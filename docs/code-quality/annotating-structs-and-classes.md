@@ -19,12 +19,12 @@ f1_keywords:
 - _Field_size_full_opt_
 - _Field_z_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
-ms.openlocfilehash: e6b08c18d2524f1240eed99dd45320a7f4c00ac3
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: fe177e6afea088b59b16bfbd0bff6fa00b526222
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77417480"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765112"
 ---
 # <a name="annotating-structs-and-classes"></a>Dodawanie adnotacji struktur i klas
 
@@ -34,19 +34,19 @@ Możesz dodawać adnotacje do struktury i składowych klas przy użyciu adnotacj
 
 - `_Field_range_(low, high)`
 
-     Pole znajduje się w zakresie (włącznie) od `low` do `high`.  Odpowiednik do `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` stosowany do obiektu z adnotacją przy użyciu odpowiednich warunków poprzedzających lub post.
+     Pole znajduje się w zakresie (włącznie) od `low` do `high` .  Równoważne z `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` zastosowaniem do obiektu z adnotacją przy użyciu odpowiednich warunków wstępnych lub post.
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     Pole, które ma rozmiar możliwy do zapisu w elementach (lub bajtach) określonych przez `size`.
+     Pole, które ma rozmiar możliwy do zapisu w elementach (lub bajtach) określonych przez `size` .
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)``_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
-     Pole, które ma zapisywalny rozmiar w elementach (lub bajtach) określony przez `size`i `count` tych elementów (bajtów), które można odczytać.
+     Pole, które ma rozmiar możliwy do zapisu w elementach (lub bajtach) określonych przez `size` , i `count` z tych elementów (bajtów), które można odczytać.
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
-     Pole, które ma zarówno czytelny, jak i zapisywalny rozmiar w elementach (lub bajtach) określony przez `size`.
+     Pole, które ma zarówno czytelny, jak i zapisywalny rozmiar w elementach (lub bajtach) określonych przez `size` .
 
 - `_Field_z_`
 
@@ -54,7 +54,7 @@ Możesz dodawać adnotacje do struktury i składowych klas przy użyciu adnotacj
 
 - `_Struct_size_bytes_(size)`
 
-     Dotyczy deklaracji struktury lub klasy.  Wskazuje, że prawidłowy obiekt tego typu może być większy niż zadeklarowany typ, z liczbą bajtów określoną przez `size`.  Na przykład:
+     Dotyczy deklaracji struktury lub klasy.  Wskazuje, że prawidłowy obiekt tego typu może być większy niż zadeklarowany typ, z liczbą bajtów określoną przez `size` .  Przykład:
 
     ```cpp
 
@@ -66,7 +66,7 @@ Możesz dodawać adnotacje do struktury i składowych klas przy użyciu adnotacj
 
     ```
 
-     Rozmiar buforu w bajtach `pM` parametru typu `MyStruct *` jest następnie traktowany jako:
+     Rozmiar buforu w bajtach parametru `pM` typu `MyStruct *` jest następnie traktowany jako:
 
     ```cpp
     min(pM->nSize, sizeof(MyStruct))
@@ -93,21 +93,21 @@ struct MyBuffer
     _Field_range_(1, MaxBufferSize)
     int bufferSize;
 
-    _Field_size_(bufferSize)        // Prefered way - easier to read and maintain.
+    _Field_size_(bufferSize)        // Preferred way - easier to read and maintain.
     int buffer[]; // Using C99 Flexible array member
 };
 ```
 
 Uwagi dotyczące tego przykładu:
 
-- `_Field_z_` jest równoznaczna z `_Null_terminated_`.  `_Field_z_` pola Nazwa Określa, że pole Nazwa jest ciągiem zakończonym wartością null.
-- `_Field_range_` dla `bufferSize` określa, że wartość `bufferSize` powinna należeć do zakresu od 1 do `MaxBufferSize` (włącznie).
-- Końcowe wyniki `_Struct_size_bytes_` i `_Field_size_` adnotacji są równoważne. W przypadku struktur lub klas, które mają podobny układ, `_Field_size_` jest łatwiejsze do odczytania i konserwowania, ponieważ ma mniejszą liczbę odwołań i obliczeń niż odpowiednik `_Struct_size_bytes_`j adnotacji. `_Field_size_` nie wymaga konwersji do rozmiaru bajtowego. Jeśli rozmiar bajtu jest jedyną opcją, na przykład dla pola wskaźnika void, można użyć `_Field_size_bytes_`. Jeśli zarówno `_Struct_size_bytes_`, jak i `_Field_size_` istnieją, oba będą dostępne dla narzędzi. Jest to narzędzie, co należy zrobić, jeśli dwa adnotacje nie zgadzają się.
+- `_Field_z_` jest równoważne `_Null_terminated_`.  `_Field_z_` dla pola Nazwa Określa, że pole Nazwa jest ciągiem zakończonym wartością null.
+- `_Field_range_` w przypadku `bufferSize` określa, że wartość `bufferSize` powinna należeć do zakresu od 1 do `MaxBufferSize` (włącznie).
+- Końcowe wyniki `_Struct_size_bytes_` `_Field_size_` adnotacji i są równoważne. W przypadku struktur lub klas, które mają podobny układ, `_Field_size_` jest łatwiejsze odczytywanie i konserwowanie, ponieważ ma mniejszą liczbę odwołań i obliczeń niż równoważna `_Struct_size_bytes_` adnotacja. `_Field_size_` nie wymaga konwersji do rozmiaru bajtowego. Jeśli rozmiar bajtu jest jedyną opcją, na przykład dla pola wskaźnika void, `_Field_size_bytes_` można użyć. Jeśli oba `_Struct_size_bytes_` i `_Field_size_` istnieją, będą dostępne dla narzędzi. Jest to narzędzie, co należy zrobić, jeśli dwa adnotacje nie zgadzają się.
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Korzystanie z adnotacji SAL w celu zmniejszenia liczby defektów kodu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
-- [Informacje o języku SAL](../code-quality/understanding-sal.md)
+- [Poznanie SAL](../code-quality/understanding-sal.md)
 - [Dodawanie adnotacji do parametrów funkcji i zwracanych wartości](../code-quality/annotating-function-parameters-and-return-values.md)
 - [Zachowanie funkcji dodawania adnotacji](../code-quality/annotating-function-behavior.md)
 - [Dodawanie adnotacji do zachowania blokującego](../code-quality/annotating-locking-behavior.md)

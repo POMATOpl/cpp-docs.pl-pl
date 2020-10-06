@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POSIX file names
 - UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
-ms.openlocfilehash: 07f5ffeec8696ded5880c45ed2ea1a5107bee48c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 3975db2407943b329fa7eded0d72d63524428210
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590150"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765214"
 ---
 # <a name="unix"></a>UNIX
 
@@ -29,7 +29,7 @@ Jeśli planujesz porty programów do systemu UNIX, postępuj zgodnie z następuj
 - Należy używać ścieżek i nazw plików, które działają poprawnie w systemie UNIX, w których jest rozróżniana wielkość liter. W systemie plików tabeli alokacji plików (FAT) w systemach operacyjnych Win32 nie jest rozróżniana wielkość liter. System plików NTFS zachowuje przypadek dla list katalogów, ale ignoruje wielkość liter podczas wyszukiwania plików i innych operacji systemu.
 
 > [!NOTE]
->  W tej wersji Visual C++ informacje o zgodności z systemem UNIX zostały usunięte z opisów funkcji.
+> W tej wersji Visual C++ informacje o zgodności z systemem UNIX zostały usunięte z opisów funkcji.
 
 ## <a name="see-also"></a>Zobacz też
 

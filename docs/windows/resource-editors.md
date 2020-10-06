@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 2552f9eea79aa0a3545d9746d85cacfbd9a3f25d
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f854f3cc6e61e3022e784befc738bf28c1adeb6c
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353171"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765250"
 ---
 # <a name="resource-editors-c"></a>Edytory zasobów (C++)
 
@@ -58,7 +58,7 @@ Każdy typ zasobu ma Edytor zasobów specyficzny dla tego typu zasobu. Można zm
 
 Niektóre typy zasobów są pojedynczymi plikami, które mogą być importowane i używane na różne sposoby. obejmują one mapy bitowe, ikony, kursory, paski narzędzi i pliki HTML. Takie zasoby mają nazwy plików i [identyfikatory zasobów](../windows/symbols-resource-identifiers.md). Inne, takie jak okna dialogowe, menu i tabele ciągów w projektach Win32, istnieją tylko jako część pliku skryptu zasobu (. RC) lub plik szablonu zasobów (. rct).
 
-Zasoby mogą być również edytowane poza projektem bez otwierania projektu. Aby uzyskać więcej informacji, zobacz [How to: Create Resources](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Zasoby mogą być również edytowane poza projektem bez otwierania projektu. Aby uzyskać więcej informacji, zobacz [How to: Create Resources](./how-to-create-a-resource-script-file.md).
 
 > [!NOTE]
 > Właściwości zasobu można zmodyfikować przy użyciu okna **Właściwości** .

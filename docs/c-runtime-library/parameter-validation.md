@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: 60ded7fc5a4388b2c4bf87ab5a388caab5fc47c2
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 8378e4bf9bdfc950002c3ed8c3ef50c27a3c162d
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589825"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765262"
 ---
 # <a name="parameter-validation"></a>Sprawdzanie poprawności parametru
 
@@ -25,7 +25,7 @@ W kompilacjach debugowania makro nieprawidłowego parametru zazwyczaj wywołuje 
 
 Funkcja wysyłania nieprawidłowego parametru wywołuje aktualnie przypisaną procedurę obsługi nieprawidłowego parametru. Domyślnie nieprawidłowe wywołania parametrów `_invoke_watson` , które powodują zamknięcie aplikacji i generują miniy zrzut. Jeśli jest włączona przez system operacyjny, okno dialogowe monituje użytkownika o wysłanie zrzutu awaryjnego do firmy Microsoft w celu przeprowadzenia analizy.
 
-Można zmienić to zachowanie przy użyciu funkcji [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) lub [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) , aby ustawić procedurę obsługi nieprawidłowego parametru na własną funkcję. Jeśli określona funkcja nie kończy działanie aplikacji, formant jest zwracany do funkcji, która otrzymała nieprawidłowe parametry. W CRT te funkcje zwykle zatrzymają wykonywanie funkcji, ustawimy `errno` Kod błędu i zwracają kod błędu. W wielu przypadkach `errno` wartość i wartość zwracana są oba `EINVAL` , aby wskazać nieprawidłowy parametr. W niektórych przypadkach zwracany jest bardziej szczegółowy kod błędu, taki jak `EBADF` dla nieprawidłowego wskaźnika pliku przekazana jako parametr. 
+Można zmienić to zachowanie przy użyciu funkcji [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) lub [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) , aby ustawić procedurę obsługi nieprawidłowego parametru na własną funkcję. Jeśli określona funkcja nie kończy działanie aplikacji, formant jest zwracany do funkcji, która otrzymała nieprawidłowe parametry. W CRT te funkcje zwykle zatrzymają wykonywanie funkcji, ustawimy `errno` Kod błędu i zwracają kod błędu. W wielu przypadkach `errno` wartość i wartość zwracana są oba `EINVAL` , aby wskazać nieprawidłowy parametr. W niektórych przypadkach zwracany jest bardziej szczegółowy kod błędu, taki jak `EBADF` dla nieprawidłowego wskaźnika pliku przekazana jako parametr.
 
 Aby uzyskać więcej informacji na temat `errno` , zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

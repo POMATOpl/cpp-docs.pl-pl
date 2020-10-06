@@ -1,5 +1,6 @@
 ---
 title: /RTC (Sprawdzanie błędów czasu wykonywania)
+description: Opcje/RTC kompilatora języka Microsoft C/C++ do sprawdzania błędów w czasie wykonywania.
 ms.date: 07/31/2020
 f1_keywords:
 - /rtc
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: eefec0956bebe9f72324f3cbc61fccbc5e2e24d7
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 888a81d0d5c21b0b85420a43d534c5b2742aa082
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520541"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765228"
 ---
-# <a name="rtc-run-time-error-checks"></a>`/RTC`(Sprawdzanie błędów czasu wykonywania)
+# <a name="rtc-run-time-error-checks"></a>`/RTC` (Sprawdzanie błędów czasu wykonywania)
 
 Służy do włączania i wyłączania funkcji sprawdzania błędów czasu wykonywania w połączeniu z [runtime_checks](../../preprocessor/runtime-checks.md) pragma.
 
@@ -51,7 +52,7 @@ Odpowiednik **`/RTCsu`** .
 **`/RTCc`**<br/>
 Raportuje, gdy wartość jest przypisana do mniejszego typu danych i powoduje utratę danych. Na przykład raport jest zgłaszany, jeśli **`short`** wartość typu `0x0101` jest przypisana do zmiennej typu **`char`** .
 
-Ta opcja może raportować sytuacje, w których zamierzasz obciąć. Na przykład, jeśli chcesz, aby pierwsze 8 bitów **`int`** zwrócone jako **`char`** . Ponieważ **`/RTCc`** powoduje błąd czasu wykonywania, jeśli przypisanie powoduje utratę informacji, najpierw należy zamaskować informacje, które są potrzebne, aby uniknąć błędu czasu wykonywania. Na przykład:
+Ta opcja może raportować sytuacje, w których zamierzasz obciąć. Na przykład, jeśli chcesz, aby pierwsze 8 bitów **`int`** zwrócone jako **`char`** . Ponieważ **`/RTCc`** powoduje błąd czasu wykonywania, jeśli przypisanie powoduje utratę informacji, najpierw należy zamaskować informacje, które są potrzebne, aby uniknąć błędu czasu wykonywania. Przykład:
 
 ```C
 #include <crtdbg.h>
@@ -109,7 +110,7 @@ Używane **`/RTC`** na potrzeby kompilacji programistycznych; Nie używaj **`/RT
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja**generowania kodu** **C/C++**.  
+1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja generowania kodu**C/C++**  >  **Code Generation** .
 
 1. Zmodyfikuj jedną lub obie następujące właściwości: **podstawowe testy środowiska uruchomieniowego** lub **mniejszego typu**.
 
@@ -117,7 +118,7 @@ Używane **`/RTC`** na potrzeby kompilacji programistycznych; Nie używaj **`/RT
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A> właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>

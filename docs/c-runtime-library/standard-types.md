@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: bf90adbdbc739a2dd26d8e59ab38e56aef3bd312
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 376c29371fb9213ed46435b41bea1666058c7b4e
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352937"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765311"
 ---
 # <a name="standard-types"></a>Standardowe typy
 
@@ -199,7 +199,7 @@ Biblioteka wykonawcza firmy Microsoft definiuje następujące typy standardowe i
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Typ zdefiniowany dla funkcji wywołania zwrotnego, która będzie wywoływana w [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Parametry dla tej funkcji to: typ raportu, komunikat wyjściowy i wartość zwracana z funkcji wywołania zwrotnego.|CRTDBG.H|
 |`dev_t`, `_dev_t` short lub unsigned Integer|Reprezentuje uchwyty urządzenia.|SYS\TYPES.H|
 |`_diskfree_t` XML|Zawiera informacje o stacji dysków. Używane przez [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H i DIRECT.H|
-|`div_t``ldiv_t`i `lldiv_t` struktury|Wartości są przechowywane odpowiednio przez [DIV](reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md)i [LLDiv](../c-runtime-library/reference/ldiv-lldiv.md).|STDLIB.H|
+|`div_t``ldiv_t`i `lldiv_t` struktury|Wartości są przechowywane odpowiednio przez [DIV](reference/div.md), [ldiv](./reference/div.md)i [LLDiv](./reference/div.md).|STDLIB.H|
 |`errno_t` całkowitą|Używane dla zwracanego typu funkcji lub parametru, który zajmuje się kodami błędów `errno` .|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` XML|Przechowuje informacje o błędzie dla [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
 |`_EXCEPTION_POINTERS`|Zawiera rekord wyjątku. Aby uzyskać więcej informacji, zobacz [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers) .|FPIEEE.H|

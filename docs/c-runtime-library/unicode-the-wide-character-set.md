@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-ms.openlocfilehash: 751017a62a960eaf2afa2354a43a13971b89252a
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 7cd170ae43223f1e8e61d9fc576e49baa2164b23
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590163"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765343"
 ---
 # <a name="unicode-the-wide-character-set"></a>Unicode: zestaw znaków dwubajtowych
 
 Znak dwubajtowy to kod 2-bitowy. Każdy znak używany w nowoczesnej skali na całym świecie, w tym symbole techniczne i znaki specjalne publikacji, można przedstawić na podstawie specyfikacji Unicode jako znaku dwubajtowego. Opracowane i utrzymywane przez duże konsorcjum, które obejmuje firmę Microsoft, standard Unicode jest teraz szeroko zaakceptowany.
 
-Znak dwubajtowy jest typu **`wchar_t`** . Ciąg znaków dwubajtowych jest reprezentowany jako **`wchar_t[]`** Tablica. Wskaż tablicę `wchar_t*` wskaźnikiem. 
+Znak dwubajtowy jest typu **`wchar_t`** . Ciąg znaków dwubajtowych jest reprezentowany jako **`wchar_t[]`** Tablica. Wskaż tablicę `wchar_t*` wskaźnikiem.
 
 Można reprezentować dowolny znak ASCII jako znak dwubajtowy, tworząc prefiks litery `L` . Na przykład, `L'\0'` jest znakiem o zerowej szerokości (16-bitowym).
 
