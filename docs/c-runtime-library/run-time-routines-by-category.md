@@ -1,5 +1,6 @@
 ---
 title: Procedury środowiska uruchomieniowego języka Universal C według kategorii
+description: Lista procedur biblioteki uniwersalnego środowiska uruchomieniowego (UCRT) firmy Microsoft według kategorii.
 ms.date: 04/06/2018
 helpviewer_keywords:
 - routines, run-time
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: be58ce7550c8f15c1c12eafa1dd4187f12fb71cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3106c97bfcaf6ed273ba9f826edf7b268fdca782
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846345"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806542"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>Procedury środowiska uruchomieniowego języka Universal C według kategorii
 
-W tej sekcji wymieniono i opisano procedury biblioteki uniwersalnego środowiska uruchomieniowego C (UCRT) według kategorii. Dla wygody odniesienia niektóre procedury są wymienione w więcej niż jednej kategorii. Procedury znaków wielobajtowych i procedury znaków dwubajtowych są pogrupowane przy użyciu odpowiedników znaków pojedynczych, gdzie istnieją.
+W tej sekcji wymieniono procedury biblioteki uniwersalnego środowiska uruchomieniowego języka C (UCRT) według kategorii. Dla wygody odniesienia niektóre procedury są wymienione w więcej niż jednej kategorii. Procedury znaków wielobajtowych i procedury znaków dwubajtowych są pogrupowane przy użyciu odpowiedników znaków pojedynczych, gdzie istnieją.
 
 ## <a name="ucrt-library-routine-categories"></a>Kategorie procedur biblioteki UCRT
 
