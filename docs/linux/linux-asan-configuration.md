@@ -1,13 +1,13 @@
 ---
 title: Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
 description: W tym artykule opisano sposób konfigurowania projektów systemu Linux w języku C++ w programie Visual Studio do używania adresu Sanitizer.
-ms.date: 09/25/2020
-ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.date: 10/7/2020
+ms.openlocfilehash: 3c2f78346e4a2049e3482ba4093d8a6212f54e9a
+ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414204"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847154"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
 
@@ -84,5 +84,7 @@ Usługi ASan Debug można zainstalować w systemie Linux dystrybucje, które uż
 ```bash
 sudo apt-get install libasan4-dbg
 ```
+
+Pełne instrukcje dotyczące instalowania pakietów symboli debugowania w programie Ubuntu można znaleźć w odniesieniu do [pakietów symboli debugowania](https://wiki.ubuntu.com/Debug%20Symbol%20Packages).
 
 Jeśli ASan jest włączona, program Visual Studio wyświetli w górnej części okienka **debugowanie** okna **dane wyjściowe** , aby zainstalować symbole debugowania ASan.
