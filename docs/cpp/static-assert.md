@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: bf796b853d21d33d97e25c05101b7486e1eb112f
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742973"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008860"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ Kompilator analizuje **`static_assert`** deklarację pod kątem błędów skład
 
 Możesz użyć **`static_assert`** słowa kluczowego w przestrzeni nazw, klasie lub zakresie bloku. ( **`static_assert`** Słowo kluczowe jest technicznie deklaracją, mimo że nie wprowadza nowej nazwy do programu, ponieważ może być używane w zakresie przestrzeni nazw).
 
-## <a name="description-of-static_assert-with-namespace-scope"></a>Opis static_assert z zakresem przestrzeni nazw
+## <a name="description-of-static_assert-with-namespace-scope"></a>Opis `static_assert` z zakresem przestrzeni nazw
 
 W poniższym przykładzie **`static_assert`** Deklaracja ma zakres przestrzeni nazw. Ponieważ kompilator wie o wielkości typu `void *` , wyrażenie jest oceniane natychmiast.
 
-## <a name="example-of-static_assert-with-namespace-scope"></a>Przykład static_assert z zakresem przestrzeni nazw
+## <a name="example-static_assert-with-namespace-scope"></a>Przykład: `static_assert` z zakresem przestrzeni nazw
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description-of-static_assert-with-class-scope"></a>Opis static_assert z zakresem klasy
+## <a name="description-of-static_assert-with-class-scope"></a>Opis `static_assert` z zakresem klasy
 
 W poniższym przykładzie **`static_assert`** Deklaracja ma zakres klas. **`static_assert`** Sprawdza, czy parametr szablonu jest *zwykłym starym typem danych* (pod). Kompilator sprawdza **`static_assert`** deklarację, gdy jest zadeklarowany, ale nie ocenia parametru *stałego wyrażenia* do momentu `basic_string` wystąpienia szablonu klasy w `main()` .
 
-## <a name="example-of-static_assert-with-class-scope"></a>Przykład static_assert z zakresem klasy
+## <a name="example-static_assert-with-class-scope"></a>Przykład: `static_assert` z zakresem klasy
 
 ```cpp
 #include <type_traits>
@@ -83,11 +83,11 @@ int main()
 }
 ```
 
-## <a name="description"></a>Opis
+## <a name="description-of-static_assert-with-block-scope"></a>Opis `static_assert` z zakresem bloku
 
 W poniższym przykładzie **`static_assert`** Deklaracja ma zakres bloku. **`static_assert`** Sprawdza, czy rozmiar struktury VMPage jest równy wartości PageSize pamięci wirtualnej.
 
-## <a name="example"></a>Przykład
+## <a name="example-static_assert-at-block-scope"></a>Przykład: `static_assert` w zakresie bloku
 
 ```cpp
 #include <sys/param.h> // defines PAGESIZE

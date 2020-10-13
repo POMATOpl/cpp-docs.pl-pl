@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214233"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008357"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr  (C++/CLI i C++/CX)
 
@@ -23,7 +23,7 @@ Słowo kluczowe **__nullptr** jest słowem kluczowym specyficznym dla firmy Micr
 
 **`nullptr`** Słowo kluczowe jest równoważne wartości **Nothing** w Visual Basic i **null** w języku C#.
 
-## <a name="usage"></a>Sposób użycia
+## <a name="usage"></a>Użycie
 
 **`nullptr`** Słowo kluczowe może być używane wszędzie tam, gdzie dojście, wskaźnik natywny lub argument funkcji może być używany.
 
@@ -33,7 +33,7 @@ Słowo kluczowe **__nullptr** jest słowem kluczowym specyficznym dla firmy Micr
 
 - [typeid](../cpp/typeid-operator.md)
 
-- `throw nullptr`(chociaż `throw (Object^)nullptr;` będzie działała)
+- `throw nullptr` (chociaż `throw (Object^)nullptr;` będzie działała)
 
 **`nullptr`** Słowo kluczowe może być używane podczas inicjowania następujących typów wskaźnika:
 
@@ -51,7 +51,7 @@ Wywołania funkcji w różnych językach, które używają wartości wskaźnika 
 
 Nie można zainicjować dojścia do zera. **`nullptr`** można używać tylko. Przypisanie stałej 0 do dojścia do obiektu tworzy opakowane `Int32` i rzutowanie na `Object^` .
 
-## <a name="example"></a>Przykład
+## <a name="example-nullptr-keyword"></a>Przykład: `nullptr` słowo kluczowe
 
 Poniższy przykład kodu pokazuje, że **`nullptr`** słowo kluczowe może być używane wszędzie tam, gdzie można użyć uchwytu, wskaźnika natywnego lub argumentu funkcji. W przykładzie pokazano, że **`nullptr`** słowo kluczowe może służyć do sprawdzenia odwołania przed jego użyciem.
 
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-use-nullptr-and-zero-interchangeably"></a>Przykład: Użyj `nullptr` i zero zamiennie
 
 Poniższy przykład kodu pokazuje, że **`nullptr`** i zero można użyć zamiennie na wskaźnikach natywnych.
 
@@ -119,7 +119,7 @@ pMyClass == nullptr
 pMyClass == 0
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-interpret-nullptr-as-a-handle"></a>Przykład: interpretowanie `nullptr` jako dojście
 
 Poniższy przykład kodu pokazuje, że **`nullptr`** jest interpretowany jako dojście do dowolnego typu lub macierzystego wskaźnika do dowolnego typu. W przypadku przeciążania funkcji z dojściami do różnych typów zostanie wygenerowany błąd niejednoznaczności. **`nullptr`** Musi być jawnie rzutowany na typ.
 
@@ -137,7 +137,7 @@ void f_null() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-cast-nullptr"></a>Przykład: Rzutowanie `nullptr`
 
 Poniższy przykład kodu pokazuje, że rzutowanie **`nullptr`** jest dozwolone i zwraca wskaźnik lub uchwyt do typu rzutowania, który zawiera **`nullptr`** wartość.
 
@@ -158,7 +158,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-pass-nullptr-as-a-function-parameter"></a>Przykład: Przekaż `nullptr` jako parametr funkcji
 
 Poniższy przykład kodu pokazuje, że **`nullptr`** może być używany jako parametr funkcji.
 
@@ -179,7 +179,7 @@ int main() {
 test
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-default-initialization"></a>Przykład: Inicjowanie domyślne
 
 Poniższy przykład kodu pokazuje, że gdy dojścia są zadeklarowane i nie są jawnie inicjowane, są one domyślnie inicjowane **`nullptr`** .
 
@@ -206,7 +206,7 @@ int main() {
 NULL
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-assign-nullptr-to-a-native-pointer"></a>Przykład: Przypisz `nullptr` do wskaźnika natywnego
 
 Poniższy przykład kodu pokazuje, że **`nullptr`** można przypisać do macierzystego wskaźnika podczas kompilowania przy użyciu `/clr` .
 
@@ -223,7 +223,7 @@ int main() {
 
 Opcja kompilatora: (niewymagane; obsługiwane przez wszystkie opcje generowania kodu, w tym `/ZW` i `/clr` )
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

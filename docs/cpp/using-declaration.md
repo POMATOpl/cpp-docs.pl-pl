@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 072ecd325a76e80dbd710c241e39fdf7b969e537
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227026"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008251"
 ---
 # <a name="using-declaration"></a>using — Deklaracja
 
@@ -37,7 +37,7 @@ using declarator-list ;
 
 Deklaracja using wprowadza niekwalifikowaną nazwę jako synonim dla jednostki zadeklarowanej w innym miejscu. Umożliwia ona użycie pojedynczej nazwy z określonej przestrzeni nazw bez jawnej kwalifikacji w regionie deklaracji, w którym występuje. Jest to w przeciwieństwie do [dyrektywy using](../cpp/namespaces-cpp.md#using_directives), która umożliwia używanie *wszystkich* nazw w przestrzeni nazw bez kwalifikacji. **`using`** Słowo kluczowe jest również używane dla [aliasów typów](../cpp/aliases-and-typedefs-cpp.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-using-declaration-in-class-field"></a>Przykład: `using` Deklaracja w polu klasy
 
 Deklaracja using może być używana w definicji klasy.
 
@@ -83,7 +83,7 @@ In B::f()
 In B::g()
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-using-declaration-to-declare-a-member"></a>Przykład: `using` Deklaracja do deklarowania elementu członkowskiego
 
 Gdy jest używany do deklarowania elementu członkowskiego, deklaracja using musi odwoływać się do elementu członkowskiego klasy bazowej.
 
@@ -123,7 +123,7 @@ int main() {
 In B::f()
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-using-declaration-with-explicit-qualification"></a>Przykład: `using` Deklaracja z jawną kwalifikacją
 
 Składowe zadeklarowane za pomocą deklaracji using mogą być przywoływane przy użyciu jawnej kwalifikacji. `::`Prefiks odwołuje się do globalnej przestrzeni nazw.
 
@@ -163,7 +163,7 @@ In f
 In A::g
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-using-declaration-synonyms-and-aliases"></a>Przykład: `using` synonimy i aliasy deklaracji
 
 W przypadku złożenia deklaracji using, synonim utworzony przez deklarację odwołuje się tylko do definicji, które są prawidłowe w punkcie deklaracji using. Definicje dodane do przestrzeni nazw po deklaracji using nie są prawidłowymi synonimami.
 
@@ -192,7 +192,7 @@ void b() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-local-declarations-and-using-declarations"></a>Przykład: lokalne deklaracje i `using` deklaracje
 
 W odniesieniu do funkcji w przestrzeniach nazw, jeśli zestaw lokalnych deklaracji i użycie deklaracji dla pojedynczej nazwy są określone w regionie deklaratywnym, muszą one odwoływać się do tej samej jednostki lub muszą odwoływać się do funkcji.
 
@@ -215,7 +215,7 @@ void g() {
 
 W powyższym przykładzie `using B::i` instrukcja powoduje, że druga `int i` zostanie zadeklarowana w `g()` funkcji. `using B::f`Instrukcja nie powoduje konfliktu z funkcją, `f(char)` ponieważ nazwy funkcji wprowadzone przez `B::f` mają różne typy parametrów.
 
-## <a name="example"></a>Przykład
+## <a name="example-local-function-declarations-and-using-declarations"></a>Przykład: deklaracje i `using` deklaracje funkcji lokalnych
 
 Deklaracja funkcji lokalnej nie może mieć takiej samej nazwy i typu jak funkcja wprowadzona przy użyciu deklaracji. Na przykład:
 
@@ -242,7 +242,7 @@ void h() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-using-declaration-and-inheritance"></a>Przykład: `using` Deklaracja i dziedziczenie
 
 W odniesieniu do dziedziczenia, gdy deklaracja using wprowadza nazwę z klasy bazowej do zakresu klasy pochodnej, funkcje składowe w klasie pochodnej przesłaniają wirtualne funkcje Członkowskie o tej samej nazwie i typach argumentów w klasie bazowej.
 
@@ -300,7 +300,7 @@ In B::g
 In D::g(char)
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-using-declaration-accessibility"></a>Przykład: `using` dostępność deklaracji
 
 Wszystkie wystąpienia nazwy wymienionej w deklaracji using muszą być dostępne. W szczególności, jeśli Klasa pochodna używa deklaracji using w celu uzyskania dostępu do składowej klasy bazowej, nazwa elementu członkowskiego musi być dostępna. Jeśli nazwa jest funkcją przeciążonej funkcji członkowskiej, wszystkie funkcje o nazwie muszą być dostępne.
 
@@ -325,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Namespaces](../cpp/namespaces-cpp.md)<br/>
+[Przestrzenie nazw](../cpp/namespaces-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -49,12 +49,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 9a3f10fc89d93717edfb032dea910040589c1254
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: da3c5b3660b481fd3a7140adbc236f44cd51f37e
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334943"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008826"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -122,7 +122,7 @@ Format — ciąg kontrolny
 *argument*<br/>
 Argumenty opcjonalne
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
@@ -162,7 +162,7 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-use-sprintf-to-format-data"></a>Przykład: Użyj sprintf — do formatowania danych
 
 ```C
 // crt_sprintf.c
@@ -199,7 +199,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-error-code-handling"></a>Przykład: obsługa kodu błędu
 
 ```C
 // crt_swprintf.c

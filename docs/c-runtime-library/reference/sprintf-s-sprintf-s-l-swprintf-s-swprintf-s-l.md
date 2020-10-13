@@ -44,16 +44,16 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 34b3ddce68563479b26abff34e8fa31f6298558a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 006b0f84494466b5c23a8c86f586774b66839b03
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958010"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008829"
 ---
 # <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
-Napisz sformatowane dane do ciągu. Są to wersje [sprintf —, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Napisz sformatowane dane do ciągu. Są to wersje [sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) z ulepszonymi zabezpieczeniami, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -100,28 +100,28 @@ int swprintf_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Lokalizacja magazynu dla danych wyjściowych
 
 *sizeOfBuffer*<br/>
 Maksymalna liczba znaków do zapisania.
 
-*format*<br/>
+*Formatowanie*<br/>
 Format — ciąg kontrolny
 
 *...*<br/>
 Opcjonalne argumenty do sformatowania
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków pisanych lub-1, jeśli wystąpił błąd. Jeśli *bufor* lub *Format* jest wskaźnikiem o wartości null, **sprintf_s** i **swprintf_s** zwracają-1 i ustawiają **errno** na **EINVAL**.
+Liczba znaków pisanych lub-1, jeśli wystąpił błąd. Jeśli *bufor* lub *Format* jest wskaźnikiem o wartości null, **sprintf_s** i **swprintf_s** Return-1 i ustawić **errno** na **EINVAL**.
 
-**sprintf_s** zwraca liczbę bajtów przechowywanych w *buforze*, która nie zlicza kończącego znaku null. Funkcja **swprintf_s** zwraca liczbę znaków dwubajtowych przechowywanych w *buforze*, która nie zlicza kończących znaków dwubajtowych o zerowej długości.
+**sprintf_s** zwraca liczbę bajtów przechowywanych w *buforze*, która nie zlicza kończącego znaku null. **swprintf_s** zwraca liczbę znaków dwubajtowych przechowywanych w *buforze*, która nie zlicza kończących znaków dwubajtowych o zerowej długości.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -131,15 +131,15 @@ Jedną z głównych różnic między **sprintf_s** i [sprintf —](sprintf-sprin
 
 Druga główna różnica między **sprintf_s** i [sprintf —](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) polega na tym, że **sprintf_s** pobiera parametr długości określający rozmiar buforu wyjściowego w znakach. Jeśli bufor jest za mały dla sformatowanego tekstu, łącznie z kończącą się wartością null, wówczas bufor jest ustawiany na pusty ciąg, umieszczając znak null w *buforze*[0] i wywoływana jest procedura obsługi nieprawidłowego parametru. W przeciwieństwie do **_snprintf**, **sprintf_s** gwarantuje, że bufor będzie zakończony wartością null, chyba że rozmiar buforu wynosi zero.
 
-**swprintf_s** to dwubajtowa wersja **sprintf_s**; argumenty wskaźnika do **swprintf_s** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania w **swprintf_s** może się różnić od tego w **sprintf_s**. Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
+**swprintf_s** to dwubajtowa wersja **sprintf_s**; argumenty wskaźnika do **swprintf_s** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania w **swprintf_s** może różnić się od tego w **sprintf_s**. Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
-W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość bufora, co eliminuje konieczność określenia argumentu rozmiaru i może automatycznie zastąpić starsze, niezabezpieczone funkcje nowym, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość bufora, co eliminuje konieczność określenia argumentu rozmiaru i może automatycznie zastąpić starsze, niezabezpieczone funkcje nowym, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Istnieją wersje programu **sprintf_s** , które oferują dodatkową kontrolę nad tym, co się stanie, jeśli bufor jest za mały. Aby uzyskać więcej informacji, zobacz [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Istnieją wersje **sprintf_s** , które oferują dodatkową kontrolę nad tym, co się stanie, jeśli bufor jest za mały. Aby uzyskać więcej informacji, zobacz [_snprintf_s, _snprintf_s_l, _snwprintf_s _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf_s**|**sprintf_s**|**sprintf_s**|**swprintf_s**|
 |**_stprintf_s_l**|**_sprintf_s_l**|**_sprintf_s_l**|**_swprintf_s_l**|
@@ -148,12 +148,12 @@ Istnieją wersje programu **sprintf_s** , które oferują dodatkową kontrolę n
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**sprintf_s**, **_sprintf_s_l**|C: \<stdio.h><br /><br /> C++: \<cstdio > lub \<stdio. h >|
-|**swprintf_s**, **_swprintf_s_l**|C: \<stdio. h > lub \<WCHAR. h ><br /><br /> C++: \<cstdio >, \<cwchar >, \<stdio. h > lub \<WCHAR. h >|
+|**sprintf_s**, **_sprintf_s_l**|S \<stdio.h><br /><br /> C++: \<cstdio> lub \<stdio.h>|
+|**swprintf_s**, **_swprintf_s_l**|C: \<stdio.h> lub \<wchar.h><br /><br /> C++: \<cstdio> , \<cwchar> \<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-use-sprintf_s-to-format-data"></a>Przykład: Użyj sprintf_s, aby sformatować dane
 
 ```C
 // crt_sprintf_s.c
@@ -189,7 +189,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-error-code-handling"></a>Przykład: obsługa kodu błędu
 
 ```C
 // crt_swprintf_s.c
@@ -213,12 +213,12 @@ wrote 11 characters
 wrote -1 characters
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
-[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>

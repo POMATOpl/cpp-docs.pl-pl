@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: be9d9fe56d35e96e4179eb511edccd475a369f32
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684458"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008286"
 ---
 # <a name="tuple_element-class"></a>tuple_element — Klasa
 
-Zawija element `tuple`. Specjalizacje zawijają `array` elementów i `pair` elementów.
+Zawija `tuple` element. Specjalizacje zawijają `array` elementy i `pair` elementy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,37 +56,37 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *indeksu*
+*Indeks*\
 Indeks wyoznaczonego elementu.
 
-@No__t_1 *krotek*
+*Spoin*\
 Typ krotki.
 
-*Elem* \
+*Elem*\
 Typ elementu tablicy.
 
-@No__t_1 *rozmiaru*
+*Zmienia*\
 Rozmiar tablicy.
 
-@No__t_1 *T1*
+*Połączeń*\
 Typ pierwszego elementu w parze.
 
-@No__t_1 *T2*
+*T2*\
 Typ drugiego elementu w parze.
 
 ## <a name="remarks"></a>Uwagi
 
-@No__t_0 szablonu klasy zawiera zagnieżdżony element typedef `type`, który jest synonimem dla typu w *indeksie* indeksu *krotki*typu krotki.
+Szablon klasy `tuple_element` zawiera zagnieżdżony element typedef `type` , który jest synonimem dla typu w *indeksie* indeksu *krotki*typu krotki.
 
-Element typedef `tuple_element_t` jest wygodnym aliasem dla `tuple_element<Index, Tuple>::type`.
+Element typedef `tuple_element_t` jest wygodnym aliasem dla `tuple_element<Index, Tuple>::type` .
 
-Specjalizacja szablonu klasy dla tablic zawiera interfejs do `array` jako spójna kolekcja elementów `Size`, z których każdy ma ten sam typ. Każda specjalizacja ma zagnieżdżony element typedef `type`, który jest synonimem dla typu elementu *indeksu* `array`, z dowolnymi nietrwałymi zastrzeżeniami const.
+Specjalizacja szablonu klasy dla tablic zawiera interfejs do `array` postaci spójnej kolekcji `Size` elementów, z których każdy ma ten sam typ. Każda specjalizacja ma zagnieżdżony element typedef `type` , który jest synonimem dla typu elementu *indeksu* `array` , z wszelkimi nietrwałymi zastrzeżeniami const.
 
-Specjalizacje szablonów dla `pair` typy każdy zapewniają jeden element członkowski typedef, `type`, który jest synonimem dla typu elementu w określonej pozycji w parze, z dowolnymi nieprawidłowymi nieprawidłowymi kwalifikacjami. Element typedef `tuple_element_t` jest wygodnym aliasem dla `tuple_element<N, pair<T1, T2>>::type`.
+Specjalizacje szablonu dla `pair` typów każdy zapewniają pojedynczy element członkowski typedef, `type` , który jest synonimem dla typu elementu w określonej pozycji w parze, z dowolnymi nieprawidłowymi zastrzeżeniami const i/lub volatile. Element typedef `tuple_element_t` jest wygodnym aliasem dla `tuple_element<N, pair<T1, T2>>::type` .
 
-Użyj [funkcji get &lt;utility &gt;](../standard-library/utility-functions.md#get) , aby zwrócić element w określonej pozycji lub o określonym typie.
+Użyj [ &lt; narzędzia &gt; Get Function](../standard-library/utility-functions.md#get) , aby zwrócić element w określonej pozycji lub o określonym typie.
 
-## <a name="example"></a>Przykład
+## <a name="example-get-an-element-from-a-tuple"></a>Przykład: pobieranie elementu z krotki
 
 ```cpp
 #include <tuple>
@@ -111,7 +111,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-get-an-element-from-an-array"></a>Przykład: pobieranie elementu z tablicy
 
 ```cpp
 #include <array>
@@ -141,7 +141,7 @@ int main()
 0
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-get-an-element-from-a-pair"></a>Przykład: pobieranie elementu z pary
 
 ```cpp
 #include <utility>
@@ -174,10 +174,10 @@ int main() {
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<tuple >
+**Nagłówek:**\<tuple>
 
-**Nagłówek:** \<array > (dla specjalizacji macierzy)
+**Nagłówek:** \<array> (dla specjalizacji macierzy)
 
-**Nagłówek:** \<utility > (dla specjalizacji par)
+**Nagłówek:** \<utility> (dla specjalizacji par)
 
 **Przestrzeń nazw:** std

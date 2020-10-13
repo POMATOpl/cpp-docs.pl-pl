@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f71c2c3862bd015ba3edcd17aeac85472eb2562
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223580"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008913"
 ---
 # <a name="template-specialization-c"></a>Specjalizacja szablonu (C++)
 
@@ -19,7 +19,7 @@ Szablony klas mogą być częściowo wyspecjalizowane, a klasa będąca wynikiem
 
 - Szablon ma tylko jeden typ, ale dla wskaźnika, odwołania, wskaźnika do elementu członkowskiego lub typu wskaźnika funkcji jest wymagana specjalizacja. Sama specjalizacja jest nadal szablonem na typie wskazywanym lub, do którego się odwołuje.
 
-## <a name="example"></a>Przykład
+## <a name="example-partial-specialization-of-class-templates"></a>Przykład: Częściowa specjalizacja szablonów klas
 
 ```cpp
 // partial_specialization_of_class_templates.cpp
@@ -66,7 +66,7 @@ PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0
 PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-partial-specialization-for-pointer-types"></a>Przykład: Częściowa specjalizacja dla typów wskaźników
 
 Jeśli masz klasę kolekcji szablonów, która przyjmuje dowolny typ `T` , można utworzyć częściową specjalizację, która przyjmuje dowolny typ wskaźnika `T*` . Poniższy kod ilustruje szablon klasy kolekcji `Bag` i częściową specjalizację dla typów wskaźników, w których kolekcja odwołuje się do typów wskaźnika przed skopiowaniem ich do tablicy. Kolekcja przechowuje następnie wartości, które są wskazywane przez. W oryginalnym szablonie tylko te same wskaźniki byłyby przechowywane w kolekcji, pozostawiając dane podatne na usunięcie lub modyfikację. W tej specjalnej wersji wskaźnika kolekcji, kod do sprawdzenia wskaźnika o wartości null w `add` metodzie jest dodawany.
 
@@ -178,7 +178,7 @@ Null pointer!
 3 87 8 100
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-define-partial-specialization-so-one-type-is-int"></a>Przykład: Zdefiniuj częściową specjalizację, więc jeden typ to `int`
 
 W poniższym przykładzie zdefiniowano klasę szablonu, która pobiera pary dowolnego typu, a następnie definiuje częściową specjalizację tej klasy szablonu wyspecjalizowanej, tak aby jeden z typów był **`int`** . Specjalizacja definiuje dodatkową metodę sortowania, która implementuje proste sortowanie bąbelkowe oparte na liczbie całkowitej.
 

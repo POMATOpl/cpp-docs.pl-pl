@@ -4,66 +4,66 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee5aa122983a315e55884c643a9b7894f075e260
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384507"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008957"
 ---
 # <a name="user-defined-operators-ccli"></a>Operatory zdefiniowane przez użytkownika (C++/CLI)
 
-Operatory zdefiniowane przez użytkownika w typach zarządzanych są dozwolone jako elementy statyczne lub składowych wystąpienia lub w zakresie globalnym. Jednak tylko statyczne operatory są dostępne za pośrednictwem metadanych dla klientów, którzy są napisane w języku innym niż Visual C++.
+Operatory zdefiniowane przez użytkownika dla typów zarządzanych są dozwolone jako statyczne elementy członkowskie lub elementy członkowskie wystąpienia lub w zakresie globalnym. Jednak tylko operatory statyczne są dostępne za pomocą metadanych na klientach, które są zapisywane w języku innym niż Visual C++.
 
-W typ odwołania jeden z parametrów statyczne operatora zdefiniowanego przez użytkownika musi mieć jedną z tych:
+W typie referencyjnym jeden z parametrów statycznego operatora zdefiniowanego przez użytkownika musi mieć jedną z następujących wartości:
 
-- Dojście (`type` ^) do wystąpienia typu otaczającego.
+- Dojście ( `type` ^) do wystąpienia typu otaczającego.
 
-- Operatory pośrednie odwołanie do typu (`type`^ & lub typ ^ %) do dojścia do wystąpienia typu otaczającego.
+- Pośredni typ odwołania ( `type` ^& lub typ ^%) do dojścia do wystąpienia typu otaczającego.
 
-Utworzenie typu wartości jednego z parametrów statyczne operatora zdefiniowanego przez użytkownika muszą być jeden z nich:
+W typie wartości jeden z parametrów statycznego operatora zdefiniowanego przez użytkownika musi być jednym z następujących:
 
-- Tego samego typu co typ otaczający wartość.
+- Tego samego typu co typ wartości otaczającej.
 
-- Bezpośredni typ wskaźnika (`type`^) na typ otaczający.
+- Pośredni typ wskaźnika ( `type` ^) do typu otaczającego.
 
-- Operatory pośrednie odwołanie do typu (`type`% lub `type`&) na typ otaczający.
+- Pośredni typ odwołania ( `type` % lub `type`&) do typu otaczającego.
 
-- Operatory pośrednie odwołanie do typu (`type`^ % lub `type`^ &) do uchwytu.
+- Pośredniego typu odwołania ( `type` ^% lub `type` ^&) do dojścia.
 
 Można zdefiniować następujące operatory:
 
-|Operator|Formularze jedno/dwuargumentowy?|
+|Operator|Formularze jednoargumentowe/binarne?|
 |--------------|--------------------------|
 |!|Jednoargumentowy|
-|!=|plików binarnych|
-|%|plików binarnych|
-|&|Jednoargumentowy i danych binarnych|
-|&&|plików binarnych|
-|*|Jednoargumentowy i danych binarnych|
-|+|Jednoargumentowy i danych binarnych|
+|!=|Binarne|
+|%|Binarne|
+|&|Jednoargumentowy i binarny|
+|&&|Binarne|
+|*|Jednoargumentowy i binarny|
+|+|Jednoargumentowy i binarny|
 |++|Jednoargumentowy|
-|,|plików binarnych|
-|-|Jednoargumentowy i danych binarnych|
+|,|Binarne|
+|-|Jednoargumentowy i binarny|
 |--|Jednoargumentowy|
 |->|Jednoargumentowy|
-|/|plików binarnych|
-|<|plików binarnych|
-|<<|plików binarnych|
-|\<=|plików binarnych|
-|=|plików binarnych|
-|==|plików binarnych|
-|>|plików binarnych|
-|>=|plików binarnych|
-|>>|plików binarnych|
-|^|plików binarnych|
-|false|Jednoargumentowy|
+|/|Binarne|
+|<|Binarne|
+|<<|Binarne|
+|\<=|Binarne|
+|=|Binarne|
+|==|Binarne|
+|>|Binarne|
+|>=|Binarne|
+|>>|Binarne|
+|^|Binarne|
+|fałsz|Jednoargumentowy|
 |true|Jednoargumentowy|
-|&#124;|plików binarnych|
-|&#124;&#124;|plików binarnych|
+|&#124;|Binarne|
+|&#124;&#124;|Binarne|
 |~|Jednoargumentowy|
 
-## <a name="example"></a>Przykład
+## <a name="example-user-defined-operators"></a>Przykład: zdefiniowane przez użytkownika operatory
 
 ```cpp
 // mcppv2_user-defined_operators.cpp
@@ -135,9 +135,9 @@ int main() {
 -3
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-operator-synthesis"></a>Przykład: synteza operatora
 
-W poniższym przykładzie pokazano syntezy operatora, który jest dostępny tylko jeśli używasz **/CLR** do skompilowania. Syntezy operatora tworzy formularz przypisania operatora binarnego, jeśli nie jest zdefiniowany, gdzie po lewej stronie operatora przypisania ma typ CLR.
+Poniższy przykład demonstruje syntezę operatora, która jest dostępna tylko w przypadku użycia opcji **/CLR** do kompilowania. Synteza operatora tworzy formularz przypisania operatora binarnego, jeśli nie jest on zdefiniowany, gdzie lewa strona operatora przypisania ma typ CLR.
 
 ```cpp
 // mcppv2_user-defined_operators_2.cpp
@@ -163,6 +163,6 @@ int main() {
 30
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

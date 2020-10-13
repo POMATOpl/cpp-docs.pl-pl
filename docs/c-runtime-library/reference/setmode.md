@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915809"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008416"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -74,7 +74,7 @@ Funkcja **_setmode** ustawia tryb translacji pliku *, który jest* określony pr
 Możesz również przekazać **_O_U16TEXT**, **_O_U8TEXT**lub **_O_WTEXT** , aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
 
 > [!CAUTION]
-> Tryb Unicode jest przeznaczony dla szerokiej funkcji drukowania (na `wprintf`przykład) i nie jest obsługiwany w przypadku wąskich funkcji drukowania. Użycie wąskiej funkcji drukowania w strumieniu trybu Unicode wyzwala potwierdzenie.
+> Tryb Unicode jest przeznaczony dla szerokiej funkcji drukowania (na przykład `wprintf` ) i nie jest obsługiwany w przypadku wąskich funkcji drukowania. Użycie wąskiej funkcji drukowania w strumieniu trybu Unicode wyzwala potwierdzenie.
 
 **_setmode** jest zwykle używany do modyfikacji domyślnego trybu translacji **stdin** i **stdout**, ale można go użyć w dowolnym pliku. Jeśli zastosujesz **_setmode** do deskryptora pliku dla strumienia, wywołaj **_setmode** przed wykonaniem jakichkolwiek operacji wejścia lub wyjścia strumienia.
 
@@ -87,11 +87,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_setmode**|\<IO. h>|\<fcntl. h>|
+|**_setmode**|\<io.h>|\<fcntl.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-use-_setmode-to-change-stdin"></a>Przykład: Użyj _setmode, aby zmienić stdin
 
 ```C
 // crt_setmode.c
@@ -119,7 +119,7 @@ int main( void )
 'stdin' successfully changed to binary mode
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-use-_setmode-to-change-stdout"></a>Przykład: Użyj _setmode, aby zmienić stdout
 
 ```C
 // crt_setmodeunicode.c

@@ -56,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: e6ed3d146458f514691fe0b20a4c88ffebb5f877
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075767"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008688"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -155,7 +155,7 @@ Specyfikacja formatu.
 *argptr*<br/>
 Wskaźnik na listę argumentów.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
@@ -206,7 +206,7 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze
 
 Funkcje **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** i **_vsnwprintf_l** są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-use-wide-characters-with-_vsnwprintf"></a>Przykład: Użyj znaków dwubajtowych z `_vsnwprintf()`
 
 ```C
 // crt_vsnwprintf.c
@@ -248,7 +248,7 @@ nSize: -1, buff: Hi there!
 
 Zachowanie zmienia się w przypadku użycia vsnprintf zamiast parametrów z wąskim ciągiem. Parametr *Count* może być rozmiarem całego buforu, a wartością zwracaną jest liczba znaków, które zostałyby wprowadzone, jeśli *Liczba* była wystarczająco duża:
 
-## <a name="example"></a>Przykład
+## <a name="example-use-vsnprintf-with-narrow-strings"></a>Przykład: Użyj `vsnprintf()` z wąskimi ciągami
 
 ```C
 // crt_vsnprintf.c
@@ -284,7 +284,7 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>

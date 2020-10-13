@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cd2ec4e22d94c42432a1fc3e39afd5540302d22
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213232"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008211"
 ---
 # `selectany`
 
@@ -37,7 +37,7 @@ Element danych globalnych można zwykle zainicjować tylko raz w projekcie EXE l
 > [!NOTE]
 > **`selectany`** mogą być stosowane tylko do rzeczywistej inicjalizacji elementów danych globalnych, które są widoczne na zewnątrz.
 
-## <a name="example"></a>Przykład
+## <a name="example-selectany-attribute"></a>Przykład: `selectany` Attribute
 
 Ten kod pokazuje, jak używać **`selectany`** atrybutu:
 
@@ -71,7 +71,7 @@ int i;
 __declspec(selectany) X x(1);
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-use-selectany-attribute-to-ensure-data-comdat-folding"></a>Przykład: Użyj `selectany` atrybutu, aby zapewnić COMDAT danych
 
 Ten kod pokazuje, jak używać **`selectany`** atrybutu w celu zapewnienia, że dane COMDAT są również używane w przypadku korzystania z [`/OPT:ICF`](../build/reference/opt-optimizations.md) opcji konsolidatora. Należy zauważyć, że dane muszą być oznaczone **`selectany`** i umieszczone w **`const`** sekcji (ReadOnly). Należy jawnie określić sekcję tylko do odczytu.
 
@@ -88,7 +88,7 @@ int main() {
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [`__declspec`](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

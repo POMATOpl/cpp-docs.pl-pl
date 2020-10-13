@@ -5,12 +5,12 @@ helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: 9cf42df0926022f93633a6b5b1365ae9fc646a1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f6842e3093a577289c0c4432d96298e3c7b2bb92
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213921"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008506"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Porady: Użyj obsługi wyjątków, aby przerwać pętlę równoległą
 
@@ -18,19 +18,19 @@ W tym temacie pokazano, jak napisać algorytm wyszukiwania dla podstawowej struk
 
 [Anulowanie](cancellation-in-the-ppl.md) tematu wyjaśnia rolę anulowania w bibliotece wzorców równoległych. Korzystanie z obsługi wyjątków jest mniej wydajnym sposobem anulowania równoległej pracy niż użycie metody [concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) i [concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . Jednak jednym scenariuszem, w którym użycie obsługi wyjątków do anulowania pracy jest odpowiednie, jest wywołanie do biblioteki innej firmy, która korzysta z zadań lub algorytmów równoległych, ale nie zapewnia `task_group` `structured_task_group` obiektu lub do anulowania.
 
-## <a name="example"></a>Przykład
+## <a name="example-basic-tree-type"></a>Przykład: podstawowy typ drzewa
 
 Poniższy przykład przedstawia `tree` Typ podstawowy, który zawiera element danych i listę węzłów podrzędnych. W poniższej sekcji przedstawiono treść `for_all` metody, która rekurencyjnie wykonuje funkcję roboczą na każdym węźle podrzędnym.
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-perform-work-in-parallel"></a>Przykład: wykonywanie pracy równolegle
 
 Poniższy przykład przedstawia `for_all` metodę. Używa algorytmu [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) do wykonywania funkcji pracy w każdym węźle drzewa równolegle.
 
 [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example--search-the-tree-for-a-value"></a>Przykład: Wyszukaj wartość w drzewie drzewa.
 
 W poniższym przykładzie pokazano `search_for_value` funkcję, która wyszukuje wartość z podanego `tree` obiektu. Ta funkcja przekazuje do `for_all` metody funkcja pracy, która zgłasza, gdy odnajdzie węzeł drzewa, który zawiera podaną wartość.
 
@@ -40,7 +40,7 @@ Gdy funkcja robocza dostarczana do grupy zadań zgłasza wyjątek, środowisko u
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
-## <a name="example"></a>Przykład
+## <a name="example-create-and-search-a-tree-in-parallel"></a>Przykład: Tworzenie i przeszukiwanie drzewa równolegle
 
 Poniższy przykład tworzy `tree` obiekt i wyszukuje kilka wartości równolegle. `build_tree`Funkcja jest przedstawiona w dalszej części tego tematu.
 
@@ -48,7 +48,7 @@ Poniższy przykład tworzy `tree` obiekt i wyszukuje kilka wartości równolegle
 
 W poniższym przykładzie zastosowano algorytm [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) , aby wyszukiwać wartości równolegle. Aby uzyskać więcej informacji na temat tego algorytmu, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-finished-exception-handling-code-sample"></a>Przykład: zakończono przykład kodu obsługi wyjątków
 
 W poniższym przykładzie zastosowano obsługę wyjątków w celu wyszukania wartości w podstawowej strukturze drzewa.
 
@@ -68,7 +68,7 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 > **cl.exe/EHsc Task-Tree-Search. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Anulowanie w PPL](cancellation-in-the-ppl.md)<br/>
 [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>

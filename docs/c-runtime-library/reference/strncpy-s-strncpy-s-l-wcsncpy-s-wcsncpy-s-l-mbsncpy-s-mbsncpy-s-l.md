@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919295"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008277"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -176,10 +176,10 @@ Zero, jeśli zakończyło się pomyślnie, **STRUNCATE** Jeśli wystąpiło obci
 
 |*strDest*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|ile|ile|**EINVAL**|nie zmodyfikowano|
-|ile|ile|**NULL**|**EINVAL**|*strDest*[0] ustaw na 0|
-|ile|0|ile|**EINVAL**|nie zmodyfikowano|
-|nie **ma wartości null**|za mały|ile|**ERANGE**|*strDest*[0] ustaw na 0|
+|**NULL**|dowolny|dowolny|**EINVAL**|nie zmodyfikowano|
+|dowolny|dowolny|**NULL**|**EINVAL**|*strDest*[0] ustaw na 0|
+|dowolny|0|dowolny|**EINVAL**|nie zmodyfikowano|
+|nie **ma wartości null**|za mały|dowolny|**ERANGE**|*strDest*[0] ustaw na 0|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -187,7 +187,7 @@ Te funkcje próbują skopiować pierwsze *D* znaków z *strSource* do *strDest*,
 
 Występuje wyjątek w powyższym akapicie. Jeśli *Liczba* jest **_TRUNCATE**, wtedy, gdy *strSource* się dopasowanie do *strDest* jest kopiowana, podczas gdy nadal opuszcza miejsce dla kończącej wartości null, która jest zawsze dołączana.
 
-Na przykład:
+Przykład:
 
 ```C
 char dst[5];
@@ -233,13 +233,13 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncpy_s**, **_strncpy_s_l**|\<> String. h|
-|**wcsncpy_s**, **_wcsncpy_s_l**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring. h>|
+|**strncpy_s**, **_strncpy_s_l**|\<string.h>|
+|**wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> lub \<wchar.h>|
+|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-copy-chars-to-a-buffer"></a>Przykład: Kopiuj znaki do buforu
 
 ```cpp
 // crt_strncpy_s_1.cpp
@@ -366,7 +366,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-strncpy-and-strncpy_s"></a>Przykład: strncpy i strncpy_s
 
 ```C
 // crt_strncpy_s_2.c
@@ -414,7 +414,7 @@ After strncpy_s (with null-termination):
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

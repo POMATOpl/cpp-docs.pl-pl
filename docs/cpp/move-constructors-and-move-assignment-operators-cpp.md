@@ -4,12 +4,12 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: e57f67eeca93572b26ee03033cbe4dcf90431f78
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550774"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008876"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory przenoszące i przenoszące operatory przypisania (C++)
 
@@ -168,7 +168,7 @@ W poniższych procedurach opisano, jak napisać Konstruktor przenoszący i opera
     return *this;
     ```
 
-## <a name="example"></a>Przykład
+## <a name="example-complete-move-constructor-and-assignment-operator"></a>Przykład: Ukończ Konstruktor przenoszenia i operator przypisania
 
 Poniższy przykład pokazuje kompletny Konstruktor przenoszenia i operator przypisania przenoszenia dla `MemoryBlock` klasy:
 
@@ -217,7 +217,7 @@ MemoryBlock& operator=(MemoryBlock&& other) noexcept
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-use-move-semantics-to-improve-performance"></a>Przykład użycia semantyki przenoszenia w celu zwiększenia wydajności
 
 Poniższy przykład pokazuje, jak Semantyka przenoszenia może zwiększyć wydajność aplikacji. Przykład dodaje dwa elementy do obiektu Vector, a następnie wstawia nowy element między dwoma istniejącymi elementami. `vector`Klasa używa semantyki przenoszenia do wydajnego wykonywania operacji wstawiania przez przeniesienie elementów wektora zamiast ich kopiowania.
 
@@ -309,7 +309,7 @@ MemoryBlock(MemoryBlock&& other) noexcept
 
 Funkcja [std:: Move](../standard-library/utility-functions.md#move) konwertuje lvalue `other` na rvalue.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklarator odwołania do wartości R: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
 [std:: Move](../standard-library/utility-functions.md#move)

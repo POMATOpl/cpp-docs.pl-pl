@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 81dd7483c49a699ac53ea53d33481fa6539d484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c3ed59262ec5ad061572d23c1166b2153cb16ca
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223658"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008579"
 ---
 # <a name="new-operator-c"></a>new — Operator (C++)
 
@@ -70,7 +70,7 @@ Określa typ do przydzielenia; może to być typ wbudowany lub zdefiniowany prze
 *skład*<br/>
 Udostępnia wartość dla zainicjowanego obiektu. Nie można określić inicjatorów dla tablic. **`new`** Operator utworzy tablice obiektów tylko wtedy, gdy Klasa ma Konstruktor domyślny.
 
-## <a name="example"></a>Przykład
+## <a name="example-allocate-and-free-a-character-array"></a>Przykład: Alokuj i zwolnij tablicę znaków
 
 Poniższy przykład kodu przydziela tablicę znaków i obiekt klasy `CName` , a następnie zwalnia je.
 
@@ -115,7 +115,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-new-operator"></a>Przykład: `new` operator
 
 Jeśli używasz nowej postaci rozmieszczenia **`new`** operatora, formularz z argumentami oprócz rozmiaru alokacji, kompilator nie obsługuje formy umieszczania **`delete`** operatora, jeśli Konstruktor zgłosi wyjątek. Na przykład:
 
@@ -252,7 +252,7 @@ T *TObject =::new TObject;
 
 Operator rozpoznawania zakresu ( `::` ) wymusza użycie **`new`** operatora globalnego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

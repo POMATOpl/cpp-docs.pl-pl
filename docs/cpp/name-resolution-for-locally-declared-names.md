@@ -2,18 +2,18 @@
 title: Rozpoznawanie nazwy dla lokalnie zadeklarowanych nazw
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
-ms.openlocfilehash: 2c75c09308f6ba07039de4d2811b9bedaba71e44
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0216154b55e9742c2c4f3f5df7e6d612e16ec9b1
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177901"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008922"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Rozpoznawanie nazwy dla lokalnie zadeklarowanych nazw
 
 Sama nazwa szablonu może być określona z argumentami szablonu lub też bez nich. W zakresie szablonu klasy sama nazwa odnosi się do szablonu. W zakresie specjalizacji lub częściowej specjalizacji szablonu sama nazwa odnosi się do specjalizacji lub częściowej specjalizacji. Można się również odwoływać do innych specjalizacji lub częściowych specjalizacji szablonu, z argumentami odpowiedniego szablonu.
 
-## <a name="example"></a>Przykład
+## <a name="example-specialization-versus-partial-specialization"></a>Przykład: specjalizacja a Częściowa specjalizacja
 
 Poniższy kod pokazuje, że nazwa szablonu klasy A jest interpretowana inaczej w zakresie specjalizacji lub częściowej specjalizacji.
 
@@ -35,7 +35,7 @@ template<> class A<int> {
 };
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-name-conflict-between-template-parameter-and-object"></a>Przykład: konflikt nazw między parametrem szablonu a obiektem
 
 W przypadku konfliktu nazw między parametrem szablonu i innym obiektem, parametr szablonu może lub nie może być ukryty. Następujące reguły pomogą określić pierwszeństwo.
 
@@ -55,7 +55,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-define-member-function-outside-class-template"></a>Przykład: Zdefiniuj funkcję składową poza szablonem klasy
 
 Podczas definiowania funkcji skkładowych szablonu poza szablonem klasy nazwy parametru może używać inny szablon. Jeśli definicja funkcji członkowskiej szablonu używa innej nazwy parametru szablonu, niż ta zgłoszona, a nazwa używana w definicji powoduje konflikt z innym elementem członkowskim deklaracji, element członkowski w deklaracji szablonu ma pierwszeństwo.
 
@@ -90,7 +90,7 @@ int main() {
 Z::Z()
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-define-template-or-member-function-outside-namespace"></a>Przykład: Zdefiniuj szablon lub funkcję członkowską poza przestrzenią nazw
 
 Podczas definiowania funkcji szablonu lub funkcji członkowskiej poza przestrzenią nazw, w której został zadeklarowany szablon, argument szablonu ma pierwszeństwo przed nazwami innych elementów członkowskich przestrzeni nazw.
 
@@ -124,7 +124,7 @@ int main() {
 C<T>::g
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-base-class-or-member-name-hides-template-argument"></a>Przykład: Klasa bazowa lub nazwa składowa ukrywa argument szablonu
 
 W definicjach, które nie należą do deklaracji klasy szablonu, jeśli klasa szablonu ma klasę podstawową, która nie zależy od argumentu szablonu i jeśli klasa podstawowa lub jedna z jej składowych ma taką samą nazwę jak argument szablonu, wówczas klasa podstawowa lub nazwa składowej ukrywa argument szablonu.
 

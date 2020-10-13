@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4f42d6f20da819cf325cad06a04878b46e52352a
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509421"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008681"
 ---
 # <a name="using-dynamic-accessors"></a>Używanie dynamicznych metod dostępu
 
@@ -22,7 +22,7 @@ Przykład [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/V
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) umożliwia dostęp do źródła danych, gdy nie ma żadnej znajomości schematu bazy danych (struktury podstawowej bazy danych). `CDynamicAccessor` Metody pobierają informacje o kolumnie, takie jak nazwy kolumn, liczba i typ danych. Te informacje o kolumnie służą do dynamicznego tworzenia akcesora w czasie wykonywania. Informacje o kolumnie są przechowywane w buforze, który jest tworzony i zarządzany przez tę klasę. Pobierz dane z buforu przy użyciu metody [GetValue](./cdynamicaccessor-class.md#getvalue) .
 
-## <a name="example"></a>Przykład
+## <a name="example-cdynamic-accessors"></a>Przykład: metody dostępu CDynamic
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -94,7 +94,7 @@ int main(int argc, char* argv[] )
 
 Użyj `CDynamicStringAccessor` metod, aby uzyskać informacje o kolumnie. Te informacje o kolumnie służą do dynamicznego tworzenia akcesora w czasie wykonywania. Informacje o kolumnie są przechowywane w buforze utworzonym i zarządzanym przez tę klasę. Pobierz dane z buforu przy użyciu [CDynamicStringAccessor:: GetString](./cdynamicstringaccessor-class.md#getstring) lub Zapisz go w buforze przy użyciu [CDynamicStringAccessor:: SetString](./cdynamicstringaccessor-class.md#setstring).
 
-## <a name="example"></a>Przykład
+## <a name="example-cdynamicstringaccessor"></a>Przykład: CDynamicStringAccessor
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: c7b219ddad939aab7d6093787dc2fe4131ccced5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cf33014c455bef145f7b7ec7ee353f27d1157f24
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225166"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008595"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrów atrybutu  (C++/CLI i C++/CX)
 
@@ -32,7 +32,7 @@ Wartości przesyłane do atrybutów muszą być znane kompilatorowi w czasie kom
 
 - **`wchar_t`**
 
-- **`char*`** lub `wchar_t*` lub`System::String*`
+- **`char*`** lub `wchar_t*` lub `System::String*`
 
 - `System::Type ^`
 
@@ -40,7 +40,7 @@ Wartości przesyłane do atrybutów muszą być znane kompilatorowi w czasie kom
 
 - **`enum`**
 
-## <a name="example"></a>Przykład
+## <a name="example-attribute-parameter-types"></a>Przykład: typy parametrów atrybutów
 
 ### <a name="code"></a>Kod
 
@@ -65,7 +65,7 @@ ref struct MyStruct {
 };
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-unnamed-arguments-precede-named-arguments"></a>Przykład: argumenty nienazwane poprzedzające nazwane argumenty
 
 ### <a name="description"></a>Opis
 
@@ -99,7 +99,7 @@ ref class ClassC {};   // Positional argument
 ref class ClassD {};   // Positional and named
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-one-dimensional-array-attribute-parameter"></a>Przykład: jednowymiarowy parametr atrybutu tablicy
 
 ### <a name="description"></a>Opis
 
@@ -122,6 +122,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty zdefiniowane przez użytkownika](user-defined-attributes-cpp-component-extensions.md)

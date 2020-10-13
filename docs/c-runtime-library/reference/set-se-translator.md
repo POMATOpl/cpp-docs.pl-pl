@@ -26,12 +26,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: f1c9446f9c3f0d637ea53d54584258959677b339
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232420"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008625"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -84,7 +84,7 @@ W przypadku korzystania z **_set_se_translator** z kodu zarządzanego (kod skomp
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Przykład
+## <a name="example-catch-__try-exception-error"></a>Przykład: błąd wyjątku przechwytywania __try
 
 Ten przykład otacza wywołania w celu ustawienia translatora wyjątków strukturalnych i przywrócenia starego obiektu w klasie RAII `Scoped_SE_Translator` . Ta klasa umożliwia wprowadzenie translatora specyficznego dla zakresu jako pojedynczej deklaracji. Destruktor klasy przywraca oryginalny translator, gdy kontrolka opuszcza zakres.
 
@@ -157,7 +157,7 @@ In __finally
 Caught a __try exception, error c0000094.
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-catch-se_exception-error"></a>Przykład: błąd SE_Exception przechwytywania
 
 Chociaż funkcje zapewniane przez **_set_se_translator** nie są dostępne w kodzie zarządzanym, można użyć tego mapowania w kodzie natywnym, nawet jeśli ten kod natywny jest w kompilacji pod przełącznikiem **/CLR** , o ile kod natywny jest wskazywany przy użyciu `#pragma unmanaged` . Jeśli wystąpi wyjątek strukturalny w kodzie zarządzanym, który ma zostać zamapowany, kod generujący i obsługujący wyjątek musi być oznaczony `#pragma unmanaged` . Poniższy kod pokazuje możliwe użycie. Aby uzyskać więcej informacji, zobacz [dyrektywy pragma i słowo kluczowe __pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
@@ -230,7 +230,7 @@ int main() {
 Caught SE_Exception, error c0000094
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury obsługi wyjątków](../../c-runtime-library/exception-handling-routines.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>

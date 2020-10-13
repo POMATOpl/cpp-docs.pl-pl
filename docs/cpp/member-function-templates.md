@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8514c8ffe630f5bc44d8d287d6ccf08c7755e3a0
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177984"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008563"
 ---
 # <a name="member-function-templates"></a>Szablony funkcji członkowskich
 
@@ -17,7 +17,7 @@ Termin szablon elementu członkowskiego odwołuje się zarówno do szablonów fu
 
 Funkcje składowe mogą być szablonami funkcji w kilku kontekstach. Wszystkie funkcje szablonów klas są ogólne, ale nie są określane jako szablony elementów członkowskich lub szablony funkcji składowych. Jeśli te funkcje elementu członkowskiego korzystają z własnych argumentów szablonu, są one uznawane za szablony funkcji składowych.
 
-## <a name="example"></a>Przykład
+## <a name="example-declare-member-function-templates"></a>Przykład: Zadeklaruj szablony funkcji składowych
 
 Szablony funkcji członkowskich klas nienależących do szablonu lub szablonu są deklarowane jako szablony funkcji ze swoimi parametrami szablonu.
 
@@ -36,7 +36,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-member-function-template-of-template-class"></a>Przykład: element członkowski szablonu klasy szablonu
 
 Poniższy przykład pokazuje szablon funkcji składowej klasy szablonu.
 
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-define-member-templates-outside-class"></a>Przykład: Definiowanie szablonów elementów członkowskich poza klasą
 
 ```cpp
 // defining_member_templates_outside_class.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-templated-user-defined-conversion"></a>Przykład: konwersja zdefiniowana przez użytkownika
 
 Lokalne klasy nie mogą mieć szablonów składowych.
 

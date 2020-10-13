@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: f6d831ac8b86be8a6669e8ee6c66da64507d129f
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2d42803b5eca7a43f122d209b7d9e2d4e45c38de
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590189"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008936"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potencjalne przekazywanie błędów obiektów CRT w poprzek granic DLL
 
@@ -33,7 +33,7 @@ Ponieważ każda kopia biblioteki CRT ma swój własny Menedżer sterty, przydzi
 
 Biblioteka DLL i jej klienci zwykle używają tej samej kopii biblioteki CRT tylko wtedy, gdy oba są połączone w czasie ładowania do tej samej wersji biblioteki DLL CRT. Ponieważ wersja biblioteki uniwersalnej biblioteki CRT używanej przez program Visual Studio 2015 lub nowsza w systemie Windows 10 jest teraz centralnie wdrożonym składnikiem systemu Windows (ucrtbase.dll), jest to taka sama dla aplikacji skompilowanych w programie Visual Studio 2015 i nowszych wersjach. Jednak nawet gdy kod CRT jest identyczny, nie można przyznać pamięci przystosowanej w jednej stercie do składnika korzystającego z innego stosu.
 
-## <a name="example"></a>Przykład
+## <a name="example-pass-file-handle-across-dll-boundary"></a>Przykład: Przekaż dojście pliku między granicami DLL
 
 ### <a name="description"></a>Opis
 
@@ -75,7 +75,7 @@ int main(void)
 this is a string
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-pass-environment-variables-across-dll-boundary"></a>Przykład: przekazywanie zmiennych środowiskowych między granicami bibliotek DLL
 
 ### <a name="description"></a>Opis
 
