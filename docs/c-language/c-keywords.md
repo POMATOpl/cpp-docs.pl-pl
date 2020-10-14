@@ -1,18 +1,18 @@
 ---
 title: Słowa kluczowe języka C
 description: Słowa kluczowe w standardowych rozszerzeniach kompilatora C i Microsoft C.
-ms.date: 09/12/2020
+ms.date: 10/12/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: f459b81c2b3f314218108f3f367eec0c1bf17f26
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: cb255e1d7ce6bc15bf13bc1e3152bc3464ea5ec2
+ms.sourcegitcommit: 651348f8cd92ab0d52f09e9225a7eb41562559db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075741"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059798"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 
@@ -119,7 +119,8 @@ Poniższe słowa kluczowe i specjalne identyfikatory są rozpoznawane przez komp
         **`__try`**<sup>5000</sup>\
         **`dllexport`**<sup>czwart</sup>\
         **`__inline`**<sup>5000</sup>\
-        **`__leave`**<sup>5000</sup>
+        **`__leave`**<sup>5000</sup>\
+        **`static_assert`**<sup>ust</sup>
     :::column-end:::
 :::row-end:::
 
@@ -129,10 +130,12 @@ Poniższe słowa kluczowe i specjalne identyfikatory są rozpoznawane przez komp
 
 <sup>5</sup> aby zapewnić zgodność z poprzednimi wersjami, te słowa kluczowe są dostępne zarówno z dwoma wiodącymi podkreśleniami, jak i z pojedynczym znakiem wiodącym po włączeniu rozszerzeń firmy Microsoft.
 
+<sup>6</sup> gdy <Assert. h> nie jest uwzględniony, kompilator Microsoft Visual C jest mapowany **`static_assert`** na **`_Static_assert`** słowo kluczowe C11.
+
 Rozszerzenia Microsoft są domyślnie włączone. Aby pomóc w tworzeniu kodu przenośnego, można wyłączyć rozszerzenia Microsoft przez określenie opcji [/za \( disable Language Extensions (wyłączając)](../build/reference/za-ze-disable-language-extensions.md) w trakcie kompilacji. W przypadku korzystania z tej opcji niektóre słowa kluczowe specyficzne dla firmy Microsoft są wyłączone.
 
 Po włączeniu rozszerzeń Microsoft, możesz używać słów kluczowych wymienionych powyżej w swoich programach. W przypadku zgodności ze standardami większość tych słów kluczowych jest poprzedzona podwójnym podkreśleniem. Cztery wyjątki, **`dllexport`** ,, **`dllimport`** **`naked`** i **`thread`** , są używane tylko z **`__declspec`** i nie wymagają wiodącego podwójnego podkreślenia. W celu zapewnienia zgodności z poprzednimi wersjami, wersje z pojedynczym podkreśleniem reszty słów kluczowych są obsługiwane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy języka C](../c-language/elements-of-c.md)
