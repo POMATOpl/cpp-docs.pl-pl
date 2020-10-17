@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 09418991e805e494c1d79ef31980bbec66a2e172
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126464"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135570"
 ---
 # <a name="invalid_compute_domain-class"></a>invalid_compute_domain — Klasa
 
@@ -25,11 +25,11 @@ Wyjątek, który jest generowany, gdy środowisko uruchomieniowe nie może uruch
 class invalid_compute_domain : public runtime_exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor invalid_compute_domain](#ctor)|Inicjuje nowe wystąpienie klasy `invalid_compute_domain`.|
 
@@ -47,11 +47,11 @@ class invalid_compute_domain : public runtime_exception;
 
 **Przestrzeń nazw:** Współbieżności
 
-## <a name="ctor"></a>invalid_compute_domain
+## <a name="invalid_compute_domain"></a><a name="ctor"></a> invalid_compute_domain
 
 Inicjuje nowe wystąpienie klasy.
 
-## <a name="syntax"></a>Składnia
+### <a name="syntax"></a>Składnia
 
 ```cpp
 explicit invalid_compute_domain(
@@ -65,9 +65,9 @@ invalid_compute_domain() throw();
 *_Message*<br/>
 Opis błędu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wystąpienie klasy `invalid_compute_domain`
+Wystąpienie `invalid_compute_domain` klasy
 
 ## <a name="see-also"></a>Zobacz też
 

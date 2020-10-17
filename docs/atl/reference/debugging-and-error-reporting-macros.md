@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833481"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135544"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
 
@@ -94,7 +94,7 @@ Wyrażenie (w tym wskaźniki), które ma wartość różną od zera lub 0.
 
 W kompilacjach debugowania ATLASSERT oblicza *booleanExpression* i generuje raport debugowania, gdy wynik ma wartość false.
 
-## <a name="requirements"></a>Wymagania
+### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atldef. h
 
@@ -131,7 +131,7 @@ Różnica między ATLENSURE i ATLASSERT polega na tym, że ATLENSURE zgłasza wy
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Wymagania
+### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** AFX. h
 
@@ -156,7 +156,7 @@ W kompilacjach wydań po prostu zwraca E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Wymagania
+### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** ATLTRACE. h
 
@@ -283,7 +283,7 @@ ATLTRACE i ATLTRACE2 mają takie samo zachowanie, ATLTRACE jest uwzględniana w 
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)

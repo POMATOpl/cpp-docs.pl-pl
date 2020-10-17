@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218029"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135531"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfejsy ogólne (C++/CLI)
 
@@ -36,7 +36,7 @@ Aby uzyskać więcej informacji na temat interfejsów, zobacz [Klasa interfejsu]
 Obowiązkowe Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na temat atrybutów i klas atrybutów, zobacz **atrybuty**.
 
 *klucz klasy*<br/>
-**`class`** oraz**`typename`**
+**`class`** oraz **`typename`**
 
 *identyfikatory parametrów typu*<br/>
 Lista identyfikatorów rozdzielonych przecinkami.
@@ -59,7 +59,7 @@ Deklaracje elementów członkowskich interfejsu.
 *Deklaratory*<br/>
 Obowiązkowe Deklaracje zmiennych na podstawie tego typu.
 
-## <a name="example"></a>Przykład
+## <a name="example-how-to-declare-and-instantiate-a-generic-interface"></a>Przykład: jak zadeklarować i utworzyć wystąpienie interfejsu ogólnego
 
 Poniższy przykład ilustruje sposób deklarowania i tworzenia wystąpienia interfejsu ogólnego. W tym przykładzie ogólny interfejs `IList<ItemType>` jest zadeklarowany. Są one następnie zaimplementowane przez dwie klasy ogólne `List1<ItemType>` i `List2<ItemType>` , z różnymi implementacjami.
 
@@ -236,7 +236,7 @@ Array List
 List2
 ```
 
-## <a name="example"></a>Przykład
+## <a name="example-declare-a-generic-interface"></a>Przykład: deklarowanie interfejsu ogólnego
 
 Ten przykład deklaruje ogólny interfejs, `IMyGenIface` i dwa interfejsy inne niż ogólne, `IMySpecializedInt` i `ImySpecializedString` , które są specjalizacją `IMyGenIface` . Dwa wyspecjalizowane interfejsy są następnie implementowane przez dwie klasy `MyIntClass` i `MyStringClass` . W przykładzie przedstawiono sposób specjalizacji interfejsów ogólnych, tworzenia wystąpienia ogólnych i nieogólnych interfejsów oraz wywoływania jawnie zaimplementowanych elementów członkowskich w interfejsach.
 
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

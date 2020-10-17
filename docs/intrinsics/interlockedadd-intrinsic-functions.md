@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c611a22e696b9dda0c6910cd4aac84399cc7d20a
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683900"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135557"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedAdd
 
@@ -109,7 +109,7 @@ Wersje tych funkcji z `_acq` `_rel` sufiksami lub wykonują komplementarne Dodaw
 
 Te procedury są dostępne tylko jako elementy wewnętrzne.
 
-## <a name="examples"></a>Przykłady
+## <a name="example-_interlockedadd"></a>Przykład: `_InterlockedAdd`
 
 ```cpp
 // interlockedadd.cpp
@@ -130,11 +130,13 @@ int main()
 }
 ```
 
-## <a name="output"></a>Dane wyjściowe
+## <a name="output-_interlockedadd"></a>Rozdzielczości `_InterlockedAdd`
 
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
+
+## <a name="example-_interlockedadd64"></a>Przykład: `_InterlockedAdd64`
 
 ```cpp
 // interlockedadd64.cpp
@@ -158,7 +160,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Dane wyjściowe
+## <a name="output-_interlockedadd64"></a>Rozdzielczości `_InterlockedAdd64`
 
 ```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
@@ -167,7 +169,7 @@ Return value: ffff00ffffffff
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
