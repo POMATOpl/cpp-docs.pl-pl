@@ -1,6 +1,7 @@
 ---
 title: Ostrzeżenia kompilatora — od C4800 do C5999
-ms.date: 04/21/2019
+description: Tabela ostrzeżeń kompilatora języka Microsoft C/C++ C4800 do C5999.
+ms.date: 10/18/2020
 f1_keywords:
 - C4808
 - C4809
@@ -193,14 +194,27 @@ helpviewer_keywords:
 - C5205
 - C5206
 - C5207
-ms.openlocfilehash: 71a924982a1375f378e6935859aae05f0298bd22
-ms.sourcegitcommit: 00af3df3331854b23693ee844e5e7c10c8b05a90
+- C5209
+- C5210
+- C5211
+- C5212
+- C5213
+- C5214
+- C5215
+- C5216
+- C5217
+- C5218
+- C5219
+- C5220
+- C5221
+ms.openlocfilehash: 1092aca672c41c21bbdf5e52593e70c0c0e06cdc
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491404"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176253"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora — od C4800 do C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Ostrzeżenia kompilatora C4800 do C5999
 
 Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzegawczych generowanych przez kompilator.
 
@@ -208,7 +222,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 
 ## <a name="warning-messages"></a>Komunikaty ostrzegawcze
 
-| Ostrzeżenie | Komunikat |
+| Ostrzeżenie | Wiadomość |
 |--|--|
 | [Ostrzeżenie kompilatora (poziom 4) C4800](compiler-warning-level-3-c4800.md) | Niejawna konwersja z "*Type*" na `bool` . Możliwa utrata informacji |
 | [Ostrzeżenie kompilatora (poziom 1) C4803](compiler-warning-level-1-c4803.md) | "*Metoda*": Metoda podniesienia ma inną klasę magazynu od zdarzenia, "*Event*" |
@@ -216,8 +230,8 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | [Ostrzeżenie kompilatora (poziom 1) C4805](compiler-warning-level-1-c4805.md) | "*Operation*": niebezpieczne połączenie typu "*Type1*" i typu "*Type2*" w operacji |
 | [Ostrzeżenie kompilatora (poziom 1) C4806](compiler-warning-level-1-c4806.md) | "*Operation*": niebezpieczna operacja: żadna wartość typu "*Type1*" podwyższana do typu "*Type2*" nie może być równa podanych stałej |
 | [Ostrzeżenie kompilatora (poziom 1) C4807](compiler-warning-level-1-c4807.md) | "*Operation*": niebezpieczne połączenie typu "*Type1*" i podpisane pole bitowe typu "*Type2*" |
-| Ostrzeżenie kompilatora (poziom 1) C4808 | `case`wartość "*Value*" nie jest prawidłową wartością dla `switch` warunku typu " `bool` ". |
-| Ostrzeżenie kompilatora (poziom 1) C4809 | `switch`instrukcja ma nadmiarową `default` etykietę ""; wszystkie możliwe `case` etykiety "" są podawane |
+| Ostrzeżenie kompilatora (poziom 1) C4808 | `case` wartość "*Value*" nie jest prawidłową wartością dla `switch` warunku typu " `bool` ". |
+| Ostrzeżenie kompilatora (poziom 1) C4809 | `switch` instrukcja ma nadmiarową `default` etykietę ""; wszystkie możliwe `case` etykiety "" są podawane |
 | [Ostrzeżenie kompilatora (poziom 1) C4810](compiler-warning-level-1-c4810.md) | wartość `pragma pack(show)` = = n |
 | [Ostrzeżenie kompilatora (poziom 1) C4811](compiler-warning-level-1-c4811.md) | wartość wartości `pragma conform(forScope, show)`  ==  *value* |
 | [Ostrzeżenie kompilatora (poziom 1) C4812](compiler-warning-level-1-c4812.md) | przestarzała deklaracja stylu: zamiast niej użyj "*new_syntax*" |
@@ -228,16 +242,16 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | [Ostrzeżenie kompilatora (poziom 4) C4820](compiler-warning-level-4-c4820.md) | dopełnienie bajtów "*Bytes*" po konstrukcji "*MEMBER_NAME*" |
 | [Ostrzeżenie kompilatora (poziom 1) C4821](compiler-warning-level-1-c4821.md) | Nie można określić typu kodowania Unicode, Zapisz plik z podpisem (BOM) |
 | [Ostrzeżenie kompilatora (poziom 1) C4822](compiler-warning-level-1-c4822.md) | "funkcja członkowska": Funkcja składowa klasy lokalnej nie ma treści |
-| [Ostrzeżenie kompilatora (poziom 3) C4823](compiler-warning-level-3-c4823.md) | "*Function*": używa przypiętych wskaźników, ale semantyka nieprzewinięcia nie jest włączona. Rozważ użycie`/EHa` |
+| [Ostrzeżenie kompilatora (poziom 3) C4823](compiler-warning-level-3-c4823.md) | "*Function*": używa przypiętych wskaźników, ale semantyka nieprzewinięcia nie jest włączona. Rozważ użycie `/EHa` |
 | Ostrzeżenie kompilatora (poziom 2) C4826 | Konwersja z "*Type1*" na "*Type2*" jest rozszerzona. Może to spowodować nieoczekiwane zachowanie w czasie wykonywania. |
-| Ostrzeżenie kompilatora (poziom 3) C4827 | Publiczna `ToString` Metoda "" z wartością 0 parametrów powinna być oznaczona jako `virtual` i`override` |
+| Ostrzeżenie kompilatora (poziom 3) C4827 | Publiczna `ToString` Metoda "" z wartością 0 parametrów powinna być oznaczona jako `virtual` i `override` |
 | [Ostrzeżenie kompilatora (poziom 1) C4829](compiler-warning-level-1-c4829.md) | Prawdopodobnie nieprawidłowe parametry do działania `main` . Rozważmy " `int main(Platform::Array<Platform::String^>^ argv)` " |
 | [Ostrzeżenie kompilatora (poziom 1) C4835](compiler-warning-level-1-c4835.md) | "*zmienna*": inicjator dla eksportowanych danych nie zostanie uruchomiony, dopóki kod zarządzany nie zostanie uruchomiony po raz pierwszy w zestawie hosta |
 | Ostrzeżenie kompilatora (poziom 4) C4837 | Wykryto trójznaków: `??` *znak "Character*" został zastąpiony przez "*Character*" |
 | [Ostrzeżenie kompilatora (poziom 1) C4838](compiler-warning-level-1-c4838.md) | Konwersja z "*type_1*" na "*type_2*" wymaga konwersji z zawężaniem |
 | [Ostrzeżenie kompilatora (poziom 3) C4839](compiler-warning-level-3-c4839.md) | niestandardowe użycie klasy "*Type*" jako argumentu funkcji wariadyczne |
 | [Ostrzeżenie kompilatora (poziom 4) C4840](compiler-warning-level-4-c4840.md) | nieprzenośne użycie klasy "*Type*" jako argumentu funkcji wariadyczne |
-| Ostrzeżenie kompilatora (poziom 4) C4841 | użyto niestandardowego rozszerzenia: wskaźnik składowej złożonej używany w`offsetof` |
+| Ostrzeżenie kompilatora (poziom 4) C4841 | użyto niestandardowego rozszerzenia: wskaźnik składowej złożonej używany w `offsetof` |
 | Ostrzeżenie kompilatora (poziom 4) C4842 | wynik " `offsetof` " zastosowany do typu z wielokrotnym dziedziczeniem nie jest gwarantowany spójny między wydaniami kompilatora |
 | Ostrzeżenie kompilatora C4843 | "*Type1*": procedura obsługi wyjątków odwołania do typu tablicy lub funkcji jest nieosiągalna. Użyj zamiast tego elementu "*Type2*" |
 | Ostrzeżenie kompilatora C4844 | " `export module` *`module_name`* `;` " jest teraz preferowaną składnią do deklarowania interfejsu modułu |
@@ -248,7 +262,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | Ostrzeżenie kompilatora C4854 | Brak niezdefiniowanego zachowania powiązania ze wskaźnikiem null do odwołania |
 | Ostrzeżenie kompilatora C4855 | niejawne przechwytywanie elementu " `this` " za pośrednictwem elementu " `[=]` " jest przestarzałe w "wersji" |
 | Ostrzeżenie kompilatora C4856 | element "*Value*" nie jest prawidłowym argumentem dla elementu " `/d1initAll:FillPattern` " (wartość musi należeć do zakresu od 0 do 255). Zignorowano flagę wiersza polecenia |
-| Ostrzeżenie kompilatora C4857 | Tryb c++/CLI nie obsługuje wersji C++ nowszej niż C++ 17; Ustawianie języka na`/std:c++17` |
+| Ostrzeżenie kompilatora C4857 | Tryb c++/CLI nie obsługuje wersji C++ nowszej niż C++ 17; Ustawianie języka na `/std:c++17` |
 | [Ostrzeżenie kompilatora (poziom 4) C4866](c4866.md) | Kompilator nie może wymusić kolejności oceny od lewej do prawej na potrzeby wywołania *operator_name* |
 | [Ostrzeżenie kompilatora (error) C4867](compiler-warning-c4867.md) | "*Function*": wywołanie funkcji nie ma listy argumentów; Użyj elementu "*call*", aby utworzyć wskaźnik do składowej |
 | [Ostrzeżenie kompilatora (poziom 4) C4868](compiler-warning-c4868.md) | Kompilator "_File_(*line_number*)" nie może wymusić kolejności oceny od lewej do prawej na liście inicjalizacji z nawiasami klamrowymi |
@@ -277,13 +291,13 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | [Ostrzeżenie kompilatora (poziom 4) C4932](compiler-warning-level-4-c4932.md) | `__identifier(`*Identyfikator* `)` i `__identifier(` *Identyfikator* `)` jest nieodróżniany |
 | Ostrzeżenie kompilatora (poziom 1) C4934 | " `__delegate(multicast)` " jest przestarzałe, użyj " `__delegate` " zamiast niego |
 | [Ostrzeżenie kompilatora (poziom 1) C4935](compiler-warning-level-1-c4935.md) | specyfikator dostępu do zestawu został zmodyfikowany z "*Access*" |
-| [Ostrzeżenie kompilatora (poziom 1, błąd) C4936](compiler-warning-c4936.md) | Ta __declspec jest obsługiwana tylko w przypadku kompilowania z `/clr` lub`/clr:pure` |
+| [Ostrzeżenie kompilatora (poziom 1, błąd) C4936](compiler-warning-c4936.md) | Ta __declspec jest obsługiwana tylko w przypadku kompilowania z `/clr` lub `/clr:pure` |
 | [Ostrzeżenie kompilatora (poziom 4) C4937](compiler-warning-level-4-c4937.md) | "*Tekst1*" i "*Tekst2*" są nierozróżniane jako argumenty*dyrektywy*" |
-| [Ostrzeżenie kompilatora (poziom 4) C4938](compiler-warning-level-4-c4938.md) | "*var*": zmienna redukcji zmiennoprzecinkowej może spowodować niespójne wyniki w obszarze `/fp:strict` lub`#pragma fenv_access` |
+| [Ostrzeżenie kompilatora (poziom 4) C4938](compiler-warning-level-4-c4938.md) | "*var*": zmienna redukcji zmiennoprzecinkowej może spowodować niespójne wyniki w obszarze `/fp:strict` lub `#pragma fenv_access` |
 | [Ostrzeżenie kompilatora C4939](compiler-warning-level-1-c4939.md) | #pragma vtordisp jest przestarzała i zostanie usunięta w przyszłych wersjach Visual C++ |
 | [Ostrzeżenie kompilatora (poziom 1) C4944](compiler-warning-level-1-c4944.md) | "*symbol*": nie można zaimportować symbolu z "*assembly1*": ponieważ "*symbol*" istnieje już w bieżącym zakresie |
 | [Ostrzeżenie kompilatora (poziom 1) C4945](compiler-warning-level-1-c4945.md) | "*symbol*": nie można zaimportować symbolu z "*assembly1*": ponieważ "*symbol*" został już zaimportowany z innego zestawu "*Assembly2*" |
-| [Ostrzeżenie kompilatora (poziom 1) C4946](compiler-warning-level-1-c4946.md) | `reinterpret_cast`używane między powiązanymi klasami: "*Class1*" i "*'klasa*" |
+| [Ostrzeżenie kompilatora (poziom 1) C4946](compiler-warning-level-1-c4946.md) | `reinterpret_cast` używane między powiązanymi klasami: "*Class1*" i "*'klasa*" |
 | [Ostrzeżenie kompilatora (poziom 1) C4947](compiler-warning-level-1-c4947.md) | "*type_or_member*": oznaczono jako przestarzały |
 | [Ostrzeżenie kompilatora (poziom 2) C4948](compiler-warning-level-2-c4948.md) | zwracany typ elementu "*akcesor*" jest niezgodny z typem ostatniego parametru odpowiadającej mu metody ustawiającej |
 | [Ostrzeżenie kompilatora (poziom 1 i 4) C4949](compiler-warning-level-1-and-level-4-c4949.md) | dyrektywy pragma " `managed` " i " `unmanaged` " mają znaczenie tylko w przypadku skompilowania przy użyciu " `/clr[:option]` " |
@@ -305,7 +319,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | [Ostrzeżenie kompilatora (poziom 1) C4965](compiler-warning-level-1-c4965.md) | niejawne pole z liczbą całkowitą 0; Użyj nullptr lub jawnego rzutowania |
 | Ostrzeżenie kompilatora (poziom 1) C4966 | element "*Function*" ma `__code_seg` adnotację z nieobsługiwaną nazwą segmentu, ignorowanie adnotacji |
 | Ostrzeżenie kompilatora C4970 | Konstruktor delegata: obiekt docelowy został zignorowany, ponieważ element "*Type*" jest statyczny |
-| Ostrzeżenie kompilatora (poziom 1) C4971 | Kolejność argumentów: \<target object> , \<target function> dla konstruktora delegatów jest przestarzała, użyj \<target function> ,\<target object=""> |
+| Ostrzeżenie kompilatora (poziom 1) C4971 | Kolejność argumentów: \<target object> , \<target function> dla konstruktora delegatów jest przestarzała, użyj \<target function> , \<target object=""> |
 | [Ostrzeżenie kompilatora (poziom 1, błąd) C4972](compiler-warning-c4972.md) | Bezpośrednie modyfikowanie lub potraktowanie wyniku operacji Unbox jako lvalue jest niemożliwy do zweryfikowania |
 | Ostrzeżenie kompilatora (poziom 1) C4973 | "*symbol*": oznaczono jako przestarzały |
 | Ostrzeżenie kompilatora (poziom 1) C4974 | "*symbol*": oznaczono jako przestarzały |
@@ -334,7 +348,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | Ostrzeżenie kompilatora (poziom 4) C5029 | użyto niestandardowego rozszerzenia: atrybuty wyrównania w języku C++ stosują się tylko do zmiennych, składowych danych i typów tagów |
 | Ostrzeżenie kompilatora (poziom 3) C5030 | atrybut "*Attribute-Name*" nie został rozpoznany |
 | Ostrzeżenie kompilatora (poziom 4) C5031 | `#pragma warning(pop)`: przyczyną niezgodności, usuwanie stanu ostrzeżenia wypychanego w innym pliku |
-| Ostrzeżenie kompilatora (poziom 4) C5032 | wykryto `#pragma warning(push)` bez odpowiadających`#pragma warning(pop)` |
+| Ostrzeżenie kompilatora (poziom 4) C5032 | wykryto `#pragma warning(push)` bez odpowiadających `#pragma warning(pop)` |
 | Ostrzeżenie kompilatora (poziom 1) C5033 | "*Storage-Class*" nie jest już obsługiwaną klasą magazynu |
 | Ostrzeżenie kompilatora C5034 | Użycie wewnętrznej "*wewnętrznej*" powoduje, że *nazwa funkcji* funkcji jest kompilowana jako kod gościa |
 | Ostrzeżenie kompilatora C5035 | Użycie funkcji "*Feature*" powoduje, że *nazwa funkcji* funkcji jest kompilowana jako kod gościa |
@@ -362,11 +376,11 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | Ostrzeżenie kompilatora C5057 | odwołanie do jednostki nagłówka "name" już istnieje.  Ignorowanie jednostki nagłówka "Header-Name" |
 | Ostrzeżenie kompilatora C5058 | błąd systemu plików: nie można odnaleźć pliku nagłówka "File-Name" dla jednostki nagłówka "Unit-name" |
 | Ostrzeżenie kompilatora C5059 | Sprawdzanie i Sanitizer adresów środowiska uruchomieniowego nie jest obecnie obsługiwane — wyłączanie testów środowiska uruchomieniowego |
-| Ostrzeżenie kompilatora C5060 | `/Qpar`i Address Sanitizer nie jest obecnie obsługiwany — wyłączanie autoprzetwarzanie równoległe |
+| Ostrzeżenie kompilatora C5060 | `/Qpar` i Address Sanitizer nie jest obecnie obsługiwany — wyłączanie autoprzetwarzanie równoległe |
 | Ostrzeżenie kompilatora C5061 | użycie operatora przecinka jako wyrażenia indeksu jest przestarzałe |
 | Ostrzeżenie kompilatora C5062 | Inicjalizacja listy bezpośredniej wyliczenia między elementami "Type-1" i "Type-2" nie jest już obsługiwana |
 | Ostrzeżenie kompilatora C5063 | element " `std::is_constant_evaluated` " zawsze daje w wyniku wartość true w wyrażeniach z manifestem stałym |
-| Ostrzeżenie kompilatora (poziom 1) C5100 | `__VA_ARGS__`jest zarezerwowany do użycia w makrach wariadyczne |
+| Ostrzeżenie kompilatora (poziom 1) C5100 | `__VA_ARGS__` jest zarezerwowany do użycia w makrach wariadyczne |
 | Ostrzeżenie kompilatora (poziom 1) C5101 | Użycie dyrektywy preprocesora w liście argumentów makra przypominającej funkcję jest niezdefiniowane zachowanie |
 | Ostrzeżenie kompilatora (poziom 1) C5102 | ignorowanie nieprawidłowej definicji makra wiersza polecenia "*Value*" |
 | Ostrzeżenie kompilatora (poziom 1) C5103 | wklejanie elementów "*token1*" i "*token2*" nie powoduje prawidłowego tokenu przetwarzania wstępnego |
@@ -374,7 +388,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | [Ostrzeżenie kompilatora (poziom 1) C5105](c5105.md) | niezdefiniowane zachowanie podczas tworzenia makra "defined" |
 | Ostrzeżenie kompilatora (poziom 1) C5106 | makro ponownie zdefiniowane z innymi nazwami parametrów |
 | Ostrzeżenie kompilatora (poziom 1) C5107 | brak zamykającego znaku "*char*" |
-| Ostrzeżenie kompilatora C5108 | `__VA_OPT__`jest zarezerwowany do użycia w makrach wariadyczne |
+| Ostrzeżenie kompilatora C5108 | `__VA_OPT__` jest zarezerwowany do użycia w makrach wariadyczne |
 | Ostrzeżenie kompilatora C5200 | Funkcja "nazwa funkcji" wymaga flagi kompilatora "Option-Name" |
 | Ostrzeżenie kompilatora C5201 | Deklaracja modułu może wystąpić tylko na początku jednostki tłumaczenia, chyba że jest używany globalny fragment modułu |
 | Ostrzeżenie kompilatora C5202 | fragment modułu globalnego może zawierać tylko dyrektywy preprocesora |
@@ -384,8 +398,21 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 | Ostrzeżenie kompilatora C5206 | wywnioskowane typy zwracane dla wspólnych procedur to niestandardowe rozszerzenie |
 | Ostrzeżenie kompilatora C5207 | proste wymaganie potwierdza prawidłowość wyrażenia " `e->id` ". Czy chodziło o " `{ e } -> id` "? Możesz pominąć ostrzeżenie przy użyciu " `{ e->id }` " |
 | [Ostrzeżenie kompilatora (poziom 1) C5208](c5208.md) | NIENAZWANA Klasa użyta w `typedef` nazwie nie może deklarować składowych innych niż statyczne składowe danych, wyliczenia elementów członkowskich lub klasy składowych |
+| Ostrzeżenie kompilatora C5209 | Składnia języka C++ 20 dla funkcji przechwytywania init została zmieniona na "&... Inicjator identyfikatora opt |
+| Ostrzeżenie kompilatora C5210 | "*name*" nie jest prawidłowym odwołaniem do jednostki nagłówka; ignorowanie |
+| Ostrzeżenie kompilatora C5212 | wartość "*name*" nie jest prawidłowym nazwanym odwołaniem; traktowanie jako odwołanie do pliku |
+| Ostrzeżenie kompilatora C5213 | nazwane odwołanie jest traktowane*jako nazwana*partycja, ale nie określono nazwy; traktowanie jako odwołanie do pliku |
+| Ostrzeżenie kompilatora C5214 | stosowanie elementu "*modyfikator*" do operandu z kwalifikowanym typem nietrwałym jest przestarzałe w języku c++ 20 |
+| Ostrzeżenie kompilatora C5215 | "*name*" parametr funkcji z kwalifikowanym typem nietrwałym jest przestarzały w języku c++ 20 |
+| Ostrzeżenie kompilatora C5216 | "*name*" nietrwały kwalifikowany typ zwracany jest przestarzały w języku c++ 20 |
+| Ostrzeżenie kompilatora C5217 | Deklaracja powiązania strukturalnego, która zawiera nietrwały, jest przestarzała w języku C++ 20 |
+| Ostrzeżenie kompilatora C5218 | niszczenie usuwania może nie zachowywać się zgodnie z oczekiwaniami, gdy są używane niezgodne przełączniki " `/Zc:sizedDealloc-` " lub " `/Zc:alignedNew-` " |
+| Ostrzeżenie kompilatora C5219 | niejawna konwersja z*typu "Type-1*" na "*Type-2*", możliwa utrata danych |
+| Ostrzeżenie kompilatora C5220 | "*name*": niestatyczna składowa danych z typem kwalifikowanym niestandardowym nie oznacza, że konstruktorzy i przypisania kopiowania/przenoszenia wygenerowane przez kompilator nie są proste |
+| Ostrzeżenie kompilatora C5221 | `xfg::rename` jest przestarzały. |
 
-## <a name="see-also"></a>Zobacz także
+
+## <a name="see-also"></a>Zobacz też
 
 [Błędy i ostrzeżenia dotyczące kompilatora i narzędzi kompilacji C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
 [Ostrzeżenia kompilatora C4000–C5999](compiler-warnings-c4000-c5999.md)

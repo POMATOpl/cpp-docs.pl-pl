@@ -1,18 +1,18 @@
 ---
 title: Słowa kluczowe języka C
 description: Słowa kluczowe w standardowych rozszerzeniach kompilatora C i Microsoft C.
-ms.date: 10/12/2020
+ms.date: 10/15/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: cb255e1d7ce6bc15bf13bc1e3152bc3464ea5ec2
-ms.sourcegitcommit: 651348f8cd92ab0d52f09e9225a7eb41562559db
+ms.openlocfilehash: 24981c8d70cb56b4578fd905a30ccc57eaa83d45
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059798"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176224"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 
@@ -130,7 +130,7 @@ Poniższe słowa kluczowe i specjalne identyfikatory są rozpoznawane przez komp
 
 <sup>5</sup> aby zapewnić zgodność z poprzednimi wersjami, te słowa kluczowe są dostępne zarówno z dwoma wiodącymi podkreśleniami, jak i z pojedynczym znakiem wiodącym po włączeniu rozszerzeń firmy Microsoft.
 
-<sup>6</sup> gdy <Assert. h> nie jest uwzględniony, kompilator Microsoft Visual C jest mapowany **`static_assert`** na **`_Static_assert`** słowo kluczowe C11.
+<sup>6</sup> Jeśli nie dołączysz <Assert. h>, kompilator języka Microsoft Visual C mapuje **`static_assert`** do **`_Static_assert`** słowa kluczowego C11.
 
 Rozszerzenia Microsoft są domyślnie włączone. Aby pomóc w tworzeniu kodu przenośnego, można wyłączyć rozszerzenia Microsoft przez określenie opcji [/za \( disable Language Extensions (wyłączając)](../build/reference/za-ze-disable-language-extensions.md) w trakcie kompilacji. W przypadku korzystania z tej opcji niektóre słowa kluczowe specyficzne dla firmy Microsoft są wyłączone.
 

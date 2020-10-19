@@ -1,14 +1,14 @@
 ---
 title: Konfigurowanie projektu systemu Linux MSBuild C++ w programie Visual Studio
-ms.date: 08/06/2020
+ms.date: 10/16/2020
 description: Skonfiguruj projekt systemu Linux oparty na programie MSBuild w programie Visual Studio, aby można było go skompilować.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 51837dc86d041b9120f984cc01f8db06d696b292
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685959"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176345"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Konfigurowanie projektu systemu Linux MSBuild C++ w programie Visual Studio
 
@@ -26,7 +26,7 @@ Istnieje możliwość skonfigurowania projektu systemu Linux, który będzie prz
 
 **Program Visual Studio 2019 w wersji 16,1**:
 
-- W przypadku kierowania WSL można uniknąć operacji kopiowania, które są niezbędne do kompilowania i IntelliSense w przypadku kierowania zdalnego systemu Linux.
+- W przypadku kierowania WSL można uniknąć operacji kopiowania wymaganych do kompilowania i pobierania IntelliSense, które są wymagane w przypadku kierowania zdalnego systemu Linux.
 
 - Można określić oddzielne elementy docelowe systemu Linux na potrzeby kompilowania i debugowania.
 
@@ -40,6 +40,10 @@ Aby wyświetlić opcje konfiguracji, zaznacz menu **właściwości > projektu** 
 
 Domyślnie tworzony jest plik wykonywalny (. out). Aby utworzyć bibliotekę statyczną lub dynamiczną lub użyć istniejącego pliku reguł programu make, użyj ustawienia **typu konfiguracji** .
 
+W przypadku kompilowania dla podsystemu Windows dla systemu Linux (WSL) WSL wersja 1 jest ograniczona do 64 procesów kompilacji równoległej. Jest to regulowane przez ustawienie **Maksymalna liczba równoległych zadań kompilacji** we **właściwościach konfiguracji > C/C++ > ogólne**.
+
+Bez względu na używaną wersję programu WSL, jeśli zamierzasz używać więcej niż 64 procesów kompilacji równoległej, zalecamy skompilowanie z Ninja — który zwykle będzie szybszy i bardziej niezawodny. Aby skompilować przy użyciu ninja, użyj ustawienia **przyrostowej kompilacji** we **właściwościach konfiguracji > ogólne**.
+
 Aby uzyskać więcej informacji na temat ustawień na stronach właściwości, zobacz temat [Informacje o stronie właściwości projektu systemu Linux](prop-pages-linux.md).
 
 ## <a name="remote-settings"></a>Ustawienia zdalne
@@ -52,7 +56,7 @@ Aby zmienić ustawienia związane ze zdalnym komputerem z systemem Linux, skonfi
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 w wersji 16,1**: aby kierować podsystem Windows dla systemu Linux, kliknij strzałkę w dół dla zestawu **narzędzi platformy** i wybierz **WSL_1_0**. Inne opcje zdalne znikną, a ścieżka do domyślnej powłoki WSL pojawi się w ich miejscu:
+   **Visual Studio 2019 w wersji 16,7**: aby kierować podsystem Windows dla systemu Linux (WSL), Ustaw listę rozwijaną zestawu **narzędzi platformy** z systemem **Windows dla systemu Linux dla podsystemu Microsoft**. Inne opcje zdalne znikną, a ścieżka do domyślnej powłoki WSL pojawi się w ich miejscu:
 
    ![Maszyna kompilacji WSL](media/wsl-remote-vs2019.png)
 
@@ -106,7 +110,7 @@ Ta funkcja jest zależna od komputera z systemem Linux z zainstalowanym zip. Pli
 sudo apt install zip
 ```
 
-Aby zarządzać pamięcią podręczną nagłówków, przejdź do **opcji narzędzia > opcje, Międzyplatformowe > Menedżer połączeń > zdalnych nagłówków programu IntelliSense**. Aby zaktualizować pamięć podręczną nagłówka po wprowadzeniu zmian na komputerze z systemem Linux, wybierz połączenie zdalne, a następnie wybierz pozycję **Aktualizuj**. Wybierz pozycję **Usuń** , aby usunąć nagłówki bez usuwania samego połączenia. Wybierz pozycję **Eksploruj** , aby otworzyć katalog lokalny w **Eksploratorze plików**. Traktuj ten folder jako tylko do odczytu. Aby pobrać nagłówki dla istniejącego połączenia, które zostało utworzone przed program Visual Studio 2017 w wersji 15,3, wybierz połączenie, a następnie wybierz pozycję **Pobierz**.
+Aby zarządzać pamięcią podręczną nagłówków, przejdź do **opcji narzędzia > opcje, Międzyplatformowe > Menedżer połączeń > zdalnych nagłówków programu IntelliSense**. Aby zaktualizować pamięć podręczną nagłówka po wprowadzeniu zmian na komputerze z systemem Linux, wybierz połączenie zdalne, a następnie wybierz pozycję **Aktualizuj**. Wybierz pozycję **Usuń** , aby usunąć nagłówki bez usuwania samego połączenia. Wybierz pozycję **Eksploruj** , aby otworzyć katalog lokalny w **Eksploratorze plików**. Traktuj ten folder jako tylko do odczytu. Aby pobrać nagłówki dla istniejącego połączenia, które zostało utworzone przed Visual Studio 2017 w wersji 15,3, wybierz połączenie, a następnie wybierz pozycję **Pobierz**.
 
 ::: moniker range="vs-2017"
 
@@ -128,7 +132,7 @@ Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów:
 
 Ustawienia języka programu Visual Studio nie są propagowane do celów systemu Linux, ponieważ program Visual Studio nie zarządza ani nie konfiguruje zainstalowanych pakietów. Komunikaty wyświetlane w oknie **danych wyjściowych** , takie jak błędy kompilacji, są wyświetlane przy użyciu języka i ustawień regionalnych docelowego systemu Linux. Należy skonfigurować cele systemu Linux dla żądanych ustawień regionalnych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ustawianie właściwości kompilatora i Build](../build/working-with-project-properties.md)<br/>
 [Ogólne właściwości języka c++ (Linux C++)](prop-pages/general-linux.md)<br/>

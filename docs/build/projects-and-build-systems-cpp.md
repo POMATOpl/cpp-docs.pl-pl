@@ -1,6 +1,6 @@
 ---
 title: Projekty C/C++ i systemy kompilacji w programie Visual Studio
-ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
+description: Użyj programu Visual Studio do kompilowania i kompilowania projektów C++ dla systemu Windows, ARM lub Linux na podstawie dowolnego systemu projektu.
 ms.date: 07/17/2019
 helpviewer_keywords:
 - builds [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 3d82ac4569e06a4472047a79da60032ad2db43ca
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 193230ef393aa83d7ce4b9aec11a1fa2cb5052ce
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078474"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176075"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Projekty C/C++ i systemy kompilacji w programie Visual Studio
 
@@ -33,25 +33,25 @@ Podstawowa kompilacja C++ obejmuje trzy główne kroki:
 
 ## <a name="the-msvc-toolset"></a>Zestaw narzędzi MSVC
 
-Kompilatory języka Microsoft C++, konsolidator, biblioteki standardowe i powiązane narzędzia składają się z zestawu narzędzi kompilatora MSVC (nazywanego również łańcucha narzędzi lub "narzędziami do kompilacji"). Są one dołączone do programu Visual Studio. Możesz również pobrać zestaw narzędzi jako pakiet autonomiczny bezpłatnie z [Narzędzia Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
+Kompilatory języka Microsoft C++, konsolidator, biblioteki standardowe i powiązane narzędzia tworzą zestaw narzędzi kompilatora MSVC (nazywany również łańcucha narzędzi lub "narzędziami do kompilowania"). Są one dołączone do programu Visual Studio. Zestaw narzędzi można także pobrać i użyć jako bezpłatny pakiet autonomiczny z [narzędzia kompilacji dla programu Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-Można tworzyć proste programy, wywołując kompilator MSVC (CL. exe) bezpośrednio z wiersza polecenia. Następujące polecenie akceptuje pojedynczy plik kodu źródłowego i wywołuje CL. exe w celu utworzenia pliku wykonywalnego o nazwie *Hello. exe*:
+Można tworzyć proste programy, wywołując kompilator MSVC (cl.exe) bezpośrednio z wiersza polecenia. Następujące polecenie akceptuje pojedynczy plik kodu źródłowego i wywołuje cl.exe, aby skompilować plik wykonywalny o nazwie *hello.exe*:
 
 ```cmd
 cl /EHsc hello.cpp
 ```
 
-Należy zauważyć, że kompilator (CL. exe) automatycznie wywołuje Preprocesor języka C++ i konsolidator, aby utworzyć końcowy plik wyjściowy.  Aby uzyskać więcej informacji, zobacz [Kompilowanie w wierszu polecenia](building-on-the-command-line.md).
+W tym miejscu kompilator (cl.exe) automatycznie wywołuje Preprocesor języka C++ i konsolidator, aby utworzyć końcowy plik wyjściowy. Aby uzyskać więcej informacji, zobacz [Kompilowanie w wierszu polecenia](building-on-the-command-line.md).
 
 ## <a name="build-systems-and-projects"></a>Kompiluj systemy i projekty
 
-Większość programów działających w świecie korzysta z pewnego rodzaju *systemu kompilacji* do zarządzania złożonością kompilowania wielu plików źródłowych w wielu konfiguracjach (tj. debugowanie i wydanie), wielu platform (x86, x64, ARM itd.), niestandardowych kroków kompilacji i nawet wielu plików wykonywalnych, które muszą być kompilowane w określonej kolejności. Należy wprowadzić ustawienia w plikach konfiguracji kompilacji, a system kompilacji akceptuje ten plik jako dane wejściowe przed wywołaniem kompilatora. Zestaw plików kodu źródłowego i pliki konfiguracji kompilacji wymagane do skompilowania pliku wykonywalnego nazywa się *projektem*.
+Większość programów działających w świecie korzysta z pewnego rodzaju *systemu kompilacji* do zarządzania złożonością kompilowania wielu plików źródłowych dla wielu konfiguracji (debugowanie i wydanie), wielu platform (x86, x64, ARM itd.), niestandardowych kroków kompilacji, a nawet wielu plików wykonywalnych, które muszą zostać skompilowane w określonej kolejności. Należy wprowadzić ustawienia w plikach konfiguracji kompilacji, a system kompilacji akceptuje ten plik jako dane wejściowe przed wywołaniem kompilatora. Zestaw plików kodu źródłowego i pliki konfiguracji kompilacji wymagane do skompilowania pliku wykonywalnego nazywa się *projektem*.
 
 Na poniższej liście przedstawiono różne opcje projektów programu Visual Studio — C++:
 
 - Utwórz projekt programu Visual Studio przy użyciu środowiska IDE programu Visual Studio i skonfiguruj go za pomocą stron właściwości. Projekty programu Visual Studio tworzą programy działające w systemie Windows. Aby zapoznać się z omówieniem, zobacz [Kompilowanie i kompilowanie](/visualstudio/ide/compiling-and-building-in-visual-studio) w dokumentacji programu Visual Studio.
 
-- Otwórz folder, który zawiera plik CMakeLists. txt. Obsługa CMake jest zintegrowana z Visual Studio. IDE służy do edytowania, testowania i debugowania bez modyfikowania plików CMake w dowolny sposób. Dzięki temu można działać w tym samym projekcie CMake, co inne osoby, które mogą używać różnych edytorów. CMake to zalecane podejście do tworzenia aplikacji dla wielu platform. Aby uzyskać więcej informacji, zobacz [CMAKE projects](cmake-projects-in-visual-studio.md).
+- Otwórz folder, który zawiera plik CMakeLists.txt. Obsługa CMake jest zintegrowana z Visual Studio. IDE służy do edytowania, testowania i debugowania bez modyfikowania plików CMake w dowolny sposób. Dzięki temu można działać w tym samym projekcie CMake, co inne osoby, które mogą używać różnych edytorów. CMake to zalecane podejście do tworzenia aplikacji dla wielu platform. Aby uzyskać więcej informacji, zobacz [CMAKE projects](cmake-projects-in-visual-studio.md).
 
 - Otwórz luźny folder plików źródłowych bez pliku projektu. Program Visual Studio będzie używać algorytmów heurystycznych do kompilowania plików. Jest to prosty sposób kompilowania i uruchamiania małych aplikacji konsolowych. Aby uzyskać więcej informacji, zobacz temat [Otwieranie projektów folderów](open-folder-projects-cpp.md).
 
@@ -61,34 +61,45 @@ Na poniższej liście przedstawiono różne opcje projektów programu Visual Stu
 
 ## <a name="msbuild-from-the-command-line"></a>MSBuild z wiersza polecenia
 
-Można wywołać program MSBuild z poziomu wiersza polecenia, przechodząc do niego plik. vcxproj wraz z opcjami wiersza polecenia. Takie podejście wymaga dobrego poznania programu MSBuild i jest zalecane tylko wtedy, gdy jest to absolutnie konieczne. Aby uzyskać więcej informacji, zobacz [MSBuild](msbuild-visual-cpp.md).
+Można wywołać program MSBuild z poziomu wiersza polecenia, przechodząc do niego plik. vcxproj wraz z opcjami wiersza polecenia. Takie podejście wymaga dobrego poznania programu MSBuild i jest zalecane tylko w razie potrzeby. Aby uzyskać więcej informacji, zobacz [MSBuild](msbuild-visual-cpp.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Projekty programu Visual Studio](creating-and-managing-visual-cpp-projects.md) Jak tworzyć, konfigurować i kompilować projekty języka C++ w programie Visual Studio przy użyciu natywnego systemu kompilacji (MSBuild).
+[Projekty programu Visual Studio](creating-and-managing-visual-cpp-projects.md)\
+Jak tworzyć, konfigurować i kompilować projekty języka C++ w programie Visual Studio przy użyciu natywnego systemu kompilacji (MSBuild).
 
-[CMAKE projekty](cmake-projects-in-visual-studio.md) Jak zakodować, skompilować i wdrożyć projekty CMake w programie Visual Studio.
+[CMake projekty](cmake-projects-in-visual-studio.md)\
+Jak zakodować, skompilować i wdrożyć projekty CMake w programie Visual Studio.
 
-[Otwórz projekty folderu](open-folder-projects-cpp.md) Jak używać programu Visual Studio do wykonywania kodu, kompilowania i wdrażania projektów C++ na podstawie dowolnego systemu kompilacji lub bez systemu kompilacji. W ogóle.
+[Otwórz projekty folderu](open-folder-projects-cpp.md)\
+Jak używać programu Visual Studio do kodowania, kompilowania i wdrażania projektów C++ na podstawie dowolnego systemu kompilacji lub bez systemu kompilacji w ogóle.
 
-[Kompilacje wydania](release-builds.md) Tworzenie i rozwiązywanie problemów z zoptymalizowanymi kompilacjami wydania dla użytkowników końcowych.
+[Kompilacje wydania](release-builds.md)\
+Tworzenie i rozwiązywanie problemów z zoptymalizowanymi kompilacjami wydania dla użytkowników końcowych.
 
-[Używanie zestawu narzędzi MSVC z poziomu wiersza polecenia](building-on-the-command-line.md)<br/>
+[Korzystanie z zestawu narzędzi MSVC z poziomu wiersza polecenia](building-on-the-command-line.md)\
 W tym artykule omówiono sposób używania kompilatora C/C++ i narzędzi do kompilowania bezpośrednio z wiersza polecenia zamiast używania środowiska IDE programu Visual Studio.
 
-[Tworzenie bibliotek DLL w programie Visual Studio](dlls-in-visual-cpp.md) Jak tworzyć, debugować i wdrażać biblioteki DLL C/C++ (biblioteki udostępnione) w programie Visual Studio.
+[Tworzenie bibliotek DLL w programie Visual Studio](dlls-in-visual-cpp.md)\
+Jak tworzyć, debugować i wdrażać biblioteki DLL C/C++ (biblioteki udostępnione) w programie Visual Studio.
 
-[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md) Jak utworzyć plik binarny. lib.
+[Przewodnik: Tworzenie i używanie biblioteki statycznej](walkthrough-creating-and-using-a-static-library-cpp.md)\
+Jak utworzyć plik binarny **. lib** .
 
-[Kompilowanie aplikacji izolowanych C/C++ i zestawów równoległych](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Opisuje model wdrażania aplikacji klasycznych systemu Windows, na podstawie koncepcji izolowanych aplikacji i zestawów równoległych.
+[Kompilowanie aplikacji izolowanych C/C++ i zestawów równoległych](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)\
+Opisuje model wdrażania aplikacji klasycznych systemu Windows, na podstawie koncepcji izolowanych aplikacji i zestawów równoległych.
 
-[Konfigurowanie projektów C++ dla 64-bitowych, docelowych procesorów x64](configuring-programs-for-64-bit-visual-cpp.md) Jak kierować sprzętem 64-bitowym x64 za pomocą narzędzi kompilacji MSVC.
+[Konfigurowanie projektów C++ dla 64-bitowych, docelowych procesorów x64](configuring-programs-for-64-bit-visual-cpp.md)\
+Jak kierować sprzętem 64-bitowym x64 za pomocą narzędzi kompilacji MSVC.
 
-[Konfigurowanie projektów języka C++ dla procesorów ARM](configuring-programs-for-arm-processors-visual-cpp.md) Jak używać narzędzi kompilacji MSVC do kierowania sprzętu ARM.
+[Konfigurowanie projektów języka C++ dla procesorów ARM](configuring-programs-for-arm-processors-visual-cpp.md)\
+Jak używać narzędzi kompilacji MSVC do kierowania sprzętu ARM.
 
-[Optymalizowanie kodu](optimizing-your-code.md) Jak zoptymalizować swój kod na różne sposoby, w tym optymalizacje programu z przewodnikiem.
+[Optymalizowanie kodu](optimizing-your-code.md)\
+Jak zoptymalizować swój kod na różne sposoby, w tym optymalizacje programu z przewodnikiem.
 
-[Konfigurowanie programów dla systemu Windows XP](configuring-programs-for-windows-xp.md) Jak kierować system Windows XP przy użyciu narzędzi kompilacji MSVC.
+[Konfigurowanie programów dla systemu Windows XP](configuring-programs-for-windows-xp.md)\
+Jak kierować system Windows XP przy użyciu narzędzi kompilacji MSVC.
 
-[Odwołanie kompilacji C/C++](reference/c-cpp-building-reference.md)<br/>
+[Dokumentacja konstrukcyjna języka C/C++](reference/c-cpp-building-reference.md)\
 Zawiera łącza do artykułów referencyjnych dotyczących tworzenia programów w języku C++, opcje kompilatora i konsolidatora oraz różne narzędzia do kompilacji.

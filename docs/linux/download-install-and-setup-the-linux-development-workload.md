@@ -3,12 +3,12 @@ title: Instalowanie obciążenia C++ w systemie Linux w programie Visual Studio
 description: Jak pobrać, zainstalować i skonfigurować obciążenie systemu Linux dla języka C++ w programie Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 3f8e6eb8285652078e5f26ca58601bc6ccfa80d1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040980"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176284"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux
 
@@ -157,7 +157,7 @@ Maszyna docelowa z systemem Fedora korzysta z Instalatora pakietu **DNF** . Aby 
 
 Teraz możesz utworzyć lub otworzyć projekt systemu Linux i skonfigurować go do uruchamiania w systemie docelowym. Aby uzyskać więcej informacji, zobacz:
 
-- [Tworzenie nowego projektu systemu Linux](create-a-new-linux-project.md)
+- [Tworzenie nowego projektu systemu Linux MSBuild C++](create-a-new-linux-project.md)
 - [Konfigurowanie projektu CMake systemu Linux](cmake-linux-project.md)
 
 ::: moniker-end
