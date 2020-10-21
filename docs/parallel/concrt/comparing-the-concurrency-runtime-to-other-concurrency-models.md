@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
 ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422256"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274699"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porównywanie współbieżności środowiska wykonawczego z innymi modelami współbieżności
 
@@ -19,7 +19,7 @@ Jeśli obecnie używasz innego modelu programowania, takiego jak Pula wątków s
 
 Korzystając z funkcji i korzyści związanych z produktywnością środowisko uruchomieniowe współbieżności, można uzupełnić istniejącą aplikację, która korzysta z innego modelu współbieżności. Środowisko uruchomieniowe współbieżności nie może zagwarantować równoważenia obciążenia, gdy wiele harmonogramów zadań jest konkurujących dla tych samych zasobów obliczeniowych. Jeśli jednak obciążenia nie nakładają się na siebie, ten efekt jest minimalny.
 
-## <a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 - [Porównywanie planowania z przeznaczeniem do wspólnego planowania](#models)
 
@@ -27,7 +27,7 @@ Korzystając z funkcji i korzyści związanych z produktywnością środowisko u
 
 - [Porównywanie środowisko uruchomieniowe współbieżności ze OpenMP](#openmp)
 
-## <a name="models"></a>Porównywanie planowania z przeznaczeniem do wspólnego planowania
+## <a name="comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> Porównywanie planowania z przeznaczeniem do wspólnego planowania
 
 Model zastępujący i wspólne modele planowania są dwa typowe sposoby na umożliwienie wielu zadań współdzielenia zasobów obliczeniowych, na przykład procesorów lub wątków sprzętowych.
 
@@ -51,7 +51,7 @@ W ramach planowania wspólnego nie są rozwiązywane wszystkie problemy związan
 
 [[Top](#top)]
 
-## <a name="winapi"></a>Porównywanie środowisko uruchomieniowe współbieżności z interfejsem API systemu Windows
+## <a name="comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> Porównywanie środowisko uruchomieniowe współbieżności z interfejsem API systemu Windows
 
 Interfejs programowania aplikacji systemu Microsoft Windows, który jest zwykle określany jako interfejs API systemu Windows (i dawniej znany jako Win32), zapewnia model programowania, który umożliwia współbieżność aplikacji. Środowisko uruchomieniowe współbieżności kompiluje się w interfejsie API systemu Windows w celu zapewnienia dodatkowych modeli programistycznych, które nie są dostępne w podstawowym systemie operacyjnym.
 
@@ -59,7 +59,7 @@ Interfejs programowania aplikacji systemu Microsoft Windows, który jest zwykle 
 
 ### <a name="programming-languages"></a>Języki programowania
 
-Interfejs API systemu Windows używa języka programowania C, aby uwidocznić model programowania. Środowisko uruchomieniowe współbieżności udostępnia interfejs C++ programowania, który korzysta z najnowszych funkcji w C++ języku. Na przykład funkcje lambda zapewniają zwięzły, bezpieczny dla typu mechanizm do definiowania równoległych funkcji roboczych. Aby uzyskać więcej informacji na temat C++ najnowszych funkcji używanych przez środowisko uruchomieniowe współbieżności, zobacz [Omówienie](../../parallel/concrt/asynchronous-message-blocks.md).
+Interfejs API systemu Windows używa języka programowania C, aby uwidocznić model programowania. Środowisko uruchomieniowe współbieżności udostępnia interfejs programowania w języku C++, który korzysta z najnowszych funkcji w języku C++. Na przykład funkcje lambda zapewniają zwięzły, bezpieczny dla typu mechanizm do definiowania równoległych funkcji roboczych. Aby uzyskać więcej informacji na temat najnowszych funkcji języka C++, których używa środowisko uruchomieniowe współbieżności, zobacz [Omówienie](../../parallel/concrt/asynchronous-message-blocks.md).
 
 ### <a name="threads-and-thread-pools"></a>Wątki i pule wątków
 
@@ -81,11 +81,11 @@ W systemach Windows 7 i Windows Server 2008 R2 system operacyjny obsługuje wsp�
 
 [[Top](#top)]
 
-## <a name="openmp"></a>Porównywanie środowisko uruchomieniowe współbieżności ze OpenMP
+## <a name="comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> Porównywanie środowisko uruchomieniowe współbieżności ze OpenMP
 
 Środowisko uruchomieniowe współbieżności włącza różne modele programowania. Modele te mogą nakładać się lub uzupełniać modele innych bibliotek. W tej sekcji porównano środowisko uruchomieniowe współbieżności ze [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
-Model programowania OpenMP jest definiowany przez otwarty standard i ma dobrze zdefiniowane powiązania z Pascal i językiem programowania C/C++ c++. Wersje OpenMP 2,0 i 2,5 są odpowiednie dla równoległych algorytmów, które są iteracyjne; oznacza to, że wykonują iterację równoległą w odniesieniu do tablicy danych. OpenMP jest najbardziej wydajny, gdy stopień równoległości jest wstępnie określony i jest zgodny z dostępnymi zasobami w systemie. Model OpenMP to szczególnie dobre dopasowanie w przypadku obliczeń o wysokiej wydajności, w przypadku których duże problemy obliczeniowe są dystrybuowane między zasobami przetwarzania jednego komputera. W tym scenariuszu środowisko sprzętowe jest znane, a deweloper może oczekiwać, że ma wyłączny dostęp do zasobów obliczeniowych, gdy algorytm jest wykonywany.
+Model programowania OpenMP jest definiowany przez otwarty standard i ma dobrze zdefiniowane powiązania z językami programowania Pascal i C/C++. Wersje OpenMP 2,0 i 2,5 są odpowiednie dla równoległych algorytmów, które są iteracyjne; oznacza to, że wykonują iterację równoległą w odniesieniu do tablicy danych. OpenMP jest najbardziej wydajny, gdy stopień równoległości jest wstępnie określony i jest zgodny z dostępnymi zasobami w systemie. Model OpenMP to szczególnie dobre dopasowanie w przypadku obliczeń o wysokiej wydajności, w przypadku których duże problemy obliczeniowe są dystrybuowane między zasobami przetwarzania jednego komputera. W tym scenariuszu środowisko sprzętowe jest znane, a deweloper może oczekiwać, że ma wyłączny dostęp do zasobów obliczeniowych, gdy algorytm jest wykonywany.
 
 Jednak inne, mniej ograniczone środowiska obliczeniowe mogą nie być dobrym odpowiednikiem OpenMP. Na przykład problemy cykliczne (takie jak algorytm sortowania lub wyszukiwanie drzewa danych) są trudniejsze do zaimplementowania przy użyciu OpenMP. Środowisko uruchomieniowe współbieżności uzupełnia możliwości technologii OpenMP przez udostępnienie [biblioteki równoległych wzorców](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) i [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md). W przeciwieństwie do OpenMP, środowisko uruchomieniowe współbieżności zapewnia dynamiczny harmonogram, który dostosowuje się do dostępnych zasobów i dostosowuje stopień równoległości w miarę zmiany obciążeń.
 
@@ -97,8 +97,8 @@ Aby uzyskać więcej informacji na temat porównuje środowisko uruchomieniowe w
 
 ## <a name="see-also"></a>Zobacz też
 
-[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
+[Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Omówienie](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

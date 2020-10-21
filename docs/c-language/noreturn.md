@@ -1,26 +1,28 @@
 ---
 title: _Noreturn słowo kluczowe i noreturn makro (C11)
 description: Opisuje `_Noreturn` słowo kluczowe i `noreturn` makro.
-ms.date: 10/16/2020
+ms.date: 10/19/2020
 f1_keywords:
 - _Noreturn_c
 - noreturn
 helpviewer_keywords:
 - keywords [C]
-ms.openlocfilehash: f876485b5be497688c5cf1dd8fca206d08560de0
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 68448d8b8c999c92fb240100c25048fa94a559b9
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92182817"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274691"
 ---
 # <a name="_noreturn-keyword-and-noreturn-macro-c11"></a>`_Noreturn` słowo kluczowe i `noreturn` makro (C11)
 
-`_Noreturn`Słowo kluczowe zostało wprowadzone w C11. Informuje kompilator, że funkcja, która jest stosowana, nie zwraca. Kompilator wie, że kod następujący po wywołaniu `_Noreturn` funkcji jest nieosiągalny.
+`_Noreturn`Słowo kluczowe zostało wprowadzone w C11. Informuje kompilator, że funkcja, która jest stosowana, nie zwraca do obiektu wywołującego. Kompilator wie, że kod następujący po wywołaniu `_Noreturn` funkcji jest nieosiągalny. Przykład funkcji, która nie zwraca wartości, jest [przerywana](../c-runtime-library/reference/abort.md). Jeśli istnieje możliwość, aby przepływ sterowania był zwracany do obiektu wywołującego, funkcja nie może mieć `_Noreturn` atrybutu.
 
-Wygodne makro, `noreturn` , podane w <stdnoreturn. h>, mapuje do `_Noreturn` słowa kluczowego.
+Słowo kluczowe jest zwykle używane przez wygodne makro, które znajduje się `noreturn` w <stdnoreturn. h>, które mapuje do `_Noreturn` słowa kluczowego.
 
 Główną zaletą korzystania z programu `_Noreturn` (lub równoważnego `noreturn` ) jest zamiar funkcji jasnej w kodzie dla przyszłych czytelników i wykrywania niecelowo nieosiągalnego kodu.
+
+Funkcja oznaczona jako `noreturn` nie powinna zawierać zwracanego typu, ponieważ nie zwraca wartości do obiektu wywołującego. Powinna ona mieć wartość `void`.
 
 ## <a name="example-using-noreturn-macro-and-_noreturn-keyword"></a>Przykład użycia `noreturn` makra i `_Noreturn ` słowa kluczowego
 
@@ -69,5 +71,6 @@ int main(void)
 ## <a name="see-also"></a>Zobacz też
 
 [/STD (Określ wersję standardową języka)](../build/reference/std-specify-language-standard-version.md)\
-[/W4 (Określ poziom ostrzeżeń)](../build/reference/compiler-option-warning-level.md) 
- [Ostrzeżenie C4702](../error-messages\compiler-warnings\compiler-warning-level-4-c4702.md)
+[/W4 (Określ poziom ostrzeżeń)](../build/reference/compiler-option-warning-level.md)\
+[Ostrzeżenie C4702](../error-messages\compiler-warnings\compiler-warning-level-4-c4702.md)\
+[__declspec (noreturn)](../cpp/noreturn.md)

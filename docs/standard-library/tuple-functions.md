@@ -1,5 +1,5 @@
 ---
-title: funkcje&gt; krotki &lt;
+title: '&lt;&gt;funkcje krotki'
 ms.date: 11/04/2016
 f1_keywords:
 - tuple/std::get
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422655"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274523"
 ---
-# <a name="lttuplegt-functions"></a>funkcje&gt; krotki &lt;
+# <a name="lttuplegt-functions"></a>&lt;&gt;funkcje krotki
 
-## <a name="apply"></a>stosowa
+## <a name="apply"></a><a name="apply"></a> stosowa
 
 ```cpp
 template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
@@ -32,14 +32,14 @@ template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t)
 
 Wywołuje funkcję *F* z krotką *t*.
 
-## <a name="forward"></a>forward_as_tuple
+## <a name="forward_as_tuple"></a><a name="forward"></a> forward_as_tuple
 
 ```cpp
 template <class... TTypes>
     constexpr tuple<TTypes&&...> forward_as_tuple(TTypes&&...) noexcept;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
 
@@ -47,9 +47,9 @@ Zwraca wartość `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
 
 Konstruuje krotkę odwołań do argumentów w *t* odpowiednie do przesyłania dalej jako argumenty do funkcji.
 
-## <a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a> Pobierz
 
-Pobiera element z obiektu `tuple` przez indeks lub (w języku C++ 14) według typu.
+Pobiera element z `tuple` obiektu, według indeksu lub (w języku c++ 14) według typu.
 
 ```cpp
 // by index:
@@ -84,20 +84,20 @@ template <class T, class... Types>
 *Indeks*\
 Indeks elementu, który ma zostać pobrany.
 
-*Typy*\
+*Typ*\
 Sekwencja typów zadeklarowanych w spójnej kolekcji w kolejności deklaracji.
 
-*T*\
+*&*\
 Typ elementu, który ma zostać pobrany.
 
-\ *krotek*
-`std::tuple`, która zawiera dowolną liczbę elementów.
+*Spoin*\
+A `std::tuple` , która zawiera dowolną liczbę elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje szablonu zwracają odwołanie do wartości przy *indeksie*indeksu lub typu *T* w obiekcie `tuple`.
+Funkcje szablonu zwracają odwołanie do wartości w *indeksie*indeksu lub typu *T* w `tuple` obiekcie.
 
-Wywołanie `get<T>(Tuple)` spowoduje błąd kompilatora, jeśli krotka zawiera więcej lub mniej niż jeden element typu T.
+Wywołanie `get<T>(Tuple)` spowoduje wygenerowanie błędu kompilatora, jeśli krotka zawiera więcej lub mniej niż jeden element typu T.
 
 ### <a name="example"></a>Przykład
 
@@ -128,7 +128,7 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_from_tuple"></a>make_from_tuple
+## <a name="make_from_tuple"></a><a name="make_from_tuple"></a> make_from_tuple
 
 ```cpp
 template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
@@ -136,11 +136,11 @@ template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 
 ### <a name="remarks"></a>Uwagi
 
-Taki sam jak `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
+Analogicznie jak `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})` .
 
-## <a name="make_tuple"></a>make_tuple
+## <a name="make_tuple"></a><a name="make_tuple"></a> make_tuple
 
-Tworzy `tuple` z wartości elementów.
+Tworzy `tuple` wartości elementu z.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -149,17 +149,17 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ parametru n funkcji.
 
-\ *TN*
+*tN*\
 Wartość parametru n funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, gdzie `Vi` poszczególnych typów jest `X&`, gdy odpowiadający mu typ `Ti` jest `cv` `reference_wrapper<X>`; w przeciwnym razie jest `Ti`.
+Funkcja szablonu zwraca `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)` , gdzie każdy typ `Vi` jest, `X&` gdy odpowiedni typ to `Ti` `cv` `reference_wrapper<X>` ; w przeciwnym razie jest `Ti` .
 
-Jedną z zalet `make_tuple` jest to, że typy obiektów, które są przechowywane, są określane automatycznie przez kompilator i nie muszą być jawnie określone. Nie używaj jawnych argumentów szablonu, takich jak `make_tuple<int, int>(1, 2)`, gdy używasz `make_tuple`, ponieważ nie jest to niepotrzebnie pełne i dodaje złożone problemy referencyjne rvalue, które mogą spowodować błąd kompilacji.
+Jedną z zalet tego `make_tuple` jest to, że typy obiektów, które są przechowywane, są określane automatycznie przez kompilator i nie muszą być jawnie określone. Nie używaj jawnych argumentów szablonu, takich jak `make_tuple<int, int>(1, 2)` użycie, `make_tuple` ponieważ nie jest to niepotrzebna pełna i dodaje złożone problemy referencyjne rvalue, które mogą spowodować błąd kompilacji.
 
 ### <a name="example"></a>Przykład
 
@@ -196,16 +196,16 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 ```cpp
 template <class... Types>
     void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
 ```
 
-## <a name="tie"></a>równe
+## <a name="tie"></a><a name="tie"></a> równe
 
-Tworzy `tuple` z odwołań do elementów.
+Tworzy `tuple` odwołania do elementu z.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -214,12 +214,12 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ podstawowy wielonowego elementu krotki.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
+Funkcja szablonu zwraca wartość `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)` .
 
 ### <a name="example"></a>Przykład
 
@@ -262,24 +262,24 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="tuple_cat"></a>tuple_cat
+## <a name="tuple_cat"></a><a name="tuple_cat"></a> tuple_cat
 
 ```cpp
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt krotki skonstruowany przez zainicjowanie każdego elementu typu.
 
-## <a name="tuple_element_t"></a>tuple_element_t
+## <a name="tuple_element_t"></a><a name="tuple_element_t"></a> tuple_element_t
 
 ```cpp
 template <size_t I, class T>
     using tuple_element_t = typename tuple_element<I, T>::type;
 ```
 
-## <a name="tuple_size_v"></a>tuple_size_v
+## <a name="tuple_size_v"></a><a name="tuple_size_v"></a> tuple_size_v
 
 ```cpp
 template <class T>

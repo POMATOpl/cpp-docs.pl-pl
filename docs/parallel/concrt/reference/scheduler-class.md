@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422116"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274713"
 ---
 # <a name="scheduler-class"></a>Klasa harmonogramu
 
@@ -38,32 +38,32 @@ Reprezentuje streszczenie dla środowisko uruchomieniowe współbieżności Sche
 class Scheduler;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Scheduler](#ctor)|Obiekt klasy `Scheduler` można utworzyć tylko przy użyciu metod fabrycznych lub niejawnie.|
-|[~ Scheduler — destruktor](#dtor)|Obiekt klasy `Scheduler` jest niejawnie niszczony, gdy wszystkie odwołania zewnętrzne przestaną istnieć.|
+|[Scheduler](#ctor)|Obiekt `Scheduler` klasy można utworzyć tylko przy użyciu metod fabrycznych lub niejawnie.|
+|[~ Scheduler — destruktor](#dtor)|Obiekt `Scheduler` klasy jest niejawnie niszczony, gdy wszystkie odwołania zewnętrzne przestaną istnieć.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Attach](#attach)|Dołącza harmonogram do kontekstu wywołującego. Po powrocie tej metody kontekst wywołujący jest zarządzany przez harmonogram, a harmonogram stał się bieżącym harmonogramem.|
-|[Tworzenie](#create)|Tworzy nowy harmonogram, którego zachowanie jest opisane przez `_Policy` parametru, umieszcza odwołanie początkowe w harmonogramie i zwraca do niego wskaźnik.|
-|[CreateScheduleGroup —](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramów w ramach harmonogramu. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w nowo utworzonej grupie harmonogramu zostaną rozdzielone na wykonanie w lokalizacji określonej przez ten parametr.|
+|[Dołącz](#attach)|Dołącza harmonogram do kontekstu wywołującego. Po powrocie tej metody kontekst wywołujący jest zarządzany przez harmonogram, a harmonogram stał się bieżącym harmonogramem.|
+|[Utwórz](#create)|Tworzy nowy harmonogram, którego zachowanie jest opisane przez `_Policy` parametr, umieszcza początkowe odwołanie w harmonogramie i zwraca do niego wskaźnik.|
+|[CreateScheduleGroup —](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramów w ramach harmonogramu. Wersja, która przyjmuje parametr, `_Placement` powoduje, że zadania w nowo utworzonej grupie harmonogramu są wliczane do wykonania w lokalizacji określonej przez ten parametr.|
 |[GetNumberOfVirtualProcessors —](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.|
 |[GetPolicy —](#getpolicy)|Zwraca kopię zasad, za pomocą której został utworzony harmonogram.|
-|[Identyfikator](#id)|Zwraca unikatowy identyfikator dla harmonogramu.|
+|[#C1](#id)|Zwraca unikatowy identyfikator dla harmonogramu.|
 |[IsAvailableLocation —](#isavailablelocation)|Określa, czy dana lokalizacja jest dostępna w harmonogramie.|
-|[Dokumentacja](#reference)|Zwiększa liczbę odwołań harmonogramu.|
-|[RegisterShutdownEvent —](#registershutdownevent)|Powoduje, że dojście zdarzenia systemu Windows przeszedł do `_Event` parametru, aby zasygnalizować, gdy harmonogram zostanie zamknięty i zniszczy siebie. W momencie zasygnalizowania zdarzenia wszystkie prace, które zostały zaplanowane do harmonogramu, zostały ukończone. W tej metodzie można zarejestrować wiele zdarzeń zamknięcia.|
+|[Odwołanie](#reference)|Zwiększa liczbę odwołań harmonogramu.|
+|[RegisterShutdownEvent —](#registershutdownevent)|Powoduje, że uchwyt zdarzenia systemu Windows przeszedł `_Event` do zasygnalizowania, gdy harmonogram zostanie zamknięty i zniszczy siebie. W momencie zasygnalizowania zdarzenia wszystkie prace, które zostały zaplanowane do harmonogramu, zostały ukończone. W tej metodzie można zarejestrować wiele zdarzeń zamknięcia.|
 |[Wersja](#release)|Zmniejsza liczbę odwołań do harmonogramu.|
 |[ResetDefaultSchedulerPolicy —](#resetdefaultschedulerpolicy)|Resetuje domyślne zasady harmonogramu do ustawień domyślnych środowiska uruchomieniowego. Przy następnym utworzeniu domyślnego harmonogramu zostaną użyte domyślne ustawienia zasad środowiska uruchomieniowego.|
-|[ScheduleTask —](#scheduletask)|Przeciążone. Planuje zadanie lekkiej wagi w ramach harmonogramu. Uproszczone zadanie zostanie umieszczone w grupie harmonogramu określonej przez środowisko uruchomieniowe. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadanie zostanie rozdzielone na wykonanie w określonej lokalizacji.|
-|[SetDefaultSchedulerPolicy —](#setdefaultschedulerpolicy)|Zezwala na użycie zasad zdefiniowanych przez użytkownika do tworzenia domyślnego harmonogramu. Tę metodę można wywołać tylko wtedy, gdy w ramach procesu nie istnieje domyślny harmonogram. Po ustawieniu zasad domyślnych, będzie obowiązywać do następnego prawidłowego wywołania do `SetDefaultSchedulerPolicy` lub metody [ResetDefaultSchedulerPolicy —](#resetdefaultschedulerpolicy) .|
+|[ScheduleTask —](#scheduletask)|Przeciążone. Planuje zadanie lekkiej wagi w ramach harmonogramu. Uproszczone zadanie zostanie umieszczone w grupie harmonogramu określonej przez środowisko uruchomieniowe. Wersja, która przyjmuje parametr powoduje, że zadanie jest rozdzielone na `_Placement` wykonanie w określonej lokalizacji.|
+|[SetDefaultSchedulerPolicy —](#setdefaultschedulerpolicy)|Zezwala na użycie zasad zdefiniowanych przez użytkownika do tworzenia domyślnego harmonogramu. Tę metodę można wywołać tylko wtedy, gdy w ramach procesu nie istnieje domyślny harmonogram. Po ustawieniu domyślnych zasad pozostaje ona obowiązująca do następnego prawidłowego wywołania `SetDefaultSchedulerPolicy` metody lub [ResetDefaultSchedulerPolicy —](#resetdefaultschedulerpolicy) .|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -81,7 +81,7 @@ Harmonogram środowisko uruchomieniowe współbieżności używa kontekstów wyk
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="attach"></a>Klej
+## <a name="attach"></a><a name="attach"></a> Klej
 
 Dołącza harmonogram do kontekstu wywołującego. Po powrocie tej metody kontekst wywołujący jest zarządzany przez harmonogram, a harmonogram stał się bieżącym harmonogramem.
 
@@ -95,13 +95,13 @@ Dołączenie harmonogramu powoduje niejawnie umieszczenie odwołania w harmonogr
 
 W pewnym momencie w przyszłości należy wywołać metodę [CurrentScheduler::D etach](currentscheduler-class.md#detach) , aby można było wyłączyć harmonogram.
 
-Jeśli ta metoda jest wywoływana z kontekstu, który jest już dołączony do innego harmonogramu, istniejący harmonogram zostanie zapamiętany jako poprzedni harmonogram, a nowo utworzony harmonogram będzie bieżącym harmonogramem. Gdy wywołasz metodę `CurrentScheduler::Detach` w późniejszym czasie, poprzedni harmonogram zostanie przywrócony jako bieżący harmonogram.
+Jeśli ta metoda jest wywoływana z kontekstu, który jest już dołączony do innego harmonogramu, istniejący harmonogram zostanie zapamiętany jako poprzedni harmonogram, a nowo utworzony harmonogram będzie bieżącym harmonogramem. Po wywołaniu `CurrentScheduler::Detach` metody w późniejszym czasie, poprzedni harmonogram zostanie przywrócony jako bieżący harmonogram.
 
 Ta metoda zgłosi wyjątek [improper_scheduler_attach](improper-scheduler-attach-class.md) , jeśli ten harmonogram jest bieżącym harmonogramem wywołującego kontekstu.
 
-## <a name="create"></a>Create
+## <a name="create"></a><a name="create"></a> Create
 
-Tworzy nowy harmonogram, którego zachowanie jest opisane przez `_Policy` parametru, umieszcza odwołanie początkowe w harmonogramie i zwraca do niego wskaźnik.
+Tworzy nowy harmonogram, którego zachowanie jest opisane przez `_Policy` parametr, umieszcza początkowe odwołanie w harmonogramie i zwraca do niego wskaźnik.
 
 ```cpp
 static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
@@ -112,21 +112,21 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 Zasady harmonogramu opisujące zachowanie nowo utworzonego harmonogramu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowo utworzonego harmonogramu. Ten obiekt `Scheduler` ma umieszczaną początkową liczbę odwołań.
+Wskaźnik do nowo utworzonego harmonogramu. `Scheduler`Dla tego obiektu jest umieszczona początkowa liczba odwołań.
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu harmonogramu przy użyciu metody `Create` należy wywołać metodę `Release` w pewnym momencie w przyszłości, aby usunąć początkową liczbę odwołań i zezwolić na zamknięcie harmonogramu.
+Po utworzeniu harmonogramu przy użyciu `Create` metody, należy wywołać `Release` metodę w pewnym momencie w przyszłości, aby usunąć początkową liczbę odwołań i zezwolić na zamknięcie harmonogramu.
 
 Harmonogram utworzony za pomocą tej metody nie jest dołączony do kontekstu wywołującego. Można go dołączyć do kontekstu przy użyciu metody [Attach](#attach) .
 
 Ta metoda może zgłosić różne wyjątki, w tym [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) i [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
 
-## <a name="createschedulegroup"></a>CreateScheduleGroup —
+## <a name="createschedulegroup"></a><a name="createschedulegroup"></a> CreateScheduleGroup —
 
-Tworzy nową grupę harmonogramów w ramach harmonogramu. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w nowo utworzonej grupie harmonogramu zostaną rozdzielone na wykonanie w lokalizacji określonej przez ten parametr.
+Tworzy nową grupę harmonogramów w ramach harmonogramu. Wersja, która przyjmuje parametr, `_Placement` powoduje, że zadania w nowo utworzonej grupie harmonogramu są wliczane do wykonania w lokalizacji określonej przez ten parametr.
 
 ```cpp
 virtual ScheduleGroup* CreateScheduleGroup() = 0;
@@ -139,9 +139,9 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 *_Placement*<br/>
 Odwołanie do lokalizacji, w której zadania w ramach grupy harmonogramu będą rozliczać do wykonywania w.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nowo utworzonej grupy harmonogramów. Ten obiekt `ScheduleGroup` ma umieszczaną początkową liczbę odwołań.
+Wskaźnik do nowo utworzonej grupy harmonogramów. `ScheduleGroup`Dla tego obiektu jest umieszczona początkowa liczba odwołań.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -149,7 +149,7 @@ Należy wywołać metodę [Release](schedulegroup-class.md#release) w grupie har
 
 Należy pamiętać, że jeśli ten harmonogram został utworzony jawnie, przed zwolnieniem odwołań do harmonogramu należy zwolnić wszystkie odwołania do grup zaplanowanych w ramach tej usługi.
 
-## <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors —
+## <a name="getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors —
 
 Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.
 
@@ -157,11 +157,11 @@ Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.
 virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca liczba procesorów wirtualnych dla harmonogramu.
 
-## <a name="getpolicy"></a>GetPolicy —
+## <a name="getpolicy"></a><a name="getpolicy"></a> GetPolicy —
 
 Zwraca kopię zasad, za pomocą której został utworzony harmonogram.
 
@@ -169,11 +169,11 @@ Zwraca kopię zasad, za pomocą której został utworzony harmonogram.
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Kopia zasad, za pomocą których harmonogram został utworzony.
 
-## <a name="id"></a>#
+## <a name="id"></a><a name="id"></a> #C1
 
 Zwraca unikatowy identyfikator dla harmonogramu.
 
@@ -181,11 +181,11 @@ Zwraca unikatowy identyfikator dla harmonogramu.
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Unikatowy identyfikator dla harmonogramu.
 
-## <a name="isavailablelocation"></a>IsAvailableLocation —
+## <a name="isavailablelocation"></a><a name="isavailablelocation"></a> IsAvailableLocation —
 
 Określa, czy dana lokalizacja jest dostępna w harmonogramie.
 
@@ -198,15 +198,15 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 *_Placement*<br/>
 Odwołanie do lokalizacji, w której ma być wysyłana Kwerenda dotycząca usługi Scheduler.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskazanie, czy lokalizacja określona przez argument `_Placement` jest dostępna w harmonogramie.
+Wskazanie, czy lokalizacja określona przez `_Placement` argument jest dostępna w harmonogramie.
 
 ### <a name="remarks"></a>Uwagi
 
 Zwróć uwagę, że wartość zwracana to chwilowe próbkowanie, czy dana lokalizacja jest dostępna. W obecności wielu harmonogramów dynamiczne zarządzanie zasobami może dodawać lub odrzucać zasoby od harmonogramów w dowolnym momencie. W takim przypadku dana lokalizacja może zmienić dostępność.
 
-## <a name="reference"></a>Odwoła
+## <a name="reference"></a><a name="reference"></a> Odwoła
 
 Zwiększa liczbę odwołań harmonogramu.
 
@@ -214,7 +214,7 @@ Zwiększa liczbę odwołań harmonogramu.
 virtual unsigned int Reference() = 0 ;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Nowo zwiększona liczba odwołań.
 
@@ -222,11 +222,11 @@ Nowo zwiększona liczba odwołań.
 
 Jest to zwykle używane do zarządzania okresem istnienia harmonogramu dla kompozycji. Gdy liczba odwołań dla harmonogramu jest równa zero, harmonogram zostanie zamknięty i zostanie destruktorem po ukończeniu wszystkich zadań w harmonogramie.
 
-Metoda zgłosi wyjątek [improper_scheduler_reference](improper-scheduler-reference-class.md) , jeśli liczba odwołań przed wywołaniem metody `Reference` była zerem i wywołanie zostało wykonane z kontekstu, który nie należy do harmonogramu.
+Metoda zgłosi wyjątek [improper_scheduler_reference](improper-scheduler-reference-class.md) , jeśli liczba odwołań przed wywołaniem `Reference` metody była zerowa i wywołanie zostało wykonane z kontekstu, który nie należy do harmonogramu.
 
-## <a name="registershutdownevent"></a>RegisterShutdownEvent —
+## <a name="registershutdownevent"></a><a name="registershutdownevent"></a> RegisterShutdownEvent —
 
-Powoduje, że dojście zdarzenia systemu Windows przeszedł do `_Event` parametru, aby zasygnalizować, gdy harmonogram zostanie zamknięty i zniszczy siebie. W momencie zasygnalizowania zdarzenia wszystkie prace, które zostały zaplanowane do harmonogramu, zostały ukończone. W tej metodzie można zarejestrować wiele zdarzeń zamknięcia.
+Powoduje, że uchwyt zdarzenia systemu Windows przeszedł `_Event` do zasygnalizowania, gdy harmonogram zostanie zamknięty i zniszczy siebie. W momencie zasygnalizowania zdarzenia wszystkie prace, które zostały zaplanowane do harmonogramu, zostały ukończone. W tej metodzie można zarejestrować wiele zdarzeń zamknięcia.
 
 ```cpp
 virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
@@ -237,7 +237,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 *_Event*<br/>
 Dojście do obiektu zdarzenia systemu Windows, które zostanie zasygnalizowane przez środowisko uruchomieniowe, gdy harmonogram zostanie zamknięty i zniszczy siebie.
 
-## <a name="release"></a>Usuwanie
+## <a name="release"></a><a name="release"></a> Usuwanie
 
 Zmniejsza liczbę odwołań do harmonogramu.
 
@@ -245,7 +245,7 @@ Zmniejsza liczbę odwołań do harmonogramu.
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Nowo zmniejszona liczba odwołań.
 
@@ -253,7 +253,7 @@ Nowo zmniejszona liczba odwołań.
 
 Jest to zwykle używane do zarządzania okresem istnienia harmonogramu dla kompozycji. Gdy liczba odwołań dla harmonogramu jest równa zero, harmonogram zostanie zamknięty i zostanie destruktorem po ukończeniu wszystkich zadań w harmonogramie.
 
-## <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy —
+## <a name="resetdefaultschedulerpolicy"></a><a name="resetdefaultschedulerpolicy"></a> ResetDefaultSchedulerPolicy —
 
 Resetuje domyślne zasady harmonogramu do ustawień domyślnych środowiska uruchomieniowego. Przy następnym utworzeniu domyślnego harmonogramu zostaną użyte domyślne ustawienia zasad środowiska uruchomieniowego.
 
@@ -265,9 +265,9 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 
 Tę metodę można wywołać, gdy w ramach procesu istnieje harmonogram domyślny. Nie będzie to miało wpływu na zasady istniejącego harmonogramu domyślnego. Jeśli jednak domyślny harmonogram został zamknięty i zostanie utworzony nowy element domyślny w późniejszym momencie, nowy harmonogram użyje domyślnych ustawień zasad środowiska uruchomieniowego.
 
-## <a name="ctor"></a>Pracę
+## <a name="scheduler"></a><a name="ctor"></a> Pracę
 
-Obiekt klasy `Scheduler` można utworzyć tylko przy użyciu metod fabrycznych lub niejawnie.
+Obiekt `Scheduler` klasy można utworzyć tylko przy użyciu metod fabrycznych lub niejawnie.
 
 ```cpp
 Scheduler();
@@ -275,21 +275,21 @@ Scheduler();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślny harmonogram procesu jest tworzony niejawnie w przypadku korzystania z wielu funkcji środowiska uruchomieniowego, które wymagają dołączenia harmonogramu do kontekstu wywołującego. Metody w klasie `CurrentScheduler` i funkcje warstw PPL i Agents zwykle wykonują niejawny załącznik.
+Domyślny harmonogram procesu jest tworzony niejawnie w przypadku korzystania z wielu funkcji środowiska uruchomieniowego, które wymagają dołączenia harmonogramu do kontekstu wywołującego. Metody w `CurrentScheduler` klasie i funkcje warstw PPL i Agents zwykle wykonują niejawny załącznik.
 
-Harmonogram można również utworzyć jawnie za pomocą metody `CurrentScheduler::Create` lub metody `Scheduler::Create`.
+Harmonogram można także utworzyć jawnie za pomocą `CurrentScheduler::Create` metody lub `Scheduler::Create` metody.
 
-## <a name="dtor"></a>~ Scheduler
+## <a name="scheduler"></a><a name="dtor"></a> ~ Scheduler
 
-Obiekt klasy `Scheduler` jest niejawnie niszczony, gdy wszystkie odwołania zewnętrzne przestaną istnieć.
+Obiekt `Scheduler` klasy jest niejawnie niszczony, gdy wszystkie odwołania zewnętrzne przestaną istnieć.
 
 ```cpp
 virtual ~Scheduler();
 ```
 
-## <a name="scheduletask"></a>ScheduleTask —
+## <a name="scheduletask"></a><a name="scheduletask"></a> ScheduleTask —
 
-Planuje zadanie lekkiej wagi w ramach harmonogramu. Uproszczone zadanie zostanie umieszczone w grupie harmonogramu określonej przez środowisko uruchomieniowe. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadanie zostanie rozdzielone na wykonanie w określonej lokalizacji.
+Planuje zadanie lekkiej wagi w ramach harmonogramu. Uproszczone zadanie zostanie umieszczone w grupie harmonogramu określonej przez środowisko uruchomieniowe. Wersja, która przyjmuje parametr powoduje, że zadanie jest rozdzielone na `_Placement` wykonanie w określonej lokalizacji.
 
 ```cpp
 virtual void ScheduleTask(
@@ -313,9 +313,9 @@ Wskaźnik void do danych, które zostaną przesłane jako parametr do treści za
 *_Placement*<br/>
 Odwołanie do lokalizacji, w której zostanie obciążone zadanie lekkiej wagi.
 
-## <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy —
+## <a name="setdefaultschedulerpolicy"></a><a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy —
 
-Zezwala na użycie zasad zdefiniowanych przez użytkownika do tworzenia domyślnego harmonogramu. Tę metodę można wywołać tylko wtedy, gdy w ramach procesu nie istnieje domyślny harmonogram. Po ustawieniu zasad domyślnych, będzie obowiązywać do następnego prawidłowego wywołania do `SetDefaultSchedulerPolicy` lub metody [ResetDefaultSchedulerPolicy —](#resetdefaultschedulerpolicy) .
+Zezwala na użycie zasad zdefiniowanych przez użytkownika do tworzenia domyślnego harmonogramu. Tę metodę można wywołać tylko wtedy, gdy w ramach procesu nie istnieje domyślny harmonogram. Po ustawieniu domyślnych zasad pozostaje ona obowiązująca do następnego prawidłowego wywołania `SetDefaultSchedulerPolicy` metody lub [ResetDefaultSchedulerPolicy —](#resetdefaultschedulerpolicy) .
 
 ```cpp
 static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
@@ -333,6 +333,6 @@ Jeśli `SetDefaultSchedulerPolicy` Metoda jest wywoływana, gdy domyślny harmon
 ## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[Scheduler, klasa](scheduler-class.md)<br/>
+[Scheduler — Klasa](scheduler-class.md)<br/>
 [PolicyElementKey —](concurrency-namespace-enums.md)<br/>
 [Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

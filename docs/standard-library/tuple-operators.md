@@ -1,5 +1,5 @@
 ---
-title: Operatory &lt;krotki&gt;
+title: '&lt;&gt;Operatory krotki'
 ms.date: 11/04/2016
 f1_keywords:
 - tuple/std::operator!=
@@ -10,17 +10,17 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422648"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274623"
 ---
-# <a name="lttuplegt-operators"></a>Operatory &lt;krotki&gt;
+# <a name="lttuplegt-operators"></a>&lt;&gt;Operatory krotki
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
-Porównaj `tuple` obiektów pod kątem nierówności.
+Porównywanie `tuple` obiektów pod kątem nierówności.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -31,12 +31,12 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ n-tego elementu krotki.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca wartość false, jeśli `N` ma wartość 0, w przeciwnym razie `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
+Funkcja zwraca wartość false `N` , jeśli jest równa 0, w przeciwnym razie `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)` .
 
 ### <a name="example"></a>Przykład
 
@@ -83,9 +83,9 @@ false
 true
 ```
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
-Porównaj `tuple` obiektów mniej.
+Porównywanie `tuple` obiektów w mniej.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -96,12 +96,12 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ n-tego elementu krotki.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca wartość true, jeśli `N` jest większa niż 0, a pierwsza różna wartość w `tpl1` porównuje wartość mniejszą niż odpowiadającą jej wartością w `tpl2`, w przeciwnym razie zwraca wartość false.
+Funkcja zwraca wartość true `N` , jeśli jest większa niż 0, a pierwsza różna wartość w `tpl1` porównaniu do odpowiedniej wartości w, w `tpl2` przeciwnym razie zwraca wartość false.
 
 ### <a name="example"></a>Przykład
 
@@ -148,9 +148,9 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
-Porównaj `tuple` obiektów w mniej lub większym stopniu.
+Porównywanie `tuple` obiektów jest mniejsze lub równe.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -161,12 +161,12 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ n-tego elementu krotki.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca `!(tpl2 < tpl1)`.
+Funkcja zwraca wartość `!(tpl2 < tpl1)` .
 
 ### <a name="example"></a>Przykład
 
@@ -213,9 +213,9 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
-Porównaj `tuple` obiektów pod kątem równości.
+Porównaj `tuple` obiekty pod kątem równości.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -226,12 +226,12 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ n-tego elementu krotki.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca wartość true, jeśli `N` ma wartość 0, w przeciwnym razie `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
+Funkcja zwraca wartość true `N` , jeśli jest równa 0, w przeciwnym razie `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)` .
 
 ### <a name="example"></a>Przykład
 
@@ -278,9 +278,9 @@ true
 false
 ```
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
-Porównaj `tuple` obiektów w większym zakresie.
+Porównywanie `tuple` obiektów w większym zakresie.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -291,12 +291,12 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ n-tego elementu krotki.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca `tpl2 < tpl1`.
+Funkcja zwraca wartość `tpl2 < tpl1` .
 
 ### <a name="example"></a>Przykład
 
@@ -343,9 +343,9 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
-Porównaj `tuple` obiektów w większym lub równym stopniu.
+Porównywanie `tuple` obiektów jest większe lub równe.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -356,12 +356,12 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ n-tego elementu krotki.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca `!(tpl1 < tpl2)`.
+Funkcja zwraca wartość `!(tpl1 < tpl2)` .
 
 ### <a name="example"></a>Przykład
 
