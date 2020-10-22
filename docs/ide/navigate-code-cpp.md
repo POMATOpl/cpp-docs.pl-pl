@@ -3,10 +3,10 @@ title: Nawigowanie po kodzie C++ w programie Visual Studio
 description: Użyj różnych narzędzi w programie Visual Studio, aby nawigować po kodzie bazowym języka C++.
 ms.date: 05/28/2019
 ms.openlocfilehash: cc13326dee14e952c78e521344a6244249179cb8
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "90683497"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Nawigowanie po kodzie C++ w programie Visual Studio
@@ -128,7 +128,7 @@ Można przejść do definicji typu w pliku lub do typu elementów członkowskich
 
 ![C&#43;&#43; pasek nawigacyjny](../ide/media/navbar-cpp.png "Pasek nawigacji")
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Czytanie i interpretacja kodu w języku C++](read-and-understand-code-cpp.md)</br>
 - [Edycja i refaktoryzacja kodu w języku C++](read-and-understand-code-cpp.md)</br>
