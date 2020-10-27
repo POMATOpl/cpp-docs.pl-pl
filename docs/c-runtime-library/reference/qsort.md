@@ -1,6 +1,7 @@
 ---
 title: qsort
-ms.date: 4/2/2020
+description: Opisuje interfejs API szybkiego sortowania środowiska uruchomieniowego Microsoft C `qsort`
+ms.date: 10/23/2020
 api_name:
 - qsort
 - _o_qsort
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c658ffae69cd662809eb4dac09c06b6a13f4e051
+ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913254"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639123"
 ---
 # <a name="qsort"></a>qsort
 
@@ -55,23 +56,23 @@ void qsort(
 
 ### <a name="parameters"></a>Parametry
 
-*base*<br/>
+*`base`*\
 Początek tablicy docelowej.
 
-*Liczba*<br/>
+*`number`*\
 Rozmiar tablicy w elementach.
 
-*Szerokość*<br/>
+*`width`*\
 Rozmiar elementu w bajtach.
 
-*porównaniu*<br/>
+*`compare`*\
 Wskaźnik do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **qsort** implementuje algorytm szybkiego sortowania, aby posortować tablicę elementów *liczbowych* , a każda z nich ma *Szerokość* . *Podstawa* argumentu jest wskaźnikiem do podstawy tablicy, która ma zostać posortowana. **qsort** zastępuje tę tablicę przy użyciu posortowanych elementów.
+**`qsort`** Funkcja implementuje algorytm szybkiego sortowania, aby posortować tablicę *`number`* elementów, każdy z *`width`* bajtów. Argument *`base`* jest wskaźnikiem do podstawy tablicy, która ma zostać posortowana. **`qsort`** zastępuje tę tablicę przy użyciu posortowanych elementów.
 
-**qsort** wywołuje procedurę *porównania* w jeden lub więcej razy podczas sortowania i przekazuje wskaźniki do dwóch elementów tablicy dla każdego wywołania.
+**`qsort`** wywołuje *`compare`* procedurę co najmniej jeden raz podczas sortowania i przekazuje wskaźniki do dwóch elementów tablicy dla każdego wywołania. Jeśli *`compare`* wskazuje dwa elementy są takie same, ich kolejność w sortowanej tablicy jest nieokreślona.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -81,13 +82,13 @@ Procedura porównuje elementy i zwraca jedną z następujących wartości.
 
 |Porównywanie zwracanej wartości funkcji|Opis|
 |-----------------------------------|-----------------|
-|< 0|**elem1** mniejsze niż **elem2**|
-|0|**elem1** równoważne **elem2**|
-|> 0|**elem1** większe niż **elem2**|
+|< 0|**`elem1`** mniejsze niż **`elem2`**|
+|0|**`elem1`** równoważne **`elem2`**|
+|> 0|**`elem1`** większe niż **`elem2`**|
 
 Tablica jest sortowana w kolejności rosnącej, zgodnie z definicją w funkcji porównania. Aby posortować tablicę w kolejności malejącej, Odwróć wartość "większe niż" i "mniejsze niż" w funkcji porównywania.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare* lub *Number* ma **wartość null**lub jeśli *podstawa* ma **wartość null** , a *Liczba* jest różna od zera, lub jeśli *Szerokość* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca i **errno** jest ustawiona na **EINVAL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *`compare`* lub *`number`* ma wartość lub **`NULL`** Jeśli *`base`* jest **`NULL`** i *`number`* jest różna od zera lub jeśli *`width`* jest mniejsza od zera, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca i **`errno`** ma ustawioną wartość **`EINVAL`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -95,7 +96,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**qsort**|\<STDLIB. h> i \<Search. h>|
+|**`qsort`**|\<stdlib.h> i \<search.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -143,8 +144,8 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)<br/>
-[bsearch](bsearch.md)<br/>
-[_lsearch](lsearch.md)<br/>
+[Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)\
+[`bsearch`](bsearch.md)\
+[`_lsearch`](lsearch.md)
