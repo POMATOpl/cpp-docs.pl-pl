@@ -1,6 +1,7 @@
 ---
-title: 'Strona niestandardowy krok budowania właściwości: Ogólne'
-ms.date: 11/04/2016
+title: 'Strona właściwości Niestandardowy krok budowania: ogólne'
+description: W tym artykule opisano właściwości dostępne na stronie niestandardowy krok kompilacji w oknie dialogowym strony właściwości.
+ms.date: 10/27/2020
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
 - VC.Project.VCCustomBuildStep.CustomBuildAfterTargets
@@ -12,20 +13,20 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-ms.openlocfilehash: 329923140cf5a8f05e5c032ddb9e25c0ea45ec2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f2deef931821981b3301f44ba37660975fb811
+ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273082"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907587"
 ---
-# <a name="custom-build-step-property-page-general"></a>Strona niestandardowy krok budowania właściwości: Ogólne
+# <a name="custom-build-step-property-page-general"></a>Strona właściwości Niestandardowy krok budowania: ogólne
 
-Dla każdej kombinacji konfiguracji projektu i platformy docelowej w projekcie można określić niestandardowy krok wykonywany podczas kompilacji projektu.
+Dla każdej konfiguracji projektu i docelowej kombinacji platformy w projekcie można określić niestandardowy krok do wykonania podczas kompilowania projektu.
 
-Wersja systemu Linux na tej stronie, zobacz [właściwości kroku kompilacji niestandardowy (Linux C++)](../../linux/prop-pages/custom-build-step-linux.md).
+Aby uzyskać wersję systemu Linux na tej stronie, zobacz [właściwości niestandardowego kroku kompilacji (Linux C++)](../../linux/prop-pages/custom-build-step-linux.md).
 
-## <a name="uielement-list"></a>Lista elementów UI
+## <a name="general-page"></a>Strona ogólna
 
 - **Wiersz polecenia**
 
@@ -45,20 +46,20 @@ Wersja systemu Linux na tej stronie, zobacz [właściwości kroku kompilacji nie
 
 - **Wykonaj po i wykonaj przed**
 
-   Te opcje definiują, kiedy krok niestandardowej kompilacji jest uruchamiany w procesie kompilacji w stosunku do wymienionych celów. Najczęściej wymienione cele to BuildGenerateSources, BuildCompile i BuildLink, ponieważ stanowią one najważniejsze kroki procesu kompilacji. Inne często wymienione cele to Midl, CLCompile i Link.
+   Te opcje definiują, kiedy krok niestandardowej kompilacji jest uruchamiany w procesie kompilacji w stosunku do wymienionych celów. Najczęściej wymienione cele to `BuildGenerateSources` , `BuildCompile` , i `BuildLink` , ponieważ reprezentują główne kroki procesu kompilacji. Inne często wymienione cele to `Midl` , `CLCompile` , i `Link` .
 
-- **Traktuj produkty wyjściowe jako zawartość**
+- **Traktuj dane wyjściowe jako zawartość**
 
-   Ta opcja jest przydatna tylko dla aplikacji uniwersalnych platformy Windows lub Windows Phone, które obejmują wszystkie pliki zawartości w pakiecie .appx.
+   Ta opcja ma znaczenie tylko w przypadku aplikacji platforma uniwersalna systemu Windows lub Windows Phone, które obejmują wszystkie pliki zawartości w *`.appx`* pakiecie.
 
 ### <a name="to-specify-a-custom-build-step"></a>Aby określić krok niestandardowej kompilacji
 
-1. Na pasku menu wybierz **projektu**, **właściwości**. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Na pasku menu wybierz **Project**  >  **Właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. W **stron właściwości** okno dialogowe, przejdź do **właściwości konfiguracji**, **niestandardowy krok budowania**, **ogólne** strony.
+1. W oknie dialogowym **strony właściwości** przejdź do strony Ogólne w obszarze **Właściwości konfiguracji**  >  **niestandardowe krok kompilacji**  >  **General** .
 
 1. Zmodyfikuj ustawienia.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja strony właściwości projektu C++](property-pages-visual-cpp.md)
+[Odwołanie do strony właściwości projektu C++](property-pages-visual-cpp.md)

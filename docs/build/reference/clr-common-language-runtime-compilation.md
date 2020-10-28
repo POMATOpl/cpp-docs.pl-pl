@@ -1,7 +1,7 @@
 ---
 title: /clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 description: Użyj opcji kompilatora Microsoft C++ Option/CLR, aby skompilować kod C++/CLI i C++ jako kod zarządzany.
-ms.date: 10/25/2020
+ms.date: 10/27/2020
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: b4634b63e58344893d99e2217e57693a2c169f66
-ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
+ms.openlocfilehash: 9d27d9fb6226f84c4ea67a8f9387a595ba65468b
+ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639097"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907600"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>`/clr` (Kompilacja środowiska uruchomieniowego języka wspólnego)
 
-Umożliwia aplikacjom i składnikom korzystanie z funkcji środowiska uruchomieniowego języka wspólnego (CLR).
+Umożliwia aplikacjom i składnikom korzystanie z funkcji środowiska uruchomieniowego języka wspólnego (CLR) i umożliwia kompilację C++/CLI.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +36,15 @@ Co najmniej jeden z następujących argumentów oddzielonych przecinkami.
 
 - brak
 
-   Bez opcji program **`/clr`** tworzy metadane dla aplikacji. Metadane mogą być używane przez inne aplikacje CLR i umożliwiają aplikacji korzystanie z typów i danych w metadanych innych składników CLR. Aby uzyskać więcej informacji, zobacz [zestawy mieszane (natywne i zarządzane)](../../dotnet/mixed-native-and-managed-assemblies.md).
+   Bez opcji program **`/clr`** tworzy metadane dla składnika. Metadane mogą być używane przez inne aplikacje CLR i umożliwiają składnikowi korzystanie z typów i danych w metadanych innych składników CLR. Aby uzyskać więcej informacji, zobacz [zestawy mieszane (natywne i zarządzane)](../../dotnet/mixed-native-and-managed-assemblies.md).
+
+- **`NetCore`**
+
+   **`/clr:NetCore`** Tworzy metadane i kod dla składnika przy użyciu najnowszego międzyplatformowego programu .NET Framework, znanego również jako .NET Core. Metadane mogą być używane przez inne aplikacje platformy .NET Core. Ponadto opcja umożliwia składnikowi korzystanie z typów i danych w metadanych innych składników .NET Core.
+
+- **`nostdlib`**
+
+   Nakazuje kompilatorowi ignorowanie domyślnego *`\clr`* katalogu. Kompilator tworzy błędy, jeśli dołączysz wiele wersji biblioteki DLL, takich jak System.dll. Ta opcja umożliwia określenie konkretnej platformy do użycia podczas kompilacji.
 
 - **`pure`**
 
@@ -58,15 +66,11 @@ Co najmniej jeden z następujących argumentów oddzielonych przecinkami.
 
 - **`initialAppDomain`**
 
-   Umożliwia uruchamianie aplikacji C++/CLI w wersji 1 środowiska CLR.  Aplikacja, która jest skompilowana przy użyciu, **`initialAppDomain`** nie powinna być używana przez aplikację, która używa ASP.NET, ponieważ nie jest obsługiwana w wersji 1 środowiska CLR.
-
-- **`nostdlib`**
-
-   Nakazuje kompilatorowi ignorowanie domyślnego *`\clr`* katalogu. Kompilator tworzy błędy, jeśli dołączysz wiele wersji biblioteki DLL, takich jak System.dll. Ta opcja umożliwia określenie konkretnej platformy do użycia podczas kompilacji.
+   **`initialAppDomain` jest przestarzały** . Umożliwia uruchamianie aplikacji C++/CLI w wersji 1 środowiska CLR.  Aplikacja, która jest skompilowana przy użyciu, **`initialAppDomain`** nie powinna być używana przez aplikację, która używa ASP.NET, ponieważ nie jest obsługiwana w wersji 1 środowiska CLR.
 
 ## <a name="remarks"></a>Uwagi
 
-Kod zarządzany to kod, który może być sprawdzany i zarządzany przez środowisko CLR. Kod zarządzany może uzyskiwać dostęp do obiektów zarządzanych. Aby uzyskać więcej informacji, zobacz [ `/clr ` ograniczenia](clr-restrictions.md).
+*Kod zarządzany* to kod, który może być sprawdzany i zarządzany przez środowisko CLR. Kod zarządzany może uzyskiwać dostęp do obiektów zarządzanych. Aby uzyskać więcej informacji, zobacz [ `/clr` ograniczenia](clr-restrictions.md).
 
 Aby uzyskać informacje o sposobie tworzenia aplikacji, które definiują i zużywają typy zarządzane w języku C++, zobacz [rozszerzenia składników dla platform środowiska uruchomieniowego](../../extensions/component-extensions-for-runtime-platforms.md).
 
@@ -110,9 +114,12 @@ Użyj ildasm.exe, aby wyświetlić metadane.
 
 1. Ustaw listę rozwijaną **Konfiguracja** na **wszystkie konfiguracje** i Ustaw listę rozwijaną **platformy** na **wszystkie platformy** .
 
-1. Wybierz stronę **właściwości konfiguracja**  >  **zaawansowana** .
+1. Wybierz stronę **Ogólne właściwości konfiguracji**  >  **C/C++**  >  **General** .
 
 1. Zmodyfikuj właściwość **Obsługa środowiska uruchomieniowego** CLR. Wybierz **przycisk OK** , aby zapisać zmiany.
+
+> [!NOTE]
+> W środowisku IDE programu Visual Studio **`/clr`** opcję kompilatora można ustawić indywidualnie na stronie Ogólne **Właściwości konfiguracji**  >  **C/C++**  >  **General** okna dialogowego strony właściwości. Zalecamy jednak użycie szablonu CLR do utworzenia projektu. Ustawia wszystkie właściwości wymagane do pomyślnego utworzenia składnika CLR. Innym sposobem ustawienia tych właściwości jest użycie właściwości **Obsługa środowiska uruchomieniowego** CLR na stronie Zaawansowane **Właściwości konfiguracji** w  >  **Advanced** oknie dialogowym strony właściwości. Ta właściwość ustawia wszystkie inne opcje narzędzi związanych ze środowiskiem CLR jednocześnie.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
