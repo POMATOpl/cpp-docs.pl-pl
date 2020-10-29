@@ -25,20 +25,20 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: bb301f63bfd1e6839d7893cdc03d61e021409666
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eaaa2c7428809c05532642b0f9ac53146c6f01a9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500068"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924288"
 ---
 # <a name="general-property-page-project"></a>Ogólna strona właściwości (projekt)
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Ten temat dotyczy projektów programu Visual Studio dla systemu Windows. W przypadku projektów systemu Linux zapoznaj się z informacjami na [stronie właściwości systemu Linux C++](../../linux/prop-pages-linux.md). W przypadku projektów CMake zobacz [CMAKE projects w programie Visual Studio](../cmake-projects-in-visual-studio.md). W przypadku projektów systemu Android zobacz [Ogólne właściwości projektu (Android C++)](../../cross-platform/general-android-prop-page.md). W przypadku projektów programu make dla systemu Android zobacz [Ogólne właściwości projektu (plik reguł programu make dla systemu Android C++)](../../cross-platform/general-makefile-android-prop-page.md)
 
-Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiązań i wybraniu **Właściwości**, na stronie właściwości **Ogólne** w węźle **Właściwości konfiguracji** w lewym okienku zostaną wyświetlone następujące właściwości:
+Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiązań i wybraniu **Właściwości** , na stronie właściwości **Ogólne** w węźle **Właściwości konfiguracji** w lewym okienku zostaną wyświetlone następujące właściwości:
 
 - **Katalog wyjściowy**
 
@@ -68,7 +68,7 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
      Wyświetla zestaw narzędzi konsolidatora, określa opcję konsolidatora/DLL i dodaje _WINDLL definiuje do CL.
 
-  - **Make**
+  - **Makefile**
 
      Wyświetla zestaw narzędzi programu make (NMake).
 
@@ -86,7 +86,7 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
    W przypadku platformy docelowej systemu Windows określa wersję Windows SDK wymaganą przez projekt. Podczas instalowania obciążenia języka C++ przy użyciu Instalatora programu Visual Studio wymagane są także zainstalowane części Windows SDK. Jeśli na komputerze znajduje się inna wersja Windows SDK, na liście rozwijanej są wyświetlane wszystkie zainstalowane narzędzia zestawu SDK.
 
-   Aby przejść do systemu Windows 7 lub Windows Vista, użyj wartości **8,1**, ponieważ Windows SDK 8,1 jest zgodny z tymi platformami. Ponadto należy zdefiniować odpowiednią wartość dla **_WIN32_WINNT** w targetver. h. W przypadku systemu Windows 7 to 0x0601. Zobacz [Modyfikowanie winver i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+   Aby przejść do systemu Windows 7 lub Windows Vista, użyj wartości **8,1** , ponieważ Windows SDK 8,1 jest zgodny z tymi platformami. Ponadto należy zdefiniować odpowiednią wartość dla **_WIN32_WINNT** w targetver. h. W przypadku systemu Windows 7 to 0x0601. Zobacz [Modyfikowanie winver i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
    Możesz zainstalować zestaw narzędzi platformy systemu Windows XP dołączony do programu Visual Studio, aby użyć bieżącej wersji bibliotek do kompilowania projektów systemu Windows XP i Windows 2003 Server. Aby uzyskać informacje na temat uzyskiwania i używania tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów dla systemu Windows XP](../configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat zmiany zestawu narzędzi platformy, zobacz [How to: Modify The Target Framework and platform zestaw narzędzi](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
@@ -100,9 +100,9 @@ Po kliknięciu prawym przyciskiem myszy węzła projektu w Eksplorator rozwiąza
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyciskiem myszy węzła projektu w **Eksplorator rozwiązań**, a następnie wybraniu **Właściwości**, na stronie właściwości **Ogólne** w węźle **Właściwości konfiguracji** w lewym okienku są wyświetlane dwie sekcje właściwości:
+W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyciskiem myszy węzła projektu w **Eksplorator rozwiązań** , a następnie wybraniu **Właściwości** , na stronie właściwości **Ogólne** w węźle **Właściwości konfiguracji** w lewym okienku są wyświetlane dwie sekcje właściwości:
 
 - Ogólne
 
@@ -112,7 +112,7 @@ W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyci
 
 - **Platforma docelowa**
 
-   Określa platformę, na której będzie wykonywany projekt. Na przykład Windows, Android lub iOS. Wartość **Windows 10** oznacza, że projekt jest przeznaczony dla platforma uniwersalna systemu Windows. Jeśli chcesz uzyskać dostęp do wcześniejszych wersji systemu Windows, wersja nie jest wyświetlana, a wartość w tym polu jest wyświetlana jako tylko **Windows**. Jest to pole tylko do odczytu, które jest ustawiane podczas tworzenia projektu.
+   Określa platformę, na której będzie wykonywany projekt. Na przykład Windows, Android lub iOS. Wartość **Windows 10** oznacza, że projekt jest przeznaczony dla platforma uniwersalna systemu Windows. Jeśli chcesz uzyskać dostęp do wcześniejszych wersji systemu Windows, wersja nie jest wyświetlana, a wartość w tym polu jest wyświetlana jako tylko **Windows** . Jest to pole tylko do odczytu, które jest ustawiane podczas tworzenia projektu.
 
 - **Wersja platformy docelowej (Visual Studio 2015)**
 
@@ -124,7 +124,7 @@ W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyci
 
    W przypadku platformy docelowej systemu Windows określa wersję Windows SDK wymaganą przez projekt. Podczas instalowania obciążenia języka C++ przy użyciu Instalatora programu Visual Studio wymagane są także zainstalowane części Windows SDK. Jeśli na komputerze znajduje się inna wersja Windows SDK, na liście rozwijanej są wyświetlane wszystkie zainstalowane narzędzia zestawu SDK.
 
-   Aby przejść do systemu Windows 7 lub Windows Vista, użyj wartości **8,1**, ponieważ Windows SDK 8,1 jest zgodny z tymi platformami. Ponadto należy zdefiniować odpowiednią wartość dla **_WIN32_WINNT** w targetver. h. W przypadku systemu Windows 7 to 0x0601. Zobacz [Modyfikowanie winver i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+   Aby przejść do systemu Windows 7 lub Windows Vista, użyj wartości **8,1** , ponieważ Windows SDK 8,1 jest zgodny z tymi platformami. Ponadto należy zdefiniować odpowiednią wartość dla **_WIN32_WINNT** w targetver. h. W przypadku systemu Windows 7 to 0x0601. Zobacz [Modyfikowanie winver i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
    Możesz zainstalować zestaw narzędzi platformy systemu Windows XP dołączony do programu Visual Studio, aby użyć bieżącej wersji bibliotek do kompilowania projektów systemu Windows XP i Windows 2003 Server. Aby uzyskać informacje na temat uzyskiwania i używania tego zestawu narzędzi platformy, zobacz [Konfigurowanie programów dla systemu Windows XP](../configuring-programs-for-windows-xp.md). Aby uzyskać dodatkowe informacje na temat zmiany zestawu narzędzi platformy, zobacz [How to: Modify The Target Framework and platform zestaw narzędzi](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
@@ -150,7 +150,7 @@ W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyci
 
 - **Rozszerzenia do usunięcia podczas czyszczenia**
 
-   Opcja **Oczyść** (menu**kompilacja** ) usuwa pliki z katalogu pośredniego, w którym jest skompilowana Konfiguracja projektu. Pliki z rozszerzeniami określonymi za pomocą tej właściwości zostaną usunięte po uruchomieniu **czyszczenia** lub po wykonaniu odbudowy. Oprócz plików tych rozszerzeń w katalogu pośrednim, system kompilacji również usunie wszystkie znane dane wyjściowe kompilacji, bez względu na to, gdzie się znajdują (włącznie z wynikami pośrednimi, takimi jak pliki. obj). Należy pamiętać, że można określić symbole wieloznaczne.
+   Opcja **Oczyść** (menu **kompilacja** ) usuwa pliki z katalogu pośredniego, w którym jest skompilowana Konfiguracja projektu. Pliki z rozszerzeniami określonymi za pomocą tej właściwości zostaną usunięte po uruchomieniu **czyszczenia** lub po wykonaniu odbudowy. Oprócz plików tych rozszerzeń w katalogu pośrednim, system kompilacji również usunie wszystkie znane dane wyjściowe kompilacji, bez względu na to, gdzie się znajdują (włącznie z wynikami pośrednimi, takimi jak pliki. obj). Należy pamiętać, że można określić symbole wieloznaczne.
 
    Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A> .
 
@@ -170,7 +170,7 @@ W programie Visual Studio 2015 i Visual Studio 2017 po kliknięciu prawym przyci
 
 ## <a name="project-defaults"></a>Wartości domyślne projektu
 
-Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwości, które można modyfikować. Definicję tych właściwości można znaleźć w plikach. props w *katalogu instalacyjnym*\VC\VCProjectDefaults.
+Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwości, które można modyfikować. Definicję tych właściwości można znaleźć w plikach. props w *katalogu instalacyjnym* \VC\VCProjectDefaults.
 
 - **Typ konfiguracji**
 
@@ -184,7 +184,7 @@ Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwoś
 
      Wyświetla zestaw narzędzi konsolidatora, określa opcję konsolidatora/DLL i dodaje _WINDLL definiuje do CL.
 
-  - **Make**
+  - **Makefile**
 
      Wyświetla zestaw narzędzi programu make (NMake).
 
@@ -230,6 +230,6 @@ Właściwości w sekcji domyślnej projektu reprezentują domyślne właściwoś
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Odwołanie do strony właściwości projektu C++](property-pages-visual-cpp.md)

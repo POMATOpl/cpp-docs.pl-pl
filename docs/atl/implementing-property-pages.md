@@ -6,22 +6,22 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 6544f5ddf0b81fdec893308bb10e0c19cea73005
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499452"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923890"
 ---
 # <a name="implementing-property-pages"></a>Implementowanie stron właściwości
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Kreator strony właściwości ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Strony właściwości to obiekty COM implementujące `IPropertyPage` interfejs lub `IPropertyPage2` . ATL zapewnia obsługę implementowania stron właściwości za pomocą [Kreatora strony właściwości ATL](../atl/reference/atl-property-page-wizard.md) w [oknie dialogowym Dodaj klasę](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box).
 
@@ -29,7 +29,7 @@ Aby utworzyć stronę właściwości przy użyciu biblioteki ATL:
 
 - Utwórz lub Otwórz projekt serwera biblioteki dołączanej dynamicznie (DLL) ATL.
 
-- Otwórz okno [dialogowe Dodawanie klasy](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) i wybierz opcję **Strona właściwości ATL**.
+- Otwórz okno [dialogowe Dodawanie klasy](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) i wybierz opcję **Strona właściwości ATL** .
 
 - Upewnij się, że strona właściwości jest komórką Apartment (ponieważ ma interfejs użytkownika).
 
@@ -51,11 +51,11 @@ Aby utworzyć stronę właściwości przy użyciu biblioteki ATL:
 Aby zapoznać się z przykładową implementacją strony właściwości, zobacz [przykład: implementowanie strony właściwości](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
-> Jeśli chcesz hostować kontrolki ActiveX na stronie właściwości, musisz zmienić sposób wyprowadzania klasy generowanej przez kreatora. Zastąp **CDialogImpl \<CYourClass> ** z **CAxDialogImpl \<CYourClass> ** na liście klas bazowych.
+> Jeśli chcesz hostować kontrolki ActiveX na stronie właściwości, musisz zmienić sposób wyprowadzania klasy generowanej przez kreatora. Zastąp **CDialogImpl \<CYourClass>** z **CAxDialogImpl \<CYourClass>** na liście klas bazowych.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
 [Przykład ATLPages](../overview/visual-cpp-samples.md)

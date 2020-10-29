@@ -4,12 +4,12 @@ description: Przewodnik przedstawiający sposób tworzenia projektu programu MSB
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), walkthrough: create a project'
-ms.openlocfilehash: 4f17cd8c4f5f48d8be5cd7cb25940db87029e111
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: b3d4e8881f926e80e95832a27f7a5106ce876265
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099735"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924333"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Wskazówki: Korzystanie z MSBuild do tworzenia projektu Visual C++
 
@@ -36,21 +36,21 @@ Te wymagania wstępne są wymagane do wykonania tego przewodnika:
 
 - Ogólna znajomość systemu MSBuild.
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > [!NOTE]
 > Większość instrukcji kompilacji niskiego poziomu znajduje się w *`.targets`* plikach i, *`.props`* które są zdefiniowane w folderze default targets, przechowywane we właściwości `$(VCTargetsPath)` . Jest to miejsce, w którym znajdują się pliki, takie jak *`Microsoft.Cpp.Common.props`* . Domyślną ścieżką dla tych plików w programie Visual Studio 2015 i starszych wersjach jest poniżej *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > Większość instrukcji kompilacji niskiego poziomu znajduje się w *`.targets`* plikach i, *`.props`* które są zdefiniowane w folderze default targets, przechowywane we właściwości `$(VCTargetsPath)` . Jest to miejsce, w którym znajdują się pliki, takie jak *`Microsoft.Cpp.Common.props`* . Domyślną ścieżką dla tych plików w programie Visual Studio 2017 jest poniżej *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . Program Visual Studio 2015 i jego wersje zostały zapisane w ramach programu *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 > [!NOTE]
 > Większość instrukcji kompilacji niskiego poziomu znajduje się w *`.targets`* plikach i, *`.props`* które są zdefiniowane w folderze default targets, przechowywane we właściwości `$(VCTargetsPath)` . Jest to miejsce, w którym znajdują się pliki, takie jak *`Microsoft.Cpp.Common.props`* . Domyślną ścieżką dla tych plików jest *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`* . `<version>`Element Path jest specyficzny dla wersji programu Visual Studio. Jest to *`v160`* program Visual Studio 2019. Program Visual Studio 2017 zaprzechowywał te pliki w folderze *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . Program Visual Studio 2015 i jego wersje zostały zapisane w ramach programu *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .

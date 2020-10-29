@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 156fe9c7a2b15f7254fb0c83f8b25982aa5ad09a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509456"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924316"
 ---
 # <a name="supporting-schema-rowsets"></a>Obsługa zestawów wierszy schematu
 
@@ -32,13 +32,13 @@ Zestawy wierszy schematu umożliwiają klientom pobieranie informacji o magazyni
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Obsługa kreatora dostawcy OLE DB ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Kreator dostawcy OLE DB ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 **Kreator dostawcy OLE DB ATL** tworzy trzy klasy schematu w pliku nagłówkowym sesji:
 
@@ -58,9 +58,9 @@ Te klasy odpowiadają na żądania klientów dotyczące informacji o schemacie; 
 
 Można dostosować te klasy do obsługi informacji o schemacie odpowiednich dla dostawcy:
 
-- W języku **C**<em>ShortName</em>**SessionTRSchemaRowset**należy wypełnić pola wykazu, tabeli i opisu ( `trData.m_szType` , `trData.m_szTable` i `trData.m_szDesc` ). W przykładzie wygenerowanym przez kreatora jest wykorzystywany tylko jeden wiersz (tabela). Inni dostawcy mogą zwrócić więcej niż jedną tabelę.
+- W języku **C**<em>ShortName</em>**SessionTRSchemaRowset** należy wypełnić pola wykazu, tabeli i opisu ( `trData.m_szType` , `trData.m_szTable` i `trData.m_szDesc` ). W przykładzie wygenerowanym przez kreatora jest wykorzystywany tylko jeden wiersz (tabela). Inni dostawcy mogą zwrócić więcej niż jedną tabelę.
 
-- W **C**<em>ShortName</em>**SessionColSchemaRowset**, należy przekazać nazwę tabeli jako `DBID` .
+- W **C**<em>ShortName</em>**SessionColSchemaRowset** , należy przekazać nazwę tabeli jako `DBID` .
 
 ::: moniker-end
 
@@ -146,7 +146,7 @@ if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-Następująca `Execute` Funkcja jest podobna do tych w zwykłych zestawach wierszy. Masz trzy argumenty: *pcRowsAffected*, *cRestrictions*i *rgRestrictions*. Zmienna *pcRowsAffected* jest parametrem wyjściowym, który dostawca może zwrócić liczbę wierszy w zestawie wierszy schematu. Parametr *cRestrictions* jest parametrem wejściowym zawierającym liczbę ograniczeń przekazaną przez odbiorcę do dostawcy. Parametr *rgRestrictions* jest tablicą wartości wariantów, które zawierają wartości ograniczeń.
+Następująca `Execute` Funkcja jest podobna do tych w zwykłych zestawach wierszy. Masz trzy argumenty: *pcRowsAffected* , *cRestrictions* i *rgRestrictions* . Zmienna *pcRowsAffected* jest parametrem wyjściowym, który dostawca może zwrócić liczbę wierszy w zestawie wierszy schematu. Parametr *cRestrictions* jest parametrem wejściowym zawierającym liczbę ograniczeń przekazaną przez odbiorcę do dostawcy. Parametr *rgRestrictions* jest tablicą wartości wariantów, które zawierają wartości ograniczeń.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
@@ -265,12 +265,12 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 Ponieważ `Execute` Funkcja zwraca dane dla pól table_name, TABLE_TYPE i Description z zestawu wierszy tabel, można zajrzeć do **dodatku B** specyfikacji OLE DB i określić (poprzez zliczanie od góry), że są to liczby porządkowe 3, 4 i 6. Dla każdej z tych kolumn zwraca DBSTATUS_S_OK. Dla wszystkich innych kolumn zwraca DBSTATUS_S_ISNULL. Ważne jest, aby zwrócić ten stan, ponieważ konsument może nie rozumieć, że zwracana wartość ma wartość NULL lub coś innego. Należy pamiętać, że wartość NULL nie jest równoznaczna z wartością pustą.
 
-Aby uzyskać więcej informacji na temat interfejsu zestawu wierszy schematu OLE DB, zobacz Interfejs [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) w **dokumentacji OLE DB programisty**.
+Aby uzyskać więcej informacji na temat interfejsu zestawu wierszy schematu OLE DB, zobacz Interfejs [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) w **dokumentacji OLE DB programisty** .
 
 Aby uzyskać informacje o sposobach używania `IDBSchemaRowset` metod przez odbiorców, zobacz [Uzyskiwanie metadanych z zestawami wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
 Aby zapoznać się z przykładem dostawcy, który obsługuje zestawy wierszy schematu, zobacz przykład [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b5f793df0340005665a8f4ab42e9793f51f3aa0c
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 1a03c2c47be82fac2ee036a632e4df775f6c4f5f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041812"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923597"
 ---
 # <a name="file_data-structure"></a>Struktura FILE_DATA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `FILE_DATA`Struktura opisuje dane wejściowe lub wyjściowe.
 

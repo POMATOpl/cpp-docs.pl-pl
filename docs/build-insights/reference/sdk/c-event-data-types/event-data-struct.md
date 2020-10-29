@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 617a82055f406c130d74a2823c2cf00aa1beef36
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041825"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923612"
 ---
 # <a name="event_data-structure"></a>Struktura EVENT_DATA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `EVENT_DATA`Struktura opisuje zdarzenie odebrane z analizy lub sesji rejestrowania. Te sesje są uruchamiane przez wywołanie funkcji [Analizuj](../functions/analyze.md), [Analizuj](../functions/analyze-a.md)i [AnalyzeW](../functions/analyze-w.md), [relog](../functions/relog.md), [RelogA](../functions/relog-a.md)lub [RelogW](../functions/relog-w.md) .
 
@@ -63,13 +63,13 @@ typedef struct EVENT_DATA_TAG
 | `EventId` | Liczba, która identyfikuje zdarzenie. Aby uzyskać listę identyfikatorów zdarzeń, zobacz [EVENT_ID](event-id-enum.md). |
 | `EventInstanceId` | Liczba, która jednoznacznie identyfikuje bieżące zdarzenie wewnątrz śladu. Ta wartość nie ulega zmianie podczas analizowania lub wielokrotnego rejestrowania tego samego śledzenia. To pole służy do identyfikowania tego samego zdarzenia w wielu analizach lub przerejestrowaniu przebiegów tego samego śledzenia. |
 | `TickFrequency` | Liczba taktów na sekundę do użycia podczas oceniania czasu trwania mierzoną w taktach. |
-| `StartTimestamp` | Gdy zdarzenie jest *działaniem*, to pole jest ustawione na wartość takt przechwyconą w momencie uruchomienia działania. Jeśli to zdarzenie jest *zdarzeniem prostym*, to pole jest ustawione na wartość taktu przechwyconą w momencie wystąpienia zdarzenia. |
-| `StopTimestamp` | Gdy zdarzenie jest *działaniem*, to pole jest ustawione na wartość takt przechwyconą w momencie zatrzymania działania. Jeśli zdarzenie zatrzymania nie zostało jeszcze odebrane dla tego działania, to pole jest ustawione na wartość zero. Jeśli to zdarzenie jest *zdarzeniem prostym*, to pole jest ustawione na wartość zero. |
-| `ExclusiveDurationTicks` | Jeśli to zdarzenie jest *działaniem*, to pole jest ustawione na liczbę taktów, które wystąpiły bezpośrednio w tym działaniu. Liczba znaczników, które wystąpiły w działaniu podrzędnym, jest wykluczona. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `CPUTicks` | Jeśli to zdarzenie jest *działaniem*, to pole jest ustawione na liczbę cykli procesora CPU, które wystąpiły w trakcie tego działania. Cykl procesora CPU różni się od zwykłego taktu. Takty procesora są zliczane tylko wtedy, gdy procesor wykonuje kod w działaniu. Takty procesora nie są zliczane, gdy wątek skojarzony z działaniem jest uśpiony. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `ExclusiveCPUTicks` | To pole ma takie samo znaczenie jak `CPUTicks` , z tą różnicą, że nie obejmuje taktów procesora, które wystąpiły w działaniach podrzędnych. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `WallClockTimeResponsibilityTicks` | Jeśli to zdarzenie jest *działaniem*, wartość tego pola jest równa liczbie cykli reprezentującej udział tego działania w ogólnym czasie zegara ściany. Cykl odpowiedzialności w czasie zegara ściany różni się od zwykłego taktu. Cykle odpowiedzialności za zegary ścienne są uwzględniane równolegle między działaniami. Na przykład dwie działania równoległe mogą mieć czas trwania 50 taktów i ten sam czas rozpoczęcia i zakończenia. W takim przypadku do obu tych elementów zostanie przypisany Czas zegarowy do 25 taktów. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `ExclusiveWallClockTimeResponsibilityTicks` | To pole ma takie samo znaczenie jak `WallClockTimeResponsibilityTicks` , z tą różnicą, że nie zawiera on znaczników odpowiedzialności za czas zegara ściennego działań podrzędnych. To pole jest ustawione na zero dla *zdarzeń prostych*. |
+| `StartTimestamp` | Gdy zdarzenie jest *działaniem* , to pole jest ustawione na wartość takt przechwyconą w momencie uruchomienia działania. Jeśli to zdarzenie jest *zdarzeniem prostym* , to pole jest ustawione na wartość taktu przechwyconą w momencie wystąpienia zdarzenia. |
+| `StopTimestamp` | Gdy zdarzenie jest *działaniem* , to pole jest ustawione na wartość takt przechwyconą w momencie zatrzymania działania. Jeśli zdarzenie zatrzymania nie zostało jeszcze odebrane dla tego działania, to pole jest ustawione na wartość zero. Jeśli to zdarzenie jest *zdarzeniem prostym* , to pole jest ustawione na wartość zero. |
+| `ExclusiveDurationTicks` | Jeśli to zdarzenie jest *działaniem* , to pole jest ustawione na liczbę taktów, które wystąpiły bezpośrednio w tym działaniu. Liczba znaczników, które wystąpiły w działaniu podrzędnym, jest wykluczona. To pole jest ustawione na zero dla *zdarzeń prostych* . |
+| `CPUTicks` | Jeśli to zdarzenie jest *działaniem* , to pole jest ustawione na liczbę cykli procesora CPU, które wystąpiły w trakcie tego działania. Cykl procesora CPU różni się od zwykłego taktu. Takty procesora są zliczane tylko wtedy, gdy procesor wykonuje kod w działaniu. Takty procesora nie są zliczane, gdy wątek skojarzony z działaniem jest uśpiony. To pole jest ustawione na zero dla *zdarzeń prostych* . |
+| `ExclusiveCPUTicks` | To pole ma takie samo znaczenie jak `CPUTicks` , z tą różnicą, że nie obejmuje taktów procesora, które wystąpiły w działaniach podrzędnych. To pole jest ustawione na zero dla *zdarzeń prostych* . |
+| `WallClockTimeResponsibilityTicks` | Jeśli to zdarzenie jest *działaniem* , wartość tego pola jest równa liczbie cykli reprezentującej udział tego działania w ogólnym czasie zegara ściany. Cykl odpowiedzialności w czasie zegara ściany różni się od zwykłego taktu. Cykle odpowiedzialności za zegary ścienne są uwzględniane równolegle między działaniami. Na przykład dwie działania równoległe mogą mieć czas trwania 50 taktów i ten sam czas rozpoczęcia i zakończenia. W takim przypadku do obu tych elementów zostanie przypisany Czas zegarowy do 25 taktów. To pole jest ustawione na zero dla *zdarzeń prostych* . |
+| `ExclusiveWallClockTimeResponsibilityTicks` | To pole ma takie samo znaczenie jak `WallClockTimeResponsibilityTicks` , z tą różnicą, że nie zawiera on znaczników odpowiedzialności za czas zegara ściennego działań podrzędnych. To pole jest ustawione na zero dla *zdarzeń prostych* . |
 | `Data` | Wskazuje dodatkowe dane przechowywane w zdarzeniu. Typ danych wskazywanych przez jest inny, w zależności od `EventId` pola. |
 | `ProcessId` | Identyfikator procesu, w którym wystąpiło zdarzenie. |
 | `ThreadId` | Identyfikator wątku, w którym wystąpiło zdarzenie. |
@@ -86,7 +86,7 @@ Wartość `EVENT_DATA` `Data` pola zależy od wartości `EventId` pola. Wartoś�
 | `EventId` wartościami | Typ wskazywany przez `Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
-| `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
+| `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
 | `EVENT_ID_COMPILER` | [INVOCATION_DATA](invocation-data-struct.md) |
 | `EVENT_ID_ENVIRONMENT_VARIABLE` | [NAME_VALUE_PAIR_DATA](name-value-pair-data-struct.md) |
 | `EVENT_ID_EXECUTABLE_IMAGE_OUTPUT` | [FILE_DATA](file-data-struct.md) |

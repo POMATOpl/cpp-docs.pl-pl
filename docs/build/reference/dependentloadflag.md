@@ -10,37 +10,37 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 5e31a0d747e7186814cba3ae1c4cf243569d87a8
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: 8d0f53ed13143ed7ff5c507df73937a86c07b5b8
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725711"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924208"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (Ustaw domyślne zależne flagi ładowania)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Opcja **/DEPENDENTLOADFLAG** wymaga programu Visual Studio 2017 lub nowszego.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Ustawia domyślne flagi ładowania używane, gdy system operacyjny rozwiązuje statycznie połączone Importowanie modułu.
 
 ## <a name="syntax"></a>Składnia
 
-> **/DEPENDENTLOADFLAG**[ __:__ *load_flags*]
+> **/DEPENDENTLOADFLAG** [ __:__*load_flags* ]
 
 ### <a name="arguments"></a>Argumenty
 
 *load_flags*<br/>
-Opcjonalna wartość całkowita, która określa flagi ładowania do zastosowania podczas rozpoznawania połączonych statycznie zależności importu modułu. Wartość domyślna to 0. Aby zapoznać się z listą obsługiwanych wartości flag, zobacz wpisy `LOAD_LIBRARY_SEARCH_*` w [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
+Opcjonalna wartość całkowita, która określa flagi ładowania do zastosowania podczas rozpoznawania połączonych statycznie zależności importu modułu. Wartość domyślna to 0. Aby uzyskać listę obsługiwanych wartości flag, zobacz `LOAD_LIBRARY_SEARCH_*` wpisy w [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy system operacyjny rozwiązuje statycznie połączone Importowanie modułu, używa [domyślnej kolejności wyszukiwania](/windows/win32/dlls/dynamic-link-library-search-order). Użyj opcji **/DEPENDENTLOADFLAG** , aby określić wartość *load_flags* , która zmienia ścieżkę wyszukiwania używaną do rozpoznania tych importów. W obsługiwanych systemach operacyjnych zmienia kolejność wyszukiwania statycznej rozdzielczości importowania, podobnie jak [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) w przypadku używania parametrów `LOAD_LIBRARY_SEARCH`. Aby uzyskać informacje na temat kolejności wyszukiwania ustawionej przez *load_flags*, zobacz [kolejność wyszukiwania przy użyciu flag LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
+Gdy system operacyjny rozwiązuje statycznie połączone Importowanie modułu, używa [domyślnej kolejności wyszukiwania](/windows/win32/dlls/dynamic-link-library-search-order). Użyj opcji **/DEPENDENTLOADFLAG** , aby określić wartość *load_flags* , która zmienia ścieżkę wyszukiwania używaną do rozpoznania tych importów. W obsługiwanych systemach operacyjnych zmienia kolejność wyszukiwania statycznej rozdzielczości importowania, podobnie jak w przypadku używania parametrów [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) `LOAD_LIBRARY_SEARCH` . Aby uzyskać informacje na temat kolejności wyszukiwania ustawionej przez *load_flags* , zobacz [kolejność wyszukiwania przy użyciu flag LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
 
 Ta flaga może służyć do wydzielenia przez jeden wektor [ataku z przesadzeniem biblioteki DLL](/windows/win32/dlls/dynamic-link-library-security) . Rozważmy na przykład aplikację, która ma statycznie połączoną bibliotekę DLL:
 
@@ -48,7 +48,7 @@ Ta flaga może służyć do wydzielenia przez jeden wektor [ataku z przesadzenie
 
 - Jeśli brakuje biblioteki DLL w katalogach aplikacji,%Windows%\System32 i% Windows%, rozwiązanie do importowania zostanie przechodzące do bieżącego katalogu. Osoba atakująca może zakładać bibliotekę DLL.
 
-W obu przypadkach, jeśli określisz opcję łącza `/DEPENDENTLOADFLAG:0x800` (wartość flagi `LOAD_LIBRARY_SEARCH_SYSTEM32`), ścieżka wyszukiwania modułu jest ograniczona do katalogu%Windows%\System32. Oferuje pewną ochronę przed atakami na inne katalogi. Aby uzyskać więcej informacji, zobacz [zabezpieczenia biblioteki dołączanej dynamicznie](/windows/win32/dlls/dynamic-link-library-security).
+W obu przypadkach, jeśli określisz opcję łącza `/DEPENDENTLOADFLAG:0x800` (wartość flagi `LOAD_LIBRARY_SEARCH_SYSTEM32` ), ścieżka wyszukiwania modułu jest ograniczona do katalogu%Windows%\System32. Oferuje pewną ochronę przed atakami na inne katalogi. Aby uzyskać więcej informacji, zobacz [zabezpieczenia biblioteki dołączanej dynamicznie](/windows/win32/dlls/dynamic-link-library-security).
 
 Aby wyświetlić wartość ustawioną przez opcję **/DEPENDENTLOADFLAG** w dowolnej bibliotece DLL, użyj polecenia [polecenia DUMPBIN](dumpbin-reference.md) z opcją [/LOADCONFIG](loadconfig.md) .
 
@@ -56,20 +56,20 @@ Opcja **/DEPENDENTLOADFLAG** jest nowa w programie Visual Studio 2017. Dotyczy t
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję konsolidatora DEPENDENTLOADFLAG w środowisku deweloperskim programu Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz opcję **Właściwości konfiguracji** > **konsolidator** > strony właściwości **wiersza polecenia** .
+1. Wybierz stronę właściwości **Konfiguracja właściwości** > **Linker** > **wiersza polecenia** konsolidatora.
 
-1. Wprowadź opcję w opcjach **dodatkowych**.
+1. Wprowadź opcję w opcjach **dodatkowych** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
-- [MSVC Opcje konsolidatora](linker-options.md)
+- [Opcje konsolidatora MSVC](linker-options.md)
 - [Łączenie pliku wykonywalnego z biblioteką DLL niejawnie](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [Określanie, która Metoda łączenia ma być używana](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)

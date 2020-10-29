@@ -1,6 +1,6 @@
 ---
 title: Klasa FileOutput
-description: Odwołanie do klasy SDK FileOutput w języku C++ Build Insights.
+description: Odwołanie do klasy FileOutput zestawu SDK kompilacji C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 37823da8a4aaac0ce4094583b8aee8ac1eb04aaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65e23715d8ac47a8653215e8bd3ee7a43bbe80a3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324804"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923242"
 ---
 # <a name="fileoutput-class"></a>Klasa FileOutput
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `FileOutput` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie EXECUTABLE_IMAGE_OUTPUT,](../event-table.md#executable-image-output) [EXP_OUTPUT,](../event-table.md#exp-output) [IMP_LIB_OUTPUT,](../event-table.md#imp-lib-output) [LIB_OUTPUT](../event-table.md#lib-output)lub [OBJ_OUTPUT.](../event-table.md#obj-output)
+`FileOutput`Klasa jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)lub [OBJ_OUTPUT](../event-table.md#obj-output) zdarzenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z odziedziczonych członków z jego [SimpleEvent](simple-event.md) klasy podstawowej, `FileOutput` klasa zawiera następujące elementy członkowskie:
+Wraz z dziedziczonymi elementami członkowskimi z klasy bazowej [SimpleEvent](simple-event.md) `FileOutput` Klasa zawiera następujące elementy członkowskie:
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-[FileOutput (FileOutput)](#file-output)
+[FileOutput](#file-output)
 
 ### <a name="functions"></a>Funkcje
 
-[Path](#path)
-[Typ](#type) ścieżki
+[Ścieżka](#path) 
+ [Typ](#type)
 
-## <a name="fileoutput"></a><a name="file-output"></a>FileOutput (FileOutput)
+## <a name="fileoutput"></a><a name="file-output"></a> FileOutput
 
 ```cpp
 FileOutput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-*Zdarzenie*\
-[Wydarzenie EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT,](../event-table.md#exp-output) [IMP_LIB_OUTPUT,](../event-table.md#imp-lib-output) [LIB_OUTPUT](../event-table.md#lib-output)lub [OBJ_OUTPUT.](../event-table.md#obj-output)
+*wydarzen*\
+[EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)lub [OBJ_OUTPUT](../event-table.md#obj-output) zdarzenia.
 
-## <a name="path"></a><a name="path"></a>Ścieżka
+## <a name="path"></a><a name="path"></a> Ścieżka
 
 ```cpp
 const wchar_t Path() const;
@@ -82,9 +82,9 @@ const wchar_t Path() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bezwzględna ścieżka do pliku wyjściowego.
+Ścieżka bezwzględna do pliku wyjściowego.
 
-## <a name="type"></a><a name="type"></a>Typu
+## <a name="type"></a><a name="type"></a> Wprowadź
 
 ```cpp
 Type Type() const;

@@ -4,12 +4,12 @@ description: Pliki, właściwości i obiekty docelowe, które są używane przez
 ms.date: 10/14/2020
 helpviewer_keywords:
 - MSBuild overview
-ms.openlocfilehash: b08db751bfe04c7cd3ce2c2f4741c9ee8956cf74
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: e99b9a428d9c6149debc06e1dfab7a69c3590196
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099683"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924392"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Funkcje wewnętrzne aparatu MSBuild dla projektów w języku C++
 
@@ -21,7 +21,7 @@ Większość elementów docelowych i właściwości w plikach obsługi istnieje 
 
 Domyślnie podstawowe pliki obsługi programu Visual Studio znajdują się w następujących katalogach. Te informacje są specyficzne dla wersji.
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
@@ -39,7 +39,7 @@ Domyślnie podstawowe pliki obsługi programu Visual Studio znajdują się w nas
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
@@ -79,7 +79,7 @@ Domyślnie podstawowe pliki obsługi programu Visual Studio znajdują się w nas
 
 Katalogi plików pomocy technicznej zawierają pliki z następującymi rozszerzeniami:
 
-| Wewnętrzny | Opis |
+| Rozszerzenie | Opis |
 | --------- | ----------- |
 | *`.targets`* | Zawiera `Target` elementy XML, które określają zadania, które są wykonywane przez element docelowy. Mogą również zawierać `PropertyGroup` `ItemGroup` elementy,, `ItemDefinitionGroup` i zdefiniowane przez użytkownika, `Item` które są używane do przypisywania plików i opcji wiersza polecenia do parametrów zadań.<br /><br /> Aby uzyskać więcej informacji, zobacz [Target element (MSBuild)](/visualstudio/msbuild/target-element-msbuild). |
 | *`.props`* | Zawiera `Property Group` i zdefiniowane przez użytkownika `Property` elementy XML, które określają ustawienia plików i parametrów, które są używane podczas kompilacji.<br /><br /> Może również zawierać `ItemDefinitionGroup` i zdefiniowane przez użytkownika `Item` elementy XML, które określają dodatkowe ustawienia. Elementy zdefiniowane w grupie definicji elementu przypominają właściwości, ale nie są dostępne z wiersza polecenia. Pliki projektu programu Visual Studio często używają elementów zamiast właściwości do reprezentowania ustawień.<br /><br /> Aby uzyskać więcej informacji, zobacz [itemmanager element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [ItemDefinitionGroup element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)i [element Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild). |

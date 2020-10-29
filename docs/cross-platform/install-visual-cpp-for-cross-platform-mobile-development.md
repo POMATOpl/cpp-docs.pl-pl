@@ -2,12 +2,12 @@
 title: Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: b9a6b78450969f5228ccf16cc7b0cff02a4d3b1e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041955"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924000"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++
 
@@ -17,7 +17,7 @@ W tym artykule opisano sposób instalowania narzędzi i oprogramowania innych fi
 
 ## <a name="requirements"></a>Wymagania
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 - Wymagania dotyczące instalacji znajdują się w temacie [wymagania systemowe rodziny produktów Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs).
 
@@ -25,7 +25,7 @@ W tym artykule opisano sposób instalowania narzędzi i oprogramowania innych fi
    > W przypadku korzystania z systemu Windows 7 lub Windows Server 2008 R2 można opracowywać kod dla aplikacji klasycznych systemu Windows, aplikacji i bibliotek aktywności systemu Android, a także aplikacji i bibliotek kodu dla systemu iOS, ale nie sklepu Windows ani aplikacji platformy UWP.
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 - Wymagania dotyczące instalacji znajdują się w temacie [wymagania systemowe rodziny produktów Visual Studio](/visualstudio/releases/2019/system-requirements).
 
@@ -60,7 +60,7 @@ Instalator programu Visual Studio obejmuje **opracowywanie aplikacji mobilnych p
 - Narzędzia programistyczne w języku c++ dla systemu iOS są wymagane do kompilowania kodu C++ przeznaczonego dla platformy iOS.
 
 > [!NOTE]
-> Jeśli używasz programu Visual Studio 2015, zobacz [Install Visual C++ dla opracowywania aplikacji mobilnych na wiele platform (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)
+> Jeśli używasz programu Visual Studio 2015, zobacz [Install Visual C++ dla opracowywania aplikacji mobilnych na wiele platform (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=msvc-140&preserve-view=true)
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>Instalowanie tworzenia aplikacji mobilnych przy użyciu obciążenia języka C++
 
@@ -70,7 +70,7 @@ Instalator programu Visual Studio obejmuje **opracowywanie aplikacji mobilnych p
 
 1. Po wybraniu karty **obciążenia** przewiń w dół i wybierz pozycję **Programowanie aplikacji mobilnych za pomocą języka C++** w Instalator programu Visual Studio. Po wybraniu tego obciążenia są również wybierane inne wymagane składniki dla programowania w języku C++. Możesz również wybrać inne obciążenia i poszczególne składniki do zainstalowania w tym samym czasie. Aby utworzyć Międzyplatformowy kod, który również jest ukierunkowany na platformy UWP, wybierz **platforma uniwersalna systemu Windows obciążenie programowaniem** .
 
-1. W okienku **szczegóły instalacji** rozwiń pozycję **Programowanie aplikacji mobilnych za pomocą języka C++**. W **opcjonalnej** sekcji można wybrać dodatkowe wersje NDK, Google emulator systemu Android, Intel Hardware Accelerated Execution Manager i narzędzie IncrediBuild Build Acceleration.
+1. W okienku **szczegóły instalacji** rozwiń pozycję **Programowanie aplikacji mobilnych za pomocą języka C++** . W **opcjonalnej** sekcji można wybrać dodatkowe wersje NDK, Google emulator systemu Android, Intel Hardware Accelerated Execution Manager i narzędzie IncrediBuild Build Acceleration.
 
 1. Domyślnie co najmniej jeden składnik instalatora Android SDK jest uwzględniony w obciążeniu. Dostępne są dodatkowe wersje Android SDK. Aby dodać jeden do instalacji, wybierz kartę **poszczególne składniki** , a następnie przewiń w dół do sekcji **zestawy SDK, biblioteki i struktury** , aby wybrać opcję.
 
@@ -99,13 +99,13 @@ W większości przypadków program Visual Studio może wykryć konfiguracje dla 
 
 ### <a name="to-set-the-paths-for-third-party-tools"></a>Aby ustawić ścieżki dla narzędzi innych firm
 
-1. Na pasku menu programu Visual Studio wybierz pozycję **Narzędzia**  >  **Opcje**.
+1. Na pasku menu programu Visual Studio wybierz pozycję **Narzędzia**  >  **Opcje** .
 
-1. W oknie dialogowym **Opcje** wybierz pozycję **cross platform**  >  **C++**  >  **Android**.
+1. W oknie dialogowym **Opcje** wybierz pozycję **cross platform**  >  **C++**  >  **Android** .
 
    ![Opcje ścieżek narzędzi systemu Android](../cross-platform/media/cppmdd-options-android.png "Opcje ścieżek narzędzi systemu Android")
 
-1. Aby zmienić ścieżkę używaną przez narzędzie, zaznacz pole wyboru obok ścieżki i Edytuj ścieżkę folderu w polu tekstowym. Możesz również użyć przycisku przeglądania (**...**), aby otworzyć okno dialogowe **Wybieranie lokalizacji** w celu wybrania folderu.
+1. Aby zmienić ścieżkę używaną przez narzędzie, zaznacz pole wyboru obok ścieżki i Edytuj ścieżkę folderu w polu tekstowym. Możesz również użyć przycisku przeglądania ( **...** ), aby otworzyć okno dialogowe **Wybieranie lokalizacji** w celu wybrania folderu.
 
 1. Wybierz **przycisk OK** , aby zapisać lokalizacje folderów narzędzi niestandardowych.
 

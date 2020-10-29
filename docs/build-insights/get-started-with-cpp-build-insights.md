@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: c4ebbb280a5cccaa35b5efc7f90e9b570600c47b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759228"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923639"
 ---
 # <a name="get-started-with-c-build-insights"></a>Wprowadzenie do szczegółowych informacji o kompilowaniu w języku C++
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Narzędzia do tworzenia szczegółowych danych w języku C++ są dostępne w programie Visual Studio 2019. Aby zapoznać się z dokumentacją tej wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Program C++ build Insights to zbiór narzędzi, które zapewniają lepszy wgląd w łańcuch narzędzi Microsoft Visual C++ (MSVC). Narzędzia zbierają dane o kompilacjach języka C++ i są wyświetlane w formacie, który może pomóc odpowiedzieć na często zadawane pytania, takie jak:
 
@@ -31,7 +31,7 @@ Program C++ build Insights to zbiór narzędzi, które zapewniają lepszy wgląd
 
 Główne składniki tej technologii to:
 
-- *vcperf. exe*, narzędzie wiersza polecenia, które służy do zbierania śladów dla kompilacji,
+- *vcperf.exe* , narzędzia wiersza polecenia, które służy do zbierania śladów dla kompilacji,
 - rozszerzenie analizatora wydajności systemu Windows (WPA), które umożliwia wyświetlanie śladów kompilacji w WPA i
 - zestaw SDK usługi Build Insights, który umożliwia tworzenie własnych narzędzi, które zużywają dane usługi C++ build Insights.
 

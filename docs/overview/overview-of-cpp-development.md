@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: db0a4ccbab142d01f0506b77237dbb09d43a1cf0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500277"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924369"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Omówienie programowania w języku C++ w programie Visual Studio
 
-W ramach zintegrowanego środowiska programistycznego (IDE) programu Visual Studio, Microsoft C++ (MSVC) udostępnia wiele okien i narzędzi wspólnych dla innych języków. Wiele z tych elementów, w tym **Eksplorator rozwiązań**, Edytor kodu i debuger, są udokumentowane w obszarze [IDE programu Visual Studio](/visualstudio/get-started/visual-studio-ide). Często udostępnione narzędzie lub okno ma nieco inny zestaw funkcji dla języka C++ niż w przypadku innych języków. Kilka okien lub narzędzi jest dostępnych tylko w wersjach Visual Studio Professional lub Visual Studio Enterprise.
+W ramach zintegrowanego środowiska programistycznego (IDE) programu Visual Studio, Microsoft C++ (MSVC) udostępnia wiele okien i narzędzi wspólnych dla innych języków. Wiele z tych elementów, w tym **Eksplorator rozwiązań** , Edytor kodu i debuger, są udokumentowane w obszarze [IDE programu Visual Studio](/visualstudio/get-started/visual-studio-ide). Często udostępnione narzędzie lub okno ma nieco inny zestaw funkcji dla języka C++ niż w przypadku innych języków. Kilka okien lub narzędzi jest dostępnych tylko w wersjach Visual Studio Professional lub Visual Studio Enterprise.
 
 Oprócz udostępnionych narzędzi w środowisku IDE programu Visual Studio MSVC ma kilka narzędzi przeznaczonych do tworzenia kodu natywnego. Te narzędzia są również wymienione w tym artykule. Aby uzyskać listę narzędzi dostępnych w każdej wersji programu Visual Studio, zobacz [Narzędzia i funkcje języka C++ w wersjach programu Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
@@ -27,13 +27,13 @@ Program Visual Studio zapewnia obsługę dowolnego systemu projektu lub niestand
 
 - **MSBuild** to natywny system projektu dla programu Visual Studio. Po wybraniu opcji **plik**  >  **Nowy**  >  **projekt** z menu głównego zobaczysz wiele rodzajów *szablonów projektów programu* MSBuild, które umożliwiają szybkie rozpoczęcie tworzenia różnych rodzajów aplikacji C++.
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
    ![Nowe szablony projektów](../build/media/mathclient-project-name-2019.png "Okno dialogowe nowego projektu programu Visual Studio 2019")
 
    ::: moniker-end
 
-   ::: moniker range="<=vs-2017"
+   ::: moniker range="<=msvc-150"
 
    ![Szablony projektów](media/vs2017-new-project.png "Okno dialogowe nowego projektu programu Visual Studio 2017")
 
@@ -49,13 +49,13 @@ Program Visual Studio zapewnia obsługę dowolnego systemu projektu lub niestand
 
 Kontrola źródła umożliwia koordynowanie pracy wśród wielu deweloperów, izolowanie pracy w toku od kodu produkcyjnego i tworzenie kopii zapasowej kodu źródłowego. Program Visual Studio obsługuje narzędzia Git i [Kontrola wersji serwera Team Foundation \( \) TFVC](/azure/devops/repos/tfvc/) za poorednictwem okna **Team Explorer** .
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Zrzut ekranu okna Team Explorer w programie Visual Studio 2019.](media/vs2019-team-explorer.png "Team Explorer programu Visual Studio 2017")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Zrzut ekranu okna Team Explorer w programie Visual Studio 2017.](media/vs2017-team-explorer.png "Team Explorer programu Visual Studio 2017")
 
@@ -79,7 +79,7 @@ Aby uzyskać więcej informacji na temat tworzenia interfejsu użytkownika dla a
 
 ## <a name="write-code"></a>Pisanie kodu
 
-Po utworzeniu projektu wszystkie pliki projektu są wyświetlane w oknie **Eksplorator rozwiązań** . ( *Rozwiązanie* jest kontenerem logicznym dla co najmniej jednego powiązanego projektu). Po kliknięciu pliku. h lub. cpp w **Eksplorator rozwiązań**, plik zostanie otwarty w edytorze kodu.
+Po utworzeniu projektu wszystkie pliki projektu są wyświetlane w oknie **Eksplorator rozwiązań** . ( *Rozwiązanie* jest kontenerem logicznym dla co najmniej jednego powiązanego projektu). Po kliknięciu pliku. h lub. cpp w **Eksplorator rozwiązań** , plik zostanie otwarty w edytorze kodu.
 
 ![Eksplorator rozwiązań i Edytor kodu](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 Eksplorator rozwiązań i Edytor kodu")
 
@@ -87,11 +87,11 @@ Edytor kodu jest wyspecjalizowanym procesorem tekstów dla kodu źródłowego C+
 
 ## <a name="add-and-edit-resources"></a>Dodawanie i edytowanie zasobów
 
-Program lub biblioteka DLL systemu Windows zwykle zawiera niektóre *zasoby*, takie jak okna dialogowe, ikony, obrazy, lokalizowalne ciągi, ekrany powitalne, parametry połączenia bazy danych lub dowolne dane. Program Visual Studio zawiera narzędzia umożliwiające dodawanie i edytowanie zasobów. Aby uzyskać więcej informacji, zobacz [Praca z plikami zasobów](../windows/working-with-resource-files.md).
+Program lub biblioteka DLL systemu Windows zwykle zawiera niektóre *zasoby* , takie jak okna dialogowe, ikony, obrazy, lokalizowalne ciągi, ekrany powitalne, parametry połączenia bazy danych lub dowolne dane. Program Visual Studio zawiera narzędzia umożliwiające dodawanie i edytowanie zasobów. Aby uzyskać więcej informacji, zobacz [Praca z plikami zasobów](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Kompilacja (kompilacja i link)
 
-Wybierz pozycję **Kompiluj**  >  **kompilację rozwiązania** na pasku menu lub wprowadź kombinację **klawiszy Ctrl + Shift + B** , aby skompilować i połączyć projekt. Błędy kompilacji i ostrzeżenia są raportowane w Lista błędów (**Ctrl + \\ , E**). Okno **dane wyjściowe** (**ALT + 2**) pokazuje informacje o procesie kompilacji.
+Wybierz pozycję **Kompiluj**  >  **kompilację rozwiązania** na pasku menu lub wprowadź kombinację **klawiszy Ctrl + Shift + B** , aby skompilować i połączyć projekt. Błędy kompilacji i ostrzeżenia są raportowane w Lista błędów ( **Ctrl + \\ , E** ). Okno **dane wyjściowe** ( **ALT + 2** ) pokazuje informacje o procesie kompilacji.
 
 ![Okno Dane wyjściowe i Lista błędów](media/vs2017-output-error-list.png "Okno danych wyjściowych programu Visual Studio 2017 i Lista błędów")
 
@@ -101,7 +101,7 @@ Można również użyć kompilatora (cl.exe) i wielu innych autonomicznych narz�
 
 ## <a name="debug"></a>Debugowanie
 
-Debugowanie można rozpocząć, naciskając klawisz **F5**. Wykonywanie jest wstrzymywane dla wszystkich ustawionych punktów przerwania (przez naciśnięcie klawisza **F9**). Możesz również przejść przez kod jeden wiersz w czasie (**F10**), wyświetlić wartości zmiennych lub rejestrów, a nawet w niektórych przypadkach wprowadzić zmiany w kodzie i kontynuować debugowanie bez ponownego kompilowania. Na poniższej ilustracji przedstawiono sesję debugowania, w której wykonywanie zostało zatrzymane w punkcie przerwania. Wartości elementów członkowskich struktury danych są widoczne w **oknie Czujka**.
+Debugowanie można rozpocząć, naciskając klawisz **F5** . Wykonywanie jest wstrzymywane dla wszystkich ustawionych punktów przerwania (przez naciśnięcie klawisza **F9** ). Możesz również przejść przez kod jeden wiersz w czasie ( **F10** ), wyświetlić wartości zmiennych lub rejestrów, a nawet w niektórych przypadkach wprowadzić zmiany w kodzie i kontynuować debugowanie bez ponownego kompilowania. Na poniższej ilustracji przedstawiono sesję debugowania, w której wykonywanie zostało zatrzymane w punkcie przerwania. Wartości elementów członkowskich struktury danych są widoczne w **oknie Czujka** .
 
 ![Sesja debugowania](media/vs2017-debug-watch.png "Sesja debugowania programu Visual Studio 2017")
 

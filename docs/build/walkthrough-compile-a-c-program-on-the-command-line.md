@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 1090bf98332a51773e53bfcda51e944dc09c5221
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075611"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924744"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu w języku C w wierszu polecenia
 
@@ -28,16 +28,16 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany program Visual Studio 
 
 Program Visual Studio to zaawansowane zintegrowane środowisko programistyczne, które obsługuje w pełni funkcjonalne Edytor, menedżerów zasobów, debugery i kompilatory dla wielu języków i platform. Aby uzyskać informacje na temat tych funkcji oraz sposobu pobierania i instalowania programu Visual Studio, w tym bezpłatnej wersji programu Visual Studio Community Edition, zobacz [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio).
 
-Narzędzia Build Tools for Visual Studio w wersji Visual Studio instalują tylko zestaw narzędzi wiersza polecenia, kompilatory, narzędzia i biblioteki potrzebne do tworzenia programów C i C++. Doskonale nadaje się do kompilowania laboratoriów lub ćwiczeń z zajęć i jest stosunkowo szybko instalowana. Aby zainstalować tylko zestaw narzędzi wiersza polecenia, Pobierz narzędzia kompilacji dla programu Visual Studio ze strony [pliki do pobrania programu Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) i uruchom Instalatora. W Instalatorze programu Visual Studio wybierz obciążenie **narzędzia kompilacji C++** , a następnie wybierz **Zainstaluj**.
+Narzędzia Build Tools for Visual Studio w wersji Visual Studio instalują tylko zestaw narzędzi wiersza polecenia, kompilatory, narzędzia i biblioteki potrzebne do tworzenia programów C i C++. Doskonale nadaje się do kompilowania laboratoriów lub ćwiczeń z zajęć i jest stosunkowo szybko instalowana. Aby zainstalować tylko zestaw narzędzi wiersza polecenia, Pobierz narzędzia kompilacji dla programu Visual Studio ze strony [pliki do pobrania programu Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) i uruchom Instalatora. W Instalatorze programu Visual Studio wybierz obciążenie **narzędzia kompilacji C++** , a następnie wybierz **Zainstaluj** .
 
 Aby można było skompilować program C lub C++ w wierszu polecenia, należy sprawdzić, czy są zainstalowane narzędzia i czy można uzyskać do nich dostęp z poziomu wiersza polecenia. Visual C++ ma złożone wymagania dotyczące środowiska wiersza polecenia, aby znaleźć narzędzia, nagłówki i biblioteki, których używa. **Nie można użyć Visual C++ w zwykłym oknie wiersza polecenia** bez pewnego przygotowania. Potrzebujesz okna *wiersza polecenia dla deweloperów* , czyli zwykłego okna wiersza polecenia, które ma wszystkie wymagane zmienne środowiskowe. Na szczęście program Visual C++ instaluje skróty umożliwiające uruchamianie poleceń deweloperskich, które mają skonfigurowane środowisko dla kompilacji wiersza polecenia. Niestety nazwy skrótów dla wiersza polecenia dla deweloperów i lokalizacji, gdzie się znajdują, są inne w prawie każdej wersji Visual C++ i różnych wersjach systemu Windows. Pierwsze zadanie instruktażu polega na znalezieniu odpowiedniego skrótu do użycia.
 
 > [!NOTE]
-> Skrót do wiersza polecenia dla deweloperów automatycznie ustawia prawidłowe ścieżki dla kompilatora i narzędzi oraz dla wszystkich wymaganych nagłówków i bibliotek. Niektóre z tych wartości są różne dla każdej konfiguracji kompilacji. Należy samodzielnie ustawić te wartości środowiskowe, jeśli nie używasz jednego z skrótów. Aby uzyskać więcej informacji, zobacz [Ustawianie zmiennych dotyczących ścieżki i środowiska dla kompilacji w wierszu polecenia](setting-the-path-and-environment-variables-for-command-line-builds.md). Ze względu na to, że środowisko kompilacji jest złożone, zdecydowanie zalecamy użycie skrótu wiersza polecenia dla deweloperów zamiast tworzenia własnych.
+> Skrót do wiersza polecenia dla deweloperów automatycznie ustawia prawidłowe ścieżki dla kompilatora i narzędzi oraz dla wszystkich wymaganych nagłówków i bibliotek. Niektóre z tych wartości są różne dla każdej konfiguracji kompilacji. Należy samodzielnie ustawić te wartości środowiskowe, jeśli nie używasz jednego z skrótów. Aby uzyskać więcej informacji, zobacz [Ustawianie zmiennych dotyczących ścieżki i środowiska dla kompilacji Command-Line](setting-the-path-and-environment-variables-for-command-line-builds.md). Ze względu na to, że środowisko kompilacji jest złożone, zdecydowanie zalecamy użycie skrótu wiersza polecenia dla deweloperów zamiast tworzenia własnych.
 
 Te instrukcje różnią się w zależności od używanej wersji programu Visual Studio. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj kontrolki selektora **wersji** . Znajduje się w górnej części spisu treści na tej stronie.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>Otwieranie wiersza polecenia dla deweloperów w programie Visual Studio 2019
 
@@ -47,7 +47,7 @@ Jeśli używasz innej wersji systemu Windows, poszukaj w menu Start lub stronie 
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>Otwieranie wiersza polecenia dla deweloperów w programie Visual Studio 2017
 
@@ -57,7 +57,7 @@ Jeśli używasz innej wersji systemu Windows, poszukaj w menu Start lub stronie 
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>Otwieranie wiersza polecenia dla deweloperów w programie Visual Studio 2015
 

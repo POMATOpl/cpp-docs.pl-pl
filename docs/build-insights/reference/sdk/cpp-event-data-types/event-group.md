@@ -1,6 +1,6 @@
 ---
-title: Klasa EventGroup
-description: Odwołanie do klasy SDK SDK eventgroup kompilacji języka C++.
+title: Event, Klasa
+description: Odwołanie do klasy grupy zdarzeń SDK kompilacji usługi C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 596c18ca0e9b4d7b26c4ed5209b16871952c4af2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57cbc7a053132909149aee182b9560e2ee33c161
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324987"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923316"
 ---
-# <a name="eventgroup-class"></a>Klasa EventGroup
+# <a name="eventgroup-class"></a>Event, Klasa
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Szablon `EventGroup` klasy jest klasą podstawową dla wszystkich klas przechwytywania grupy.
+`EventGroup`Szablon klasy jest klasą bazową dla wszystkich klas przechwytywania grup.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,20 +47,20 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Bezczynność* Typ działania zawarty w grupie.
+*TActivity* Typ działania zawarty w grupie.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="functions"></a>Funkcje
 
-[Tylny](#back)
-[początek](#begin)
-[end](#end)
-[operator[]](#subscript-operator)
-[Size](#size) [Front](#front)Operator frontu[] Rozmiar
+[Wstecz](#back) 
+ [Rozpocznij](#begin) 
+ [koniec](#end) 
+ [Przód](#front) 
+ [operator []](#subscript-operator) 
+ [Rozmiar](#size)
 
-
-## <a name="back"></a><a name="back"></a>Wstecz
+## <a name="back"></a><a name="back"></a> Wstecz
 
 ```cpp
 const TActivity& Back() const;
@@ -70,7 +70,7 @@ const TActivity& Back() const;
 
 Odwołanie do ostatniego zdarzenia działania w grupie.
 
-## <a name="begin"></a><a name="begin"></a>Rozpocząć
+## <a name="begin"></a><a name="begin"></a> zaczną
 
 ```cpp
 std::deque<TActivity>::const_iterator begin() const;
@@ -78,9 +78,9 @@ std::deque<TActivity>::const_iterator begin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator wskazujący na początku grupy zdarzeń działania.
+Iterator wskazujący początek grupy zdarzeń działania.
 
-## <a name="end"></a><a name="end"></a>Końcu
+## <a name="end"></a><a name="end"></a> punktów
 
 ```cpp
 std::deque<TActivity>::const_iterator end() const;
@@ -88,9 +88,9 @@ std::deque<TActivity>::const_iterator end() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator wskazujący jedną pozycję poza koniec grupy zdarzeń aktywności.
+Iterator wskazujący jedną pozycję poza końcem grupy zdarzeń działania.
 
-## <a name="front"></a><a name="front"></a>Przednie
+## <a name="front"></a><a name="front"></a> FSB
 
 ```cpp
 const TActivity& Front() const;
@@ -100,7 +100,7 @@ const TActivity& Front() const;
 
 Odwołanie do pierwszego zdarzenia działania w grupie.
 
-## <a name="operator"></a><a name="subscript-operator"></a>operator[]
+## <a name="operator"></a><a name="subscript-operator"></a> operator []
 
 ```cpp
 const TActivity& operator[](size_t index) const;
@@ -108,14 +108,14 @@ const TActivity& operator[](size_t index) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Indeks*\
-Indeks elementu dostępu w grupie zdarzeń działania.
+*indeks*\
+Indeks elementu, do którego można uzyskać dostęp w grupie zdarzeń działania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zdarzenie ze stosu zdarzeń przechowywane w pozycji wskazanej przez *indeks*.
+Zdarzenie ze stosu zdarzeń przechowywane w pozycji wskazywanej przez *indeks* .
 
-## <a name="size"></a><a name="size"></a>Rozmiar
+## <a name="size"></a><a name="size"></a> Zmienia
 
 ```cpp
 size_t Size() const;

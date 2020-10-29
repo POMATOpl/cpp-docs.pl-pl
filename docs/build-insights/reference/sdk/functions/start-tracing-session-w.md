@@ -1,6 +1,6 @@
 ---
 title: StartTracingSessionW
-description: Odwołanie do funkcji SDK StartTracingSessionW w programie C++ Build Insights.
+description: Dokumentacja funkcji StartTracingSessionW zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: af67c3be50cb19ccbfb7fe286e5d61cd1d241bf8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d89bd6d040f9786539c9be08b9da0813d3bb2c82
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323798"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922741"
 ---
 # <a name="starttracingsessionw"></a>StartTracingSessionW
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Funkcja `StartTracingSessionW` rozpoczyna sesję śledzenia. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
+`StartTracingSessionW`Funkcja uruchamia sesję śledzenia. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,14 +37,14 @@ enum RESULT_CODE StartTracingSessionW(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa_sesji*\
-Nazwa sesji śledzenia, aby rozpocząć. Użyj tej samej nazwy podczas wywoływania [StopTracingSessionW](stop-tracing-session-w.md)lub innej funkcji śledzenia zatrzymania.
+*sessionName*\
+Nazwa sesji śledzenia do uruchomienia. Użyj tej samej nazwy podczas wywoływania [StopTracingSessionW](stop-tracing-session-w.md)lub dowolnej innej funkcji zatrzymania śledzenia.
 
 *Opcje*\
-Wskaźnik do [obiektu TRACING_SESSION_OPTIONS.](../other-types/tracing-session-options-struct.md) Ten obiekt służy do wybierania zdarzeń, które mają być zbierane przez sesję śledzenia.
+Wskaźnik do obiektu [TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md) . Użyj tego obiektu, aby wybrać zdarzenia, które mają być zbierane przez sesję śledzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod wyniku z [RESULT_CODE](../other-types/result-code-enum.md) wyliczenia.
+Kod wyniku z wyliczenia [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

@@ -4,28 +4,28 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 80a43446f0367acb89a04fdaa8198b5cff5a6697
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5c8a975b2f4a8ae3285f035e7b708c5026f5f480
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500974"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924595"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Klasy konsumentów generowane przez kreatora
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 W przypadku wygenerowania konsumenta przy użyciu **kreatora ATL OLE DB Consumer** można korzystać z szablonów OLE DB lub atrybutów OLE DB. W obu przypadkach Kreator generuje klasę poleceń i klasę rekordu użytkownika. Klasa Command zawiera kod umożliwiający otwarcie źródła danych i zestawu wierszy określonego w kreatorze. Klasa rekordu użytkownika zawiera mapę kolumn dla wybranej tabeli bazy danych. Jednak wygenerowany kod różni się w każdym przypadku:
 
-- W przypadku wybrania użytkownika z szablonem Kreator wygeneruje klasę poleceń i klasę rekordu użytkownika. Klasa poleceń będzie miała nazwę, którą wprowadzisz w polu **klasy** w Kreatorze (na przykład `CProducts` ), a Klasa rekordu użytkownika będzie miała nazwę formularza "metoda dostępu*ClassName*" (na przykład `CProductsAccessor` ). Obie klasy są umieszczane w pliku nagłówkowym użytkownika.
+- W przypadku wybrania użytkownika z szablonem Kreator wygeneruje klasę poleceń i klasę rekordu użytkownika. Klasa poleceń będzie miała nazwę, którą wprowadzisz w polu **klasy** w Kreatorze (na przykład `CProducts` ), a Klasa rekordu użytkownika będzie miała nazwę formularza "metoda dostępu *ClassName* " (na przykład `CProductsAccessor` ). Obie klasy są umieszczane w pliku nagłówkowym użytkownika.
 
-- W przypadku wybrania odbiorcy z atrybutem Klasa rekordu użytkownika będzie miała nazwę formularza "_*ClassName*akcesor" i zostanie wprowadzona. Oznacza to, że będzie można wyświetlić tylko klasę poleceń w edytorze tekstu. można wyświetlić tylko klasę rekordu użytkownika jako wstrzyknięty kod. Aby uzyskać informacje na temat wyświetlania wstrzykniętego kodu, zobacz [debugowanie wstrzykiwanego kodu](/visualstudio/debugger/how-to-debug-injected-code).
+- W przypadku wybrania odbiorcy z atrybutem Klasa rekordu użytkownika będzie miała nazwę formularza "_ *ClassName* akcesor" i zostanie wprowadzona. Oznacza to, że będzie można wyświetlić tylko klasę poleceń w edytorze tekstu. można wyświetlić tylko klasę rekordu użytkownika jako wstrzyknięty kod. Aby uzyskać informacje na temat wyświetlania wstrzykniętego kodu, zobacz [debugowanie wstrzykiwanego kodu](/visualstudio/debugger/how-to-debug-injected-code).
 
 W poniższych przykładach użyto klasy Command utworzonej w `Products` tabeli `Northwind` bazy danych, aby przedstawić kod klienta wygenerowany przez kreatora dla klasy poleceń i klasy rekordu użytkownika.
 
@@ -35,7 +35,7 @@ Jeśli utworzysz klienta OLE DB przy użyciu szablonów OLE DB (zamiast atrybut�
 
 ### <a name="column-data-members"></a>Elementy członkowskie danych kolumny
 
-Pierwsza część klasy rekordu użytkownika zawiera deklaracje elementu członkowskiego danych oraz dane o stanie i długości dla każdej kolumny powiązanej z danymi. Informacje o tych elementach członkowskich danych znajdują się [w temacie elementy członkowskie danych o stanie pola w przystawce metod dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
+Pierwsza część klasy rekordu użytkownika zawiera deklaracje elementu członkowskiego danych oraz dane o stanie i długości dla każdej kolumny powiązanej z danymi. Informacje o tych elementach członkowskich danych znajdują się [w temacie elementy członkowskie danych o stanie pola w Wizard-Generated metod dostępu](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
 > [!NOTE]
 > W przypadku modyfikacji klasy rekordu użytkownika lub napisania własnego odbiorcy zmienne danych muszą występować przed zmiennymi stan i długość.
@@ -88,7 +88,7 @@ public:
 
 ### <a name="rowset-properties"></a>Właściwości zestawu wierszy
 
-Następnie Kreator ustawia właściwości zestawu wierszy. W przypadku wybrania opcji **Zmień**, **Wstaw**lub **Usuń** w Kreatorze OLE DB użytkownika ATL, odpowiednie właściwości są ustawione w tym miejscu (DBPROP_IRowsetChange jest zawsze ustawiona, a następnie co najmniej jeden DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT i/lub DBPROPVAL_UP_DELETE).
+Następnie Kreator ustawia właściwości zestawu wierszy. W przypadku wybrania opcji **Zmień** , **Wstaw** lub **Usuń** w Kreatorze OLE DB użytkownika ATL, odpowiednie właściwości są ustawione w tym miejscu (DBPROP_IRowsetChange jest zawsze ustawiona, a następnie co najmniej jeden DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT i/lub DBPROPVAL_UP_DELETE).
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -148,9 +148,9 @@ Na koniec Kreator generuje deklarację klasy polecenia, taką jak:
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 ```
 
-## <a name="attribute-injected-user-record-classes"></a>Klasy rekordów użytkowników z Wstrzykiwanymi atrybutami
+## <a name="attribute-injected-user-record-classes"></a>Klasy rekordu użytkownika Attribute-Injected
 
-Jeśli utworzysz klienta OLE DB przy użyciu atrybutów bazy danych ([db_command](../../windows/attributes/db-command.md) lub [DB_Table](../../windows/attributes/db-table.md)), atrybuty iniekcji klasy rekordu użytkownika z nazwą formularza "_*ClassName*akcesor". Jeśli na przykład nazwa została określona jako Klasa poleceń `COrders` , Klasa rekordu użytkownika będzie `_COrdersAccessor` . Mimo że Klasa rekordu użytkownika pojawia się w **Widok klasy**, dwukrotnie klikając ją w pliku nagłówkowym, można w tym celu przejść do klasy polecenia lub tabeli. W takich przypadkach można wyświetlić tylko rzeczywistą deklarację klasy rekordu użytkownika, wyświetlając kod wstrzykiwanego atrybutu.
+Jeśli utworzysz klienta OLE DB przy użyciu atrybutów bazy danych ( [db_command](../../windows/attributes/db-command.md) lub [DB_Table](../../windows/attributes/db-table.md)), atrybuty iniekcji klasy rekordu użytkownika z nazwą formularza "_ *ClassName* akcesor". Jeśli na przykład nazwa została określona jako Klasa poleceń `COrders` , Klasa rekordu użytkownika będzie `_COrdersAccessor` . Mimo że Klasa rekordu użytkownika pojawia się w **Widok klasy** , dwukrotnie klikając ją w pliku nagłówkowym, można w tym celu przejść do klasy polecenia lub tabeli. W takich przypadkach można wyświetlić tylko rzeczywistą deklarację klasy rekordu użytkownika, wyświetlając kod wstrzykiwanego atrybutu.
 
 Mogą istnieć potencjalne komplikacje w przypadku dodawania lub zastępowania metod w przypadku użytkowników z atrybutami. Na przykład, można dodać `_COrdersAccessor` konstruktora do `COrders` deklaracji, ale należy pamiętać, że w rzeczywistości dodaje konstruktora do klasy wstrzykiwanej `COrdersAccessor` . Taki Konstruktor może inicjować kolumny/parametry, ale nie można utworzyć konstruktora kopiującego w ten sposób, ponieważ nie może on bezpośrednio utworzyć wystąpienia `COrdersAccessor` obiektu. Jeśli potrzebujesz konstruktora (lub innej metody) bezpośrednio w `COrders` klasie, zaleca się zdefiniowanie nowej klasy pochodnej z `COrders` i dodanie niezbędnych metod.
 
@@ -182,12 +182,12 @@ Deklaracja klasy wstrzykiwanych poleceń wygląda następująco:
 class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 ```
 
-Większość iniekcji kodu jest taka sama jak lub podobna do wersji z szablonami. Główne różnice znajdują się w metodach wstrzykiwanych, które są opisane w [metodach generowanych przez kreatora klienta](../../data/oledb/consumer-wizard-generated-methods.md).
+Większość iniekcji kodu jest taka sama jak lub podobna do wersji z szablonami. Główne różnice znajdują się w metodach wstrzykiwanych, które są opisane w [metodach Wizard-Generated konsumenta](../../data/oledb/consumer-wizard-generated-methods.md).
 
 Aby uzyskać informacje na temat wyświetlania wstrzykniętego kodu, zobacz [debugowanie wstrzykiwanego kodu](/visualstudio/debugger/how-to-debug-injected-code).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

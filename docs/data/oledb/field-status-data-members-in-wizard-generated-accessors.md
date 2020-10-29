@@ -5,26 +5,26 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 61ee867f664b6b0d885e35f6d58840b37ce322b9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 476c91f55071f6d1c7f243257273a32798813cae
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210915"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924631"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [Tworzenie klienta bez korzystania z Kreatora](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 W przypadku utworzenia konsumenta przy użyciu **kreatora ATL OLE DB** User, Kreator generuje element członkowski danych w klasie rekordu użytkownika dla każdego pola określonego w mapie kolumn. Każdy element członkowski danych jest typu `DWORD` i zawiera wartość stanu odpowiadającą jej odpowiedniemu polu.
 
-Na przykład dla elementu członkowskiego danych *m_OwnerID*Kreator generuje dodatkowy element członkowski danych dla stanu pola (*dwOwnerIDStatus*), a drugi dla długości pola (*dwOwnerIDLength*). Generuje również mapę kolumn zawierającą COLUMN_ENTRY_LENGTH_STATUS wpisów.
+Na przykład dla elementu członkowskiego danych *m_OwnerID* Kreator generuje dodatkowy element członkowski danych dla stanu pola ( *dwOwnerIDStatus* ), a drugi dla długości pola ( *dwOwnerIDLength* ). Generuje również mapę kolumn zawierającą COLUMN_ENTRY_LENGTH_STATUS wpisów.
 
 Jest to pokazane w poniższym kodzie:
 
@@ -110,10 +110,10 @@ Można pobrać długość kolumny o zmiennej długości lub stanu kolumny (na pr
     }
     ```
 
-W przypadku używania `CDynamicAccessor`długość i stan są powiązane automatycznie. Aby pobrać wartości długości i stanu, użyj `GetLength` i `GetStatus` funkcji Członkowskich.
+Gdy używasz `CDynamicAccessor` , długość i stan są powiązane automatycznie. Aby pobrać wartości długości i stanu, użyj `GetLength` `GetStatus` funkcji i.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 74cf72feedd8dc8e1186d54a8abe840195964620
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076207"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923660"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opcje, Kreator strony właściwości ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Kreator strony właściwości ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Użyj tej strony kreatora, aby zdefiniować model wątkowości i poziom agregacji tworzonej strony właściwości.
 
@@ -33,7 +33,7 @@ Użyj tej strony kreatora, aby zdefiniować model wątkowości i poziom agregacj
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Wiersz**|Strona właściwości jest uruchamiana tylko w podstawowym wątku COM.|
+   |**Pojedynczy**|Strona właściwości jest uruchamiana tylko w podstawowym wątku COM.|
    |**Apartamentu**|Stronę właściwości można utworzyć w dowolnym elemencie Apartment pojedynczego wątku. Domyślnie.|
 
 - **Agregacja**
@@ -48,7 +48,7 @@ Użyj tej strony kreatora, aby zdefiniować model wątkowości i poziom agregacj
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)

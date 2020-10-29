@@ -1,5 +1,5 @@
 ---
-title: Przykładowy projekt C++ do analizy kodu
+title: Przykładowy projekt w języku C++ na potrzeby analizy kodu
 description: Jak utworzyć przykładowe rozwiązanie do użycia w instruktażu analizy kodu dla programu Microsoft C++ w programie Visual Studio.
 ms.date: 04/14/2020
 ms.topic: sample
@@ -7,108 +7,108 @@ helpviewer_keywords:
 - demo sample [Visual Studio ALM]
 - code analysis, samples
 ms.assetid: 09e1b9f7-5916-4ed6-a001-5c2d7e710682
-ms.openlocfilehash: c2a1b8c80b7e7aebd1f1530c66ade5859b392028
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd4fe67c05200ccc2865bc7c48b1f5047d77565e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372058"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924622"
 ---
-# <a name="sample-c-project-for-code-analysis"></a>Przykładowy projekt C++ do analizy kodu
+# <a name="sample-c-project-for-code-analysis"></a>Przykładowy projekt w języku C++ na potrzeby analizy kodu
 
-Poniższe procedury pokazują, jak utworzyć przykład dla [Instruktażu: Analizowanie kodu C/C++ pod kątem wad](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Procedury tworzą:
+Poniższe procedury pokazują, jak utworzyć przykład dla [przewodnika: Analizowanie kodu C/C++ pod kątem wad](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Procedury tworzą:
 
-- Rozwiązanie programu Visual Studio o nazwie *CppDemo*.
+- Rozwiązanie programu Visual Studio o nazwie *CppDemo* .
 
-- Projekt biblioteki statycznej o nazwie *CodeDefects*.
+- Projekt biblioteki statycznej o nazwie *CodeDefects* .
 
-- Statyczny projekt biblioteki o nazwie *Adnotacje*.
+- Projekt biblioteki statycznej o nazwie *Adnotacje* .
 
-Procedury zawierają również kod dla nagłówka i plików *cpp* dla bibliotek statycznych.
+Procedury te zawierają również kod dla plików nagłówkowych i *. cpp* dla bibliotek statycznych.
 
 ## <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>Tworzenie rozwiązania CppDemo i projektu CodeDefects
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. Otwórz program Visual Studio i wybierz pozycję **Utwórz nowy projekt**
 
-1. W oknie **dialogowym Tworzenie nowego projektu** zmień filtr języka na **C++**.
+1. W oknie dialogowym **Tworzenie nowego projektu** Zmień filtr języka na **C++** .
 
-1. Wybierz **Pozycję Kreator pulpitu systemu Windows** i wybierz przycisk **Dalej.**
+1. Wybierz pozycję **Kreator pulpitu systemu Windows** , a następnie kliknij przycisk **dalej** .
 
-1. Na stronie **Konfigurowanie nowego projektu** w polu tekstowym **Nazwa projektu** wprowadź pozycję *CodeDefects*.
+1. Na stronie **Konfiguruj nowy projekt** w polu tekstowym **Nazwa projektu** wprowadź *CodeDefects* .
 
-1. W polu **tekstowym Nazwa rozwiązania** wprowadź *CppDemo*.
+1. W polu tekstowym **Nazwa rozwiązania** wprowadź *CppDemo* .
 
-1. Wybierz pozycję **Utwórz**.
+1. Wybierz pozycję **Utwórz** .
 
-1. W oknie dialogowym **Projekt pulpitu systemu Windows** zmień typ **aplikacji** na **Biblioteka statyczna (lib).**
+1. W oknie dialogowym **projekt pulpitu systemu Windows** Zmień **Typ aplikacji** na **Biblioteka statyczna (. lib)** .
 
-1. W obszarze **Dodatkowe opcje**wybierz pozycję **Pusty projekt**.
+1. W obszarze **Opcje dodatkowe** wybierz pozycję **pusty projekt** .
 
-1. Wybierz **przycisk OK,** aby utworzyć rozwiązanie i projekt.
-
-::: moniker-end
-
-::: moniker range="vs-2017"
-
-1. Otwórz program Visual Studio. Na pasku menu wybierz pozycję **Plik** > **nowego** > **projektu**.
-
-1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Visual C++** > **Windows Desktop**.
-
-1. Wybierz **Kreatora pulpitu systemu Windows**.
-
-1. W polu **tekstowym Nazwa** wprowadź *pozycję CodeDefects*.
-
-1. W polu **tekstowym Nazwa rozwiązania** wprowadź *CppDemo*.
-
-1. Wybierz pozycję **OK**.
-
-1. W oknie dialogowym **Projekt pulpitu systemu Windows** zmień typ **aplikacji** na **Biblioteka statyczna (lib).**
-
-1. W obszarze **Dodatkowe opcje**wybierz pozycję **Pusty projekt**.
-
-1. Wybierz **przycisk OK,** aby utworzyć rozwiązanie i projekt.
+1. Wybierz **przycisk OK** , aby utworzyć rozwiązanie i projekt.
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-150"
 
-1. Otwórz program Visual Studio. Na pasku menu wybierz pozycję **Plik** > **nowego** > **projektu**.
+1. Otwórz program Visual Studio. Na pasku menu wybierz pozycję **plik**  >  **Nowy**  >  **projekt** .
 
-1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Szablony** > **visual c++** > **Win32**.
+1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Visual C++** > **Windows Desktop** .
 
-1. Wybierz **aplikację konsoli Win32**.
+1. Wybierz pozycję **Kreator pulpitu systemu Windows** .
 
-1. W polu **tekstowym Nazwa** wprowadź *pozycję CodeDefects*.
+1. W polu tekstowym **Nazwa** wprowadź *CodeDefects* .
 
-1. W polu **tekstowym Nazwa rozwiązania** wprowadź *CppDemo*.
+1. W polu tekstowym **Nazwa rozwiązania** wprowadź *CppDemo* .
 
-1. Wybierz pozycję **OK**.
+1. Wybierz przycisk **OK** .
 
-1. W oknie dialogowym **Kreator aplikacji Win32** wybierz przycisk **Dalej.**
+1. W oknie dialogowym **projekt pulpitu systemu Windows** Zmień **Typ aplikacji** na **Biblioteka statyczna (. lib)** .
 
-1. Zmień **typ aplikacji** na **Biblioteka statyczna**.
+1. W obszarze **Opcje dodatkowe** wybierz pozycję **pusty projekt** .
 
-1. W obszarze **Opcje dodatkowe**usuń zaznaczenie **wstępnie skompilowanego nagłówka**.
-
-1. Wybierz **pozycję Zakończ,** aby utworzyć rozwiązanie i projekt.
+1. Wybierz **przycisk OK** , aby utworzyć rozwiązanie i projekt.
 
 ::: moniker-end
 
-## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>Dodawanie pliku nagłówka i pliku źródłowego do projektu CodeDefects
+::: moniker range="msvc-140"
 
-1. W Eksploratorze rozwiązań rozwiń **pozycję CodeDefects**.
+1. Otwórz program Visual Studio. Na pasku menu wybierz pozycję **plik**  >  **Nowy**  >  **projekt** .
 
-1. Kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe **dla plików nagłówkowych**. Wybierz **pozycję Dodaj** > **nowy element**.
+1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Szablony** > **Visual C++** > **Win32** .
 
-1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję **Kod programu Visual C++,** > **Code**a następnie wybierz pozycję **Plik nagłówka (h)**.
+1. Wybierz pozycję **aplikacja konsoli Win32** .
 
-1. W polu Edycja **nazwy** wprowadź *plik Bug.h*, a następnie wybierz przycisk **Dodaj.**
+1. W polu tekstowym **Nazwa** wprowadź *CodeDefects* .
 
-1. W oknie edycji *dla Bug.h*wybierz i usuń zawartość.
+1. W polu tekstowym **Nazwa rozwiązania** wprowadź *CppDemo* .
 
-1. Skopiuj poniższy kod i wklej go do pliku *Bug.h* w edytorze.
+1. Wybierz przycisk **OK** .
+
+1. W oknie dialogowym **Kreator aplikacji Win32** wybierz przycisk **dalej** .
+
+1. Zmień **Typ aplikacji** na **bibliotekę statyczną** .
+
+1. W obszarze **Opcje dodatkowe** Usuń zaznaczenie **prekompilowanego nagłówka** .
+
+1. Wybierz przycisk **Zakończ** , aby utworzyć rozwiązanie i projekt.
+
+::: moniker-end
+
+## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>Dodaj nagłówek i plik źródłowy do projektu CodeDefects
+
+1. W Eksplorator rozwiązań rozwiń węzeł **CodeDefects** .
+
+1. Kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe dla **plików nagłówkowych** . Wybierz pozycję **Dodaj**  >  **nowy element** .
+
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Visual C++**  >  **kod** , a następnie wybierz pozycję **plik nagłówka (. h)** .
+
+1. W polu **Nazwa** wprowadź wartość *błąd. h* , a następnie wybierz przycisk **Dodaj** .
+
+1. W oknie Edycja dla *błędu. h* wybierz i Usuń zawartość.
+
+1. Skopiuj poniższy kod i wklej go do pliku *usterek. h* w edytorze.
 
     ```cpp
     #pragma once
@@ -125,13 +125,13 @@ Procedury zawierają również kod dla nagłówka i plików *cpp* dla bibliotek 
     const int ACCOUNT_DOMAIN_LEN = 128;
     ```
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe **dla plików źródłowych**. Wybierz **pozycję Dodaj** > **nowy element**.
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe dla **plików źródłowych** . Wybierz pozycję **Dodaj**  >  **nowy element** .
 
-1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję Plik języka **C++ (cpp)**.
+1. W oknie dialogowym **Dodaj nowy element** wybierz opcję **plik C++ (. cpp)** .
 
-1. W polu Edycja **nazwy** wprowadź pole *Bug.cpp*, a następnie wybierz przycisk **Dodaj.**
+1. W polu **Nazwa wprowadź nazwę** *usterka. cpp* , a następnie wybierz przycisk **Dodaj** .
 
-1. Skopiuj poniższy kod i wklej go do pliku *Bug.cpp* w edytorze.
+1. Skopiuj poniższy kod i wklej go do pliku *usterek. cpp* w edytorze.
 
     ```cpp
     #include "Bug.h"
@@ -199,79 +199,79 @@ Procedury zawierają również kod dla nagłówka i plików *cpp* dla bibliotek 
     }
     ```
 
-1. Na pasku menu wybierz pozycję Zapisz**wszystko** **.** > 
+1. Na pasku menu wybierz kolejno opcje **plik**  >  **Zapisz wszystko** .
 
-## <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>Dodawanie projektu Adnotacje i konfigurowanie go jako biblioteki statycznej
+## <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>Dodaj projekt adnotacji i skonfiguruj go jako bibliotekę statyczną
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy **polecenie CppDemo,** aby otworzyć menu kontekstowe. Wybierz **pozycję Dodaj** > **nowy projekt**.
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **CppDemo** , aby otworzyć menu kontekstowe. Wybierz pozycję **Dodaj**  >  **Nowy projekt** .
 
-1. W oknie **dialogowym Dodawanie nowego projektu** wybierz pozycję **Kreator pulpitu systemu Windows**, a następnie wybierz przycisk **Dalej.**
+1. W oknie dialogowym **Dodawanie nowego projektu** wybierz pozycję **Kreator pulpitu systemu Windows** , a następnie kliknij przycisk **dalej** .
 
-1. Na stronie **Konfigurowanie nowego projektu** w polu tekstowym **Nazwa projektu** wprowadź pozycję *Adnotacje*, a następnie wybierz pozycję **Utwórz**.
+1. Na stronie **Konfiguruj nowy projekt** w polu tekstowym **Nazwa projektu** wprowadź *Adnotacje* , a następnie wybierz pozycję **Utwórz** .
 
-1. W oknie dialogowym **Projekt pulpitu systemu Windows** zmień typ **aplikacji** na **Biblioteka statyczna (lib).**
+1. W oknie dialogowym **projekt pulpitu systemu Windows** Zmień **Typ aplikacji** na **Biblioteka statyczna (. lib)** .
 
-1. W obszarze **Dodatkowe opcje**wybierz pozycję **Pusty projekt**.
+1. W obszarze **Opcje dodatkowe** wybierz pozycję **pusty projekt** .
 
-1. Wybierz **przycisk OK,** aby utworzyć projekt.
-
-::: moniker-end
-
-::: moniker range="vs-2017"
-
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy **polecenie CppDemo,** aby otworzyć menu kontekstowe. Wybierz **pozycję Dodaj** > **nowy projekt**.
-
-1. W oknie dialogowym **Dodawanie nowego projektu** wybierz pozycję Visual **C++** > **Windows Desktop**.
-
-1. Wybierz **Kreatora pulpitu systemu Windows**.
-
-1. W polu **tekstowym Nazwa** wprowadź pozycję *Adnotacje*, a następnie wybierz przycisk **OK**.
-
-1. W oknie dialogowym **Projekt pulpitu systemu Windows** zmień typ **aplikacji** na **Biblioteka statyczna (lib).**
-
-1. W obszarze **Dodatkowe opcje**wybierz pozycję **Pusty projekt**.
-
-1. Wybierz **przycisk OK,** aby utworzyć projekt.
+1. Wybierz **przycisk OK** , aby utworzyć projekt.
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-150"
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy **polecenie CppDemo,** aby otworzyć menu kontekstowe. Wybierz **pozycję Dodaj** > **nowy projekt**.
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **CppDemo** , aby otworzyć menu kontekstowe. Wybierz pozycję **Dodaj**  >  **Nowy projekt** .
 
-1. W oknie dialogowym **Dodawanie nowego projektu** wybierz pozycję Visual **C++** > **Win32**.
+1. W oknie dialogowym **Dodaj nowy projekt** wybierz pozycję **Visual C++** > **Windows Desktop** .
 
-1. Wybierz **aplikację konsoli Win32**.
+1. Wybierz pozycję **Kreator pulpitu systemu Windows** .
 
-1. W polu **tekstowym Nazwa** wprowadź *adnotacje*.
+1. W polu tekstowym **Nazwa** wprowadź *Adnotacje* , a następnie wybierz przycisk **OK** .
 
-1. Wybierz pozycję **OK**.
+1. W oknie dialogowym **projekt pulpitu systemu Windows** Zmień **Typ aplikacji** na **Biblioteka statyczna (. lib)** .
 
-1. W oknie dialogowym **Kreator aplikacji Win32** wybierz przycisk **Dalej.**
+1. W obszarze **Opcje dodatkowe** wybierz pozycję **pusty projekt** .
 
-1. Zmień **typ aplikacji** na **Biblioteka statyczna**.
-
-1. W obszarze **Opcje dodatkowe**usuń zaznaczenie **wstępnie skompilowanego nagłówka**.
-
-1. Wybierz **pozycję Zakończ,** aby utworzyć projekt.
+1. Wybierz **przycisk OK** , aby utworzyć projekt.
 
 ::: moniker-end
 
-## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>Dodawanie pliku nagłówka i pliku źródłowego do projektu Adnotacje
+::: moniker range="msvc-140"
 
-1. W Eksploratorze rozwiązań rozwiń **węzeł Adnotacje**.
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy pozycję **CppDemo** , aby otworzyć menu kontekstowe. Wybierz pozycję **Dodaj**  >  **Nowy projekt** .
 
-1. Kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe **dla plików nagłówków** w obszarze **Adnotacje**. Wybierz **pozycję Dodaj** > **nowy element**.
+1. W oknie dialogowym **Dodaj nowy projekt** wybierz pozycję **Visual C++** > **Win32** .
 
-1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję **Kod programu Visual C++,** > **Code**a następnie wybierz pozycję **Plik nagłówka (h)**.
+1. Wybierz pozycję **aplikacja konsoli Win32** .
 
-1. W polu Edycja **nazwy** wprowadź *plik adnotations.h*, a następnie wybierz przycisk **Dodaj.**
+1. W polu tekstowym **Nazwa** wprowadź *Adnotacje* .
 
-1. W oknie edycji *adnotations.h*zaznacz i usuń zawartość.
+1. Wybierz przycisk **OK** .
 
-1. Skopiuj poniższy kod i wklej go do pliku *adnotations.h* w edytorze.
+1. W oknie dialogowym **Kreator aplikacji Win32** wybierz przycisk **dalej** .
+
+1. Zmień **Typ aplikacji** na **bibliotekę statyczną** .
+
+1. W obszarze **Opcje dodatkowe** Usuń zaznaczenie **prekompilowanego nagłówka** .
+
+1. Wybierz pozycję **Zakończ** , aby utworzyć projekt.
+
+::: moniker-end
+
+## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>Dodaj plik nagłówka i plik źródłowy do projektu adnotacji
+
+1. W Eksplorator rozwiązań rozwiń pozycję **Adnotacje** .
+
+1. Kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe dla **plików nagłówkowych** w obszarze **Adnotacje** . Wybierz pozycję **Dodaj**  >  **nowy element** .
+
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **Visual C++**  >  **kod** , a następnie wybierz pozycję **plik nagłówka (. h)** .
+
+1. W polu tekstowym **Nazwa** wprowadź *Adnotacje. h* , a następnie wybierz przycisk **Dodaj** .
+
+1. W oknie Edycja do *adnotacji. h* wybierz i Usuń zawartość.
+
+1. Skopiuj poniższy kod i wklej go do pliku *Annotations. h* w edytorze.
 
     ```cpp
     #pragma once
@@ -288,13 +288,13 @@ Procedury zawierają również kod dla nagłówka i plików *cpp* dla bibliotek 
     _Ret_maybenull_ LinkedList* AllocateNode();
     ```
 
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe **dla plików źródłowych** w obszarze **Adnotacje**. Wybierz **pozycję Dodaj** > **nowy element**.
+1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe dla **plików źródłowych** w obszarze **Adnotacje** . Wybierz pozycję **Dodaj**  >  **nowy element** .
 
-1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję Plik języka **C++ (cpp)**.
+1. W oknie dialogowym **Dodaj nowy element** wybierz opcję **plik C++ (. cpp)** .
 
-1. W polu Edycja **nazwy** wprowadź *polecenie adnotations.cpp*, a następnie wybierz przycisk **Dodaj.**
+1. W polu tekstowym **Nazwa** wprowadź *Adnotacje. cpp* , a następnie wybierz przycisk **Dodaj** .
 
-1. Skopiuj poniższy kod i wklej go do pliku *adnotations.cpp* w edytorze.
+1. Skopiuj poniższy kod i wklej go do pliku *Annotation. cpp* w edytorze.
 
     ```cpp
     #include "annotations.h"
@@ -324,13 +324,13 @@ Procedury zawierają również kod dla nagłówka i plików *cpp* dla bibliotek 
     }
     ```
 
-1. Na pasku menu wybierz pozycję Zapisz**wszystko** **.** > 
+1. Na pasku menu wybierz kolejno opcje **plik**  >  **Zapisz wszystko** .
 
-Rozwiązanie zostało ukończone i powinno zostać skompilowe bez błędów.
+Rozwiązanie jest teraz ukończone i powinno zostać skompilowane bez błędów.
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
-> W programie Visual Studio 2017 może `E1097 unknown attribute "no_init_all"` pojawić się fałszywe ostrzeżenie w silniku IntelliSense. Możesz bezpiecznie zignorować to ostrzeżenie.
+> W programie Visual Studio 2017 w aparacie IntelliSense może zostać wyświetlone ostrzeżenie fałszywe `E1097 unknown attribute "no_init_all"` . Możesz bezpiecznie zignorować to ostrzeżenie.
 
 ::: moniker-end

@@ -1,23 +1,23 @@
 ---
-title: Właściwości kroku kompilacji niestandardowej (Linux C++)
+title: Właściwości niestandardowego kroku kompilacji (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 77a9c1fb-7c41-4a9b-9418-18ac17ce4e74
-ms.openlocfilehash: 67b281e245c4fff8f37baff8875cbc3dc84ca718
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51111b7ff1ab68ecc49b54efdeeef5f95368ab0c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441330"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924532"
 ---
-# <a name="custom-build-step-properties-linux-c"></a>Właściwości kroku kompilacji niestandardowej (Linux C++)
+# <a name="custom-build-step-properties-linux-c"></a>Właściwości niestandardowego kroku kompilacji (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | Właściwość | Opis |
 |--|--|
@@ -26,6 +26,6 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 | Dane wyjściowe | Plik wyjściowy, generowany przez krok niestandardowej kompilacji. To ustawienie jest wymagane, aby kompilacje przyrostowe działały poprawnie. |
 | Dodatkowe zależności | Rozdzielana średnikami lista wszelkich dodatkowych plików wejściowych dla kroku niestandardowej kompilacji. |
 | Wykonaj po i wykonaj przed | Te opcje definiują, kiedy krok niestandardowej kompilacji jest uruchamiany w procesie kompilacji w stosunku do wymienionych celów. Najczęściej wymienione cele to BuildGenerateSources, BuildCompile i BuildLink, ponieważ stanowią one najważniejsze kroki procesu kompilacji. Inne często wymienione cele to Midl, CLCompile i Link. |
-| Traktuj dane wyjściowe jako zawartość | Ta opcja ma znaczenie tylko dla aplikacji Microsoft Store lub Windows Phone, które zawierają wszystkie pliki zawartości w pakiecie .appx. |
+| Traktuj dane wyjściowe jako zawartość | Ta opcja ma znaczenie tylko w przypadku aplikacji Microsoft Store lub Windows Phone, które obejmują wszystkie pliki zawartości w pakiecie. appx. |
 
 ::: moniker-end

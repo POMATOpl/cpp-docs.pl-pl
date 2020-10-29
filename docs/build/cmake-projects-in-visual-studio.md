@@ -5,12 +5,12 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: a4eea2b321bc07fc40c9a42b3ce515435e808ee4
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 693179c6da368fa84a5ccb0ffaf2b1b1596972b8
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685035"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922340"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>CMake projekty w programie Visual Studio
 
@@ -19,9 +19,9 @@ CMake to międzyplatformowe narzędzie typu open source służące do definiowan
 > [!NOTE]
 > CMake stał się bardziej i bardziej zintegrowany z programem Visual Studio w ciągu ostatnich kilku wydań. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj kontrolki selektora **wersji** . Znajduje się w górnej części spisu treści na tej stronie.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Składnik **C++ CMAKE Tools for Windows** korzysta z funkcji [Otwórz folder](open-folder-projects-cpp.md) , aby używać plików projektu CMake (takich jak *CMakeLists.txt*) bezpośrednio na potrzeby funkcji IntelliSense i przeglądania. Obsługiwane są zarówno generatory ninja, jak i Visual Studio. Jeśli używasz generatora programu Visual Studio, generuje on tymczasowy plik projektu i przekazuje go do msbuild.exe. Jednak projekt nigdy nie jest ładowany do celów IntelliSense ani do przeglądania. Istnieje również możliwość zaimportowania istniejącej pamięci podręcznej CMake.
+Składnik **C++ CMAKE Tools for Windows** korzysta z funkcji [Otwórz folder](open-folder-projects-cpp.md) , aby używać plików projektu CMake (takich jak *CMakeLists.txt* ) bezpośrednio na potrzeby funkcji IntelliSense i przeglądania. Obsługiwane są zarówno generatory ninja, jak i Visual Studio. Jeśli używasz generatora programu Visual Studio, generuje on tymczasowy plik projektu i przekazuje go do msbuild.exe. Jednak projekt nigdy nie jest ładowany do celów IntelliSense ani do przeglądania. Istnieje również możliwość zaimportowania istniejącej pamięci podręcznej CMake.
 
 ## <a name="installation"></a>Instalacja
 
@@ -39,7 +39,7 @@ Po wybraniu opcji **plik > Otwórz folder >** , aby otworzyć folder zawierając
 
 - **Eksplorator rozwiązań** Wyświetla strukturę folderów i pliki.
 
-- Program Visual Studio działa cmake.exe i generuje plik pamięci podręcznej CMake (*CMakeCache.txt*) dla konfiguracji domyślnej (debugowanie x64). Wiersz polecenia CMake jest wyświetlany w **okno dane wyjściowe**wraz z dodatkowymi danymi wyjściowymi z CMAKE.
+- Program Visual Studio działa cmake.exe i generuje plik pamięci podręcznej CMake ( *CMakeCache.txt* ) dla konfiguracji domyślnej (debugowanie x64). Wiersz polecenia CMake jest wyświetlany w **okno dane wyjściowe** wraz z dodatkowymi danymi wyjściowymi z CMAKE.
 
 - W tle program Visual Studio zaczyna indeksować pliki źródłowe w celu włączenia funkcji IntelliSense, przeglądania informacji, refaktoryzacji i tak dalej. Podczas pracy program Visual Studio monitoruje zmiany w edytorze, a także na dysku, aby zachować synchronizację indeksu ze źródłami.
 
@@ -51,22 +51,22 @@ Możesz również wyświetlać projekty zorganizowane logicznie według celów. 
 
 ![Przycisk Widok elementów docelowych CMake](media/cmake-targets-view.png)
 
-Kliknij przycisk **Pokaż wszystkie pliki** w górnej części **Eksplorator rozwiązań** , aby wyświetlić wszystkie dane wyjściowe generowane przez CMAKE w folderze *out/Build/ \<config> * .
+Kliknij przycisk **Pokaż wszystkie pliki** w górnej części **Eksplorator rozwiązań** , aby wyświetlić wszystkie dane wyjściowe generowane przez CMAKE w folderze *out/Build/ \<config>* .
 
-Program Visual Studio używa pliku konfiguracji o nazwie **CMakeSettings.json**. Ten plik umożliwia definiowanie i przechowywanie wielu konfiguracji kompilacji oraz wygodne przełączanie się między nimi w środowisku IDE. *Konfiguracja* to konstrukcja programu Visual Studio, która hermetyzuje ustawienia specyficzne dla danego typu kompilacji. Ustawienia służą do konfigurowania domyślnych opcji wiersza polecenia, które program Visual Studio przekazuje do cmake.exe. W tym miejscu możesz również określić dodatkowe opcje CMake i zdefiniować wszelkie dodatkowe zmienne, które chcesz. Wszystkie opcje są zapisywane w pamięci podręcznej CMake jako zmienne wewnętrzne lub zewnętrzne. W programie Visual Studio 2019 **Edytor ustawień CMAKE** zapewnia wygodny sposób edytowania ustawień. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień CMAKE](customize-cmake-settings.md).
+Program Visual Studio używa pliku konfiguracji o nazwie **CMakeSettings.json** . Ten plik umożliwia definiowanie i przechowywanie wielu konfiguracji kompilacji oraz wygodne przełączanie się między nimi w środowisku IDE. *Konfiguracja* to konstrukcja programu Visual Studio, która hermetyzuje ustawienia specyficzne dla danego typu kompilacji. Ustawienia służą do konfigurowania domyślnych opcji wiersza polecenia, które program Visual Studio przekazuje do cmake.exe. W tym miejscu możesz również określić dodatkowe opcje CMake i zdefiniować wszelkie dodatkowe zmienne, które chcesz. Wszystkie opcje są zapisywane w pamięci podręcznej CMake jako zmienne wewnętrzne lub zewnętrzne. W programie Visual Studio 2019 **Edytor ustawień CMAKE** zapewnia wygodny sposób edytowania ustawień. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień CMAKE](customize-cmake-settings.md).
 
 Jedno ustawienie `intelliSenseMode` nie jest przesyłane do cmake, ale jest używane tylko przez program Visual Studio.
 
 Użyj pliku **CMakeLists.txt** w każdym folderze projektu tak samo jak w każdym projekcie CMAKE. Można określić pliki źródłowe, znaleźć biblioteki, ustawić opcje kompilatora i konsolidatora, a także określić inne informacje związane z systemem kompilacji.
 
-Aby przekazać argumenty do pliku wykonywalnego w czasie debugowania, można użyć innego pliku o nazwie **launch.vs.jsna**. W niektórych scenariuszach program Visual Studio automatycznie generuje te pliki. Można edytować je ręcznie, a nawet samodzielnie tworzyć pliki.
+Aby przekazać argumenty do pliku wykonywalnego w czasie debugowania, można użyć innego pliku o nazwie **launch.vs.jsna** . W niektórych scenariuszach program Visual Studio automatycznie generuje te pliki. Można edytować je ręcznie, a nawet samodzielnie tworzyć pliki.
 
 > [!NOTE]
-> W przypadku innych rodzajów projektów typu "Open folder" są używane dwa dodatkowe pliki JSON: **CppProperties.json** i **tasks.vs.json**. Żadna z tych elementów nie jest istotna dla projektów CMake.
+> W przypadku innych rodzajów projektów typu "Open folder" są używane dwa dodatkowe pliki JSON: **CppProperties.json** i **tasks.vs.json** . Żadna z tych elementów nie jest istotna dla projektów CMake.
 
 ## <a name="open-an-existing-cache"></a>Otwieranie istniejącej pamięci podręcznej
 
-Gdy otworzysz istniejący plik pamięci podręcznej CMake (*CMakeCache.txt*), program Visual Studio nie spróbuje zarządzać pamięcią podręczną i drzewem kompilacji. Niestandardowe lub preferowane narzędzia mają pełną kontrolę nad sposobem konfigurowania projektu przez program CMake. Aby otworzyć istniejącą pamięć podręczną w programie Visual Studio, wybierz pozycję **plik > otwórz > CMAKE**. Następnie przejdź do istniejącego pliku *CMakeCache.txt* .
+Gdy otworzysz istniejący plik pamięci podręcznej CMake ( *CMakeCache.txt* ), program Visual Studio nie spróbuje zarządzać pamięcią podręczną i drzewem kompilacji. Niestandardowe lub preferowane narzędzia mają pełną kontrolę nad sposobem konfigurowania projektu przez program CMake. Aby otworzyć istniejącą pamięć podręczną w programie Visual Studio, wybierz pozycję **plik > otwórz > CMAKE** . Następnie przejdź do istniejącego pliku *CMakeCache.txt* .
 
 Do otwartego projektu można dodać istniejącą pamięć podręczną CMake. W ten sam sposób można dodać nową konfigurację. Aby uzyskać więcej informacji, zobacz nasz wpis w blogu na temat [otwierania istniejącej pamięci podręcznej w programie Visual Studio](https://devblogs.microsoft.com/cppblog/open-existing-cmake-caches-in-visual-studio/).
 
@@ -74,15 +74,15 @@ Do otwartego projektu można dodać istniejącą pamięć podręczną CMake. W t
 
 Aby skompilować projekt CMake, możesz wybrać następujące opcje:
 
-1. Na pasku narzędzi Ogólne znajdź listę rozwijaną **konfiguracje** . Prawdopodobnie domyślnie jest wyświetlana wartość "x64-debug". Wybierz preferowaną konfigurację i naciśnij klawisz **F5**lub kliknij przycisk **Uruchom** (zielony trójkąt) na pasku narzędzi. Projekt automatycznie kompiluje się jako pierwszy, podobnie jak rozwiązanie Visual Studio.
+1. Na pasku narzędzi Ogólne znajdź listę rozwijaną **konfiguracje** . Prawdopodobnie domyślnie jest wyświetlana wartość "x64-debug". Wybierz preferowaną konfigurację i naciśnij klawisz **F5** lub kliknij przycisk **Uruchom** (zielony trójkąt) na pasku narzędzi. Projekt automatycznie kompiluje się jako pierwszy, podobnie jak rozwiązanie Visual Studio.
 
 1. Kliknij prawym przyciskiem myszy *CMakeLists.txt* i wybierz opcję **Kompiluj** z menu kontekstowego. Jeśli masz wiele obiektów docelowych w strukturze folderów, możesz utworzyć wszystko lub tylko jeden określony element docelowy.
 
-1. Z menu głównego wybierz kolejno opcje **kompiluj > Kompiluj wszystko** (**F7** lub **Ctrl + Shift + B**). Upewnij się, że element docelowy CMake został już wybrany na liście rozwijanej **elementu startowego** na pasku narzędzi **Ogólne** .
+1. Z menu głównego wybierz kolejno opcje **kompiluj > Kompiluj wszystko** ( **F7** lub **Ctrl + Shift + B** ). Upewnij się, że element docelowy CMake został już wybrany na liście rozwijanej **elementu startowego** na pasku narzędzi **Ogólne** .
 
 ![CMake — polecenie menu kompilacji](media/cmake-build-menu.png "Menu poleceń kompilacji CMake")
 
-Zgodnie z oczekiwaniami wyniki kompilacji są wyświetlane w **okno dane wyjściowe** i **Lista błędów**.
+Zgodnie z oczekiwaniami wyniki kompilacji są wyświetlane w **okno dane wyjściowe** i **Lista błędów** .
 
 ![Błędy kompilacji CMake](media/cmake-build-errors.png "Błędy kompilacji CMake")
 
@@ -90,7 +90,7 @@ W folderze z wieloma obiektami docelowymi kompilacji można określić, który e
 
 ## <a name="debugging-cmake-projects"></a>Debugowanie projektów CMake
 
-Aby debugować projekt CMake, wybierz preferowaną konfigurację i naciśnij klawisz **F5**lub naciśnij przycisk **Run (Uruchom** ) na pasku narzędzi. Jeśli przycisk **Uruchom** ma wartość "Wybierz element startowy", wybierz strzałkę listy rozwijanej. Wybierz obiekt docelowy, który chcesz uruchomić. (W projekcie CMake opcja "bieżący dokument" jest prawidłowa tylko dla plików. cpp).
+Aby debugować projekt CMake, wybierz preferowaną konfigurację i naciśnij klawisz **F5** lub naciśnij przycisk **Run (Uruchom** ) na pasku narzędzi. Jeśli przycisk **Uruchom** ma wartość "Wybierz element startowy", wybierz strzałkę listy rozwijanej. Wybierz obiekt docelowy, który chcesz uruchomić. (W projekcie CMake opcja "bieżący dokument" jest prawidłowa tylko dla plików. cpp).
 
 ![Przycisk uruchamiania CMake](media/cmake-run-button.png "Przycisk uruchamiania CMake")
 
@@ -100,7 +100,7 @@ Można dostosować sesję debugowania CMake przez ustawienie właściwości w **
 
 ## <a name="just-my-code-for-cmake-projects"></a>Tylko mój kod projektów CMake
 
-Podczas kompilowania dla systemu Windows za pomocą kompilatora MSVC, projekty CMake obsługują debugowanie Tylko mój kod. Aby zmienić ustawienie tylko mój kod, przejdź do pozycji **Narzędzia**  >  **Opcje**  >  **debugowanie**  >  **Ogólne**.
+Podczas kompilowania dla systemu Windows za pomocą kompilatora MSVC, projekty CMake obsługują debugowanie Tylko mój kod. Aby zmienić ustawienie tylko mój kod, przejdź do pozycji **Narzędzia**  >  **Opcje**  >  **debugowanie**  >  **Ogólne** .
 
 ## <a name="vcpkg-integration"></a>Integracja Vcpkg
 
@@ -108,17 +108,17 @@ Jeśli zainstalowano [vcpkg](vcpkg.md), projekty CMAKE otwarte w programie Visua
 
 ## <a name="customize-configuration-feedback"></a>Dostosowywanie informacji o konfiguracji
 
-Domyślnie większość komunikatów konfiguracyjnych jest pomijana, o ile wystąpi błąd. Aby wyświetlić wszystkie komunikaty, Włącz tę funkcję w opcji **Narzędzia**  >  **Options**  >  **CMAKE**.
+Domyślnie większość komunikatów konfiguracyjnych jest pomijana, o ile wystąpi błąd. Aby wyświetlić wszystkie komunikaty, Włącz tę funkcję w opcji **Narzędzia**  >  **Options**  >  **CMAKE** .
 
    ![Konfigurowanie opcji diagnostycznych CMake](media/vs2019-cmake-configure-options.png "Opcje diagnostyki CMake")
 
 ## <a name="editing-cmakeliststxt-files"></a>Edytowanie plików CMakeLists.txt
 
-Aby edytować plik *CMakeLists.txt* , kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**. Po wprowadzeniu zmian w pliku zostanie wyświetlony żółty pasek stanu z informacją o tym, że IntelliSense zaktualizuje. Pozwala to na anulowanie operacji aktualizacji. Aby uzyskać informacje na temat *CMakeLists.txt*, zobacz [dokumentację CMAKE](https://cmake.org/documentation/).
+Aby edytować plik *CMakeLists.txt* , kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz** . Po wprowadzeniu zmian w pliku zostanie wyświetlony żółty pasek stanu z informacją o tym, że IntelliSense zaktualizuje. Pozwala to na anulowanie operacji aktualizacji. Aby uzyskać informacje na temat *CMakeLists.txt* , zobacz [dokumentację CMAKE](https://cmake.org/documentation/).
 
    ![ Edycja plikuCMakeLists.txt](media/cmake-cmakelists.png "Edycja pliku CMakeLists.txt")
 
-Po zapisaniu pliku krok konfiguracji zostanie automatycznie uruchomiony ponownie i zostaną wyświetlone informacje w oknie **danych wyjściowych** . Błędy i ostrzeżenia są wyświetlane w oknie **Lista błędów** lub **dane wyjściowe** . Kliknij dwukrotnie błąd w **Lista błędów** , aby przejść do wiersza błędnego w *CMakeLists.txt*.
+Po zapisaniu pliku krok konfiguracji zostanie automatycznie uruchomiony ponownie i zostaną wyświetlone informacje w oknie **danych wyjściowych** . Błędy i ostrzeżenia są wyświetlane w oknie **Lista błędów** lub **dane wyjściowe** . Kliknij dwukrotnie błąd w **Lista błędów** , aby przejść do wiersza błędnego w *CMakeLists.txt* .
 
    ![ Błędy plikówCMakeLists.txt](media/cmake-cmakelists-error.png "Błędy plików CMakeLists.txt")
 
@@ -152,9 +152,9 @@ Jeśli zainstalowano CMake z Instalator programu Visual Studio, można uruchomi�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
-Program Visual Studio 2017 ma rozbudowaną obsługę CMake, w tym [wieloplatformowych projektów CMAKE](../linux/cmake-linux-project.md). Składnik **Visual C++ Tools for CMAKE** korzysta z funkcji **Otwórz folder** , aby umożliwić IDE korzystanie z plików projektu CMake (takich jak *CMakeLists.txt*) bezpośrednio na potrzeby funkcji IntelliSense i przeglądania. Obsługiwane są zarówno generatory ninja, jak i Visual Studio. Jeśli używasz generatora programu Visual Studio, generuje on tymczasowy plik projektu i przekazuje go do msbuild.exe. Jednak projekt nigdy nie jest ładowany do celów IntelliSense ani do przeglądania. Istnieje również możliwość zaimportowania istniejącej pamięci podręcznej CMake.
+Program Visual Studio 2017 ma rozbudowaną obsługę CMake, w tym [wieloplatformowych projektów CMAKE](../linux/cmake-linux-project.md). Składnik **Visual C++ Tools for CMAKE** korzysta z funkcji **Otwórz folder** , aby umożliwić IDE korzystanie z plików projektu CMake (takich jak *CMakeLists.txt* ) bezpośrednio na potrzeby funkcji IntelliSense i przeglądania. Obsługiwane są zarówno generatory ninja, jak i Visual Studio. Jeśli używasz generatora programu Visual Studio, generuje on tymczasowy plik projektu i przekazuje go do msbuild.exe. Jednak projekt nigdy nie jest ładowany do celów IntelliSense ani do przeglądania. Istnieje również możliwość zaimportowania istniejącej pamięci podręcznej CMake.
 
 ## <a name="installation"></a>Instalacja
 
@@ -172,7 +172,7 @@ Po wybraniu opcji **plik > Otwórz folder >** , aby otworzyć folder zawierając
 
 - **Eksplorator rozwiązań** Wyświetla strukturę folderów i pliki.
 
-- Program Visual Studio działa CMake.exe i opcjonalnie generuje pamięć podręczną CMake dla *konfiguracji*domyślnej, która jest debugowaniem x86. Wiersz polecenia CMake jest wyświetlany w **okno dane wyjściowe**wraz z dodatkowymi danymi wyjściowymi z CMAKE.
+- Program Visual Studio działa CMake.exe i opcjonalnie generuje pamięć podręczną CMake dla *konfiguracji* domyślnej, która jest debugowaniem x86. Wiersz polecenia CMake jest wyświetlany w **okno dane wyjściowe** wraz z dodatkowymi danymi wyjściowymi z CMAKE.
 
 - W tle program Visual Studio zaczyna indeksować pliki źródłowe w celu włączenia funkcji IntelliSense, przeglądania informacji, refaktoryzacji i tak dalej. Podczas pracy program Visual Studio monitoruje zmiany w edytorze, a także na dysku, aby zachować synchronizację indeksu ze źródłami.
 
@@ -188,26 +188,26 @@ Program Visual Studio używa pliku o nazwie *CMakeSettings.jsna* potrzeby przech
 
 W przeciwnym razie użyj *CMakeLists.txt* tak samo jak w każdym projekcie cmake, aby określić pliki źródłowe, znaleźć biblioteki, ustawić opcje kompilatora i konsolidatora, a także określić inne informacje związane z systemem kompilacji.
 
-Jeśli musisz przekazać argumenty do pliku wykonywalnego w czasie debugowania, możesz użyć innego pliku o nazwie **launch.vs.jsna**. W niektórych scenariuszach program Visual Studio automatycznie generuje te pliki. Można edytować je ręcznie, a nawet samodzielnie tworzyć pliki.
+Jeśli musisz przekazać argumenty do pliku wykonywalnego w czasie debugowania, możesz użyć innego pliku o nazwie **launch.vs.jsna** . W niektórych scenariuszach program Visual Studio automatycznie generuje te pliki. Można edytować je ręcznie, a nawet samodzielnie tworzyć pliki.
 
 > [!NOTE]
-> W przypadku innych rodzajów projektów typu "Open folder" są używane dwa dodatkowe pliki JSON: **CppProperties.json** i **tasks.vs.json**. Żadna z tych elementów nie jest istotna dla projektów CMake.
+> W przypadku innych rodzajów projektów typu "Open folder" są używane dwa dodatkowe pliki JSON: **CppProperties.json** i **tasks.vs.json** . Żadna z tych elementów nie jest istotna dla projektów CMake.
 
 ## <a name="import-an-existing-cache"></a>Importowanie istniejącej pamięci podręcznej
 
-Podczas importowania istniejącego pliku *CMakeCache.txt* program Visual Studio automatycznie wyodrębnia dostosowane zmienne i tworzy wstępnie wypełniony *CMakeSettings.jsna* pliku na podstawie tych elementów. Oryginalna pamięć podręczna nie jest w żaden sposób modyfikowana. Może być nadal używany z wiersza polecenia lub z dowolnym narzędziem lub środowiskiem IDE używanym do jego wygenerowania. Nowy  *CMakeSettings.jsw* pliku zostanie umieszczony obok *CMakeLists.txt*głównej projektu. Program Visual Studio generuje nową pamięć podręczną opartą na pliku ustawień. Automatyczne generowanie pamięci podręcznej można przesłonić w oknie **narzędzia > opcje > CMake > ogólne** .
+Podczas importowania istniejącego pliku *CMakeCache.txt* program Visual Studio automatycznie wyodrębnia dostosowane zmienne i tworzy wstępnie wypełniony *CMakeSettings.jsna* pliku na podstawie tych elementów. Oryginalna pamięć podręczna nie jest w żaden sposób modyfikowana. Może być nadal używany z wiersza polecenia lub z dowolnym narzędziem lub środowiskiem IDE używanym do jego wygenerowania. Nowy  *CMakeSettings.jsw* pliku zostanie umieszczony obok *CMakeLists.txt* głównej projektu. Program Visual Studio generuje nową pamięć podręczną opartą na pliku ustawień. Automatyczne generowanie pamięci podręcznej można przesłonić w oknie **narzędzia > opcje > CMake > ogólne** .
 
 Nie wszystkie elementy w pamięci podręcznej są importowane.  Właściwości, takie jak generator i lokalizacja kompilatorów, są zastępowane wartościami domyślnymi, które są znane do pracy z IDE.
 
 ### <a name="to-import-an-existing-cache"></a>Aby zaimportować istniejącą pamięć podręczną
 
-1. Z menu głównego wybierz kolejno pozycje **plik > otwórz > CMAKE**:
+1. Z menu głównego wybierz kolejno pozycje **plik > otwórz > CMAKE** :
 
    ![Otwórz CMake](media/cmake-file-open.png "Plik, Otwórz, CMake")
 
    To polecenie powoduje wyświetlenie kreatora **importu CMAKE z pamięci podręcznej** .
 
-2. Przejdź do pliku *CMakeCache.txt* , który chcesz zaimportować, a następnie kliknij przycisk **OK**. Zostanie wyświetlony Kreator **importowania projektu CMAKE z pamięci podręcznej** :
+2. Przejdź do pliku *CMakeCache.txt* , który chcesz zaimportować, a następnie kliknij przycisk **OK** . Zostanie wyświetlony Kreator **importowania projektu CMAKE z pamięci podręcznej** :
 
    ![Importowanie pamięci podręcznej CMake](media/cmake-import-wizard.png "Otwórz Kreatora importu pamięci podręcznej CMake")
 
@@ -217,17 +217,17 @@ Nie wszystkie elementy w pamięci podręcznej są importowane.  Właściwości, 
 
 Aby skompilować projekt CMake, możesz wybrać następujące opcje:
 
-1. Na pasku narzędzi Ogólne znajdź listę rozwijaną **konfiguracje** . Prawdopodobnie domyślnie jest wyświetlany ekran "Linux-debug" lub "x64-debug". Wybierz preferowaną konfigurację i naciśnij klawisz **F5**lub kliknij przycisk **Uruchom** (zielony trójkąt) na pasku narzędzi. Projekt automatycznie kompiluje się jako pierwszy, podobnie jak rozwiązanie Visual Studio.
+1. Na pasku narzędzi Ogólne znajdź listę rozwijaną **konfiguracje** . Prawdopodobnie domyślnie jest wyświetlany ekran "Linux-debug" lub "x64-debug". Wybierz preferowaną konfigurację i naciśnij klawisz **F5** lub kliknij przycisk **Uruchom** (zielony trójkąt) na pasku narzędzi. Projekt automatycznie kompiluje się jako pierwszy, podobnie jak rozwiązanie Visual Studio.
 
 1. Kliknij prawym przyciskiem myszy *CMakeLists.txt* i wybierz opcję **Kompiluj** z menu kontekstowego. Jeśli masz wiele obiektów docelowych w strukturze folderów, możesz utworzyć wszystko lub tylko jeden określony element docelowy.
 
-1. Z menu głównego wybierz kolejno opcje **kompiluj > Kompiluj rozwiązanie** (**F7** lub **Ctrl + Shift + B**). Upewnij się, że element docelowy CMake został już wybrany na liście rozwijanej **elementu startowego** na pasku narzędzi **Ogólne** .
+1. Z menu głównego wybierz kolejno opcje **kompiluj > Kompiluj rozwiązanie** ( **F7** lub **Ctrl + Shift + B** ). Upewnij się, że element docelowy CMake został już wybrany na liście rozwijanej **elementu startowego** na pasku narzędzi **Ogólne** .
 
 ![CMake — polecenie menu kompilacji](media/cmake-build-menu.png "Menu poleceń kompilacji CMake")
 
 Można dostosować konfiguracje kompilacji, zmienne środowiskowe, argumenty wiersza polecenia i inne ustawienia w *CMakeSettings.js* pliku. Umożliwia wprowadzanie zmian bez modyfikowania pliku *CMakeLists.txt* . Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień CMAKE](customize-cmake-settings.md).
 
-Zgodnie z oczekiwaniami wyniki kompilacji są wyświetlane w **okno dane wyjściowe** i **Lista błędów**.
+Zgodnie z oczekiwaniami wyniki kompilacji są wyświetlane w **okno dane wyjściowe** i **Lista błędów** .
 
 ![Błędy kompilacji CMake](media/cmake-build-errors.png "Błędy kompilacji CMake")
 
@@ -235,7 +235,7 @@ W folderze z wieloma obiektami docelowymi kompilacji można określić, który e
 
 ## <a name="debugging-cmake-projects"></a>Debugowanie projektów CMake
 
-Aby debugować projekt CMake, wybierz preferowaną konfigurację i naciśnij klawisz **F5**. Lub naciśnij przycisk **Run (Uruchom** ) na pasku narzędzi. Jeśli przycisk **Uruchom** ma wartość "Wybierz element startowy", wybierz strzałkę listy rozwijanej i wybierz obiekt docelowy, który chcesz uruchomić. (W projekcie CMake opcja "bieżący dokument" jest prawidłowa tylko dla plików. cpp).
+Aby debugować projekt CMake, wybierz preferowaną konfigurację i naciśnij klawisz **F5** . Lub naciśnij przycisk **Run (Uruchom** ) na pasku narzędzi. Jeśli przycisk **Uruchom** ma wartość "Wybierz element startowy", wybierz strzałkę listy rozwijanej i wybierz obiekt docelowy, który chcesz uruchomić. (W projekcie CMake opcja "bieżący dokument" jest prawidłowa tylko dla plików. cpp).
 
 ![Przycisk uruchamiania CMake](media/cmake-run-button.png "Przycisk uruchamiania CMake")
 
@@ -245,11 +245,11 @@ Można dostosować sesję debugowania CMake przez ustawienie właściwości w **
 
 ## <a name="editing-cmakeliststxt-files"></a>Edytowanie plików CMakeLists.txt
 
-Aby edytować plik *CMakeLists.txt* , kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**. Po wprowadzeniu zmian w pliku zostanie wyświetlony żółty pasek stanu z informacją o tym, że IntelliSense zaktualizuje. Pozwala to na anulowanie operacji aktualizacji. Aby uzyskać informacje na temat *CMakeLists.txt*, zobacz [dokumentację CMAKE](https://cmake.org/documentation/).
+Aby edytować plik *CMakeLists.txt* , kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz** . Po wprowadzeniu zmian w pliku zostanie wyświetlony żółty pasek stanu z informacją o tym, że IntelliSense zaktualizuje. Pozwala to na anulowanie operacji aktualizacji. Aby uzyskać informacje na temat *CMakeLists.txt* , zobacz [dokumentację CMAKE](https://cmake.org/documentation/).
 
    ![ Edycja plikuCMakeLists.txt](media/cmake-cmakelists.png "Edycja pliku CMakeLists.txt")
 
-Po zapisaniu pliku krok konfiguracji zostanie automatycznie uruchomiony ponownie i zostaną wyświetlone informacje w oknie **danych wyjściowych** . Błędy i ostrzeżenia są wyświetlane w oknie **Lista błędów** lub **dane wyjściowe** . Kliknij dwukrotnie błąd w **Lista błędów** , aby przejść do wiersza błędnego w *CMakeLists.txt*.
+Po zapisaniu pliku krok konfiguracji zostanie automatycznie uruchomiony ponownie i zostaną wyświetlone informacje w oknie **danych wyjściowych** . Błędy i ostrzeżenia są wyświetlane w oknie **Lista błędów** lub **dane wyjściowe** . Kliknij dwukrotnie błąd w **Lista błędów** , aby przejść do wiersza błędnego w *CMakeLists.txt* .
 
    ![ Błędy plikówCMakeLists.txt](media/cmake-cmakelists-error.png "Błędy plików CMakeLists.txt")
 
@@ -279,7 +279,7 @@ Automatyczne generowanie pamięci podręcznej można wyłączyć w oknie **narz�
 
 ## <a name="single-file-compilation"></a>Kompilacja pojedynczego pliku
 
-Aby skompilować pojedynczy plik w projekcie CMake, kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań**. Wybierz opcję **Kompiluj** z menu podręcznego. Możesz również skompilować aktualnie otwarty plik w edytorze przy użyciu głównego menu **CMAKE** :
+Aby skompilować pojedynczy plik w projekcie CMake, kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** . Wybierz opcję **Kompiluj** z menu podręcznego. Możesz również skompilować aktualnie otwarty plik w edytorze przy użyciu głównego menu **CMAKE** :
 
 ![Kompilacja pojedynczego pliku CMake](media/cmake-single-file-compile.png)
 
@@ -295,7 +295,7 @@ Jeśli zainstalowano CMake z Instalator programu Visual Studio, można uruchomi�
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 W programie Visual Studio 2015 użytkownicy programu Visual Studio mogą używać [generatora CMAKE](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) do generowania plików projektu MSBuild, które następnie wykorzystuje środowisko IDE do IntelliSense, przeglądania i kompilowania.
 

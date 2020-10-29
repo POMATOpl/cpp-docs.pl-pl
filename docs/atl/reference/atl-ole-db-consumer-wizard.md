@@ -4,22 +4,22 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: f7bdc371e5575375f5e72a1a6c0c51890921b1f4
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 490335f1f61987fc6e5b0b3806ee8e39c82f336f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353132"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923749"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Ten Kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Ten Kreator konfiguruje OLE DB klasę konsumenta z powiązaniami danych, które są niezbędne do uzyskania dostępu do określonego źródła danych za pomocą określonego dostawcy OLE DB.
 
@@ -54,7 +54,7 @@ Ten Kreator konfiguruje OLE DB klasę konsumenta z powiązaniami danych, które 
          > - **Korzystanie z zintegrowanych zabezpieczeń systemu Windows NT**
          > - **Użyj określonej nazwy użytkownika i hasła**
          >
-         > W przypadku wybrania opcji **Użyj konkretnej nazwy użytkownika i hasła**można zapisać hasło (przy użyciu pola wyboru "Zezwalaj na zapisywanie hasła"). Jednak ta opcja nie jest bezpieczna. Zalecane jest wybranie opcji **Użyj zintegrowanych zabezpieczeń systemu Windows NT**. Ta opcja jest bezpieczna, ponieważ szyfruje hasło.
+         > W przypadku wybrania opcji **Użyj konkretnej nazwy użytkownika i hasła** można zapisać hasło (przy użyciu pola wyboru "Zezwalaj na zapisywanie hasła"). Jednak ta opcja nie jest bezpieczna. Zalecane jest wybranie opcji **Użyj zintegrowanych zabezpieczeń systemu Windows NT** . Ta opcja jest bezpieczna, ponieważ szyfruje hasło.
          > Mogą wystąpić sytuacje, w których chcesz wybrać opcję "Zezwalaj na zapisywanie hasła". Na przykład w przypadku zwalniania biblioteki z rozwiązaniem prywatnej bazy danych nie należy bezpośrednio uzyskiwać dostępu do bazy danych, ale zamiast tego należy użyć aplikacji warstwy środkowej do zweryfikowania użytkownika (za pomocą dowolnego wybranego przez Ciebie schematu uwierzytelniania), a następnie ograniczenia sortowania danych dostępnych dla użytkownika.
 
       1. **Wybierz bazę danych na serwerze:** Kliknij menu rozwijane listę, aby wyświetlić wszystkie zarejestrowane bazy danych na serwerze danych, a następnie wybierz jeden z nich.
@@ -71,22 +71,22 @@ Ten Kreator konfiguruje OLE DB klasę konsumenta z powiązaniami danych, które 
 
          \- oraz
 
-         **Użyj parametrów połączenia:** Wprowadź już uzyskane parametry połączenia lub kliknij przycisk **Kompiluj** . zostanie wyświetlone okno dialogowe **Wybieranie źródła danych** . Wybierz plik lub źródło danych maszyny, a następnie kliknij przycisk **OK**.
+         **Użyj parametrów połączenia:** Wprowadź już uzyskane parametry połączenia lub kliknij przycisk **Kompiluj** . zostanie wyświetlone okno dialogowe **Wybieranie źródła danych** . Wybierz plik lub źródło danych maszyny, a następnie kliknij przycisk **OK** .
 
          > [!NOTE]
-         > Parametry połączenia można uzyskać, wyświetlając właściwości istniejącego połączenia w **Eksplorator serwera**lub można utworzyć połączenie przez dwukrotne kliknięcie pozycji **dodaj połączenie** w **Eksplorator serwera**.
+         > Parametry połączenia można uzyskać, wyświetlając właściwości istniejącego połączenia w **Eksplorator serwera** lub można utworzyć połączenie przez dwukrotne kliknięcie pozycji **dodaj połączenie** w **Eksplorator serwera** .
 
       1. **Wprowadź informacje, aby zalogować się na serwerze:** Wprowadź nazwę użytkownika i hasło, aby zalogować się do serwera danych.
 
       1. Wprowadź początkowy wykaz do użycia.
 
-      1. Kliknij pozycję **Testuj połączenie**. Jeśli test zakończy się pomyślnie, kliknij przycisk **OK**. Jeśli nie, sprawdź informacje dotyczące logowania, wypróbuj inną bazę danych lub wypróbuj inny serwer danych.
+      1. Kliknij pozycję **Testuj połączenie** . Jeśli test zakończy się pomyślnie, kliknij przycisk **OK** . Jeśli nie, sprawdź informacje dotyczące logowania, wypróbuj inną bazę danych lub wypróbuj inny serwer danych.
 
   - Karta **Zaawansowane**
 
       **Ustawienia sieci:** Określ **poziom personifikacji** (poziom personifikacji, który może być używany przez serwer podczas personifikowania klienta; odpowiada bezpośrednio na poziomy personifikacji RPC) i **poziom ochrony** (poziom ochrony danych przesyłanych między klientem a serwerem; odpowiada bezpośrednio na poziomy ochrony RPC).
 
-      **Inne:** W obszarze **limit czasu połączenia**Określ liczbę sekund czasu bezczynności dozwoloną przed upływem limitu czasu. W obszarze **uprawnienia dostępu**Określ uprawnienia dostępu do połączenia danych.
+      **Inne:** W obszarze **limit czasu połączenia** Określ liczbę sekund czasu bezczynności dozwoloną przed upływem limitu czasu. W obszarze **uprawnienia dostępu** Określ uprawnienia dostępu do połączenia danych.
 
       Więcej informacji o zaawansowanych właściwościach inicjowania znajduje się w dokumentacji dostarczonej z konkretnym dostawcą OLE DB.
 
@@ -94,7 +94,7 @@ Ten Kreator konfiguruje OLE DB klasę konsumenta z powiązaniami danych, które 
 
       Na tej karcie jest wyświetlane podsumowanie właściwości inicjalizacji określonego źródła danych i połączenia. Można edytować te wartości.
 
-      Kliknij przycisk **OK**, aby zakończyć. Zostanie wyświetlone okno dialogowe **Wybieranie obiektu bazy danych** . W tym oknie dialogowym Wybierz tabelę, widok lub procedurę przechowywaną, która będzie używana przez klienta.
+      Kliknij przycisk **OK** , aby zakończyć. Zostanie wyświetlone okno dialogowe **Wybieranie obiektu bazy danych** . W tym oknie dialogowym Wybierz tabelę, widok lub procedurę przechowywaną, która będzie używana przez klienta.
 
 - **Klasa**
 
@@ -108,7 +108,7 @@ Ten Kreator konfiguruje OLE DB klasę konsumenta z powiązaniami danych, które 
 
    Ta opcja określa, czy Kreator utworzy klasy konsumenckie przy użyciu atrybutów lub deklaracji szablonu. Po wybraniu tej opcji Kreator używa atrybutów zamiast deklaracji szablonu (jest to opcja domyślna). Po oddzieleniu zaznaczenia tej opcji Kreator używa deklaracji szablonu zamiast atrybutów.
 
-  - W przypadku wybrania **typu** odbiorcy **tabeli**Kreator używa `db_source` `db_table` atrybutów i do tworzenia deklaracji klasy metody dostępu tabeli i tabeli, a `db_column` następnie używa do tworzenia mapy kolumn. Na przykład tworzy tę mapę:
+  - W przypadku wybrania **typu** odbiorcy **tabeli** Kreator używa `db_source` `db_table` atrybutów i do tworzenia deklaracji klasy metody dostępu tabeli i tabeli, a `db_column` następnie używa do tworzenia mapy kolumn. Na przykład tworzy tę mapę:
 
     ```cpp
     // Inject table class and table accessor class declarations
@@ -135,7 +135,7 @@ Ten Kreator konfiguruje OLE DB klasę konsumenta z powiązaniami danych, które 
         END_COLUMN_MAP()
     ```
 
-  - W przypadku wybrania **typu** odbiorcy **polecenia**Kreator używa `db_source` `db_command` atrybutów i i używa `db_column` do tworzenia mapy kolumn. Na przykład tworzy tę mapę:
+  - W przypadku wybrania **typu** odbiorcy **polecenia** Kreator używa `db_source` `db_command` atrybutów i i używa `db_column` do tworzenia mapy kolumn. Na przykład tworzy tę mapę:
 
     ```cpp
     [db_source("<initialization_string>"), db_command("SQL_command")]
@@ -187,7 +187,7 @@ Ten Kreator konfiguruje OLE DB klasę konsumenta z powiązaniami danych, które 
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klient ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

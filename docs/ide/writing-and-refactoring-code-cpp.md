@@ -4,12 +4,12 @@ description: Użyj edytora kodu C++ w programie Visual Studio do formatowania, n
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: df59509f37567a6fe1d1e0cc6d5b9f38b953009c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686335"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924396"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Edytuj i Refaktoryzacja kodu C++ w programie Visual Studio
 
@@ -23,9 +23,9 @@ IntelliSense to zaawansowane narzędzie do uzupełniania kodu, które sugeruje s
 
 Niektóre symbole są pomijane automatycznie, aby pomóc w zawężaniu wyników. Na przykład podczas uzyskiwania dostępu do elementów członkowskich obiektu klasy spoza klasy nie będzie można zobaczyć prywatnych członków domyślnie lub chronionych składowych (jeśli nie jesteś w kontekście klasy podrzędnej). Filtrowanie można dostosować za pomocą przycisków u dołu.
 
-Po wybraniu symbolu z listy rozwijanej można uzupełnić go za pomocą **klawisza Tab**, **wprowadzić**lub jednego z innych znaków zatwierdzenia (domyślnie: `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \` ). Aby dodać lub usunąć znaki z tej listy, wyszukaj ciąg "IntelliSense" w obszarze **Szybkie uruchamianie** (Ctrl + Q) i wybierz opcję **Edytor tekstu > C/C++ > Advanced** . Opcja **zatwierdzania list elementów członkowskich** umożliwia dostosowanie listy przy użyciu żądanych zmian.
+Po wybraniu symbolu z listy rozwijanej można uzupełnić go za pomocą **klawisza Tab** , **wprowadzić** lub jednego z innych znaków zatwierdzenia (domyślnie: `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \` ). Aby dodać lub usunąć znaki z tej listy, wyszukaj ciąg "IntelliSense" w obszarze **Szybkie uruchamianie** (Ctrl + Q) i wybierz opcję **Edytor tekstu > C/C++ > Advanced** . Opcja **zatwierdzania list elementów członkowskich** umożliwia dostosowanie listy przy użyciu żądanych zmian.
 
-Opcja **tryb filtrowania listy składowych** określa, jakie rodzaje sugestii autouzupełniania funkcji IntelliSense są widoczne. Domyślnie jest ustawiona wartość **rozmyte**. W przypadku wyszukiwania rozmytego, jeśli masz symbol o nazwie *MyAwesomeClass*, możesz wpisać "Mac" i znaleźć klasę w sugestiach autouzupełniania. Algorytm rozmyte ustawia minimalny próg, który musi spełniać symbole, aby były widoczne na liście. Filtrowanie **inteligentne** wyświetla wszystkie symbole zawierające podciągi, które pasują do wpisanych informacji. Filtrowanie **prefiksów** wyszukuje ciągi zaczynające się od wpisanego typu.
+Opcja **tryb filtrowania listy składowych** określa, jakie rodzaje sugestii autouzupełniania funkcji IntelliSense są widoczne. Domyślnie jest ustawiona wartość **rozmyte** . W przypadku wyszukiwania rozmytego, jeśli masz symbol o nazwie *MyAwesomeClass* , możesz wpisać "Mac" i znaleźć klasę w sugestiach autouzupełniania. Algorytm rozmyte ustawia minimalny próg, który musi spełniać symbole, aby były widoczne na liście. Filtrowanie **inteligentne** wyświetla wszystkie symbole zawierające podciągi, które pasują do wpisanych informacji. Filtrowanie **prefiksów** wyszukuje ciągi zaczynające się od wpisanego typu.
 
 Aby uzyskać więcej informacji na temat funkcji IntelliSense języka C++, zobacz [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense) i [Konfigurowanie projektu C++ dla IntelliSense](/visualstudio/ide/visual-cpp-intellisense-configuration).
 
@@ -37,13 +37,13 @@ Podczas pisania języka C++ rozszerzenia intellicode będzie pomocne podczas kor
 
 ![C&#43;&#43; rozszerzenia intellicode](../ide/media/intellicode-cpp.png "C++ rozszerzenia intellicode")
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-W programie Visual Studio 2019 rozszerzenia intellicode jest dostępny jako składnik opcjonalny w obciążeniu **programowania aplikacji klasycznych w języku C++** . Aby upewnić się, że rozszerzenia intellicode jest aktywny dla języka C++, przejdź do pozycji **Narzędzia**  >  **Opcje**  >  **rozszerzenia intellicode**  >  **Ogólne** i ustaw **model C++ Base** na **włączone**.
+W programie Visual Studio 2019 rozszerzenia intellicode jest dostępny jako składnik opcjonalny w obciążeniu **programowania aplikacji klasycznych w języku C++** . Aby upewnić się, że rozszerzenia intellicode jest aktywny dla języka C++, przejdź do pozycji **Narzędzia**  >  **Opcje**  >  **rozszerzenia intellicode**  >  **Ogólne** i ustaw **model C++ Base** na **włączone** .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 W programie Visual Studio 2017 rozszerzenia intellicode jest dostępny jako rozszerzenie w Visual Studio Marketplace.
 
@@ -51,9 +51,9 @@ W programie Visual Studio 2017 rozszerzenia intellicode jest dostępny jako rozs
 
 ## <a name="predictive-intellisense-experimental"></a>Funkcja IntelliSense predykcyjna (eksperymentalna)
 
-Funkcja **IntelliSense predykcyjna** jest eksperymentalną funkcją, która korzysta z rozpoznawania kontekstowego, aby ograniczyć liczbę wyników wyświetlanych na liście rozwijanej IntelliSense. Algorytm stosuje dopasowanie typu, aby wyświetlić tylko te wyniki, które pasują do oczekiwanego typu. W najprostszym przypadku, jeśli wpiszesz `int x =` i wywołajesz listę rozwijaną IntelliSense, zobaczysz tylko liczby całkowite lub funkcje zwracające liczby całkowite. Ta funkcja jest domyślnie wyłączona, ponieważ nadal trwa tworzenie. Najlepiej sprawdza się w przypadku symboli globalnych; funkcje składowe nie są jeszcze obsługiwane. Można ją włączyć, wpisując "predykcyjne" w **szybkim uruchomieniu** lub wybierając opcje **Narzędzia**  >  **Options**  >  **Edytor tekstu**  >  **C/C++**  >  **eksperymentalne**  >  **Włącz funkcję IntelliSense predykcyjną**.
+Funkcja **IntelliSense predykcyjna** jest eksperymentalną funkcją, która korzysta z rozpoznawania kontekstowego, aby ograniczyć liczbę wyników wyświetlanych na liście rozwijanej IntelliSense. Algorytm stosuje dopasowanie typu, aby wyświetlić tylko te wyniki, które pasują do oczekiwanego typu. W najprostszym przypadku, jeśli wpiszesz `int x =` i wywołajesz listę rozwijaną IntelliSense, zobaczysz tylko liczby całkowite lub funkcje zwracające liczby całkowite. Ta funkcja jest domyślnie wyłączona, ponieważ nadal trwa tworzenie. Najlepiej sprawdza się w przypadku symboli globalnych; funkcje składowe nie są jeszcze obsługiwane. Można ją włączyć, wpisując "predykcyjne" w **szybkim uruchomieniu** lub wybierając opcje **Narzędzia**  >  **Options**  >  **Edytor tekstu**  >  **C/C++**  >  **eksperymentalne**  >  **Włącz funkcję IntelliSense predykcyjną** .
 
-Aby zastąpić **predykcyjną funkcję IntelliSense** i wyświetlić dłuższą listę, naciśnij **klawisze Ctrl + J**. Jeśli funkcja **IntelliSense predykcyjna** jest włączona, wywołanie **klawiszy Ctrl + J** spowoduje usunięcie filtra predykcyjnego. Naciśnięcie **klawiszy Ctrl + J** ponownie usuwa filtr dostępności z listy elementów członkowskich, tam gdzie ma to zastosowanie. Przycisk ([+]) pod listą rozwijaną IntelliSense ma taki sam efekt jak **Ctrl + J**. Umieść kursor nad przyciskiem, aby zobaczyć informacje o tym, co jest wyświetlane.
+Aby zastąpić **predykcyjną funkcję IntelliSense** i wyświetlić dłuższą listę, naciśnij **klawisze Ctrl + J** . Jeśli funkcja **IntelliSense predykcyjna** jest włączona, wywołanie **klawiszy Ctrl + J** spowoduje usunięcie filtra predykcyjnego. Naciśnięcie **klawiszy Ctrl + J** ponownie usuwa filtr dostępności z listy elementów członkowskich, tam gdzie ma to zastosowanie. Przycisk ([+]) pod listą rozwijaną IntelliSense ma taki sam efekt jak **Ctrl + J** . Umieść kursor nad przyciskiem, aby zobaczyć informacje o tym, co jest wyświetlane.
 
 ![Język C&#43;&#43; funkcji IntelliSense predykcyjnej](../ide/media/predictive-intellisense-cpp.png "Funkcja IntelliSense predykcyjna")
 
@@ -74,7 +74,7 @@ Gdy karetka znajduje się wewnątrz definicji szablonu, pojawi się **pasek szab
 
 ![Szablon języka C&#43;&#43; IntelliSense przedstawia istniejące wystąpienia](../ide/media/template-intellisense-cpp-1.png "Funkcja IntelliSense szablonów Wyświetla istniejące wystąpienia")
 
-Kliknij **\<T>** ikonę, aby rozwinąć/zwinąć **pasek szablonu**. Kliknij ikonę ołówka lub dwukrotnie kliknij **pasek szablonu** , aby otworzyć okno **Edycja** .
+Kliknij **\<T>** ikonę, aby rozwinąć/zwinąć **pasek szablonu** . Kliknij ikonę ołówka lub dwukrotnie kliknij **pasek szablonu** , aby otworzyć okno **Edycja** .
 
 ![Funkcja IntelliSense szablonu&#43;&#43; języka C](../ide/media/template-intellisense-cpp-3.png "IntelliSense szablonu")
 
@@ -122,7 +122,7 @@ Wstawka jest wstępnie zdefiniowanym fragmentem kodu źródłowego. Kliknij praw
 
 ## <a name="add-class"></a>Dodaj klasę
 
-Dodaj nową klasę z menu **projekt** lub z menu kontekstowego w **Eksplorator rozwiązań**:
+Dodaj nową klasę z menu **projekt** lub z menu kontekstowego w **Eksplorator rozwiązań** :
 
 ![Dodaj nową klasę w języku C&#43;&#43;](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
 
@@ -134,7 +134,7 @@ Aby uzyskać więcej informacji, zobacz [Dodawanie funkcji za pomocą kreatorów
 
 ## <a name="refactoring"></a>Refaktoryzacja
 
-Refaktoryzacje są dostępne w menu kontekstowym szybkiej akcji lub przez kliknięcie [żarówki](/visualstudio/ide/perform-quick-actions-with-light-bulbs) w edytorze.  Niektóre znajdują się również w menu **edytuj > refaktoryzacji** .  Te funkcje obejmują:
+Refaktoryzacje są dostępne w menu kontekstowym szybkiej akcji lub przez kliknięcie [żarówki](/visualstudio/ide/perform-quick-actions-with-light-bulbs) w edytorze.  Niektóre znajdują się również w menu **edytuj > refaktoryzacji** .  Są one następujące:
 
 - [Zmień nazwę](refactoring/rename.md)
 - [Extract — Funkcja](refactoring/extract-function.md)
@@ -161,7 +161,7 @@ Pliki są łatwo udostępniane za pośrednictwem kontroli źródła, więc możn
 
 ![Format języka C&#43;&#43; Clang](../ide/media/clang-format-cpp.png "Format Clang")
 
-Program Visual Studio 2017 i jego nowsze wersje obsługują również [EditorConfig](https://editorconfig.org/), które działają w podobny sposób. ClangFormat jednak ma więcej opcji stylu niż EditorConfig, w tym reguł, które są specyficzne dla języka C++. Za pomocą **EditorConfig**można tworzyć pliki **EditorConfig** i umieszczać je w różnych folderach bazy kodu w celu określenia stylów kodu dla tych folderów i ich podfolderów. Plik **. editorconfig** zastępuje wszystkie inne pliki **. editorconfig** w folderach nadrzędnych i zastępuje wszelkie ustawienia formatowania skonfigurowane za pośrednictwem opcji **narzędzi**  >  **Options**. Możesz ustawić reguły dla kart zamiast spacji, wcięcia rozmiaru i inne. Aby uzyskać więcej informacji, zobacz [Tworzenie przenośnych ustawień edytora niestandardowego z EditorConfig](/visualstudio/ide/create-portable-custom-editor-options).
+Program Visual Studio 2017 i jego nowsze wersje obsługują również [EditorConfig](https://editorconfig.org/), które działają w podobny sposób. ClangFormat jednak ma więcej opcji stylu niż EditorConfig, w tym reguł, które są specyficzne dla języka C++. Za pomocą **EditorConfig** można tworzyć pliki **EditorConfig** i umieszczać je w różnych folderach bazy kodu w celu określenia stylów kodu dla tych folderów i ich podfolderów. Plik **. editorconfig** zastępuje wszystkie inne pliki **. editorconfig** w folderach nadrzędnych i zastępuje wszelkie ustawienia formatowania skonfigurowane za pośrednictwem opcji **narzędzi**  >  **Options** . Możesz ustawić reguły dla kart zamiast spacji, wcięcia rozmiaru i inne. Aby uzyskać więcej informacji, zobacz [Tworzenie przenośnych ustawień edytora niestandardowego z EditorConfig](/visualstudio/ide/create-portable-custom-editor-options).
 
 ## <a name="other-formatting-options"></a>Inne opcje formatowania
 
@@ -177,7 +177,7 @@ Inne opcje formatowania można znaleźć w obszarze **Edytuj**  >  **Zaawansowan
 
 ![Opcje edycji zaawansowanej języka C++](media/edit-advanced-cpp.png)
 
-Opcje włączania i konfigurowania funkcji edycji specyficznych dla języka C++ znajdują się w obszarze **Narzędzia**  >  **Opcje**  >  **Edytor tekstu**  >  **C/C++**. Po wybraniu opcji, która ma zostać ustawiona, możesz uzyskać więcej pomocy, naciskając klawisz **F1** , gdy okno dialogowe jest fokusem. Aby uzyskać ogólne opcje formatowania kodu, wpisz polecenie `Editor C++` **Szybkie uruchamianie**.
+Opcje włączania i konfigurowania funkcji edycji specyficznych dla języka C++ znajdują się w obszarze **Narzędzia**  >  **Opcje**  >  **Edytor tekstu**  >  **C/C++** . Po wybraniu opcji, która ma zostać ustawiona, możesz uzyskać więcej pomocy, naciskając klawisz **F1** , gdy okno dialogowe jest fokusem. Aby uzyskać ogólne opcje formatowania kodu, wpisz polecenie `Editor C++` **Szybkie uruchamianie** .
 
 ![Opcje > Visual Studio Tools](../ide/media/tools-options.png "Opcje edytora")
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 7a639f7ad7deb76cade47b0162012dcb70cb0d69
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: a660e67b2664417438ea9fa7acddbde4c20c307a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446756"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924143"
 ---
 # <a name="redistributing-visual-c-files"></a>Redystrybuowanie plików programu Visual C++
 
@@ -25,19 +25,19 @@ ms.locfileid: "86446756"
 
 Podczas wdrażania aplikacji należy również wdrożyć pliki, które są wymagane do jej obsługi. Jeśli którykolwiek z tych plików jest dostarczany przez firmę Microsoft, sprawdź, czy masz uprawnienia do ich rozpowszechniania. Znajdziesz link do postanowień licencyjnych programu Visual Studio w środowisku IDE. Użyj linku postanowienia licencyjne w oknie dialogowym informacje Microsoft Visual Studio. Lub Pobierz odpowiednie umowy licencyjne i licencje z [katalogu licencji](https://visualstudio.microsoft.com/license-terms/)programu Visual Studio.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Aby wyświetlić "listę Redist", o której mowa w sekcji "Kod dystrybucyjny" postanowień licencyjnych dotyczących oprogramowania w programie Visual Studio 2019, zobacz [pliki kodu dystrybucyjnego dla Microsoft Visual Studio 2019](/visualstudio/releases/2019/redistribution#-distributable-code-files-for-visual-studio-2019)
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Aby wyświetlić "listę Redist", o której mowa w punkcie "Kod dystrybucyjny" postanowień licencyjnych dotyczących oprogramowania w programie Visual Studio 2017, zobacz [pliki kodu dystrybucyjnego dla Microsoft Visual Studio 2017](/visualstudio/productinfo/2017-redistribution-vs#-distributable-code-files-for-visual-studio-2017).
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Aby wyświetlić "listę Redist", o której mowa w punkcie "Kod dystrybucyjny" postanowień licencyjnych dotyczących oprogramowania w programie Visual Studio 2015, zobacz [pliki kodu dystrybucyjnego dla Microsoft Visual Studio 2015](/visualstudio/productinfo/2015-redistribution-vs#-distributable-code-files-for-visual-studio-2015).
 
@@ -65,11 +65,11 @@ Moduły scalania redystrybucyjne muszą być zawarte w pakiecie Instalator Windo
 
 ## <a name="install-individual-redistributable-files"></a>Instalowanie pojedynczych plików redystrybucyjnych
 
-Możliwe jest również bezpośrednie zainstalowanie bibliotek DLL redystrybucyjnych w *folderze lokalnym aplikacji*. To jest folder, który zawiera plik wykonywalny aplikacji. Ze względów związanych z obsługą nie zalecamy korzystania z tej lokalizacji instalacji.
+Możliwe jest również bezpośrednie zainstalowanie bibliotek DLL redystrybucyjnych w *folderze lokalnym aplikacji* . To jest folder, który zawiera plik wykonywalny aplikacji. Ze względów związanych z obsługą nie zalecamy korzystania z tej lokalizacji instalacji.
 
 ## <a name="potential-run-time-errors"></a>Potencjalne błędy czasu wykonywania
 
-Jeśli system Windows nie może odnaleźć jednej z bibliotek DLL biblioteki redystrybucyjnej wymaganej przez aplikację, może zostać wyświetlony komunikat podobny do: "nie można uruchomić tej aplikacji, ponieważ nie znaleziono *biblioteki*dll. Ponowne zainstalowanie aplikacji może rozwiązać ten problem ".
+Jeśli system Windows nie może odnaleźć jednej z bibliotek DLL biblioteki redystrybucyjnej wymaganej przez aplikację, może zostać wyświetlony komunikat podobny do: "nie można uruchomić tej aplikacji, ponieważ nie znaleziono *biblioteki* dll. Ponowne zainstalowanie aplikacji może rozwiązać ten problem ".
 
 Aby rozwiązać ten rodzaj błędu, upewnij się, że Instalator aplikacji poprawnie kompiluje. Sprawdź, czy biblioteki redystrybucyjne zostały poprawnie wdrożone w systemie docelowym. Aby uzyskać więcej informacji, zobacz [Omówienie zależności aplikacji Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md).
 

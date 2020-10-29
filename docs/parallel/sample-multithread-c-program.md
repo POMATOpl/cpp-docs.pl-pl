@@ -2,16 +2,16 @@
 title: Przykładowy program więlowątkowy w języku C
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: eb1a07558dd9446e167c27ad08891f88c37fb4ec
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195816"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924772"
 ---
 # <a name="sample-multithread-c-program"></a>Przykładowy program więlowątkowy w języku C
 
-Odbicie. c jest przykładowym programem wielowątkowej, który tworzy nowy wątek każdorazowo po wpisaniu `a` litery `A` lub. Każdy wątek odbija literę innego koloru wokół ekranu. Można utworzyć maksymalnie 32 wątków. Normalne zakończenie programu ma miejsce, gdy `q` lub `Q` jest wpisane.
+Odbicie. c jest przykładowym programem wielowątkowej, który tworzy nowy wątek każdorazowo po `a` wpisaniu litery lub `A` . Każdy wątek odbija literę innego koloru wokół ekranu. Można utworzyć maksymalnie 32 wątków. Normalne zakończenie programu ma miejsce, gdy `q` lub `Q` jest wpisane.
 
 ## <a name="compile-and-link-a-multithread-program"></a>Kompiluj i łącz program wielowątkowej
 
@@ -19,11 +19,11 @@ Programy są domyślnie kompilowane jako wielowątkowe.
 
 ### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Aby skompilować i połączyć program wielowątkowej. c z poziomu środowiska deweloperskiego
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. W menu **plik** wybierz pozycję **Nowy** > **projekt**.
+1. W menu **plik** wybierz pozycję **Nowy** > **projekt** .
 
-1. W oknie dialogowym **Tworzenie nowego projektu** wybierz szablon **aplikacji konsoli** , który zawiera **C++** znaczniki **systemu Windows**i **konsoli** . Wybierz pozycję **dalej** , aby kontynuować.
+1. W oknie dialogowym **Tworzenie nowego projektu** wybierz szablon **aplikacji konsoli** , który zawiera Tagi **C++** , **Windows** i **konsole** . Wybierz pozycję **Dalej** , aby kontynuować.
 
 1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź nazwę projektu, na przykład "odbijanie". Wybierz pozycję **Utwórz** , aby kontynuować.
 
@@ -31,17 +31,17 @@ Programy są domyślnie kompilowane jako wielowątkowe.
 
 1. W oknie Edycja usuń istniejący kod źródłowy i zastąp go kodem przykładowym.
 
-1. W menu **kompilacja** wybierz polecenie **Kompiluj rozwiązanie**.
+1. W menu **kompilacja** wybierz polecenie **Kompiluj rozwiązanie** .
 
 1. Naciśnij klawisz **F5** , aby uruchomić program w debugerze.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-1. W menu **plik** wybierz pozycję **Nowy** > **projekt**.
+1. W menu **plik** wybierz pozycję **Nowy** > **projekt** .
 
-1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Wizualizacja C++**  w okienku po lewej stronie, a następnie w środkowym okienku wybierz pozycję **pusty projekt** .
+1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Visual C++** w lewym okienku, a następnie w środkowym okienku wybierz pozycję **pusty projekt** .
 
 1. W polu **Nazwa** wprowadź nazwę projektu, na przykład "odbijanie". Wybierz **przycisk OK** , aby utworzyć pusty projekt.
 

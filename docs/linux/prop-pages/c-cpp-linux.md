@@ -4,22 +4,22 @@ ms.date: 10/14/2020
 description: Opisuje opcje kompilacji systemu Linux na stronie właściwości programu Visual Studio C/C++
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: 0840327b30d94b4845adef7788fd73f4e797775f
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: b8cb1d8c6c585262e966c3015660adeaeab60307
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176233"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924554"
 ---
 # <a name="cc-properties-linux-c"></a>Właściwości C/C++ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="general"></a>Ogólne
 
@@ -28,7 +28,7 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 | Dodatkowe katalogi dołączane | Określa co najmniej jeden katalog do dodania do ścieżki dołączania. Użyj średników do rozdzielenia wielu katalogów. (-I \[ ścieżka]). |
 | Format informacji o debugowaniu | Określa typ informacji o debugowaniu generowanych przez kompilator. | **Brak** — nie tworzy informacji o debugowaniu, dzięki czemu kompilacja może być szybsza.<br/>**Minimalne informacje debugowania** — generowanie minimalnych informacji o debugowaniu.<br/>**Pełne informacje o debugowaniu (DWARF2)** — generują informacje debugowania DWARF2.<br/> |
 | Nazwa pliku obiektu | Określa nazwę do przesłaniania domyślnej nazwy pliku obiektu. Może to być nazwa pliku lub katalogu. (-o [nazwa]). |
-| Poziom ostrzeżeń | Wybiera, jak ścisłość kompilator ma mieć wpływ na błędy kodu.  Dodaj inne flagi bezpośrednio do **dodatkowych opcji**. (/w,/Weverything). | Wyłącz **wszystkie ostrzeżenia** — wyłącza wszystkie ostrzeżenia kompilatora.<br/>**Włącz wszystkie ostrzeżenia** — włącza wszystkie ostrzeżenia, w tym wyłączone domyślnie.<br/> |
+| Poziom ostrzeżeń | Wybiera, jak ścisłość kompilator ma mieć wpływ na błędy kodu.  Dodaj inne flagi bezpośrednio do **dodatkowych opcji** . (/w,/Weverything). | Wyłącz **wszystkie ostrzeżenia** — wyłącza wszystkie ostrzeżenia kompilatora.<br/>**Włącz wszystkie ostrzeżenia** — włącza wszystkie ostrzeżenia, w tym wyłączone domyślnie.<br/> |
 | Traktuj ostrzeżenia jako błędy | Traktuje wszystkie ostrzeżenia kompilatora jako błędy. W przypadku nowego projektu najlepiej jest używać/Werror we wszystkich kompilacjach. Usuń wszystkie ostrzeżenia, aby upewnić się, że wady kodu są trudne do znalezienia. |
 | Dodatkowe ostrzeżenia dotyczące języka C | Definiuje zestaw dodatkowych komunikatów ostrzegawczych. |
 | Dodatkowe ostrzeżenia dotyczące języka C++ | Definiuje zestaw dodatkowych komunikatów ostrzegawczych. |
@@ -77,8 +77,8 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 | Właściwość | Opis | Choices |
 |--|--|--|
 | Włącz informacje o typach Run-Time | Dodaje kod do sprawdzania typów obiektów C++ w czasie wykonywania (informacje o typie środowiska uruchomieniowego).     (frtti, FNO-RTTI) |
-| Standard języka C | Określa standard języka C. | **Domyślny**<br/>Standard języka **C89** -c89.<br/>Standard języka **C99** -C99.<br/>Standard języka **C11** -C11.<br/>Standard języka **C99 (DIALEKT GNU)** — C99 (dialekt GNU).<br/>Standard języka **C11 (DIALEKT GNU)** — C11 (dialekt GNU). |
-| Standard języka C++ | Określa standard języka C++. | **Domyślny**<br/>Standard języka **C++ 03** -c++ 03.<br/>Standard języka **C++ 11** — c++ 11.<br/>Standard języka **C++ 14** -c++ 14.<br/>**C++ 03 (DIALEKT GNU)** — Standard języka c++ 03 (dialekt GNU).<br/>**C++ 11 (DIALEKT GNU)** — Standard języka c++ 11 (dialekt GNU).<br/>**C++ 14 (DIALEKT GNU)** — Standard języka c++ 14 (dialekt GNU). |
+| Standard języka C | Określa standard języka C. | **Domyślne**<br/>Standard języka **C89** -c89.<br/>Standard języka **C99** -C99.<br/>Standard języka **C11** -C11.<br/>Standard języka **C99 (DIALEKT GNU)** — C99 (dialekt GNU).<br/>Standard języka **C11 (DIALEKT GNU)** — C11 (dialekt GNU). |
+| Standard języka C++ | Określa standard języka C++. | **Domyślne**<br/>Standard języka **C++ 03** -c++ 03.<br/>Standard języka **C++ 11** — c++ 11.<br/>Standard języka **C++ 14** -c++ 14.<br/>**C++ 03 (DIALEKT GNU)** — Standard języka c++ 03 (dialekt GNU).<br/>**C++ 11 (DIALEKT GNU)** — Standard języka c++ 11 (dialekt GNU).<br/>**C++ 14 (DIALEKT GNU)** — Standard języka c++ 14 (dialekt GNU). |
 
 ## <a name="advanced"></a>Zaawansowane
 

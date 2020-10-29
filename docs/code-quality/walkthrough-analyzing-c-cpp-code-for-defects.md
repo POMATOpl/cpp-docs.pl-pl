@@ -8,12 +8,12 @@ helpviewer_keywords:
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-ms.openlocfilehash: 65da18f5f6d1972276f1cb8e306e82314282e40a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb81ca376651c17c760ee776510303efaa13fd9a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227715"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924784"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>Przewodnik: Analizowanie kodu C/C++ dla wad
 
@@ -35,25 +35,25 @@ W tym instruktażu przedstawiono następujące instrukcje:
 
 ### <a name="to-run-code-defect-analysis-on-native-code"></a>Aby uruchomić analizę wad kodu w kodzie natywnym
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. Otwórz rozwiązanie CppDemo w programie Visual Studio.
 
-     Rozwiązanie CppDemo teraz wypełnia **Eksplorator rozwiązań**.
+     Rozwiązanie CppDemo teraz wypełnia **Eksplorator rozwiązań** .
 
-1. W menu **kompilacja** wybierz polecenie **Kompiluj ponownie rozwiązanie**.
+1. W menu **kompilacja** wybierz polecenie **Kompiluj ponownie rozwiązanie** .
 
      Rozwiązanie kompiluje się bez błędów lub ostrzeżeń.
 
-1. W **Eksplorator rozwiązań**wybierz projekt CodeDefects.
+1. W **Eksplorator rozwiązań** wybierz projekt CodeDefects.
 
-1. W menu **projekt** wybierz polecenie **Właściwości**.
+1. W menu **projekt** wybierz polecenie **Właściwości** .
 
      Zostanie wyświetlone okno dialogowe **strony właściwości CodeDefects** .
 
 1. Wybierz stronę właściwości **Analiza kodu** .
 
-1. Zmień właściwość **Włącz analizę kodu na kompilacja** na **tak**. Wybierz **przycisk OK** , aby zapisać zmiany.
+1. Zmień właściwość **Włącz analizę kodu na kompilacja** na **tak** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
 1. Skompiluj ponownie projekt CodeDefects.
 
@@ -61,22 +61,22 @@ W tym instruktażu przedstawiono następujące instrukcje:
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. Otwórz rozwiązanie CppDemo w programie Visual Studio.
 
-     Rozwiązanie CppDemo teraz wypełnia **Eksplorator rozwiązań**.
+     Rozwiązanie CppDemo teraz wypełnia **Eksplorator rozwiązań** .
 
-1. W menu **kompilacja** wybierz polecenie **Kompiluj ponownie rozwiązanie**.
+1. W menu **kompilacja** wybierz polecenie **Kompiluj ponownie rozwiązanie** .
 
      Rozwiązanie kompiluje się bez błędów lub ostrzeżeń.
 
      > [!NOTE]
      > W programie Visual Studio 2017 w aparacie IntelliSense może zostać wyświetlone ostrzeżenie fałszywe `E1097 unknown attribute "no_init_all"` . Możesz bezpiecznie zignorować to ostrzeżenie.
 
-1. W **Eksplorator rozwiązań**wybierz projekt CodeDefects.
+1. W **Eksplorator rozwiązań** wybierz projekt CodeDefects.
 
-1. W menu **projekt** wybierz polecenie **Właściwości**.
+1. W menu **projekt** wybierz polecenie **Właściwości** .
 
      Zostanie wyświetlone okno dialogowe **strony właściwości CodeDefects** .
 
@@ -92,9 +92,9 @@ W tym instruktażu przedstawiono następujące instrukcje:
 
 ### <a name="to-analyze-code-defect-warnings"></a>Aby analizować ostrzeżenia defektu kodu
 
-1. W menu **Widok** wybierz **Lista błędów**.
+1. W menu **Widok** wybierz **Lista błędów** .
 
-     Ten element menu może być niewidoczny. Jest to zależne od profilu dewelopera wybranego w programie Visual Studio. Być może trzeba będzie wskazać **inne okna** w menu **Widok** , a następnie wybrać **Lista błędów**.
+     Ten element menu może być niewidoczny. Jest to zależne od profilu dewelopera wybranego w programie Visual Studio. Być może trzeba będzie wskazać **inne okna** w menu **Widok** , a następnie wybrać **Lista błędów** .
 
 1. W oknie **Lista błędów** kliknij dwukrotnie następujące ostrzeżenie:
 
@@ -108,7 +108,7 @@ W tym instruktażu przedstawiono następujące instrukcje:
    if (SUCCEEDED(ReadUserAccount()))
    ```
 
-1. W **Lista błędów**kliknij dwukrotnie następujące ostrzeżenie:
+1. W **Lista błędów** kliknij dwukrotnie następujące ostrzeżenie:
 
      C6282: nieprawidłowy operator: przypisanie stałej w kontekście Boolean. Rozważ użycie zamiast tego "= =".
 
@@ -128,25 +128,25 @@ W tym instruktażu przedstawiono następujące instrukcje:
 
 ### <a name="to-enable-the-source-code-annotation-warnings-in-annotationc"></a>Aby włączyć ostrzeżenia adnotacji kodu źródłowego w adnotacji. c
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. W Eksplorator rozwiązań wybierz projekt adnotacji.
 
-1. W menu **projekt** wybierz polecenie **Właściwości**.
+1. W menu **projekt** wybierz polecenie **Właściwości** .
 
      Zostanie wyświetlone okno dialogowe **strony właściwości adnotacji** .
 
 1. Wybierz stronę właściwości **Analiza kodu** .
 
-1. Zmień właściwość **Włącz analizę kodu na kompilacja** na **tak**. Wybierz **przycisk OK** , aby zapisać zmiany.
+1. Zmień właściwość **Włącz analizę kodu na kompilacja** na **tak** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. W Eksplorator rozwiązań wybierz projekt adnotacji.
 
-1. W menu **projekt** wybierz polecenie **Właściwości**.
+1. W menu **projekt** wybierz polecenie **Właściwości** .
 
      Zostanie wyświetlone okno dialogowe **strony właściwości adnotacji** .
 
@@ -160,9 +160,9 @@ W tym instruktażu przedstawiono następujące instrukcje:
 
 1. Kompiluj ponownie projekt adnotacji.
 
-1. W menu **kompilacja** wybierz polecenie **Uruchom analizę kodu w adnotacjach**.
+1. W menu **kompilacja** wybierz polecenie **Uruchom analizę kodu w adnotacjach** .
 
-1. W **Lista błędów**kliknij dwukrotnie następujące ostrzeżenie:
+1. W **Lista błędów** kliknij dwukrotnie następujące ostrzeżenie:
 
      C6011: wyłuskanie wskaźnika o wartości NULL "newNode".
 
@@ -196,9 +196,9 @@ W tym instruktażu przedstawiono następujące instrukcje:
    _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
-1. W menu **kompilacja** wybierz polecenie **Uruchom analizę kodu w rozwiązaniu**.
+1. W menu **kompilacja** wybierz polecenie **Uruchom analizę kodu w rozwiązaniu** .
 
-1. W **Lista błędów**kliknij dwukrotnie następujące ostrzeżenie:
+1. W **Lista błędów** kliknij dwukrotnie następujące ostrzeżenie:
 
      C6011: odwołuje się do "Node" wskaźnika o wartości NULL.
 
@@ -213,7 +213,7 @@ W tym instruktażu przedstawiono następujące instrukcje:
    }
    ```
 
-1. W menu **kompilacja** wybierz polecenie **Uruchom analizę kodu w rozwiązaniu**.
+1. W menu **kompilacja** wybierz polecenie **Uruchom analizę kodu w rozwiązaniu** .
 
      Projekt teraz kompiluje się bez żadnych ostrzeżeń lub błędów.
 

@@ -4,22 +4,22 @@ ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 3d6694e44d3da4023998a0335cd06c85b353b2b1
-ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
+ms.openlocfilehash: 3b1e45f984cd40d6ea42ead25b045fc8688ad0a7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144168"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924035"
 ---
 # <a name="advanced-property-page"></a>Zaawansowana Strona właściwości
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Strona właściwości zaawansowane jest dostępna w programie Visual Studio 2019 i nowszych. Aby zapoznać się z dokumentacją tej wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Strona właściwości zaawansowane jest dostępna w programie Visual Studio 2019 i nowszych.
 
@@ -31,7 +31,7 @@ Strona właściwości zaawansowane jest dostępna w programie Visual Studio 2019
 
 - **Rozszerzenia do usunięcia podczas czyszczenia**
 
-   Opcja **Oczyść** (menu**kompilacja** ) usuwa pliki z katalogu pośredniego, w którym jest skompilowana Konfiguracja projektu. Pliki z rozszerzeniami określonymi w tej właściwości zostaną usunięte po uruchomieniu **czyszczenia** lub po odbudowie. System kompilacji usuwa wszystkie pliki, które mają te rozszerzenia w katalogu pośrednim. Usuwa także wszystkie znane dane wyjściowe kompilacji, niezależnie od tego, gdzie się znajdują. (Obejmuje to pośrednie dane wyjściowe, takie jak *`.obj`* pliki). W tej właściwości można określić symbole wieloznaczne.
+   Opcja **Oczyść** (menu **kompilacja** ) usuwa pliki z katalogu pośredniego, w którym jest skompilowana Konfiguracja projektu. Pliki z rozszerzeniami określonymi w tej właściwości zostaną usunięte po uruchomieniu **czyszczenia** lub po odbudowie. System kompilacji usuwa wszystkie pliki, które mają te rozszerzenia w katalogu pośrednim. Usuwa także wszystkie znane dane wyjściowe kompilacji, niezależnie od tego, gdzie się znajdują. (Obejmuje to pośrednie dane wyjściowe, takie jak *`.obj`* pliki). W tej właściwości można określić symbole wieloznaczne.
 
    Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A> .
 

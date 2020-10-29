@@ -4,16 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c2ef6c539d5845beee044a963e0056d3287ba679
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845357"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924808"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Narzędzia i funkcje języka C++ w wersjach programu Visual Studio
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 W programie Visual Studio 2019 dostępne są następujące funkcje języka C++. O ile nie określono inaczej, wszystkie funkcje są dostępne we wszystkich wersjach: Visual Studio Community, Visual Studio Professional i Visual Studio Enterprise. Niektóre funkcje wymagają określonych obciążeń lub składników opcjonalnych, które można zainstalować za pomocą Instalator programu Visual Studio.
 
@@ -301,7 +301,7 @@ W systemie Linux:
 - Sztuczne firmy Microsoft (izolacja testu jednostkowego) (tylko dla przedsiębiorstw)
 - Pokrycie kodu (tylko w przedsiębiorstwie)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
@@ -309,7 +309,7 @@ W systemie Linux:
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 W poniższych tabelach przedstawiono funkcje Visual C++, które są dostępne w programie Visual Studio 2017. X w komórce wskazuje, że funkcja jest dostępna; pusta komórka wskazuje, że funkcja jest niedostępna. Uwagi w nawiasach wskazują, że funkcja jest dostępna, ale jest ograniczona.
 
@@ -467,7 +467,7 @@ W poniższych tabelach przedstawiono funkcje Visual C++, które są dostępne w 
 |Mapa kodu i wykresy zależności|||tylko do odczytu|X|
 |Debugowanie mapy kodu||||X|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instalowanie programu Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Co nowego w programie Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>

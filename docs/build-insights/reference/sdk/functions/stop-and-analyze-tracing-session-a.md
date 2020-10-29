@@ -1,6 +1,6 @@
 ---
 title: StopAndAnalyzeTracingSessionA
-description: Odwołanie do funkcji SDK StopAndAnalyzeTracingSessiona w języku C++ Build Insights.
+description: Dokumentacja funkcji StopAndAnalyzeTracingSessionA zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 51a979b68cd87c5e7fd07b28acec80c2d7b81cf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fa5adfca2c5e4d3d4bd17abae4e78c2ac6464773
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323733"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922727"
 ---
 # <a name="stopandanalyzetracingsessiona"></a>StopAndAnalyzeTracingSessionA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Funkcja `StopAndAnalyzeTracingSessionA` zatrzymuje trwającą sesję śledzenia i zapisuje wynikowy ślad w pliku tymczasowym. Sesja analizy jest następnie natychmiast uruchamiana przy użyciu pliku tymczasowego jako danych wejściowych. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
+`StopAndAnalyzeTracingSessionA`Funkcja przerywa trwającą sesję śledzenia i zapisuje wynikowy ślad w pliku tymczasowym. Sesja analizy jest następnie natychmiast uruchamiana przy użyciu pliku tymczasowego jako dane wejściowe. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,17 +38,17 @@ enum RESULT_CODE StopAndAnalyzeTracingSessionA(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa_sesji*\
-Nazwa sesji śledzenia, aby zatrzymać. Użyj tej samej nazwy sesji, co nazwa przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
+*sessionName*\
+Nazwa sesji śledzenia, która ma zostać zatrzymana. Użyj tej samej nazwy sesji, która została przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
 
 *Statystyki*\
-Wskaźnik do [obiektu TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopAndAnalyzeTracingSessionA`zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
+Wskaźnik do obiektu [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopAndAnalyzeTracingSessionA` zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
 
-*analysisDeptor*\
-Wskaźnik do [obiektu ANALYSIS_DESCRIPTOR.](../other-types/analysis-descriptor-struct.md) Ten obiekt służy do konfigurowania sesji analizy, która jest uruchamiana przez `StopAndAnalyzeTracingSessionA`program .
+*analysisDescriptor*\
+Wskaźnik do obiektu [ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) . Ten obiekt służy do konfigurowania sesji analizy, która jest uruchamiana przez program `StopAndAnalyzeTracingSessionA` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod wyniku z [RESULT_CODE](../other-types/result-code-enum.md) wyliczenia.
+Kod wyniku z wyliczenia [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

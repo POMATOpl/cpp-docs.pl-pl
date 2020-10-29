@@ -2,12 +2,12 @@
 title: 'Wskazówki: mnożenie macierzy'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 6387e68304c7b1dbf0531729b7b73b519f40d159
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d45e731cefe51a815424aa941362dce8ceaa4500
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215871"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924355"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Wskazówki: mnożenie macierzy
 
@@ -27,41 +27,41 @@ Przed rozpoczęciem:
 
 Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od zainstalowanej wersji programu Visual Studio. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj kontrolki selektora **wersji** . Znajduje się w górnej części spisu treści na tej stronie.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-the-project-in-visual-studio-2019"></a>Aby utworzyć projekt w programie Visual Studio 2019
 
 1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego Ustaw **Język** na **C++**, ustaw **platformę** na **Windows**i ustaw **Typ projektu** na **Console**.
+1. W górnej części okna dialogowego Ustaw  **Język** na **C++** , ustaw **platformę** na **Windows** i ustaw **Typ projektu** na **Console** .
 
-1. Z listy filtrowane typy projektów wybierz pozycję **pusty projekt** , a następnie wybierz przycisk **dalej**. Na następnej stronie wprowadź *MatrixMultiply* w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
+1. Z listy filtrowane typy projektów wybierz pozycję **pusty projekt** , a następnie wybierz przycisk **dalej** . Na następnej stronie wprowadź *MatrixMultiply* w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
 
    ![Nowa aplikacja konsolowa](../../build/media/mathclient-project-name-2019.png "Nowa aplikacja konsolowa")
 
 1. Wybierz przycisk **Utwórz** , aby utworzyć projekt klienta.
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla **plików źródłowych**, a następnie wybierz polecenie **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **plików źródłowych** , a następnie wybierz polecenie **Dodaj** > **nowy element** .
 
-1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik C++ (. cpp)**, wprowadź *MatrixMultiply. cpp* w polu **Nazwa** , a następnie wybierz przycisk **Dodaj** .
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik C++ (. cpp)** , wprowadź *MatrixMultiply. cpp* w polu **Nazwa** , a następnie wybierz przycisk **Dodaj** .
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Aby utworzyć projekt w programie Visual Studio 2017 lub 2015
 
-1. Na pasku menu w programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
+1. Na pasku menu w programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt** .
 
-1. W obszarze **zainstalowane** w okienku szablony wybierz pozycję **Visual C++**.
+1. W obszarze **zainstalowane** w okienku szablony wybierz pozycję **Visual C++** .
 
-1. Wybierz pozycję **pusty projekt**, wprowadź *MatrixMultiply* w polu **Nazwa** , a następnie wybierz przycisk **OK** .
+1. Wybierz pozycję **pusty projekt** , wprowadź *MatrixMultiply* w polu **Nazwa** , a następnie wybierz przycisk **OK** .
 
 1. Wybierz przycisk **dalej** .
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla **plików źródłowych**, a następnie wybierz polecenie **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **plików źródłowych** , a następnie wybierz polecenie **Dodaj** > **nowy element** .
 
-1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik C++ (. cpp)**, wprowadź *MatrixMultiply. cpp* w polu **Nazwa** , a następnie wybierz przycisk **Dodaj** .
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik C++ (. cpp)** , wprowadź *MatrixMultiply. cpp* w polu **Nazwa** , a następnie wybierz przycisk **Dodaj** .
 
 ::: moniker-end
 
@@ -109,7 +109,7 @@ A to macierz 3-na-2, a B to macierz 2-na-3. Iloczyn mnożenia A przez B to nast�
 
    Algorytm jest prostą implementacją definicji mnożenia macierzy. Nie używa żadnych algorytmów równoległych lub wielowątkowych, aby skrócić czas obliczeń.
 
-1. Na pasku menu wybierz kolejno opcje **plik**  >  **Zapisz wszystko**.
+1. Na pasku menu wybierz kolejno opcje **plik**  >  **Zapisz wszystko** .
 
 1. Wybierz skrót klawiaturowy **F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
 
@@ -171,7 +171,7 @@ A to macierz 3-na-2, a B to macierz 2-na-3. Iloczyn mnożenia A przez B to nast�
    }
    ```
 
-1. Naciśnij **Ctrl** + skrót klawiaturowy CTRL**F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
+1. Naciśnij **Ctrl** + skrót klawiaturowy CTRL **F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
 
 1. Naciśnij klawisz **spacji** , aby zakończyć działanie aplikacji.
 
@@ -316,7 +316,7 @@ Aby zaimplementować ten algorytm, kod:
    }
    ```
 
-1. Naciśnij **Ctrl** + skrót klawiaturowy CTRL**F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
+1. Naciśnij **Ctrl** + skrót klawiaturowy CTRL **F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
 
 1. Naciśnij klawisz **spacji** , aby zakończyć działanie aplikacji.
 
