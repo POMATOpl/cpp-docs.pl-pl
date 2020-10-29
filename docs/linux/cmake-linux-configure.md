@@ -2,20 +2,20 @@
 title: Konfigurowanie projektu systemu Linux CMake w programie Visual Studio
 description: Jak skonfigurować ustawienia CMake systemu Linux w programie Visual Studio
 ms.date: 08/08/2020
-ms.openlocfilehash: 32c851791402b59c941ae088fa637d3d9953dd1b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c4c2d4682b6d18f9175a92a810b3f86d8132fc0c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504730"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921922"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Konfigurowanie projektu systemu Linux CMake w programie Visual Studio
 
-::: moniker range="vs-2015"
-Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych. Aby wyświetlić dokumentację dla tych wersji, Ustaw listę rozwijaną **wersja** znajdującą się powyżej spisu treści w **programie Visual Studio 2017** lub **Visual Studio 2019**.
+::: moniker range="msvc-140"
+Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych. Aby wyświetlić dokumentację dla tych wersji, Ustaw listę rozwijaną **wersja** znajdującą się powyżej spisu treści w **programie Visual Studio 2017** lub **Visual Studio 2019** .
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 W tym temacie opisano sposób dodawania konfiguracji systemu Linux do projektu CMake, który jest przeznaczony dla zdalnego systemu Linux lub podsystemu Windows dla systemu Linux (WSL). Kontynuuje serię, która rozpoczęła się przy [tworzeniu projektu systemu Linux CMAKE w programie Visual Studio](cmake-linux-project.md). Jeśli używasz programu MSBuild, zobacz [Konfigurowanie projektu systemu Linux MSBuild w programie Visual Studio](configure-a-linux-project.md)
 
 ## <a name="add-a-linux-configuration"></a>Dodawanie konfiguracji systemu Linux
@@ -23,10 +23,10 @@ W tym temacie opisano sposób dodawania konfiguracji systemu Linux do projektu C
 Konfiguracja może służyć jako ukierunkowana na różne platformy (Windows, WSL, system zdalny) z tym samym kodem źródłowym. Konfiguracja służy również do ustawiania kompilatorów, przekazywania zmiennych środowiskowych i dostosowywania sposobu wywoływania CMake. *CMakeSettings.jsw* pliku określa niektóre lub wszystkie właściwości wymienione w temacie [Dostosowywanie ustawień CMAKE](../build/customize-cmake-settings.md)oraz dodatkowe właściwości kontrolujące ustawienia kompilacji na zdalnym komputerze z systemem Linux.
 ::: moniker-end
 
-::: moniker range="vs-2017"
-Aby zmienić domyślne ustawienia CMAKE w programie Visual Studio 2017, wybierz pozycję **CMAKE**  >  **Zmień ustawienia CMAKE**  >  **CMakeLists.txt** z menu głównego. Lub kliknij prawym przyciskiem myszy *CMakeLists.txt* w **Eksplorator rozwiązań** i wybierz **Zmień ustawienia CMAKE**. Program Visual Studio tworzy następnie nowy *CMakeSettings.jsw* pliku w folderze głównym projektu. Aby wprowadzić zmiany, Otwórz plik i zmodyfikuj go bezpośrednio. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień CMAKE](../build/customize-cmake-settings.md).
+::: moniker range="msvc-150"
+Aby zmienić domyślne ustawienia CMAKE w programie Visual Studio 2017, wybierz pozycję **CMAKE**  >  **Zmień ustawienia CMAKE**  >  **CMakeLists.txt** z menu głównego. Lub kliknij prawym przyciskiem myszy *CMakeLists.txt* w **Eksplorator rozwiązań** i wybierz **Zmień ustawienia CMAKE** . Program Visual Studio tworzy następnie nowy *CMakeSettings.jsw* pliku w folderze głównym projektu. Aby wprowadzić zmiany, Otwórz plik i zmodyfikuj go bezpośrednio. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień CMAKE](../build/customize-cmake-settings.md).
 
-Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2017 (i Visual Studio 2019 w wersji 16,0) wygląda następująco:
+Domyślna konfiguracja Linux-Debug w programie Visual Studio 2017 (i Visual Studio 2019 w wersji 16,0) wygląda następująco:
 
 ```json
 {
@@ -56,14 +56,14 @@ Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
-Aby zmienić domyślne ustawienia CMake w programie Visual Studio 2019, na głównym pasku narzędzi Otwórz listę rozwijaną **Konfiguracja** i wybierz pozycję **Zarządzaj konfiguracjami**.
+::: moniker range="msvc-160"
+Aby zmienić domyślne ustawienia CMake w programie Visual Studio 2019, na głównym pasku narzędzi Otwórz listę rozwijaną **Konfiguracja** i wybierz pozycję **Zarządzaj konfiguracjami** .
 
 ![CMake Zarządzanie konfiguracjami](../build/media/vs2019-cmake-manage-configurations.png "Lista rozwijana konfiguracji CMake")
 
-To polecenie otwiera **Edytor ustawień CMAKE**, którego można użyć do edytowania *CMakeSettings.js* pliku w folderze głównym projektu. Możesz również otworzyć plik za pomocą edytora JSON, klikając przycisk **Edytuj JSON** w edytorze. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień CMAKE](../build/customize-cmake-settings.md).
+To polecenie otwiera **Edytor ustawień CMAKE** , którego można użyć do edytowania *CMakeSettings.js* pliku w folderze głównym projektu. Możesz również otworzyć plik za pomocą edytora JSON, klikając przycisk **Edytuj JSON** w edytorze. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień CMAKE](../build/customize-cmake-settings.md).
 
-Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2019 w wersji 16,1 i nowszej wygląda następująco:
+Domyślna konfiguracja Linux-Debug w programie Visual Studio 2019 w wersji 16,1 i nowszej wygląda następująco:
 
 ```json
 {
@@ -94,7 +94,7 @@ Domyślna konfiguracja systemu Linux — debugowanie w programie Visual Studio 2
 W programie Visual Studio 2019 w wersji 16,6 lub nowszej Ninja jest domyślnym generatorem dla konfiguracji przeznaczonych dla zdalnego systemu lub WSL. Aby uzyskać więcej informacji, zobacz ten wpis na [blogu zespołu języka C++](https://devblogs.microsoft.com/cppblog/linux-development-with-visual-studio-first-class-support-for-gdbserver-improved-build-times-with-ninja-and-updates-to-the-connection-manager/).
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 Aby uzyskać więcej informacji na temat tych ustawień, zobacz [CMakeSettings.json Reference](../build/cmakesettings-reference.md).
 
 Po wykonaniu kompilacji:
@@ -104,7 +104,7 @@ Po wykonaniu kompilacji:
 
 ## <a name="choose-a-linux-target"></a>Wybierz element docelowy systemu Linux
 
-Po otwarciu folderu projektu CMake program Visual Studio analizuje plik *CMakeLists.txt* i określa element docelowy systemu Windows dla **debugowania x86**. Aby włączyć zdalny system Linux, należy zmienić ustawienia projektu w oparciu o kompilator systemu Linux. Na przykład jeśli korzystasz z programu do tworzenia i kompilowania z informacjami o debugowaniu w systemie Linux, wybierzesz pozycję:  **Linux-pozarząd-Debug** lub **Linux-zatoce-Release**.
+Po otwarciu folderu projektu CMake program Visual Studio analizuje plik *CMakeLists.txt* i określa element docelowy systemu Windows dla **debugowania x86** . Aby włączyć zdalny system Linux, należy zmienić ustawienia projektu w oparciu o kompilator systemu Linux. Na przykład jeśli korzystasz z programu do tworzenia i kompilowania z informacjami o debugowaniu w systemie Linux, wybierzesz pozycję:  **Linux-pozarząd-Debug** lub **Linux-zatoce-Release** .
 
 Jeśli określisz docelowy zdalny system Linux, źródło zostanie skopiowane do systemu zdalnego.
 
@@ -113,7 +113,7 @@ Po wybraniu elementu docelowego CMake jest uruchamiany automatycznie w systemie 
 ![Generowanie pamięci podręcznej CMake w systemie Linux](media/cmake-linux-1.png "Generowanie pamięci podręcznej CMake w systemie Linux")
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="target-windows-subsystem-for-linux"></a>Docelowy podsystem Windows dla systemu Linux
 
@@ -131,7 +131,7 @@ Naciśnij pozycję **Dodaj konfigurację** (zielony przycisk "+"), a następnie 
 
 **Visual Studio 2019 w wersji 16,1** Gdy docelowa jest WSL, program Visual Studio nie musi kopiować plików źródłowych i zachować dwóch synchronicznych kopii drzewa kompilacji, ponieważ kompilator w systemie Linux ma bezpośredni dostęp do plików źródłowych w zainstalowanym systemie plików Windows.
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ### <a name="intellisense"></a>IntelliSense
 
@@ -157,7 +157,7 @@ Użyj następujących ustawień, aby uruchomić polecenia w systemie Linux przed
 
 [Konfigurowanie sesji debugowania narzędzia CMake](../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z właściwościami projektu](../build/working-with-project-properties.md)<br/>
 [Dostosuj ustawienia CMake](../build/customize-cmake-settings.md)<br/>

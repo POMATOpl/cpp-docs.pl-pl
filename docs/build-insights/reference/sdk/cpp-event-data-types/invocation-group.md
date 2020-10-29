@@ -1,6 +1,6 @@
 ---
-title: Klasa InvocationGroup
-description: Odwołanie do klasy SDK InvocationGroup w programie C++ Build Insights.
+title: Klasa wywołania
+description: Odwołanie do klasy wywołania zestawu SDK usługi kompilacja dla języka C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ff5a73d5304a21c314c0fc5ce442e0ffc23b28fd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a8d4786a228ab25551ee36ce22637d44dc07307
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324688"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920635"
 ---
-# <a name="invocationgroup-class"></a>Klasa InvocationGroup
+# <a name="invocationgroup-class"></a>Klasa wywołania
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `InvocationGroup` jest używana z [funkcjami MatchEventStack](../functions/match-event-stack.md) i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować grupy zawierające kombinację [zdarzeń kompilatora](../event-table.md#compiler) i [konsolidatora.](../event-table.md#linker)
+`InvocationGroup`Klasa jest używana z funkcjami [MatchEventStack](../functions/match-event-stack.md) i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go do dopasowania grup zawierających mieszanie zdarzeń [kompilatora](../event-table.md#compiler) i [konsolidatora](../event-table.md#linker) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z odziedziczonymi członkami z klasy podstawowej [\<invocation\> grupy zdarzeń](event-group.md) `InvocationGroup` klasa zawiera następujące elementy członkowskie:
+Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [eventObject \<Invocation\> ](event-group.md) `InvocationGroup` Klasa zawiera następujące elementy członkowskie:
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-[Grupa invocation](#invocation-group)
+[InvocationGroup](#invocation-group)
 
-## <a name="invocationgroup"></a><a name="invocation-group"></a>Grupa invocation
+## <a name="invocationgroup"></a><a name="invocation-group"></a> Wywołanie
 
 ```cpp
 InvocationGroup(std::deque<Invocation>&& group);
@@ -53,7 +53,7 @@ InvocationGroup(std::deque<Invocation>&& group);
 
 ### <a name="parameters"></a>Parametry
 
-*Grupa*\
-Grupa zawierająca kombinację [zdarzeń kompilatora](../event-table.md#compiler) i [konsolidatora.](../event-table.md#linker)
+*Group*\
+Grupa zawierająca kombinację zdarzeń [kompilatora](../event-table.md#compiler) i [konsolidatora](../event-table.md#linker) .
 
 ::: moniker-end

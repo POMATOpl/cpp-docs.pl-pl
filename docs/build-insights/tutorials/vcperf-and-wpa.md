@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d5c613a7cd8ee2d7dc158050dae9529bba2a8f71
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507771"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919569"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Samouczek: vcperf i Analizator wydajności systemu Windows
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Narzędzia do tworzenia szczegółowych danych w języku C++ są dostępne w programie Visual Studio 2019. Aby zapoznać się z dokumentacją tej wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 W tym samouczku dowiesz się, jak za pomocą *vcperf.exe* zbierać ślady kompilacji w języku C++. Dowiesz się również, jak wyświetlić ten ślad w analizatorze wydajności systemu Windows.
 
@@ -39,7 +39,7 @@ Uwaga: Aby zainstalować Analizator wydajności systemu Windows, wymagany jest s
 
 1. Pobierz i zainstaluj najnowszą wersję zestawu Windows ADK.
 
-1. Po wyświetleniu monitu o funkcje, które chcesz zainstalować, wybierz **zestaw narzędzi wydajności systemu Windows**. Jeśli chcesz, możesz wybrać inne funkcje, ale nie są one wymagane do zainstalowania protokołu WPA.
+1. Po wyświetleniu monitu o funkcje, które chcesz zainstalować, wybierz **zestaw narzędzi wydajności systemu Windows** . Jeśli chcesz, możesz wybrać inne funkcje, ale nie są one wymagane do zainstalowania protokołu WPA.
 
    ![Ekran wyboru funkcji Instalatora analizatora wydajności systemu Windows](media/wpa-installation.png)
 
@@ -66,8 +66,8 @@ Wyświetlanie śladów w usłudze C++ build Insights w protokole WPA wymaga spec
 
 Aby wyświetlić dane kompilacji w języku C++, należy najpierw zebrać je do pliku śledzenia, wykonując następujące czynności:
 
-1. Otwórz **architekturę x64** lub **wiersz polecenia narzędzi x86 Native Tools dla programu vs 2019** w trybie administratora. (Kliknij prawym przyciskiem myszy element menu Start i wybierz polecenie **więcej**  >  **Uruchom jako administrator**.)
-    1. Wybierz **x64** , jeśli masz 64-bitową wersję systemu Windows. W przeciwnym razie wybierz pozycję **x86**.
+1. Otwórz **architekturę x64** lub **wiersz polecenia narzędzi x86 Native Tools dla programu vs 2019** w trybie administratora. (Kliknij prawym przyciskiem myszy element menu Start i wybierz polecenie **więcej**  >  **Uruchom jako administrator** .)
+    1. Wybierz **x64** , jeśli masz 64-bitową wersję systemu Windows. W przeciwnym razie wybierz pozycję **x86** .
 
 1. W oknie wiersza polecenia wprowadź następujące polecenie:
 
@@ -89,19 +89,19 @@ Poniżej przedstawiono typowe sekwencje poleceń *vcperf.exe* w oknie wiersza po
 
 ### <a name="important-notes-about-vcperfexe"></a>Ważne uwagi dotyczące vcperf.exe
 
-- Do uruchamiania lub zatrzymywania śledzenia *vcperf.exe* są wymagane uprawnienia administratora. Użyj okna wiersza polecenia dla deweloperów, które jest otwierane za pomocą **Uruchom jako administrator**.
+- Do uruchamiania lub zatrzymywania śledzenia *vcperf.exe* są wymagane uprawnienia administratora. Użyj okna wiersza polecenia dla deweloperów, które jest otwierane za pomocą **Uruchom jako administrator** .
 
 - Na komputerze może działać tylko jedna sesja śledzenia naraz.
 
 - Pamiętaj, aby zapamiętać nazwę sesji, która została użyta do rozpoczęcia śledzenia. Może być problematycznych, aby zatrzymać działającą sesję bez znajomości jej nazwy.
 
-- Podobnie jak *cl.exe* i *link.exe*, *vcperf.exe* narzędzi wiersza polecenia jest zawarta w instalacji MSVC. Do uzyskania tego składnika nie są wymagane żadne dodatkowe kroki.
+- Podobnie jak *cl.exe* i *link.exe* , *vcperf.exe* narzędzi wiersza polecenia jest zawarta w instalacji MSVC. Do uzyskania tego składnika nie są wymagane żadne dodatkowe kroki.
 
 - *vcperf.exe* zbiera informacje o wszystkich narzędziach MSVC uruchomionych w systemie. W związku z tym nie trzeba uruchamiać kompilacji z tego samego wiersza polecenia, który został użyty do zebrania śladu. Projekt można skompilować z innego wiersza polecenia lub nawet w programie Visual Studio.
 
 ### <a name="vcperfexe-is-open-source"></a>vcperf.exe jest otwartym źródłem
 
-Jeśli chcesz skompilować i uruchomić własną wersję *vcperf.exe*, możesz ją sklonować z [repozytorium GitHub vcperf](https://github.com/microsoft/vcperf).
+Jeśli chcesz skompilować i uruchomić własną wersję *vcperf.exe* , możesz ją sklonować z [repozytorium GitHub vcperf](https://github.com/microsoft/vcperf).
 
 ## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>Krok 3. Wyświetlanie śladu w analizatorze wydajności systemu Windows
 

@@ -1,6 +1,6 @@
 ---
-title: Klasa EnvironmentVariable
-description: Odwołanie do klasy SDK Środowiska SDK kompilacji języka C++.The C++ Build Insights SDK EnvironmentVariable class reference.
+title: Klasa zmiennych środowiskowych
+description: Odwołanie do klasy zmiennych środowiskowych zestawu SDK kompilacji C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 963c52e0ea9e048448c6f2b3ac62d9938817467e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f707ab744aaf6097975ba9e189815df3c9f32266
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325015"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920766"
 ---
-# <a name="environmentvariable-class"></a>Klasa EnvironmentVariable
+# <a name="environmentvariable-class"></a>Klasa zmiennych środowiskowych
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `EnvironmentVariable` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
+`EnvironmentVariable`Klasa jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,18 +42,18 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z odziedziczonych członków z jego [SimpleEvent](simple-event.md) klasy podstawowej, `EnvironmentVariable` klasa zawiera następujące elementy członkowskie:
+Wraz z dziedziczonymi elementami członkowskimi z klasy bazowej [SimpleEvent](simple-event.md) `EnvironmentVariable` Klasa zawiera następujące elementy członkowskie:
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-[ŚrodowiskoWaralne](#environment-variable)
+[EnvironmentVariable](#environment-variable)
 
 ### <a name="functions"></a>Funkcje
 
-[Wartość nazwy](#name)
-[Value](#value)
+[Nazwa](#name) 
+ [Wartość](#value)
 
-## <a name="environmentvariable"></a><a name="environment-variable"></a>ŚrodowiskoWaralne
+## <a name="environmentvariable"></a><a name="environment-variable"></a> Zmiennych środowiskowych
 
 ```cpp
 EnvironmentVariable(const RawEvent& event);
@@ -61,10 +61,10 @@ EnvironmentVariable(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-*Zdarzenie*\
-Wydarzenie [ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
+*wydarzen*\
+Zdarzenie [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
 
-## <a name="name"></a><a name="name"></a>Nazwa
+## <a name="name"></a><a name="name"></a> Nazwij
 
 ```cpp
 const wchar_t Name() const;
@@ -74,7 +74,7 @@ const wchar_t Name() const;
 
 Nazwa zmiennej środowiskowej.
 
-## <a name="value"></a><a name="value"></a>Wartość
+## <a name="value"></a><a name="value"></a> Wartościami
 
 ```cpp
 const wchar_t Value() const;

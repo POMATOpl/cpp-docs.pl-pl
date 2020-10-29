@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62a7bf6bde62dee7fdf5b1d2ce9044491a123f94
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224152"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920193"
 ---
 # <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `MatchEventInMemberFunction`Funkcja jest używana do dopasowania zdarzenia do typu opisanego przez pierwszy parametr funkcji członkowskiej. Dopasowane zdarzenie jest przekazywane do funkcji składowej w celu dalszej obróbki.
 
@@ -61,7 +61,7 @@ Typy dodatkowych parametrów akceptowane przez funkcję członkowską wraz z typ
 Typy dodatkowych argumentów, które zostały przekazane do `MatchEventInMemberFunction` .
 
 *wydarzen*\
-Zdarzenie do dopasowania względem typu zdarzenia opisanego przez *TEvent*.
+Zdarzenie do dopasowania względem typu zdarzenia opisanego przez *TEvent* .
 
 *objectPtr*\
 Wskaźnik do obiektu, w którym wywołano *memberFunc* .
@@ -78,7 +78,7 @@ Argumenty, które uzyskują doskonałe przesłanie dalej do *memberFunc* wraz z 
 
 ## <a name="remarks"></a>Uwagi
 
-Typ zdarzenia do użycia dla parametru *TEvent* można wybrać z listy *klas przechwytywania*. Aby zapoznać się z listą zdarzeń i klas przechwytywania, których można użyć do dopasowania, zobacz [tabela zdarzeń](../event-table.md).
+Typ zdarzenia do użycia dla parametru *TEvent* można wybrać z listy *klas przechwytywania* . Aby zapoznać się z listą zdarzeń i klas przechwytywania, których można użyć do dopasowania, zobacz [tabela zdarzeń](../event-table.md).
 
 ## <a name="example"></a>Przykład
 

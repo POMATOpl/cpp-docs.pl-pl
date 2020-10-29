@@ -3,22 +3,22 @@ title: Tworzenie projektu systemu Linux MSBuild C++ w programie Visual Studio
 ms.date: 10/15/2020
 description: Utwórz nowy projekt systemu Linux oparty na programie MSBuild w programie Visual Studio.
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: dddb9dbdee4cefc58a2bd5ccefa493b25e1c9f24
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 458a26408bfd29b714150e5259fd23807c9b2908
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176288"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921636"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>Tworzenie projektu systemu Linux MSBuild C++ w programie Visual Studio
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Projekty systemu Linux są dostępne w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Najpierw upewnij się, że masz zainstalowane **obciążenie deweloperskie systemu Linux** dla programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux](download-install-and-setup-the-linux-development-workload.md).
 
@@ -28,8 +28,8 @@ W przypadku kompilacji na wielu platformach zalecamy użycie CMake. Obsługa CMa
 
 Aby utworzyć nowy projekt systemu Linux w programie Visual Studio 2017, wykonaj następujące kroki:
 
-1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N**.
-1. Wybierz węzeł **Visual C++ > wielu Platform > Linux** , a następnie wybierz typ projektu do utworzenia. Wprowadź **nazwę** i **lokalizację**, a następnie wybierz **przycisk OK**.
+1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N** .
+1. Wybierz węzeł **Visual C++ > wielu Platform > Linux** , a następnie wybierz typ projektu do utworzenia. Wprowadź **nazwę** i **lokalizację** , a następnie wybierz **przycisk OK** .
 
    ![Zrzut ekranu przedstawiający okno dialogowe Nowy projekt z wybraną pozycją Visual C plus plus > cross platform > Linux, wszystkie typy projektów o nazwie i pola tekstowe Nazwa i lokalizacja są również wywoływane.](media/newproject.png)
 
@@ -46,7 +46,7 @@ Aby utworzyć nowy projekt systemu Linux w programie Visual Studio 2017, wykonaj
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Najpierw upewnij się, że masz zainstalowane **obciążenie deweloperskie systemu Linux** dla programu Visual Studio. Aby uzyskać więcej informacji, zobacz [pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux](download-install-and-setup-the-linux-development-workload.md).
 
@@ -58,9 +58,9 @@ Jeśli masz istniejące rozwiązanie Windows Visual Studio, które chcesz rozło
 
 Aby utworzyć nowy projekt systemu Linux w programie Visual Studio 2019, wykonaj następujące kroki:
 
-1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N**. Zostanie wyświetlone okno dialogowe Tworzenie nowego projektu.
+1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N** . Zostanie wyświetlone okno dialogowe Tworzenie nowego projektu.
 1. W polu tekstowym **Wyszukiwanie szablonów** Wprowadź system **Linux** , aby wyświetlić listę dostępnych szablonów dla projektów systemu Linux.
-1. Wybierz typ projektu do utworzenia, na przykład **Aplikacja konsolowa**, a następnie wybierz przycisk **dalej**. Wprowadź **nazwę** i **lokalizację**, a następnie wybierz pozycję **Utwórz**.
+1. Wybierz typ projektu do utworzenia, na przykład **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej** . Wprowadź **nazwę** i **lokalizację** , a następnie wybierz pozycję **Utwórz** .
 
    ![Zrzut ekranu okna dialogowego Nowy projekt z listą rozwijaną język ustawioną na C++ i listę rozwijaną platforma ustawionymi na system Linux.](media/newproject-vs2019.png)
 

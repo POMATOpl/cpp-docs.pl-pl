@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 04178c435bbd0ca80e412efc39a1b736062d95e7
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 61378e0aa2cee94420849195a94203be078418ff
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706764"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921116"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Ciągi, Kreator strony właściwości ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Kreator strony właściwości ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Kreator strony właściwości ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Zawiera tekst skojarzony ze stroną właściwości.
 
@@ -29,13 +29,13 @@ Zawiera tekst skojarzony ze stroną właściwości.
 
    Ustawia tekst, który pojawia się na karcie strony właściwości.
 
-- **Ciąg dokumentu**
+- **Ciąg doc**
 
-   Ustawia ciąg tekstowy z opisem na stronie. Te parametry mogą być wyświetlane w oknie dialogowym arkusza właściwości. Ramka właściwości można użyć opisu w etykietce wiersza lub narzędzia stanu. Ramka właściwości standardowe obecnie nie są używane te parametry.
+   Ustawia ciąg tekstowy opisujący stronę. Ten ciąg może być wyświetlany w oknie dialogowym arkusz właściwości. Ramka właściwości może użyć opisu w wierszu stanu lub w etykietce narzędzia. Standardowa ramka właściwości obecnie nie używa tego ciągu.
 
 - **Plik pomocy**
 
-   Określa nazwę pliku pomocy, który opisuje sposób używania na stronie właściwości. Ta nazwa nie może zawierać ścieżki. Gdy użytkownik naciśnie **pomocy**, ramki spowoduje otwarcie pliku pomocy w katalogu o nazwie w wartości klucza HelpDir we wpisach rejestru strony właściwości w ramach jego identyfikator CLSID.
+   Ustawia nazwę pliku pomocy opisującego sposób używania strony właściwości. Ta nazwa nie powinna zawierać ścieżki. Gdy użytkownik naciśnie **Pomoc** , ramka otwiera plik pomocy w katalogu o nazwie w wartości klucza helpDir we wpisach rejestru strony właściwości w obszarze jego identyfikatora CLSID.
 
 ::: moniker-end
 

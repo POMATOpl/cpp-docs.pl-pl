@@ -3,18 +3,18 @@ title: Konfigurowanie programów dla systemu Windows XP
 description: Jak zainstalować i używać zestawów narzędzi języka C++ systemu Windows XP w programie Visual Studio.
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 92364d7fd25ac617baacc125b279fb0ee9c92f62
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 09fe1a511c92f999e02646b9e606a3631a175215
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440481"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919374"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów dla systemu Windows XP
 
 Program Visual Studio obsługuje wiele zestawów narzędzi platformy. Oznacza to, że istnieje możliwość docelowości systemów operacyjnych i bibliotek środowiska uruchomieniowego, które nie są obsługiwane przez domyślny zestaw narzędzi. Na przykład przez przełączenie zestawu narzędzi platformy można użyć kompilatora Visual Studio 2017 C++ do tworzenia aplikacji przeznaczonych dla systemów Windows XP i Windows Server 2003. Możesz również użyć starszych zestawów narzędzi platformy, aby zachować starszy kod zgodny ze standardem Binary i nadal korzystać z najnowszych funkcji środowiska IDE programu Visual Studio.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Zestaw narzędzi v142 dostarczony w programie Visual Studio 2019 nie obejmuje obsługi tworzenia kodu dla systemu Windows XP. Obsługa programowania systemu Windows XP przy użyciu zestawu narzędzi programu Visual Studio 2017 v141_xp jest dostępna jako opcja poszczególnych składników w Instalator programu Visual Studio.
 
@@ -22,15 +22,15 @@ Zestaw narzędzi v142 dostarczony w programie Visual Studio 2019 nie obejmuje ob
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Zainstaluj zestaw narzędzi platformy dla systemu Windows XP
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Aby uzyskać zestaw narzędzi i składników platformy Visual Studio 2017 dla systemu Windows XP i Windows Server 2003, uruchom Instalator programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub modyfikacji istniejącej instalacji upewnij się, że wybrano opcję **Programowanie aplikacji klasycznych w języku C++** . Na liście składników opcjonalnych dla tego obciążenia wybierz pozycję **Obsługa systemu Windows XP dla języka C++**, a następnie wybierz opcję **Zainstaluj** lub **Modyfikuj**.
+Aby uzyskać zestaw narzędzi i składników platformy Visual Studio 2017 dla systemu Windows XP i Windows Server 2003, uruchom Instalator programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub modyfikacji istniejącej instalacji upewnij się, że wybrano opcję **Programowanie aplikacji klasycznych w języku C++** . Na liście składników opcjonalnych dla tego obciążenia wybierz pozycję **Obsługa systemu Windows XP dla języka C++** , a następnie wybierz opcję **Zainstaluj** lub **Modyfikuj** .
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Aby uzyskać zestaw narzędzi platformy v141_xp i składników przeznaczonych dla systemów Windows XP i Windows Server 2003, uruchom Instalator programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub modyfikacji istniejącej instalacji upewnij się, że wybrano opcję **Programowanie aplikacji klasycznych w języku C++** . Na karcie **poszczególne składniki** w obszarze **kompilatory, narzędzia do kompilacji i środowiska uruchomieniowe**wybierz pozycję **C++ Windows XP Support Tools \[for vs 2017 (najnowsze 141)**, a następnie wybierz **Zainstaluj** lub **Modyfikuj**.
+Aby uzyskać zestaw narzędzi platformy v141_xp i składników przeznaczonych dla systemów Windows XP i Windows Server 2003, uruchom Instalator programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub modyfikacji istniejącej instalacji upewnij się, że wybrano opcję **Programowanie aplikacji klasycznych w języku C++** . Na karcie **poszczególne składniki** w obszarze **kompilatory, narzędzia do kompilacji i środowiska uruchomieniowe** wybierz pozycję **C++ Windows XP Support Tools for vs 2017 (najnowsze 141) \[** , a następnie wybierz **Zainstaluj** lub **Modyfikuj** .
 
 ::: moniker-end
 
@@ -40,9 +40,9 @@ Zestaw narzędzi platformy systemu Windows XP, który jest dołączony do progra
 
 ### <a name="to-target-windows-xp"></a>Aby docelowa była wersja systemu Windows XP
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości** .
 
-1. W oknie dialogowym **strony właściwości** projektu wybierz pozycję **Właściwości** > konfiguracji**Ogólne**. Ustaw właściwość zestawu **narzędzi platformy** na preferowany zestaw narzędzi systemu Windows XP. Na przykład wybierz **program Visual studio 2017 — Windows XP (v141_xp)** , aby utworzyć kod dla systemów Windows XP i windows Server 2003 przy użyciu kompilatora języka Microsoft C++ w programie Visual Studio 2017.
+1. W oknie dialogowym **strony właściwości** projektu wybierz pozycję **Właściwości konfiguracji**  >  **Ogólne** . Ustaw właściwość zestawu **narzędzi platformy** na preferowany zestaw narzędzi systemu Windows XP. Na przykład wybierz **program Visual studio 2017 — Windows XP (v141_xp)** , aby utworzyć kod dla systemów Windows XP i windows Server 2003 przy użyciu kompilatora języka Microsoft C++ w programie Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Obsługa środowiska uruchomieniowego języka C++
 
@@ -68,7 +68,7 @@ Ze względu na różnice w zakresie obsługi platformy i biblioteki środowisko 
 
 - **Funkcje języka C++**
 
-   Tylko funkcje języka C++ zaimplementowane w programie Visual Studio 2012 są obsługiwane w aplikacjach korzystających z\_zestawu narzędzi platformy v110 XP. Tylko funkcje języka C++ zaimplementowane w Visual Studio 2013 są obsługiwane w aplikacjach korzystających z zestawu\_narzędzi platformy v120 XP. Tylko funkcje języka C++ zaimplementowane w programie Visual Studio 2015 są obsługiwane w aplikacjach korzystających z\_zestawu narzędzi platformy wersji 140 XP. Tylko funkcje języka C++ zaimplementowane w programie Visual Studio 2017 są obsługiwane w aplikacjach korzystających z\_zestawu narzędzi platformy najnowsze 141 XP. Program Visual Studio używa odpowiedniego kompilatora podczas kompilacji przy użyciu starszych zestawów narzędzi platformy. Użyj najnowszego zestawu narzędzi platformy systemu Windows XP, aby skorzystać z dodatkowych funkcji języka C++ wdrożonych w tej wersji kompilatora.
+   Tylko funkcje języka C++ zaimplementowane w programie Visual Studio 2012 są obsługiwane w aplikacjach korzystających z zestawu \_ narzędzi platformy v110 XP. Tylko funkcje języka C++ zaimplementowane w Visual Studio 2013 są obsługiwane w aplikacjach korzystających z zestawu \_ narzędzi platformy v120 XP. Tylko funkcje języka C++ zaimplementowane w programie Visual Studio 2015 są obsługiwane w aplikacjach korzystających z zestawu \_ narzędzi platformy wersji 140 XP. Tylko funkcje języka C++ zaimplementowane w programie Visual Studio 2017 są obsługiwane w aplikacjach korzystających z zestawu \_ narzędzi platformy najnowsze 141 XP. Program Visual Studio używa odpowiedniego kompilatora podczas kompilacji przy użyciu starszych zestawów narzędzi platformy. Użyj najnowszego zestawu narzędzi platformy systemu Windows XP, aby skorzystać z dodatkowych funkcji języka C++ wdrożonych w tej wersji kompilatora.
 
 - **Debugowanie zdalne**
 

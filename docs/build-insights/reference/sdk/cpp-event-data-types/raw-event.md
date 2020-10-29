@@ -1,6 +1,6 @@
 ---
 title: Klasa RawEvent
-description: Odwołanie do klasy SDK RawEvent w języku C++ Build Insights.
+description: Odwołanie do klasy RawEvent zestawu SDK kompilacji C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 83629457ac3a0d1f991f6b084af2f3400612b2ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1cf96e1b8eadaf1de9fe2cf565a993f3bcafe358
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324382"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920466"
 ---
 # <a name="rawevent-class"></a>Klasa RawEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `RawEvent` jest używana do reprezentowania zdarzenia ogólnego w [EventStack](event-stack.md).
+`RawEvent`Klasa jest używana do reprezentowania zdarzenia ogólne w [EventStack](event-stack.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,42 +63,42 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Kilka funkcji członkowskich `RawEvent` w klasie zwraca liczbę znaczników. Usługa C++ Build Insights używa licznika wydajności systemu Windows jako źródła znaczników. Liczba znaczników musi być używana z częstotliwością znaczników, aby przekształcić ją w jednostkę czasu, taką jak sekundy. Funkcja `TickFrequency` elementu członkowskiego może zostać wywołana w celu uzyskania częstotliwości znaczników. Zobacz stronę [EVENT_DATA,](../c-event-data-types/event-data-struct.md#tick-conversion-example) aby zapoznać się z przykładem sposobu konwertowania znaczników na jednostkę czasu.
+Kilka funkcji Członkowskich w `RawEvent` klasie zwraca liczbę cykli. Szczegółowe informacje o kompilacji w języku C++ używają licznika wydajności systemu Windows jako źródła taktów. Liczba cykli musi być używana z częstotliwością taktu, aby przekonwertować ją na jednostkę czasu, taką jak sekundy. `TickFrequency`Funkcja członkowska może zostać wywołana w celu uzyskania częstotliwości taktu. Na stronie [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) można zobaczyć przykład sposobu konwertowania taktów na jednostkę czasu.
 
-Jeśli nie chcesz konwertować znaczników `RawEvent` samodzielnie, klasa udostępnia funkcje członkowskie, które zwracają wartości czasu w nanosekundach. Użyj standardowej biblioteki C++, `chrono` aby przekonwertować nanosekundy na inne jednostki czasu.
+Jeśli nie chcesz samodzielnie konwertować taktów, `RawEvent` Klasa dostarcza funkcje członkowskie, które zwracają wartości czasu w nanosekundach. Użyj standardowej biblioteki C++ `chrono` do przekonwertowania nanosekund na inne jednostki czasu.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="constructor"></a>Konstruktor
 
-[RawEvent ( RawEvent )](#raw-event)
+[RawEvent](#raw-event)
 
 ### <a name="functions"></a>Funkcje
 
-[Procesory](#cpu-ticks)\
-[Czas procesora](#cpu-time)\
-[Danych](#data)\
-[Długość](#duration)\
-[Nazwa](#event-id)
-[zdarzenia](#event-name) [Identyfikator](#event-instance-id)
-zdarzenia EventId\
-[Nazwa zdarzenia](#event-wide-name)\
-[Ekskluzywne akputicks](#exclusive-cpu-ticks)\
+[CPUTicks](#cpu-ticks)\
+[CPUTime](#cpu-time)\
+[Data](#data)\
+[Trwania](#duration)\
+[EventID](#event-id) 
+ [EventInstanceId](#event-instance-id) 
+ [EventName](#event-name)\
+[EventWideName](#event-wide-name)\
+[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
 [ExclusiveCPUTime](#exclusive-cpu-time)\
-[Wyłącznośćducja](#exclusive-duration)\
-[EkskluzywnedurationTicks](#exclusive-duration-ticks)\
-[ExclusiveWallClockOdpowiedzialność za](#exclusive-wall-clock-time-responsibility)\
+[ExclusiveDuration](#exclusive-duration)\
+[ExclusiveDurationTicks](#exclusive-duration-ticks)\
+[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
 [ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
-[Processid](#process-id)\
-[ProcesorIndex](#processor-index)\
-[Sygnatura starttimestamp](#start-timestamp)\
-[StopTimestamp (StopTimestamp)](#stop-timestamp)\
-[Threadid](#thread-id)\
-[Częstotliwość ticków](#tick-frequency)\
-[WallClockTimeOdpowiedzialność](#wall-clock-time-responsibility)\
-[WallClockTimeOdpowiedzialnośćOdpowiedziTicks](#wall-clock-time-responsibility-ticks)
+[Identyfikator](#process-id)\
+[ProcessorIndex](#processor-index)\
+[StartTimestamp](#start-timestamp)\
+[StopTimestamp](#stop-timestamp)\
+[ThreadId](#thread-id)\
+[TickFrequency](#tick-frequency)\
+[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
+[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
-## <a name="rawevent"></a><a name="raw-event"></a>RawEvent ( RawEvent )
+## <a name="rawevent"></a><a name="raw-event"></a> RawEvent
 
 ```cpp
 RawEvent(const EVENT_DATA& data);
@@ -106,10 +106,10 @@ RawEvent(const EVENT_DATA& data);
 
 ### <a name="parameters"></a>Parametry
 
-*Zdarzenie*\
+*wydarzen*\
 Dane dotyczące zdarzenia.
 
-## <a name="cputicks"></a><a name="cpu-ticks"></a>Procesory
+## <a name="cputicks"></a><a name="cpu-ticks"></a> CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -117,9 +117,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaczników procesora CPU, które wystąpiły podczas tego działania. Znacznik procesora różni się od zwykłego kleszcza. Znaczniki procesora CPU są liczone tylko wtedy, gdy procesor jest wykonywany kod w działaniu. Znaczniki procesora CPU nie są liczone, gdy wątek skojarzony z aktywnością jest uśpiony.
+Liczba cykli procesora CPU, które wystąpiły w trakcie tego działania. Cykl procesora CPU różni się od zwykłego taktu. Takty procesora są zliczane tylko wtedy, gdy procesor wykonuje kod w działaniu. Takty procesora nie są zliczane, gdy wątek skojarzony z działaniem jest uśpiony.
 
-## <a name="cputime"></a><a name="cpu-time"></a>Czas procesora
+## <a name="cputime"></a><a name="cpu-time"></a> CPUTime
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -127,9 +127,9 @@ std::chrono::nanoseconds CPUTime()() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Czas wykonywania kodu przez procesor CPU w ramach tego działania. Ta wartość może być wyższa niż czas trwania działania, jeśli działania podrzędne są wykonywane w oddzielnych wątkach. Wartość jest zwracana w nanosekundach.
+Czas wykonywania przez procesor CPU kodu w ramach tego działania. Ta wartość może być większa niż czas trwania działania, jeśli działania podrzędne są wykonywane w oddzielnych wątkach. Wartość jest zwracana w nanosekundach.
 
-## <a name="data"></a><a name="data"></a>Danych
+## <a name="data"></a><a name="data"></a> Data
 
 ```cpp
 const void* Data() const;
@@ -139,7 +139,7 @@ const void* Data() const;
 
 Wskaźnik do dodatkowych danych zawartych w tym zdarzeniu. Aby uzyskać więcej informacji na temat interpretowania tego pola, zobacz [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-## <a name="duration"></a><a name="duration"></a>Długość
+## <a name="duration"></a><a name="duration"></a> Trwania
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -149,7 +149,7 @@ std::chrono::nanoseconds Duration() const;
 
 Czas trwania działania w nanosekundach.
 
-## <a name="eventid"></a><a name="event-id"></a>Eventid
+## <a name="eventid"></a><a name="event-id"></a> EventId
 
 ```cpp
 const unsigned short& EventId() const;
@@ -157,9 +157,9 @@ const unsigned short& EventId() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba identyfikująca typ zdarzenia. Aby uzyskać listę identyfikatorów zdarzeń, zobacz [EVENT_ID](../c-event-data-types/event-id-enum.md).
+Liczba, która identyfikuje typ zdarzenia. Aby uzyskać listę identyfikatorów zdarzeń, zobacz [EVENT_ID](../c-event-data-types/event-id-enum.md).
 
-## <a name="eventinstanceid"></a><a name="event-instance-id"></a>Identyfikator wystąpienia zdarzenia
+## <a name="eventinstanceid"></a><a name="event-instance-id"></a> EventInstanceId
 
 ```cpp
 const unsigned long long& EventInstanceId() const;
@@ -167,9 +167,9 @@ const unsigned long long& EventInstanceId() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba, która jednoznacznie identyfikuje zdarzenie wewnątrz śledzenia. Ta wartość nie zmienia się podczas analizowania lub ponownego rejestrowania tego samego śledzenia wiele razy. Ta wartość służy do identyfikowania tego samego zdarzenia w wielu analizach lub ponownego rejestrowania przebiegów przez ten sam ślad.
+Liczba, która jednoznacznie identyfikuje zdarzenie wewnątrz śladu. Ta wartość nie ulega zmianie podczas analizowania lub wielokrotnego rejestrowania tego samego śledzenia. Użyj tej wartości, aby zidentyfikować to samo zdarzenie w wielu analizach lub przerejestrowaniu przebiegów tego samego śledzenia.
 
-## <a name="eventname"></a><a name="event-name"></a>Eventname
+## <a name="eventname"></a><a name="event-name"></a> EventName
 
 ```cpp
 const char* EventName() const;
@@ -177,9 +177,9 @@ const char* EventName() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg ANSI zawierający nazwę typu zdarzenia identyfikowanego przez [EventId](#event-id).
+Ciąg ANSI zawierający nazwę typu zdarzenia identyfikowanego przez [EventID](#event-id).
 
-## <a name="eventwidename"></a><a name="event-wide-name"></a>Nazwa zdarzenia
+## <a name="eventwidename"></a><a name="event-wide-name"></a> EventWideName
 
 ```cpp
 const wchar_t* EventWideName() const;
@@ -187,9 +187,9 @@ const wchar_t* EventWideName() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Szeroki ciąg zawierający nazwę typu zdarzenia identyfikowanego przez [EventId](#event-id).
+Szeroki ciąg zawierający nazwę typu zdarzenia identyfikowanego przez [EventID](#event-id).
 
-## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>Ekskluzywne akputicks
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a> ExclusiveCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -197,9 +197,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Tak samo jak [CPUTicks](#cpu-ticks), ale nie w tym kleszcze procesora CPU, które wystąpiły w działaniach podrzędnych.
+Analogicznie jak [CPUTicks](#cpu-ticks), ale nie obejmuje taktów procesora, które wystąpiły w działaniach podrzędnych.
 
-## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>ExclusiveCPUTime
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a> ExclusiveCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -207,9 +207,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Tak samo jak [CPUTime](#cpu-time), z tą różnicą, że czas procesora CPU działań podrzędnych nie jest uwzględniony.
+Analogicznie jak [CPUTime](#cpu-time), z tą różnicą, że czas procesora działań podrzędnych nie jest uwzględniony.
 
-## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>Wyłącznośćducja
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a> ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -217,9 +217,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Czas trwania działania w nanosekundach, nie licząc czasu spędzonego na zajęciach dla dzieci.
+Czas trwania działania w nanosekundach, bez uwzględniania czasu spędzonego w działaniach podrzędnych.
 
-## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>EkskluzywnedurationTicks
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a> ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -227,9 +227,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaczników, które wystąpiły w tym działaniu, z wyłączeniem liczby znaczników, które wystąpiły w działaniach podrzędnych.
+Liczba znaczników, które wystąpiły w tym działaniu, z wyłączeniem liczby taktów, które wystąpiły w działaniach podrzędnych.
 
-## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>ExclusiveWallClockOdpowiedzialność za
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a> ExclusiveWallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -237,9 +237,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Tak samo jak [WallClockTimeOdpowiedzialność ,](#wall-clock-time-responsibility)ale nie w tym odpowiedzialność czasu zegara ściennego działań podrzędnych.
+Analogicznie jak [WallClockTimeResponsibility](#wall-clock-time-responsibility), ale nie obejmuje odpowiedzialności za czas zegara na działania podrzędne.
 
-## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeResponsibilityTicks
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a> ExclusiveWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -247,9 +247,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Tak samo jak [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), ale nie wliczając w to odpowiedzialność za czas ścienny aktywności podrzędnych.
+Analogicznie jak [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), ale nie uwzględniające czasu zegarka odpowiedzialności za działania podrzędne.
 
-## <a name="processid"></a><a name="process-id"></a>Processid
+## <a name="processid"></a><a name="process-id"></a> Identyfikator
 
 ```cpp
 const unsigned long& ProcessId() const;
@@ -259,7 +259,7 @@ const unsigned long& ProcessId() const;
 
 Identyfikator procesu, w którym wystąpiło zdarzenie.
 
-## <a name="processorindex"></a><a name="processor-index"></a>ProcesorIndex
+## <a name="processorindex"></a><a name="processor-index"></a> ProcessorIndex
 
 ```cpp
 const unsigned short& ProcessorIndex() const;
@@ -267,9 +267,9 @@ const unsigned short& ProcessorIndex() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera dla procesora logicznego, na którym wystąpiło zdarzenie.
+Indeks (liczony od zera) dla procesora logicznego, w którym wystąpiło zdarzenie.
 
-## <a name="starttimestamp"></a><a name="start-timestamp"></a>Sygnatura starttimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a> StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -277,9 +277,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość znacznika przechwycona w momencie rozpoczęcia działania.
+Wartość taktu przechwycona w momencie uruchomienia działania.
 
-## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimestamp (StopTimestamp)
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a> StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -287,9 +287,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość znacznika przechwycona w momencie zatrzymania działania.
+Wartość taktu przechwycona w momencie zatrzymania działania.
 
-## <a name="threadid"></a><a name="thread-id"></a>Threadid
+## <a name="threadid"></a><a name="thread-id"></a> ThreadId
 
 ```cpp
 const unsigned long& ThreadId() const;
@@ -299,7 +299,7 @@ const unsigned long& ThreadId() const;
 
 Identyfikator wątku, w którym wystąpiło zdarzenie.
 
-## <a name="tickfrequency"></a><a name="tick-frequency"></a>Częstotliwość ticków
+## <a name="tickfrequency"></a><a name="tick-frequency"></a> TickFrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -307,9 +307,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaczników na sekundę do użycia podczas oceny czasu trwania mierzonego w znacznikach dla tego zdarzenia.
+Liczba taktów na sekundę, która ma być używana podczas obliczania czasu trwania mierzoną w taktach dla tego zdarzenia.
 
-## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>WallClockTimeOdpowiedzialność
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a> WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -317,9 +317,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odpowiedzialność czasu zegara ściennego tego działania, w nanosekundach. Aby uzyskać więcej informacji na temat tego, co oznacza odpowiedzialność za czas zegara ściennego, zobacz [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
+Czas zegarowy w nanosekundach, który jest odpowiedzialny za to działanie. Aby uzyskać więcej informacji o tym, co jest odpowiedzialne za czas zegara ściany, zobacz [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
 
-## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeOdpowiedzialnośćOdpowiedziTicks
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a> WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -327,6 +327,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaczników, która reprezentuje wkład tego działania w ogólny czas zegara ściennego. Odpowiedzialność za czas zegara ściennego różni się od zwykłego kleszcza. Odpowiedzialność zegara ściennego uwzględnia równoległość między działaniami. Dwa równoległe działania mogą mieć czas trwania 50 znaczników i ten sam czas rozpoczęcia i zatrzymania. W takim przypadku oba otrzymują przypisaną odpowiedzialność za czas zegara ściennego 25 znaczników.
+Liczba cykli, która reprezentuje udział tego działania w ogólnym czasie zegara ściany. Cykl odpowiedzialności w czasie zegara ściany różni się od zwykłego taktu. Cykle odpowiedzialności za zegary ścienne są uwzględniane równolegle między działaniami. Dwie działania równoległe mogą mieć czas trwania 50 taktów i ten sam czas rozpoczęcia i zakończenia. W takim przypadku oba te elementy otrzymują przypisany Czas zegarowy do 25 taktów.
 
 ::: moniker-end

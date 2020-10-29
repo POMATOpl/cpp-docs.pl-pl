@@ -3,20 +3,20 @@ title: Tworzenie projektu CMake systemu Linux w programie Visual Studio
 description: Jak utworzyć projekt systemu Linux CMake w programie Visual Studio
 ms.date: 08/06/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 5753dbb37c11686becb3e141261284b68468a3bc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8a960f89274fbbf235b88fdcd787ee6de8ab988b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507953"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921805"
 ---
 # <a name="create-a-cmake-linux-project-in-visual-studio"></a>Tworzenie projektu CMake systemu Linux w programie Visual Studio
 
-::: moniker range="vs-2015"
-Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych. Aby wyświetlić dokumentację dla tych wersji, Ustaw listę rozwijaną **wersja** znajdującą się powyżej spisu treści w **programie Visual Studio 2017** lub **Visual Studio 2019**.
+::: moniker range="msvc-140"
+Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych. Aby wyświetlić dokumentację dla tych wersji, Ustaw listę rozwijaną **wersja** znajdującą się powyżej spisu treści w **programie Visual Studio 2017** lub **Visual Studio 2019** .
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Zalecamy używanie CMake na potrzeby projektów, które są na wielu platformach lub będą udostępniane jako "open source". Projektów CMake można użyć do kompilowania i debugowania tego samego kodu źródłowego w systemie Windows, podsystemu Windows dla systemu Linux (WSL) i systemów zdalnych.
 
@@ -33,7 +33,7 @@ Upewnij się również, że na komputerze zdalnym są zainstalowane następując
 - Ninja — kompilacja (Visual Studio 2019 lub nowsza)
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 Obsługa CMake w programie Visual Studio wymaga obsługi trybu serwera wprowadzonej w CMake 3,8. W przypadku CMake z wariantem dostarczonym przez firmę Microsoft Pobierz najnowsze wstępnie skompilowane pliki binarne w [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) .
 
 Pliki binarne są instalowane w programie `~/.vs/cmake` . Po wdrożeniu plików binarnych projekt zostanie automatycznie replikny. Jeśli CMake określony przez `cmakeExecutable` pole w *CMakeSettings.json* jest nieprawidłowy (nie istnieje lub jest nieobsługiwaną wersją), a wstępnie skompilowane pliki binarne są obecne, program Visual Studio ignoruje `cmakeExecutable` i używa wstępnie skompilowanych plików binarnych.
@@ -41,7 +41,7 @@ Pliki binarne są instalowane w programie `~/.vs/cmake` . Po wdrożeniu plików 
 Program Visual Studio 2017 nie może utworzyć projektu CMake od podstaw, ale można otworzyć folder zawierający istniejący projekt CMake, zgodnie z opisem w następnej sekcji.
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 Możesz użyć programu Visual Studio 2019 do kompilowania i debugowania w zdalnym systemie Linux lub WSL, a CMake zostanie wywołana w tym systemie. Na maszynie docelowej należy zainstalować CMAKE w wersji 3,14 lub nowszej.
 
 Upewnij się, że na komputerze docelowym jest używana najnowsza wersja programu CMake. Często Wersja oferowana przez domyślny Menedżer pakietów dystrybucji nie jest wystarczająca do obsługi wszystkich funkcji wymaganych przez program Visual Studio. Program Visual Studio 2019 wykrywa, czy w systemie Linux jest zainstalowana najnowsza wersja programu CMake. Jeśli nie zostanie znaleziona, program Visual Studio wyświetli pasek informacji w górnej części okienka edytora. Oferuje ona możliwość instalacji CMake z programu [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) .
@@ -52,8 +52,8 @@ W programie Visual Studio 2019 można utworzyć projekt CMake od podstaw lub otw
 
 Aby utworzyć nowy projekt systemu Linux CMake w programie Visual Studio 2019:
 
-1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N**.
-1. Ustaw **Język** na **C++** i wyszukaj ciąg "CMAKE". Następnie wybierz przycisk **dalej**. Wprowadź **nazwę** i **lokalizację**, a następnie wybierz pozycję **Utwórz**.
+1. Wybierz pozycję **plik > nowy projekt** w programie Visual Studio lub naciśnij **klawisze Ctrl + Shift + N** .
+1. Ustaw **Język** na **C++** i wyszukaj ciąg "CMAKE". Następnie wybierz przycisk **dalej** . Wprowadź **nazwę** i **lokalizację** , a następnie wybierz pozycję **Utwórz** .
 
 Alternatywnie możesz otworzyć własny projekt CMake w programie Visual Studio 2019. W poniższej sekcji wyjaśniono, jak.
 
@@ -66,13 +66,13 @@ Aby ułatwić zrozumienie, edytowanie i tworzenie skryptów CMake w programie Vi
 - [Łatwe dodawanie, usuwanie i zmiana nazw plików i obiektów docelowych w projektach CMake](https://devblogs.microsoft.com/cppblog/easily-add-remove-and-rename-files-and-targets-in-cmake-projects/)
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="open-a-cmake-project-folder"></a>Otwieranie folderu projektu CMake
 
 Po otwarciu folderu zawierającego istniejący projekt CMake program Visual Studio używa zmiennych w pamięci podręcznej CMake, aby automatycznie konfigurować funkcje IntelliSense i kompilacje. Ustawienia konfiguracji lokalnej i debugowania są przechowywane w plikach JSON. Możesz opcjonalnie udostępniać te pliki innym osobom korzystającym z programu Visual Studio.
 
-Program Visual Studio nie modyfikuje plików *CMakeLists.txt* . Pozwala to innym osobom pracującym nad tym samym projektem w dalszym ciągu korzystać z istniejących narzędzi. Program Visual Studio generuje ponownie pamięć podręczną podczas zapisywania zmian w *CMakeLists.txt*lub w niektórych przypadkach, aby *CMakeSettings.jsna*. W przypadku korzystania z **istniejącej konfiguracji pamięci** podręcznej program Visual Studio nie modyfikuje pamięci podręcznej.
+Program Visual Studio nie modyfikuje plików *CMakeLists.txt* . Pozwala to innym osobom pracującym nad tym samym projektem w dalszym ciągu korzystać z istniejących narzędzi. Program Visual Studio generuje ponownie pamięć podręczną podczas zapisywania zmian w *CMakeLists.txt* lub w niektórych przypadkach, aby *CMakeSettings.jsna* . W przypadku korzystania z **istniejącej konfiguracji pamięci** podręcznej program Visual Studio nie modyfikuje pamięci podręcznej.
 
 Aby uzyskać ogólne informacje na temat obsługi CMake w programie Visual Studio, zobacz [CMAKE projects in Visual Studio](../build/cmake-projects-in-visual-studio.md). Przeczytaj ten element przed kontynuowaniem.
 
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-*CMakeLists.txt*:
+*CMakeLists.txt* :
 
 ```txt
 cmake_minimum_required(VERSION 3.8)
@@ -103,7 +103,7 @@ add_executable(hello-cmake hello.cpp)
 
 [Konfigurowanie projektu CMake systemu Linux](cmake-linux-configure.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CMake projekty w programie Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>
 ::: moniker-end

@@ -4,26 +4,26 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: dd731862adb741db068fc3465acb64b42e673522
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 08abbae2e8d3cb791117225c74b09aaf8dbf2ecb
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707601"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921324"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Tworzenie konsumenta OLE DB przy użyciu kreatora
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Kreator OLE DB konsumenta ATL nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [tworzenie konsumenta bez przy użyciu kreatora](creating-a-consumer-without-using-a-wizard.md).
+Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [Tworzenie klienta bez korzystania z Kreatora](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Ta procedura pokazuje, jak można użyć **Kreator projektów ATL** i **OLE DB Kreator konsumenta ATL** do wygenerowania konsumenta szablony OLE DB, a następnie zmodyfikuj główny kod aplikacji konsolowej w celu Pobieranie i wyświetlanie danych z tabeli bazy danych.
+W tej procedurze pokazano, jak można użyć **Kreatora projektu ATL** i **kreatora ATL OLE DB użytkownika** do wygenerowania klienta szablony OLE DB, a następnie zmodyfikować kod główny aplikacji konsolowej w celu pobrania i wyświetlenia danych z tabeli bazy danych.
 
-Ostatnie dwie sekcje zawierają opis kodu generowane przez kreatora konsumenta OLE DB.
+W ostatnich dwóch sekcjach objaśniono kod klienta wygenerowany przez kreatora OLE DB.
 
 W tej sekcji omówiono następujące tematy:
 
@@ -31,12 +31,12 @@ W tej sekcji omówiono następujące tematy:
 
 - [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md)
 
-- [Klasy konsumentów generowane przez kreatora](../../data/oledb/consumer-wizard-generated-classes.md)
+- [Klasy Wizard-Generated konsumenta](../../data/oledb/consumer-wizard-generated-classes.md)
 
-- [Metody konsumenta generowane przez kreatora](../../data/oledb/consumer-wizard-generated-methods.md)
+- [Metody Wizard-Generated konsumenta](../../data/oledb/consumer-wizard-generated-methods.md)
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 
-[Tworzenie konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+[Tworzenie klienta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

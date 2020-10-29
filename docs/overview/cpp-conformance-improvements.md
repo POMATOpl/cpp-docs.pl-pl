@@ -3,18 +3,18 @@ title: Ulepszenia zgodności języka C++
 ms.date: 08/04/2020
 description: Program Microsoft C++ w programie Visual Studio postępuje w kierunku pełnej zgodności ze standardem języka C++ 20.
 ms.technology: cpp-language
-ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500258"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921428"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 
 Program Microsoft C++ zapewnia zgodność z poprawkami i poprawek błędów w każdej wersji. W tym artykule przedstawiono ulepszenia w wersji głównej, a następnie według wersji. Zawiera również listę najważniejszych poprawek błędów według wersji. Aby przejść bezpośrednio do zmian w określonej wersji, użyj na liście **w tym artykule** .
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="conformance-improvements-in-visual-studio-2019-rtw-version-160"></a><a name="improvements_160"></a> Udoskonalenia zgodności w programie Visual Studio 2019 RTW (wersja 16,0)
 
@@ -341,7 +341,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Wpływ definiowania operatora Spaceship na `==` i `!=`
 
-Definicja samego operatora Spaceship ( **`<=>`** ) nie będzie już ponownie pisać wyrażeń obejmujących **`==`** lub **`!=`** , chyba że operator Spaceship jest oznaczony jako **`= default`** ([P1185R2](https://wg21.link/p1185r2)). Poniższy przykład kompiluje się w programie Visual Studio 2019 RTW i w wersji 16,1, ale produkuje C2678 w programie Visual Studio 2019 w wersji 16,2:
+Definicja samego operatora Spaceship ( **`<=>`** ) nie będzie już ponownie pisać wyrażeń obejmujących **`==`** lub **`!=`** , chyba że operator Spaceship jest oznaczony jako **`= default`** ( [P1185R2](https://wg21.link/p1185r2)). Poniższy przykład kompiluje się w programie Visual Studio 2019 RTW i w wersji 16,1, ale produkuje C2678 w programie Visual Studio 2019 w wersji 16,2:
 
 ```cpp
 #include <compare>
@@ -1066,7 +1066,7 @@ Kompilator emituje błąd C2668, ponieważ oba przeciążenia są zgodne z tą l
 
 ### <a name="definition-of-is-trivially-copyable"></a>Definicja *jest w prosty sposób kopiowany*
 
-W języku c++ 20 zmieniono definicję elementu, który *jest w prosty sposób kopiowany*. Gdy Klasa ma niestatyczną składową danych z **`volatile`** typem kwalifikowanym, nie oznacza już, że żaden Konstruktor kopiowania lub przenoszenia wygenerowanego przez kompilator lub operator przypisania kopiowania lub przenoszenia nie jest prosty. Standardowy Komitet języka C++ stosował tę zmianę wstecz jako raport wad. W MSVC zachowanie kompilatora nie zmienia się w różnych trybach języka, takich jak **`/std:c++14`** lub **`/std:c++latest`** .
+W języku c++ 20 zmieniono definicję elementu, który *jest w prosty sposób kopiowany* . Gdy Klasa ma niestatyczną składową danych z **`volatile`** typem kwalifikowanym, nie oznacza już, że żaden Konstruktor kopiowania lub przenoszenia wygenerowanego przez kompilator lub operator przypisania kopiowania lub przenoszenia nie jest prosty. Standardowy Komitet języka C++ stosował tę zmianę wstecz jako raport wad. W MSVC zachowanie kompilatora nie zmienia się w różnych trybach języka, takich jak **`/std:c++14`** lub **`/std:c++latest`** .
 
 Oto przykład nowego zachowania:
 
@@ -1119,7 +1119,7 @@ int main() {
 
 ### <a name="nullptr_t-is-only-convertible-to-bool-as-a-direct-initialization"></a>`nullptr_t` jest konwertowany tylko `bool` jako Inicjalizacja bezpośrednia
 
-W języku C++ 11, **`nullptr`** można przekonwertować tylko na **`bool`** jako *konwersję bezpośrednią*; na przykład po zainicjowaniu **`bool`** za pomocą listy inicjalizatora w nawiasach klamrowych. To ograniczenie nigdy nie jest wymuszane przez MSVC. MSVC teraz implementuje regułę w obszarze [`/permissive-`](../build/reference/permissive-standards-conformance.md) . Konwersje niejawne są teraz diagnozowane jako źle sformułowane. Konwersja kontekstowa **`bool`** jest nadal dozwolona, ponieważ bezpośrednie inicjowanie `bool b(nullptr)` jest prawidłowe.
+W języku C++ 11, **`nullptr`** można przekonwertować tylko na **`bool`** jako *konwersję bezpośrednią* ; na przykład po zainicjowaniu **`bool`** za pomocą listy inicjalizatora w nawiasach klamrowych. To ograniczenie nigdy nie jest wymuszane przez MSVC. MSVC teraz implementuje regułę w obszarze [`/permissive-`](../build/reference/permissive-standards-conformance.md) . Konwersje niejawne są teraz diagnozowane jako źle sformułowane. Konwersja kontekstowa **`bool`** jest nadal dozwolona, ponieważ bezpośrednie inicjowanie `bool b(nullptr)` jest prawidłowe.
 
 W większości przypadków błąd można naprawić, zastępując **`nullptr`** przy użyciu **`false`** , jak pokazano w poniższym przykładzie:
 
@@ -1617,7 +1617,7 @@ void f(E e) {
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Udoskonalenia zgodności w programie Visual Studio 2017 RTW (wersja 15,0)
 
@@ -1645,7 +1645,7 @@ W **`/std:c++17`** trybie w tym `[[fallthrough]]` atrybut może być używany w 
 
 ### <a name="generalized-range-based-for-loops"></a>Uogólniony zakres na podstawie pętli
 
-Pętle oparte na zakresie dla pętli nie wymagają już `begin()` i `end()` zwracają obiekty tego samego typu. Ta zmiana umożliwia `end()` zwrócenie wskaźnikiem kontrolnym używanym przez zakresy z [zakresu od 3](https://github.com/ericniebler/range-v3) do i gotowe, ale niecałkowicie opublikowane zakresy Specyfikacja techniczna. Aby uzyskać więcej informacji, zobacz [uogólnianie `for` pętli opartej na zakresie](https://wg21.link/p0184r0).
+Pętle oparte na zakresie dla pętli nie wymagają już `begin()` i `end()` zwracają obiekty tego samego typu. Ta zmiana umożliwia `end()` zwrócenie wskaźnikiem kontrolnym używanym przez zakresy z [zakresu od 3](https://github.com/ericniebler/range-v3) do i gotowe, ale niecałkowicie opublikowane zakresy Specyfikacja techniczna. Aby uzyskać więcej informacji, zobacz [uogólnianie Range-Based `for` pętli](https://wg21.link/p0184r0).
 
 ## <a name="conformance-improvements-in-153"></a><a name="improvements_153"></a> Ulepszenia zgodności w 15,3
 
@@ -3357,7 +3357,7 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>`offsetof` z wyrażeniami stałymi
 
-[makro OffsetOf](../c-runtime-library/reference/offsetof-macro.md) tradycyjnie zaimplementowano przy użyciu makra, które wymaga [reinterpret_cast](../cpp/reinterpret-cast-operator.md). To użycie jest niedozwolone w kontekstach, które wymagają wyrażenia stałego, ale kompilator języka Microsoft C++ tradycyjnie go zezwala. `offsetof`Makro, które jest dostarczane jako część biblioteki standardowej, prawidłowo używa wewnętrznego kompilatora (**__builtin_offsetof**), ale wiele osób użyło lew makro do definiowania własnych `offsetof` .
+[makro OffsetOf](../c-runtime-library/reference/offsetof-macro.md) tradycyjnie zaimplementowano przy użyciu makra, które wymaga [reinterpret_cast](../cpp/reinterpret-cast-operator.md). To użycie jest niedozwolone w kontekstach, które wymagają wyrażenia stałego, ale kompilator języka Microsoft C++ tradycyjnie go zezwala. `offsetof`Makro, które jest dostarczane jako część biblioteki standardowej, prawidłowo używa wewnętrznego kompilatora ( **__builtin_offsetof** ), ale wiele osób użyło lew makro do definiowania własnych `offsetof` .
 
 W programie Visual Studio 2017 w wersji 15,8 kompilator ogranicza obszary, które te **`reinterpret_cast`** Operatory mogą wyświetlać w trybie domyślnym, aby pomóc w kodzie zgodnym ze standardowym zachowaniem języka C++. W obszarze [`/permissive-`](../build/reference/permissive-standards-conformance.md) ograniczenia są jeszcze bardziej rygorystyczne. Użycie wyniku `offsetof` w miejscach, które wymagają wyrażeń stałych może spowodować powstanie kodu, który wystawia ostrzeżenie C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` lub C2975 `invalid template argument, expected compile-time constant expression` .
 
@@ -3643,7 +3643,7 @@ Aby uniknąć tego błędu, Usuń **`constexpr`** kwalifikator z jawnego tworzen
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Udoskonalenia zgodności języka C++ w programie Visual Studio 2015
 
@@ -3651,6 +3651,6 @@ Mamy pełną listę ulepszeń zgodności w programie Visual Studio 2015 Update 3
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tabela zgodności języka Microsoft C++](visual-cpp-language-conformance.md)

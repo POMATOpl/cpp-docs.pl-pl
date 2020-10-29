@@ -1,6 +1,6 @@
 ---
 title: Klasa FrontEndFile
-description: Odwołanie do klasy SDK FrontEndFile aplikacji kompilacji języka C++.The C++ Build Insights SDK FrontEndFile class reference.
+description: Odwołanie do klasy FrontEndFile zestawu SDK kompilacji C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c40137724279ea2fd615729db39f0ac5c907b79e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7715a153df538eab94b8de5281a91d4f6b439ff9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324759"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920661"
 ---
 # <a name="frontendfile-class"></a>Klasa FrontEndFile
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `FrontEndFile` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie FRONT_END_FILE.](../event-table.md#front-end-file)
+`FrontEndFile`Klasa jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [FRONT_END_FILE](../event-table.md#front-end-file) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,17 +41,17 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z odziedziczonych elementów członkowskich z `FrontEndFile` jego [działania](activity.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
+Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania](activity.md) `FrontEndFile` Klasa zawiera następujących członków:
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-[Plik frontu](#front-end-file)
+[FrontEndFile](#front-end-file)
 
 ### <a name="functions"></a>Funkcje
 
 [Ścieżka](#path)
 
-## <a name="frontendfile"></a><a name="front-end-file"></a>Plik frontu
+## <a name="frontendfile"></a><a name="front-end-file"></a> FrontEndFile
 
 ```cpp
 FrontEndFile(const RawEvent& event);
@@ -59,10 +59,10 @@ FrontEndFile(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-*Zdarzenie*\
-Wydarzenie [FRONT_END_FILE.](../event-table.md#front-end-file)
+*wydarzen*\
+Zdarzenie [FRONT_END_FILE](../event-table.md#front-end-file) .
 
-## <a name="path"></a><a name="path"></a>Ścieżka
+## <a name="path"></a><a name="path"></a> Ścieżka
 
 ```cpp
 const char* Path() const;
@@ -70,6 +70,6 @@ const char* Path() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bezwzględna ścieżka do pliku, zakodowana w UTF-8.
+Ścieżka bezwzględna do pliku zakodowana w formacie UTF-8.
 
 ::: moniker-end

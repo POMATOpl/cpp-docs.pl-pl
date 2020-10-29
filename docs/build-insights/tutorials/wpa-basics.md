@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 75f45244b9e9b38b7dc65b604940199acafa0ede
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507731"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922221"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Samouczek: podstawowe informacje dotyczące analizatora wydajności systemu Windows
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Narzędzia do tworzenia szczegółowych danych w języku C++ są dostępne w programie Visual Studio 2019. Aby zapoznać się z dokumentacją tej wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Wydajny wgląd w dane w języku C++ wymaga pewnej znajomości analizatora wydajności systemu Windows. Ten artykuł ułatwia zapoznanie się z typowymi operacjami WPA. Więcej informacji o sposobach korzystania z protokołu WPA znajduje się w dokumentacji [analizatora wydajności systemu Windows](/windows-hardware/test/wpt/windows-performance-analyzer) .
 
@@ -44,7 +44,7 @@ Większość widoków w usłudze C++ build Insights ma wiele ustawień wstępnyc
 
 ## <a name="zoom-in-and-out"></a>Powiększenie lub pomniejszenie
 
-Niektóre ślady kompilacji są bardzo duże, dlatego trudno jest wprowadzić szczegóły. Aby powiększyć obszar, który Cię interesuje, kliknij prawym przyciskiem myszy wykres i wybierz pozycję **Powiększ**. Zawsze możesz wrócić do poprzedniego ustawienia, wybierając polecenie **Cofnij powiększenie**. Ten obraz pokazuje przykład użycia zaznaczenia i **powiększania** w celu powiększania w sekcji grafu:
+Niektóre ślady kompilacji są bardzo duże, dlatego trudno jest wprowadzić szczegóły. Aby powiększyć obszar, który Cię interesuje, kliknij prawym przyciskiem myszy wykres i wybierz pozycję **Powiększ** . Zawsze możesz wrócić do poprzedniego ustawienia, wybierając polecenie **Cofnij powiększenie** . Ten obraz pokazuje przykład użycia zaznaczenia i **powiększania** w celu powiększania w sekcji grafu:
 
 ![Krótkie wideo pokazujące powiększanie w grafie.](media/wpa-zooming.gif)
 
@@ -56,7 +56,7 @@ Ten obraz przedstawia przykładowy wykres słupkowy wywołania linku. Używamy i
 
 ![Krótkie wideo pokazujące, jak można grupować według różnych kolumn.](media/wpa-grouping.gif)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Samouczek: vcperf i Analizator wydajności systemu Windows](vcperf-and-wpa.md)\
 [Reference: polecenia vcperf](../reference/vcperf-commands.md)\

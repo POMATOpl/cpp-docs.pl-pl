@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dcf44f1d282a9dd39205aecb4e75b59a6e8481f9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500084"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919101"
 ---
 # <a name="analyze-code-analysis"></a>`/analyze` (Analiza kodu)
 
@@ -25,7 +25,7 @@ Włącza opcje analizy kodu i kontroli.
 
 ## <a name="syntax"></a>Składnia
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -42,7 +42,7 @@ Włącza opcje analizy kodu i kontroli.
 > **`/analyze:WX-`**
 
 ::: moniker-end
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -68,10 +68,10 @@ Włącza analizę w trybie domyślnym. Dane wyjściowe analizy przechodzą do ko
 Szczegółowe wyniki analizatora są zapisywane w postaci kodu XML do pliku o tej samej nazwie podstawowej co plik źródłowy i rozszerzenie *`.pftlog`* . **`/analyze:autolog-`** wyłącza ten plik dziennika.
 
 **`/analyze:autolog:ext`***rozszerzenie*\
-Szczegółowe wyniki analizatora są zapisywane w postaci kodu XML do pliku o tej samej nazwie podstawowej co plik źródłowy i rozszerzenie *rozszerzenia*.
+Szczegółowe wyniki analizatora są zapisywane w postaci kodu XML do pliku o tej samej nazwie podstawowej co plik źródłowy i rozszerzenie *rozszerzenia* .
 
 **`/analyze:log`***Nazwa pliku*\
-Szczegółowe wyniki analizatora są zapisywane w formacie XML do pliku, który jest określony przez *filename*.
+Szczegółowe wyniki analizatora są zapisywane w formacie XML do pliku, który jest określony przez *filename* .
 
 **`/analyze:max_paths`***Liczba*\
 Parametr *Number* , który jest używany z tą opcją, określa maksymalną liczbę ścieżek kodu do przeanalizowania. Jeśli ten parametr nie jest określony, liczba jest domyślnie 256. Większe wartości powodują dokładniejsze sprawdzanie, ale analiza może trwać dłużej.
@@ -82,14 +82,14 @@ Zazwyczaj kompilator generuje kod i sprawdza więcej składni po uruchomieniu an
 **`/analyze:plugin`***wtyczka — Biblioteka DLL*\
 Włącza określoną preszybką wtyczkę w ramach przebiegów analizy kodu.
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 LocalEspC.dll jest wtyczką implementującą testy analizy kodu związane z współbieżnością w zakresie ostrzeżeń C261XX. Na przykład [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Aby uruchomić LocalEspC.dll, Użyj tej opcji kompilatora: **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ConcurrencyCheck.dll implementuje testy analizy kodu związane z współbieżnością w zakresie ostrzeżeń C261XX. Na przykład [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
@@ -114,7 +114,7 @@ Następnie użyj tej opcji kompilatora: **`/analyze:plugin EspXEngine.dll`** .
 **`/analyze:quiet`**\
 Wyłącza dane wyjściowe analizatora w oknie **danych wyjściowych** konsoli lub programu Visual Studio.
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 **`/analyze:ruleset`***FILE_PATH. zestaw reguł*\
 Pozwala określić, które zestawy reguł mają być analizowane, łącznie z zestawami reguł niestandardowych, które można utworzyć samodzielnie. Gdy ten przełącznik jest ustawiony, aparat reguł jest bardziej wydajny, ponieważ wyklucza nie należący do określonego zestawu reguł przed uruchomieniem. W przeciwnym razie aparat sprawdza wszystkie reguły.
@@ -149,7 +149,7 @@ Aby uzyskać więcej informacji, zobacz [Analiza kodu dla c/C++ — Omówienie](
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości Konfiguracja ogólna**Analiza kodu**właściwości  >  **General** .
+1. Wybierz **Configuration Properties**  >  stronę właściwości Konfiguracja ogólna **Analiza kodu** właściwości  >  **General** .
 
 1. Zmodyfikuj co najmniej jedną właściwość **analizy kodu** .
 
@@ -157,7 +157,7 @@ Aby uzyskać więcej informacji, zobacz [Analiza kodu dla c/C++ — Omówienie](
 
 1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora MSVC](compiler-options.md)\
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

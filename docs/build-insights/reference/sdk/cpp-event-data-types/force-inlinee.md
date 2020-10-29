@@ -1,6 +1,6 @@
 ---
-title: ForceInlinee, klasa
-description: Odwołanie do klasy SDK ForceInlinee aplikacji C++ Build Insights.
+title: Klasa ForceInlinee
+description: Odwołanie do klasy ForceInlinee zestawu SDK kompilacji C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c6a1af0384197a0a3b6062ad9ef30537c348190d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53fff7b6cfd37ba3e3211dd072c1ce3386d00fda
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324781"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920674"
 ---
-# <a name="forceinlinee-class"></a>ForceInlinee, klasa
+# <a name="forceinlinee-class"></a>Klasa ForceInlinee
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `ForceInlinee` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie FORCE_INLINEE.](../event-table.md#force-inlinee)
+`ForceInlinee`Klasa jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [FORCE_INLINEE](../event-table.md#force-inlinee) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,18 +42,18 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z odziedziczonych członków z jego [SimpleEvent](simple-event.md) klasy podstawowej, `ForceInlinee` klasa zawiera następujące elementy członkowskie:
+Wraz z dziedziczonymi elementami członkowskimi z klasy bazowej [SimpleEvent](simple-event.md) `ForceInlinee` Klasa zawiera następujące elementy członkowskie:
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-[ForceInlinee (Linia siłowa)](#force-inlinee)
+[ForceInlinee](#force-inlinee)
 
 ### <a name="functions"></a>Funkcje
 
-[Name](#name)
-[Rozmiar](#size) nazwy
+[Nazwa](#name) 
+ [Rozmiar](#size)
 
-## <a name="forceinlinee"></a><a name="force-inlinee"></a>ForceInlinee (Linia siłowa)
+## <a name="forceinlinee"></a><a name="force-inlinee"></a> ForceInlinee
 
 ```cpp
 ForceInlinee(const RawEvent& event);
@@ -61,10 +61,10 @@ ForceInlinee(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-*Zdarzenie*\
-Wydarzenie [FORCE_INLINEE.](../event-table.md#force-inlinee)
+*wydarzen*\
+Zdarzenie [FORCE_INLINEE](../event-table.md#force-inlinee) .
 
-## <a name="name"></a><a name="name"></a>Nazwa
+## <a name="name"></a><a name="name"></a> Nazwij
 
 ```cpp
 const char* Name() const;
@@ -72,9 +72,9 @@ const char* Name() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nazwa funkcji force-inlined, zakodowana w UTF-8.
+Nazwa funkcji wymuszonej, zakodowana w UTF-8.
 
-## <a name="size"></a><a name="size"></a>Rozmiar
+## <a name="size"></a><a name="size"></a> Zmienia
 
 ```cpp
 const unsigned short& Size() const;
@@ -82,6 +82,6 @@ const unsigned short& Size() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar funkcji force-inlined jako liczba instrukcji pośrednich.
+Rozmiar funkcji bezwierszowej w postaci liczby instrukcji pośrednich.
 
 ::: moniker-end

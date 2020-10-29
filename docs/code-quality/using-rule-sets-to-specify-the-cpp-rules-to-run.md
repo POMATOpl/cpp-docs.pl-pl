@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: f9876a2ce164d0a129ba21405ec61fdcbbd8de91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 53e1122cd1aac74401ca956ee24ebcdf79883228
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507480"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921909"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Korzystanie z zestawów reguł do określania reguł C++ do uruchomienia
 
@@ -23,9 +23,9 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Aby utworzyć regułę niestandardową na podstawie jednego istniejącego zestawu reguł
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-1. W Eksplorator rozwiązań otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+1. W Eksplorator rozwiązań otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości** .
 
 1. W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja** > **ogólna Analiza kodu** > **General** .
 
@@ -40,9 +40,9 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 1. Wybierz pozycję **Otwórz** , aby wyświetlić reguły w edytorze zestawu reguł.
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. W Eksplorator rozwiązań otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+1. W Eksplorator rozwiązań otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości** .
 
 1. W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja** > **Analiza kodu** właściwości > **Microsoft** .
 
@@ -60,7 +60,7 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Aby zmodyfikować zestaw reguł w edytorze zestawu reguł
 
-- Aby zmienić nazwę wyświetlaną zestawu reguł, w menu **Widok** wybierz polecenie **okno właściwości**. Wprowadź nazwę wyświetlaną w polu **Nazwa** . Zauważ, że nazwa wyświetlana może się różnić od nazwy pliku.
+- Aby zmienić nazwę wyświetlaną zestawu reguł, w menu **Widok** wybierz polecenie **okno właściwości** . Wprowadź nazwę wyświetlaną w polu **Nazwa** . Zauważ, że nazwa wyświetlana może się różnić od nazwy pliku.
 
 - Aby dodać wszystkie reguły grupy do niestandardowego zestawu reguł, zaznacz pole wyboru grupy. Aby usunąć wszystkie reguły grupy, usuń zaznaczenie pola wyboru.
 
@@ -78,23 +78,23 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
 ## <a name="to-group-filter-or-change-the-fields-in-the-rule-set-editor-by-using-the-rule-set-editor-toolbar"></a>Aby grupować, filtrować lub zmieniać pola w edytorze zestawu reguł przy użyciu paska narzędzi edytora zestawu reguł
 
-- Aby rozwinąć reguły we wszystkich grupach, wybierz **Rozwiń wszystkie**.
+- Aby rozwinąć reguły we wszystkich grupach, wybierz **Rozwiń wszystkie** .
 
-- Aby zwinąć reguły we wszystkich grupach, wybierz pozycję **Zwiń wszystko**.
+- Aby zwinąć reguły we wszystkich grupach, wybierz pozycję **Zwiń wszystko** .
 
 - Aby zmienić pole, według którego reguły są grupowane, wybierz pole z listy **Grupuj według** . Aby wyświetlić reguły niezgrupowane, wybierz opcję **\<None>** .
 
-- Aby dodać lub usunąć pola w kolumnach reguł, wybierz **Opcje kolumn**.
+- Aby dodać lub usunąć pola w kolumnach reguł, wybierz **Opcje kolumn** .
 
-- Aby ukryć reguły, które nie mają zastosowania do bieżącego rozwiązania, wybierz **Ukryj reguły, które nie mają zastosowania do bieżącego rozwiązania**.
+- Aby ukryć reguły, które nie mają zastosowania do bieżącego rozwiązania, wybierz **Ukryj reguły, które nie mają zastosowania do bieżącego rozwiązania** .
 
-- Aby przełączać się między pokazywaniem i ukrywaniem reguł, które są przypisane do akcji błędu, wybierz **Pokaż reguły, które mogą generować błędy analizy kodu**.
+- Aby przełączać się między pokazywaniem i ukrywaniem reguł, które są przypisane do akcji błędu, wybierz **Pokaż reguły, które mogą generować błędy analizy kodu** .
 
-- Aby przełączać się między pokazywaniem i ukrywaniem reguł, które są przypisane do akcji ostrzeżenie, wybierz **Pokaż reguły, które mogą generować ostrzeżenia analizy kodu**.
+- Aby przełączać się między pokazywaniem i ukrywaniem reguł, które są przypisane do akcji ostrzeżenie, wybierz **Pokaż reguły, które mogą generować ostrzeżenia analizy kodu** .
 
-- Aby przełączać się między pokazywaniem i ukrywaniem reguł, do których przypisano akcję **Brak** , wybierz pozycję **Pokaż reguły, które nie są włączone**.
+- Aby przełączać się między pokazywaniem i ukrywaniem reguł, do których przypisano akcję **Brak** , wybierz pozycję **Pokaż reguły, które nie są włączone** .
 
-- Aby dodać lub usunąć zestawy reguł domyślnych firmy Microsoft do bieżącego zestawu reguł, wybierz pozycję **Dodaj lub usuń podrzędne zestawy reguł**.
+- Aby dodać lub usunąć zestawy reguł domyślnych firmy Microsoft do bieżącego zestawu reguł, wybierz pozycję **Dodaj lub usuń podrzędne zestawy reguł** .
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Aby utworzyć zestaw reguł w edytorze tekstu
 

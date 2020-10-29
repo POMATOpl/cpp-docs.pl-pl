@@ -1,6 +1,6 @@
 ---
 title: Klasa EventStack
-description: Odwołanie do klasy SDK EventStack aplikacji C++ Build Insights.
+description: Odwołanie do klasy EventStack zestawu SDK kompilacji C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eaaaedcbf57fdaf8e437a80a7823488febac3e1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4f1e92011acdf8272fe631843c03c2f960a1234
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324983"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920713"
 ---
 # <a name="eventstack-class"></a>Klasa EventStack
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `EventStack` jest kolekcją [Event](event.md) obiektów. Wszystkie zdarzenia odebrane z SDK analizy kompilacji języka `EventStack` C++ są w postaci obiektu. Ostatni wpis w tym stosie jest zdarzeniem aktualnie przetwarzane. Wpisy poprzedzające ostatni wpis są hierarchią nadrzędną bieżącego zdarzenia. Aby uzyskać więcej informacji na temat modelu zdarzeń używanego w usłudze C++ Build Insights, zobacz [tabelę zdarzeń](../event-table.md).
+`EventStack`Klasa jest kolekcją obiektów [zdarzeń](event.md) . Wszystkie zdarzenia otrzymane z zestawu SDK usługi Build Insights są dostępne w postaci `EventStack` obiektu. Ostatni wpis w tym stosie jest aktualnie przetwarzanym zdarzeniem. Wpisy poprzedzające ostatni wpis są hierarchią nadrzędną bieżącego zdarzenia. Aby uzyskać więcej informacji na temat modelu zdarzeń używanego w usłudze C++ build Insights, zobacz [tabela zdarzeń](../event-table.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,17 +43,17 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-[WydarzenieStack](#event-stack)
+[EventStack](#event-stack)
 
 ### <a name="functions"></a>Funkcje
 
-[Operator](#back)
-[tylny[]](#subscript-operator)
-[Rozmiar](#size)
+[Wstecz](#back) 
+ [operator []](#subscript-operator) 
+ [Rozmiar](#size)
 
-## <a name="back"></a><a name="back"></a>Wstecz
+## <a name="back"></a><a name="back"></a> Wstecz
 
 ```cpp
 RawEvent Back() const;
@@ -61,9 +61,9 @@ RawEvent Back() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-[RawEvent](raw-event.md) obiektu, który reprezentuje ostatni wpis w stosie. Ostatni wpis w stosie zdarzeń jest zdarzenie, które zostało wyzwolone.
+Obiekt [RawEvent](raw-event.md) , który reprezentuje ostatni wpis w stosie. Ostatnim wpisem w stosie zdarzeń jest zdarzenie, które zostało wyzwolone.
 
-## <a name="eventstack"></a><a name="event-stack"></a>WydarzenieStack
+## <a name="eventstack"></a><a name="event-stack"></a> EventStack
 
 ```cpp
 EventStack(const EVENT_COLLECTION_DATA& data);
@@ -71,14 +71,14 @@ EventStack(const EVENT_COLLECTION_DATA& data);
 
 ### <a name="parameters"></a>Parametry
 
-*Danych*\
-Nieprzetworzone `EventStack` dane, z których jest zbudowany.
+*Data*\
+Dane pierwotne, z których `EventStack` została utworzona.
 
 ### <a name="remarks"></a>Uwagi
 
-Zazwyczaj nie trzeba tworzyć `EventStack` obiektów samodzielnie. Są one dostarczane przez C++ Build Insights SDK, gdy zdarzenia są przetwarzane podczas analizy lub sesji ponownego rejestrowania.
+Zazwyczaj nie trzeba tworzyć `EventStack` obiektów samodzielnie. Są one udostępniane przez zestaw SDK usługi Build Insights, gdy zdarzenia są przetwarzane podczas przeprowadzania analizy lub ponownego rejestrowania sesji.
 
-## <a name="operator"></a><a name="subscript-operator"></a>operator[]
+## <a name="operator"></a><a name="subscript-operator"></a> operator []
 
 ```cpp
 RawEvent operator[] (size_t index) const;
@@ -86,14 +86,14 @@ RawEvent operator[] (size_t index) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Indeks*\
-Indeks elementu, aby uzyskać dostęp w stosie zdarzeń.
+*indeks*\
+Indeks elementu, do którego można uzyskać dostęp w stosie zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-[RawEvent](raw-event.md) obiektu, który reprezentuje zdarzenie przechowywane w pozycji wskazanej przez *indeks* w stosie zdarzeń.
+Obiekt [RawEvent](raw-event.md) , który reprezentuje zdarzenie przechowywane w pozycji wskazywanej przez *indeks* w stosie zdarzeń.
 
-## <a name="size"></a><a name="size"></a>Rozmiar
+## <a name="size"></a><a name="size"></a> Zmienia
 
 ```cpp
 size_t Size() const;

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6f53a9b6c682a0af7d8a01f6378ed0574d8fa4ca
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a6ecff81a9f3d2b22107a8fa7fc26fad85d4f579
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041175"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919517"
 ---
 # <a name="c-build-insights-sdk"></a>Zestaw SDK ze szczegółowymi informacjami o kompilowaniu w języku C++
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Zestaw SDK usługi Build Insights to zbiór interfejsów API, które umożliwiają tworzenie spersonalizowanych narzędzi na platformie C++ build Insights. Ta strona zawiera ogólne omówienie ułatwiające rozpoczęcie pracy.
 
@@ -37,7 +37,7 @@ Zestaw SDK kompilacji usługi Build Insights można pobrać jako pakiet NuGet, w
 1. Wybierz pozycję **Zarządzaj pakietami NuGet** z menu kontekstowego.
 1. W prawym górnym rogu wybierz źródło pakietu **NuGet.org** .
 1. Wyszukaj najnowszą wersję pakietu Microsoft. cpp. BuildInsights.
-1. Wybierz pozycję **Zainstaluj**.
+1. Wybierz pozycję **Zainstaluj** .
 1. Zaakceptuj licencję.
 
 Zapoznaj się z informacjami na temat ogólnych pojęć związanych z zestawem SDK. Możesz również uzyskać dostęp do oficjalnych [przykładów usługi Build Insights](https://github.com/microsoft/cpp-build-insights-samples) w witrynie GitHub, aby zobaczyć przykłady rzeczywistych aplikacji w języku c++, które używają zestawu SDK.
@@ -62,7 +62,7 @@ Użyj dowolnej z tych funkcji zbierania danych śledzenia zestawu SDK w usłudze
 
 ### <a name="sdk-functions-related-to-trace-collection"></a>Funkcje zestawu SDK powiązane z kolekcją śledzenia
 
-| Funkcjonalność | Interfejs API języka C++ | INTERFEJS API JĘZYKA C |
+| Funkcja | Interfejs API języka C++ | INTERFEJS API JĘZYKA C |
 |--|--|--|
 | Rozpoczynanie śledzenia | [StartTracingSession](functions/start-tracing-session.md) | [StartTracingSessionA](functions/start-tracing-session-a.md)<br />[StartTracingSessionW](functions/start-tracing-session-w.md) |
 | Zatrzymywanie śledzenia | [StopTracingSession](functions/stop-tracing-session.md) | [StopTracingSessionA](functions/stop-tracing-session-a.md)<br />[StopTracingSessionW](functions/stop-tracing-session-w.md) |
@@ -77,7 +77,7 @@ Po utworzeniu śledzenia ETW Użyj zestawu SDK usługi Build Insights, aby go ro
 
 ### <a name="sdk-types-and-functions-related-to-trace-consumption"></a>Typy i funkcje zestawu SDK związane z użyciem śledzenia
 
-| Funkcjonalność | Interfejs API języka C++ | INTERFEJS API JĘZYKA C | Uwagi |
+| Funkcja | Interfejs API języka C++ | INTERFEJS API JĘZYKA C | Uwagi |
 |--|--|--|--|
 | Konfigurowanie wywołań zwrotnych zdarzeń | [IAnalyzer](other-types/ianalyzer-class.md)<br />[IRelogger](other-types/irelogger-class.md) | [ANALYSIS_CALLBACKS](other-types/analysis-callbacks-struct.md)<br />[RELOG_CALLBACKS](other-types/relog-callbacks-struct.md) | Zestaw SDK usługi Build Insights w wersji C++ udostępnia zdarzenia za pomocą funkcji wywołania zwrotnego. W języku C++ zaimplementuj funkcje wywołania zwrotnego, tworząc Analizator lub klasę rerejestratora, która dziedziczy interfejs IAnalyzer lub IRelogger. W języku C Zaimplementuj wywołania zwrotne w funkcjach globalnych i podaj do nich wskaźniki w strukturze ANALYSIS_CALLBACKS lub RELOG_CALLBACKS. |
 | Kompilowanie grup | [MakeStaticAnalyzerGroup](functions/make-static-analyzer-group.md)<br />[MakeStaticReloggerGroup](functions/make-static-relogger-group.md)<br />[MakeDynamicAnalyzerGroup](functions/make-dynamic-analyzer-group.md)<br />[MakeDynamicReloggerGroup](functions/make-dynamic-relogger-group.md) |  | Interfejs API języka C++ udostępnia funkcje i typy pomocnika do grupowania wielu obiektów analizatora i ponownego rejestratora. Grupy to sposób, aby podzielić złożoną analizę na prostsze czynności. [vcperf](https://github.com/microsoft/vcperf) jest zorganizowany w ten sposób. |
@@ -145,14 +145,14 @@ int main()
 
 ### <a name="sdk-types-and-functions-related-to-events"></a>Typy i funkcje zestawu SDK związane ze zdarzeniami
 
-| Funkcjonalność | Interfejs API języka C++ | INTERFEJS API JĘZYKA C | Uwagi |
+| Funkcja | Interfejs API języka C++ | INTERFEJS API JĘZYKA C | Uwagi |
 |--|--|--|--|
 | Dopasowywanie i filtrowanie zdarzeń | [MatchEventStackInMemberFunction](functions/match-event-stack-in-member-function.md)<br />[MatchEventStack](functions/match-event-stack.md)<br />[MatchEventInMemberFunction](functions/match-event-in-member-function.md)<br />[MatchEvent](functions/match-event.md) |  | Interfejs API języka C++ oferuje funkcje, które ułatwiają wyodrębnienie zdarzeń, z których korzystasz ze śladów. Korzystając z interfejsu API języka C, to filtrowanie musi być wykonywane ręcznie. |
 | Typy danych zdarzenia | [Działanie](cpp-event-data-types/activity.md)<br />[BackEndPass](cpp-event-data-types/back-end-pass.md)<br />[BottomUp](cpp-event-data-types/bottom-up.md)<br />[C1DLL](cpp-event-data-types/c1-dll.md)<br />[C2DLL](cpp-event-data-types/c2-dll.md)<br />[CodeGeneration](cpp-event-data-types/code-generation.md)<br />[CommandLine](cpp-event-data-types/command-line.md)<br />[Compiler](cpp-event-data-types/compiler.md)<br />[CompilerPass](cpp-event-data-types/compiler-pass.md)<br />[EnvironmentVariable](cpp-event-data-types/environment-variable.md)<br />[Wydarzenie](cpp-event-data-types/event.md)<br />[EventGroup](cpp-event-data-types/event-group.md)<br />[EventStack](cpp-event-data-types/event-stack.md)<br />[ExecutableImageOutput](cpp-event-data-types/executable-image-output.md)<br />[ExpOutput](cpp-event-data-types/exp-output.md)<br />[FileInput](cpp-event-data-types/file-input.md)<br />[FileOutput](cpp-event-data-types/file-output.md)<br />[ForceInlinee](cpp-event-data-types/force-inlinee.md)<br />[FrontEndFile](cpp-event-data-types/front-end-file.md)<br />[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md)<br />[FrontEndPass](cpp-event-data-types/front-end-pass.md)<br />[Funkcja](cpp-event-data-types/function.md)<br />[ImpLibOutput](cpp-event-data-types/imp-lib-output.md)<br />[Invocation](cpp-event-data-types/invocation.md)<br />[InvocationGroup](cpp-event-data-types/invocation-group.md)<br />[LibOutput](cpp-event-data-types/lib-output.md)<br />[Konsolidator](cpp-event-data-types/linker.md)<br />[LinkerGroup](cpp-event-data-types/linker-group.md)<br />[LinkerPass](cpp-event-data-types/linker-pass.md)<br />[LTCG](cpp-event-data-types/ltcg.md)<br />[ObjOutput](cpp-event-data-types/obj-output.md)<br />[OptICF](cpp-event-data-types/opt-icf.md)<br />[OptLBR](cpp-event-data-types/opt-lbr.md)<br />[OptRef](cpp-event-data-types/opt-ref.md)<br />[Pass1](cpp-event-data-types/pass1.md)<br />[Pass2](cpp-event-data-types/pass2.md)<br />[PreLTCGOptRef](cpp-event-data-types/pre-ltcg-opt-ref.md)<br />[SimpleEvent](cpp-event-data-types/simple-event.md)<br />[SymbolName](cpp-event-data-types/symbol-name.md)<br />[TemplateInstantiation](cpp-event-data-types/template-instantiation.md)<br />[TemplateInstantiationGroup](cpp-event-data-types/template-instantiation-group.md)<br />[Nici](cpp-event-data-types/thread.md)<br />[TopDown](cpp-event-data-types/top-down.md)<br />[TraceInfo](cpp-event-data-types/trace-info.md)<br />[WholeProgramAnalysis](cpp-event-data-types/whole-program-analysis.md) | [CL_PASS_DATA](c-event-data-types/cl-pass-data-struct.md)<br />[EVENT_COLLECTION_DATA](c-event-data-types/event-collection-data-struct.md)<br />[EVENT_DATA](c-event-data-types/event-data-struct.md)<br />[EVENT_ID](c-event-data-types/event-id-enum.md)<br />[FILE_DATA](c-event-data-types/file-data-struct.md)<br />[FILE_TYPE_CODE](c-event-data-types/file-type-code-enum.md)<br />[FRONT_END_FILE_DATA](c-event-data-types/front-end-file-data-struct.md)<br />[FUNCTION_DATA](c-event-data-types/function-data-struct.md)<br />[FUNCTION_FORCE_INLINEE_DATA](c-event-data-types/function-force-inlinee-data-struct.md)<br />[INVOCATION_DATA](c-event-data-types/invocation-data-struct.md)<br />[INVOCATION_VERSION_DATA](c-event-data-types/invocation-version-data-struct.md)<br />[MSVC_TOOL_CODE](c-event-data-types/msvc-tool-code-enum.md)<br />[NAME_VALUE_PAIR_DATA](c-event-data-types/name-value-pair-data-struct.md)<br />[SYMBOL_NAME_DATA](c-event-data-types/symbol-name-data-struct.md)<br />[TEMPLATE_INSTANTIATION_DATA](c-event-data-types/template-instantiation-data-struct.md)<br />[TEMPLATE_INSTANTIATION_KIND_CODE](c-event-data-types/template-instantiation-kind-code-enum.md)<br />[TRACE_INFO_DATA](c-event-data-types/trace-info-data-struct.md)<br />[TRANSLATION_UNIT_PASS_CODE](c-event-data-types/translation-unit-pass-code-enum.md) |  |
 
 ### <a name="activities-and-simple-events"></a>Działania i zdarzenia proste
 
-Zdarzenia są dostępne w dwóch kategoriach: *działania* i *proste zdarzenia*. Działania są ciągłymi procesami, które mają początek i zakończenie. Proste zdarzenia to punktualne wystąpienia i nie mają czasu trwania. Podczas analizowania śladów MSVC za pomocą zestawu SDK języka C++ build Insights otrzymasz oddzielne zdarzenia, gdy działanie zostanie uruchomione i zatrzymane. Po wystąpieniu prostego zdarzenia otrzymasz tylko jedno zdarzenie.
+Zdarzenia są dostępne w dwóch kategoriach: *działania* i *proste zdarzenia* . Działania są ciągłymi procesami, które mają początek i zakończenie. Proste zdarzenia to punktualne wystąpienia i nie mają czasu trwania. Podczas analizowania śladów MSVC za pomocą zestawu SDK języka C++ build Insights otrzymasz oddzielne zdarzenia, gdy działanie zostanie uruchomione i zatrzymane. Po wystąpieniu prostego zdarzenia otrzymasz tylko jedno zdarzenie.
 
 ### <a name="parent-child-relationships"></a>Relacje nadrzędny-podrzędny
 
@@ -197,7 +197,7 @@ Za każdym razem, gdy zestaw SDK usługi Build Insights zawiera zdarzenie, znajd
 
 #### <a name="matching-events-and-event-stacks"></a>Zgodne zdarzenia i stosy zdarzeń
 
-Zestaw SDK usługi Build Insights w wersji zapoznawczej udostępnia każde zdarzenie w śladach, ale większość z nich zajmuje się tylko ich podzbiorem. W niektórych przypadkach można zadbać o to tylko podzbiór *stosów zdarzeń*. Zestaw SDK udostępnia funkcje ułatwiające szybkie wyodrębnienie potrzebnych zdarzeń lub stosu zdarzeń oraz odrzucanie tych elementów. Jest to wykonywane przez następujące zgodne funkcje:
+Zestaw SDK usługi Build Insights w wersji zapoznawczej udostępnia każde zdarzenie w śladach, ale większość z nich zajmuje się tylko ich podzbiorem. W niektórych przypadkach można zadbać o to tylko podzbiór *stosów zdarzeń* . Zestaw SDK udostępnia funkcje ułatwiające szybkie wyodrębnienie potrzebnych zdarzeń lub stosu zdarzeń oraz odrzucanie tych elementów. Jest to wykonywane przez następujące zgodne funkcje:
 
 | Funkcja | Opis |
 |--|--|
@@ -210,13 +210,13 @@ Funkcja dopasowania stosu zdarzeń, taka jak `MatchEventStack` Zezwalaj na przer
 
 #### <a name="capture-classes"></a>Klasy przechwytywania
 
-Korzystanie z `Match*` funkcji wymaga określenia typów, które mają być zgodne. Te typy są wybierane z listy *klas przechwytywania*. Klasy przechwytywania pochodzą z kilku kategorii opisanych poniżej.
+Korzystanie z `Match*` funkcji wymaga określenia typów, które mają być zgodne. Te typy są wybierane z listy *klas przechwytywania* . Klasy przechwytywania pochodzą z kilku kategorii opisanych poniżej.
 
 | Kategoria | Opis |
 |--|--|
 | Exact | Te klasy przechwytywania są używane do dopasowania określonego typu zdarzenia i nie są inne. Przykładem jest Klasa [kompilatora](cpp-event-data-types/compiler.md) , która odpowiada zdarzeniu [kompilatora](event-table.md#compiler) . |
 | Znaku | Te klasy przechwytywania mogą służyć do dopasowania dowolnego zdarzenia z listy zdarzeń, które są przez nie obsługiwane. Na przykład symbol wieloznaczny [działania](cpp-event-data-types/activity.md) pasuje do dowolnego zdarzenia działania. Innym przykładem jest [CompilerPass](cpp-event-data-types/compiler-pass.md) symbol wieloznaczny, który może pasować do [FRONT_END_PASS](event-table.md#front-end-pass) lub [BACK_END_PASS](event-table.md#back-end-pass) zdarzenia. |
-| Group (Grupa) | Nazwy klas przechwytywania grupy kończą się w *grupie*. Są one używane do dopasowania wielu zdarzeń tego samego typu w wierszu, ignorując luki. Są one sensowne tylko podczas dopasowywania zdarzeń cyklicznych, ponieważ nie wiadomo, ile istnieje w stosie zdarzeń. Na przykład działanie [FRONT_END_FILE](event-table.md#front-end-file) odbywa się za każdym razem, gdy kompilator analizuje plik. To działanie jest cykliczne, ponieważ kompilator może znaleźć dyrektywę include podczas analizy pliku. Klasa [FrontEndFile](cpp-event-data-types/front-end-file.md) dopasowuje tylko jedno zdarzenie FRONT_END_FILE w stosie. Użyj klasy [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) , aby dopasować całą hierarchię dołączania. |
+| Group (Grupa) | Nazwy klas przechwytywania grupy kończą się w *grupie* . Są one używane do dopasowania wielu zdarzeń tego samego typu w wierszu, ignorując luki. Są one sensowne tylko podczas dopasowywania zdarzeń cyklicznych, ponieważ nie wiadomo, ile istnieje w stosie zdarzeń. Na przykład działanie [FRONT_END_FILE](event-table.md#front-end-file) odbywa się za każdym razem, gdy kompilator analizuje plik. To działanie jest cykliczne, ponieważ kompilator może znaleźć dyrektywę include podczas analizy pliku. Klasa [FrontEndFile](cpp-event-data-types/front-end-file.md) dopasowuje tylko jedno zdarzenie FRONT_END_FILE w stosie. Użyj klasy [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) , aby dopasować całą hierarchię dołączania. |
 | Grupa symboli wieloznacznych | Grupa symboli wieloznacznych łączy Właściwości symboli wieloznacznych i grup. Jedyną klasą tej kategorii jest [wywołanie](cpp-event-data-types/invocation-group.md), które dopasowuje i przechwytuje wszystkie zdarzenia [konsolidatora](event-table.md#linker) i [kompilatora](event-table.md#compiler) w pojedynczym stosie zdarzeń. |
 
 Zapoznaj się z [tabelą zdarzeń](event-table.md) , aby dowiedzieć się, które klasy przechwytywania mogą być używane do dopasowania poszczególnych zdarzeń.

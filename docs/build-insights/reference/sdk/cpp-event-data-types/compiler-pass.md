@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 054bdf75dcfca42b8c202565fb44df671f17f912
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bfbfdc28870a13a9cdb19d0ec050ea2e69fe1208
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831622"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920817"
 ---
 # <a name="compilerpass-class"></a>Klasa CompilerPass
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `CompilerPass`Klasa jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować [BACK_END_PASS](../event-table.md#back-end-pass) lub [FRONT_END_PASS](../event-table.md#front-end-pass) zdarzenia.
 
@@ -64,7 +64,7 @@ Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania]
 |FRONT_END|Fronton.|
 |BACK_END|Przebieg zaplecza.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 [InputSourcePath](#input-source-path)\
 [OutputObjectPath](#output-object-path)\

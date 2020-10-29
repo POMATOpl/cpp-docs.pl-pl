@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 72fff7e788e4ffd938867dfa662c98fc0305ec0c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838805"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922195"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Używanie zestawu narzędzi platformy Microsoft C++ w wierszu polecenia
 
@@ -26,13 +26,13 @@ Możesz tworzyć aplikacje C i C++ w wierszu polecenia, korzystając z narzędzi
 
 ## <a name="download-and-install-the-tools"></a>Pobieranie i Instalowanie narzędzi
 
-Jeśli zainstalowano program Visual Studio i obciążenie języka C++, masz wszystkie narzędzia wiersza polecenia. Aby uzyskać informacje na temat instalowania języków C++ i Visual Studio, zobacz [Install c++ Support in Visual Studio](vscpp-step-0-installation.md). Jeśli potrzebujesz tylko zestawu narzędzi wiersza polecenia, Pobierz [Narzędzia do kompilacji dla programu Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Po uruchomieniu pobranego pliku wykonywalnego program aktualizuje i uruchamia Instalator programu Visual Studio. Aby zainstalować tylko potrzebne narzędzia do programowania w języku C++, wybierz obciążenie **narzędzi kompilacji c++** . Można wybrać opcjonalne biblioteki i zestawy narzędzi do uwzględnienia w obszarze **szczegóły instalacji**. Aby skompilować kod przy użyciu zestawów narzędzi programu Visual Studio 2015 lub 2017, wybierz opcjonalne narzędzia do kompilacji MSVC wersji 140 lub MSVC najnowsze 141. Po spełnieniu wybranych opcji wybierz pozycję **Zainstaluj**.
+Jeśli zainstalowano program Visual Studio i obciążenie języka C++, masz wszystkie narzędzia wiersza polecenia. Aby uzyskać informacje na temat instalowania języków C++ i Visual Studio, zobacz [Install c++ Support in Visual Studio](vscpp-step-0-installation.md). Jeśli potrzebujesz tylko zestawu narzędzi wiersza polecenia, Pobierz [Narzędzia do kompilacji dla programu Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Po uruchomieniu pobranego pliku wykonywalnego program aktualizuje i uruchamia Instalator programu Visual Studio. Aby zainstalować tylko potrzebne narzędzia do programowania w języku C++, wybierz obciążenie **narzędzi kompilacji c++** . Można wybrać opcjonalne biblioteki i zestawy narzędzi do uwzględnienia w obszarze **szczegóły instalacji** . Aby skompilować kod przy użyciu zestawów narzędzi programu Visual Studio 2015 lub 2017, wybierz opcjonalne narzędzia do kompilacji MSVC wersji 140 lub MSVC najnowsze 141. Po spełnieniu wybranych opcji wybierz pozycję **Zainstaluj** .
 
 ## <a name="how-to-use-the-command-line-tools"></a>Jak używać narzędzi wiersza polecenia
 
-Po wybraniu jednego z obciążeń C++ w Instalator programu Visual Studio zainstaluje zestaw *narzędzi platformy*programu Visual Studio. Zestaw narzędzi platformy ma wszystkie narzędzia C i C++ dla określonej wersji programu Visual Studio. Narzędzia te obejmują kompilatory C/C++, linki, asemblery oraz inne narzędzia do kompilacji i zgodne biblioteki. Wszystkie z tych narzędzi można użyć w wierszu polecenia. Są one również używane wewnętrznie przez środowisko IDE programu Visual Studio. Istnieją oddzielne kompilatory i narzędzia obsługiwane przez architekturę x86, które umożliwiają tworzenie kodu dla obiektów docelowych x86, x64, ARM i ARM64. Każdy zestaw narzędzi dla określonego hosta i docelową architekturę kompilacji jest przechowywany w jego własnym katalogu.
+Po wybraniu jednego z obciążeń C++ w Instalator programu Visual Studio zainstaluje zestaw *narzędzi platformy* programu Visual Studio. Zestaw narzędzi platformy ma wszystkie narzędzia C i C++ dla określonej wersji programu Visual Studio. Narzędzia te obejmują kompilatory C/C++, linki, asemblery oraz inne narzędzia do kompilacji i zgodne biblioteki. Wszystkie z tych narzędzi można użyć w wierszu polecenia. Są one również używane wewnętrznie przez środowisko IDE programu Visual Studio. Istnieją oddzielne kompilatory i narzędzia obsługiwane przez architekturę x86, które umożliwiają tworzenie kodu dla obiektów docelowych x86, x64, ARM i ARM64. Każdy zestaw narzędzi dla określonego hosta i docelową architekturę kompilacji jest przechowywany w jego własnym katalogu.
 
-Aby można było poprawnie działać, narzędzia wymagają określenia kilku określonych zmiennych środowiskowych. Te zmienne służą do dodawania narzędzi do ścieżki oraz do ustawiania plików dołączanych, plików bibliotek i lokalizacji zestawu SDK. Aby ułatwić ustawienie tych zmiennych środowiskowych, Instalator tworzy niestandardowe *pliki poleceń*lub pliki wsadowe podczas instalacji. Można uruchomić jeden z tych plików poleceń, aby ustawić określony host i docelową architekturę kompilacji, wersję Windows SDK i zestaw narzędzi platformy. Dla wygody Instalator tworzy również skróty w menu Start. Skróty uruchamiają okna wiersza polecenia dla deweloperów, używając tych plików poleceń dla określonych kombinacji hosta i celu. Te skróty zapewniają, że wszystkie wymagane zmienne środowiskowe są ustawione i gotowe do użycia.
+Aby można było poprawnie działać, narzędzia wymagają określenia kilku określonych zmiennych środowiskowych. Te zmienne służą do dodawania narzędzi do ścieżki oraz do ustawiania plików dołączanych, plików bibliotek i lokalizacji zestawu SDK. Aby ułatwić ustawienie tych zmiennych środowiskowych, Instalator tworzy niestandardowe *pliki poleceń* lub pliki wsadowe podczas instalacji. Można uruchomić jeden z tych plików poleceń, aby ustawić określony host i docelową architekturę kompilacji, wersję Windows SDK i zestaw narzędzi platformy. Dla wygody Instalator tworzy również skróty w menu Start. Skróty uruchamiają okna wiersza polecenia dla deweloperów, używając tych plików poleceń dla określonych kombinacji hosta i celu. Te skróty zapewniają, że wszystkie wymagane zmienne środowiskowe są ustawione i gotowe do użycia.
 
 Wymagane zmienne środowiskowe są specyficzne dla danej instalacji i wybranej architektury kompilacji. Mogą być również zmieniane przez aktualizacje lub uaktualnienia produktów. Dlatego zalecamy użycie zainstalowanego skrótu wiersza polecenia lub pliku poleceń, zamiast samodzielnie ustawić zmienne środowiskowe. Aby uzyskać więcej informacji, zobacz [Ustawianie zmiennych dotyczących ścieżki i środowiska dla kompilacji w wierszu polecenia](setting-the-path-and-environment-variables-for-command-line-builds.md).
 
@@ -48,25 +48,25 @@ Skróty wiersza polecenia są instalowane w folderze programu Visual Studio spec
 - **wiersz polecenia narzędzi x86_x64 Cross Tools** — ustawia środowisko do używania 32-bitowych, x86-Native narzędzi do kompilowania 64-bitowego, 64-natywnego kodu.
 - **wiersz polecenia narzędzi x64_x86 Cross Tools** — ustawia środowisko do używania 64-bitowych, 64-natywnych narzędzi do tworzenia 32-bitowego kodu x86.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
-Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowanej wersji programu Visual Studio. Jeśli je ustawisz, zależą również od **pseudonimu**instalacji. Załóżmy na przykład, że zainstalowano program Visual Studio 2019 i został on przydomek do *najnowszej wersji*. Skrót do wiersza polecenia dla deweloperów ma nazwę **wiersz polecenia dla deweloperów dla programu VS 2019 (Najnowsza wersja)** w folderze o nazwie **Visual Studio 2019**.
-
-::: moniker-end
-::: moniker range="= vs-2017"
-
-Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowanej wersji programu Visual Studio. Jeśli je ustawisz, zależą również od **pseudonimu**instalacji. Załóżmy na przykład, że zainstalowano program Visual Studio 2017 i został on przydomek do *najnowszej wersji*. Skrót do wiersza polecenia dla deweloperów ma nazwę **wiersz polecenia dla deweloperów dla programu VS 2017 (Najnowsza wersja)** w folderze o nazwie **Visual Studio 2017**.
+Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowanej wersji programu Visual Studio. Jeśli je ustawisz, zależą również od **pseudonimu** instalacji. Załóżmy na przykład, że zainstalowano program Visual Studio 2019 i został on przydomek do *najnowszej wersji* . Skrót do wiersza polecenia dla deweloperów ma nazwę **wiersz polecenia dla deweloperów dla programu VS 2019 (Najnowsza wersja)** w folderze o nazwie **Visual Studio 2019** .
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="= msvc-150"
 
-Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowanej wersji programu Visual Studio. Załóżmy na przykład, że zainstalowano program Visual Studio 2015. Skrót do wiersza polecenia dla deweloperów ma nazwę **wiersz polecenia dla deweloperów dla programu VS 2015**.
+Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowanej wersji programu Visual Studio. Jeśli je ustawisz, zależą również od **pseudonimu** instalacji. Załóżmy na przykład, że zainstalowano program Visual Studio 2017 i został on przydomek do *najnowszej wersji* . Skrót do wiersza polecenia dla deweloperów ma nazwę **wiersz polecenia dla deweloperów dla programu VS 2017 (Najnowsza wersja)** w folderze o nazwie **Visual Studio 2017** .
+
+::: moniker-end
+::: moniker range="< msvc-150"
+
+Folder menu Start i nazwy skrótów różnią się w zależności od zainstalowanej wersji programu Visual Studio. Załóżmy na przykład, że zainstalowano program Visual Studio 2015. Skrót do wiersza polecenia dla deweloperów ma nazwę **wiersz polecenia dla deweloperów dla programu VS 2015** .
 
 ::: moniker-end
 
 ### <a name="to-open-a-developer-command-prompt-window"></a><a name="developer_command_prompt"></a> Aby otworzyć okno wiersza polecenia dla deweloperów
 
-1. Na pulpicie Otwórz menu **Start** systemu Windows, a następnie przewiń, aby znaleźć i otworzyć folder dla używanej wersji programu Visual Studio, na przykład **Visual Studio 2019**.
+1. Na pulpicie Otwórz menu **Start** systemu Windows, a następnie przewiń, aby znaleźć i otworzyć folder dla używanej wersji programu Visual Studio, na przykład **Visual Studio 2019** .
 
 1. W folderze wybierz **wiersz polecenia dla deweloperów** dla używanej wersji programu Visual Studio. Ten skrót uruchamia okno wiersza polecenia dla deweloperów, które używa domyślnej architektury kompilacji o 32-bitowej, x86-Native Tools do kompilowania 32-bitowego kodu x86. Jeśli wolisz niedomyślną architekturę kompilacji, wybierz jedną z poleceń narzędzia natywnego lub krzyżowego, aby określić architekturę hosta i docelową.
 
@@ -76,17 +76,17 @@ Aby jeszcze szybszy otworzyć wiersz polecenia dewelopera, wprowadź *wiersz pol
 
 Jeśli wolisz ustawić środowisko kompilacji w istniejącym oknie wiersza polecenia, możesz użyć jednego z plików poleceń utworzonych przez Instalatora. Zalecamy ustawienie środowiska w nowym oknie wiersza polecenia. Nie zalecamy później przełączania środowisk w tym samym oknie poleceń.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
-Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2019 typowa lokalizacja instalacji w systemie 64-bitowym jest w \\ plikach Program Files (x86) \\ Microsoft Visual Studio \\ 2019 \\ *Edition*. *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
-
-::: moniker-end
-::: moniker range="= vs-2017"
-
-Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2017 typowa lokalizacja instalacji w systemie 64-bitowym jest w \\ plikach Program Files (x86) \\ Microsoft Visual Studio \\ 2017 \\ *Edition*. *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
+Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2019 typowa lokalizacja instalacji w systemie 64-bitowym jest w \\ plikach Program Files (x86) \\ Microsoft Visual Studio \\ 2019 \\ *Edition* . *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="= msvc-150"
+
+Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2017 typowa lokalizacja instalacji w systemie 64-bitowym jest w \\ plikach Program Files (x86) \\ Microsoft Visual Studio \\ 2017 \\ *Edition* . *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
+
+::: moniker-end
+::: moniker range="< msvc-150"
 
 Lokalizacja pliku poleceń zależy od wersji programu Visual Studio i katalogu instalacyjnego. W przypadku programu Visual Studio 2015 typowa lokalizacja instalacji to w \\ plikach programowych (x86) \\ Microsoft Visual Studio 14,0.
 
@@ -94,12 +94,12 @@ Lokalizacja pliku poleceń zależy od wersji programu Visual Studio i katalogu i
 
 Podstawowy plik poleceń wiersza polecenia dla deweloperów, VsDevCmd.bat, znajduje się w \\ podkatalogu Tools Common7. Jeśli nie określono parametrów, ustawia środowisko do używania narzędzi x86-native do kompilowania 32-bitowego kodu x86.
 
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 Więcej plików poleceń jest dostępnych do skonfigurowania określonych architektur kompilacji. Dostępne pliki poleceń zależą od obciążeń i opcji programu Visual Studio, które zostały zainstalowane. W programie Visual Studio 2017 i Visual Studio 2019 znajdują się one w \\ \\ podkatalogu kompilacji pomocniczej VC.
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 Więcej plików poleceń jest dostępnych do skonfigurowania określonych architektur kompilacji. Dostępne pliki poleceń zależą od obciążeń i opcji programu Visual Studio, które zostały zainstalowane. W programie Visual Studio 2015 znajdują się one w \\ podkatalogach VC, VC lub \\ VC \\ *architektury* bin, gdzie *Architecture* jest jedną z opcji macierzystych lub międzykompilatorowych.
 
@@ -130,7 +130,7 @@ Gdy jest używany bez argumentów, vcvarsall.bat konfiguruje zmienne środowisko
 
 ### <a name="vcvarsall-syntax"></a>Składnia vcvarsall
 
-> **vcvarsall.bat** [*architektura*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver =**_vcversion_]
+> **vcvarsall.bat** [ *architektura* ] [ *platform_type* ] [ *winsdk_version* ] [ **-vcvars_ver =**_vcversion_ ]
 
 *Będąc*<br/>
 Ten opcjonalny argument określa architekturę hosta i docelowy do użycia. Jeśli *Architektura* nie jest określona, używane jest domyślne środowisko kompilacji. Te argumenty są obsługiwane:
@@ -150,19 +150,19 @@ Ten opcjonalny argument określa architekturę hosta i docelowy do użycia. Jeś
 Ten opcjonalny argument umożliwia określenie **sklepu** lub **platformy UWP** jako typu platformy. Domyślnie środowisko jest ustawione na potrzeby kompilowania aplikacji klasycznych lub konsolowych.
 
 *winsdk_version*<br/>
-Opcjonalnie określa wersję Windows SDK, która ma być używana. Domyślnie jest używana najnowsza Windows SDK. Aby określić wersję Windows SDK, można użyć pełnego numeru zestawu SDK systemu Windows 10, takiego jak **10.0.10240.0**, lub określić **8,1** , aby użyć zestawu Windows 8.1 SDK.
+Opcjonalnie określa wersję Windows SDK, która ma być używana. Domyślnie jest używana najnowsza Windows SDK. Aby określić wersję Windows SDK, można użyć pełnego numeru zestawu SDK systemu Windows 10, takiego jak **10.0.10240.0** , lub określić **8,1** , aby użyć zestawu Windows 8.1 SDK.
 
 *vcversion*<br/>
 Opcjonalnie określa zestaw narzędzi kompilatora programu Visual Studio, który ma być używany. Domyślnie środowisko jest skonfigurowane do korzystania z bieżącego zestawu narzędzi kompilatora programu Visual Studio.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 Użyj **-vcvars_ver = 14.2 x. rrrr** , aby określić określoną wersję zestawu narzędzi kompilatora programu Visual Studio 2019.
 
 Użyj **-vcvars_ver = 14.16** , aby określić najnowszą wersję zestawu narzędzi kompilatora programu Visual Studio 2017.
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 Użyj **-vcvars_ver = 14.16** , aby określić najnowszą wersję zestawu narzędzi kompilatora programu Visual Studio 2017.
 
@@ -174,7 +174,7 @@ Użyj **-vcvars_ver = 14.0** , aby określić zestaw narzędzi kompilatora progr
 
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a> Aby skonfigurować środowisko kompilacji w istniejącym oknie wiersza polecenia
 
-1. W wierszu polecenia Użyj polecenia CD, aby przejść do katalogu instalacyjnego programu Visual Studio. Następnie ponownie Użyj dysku CD, aby przejść do podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. W przypadku programów Visual Studio 2019 i Visual Studio 2017 należy użyć podkatalogu * \\ \\ kompilacji pomocniczej VC* . Dla programu Visual Studio 2015 Użyj podkatalogu *VC* .
+1. W wierszu polecenia Użyj polecenia CD, aby przejść do katalogu instalacyjnego programu Visual Studio. Następnie ponownie Użyj dysku CD, aby przejść do podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. W przypadku programów Visual Studio 2019 i Visual Studio 2017 należy użyć podkatalogu *\\ \\ kompilacji pomocniczej VC* . Dla programu Visual Studio 2015 Użyj podkatalogu *VC* .
 
 1. Wprowadź polecenie dla preferowanego środowiska deweloperskiego. Na przykład, aby skompilować kod ARM dla platformy UWP na platformie 64-bitowej przy użyciu najnowszych Windows SDK i zestawu narzędzi kompilatora programu Visual Studio, użyj tego wiersza polecenia:
 
@@ -182,21 +182,21 @@ Użyj **-vcvars_ver = 14.0** , aby określić zestaw narzędzi kompilatora progr
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>Utwórz własny skrót do wiersza polecenia
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 Otwórz okno dialogowe właściwości dla skrótu wiersza polecenia dla deweloperów, aby zobaczyć użyty obiekt docelowy polecenia. Na przykład element docelowy dla skrótu **wiersz polecenia narzędzi x64 Native Tools dla programu VS 2019** to coś podobnego do:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 Otwórz okno dialogowe właściwości dla skrótu wiersza polecenia dla deweloperów, aby zobaczyć użyty obiekt docelowy polecenia. Na przykład element docelowy dla skrótu **wiersz polecenia narzędzi x64 Native Tools dla programu VS 2017** to coś podobnego do:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 Otwórz okno dialogowe właściwości dla skrótu wiersza polecenia dla deweloperów, aby zobaczyć użyty obiekt docelowy polecenia. Na przykład obiekt docelowy skrótu **programu vs2015 wiersz polecenia narzędzi x64 Native Tools** jest coś podobnego do:
 
@@ -206,17 +206,17 @@ Otwórz okno dialogowe właściwości dla skrótu wiersza polecenia dla dewelope
 
 Pliki wsadowe specyficzne dla architektury ustawiają parametr *architektury* i vcvarsall.bat wywołań. Te same opcje można przekazać do tych plików wsadowych, co zostało przekazane do vcvarsall.bat lub można tylko wywołać vcvarsall.bat bezpośrednio. Aby określić parametry dla własnego skrótu polecenia, Dodaj je na końcu polecenia w podwójnym cudzysłowie. Na przykład Oto skrót do kompilowania kodu ARM dla platformy UWP na platformie 64-bitowej przy użyciu najnowszej Windows SDK. Aby użyć wcześniejszego zestawu narzędzi kompilatora, określ numer wersji. Użyj podobnej do tego celu polecenia w skrócie:
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.16`
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.0`
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64 -vcvars_ver=12.0`
 
@@ -288,6 +288,6 @@ Zawiera łącza do artykułów, które omawiają Opcje konsolidatora i LINK.exe.
 [Dodatkowe narzędzia kompilacji kompilatora MSVC](reference/c-cpp-build-tools.md)<br/>
 Oferuje linki do narzędzi do kompilacji C/C++, które są zawarte w programie Visual Studio.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)

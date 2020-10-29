@@ -1,6 +1,6 @@
 ---
-title: Klasa funkcyjna
-description: Odwołanie do klasy funkcji SDK kompilacji języka C++.
+title: Function — Klasa
+description: Odwołanie do klasy funkcji zestawu SDK w usłudze C++ build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 69acbe4d6630de37120aec89a24a9f33d447009e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 874477b9ca31095bfcf4ba3c7a6fd220dc073415
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324723"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920648"
 ---
-# <a name="function-class"></a>Klasa funkcyjna
+# <a name="function-class"></a>Function — Klasa
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `Function` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować zdarzenie [FUNCTION.](../event-table.md#function)
+`Function`Klasa jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj jej do dopasowania zdarzenia [funkcji](../event-table.md#function) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,9 +41,9 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z odziedziczonych elementów członkowskich z `Function` jego [działania](activity.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
+Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania](activity.md) `Function` Klasa zawiera następujących członków:
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 [Funkcja](#function)
 
@@ -51,7 +51,7 @@ Wraz z odziedziczonych elementów członkowskich z `Function` jego [działania](
 
 [Nazwa](#name)
 
-## <a name="function"></a><a name="function"></a>Funkcja
+## <a name="function"></a><a name="function"></a> Funkcyjn
 
 ```cpp
 Function(const RawEvent& event);
@@ -59,10 +59,10 @@ Function(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-*Zdarzenie*\
-Zdarzenie [FUNCTION.](../event-table.md#function)
+*wydarzen*\
+Zdarzenie [funkcji](../event-table.md#function) .
 
-## <a name="name"></a><a name="name"></a>Nazwa
+## <a name="name"></a><a name="name"></a> Nazwij
 
 ```cpp
 const char* Name() const;
@@ -70,6 +70,6 @@ const char* Name() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nazwa funkcji zakodowana w UTF-8.
+Nazwa funkcji zakodowana w formacie UTF-8.
 
 ::: moniker-end

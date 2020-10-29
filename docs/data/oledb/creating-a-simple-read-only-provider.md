@@ -5,30 +5,30 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: 466530cb8c2ebca7f1c87370389309d3a0486e26
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: c7c6c5bb2691a110a6368decd875f5a5a06b11b5
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707610"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919192"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Tworzenie prostego dostawcy tylko do odczytu
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Kreator ATL OLE DB Provider nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Kreator dostawcy OLE DB ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Po utworzeniu dostawcy OLE DB przy użyciu **Kreator projektów ATL** i **Kreator biblioteki ATL OLE DB Provider**, można dodać inne funkcje, które mają być obsługiwane. Rozpocznij projektowanie dostawcy, sprawdzając rodzaj danych, które można będzie wysyłania do użytkownika, jak i w jakich okolicznościach. Jest to szczególnie ważne ustalić, czy wymagana jest obsługa polecenia, transakcji i inne opcjonalne obiekty. Na początku dobrego projektowania przyspieszy implementowania i testowania.
+Po utworzeniu dostawcy OLE DB przy użyciu **Kreatora projektu ATL** i **kreatora dostawcy ATL OLE DB** można dodać inne funkcje, które mają być obsługiwane. Rozpocznij projektowanie dostawcy, sprawdzając, jakiego rodzaju dane będą wysyłane do konsumenta i w jakich warunkach. Szczególnie ważne jest, aby określić, czy należy obsługiwać polecenia, transakcje i inne opcjonalne obiekty. Dobrym etapem projektowania jest przyspieszenie wdrożenia i przetestowania.
 
-Przykład został przedstawiony w dwóch częściach:
+Przykład jest prezentowany w dwóch częściach:
 
-- Pierwszy pokazuje części jak [Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md) który odczytuje pary ciągów.
+- Pierwsza część pokazuje, jak [utworzyć prostego dostawcę tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md) , który odczytuje parę ciągów.
 
-- Drugi pokazuje części jak [zwiększenia prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md) , dodając `IRowsetLocate` interfejsu.
+- Druga część pokazuje [, jak zwiększyć prostego dostawcę tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md) przez dodanie `IRowsetLocate` interfejsu.
 
 ::: moniker-end
 

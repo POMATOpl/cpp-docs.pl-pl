@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 82c2bd3765802f87025eaf2dfbda8f7467bbe9a0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499620"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921246"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: implementowanie strony właściwości
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Kreator strony właściwości ATL nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Ten przykład pokazuje, jak utworzyć stronę właściwości, która wyświetla (i pozwala zmieniać) właściwości interfejsu [klasy dokumentu](../mfc/document-classes.md) .
 
@@ -171,7 +171,7 @@ Po uruchomieniu tego makra zostanie wyświetlona strona właściwości zawieraj�
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
 [Przykład ATLPages](../overview/visual-cpp-samples.md)

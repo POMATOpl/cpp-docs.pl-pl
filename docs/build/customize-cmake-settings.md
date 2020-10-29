@@ -3,20 +3,20 @@ title: Dostosowywanie ustawień kompilacji CMake w programie Visual Studio
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: c6bd1404799ccc9ad6b689646cd066849d48fca8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9fa1a21b26088482fb64441d0ccf0ad968bd480f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328676"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919270"
 ---
 # <a name="customize-cmake-build-settings"></a>Dostosowywanie ustawień kompilacji narzędzia CMake
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-W programie Visual Studio 2019 i nowszych można dodać konfiguracje i dostosować ich ustawienia za pomocą **edytora ustawień CMAKE**. Edytor ma być prostszym rozwiązaniem alternatywnym do ręcznego edytowania pliku *pliku cmakesettings. JSON* , ale jeśli wolisz edytować plik bezpośrednio, możesz kliknąć link **Edytuj kod JSON** w prawym górnym rogu edytora.
+W programie Visual Studio 2019 i nowszych można dodać konfiguracje i dostosować ich ustawienia za pomocą **edytora ustawień CMAKE** . Edytor ma być prostszym rozwiązaniem alternatywnym do ręcznego edytowania *CMakeSettings.jsw* pliku, ale jeśli wolisz edytować plik bezpośrednio, możesz kliknąć link **Edytuj kod JSON** w prawym górnym rogu edytora.
 
-Aby otworzyć Edytor, kliknij listę rozwijaną **Konfiguracja** na głównym pasku narzędzi i wybierz pozycję **Zarządzaj konfiguracjami**.
+Aby otworzyć Edytor, kliknij listę rozwijaną **Konfiguracja** na głównym pasku narzędzi i wybierz pozycję **Zarządzaj konfiguracjami** .
 
 ![Lista rozwijana konfiguracji CMake](media/vs2019-cmake-manage-configurations.png)
 
@@ -24,9 +24,9 @@ Teraz zostanie wyświetlony **Edytor ustawień** z zainstalowanymi konfiguracjam
 
 ![Edytor ustawień CMake](media/cmake-settings-editor.png)
 
-Program Visual Studio domyślnie `x64-Debug` udostępnia jedną konfigurację. Aby dodać dodatkowe konfiguracje, kliknij zielony znak plus. Ustawienia wyświetlane w edytorze mogą się różnić w zależności od tego, która konfiguracja została wybrana.
+Program Visual Studio domyślnie udostępnia jedną `x64-Debug` konfigurację. Aby dodać dodatkowe konfiguracje, kliknij zielony znak plus. Ustawienia wyświetlane w edytorze mogą się różnić w zależności od tego, która konfiguracja została wybrana.
 
-Opcje wybrane w edytorze są zapisywane w pliku o nazwie *pliku cmakesettings. JSON*. Ten plik zawiera argumenty wiersza polecenia i zmienne środowiskowe, które są przekazane do CMake podczas kompilowania projektów. Program Visual Studio nigdy nie modyfikuje *CMakeLists. txt* . za pomocą *pliku cmakesettings. JSON* można dostosować kompilację za pośrednictwem programu Visual Studio, pozostawiając nienaruszone pliki projektu cmake, tak aby inni członkowie zespołu mogli korzystać z nich za pomocą dowolnych narzędzi, które są używane.
+Opcje wybrane w edytorze są zapisywane w pliku o nazwie *CMakeSettings.json* . Ten plik zawiera argumenty wiersza polecenia i zmienne środowiskowe, które są przekazane do CMake podczas kompilowania projektów. Program Visual Studio nigdy nie modyfikuje *CMakeLists.txt* automatycznie; za pomocą *CMakeSettings.jsna* można dostosować kompilację za pośrednictwem programu Visual Studio, pozostawiając niezmienione pliki projektu cmake, tak aby inni członkowie zespołu mogli korzystać z nich za pomocą dowolnych narzędzi, które są używane.
 
 ## <a name="cmake-general-settings"></a>Ustawienia ogólne CMake
 
@@ -42,15 +42,15 @@ Odpowiada ustawieniu **ConfigurationType** . Definiuje typ konfiguracji kompilac
 
 ### <a name="toolset"></a>Zestaw narzędzi
 
-Odpowiada ustawieniu **inheritedEnvironments** . Definiuje środowisko kompilatora, które jest używane do tworzenia wybranej konfiguracji. Obsługiwane wartości zależą od typu konfiguracji. Aby utworzyć środowisko niestandardowe, wybierz łącze **Edytuj kod JSON** w prawym górnym rogu edytora ustawień i bezpośrednio Edytuj plik *pliku cmakesettings. JSON* .
+Odpowiada ustawieniu **inheritedEnvironments** . Definiuje środowisko kompilatora, które jest używane do tworzenia wybranej konfiguracji. Obsługiwane wartości zależą od typu konfiguracji. Aby utworzyć środowisko niestandardowe, wybierz łącze **Edytuj kod JSON** w prawym górnym rogu edytora ustawień i edytuj *CMakeSettings.jsw* pliku bezpośrednio.
 
 ### <a name="cmake-toolchain-file"></a>Plik łańcucha narzędzi CMake
 
-Ścieżka do [pliku łańcucha narzędzi CMAKE](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html). Ta ścieżka jest przenoszona do CMake jako "-DCMAKE_TOOLCHAIN_FILE \<= FilePath>". Pliki łańcucha narzędzi określają lokalizacje kompilatorów i narzędzi łańcucha narzędzi oraz inne informacje związane z platformą docelową i kompilatorem. Domyślnie program Visual Studio używa [pliku vcpkg łańcucha narzędzi](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) , jeśli to ustawienie jest nieokreślone.
+Ścieżka do [pliku łańcucha narzędzi CMAKE](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html). Ta ścieżka jest przenoszona do CMake jako "-DCMAKE_TOOLCHAIN_FILE = \<filepath> ". Pliki łańcucha narzędzi określają lokalizacje kompilatorów i narzędzi łańcucha narzędzi oraz inne informacje związane z platformą docelową i kompilatorem. Domyślnie program Visual Studio używa [pliku vcpkg łańcucha narzędzi](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) , jeśli to ustawienie jest nieokreślone.
 
 ### <a name="build-root"></a>Kompiluj główny
 
-Odnosi się do **element buildroot**. Mapuje do [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)i określa miejsce tworzenia pamięci podręcznej CMAKE. Określony folder zostanie utworzony, jeśli nie istnieje.
+Odnosi się do **element buildroot** . Mapuje do [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)i określa miejsce tworzenia pamięci podręcznej CMAKE. Określony folder zostanie utworzony, jeśli nie istnieje.
 
 ## <a name="command-arguments"></a>Argumenty polecenia
 
@@ -58,15 +58,15 @@ Następujące ustawienia są dostępne pod nagłówkiem **argumenty polecenia** 
 
 ### <a name="cmake-command-arguments"></a>Argumenty polecenia CMake
 
-Odnosi się do **cmakeCommandArgs**. Określa wszelkie dodatkowe [Opcje wiersza polecenia](https://cmake.org/cmake/help/latest/manual/cmake.1.html) przekazaną do cmake. exe.
+Odnosi się do **cmakeCommandArgs** . Określa wszelkie dodatkowe [Opcje wiersza polecenia](https://cmake.org/cmake/help/latest/manual/cmake.1.html) przekazaną do CMake.exe.
 
 ### <a name="build-command-arguments"></a>Argumenty polecenia kompilacji
 
-Odnosi się do **buildCommandArgs**. Określa dodatkowe przełączniki do przekazania do bazowego systemu kompilacji. Na przykład przekazywanie `-v` przy użyciu generatora Ninja wymusza Ninja do danych wyjściowych wiersza polecenia.
+Odnosi się do **buildCommandArgs** . Określa dodatkowe przełączniki do przekazania do bazowego systemu kompilacji. Na przykład przekazywanie `-v` przy użyciu generatora Ninja wymusza Ninja do danych wyjściowych wiersza polecenia.
 
 ### <a name="ctest-command-arguments"></a>Argumenty polecenia narzędzia ctest
 
-Odnosi się do **ctestCommandArgs**. Określa dodatkowe [Opcje wiersza polecenia](https://cmake.org/cmake/help/v3.15/manual/ctest.1.html) , które zostaną przekazane do narzędzia ctest podczas uruchamiania testów.
+Odnosi się do **ctestCommandArgs** . Określa dodatkowe [Opcje wiersza polecenia](https://cmake.org/cmake/help/v3.15/manual/ctest.1.html) , które zostaną przekazane do narzędzia ctest podczas uruchamiania testów.
 
 ## <a name="general-settings-for-remote-builds"></a>Ustawienia ogólne dla kompilacji zdalnych
 
@@ -78,15 +78,15 @@ Dodatkowe opcje wiersza polecenia przechodzą do [rsync](https://download.samba.
 
 ## <a name="cmake-variables-and-cache"></a>CMake zmienne i pamięć podręczną
 
-Te ustawienia umożliwiają ustawienie zmiennych CMake i zapisanie ich w pliku *pliku cmakesettings. JSON*. Są one przenoszone do CMake w czasie kompilacji i przesłonięcia wszelkich wartości w pliku *CMakeLists. txt* . Tej sekcji można użyć w taki sam sposób, w jaki można użyć CMakeGUI, aby wyświetlić listę wszystkich zmiennych CMake dostępnych do edycji. Kliknij przycisk **Zapisz i Generuj pamięć podręczną** , aby wyświetlić listę wszystkich zmiennych CMAKE dostępnych do edycji, w tym zmiennych zaawansowanych (na CMakeGUI). Można filtrować listę według nazwy zmiennej.
+Te ustawienia umożliwiają ustawienie zmiennych CMake i zapisanie ich w *CMakeSettings.js* . Są one przenoszone do CMake w czasie kompilacji i przesłonięcia wszelkich wartości, które znajdują się w pliku *CMakeLists.txt* . Tej sekcji można użyć w taki sam sposób, w jaki można użyć CMakeGUI, aby wyświetlić listę wszystkich zmiennych CMake dostępnych do edycji. Kliknij przycisk **Zapisz i Generuj pamięć podręczną** , aby wyświetlić listę wszystkich zmiennych CMAKE dostępnych do edycji, w tym zmiennych zaawansowanych (na CMakeGUI). Można filtrować listę według nazwy zmiennej.
 
-Odnosi się do **zmiennych**. Zawiera parę nazwa-wartość zmiennych CMAKE przekazaną jako **-D** *wartość _nazwy_=* D do cmake. Jeśli instrukcje dotyczące kompilacji projektu CMake określają dodanie jakichkolwiek zmiennych bezpośrednio do pliku pamięci podręcznej CMake, zalecamy ich dodanie zamiast tego.
+Odnosi się do **zmiennych** . Zawiera parę nazwa-wartość zmiennych CMAKE przekazaną jako **-D** *_name_ = _wartość_ nazwy* D do cmake. Jeśli instrukcje dotyczące kompilacji projektu CMake określają dodanie jakichkolwiek zmiennych bezpośrednio do pliku pamięci podręcznej CMake, zalecamy ich dodanie zamiast tego.
 
 ## <a name="advanced-settings"></a>Ustawienia zaawansowane
 
 ### <a name="cmake-generator"></a>Generator CMake
 
-Odnosi się do **generatora**. Mapuje na przełącznik CMake **-G** i określa [Generator CMAKE](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) , który ma być używany. Ta właściwość może być również używana jako makro, `${generator}`podczas tworzenia innych wartości właściwości. Program Visual Studio obecnie obsługuje następujące generatory CMake:
+Odnosi się do **generatora** . Mapuje na przełącznik CMake **-G** i określa [Generator CMAKE](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) , który ma być używany. Ta właściwość może być również używana jako makro, `${generator}` podczas tworzenia innych wartości właściwości. Program Visual Studio obecnie obsługuje następujące generatory CMake:
 
 - Ninja
 - "Pliki reguł programu make systemu UNIX"
@@ -116,9 +116,9 @@ Pełna ścieżka do pliku wykonywalnego programu CMake, w tym nazwa i rozszerzen
 
 W przypadku konfiguracji, takich jak Linux, które korzystają z kompilacji zdalnych, dostępne są również następujące ustawienia:
 
-### <a name="remote-cmakeliststxt-root"></a>Zdalny CMakeLists. txt — główny
+### <a name="remote-cmakeliststxt-root"></a>Zdalny CMakeLists.txt główny
 
-Katalog na komputerze zdalnym, który zawiera plik root *CMakeLists. txt* .
+Katalog na komputerze zdalnym, który zawiera plik głównego *CMakeLists.txt* .
 
 ### <a name="remote-install-root"></a>Katalog główny instalacji zdalnej
 
@@ -128,9 +128,9 @@ Katalog na komputerze zdalnym, w którym program CMake instaluje elementy docelo
 
 Określa, czy pliki źródłowe mają być kopiowane do maszyny zdalnej, i umożliwia określenie, czy ma być używany rsync, czy SFTP.
 
-## <a name="directly-edit-cmakesettingsjson"></a>Bezpośrednio Edytuj plik pliku cmakesettings. JSON
+## <a name="directly-edit-cmakesettingsjson"></a>Edytuj bezpośrednio CMakeSettings.jsna
 
-Można również bezpośrednio edytować plik *pliku cmakesettings. JSON* w celu utworzenia konfiguracji niestandardowych. **Edytor ustawień** ma przycisk **Edytuj JSON** w prawym górnym rogu, który otwiera plik do edycji.
+Możesz również bezpośrednio edytować *CMakeSettings.jsw* programie, aby utworzyć niestandardowe konfiguracje. **Edytor ustawień** ma przycisk **Edytuj JSON** w prawym górnym rogu, który otwiera plik do edycji.
 
 W poniższym przykładzie przedstawiono przykładową konfigurację, której można użyć jako punktu wyjścia:
 
@@ -148,19 +148,19 @@ W poniższym przykładzie przedstawiono przykładową konfigurację, której mo�
     },
 ```
 
-Funkcja IntelliSense JSON pomaga edytować plik *pliku cmakesettings. JSON* :
+Funkcja IntelliSense JSON pomaga edytować *CMakeSettings.jsw* pliku:
 
    ![Funkcja IntelliSense JSON CMake](media/cmake-json-intellisense.png "Funkcja IntelliSense JSON CMake")
 
 Edytor JSON informuje także o wyborze niezgodnych ustawień.
 
-Aby uzyskać więcej informacji na temat każdej z właściwości w pliku, zobacz [pliku cmakesettings. JSON — odwołanie do schematu](cmakesettings-reference.md).
+Aby uzyskać więcej informacji na temat każdej z właściwości w pliku, zobacz [CMakeSettings.jsna temat odwołania do schematu](cmakesettings-reference.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Program Visual Studio 2017 zawiera kilka konfiguracji CMake, które definiują sposób wywoływania CMake. exe w celu utworzenia pamięci podręcznej CMake dla danego projektu. Aby dodać nową konfigurację, kliknij listę rozwijaną konfiguracja na pasku narzędzi i wybierz pozycję **Zarządzaj konfiguracjami**:
+Program Visual Studio 2017 zawiera kilka konfiguracji CMake, które definiują sposób wywoływania CMake.exe w celu utworzenia pamięci podręcznej CMake dla danego projektu. Aby dodać nową konfigurację, kliknij listę rozwijaną konfiguracja na pasku narzędzi i wybierz pozycję **Zarządzaj konfiguracjami** :
 
    ![CMake Zarządzanie konfiguracjami](media/cmake-manage-configurations.png)
 
@@ -168,15 +168,15 @@ Można wybrać jedną z listy wstępnie zdefiniowanych konfiguracji:
 
    ![Wstępnie zdefiniowane konfiguracje CMake](media/cmake-configurations.png)
 
-Przy pierwszym wybraniu konfiguracji program Visual Studio tworzy plik *pliku cmakesettings. JSON* w folderze głównym projektu. Ten plik jest używany do ponownego tworzenia pliku pamięci podręcznej CMake, na przykład po **czystej** operacji.
+Przy pierwszym wybraniu konfiguracji program Visual Studio tworzy *CMakeSettings.jsw* pliku w folderze głównym projektu. Ten plik jest używany do ponownego tworzenia pliku pamięci podręcznej CMake, na przykład po **czystej** operacji.
 
-Aby dodać dodatkową konfigurację, kliknij prawym przyciskiem myszy plik *pliku cmakesettings. JSON* i wybierz polecenie **Dodaj konfigurację**.
+Aby dodać dodatkową konfigurację, kliknij prawym przyciskiem myszy *CMakeSettings.jsna* i wybierz polecenie **Dodaj konfigurację** .
 
    ![CMake Dodawanie konfiguracji](media/cmake-add-configuration.png "CMake Dodawanie konfiguracji")
 
-Plik można również edytować za pomocą **edytora ustawień CMAKE**. Kliknij prawym przyciskiem myszy plik *pliku cmakesettings. JSON* w **Eksplorator rozwiązań** i wybierz polecenie **Edytuj ustawienia CMAKE**. Lub wybierz pozycję **Zarządzaj konfiguracjami** z listy rozwijanej konfiguracja w górnej części okna edytora.
+Plik można również edytować za pomocą **edytora ustawień CMAKE** . Kliknij prawym przyciskiem myszy pozycję *CMakeSettings.js* w obszarze **Eksplorator rozwiązań** i wybierz polecenie **Edytuj ustawienia CMAKE** . Lub wybierz pozycję **Zarządzaj konfiguracjami** z listy rozwijanej konfiguracja w górnej części okna edytora.
 
-Można również bezpośrednio edytować plik *pliku cmakesettings. JSON* w celu utworzenia konfiguracji niestandardowych. W poniższym przykładzie przedstawiono przykładową konfigurację, której można użyć jako punktu wyjścia:
+Możesz również bezpośrednio edytować *CMakeSettings.jsw* programie, aby utworzyć niestandardowe konfiguracje. W poniższym przykładzie przedstawiono przykładową konfigurację, której można użyć jako punktu wyjścia:
 
 ```json
     {
@@ -192,15 +192,15 @@ Można również bezpośrednio edytować plik *pliku cmakesettings. JSON* w celu
     },
 ```
 
-Funkcja IntelliSense JSON pomaga edytować plik *pliku cmakesettings. JSON* :
+Funkcja IntelliSense JSON pomaga edytować *CMakeSettings.jsw* pliku:
 
    ![Funkcja IntelliSense JSON CMake](media/cmake-json-intellisense.png "Funkcja IntelliSense JSON CMake")
 
-Aby uzyskać więcej informacji na temat każdej z właściwości w pliku, zobacz [pliku cmakesettings. JSON — odwołanie do schematu](cmakesettings-reference.md).
+Aby uzyskać więcej informacji na temat każdej z właściwości w pliku, zobacz [CMakeSettings.jsna temat odwołania do schematu](cmakesettings-reference.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [CMake projekty w programie Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)<br/>

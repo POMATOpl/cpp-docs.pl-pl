@@ -3,22 +3,22 @@ title: Instalowanie obciążenia C++ w systemie Linux w programie Visual Studio
 description: Jak pobrać, zainstalować i skonfigurować obciążenie systemu Linux dla języka C++ w programie Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 9d0c832ec383286b5f89b8ed1474e69d72b5cb98
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176284"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921610"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Projekty systemu Linux są obsługiwane w programie Visual Studio 2017 i nowszych. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Za pomocą środowiska IDE programu Visual Studio w systemie Windows można tworzyć, edytować i debugować projekty w języku C++, które są wykonywane w zdalnym systemie Linux, maszynie wirtualnej lub [podsystemie Windows dla systemu Linux](/windows/wsl/about).
 
@@ -28,7 +28,7 @@ W przypadku każdego z tych scenariuszy wymagane jest programowanie dla systemu 
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="visual-studio-setup"></a>Instalator programu Visual Studio
 
@@ -36,11 +36,11 @@ W przypadku każdego z tych scenariuszy wymagane jest programowanie dla systemu 
 
    ![Pole wyszukiwania systemu Windows](media/visual-studio-installer-search.png)
 
-1. Poszukaj Instalatora w obszarze wyniki **aplikacji** i kliknij go dwukrotnie. Po otwarciu Instalatora wybierz pozycję **Modyfikuj**, a następnie kliknij kartę **obciążenia** . Przewiń w dół do **innych zestawów narzędzi** i wybierz pozycję Programowanie dla systemu **Linux za pomocą języka C++** .
+1. Poszukaj Instalatora w obszarze wyniki **aplikacji** i kliknij go dwukrotnie. Po otwarciu Instalatora wybierz pozycję **Modyfikuj** , a następnie kliknij kartę **obciążenia** . Przewiń w dół do **innych zestawów narzędzi** i wybierz pozycję Programowanie dla systemu **Linux za pomocą języka C++** .
 
    ![Obciążenie Visual C++ for Linux Development](media/linuxworkload.png)
 
-1. Jeśli chcesz wybrać platformy IoT lub Embedded, przejdź do okienka **szczegóły instalacji** po prawej stronie. W obszarze **Programowanie dla systemu Linux przy użyciu języka C++** rozwiń węzeł **składniki opcjonalne**i wybierz potrzebne składniki. Obsługa CMake dla systemu Linux jest domyślnie zaznaczona.
+1. Jeśli chcesz wybrać platformy IoT lub Embedded, przejdź do okienka **szczegóły instalacji** po prawej stronie. W obszarze **Programowanie dla systemu Linux przy użyciu języka C++** rozwiń węzeł **składniki opcjonalne** i wybierz potrzebne składniki. Obsługa CMake dla systemu Linux jest domyślnie zaznaczona.
 
 1. Kliknij przycisk **Modyfikuj** , aby kontynuować instalację.
 
@@ -52,7 +52,7 @@ W systemie Windows 10 można zainstalować i wskazać Ulubione dystrybucji z sys
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL:
 
@@ -68,7 +68,7 @@ W poniższych poleceniach przyjęto założenie, że używasz funkcji g + + zami
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL:
 
@@ -81,7 +81,7 @@ Projekty systemu Linux w programie Visual Studio wymagają zainstalowania nastę
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Konfiguracja systemu Linux: Ubuntu on WSL
 
@@ -93,11 +93,11 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu w zdalnych systemach Linux
 
-Docelowy system Linux musi **mieć zainstalowany program** **OpenSSH-Server**, **g + +**, **GDB**i. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE. Demon **SSH** musi być uruchomiony. elementy **zip** i **rsync** są wymagane do automatycznej synchronizacji nagłówków zdalnych z maszyną lokalną na potrzeby obsługi technologii IntelliSense. Jeśli te aplikacje nie są jeszcze obecne, można je zainstalować w następujący sposób:
+Docelowy system Linux musi **mieć zainstalowany program** **OpenSSH-Server** , **g + +** , **GDB** i. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE. Demon **SSH** musi być uruchomiony. elementy **zip** i **rsync** są wymagane do automatycznej synchronizacji nagłówków zdalnych z maszyną lokalną na potrzeby obsługi technologii IntelliSense. Jeśli te aplikacje nie są jeszcze obecne, można je zainstalować w następujący sposób:
 
 1. W wierszu polecenia powłoki na komputerze z systemem Linux Uruchom polecenie:
 
@@ -117,11 +117,11 @@ Docelowy system Linux musi **mieć zainstalowany program** **OpenSSH-Server**, *
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="fedora-on-wsl"></a>Fedora na WSL
 
-Fedora korzysta z Instalatora pakietu **DNF** . Aby pobrać plik **g + +**, **GDB**, **Marka**, **rsync**, **Ninja-Build**i **zip**, uruchom polecenie:
+Fedora korzysta z Instalatora pakietu **DNF** . Aby pobrać plik **g + +** , **GDB** , **Marka** , **rsync** , **Ninja-Build** i **zip** , uruchom polecenie:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync ninja-build make zip
@@ -131,11 +131,11 @@ Elementy **zip** i **rsync** są wymagane do automatycznej synchronizacji nagł�
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora w zdalnych systemach Linux
 
-Maszyna docelowa z systemem Fedora korzysta z Instalatora pakietu **DNF** . Aby pobrać **OpenSSH-Server**, **g + +**, **GDB**, **Make**, **Ninja-Build**, **rsync**i **zip**, a następnie ponownie uruchomić demona SSH, wykonaj te instrukcje. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE.
+Maszyna docelowa z systemem Fedora korzysta z Instalatora pakietu **DNF** . Aby pobrać **OpenSSH-Server** , **g + +** , **GDB** , **Make** , **Ninja-Build** , **rsync** i **zip** , a następnie ponownie uruchomić demona SSH, wykonaj te instrukcje. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE.
 
 1. W wierszu polecenia powłoki na komputerze z systemem Linux Uruchom polecenie:
 

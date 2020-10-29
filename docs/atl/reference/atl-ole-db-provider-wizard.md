@@ -4,89 +4,89 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706964"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921142"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Kreator dostawcy interfejsu OLE DB ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Ten Kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od programu Visual Studio 2008, skrypt rejestrowania generowane przez kreatora, będą rejestrować jego składników modelu COM, w obszarze **HKEY_CURRENT_USER** zamiast **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw **części rejestru dla wszystkich użytkowników** opcji kreatora ATL.
+Począwszy od programu Visual Studio 2008 skrypt rejestracji utworzony przez tego kreatora spowoduje zarejestrowanie jego składników modelu COM w **HKEY_CURRENT_USER** , a nie **HKEY_LOCAL_MACHINE** . Aby zmienić to zachowanie, ustaw opcję **Zarejestruj składnik dla wszystkich użytkowników** w Kreatorze ATL.
 
-W poniższej tabeli opisano opcje ATL OLE DB Provider kreatora:
+W poniższej tabeli opisano opcje kreatora dostawcy OLE DB ATL:
 
 - **Krótka nazwa**
 
-   Wpisz krótką nazwę dostawcy, który ma zostać utworzony. Pozostałe pola edycji kreatora zostaną wypełnione automatycznie oparte na w tym miejscu wpisz. Jeśli chcesz, możesz edytować pozostałe pola nazw.
+   Wpisz krótką nazwę dostawcy, który ma zostać utworzony. Pozostałe pola edycji w kreatorze zostaną automatycznie wypełnione w oparciu o wpisany tutaj tekst. Jeśli chcesz, możesz edytować inne pola nazw.
 
-- **Coclass**
+- **Klasa coclass**
 
-   Nazwa klasy coclass. Nazwa identyfikatora ProgID zostanie zmieniona na pasują do tej nazwy.
+   Nazwa klasy coclass. Nazwa identyfikatora ProgID zmieni się w taki sposób, aby odpowiadała tej nazwie.
 
-- **Opartego na atrybutach**
+- **Przypisanych**
 
-   Ta opcja określa, czy Kreator utworzy klasy dostawców przy użyciu atrybutów lub deklaracji szablonu. Po wybraniu tej opcji, kreator używa atrybutów zamiast deklaracji szablonu (jest to opcja domyślna Jeśli zostało utworzone w projekcie z atrybutami). Po usunięciu zaznaczenia tej opcji, kreator używa deklaracji szablonu zamiast atrybutów (jest to opcja domyślna, jeśli utworzono projekt bezatrybutowego).
+   Ta opcja określa, czy Kreator ma tworzyć klasy dostawców przy użyciu atrybutów lub deklaracji szablonu. Po wybraniu tej opcji Kreator używa atrybutów zamiast deklaracji szablonu (jest to opcja domyślna w przypadku utworzenia projektu z atrybutem). Po wyczyszczeniu tej opcji Kreator używa deklaracji szablonu zamiast atrybutów (jest to opcja domyślna, jeśli utworzono projekt bez atrybutu).
 
-   Wybranie tej opcji podczas tworzenia projektu bezatrybutowego, Kreator wyświetli ostrzeżenie, zostaną przekonwertowane na projekcie z atrybutami i zapyta, czy chcesz kontynuować, lub nie projektu.
+   W przypadku wybrania tej opcji podczas tworzenia projektu bez atrybutu zostanie wyświetlony komunikat z ostrzeżeniem, że projekt zostanie przekonwertowany na projekt z atrybutami i zostanie wyświetlony monit z pytaniem, czy kontynuować, czy nie.
 
 - **ProgID**
 
-   Identyfikator ProgID lub identyfikator programowy, to ciąg tekstowy, który aplikacja może użyć zamiast identyfikatora GUID. Nazwa identyfikatora ProgID ma formę *NazwaProjektu.nazwaklasycoclass*.
+   Identyfikator ProgID lub program programistyczny to ciąg tekstowy, który może być używany przez aplikację zamiast identyfikatora GUID. Nazwa ProgID ma postać *ProjectName. coclassname* .
 
 - **Wersja**
 
-   Numer wersji dostawcy. Domyślnym ustawieniem jest 1.
+   Numer wersji dostawcy. Wartość domyślna to 1.
 
-- **Klasa źródła danych**
+- **DataSource — Klasa**
 
-   Nazwa klasy źródła danych w formularzu C*Shortname*źródła.
+   Nazwa klasy źródła danych w postaci C *ShortName* source.
 
-- **Plik .h klasy źródła danych**
+- **Plik DataSource. h**
 
-   Plik nagłówkowy klasy źródła danych. Można zmienić nazwę tego pliku lub wybierz istniejący plik nagłówkowy.
+   Plik nagłówkowy klasy źródła danych. Można edytować nazwę tego pliku lub wybrać istniejący plik nagłówkowy.
 
-- **Klasy sesji**
+- **Klasa sesji**
 
-   Nazwa klasy sesji formularza C*Shortname*sesji.
+   Nazwa klasy sesji w postaci C *ShortName* sesji.
 
-- **Plik .h klasy sesji**
+- **Plik Session. h**
 
-   Plik nagłówkowy klasy sesji. Można zmienić nazwę tego pliku lub wybierz istniejący plik nagłówkowy.
+   Plik nagłówkowy klasy sesji. Można edytować nazwę tego pliku lub wybrać istniejący plik nagłówkowy.
 
 - **Klasa polecenia**
 
-   Nazwa klasy poleceń formularza C*Shortname*polecenia.
+   Nazwa klasy polecenia w postaci C *ShortName* polecenia.
 
-- **Plik .h klasy poleceń**
+- **Plik Command. h**
 
-   Plik nagłówkowy klasy poleceń. Ta nazwa nie może być edytowany i zależy od nazwy pliku nagłówkowego zestawu wierszy.
+   Plik nagłówkowy klasy Command. Ta nazwa nie może być edytowana i zależy od nazwy pliku nagłówkowego zestawu wierszy.
 
-- **Klasy zestawów wierszy**
+- **Klasa zestawu wierszy**
 
-   Nazwa klasy zestawu wierszy formularza C*Shortname*zestawu wierszy.
+   Nazwa klasy zestawu wierszy w postaci C *ShortName* zestawu wierszy.
 
-- **Plik .h klasy zestawu wierszy**
+- **Plik Rowset. h**
 
-   Plik nagłówkowy klasy zestawu wierszy. Można zmienić nazwę tego pliku lub wybierz istniejący plik nagłówkowy.
+   Plik nagłówkowy klasy zestawu wierszy. Można edytować nazwę tego pliku lub wybrać istniejący plik nagłówkowy.
 
-- **Plik CPP zestawu wierszy**
+- **Plik. cpp zestawu wierszy**
 
-   Plik implementacji dostawcy. Można zmienić nazwę tego pliku lub wybierz istniejący plik implementacji.
+   Plik implementacji dostawcy. Można edytować nazwę tego pliku lub wybrać istniejący plik implementacji.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dostawcy ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
+[Dostawca OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)

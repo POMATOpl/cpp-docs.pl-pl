@@ -4,24 +4,24 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61da0fd70ad68928872a2212b70377ab8a83a76a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229873"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919400"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.jsodwołania do schematu
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Projekty CMake są obsługiwane w programie Visual Studio 2017 i nowszych.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-**CMakeSettings.jsw** pliku zawiera informacje, które są używane przez program Visual Studio na potrzeby technologii IntelliSense i konstruowania argumentów wiersza polecenia, które są przekazywane do cmake.exe dla określonej *konfiguracji* i *środowiska*kompilatora. Konfiguracja określa właściwości, które mają zastosowanie do określonej platformy i typu kompilacji, na przykład `x86-Debug` lub `Linux-Release` . Każda konfiguracja określa środowisko, które hermetyzuje informacje o zestawie narzędzi kompilatora, na przykład MSVC, w zatoce lub Clang. CMake używa argumentów wiersza polecenia, aby ponownie wygenerować główny plik *CMakeCache.txt* i inne pliki projektu dla projektu. Wartości można przesłonić w plikach *CMakeLists.txt* .
+**CMakeSettings.jsw** pliku zawiera informacje, które są używane przez program Visual Studio na potrzeby technologii IntelliSense i konstruowania argumentów wiersza polecenia, które są przekazywane do cmake.exe dla określonej *konfiguracji* i *środowiska* kompilatora. Konfiguracja określa właściwości, które mają zastosowanie do określonej platformy i typu kompilacji, na przykład `x86-Debug` lub `Linux-Release` . Każda konfiguracja określa środowisko, które hermetyzuje informacje o zestawie narzędzi kompilatora, na przykład MSVC, w zatoce lub Clang. CMake używa argumentów wiersza polecenia, aby ponownie wygenerować główny plik *CMakeCache.txt* i inne pliki projektu dla projektu. Wartości można przesłonić w plikach *CMakeLists.txt* .
 
 Można dodać lub usunąć konfiguracje w IDE, a następnie edytować je bezpośrednio w pliku JSON lub użyć **edytora ustawień CMAKE** (Visual Studio 2019 i nowsze). Aby generować różne pliki projektu, można łatwo przełączać się między konfiguracjami w środowisku IDE. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień kompilacji CMAKE w programie Visual Studio](customize-cmake-settings.md) .
 
@@ -50,7 +50,7 @@ Można dodać lub usunąć konfiguracje w IDE, a następnie edytować je bezpoś
   
 - `ctestCommandArgs`: określa dodatkowe opcje wiersza polecenia, które przechodzą do narzędzia ctest podczas uruchamiania testów ".
 - `description`: Opis tej konfiguracji, która będzie wyświetlana w menu.
-- `enableClangTidyCodeAnalysis`: Użyj Clang-uporządkowanego do analizy kodu.
+- `enableClangTidyCodeAnalysis`: Użyj Clang-Tidy do analizy kodu.
 - `enableMicrosoftCodeAnalysis`: Użyj narzędzi analizy kodu firmy Microsoft na potrzeby analizy kodu.
 - `generator`: określa Generator CMake, który ma być używany w tej konfiguracji. Może być jednym z:
   
@@ -71,11 +71,11 @@ Można dodać lub usunąć konfiguracje w IDE, a następnie edytować je bezpoś
 
 Ponieważ Ninja jest zaprojektowana dla szybkich szybkości kompilacji, a nie elastyczności i funkcji, jest ustawiana jako domyślna. Jednak niektóre projekty CMake mogą nie być w stanie poprawnie skompilować przy użyciu ninja. W takim przypadku można wydać CMake do generowania projektów programu Visual Studio.
 
-Aby określić Generator programu Visual Studio w programie Visual Studio 2017, Otwórz edytor ustawień z menu głównego, wybierając pozycję **CMAKE | Zmień ustawienia CMake**. Usuń "Ninja" i wpisz "V". Pozwala to aktywować funkcję IntelliSense, która umożliwia wybranie generatora, którego chcesz użyć.
+Aby określić Generator programu Visual Studio w programie Visual Studio 2017, Otwórz edytor ustawień z menu głównego, wybierając pozycję **CMAKE | Zmień ustawienia CMake** . Usuń "Ninja" i wpisz "V". Pozwala to aktywować funkcję IntelliSense, która umożliwia wybranie generatora, którego chcesz użyć.
 
-Aby określić Generator programu Visual Studio w programie Visual Studio 2019, kliknij prawym przyciskiem myszy plik *CMakeLists.txt* w **Eksplorator rozwiązań** a następnie wybierz pozycję **Ustawienia CMakeymi dla opcji Project** > **Show Advanced Settings** > **CMAKE Generator**.
+Aby określić Generator programu Visual Studio w programie Visual Studio 2019, kliknij prawym przyciskiem myszy plik *CMakeLists.txt* w **Eksplorator rozwiązań** a następnie wybierz pozycję **Ustawienia CMakeymi dla opcji Project** > **Show Advanced Settings** > **CMAKE Generator** .
 
-Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie MSBuild.exe jest wywoływana z `-m -v:minimal` argumentami. Aby dostosować kompilację, wewnątrz *CMakeSettings.jsw* pliku można określić dodatkowe [argumenty wiersza polecenia MSBuild](../build/reference/msbuild-visual-cpp-overview.md) , które mają być przekazane do systemu kompilacji za pośrednictwem `buildCommandArgs` Właściwości:
+Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie MSBuild.exe jest wywoływana z `-m -v:minimal` argumentami. Aby dostosować kompilację, wewnątrz  *CMakeSettings.jsw* pliku można określić dodatkowe [argumenty wiersza polecenia MSBuild](../build/reference/msbuild-visual-cpp-overview.md) , które mają być przekazane do systemu kompilacji za pośrednictwem `buildCommandArgs` Właściwości:
 
    ```json
    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -128,7 +128,7 @@ Gdy aktywna konfiguracja określa Generator programu Visual Studio, domyślnie M
 - `remotePreGenerateCommand`: Określa polecenie do uruchomienia przed uruchomieniem CMake w celu przeanalizowania pliku *CMakeLists.txt* .
 - `remotePrebuildCommand`: Określa polecenie do uruchomienia na maszynie zdalnej przed kompilacją.
 - `remotePostbuildCommand`: Określa polecenie do uruchomienia na maszynie zdalnej po kompilacji.
-- `variables`: zawiera parę nazwa-wartość zmiennych cmake, które będą przekazywać * _name_ = _wartość_ nazwy* jako **D** do cmake. Jeśli instrukcje dotyczące kompilacji projektu CMake określają dodanie jakichkolwiek zmiennych bezpośrednio do pliku *CMakeCache.txt* , zaleca się ich dodanie zamiast tego. Poniższy przykład pokazuje, jak określić pary nazwa-wartość dla zestawu narzędzi 14.14.26428 MSVC:
+- `variables`: zawiera parę nazwa-wartość zmiennych cmake, które będą przekazywać *_name_ = _wartość_ nazwy* jako **D** do cmake. Jeśli instrukcje dotyczące kompilacji projektu CMake określają dodanie jakichkolwiek zmiennych bezpośrednio do pliku *CMakeCache.txt* , zaleca się ich dodanie zamiast tego. Poniższy przykład pokazuje, jak określić pary nazwa-wartość dla zestawu narzędzi 14.14.26428 MSVC:
 
 ```json
 "variables": [
@@ -149,7 +149,7 @@ Należy pamiętać, że jeśli nie zdefiniujesz `"type"` , `"STRING"` Typ zostan
 
 - `remoteCopyOptimizations`: **Program Visual Studio 2019 w wersji 16,5 lub nowszej** służący do kontrolowania kopiowania źródła do zdalnego obiektu docelowego. Optymalizacje są domyślnie włączone. Obejmuje `remoteCopyUseOptimizations` , `rsyncSingleDirectoryCommandArgs` i `remoteCopySourcesMaxSmallChange` .
 
-## <a name="environments"></a><a name="environments"></a>Wiejski
+## <a name="environments"></a><a name="environments"></a> Wiejski
 
 *Środowisko* hermetyzuje zmienne środowiskowe, które są ustawiane w procesie, którego program Visual Studio używa do wywoływania cmake.exe. W przypadku projektów MSVC zmienne są te, które są ustawiane w [wierszu polecenia dewelopera](building-on-the-command-line.md) dla określonej platformy. Na przykład `msvc_x64_x64` środowisko jest takie samo jak uruchamianie **wiersz polecenia dla deweloperów dla programu vs 2017** lub **wiersz polecenia dla deweloperów dla programu vs 2019** z argumentami **-Arch = amd64-host_arch = amd64** . Możesz użyć `env.{<variable_name>}` składni w *CMakeSettings.jsna* , aby odwołać się do poszczególnych zmiennych środowiskowych, na przykład w celu skonstruowania ścieżek do folderów.  Dostępne są następujące wstępnie zdefiniowane środowiska:
 
@@ -171,16 +171,16 @@ W pliku CMakeLists.txt wszystkie zmienne środowiskowe są przywoływane przez s
 
 ### <a name="custom-environment-variables"></a>Niestandardowe zmienne środowiskowe
 
-W programie `CMakeSettings.json` można definiować niestandardowe zmienne środowiskowe globalnie lub dla konfiguracji w `environments` tablicy. Środowisko niestandardowe jest wygodnym sposobem grupowania zestawu właściwości, których można użyć zamiast wstępnie zdefiniowanego środowiska lub w celu rozbudowania lub zmodyfikowania wstępnie zdefiniowanego środowiska. Każdy element w `environments` tablicy składa się z:
+W programie  `CMakeSettings.json` można definiować niestandardowe zmienne środowiskowe globalnie lub dla konfiguracji w `environments` tablicy. Środowisko niestandardowe jest wygodnym sposobem grupowania zestawu właściwości, których można użyć zamiast wstępnie zdefiniowanego środowiska lub w celu rozbudowania lub zmodyfikowania wstępnie zdefiniowanego środowiska. Każdy element w `environments` tablicy składa się z:
 
 - `namespace`: Nazwa środowiska, tak aby jego zmienne mogły być przywoływane z konfiguracji w formularzu `namespace.variable` . Domyślny obiekt środowiska jest wywoływany `env` i jest wypełniany przy użyciu określonych zmiennych środowiskowych systemu, takich jak `%USERPROFILE%` .
 - `environment`: jednoznacznie identyfikuje tę grupę zmiennych. Zezwala, aby grupa była dziedziczona w dalszej części `inheritEnvironments` wpisu.
 - `groupPriority`: Liczba całkowita, która określa priorytet tych zmiennych podczas ich oceniania. Elementy o większej liczbie są oceniane jako pierwsze.
 - `inheritEnvironments`: Tablica wartości, które określają zestaw środowisk, które są dziedziczone przez tę grupę. Ta funkcja umożliwia dziedziczenie domyślnych środowisk i tworzenie niestandardowych zmiennych środowiskowych, które są przesyłane do CMake.exe podczas jego uruchamiania.
 
-**Program Visual Studio 2019 w wersji 16,4 lub nowszej:** Elementy docelowe debugowania są automatycznie uruchamiane przy użyciu środowiska określonego w *CMakeSettings.jsna*. Zmienne środowiskowe można przesłonić lub dodać na podstawie poszczególnych zadań w [launch.vs.js](launch-vs-schema-reference-cpp.md) i [tasks.vs.jsna](tasks-vs-json-schema-reference-cpp.md).
+**Program Visual Studio 2019 w wersji 16,4 lub nowszej:** Elementy docelowe debugowania są automatycznie uruchamiane przy użyciu środowiska określonego w *CMakeSettings.jsna* . Zmienne środowiskowe można przesłonić lub dodać na podstawie poszczególnych zadań w [launch.vs.js](launch-vs-schema-reference-cpp.md) i [tasks.vs.jsna](tasks-vs-json-schema-reference-cpp.md).
 
-W poniższym przykładzie zdefiniowano jedną zmienną globalną, **BuildDir**, która jest dziedziczona zarówno w konfiguracji x86, jak i x64-Debug. Każda konfiguracja używa zmiennej do określenia wartości właściwości **element buildroot** dla danej konfiguracji. Należy pamiętać, że każda konfiguracja używa właściwości **inheritEnvironments** , aby określić zmienną, która ma zastosowanie tylko do tej konfiguracji.
+W poniższym przykładzie zdefiniowano jedną zmienną globalną, **BuildDir** , która jest dziedziczona zarówno w konfiguracji x86, jak i x64-Debug. Każda konfiguracja używa zmiennej do określenia wartości właściwości **element buildroot** dla danej konfiguracji. Należy pamiętać, że każda konfiguracja używa właściwości **inheritEnvironments** , aby określić zmienną, która ma zastosowanie tylko do tej konfiguracji.
 
 ```json
 {
@@ -258,19 +258,19 @@ W następnym przykładzie konfiguracja programu x86-Debug definiuje własną war
 
 ## <a name="macros"></a>Makra
 
-Następujące makra mogą być używane w *CMakeSettings.jsna*:
+Następujące makra mogą być używane w *CMakeSettings.jsna* :
 
-- `${workspaceRoot}`— Pełna ścieżka folderu obszaru roboczego
-- `${workspaceHash}`— skrót lokalizacji obszaru roboczego; przydatne do tworzenia unikatowych identyfikatorów dla bieżącego obszaru roboczego (na przykład do użycia w ścieżkach folderów)
-- `${projectFile}`— Pełna ścieżka pliku głównego CMakeLists.txt
-- `${projectDir}`— Pełna ścieżka folderu głównego pliku CMakeLists.txt
-- `${thisFile}`— Pełna ścieżka `CMakeSettings.json` pliku
-- `${name}`— Nazwa konfiguracji
-- `${generator}`— nazwa generatora CMake użyta w tej konfiguracji.
+- `${workspaceRoot}` — Pełna ścieżka folderu obszaru roboczego
+- `${workspaceHash}` — skrót lokalizacji obszaru roboczego; przydatne do tworzenia unikatowych identyfikatorów dla bieżącego obszaru roboczego (na przykład do użycia w ścieżkach folderów)
+- `${projectFile}` — Pełna ścieżka pliku głównego CMakeLists.txt
+- `${projectDir}` — Pełna ścieżka folderu głównego pliku CMakeLists.txt
+- `${thisFile}` — Pełna ścieżka  `CMakeSettings.json` pliku
+- `${name}` — Nazwa konfiguracji
+- `${generator}` — nazwa generatora CMake użyta w tej konfiguracji.
 
 Wszystkie odwołania do makr i zmiennych środowiskowych w *CMakeSettings.jsna* są rozwinięte przed przekazaniem do cmake.exe wiersza polecenia.
 
-## <a name="ninja-command-line-arguments"></a><a name="ninja"></a>Ninja argumenty wiersza polecenia
+## <a name="ninja-command-line-arguments"></a><a name="ninja"></a> Ninja argumenty wiersza polecenia
 
 Jeśli elementy docelowe nie są określone, kompiluje obiekt docelowy "default".
 

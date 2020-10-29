@@ -1,6 +1,6 @@
 ---
-title: TemplateInstantiation, klasa
-description: Odwołanie do klasy SDK TemplateInstantiation w języku C++ Build Insights.
+title: Klasa TemplateInstantiation
+description: Odwołanie do klasy TemplateInstantiation zestawu SDK kompilacji C++ build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ba8fd10efc6a536c9160f10b19e19e17bfaaad98
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7ff03aaa431f5c5e217f605698a255686411b479
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324220"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920440"
 ---
-# <a name="templateinstantiation-class"></a>TemplateInstantiation, klasa
+# <a name="templateinstantiation-class"></a>Klasa TemplateInstantiation
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Klasa `TemplateInstantiation` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie TEMPLATE_INSTANTIATION.](../event-table.md#template-instantiation)
+`TemplateInstantiation`Klasa jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,19 +52,19 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z odziedziczonych elementów członkowskich z `TemplateInstantiation` jego [działania](activity.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
+Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania](activity.md) `TemplateInstantiation` Klasa zawiera następujących członków:
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-[SzablonInstantiation](#template-instantiation)
+[TemplateInstantiation](#template-instantiation)
 
 ### <a name="functions"></a>Funkcje
 
-[Rodzaj](#kind)
-[PrimaryTemplateSymbolKey](#primary-template-symbol-key)
-[SpecjalizacjeSymbolKey](#specialization-symbol-key)
+[Rodzaj](#kind) 
+ [PrimaryTemplateSymbolKey](#primary-template-symbol-key) 
+ [SpecializationSymbolKey](#specialization-symbol-key)
 
-## <a name="kind"></a><a name="kind"></a>Rodzaju
+## <a name="kind"></a><a name="kind"></a> Natur
 
 ```cpp
 Kind Kind() const;
@@ -72,9 +72,9 @@ Kind Kind() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod opisujący typ wystąpienia szablonu, który został wykonany.
+Kod opisujący typ tworzenia wystąpienia szablonu, który został wykonany.
 
-## <a name="primarytemplatesymbolkey"></a><a name="primary-template-symbol-key"></a>PrimaryTemplateSymbolKey
+## <a name="primarytemplatesymbolkey"></a><a name="primary-template-symbol-key"></a> PrimaryTemplateSymbolKey
 
 ```cpp
 const unsigned long long& PrimaryTemplateSymbolKey() const;
@@ -82,9 +82,9 @@ const unsigned long long& PrimaryTemplateSymbolKey() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Identyfikator numeryczny dla typu szablonu, który był wyspecjalizowany. Ten identyfikator jest unikatowy w ramach przebiegu front-end kompilatora.
+Identyfikator liczbowy typu szablonu, który był wyspecjalizowany. Ten identyfikator jest unikatowy w ramach przebiegu frontonu kompilatora.
 
-## <a name="specializationsymbolkey"></a><a name="specialization-symbol-key"></a>SpecjalizacjeSymbolKey
+## <a name="specializationsymbolkey"></a><a name="specialization-symbol-key"></a> SpecializationSymbolKey
 
 ```cpp
 const unsigned long long& SpecializationSymbolKey() const;
@@ -92,9 +92,9 @@ const unsigned long long& SpecializationSymbolKey() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Identyfikator numeryczny dla typu specjalizacji. Ten identyfikator jest unikatowy w ramach przebiegu front-end kompilatora.
+Identyfikator liczbowy typu specjalizacji. Ten identyfikator jest unikatowy w ramach przebiegu frontonu kompilatora.
 
-## <a name="templateinstantiation"></a><a name="template-instantiation"></a>SzablonInstantiation
+## <a name="templateinstantiation"></a><a name="template-instantiation"></a> TemplateInstantiation
 
 ```cpp
 TemplateInstantiation(const RawEvent& event);
@@ -102,7 +102,7 @@ TemplateInstantiation(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-*Zdarzenie*\
-Wydarzenie [TEMPLATE_INSTANTIATION.](../event-table.md#template-instantiation)
+*wydarzen*\
+Zdarzenie [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) .
 
 ::: moniker-end
