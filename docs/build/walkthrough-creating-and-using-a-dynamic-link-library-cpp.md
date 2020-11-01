@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 0018df31e19a3f1a68a1c4a0bde37d6fa2678406
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92924484"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej
@@ -583,6 +583,6 @@ Po utworzeniu biblioteki DLL i aplikacji klienckiej można eksperymentować. Spr
 
 Podczas wdrażania aplikacji należy również wdrożyć biblioteki DLL, z których korzysta. Najprostszym sposobem utworzenia bibliotek DLL, które można utworzyć, lub dołączenia ich od stron trzecich, jest umieszczenie ich w tym samym katalogu, w którym znajduje się aplikacja. Nazywa się to *wdrożeniem lokalnym aplikacji* . Aby uzyskać więcej informacji o wdrażaniu, zobacz [wdrażanie w Visual C++](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wywoływanie funkcji DLL z aplikacji Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

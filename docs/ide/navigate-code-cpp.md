@@ -3,10 +3,10 @@ title: Nawigowanie po kodzie C++ w programie Visual Studio
 description: Użyj różnych narzędzi w programie Visual Studio, aby nawigować po kodzie bazowym języka C++.
 ms.date: 05/28/2019
 ms.openlocfilehash: cc13326dee14e952c78e521344a6244249179cb8
-ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "90683497"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Nawigowanie po kodzie C++ w programie Visual Studio
@@ -15,17 +15,17 @@ Program Visual Studio udostępnia zestaw narzędzi, za pomocą których można s
 
 ## <a name="open-an-included-file"></a>Otwórz dołączony plik
 
-Kliknij prawym przyciskiem myszy `#include` dyrektywę, a następnie wybierz pozycję **Przejdź do dokumentu**. Lub wybierz **klawisz F12** z kursorem nad tym wierszem, aby otworzyć plik.
+Kliknij prawym przyciskiem myszy `#include` dyrektywę, a następnie wybierz pozycję **Przejdź do dokumentu** . Lub wybierz **klawisz F12** z kursorem nad tym wierszem, aby otworzyć plik.
 
 ![C&#43;&#43; przejdź do dokumentu — opcja menu](../ide/media/go-to-document.png "Przejdź do dokumentu")
 
 ## <a name="toggle-headercode-file"></a>Przełącz nagłówek/plik kodu
 
-Można przełączać się między plikiem nagłówka i odpowiadającym mu plikiem źródłowym. Kliknij prawym przyciskiem myszy w dowolnym miejscu w pliku i wybierz polecenie **Przełącz nagłówek/plik kodu**. Możesz też wybrać **kombinację klawiszy CTRL + K**, **Ctrl + O**.
+Można przełączać się między plikiem nagłówka i odpowiadającym mu plikiem źródłowym. Kliknij prawym przyciskiem myszy w dowolnym miejscu w pliku i wybierz polecenie **Przełącz nagłówek/plik kodu** . Możesz też wybrać **kombinację klawiszy CTRL + K** , **Ctrl + O** .
 
 ## <a name="go-to-definitiondeclaration"></a>Przejdź do definicji/deklaracji
 
-Możesz przejść do definicji symbolu kodu, klikając go prawym przyciskiem myszy w edytorze, a następnie wybierając pozycję **Przejdź do definicji**lub wybierając **klawisz F12**. Możesz przejść do deklaracji podobnie, klikając prawym przyciskiem myszy, aby otworzyć menu kontekstowe lub wybierając **klawisze Ctrl + F12**.
+Możesz przejść do definicji symbolu kodu, klikając go prawym przyciskiem myszy w edytorze, a następnie wybierając pozycję **Przejdź do definicji** lub wybierając **klawisz F12** . Możesz przejść do deklaracji podobnie, klikając prawym przyciskiem myszy, aby otworzyć menu kontekstowe lub wybierając **klawisze Ctrl + F12** .
 
 ![C&#43;&#43; przejdź do definicji](../ide/media/go-to-def.png "Przejdź do definicji")
 
@@ -33,31 +33,31 @@ Możesz przejść do definicji symbolu kodu, klikając go prawym przyciskiem mys
 
 **Przejdź do** programu odwołuje się do zestawu funkcji nawigacji, które każdy z nich dostarcza określonego rodzaju wyniki na podstawie określonych filtrów.
 
-Możesz otworzyć polecenie **Przejdź do** za pomocą **kombinacji klawiszy CTRL +,**. Ta akcja powoduje utworzenie pola wyszukiwania dla edytowanego dokumentu.
+Możesz otworzyć polecenie **Przejdź do** za pomocą **kombinacji klawiszy CTRL +,** . Ta akcja powoduje utworzenie pola wyszukiwania dla edytowanego dokumentu.
 
 ![C&#43;&#43; przejdź do](../ide/media/go-to-cpp.png "Przejdź do")
 
 **Przejdź do** obejmuje następujące filtry wyszukiwania:
 
-- **Przejdź do wiersza** (**Ctrl + G**): szybko przejdź do innego wiersza w bieżącym dokumencie.
-- **Przejdź do wszystkich** (**Ctrl +,**) lub (**Ctrl + T**): wyniki wyszukiwania obejmują wszystkie poniższe elementy.
-- **Przejdź do pliku** (**Ctrl 1, F**): Wyszukaj pliki w rozwiązaniu.
-- **Przejdź do typu** (**Ctrl 1, T**): wyniki wyszukiwania obejmują:
+- **Przejdź do wiersza** ( **Ctrl + G** ): szybko przejdź do innego wiersza w bieżącym dokumencie.
+- **Przejdź do wszystkich** ( **Ctrl +,** ) lub ( **Ctrl + T** ): wyniki wyszukiwania obejmują wszystkie poniższe elementy.
+- **Przejdź do pliku** ( **Ctrl 1, F** ): Wyszukaj pliki w rozwiązaniu.
+- **Przejdź do typu** ( **Ctrl 1, T** ): wyniki wyszukiwania obejmują:
   - Klasy, struktury i wyliczenia.
   - Interfejsy i Delegaty (tylko kod zarządzany).
-- **Przejdź do elementu członkowskiego** (**Ctrl 1, M**): wyniki wyszukiwania obejmują:
+- **Przejdź do elementu członkowskiego** ( **Ctrl 1, M** ): wyniki wyszukiwania obejmują:
   - Zmienne globalne i funkcje globalne.
   - Zmienne składowe klasy i funkcje członkowskie.
   - Stałe.
   - Elementy enum.
   - Właściwości i zdarzenia.
-- **Przejdź do symbolu** (**Ctrl 1, S**): wyniki wyszukiwania obejmują:
+- **Przejdź do symbolu** ( **Ctrl 1, S** ): wyniki wyszukiwania obejmują:
   - Wyniki z przejdź do typów i przejdź do elementów członkowskich.
   - Wszystkie pozostałe konstrukcje języka C++, w tym makra.
 
-Po pierwszym wywołaniu **Przejdź do** pozycji **Ctrl +**, **Przejdź do wszystkich** jest aktywowany (brak filtrów dla wyników wyszukiwania). Możesz wybrać odpowiedni filtr, używając przycisków obok pola wyszukiwania. Konkretny filtr można wywołać przy użyciu odpowiedniego skrótu klawiaturowego. Spowoduje to otwarcie pola wyszukiwania **Przejdź do** z zaznaczonym filtrem. Wszystkie skróty klawiaturowe można konfigurować.
+Po pierwszym wywołaniu **Przejdź do** pozycji **Ctrl +** , **Przejdź do wszystkich** jest aktywowany (brak filtrów dla wyników wyszukiwania). Możesz wybrać odpowiedni filtr, używając przycisków obok pola wyszukiwania. Konkretny filtr można wywołać przy użyciu odpowiedniego skrótu klawiaturowego. Spowoduje to otwarcie pola wyszukiwania **Przejdź do** z zaznaczonym filtrem. Wszystkie skróty klawiaturowe można konfigurować.
 
-Aby zastosować filtr tekstu, uruchom zapytanie wyszukiwania z odpowiednim znakiem filtru, a następnie spacją. (**Przejdź do wiersza** może opcjonalnie pominąć miejsce). Dostępne są następujące filtry tekstu:
+Aby zastosować filtr tekstu, uruchom zapytanie wyszukiwania z odpowiednim znakiem filtru, a następnie spacją. ( **Przejdź do wiersza** może opcjonalnie pominąć miejsce). Dostępne są następujące filtry tekstu:
 
 - Przejdź do wszystkiego: (brak filtru tekstu)
 - Przejdź do numeru wiersza::
@@ -76,7 +76,7 @@ Aby wyświetlić listę filtrów tekstu, wpisz a? następuje spacja. Możesz ró
 
 ## <a name="find-or-find-in-files"></a>Znajdź lub Znajdź w plikach
 
-Możesz uruchomić wyszukiwanie tekstu dla wszystkich elementów w rozwiązaniu za pomocą **Znajdź** (**Ctrl + F**) lub **Znajdź w plikach** (**Ctrl + Shift + F**).
+Możesz uruchomić wyszukiwanie tekstu dla wszystkich elementów w rozwiązaniu za pomocą **Znajdź** ( **Ctrl + F** ) lub **Znajdź w plikach** ( **Ctrl + Shift + F** ).
 
 **Znajdź** można ograniczyć do wyboru, bieżący dokument, wszystkie otwarte dokumenty, bieżący projekt lub całe rozwiązanie. Można używać wyrażeń regularnych i zwykłego tekstu. Wyróżnia również wszystkie dopasowania automatycznie w IDE.
 
@@ -94,7 +94,7 @@ Aby uzyskać więcej informacji, zobacz sekcję [Znajdź w plikach](/visualstudi
 
 ## <a name="find-all-references"></a>Znajdź wszystkie odwołania
 
-Aby znaleźć wszystkie użycia symbolu w bazie kodu, umieść karetkę w lub tuż po symbolu, kliknij prawym przyciskiem myszy, a następnie wybierz pozycję **Znajdź wszystkie odwołania**. Można filtrować, sortować lub grupować wyniki na wiele różnych sposobów. Wyniki są wypełniane przyrostowo. Są one klasyfikowane jako operacje odczytu lub zapisu, które pomagają zobaczyć, co znajduje się w rozwiązaniu, w przeciwieństwie do nagłówków systemowych lub innych bibliotek.
+Aby znaleźć wszystkie użycia symbolu w bazie kodu, umieść karetkę w lub tuż po symbolu, kliknij prawym przyciskiem myszy, a następnie wybierz pozycję **Znajdź wszystkie odwołania** . Można filtrować, sortować lub grupować wyniki na wiele różnych sposobów. Wyniki są wypełniane przyrostowo. Są one klasyfikowane jako operacje odczytu lub zapisu, które pomagają zobaczyć, co znajduje się w rozwiązaniu, w przeciwieństwie do nagłówków systemowych lub innych bibliotek.
 
 ![C&#43;&#43; Znajdź wszystkie odwołania](../ide/media/find-all-references-results-cpp.png "Znajdź wszystkie odwołania")
 
@@ -112,11 +112,11 @@ Aby filtrować wyniki, umieść kursor nad kolumną i wybierz ikonę filtrowania
 
 ![C&#43;&#43; Znajdź wszystkie filtry odwołań](../ide/media/find-all-references-filters-cpp.png "Filtry Znajdź wszystkie odwołania")
 
-- **Potwierdzone wyniki**: rzeczywiste odwołania do kodu do wyszukiwanego symbolu. Na przykład wyszukiwanie funkcji składowej o nazwie `Size` zwraca wszystkie odwołania do `Size` zakresu klasy, która definiuje `Size` .
+- **Potwierdzone wyniki** : rzeczywiste odwołania do kodu do wyszukiwanego symbolu. Na przykład wyszukiwanie funkcji składowej o nazwie `Size` zwraca wszystkie odwołania do `Size` zakresu klasy, która definiuje `Size` .
 
-- **Niepotwierdzone wyniki**: ten filtr jest domyślnie wyłączony, ponieważ pokazuje symbole, których nazwy są zgodne, ale nie są rzeczywistymi odwołaniami do wyszukiwanego symbolu. Na przykład jeśli istnieją dwie klasy, które definiują funkcję członkowską `Size` , i uruchamiasz wyszukiwanie `Size` na podstawie odwołania z obiektu `Class1` , wszystkie odwołania do elementu `Size` `Class2` są wyświetlane jako niepotwierdzone.
+- **Niepotwierdzone wyniki** : ten filtr jest domyślnie wyłączony, ponieważ pokazuje symbole, których nazwy są zgodne, ale nie są rzeczywistymi odwołaniami do wyszukiwanego symbolu. Na przykład jeśli istnieją dwie klasy, które definiują funkcję członkowską `Size` , i uruchamiasz wyszukiwanie `Size` na podstawie odwołania z obiektu `Class1` , wszystkie odwołania do elementu `Size` `Class2` są wyświetlane jako niepotwierdzone.
 
-- **Nieprzetworzone wyniki**: operacja **Znajdź wszystkie odwołania** może zająć trochę czasu w przypadku większych baz kodu, dlatego na liście wyników w tym miejscu są wyświetlane wyniki "nieprzetworzone". Nieprzetworzone wyniki pasują do nazwy symbolu, którego szukasz, ale nie zostały jeszcze potwierdzone jako rzeczywiste odwołania do kodu. Możesz włączyć ten filtr, aby szybciej uzyskiwać wyniki. Należy pamiętać, że niektóre wyniki mogą nie być rzeczywistymi odwołaniami.
+- **Nieprzetworzone wyniki** : operacja **Znajdź wszystkie odwołania** może zająć trochę czasu w przypadku większych baz kodu, dlatego na liście wyników w tym miejscu są wyświetlane wyniki "nieprzetworzone". Nieprzetworzone wyniki pasują do nazwy symbolu, którego szukasz, ale nie zostały jeszcze potwierdzone jako rzeczywiste odwołania do kodu. Możesz włączyć ten filtr, aby szybciej uzyskiwać wyniki. Należy pamiętać, że niektóre wyniki mogą nie być rzeczywistymi odwołaniami.
 
 #### <a name="sort-results"></a>Sortowanie wyników
 
