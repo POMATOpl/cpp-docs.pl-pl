@@ -1,110 +1,131 @@
 ---
 title: Podsumowanie wyrażeń
-ms.date: 06/14/2018
+description: Dowiedz się więcej na temat standardowej gramatyki C dla wyrażeń zaimplementowanych przez kompilator Microsoft C/C++.
+ms.date: 10/30/2020
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-ms.openlocfilehash: 1660690c6d36aa1dbdc025d6afe92e19ff941463
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 317f7c26e89e2741a5496c5a091100f0c2d8a21a
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220837"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238450"
 ---
 # <a name="summary-of-expressions"></a>Podsumowanie wyrażeń
 
-*wyrażenie podstawowe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*stałego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *wyrażenie*  **)**
+*`primary-expression`* :\
+&emsp;*`identifier`*\
+&emsp;*`constant`*\
+&emsp;*`string-literal`*\
+&emsp;**`(`** *`expression`* **`)`**\
+&emsp;*`generic-selection`*
 
-*wyrażenie*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie — wyrażenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie*  **,**  *przypisanie — wyrażenie*
+*`generic-selection`* :\
+&emsp;**`_Generic`** **`(`** *`assignment-expression`* **`,`** *`generic-assoc-list`* **`)`**
 
-*wyrażenie stałe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie warunkowe*
+*`generic-assoc-list`* :\
+&emsp;*`generic-association`*\
+&emsp;*`generic-assoc-list`* **`,`** *`generic-association`*
 
-*wyrażenie warunkowe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logiczne lub wyrażenie*  **?**  *wyrażenie*  **:**  *wyrażenie warunkowe*
+*`generic-association`* :\
+&emsp;*`type-name`* **`:`** *`assignment-expression`*\
+&emsp;**`default`** **`:`** *`assignment-expression`*
 
-*przypisanie — wyrażenie*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie warunkowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;przypisanie *jednoargumentowe* - *wyrażenie* przypisania *operatora*
+*`postfix-expression`* :\
+&emsp;*`primary-expression`*\
+&emsp;*`postfix-expression`* **`[`** *`expression`* **`]`**\
+&emsp;*`postfix-expression`***`(`** *`argument-expression-list`* <sub>wybór</sub>**`)`**\
+&emsp;*`postfix-expression`* **`.`** *`identifier`*\
+&emsp;*`postfix-expression`* **`->`** *`identifier`*\
+&emsp;*`postfix-expression`* **`++`**\
+&emsp;*`postfix-expression`* **`--`**\
+&emsp;**`(`** *`type-name`* **`)`** **`{`** *`initializer-list`* **`}`**\
+&emsp;**`(`** *`type-name`* **`)`** **`{`** *`initializer-list`* **`,`** **`}`**
 
-*wyrażenie przyrostkowe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie podstawowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*przyrostk — wyrażenie*  **[**  *wyrażenie*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*przyrostkowe wyrażenie***(***opt-expression-list*<sub>opt</sub> **)**    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **.**  *identyfikatora*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **->** przyrostkowe *Identyfikator*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **--**
+*`argument-expression-list`* :\
+&emsp;*`assignment-expression`*\
+&emsp;*`argument-expression-list`* **`,`** *`assignment-expression`*
 
-*argument-lista wyrażeń*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie — wyrażenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argumenty argumentu-list*  **,**  *przypisanie-wyrażenie*
+*`unary-expression`* :\
+&emsp;*`postfix-expression`*\
+&emsp;**`++`** *`unary-expression`*\
+&emsp;**`--`** *`unary-expression`*\
+&emsp;*`unary-operator`* *`cast-expression`*\
+&emsp;**`sizeof`** *`unary-expression`*\
+&emsp;**`sizeof`** **`(`** *`type-name`* **`)`** &emsp;**`_Alignof`** **`(`** *`type-name`* **`)`**
 
-*wyrażenie jednoargumentowe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**++**  *wyrażenie jednoargumentowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**--**  *wyrażenie jednoargumentowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operator jednoargumentowy*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie cast*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`sizeof`**  *wyrażenie jednoargumentowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *Nazwa typu*  **)**
+*`unary-operator`* : jeden z \
+&emsp;**`&`** **`*`** **`+`** **`-`** **`~`** **`!`**
 
-*jednoargumentowy — operator*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+** **-** **~** **!**
+*`cast-expression`* :\
+&emsp;*`unary-expression`*\
+&emsp;**`(`** *`type-name`* **`)`** *`cast-expression`*
 
-*wyrażenie cast*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie-jednoargumentowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie cast* **(***type-name***)**      
+*`multiplicative-expression`* :\
+&emsp;*`cast-expression`*\
+&emsp;*`multiplicative-expression`* **`*`** *`cast-expression`*\
+&emsp;*`multiplicative-expression`* **`/`** *`cast-expression`*\
+&emsp;*`multiplicative-expression`* **`%`** *`cast-expression`*
 
-*mnożenia — wyrażenie*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie cast*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*mnożenia —* wyrażenie *rzutowania* **&#42;**    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*mnożenia — wyrażenie* **/** *wyrażenie cast*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*mnożenia — wyrażenie* **%** *wyrażenie cast*    
+*`additive-expression`* :\
+&emsp;*`multiplicative-expression`*\
+&emsp;*`additive-expression`* **`+`** *`multiplicative-expression`*\
+&emsp;*`additive-expression`* **`-`** *`multiplicative-expression`*
 
-*wyrażenie addytywne*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*mnożenia — wyrażenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie addytywne* **+** *mnożenia — wyrażenie*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie addytywne* **-** *mnożenia — wyrażenie*    
+*`shift-expression`* :\
+&emsp;*`additive-expression`*\
+&emsp;*`shift-expression`* **`<<`** *`additive-expression`*\
+&emsp;*`shift-expression`* **`>>`** *`additive-expression`*
 
-*wyrażenie przesunięcia*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie addytywne*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie*   * przesunięcia *shift-expression * dodatek-wyrażenie \<\<**  *additive-expression*<br/> &nbsp; &nbsp; &nbsp; &nbsp; * **>>** *additive-expression*  
+*`relational-expression`* :\
+&emsp;*`shift-expression`*\
+&emsp;*`relational-expression`* **`<`** *`shift-expression`*\
+&emsp;*`relational-expression`* **`>`** *`shift-expression`*\
+&emsp;*`relational-expression`* **`<=`** *`shift-expression`*\
+&emsp;*`relational-expression`* **`>=`** *`shift-expression`*
 
-*wyrażenie relacyjne*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przesunięcia*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relacyjne* * * \<**  *shift-expression*<br/> wyrażenie &nbsp; &nbsp; relacyjne &nbsp; — wyrażenie * shift-expression relacyjne * * rerelacyjne wyrażenie * Shift-Expression &nbsp; * **>** *shift-expression* <br/> &nbsp; &nbsp; &nbsp; &nbsp;   ** \<=**  *shift-expression*<br/> &nbsp; &nbsp; &nbsp; &nbsp; * **>=** *shift-expression*    
+*`equality-expression`* :\
+&emsp;*`relational-expression`*\
+&emsp;*`equality-expression`* **`==`** *`relational-expression`*\
+&emsp;*`equality-expression`* **`!=`** *`relational-expression`*
 
-*wyrażenie równości*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie relacyjne*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości* **==** *wyrażenie relacyjne*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości*  **! =**  *wyrażenie relacyjne*
+*`AND-expression`* :\
+&emsp;*`equality-expression`*\
+&emsp;*`AND-expression`* **`&`** *`equality-expression`*
 
-*And-Expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie równości*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*And — wyrażenie* **&** *wyrażenie równości*    
+*`exclusive-OR-expression`* :\
+&emsp;*`AND-expression`*\
+&emsp;*`exclusive-OR-expression`* **`^`** *`AND-expression`*
 
-*wyłączne lub wyrażeniu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*AND — wyrażenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyłączne lub wyrażeniu* **^** *And — wyrażenie*    
+*`inclusive-OR-expression`* :\
+&emsp;*`exclusive-OR-expression`*\
+&emsp;*`inclusive-OR-expression`* **`|`** *`exclusive-OR-expression`*
 
-*włącznie — lub-Expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyłączne lub wyrażeniu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;wyrażenie " *włączne" lub "* **&#124;** *wykluczające" lub* "    
+*`logical-AND-expression`* :\
+&emsp;*`inclusive-OR-expression`*\
+&emsp;*`logical-AND-expression`* **`&&`** *`inclusive-OR-expression`*
 
-*wyrażenie logiczne-and-Expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie włączne-lub-*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne-and-Expression* **&&** *wyrażenie włączne-lub-*    
+*`logical-OR-expression`* :\
+&emsp;*`logical-AND-expression`*\
+&emsp;*`logical-OR-expression`* **`||`** *`logical-AND-expression`*
 
-*wyrażenie logiczne or*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne-AND-Expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;wyrażenie *logiczne-and-* Expression **&#124;&#124;** *logiczne i wyrażenie*    
+*`conditional-expression`* :\
+&emsp;*`logical-OR-expression`*\
+&emsp;*`logical-OR-expression`* **`?`** *`expression`* **`:`** *`conditional-expression`*
 
-## <a name="see-also"></a>Zobacz także
+*`assignment-expression`* :\
+&emsp;*`conditional-expression`*\
+&emsp;*`unary-expression`* *`assignment-operator`* *`assignment-expression`*
+
+*`assignment-operator`* : jeden z \
+&emsp;**`=`** **`*=`** **`/=`** **`%=`** **`+=`** **`-=`** **`<<=`** **`>>=`** **`&=`** **`^=`** **`|=`**
+
+*`expression`* :\
+&emsp;*`assignment-expression`*\
+&emsp;*`expression`* **`,`** *`assignment-expression`*
+
+*`constant-expression`* :\
+&emsp;*`conditional-expression`*
+
+## <a name="see-also"></a>Zobacz też
 
 - [Gramatyka struktury frazy](../c-language/phrase-structure-grammar.md)

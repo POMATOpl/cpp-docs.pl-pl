@@ -1,6 +1,7 @@
 ---
 title: Dyrektywy pragma i słowo kluczowe __pragma
-ms.date: 08/29/2019
+description: Opisuje dyrektywy pragma dostępnych w programach Microsoft Visual C i C++ (MSVC)
+ms.date: 10/30/2020
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 786f76d9f7fd2eee73c6b1d009186bf93ea0c667
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842692"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238411"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Dyrektywy pragma i słowo kluczowe __pragma
 
@@ -26,8 +27,8 @@ Dyrektywy pragma określają funkcje kompilatora specyficzne dla maszyny lub sys
 
 ## <a name="syntax"></a>Składnia
 
-> token **#pragma** *— ciąg*\
-> **__pragma (** *ciąg tokenu* **)**
+> **#`pragma`***token — ciąg*\
+> **`__pragma(`***token — ciąg* **`)`** dwa wiodące podkreślenia — ciąg rozszerzenia określony przez firmę Microsoft **`_Pragma(`** *— Literal* **`)`** //C99
 
 ## <a name="remarks"></a>Uwagi
 
@@ -35,7 +36,9 @@ Każda implementacja języków C i C++ obsługuje pewne funkcje, które są unik
 
 Dyrektywy pragma są specyficzne dla maszyny lub systemu operacyjnego według definicji i są zwykle różne dla każdego kompilatora. Dyrektywy pragma mogą być używane w dyrektywach warunkowych, aby zapewnić nową funkcję preprocesora lub dostarczyć do kompilatora informacje zdefiniowane przez implementację.
 
-*Token-String* to seria znaków, które dają konkretną instrukcję i argumenty kompilatora, jeśli istnieją. Numer ( **#** ) musi być pierwszym znakiem niebiałym w wierszu zawierającym pragmę. Znaki odstępu mogą oddzielić znak numeru i słowo "pragma". Poniżej **#pragma**Napisz dowolny tekst, który tłumaczy może analizować jako wstępnie przetworzony tokeny. Argument **#pragma** podlega rozwinięciu makra.
+*Token-String* to seria znaków reprezentująca konkretną instrukcję i argumenty kompilatora, jeśli istnieją. Numer ( **#** ) musi być pierwszym znakiem niebiałym w wierszu zawierającym pragmę. Znaki odstępu mogą oddzielić znak numeru i słowo "pragma". Poniżej **#pragma** Napisz dowolny tekst, który tłumaczy może analizować jako wstępnie przetworzony tokeny. Argument **#pragma** podlega rozwinięciu makra.
+
+*Literał ciągu* jest danymi wejściowymi `_Pragma` . Cudzysłowy zewnętrzne i spacje wiodące/końcowe są usuwane. `\"` jest zastępowany `"` i `\\` jest zastępowany przez `\` .
 
 Kompilator generuje ostrzeżenie, gdy znajdzie pragma, że nie rozpoznaje i kontynuuje Kompilowanie.
 
@@ -114,9 +117,9 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Słowo kluczowe __pragma ()
 
-Kompilator obsługuje także słowo kluczowe **__pragma** specyficzne dla firmy Microsoft, które ma takie same funkcje jak dyrektywy **#pragma** . Różnica polega na tym, że słowo kluczowe **__pragma** jest możliwe do użycia w definicji makra. Dyrektywa **#pragma** nie jest użyteczna w definicji makra, ponieważ kompilator interpretuje znak znaku cyfry ("#") w dyrektywie jako [operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md).
+Kompilator obsługuje także słowo kluczowe specyficzne dla firmy Microsoft **`__pragma`** , które ma takie same funkcje jak w przypadku **`#pragma`** dyrektywy. Różnica polega na tym, że **`__pragma`** słowo kluczowe jest możliwe do użycia w definicji makra. **`#pragma`** Dyrektywa nie można użyć w definicji makra, ponieważ kompilator interpretuje znak cyfry ("#") w dyrektywie jako [operator tworzenia ciągu (#)](../preprocessor/stringizing-operator-hash.md).
 
-Poniższy przykład kodu demonstruje, jak słowo kluczowe **__pragma** może być używane w makrze. Ten kod jest pochodzący z nagłówka MFCDUAL. h w próbce ACDUAL w "Przykłady obsługi kompilatora COM":
+Poniższy przykład kodu demonstruje, jak **`__pragma`** słowo kluczowe może być używane w makrze. Ten kod jest pochodzący z nagłówka *MFCDUAL. h* w próbce ACDUAL w "Przykłady obsługi kompilatora com":
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -134,6 +137,48 @@ _hr = DualHandleException(_riidSource, e); \
 } \
 END_CATCH_ALL \
 return _hr; \
+```
+
+## <a name="the-_pragma-preprocessing-operator-c99-c11"></a>`_Pragma`Operator przetwarzania wstępnego (C99, c++ 11)
+
+`_Pragma` jest podobny do słowa kluczowego specyficznego dla firmy Microsoft [`__pragma`](#the-__pragma-keyword) , z wyjątkiem tego, że jest on częścią standardu. Została wprowadzona dla języka C w C99. Język C++ został wprowadzony w języku C++ 11.
+
+ Umożliwia umieszczenie pragm do definicji makra. Ma jeden wiodący znak podkreślenia `_` zamiast dwóch wiodących podkreśleń, `__` które ma słowo kluczowe specyficzne dla firmy Microsoft, a pierwsza litera jest Wielka litera.
+
+Literał ciągu powinien być to, co w przeciwnym razie należy umieścić po *`#pragma`* instrukcji. Przykład:
+
+```c
+#pragma message("--the #pragma way")
+_Pragma ("message( \"the _Pragma way\")") 
+```
+
+Znaki cudzysłowu i ukośniki odwrotne powinny zostać zmienione, jak pokazano powyżej. Ciąg pragma, który nie został rozpoznany, jest ignorowany.
+
+Poniższy przykład kodu demonstruje, jak **`_Pragma`** słowo kluczowe może być używane w makro podobnej do potwierdzeń, gdy nie chcesz otrzymywać ostrzeżenia, gdy wyrażenie warunku ma być stałe. 
+
+Definicja makra używa idiom do/while (0) dla makr wielu instrukcji, aby można było jej używać tak, jakby była jedną instrukcją. Aby uzyskać więcej informacji, zobacz [wielowierszowe makro języka C](https://stackoverflow.com/questions/1067226/c-multi-line-macro-do-while0-vs-scope-block) na Stack Overflow. Instrukcja _Pragma ma zastosowanie tylko do wiersza kodu, który następuje po nim.
+
+```C
+// Compile with /W4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MY_ASSERT(BOOL_EXPRESSION) \
+    do { \
+        _Pragma("warning(suppress: 4127)") /* C4127 conditional expression is constant */  \
+        if (!(BOOL_EXPRESSION)) {   \
+            printf("MY_ASSERT FAILED: \"" #BOOL_EXPRESSION "\" on %s(%d)", __FILE__, __LINE__); \
+            exit(-1); \
+        } \
+    } while (0)
+
+int main()
+{
+    MY_ASSERT(0 && "Note that there is no warning: C4127 conditional expression is constant");
+
+    return 0;
+}
 ```
 
 ## <a name="see-also"></a>Zobacz też

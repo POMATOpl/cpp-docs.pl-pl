@@ -1,179 +1,225 @@
 ---
 title: Podsumowanie deklaracji
-ms.date: 11/04/2016
+description: Dowiedz się więcej na temat standardowej gramatyki C dla deklaracji zaimplementowanych przez kompilator Microsoft C/C++.
+ms.date: 10/30/2020
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 894ed5e39ac8019048b6730d5e3b34de22f3a0c7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 691424cc6f4efa59411397a13850d2057d4fcc50
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220850"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238463"
 ---
 # <a name="summary-of-declarations"></a>Podsumowanie deklaracji
 
-*`declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`attribute-seq`* <sub>opt</sub> *`init-declarator-list`* <sub>opt</sub> opt**`;`**
+*`declaration`* :\
+&emsp;*`declaration-specifiers`**`attribute-seq`* <sub>wybór</sub><sup>1</sup> *`init-declarator-list`* <sub>opt</sub>**`;`**\
+&emsp;*`static_assert-declaration`*
 
-*`declaration-specifiers`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`storage-class-specifier`**`declaration-specifiers`* <sub>wybór</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-specifier`**`declaration-specifiers`* <sub>wybór</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier`**`declaration-specifiers`* <sub>wybór</sub>
+*`declaration-specifiers`* :\
+&emsp;*`storage-class-specifier`**`declaration-specifiers`* <sub>wybór</sub>\
+&emsp;*`type-specifier`**`declaration-specifiers`* <sub>wybór</sub>\
+&emsp;*`type-qualifier`**`declaration-specifiers`* <sub>wybór</sub>\
+&emsp;*`function-specifier`**`declaration-specifiers`* <sub>wybór</sub>\
+&emsp;*`alignment-specifier`**`declaration-specifiers`* <sub>wybór</sub>
 
-*`attribute-seq`*: &nbsp; &nbsp; &nbsp; &nbsp; / \* Specyficzny dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`attribute`**`attribute-seq`* <sub>wybór</sub>
+*`attribute-seq`*<sup>1</sup>: \
+&emsp;*`attribute`*<sup>1</sup> *`attribute-seq`* <sub>zgoda</sub><sup>1</sup>
 
-*`attribute`*: jeden z &nbsp; &nbsp; &nbsp; &nbsp; / \* określonych przez firmę Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[`__asm`](../assembler/inline/asm.md) [`__clrcall`](../cpp/clrcall.md) [`__stdcall`](../cpp/stdcall.md) [`__based`](../cpp/based-grammar.md) [`__fastcall`](../cpp/fastcall.md) [`__thiscall`](../cpp/thiscall.md) [`__cdecl`](../cpp/cdecl.md) [`__inline`](../cpp/inline-functions-cpp.md) [`__vectorcall`](../cpp/vectorcall.md)
+*`attribute`*<sup>1, 2</sup>: jeden z \
+&emsp;**`__asm`** **`__based`** **`__cdecl`** **`__clrcall`** **`__fastcall`** **`__inline`** **`__stdcall`** **`__thiscall`** **`__vectorcall`**
 
-*`init-declarator-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator-list`*  **`,`**  *`init-declarator`*
+*`init-declarator-list`* :\
+&emsp;*`init-declarator`*\
+&emsp;*`init-declarator-list`* **`,`** *`init-declarator`*
 
-*`init-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*  **`=`**  *`initializer`* /\*Na potrzeby inicjacji skalarnej\*/
+*`init-declarator`* :\
+&emsp;*`declarator`*\
+&emsp;*`declarator`* **`=`** *`initializer`*
 
-*`storage-class-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`auto`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`register`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`static`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`extern`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`***`extended-decl-modifier-seq`* **`)`** /\* Specyficzne dla firmy Microsoft\*/
+*`storage-class-specifier`* :\
+&emsp;**`auto`**\
+&emsp;**`extern`**\
+&emsp;**`register`**\
+&emsp;**`static`**\
+&emsp;**`_Thread_local`**\
+&emsp;**`typedef`**\
+&emsp;**`__declspec`****`(`** *`extended-decl-modifier-seq`* **`)`** <sup>1</sup>
 
-*`type-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`void`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`char`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`short`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int8`** /\*Specyficzne dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int16`** /\*Specyficzne dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int32`** /\*Specyficzne dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__int64`** /\*Specyficzne dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`long`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`float`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`double`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`signed`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-or-union-specifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enum-specifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`typedef-name`*
+*`extended-decl-modifier-seq`*<sup>1</sup>: \
+&emsp;*`extended-decl-modifier`*<sub>uszlachetniania</sub>\
+&emsp;*`extended-decl-modifier-seq`* *`extended-decl-modifier`*
 
-*`type-qualifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`const`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`volatile`**
+*`extended-decl-modifier`*<sup>1</sup>: \
+&emsp;**`thread`**\
+&emsp;**`naked`**\
+&emsp;**`dllimport`**\
+&emsp;**`dllexport`**
 
-*`declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>wybór</sub>*`direct-declarator`*
+*`type-specifier`* :\
+&emsp;**`void`**\
+&emsp;**`char`**\
+&emsp;**`short`**\
+&emsp;**`int`**\
+&emsp;**`__int8`**<sup>jedno</sup>\
+&emsp;**`__int16`**<sup>jedno</sup>\
+&emsp;**`__int32`**<sup>jedno</sup>\
+&emsp;**`__int64`**<sup>jedno</sup>\
+&emsp;**`long`**\
+&emsp;**`float`**\
+&emsp;**`double`**\
+&emsp;**`signed`**\
+&emsp;**`unsigned`**\
+&emsp;**`_Bool`**\
+&emsp;**`_Complex`**\
+&emsp;*`atomic-type-specifier`*\
+&emsp;*`struct-or-union-specifier`*\
+&emsp;*`enum-specifier`*\
+&emsp;*`typedef-name`*
 
-*`direct-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`declarator`* **`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`***`[`** *`constant-expression`* <sub>wybór</sub>**`]`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`***`(`** *`parameter-type-list`* **`)`** /\* Deklarator nowego stylu\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`***`(`** *`identifier-list`* <sub>opt</sub> **`)`**  / \* nieaktualne deklarator w stylu\*/
+*`struct-or-union-specifier`* :\
+&emsp;*`struct-or-union`**`identifier`* <sub>opt</sub> **`{`** wybór *`struct-declaration-list`***`}`**\
+&emsp;*`struct-or-union`* *`identifier`*
 
-*`pointer`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>`*`</strong>*`type-qualifier-list`* <sub>wybór</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>`*`</strong>*`type-qualifier-list`* <sub>wybór</sub>*`pointer`*
+*`struct-or-union`* :\
+&emsp;**`struct`**\
+&emsp;**`union`**
 
-*`parameter-type-list`*: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / \* Lista parametrów\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
+*`struct-declaration-list`* :\
+&emsp;*`struct-declaration`*\
+&emsp;*`struct-declaration-list`* *`struct-declaration`*
 
-*`parameter-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`,`** *`parameter-declaration`*
+*`struct-declaration`* :\
+&emsp;*`specifier-qualifier-list`**`struct-declarator-list`* <sub>wybór</sub>**`;`**\
+&emsp;*`static_assert-declaration`*
 
-*`type-qualifier-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier-list`* *`type-qualifier`*
+*`specifier-qualifier-list`* :\
+&emsp;*`type-specifier`**`specifier-qualifier-list`* <sub>wybór</sub>\
+&emsp;*`type-qualifier`**`specifier-qualifier-list`* <sub>wybór</sub>\
+&emsp;*`alignment-specifier`**`specifier-qualifier-list`* <sub>wybór</sub>
 
-*`enum-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***`identifier`* <sub>opt</sub> **`{`** wybór *`enumerator-list`***`}`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`enum`** *`identifier`*
+*`struct-declarator-list`* :\
+&emsp;*`struct-declarator`*\
+&emsp;*`struct-declarator-list`* **`,`** *`struct-declarator`*
 
-*`enumerator-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumerator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumerator-list`* **`,`** *`enumerator`*
+*`struct-declarator`* :\
+&emsp;*`declarator`*\
+&emsp;*`declarator`*<sub>wybór</sub> **`:`***`constant-expression`*
 
-*`enumerator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumeration-constant`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`enumeration-constant`* **`=`** *`constant-expression`*
+*`enum-specifier`* :\
+&emsp;**`enum`***`identifier`* <sub>opt</sub> **`{`** wybór *`enumerator-list`***`}`**\
+&emsp;**`enum`***`identifier`* <sub>opt</sub> **`{`** wybór *`enumerator-list`* **`,`****`}`**\
+&emsp;**`enum`** *`identifier`*
 
-*`enumeration-constant`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*
+*`enumerator-list`* :\
+&emsp;*`enumerator`*\
+&emsp;*`enumerator-list`* **`,`** *`enumerator`*
 
-*`struct-or-union-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-or-union`**`identifier`* <sub>opt</sub> **`{`** wybór *`struct-declaration-list`***`}`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-or-union`* *`identifier`*
+*`enumerator`* :\
+&emsp;*`enumeration-constant`*\
+&emsp;*`enumeration-constant`* **`=`** *`constant-expression`*
 
-*`struct-or-union`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
+*`atomic-type-specifier`* :\
+&emsp;**`_Atomic`** **`(`** *`type-name`* **`)`**
 
-*`struct-declaration-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-declaration-list`* *`struct-declaration`*
+*`type-qualifier`* :\
+&emsp;**`const`**\
+&emsp;**`restrict`**\
+&emsp;**`volatile`**\
+&emsp;**`_Atomic`**
 
-*`struct-declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`specifier-qualifier-list`* *`struct-declarator-list`* **`;`**
+*`function-specifier`* :\
+&emsp;**`inline`**\
+&emsp;**`_Noreturn`**
 
-*`specifier-qualifier-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-specifier`**`specifier-qualifier-list`* <sub>wybór</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-qualifier`**`specifier-qualifier-list`* <sub>wybór</sub>
+*`alignment-specifier`* :\
+&emsp;**`_Alignas`** **`(`** *`type-name`* **`)`**\
+&emsp;**`_Alignas`** **`(`** *`constant-expression`* **`)`**
 
-*`struct-declarator-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`struct-declarator`* *`struct-declarator-list`* **`,`** *`struct-declarator`*
+*`declarator`* :\
+&emsp;*`pointer`*<sub>wybór</sub>*`direct-declarator`*
 
-*`struct-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`type-specifier`**`declarator`* <sub>opt</sub> wybór **`:`***`constant-expression`*
+*`direct-declarator`* :\
+&emsp;*`identifier`*\
+&emsp;**`(`** *`declarator`* **`)`**\
+&emsp;*`direct-declarator`***`[`** *`type-qualifier-list`* <sub>opt</sub> opt opt *`assignment-expression`* <sub>opt</sub>**`]`**\
+&emsp;*`direct-declarator`***`[`** **`static`** *`type-qualifier-list`* <sub>wybór</sub> *`assignment-expression`***`]`**\
+&emsp;*`direct-declarator`* **`[`** *`type-qualifier-list`* **`static`** *`assignment-expression`* **`]`**\
+&emsp;*`direct-declarator`***`[`** *`type-qualifier-list`* <sub>opt</sub> wybór **`*`****`]`**\
+&emsp;*`direct-declarator`* **`(`** *`parameter-type-list`* **`)`**\
+&emsp;*`direct-declarator`***`(`** *`identifier-list`* <sub>wybór</sub> **`)`** <sup>3</sup>
 
-*`parameter-declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`declarator`* /\* O nazwie deklarator\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`abstract-declarator`* <sub>opt</sub>  / wybór \* Deklarator anonimowe\*/
+*`pointer`* :\
+&emsp;**`*`***`type-qualifier-list`* <sub>wybór</sub>\
+&emsp;**`*`***`type-qualifier-list`* <sub>wybór</sub>*`pointer`*
 
-*`identifier-list`*:/ \* Dla deklarator starego stylu\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier-list`* **`,`** *`identifier`*
+*`type-qualifier-list`* :\
+&emsp;*`type-qualifier`*\
+&emsp;*`type-qualifier-list`* *`type-qualifier`*
 
-*`abstract-declarator`*:/ \* Używane z anonimową Deklaratory\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>wybór</sub>*`direct-abstract-declarator`*
+*`parameter-type-list`* :\
+&emsp;*`parameter-list`*\
+&emsp;*`parameter-list`* **`,`** **`...`**
 
-*`direct-abstract-declarator`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`abstract-declarator`* **`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-abstract-declarator`*<sub>wybór</sub> **`[`** *`constant-expression`* <sub>wybór</sub>**`]`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-abstract-declarator`*<sub>wybór</sub> **`(`** *`parameter-type-list`* <sub>wybór</sub>**`)`**
+*`parameter-list`* :\
+&emsp;*`parameter-declaration`*\
+&emsp;*`parameter-list`* **`,`** *`parameter-declaration`*
 
-*`initializer`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`assignment-expression`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`{`***`initializer-list`* **`}`** /\* Do zainicjowania agregacji\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`{`** *`initializer-list`* **`, }`**
+*`parameter-declaration`* :\
+&emsp;*`declaration-specifiers`* *`declarator`*\
+&emsp;*`declaration-specifiers`**`abstract-declarator`* <sub>wybór</sub>
 
-*`initializer-list`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`initializer`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`initializer-list`* **`,`** *`initializer`*
+*`identifier-list`* :/ \* Dla deklarator starego stylu \*/\
+&emsp;*`identifier`*\
+&emsp;*`identifier-list`* **`,`** *`identifier`*
 
-*`type-name`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`specifier-qualifier-list`**`abstract-declarator`* <sub>wybór</sub>
+*`type-name`* :\
+&emsp;*`specifier-qualifier-list`**`abstract-declarator`* <sub>wybór</sub>
 
-*`typedef-name`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`identifier`*
+*`abstract-declarator`* :\
+&emsp;*`pointer`*\
+&emsp;*`pointer`*<sub>wybór</sub>*`direct-abstract-declarator`*
 
-*`extended-decl-modifier-seq`*: &nbsp; &nbsp; &nbsp; &nbsp; / \* Specyficzny dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>uszlachetniania</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier-seq`* *`extended-decl-modifier`*
+*`direct-abstract-declarator`* :\
+&emsp;**`(`** *`abstract-declarator`* **`)`**\
+&emsp;*`direct-abstract-declarator`***`[`** *`type-qualifier-list`* <sub>opt</sub> opt opt *`assignment-expression`* <sub>opt</sub>**`]`**\
+&emsp;*`direct-abstract-declarator`***`[`** **`static`** *`type-qualifier-list`* <sub>wybór</sub> *`assignment-expression`***`]`**\
+&emsp;*`direct-abstract-declarator`* **`[`** *`type-qualifier-list`* **`static`** *`assignment-expression`* **`]`**\
+&emsp;*`direct-abstract-declarator`***`[`** *`type-qualifier-list`* <sub>opt</sub> wybór **`*`****`]`**\
+&emsp;*`direct-abstract-declarator`*<sub>wybór</sub> **`(`** *`parameter-type-list`* <sub>wybór</sub>**`)`**
 
-*`extended-decl-modifier`*: &nbsp; &nbsp; &nbsp; &nbsp; / \* Specyficzny dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**
+*`typedef-name`* :\
+&emsp;*`identifier`*
 
-## <a name="see-also"></a>Zobacz także
+*`initializer`* :\
+&emsp;*`assignment-expression`*\
+&emsp;**`{`** *`initializer-list`* **`}`**\
+&emsp;**`{`** *`initializer-list`* **`, }`**
 
-[Konwencje wywoływania](../cpp/calling-conventions.md)<br/>
-[Gramatyka struktury frazy](../c-language/phrase-structure-grammar.md)<br/>
+*`initializer-list`* :\
+&emsp;*`designation`*<sub>wybór</sub>*`initializer`*\
+&emsp;*`initializer-list`***`,`** *`designation`* <sub>wybór</sub>*`initializer`*
+
+*`designation`* :\
+&emsp;*`designator-list`* **`=`**
+
+*`designator-list`* :\
+&emsp;*`designator`*\
+&emsp;*`designator-list`* *`designator`*
+
+*`designator`* :\
+&emsp;**`[`** *`constant-expression`* **`]`**\
+&emsp;**`.`** *`identifier`*
+
+*`static_assert-declaration`* :\
+&emsp;**`_Static_assert`** **`(`** *`constant-expression`* **`,`** *`string-literal`* **`)`** **`;`**
+
+<sup>1</sup> ten element gramatyczny jest specyficzny dla firmy Microsoft. \
+<sup>2</sup> Aby uzyskać więcej informacji o tych elementach, zobacz,,,,,,, [`__asm`](../assembler/inline/asm.md) [`__clrcall`](../cpp/clrcall.md) [`__stdcall`](../cpp/stdcall.md) [`__based`](../cpp/based-grammar.md) [`__fastcall`](../cpp/fastcall.md) [`__thiscall`](../cpp/thiscall.md) [`__cdecl`](../cpp/cdecl.md) [`__inline`](../cpp/inline-functions-cpp.md) i [`__vectorcall`](../cpp/vectorcall.md) .
+<sup>3</sup> ten styl jest przestarzały.
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwencje wywoływania](../cpp/calling-conventions.md)\
+[Gramatyka struktury frazy](./phrase-structure-grammar.md)\
 [Przestarzałe konwencje wywoływania](../cpp/obsolete-calling-conventions.md)

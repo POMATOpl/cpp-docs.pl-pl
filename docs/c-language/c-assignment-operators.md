@@ -1,6 +1,7 @@
 ---
 title: Operatory przypisania w języku C
-ms.date: 06/14/2018
+description: Standardowe operatory przypisania języka C, ich składnia i znaczenie.
+ms.date: 10/30/2020
 helpviewer_keywords:
 - remainder assignment operator (%=)
 - '&= operator'
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 460e18772689de0d28fcfda3295a49b2f8a3c0d7
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168802"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238515"
 ---
 # <a name="c-assignment-operators"></a>Operatory przypisania w języku C
 
@@ -43,28 +44,28 @@ Operacja przypisania przypisuje wartość operandu po prawej stronie do lokaliza
 
 ## <a name="syntax"></a>Składnia
 
-*przypisanie — wyrażenie*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie warunkowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;przypisanie *jednoargumentowe* - *wyrażenie* przypisania *operatora*
+*`assignment-expression`* :\
+&emsp;*`conditional-expression`*\
+&emsp;*`unary-expression`* *`assignment-operator`* *`assignment-expression`*
 
-*przypisanie — operator*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+*`assignment-operator`* : jedno z<br/>
+&emsp;**`=`** **`*=`** **`/=`** **`%=`** **`+=`** **`-=`** **`<<=`** **`>>=`** **`&=`** **`^=`** **`|=`**
 
 Operatory przypisania w języku C mogą przetwarzać i przypisywać wartości w jednej operacji. C udostępnia następujące operatory przypisania:
 
 |Operator|Wykonano operację|
 |--------------|-------------------------|
-|**=**|Przypisanie proste|
-|**&#42;=**|Mnożenie i przypisanie|
-|**/=**|Dzielenie i przypisanie|
-|**%=**|Przypisanie reszty|
-|**+=**|Dodawanie i przypisanie|
-|**-=**|Odejmowanie i przypisanie|
-|**<\<=**|Przesunięcie bitowe w lewo i przypisanie|
-|**>>=**|Przesunięcie bitowe w prawo i przypisanie|
-|**&=**|Przypisanie bitowe i|
-|**^=**|Przypisanie bitowe i wyłączne|
-|**&#124;=**|Bitowe lub przydzielenie|
+|**`=`**|Przypisanie proste|
+|**`*=`**|Mnożenie i przypisanie|
+|**`/=`**|Dzielenie i przypisanie|
+|**`%=`**|Przypisanie reszty|
+|**`+=`**|Dodawanie i przypisanie|
+|**`-=`**|Odejmowanie i przypisanie|
+|**`<<=`**|Przesunięcie bitowe w lewo i przypisanie|
+|**`>>=`**|Przesunięcie bitowe w prawo i przypisanie|
+|**`&=`**|Przypisanie bitowe i|
+|**`^=`**|Przypisanie bitowe i wyłączne|
+|**`|=`**|Bitowe lub przydzielenie|
 
 W obszarze przypisanie typ wartości po prawej stronie jest konwertowany na typ wartości po lewej stronie, a wartość jest przechowywana w lewym operandzie po przypisaniu. Lewy argument operacji nie może być tablicą, funkcją ani stałą. Określona ścieżka konwersji, która zależy od dwóch typów, została szczegółowo zakreślona w [konwersji typów](../c-language/type-conversions-c.md).
 

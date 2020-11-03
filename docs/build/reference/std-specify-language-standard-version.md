@@ -1,7 +1,7 @@
 ---
 title: /STD (Określ wersję standardową języka)
 description: Opcja kompilatora MSVC/STD określa Standard języka C lub C++ obsługiwany przez kompilator.
-ms.date: 09/11/2020
+ms.date: 10/29/2020
 f1_keywords:
 - /std
 - -std
@@ -11,12 +11,12 @@ f1_keywords:
 - /std:c17
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 82f37377dc223bfe3f5e578e1c7f390da91752a1
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 208789071ff028107d3c7311c3b5c6cf3eea7c1d
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075832"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238476"
 ---
 # <a name="std-specify-language-standard-version"></a>`/std` (Określ wersję standardową języka)
 
@@ -77,7 +77,7 @@ Począwszy od programu Visual Studio 2019 w wersji 16,8, możesz określić **`/
 
 Po określeniu **`/std:c11`** lub **`/std:c17`** , MSVC obsługuje wszystkie funkcje wymagane przez C11 i C17. Opcje kompilatora umożliwiają obsługę tych funkcji:
 
-- **`_Pragma`**
+- [`_Pragma`](../../preprocessor/pragma-directives-and-the-pragma-keyword.md#the-_pragma-preprocessing-operator-c99-c11)
 
 - **`restrict`**
 
@@ -107,11 +107,11 @@ Kompilator nie obsługuje żadnych opcjonalnych funkcji ISO C11. Niektóre z tyc
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Właściwości konfiguracji**, **C/C++** i **Język**.
+1. Wybierz **Właściwości konfiguracji** , **C/C++** i **Język** .
 
-1. W **standardzie języka C++** (lub w **standardzie języka**c, c) wybierz Standard języka do obsługi z kontrolki menu rozwijanego, a następnie wybierz przycisk **OK** lub **Zastosuj** , aby zapisać zmiany.
+1. W **standardzie języka C++** (lub w **standardzie języka** c, c) wybierz Standard języka do obsługi z kontrolki menu rozwijanego, a następnie wybierz przycisk **OK** lub **Zastosuj** , aby zapisać zmiany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

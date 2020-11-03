@@ -1,22 +1,22 @@
 ---
 title: Słowa kluczowe języka C
 description: Słowa kluczowe w standardowych rozszerzeniach kompilatora C i Microsoft C.
-ms.date: 10/15/2020
+ms.date: 10/30/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 24981c8d70cb56b4578fd905a30ccc57eaa83d45
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 9efa3fc353a2386a465227c39f4ae83565ae12c3
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176224"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238489"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 
-*Słowa kluczowe* są słowami, które mają specjalne znaczenie w kompilatorze języka C. W fazach translacji 7 i 8 identyfikator nie może mieć takiej samej pisowni i wielkości liter jak słowo kluczowe języka C. Aby uzyskać więcej informacji, zobacz [etapy translacji](../preprocessor/phases-of-translation.md) w *odniesieniu do preprocesora*. Aby uzyskać więcej informacji na temat identyfikatorów, zobacz [identyfikatory](../c-language/c-identifiers.md).
+*Słowa kluczowe* są słowami, które mają specjalne znaczenie w kompilatorze języka C. W fazach translacji 7 i 8 identyfikator nie może mieć takiej samej pisowni i wielkości liter jak słowo kluczowe języka C. Aby uzyskać więcej informacji, zobacz [etapy translacji](../preprocessor/phases-of-translation.md) w *odniesieniu do preprocesora* . Aby uzyskać więcej informacji na temat identyfikatorów, zobacz [identyfikatory](../c-language/c-identifiers.md).
 
 ## <a name="standard-c-keywords"></a>Standardowe słowa kluczowe języka C
 
@@ -96,31 +96,30 @@ Poniższe słowa kluczowe i specjalne identyfikatory są rozpoznawane przez komp
 :::row:::
     :::column:::
         **`__asm`**<sup>5000</sup>\
-        **`dllimport`**<sup>czwart</sup>\
-        **`__int8`**<sup>5000</sup>\
-        **`naked`**<sup>czwart</sup>\
-        **`__based`**<sup>3, 5</sup>
-    :::column-end:::
-    :::column:::
-        **`__except`**<sup>5000</sup>\
-        **`__int16`**<sup>5000</sup>\
-        **`__stdcall`**<sup>5000</sup>\
+        **`__based`**<sup>3, 5</sup>\
         **`__cdecl`**<sup>5000</sup>\
-        **`__fastcall`**
-    :::column-end:::
-    :::column:::
-        **`__int32`**<sup>5000</sup>\
-        **`thread`**<sup>czwart</sup>\
         **`__declspec`**<sup>5000</sup>\
-        **`__finally`**<sup>5000</sup>\
-        **`__int64`**<sup>5000</sup>
+        **`__except`**<sup>5000</sup>\
+        **`__fastcall`**\
+        **`__finally`**<sup>5000</sup>
     :::column-end:::
     :::column:::
+        **`__inline`**<sup>5000</sup>\
+        **`__int16`**<sup>5000</sup>\
+        **`__int32`**<sup>5000</sup>\
+        **`__int64`**<sup>5000</sup>\
+        **`__int8`**<sup>5000</sup>\
+        **`__leave`**<sup>5000</sup>\
+        **`__restrict`**
+    :::column-end:::
+    :::column:::
+        **`__stdcall`**<sup>5000</sup>\
         **`__try`**<sup>5000</sup>\
         **`dllexport`**<sup>czwart</sup>\
-        **`__inline`**<sup>5000</sup>\
-        **`__leave`**<sup>5000</sup>\
-        **`static_assert`**<sup>ust</sup>
+        **`dllimport`**<sup>czwart</sup>\
+        **`naked`**<sup>czwart</sup>\
+        **`static_assert`**<sup>ust</sup>\
+        **`thread`**<sup>czwart</sup>
     :::column-end:::
 :::row-end:::
 
