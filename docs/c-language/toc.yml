@@ -481,23 +481,7 @@
         - name: Definicje i konwencje
           href: ../c-language/definitions-and-conventions.md
         - name: Gramatyka leksykalna
-          items:
-            - name: Gramatyka leksykalna
-              href: ../c-language/lexical-grammar.md
-            - name: Podsumowanie tokenów
-              href: ../c-language/summary-of-tokens.md
-            - name: Podsumowanie dotyczące słów kluczowych
-              href: ../c-language/summary-of-keywords.md
-            - name: Podsumowanie identyfikatorów
-              href: ../c-language/summary-of-identifiers.md
-            - name: Podsumowanie dotyczące stałych
-              href: ../c-language/summary-of-constants.md
-            - name: Podsumowanie literałów ciągu
-              href: ../c-language/summary-of-string-literals.md
-            - name: Operatory (C)
-              href: ../c-language/operators-c.md
-            - name: Separatory
-              href: ../c-language/punctuators.md
+          href: ../c-language/lexical-grammar.md
         - name: Gramatyka struktury fazy
           items:
             - name: Gramatyka struktury fazy
