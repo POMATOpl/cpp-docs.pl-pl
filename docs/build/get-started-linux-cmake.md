@@ -3,12 +3,12 @@ title: Tworzenie międzyplatformowych projektów w języku C++ w programie Visua
 description: Sposób konfigurowania, kompilowania i debugowania projektu typu open source CMake języka C++ w programie Visual Studio, który jest przeznaczony dla systemów Linux i Windows.
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c420e0ee04e85d49ad752da085d38b2c5ff9d4fa
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040486"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344660"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Samouczek: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio
 
@@ -31,10 +31,10 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
 * Konfigurowanie maszyny z systemem Linux na potrzeby programowania w języku C++ dla wielu platform
   * Program Visual Studio nie wymaga żadnej konkretnej dystrybucji systemu Linux. System operacyjny może działać na komputerze fizycznym, na maszynie wirtualnej lub w chmurze. Można również użyć podsystemu Windows dla systemu Linux (WSL). Jednak w tym samouczku jest wymagane środowisko graficzne. WSL nie jest zalecana w tym miejscu, ponieważ jest zaprojektowana głównie dla operacji wiersza polecenia.
-  * Program Visual Studio wymaga tych narzędzi na komputerze z systemem Linux: kompilatory C++, GDB, SSH, rsync, ninja i zip. W systemach opartych na systemie Debian można użyć tego polecenia, aby zainstalować te zależności:
+  * Program Visual Studio wymaga tych narzędzi na komputerze z systemem Linux: kompilatory C++, GDB, SSH, rsync, Marka i zip. W systemach opartych na systemie Debian można użyć tego polecenia, aby zainstalować te zależności:
 
     ```cmd
-    sudo apt install -y openssh-server build-essential gdb rsync ninja-build zip
+    sudo apt install -y openssh-server build-essential gdb rsync make zip
     ```
 
   * Program Visual Studio wymaga najnowszej wersji programu CMake na komputerze z systemem Linux z włączonym trybem serwera (co najmniej 3,8). Firma Microsoft tworzy uniwersalną kompilację CMake, którą można zainstalować na dowolnym komputerze z systemem Linux. Zalecamy użycie tej kompilacji, aby upewnić się, że masz najnowsze funkcje. Pliki binarne CMake można pobrać z [rozwidlenia firmy Microsoft repozytorium CMAKE](https://github.com/Microsoft/CMake/releases) w witrynie GitHub. Przejdź do tej strony i Pobierz wersję zgodną z architekturą systemu na komputerze z systemem Linux, a następnie oznacz ją jako plik wykonywalny:
@@ -79,7 +79,7 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 Po otwarciu folderu, który używa CMake, program Visual Studio automatycznie generuje pamięć podręczną CMake. Ta operacja może potrwać kilka minut, w zależności od wielkości projektu.
 
-1. W **okno dane wyjściowe**wybierz pozycję **Pokaż dane wyjściowe z** , a następnie wybierz pozycję **CMAKE** , aby monitorować stan procesu generowania pamięci podręcznej. Po zakończeniu operacji zostanie wyświetlony komunikat "Ekstrakcja docelowa informacja została zakończona".
+1. W **okno dane wyjściowe** wybierz pozycję **Pokaż dane wyjściowe z** , a następnie wybierz pozycję **CMAKE** , aby monitorować stan procesu generowania pamięci podręcznej. Po zakończeniu operacji zostanie wyświetlony komunikat "Ekstrakcja docelowa informacja została zakończona".
 
    ![Okno danych wyjściowych programu Visual Studio pokazujące dane wyjściowe z CMake](media/cmake-bullet3-output-window.png)
 
@@ -109,13 +109,13 @@ Program Visual Studio tworzy domyślną konfigurację **x64-Debug** dla systemu 
 
    ![Dodawanie konfiguracji do okna dialogowego pliku cmakesettings](media/cmake-bullet3-add-configuration-x64-debug.png)
 
-   W tym oknie dialogowym są wyświetlane wszystkie konfiguracje dołączone do programu Visual Studio oraz wszystkie niestandardowe konfiguracje, które tworzysz. Jeśli chcesz kontynuować korzystanie z konfiguracji **x64-Debug** , należy ją dodać do pierwszej. Wybierz pozycję **x64-Debug**, a następnie wybierz przycisk **Wybierz** . Program Visual Studio tworzy CMakeSettings.jsw pliku z konfiguracją dla **x64-Debug**i zapisuje ją na dysku. Możesz użyć dowolnych nazw, które mają być używane w konfiguracjach, zmieniając parametr name bezpośrednio w CMakeSettings.json.
+   W tym oknie dialogowym są wyświetlane wszystkie konfiguracje dołączone do programu Visual Studio oraz wszystkie niestandardowe konfiguracje, które tworzysz. Jeśli chcesz kontynuować korzystanie z konfiguracji **x64-Debug** , należy ją dodać do pierwszej. Wybierz pozycję **x64-Debug** , a następnie wybierz przycisk **Wybierz** . Program Visual Studio tworzy CMakeSettings.jsw pliku z konfiguracją dla **x64-Debug** i zapisuje ją na dysku. Możesz użyć dowolnych nazw, które mają być używane w konfiguracjach, zmieniając parametr name bezpośrednio w CMakeSettings.json.
 
 ## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Ustawianie punktu przerwania, kompilowania i uruchamiania w systemie Windows
 
 W tym kroku poprowadzimy do debugowania przykładowego programu, który demonstruje bibliotekę fizyki.
   
-1. W **Eksplorator rozwiązań**wybierz pozycję AppBasicExampleGui i rozwiń ją.
+1. W **Eksplorator rozwiązań** wybierz pozycję AppBasicExampleGui i rozwiń ją.
 
 1. Otwórz plik `BasicExample.cpp`.
 
@@ -145,9 +145,11 @@ W tym kroku poprowadzimy do debugowania przykładowego programu, który demonstr
 
 1. Dodaj konfigurację systemu Linux. Kliknij prawym przyciskiem myszy CMakeSettings.jsw pliku w widoku **Eksplorator rozwiązań** i wybierz polecenie **Dodaj konfigurację**. Zostanie wyświetlona ta sama okno dialogowe Dodaj konfigurację do pliku cmakesettings. Wybierz pozycję **Linux — Debuguj** ten czas, a następnie Zapisz CMakeSettings.jsw pliku (Ctrl + s).
 
+1. **Visual Studio 2019 w wersji 16,6 lub nowszej** Przewiń w dół do końca edytora ustawień CMake, a następnie wybierz pozycję **Pokaż ustawienia zaawansowane**. Wybierz pozycję pliki **reguł programu make systemu UNIX** jako **Generator CMAKE** , a następnie Zapisz CMakeSettings.jsw pliku (Ctrl + s).
+
 1. Na liście rozwijanej konfiguracja wybierz pozycję **Linux-Debug** .
 
-   ![Lista rozwijana uruchamiania konfiguracji z opcjami debugowania x64 i Linux](media/cmake-bullet3-linux-configuration-item.png)
+   ![Lista rozwijana uruchamiania konfiguracji z opcjami X64-Debug i Linux-Debug](media/cmake-bullet3-linux-configuration-item.png)
 
    Jeśli łączysz się z systemem Linux po raz pierwszy, zostanie wyświetlone okno dialogowe **łączenie z systemem zdalnym** .
 

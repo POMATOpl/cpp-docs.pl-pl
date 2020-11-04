@@ -23,16 +23,16 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 - VC.Project.FXCompilerTool.CompileD2DCustomEffect
 - VC.Project.FXCompilerTool.MultiProcFXC
-ms.openlocfilehash: a45ae433e5adaa8aeaf32215d4af7ad0a247af04
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 629a242d3698c9c3c2d3c697298b5c6625e4768f
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606399"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344686"
 ---
 # <a name="hlsl-compiler-property-pages"></a>Strony właściwości kompilatora HLSL
 
-Korzystając ze stron właściwości kompilatora HLSL (fxc. exe), można skonfigurować sposób kompilowania pojedynczych plików modułu cieniującego HLSL. Można również określić argumenty wiersza polecenia do kompilatora HLSL, używając właściwości **dodatkowe opcje** strony właściwości **wiersza polecenia** . dotyczy to również argumentów, których nie można skonfigurować przy użyciu innych właściwości stron właściwości HLSL. Aby uzyskać informacje na temat kompilatora HLSL, zobacz [efekty — narzędzie kompilatora](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
+Za pomocą stron właściwości kompilatora HLSL (fxc.exe) można skonfigurować sposób kompilowania pojedynczych plików programu HLSL Shader. Można również określić argumenty wiersza polecenia do kompilatora HLSL, używając właściwości **dodatkowe opcje** strony właściwości **wiersza polecenia** . dotyczy to również argumentów, których nie można skonfigurować przy użyciu innych właściwości stron właściwości HLSL. Aby uzyskać informacje na temat kompilatora HLSL, zobacz [efekty — narzędzie kompilatora](/windows/win32/direct3dtools/fxc)
 
 ## <a name="hlsl-general-property-page"></a>Ogólna strona właściwości HLSL
 
@@ -48,7 +48,7 @@ Określa nazwę punktu wejścia dla programu do cieniowania (/E [nazwa])
 
 **Tak (/od)** aby wyłączyć optymalizacje; w przeciwnym razie **nie**. Domyślnie wartość to **Yes (/od)** dla konfiguracji **debugowania** i **nie** dla konfiguracji **wydania** .
 
-Argument wiersza polecenia **/od** do kompilatora HLSL niejawnie stosuje argument wiersza polecenia **/GFP** , ale dane wyjściowe nie mogą być identyczne z danymi wyjściowymi, które są tworzone przez przekazanie argumentów wiersza polecenia **/od** i **/GFP** bezpośredniego.
+Argument wiersza polecenia **/od** do kompilatora HLSL niejawnie stosuje argument wiersza polecenia **/GFP** , ale dane wyjściowe nie mogą być identyczne z danymi wyjściowymi, które są tworzone przez przekazanie jawnie parametrów wiersza polecenia **/od** i **/GFP** .
 
 ### <a name="enable-debugging-information"></a>Włącz informacje o debugowaniu
 
@@ -56,11 +56,11 @@ Argument wiersza polecenia **/od** do kompilatora HLSL niejawnie stosuje argumen
 
 ### <a name="shader-type"></a>Typ cieniowania
 
-Określa typ cieniowania. Różne rodzaje programów do cieniowania implementują różne części potoku grafiki. Niektóre rodzaje programów do cieniowania są dostępne tylko w nowszych modelach cieniowania (które są określone przez właściwość **model** programu do cieniowania) — na przykład cieniowanie obliczeń zostało wprowadzone w modelu modułu cieniującego 5.
+Określa typ cieniowania. Różne rodzaje programów do cieniowania implementują różne części potoku grafiki. Niektóre rodzaje programów do cieniowania są dostępne tylko w nowszych modelach cieniowania (które są określone przez właściwość **model programu do cieniowania** ) — na przykład cieniowanie obliczeń zostało wprowadzone w modelu modułu cieniującego 5.
 
-Ta właściwość odpowiada  **\[części typu]** elementu **/t \[Type] _\[model]** argumentu wiersza polecenia do kompilatora HLSL. Właściwość **modele cieniowania** określa część **[model]** argumentu.
+Ta właściwość odpowiada części **\[ typu]** elementu **/t \[ Type] _ \[ model]** argumentu wiersza polecenia do kompilatora HLSL. Właściwość **modele cieniowania** określa część **[model]** argumentu.
 
-**Decyzji**
+**Choices**
 
 - **Efekt**
 - **Program do cieniowania wierzchołków**
@@ -69,14 +69,14 @@ Ta właściwość odpowiada  **\[części typu]** elementu **/t \[Type] _\[model
 - **Program do cieniowania kadłuba**
 - **Program do cieniowania domeny**
 - **Program do cieniowania obliczeń**
-- **Biblioteka**
+- **Biblioteki**
 - **Generuj obiekt sygnatury głównej**
 
 ### <a name="shader-model"></a>Model programu do cieniowania
 
-Określa model programu do cieniowania. Różne modele cieniowania mają różne możliwości. Ogólnie rzecz biorąc, nowsze modele cieniowania oferują rozszerzone możliwości, ale wymagają bardziej nowoczesnego sprzętu graficznego do uruchamiania kodu programu do cieniowania. Niektóre rodzaje programów do cieniowania (które są określone przez właściwość **Typ** programu do cieniowania) są dostępne tylko w nowszych modelach cieniowania — na przykład cieniowanie obliczeń zostało wprowadzone w modelu modułu cieniującego 5.
+Określa model programu do cieniowania. Różne modele cieniowania mają różne możliwości. Ogólnie rzecz biorąc, nowsze modele cieniowania oferują rozszerzone możliwości, ale wymagają bardziej nowoczesnego sprzętu graficznego do uruchamiania kodu programu do cieniowania. Niektóre rodzaje programów do cieniowania (które są określone przez właściwość **Typ programu do cieniowania** ) są dostępne tylko w nowszych modelach cieniowania — na przykład cieniowanie obliczeń zostało wprowadzone w modelu modułu cieniującego 5.
 
-Ta właściwość odnosi się do  **\[części model]** argumentu wiersza **polecenia \[/t Type]\[_ model]** do kompilatora HLSL. Właściwość **typu** programu do cieniowania określa część **[Type]** argumentu.
+Ta właściwość odnosi się do części **\[ model]** argumentu wiersza polecenia **/t \[ Type] _ \[ model]** do kompilatora HLSL. Właściwość **typu programu do cieniowania** określa część **[Type]** argumentu.
 
 ### <a name="all-resources-bound"></a>Powiązano wszystkie zasoby
 
@@ -94,7 +94,7 @@ Dołącz sygnaturę główną do kodu bajtowego modułu cieniującego (/setroots
 
 Dodaje co najmniej jedną definicję symbolu preprocesora, która ma zostać zastosowana do pliku kodu źródłowego HLSL. Użyj średników, aby oddzielić definicje symboli.
 
-Ta właściwość odnosi się do argumentu wiersza polecenia  **\[/d definicje]** do kompilatora HLSL.
+Ta właściwość odnosi się do argumentu wiersza polecenia **/d \[ definicje]** do kompilatora HLSL.
 
 ### <a name="compile-a-direct2d-custom-pixel-shader-effect"></a>Kompiluj niestandardowy efekt programu do cieniowania pikseli Direct2D
 
@@ -132,18 +132,18 @@ Określa nazwę pliku obiektu. (/Fo [nazwa])
 
 Określa zawartość pliku wyjściowego języka asemblera. (/FC,/FX)
 
-**Decyzji**
+**Choices**
 
 - **Brak listy** — brak listy.
 - **Lista** — plik kodu zestawu
-- **Kod zestawu i** kod szesnastkowy oraz plik listy szesnastkowej
+- **Kod zestawu i kod szesnastkowy** oraz plik listy szesnastkowej
 
 ### <a name="assembler-output-file"></a>Plik wyjściowy asemblera
 
 Określa nazwę pliku dla pliku listy kodu zestawu
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[C++odwołanie do strony właściwości projektu](property-pages-visual-cpp.md)<br>
+[Odwołanie do strony właściwości projektu C++](property-pages-visual-cpp.md)<br>
 [Strony właściwości wiersza polecenia](command-line-property-pages.md)<br>
-[Kompilowanie programów do cieniowania](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+[Kompilowanie programów do cieniowania](/windows/win32/direct3dhlsl/dx-graphics-hlsl-part1)

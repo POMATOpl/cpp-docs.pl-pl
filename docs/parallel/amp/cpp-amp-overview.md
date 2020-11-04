@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
-ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
+ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427728"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344751"
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 
@@ -473,9 +473,9 @@ Podobnie jak w przypadku innych bibliotek C++, możesz używać C++ AMP w aplika
 
 - [Używanie C++ AMP w aplikacjach platformy UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Przewodnik: Tworzenie podstawowego składnika środowisko wykonawcze systemu Windows w języku C++ i wywoływanie go przy użyciu języka JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Przewodnik: Tworzenie podstawowego składnika środowisko wykonawcze systemu Windows w języku C++ i wywoływanie go przy użyciu języka JavaScript](/previous-versions/windows/apps/hh755833(v=vs.140))
 
-- [Optymalizator podróży w usłudze mapy Bing — aplikacja ze sklepu Windows w języku JavaScript i C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Optymalizator podróży w usłudze mapy Bing — aplikacja ze sklepu Windows w języku JavaScript i C++](/previous-versions/windows/apps/hh699893(v=vs.140))
 
 - [Jak używać C++ AMP z języka C# przy użyciu środowisko wykonawcze systemu Windows](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c-using-winrt/)
 
