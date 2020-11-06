@@ -1,17 +1,17 @@
 ---
 title: Instalowanie obsługi języków C i C++ w programie Visual Studio
-description: Zainstaluj obsługę programu Visual Studio dla Visual C++
+description: Dowiedz się, jak zainstalować program Visual Studio z obsługą języka Microsoft C/C++ i związanych z nimi obciążeń.
 ms.custom: mvc
-ms.date: 04/02/2019
+ms.date: 11/05/2020
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 6f547b7e50d39b073232e913e660bf3ab96789cb
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 3f2d2ade54cb4db2cd692f044a5cd648600bc7f6
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922130"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334185"
 ---
 # <a name="install-c-and-c-support-in-visual-studio"></a>Instalowanie obsługi języków C i C++ w programie Visual Studio
 
@@ -46,14 +46,14 @@ Pytania dotyczące uruchamiania poprzednich wersji programu Visual Studio obok p
 
 ### <a name="step-2---download-visual-studio"></a>Krok 2. Pobieranie programu Visual Studio
 
-Następnie Pobierz plik programu inicjującego Visual Studio. Aby to zrobić, wybierz poniższy przycisk, wybierz wersję programu Visual Studio, a następnie wybierz pozycję **Zapisz** , a następnie wybierz pozycję **Otwórz folder** .
+Następnie Pobierz plik programu inicjującego Visual Studio. Aby to zrobić, wybierz poniższy przycisk, aby przejść do strony pobierania programu Visual Studio. Wybierz wybraną wersję programu Visual Studio i wybierz przycisk **bezpłatnej wersji próbnej** lub **bezpłatnego pobierania** .
 
  > [!div class="button"]
  > [Pobierz program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>Krok 3 — Instalowanie Instalatora programu Visual Studio
 
-Uruchom plik programu inicjującego, aby zainstalować Instalator programu Visual Studio. Ten nowy Lightweight Installer zawiera wszystko, czego potrzebujesz do zainstalowania i dostosowania programu Visual Studio.
+Uruchom pobrany plik inicjujący, aby zainstalować Instalator programu Visual Studio. Ten nowy Lightweight Installer zawiera wszystko, czego potrzebujesz do zainstalowania i dostosowania programu Visual Studio.
 
 1. W folderze **pobierania** kliknij dwukrotnie program inicjujący pasujący do jednego z następujących plików lub jest podobny do następującego:
 
@@ -61,9 +61,9 @@ Uruchom plik programu inicjującego, aby zainstalować Instalator programu Visua
    - **vs_professional.exe** Visual Studio Professional
    - **vs_enterprise.exe** Visual Studio Enterprise
 
-   Jeśli zostanie wyświetlony komunikat Kontrola konta użytkownika, wybierz opcję **tak** .
+   Jeśli zostanie wyświetlony komunikat Kontrola konta użytkownika, wybierz opcję **tak** , aby umożliwić uruchomienie programu inicjującego.
 
-1. Poprosimy o potwierdzenie [postanowień licencyjnych](https://visualstudio.microsoft.com/license-terms/) firmy Microsoft oraz [zasad zachowania poufności informacji](https://privacy.microsoft.com/privacystatement)firmy Microsoft. Wybierz pozycję **Kontynuuj** .
+1. Poprosimy o potwierdzenie [postanowień licencyjnych](https://visualstudio.microsoft.com/license-terms/) firmy Microsoft oraz [zasad zachowania poufności informacji](https://privacy.microsoft.com/privacystatement)firmy Microsoft. Wybierz pozycję **Kontynuuj**.
 
 ### <a name="step-4---choose-workloads"></a>Krok 4. Wybieranie obciążeń
 
@@ -79,12 +79,12 @@ Po zainstalowaniu Instalatora można go użyć do dostosowania instalacji, wybie
 
    Okienko **szczegóły instalacji** zawiera listę składników dołączonych i opcjonalnych zainstalowanych przez każde obciążenie. Możesz wybrać lub usunąć zaznaczenie składników opcjonalnych na tej liście. Na przykład aby obsługiwać Programowanie przy użyciu zestawu narzędzi kompilatora programu Visual Studio 2017 lub 2015, wybierz składniki opcjonalne MSVC najnowsze 141 lub MSVC wersji 140. Można dodać obsługę MFC, rozszerzenie języka dla modułów eksperymentalnych, IncrediBuild i inne.
 
-1. Po wybraniu żądanych obciążeń i składników opcjonalnych wybierz pozycję **Zainstaluj** .
+1. Po wybraniu żądanych obciążeń i składników opcjonalnych wybierz pozycję **Zainstaluj**.
 
    Następnie wyświetlane są ekrany stanu pokazujące postęp instalacji programu Visual Studio.
 
 > [!TIP]
-> W dowolnym momencie po zakończeniu instalacji można zainstalować obciążenia lub składniki, które nie zostały wcześniej zainstalowane. Jeśli masz otwarty program Visual Studio, przejdź do pozycji **Narzędzia**  >  **Pobierz narzędzia i funkcje...** , co spowoduje otwarcie Instalator programu Visual Studio. Lub Otwórz **Instalator programu Visual Studio** z menu Start. W tym miejscu możesz wybrać obciążenia lub składniki, które chcesz zainstalować. Następnie wybierz **Modyfikuj** .
+> W dowolnym momencie po zakończeniu instalacji można zainstalować obciążenia lub składniki, które nie zostały wcześniej zainstalowane. Jeśli masz otwarty program Visual Studio, przejdź do pozycji **Narzędzia**  >  **Pobierz narzędzia i funkcje...** , co spowoduje otwarcie Instalator programu Visual Studio. Lub Otwórz **Instalator programu Visual Studio** z menu Start. W tym miejscu możesz wybrać obciążenia lub składniki, które chcesz zainstalować. Następnie wybierz **Modyfikuj**.
 
 ### <a name="step-5---choose-individual-components-optional"></a>Krok 5. Wybierz poszczególne składniki (opcjonalnie)
 
@@ -115,7 +115,7 @@ Możesz zmniejszyć zasięg instalacji programu Visual Studio na dysku systemowy
 
 1. Po zakończeniu instalacji programu Visual Studio wybierz przycisk **Uruchom** , aby rozpocząć programowanie przy użyciu programu Visual Studio.
 
-1. W oknie uruchamiania wybierz pozycję **Utwórz nowy projekt** .
+1. W oknie uruchamiania wybierz pozycję **Utwórz nowy projekt**.
 
 1. W polu wyszukiwania wprowadź typ aplikacji, którą chcesz utworzyć, aby wyświetlić listę dostępnych szablonów. Lista szablonów zależy od obciążeń, które zostały wybrane podczas instalacji. Aby wyświetlić różne szablony, wybierz różne obciążenia.
 
@@ -143,15 +143,12 @@ Aby uzyskać szczegółowe informacje o wymaganiach dotyczących miejsca na dysk
 
 ### <a name="download-and-install"></a>Pobieranie i instalowanie
 
-1. Pobierz najnowszą wersję Instalatora programu Visual Studio 2017 dla systemu Windows.
-
-   > [!div class="nextstepaction"]
-   > [Zainstaluj społeczność programu Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+1. Aby pobrać najnowszy Instalator programu Visual Studio 2017 dla systemu Windows, przejdź do strony Microsoft Visual Studio [starsze pliki do pobrania](https://www.visualstudio.com/vs/older-downloads/) . Rozwiń sekcję **2017** , a następnie wybierz przycisk **Pobierz** .
 
    >[!Tip]
-   > Wersja Community jest przeznaczony dla indywidualnych deweloperów, uczenia klasowego, badań akademickich i opracowywania rozwiązań open source. Aby uzyskać inne zastosowania, zainstaluj [program Visual studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) lub [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+   > Wersja Community jest przeznaczony dla indywidualnych deweloperów, uczenia klasowego, badań akademickich i opracowywania rozwiązań open source. Aby uzyskać inne zastosowania, zainstaluj program Visual Studio 2017 Professional lub Visual Studio 2017 Enterprise.
 
-1. Znajdź pobrany plik Instalatora i uruchom go. Może być wyświetlana w przeglądarce lub może znajdować się w folderze pobierania. Instalator wymaga uprawnień administratora do uruchomienia. Może zostać wyświetlone okno dialogowe **Kontrola konta użytkownika** z prośbą o przyznanie uprawnień, aby Instalator mógł wprowadzać zmiany w systemie. Wybierz opcję **tak** . Jeśli występują problemy, Znajdź pobrany plik w Eksploratorze plików, kliknij prawym przyciskiem myszy ikonę Instalatora i wybierz polecenie **Uruchom jako administrator** z menu kontekstowego.
+1. Znajdź pobrany plik Instalatora i uruchom go. Pobrany plik może być wyświetlany w przeglądarce lub może znajdować się w folderze pobierania. Instalator wymaga uprawnień administratora do uruchomienia. Może zostać wyświetlone okno dialogowe **Kontrola konta użytkownika** z prośbą o przyznanie uprawnień, aby Instalator mógł wprowadzać zmiany w systemie. Wybierz opcję **tak**. Jeśli występują problemy, Znajdź pobrany plik w Eksploratorze plików, kliknij prawym przyciskiem myszy ikonę Instalatora i wybierz polecenie **Uruchom jako administrator** z menu kontekstowego.
 
    ![Pobierz i zainstaluj Instalator programu Visual Studio](media/vscpp-concierge-run-installer.gif "Pobierz i zainstaluj Instalator programu Visual Studio")
 
@@ -159,7 +156,7 @@ Aby uzyskać szczegółowe informacje o wymaganiach dotyczących miejsca na dysk
 
    ![Programowanie aplikacji klasycznych w języku C++](media/desktop-development-with-cpp.png "Programowanie aplikacji klasycznych w języku C++")
 
-   W przypadku języków C i C++ wybierz pozycję **Programowanie aplikacji klasycznych w języku C++** , a następnie wybierz pozycję **Zainstaluj** .
+   W przypadku języków C i C++ wybierz pozycję **Programowanie aplikacji klasycznych w języku C++** , a następnie wybierz pozycję **Zainstaluj**.
 
    ![Instalowanie programu Desktop Development przy użyciu obciążenia C++](media/vscpp-concierge-choose-workload.gif "Instalowanie programu Desktop Development przy użyciu obciążenia C++")
 
@@ -185,7 +182,7 @@ Aby uzyskać szczegółowe informacje o wymaganiach dotyczących miejsca na dysk
 
 ## <a name="visual-studio-2015-installation"></a>Instalacja programu Visual Studio 2015
 
-Aby zainstalować program Visual Studio 2015, przejdź do [pozycji Pobierz starsze wersje programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny i wybierz pozycję **Instalacja niestandardowa** , a następnie wybierz składnik C++. Aby dodać obsługę C i C++ do istniejącej instalacji programu Visual Studio 2015, kliknij przycisk Start systemu Windows i wpisz polecenie **Dodaj Usuń programy** . Otwórz program z listy wyników, a następnie Znajdź instalację programu Visual Studio 2015 na liście zainstalowanych programów. Kliknij go dwukrotnie, a następnie wybierz polecenie **Modyfikuj** i wybierz składniki Visual C++, które mają zostać zainstalowane.
+Aby zainstalować program Visual Studio 2015, przejdź do strony Microsoft Visual Studio [starsze pliki do pobrania](https://www.visualstudio.com/vs/older-downloads/) . Rozwiń sekcję **2015** , a następnie wybierz przycisk **Pobierz** . Uruchom pobrany program instalacyjny i wybierz pozycję **Instalacja niestandardowa** , a następnie wybierz składnik C++. Aby dodać obsługę C i C++ do istniejącej instalacji programu Visual Studio 2015, kliknij przycisk Start systemu Windows i wpisz polecenie **Dodaj Usuń programy**. Otwórz program z listy wyników, a następnie Znajdź instalację programu Visual Studio 2015 na liście zainstalowanych programów. Kliknij go dwukrotnie, a następnie wybierz polecenie **Modyfikuj** i wybierz składniki Visual C++, które mają zostać zainstalowane.
 
 Ogólnie rzecz biorąc, zdecydowanie zalecamy użycie najnowszej wersji programu Visual Studio, nawet jeśli trzeba skompilować kod przy użyciu kompilatora programu Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](../porting/use-native-multi-targeting.md).
 

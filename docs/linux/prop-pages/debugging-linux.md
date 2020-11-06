@@ -1,13 +1,14 @@
 ---
 title: Właściwości debugera (Linux C++) | Microsoft Docs
+description: Opisuje właściwości debugera C++ Microsoft Visual Studio systemu Linux
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: 2b55a0db001c98be72ac88c17c62b21e98ec4888
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0d43877df817f40cfd97a03c4f66730ab17138d8
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924519"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334224"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Właściwości debugowania języka c++ (Linux C++)
 
@@ -21,7 +22,7 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 
 | Właściwość | Opis | Choices |
 |--|--|--|
-| Zdalna maszyna debugowania | **Visual Studio 2019 w wersji 16,1** : określa maszynę, na której ma być debugowany program. Może różnić się od maszyny kompilacji zdalnej określonej na stronie [Ogólne](general-linux.md) . Możesz dodać lub edytować połączenie z maszyną docelową, korzystając z opcji **Narzędzia**  >  **Options**  >  Menedżer połączeń **między platformami**  >  **Connection Manager** . |
+| Zdalna maszyna debugowania | **Visual Studio 2019 w wersji 16,1** : określa maszynę, na której ma być debugowany program. Może różnić się od maszyny kompilacji zdalnej określonej na stronie [Ogólne](general-linux.md) . Możesz dodać lub edytować połączenie z maszyną docelową, korzystając z opcji **Narzędzia**  >  **Options**  >  Menedżer połączeń **między platformami**  >  **Connection Manager**. |
 | Polecenie przed uruchomieniem | Polecenie uruchamiane w powłoce przed uruchomieniem debugera, które może być używane w celu wpływania na środowisko debugowania. |
 | Program | Pełna ścieżka do programu, który ma być debugowany w systemie zdalnym. W przypadku pozostawienia pustej lub niezmienionej wartości domyślne bieżące dane wyjściowe projektu. |
 | Argumenty programu | Argumenty wiersza polecenia do przekazania do debugowanego programu. |
@@ -35,5 +36,6 @@ Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
 | Włącz drukowanie strukturalne języka Python | Włącz opcję całkiem drukowanie wartości wyrażeń. Obsługiwane tylko w trybie debugowania GDB. |
 | Plik wizualizacji | Domyślny natywny plik wizualizacji (. Natvis) zawierający dyrektywy wizualizacji dla typów SLT. Inne pliki Natvis należące do bieżącego rozwiązania są ładowane automatycznie. |
 | Mapa ścieżek plików dodatkowych źródeł | Dodatkowe równoważność ścieżki dla debugera, który ma być używany do mapowania nazw plików źródłowych systemu Windows na nazwy plików źródłowych w systemie Linux. Format to " \<windows-path> = \<linux-path> ;...". Nazwa pliku źródłowego znaleziona w ścieżce systemu Windows jest przywoływana tak, jakby została znaleziona w tej samej pozycji względnej pod ścieżką Linux. Pliki Znalezione w projekcie lokalnym nie wymagają dodatkowego mapowania. |
+| Ścieżka GDB | **Visual studio 2019 w wersji 16,9** : Określa ścieżkę do pliku WYKONYWALNego GDB, który ma być używany przez program Visual Studio. |
 
 ::: moniker-end

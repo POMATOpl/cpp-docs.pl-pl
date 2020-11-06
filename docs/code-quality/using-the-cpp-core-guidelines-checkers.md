@@ -5,12 +5,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: a041ecd4053360ebfc0da198efe9a3decb73ffd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924795"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334146"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Korzystanie z kontrolerów podstawowych wytycznych dotyczących języka C++
 
@@ -61,7 +61,7 @@ Możesz również uruchomić wszystkie obsługiwane reguły podstawowe sprawdzan
 
 1. Wybierz pozycję **Configuration Properties** > **Analiza kodu** właściwości > Strona właściwości **Microsoft** .
 
-1. Otwórz listę rozwijaną **aktywne reguły** i wybierz pozycję **Wybierz wiele zestawów reguł** .
+1. Otwórz listę rozwijaną **aktywne reguły** i wybierz pozycję **Wybierz wiele zestawów reguł**.
 
 1. W oknie dialogowym **Dodawanie lub usuwanie zestawów reguł** wybierz zestawy reguł, które chcesz uwzględnić.
 
@@ -130,7 +130,7 @@ W miarę dodawania nowych reguł do narzędzia podstawowe wytyczne dotyczące j�
 
 - **Reguły wyliczeniowe** : te reguły wymuszają [sprawdzenia związane z wyliczeniem z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
-- **Reguły eksperymentalne** Są to eksperymentalne reguły podstawowe sprawdzanie języka C++, które są przydatne, ale nie są gotowe do codziennego użytku. Wypróbuj je i [Podaj opinię](https://developercommunity.visualstudio.com/content/idea/post.html?space=62). <sup>16,0</sup>
+- **Reguły eksperymentalne** Są to eksperymentalne reguły podstawowe sprawdzanie języka C++, które są przydatne, ale nie są gotowe do codziennego użytku. Wypróbuj je i [Podaj opinię](https://aka.ms/feedback/suggest?space=62). <sup>16,0</sup>
 
 - **Reguły funkcji** : dwie kontrole, które pomagają w przyjęciu **`noexcept`** specyfikatora. Są one częścią wytycznych dotyczących [projektowania i implementacji funkcji czyszczenia](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
@@ -165,12 +165,12 @@ Można wybrać ograniczenie ostrzeżeń tylko do jednej lub kilku grup. **Natywn
 
 ::: moniker range="<=msvc-150"
 
-Aby wyświetlić dostępne zestawy reguł, Otwórz okno dialogowe **właściwości projektu** . W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja**  >  **ogólna Analiza kodu**  >  **General** . Następnie otwórz listę rozwijaną w polu kombi **zestawy reguł** , aby wyświetlić dostępne zestawy reguł. Aby utworzyć niestandardową kombinację zestawów reguł, wybierz pozycję **Wybierz wiele zestawów reguł** . Okno dialogowe **Dodawanie lub usuwanie zestawów reguł** zawiera listę reguł, spośród których można wybrać. Aby uzyskać więcej informacji o korzystaniu z zestawów reguł w programie Visual Studio, zobacz [Korzystanie z zestawów reguł do określania reguł języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Aby wyświetlić dostępne zestawy reguł, Otwórz okno dialogowe **właściwości projektu** . W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja**  >  **ogólna Analiza kodu**  >  **General** . Następnie otwórz listę rozwijaną w polu kombi **zestawy reguł** , aby wyświetlić dostępne zestawy reguł. Aby utworzyć niestandardową kombinację zestawów reguł, wybierz pozycję **Wybierz wiele zestawów reguł**. Okno dialogowe **Dodawanie lub usuwanie zestawów reguł** zawiera listę reguł, spośród których można wybrać. Aby uzyskać więcej informacji o korzystaniu z zestawów reguł w programie Visual Studio, zobacz [Korzystanie z zestawów reguł do określania reguł języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 ::: moniker range=">=msvc-160"
 
-Aby wyświetlić dostępne zestawy reguł, Otwórz okno dialogowe **właściwości projektu** . W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja**  >  **Analiza kodu** właściwości  >  **Microsoft** . Następnie otwórz listę rozwijaną w polu kombi **aktywne reguły** , aby wyświetlić dostępne zestawy reguł. Aby utworzyć niestandardową kombinację zestawów reguł, wybierz pozycję **Wybierz wiele zestawów reguł** . Okno dialogowe **Dodawanie lub usuwanie zestawów reguł** zawiera listę reguł, spośród których można wybrać. Aby uzyskać więcej informacji o korzystaniu z zestawów reguł w programie Visual Studio, zobacz [Korzystanie z zestawów reguł do określania reguł języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Aby wyświetlić dostępne zestawy reguł, Otwórz okno dialogowe **właściwości projektu** . W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja**  >  **Analiza kodu** właściwości  >  **Microsoft** . Następnie otwórz listę rozwijaną w polu kombi **aktywne reguły** , aby wyświetlić dostępne zestawy reguł. Aby utworzyć niestandardową kombinację zestawów reguł, wybierz pozycję **Wybierz wiele zestawów reguł**. Okno dialogowe **Dodawanie lub usuwanie zestawów reguł** zawiera listę reguł, spośród których można wybrać. Aby uzyskać więcej informacji o korzystaniu z zestawów reguł w programie Visual Studio, zobacz [Korzystanie z zestawów reguł do określania reguł języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 
@@ -224,7 +224,7 @@ Kompilator języka Microsoft C++ ma ograniczoną obsługę `[[gsl::suppress]]` a
 
 Zamiast #pragmas można użyć opcji wiersza polecenia na stronie właściwości pliku, aby pominąć ostrzeżenia dla projektu lub pojedynczego pliku. Na przykład, aby wyłączyć C26400 ostrzegawczy dla pliku:
 
-1. Kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości** .
+1. Kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**.
 
 1. W oknie dialogowym **strony właściwości** wybierz pozycję **Właściwości konfiguracji**  >  **C/C++**  >  **Command Line** Strona właściwości.
 
@@ -322,7 +322,7 @@ Ze względu na sposób, w jaki reguły analizy kodu są ładowane w programie Vi
 
 ### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Aby dodać pakiet Microsoft. CppCoreCheck do projektu w programie Visual Studio 2015
 
-1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe projektu w rozwiązaniu, do którego chcesz dodać pakiet. Wybierz pozycję **Zarządzaj pakietami NuGet** , aby otworzyć **Menedżera pakietów NuGet** .
+1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe projektu w rozwiązaniu, do którego chcesz dodać pakiet. Wybierz pozycję **Zarządzaj pakietami NuGet** , aby otworzyć **Menedżera pakietów NuGet**.
 
 1. W oknie **Menedżer pakietów NuGet** Wyszukaj ciąg Microsoft. CppCoreCheck.
 
@@ -334,6 +334,6 @@ Ze względu na sposób, w jaki reguły analizy kodu są ładowane w programie Vi
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Informacje dotyczące podstawowe sprawdzanie języka C++ programu Visual Studio](code-analysis-for-cpp-corecheck.md)

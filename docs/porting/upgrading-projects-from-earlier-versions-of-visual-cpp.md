@@ -6,20 +6,20 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 7a4ab98c196d601bc458fe33bb1e2cb45ac30088
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 89c1df88aa8e533dd7d6e5312b1150468c905c18
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505892"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334237"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Uaktualnianie projektów C++ z wcześniejszych wersji programu Visual Studio
 
 Aby uaktualnić projekt utworzony we wcześniejszej wersji programu Visual Studio, po prostu otwórz projekt w najnowszej wersji programu Visual Studio. Program Visual Studio oferuje uaktualnienie projektu do bieżącego schematu.
 
-Jeśli wybierzesz opcję **nie**, projekt nie zostanie uaktualniony. W przypadku projektów utworzonych w programie Visual Studio 2010 i nowszych można nadal używać projektu w nowszej wersji programu Visual Studio. Po prostu ustaw właściwości projektu, aby dalej korzystać ze starszego zestawu narzędzi. Jeśli opuścisz starszą wersję programu Visual Studio na komputerze, jego zestaw narzędzi będzie dostępny w nowszych wersjach. Na przykład jeśli projekt musi nadal działać w systemie Windows XP, można przeprowadzić uaktualnienie do programu Visual Studio 2019. Następnie należy określić zestaw narzędzi jako v141_xp lub wcześniej we właściwościach projektu. Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](use-native-multi-targeting.md).
+Jeśli wybierzesz opcję **nie** , projekt nie zostanie uaktualniony. W przypadku projektów utworzonych w programie Visual Studio 2010 i nowszych można nadal używać projektu w nowszej wersji programu Visual Studio. Po prostu ustaw właściwości projektu, aby dalej korzystać ze starszego zestawu narzędzi. Jeśli opuścisz starszą wersję programu Visual Studio na komputerze, jego zestaw narzędzi będzie dostępny w nowszych wersjach. Na przykład jeśli projekt musi nadal działać w systemie Windows XP, można przeprowadzić uaktualnienie do programu Visual Studio 2019. Następnie należy określić zestaw narzędzi jako v141_xp lub wcześniej we właściwościach projektu. Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](use-native-multi-targeting.md).
 
-Jeśli wybierzesz opcję **tak**, projekt zostanie uaktualniony w miejscu. Nie można go przekonwertować z powrotem do wcześniejszej wersji. Ze względu na scenariusze uaktualniania dobrym rozwiązaniem jest wykonanie kopii zapasowej istniejących plików projektu i rozwiązania.
+Jeśli wybierzesz opcję **tak** , projekt zostanie uaktualniony w miejscu. Nie można go przekonwertować z powrotem do wcześniejszej wersji. Ze względu na scenariusze uaktualniania dobrym rozwiązaniem jest wykonanie kopii zapasowej istniejących plików projektu i rozwiązania.
 
 ## <a name="upgrade-reports"></a>Uaktualnianie raportów
 
@@ -41,27 +41,27 @@ Podczas uaktualniania projektu otrzymujesz Raport z uaktualnienia. Raport jest r
 
 - Błędy środowiska uruchomieniowego lub nieoczekiwane wyniki spowodowane zmianami zachowania.
 
-- Błędy wprowadzone w narzędziach. W przypadku znalezienia problemu zgłoś go do zespołu Visual C++ za pośrednictwem zwykłych kanałów pomocy technicznej lub na stronie [społeczności deweloperów programu Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html) .
+- Błędy wprowadzone w narzędziach. W przypadku znalezienia problemu zgłoś go do zespołu Visual C++ za pośrednictwem zwykłych kanałów pomocy technicznej lub na stronie [społeczności deweloperów programu Visual Studio C++](https://aka.ms/feedback/report?space=62) .
 
 Niektóre uaktualnione projekty i rozwiązania można skompilować pomyślnie bez modyfikacji. Jednak większość projektów będzie prawdopodobnie wymagała zmian w ustawieniach projektu i kodzie źródłowym. Nie istnieje pojedynczy prawidłowy sposób rozwiązania tych problemów, ale zalecamy użycie podejścia etapowego. Przed rozpoczęciem zapoznaj się [z omówieniem potencjalnych problemów z uaktualnianiem](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) , aby uzyskać więcej informacji na temat wielu rodzajów typowych błędów.
 
-1. Ustaw zestaw narzędzi platformy, Standard języka C++ i wersję Windows SDK (jeśli dotyczy) w preferowanych wersjach. (**Projekt**  >  **Właściwości**  >  **Właściwości konfiguracji**  >  **Ogólne**)
+1. Ustaw zestaw narzędzi platformy, Standard języka C++ i wersję Windows SDK (jeśli dotyczy) w preferowanych wersjach. ( **Projekt**  >  **Właściwości**  >  **Właściwości konfiguracji**  >  **Ogólne** )
 
-1. Jeśli masz wiele błędów, możesz tymczasowo wyłączyć niektóre opcje podczas ich rozwiązywania. Aby wyłączyć opcję [/permissive-](../build/reference/permissive-standards-conformance.md) , użyj właściwości konfiguracji **Project**  >  **Właściwości**projektu  >  **Configuration Properties**  >  **C/C++**  >  **Language**. Aby wyłączyć opcję [analizy kodu](../code-quality/code-analysis-for-c-cpp-overview.md) , użyj właściwości konfiguracji właściwości **projektu**  >  **Properties**  >  **Configuration Properties**  >  **Analiza kodu**.
+1. Jeśli masz wiele błędów, możesz tymczasowo wyłączyć niektóre opcje podczas ich rozwiązywania. Aby wyłączyć [`/permissive-`](../build/reference/permissive-standards-conformance.md) opcję, użyj właściwości **Project**  >  **Properties**  >  **konfiguracji** właściwości projektu  >  **Język C/C++**  >  **Language**. Aby wyłączyć opcję [analizy kodu](../code-quality/code-analysis-for-c-cpp-overview.md) , użyj właściwości konfiguracji właściwości **projektu**  >  **Properties**  >  **Configuration Properties**  >  **Analiza kodu**.
 
-1. Upewnij się, że wszystkie zależności są obecne i że ścieżki dołączania lub lokalizacje biblioteki są poprawne. (**Projekt**  >  **Właściwości**  >  **Właściwości konfiguracji**  >  **Katalogi VC + +**)
+1. Upewnij się, że wszystkie zależności są obecne i że ścieżki dołączania lub lokalizacje biblioteki są poprawne. ( **Projekt**  >  **Właściwości**  >  **Właściwości konfiguracji**  >  **Katalogi VC + +** )
 
 1. Identyfikowanie i rozwiązywanie błędów spowodowanych odwołaniami do interfejsów API, które już nie istnieją.
 
 1. Popraw wszystkie pozostałe błędy, które uniemożliwiają kompilację. Zapoznaj się z [omówieniem potencjalnych problemów z uaktualnianiem](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) dla poprawek w przypadku typowych błędów.
 
-1. Włącz **/permissive-** i napraw wszelkie nowe błędy spowodowane przez niezgodny kod, który został wcześniej SKOMPILOWANY w MSVC.
+1. Włącz **`/permissive-`** i napraw wszelkie nowe błędy spowodowane przez niezgodne kod, który został wcześniej skompilowany w MSVC.
 
 1. Włącz analizę kodu, aby identyfikować potencjalne problemy lub nieaktualne wzorce kodowania, które nie są już uznawane za akceptowalne. Jeśli analiza kodu flaguje wiele błędów, można wyłączyć niektóre ostrzeżenia, aby skoncentrować się na najważniejszych pierwszych. Środowisko IDE może pomóc w szybkim rozwiązywaniu niektórych rodzajów problemów.
 
 1. Rozważ inne możliwości modernizacji kodu. Na przykład Zastąp niestandardowe struktury danych i algorytmy tymi, które pochodzą z standardowej biblioteki C++, lub Zwiększ bibliotekę Open Source. Korzystając z funkcji standardowych, można ułatwić innym osobom zachowanie kodu. Możesz mieć pewność, że ten kod został dobrze przetestowany i sprawdzony przez wielu ekspertów w Komitecie standardowym i szerszej społeczności języka C++.
 
-Aby usunąć błędy, spróbuj wyszukać lub opublikować pytanie w witrynie Developer Stack Overflow lub [społeczność deweloperów języka C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
+Aby wyeliminować błędy, możesz wyszukać rozwiązania lub opublikować pytanie na [Microsoft docs Q&a](/answers/topics/c%2B%2B.html). W przypadku problemów z kompilatorem i narzędziami języka C++ Wypróbuj witrynę internetową [społeczności deweloperów języka c++](https://aka.ms/vsfeedback/browsecpp) .
 
 ## <a name="in-this-section"></a>W tej sekcji
 

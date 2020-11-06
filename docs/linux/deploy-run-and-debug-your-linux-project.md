@@ -3,17 +3,17 @@ title: Wdrażanie, uruchamianie i debugowanie projektu systemu Linux MSBuild C++
 description: Opisuje sposób kompilowania, wykonywania i debugowania kodu na zdalnym miejscu docelowym z wnętrza projektu systemu Linux w języku MSBuild w programie Visual Studio.
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: a9feffbc86b50d510647776de6f1030f6986bef7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 7c038e1903fe029e04e8e9e9e41c11c7bff61ee2
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921714"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334198"
 ---
 # <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Wdrażanie, uruchamianie i debugowanie projektu narzędzia w systemie Linux
 
 ::: moniker range="msvc-140"
-Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych. Aby wyświetlić dokumentację dla tych wersji, Ustaw listę rozwijaną **wersja** znajdującą się powyżej spisu treści w **programie Visual Studio 2017** lub **Visual Studio 2019** .
+Obsługa systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych. Aby wyświetlić dokumentację dla tych wersji, Ustaw listę rozwijaną **wersja** znajdującą się powyżej spisu treści w **programie Visual Studio 2017** lub **Visual Studio 2019**.
 ::: moniker-end
 
 Po utworzeniu projektu systemu Linux w języku MSBuild w programie Visual Studio i nawiązaniu połączenia z projektem za pomocą [Menedżera połączeń z systemem Linux](connect-to-your-remote-linux-computer.md)można uruchomić i debugować projekt. Kompilowanie, wykonywanie i debugowanie kodu w zdalnym miejscu docelowym.
@@ -79,9 +79,9 @@ Istnieje kilka sposobów współtworzenia i debugowania projektu systemu Linux.
 
    ![Trafienie punktu przerwania](media/hit_breakpoint.png)
 
-   Teraz możesz korzystać z aplikacji w jej bieżącym stanie, wyświetlać zmienne i przechodzić przez kod, naciskając klawisze poleceń, takie jak **F10** lub **F11** .
+   Teraz możesz korzystać z aplikacji w jej bieżącym stanie, wyświetlać zmienne i przechodzić przez kod, naciskając klawisze poleceń, takie jak **F10** lub **F11**.
 
-1. Jeśli chcesz używać konsoli systemu Linux do korzystania z aplikacji, wybierz pozycję **debuguj > konsoli systemu Linux** .
+1. Jeśli chcesz używać konsoli systemu Linux do korzystania z aplikacji, wybierz pozycję **debuguj > konsoli systemu Linux**.
 
    ![Menu konsoli systemu Linux](media/consolemenu.png)
 
@@ -99,6 +99,8 @@ Istnieje kilka sposobów współtworzenia i debugowania projektu systemu Linux.
 - Określone opcje debugera można przekazywać do GDB przy użyciu **dodatkowego wpisu poleceń debugera** .  Na przykład możesz chcieć zignorować sygnały SIGILL (niedozwolone instrukcje).  Aby to osiągnąć, można użyć polecenia **obsługi** , dodając następujący element do **dodatkowego polecenia debugera** , jak pokazano powyżej:
 
    `handle SIGILL nostop noprint`
+   
+- Możesz określić ścieżkę do GDB używanego przez program Visual Studio przy użyciu elementu **Path GDB** na stronie właściwości **debugowania** projektu. Ta właściwość jest dostępna w programie Visual Studio 2019 w wersji 16,9 lub nowszej.
 
 ## <a name="debug-with-attach-to-process"></a>Debuguj z dołączaniem do procesu
 
@@ -127,11 +129,11 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 W programie Visual Studio 2019 w wersji 16,1 można oddzielić zdalną maszynę kompilacji od zdalnego komputera debugowania w przypadku projektów systemu Linux opartych na programie MSBuild i projektów CMake przeznaczonych dla zdalnego komputera z systemem Linux. Można na przykład teraz przeprowadzić kompilację krzyżową na platformie x64 i wdrożyć ją na urządzeniu ARM w przypadku scenariuszy IoT.
 
-Domyślnie maszyna debugowania zdalnego jest taka sama jak maszyna kompilacji zdalnej ( **Właściwości konfiguracji**  >  **ogólna**  >  **maszyna kompilacji** ). Aby określić nową maszynę debugowania zdalnego, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i przejdź do **Właściwości konfiguracji**  >  **debugowanie**  >  **zdalnego debugowania** .  
+Domyślnie maszyna debugowania zdalnego jest taka sama jak maszyna kompilacji zdalnej ( **Właściwości konfiguracji**  >  **ogólna**  >  **maszyna kompilacji** ). Aby określić nową maszynę debugowania zdalnego, kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i przejdź do **Właściwości konfiguracji**  >  **debugowanie**  >  **zdalnego debugowania**.  
 
 ![Maszyna zdalnego debugowania systemu Linux](media/linux-remote-debug-machine.png)
 
-Menu rozwijane dla **zdalnego komputera debugowania** jest wypełniane wszystkimi ustanowionymi połączeniami zdalnymi. Aby dodać nowe połączenie zdalne, przejdź do opcji **Narzędzia**  >  **Opcje**  >  Menedżer połączeń **międzyplatformowych**  >  **Connection Manager** lub wyszukaj "Menedżer połączeń" w obszarze **szybkiego uruchamiania** . Możesz również określić nowy katalog zdalnego wdrażania na stronach właściwości projektu ( **Właściwości konfiguracji**  >  **ogólny**  >  **katalog zdalnego wdrażania** ).
+Menu rozwijane dla **zdalnego komputera debugowania** jest wypełniane wszystkimi ustanowionymi połączeniami zdalnymi. Aby dodać nowe połączenie zdalne, przejdź do opcji **Narzędzia**  >  **Opcje**  >  Menedżer połączeń **międzyplatformowych**  >  **Connection Manager** lub wyszukaj "Menedżer połączeń" w obszarze **szybkiego uruchamiania**. Możesz również określić nowy katalog zdalnego wdrażania na stronach właściwości projektu ( **Właściwości konfiguracji**  >  **ogólny**  >  **katalog zdalnego wdrażania** ).
 
 Domyślnie tylko pliki niezbędne do debugowania procesu zostaną wdrożone na maszynie zdalnego debugowania. Za pomocą **Eksplorator rozwiązań** można skonfigurować, które pliki źródłowe zostaną wdrożone na maszynie zdalnego debugowania. Po kliknięciu pliku źródłowego zobaczysz podgląd jego właściwości pliku bezpośrednio poniżej Eksplorator rozwiązań.
 
@@ -164,7 +166,7 @@ W przypadku projektów CMake przeznaczonych dla zdalnego komputera z systemem Li
 
 ![CMake zdalnego debugowania](media/cmake-remote-debug-machine.png)
 
-Funkcja IntelliSense zasugeruje całą listę wszystkich ustanowionych połączeń zdalnych. Nowe połączenie zdalne można dodać, przechodząc do opcji **Narzędzia**  >  **Opcje**  >  Menedżer połączeń **między platformami**  >  **Connection Manager** lub wyszukując pozycję "Menedżer połączeń" w obszarze **Szybki Start** .
+Funkcja IntelliSense zasugeruje całą listę wszystkich ustanowionych połączeń zdalnych. Nowe połączenie zdalne można dodać, przechodząc do opcji **Narzędzia**  >  **Opcje**  >  Menedżer połączeń **między platformami**  >  **Connection Manager** lub wyszukując pozycję "Menedżer połączeń" w obszarze **Szybki Start**.
 
 Jeśli chcesz uzyskać pełną kontrolę nad wdrożeniem, możesz dołączyć następujące bloki kodu do launch.vs.jspliku. Pamiętaj, aby zastąpić wartości symboli zastępczych wartościami rzeczywistymi:
 
@@ -188,6 +190,6 @@ Jeśli chcesz uzyskać pełną kontrolę nad wdrożeniem, możesz dołączyć na
 
 - Aby debugować urządzenia ARM w systemie Linux, zobacz ten wpis w blogu: [debugowanie osadzonego urządzenia ARM w programie Visual Studio](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Właściwości debugowania języka c++ (Linux C++)](prop-pages/debugging-linux.md)

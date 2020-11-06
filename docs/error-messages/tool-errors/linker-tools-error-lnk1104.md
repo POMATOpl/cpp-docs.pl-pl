@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: aa7bcf34cddfa24956d807131b3c484e7d580e73
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2eea6885537037db496a2f42e0fff0ffa69127e3
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506036"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334211"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Błąd narzędzi konsolidatora LNK1104
 
-> nie można otworzyć pliku "*filename*"
+> nie można otworzyć pliku " *filename* "
 
 Ten błąd jest zgłaszany, gdy konsolidator nie może otworzyć pliku, do odczytu lub do zapisu. Dwa najczęstsze przyczyny problemu to:
 
@@ -40,11 +40,11 @@ Programy antywirusowe często tymczasowo blokują dostęp do nowo utworzonych pl
 
 ### <a name="windows-libraries-such-as-kernel32lib"></a>Biblioteki systemu Windows, takie jak Kernel32. lib
 
-Jeśli plik, który nie może zostać otwarty, jest jednym z plików biblioteki standardowej dostarczonej przez firmę Microsoft, takim jak *Kernel32. lib*, może wystąpić błąd konfiguracji projektu lub błąd instalacji. Upewnij się, że zainstalowano Windows SDK. Jeśli projekt wymaga innych bibliotek firmy Microsoft, takich jak MFC, upewnij się, że składniki MFC zostały zainstalowane także przez Instalatora programu Visual Studio. Możesz ponownie uruchomić Instalatora, aby dodać opcjonalne składniki w dowolnym momencie. Aby uzyskać więcej informacji, zobacz [modyfikowanie programu Visual Studio](/visualstudio/install/modify-visual-studio). Użyj karty **poszczególne składniki** w instalatorze, aby wybrać określone biblioteki i zestawy SDK.
+Jeśli plik, który nie może zostać otwarty, jest jednym z plików biblioteki standardowej dostarczonej przez firmę Microsoft, takim jak *Kernel32. lib* , może wystąpić błąd konfiguracji projektu lub błąd instalacji. Upewnij się, że zainstalowano Windows SDK. Jeśli projekt wymaga innych bibliotek firmy Microsoft, takich jak MFC, upewnij się, że składniki MFC zostały zainstalowane także przez Instalatora programu Visual Studio. Możesz ponownie uruchomić Instalatora, aby dodać opcjonalne składniki w dowolnym momencie. Aby uzyskać więcej informacji, zobacz [modyfikowanie programu Visual Studio](/visualstudio/install/modify-visual-studio). Użyj karty **poszczególne składniki** w instalatorze, aby wybrać określone biblioteki i zestawy SDK.
 
 ### <a name="versioned-vcruntime-libraries"></a>Biblioteki vcruntime z wersjami
 
-Jeśli komunikat o błędzie ma wersję biblioteki firmy Microsoft, taką jak *msvcr120. lib*, zestaw narzędzi platformy dla tej wersji kompilatora może nie być zainstalowany. Aby rozwiązać ten problem, dostępne są dwie opcje: Uaktualnij projekt do korzystania z bieżącego zestawu narzędzi platformy lub zainstaluj starszy zestaw narzędzi i skompiluj projekt bez zmian. Aby uzyskać więcej informacji, zobacz [uaktualnianie projektów z wcześniejszych wersji programu Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) i [Używanie natywnego wielu elementów docelowych w programie Visual Studio w celu kompilowania starych projektów](../../porting/use-native-multi-targeting.md).
+Jeśli komunikat o błędzie ma wersję biblioteki firmy Microsoft, taką jak *msvcr120. lib* , zestaw narzędzi platformy dla tej wersji kompilatora może nie być zainstalowany. Aby rozwiązać ten problem, dostępne są dwie opcje: Uaktualnij projekt do korzystania z bieżącego zestawu narzędzi platformy lub zainstaluj starszy zestaw narzędzi i skompiluj projekt bez zmian. Aby uzyskać więcej informacji, zobacz [uaktualnianie projektów z wcześniejszych wersji programu Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) i [Używanie natywnego wielu elementów docelowych w programie Visual Studio w celu kompilowania starych projektów](../../porting/use-native-multi-targeting.md).
 
 ### <a name="retail-debug-or-platform-specific-libraries"></a>Biblioteki detaliczne, debugowania lub specyficzne dla platformy
 
@@ -52,7 +52,7 @@ Ten błąd może wystąpić podczas pierwszej kompilacji nowej docelowej platfor
 
 ### <a name="the-vccorliblib-library"></a>Biblioteka vccorlib. lib
 
-Nie ma bibliotek Spectre-z ograniczeniami dla aplikacji uniwersalnych systemu Windows (platformy UWP) ani składników. Jeśli komunikat o błędzie zawiera *vccorlib. lib*, być może włączono [/QSPECTRE](../../build/reference/qspectre.md) w projekcie platformy UWP. Wyłącz opcję kompilatora **/Qspectre** , aby rozwiązać ten problem. W programie Visual Studio Zmień właściwość **Spectre ograniczenia** . Znajduje się na stronie generowania **kodu C/C++**  >  **Code Generation** okna dialogowego **strony właściwości** projektu.
+Nie ma bibliotek Spectre-z ograniczeniami dla aplikacji uniwersalnych systemu Windows (platformy UWP) ani składników. Jeśli komunikat o błędzie zawiera *vccorlib. lib* , być może włączono [/QSPECTRE](../../build/reference/qspectre.md) w projekcie platformy UWP. Wyłącz opcję kompilatora **/Qspectre** , aby rozwiązać ten problem. W programie Visual Studio Zmień właściwość **Spectre ograniczenia** . Znajduje się na stronie generowania **kodu C/C++**  >  **Code Generation** okna dialogowego **strony właściwości** projektu.
 
 ### <a name="libraries-in-projects-from-online-or-other-sources"></a>Biblioteki w projektach z Internetu lub innych źródeł
 
@@ -82,7 +82,7 @@ Upewnij się, że instalujesz każdą wersję biblioteki potrzebną dla kompilac
 
 Ten błąd może pojawić się, jeśli *Nazwa pliku* nie istnieje jeszcze, gdy konsolidator próbuje uzyskać do niego dostęp. Może się to zdarzyć, gdy jeden projekt zależy od innego w rozwiązaniu, ale projekty są kompilowane w niewłaściwej kolejności. Aby rozwiązać ten problem, upewnij się, że odwołania do projektu są ustawione w projekcie, który używa tego pliku. Następnie brakujący plik zostanie skompilowany przed jego zainstalowaniem. Aby uzyskać więcej informacji, zobacz [Dodawanie odwołań w projektach Visual Studio C++](../../build/adding-references-in-visual-cpp-projects.md) i [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project).
 
-## <a name="cannot-open-file-cprogramobj"></a>Nie można otworzyć pliku "C: \\ program. obj"
+## <a name="cant-open-file-cprogramobj"></a>Nie można otworzyć pliku "C: \\ program. obj"
 
 Jeśli zobaczysz nazwę pliku *C: \\ program. obj* w komunikacie o błędzie, zawiń ścieżki biblioteki w podwójnych cudzysłowach. Ten błąd występuje, gdy nieopakowana ścieżka rozpoczynająca się od *C: \\ Program Files* jest przenoszona do konsolidatora. Nieopakowane ścieżki mogą również spowodować podobne błędy. Zwykle pokazują one nieoczekiwany plik. obj w katalogu głównym dysku.
 
@@ -128,10 +128,10 @@ Ten błąd może wystąpić, gdy nie ma wystarczającej ilości miejsca na dysku
 
 ### <a name="problems-in-the-tmp-environment-variable"></a>Problemy w zmiennej środowiskowej TMP
 
-Jeśli *Nazwa pliku* ma nazwę lnk*nnn*, jest to nazwa pliku wygenerowana przez konsolidator dla pliku tymczasowego. Katalog określony w zmiennej środowiskowej TMP może nie istnieć. Lub można określić więcej niż jeden katalog dla zmiennej środowiskowej TMP. Dla zmiennej środowiskowej TMP należy określić tylko jedną ścieżkę do katalogu.
+Jeśli *Nazwa pliku* ma nazwę lnk *nnn* , jest to nazwa pliku wygenerowana przez konsolidator dla pliku tymczasowego. Katalog określony w zmiennej środowiskowej TMP może nie istnieć. Lub można określić więcej niż jeden katalog dla zmiennej środowiskowej TMP. Dla zmiennej środowiskowej TMP należy określić tylko jedną ścieżkę do katalogu.
 
 ## <a name="help-my-issue-isnt-listed-here"></a>Pomoc, mój problem nie jest tutaj wymieniony.
 
-Jeśli żaden z wymienionych tu problemów nie ma zastosowania, możesz użyć narzędzi do przesyłania opinii w programie Visual Studio, aby uzyskać pomoc. W środowisku IDE przejdź do paska menu, a następnie wybierz pozycję **pomoc > Wyślij opinię > Zgłoś problem**. Lub Prześlij sugestię, korzystając z **pomocy > wysyłania opinii > wysłania sugestii**. Możesz również użyć witryny sieci Web Visual Studio C++ [Developer](https://developercommunity.visualstudio.com/spaces/62/index.html). Użyj go, aby wyszukać odpowiedzi na pytania i poprosił o pomoc. Aby uzyskać więcej informacji, zobacz [Jak zgłosić problem z zestawem narzędzi Visual C++ lub dokumentacją](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Jeśli żaden z wymienionych tu problemów nie ma zastosowania, możesz użyć narzędzi do przesyłania opinii w programie Visual Studio, aby uzyskać pomoc. W środowisku IDE przejdź do paska menu, a następnie wybierz pozycję **pomoc > Wyślij opinię > Zgłoś problem**. Lub Prześlij sugestię, korzystając z **pomocy > wysyłania opinii > wysłania sugestii**. Możesz również użyć Microsoft Docs pytań [&](/answers/topics/c%2B%2B.html) witryny, aby uzyskać pytania i witrynę internetową [społeczności deweloperów](https://aka.ms/vsfeedback/browsecpp) Visual Studio C++. Te witryny umożliwiają wyszukiwanie odpowiedzi na pytania i poproszenie o pomoc. Aby uzyskać więcej informacji, zobacz [Jak zgłosić problem z zestawem narzędzi Visual C++ lub dokumentacją](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 Jeśli wykryto nowy sposób rozwiązania tego problemu, który należy dodać do tego artykułu, skontaktuj się z nami. Opinię można wysłać do nas za pomocą poniższego przycisku dla **tej strony**. Użyj go, aby utworzyć nowy problem w naszym [repozytorium GitHub dokumentacji języka C++](https://github.com/MicrosoftDocs/cpp-docs/issues). Dziękujemy.
