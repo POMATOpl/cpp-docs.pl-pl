@@ -14,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238411"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381548"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Dyrektywy pragma i słowo kluczowe __pragma
 
@@ -145,10 +145,10 @@ return _hr; \
 
  Umożliwia umieszczenie pragm do definicji makra. Ma jeden wiodący znak podkreślenia `_` zamiast dwóch wiodących podkreśleń, `__` które ma słowo kluczowe specyficzne dla firmy Microsoft, a pierwsza litera jest Wielka litera.
 
-Literał ciągu powinien być to, co w przeciwnym razie należy umieścić po *`#pragma`* instrukcji. Przykład:
+Literał ciągu powinien być to, co w przeciwnym razie należy umieścić po *`#pragma`* instrukcji. Na przykład:
 
 ```c
-#pragma message("--the #pragma way")
+#pragma message("the #pragma way")
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 

@@ -1,6 +1,7 @@
 ---
-title: '&lt;elementy &gt; typedef systemu iOS'
-ms.date: 11/04/2016
+title: '`<ios>`, definicje typów'
+description: Opisuje definicje typów języka C++ Standard (STL) `<ios>` , które obsługują `ios` klasę z starej `iostream` biblioteki.
+ms.date: 11/06/2020
 f1_keywords:
 - iosfwd/std::ios
 - iosfwd/std::streamoff
@@ -8,19 +9,18 @@ f1_keywords:
 - iosfwd/std::streamsize
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
-ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4af9636ab3317e7b81eb73dc74aef065b1287e21
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212283"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381639"
 ---
-# <a name="ltiosgt-typedefs"></a>&lt;elementy &gt; typedef systemu iOS
+# <a name="ios-typedefs"></a>`<ios>`, definicje typów
 
-## <a name="ios"></a><a name="ios"></a>wykonane
+## `ios`
 
-Obsługuje klasę systemu iOS ze starej biblioteki iostream.
+Obsługuje `ios` klasę ze starej `iostream` biblioteki.
 
 ```cpp
 typedef basic_ios<char, char_traits<char>> ios;
@@ -28,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_ios](../standard-library/basic-ios-class.md), wyspecjalizowany dla elementów typu **`char`** z cechami domyślnymi znaków.
+Typ jest synonimem dla szablonu klasy [`basic_ios`](../standard-library/basic-ios-class.md) , wyspecjalizowanym dla elementów typu **`char`** z cechami domyślnymi znaków.
 
-## <a name="streamoff"></a><a name="streamoff"></a>streamoff —
+## `streamoff`
 
 Obsługuje operacje wewnętrzne.
 
@@ -44,9 +44,9 @@ Obsługuje operacje wewnętrzne.
 
 ### <a name="remarks"></a>Uwagi
 
-Typ to liczba całkowita ze znakiem, która opisuje obiekt, który może przechowywać przesunięcie bajtów związane z różnymi operacjami pozycjonowania strumienia. Jego reprezentacja ma co najmniej 32 bitów wartości. Nie musi być wystarczająco duże, aby reprezentować dowolną pozycję bajtową w strumieniu. Wartość `streamoff(-1)` zwykle wskazuje błędne przesunięcie.
+Typ to liczba całkowita ze znakiem. Opisuje obiekt, który może przechowywać przesunięcie bajtów w operacjach umieszczania w strumieniu. Jego reprezentacja ma co najmniej 32 bitów wartości. Nie musi być wystarczająco duże, aby reprezentować dowolną pozycję bajtową w strumieniu. Wartość `streamoff(-1)` zwykle wskazuje błędne przesunięcie.
 
-## <a name="streampos"></a><a name="streampos"></a>streampos
+## `streampos`
 
 Przechowuje bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.
 
@@ -56,7 +56,7 @@ typedef fpos<mbstate_t> streampos;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Typ jest synonimem dla [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Przykład
 
@@ -73,7 +73,7 @@ int main( )
    ofstream x( "iostream.txt" );
    x << "testing";
    streampos y = x.tellp( );
-   cout << y << endl;
+   cout << streamoff(y) << '\n';
 }
 ```
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>dane StreamSize
+## `streamsize`
 
 Określa rozmiar strumienia.
 
@@ -99,7 +99,7 @@ Typ to liczba całkowita ze znakiem, która opisuje obiekt, który może przecho
 
 ### <a name="example"></a>Przykład
 
-Po skompilowaniu i uruchomieniu następującego programu Przyjrzyj się test.txt pliku, aby zobaczyć efekt ustawienia `streamsize` .
+Po skompilowaniu i uruchomieniu następującego programu Przyjrzyj się plikowi, `test.txt` Aby zobaczyć efekt ustawienia `streamsize` .
 
 ```cpp
 // ios_streamsize.cpp
@@ -117,9 +117,9 @@ int main( )
 }
 ```
 
-## <a name="wios"></a><a name="wios"></a>wios
+## `wios`
 
-Obsługuje klasę wios ze starej biblioteki iostream.
+Obsługuje `wios` klasę ze starej `iostream` biblioteki.
 
 ```cpp
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
@@ -127,9 +127,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla szablonu klasy [basic_ios](../standard-library/basic-ios-class.md), wyspecjalizowany dla elementów typu **`wchar_t`** z cechami domyślnymi znaków.
+Typ jest synonimem dla szablonu klasy [`basic_ios`](../standard-library/basic-ios-class.md) , wyspecjalizowanym dla elementów typu **`wchar_t`** z cechami domyślnymi znaków.
 
-## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
+## `wstreampos`
 
 Przechowuje bieżącą pozycję wskaźnika buforu lub wskaźnika pliku.
 
@@ -139,7 +139,7 @@ typedef fpos<mbstate_t> wstreampos;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Typ jest synonimem dla [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Przykład
 

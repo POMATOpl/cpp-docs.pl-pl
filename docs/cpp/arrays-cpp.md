@@ -1,17 +1,18 @@
 ---
 title: Tablice (C++)
-ms.date: 08/03/2020
+description: Dowiedz się, jak zadeklarować typ tablicy natywnej i korzystać z niej w standardowym języku programowania C++.
+ms.date: 11/08/2020
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2a84e5db04d0a37ebd65e0d979e9b075b7c23312
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352794"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381587"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
 
@@ -44,7 +45,7 @@ W deklaracji tablicy języka C++ rozmiar tablicy jest określany po nazwie zmien
     }
 ```
 
-Pierwszy element w tablicy jest elementem zerowego. Ostatnim elementem jest element (*n*-1), gdzie *n* to liczba elementów, które może zawierać tablica. Liczba elementów w deklaracji musi być typu całkowitego i musi być większa niż 0. Użytkownik jest odpowiedzialny za zapewnienie, że program nigdy nie przekaże wartości do operatora indeksu dolnego, który jest większy niż `(size - 1)` .
+Pierwszy element w tablicy jest elementem zerowego. Ostatnim elementem jest element ( *n* -1), gdzie *n* to liczba elementów, które może zawierać tablica. Liczba elementów w deklaracji musi być typu całkowitego i musi być większa niż 0. Użytkownik jest odpowiedzialny za zapewnienie, że program nigdy nie przekaże wartości do operatora indeksu dolnego, który jest większy niż `(size - 1)` .
 
 Tablica o rozmiarze zerowym jest dozwolona tylko wtedy, gdy tablica jest ostatnim polem w **`struct`** lub **`union`** i po włączeniu rozszerzeń Microsoft ( **`/Za`** lub **`/permissive-`** nie jest ustawiony).
 
@@ -136,7 +137,7 @@ Gdy tablica jest przenoszona do funkcji, jest ona przenoszona jako wskaźnik do 
 Poniższy przykład pokazuje funkcję, która akceptuje tablicę i długość. Wskaźnik wskazuje oryginalną tablicę, a nie kopię. Ponieważ parametr nie jest **`const`** , funkcja może modyfikować elementy tablicy.
 
 ```cpp
-void process(double p*, const size_t len)
+void process(double *p, const size_t len)
 {
     std::cout << "process:\n";
     for (size_t i = 0; i < len; ++i)
@@ -146,10 +147,10 @@ void process(double p*, const size_t len)
 }
 ```
 
-Zadeklaruj tablicę jako stałą, aby uczynić ją tylko do odczytu w bloku funkcji:
+Zadeklaruj i zdefiniuj parametr array `p` tak, **`const`** aby był tylko do odczytu w bloku funkcji:
 
 ```cpp
-void process(const double p*, const size_t len);
+void process(const double *p, const size_t len);
 ```
 
 Tę samą funkcję można także zadeklarować w taki sposób, bez zmiany w zachowaniu. Tablica jest nadal przenoszona jako wskaźnik do pierwszego elementu:
@@ -254,7 +255,7 @@ Funkcja `FindMinToMkt` jest zapisywana w taki sposób, że dodanie nowych fabryk
 
 ## <a name="initializing-arrays"></a>Inicjowanie tablic
 
-Tablice obiektów, które mają konstruktora klasy, są inicjowane przez konstruktora. Gdy lista inicjatorów zawiera mniej elementów niż elementy w tablicy, Konstruktor domyślny jest używany dla pozostałych elementów. Jeśli nie zdefiniowano domyślnego konstruktora dla klasy, lista inicjatorów musi być *kompletna*, to oznacza, że dla każdego elementu w tablicy musi istnieć jeden inicjator.
+Tablice obiektów, które mają konstruktora klasy, są inicjowane przez konstruktora. Gdy lista inicjatorów zawiera mniej elementów niż elementy w tablicy, Konstruktor domyślny jest używany dla pozostałych elementów. Jeśli nie zdefiniowano domyślnego konstruktora dla klasy, lista inicjatorów musi być *kompletna* , to oznacza, że dla każdego elementu w tablicy musi istnieć jeden inicjator.
 
 Rozważmy `Point` klasę, która definiuje dwa konstruktory:
 
@@ -344,7 +345,7 @@ Podobnie jak w przypadku innych operatorów, Operator indeksu dolnego ( `[]` ) m
 
 `*((array_name) + (subscript))`
 
-Podobnie jak w przypadku wszystkich elementów, które obejmują typy wskaźników, skalowanie jest wykonywane automatycznie w celu dostosowania rozmiaru typu. Wynikowa wartość nie jest *n* bajtami z pochodzenia `array_name` ; zamiast tego, jest to *n*-ty element tablicy. Aby uzyskać więcej informacji na temat tej konwersji, zobacz [dodatek operatory](additive-operators-plus-and.md).
+Podobnie jak w przypadku wszystkich elementów, które obejmują typy wskaźników, skalowanie jest wykonywane automatycznie w celu dostosowania rozmiaru typu. Wynikowa wartość nie jest *n* bajtami z pochodzenia `array_name` ; zamiast tego, jest to *n* -ty element tablicy. Aby uzyskać więcej informacji na temat tej konwersji, zobacz [dodatek operatory](additive-operators-plus-and.md).
 
 Podobnie w przypadku tablic wielowymiarowych adres jest wyprowadzany przy użyciu następującej metody:
 

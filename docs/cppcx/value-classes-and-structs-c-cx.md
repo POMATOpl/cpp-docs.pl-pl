@@ -5,12 +5,12 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214948"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381600"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Klasy i struktury wartości (C++/CX)
 
@@ -64,7 +64,7 @@ Poniższy fragment kodu deklaruje `Coordinates` typy i `City` jako struktury war
 
 ## <a name="parameter-passing-for-value-types"></a>Przekazywanie parametrów dla typów wartości
 
-Jeśli masz typ wartości jako parametr funkcji lub metody, jest on zwykle przenoszona przez wartość. W przypadku większych obiektów może to spowodować problem z wydajnością. W programie Visual Studio2013 i starszych typach wartości w C++/CX były zawsze przenoszone przez wartość. W programie Visual Studio 2015 i nowszych można przekazać typy wartości według odwołania lub wartości.
+Jeśli masz typ wartości jako parametr funkcji lub metody, jest on zwykle przenoszona przez wartość. W przypadku większych obiektów może to spowodować problem z wydajnością. W Visual Studio 2013 i starsze typy wartości w języku C++/CX były zawsze przenoszone przez wartość. W programie Visual Studio 2015 i nowszych można przekazać typy wartości według odwołania lub wartości.
 
 Aby zadeklarować parametr, który przekazuje typ wartości według wartości, należy użyć następującego kodu:
 
@@ -147,7 +147,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
