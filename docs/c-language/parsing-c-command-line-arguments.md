@@ -1,19 +1,21 @@
 ---
 title: Analizowanie argumentów wiersza polecenia języka C
-ms.date: 11/04/2016
+description: Dowiedz się, jak kod uruchomienia środowiska uruchomieniowego Microsoft C interpretuje argumenty wiersza polecenia, aby utworzyć parametry argv i argc.
+ms.date: 11/09/2020
 helpviewer_keywords:
 - quotation marks, command-line arguments
 - double quotation marks
+- double quote marks
 - command line, parsing
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 92921e91ee6bb37b2bf7b702a1b31ed045187b59
+ms.sourcegitcommit: b38485bb3a9d479e0c5d64ffc3d841fa2c2b366f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299094"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441258"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C
 
@@ -23,32 +25,34 @@ Kod uruchamiania języka Microsoft C używa następujących reguł podczas inter
 
 - Argumenty są rozdzielane znakami odstępu, który jest spacją lub tabulatorem.
 
-- Ciąg ujęty w znaki podwójnego cudzysłowu jest interpretowany jako pojedynczy argument, bez względu na biały znak zawarty w. Ciąg w cudzysłowie może być osadzony w argumencie. Należy zauważyć, że karetka (**^**) nie jest rozpoznawana jako znak ucieczki ani ogranicznik.
+- Pierwszy argument ( `argv[0]` ) jest traktowany specjalnie. Reprezentuje nazwę programu. Ponieważ musi być prawidłową nazwą ścieżki, części ujęte w podwójne cudzysłowy ( **`"`** ) są dozwolone. Znaki podwójnego cudzysłowu nie są uwzględniane w `argv[0]` danych wyjściowych. Części ujęte w podwójne cudzysłowy uniemożliwiają interpretację spacji lub znaku tabulacji jako końca argumentu. Późniejsze reguły na tej liście nie mają zastosowania.
 
-- Podwójny cudzysłów poprzedzony ukośnikiem odwrotnym ** \\"**, jest interpretowany jako literał podwójnego cudzysłowu (**"**).
+- Ciąg otoczony podwójnym cudzysłowem jest interpretowany jako pojedynczy argument, niezależnie od tego, czy zawiera on biały znak. Ciąg w cudzysłowie może być osadzony w argumencie. Karetka ( **`^`** ) nie jest rozpoznawana jako znak ucieczki ani ogranicznik. W ciągu ujętym w cudzysłów para podwójnych cudzysłowów jest interpretowana jako pojedynczy znak cudzysłowu podwójnego ucieczki. Jeśli wiersz polecenia zakończy się przed znalezieniem znaku cudzysłowu zamykającego, wszystkie znaki odczytane do tej pory są wyprowadzane jako ostatni argument.
+
+- Podwójny znak cudzysłowu poprzedzony ukośnikiem odwrotnym ( **`\"`** ) jest interpretowany jako znak podwójnego cudzysłowu ( **`"`** ).
 
 - Ukośniki odwrotne są interpretowane dosłownie, chyba że od razu poprzedzają podwójny cudzysłów.
 
-- Jeśli parzysta liczba kresek ułamkowych jest poprzedzona znakiem podwójnego cudzysłowu, to jeden ukośnik**\\**odwrotny () jest `argv` umieszczany w tablicy dla każdej pary ukośników**\\**odwrotnych (), a znak podwójnego cudzysłowu (**"**) jest interpretowany jako ogranicznik ciągu.
+- Jeśli parzysta liczba kresek ułamkowych jest poprzedzona znakiem podwójnego cudzysłowu, to jeden ukośnik odwrotny ( **`\`** ) jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych ( **`\\`** ), a znak cudzysłowu ( **`"`** ) jest interpretowany jako ogranicznik ciągu.
 
-- Jeśli po parzystej liczbie ukośników odwrotnych następuje znak podwójnego cudzysłowu, to jeden ukośnik**\\**odwrotny () jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych (**\\**), a znak podwójnego cudzysłowu jest interpretowany jako sekwencja ucieczki przez pozostały ukośnik odwrotny, co powoduje umieszczenie literału podwójnego cudzysłowu (**"**). `argv`
+- Jeśli po parzystej liczbie ukośników odwrotnych następuje znak podwójnego cudzysłowu, to jeden ukośnik odwrotny ( **`\`** ) zostanie umieszczony w `argv` tablicy dla każdej pary ukośników odwrotnych ( **`\\`** ). Znak podwójnego cudzysłowu jest interpretowany jako sekwencja ucieczki przez resztę odwrotnego ukośnika, co powoduje umieszczenie znaku cudzysłowu podwójnego ( **`"`** ) `argv` .
 
-Na tej liście przedstawiono reguły opisane powyżej, pokazując wynik interpretowany przekazane `argv` do kilku przykładów argumentów wiersza polecenia. Dane wyjściowe wymienione w drugiej, trzeciej i czwartej kolumnie pochodzą z ARGUMENTÓW. Program C, który znajduje się na liście.
+Na tej liście przedstawiono reguły opisane powyżej, pokazując wynik interpretowany przekazane do `argv` kilku przykładów argumentów wiersza polecenia. Dane wyjściowe wymienione w drugiej, trzeciej i czwartej kolumnie pochodzą z ARGUMENTÓW. Program C, który znajduje się na liście.
 
-|Wprowadzanie w wierszu polecenia|argv [1]|argv [2]|argv [3]|
+|Command-Line dane wejściowe|argv [1]|argv [2]|argv [3]|
 |-------------------------|---------------|---------------|---------------|
 |`"a b c" d e`|`a b c`|`d`|`e`|
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|
 |`a\\\b d"e f"g h`|`a\\\b`|`de fg`|`h`|
 |`a\\\"b c d`|`a\"b`|`c`|`d`|
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|
+|`a"b"" c d`|`ab" c d`|||
 
 ## <a name="example"></a>Przykład
 
-### <a name="code"></a>Code
+### <a name="code"></a>Kod
 
 ```c
-// Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
 // argc  argv  envp
@@ -99,4 +103,4 @@ Environment variables:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)
+[Funkcja Main i wykonywanie programu](../c-language/main-function-and-program-execution.md)
