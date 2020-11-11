@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
+ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924698"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518820"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora według wersji kompilatora
 
@@ -45,7 +45,7 @@ W tych wersjach kompilatora wprowadzono nowe ostrzeżenia:
 |  Program Visual Studio 2019 w wersji 16.4 | 19.24.28314.0 |
 | Visual Studio 2019 w wersji 16,5 | 19.25.28610.0 |
 | Visual Studio 2019 w wersji 16,6 | 19.26.28805.0 |
-| Visual Studio 2019 w wersji 16,7 | 19.26.29112.0 |
+| Visual Studio 2019 w wersji 16,7 | 19.27.29112.0 |
 
 Do opcji można określić tylko numer główny, wartości główne i pomocnicze, a także numery główne, pomocnicze i kompilacje **`/Wv`** . Kompilator raportuje wszystkie ostrzeżenia, które są zgodne z wersjami zaczynającymi się od podanej liczby. Pomija wszystkie ostrzeżenia dla wersji większych niż określona liczba. Na przykład **`/Wv:17`** raporty ostrzeżeń wprowadzone w lub przed wszystkimi wersjami programu Visual Studio 2012 i pomijają ostrzeżenia wprowadzone przez dowolny kompilator z Visual Studio 2013 (wersja 18) lub nowszy. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 Update 2 lub nowszym, można użyć **`/Wv:19.00.23506`** . Służy **`/Wv:19.11`** do zgłaszania ostrzeżeń wprowadzonych w dowolnej wersji programu Visual Studio przed Visual studio 2017 w wersji 15,5, ale pomijania ostrzeżeń wprowadzonych w programie Visual studio 2017 w wersji 15,5 lub nowszej.
 
@@ -57,7 +57,7 @@ W poniższych sekcjach wymieniono ostrzeżenia wprowadzone przez każdą z wersj
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.26`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
 | C5209 | `the C++20 syntax for an init-capture has changed to '& ...opt identifier initializer'` |
@@ -77,7 +77,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.25`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
 | C5208 | `unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes` |
@@ -86,7 +86,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.24`** .
 
-|Ostrzeżenie|Wiadomość|
+|Ostrzeżenie|Komunikat|
 |-|-|
 | C5061 | `the use of a comma operator as a subscript expression has been deprecated` |
 | C5062 | `enum direct list initialization between 'type-1' and 'type-2' is no longer supported` |
@@ -100,7 +100,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.23`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | Ostrzeżenie równoważne C2429 dla funkcji języka
 | C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
@@ -111,7 +111,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.22`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4856 | `'value' is not a valid argument for '/d1initAll:FillPattern' (value must be between 0 and 255). Command-line flag ignored` |
 | C4857 | `C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17` |
@@ -120,7 +120,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.21`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4855 | `implicit capture of 'this' via '[=]' is deprecated in 'version'` |
 | C5054 | `operator 'operator-name': deprecated between enumerations of different types` |
@@ -135,7 +135,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.20`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C5052 | `Keyword 'keyword-name' was introduced in C++<version> and requires use of the 'option-name' command-line option` |
 | C5053 | `support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension` |
@@ -144,7 +144,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.15`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
 | C4854 | `binding dereferenced null pointer to reference has undefined behavior` |
@@ -157,7 +157,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.14`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
 | C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
@@ -183,7 +183,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.13`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
@@ -192,7 +192,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.12`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
@@ -200,7 +200,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.11`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
 | C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
@@ -214,7 +214,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.10`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4597 | `undefined behavior: description` |
 | C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
@@ -236,7 +236,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.00`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
 | C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
@@ -249,7 +249,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.00.23918`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4467 | `usage of ATL attributes is deprecated` |
 | C4596 | `'name': illegal qualified name in member declaration` |
@@ -260,7 +260,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.00.23506`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4466 | `Could not perform coroutine heap elision` |
 | C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
@@ -271,7 +271,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:19.00.23026`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
 | C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
@@ -282,7 +282,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:18`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4427 | `'error': overflow in constant division, undefined behavior` |
 | C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
@@ -341,7 +341,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:17`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
 | C4316 | `'type': object allocated on the heap may not be aligned number` |
@@ -370,7 +370,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:16`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4330 | `attribute 'attribute' for section 'section' ignored` |
 | C4415 | `duplicate __declspec(code_seg('name'))` |
@@ -413,7 +413,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:15`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4352 | `'name': intrinsic function already defined` |
 | C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
@@ -429,7 +429,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:14`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
 | C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
@@ -444,7 +444,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:13`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
 | C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
@@ -587,7 +587,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:13.00.9466`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4343 | `#pragma optimize(description,off) overrides /Og option` |
 | C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
@@ -623,7 +623,7 @@ Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy u
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora **`/Wv:12`** .
 
-| Ostrzeżenie | Wiadomość |
+| Ostrzeżenie | Komunikat |
 |--|--|
 | C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
 | C4097 | `expected pragma parameter to be 'restore' or 'off'` |
