@@ -1,14 +1,14 @@
 ---
 title: Ulepszenia zgodności języka C++
-ms.date: 08/04/2020
 description: Program Microsoft C++ w programie Visual Studio postępuje w kierunku pełnej zgodności ze standardem języka C++ 20.
+ms.date: 11/10/2020
 ms.technology: cpp-language
-ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ff4d75626b75c55e001601ef7005bc23be60869d
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921428"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448493"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Ulepszenia zgodności języka C++ w programie Visual Studio
 
@@ -1066,7 +1066,7 @@ Kompilator emituje błąd C2668, ponieważ oba przeciążenia są zgodne z tą l
 
 ### <a name="definition-of-is-trivially-copyable"></a>Definicja *jest w prosty sposób kopiowany*
 
-W języku c++ 20 zmieniono definicję elementu, który *jest w prosty sposób kopiowany* . Gdy Klasa ma niestatyczną składową danych z **`volatile`** typem kwalifikowanym, nie oznacza już, że żaden Konstruktor kopiowania lub przenoszenia wygenerowanego przez kompilator lub operator przypisania kopiowania lub przenoszenia nie jest prosty. Standardowy Komitet języka C++ stosował tę zmianę wstecz jako raport wad. W MSVC zachowanie kompilatora nie zmienia się w różnych trybach języka, takich jak **`/std:c++14`** lub **`/std:c++latest`** .
+W języku c++ 20 zmieniono definicję elementu, który *jest w prosty sposób kopiowany*. Gdy Klasa ma niestatyczną składową danych z **`volatile`** typem kwalifikowanym, nie oznacza już, że żaden Konstruktor kopiowania lub przenoszenia wygenerowanego przez kompilator lub operator przypisania kopiowania lub przenoszenia nie jest prosty. Standardowy Komitet języka C++ stosował tę zmianę wstecz jako raport wad. W MSVC zachowanie kompilatora nie zmienia się w różnych trybach języka, takich jak **`/std:c++14`** lub **`/std:c++latest`** .
 
 Oto przykład nowego zachowania:
 
@@ -1154,6 +1154,338 @@ void f() {
     B b2[1]; // OK: calls default ctor for each array element
 }
 ```
+
+## <a name="conformance-improvements-in-visual-studio-2019-version-168"></a><a name="improvements_168"></a> Ulepszenia zgodności w programie Visual Studio 2019 w wersji 16,8
+
+### <a name="class-rvalue-used-as-lvalue-extension"></a>"Klasa rvalue używana jako rozszerzenie lvalue"
+
+MSVC ma rozszerzenie, które pozwala używać klasy rvalue jako lvalue. Rozszerzenie nie rozszerza okresu istnienia klasy rvalue i może prowadzić do niezdefiniowanego zachowania w czasie wykonywania. Wymuśmy teraz regułę standardową i nie Zezwalaj na to rozszerzenie w ramach programu **`/permissive-`** .
+Jeśli nie możesz użyć **`/permissive-`** jeszcze, możesz użyć, **`/we4238`** Aby jawnie nie zezwalać na rozszerzenie. Oto przykład:
+
+```cpp
+// Compiling with /permissive- now gives:
+// error C2102: '&' requires l-value
+struct S {};
+
+S f();
+
+void g()
+{
+    auto p1 = &(f()); // The temporary returned by 'f' is destructed after this statement. So 'p1' points to an invalid object.
+
+    const auto &r = f(); // This extends the lifetime of the temporary returned by 'f'
+    auto p2 = &r; // 'p2' points to a valid object
+}
+```
+
+### <a name="explicit-specialization-in-non-namespace-scope-extension"></a>"Jawna specjalizacja w rozszerzeniu" nienależącym do przestrzeni nazw "
+
+MSVC ma rozszerzenie, które zezwala na jawną specjalizację w zakresie innym niż przestrzeń nazw. Jest teraz częścią standardu po rozpoznaniu CWG 727. Istnieją jednak różnice w zachowaniu. Dostosowano zachowanie kompilatora w celu dopasowania go do standardu.
+
+```cpp
+// Compiling with 'cl a.cpp b.cpp /permissive-' now gives:
+//   error LNK2005: "public: void __thiscall S::f<int>(int)" (??$f@H@S@@QAEXH@Z) already defined in a.obj
+// To fix the linker error,
+// 1. Mark the explicit specialization with 'inline' explicitly. Or,
+// 2. Move its definition to a source file.
+
+// common.h
+struct S {
+    template<typename T> void f(T);
+    template<> void f(int);
+};
+
+// This explicit specialization is implicitly inline in the default mode.
+template<> void S::f(int) {}
+
+// a.cpp
+#include "common.h"
+
+int main() {}
+
+// b.cpp
+#include "common.h"
+```
+
+### <a name="checking-for-abstract-class-types"></a>Sprawdzanie typów klas abstrakcyjnych
+
+Standard C++ 20 zmienił proces polegający na tym, że użycie typu klasy abstrakcyjnej jako parametru funkcji jest wykrywane przez kompilator. W tym celu nie jest już SFINAE błąd. Wcześniej, jeśli Kompilator wykrył, że specjalizacja szablonu funkcji miałaby parametr funkcji, którego typem było wystąpienie klasy abstrakcyjnej, to specjalizacja byłaby traktowana jako źle sformułowany. Nie zostanie dodany do zestawu funkcji zdolnych do działania. W języku C++ 20 sprawdzanie parametru typu klasy abstrakcyjnej nie następuje do momentu wywołania funkcji. Oznacza to, że kod, który został użyty do skompilowania nie spowoduje błędu. Oto przykład:
+
+```cpp
+class Node {
+public:
+    int index() const;
+};
+
+class String : public Node {
+public:
+    virtual int size() const = 0;
+};
+
+class Identifier : public Node {
+public:
+    const String& string() const;
+};
+
+template<typename T>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+
+int compare(const Node& x, const Node& y)
+{
+    return compare(x.index(), y.index());
+}
+
+int f(const Identifier& x, const String& y)
+{
+    return compare(x.string(), y);
+}
+```
+
+Wcześniej wywołanie próbowało dokonać `compare` specjalizacji szablonu funkcji `compare` z argumentem szablonu `T` `String` . Wygenerowanie prawidłowej specjalizacji nie powiedzie się, ponieważ `String` jest klasą abstrakcyjną. Jedyna żywotna wartość kandydata zostałaby osiągnięta `compare(const Node&, const Node&)` . Jednak w środowisku C++ 20 sprawdzanie typu klasy abstrakcyjnej nie następuje do momentu wywołania funkcji. W związku z tym specjalizacja jest `compare(String, String)` dodawana do zestawu żywotnych kandydatów i jest wybierana jako najlepszy kandydat, ponieważ konwersja z `const String&` do na `String` jest lepszą sekwencją konwersji niż konwersja z `const String&` do `const Node&` .
+
+W języku C++ 20 jedną z możliwych poprawek do tego przykładu jest użycie koncepcji; oznacza to, że należy zmienić definicję `compare` :
+
+```cpp
+template<typename T>
+int compare(T x, T y) requires !std::is_abstract_v<T>
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+Lub jeśli koncepcje języka C++ nie są dostępne, można wrócić do SFINAE:
+
+```cpp
+template<typename T, std::enable_if_t<!std::is_abstract_v<T>, int> = 0>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+### <a name="support-for-p0960r3---allow-initializing-aggregates-from-a-parenthesized-list-of-values"></a>Obsługa P0960R3 — umożliwia inicjowanie agregacji na podstawie ujętej w nawiasy listy wartości.
+
+Język c++ 20 dodaje obsługę inicjowania agregacji za pomocą listy inicjalizatora w nawiasach okrągłych. Na przykład następujący kod jest prawidłowy w języku C++ 20:
+
+```cpp
+struct S {
+    int i;
+    int j;
+};
+
+S s(1, 2);
+```
+
+Większość tej funkcji to dodatek, który jest teraz kompiluje kod, który nie został wcześniej skompilowany. Jednak zmienia zachowanie `std::is_constructible` . W trybie C++ 17 to nie powiodło się **`static_assert`** , ale w trybie c++ 20 powiedzie się:
+
+`static_assert(std::is_constructible_v<S, int, int>, "Assertion failed!");`
+
+Jeśli ta cecha typu jest używana do kontrolowania rozpoznawania przeciążenia, może to prowadzić do zmiany zachowania między C++ 17 i C++ 20.
+
+### <a name="overload-resolution-involving-function-templates"></a>Rozpoznawanie przeciążenia obejmujące szablony funkcji
+
+Wcześniej kompilator zezwolił na kompilowanie kodu, **`/permissive-`** który nie powinien kompilować. W efekcie kompilator wywołał niewłaściwą funkcję prowadzącą do zmiany zachowania w czasie wykonywania:
+
+```cpp
+int f(int);
+
+namespace N
+{
+    using ::f;
+    template<typename T>
+    T f(T);
+}
+
+template<typename T>
+void g(T&& t)
+{
+}
+
+void h()
+{
+    using namespace N;
+    g(f);
+}
+```
+
+Wywołanie `g` używa zestawu przeciążenia zawierającego dwie funkcje `::f` i `N::f` . Ponieważ `N::f` jest szablonem funkcji, kompilator powinien traktować argument funkcji jako *kontekst niepodlegający wnioskom*. Oznacza to, że w tym przypadku wywołanie `g` powinno kończyć się niepowodzeniem, ponieważ kompilator nie może wywnioskować typu dla parametru szablonu `T` . Niestety, kompilator nie odrzucił faktu, że został już przyjęty, że `::f` był to dobry odpowiednik wywołania funkcji. Zamiast emitowania błędu, kompilator generuje kod do wywołania `g` przy użyciu `::f` jako argument.
+
+Uwzględniając, że w wielu przypadkach użycie `::f` jako argumentu funkcji jest oczekiwanym przez użytkownika, firma Microsoft emituje błąd tylko wtedy, gdy kod jest kompilowany za pomocą **`/permissive-`** .
+
+### <a name="migrating-from-await-to-c20-coroutines"></a>Migrowanie z `/await` do programu w języku c++ 20 procedur
+
+Standardowe procedury w języku C++ 20 są teraz domyślnie włączone **`/std:c++latest`** . Różnią się one od procedur i pomocy technicznej w ramach **`/await`** przełącznika. Migracja z **`/await`** programu do standardowych procedur wspólnych może wymagać pewnych zmian źródłowych.
+
+#### <a name="non-standard-keywords"></a>Niestandardowe słowa kluczowe
+
+Stare **`await`** i **`yield`** słowa kluczowe nie są obsługiwane w trybie c++ 20. Kod musi używać **`co_await`** i **`co_yield`** zamiast tego. Tryb standardowy nie zezwala również na korzystanie z programu `return` w procedurze wspólnej. Co **`return`** do procedury wspólnej musi używać **`co_return`** .
+
+```cpp
+// /await
+task f_legacy() {
+    ...
+    await g();
+    return n;
+}
+// /std:c++latest
+task f() {
+    ...
+    co_await g();
+    co_return n;
+}
+```
+
+#### <a name="types-of-initial_suspendfinal_suspend"></a>Typy initial_suspend/final_suspend
+
+W obszarze **`/await`** funkcje wstępne i wstrzymania obietnic mogą być deklarowane jako zwracające **`bool`** . To zachowanie nie jest standardowe. W języku C++ 20 te funkcje muszą zwracać oczekiwany typ klasy, często jednym z prostych awaitables, `std::suspend_always` Jeśli funkcja została wcześniej zwrócona **`true`** lub `std::suspend_never` Jeśli została zwrócona **`false`** .
+
+```cpp
+// /await
+struct promise_type_legacy {
+    bool initial_suspend() noexcept { return false; }
+    bool final_suspend() noexcept { return true; }
+    ...
+};
+
+// /std:c++latest
+struct promise_type {
+    auto initial_susepend() noexcept { return std::suspend_never{}; }
+    auto final_suspend() noexcept { return std::suspend_always{}; }
+    ...
+};
+```
+
+#### <a name="type-of-yield_value"></a>Typ elementu `yield_value`
+
+W języku C++ 20 Funkcja Promise `yield_value` musi zwrócić oczekujące. W **`/await`** trybie, `yield_value` funkcja mogła zwrócić **`void`** i zawsze zawiesza się. Takie funkcje można zastąpić funkcją, która zwraca wartość `std::suspend_always` .
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    void yield_value(int x) { next = x; };
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    auto yield_value(int x) { next = x; return std::suspend_always{}; }
+};
+```
+
+#### <a name="exception-handling-function"></a>Funkcja obsługi wyjątków
+
+**`/await`** obsługuje typ obietnicy bez żadnej funkcji obsługi wyjątków lub funkcji obsługi wyjątków o nazwie `set_exception` , która ma wartość `std::exception_ptr` . W języku C++ 20 typ obietnicy musi mieć funkcję o nazwie `unhandled_exception` , która nie przyjmuje argumentów. Obiekt Exception można uzyskać z w `std::current_exception` razie konieczności.
+
+```cpp
+// /await
+struct promise_type_legacy {
+    void set_exception(std::exception_ptr e) { saved_exception = e; }
+    ...
+};
+// /std:c++latest
+struct promise_type {
+    void unhandled_exception() { saved_exception = std::current_exception(); }
+    ...
+};
+```
+
+#### <a name="deduced-return-types-of-coroutines-not-supported"></a>Wywnioskowane typy zwracane procedur wspólnych nie są obsługiwane
+
+Język c++ 20 nie obsługuje wspólnych procedur z typem zwracanym, który zawiera typ zastępczy, taki jak **`auto`** . Zwracane typy współprocedur muszą być jawnie zadeklarowane. W obszarze **`/await`** te wywnioskowane typy zawsze obejmują typ eksperymentalny i wymagają włączenia nagłówka, który definiuje wymagany typ: jeden z `std::experimental::task<T>` , `std::experimental::generator<T>` lub `std::experimental::async_stream<T>` .
+
+```cpp
+// /await
+auto my_generator() {
+    ...
+    co_yield next;
+};
+
+// /std:c++latest
+#include <experimental/generator>
+std::experimental::generator<int> my_generator() {
+    ...
+    co_yield next;
+};
+```
+
+#### <a name="return-type-of-return_value"></a>Zwracany typ `return_value`
+
+Typem zwracanym funkcji obietnicy `return_value` musi być **`void`** . W **`/await`** trybie, zwracany typ może być dowolny i jest ignorowany. Ta Diagnostyka może pomóc w wykrywaniu delikatnych błędów, w których autor niepoprawnie zakłada, że wartość zwracana `return_value` jest zwracana do obiektu wywołującego.
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    int return_value(int x) { return x; } // incorrect, the return value of this function is unused and the value is lost.
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    void return_value(int x) { value = x; }; // save return value
+};
+```
+
+#### <a name="return-object-conversion-behavior"></a>Zachowanie konwersji obiektu zwrotnego
+
+Jeśli zadeklarowany zwracany typ procedury wspólnej nie pasuje do zwracanego typu funkcji Promise `get_return_object` , zwracany obiekt z `get_return_object` elementu jest konwertowany na zwracany typ procedury wspólnej. W programie **`/await`** Ta konwersja jest wykonywana wczesnie, zanim treść procedury wspólnej będzie mogła zostać wykonana. W programie **`/std:c++latest`** Ta konwersja jest wykonywana tylko wtedy, gdy wartość jest faktycznie zwracana do obiektu wywołującego. Umożliwia Współtworzenie procedur, które nie zawieszają się w początkowym punkcie wstrzymania, aby użyć obiektu zwróconego przez `get_return_object` w ramach procedury wspólnej.
+
+#### <a name="coroutine-promise-parameters"></a>Parametry obietnicy wspólnej
+
+W języku C++ 20 kompilator próbuje przekazać parametry współrutynowe (jeśli istnieją) do konstruktora typu obietnicy. Jeśli to się nie powiedzie, ponawia próbę przy użyciu domyślnego konstruktora. W **`/await`** tryb w trybie użyto tylko domyślnego konstruktora. Ta zmiana może prowadzić do różnic w działaniu, jeśli obietnica ma wiele konstruktorów lub jeśli istnieje konwersja z parametru międzyprocedurowego na typ obietnicy.
+
+```cpp
+struct coro {
+    struct promise_type {
+        promise_type() { ... }
+        promise_type(int x) { ... }
+        ...
+    };
+};
+
+coro f1(int x);
+
+// Under /await the promise gets constructed using the default constructor.
+// Under /std:c++latest the promise gets constructed using the 1-argument constructor.
+f1(0);
+
+struct Object {
+template <typename T> operator T() { ... } // Converts to anything!
+};
+
+coro f2(Object o);
+
+// Under /await the promise gets constructed using the default constructor
+// Under /std:c++latest the promise gets copy- or move-constructed from the result of
+// Object::operator coro::promise_type().
+f2(Object{});
+```
+
+### <a name="permissive--and-c20-modules-are-on-by-default-under-stdclatest"></a>`/permissive-` i moduły C++ 20 są domyślnie włączone w obszarze `/std:c++latest`
+
+Obsługa modułów c++ 20 jest domyślnie włączona w programie **`/std:c++latest`** . Aby uzyskać więcej informacji na temat tej zmiany i scenariuszy, w których **`module`** **`import`** warunki i są warunkowo traktowane jako słowa kluczowe, zobacz [Standard c++ 20 module support with MSVC w programie Visual Studio 2019 w wersji 16,8](https://devblogs.microsoft.com/cppblog/standard-c20-modules-support-with-msvc-in-visual-studio-2019-version-16-8/).
+
+Jako warunek wstępny dla obsługi modułów program **`permissive-`** jest teraz włączony, gdy **`/std:c++latest`** jest określony. Aby uzyskać więcej informacji, zobacz [`/permissive-`](../build/reference/permissive-standards-conformance.md).
+
+W przypadku kodu, który wcześniej skompilowany w ramach i wymaga niezgodnych **`/std:c++latest`** zachowań kompilatora, można **`permissive`** określić, aby wyłączyć tryb zgodności ścisłej w kompilatorze. Opcja kompilatora musi znajdować się po **`/std:c++latest`** liście argumentów wiersza polecenia. Jednak **`permissive`** powoduje błąd w przypadku napotkania użycia modułów:
+
+> błąd C1214: moduły powodują konflikt z niestandardowym zachowaniem żądanym za pośrednictwem *opcji "Option* "
+
+Najbardziej typowe wartości dla *opcji* to:
+
+| Opcja | Opis |
+|--|--|
+| **`/Zc:twoPhase-`** | Dwa wyszukiwania nazw faz są wymagane dla modułów C++ 20 i implikowane przez **`permissive-`** . |
+| **`/Zc:hiddenFriend-`** | Włącza standardowe, ukryte reguły wyszukiwania nazw zaprzyjaźnionych. Wymagane dla modułów C++ 20 i implikowane przez program **`permissive-`** . |
+| **`/Zc:preprocessor-`** | Preprocesor jest wymagany w przypadku użycia jednostki nagłówka C++ 20 i tylko tworzenie. Nazwane moduły nie wymagają tej opcji. |
+
+[`/experimental:module`](../build/reference/experimental-module.md)Opcja jest nadal wymagana do korzystania z modułów dostarczanych *`std.*`* z programem Visual Studio, ponieważ nie są one jeszcze ustandaryzowane.
+
+Ta **`/experimental:module`** opcja oznacza również **`/Zc:twoPhase`** , że i **`/Zc:hiddenFriend`** . Wcześniej kod skompilowany z modułami może być czasami kompilowany przy użyciu, **`/Zc:twoPhase-`** Jeśli moduł był używany. To zachowanie nie jest już obsługiwane.
 
 ## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a><a name="update_160"></a> Poprawki błędów i zmiany zachowań w programie Visual Studio 2019
 
@@ -3651,6 +3983,6 @@ Mamy pełną listę ulepszeń zgodności w programie Visual Studio 2015 Update 3
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tabela zgodności języka Microsoft C++](visual-cpp-language-conformance.md)
