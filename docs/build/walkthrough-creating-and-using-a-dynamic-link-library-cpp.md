@@ -1,18 +1,19 @@
 ---
 title: 'Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej'
 description: Użyj języka C++ do tworzenia biblioteki dołączanej dynamicznie (DLL) systemu Windows w programie Visual Studio.
-ms.custom: conceptual
+ms.custom:
+- walkthrough
+- contperfq2
 ms.date: 08/22/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
-ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 0018df31e19a3f1a68a1c4a0bde37d6fa2678406
-ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
+ms.openlocfilehash: ca9aebd7103d36918940e52638b3c2cb52612c25
+ms.sourcegitcommit: 43a6ff739516dff62fee521d401eb4b1201cea8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "92924484"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870691"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej
 
@@ -583,6 +584,6 @@ Po utworzeniu biblioteki DLL i aplikacji klienckiej można eksperymentować. Spr
 
 Podczas wdrażania aplikacji należy również wdrożyć biblioteki DLL, z których korzysta. Najprostszym sposobem utworzenia bibliotek DLL, które można utworzyć, lub dołączenia ich od stron trzecich, jest umieszczenie ich w tym samym katalogu, w którym znajduje się aplikacja. Nazywa się to *wdrożeniem lokalnym aplikacji*. Aby uzyskać więcej informacji o wdrażaniu, zobacz [wdrażanie w Visual C++](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wywoływanie funkcji DLL z aplikacji Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
