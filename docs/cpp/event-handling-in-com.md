@@ -1,6 +1,7 @@
 ---
 title: Obsługa zdarzeń w modelu COM
-ms.date: 11/04/2016
+description: Dowiedz się, jak używać rozszerzeń języka Microsoft C++ do obsługi zdarzeń COM.
+ms.date: 11/20/2020
 helpviewer_keywords:
 - event handling [C++], COM
 - event handling [C++], about event handling
@@ -15,36 +16,38 @@ helpviewer_keywords:
 - event sources, in event handling
 - declaring events, in COM
 - declaring events, event handling in COM
-ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: be71bd9eac44c51a2e6a7cdeb925a1ca0b8b5dfb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c664f052fe211c88ad097c9d2617ec47f180eff
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231211"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483116"
 ---
 # <a name="event-handling-in-com"></a>Obsługa zdarzeń w modelu COM
 
-W obsłudze zdarzeń COM należy skonfigurować źródło zdarzeń i odbiorcę zdarzeń przy użyciu odpowiednio atrybutów [event_source](../windows/attributes/event-source.md) i [event_receiver](../windows/attributes/event-receiver.md) , określając `type` = `com` . Te atrybuty wprowadzają odpowiedni kod dla interfejsów niestandardowych, wysyłania i dualnych, aby umożliwić odpowiednim klasom wywoływanie zdarzeń i obsługę zdarzeń za pośrednictwem punktów połączenia COM.
+W obsłudze zdarzeń COM należy skonfigurować źródło zdarzeń i odbiorcę zdarzeń przy użyciu [`event_source`](../windows/attributes/event-source.md) [`event_receiver`](../windows/attributes/event-receiver.md) odpowiednio atrybutów i `type` = `com` . Te atrybuty wprowadzają odpowiedni kod dla niestandardowych, wysyłanych i podwójnych interfejsów. Wprowadzony kod zezwala klasie z atrybutami na Wyzwalanie zdarzeń i obsługę zdarzeń za pomocą punktów połączenia COM.
+
+> [!NOTE]
+> Atrybuty zdarzeń w natywnym języku C++ są niezgodne ze standardem C++. Nie kompilują się po określeniu [`/permissive-`](../build/reference/permissive-standards-conformance.md) trybu zgodności.
 
 ## <a name="declaring-events"></a>Deklarowanie zdarzeń
 
-W klasie źródła zdarzeń, użyj słowa kluczowego [__event](../cpp/event.md) w deklaracji interfejsu, aby zadeklarować metody tego interfejsu jako zdarzenia. Zdarzenia tego interfejsu są uruchamiane podczas wywoływania ich jako metod interfejsu. Metody interfejsów zdarzeń mogą mieć zero lub więcej parametrów (które powinny znajdować się *w* parametrach). Zwracany typ może być typu void lub dowolnego całkowitego.
+W klasie źródła zdarzeń, użyj [`__event`](../cpp/event.md) słowa kluczowego w deklaracji interfejsu, aby zadeklarować metody tego interfejsu jako zdarzenia. Zdarzenia tego interfejsu są uruchamiane podczas wywoływania ich jako metod interfejsu. Metody interfejsów zdarzeń mogą mieć zero lub więcej parametrów (które powinny znajdować się *w* parametrach). Zwracany typ może być typu void lub dowolnego całkowitego.
 
 ## <a name="defining-event-handlers"></a>Definiowanie programów obsługi zdarzeń
 
-W klasie odbiornika zdarzeń należy zdefiniować programy obsługi zdarzeń, które są metodami z podpisami (typy zwracane, konwencje wywoływania i argumenty), które odpowiadają obsługiwanemu zdarzeniu. W przypadku zdarzeń COM konwencje wywoływania nie muszą być zgodne; Zobacz [zdarzenia zależne od układu com](#vcconeventhandlingincomanchorlayoutdependentcomevents) , aby uzyskać szczegółowe informacje.
+Programy obsługi zdarzeń definiuje się w klasie odbiorcy zdarzeń. Programy obsługi zdarzeń to metody z sygnaturami (typy zwracane, konwencje wywoływania i argumenty), które pasują do zdarzenia, które będą obsługiwane. W przypadku zdarzeń COM konwencje wywoływania nie muszą być zgodne. Aby uzyskać więcej informacji, zobacz [zdarzenia com zależne od układu](#vcconeventhandlingincomanchorlayoutdependentcomevents) poniżej.
 
 ## <a name="hooking-event-handlers-to-events"></a>Podłączanie programów obsługi zdarzeń do zdarzeń
 
-Ponadto w klasie odbiorcy zdarzeń można używać funkcji wewnętrznej [__hook](../cpp/hook.md) do kojarzenia zdarzeń z programami obsługi zdarzeń i [__unhook](../cpp/unhook.md) do usuwania skojarzeń zdarzeń z programów obsługi zdarzeń. Można podłączyć kilka zdarzeń do programu obsługi zdarzeń lub kilka programów obsługi zdarzeń do zdarzenia.
+Również w klasie odbiorcy zdarzeń, funkcja wewnętrzna służy [`__hook`](../cpp/hook.md) do kojarzenia zdarzeń z obsługą zdarzeń oraz [`__unhook`](../cpp/unhook.md) do usuwania skojarzeń zdarzeń z programów obsługi zdarzeń. Można podłączyć kilka zdarzeń do programu obsługi zdarzeń lub kilka programów obsługi zdarzeń do zdarzenia.
 
 > [!NOTE]
 > Zwykle istnieją dwie techniki udostępniające odbiorcy zdarzenia COM definicje interfejsu źródła zdarzeń. Pierwszą techniką, jak pokazano poniżej, jest udostępnienie wspólnego pliku nagłówkowego. Drugim jest użycie [#import](../preprocessor/hash-import-directive-cpp.md) z `embedded_idl` kwalifikatorem importu, tak aby biblioteka typów źródła zdarzeń była zapisywana w pliku TLH z zachowaniem kodu generowanego przez atrybut.
 
 ## <a name="firing-events"></a>Wyzwalanie zdarzeń
 
-Aby wywołać zdarzenie, po prostu wywołaj metodę w interfejsie zadeklarowanym za pomocą **`__event`** słowa kluczowego w klasie Źródło zdarzenia. Jeśli programy obsługi zostały podłączone do zdarzenia, zostaną wywołane programy obsługi.
+Aby wyzwolić zdarzenie, należy wywołać metodę w interfejsie zadeklarowanym ze **`__event`** słowem kluczowym w klasie źródła zdarzenia. Jeśli programy obsługi zostały podłączone do zdarzenia, zostaną wywołane programy obsługi.
 
 ### <a name="com-event-code"></a>Kod zdarzenia COM
 
@@ -157,13 +160,13 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Zależne od układu zdarzenia COM
+## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Zdarzenia COM zależne od układu
 
-Zależność układu jest tylko problemem programowania COM. W obsłudze zdarzeń macierzystych i zarządzanych, podpisy (typy zwracane, konwencja wywoływania i argumenty) z programów obsługi muszą odpowiadać ich zdarzeniom, ale nazwy programów obsługi nie muszą odpowiadać ich zdarzeniom.
+Zależność układu jest tylko problemem programowania COM. W natywnej i zarządzanej obsłudze zdarzeń, podpisy (typ zwracany, Konwencja wywoływania i argumenty) programów obsługi muszą być zgodne ze swoimi zdarzeniami, ale nazwy programu obsługi nie muszą odpowiadać ich zdarzeniom.
 
-Jednak w obsłudze zdarzeń COM, gdy ustawisz parametr *layout_dependent* `event_receiver` do **`true`** , zostanie wymuszone dopasowanie nazwy i podpisu. Oznacza to, że nazwy i wzory podpisów w programach obsługi zdarzeń muszą dokładnie odpowiadać nazwom i wzorom podpisów zdarzeń, do których są podłączone.
+Jednak w obsłudze zdarzeń COM, podczas ustawiania *`layout_dependent`* parametru `event_receiver` do **`true`** , jest wymuszane dopasowanie nazwy i podpisu. Nazwy i podpisy programów obsługi w odbiorniku zdarzeń oraz zdarzenia podłączane muszą dokładnie pasować.
 
-Gdy *layout_dependent* jest ustawiona na **`false`** , Konwencja wywoływania i Klasa magazynu (wirtualna, statyczna i tak dalej) można mieszać i dopasowywać między metodą zdarzenia wyzwalania a metodami zaczepienia (delegatów). Jest nieco bardziej wydajny, aby mieć *layout_dependent* = **`true`** .
+Gdy *`layout_dependent`* jest ustawiona na **`false`** , Konwencja wywoływania i Klasa magazynu (wirtualne, statyczne i tak dalej) mogą być mieszane i dopasowywane między metodą zdarzenia wyzwalania a metodami podłączania (jego delegatów). Jest nieco bardziej wydajny *`layout_dependent`* = **`true`** .
 
 Załóżmy, że `IEventSource` jest zdefiniowany dla następujących metod:
 
