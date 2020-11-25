@@ -10,11 +10,11 @@ helpviewer_keywords:
 - binary data, binary expressions
 ms.assetid: 13bc4c8e-2dc9-4b23-9f3a-25064e8777ed
 ms.openlocfilehash: 7868073f4932e4b77329e6df4a3de374bcf41ec9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227975"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96035238"
 ---
 # <a name="c-operators"></a>Operatory języka C
 
@@ -50,6 +50,6 @@ Operator wyrażenia warunkowego ma niższy priorytet niż wyrażenia binarne i r
 
 Wyrażenia z operatorami zawierają również wyrażenia przypisania, które używają jednoargumentowego lub binarnego operatora przypisania. Operatory przypisania jednoargumentowego to operatory przyrostu ( **++** ) i zmniejszania ( **--** ); operatory przypisania binarnego to operator prostego przypisania ( **=** ) i operatory przypisania złożonego. Każdy operator przypisania złożonego jest kombinacją innego operatora binarnego z operatorem przypisania prostego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)
