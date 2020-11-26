@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
 ms.openlocfilehash: b1c64505a63b8720ed7aee855f2bbbbdb9134e28
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505984"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188838"
 ---
 # <a name="add-a-class"></a>Dodawanie klasy
 
-Aby dodać klasę w projekcie Visual Studio C++, w **Eksplorator rozwiązań**kliknij projekt prawym przyciskiem myszy, wybierz polecenie **Dodaj**, a następnie wybierz pozycję **Klasa**. Spowoduje to otwarcie [okna dialogowego Dodaj klasę](#add-class-dialog-box).
+Aby dodać klasę w projekcie Visual Studio C++, w **Eksplorator rozwiązań** kliknij projekt prawym przyciskiem myszy, wybierz polecenie **Dodaj**, a następnie wybierz pozycję **Klasa**. Spowoduje to otwarcie [okna dialogowego Dodaj klasę](#add-class-dialog-box).
 
 Podczas dodawania klasy należy określić nazwę, która różni się od klas, które już istnieją w MFC lub ATL. Jeśli określisz nazwę, która już istnieje w jednej z bibliotek, środowisko IDE wyświetli komunikat o błędzie.
 
@@ -31,7 +31,7 @@ Jeśli Konwencja nazewnictwa projektu wymaga użycia istniejącej nazwy, można 
 
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>Jakiego rodzaju klasy chcesz dodać?
 
-W oknie dialogowym **Dodawanie klasy** po rozwinięciu węzła **Visual C++** w lewym okienku wyświetlane są kilka grup zainstalowanych szablonów. Grupy obejmują **środowiska CLR**, **ATL**, **MFC**i **C++**. Po wybraniu grupy w środkowym okienku zostanie wyświetlona lista dostępnych szablonów znajdujących się w tej grupie. Każdy szablon zawiera pliki i kod źródłowy, które są wymagane dla klasy.
+W oknie dialogowym **Dodawanie klasy** po rozwinięciu węzła **Visual C++** w lewym okienku wyświetlane są kilka grup zainstalowanych szablonów. Grupy obejmują **środowiska CLR**, **ATL**, **MFC** i **C++**. Po wybraniu grupy w środkowym okienku zostanie wyświetlona lista dostępnych szablonów znajdujących się w tej grupie. Każdy szablon zawiera pliki i kod źródłowy, które są wymagane dla klasy.
 
 Aby wygenerować nową klasę, wybierz szablon w środkowym okienku, wpisz nazwę klasy w polu **Nazwa** , a następnie wybierz pozycję **Dodaj**. Spowoduje to otwarcie **Kreatora dodawania klasy** , dzięki czemu można określić opcje dla klasy.
 
@@ -56,7 +56,7 @@ Okno dialogowe **Dodawanie klasy** zawiera szablony, które umożliwiają:
 
 - Automatycznie Utwórz nową klasę przez dodanie odpowiednich plików i kodu źródłowego do projektu.
 
-Możesz uzyskać dostęp do okna dialogowego **Dodaj klasę** z menu **projekt** , **Eksplorator rozwiązań**lub [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code).
+Możesz uzyskać dostęp do okna dialogowego **Dodaj klasę** z menu **projekt** , **Eksplorator rozwiązań** lub [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Podczas próby dodania klasy, która nie jest odpowiednia dla bieżącego projektu, zostanie wyświetlony komunikat o błędzie. Wybierz **przycisk OK** , aby powrócić do okna dialogowego **Dodaj klasę** .
@@ -67,7 +67,7 @@ Istnieją cztery kategorie szablonów **dodawania klas** : .NET, ATL, MFC i Gene
 
 #### <a name="net"></a>.NET
 
-|Szablon|Kreatora|
+|Template|Kreatora|
 |--------------|------------|
 |Usługa sieci Web ASP.NET|Niedostępne|
 |Klasa składnika (.NET)|Niedostępne|
@@ -77,7 +77,7 @@ Istnieją cztery kategorie szablonów **dodawania klas** : .NET, ATL, MFC i Gene
 
 #### <a name="atl"></a>ATL
 
-|Szablon|Kreatora|
+|Template|Kreatora|
 |--------------|------------|
 |Dodawanie obsługi ATL do MFC|Niedostępne|
 |Formant ATL|[Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md)|
@@ -88,12 +88,12 @@ Istnieją cztery kategorie szablonów **dodawania klas** : .NET, ATL, MFC i Gene
 
 #### <a name="mfc"></a>MFC
 
-|Szablon|Kreatora|
+|Template|Kreatora|
 |--------------|------------|
 |Klasa MFC|[Kreator dodawania klasy MFC](../mfc/reference/mfc-add-class-wizard.md)|
 
 #### <a name="generic-classes"></a>Klasy ogólne
 
-|Szablon|Kreatora|
+|Template|Kreatora|
 |--------------|------------|
 |Klasa generyczna C++|[Kreator klasy generycznej C++](./adding-a-generic-cpp-class.md#generic-c-class-wizard)|

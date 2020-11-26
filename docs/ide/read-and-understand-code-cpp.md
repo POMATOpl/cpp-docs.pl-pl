@@ -3,11 +3,11 @@ title: Odczytywanie i poznawanie kodu C++ w programie Visual Studio
 description: Użyj edytora kodu C++ w programie Visual Studio, aby sformatować i zrozumieć swój kod.
 ms.date: 05/28/2019
 ms.openlocfilehash: cd152ffbbd106c6a31a21da35d08b53555047209
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924655"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188903"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Odczytywanie i poznawanie kodu C++ w programie Visual Studio
 
@@ -23,7 +23,7 @@ Nieużywany kod (taki jak kod w #if 0) jest bardziej wyblakły kolorem.
 
 ![Nieaktywny kod](../ide/media/inactive-code-cpp.png "Nieaktywny kod języka C++")
 
-Kolory można dostosować, wpisując "Fonts" ( **Szybkie uruchamianie** ), a następnie wybierając **czcionkę i kolory** . W oknie dialogowym **czcionki i kolory** przewiń w dół do opcji C/C++, a następnie wybierz niestandardową czcionkę i/lub kolor.
+Kolory można dostosować, wpisując "Fonts" ( **Szybkie uruchamianie**), a następnie wybierając **czcionkę i kolory**. W oknie dialogowym **czcionki i kolory** przewiń w dół do opcji C/C++, a następnie wybierz niestandardową czcionkę i/lub kolor.
 
 ## <a name="outlining"></a>Tworzenie konspektu
 
@@ -37,7 +37,7 @@ Inne opcje tworzenia konspektu znajdują się w obszarze **Edytuj**  >  **Konspe
 
 ## <a name="line-numbers"></a>Numery wierszy
 
-Możesz dodać numery wierszy do projektu, przechodząc do opcji **Narzędzia**  >  **Options**  >  **Edytor tekstu**  >  **wszystkie języki**  >  **Ogólne** lub wyszukując "wiersz num" przy użyciu **szybkiego uruchamiania (Ctrl + Q)** . Numery wierszy można ustawić dla wszystkich języków lub tylko dla określonych języków, w tym C++.
+Możesz dodać numery wierszy do projektu, przechodząc do opcji **Narzędzia**  >  **Options**  >  **Edytor tekstu**  >  **wszystkie języki**  >  **Ogólne** lub wyszukując "wiersz num" przy użyciu **szybkiego uruchamiania (Ctrl + Q)**. Numery wierszy można ustawić dla wszystkich języków lub tylko dla określonych języków, w tym C++.
 
 ## <a name="scroll-and-zoom"></a>Przewiń i Powiększ
 
@@ -49,7 +49,7 @@ Możesz powiększyć lub pomniejszyć w edytorze, naciskając klawisz **Ctrl** i
 
 ![Mapa kodu w języku C&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mapa kodu")
 
-Aby włączyć **tryb mapowania** , wpisz "map" w polu wyszukiwania **szybkiego uruchamiania** na głównym pasku narzędzi i wybierz opcję **Użyj trybu Scroll map** . Aby uzyskać więcej informacji, zobacz [jak: śledzić kod przez dostosowanie paska przewijania](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Aby włączyć **tryb mapowania**, wpisz "map" w polu wyszukiwania **szybkiego uruchamiania** na głównym pasku narzędzi i wybierz opcję **Użyj trybu Scroll map**. Aby uzyskać więcej informacji, zobacz [jak: śledzić kod przez dostosowanie paska przewijania](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 Gdy **tryb mapy** jest wyłączony, pasek przewijania nadal wyróżnia zmiany wprowadzone w pliku. Zielony oznacza zapisane zmiany i żółty wskazuje niezapisane zmiany.
 

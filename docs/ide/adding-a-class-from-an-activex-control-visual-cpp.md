@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
 ms.openlocfilehash: d63f73e17e47f2cabb8f1a55c71325ec7068a2c8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500377"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188929"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Dodawanie klasy z kontrolki ActiveX
 
@@ -73,18 +73,18 @@ Użyj tego kreatora, aby dodać klasę MFC z dostępnej kontrolki ActiveX. Kreat
 
 - **Interfejsy**
 
-  Określa interfejsy w kontrolce ActiveX. Kreator używa interfejsów z bieżącego wyboru w **dostępnych kontrolkach ActiveX**lub używa interfejsów z pliku biblioteki typów określonego w **lokalizacji**.
+  Określa interfejsy w kontrolce ActiveX. Kreator używa interfejsów z bieżącego wyboru w **dostępnych kontrolkach ActiveX** lub używa interfejsów z pliku biblioteki typów określonego w **lokalizacji**.
 
   |Przycisk transferu|Opis|
   |---------------------|-----------------|
   |**>**|Dodaje interfejs aktualnie wybrany na liście **interfejsy** . Niedostępne, jeśli nie wybrano interfejsu.|
-  |**>>**|Dodaje wszystkie interfejsy w kontrolce ActiveX. Kreator używa interfejsów z bieżącego wyboru w **dostępnych kontrolkach ActiveX**lub używa interfejsów z pliku biblioteki typów określonego w **lokalizacji**.|
+  |**>>**|Dodaje wszystkie interfejsy w kontrolce ActiveX. Kreator używa interfejsów z bieżącego wyboru w **dostępnych kontrolkach ActiveX** lub używa interfejsów z pliku biblioteki typów określonego w **lokalizacji**.|
   |**\<**|Usuwa klasę aktualnie wybraną z listy **wygenerowanych klas** . Niedostępne, jeśli żadna Klasa nie jest obecnie zaznaczona na liście **wygenerowanych klas** .|
   |**\<\<**|Usuwa wszystkie klasy z listy **wygenerowanych klas** . Niedostępne, jeśli lista **wygenerowanych klas** jest pusta.|
 
 - **Wygenerowane klasy**
 
-  Określa nazwy klas do wygenerowania z interfejsów dodanych za pomocą **>** przycisku lub **>>** . Możesz zaznaczyć to pole, aby wybrać klasę, a następnie użyć klawiszy w górę lub w dół, aby przewijać listę. Po wybraniu przycisku **Zakończ**można wyświetlić każdą wygenerowaną nazwę klasy w polu **Klasa** i każdą wygenerowaną nazwę pliku w polu **plik. h** . W tym polu można wybrać tylko jedną klasę naraz.
+  Określa nazwy klas do wygenerowania z interfejsów dodanych za pomocą **>** przycisku lub **>>** . Możesz zaznaczyć to pole, aby wybrać klasę, a następnie użyć klawiszy w górę lub w dół, aby przewijać listę. Po wybraniu przycisku **Zakończ** można wyświetlić każdą wygenerowaną nazwę klasy w polu **Klasa** i każdą wygenerowaną nazwę pliku w polu **plik. h** . W tym polu można wybrać tylko jedną klasę naraz.
 
   Możesz usunąć klasę, wybierając ją na liście i wybierając **<** . Nie musisz wybierać klasy w polu **wygenerowane klasy** , aby usunąć wszystkie klasy. Zaznaczając **<<** , należy usunąć wszystkie klasy w polu **wygenerowane klasy** .
 

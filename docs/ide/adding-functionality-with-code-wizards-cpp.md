@@ -5,11 +5,11 @@ helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
 ms.openlocfilehash: 651eac8c630636455dd1ffa04fdd02b71fa3cf62
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509707"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188916"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 
@@ -52,7 +52,7 @@ Istnieją trzy lokalizacje, w których można uzyskać dostęp do kreatorów kod
 
   - **Dodaj zdarzenie** (tylko z klasy kontrolki)
 
-- W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy dowolny folder i kliknij polecenie **Dodaj** z menu skrótów, aby dodać nowe lub istniejące pliki, więcej folderów, elementów, klas, zasobów i odwołań sieci Web do projektu.
+- W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy dowolny folder i kliknij polecenie **Dodaj** z menu skrótów, aby dodać nowe lub istniejące pliki, więcej folderów, elementów, klas, zasobów i odwołań sieci Web do projektu.
 
 - W [oknie widok klasy](/visualstudio/ide/viewing-the-structure-of-code)kliknij prawym przyciskiem myszy odpowiedni węzeł, a następnie kliknij polecenie **Dodaj** z menu skrótów umożliwia dodanie funkcji, zmiennych, klas, właściwości, metod, zdarzeń, interfejsów, punktów połączenia lub innego kodu do projektu.
 
