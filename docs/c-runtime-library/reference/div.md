@@ -1,8 +1,11 @@
 ---
 title: DIV, ldiv, LLDiv
-ms.date: 04/05/2018
+description: Funkcja DIV, ldiv i LLDiv biblioteki środowiska uruchomieniowego Microsoft C oblicza iloraz i resztę dwóch wartości całkowitych.
+ms.date: 11/21/2020
 api_name:
 - div
+- ldiv
+- lldiv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +24,22 @@ topic_type:
 - apiref
 f1_keywords:
 - div
+- ldiv
+- lldiv
 helpviewer_keywords:
 - div function
 - quotients, computing
 - quotients
 - dividing integers
 - remainder computing
-ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d87b2e3a84e389be8b14970a3aa611bb288cbec8
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509894"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440283"
 ---
-# <a name="div-ldiv-lldiv"></a>DIV, ldiv, LLDiv
+# <a name="div-ldiv-lldiv"></a>`div`, `ldiv`, `lldiv`
 
 Oblicza iloraz i resztę dwóch wartości całkowitych.
 
@@ -69,27 +73,27 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Parametry
 
-*numeracj*<br/>
+*`numer`*\
 Licznik.
 
-*denom*<br/>
+*`denom`*\
 Mianownik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**blok DIV** wywoływany za pomocą argumentów typu **`int`** zwraca strukturę typu **div_t**, która składa się z ilorazu i reszty. Zwracaną wartością z argumentami typu **`long`** jest **ldiv_t**, a zwracaną wartością z argumentami typu **`long long`** jest **lldiv_t**. **div_t**, **ldiv_t**i **lldiv_t** są zdefiniowane w \<stdlib.h> .
+**`div`** wywoływana za pomocą argumentów typu **`int`** zwraca strukturę typu `div_t` , która zawiera iloraz i resztę. Wartością zwracaną z argumentami typu **`long`** jest `ldiv_t` , a zwracaną wartością z argumentami typu **`long long`** jest `lldiv_t` . `div_t`Typy, `ldiv_t` i `lldiv_t` są zdefiniowane w \<stdlib.h> .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **DIV** dzieli *numer* przez *denom* , a tym samym Oblicza iloraz i resztę. Struktura [div_t](../../c-runtime-library/standard-types.md) zawiera iloraz, **Quote**i resztę, **REM**. Znak ilorazu jest taki sam jak w przypadku ilorazu matematycznego. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeśli mianownik ma wartość 0, program kończy pracę z komunikatem o błędzie.
+**`div`** Funkcja jest dzielona *`numer`* przez *`denom`* i oblicza iloraz i resztę. [`div_t`](../../c-runtime-library/standard-types.md)Struktura zawiera iloraz, `quot` i resztę, `rem` . Znak ilorazu jest taki sam jak znak ilorazu matematycznego. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeśli mianownik ma wartość 0, program kończy pracę z komunikatem o błędzie.
 
-Przeciążenia elementu **DIV** , które przyjmują argumenty typu **`long`** lub **`long long`** są dostępne tylko dla kodu C++. Typy zwracane [ldiv_t](../../c-runtime-library/standard-types.md) i [lldiv_t](../../c-runtime-library/standard-types.md) zawierają elementy **Quote** i **REM**, które mają takie same znaczenie jak elementy członkowskie **div_t**.
+Przeciążenia **`div`** przyjmujące argumenty typu **`long`** lub **`long long`** są dostępne tylko dla kodu C++. Typy zwracane [`ldiv_t`](../../c-runtime-library/standard-types.md) i [`lldiv_t`](../../c-runtime-library/standard-types.md) zawiera elementy członkowskie `quot` i `rem` , które mają takie same znaczenie jak elementy członkowskie `div_t` .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek|
-|-------------|---------------------|
-|**DIV**, **ldiv**, **LLDiv**|\<stdlib.h>|
+| Procedura | Wymagany nagłówek |
+|--|--|
+| **`div`**, **`ldiv`**, **`lldiv`** | \<stdlib.h> |
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -131,8 +135,7 @@ x is 876, y is 13
 The quotient is 67, and the remainder is 5
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv]()<br/>
-[imaxdiv](imaxdiv.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)\
+[`imaxdiv`](imaxdiv.md)

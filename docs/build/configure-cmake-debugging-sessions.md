@@ -4,12 +4,12 @@ description: Opisuje sposób korzystania z programu Visual Studio w celu skonfig
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: a790e26e5bf3980ffb81a3ba778577afacff95b4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922234"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440299"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie sesji debugowania narzędzia CMake
 
@@ -29,11 +29,11 @@ Możesz również uruchomić sesję debugowania z poziomu Eksplorator rozwiąza�
 
 ![Przycisk Widok elementów docelowych CMake](media/cmake-targets-view.png  "Element menu Widok elementów docelowych CMake")
 
-Następnie kliknij prawym przyciskiem myszy plik wykonywalny i wybierz polecenie **Debuguj** . To polecenie automatycznie uruchamia debugowanie wybranego elementu docelowego na podstawie aktywnej konfiguracji.
+Następnie kliknij prawym przyciskiem myszy plik wykonywalny i wybierz polecenie **Debuguj**. To polecenie automatycznie uruchamia debugowanie wybranego elementu docelowego na podstawie aktywnej konfiguracji.
 
 ## <a name="customize-debugger-settings"></a>Dostosuj ustawienia debugera
 
-Możesz dostosować ustawienia debugera dla dowolnego elementu wykonywalnego CMake w projekcie. Znajdują się one w pliku konfiguracji o nazwie *launch.vs.jsna* , znajdującym się w *`.vs`* folderze w katalogu głównym projektu. Plik konfiguracji uruchamiania jest przydatny w większości scenariuszy debugowania, ponieważ można skonfigurować i zapisać szczegóły konfiguracji debugowania. Istnieją trzy punkty wejścia do tego pliku:
+Możesz dostosować ustawienia debugera dla dowolnego elementu wykonywalnego CMake w projekcie. Znajdują się one w pliku konfiguracji o nazwie *launch.vs.jsna*, znajdującym się w *`.vs`* folderze w katalogu głównym projektu. Plik konfiguracji uruchamiania jest przydatny w większości scenariuszy debugowania, ponieważ można skonfigurować i zapisać szczegóły konfiguracji debugowania. Istnieją trzy punkty wejścia do tego pliku:
 
 - **Menu Debuguj:** Wybierz pozycję **debuguj > Debuguj i Uruchom ustawienia dla $ {activeDebugTarget}** z menu głównego, aby dostosować konfigurację debugowania specyficzną dla aktywnego celu debugowania. Jeśli nie wybrano elementu docelowego debugowania, ta opcja jest wyszarzona.
 
@@ -51,12 +51,11 @@ Można edytować *launch.vs.jsw* pliku, aby utworzyć konfiguracje debugowania d
 
 ## <a name="reference-keys-in-cmakesettingsjson"></a>Klucze odwołań w CMakeSettings.jsna
 
-Aby odwołać się do dowolnego klucza w *CMakeSettings.js* w pliku, należy go dołączać `cmake.` do *launch.vs.jsna* . W poniższym przykładzie przedstawiono prostą *launch.vs.jsw* pliku, który ściąga wartość `remoteCopySources` klucza w *CMakeSettings.jsna* pliku dla aktualnie wybranej konfiguracji:
+Aby odwołać się do dowolnego klucza w *CMakeSettings.js* w pliku, należy go dołączać `cmake.` do *launch.vs.jsna*. W poniższym przykładzie przedstawiono prostą *launch.vs.jsw* pliku, który ściąga wartość `remoteCopySources` klucza w *CMakeSettings.jsna* pliku dla aktualnie wybranej konfiguracji:
 
 ```json
 {
   "version": "0.2.1",
-  "defaults": {},
   "configurations": [
     {
       "type": "default",
@@ -69,13 +68,13 @@ Aby odwołać się do dowolnego klucza w *CMakeSettings.js* w pliku, należy go 
 }
 ```
 
-**Zmienne środowiskowe** zdefiniowane w *CMakeSettings.json* mogą być również używane w launch.vs.jsprzy użyciu składni `${env.VARIABLE_NAME}` . W programie Visual Studio 2019 w wersji 16,4 i nowszych elementy docelowe debugowania są automatycznie uruchamiane przy użyciu środowiska określonego w *CMakeSettings.jsna* . Można cofnąć ustawienia zmiennej środowiskowej przez ustawienie jej na **wartość null** .
+**Zmienne środowiskowe** zdefiniowane w *CMakeSettings.json* mogą być również używane w launch.vs.jsprzy użyciu składni `${env.VARIABLE_NAME}` . W programie Visual Studio 2019 w wersji 16,4 i nowszych elementy docelowe debugowania są automatycznie uruchamiane przy użyciu środowiska określonego w *CMakeSettings.jsna*. Można cofnąć ustawienia zmiennej środowiskowej przez ustawienie jej na **wartość null**.
 
 ## <a name="launchvsjson-reference"></a>Launch.vs.jsna temat odwołania
 
 Istnieje wiele *launch.vs.js* właściwości, które obsługują wszystkie scenariusze debugowania. Następujące właściwości są wspólne dla wszystkich konfiguracji debugowania, zarówno zdalnych, jak i lokalnych:
 
-- `projectTarget`: Określa element docelowy CMake, który ma zostać wywołany podczas kompilowania projektu. Program Visual Studio automatycznie wypełnia tę właściwość, jeśli wprowadzasz *polecenielaunch.vs.jsw* **menu Debugowanie** lub **widoku elementów docelowych** . Ta wartość musi być zgodna z nazwą istniejącego elementu docelowego debugowania wyświetlaną na liście rozwijanej **elementu startowego** .
+- `projectTarget`: Określa element docelowy CMake, który ma zostać wywołany podczas kompilowania projektu. Program Visual Studio automatycznie wypełnia tę właściwość, jeśli wprowadzasz *polecenielaunch.vs.jsw* **menu Debugowanie** lub **widoku elementów docelowych**. Ta wartość musi być zgodna z nazwą istniejącego elementu docelowego debugowania wyświetlaną na liście rozwijanej **elementu startowego** .
 
 - `env`: Dodatkowe zmienne środowiskowe do dodania przy użyciu składni:
 
@@ -96,7 +95,7 @@ W programie Visual Studio 2019 w wersji 16,6 dodaliśmy nową konfigurację debu
 
 - `name`: Przyjazna nazwa identyfikująca konfigurację na liście rozwijanej **elementu startowego** .
 - `project`: Określa ścieżkę względną do pliku projektu. Zwykle nie trzeba zmieniać tej ścieżki podczas debugowania projektu CMake.
-- `projectTarget`: Określa element docelowy CMake, który ma zostać wywołany podczas kompilowania projektu. Program Visual Studio automatycznie wypełnia tę właściwość, jeśli wprowadzasz *polecenielaunch.vs.jsw* **menu Debugowanie** lub **widoku elementów docelowych** . Ta wartość docelowa musi być zgodna z nazwą istniejącego elementu docelowego debugowania wymienionego na liście rozwijanej **elementu startowego** .
+- `projectTarget`: Określa element docelowy CMake, który ma zostać wywołany podczas kompilowania projektu. Program Visual Studio automatycznie wypełnia tę właściwość, jeśli wprowadzasz *polecenielaunch.vs.jsw* **menu Debugowanie** lub **widoku elementów docelowych**. Ta wartość docelowa musi być zgodna z nazwą istniejącego elementu docelowego debugowania wymienionego na liście rozwijanej **elementu startowego** .
 - `debuggerConfiguration`: Wskazuje, który zestaw domyślnych wartości debugowania ma być używany. W programie Visual Studio 2019 w wersji 16,6 jedyną prawidłową opcją jest `gdb` . Program Visual Studio 2019 w wersji 16,7 lub nowszej obsługuje także `gdbserver` .
 - `args`: Argumenty wiersza polecenia przekazane podczas uruchamiania do debugowanego programu.
 - `env`: Dodatkowe zmienne środowiskowe przechodzą do debugowanego programu. Na przykład `{"DISPLAY": "0.0"}`.
@@ -131,7 +130,7 @@ Użyj następujących opcji, aby rozdzielić maszynę kompilacji (zdefiniowaną 
   - `targetMachine`: Komputer, do którego kopiowany jest plik lub katalog. Naciśnij **klawisze CTRL + SPACJA** , aby wyświetlić listę wszystkich połączeń zdalnych przechowywanych w Menedżerze połączeń.
   - `sourcePath`: Lokalizacja pliku lub katalogu w systemie `sourceMachine` .
   - `targetPath`: Lokalizacja pliku lub katalogu w systemie `targetMachine` .
-  - `deploymentType`: Opis typu wdrożenia. `LocalRemote` i `RemoteRemote` są obsługiwane. `LocalRemote` oznacza kopiowanie z lokalnego systemu plików do systemu zdalnego określonego przez program `remoteMachineName` w *launch.vs.json* . `RemoteRemote` oznacza kopiowanie ze zdalnego systemu kompilacji określonego w *CMakeSettings.jsna* inny system zdalny określony w *launch.vs.jsna* .
+  - `deploymentType`: Opis typu wdrożenia. `LocalRemote` i `RemoteRemote` są obsługiwane. `LocalRemote` oznacza kopiowanie z lokalnego systemu plików do systemu zdalnego określonego przez program `remoteMachineName` w *launch.vs.json*. `RemoteRemote` oznacza kopiowanie ze zdalnego systemu kompilacji określonego w *CMakeSettings.jsna* inny system zdalny określony w *launch.vs.jsna*.
   - `executable`: Wskazuje, czy wdrożony plik jest plikiem wykonywalnym.
 
 ### <a name="execute-custom-gdb-commands"></a>Wykonywanie `gdb` poleceń niestandardowych
@@ -150,7 +149,7 @@ Podczas debugowania w systemie zdalnym lub WSL przy użyciu typu konfiguracji mo
 
 - `project`: Określa ścieżkę względną do pliku projektu. Zwykle nie trzeba zmieniać tej wartości podczas debugowania projektu CMake.
 
-- `projectTarget`: Określa element docelowy CMake, który ma zostać wywołany podczas kompilowania projektu. Program Visual Studio automatycznie wypełnia tę właściwość, jeśli wprowadzasz *polecenielaunch.vs.jsw* **menu Debugowanie** lub **widoku elementów docelowych** . Ta wartość musi być zgodna z nazwą istniejącego elementu docelowego debugowania wyświetlaną na liście rozwijanej **elementu startowego** .
+- `projectTarget`: Określa element docelowy CMake, który ma zostać wywołany podczas kompilowania projektu. Program Visual Studio automatycznie wypełnia tę właściwość, jeśli wprowadzasz *polecenielaunch.vs.jsw* **menu Debugowanie** lub **widoku elementów docelowych**. Ta wartość musi być zgodna z nazwą istniejącego elementu docelowego debugowania wyświetlaną na liście rozwijanej **elementu startowego** .
 
 - `args`: Argumenty wiersza polecenia przekazane podczas uruchamiania do debugowanego programu.
 
@@ -162,7 +161,7 @@ Podczas debugowania w systemie zdalnym lub WSL przy użyciu typu konfiguracji mo
 
 - `cwd`: Domyślnie `"${debugInfo.defaultWorkingDirectory}"` . Pełna ścieżka systemu UNIX do katalogu w systemie zdalnym, gdzie `program` jest uruchomiony. Ten katalog musi istnieć.
 
-- `environment`: Dodatkowe zmienne środowiskowe przechodzą do debugowanego programu. Przykład:
+- `environment`: Dodatkowe zmienne środowiskowe przechodzą do debugowanego programu. Na przykład
 
   ```json
     "environment": [
@@ -227,7 +226,7 @@ Konfigurację można skonfigurować `cppdbg` do debugowania przy użyciu program
 
 ::: moniker range=">=msvc-150"
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [CMake projekty w programie Visual Studio](cmake-projects-in-visual-studio.md)\
 [Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)\
