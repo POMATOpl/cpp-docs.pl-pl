@@ -1,6 +1,7 @@
 ---
-title: 'Operator rozpoznawania zakresów: ::'
-ms.date: 11/04/2016
+title: 'Operator rozpoznawania zakresu: `::`'
+description: Dowiedz się, w jaki sposób operator rozpoznawania zakresu `::` działa w standardowym języku C++.
+ms.date: 12/06/2020
 f1_keywords:
 - '::'
 helpviewer_keywords:
@@ -8,33 +9,44 @@ helpviewer_keywords:
 - operators [C++], scope resolution
 - scope resolution operator
 - ':: operator'
-ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff774d9fcca9f68cb2925af82c55ef438ab4d71a
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178889"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776534"
 ---
-# <a name="scope-resolution-operator-"></a>Operator rozpoznawania zakresów: ::
+# <a name="scope-resolution-operator-"></a>Operator rozpoznawania zakresu: `::`
 
-Operator rozpoznawania zakresu **::** służy do identyfikowania i niejednoznaczności identyfikatorów używanych w różnych zakresach. Aby uzyskać więcej informacji na temat zakresu, zobacz [SCOPE](../cpp/scope-visual-cpp.md).
+Operator rozpoznawania zakresu służy **`::`** do identyfikowania i niejednoznaczności identyfikatorów używanych w różnych zakresach. Aby uzyskać więcej informacji na temat zakresu, zobacz [SCOPE](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Składnia
 
-```
-:: identifier
-class-name :: identifier
-namespace :: identifier
-enum class :: identifier
-enum struct :: identifier
-```
+> *`qualified-id`*:\
+> &emsp;*`nested-name-specifier`***`template`** <sub>wybór</sub>*`unqualified-id`*
+
+> *`nested-name-specifier`*:\
+> &emsp;**`::`**\
+> &emsp;*`type-name`* **`::`**\
+> &emsp;*`namespace-name`* **`::`**\
+> &emsp;*`decltype-specifier`* **`::`**\
+> &emsp;*`nested-name-specifier`* *`identifier`* **`::`**\
+> &emsp;*`nested-name-specifier`***`template`** <sub>opt</sub> wybór *`simple-template-id`***`::`**
+
+> *`unqualified-id`*:\
+> &emsp;*`identifier`*\
+> &emsp;*`operator-function-id`*\
+> &emsp;*`conversion-function-id`*\
+> &emsp;*`literal-operator-id`*\
+> &emsp;**`~`** *`type-name`*\
+> &emsp;**`~`** *`decltype-specifier`*\
+> &emsp;*`template-id`*
 
 ## <a name="remarks"></a>Uwagi
 
-`identifier` może być zmienną, funkcją lub wartością wyliczenia.
+`identifier`Może to być zmienna, funkcja lub wartość wyliczenia.
 
-## <a name="with-classes-and-namespaces"></a>Z klasami i przestrzeniami nazw
+## <a name="use--for-classes-and-namespaces"></a>Użyj `::` dla klas i przestrzeni nazw
 
 Poniższy przykład pokazuje, jak operator rozpoznawania zakresu jest używany z przestrzeniami nazw i klasami:
 
@@ -80,7 +92,7 @@ int main() {
 }
 ```
 
-Możesz użyć operatora rozpoznawania zakresu, aby zidentyfikować element członkowski przestrzeni nazw lub zidentyfikować przestrzeń nazw, która wyznacza przestrzeń nazw składowej w dyrektywie using. W poniższym przykładzie można użyć `NamespaceC`, aby zakwalifikować `ClassB`, nawet jeśli `ClassB` został zadeklarowany w `NamespaceB`przestrzeni nazw, ponieważ `NamespaceB` został wyznaczony w `NamespaceC` przez dyrektywę using.
+Możesz użyć operatora rozpoznawania zakresu, aby zidentyfikować element członkowski **`namespace`** lub zidentyfikować przestrzeń nazw, która wyznacza przestrzeń nazw składowej w **`using`** dyrektywie. W poniższym przykładzie można użyć `NamespaceC` do kwalifikowania `ClassB` , nawet jeśli `ClassB` została zadeklarowana w przestrzeni nazw `NamespaceB` , ponieważ `NamespaceB` została wyznaczony `NamespaceC` przez **`using`** dyrektywę.
 
 ```cpp
 namespace NamespaceB {
@@ -91,18 +103,19 @@ namespace NamespaceB {
 }
 
 namespace NamespaceC{
-    using namespace B;
+    using namespace NamespaceB;
 }
-int main() {
-    NamespaceB::ClassB c_b;
-    NamespaceC::ClassB c_c;
 
-    c_b.x = 3;
-    c_c.x = 4;
+int main() {
+    NamespaceB::ClassB b_b;
+    NamespaceC::ClassB c_b;
+
+    b_b.x = 3;
+    c_b.x = 4;
 }
 ```
 
-Można używać łańcuchów operatorów rozpoznawania zakresu. W poniższym przykładzie `NamespaceD::NamespaceD1` identyfikuje zagnieżdżoną przestrzeń nazw `NamespaceD1`, a `NamespaceE::ClassE::ClassE1` określa klasę zagnieżdżoną `ClassE1`.
+Można używać łańcuchów operatorów rozpoznawania zakresu. W poniższym przykładzie `NamespaceD::NamespaceD1` identyfikuje zagnieżdżoną przestrzeń nazw `NamespaceD1` i `NamespaceE::ClassE::ClassE1` identyfikuje klasę zagnieżdżoną `ClassE1` .
 
 ```cpp
 namespace NamespaceD{
@@ -128,7 +141,7 @@ int main() {
 }
 ```
 
-## <a name="with-static-members"></a>Ze statycznymi składowymi
+## <a name="use--for-static-members"></a>Użyj `::` dla statycznych składowych
 
 Aby wywołać statyczne elementy członkowskie klas, należy użyć operatora rozpoznawania zakresu.
 
@@ -148,7 +161,7 @@ int main() {
 }
 ```
 
-## <a name="with-scoped-enumerations"></a>Z wyliczeniem w zakresie
+## <a name="use--for-scoped-enumerations"></a>Użyj `::` dla wyliczeń z zakresem
 
 Operator rozpoznania zakresu jest również używany z wartościami [deklaracji wyliczenia](../cpp/enumerations-cpp.md)wyliczeniowego w zakresie, jak w poniższym przykładzie:
 
@@ -164,7 +177,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Przestrzenie nazw](../cpp/namespaces-cpp.md)
+[Wbudowane operatory, pierwszeństwo i łączność języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Namespaces](../cpp/namespaces-cpp.md)

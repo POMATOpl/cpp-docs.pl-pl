@@ -1,93 +1,57 @@
 ---
 title: '**`CStringT`** Określonej'
 description: Dokumentacja interfejsu API dla klasy ATL firmy Microsoft **`CStringT`**
-ms.date: 11/13/2020
+ms.date: 12/06/2020
 f1_keywords:
 - CStringT
-- ATLSTR/ATL::CStringT
-- ATLSTR/ATL::CStringT::CStringT
-- ATLSTR/ATL::CStringT::AllocSysString
-- ATLSTR/ATL::CStringT::AnsiToOem
-- ATLSTR/ATL::CStringT::AppendFormat
-- ATLSTR/ATL::CStringT::Collate
-- ATLSTR/ATL::CStringT::CollateNoCase
-- ATLSTR/ATL::CStringT::Compare
-- ATLSTR/ATL::CStringT::CompareNoCase
-- ATLSTR/ATL::CStringT::Delete
-- ATLSTR/ATL::CStringT::Find
-- ATLSTR/ATL::CStringT::FindOneOf
-- ATLSTR/ATL::CStringT::Format
-- ATLSTR/ATL::CStringT::FormatMessage
-- ATLSTR/ATL::CStringT::FormatMessageV
-- ATLSTR/ATL::CStringT::FormatV
-- ATLSTR/ATL::CStringT::GetEnvironmentVariable
-- ATLSTR/ATL::CStringT::Insert
-- ATLSTR/ATL::CStringT::Left
-- ATLSTR/ATL::CStringT::LoadString
-- ATLSTR/ATL::CStringT::MakeLower
-- ATLSTR/ATL::CStringT::MakeReverse
-- ATLSTR/ATL::CStringT::MakeUpper
-- ATLSTR/ATL::CStringT::Mid
-- ATLSTR/ATL::CStringT::OemToAnsi
-- ATLSTR/ATL::CStringT::Remove
-- ATLSTR/ATL::CStringT::Replace
-- ATLSTR/ATL::CStringT::ReverseFind
-- ATLSTR/ATL::CStringT::Right
-- ATLSTR/ATL::CStringT::SetSysString
-- ATLSTR/ATL::CStringT::SpanExcluding
-- ATLSTR/ATL::CStringT::SpanIncluding
-- ATLSTR/ATL::CStringT::Tokenize
-- ATLSTR/ATL::CStringT::Trim
-- ATLSTR/ATL::CStringT::TrimLeft
-- ATLSTR/ATL::CStringT::TrimRight
-- CSTRINGT/CStringT
-- CSTRINGT/CStringT::CStringT
-- CSTRINGT/CStringT::AllocSysString
-- CSTRINGT/CStringT::AnsiToOem
-- CSTRINGT/CStringT::AppendFormat
-- CSTRINGT/CStringT::Collate
-- CSTRINGT/CStringT::CollateNoCase
-- CSTRINGT/CStringT::Compare
-- CSTRINGT/CStringT::CompareNoCase
-- CSTRINGT/CStringT::Delete
-- CSTRINGT/CStringT::Find
-- CSTRINGT/CStringT::FindOneOf
-- CSTRINGT/CStringT::Format
-- CSTRINGT/CStringT::FormatMessage
-- CSTRINGT/CStringT::FormatMessageV
-- CSTRINGT/CStringT::FormatV
-- CSTRINGT/CStringT::GetEnvironmentVariable
-- CSTRINGT/CStringT::Insert
-- CSTRINGT/CStringT::Left
-- CSTRINGT/CStringT::LoadString
-- CSTRINGT/CStringT::MakeLower
-- CSTRINGT/CStringT::MakeReverse
-- CSTRINGT/CStringT::MakeUpper
-- CSTRINGT/CStringT::Mid
-- CSTRINGT/CStringT::OemToAnsi
-- CSTRINGT/CStringT::Remove
-- CSTRINGT/CStringT::Replace
-- CSTRINGT/CStringT::ReverseFind
-- CSTRINGT/CStringT::Right
-- CSTRINGT/CStringT::SetSysString
-- CSTRINGT/CStringT::SpanExcluding
-- CSTRINGT/CStringT::SpanIncluding
-- CSTRINGT/CStringT::Tokenize
-- CSTRINGT/CStringT::Trim
-- CSTRINGT/CStringT::TrimLeft
-- CSTRINGT/CStringT::TrimRight
+- CSTRINGT/ATL::CStringT
+- CSTRINGT/ATL::CStringT::CStringT
+- CSTRINGT/ATL::CStringT::AllocSysString
+- CSTRINGT/ATL::CStringT::AnsiToOem
+- CSTRINGT/ATL::CStringT::AppendFormat
+- CSTRINGT/ATL::CStringT::Collate
+- CSTRINGT/ATL::CStringT::CollateNoCase
+- CSTRINGT/ATL::CStringT::Compare
+- CSTRINGT/ATL::CStringT::CompareNoCase
+- CSTRINGT/ATL::CStringT::Delete
+- CSTRINGT/ATL::CStringT::Find
+- CSTRINGT/ATL::CStringT::FindOneOf
+- CSTRINGT/ATL::CStringT::Format
+- CSTRINGT/ATL::CStringT::FormatMessage
+- CSTRINGT/ATL::CStringT::FormatMessageV
+- CSTRINGT/ATL::CStringT::FormatV
+- CSTRINGT/ATL::CStringT::GetEnvironmentVariable
+- CSTRINGT/ATL::CStringT::Insert
+- CSTRINGT/ATL::CStringT::Left
+- CSTRINGT/ATL::CStringT::LoadString
+- CSTRINGT/ATL::CStringT::MakeLower
+- CSTRINGT/ATL::CStringT::MakeReverse
+- CSTRINGT/ATL::CStringT::MakeUpper
+- CSTRINGT/ATL::CStringT::Mid
+- CSTRINGT/ATL::CStringT::OemToAnsi
+- CSTRINGT/ATL::CStringT::Remove
+- CSTRINGT/ATL::CStringT::Replace
+- CSTRINGT/ATL::CStringT::ReverseFind
+- CSTRINGT/ATL::CStringT::Right
+- CSTRINGT/ATL::CStringT::SetSysString
+- CSTRINGT/ATL::CStringT::SpanExcluding
+- CSTRINGT/ATL::CStringT::SpanIncluding
+- CSTRINGT/ATL::CStringT::Tokenize
+- CSTRINGT/ATL::CStringT::Trim
+- CSTRINGT/ATL::CStringT::TrimLeft
+- CSTRINGT/ATL::CStringT::TrimRight
 helpviewer_keywords:
 - strings [C++], in ATL
 - shared classes, CStringT
 - CStringT class
-ms.openlocfilehash: 80ea59b5f50fc9f430aa588a37e73d4526e3fd94
-ms.sourcegitcommit: 07408df5f4b2cbf070d9bb4bb40d821bfd5d8a62
+ms.openlocfilehash: f9ec5c02aa1ed9377a38d30d9a4152af5e164d58
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703514"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776547"
 ---
-# <a name="cstringt-class"></a>Klasa CStringT
+# <a name="cstringt-class"></a>`CStringT` Określonej
 
 Ta klasa reprezentuje **`CStringT`** obiekt.
 
@@ -575,7 +539,7 @@ Ponieważ konstruktory kopiuje dane wejściowe do nowego przydzielonego magazynu
 - **`CStringT`**( `const unsigned char*` `psz` ): Umożliwia utworzenie **`CStringT`** z wskaźnika do **`unsigned char`** .
 
 > [!NOTE]
-> Zdefiniuj ` _CSTRING_DISABLE_NARROW_WIDE_CONVERSION` makro, aby wyłączyć niejawną konwersję ciągów między ciągami ANSI i Unicode. Makro wyklucza z konstruktorów kompilacji, które obsługują konwersję.
+> Zdefiniuj `_CSTRING_DISABLE_NARROW_WIDE_CONVERSION` makro, aby wyłączyć niejawną konwersję ciągów między ciągami ANSI i Unicode. Makro wyklucza z konstruktorów kompilacji, które obsługują konwersję.
 
 *`strSrc`* Parametr może być **`CStringT`** `CThisSimpleString` obiektem lub. Dla **`CStringT`** , użyj jednego z jego domyślnych konkretyzacji ( `CString` , `CStringA` , lub `CStringW` ); w przypadku `CThisSimpleString` , użyj **`this`** wskaźnika. `CThisSimpleString` deklaruje wystąpienie [klasy CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), która jest mniejszą klasą ciągu z mniej wbudowaną funkcjonalnością niż **`CStringT`** Klasa.
 
@@ -1642,8 +1606,6 @@ W przeciwieństwie do funkcji CRT tokenize [`strtok_s, _strtok_s_l, wcstok_s, _w
 
 [!code-cpp[NVC_ATLMFC_Utilities#135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]
 
-### <a name="remarks"></a>Uwagi
-
 Dane wyjściowe z tego przykładu są następujące:
 
 ```Output
@@ -1687,8 +1649,6 @@ Usuwa wszystkie wystąpienia wiodące i końcowe jednego z następujących eleme
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]
-
-### <a name="remarks"></a>Uwagi
 
 Dane wyjściowe z tego przykładu są następujące:
 
