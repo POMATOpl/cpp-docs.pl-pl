@@ -1,15 +1,15 @@
 ---
 title: Konfigurowanie sesji debugowania CMake w programie Visual Studio
 description: Opisuje sposób korzystania z programu Visual Studio w celu skonfigurowania ustawień debugera CMake.
-ms.date: 04/02/2020
+ms.date: 12/07/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
-ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
+ms.openlocfilehash: b289acf8d0aa89cef1d2a72c988b41d99914f828
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440299"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862571"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie sesji debugowania narzędzia CMake
 
@@ -112,6 +112,8 @@ W programie Visual Studio 2019 w wersji 16,6 dodaliśmy nową konfigurację debu
 #### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>Dodatkowe opcje dozwolone w przypadku `gdbserver` konfiguracji (16,7 lub nowszej)
 
 - `program`: Domyślnie `"${debugInfo.fullTargetPath}"` . Ścieżka systemu UNIX do aplikacji do debugowania. Wymagany tylko wtedy, gdy jest inny niż docelowy plik wykonywalny w lokalizacji kompilacji lub wdrożenia.
+> [!TIP]
+> Wdrożenie nie jest jeszcze obsługiwane w scenariuszach lokalnego tworzenia wielu kompilacji. W przypadku kompilowania wielu operacji w systemie Windows (na przykład używania kompilatora wieloskładnikowego w systemie Windows do kompilowania pliku wykonywalnego ARM systemu Linux) należy ręcznie skopiować plik binarny do lokalizacji określonej przez `program` zdalny komputer ARM przed debugowaniem.
 - `remoteMachineName`: Domyślnie `"${debugInfo.remoteMachineName}"` . Nazwa systemu zdalnego, który hostuje program do debugowania. Wymagane tylko w przypadku, gdy różni się od systemu kompilacji. Musi mieć istniejący wpis w [Menedżerze połączeń](../linux/connect-to-your-remote-linux-computer.md). Naciśnij **klawisze CTRL + SPACJA** , aby wyświetlić listę wszystkich istniejących połączeń zdalnych.
 - `cwd`: Domyślnie `"${debugInfo.defaultWorkingDirectory}"` . Pełna ścieżka systemu UNIX do katalogu w systemie zdalnym, gdzie `program` jest uruchomiony. Ten katalog musi istnieć.
 - `gdbPath`: Domyślnie `${debugInfo.vsInstalledGdb}` . Pełna ścieżka systemu Windows do `gdb` używanej do debugowania. Domyślnie jest `gdb` instalowany z programowaniem w systemie Linux przy użyciu obciążenia C/C++.
@@ -161,7 +163,7 @@ Podczas debugowania w systemie zdalnym lub WSL przy użyciu typu konfiguracji mo
 
 - `cwd`: Domyślnie `"${debugInfo.defaultWorkingDirectory}"` . Pełna ścieżka systemu UNIX do katalogu w systemie zdalnym, gdzie `program` jest uruchomiony. Ten katalog musi istnieć.
 
-- `environment`: Dodatkowe zmienne środowiskowe przechodzą do debugowanego programu. Na przykład
+- `environment`: Dodatkowe zmienne środowiskowe przechodzą do debugowanego programu. Przykład:
 
   ```json
     "environment": [

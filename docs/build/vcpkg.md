@@ -4,12 +4,12 @@ description: vcpkg to Menedżer pakietów wiersza polecenia, który znacznie upr
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ec908824c19099ad6eaa46a4d85c0187ef12b3fd
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373635"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862558"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów języka C++ dla systemów Windows, Linux i macOS
 
@@ -29,12 +29,12 @@ Można również utworzyć klon vcpkg z bibliotekami prywatnymi w kolekcji ports
 
 ## <a name="installation"></a>Instalacja
 
-Klonuj repozytorium vcpkg z usługi GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg) . Możesz pobrać do dowolnej preferowanej lokalizacji folderów. Ta lokalizacja jest *katalogiem głównym*vcpkg. Po zakończeniu pobierania przejdź do tego katalogu w powłoce poleceń.
+Klonuj repozytorium vcpkg z usługi GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg) . Możesz pobrać do dowolnej preferowanej lokalizacji folderów. Ta lokalizacja jest *katalogiem głównym* vcpkg. Po zakończeniu pobierania przejdź do tego katalogu w powłoce poleceń.
 
 W katalogu głównym vcpkg Uruchom program inicjujący vcpkg:
 
 - **`bootstrap-vcpkg.bat`** Systemy
-- **`./bootstrap-vcpkg.sh`**(Linux, macOS)
+- **`./bootstrap-vcpkg.sh`** (Linux, macOS)
 
 W systemie Linux lub macOS może być konieczne odtworzenie prefiksu poleceń vcpkg przy użyciu **`./`** w następujących przykładach. Pamiętaj, aby uruchomić te polecenia w katalogu głównym vcpkg.
 
@@ -169,7 +169,7 @@ Uruchom **`vcpkg integrate install`** , aby skonfigurować Visual Studio Code w 
 
 Pliki binarne systemu Linux można tworzyć na komputerze z systemem Windows za pomocą podsystemu Windows dla systemów Linux lub WSL. Postępuj zgodnie z instrukcjami, aby [skonfigurować WSL w systemie Windows 10](/windows/wsl/install-win10). Następnie skonfiguruj go za pomocą [rozszerzenia programu Visual Studio dla systemu Linux](https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/). Można umieścić wszystkie skompilowane biblioteki dla systemów Windows i Linux w tym samym folderze. Są one dostępne zarówno w systemie Windows, jak i w WSL.
 
-## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a>Eksportuj skompilowane pliki binarne i nagłówki
+## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> Eksportuj skompilowane pliki binarne i nagłówki
 
 Wszyscy członkowie zespołu mogą pobierać i kompilować wspólne biblioteki. Pojedynczy członek zespołu może użyć polecenia, **`vcpkg export`** Aby utworzyć wspólny plik zip plików binarnych i nagłówków lub pakiet NuGet. Następnie można łatwo udostępnić go innym członkom zespołu.
 
@@ -185,10 +185,10 @@ Domyślnie **`vcpkg upgrade`** polecenie wyświetla tylko te biblioteki, które 
 
 ### <a name="upgrade-options"></a>Opcje uaktualniania
 
-- **`--no-dry-run`** Wykonaj uaktualnienie; gdy nie zostanie określony, polecenie wyświetla tylko listę nieaktualnych pakietów.
-- **`--keep-going`** Kontynuuj Instalowanie pakietów nawet wtedy, gdy jeden z nich nie powiedzie się.
-- **`--triplet <t>`** Ustaw wartość domyślną tryplet dla niekwalifikowanych pakietów.
-- **`--vcpkg-root <path>`** Określ katalog vcpkg, który ma być używany zamiast bieżącego katalogu lub katalogu narzędzi.
+- **`--no-dry-run`**  Wykonaj uaktualnienie; gdy nie zostanie określony, polecenie wyświetla tylko listę nieaktualnych pakietów.
+- **`--keep-going`**  Kontynuuj Instalowanie pakietów nawet wtedy, gdy jeden z nich nie powiedzie się.
+- **`--triplet <t>`**  Ustaw wartość domyślną tryplet dla niekwalifikowanych pakietów.
+- **`--vcpkg-root <path>`**  Określ katalog vcpkg, który ma być używany zamiast bieżącego katalogu lub katalogu narzędzi.
 
 ### <a name="upgrade-example"></a>Przykład uaktualnienia
 
@@ -227,6 +227,8 @@ Menedżer pakietów vcpkg jest regularnie aktualizowany w serwisie GitHub. Aby z
 
 Aby odinstalować vcpkg, po prostu Usuń katalog vcpkg. Usunięcie tego katalogu spowoduje odinstalowanie dystrybucji vcpkg oraz wszystkich bibliotek, które vcpkg zainstalowane.
 
+Jednak jeśli wykonano **`vcpkg integrate install`** , należy wykonać, **`vcpkg integrate remove`** Aby upewnić się, że integracja jest czyszczona, zanim folder zostanie usunięty.
+
 ## <a name="send-feedback-about-vcpkg"></a>Wyślij opinię na temat vcpkg
 
 Użyj **`vcpkg contact --survey`** polecenia, aby wysłać opinię do firmy Microsoft dotyczącej vcpkg, w tym raportów o błędach i sugestii dotyczących funkcji.
@@ -252,7 +254,7 @@ Zawartość wystąpienia vcpkg:
 |Polecenie|Opis|
 |---------|---------|
 |**`vcpkg search [pat]`**|Wyszukaj pakiety dostępne do zainstalowania|
-|**`vcpkg install <pkg>...`**|Zainstaluj pakiet|
+|**`vcpkg install <pkg>...`**|Instalowanie pakietu|
 |**`vcpkg remove <pkg>...`**|Odinstalowywanie pakietu|
 |**`vcpkg remove --outdated`**|Odinstaluj wszystkie nieaktualne pakiety|
 |**`vcpkg list`**|Wyświetl listę zainstalowanych pakietów|
