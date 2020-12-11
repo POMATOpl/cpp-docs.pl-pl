@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _variant_t:: _variant_t'
 title: _variant_t::_variant_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-ms.openlocfilehash: 50c10eb4ff617f4bcdc69d2e1781a9920b9eb0e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e49f2cf42ce1d73cb18d280d335ed267cb11df3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233564"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161367"
 ---
 # <a name="_variant_t_variant_t"></a>_variant_t::_variant_t
 
@@ -230,12 +231,12 @@ Wartość **__int64 bez znaku** do skopiowania do nowego `_variant_t` obiektu.
 
 - **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool** `fAddRef` **= true)** Konstruuje `_variant_t` obiekt typu VT_DISPATCH ze wskaźnika interfejsu com.       Jeśli `fAddRef` jest **`true`** , `AddRef` to jest wywoływana na podanym wskaźniku interfejsu w celu dopasowania do wywołania `Release` , które pojawi się, gdy `_variant_t` obiekt zostanie zniszczony. Jest to możliwe do wywołania `Release` na podanym wskaźniku interfejsu. Jeśli `fAddRef` jest **`false`** , ten Konstruktor przejmuje własność dostarczonego wskaźnika interfejsu; nie wywołuj do `Release` podanego wskaźnika interfejsu.
 
-- **_variant_t (&dziesiętny ** `decSrc` **)** konstruuje `_variant_t` obiekt typu VT_DECIMAL z `DECIMAL` wartości.    
+- **_variant_t (&dziesiętny** `decSrc` **)** konstruuje `_variant_t` obiekt typu VT_DECIMAL z `DECIMAL` wartości.    
 
 - **_variant_t (Byte** `bSrc` **)** konstruuje `_variant_t` obiekt typu `VT_UI1` z `BYTE` wartości.    
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa _variant_t](../cpp/variant-t-class.md)

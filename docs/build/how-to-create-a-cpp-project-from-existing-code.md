@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak utworzyć projekt C++ na podstawie istniejącego kodu'
 title: 'Porady: tworzenie projektu C++ z istniejącego kodu'
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 5e59230186380b787c95dbe08914bcd9d3ca2407
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0bd08275a812ebc6a2a99d0e12c8b71e30a24b90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162784"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Porady: tworzenie projektu C++ z istniejącego kodu
 
@@ -25,7 +26,7 @@ Przenoszenie istniejących plików kodu do projektu C++ umożliwia korzystanie z
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>Aby utworzyć projekt C++ z istniejącego kodu
 
-1. W menu **plik** wybierz pozycję **Nowy** > **projekt z istniejącego kodu**.
+1. W menu **plik** wybierz pozycję **Nowy**  >  **projekt z istniejącego kodu**.
 
 1. Określ lokalizację projektu, katalog dla plików źródłowych i rodzaje plików, które Kreator importuje do nowego projektu. Wybierz pozycję **Dalej**, aby kontynuować.
 

@@ -1,14 +1,15 @@
 ---
+description: 'Dowiedz się więcej na temat: CppProperties.jsna temat odwołania'
 title: CppProperties.jsna temat odwołania
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9067a186d3ab111eda11246d06e3a9d7a164455f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163057"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.jsna temat odwołania
 
@@ -119,7 +120,7 @@ Opcjonalnie można użyć właściwości, `environments` Aby zdefiniować zestaw
   ]
 ```
 
-Gdy definiujesz Właściwość **environments** Environments wewnątrz konfiguracji, zastępuje ona wszystkie zmienne globalne o tej samej nazwie.
+Gdy definiujesz Właściwość  Environments wewnątrz konfiguracji, zastępuje ona wszystkie zmienne globalne o tej samej nazwie.
 
 ## <a name="built-in-macros"></a>Makra wbudowane
 
@@ -160,7 +161,7 @@ Jeśli projekt zawiera folder dołączania, a także zawiera *Windows. h* i inne
 
 ## <a name="troubleshoot-intellisense-errors"></a>Rozwiązywanie problemów z błędami IntelliSense
 
-Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do opcji **Narzędzia**  >  **Options**  >  **Edytor tekstu**  >  **C/C++**  >  **Zaawansowane** i ustawienie **Włącz rejestrowanie** na **`true`** . Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
+Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do opcji **Narzędzia**  >    >  **Edytor tekstu**  >  **C/C++**  >  **Zaawansowane** i ustawienie **Włącz rejestrowanie** na **`true`** . Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
 
 ![Rejestrowanie diagnostyczne](media/diagnostic-logging.png)
 

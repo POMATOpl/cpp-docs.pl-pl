@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Virtual (C++)'
 title: wirtualne (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf90baa1d9be9992e2e516743857bf8889087188
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161353"
 ---
 # <a name="virtual-c"></a>wirtualne (C++)
 
@@ -48,6 +49,6 @@ Aby uzyskać więcej informacji, zobacz [funkcje wirtualne](../cpp/virtual-funct
 
 Zobacz również następujące słowa kluczowe: [Klasa](../cpp/class-cpp.md), [prywatna](../cpp/private-cpp.md), [publiczna](../cpp/public-cpp.md)i [chroniona](../cpp/protected-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

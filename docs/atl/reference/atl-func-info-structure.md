@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury _ATL_FUNC_INFO
 title: Struktura _ATL_FUNC_INFO
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-ms.openlocfilehash: b1c740cf1a1ed344dbceb028bd1f39a87fc09363
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 6368440347672524bb7d1e3aa3068ef91a2c6f09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158858"
 ---
 # <a name="_atl_func_info-structure"></a>Struktura _ATL_FUNC_INFO
 
@@ -34,7 +35,7 @@ struct _ATL_FUNC_INFO {
 ## <a name="members"></a>Elementy członkowskie
 
 `cc`<br/>
-Konwencja wywoływania. W przypadku używania tej struktury z klasą [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) ten element członkowski musi być CC_STDCALL. `CC_CDECL`jest jedyną opcją obsługiwaną w Windows CE dla `CALLCONV` pola `_ATL_FUNC_INFO` struktury. Wszystkie inne wartości są nieobsługiwane w tym przypadku, gdy zachowanie nie jest zdefiniowane.
+Konwencja wywoływania. W przypadku używania tej struktury z klasą [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) ten element członkowski musi być CC_STDCALL. `CC_CDECL` jest jedyną opcją obsługiwaną w Windows CE dla `CALLCONV` pola `_ATL_FUNC_INFO` struktury. Wszystkie inne wartości są nieobsługiwane w tym przypadku, gdy zachowanie nie jest zdefiniowane.
 
 `vtReturn`<br/>
 Typ wariantu zwracanej wartości funkcji.
@@ -63,7 +64,7 @@ należy zdefiniować `_ATL_FUNC_INFO` strukturę:
 
 Nagłówek: atlcom. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../../atl/reference/atl-classes.md)<br/>
 [Klasa IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)<br/>

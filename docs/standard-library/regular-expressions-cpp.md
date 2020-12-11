@@ -1,69 +1,70 @@
 ---
+description: 'Dowiedz się więcej o: wyrażenia regularne (C++)'
 title: Wyrażenia regularne (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - regular expressions [C++]
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-ms.openlocfilehash: a6ff0fafce9f4b3e029be053d27ca68d096ec108
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0946ae1a88e7c9f0dafd9b88d37ca7f9d80e0f5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159755"
 ---
 # <a name="regular-expressions-c"></a>Wyrażenia regularne (C++)
 
-Standardowa biblioteka języka C++ obsługuje wiele gramatyki wyrażeń regularnych. W tym temacie omówiono odmiany gramatyki dostępne podczas używania wyrażeń regularnych.
+Standardowa biblioteka języka C++ obsługuje wiele gramatyk wyrażeń regularnych. W tym temacie omówiono różnice gramatyczne dostępne podczas używania wyrażeń regularnych.
 
-## <a name="regular-expression-grammar"></a><a name="regexgrammar"></a>Gramatyka wyrażeń regularnych
+## <a name="regular-expression-grammar"></a><a name="regexgrammar"></a> Gramatyka wyrażenia regularnego
 
-Gramatyki wyrażenia regularnego do użycia jest określony `std::regex_constants::syntax_option_type` przez użycie jednej z wartości wyliczenia. Te gramatyki wyrażeń regularnych są zdefiniowane w std::regex_constants:
+Gramatyka wyrażenia regularnego do użycia jest określona przez użycie jednej z `std::regex_constants::syntax_option_type` wartości wyliczenia. Te gramatyki wyrażeń regularnych są zdefiniowane w std:: regex_constants:
 
-- `ECMAScript`: Jest to najbliższe gramatyki używanej przez język JavaScript i .NET.
-- `basic`: Podstawowe wyrażenia regularne POSIX lub BRE.
-- `extended`: POSIX rozszerzone wyrażenia regularne lub ERE.
-- `awk`: Jest `extended`to , ale ma dodatkowe wyjścia dla znaków niedrukowych.
-- `grep`: Jest `basic`to , ale umożliwia również znaki nowej linii ('\n') oddzielanie naprzemnień.
-- `egrep`: Jest `extended`to , ale pozwala również znaki nowego linii do oddzielenia naprzemnań.
+- `ECMAScript`: Jest to najbliżej gramatyki używanej przez język JavaScript i języki .NET.
+- `basic`: Podstawowe wyrażenia w standardzie POSIX lub BRE.
+- `extended`: Rozszerzone wyrażenia regularne w standardzie POSIX lub ERE.
+- `awk`: To jest `extended` , ale ma dodatkowe ucieczki dla znaków niedrukowalnych.
+- `grep`: To jest `basic` , ale umożliwia także znak nowego wiersza ("\n") do oddzielenia.
+- `egrep`: To jest `extended` , ale umożliwia także znak nowego wiersza do oddzielania alternatyw.
 
-Domyślnie, jeśli nie określono `ECMAScript` gramatyki, zakłada się. Można określić tylko jedną gramatykę.
+Domyślnie, jeśli nie określono gramatyki, `ECMAScript` przyjmuje się. Można określić tylko jedną gramatykę.
 
 Oprócz gramatyki można zastosować kilka flag:
 
-- `icase`: Ignorowanie przypadku podczas dopasowywania.
-- `nosubs`: Ignorowanie oznaczonych dopasowań (czyli wyrażeń w nawiasach); nie są przechowywane żadne zastępstwa.
-- `optimize`: Spraw, aby dopasowanie było szybsze, kosztem większego czasu budowy.
-- `collate`: Użyj sekwencji sortowania zależnych od ustawień regionalnych (na przykład zakresów formularza "[a-z]").
+- `icase`: Ignoruj wielkość liter podczas dopasowywania.
+- `nosubs`: Ignoruj oznaczone dopasowania (czyli wyrażenia w nawiasach); nie są przechowywane podstawiania.
+- `optimize`: Szybsze dopasowanie, przy możliwym kosztie większego czasu konstrukcji.
+- `collate`: Użyj sekwencji sortowania z uwzględnieniem ustawień regionalnych (na przykład zakresów formularza "[a-z]").
 
-Zero lub więcej flag może być łączony z gramatyki, aby określić zachowanie aparatu wyrażeń regularnych. Jeśli określono tylko `ECMAScript` flagi, przyjmuje się jako gramatyki.
+Aby określić zachowanie aparatu wyrażeń regularnych, można połączyć zero lub więcej flag z gramatyką. Jeśli określono tylko flagi, `ECMAScript` założono, że Gramatyka.
 
 ### <a name="element"></a>Element
 
 Element może być jednym z następujących:
 
-- *Zwykły znak,* który pasuje do tego samego znaku w sekwencji docelowej.
+- *Zwykły znak* , który pasuje do tego samego znaku w sekwencji docelowej.
 
-- *Symbol wieloznaczny* '.', który pasuje do dowolnego znaku w sekwencji docelowej z wyjątkiem nowej linii.
+- *Symbol wieloznaczny* ".", który pasuje do dowolnego znaku w sekwencji docelowej z wyjątkiem nowego wiersza.
 
-- *Wyrażenie nawiasu* formularza`expr`"[ ]", który pasuje do znaku lub elementu sortowania w sekwencji `expr`docelowej, który jest`expr`również w zestawie zdefiniowanym przez wyrażenie , lub formularza "[^ ]", `expr`który pasuje do znaku lub elementu sortowania w sekwencji docelowej, która nie znajduje się w zestawie zdefiniowanym przez wyrażenie .
+- *Wyrażenie w nawiasie klamrowym* w postaci "[ `expr` ]", które dopasowuje znak lub element sortowania w sekwencji docelowej, który jest również w zestawie zdefiniowanym przez wyrażenie `expr` lub w postaci "[^ `expr` ]", który dopasowuje znak lub element sortowania w sekwencji docelowej, która nie znajduje się w zestawie zdefiniowanym przez wyrażenie `expr` .
 
    Wyrażenie `expr` może zawierać dowolną kombinację następujących elementów:
 
-  - Pojedynczy znak. Dodaje ten znak do `expr`zestawu zdefiniowanego przez .
+  - Pojedynczy znak. Dodaje ten znak do zestawu zdefiniowanego przez `expr` .
 
-  - *Zakres znaków* formularza "`ch1`-`ch2`". Dodaje znaki, które są reprezentowane przez`ch1`wartości `ch2`w zamkniętym zakresie `expr`[ , ] do zestawu zdefiniowanego przez .
+  - *Zakres znaków* w formie " `ch1` - `ch2` ". Dodaje znaki, które są reprezentowane przez wartości w zamkniętym zakresie [ `ch1` , `ch2` ] do zestawu zdefiniowanego przez `expr` .
 
-  - *Klasa znaków* formularza "[:`name`:]". Dodaje znaki w klasie o nazwie `expr`do zestawu zdefiniowanego przez .
+  - *Klasa znaku* w postaci "[: `name` :]". Dodaje znaki w nazwanej klasie do zestawu zdefiniowanego przez `expr` .
 
-  - *Klasa równoważności* formularza "[=`elt`=]". Dodaje elementy sortujące, które `elt` są równoważne `expr`zestawowi zdefiniowanemu przez program .
+  - *Klasa równoważności* w postaci "[= `elt` =]". Dodaje elementy sortowania, które są równoważne z `elt` zestawem zdefiniowanym przez `expr` .
 
-  - *Symbol sortowania* formularza "[.`elt`.]". Dodaje element `elt` sortowania do zestawu `expr`zdefiniowanego przez .
+  - *Symbol sortowania* formularza "[. `elt` .]". Dodaje element sortowania `elt` do zestawu zdefiniowanego przez `expr` .
 
-- *Kotwica*. Kotwica '^' pasuje do początku sekwencji docelowej; kotwica '$' pasuje do końca sekwencji docelowej.
+- *Zakotwiczenie*. Kotwica '^' pasuje do początku sekwencji docelowej; kotwica '$' pasuje do końca sekwencji docelowej.
 
-*Grupa przechwytywania* formularza "( *podwyrażenie)",* \\lub " ( *podwyrażenie)"* \\w `basic` i `grep`, która pasuje do sekwencji znaków w sekwencji docelowej, która jest dopasowywać wzorzec między ogranicznikami.
+*Grupa przechwytywania* formularza "( *Podwyrażenie* )" lub " \\ ( *Podwyrażenie* \\ )" w `basic` i `grep` , która dopasowuje sekwencję znaków w sekwencji docelowej, która jest zgodna ze wzorcem między ogranicznikami.
 
-- *Ucieczka tożsamości* formularza\\`k`" ", który `k` pasuje do znaku w sekwencji docelowej.
+- *Identyfikator ucieczki* w postaci " \\ `k` ", który pasuje do znaku `k` w sekwencji docelowej.
 
 Przykłady:
 
@@ -77,111 +78,111 @@ Przykłady:
 
 - „(a)” pasuje do sekwencji docelowej „a” i kojarzy grupę przechwytywania 1 z podsekwencją „a”, ale nie pasuje do sekwencji docelowych „B”, „b” lub „c”.
 
-W `ECMAScript` `basic`programie `grep`, i element może być również *tylnym odniesieniem* formularza "\\`dd`", gdzie `dd` reprezentuje wartość dziesiętną N, która pasuje do sekwencji docelowej sekwencji docelowej, która jest taka sama jak sekwencja znaków dopasowana przez *grupę przechwytywania*Nth . Na przykład, „(a)\1” odpowiada sekwencji docelowej „aa”, ponieważ pierwsza (i tylko) grupa przechwytywania pasuje do początkowej sekwencji „a”, a następnie \1 pasuje do ostatniej sekwencji „a”.
+W `ECMAScript` , `basic` , i `grep` , element może być również *odwołaniem wstecznym* w postaci " \\ `dd` ", gdzie `dd` reprezentuje wartość dziesiętną N, która pasuje do sekwencji znaków w sekwencji docelowej, która jest taka sama jak sekwencja znaków, która jest dopasowywana przez n-ścieżkową *grupę przechwytywania*. Na przykład, „(a)\1” odpowiada sekwencji docelowej „aa”, ponieważ pierwsza (i tylko) grupa przechwytywania pasuje do początkowej sekwencji „a”, a następnie \1 pasuje do ostatniej sekwencji „a”.
 
-W `ECMAScript`, element może być również jedną z następujących rzeczy:
+W programie `ECMAScript` element może być również jednym z następujących elementów:
 
-- *Grupa nieprzejmująca* formularza "(?: *podwyrażenie* )". Pasuje do sekwencji znaków w sekwencji docelowej, do której pasuje wzorzec między ogranicznikami.
+- *Grupa nie przechwytuje* formularza "(?: *subexpression* )". Pasuje do sekwencji znaków w sekwencji docelowej, do której pasuje wzorzec między ogranicznikami.
 
-- Ograniczony *format pliku ucieczki* formularza "\f", "\n", "\r", "\t" lub "\v". Pasują one, odpowiednio, do wciągnięcia kartki, nowego wiersza, powrotu karetki, tabulatora poziomego i tabulatora pionowego w sekwencji docelowej.
+- Ograniczony *Format pliku ucieczki* w postaci "\f", "\n", "\r", "\t" lub "\v". Pasują one, odpowiednio, do wciągnięcia kartki, nowego wiersza, powrotu karetki, tabulatora poziomego i tabulatora pionowego w sekwencji docelowej.
 
-- *Pozytywna potwierdzenia* formularza "(= *podwyrażenie* )". Pasuje do sekwencji znaków w sekwencji docelowej, do której pasuje wzorzec między ogranicznikami, ale nie zmienia pozycji dopasowania w sekwencji docelowej.
+- *Pozytywne potwierdzenie* formularza "(= *subexpression* )". Pasuje do sekwencji znaków w sekwencji docelowej, do której pasuje wzorzec między ogranicznikami, ale nie zmienia pozycji dopasowania w sekwencji docelowej.
 
-- *Negatywne twierdzenie* formularza "(! *podwyrażenie* )". Pasuje do dowolnej sekwencji znaków w sekwencji docelowej, do której nie pasuje wzorzec między ogranicznikami, i nie zmienia pozycji dopasowania w sekwencji docelowej.
+- *Ujemne potwierdzenie* formularza "(! *subexpression* ) ". Pasuje do dowolnej sekwencji znaków w sekwencji docelowej, do której nie pasuje wzorzec między ogranicznikami, i nie zmienia pozycji dopasowania w sekwencji docelowej.
 
-- *Szesnastkowa sekwencja ucieczki* `hh`formularza "\x". Dopasowuje znak w sekwencji docelowej, który jest reprezentowany `hh`przez dwie cyfry szesnastkowe .
+- *Szesnastkowa sekwencja ucieczki* w postaci "\x `hh` ". Dopasowuje znak w sekwencji docelowej, który jest reprezentowany przez dwie cyfry szesnastkowe `hh` .
 
-- *Sekwencja unicode uniku* postaci`hhhh`"\u". Dopasowuje znak w sekwencji docelowej, który jest reprezentowany `hhhh`przez cztery cyfry szesnastkowe .
+- *Sekwencja unikowa Unicode* w postaci "\u `hhhh` ". Dopasowuje znak w sekwencji docelowej, który jest reprezentowany przez cztery cyfry szesnastkowe `hhhh` .
 
-- *Sekwencja unikowa formantu* formularza "\c".`k` Dopasowuje znak kontrolny nazwany `k`przez znak .
+- *Sekwencja ucieczki kontrolki* w postaci "\c `k` ". Dopasowuje znak kontrolny, który jest nazwany przez znak `k` .
 
-- Potwierdzenie *granicy słowa* formularza "\b". Dopasowuje się, gdy bieżąca pozycja w sekwencji docelowej znajduje się bezpośrednio po *granicy słowa*.
+- *Potwierdzenie granicy słowa* w postaci "\b". Dopasowuje, gdy bieżąca pozycja w sekwencji docelowej jest natychmiast po *granicy słowa*.
 
-- *Ujemna miara granicy słowa* formularza "\B". Pasuje, gdy bieżąca pozycja w sekwencji docelowej nie jest bezpośrednio po *granicy słowa*.
+- *Ujemne potwierdzenie granicy słowa* w postaci "\b". Dopasowuje, gdy bieżąca pozycja w sekwencji docelowej nie jest natychmiast po *granicy słowa*.
 
-- *Ucieczka znaku dsw* formularza "\d", "\D", "\s", "\S", "\w", "\W". Zawiera skróconą nazwę klasy znaków.
+- *DSW znak ucieczki* w postaci "\d", "\d", "\s", "\s", "\w", "\w". Zawiera skróconą nazwę klasy znaków.
 
 Przykłady:
 
 - „(?:a)” pasuje do sekwencji docelowej „a”, ale „(?:a)\1” jest nieprawidłowe, ponieważ nie istnieje żadna grupa przechwytywania 1.
 
-- "(=a)a" pasuje do docelowej sekwencji "a". Asercja pozytywna pasuje do początkowej sekwencji „a” w sekwencji docelowej, a końcowe „a” w wyrażeniu regularnym pasuje do sekwencji początkowej „a” w sekwencji docelowej.
+- "(= a) a" pasuje do sekwencji docelowej "a". Asercja pozytywna pasuje do początkowej sekwencji „a” w sekwencji docelowej, a końcowe „a” w wyrażeniu regularnym pasuje do sekwencji początkowej „a” w sekwencji docelowej.
 
-- "(!a)a" nie pasuje do docelowej sekwencji "a".
+- "(! a) a" nie pasuje do sekwencji docelowej "a".
 
-- "a\b". dopasowuje sekwencję docelową "a~", ale nie pasuje do docelowej sekwencji "ab".
+- a\B. pasuje do sekwencji docelowej "a ~", ale nie pasuje do sekwencji docelowej "AB".
 
-- "a\B". dopasowuje sekwencję docelową "ab", ale nie pasuje do sekwencji docelowej "a~".
+- A\B. pasuje do sekwencji docelowej "AB", ale nie pasuje do sekwencji docelowej "a ~".
 
-W `awk`, element może być również jedną z następujących rzeczy:
+W programie `awk` element może być również jednym z następujących elementów:
 
-- Ucieczka *formatu pliku* \\\\formularza " ", "\a", "\b", "\f", "\n", "\r", "\t" lub "\v". Pasują one, odpowiednio, do odwrotnego ukośnika, alertu, backspace, wciągnięcia kartki, nowego wiersza, powrotu karetki, tabulatora poziomego i tabulatora pionowego w sekwencji docelowej.
+- *Format pliku ucieczki* w postaci " \\ \\ ", "\a", "\b", "\f", "\n", "\r", "\t" lub "\v". Pasują one, odpowiednio, do odwrotnego ukośnika, alertu, backspace, wciągnięcia kartki, nowego wiersza, powrotu karetki, tabulatora poziomego i tabulatora pionowego w sekwencji docelowej.
 
-- *Ósemkowa sekwencja ucieczki* formularza "\\`ooo`". Dopasowuje znak w sekwencji docelowej, którego reprezentacja jest wartością reprezentowaną przez jedną, dwie lub trzy cyfry ósemki `ooo`.
+- *Ósemkowa sekwencja ucieczki* w formie " \\ `ooo` ". Dopasowuje znak w sekwencji docelowej, którego reprezentacja jest wartością reprezentowaną przez jedną, dwie lub trzy cyfry ósemkowe `ooo` .
 
 ### <a name="repetition"></a>Powtórzenie
 
-Dowolne elementy inne niż *potwierdzenia dodatnie,* *potwierdzenia ujemnego*lub *zakotwiczenia* mogą następować liczba powtórzeń. Najbardziej ogólny rodzaj liczby powtórzeń ma`min`formę`max`"{\\,`min``max`\\}" `basic` lub `grep`" { , }" in i . Element, po którym następuje ta forma liczby `min` powtórzeń pasuje co `max` najmniej kolejnych wystąpień i nie więcej niż kolejne wystąpienia sekwencji, która pasuje do elementu. Na przykład "a"{2,3}pasuje do sekwencji docelowej "aa" i sekwencji docelowej "aaa", ale nie do sekwencji docelowej "a" lub sekwencji docelowej "aaaa".
+Każdy element inny niż *pozytywne potwierdzenie*, *negatywne potwierdzenie* lub *zakotwiczenie* może następować przez liczbę powtórzeń. Najbardziej ogólnym rodzajem liczby powtórzeń jest format "{ `min` , `max` }" lub " \\ { `min` , `max` \\ }" w `basic` i `grep` . Element, który następuje po tej formie liczby powtórzeń, dopasowuje co najmniej `min` kolejne wystąpienia i nie więcej niż `max` kolejne wystąpienia sekwencji, które pasują do elementu. Na przykład "a {2,3} " pasuje do sekwencji docelowej "AA" i sekwencji docelowej "aaa", ale nie do sekwencji docelowej "a" ani do sekwencji docelowej "aaaa".
 
 Licznik powtórzeń może mieć również jedną z następujących postaci:
 
-- "{`min`}"\\lub`min`\\" `basic` { `grep`}" w i . Odpowiednik "{`min``min`, }".
+- "{ `min` }" lub " \\ { `min` \\ }" w `basic` i `grep` . Równoważne "{ `min` , `min` }".
 
-- "{`min`,}"\\lub`min`\\" { `basic` `grep`, }" w i . Odpowiednik "{`min`,unbounded}".
+- "{ `min` ,}" lub " \\ { `min` , \\ }" w `basic` i `grep` . Równoważne "{ `min` , unboundd}".
 
 - "\*". Równoważne postaci „{0,nieograniczone}”.
 
 Przykłady:
 
-- "a"{2}pasuje do docelowej sekwencji "aa", ale nie do sekwencji docelowej "a" lub sekwencji docelowej "aaa".
+- "a {2} " pasuje do sekwencji docelowej "AA", ale nie do sekwencji docelowej "a" lub sekwencji docelowej "aaa".
 
-- "a{2,}" pasuje do docelowej sekwencji "aa", sekwencji docelowej "aaa" i tak dalej, ale nie pasuje do docelowej sekwencji "a".
+- "a {2,} " pasuje do sekwencji docelowej "AA", sekwencji docelowej "aaa" itd., ale nie pasuje do sekwencji docelowej "a".
 
-- "a\*" pasuje do sekwencji docelowej "", sekwencji docelowej "a", sekwencji docelowej "aa" i tak dalej.
+- "a \* " pasuje do sekwencji docelowej "", sekwencji docelowej "a", sekwencji docelowej "AA" itd.
 
-Dla wszystkich gramatyki z wyjątkiem `basic` i `grep`, liczba powtórzeń może również przybierać jedną z następujących form:
+W przypadku wszystkich gramatyki z wyjątkiem `basic` i `grep` , liczba powtórzeń może również przyjmować jedną z następujących form:
 
-- "?". Odpowiednik "{0,1}"."
+- "?". Równoważne " {0,1} ".
 
-- "+". Odpowiednik "{1,unbounded}".
+- "+". Odpowiednik wartości "{1, Unbounded}".
 
 Przykłady:
 
-- "a?" dopasowuje sekwencję docelową "" i sekwencję docelową "a", ale nie sekwencję docelową "aa".
+- "a?" pasuje do sekwencji docelowej "" i sekwencji docelowej "a", ale nie do sekwencji docelowej "AA".
 
 - „a+” pasuje do sekwencji docelowej „a”, sekwencji docelowej „aa” itd., ale nie do sekwencji docelowej „”.
 
-W `ECMAScript`, wszystkie formy liczby powtórzeń może nastąpić znak "?", który oznacza *niechciwe powtórzenia*.
+W programie `ECMAScript` wszystkie formy liczby powtórzeń mogą następować znak "?", który wyznacza *zachłanne powtórzenia*.
 
 ### <a name="concatenation"></a>Łączenie
 
-Elementy wyrażenia regularnego, z *liczeniem powtórzeń*lub bez, mogą być łączone w celu utworzenia dłuższych wyrażeń regularnych. Wyrażenie wynikowe pasuje do sekwencji docelowej będącej połączeniem sekwencji, do których pasują poszczególne elementy. Na przykład "a{2,3}b" pasuje do sekwencji docelowej "aab" i sekwencji docelowej "aaab", ale nie pasuje do sekwencji docelowej "ab" lub sekwencji docelowej "aaaab".
+Elementy wyrażenia regularnego, z lub bez *liczby powtórzeń*, można łączyć, aby tworzyć dłuższe wyrażenia regularne. Wyrażenie wynikowe pasuje do sekwencji docelowej będącej połączeniem sekwencji, do których pasują poszczególne elementy. Na przykład "a {2,3} b" pasuje do sekwencji docelowej "AAB" i sekwencji docelowej "aaab", ale nie pasuje do sekwencji docelowej "AB" lub sekwencji docelowej "aaaab".
 
 ### <a name="alternation"></a>Alternatywa
 
-We wszystkich gramatykach wyrażeń regularnych z wyjątkiem `basic` i `grep`, po połączonym wyrażeniu regularnym może następować znak "&#124;" i inne połączone wyrażenie regularne. W ten sposób można łączyć dowolną liczbę połączonych wyrażeń regularnych. Wyrażenie wynikowe pasuje do dowolnej sekwencji docelowej, do której pasuje jedno lub więcej z połączonych wyrażeń regularnych.
+We wszystkich gramatykach wyrażeń regularnych z wyjątkiem `basic` i `grep` , za pomocą połączonego wyrażenia regularnego może następować znak "&#124;" i inne połączone wyrażenie regularne. W ten sposób można łączyć dowolną liczbę połączonych wyrażeń regularnych. Wyrażenie wynikowe pasuje do dowolnej sekwencji docelowej, do której pasuje jedno lub więcej z połączonych wyrażeń regularnych.
 
-Gdy więcej niż jedno zesłane wyrażenia regularne `ECMAScript` odpowiada sekwencji docelowej, wybiera pierwsze zesłane wyrażenia regularne, które pasują do sekwencji jako dopasowania *(pierwsze dopasowanie);* inne gramatyki wyrażeń regularnych wybrać ten, który osiąga *najdłuższe dopasowanie*. Na przykład "ab&#124;cd" pasuje do docelowej sekwencji "ab" i docelowej sekwencji "cd", ale nie pasuje do docelowej sekwencji "abd" lub sekwencji docelowej "acd".
+Jeśli więcej niż jeden z połączonych wyrażeń regularnych pasuje do sekwencji docelowej, `ECMAScript` wybiera pierwsze z połączonych wyrażeń regularnych, które pasują do sekwencji jako dopasowanie (*pierwsze dopasowanie*); inne gramatyki wyrażenia regularnego wybierają ten, który osiąga *najdłuższe dopasowanie*. Na przykład "AB&#124;CD" pasuje do sekwencji docelowej "AB" i sekwencji docelowej "CD", ale nie pasuje do sekwencji docelowej "Abd" lub sekwencji docelowej "ACD".
 
-W `grep` `egrep`i znak nowego bohatera ('\n') może służyć do oddzielania naprzemnień.
+W `grep` i `egrep` , znak nowego wiersza ("\n") może służyć do oddzielania zmiany.
 
 ### <a name="subexpression"></a>Wyrażenie cząstkowe
 
-W `basic` `grep`i , subexpression jest łączenia. W innych gramatykach wyrażeń regularnych wyrażenie cząstkowe jest alternatywą.
+W `basic` i `grep` , Podwyrażenie jest połączeniem. W innych gramatykach wyrażeń regularnych wyrażenie cząstkowe jest alternatywą.
 
-## <a name="grammar-summary"></a><a name="grammarsummary"></a>Podsumowanie gramatyki
+## <a name="grammar-summary"></a><a name="grammarsummary"></a> Podsumowanie dotyczące gramatyki
 
 W następującej tabeli podsumowano funkcje, które są dostępne w różnych gramatykach wyrażeń regularnych:
 
-|Element|Podstawowe|rozszerzone|Ecmascript|grep|egrep|awk|
+|Element|prosty|rozszerzone|ECMAScript|grep|egrep|awk|
 |-------------|---------|---------|----------|----------|-----------|---------|
-|naprzemiennie za pomocą "&#124;"||+|+||+|+|
+|alternatywa przy użyciu "&#124;"||+|+||+|+|
 |alternatywa przy użyciu '\n'||||+|+||
 |kotwica|+|+|+|+|+|+|
 |dopasowanie wsteczne|+||+|+|||
 |wyrażenie w nawiasie kwadratowym|+|+|+|+|+|+|
 |grupa przechwytywania przy użyciu „()”||+|+||+|+|
-|grupa przechwytywania\\\\za pomocą " ( )"|+|||+|||
+|Grupa przechwytywania przy użyciu " \\ ( \\ )"|+|||+|||
 |kontrolna sekwencja unikowa|||+||||
 |sekwencja unikowa dsw|||+||||
 |sekwencja unikowa formatu pliku|||+|||+|
@@ -194,15 +195,15 @@ W następującej tabeli podsumowano funkcje, które są dostępne w różnych gr
 |ósemkowa sekwencja unikowa||||||+|
 |zwykły znak|+|+|+|+|+|+|
 |asercja pozytywna|||+||||
-|powtarzanie za{}pomocą " "||+|+||+|+|
-|powtarzanie za\\pomocą\\" { }"|+|||+|||
-|powtarzanie za\*pomocą ' '|+|+|+|+|+|+|
+|powtórzenie przy użyciu " {} "||+|+||+|+|
+|powtórzenie przy użyciu " \\ { \\ }"|+|||+|||
+|powtórzenie przy użyciu " \* "|+|+|+|+|+|+|
 |powtórzenie przy użyciu '?' i '+'||+|+||+|+|
 |sekwencja unikowa unicode|||+||||
 |symbol wieloznaczny|+|+|+|+|+|+|
 |asercja granicy słowa|||+||||
 
-## <a name="semantic-details"></a><a name="semanticdetails"></a>Szczegóły semantyczne
+## <a name="semantic-details"></a><a name="semanticdetails"></a> Szczegóły semantyczne
 
 ### <a name="anchor"></a>Kotwica
 
@@ -210,7 +211,7 @@ Kotwica pasuje do pozycji w ciągu docelowym, a nie do znaku. Kotwica '^' pasuje
 
 ### <a name="back-reference"></a>Dopasowanie wsteczne
 
-Odwołanie wstecz jest ukośnikiem odwrotnym, po którym następuje wartość dziesiętna N. Pasuje do zawartości grupy *przechwytywania*Nth . Wartość N nie może być większa niż liczba grup przechwytywania, które poprzedzają dopasowanie wsteczne. W `basic` `grep`i , wartość N jest określana przez cyfrę dziesiętną, która następuje ukośnik odwrotny. W `ECMAScript`, wartość N jest określana przez wszystkie cyfry dziesiętne, które natychmiast następują po ukośniku odwrotnym. W związku `basic` z `grep`tym w i , wartość N nigdy nie jest większa niż 9, nawet jeśli wyrażenie regularne ma więcej niż dziewięć grup przechwytywania. W `ECMAScript`, wartość N jest nieograniczona.
+Odwołanie wsteczne to ukośnik odwrotny, po którym następuje wartość dziesiętna N. Pasuje do zawartości n-tej *grupy przechwytywania*. Wartość N nie może być większa niż liczba grup przechwytywania, które poprzedzają dopasowanie wsteczne. W `basic` i `grep` , wartość N jest określana przez cyfrę dziesiętną, która następuje po ukośniku odwrotnym. W programie `ECMAScript` wartość N jest określana przez wszystkie cyfry dziesiętne, które bezpośrednio po ukośniku odwrotnym. W związku z tym w `basic` i `grep` , wartość N nigdy nie jest większa niż 9, nawet jeśli wyrażenie regularne ma więcej niż dziewięć grup przechwytywania. W `ECMAScript` , wartość N jest nieograniczona.
 
 Przykłady:
 
@@ -218,13 +219,13 @@ Przykłady:
 
 - „(a)\2” jest nieprawidłowe.
 
-- "(b(((((((((a))))))))))))\10" ma `basic` różne `ECMAScript`znaczenia w . W `basic` tylnym odwołaniu znajduje się "\1". Dopasowanie wsteczne pasuje do zawartości pierwszej grupy przechwytywania (czyli tej, która zaczyna się od „(b” i kończy się ostatnim „)” i znajduje się przed dopasowaniem wstecznym), a końcowe '0' pasuje do zwykłego znaku '0'. W `ECMAScript`obszarze , odwołanie tylne to "\10". Pasuje do dziesiątej grupy przechwytywania, to znaczy tej najbardziej w środku.
+- "((((((((((((()))))))))))))))" `basic` `ECMAScript` W `basic` odwołaniu wstecznym jest "\ 1". Dopasowanie wsteczne pasuje do zawartości pierwszej grupy przechwytywania (czyli tej, która zaczyna się od „(b” i kończy się ostatnim „)” i znajduje się przed dopasowaniem wstecznym), a końcowe '0' pasuje do zwykłego znaku '0'. W programie `ECMAScript` odwołanie wsteczne to "\ 10". Pasuje do dziesiątej grupy przechwytywania, to znaczy tej najbardziej w środku.
 
 ### <a name="bracket-expression"></a>Wyrażenie w nawiasie kwadratowym
 
-Wyrażenie nawiasu definiuje zestaw znaków i *elementów sortowania*. Kiedy wyrażenie w nawiasie kwadratowym zaczyna się od znaku '^', dopasowanie zakończy się pomyślnie, jeśli do bieżącego znaku w sekwencji docelowej nie pasuje żaden element w zestawie. W przeciwnym razie dopasowanie się powiedzie, jeśli do bieżącego znaku w sekwencji docelowej pasuje dowolny z elementów w zestawie.
+Wyrażenie w nawiasie kwadratowym definiuje zestaw znaków i *elementy sortowania*. Kiedy wyrażenie w nawiasie kwadratowym zaczyna się od znaku '^', dopasowanie zakończy się pomyślnie, jeśli do bieżącego znaku w sekwencji docelowej nie pasuje żaden element w zestawie. W przeciwnym razie dopasowanie się powiedzie, jeśli do bieżącego znaku w sekwencji docelowej pasuje dowolny z elementów w zestawie.
 
-Zestaw znaków można zdefiniować, wymieniając dowolną kombinację *pojedynczych znaków,* *zakresów znaków,* *klas znaków,* *klas równoważności*i *symboli sortujących.*
+Zestaw znaków może być definiowany przez wystawienie dowolnej kombinacji *pojedynczych znaków*, *zakresów znaków*, *klas znaków*, *klas równoważności* i *symboli sortowania*.
 
 ### <a name="capture-group"></a>Grupa przechwytywania
 
@@ -240,7 +241,7 @@ Przykłady:
 
 ### <a name="character-class"></a>Klasa znaków
 
-Klasa znaków w wyrażeniu w nawiasie kwadratowym dodaje wszystkie znaki w nazwanej klasie do zestawu znaków, który jest zdefiniowany przez wyrażenie w nawiasie kwadratowym. Aby utworzyć klasę znaków, należy użyć „[:”, po którym następuje nazwa klasy, a na koniec „:]”. Wewnętrznie nazwy klas znaków są rozpoznawane przez wywołanie `id = traits.lookup_classname`. Znak `ch` należy do takiej klasy, jeśli `traits.isctype(ch, id)` zwraca true. Szablon `regex_traits` domyślny obsługuje nazwy klas w poniższej tabeli.
+Klasa znaków w wyrażeniu w nawiasie kwadratowym dodaje wszystkie znaki w nazwanej klasie do zestawu znaków, który jest zdefiniowany przez wyrażenie w nawiasie kwadratowym. Aby utworzyć klasę znaków, należy użyć „[:”, po którym następuje nazwa klasy, a na koniec „:]”. Wewnętrznie nazwy klas znaków są rozpoznawane przez wywołanie `id = traits.lookup_classname` . Znak `ch` należy do takiej klasy, jeśli `traits.isctype(ch, id)` zwraca wartość true. Szablon domyślny `regex_traits` obsługuje nazwy klas w poniższej tabeli.
 
 |Nazwa klasy|Opis|
 |----------------|-----------------|
@@ -286,11 +287,11 @@ Element sortujący to sekwencja wielu znaków, która jest traktowana jako pojed
 
 ### <a name="collating-symbol"></a>Symbol sortowania
 
-Symbol sortowania w wyrażeniu nawiasu dodaje *element sortowania* do zestawu zdefiniowanego przez wyrażenie nawiasu. Aby utworzyć symbol sortowania, użyj "[." następnie element sortujący, po którym następuje ".]".
+Symbol sortowania w wyrażeniu w nawiasie kwadratowym dodaje *element sortowania* do zestawu, który jest zdefiniowany przez wyrażenie w nawiasie kwadratowym. Aby utworzyć symbol sortowania, użyj "[." a następnie element sortowania, po którym następuje ".]".
 
 ### <a name="control-escape-sequence"></a>Kontrolna sekwencja unikowa
 
-Kontrolna sekwencja unikowa to ukośnik odwrotny, po którym następuje litera „c”, po której następuje jedna z liter od 'a' do 'z' lub od 'A' do 'Z'. Pasuje do znaku kontrolnego ASCII, który jest nazwany przez tę literę. Na przykład "\ci" pasuje do sekwencji docelowej \<"\x09", ponieważ ctrl-i> ma wartość 0x09.
+Kontrolna sekwencja unikowa to ukośnik odwrotny, po którym następuje litera „c”, po której następuje jedna z liter od 'a' do 'z' lub od 'A' do 'Z'. Pasuje do znaku kontrolnego ASCII, który jest nazwany przez tę literę. Na przykład "\ci" pasuje do sekwencji docelowej "\x09", ponieważ \<ctrl-i> ma wartość 0x09.
 
 ### <a name="dsw-character-escape"></a>Sekwencja unikowa DSW.
 
@@ -302,18 +303,18 @@ Sekwencja unikowa dsw to skrócona nazwa klasy znaków, jak pokazano w poniższe
 |„\D”|„[^[:d:]]”|„[^[:digit:]]”|
 |„\s”|„[[:s:]]”|„[[:space:]]”|
 |„\S”|„[^[:s:]]”|„[^[:space:]]”|
-|„\w”|„[[:w:]]”|"[a-zA-Z0-9_]"\*|
-|„\W”|„[^[:w:]]”|"[^a-zA-Z0-9_]"\*|
+|„\w”|„[[:w:]]”|"[a-za-Z0-9_]"\*|
+|„\W”|„[^[:w:]]”|"[^ a-za-Z0-9_]"\*|
 
 \*Zestaw znaków ASCII
 
 ### <a name="equivalence-class"></a>Klasa równoważności
 
-Klasa równoważności w wyrażeniu nawiasu dodaje wszystkie znaki i *elementy sortujące,* które są równoważne elementowi sortowania w definicji klasy równoważności do zestawu zdefiniowanego przez wyrażenie nawiasu. Aby utworzyć klasę równoważności, należy użyć „[=”, po którym następuje element sortujący, a na koniec „=]”. Wewnętrznie dwa elementy `elt1` sortujące `elt2` i `traits.transform_primary(elt1.begin(), elt1.end()) == traits.transform_primary(elt2.begin(), elt2.end())`są równoważne, jeśli .
+Klasa równoważności w wyrażeniu w nawiasie kwadratowym dodaje wszystkie znaki i *elementy sortowania* , które są równoważne elementowi sortowania w definicji klasy równoważności, do zestawu, który jest zdefiniowany przez wyrażenie w nawiasie kwadratowym. Aby utworzyć klasę równoważności, należy użyć „[=”, po którym następuje element sortujący, a na koniec „=]”. Wewnętrznie, dwa elementy sortowania `elt1` i `elt2` są równoważne, jeśli `traits.transform_primary(elt1.begin(), elt1.end()) == traits.transform_primary(elt2.begin(), elt2.end())` .
 
 ### <a name="file-format-escape"></a>Sekwencja unikowa formatu pliku
 
-Ucieczka formatu pliku składa się ze zwykłych\\\\sekwencji ulatniania znaków języka C, "", "\a", "\b", "\f", "\n", "\r", "\t", "\v". Mają one zwykłe znaczenie, czyli ukośnik odwrotny, alert, backspace, kanał informacyjny formularza, nowy linia, powrót karetki, karta pozioma i pionowa. W `ECMAScript`, "\a" i "\b" nie są dozwolone. ("\\\\" jest dozwolone, ale jest to ucieczka tożsamości, a nie ucieczka formatu pliku).
+Format pliku ucieczki składa się ze zwykłych sekwencji unikowych języka C, " \\ \\ ", "\a", "\b", "\f", "\n", "\r", "\t", "\v". Mają one zwykłe znaczenie, to znaczy ukośnik odwrotny, alert, Backspace, podawanie formularza, nowy wiersz, znak powrotu karetki, tabulator poziomy i tabulator pionowy. W `ECMAScript` , "\a" i "\b" są niedozwolone. ("\\\\" jest dozwolony, ale jest to znak ucieczki tożsamości, a nie wyjście w formacie pliku).
 
 ### <a name="hexadecimal-escape-sequence"></a>Szesnastkowa sekwencja unikowa
 
@@ -321,20 +322,20 @@ Szesnastkowa sekwencja unikowa to ukośnik odwrotny, po którym następuje liter
 
 ### <a name="identity-escape"></a>Ucieczka tożsamości
 
-Ucieczka tożsamości to odwrotny ukośnik, po którym następuje pojedynczy znak. Pasuje do tego znaku. Jest wymagana, gdy znak ma specjalne znaczenie; dzięki ucieczce tożsamości to znaczenie jest usuwane. Przykład:
+Ucieczka tożsamości to odwrotny ukośnik, po którym następuje pojedynczy znak. Pasuje do tego znaku. Jest wymagana, gdy znak ma specjalne znaczenie; dzięki ucieczce tożsamości to znaczenie jest usuwane. Na przykład:
 
-- "a\*" pasuje do docelowej sekwencji "aaa",\*ale nie pasuje do sekwencji docelowej "a".
+- "a \* " pasuje do sekwencji docelowej "aaa", ale nie pasuje do sekwencji docelowej "a \* ".
 
-- "a\\\*" nie pasuje do docelowej sekwencji "aaa", ale pasuje do sekwencji docelowej "a".\*
+- "a \\ \* " nie pasuje do sekwencji docelowej "aaa", ale pasuje do sekwencji docelowej "a \* ".
 
 Zestaw znaków, które są dozwolone w ucieczce tożsamości, zależy od gramatyki wyrażeń regularnych, jak pokazano w poniższej tabeli.
 
 |Gramatyka|Dozwolone znaki ucieczki tożsamości|
 |-------------|----------------------------------------|
 |`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|
-|`extended`, `egrep`|{ '(', ')', '{', '.',\\'[', ' ' '\*' ', '^', '$', '+', '?', '&#124;' }|
-|`awk`|`extended`plus { '"' , "/" }|
-|`ECMAScript`|Wszystkie znaki z wyjątkiem tych, które mogą być częścią identyfikatora. Zazwyczaj obejmuje to litery, cyfry, '$', '\_i sekwencje unicode escape. Aby uzyskać więcej informacji, zobacz temat specyfikacji języka ECMAScript.|
+|`extended`, `egrep`|{"(", ")", "{", ".", "[", " \\ ", " \* ", "^", "$", "+", "?", "&#124;"}|
+|`awk`|`extended` Plus {"" ","/"}|
+|`ECMAScript`|Wszystkie znaki z wyjątkiem tych, które mogą być częścią identyfikatora. Zwykle dotyczy to liter, cyfr, "$", " \_ " i sekwencji unikowych Unicode. Aby uzyskać więcej informacji, zobacz temat specyfikacji języka ECMAScript.|
 
 ### <a name="individual-character"></a>Pojedynczy znak
 
@@ -348,7 +349,7 @@ Przykłady:
 
 - „[a^bc]” pasuje do sekwencji docelowych „a”, „b”, „c” i „^” , ale nie do sekwencji docelowej „d”.
 
-We wszystkich gramatykach wyrażeń regularnych z wyjątkiem `ECMAScript`, jeśli ']' jest pierwszym znakiem, który następuje po otwarciu '[' lub jest pierwszym znakiem, który następuje po początkowym '^', reprezentuje się.
+We wszystkich gramatykach wyrażeń regularnych, z wyjątkiem `ECMAScript` , jeśli '] ' jest pierwszym znakiem, który następuje po otwarciu ' [' lub jest pierwszym znakiem, który następuje po początkowym ' ^ ', reprezentuje sam siebie.
 
 Przykłady:
 
@@ -358,29 +359,29 @@ Przykłady:
 
 - „[^]abc]” pasuje do sekwencji docelowej „d”, ale nie do sekwencji docelowych „a”, „b”, „c” lub „]”.
 
-W `ECMAScript`,\\użyj ' ]' do reprezentowania znaku ']' w wyrażeniu nawiasu.
+W `ECMAScript` , użyj \\ znaku "]", aby reprezentować znak "]" w wyrażeniu w nawiasie kwadratowym.
 
 Przykłady:
 
 - „[]a” pasuje do sekwencji docelowej „a”, ponieważ wyrażenie w nawiasie kwadratowym jest puste.
 
-- "[\\]abc]" pasuje do sekwencji docelowych "a", "b", "c" i "]", ale nie do sekwencji docelowej "d".
+- "[ \\ ] ABC]" pasuje do sekwencji docelowych "a", "b", "c" i "]", ale nie do sekwencji docelowej "d".
 
 ### <a name="negative-assert"></a>Asercja negatywna
 
-Asercja negatywna pasuje do wszystkiego oprócz swojej zawartości. Nie używa żadnych znaków w sekwencji docelowej. Na przykład "(!aa)(a\*)" pasuje do sekwencji docelowej "a" i kojarzy grupę przechwytywania 1 z podsekwencją "a". Nie pasuje do sekwencji docelowej „aa” ani do sekwencji docelowej „aaa”.
+Asercja negatywna pasuje do wszystkiego oprócz swojej zawartości. Nie używa żadnych znaków w sekwencji docelowej. Na przykład "(! AA) (a \* )" pasuje do sekwencji docelowej "a" i kojarzy grupę przechwytywania 1 z podsekwencją "a". Nie pasuje do sekwencji docelowej „aa” ani do sekwencji docelowej „aaa”.
 
 ### <a name="negative-word-boundary-assert"></a>Asercja negatywna granicy słowa
 
-Ujemna granica słowa potwierdzenia pasuje, jeśli bieżąca pozycja w ciągu docelowym nie jest bezpośrednio po *granicy słowa*.
+Ujemne potwierdzenie granicy słowa jest zgodne, jeśli bieżąca pozycja w ciągu docelowym nie jest natychmiast po *granicy słowa*.
 
 ### <a name="non-capture-group"></a>Grupa nieprzechwytująca
 
-Grupa nieprzechwytująca oznacza swoją zawartość jako pojedynczą jednostkę w gramatyce wyrażeń regularnych, ale nie nadaje etykiety tekstowi docelowemu. Na przykład "(a)(?:b)\*(c)" dopasowuje tekst docelowy "abbc" i kojarzy grupę przechwytywania 1 z podsekwencją "a" i grupą przechwytywania 2 z podsekwencją "c".
+Grupa nieprzechwytująca oznacza swoją zawartość jako pojedynczą jednostkę w gramatyce wyrażeń regularnych, ale nie nadaje etykiety tekstowi docelowemu. Na przykład "(a) (?: b) \* (c)" pasuje do tekstu docelowego "abbc" i kojarzy grupę przechwytywania 1 z podsekwencją "a" i grupą przechwytywania 2 z podsekwencją "c".
 
 ### <a name="non-greedy-repetition"></a>Powtórzenie niezachłanne
 
-Powtórzenie niezachłanne używa najkrótszej podsekwencji sekwencji docelowej, która pasuje do wzorca. Powtórzenie zachłanne używa najdłuższej. Na przykład "(a+)(a\*b)" pasuje do sekwencji docelowej "aaab". Gdy używa się powtórzenia niezachłannego, kojarzy ono grupę przechwytywania 1 z podsekwencją „a” na początku sekwencji docelowej, a grupę przechwytywania 2 z podsekwencją „aab” na końcu sekwencji docelowej. Gdy używa się dopasowania zachłannego, kojarzy ono grupę przechwytywania 1 z podsekwencją „aaa”, a grupę przechwytywania 2 z podsekwencją „b”.
+Powtórzenie niezachłanne używa najkrótszej podsekwencji sekwencji docelowej, która pasuje do wzorca. Powtórzenie zachłanne używa najdłuższej. Na przykład "(a +) (a \* b)" pasuje do sekwencji docelowej "aaab". Gdy używa się powtórzenia niezachłannego, kojarzy ono grupę przechwytywania 1 z podsekwencją „a” na początku sekwencji docelowej, a grupę przechwytywania 2 z podsekwencją „aab” na końcu sekwencji docelowej. Gdy używa się dopasowania zachłannego, kojarzy ono grupę przechwytywania 1 z podsekwencją „aaa”, a grupę przechwytywania 2 z podsekwencją „b”.
 
 ### <a name="octal-escape-sequence"></a>Ósemkowa sekwencja unikowa
 
@@ -390,27 +391,27 @@ Powtórzenie niezachłanne używa najkrótszej podsekwencji sekwencji docelowej,
 
 Zwykły znak to dowolny prawidłowy znak, który nie ma specjalnego znaczenia w bieżącej gramatyce.
 
-W `ECMAScript`, następujące znaki mają specjalne znaczenie:
+W programie `ECMAScript` następujące znaki mają specjalne znaczenie:
 
-- ^  $  \  .  \*+  ?  ( \[ ) ] { } &#124;
+- ^  $  \  .  \*  +  ?  ()  \[  ] {} &#124;
 
-W `basic` `grep`i , następujące znaki mają specjalne znaczenie:
+W `basic` i `grep` , następujące znaki mają specjalne znaczenie:
 
 - .   \[   \
 
-Również `basic` w `grep`i , następujące znaki mają specjalne znaczenia, gdy są one używane w określonym kontekście:
+Ponadto w `basic` i `grep` , następujące znaki mają specjalne znaczenie, gdy są używane w określonym kontekście:
 
-- '\*ma szczególne znaczenie we wszystkich przypadkach, z wyjątkiem sytuacji, gdy jest to pierwszy znak w wyrażeniu regularnym lub pierwszy znak, który następuje po początkowym "^" w wyrażeniu regularnym lub gdy jest to pierwszy znak grupy przechwytywania lub pierwszy znak, który następuje po początkowym "^" w grupie przechwytywania.
+- " \* " ma specjalne znaczenie we wszystkich przypadkach, z wyjątkiem sytuacji, gdy jest to pierwszy znak w wyrażeniu regularnym lub pierwszy znak, który następuje po początkowym znaku "^" w wyrażeniu regularnym, lub gdy jest to pierwszy znak grupy przechwytywania lub pierwszy znak, który następuje po początkowym ' ^ ' w grupie przechwytywania.
 
 - '^' ma specjalne znaczenie, gdy jest to pierwszy znak wyrażenia regularnego.
 
 - '$' ma specjalne znaczenie, gdy jest to ostatni znak wyrażenia regularnego.
 
-W `extended` `egrep`, `awk`i , następujące znaki mają znaczenie specjalne:
+W `extended` , `egrep` , i `awk` , następujące znaki mają specjalne znaczenie:
 
-- .   \[\   (   \*   +   ?   { &#124;
+- .   \[   \   (   \*   +   ?   {&#124;
 
-Również `extended`w `egrep`, `awk`i , następujące znaki mają specjalne znaczenia, gdy są one używane w określonym kontekście.
+Ponadto w `extended` , `egrep` , i `awk` , następujące znaki mają specjalne znaczenie, gdy są używane w określonym kontekście.
 
 - ')' ma specjalne znaczenie, gdy pasuje do poprzedzającego '('.
 
@@ -418,7 +419,7 @@ Również `extended`w `egrep`, `awk`i , następujące znaki mają specjalne znac
 
 - '$' ma specjalne znaczenie, gdy jest to ostatni znak wyrażenia regularnego.
 
-Zwykły znak pasuje do takiego samego znaku w sekwencji docelowej. Domyślnie oznacza to, że dopasowanie się powiedzie, jeśli dwa znaki są reprezentowane przez tę samą wartość. W dopasowaniu bez uwzględniania wielkości liter `ch0` `ch1` dwa `traits.translate_nocase(ch0) == traits.translate_nocase(ch1)`znaki i dopasuj je, jeśli . W dopasowaniu z uwzględnieniem ustawień `ch0` `ch1` regionalnych `traits.translate(ch0) == traits.translate(ch1)`dwa znaki i dopasuj, jeśli .
+Zwykły znak pasuje do takiego samego znaku w sekwencji docelowej. Domyślnie oznacza to, że dopasowanie się powiedzie, jeśli dwa znaki są reprezentowane przez tę samą wartość. W przypadku dopasowania bez uwzględniania wielkości liter, dwa znaki `ch0` i `ch1` są zgodne, jeśli `traits.translate_nocase(ch0) == traits.translate_nocase(ch1)` . W przypadku dopasowania z uwzględnieniem ustawień regionalnych, dwa znaki `ch0` i `ch1` są zgodne, jeśli `traits.translate(ch0) == traits.translate(ch1)` .
 
 ### <a name="positive-assert"></a>Asercja pozytywna
 
@@ -426,11 +427,11 @@ Asercja pozytywna pasuje do swojej zawartości, ale nie używa żadnych znaków 
 
 Przykłady:
 
-- "(=aa)(a)"\*pasuje do sekwencji docelowej "aaaa" i kojarzy grupę przechwytywania 1 z podsekwencją "aaaa".
+- "(= AA) (a \* )" pasuje do sekwencji docelowej "aaaa" i kojarzy grupę przechwytywania 1 z podsekwencją "aaaa".
 
-- "aa)(a)"\*pasuje do sekwencji docelowej "aaaa" i kojarzy grupę przechwytywania 1 z podsekwencją "aa" na początku sekwencji docelowej i przechwytywania grupy 2 z podsekwencją "aa" na końcu sekwencji docelowej.
+- "(AA) (a \* )" pasuje do sekwencji docelowej "aaaa" i kojarzy grupę przechwytywania 1 z podsekwencją "AA" na początku sekwencji docelowej i grupą przechwytywania 2 z podsekwencją "AA" na końcu sekwencji docelowej.
 
-- "(=aa)(a)&#124;(a)" dopasowuje sekwencję docelową "a" i kojarzy grupę przechwytywania 1 z pustą sekwencją (ponieważ pozytywna asertywna nie powiodła się) i przechwytuje grupę 2 z podsekwencją "a". Pasuje też do sekwencji docelowej „aa” i kojarzy grupę przechwytywania 1 z podsekwencją „aa”, a grupę przechwytywania 2 z pustą sekwencją.
+- "(= AA) (a) &#124; (a)" pasuje do sekwencji docelowej "a" i kojarzy grupę przechwytywania 1 z pustą sekwencją (ponieważ pomyślne potwierdzenie nie powiodło się) i grupą przechwytywania 2 z podsekwencją "a". Pasuje też do sekwencji docelowej „aa” i kojarzy grupę przechwytywania 1 z podsekwencją „aa”, a grupę przechwytywania 2 z pustą sekwencją.
 
 ### <a name="unicode-escape-sequence"></a>Sekwencja unikowa unicode
 
@@ -444,7 +445,7 @@ Symbol wieloznaczny pasuje do dowolnego znaku w wyrażeniu docelowym z wyjątkie
 
 Granica słowa występuje w następujących sytuacjach:
 
-- Bieżący znak znajduje się na początku sekwencji docelowej i jest jednym ze znaków wyrazu`A-Za-z0-9_.`
+- Bieżący znak jest na początku sekwencji docelowej i jest jednym ze znaków słowa `A-Za-z0-9_.`
 
 - Bieżąca pozycja znaku jest poza końcem sekwencji docelowej, a ostatni znak w sekwencji docelowej jest jednym ze znaków słowa.
 
@@ -454,9 +455,9 @@ Granica słowa występuje w następujących sytuacjach:
 
 ### <a name="word-boundary-assert"></a>Asercja granicy słowa
 
-Granica słowa assert pasuje, gdy bieżąca pozycja w ciągu docelowym znajduje się bezpośrednio po *granicy słowa*.
+Potwierdzenie granicy słowa jest zgodne, gdy bieżąca pozycja w ciągu docelowym jest natychmiast po *granicy słowa*.
 
-## <a name="matching-and-searching"></a><a name="matchingandsearching"></a>Dopasowywanie i wyszukiwanie
+## <a name="matching-and-searching"></a><a name="matchingandsearching"></a> Dopasowywanie i wyszukiwanie
 
 Aby wyrażenie regularne pasowało do sekwencji docelowej, całe wyrażenie regularne musi pasować do całej sekwencji docelowej. Na przykład, wyrażenie regularne „bcd” pasuje do sekwencji docelowej „bcd”, ale nie pasuje do sekwencji docelowej „abcd” ani sekwencji docelowej „bcde”.
 
@@ -468,23 +469,23 @@ Przykłady:
 
 - Wyszukanie wyrażenia regularnego „bcd” w sekwencji docelowej „bcdbcd” zakończy się pomyślnie i dopasuje pierwsze trzy znaki.
 
-Jeśli istnieje więcej niż jedna podsekwencja, która pasuje w którymś miejscu w sekwencji docelowej, istnieją dwa sposoby wyboru pasującego wzorca. *Pierwsze dopasowanie* wybiera podsekwencję, która została znaleziona jako pierwsza, gdy wyrażenie regularne jest dopasowywane. *Najdłuższy mecz* wybiera najdłuższą podsekwencję spośród tych, które pasują w tej lokalizacji. Jeśli istnieje więcej niż jedna podsekwencja, która ma maksymalną długość, najdłuższe wystąpienie wybiera tę, która została znaleziona jako pierwsza. Na przykład, gdy używane jest pierwsze dopasowanie, wyszukiwanie wyrażenia regularnego "b&#124;bc" w sekwencji docelowej "abcd" odpowiada podsekwencji "b", ponieważ lewy termin naprzemienności odpowiada tej podsekwencji; w związku z tym, pierwszy mecz nie próbuje prawej strony terminu naprzemienności. Gdy jest używane najdłuższe wystąpienie, to samo wyszukiwanie pasuje do „bc” ponieważ „bc” jest dłuższe niż „b”.
+Jeśli istnieje więcej niż jedna podsekwencja, która pasuje w którymś miejscu w sekwencji docelowej, istnieją dwa sposoby wyboru pasującego wzorca. *Pierwsze dopasowanie* wybiera podsekwencję, która została znaleziona jako pierwsza podczas dopasowywania wyrażenia regularnego. *Najdłuższe dopasowanie* wybiera najdłuższą podsekwencję z tych, które pasują do tej lokalizacji. Jeśli istnieje więcej niż jedna podsekwencja, która ma maksymalną długość, najdłuższe wystąpienie wybiera tę, która została znaleziona jako pierwsza. Na przykład, gdy używane jest pierwsze dopasowanie, wyszukiwanie wyrażenia regularnego "b&#124;BC" w sekwencji docelowej "abcd" pasuje do podsekwencji "b", ponieważ lewa wartość tego wyrażenia jest zgodna z podsekwencją; w związku z tym pierwsze dopasowanie nie powoduje wypróbowania prawego warunku zmiany. Gdy jest używane najdłuższe wystąpienie, to samo wyszukiwanie pasuje do „bc” ponieważ „bc” jest dłuższe niż „b”.
 
 Częściowe wystąpienie powiedzie się, jeśli dopasowanie osiąga koniec sekwencji docelowej bez niepowodzenia, nawet jeśli nie osiągnęło końca wyrażenia regularnego. W związku z tym, po pomyślnym częściowym wystąpieniu, dodanie znaków do sekwencji docelowej mogłoby spowodować niepowodzenie późniejszego częściowego wystąpienia. Jednakże, po niepowodzeniu częściowego wystąpienia, dodanie znaków do sekwencji docelowej nie może spowodować powodzenia późniejszego częściowego wystąpienia. Na przykład, przy częściowym wystąpieniu, „ab” pasuje do sekwencji docelowej „a”, ale nie „ac”.
 
-## <a name="format-flags"></a><a name="formatflags"></a>Formatowanie flag
+## <a name="format-flags"></a><a name="formatflags"></a> Flagi formatowania
 
 |Reguły formatu ECMAScript|Reguły formatu sed|Tekst zastępczy|
 |-----------------------------|----------------------|----------------------|
-|"$&"|"&"|Sekwencja znaków zgodna z całym`[match[0].first, match[0].second)`wyrażeniem regularnym ( )|
+|"$&"|"&"|Sekwencja znaków zgodna z całym wyrażeniem regularnym ( `[match[0].first, match[0].second)` )|
 |"$$"||"$"|
-||"\\&"|"&"|
-|"$"\`(znak dolara, po którym następuje wycena wstecz)|| Sekwencja znaków poprzedzająca podsekwencję, która`[match.prefix().first, match.prefix().second)`pasuje do wyrażenia regularnego ( )|
-|„$'” (znak dolara, po którym następuje cudzysłów pojedynczy)||Sekwencja znaków, która następuje po podsekwencji, która pasuje do wyrażenia regularnego (`[match.suffix().first, match.suffix().second)`)|
-|„$n”|„\n”|Sekwencja znaków, która pasuje `n`do `n` grupy przechwytywania na pozycji,`[match[n].first, match[n].second)`gdzie jest liczbą z 0 a 9 ( )|
-||"\\\n"|„\n”|
-|„$nn”||Sekwencja znaków, która pasuje `nn`do `nn` grupy przechwytywania na pozycji, gdzie`[match[nn].first, match[nn].second)`jest liczbą z 10 a 99 ( )|
+||" \\&"|"&"|
+|"$ \` " (znak dolara, po którym następuje cudzysłów zwrotny) | | Sekwencja znaków poprzedzająca podsekwencję, która jest zgodna z wyrażeniem regularnym ( `[match.prefix().first, match.prefix().second)` )|
+|„$'” (znak dolara, po którym następuje cudzysłów pojedynczy)||Sekwencja znaków, która następuje po podsekwencji, która pasuje do wyrażenia regularnego ( `[match.suffix().first, match.suffix().second)` )|
+|„$n”|„\n”|Sekwencja znaków zgodna z grupą przechwytywania na pozycji `n` , gdzie `n` jest liczbą z zakresu od 0 do 9 ( `[match[n].first, match[n].second)` )|
+||" \\ \n"|„\n”|
+|„$nn”||Sekwencja znaków zgodna z grupą przechwytywania na pozycji `nn` , gdzie `nn` jest liczbą z zakresu od 10 do 99 ( `[match[nn].first, match[nn].second)` )|
 
 ## <a name="see-also"></a>Zobacz też
 
-[Omówienie biblioteki standardowej języka C++](../standard-library/cpp-standard-library-overview.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Importowanie i eksportowanie'
 title: Importowanie i eksportowanie
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 29c8abf9528c2c34bd918463bccc8f845958759c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2045b41450881056fb109f059e9c3202d93cab3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162524"
 ---
 # <a name="importing-and-exporting"></a>Importowanie i eksportowanie
 
@@ -43,6 +44,6 @@ Przenośny format wykonywalny Win32 został zaprojektowany w celu zminimalizowan
 
 - [Eksportuj z biblioteki DLL](exporting-from-a-dll.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

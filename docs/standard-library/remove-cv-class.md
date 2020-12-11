@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy remove_cv
 title: remove_cv — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_cv class
 - remove_cv
 ms.assetid: 8502602a-1c80-479c-84e0-33bd1d6496d6
-ms.openlocfilehash: dbe21d8e9f0ed0dc7c72a19584f24ee1bce0803c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2842c250ef46bf4fe1d36e6159bfaaf09b872034
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159690"
 ---
-# <a name="removecv-class"></a>remove_cv — Klasa
+# <a name="remove_cv-class"></a>remove_cv — Klasa
 
 Tworzy typ inny niż const/volatile z typu.
 
@@ -30,12 +31,12 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_cv<T>` zawiera zmodyfikowany typ, który jest `T1` , gdy *t* ma `const T1`postać, `volatile T1`lub `const volatile T1`, w przeciwnym razie *t*.
+Wystąpienie `remove_cv<T>` zawiera zmodyfikowany typ, który jest, `T1` gdy *t* ma postać `const T1` , `volatile T1` lub `const volatile T1` , w przeciwnym razie *t*.
 
 ## <a name="example"></a>Przykład
 
@@ -61,12 +62,12 @@ remove_cv_t<const volatile int> == int
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa remove_const](../standard-library/remove-const-class.md)\
-[remove_volatile, klasa](../standard-library/remove-volatile-class.md)
+[Klasa remove_volatile](../standard-library/remove-volatile-class.md)

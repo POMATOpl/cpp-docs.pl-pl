@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Kreator składnika strony Active Server ATL'
 title: Kreator składników stron Active Server Page ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: 191b739354827dc1b7f0fd22e5ba2fd57f7b14d0
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1edfa3262e311b2042c4e8acc7332f6d1b70f06a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158923"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Kreator składników stron Active Server Page ATL
 
@@ -27,11 +28,11 @@ Za pomocą tego kreatora można określić model wątkowości składnika i jego 
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od programu Visual Studio 2008 skrypt rejestracji utworzony przez tego kreatora rejestruje jego składniki COM w **HKEY_CURRENT_USER** , a nie **HKEY_LOCAL_MACHINE** . Aby zmienić to zachowanie, ustaw opcję **Zarejestruj składnik dla wszystkich użytkowników** w Kreatorze ATL.
+Począwszy od programu Visual Studio 2008 skrypt rejestracji utworzony przez tego kreatora rejestruje jego składniki COM w **HKEY_CURRENT_USER** , a nie **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw opcję **Zarejestruj składnik dla wszystkich użytkowników** w Kreatorze ATL.
 
 ## <a name="names"></a>Nazwy
 
-Określ nazwy obiektu, interfejsu i klas, które mają zostać dodane do projektu. Oprócz **krótkiej nazwy** wszystkie inne pola można edytować niezależnie od innych. Jeśli zmienisz tekst **skróconej nazwy** , zmiana zostanie odzwierciedlona w nazwach wszystkich innych pól na tej stronie.
+Określ nazwy obiektu, interfejsu i klas, które mają zostać dodane do projektu. Oprócz **krótkiej nazwy** wszystkie inne pola można edytować niezależnie od innych. Jeśli zmienisz tekst **skróconej nazwy**, zmiana zostanie odzwierciedlona w nazwach wszystkich innych pól na tej stronie.
 
 Jeśli zmienisz nazwę **klasy coclass** w sekcji com, zmiana zostanie odzwierciedlona w polach **Typ** i **ProgID** , ale nazwa **interfejsu** nie zostanie zmieniona. Takie zachowanie nazewnictwa zostało zaprojektowane, aby wszystkie nazwy były łatwo rozpoznawalne podczas tworzenia kontrolki.
 
@@ -41,21 +42,21 @@ Zawiera informacje o klasie C++ utworzonej dla obiektu.
 
 - **Krótka nazwa**
 
-   Ustawia nazwę główną dla obiektu. Nazwa dostarczana przez użytkownika określa `Class` nazwy i **klasy coclass** , **plik. cpp** i nazwy **plików. h** , nazwę **interfejsu** , nazwy **typów** i **Identyfikator ProgID** , chyba że te pola są zmieniane pojedynczo.
+   Ustawia nazwę główną dla obiektu. Nazwa dostarczana przez użytkownika określa `Class` nazwy i **klasy coclass** , **plik. cpp** i nazwy **plików. h** , nazwę **interfejsu** , nazwy **typów** i **Identyfikator ProgID**, chyba że te pola są zmieniane pojedynczo.
 
 - **plik h**
 
-   Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **krótka nazwa** . Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. W przypadku wybrania istniejącego pliku Kreator nie zapisze go w wybranej lokalizacji, dopóki nie zostanie kliknięty przycisk **Zakończ** w kreatorze.
+   Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **krótka nazwa**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. W przypadku wybrania istniejącego pliku Kreator nie zapisze go w wybranej lokalizacji, dopóki nie zostanie kliknięty przycisk **Zakończ** w kreatorze.
 
    Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu przycisku **Zakończ** Kreator monituje o wskazanie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
 - **Klasa**
 
-   Ustawia nazwę klasy, która ma zostać utworzona. Ta nazwa jest oparta na nazwie, którą podano w **krótkiej nazwie** , poprzedzonej znakiem "C", typowym prefiksem dla nazwy klasy.
+   Ustawia nazwę klasy, która ma zostać utworzona. Ta nazwa jest oparta na nazwie, którą podano w **krótkiej nazwie**, poprzedzonej znakiem "C", typowym prefiksem dla nazwy klasy.
 
 - **plik. cpp**
 
-   Ustawia nazwę pliku implementacji dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **krótka nazwa** . Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie zostanie kliknięty przycisk **Zakończ** w kreatorze.
+   Ustawia nazwę pliku implementacji dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **krótka nazwa**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie zostanie kliknięty przycisk **Zakończ** w kreatorze.
 
    Kreator nie zastępuje pliku. W przypadku wybrania nazwy istniejącego pliku po kliknięciu przycisku **Zakończ** Kreator monituje o wskazanie, czy implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
@@ -91,6 +92,6 @@ Zawiera informacje o funkcji COM dla obiektu.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składnik strony Active Server ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak włączyć 64-bitowy, MSVC zestaw narzędzi dla architektury x64 w wierszu polecenia'
 title: 'Instrukcje: włączanie 64-bitowego zestawu narzędzi MSVC w wierszu polecenia'
 ms.date: 07/24/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5e712802f420d425f4a0291d88220c22d4aeb62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162732"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Instrukcje: włączanie 64-bitowego, obsługiwanego przez x64 zestawu narzędzi MSVC w wierszu polecenia
 
@@ -31,9 +32,9 @@ Aby uzyskać dostęp do tych wierszy poleceń w systemie Windows 10, w menu **St
 
 Aby uzyskać dostęp do tych wierszy poleceń w systemie Windows 8, na ekranie **startowym** Otwórz **wszystkie aplikacje**. Pod nagłówkiem zainstalowanej wersji programu Visual Studio, Otwórz folder **programu Visual Studio** (w starszych wersjach programu Visual Studio, może mieć nazwę **Visual Studio Tools**). We wcześniejszych wersjach systemu Windows wybierz **Start**, rozwiń **Wszystkie programy**, folder dla używanej wersji programu **Visual Studio** (i starszych wersji programu Visual Studio, **Visual Studio Tools**). Aby uzyskać więcej informacji, zobacz [skróty do wiersza polecenia dla deweloperów](building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
-## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Użyj vcvarsall. bat, aby ustawić 64-bitową architekturę kompilacji hostowanej
+## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Użyj Vcvarsall.bat, aby ustawić 64-bitową architekturę kompilacji hostowanej
 
-Wszystkie konfiguracje kompilacji natywnych lub międzypracujących kompilatorów mogą być używane w wierszu polecenia przez uruchomienie pliku polecenia vcvarsall. bat. Ten plik polecenia służy do konfigurowania ścieżki i zmiennych środowiskowych, które umożliwiają konkretną architekturę kompilacji w istniejącym oknie wiersza polecenia. Aby uzyskać szczegółowe instrukcje, zobacz [lokalizacje plików poleceń deweloperskich](building-on-the-command-line.md#developer_command_file_locations).
+Wszystkie konfiguracje kompilacji natywnych lub międzypracujących kompilatorów można użyć w wierszu polecenia, uruchamiając plik poleceń vcvarsall.bat. Ten plik polecenia służy do konfigurowania ścieżki i zmiennych środowiskowych, które umożliwiają konkretną architekturę kompilacji w istniejącym oknie wiersza polecenia. Aby uzyskać szczegółowe instrukcje, zobacz [lokalizacje plików poleceń deweloperskich](building-on-the-command-line.md#developer_command_file_locations).
 
 ## <a name="remarks"></a>Uwagi
 

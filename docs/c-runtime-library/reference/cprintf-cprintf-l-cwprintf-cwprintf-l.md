@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _cprintf, _cprintf_l, _cwprintf _cwprintf_l'
 title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -48,16 +49,16 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a935f43c00fab31a582012e938db16e3aa1a5f6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162381"
 ---
 # <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
-Formatuje i drukuje do konsoli. Dostępne są bardziej bezpieczne wersje; Zobacz [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
+Formatuje i drukuje do konsoli. Dostępne są bardziej bezpieczne wersje; Zobacz [_cprintf_s, _cprintf_s_l, _cwprintf_s _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
 
 > [!IMPORTANT]
 > Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -83,13 +84,13 @@ int _cwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu.
 
 *argument_list*<br/>
 Parametry opcjonalne dla ciągu formatu.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -98,7 +99,7 @@ Liczba drukowanych znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje formatują i drukują serie znaków i wartości bezpośrednio do konsoli przy użyciu funkcji **_putch** ( **_putwch** for **_cwprintf**) do znaków danych wyjściowych. Każdy argument w *argument_list* (jeśli istnieje) jest konwertowany i wyprowadzany zgodnie ze specyfikacją formatu w *formacie*. Argument *Format* używa [składni specyfikacji formatu dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). W przeciwieństwie do funkcji **fprintf —** , **printf**i **sprintf —** , żadne **_cprintf** ani **_cwprintf** nie tłumaczy znaków WYSUWU wiersza na kombinacje wysuwu wiersza (CR-LF) w przypadku danych wyjściowych.
+Te funkcje formatują i drukują serie znaków i wartości bezpośrednio do konsoli przy użyciu funkcji **_putch** (**_putwch** dla **_cwprintf**) do znaków danych wyjściowych. Każdy argument w *argument_list* (jeśli istnieje) jest konwertowany i wyprowadzany zgodnie ze specyfikacją formatu w *formacie*. Argument *Format* używa [składni specyfikacji formatu dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). W przeciwieństwie do funkcji **fprintf —**, **printf** i **sprintf —** , żaden **_cprintf** ani **_cwprintf** nie tłumaczy znaków WYSUWU wiersza na kombinacje wysuwu wiersza (CR-LF) w przypadku danych wyjściowych.
 
 Ważną różnicą jest to, że **_cwprintf** Wyświetla znaki Unicode, gdy są używane w systemie Windows. W przeciwieństwie do **_cprintf**, **_cwprintf** używa bieżących ustawień regionalnych konsoli.
 
@@ -159,7 +160,7 @@ int main( void )
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)<br/>
 [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)<br/>
 [_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)<br/>

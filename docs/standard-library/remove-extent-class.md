@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy remove_extent
 title: remove_extent — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_extent class
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
-ms.openlocfilehash: 73af53d2b93d794e2479a33721bfeae71e531794
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6f088d58cafdafd9c6ebe4c1fcbbbd8db4dff69c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159677"
 ---
-# <a name="removeextent-class"></a>remove_extent — Klasa
+# <a name="remove_extent-class"></a>remove_extent — Klasa
 
 Tworzy typ elementu z typu tablicy.
 
@@ -30,12 +31,12 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_extent<T>` ma zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `T1[N]`, w przeciwnym razie *t*.
+Wystąpienie ma `remove_extent<T>` zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `T1[N]` , w przeciwnym razie *t*.
 
 ## <a name="example"></a>Przykład
 
@@ -66,11 +67,11 @@ remove_extent_t<int[5][10]> == int [10]
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[remove_all_extents, klasa](../standard-library/remove-all-extents-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa remove_all_extents](../standard-library/remove-all-extents-class.md)

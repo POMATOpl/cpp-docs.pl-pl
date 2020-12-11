@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: podstawowe informacje o ODBC'
 title: Podstawy ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 042b1ce6d12e4f4a2be57c0e2e8e01d9750f5357
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 94482abd046645e445ffae7f85f192514f4fff78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161185"
 ---
 # <a name="odbc-basics"></a>Podstawy ODBC
 
@@ -45,7 +46,7 @@ Poniżej przedstawiono składniki ODBC:
 
 - Menedżer sterowników ODBC
 
-   Biblioteka dołączana dynamicznie (biblioteki odbc32. dll), która ładuje sterowniki ODBC bazy danych w imieniu aplikacji. Ta biblioteka DLL jest niewidoczna dla aplikacji.
+   Biblioteka dołączana dynamicznie (Odbc32.dll), która ładuje sterowniki ODBC bazy danych w imieniu aplikacji. Ta biblioteka DLL jest niewidoczna dla aplikacji.
 
 - Sterowniki baz danych ODBC
 
@@ -53,7 +54,7 @@ Poniżej przedstawiono składniki ODBC:
 
 - [Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-   Biblioteka dołączana dynamicznie (Odbccr32. dll), która znajduje się między menedżerem sterowników ODBC a sterownikami i obsługuje przewijanie danych.
+   Biblioteka dołączana dynamicznie (Odbccr32.dll), która znajduje się między menedżerem sterowników ODBC a sterownikami i obsługuje przewijanie danych.
 
 - [Administrator ODBC](../../data/odbc/odbc-administrator.md)
 

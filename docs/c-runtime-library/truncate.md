@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _TRUNCATE'
 title: _TRUNCATE
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: ea8a1517db8b270e03c5767838f3965cdea8b36f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162368"
 ---
 # <a name="_truncate"></a>_TRUNCATE
 
@@ -27,7 +28,7 @@ Określa zachowanie obcinania ciągów.
 
 ## <a name="remarks"></a>Uwagi
 
-`_TRUNCATE` włącza zachowanie obcinania po przekazaniu jako parametr `count` do tych funkcji:
+`_TRUNCATE` Włącza zachowanie obcinania, gdy zostanie ono przesłane jako `count` parametr do tych funkcji:
 
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
 
@@ -45,9 +46,9 @@ Określa zachowanie obcinania ciągów.
 
 [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
 
-Jeśli bufor docelowy jest zbyt mały, aby pomieścić cały ciąg, normalne zachowanie tych funkcji jest traktowane jako błąd (zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md)). Jeśli jednak obcinanie ciągów jest włączone przez przekazanie `_TRUNCATE`, te funkcje skopiują tylko tyle ciągów, ile będzie to dopasować, pozostawiając bufor docelowy zakończony zerem i powrócisz pomyślnie.
+Jeśli bufor docelowy jest zbyt mały, aby pomieścić cały ciąg, normalne zachowanie tych funkcji jest traktowane jako błąd (zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md)). Jeśli jednak obcinanie ciągów jest włączone przez przekazanie `_TRUNCATE` , te funkcje skopiują tylko tyle, ile ciągu pasuje do rozmiaru, pozostawiając bufor docelowy zakończony zerem i powrócisz pomyślnie.
 
-Obcinanie ciągu zmienia wartości zwracane funkcji. Poniższe funkcje zwracają 0 w przypadku braku obcinania lub `STRUNCATE`, jeśli wystąpi obcinanie:
+Obcinanie ciągu zmienia wartości zwracane funkcji. Poniższe funkcje zwracają wartość 0, jeśli nie występuje obcinanie, lub `STRUNCATE` Jeśli występuje obcinanie:
 
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
 

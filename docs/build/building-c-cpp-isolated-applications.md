@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: kompilowanie aplikacji izolowanych C/C++'
 title: Kompilowanie izolowanych kompilacji C/C++
 ms.date: 05/06/2019
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
-ms.openlocfilehash: fbb553e3514ac3c32ee1e1f276dcb3e43d3a192e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a8cd99032c27d21efaec7f213c470017e52777c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163213"
 ---
 # <a name="building-cc-isolated-applications"></a>Kompilowanie izolowanych kompilacji C/C++
 
@@ -19,5 +20,5 @@ Podczas kompilowania natywnej aplikacji C/C++ przy użyciu programu Visual Studi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
-[Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Koncepcje izolowanych aplikacji i zestawów równoległych](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
+[Kompilowanie aplikacji izolowanych C/C++ i zestawów równoległych](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

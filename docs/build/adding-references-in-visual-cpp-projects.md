@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zużywaniu bibliotek i składników'
 title: Zużywanie bibliotek i składników w projektach C++
 ms.date: 12/10/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8933afc1d3d9257e4a8b1d80a39c5fa15a9d438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163265"
 ---
 # <a name="consuming-libraries-and-components"></a>Zużywanie bibliotek i składników
 
@@ -54,7 +55,7 @@ W projektach platformy UWP lub C++/CLI, zestawy .NET lub składniki środowisko 
 
 ## <a name="reference-properties"></a>Właściwości odwołania
 
-Każdy rodzaj odwołania ma właściwości. Aby wyświetlić właściwości, wybierz odwołanie w Eksplorator rozwiązań i naciśnij **klawisze ALT + ENTER**lub kliknij prawym przyciskiem myszy i wybierz polecenie **Właściwości**. Niektóre właściwości są tylko do odczytu, a niektóre można modyfikować. Jednak zazwyczaj nie trzeba ręcznie modyfikować tych właściwości.
+Każdy rodzaj odwołania ma właściwości. Aby wyświetlić właściwości, wybierz odwołanie w Eksplorator rozwiązań i naciśnij **klawisze ALT + ENTER** lub kliknij prawym przyciskiem myszy i wybierz polecenie **Właściwości**. Niektóre właściwości są tylko do odczytu, a niektóre można modyfikować. Jednak zazwyczaj nie trzeba ręcznie modyfikować tych właściwości.
 
 ### <a name="activex-reference-properties"></a>Właściwości odwołania ActiveX
 
@@ -164,7 +165,7 @@ Poniższe właściwości znajdują się w odwołaniach do zestawów COM i .NET i
 
    Wyświetla wersję przywoływanego zestawu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Odwołanie do strony właściwości projektu C++](reference/property-pages-visual-cpp.md)<br>
 [Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)

@@ -1,55 +1,56 @@
 ---
-title: Modyfikowanie kontrolki ATL DHTML
+description: 'Dowiedz się więcej o: modyfikowanie kontrolki DHTML ATL'
+title: Modyfikowanie kontrolki DHTML ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML controls, modifying
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: e594360cc6752a60bf2e07a1fb1d02041604d959
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 7ae9c102addd7a33341a8f16105a3581de10481e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159456"
 ---
-# <a name="modifying-the-atl-dhtml-control"></a>Modyfikowanie kontrolki ATL DHTML
+# <a name="modifying-the-atl-dhtml-control"></a>Modyfikowanie kontrolki DHTML ATL
 
-Kreator kontrolki ATL zawiera kod startowy, dzięki czemu można tworzyć i uruchamiać kontrolki, więc możesz zobaczyć jak metody są zapisywane w plikach projektu i jak DHTML wywołuje kod C++ formantu przy użyciu metod wysyłania. Możesz dodać dowolną metodę wysyłania do interfejsu. Następnie możesz wywołać metod w zasobie HTML.
+Kreator kontrolki ATL udostępnia kod początkowy, dzięki czemu można kompilować i uruchamiać kontrolkę, aby zobaczyć, jak metody są zapisywane w plikach projektu i jak kod DHTML wywołuje w kodzie C++ formantu przy użyciu metod wysyłania. Do interfejsu można dodać dowolną metodę wysyłania. Następnie można wywołać metody z zasobu HTML.
 
-## <a name="to-modify-the-atl-dhtml-control"></a>Aby zmodyfikować kontrolki ATL DHTML
+## <a name="to-modify-the-atl-dhtml-control"></a>Aby zmodyfikować formant ATL DHTML
 
-1. W **Widok klas**, rozwiń węzeł projektu kontroli.
+1. W **Widok klasy** rozwiń projekt kontrolki.
 
-   Należy zauważyć, że interfejs, który kończy się na "Interfejsu" ma jedną metodę `OnClick`. Interfejs, który nie kończy się w interfejsie "użytkownika" nie ma żadnych metod.
+   Należy zauważyć, że interfejs kończący się znakiem "UI" ma jedną metodę `OnClick` . Interfejs, który nie kończy się na "interfejsie użytkownika" nie ma żadnych metod.
 
-1. Dodaj metodę o nazwie `MethodInvoked` do interfejsu, który nie kończy się w interfejsie "użytkownika".
+1. Dodaj metodę o nazwie `MethodInvoked` do interfejsu, który nie kończy się "interfejsem użytkownika".
 
-   Ta metoda zostanie dodany do interfejsu, który jest używany w kontenerze kontrolek do interakcji z kontenera, z interfejs używany przez DHTML wchodzić w interakcje z kontrolką. Tylko kontenera można wywołać tej metody.
+   Ta metoda zostanie dodana do interfejsu, który jest używany w kontenerze sterowania dla interakcji kontenera, a nie do interfejsu używanego przez DHTML do interakcji z kontrolką. Tylko kontener może wywołać tę metodę.
 
-1. Znajdź metoda zastąpić jej metodą zastępczą w poziomie w pliku .cpp i Dodaj kod, aby wyświetlić okno komunikatu, na przykład:
+1. Znajdź metodę użyto metod zastępczych w pliku. cpp i Dodaj kod, aby wyświetlić okno komunikatu, na przykład:
 
    [!code-cpp[NVC_ATL_COM#5](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_1.cpp)]
 
-1. Dodaj inną metodę o nazwie `HelloHTML`, tylko tym razem Dodaj go do interfejsu, który kończy się w interfejsie "użytkownika". Znajdź zastąpić jej metodą zastępczą poza `HelloHTML` metody w .cpp pliku i Dodaj kod, aby wyświetlić okno komunikatu, na przykład:
+1. Dodaj inną metodę o nazwie `HelloHTML` , tylko ten czas, Dodaj ją do interfejsu kończącego się na "interfejsie użytkownika". Znajdź `HelloHTML` metodę użyto metod zastępczych w pliku. cpp i Dodaj kod, aby wyświetlić okno komunikatu, na przykład:
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. Dodaj metodę trzeci `GoToURL`, interfejsu, który nie kończy się w interfejsie "użytkownika". Zaimplementować tę metodę, wywołując [IWebBrowser2::Navigate](/previous-versions//aa752133\(v=vs.85\)), wykonując następujące czynności:
+1. Dodaj trzecią metodę, `GoToURL` do interfejsu, który nie kończy się "interfejsem użytkownika". Zaimplementuj tę metodę przez wywołanie [IWebBrowser2:: Nawiguj](/previous-versions//aa752133\(v=vs.85\))w następujący sposób:
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
-   Możesz użyć `IWebBrowser2` metody ponieważ ATL dostarcza wskaźnik do interfejsu dla Ciebie w pliku .h.
+   Możesz użyć metod, `IWebBrowser2` ponieważ ATL udostępnia wskaźnik do tego interfejsu w pliku h.
 
-Następnie można zmodyfikować zasobu HTML do wywołania metody, który został utworzony. Zostaną dodane trzy przyciski wywoływanie tych metod.
+Następnie zmodyfikuj zasób HTML w celu wywołania utworzonych metod. Do wywoływania tych metod zostaną dodane trzy przyciski.
 
 ## <a name="to-modify-the-html-resource"></a>Aby zmodyfikować zasób HTML
 
-1. W **Eksploratora rozwiązań**, kliknij dwukrotnie plik htm, aby wyświetlić zasobu HTML.
+1. W **Eksplorator rozwiązań** kliknij dwukrotnie plik. htm, aby wyświetlić zasób html.
 
-   Sprawdź kod HTML, szczególnie wywołania zewnętrznego metody wysyłania Windows. Kod HTML wywołuje projektu `OnClick` metody i parametrów wskazują treści formantu (`theBody`), a kolor, aby przypisać ("`red`"). Tekst następujący po wywołaniu metody jest etykietę, która pojawia się na przycisku.
+   Przejrzyj kod HTML, szczególnie wywołania zewnętrznych metod wysyłania systemu Windows. KOD HTML wywołuje `OnClick` metodę projektu, a parametry wskazują treść formantu ( `theBody` ) i kolor do przypisania (" `red` "). Tekst następujący po wywołaniu metody jest etykietą, która pojawia się na przycisku.
 
-1. Dodaj kolejną `OnClick` metodę, Zmień kolor. Na przykład:
+1. Dodaj kolejną `OnClick` metodę, tylko Zmień kolor. Na przykład:
 
     ```html
     <br>
@@ -57,9 +58,9 @@ Następnie można zmodyfikować zasobu HTML do wywołania metody, który został
     <BUTTON onclick='window.external.OnClick(theBody, "white");'>Refresh</BUTTON>
     ```
 
-   Ta metoda utworzy przycisku, **Odśwież**, czy użytkownik może kliknąć do zwrócenia kontrolki w oryginalnej, białe tło.
+   Ta metoda spowoduje utworzenie przycisku z etykietą **Odśwież**, który użytkownik może kliknąć, aby przywrócić formant do oryginalnego, białego tła.
 
-1. Dodaj wywołanie do `HelloHTML` metody tworzenia. Na przykład:
+1. Dodaj wywołanie do `HelloHTML` metody, która została utworzona. Na przykład:
 
     ```html
     <br>
@@ -67,10 +68,10 @@ Następnie można zmodyfikować zasobu HTML do wywołania metody, który został
     <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
-   Ta metoda utworzy przycisku, **HelloHTML**, który użytkownik może kliknąć, aby wyświetlić `HelloHTML` okno komunikatu.
+   Ta metoda utworzy przycisk o nazwie **HelloHTML**, który użytkownik może kliknąć, aby wyświetlić `HelloHTML` okno komunikatu.
 
-Teraz możesz tworzyć i [testowanie zmodyfikowanej kontrolki DHTML](../atl/testing-the-modified-atl-dhtml-control.md).
+Teraz można skompilować i [przetestować zmodyfikowaną kontrolkę DHTML](../atl/testing-the-modified-atl-dhtml-control.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa kontrolki DHTML](../atl/atl-support-for-dhtml-controls.md)
+[Obsługa formantów DHTML](../atl/atl-support-for-dhtml-controls.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Rozwiązywanie problemów z kompilacją wersji'
 title: Naprawianie problemów kompilacji wydania
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - troubleshooting Visual C++, release builds
 - troubleshooting release builds
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
-ms.openlocfilehash: 75dba6ecfc915fa22829491705fb5dc769ddf377
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 640cd8071206f2abfdea63af633630bbac6f37b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162901"
 ---
 # <a name="fixing-release-build-problems"></a>Naprawianie problemów kompilacji wydania
 
@@ -33,4 +34,4 @@ Użytkownik może otrzymywać ostrzeżenia kompilatora podczas kompilacji zoptym
 
 [Kompilacje wydania](release-builds.md)<br/>
 [Typowe problemy podczas tworzenia kompilacji wydania](common-problems-when-creating-a-release-build.md)<br/>
-[Optymalizacja kodu](optimizing-your-code.md)
+[Optymalizowanie kodu](optimizing-your-code.md)

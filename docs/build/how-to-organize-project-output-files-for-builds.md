@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: jak organizować pliki wyjściowe projektu dla kompilacji'
 title: 'Porady: porządkowanie plików wyjściowych projektu dla kompilacji'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1283cb1cc275100551eb9de0a2c0af370aaec51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162667"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Porady: porządkowanie plików wyjściowych projektu dla kompilacji
 
@@ -20,7 +21,7 @@ W tym temacie opisano najlepsze rozwiązania dotyczące organizowania plików wy
 
 #### <a name="to-reference-assemblies-with-using"></a>Aby odwoływać się do zestawów za pomocą #using
 
-1. Można odwołać się do zestawu bezpośrednio z kodu za pomocą dyrektywy #using, takiej jak `#using <System.Data.dll>`. Aby uzyskać więcej informacji, zobacz [#using dyrektywie](../preprocessor/hash-using-directive-cpp.md).
+1. Można odwołać się do zestawu bezpośrednio z kodu za pomocą dyrektywy #using, takiej jak `#using <System.Data.dll>` . Aby uzyskać więcej informacji, zobacz [#using dyrektywie](../preprocessor/hash-using-directive-cpp.md).
 
    Określony plik może być rozszerzeniem dll, exe,. webmodule lub obj, o ile jest w języku MSIL. Składnik, do którego istnieje odwołanie, można skompilować w dowolnym języku. Korzystając z tej opcji, będziesz mieć dostęp do technologii IntelliSense, ponieważ metadane zostaną wyodrębnione z MSIL. Dany plik musi być w ścieżce dla projektu; w przeciwnym razie projekt nie zostanie skompilowany i technologia IntelliSense nie będzie dostępna. Aby łatwo określić, czy plik znajduje się w ścieżce, kliknij prawym przyciskiem myszy wiersz #using i wybierz polecenie **Otwórz dokument** . Użytkownik zostanie powiadomiony, jeśli nie można znaleźć pliku.
 
@@ -62,11 +63,11 @@ Domyślnie projekty są kompilowane w taki sposób, że wszystkie pliki wyjścio
 
 Wszystkie podstawowe pliki wyjściowe (takie jak pliki wykonywalne, przyrostowe plików konsolidatora i pliki PDB) są kopiowane do katalogu wspólnego rozwiązania. W ten sposób podczas pracy z rozwiązaniem zawierającym wiele projektów C++ z równoważnymi konfiguracjami wszystkie pliki wyjściowe są scentralizowane dla uproszczonego łączenia i wdrażania. Możesz mieć pewność, że ich aplikacja/biblioteka będzie działać zgodnie z oczekiwaniami, jeśli przechowują te pliki razem (ponieważ pliki są gwarantowane w ścieżce).
 
-Lokalizacja plików wyjściowych może być głównym problemem podczas wdrażania w środowisku produkcyjnym. W przypadku uruchamiania projektów w środowisku IDE ścieżki do dołączonych bibliotek nie muszą być takie same jak w przypadku środowiska produkcyjnego. Na przykład jeśli masz `#using "../../lib/debug/mylib.dll"` w kodzie, a następnie wdróż mylib. dll w innej pozycji względnej, aplikacja zakończy się niepowodzeniem w czasie wykonywania. Aby tego uniknąć, należy unikać używania ścieżek względnych w instrukcji #include w kodzie. Lepszym rozwiązaniem jest upewnienie się, że niezbędne pliki znajdują się w ścieżce kompilacji projektu i w podobny sposób zapewniają, że odpowiednie pliki produkcyjne są prawidłowo umieszczone.
+Lokalizacja plików wyjściowych może być głównym problemem podczas wdrażania w środowisku produkcyjnym. W przypadku uruchamiania projektów w środowisku IDE ścieżki do dołączonych bibliotek nie muszą być takie same jak w przypadku środowiska produkcyjnego. Na przykład jeśli masz `#using "../../lib/debug/mylib.dll"` w kodzie, a następnie wdrożono mylib.dll w innej pozycji względnej, aplikacja zakończy się niepowodzeniem w czasie wykonywania. Aby tego uniknąć, należy unikać używania ścieżek względnych w instrukcji #include w kodzie. Lepszym rozwiązaniem jest upewnienie się, że niezbędne pliki znajdują się w ścieżce kompilacji projektu i w podobny sposób zapewniają, że odpowiednie pliki produkcyjne są prawidłowo umieszczone.
 
 #### <a name="how-to-specify-where-output-files-go"></a>Jak określić miejsce użycia plików wyjściowych
 
-1. Lokalizację ustawień wyjściowych projektu można znaleźć na **stronach właściwości**projektu. Rozwiń węzeł obok pozycji **Właściwości konfiguracji** , a następnie wybierz pozycję **Ogólne**. Lokalizacja wyjściowa jest określana obok **katalogu wyjściowego**. Aby uzyskać więcej informacji, zobacz [Ogólne strony właściwości (projekt)](reference/general-property-page-project.md).
+1. Lokalizację ustawień wyjściowych projektu można znaleźć na **stronach właściwości** projektu. Rozwiń węzeł obok pozycji **Właściwości konfiguracji** , a następnie wybierz pozycję **Ogólne**. Lokalizacja wyjściowa jest określana obok **katalogu wyjściowego**. Aby uzyskać więcej informacji, zobacz [Ogólne strony właściwości (projekt)](reference/general-property-page-project.md).
 
 ## <a name="see-also"></a>Zobacz też
 

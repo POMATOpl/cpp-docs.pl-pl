@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie nowego interfejsu w projekcie ATL'
 title: Dodawanie nowego interfejsu w projekcie ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 8bf0138f85929e06b67e9a2e294eda8a2f385e1a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7db5cd5f613985caf22253736ae691f3af9240ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159144"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Dodawanie nowego interfejsu w projekcie ATL
 
@@ -44,6 +45,6 @@ Nowy interfejs można dodać do formantu na jeden z dwóch sposobów: ręcznie l
 
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Typy projektów C++ w programie Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
-[Programowanie za pomocą kodu ATL i języka uruchomieniowego C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programowanie za pomocą kodu ATL i języka C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Podstawowe informacje o obiektach COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)

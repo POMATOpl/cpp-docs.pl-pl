@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy remove_const
 title: remove_const — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 262c4ec34a0559afb7cf77849efce8fe577cf5b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159716"
 ---
-# <a name="removeconst-class"></a>remove_const — Klasa
+# <a name="remove_const-class"></a>remove_const — Klasa
 
 Tworzy typ niestały z typu.
 
@@ -32,12 +33,12 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_const<T>` ma zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `const T1`, w przeciwnym razie *t*.
+Wystąpienie ma `remove_const<T>` zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `const T1` , w przeciwnym razie *t*.
 
 ## <a name="example"></a>Przykład
 
@@ -63,12 +64,12 @@ remove_const_t<const int> == int
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa add_const](../standard-library/add-const-class.md)\
-[remove_cv, klasa](../standard-library/remove-cv-class.md)
+[Klasa remove_cv](../standard-library/remove-cv-class.md)

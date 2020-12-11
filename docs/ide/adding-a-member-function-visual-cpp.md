@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie funkcji członkowskiej'
 title: Dodawanie funkcji składowej
 ms.date: 11/09/2018
 f1_keywords:
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e40cd3b70b90026ebaebe2ec0af2224d89868f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160158"
 ---
 # <a name="add-a-member-function"></a>Dodawanie funkcji składowej
 
-W **Widok klasy**można dodać funkcję członkowską do dowolnej klasy. Gdy to zrobisz, deklaracja jest dodawana do pliku nagłówkowego, a do pliku implementacji klasy zostanie dodana treść funkcji składowej, którą można następnie zmodyfikować.
+W **Widok klasy** można dodać funkcję członkowską do dowolnej klasy. Gdy to zrobisz, deklaracja jest dodawana do pliku nagłówkowego, a do pliku implementacji klasy zostanie dodana treść funkcji składowej, którą można następnie zmodyfikować.
 
 **Aby dodać funkcję członkowską do klasy:**
 
-1. W **Widok klasy**rozwiń węzeł projektu, aby wyświetlić klasy w projekcie. (Aby otworzyć **Widok klasy**, na pasku menu wybierz **Widok**, **Widok klasy**.)
+1. W **Widok klasy** rozwiń węzeł projektu, aby wyświetlić klasy w projekcie. (Aby otworzyć **Widok klasy**, na pasku menu wybierz **Widok**, **Widok klasy**.)
 
 1. Otwórz menu skrótów dla klasy, do której chcesz dodać funkcję członkowską, a następnie wybierz **Dodaj**, **Dodaj funkcję**.
 
@@ -104,14 +105,14 @@ Po dodaniu funkcji składowej za pomocą kreatora można edytować kod w środow
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [użytek](../cpp/private-cpp.md)
 
   Sprawdź, czy nowa funkcja członkowska jest statyczna, wirtualna i czy jest wbudowana, czy czysta. Jeśli ustawisz czystą funkcję elementu członkowskiego, pole wyboru **wirtualne** jest zaznaczone, a **wbudowane** pole wyboru stanie się niedostępne. Wartość domyślna to niestatyczna, niewirtualna funkcja członkowska.
 
   | Opcja | Opis |
   |--------|-------------|
   | [Statyczny](../cpp/storage-classes-cpp.md) |  Określa, że funkcja działa jak Global i może być wywoływana poza klasą, nawet bez tworzenia wystąpienia klasy. Funkcja członkowska nie ma dostępu do niestatycznych elementów członkowskich. Funkcja członkowska określona jako `Static` nie może być wirtualna. |
-  | [Wirtualnej](../cpp/virtual-cpp.md) | Upewnij się, że jest wywoływana poprawna funkcja członkowska dla obiektu, niezależnie od wyrażenia użytego do wywołania funkcji składowej. Funkcja członkowska określona jako `Virtual` nie może być statyczna. |
+  | [Wirtualne](../cpp/virtual-cpp.md) | Upewnij się, że jest wywoływana poprawna funkcja członkowska dla obiektu, niezależnie od wyrażenia użytego do wywołania funkcji składowej. Funkcja członkowska określona jako `Virtual` nie może być statyczna. |
   | **Dotyczy** | Wskazuje, że nie podano implementacji dla zadeklarowanej wirtualnej funkcji członkowskiej. **Czysty** można określić tylko w przypadku wirtualnych funkcji Członkowskich. Klasa, która zawiera co najmniej jedną czystą wirtualną funkcję członkowską, jest uznawana za klasę abstrakcyjną. Klasy pochodne klasy abstrakcyjnej muszą implementować czystą wirtualną funkcję członkowską lub są one również klasami abstrakcyjnymi. |
   | [Alert](../cpp/inline-functions-cpp.md) | Instruuje kompilator, aby wstawiał kopię treści funkcji składowej w każdym miejscu, w którym wywoływana jest funkcja członkowska. Funkcja członkowska określona jako **wbudowana** nie może być czysta. |
 

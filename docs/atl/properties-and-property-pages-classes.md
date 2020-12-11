@@ -1,5 +1,6 @@
 ---
-title: Właściwości i klasy strony właściwości (ATL)
+description: 'Dowiedz się więcej na temat: właściwości i klasy stron właściwości'
+title: Klasy właściwości i strony właściwości (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,38 +8,38 @@ helpviewer_keywords:
 - properties [ATL], classes
 - properties [ATL]
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
-ms.openlocfilehash: 05c3a67e278389bb2ab1b07e9d6cf63cbe347c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fddb9626afcab908ae6f7ffb085c263b7a84af7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249629"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159196"
 ---
-# <a name="properties-and-property-pages-classes"></a>Właściwości i klasy strony właściwości
+# <a name="properties-and-property-pages-classes"></a>Właściwości i klasy stron właściwości
 
 Następujące klasy obsługują właściwości i strony właściwości:
 
-- [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) pobiera lub ustawia właściwości obiektu za pomocą `IDispatch` wskaźnika.
+- [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) Pobiera lub ustawia właściwości obiektu za poorednictwem `IDispatch` wskaźnika.
 
-- [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) implementuje właściwości podstawowe obsługiwane przez ATL.
+- [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) Implementuje właściwości podstawowe obsługiwane przez ATL.
 
-- [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) uzyskuje dostęp do informacji na stronach właściwości obiektu.
+- [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) Uzyskuje dostęp do informacji na stronach właściwości obiektu.
 
-- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) właściwości obiektu są przechowywane w zbiorze właściwości dostarczonych przez klienta.
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) Zapisuje właściwości obiektu w zbiorze właściwości dostarczanym przez klienta.
 
-- [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) zarządza określoną stronę właściwości w arkuszu właściwości.
+- [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) Zarządza określoną stroną właściwości w arkuszu właściwości.
 
-- [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) podobnie jak `IPropertyPageImpl`, ale również umożliwia klientowi wybrać określoną właściwość na stronie właściwości.
+- [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) Podobnie jak w `IPropertyPageImpl` przypadku programu, ale umożliwia klientowi wybranie konkretnej właściwości na stronie właściwości.
 
-- [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) uzyskuje CLSID dla stron właściwości obsługiwanych przez obiekt.
+- [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) Uzyskuje identyfikatory CLSID stron właściwości obsługiwanych przez obiekt.
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
-[ALT — samouczek](../atl/active-template-library-atl-tutorial.md)
+[Samouczek ATL](../atl/active-template-library-atl-tutorial.md)
 
-[Strony właściwości ALT COM](../atl/atl-com-property-pages.md)
+[Strony właściwości ATL COM](../atl/atl-com-property-pages.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../atl/atl-class-overview.md)<br/>
 [Makra mapy właściwości](../atl/reference/property-map-macros.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje vprintf —'
 title: vprintf — Funkcje
 ms.date: 11/04/2016
 api_location:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: 2455655404bd61c220ebe4e3d018bc81204fa51e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 54490518fd083826108da6a87e4a759fc2aa6227
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162108"
 ---
 # <a name="vprintf-functions"></a>vprintf — Funkcje
 
@@ -75,7 +76,7 @@ Te funkcje formatują dane wyjściowe do miejsc docelowych w następujący spos�
 |`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|pamięć wskazywana przez *bufor*|Sprawdź, czy nie ma wartości null.|nie|
 |`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|pamięć wskazywana przez *bufor*|Sprawdź, czy nie ma wartości null.|nie|
 
-`argptr`Argument ma typ `va_list` , który jest zdefiniowany w elemencie VarArgs. H i STDARG. C. `argptr`Zmienna musi być inicjowana przez **va_start** i może zostać zainicjowana przez kolejne wywołania, a `va_arg` `argptr` następnie wskazuje początek listy argumentów konwertowanych i przesyłanych do danych wyjściowych zgodnie z odpowiednimi specyfikacjami w argumencie *Format* . *Format* ma taką samą formę i funkcję jak argument *formatu* dla [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Żadna z tych funkcji nie jest uruchamiana `va_end` . Aby zapoznać się z bardziej szczegółowym opisem każdej `vprintf` funkcji, zobacz opis jej funkcji odpowiadającej powyższej tabeli.
+`argptr`Argument ma typ `va_list` , który jest zdefiniowany w elemencie VarArgs. H i STDARG. H. `argptr`Zmienna musi być inicjowana przez **va_start** i może zostać zainicjowana przez kolejne wywołania, a `va_arg` `argptr` następnie wskazuje początek listy argumentów konwertowanych i przesyłanych do danych wyjściowych zgodnie z odpowiednimi specyfikacjami w argumencie *Format* . *Format* ma taką samą formę i funkcję jak argument *formatu* dla [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Żadna z tych funkcji nie jest uruchamiana `va_end` . Aby zapoznać się z bardziej szczegółowym opisem każdej `vprintf` funkcji, zobacz opis jej funkcji odpowiadającej powyższej tabeli.
 
 `_vsnprintf` różni się od **vsprintf** w tym, że zapisuje nie więcej niż *Count* bajtów do *buforu*.
 

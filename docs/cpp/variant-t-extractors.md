@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _variant_t Extracts'
 title: _variant_t — Ekstraktory
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55a02fdf422388b0e44a9aad77e86f7a76e80e3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161601"
 ---
 # <a name="_variant_t-extractors"></a>_variant_t — Ekstraktory
 
@@ -107,12 +108,12 @@ Wyodrębnia pierwotne dane z hermetyzowania `VARIANT` . Jeśli `VARIANT` Typ nie
 
 - **_bstr_t operatora ()** Wyodrębnia ciąg, który jest hermetyzowany w `_bstr_t` obiekcie.
 
-- **operator IDispatch \* ()** wyodrębnia wskaźnik dispinterface z hermetyzowania `VARIANT` . `AddRef`jest wywoływana na wskaźniku będącym wynikiem, aby można było go wywoływać `Release` .
+- **operator IDispatch \* ()** wyodrębnia wskaźnik dispinterface z hermetyzowania `VARIANT` . `AddRef` jest wywoływana na wskaźniku będącym wynikiem, aby można było go wywoływać `Release` .
 
-- **operator IUnknown \* ()** WYODRĘBNIA wskaźnik interfejsu com z hermetyzowania `VARIANT` . `AddRef`jest wywoływana na wskaźniku będącym wynikiem, aby można było go wywoływać `Release` .
+- **operator IUnknown \* ()** WYODRĘBNIA wskaźnik interfejsu com z hermetyzowania `VARIANT` . `AddRef` jest wywoływana na wskaźniku będącym wynikiem, aby można było go wywoływać `Release` .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa _variant_t](../cpp/variant-t-class.md)

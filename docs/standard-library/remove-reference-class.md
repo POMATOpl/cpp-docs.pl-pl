@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy remove_reference
 title: remove_reference — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_reference class
 - remove_reference
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
-ms.openlocfilehash: f185994f943b2419a67fe86ce957751dc4031cbe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ccde3e2070e38ca06ca519b7c184fce7dcdbb90d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159625"
 ---
-# <a name="removereference-class"></a>remove_reference — Klasa
+# <a name="remove_reference-class"></a>remove_reference — Klasa
 
 Tworzy typ inny niż odwołanie z typu.
 
@@ -30,12 +31,12 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_reference<T>` ma zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `T1&`, w przeciwnym razie *t*.
+Wystąpienie ma `remove_reference<T>` zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `T1&` , w przeciwnym razie *t*.
 
 ## <a name="example"></a>Przykład
 
@@ -61,11 +62,11 @@ remove_reference_t<int&> == int
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[add_lvalue_reference, klasa](../standard-library/add-lvalue-reference-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)

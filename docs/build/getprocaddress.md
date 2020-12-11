@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: GetProcAddress'
 title: GetProcAddress
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: 2d322cfe7d3bd60d8d702a226e181eb7b4ede963
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 32f0d6d623ea3a4499603a1b76e2c320537820fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162875"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Procesy jawnie łączące się z wywołaniem DLL wywołania [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) w celu uzyskania adresu eksportowanej funkcji w bibliotece DLL. Aby wywołać funkcję DLL, należy użyć zwróconego wskaźnika funkcji. Funkcja **GetProcAddress** przyjmuje jako parametry obsługę modułu dll (zwracaną przez funkcję **LoadLibrary**lub `AfxLoadLibrary` **GetModuleHandle**) i pobiera nazwę funkcji, która ma zostać wywołana, lub numer porządkowy eksportu funkcji.
+Procesy jawnie łączące się z wywołaniem DLL wywołania [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) w celu uzyskania adresu eksportowanej funkcji w bibliotece DLL. Aby wywołać funkcję DLL, należy użyć zwróconego wskaźnika funkcji. Funkcja **GetProcAddress** przyjmuje jako parametry obsługę modułu dll (zwracaną przez funkcję **LoadLibrary** `AfxLoadLibrary` lub **GetModuleHandle**) i pobiera nazwę funkcji, która ma zostać wywołana, lub numer porządkowy eksportu funkcji.
 
-Ponieważ wywołujesz funkcję DLL za pomocą wskaźnika i nie ma sprawdzania typu w czasie kompilacji, upewnij się, że parametry funkcji są poprawne, aby nie przekroczyć pamięci przyłożonej na stos i spowodować naruszenie zasad dostępu. Jednym ze sposobów zapewnienia bezpieczeństwa typów jest wyszukanie prototypów funkcji eksportowanych funkcji i utworzenie zgodnych elementów typedef dla wskaźników funkcji. Przykład:
+Ponieważ wywołujesz funkcję DLL za pomocą wskaźnika i nie ma sprawdzania typu w czasie kompilacji, upewnij się, że parametry funkcji są poprawne, aby nie przekroczyć pamięci przyłożonej na stos i spowodować naruszenie zasad dostępu. Jednym ze sposobów zapewnienia bezpieczeństwa typów jest wyszukanie prototypów funkcji eksportowanych funkcji i utworzenie zgodnych elementów typedef dla wskaźników funkcji. Na przykład:
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);

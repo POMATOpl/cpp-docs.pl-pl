@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: NotifyHandler'
 title: NotifyHandler
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 16fb330d2da83ddfd013e33a2d4b688b2711103b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1c08eaa91962fa9f6acf330de89334ad1224e582
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159378"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -42,9 +43,9 @@ Wynik przetwarzania komunikatów. 0 w przypadku powodzenia.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby zapoznać się z przykładem użycia tego programu obsługi komunikatów w mapie komunikatów, zobacz [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
+Przykład użycia tego programu obsługi komunikatów w mapie komunikatów znajduje się w temacie [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Implementowanie okna](../atl/implementing-a-window.md)<br/>
 [Mapy komunikatów](../atl/message-maps-atl.md)<br/>

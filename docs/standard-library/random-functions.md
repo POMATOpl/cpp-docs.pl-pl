@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej &lt; o &gt; funkcjach losowych
 title: '&lt;funkcje losowe &gt;'
 ms.date: 09/04/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 39670fcd9b200a6bd56656bbfa07391fdd0d96be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274593"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163343"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;funkcje losowe &gt;
 
@@ -36,7 +37,7 @@ Liczba bitów losowości do użycia.
 Klasa generatora liczb losowych.
 
 *Zbieranie*\
-Odwołanie do wystąpienia generatora liczb losowych *generatora*typów.
+Odwołanie do wystąpienia generatora liczb losowych *generatora* typów.
 
 ### <a name="remarks"></a>Uwagi
 

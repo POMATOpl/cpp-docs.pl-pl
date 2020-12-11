@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _unlock'
 title: _unlock
 ms.date: 11/04/2016
 api_name:
@@ -23,19 +24,19 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 73eec2b05b1d321bfc8ac61e743459bf2323fb8e
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: ca3b31dd2b1ff12f5dd98d93e12e76c3cc4f0864
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162158"
 ---
 # <a name="_unlock"></a>_unlock
 
-Zwalnia blokadę wielowątkową.
+Zwalnia blokadę wielowątkowości.
 
 > [!IMPORTANT]
-> Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+> Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,12 +48,12 @@ void __cdecl _unlock(
 
 #### <a name="parameters"></a>Parametry
 
-*locknum ( locknum )*<br/>
-[w] Identyfikator blokady do zwolnienia.
+*locknum*<br/>
+podczas Identyfikator blokady do wydania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Źródło:** mlock.c
+**Źródło:** MLOCK. c
 
 ## <a name="see-also"></a>Zobacz też
 

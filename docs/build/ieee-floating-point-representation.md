@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: reprezentacja IEEE Floating-Point'
 title: Odwzorowanie liczby zmiennoprzecinkowej IEEE
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 47802a32d43824b4e568ca520c360dc7b12cbf8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de48975ba13fae6117b095565f22265e28edf07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162654"
 ---
 # <a name="ieee-floating-point-representation"></a>Odwzorowanie liczby zmiennoprzecinkowej IEEE
 
@@ -51,7 +52,7 @@ Format reprezentacji zmiennoprzecinkowej jest następujący:
 |Pojedyncza precyzja| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
 |Podwójna precyzja|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S`reprezentuje bit znaku, jest to `X` bity wykładnika, a jest to `M` mantysę bity. Bit z lewej strony jest założono w formatach o pojedynczej precyzji i o podwójnej precyzji.
+`S` reprezentuje bit znaku, jest to `X` bity wykładnika, a jest to `M` mantysę bity. Bit z lewej strony jest założono w formatach o pojedynczej precyzji i o podwójnej precyzji.
 
 Aby prawidłowo przesunąć punkt binarny, najpierw należy rozwiązać ten wykładnik, a następnie przenieść punkt binarny w prawo lub w lewo do odpowiedniej liczby bitów.
 
@@ -125,7 +126,7 @@ Poniżej przedstawiono kilka przykładów w formacie o pojedynczej precyzji:
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
-   |0.1|1,6 * 2<sup>– 4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
+   |0,1|1,6 * 2<sup>– 4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 
 - Zero jest szczególnym przypadkiem. Używa formuły dla minimalnej możliwej reprezentacji wartości dodatniej, która jest równa zero.
 
@@ -133,6 +134,6 @@ Poniżej przedstawiono kilka przykładów w formacie o pojedynczej precyzji:
    |-|-|-|-|
    |0|1 * 2<sup>– 128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dlaczego liczby zmiennoprzecinkowe mogą utracić dokładnooć](why-floating-point-numbers-may-lose-precision.md)
+[Dlaczego liczby Floating-Point mogą utracić dokładnooć](why-floating-point-numbers-may-lose-precision.md)

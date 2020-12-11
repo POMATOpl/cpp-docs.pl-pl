@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 3) C4398'
 title: Ostrzeżenie kompilatora (poziom 3) C4398
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-ms.openlocfilehash: 041bf9f6bfce17b16f301604bb8706be30095c13
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea88f81e44fe0520cd096e1904c49a306863496a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160431"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>Ostrzeżenie kompilatora (poziom 3) C4398
 
@@ -21,9 +22,9 @@ ms.locfileid: "80198669"
 
 Funkcja wirtualna z [__clrcall](../../cpp/clrcall.md) konwencją wywoływania w typie natywnym powoduje utworzenie tabeli dla każdej domeny aplikacji. Taka zmienna może nie poprawić prawidłowo, gdy jest używana w wielu domenach aplikacji.
 
-Możesz rozwiązać to ostrzeżenie poprzez jawne oznaczenie zmiennej `__declspec(appdomain)`. W wersjach programu Visual Studio przed Visual Studio 2017 można rozwiązać to ostrzeżenie przez skompilowanie z **/CLR: Pure**, co powoduje domyślne zmienne globalne na domenę aplikacji. **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
+Możesz rozwiązać to ostrzeżenie poprzez jawne oznaczenie zmiennej `__declspec(appdomain)` . W wersjach programu Visual Studio przed Visual Studio 2017 można rozwiązać to ostrzeżenie przez skompilowanie z **/CLR: Pure**, co powoduje domyślne zmienne globalne na domenę aplikacji. **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Aby uzyskać więcej informacji, [Zobacz](../../cpp/appdomain.md) [domeny aplikacji i aplikacje i C++wizualizację ](../../dotnet/application-domains-and-visual-cpp.md).
+Aby uzyskać więcej informacji, [Zobacz](../../cpp/appdomain.md) [domeny aplikacji i aplikacje oraz Visual C++](../../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Przykład
 

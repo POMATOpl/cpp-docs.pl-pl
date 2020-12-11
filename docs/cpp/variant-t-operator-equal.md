@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _variant_t:: operator ='
 title: _variant_t::operator =
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 2db26a378526cd5f48992cb32ea46e9677125e66
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a304f0904f697ade7d04c6d12f375571a156e989
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161471"
 ---
 # <a name="_variant_toperator-"></a>_variant_t::operator =
 
@@ -153,6 +154,6 @@ Operator przypisuje nową wartość do `_variant_t` obiektu:
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa _variant_t](../cpp/variant-t-class.md)

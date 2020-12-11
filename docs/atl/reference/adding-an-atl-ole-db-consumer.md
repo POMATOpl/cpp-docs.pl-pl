@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie klienta ATL OLE DB'
 title: Dodawanie konsumenta ATL OLE DB
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: c298a841bf0d37f90bcd6b53bc0c6cdf501f4dd3
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: cfd88524e369781b239bb0246ab59fcf0080a144
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921155"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159105"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Dodawanie konsumenta ATL OLE DB
 
@@ -28,9 +29,9 @@ Użyj tego kreatora, aby dodać klienta ATL OLE DB do projektu. Odbiorca ATL OLE
 
 ## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>Aby dodać klienta ATL OLE DB do projektu
 
-1. W **Widok klasy** kliknij prawym przyciskiem myszy projekt. W menu skrótów kliknij pozycję **Dodaj** , a następnie kliknij pozycję **Dodaj klasę** .
+1. W **Widok klasy** kliknij prawym przyciskiem myszy projekt. W menu skrótów kliknij pozycję **Dodaj** , a następnie kliknij pozycję **Dodaj klasę**.
 
-1. W folderze Visual C++ kliknij dwukrotnie ikonę **klienta ATL OLE DB** lub wybierz ją, a następnie kliknij przycisk **Otwórz** .
+1. W folderze Visual C++ kliknij dwukrotnie ikonę **klienta ATL OLE DB** lub wybierz ją, a następnie kliknij przycisk **Otwórz**.
 
    Zostanie otwarty Kreator OLE DB użytkownika ATL.
 
@@ -40,6 +41,6 @@ Użyj tego kreatora, aby dodać klienta ATL OLE DB do projektu. Odbiorca ATL OLE
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)

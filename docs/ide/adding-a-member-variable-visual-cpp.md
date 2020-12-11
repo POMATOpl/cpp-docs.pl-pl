@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie zmiennej składowej'
 title: Dodawanie zmiennej składowej
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b3af5c5920e465545623e9fa7239662954df2d66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160119"
 ---
 # <a name="add-a-member-variable"></a>Dodawanie zmiennej składowej
 
@@ -70,7 +71,7 @@ Ten Kreator dodaje deklarację zmiennej składowej do pliku nagłówkowego. W za
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [użytek](../cpp/private-cpp.md)
 
 - **Typ zmiennej**
 
@@ -117,7 +118,7 @@ Ten Kreator dodaje deklarację zmiennej składowej do pliku nagłówkowego. W za
 
 - **Typ kontrolki**
 
-  Ustawia typ kontrolki, która jest dodawana. To pole nie jest dostępne do zmiany. Na przykład przycisk ma **przycisk**typ kontrolki, a pole kombi ma typ kontrolki **ComboBox**. Aby uzyskać więcej informacji, zobacz [kontrolki okna dialogowego i typy zmiennych](#dialog-box-controls-and-variable-types).
+  Ustawia typ kontrolki, która jest dodawana. To pole nie jest dostępne do zmiany. Na przykład przycisk ma **przycisk** typ kontrolki, a pole kombi ma typ kontrolki **ComboBox**. Aby uzyskać więcej informacji, zobacz [kontrolki okna dialogowego i typy zmiennych](#dialog-box-controls-and-variable-types).
 
 - **Maksymalna liczba znaków**
 

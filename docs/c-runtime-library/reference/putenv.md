@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: putenv'
 title: putenv
 ms.date: 12/16/2019
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - putenv function
 ms.assetid: 1dc49ef3-6b12-484c-8e60-7048bcc999f1
-ms.openlocfilehash: 0a2a86753f1d9780f1dd8e3baf60f50ff1e79ea2
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d09e2c3800d18adc5ae0d5ae44e3c168a99151dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162324"
 ---
 # <a name="putenv"></a>putenv
 

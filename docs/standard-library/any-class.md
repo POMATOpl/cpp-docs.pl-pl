@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: dowolna klasa'
 title: dowolna klasa
 ms.date: 04/04/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1ff32693e216657bdc9057a7dd7899d9bc479b02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163421"
 ---
 # <a name="any-class"></a>dowolna klasa
 
@@ -42,7 +43,7 @@ class any
 |-|-|
 |[ile](#any)|Konstruuje obiekt typu `any` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

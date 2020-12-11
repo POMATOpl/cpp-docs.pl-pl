@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie klasy generycznej języka C++'
 title: Dodawanie klasy ogólnej C++
 ms.date: 11/09/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: d5c00a35e375d133fbd3a6ed7fe3591e4b0cd54b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ed84f7cf3d1b2e85c407c275b20a56ff06dddc21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160184"
 ---
 # <a name="add-a-generic-c-class"></a>Dodawanie klasy ogólnej C++
 
@@ -23,7 +24,7 @@ Można dodać generyczną klasę C++ za pomocą **Widok klasy**. Ogólna Klasa C
 
 **Aby dodać ogólną klasę C++ do projektu:**
 
-1. W **Widok klasy**kliknij prawym przyciskiem myszy projekt, do którego chcesz dodać nową klasę, wybierz polecenie **Dodaj**, a następnie wybierz pozycję **Klasa**.
+1. W **Widok klasy** kliknij prawym przyciskiem myszy projekt, do którego chcesz dodać nową klasę, wybierz polecenie **Dodaj**, a następnie wybierz pozycję **Klasa**.
 
 1. W oknie dialogowym [Dodawanie klasy](./adding-a-class-visual-cpp.md#add-class-dialog-box) w okienku szablony wybierz pozycję **Klasa C++**. Wybierz pozycję **Dodaj** , aby wyświetlić [Kreatora ogólnej klasy języka C++](#generic-c-class-wizard).
 

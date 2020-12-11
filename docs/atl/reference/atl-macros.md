@@ -1,82 +1,83 @@
 ---
+description: Dowiedz się więcej o makrach ATL
 title: Makra ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, macros
 - macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
-ms.openlocfilehash: 2331f100f627dcd79ba2976b44da30474d93dd3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 669e1b6b37d6181a633f396ab8a85598ef8cdc51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158793"
 ---
 # <a name="atl-macros"></a>Makra ATL
 
-Aby znaleźć makra ATL według kategorii, zobacz następujące tematy.
+Aby znaleźć makro ATL według kategorii, zobacz następujące tematy.
 
 [Makra agregacji i fabryki klas](../../atl/reference/aggregation-and-class-factory-macros.md)<br/>
-Umożliwiają kontrolowanie agregacji i fabryki klas deklarowanie.
+Zapewniają sposoby kontrolowania agregacji i deklarowania fabryk klas.
 
 [Makra kategorii](../../atl/reference/category-macros.md)<br/>
-Definiowanie kategorii mapy.
+Zdefiniuj mapy kategorii.
 
 [Makra mapy modelu COM](../../atl/reference/com-map-macros.md)<br/>
-Zdefiniuj mapy interfejsu COM.
+Zdefiniuj mapy interfejsów COM.
 
 [Makra opcji kompilatora](../../atl/reference/compiler-options-macros.md)<br/>
-Funkcje kompilatora określonego formantu.
+Sterowanie określonymi funkcjami kompilatora.
 
-[Makra kontrolek złożonych](../../atl/reference/composite-control-macros.md)<br/>
-Zdefiniuj mapy wychwytywania zdarzeń i zapisy.
+[Makra kontroli złożonej](../../atl/reference/composite-control-macros.md)<br/>
+Zdefiniuj mapy i wpisy ujścia zdarzeń.
 
 [Makra punktów połączenia](../../atl/reference/connection-point-macros.md)<br/>
-Zdefiniuj połączenie punktu mapy i wpisy.
+Zdefiniuj mapy i wpisy punktu połączenia.
 
 [Makra debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-macros.md)<br/>
-Udostępniać przydatne narzędzia do debugowania i śledzenia.
+Zapewniają przydatne funkcje debugowania i śledzenia.
 
 [Makra obsługi wyjątków](../../atl/reference/exception-handling-macros.md)<br/>
-Zapewnia obsługę wyjątków.
+Zapewnianie obsługi wyjątków.
 
 [Makra mapy komunikatów](../../atl/reference/message-map-macros-atl.md)<br/>
-Zdefiniuj mapy komunikatów i wpisy.
+Zdefiniuj mapy i wpisy komunikatów.
 
 [Makra mapy obiektów](../../atl/reference/object-map-macros.md)<br/>
-Definiowanie obiektu mapy i wpisy.
+Zdefiniuj mapowania obiektów i wpisy.
 
-[Makra stanu obiektów](../../atl/reference/object-status-macros.md)<br/>
-Ustawia flagi należących do kontrolki ActiveX.
+[Makra stanu obiektu](../../atl/reference/object-status-macros.md)<br/>
+Ustawia flagi należące do kontrolek ActiveX.
 
 [Makra mapy właściwości](../../atl/reference/property-map-macros.md)<br/>
-Zdefiniuj właściwości mapy i wpisy.
+Zdefiniuj mapy i wpisy właściwości.
 
 [Makra wymiany danych rejestru](../../atl/reference/registry-data-exchange-macros.md)<br/>
 Wykonywanie operacji wymiany danych rejestru.
 
 [Makra rejestru](../../atl/reference/registry-macros.md)<br/>
-Zdefiniuj typ przydatne biblioteki i rejestru urządzeń.
+Zdefiniuj przydatną bibliotekę typów i funkcje rejestru.
 
-[Makra mapy usługi](../../atl/reference/service-map-macros.md)<br/>
-Definiowanie map usług i wpisów.
+[Makra Service Map](../../atl/reference/service-map-macros.md)<br/>
+Zdefiniuj mapy i wpisy usług.
 
-[Makra obiektu przystawki](../../atl/reference/snap-in-object-macros.md)<br/>
-Zapewnia obsługę rozszerzeń przystawek.
+[Makra obiektów przystawek](../../atl/reference/snap-in-object-macros.md)<br/>
+Zapewnianie obsługi rozszerzeń przystawek.
 
 [Makra konwersji ciągów](string-conversion-macros.md)<br/>
-Podaj ciąg funkcji konwersji.
+Zapewnianie funkcji konwersji ciągów.
 
 [Makra klasy okna](../../atl/reference/window-class-macros.md)<br/>
 Zdefiniuj narzędzia klasy okna.
 
 [Makra komunikatów systemu Windows](../../atl/reference/windows-messages-macros.md)<br/>
-Przekaż dalej komunikatów okien.
+Komunikaty okna do przodu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
 [Funkcje](../../atl/reference/atl-functions.md)<br/>
 [Zmienne globalne](../../atl/reference/atl-global-variables.md)<br/>
 [Klasy i struktury](../../atl/reference/atl-classes.md)<br/>
-[Typedefs](../../atl/reference/atl-typedefs.md)
+[Definicje typów](../../atl/reference/atl-typedefs.md)

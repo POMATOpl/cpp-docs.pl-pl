@@ -1,33 +1,34 @@
 ---
+description: 'Dowiedz się więcej o: zalecenia dotyczące wybierania między ATL i MFC'
 title: Zalecenia dotyczące wybierania między ATL i MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 506df04ebbd3bc9079e1d40cf14773d9d9a6bd1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159157"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Zalecenia dotyczące wybierania między ATL i MFC
 
-Podczas tworzenia składników i aplikacji, możesz wybrać dwóch metod — ATL i MFC (biblioteki klas Microsoft Foundation).
+Podczas tworzenia składników i aplikacji można wybrać dwa podejścia — ATL i MFC (biblioteka MFC).
 
-## <a name="using-atl"></a>Przy użyciu biblioteki ATL
+## <a name="using-atl"></a>Przy użyciu ATL
 
-ATL jest szybki i prosty sposób utworzyć składnik COM w języku C++ i obsługa o niewielkich rozmiarach. Użyj ATL, aby utworzyć formant, jeśli nie potrzebujesz wszystkich funkcji wbudowanych, który automatycznie zapewnia MFC.
+ATL to szybki i łatwy sposób tworzenia składnika modelu COM w języku C++ i utrzymania małego rozmiaru. Użyj ATL, aby utworzyć kontrolkę, jeśli nie są potrzebne wszystkie wbudowane funkcje zapewniane przez MFC.
 
-## <a name="using-mfc"></a>Za pomocą MFC
+## <a name="using-mfc"></a>Korzystanie z MFC
 
-MFC umożliwia tworzenie pełnych aplikacji, formanty ActiveX i dokumenty aktywne. Jeśli już utworzono kontrolkę z MFC, możesz kontynuować tworzenie w MFC. Podczas tworzenia nowej kontrolki, należy wziąć pod uwagę przy użyciu biblioteki ATL, jeśli nie potrzebujesz wszystkich funkcji wbudowanych w MFC.
+MFC umożliwia tworzenie pełnych aplikacji, kontrolek ActiveX i dokumentów aktywnych. Jeśli utworzono już formant z MFC, możesz kontynuować programowanie w MFC. Podczas tworzenia nowej kontrolki należy rozważyć użycie ATL, jeśli nie są potrzebne wszystkie wbudowane funkcje MFC.
 
-## <a name="using-atl-in-an-mfc-project"></a>Przy użyciu biblioteki ATL w projekcie MFC
+## <a name="using-atl-in-an-mfc-project"></a>Używanie ATL w projekcie MFC
 
-Możesz dodać obsługę przy użyciu biblioteki ATL w istniejącym projekcie MFC za pomocą kreatora. Aby uzyskać więcej informacji, zobacz [Dodawanie obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+Można dodać obsługę używania ATL w istniejącym projekcie MFC przez uruchomienie kreatora. Aby uzyskać szczegółowe informacje, zobacz [Dodawanie obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wprowadzenie do ATL](../atl/introduction-to-atl.md)

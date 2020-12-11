@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o programie: typowe problemy z migracją w usłudze ARM Visual C++'
 title: Typowe problemy przy migracji Visual C++ ARM
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 889eed2b02362f33446cd9441ef84f406817b01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b867d94fa8b80bd1a5be12b50718b979ee92a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163083"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Typowe problemy przy migracji Visual C++ ARM
 
@@ -54,7 +55,7 @@ Ponieważ wynik operacji przesunięcia, która przekracza liczbę bitów w typie
 
 ### <a name="variable-arguments-varargs-behavior"></a>Zmienne argumenty (VarArgs)
 
-W architekturze ARM parametry z listy argumentów zmiennych, które są przekazane na stosie, podlegają wyrównaniu. Na przykład parametr 64-bitowy jest wyrównany na granicy 64-bitowej. Na procesorach x86 i x64 argumenty, które są przekazane na stosie, nie podlegają wyrównaniu i ściśle pakowaniu. Różnica ta może spowodować, że funkcja wariadyczne będzie `printf` odczytywać adresy pamięci, które zostały zamierzone jako uzupełnienie na platformie ARM, jeśli oczekiwany układ listy zmiennych argumentów nie jest dokładnie dopasowany, mimo że może ona działać w przypadku podzestawu niektórych wartości w architekturze x86 lub x64. Rozważmy następujący przykład:
+W architekturze ARM parametry z listy argumentów zmiennych, które są przekazane na stosie, podlegają wyrównaniu. Na przykład parametr 64-bitowy jest wyrównany na granicy 64-bitowej. Na procesorach x86 i x64 argumenty, które są przekazane na stosie, nie podlegają wyrównaniu i ściśle pakowaniu. Różnica ta może spowodować, że funkcja wariadyczne będzie `printf` odczytywać adresy pamięci, które zostały zamierzone jako uzupełnienie na platformie ARM, jeśli oczekiwany układ listy zmiennych argumentów nie jest dokładnie dopasowany, mimo że może ona działać w przypadku podzestawu niektórych wartości w architekturze x86 lub x64. Rozważ taki przykład:
 
 ```C
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.
@@ -98,6 +99,6 @@ W architekturze ARM wartość domyślna to **/volatile: ISO** , ponieważ proces
 
 W architekturze x86 i x64 wartością domyślną jest **/volatile: MS** , ponieważ większość oprogramowania, które zostało już utworzone dla tych architektur przy użyciu MSVC opiera się na nich. Podczas kompilowania programów x86 i x64 można określić przełącznik **/volatile: ISO** , aby uniknąć niepotrzebnych zależności tradycyjnych nietrwałych semantyki i podwyższyć poziom przenoszenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konfigurowanie Visual C++ dla procesorów ARM](configuring-programs-for-arm-processors-visual-cpp.md)

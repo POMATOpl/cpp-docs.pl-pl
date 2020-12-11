@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: Dodawanie obiektu CTaskDialog do aplikacji'
 title: 'Wskazówki: dodawanie obiektu CTaskDialog do aplikacji'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: 3a970df4911fed643045a1c6b59fcda1a853dbcf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f7462551af785b85156f3f0b0f83b2ff3ddbf4c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159898"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Wskazówki: dodawanie obiektu CTaskDialog do aplikacji
 
@@ -191,7 +192,7 @@ Skompiluj i uruchom aplikację. Aplikacja wyświetla dwa okna dialogowe zadań. 
 
 Te przykłady nie demonstrują wszystkich dostępnych opcji dla `CTaskDialog` , ale powinny pomóc Ci rozpocząć pracę. Aby uzyskać pełny opis klasy, zobacz [obiektu CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Okna dialogowe](../mfc/dialog-boxes.md)<br/>
 [Klasa obiektu CTaskDialog](../mfc/reference/ctaskdialog-class.md)<br/>

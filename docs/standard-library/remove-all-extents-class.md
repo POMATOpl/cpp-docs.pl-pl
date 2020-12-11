@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy remove_all_extents
 title: remove_all_extents — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6c798e1f128b10ef94061573c93c3bb9e3aa4f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159729"
 ---
-# <a name="removeallextents-class"></a>remove_all_extents — Klasa
+# <a name="remove_all_extents-class"></a>remove_all_extents — Klasa
 
 Tworzy typ inny niż tablica z typu tablicy.
 
@@ -30,7 +31,7 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
@@ -61,11 +62,11 @@ int main()
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[remove_extent, klasa](../standard-library/remove-extent-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa remove_extent](../standard-library/remove-extent-class.md)

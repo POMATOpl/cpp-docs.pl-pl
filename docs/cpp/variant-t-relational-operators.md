@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: _variant_t operatory relacyjne'
 title: _variant_t — Operatory relacyjne
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: 6e0296a2bf4ce97e41fdf6208c3dd1c6b91215dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a9c339bc67527e258c0d1f69060cde251c8adb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161432"
 ---
 # <a name="_variant_t-relational-operators"></a>_variant_t — Operatory relacyjne
 
@@ -59,6 +60,6 @@ Porównuje `_variant_t` obiekt z `VARIANT` , testowaniem pod kątem równości l
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa _variant_t](../cpp/variant-t-class.md)

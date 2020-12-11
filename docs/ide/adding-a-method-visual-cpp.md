@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie metody'
 title: Dodawanie metody
 ms.date: 11/09/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - methods [C++], adding using wizards
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-ms.openlocfilehash: b0c8ddabc4ed08fd217545bad269f0b2e48dd49e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fb472bd5df2709bc0d7115540f78e18b70d02528
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160028"
 ---
 # <a name="add-a-method"></a>Dodawanie metody
 
@@ -23,7 +24,7 @@ Aby dodać metodę do interfejsu w projekcie, można użyć [Kreatora dodawania 
 
 **Aby dodać metodę do obiektu:**
 
-1. W **Widok klasy**rozwiń węzeł projektu, aby wyświetlić interfejs, do którego chcesz dodać metodę.
+1. W **Widok klasy** rozwiń węzeł projektu, aby wyświetlić interfejs, do którego chcesz dodać metodę.
 
    > [!NOTE]
    > Można również dodać metody do dispinterfaces, które, chyba że projekt jest przypisany do węzła biblioteki.
@@ -51,7 +52,7 @@ Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu pr
 
 - **Typ zwracany**
 
-  Typ danych zwracanych przez metodę. `HRESULT`zalecane dla wszystkich typów interfejsów, ponieważ oferuje standardowy sposób zwracania błędów.
+  Typ danych zwracanych przez metodę. `HRESULT` zalecane dla wszystkich typów interfejsów, ponieważ oferuje standardowy sposób zwracania błędów.
 
   |Typ interfejsu|Opis|
   |--------------------|-----------------|
@@ -59,7 +60,7 @@ Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu pr
   |Niestandardowy interfejs|`HRESULT`. Można zmienić.|
   |Lokalny interfejs niestandardowy|Podaj własny typ zwracany lub wybierz z listy.|
   |Dispinterface|Podaj własny typ zwracany lub wybierz z listy.|
-  |Kontrolka ActiveX MFC dispinterface|W przypadku zaimplementowania metody giełdowej dla zwracanego typu jest ustawiana odpowiednia wartość i nie można jej zmienić. W przypadku wybrania metody z listy **Nazwa metody** i wybrania opcji **niestandardowe** w obszarze **Wybierz typ metody**wybierz z listy typ zwracany.|
+  |Kontrolka ActiveX MFC dispinterface|W przypadku zaimplementowania metody giełdowej dla zwracanego typu jest ustawiana odpowiednia wartość i nie można jej zmienić. W przypadku wybrania metody z listy **Nazwa metody** i wybrania opcji **niestandardowe** w obszarze **Wybierz typ metody** wybierz z listy typ zwracany.|
 
 - **Nazwa metody**
 
@@ -69,7 +70,7 @@ Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu pr
   |--------------------|-----------------|
   |Interfejs ATL Dual Interface, niestandardowy interfejs i lokalny|Podaj własną nazwę metody.|
   |MFC dispinterface|Podaj własną nazwę metody lub wybierz sugerowaną nazwę metody z listy. Jeśli wybierzesz nazwę z listy, odpowiednia wartość zostanie wyświetlona w polu **Typ zwracany** i nie można jej zmienić.|
-  |Kontrolka ActiveX MFC dispinterface|Podaj własne lub wybierz jedną z metod podstawowych [DoClick](../mfc/reference/colecontrol-class.md#doclick) i [Odśwież](../mfc/reference/colecontrol-class.md#refresh). Aby uzyskać więcej informacji, [Zobacz kontrolki ActiveX MFC: Dodawanie metod](../mfc/mfc-activex-controls-adding-stock-methods.md)podstawowych.|
+  |Kontrolka ActiveX MFC dispinterface|Podaj własne lub wybierz jedną z metod podstawowych [DoClick](../mfc/reference/colecontrol-class.md#doclick) i [Odśwież](../mfc/reference/colecontrol-class.md#refresh). Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC: dodawanie metod podstawowych](../mfc/mfc-activex-controls-adding-stock-methods.md).|
 
 - **Typ metody**
 
@@ -80,7 +81,7 @@ Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu pr
   |Typ metody|Opis|
   |-----------------|-----------------|
   |**Stanu**|Domyślnie. Wstawia implementację giełdową metody wybranej na liście **Nazwa metody** . Nie można zmienić **zwracanego typu** , jeśli wybierzesz opcję **Zapasy**.|
-  |**Custom**|Wstawia implementację klasy zastępczej metody wybranej na liście **Nazwa metody** . W przypadku typów metod niestandardowych można podać własny typ zwracany lub wybrać jeden z listy **Typ zwracany** .|
+  |**Niestandardowe**|Wstawia implementację klasy zastępczej metody wybranej na liście **Nazwa metody** . W przypadku typów metod niestandardowych można podać własny typ zwracany lub wybrać jeden z listy **Typ zwracany** .|
 
 - **Nazwa wewnętrzna**
 
@@ -98,8 +99,8 @@ Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu pr
 
   |Atrybut parametru|Opis|Dozwolone kombinacje|
   |-------------------------|-----------------|--------------------------|
-  |**W**|Wskazuje, że parametr jest przesyłany z procedury wywołującej do procedury wywoływanej.|`in`jedyn<br /><br /> `in` i `out`|
-  |**Określoną**|Wskazuje, że parametr wskaźnika jest zwracany z wywoływanej procedury do procedury wywołującej (z serwera do klienta).|`out`jedyn<br /><br /> `in` i `out`<br /><br /> `out` i `retval`|
+  |**W**|Wskazuje, że parametr jest przesyłany z procedury wywołującej do procedury wywoływanej.|`in` jedyn<br /><br /> `in` i `out`|
+  |**Określoną**|Wskazuje, że parametr wskaźnika jest zwracany z wywoływanej procedury do procedury wywołującej (z serwera do klienta).|`out` jedyn<br /><br /> `in` i `out`<br /><br /> `out` i `retval`|
   |**Retval**|Wskazuje, że parametr otrzymuje wartość zwracaną przez element członkowski.|`retval` i `out`|
 
 - **Typ parametru**
@@ -110,14 +111,14 @@ Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu pr
 
   Ustawia nazwę parametru, który ma zostać przekazany przez metodę. Po wpisaniu nazwy wybierz pozycję **Dodaj** , aby dodać ją do listy parametrów, które będą przekazywane przez metodę. Jeśli nie podano nazwy parametru, Kreator zignoruje wszystkie atrybuty parametrów (tylko ATL) lub **Typ parametru** .
 
-  Po wybraniu opcji **Dodaj**Nazwa parametru zostanie wyświetlona na **liście parametrów**.
+  Po wybraniu opcji **Dodaj** Nazwa parametru zostanie wyświetlona na **liście parametrów**.
 
   > [!NOTE]
   > Jeśli podasz nazwę parametru, a następnie wybierzesz pozycję **Zakończ** przed wybraniem opcji **Dodaj**, parametr nie zostanie dodany do metody. Należy znaleźć metodę i wstawić parametr ręcznie.
 
-- **Add**
+- **Dodaj**
 
-  Dodaje parametr określony w polu **Nazwa parametru**oraz jego atrybuty typu i parametru do **listy parametrów**. Wybierz pozycję **Dodaj** , aby dodać parametr do listy.
+  Dodaje parametr określony w polu **Nazwa parametru** oraz jego atrybuty typu i parametru do **listy parametrów**. Wybierz pozycję **Dodaj** , aby dodać parametr do listy.
 
 - **Usuń**
 
@@ -139,7 +140,7 @@ Użyj tej strony Kreatora dodawania metody, aby określić ustawienia języka de
 
 - `call_as`
 
-  Określa nazwę metody zdalnej, do której można zamapować tę metodę lokalną. Aby uzyskać więcej informacji, zobacz [call_as](/windows/win32/Midl/call-as) in the *MIDL Reference*.
+  Określa nazwę metody zdalnej, do której można zamapować tę metodę lokalną. Aby uzyskać więcej informacji, zobacz [call_as](/windows/win32/Midl/call-as) w *MIDL Reference*.
 
   Niedostępne dla MFC dispinterfaces.
 
@@ -151,7 +152,7 @@ Użyj tej strony Kreatora dodawania metody, aby określić ustawienia języka de
 
 - `helpstring`
 
-  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Jest ona domyślnie ustawiona na wartość " *Nazwa metody*metody". Aby uzyskać więcej informacji, zobacz [HelpString](/windows/win32/Midl/helpstring) in the *MIDL Reference*.
+  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Jest ona domyślnie ustawiona na wartość " *Nazwa metody* metody". Aby uzyskać więcej informacji, zobacz [HelpString](/windows/win32/Midl/helpstring) in the *MIDL Reference*.
 
   Niedostępne dla MFC dispinterfaces.
 
@@ -164,5 +165,5 @@ Użyj tej strony Kreatora dodawania metody, aby określić ustawienia języka de
   |`hidden`|Wskazuje, że metoda istnieje, ale nie powinna być wyświetlana w przeglądarce zorientowanej na użytkownika. Aby uzyskać więcej informacji, zobacz [Hidden](/windows/win32/Midl/hidden) in *MIDL Reference*.|
   |`source`|Wskazuje, że element członkowski metody jest źródłem zdarzeń. Aby uzyskać więcej informacji, zobacz [Źródło](/windows/win32/Midl/source) w *MIDL Reference*.|
   |`local`|Określa kompilatorowi MIDL, że metoda nie jest zdalna. Aby uzyskać więcej informacji, zobacz [Local](/windows/win32/Midl/local) in the *MIDL Reference*.|
-  |`restricted`|Określa, że metoda nie może być wywoływana arbitralnie. Aby uzyskać więcej informacji, [](/windows/win32/Midl/restricted) Zobacz artykuł z ograniczeniami w *MIDL Reference*.|
+  |`restricted`|Określa, że metoda nie może być wywoływana arbitralnie. Aby uzyskać więcej informacji, zobacz artykuł z [ograniczeniami](/windows/win32/Midl/restricted) w *MIDL Reference*.|
   |`vararg`|Określa, że metoda przyjmuje zmienną liczbę argumentów. Aby to osiągnąć, ostatni argument musi być bezpieczną tablicą `VARIANT` typu, która zawiera resztę argumentów. Aby uzyskać więcej informacji, zobacz [vararg](/windows/win32/Midl/vararg) w *MIDL Reference*.|

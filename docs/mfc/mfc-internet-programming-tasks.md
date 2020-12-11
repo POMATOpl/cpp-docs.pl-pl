@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: zadania programistyczne internetowe MFC'
 title: MFC — zadania związane z programowaniem Internetu
 ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], getting started
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
-ms.openlocfilehash: 6d8a542ada94bc52ee2000bc92ae0457ec87609c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 26823dbd85222998ebf20947ac2af30a6b11e987
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159937"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC — zadania związane z programowaniem Internetu
 
@@ -32,13 +33,13 @@ W poniższej tabeli opisano kilka czynności, które można wykonać za pomocą 
 
 Zobacz następujące tematy, aby uzyskać szczegółowe informacje umożliwiające rozpoczęcie pracy:
 
-- [Opcje do wyboru przy projektowaniu aplikacji](application-design-choices.md)
+- [Wybór projektu aplikacji](application-design-choices.md)
 
 - [Pisanie aplikacji MFC](writing-mfc-applications.md)
 
 - [Kontrolki ActiveX w Internecie](activex-controls-on-the-internet.md)
 
-- [Uaktualnianie istniejącego formantu ActiveX](upgrading-an-existing-activex-control.md)
+- [Uaktualnianie istniejącej kontrolki ActiveX](upgrading-an-existing-activex-control.md)
 
 - [Monikery asynchroniczne w Internecie](asynchronous-monikers-on-the-internet.md)
 
@@ -48,5 +49,5 @@ Zobacz następujące tematy, aby uzyskać szczegółowe informacje umożliwiają
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)<br/>
-[Informacje internetowe według zadań](internet-information-by-task.md)
+[Podstawy programowania internetowego MFC](mfc-internet-programming-basics.md)<br/>
+[Informacje internetowe według zadania](internet-information-by-task.md)
