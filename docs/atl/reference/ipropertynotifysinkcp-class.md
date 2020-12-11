@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IPropertyNotifySinkCP'
 title: Klasa IPropertyNotifySinkCP
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,19 +10,19 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: c6d98bf5a6dfe5566839eb22bcd2bab2a9c28e4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 096a24a22634be23c7ede955c7ae49c3dd963f66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158364"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Klasa IPropertyNotifySinkCP
 
-Ta klasa udostępnia [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) interfejs jako interfejs wychodzący na obiekcie connectable.
+Ta klasa uwidacznia Interfejs [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) jako interfejs wychodzący w obiekcie połączonym.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,24 +35,24 @@ class IPropertyNotifySinkCP
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Twoja klasa, pochodząca od `IPropertyNotifySinkCP`.
+Klasa, która pochodzi od `IPropertyNotifySinkCP` .
 
-*Cdv*<br/>
-Klasa, która zarządza połączeniami między punktem połączenia a jego pochłaniaczami. Wartością domyślną jest [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), która pozwala na nieograniczone połączenia. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), który określa stałą liczbę połączeń.
+*CDV*<br/>
+Klasa, która zarządza połączeniami między punktem połączenia a jego ujściam. Wartość domyślna to [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), która umożliwia nieograniczone połączenia. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), który określa stałą liczbę połączeń.
 
 ## <a name="remarks"></a>Uwagi
 
-`IPropertyNotifySinkCP`dziedziczy wszystkie metody za pośrednictwem swojej klasy podstawowej [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
+`IPropertyNotifySinkCP` dziedziczy wszystkie metody za poorednictwem klasy bazowej, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
 
-[Interfejs IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) umożliwia obiektowi ujścia do odbierania powiadomień o zmianach właściwości. Klasa `IPropertyNotifySinkCP` udostępnia ten interfejs jako interfejs wychodzący na obiekcie, który można podłączyć. Klient musi zaimplementować `IPropertyNotifySink` metody na zlewie.
+Interfejs [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) umożliwia obiektowi ujścia otrzymywanie powiadomień o zmianach właściwości. Klasa `IPropertyNotifySinkCP` uwidacznia ten interfejs jako interfejs wychodzący w obiekcie połączonym. Klient musi zaimplementować `IPropertyNotifySink` metody w zlewie.
 
-Wywodź `IPropertyNotifySinkCP` klasę z punktu, w którym `IPropertyNotifySink` chcesz utworzyć punkt połączenia reprezentujący interfejs.
+Utwórz klasę z `IPropertyNotifySinkCP` , gdy chcesz utworzyć punkt połączenia, który reprezentuje `IPropertyNotifySink` interfejs.
 
-Aby uzyskać więcej informacji na temat korzystania z punktów połączenia w atl, zobacz artykuł [Punkty połączenia](../../atl/atl-connection-points.md).
+Aby uzyskać więcej informacji na temat używania punktów połączenia w ATL, zobacz [punkty połączenia](../../atl/atl-connection-points.md)w artykule.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
 ## <a name="see-also"></a>Zobacz też
 

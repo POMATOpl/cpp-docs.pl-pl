@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Jak osadzić Manifest w aplikacji C/C++'
 title: 'Porady: osadzanie manifestu w aplikacji C/C++'
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 2f125ee445d4ee9efdf21c37134d4c5adbca256d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce3bdd56b994498b223857b80989247fe9919e4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156349"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Porady: osadzanie manifestu w aplikacji C/C++
 
@@ -37,7 +38,7 @@ Istnieją dwa sposoby osadzenia manifestu wewnątrz aplikacji lub biblioteki.
 
 - Jeśli wykonujesz kompilację przyrostową, wykonaj następujące czynności:
 
-  - Połącz dane binarne, aby wygenerować plik MojaApl. exe. manifest.
+  - Połącz plik binarny w celu wygenerowania pliku MyApp.exe. manifest.
 
   - Przekonwertuj manifest na plik zasobów.
 
@@ -47,7 +48,7 @@ W poniższych przykładach pokazano, jak zmienić pliki reguł programu make w c
 
 ## <a name="makefiles-before"></a>Pliki reguł programu make (przed)
 
-Rozważmy skrypt NMAKE dla programu MojaApl. exe, prostą aplikację skompilowaną z jednego pliku:
+Rozważmy skrypt NMAKE dla MyApp.exe, prostą aplikację utworzoną z jednego pliku:
 
 ```
 # build MyApp.exe
@@ -67,9 +68,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Jeśli ten skrypt jest uruchamiany bez zmian w programie Visual Studio, pomyślnie tworzy plik MojaApl. exe. Tworzy również zewnętrzny plik manifestu MojaApl. exe. manifest, do użycia przez system operacyjny w celu załadowania zestawów zależnych w czasie wykonywania.
+Jeśli ten skrypt jest uruchamiany bez zmian w programie Visual Studio, pomyślnie tworzy MyApp.exe. Tworzy również zewnętrzny plik manifestu MyApp.exe. manifest, do użytku przez system operacyjny w celu załadowania zestawów zależnych w czasie wykonywania.
 
-Skrypt NMAKE dla biblioteki weblibrary. dll wygląda bardzo podobnie:
+Skrypt NMAKE dla MyLibrary.dll wygląda bardzo podobnie:
 
 ```
 # build MyLibrary.dll
@@ -94,7 +95,7 @@ clean :
 
 ## <a name="makefiles-after"></a>Pliki reguł programu make (po)
 
-Aby kompilować przy użyciu osadzonych manifestów, należy wprowadzić cztery małe zmiany w oryginalnych plikach reguł programu make. Plik reguł programu make. exe dla programu MojaApl:
+Aby kompilować przy użyciu osadzonych manifestów, należy wprowadzić cztery małe zmiany w oryginalnych plikach reguł programu make. MyApp.exe pliku reguł programu make:
 
 ```
 # build MyApp.exe
@@ -124,7 +125,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Dla pliku reguł programu make biblioteki dll:
+MyLibrary.dll pliku reguł programu make:
 
 ```
 # build MyLibrary.dll
@@ -259,4 +260,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ogólne informacje o tworzeniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
+[Informacje o generowaniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

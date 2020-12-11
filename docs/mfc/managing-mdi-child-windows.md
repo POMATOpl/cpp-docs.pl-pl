@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat zarządzania oknami podrzędnymi MDI
 title: Zarządzanie oknami podrzędnymi MDI
 ms.date: 11/19/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 6e8e3d0aa51eeea112597485a9221dcba4feda87
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1207e6a8fa174c36b09352796521bcb860ee665f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112092"
 ---
 # <a name="managing-mdi-child-windows"></a>Zarządzanie oknami podrzędnymi MDI
 
@@ -38,4 +39,4 @@ Okno ramki MDI działa również w połączeniu z bieżącym oknem podrzędnym M
 
 ## <a name="see-also"></a>Zobacz też
 
-[Używanie okien ramowych](using-frame-windows.md)
+[Korzystanie z okien ramowych](using-frame-windows.md)

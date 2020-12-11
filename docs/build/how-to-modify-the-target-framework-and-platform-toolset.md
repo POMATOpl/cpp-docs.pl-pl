@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Jak zmodyfikować platformę docelową i zestaw narzędzi platformy'
 title: 'Porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy'
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 8b3de299652efcdd8fd94622b890b6cec7b059e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73964903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156258"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy
 
@@ -18,7 +19,7 @@ Można edytować plik projektu Visual Studio C++, aby wskazać różne wersje ze
 
 ## <a name="platform-toolset"></a>Zestaw narzędzi platformy
 
-Zestaw narzędzi platformy składa się z kompilatora C++ (CL. exe) i konsolidatora (link. exe) wraz z bibliotekami standardowymi C/C++. Ponieważ program Visual Studio 2015, główna wersja zestawu narzędzi pozostawała w 14, co oznacza, że projekty skompilowane z programem Visual Studio 2019 lub Visual Studio 2017 są zgodne z projektami skompilowanymi w programie Visual Studio 2015. Wersja pomocnicza została zaktualizowana o 1 dla każdej wersji, ponieważ program Visual Studio 2015:
+Zestaw narzędzi platformy składa się z kompilatora C++ (cl.exe) i konsolidatora (link.exe) wraz z bibliotekami standardowymi C/C++. Ponieważ program Visual Studio 2015, główna wersja zestawu narzędzi pozostawała w 14, co oznacza, że projekty skompilowane z programem Visual Studio 2019 lub Visual Studio 2017 są zgodne z projektami skompilowanymi w programie Visual Studio 2015. Wersja pomocnicza została zaktualizowana o 1 dla każdej wersji, ponieważ program Visual Studio 2015:
 
 - Visual Studio 2015: wersji 140
 - Visual Studio 2017: Najnowsze 141
@@ -36,26 +37,26 @@ Platformę docelową można zwiększyć, tworząc niestandardowy zestaw narzędz
 
 ### <a name="to-change-the-target-framework"></a>Aby zmienić platformę docelową
 
-1. W programie Visual Studio w obszarze **Eksplorator rozwiązań**wybierz projekt. Na pasku menu Otwórz menu **projekt** i wybierz polecenie **Zwolnij projekt**. Spowoduje to odładowanie pliku projektu (. vcxproj) dla projektu.
+1. W programie Visual Studio w obszarze **Eksplorator rozwiązań** wybierz projekt. Na pasku menu Otwórz menu **projekt** i wybierz polecenie **Zwolnij projekt**. Spowoduje to odładowanie pliku projektu (. vcxproj) dla projektu.
 
    > [!NOTE]
    >  Nie można załadować projektu C++, gdy plik projektu jest modyfikowany w programie Visual Studio. Można jednak użyć innego edytora, takiego jak Notatnik, aby zmodyfikować plik projektu, podczas gdy projekt jest ładowany w programie Visual Studio. Program Visual Studio wykryje, że plik projektu został zmieniony i wyświetli monit o ponowne załadowanie projektu.
 
 1. Na pasku menu wybierz **plik**, **Otwórz**, **plik**. W oknie dialogowym **Otwórz plik** przejdź do folderu projektu, a następnie otwórz plik projektu (. vcxproj).
 
-1. W pliku projektu Znajdź wpis dla wersji platformy docelowej. Na przykład, jeśli projekt jest przeznaczony do używania .NET Framework 4,5, Znajdź `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` w `<PropertyGroup Label="Globals">` elemencie `<Project>` elementu. Jeśli `<TargetFrameworkVersion>` element nie jest obecny, projekt nie używa .NET Framework i żadna zmiana nie jest wymagana.
+1. W pliku projektu Znajdź wpis dla wersji platformy docelowej. Na przykład, jeśli projekt jest przeznaczony do używania .NET Framework 4,5, Znajdź `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` w `<PropertyGroup Label="Globals">` elemencie elementu `<Project>` . Jeśli `<TargetFrameworkVersion>` element nie jest obecny, projekt nie używa .NET Framework i żadna zmiana nie jest wymagana.
 
 1. Zmień wartość na żądaną wersję platformy, na przykład v 3.5 lub v 4.6.
 
 1. Zapisz zmiany i Zamknij Edytor.
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Załaduj ponownie projekt**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Załaduj ponownie projekt**.
 
-1. Aby sprawdzić zmianę, w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla projektu (nie dla rozwiązania), a następnie wybierz **Właściwości** , aby otworzyć okno dialogowe **strony właściwości** projektu. W lewym okienku okna dialogowego rozwiń węzeł **Właściwości konfiguracji** , a następnie wybierz pozycję **Ogólne**. Sprawdź, czy **wersja programu .NET Target Framework** zawiera nową wersję platformy.
+1. Aby sprawdzić zmianę, w **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla projektu (nie dla rozwiązania), a następnie wybierz **Właściwości** , aby otworzyć okno dialogowe **strony właściwości** projektu. W lewym okienku okna dialogowego rozwiń węzeł **Właściwości konfiguracji** , a następnie wybierz pozycję **Ogólne**. Sprawdź, czy **wersja programu .NET Target Framework** zawiera nową wersję platformy.
 
 ### <a name="to-change-the-platform-toolset"></a>Aby zmienić zestaw narzędzi platformy
 
-1. W programie Visual Studio w **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu (nie dla rozwiązania), a następnie wybierz **Właściwości** , aby otworzyć okno dialogowe **strony właściwości** projektu.
+1. W programie Visual Studio w **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu (nie dla rozwiązania), a następnie wybierz **Właściwości** , aby otworzyć okno dialogowe **strony właściwości** projektu.
 
 1. W oknie dialogowym **strony właściwości** Otwórz listę rozwijaną **Konfiguracja** , a następnie wybierz pozycję **wszystkie konfiguracje**.
 

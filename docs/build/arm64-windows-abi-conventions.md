@@ -1,12 +1,13 @@
 ---
+description: 'Dowiedz się więcej na temat: Omówienie Konwencji ABI ARM64'
 title: Przegląd konwencji ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
-ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
+ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157116"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd konwencji ABI ARM64
 
@@ -31,7 +32,7 @@ Na koniec podczas odwoływania się do typów danych są odwoływane następują
 
 - **Short-Vector** — typ danych, które można bezpośrednio przedstawić w SIMD, wektor 8 bajtów lub 16 bajtów elementów. Jest on wyrównany do jego rozmiaru, 8 bajtów lub 16 bajtów, gdzie każdy element może mieć wartość 1, 2, 4 lub 8 bajtów.
 - **HFA (jednorodna agregacja zmiennoprzecinkowa)** — typ danych z 2 do 4 identycznych elementów członkowskich zmiennoprzecinkowych, wartości zmiennoprzecinkowe lub podwójne.
-- **HVA (jednorodna funkcja globalnej agregacji wektorowej)** — typ danych z 2 do 4 identycznych elementów członkowskich krótkich wektorów.
+- **HVA (jednorodna Short-Vector agregowania)** — typ danych z 2 do 4 identycznych Short-Vector elementów członkowskich.
 
 ## <a name="base-requirements"></a>Wymagania podstawowe
 

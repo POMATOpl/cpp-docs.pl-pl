@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Importowanie i eksportowanie funkcji wbudowanych'
 title: Importowanie i eksportowanie funkcji śródwierszowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: abb0443ab8fbd315524350caaff34e0250147ed2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 053280685edf8fa88c969399e7905582534c7493
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156193"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importowanie i eksportowanie funkcji śródwierszowych
 
@@ -40,7 +41,7 @@ Jedną z funkcji zaimportowanej wbudowanej funkcji jest możliwość poprawnego 
 
 - [Eksportowanie funkcji języka C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Określanie, której metody eksportowania użyć](determining-which-exporting-method-to-use.md)
+- [Wybieranie metody eksportowania do użycia](determining-which-exporting-method-to-use.md)
 
 - [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 

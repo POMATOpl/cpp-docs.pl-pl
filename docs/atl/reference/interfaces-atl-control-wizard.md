@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat interfejsów, Kreatora kontrolki ATL
 title: Interfejsy, Kreator kontrolki ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,35 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
-ms.openlocfilehash: f19df1723a4e115ca7f8e314bd5ea423082417e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abc0980588c3340277704b0084334a7d15fc1c6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158351"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfejsy, Kreator kontrolki ATL
 
-Ta strona kreatora zidentyfikować interfejsy, które są obsługiwane przez kontrolkę. Domyślnie obsługiwanych interfejsów są zwykle używane przez większość kontenerów.
+Ta strona kreatora identyfikuje interfejsy obsługiwane przez formant. Domyślnie obsługiwane interfejsy są zwykle używane przez większość kontenerów.
 
 > [!NOTE]
-> W przypadku wybrania **kontrolka minimalnego** na [opcje](../../atl/reference/options-atl-control-wizard.md) karcie interfejsy nie są wyświetlane domyślnie w **obsługiwane** pola listy.
+> W przypadku wybrania **minimalnej kontroli** na karcie [Opcje](../../atl/reference/options-atl-control-wizard.md) , w polu listy **obsługiwanych** nie są wyświetlane żadne interfejsy.
 
-- **Nieobsługiwane**
+- **Nieobsługiwany**
 
-   Wskazuje dostępnych interfejsów, które nie są obecnie obsługiwane dla formantu.
+   Wskazuje dostępne interfejsy, które nie są obecnie obsługiwane dla formantu.
 
 - **Obsługiwane**
 
-   Wskazuje, interfejsy, które są obecnie obsługiwane dla formantu.
+   Wskazuje interfejsy, które są obecnie obsługiwane dla formantu.
 
    |Przycisk transferu|Opis|
    |---------------------|-----------------|
-   |**>**|Dodaje do **obsługiwane** Nazwa interfejsu, aktualnie wybrane w listy **nieobsługiwane** listy.|
-   |**>>**|Dodaje do **obsługiwane** listy dostępny w wszystkich nazw interfejsu **nieobsługiwane** listy.|
-   |**\<**|Usuwa nazwę interfejsu aktualnie wybrany w **obsługiwane** listy.|
-   |**\<\<**|Usuwa wszystkie interfejsu nazwy obecnie wymienione w **obsługiwane** listy.|
+   |**>**|Dodaje do **obsługiwanej** listy nazwę interfejsu aktualnie wybraną z listy **nieobsługiwane** .|
+   |**>>**|Dodaje do **obsługiwanej** listy wszystkie nazwy interfejsów dostępne na liście **nieobsługiwane** .|
+   |**\<**|Usuwa nazwę interfejsu aktualnie wybraną z listy **obsługiwanych** .|
+   |**\<\<**|Usuwa wszystkie nazwy interfejsów aktualnie wymienione na liście **obsługiwanych** .|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)

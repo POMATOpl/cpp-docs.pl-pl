@@ -1,5 +1,6 @@
 ---
-title: Testowanie kontrolki ATL DHTML
+description: 'Dowiedz się więcej o: testowanie kontrolki DHTML ATL'
+title: Testowanie kontrolki DHTML ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML controls, testing
@@ -7,35 +8,35 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-ms.openlocfilehash: 510b24b383f6ae0489a1c54d701c632159140c2a
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d9e82b609b4bb9346f3db983e9734fd732ec422f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157337"
 ---
-# <a name="testing-the-atl-dhtml-control"></a>Testowanie kontrolki ATL DHTML
+# <a name="testing-the-atl-dhtml-control"></a>Testowanie kontrolki DHTML ATL
 
-Po utworzeniu projektu może kompilowania i testowania kontroli próbki. Zanim to zrobisz, użyj **Widok klas** i **Eksploratora rozwiązań** zbadanie projektu. Elementy projektu są opisane bardziej szczegółowo w [identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+Po utworzeniu projektu można skompilować i przetestować przykładową kontrolkę. Przed wykonaniem tej czynności Użyj **Widok klasy** i **Eksplorator rozwiązań** do sprawdzenia projektu. Elementy projektu są bardziej szczegółowo opisane w temacie [Identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-## <a name="to-build-and-test-the-atl-dhtml-control"></a>Aby skompilować i przetestować kontrolki ATL DHTML
+## <a name="to-build-and-test-the-atl-dhtml-control"></a>Aby skompilować i przetestować formant ATL DHTML
 
-1. Skompiluj projekt. Z **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
+1. Skompiluj projekt. W menu **Kompiluj** kliknij pozycję **Kompiluj rozwiązanie**.
 
-1. Po ukończeniu kompilacji, otwórz **kontener testu**. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do **kontener testu**.
+1. Po zakończeniu kompilacji Otwórz **kontener testowy**. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testów,](../mfc/testing-properties-and-events-with-test-container.md) Aby uzyskać informacje na temat uzyskiwania dostępu do **kontenera testowego**.
 
-1. W **kontener testu**, z **Edytuj** menu, kliknij przycisk **Wstaw nową kontrolkę**.
+1. W **kontenerze Test** z menu **Edycja** kliknij polecenie **Wstaw nową kontrolkę**.
 
-1. W **Wstawianie formantu** okna dialogowego Wybierz formant z listy rozwijanej. Należy pamiętać, że jego nazwa jest oparta na krótką nazwę, wskazana w Kreatorze formantu ATL. Kliknij przycisk **OK**.
+1. W oknie dialogowym **Wstawianie kontrolki** zaznacz swój formant w polu listy. Należy pamiętać, że jego nazwa jest oparta na krótkiej nazwie wskazanej w Kreatorze kontrolki ATL. Kliknij przycisk **OK**.
 
-1. Sprawdź kontrolki. Należy pamiętać, że ma paska przewijania. Zmień rozmiar formantu, aby uaktywnić paska przewijania za pomocą uchwytów sterujących.
+1. Przejrzyj formant. Należy pamiętać, że ma pasek przewijania. Użyj uchwytów kontrolki, aby zmienić rozmiar kontrolki w celu aktywowania paska przewijania.
 
-1. Przetestuj przyciski formantu. Zmienia kolor tła na kolor wskazywany przez przycisk.
+1. Przetestuj przyciski kontrolki. Kolor tła zmieni się na kolor wskazywany przez przycisk.
 
-1. Zamknij **kontener testu**.
+1. Zamknij **kontener testowy**.
 
-Następnie spróbuj [modyfikowanie kontrolki DHTML](../atl/modifying-the-atl-dhtml-control.md).
+Następnie spróbuj [zmodyfikować kontrolkę DHTML](../atl/modifying-the-atl-dhtml-control.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa kontrolki DHTML](../atl/atl-support-for-dhtml-controls.md)
+[Obsługa formantów DHTML](../atl/atl-support-for-dhtml-controls.md)

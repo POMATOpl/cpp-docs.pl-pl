@@ -1,14 +1,15 @@
 ---
+description: 'Dowiedz się więcej na temat: udostępnianie lub ponowne używanie ustawień projektu programu Visual Studio'
 title: Udostępnianie lub ponowne używanie ustawień projektu programu Visual Studio — C++
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: bcf54be0531c7150c1506eb6f5dda2b5bc95161f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5108bba6526c6c3140680cc12013b0c6232c9a0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156843"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Udostępnianie lub ponowne używanie ustawień projektów programu Visual Studio
 
@@ -17,11 +18,11 @@ Aby utworzyć niestandardową grupę ustawień, które można udostępniać inny
 > [!IMPORTANT]
 > **pliki. User i dlaczego są problematyczne**
 >
-> Poprzednie wersje programu Visual Studio używały globalnych arkuszy właściwości, które mają rozszerzenie nazwy pliku. User i znajdowały się w \<folderze userprofile> \AppData\Local\Microsoft\MSBuild\v4.0\. Firma Microsoft nie zaleca już używania tych plików, ponieważ ustawiają one właściwości konfiguracji projektu dla poszczególnych użytkowników i konkretnych komputerów. Takie ustawienia „globalne” mogą zakłócać kompilacje, zwłaszcza gdy są one ukierunkowane na więcej niż jedną platformę na komputerze kompilacji. Na przykład, jeśli masz zarówno projekt MFC, jak i projekt Windows Phone, właściwości .user byłyby nieprawidłowe dla jednego z nich. Arkusze właściwości wielokrotnego użytku są bardziej elastyczne i bardziej niezawodne.
+> Wcześniejsze wersje programu Visual Studio używały globalnych arkuszy właściwości, które mają rozszerzenie nazwy pliku. User i znajdowały się w \<userprofile> folderze \AppData\Local\Microsoft\MSBuild\v4.0\. Firma Microsoft nie zaleca już używania tych plików, ponieważ ustawiają one właściwości konfiguracji projektu dla poszczególnych użytkowników i konkretnych komputerów. Takie ustawienia „globalne” mogą zakłócać kompilacje, zwłaszcza gdy są one ukierunkowane na więcej niż jedną platformę na komputerze kompilacji. Na przykład, jeśli masz zarówno projekt MFC, jak i projekt Windows Phone, właściwości .user byłyby nieprawidłowe dla jednego z nich. Arkusze właściwości wielokrotnego użytku są bardziej elastyczne i bardziej niezawodne.
 >
 > Pomimo tego, że pliki .user są nadal instalowane przez Visual Studio i uczestniczą w dziedziczeniu właściwości, są one domyślnie puste. Najlepszym rozwiązaniem jest usunięcie odwołania do nich w **Menedżer właściwości** , aby upewnić się, że projekty działają niezależnie od wszelkich ustawień dla poszczególnych użytkowników i komputerów, jest to ważne, aby zapewnić poprawne zachowanie w środowisku SCC (kontroli kodu źródłowego).
 
-Aby wyświetlić **Menedżer właściwości**, na pasku menu wybierz pozycję **Wyświetl** > **Menedżer właściwości** lub **Wyświetl** > **inne** > **Menedżer właściwości**Windows, w zależności od ustawień.
+Aby wyświetlić **Menedżer właściwości**, na pasku menu wybierz pozycję **Wyświetl**  >  **Menedżer właściwości** lub **Wyświetl**  >  **inne**  >  **Menedżer właściwości** Windows, w zależności od ustawień.
 
 Jeśli masz wspólny, często używany zestaw właściwości, które chcesz zastosować do wielu projektów, możesz użyć **Menedżer właściwości** do przechwycenia ich w pliku *arkusza właściwości* wielokrotnego użytku, który Konwencji ma rozszerzenie nazwy pliku. props. Arkusz (lub arkusze) można stosować do nowych projektów, aby nie było konieczne ustawianie ich właściwości od podstaw.
 
@@ -44,8 +45,8 @@ W dużych rozwiązaniach, które będą miały wiele projektów, może być przy
 
 #### <a name="to-create-a-property-sheet"></a>Aby utworzyć arkusz właściwości
 
-1. Na pasku menu wybierz polecenie **Wyświetl** > **Menedżer właściwości** lub **Wyświetl** > **inne Menedżer właściwości systemu Windows** > **Property Manager**. Zostanie otwarty **Menedżer właściwości** .
+1. Na pasku menu wybierz polecenie **Wyświetl**  >  **Menedżer właściwości** lub **Wyświetl**  >  **inne Menedżer właściwości systemu Windows**  >  . Zostanie otwarty **Menedżer właściwości** .
 
 2. Aby zdefiniować zakres arkusza właściwości, wybierz element, do którego ma to zastosowanie. Może to być określona konfiguracja lub inny arkusz właściwości. Otwórz menu skrótów dla tego elementu, a następnie wybierz polecenie **Dodaj nowy projekt arkusza właściwości**. Określ nazwę i lokalizację.
 
-3. W **Menedżer właściwości**Otwórz nowy arkusz właściwości, a następnie ustaw właściwości, które chcesz uwzględnić.
+3. W **Menedżer właściwości** Otwórz nowy arkusz właściwości, a następnie ustaw właściwości, które chcesz uwzględnić.

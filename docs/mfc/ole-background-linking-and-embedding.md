@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tło OLE: łączenie i osadzanie'
 title: 'Podstawy OLE: łączenie i osadzanie'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 6b6032d2e772728495d4ddb1dbfaa5daf7348b60
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 05bd51c11cadfc3220f23db9098db9f07703a814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112222"
 ---
 # <a name="ole-background-linking-and-embedding"></a>Podstawy OLE: łączenie i osadzanie
 
@@ -29,7 +30,7 @@ Każdy element OLE, niezależnie od tego, czy jest osadzony lub połączony, ma 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Podstawy OLE](ole-background.md)<br/>
-[Podstawy OLE: kontenery i serwery](ole-background-containers-and-servers.md)<br/>
-[Kontenery: elementy klienckie](containers-client-items.md)<br/>
+[Tło OLE](ole-background.md)<br/>
+[Tło OLE: kontenery i serwery](ole-background-containers-and-servers.md)<br/>
+[Kontenery: elementy klienta](containers-client-items.md)<br/>
 [Serwery: elementy serwera](servers-server-items.md)

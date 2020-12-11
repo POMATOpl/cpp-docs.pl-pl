@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: opcje, Kreator kontrolki ATL'
 title: Opcje, Kreator kontrolki ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 481c97fe7621e9592317f629c2cf87f2f719d5d1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 428f6ba1a4bee9cec60ca05b57d66d176c3f0deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157896"
 ---
 # <a name="options-atl-control-wizard"></a>Opcje, Kreator kontrolki ATL
 
@@ -73,7 +74,7 @@ Typ interfejsu, który ten formant uwidacznia dla kontenera.
 
 - **Niestandardowy**: tworzy interfejs, który uwidacznia metody bezpośrednio przez VTBL.
 
-   W przypadku wybrania opcji **niestandardowe**można określić, że formant jest **zgodny z automatyzacją**. Jeśli wybierzesz opcję **zgodne z automatyzacją**, Kreator doda atrybut [OleAutomation](../../windows/attributes/oleautomation.md) do interfejsu w IDL, a interfejs może być zorganizowany przez uniwersalnego organizatora w oleaut32.dll. Aby uzyskać więcej informacji, zobacz [organizowanie szczegółów](/windows/win32/com/marshaling-details) w Windows SDK.
+   W przypadku wybrania opcji **niestandardowe** można określić, że formant jest **zgodny z automatyzacją**. Jeśli wybierzesz opcję **zgodne z automatyzacją**, Kreator doda atrybut [OleAutomation](../../windows/attributes/oleautomation.md) do interfejsu w IDL, a interfejs może być zorganizowany przez uniwersalnego organizatora w oleaut32.dll. Aby uzyskać więcej informacji, zobacz [organizowanie szczegółów](/windows/win32/com/marshaling-details) w Windows SDK.
 
    Ponadto, jeśli wybierzesz opcję **zgodne z automatyzacją**, wszystkie parametry dla wszystkich metod w kontrolce muszą być zgodne z wariantem.
 

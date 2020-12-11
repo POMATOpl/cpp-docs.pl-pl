@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_trivially_move_constructible
 title: Klasa is_trivially_move_constructible
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 30e8be25e74aeed1eafc8fcafbece5c62e4ad999
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154321"
 ---
-# <a name="istriviallymoveconstructible-class"></a>Klasa is_trivially_move_constructible
+# <a name="is_trivially_move_constructible-class"></a>Klasa is_trivially_move_constructible
 
 Testuje, czy typ ma Konstruktor prostego przenoszenia.
 
@@ -53,10 +54,10 @@ klasy wszystkich niestatycznych składowych danych typu Array klasy mają konstr
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

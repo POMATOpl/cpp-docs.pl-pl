@@ -1,5 +1,6 @@
 ---
-title: Programowo Tworzenie tabeli w źródle danych ODBC
+description: 'Dowiedz się więcej na temat: Źródło danych: programowe tworzenie tabeli w źródle danych ODBC'
+title: Programowe tworzenie tabeli w źródle danych ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - programmatically creating ODBC tables [C++]
@@ -7,30 +8,30 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 6cf26cad7fe39f374daf371902525087b446658c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b195cc4fb81f1caed0b280c5df6a2032f4944ddf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155712"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Źródło danych: programowe tworzenie tabeli w źródle danych ODBC
 
-W tym temacie wyjaśniono, jak utworzyć tabelę dla źródła danych, przy użyciu funkcji `ExecuteSQL` elementu członkowskiego klasy `CDatabase`, przekazując funkcję ciąg, który zawiera **instrukcję SQL CREATE TABLE.**
+W tym temacie wyjaśniono, jak utworzyć tabelę dla źródła danych przy użyciu `ExecuteSQL` funkcji składowej klasy `CDatabase` , przekazując funkcję do ciągu, który zawiera **CREATE TABLE** instrukcji SQL.
 
-Aby uzyskać ogólne informacje o źródłach danych ODBC w MFC, zobacz [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md). Temat [Źródło danych: Programowo Konfigurowanie źródła danych ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) opisuje tworzenie źródeł danych.
+Aby uzyskać ogólne informacje o źródłach danych ODBC w MFC, zobacz [Data Source (ODBC)](../../data/odbc/data-source-odbc.md). [Źródło danych tematu: programowe Konfigurowanie źródła danych ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) opisuje Tworzenie źródeł danych.
 
-Po ustanowieniu źródła danych można łatwo utworzyć tabele przy użyciu funkcji `ExecuteSQL` elementu członkowskiego i instrukcji CREATE **TABLE** SQL. Na przykład, jeśli `CDatabase` miałeś `myDB`obiekt o nazwie , można użyć następującego kodu MFC, aby utworzyć tabelę:
+Po ustanowieniu źródła danych można łatwo tworzyć tabele przy użyciu `ExecuteSQL` funkcji członkowskiej i **CREATE TABLE** instrukcji SQL. Na przykład jeśli `CDatabase` obiekt został wywołany `myDB` , można użyć następującego kodu MFC, aby utworzyć tabelę:
 
 ```
 myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",
                          OfficeName TEXT(10))");
 ```
 
-W tym przykładzie kodu tworzy tabelę o nazwie "BIURA" w połączeniu źródła danych programu Microsoft Access obsługiwane przez `myDB`; tabela zawiera dwa pola "OfficeID" i "OfficeName".
+Ten przykład kodu tworzy tabelę o nazwie "BIURAs" w połączeniu ze źródłem danych programu Microsoft Access obsługiwanym przez program `myDB` ; tabela zawiera dwa pola "OfficeId" i "OfficeName".
 
 > [!NOTE]
-> Typy pól określone w instrukcji **SQL CREATE TABLE** mogą się różnić w zależności od używanego sterownika ODBC. Program Microsoft Query (dystrybuowany z programem Visual C++ 1.5) jest jednym ze sposobów odnajdywanie, jakie typy pól są dostępne dla źródła danych. W programie Microsoft Query kliknij pozycję **Plik**, kliknij **pozycję Table_Definition**, wybierz tabelę ze źródła danych i spójrz na typ wyświetlany w polu kombi **Typ.** Istnieje również składnia SQL do tworzenia indeksów.
+> Typy pól określone w instrukcji SQL **CREATE TABLE** mogą się różnić w zależności od używanego sterownika ODBC. Program Microsoft Query (dystrybuowany z Visual C++ 1,5) jest jednym ze sposobów wykrywania, jakie typy pól są dostępne dla źródła danych. W programie Microsoft Query kliknij pozycję **plik**, kliknij pozycję **Table_Definition**, wybierz tabelę ze źródła danych i poszukaj typu wyświetlanego w polu kombi **Typ** . Istnieje również składnia SQL do tworzenia indeksów.
 
 ## <a name="see-also"></a>Zobacz też
 

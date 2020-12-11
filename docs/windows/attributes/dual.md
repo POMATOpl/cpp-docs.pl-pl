@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: podwójne'
 title: Podwójny (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1e72bd787bc73042b4f4a180ea119712021edaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112027"
 ---
 # <a name="dual"></a>dual
 
@@ -58,7 +59,7 @@ __interface IStatic : IDispatch
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejsu**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 
@@ -70,5 +71,5 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-co
 [Atrybuty według użycia](attributes-by-usage.md)<br/>
 [celnej](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[object](object-cpp.md)<br/>
+[Stream](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

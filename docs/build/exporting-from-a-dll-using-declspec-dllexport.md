@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Eksportowanie z biblioteki DLL przy użyciu __declspec (dllexport)'
 title: Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)
 ms.date: 05/06/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 77dc6dc14efe2a7ccf46c41477ed4fd6d1956856
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e662563e63881d893b9ef717b160844e9995eb0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156544"
 ---
 # <a name="exporting-from-a-dll-using-__declspecdllexport"></a>Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)
 
@@ -38,7 +39,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 > [!NOTE]
-> `__declspec(dllexport)`nie można zastosować do funkcji z `__clrcall` konwencją wywoływania.
+> `__declspec(dllexport)` nie można zastosować do funkcji z `__clrcall` konwencją wywoływania.
 
 Podczas kompilowania biblioteki DLL zwykle tworzony jest plik nagłówkowy zawierający prototypy i/lub klasy, które są eksportowane i dodawane **`__declspec(dllexport)`** do deklaracji w pliku nagłówkowym. Aby kod był bardziej czytelny, zdefiniuj makro dla **`__declspec(dllexport)`** i użyj makra z każdym eksportowanym symbolem:
 
@@ -72,6 +73,6 @@ Podczas kompilowania biblioteki DLL zwykle tworzony jest plik nagłówkowy zawie
 
 - [Importy wzajemne](mutual-imports.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

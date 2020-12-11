@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: korzystanie z okien ramowych'
 title: Używanie okien ramowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-ms.openlocfilehash: ba304bce5bd0d91f4db8372b087c42c98b9c103d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7afcee5e0bcbcc3613fa45e4b6bce73c39f6cb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154451"
 ---
 # <a name="using-frame-windows"></a>Używanie okien ramowych
 
-Struktura MFC tworzy dokument okien ramowych — oraz widoki i dokumenty — w ramach jego implementacja obiektu nowe i polecenia Otwórz menu Plik. Ponieważ struktura wykonuje większość pracy okno ramki dla Ciebie, odtwarzania małych roli w tworzeniu, przy użyciu i niszczenie tych oknach. Można jednak jawnie utworzyć własne okna ramowe i okien podrzędnych do specjalnych celów.
+Struktura MFC tworzy okna z ramkami dokumentu, a także ich widoki i dokumenty — w ramach implementacji nowych i otwartych poleceń w menu plik. Ze względu na to, że platforma wykonuje większość pracy z oknami ramek, odgrywasz tylko małą rolę w tworzeniu, używaniu i zniszczeniu tych okien. Można jednak jawnie utworzyć własne okna i okna podrzędne z ramkami do specjalnych celów.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
 
@@ -33,14 +34,14 @@ Struktura MFC tworzy dokument okien ramowych — oraz widoki i dokumenty — w r
 
 - [Przeciąganie i upuszczanie plików w oknie ramowym](../mfc/dragging-and-dropping-files-in-a-frame-window.md)
 
-- [Odpowiadanie na dynamiczną wymianę danych (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+- [Reagowanie na dynamiczną wymianę danych (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
 - [Organizowanie innych akcji okna](../mfc/orchestrating-other-window-actions.md)
 
-- [Zarządzanie pomocy kontekstowej](../mfc/orchestrating-other-window-actions.md)
+- [Zarządzanie pomocą kontekstową](../mfc/orchestrating-other-window-actions.md)
 
-- [Rola okno ramowe w drukowania i podglądu wydruku](../mfc/orchestrating-other-window-actions.md)
+- [Rola okna ramki w drukowaniu i podglądzie wydruku](../mfc/orchestrating-other-window-actions.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Okna ramowe](../mfc/frame-windows.md)

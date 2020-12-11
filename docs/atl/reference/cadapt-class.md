@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAdapt'
 title: Klasa CAdapt
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c6ec1c40d430c2de64defb5ea7394a47b1d7a6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158507"
 ---
 # <a name="cadapt-class"></a>Klasa CAdapt
 
@@ -61,11 +62,11 @@ Typ dostosowany.
 
 ## <a name="remarks"></a>Uwagi
 
-`CAdapt`jest prostym szablonem używanym do zawijania klas, które definiują operator address-of ( `operator &` ), aby zwrócić coś innego niż adres obiektu. Przykładami takich klas są klasy ATL `CComBSTR` , `CComPtr` , i i `CComQIPtr` Klasa obsługi kompilatora com `_com_ptr_t` . W tych klasach wszystkie ponownie definiują operator address-of, aby zwrócić adres jednego z ich składowych danych (BSTR w przypadku `CComBSTR` i wskaźnik interfejsu w przypadku innych klas).
+`CAdapt` jest prostym szablonem używanym do zawijania klas, które definiują operator address-of ( `operator &` ), aby zwrócić coś innego niż adres obiektu. Przykładami takich klas są klasy ATL `CComBSTR` , `CComPtr` , i i `CComQIPtr` Klasa obsługi kompilatora com `_com_ptr_t` . W tych klasach wszystkie ponownie definiują operator address-of, aby zwrócić adres jednego z ich składowych danych (BSTR w przypadku `CComBSTR` i wskaźnik interfejsu w przypadku innych klas).
 
-`CAdapt`podstawowa rola to ukrycie operatora address-of zdefiniowanego przez klasę *T*, ale nadal zachowuje charakterystykę przystosowanej klasy. `CAdapt`spełnia tę rolę, przechowując publiczną składową, [m_T](#m_t), typu *T*, i definiując operatory konwersji, operatory porównania i Konstruktor kopiujący, aby zezwolić na traktowanie specjalizacji, tak jakby były `CAdapt` obiektami typu *T*.
+`CAdapt`podstawowa rola to ukrycie operatora address-of zdefiniowanego przez klasę *T*, ale nadal zachowuje charakterystykę przystosowanej klasy. `CAdapt` spełnia tę rolę, przechowując publiczną składową, [m_T](#m_t), typu *T*, i definiując operatory konwersji, operatory porównania i Konstruktor kopiujący, aby zezwolić na traktowanie specjalizacji, tak jakby były `CAdapt` obiektami typu *T*.
 
-Klasa adaptera `CAdapt` jest przydatna, ponieważ niektóre klasy stylu kontenera mogą uzyskać adresy zawartych w nich obiektów przy użyciu operatora address-of. Ponowne zdefiniowanie operatora address-of może spowodować problemy z tym wymaganiem, zazwyczaj powoduje błędy kompilacji i uniemożliwia wykorzystywanie typu niezaadaptowanego z klasami, które oczekują, że „po prostu ma działać”. `CAdapt`pozwala na obejście tych problemów.
+Klasa adaptera `CAdapt` jest przydatna, ponieważ niektóre klasy stylu kontenera mogą uzyskać adresy zawartych w nich obiektów przy użyciu operatora address-of. Ponowne zdefiniowanie operatora address-of może spowodować problemy z tym wymaganiem, zazwyczaj powoduje błędy kompilacji i uniemożliwia wykorzystywanie typu niezaadaptowanego z klasami, które oczekują, że „po prostu ma działać”. `CAdapt` pozwala na obejście tych problemów.
 
 Zwykle, `CAdapt` gdy chcesz przechowywać `CComBSTR` , `CComPtr` , `CComQIPtr` , lub `_com_ptr_t` obiekty w klasie stylu kontenera. Jest to najczęściej konieczne w przypadku kontenerów standardowej biblioteki języka C++ przed wsparciem standardu C++ 11, ale Kontenery biblioteki standardowej języka C++ 11 automatycznie pracują z typami, które mają przeciążony `operator&()` . Biblioteka standardowa realizuje ją wewnętrznie przy użyciu [std:: AddressOf](../../standard-library/memory-functions.md#addressof) , aby uzyskać prawdziwe adresy obiektów.
 
@@ -73,7 +74,7 @@ Zwykle, `CAdapt` gdy chcesz przechowywać `CComBSTR` , `CComPtr` , `CComQIPtr` ,
 
 **Nagłówek:** atlcomcli. h
 
-## <a name="cadaptcadapt"></a><a name="cadapt"></a>CAdapt:: CAdapt
+## <a name="cadaptcadapt"></a><a name="cadapt"></a> CAdapt:: CAdapt
 
 Konstruktory umożliwiają Konstruowanie obiektu adaptera, skopiowane z obiektu typu dostosowanego lub skopiowane z innego obiektu adaptera.
 
@@ -93,7 +94,7 @@ Zmienna typu dostosowanego do kopiowania do nowo skonstruowanego obiektu adapter
 *rSrCA*<br/>
 Obiekt karty, którego zawarte dane powinny zostać skopiowane (lub przeniesione) do nowo skonstruowanego obiektu adaptera.
 
-## <a name="cadaptm_t"></a><a name="m_t"></a>CAdapt:: m_T
+## <a name="cadaptm_t"></a><a name="m_t"></a> CAdapt:: m_T
 
 Przechowuje dane, które są dostosowywane.
 
@@ -105,7 +106,7 @@ T m_T;
 
 **`public`** Dostęp do tego elementu członkowskiego danych można uzyskać bezpośrednio lub pośrednio z [operatorem const t&](#operator_const_t_amp) i [operatorem t&](#operator_t_amp).
 
-## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt:: operator const T&amp;
+## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a> CAdapt:: operator const T&amp;
 
 Zwraca **`const`** odwołanie do elementu członkowskiego [m_T](#m_t) , co umożliwia podtraktowanie obiektu adaptera tak, jakby był obiektem typu *T*.
 
@@ -117,7 +118,7 @@ operator const T&() const;
 
 **`const`** Odwołanie do `m_T` .
 
-## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt:: operator T&amp;
+## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a> CAdapt:: operator T&amp;
 
 Zwraca odwołanie do elementu członkowskiego [m_T](#m_t) , co umożliwia podtraktowanie obiektu adaptera tak, jakby był obiektem typu *T*.
 
@@ -129,7 +130,7 @@ operator T&();
 
 Odwołanie do `m_T` .
 
-## <a name="cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt:: operator&lt;
+## <a name="cadaptoperator-lt"></a><a name="operator_lt"></a> CAdapt:: operator &lt;
 
 Porównuje obiekt typu dostosowanego z [m_T](#m_t).
 
@@ -146,9 +147,9 @@ Odwołanie do obiektu, który ma zostać porównany.
 
 Wynik porównania między `m_T` i *RSRC*.
 
-## <a name="cadaptoperator-"></a><a name="operator_eq"></a>CAdapt:: operator =
+## <a name="cadaptoperator-"></a><a name="operator_eq"></a> CAdapt:: operator =
 
-Operator przypisania przypisuje argument, *RSRC*do elementu członkowskiego danych [m_T](#m_t) i zwraca bieżący obiekt adaptera.
+Operator przypisania przypisuje argument, *RSRC* do elementu członkowskiego danych [m_T](#m_t) i zwraca bieżący obiekt adaptera.
 
 ```cpp
 CAdapt& operator= (const T& rSrc);
@@ -168,7 +169,7 @@ Odwołanie do obiektu, który ma zostać przeniesiony.
 
 Odwołanie do bieżącego obiektu.
 
-## <a name="cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt:: operator = =
+## <a name="cadaptoperator-"></a><a name="operator_eq_eq"></a> CAdapt:: operator = =
 
 Porównuje obiekt typu dostosowanego z [m_T](#m_t).
 
@@ -185,6 +186,6 @@ Odwołanie do obiektu, który ma zostać porównany.
 
 Wynik porównania między *m_T* i *RSRC*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

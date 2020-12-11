@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wywoływanie funkcji DLL z aplikacji Visual Basic'
 title: Wywoływanie funkcji DLL z aplikacji języka Visual Basic
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 8d792dac45d69a0857bda551d1f3c03fc3d03d1c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c9a66a4d6dc9a8e3cc6e8b8a80584d430f12562
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156986"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Wywoływanie funkcji DLL z aplikacji języka Visual Basic
 
@@ -70,6 +71,6 @@ W przypadku bibliotek DLL, które mają być wywoływane przez programy w Visual
 
 - [Nazwy ozdobione](reference/decorated-names.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

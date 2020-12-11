@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAtlArray'
 title: Klasa CAtlArray
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ae3f5aef84cac64adba20ef438f5063abda098e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833845"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158429"
 ---
 # <a name="catlarray-class"></a>Klasa CAtlArray
 
@@ -45,7 +46,7 @@ class CAtlArray
 
 ### <a name="parameters"></a>Parametry
 
-*E*<br/>
+*Adres*<br/>
 Typ danych, które mają być przechowywane w tablicy.
 
 *ETraits*<br/>
@@ -333,7 +334,7 @@ Tablica, która ma zostać wstawiona.
 
 ### <a name="remarks"></a>Uwagi
 
-Elementy z tablicy *Panew* są kopiowane do obiektu Array, zaczynając *od elementu*ispoczątku. Istniejące elementy tablicy są przenoszone, aby uniknąć ich nadpisania.
+Elementy z tablicy *Panew* są kopiowane do obiektu Array, zaczynając *od elementu* ispoczątku. Istniejące elementy tablicy są przenoszone, aby uniknąć ich nadpisania.
 
 W kompilacjach debugowania ATLASSERT zostanie zgłoszony, jeśli `CAtlArray` obiekt jest nieprawidłowy lub jeśli wskaźnik *Panew* ma wartość null lub jest nieprawidłowy.
 
@@ -547,7 +548,7 @@ Zamienia wartość elementu wskazywanego przez indeks. Jeśli wartość *IElemen
 
 [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykład MMXSwarm](../../overview/visual-cpp-samples.md)<br/>
 [Przykład DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>

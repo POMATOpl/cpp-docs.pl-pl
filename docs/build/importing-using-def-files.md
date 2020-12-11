@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: importowanie przy użyciu plików DEF'
 title: Importowanie przy użyciu plików DEF
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: e4ac48dc013874c240411f78a733d32e116df25d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9eb4face47bf999daa8f969282cc621708a76006
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156154"
 ---
 # <a name="importing-using-def-files"></a>Importowanie przy użyciu plików DEF
 
@@ -28,7 +29,7 @@ EXPORTS
 
 W poniższej tabeli przedstawiono przyczynę.
 
-|Słowo kluczowe|Emituje w bibliotece import|Eksportowanie|
+|Słowo kluczowe|Emituje w bibliotece import|Eksporty|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
@@ -61,6 +62,6 @@ Użycie stałej jest bardziej ryzykowne, ponieważ jeśli zapomnisz użyć dodat
 
 Bieżący konsolidator MSVC wyświetla ostrzeżenie, jeśli w pliku. def zostanie wyświetlona stała dla tego przypadku. Jedyną przyczyną użycia stałej jest to, że nie można ponownie skompilować pliku obiektu, w którym plik nagłówka nie został wystawiony **`__declspec(dllimport)`** na prototypie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie do aplikacji](importing-into-an-application.md)

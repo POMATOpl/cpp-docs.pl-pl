@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej o programie: Uruchamianie programu jako serwera lokalnego'
 title: Uruchamianie programu jako serwera lokalnego
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [ATL], running services as local server
 - ATL services, running as local servers
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
-ms.openlocfilehash: a412814fc5f3900a248f779501e2720b72287e57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdf3cef0773769318d68964b28bb60ca66666d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157494"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Uruchamianie programu jako serwera lokalnego
 
-Jeśli program działa jako usługa jest wygodne, można tymczasowo zmienić rejestru, więc, że program jest uruchamiany jako normalna serwera lokalnego. Po prostu Zmień nazwę `LocalService` wartości w obszarze identyfikator aplikacji, który `_LocalService` i upewnij się, `LocalServer32` klucza w ramach Twojego identyfikatora CLSID jest poprawnie ustawiony. (Należy pamiętać, że za pomocą DCOMCNFG, aby określić, że Twoja aplikacja powinna zostać uruchomiona na innym komputerze zmienia nazwę Twojego `LocalServer32` klucza `_LocalServer32`.) Uruchamianie programu jako serwera lokalnego zajmuje kilka sekund podczas uruchamiania, ponieważ wywołanie `StartServiceCtrlDispatcher` w `CAtlServiceModuleT::Start` zajmuje kilka sekund, zanim zakończy się niepowodzeniem.
+Jeśli Uruchamianie programu jako usługi jest niewygodne, można tymczasowo zmienić rejestr, aby program był uruchamiany jako normalny serwer lokalny. Wystarczy zmienić nazwę `LocalService` wartości w identyfikatorze AppID na `_LocalService` i upewnić się, że `LocalServer32` klucz w obszarze CLSID został poprawnie ustawiony. (Należy pamiętać, że przy użyciu programu DCOMCNFG, aby określić, że aplikacja powinna być uruchamiana na innym komputerze, zmienia nazwę `LocalServer32` klucza na `_LocalServer32` ). Uruchomienie programu jako serwera lokalnego zajmuje kilka sekund podczas uruchamiania, ponieważ wywołanie `StartServiceCtrlDispatcher` w `CAtlServiceModuleT::Start` ciągu kilku sekund przed zakończeniem się niepowodzeniem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wskazówki dotyczące debugowania](../atl/debugging-tips.md)
+[Porady dotyczące debugowania](../atl/debugging-tips.md)

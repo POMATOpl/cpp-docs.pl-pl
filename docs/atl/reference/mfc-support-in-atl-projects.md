@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: obsługa MFC w projektach ATL'
 title: Obsługa MFC w projektach ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
-ms.openlocfilehash: 0aece6805f1de987b0164f405e50b99fd706fef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8614bfdd5320e0ecdf34cc96251fa8a20f2dede9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157922"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Obsługa MFC w projektach ATL
 
-Jeśli wybierzesz **obsługi MFC** w Kreatorze projektu ATL projektu deklaruje aplikacji jako obiekt aplikacji MFC (klasy). Projekt inicjuje biblioteki MFC i tworzy wystąpienia klasy (klasy *ProjName*) który jest tworzony na podstawie [CWinApp](../../mfc/reference/cwinapp-class.md).
+W przypadku wybrania opcji **Obsługa MFC** w Kreatorze projektu ATL, projekt deklaruje aplikację jako obiekt aplikacji MFC (Klasa). Projekt inicjuje bibliotekę MFC i tworzy wystąpienie klasy ( *Projname*), która pochodzi od [CWinApp](../../mfc/reference/cwinapp-class.md).
 
-Ta opcja jest dostępna dla nonattributed projektów ATL DLL.
+Ta opcja jest dostępna tylko dla projektów bibliotek DLL ATL, które nie są atrybutami.
 
 ```
 class CProjNameApp : public CWinApp
@@ -48,9 +49,9 @@ int CProjNameApp::ExitInstance()
 }
 ```
 
-Możesz wyświetlić klasę obiektu aplikacji i jej `InitInstance` i `ExitInstance` funkcji w widoku klas.
+Można wyświetlić klasy obiektów aplikacji i jej `InitInstance` `ExitInstance` funkcje oraz w widok klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o interfejsie IWorkerThreadClient
 title: IWorkerThreadClient, interfejs
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: aa72f090a006d6936339582a919b0faf5cab6b03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb9113c9380453dad9f647fa2f5a2095ff12cea7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157987"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient, interfejs
 
@@ -36,7 +37,7 @@ __interface IWorkerThreadClient
 |Nazwa|Opis|
 |-|-|
 |[Funkcja](#closehandle)|Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.|
-|[Realizacja](#execute)|Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem zostanie zasygnalizowane.|
+|[Wykonaj polecenie](#execute)|Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem zostanie zasygnalizowane.|
 
 ## <a name="remarks"></a>Uwagi
 

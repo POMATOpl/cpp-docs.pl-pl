@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Eksportowanie z biblioteki DLL przy użyciu plików DEF'
 title: Eksportowanie z biblioteki DLL przy użyciu plików DEF
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5be5f2c4a5f6db5f1983da940d8a336f02c938f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156531"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Eksportowanie z biblioteki DLL przy użyciu plików DEF
 
@@ -34,7 +35,7 @@ EXPORTS
    Min   @4
 ```
 
-Jeśli użyjesz [kreatora MFC DLL](../mfc/reference/mfc-dll-wizard.md) do utworzenia biblioteki MFC DLL, Kreator tworzy plik szkieletu i automatycznie dodaje go do projektu. Dodaj nazwy funkcji, które mają zostać wyeksportowane do tego pliku. W przypadku bibliotek DLL innych niż MFC Utwórz sam plik DEF i dodaj go do projektu. Następnie przejdź do **Project**pozycji  >  **Właściwości**projektu  >  **konsolidator**  >  **wejściowy**  >  **plik definicji modułu** i wprowadź nazwę pliku DEF. Powtórz ten krok dla każdej konfiguracji i platformy lub wykonaj wszystkie czynności jednocześnie, wybierając kolejno pozycje **Konfiguracja = wszystkie konfiguracje**i **platforma = wszystkie platformy**.
+Jeśli użyjesz [kreatora MFC DLL](../mfc/reference/mfc-dll-wizard.md) do utworzenia biblioteki MFC DLL, Kreator tworzy plik szkieletu i automatycznie dodaje go do projektu. Dodaj nazwy funkcji, które mają zostać wyeksportowane do tego pliku. W przypadku bibliotek DLL innych niż MFC Utwórz sam plik DEF i dodaj go do projektu. Następnie przejdź do pozycji  >  **Właściwości** projektu  >  **konsolidator**  >  **wejściowy**  >  **plik definicji modułu** i wprowadź nazwę pliku DEF. Powtórz ten krok dla każdej konfiguracji i platformy lub wykonaj wszystkie czynności jednocześnie, wybierając kolejno pozycje **Konfiguracja = wszystkie konfiguracje** i **platforma = wszystkie platformy**.
 
 Jeśli eksportujesz funkcje w pliku języka C++, musisz umieścić nazwy dekoracyjne w pliku DEF lub zdefiniować eksportowane funkcje ze standardowym powiązaniem C przy użyciu elementu extern "C". Jeśli trzeba umieścić nazwy dekoracyjne w pliku DEF, można je uzyskać za pomocą narzędzia [polecenia DUMPBIN](../build/reference/dumpbin-reference.md) lub za pomocą opcji konsolidatora [/map](../build/reference/map-generate-mapfile.md) . Należy zauważyć, że nazwy dekoracyjne wytwarzane przez kompilator są specyficzne dla kompilatora. Jeśli umieścisz dekoracyjne nazwy wytwarzane przez kompilator języka Microsoft C++ (MSVC) w pliku DEF, aplikacje, które łączą się z biblioteką DLL, muszą być również skompilowane przy użyciu tej samej wersji programu MSVC, aby nazwy dekoracyjne w aplikacji wywołującej odpowiadały wyeksportowanym nazwom w pliku DLL.
 
@@ -85,6 +86,6 @@ Należy pamiętać, że MFC używa plików DEF do eksportowania funkcji i klas z
 
 - [Importy wzajemne](mutual-imports.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

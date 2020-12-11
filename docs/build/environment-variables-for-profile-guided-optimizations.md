@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat zmiennych środowiskowych dla optymalizacji Profile-Guided
 title: Zmienne środowiskowe dla optymalizacji sterowanych profilem
 ms.date: 03/14/2018
 helpviewer_keywords:
 - profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-ms.openlocfilehash: 099e57f1ac69223adafe7bec1af4cc3452915e86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd78db781fc19b7ecfd451e01dc046b21bd87d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195276"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156674"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Zmienne środowiskowe dla optymalizacji sterowanych profilem
 
@@ -21,7 +22,7 @@ Istnieją trzy zmienne środowiskowe, które mają wpływ na scenariusze testowe
 
 - **VCPROFILE_PATH** umożliwia określenie folderu używanego dla plików. pgc.
 
-**Zmienne środowiskowe PogoSafeMode i VCPROFILE_ALLOC_SCALE są przestarzałe, począwszy od programu Visual Studio 2015.** Opcje konsolidatora [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) i [/USEPROFILE](reference/useprofile.md) określają takie samo zachowanie konsolidatora jak te zmienne środowiskowe.
+**Zmienne środowiskowe PogoSafeMode i VCPROFILE_ALLOC_SCALE są przestarzałe, począwszy od programu Visual Studio 2015.** Opcje konsolidatora [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) i  [/USEPROFILE](reference/useprofile.md) określają takie samo zachowanie konsolidatora jak te zmienne środowiskowe.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
@@ -37,7 +38,7 @@ Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć zmiennej śro
 
 ### <a name="pogosafemode-syntax"></a>Składnia PogoSafeMode
 
-> **Set PogoSafeMode**[**=**_Value_]
+> **Set PogoSafeMode**[ **=** _Value_]
 
 Ustaw **PogoSafeMode** na dowolną wartość, aby włączyć tryb awaryjny. Ustaw bez wartości, aby wyczyścić poprzednią wartość i ponownie włączyć tryb szybki.
 
@@ -49,9 +50,9 @@ Zmodyfikuj zmienną środowiskową **VCPROFILE_ALLOC_SCALE** , aby zmienić ilo�
 
 ### <a name="vcprofile_alloc_scale-syntax"></a>Składnia VCPROFILE_ALLOC_SCALE
 
-> **Ustawianie VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **Ustawianie VCPROFILE_ALLOC_SCALE**[ __=__ *scale_value*]
 
-Parametr *scale_value* to współczynnik skalowania ilości pamięci, która ma być używana w scenariuszach testowych.  Domyślnym ustawieniem jest 1. Na przykład ten wiersz polecenia ustawia współczynnik skalowania na 2:
+Parametr *scale_value* to współczynnik skalowania ilości pamięci, która ma być używana w scenariuszach testowych.  Wartość domyślna to 1. Na przykład ten wiersz polecenia ustawia współczynnik skalowania na 2:
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
@@ -61,7 +62,7 @@ Użyj zmiennej środowiskowej **VCPROFILE_PATH** , aby określić katalog do two
 
 ### <a name="vcprofile_path-syntax"></a>Składnia VCPROFILE_PATH
 
-> **Ustawianie VCPROFILE_PATH**[**=**_ścieżka_]
+> **Ustawianie VCPROFILE_PATH**[ **=** _ścieżka_]
 
 Ustaw parametr *Path* na ścieżkę katalogu, w której chcesz dodać pliki. pgc. Na przykład ten wiersz polecenia ustawia folder na C:\Profile:
 
@@ -69,6 +70,6 @@ Ustaw parametr *Path* na ścieżkę katalogu, w której chcesz dodać pliki. pgc
 
 ## <a name="see-also"></a>Zobacz też
 
-[Optymalizacje sterowane profilem](profile-guided-optimizations.md)<br/>
+[Optymalizacje profilowane](profile-guided-optimizations.md)<br/>
 [/GENPROFILE i/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/USEPROFILE](reference/useprofile.md)<br/>

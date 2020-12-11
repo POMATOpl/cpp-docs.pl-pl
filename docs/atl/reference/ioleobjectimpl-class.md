@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IOleObjectImpl'
 title: Klasa IOleObjectImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,19 +50,19 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: 86d82aea2e92eb99903284abe4ac03478369616c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8e9fd7dc370ee3f0861ab152061e4a0b96465ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158182"
 ---
 # <a name="ioleobjectimpl-class"></a>Klasa IOleObjectImpl
 
-Ta klasa `IUnknown` implementuje i jest głównym interfejsem, za pośrednictwem którego kontener komunikuje się z formantem.
+Ta klasa implementuje `IUnknown` i jest interfejsem głównym, za pomocą którego kontener komunikuje się z kontrolką.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -73,7 +74,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Twoja klasa, pochodząca od `IOleObjectImpl`.
+Klasa, która pochodzi od `IOleObjectImpl` .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -81,52 +82,52 @@ Twoja klasa, pochodząca od `IOleObjectImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IOleObjectImpl::Doradzić](#advise)|Ustanawia połączenie doradcze z formantem.|
-|[IOleObjectImpl::Zamknij](#close)|Zmienia stan sterowania z uruchomionego na załadowany.|
-|[IOleObjectImpl::DoVerb](#doverb)|Informuje formant, aby wykonać jedną z jego wyliczonych akcji.|
-|[IOleObjectImpl::DoVerbDiscardUndo](#doverbdiscardundo)|Informuje formant, aby odrzucić każdy stan cofania, który utrzymuje.|
-|[IOleObjectImpl::DoVerbHide](#doverbhide)|Informuje formant, aby usunąć jego interfejs użytkownika z widoku.|
-|[IOleObjectImpl::DoVerbInPlaceActivate](#doverbinplaceactivate)|Uruchamia formant i instaluje jego okno, ale nie instaluje interfejsu użytkownika formantu.|
-|[IOleObjectImpl::DoVerbOpen](#doverbopen)|Powoduje, że formant ma być otwarty edytowany w osobnym oknie.|
-|[IOleObjectImpl::DoVerbPrimary](#doverbprimary)|Wykonuje określoną akcję, gdy użytkownik kliknie dwukrotnie formant. Formant definiuje akcję, zwykle, aby aktywować formant w miejscu.|
-|[IOleObjectImpl::DoVerbShow](#doverbshow)|Pokazuje nowo wstawiony formant dla użytkownika.|
-|[IOleObjectImpl::DoVerbUIActivate](#doverbuiactivate)|Aktywuje formant w miejscu i pokazuje interfejs użytkownika formantu, takich jak menu i paski narzędzi.|
-|[IOleObjectImpl::EnumAdvise](#enumadvise)|Wylicza połączenia doradcze formantu.|
-|[IOleObjectImpl::EnumVerbs](#enumverbs)|Wylicza akcje dla formantu.|
-|[IOleObjectImpl::GetClientSite](#getclientsite)|Pobiera lokację klienta formantu.|
-|[IOleObjectImpl::GetClipboardData](#getclipboarddata)|Pobiera dane ze Schowka. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::GetExtent](#getextent)|Pobiera zasięg obszaru wyświetlania formantu.|
+|[IOleObjectImpl:: Advise](#advise)|Nawiązuje połączenie doradcze z kontrolką.|
+|[IOleObjectImpl:: Close](#close)|Zmienia stan formantu z uruchamiania na załadowany.|
+|[IOleObjectImpl::D oVerb](#doverb)|Instruuje formant, aby wykonał jedną z wyliczonych akcji.|
+|[IOleObjectImpl::D oVerbDiscardUndo](#doverbdiscardundo)|Informuje formant, aby odrzucił stan wycofania, który jest konserwowany.|
+|[IOleObjectImpl::D oVerbHide](#doverbhide)|Instruuje formant, aby usunął interfejs użytkownika z widoku.|
+|[IOleObjectImpl::D oVerbInPlaceActivate](#doverbinplaceactivate)|Uruchamia formant i instaluje jego okno, ale nie instaluje interfejsu użytkownika kontrolki.|
+|[IOleObjectImpl::D oVerbOpen](#doverbopen)|Powoduje, że kontrolka jest otwierana w osobnym oknie.|
+|[IOleObjectImpl::D oVerbPrimary](#doverbprimary)|Wykonuje określoną akcję po dwukrotnym kliknięciu kontrolki przez użytkownika. Formant definiuje akcję, zazwyczaj w celu aktywowania kontrolki w miejscu.|
+|[IOleObjectImpl::D oVerbShow](#doverbshow)|Pokazuje nowo wstawiony formant użytkownikowi.|
+|[IOleObjectImpl::D oVerbUIActivate](#doverbuiactivate)|Uaktywnia formant w miejscu i pokazuje interfejs użytkownika kontrolki, taki jak menu i paski narzędzi.|
+|[IOleObjectImpl::EnumAdvise](#enumadvise)|Wylicza połączenia doradcze kontrolki.|
+|[IOleObjectImpl::EnumVerbs](#enumverbs)|Wylicza akcje dla kontrolki.|
+|[IOleObjectImpl::GetClientSite](#getclientsite)|Pobiera lokację klienta kontrolki.|
+|[IOleObjectImpl::GetClipboardData](#getclipboarddata)|Pobiera dane ze schowka. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleObjectImpl:: getzakres](#getextent)|Pobiera zakres obszaru wyświetlania formantu.|
 |[IOleObjectImpl::GetMiscStatus](#getmiscstatus)|Pobiera stan formantu.|
-|[IOleObjectImpl::GetMoniker](#getmoniker)|Pobiera moniker formantu. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::GetUserClassID](#getuserclassid)|Pobiera identyfikator klasy formantu.|
-|[IOleObjectImpl::GetUserType](#getusertype)|Pobiera nazwę typu użytkownika formantu.|
-|[IOleObjectImpl::InitFromData](#initfromdata)|Inicjuje formant z wybranych danych. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::IsUpToDate](#isuptodate)|Sprawdza, czy kontrola jest aktualna. Implementacja ATL zwraca S_OK.|
-|[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po odrzuceniu stanu cofania.|
-|[IOleObjectImpl::OnPostVerbHide](#onpostverbhide)|Wywoływane przez [DoVerbHide](#doverbhide) po formancie jest ukryty.|
-|[IOleObjectImpl::OnPostVerbInPlaceActivate](#onpostverbinplaceactivate)|Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) po włączeniu formantu w miejscu.|
-|[IOleObjectImpl::OnPostVerbOpen](#onpostverbopen)|Wywoływane przez [DoVerbOpen](#doverbopen) po otwarciu formantu do edycji w osobnym oknie.|
-|[IOleObjectImpl::OnPostVerbShow](#onpostverbshow)|Wywoływane przez [DoVerbShow](#doverbshow) po kontroli został widoczny.|
-|[IOleObjectImpl::OnPostVerbUIActivate](#onpostverbuiactivate)|Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) po aktywacji interfejsu użytkownika formantu.|
-|[IOleObjectImpl::OnPreVerbDiscardUndo](#onpreverbdiscardundo)|Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) przed odrzuceniem stanu cofania.|
-|[IOleObjectImpl::OnPreVerbHide](#onpreverbhide)|Wywoływane przez [DoVerbHide](#doverbhide) przed formant jest ukryty.|
-|[IOleObjectImpl::OnPreVerbInPlaceActivate](#onpreverbinplaceactivate)|Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) przed aktywowaniem formantu w miejscu.|
-|[IOleObjectImpl::OnPreVerbOpen](#onpreverbopen)|Wywoływane przez [DoVerbOpen](#doverbopen) przed otwarciem formantu do edycji w osobnym oknie.|
-|[IOleObjectImpl::OnPreVerbShow](#onpreverbshow)|Wywoływane przez [DoVerbShow](#doverbshow) przed formant został widoczna.|
-|[IOleObjectImpl::OnPreVerbUIActivate](#onpreverbuiactivate)|Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) przed interfejsem użytkownika formantu został aktywowany.|
+|[IOleObjectImpl:: GetMoniker](#getmoniker)|Pobiera moniker kontrolki. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleObjectImpl::GetUserClassID](#getuserclassid)|Pobiera identyfikator klasy kontrolki.|
+|[IOleObjectImpl:: GetUserType](#getusertype)|Pobiera nazwę typu użytkownika kontrolki.|
+|[IOleObjectImpl::InitFromData](#initfromdata)|Inicjuje kontrolkę z wybranych danych. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleObjectImpl::IsUpToDate](#isuptodate)|Sprawdza, czy kontrolka jest aktualna. Implementacja ATL zwraca S_OK.|
+|[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po odrzuconym stanie cofania.|
+|[IOleObjectImpl::OnPostVerbHide](#onpostverbhide)|Wywoływane przez [DoVerbHide](#doverbhide) , gdy kontrolka jest ukryta.|
+|[IOleObjectImpl::OnPostVerbInPlaceActivate](#onpostverbinplaceactivate)|Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) po aktywowaniu kontrolki.|
+|[IOleObjectImpl::OnPostVerbOpen](#onpostverbopen)|Wywoływane przez [DoVerbOpen](#doverbopen) po otwarciu kontrolki do edycji w osobnym oknie.|
+|[IOleObjectImpl::OnPostVerbShow](#onpostverbshow)|Wywoływane przez [DoVerbShow](#doverbshow) po przeprowadzeniu widoczności kontrolki.|
+|[IOleObjectImpl::OnPostVerbUIActivate](#onpostverbuiactivate)|Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) po aktywowaniu interfejsu użytkownika kontrolki.|
+|[IOleObjectImpl::OnPreVerbDiscardUndo](#onpreverbdiscardundo)|Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) przed usunięciem stanu cofania.|
+|[IOleObjectImpl::OnPreVerbHide](#onpreverbhide)|Wywoływane przez [DoVerbHide](#doverbhide) przed ukryciem formantu.|
+|[IOleObjectImpl::OnPreVerbInPlaceActivate](#onpreverbinplaceactivate)|Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) przed aktywowaniem kontrolki.|
+|[IOleObjectImpl::OnPreVerbOpen](#onpreverbopen)|Wywoływane przez [DoVerbOpen](#doverbopen) przed otwarciem kontrolki do edycji w osobnym oknie.|
+|[IOleObjectImpl::OnPreVerbShow](#onpreverbshow)|Wywoływane przez [DoVerbShow](#doverbshow) przed udostępnieniem formantu.|
+|[IOleObjectImpl::OnPreVerbUIActivate](#onpreverbuiactivate)|Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) przed aktywowaniem interfejsu użytkownika kontrolki.|
 |[IOleObjectImpl::SetClientSite](#setclientsite)|Informuje formant o swojej lokacji klienta w kontenerze.|
-|[IOleObjectImpl::SetColorScheme](#setcolorscheme)|Zaleca schemat kolorów do aplikacji formantu, jeśli istnieje. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::SetExtent](#setextent)|Ustawia zasięg obszaru wyświetlania formantu.|
-|[IOleObjectImpl::SetHostNames](#sethostnames)|Informuje formantu nazwy aplikacji kontenera i dokumentu kontenera.|
-|[IOleObjectImpl::SetMoniker](#setmoniker)|Informuje formant, co jest jego moniker. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleObjectImpl::Unadvise](#unadvise)|Usuwa połączenie doradcze z formantem.|
-|[IOleObjectImpl::Aktualizacja](#update)|Aktualizuje formant. Implementacja ATL zwraca S_OK.|
+|[IOleObjectImpl::SetColorScheme](#setcolorscheme)|Zaleca schemat kolorów dla aplikacji kontrolki, jeśli istnieje. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleObjectImpl:: setzakres](#setextent)|Ustawia zakres obszaru wyświetlania formantu.|
+|[IOleObjectImpl:: SetHostNames](#sethostnames)|Informuje kontrolkę o nazwie aplikacji kontenera i dokumentu kontenera.|
+|[IOleObjectImpl:: SetMoniker](#setmoniker)|Informuje formant o tym, jaki jest jego moniker. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleObjectImpl:: Unadvise](#unadvise)|Usuwa połączenie doradcze z kontrolką.|
+|[IOleObjectImpl:: Update](#update)|Aktualizuje formant. Implementacja ATL zwraca S_OK.|
 
 ## <a name="remarks"></a>Uwagi
 
-Interfejs [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) jest interfejsem głównym, za pośrednictwem którego kontener komunikuje się z formantem. Klasa `IOleObjectImpl` zapewnia domyślną implementację tego `IUnknown` interfejsu i implementuje przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
+Interfejs [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) jest interfejsem głównym, za pomocą którego kontener komunikuje się z kontrolką. Klasa `IOleObjectImpl` zapewnia domyślną implementację tego interfejsu i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Podobne artykuły** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), Tworzenie projektu [ATL](../../atl/reference/creating-an-atl-project.md)
+ [Samouczki dotyczące biblioteki](../../atl/active-template-library-atl-tutorial.md)ATL, [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -136,11 +137,11 @@ Interfejs [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) jest inte
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-## <a name="ioleobjectimpladvise"></a><a name="advise"></a>IOleObjectImpl::Doradzić
+## <a name="ioleobjectimpladvise"></a><a name="advise"></a> IOleObjectImpl:: Advise
 
-Ustanawia połączenie doradcze z formantem.
+Nawiązuje połączenie doradcze z kontrolką.
 
 ```
 STDMETHOD(Advise)(
@@ -150,11 +151,11 @@ STDMETHOD(Advise)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::Doradzić](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) w windows SDK.
+Zobacz [IOleObject:: Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) w Windows SDK.
 
-## <a name="ioleobjectimplclose"></a><a name="close"></a>IOleObjectImpl::Zamknij
+## <a name="ioleobjectimplclose"></a><a name="close"></a> IOleObjectImpl:: Close
 
-Zmienia stan sterowania z uruchomionego na załadowany.
+Zmienia stan formantu z uruchamiania na załadowany.
 
 ```
 STDMETHOD(Close)(DWORD dwSaveOption);
@@ -162,15 +163,15 @@ STDMETHOD(Close)(DWORD dwSaveOption);
 
 ### <a name="remarks"></a>Uwagi
 
-Dezaktywuje formant i niszczy okno formantu, jeśli istnieje. Jeśli element członkowski danych klasy kontrolnej [CComControlBase::m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) ma wartość TRUE, a parametr *dwSaveOption* jest OLECLOSE_SAVEIFDIRTY lub OLECLOSE_PROMPTSAVE, właściwości formantu są zapisywane przed zamknięciem.
+Dezaktywuje formant i niszczy okno kontroli, jeśli istnieje. Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) ma wartość true, a parametr *dwSaveOption* ma wartość OLECLOSE_SAVEIFDIRTY lub OLECLOSE_PROMPTSAVE, właściwości kontrolki są zapisywane przed zamknięciem.
 
-Wskaźniki przechowywane w grupach kontrolnych elementów członkowskich danych [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) i [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) są zwalniane, a elementy członkowskie danych [CComControlBase::m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)i [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) są ustawione na FALSE.
+Wskaźniki przechowywane w elementach członkowskich danych klasy kontrolki [CComControlBase:: m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) i [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) zostały wydane, a elementy członkowskie danych [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase:: m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)i [CComControlBase:: m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) są ustawione na wartość false.
 
-Zobacz [IOleObject::Zamknij](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) w windows SDK.
+Zobacz [IOleObject:: Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) w Windows SDK.
 
-## <a name="ioleobjectimpldoverb"></a><a name="doverb"></a>IOleObjectImpl::DoVerb
+## <a name="ioleobjectimpldoverb"></a><a name="doverb"></a> IOleObjectImpl::D oVerb
 
-Informuje formant, aby wykonać jedną z jego wyliczonych akcji.
+Instruuje formant, aby wykonał jedną z wyliczonych akcji.
 
 ```
 STDMETHOD(DoVerb)(
@@ -184,24 +185,24 @@ STDMETHOD(DoVerb)(
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od `iVerb`wartości , jedna `DoVerb` z funkcji pomocnika ATL jest wywoływana w następujący sposób:
+W zależności od wartości `iVerb` , jedna z `DoVerb` funkcji pomocnika ATL jest wywoływana w następujący sposób:
 
-|*iVerb* Wartość|Funkcja pomocnika DoVerb o nazwie|
+|*iVerb* Wartościami|Wywołano funkcję pomocnika DoVerb|
 |-------------------|-----------------------------------|
 |OLEIVERB_DISCARDUNDOSTATE|[DoVerbDiscardUndo](#doverbdiscardundo)|
-|OLEIVERB_HIDE|[DoVerbHide (DoVerbHide)](#doverbhide)|
-|OLEIVERB_INPLACEACTIVATE|[DoVerbInPlaceAktywnie](#doverbinplaceactivate)|
+|OLEIVERB_HIDE|[DoVerbHide](#doverbhide)|
+|OLEIVERB_INPLACEACTIVATE|[DoVerbInPlaceActivate](#doverbinplaceactivate)|
 |OLEIVERB_OPEN|[DoVerbOpen](#doverbopen)|
-|OLEIVERB_PRIMARY|[DoVerbPrimary (DoVerbPrimary)](#doverbprimary)|
-|OLEIVERB_PROPERTIES|[CComControlBase::DoVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
-|OLEIVERB_SHOW|[DoVerbShow (DoVerbShow)](#doverbshow)|
-|OLEIVERB_UIACTIVATE|[DoVerbUIAktywuj](#doverbuiactivate)|
+|OLEIVERB_PRIMARY|[DoVerbPrimary](#doverbprimary)|
+|OLEIVERB_PROPERTIES|[CComControlBase::D oVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
+|OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|
+|OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|
 
-Zobacz [IOleObject::DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) w windows SDK.
+Zobacz [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) w Windows SDK.
 
-## <a name="ioleobjectimpldoverbdiscardundo"></a><a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo
+## <a name="ioleobjectimpldoverbdiscardundo"></a><a name="doverbdiscardundo"></a> IOleObjectImpl::D oVerbDiscardUndo
 
-Informuje formant, aby odrzucić każdy stan cofania, który utrzymuje.
+Informuje formant, aby odrzucił stan wycofania, który jest konserwowany.
 
 ```
 HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
@@ -209,19 +210,19 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*chcPosRec*<br/>
-[w] Wskaźnik do prostokąta kontenera chce formantu, aby wyciągnąć do.
+*prcPosRec*<br/>
+podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 
-*hwndRodziciela*<br/>
-[w] Uchwyt okna zawierającego formant.
+*hwndParent*<br/>
+podczas Uchwyt okna zawierającego formant.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca S_OK.
 
-## <a name="ioleobjectimpldoverbhide"></a><a name="doverbhide"></a>IOleObjectImpl::DoVerbHide
+## <a name="ioleobjectimpldoverbhide"></a><a name="doverbhide"></a> IOleObjectImpl::D oVerbHide
 
-Dezaktywuje i usuwa interfejs użytkownika formantu i ukrywa formant.
+Dezaktywuje i usuwa interfejs użytkownika kontrolki, a następnie ukrywa formant.
 
 ```
 HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
@@ -229,19 +230,19 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*chcPosRec*<br/>
-[w] Wskaźnik do prostokąta kontenera chce formantu, aby wyciągnąć do.
+*prcPosRec*<br/>
+podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 
-*hwndRodziciela*<br/>
-[w] Uchwyt okna zawierającego formant. Nie jest używany w implementacji ATL.
+*hwndParent*<br/>
+podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca S_OK.
 
-## <a name="ioleobjectimpldoverbinplaceactivate"></a><a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate
+## <a name="ioleobjectimpldoverbinplaceactivate"></a><a name="doverbinplaceactivate"></a> IOleObjectImpl::D oVerbInPlaceActivate
 
-Uruchamia formant i instaluje jego okno, ale nie instaluje interfejsu użytkownika formantu.
+Uruchamia formant i instaluje jego okno, ale nie instaluje interfejsu użytkownika kontrolki.
 
 ```
 HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -249,11 +250,11 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*chcPosRec*<br/>
-[w] Wskaźnik do prostokąta kontenera chce formantu, aby wyciągnąć do.
+*prcPosRec*<br/>
+podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 
-*hwndRodziciela*<br/>
-[w] Uchwyt okna zawierającego formant. Nie jest używany w implementacji ATL.
+*hwndParent*<br/>
+podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -261,11 +262,11 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Aktywuje formant w miejscu, wywołując [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). O ile element członkowski `m_bWindowOnly` danych `DoVerbInPlaceActivate` klasy kontrolnej nie ma właściwości PRAWDA, najpierw próbuje aktywować formant jako formant bez okien (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaCeSiteWindowless).](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) Jeśli to się nie powiedzie, funkcja próbuje aktywować formant za pomocą rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaCeSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Jeśli to się nie powiedzie, funkcja próbuje aktywować formant bez rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). Jeśli aktywacja zakończy się pomyślnie, funkcja powiadamia kontener, który został aktywowany.
+Uaktywnia formant w miejscu przez wywołanie [CComControlBase:: InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Chyba że element członkowski danych klasy kontroli `m_bWindowOnly` ma wartość true, `DoVerbInPlaceActivate` najpierw próbuje uaktywnić formant jako kontrolkę bez okna (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Jeśli to się nie powiedzie, funkcja próbuje uaktywnić formant z rozszerzonymi funkcjami (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Jeśli to się nie powiedzie, funkcja próbuje uaktywnić formant bez rozszerzonych funkcji (możliwe tylko wtedy, gdy kontener obsługuje [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). W przypadku pomyślnego aktywacji funkcja powiadamia kontener, że formant został aktywowany.
 
-## <a name="ioleobjectimpldoverbopen"></a><a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen
+## <a name="ioleobjectimpldoverbopen"></a><a name="doverbopen"></a> IOleObjectImpl::D oVerbOpen
 
-Powoduje, że formant ma być otwarty edytowany w osobnym oknie.
+Powoduje, że kontrolka jest otwierana w osobnym oknie.
 
 ```
 HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
@@ -273,19 +274,19 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*chcPosRec*<br/>
-[w] Wskaźnik do prostokąta kontenera chce formantu, aby wyciągnąć do.
+*prcPosRec*<br/>
+podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 
-*hwndRodziciela*<br/>
-[w] Uchwyt okna zawierającego formant.
+*hwndParent*<br/>
+podczas Uchwyt okna zawierającego formant.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca S_OK.
 
-## <a name="ioleobjectimpldoverbprimary"></a><a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary
+## <a name="ioleobjectimpldoverbprimary"></a><a name="doverbprimary"></a> IOleObjectImpl::D oVerbPrimary
 
-Definiuje akcję podjętą po dwukrotnym kliknięciu formantu przez użytkownika.
+Definiuje akcję wykonywaną po dwukrotnym kliknięciu kontrolki przez użytkownika.
 
 ```
 HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
@@ -293,11 +294,11 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*chcPosRec*<br/>
-[w] Wskaźnik do prostokąta kontenera chce formantu, aby wyciągnąć do.
+*prcPosRec*<br/>
+podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 
-*hwndRodziciela*<br/>
-[w] Uchwyt okna zawierającego formant.
+*hwndParent*<br/>
+podczas Uchwyt okna zawierającego formant.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -305,11 +306,11 @@ Jedna ze standardowych wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ustawiono wyświetlanie stron właściwości. Można zastąpić to w klasie formantu, aby wywołać inne zachowanie po dwukrotnym kliknięciu; na przykład odtwórz film lub bądź aktywny w miejscu.
+Domyślnie ustawione na wyświetlanie stron właściwości. Możesz przesłonić ten element w klasie kontrolki, aby wywołać inne zachowanie w przypadku dwukrotnego kliknięcia; na przykład Odtwórz wideo lub przejdź w miejscu aktywności.
 
-## <a name="ioleobjectimpldoverbshow"></a><a name="doverbshow"></a>IOleObjectImpl::DoVerbShow
+## <a name="ioleobjectimpldoverbshow"></a><a name="doverbshow"></a> IOleObjectImpl::D oVerbShow
 
-Informuje kontener, aby formant był widoczny.
+Instruuje kontener, aby formant był widoczny.
 
 ```
 HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -317,19 +318,19 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*chcPosRec*<br/>
-[w] Wskaźnik do prostokąta kontenera chce formantu, aby wyciągnąć do.
+*prcPosRec*<br/>
+podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 
-*hwndRodziciela*<br/>
-[w] Uchwyt okna zawierającego formant. Nie jest używany w implementacji ATL.
+*hwndParent*<br/>
+podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Jedna ze standardowych wartości HRESULT.
 
-## <a name="ioleobjectimpldoverbuiactivate"></a><a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate
+## <a name="ioleobjectimpldoverbuiactivate"></a><a name="doverbuiactivate"></a> IOleObjectImpl::D oVerbUIActivate
 
-Aktywuje interfejs użytkownika formantu i powiadamia kontener, że jego menu są zastępowane przez menu złożone.
+Aktywuje interfejs użytkownika kontrolki i powiadamia kontener, że jego menu są zastępowane przez menu złożone.
 
 ```
 HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -337,19 +338,19 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*chcPosRec*<br/>
-[w] Wskaźnik do prostokąta kontenera chce formantu, aby wyciągnąć do.
+*prcPosRec*<br/>
+podczas Wskaźnik do prostokąta, do którego ma zostać narysowany formant.
 
-*hwndRodziciela*<br/>
-[w] Uchwyt okna zawierającego formant. Nie jest używany w implementacji ATL.
+*hwndParent*<br/>
+podczas Uchwyt okna zawierającego formant. Nieużywane w implementacji ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Jedna ze standardowych wartości HRESULT.
 
-## <a name="ioleobjectimplenumadvise"></a><a name="enumadvise"></a>IOleObjectImpl::EnumAdvise
+## <a name="ioleobjectimplenumadvise"></a><a name="enumadvise"></a> IOleObjectImpl::EnumAdvise
 
-Dostarcza wyliczenie zarejestrowanych połączeń doradczych dla tego formantu.
+Dostarcza Wyliczenie zarejestrowanych połączeń doradczych dla tej kontrolki.
 
 ```
 STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
@@ -357,11 +358,11 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::EnumAdvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) w windows SDK.
+Zobacz [IOleObject:: enumAdvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) w Windows SDK.
 
-## <a name="ioleobjectimplenumverbs"></a><a name="enumverbs"></a>IOleObjectImpl::EnumVerbs
+## <a name="ioleobjectimplenumverbs"></a><a name="enumverbs"></a> IOleObjectImpl::EnumVerbs
 
-Dostarcza wyliczenie zarejestrowanych akcji (czasowników) dla `OleRegEnumVerbs`tej kontroli, wywołując .
+Dostarcza Wyliczenie zarejestrowanych akcji (czasowników) dla tej kontrolki przez wywołanie `OleRegEnumVerbs` .
 
 ```
 STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
@@ -369,13 +370,13 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ### <a name="remarks"></a>Uwagi
 
-Zlecenia można dodawać do pliku .rgs projektu. Na przykład zobacz CIRCCTL. rgs w próbce [CIRC.](../../overview/visual-cpp-samples.md)
+Do pliku. RGS projektu można dodać czasowniki. Na przykład zobacz CIRCCTL. RGS w przykładowym [cyklem](../../overview/visual-cpp-samples.md) .
 
-Zobacz [IOleObject::EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) w windows SDK.
+Zobacz [IOleObject:: EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) w Windows SDK.
 
-## <a name="ioleobjectimplgetclientsite"></a><a name="getclientsite"></a>IOleObjectImpl::GetClientSite
+## <a name="ioleobjectimplgetclientsite"></a><a name="getclientsite"></a> IOleObjectImpl::GetClientSite
 
-Umieszcza wskaźnik w elementów członkowskich danych klasy kontrolnej [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) w *ppClientSite* i zwiększa liczbę odwołań na wskaźniku.
+Umieszcza wskaźnik w elemencie członkowskim danych klasy kontrolki [CComControlBase:: m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) do *ppClientSite* i zwiększa liczbę odwołań na wskaźniku.
 
 ```
 STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
@@ -383,11 +384,11 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::GetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) w windows SDK.
+Zobacz [IOleObject:: GetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) w Windows SDK.
 
-## <a name="ioleobjectimplgetclipboarddata"></a><a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData
+## <a name="ioleobjectimplgetclipboarddata"></a><a name="getclipboarddata"></a> IOleObjectImpl::GetClipboardData
 
-Pobiera dane ze Schowka.
+Pobiera dane ze schowka.
 
 ```
 STDMETHOD(GetClipboardData)(
@@ -401,11 +402,11 @@ Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::GetClipboardData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) w windows SDK.
+Zobacz [IOleObject:: GetClipboardData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) w Windows SDK.
 
-## <a name="ioleobjectimplgetextent"></a><a name="getextent"></a>IOleObjectImpl::GetExtent
+## <a name="ioleobjectimplgetextent"></a><a name="getextent"></a> IOleObjectImpl:: getzakres
 
-Pobiera rozmiar wyświetlania formantu bieżącego w jednostkach HIMETRIC (0,01 milimetra na jednostkę).
+Pobiera rozmiar wyświetlania uruchomionej kontrolki w jednostkach HIMETRIC (0,01 milimetr na jednostkę).
 
 ```
 STDMETHOD(GetExtent)(
@@ -415,13 +416,13 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar jest przechowywany w elementów członkowskich danych klasy kontrolnej [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
+Rozmiar jest przechowywany w elemencie członkowskim danych klasy kontrolki [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
 
-Zobacz [IOleObject::GetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) w windows SDK.
+Zobacz [IOleObject:: getzakres](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) w Windows SDK.
 
-## <a name="ioleobjectimplgetmiscstatus"></a><a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus
+## <a name="ioleobjectimplgetmiscstatus"></a><a name="getmiscstatus"></a> IOleObjectImpl::GetMiscStatus
 
-Zwraca wskaźnik do zarejestrowanych informacji o `OleRegGetMiscStatus`stanie formantu przez wywołanie .
+Zwraca wskaźnik do zarejestrowanych informacji o stanie dla kontrolki przez wywołanie `OleRegGetMiscStatus` .
 
 ```
 STDMETHOD(GetMiscStatus)(
@@ -431,13 +432,13 @@ STDMETHOD(GetMiscStatus)(
 
 ### <a name="remarks"></a>Uwagi
 
-Informacje o stanie obejmują zachowania obsługiwane przez dane kontroli i prezentacji. Informacje o stanie można dodać do pliku .rgs projektu.
+Informacje o stanie obejmują zachowania obsługiwane przez kontrolkę i dane prezentacji. Do pliku. RGS projektu można dodać informacje o stanie.
 
-Zobacz [IOleObject::GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) w zestawie Windows SDK.
+Zobacz [IOleObject:: GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) w Windows SDK.
 
-## <a name="ioleobjectimplgetmoniker"></a><a name="getmoniker"></a>IOleObjectImpl::GetMoniker
+## <a name="ioleobjectimplgetmoniker"></a><a name="getmoniker"></a> IOleObjectImpl:: GetMoniker
 
-Pobiera moniker formantu.
+Pobiera moniker kontrolki.
 
 ```
 STDMETHOD(GetMoniker)(
@@ -452,11 +453,11 @@ Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::GetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) w windows SDK.
+Zobacz [IOleObject:: GetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) w Windows SDK.
 
-## <a name="ioleobjectimplgetuserclassid"></a><a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID
+## <a name="ioleobjectimplgetuserclassid"></a><a name="getuserclassid"></a> IOleObjectImpl::GetUserClassID
 
-Zwraca identyfikator klasy formantu.
+Zwraca identyfikator klasy kontrolki.
 
 ```
 STDMETHOD(GetUserClassID)(CLSID* pClsid);
@@ -464,11 +465,11 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::GetUserClassID](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) w windows SDK.
+Zobacz [IOleObject:: GetUserClassID](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) w Windows SDK.
 
-## <a name="ioleobjectimplgetusertype"></a><a name="getusertype"></a>IOleObjectImpl::GetUserType
+## <a name="ioleobjectimplgetusertype"></a><a name="getusertype"></a> IOleObjectImpl:: GetUserType
 
-Zwraca nazwę typu użytkownika formantu `OleRegGetUserType`przez wywołanie .
+Zwraca nazwę typu użytkownika kontrolki przez wywołanie `OleRegGetUserType` .
 
 ```
 STDMETHOD(GetUserType)(
@@ -478,13 +479,13 @@ STDMETHOD(GetUserType)(
 
 ### <a name="remarks"></a>Uwagi
 
-Nazwa typu użytkownika jest używana do wyświetlania w interfejsach użytkownika elementów, takich jak menu i okna dialogowe. Nazwę typu użytkownika można zmienić w pliku .rgs projektu.
+Nazwa typu użytkownika jest używana do wyświetlania w elementach interfejsów użytkownika, takich jak menu i okna dialogowe. W pliku. RGS projektu można zmienić nazwę typu użytkownika.
 
-Zobacz [IOleObject::GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) w windows SDK.
+Zobacz [IOleObject:: GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) w Windows SDK.
 
-## <a name="ioleobjectimplinitfromdata"></a><a name="initfromdata"></a>IOleObjectImpl::InitFromData
+## <a name="ioleobjectimplinitfromdata"></a><a name="initfromdata"></a> IOleObjectImpl::InitFromData
 
-Inicjuje formant z wybranych danych.
+Inicjuje kontrolkę z wybranych danych.
 
 ```
 STDMETHOD(InitFromData)(
@@ -499,11 +500,11 @@ Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) w windows SDK.
+Zobacz [IOleObject:: InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) w Windows SDK.
 
-## <a name="ioleobjectimplisuptodate"></a><a name="isuptodate"></a>IOleObjectImpl::IsUpToDate
+## <a name="ioleobjectimplisuptodate"></a><a name="isuptodate"></a> IOleObjectImpl::IsUpToDate
 
-Sprawdza, czy kontrola jest aktualna.
+Sprawdza, czy kontrolka jest aktualna.
 
 ```
 STDMETHOD(IsUpToDate)(void);
@@ -515,11 +516,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::IsUpToDate](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) w zestawie Windows SDK.
+Zobacz [IOleObject:: IsUpToDate](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) w Windows SDK.
 
-## <a name="ioleobjectimplonpostverbdiscardundo"></a><a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo
+## <a name="ioleobjectimplonpostverbdiscardundo"></a><a name="onpostverbdiscardundo"></a> IOleObjectImpl::OnPostVerbDiscardUndo
 
-Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po odrzuceniu stanu cofania.
+Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) po odrzuconym stanie cofania.
 
 ```
 HRESULT OnPostVerbDiscardUndo();
@@ -531,11 +532,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę kodem, który ma zostać wykonany po odrzuceniu stanu cofania.
+Zastąp tę metodę kodem, który ma zostać wykonany po odrzuconym stanie cofania.
 
-## <a name="ioleobjectimplonpostverbhide"></a><a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide
+## <a name="ioleobjectimplonpostverbhide"></a><a name="onpostverbhide"></a> IOleObjectImpl::OnPostVerbHide
 
-Wywoływane przez [DoVerbHide](#doverbhide) po formancie jest ukryty.
+Wywoływane przez [DoVerbHide](#doverbhide) , gdy kontrolka jest ukryta.
 
 ```
 HRESULT OnPostVerbHide();
@@ -549,9 +550,9 @@ Zwraca S_OK.
 
 Zastąp tę metodę kodem, który ma zostać wykonany po ukryciu formantu.
 
-## <a name="ioleobjectimplonpostverbinplaceactivate"></a><a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate
+## <a name="ioleobjectimplonpostverbinplaceactivate"></a><a name="onpostverbinplaceactivate"></a> IOleObjectImpl::OnPostVerbInPlaceActivate
 
-Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) po włączeniu formantu w miejscu.
+Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) po aktywowaniu kontrolki.
 
 ```
 HRESULT OnPostVerbInPlaceActivate();
@@ -563,11 +564,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę kodem, który ma zostać wykonany po aktywowaniu formantu na miejscu.
+Zastąp tę metodę kodem, który ma zostać wykonany po aktywowaniu kontrolki.
 
-## <a name="ioleobjectimplonpostverbopen"></a><a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen
+## <a name="ioleobjectimplonpostverbopen"></a><a name="onpostverbopen"></a> IOleObjectImpl::OnPostVerbOpen
 
-Wywoływane przez [DoVerbOpen](#doverbopen) po otwarciu formantu do edycji w osobnym oknie.
+Wywoływane przez [DoVerbOpen](#doverbopen) po otwarciu kontrolki do edycji w osobnym oknie.
 
 ```
 HRESULT OnPostVerbOpen();
@@ -579,11 +580,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę kodem, który ma zostać wykonany po otwarciu formantu do edycji w osobnym oknie.
+Zastąp tę metodę kodem, który ma zostać wykonany po otwarciu kontrolki do edycji w osobnym oknie.
 
-## <a name="ioleobjectimplonpostverbshow"></a><a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow
+## <a name="ioleobjectimplonpostverbshow"></a><a name="onpostverbshow"></a> IOleObjectImpl::OnPostVerbShow
 
-Wywoływane przez [DoVerbShow](#doverbshow) po kontroli został widoczny.
+Wywoływane przez [DoVerbShow](#doverbshow) po przeprowadzeniu widoczności kontrolki.
 
 ```
 HRESULT OnPostVerbShow();
@@ -595,11 +596,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę kodem, który ma zostać wykonany po udostępnieniu formantu.
+Zastąp tę metodę kodem, który ma zostać wykonany po udostępnieniu kontrolki.
 
-## <a name="ioleobjectimplonpostverbuiactivate"></a><a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate
+## <a name="ioleobjectimplonpostverbuiactivate"></a><a name="onpostverbuiactivate"></a> IOleObjectImpl::OnPostVerbUIActivate
 
-Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) po aktywacji interfejsu użytkownika formantu.
+Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) po aktywowaniu interfejsu użytkownika kontrolki.
 
 ```
 HRESULT OnPostVerbUIActivate();
@@ -611,11 +612,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę kodem, który ma zostać wykonany po uaktywnieniu interfejsu użytkownika formantu.
+Zastąp tę metodę kodem, który ma zostać wykonany po aktywowaniu interfejsu użytkownika kontrolki.
 
-## <a name="ioleobjectimplonpreverbdiscardundo"></a><a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo
+## <a name="ioleobjectimplonpreverbdiscardundo"></a><a name="onpreverbdiscardundo"></a> IOleObjectImpl::OnPreVerbDiscardUndo
 
-Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) przed odrzuceniem stanu cofania.
+Wywoływane przez [DoVerbDiscardUndo](#doverbdiscardundo) przed usunięciem stanu cofania.
 
 ```
 HRESULT OnPreVerbDiscardUndo();
@@ -627,11 +628,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapobiec odrzucaniu stanu cofania, należy zastąpić tę metodę, aby zwrócić błąd HRESULT.
+Aby zapobiec odrzuceniu stanu cofania, Zastąp tę metodę, aby zwrócić błąd HRESULT.
 
-## <a name="ioleobjectimplonpreverbhide"></a><a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide
+## <a name="ioleobjectimplonpreverbhide"></a><a name="onpreverbhide"></a> IOleObjectImpl::OnPreVerbHide
 
-Wywoływane przez [DoVerbHide](#doverbhide) przed formant jest ukryty.
+Wywoływane przez [DoVerbHide](#doverbhide) przed ukryciem formantu.
 
 ```
 HRESULT OnPreVerbHide();
@@ -643,11 +644,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapobiec ukryciu formantu, należy zastąpić tę metodę, aby zwrócić błąd HRESULT.
+Aby zapobiec ukrywaniu formantu, Przesłoń tę metodę w celu zwrócenia błędu HRESULT.
 
-## <a name="ioleobjectimplonpreverbinplaceactivate"></a><a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate
+## <a name="ioleobjectimplonpreverbinplaceactivate"></a><a name="onpreverbinplaceactivate"></a> IOleObjectImpl::OnPreVerbInPlaceActivate
 
-Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) przed aktywowaniem formantu w miejscu.
+Wywoływane przez [DoVerbInPlaceActivate](#doverbinplaceactivate) przed aktywowaniem kontrolki.
 
 ```
 HRESULT OnPreVerbInPlaceActivate();
@@ -659,11 +660,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapobiec aktywowaniu formantu w miejscu, należy zastąpić tę metodę, aby zwrócić błąd HRESULT.
+Aby zapobiec aktywowaniu formantu w miejscu, Przesłoń tę metodę, aby zwrócić błąd HRESULT.
 
-## <a name="ioleobjectimplonpreverbopen"></a><a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen
+## <a name="ioleobjectimplonpreverbopen"></a><a name="onpreverbopen"></a> IOleObjectImpl::OnPreVerbOpen
 
-Wywoływane przez [DoVerbOpen](#doverbopen) przed otwarciem formantu do edycji w osobnym oknie.
+Wywoływane przez [DoVerbOpen](#doverbopen) przed otwarciem kontrolki do edycji w osobnym oknie.
 
 ```
 HRESULT OnPreVerbOpen();
@@ -675,11 +676,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapobiec otwarciu formantu do edycji w osobnym oknie, należy zastąpić tę metodę, aby zwrócić błąd HRESULT.
+Aby uniemożliwić otwieranie formantu w oddzielnym oknie, Przesłoń tę metodę w celu zwrócenia błędu HRESULT.
 
-## <a name="ioleobjectimplonpreverbshow"></a><a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow
+## <a name="ioleobjectimplonpreverbshow"></a><a name="onpreverbshow"></a> IOleObjectImpl::OnPreVerbShow
 
-Wywoływane przez [DoVerbShow](#doverbshow) przed formant został widoczna.
+Wywoływane przez [DoVerbShow](#doverbshow) przed udostępnieniem formantu.
 
 ```
 HRESULT OnPreVerbShow();
@@ -691,11 +692,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapobiec kontroli są widoczne, należy zastąpić tę metodę, aby zwrócić błąd HRESULT.
+Aby zapobiec widoczności formantu, Przesłoń tę metodę w celu zwrócenia błędu HRESULT.
 
-## <a name="ioleobjectimplonpreverbuiactivate"></a><a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate
+## <a name="ioleobjectimplonpreverbuiactivate"></a><a name="onpreverbuiactivate"></a> IOleObjectImpl::OnPreVerbUIActivate
 
-Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) przed interfejsem użytkownika formantu został aktywowany.
+Wywoływane przez [DoVerbUIActivate](#doverbuiactivate) przed aktywowaniem interfejsu użytkownika kontrolki.
 
 ```
 HRESULT OnPreVerbUIActivate();
@@ -707,9 +708,9 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapobiec aktywowaniu interfejsu użytkownika formantu, należy zastąpić tę metodę, aby zwrócić błąd HRESULT.
+Aby zapobiec aktywacji interfejsu użytkownika kontrolki, Zastąp tę metodę, aby zwrócić błąd HRESULT.
 
-## <a name="ioleobjectimplsetclientsite"></a><a name="setclientsite"></a>IOleObjectImpl::SetClientSite
+## <a name="ioleobjectimplsetclientsite"></a><a name="setclientsite"></a> IOleObjectImpl::SetClientSite
 
 Informuje formant o swojej lokacji klienta w kontenerze.
 
@@ -719,13 +720,13 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 
 ### <a name="remarks"></a>Uwagi
 
-Następnie metoda zwraca S_OK.
+Metoda następnie zwraca S_OK.
 
-Zobacz [IOleObject::SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) w zestawie Windows SDK.
+Zobacz [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) w Windows SDK.
 
-## <a name="ioleobjectimplsetcolorscheme"></a><a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme
+## <a name="ioleobjectimplsetcolorscheme"></a><a name="setcolorscheme"></a> IOleObjectImpl::SetColorScheme
 
-Zaleca schemat kolorów do aplikacji formantu, jeśli istnieje.
+Zaleca schemat kolorów dla aplikacji kontrolki, jeśli istnieje.
 
 ```
 STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
@@ -737,11 +738,11 @@ Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) w zestawie Windows SDK.
+Zobacz [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) w Windows SDK.
 
-## <a name="ioleobjectimplsetextent"></a><a name="setextent"></a>IOleObjectImpl::SetExtent
+## <a name="ioleobjectimplsetextent"></a><a name="setextent"></a> IOleObjectImpl:: setzakres
 
-Ustawia zasięg obszaru wyświetlania formantu.
+Ustawia zakres obszaru wyświetlania formantu.
 
 ```
 STDMETHOD(SetExtent)(
@@ -751,17 +752,17 @@ STDMETHOD(SetExtent)(
 
 ### <a name="remarks"></a>Uwagi
 
-W `SetExtent` przeciwnym razie przechowuje `psizel` wartość wskazywuj w elementów członkowskich klasy kontrolnej [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Wartość ta jest w jednostkach HIMETRIC (0,01 milimetra na jednostkę).
+W przeciwnym razie `SetExtent` przechowuje wartość wskazywaną przez `psizel` element członkowski danych klasy formantu [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Ta wartość jest w jednostkach HIMETRIC (0,01 milimetr na jednostkę).
 
-Jeśli element członkowski danych klasy kontrolnej [CComControlBase::m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) ma wartość PRAWDA, `SetExtent` przechowuje również wartość wskazywową przez `psizel` w elementów członkowskich danych klasy kontrolnej [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
+Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) ma wartość true, `SetExtent` również przechowuje wartość wskazywaną przez `psizel` element członkowski danych klasy sterowania [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
 
-Jeśli element członkowski danych klasy kontrolnej [CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) jest true, `SetExtent` wywołania `SendOnDataChange` i `SendOnViewChange` powiadomić wszystkie pochłaniacze doradcze zarejestrowane z posiadaczem poinformować, że rozmiar formantu uległ zmianie.
+Jeśli element członkowski danych klasy kontrolki [CComControlBase:: m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) ma wartość true, `SetExtent` wywołuje `SendOnDataChange` i `SendOnViewChange` powiadamia wszystkie ujścia doradców zarejestrowane przez posiadacza powiadomienia o zmianie rozmiaru formantu.
 
-Zobacz [IOleObject::SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) w zestawie Windows SDK.
+Zobacz [IOleObject:: setstop](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) w Windows SDK.
 
-## <a name="ioleobjectimplsethostnames"></a><a name="sethostnames"></a>IOleObjectImpl::SetHostNames
+## <a name="ioleobjectimplsethostnames"></a><a name="sethostnames"></a> IOleObjectImpl:: SetHostNames
 
-Informuje formantu nazwy aplikacji kontenera i dokumentu kontenera.
+Informuje kontrolkę o nazwie aplikacji kontenera i dokumentu kontenera.
 
 ```
 STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainerObj */);
@@ -773,11 +774,11 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) w zestawie Windows SDK.
+Zobacz [IOleObject:: SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) w Windows SDK.
 
-## <a name="ioleobjectimplsetmoniker"></a><a name="setmoniker"></a>IOleObjectImpl::SetMoniker
+## <a name="ioleobjectimplsetmoniker"></a><a name="setmoniker"></a> IOleObjectImpl:: SetMoniker
 
-Informuje formant, co jest jego moniker.
+Informuje formant o tym, jaki jest jego moniker.
 
 ```
 STDMETHOD(SetMoniker)(
@@ -791,11 +792,11 @@ Zwraca E_NOTIMPL.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) w zestawie Windows SDK.
+Zobacz [IOleObject:: SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) w Windows SDK.
 
-## <a name="ioleobjectimplunadvise"></a><a name="unadvise"></a>IOleObjectImpl::Unadvise
+## <a name="ioleobjectimplunadvise"></a><a name="unadvise"></a> IOleObjectImpl:: Unadvise
 
-Usuwa połączenie doradcze przechowywane w elementów `m_spOleAdviseHolder` członkowskich danych klasy kontrolnej.
+Usuwa połączenie doradcze przechowywane w `m_spOleAdviseHolder` składowej danych klasy formantu.
 
 ```
 STDMETHOD(Unadvise)(DWORD dwConnection);
@@ -803,9 +804,9 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::Unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) w windows SDK.
+Zobacz [IOleObject:: Unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) w Windows SDK.
 
-## <a name="ioleobjectimplupdate"></a><a name="update"></a>IOleObjectImpl::Aktualizacja
+## <a name="ioleobjectimplupdate"></a><a name="update"></a> IOleObjectImpl:: Update
 
 Aktualizuje formant.
 
@@ -819,10 +820,10 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleObject::Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) w windows SDK.
+Zobacz [IOleObject:: Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Interfejsy sterowania ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
+[Interfejsy formantów ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

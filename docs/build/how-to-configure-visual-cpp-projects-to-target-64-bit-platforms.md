@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak skonfigurować projekty programu Visual Studio C++ na docelowe 64-bitowe, platformy x64'
 title: 'Instrukcje: Konfigurowanie projektów programu Visual Studio C++ do docelowych 64-bitowych, platformy x64'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 762fd5d6ddbb55713cf2fc5e34cb33fb91b08eb9
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 717f9db302f4a7bfef12d30830336b22f9fc5169
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156375"
 ---
 # <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Instrukcje: Konfigurowanie projektów programu Visual Studio C++ do docelowych 64-bitowych, platformy x64
 
@@ -24,11 +25,11 @@ Możesz użyć konfiguracji projektu w środowisku IDE programu Visual Studio, a
 1. Otwórz strony właściwości dla tego projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
-   > W przypadku projektów .NET upewnij się, że węzeł **Właściwości konfiguracji** lub jeden z jego węzłów podrzędnych jest zaznaczony w oknie dialogowym ** \<> ProjectName strony właściwości** : w przeciwnym razie przycisk **Configuration Manager** pozostaje niedostępny.
+   > W przypadku projektów platformy .NET upewnij się, że w oknie dialogowym **\<Projectname> strony właściwości** jest zaznaczony węzeł **Właściwości konfiguracji** lub jeden z jego węzłów podrzędnych. w przeciwnym razie przycisk **Configuration Manager** pozostanie niedostępny.
 
 1. Wybierz przycisk **Configuration Manager** , aby otworzyć okno dialogowe **Configuration Manager** .
 
-1. Z listy rozwijanej **platforma aktywnego rozwiązania** wybierz opcję ** \<nowy... >** , aby otworzyć okno dialogowe **Nowa platforma rozwiązania** .
+1. Z listy rozwijanej **Active Solution platform** wybierz **\<New...>** opcję, aby otworzyć okno dialogowe **Nowa platforma rozwiązania** .
 
 1. Z listy rozwijanej **Typ lub wybierz nową platformę** wybierz 64-bitową platformę docelową.
 
@@ -37,7 +38,7 @@ Możesz użyć konfiguracji projektu w środowisku IDE programu Visual Studio, a
 
 1. Wybierz przycisk **OK** . Platforma wybrana w poprzednim kroku jest wyświetlana w obszarze **Active Solution platform** w oknie dialogowym **Configuration Manager** .
 
-1. Wybierz przycisk **Zamknij** w oknie dialogowym **Configuration Manager** , a następnie wybierz przycisk **OK** w oknie dialogowym ** \<ProjectName> strony właściwości** .
+1. Wybierz przycisk **Zamknij** w oknie dialogowym **Configuration Manager** , a następnie wybierz przycisk **OK** w oknie dialogowym **\<Projectname> strony właściwości** .
 
 ### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Aby skopiować ustawienia projektu Win32 do konfiguracji projektu 64-bitowego
 

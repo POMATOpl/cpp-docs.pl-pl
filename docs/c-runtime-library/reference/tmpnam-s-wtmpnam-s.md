@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tmpnam_s, _wtmpnam_s'
 title: tmpnam_s, _wtmpnam_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 2168a1bef5b8eb20a1f59460146559f4fa9f2645
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fefaa0ca54ecd1a4ae0a61f10ab502cf5310648a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155790"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -93,7 +94,7 @@ Jeśli *str* ma **wartość null**, zostanie wywołana procedura obsługi niepra
 
 Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. **tmpnam_s** zwraca nazwę unikatową w wydzielonym katalogu tymczasowym systemu Windows zwróconym przez [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Zwróć uwagę, że nazwa pliku jest wstępnie zainstalowana z ukośnikiem odwrotnym i bez informacji o ścieżce, takich jak \fname21, oznacza to, że nazwa jest prawidłowa dla bieżącego katalogu roboczego.
 
-W przypadku **tmpnam_s**można zapisać tę wygenerowaną nazwę pliku w *str*. Maksymalna długość ciągu zwracanego przez **tmpnam_s** jest **L_TMPNAM_S**zdefiniowana w stdio. C. Jeśli *str* ma **wartość null**, **tmpnam_s** pozostawia wynik w wewnętrznym buforze statycznym. W ten sposób wszystkie kolejne wywołania powodują zniszczenie tej wartości. Nazwa wygenerowana przez **tmpnam_s** składa się z nazwy pliku wygenerowanego przez program i, po pierwszym wywołaniu **tmpnam_s**, rozszerzenie pliku z numerem sekwencyjnym w podstawowej 32 (. 1-. 1vvvvvu, gdy **TMP_MAX_S** w stdio. H jest **INT_MAX**).
+W przypadku **tmpnam_s** można zapisać tę wygenerowaną nazwę pliku w *str*. Maksymalna długość ciągu zwracanego przez **tmpnam_s** jest **L_TMPNAM_S** zdefiniowana w stdio. H. Jeśli *str* ma **wartość null**, **tmpnam_s** pozostawia wynik w wewnętrznym buforze statycznym. W ten sposób wszystkie kolejne wywołania powodują zniszczenie tej wartości. Nazwa wygenerowana przez **tmpnam_s** składa się z nazwy pliku wygenerowanego przez program i, po pierwszym wywołaniu **tmpnam_s**, rozszerzenie pliku z numerem sekwencyjnym w podstawowej 32 (. 1-. 1vvvvvu, gdy **TMP_MAX_S** w stdio. H jest **INT_MAX**).
 
 **tmpnam_s** automatycznie obsługuje argumenty ciągu znaków wielobajtowych, aby rozpoznawać sekwencje znaków wielobajtowych zgodnie ze stroną kodową OEM uzyskaną od systemu operacyjnego. **_wtmpnam_s** to dwubajtowa wersja **tmpnam_s**; argument i zwracana wartość **_wtmpnam_s** są ciągami znaków dwubajtowych. **_wtmpnam_s** i **tmpnam_s** zachowują się identycznie, z tą różnicą, że **_wtmpnam_s** nie obsługują ciągów znaków wielobajtowych.
 
@@ -167,7 +168,7 @@ C:\Users\LocalUser\AppData\Local\Temp\u19q8.d is safe to use as a temporary file
 C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_trivially_destructible
 title: Klasa is_trivially_destructible
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
-ms.openlocfilehash: 6a978b7cc32e6de3d4b1d811b9aa6f52cf0370d7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 41f36c027175cbf67049eed986b9188ba1532048
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459640"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154360"
 ---
-# <a name="istriviallydestructible-class"></a>Klasa is_trivially_destructible
+# <a name="is_trivially_destructible-class"></a>Klasa is_trivially_destructible
 
 Testuje, czy typ jest bardzo zniszczalnych.
 
@@ -26,7 +27,7 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
@@ -35,10 +36,10 @@ Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest typem zniszcz
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

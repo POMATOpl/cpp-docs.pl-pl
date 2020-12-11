@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ciągi, Kreator strony właściwości ATL'
 title: Ciągi, Kreator strony właściwości ATL
 ms.date: 05/09/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 61378e0aa2cee94420849195a94203be078418ff
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: f2d5b814cd817d37569765f4777c63661f6f8ca9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157649"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Ciągi, Kreator strony właściwości ATL
 
@@ -35,11 +36,11 @@ Zawiera tekst skojarzony ze stroną właściwości.
 
 - **Plik pomocy**
 
-   Ustawia nazwę pliku pomocy opisującego sposób używania strony właściwości. Ta nazwa nie powinna zawierać ścieżki. Gdy użytkownik naciśnie **Pomoc** , ramka otwiera plik pomocy w katalogu o nazwie w wartości klucza helpDir we wpisach rejestru strony właściwości w obszarze jego identyfikatora CLSID.
+   Ustawia nazwę pliku pomocy opisującego sposób używania strony właściwości. Ta nazwa nie powinna zawierać ścieżki. Gdy użytkownik naciśnie **Pomoc**, ramka otwiera plik pomocy w katalogu o nazwie w wartości klucza helpDir we wpisach rejestru strony właściwości w obszarze jego identyfikatora CLSID.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)

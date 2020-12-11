@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z CTreeCtrl'
 title: Korzystanie z CTreeCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3a8c3b9b9365faf5f2d0e4b100a1239311c5d57d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442191"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154581"
 ---
 # <a name="using-ctreectrl"></a>Korzystanie z CTreeCtrl
 
@@ -20,7 +21,7 @@ Kontrolka drzewa, reprezentowana przez klasę [CTreeCtrl](../mfc/reference/ctree
 
 - [CTreeCtrl a CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
 
-- [Używanie kontrolek drzewa](../mfc/using-tree-controls.md)
+- [Używanie formantów drzewa](../mfc/using-tree-controls.md)
 
 - [Komunikacja z kontrolką drzewa](../mfc/communicating-with-a-tree-control.md)
 
@@ -34,7 +35,7 @@ Kontrolka drzewa, reprezentowana przez klasę [CTreeCtrl](../mfc/reference/ctree
 
 - [Edytowanie etykiety kontrolki drzewa](../mfc/tree-control-label-editing.md)
 
-- [Przegląd stanów elementu kontrolki drzewa](../mfc/tree-control-item-states-overview.md)
+- [Przegląd Stanów elementu kontrolki drzewa](../mfc/tree-control-item-states-overview.md)
 
 - [Listy obrazów kontrolki drzewa](../mfc/tree-control-image-lists.md)
 
@@ -48,4 +49,4 @@ Kontrolka drzewa, reprezentowana przez klasę [CTreeCtrl](../mfc/reference/ctree
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

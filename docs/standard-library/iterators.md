@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: iteratorów'
 title: Iteratory
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
-ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
+ms.openlocfilehash: 98263f69c49e0d645106e1ce29e6bb1a4330acea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87870155"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112248"
 ---
 # <a name="iterators"></a>Iteratory
 
@@ -88,7 +89,7 @@ Ważne jest, aby zrozumieć niesie obietnice zwiększenia i ograniczenia każdej
 
 Język Microsoft C++ oferuje teraz sprawdzone Iteratory i Iteratory debugowania, aby upewnić się, że nie zastąpisz granic kontenera. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md) i [Obsługa iteratora debugowania](../standard-library/debug-iterator-support.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

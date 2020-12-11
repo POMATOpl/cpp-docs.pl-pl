@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: obsługa wyjątków ARM'
 title: Obsługa wyjątków ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 4bdf0c88f0c2fe445f3a8865353ca1259ba586fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d37d0ad65f436d1ff67677032f378a30b44e32a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157129"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -113,30 +114,30 @@ Prologues dla funkcji kanonicznych mogą zawierać do 5 instrukcji (należy zauw
 
 Instrukcja 1 jest zawsze obecna, jeśli bit *H* jest ustawiony na 1.
 
-Aby skonfigurować łańcuch ramek, instrukcja 3A lub 3B jest obecna, jeśli ustawiono bit *C* . Jest to 16-bitowa `mov` , jeśli żadne rejestry inne niż R11 i LR są wypychane; w przeciwnym razie jest to 32-bitowa `add`.
+Aby skonfigurować łańcuch ramek, instrukcja 3A lub 3B jest obecna, jeśli ustawiono bit *C* . Jest to 16-bitowa `mov` , jeśli rejestry inne niż R11 i LR są wypychane; w przeciwnym razie jest to 32-bitowe `add` .
 
 Jeśli określono nieskładane dopasowanie, instrukcja 5 jest jawnym dopasowaniem stosu.
 
-Instrukcje 2 i 4 są ustawiane na podstawie tego, czy jest wymagana wypychanie. Ta tabela zawiera podsumowanie, które rejestry są zapisywane w oparciu o pola *C*, *L*, *R*i *PF* . We wszystkich przypadkach *N* jest równa *reg* + 4, *E* jest równe *reg* + 8, a *S* jest równa (~*dopasowuje stos*) & 3.
+Instrukcje 2 i 4 są ustawiane na podstawie tego, czy jest wymagana wypychanie. Ta tabela zawiera podsumowanie, które rejestry są zapisywane w oparciu o pola *C*, *L*, *R* i *PF* . We wszystkich przypadkach *N* jest równa *reg* + 4, *E* jest równe *reg* + 8, a *S* jest równa (~*dopasowuje stos*) & 3.
 
 |C|L|R|PF|Wypychanie rejestrów liczb całkowitych|Wypchnięcie rejestry Visual FoxPro|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|brak|
-|0|0|0|1|r*S*-r*N*|brak|
-|0|0|1|0|brak|D8-d*E*|
-|0|0|1|1|r*S*-R3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|brak|
-|0|1|0|1|r*S*-r*N*, LR|brak|
-|0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|r*S*-R3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, R11|brak|
-|1|0|0|1|r*S*-r*N*, R11|brak|
-|1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|r*S*-R3, R11|D8-d*E*|
-|1|1|0|0|R4-r*N*, R11, LR|brak|
-|1|1|0|1|r*S*-r*N*, R11, LR|brak|
-|1|1|1|0|R11, LR|D8-d*E*|
-|1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
+|0|0|0|0|R4-r *N*|brak|
+|0|0|0|1|r *S*-r *N*|brak|
+|0|0|1|0|brak|D8-d *E*|
+|0|0|1|1|r *S*-R3|D8-d *E*|
+|0|1|0|0|R4-r *N*, LR|brak|
+|0|1|0|1|r *S*-r *N*, LR|brak|
+|0|1|1|0|LR|D8-d *E*|
+|0|1|1|1|r *S*-R3, LR|D8-d *E*|
+|1|0|0|0|R4-r *N*, R11|brak|
+|1|0|0|1|r *S*-r *N*, R11|brak|
+|1|0|1|0|r11|D8-d *E*|
+|1|0|1|1|r *S*-R3, R11|D8-d *E*|
+|1|1|0|0|R4-r *N*, R11, LR|brak|
+|1|1|0|1|r *S*-r *N*, R11, LR|brak|
+|1|1|1|0|R11, LR|D8-d *E*|
+|1|1|1|1|r *S*-R3, R11, LR|D8-d *E*|
 
 Epilogues dla funkcji kanonicznych są zgodne z podobnym formularzem, ale w odwrocie i z kilkoma dodatkowymi opcjami. Epilogu może być maksymalnie 5 instrukcji, a jego forma jest ściśle podyktowana formą prologu.
 
@@ -175,7 +176,7 @@ Gdy spakowany format unwindy jest niewystarczający do opisania odwinięcia funk
    |0|28-31|*Słowa kodu* to pole 4-bitowe, które określa liczbę 32-bitowych słów wymaganych do zawierania wszystkich kodów operacji unwind w sekcji 4. Jeśli więcej niż 15 słów jest wymaganych przez więcej niż 63 bajtów kodu wywinięcia, to pole i pole *Count epilogu* muszą mieć ustawioną wartość 0, aby wskazać, że wymagane jest słowo rozszerzenia.|
    |1|0-15|*Extended epilogu Count* to pole 16-bitowe, które zapewnia więcej miejsca do kodowania nietypowo dużej liczby epilogues. Słowo rozszerzenia, które zawiera to pole, jest obecne tylko wtedy, gdy pola *Liczba epilogu* i *słowa kodu* w pierwszym wyrazie nagłówka są ustawione na 0.|
    |1|16-23|*Rozszerzone słowa kodu* to pole 8-bitowe, które zapewnia więcej miejsca do kodowania nietypowo dużej liczby słów kodu unwind. Słowo rozszerzenia, które zawiera to pole, jest obecne tylko wtedy, gdy pola *Liczba epilogu* i *słowa kodu* w pierwszym wyrazie nagłówka są ustawione na 0.|
-   |1|24-31|Zarezerwowano|
+   |1|24-31|Zarezerwowany|
 
 1. Po danych wyjątku (Jeśli bit *E* w nagłówku został ustawiony na 0) jest listą informacji na temat zakresów epilogu, które są pakowane jeden do wyrazu i przechowywane w kolejności rosnącego przesunięcia początkowego. Każdy zakres zawiera następujące pola:
 
@@ -263,11 +264,11 @@ W poniższej tabeli przedstawiono mapowanie od kodów unwind do opcode. Najbardz
 |FE||||32|End + 32-bit NOP w epilogu|
 |ZZ||||-|end|
 
-Pokazuje zakres wartości szesnastkowych dla każdego bajtu w *kodzie*kodu unwind, wraz z rozmiarem opcode *Opsize* i odpowiadającą jej pierwotną interpretacją instrukcji. Puste komórki wskazują krótsze kody operacji unwind. W instrukcjach, które mają duże wartości obejmujące wiele bajtów, najbardziej znaczące bity są przechowywane jako pierwsze. Pole *Opsize* pokazuje niejawny rozmiar kodu operacji skojarzony z każdą operacją kciuka 2. Widoczne zduplikowane wpisy w tabeli z różnymi kodowaniem są używane do rozróżniania między różnymi rozmiarami kodu.
+Pokazuje zakres wartości szesnastkowych dla każdego bajtu w *kodzie* kodu unwind, wraz z rozmiarem opcode *Opsize* i odpowiadającą jej pierwotną interpretacją instrukcji. Puste komórki wskazują krótsze kody operacji unwind. W instrukcjach, które mają duże wartości obejmujące wiele bajtów, najbardziej znaczące bity są przechowywane jako pierwsze. Pole *Opsize* pokazuje niejawny rozmiar kodu operacji skojarzony z każdą operacją kciuka 2. Widoczne zduplikowane wpisy w tabeli z różnymi kodowaniem są używane do rozróżniania między różnymi rozmiarami kodu.
 
 Kody operacji unwind są zaprojektowane tak, aby pierwszy bajt kodu nakazuje zarówno całkowity rozmiar w bajtach kodu, jak i rozmiar odpowiedniego kodu w strumieniu instrukcji. Aby obliczyć rozmiar prologu lub epilogu, należy przeszukać kody operacji unwind od początku sekwencji do końca, a następnie użyć tabeli odnośników lub podobnej metody do określenia, jak długo jest odpowiedni opcode.
 
-Kody unwind 0xFD i 0xFE są równoważne zwykłemu kodowi, ale konto dla jednego NOP kodu operacji w przypadku epilogu, 16-bitowy lub 32-bitowy. W przypadku prologues kody 0xFD, 0xFE i 0xFF są dokładnie równoważne. Te konta dla typowych epilogu kończących `bx lr` lub `b <tailcall-target>`, które nie mają równoważnej instrukcji prologu. Zwiększa to prawdopodobieństwo, że sekwencje odwinięcia mogą być współużytkowane przez prologu i epilogues.
+Kody unwind 0xFD i 0xFE są równoważne zwykłemu kodowi, ale konto dla jednego NOP kodu operacji w przypadku epilogu, 16-bitowy lub 32-bitowy. W przypadku prologues kody 0xFD, 0xFE i 0xFF są dokładnie równoważne. Te konta dla typowych epilogu kończących `bx lr` lub `b <tailcall-target>` , które nie mają równoważnej instrukcji prologu. Zwiększa to prawdopodobieństwo, że sekwencje odwinięcia mogą być współużytkowane przez prologu i epilogues.
 
 W wielu przypadkach powinno być możliwe użycie tego samego zestawu kodów operacji unwind dla prologu i wszystkie epilogues. Jednak aby obsłużyć niewietrzenie częściowo wykonanych prologues i epilogues, może być konieczne posiadanie wielu sekwencji kodu operacji unwind, które różnią się w zależności od kolejności lub zachowania. To dlatego, że każdy epilogu ma swój własny indeks w tablicy unwind, aby pokazać, gdzie rozpocząć wykonywanie.
 
@@ -360,7 +361,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C:
 ```
 
-Przeważnie funkcje zmniejszania są zwykle oczekiwane w celu wstępnego przydzielenia miejsca na zarejestrowanie dodatkowych zapisów w zwykłych prologu, a następnie przeprowadzenie `stm` rejestracji przy `push`użyciu `str` lub zamiast. Dzięki temu wszystkie operacje na wskaźniku stosu są zachowywane w oryginalnym prologu funkcji.
+Przeważnie funkcje zmniejszania są zwykle oczekiwane w celu wstępnego przydzielenia miejsca na zarejestrowanie dodatkowych zapisów w zwykłych prologu, a następnie przeprowadzenie rejestracji przy użyciu `str` lub `stm` zamiast `push` . Dzięki temu wszystkie operacje na wskaźniku stosu są zachowywane w oryginalnym prologu funkcji.
 
 Przykładowa funkcja zmniejszania z otoką musi być podzielona na trzy regiony, które są oznaczone jako, B i C w komentarzach. Pierwszy region obejmuje początek funkcji przez koniec dodatkowych, nietrwałych zapisywanych. Aby opisać ten fragment jako prologu i nie epilogues, należy utworzyć rekord. pdata lub. xdata.
 

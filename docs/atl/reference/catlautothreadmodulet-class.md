@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAtlAutoThreadModuleT'
 title: Klasa CAtlAutoThreadModuleT
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: 7308e3a51c531fbe942e2df326c03273eeb326e2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: ad55c78488567c12477c427b99a527b8154ddd22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158416"
 ---
 # <a name="catlautothreadmodulet-class"></a>Klasa CAtlAutoThreadModuleT
 
@@ -67,7 +68,7 @@ Klasa [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) 
 
 **Nagłówek:** atlbase. h
 
-## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads
+## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a> CAtlAutoThreadModuleT::GetDefaultThreads
 
 Ta funkcja statyczna dynamicznie oblicza i zwraca maksymalną liczbę wątków dla modułu EXE na podstawie liczby procesorów.
 
@@ -83,7 +84,7 @@ Liczba wątków, które mają zostać utworzone w module EXE.
 
 Zastąp tę metodę, jeśli chcesz użyć innej metody do obliczania liczby wątków. Domyślnie liczba wątków jest oparta na liczbie procesorów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy length_error
 title: length_error — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-ms.openlocfilehash: 740ae69948a8f1975872f223ba51fb669121a891
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 051f79da569a153413a88af4976cb619e4b04e66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112053"
 ---
 # <a name="length_error-class"></a>length_error — Klasa
 
@@ -81,7 +82,7 @@ Type class std::length_error
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa logic_error](../standard-library/logic-error-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
