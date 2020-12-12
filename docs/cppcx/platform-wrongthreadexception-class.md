@@ -1,5 +1,6 @@
 ---
-title: Platform::WrongThreadException, klasa
+description: 'Dowiedz się więcej na temat: platform:: WrongThreadException, Klasa'
+title: 'Platform:: WrongThreadException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
-ms.openlocfilehash: dde8c9afff6be083580042a958f59e057bc44350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7fbaed7766a3928ca24d56f5233c38d9298d466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307733"
 ---
-# <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException, klasa
+# <a name="platformwrongthreadexception-class"></a>Platform:: WrongThreadException, Klasa
 
-Element zgłaszany, gdy wątek wywołuje za pomocą wskaźnika interfejsu dla obiektu serwera proxy, który nie należy do komórka wątku.
+Zgłaszany, gdy wątek wywołuje metodę wskaźnika interfejsu dla obiektu serwera proxy, który nie należy do apartamentu wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,14 +32,14 @@ Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexce
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+[Platform:: COMException, Klasa](../cppcx/platform-comexception-class.md)

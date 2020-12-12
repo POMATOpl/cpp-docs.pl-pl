@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: malowanie kontrolki ActiveX'
 title: 'Kontrolki ActiveX MFC: malowanie kontrolki ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: a01a66402471b295a6e57af8af265c50685b4a1f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d9e6fb23deb701e32f1af6ff4bf4d79c7d9df085
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305276"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: malowanie kontrolki ActiveX
 
@@ -29,7 +30,7 @@ Omówiono następujące tematy:
 
 - [Jak malować swój formant przy użyciu plików.](#_core_painting_your_control_using_metafiles)
 
-## <a name="the-painting-process-of-an-activex-control"></a><a name="_core_the_painting_process_of_an_activex_control"></a>Proces rysowania kontrolki ActiveX
+## <a name="the-painting-process-of-an-activex-control"></a><a name="_core_the_painting_process_of_an_activex_control"></a> Proces rysowania kontrolki ActiveX
 
 Gdy kontrolki ActiveX są początkowo wyświetlane lub odświeżane, postępują zgodnie z procesem malowania podobnym do innych aplikacji opracowanych przy użyciu MFC, z jedną ważną różnicą: formanty ActiveX mogą znajdować się w stanie aktywnym lub nieaktywnym.
 
@@ -53,7 +54,7 @@ Domyślna implementacja udostępniona przez kreatora kontrolek ActiveX MFC w pli
 > [!NOTE]
 > Podczas malowania kontrolki nie należy tworzyć założeń dotyczących stanu kontekstu urządzenia, który jest przesyłany jako parametr *podstawowego kontrolera domeny* do `OnDraw` funkcji. Czasami kontekst urządzenia jest dostarczany przez aplikację kontenera i niekoniecznie zostanie zainicjowany do stanu domyślnego. W szczególności, jawnie wybierz pióra, pędzle, kolory, czcionki i inne zasoby, od których zależy kod rysowania.
 
-## <a name="optimizing-your-paint-code"></a><a name="_core_optimizing_your_paint_code"></a>Optymalizowanie kodu programu Paint
+## <a name="optimizing-your-paint-code"></a><a name="_core_optimizing_your_paint_code"></a> Optymalizowanie kodu programu Paint
 
 Po pomyślnym narysowaniu kontrolki, następnym krokiem jest zoptymalizowanie `OnDraw` funkcji.
 
@@ -61,7 +62,7 @@ Domyślna implementacja kontrolki ActiveX maluje cały obszar kontroli. Jest to 
 
 `OnDraw`Funkcja zapewnia łatwą metodę optymalizacji poprzez przekazanie *rcInvalid*, prostokątnego obszaru kontrolki, która wymaga rerysowania. Użyj tego obszaru, zazwyczaj mniejszego niż cały obszar kontroli, aby przyspieszyć proces malowania.
 
-## <a name="painting-your-control-using-metafiles"></a><a name="_core_painting_your_control_using_metafiles"></a>Malowanie kontrolki przy użyciu plików.
+## <a name="painting-your-control-using-metafiles"></a><a name="_core_painting_your_control_using_metafiles"></a> Malowanie kontrolki przy użyciu plików.
 
 W większości przypadków parametr *PDC* do `OnDraw` funkcji wskazuje kontekst urządzenia ekranu. Jednak podczas drukowania obrazów kontrolki lub podczas sesji podglądu wydruku kontroler domeny otrzymany do renderowania jest specjalnym typem o nazwie "metaplik DC". W przeciwieństwie do kontrolera domeny ekranu, który natychmiast obsługuje wysłane do niego żądania, kontroler domeny metaplik zapisuje żądania w późniejszym czasie. Niektóre aplikacje kontenera mogą również wybrać renderowanie obrazu kontrolki przy użyciu metapliku DC w trybie projektowania.
 

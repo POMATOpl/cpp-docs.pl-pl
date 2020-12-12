@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: WeakReference, Klasa'
 title: 'Platform:: WeakReference, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: befefba7cc76f24f6dddd58d0c5f040bfd205508
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: edf3220d8916ff4bdb1462f3dd04149a4e9a9709
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307798"
 ---
 # <a name="platformweakreference-class"></a>Platform:: WeakReference, Klasa
 
@@ -49,7 +50,7 @@ class WeakReference
 
 Sama klasa WeakReference nie jest klasą referencyjną i dlatego nie dziedziczy z klasy platform:: Object ^ i nie może być używana w sygnaturze metody publicznej.
 
-## <a name="weakreferenceoperator"></a><a name="operator-assign"></a>WeakReference:: operator =
+## <a name="weakreferenceoperator"></a><a name="operator-assign"></a> WeakReference:: operator =
 
 Przypisuje wartość do WeakReference.
 
@@ -66,7 +67,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 
 Ostatnie Przeciążenie na powyższej liście umożliwia przypisanie klasy ref do zmiennej WeakReference. W takim przypadku Klasa ref jest downcast do [platform:: Object](../cppcx/platform-object-class.md)^. Oryginalny typ można przywrócić później przez określenie go jako argumentu parametru typu w funkcji członkowskiej [WeakReference:: Rozwiązuj \<T> ](#resolve) .
 
-## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a>WeakReference:: operator BoolType
+## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a> WeakReference:: operator BoolType
 
 Implementuje bezpieczny wzorzec bool dla klasy WeakReference. Nie można jawnie wywołać w kodzie.
 
@@ -76,7 +77,7 @@ Implementuje bezpieczny wzorzec bool dla klasy WeakReference. Nie można jawnie 
 BoolType BoolType();
 ```
 
-## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a>WeakReference:: Rozwiązuj — Metoda (przestrzeń nazw platformy)
+## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a> WeakReference:: Rozwiązuj — Metoda (przestrzeń nazw platformy)
 
 Zwraca dojście do oryginalnej klasy referencyjnej lub **`nullptr`** Jeśli obiekt już nie istnieje.
 
@@ -108,7 +109,7 @@ if (bar != nullptr)
 
 Należy zauważyć, że parametr type ma wartość T, a nie T ^.
 
-## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a>WeakReference:: WeakReference — Konstruktor
+## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a> WeakReference:: WeakReference — Konstruktor
 
 Oferuje różne sposoby konstruowania WeakReference.
 

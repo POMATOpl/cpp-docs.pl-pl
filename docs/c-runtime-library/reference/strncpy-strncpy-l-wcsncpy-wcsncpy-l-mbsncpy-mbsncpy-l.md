@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy _mbsncpy_l'
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 4/2/2020
 api_name:
@@ -68,12 +69,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28d3998ccfe1e7460fa628d462732f233c553b10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306108"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -179,7 +180,7 @@ Zwraca *strDest*. Żadna wartość zwracana nie jest zarezerwowana do wskazania 
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strncpy** kopiuje początkową *liczbę* znaków *StrSource* do *strDest* i zwraca *strDest*. Jeśli *Liczba* jest mniejsza lub równa długości *strSource*, znak null nie jest automatycznie dołączany do skopiowanego ciągu. Jeśli *Liczba* jest większa niż długość *strSource*, ciąg docelowy jest uzupełniony znakami o wartości null do *liczby*długości. Zachowanie **strncpy** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
+Funkcja **strncpy** kopiuje początkową *liczbę* znaków *StrSource* do *strDest* i zwraca *strDest*. Jeśli *Liczba* jest mniejsza lub równa długości *strSource*, znak null nie jest automatycznie dołączany do skopiowanego ciągu. Jeśli *Liczba* jest większa niż długość *strSource*, ciąg docelowy jest uzupełniony znakami o wartości null do *liczby* długości. Zachowanie **strncpy** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
 
 > [!IMPORTANT]
 > **strncpy** nie sprawdza wystarczającej ilości miejsca w *strDest*; stanowi to potencjalną przyczynę przekroczenia buforu. Argument *Count* ogranicza liczbę znaków skopiowanych; nie jest to limit rozmiaru *strDest*. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -208,9 +209,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncpy**|\<> String. h|
-|**wcsncpy**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsncpy**, **_mbsncpy_l**|\<mbstring. h>|
+|**strncpy**|\<string.h>|
+|**wcsncpy**|\<string.h> lub \<wchar.h>|
+|**_mbsncpy**, **_mbsncpy_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności platformy, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -287,7 +288,7 @@ Układ automatycznych zmiennych i poziom wykrywania błędów oraz ochrony kodu 
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

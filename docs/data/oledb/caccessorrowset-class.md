@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAccessorRowset'
 title: CAccessorRowset — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c93580fa41967004947b075e82e00bdcb745ad4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307577"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
 

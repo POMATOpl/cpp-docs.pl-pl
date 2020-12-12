@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l'
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 ms.date: 4/2/2020
 api_name:
@@ -63,12 +64,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 123f8c4945d98ccf3dd94a48dbbb0fef3b35a8e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 388d0ed82b811187f10d68fed7e48b954fdb3e2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305913"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
@@ -146,7 +147,7 @@ Te funkcje weryfikują ich argumenty. Jeśli *str* nie jest prawidłowym ciągie
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są ustawiane jako pierwsze w pierwszej *liczbie* znaków od *str* do *c*. Jeśli *Liczba* jest większa niż rozmiar *str*, zamiast *Count*jest używany rozmiar *str* . Występuje błąd, jeśli *Liczba* jest większa niż *NumberOfElements* i oba te parametry są większe niż rozmiar *str*.
+Te funkcje są ustawiane jako pierwsze w pierwszej *liczbie* znaków od *str* do *c*. Jeśli *Liczba* jest większa niż rozmiar *str*, zamiast *Count* jest używany rozmiar *str* . Występuje błąd, jeśli *Liczba* jest większa niż *NumberOfElements* i oba te parametry są większe niż rozmiar *str*.
 
 **_wcsnset_s** i **_mbsnset_s** są wersjami znaków dwubajtowych i **_strnset_s**. Argument ciągu **_wcsnset_s** jest ciągiem znaków dwubajtowych; **_mbsnset_s** jest ciągiem znaków amultibyte. Te trzy funkcje zachowują się identycznie w inny sposób.
 
@@ -167,11 +168,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnset_s**|\<> String. h|
-|**_strnset_s_l**|\<Używanie TCHAR. h>|
-|**_wcsnset_s**|\<ciąg. h> lub \<WCHAR. h>|
-|**_wcsnset_s_l**|\<Używanie TCHAR. h>|
-|**_mbsnset_s**, **_mbsnset_s_l**|\<mbstring. h>|
+|**_strnset_s**|\<string.h>|
+|**_strnset_s_l**|\<tchar.h>|
+|**_wcsnset_s**|\<string.h> lub \<wchar.h>|
+|**_wcsnset_s_l**|\<tchar.h>|
+|**_mbsnset_s**, **_mbsnset_s_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -197,11 +198,11 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

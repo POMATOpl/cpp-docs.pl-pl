@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strcoll —, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l'
 title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 4/2/2020
 api_name:
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: f75bf4bb28a2dc34a233374314e6bc170793d77e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f3d826a14bb1cc77f6265806cc24ef5e9cd92b6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306147"
 ---
 # <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -117,7 +118,7 @@ Każda z tych funkcji zwraca wartość wskazującą, że jest to relacja *ciąg1
 |0|*ciąg1* identyczny z *ciąg2*|
 |> 0|*ciąg1* większy niż *ciąg2*|
 
-Każda z tych funkcji zwraca **_NLSCMPERROR** w przypadku błędu. Aby użyć **_NLSCMPERROR**, Dołącz oba ciągi. H lub MBSTRING. C. **wcscoll** może się nie powieść, jeśli *ciąg1* lub *ciąg2* ma **wartość null** lub zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **wcscoll** może ustawić **errno** na **EINVAL**. Aby sprawdzić, czy wystąpił błąd w wywołaniu **wcscoll**, ustaw **errno** na 0, a następnie sprawdź **errno** po wywołaniu **wcscoll**.
+Każda z tych funkcji zwraca **_NLSCMPERROR** w przypadku błędu. Aby użyć **_NLSCMPERROR**, Dołącz oba ciągi. H lub MBSTRING. H. **wcscoll** może się nie powieść, jeśli *ciąg1* lub *ciąg2* ma **wartość null** lub zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **wcscoll** może ustawić **errno** na **EINVAL**. Aby sprawdzić, czy wystąpił błąd w wywołaniu **wcscoll**, ustaw **errno** na 0, a następnie sprawdź **errno** po wywołaniu **wcscoll**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -139,11 +140,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strcoll —**|\<> String. h|
-|**wcscoll**|\<WCHAR. h>, \<String. h>|
-|**_mbscoll**, **_mbscoll_l**|\<mbstring. h>|
-|**_strcoll_l**|\<> String. h|
-|**_wcscoll_l**|\<WCHAR. h>, \<String. h>|
+|**strcoll —**|\<string.h>|
+|**wcscoll**|\<wchar.h>, \<string.h>|
+|**_mbscoll**, **_mbscoll_l**|\<mbstring.h>|
+|**_strcoll_l**|\<string.h>|
+|**_wcscoll_l**|\<wchar.h>, \<string.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -151,7 +152,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

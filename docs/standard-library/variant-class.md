@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie wariantów
 title: Klasa Variant
 ms.date: 04/04/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0fc2887def147b458e63bc316f211e62a5eba879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305107"
 ---
 # <a name="variant-class"></a>Klasa Variant
 
@@ -37,12 +38,12 @@ template <class... Types>
 |-|-|
 |[typu](#variant)|Konstruuje obiekt typu `variant` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
 |[emplace](#emplace)|Tworzy nową wartość zawartej.|
-|[index](#index)|Zwraca indeks zawartej wartości.|
+|[indeks](#index)|Zwraca indeks zawartej wartości.|
 |[wymiany](#swap)||
 |[valueless_by_exception](#emplace)|Zwraca **`false`** czy wariant ma wartość.|
 

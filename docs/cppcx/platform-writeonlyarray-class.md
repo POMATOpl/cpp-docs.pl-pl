@@ -1,5 +1,6 @@
 ---
-title: Platform::WriteOnlyArray, klasa
+description: 'Dowiedz się więcej na temat: platform:: WriteOnlyArray, Klasa'
+title: 'Platform:: WriteOnlyArray, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -12,18 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: d06ed19b7c041f9ae73f862ba521449a206aa321
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cddbe0d3823ba7b9751bd60844d9ce699546b804
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307772"
 ---
-# <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray, klasa
+# <a name="platformwriteonlyarray-class"></a>Platform:: WriteOnlyArray, Klasa
 
-Reprezentuje tablicę jednowymiarową, która jest używana jako parametr wejściowy, gdy wywołujący przekazuje tablicę dla metody do wypełnienia.
+Reprezentuje tablicę jednowymiarową używaną jako parametr wejściowy, gdy obiekt wywołujący przekazuje tablicę dla metody do wypełnienia.
 
-Ta klasa ref jest zadeklarowana jako prywatna w vccorlib.h; w związku z tym nie jest emitowany w metadanych i jest tylko materiały eksploatacyjne z języka C++. Ta klasa jest przeznaczona tylko do użycia jako parametr wejściowy, który odbiera tablicę, która została przydzielona przez obiekt wywołujący. Nie jest konstruowany z kodu użytkownika. Umożliwia metodę C++ do zapisu bezpośrednio do tej tablicy — wzorzec, który jest znany jako *FillArray* wzorca. Aby uzyskać więcej informacji, zobacz [Tablica i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Ta klasa referencyjna jest zadeklarowana jako prywatna w vccorlib. h; w związku z tym nie jest emitowany w metadanych i można go używać tylko z C++. Ta klasa jest przeznaczona tylko do użycia jako parametr wejściowy, który odbiera tablicę przydzieloną przez wywołującego. Nie jest konstrukcyjną od kodu użytkownika. Umożliwia metodzie języka C++ zapis bezpośrednio w tej tablicy — wzorzec, który jest znany jako wzorzec *metodzie FillArray* . Aby uzyskać więcej informacji, zobacz [Array i WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,16 +36,16 @@ private ref class WriteOnlyArray<T, 1>
 
 ### <a name="public-methods"></a>Metody publiczne
 
-Te metody mają dostęp wewnętrzny — oznacza to, że są one dostępne tylko w aplikacji lub składniku C++.
+Te metody mają wewnętrzny dostęp — to znaczy, że są dostępne tylko w aplikacji lub składniku C++.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[WriteOnlyArray::begin](#begin)|Iterator, który wskazuje na pierwszy element tablicy.|
-|[WriteOnlyArray::Data](#data)|Wskaźnik do buforu danych.|
-|[WriteOnlyArray::end](#end)|Iterator, który wskazuje jeden przeszłości ostatni element w tablicy.|
-|[WriteOnlyArray::FastPass](#fastpass)|Wskazuje, czy tablica może korzystać z mechanizmu FastPass, który jest optymalizacją w sposób przezroczysty wykonywany przez system. Nie używaj tego w kodzie|
-|[WriteOnlyArray::Długość](#length)|Zwraca liczbę elementów w tablicy.|
-|[WriteOnlyArray::set](#set)|Ustawia określony element na określoną wartość.|
+|[WriteOnlyArray:: BEGIN](#begin)|Iterator, który wskazuje na pierwszy element tablicy.|
+|[WriteOnlyArray::D ATA](#data)|Wskaźnik do buforu danych.|
+|[WriteOnlyArray:: end](#end)|Iterator, który wskazuje jeden poza ostatnim elementem w tablicy.|
+|[WriteOnlyArray:: FastPass](#fastpass)|Wskazuje, czy tablica może korzystać z mechanizmu FastPass, który jest optymalizacją niewidocznie wykonywaną przez system. Nie używaj tego w kodzie|
+|[WriteOnlyArray:: length](#length)|Zwraca liczbę elementów w tablicy.|
+|[WriteOnlyArray:: Set](#set)|Ustawia określony element na określoną wartość.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -52,13 +53,13 @@ Te metody mają dostęp wewnętrzny — oznacza to, że są one dostępne tylko 
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: **/ZW**
+Opcja kompilatora: **/zw**
 
-**Metadane:** Platforma.winmd
+**Metadane:** Obiekt platform. winmd
 
-**Obszar nazw:** Platformy
+**Przestrzeń nazw:** Platformach
 
-## <a name="writeonlyarraybegin-method"></a><a name="begin"></a>WriteOnlyArray::begin Metoda
+## <a name="writeonlyarraybegin-method"></a><a name="begin"></a> WriteOnlyArray:: BEGIN — Metoda
 
 Zwraca wskaźnik do pierwszego elementu w tablicy.
 
@@ -74,9 +75,9 @@ Wskaźnik do pierwszego elementu w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten iterator może służyć z algorytmami `std::sort` STL, takich jak do pracy na elementach w tablicy.
+Ten iterator może być używany z algorytmami STL, takimi jak wykonywanie `std::sort` operacji na elementach tablicy.
 
-## <a name="writeonlyarraydata-property"></a><a name="data"></a>WriteOnlyArray::Data Właściwość
+## <a name="writeonlyarraydata-property"></a><a name="data"></a> WriteOnlyArray::D ATA — Właściwość
 
 Wskaźnik do buforu danych.
 
@@ -90,11 +91,11 @@ property T* Data{
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do nieprzetworzonych bajtów tablicy.
+Wskaźnik do nieprzetworzonych bajtów tablicowych.
 
-## <a name="writeonlyarrayend-method"></a><a name="end"></a>WriteOnlyArray::end Metoda
+## <a name="writeonlyarrayend-method"></a><a name="end"></a> WriteOnlyArray:: end — Metoda
 
-Zwraca wskaźnik do jednego przeszłości ostatni element w tablicy.
+Zwraca wskaźnik do jednego z ostatnich elementów w tablicy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -104,15 +105,15 @@ T* end() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator wskaźnika do jednego przeszłości ostatni element w tablicy.
+Iterator wskaźnika do jednego z ostatnich elementów w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten iterator może służyć z algorytmami STL `std::sort` do wykonywania operacji, takich jak na elementy tablicy.
+Ten iterator może być używany z algorytmami STL do wykonywania operacji, takich jak `std::sort` w przypadku elementów tablicy.
 
-## <a name="writeonlyarrayfastpass-property"></a><a name="fastpass"></a>WriteOnlyArray::Właściwość FastPass
+## <a name="writeonlyarrayfastpass-property"></a><a name="fastpass"></a> WriteOnlyArray:: FastPass, właściwość
 
-Wskazuje, czy można wykonać wewnętrzną optymalizację FastPass. Nie jest przeznaczony do użycia przez kod użytkownika.
+Wskazuje, czy można wykonać wewnętrzną optymalizację FastPass. Nie przeznaczony do użycia przez kod użytkownika.
 
 ### <a name="syntax"></a>Składnia
 
@@ -126,9 +127,9 @@ property bool FastPass{
 
 Wartość logiczna wskazująca, czy tablica jest FastPass.
 
-## <a name="writeonlyarrayget-method"></a><a name="get"></a>WriteOnlyArray::get Metoda
+## <a name="writeonlyarrayget-method"></a><a name="get"></a> WriteOnlyArray:: Get — Metoda
 
-Zwraca element w określonym indeksie.
+Zwraca element o określonym indeksie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -138,14 +139,14 @@ T& get(unsigned int indexArg) const;
 
 ### <a name="parameters"></a>Parametry
 
-*indeksArg*<br/>
+*indexArg*<br/>
 Indeks do użycia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="writeonlyarraylength-property"></a><a name="length"></a>WriteOnlyArray::Właściwość Length
+## <a name="writeonlyarraylength-property"></a><a name="length"></a> WriteOnlyArray:: Length — właściwość
 
-Zwraca liczbę elementów w tablicy przydzielonej przez wywołującego.
+Zwraca liczbę elementów w tablicy przydzielonym przez obiekt wywołujący.
 
 ### <a name="syntax"></a>Składnia
 
@@ -159,7 +160,7 @@ property unsigned int Length{
 
 Liczba elementów w tablicy.
 
-## <a name="writeonlyarrayset-function"></a><a name="set"></a>WriteOnlyArray::set Funkcja
+## <a name="writeonlyarrayset-function"></a><a name="set"></a> WriteOnlyArray:: Set — funkcja
 
 Ustawia określoną wartość w określonym indeksie w tablicy.
 
@@ -173,11 +174,11 @@ T& set(
 
 ### <a name="parameters"></a>Parametry
 
-*indeksArg*<br/>
-Indeks elementu do ustawionego.
+*indexArg*<br/>
+Indeks elementu, który ma zostać ustawiony.
 
-*wartośćArg*<br/>
-Wartość ustawiona `indexArg`na .
+*valueArg*<br/>
+Wartość, która ma zostać ustawiona na `indexArg` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -185,9 +186,9 @@ Odwołanie do elementu, który został właśnie ustawiony.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat interpretowania wartości HRESULT, zobacz [Struktura kodów błędów COM](/windows/win32/com/structure-of-com-error-codes).
+Aby uzyskać więcej informacji na temat interpretowania wartości HRESULT, zobacz [struktury kodów błędów modelu COM](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obszar nazw platformy](platform-namespace-c-cx.md)<br/>
-[Tworzenie składników środowiska wykonawczego systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)<br/>
+[Tworzenie składników środowisko wykonawcze systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

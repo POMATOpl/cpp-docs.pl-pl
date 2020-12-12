@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l'
 title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: c7abe5ce96d0fa3d198834f6923724321d60d666
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 71f37511ab531def178926d77e61978190fce817
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306121"
 ---
 # <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -135,7 +136,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość, która wskazuje związek podciągów *ciąg1* i *ciąg2*w następujący sposób.
+Każda z tych funkcji zwraca wartość, która wskazuje związek podciągów *ciąg1* i *ciąg2* w następujący sposób.
 
 |Wartość zwracana|Relacja ciąg1 do ciąg2|
 |------------------|----------------------------------------|
@@ -164,9 +165,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strncoll**, **_strncoll_l**|\<> String. h|
-|**_wcsncoll**, **_wcsncoll_l**|\<WCHAR. h> lub \<> String. h|
-|**_mbsncoll**, **_mbsncoll_l**|\<mbstring. h>|
+|**_strncoll**, **_strncoll_l**|\<string.h>|
+|**_wcsncoll**, **_wcsncoll_l**|\<wchar.h> lub \<string.h>|
+|**_mbsncoll**, **_mbsncoll_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -174,7 +175,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

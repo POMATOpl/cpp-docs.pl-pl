@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strnextc, _wcsnextc, _mbsnextc _mbsnextc_l'
 title: _strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-ms.openlocfilehash: 4017dc4f72a0072df8d0969406169a26c1da43ac
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8eb1af549e3ef983441870350cbfdc4361f26e9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306095"
 ---
 # <a name="_strnextc-_wcsnextc-_mbsnextc-_mbsnextc_l"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
@@ -110,7 +111,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc** i **_wcsnextc** są ciągami znaków dwubajtowych i ciągami o szerokim znaku **_mbsnextc**. **_wcsnextc** zwraca wartość całkowitą następnego znaku dwubajtowego w *str*; **_strnextc** zwraca wartość całkowitą kolejnego jednobajtowego znaku w *str*. **_strnextc** i **_wcsnextc** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
+**_strnextc** i **_wcsnextc** są ciągami znaków dwubajtowych i ciągami o szerokim znaku **_mbsnextc**. **_wcsnextc** zwraca wartość całkowitą następnego znaku dwubajtowego w *str*; **_strnextc** zwraca wartość całkowitą kolejnego jednobajtowego znaku w *str*. **_strnextc** i **_wcsnextc** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [Używanie mapowań Generic-Text](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
 **_mbsnextc_l** jest identyczny, z tą różnicą, że używa zamiast tego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -118,10 +119,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnextc**|\<mbstring. h>|
-|**_mbsnextc_l**|\<mbstring. h>|
-|**_strnextc**|\<Używanie TCHAR. h>|
-|**_wcsnextc**|\<Używanie TCHAR. h>|
+|**_mbsnextc**|\<mbstring.h>|
+|**_mbsnextc_l**|\<mbstring.h>|
+|**_strnextc**|\<tchar.h>|
+|**_wcsnextc**|\<tchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -129,7 +130,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

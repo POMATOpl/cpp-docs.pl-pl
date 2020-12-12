@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa ostrstream'
 title: ostrstream — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: f17d8006aea6c5467f8de270318386bb12df264a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9966f044d48aa762d681bafcfc22441f7124c9a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305146"
 ---
 # <a name="ostrstream-class"></a>ostrstream — Klasa
 
@@ -57,7 +58,7 @@ Obiekt przechowuje obiekt klasy `strstreambuf` .
 
 **Przestrzeń nazw:** std
 
-## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream:: Zablokuj
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a> ostrstream:: Zablokuj
 
 Powoduje, że bufor strumienia nie jest dostępny za pomocą operacji buforu strumienia.
 
@@ -78,7 +79,7 @@ Funkcja członkowska wywołuje [rdbuf](#rdbuf)  ->  [Zablokuj](../standard-libra
 
 Zobacz [strstream:: Zablokuj](../standard-library/strstreambuf-class.md#freeze) , aby zapoznać się z przykładem, który używa `freeze` .
 
-## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream:: ostrstream
+## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a> ostrstream:: ostrstream
 
 Konstruuje obiekt typu `ostrstream` .
 
@@ -109,7 +110,7 @@ Oba konstruktory inicjują klasę bazową przez wywołanie [ostream](../standard
 
 - W przeciwnym razie `ptr` należy wyznaczyć pierwszy element tablicy elementów count, który zawiera ciąg C, którego pierwszy element jest wyznaczony przez `ptr` , i Konstruktor wywołuje `strstreambuf` ( `ptr` , `count` , `ptr`  +  `strlen` `ptr` ).
 
-## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream: liczba:p
+## <a name="ostrstreampcount"></a><a name="pcount"></a> ostrstream: liczba:p
 
 Zwraca liczbę elementów, które są zapisywane w kontrolowanej sekwencji.
 
@@ -129,7 +130,7 @@ Funkcja członkowska zwraca [rdbuf](#rdbuf)  ->  [pcount](../standard-library/st
 
 Zobacz [strstream: liczba:p](../standard-library/strstreambuf-class.md#pcount) dla przykładu, który używa `pcount` .
 
-## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>ostrstream:: rdbuf
+## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a> ostrstream:: rdbuf
 
 Zwraca wskaźnik do obiektu strstreambuf skojarzonego ze strumieniem.
 
@@ -149,7 +150,7 @@ Funkcja członkowska zwraca adres bufora zapisanego strumienia typu `pointer` do
 
 Zobacz [strstreambuf: liczba:p](../standard-library/strstreambuf-class.md#pcount) dla przykładu, który używa `rdbuf` .
 
-## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream:: str
+## <a name="ostrstreamstr"></a><a name="str"></a> ostrstream:: str
 
 Wywołania [zawieszają](../standard-library/strstreambuf-class.md#freeze)się, a następnie zwracają wskaźnik do początku kontrolowanej sekwencji.
 
@@ -169,7 +170,7 @@ Funkcja członkowska zwraca [rdbuf](#rdbuf)  ->  [str](../standard-library/strst
 
 Zobacz [strstream:: str](../standard-library/strstreambuf-class.md#str) , aby uzyskać przykład, który używa `str` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [ostream](../standard-library/ostream-typedefs.md#ostream)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

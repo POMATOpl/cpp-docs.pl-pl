@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __segmentlimit'
 title: __segmentlimit
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 49f8688918e07e143615af7b184a784daa0eaaa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307005"
 ---
 # <a name="__segmentlimit"></a>__segmentlimit
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję `lsl` (limit segmentów obciążenia).
+Generuje `lsl` instrukcję (limit segmentów obciążenia).
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +36,7 @@ podczas Stała określająca selektor segmentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Limit segmentów selektora segmentu określony przez,Jeśli selektor jest prawidłowy i widoczny na bieżącym poziomie uprawnień.
+Limit segmentów selektora segmentu określony *przez, jeśli* selektor jest prawidłowy i widoczny na bieżącym poziomie uprawnień.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -43,7 +44,7 @@ Limit segmentów selektora segmentu określony przez,Jeśli selektor jest prawid
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -107,6 +108,6 @@ sl was changed
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

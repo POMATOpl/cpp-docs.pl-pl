@@ -1,61 +1,62 @@
 ---
+description: 'Dowiedz się więcej o: ciągi (C++/CX)'
 title: Ciągi (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-ms.openlocfilehash: a67b9a4552dc83791c05029cca76f60fd83df0f1
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 83ea4cd86b57e8bfd81968cbb617b7b8af81b978
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307616"
 ---
 # <a name="strings-ccx"></a>Ciągi (C++/CX)
 
-Tekst w środowisku wykonawczego systemu Windows jest reprezentowany w języku C++/CX przez [platformę::String Class](../cppcx/platform-string-class.md). `Platform::String Class` Podczas przekazywania ciągów tam iz powrotem do metod w klasach środowiska wykonawczego systemu Windows lub podczas interakcji z innymi składnikami środowiska wykonawczego systemu Windows w granicach interfejsu binarnego aplikacji (ABI). Zapewnia `Platform::String Class` metody dla kilku typowych operacji ciągu, ale nie jest przeznaczony do w pełni funkcjonalny ciąg klasy. W module C++ należy użyć standardowych typów ciągów języka C++, takich jak [wstring](../standard-library/basic-string-class.md) dla dowolnego znaczącego przetwarzania tekstu, a następnie przekonwertować wynik końcowy na [Platform::String^](../cppcx/platform-string-class.md) przed przekazaniem go do lub z interfejsu publicznego. Konwersja między `wstring` lub i `wchar_t*` . `Platform::String`
+Tekst w środowisko wykonawcze systemu Windows jest reprezentowany w języku C++/CX przez [klasę platform:: String](../cppcx/platform-string-class.md). `Platform::String Class`W przypadku przekazywania ciągów z powrotem i do metod w klasach środowisko wykonawcze systemu Windows lub w przypadku korzystania z innych składników Środowisko wykonawcze systemu Windows na granicy interfejsu binarnego aplikacji (ABI). `Platform::String Class`Zapewnia metody dla kilku typowych operacji na ciągach, ale nie jest ona przeznaczona do obsługi w pełni funkcjonalnej klasy ciągów. W module języka C++ Użyj standardowych typów ciągów języka C++, takich jak [wstring](../standard-library/basic-string-class.md) , do dowolnego istotnego przetwarzania tekstu, a następnie przekonwertuj wynik końcowy na [platformę:: String ^](../cppcx/platform-string-class.md) przed przekazaniem go do lub z interfejsu publicznego. Konwersja między programami `wstring` lub `wchar_t*` i `Platform::String` .
 
-**Szybkie przejście**
+**Szybki przebieg**
 
-W niektórych przypadkach kompilator może sprawdzić, `Platform::String` czy `String` można bezpiecznie skonstruować lub przekazać do funkcji bez kopiowania podstawowych danych ciągu. Takie operacje są znane jako *szybkie przejście* i występują w sposób przezroczysty.
+W niektórych przypadkach kompilator może sprawdzić, czy może bezpiecznie skonstruować `Platform::String` lub przekazać `String` do funkcji bez kopiowania danych ciągu bazowego. Takie operacje są nazywane *szybkim przebiegiem* i występują w sposób niewidoczny dla użytkownika.
 
-## <a name="string-construction"></a>Konstrukcja strun
+## <a name="string-construction"></a>Konstrukcja ciągu
 
-Wartość `String` obiektu jest niezmienną (tylko do odczytu) `char16` sekwencją (16-bitowych znaków Unicode). Ponieważ `String` obiekt jest niezmienny, przypisanie nowego literału ciągu do `String` `String` zmiennej faktycznie `String` zastępuje oryginalny obiekt nowym obiektem. Operacje łączenia obejmują zniszczenie oryginalnego `String` obiektu i utworzenie nowego obiektu.
+Wartość `String` obiektu jest niezmienne (tylko do odczytu) `char16` (16-bitowe znaki Unicode). Ponieważ `String` obiekt jest niezmienny, przypisanie nowego literału ciągu do `String` zmiennej faktycznie zastępuje oryginalny `String` obiekt nowym `String` obiektem. Operacje łączenia obejmują zniszczenie oryginalnego `String` obiektu i tworzenie nowego obiektu.
 
 **Literały**
 
-*Znak dosłowny* jest znakiem, który jest ujęty w pojedynczy cudzysłów, a *ciąg literał* jest sekwencją znaków, która jest ujęta w podwójne cudzysłowy. Jeśli używasz literału do zainicjowania string^ zmiennej, kompilator `char16` zakłada, że literał składa się ze znaków. Oznacza to, że nie trzeba poprzedzać literału modyfikatorem ciągu "L" ani ująć literału w makra **_T()** lub **TEXT().** Aby uzyskać więcej informacji na temat obsługi języka C++ dla unicode, zobacz [Podsumowanie programowania Unicode](../text/unicode-programming-summary.md).
+*Znak literału* jest znakiem, który jest ujęty w znaki pojedynczego cudzysłowu, a *ciąg literału* jest sekwencją znaków ujętych w znaki podwójnego cudzysłowu. Jeśli użyjesz literału w celu zainicjowania zmiennej ciągu ^ ^, kompilator zakłada, że literał zawiera `char16` znaki. Oznacza to, że nie trzeba poprzedzać literału modyfikatorem ciągu "L" ani ująć literału w makrze **_T ()** lub **tekstowym ()** . Aby uzyskać więcej informacji na temat obsługi języka Unicode w języku C++, zobacz [Podsumowanie programowania Unicode](../text/unicode-programming-summary.md).
 
-W poniższym przykładzie `String` przedstawiono różne sposoby konstruowania obiektów.
+Poniższy przykład przedstawia różne sposoby konstruowania `String` obiektów.
 
 [!code-cpp[cx_strings#01](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#01)]
 
 ## <a name="string-handling-operations"></a>Operacje obsługi ciągów
 
-Klasa `String` zawiera metody i operatory do łączenia, porównywania ciągów i innych podstawowych operacji ciągu. Aby wykonać bardziej obszerne manipulacje ciągami, użyj funkcji `String::Data()` elementu członkowskiego, aby pobrać wartość `String^` obiektu jako . `const wchar_t*` Następnie użyj tej wartości, `std::wstring`aby zainicjować , który zapewnia zaawansowane funkcje obsługi ciągów.
+`String`Klasa zawiera metody i operatory umożliwiające łączenie, Porównywanie ciągów i wykonywanie innych podstawowych operacji na ciągach. Aby wykonać bardziej rozległe manipulowanie ciągami, użyj `String::Data()` funkcji elementu członkowskiego, aby pobrać wartość `String^` obiektu jako `const wchar_t*` . Następnie użyj tej wartości do zainicjowania `std::wstring` , która zapewnia funkcje obsługi ciągów rozbudowanych.
 
 [!code-cpp[cx_strings#03](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#03)]
 
 ## <a name="string-conversions"></a>Konwersje ciągów
 
-A `Platform::String` może `char16` zawierać tylko `NULL` znaki lub znak. Jeśli aplikacja musi pracować ze znakami 8-bitowym, `const wchar_t*`użyj [string::Data,](../cppcx/platform-string-class.md#data) aby wyodrębnić tekst jako plik . Następnie można użyć odpowiednich funkcji systemu Windows lub funkcji biblioteki standardowej `wchar_t*` do działania na danych i przekonwertować je z powrotem na lub [wstring](../standard-library/basic-string-class.md), który można użyć do skonstruowania nowego `Platform::String`.
+`Platform::String`Może zawierać tylko `char16` znaki lub `NULL` znak. Jeśli aplikacja musi współpracować z znakami 8-bitowymi, użyj [ciągu::D ATA](../cppcx/platform-string-class.md#data) , aby wyodrębnić tekst jako `const wchar_t*` . Następnie można użyć odpowiednich funkcji systemu Windows lub standardowych funkcji biblioteki do działania na danych i przekonwertować ją z powrotem na `wchar_t*` lub [wstring](../standard-library/basic-string-class.md), których można użyć do utworzenia nowego `Platform::String` .
 
-Poniższy fragment kodu pokazuje, `String^` jak przekonwertować zmienną do i ze zmiennej. `wstring` Aby uzyskać więcej informacji na temat manipulacji ciągami używanymi w tym przykładzie, zobacz [basic_string::replace](../standard-library/basic-string-class.md#replace).
+Poniższy fragment kodu przedstawia sposób konwersji `String^` zmiennej do i ze `wstring` zmiennej. Aby uzyskać więcej informacji na temat manipulowania ciągami używanymi w tym przykładzie, zobacz [basic_string:: Replace](../standard-library/basic-string-class.md#replace).
 
 [!code-cpp[cx_strings#04](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#04)]
 
 ## <a name="string-length-and-embedded-null-values"></a>Długość ciągu i osadzone wartości NULL
 
-[Ciąg::Długość](../cppcx/platform-string-class.md#length) zwraca liczbę znaków w ciągu, a nie liczbę bajtów. Kończący się znak NULL nie jest liczony, chyba że jawnie określisz go podczas używania semantyki stosu do konstruowania ciągu.
+[Ciąg:: length](../cppcx/platform-string-class.md#length) zwraca liczbę znaków w ciągu, a nie liczbę bajtów. Kończący znak NULL nie jest liczony, chyba że zostanie jawnie określony podczas tworzenia ciągu przy użyciu semantyki stosu.
 
-A `Platform::String` może zawierać osadzone wartości NULL, ale tylko wtedy, gdy null jest wynikiem operacji łączenia. Osadzone Nulls nie są obsługiwane w literałach ciągów; w związku z tym nie można użyć osadzonych NULLs w ten sposób, aby zainicjować `Platform::String`. Osadzone wartości NULL `Platform::String` w a są ignorowane, gdy ciąg jest wyświetlany, `TextBlock::Text` na przykład, gdy jest przypisany do właściwości. Osadzone NulLs są usuwane, gdy `Data` wartość ciągu jest zwracana przez właściwość.
+`Platform::String`Może zawierać osadzone wartości null, ale tylko wtedy, gdy wartość null jest wynikiem operacji łączenia. Osadzone wartości NULL nie są obsługiwane w literałach ciągu; w związku z tym nie można używać osadzonych wartości NULL w ten sposób, aby zainicjować `Platform::String` . Osadzone wartości NULL w elemencie `Platform::String` są ignorowane, gdy zostanie wyświetlony ciąg, na przykład, gdy zostanie przypisany do `TextBlock::Text` właściwości. Osadzone wartości NULL są usuwane, gdy wartość ciągu jest zwracana przez `Data` Właściwość.
 
-## <a name="stringreference"></a>Odwzłówka ciągu
+## <a name="stringreference"></a>StringReference
 
-W niektórych przypadkach kod (a) odbiera std::wstring lub wchar_t string lub literał ciągu L"" i po prostu przekazuje go do innej metody, która przyjmuje String^ jako parametr wejściowy. Tak długo, jak oryginalny bufor ciągu sam pozostaje prawidłowy i nie mutuje przed zwraca funkcję, można przekonwertować `wchar_t*` ciąg lub ciąg literał do [Platform::StringReference](../cppcx/platform-stringreference-class.md), i przekazać w tym zamiast . `Platform::String^` Jest to dozwolone, ponieważ `StringReference` ma zdefiniowaną przez użytkownika konwersję do `Platform::String^`. Za `StringReference` pomocą można uniknąć tworzenia dodatkowej kopii danych ciągu. W pętlach, w których przekazujesz dużą liczbę ciągów lub podczas przekazywania bardzo dużych ciągów, można potencjalnie osiągnąć znaczną poprawę wydajności za pomocą `StringReference`programu . Ale `StringReference` ponieważ zasadniczo pożycza oryginalny bufor ciągów, należy użyć ekstremalnej staranności, aby uniknąć uszkodzenia pamięci. Nie należy przekazywać `StringReference` do metody asynchroniczne, chyba że oryginalny ciąg jest gwarantowane w zakresie, gdy ta metoda zwraca. A String^ który jest inicjowany z StringReference wymusi alokacji i kopii danych ciągu, jeśli wystąpi druga operacja przypisania. W takim przypadku stracisz korzyści `StringReference`z wydajności .
+W niektórych przypadkach kod (a) otrzymuje literał typu std:: wstring lub wchar_t lub L "", a po prostu przekazuje go do innej metody, która pobiera ciąg ^ jako parametr wejściowy. Tak długo, jak oryginalny bufor ciągu pozostanie ważny i nie zmienia się przed zwróceniem przez funkcję, można przekonwertować `wchar_t*` ciąg lub literał ciągu na [platformę:: StringReference](../cppcx/platform-stringreference-class.md)i przekazać go, zamiast `Platform::String^` . Jest to dozwolone `StringReference` , ponieważ ma zdefiniowaną przez użytkownika konwersję do `Platform::String^` . Za pomocą można `StringReference` uniknąć tworzenia dodatkowej kopii danych ciągu. W pętlach, w których przekazywana jest duża liczba ciągów lub podczas przekazywania bardzo dużych ciągów, można osiągnąć znaczącą poprawę wydajności przy użyciu programu `StringReference` . Ale ponieważ `StringReference` zasadniczo ponosi oryginalny bufor ciągu, należy użyć wyjątkowo zadbać, aby uniknąć uszkodzenia pamięci. Nie należy przekazywać `StringReference` do metody asynchronicznej, chyba że oryginalny ciąg musi znajdować się w zakresie, gdy ta metoda zwraca. Ciąg ^, który jest inicjowany z StringReference, wymusi alokację i kopię danych ciągu w przypadku wystąpienia drugiej operacji przypisania. W takim przypadku utracisz korzyść wydajności `StringReference` .
 
-Należy `StringReference` zauważyć, że jest to standardowy typ klasy C++, a nie klasa ref, nie można jej używać w interfejsie publicznym klasy ref, które definiujesz.
+Należy pamiętać, że `StringReference` jest to standardowy typ klasy języka C++, a nie Klasa referencyjna, nie można używać go w publicznym interfejsie klas ref, które definiujesz.
 
-W poniższym przykładzie pokazano, jak używać StringReference:
+Poniższy przykład pokazuje, jak używać StringReference:
 
 ```cpp
 void GetDecodedStrings(std::vector<std::wstring> strings)

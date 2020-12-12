@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCStatusBar'
 title: Klasa CMFCStatusBar
 ms.date: 11/19/2018
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 004873ef2696eb9504cdd4df77e700c4a145e886
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 79ba7c749a73406893173d7486fd5df208a37b83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307083"
 ---
 # <a name="cmfcstatusbar-class"></a>Klasa CMFCStatusBar
 
@@ -800,7 +801,7 @@ podczas Indeks okienka, do którego ma zostać przypisany tekst etykietki narzę
 *pszTipText*<br/>
 podczas Tekst nowej etykietki narzędzia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

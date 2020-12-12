@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _rotr8, _rotr16'
 title: _rotr8, _rotr16
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 66598a4e6cdc26fa60a87cd32abaa34319ebe6cc
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 95908956fe34b654c3602f27b495eb58a0b8f8c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218041"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307044"
 ---
 # <a name="_rotr8-_rotr16"></a>_rotr8, _rotr16
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Obróć wartości wejściowe w prawo do najmniej znaczącego bitu (LSB) o określoną liczbę pozycji bitowych.
 
@@ -53,7 +54,7 @@ Obrócona wartość.
 |`_rotr8`|x86, ARM, x64, ARM64|
 |`_rotr16`|x86, ARM, x64, ARM64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -101,7 +102,7 @@ Rotating unsigned short 0x12 right by 10 bits gives 0x480
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

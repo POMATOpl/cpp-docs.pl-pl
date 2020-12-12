@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __shiftleft128'
 title: __shiftleft128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e0e1402660c2ddb6f5993e5186302ff489ed864f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306992"
 ---
 # <a name="__shiftleft128"></a>__shiftleft128
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Przenosi ilość 128-bitową, reprezentowaną jako 2 64-bitowe `LowPart` ilości `HighPart`i, po lewej stronie przez liczbę bitów określoną przez `Shift` , i zwraca wartość o wysokim stopniu 64 bitów wyniku.
+Przenosi ilość 128-bitową, reprezentowaną jako 2 64-bitowe ilości `LowPart` i `HighPart` , po lewej stronie przez liczbę bitów określoną przez `Shift` , i zwraca wartość o wysokim stopniu 64 bitów wyniku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,13 +49,13 @@ Wysokie 64 bitów wyniku.
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__shiftleft128`|X64|
+|`__shiftleft128`|x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość *przesunięcia* jest zawsze modulo 64, tak więc, na przykład, jeśli `__shiftleft128(1, 0, 64)`wywołasz, funkcja przesunie w `0` lewo `0` bity o niskiej części i zwróci dużą część, a `1` nie jako oczekiwaną w przeciwnym razie.
+Wartość *przesunięcia* jest zawsze modulo 64, tak więc, na przykład, jeśli wywołasz `__shiftleft128(1, 0, 64)` , funkcja przesunie w lewo bity o niskiej części `0` i zwróci dużą część, `0` a nie `1` jako oczekiwaną w przeciwnym razie.
 
 ## <a name="example"></a>Przykład
 
@@ -96,7 +97,7 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [__shiftright128](../intrinsics/shiftright128.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

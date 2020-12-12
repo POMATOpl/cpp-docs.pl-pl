@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strcmp, wcscmp, _mbscmp, _mbscmp_l'
 title: strcmp, wcscmp, _mbscmp, _mbscmp_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: 805e355fe12cb2f7ead6180edd45ad0748570141
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0c611b92b39d04e455bbd31f22f98898723ff7c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306160"
 ---
 # <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
@@ -102,7 +103,7 @@ Wartość zwracana dla każdej z tych funkcji wskazuje liczbę porządkową od *
 |0|*ciąg1* jest identyczny z *ciąg2*|
 |> 0|*ciąg1* jest większy niż *ciąg2*|
 
-W przypadku błędu walidacji parametru **_mbscmp** i **_mbscmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<> String. h i \<mbstring. h>.
+W przypadku błędu walidacji parametru **_mbscmp** i **_mbscmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<string.h> i \<mbstring.h> .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -122,15 +123,15 @@ W ustawieniach regionalnych "C" kolejność znaków w zestawie znaków (zestaw z
 
 W ustawieniach regionalnych, dla których zestaw znaków i kolejność znaków leksykograficznych są różne, można użyć **strcoll —** zamiast **strcmp** do porównywania ciągów przez leksykograficznych. Alternatywnie możesz użyć **strxfrm** w oryginalnych ciągach, a następnie użyć **strcmp** na ciągach z wynikiem.
 
-W funkcjach **strcmp** jest rozróżniana wielkość liter. stricmp, ** \_wcsicmp**i ** \_mbsicmp** porównują ciągi, przenosząc je najpierw do postaci małych liter. ** \_** Dwa ciągi zawierające znaki, które znajdują się między "z" i "a" w tabeli ASCII ("[", "\\", "]", "^", "_" i "\`"), różnią się w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli porównanie ma wielkie litery.
+W funkcjach **strcmp** jest rozróżniana wielkość liter. **\_ stricmp**, **\_ wcsicmp** i **\_ mbsicmp** porównują ciągi, przenosząc je najpierw do postaci małych liter. Dwa ciągi zawierające znaki, które znajdują się między "z" i "a" w tabeli ASCII ("[", " \\ ", "]", "^", "_" i " \` "), różnią się w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli porównanie ma wielkie litery.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strcmp**|\<> String. h|
-|**wcscmp**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbscmp**|\<mbstring. h>|
+|**strcmp**|\<string.h>|
+|**wcscmp**|\<string.h> lub \<wchar.h>|
+|**_mbscmp**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -187,12 +188,12 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _environ, _wenviron'
 title: _environ, _wenviron
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1a69bec6fa93373c74e1f73de469bc3b93158e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305055"
 ---
 # <a name="_environ-_wenviron"></a>_environ, _wenviron
 
-Zmienna `_environ` jest wskaźnikiem do tablicy wskaźników do ciągów znaków wielobajtowych, które stanowią środowisko procesu. Ta zmienna globalna została przestarzała dla bezpieczniejszych wersji funkcjonalnych [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) i [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), które powinny być używane zamiast zmiennej globalnej. `_environ`w stdlib.h.
+`_environ`Zmienna jest wskaźnikiem do tablicy wskaźników do ciągów znaków wielobajtowych, które stanowią środowisko procesu. Ta zmienna globalna została uznana za przestarzałą dla bezpieczniejszych wersji funkcjonalnych [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) i [_putenv_s _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), które powinny być używane zamiast zmiennej globalnej. `_environ` jest zadeklarowany w STDLIB. h.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,32 +36,32 @@ extern char **_environ;
 
 ## <a name="remarks"></a>Uwagi
 
-W programie, który `main` korzysta `_environ` z tej funkcji, jest inicjowany przy uruchamianiu programu zgodnie z ustawieniami zaczerpniętymi ze środowiska systemu operacyjnego. Środowisko składa się z jednego lub więcej wpisów formularza
+W programie, który używa `main` funkcji, `_environ` jest inicjowany podczas uruchamiania programu zgodnie z ustawieniami podanymi w środowisku systemu operacyjnego. Środowisko składa się z co najmniej jednego wpisu w formularzu
 
 `ENVVARNAME` `=string`
 
-`getenv_s`i `putenv_s` użyj `_environ` zmiennej, aby uzyskać dostęp i zmodyfikować tabelę środowiska. Gdy `_putenv` jest wywoływana, aby dodać lub usunąć ustawienia środowiska, tabela środowiska zmienia rozmiar. Jego lokalizacja w pamięci może również ulec zmianie, w zależności od wymagań dotyczących pamięci programu. Wartość `_environ` jest odpowiednio dostosowywana automatycznie.
+`getenv_s` i `putenv_s` Użyj `_environ` zmiennej, aby uzyskać dostęp do tabeli środowiska i zmodyfikować ją. Gdy `_putenv` jest wywoływana w celu dodania lub usunięcia ustawień środowiska, tabela środowiskowa zmienia rozmiar. Jego lokalizacja w pamięci może także ulec zmianie, w zależności od wymagań dotyczących pamięci programu. Wartość `_environ` jest odpowiednio ustawiana automatycznie.
 
-Zmienna, `_wenviron` zadeklarowana w stdlib.h jako:
+`_wenviron`Zmienna zadeklarowana w STDLIB. h jako:
 
 ```
 extern wchar_t **_wenviron;
 ```
 
-jest szerokoznakową `_environ`wersją . W programie, który `wmain` korzysta `_wenviron` z tej funkcji, jest inicjowany przy uruchamianiu programu zgodnie z ustawieniami zaczerpniętymi ze środowiska systemu operacyjnego.
+to wersja znaku dwubajtowego `_environ` . W programie, który używa `wmain` funkcji, `_wenviron` jest inicjowany podczas uruchamiania programu zgodnie z ustawieniami podanymi w środowisku systemu operacyjnego.
 
-W programie, który `main` `_wenviron` używa , jest początkowo **NULL,** ponieważ środowisko składa się z ciągów znaków wielobajtowych. Przy pierwszym wywołaniu lub `_wgetenv` `_wputenv`, odpowiednie środowisko ciąg szerokich znaków `_wenviron`jest tworzony i jest wskazywowy przez .
+W programie, który używa `main` , `_wenviron` jest początkowo **wartość null** , ponieważ środowisko składa się z ciągów znaków wielobajtowych. Przy pierwszym wywołaniu `_wgetenv` lub `_wputenv` , odpowiednim środowisku ciągu znaków dwubajtowych jest tworzony i jest wskazywany przez `_wenviron` .
 
-Podobnie w programie, który `wmain`używa `_environ` , jest początkowo **NULL,** ponieważ środowisko składa się z ciągów znaków o szerokich znakach. Przy pierwszym wywołaniu lub `_getenv` `_putenv`, odpowiednie środowisko ciąg wieloznakowy jest `_environ`tworzony i jest wskazywowy przez .
+Podobnie w programie, który używa `wmain` , `_environ` jest początkowo **wartość null** , ponieważ środowisko składa się z ciągów znaków dwubajtowych. Przy pierwszym wywołaniu `_getenv` lub `_putenv` , odpowiednie środowisko ciągu znaków wielobajtowych jest tworzone i jest wskazywane przez `_environ` .
 
-Gdy dwie kopie środowiska (MBCS i Unicode) istnieją jednocześnie w programie, system czasu wykonywania musi obsługiwać obie kopie, co powoduje wolniejszy czas wykonywania. Na przykład za każdym `_putenv`razem, `_wputenv` gdy wywołasz , wywołanie jest również wykonywane automatycznie, tak aby dwa parametry środowiska odpowiadały.
+Gdy dwie kopie środowiska (MBCS i Unicode) istnieją jednocześnie w programie, system czasu wykonywania musi zachować obie kopie, co powoduje wolniejszy czas wykonywania. Na przykład za każdym razem, gdy `_putenv` jest wywoływana, wywołanie `_wputenv` jest również wykonywane automatycznie, dzięki czemu dwa ciągi środowiska odpowiadają.
 
 > [!CAUTION]
-> W rzadkich przypadkach, gdy system czasu wykonywania jest utrzymanie zarówno wersji Unicode i wielobajtowej wersji środowiska, te dwie wersje środowiska może nie odpowiadać dokładnie. Dzieje się tak, ponieważ chociaż dowolny unikatowy ciąg znaków wielobajtowych jest mapowany na unikatowy ciąg Unicode, mapowanie z unikatowego ciągu Unicode do ciągu znaków wielobajtowych niekoniecznie jest unikatowe. W związku z tym dwa różne ciągi Unicode może mapować do tego samego ciągu wielobajtowego.
+> W rzadkich przypadkach, gdy system czasu wykonywania zachowuje zarówno wersję standardu Unicode, jak i wielobajtowe wersje środowiska, te systemy mogą nie odpowiadać dokładnie. Wynika to z faktu, że wszystkie unikatowe ciągi znaków wielobajtowych są mapowane na unikatowy ciąg Unicode, mapowanie z unikatowego ciągu Unicode na ciąg znaków wielobajtowych nie musi być unikatowe. W związku z tym dwa różne ciągi Unicode mogą być mapowane na ten sam ciąg wielobajtowy.
 
-Sondowanie `_environ` w kontekście Unicode jest `/MDd` bez znaczenia, gdy [/MD](../build/reference/md-mt-ld-use-run-time-library.md) lub powiązania jest używany. Dla biblioteki DLL CRT typ (szeroki lub wielobajtowy) programu jest nieznany. Tylko typ wielobajtowy jest tworzony, ponieważ jest to najbardziej prawdopodobny scenariusz.
+Sondowanie `_environ` w kontekście Unicode ma znaczenie bez względu [](../build/reference/md-mt-ld-use-run-time-library.md) na to, kiedy `/MDd` jest używane/MD lub połączenie. Dla biblioteki DLL CRT typ (szeroki lub wielobajtowy) programu jest nieznany. Tworzony jest tylko typ wielobajtowy, ponieważ jest to najbardziej prawdopodobną przyczyną scenariusza.
 
-Poniższy pseudokod ilustruje, jak to może się zdarzyć.
+Następujący pseudo kod ilustruje, jak to możliwe.
 
 ```
 int i, j;
@@ -70,9 +71,9 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
                                       // putenv("env_var_z=string2")
 ```
 
-W notacji używanej w tym przykładzie ciągi znaków nie są literałami ciągu C; raczej są symbole zastępcze, które reprezentują literały `_wputenv` ciągu środowiska Unicode w ciągach środowiska wywołania i wielobajtowych ciągów środowiska w `putenv` wywołaniu. Symbole zastępcze`x`znaków '`y`' i ' ' w dwóch różnych ciągach środowiska Unicode nie są mapowane jednoznacznie na znaki w bieżącym MBCS. Zamiast tego obie mapują na`z`jakiś znak MBCS ' ', który jest domyślnym wynikiem próby konwersji ciągów.
+W notacji używanej w tym przykładzie ciągi znaków nie są literałami ciągu C. Zamiast tego są to symbole zastępcze reprezentujące literały ciągu środowiska Unicode w `_wputenv` ciągach środowiska wywołań i wielobajtowych w `putenv` wywołaniu. Symbole zastępcze znaku " `x` " i " `y` " w dwóch odrębnych ciągach środowiska Unicode nie są mapowane do znaków w bieżącym MBCS. Zamiast tego, obie mapują do pewnego znaku MBCS " `z` ", który jest domyślnym wynikiem próby konwersji ciągów.
 
-Tak więc w środowisku wielobajtowym wartość`env_var_z`" po `putenv` pierwszym`string1`niejawnym wywołaniu będzie " ", ale ta `putenv`wartość zostanie zastąpiona w drugim niejawne wywołanie , gdy wartość "`env_var_z`" jest ustawiona na "`string2`". Środowisko Unicode (w) `_wenviron`i środowisko wielobajtowe (w) `_environ`różnią się zatem po tej serii wywołań.
+W takim przypadku w środowisku wielobajtowym wartość " `env_var_z` " po pierwszym niejawnym wywołaniu `putenv` zostałby " `string1` ", ale ta wartość zostałaby zapisywana w drugim niejawnym wywołaniu do `putenv` , gdy wartość " `env_var_z` " jest ustawiona na "" `string2` . Środowisko Unicode (w programie `_wenviron` ) i środowisko wielobajtowe (w `_environ` ) różnią się w zależności od tej serii wywołań.
 
 ## <a name="see-also"></a>Zobacz też
 

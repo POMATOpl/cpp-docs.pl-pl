@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l'
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -76,12 +77,12 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d43a0879bf044f71b9f71b6c5d97d0bd3b1353d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306082"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -149,13 +150,13 @@ Określa relację między podciągami w następujący sposób.
 |0|podciąg *ciąg1* jest identyczny z podciągiem *ciąg2* .|
 |> 0|podciąg *ciąg1* jest dłuższy niż *ciąg2* podciągu.|
 
-W przypadku błędu walidacji parametrów te funkcje zwracają **_NLSCMPERROR**, które są zdefiniowane w \<ciągach String. h \<> i mbstring. h>.
+W przypadku błędu walidacji parametrów te funkcje zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<string.h> i \<mbstring.h> .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strnicmp** w liczbie porządkowej porównuje *liczbę pierwszych znaków* wynoszących *ciąg1* i *ciąg2*. Porównanie jest wykonywane bez względu na wielkość liter, konwertując każdy znak na małe litery. **_strnicmp** to wersja **strncmp**bez uwzględniania wielkości liter. Porównanie kończy się, jeśli kończący znak null zostanie osiągnięty w dowolnym ciągu przed porównaniem znaków *Count* . Jeśli ciągi są równe, gdy zostanie osiągnięty kończący znak null w dowolnym ciągu przed porównaniem znaków *Count* , krótszy ciąg jest mniejszy.
+Funkcja **_strnicmp** w liczbie porządkowej porównuje *liczbę pierwszych znaków* wynoszących *ciąg1* i *ciąg2*. Porównanie jest wykonywane bez względu na wielkość liter, konwertując każdy znak na małe litery. **_strnicmp** to wersja **strncmp** bez uwzględniania wielkości liter. Porównanie kończy się, jeśli kończący znak null zostanie osiągnięty w dowolnym ciągu przed porównaniem znaków *Count* . Jeśli ciągi są równe, gdy zostanie osiągnięty kończący znak null w dowolnym ciągu przed porównaniem znaków *Count* , krótszy ciąg jest mniejszy.
 
-Znaki od 91 do 96 w tabeli ASCII ("[", "\\", "]", "^", "_" i "\`") są oceniane jako mniejsze niż wszystkie znaki alfabetyczne. Ta kolejność jest taka sama jak w przypadku **stricmp**.
+Znaki od 91 do 96 w tabeli ASCII ("[", " \\ ", "]", "^", "_" i " \` ") są oceniane jako mniejsze niż wszystkie znaki alfabetyczne. Ta kolejność jest taka sama jak w przypadku **stricmp**.
 
 **_wcsnicmp** i **_mbsnicmp** są wersjami znaków dwubajtowych i **_strnicmp**. Argumenty **_wcsnicmp** są ciągami znaków dwubajtowych; te **_mbsnicmp** są ciągami znaków wielobajtowych. **_mbsnicmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą stroną kodową wielobajtowego i zwraca **_NLSCMPERROR** w przypadku błędu. Aby uzyskać więcej informacji, zobacz [stronę kodową](../../c-runtime-library/code-pages.md). Te trzy funkcje zachowują się identycznie w inny sposób. Te funkcje mają wpływ na ustawienia regionalne — wersje, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. wersje, które mają sufiks **_l** , zamiast nich używają *ustawień regionalnych* , które są przesyłane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -175,9 +176,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnicmp**, **_strnicmp_l**|\<> String. h|
-|**_wcsnicmp**, **_wcsnicmp_l**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring. h>|
+|**_strnicmp**, **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> lub \<wchar.h>|
+|**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
