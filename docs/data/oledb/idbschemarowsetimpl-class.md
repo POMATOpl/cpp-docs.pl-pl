@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IDBSchemaRowsetImpl'
 title: IDBSchemaRowsetImpl — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 392f74793f363c203b740b14b00b605d8256bef5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287284"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl — Klasa
 
@@ -279,7 +280,7 @@ określoną Wskaźnik do elementu **ULONG** , który jest wypełniony liczbą sc
 określoną Wskaźnik do tablicy identyfikatorów GUID, który jest wypełniony wskaźnikiem do tablicy identyfikatorów GUID zestawu wierszy schematu.
 
 *prgRest*<br/>
-określoną Wskaźnik do tablicy **ULONG**s, który ma zostać wypełniony tablicą ograniczeń.
+określoną Wskaźnik do tablicy **ULONG** s, który ma zostać wypełniony tablicą ograniczeń.
 
 ### <a name="remarks"></a>Uwagi
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: debugowanie dostawcy'
 title: Debugowanie dostawcy
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: f80ce5dc82dd2baeefe3410a488a5fefda0e9bf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a178bfa55f8efeb11a3265ab8aa14a5418d7516
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287583"
 ---
 # <a name="debugging-your-provider"></a>Debugowanie dostawcy
 
@@ -20,7 +21,7 @@ Istnieją dwa sposoby debugowania dostawcy:
 
 - Ze względu na to, że dostawcy są tworzone w procesie, można utworzyć pewien kod konsumenta przy użyciu szablonów konsumentów OLE DB i przekroczyć dostawcę w normalny sposób.
 
-- Możesz użyć różnych narzędzi dostarczanych z wizualizacją C++.
+- Możesz użyć różnych narzędzi, które są dostarczane z Visual C++.
 
 ## <a name="to-use-debugging"></a>Aby używać debugowania
 

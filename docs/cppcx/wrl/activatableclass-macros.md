@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: makra ActivatableClass'
 title: ActivatableClass Makra
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2b59101373de72ca88338750bb7fe9169376ac65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287947"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass Makra
 
@@ -54,7 +55,7 @@ Nazwa, która określa podzbiór fabryk w module.
 
 ## <a name="remarks"></a>Uwagi
 
-Nie używaj tych makr z klasycznym modelem COM, chyba że używasz dyrektywy `#undef`, aby upewnić się, że `__WRL_WINRT_STRICT__` definicja makra zostanie usunięta.
+Nie używaj tych makr z klasycznym modelem COM, chyba że używasz `#undef` dyrektywy do upewnienia się, że `__WRL_WINRT_STRICT__` Definicja makra zostanie usunięta.
 
 ## <a name="requirements"></a>Wymagania
 

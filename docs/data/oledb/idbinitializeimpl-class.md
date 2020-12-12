@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IDBInitializeImpl'
 title: IDBInitializeImpl — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b37998c78c3e88921318654653995ff356ba18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287323"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
 
@@ -77,7 +78,7 @@ Klasa, która pochodzi od `IDBInitializeImpl` .
 
 | Nazwa | Opis |
 |-|-|
-|[Initialize](#initialize)|Uruchamia dostawcę.|
+|[Inicjowanie](#initialize)|Uruchamia dostawcę.|
 |[Uninitialize](#uninitialize)|Powoduje zatrzymanie dostawcy.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych

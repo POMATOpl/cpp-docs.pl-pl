@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: pobieranie danych'
 title: Pobieranie danych
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d98a3d804688447f8f7073d20371a098b2bfa11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287531"
 ---
 # <a name="fetching-data"></a>Pobieranie danych
 
@@ -90,6 +91,6 @@ Po otwarciu źródła danych, sesji i obiektów zestawu wierszy można pobrać d
         }
         ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa list'
 title: list — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: ec53e2a907cd38b262ec305d10ae63ad746f29b5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d73c1c61cb7e630ea936685aeaab20f778340ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833338"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284840"
 ---
 # <a name="list-class"></a>list — Klasa
 
@@ -159,11 +160,11 @@ Dołącz standardowy nagłówek standardowej biblioteki języka C++, \<list> Aby
 |[size_type](#size_type)|Typ, który zlicza liczbę elementów na liście.|
 |[value_type](#value_type)|Typ, który reprezentuje typ danych przechowywany na liście.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
-|[przypisać](#assign)|Wymazuje elementy z listy i kopiuje nowy zestaw elementów na listę docelową.|
+|[ponownie](#assign)|Wymazuje elementy z listy i kopiuje nowy zestaw elementów na listę docelową.|
 |[Wstecz](#back)|Zwraca odwołanie do ostatniego elementu listy.|
 |[zaczną](#begin)|Zwraca iterator odnoszący się do pierwszego elementu na liście.|
 |[cbegin](#cbegin)|Zwraca iterator const odnoszący się do pierwszego elementu na liście.|
@@ -196,7 +197,7 @@ Dołącz standardowy nagłówek standardowej biblioteki języka C++, \<list> Aby
 |[porządku](#sort)|Rozmieszcza elementy listy w kolejności rosnącej lub w odniesieniu do innej relacji Order.|
 |[splice](#splice)|Usuwa elementy z listy argumentów i wstawia je do listy elementów docelowych.|
 |[wymiany](#swap)|Wymienia elementy dwóch list.|
-|[unique](#unique)|Usuwa sąsiadujące zduplikowane elementy lub sąsiadujące elementy, które spełniają inny Predykat binarny z listy.|
+|[unikatowy](#unique)|Usuwa sąsiadujące zduplikowane elementy lub sąsiadujące elementy, które spełniają inny Predykat binarny z listy.|
 
 ### <a name="operators"></a>Operatory
 
@@ -218,7 +219,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`allocator_type` jest synonimem dla *alokatora*parametrów szablonu.
+`allocator_type` jest synonimem dla *alokatora* parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1311,7 +1312,7 @@ Trzeci konstruktor określa powtarzanie określonej liczby (*Count*) elementów 
 
 Czwarty i piąty konstruktory określają powtórzenia (*Count*) elementów wartości *Val*.
 
-Szósty konstruktor określa kopię *po prawej stronie*listy.
+Szósty konstruktor określa kopię *po prawej stronie* listy.
 
 Siódmy Konstruktor przenosi listę w *prawo*.
 
@@ -2128,7 +2129,7 @@ Wartość nowych elementów, które mają zostać dodane do listy, jeśli nowy r
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli rozmiar listy jest mniejszy niż żądany rozmiar, *_Newsize*elementy są dodawane do listy do momentu osiągnięcia żądanego rozmiaru.
+Jeśli rozmiar listy jest mniejszy niż żądany rozmiar, *_Newsize* elementy są dodawane do listy do momentu osiągnięcia żądanego rozmiaru.
 
 Jeśli rozmiar listy jest większy niż żądany rozmiar, elementy znajdujące się najbliżej końca listy zostaną usunięte, dopóki lista osiągnie rozmiar *_Newsize*.
 
@@ -2625,7 +2626,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type` jest synonimem dla *typu*parametru szablonu.
+`value_type` jest synonimem dla *typu* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

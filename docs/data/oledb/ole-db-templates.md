@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat szablonów OLE DB
 title: Szablony OLE DB
 ms.date: 05/09/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2a1680f541e9d8f8fb35da22670e72b3a87a1db0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286777"
 ---
 # <a name="ole-db-templates"></a>Szablony OLE DB
 
@@ -45,7 +46,7 @@ W tym artykule omówiono materiał koncepcyjny dotyczący szablonów dostawców 
 [Tworzenie klienta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
 Opisuje tworzenie klienta szablonów OLE DB.
 
-[Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[Tworzenie prostego dostawcy Read-Only](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
 Opisuje Tworzenie prostego dostawcy tylko do odczytu, który odczytuje parę ciągów.
 
 [Tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md)<br/>

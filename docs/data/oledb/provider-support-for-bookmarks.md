@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: obsługa dostawców dla zakładek'
 title: Obsługa dostawców dla zakładek
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 240cb4da03d6c8c1958b7a86e78171aca2dc30e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a2225f44d9d094f52e97b88eb58c6942906edf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216456"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286660"
 ---
 # <a name="provider-support-for-bookmarks"></a>Obsługa dostawców dla zakładek
 
@@ -40,7 +41,7 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-Zostaną dodane czwarty, piąty i szósty parametr. W tym przykładzie używane są wartości domyślne dla czwartego i piątego `IRowsetLocateImpl` parametru, ale określono jako szósty parametr. `IRowsetLocateImpl`jest klasą szablonu OLE DB, która przyjmuje dwa parametry szablonu: podłącza `IRowsetLocate` interfejs do `CCustomRowset` klasy. Aby dodać większość interfejsów, można pominąć ten krok i przejść do kolejnego. Tylko `IRowsetLocate` interfejsy i `IRowsetScroll` muszą być obsługiwane w ten sposób.
+Zostaną dodane czwarty, piąty i szósty parametr. W tym przykładzie używane są wartości domyślne dla czwartego i piątego `IRowsetLocateImpl` parametru, ale określono jako szósty parametr. `IRowsetLocateImpl` jest klasą szablonu OLE DB, która przyjmuje dwa parametry szablonu: podłącza `IRowsetLocate` interfejs do `CCustomRowset` klasy. Aby dodać większość interfejsów, można pominąć ten krok i przejść do kolejnego. Tylko `IRowsetLocate` interfejsy i `IRowsetScroll` muszą być obsługiwane w ten sposób.
 
 Następnie należy poinformować o `CCustomRowset` wywołaniu `QueryInterface` `IRowsetLocate` interfejsu. Dodaj linię `COM_INTERFACE_ENTRY(IRowsetLocate)` do mapy. Mapa interfejsu dla `CCustomRowset` powinna być wyświetlana, jak pokazano w poniższym kodzie:
 
@@ -78,7 +79,7 @@ class CTextData
 };
 ```
 
-Następnie Zaimplementuj `GetColumnInfo` funkcję w pliku *Custom*RS. cpp w następujący sposób:
+Następnie Zaimplementuj `GetColumnInfo` funkcję w pliku *Custom* RS. cpp w następujący sposób:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,11 +149,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo`najpierw sprawdza, czy ustawiono właściwość o nazwie `DBPROP_IRowsetLocate` . OLE DB ma właściwości dla każdego z opcjonalnych interfejsów poza obiektem zestawu wierszy. Jeśli odbiorca chce użyć jednego z tych opcjonalnych interfejsów, ustawia właściwość na true. Dostawca może następnie sprawdzić tę właściwość i wykonać specjalną akcję na jej podstawie.
+`GetColumnInfo` najpierw sprawdza, czy ustawiono właściwość o nazwie `DBPROP_IRowsetLocate` . OLE DB ma właściwości dla każdego z opcjonalnych interfejsów poza obiektem zestawu wierszy. Jeśli odbiorca chce użyć jednego z tych opcjonalnych interfejsów, ustawia właściwość na true. Dostawca może następnie sprawdzić tę właściwość i wykonać specjalną akcję na jej podstawie.
 
 W implementacji uzyskasz Właściwość za pomocą wskaźnika do obiektu polecenia. `pThis`Wskaźnik reprezentuje zestaw wierszy lub klasę poleceń. Ponieważ używasz tutaj szablonów, musisz przekazać go jako **`void`** wskaźnik lub kod nie kompiluje się.
 
-Określ tablicę statyczną do przechowywania informacji o kolumnie. Jeśli odbiorca nie ma zamiaru kolumny zakładki, wpis w tablicy jest tracony. Można dynamicznie przydzielić tę tablicę, ale należy upewnić się, że jest ona poprawna. Ten przykład definiuje i używa makr ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX do wstawienia informacji do tablicy. Możesz dodać makra do *niestandardowego*RS. H plik, jak pokazano w poniższym kodzie:
+Określ tablicę statyczną do przechowywania informacji o kolumnie. Jeśli odbiorca nie ma zamiaru kolumny zakładki, wpis w tablicy jest tracony. Można dynamicznie przydzielić tę tablicę, ale należy upewnić się, że jest ona poprawna. Ten przykład definiuje i używa makr ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX do wstawienia informacji do tablicy. Możesz dodać makra do *niestandardowego* RS. H plik, jak pokazano w poniższym kodzie:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -264,6 +265,6 @@ END_ACCESSOR_MAP()
 
 Po zaktualizowaniu kodu należy być w stanie skompilować i uruchomić dostawcę przy użyciu `IRowsetLocate` interfejsu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

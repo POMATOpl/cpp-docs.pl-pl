@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: obsługa bezpłatnej wielowątkowości w dostawcy'
 title: Obsługa wolnych wątków w dostawcy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4f6785dd85ae043ce0ee74c1dda4fa365c566729
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286478"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Obsługa wolnych wątków w dostawcy
 
@@ -37,9 +38,9 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-Aby uzyskać więcej informacji na temat ochrony sekcji krytycznych przy użyciu `Lock` i `Unlock`, zobacz [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat ochrony krytycznych sekcji za pomocą `Lock` i `Unlock` , zobacz [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-Sprawdź, czy wszystkie metody zastępujące (takie jak `Execute`) są bezpieczne dla wątków.
+Sprawdź, czy wszystkie metody, które zostały zastąpione (na przykład `Execute` ), są bezpieczne dla wątków.
 
 ## <a name="see-also"></a>Zobacz też
 

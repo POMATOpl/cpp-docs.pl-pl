@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: słabe odwołania i cykle przerywania (C++/CX)'
 title: Słabe odwołania i przerywanie cykli (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-ms.openlocfilehash: 04ba70c148121de520b470bd727b26e756858011
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c42081b0030ee697eab63fa519e2f6cbe4fe090
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288025"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Słabe odwołania i przerywanie cykli (C++/CX)
 

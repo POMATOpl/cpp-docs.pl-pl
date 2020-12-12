@@ -1,42 +1,43 @@
 ---
+description: 'Dowiedz się więcej o: Tworzenie dostawcy OLE DB'
 title: Tworzenie dostawcy OLE DB
 ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69dc9311a79f2739636633b2d268343a92d2dac9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287804"
 ---
 # <a name="creating-an-ole-db-provider"></a>Tworzenie dostawcy OLE DB
 
-Zalecany sposób tworzenia dostawcy OLE DB jest za pomocą kreatorów, aby utworzyć Projekt ATL COM i dostawcy, a następnie zmodyfikuj pliki przy użyciu szablonów OLE DB. Podczas dostosowywania dostawcy można przekształcić w komentarz zbędne właściwości i dodać opcjonalne interfejsy.
+Zalecanym sposobem utworzenia dostawcy OLE DB jest użycie kreatorów do utworzenia projektu ATL COM i dostawcy, a następnie zmodyfikowanie plików przy użyciu szablonów OLE DB. Podczas dostosowywania dostawcy można skomentować niepożądane właściwości i dodać opcjonalne interfejsy.
 
 Podstawowe kroki są następujące:
 
-1. Użyj **Kreator projektów ATL** do tworzenia plików podstawowego projektu i **Kreator dostawcy interfejsu OLE DB ATL** do utworzenia dostawcy (wybierz **dostawcy OLE DB ATL** z **Zainstalowane** > **Visual C++** > **ATL** folderu w **Dodaj nowy element**).
+1. Użyj **Kreatora projektu ATL** do utworzenia podstawowych plików projektu i **Kreatora dostawcy ATL OLEDB** , aby utworzyć dostawcę (wybierz **dostawcę ATL OLEDB** z **zainstalowanego**  >  **Visual C++**  >  **ATL** folderu w obszarze **Dodaj nowy element**).
 
    > [!NOTE]
-   > Projekt musi zawierać obsługę MFC przed dodaniem **dostawcy OLE DB ATL**.
+   > Projekt musi zawierać obsługę MFC przed dodaniem **dostawcy ATL OLEDB**.
 
-1. Zmodyfikuj kod `Execute` method in Class metoda [CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md). Aby uzyskać przykład, zobacz [odczyt ciągów do dostawcy OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
+1. Zmodyfikuj kod w `Execute` metodzie w [CCustomRowset (Customs. h)](cmyproviderrowset-myproviderrs-h.md). Aby zapoznać się z przykładem, zobacz [odczytywanie ciągów do dostawcy OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
-1. Edytuj właściwości mapy w [CustomDS.h](cmyprovidersource-myproviderds-h.md), [CustomSess.h](cmyprovidersession-myprovidersess-h.md), i [CustomRS.h](cmyproviderrowset-myproviderrs-h.md). Kreator utworzy map właściwości, które zawierają wszystkie właściwości, które mogą zaimplementować dostawcę. Przejdź do mapy właściwości i usuń lub komentarz właściwości, które Twój dostawca musi obsługiwać.
+1. Edytuj mapy właściwości w [CustomDS. h](cmyprovidersource-myproviderds-h.md), [CustomSess. h](cmyprovidersession-myprovidersess-h.md)i [niestandardowych. h](cmyproviderrowset-myproviderrs-h.md). Kreator tworzy mapy właściwości, które zawierają wszystkie właściwości, które może zaimplementować dostawca. Zapoznaj się z właściwościami mapy i Usuń lub Skomentuj właściwości, które nie muszą być obsługiwane przez dostawcę.
 
-1. Aktualizuj PROVIDER_COLUMN_MAP, w którym znajdują się w [CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md). Aby uzyskać przykład, zobacz [przechowywanie ciągów w dostawcy OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).
+1. Zaktualizuj PROVIDER_COLUMN_MAP, które można znaleźć w [CCustomRowset (Customs. h)](cmyproviderrowset-myproviderrs-h.md). Aby zapoznać się z przykładem, zobacz artykuł [Przechowywanie ciągów w dostawcy OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).
 
-1. Gdy wszystko jest gotowe do testowania dostawcy, można ją przetestować, próbując znaleźć dostawcy w wyliczeniu dostawcy. Aby zapoznać się z przykładami kodu, który umożliwia znalezienie dostawcy w wyliczeniu, zobacz [CATDB](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb) i [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) próbek lub w przykładzie w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md).
+1. Gdy jesteś gotowy do testowania dostawcy, możesz go przetestować, próbując znaleźć dostawcę w wyliczeniu dostawcy. Aby zapoznać się z przykładami kodu testowego, który znajduje się w wyliczeniu, zobacz przykłady [catdb](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb) i [dbview](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) lub przykład [wdrażania prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md).
 
-1. Dodaj wszelkie dodatkowe interfejsy, które chcesz. Aby uzyskać przykład, zobacz [udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+1. Dodaj wszelkie dodatkowe interfejsy. Aby zapoznać się z przykładem, zobacz [ulepszanie prostego dostawcy Read-Only](../../data/oledb/enhancing-the-simple-read-only-provider.md).
 
    > [!NOTE]
-   > Domyślnie kreatorów wygenerować kod, który jest poziom OLE DB 0 zgodne. Aby upewnić się, że aplikacja pozostanie poziom 0 jest zgodne, nie usuwaj żadnego z interfejsów generowane przez kreatora z kodu.
+   > Domyślnie kreatorzy generują kod, który jest zgodny OLE DB poziomu 0. Aby upewnić się, że aplikacja pozostaje zgodna poziom 0, nie usuwaj żadnych interfejsów generowanych przez kreatora z kodu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przykład CatDB: Data Source Schema Browser](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
-[Przykład DBViewer: Przeglądarka bazy danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
+[Przykład CatDB: przeglądarka schematu źródła danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
+[Przykład DBVIEWER: przeglądarka bazy danych](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)

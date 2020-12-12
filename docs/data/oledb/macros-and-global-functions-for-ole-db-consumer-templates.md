@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: makra i funkcje globalne dla OLE DB szablonów konsumentów'
 title: Makra i funkcje globalne dla szablonów konsumentów OLE DB
 ms.date: 02/11/2019
 f1_keywords:
@@ -99,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fb6e126483690e43ceaf3814f6c288ecfdc69da1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287076"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra i funkcje globalne dla szablonów konsumentów OLE DB
 
@@ -140,7 +141,7 @@ Szablony konsumentów OLE DB obejmują następujące makra i funkcje globalne:
 |[BLOB_NAME_STATUS](#blob_name_status)|Raportuje stan kolumny dane obiektu BLOB.|
 |[BOOKMARK_ENTRY](#bookmark_entry)|Reprezentuje wpis zakładki w zestawie wierszy. Wpis zakładki jest specjalnym rodzajem wpisu kolumny.|
 |[COLUMN_ENTRY](#column_entry)|Reprezentuje powiązanie z określoną kolumną w bazie danych.|
-|[COLUMN_ENTRY_EX](#column_entry_ex)|Reprezentuje powiązanie z określoną kolumną w bazie danych. Obsługuje parametry *typu*, *długości*, *precyzji*, *skali*i *stanu* .|
+|[COLUMN_ENTRY_EX](#column_entry_ex)|Reprezentuje powiązanie z określoną kolumną w bazie danych. Obsługuje parametry *typu*, *długości*, *precyzji*, *skali* i *stanu* .|
 |[COLUMN_ENTRY_LENGTH](#column_entry_length)|Reprezentuje powiązanie z określoną kolumną w bazie danych. Obsługuje zmienną *długości* .|
 |[COLUMN_ENTRY_LENGTH_STATUS](#column_entry_length_status)|Reprezentuje powiązanie z określoną kolumną w bazie danych. Obsługuje parametry *stanu* i *długości* .|
 |[COLUMN_ENTRY_PS](#column_entry_ps)|Reprezentuje powiązanie z określoną kolumną w bazie danych. Obsługuje parametry *precyzji* i *skalowania* .|
@@ -377,7 +378,7 @@ podczas Numer kolumny.
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>
@@ -405,7 +406,7 @@ podczas Numer kolumny.
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>
@@ -442,7 +443,7 @@ podczas Numer kolumny.
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>
@@ -476,7 +477,7 @@ podczas Numer kolumny.
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>
@@ -507,7 +508,7 @@ podczas Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to 
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>
@@ -535,7 +536,7 @@ podczas Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to 
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>
@@ -562,7 +563,7 @@ podczas Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to 
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>
@@ -592,7 +593,7 @@ podczas Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to 
 *IID*<br/>
 podczas Identyfikator GUID interfejsu, taki jak `IDD_ISequentialStream` , używany do pobierania obiektu BLOB.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Flagi trybu magazynu zdefiniowane przez model magazynu strukturalnego OLE (na przykład `STGM_READ` ).
 
 *data*<br/>

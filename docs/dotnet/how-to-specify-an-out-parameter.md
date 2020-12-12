@@ -1,27 +1,28 @@
 ---
-title: 'Instrukcje: Określanie parametru out'
+description: 'Dowiedz się więcej na temat: jak określić parametr out'
+title: 'Instrukcje: Określanie parametru wyjściowego'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: b43930557b4bdfd22bf902a6d9adf95eb8ba4d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286341"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>Instrukcje: Określanie parametru out
+# <a name="how-to-specify-an-out-parameter"></a>Instrukcje: Określanie parametru wyjściowego
 
-Ten przykład pokazuje, jak określić, że parametr funkcji jest parametrem `out` i jak wywołać tę funkcję z C# programu.
+Ten przykład pokazuje, jak określić, że parametr funkcji jest `out` parametrem i jak wywołać tę funkcję z programu w języku C#.
 
-Parametr `out` jest określony w programie C++ przy użyciu <xref:System.Runtime.InteropServices.OutAttribute>.
+`out`Parametr jest określony w języku C++ przy użyciu <xref:System.Runtime.InteropServices.OutAttribute> .
 
 ## <a name="example"></a>Przykład
 
-Pierwsza część tego przykładu tworzy C++ bibliotekę DLL. Definiuje typ, który zawiera funkcję z parametrem `out`.
+Pierwsza część tego przykładu tworzy bibliotekę DLL języka C++. Definiuje typ, który zawiera funkcję z `out` parametrem.
 
 ```cpp
 // cpp_out_param.cpp
@@ -34,7 +35,7 @@ public value struct TestStruct {
 };
 ```
 
-Ten plik źródłowy jest C# klientem korzystającym z C++ składnika utworzonego w poprzednim przykładzie.
+Ten plik źródłowy jest klientem języka C#, który korzysta ze składnika C++ utworzonego w poprzednim przykładzie.
 
 ```csharp
 // cpp_out_param_2.cs
@@ -53,6 +54,6 @@ class TestClass {
 a string
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

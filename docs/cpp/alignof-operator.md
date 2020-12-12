@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operator alignof'
 title: Operator alignof
 ms.date: 12/17/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 6a2046774674858211ae89abb9b4cfc7b09c0a6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7e053b932ed631d8b03dc1b89f6857905740e5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288313"
 ---
 # <a name="alignof-operator"></a>Operator alignof
 
@@ -58,7 +59,7 @@ Podobnie w przypadku
 typedef __declspec(align(32)) struct { int a; } S;
 ```
 
-`alignof(S)`jest równe `32` .
+`alignof(S)` jest równe `32` .
 
 Jeden z nich **`alignof`** może być parametrem do jednej z własnych procedur alokacji pamięci. Na przykład przy użyciu następującej zdefiniowanej struktury `S` można wywołać procedurę alokacji pamięci o nazwie, `aligned_malloc` Aby przydzielić pamięć na określonej granicy wyrównania.
 
@@ -90,7 +91,7 @@ Aby uzyskać więcej informacji na temat różnic w obrównaniu kodu dla proceso
 
 W celu zapewnienia zgodności z poprzednimi wersjami, **`_alignof`** jest synonimem, **`__alignof`** Jeśli opcja kompilatora [ `/Za` \( disable rozszerzenia języka](../build/reference/za-ze-disable-language-extensions.md) nie jest określona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

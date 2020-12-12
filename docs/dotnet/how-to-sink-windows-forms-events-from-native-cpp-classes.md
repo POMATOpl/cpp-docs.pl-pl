@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++'
+description: 'Dowiedz się więcej na temat: Instrukcje: ujścia zdarzeń Windows Forms z natywnych klas C++'
+title: 'Porady: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,36 +9,36 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 223590849f114bfe02b030a0639f160b8fc1c321
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387269"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286361"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Instrukcje: Wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Porady: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++
 
-Można włączyć macierzystych klas C++ odbierać wywołania zwrotne z zarządzanego zdarzenia wywoływane z kontrolek formularzy Windows Forms lub inne formy z formatem mapy makr MFC. Wychwytywania zdarzeń w widokach i oknach dialogowych jest podobny do tego samego zadania dla formantów czynności.
+Można włączyć natywne klasy języka C++, aby odbierać wywołania zwrotne z zdarzeń zarządzanych wywoływanych z formantów Windows Forms lub innych formularzy przy użyciu formatu mapy makr MFC. Zdarzenia dotyczące ujścia w widokach i oknach dialogowych przypominają wykonywanie tego samego zadania dla kontrolek.
 
-Aby to zrobić, należy:
+W tym celu należy:
 
-- Dołącz `OnClick` programu obsługi zdarzeń do formantu za pomocą [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate).
+- Dołącz `OnClick` procedurę obsługi zdarzeń do formantu przy użyciu [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate).
 
-- Utwórz mapę delegata za pomocą [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), i [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
+- Utwórz mapę delegata przy użyciu [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)i [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
 
-W tym przykładzie kontynuuje pracę, jak w [jak: Powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Ten przykład kontynuuje pracę, która została wykonana w [sposób: wykonywanie powiązania danych DDX/DDV za pomocą Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
-Teraz zostanie skojarzony formant MFC (`m_MyControl`) za pomocą delegata obsługi zdarzeń zarządzanych, o nazwie `OnClick` dla zarządzanej <xref:System.Windows.Forms.Control.Click> zdarzeń.
+Teraz zostanie skojarzona kontrolka MFC ( `m_MyControl` ) z zarządzanym delegatem obsługi zdarzeń wywołanym `OnClick` dla <xref:System.Windows.Forms.Control.Click> zdarzenia zarządzanego.
 
-### <a name="to-attach-the-onclick-event-handler"></a>Aby dołączyć program obsługi zdarzeń:
+### <a name="to-attach-the-onclick-event-handler"></a>Aby dołączyć program obsługi zdarzeń onkliknięcia:
 
-1. Dodaj następujący kod do implementacji BOOL CMFC01Dlg::OnInitDialog:
+1. Dodaj następujący kod do implementacji BOOL CMFC01Dlg:: OnInitDialog:
 
     ```
     m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );
     ```
 
-1. Dodaj następujący kod do sekcji publicznej w deklaracji klasy CMFC01Dlg: CDialog publicznych.
+1. Dodaj następujący kod do sekcji publicznej w deklaracji klasy CMFC01Dlg: Public CDialog.
 
     ```
     // delegate map
@@ -48,7 +49,7 @@ Teraz zostanie skojarzony formant MFC (`m_MyControl`) za pomocą delegata obsłu
     void OnClick( System::Object^ sender, System::EventArgs^ e );
     ```
 
-1. Na koniec należy dodać to implementacja `OnClick` do CMFC01Dlg.cpp:
+1. Na koniec Dodaj implementację programu `OnClick` do programu CMFC01Dlg. cpp:
 
     ```
     void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)
@@ -57,7 +58,7 @@ Teraz zostanie skojarzony formant MFC (`m_MyControl`) za pomocą delegata obsłu
     }
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)<br/>
 [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)<br/>

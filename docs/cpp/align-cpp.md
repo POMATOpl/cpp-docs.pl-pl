@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: align (C++)'
 title: align (C++)
 ms.date: 12/17/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: 0a1212f1c78f49029f82be5a2f5d82ea1788b6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2794c94e5ef56063ea0b5621838a8e33cfdca5c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288312"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -30,7 +31,7 @@ Służy `__declspec(align(#))` do precyzyjnego kontrolowania wyrównania danych 
 
 Pisanie aplikacji, które korzystają z najnowszych instrukcji procesora, wprowadza pewne nowe ograniczenia i problemy. Wiele nowych instrukcji wymaga, aby dane były wyrównane do 16-bajtowych granic. Ponadto poprzez wyrównywanie często używanych danych do rozmiaru wiersza pamięci podręcznej procesora, można zwiększyć wydajność pamięci podręcznej. Na przykład, jeśli zdefiniujesz strukturę, której rozmiar jest mniejszy niż 32 bajtów, możesz chcieć wyrównać 32 bajtów, aby upewnić się, że obiekty tego typu struktury są efektywnie buforowane.
 
-\#jest wartością wyrównania. Prawidłowe wpisy to liczby całkowite z przedziału od 1 do 8192 (bajty), takie jak 2, 4, 8, 16, 32 lub 64. `declarator`to dane, które są deklarowane jako wyrównane.
+\# jest wartością wyrównania. Prawidłowe wpisy to liczby całkowite z przedziału od 1 do 8192 (bajty), takie jak 2, 4, 8, 16, 32 lub 64. `declarator` to dane, które są deklarowane jako wyrównane.
 
 Aby uzyskać informacje o sposobach zwracania wartości typu, `size_t` który jest wymaganiem wyrównania typu, zobacz [`alignof`](../cpp/alignof-operator.md) . Aby uzyskać informacje na temat deklarowania niewyrównanych wskaźników w przypadku procesorów 64-bitowych, zobacz [`__unaligned`](../cpp/unaligned.md) .
 
@@ -66,13 +67,13 @@ Kompilator używa tych reguł do wyrównania struktury:
 
 - Rozmiar struktury jest najmniejszą wielokrotnością jego wyrównania większą lub równą przesunięciu końca ostatniego elementu członkowskiego.
 
-`__declspec(align(#))`można zwiększyć tylko ograniczenia wyrównania.
+`__declspec(align(#))` można zwiększyć tylko ograniczenia wyrównania.
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [`align`Pokazują](#vclrfalignexamples)
+- [`align` Pokazują](#vclrfalignexamples)
 
-- [Definiowanie nowych typów przy użyciu`__declspec(align(#))`](#vclrf_declspecaligntypedef)
+- [Definiowanie nowych typów przy użyciu `__declspec(align(#))`](#vclrf_declspecaligntypedef)
 
 - [Wyrównywanie danych w lokalnym magazynie wątków](#vclrfthreadlocalstorageallocation)
 
@@ -80,7 +81,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Przykłady wyrównania struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) (specyficzne dla architektury x64)
 
-## <a name="align-examples"></a><a name="vclrfalignexamples"></a>Wyrównaj przykłady
+## <a name="align-examples"></a><a name="vclrfalignexamples"></a> Wyrównaj przykłady
 
 W poniższych przykładach pokazano `__declspec(align(#))` , jak wpływa rozmiar i wyrównanie struktur danych. Przykłady zakładają następujące definicje:
 
@@ -89,7 +90,7 @@ W poniższych przykładach pokazano `__declspec(align(#))` , jak wpływa rozmiar
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-W tym przykładzie `S1` Struktura jest definiowana przy użyciu `__declspec(align(32))` . Wszystkie zastosowania `S1` do definicji zmiennej lub w innych deklaracjach typów są 32-bajtowe wyrównane. `sizeof(struct S1)`zwraca 32 i `S1` ma 16 bajtów wypełnienia po 16 bajtach wymaganych do przechowywania czterech liczb całkowitych. Każdy **`int`** element członkowski wymaga wyrównania 4-bajtowego, ale wyrównanie samej struktury jest deklarowane jako 32. Następnie ogólne wyrównanie jest 32.
+W tym przykładzie `S1` Struktura jest definiowana przy użyciu `__declspec(align(32))` . Wszystkie zastosowania `S1` do definicji zmiennej lub w innych deklaracjach typów są 32-bajtowe wyrównane. `sizeof(struct S1)` zwraca 32 i `S1` ma 16 bajtów wypełnienia po 16 bajtach wymaganych do przechowywania czterech liczb całkowitych. Każdy **`int`** element członkowski wymaga wyrównania 4-bajtowego, ale wyrównanie samej struktury jest deklarowane jako 32. Następnie ogólne wyrównanie jest 32.
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -117,7 +118,7 @@ struct S3 {
 };
 ```
 
-W tym przykładzie należy zauważyć, że `a` ma wyrównanie jego typu naturalnego, w tym przypadku 4 bajty. Jednak `S1` muszą być 32-bajtowe wyrównane. 28 bajtów uzupełnienia `a` , tak jak `s1` zaczyna się o przesunięciu 32. `S4`następnie dziedziczy wymóg wyrównania z `S1` , ponieważ jest to największe wymaganie wyrównania w strukturze. `sizeof(struct S4)`zwraca 64.
+W tym przykładzie należy zauważyć, że `a` ma wyrównanie jego typu naturalnego, w tym przypadku 4 bajty. Jednak `S1` muszą być 32-bajtowe wyrównane. 28 bajtów uzupełnienia `a` , tak jak `s1` zaczyna się o przesunięciu 32. `S4` następnie dziedziczy wymóg wyrównania z `S1` , ponieważ jest to największe wymaganie wyrównania w strukturze. `sizeof(struct S4)` zwraca 64.
 
 ```cpp
 struct S4 {
@@ -156,7 +157,7 @@ struct S7 {
 };
 ```
 
-`S6`i `S7` mają identyczne wyrównanie, alokację i charakterystykę rozmiaru.
+`S6` i `S7` mają identyczne wyrównanie, alokację i charakterystykę rozmiaru.
 
 W tym przykładzie wyrównanie adresów początkowych a, b, c i d jest odpowiednio 4, 1, 4 i 1.
 
@@ -171,7 +172,7 @@ void fn() {
 
 Wyrównanie w przypadku przydzielenia pamięci na stercie zależy od tego, która funkcja alokacji jest wywoływana.  Na przykład, jeśli używasz `malloc` , wynik zależy od rozmiaru operandu. Jeśli *arg* >= 8, zwracana pamięć to 8-bajtowe wyrównanie. Jeśli *arg* < 8, wyrównanie zwróconej pamięci jest pierwszą potęgą wynoszącą 2 mniej niż *ARG*. Na przykład, jeśli używasz `malloc(7)` , wyrównanie wynosi 4 bajty.
 
-## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>Definiowanie nowych typów przy użyciu`__declspec(align(#))`
+## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a> Definiowanie nowych typów przy użyciu `__declspec(align(#))`
 
 Można zdefiniować typ z cechą wyrównania.
 
@@ -184,7 +185,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Teraz `aType` i `bType` ma ten sam rozmiar (8 bajtów), ale zmienne typu `bType` są 32-bajtowe wyrównane.
 
-## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a>Wyrównywanie danych w lokalnym magazynie wątków
+## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a> Wyrównywanie danych w lokalnym magazynie wątków
 
 Statyczny Magazyn wątków (TLS) utworzony przy użyciu `__declspec(thread)` atrybutu i umieszczony w sekcji TLS w obrazie działa do wyrównania dokładnie takich jak normalne dane statyczne. Aby można było utworzyć dane protokołu TLS, system operacyjny przydziela pamięć rozmiar sekcji TLS i uwzględnia atrybut wyrównania sekcji TLS.
 
@@ -207,7 +208,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-## <a name="how-align-works-with-data-packing"></a><a name="vclrfhowalignworkswithdatapacking"></a>Jak `align` współpracuje z pakowanie danych
+## <a name="how-align-works-with-data-packing"></a><a name="vclrfhowalignworkswithdatapacking"></a> Jak `align` współpracuje z pakowanie danych
 
 `/Zp`Opcja kompilatora i `pack` pragma mają wpływ na dane pakowania dla elementów członkowskich struktury i Unii. Ten przykład pokazuje `/Zp` , jak i `__declspec(align(#))` współpracować ze sobą:
 
@@ -240,7 +241,7 @@ Przesunięcie obiektu jest oparte na przesunięciu poprzedniego obiektu i bież�
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [`__declspec`](../cpp/declspec.md)<br/>
 [Omówienie Konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>

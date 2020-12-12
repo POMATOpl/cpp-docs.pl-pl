@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: typ System (C++/CX)'
 title: System typów (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 43b1e9dd2df6e9e457525ebf337604f68f0c267f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288168"
 ---
 # <a name="type-system-ccx"></a>System typów (C++/CX)
 

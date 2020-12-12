@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy default_scheduler_exists
 title: default_scheduler_exists — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6921f7bd820271cf590707c2e56cefa9f576cefe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139191"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284853"
 ---
 # <a name="default_scheduler_exists-class"></a>default_scheduler_exists — Klasa
 
-Ta klasa opisuje wyjątek zgłoszony w przypadku wywołania metody `Scheduler::SetDefaultSchedulerPolicy`, gdy domyślny harmonogram już istnieje w ramach procesu.
+Ta klasa opisuje wyjątek zgłoszony, gdy `Scheduler::SetDefaultSchedulerPolicy` Metoda jest wywoływana, gdy domyślny harmonogram już istnieje w ramach procesu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +26,13 @@ Ta klasa opisuje wyjątek zgłoszony w przypadku wywołania metody `Scheduler::S
 class default_scheduler_exists : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[default_scheduler_exists](#ctor)|Przeciążone. Konstruuje obiekt `default_scheduler_exists`.|
+|[default_scheduler_exists](#ctor)|Przeciążone. Konstruuje `default_scheduler_exists` obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,9 +46,9 @@ class default_scheduler_exists : public std::exception;
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>default_scheduler_exists
+## <a name="default_scheduler_exists"></a><a name="ctor"></a> default_scheduler_exists
 
-Konstruuje obiekt `default_scheduler_exists`.
+Konstruuje `default_scheduler_exists` obiekt.
 
 ```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();

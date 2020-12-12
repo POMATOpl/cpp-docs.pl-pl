@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: scanf_s, _scanf_s_l, wscanf_s _wscanf_s_l'
 title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 ms.date: 03/26/2019
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f7044a5f0a29e9421b7105ac177228e7fad3ab30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289104"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
@@ -87,7 +88,7 @@ Format ciąg kontrolny.
 *argument*<br/>
 Argumenty opcjonalne.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -98,13 +99,13 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **scanf_s** odczytuje dane ze standardowego strumienia wejściowego, **stdin**i zapisuje je w *argumencie*. Każdy *argument* musi być wskaźnikiem do typu zmiennej, który odpowiada specyfikatorowi typu w *formacie*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
+Funkcja **scanf_s** odczytuje dane ze standardowego strumienia wejściowego, **stdin** i zapisuje je w *argumencie*. Każdy *argument* musi być wskaźnikiem do typu zmiennej, który odpowiada specyfikatorowi typu w *formacie*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 **wscanf_s** to dwubajtowa wersja **scanf_s**; argument *formatu* **wscanf_s** jest ciągiem znaków dwubajtowych. **wscanf_s** i **scanf_s** zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **scanf_s** nie obsługuje obecnie danych wejściowych ze strumienia Unicode.
 
 Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że korzystają z parametru *locale* zamiast bieżących ustawień regionalnych wątku.
 
-W przeciwieństwie do **scanf** i **wscanf**, **scanf_s** i **wscanf_s** wymagają określenia rozmiarów buforów dla niektórych parametrów. Określ rozmiary dla wszystkich parametrów **c**, **c**, **s**, **s**lub String **[]** . Rozmiar buforu w znakach jest przesyłany jako dodatkowy parametr. Natychmiast następuje po wskaźniku do bufora lub zmiennej. Na przykład w przypadku odczytywania ciągu rozmiar buforu dla tego ciągu jest przesyłany w następujący sposób:
+W przeciwieństwie do **scanf** i **wscanf**, **scanf_s** i **wscanf_s** wymagają określenia rozmiarów buforów dla niektórych parametrów. Określ rozmiary dla wszystkich parametrów **c**, **c**, **s**, **s** lub String **[]** . Rozmiar buforu w znakach jest przesyłany jako dodatkowy parametr. Natychmiast następuje po wskaźniku do bufora lub zmiennej. Na przykład w przypadku odczytywania ciągu rozmiar buforu dla tego ciągu jest przesyłany w następujący sposób:
 
 ```C
 char s[10];
@@ -157,7 +158,7 @@ Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i
 |**scanf_s**, **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**, **_wscanf_s_l**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Strumień standardowy obsługuje parametry **stdin**, **stdout**i **stderr** przed użyciem ich w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Strumień standardowy obsługuje parametry **stdin**, **stdout** i **stderr** przed użyciem ich w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -206,11 +207,11 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

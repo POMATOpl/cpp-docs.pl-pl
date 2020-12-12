@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej o: odczytywanie ciągów do dostawcy OLE DB'
 title: Wczytywanie ciągów do dostawcy OLE DB
 ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: d46b4e1a53e7e489763f40e7a5238e65b493f7c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df8812d5589dd457684bf5e36a8a49f798f99aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286634"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Wczytywanie ciągów do dostawcy OLE DB
 
-`CCustomRowset::Execute` Funkcji otwiera plik i odczytuje ciągi. Konsument przekazuje nazwę pliku do dostawcy, wywołując [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Dostawca otrzymuje nazwę pliku i zapisuje go w zmiennej składowej `m_strCommandText`. `Execute` odczytuje nazwę pliku z `m_strCommandText`. Jeśli nazwa pliku jest nieprawidłowa lub plik jest niedostępny, `Execute` zwraca błąd. W przeciwnym razie zostanie otwarty plik i wywołania `fgets` można pobrać ciągów. Dla każdego zestawu ciągów jej operacje odczytu, `Execute` tworzy wystąpienie rekord użytkownika (zmodyfikowany `CCustomWindowsFile` z [przechowywanie ciągów w dostawcy OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) i umieszcza je w tablicy.
+`CCustomRowset::Execute`Funkcja otwiera plik i odczytuje ciągi. Odbiorca przekazuje nazwę pliku do dostawcy przez wywołanie [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Dostawca otrzymuje nazwę pliku i zapisuje ją w zmiennej składowej `m_strCommandText` . `Execute` odczytuje nazwę pliku z `m_strCommandText` . Jeśli nazwa pliku jest nieprawidłowa lub plik jest niedostępny, `Execute` zwraca błąd. W przeciwnym razie otwiera plik i wywołuje, `fgets` Aby pobrać ciągi. Dla każdego zestawu ciągów, które odczytuje, `Execute` tworzy wystąpienie rekordu użytkownika (zmodyfikowane `CCustomWindowsFile` przy [przechowywaniu ciągów w dostawcy OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) i umieszcza je w tablicy.
 
-Jeśli nie można otworzyć pliku, `Execute` musi zwracać DB_E_NOTABLE. Jeśli zamiast tego zwraca E_FAIL, dostawca nie będzie działać z wielu odbiorców i nie przekaże OLE DB [testów zgodności](../../data/oledb/testing-your-provider.md).
+Jeśli nie można otworzyć pliku, `Execute` należy zwrócić DB_E_NOTABLE. Jeśli zwróci E_FAIL zamiast tego, dostawca nie będzie mógł współpracować z wieloma użytkownikami i nie przekaże OLE DB [testów zgodności](../../data/oledb/testing-your-provider.md).
 
 ## <a name="example"></a>Przykład
 
@@ -91,10 +92,10 @@ public:
 };
 ```
 
-Gdy jest to wykonywane, dostawca powinien być gotowe do kompilowania i uruchamiania. Aby przetestować dostawcę, należy odbiorców za pomocą funkcji dopasowywania. [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md) pokazuje, jak utworzyć odbiorcę testu. Uruchom klienta testowego z dostawcą i sprawdź, czy konsumenta test pobiera odpowiednie ciągi od dostawcy.
+Po wykonaniu tej czynności dostawca powinien być gotowy do skompilowania i uruchomienia. Do przetestowania dostawcy potrzebny jest klient z pasującymi funkcjami. [Zaimplementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md) pokazuje, jak utworzyć takiego konsumenta testowego. Uruchom konsumenta testowego u dostawcy i sprawdź, czy konsument testowy pobiera odpowiednie ciągi od dostawcy.
 
-Twój dostawca zostały pomyślnie przetestowane, można zwiększyć jego działanie, implementując dodatkowe interfejsy. Przykład został przedstawiony na [udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+Po pomyślnym przetestowaniu dostawcy warto zwiększyć jego funkcjonalność, implementując dodatkowe interfejsy. Przykład jest przedstawiony w temacie [ulepszanie prostego dostawcy Read-Only](../../data/oledb/enhancing-the-simple-read-only-provider.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Implementowanie prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>
+[Implementowanie prostego dostawcy Read-Only](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

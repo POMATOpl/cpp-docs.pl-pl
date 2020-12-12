@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak przeprowadzić migrację do/CLR'
 title: 'Instrukcje: Migracja do -clr'
 ms.custom: get-started-article
 ms.date: 09/18/2018
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 0c21fe585049ebce6383c5d8f673704e7362cd72
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 39853f755074a4999f39f9e04445234abfbe93b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286400"
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 
@@ -87,7 +88,7 @@ Po skompilowaniu i uruchomieniu projektu w programie Visual Studio 2010 należy 
 
 ### <a name="create-new-project-configurations"></a>Utwórz nowe konfiguracje projektu
 
-Możesz użyć opcji **Kopiuj ustawienia z z** w oknie **dialogowym Nowa konfiguracja projektu** (**kompilacja**,  >  **Configuration Manager**  >  Nowa**Konfiguracja rozwiązania**  >  **New**), aby utworzyć konfigurację projektu na podstawie istniejących ustawień projektu. Wykonaj tę czynność raz, aby przeprowadzić konfigurację debugowania i jeden raz dla konfiguracji wydania. Kolejne zmiany można następnie zastosować tylko do konfiguracji specyficznych dla programu **/CLR** , pozostawiając oryginalne konfiguracje projektu bez zmian.
+Możesz użyć opcji **Kopiuj ustawienia z z** w oknie **dialogowym Nowa konfiguracja projektu** (**kompilacja**,  >  **Configuration Manager**  >  Nowa **Konfiguracja rozwiązania**  >  **New**), aby utworzyć konfigurację projektu na podstawie istniejących ustawień projektu. Wykonaj tę czynność raz, aby przeprowadzić konfigurację debugowania i jeden raz dla konfiguracji wydania. Kolejne zmiany można następnie zastosować tylko do konfiguracji specyficznych dla programu **/CLR** , pozostawiając oryginalne konfiguracje projektu bez zmian.
 
 Projekty używające niestandardowych reguł kompilacji mogą wymagać dodatkowej uwagi.
 
@@ -132,7 +133,7 @@ Typy natywne są domyślnie prywatne. Może to spowodować, że typ natywny nie 
 
 ### <a name="floating-point-and-alignment-issues"></a>Problemy dotyczące zmiennoprzecinkowych i wyrównania
 
-`__controlfp`nie jest obsługiwany w środowisku uruchomieniowym języka wspólnego (zobacz [_control87, _controlfp, \_ _control87_2,](../c-runtime-library/reference/control87-controlfp-control87-2.md) Aby uzyskać więcej informacji). Środowisko CLR również nie będzie uwzględniać [wyrównania](../cpp/align-cpp.md).
+`__controlfp` nie jest obsługiwany w środowisku uruchomieniowym języka wspólnego (zobacz [_control87, _controlfp, \_ _control87_2,](../c-runtime-library/reference/control87-controlfp-control87-2.md) Aby uzyskać więcej informacji). Środowisko CLR również nie będzie uwzględniać [wyrównania](../cpp/align-cpp.md).
 
 ### <a name="com-initialization"></a>Inicjowanie modelu COM
 
@@ -162,6 +163,6 @@ Aby uzyskać informacje na temat programowania .NET w Visual C++, zobacz:
 
 - [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcja ActivateInstance —'
 title: ActivateInstance — Funkcja
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03d7b67810ee2ab287072546b098f81f43687233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287856"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance — Funkcja
 
@@ -31,7 +32,7 @@ inline HRESULT ActivateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Typ do uaktywnienia.
 
 *Wpisy*<br/>
@@ -52,4 +53,4 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie błąd HRESULT, który wskazu
 
 ## <a name="see-also"></a>Zobacz też
 
-[Windows::Foundation, przestrzeń nazw](windows-foundation-namespace.md)
+[Windows:: Foundation — przestrzeń nazw](windows-foundation-namespace.md)

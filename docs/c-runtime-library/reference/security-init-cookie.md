@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __security_init_cookie'
 title: __security_init_cookie
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-ms.openlocfilehash: 9f7e9924f4a96803749418d777e5ee2020f9df78
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48051eb34e7fe9fe1e32e41849072f71d6665d94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288948"
 ---
 # <a name="__security_init_cookie"></a>__security_init_cookie
 
@@ -48,9 +49,9 @@ void __security_init_cookie(void);
 
 Globalny plik cookie zabezpieczeń jest używany na potrzeby ochrony przepełnienia buforu w kodzie skompilowanym za pomocą [/GS (sprawdzanie zabezpieczeń bufora)](../../build/reference/gs-buffer-security-check.md) i w kodzie, który używa obsługi wyjątków. We wpisie do funkcji chronionej przez przepełnienie plik cookie jest umieszczany na stosie, a po zakończeniu wartość na stosie jest porównywana z globalnym plikiem cookie. Każda różnica między nimi wskazuje, że przepełnienie buforu nastąpiło i powoduje natychmiastowe zakończenie działania programu.
 
-Zwykle **__security_init_cookie** jest wywoływany przez CRT, gdy zostanie zainicjowany. W przypadku obejścia inicjalizacji CRT — na przykład jeśli używasz [/entry](../../build/reference/entry-entry-point-symbol.md) do określenia punktu wejścia, należy wywołać **__security_init_cookie** samodzielnie. Jeśli **__security_init_cookie** nie jest wywoływana, plik cookie zabezpieczeń globalnych ma ustawioną wartość domyślną, a ochrona przed przepełnieniem buforu zostaje naruszona. Ponieważ osoba atakująca może wykorzystać tę domyślną wartość pliku cookie w celu wypróbowania kontroli przepełnienia buforu, zalecamy, aby zawsze wywoływał **__security_init_cookie** podczas definiowania własnego punktu wejścia.
+Zwykle **__security_init_cookie** jest wywoływana przez CRT, gdy zostanie zainicjowany. W przypadku obejścia inicjalizacji CRT — na przykład jeśli używasz [/entry](../../build/reference/entry-entry-point-symbol.md) do określenia punktu wejścia, należy wywoływać **__security_init_cookie** siebie. Jeśli **__security_init_cookie** nie zostanie wywołana, plik cookie zabezpieczeń globalnych zostanie ustawiony na wartość domyślną, a ochrona przed przepełnieniem buforu zostanie naruszona. Ponieważ osoba atakująca może wykorzystać tę domyślną wartość pliku cookie w celu wypróbowania kontroli przepełnienia buforu, zalecamy, aby zawsze wywoływać **__security_init_cookie** podczas definiowania własnego punktu wejścia.
 
-Wywołanie **__security_init_cookie** musi zostać wykonane przed wprowadzeniem jakiejkolwiek funkcji chronionej przez przepełnienie; w przeciwnym razie zostanie wykryte przepełnienie buforu fałszywe. Aby uzyskać więcej informacji, zobacz [błąd środowiska uruchomieniowego C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+Wywołanie **__security_init_cookie** musi nastąpić przed wprowadzeniem jakiejkolwiek funkcji chronionej przez przepełnienie; w przeciwnym razie zostanie wykryte przepełnienie buforu fałszywe. Aby uzyskać więcej informacji, zobacz [błąd środowiska uruchomieniowego C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Przykład
 
@@ -64,6 +65,6 @@ Zobacz przykłady [błędów środowiska uruchomieniowego języka C R6035](../..
 
 **__security_init_cookie** to rozszerzenie firmy Microsoft do standardowej biblioteki środowiska uruchomieniowego C. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)
+[Centrum zabezpieczeń firmy Microsoft](https://www.microsoft.com/msrc?rtc=1)

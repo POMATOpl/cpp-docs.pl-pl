@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _searchenv_s, _wsearchenv_s'
 title: _searchenv_s, _wsearchenv_s
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c618840c904bb03eb2f04b9931c7fe7999a278a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288961"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
@@ -109,15 +110,15 @@ Jeśli *Nazwa pliku* jest pustym ciągiem, wartość zwracana to **ENOENT**.
 
 |*Nazwa pliku*|*nazwa_zmiennej*|*ścieżki*|*numberOfElements*|Wartość zwracana|Zawartość *nazwy ścieżki*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|ile|ile|**NULL**|ile|**EINVAL**|n/d|
-|**NULL**|ile|ile|ile|**EINVAL**|nie zmieniono|
-|ile|ile|ile|<= 0|**EINVAL**|nie zmieniono|
+|dowolny|dowolny|**NULL**|dowolny|**EINVAL**|n/d|
+|**NULL**|dowolny|dowolny|dowolny|**EINVAL**|nie zmieniono|
+|dowolny|dowolny|dowolny|<= 0|**EINVAL**|nie zmieniono|
 
 Jeśli wystąpi którykolwiek z tych warunków błędów, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Procedura **_searchenv_s** wyszukuje plik docelowy w określonej domenie. Zmienna *nazwa_zmiennej* może być dowolnego środowiska lub zmiennej zdefiniowanej przez użytkownika, która określa listę ścieżek katalogów, takich jak **Path**, **lib**i **include**. Ponieważ w **_searchenv_s** jest rozróżniana wielkość liter, wartość *nazwa_zmiennej* powinna być zgodna z wielkością liter zmiennej środowiskowej. Jeśli właściwość *nazwa_zmiennej* nie jest zgodna z nazwą zmiennej środowiskowej zdefiniowanej w środowisku procesu, funkcja zwraca zero, a zmienna *PATHNAME* nie jest zmieniana.
+Procedura **_searchenv_s** wyszukuje plik docelowy w określonej domenie. Zmienna *nazwa_zmiennej* może być dowolnego środowiska lub zmiennej zdefiniowanej przez użytkownika, która określa listę ścieżek katalogów, takich jak **Path**, **lib** i **include**. Ponieważ w **_searchenv_s** jest rozróżniana wielkość liter, wartość *nazwa_zmiennej* powinna być zgodna z wielkością liter zmiennej środowiskowej. Jeśli właściwość *nazwa_zmiennej* nie jest zgodna z nazwą zmiennej środowiskowej zdefiniowanej w środowisku procesu, funkcja zwraca zero, a zmienna *PATHNAME* nie jest zmieniana.
 
 Procedura przeszukuje najpierw plik w bieżącym katalogu roboczym. Jeśli plik nie zostanie znaleziony, będzie wyglądał dalej za pomocą katalogów określonych przez zmienną środowiskową. Jeśli plik docelowy znajduje się w jednym z tych katalogów, nowo utworzona ścieżka jest kopiowana do *nazwy ścieżki*. Jeśli plik *filename* nie zostanie znaleziony, *Nazwa ścieżki* zawiera pusty ciąg zakończony znakiem null.
 
@@ -139,8 +140,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_searchenv_s**|\<STDLIB. h>|
-|**_wsearchenv_s**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_searchenv_s**|\<stdlib.h>|
+|**_wsearchenv_s**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -180,9 +181,9 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>

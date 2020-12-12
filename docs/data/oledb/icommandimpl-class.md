@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa ICommandImpl'
 title: ICommandImpl — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 62066d689e51a8ca8a71bb8120199c05ed2811d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287388"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2653'
 title: Błąd kompilatora C2653
 ms.date: 11/30/2017
 f1_keywords:
@@ -6,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-ms.openlocfilehash: 2882764e1c0a84634c500d920f327fbebc4b19a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: f3be7ade8a6dcfc6aa8c5a83cc8a055fc230789d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286153"
 ---
 # <a name="compiler-error-c2653"></a>Błąd kompilatora C2653
 
-> "*identyfikator*": nie jest klasą lub przestrzenią nazw
+> "*Identyfikator*": nie jest nazwą klasy lub przestrzeni nazw
 
-Składnia języka wymaga klasy, struktury, Unii lub nazwa przestrzeni nazw w tym miejscu.
+Składnia języka wymaga tutaj nazwy klasy, struktury, Unii lub przestrzeni nazw.
 
-Ten błąd może wystąpić, gdy używasz nazwę, która nie została zadeklarowana jako klasy, struktury, Unii lub przestrzeni nazw przed operatorem zakresu. Aby rozwiązać ten problem, należy zadeklarować nazwę lub zawierać nagłówek, który deklaruje nazwę, zanim zostaną one użyte.
+Ten błąd może wystąpić, gdy używasz nazwy, która nie została zadeklarowana jako Klasa, struktura, Unia lub przestrzeń nazw przed operatorem zakresu. Aby rozwiązać ten problem, zadeklaruj nazwę lub Dołącz nagłówek, który deklaruje nazwę przed użyciem.
 
-C2653 jest również możliwe, jeśli zostanie podjęta próba zdefiniować *złożone przestrzeni nazw*, przestrzeń nazw, który zawiera jedną lub więcej nazw zagnieżdżony zakres przestrzeni nazw. Złożone przestrzeni nazw, których definicje nie są dozwolone w języku C++ przed C ++ 17. Złożone przestrzenie nazw są obsługiwane, począwszy od programu Visual Studio 2015 Update 3 po określeniu [/STD: c ++ najnowsze](../../build/reference/std-specify-language-standard-version.md) — opcja kompilatora. Począwszy od programu Visual Studio 2017 w wersji 15.5 definicji przestrzeni nazw złożonego obsługiwanych przez kompilator podczas [/STD: c ++ 17](../../build/reference/std-specify-language-standard-version.md) określono opcję.
+C2653 jest również możliwe w przypadku próby zdefiniowania *złożonej przestrzeni nazw*, przestrzeni nazw zawierającej co najmniej jedną zagnieżdżoną nazwę zakresu nazw. Definicje złożonych przestrzeni nazw są niedozwolone w języku C++ przed C++ 17. Złożone przestrzenie nazw są obsługiwane począwszy od programu Visual Studio 2015 Update 3 w przypadku określenia opcji kompilatora [/std: c + +](../../build/reference/std-specify-language-standard-version.md) . Począwszy od programu Visual Studio 2017 w wersji 15,5, kompilator obsługuje definicje przestrzeni nazw złożonych, gdy jest określona opcja [/std: c++ 17](../../build/reference/std-specify-language-standard-version.md) .
 
 ## <a name="examples"></a>Przykłady
 
-Ten przykład generuje C2653, ponieważ nazwa zakresu jest używany, ale nie został zadeklarowany. Kompilator oczekuje, że klasy, struktury, Unii lub nazwa przestrzeni nazw przed operatora zakresu (:).
+Ten przykład generuje C2653, ponieważ nazwa zakresu jest używana, ale nie została zadeklarowana. Kompilator oczekuje nazwy klasy, struktury, Unii lub przestrzeni nazw przed operatorem zakresu (::).
 
 ```cpp
 // C2653.cpp
@@ -38,7 +39,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-W kodzie, który nie jest kompilowany dla języka C ++ 17 lub nowszym zagnieżdżone przestrzenie nazw, należy użyć deklaracji jawną przestrzeń nazw na każdym poziomie zagnieżdżania:
+W kodzie, który nie jest kompilowany dla standardów C++ 17 lub nowszych, zagnieżdżone przestrzenie nazw muszą używać jawnej deklaracji przestrzeni nazw na każdym poziomie zagnieżdżania:
 
 ```cpp
 // C2653b.cpp
