@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAnimationManagerEventHandler'
 title: Klasa CAnimationManagerEventHandler
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: 58bb37e9de40f4bc711b417eab107aa55b8ff0e8
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: aab944c23822486bbc04bb7710d257dd8c42beed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207949"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Klasa CAnimationManagerEventHandler
 
-Implementuje wywołanie zwrotne, który jest wywoływany przez interfejs API animacji po zmianie stanu menedżera animacji.
+Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy zmieni się stan Menedżera animacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,13 +44,13 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationManagerEventHandler` obiektu.|
-|[CAnimationManagerEventHandler::OnManagerStatusZmienia](#onmanagerstatuschanged)|Wywoływana po zmianie stanu menedżera animacji. (Przesłania `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.|
+|[CAnimationManagerEventHandler:: CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationManagerEventHandler` obiektu.|
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Wywoływana, gdy zmieniono stan Menedżera animacji. (Przesłania `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji, aby skierować zdarzenia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten program obsługi zdarzeń jest tworzony i przekazywany do metody IUIAnimationManager::SetManagerEventHandler, po wywołaniu CAnimationController::EnableAnimationManagerEvent.
+Ta procedura obsługi zdarzeń jest tworzona i przenoszona do metody IUIAnimationManager:: SetManagerEventHandler, gdy zostanie wywołana CAnimationController:: EnableAnimationManagerEvent.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -61,23 +62,23 @@ Ten program obsługi zdarzeń jest tworzony i przekazywany do metody IUIAnimatio
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxanimationcontroller.h
+**Nagłówek:** afxanimationcontroller. h
 
-## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler
+## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a> CAnimationManagerEventHandler::CAnimationManagerEventHandler
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Konstruuje CAnimationManagerEventHandler obiektu.
+Konstruuje obiekt CAnimationManagerEventHandler.
 
 ```
 CAnimationManagerEventHandler();
 ```
 
-## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance
+## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a> CAnimationManagerEventHandler:: CreateInstance
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Tworzy wystąpienie CAnimationManagerEventHandler obiektu.
+Tworzy wystąpienie obiektu CAnimationManagerEventHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -87,21 +88,21 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pKontroleranimacji*<br/>
-Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
+*pAnimationController*<br/>
+Wskaźnik do kontrolera animacji, który będzie otrzymywał zdarzenia.
 
 *ppManagerEventHandler*<br/>
-Wyjście. Jeśli metoda powiedzie się zawiera wskaźnik do obiektu COM, który będzie obsługiwać aktualizacje stanu do menedżera animacji.
+Rozdzielczości. Jeśli metoda zakończy się pomyślnie, zawiera wskaźnik do obiektu COM, który będzie obsługiwał aktualizacje stanu do Menedżera animacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda się powiedzie, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusZmienia
+## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a> CAnimationManagerEventHandler::OnManagerStatusChanged
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Wywoływana po zmianie stanu menedżera animacji.
+Wywoływana, gdy zmieniono stan Menedżera animacji.
 
 ```
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -111,21 +112,21 @@ IFACEMETHOD(OnManagerStatusChanged)(
 
 ### <a name="parameters"></a>Parametry
 
-*nowyStatus*<br/>
+*newStatus*<br/>
 Nowy stan.
 
-*poprzednistatus*<br/>
+*previousStatus*<br/>
 Poprzedni stan.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca implementacja zawsze zwraca S_OK;
 
-## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController
+## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a> CAnimationManagerEventHandler::SetAnimationController
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.
+Przechowuje wskaźnik do kontrolera animacji, aby skierować zdarzenia.
 
 ```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -133,8 +134,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>Parametry
 
-*pKontroleranimacji*<br/>
-Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
+*pAnimationController*<br/>
+Wskaźnik do kontrolera animacji, który będzie otrzymywał zdarzenia.
 
 ## <a name="see-also"></a>Zobacz też
 

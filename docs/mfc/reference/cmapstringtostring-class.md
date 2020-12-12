@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMapStringToString'
 title: Klasa CMapStringToString
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CMapStringToString [MFC], RemoveKey
 - CMapStringToString [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 28422c26ba2ca77657bfcf166592d2bc69169891
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ba82647a6e81e82b4d977e4de3beee1bfd0b7c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223008"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207816"
 ---
 # <a name="cmapstringtostring-class"></a>Klasa CMapStringToString
 
@@ -110,7 +111,7 @@ na przykład tłumaczy na
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapStringToString`zawiera `IMPLEMENT_SERIAL` makro obsługujące serializację i zatopienie swoich elementów. Każdy element jest serializowany, jeśli mapa jest przechowywana w archiwum, przy użyciu przeciążonego operatora wstawiania ( **<<** ) lub `Serialize` funkcji członkowskiej.
+`CMapStringToString` zawiera `IMPLEMENT_SERIAL` makro obsługujące serializację i zatopienie swoich elementów. Każdy element jest serializowany, jeśli mapa jest przechowywana w archiwum, przy użyciu przeciążonego operatora wstawiania ( **<<** ) lub `Serialize` funkcji członkowskiej.
 
 Jeśli potrzebujesz zrzutu poszczególnych `CString` -  `CString` elementów, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
@@ -128,7 +129,7 @@ Aby uzyskać więcej informacji na temat `CMapStringToString` , zobacz [kolekcje
 
 **Nagłówek:** afxcoll. h
 
-## <a name="cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair
+## <a name="cmapstringtostringcpair"></a><a name="cpair"></a> CMapStringToString::CPair
 
 Zawiera wartość klucza i wartość skojarzonego obiektu ciągu.
 
@@ -138,9 +139,9 @@ Jest to struktura zagnieżdżona w klasie [CMapStringToString](../../mfc/referen
 
 Struktura składa się z dwóch pól:
 
-- `key`Rzeczywista wartość typu klucza.
+- `key` Rzeczywista wartość typu klucza.
 
-- `value`Wartość skojarzonego obiektu.
+- `value` Wartość skojarzonego obiektu.
 
 Służy do przechowywania wartości zwracanych z [CMapStringToString::P Lookup](#plookup), [CMapStringToString::P getfirstassoc](#pgetfirstassoc)i [CMapStringToString::P GetNextAssoc](#pgetnextassoc).
 
@@ -148,7 +149,7 @@ Służy do przechowywania wartości zwracanych z [CMapStringToString::P Lookup](
 
   Aby zapoznać się z przykładem użycia, zobacz przykład dla [CMapStringToString::P Lookup](#plookup).
 
-## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString::P GetFirstAssoc
+## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a> CMapStringToString::P GetFirstAssoc
 
 Zwraca pierwszy wpis obiektu mapy.
 
@@ -170,7 +171,7 @@ Wywołaj tę funkcję, aby zwrócić wskaźnik do pierwszego elementu w obiekcie
 
 [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]
 
-## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString::P GetNextAssoc
+## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a> CMapStringToString::P GetNextAssoc
 
 Pobiera element mapy wskazywany przez *pAssocRec*.
 
@@ -197,7 +198,7 @@ Wywołaj tę metodę, aby wykonać iterację wszystkich elementów na mapie. Pob
 
   Zobacz przykład dla [CMapStringToString::P getfirstassoc](#pgetfirstassoc).
 
-## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString: wyszukiwanie:P
+## <a name="cmapstringtostringplookup"></a><a name="plookup"></a> CMapStringToString: wyszukiwanie:P
 
 Wyszukuje wartość zamapowane na dany klucz.
 

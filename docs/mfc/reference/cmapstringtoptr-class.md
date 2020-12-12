@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMapStringToPtr'
 title: Klasa CMapStringToPtr
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapStringToPtr [MFC], RemoveKey
 - CMapStringToPtr [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-ms.openlocfilehash: 26a606d5813a68b55d8fc555025ccef270a25766
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67b4f29b552c82ce6c8b9686ed043cbfc65f078e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223021"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207842"
 ---
 # <a name="cmapstringtoptr-class"></a>Klasa CMapStringToPtr
 
@@ -93,7 +94,7 @@ na przykład tłumaczy na
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapStringToPtr`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
+`CMapStringToPtr` obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
 Mapowania ciągów do wskaźnika nie mogą być serializowane.
 
@@ -109,7 +110,7 @@ Po `CMapStringToPtr` usunięciu obiektu lub po usunięciu jego elementów `CStri
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
