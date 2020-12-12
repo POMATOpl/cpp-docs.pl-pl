@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: typ rzutowania obiektów klas MFC'
 title: Rzutowanie typów obiektów klas MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: e3702ced83021e42ac6bf71a78efc51fa07b8be9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bec49afc0050aa32c6e5436e5efca9b0dab30709
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218674"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Rzutowanie typów obiektów klas MFC
 

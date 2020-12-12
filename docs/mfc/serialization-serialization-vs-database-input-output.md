@@ -1,5 +1,6 @@
 ---
-title: 'Serializacja: Serializacja programu vs. Baza danych we / wy'
+description: 'Dowiedz się więcej o: serializacji: serializacji a dane wejściowe/wyjściowe bazy danych'
+title: 'Serializacja: serializacja a Input-Output bazy danych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database applications [MFC], file I/O vs. serialization
@@ -7,21 +8,21 @@ helpviewer_keywords:
 - I/O [MFC], vs. serialization
 - databases [MFC], input/output handling
 ms.assetid: f1d23d77-4761-4a52-a7ea-54fc92d347ea
-ms.openlocfilehash: c4f44f1ac291b2d068ca0525543938331d6e07d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2c2c8aa9597e23ac3e6caefcb2adb8b31dc3e93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217513"
 ---
-# <a name="serialization-serialization-vs-database-inputoutput"></a>Serializacja: Serializacja programu vs. Dane wejściowe/wyjściowe bazy danych
+# <a name="serialization-serialization-vs-database-inputoutput"></a>Serializacja: serializacja a dane wejściowe/wyjściowe bazy danych
 
-W tym artykule wyjaśniono, kiedy należy używać obiektów dokumentu i serializacji dla opartych na plikach wejścia/wyjścia (We/Wy) i innych technik operacji We/Wy są odpowiednie, ponieważ aplikacja odczytuje i zapisuje dane na podstawie każdej transakcji, tak jak w aplikacjach baz danych. Jeśli nie używasz serializacji, możesz również nie będzie konieczne Otwórz plik, Zapisz i Zapisz jako polecenia. Omawiane tematy to m.in.:
+W tym artykule wyjaśniono, kiedy używać obiektów dokumentów i serializacji dla danych wejściowych/wyjściowych opartych na plikach (we/wy) i kiedy inne techniki we/wy są odpowiednie — ponieważ aplikacja odczytuje i zapisuje dane w oparciu o transakcję, jak w aplikacjach baz danych. Jeśli nie korzystasz z serializacji, nie będzie potrzebne również plik Otwórz, Zapisz i Zapisz jako. Omawiane tematy to m.in.:
 
-- [Zalecenia dotyczące obsługi We/Wy](../mfc/recommendations-for-handling-input-output.md)
+- [Zalecenia dotyczące obsługi danych wejściowych/wyjściowych](../mfc/recommendations-for-handling-input-output.md)
 
-- [Obsługa menu Plik w aplikacjach baz danych](../mfc/file-menu-in-an-mfc-database-application.md)
+- [Obsługa menu plik w aplikacjach baz danych](../mfc/file-menu-in-an-mfc-database-application.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Serializacja](../mfc/serialization-in-mfc.md)

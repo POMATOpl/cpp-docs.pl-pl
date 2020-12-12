@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: dostęp do biblioteki typów'
 title: Dostęp do biblioteki typów
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 55d6a56f566416bb25f3ee3ae508c86f17f0df99
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c855f82914e540ab13f4bc20581c041633b5bc0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840456"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218657"
 ---
 # <a name="type-library-access"></a>Dostęp do biblioteki typów
 
