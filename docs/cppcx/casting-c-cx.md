@@ -1,17 +1,18 @@
 ---
+description: 'Dowiedz się więcej o: rzutowania (C++/CX)'
 title: Rzutowanie (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: 5e51f9e100be2096494e10aca38232dbd1576f40
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 90b9e90833acc14bcf76287b44f70fb914c7604a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190279"
 ---
 # <a name="casting-ccx"></a>Rzutowanie (C++/CX)
 
-Cztery różne Operatory rzutowania stosują się do typów środowisko wykonawcze systemu Windows: [operatora static_cast](../cpp/static-cast-operator.md), operatora [dynamic_cast](../cpp/dynamic-cast-operator.md), operatora **safe_cast**i [operatora reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** i **`static_cast`** zgłosić wyjątek, gdy nie można wykonać konwersji; [Operator static_cast](../cpp/static-cast-operator.md) wykonuje także sprawdzanie typu w czasie kompilacji. **`dynamic_cast`** zwraca **`nullptr`** Jeśli konwersja typu nie powiedzie się. Chociaż **`reinterpret_cast`** zwraca wartość różną od null, może być nieprawidłowa. Z tego powodu zalecamy, aby nie korzystać z programu, **`reinterpret_cast`** chyba że wiadomo, że rzutowanie zakończy się pomyślnie. Ponadto zaleca się, aby nie używać rzutowania w stylu języka C w kodzie C++/CX, ponieważ są one identyczne z **`reinterpret_cast`** .
+Cztery różne Operatory rzutowania stosują się do typów środowisko wykonawcze systemu Windows: [operatora static_cast](../cpp/static-cast-operator.md), operatora [dynamic_cast](../cpp/dynamic-cast-operator.md), operatora **safe_cast** i [operatora reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** i **`static_cast`** zgłosić wyjątek, gdy nie można wykonać konwersji; [Operator static_cast](../cpp/static-cast-operator.md) wykonuje także sprawdzanie typu w czasie kompilacji. **`dynamic_cast`** zwraca **`nullptr`** Jeśli konwersja typu nie powiedzie się. Chociaż **`reinterpret_cast`** zwraca wartość różną od null, może być nieprawidłowa. Z tego powodu zalecamy, aby nie korzystać z programu, **`reinterpret_cast`** chyba że wiadomo, że rzutowanie zakończy się pomyślnie. Ponadto zaleca się, aby nie używać rzutowania w stylu języka C w kodzie C++/CX, ponieważ są one identyczne z **`reinterpret_cast`** .
 
 Kompilator i środowisko uruchomieniowe również wykonuje niejawne rzutowania — na przykład w operacjach pakowania, gdy typ wartości lub typ wbudowany są przekazane jako argumenty do metody, której typem parametru jest `Object^` . W teorii niejawne rzutowanie nigdy nie powinno spowodować wyjątku w czasie wykonywania; Jeśli kompilator nie może wykonać konwersji niejawnej, zgłasza błąd w czasie kompilacji.
 

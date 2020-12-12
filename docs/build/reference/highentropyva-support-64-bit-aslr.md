@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej na temat:/HIGHENTROPYVA (Obsługa 64-bit ASLR)
 title: /HIGHENTROPYVA (Adres 64-bitowej obsługi ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: ead296b1bd31171fb1a187685f407f6a0cf8a74c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aed5d5eea2d3351d4eff88a58818a953563ba0e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191553"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Adres 64-bitowej obsługi ASLR)
 
@@ -29,9 +30,9 @@ Aby **`/HIGHENTROPYVA`** program miał efekt w czasie ładowania, [`/DYNAMICBASE
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja właściwości**  >  **Linker**  >  **wiersza polecenia** konsolidatora.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
-1. W obszarze **Opcje dodatkowe**wprowadź `/HIGHENTROPYVA` lub `/HIGHENTROPYVA:NO` .
+1. W obszarze **Opcje dodatkowe** wprowadź `/HIGHENTROPYVA` lub `/HIGHENTROPYVA:NO` .
 
 ## <a name="see-also"></a>Zobacz też
 

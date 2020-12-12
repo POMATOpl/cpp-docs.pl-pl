@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/IGNORE (ignorowanie określonych ostrzeżeń)
 title: /IGNORE (ignorowanie określonych ostrzeżeń)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4ed87a1a12bea189f56545cf5256351a29977643
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7098515a65981ffcdf60b5b517d2434d20e7c015
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191332"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (ignorowanie określonych ostrzeżeń)
 

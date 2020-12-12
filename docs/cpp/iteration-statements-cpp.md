@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: Instrukcje iteracji (C++)'
 title: Instrukcje iteracji (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iteration statements
 - loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
-ms.openlocfilehash: b4176e8265759ae569275bdae5304b0b10c29fc1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 71edf526ed641a5bcd7944c546486cf3d2fb5059
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190292"
 ---
 # <a name="iteration-statements-c"></a>Instrukcje iteracji (C++)
 
@@ -29,6 +30,6 @@ C++ zawiera cztery instrukcje iteracji — [while](../cpp/while-statement-cpp.md
 
 Część instrukcji instrukcji iteracji nie może być deklaracją. Jednak może to być złożonej instrukcji zawierającej deklarację.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Omówienie instrukcji języka C++](../cpp/overview-of-cpp-statements.md)

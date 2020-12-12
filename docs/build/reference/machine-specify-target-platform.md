@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/MACHINE (Określ platformę docelową)
 title: /MACHINE (Określ platformę docelową)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /MACHINE linker option
 - MACHINE linker option
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
-ms.openlocfilehash: e64aa7b2ca9e50ebdc0760f64a9b25e851b45310
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1bf87142fb99577672391356a43a2771ea0b09f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190812"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (Określ platformę docelową)
 
@@ -26,25 +27,25 @@ ms.locfileid: "62321725"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/Machine Określa docelową platformę dla programu.
+Opcja/MACHINE określa docelową platformę dla programu.
 
-Zazwyczaj nie trzeba określić opcję/Machine. LINK wnioskuje typ maszyny z plików .obj. Jednak w niektórych sytuacjach łącze nie można określić typu maszyny i problemów [narzędzi konsolidatora LNK1113 błąd](../../error-messages/tool-errors/linker-tools-error-lnk1113.md). Jeśli wystąpi taki błąd, należy określić/Machine.
+Zwykle nie trzeba określać opcji/MACHINE. LINK wnioskuje typ maszyny z plików. obj. Jednak w niektórych okolicznościach LINK nie może określić typu maszyny i wystawia [błąd narzędzia konsolidatora LNK1113](../../error-messages/tool-errors/linker-tools-error-lnk1113.md). Jeśli wystąpi błąd, określ/MACHINE.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **zaawansowane** stronę właściwości.
+1. Kliknij stronę właściwości **Zaawansowane** .
 
-1. Modyfikowanie **maszyna docelowa** właściwości.
+1. Zmodyfikuj właściwość **maszyny docelowej** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TargetMachine%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TargetMachine%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

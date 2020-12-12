@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Importy wzajemne'
 title: Importy wzajemne
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0015dfe69237ff46ecfbef9ee1f1649fcb04d689
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187497"
 ---
 # <a name="mutual-imports"></a>Importy wzajemne
 
@@ -75,7 +76,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...
 ```
 
-Po skompilowaniu A.dll jest on zbudowany z `/D A_IMPL` i po skompilowaniu B.dll jest on zbudowany przy użyciu `/D B_IMPL` . Przy użyciu oddzielnych symboli dla każdej biblioteki DLL `CExampleB` jest eksportowany i `CExampleA` importowany podczas kompilowania B.dll. `CExampleA`jest eksportowany podczas kompilowania A.dll i importowania, gdy jest używany przez B.dll (lub innego klienta).
+Po skompilowaniu A.dll jest on zbudowany z `/D A_IMPL` i po skompilowaniu B.dll jest on zbudowany przy użyciu `/D B_IMPL` . Przy użyciu oddzielnych symboli dla każdej biblioteki DLL `CExampleB` jest eksportowany i `CExampleA` importowany podczas kompilowania B.dll. `CExampleA` jest eksportowany podczas kompilowania A.dll i importowania, gdy jest używany przez B.dll (lub innego klienta).
 
 Tego typu warstw nie można wykonać w przypadku używania wbudowanych **AFX_EXT_CLASS** i `_AFXEXT` symboli preprocesora. Opisana powyżej technika pozwala rozwiązać ten problem w sposób, który nie jest w przeciwieństwie do mechanizmu MFC, który używa w przypadku kompilowania aktywnych technologii, bazy danych i bibliotek DLL rozszerzeń MFC.
 
@@ -127,6 +128,6 @@ class CExampleA : public CObject
 
 - [Narzędzie LIB i opcja/DEF](reference/lib-reference.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie i eksportowanie](importing-and-exporting.md)

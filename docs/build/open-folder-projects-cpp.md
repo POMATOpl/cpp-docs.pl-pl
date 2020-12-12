@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Obsługa otwartych folderów dla systemów kompilacji C++ w programie Visual Studio'
 title: Obsługa otwartych folderów dla systemów kompilacji C++ w programie Visual Studio
 ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 03c6a07d19599958de81a604ca77e2772168d441
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 056ad4d1d611f2fc8b1c2d5594057a82b3e54a10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187575"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Obsługa otwartych folderów dla systemów kompilacji C++ w programie Visual Studio
 
@@ -29,13 +30,13 @@ CMake jest zintegrowany w środowisku IDE programu Visual Studio jako składnik 
 
 ## <a name="other-build-systems"></a>Inne systemy kompilacji
 
-Aby użyć środowiska IDE programu Visual Studio z systemem kompilacji lub zestawem narzędzi kompilatora, który nie jest bezpośrednio obsługiwany z menu głównego wybierz **plik | Otwórz | Lub naciśnij** **klawisze Ctrl + Shift + Alt + O** . Przejdź do folderu, który zawiera pliki kodu źródłowego. Aby skompilować projekt, skonfigurować funkcję IntelliSense i ustawić parametry debugowania, należy dodać trzy pliki JSON:
+Aby użyć środowiska IDE programu Visual Studio z systemem kompilacji lub zestawem narzędzi kompilatora, który nie jest bezpośrednio obsługiwany z menu głównego wybierz **plik | Otwórz | Lub naciśnij** **klawisze Ctrl + Shift + Alt + O**. Przejdź do folderu, który zawiera pliki kodu źródłowego. Aby skompilować projekt, skonfigurować funkcję IntelliSense i ustawić parametry debugowania, należy dodać trzy pliki JSON:
 
 | Plik | Opis |
 |-|-|
 |CppProperties.jsna|Określ informacje o konfiguracji niestandardowej do przeglądania. Utwórz ten plik, w razie konieczności, w folderze głównym projektu. (Nieużywane w projektach CMake).|
 |tasks.vs.jsna|Określ niestandardowe polecenia kompilacji. Dostępne za pośrednictwem **elementu menu** kontekstowego **Eksplorator rozwiązań** .|
-|launch.vs.jsna|Określ argumenty wiersza polecenia dla debugera. Dostępne za pośrednictwem elementu menu kontekstowego **Eksplorator rozwiązań** **Ustawienia debugowania i uruchamiania** .|
+|launch.vs.jsna|Określ argumenty wiersza polecenia dla debugera. Dostępne za pośrednictwem elementu menu kontekstowego **Eksplorator rozwiązań** **Ustawienia debugowania i uruchamiania**.|
 
 ## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Skonfiguruj nawigację po kodzie przy użyciu CppProperties.jsna
 
@@ -47,7 +48,7 @@ Program Visual Studio oferuje następujące konfiguracje domyślne:
 
 ![Konfiguracje domyślne](media/default-configurations.png)
 
-Jeśli na przykład wybierzesz opcję **x64-Debug** , program Visual Studio utworzy plik o nazwie *CppProperties.js* w folderze głównym projektu:
+Jeśli na przykład wybierzesz opcję **x64-Debug**, program Visual Studio utworzy plik o nazwie *CppProperties.js* w folderze głównym projektu:
 
 ```json
 {
@@ -76,7 +77,7 @@ Jeśli na przykład wybierzesz opcję **x64-Debug** , program Visual Studio utwo
 Ta konfiguracja dziedziczy zmienne środowiskowe wiersz polecenia dla deweloperów programu Visual Studio [x64](building-on-the-command-line.md). Jedna z tych zmiennych jest `INCLUDE` i można do niej odwołać się w tym miejscu za pomocą `${env.INCLUDE}` makra. `includePath`Właściwość nakazuje programowi Visual Studio wyszukiwanie wszystkich źródeł wymaganych przez funkcję IntelliSense. W tym przypadku jest to komunikat "Znajdź wszystkie katalogi określone przez zmienną środowiskową INCLUDE, a także wszystkie katalogi w bieżącym drzewie folderów roboczych". `name`Właściwość to nazwa, która będzie wyświetlana na liście rozwijanej i może być dowolna. `defines`Właściwość zawiera wskazówki do funkcji IntelliSense, gdy napotykają bloki kompilacji warunkowej. `intelliSenseMode`Właściwość zawiera kilka dodatkowych wskazówek opartych na typie kompilatora. Dostępne są różne opcje MSVC, w zatoce i Clang.
 
 > [!NOTE]
-> Jeśli program Visual Studio prawdopodobnie zignoruje ustawienia w *CppProperties.jsna* , spróbuj dodać wyjątek do pliku *. gitignore* w następujący sposób: `!/CppProperties.json` .
+> Jeśli program Visual Studio prawdopodobnie zignoruje ustawienia w *CppProperties.jsna*, spróbuj dodać wyjątek do pliku *. gitignore* w następujący sposób: `!/CppProperties.json` .
 
 ## <a name="default-configuration-for-mingw-w64"></a>Domyślna konfiguracja dla MinGW-W64
 
@@ -109,7 +110,7 @@ Jeśli dodasz konfigurację MinGW-W64, kod JSON będzie wyglądać następująco
 }
 ```
 
-Zwróć uwagę na `environments` blok. Definiuje właściwości, które zachowują się jak zmienne środowiskowe i są dostępne nie tylko w *CppProperties.jsw* pliku, ale również w innych plikach konfiguracyjnych *task.vs.jsna* i *launch.vs.js* . `Mingw64`Konfiguracja dziedziczy `mingw_w64` środowisko i używa jego `INCLUDE` właściwości do określenia wartości dla `includePath` . W razie potrzeby możesz dodać inne ścieżki do tej właściwości tablicy.
+Zwróć uwagę na `environments` blok. Definiuje właściwości, które zachowują się jak zmienne środowiskowe i są dostępne nie tylko w *CppProperties.jsw* pliku, ale również w innych plikach konfiguracyjnych *task.vs.jsna* i *launch.vs.js*. `Mingw64`Konfiguracja dziedziczy `mingw_w64` środowisko i używa jego `INCLUDE` właściwości do określenia wartości dla `includePath` . W razie potrzeby możesz dodać inne ścieżki do tej właściwości tablicy.
 
 `intelliSenseMode`Właściwość ma ustawioną wartość odpowiednią dla programu w zatoce. Aby uzyskać więcej informacji na temat wszystkich tych właściwości, zobacz [pliku cppproperties Schema Reference](cppproperties-schema-reference.md).
 
@@ -119,19 +120,19 @@ Gdy wszystko działa prawidłowo, po umieszczeniu wskaźnika myszy na typie zoba
 
 ## <a name="enable-intellisense-diagnostics"></a>Włączanie diagnostyki IntelliSense
 
-Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do opcji **Narzędzia**  >  **Options**  >  **Edytor tekstu**  >  **C/C++**  >  **Zaawansowane** i ustawienie **Włącz rejestrowanie** na **`true`** . Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
+Jeśli nie widzisz oczekiwanej technologii IntelliSense, możesz rozwiązać problemy, przechodząc do opcji **Narzędzia**  >    >  **Edytor tekstu**  >  **C/C++**  >  **Zaawansowane** i ustawienie **Włącz rejestrowanie** na **`true`** . Aby rozpocząć pracę z programem, spróbuj ustawić **poziom rejestrowania** na 5 i **filtry rejestrowania** na 8.
 
 ![Rejestrowanie diagnostyczne](media/diagnostic-logging.png)
 
-Dane wyjściowe są przekazywane do **okno dane wyjściowe** i są widoczne po wybraniu polecenia * *Pokaż dane wyjściowe z: Visual C++ log* . Dane wyjściowe zawierają między innymi listę rzeczywistych ścieżek dołączania, które próbuje użyć IntelliSense. Jeśli ścieżki nie pasują do tych, które znajdują się w *CppProperties.jsna* , spróbuj zamknąć folder i usunąć podfolder *. vs* zawierający buforowane dane przeglądania.
+Dane wyjściowe są przekazywane do **okno dane wyjściowe** i są widoczne po wybraniu polecenia **Pokaż dane wyjściowe z: Visual C++ log*. Dane wyjściowe zawierają między innymi listę rzeczywistych ścieżek dołączania, które próbuje użyć IntelliSense. Jeśli ścieżki nie pasują do tych, które znajdują się w *CppProperties.jsna*, spróbuj zamknąć folder i usunąć podfolder *. vs* zawierający buforowane dane przeglądania.
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>Zdefiniuj zadania kompilacji z tasks.vs.jsna
 
-Możesz zautomatyzować skrypty kompilacji lub wszystkie inne operacje zewnętrzne na plikach znajdujących się w bieżącym obszarze roboczym, uruchamiając je jako zadania bezpośrednio w środowisku IDE. Nowe zadanie można skonfigurować, klikając prawym przyciskiem myszy plik lub folder, a następnie wybierając pozycję **Konfiguruj zadania** .
+Możesz zautomatyzować skrypty kompilacji lub wszystkie inne operacje zewnętrzne na plikach znajdujących się w bieżącym obszarze roboczym, uruchamiając je jako zadania bezpośrednio w środowisku IDE. Nowe zadanie można skonfigurować, klikając prawym przyciskiem myszy plik lub folder, a następnie wybierając pozycję **Konfiguruj zadania**.
 
 ![Otwórz folder konfiguracja zadań](media/configure-tasks.png)
 
-Spowoduje to utworzenie (lub otwarcie) *tasks.vs.js* w pliku w folderze. vs, który program Visual Studio tworzy w folderze głównym projektu. Można zdefiniować dowolne dowolne zadanie w tym pliku, a następnie wywołać je z menu kontekstowego **Eksplorator rozwiązań** . W celu kontynuowania przykładu w ramach programu w zatoce Poniższy fragment kodu przedstawia pełną *tasks.vs.jsw* pliku z jak pojedynczym zadaniem, które wywołuje program *g + +. exe* w celu skompilowania projektu. Załóżmy, że projekt zawiera jeden plik o nazwie *Hello. cpp* .
+Spowoduje to utworzenie (lub otwarcie) *tasks.vs.js* w pliku w folderze. vs, który program Visual Studio tworzy w folderze głównym projektu. Można zdefiniować dowolne dowolne zadanie w tym pliku, a następnie wywołać je z menu kontekstowego **Eksplorator rozwiązań** . W celu kontynuowania przykładu w ramach programu w zatoce Poniższy fragment kodu przedstawia pełną *tasks.vs.jsw* pliku z jak pojedynczym zadaniem, które wywołuje program *g + +. exe* w celu skompilowania projektu. Załóżmy, że projekt zawiera jeden plik o nazwie *Hello. cpp*.
 
 ```json
 {
@@ -154,9 +155,9 @@ Spowoduje to utworzenie (lub otwarcie) *tasks.vs.js* w pliku w folderze. vs, kt�
 
 ```
 
-Plik JSON zostanie umieszczony w podfolderze *. vs* . Aby wyświetlić ten folder, kliknij przycisk **Pokaż wszystkie pliki** w górnej części **Eksplorator rozwiązań** . To zadanie można uruchomić, klikając prawym przyciskiem myszy węzeł główny w **Eksplorator rozwiązań** i wybierając polecenie **Kompiluj Hello** . Po zakończeniu zadania powinien zostać wyświetlony nowy plik *hello.exe* w **Eksplorator rozwiązań** .
+Plik JSON zostanie umieszczony w podfolderze *. vs* . Aby wyświetlić ten folder, kliknij przycisk **Pokaż wszystkie pliki** w górnej części **Eksplorator rozwiązań**. To zadanie można uruchomić, klikając prawym przyciskiem myszy węzeł główny w **Eksplorator rozwiązań** i wybierając polecenie **Kompiluj Hello**. Po zakończeniu zadania powinien zostać wyświetlony nowy plik *hello.exe* w **Eksplorator rozwiązań**.
 
-Można zdefiniować wiele rodzajów zadań. Poniższy przykład pokazuje *tasks.vs.jsw pliku* , który definiuje pojedyncze zadanie. `taskLabel` definiuje nazwę, która pojawia się w menu kontekstowym. `appliesTo` Określa pliki, na których można wykonać polecenie. `command`Właściwość odwołuje się do zmiennej środowiskowej wywołana, która identyfikuje ścieżkę konsoli programu ( *cmd.exe* w systemie Windows). Można też odwoływać się do zmiennych środowiskowych, które są zadeklarowane w CppProperties.jslub CMakeSettings.jsna. `args`Właściwość określa wiersz polecenia, który ma zostać wywołany. `${file}`Makro pobiera wybrany plik w **Eksplorator rozwiązań** . W poniższym przykładzie zostanie wyświetlona nazwa pliku aktualnie wybranego pliku CPP.
+Można zdefiniować wiele rodzajów zadań. Poniższy przykład pokazuje *tasks.vs.jsw pliku* , który definiuje pojedyncze zadanie. `taskLabel` definiuje nazwę, która pojawia się w menu kontekstowym. `appliesTo` Określa pliki, na których można wykonać polecenie. `command`Właściwość odwołuje się do zmiennej środowiskowej wywołana, która identyfikuje ścieżkę konsoli programu (*cmd.exe* w systemie Windows). Można też odwoływać się do zmiennych środowiskowych, które są zadeklarowane w CppProperties.jslub CMakeSettings.jsna. `args`Właściwość określa wiersz polecenia, który ma zostać wywołany. `${file}`Makro pobiera wybrany plik w **Eksplorator rozwiązań**. W poniższym przykładzie zostanie wyświetlona nazwa pliku aktualnie wybranego pliku CPP.
 
 ```json
 {
@@ -179,7 +180,7 @@ Aby uzyskać więcej informacji, zobacz [Tasks.vs.jsna temat odwołania do schem
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Skonfiguruj parametry debugowania z launch.vs.jsna
 
-Aby dostosować argumenty wiersza polecenia programu i instrukcje debugowania, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** a następnie wybierz pozycję **Ustawienia debugowania i uruchamiania** . Spowoduje to otwarcie istniejącego *launch.vs.jsw* pliku lub, jeśli nie istnieje, spowoduje utworzenie nowego pliku z zestawem minimalnych ustawień uruchamiania. Po pierwsze użytkownik otrzymuje wybór rodzaju sesji debugowania, która ma zostać skonfigurowana. W przypadku debugowania projektu MinGw-W64, wybieramy **uruchomienie C/C++ dla MinGw/Cygwin (GDB)** . Spowoduje to utworzenie konfiguracji uruchamiania na potrzeby używania *gdb.exe* z pewnymi przewidzianymi próbami dotyczącymi wartości domyślnych. Jedną z tych wartości domyślnych jest `MINGW_PREFIX` . Można zastąpić ścieżkę literału (jak pokazano poniżej) lub zdefiniować `MINGW_PREFIX` Właściwość w *CppProperties.jsna* :
+Aby dostosować argumenty wiersza polecenia programu i instrukcje debugowania, kliknij prawym przyciskiem myszy plik wykonywalny w **Eksplorator rozwiązań** a następnie wybierz pozycję **Ustawienia debugowania i uruchamiania**. Spowoduje to otwarcie istniejącego *launch.vs.jsw* pliku lub, jeśli nie istnieje, spowoduje utworzenie nowego pliku z zestawem minimalnych ustawień uruchamiania. Po pierwsze użytkownik otrzymuje wybór rodzaju sesji debugowania, która ma zostać skonfigurowana. W przypadku debugowania projektu MinGw-W64, wybieramy **uruchomienie C/C++ dla MinGw/Cygwin (GDB)**. Spowoduje to utworzenie konfiguracji uruchamiania na potrzeby używania *gdb.exe* z pewnymi przewidzianymi próbami dotyczącymi wartości domyślnych. Jedną z tych wartości domyślnych jest `MINGW_PREFIX` . Można zastąpić ścieżkę literału (jak pokazano poniżej) lub zdefiniować `MINGW_PREFIX` Właściwość w *CppProperties.jsna*:
 
 ```json
 {

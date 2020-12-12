@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: optymalizacje z przewodnikiem'
 title: Optymalizacje sterowane profilem
 ms.date: 04/23/2019
 helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd6a9627de72ef170e88493ef3e2147a0ccc2bc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187328"
 ---
 # <a name="profile-guided-optimizations"></a>Optymalizacje sterowane profilem
 
@@ -19,7 +20,7 @@ Optymalizacja oparta na profilach (PGO) pozwala zoptymalizować cały plik wykon
 Optymalizacje oparte na profilach są dostępne tylko dla natywnych obiektów docelowych x86 i x64. Optymalizacje oparte na profilach nie są dostępne dla plików wykonywalnych, które są uruchamiane w środowisku uruchomieniowym języka wspólnego. Nawet w przypadku tworzenia zestawu z mieszanym kodem natywnym i zarządzanym (przy użyciu opcji kompilatora **/CLR** ) nie można używać optymalizacji profilowanej tylko w kodzie natywnym. Jeśli podjęto próbę skompilowania projektu z tymi opcjami ustawionymi w środowisku IDE, pojawią się błędy kompilacji.
 
 > [!NOTE]
-> Informacje zbierane z przebiegów testów profilowania zastępują optymalizacje, które w przeciwnym razie będą obowiązywać w przypadku określenia **/ob**, **/OS**lub **/OT**. Aby uzyskać więcej informacji, zobacz [/ob (rozszerzenie funkcji wbudowanej)](reference/ob-inline-function-expansion.md) i [/OS,/OT (Preferuj mały kod, Preferuj szybki kod)](reference/os-ot-favor-small-code-favor-fast-code.md).
+> Informacje zbierane z przebiegów testów profilowania zastępują optymalizacje, które w przeciwnym razie będą obowiązywać w przypadku określenia **/ob**, **/OS** lub **/OT**. Aby uzyskać więcej informacji, zobacz [/ob (rozszerzenie funkcji wbudowanej)](reference/ob-inline-function-expansion.md) i [/OS,/OT (Preferuj mały kod, Preferuj szybki kod)](reference/os-ot-favor-small-code-favor-fast-code.md).
 
 ## <a name="steps-to-optimize-your-app"></a>Kroki optymalizacji aplikacji
 
@@ -31,7 +32,7 @@ Aby skorzystać z optymalizacji profilowanej, wykonaj następujące kroki, aby z
 
 - Link przy użyciu [/LTCG](reference/ltcg-link-time-code-generation.md) i [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 
-   Użycie zarówno **/LTCG** , jak i **/GENPROFILE** lub **/FASTGENPROFILE** tworzy `.pgd` plik, gdy aplikacja Instrumentacja jest uruchamiana. Po dodaniu danych do pliku Test-Run `.pgd` może być używany jako dane wejściowe do następnego kroku linku (Tworzenie zoptymalizowanego obrazu). Podczas określania **/GENPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Kombinacja opcji **/LTCG** i **/GENPROFILE** lub **/FASTGENPROFILE** konsolidatora zastępuje przestarzałą opcję konsolidatora **/LTCG: PGINSTRUMENT** .
+   Użycie zarówno **/LTCG** , jak i **/GENPROFILE** lub **/FASTGENPROFILE** tworzy `.pgd` plik, gdy aplikacja Instrumentacja jest uruchamiana. Po dodaniu danych do pliku Test-Run `.pgd` może być używany jako dane wejściowe do następnego kroku linku (Tworzenie zoptymalizowanego obrazu). Podczas określania **/GENPROFILE** można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Kombinacja opcji **/LTCG** i **/GENPROFILE** lub **/FASTGENPROFILE** konsolidatora zastępuje przestarzałą opcję konsolidatora **/LTCG: PGINSTRUMENT** .
 
 - Wykonaj profilowanie aplikacji.
 
@@ -45,7 +46,7 @@ Aby skorzystać z optymalizacji profilowanej, wykonaj następujące kroki, aby z
 
 - Link przy użyciu **/LTCG** i **/USEPROFILE**.
 
-   Użyj opcji konsolidatora **/LTCG** i [/USEPROFILE](reference/useprofile.md) w celu utworzenia zoptymalizowanego obrazu. Ten krok przyjmuje jako plik wejściowy `.pgd` . Po określeniu **/USEPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Można również określić tę nazwę przy użyciu przestarzałej opcji konsolidatora **/PGD** . Kombinacja **/LTCG** i **/USEPROFILE** zastępuje przestarzałe Opcje konsolidatora **/LTCG: PGOPTIMIZE** i **/LTCG: PGUPDATE** .
+   Użyj opcji konsolidatora **/LTCG** i [/USEPROFILE](reference/useprofile.md) w celu utworzenia zoptymalizowanego obrazu. Ten krok przyjmuje jako plik wejściowy `.pgd` . Po określeniu **/USEPROFILE** można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Można również określić tę nazwę przy użyciu przestarzałej opcji konsolidatora **/PGD** . Kombinacja **/LTCG** i **/USEPROFILE** zastępuje przestarzałe Opcje konsolidatora **/LTCG: PGOPTIMIZE** i **/LTCG: PGUPDATE** .
 
 Można nawet utworzyć zoptymalizowany plik wykonywalny i później określić, że dodatkowe profilowanie byłoby przydatne do tworzenia bardziej zoptymalizowanego obrazu. Jeśli obraz z instrumentacją i jego `.pgd` plik są dostępne, można wykonać dodatkowe przebiegi testowe i skompilować zoptymalizowany obraz przy użyciu nowszego `.pgd` pliku, używając tych samych opcji konsolidatora **/LTCG** i **/USEPROFILE** .
 
@@ -95,6 +96,6 @@ Narzędzie wiersza polecenia, które dodaje dane profilu z jednego lub więcej `
 [Instrukcje: Scalanie wielu profilów PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
 Przykłady użycia **pgomgr** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodatkowe narzędzia kompilacji kompilatora MSVC](reference/c-cpp-build-tools.md)

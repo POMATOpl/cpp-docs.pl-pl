@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: Strona właściwości zaawansowanych'
 title: Zaawansowana Strona właściwości (projekt)
 ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 3b1e45f984cd40d6ea42ead25b045fc8688ad0a7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 916c1f341d148a0f6b426ddf3c31e0d20c59a29c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187315"
 ---
 # <a name="advanced-property-page"></a>Zaawansowana Strona właściwości
 

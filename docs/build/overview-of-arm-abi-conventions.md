@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Omówienie Konwencji ABI ARM32'
 title: Omówienie Konwencji ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de82fc6c3da085c3840af0ad48694c7472d687c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187406"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Omówienie Konwencji ABI ARM32
 
@@ -221,7 +222,7 @@ Procesory ARM z systemem Windows są wymagane do obsługi licznika cykl, ale uż
 
 Licznik jest prawdziwym licznikiem cyklu, a nie zegarem; w związku z tym częstotliwość zliczania zależy od częstotliwości procesora. Jeśli chcesz zmierzyć czas, który upłynął, użyj `QueryPerformanceCounter` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typowe problemy przy migracji Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
 [Obsługa wyjątków ARM](arm-exception-handling.md)

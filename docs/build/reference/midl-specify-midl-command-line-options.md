@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/MIDL (Określ opcje wiersza polecenia MIDL)
 title: /MIDL (Określ opcje wiersza polecenia MIDL)
 ms.date: 09/05/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 3f1b6526f51e5aaa48008792361d3e63249d9f16
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7c3a095e687ebe58db25cc8313569df3ee3a5886
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190643"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Określ opcje wiersza polecenia MIDL)
 
@@ -24,7 +25,7 @@ Określa plik odpowiedzi dla opcji wiersza polecenia MIDL
 
 ## <a name="syntax"></a>Składnia
 
-> **/MIDL: \@ ** <em>plik</em>
+> **/MIDL: \@** <em>plik</em>
 
 ## <a name="arguments"></a>Argumenty
 

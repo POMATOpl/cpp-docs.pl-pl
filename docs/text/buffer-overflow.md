@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: przepełnienie buforu'
 title: Przepełnienie buforu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 71877ed770384190cb7f856567d9e7e845e3da19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17da102b9a48a34d9879c08f0470ced3852ed0ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187601"
 ---
 # <a name="buffer-overflow"></a>Przepełnienie buforu
 
@@ -53,6 +54,6 @@ Ten kod sprawdza możliwy przepełnienie buforu w teście pętli, przy użyciu `
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wskazówki dotyczące programowania MBCS](../text/mbcs-programming-tips.md)

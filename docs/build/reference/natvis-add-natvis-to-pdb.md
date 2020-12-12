@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/NATVIS (Dodaj plik Natvis do pliku PDB)
 title: /NATVIS (Dodaj Natvis do PDB)
 ms.date: 08/10/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: a16e320a2f8f946912fef6a354f27f6514a67e29
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7703915591a59a558c8580dd64b9be22d281d784
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190526"
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/NATVIS (Dodaj Natvis do PDB)
 
@@ -33,7 +34,7 @@ LINK ignoruje/NATVIS, gdy plik PDB nie jest tworzony przy użyciu opcji [/Debug]
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz stronę właściwości **wiersza polecenia** w folderze **konsolidatora** .
 
@@ -46,4 +47,4 @@ LINK ignoruje/NATVIS, gdy plik PDB nie jest tworzony przy użyciu opcji [/Debug]
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyrażenia z operatorami jednoargumentowymi'
 title: Wyrażenia z operatorami jednoargumentowymi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-ms.openlocfilehash: 032ebd99041de9308d16710b2a27e0db3cddd4df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6714727d0a4b2c386c37550151df21062534376e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233759"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186509"
 ---
 # <a name="expressions-with-unary-operators"></a>Wyrażenia z operatorami jednoargumentowymi
 
@@ -35,15 +36,15 @@ Operatory jednoargumentowe działają tylko dla jednego operandu w wyrażeniu. O
 
 - [Operator rzutowania ()](../cpp/cast-operator-parens.md)
 
-- [`sizeof`zakład](../cpp/sizeof-operator.md)
+- [`sizeof` zakład](../cpp/sizeof-operator.md)
 
-- [`__uuidof`zakład](../cpp/uuidof-operator.md)
+- [`__uuidof` zakład](../cpp/uuidof-operator.md)
 
-- [`alignof`zakład](../cpp/alignof-operator.md)
+- [`alignof` zakład](../cpp/alignof-operator.md)
 
-- [`new`zakład](../cpp/new-operator-cpp.md)
+- [`new` zakład](../cpp/new-operator-cpp.md)
 
-- [`delete`zakład](../cpp/delete-operator-cpp.md)
+- [`delete` zakład](../cpp/delete-operator-cpp.md)
 
 Te operatory mają łączność od prawej do lewej. Wyrażenia jednoargumentowe zwykle obejmują składnię, która poprzedza wyrażenie przyrostkowe lub podstawowe.
 
@@ -77,6 +78,6 @@ Każde *wyrażenie przyrostkowe* jest uznawane za *wyrażenie jednoargumentowe*,
 
 *Wyrażenie alokacji* odwołuje się do **`new`** operatora. *Cofnięcie alokacji — wyrażenie* odwołuje się do **`delete`** operatora. Aby uzyskać więcej informacji, zobacz linki we wcześniejszej części tego tematu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy wyrażeń](../cpp/types-of-expressions.md)

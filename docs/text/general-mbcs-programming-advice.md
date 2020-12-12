@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: ogólne porady dotyczące programowania MBCS'
 title: Ogólne porady dotyczące programowania MBSC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 887387220105614eb3257f008ec601a6fc0adc18
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9ed4fcd4909b643e2c233482a420e82d01125efa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187536"
 ---
 # <a name="general-mbcs-programming-advice"></a>Ogólne porady dotyczące programowania MBSC
 
 Skorzystaj z następujących wskazówek:
 
-- Aby zapewnić elastyczność, użyj makr w czasie wykonywania, `_tcschr` takich `_tcscpy` jak i, jeśli to możliwe. Aby uzyskać więcej informacji, zobacz [Mapowanie tekstu ogólnego w używanie TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).
+- Aby zapewnić elastyczność, użyj makr w czasie wykonywania, takich jak `_tcschr` i, `_tcscpy` Jeśli to możliwe. Aby uzyskać więcej informacji, zobacz [Mapowanie tekstu ogólnego w używanie TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).
 
-- Użyj funkcji C Run-Time `_getmbcp` , aby uzyskać informacje o bieżącej stronie kodowej.
+- Użyj funkcji C Run-Time, `_getmbcp` Aby uzyskać informacje o bieżącej stronie kodowej.
 
 - Nie używaj ponownie zasobów ciągu. W zależności od języka docelowego dany ciąg może mieć inne znaczenie podczas tłumaczenia. Na przykład "plik" w menu głównym aplikacji może być w różny sposób przetłumaczony od ciągu "plik" w oknie dialogowym. Jeśli musisz użyć więcej niż jednego ciągu o tej samej nazwie, użyj innych identyfikatorów ciągów dla każdej z nich.
 
@@ -34,7 +35,7 @@ Skorzystaj z następujących wskazówek:
 
 - Podczas projektowania aplikacji Zdecyduj, które ciągi mogą być lokalizowane. W razie wątpliwości należy założyć, że każdy określony ciąg zostanie zlokalizowany. W związku z tym nie należy mieszać ciągów, które mogą być lokalizowane za pomocą tych, które nie mogą.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)<br/>
-[Inkrementacja i dekrementacja wskaźników](../text/incrementing-and-decrementing-pointers.md)
+[Wskazówki dotyczące programowania MBCS](../text/mbcs-programming-tips.md)<br/>
+[Zwiększanie i zmniejszanie wskaźników](../text/incrementing-and-decrementing-pointers.md)

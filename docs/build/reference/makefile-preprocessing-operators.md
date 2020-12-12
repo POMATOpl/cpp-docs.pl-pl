@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: operatory przetwarzania wstępnego pliku reguł programu make'
 title: Operatory przetwarzania wstępnego pliku reguł programu Make
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -9,65 +10,65 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-ms.openlocfilehash: 212f39ee62008b391977aaa91d5c8c4fadfd9730
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7cf68511eec26a9049a4b44f62126a28ddbf0282
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190786"
 ---
 # <a name="makefile-preprocessing-operators"></a>Operatory przetwarzania wstępnego pliku reguł programu Make
 
-Wyrażenia przetwarzania wstępnego Makefile mogą używać operatorów, które działają na wartości stałe, kody zakończenia z poleceń, ciągów, makr i ścieżek systemu plików. Aby ocenić wyrażenie, preprocesor najpierw rozszerza makra, a następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są oceniane w kolejności jawnego grupowania w nawiasach, a następnie w kolejności pierwszeństwa operatora. Wynik jest wartością stałą.
+Wyrażenia przetwarzania wstępnego pliku reguł programu make mogą używać operatorów, które działają na wartościach stałych, kody wyjścia z poleceń, ciągów, makr i ścieżek systemu plików. Aby oszacować wyrażenie, preprocesor najpierw rozszerza makra, a następnie wykonuje polecenia, a następnie wykonuje operacje. Operacje są oceniane w kolejności jawnej grupowania w nawiasach, a następnie w kolejności pierwszeństwa operatorów. Wynik jest wartością stałą.
 
-Operator **DEFINED** jest operatorem logicznym, który działa na nazwę makra. Wyrażenie **DEFINED(**_macroname_**)** jest prawdziwe, jeśli *makroskładnik* jest zdefiniowany, nawet jeśli nie ma przypisanej wartości. **ZDEFINIOWANE** w połączeniu z **! JEŻELI** lub **! ELSE IF** jest odpowiednikiem **! IFDEF** lub **! ELSE IFDEF**. Jednak w przeciwieństwie do tych **dyrektyw, DEFINED** może być używany w wyrażeniach złożonych.
+**Zdefiniowany** operator jest operatorem logicznym, który działa w nazwie makra. Wyrażenie **zdefiniowane (**_Macroname_**)** ma wartość true, jeśli określono wartość *Macroname* , nawet jeśli nie ma przypisanej wartości. **Zdefiniowane** w połączeniu z **! IF** lub **! ELSE IF** jest równoważne **! IFDEF** lub **! ELSE IFDEF**. Jednak w przeciwieństwie do tych dyrektyw, **zdefiniowane** można używać w wyrażeniach złożonych.
 
-Exist **EXIST** Operator jest operator logiczny, który działa na ścieżce systemu plików. **EXIST(**_path_**)** jest true, jeśli *ścieżka* istnieje. Wynik z **EXIST** może służyć w wyrażeniach binarnych. Jeśli *ścieżka* zawiera spacje, należy ją ująć w cudzysłów podwójnych.
+Operator **exist** jest operatorem logicznym, który działa na ścieżce systemu plików. **Istnieje (**_ścieżka_**)** ma wartość true, jeśli *ścieżka* istnieje. Wynik z **istnieje** może być używany w wyrażeniach binarnych. Jeśli *ścieżka* zawiera spacje, ujmij ją w znaki podwójnego cudzysłowu.
 
-Aby porównać dwa ciągi,**==** użyj operatora równości ( ) lub operatora nierówności (**!=**). Ciągi należy ująć w cudzysłów podwójnych.
+Aby porównać dwa ciągi, użyj operatora równości ( **==** ) lub operatora nierówności (**! =**). Ciągi ujęte w znaki podwójnego cudzysłowu.
 
-Stałe całkowite mogą używać operatorów jedno- dla negacji numerycznej**-**(**~**), dopełnienia ( ) i logicznego negacji (**!**).
+Stałe całkowite mogą używać jednoargumentowych operatorów dla liczbowych negacji ( **-** ), jednego uzupełnienia ( **~** ) i logicznego negacji (**!**).
 
-Wyrażenia można użyć następujących operatorów. Operatory o równym priorytecie są zgrupowane razem, a grupy są wyświetlane w malejącej kolejności pierwszeństwa. Operatory niewymierne kojarzą się z operandem po prawej stronie. Operatory binarne o równym priorytecie kojarzą operandy od lewej do prawej.
+Wyrażenia mogą używać następujących operatorów. Operatory równego pierwszeństwa są grupowane razem, a grupy są wyświetlane w kolejności malejącej pierwszeństwa. Operatory jednoargumentowe są kojarzone z argumentem operacji po prawej stronie. Operatory binarne o równych priorytetach kojarzą operandy od lewej do prawej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|**ZDEFINIOWANE(** *macroname* **)**|Tworzy wartość logiczną dla bieżącego stanu definicji *macroname*.|
-|**EXIST(** *ścieżka* **)**|Tworzy wartość logiczną dla istnienia pliku w *ścieżce*.|
+|**Zdefiniowane (** *Macroname* **)**|Tworzy wartość logiczną dla bieżącego stanu definicji *Macroname*.|
+|**Istnieje (** *ścieżka* **)**|Tworzy wartość logiczną dla istnienia pliku w *ścieżce*.|
 |||
-|**!**|Jednomyślne logiczne NIE.|
-|**~**|Jednoary jest uzupełnieniem.|
-|**-**|Negacja jednoznaczna.|
+|**!**|Logiczne jednoargumentowe NOT.|
+|**~**|Jednoargumentowy uzupełnienie jednego.|
+|**-**|Jednoargumentowa Negacja.|
 |||
-|**&#42;**|Mnożenie.|
-|**/**|Dywizji.|
+|**&#42;**|Mnożenia.|
+|**/**|Przegrod.|
 |**%**|Moduł (reszta).|
 |||
-|**+**|Dodatek.|
+|**+**|Dodatkowo.|
 |**-**|Odejmowania.|
 |||
-|**\<\<**|Bitowe przesunięcie w lewo.|
-|**>>**|Bitowe przesunięcie w prawo.|
+|**\<\<**|Przesunięcie bitowe w lewo.|
+|**>>**|Przesunięcie bitowe w prawo.|
 |||
-|**\<=**|Mniej niż lub równe.|
-|**>=**|Większa lub równa.|
-|**\<**|Mniej niż.|
-|**>**|Większa niż.|
+|**\<=**|Mniejsze niż lub równe.|
+|**>=**|Większe niż lub równe.|
+|**\<**|Mniejsze niż.|
+|**>**|Większe niż.|
 |||
-|**==**|Równości.|
+|**==**|Kryteri.|
 |**!=**|Nierówności.|
 |||
-|**&**|Bitowe I.|
-|**^**|Bitowy XOR.|
-|**&#124;**|Bitowy LUB.|
+|**&**|Bitowe i.|
+|**^**|Bitowe XOR.|
+|**&#124;**|Bitowe lub.|
 |||
-|**&&**|Logiczne I.|
+|**&&**|Koniunkcja logiczna i.|
 |||
-|**&#124;&#124;**|Logiczne LUB.|
+|**&#124;&#124;**|Logiczne OR.|
 
 > [!NOTE]
-> Operator bitowy XOR**^**( ) jest taki sam jak znak **^^** ucieczki i musi być zmieniony (jako) podczas użycia w wyrażeniu.
+> Bitowy operator XOR ( **^** ) jest taki sam jak znak ucieczki i musi być zmieniony (AS **^^** ), gdy jest używany w wyrażeniu.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make](expressions-in-makefile-preprocessing.md)
+- [Wyrażenia w procesie przetwarzania wstępnego pliku reguł programu make](expressions-in-makefile-preprocessing.md)

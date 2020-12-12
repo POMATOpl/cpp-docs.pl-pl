@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: rozszerzenia Microsoft do C i C++'
 title: Rozszerzenia Microsoft do C i C++
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fac6edbdfd559f3cebd18dcdc3b8cfca2a9336dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190695"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Rozszerzenia Microsoft do C i C++
 
@@ -57,7 +58,7 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-W obszarze **/ze**Definicja poza klasą jest opcjonalna dla elementów członkowskich danych static, const integer i const. Tylko elementy całkowitoliczbowe i wyliczenia, które są statyczne i stałe, mogą mieć inicjatory w klasach. Wyrażenie inicjujące musi być wyrażeniem stałym.
+W obszarze **/ze** Definicja poza klasą jest opcjonalna dla elementów członkowskich danych static, const integer i const. Tylko elementy całkowitoliczbowe i wyliczenia, które są statyczne i stałe, mogą mieć inicjatory w klasach. Wyrażenie inicjujące musi być wyrażeniem stałym.
 
 Aby uniknąć błędów w przypadku podanej definicji poza klasą w pliku nagłówkowym, a plik nagłówkowy jest uwzględniany w wielu plikach źródłowych, użyj [selectany](../../cpp/selectany.md). Na przykład:
 
@@ -260,7 +261,7 @@ void func ()
 
 ## <a name="iso646h-not-enabled"></a>Iso646. H nie włączona
 
-W obszarze **/ze**należy uwzględnić iso646. h, jeśli chcesz używać form tekstowych następujących operatorów:
+W obszarze **/ze** należy uwzględnić iso646. h, jeśli chcesz używać form tekstowych następujących operatorów:
 
 - && (i)
 
@@ -298,8 +299,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [/Za,/ze (Wyłącz rozszerzenia językowe)](za-ze-disable-language-extensions.md)
 - [Opcje kompilatora MSVC](compiler-options.md)
-- [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+- [Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/MANIFEST (Tworzenie manifestu zestawu równoczesnego)
 title: /MANIFEST (Tworzenie manifestu dla aplikacji wykonywanych jednocześnie)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: ea58b43accdd854665fad3b70d7aecbc9eaa0f9e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab5dd0c0ae04a6ac5377c1c9ee0015f8c64ad54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190708"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Tworzenie manifestu dla aplikacji wykonywanych jednocześnie)
 
@@ -27,7 +28,7 @@ ms.locfileid: "69492779"
 
 Wartość domyślna to/MANIFEST.
 
-Opcja/MANIFEST: EMBED określa, że konsolidator powinien osadzić plik manifestu w obrazie jako zasób typu RT_MANIFEST. Opcjonalny `ID` parametr jest identyfikatorem zasobu, który ma być używany dla manifestu. Użyj wartości 1 dla pliku wykonywalnego. Użyj wartości 2 dla biblioteki DLL, aby umożliwić jej Określanie zależności prywatnych. `ID` Jeśli parametr nie jest określony, wartość domyślna to 2, jeśli ustawiona jest opcja/dll; w przeciwnym razie wartość domyślna to 1.
+Opcja/MANIFEST: EMBED określa, że konsolidator powinien osadzić plik manifestu w obrazie jako zasób typu RT_MANIFEST. Opcjonalny `ID` parametr jest identyfikatorem zasobu, który ma być używany dla manifestu. Użyj wartości 1 dla pliku wykonywalnego. Użyj wartości 2 dla biblioteki DLL, aby umożliwić jej Określanie zależności prywatnych. Jeśli `ID` parametr nie jest określony, wartość domyślna to 2, jeśli ustawiona jest opcja/dll; w przeciwnym razie wartość domyślna to 1.
 
 Począwszy od programu Visual Studio 2008 pliki manifestu dla plików wykonywalnych zawierają sekcję, która określa informacje o kontroli konta użytkownika (UAC). Jeśli określisz/MANIFEST, ale nie określisz ani [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) ani [/dll](dll-build-a-dll.md), domyślny fragment UAC, który ma ustawiony na *jako źródło* poziom kontroli konta użytkownika, zostanie wstawiony do manifestu. Aby uzyskać więcej informacji na temat poziomów kontroli konta użytkownika, zobacz [/MANIFESTUAC (osadza informacje kontroli konta użytkownika w manifeście)](manifestuac-embeds-uac-information-in-manifest.md).
 
@@ -39,11 +40,11 @@ Aby zmienić domyślne zachowanie funkcji Kontrola konta użytkownika, wykonaj j
 
 Jeśli nie określisz/MANIFEST, ale nie określisz komentarzy [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) , tworzony jest plik manifestu. Plik manifestu nie jest tworzony w przypadku określenia/MANIFEST: NO.
 
-Jeśli określisz/MANIFEST, nazwa pliku manifestu jest taka sama jak nazwa pliku wyjściowego, ale z. manifest dołączany do nazwy pliku. Na przykład, jeśli nazwa pliku wyjściowego to plik. exe, nazwa pliku manifestu to plik. exe. manifest.  W przypadku określenia/MANIFESTFILE:*name*Nazwa manifestu jest określana w polu *Nazwa*.
+Jeśli określisz/MANIFEST, nazwa pliku manifestu jest taka sama jak nazwa pliku wyjściowego, ale z. manifest dołączany do nazwy pliku. Na przykład jeśli nazwa pliku wyjściowego jest MyFile.exe, nazwa pliku manifestu to MyFile.exe. manifest.  W przypadku określenia/MANIFESTFILE:*name* Nazwa manifestu jest określana w polu *Nazwa*.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń węzeł **Właściwości konfiguracji** .
 
@@ -55,9 +56,9 @@ Jeśli określisz/MANIFEST, nazwa pliku manifestu jest taka sama jak nazwa pliku
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

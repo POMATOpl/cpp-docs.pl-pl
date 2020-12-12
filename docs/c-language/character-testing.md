@@ -1,17 +1,18 @@
 ---
+description: 'Dowiedz się więcej o programie: testowanie znaków'
 title: Testowanie znaków
 ms.date: 11/04/2016
 ms.assetid: 376ba061-bae3-427e-9569-33fa5949a199
-ms.openlocfilehash: b02d07ca2796e5088c3021f1ae8795ea92761943
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: b7d73bce671787622814e11d8f3add7a1092572a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190539"
 ---
 # <a name="character-testing"></a>Testowanie znaków
 
-**ANSI 4.3.1** Zestawy `isalnum`znaków testowane przez, `isalpha`, `iscntrl` `islower` `isprint`,,, i funkcje `isupper`
+**ANSI 4.3.1** Zestawy znaków testowane przez,,,, `isalnum` , `isalpha` `iscntrl` `islower` `isprint` i `isupper` funkcje
 
 Na poniższej liście opisano te funkcje, które są implementowane przez kompilator języka Microsoft C.
 
@@ -26,4 +27,4 @@ Na poniższej liście opisano te funkcje, które są implementowane przez kompil
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcje bibliotek](../c-language/library-functions.md)
+[Funkcje biblioteki](../c-language/library-functions.md)

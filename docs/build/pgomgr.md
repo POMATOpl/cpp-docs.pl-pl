@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: pgomgr'
 title: pgomgr
 ms.date: 03/14/2018
 helpviewer_keywords:
 - pgomgr program
 - profile-guided optimizations, pgomgr
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
-ms.openlocfilehash: 4e3eb08c88db9d0ed4e47649014a600c3e0ccb78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b6b969becde43b98ea06f2058dd235eaf0acbed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187354"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -23,7 +24,7 @@ Dodaje dane profilu z jednego lub więcej plików. PGC do pliku. pgd.
 ### <a name="parameters"></a>Parametry
 
 *Opcje*<br/>
-Do **pgomgr**można określić następujące opcje:
+Do **pgomgr** można określić następujące opcje:
 
 - **/help** lub **/?** Wyświetla dostępne opcje **pgomgr** .
 
@@ -35,7 +36,7 @@ Do **pgomgr**można określić następujące opcje:
 
 - **/Unique** Gdy jest używany z **/Summary**, powoduje wyświetlenie nazw funkcji dekoracyjnych. Wartość domyślna, gdy **/Unique** nie jest używana, jest przeznaczony do wyświetlania niedekoracyjnych nazw funkcji.
 
-- **/Merge**\[**:**<em>n</em>] powoduje dodanie danych z pliku. PGC lub plików do pliku. pgd. Opcjonalny parametr *n*, umożliwia określenie, że dane powinny być dodawane *n* razy. Na przykład, jeśli scenariusz będzie często wykonywany sześć razy, aby odzwierciedlić, jak często jest wykonywane przez klientów, można wykonać tę czynność jeden raz w przebiegu testowym i dodać go do pliku. PGD sześć razy z **pgomgr/MERGE: 6**.
+- **/merge** \[ **:**<em>n</em>] powoduje, że dane z pliku. PGC lub plików zostaną dodane do pliku. pgd. Opcjonalny parametr *n*, umożliwia określenie, że dane powinny być dodawane *n* razy. Na przykład, jeśli scenariusz będzie często wykonywany sześć razy, aby odzwierciedlić, jak często jest wykonywane przez klientów, można wykonać tę czynność jeden raz w przebiegu testowym i dodać go do pliku. PGD sześć razy z **pgomgr/MERGE: 6**.
 
 *pgcfiles*<br/>
 Jeden lub więcej plików. PGC, których dane profilowe mają zostać scalone w pliku. pgd. Można określić pojedynczy plik PGC lub wiele plików. pgc. Jeśli nie określisz żadnych plików PGC, **pgomgr** scala wszystkie pliki. PGC, których nazwy plików są takie same jak plik. pgd.
@@ -64,6 +65,6 @@ W tym przykładzie dane profilowe wszystkich plików MojaApl #. pgc są dodawane
 
 ## <a name="see-also"></a>Zobacz też
 
-[Optymalizacje sterowane profilem](profile-guided-optimizations.md)<br/>
+[Optymalizacje profilowane](profile-guided-optimizations.md)<br/>
 [PgoAutoSweep](pgoautosweep.md)<br/>
 [pgosweep](pgosweep.md)<br/>
