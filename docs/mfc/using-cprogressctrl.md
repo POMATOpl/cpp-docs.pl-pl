@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z korzystanie CProgressCtrl'
 title: Korzystanie z CProgressCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - progress controls [MFC], CProgressCtrl
 - progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
-ms.openlocfilehash: a575a766650a77b0908f0fa3016139239b23dc56
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 652349a62d62652db32fbe002cdc714ac7ca1420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441901"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271632"
 ---
 # <a name="using-cprogressctrl"></a>Korzystanie z CProgressCtrl
 
@@ -28,8 +29,8 @@ Po pierwszym utworzeniu kontrolki postępu należy określić jej rozmiar i poł
 
 - [Ustawienia kontrolki postępu](../mfc/settings-for-the-progress-control.md)
 
-- [Operowanie kontrolką postępu](../mfc/manipulating-the-progress-control.md)
+- [Manipulowanie formantem postępu](../mfc/manipulating-the-progress-control.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

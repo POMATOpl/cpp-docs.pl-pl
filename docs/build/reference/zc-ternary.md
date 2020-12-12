@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: `/Zc:ternary` (Wymuś reguły operatora warunkowego)'
 title: /Zc:ternary (Wymuszenie reguł operatora warunkowego)
 ms.date: 09/12/2019
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 04bd0c49528d86ddd4d1e6c77804cf64278db188
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea1cf57aa1633e08095dfd01964a2255cb0b3c70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271320"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary`(Wymuszaj reguły operatora warunkowego)
+# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary` (Wymuszaj reguły operatora warunkowego)
 
 Włącz wymuszanie standardowych reguł języka C++ dla kwalifikacji typów i const lub volatile (CV) dla drugiego i trzeciego operandu w wyrażeniu operatora warunkowego.
 
@@ -155,10 +156,10 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **`/Zc:ternary`** lub **`/Zc:ternary-`** , a następnie wybierz przycisk **OK**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[`/Zc`Zgodności](zc-conformance.md)
+[`/Zc` Zgodności](zc-conformance.md)

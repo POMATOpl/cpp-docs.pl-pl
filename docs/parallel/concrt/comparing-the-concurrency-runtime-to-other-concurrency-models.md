@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej o tym, jak porównać środowisko uruchomieniowe współbieżności z innymi modelami współbieżności
 title: Porównywanie współbieżności środowiska wykonawczego z innymi modelami współbieżności
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 3259d24d4eb3d5b4af9731b97c343d4dd01ea6e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271482"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porównywanie współbieżności środowiska wykonawczego z innymi modelami współbieżności
 

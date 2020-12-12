@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny NMAKE U1033'
 title: Błąd krytyczny NMAKE U1033
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e616e98a21c92137fab4b167318a9305a2175bb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272139"
 ---
 # <a name="nmake-fatal-error-u1033"></a>Błąd krytyczny NMAKE U1033
 
@@ -21,19 +22,19 @@ Ciąg nie jest częścią prawidłowej składni pliku reguł programu make.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 
-1. Jeśli końcowy zestaw nawiasów ostrych ( **<<** ) dla pliku wbudowanego nie znajduje się na początku wiersza, wystąpi następujący błąd:
+1. Jeśli zestaw końcowy nawiasów ostrych ( **<<** ) dla pliku wbudowanego nie znajduje się na początku wiersza, wystąpi następujący błąd:
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. Jeśli definicja makra w pliku reguł programu make zawierała znak równości ( **=** ) bez wcześniejszej nazwy lub jeśli zdefiniowana nazwa jest makrem, który rozwija się do Nothing, wystąpi następujący błąd:
+1. Jeśli definicja makra w pliku reguł programu make zawiera znak równości ( **=** ) bez powyższej nazwy lub jeśli zdefiniowana nazwa jest makrem, które rozwijają się do niczego, wystąpi następujący błąd:
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. Jeśli średnik ( **;** ) w wierszu komentarza w narzędziach. INI nie znajduje się na początku wiersza, wystąpi następujący błąd:
+1. Jeśli średnik (**;**) w wierszu komentarza w TOOLS.INI nie znajduje się na początku wiersza, wystąpi następujący błąd:
 
     ```
     syntax error : ';' unexpected

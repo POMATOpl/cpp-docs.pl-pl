@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z CStatusBarCtrl'
 title: Korzystanie z CStatusBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: ee691d013d578f4c16fa9eadabd05f8710f32d8e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29eed7f32355c838ce605132a77009d9db595aa2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442334"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271541"
 ---
 # <a name="using-cstatusbarctrl"></a>Korzystanie z CStatusBarCtrl
 
@@ -20,9 +21,9 @@ Za pomocą kontrolki pasek stanu ([CStatusBarCtrl](../mfc/reference/cstatusbarct
 
 - [Metody tworzenia paska stanu](../mfc/methods-of-creating-a-status-bar.md)
 
-- [Ustawienia CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)
+- [Ustawienia formantu CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)
 
-- [Używanie kontrolki CStatusBarCtrl do tworzenia obiektu CStatusBarCtrl](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)
+- [Tworzenie obiektu CStatusBarCtrl za pomocą CStatusBarCtrl](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)
 
 - [Ustawianie trybu obiektu CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)
 
@@ -32,4 +33,4 @@ Za pomocą kontrolki pasek stanu ([CStatusBarCtrl](../mfc/reference/cstatusbarct
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

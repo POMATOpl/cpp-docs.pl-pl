@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX'
 title: 'Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 4b7bc78a2937c010a4d2f1fb000ae0fe8ca2416c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 451061467b87df82b8bca141684ea70f222edcac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271879"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX
 
@@ -32,7 +33,7 @@ Za pomocą przycisku zdarzenia w oknie **Właściwości** (w **Widok klasy**) mo
 
 Aby uzyskać więcej informacji na temat map ujścia zdarzeń, zobacz [mapy ujścia zdarzeń](reference/event-sink-maps.md) w *dokumentacji biblioteki klas*.
 
-## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a>Modyfikacje programu obsługi zdarzeń w projekcie
+## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a> Modyfikacje programu obsługi zdarzeń w projekcie
 
 W przypadku dodawania obsługi zdarzeń przy użyciu okna **Właściwości** , Mapa ujścia zdarzeń jest zadeklarowana i zdefiniowana w projekcie. Następujące instrukcje są dodawane do kontrolki. Plik CPP podczas pierwszego dodawania programu obsługi zdarzeń. Ten kod deklaruje mapę ujścia zdarzeń dla klasy okna dialogowego (w tym przypadku `CContainerDlg` ):
 
@@ -63,7 +64,7 @@ Aby uzyskać więcej informacji na temat makr ujścia zdarzeń, zobacz [mapy uj�
 
 1. Wybierz zdarzenie, które ma być obsługiwane przez klasę okna dialogowego. Na potrzeby tego przykładu wybierz **pozycję kliknij**.
 
-1. W polu listy rozwijanej po prawej stronie wybierz pozycję ** \<Add> ClickCircctrl1**.
+1. W polu listy rozwijanej po prawej stronie wybierz pozycję **\<Add> ClickCircctrl1**.
 
 1. Kliknij dwukrotnie nową funkcję obsługi w Widok klasy, aby przejść do kodu programu obsługi zdarzeń w implementacji (. CPP) pliku `CContainerDlg` .
 

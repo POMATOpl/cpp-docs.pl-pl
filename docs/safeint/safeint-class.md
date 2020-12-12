@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa SafeInt'
 title: SafeInt — Klasa
 ms.date: 10/22/2018
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b5ee9147347f2c01ff05fd93b8b22ea3ce30ee37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271333"
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 
@@ -170,7 +171,7 @@ podczas Parametr wejściowy, który reprezentuje wartość po prawej stronie ope
 
 ## <a name="remarks"></a>Uwagi
 
-`SafeInt`Klasa chroni przed przepełnieniem liczby całkowitej w operacjach matematycznych. Na przykład rozważ dodanie dwóch 8-bitowych liczb całkowitych: jeden ma wartość 200, a drugi ma wartość 100. Poprawną operacją matematyczną byłaby 200 + 100 = 300. Jednak ze względu na 8-bitowy limit liczby całkowitej, górny bit zostanie utracony, a kompilator zwróci 44 (300-2<sup>8</sup>) jako wynik. Wszelkie operacje, które są zależne od tego równania matematycznego, spowodują wygenerowanie nieoczekiwanego zachowania.
+`SafeInt`Klasa chroni przed przepełnieniem liczby całkowitej w operacjach matematycznych. Na przykład rozważ dodanie 2 8-bitowych liczb całkowitych: jeden ma wartość 200, a drugi ma wartość 100. Poprawną operacją matematyczną byłaby 200 + 100 = 300. Jednak ze względu na 8-bitowy limit liczby całkowitej, górny bit zostanie utracony, a kompilator zwróci 44 (300-2<sup>8</sup>) jako wynik. Wszelkie operacje, które są zależne od tego równania matematycznego, spowodują wygenerowanie nieoczekiwanego zachowania.
 
 `SafeInt`Klasa sprawdza, czy występuje przepełnienie arytmetyczne, czy kod próbuje podzielić przez zero. W obu przypadkach Klasa wywołuje procedurę obsługi błędów, aby ostrzec program o potencjalnym problemie.
 
@@ -287,7 +288,7 @@ podczas A `SafeInt` typu U. Nowy `SafeInt` obiekt będzie mieć taką samą wart
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr wejściowy dla konstruktora, *i* lub *u*musi być typu Boolean, Character lub Integer. Jeśli jest to inny typ parametru, `SafeInt` Klasa wywołuje [static_assert](../cpp/static-assert.md) , aby wskazać nieprawidłowy parametr wejściowy.
+Parametr wejściowy dla konstruktora, *i* lub *u* musi być typu Boolean, Character lub Integer. Jeśli jest to inny typ parametru, `SafeInt` Klasa wywołuje [static_assert](../cpp/static-assert.md) , aby wskazać nieprawidłowy parametr wejściowy.
 
 Konstruktory używające typu szablonu `U` automatycznie konwertują parametr wejściowy na typ określony przez `T` . `SafeInt`Klasa konwertuje dane bez utraty danych. Raport jest raportowany do programu obsługi błędów, `E` Jeśli nie może przekonwertować danych na typ `T` bez utraty danych.
 

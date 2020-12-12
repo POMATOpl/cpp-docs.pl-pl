@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: adaptacja istniejącego kodu do korzystania z uproszczonych zadań'
 title: 'Wskazówki: adaptacja istniejącego kodu do potrzeb zadań lekkich'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: 7ce18b54835b2380d3baee77b00a670351e3279f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1c3de0f49dc1edc3392a436bb911e005ef84bcf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271411"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Wskazówki: adaptacja istniejącego kodu do potrzeb zadań lekkich
 
@@ -82,7 +83,7 @@ W poniższym przykładzie pokazano kod, który używa lekkiego zadania do wywoł
 
 [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Scheduler — Klasa](../../parallel/concrt/reference/scheduler-class.md)

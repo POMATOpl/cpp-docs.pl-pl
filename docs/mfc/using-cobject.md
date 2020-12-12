@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z CObject'
 title: Używanie obiektu CObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: b5399f02819407a529fd5ec66d4f5acbb16ca002
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 203e2a498f787f23de21db4469e5cdd7c5543761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271645"
 ---
 # <a name="using-cobject"></a>Używanie obiektu CObject
 
-[CObject](../mfc/reference/cobject-class.md) jest główną klasą bazową dla większości Biblioteka MFC (MFC). Klasa `CObject` zawiera wiele użytecznych funkcji, które można chcieć dołączyć do własnych obiektów programu, w tym obsługi serializacji, informacji o klasie czasu wykonywania i danych wyjściowych diagnostyki obiektów. Jeśli klasa pochodzi z `CObject`, Klasa może wykorzystać te `CObject` funkcje.
+[CObject](../mfc/reference/cobject-class.md) jest główną klasą bazową dla większości Biblioteka MFC (MFC). `CObject`Klasa zawiera wiele użytecznych funkcji, które można chcieć uwzględnić w swoich obiektach programu, w tym obsługę serializacji, informacje o klasie czasu wykonywania i dane wyjściowe diagnostyki obiektów. Jeśli klasa jest pochodną `CObject` , Klasa może wykorzystać te `CObject` funkcje.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
 
@@ -40,7 +41,7 @@ ms.locfileid: "79441922"
 ## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../mfc/mfc-concepts.md)<br/>
-[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
-[Struktura CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
-[Pliki](../mfc/files-in-mfc.md)<br/>
+[Ogólne tematy dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
+[CRuntimeClass, struktura](../mfc/reference/cruntimeclass-structure.md)<br/>
+[Files](../mfc/files-in-mfc.md)<br/>
 [Serializacja](../mfc/serialization-in-mfc.md)

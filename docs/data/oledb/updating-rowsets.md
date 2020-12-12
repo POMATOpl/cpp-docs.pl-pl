@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: aktualizowanie zestawów wierszy'
 title: Aktualizowanie zestawów wierszy
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e5fcd374e446670df586c27e6b6e89d5da30da6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272529"
 ---
 # <a name="updating-rowsets"></a>Aktualizowanie zestawów wierszy
 
@@ -31,7 +32,7 @@ Konsumenci mogą wykonywać następujące rodzaje aktualizacji dla danych zestaw
 > [!NOTE]
 > Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 2019 i nowszych. Można nadal ręcznie dodawać funkcje. Aby uzyskać więcej informacji, zobacz [Tworzenie klienta bez korzystania z Kreatora](creating-a-consumer-without-using-a-wizard.md).
 
-Podczas tworzenia odbiorcy za pomocą **kreatora ATL OLE DB klienta**można obsługiwać operacje aktualizacji, zaznaczając co najmniej jedno z trzech pól wyboru **zmieni**, **Wstaw**i **Usuń**. W przypadku wybrania tych opcji Kreator odpowiednio modyfikuje kod w celu obsługi wybranego typu zmian. Jeśli jednak Kreator nie jest używany, należy ustawić następujące właściwości zestawu wierszy, aby `VARIANT_TRUE` obsługiwały aktualizacje:
+Podczas tworzenia odbiorcy za pomocą **kreatora ATL OLE DB klienta** można obsługiwać operacje aktualizacji, zaznaczając co najmniej jedno z trzech pól wyboru **zmieni**, **Wstaw** i **Usuń**. W przypadku wybrania tych opcji Kreator odpowiednio modyfikuje kod w celu obsługi wybranego typu zmian. Jeśli jednak Kreator nie jest używany, należy ustawić następujące właściwości zestawu wierszy, aby `VARIANT_TRUE` obsługiwały aktualizacje:
 
 - `DBPROPVAL_UP_CHANGE` umożliwia zmianę wartości danych w wierszu.
 
@@ -133,7 +134,7 @@ HRESULT hr = product.Insert();
 
 Aby zapoznać się z bardziej szczegółowym przykładem, zobacz [CRowset:: INSERT](./crowset-class.md#insert).
 
-Aby uzyskać więcej informacji na temat ustawiania stanu i liczby elementów członkowskich danych, zobacz sekcję [stan pola elementy członkowskie danych w przystawce metod dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
+Aby uzyskać więcej informacji na temat ustawiania stanu i liczby elementów członkowskich danych, zobacz sekcję [stan pola elementy członkowskie danych w Wizard-Generated metod dostępu](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
 ## <a name="deleting-rows-from-rowsets"></a>Usuwanie wierszy z zestawów wierszy
 
