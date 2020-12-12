@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: Object — Klasa'
 title: 'Platform:: Object — Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: dded4602eda9653f50d26ef1b4aae86af96a262b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a190d5a56bb27fb95ac2c2c8bd2ba0e0d0572427
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308253"
 ---
 # <a name="platformobject-class"></a>Platform:: Object — Klasa
 
@@ -59,7 +60,7 @@ public ref class Object : Object
 
 **Przestrzeń nazw:** Platformach
 
-## <a name="objectequals-method"></a><a name="equals"></a>Object:: Equals — Metoda
+## <a name="objectequals-method"></a><a name="equals"></a> Object:: Equals — Metoda
 
 Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.
 
@@ -80,7 +81,7 @@ Obiekt do porównania.
 
 **`true`** Jeśli obiekty są równe, w przeciwnym razie **`false`** .
 
-## <a name="objectgethashcode-method"></a><a name="gethashcode"></a>Object:: GetHashCode, Metoda
+## <a name="objectgethashcode-method"></a><a name="gethashcode"></a> Object:: GetHashCode, Metoda
 
 Zwraca `IUnknown` * wartość tożsamości dla tego wystąpienia, jeśli jest to obiekt com lub obliczona wartość skrótu, jeśli nie jest obiektem com.
 
@@ -98,7 +99,7 @@ Wartość liczbowa, która jednoznacznie identyfikuje ten obiekt.
 
 Możesz użyć GetHashCode, aby utworzyć klucze dla obiektów w usłudze Maps. Kody skrótów można porównać przy użyciu [obiektu:: Equals](#equals). Jeśli ścieżka kodu jest niezwykle krytyczna i `GetHashCode` `Equals` nie jest dostatecznie szybka, można rozwinąć do źródłowej warstwy modelu COM i przeprowadzić porównania wskaźnika natywnego `IUnknown` .
 
-## <a name="objectgettype-method"></a><a name="gettype"></a>Object:: GetType — Metoda
+## <a name="objectgettype-method"></a><a name="gettype"></a> Object:: GetType — Metoda
 
 Zwraca obiekt [platform:: Type](../cppcx/platform-type-class.md) , który opisuje typ środowiska uruchomieniowego obiektu.
 
@@ -124,7 +125,7 @@ Użyj operatora [typeid](../extensions/typeid-cpp-component-extensions.md) do zw
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="objectobject-constructor"></a><a name="ctor"></a>Object:: Object — Konstruktor
+## <a name="objectobject-constructor"></a><a name="ctor"></a> Object:: Object — Konstruktor
 
 Inicjuje nowe wystąpienie klasy Object.
 
@@ -134,7 +135,7 @@ Inicjuje nowe wystąpienie klasy Object.
 public:Object();
 ```
 
-## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a>Object:: ReferenceEquals, Metoda
+## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a> Object:: ReferenceEquals, Metoda
 
 Określa, czy określone wystąpienia obiektów są tego samego wystąpienia.
 
@@ -156,7 +157,7 @@ Drugi obiekt do porównania.
 
 **`true`** Jeśli dwa obiekty są takie same; w przeciwnym razie **`false`** .
 
-## <a name="objecttostring-method-ccx"></a><a name="tostring"></a>Object:: ToString — Metoda (C++/CX)
+## <a name="objecttostring-method-ccx"></a><a name="tostring"></a> Object:: ToString — Metoda (C++/CX)
 
 Zwraca ciąg reprezentujący bieżący obiekt.
 

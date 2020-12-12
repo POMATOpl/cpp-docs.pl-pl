@@ -1,5 +1,6 @@
 ---
-title: 'Platform::Runtime:: CompilerServices Namespace'
+description: 'Dowiedz się więcej na temat: platform:: Runtime:: CompilerServices, przestrzeń nazw'
+title: 'Platform:: Runtime:: CompilerServices, przestrzeń nazw'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-ms.openlocfilehash: 88eac06eeb97fce26f321e8beb494b6b9e66be41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 273a218c0a53ff28188491277ffb6f7f0fe7f744
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308045"
 ---
-# <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime:: CompilerServices Namespace
+# <a name="platformruntimecompilerservices-namespace"></a>Platform:: Runtime:: CompilerServices, przestrzeń nazw
 
 Ta przestrzeń nazw jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
 
@@ -28,22 +29,22 @@ namespace Platform {
 
 ### <a name="members"></a>Elementy członkowskie
 
-Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przeglądarki można wyświetlić następujące elementy członkowskie tej przestrzeni nazw.
+Mimo że ta przestrzeń nazw jest przeznaczona do użytku wewnętrznego, przeglądarki mogą wyświetlać następujące elementy członkowskie tej przestrzeni nazw.
 
-|Nazwa|Uwagi|
+|Nazwa|Dyskusji|
 |----------|------------|
 |CallConvCdecl||
 |CallConvFastcall||
 |CallConvStdcall||
 |CallConvThiscall||
 |IndexerNameAttribute||
-|IsBoxed||
+|Isramce||
 |IsByValue||
-|IsConst||
+|Iswady||
 |IsCopyConstructed||
 |IsExplicitlyDereferenced||
 |IsImplicitlyDereferenced||
-|IsLong||
+|ISLONG||
 |IsSignUnspecifiedByte||
 |IsSigned||
 |IsUdtReturn||
@@ -56,10 +57,10 @@ Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przegl�
 
 ### <a name="requirements"></a>Wymagania
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-**Namespace:** Platform::CompilerServices
+**Przestrzeń nazw:** Platforma:: CompilerServices
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)

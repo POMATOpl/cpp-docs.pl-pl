@@ -1,5 +1,6 @@
 ---
-title: 'Platform::Runtime:: InteropServices Namespace'
+description: 'Dowiedz się więcej na temat: platform:: Runtime:: InteropServices, przestrzeń nazw'
+title: 'Platform:: Runtime:: InteropServices, przestrzeń nazw'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 710da76e27f8b1d6460a8f2c9809efff07ce132c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308032"
 ---
-# <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime:: InteropServices Namespace
+# <a name="platformruntimeinteropservices-namespace"></a>Platform:: Runtime:: InteropServices, przestrzeń nazw
 
 Ta przestrzeń nazw jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
 
@@ -28,9 +29,9 @@ namespace Platform {
 
 ### <a name="members"></a>Elementy członkowskie
 
-Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przeglądarki można wyświetlić następujące elementy członkowskie tej przestrzeni nazw.
+Mimo że ta przestrzeń nazw jest przeznaczona do użytku wewnętrznego, przeglądarki mogą wyświetlać następujące elementy członkowskie tej przestrzeni nazw.
 
-|Nazwa|Uwagi|
+|Nazwa|Dyskusji|
 |----------|------------|
 |ComInterfaceType| — wyliczenie|
 |InterfaceTypeAttribute||
@@ -45,10 +46,10 @@ Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przegl�
 
 ### <a name="requirements"></a>Wymagania
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-**Namespace:** Platform::InteropServices
+**Przestrzeń nazw:** Platform:: InteropServices
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)

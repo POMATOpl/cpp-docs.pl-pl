@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej: Rzutowanie'
 title: Rzutowanie
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: bb06db3af6aee031b6cb2d69b38a9404304420fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0850b20db0e3f951414ba2b1d480cdcf43fb971f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308643"
 ---
 # <a name="casting"></a>Rzutowanie
 
@@ -28,7 +29,7 @@ Hierarchia klas
 
 Obiekt typu `C` może zostać zwizualizowany jak pokazano na poniższym rysunku.
 
-![Klasa C z obiektami&#45;podrzędnymi B i](../cpp/media/vc38zz2.gif "Klasa C z obiektami&#45;podrzędnymi B i") <br/>
+![Klasa C z obiektami sub&#45;B i A](../cpp/media/vc38zz2.gif "Klasa C z obiektami sub&#45;B i A") <br/>
 Klasa C z obiektami podrzędnymi B i
 
 Biorąc pod uwagę wystąpienie klasy `C`, istnieje podobiekt `B` i podobiekt `A`. Wystąpienie klasy `C`, oraz podobiekty `A` i `B` to „obiekt kompletny”.

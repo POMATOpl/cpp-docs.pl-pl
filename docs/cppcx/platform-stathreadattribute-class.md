@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: STAThreadAttribute, Klasa'
 title: 'Platform:: STAThreadAttribute, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1c235ef9a171e650c960df184b081c4b6511cf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308006"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform:: STAThreadAttribute, Klasa
 
@@ -56,7 +57,7 @@ Atrybut STAThreadAttribute dziedziczy z [klasy platform:: Object](../cppcx/platf
 
 **Przestrzeń nazw:** Platformach
 
-## <a name="stathreadattribute-constructor"></a><a name="ctor"></a>Konstruktor STAThreadAttribute
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a> Konstruktor STAThreadAttribute
 
 Inicjuje nowe wystąpienie klasy STAThreadAttribute.
 
@@ -66,7 +67,7 @@ Inicjuje nowe wystąpienie klasy STAThreadAttribute.
 public:STAThreadAttribute();
 ```
 
-## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute:: Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a> STAThreadAttribute:: Equals
 
 Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.
 
@@ -85,7 +86,7 @@ Obiekt do porównania.
 
 **`true`** Jeśli obiekty są równe; w przeciwnym razie **`false`** .
 
-## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute:: GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a> STAThreadAttribute:: GetHashCode
 
 Zwraca wartość skrótu dla tego wystąpienia.
 
@@ -99,7 +100,7 @@ public:int GetHashCode();
 
 Kod skrótu dla tego wystąpienia.
 
-## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute:: ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a> STAThreadAttribute:: ToString
 
 Zwraca ciąg reprezentujący bieżący obiekt.
 
@@ -113,6 +114,6 @@ public:String^ ToString();
 
 Ciąg reprezentujący bieżący obiekt.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](platform-namespace-c-cx.md)

@@ -1,5 +1,6 @@
 ---
-title: Platform::StringReference, klasa
+description: 'Dowiedz się więcej na temat: platform:: StringReference, Klasa'
+title: 'Platform:: StringReference, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -9,16 +10,16 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5c211776bccbd3ba2fedaf769502f7dad71b6eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307954"
 ---
-# <a name="platformstringreference-class"></a>Platform::StringReference, klasa
+# <a name="platformstringreference-class"></a>Platform:: StringReference, Klasa
 
-Typ optymalizacji, którego można użyć do `Platform::String^` przekazywania danych ciągu z parametrów wejściowych do innych metod przy użyciu co najmniej operacji kopiowania.
+Typ optymalizacji, który służy do przekazywania danych ciągu z `Platform::String^` parametrów wejściowych do innych metod przy minimalnych operacjach kopiowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,37 +35,37 @@ class StringReference
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Odwzszłużenie ciągu::StringReference](#ctor)|Dwa konstruktory do `StringReference`tworzenia wystąpień .|
+|[StringReference::StringReference](#ctor)|Dwa konstruktory do tworzenia wystąpień `StringReference` .|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[StringReference::Data](#data)|Zwraca dane ciągu jako tablicę wartości char16.|
-|[CiągReference::Długość](#length)|Zwraca liczbę znaków w ciągu.|
-|[CiągReferencja::GetHSTRING](#gethstring)|Zwraca dane ciągu jako HSTRING.|
-|[CiągReference::GetString](#getstring)|Zwraca dane ciągu `Platform::String^`jako plik .|
+|[StringReference::D ATA](#data)|Zwraca dane ciągu jako tablicę wartości char16.|
+|[StringReference:: length](#length)|Zwraca liczbę znaków w ciągu.|
+|[StringReference::GetHSTRING](#gethstring)|Zwraca dane ciągu jako HSTRING.|
+|[StringReference:: GetString](#getstring)|Zwraca dane ciągu jako `Platform::String^` .|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[StringReference::operator=](#operator-assign)|Przypisuje a `StringReference` do `StringReference` nowego wystąpienia.|
-|[StringReference::operator()](#operator-call)|Konwertuje `StringReference` a `Platform::String^`do .|
+|[StringReference:: operator =](#operator-assign)|Przypisuje `StringReference` do nowego `StringReference` wystąpienia.|
+|[StringReference:: operator ()](#operator-call)|Konwertuje `StringReference` do `Platform::String^` .|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalny obsługiwany klient:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
 **Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Obszar nazw:** Platformy
+**Przestrzeń nazw:** Platformach
 
-**Nagłówek:** vccorlib.h
+**Nagłówek:** vccorlib. h
 
-## <a name="stringreferencedata-method"></a><a name="data"></a>StringReference:metoda :Data
+## <a name="stringreferencedata-method"></a><a name="data"></a> StringReference::D ATA — Metoda
 
-Zwraca zawartość tego `StringReference` jako tablicę wartości char16.
+Zwraca zawartość tego elementu `StringReference` jako tablicę wartości char16.
 
 ### <a name="syntax"></a>Składnia
 
@@ -74,11 +75,11 @@ const ::default::char16 * Data() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Tablica znaków tekstowych char16 UNICODE.
+Tablica znaków UNICODE char16.
 
-## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>StringReference::Metoda GetHSTRING
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a> StringReference:: GetHSTRING, Metoda
 
-Zwraca zawartość ciągu jako `__abi_HSTRING`plik .
+Zwraca zawartość ciągu jako `__abi_HSTRING` .
 
 ### <a name="syntax"></a>Składnia
 
@@ -88,13 +89,13 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-An, `__abi_HSTRING` który zawiera dane ciągu.
+`__abi_HSTRING`Zawierający dane ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>StringReference::Metoda GetString
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a> StringReference:: GetString — Metoda
 
-Zwraca zawartość ciągu jako `Platform::String^`plik .
+Zwraca zawartość ciągu jako `Platform::String^` .
 
 ### <a name="syntax"></a>Składnia
 
@@ -105,9 +106,9 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A, `Platform::String^` który zawiera dane ciągu.
+A `Platform::String^` , który zawiera dane ciągu.
 
-## <a name="stringreferencelength-method"></a><a name="length"></a>StringReference::Metoda długości
+## <a name="stringreferencelength-method"></a><a name="length"></a> StringReference:: length — Metoda
 
 Zwraca liczbę znaków w ciągu.
 
@@ -119,13 +120,13 @@ unsigned int Length() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niepodpisana liczba całkowita określająca liczbę znaków w ciągu.
+Liczba całkowita bez znaku, która określa liczbę znaków w ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>StringReference::operator= Operator
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a> StringReference:: operator = — operator
 
-Przypisuje określony obiekt do `StringReference` bieżącego obiektu.
+Przypisuje określony obiekt do bieżącego `StringReference` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -137,22 +138,22 @@ StringReference& operator=(const ::default::char16* __strArg);
 ### <a name="parameters"></a>Parametry
 
 *__fstrArg*<br/>
-Adres `StringReference` obiektu, który jest używany do `StringReference` inicjowania bieżącego obiektu.
+Adres `StringReference` obiektu, który jest używany do inicjowania bieżącego `StringReference` obiektu.
 
 *__strArg*<br/>
-Wskaźnik do tablicy wartości char16, która jest `StringReference` używana do inicjowania bieżącego obiektu.
+Wskaźnik do tablicy wartości Char16, który jest używany do inicjowania bieżącego `StringReference` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu typu `StringReference`.
+Odwołanie do obiektu typu `StringReference` .
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ `StringReference` jest to standardowa klasa C++, a nie klasa ref, nie jest wyświetlana w **przeglądarce obiektów**.
+Ponieważ `StringReference` jest klasą standardowego języka C++, a nie klasą referencyjną, nie jest ona wyświetlana w **Przeglądarka obiektów**.
 
-## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>StringReference::operator() Operator
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a> StringReference:: operator () — operator
 
-Konwertuje `StringReference` obiekt `Platform::String^` na obiekt.
+Konwertuje `StringReference` obiekt na `Platform::String^` obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -163,9 +164,9 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do obiektu `Platform::String`typu .
+Dojście do obiektu typu `Platform::String` .
 
-## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>StringReference::Konstruktor stringreference
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a> StringReference:: StringReference — Konstruktor
 
 Inicjuje nowe wystąpienie klasy `StringReference`.
 
@@ -181,18 +182,18 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 ### <a name="parameters"></a>Parametry
 
 *__fstrArg*<br/>
-Którego `StringReference` dane są używane do inicjowania nowego wystąpienia.
+`StringReference`Których dane są używane do inicjowania nowego wystąpienia.
 
 *__strArg*<br/>
-Wskaźnik do tablicy char16 wartości, który jest używany do inicjowania nowego wystąpienia.
+Wskaźnik do tablicy wartości Char16, który jest używany do inicjowania nowego wystąpienia.
 
 *__lenArg*<br/>
-Liczba elementów `__strArg`w programie .
+Liczba elementów w `__strArg` .
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza wersja tego konstruktora jest konstruktorem domyślnym. Druga wersja inicjuje `StringReference` nową klasę wystąpienia z obiektu, `__fstrArg` który jest określony przez parametr. Trzeci i czwarty przeciążenia zainicjować nowe `StringReference` wystąpienie z tablicy char16 wartości. char16 reprezentuje 16-bitowy znak tekstowy UNICODE.
+Pierwsza wersja tego konstruktora jest konstruktorem domyślnym. Druga wersja Inicjuje nową `StringReference` klasę wystąpienia z obiektu, który jest określony przez `__fstrArg` parametr. Trzecie i czwarte przeciążenia inicjują nowe `StringReference` wystąpienie z tablicy wartości char16. char16 reprezentuje 16-bitowy znak tekstowy w formacie UNICODE.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Platform::StringReference, klasa](../cppcx/platform-stringreference-class.md)
+[Platform:: StringReference, Klasa](../cppcx/platform-stringreference-class.md)

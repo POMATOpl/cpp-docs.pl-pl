@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tokenów i zestawów znaków'
 title: Tokeny i zestawy znaków
 ms.date: 12/10/2019
 helpviewer_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 1f6dbe2faa6348d61ec00b411cc35e8ef5ceb57a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b5a6868f5e4c01772758acaa0e44459e72b16a84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308474"
 ---
 # <a name="tokens-and-character-sets"></a>Tokeny i zestawy znaków
 
-Tekst C++ programu składa się z tokenów i *białych znaków*. Token jest najmniejszym elementem C++ programu, który jest zrozumiały dla kompilatora. C++ Analizator rozpoznaje te rodzaje tokenów:
+Tekst programu w języku C++ składa się z tokenów i *białych znaków*. Token jest najmniejszym elementem programu C++, który jest zrozumiały dla kompilatora. Analizator C++ rozpoznaje tego rodzaju tokeny:
 
 - [Słowa kluczowe](../cpp/keywords-cpp.md)
 - [Identyfikatory](../cpp/identifiers-cpp.md)
 - [Literały numeryczne, wartości logicznych i wskaźników](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
-- [Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)
-- [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md)
+- [Literały ciągów i znaków](../cpp/string-and-character-literals-cpp.md)
+- [Literały zdefiniowane przez użytkownika](../cpp/user-defined-literals-cpp.md)
 - [Operatory](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-- [Znaki interpunkcyjne](../cpp/punctuators-cpp.md)
+- [Separatory](../cpp/punctuators-cpp.md)
 
 Tokeny są zwykle oddzielane *znakami odstępu*, co może być jedną lub większą liczbą:
 
@@ -37,7 +38,7 @@ Tokeny są zwykle oddzielane *znakami odstępu*, co może być jedną lub więks
 
 ## <a name="basic-source-character-set"></a>Podstawowy zestaw znaków źródła
 
-C++ Standard określa *podstawowy zestaw znaków źródła* , który może być używany w plikach źródłowych. Aby reprezentować znaki poza tym zestawem, można określić dodatkowe znaki przy użyciu *uniwersalnej nazwy znaków*. Implementacja MSVC zezwala na dodatkowe znaki. *Podstawowy zestaw znaków źródła* składa się z 96 znaków, które mogą być używane w plikach źródłowych. Ten zestaw zawiera znak odstępu, tabulator poziomy, tabulator pionowy, znaki kontrolne formularza i wiersz sterowania i ten zestaw znaków graficznych:
+Standard C++ określa *podstawowy zestaw znaków źródła* , który może być używany w plikach źródłowych. Aby reprezentować znaki poza tym zestawem, można określić dodatkowe znaki przy użyciu *uniwersalnej nazwy znaków*. Implementacja MSVC zezwala na dodatkowe znaki. *Podstawowy zestaw znaków źródła* składa się z 96 znaków, które mogą być używane w plikach źródłowych. Ten zestaw zawiera znak odstępu, tabulator poziomy, tabulator pionowy, znaki kontrolne formularza i wiersz sterowania i ten zestaw znaków graficznych:
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -47,21 +48,21 @@ C++ Standard określa *podstawowy zestaw znaków źródła* , który może być 
 
 `_ { } [ ] # ( ) < > % : ; . ? * + - / ^ & | ~ ! = , \ " '`
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-MSVC zawiera znak `$` jako element członkowski podstawowego zestawu znaków źródła. MSVC umożliwia również dodatkowy zestaw znaków, który ma być używany w plikach źródłowych, na podstawie kodowania plików. Domyślnie program Visual Studio przechowuje pliki źródłowe przy użyciu domyślnej strony kodowej. Gdy pliki źródłowe są zapisywane przy użyciu strony kodowej specyficznej dla ustawień regionalnych lub strony kodowej Unicode, MSVC umożliwia używanie dowolnych znaków tej strony kodowej w kodzie źródłowym, z wyjątkiem kodów kontroli niejawnie dozwolonych w podstawowym zestawie znaków źródła. Na przykład można umieścić znaki japońskie w komentarzach, identyfikatorach lub literałach ciągów, jeśli plik zostanie zapisany przy użyciu japońskiej strony kodowej. MSVC nie zezwala na sekwencje znaków, których nie można przetłumaczyć na prawidłowe znaki wielobajtowe lub punkty kodu Unicode. W zależności od opcji kompilatora nie wszystkie dozwolone znaki mogą pojawić się w identyfikatorach. Aby uzyskać więcej informacji, zobacz temat [Identyfikatory](../cpp/identifiers-cpp.md).
+MSVC zawiera `$` znak jako element członkowski podstawowego zestawu znaków źródłowych. MSVC umożliwia również dodatkowy zestaw znaków, który ma być używany w plikach źródłowych, na podstawie kodowania plików. Domyślnie program Visual Studio przechowuje pliki źródłowe przy użyciu domyślnej strony kodowej. Gdy pliki źródłowe są zapisywane przy użyciu strony kodowej specyficznej dla ustawień regionalnych lub strony kodowej Unicode, MSVC umożliwia używanie dowolnych znaków tej strony kodowej w kodzie źródłowym, z wyjątkiem kodów kontroli niejawnie dozwolonych w podstawowym zestawie znaków źródła. Na przykład można umieścić znaki japońskie w komentarzach, identyfikatorach lub literałach ciągów, jeśli plik zostanie zapisany przy użyciu japońskiej strony kodowej. MSVC nie zezwala na sekwencje znaków, których nie można przetłumaczyć na prawidłowe znaki wielobajtowe lub punkty kodu Unicode. W zależności od opcji kompilatora nie wszystkie dozwolone znaki mogą pojawić się w identyfikatorach. Aby uzyskać więcej informacji, zobacz temat [Identyfikatory](../cpp/identifiers-cpp.md).
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ### <a name="universal-character-names"></a>Uniwersalne nazwy znaków
 
-Ponieważ C++ programy mogą używać dużo więcej znaków niż określone w podstawowym zestawie znaków źródłowych, można określić te znaki w przenośnej postaci przy użyciu *uniwersalnych nazw znaków*. Uniwersalna nazwa znaku składa się z sekwencji znaków, która reprezentuje punkt kodu Unicode.  Mają one dwie formy. Użyj `\UNNNNNNNN`, aby reprezentować punkt kodu Unicode w postaci U + NNNNNNNN, gdzie NNNNNNNN jest cyfrowym numerem punktu szesnastkowego. Użyj czterech cyfr `\uNNNN`, aby reprezentować punkt kodu Unicode w postaci U + 0000NNNN.
+Ponieważ programy C++ mogą używać więcej znaków niż określone w podstawowym zestawie znaków źródła, można je określić w sposób przenośny przy użyciu *uniwersalnych nazw znaków*. Uniwersalna nazwa znaku składa się z sekwencji znaków, która reprezentuje punkt kodu Unicode.  Mają one dwie formy. Służy `\UNNNNNNNN` do reprezentowania punktu kodu Unicode formularza U + nnnnnnnn, gdzie nnnnnnnn jest cyfrowym numerem punktu szesnastkowego. Użyj czterech cyfr, `\uNNNN` aby reprezentować punkt kodu Unicode w postaci U + 0000NNNN.
 
 Uniwersalne nazwy znaków mogą być używane w identyfikatorach oraz w literałach ciągów i znakach. Nie można użyć uniwersalnej nazwy znaku do reprezentowania punktu kodu zastępczego w zakresie 0xD800-0xDFFF. Zamiast tego należy użyć żądanego punktu kodu; Kompilator automatycznie generuje wszystkie wymagane surogaty. Dodatkowe ograniczenia dotyczą uniwersalnych nazw znaków, które mogą być używane w identyfikatorach. Aby uzyskać więcej informacji, zobacz [identyfikatory](../cpp/identifiers-cpp.md) i [literały znaków i znaki](../cpp/string-and-character-literals-cpp.md).
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Kompilator firmy C++ Microsoft traktuje znak w formie uniwersalnej nazwy znaków i literału w formie zamiennej. Na przykład można zadeklarować identyfikator przy użyciu formularza uniwersalnej nazwy znaku i użyć go w postaci literału:
+Kompilator języka Microsoft C++ traktuje znak w formie uniwersalnej nazwy znaków i postaci literału zamiennie. Na przykład można zadeklarować identyfikator przy użyciu formularza uniwersalnej nazwy znaku i użyć go w postaci literału:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

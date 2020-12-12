@@ -1,5 +1,6 @@
 ---
-title: Platform::NotImplementedException, klasa
+description: 'Dowiedz się więcej na temat: platform:: NotImplementedException, Klasa'
+title: 'Platform:: NotImplementedException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-ms.openlocfilehash: 5262aaf85c73e2ff09259fe350e8b5600c68be95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef99678994a42cde66ec460415ed1a57f43cbf5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308279"
 ---
-# <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException, klasa
+# <a name="platformnotimplementedexception-class"></a>Platform:: NotImplementedException, Klasa
 
-Element zgłaszany, gdy elementem interfejsu nie jest zaimplementowana w typie pochodnym.
+Zgłaszany, gdy element członkowski interfejsu nie został zaimplementowany w typie pochodnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,18 +28,18 @@ public ref class NotImplementedException : COMException,    IException,    IPrin
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.
+Aby uzyskać więcej informacji, zobacz Klasa [COMException](../cppcx/platform-comexception-class.md) .
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+[Platform:: COMException, Klasa](../cppcx/platform-comexception-class.md)

@@ -1,5 +1,6 @@
 ---
-title: Platform::NullReferenceException, klasa
+description: 'Dowiedz się więcej na temat: platform:: NullReferenceException, Klasa'
+title: 'Platform:: NullReferenceException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-ms.openlocfilehash: f513331757031c6f2f1231bb2c5fcb573d1645b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 181162163fa2fa1ef2fdc97f3c55db060ef54c2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308266"
 ---
-# <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException, klasa
+# <a name="platformnullreferenceexception-class"></a>Platform:: NullReferenceException, Klasa
 
-Zgłaszany, gdy jest próba wyłuskania odwołanie do obiektu o wartości null.
+Zgłaszany, gdy istnieje próba odwołująca się do odwołania do obiektu o wartości null.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,18 +28,18 @@ public ref class NullReferenceException : COMException,    IException,    IPrint
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.
+Aby uzyskać więcej informacji, zobacz Klasa [COMException](../cppcx/platform-comexception-class.md) .
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+[Platform:: COMException, Klasa](../cppcx/platform-comexception-class.md)

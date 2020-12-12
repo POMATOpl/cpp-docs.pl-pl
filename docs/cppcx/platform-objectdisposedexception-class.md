@@ -1,5 +1,6 @@
 ---
-title: Platform::ObjectDisposedException, klasa
+description: 'Dowiedz się więcej na temat: platform:: ObjectDisposedException, Klasa'
+title: 'Platform:: ObjectDisposedException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ObjectDisposedException
 ms.assetid: 68506fe4-d09c-4407-999f-1e3edb261d41
-ms.openlocfilehash: 566f8a05a6b81adb78113dd4ba0fb1c47fc65a2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7bbab72a8d641a4fdef0fed837ffcc127eea7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308240"
 ---
-# <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException, klasa
+# <a name="platformobjectdisposedexception-class"></a>Platform:: ObjectDisposedException, Klasa
 
-Element zgłaszany, gdy operacja jest wykonywana na zlikwidowanego obiektu.
+Zgłaszany, gdy operacja jest wykonywana na usuniętym obiekcie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,14 +32,14 @@ Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexce
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+[Platform:: COMException, Klasa](../cppcx/platform-comexception-class.md)

@@ -1,5 +1,6 @@
 ---
-title: Platform::OutOfMemoryException, klasa
+description: 'Dowiedz się więcej na temat: platform:: OutOfMemoryException, Klasa'
+title: 'Platform:: OutOfMemoryException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OutOfMemoryException
 ms.assetid: 49c19f6b-f66c-4448-b861-91dcbf32de2c
-ms.openlocfilehash: ae2a097bad5986805d6c796ebbcbaa8d9020241c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88908715395863cf034916146255942902a839ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308084"
 ---
-# <a name="platformoutofmemoryexception-class"></a>Platform::OutOfMemoryException, klasa
+# <a name="platformoutofmemoryexception-class"></a>Platform:: OutOfMemoryException, Klasa
 
-Element zgłaszany, gdy ma za mało pamięci do ukończenia tej operacji.
+Zgłaszany, gdy jest za mało pamięci, aby ukończyć operację.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,18 +28,18 @@ public ref class OutOfMemoryException : COMException,    IException,    IPrintab
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.
+Aby uzyskać więcej informacji, zobacz Klasa [COMException](../cppcx/platform-comexception-class.md) .
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+[Platform:: COMException, Klasa](../cppcx/platform-comexception-class.md)
