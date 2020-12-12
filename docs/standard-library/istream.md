@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; IStream&gt;'
 title: '&lt;IStream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c897441eef935cd6ef5a8b4e9f4676d06a57e1af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277820"
 ---
 # <a name="ltistreamgt"></a>&lt;IStream&gt;
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy money_put
 title: money_put — Klasa
 ms.date: 11/01/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: d15667f4e30561dbba024f877530c4ff0f824f64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d7e35e870d4a065948123e9d21339095d36c4579
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277482"
 ---
 # <a name="money_put-class"></a>money_put — Klasa
 
@@ -74,7 +75,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="money_putchar_type"></a><a name="char_type"></a>money_put:: char_type
+## <a name="money_putchar_type"></a><a name="char_type"></a> money_put:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -86,7 +87,7 @@ typedef CharType char_type;
 
 Typ jest synonimem dla parametru szablonu **CharType**.
 
-## <a name="money_putdo_put"></a><a name="do_put"></a>money_put::d o_put
+## <a name="money_putdo_put"></a><a name="do_put"></a> money_put::d o_put
 
 Funkcja wirtualna wywoływana w celu przekonwertowania liczby lub ciągu na sekwencję znaków, która reprezentuje wartość pieniężną.
 
@@ -155,11 +156,11 @@ W szczególności:
 
 - **FAC**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) określa liczbę znaczących cyfr ułamków po prawej stronie dowolnego punktu dziesiętnego.
 
-Jeśli ciąg znaków ( **FAC**. `negative_sign`lub **FAC**. `positive_sign`) ma więcej niż jeden element, jest generowany tylko pierwszy element, gdzie element jest równy **money_base:: Sign** jest wyświetlany w wzorcu formatu ( **FAC**. `neg_format`lub **FAC**. `pos_format`). Wszystkie pozostałe elementy są generowane na końcu pola danych wyjściowych pieniężnych.
+Jeśli ciąg znaków ( **FAC**. `negative_sign` lub **FAC**. `positive_sign`) ma więcej niż jeden element, jest generowany tylko pierwszy element, gdzie element jest równy **money_base:: Sign** jest wyświetlany w wzorcu formatu ( **FAC**. `neg_format` lub **FAC**. `pos_format`). Wszystkie pozostałe elementy są generowane na końcu pola danych wyjściowych pieniężnych.
 
-Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags)  &  [showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, ciąg **FAC**. `curr_symbol`jest generowana, gdy element jest równy **money_base:: symbol** jest wyświetlany w wzorcu formatu. W przeciwnym razie nie zostanie wygenerowany żaden symbol waluty.
+Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags)  &  [showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, ciąg **FAC**. `curr_symbol` jest generowana, gdy element jest równy **money_base:: symbol** jest wyświetlany w wzorcu formatu. W przeciwnym razie nie zostanie wygenerowany żaden symbol waluty.
 
-Jeśli żadne ograniczenia grupowania nie są nakładane przez **FAC**. **grupowanie** (jego pierwszy element ma wartość CHAR_MAX), a następnie brak wystąpień elementu **FAC**. `thousands_sep`są generowane w części wartości pola danych wyjściowych pieniężnych (gdzie element jest równy **money_base:: value** pojawia się we wzorcu formatu). Jeśli **FAC**. `frac_digits`to zero, a nie wystąpienie elementu **FAC**. `decimal_point`jest generowany po cyfrach dziesiętnych. W przeciwnym razie wynikowe pole danych wyjściowych jest umieszczane w **FAC**o niskiej kolejności. `frac_digits`cyfry dziesiętne z prawej strony punktu dziesiętnego.
+Jeśli żadne ograniczenia grupowania nie są nakładane przez **FAC**. **grupowanie** (jego pierwszy element ma wartość CHAR_MAX), a następnie brak wystąpień elementu **FAC**. `thousands_sep` są generowane w części wartości pola danych wyjściowych pieniężnych (gdzie element jest równy **money_base:: value** pojawia się we wzorcu formatu). Jeśli **FAC**. `frac_digits` to zero, a nie wystąpienie elementu **FAC**. `decimal_point` jest generowany po cyfrach dziesiętnych. W przeciwnym razie wynikowe pole danych wyjściowych jest umieszczane w **FAC** o niskiej kolejności. `frac_digits` cyfry dziesiętne z prawej strony punktu dziesiętnego.
 
 Uzupełnienie ma miejsce dla dowolnego pola danych wyjściowych, z wyjątkiem tego, że jeśli **iosbase**. **flagi**  &  **iosbase**. [wewnętrzna](../standard-library/ios-functions.md#internal) jest różna od zera, zostanie wygenerowane dopełnienie wewnętrzne, gdzie element jest równy **money_base:: spacja** pojawia się w wzorcu formatu, jeśli jest wyświetlany. W przeciwnym razie dopełnienie wewnętrzne występuje przed wygenerowaną sekwencją. Znak uzupełniania jest **wypełniany**.
 
@@ -169,7 +170,7 @@ Funkcja wywołuje **iosbase**. **Szerokość**(0), aby zresetować szerokość p
 
 Zobacz przykład dla funkcji [Put](#put), gdzie wirtualna funkcja członkowska jest wywoływana przez funkcję **Put**.
 
-## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put:: iter_type
+## <a name="money_putiter_type"></a><a name="iter_type"></a> money_put:: iter_type
 
 Typ, który opisuje iterator danych wyjściowych.
 
@@ -181,7 +182,7 @@ typedef OutputIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu **OutputIterator.**
 
-## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put:: money_put
+## <a name="money_putmoney_put"></a><a name="money_put"></a> money_put:: money_put
 
 Konstruktor dla obiektów typu `money_put` .
 
@@ -202,13 +203,13 @@ Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
 - 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \>1: te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
 Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="money_putput"></a><a name="put"></a>money_put::p UT
+## <a name="money_putput"></a><a name="put"></a> money_put::p UT
 
 Konwertuje liczbę lub ciąg na sekwencję znaków, która reprezentuje wartość pieniężną.
 
@@ -281,7 +282,7 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="money_putstring_type"></a><a name="string_type"></a>money_put:: string_type
+## <a name="money_putstring_type"></a><a name="string_type"></a> money_put:: string_type
 
 Typ, który opisuje ciąg zawierający znaki typu `CharType` .
 
@@ -293,7 +294,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) którego obiekty mogą przechowywać sekwencje elementów z sekwencji źródłowej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<locale>](../standard-library/locale.md)\
 [facet — Klasa](../standard-library/locale-class.md#facet_class)\

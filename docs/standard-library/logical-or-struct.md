@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury logical_or
 title: logical_or — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7b6578bb3405b2428724554d520ffe784b885a40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277677"
 ---
-# <a name="logicalor-struct"></a>logical_or — Struktura
+# <a name="logical_or-struct"></a>logical_or — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, który wykonuje operację rozłączenie logiczne ( `operator||`) na jego argumenty.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje logiczną operację rozłączenia ( `operator||` ) w argumentach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,21 +41,21 @@ struct logical_or<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator||` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Dowolny typ, który obsługuje element `operator||` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-*po lewej stronie*\
-Lewy operand logicznego rozłączenia operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand logicznej operacji rozłączenia. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand logicznego rozłączenia operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand logicznej operacji rozłączenia. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left || Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator||`.
+Wynik `Left || Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator||` .
 
 ## <a name="remarks"></a>Uwagi
 
-Typy zdefiniowane przez użytkownika jest nie zwarcie oceny operand. Oba argumenty są obliczane przez `operator||`.
+W przypadku typów zdefiniowanych przez użytkownika nie istnieje krótkie obwody oceny operandów. Oba argumenty są oceniane przez `operator||` .
 
 ## <a name="example"></a>Przykład
 

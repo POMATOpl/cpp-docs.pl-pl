@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy istream_iterator
 title: istream_iterator — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 4ab1c6188a076b46f08b9ea171a8a945cbe1fc70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7247e96c68f1adcc145519fc1cca6b3401302854
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277911"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator — Klasa
 
@@ -78,7 +79,7 @@ Po skonstruowaniu lub zwiększeniu obiektu klasy istream_iterator z niezerowym w
 
 **Przestrzeń nazw:** std
 
-## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator:: char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a> istream_iterator:: char_type
 
 Typ, który zapewnia typ znaku `istream_iterator` .
 
@@ -126,7 +127,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator:: istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a> istream_iterator:: istream_iterator
 
 Tworzy iterator końca strumienia jako domyślny `istream_iterator` lub `istream_iterator` zainicjowany do typu strumienia iteratora, z którego jest odczytywany.
 
@@ -181,7 +182,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator:: istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a> istream_iterator:: istream_type
 
 Typ, który zapewnia typ strumienia `istream_iterator` .
 
@@ -197,7 +198,7 @@ Typ jest synonimem dla `basic_istream` \< **CharType**, **Traits**> .
 
 Zobacz [istream_iterator](#istream_iterator) , aby zapoznać się z przykładem sposobu deklarowania i używania `istream_type` .
 
-## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator:: operator *
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a> istream_iterator:: operator *
 
 Operator dereferencji zwraca przechowywany obiekt typu, `Type` który jest rozkierowany przez `istream_iterator` .
 
@@ -241,7 +242,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator:: operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a> istream_iterator:: operator-&gt;
 
 Zwraca wartość elementu członkowskiego, jeśli istnieje.
 
@@ -255,7 +256,7 @@ Wartość elementu członkowskiego, jeśli istnieje.
 
 ### <a name="remarks"></a>Uwagi
 
-`i->m`jest równoważne`(*i).m`
+`i->m` jest równoważne `(*i).m`
 
 Operator zwraca wartość `&*this` .
 
@@ -291,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator:: operator + +
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a> istream_iterator:: operator + +
 
 Albo wyodrębnia inkrementowany obiekt ze strumienia wejściowego, albo kopiuje obiekt przed jego inkrementacją i zwraca kopię.
 
@@ -337,7 +338,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator:: traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a> istream_iterator:: traits_type
 
 Typ, który zapewnia dla typu cechy znakowe `istream_iterator` .
 
@@ -347,7 +348,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *cech*parametrów szablonu.
+Typ jest synonimem dla *cech* parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 

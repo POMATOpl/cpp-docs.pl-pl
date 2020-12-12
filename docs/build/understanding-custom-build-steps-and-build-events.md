@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Opis niestandardowych kroków kompilacji i zdarzeń kompilacji'
 title: Ogólne informacje o niestandardowych krokach kompilacji lub zdarzeniach kompilacji
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: da7e9399a1502c3d7ddaccbfb10a4d2b71fb85cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177314"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277404"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Ogólne informacje o niestandardowych krokach kompilacji lub zdarzeniach kompilacji
 
@@ -32,7 +33,7 @@ W środowisku deweloperskim Visual C++ istnieją trzy podstawowe sposoby dostoso
 
 - **Zdarzenia kompilacji**
 
-   Zdarzenia kompilacji pozwalają dostosować kompilację projektu. Istnieją trzy zdarzenia kompilacji: *przed kompilacją*, *przed połączeniem*i *po kompilacji*. Zdarzenie kompilacji pozwala określić akcję, która ma być wykonywana w określonym czasie w procesie kompilacji. Można na przykład użyć zdarzenia kompilacji do zarejestrowania pliku z **regsvr32. exe** po zakończeniu kompilowania projektu. Aby uzyskać więcej informacji, zobacz [Określanie zdarzeń kompilacji](specifying-build-events.md).
+   Zdarzenia kompilacji pozwalają dostosować kompilację projektu. Istnieją trzy zdarzenia kompilacji: *przed kompilacją*, *przed połączeniem* i *po kompilacji*. Zdarzenie kompilacji pozwala określić akcję, która ma być wykonywana w określonym czasie w procesie kompilacji. Można na przykład użyć zdarzenia kompilacji do zarejestrowania pliku z **regsvr32.exe** po zakończeniu kompilowania projektu. Aby uzyskać więcej informacji, zobacz [Określanie zdarzeń kompilacji](specifying-build-events.md).
 
 [Rozwiązania do rozwiązywania problemów z dostosowywaniem kompilacji](troubleshooting-build-customizations.md) mogą pomóc w upewnieniu się, że niestandardowe kroki kompilacji i zdarzenia kompilacji działają zgodnie z oczekiwaniami.
 
@@ -62,7 +63,7 @@ Dla każdego projektu w rozwiązaniu zdarzenia kompilacji i niestandardowe kroki
 
 11. Zdarzenie po kompilacji
 
-`custom build step on the project` I a a `post-build event` działa sekwencyjnie po zakończeniu wszystkich pozostałych procesów kompilacji.
+`custom build step on the project`I a a `post-build event` działa sekwencyjnie po zakończeniu wszystkich pozostałych procesów kompilacji.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -74,4 +75,4 @@ Dla każdego projektu w rozwiązaniu zdarzenia kompilacji i niestandardowe kroki
 ## <a name="see-also"></a>Zobacz też
 
 [Projekty programu Visual Studio — C++](creating-and-managing-visual-cpp-projects.md)<br>
-[Typowe makra dla poleceń i właściwości kompilacji](reference/common-macros-for-build-commands-and-properties.md)
+[Typowe makra dla właściwości i poleceń kompilacji](reference/common-macros-for-build-commands-and-properties.md)

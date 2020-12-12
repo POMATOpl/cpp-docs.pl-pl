@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy logic_error
 title: logic_error — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: b94f7f4c2482f0317e37c6f4bf3618b91a175147
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b4b592d268a29a1bf1c095beb79904789d695e64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521190"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277716"
 ---
 # <a name="logic_error-class"></a>logic_error — Klasa
 
@@ -66,7 +67,7 @@ Type: class std::logic_error
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa wyjątku](../standard-library/exception-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

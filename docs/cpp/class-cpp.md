@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa (C++)'
 title: klasa (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2b1e984f3facd4d2d212979a1dcf6be2eee3b3a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278743"
 ---
 # <a name="class-c"></a>klasa (C++)
 
@@ -140,7 +141,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

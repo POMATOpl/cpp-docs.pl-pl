@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy moneypunct_byname
 title: moneypunct_byname — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b20293ac6788156f25f95878a5ab0098c178edec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277469"
 ---
 # <a name="moneypunct_byname-class"></a>moneypunct_byname — Klasa
 
-Szablon klasy pochodnej, który opisuje obiekt, który może być `moneypunct` aspektem danego ustawienia regionalnego, umożliwiając formatowanie pola wejściowego pieniężnego lub pola walutowych danych wyjściowych.
+Szablon klasy pochodnej, który opisuje obiekt, który może być używany jako zestaw `moneypunct` reguł dla danego ustawienia regionalnego, co umożliwia formatowanie pola wejściowego pieniężnego lub pola walutowych danych wyjściowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,14 +41,14 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje swój obiekt podstawowy z [moneypunct](../standard-library/moneypunct-class.md#moneypunct) \<CharType, Intl > (`_Refs`).
+Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname` . Każdy Konstruktor inicjuje swój obiekt podstawowy z [moneypunct](../standard-library/moneypunct-class.md#moneypunct) \<CharType, Intl> ( `_Refs` ).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:**\<locale>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

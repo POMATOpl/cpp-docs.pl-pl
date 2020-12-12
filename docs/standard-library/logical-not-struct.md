@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury logical_not
 title: logical_not — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 731b99faed6515268b93ec3a1a43c96796e49dd3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dc89a5a764d9f3182609b47c5f05eb8b3e167cec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246472"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277690"
 ---
-# <a name="logicalnot-struct"></a>logical_not — Struktura
+# <a name="logical_not-struct"></a>logical_not — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, która wykonuje logiczny nie operacji (`operator!`) na jej argument.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje logiczne nie operacje ( `operator!` ) w argumencie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,15 +40,15 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Dowolny typ, który obsługuje `operator!` która przyjmuje argument typu określonego lub wywnioskowane uprawnienie.
+*Wprowadź*\
+Dowolny typ, który obsługuje element `operator!` , który przyjmuje operand typu określonego lub wywnioskowanego.
 
-*po lewej stronie*\
-Operand logicznego nie operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *typu*.
+*Lewym*\
+Operand operacji logicznej not. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Wyspecjalizowany szablon robi doskonałe przekazywanie argumentów odwołania lvalue i rvalue *typu* wywnioskowanego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `!Left`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator!`.
+Wynik `!Left` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator!` .
 
 ## <a name="example"></a>Przykład
 

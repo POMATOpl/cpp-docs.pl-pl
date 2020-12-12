@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)'
 title: 'SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,27 +11,27 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 083d268d2b2f2eef072809b1afde9d6ea34f6996
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73765ed66dacbc017cca6236ae5a90388390fa45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278691"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: dostosowywanie instrukcji SQL zestawu rekordów (ODBC)
 
-W tym temacie wyjaśniono:
+W tym temacie objaśniono:
 
-- Jak struktura tworzy instrukcję SQL
+- Jak struktura konstruuje instrukcję SQL
 
 - Jak zastąpić instrukcję SQL
 
 > [!NOTE]
-> Te informacje dotyczą klas Odbc MFC. Jeśli pracujesz z klasami DAO MFC, zobacz temat "Porównanie sql i SQL ansi programu MICROSOFT Jet Database Engine" w Pomocy DAO.
+> Te informacje dotyczą klas MFC ODBC. Jeśli pracujesz z klasami MFC DAO, zapoznaj się z tematem "porównanie usługi Microsoft Jet Database Engine SQL i ANSI SQL" w pomocy DAO.
 
 ## <a name="sql-statement-construction"></a>Konstrukcja instrukcji SQL
 
-Zestawienie rekordów opiera wybór rekordów głównie na instrukcji SQL **SELECT.** Podczas deklarowania klasy za pomocą kreatora zapisuje ona `GetDefaultSQL` nadrzędną wersję funkcji elementu członkowskiego, która `CAuthors`wygląda mniej więcej tak (dla klasy menedżera rekordów o nazwie ).
+Zestawy rekordów opierają się przede wszystkim na instrukcji **SELECT** języka SQL. W przypadku deklarowania klasy za pomocą kreatora program zapisuje zastępujący wersję `GetDefaultSQL` funkcji członkowskiej, która wygląda podobnie do tego (dla klasy zestawu rekordów o nazwie `CAuthors` ).
 
 ```cpp
 CString CAuthors::GetDefaultSQL()
@@ -39,35 +40,35 @@ CString CAuthors::GetDefaultSQL()
 }
 ```
 
-Domyślnie to zastąpienie zwraca nazwę tabeli określoną za pomocą kreatora. W tym przykładzie nazwa tabeli to "AUTORZY". Po wywołaniu funkcji `Open` elementu członkowskiego zestawie `Open` rekordów, tworzy końcową instrukcję **SELECT** formularza:
+Domyślnie to zastąpienie zwraca nazwę tabeli określoną za pomocą kreatora. W przykładzie nazwa tabeli to "autorów". Gdy później wywołasz `Open` funkcję członkowską zestawu rekordów, `Open` konstruuje końcową instrukcję **SELECT** w formularzu:
 
 ```
 SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
        [ORDER BY m_strSort]
 ```
 
-gdzie `table-name` jest otrzymywany przez wywołanie `GetDefaultSQL` i `rfx-field-list` jest `DoFieldExchange`otrzymywany z wywołań funkcji RFX w . Jest to, co można uzyskać dla **select** instrukcji, chyba że zastąpić go z nadrzędną wersją w czasie wykonywania, chociaż można również zmodyfikować domyślną instrukcję z parametrami lub filtru.
+gdzie `table-name` jest uzyskiwany przez wywołanie `GetDefaultSQL` i `rfx-field-list` jest uzyskiwane z wywołań funkcji RFX w `DoFieldExchange` . Jest to możliwe dla instrukcji **SELECT** , chyba że zastąpisz ją w wersji zastępujący w czasie wykonywania, chociaż można także zmodyfikować instrukcję domyślną z parametrami lub filtrem.
 
 > [!NOTE]
-> Jeśli określisz nazwę kolumny zawierającą (lub mogącą zawierać) spacje, należy ją ująć w nawiasy kwadratowe. Na przykład nazwa "Imię" powinna być "[Imię]".
+> Jeśli określisz nazwę kolumny, która zawiera (lub może zawierać) spacje, należy ująć ją w nawiasy kwadratowe. Na przykład nazwa "First Name" powinna mieć wartość "[First Name]".
 
-Aby zastąpić domyślną instrukcję **SELECT,** należy przekazać **SELECT** ciąg zawierający `Open`pełną instrukcję SELECT podczas wywoływania . Zamiast konstruowania własnego ciągu domyślnego, plik recordset używa ciągu, który dostarczasz. Jeśli instrukcja zastępowa zawiera klauzulę **WHERE,** nie należy określać filtru, `m_strFilter` ponieważ wówczas mają dwie instrukcje filtru. Podobnie jeśli instrukcja zastępowania zawiera klauzulę **ORDER BY,** nie należy określać sortowania, aby `m_strSort` nie mieć dwóch instrukcji sortowania.
+Aby zastąpić domyślną instrukcję **SELECT** , należy przekazać ciąg zawierający kompletną instrukcję **SELECT** podczas wywoływania `Open` . Zamiast konstruować własny ciąg domyślny, zestaw rekordów używa dostarczonego ciągu. Jeśli instrukcja zastępująca zawiera klauzulę **WHERE** , nie należy określać filtru, `m_strFilter` ponieważ następnie można zastosować dwie instrukcje filtru. Podobnie, jeśli instrukcja zastępująca zawiera klauzulę **order by** , nie należy określać sortowania w `m_strSort` taki sposób, że nie będziesz mieć dwóch instrukcji Sort.
 
 > [!NOTE]
-> Jeśli używasz ciągów literałów w filtrach (lub innych częściach instrukcji SQL), może być trzeba "cytat" (ująć w określonych ograniczników) takie ciągi z prefiksem literału specyficzne dla DBMS i literówka znak sufiksu (lub znaków).
+> Jeśli używasz ciągów literałów w filtrach (lub innych częściach instrukcji SQL), może być konieczne wyrażenie "Quote" (ujęte w określonych ogranicznikach) takie ciągi z prefiksem literału i znakiem sufiksu literału (lub znaków).
 
-Może również wystąpić specjalne wymagania składniowe dla operacji, takich jak sprzężenia zewnętrzne, w zależności od dbms. Użyj funkcji ODBC, aby uzyskać te informacje od sterownika dla systemu DBMS. Na przykład `::SQLGetTypeInfo` wywołać określonego typu danych, takich jak `SQL_VARCHAR`, aby zażądać LITERAL_PREFIX i LITERAL_SUFFIX znaków. Jeśli piszesz kod niezależny od bazy danych, zobacz [dodatek C: Gramatyka SQL](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) w [odwołaniu programisty ODBC, aby](/sql/odbc/reference/odbc-programmer-s-reference) uzyskać szczegółowe informacje o składni.
+Można również napotkać specjalne wymagania dotyczące składni dla operacji, takich jak sprzężenia zewnętrzne, w zależności od systemu DBMS. Użyj funkcji ODBC, aby uzyskać te informacje ze sterownika dla systemu DBMS. Na przykład, wywołaj `::SQLGetTypeInfo` dla określonego typu danych, na przykład `SQL_VARCHAR` ,, aby zażądać LITERAL_PREFIX i LITERAL_SUFFIX znaków. Jeśli piszesz kod niezależny od bazy danych, zobacz [dodatek C: Gramatyka SQL](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) w [Kompendium ODBC programisty](/sql/odbc/reference/odbc-programmer-s-reference) , aby uzyskać szczegółowe informacje o składni.
 
-Obiekt zestawie rekordów konstruuje instrukcję SQL używaną do wybierania rekordów, chyba że przekażesz niestandardową instrukcję SQL. Jak to zrobić zależy głównie od wartości, którą przekazujesz w `Open` *parametrze lpszSQL* funkcji elementu członkowskiego.
+Obiekt zestawu rekordów konstruuje instrukcję SQL, która używa do wybierania rekordów, chyba że zostanie przekazana niestandardowa instrukcja SQL. Sposób, w jaki jest to wykonywane, zależy głównie od wartości przekazywanej  w parametrze lpszSQL `Open` funkcji członkowskiej.
 
-Ogólna forma instrukcji SQL **SELECT** jest:
+Ogólna forma instrukcji **SELECT** języka SQL:
 
 ```
 SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]
 ```
 
-Jednym ze sposobów dodania słowa **kluczowego DISTINCT** do instrukcji SQL zestawie rekordów jest osadzenie `DoFieldExchange`słowa kluczowego w pierwszym wywołaniu funkcji RFX w programie . Przykład:
+Jednym ze sposobów dodawania słowa kluczowego **DISTINCT** do instrukcji SQL zestawu rekordów jest osadzenie słowa kluczowego w pierwszym WYWOŁANIU funkcji RFX w `DoFieldExchange` . Na przykład:
 
 ```
 ...
@@ -76,33 +77,33 @@ Jednym ze sposobów dodania słowa **kluczowego DISTINCT** do instrukcji SQL zes
 ```
 
 > [!NOTE]
-> Tej techniki należy używać tylko w przypadku, gdy jest otwarty jako tylko do odczytu.
+> Tej techniki należy używać tylko z zestawem rekordów otwartym jako tylko do odczytu.
 
 ## <a name="overriding-the-sql-statement"></a>Zastępowanie instrukcji SQL
 
-W poniższej tabeli przedstawiono możliwości parametru *lpszSQL* do `Open`. Przypadki w tabeli są wyjaśnione po tabeli.
+W poniższej tabeli przedstawiono możliwości parametru *lpszSQL* `Open` . Przypadki w tabeli wyjaśniono poniżej tabeli.
 
-**Parametr lpszSQL i wynikowy ciąg SQL**
+**Parametr lpszSQL i otrzymany ciąg SQL**
 
-|Sprawa|Co przekazać w lpszSQL|Wynikowe SELECT instrukcji|
+|Sprawa|Co przekazujesz w lpszSQL|Wynikająca instrukcja SELECT|
 |----------|------------------------------|------------------------------------|
-|1|NULL|**WYBIERZ** *rfx-field-list* **FROM** nazwa *tabeli*<br /><br /> `CRecordset::Open`wywołania, `GetDefaultSQL` aby uzyskać nazwę tabeli. Wynikowy ciąg jest jednym z przypadków od 2 `GetDefaultSQL` do 5, w zależności od tego, co zwraca.|
-|2|Nazwa tabeli|**WYBIERZ** *rfx-field-list* **FROM** nazwa *tabeli*<br /><br /> Lista pól jest pobierana z instrukcji `DoFieldExchange`RFX w pliku . Jeśli `m_strFilter` `m_strSort` i nie są puste, dodaje **klauzule WHERE** i/lub **ORDER BY.**|
-|3\*|Pełna instrukcja **SELECT,** ale bez klauzuli **WHERE** lub **ORDER BY**|Jak minęło. Jeśli `m_strFilter` `m_strSort` i nie są puste, dodaje **klauzule WHERE** i/lub **ORDER BY.**|
-|4\*|Kompletna instrukcja **SELECT** z klauzulą **WHERE** i/lub **ORDER BY**|Jak minęło. `m_strFilter`i/lub `m_strSort` muszą pozostać puste, lub produkowane są dwie instrukcje filtrowania i/lub sortowania.|
-|5\*|Wywołanie procedury składowanej|Jak minęło.|
+|1|NULL|**Wybierz** *RFX-Field-list* **z** *tabeli-Name*<br /><br /> `CRecordset::Open` wywołuje metodę `GetDefaultSQL` pobrania nazwy tabeli. Wynikowy ciąg jest jednym z przypadków od 2 do 5, w zależności od `GetDefaultSQL` zwracanych wartości.|
+|2|Nazwa tabeli|**Wybierz** *RFX-Field-list* **z** *tabeli-Name*<br /><br /> Lista pól jest pobierana z instrukcji RFX w `DoFieldExchange` . Jeśli `m_strFilter` i `m_strSort` nie są puste, program dodaje klauzule **WHERE** i/lub **order by** .|
+|r.3 \*|Kompletna instrukcja **SELECT** , ale bez klauzuli **WHERE** lub **order by**|Zgodnie z oczekiwaniami. Jeśli `m_strFilter` i `m_strSort` nie są puste, program dodaje klauzule **WHERE** i/lub **order by** .|
+|czwart \*|Kompletna instrukcja **SELECT** z klauzulą **WHERE** i/lub **order by**|Zgodnie z oczekiwaniami. `m_strFilter` i/lub `m_strSort` muszą pozostać puste lub dwie instrukcje Filter i/lub Sort są generowane.|
+|5000 \*|Wywołanie procedury składowanej|Zgodnie z oczekiwaniami.|
 
-\*`m_nFields` musi być mniejsza lub równa liczbie kolumn określonych w instrukcji **SELECT.** Typ danych każdej kolumny określonej w instrukcji **SELECT** musi być taki sam jak typ danych odpowiedniej kolumny wyjściowej RFX.
+\*`m_nFields`musi być mniejsza lub równa liczbie kolumn określonych w instrukcji **SELECT** . Typ danych każdej kolumny określonej w instrukcji **SELECT** musi być taki sam jak typ danych odpowiadającej RFX kolumny wyjściowej.
 
 ### <a name="case-1---lpszsql--null"></a>Przypadek 1 lpszSQL = NULL
 
-Wybór pliku recordset `GetDefaultSQL` zależy `CRecordset::Open` od tego, co zwraca, gdy wywołuje go. Przypadki od 2 do 5 opisują możliwe ciągi.
+Wybór zestawu rekordów zależy od tego, co `GetDefaultSQL` zwraca po `CRecordset::Open` jego wywołania. W przypadku przypadków od 2 do 5 opisano możliwe ciągi.
 
 ### <a name="case-2---lpszsql--a-table-name"></a>Przypadek 2 lpszSQL = nazwa tabeli
 
-Zestawienie rekordów używa wymiany pól rekordów (RFX) do tworzenia listy kolumn na podstawie nazw kolumn podanych w `DoFieldExchange`wywołaniach funkcji RFX w zastąpiono klasę zestawie rekordów . Jeśli do zadeklarowania klasy zestawu rekordów użyto kreatora, ten przypadek ma taki sam wynik jak przypadek 1 (pod warunkiem podania tej samej nazwy tabeli określonej w kreatorze). Jeśli nie używasz kreatora do pisania klasy, przypadek 2 jest najprostszym sposobem konstruowania instrukcji SQL.
+Zestaw rekordów używa wymiany pól rekordów (RFX) w celu skompilowania listy kolumn na podstawie nazw kolumn dostarczonych w wywołaniach funkcji RFX w przesłonięciu klasy zestawu rekordów `DoFieldExchange` . Jeśli użyto Kreatora do zadeklarowania klasy zestawu rekordów, ten przypadek ma taki sam wynik jak w przypadku 1 (pod warunkiem, że podano tę samą nazwę tabeli, która została określona w Kreatorze). Jeśli nie używasz Kreatora do pisania klasy, przypadek 2 jest najprostszym sposobem konstruowania instrukcji SQL.
 
-Poniższy przykład tworzy instrukcję SQL, która wybiera rekordy z aplikacji bazy danych MFC. Gdy framework wywołuje `GetDefaultSQL` funkcję elementu członkowskiego, funkcja zwraca `SECTION`nazwę tabeli, .
+Poniższy przykład tworzy instrukcję SQL, która wybiera rekordy z aplikacji bazy danych MFC. Gdy struktura wywołuje `GetDefaultSQL` funkcję członkowską, funkcja zwraca nazwę tabeli, `SECTION` .
 
 ```cpp
 CString CEnrollSet::GetDefaultSQL()
@@ -111,7 +112,7 @@ CString CEnrollSet::GetDefaultSQL()
 }
 ```
 
-Aby uzyskać nazwy kolumn dla instrukcji SQL **SELECT,** struktura `DoFieldExchange` wywołuje funkcję elementu członkowskiego.
+Aby uzyskać nazwy kolumn instrukcji **SELECT** języka SQL, struktura wywołuje `DoFieldExchange` funkcję członkowską.
 
 ```cpp
 void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
@@ -125,7 +126,7 @@ void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-Po zakończeniu instrukcja SQL wygląda następująco:
+Po zakończeniu instrukcja SQL będzie wyglądać następująco:
 
 ```sql
 SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
@@ -134,31 +135,31 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
 
 ### <a name="case-3---lpszsql--a-selectfrom-statement"></a>Przypadek 3 lpszSQL = instrukcja SELECT/FROM
 
-Listę kolumn można określić ręcznie, a nie polegać na RFX, aby utworzyć ją automatycznie. Można to zrobić, gdy:
+Należy ręcznie określić listę kolumn, zamiast polegać na RFX. Można to zrobić w następujący sposób:
 
-- Chcesz określić słowo kluczowe **DISTINCT** po **SELECT**.
+- Chcesz określić słowo kluczowe **DISTINCT** po **zaznaczeniu**.
 
-   Lista kolumn powinna być zgodna z nazwami kolumn i `DoFieldExchange`typami w tej samej kolejności, w jakiej są wymienione w pliku .
+   Lista kolumn powinna być zgodna z nazwami kolumn i typami w tej samej kolejności, w jakiej są wymienione w `DoFieldExchange` .
 
-- Masz powód, aby ręcznie pobierać wartości kolumn `::SQLGetData` przy użyciu funkcji ODBC, a nie polegać na RFX do powiązania i pobierania kolumn dla Ciebie.
+- Istnieje powód, aby ręcznie pobrać wartości kolumn przy użyciu funkcji ODBC `::SQLGetData` zamiast polegać na RFX, aby powiązać i pobrać kolumny.
 
-   Można na przykład chcieć pomieścić nowe kolumny klienta aplikacji dodane do tabel bazy danych po aplikacji został rozesłany. Należy dodać te dodatkowe elementy członkowskie danych pola, które nie były znane w momencie deklarowania klasy za pomocą kreatora.
+   Możesz na przykład uwzględnić nowe kolumny klienta aplikacji dodanej do tabel bazy danych po rozesłaniu aplikacji. Należy dodać te dodatkowe składowe danych pól, które nie były znane w czasie zadeklarowanym w klasie za pomocą kreatora.
 
-   Lista kolumn powinna być zgodna z nazwami kolumn i `DoFieldExchange`typami w tej samej kolejności, w jakiej są wymienione, a następnie nazwami kolumn powiązanych ręcznie. Aby uzyskać więcej informacji, zobacz [Zestaw rekordów: Dynamicznie wiążące kolumny danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+   Lista kolumn powinna być zgodna z nazwami kolumn i typami w tej samej kolejności, w jakiej są wyświetlane w `DoFieldExchange` , a następnie według nazw kolumn powiązanych ręcznie. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dynamiczne wiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-- Chcesz dołączyć do tabel, określając wiele tabel w klauzuli **FROM.**
+- Chcesz dołączyć do tabel, określając wiele tabel w klauzuli **from** .
 
-   Aby uzyskać informacje i przykład, zobacz [Recordset: Performing a Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Aby uzyskać informacje i przykład, zobacz [zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
-### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>Przypadek 4 lpszSQL = WYBIERZ/Z Plus GDZIE i/lub ZAMÓW WEDŁUG
+### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>Przypadek 4 lpszSQL = SELECT/FROM oraz WHERE i/lub ORDER BY
 
-Określ wszystko: listę kolumn (na podstawie wywołań RFX w), `DoFieldExchange`listę tabel i zawartość **klauzuli WHERE** i/lub ORDER **BY.** Jeśli określisz klauzule **WHERE** i/lub **ORDER BY** `m_strFilter` w ten `m_strSort`sposób, nie używaj i/lub .
+Należy określić wszystko: lista kolumn (oparta na wywołaniach RFX w programie `DoFieldExchange` ), lista tabel oraz zawartość klauzuli **order by** i/  or. Jeśli określisz klauzule **WHERE** i/lub **order by** w ten sposób, nie używaj `m_strFilter` i/lub `m_strSort` .
 
 ### <a name="case-5---lpszsql--a-stored-procedure-call"></a>Przypadek 5 lpszSQL = wywołanie procedury składowanej
 
-Jeśli chcesz wywołać wstępnie zdefiniowaną kwerendę (taką jak procedura składowana w bazie danych programu Microsoft SQL Server), należy napisać instrukcję **CALL** w ciągu przekazywanym do *programu lpszSQL*. Kreatorzy nie obsługują deklarowania klasy pliku recordset do wywoływania wstępnie zdefiniowanej kwerendy. Nie wszystkie wstępnie zdefiniowane kwerendy zwracają rekordy.
+Jeśli konieczne jest wywołanie wstępnie zdefiniowanego zapytania (na przykład procedury składowanej w Microsoft SQL Server Database), należy napisać instrukcję **call** w ciągu przekazywanym do *lpszSQL*. Kreatory nie obsługują deklarowania klasy zestawu rekordów do wywoływania wstępnie zdefiniowanego zapytania. Nie wszystkie wstępnie zdefiniowane zapytania zwracają rekordy.
 
-Jeśli wstępnie zdefiniowana kwerenda nie zwraca rekordów, `ExecuteSQL` można użyć funkcji `CDatabase` elementu członkowskiego bezpośrednio. W przypadku wstępnie zdefiniowanej kwerendy, która zwraca rekordy, należy również `DoFieldExchange` ręcznie zapisać wywołania RFX dla wszystkich kolumn zwraca procedurę. Wywołania RFX muszą być w tej samej kolejności i zwracać te same typy, co wstępnie zdefiniowane zapytanie. Aby uzyskać więcej informacji, zobacz [Recordset: Declaring a Class for a Predefined Query (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+Jeśli wstępnie zdefiniowane zapytanie nie zwraca rekordów, można użyć `CDatabase` funkcji elementu członkowskiego `ExecuteSQL` bezpośrednio. Dla wstępnie zdefiniowanego zapytania, które zwraca rekordy, należy również ręcznie napisać wywołania RFX w `DoFieldExchange` dla każdej kolumny, która zwraca procedurę. Wywołania RFX muszą być w tej samej kolejności i zwracać te same typy, co wstępnie zdefiniowane zapytanie. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 ## <a name="see-also"></a>Zobacz też
 

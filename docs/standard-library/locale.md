@@ -1,5 +1,6 @@
 ---
-title: '&lt;ustawienie&gt;'
+description: 'Dowiedz się więcej o programie: &lt; locale&gt;'
+title: '&lt;locale&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <locale>
@@ -8,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-ms.openlocfilehash: ae008ef45e8a6bb57505432f2c931a768d4c8ea4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dce8cb130269450e1b7996b61504e59dc372e3b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277807"
 ---
-# <a name="ltlocalegt"></a>&lt;ustawienie&gt;
+# <a name="ltlocalegt"></a>&lt;locale&gt;
 
 Definiuje szablony klas i funkcje, które mogą być używane przez programy C++ do hermetyzacji i manipulowania różnymi konwencjami kulturowymi dotyczącymi reprezentacji i formatowania danych liczbowych, pieniężnych i kalendarzowych, w tym do obsługi funkcji wielojęzycznych klasyfikacji znaków i sortowania ciągów.
 
@@ -58,7 +59,7 @@ Definiuje szablony klas i funkcje, które mogą być używane przez programy C++
 |[CType\<char>](../standard-library/ctype-char-class.md)|Klasa, która jest jawną specjalizacją szablonu klasy `ctype<CharType>` do wpisywania **`char`** opisującą obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu scharakteryzowania różnych właściwości znaku typu **`char`** .|
 |[ctype_base](../standard-library/ctype-base-class.md)|Klasa bazowa dla klasy ctype, która jest używana do definiowania typów wyliczeń używanych w celu klasyfikowania lub testowania znaków indywidualnie lub w ramach całych zakresów.|
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Szablon klasy pochodnej, który opisuje obiekt, który może być używany jako zestaw reguł CType dla danego ustawienia regionalnego, co umożliwia klasyfikację znaków i konwersję znaków między zestawami znaków w przypadku i natywnym i lokalnym.|
-|[ustawienie](../standard-library/locale-class.md)|Klasa opisująca obiekt ustawień regionalnych, który hermetyzuje informacje specyficzne dla kultury jako zbiór zestawu reguł, które wspólnie definiują specyficzne środowisko zlokalizowane.|
+|[locale](../standard-library/locale-class.md)|Klasa opisująca obiekt ustawień regionalnych, który hermetyzuje informacje specyficzne dla kultury jako zbiór zestawu reguł, które wspólnie definiują specyficzne środowisko zlokalizowane.|
 |[komunikaty](../standard-library/messages-class.md)|Szablon klasy, który opisuje obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu pobrania zlokalizowanych komunikatów z katalogu międzynarodowych komunikatów dla danego ustawienia regionalnego.|
 |[messages_base](../standard-library/messages-base-class.md)|Klasa bazowa opisująca **`int`** Typ wykazu komunikatów.|
 |[messages_byname](../standard-library/messages-byname-class.md)|Szablon klasy pochodnej, który opisuje obiekt, który może być używany jako zestaw aspektów komunikatów dla danego ustawienia regionalnego, umożliwiając pobieranie zlokalizowanych komunikatów.|
@@ -79,7 +80,7 @@ Definiuje szablony klas i funkcje, które mogą być używane przez programy C++
 |[Klasa wbuffer_convert](../standard-library/wbuffer-convert-class.md)|Opisuje bufor strumienia, który kontroluje przekazywanie elementów do i z bufora strumienia bajtów.|
 |[Klasa wstring_convert](../standard-library/wstring-convert-class.md)|Szablon klasy, który wykonuje konwersje między ciągiem szerokim i ciągiem bajtowym.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strony kodowe](../c-runtime-library/code-pages.md)\
 [Nazwy lokalne, Języki i ciągi kraj/region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\

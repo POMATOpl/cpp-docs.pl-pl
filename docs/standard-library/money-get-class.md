@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy money_get
 title: money_get — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: ab49dad1a24e57eb33834cc651d9ccdb50abe68c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6dfab2347799c78b89e2da9e00ebdb71af0c22d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277508"
 ---
 # <a name="money_get-class"></a>money_get — Klasa
 
@@ -65,7 +66,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 |Funkcja członkowska|Opis|
 |-|-|
 |[do_get](#do_get)|Funkcja wirtualna wywoływana w celu wyodrębniania wartości liczbowej z sekwencji znaków, która reprezentuje wartość pieniężną.|
-|[Pobierz](#get)|Wyodrębnia wartość liczbową z sekwencji znaków, która reprezentuje wartość pieniężną.|
+|[get](#get)|Wyodrębnia wartość liczbową z sekwencji znaków, która reprezentuje wartość pieniężną.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -73,7 +74,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="money_getchar_type"></a><a name="char_type"></a>money_get:: char_type
+## <a name="money_getchar_type"></a><a name="char_type"></a> money_get:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -85,7 +86,7 @@ typedef CharType char_type;
 
 Typ jest synonimem dla parametru szablonu *CharType*.
 
-## <a name="money_getdo_get"></a><a name="do_get"></a>money_get::d o_get
+## <a name="money_getdo_get"></a><a name="do_get"></a> money_get::d o_get
 
 Funkcja wirtualna wywoływana w celu wyodrębniania wartości liczbowej z sekwencji znaków, która reprezentuje wartość pieniężną.
 
@@ -153,11 +154,11 @@ W szczególności:
 
 - **FAC**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) określa liczbę znaczących cyfr ułamków po prawej stronie dowolnego punktu dziesiętnego. Podczas analizowania kwoty pieniężnej o większej liczbie ułamków niż jest wywoływana przez `frac_digits` , program `do_get` przerywa analizowanie po użyciu najwyżej `frac_digits` znaków.
 
-Jeśli ciąg znaków ( **FAC**. `negative_sign`lub **FAC**. `positive_sign`) ma więcej niż jeden element, tylko pierwszy element jest dopasowywany w przypadku, gdy element jest równy **money_base:: Sign** pojawia się w wzorcu formatu ( **FAC**. `neg_format`). Wszystkie pozostałe elementy są dopasowywane na końcu pola danych wejściowych pieniężnych. Jeśli żaden z parametrów nie ma pierwszego elementu, który jest zgodny z następnym elementem w polu wejściowym walutowym, ciąg znaków jest traktowany jako pusty, a znak jest dodatni.
+Jeśli ciąg znaków ( **FAC**. `negative_sign` lub **FAC**. `positive_sign`) ma więcej niż jeden element, tylko pierwszy element jest dopasowywany w przypadku, gdy element jest równy **money_base:: Sign** pojawia się w wzorcu formatu ( **FAC**. `neg_format`). Wszystkie pozostałe elementy są dopasowywane na końcu pola danych wejściowych pieniężnych. Jeśli żaden z parametrów nie ma pierwszego elementu, który jest zgodny z następnym elementem w polu wejściowym walutowym, ciąg znaków jest traktowany jako pusty, a znak jest dodatni.
 
-Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags)  &  [showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, ciąg **FAC**. `curr_symbol`musi pasować do miejsca, w którym element jest równy **money_base:: symbol** jest wyświetlany w wzorcu formatu. W przeciwnym razie, jeśli **money_base:: symbol** występuje na końcu wzorca formatu i jeśli żadne elementy ciągu znaków nie pozostaną dopasowane, symbol waluty nie jest dopasowany. W przeciwnym razie symbol waluty jest opcjonalnie dopasowany.
+Jeśli **iosbase**. [flagi](../standard-library/ios-base-class.md#flags)  &  [showbase](../standard-library/ios-functions.md#showbase) jest różna od zera, ciąg **FAC**. `curr_symbol` musi pasować do miejsca, w którym element jest równy **money_base:: symbol** jest wyświetlany w wzorcu formatu. W przeciwnym razie, jeśli **money_base:: symbol** występuje na końcu wzorca formatu i jeśli żadne elementy ciągu znaków nie pozostaną dopasowane, symbol waluty nie jest dopasowany. W przeciwnym razie symbol waluty jest opcjonalnie dopasowany.
 
-Jeśli nie ma wystąpień elementu **FAC**. `thousands_sep`występuje w części wartości pola danych wejściowych pieniężnych (gdzie element równy **money_base:: value** występuje we wzorcu formatu), nie nałożono ograniczenia grupowania. W przeciwnym razie wszystkie ograniczenia grupowania narzucone przez **FAC**. **grupowanie** jest wymuszane. Należy zauważyć, że wynikiem sekwencji cyfr reprezentuje liczbę całkowitą, której **FAC**o niskiej kolejności. `frac_digits`cyfry dziesiętne są uwzględniane z prawej strony punktu dziesiętnego.
+Jeśli nie ma wystąpień elementu **FAC**. `thousands_sep` występuje w części wartości pola danych wejściowych pieniężnych (gdzie element równy **money_base:: value** występuje we wzorcu formatu), nie nałożono ograniczenia grupowania. W przeciwnym razie wszystkie ograniczenia grupowania narzucone przez **FAC**. **grupowanie** jest wymuszane. Należy zauważyć, że wynikiem sekwencji cyfr reprezentuje liczbę całkowitą, której **FAC** o niskiej kolejności. `frac_digits` cyfry dziesiętne są uwzględniane z prawej strony punktu dziesiętnego.
 
 Dowolnie dowolny biały znak jest dopasowywany w przypadku, gdy element jest równy **money_base:: spacja** pojawia się w wzorcu formatu, jeśli występuje inaczej niż na końcu wzorca formatu. W przeciwnym razie nie jest dopasowywany wewnętrzny odstęp. Element *ch* jest traktowany jako biały znak, jeśli [use_facet](../standard-library/locale-functions.md#use_facet)  <  [CType](../standard-library/ctype-class.md) \< **CharType**> > ( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base:: Space**, *ch*) jest **`true`** .
 
@@ -165,7 +166,7 @@ Dowolnie dowolny biały znak jest dopasowywany w przypadku, gdy element jest ró
 
 Zobacz przykład dla [Get](#get), który wywołuje `do_get` .
 
-## <a name="money_getget"></a><a name="get"></a>money_get:: Get
+## <a name="money_getget"></a><a name="get"></a> money_get:: Get
 
 Wyodrębnia wartość liczbową z sekwencji znaków, która reprezentuje wartość pieniężną.
 
@@ -262,7 +263,7 @@ int main( )
 };
 ```
 
-## <a name="money_getiter_type"></a><a name="iter_type"></a>money_get:: iter_type
+## <a name="money_getiter_type"></a><a name="iter_type"></a> money_get:: iter_type
 
 Typ, który opisuje iterator danych wejściowych.
 
@@ -274,7 +275,7 @@ typedef InputIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu **InputIterator**.
 
-## <a name="money_getmoney_get"></a><a name="money_get"></a>money_get:: money_get
+## <a name="money_getmoney_get"></a><a name="money_get"></a> money_get:: money_get
 
 Konstruktor dla obiektów typu `money_get` , które są używane do wyodrębniania wartości liczbowych z sekwencji reprezentujących wartości pieniężne.
 
@@ -295,13 +296,13 @@ Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
 - 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \>1: te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
 Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::**[facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="money_getstring_type"></a><a name="string_type"></a>money_get:: string_type
+## <a name="money_getstring_type"></a><a name="string_type"></a> money_get:: string_type
 
 Typ, który opisuje ciąg zawierający znaki typu **CharType**.
 
@@ -313,7 +314,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<locale>](../standard-library/locale.md)\
 [facet — Klasa](../standard-library/locale-class.md#facet_class)\

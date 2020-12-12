@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2893'
 title: Błąd kompilatora C2893
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
-ms.openlocfilehash: ca603eb94d5d528a7fed15e0320e1f5d88bf0629
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 42e31327096a539feeb691c698b52f57ecb615a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278262"
 ---
 # <a name="compiler-error-c2893"></a>Błąd kompilatora C2893
 
@@ -23,7 +24,7 @@ Ogólnie rzecz biorąc, metoda rozwiązywania błędu C2893 polega na przejrzeni
 
 ## <a name="example"></a>Przykład
 
-C2893 występuje, ponieważ `T` parametru szablonu `f`jest `std::map<int,int>`, ale `std::map<int,int>` nie ma elementu członkowskiego `data_type` (`T::data_type` nie można utworzyć wystąpienia z `T = std::map<int,int>`.). Poniższy przykład generuje C2893.
+C2893 występuje `f` , ponieważ parametr szablonu `T` jest wywnioskowany jako `std::map<int,int>` , ale nie `std::map<int,int>` ma żadnego elementu członkowskiego `data_type` ( `T::data_type` nie można utworzyć wystąpienia z `T = std::map<int,int>` .). Poniższy przykład generuje C2893.
 
 ```cpp
 // C2893.cpp

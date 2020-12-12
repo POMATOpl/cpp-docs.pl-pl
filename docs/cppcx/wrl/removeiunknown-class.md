@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa RemoveIUnknown'
 title: RemoveIUnknown — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-ms.openlocfilehash: cfcdefbb8d7cd12d2ebf99710f595fdd2fc16f76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0ef00ee9859a27252550aaeec6fb9b4f9ef2d5b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278730"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown — Klasa
 
@@ -28,22 +29,22 @@ class RemoveIUnknown : public T;
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Klasa.
 
 ## <a name="remarks"></a>Uwagi
 
-Tworzy typ, który jest odpowiednikiem typu `IUnknown`, ale ma niewirtualne `QueryInterface`, `AddRef`i `Release` funkcje składowe.
+Tworzy typ, który jest odpowiednikiem `IUnknown` typu opartego na typie, ale ma funkcje niewirtualne `QueryInterface` `AddRef` i `Release` składowe.
 
-Domyślnie metody COM zapewniają metody wirtualne `QueryInterface`, `AddRef`i `Release`. Niemniej jednak `ComPtr` nie wymagają nakładów związanych z metodami wirtualnymi. `RemoveIUnknown` eliminuje to narzuty, zapewniając prywatne, niewirtualne `QueryInterface`, `AddRef`i metody `Release`.
+Domyślnie metody COM zapewniają `QueryInterface` metody wirtualne, `AddRef` i `Release` . `ComPtr`Nie wymaga jednak nakładów związanych z metodami wirtualnymi. `RemoveIUnknown` Eliminuje to narzuty, zapewniając prywatne, niewirtualne `QueryInterface` `AddRef` i `Release` metody.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|`ReturnType`|Synonim dla typu, który jest odpowiednikiem parametru szablonu *T* , ale zawiera niewirtualne elementy członkowskie `IUnknown`.|
+|`ReturnType`|Synonim dla typu, który jest odpowiednikiem parametru szablonu *T* , ale ma niewirtualne `IUnknown` składowe.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -59,4 +60,4 @@ Domyślnie metody COM zapewniają metody wirtualne `QueryInterface`, `AddRef`i `
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)
