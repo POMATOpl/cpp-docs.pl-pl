@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy fisher_f_distribution
 title: fisher_f_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3020faef2ada6254fde940c89a60630816109863
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232472"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution — Klasa
 

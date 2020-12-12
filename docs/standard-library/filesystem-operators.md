@@ -1,5 +1,6 @@
 ---
-title: '&lt;System plików&gt; operatorów'
+description: 'Dowiedz się więcej o: &lt; Operatory systemu plików &gt;'
+title: '&lt;Operatory systemu plików &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator==
@@ -12,18 +13,18 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::operator<<
 - FILESYSTEM/std::experimental::filesystem::operator>>
 ms.assetid: 102c4833-aa3b-41a8-8998-f5003c546bfd
-ms.openlocfilehash: 819c91e707e50a190aa58eda62f8e07f3451b033
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 140ef553cbfd17fe2b1cfc41bedba397506da817
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232473"
 ---
-# <a name="ltfilesystemgt-operators"></a>&lt;System plików&gt; operatorów
+# <a name="ltfilesystemgt-operators"></a>&lt;Operatory systemu plików &gt;
 
-Operatory wykonać leksykalne porównanie dwóch ścieżek jako ciągi. Użyj `equivalent` funkcję, aby określić, czy dwie ścieżki (na przykład ścieżki względnej i ścieżką bezwzględną) odwoływać się do tego samego pliku lub katalogu na dysku.
+Operatory wykonują leksykalne porównanie dwóch ścieżek jako ciągi. Użyj `equivalent` funkcji, aby określić, czy dwie ścieżki (na przykład ścieżka względna i ścieżka bezwzględna) odnoszą się do tego samego pliku lub katalogu na dysku.
 
-Aby uzyskać więcej informacji, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
+Aby uzyskać więcej informacji, zobacz [Nawigacja w systemie plików (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="operator"></a>operator==
 
@@ -31,7 +32,7 @@ Aby uzyskać więcej informacji, zobacz [nawigacji systemu plików (C++)](../sta
 bool operator==(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca left.native() == right.native().
+Funkcja zwraca wartość Left. Native () = = Right. Native ().
 
 ## <a name="operator"></a>operator!=
 
@@ -39,31 +40,31 @@ Funkcja zwraca left.native() == right.native().
 bool operator!=(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca! (== lewej po prawej stronie).
+Funkcja zwraca! (Left = = Right).
 
-## <a name="operator"></a>operator<
+## <a name="operator"></a>< operatora
 
 ```cpp
 bool operator<(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca left.native() < right.native().
+Funkcja zwraca wartość Left. Native () < Right. Native ().
 
-## <a name="operator"></a>operator<=
+## <a name="operator"></a><operatora =
 
 ```cpp
 bool operator<=(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca! (prawy \< po lewej stronie).
+Funkcja zwraca! ( \< po lewej stronie).
 
-## <a name="operator"></a>operator>
+## <a name="operator"></a>> operatora
 
 ```cpp
 bool operator>(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca bezpośrednio \< po lewej stronie.
+Funkcja zwraca prawo \< .
 
 ## <a name="operator"></a>operator>=
 
@@ -71,9 +72,9 @@ Funkcja zwraca bezpośrednio \< po lewej stronie.
 bool operator>=(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca! (po lewej stronie < prawo).
+Funkcja zwraca! (po lewej < w prawo).
 
-## <a name="operator"></a>operator /
+## <a name="operator"></a>zakład
 
 ```cpp
 path operator/(const path& left, const path& right);
@@ -87,16 +88,16 @@ path ans = left;
 return (ans /= right);
 ```
 
-## <a name="operator"></a>Operator <<
+## <a name="operator"></a><< operatora
 
 ```cpp
 template <class Elem, class Traits>
 basic_ostream<Elem, Traits>& operator<<(basic_ostream<Elem, Traits>& os, const path& pval);
 ```
 
-Funkcja zwraca os << pval.string\<Elem, cechy > ().
+Funkcja zwraca system operacyjny << Pval. String \<Elem, Traits> ().
 
-## <a name="operator"></a>operator>>
+## <a name="operator"></a>>> operatora
 
 ```cpp
 template <class Elem, class Traits>

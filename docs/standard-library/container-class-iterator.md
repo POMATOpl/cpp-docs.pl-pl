@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej na temat: Container Class:: iterator'
 title: Kontener Class::iterator
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator method
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
-ms.openlocfilehash: c761473a5fa3438dc8e6bd824a0b32fa32936376
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9a6d812c3e43b671db2276a77390871d84910407
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233490"
 ---
 # <a name="container-classiterator"></a>Kontener Class::iterator
 
 > [!NOTE]
-> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji języka Microsoft C++ jako niefunkcjonalny przykład kontenerów używanych w standardowej bibliotece języka C++. Aby uzyskać więcej informacji, zobacz [kontenery standardowej biblioteki języka C++](../standard-library/stl-containers.md).
 
 Opisuje obiekt, który może być używany jako iterator dla kontrolowanej sekwencji.
 
@@ -26,8 +27,8 @@ typedef T5 iterator;
 
 ## <a name="remarks"></a>Uwagi
 
-Jest on opisany tutaj jako synonim dla nieokreślonego typu `T5`. Obiekt typu `iterator` może być rzutowany do obiektu typu [const_iterator](../standard-library/container-class-const-iterator.md).
+Jest on opisany tutaj jako synonim dla nieokreślonego typu `T5` . Obiekt typu `iterator` może być rzutowany do obiektu typu [const_iterator](../standard-library/container-class-const-iterator.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Sample Container, klasa](../standard-library/sample-container-class.md)
+[Przykładowa Klasa kontenera](../standard-library/sample-container-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: we/wy strumienia'
 title: We/Wy strumienia
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a787d83390239679ad48c2ca09b41f567a0a8c95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235674"
 ---
 # <a name="stream-io"></a>We/Wy strumienia
 
@@ -23,7 +24,7 @@ Te funkcje przetwarzają dane w różnych rozmiarach i formatach, od pojedynczyc
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Wyczyść wskaźnik błędu dla usługi Stream|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij strumień|
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij wszystkie otwarte strumienie z wyjątkiem **stdin**, **stdout**i **stderr**|
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij wszystkie otwarte strumienie z wyjątkiem **stdin**, **stdout** i **stderr**|
 |[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Skojarz strumień z deskryptorem pliku otwartego pliku|
 |[feof](../c-runtime-library/reference/feof.md)|Testuj pod kątem końca pliku w strumieniu|
 |[ferror](../c-runtime-library/reference/ferror.md)|Testuj pod kątem błędu w strumieniu|
@@ -77,13 +78,13 @@ Te funkcje przetwarzają dane w różnych rozmiarach i formatach, od pojedynczyc
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Zapisz sformatowane dane o określonej długości w buforze|
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Zapisz sformatowane dane w buforze|
 
-Gdy program rozpoczyna wykonywanie, kod uruchamiania automatycznie otwiera kilka strumieni: standardowe dane wejściowe (wskazywane przez **stdin**), standardowe wyjście (wskazywane przez **stdout**) i błąd standardowy (wskazywany przez **stderr**). Te strumienie są domyślnie kierowane do konsoli (klawiatury i ekranu). Użyj **freopen** , aby przekierować **stdin**, **stdout**lub **stderr** do pliku dysku lub urządzenia.
+Gdy program rozpoczyna wykonywanie, kod uruchamiania automatycznie otwiera kilka strumieni: standardowe dane wejściowe (wskazywane przez **stdin**), standardowe wyjście (wskazywane przez **stdout**) i błąd standardowy (wskazywany przez **stderr**). Te strumienie są domyślnie kierowane do konsoli (klawiatury i ekranu). Użyj **freopen** , aby przekierować **stdin**, **stdout** lub **stderr** do pliku dysku lub urządzenia.
 
 Pliki otwierane przy użyciu procedur przesyłania strumieniowego są domyślnie buforowane. Funkcje **stdout** i **stderr** są opróżniane za każdym razem, gdy są pełne lub, jeśli piszesz na znakowe urządzenie, po każdym wywołaniu biblioteki. Jeśli program kończy się nieprawidłowo, bufory wyjściowe nie mogą być opróżniane, co spowodowało utratę danych. Użyj **fflush** lub **_flushall** , aby upewnić się, że bufor skojarzony z określonym plikiem lub wszystkie otwarte bufory są opróżniane do systemu operacyjnego, który może buforować dane przed zapisaniem go na dysku. Funkcja Zatwierdź do dysku gwarantuje, że opróżniona zawartość buforu nie zostanie utracona w przypadku awarii systemu.
 
 Istnieją dwa sposoby zatwierdzania zawartości buforu na dysk:
 
-- Połącz z plikiem. OBJ, aby ustawić globalną flagę zatwierdzania. Domyślnym ustawieniem flagi globalnej jest **n**dla opcji "No-Commit".
+- Połącz z plikiem. OBJ, aby ustawić globalną flagę zatwierdzania. Domyślnym ustawieniem flagi globalnej jest **n** dla opcji "No-Commit".
 
 - Ustaw flagę Mode na **c** z **fopen** lub **_fdopen**.
 
@@ -91,9 +92,9 @@ Każdy plik otwarty z flagą **c** lub **n** zachowuje się zgodnie z flagą, ni
 
 Jeśli w programie nie zamknięto jawnie strumienia, strumień jest automatycznie zamykany po zakończeniu działania programu. Należy jednak zamknąć strumień, gdy program go zakończy, ponieważ liczba strumieni, które mogą być otwarte w tym samym czasie, jest ograniczona. Aby uzyskać informacje dotyczące tego limitu, zobacz [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
 
-Dane wejściowe mogą być bezpośrednio zgodne z wywołaniem wywołującym **fflush** lub funkcją pozycjonowania plików (**fseek**, **fsetpos**lub **przewijania do tyłu**). Dane wyjściowe mogą podążać za danymi wejściowymi bez wywołującego wywołania funkcji umieszczania plików, jeśli operacja wejściowa napotka koniec pliku.
+Dane wejściowe mogą być bezpośrednio zgodne z wywołaniem wywołującym **fflush** lub funkcją pozycjonowania plików (**fseek**, **fsetpos** lub **przewijania do tyłu**). Dane wyjściowe mogą podążać za danymi wejściowymi bez wywołującego wywołania funkcji umieszczania plików, jeśli operacja wejściowa napotka koniec pliku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wejście i wyjście](../c-runtime-library/input-and-output.md)<br/>
 [Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

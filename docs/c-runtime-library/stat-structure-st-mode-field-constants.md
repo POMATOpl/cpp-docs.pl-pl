@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury _stat st_mode stałych pól
 title: Stałe pola_stat Struktura st_mode
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,14 +36,14 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: ff2b6ac806b774ae3fe80f9b3cf4b3d2e82a2a9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd304119c705196981342caf5a257cc113fed923
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235739"
 ---
-# <a name="stat-structure-stmode-field-constants"></a>Stałe pola_stat Struktura st_mode
+# <a name="_stat-structure-st_mode-field-constants"></a>Stałe pola_stat Struktura st_mode
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,23 +53,23 @@ ms.locfileid: "62267848"
 
 ## <a name="remarks"></a>Uwagi
 
-Te stałe są używane do wskazać typ pliku **st_mode** pole [_stat struktura](../c-runtime-library/standard-types.md).
+Te stałe są używane do wskazywania typu pliku w polu **st_mode** [struktury _stat](../c-runtime-library/standard-types.md).
 
-Stałe maska bitowa zostały opisane poniżej:
+Stałe maski bitowe są opisane poniżej:
 
 |Stała|Znaczenie|
 |--------------|-------------|
 |`_S_IFMT`|Maska typu pliku|
 |`_S_IFDIR`|Katalog|
-|`_S_IFCHR`|Znak specjalny (oznacza to urządzenie, jeśli ustawiona)|
-|`_S_IFREG`|Regularne|
-|`_S_IREAD`|Uprawnienia do odczytu, właściciela|
-|`_S_IWRITE`|Uprawnienia do zapisu właściciela|
-|`_S_IEXEC`|Wykonywanie/wyszukiwania uprawnienia właściciela|
+|`_S_IFCHR`|Znak specjalny (wskazuje urządzenie, jeśli zostało ustawione)|
+|`_S_IFREG`|Zwykły|
+|`_S_IREAD`|Uprawnienie Odczyt, właściciel|
+|`_S_IWRITE`|Uprawnienie do zapisu, właściciel|
+|`_S_IEXEC`|Uprawnienie wykonaj/Wyszukaj, właściciel|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[_stat, _wstat — funkcje](../c-runtime-library/reference/stat-functions.md)<br/>
+[_stat, funkcje _wstat](../c-runtime-library/reference/stat-functions.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[Standardowe typy](../c-runtime-library/standard-types.md)<br/>
+[Typy standardowe](../c-runtime-library/standard-types.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

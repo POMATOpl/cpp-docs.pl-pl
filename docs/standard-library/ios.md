@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; iOS&gt;'
 title: '&lt;wykonane&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ea336c3dc36b6f9afa76d00496965bb860d1be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845487"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231410"
 ---
 # <a name="ltiosgt"></a>&lt;wykonane&gt;
 

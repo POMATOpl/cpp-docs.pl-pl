@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy invoke_result
 title: Klasa invoke_result
 ms.date: 02/21/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: e3e1a28310660ad1fbdae4dd58973de378ddf364
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4204ff1b0b8d38eab4b7d8c0de4709b90e12f5d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231500"
 ---
 # <a name="invoke_result-class"></a>Klasa invoke_result
 
@@ -41,7 +42,7 @@ Typy listy argumentów dla wywoływanego typu do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj tego szablonu, aby określić typ wyniku możliwego *do przeprowadzenia (**args*...) w czasie kompilacji *, gdzie możliwe* jest dokończenie i wszystkie typy w *args* , tablica nieznanej granicy lub prawdopodobnie kwalifikowana CV **`void`** . `type`Element członkowski szablonu klasy nazywa zwracany typ, który jest wywoływany w przypadku wywołania przy użyciu *Args*argumentów argumenty.... *Callable* `type`Element członkowski jest definiowany tylko wtedy *, gdy* można wywołać wywoływanie przy użyciu argumentów *Args*argumenty... w nieoszacowanym kontekście. W przeciwnym razie szablon klasy nie ma elementu członkowskiego `type` , który umożliwia testowanie SFINAE na określonym zestawie typów argumentów w czasie kompilacji.
+Użyj tego szablonu, aby określić typ wyniku możliwego *do przeprowadzenia (**args*...) w czasie kompilacji *, gdzie możliwe* jest dokończenie i wszystkie typy w *args* , tablica nieznanej granicy lub prawdopodobnie kwalifikowana CV **`void`** . `type`Element członkowski szablonu klasy nazywa zwracany typ, który jest wywoływany w przypadku wywołania przy użyciu argumentów argumenty....  `type`Element członkowski jest definiowany tylko wtedy *, gdy* można wywołać wywoływanie przy użyciu argumentów argumenty... w nieoszacowanym kontekście. W przeciwnym razie szablon klasy nie ma elementu członkowskiego `type` , który umożliwia testowanie SFINAE na określonym zestawie typów argumentów w czasie kompilacji.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -49,7 +50,7 @@ Użyj tego szablonu, aby określić typ wyniku możliwego *do przeprowadzenia (*
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)\
 [wywołuje](functional-functions.md#invoke)

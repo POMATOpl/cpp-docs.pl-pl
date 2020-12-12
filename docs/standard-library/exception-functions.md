@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: &lt; &gt; funkcje wyjątków'
 title: '&lt;&gt;funkcje wyjątków'
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 849f3c8406c43b0efc2d34837e00fee6ff64e52a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f885b75462c2c7e20552d33e63048e7a55a51d67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232567"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;&gt;funkcje wyjątków
 
-## <a name="current_exception"></a><a name="current_exception"></a>current_exception
+## <a name="current_exception"></a><a name="current_exception"></a> current_exception
 
 Uzyskuje inteligentny wskaźnik na bieżący wyjątek.
 
@@ -55,7 +56,7 @@ Destruktor dla bieżącego wyjątku jest wywoływany na końcu **`catch`** bloku
 
 Kolejne wywołania `current_exception` funkcji zwracają `exception_ptr` obiekty odwołujące się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.
 
-## <a name="make_exception_ptr"></a><a name="make_exception_ptr"></a>make_exception_ptr
+## <a name="make_exception_ptr"></a><a name="make_exception_ptr"></a> make_exception_ptr
 
 Tworzy obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , który przechowuje kopię wyjątku.
 
@@ -79,7 +80,7 @@ Wywołanie `make_exception_ptr` funkcji jest równoznaczne z wygenerowaniem wyj�
 
 Aplikacja zwykle nie wymaga `make_exception_ptr` funkcji i odradza jej używanie.
 
-## <a name="rethrow_exception"></a><a name="rethrow_exception"></a>rethrow_exception
+## <a name="rethrow_exception"></a><a name="rethrow_exception"></a> rethrow_exception
 
 Zgłasza wyjątek przekazany jako parametr.
 
@@ -96,7 +97,7 @@ Przechwycony wyjątek do ponownego zgłoszenia. Jeśli *P* jest [exception_ptr](
 
 Po przechowaniu przechwyconego wyjątku w `exception_ptr` obiekcie wątek główny może przetworzyć obiekt. W wątku podstawowym Wywołaj `rethrow_exception` funkcję razem z `exception_ptr` obiektem jako argumentem. `rethrow_exception`Funkcja wyodrębnia wyjątek z `exception_ptr` obiektu, a następnie zgłasza wyjątek w kontekście wątku głównego.
 
-## <a name="get_terminate"></a><a name="get_terminate"></a>get_terminate
+## <a name="get_terminate"></a><a name="get_terminate"></a> get_terminate
 
 Uzyskuje bieżącą `terminate_handler` funkcję.
 
@@ -104,7 +105,7 @@ Uzyskuje bieżącą `terminate_handler` funkcję.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a><a name="set_terminate"></a>set_terminate
+## <a name="set_terminate"></a><a name="set_terminate"></a> set_terminate
 
 Ustanawia nowy `terminate_handler` , który zostanie wywołany po zakończeniu działania programu.
 
@@ -153,7 +154,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a><a name="get_unexpected"></a>get_unexpected
+## <a name="get_unexpected"></a><a name="get_unexpected"></a> get_unexpected
 
 Uzyskuje bieżącą `unexpected_handler` funkcję.
 
@@ -161,7 +162,7 @@ Uzyskuje bieżącą `unexpected_handler` funkcję.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="rethrow_if_nested"></a><a name="rethrow_if_nested"></a>rethrow_if_nested
+## <a name="rethrow_if_nested"></a><a name="rethrow_if_nested"></a> rethrow_if_nested
 
 ```cpp
 template <class E>
@@ -172,7 +173,7 @@ template <class E>
 
 Jeśli nie jest to typ klasy polimorficznej lub jeśli `nested_exception` jest niedostępny lub niejednoznaczny, nie ma żadnego efektu. W przeciwnym razie wykonuje dynamiczne rzutowanie.
 
-## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
+## <a name="set_unexpected"></a><a name="set_unexpected"></a> set_unexpected
 
 Ustanawia nowy, `unexpected_handler` gdy zostanie napotkany nieoczekiwany wyjątek.
 
@@ -220,7 +221,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a><a name="terminate"></a>kończyć
+## <a name="terminate"></a><a name="terminate"></a> kończyć
 
 Wywołuje terminate_handler.
 
@@ -238,7 +239,7 @@ Procedura obsługi zakończenia nie może powrócić do jego obiektu wywołując
 
 Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) , aby zapoznać się z przykładem użycia `terminate` .
 
-## <a name="throw_with_nested"></a><a name="throw_with_nested"></a>throw_with_nested
+## <a name="throw_with_nested"></a><a name="throw_with_nested"></a> throw_with_nested
 
 ```cpp
 template <class T> [[noreturn]]
@@ -249,7 +250,7 @@ template <class T> [[noreturn]]
 
 Zgłasza wyjątek z zagnieżdżonymi wyjątkami.
 
-## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
+## <a name="uncaught_exception"></a><a name="uncaught_exception"></a> uncaught_exception
 
 Zwraca **`true`** tylko wtedy, gdy zgłoszony wyjątek jest aktualnie przetwarzany.
 
@@ -314,7 +315,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a><a name="unexpected"></a>oczekiwan
+## <a name="unexpected"></a><a name="unexpected"></a> oczekiwan
 
 Wywołuje nieoczekiwaną procedurę obsługi.
 
@@ -334,7 +335,7 @@ Nieoczekiwany program obsługi nie może powrócić do jego obiektu wywołujące
 
 - Zgłaszanie obiektu typu [bad_exception](../standard-library/bad-exception-class.md).
 
-- Wywołanie [terminate](../standard-library/exception-functions.md#terminate)metody Terminate `abort` lub `exit` .
+- Wywołanie [](../standard-library/exception-functions.md#terminate)metody Terminate `abort` lub `exit` .
 
 Podczas uruchamiania programu nieoczekiwana procedura obsługi jest funkcją, która wywołuje [przerwanie](../standard-library/exception-functions.md#terminate).
 

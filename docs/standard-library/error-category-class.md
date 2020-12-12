@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy error_category
 title: error_category — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 25ad7f6acfe50cdcc0c4b9df44fb3b8b6244f569
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232658"
 ---
 # <a name="error_category-class"></a>error_category — Klasa
 
@@ -49,7 +50,7 @@ Dwa wstępnie zdefiniowane obiekty implementują `error_category` : [generic_cat
 |-|-|
 |[value_type](#value_type)|Typ reprezentujący przechowywaną wartość kodu błędu.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

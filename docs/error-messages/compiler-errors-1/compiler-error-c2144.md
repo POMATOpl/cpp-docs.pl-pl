@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2144'
 title: Błąd kompilatora C2144
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 172ccb897937008aa305616eea19f234dfc6a3bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235505"
 ---
 # <a name="compiler-error-c2144"></a>Błąd kompilatora C2144
 
@@ -23,7 +24,7 @@ Ten błąd może być spowodowany brakiem zamykającego nawiasu klamrowego, praw
 
 C2144 może również wystąpić podczas próby utworzenia makra ze słowa kluczowego CLR, które zawiera biały znak.
 
-Jeśli próbujesz wykonać przekazywanie dalej, możesz również zobaczyć C2144. Aby uzyskać więcej informacji, zobacz [przekazywanie typu (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
+Jeśli próbujesz wykonać przekazywanie dalej, możesz również zobaczyć C2144. Aby uzyskać więcej informacji, zobacz [przekazywanie dalej typu (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
 
 ## <a name="examples"></a>Przykłady
 

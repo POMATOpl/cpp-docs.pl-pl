@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP'
 title: Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0361da761b9b05e75233711df9e826c15aa14e28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2c7ec1a6fc469bf56faa746f11b52547cbf9ac8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234503"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP
 
@@ -43,7 +44,7 @@ Korzystanie z programowania asynchronicznego to kluczowy składnik modelu aplika
 
 - [Przykład: kontrolowanie wykonywania w aplikacji środowisko wykonawcze systemu Windows przy użyciu języka C++ i języka XAML](#example-app)
 
-## <a name="creating-asynchronous-operations"></a><a name="create-async"></a>Tworzenie operacji asynchronicznych
+## <a name="creating-asynchronous-operations"></a><a name="create-async"></a> Tworzenie operacji asynchronicznych
 
 Do definiowania zadań w tle (PPL) można użyć modelu zadania i kontynuacji w bibliotece równoległych wzorców, a także dodatkowych zadań, które są uruchamiane po zakończeniu poprzedniego zadania. Ta funkcja jest udostępniana przez klasę [concurrency:: Task](../../parallel/concrt/reference/task-class.md) . Aby uzyskać więcej informacji na temat tego modelu i `task` klasy, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
@@ -77,10 +78,10 @@ Zwracany typ `create_async` jest określany przez typ argumentów. Na przykład,
 
 Poniższa tabela zawiera podsumowanie kombinacji, których można użyć do definiowania operacji asynchronicznych w aplikacji.
 
-|Aby utworzyć ten interfejs środowisko wykonawcze systemu Windows|Zwróć ten typ z`create_async`|Przekaż te typy parametrów do funkcji służbowej, aby użyć niejawnego tokenu anulowania|Przekaż te typy parametrów do funkcji służbowej, aby użyć jawnego tokenu anulowania|
+|Aby utworzyć ten interfejs środowisko wykonawcze systemu Windows|Zwróć ten typ z `create_async`|Przekaż te typy parametrów do funkcji służbowej, aby użyć niejawnego tokenu anulowania|Przekaż te typy parametrów do funkcji służbowej, aby użyć jawnego tokenu anulowania|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|**`void`** oraz`task<void>`|(brak)|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|**`void`** oraz`task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|**`void`** oraz `task<void>`|(brak)|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|**`void`** oraz `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 |`IAsyncOperation<TResult>`|`T` lub `task<T>`|(brak)|(`cancellation_token`)|
 |`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` lub `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
@@ -90,7 +91,7 @@ W poniższym przykładzie przedstawiono różne sposoby tworzenia `IAsyncAction`
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>Przykład: Tworzenie składnika C++ środowisko wykonawcze systemu Windows i używanie go w języku C\#
+## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a> Przykład: Tworzenie składnika C++ środowisko wykonawcze systemu Windows i używanie go w języku C\#
 
 Rozważ użycie aplikacji, która używa języka XAML i języka C#, aby zdefiniować interfejs użytkownika i składnik C++ środowisko wykonawcze systemu Windows w celu wykonywania operacji intensywnie korzystających z obliczeń. W tym przykładzie składnik języka C++ oblicza, które liczby z danego zakresu są podstawowe. Aby zilustrować różnice między czterema środowisko wykonawcze systemu Windows asynchronicznymi interfejsami zadań, Uruchom w programie Visual Studio, tworząc **puste rozwiązanie** i wprowadzając jego nazwę `Primes` . Następnie Dodaj do rozwiązania projekt **składnika Środowisko wykonawcze systemu Windows** i nadaje mu nazwę `PrimesLibrary` . Dodaj następujący kod do wygenerowanego pliku nagłówkowego C++ (ten przykład zmienia nazwę Class1. h na. h). Każda **`public`** Metoda definiuje jeden z czterech interfejsów asynchronicznych. Metody zwracające wartość zwracają obiekt [systemu Windows:: Foundation:: Collections:: IVector \<int> ](/uwp/api/windows.foundation.collections.ivector-1) . Metody, które zgłaszają postęp **`double`** , tworzą wartości, które definiują wartość procentową ogólnej pracy, która została ukończona.
 
@@ -128,7 +129,7 @@ Na poniższej ilustracji przedstawiono `Primes` aplikację po wybraniu każdej o
 
 Przykład, który używa `create_async` do tworzenia zadań asynchronicznych, które mogą być używane przez inne języki, można znaleźć [w temacie using C++ w przykładzie Optymalizatora podróży w usłudze mapy Bing](/previous-versions/windows/apps/hh699891(v=vs.140)).
 
-## <a name="controlling-the-execution-thread"></a><a name="exethread"></a>Kontrolowanie wątku wykonywania
+## <a name="controlling-the-execution-thread"></a><a name="exethread"></a> Kontrolowanie wątku wykonywania
 
 Środowisko wykonawcze systemu Windows używa modelu wątkowości COM. W tym modelu obiekty są hostowane w różnych apartamentachach, w zależności od tego, jak obsługują synchronizację. Obiekty bezpieczne wątkowo są hostowane w apartamentach wielowątkowych (MTA). Obiekty, do których musi być dostęp pojedynczy wątek, są hostowane w jednowątkowym apartamentie (STA).
 
@@ -153,7 +154,7 @@ W poniższej sekcji przedstawiono aplikację, która odczytuje plik z dysku, zna
 > [!IMPORTANT]
 > Nie wywołuj [concurrency:: Task:: wait](reference/task-class.md#wait) w treści kontynuacji działającej w sta. W przeciwnym razie środowisko uruchomieniowe zgłasza [współbieżność:: invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , ponieważ ta metoda blokuje bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Można jednak wywołać metodę [concurrency:: Task:: Get](reference/task-class.md#get) , aby otrzymać wynik zadania poprzedzającego w kontynuacji opartej na zadaniach.
 
-## <a name="example-controlling-execution-in-a-windows-runtime-app-with-c-and-xaml"></a><a name="example-app"></a>Przykład: kontrolowanie wykonywania w aplikacji środowisko wykonawcze systemu Windows przy użyciu języka C++ i języka XAML
+## <a name="example-controlling-execution-in-a-windows-runtime-app-with-c-and-xaml"></a><a name="example-app"></a> Przykład: kontrolowanie wykonywania w aplikacji środowisko wykonawcze systemu Windows przy użyciu języka C++ i języka XAML
 
 Rozważmy aplikację C++ XAML, która odczytuje plik z dysku, znajduje najbardziej typowe słowa w tym pliku, a następnie wyświetla wyniki w interfejsie użytkownika. Aby utworzyć tę aplikację, Uruchom w programie Visual Studio, tworząc **pustą aplikację (uniwersalną systemu Windows)** i nadając jej nazwę `CommonWords` . W manifeście aplikacji Określ możliwości **biblioteki dokumenty** , aby umożliwić aplikacji dostęp do folderu dokumentów. Dodaj także typ pliku tekstowego (. txt) do sekcji deklaracji manifestu aplikacji. Aby uzyskać więcej informacji na temat możliwości i deklaracji aplikacji, zobacz [pakowanie, wdrażanie i wykonywanie zapytań dotyczących aplikacji systemu Windows](/windows/win32/appxpkg/appx-portal).
 
@@ -190,6 +191,6 @@ Na poniższej ilustracji przedstawiono wyniki `CommonWords` aplikacji.
 
 W tym przykładzie można obsługiwać anulowanie, ponieważ `task` obiekty, które obsługują `create_async` użycie niejawnego tokenu anulowania. Zdefiniuj funkcję służbową, aby utworzyć `cancellation_token` obiekt, jeśli zadania muszą odpowiedzieć na anulowanie w sposób współdziałający. Aby uzyskać więcej informacji na temat anulowania w PPL, zobacz [Anulowanie w PPL](cancellation-in-the-ppl.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)

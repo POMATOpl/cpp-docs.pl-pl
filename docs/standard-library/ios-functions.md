@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: &lt; funkcje systemu iOS &gt;'
 title: '&lt;funkcje systemu iOS &gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,16 +57,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: a750f17ba8eba40dd01a2fb4a89e47a0927e4b61
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 82353509be371f9292c05947dbc4221bb0e74b05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231436"
 ---
 # <a name="ltiosgt-functions"></a>&lt;funkcje systemu iOS &gt;
 
-## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a> boolalpha
 
 Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **`true`** lub **`false`** w strumieniu.
 
@@ -117,7 +118,7 @@ true
 true
 ```
 
-## <a name="dec"></a><a name="dec"></a>grudzień
+## <a name="dec"></a><a name="dec"></a> grudzień
 
 Określa, że zmienne całkowite pojawiają się w notacji Base 10.
 
@@ -187,7 +188,7 @@ Obiekt `ios_base`.
 
 Manipulator skutecznie wywołuje `iosbase.` [ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::floatfield)` , a następnie zwraca *iosbase*.
 
-## <a name="fixed"></a><a name="fixed"></a>FIXED
+## <a name="fixed"></a><a name="fixed"></a> FIXED
 
 Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji o stałej liczbie dziesiętnej.
 
@@ -206,7 +207,7 @@ Odwołanie do obiektu, z którego pochodzi element *str* .
 
 ### <a name="remarks"></a>Uwagi
 
-`fixed`jest domyślnym notacją wyświetlania liczb zmiennoprzecinkowych. [naukowe](../standard-library/ios-functions.md#scientific) powoduje, że liczby zmiennoprzecinkowe będą wyświetlane przy użyciu notacji wykładniczej.
+`fixed` jest domyślnym notacją wyświetlania liczb zmiennoprzecinkowych. [naukowe](../standard-library/ios-functions.md#scientific) powoduje, że liczby zmiennoprzecinkowe będą wyświetlane przy użyciu notacji wykładniczej.
 
 Manipulator skutecznie wywołuje *str*. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed` , `ios_base::floatfield` ), a następnie zwraca *str*.
 
@@ -235,7 +236,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a><a name="hex"></a>szesnastkowy
+## <a name="hex"></a><a name="hex"></a> szesnastkowy
 
 Określa, że zmienne typu integer są wyświetlane w notacji Base 16.
 
@@ -262,13 +263,13 @@ Manipulator efektywne wywołania `str` **.** [setf](../standard-library/ios-base
 
 Zapoznaj się z przykładem, jak korzystać [z programu](../standard-library/ios-functions.md#dec) `hex` .
 
-## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a> hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a><a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a> io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +277,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a><a name="internal"></a>wewnętrz
+## <a name="internal"></a><a name="internal"></a> wewnętrz
 
 Powoduje, że znak liczby jest wyrównany do lewej, a liczba powinna być wyrównana do prawej.
 
@@ -322,19 +323,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a> is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a> iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a><a name="left"></a>lewym
+## <a name="left"></a><a name="left"></a> lewym
 
 Powoduje, że tekst nie jest tak szeroki, jak szerokość danych wyjściowych, która ma być wyświetlana w strumieniu opróżniania z lewego marginesu.
 
@@ -377,19 +378,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a> make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a> make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolalpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a> noboolalpha
 
 Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako 1 lub 0 w strumieniu.
 
@@ -418,7 +419,7 @@ Domyślnie `noboolalpha` .
 
 Zobacz [boolalpha](../standard-library/ios-functions.md#boolalpha) , aby poznać przykład użycia `noboolalpha` .
 
-## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a> noshowbase
 
 Wyłącza opcję wskazującą podstawę notacji, w której wyświetlana jest liczba.
 
@@ -445,7 +446,7 @@ Manipulator skutecznie wywołuje `str.` [unsetf](../standard-library/ios-base-cl
 
 Zobacz [showbase](../standard-library/ios-functions.md#showbase) , aby zapoznać się z przykładem użycia `noshowbase` .
 
-## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a> noshowpoint
 
 Wyświetla tylko liczbę całkowitą części liczb zmiennoprzecinkowych, których część ułamkowa ma wartość zero.
 
@@ -464,7 +465,7 @@ Odwołanie do obiektu, z którego pochodzi element *str* .
 
 ### <a name="remarks"></a>Uwagi
 
-`noshowpoint`jest domyślnie włączona; Użyj [Showpoint](../standard-library/ios-functions.md#showpoint) i [Precision](../standard-library/ios-base-class.md#precision) , aby wyświetlić zera po przecinku dziesiętnym.
+`noshowpoint` jest domyślnie włączona; Użyj [Showpoint](../standard-library/ios-functions.md#showpoint) i [Precision](../standard-library/ios-base-class.md#precision) , aby wyświetlić zera po przecinku dziesiętnym.
 
 Manipulator skutecznie wywołuje `str.` [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::showpoint)` , a następnie zwraca *str*.
 
@@ -492,7 +493,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a> noshowpos
 
 Powoduje, że liczby dodatnie nie mogą być podpisywane jawnie.
 
@@ -519,7 +520,7 @@ Manipulator skutecznie wywołuje `str.` [unsetf](../standard-library/ios-base-cl
 
 Zobacz [showpos](../standard-library/ios-functions.md#showpos) , aby poznać przykład użycia `noshowpos` .
 
-## <a name="noskipws"></a><a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a> noskipws
 
 Zapoznaj się z miejscem, w którym znajduje się strumień wejściowy.
 
@@ -561,7 +562,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a> nounitbuf
 
 Powoduje, że dane wyjściowe są buforowane i przetwarzane, gdy bufor jest pełny.
 
@@ -584,7 +585,7 @@ Odwołanie do obiektu, z którego pochodzi element *str* .
 
 Manipulator skutecznie wywołuje `str.` [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::unitbuf)` , a następnie zwraca *str*.
 
-## <a name="nouppercase"></a><a name="nouppercase"></a>nowielkie litery
+## <a name="nouppercase"></a><a name="nouppercase"></a> nowielkie litery
 
 Określa, że cyfry szesnastkowe i wykładnik w notacji wykładniczej są wyświetlane małymi literami.
 
@@ -609,7 +610,7 @@ Manipulator skutecznie wywołuje `str.` [unsetf](../standard-library/ios-base-cl
 
 Zobacz [wielkie litery](../standard-library/ios-functions.md#uppercase) , aby zapoznać się z przykładem użycia `nouppercase` .
 
-## <a name="oct"></a><a name="oct"></a>ósemkow
+## <a name="oct"></a><a name="oct"></a> ósemkow
 
 Określa, że zmienne całkowite pojawiają się w notacji Base 8.
 
@@ -636,7 +637,7 @@ Manipulator skutecznie wywołuje `str.` [setf](../standard-library/ios-base-clas
 
 Zapoznaj się z przykładem, jak korzystać [z programu](../standard-library/ios-functions.md#dec) `oct` .
 
-## <a name="right"></a><a name="right"></a>Kliknij
+## <a name="right"></a><a name="right"></a> Kliknij
 
 Powoduje, że tekst nie jest tak szeroki, jak szerokość danych wyjściowych, która ma być wyświetlana w strumieniu opróżniania z prawego marginesu.
 
@@ -693,7 +694,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a><a name="scientific"></a>nauk
+## <a name="scientific"></a><a name="scientific"></a> nauk
 
 Powoduje wyświetlanie liczb zmiennoprzecinkowych przy użyciu notacji wykładniczej.
 
@@ -738,7 +739,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a><a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a> showbase
 
 Wskazuje podstawę notacji, w której wyświetlana jest liczba.
 
@@ -792,7 +793,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a><a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a> showpoint
 
 Wyświetla część liczby zmiennoprzecinkowej i cyfr z prawej strony punktu dziesiętnego, nawet jeśli część ułamkowa jest równa zero.
 
@@ -819,7 +820,7 @@ Manipulator skutecznie wywołuje `str.` [setf](../standard-library/ios-base-clas
 
 Zobacz [noshowpoint](../standard-library/ios-functions.md#noshowpoint) , aby poznać przykład użycia `showpoint` .
 
-## <a name="showpos"></a><a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a> showpos
 
 Powoduje jawne podpisywanie liczb dodatnich.
 
@@ -864,7 +865,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a><a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a> skipws
 
 Nie należy odczytywać spacji w strumieniu wejściowym.
 
@@ -916,7 +917,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a> unitbuf
 
 Powoduje, że dane wyjściowe będą przetwarzane, gdy bufor nie jest pusty.
 
@@ -941,7 +942,7 @@ Należy zauważyć, że `endl` bufor jest również opróżniany.
 
 Manipulator skutecznie wywołuje `str.` [setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags) `)` , a następnie zwraca *str*.
 
-## <a name="uppercase"></a><a name="uppercase"></a>znaki
+## <a name="uppercase"></a><a name="uppercase"></a> znaki
 
 Określa, że cyfry szesnastkowe i wykładnik w notacji wykładniczej są wyświetlane wielką literą.
 

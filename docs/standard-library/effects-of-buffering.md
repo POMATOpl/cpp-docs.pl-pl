@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej na temat: wpływ buforowania'
 title: Effects of Buffering
 ms.date: 11/04/2016
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-ms.openlocfilehash: 1f28748f1e7a837ad87ef1cfcebc56d3410d0fd2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dc46a5a7a390250be1872f9264235e133b9f58ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232723"
 ---
 # <a name="effects-of-buffering"></a>Effects of Buffering
 
-Poniższy przykład pokazuje efekty buforowania. Może się spodziewać, że program `please wait`drukuje, odczeka 5 sekund, a następnie kontynuował. Nie będzie koniecznie działać w ten sposób, ponieważ dane wyjściowe są buforowane.
+Poniższy przykład pokazuje efekty buforowania. Może się spodziewać, że program drukuje `please wait` , odczeka 5 sekund, a następnie kontynuował. Nie będzie koniecznie działać w ten sposób, ponieważ dane wyjściowe są buforowane.
 
 ```cpp
 // effects_buffering.cpp
@@ -39,8 +40,8 @@ Aby program działał logicznie, `cout` obiekt musi być pusty, gdy zostanie wy�
 cout <<"Please wait..." <<flush;
 ```
 
-Ten krok opróżnia bufor, upewniając się, że wiadomość jest drukowana przed oczekiwaniem. Można również użyć `endl` manipulator, która opróżnia bufor i wyprowadza znak wysuwu wiersza, lub `cin` użyć obiektu. Ten obiekt (z `cerr` obiektami lub `clog` ) `cout` jest zwykle powiązany z obiektem. W `cin` takim przypadku użycie (lub `cerr` obiektów lub `clog` ) opróżnia `cout` obiekt.
+Ten krok opróżnia bufor, upewniając się, że wiadomość jest drukowana przed oczekiwaniem. Można również użyć `endl` manipulator, która opróżnia bufor i wyprowadza znak wysuwu wiersza, lub użyć `cin` obiektu. Ten obiekt (z `cerr` obiektami lub `clog` ) jest zwykle powiązany z `cout` obiektem. W takim przypadku użycie `cin` (lub `cerr` `clog` obiektów lub) opróżnia `cout` obiekt.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strumienie wyjściowe](../standard-library/output-streams.md)

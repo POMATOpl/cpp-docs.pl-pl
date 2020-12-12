@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy insert_iterator
 title: insert_iterator — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: 530168f5e259934f7d614b305e6ac1092ba68f4d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9089e0ab592ed6c8289570cc422aa6183444d55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231579"
 ---
 # <a name="insert_iterator-class"></a>insert_iterator — Klasa
 
@@ -60,11 +61,11 @@ Kontener typu `Container` musi spełniać wymagania dotyczące kontenera o zmien
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**:\<iterator>
+**Nagłówek**: \<iterator>
 
 **Przestrzeń nazw:** std
 
-## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a>insert_iterator:: container_type
+## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a> insert_iterator:: container_type
 
 Typ, który reprezentuje kontener, w którym ma być przeprowadzone ogólne wstawienie.
 
@@ -74,7 +75,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *kontenera*parametrów szablonu.
+Typ jest synonimem dla *kontenera* parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -106,7 +107,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a>insert_iterator:: insert_iterator
+## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a> insert_iterator:: insert_iterator
 
 Tworzy obiekt `insert_iterator` , który wstawia element do określonej pozycji w kontenerze.
 
@@ -172,7 +173,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_star"></a>insert_iterator:: operator *
+## <a name="insert_iteratoroperator"></a><a name="op_star"></a> insert_iterator:: operator *
 
 Odwołuje się do iteratora INSERT zwracający element to addresss.
 
@@ -186,7 +187,7 @@ Funkcja członkowska zwraca wartość elementu, do którego się odnosi.
 
 ### <a name="remarks"></a>Uwagi
 
-Służy do implementowania wyrażenia iteratora danych wyjściowych ** \* ITER**  =  **value**. Jeśli `Iter` jest iteratorem, który dotyczy elementu w sekwencji, a następnie ** \* ITER**  =  **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
+Służy do implementowania wyrażenia iteratora danych wyjściowych **\* ITER**  =  . Jeśli `Iter` jest iteratorem, który dotyczy elementu w sekwencji, a następnie **\* ITER**  =  **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -232,7 +233,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a>insert_iterator:: operator + +
+## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a> insert_iterator:: operator + +
 
 Zwiększa `insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.
 
@@ -296,7 +297,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_eq"></a>insert_iterator:: operator =
+## <a name="insert_iteratoroperator"></a><a name="op_eq"></a> insert_iterator:: operator =
 
 Wstawia wartość do kontenera i zwraca iterator zaktualizowany, aby wskazywał nowy element.
 
@@ -379,7 +380,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratorreference"></a><a name="reference"></a>insert_iterator:: Reference
+## <a name="insert_iteratorreference"></a><a name="reference"></a> insert_iterator:: Reference
 
 Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.
 

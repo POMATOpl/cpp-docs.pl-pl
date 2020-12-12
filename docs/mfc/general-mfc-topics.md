@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: ogólne tematy dotyczące MFC'
 title: Tematy ogólne dotyczące MFC
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: effab556277b3cd9ca072798bea3a77dbde58620
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0e19a205e29297bf6808d6d979b9e27366b3e4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618761"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234361"
 ---
 # <a name="general-mfc-topics"></a>Tematy ogólne dotyczące MFC
 
@@ -31,9 +32,9 @@ Platforma MFC jest zaawansowanym podejściem, które pozwala na kompilowanie pra
 
 [Używanie klas do pisania aplikacji dla systemu Windows](using-the-classes-to-write-applications-for-windows.md)
 
-[Opieranie się na strukturze](building-on-the-framework.md)
+[Kompilowanie na platformie](building-on-the-framework.md)
 
-[CWinApp: klasa aplikacji](cwinapp-the-application-class.md)
+[CWinApp: Klasa aplikacji](cwinapp-the-application-class.md)
 
 [Szablony dokumentów i proces tworzenia dokumentu/widoku](document-templates-and-the-document-view-creation-process.md)
 
@@ -45,9 +46,9 @@ Platforma MFC jest zaawansowanym podejściem, które pozwala na kompilowanie pra
 
 [Izolacja biblioteki formantów wspólnych MFC](isolation-of-the-mfc-common-controls-library.md)
 
-[Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](build-requirements-for-windows-vista-common-controls.md)
+[Wymagania dotyczące kompilacji dla wspólnych kontrolek systemu Windows Vista](build-requirements-for-windows-vista-common-controls.md)
 
-[Instrukcje: dodawanie obsługi menedżera ponownego uruchamiania](how-to-add-restart-manager-support.md)
+[Instrukcje: Dodawanie obsługi Menedżera ponownego uruchamiania](how-to-add-restart-manager-support.md)
 
 [Układ dynamiczny](dynamic-layout.md)
 
