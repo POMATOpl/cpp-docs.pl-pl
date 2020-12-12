@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o obszarach nazw platform, Default i CLI (C++/CLI i C++/CX)
 title: Przestrzeń nazw platformy, domyślna i cli  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: df699b12404d9de1a9acaae6e9dc8c00fd2f15df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b4b47a1568b1a137bc49a09b8b50feb8ec3a76b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185677"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Przestrzeń nazw platformy, domyślna i cli  (C++/CLI i C++/CX)
 
@@ -30,7 +31,7 @@ Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i widoczność typów
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -46,7 +47,7 @@ C++/CLI obsługuje przestrzeń nazw **interfejsu wiersza polecenia** . Podczas k
 
 W przestrzeni nazw **interfejsu wiersza polecenia** znajdują się następujące funkcje języka:
 
-- [Macierze](arrays-cpp-component-extensions.md)
+- [Tablice](arrays-cpp-component-extensions.md)
 
 - [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
 
@@ -56,7 +57,7 @@ W przestrzeni nazw **interfejsu wiersza polecenia** znajdują się następujące
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -78,6 +79,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

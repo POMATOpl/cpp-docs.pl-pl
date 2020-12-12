@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK1301'
 title: Błąd narzędzi konsolidatora LNK1301
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ac282aea62836591c6e30abb3030ef2143a78003
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335954"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Błąd narzędzi konsolidatora LNK1301
 
@@ -25,11 +26,11 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [/GL (Optymalizacja całego programu)](../../build/reference/gl-whole-program-optimization.md)
 
-- [/LTCG (Generowanie łączonych kodów czasowych)](../../build/reference/ltcg-link-time-code-generation.md)
+- [/LTCG (generowanie kodu w czasie konsolidacji)](../../build/reference/ltcg-link-time-code-generation.md)
 
-- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [Optymalizacje sterowane profilem](../../build/profile-guided-optimizations.md)
+- [Optymalizacje profilowane](../../build/profile-guided-optimizations.md)
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView'
 title: Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 ms.date: 09/17/2019
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 06d0511317c21f6b132349d7d6cd6c2d6f20bc1b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9b149c3cdc05bf63f69b94bbcaf084a84ec42a84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220035"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 
@@ -48,7 +49,7 @@ W tym temacie wymieniono funkcje DDX_Field używane do wymiany danych między [C
 |[DDX_FieldRadio](#ddx_fieldradio)|Przenosi dane całkowite między elementem członkowskim danych pola zestawu rekordów i grupą przycisków radiowych w `CRecordView` lub `CDaoRecordView` .|
 |[DDX_FieldScroll](#ddx_fieldscroll)|Ustawia lub Pobiera pozycję przewijania kontrolki paska przewijania w `CRecordView` lub `CDaoRecordView` . Wywołanie z funkcji [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) .|
 |[DDX_FieldSlider](#ddx_fieldslider)|Synchronizuje położenie kciuka kontrolki suwaka w widoku rekordu i **`int`** element członkowski danych pola zestawu rekordów. |
-|[DDX_FieldText](#ddx_fieldtext)|Przeciążone wersje są dostępne do transferowania **`int`** , **uint**,,, CString,,,, **`long`** `DWORD` [CString](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** **`short`** [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między składową danych pola zestawu rekordów a polem edycji w `CRecordView` lub `CDaoRecordView` .|
+|[DDX_FieldText](#ddx_fieldtext)|Przeciążone wersje są dostępne do transferowania **`int`** , **uint**,,, CString,,,, **`long`** `DWORD` [](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** **`short`** [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między składową danych pola zestawu rekordów a polem edycji w `CRecordView` lub `CDaoRecordView` .|
 
 ## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a> DDX_FieldCBIndex
 
@@ -76,7 +77,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -124,7 +125,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -172,7 +173,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -220,7 +221,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola wyboru skojarzonej z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 *pRecordset*<br/>
@@ -262,7 +263,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -310,7 +311,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -358,7 +359,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -406,7 +407,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator pierwszego w grupie (z stylem WS_GROUP) sąsiadujących kontrolek przycisków radiowych w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -454,7 +455,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator pierwszego w grupie (z stylem WS_GROUP) sąsiadujących kontrolek przycisków radiowych w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
 *pRecordset*<br/>
@@ -504,7 +505,7 @@ Wskaźnik do obiektu [CDataExchange](cdataexchange-class.md) . Platforma dostarc
 *nIDC*<br/>
 Identyfikator zasobu kontrolki suwaka.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do wartości, która ma zostać nadana wymianie. Ten parametr zawiera lub zostanie użyty do ustawienia bieżącego położenia kciuka kontrolki suwaka.
 
 *pRecordset*<br/>
@@ -530,7 +531,7 @@ Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogóln
 
 ## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a> DDX_FieldText
 
-`DDX_FieldText`Funkcja zarządza transferem danych, **`int`** **`short`** ,, **`long`** typu DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **`float`** , **`double`** , wartości **bool**lub **Byte** między kontrolką pola edycji i elementami członkowskimi danych pola zestawu rekordów.
+`DDX_FieldText`Funkcja zarządza transferem danych, **`int`** **`short`** ,, **`long`** typu DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **`float`** , **`double`** , wartości **bool** lub **Byte** między kontrolką pola edycji i elementami członkowskimi danych pola zestawu rekordów.
 
 ```cpp
 void AFXAPI DDX_FieldText(
@@ -650,7 +651,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` . Typ danych wartości zależy od tego, które z przeciążonych wersji są `DDX_FieldText` używane.
 
 *pRecordset*<br/>
