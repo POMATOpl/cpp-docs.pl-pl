@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej o metodzie CompareStringOrdinal
 title: CompareStringOrdinal — Metoda
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-ms.openlocfilehash: 1291084395b02602b7a3de9013df6720d2e237fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1994d0f3ec4104e27094de10255194a911ae2945
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214100"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282851"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal — Metoda
 
@@ -52,4 +53,4 @@ Porównuje dwa określone obiekty HSTRING i zwraca liczbę całkowitą, która w
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Wrappers::Details, przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft:: WRL:: otoki::D etails przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)

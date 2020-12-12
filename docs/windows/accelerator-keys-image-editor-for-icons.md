@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej: klawisze skrótów (Edytor obrazów C++ dla ikon)'
 title: Klawisze skrótów (Edytor obrazów C++ dla ikon)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 02ac25b693e4d8f7bb6739708d23eb1df0ebf190
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 74062789a7fc6ff6b3b15364d1379861f7bea1c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280290"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Klawisze skrótów (Edytor obrazów C++ dla ikon)
 
-Poniżej znajdują się klawisze skrótów dla poleceń edytora obrazów, które są domyślnie powiązane z kluczami. Aby zmienić klawisze skrótów, przejdź do menu **Tools**  >  **Opcje** narzędzia i wybierz polecenie **Klawiatura** w folderze **środowisko** . Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Poniżej znajdują się klawisze skrótów dla poleceń edytora obrazów, które są domyślnie powiązane z kluczami. Aby zmienić klawisze skrótów, przejdź do menu   >  **Opcje** narzędzia i wybierz polecenie **Klawiatura** w folderze **środowisko** . Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
 > Opcje dostępne w oknach dialogowych oraz nazwy i lokalizacje poleceń menu, które są widoczne, mogą się różnić od tego, co opisano w pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, przejdź do menu **Narzędzia**  >  **Opcje importowania i eksportowania ustawień**. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
@@ -53,7 +54,7 @@ Poniżej znajdują się klawisze skrótów dla poleceń edytora obrazów, które
 |Image.ShowGrid|**Ctrl**  +  **Alt**  +  **S**|Włącza/wyłącza siatkę pikseli (zaznacza lub czyści opcję **Siatka pikseli** w [oknie dialogowym Ustawienia siatki](./image-editor-for-icons.md)).|
 |Image.ShowTileGrid|**Ctrl**  +  **SHIFT**  +  **Alt**  +  **S**|Włącza/wyłącza siatkę kafelków (zaznacza lub czyści opcję **siatki kafelków** w [oknie dialogowym Ustawienia siatki](./image-editor-for-icons.md)).|
 |Image.SmallBrush|**Ctrl**  +  **.** (kropka)|Zmniejsza rozmiar **pędzla** do jednego piksela. (Zobacz również Image. LargerBrush i Image. SmallerBrush w tej tabeli).|
-|Image.SmallerBrush|**Ctrl**  +  Ctrl **-** przed|Zmniejsza rozmiar pędzla o jeden piksel w każdym kierunku. Aby ponownie rozwinąć rozmiar pędzla, zobacz Image. LargerBrush w tej tabeli.|
+|Image.SmallerBrush|  +  Ctrl **-** przed|Zmniejsza rozmiar pędzla o jeden piksel w każdym kierunku. Aby ponownie rozwinąć rozmiar pędzla, zobacz Image. LargerBrush w tej tabeli.|
 |Image.TextTool|**Ctrl**  +  **T**|Otwiera [okno dialogowe Narzędzie tekstowe](./image-editor-for-icons.md).|
 |Image. UseSelectionAsBrush|**Ctrl**  +  **U**|Rysuje przy użyciu bieżącego zaznaczenia jako pędzla.|
 |Image.ZoomIn|**Ctrl**  +  **SHIFT**  +  **.** (kropka)<br /><br /> — lub —<br /><br /> **Ctrl**  +  **Strzałka w górę**|Zwiększa powiększenie bieżącego widoku.|

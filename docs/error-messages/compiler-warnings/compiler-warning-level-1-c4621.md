@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4621'
 title: Ostrzeżenie kompilatora (poziom 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: a48934fd097f9039988db32511ca87cbd66b22d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 72e4adbb45488b200ff67f1d0b225591f9ea1a6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281473"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>Ostrzeżenie kompilatora (poziom 1) C4621
 
@@ -19,7 +20,7 @@ nie znaleziono przyrostkowej formy "operator--" dla typu "Type", przy użyciu fo
 
 Dla danego typu nie zdefiniowano operatora zmniejszania przyrostu. Kompilator użył operatora przeciążonego prefiksu.
 
-To ostrzeżenie można uniknąć, definiując Przyrostkowy operator `--`. Utwórz dwuargumentową wersję operatora `--`, jak pokazano poniżej:
+To ostrzeżenie można uniknąć przez zdefiniowanie operatora przyrostkowego `--` . Utwórz dwuargumentową wersję `--` operatora, jak pokazano poniżej:
 
 ```cpp
 // C4621.cpp

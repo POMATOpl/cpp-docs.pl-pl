@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operatory przesunięcia bitowego'
 title: Operatory przesunięcia bitowego
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: a8a72a8657daec39bb042fea744b5f97d3b34009
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 649c2057f4c70310b675e4d7bd71a87a5e5cd5c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283137"
 ---
 # <a name="bitwise-shift-operators"></a>Operatory przesunięcia bitowego
 
@@ -60,6 +61,6 @@ Przesunięcie wartości ujemnej na prawo daje połowę wartości oryginalnej, za
 
 Prawy Shift zachowuje bit znaku. Gdy liczba całkowita ze znakiem zostanie przesunięta w prawo, to najbardziej znaczący bit pozostaje ustawiony. Gdy liczba całkowita bez znaku zostaje przesunięta w prawo, najbardziej znaczący bit jest wyczyszczony.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory przesunięcia w lewo i w prawo (>> i <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

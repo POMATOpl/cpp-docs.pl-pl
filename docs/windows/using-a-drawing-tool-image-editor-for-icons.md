@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak używać narzędzia do rysowania'
 title: 'Instrukcje: korzystanie z narzędzia do rysowania'
 ms.date: 02/15/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 46ba1f1057484f2b5b1e1286482d80fd96312caf
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9415b81eb520b626186fe321184bd1d7d7391b61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283267"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Instrukcje: korzystanie z narzędzia do rysowania
 
@@ -61,7 +62,7 @@ Narzędzia do rysowania można wybrać za pomocą paska narzędzi **edytora obra
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Aby wybrać narzędzie rysowania z menu obrazu i korzystać z niego
 
-1. Przejdź do menu **Image**  >  **Narzędzia**obrazu.
+1. Przejdź do menu   >  **Narzędzia** obrazu.
 
 1. W podmenu kaskadowym wybierz narzędzie, którego chcesz użyć.
 
@@ -73,7 +74,7 @@ Linie są rysowane w szerokości określonej przez bieżący wybór pędzla, a l
 
 ### <a name="to-draw-a-line"></a>Aby narysować linię
 
-1. Użyj [paska narzędzi edytora obrazu](./image-editor-for-icons.md) lub przejdź do menu **Image** >  **Narzędzia** obrazu i wybierz narzędzie **linia** .
+1. Użyj [paska narzędzi edytora obrazu](./image-editor-for-icons.md) lub przejdź do menu  >  **Narzędzia** obrazu i wybierz narzędzie **linia** .
 
 1. W razie potrzeby wybierz pozycję kolory i Pędzel:
 
@@ -87,7 +88,7 @@ Linie są rysowane w szerokości określonej przez bieżący wybór pędzla, a l
 
 ### <a name="to-draw-a-closed-figure"></a>Aby narysować figurę zamkniętą
 
-1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu **Image**  >  **Narzędzia** obrazu i wybierz narzędzie do **rysowania zamkniętego rysunku** .
+1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu   >  **Narzędzia** obrazu i wybierz narzędzie do **rysowania zamkniętego rysunku** .
 
    Narzędzia do **rysowania z zamkniętą** ilustracją tworzą rysunki zgodnie z ich odpowiednimi przyciskami.
 
@@ -105,7 +106,7 @@ Pędzel niestandardowy to prostokątna część obrazu, który można pobrać i 
 
 1. Wybierz część obrazu, która ma być używana dla pędzla.
 
-1. Przytrzymaj klawisz **SHIFT** , wybierz opcję w zaznaczeniu i przeciągnij ją na obrazie lub przejdź do **obrazu**menu  >  **Użyj opcji zaznacz jako pędzel**.
+1. Przytrzymaj klawisz **SHIFT** , wybierz opcję w zaznaczeniu i przeciągnij ją na obrazie lub przejdź do **obrazu** menu  >  **Użyj opcji zaznacz jako pędzel**.
 
    Wybór zostanie przekształcony w niestandardowy Pędzel, który dystrybuuje kolory w zaznaczeniu na obrazie. Kopie zaznaczenia są pozostawiane wzdłuż ścieżki przeciągania. Im wolniej przeciągniesz, tym więcej kopii jest wykonanych.
 

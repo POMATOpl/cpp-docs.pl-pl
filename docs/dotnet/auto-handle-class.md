@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy auto_handle
 title: auto_handle — Klasa
 ms.date: 01/16/2019
 ms.topic: reference
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 975710fb47bdcf3195330402acd869aba17234e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ac93d6b141f24a430aceb97f82fc90046622866
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282656"
 ---
 # <a name="auto_handle-class"></a>auto_handle — Klasa
 
@@ -38,7 +39,7 @@ ref class auto_handle;
 *_element_type*<br/>
 Typ zarządzany, który ma zostać osadzony.
 
-## <a name="members"></a><a name="members"></a>Skład
+## <a name="members"></a><a name="members"></a> Skład
 
 ### <a name="public-constructors"></a>Konstruktory publiczne  
 
@@ -72,7 +73,7 @@ Typ zarządzany, który ma zostać osadzony.
 
 Msclr **przestrzeni nazw**
 
-## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle:: auto_handle
+## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a> auto_handle:: auto_handle
 
 `auto_handle`Konstruktor.
 
@@ -163,7 +164,7 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle:: ~ auto_handle
+## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a> auto_handle:: ~ auto_handle
 
 `auto_handle`Destruktor.
 
@@ -210,7 +211,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_handleget"></a><a name="get"></a>auto_handle:: Get
+## <a name="auto_handleget"></a><a name="get"></a> auto_handle:: Get
 
 Pobiera zawarty obiekt.
 
@@ -270,7 +271,7 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle:: Release
+## <a name="auto_handlerelease"></a><a name="release"></a> auto_handle:: Release
 
 Zwalnia obiekt z `auto_handle` zarządzania.
 
@@ -333,7 +334,7 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle:: Reset
+## <a name="auto_handlereset"></a><a name="reset"></a> auto_handle:: Reset
 
 Zniszcz bieżący obiekt będący właścicielem i opcjonalnie zapoznaj się z nowym obiektem.
 
@@ -399,7 +400,7 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle:: swap
+## <a name="auto_handleswap"></a><a name="swap"></a> auto_handle:: swap
 
 Zamienia obiekty na inne `auto_handle` .
 
@@ -441,7 +442,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle:: operator-&gt;
+## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a> auto_handle:: operator-&gt;
 
 Operator dostępu do elementów członkowskich.
 
@@ -490,7 +491,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle:: operator =
+## <a name="auto_handleoperator"></a><a name="operator-assign"></a> auto_handle:: operator =
 
 Operator przypisania.
 
@@ -574,7 +575,7 @@ done
 in ClassA destructor: second
 ```
 
-## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle:: operator auto_handle
+## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a> auto_handle:: operator auto_handle
 
 Operator rzutowania typu między `auto_handle` i zgodnymi typami.
 
@@ -629,7 +630,7 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle:: operator — bool
+## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a> auto_handle:: operator — bool
 
 Operator do użycia `auto_handle` w wyrażeniu warunkowym.
 
@@ -674,7 +675,7 @@ s2 is valid
 s2 is now invalid
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle:: operator!
+## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a> auto_handle:: operator!
 
 Operator do użycia `auto_handle` w wyrażeniu warunkowym.
 

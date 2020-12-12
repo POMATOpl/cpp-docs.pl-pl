@@ -1,5 +1,6 @@
 ---
-title: Platform::ChangedStateException, klasa
+description: 'Dowiedz się więcej na temat: platform:: ChangedStateException, Klasa'
+title: 'Platform:: ChangedStateException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
-ms.openlocfilehash: 79181702c95f8c666b06bdb26319ccb06e55db0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: baabf54cacfc4dd03256b569fb868c402ea98a97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284034"
 ---
-# <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException, klasa
+# <a name="platformchangedstateexception-class"></a>Platform:: ChangedStateException, Klasa
 
-Element zgłaszany, gdy wewnętrzny stan obiektu zmienił, a tym samym unieważniając wyniki metody.
+Zgłaszany, gdy zmienił się stan wewnętrzny obiektu, co unieważnia wyniki metody.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,20 +28,20 @@ public ref class ChangedStateException : COMException,    IException,    IPrinta
 
 ### <a name="remarks"></a>Uwagi
 
-Przykładem, w którym ten wyjątek jest generowany jest, gdy metody iteratora kolekcji lub tego widoku kolekcji są wywoływane po zmianie kolekcji nadrzędnej, powodując unieważnienie wyniki metody.
+Przykładem, gdy ten wyjątek jest zgłaszany, jest wywoływanie metod iteratora kolekcji lub widoku kolekcji po zmianie kolekcji nadrzędnej, unieważnienie wyników metody.
 
-Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.
+Aby uzyskać więcej informacji, zobacz Klasa [COMException](../cppcx/platform-comexception-class.md) .
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+[Platform:: COMException, Klasa](../cppcx/platform-comexception-class.md)

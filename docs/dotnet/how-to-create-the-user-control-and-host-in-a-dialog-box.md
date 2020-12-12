@@ -1,93 +1,94 @@
 ---
-title: 'Instrukcje: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym'
+description: 'Dowiedz się więcej na temat: jak utworzyć kontrolkę użytkownika i hosta w oknie dialogowym'
+title: 'Porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-ms.openlocfilehash: bdf7e2f4961a16e6538c7bbcc690ef44ba87fcaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 400906344f47f7100e52319adb37c39d1fb370e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283968"
 ---
-# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Instrukcje: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym
 
-Kroki opisane w tym artykule przyjęto założenie, że tworzysz oparty na dialogu ([klasa CDialog](../mfc/reference/cdialog-class.md)) projektu Microsoft Foundation Classes (MFC), ale można również dodać obsługę formantu Windows Forms do istniejącego okna dialogowego MFC.
+W krokach w tym artykule założono, że tworzysz projekt oparty na oknach dialogowych ([CDialog Class](../mfc/reference/cdialog-class.md)) Microsoft Foundation CLASSES (MFC), ale możesz również dodać obsługę kontrolki Windows Forms do istniejącego okna dialogowego MFC.
 
-### <a name="to-create-the-net-user-control"></a>Aby utworzyć formant użytkownika .NET
+### <a name="to-create-the-net-user-control"></a>Aby utworzyć kontrolkę użytkownika platformy .NET
 
-1. Utwórz projekt Visual C# Windows Biblioteka kontrolek formularzy, o nazwie `WindowsFormsControlLibrary1`.
+1. Utwórz projekt biblioteki formantów Windows Forms Visual C# o nazwie `WindowsFormsControlLibrary1` .
 
-   Na **pliku** menu, kliknij przycisk **New** a następnie kliknij przycisk **projektu**. W **Visual C#** folderu, wybierz **Biblioteka kontrolek formularzy Windows**.
+   W menu **plik** kliknij pozycję **Nowy** , a następnie kliknij pozycję **projekt**. W folderze **Visual C#** wybierz pozycję **Biblioteka formantów Windows Forms**.
 
-   Zaakceptuj `WindowsFormsControlLibrary1` nazwę projektu, klikając pozycję **OK**.
+   Zaakceptuj `WindowsFormsControlLibrary1` nazwę projektu, klikając przycisk **OK**.
 
-   Domyślnie nazwą formantu .NET będzie `UserControl1`.
+   Domyślnie nazwą formantu .NET będzie `UserControl1` .
 
-1. Dodaj formanty podrzędne do `UserControl1`.
+1. Dodaj kontrolki podrzędne do `UserControl1` .
 
-   W **przybornika**, otwórz **wszystkie formularze Windows** listy. Przeciągnij **przycisk** kontrolę `UserControl1` powierzchni projektowej.
+   W **przyborniku** Otwórz listę **wszystkie Windows Forms** . Przeciągnij kontrolkę **Button** na `UserControl1` powierzchnię projektu.
 
-   Również dodać **TextBox** kontroli.
+   Dodaj również kontrolkę **TextBox** .
 
-1. W **Eksploratora rozwiązań**, kliknij dwukrotnie **UserControl1.Designer.cs** aby go otworzyć do edycji. Zmienić deklaracje pola tekstowego i przycisku z `private` do `public`.
+1. W **Eksplorator rozwiązań** kliknij dwukrotnie pozycję **UserControl1.Designer.cs** , aby otworzyć ją do edycji. Zmień deklaracje pola tekstowego i przycisk z `private` na `public` .
 
 1. Skompiluj projekt.
 
-   Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
+   W menu **Kompilacja** kliknij pozycję **Kompiluj rozwiązanie**.
 
 ### <a name="to-create-the-mfc-host-application"></a>Aby utworzyć aplikację hosta MFC
 
 1. Utwórz projekt aplikacji MFC.
 
-   Na **pliku** menu, kliknij przycisk **New** a następnie kliknij przycisk **projektu**. W **Visual C++** folderu, wybierz **aplikacji MFC**.
+   W menu **plik** kliknij pozycję **Nowy** , a następnie kliknij pozycję **projekt**. W folderze **Visual C++** wybierz pozycję **aplikacja MFC**.
 
-   W **nazwa** wpisz `MFC01`. Zmień ustawienie rozwiązanie na **Dodaj do rozwiązania**. Kliknij przycisk **OK**.
+   W polu **Nazwa** wpisz `MFC01`. Zmień ustawienie rozwiązania na **Dodaj do rozwiązania**. Kliknij przycisk **OK**.
 
-   W **Kreator aplikacji MFC**, jako typ aplikacji wybierz **oparte o okna dialogowe**. Zaakceptuj pozostałe domyślne ustawienia i kliknij przycisk **Zakończ**. Tworzy to aplikację MFC z okna dialogowego MFC.
+   W **Kreatorze aplikacji MFC** w obszarze Typ aplikacji wybierz pozycję **okno dialogowe**. Zaakceptuj pozostałe ustawienia domyślne i kliknij przycisk **Zakończ**. Spowoduje to utworzenie aplikacji MFC, która ma okno dialogowe MFC.
 
-1. Dodaj formant zastępczy do okna dialogowego MFC.
+1. Dodaj kontrolkę symbol zastępczy do okna dialogowego MFC.
 
-   Na **widoku** menu, kliknij przycisk **widok zasobów**. W **widok zasobów**, rozwiń węzeł **okna dialogowego** folder i kliknij dwukrotnie plik `IDD_MFC01_DIALOG`. Zasoby dialogowe pojawiają się w **Edytor zasobów**.
+   W menu **Widok** kliknij **Widok zasobów**. W **Widok zasobów** rozwiń folder **okna dialogowego** i kliknij dwukrotnie `IDD_MFC01_DIALOG` . Zasób okna dialogowego pojawia się w **edytorze zasobów**.
 
-   W **przybornika**, otwórz **Edytor okien dialogowych** listy. Przeciągnij **tekst statyczny** formantu do okna dialogowego. **Tekst statyczny** formant będzie służyć jako symbol zastępczy dla formantu .NET Windows Forms. Zmień jej rozmiar do przybliżonego rozmiaru formantu Windows Forms.
+   W **przyborniku** Otwórz listę **Edytor okien dialogowych** . Przeciągnij **statyczny formant tekstowy** do zasobu okna dialogowego. Formant **tekstu statycznego** będzie używany jako symbol zastępczy dla kontrolki Windows Forms .NET. Zmień rozmiar na rozmiar w przybliżeniu Windows Forms formantu.
 
-   W **właściwości** oknie zmiany **identyfikator** z **tekst statyczny** kontrolę `IDC_CTRL1` i zmień **TabStop** właściwości **True**.
+   W oknie **Właściwości** Zmień **Identyfikator** kontrolki **tekst statyczny** na `IDC_CTRL1` **wartość PRAWDA**. 
 
-1. Konfigurowanie projektu dla obsługi środowiska uruchomieniowego języka wspólnego (CLR).
+1. Skonfiguruj projekt dla obsługi środowiska uruchomieniowego języka wspólnego (CLR).
 
-   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy węzeł projektu MFC01, a następnie kliknij przycisk **właściwości**.
+   W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy węzeł projektu MFC01, a następnie kliknij polecenie **Właściwości**.
 
-   W **stron właściwości** dialogowego **właściwości konfiguracji**, wybierz opcję **ogólne**. W **domyślne wartości projektu** sekcji, ustaw **Obsługa środowiska uruchomieniowego języka wspólnego** do **wsparcie (/ clr)**.
+   W oknie dialogowym **strony właściwości** w obszarze **Właściwości konfiguracji** wybierz pozycję **Ogólne**. W sekcji **wartości domyślne projektu** Ustaw **obsługę środowiska uruchomieniowego** CLR na **obsługę środowiska uruchomieniowego CLR (/CLR)**.
 
-   W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** i wybierz **ogólne** węzła. Ustaw **Format informacji o debugowaniu** do **(/Zi) baza danych programu**.
+   W obszarze **Właściwości konfiguracji** rozwiń węzeł **C/C++** i wybierz węzeł **Ogólne** . Ustaw **Format informacji debugowania** dla **bazy danych programu (/ZI)**.
 
-   Wybierz **generowania kodu** węzła. Ustaw **Włącz minimalną ponowną kompilację** do **nr (/ Gm-)**. Również ustawić **podstawowe sprawdzenia środowiska uruchomieniowego** do **domyślne**.
+   Wybierz węzeł **generowanie kodu** . Ustaw **opcję Włącz minimalną** ponowną kompilację na wartość **no (/GM-)**. Ustaw również **podstawowe testy środowiska uruchomieniowego** na **domyślne**.
 
-   Kliknij przycisk **OK** Aby zastosować zmiany.
+   Kliknij przycisk **OK**, aby zastosować zmiany.
 
-1. Dodaj odwołanie do formantu .NET.
+1. Dodaj odwołanie do kontrolki .NET.
 
-   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy węzeł projektu MFC01, a następnie kliknij przycisk **Dodaj**, **odwołania**. Na **strona właściwości**, kliknij przycisk **Dodaj nowe odwołanie**, wybierz opcję **WindowsFormsControlLibrary1** (w obszarze **projektów** karty) i kliknij przycisk **OK**. Dodaje to odwołanie w formie [/FU](../build/reference/fu-name-forced-hash-using-file.md) — opcja kompilatora tak, aby program został skompilowany. Ponadto umieszcza kopię biblioteki WindowsFormsControlLibrary1.dll w folderze projektu \MFC01\, tak aby program będzie uruchamiany.
+   W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy węzeł projektu MFC01, a następnie kliknij polecenie **Dodaj**, **odwołania**. Na **stronie właściwości** kliknij pozycję **Dodaj nowe odwołanie**, wybierz pozycję **WindowsFormsControlLibrary1** (na karcie **projekty** ), a następnie kliknij przycisk **OK**. Spowoduje to dodanie odwołania w postaci opcji kompilatora [/Fu](../build/reference/fu-name-forced-hash-using-file.md) , tak aby program skompiluje. Umieszcza również kopię WindowsFormsControlLibrary1.dll w folderze projektu \MFC01\, dzięki czemu program zostanie uruchomiony.
 
-1. W pliku Stdafx.h Znajdź ten wiersz:
+1. W stdafx. h Znajdź ten wiersz:
 
     ```
     #endif // _AFX_NO_AFXCMN_SUPPORT
     ```
 
-   Nad nim Dodaj następujące wiersze:
+   W tym celu Dodaj następujące wiersze:
 
     ```
     #include <afxwinforms.h>   // MFC Windows Forms support
     ```
 
-1. Dodaj kod, aby utworzyć formant zarządzany.
+1. Dodaj kod, aby utworzyć zarządzany formant.
 
-   Najpierw należy zadeklarować zarządzany formant. W pliku MFC01Dlg.h przejdź do deklaracji klasy okna dialogowego i Dodaj element członkowski danych dla kontrolki użytkownika w zakresie chronionym, w następujący sposób.
+   Najpierw Zadeklaruj zarządzany formant. W pliku mfc01dlg. h przejdź do deklaracji klasy okna dialogowego i Dodaj element członkowski danych dla kontrolki użytkownika w zakresie chronionym w następujący sposób.
 
     ```
     class CMFC01Dlg : public CDialog
@@ -97,7 +98,7 @@ Kroki opisane w tym artykule przyjęto założenie, że tworzysz oparty na dialo
        CWinFormsControl<WindowsFormsControlLibrary1::UserControl1> m_ctrl1;
     ```
 
-   Następnie należy podać implementacja dla zarządzanego formantu. W MFC01Dlg.cpp w oknie dialogowym zastępowania `CMFC01Dlg::DoDataExchange` wygenerowany przez Kreatora aplikacji MFC (nie `CAboutDlg::DoDataExchange`, która znajduje się w tym samym pliku), Dodaj następujący kod do tworzenia zarządzanego formantu i skojarzyć ją z statyczne zastępczym idc_ctrl1.
+   Następnie podaj implementację zarządzanego formantu. W pliku mfc01dlg. cpp w oknie dialogowym przesłonięcie, `CMFC01Dlg::DoDataExchange` które zostało wygenerowane przez Kreatora aplikacji MFC (nie `CAboutDlg::DoDataExchange` , który znajduje się w tym samym pliku), Dodaj następujący kod, aby utworzyć zarządzany formant i skojarzyć go z symbolem zastępczym miejsca statycznego IDC_CTRL1.
 
     ```
     void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
@@ -107,14 +108,14 @@ Kroki opisane w tym artykule przyjęto założenie, że tworzysz oparty na dialo
     }
     ```
 
-1. Skompiluj i uruchom projekt.
+1. Skompiluj i Uruchom projekt.
 
-   W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **MFC01** a następnie kliknij przycisk **Ustaw jako projekt startowy**.
+   W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy pozycję **MFC01** , a następnie kliknij pozycję **Ustaw jako projekt startowy**.
 
-   Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.
+   W menu **Kompilacja** kliknij pozycję **Kompiluj rozwiązanie**.
 
-   Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**. W oknie dialogowym MFC powinien być wyświetlany formantu programu Windows Forms.
+   W menu **debugowanie** kliknij polecenie **Uruchom bez debugowania**. W oknie dialogowym MFC powinna zostać wyświetlona kontrolka Windows Forms.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

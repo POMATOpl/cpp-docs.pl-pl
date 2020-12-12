@@ -1,5 +1,6 @@
 ---
-title: Edytor informacji o wersjiC++()
+description: 'Dowiedz się więcej na temat: wersja Edytor informacji (C++)'
+title: Edytor informacji o wersji (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e639db4fd0ec8ac6291be452c000a23246bac662
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214373"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283228"
 ---
-# <a name="version-information-editor-c"></a>Edytor informacji o wersjiC++()
+# <a name="version-information-editor-c"></a>Edytor informacji o wersji (C++)
 
-Informacje o wersji obejmują tożsamość firmy i produktu, numer wydania produktu oraz powiadomienia o prawach autorskich i znakach towarowych. Za pomocą **edytora informacji o wersji**można tworzyć i obsługiwać te dane, które są przechowywane w zasobie informacji o wersji. Zasób informacji o wersji nie jest wymagany przez aplikację, ale jest przydatny do zbierania informacji identyfikujących aplikację. Informacje o wersji są również używane przez interfejsy API Instalatora.
+Informacje o wersji obejmują tożsamość firmy i produktu, numer wydania produktu oraz powiadomienia o prawach autorskich i znakach towarowych. Za pomocą **edytora informacji o wersji** można tworzyć i obsługiwać te dane, które są przechowywane w zasobie informacji o wersji. Zasób informacji o wersji nie jest wymagany przez aplikację, ale jest przydatny do zbierania informacji identyfikujących aplikację. Informacje o wersji są również używane przez interfejsy API Instalatora.
 
 > [!NOTE]
 > Standard systemu Windows ma mieć tylko jeden zasób wersji o nazwie VS_VERSION_INFO.
@@ -50,11 +51,11 @@ Zasób informacji o wersji ma górny blok i co najmniej jeden niższy blok: poje
 
 Wybierz element raz, aby go wybrać, a następnie ponownie, aby rozpocząć jego edytowanie. Wprowadzanie zmian bezpośrednio w tabeli **informacji o wersji** lub w [okno właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.
 
-Podczas edytowania klucza `FILEFLAGS` w **Edytorze informacji o wersji**należy zauważyć, że nie można ustawić właściwości **debugowania**, **prywatnej kompilacji**ani **specjalnej kompilacji** w oknie **Właściwości** dla plików. rc:
+Podczas edytowania `FILEFLAGS` klucza w **Edytorze informacji o wersji** należy zauważyć, że nie można ustawić **właściwości debugowania**, **prywatnej kompilacji** ani **specjalnej kompilacji** w oknie **Właściwości** dla plików. rc:
 
-- **Edytor informacji o wersji** ustawia właściwość **Debug** z `#ifdef` w skrypcie zasobów na podstawie flagi kompilacji `_DEBUG`.
+- **Edytor informacji o wersji** ustawia właściwość **Debug** z `#ifdef` w skrypcie zasobu na podstawie `_DEBUG` flagi Build.
 
-- Jeśli klucz `Private Build` ma ustawioną **wartość** w tabeli **informacji o wersji** , odpowiednia właściwość **prywatnej kompilacji** w oknie **Właściwości** dla klucza `FILEFLAGS` ma **wartość true**. Jeśli **wartość** jest pusta, właściwość będzie mieć **wartość false**. Analogicznie, **specjalny klucz kompilacji** w tabeli **informacji o wersji** jest powiązany z **specjalną** właściwością kompilacji dla klucza `FILEFLAGS`.
+- Jeśli `Private Build` klucz ma ustawioną **wartość** w tabeli **informacji o wersji** , odpowiadająca jej właściwość **prywatnej kompilacji** w oknie **Właściwości** `FILEFLAGS` klucza będzie mieć **wartość true**. Jeśli **wartość** jest pusta, właściwość będzie mieć **wartość false**. Analogicznie, **specjalny klucz kompilacji** w tabeli **informacji o wersji** jest powiązany z **specjalną** właściwością kompilacji `FILEFLAGS` klucza.
 
 Można sortować sekwencję informacji bloku ciągu, wybierając pozycję **klucz** lub nagłówki kolumn **wartości** . Te nagłówki automatycznie przestawiają informacje na wybraną sekwencję.
 

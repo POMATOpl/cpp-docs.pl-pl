@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: priority_queue (STL/CLR)'
 title: priority_queue (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: fd87c39db279fb70d5c5b5f20e583251dc519755
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 666efbc634ae962836fce4fa12ca762ab7085d92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282500"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -728,7 +729,7 @@ Konstruktor:
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-tworzy opakowany kontener, który jest kopią `right.get_container()` , z predykatem porządkowania `right.value_comp()` . Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt kolejki*z tym samym predykatem kolejności.
+tworzy opakowany kontener, który jest kopią `right.get_container()` , z predykatem porządkowania `right.value_comp()` . Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt kolejki* z tym samym predykatem kolejności.
 
 Konstruktor:
 
@@ -1335,7 +1336,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *wartości*parametru szablonu.
+Typ jest synonimem dla *wartości* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

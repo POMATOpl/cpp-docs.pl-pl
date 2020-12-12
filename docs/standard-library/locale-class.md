@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie locale
 title: locale — Klasa
 ms.date: 07/20/2020
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e934a2e892f0b68926369c8e4a4128162345dd83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284632"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -142,7 +143,7 @@ Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same ja
 
 |Konstruktor|Opis|
 |-|-|
-|[ustawienie](#locale)|Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych.|
+|[locale](#locale)|Tworzy ustawienia regionalne lub kopię ustawień regionalnych, lub kopię ustawień regionalnych, w której zestaw reguł lub kategoria zostały zastąpione przez zestaw reguł lub kategorię z innych ustawień regionalnych.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -161,7 +162,7 @@ Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same ja
 
 |Nazwa|Opis|
 |-|-|
-|[wdrożenie klasyczne](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|
+|[motyw](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|
 |[globalne](#global)|Resetuje domyślne ustawienia lokalne dla programu.|
 
 ### <a name="operators"></a>Operatory
@@ -297,7 +298,7 @@ Ustawienia regionalne zawierające zestaw reguł, który ma zostać wstawiony do
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja członkowska zwraca obiekt ustawień regionalnych, który zastępuje lub dodaje do ** \* tego** aspektu `Facet` wymienionego w *source_locale*.
+Funkcja członkowska zwraca obiekt ustawień regionalnych, który zastępuje lub dodaje do **\* tego** aspektu `Facet` wymienionego w *source_locale*.
 
 ### <a name="example"></a>Przykład
 
@@ -454,7 +455,7 @@ Zestaw reguł, który ma zostać zastąpiony przez skonstruowane ustawienia regi
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje obiekt, aby odpowiadał globalnym ustawieniom regionalnym. Drugi i trzeci konstruktorzy inicjują wszystkie kategorie ustawień regionalnych, aby mieć zachowanie spójne z nazwą ustawień regionalnych *locale_name*. Pozostałe konstruktory są kopiowane *from_locale*z wyjątkami:
+Pierwszy Konstruktor inicjuje obiekt, aby odpowiadał globalnym ustawieniom regionalnym. Drugi i trzeci konstruktorzy inicjują wszystkie kategorie ustawień regionalnych, aby mieć zachowanie spójne z nazwą ustawień regionalnych *locale_name*. Pozostałe konstruktory są kopiowane *from_locale* z wyjątkami:
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 

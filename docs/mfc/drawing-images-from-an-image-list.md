@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Rysowanie obrazów z listy obrazów'
 title: Rysowanie obrazów z poziomu listy obrazów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: 55c16ce5bff102d670e46867e121b0a0a2f304ac
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2c413092e1e7568488a091acd2b0db175d03dab9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283462"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Rysowanie obrazów z poziomu listy obrazów
 
@@ -28,7 +29,7 @@ Style **ILD_BLEND25** i **ILD_BLEND50** są symulowane dla obrazu za pomocą kol
 
 Obraz niemaskowany jest kopiowany do kontekstu urządzenia docelowego przy użyciu `SRCCOPY` operacji rastrowej. Kolory obrazu są wyświetlane w taki sam sposób, niezależnie od koloru tła kontekstu urządzenia. Style rysowania określone w programie `Draw` również nie mają wpływu na wygląd obrazu niemaskowanego.
 
-Oprócz funkcji rysowania elementu członkowskiego, inna funkcja, [DrawIndirect](reference/cimagelist-class.md#drawindirect), rozszerza możliwość renderowania obrazu. `DrawIndirect`przyjmuje jako parametr [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) strukturę. Ta struktura może służyć do dostosowywania renderowania bieżącego obrazu, łącznie z użyciem kodów operacji rastrowych (ROP). Aby uzyskać więcej informacji na temat kodów ROP, zobacz sekcję [operacje rastrowe](/windows/win32/gdi/raster-operation-codes) i [mapy bitowe jako pędzle](/windows/win32/gdi/bitmaps-as-brushes) w Windows SDK.
+Oprócz funkcji rysowania elementu członkowskiego, inna funkcja, [DrawIndirect](reference/cimagelist-class.md#drawindirect), rozszerza możliwość renderowania obrazu. `DrawIndirect` przyjmuje jako parametr [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) strukturę. Ta struktura może służyć do dostosowywania renderowania bieżącego obrazu, łącznie z użyciem kodów operacji rastrowych (ROP). Aby uzyskać więcej informacji na temat kodów ROP, zobacz sekcję [operacje rastrowe](/windows/win32/gdi/raster-operation-codes) i [mapy bitowe jako pędzle](/windows/win32/gdi/bitmaps-as-brushes) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz też
 

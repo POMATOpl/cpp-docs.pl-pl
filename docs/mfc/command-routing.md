@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: routing poleceń'
 title: Routing poleceń
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4004f74413f236599c5cdd14f6593bc5d2bd26b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283449"
 ---
 # <a name="command-routing"></a>Routing poleceń
 
@@ -31,11 +32,11 @@ Różne klasy docelowe poleceń sprawdzają własne mapy komunikatów w różnyc
 
 Jak drogie jest ten mechanizm routingu w porównaniu do tego, co program obsługi w odpowiedzi na polecenie, koszt routingu jest niski. Należy pamiętać, że struktura generuje polecenia tylko wtedy, gdy użytkownik współdziała z obiektem interfejsu użytkownika.
 
-### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a>Standardowa trasa polecenia
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a> Standardowa trasa polecenia
 
 |Gdy obiekt tego typu otrzymuje polecenie. . .|Nadaje sobie i innym obiektom docelowym polecenia możliwość obsługi polecenia w następującej kolejności:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Okno ramek MDI ( `CMDIFrameWnd` )|1. aktywne`CMDIChildWnd`<br />2. to okno ramowe<br />3. aplikacja ( `CWinApp` obiekt)|
+|Okno ramek MDI ( `CMDIFrameWnd` )|1. aktywne `CMDIChildWnd`<br />2. to okno ramowe<br />3. aplikacja ( `CWinApp` obiekt)|
 |Okno ramki dokumentu ( `CFrameWnd` , `CMDIChildWnd` )|1. widok aktywny<br />2. to okno ramowe<br />3. aplikacja ( `CWinApp` obiekt)|
 |Widok|1. ten widok<br />2. dokument dołączony do widoku|
 |Dokument|1. ten dokument<br />2. szablon dokumentu dołączony do dokumentu|

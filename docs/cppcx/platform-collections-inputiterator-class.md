@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: Collections:: InputIterator, Klasa'
 title: 'Platform:: Collections:: InputIterator, Klasa'
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 4aeef07a34c04bd1ab47acf808026024faada567
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7345435c57c75c04f0eb30d9773d655d713853de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283961"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform:: Collections:: InputIterator, Klasa
 
@@ -38,8 +39,8 @@ Nazwa typu klasy szablonu InputIterator.
 |----------|-----------------|
 |`difference_type`|Różnica wskaźnika (ptrdiff_t).|
 |`iterator_category`|Kategoria iteratora danych wejściowych (:: std:: input_iterator_tag).|
-|`pointer`|Wskaźnik do`const X`|
-|`reference`|Odwołanie do`const X`|
+|`pointer`|Wskaźnik do `const X`|
+|`reference`|Odwołanie do `const X`|
 |`value_type`|`X`Nazwa typu.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
@@ -68,7 +69,7 @@ Nazwa typu klasy szablonu InputIterator.
 
 **Przestrzeń nazw:** Platform:: Collections
 
-## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>InputIterator:: InputIterator — Konstruktor
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a> InputIterator:: InputIterator — Konstruktor
 
 Inicjuje nowe wystąpienie klasy InputIterator.
 
@@ -112,7 +113,7 @@ reference operator*() const;
 
 Element określony przez bieżący InputIterator.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>InputIterator:: operator = = — operator
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a> InputIterator:: operator = = — operator
 
 Wskazuje, czy bieżący InputIterator jest równy określonemu InputIterator.
 
@@ -131,7 +132,7 @@ Inny InputIterator.
 
 **`true`** Jeśli bieżący InputIterator jest równy *innemu*; w przeciwnym razie **`false`** .
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>Operator InputIterator:: operator + +
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a> Operator InputIterator:: operator + +
 
 Zwiększa bieżącą InputIterator.
 
@@ -152,7 +153,7 @@ Pierwsza składnia InputIterator wstępnie zwiększa bieżącą InputIterator.
 
 Druga składnia post-zwiększa bieżącą InputIterator. **`int`** Typ w drugiej składni wskazuje operację po przyrostie, a nie rzeczywisty argument operacji całkowitej.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>Operator InputIterator:: operator! =
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a> Operator InputIterator:: operator! =
 
 Wskazuje, czy bieżący InputIterator nie jest równy określonemu InputIterator.
 
@@ -171,6 +172,6 @@ Inny InputIterator.
 
 **`true`** Jeśli bieżący InputIterator nie jest równy *innemu*; w przeciwnym razie **`false`** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](platform-namespace-c-cx.md)

@@ -1,17 +1,18 @@
 ---
+description: 'Dowiedz się więcej o: `scanf` Specyfikacja szerokości'
 title: scanf, specyfikacja szerokości
 ms.date: 10/22/2019
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 781e292140babd61fbcde77cefcb917736b17cc3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f4b0e13ef87add74bc802ba11ea6b87d0dfc6b8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87188742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284437"
 ---
-# <a name="scanf-width-specification"></a>`scanf`Specyfikacja szerokości
+# <a name="scanf-width-specification"></a>`scanf` Specyfikacja szerokości
 
 Te informacje dotyczą interpretacji ciągów formatu w `scanf` rodzinie funkcji, w tym z bezpiecznymi wersjami, takimi jak `scanf_s` . Te funkcje zwykle zakładają, że strumień wejściowy jest podzielony na sekwencję tokenów. Tokeny są oddzielone odstępami (spacja, tabulatorem lub znakiem nowego wiersza) lub dla typów numerycznych przez naturalny koniec liczbowego typu danych wskazywanego przez pierwszy znak, który nie może zostać skonwertowany na tekst liczbowy. Jednakże specyfikacja szerokości może być używana w celu przeanalizowania danych wejściowych do zatrzymania przed naturalnym końcem tokenu.
 
@@ -32,33 +33,33 @@ Jeśli pole *Szerokość* nie jest używane, `scanf_s` próbuje odczytać cały 
 
 ## <a name="the-size-prefix"></a>Prefiks rozmiaru
 
-Opcjonalne prefiksy **h**, **hh**, **l**, **ll**, **I64**i **l** wskazują rozmiar `argument` (długi lub krótki, jednobajtowy znak lub szeroki, w zależności od typu modyfikowanego przez siebie znaków). Te znaki specyfikacji formatu są używane z znakami w `scanf` lub `wscanf` funkcjach, aby określić interpretację argumentów, jak pokazano w poniższej tabeli. Prefiks typu **I64** jest rozszerzeniem firmy Microsoft i nie jest zgodny ze standardowym C. Znaki typu i ich znaczenie są opisane w tabeli "znaki typu dla funkcji scanf" w [ `scanf` znakach pola typu](../c-runtime-library/scanf-type-field-characters.md).
+Opcjonalne prefiksy **h**, **hh**, **l**, **ll**, **I64** i **l** wskazują rozmiar `argument` (długi lub krótki, jednobajtowy znak lub szeroki, w zależności od typu modyfikowanego przez siebie znaków). Te znaki specyfikacji formatu są używane z znakami w `scanf` lub `wscanf` funkcjach, aby określić interpretację argumentów, jak pokazano w poniższej tabeli. Prefiks typu **I64** jest rozszerzeniem firmy Microsoft i nie jest zgodny ze standardowym C. Znaki typu i ich znaczenie są opisane w tabeli "znaki typu dla funkcji scanf" w [ `scanf` znakach pola typu](../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Prefiksy **h**, **l**i **l** są rozszerzeniami firmy Microsoft, gdy są używane z danymi typu **`char`** .
+> Prefiksy **h**, **l** i **l** są rozszerzeniami firmy Microsoft, gdy są używane z danymi typu **`char`** .
 
 ### <a name="size-prefixes-for-scanf-and-wscanf-format-type-specifiers"></a>Prefiksy rozmiarów dla `scanf` `wscanf` specyfikatorów typu i formatu
 
 |Aby określić|Użyj prefiksu|Ze specyfikatorem typu|
 |----------------|----------------|-------------------------|
-|**`double`**|**&**|**e**, **e**, **f**, **g**lub **g**|
-|**`long double`**(analogicznie jak **`double`** )|**L**|**e**, **e**, **f**, **g**lub **g**|
-|**`long int`**|**&**|**d**, **i**, **o**, **x**lub **x**|
+|**`double`**|**&**|**e**, **e**, **f**, **g** lub **g**|
+|**`long double`** (analogicznie jak **`double`** )|**L**|**e**, **e**, **f**, **g** lub **g**|
+|**`long int`**|**&**|**d**, **i**, **o**, **x** lub **x**|
 |**`long unsigned int`**|**&**|**'t**|
-|**`long long`**|**wszystki**|**d**, **i**, **o**, **x**lub **x**|
-|**`short int`**|**c**|**d**, **i**, **o**, **x**lub **x**|
-|**`short unsigned int`**|**c**|**'t**|
-|**`char`**|**formacie**|**d**, **i**, **o**, **x**lub **x**|
-|**`unsigned char`**|**formacie**|**'t**|
-|**`int64`**|**I64**|**d**, **i**, **o**, **u**, **x**lub **x**|
-|Jednobajtowy znak z`scanf`|**c**|**c** lub **c**|
-|Jednobajtowy znak z`wscanf`|**c**|**c** lub **c**|
-|Szeroki znak z`scanf`|**&**|**c** lub **c**|
-|Szeroki znak z`wscanf`|**&**|**c**lub **c**|
-|Jednobajtowy ciąg znaków z`scanf`|**c**|**s** lub **s**|
-|Jednobajtowy ciąg znaków z`wscanf`|**c**|**s** lub **s**|
-|Ciąg znaków dwubajtowych z`scanf`|**&**|**s** lub **s**|
-|Ciąg znaków dwubajtowych z`wscanf`|**&**|**s** lub **s**|
+|**`long long`**|**wszystki**|**d**, **i**, **o**, **x** lub **x**|
+|**`short int`**|**h**|**d**, **i**, **o**, **x** lub **x**|
+|**`short unsigned int`**|**h**|**'t**|
+|**`char`**|**hh**|**d**, **i**, **o**, **x** lub **x**|
+|**`unsigned char`**|**hh**|**'t**|
+|**`int64`**|**I64**|**d**, **i**, **o**, **u**, **x** lub **x**|
+|Jednobajtowy znak z `scanf`|**h**|**c** lub **c**|
+|Jednobajtowy znak z `wscanf`|**h**|**c** lub **c**|
+|Szeroki znak z `scanf`|**&**|**c** lub **c**|
+|Szeroki znak z `wscanf`|**&**|**c** lub **c**|
+|Jednobajtowy ciąg znaków z `scanf`|**h**|**s** lub **s**|
+|Jednobajtowy ciąg znaków z `wscanf`|**h**|**s** lub **s**|
+|Ciąg znaków dwubajtowych z `scanf`|**&**|**s** lub **s**|
+|Ciąg znaków dwubajtowych z `wscanf`|**&**|**s** lub **s**|
 
 W poniższych przykładach użyto **h** i **l** z `scanf_s` funkcjami i `wscanf_s` funkcjami:
 
@@ -93,9 +94,9 @@ Aby zapisać ciąg bez przechowywania kończącego znaku null (' \ 0 '), użyj s
 
 Z dowolnego powodu, gdy `scanf` Funkcja przestaje odczytywanie pola wejściowego, następne pole wejściowe jest uważane za pierwsze, nieprzeczytane. Znak powodujący konflikt, jeśli istnieje, jest uznawany za nieprzeczytany. Jest to pierwszy znak następnego pola wejściowego lub pierwszy znak w kolejnych operacjach odczytu strumienia wejściowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [`scanf`, `_scanf_l`, `wscanf`, `_wscanf_l`](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [`scanf_s`, `_scanf_s_l`, `wscanf_s`, `_wscanf_s_l`](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
 [Pola specyfikacji formatu: `scanf` i `wscanf` funkcje](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)<br/>
-[`scanf`Znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)<br/>
+[`scanf` Znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)<br/>

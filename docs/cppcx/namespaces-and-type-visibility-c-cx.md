@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej o obszarach nazw i widoczności typów (C++/CX)
 title: Przestrzenie nazw i widoczność typów (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 014791ef322538c824c68409681d7fb856e1c837
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837804"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282903"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Przestrzenie nazw i widoczność typów (C++/CX)
 
@@ -39,7 +40,7 @@ Poniższe Modyfikatory dostępu umożliwiają kontrolowanie zarówno widocznośc
 
 ## <a name="windows-runtime-namespaces"></a>środowisko wykonawcze systemu Windows przestrzenie nazw
 
-Interfejs API systemu Windows składa się z typów, które są zadeklarowane w \* przestrzeniach nazw Windows::. Te przestrzenie nazw są zastrzeżone dla systemu Windows i nie można do nich dodawać typów. W **Przeglądarka obiektów**można wyświetlić te przestrzenie nazw w pliku. winmd systemu Windows. Aby uzyskać dokumentację dotyczącą tych przestrzeni nazw, zobacz [Windows API](/uwp/api/).
+Interfejs API systemu Windows składa się z typów, które są zadeklarowane w \* przestrzeniach nazw Windows::. Te przestrzenie nazw są zastrzeżone dla systemu Windows i nie można do nich dodawać typów. W **Przeglądarka obiektów** można wyświetlić te przestrzenie nazw w pliku. winmd systemu Windows. Aby uzyskać dokumentację dotyczącą tych przestrzeni nazw, zobacz [Windows API](/uwp/api/).
 
 ## <a name="ccx-namespaces"></a>Przestrzenie nazw C++/CX
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: deklaracjach tablicowych'
 title: Deklaracje tablicy
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ab44c1121fde7371591967a9f5860442674abda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280004"
 ---
 # <a name="array-declarations"></a>Deklaracje tablicy
 
@@ -31,10 +32,10 @@ ms.locfileid: "87218926"
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjator*
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/ \* A funkcja deklarator\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***[***wybór wyrażenia stałego*<sub>opt</sub> **]**    
+*Direct-deklarator*:/ \* A funkcja deklarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***[***wybór wyrażenia stałego*<sub></sub> **]**    
 
 Ze względu na to, że *wyrażenie stałe* jest opcjonalne, składnia ma dwa formy:
 
@@ -94,6 +95,6 @@ Typ liczby całkowitej wymaganej do przechowywania maksymalnego rozmiaru tablicy
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej o: niezawodnej'
 title: Niezawodność
 ms.date: 11/04/2016
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: 9de2611e29f5f9bfd08839517e873c3dda225af0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7dfe3d40eae4c67f45d4332ce22255a44c33f728
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284515"
 ---
 # <a name="robustness"></a>Niezawodność
 
 Użyj następujących funkcji biblioteki wykonawczej języka C, aby zwiększyć niezawodność programu.
 
-## <a name="run-time-robustness-functions"></a>Funkcje niezawodności w czasie wykonywania
+## <a name="run-time-robustness-functions"></a>Run-Time funkcje niezawodne
 
 |Funkcja|Zastosowanie|
 |--------------|---------|
@@ -24,7 +25,7 @@ Użyj następujących funkcji biblioteki wykonawczej języka C, aby zwiększyć 
 |[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Instaluje własną funkcję zakończenia, która ma zostać wywołana przez [zakończenie](../c-runtime-library/reference/terminate-crt.md).|
 |[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Instaluje własną funkcję zakończenia, która ma zostać wywołana przez [nieoczekiwane](../c-runtime-library/reference/unexpected-crt.md).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [SetUnhandledExceptionFilter](/windows/win32/api/errhandlingapi/nf-errhandlingapi-setunhandledexceptionfilter)<br/>

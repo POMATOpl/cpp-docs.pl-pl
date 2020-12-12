@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: podstawowe pojęcia związane z używaniem wyjątków zarządzanych'
 title: Podstawowe pojęcia związane z używaniem wyjątków zarządzanych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 4eeec5db00ceca5429f4a3a270e1b249a8955249
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1c6e405de2a82e32375092007dcc1f0fd8f654c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282604"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Podstawowe pojęcia związane z używaniem wyjątków zarządzanych
 
@@ -35,7 +36,7 @@ Przechwytywanie typów wyjątków pochodnych od interfejsu nie jest obsługiwane
 
 Aby uzyskać więcej informacji o różnicach w obsłudze wyjątków w aplikacjach zarządzanych i niezarządzanych, zobacz [różnice w zachowaniu obsługi wyjątków w obszarze Managed Extensions for C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
 
-## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Zgłaszanie wyjątków z opcją/CLR
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Zgłaszanie wyjątków z opcją/CLR
 
 Wyrażenie throw języka C++ zostało rozszerzone, aby zgłosić dojście do typu CLR. Poniższy przykład tworzy niestandardowy typ wyjątku, a następnie zgłasza wystąpienie tego typu:
 
@@ -68,7 +69,7 @@ void GlobalFunction() {
 }
 ```
 
-## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Bloki try/catch dla rozszerzeń CLR
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Bloki try/catch dla rozszerzeń CLR
 
 Ta sama **`try`** / **`catch`** Struktura bloku może służyć do przechwytywania zarówno wyjątków CLR, jak i natywnych:
 
@@ -164,7 +165,7 @@ Jeśli typ niezarządzany zostanie przechwycony przez catch (Object ^), nie spow
 
 W przypadku zgłaszania lub przechwytywania wyjątków niezarządzanych zalecamy użycie opcji kompilatora [/EHsc](../build/reference/eh-exception-handling-model.md) zamiast **/EHS** lub **/EHa**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>

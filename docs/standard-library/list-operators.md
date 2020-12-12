@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; &gt; Operatory list'
 title: '&lt;&gt;Operatory list'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 8648258f17bff577ba1c0dde5016f5f284b82e25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86f032a201943e6b42a997c2fc6ff29df353351e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284697"
 ---
 # <a name="ltlistgt-operators"></a>&lt;&gt;Operatory list
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje, czy obiekt listy po lewej stronie operatora nie jest równy obiektowi listy po prawej stronie.
 
@@ -76,7 +77,7 @@ Lists not equal.
 */
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy obiekt listy po lewej stronie operatora jest mniejszy niż obiekt listy po prawej stronie.
 
@@ -131,7 +132,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Testuje, czy obiekt listy po lewej stronie operatora jest mniejszy niż lub równy obiektowi listy po prawej stronie.
 
@@ -186,7 +187,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje, czy obiekt listy po lewej stronie operatora jest równy obiektowi listy po prawej stronie.
 
@@ -237,7 +238,7 @@ The lists are equal.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Testuje, czy obiekt listy po lewej stronie operatora jest większy niż obiekt listy po prawej stronie.
 
@@ -292,7 +293,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Testuje, czy obiekt listy po lewej stronie operatora jest większy niż lub równy obiektowi listy po prawej stronie.
 

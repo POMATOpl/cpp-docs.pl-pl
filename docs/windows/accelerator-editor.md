@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Edytor akceleratorów (C++)'
 title: Edytor akceleratorów (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: c98ff1fd44b73b3f204e9b952836c387f7f21146
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: d6324b86a6e30f7169899a535012f4347f92bcf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280303"
 ---
 # <a name="accelerator-editor-c"></a>Edytor akceleratorów (C++)
 
@@ -60,12 +61,12 @@ W dowolnym momencie możesz ustawić właściwości akceleratora w [okno właśc
 
 Właściwość **ID** odwołuje się do każdego wpisu tabeli akceleratorów w kodzie programu. Ten wpis jest wartością polecenia, którą program otrzymuje, gdy użytkownik naciśnie klawisz skrótu lub kombinację klawiszy. Aby ustawić akcelerator w taki sam sposób, jak element menu, ustaw **Identyfikator** tak samo, o ile **Identyfikator** tabeli akceleratora jest taki sam jak **Identyfikator** zasobu menu.
 
-Każdy **Identyfikator** akceleratora ma trzy właściwości: **modyfikator**, **klucz**i **Typ**
+Każdy **Identyfikator** akceleratora ma trzy właściwości: **modyfikator**, **klucz** i **Typ**
 
 Właściwość **modyfikator** ustawia kombinacje klawiszy kontroli dla akceleratora.
 
 > [!NOTE]
-> W oknie **Właściwości** Właściwość **modyfikator** jest wyświetlana jako trzy osobne właściwości **logiczne** , które mogą być sterowane niezależnie: **Alt**, **Ctrl**i **SHIFT**.
+> W oknie **Właściwości** Właściwość **modyfikator** jest wyświetlana jako trzy osobne właściwości **logiczne** , które mogą być sterowane niezależnie: **Alt**, **Ctrl** i **SHIFT**.
 
 Poniżej przedstawiono wpisy prawne dla właściwości **modyfikator** w tabeli akceleratora:
 
@@ -78,7 +79,7 @@ Poniżej przedstawiono wpisy prawne dla właściwości **modyfikator** w tabeli 
    |**Ctrl + Alt**|Użytkownik musi nacisnąć **klawisze CTRL** i **Alt** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
    |**Ctrl + Shift**|Użytkownik musi nacisnąć **klawisze CTRL** i **SHIFT** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
    |**Alt + Shift**|Użytkownik musi nacisnąć klawisze **Alt** i **SHIFT** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
-   |**Ctrl + Alt + Shift**|Użytkownik musi nacisnąć **klawisze CTRL**, **Alt**i **SHIFT** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
+   |**Ctrl + Alt + Shift**|Użytkownik musi nacisnąć **klawisze CTRL**, **Alt** i **SHIFT** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
 
 Właściwość **Key** ustawia rzeczywisty klucz, który ma być używany jako akcelerator.
 
@@ -106,7 +107,7 @@ Właściwość **Type** określa, czy kombinacja klawiszy skrótu skojarzona z *
 - Jeśli właściwość **Type** ma wartość **standardowym VIRTKEY**, dowolna kombinacja **modyfikatora** i wartości **klucza** jest prawidłowa.
 
 > [!NOTE]
-> Jeśli chcesz wprowadzić wartość do tabeli akceleratorów i mieć wartość traktowaną jako ASCII/ANSI, wybierz **Typ** wpisu w tabeli i wybierz pozycję **ASCII** z listy rozwijanej. Jeśli jednak do określenia **klucza**używasz polecenia **Next Key type** z menu **Edytuj** , musisz zmienić właściwość **Type** z **standardowym VIRTKEY** na **ASCII** *przed* wprowadzeniem kodu **klucza** .
+> Jeśli chcesz wprowadzić wartość do tabeli akceleratorów i mieć wartość traktowaną jako ASCII/ANSI, wybierz **Typ** wpisu w tabeli i wybierz pozycję **ASCII** z listy rozwijanej. Jeśli jednak do określenia **klucza** używasz polecenia **Next Key type** z menu **Edytuj** , musisz zmienić właściwość **Type** z **standardowym VIRTKEY** na **ASCII** *przed* wprowadzeniem kodu **klucza** .
 
 ## <a name="accelerator-tables"></a>Tabele akceleratora
 
@@ -122,13 +123,13 @@ Poniższe procedury odnoszą się do używania standardowych stron właściwośc
 
 1. Wybierz z listy rozwijanej lub wpisz w miejscu, aby wprowadzić zmiany:
 
-   - Dla opcji **Identyfikator**wybierz z listy lub typ do edycji.
+   - Dla opcji **Identyfikator** wybierz z listy lub typ do edycji.
 
-   - Dla **modyfikatora**wybierz z listy.
+   - Dla **modyfikatora** wybierz z listy.
 
-   - Dla opcji **klucz**wybierz z listy lub wpisz, aby edytować.
+   - Dla opcji **klucz** wybierz z listy lub wpisz, aby edytować.
 
-   - Dla opcji **Typ**wybierz z listy pozycję **ASCII** lub **standardowym VIRTKEY** .
+   - Dla opcji **Typ** wybierz z listy pozycję **ASCII** lub **standardowym VIRTKEY** .
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Aby znaleźć wpis w otwartej tabeli akceleratorów
 
@@ -142,7 +143,7 @@ Poniższe procedury odnoszą się do używania standardowych stron właściwośc
 
 1. Otwórz tabelę akceleratora, klikając dwukrotnie jej ikonę w [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Kliknij prawym przyciskiem myszy w tabeli akceleratora i wybierz pozycję **Nowy akcelerator**lub zaznacz pusty wiersz w dolnej części tabeli.
+1. Kliknij prawym przyciskiem myszy w tabeli akceleratora i wybierz pozycję **Nowy akcelerator** lub zaznacz pusty wiersz w dolnej części tabeli.
 
 1. Wybierz **Identyfikator** z listy rozwijanej w polu **ID** lub wpisz nowy *Identyfikator* w polu **ID** .
 
@@ -159,7 +160,7 @@ Poniższe procedury odnoszą się do używania standardowych stron właściwośc
 
 1. Wybierz wpis, który chcesz usunąć, lub przytrzymaj klawisz **Ctrl** lub **SHIFT** podczas zaznaczania, aby wybrać wiele wpisów.
 
-1. Kliknij prawym przyciskiem myszy i wybierz polecenie **Usuń**lub przejdź do menu **Edycja**  >  **Usuń**.
+1. Kliknij prawym przyciskiem myszy i wybierz polecenie **Usuń** lub przejdź do menu **Edycja**  >  **Usuń**.
 
 > [!TIP]
 > Możesz również nacisnąć klawisz **delete** , aby usunąć.

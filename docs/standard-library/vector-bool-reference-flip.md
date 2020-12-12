@@ -1,21 +1,22 @@
 ---
-title: 'Vector&lt;bool&gt;:: Reference:: flip'
+description: 'Dowiedz się więcej o: Vector &lt; bool &gt; :: Reference:: flip'
+title: 'Vector &lt; bool &gt; :: Reference:: flip'
 ms.date: 11/04/2016
 f1_keywords:
 - vector/std::vector<bool>::reference::flip
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-ms.openlocfilehash: 1743df7773d577e53f054fa4e403cf0d00da8ce7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fc07fada718e440d6e2ae76c75e7e5b24c6644d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280420"
 ---
-# <a name="vectorltboolgtreferenceflip"></a>Vector&lt;bool&gt;:: Reference:: flip
+# <a name="vectorltboolgtreferenceflip"></a>Vector &lt; bool &gt; :: Reference:: flip
 
-Odwraca wartość logiczną elementu [> bool wektora\<](../standard-library/vector-bool-class.md) , do którego istnieje odwołanie.
+Odwraca wartość logiczną elementu [wektora \<bool> ](../standard-library/vector-bool-class.md) , do którego istnieje odwołanie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,11 +67,11 @@ The vector with first element flipped is:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> wektora
+**Nagłówek:**\<vector>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Vector\<bool >:: Reference — Klasa](../standard-library/vector-bool-reference-class.md)\
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Vector \<bool> :: Reference — Klasa](../standard-library/vector-bool-reference-class.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

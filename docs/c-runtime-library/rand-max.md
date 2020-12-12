@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: RAND_MAX'
 title: RAND_MAX
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - RAND_MAX constant
 ms.assetid: a2039697-8908-4911-bd2d-a2bdd19912a0
-ms.openlocfilehash: d9174198b9fff8411f20bbe309ef5900c3dcaaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77cd86cd0378c07195c44fb429b5b12d3f1d0a60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284502"
 ---
-# <a name="randmax"></a>RAND_MAX
+# <a name="rand_max"></a>RAND_MAX
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,9 +24,9 @@ ms.locfileid: "62336156"
 
 ## <a name="remarks"></a>Uwagi
 
-Stała `RAND_MAX` maksymalna wartość, które mogą być zwrócone przez `rand` funkcji. `RAND_MAX` jest zdefiniowany jako wartość 0x7fff.
+Stała `RAND_MAX` jest maksymalną wartością, którą można zwrócić przez `rand` funkcję. `RAND_MAX` jest definiowana jako wartość 0x7FFF.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[rand](../c-runtime-library/reference/rand.md)<br/>
+[Rand](../c-runtime-library/reference/rand.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

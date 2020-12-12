@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o klasie platform:: Box'
 title: 'Platform:: Box — Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 6afc12dbc3f6980bb7fd42d7f0a8fdc9e6d0e284
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbfe8ec70f2ef4c58bf2c9459f2d0c4722817810
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284060"
 ---
 # <a name="platformbox-class"></a>Platform:: Box — Klasa
 
@@ -40,7 +41,7 @@ ref class Box abstract;
 |[Box:: operator T](#t) | Włącza konwersje pakujące z klasy wartości `T` lub **`enum`** klasy `T` do `Box<T>` . |
 |[Value — Właściwość](#value) | Zwraca wartość, która jest hermetyzowana w `Box` obiekcie. |
 
-## <a name="boxbox-constructor"></a><a name="ctor"></a>Box:: Box — Konstruktor
+## <a name="boxbox-constructor"></a><a name="ctor"></a> Box:: Box — Konstruktor
 
 Tworzy obiekt `Box` , który może hermetyzować wartość określonego typu.
 
@@ -55,7 +56,7 @@ Box(T valueArg);
 *valueArg*<br/>
 Typ wartości, która ma być opakowany — na przykład,,, **`int`** **`bool`** `float64` `DateTime` .
 
-## <a name="boxoperator-boxltconst-tgt-operator"></a><a name="box-const-t"></a>Box:: operator — pole &lt; const T &gt; ^ — operator
+## <a name="boxoperator-boxltconst-tgt-operator"></a><a name="box-const-t"></a> Box:: operator — pole &lt; const T &gt; ^ — operator
 
 Włącza konwersje pakujące z **`const`** klasy wartości `T` lub **`enum`** klasy `T` do `Box<T>` .
 
@@ -74,7 +75,7 @@ Dowolna klasa wartości, struktura wartości lub typ wyliczeniowy. Zawiera wbudo
 
 `Platform::Box<T>^`Wystąpienie, które reprezentuje oryginalną wartość opakowaną w klasie ref.
 
-## <a name="boxoperator-boxltconst-volatile-tgt-operator"></a><a name="box-const-volatile-t"></a>Box:: operator Box &lt; const volatile T &gt; ^ operator
+## <a name="boxoperator-boxltconst-volatile-tgt-operator"></a><a name="box-const-volatile-t"></a> Box:: operator Box &lt; const volatile T &gt; ^ operator
 
 Włącza konwersje pakujące z **`const volatile`** klasy wartości `T` lub **`enum`** typu `T` do `Box<T>` .
 
@@ -93,7 +94,7 @@ Dowolny typ wyliczenia, Klasa wartości lub struktura wartości. Zawiera wbudowa
 
 `Platform::Box<T>^`Wystąpienie, które reprezentuje oryginalną wartość opakowaną w klasie ref.
 
-## <a name="boxoperator-boxlttgt-operator"></a><a name="box-t"></a>Box:: operator Box &lt; T &gt; ^
+## <a name="boxoperator-boxlttgt-operator"></a><a name="box-t"></a> Box:: operator Box &lt; T &gt; ^
 
 Włącza konwersje pakujące z klasy wartości `T` do `Box<T>` .
 
@@ -112,7 +113,7 @@ Dowolny typ wyliczenia, Klasa wartości lub struktura wartości. Zawiera wbudowa
 
 `Platform::Box<T>^`Wystąpienie, które reprezentuje oryginalną wartość opakowaną w klasie ref.
 
-## <a name="boxoperator-boxltvolatile-tgt-operator"></a><a name="box-volatile-t"></a>Box:: operator — &lt; nietrwały &gt; operator T ^
+## <a name="boxoperator-boxltvolatile-tgt-operator"></a><a name="box-volatile-t"></a> Box:: operator — &lt; nietrwały &gt; operator T ^
 
 Włącza konwersje pakujące z **`volatile`** klasy wartości `T` lub **`enum`** typu `T` do `Box<T>` .
 
@@ -131,7 +132,7 @@ Dowolny typ wyliczenia, Klasa wartości lub struktura wartości. Zawiera wbudowa
 
 `Platform::Box<T>^`Wystąpienie, które reprezentuje oryginalną wartość opakowaną w klasie ref.
 
-## <a name="boxoperator-t-operator"></a><a name="t"></a>Box:: operator T — operator
+## <a name="boxoperator-t-operator"></a><a name="t"></a> Box:: operator T — operator
 
 Włącza konwersje pakujące z klasy wartości `T` lub **`enum`** klasy `T` do `Box<T>` .
 
@@ -150,7 +151,7 @@ Dowolny typ wyliczenia, Klasa wartości lub struktura wartości. Zawiera wbudowa
 
 `Platform::Box<T>^`Wystąpienie, które reprezentuje oryginalną wartość opakowaną w klasie ref.
 
-## <a name="boxvalue-property"></a><a name="value"></a>Box:: Value — właściwość
+## <a name="boxvalue-property"></a><a name="value"></a> Box:: Value — właściwość
 
 Zwraca wartość, która jest hermetyzowana w `Box` obiekcie.
 
@@ -166,7 +167,7 @@ virtual property T Value{
 
 Zwraca wartość opakowaną tego samego typu, który pierwotnie miał przed zapisaniem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)<br/>
 [Boxing](../cppcx/boxing-c-cx.md)

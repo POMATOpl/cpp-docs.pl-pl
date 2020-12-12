@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fread_nolock_s'
 title: _fread_nolock_s2
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ba971d8db9fde15009362b2e8da0791883fb64e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283072"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -79,7 +80,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fread_nolock_s**|C: \<stdio. h>; C++: \<cstdio> lub \<stdio. h>|
+|**_fread_nolock_s**|C: \<stdio.h> ; C++: \<cstdio> lub \<stdio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

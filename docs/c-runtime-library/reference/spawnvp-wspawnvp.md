@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _spawnvp, _wspawnvp'
 title: _spawnvp, _wspawnvp
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 2cd1c0e464fe7efb1cce5ba969b34d040b099efa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0cb9ea9808266772528751e6c10dfa22aee77c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282929"
 ---
 # <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -94,7 +95,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotu, zobacz [e
 
 Każda z tych funkcji tworzy nowy proces i wykonuje go oraz przekazuje tablicę wskaźników do argumentów wiersza polecenia i używa zmiennej środowiskowej **Path** , aby znaleźć plik do wykonania.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *argv* jest wskaźnikiem typu null lub jeśli *argv* wskazuje na wskaźnik o wartości null lub *argv*[0] jest pustym ciągiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL**i zwracają-1. Nie jest duplikowany żaden nowy proces.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *argv* jest wskaźnikiem typu null lub jeśli *argv* wskazuje na wskaźnik o wartości null lub *argv*[0] jest pustym ciągiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają-1. Nie jest duplikowany żaden nowy proces.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

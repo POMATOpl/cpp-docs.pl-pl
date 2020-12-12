@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: różnice w programowaniu Windows Forms/MFC'
 title: Różnice w programowaniu Windows Forms-MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 136549bb457cc17293d4c7201c9836d9094eea94
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: a48b4f54e44145abab33990e20ca76ed654659e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283943"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Różnice w programowaniu Windows Forms/MFC
 
@@ -54,6 +55,6 @@ Następujące funkcje widoku MFC lub dokumentu i poleceń routingu nie mają odp
 
    MFC ma mechanizm aktualizacji poleceń. W związku z tym aktywny widok lub dokument jest odpowiedzialny za stan elementów interfejsu użytkownika (na przykład Włączanie lub wyłączanie elementu menu lub przycisku narzędzia, a także opcji zaznaczone). Windows Forms nie jest odpowiednikiem mechanizmu aktualizacji poleceń.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+[Korzystanie z kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
