@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Kreator dostawcy OLE DB ATL'
 title: Kreator dostawcy interfejsu OLE DB ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 068670205c45c559e8b312d633d715f51a78190d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165345"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Kreator dostawcy interfejsu OLE DB ATL
 
@@ -23,7 +24,7 @@ Ten Kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od programu Visual Studio 2008 skrypt rejestracji utworzony przez tego kreatora spowoduje zarejestrowanie jego składników modelu COM w **HKEY_CURRENT_USER** , a nie **HKEY_LOCAL_MACHINE** . Aby zmienić to zachowanie, ustaw opcję **Zarejestruj składnik dla wszystkich użytkowników** w Kreatorze ATL.
+Począwszy od programu Visual Studio 2008 skrypt rejestracji utworzony przez tego kreatora spowoduje zarejestrowanie jego składników modelu COM w **HKEY_CURRENT_USER** , a nie **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw opcję **Zarejestruj składnik dla wszystkich użytkowników** w Kreatorze ATL.
 
 W poniższej tabeli opisano opcje kreatora dostawcy OLE DB ATL:
 
@@ -43,7 +44,7 @@ W poniższej tabeli opisano opcje kreatora dostawcy OLE DB ATL:
 
 - **ProgID**
 
-   Identyfikator ProgID lub program programistyczny to ciąg tekstowy, który może być używany przez aplikację zamiast identyfikatora GUID. Nazwa ProgID ma postać *ProjectName. coclassname* .
+   Identyfikator ProgID lub program programistyczny to ciąg tekstowy, który może być używany przez aplikację zamiast identyfikatora GUID. Nazwa ProgID ma postać *ProjectName. coclassname*.
 
 - **Wersja**
 
@@ -87,6 +88,6 @@ W poniższej tabeli opisano opcje kreatora dostawcy OLE DB ATL:
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dostawca OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)

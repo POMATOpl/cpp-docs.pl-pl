@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: funkcje narzędziowe HTTP ATL'
 title: Funkcje narzędziowe HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: d2e30f940ded0bf355000cd42ff46a67662b54f5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb8cc8789db45095f969dd9513dcf70a9bd0d05c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165371"
 ---
 # <a name="atl-http-utility-functions"></a>Funkcje narzędziowe HTTP ATL
 

@@ -1,43 +1,44 @@
 ---
-title: ASP, Kreator składników stron Active Server ATL
+description: 'Dowiedz się więcej na temat: ASP, Kreator składnika strony Active Server ATL'
+title: Środowisko ASP, Kreator składnika strony Active Server ATL
 ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.asp.asp
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-ms.openlocfilehash: b88dffe2874d29918315af65c6ea093c24695f97
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: e9cc11cf60c3a87d6891c98a72eb240729d1a739
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165540"
 ---
-# <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Kreator składników stron Active Server ATL
+# <a name="asp-atl-active-server-page-component-wizard"></a>Środowisko ASP, Kreator składnika strony Active Server ATL
 
-Ta strona ATL Active Server strona kreatora składników umożliwia określić opcjonalne ustawienia do obsługi informacji i stanu związane z składnik ASP.
+Ta strona kreatora wieloskładnikowej strony Active Server ATL służy do określania ustawień opcjonalnych do obsługi informacji i stanu związanych ze składnikiem ASP.
 
-- **Opcjonalny metody**
+- **Metody opcjonalne**
 
-   Dodaje metody opcjonalne ASP **OnStartPage** i **OnEndPage**, do obiektu. Należy wybrać tę opcję można ustawić wszystkie wewnętrzne obiekty Active Server Pages. Domyślnie jest zaznaczona.
+   Dodaje opcjonalne metody ASP, **OnStartPage** i **OnEndPage** do obiektu. Należy wybrać tę opcję, aby ustawić wszystkie obiekty wewnętrzne stron Active Server. Domyślnie jest to zaznaczone.
 
 - **OnStartPage/OnEndPage**
 
-   [Metoda OnStartPage](/previous-versions//ms691624\(v=vs.85\)) jest wywoływana po raz pierwszy skrypt próbuje uzyskać dostęp do obiektu. **OnEndPage** jest wywoływana po zakończeniu operacji obiektu przetwarzania skryptu.
+   Metoda [OnStartPage](/previous-versions//ms691624\(v=vs.85\)) jest wywoływana za pierwszym razem, gdy skrypt próbuje uzyskać dostęp do obiektu. Metoda **OnEndPage** jest wywoływana, gdy obiekt kończy przetwarzanie skryptu.
 
 - **Obiekt wewnętrzny**
 
-   Musisz wybrać **OnStartPage/OnEndPage** opcję, aby ustawić wszystkie obiekty wewnętrzne środowiska ASP.
+   Musisz wybrać opcję **OnStartPage/OnEndPage** , aby ustawić dowolne obiekty wewnętrzne ASP.
 
 |Opcja|Opis|
 |------------|-----------------|
-|**Żądanie**|Zapewnia dostęp do strony ASP wewnętrzne **żądania** obiektu. Obiekt żądania jest używany do przekazania żądania HTTP.|
-|**Odpowiedź**|Zapewnia dostęp do strony ASP wewnętrzne **odpowiedzi** obiektu. W odpowiedzi na żądanie w obiekt odpowiedzi wysyła informacje do przeglądarki do wyświetlania użytkownikowi.|
-|**Sesja**|Zapewnia dostęp do strony ASP wewnętrzne **sesji** obiektu. **Sesji** obiekt przechowuje informacje o bieżącej sesji użytkownika, w tym przechowywania i pobierania informacji o stanie.|
-|**Aplikacja**|Zapewnia dostęp do strony ASP wewnętrzne **aplikacji** obiektu. **Aplikacji** zarządza obiekt stanu, który jest współużytkowany przez wiele obiektów ASP.|
-|**Serwer**|Zapewnia dostęp do strony ASP wewnętrzne **serwera** obiektu. **Serwera** obiektu pozwala na tworzenie innych obiektów ASP.|
+|**Żądanie**|Zapewnia dostęp do obiektu **żądania** wewnętrznego stron Active Server. Obiekt request służy do przekazywania żądania HTTP.|
+|**Odpowiedź**|Zapewnia dostęp do obiektu wewnętrznej **odpowiedzi** stron Active Server. W odpowiedzi na żądanie obiekt Response wysyła informacje do przeglądarki, aby wyświetlić użytkownika.|
+|**Sesja**|Zapewnia dostęp do obiektu wewnętrznej **sesji** stron Active Server. Obiekt **Session** zachowuje informacje o bieżącej sesji użytkownika, w tym o przechowywaniu i pobieraniu informacji o stanie.|
+|**Aplikacja**|Zapewnia dostęp do obiektu **aplikacji** wewnętrznej Active Server Pages. Obiekt **aplikacji** zarządza stanem, który jest współużytkowany przez wiele obiektów ASP.|
+|**Server** (Serwer)|Zapewnia dostęp do obiektu **serwera** wewnętrznego stron Active Server. Obiekt **serwer** umożliwia tworzenie innych obiektów ASP.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator składników stron Active Server Page ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
-[Składnika strony Active Server ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
+[Składnik strony Active Server ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: PROTO'
 title: PROTO
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 3963fa29050653d1706222d33734c4b5f2a17919
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 34dbf9d877dbbc52484e45c5f94212108aeacb42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126012"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,11 +20,11 @@ Prototypuje funkcję lub procedurę. Można wywołać funkcję prototypową prze
 
 ## <a name="syntax"></a>Składnia
 
-> *Label* **proto** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ __,__ ⟦*Parameter*⟧ __:__ *tag* ... ⟧
+> *Label* **proto** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦__,__ ⟦*Parameter*⟧__:__*tag* ... ⟧
 
 ### <a name="parameters"></a>Parametry
 
-*etykieta*\
+*oznakowan*\
 Nazwa funkcji prototypowej.
 
 *odległość* (32-bitowa MASM). \
@@ -36,24 +37,24 @@ Obowiązkowe Ustawia konwencję wywoływania i nazewnictwa dla procedur i symbol
 
 - modele 16-bitowe: **C**, **Basic**, **Pascal**, **Pascal**, **syscall**, **stdcall**
 
-\ *parametru*
+*konstruktora*\
 Opcjonalna nazwa parametru funkcji.
 
-\ *tagów*
+*seryjn*\
 Typ parametru funkcji.
 
 Parametry *parametrów* i *tagów* mogą pojawiać się wiele razy, raz dla każdego przerzuconego argumentu.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje deklarację **proto** dla funkcji o nazwie `addup3`, która używa **niemal** wywołania do przesłania domyślnego modelu 16-bitowego dla wywołań procedury i używa konwencji wywoływania języka **C** dla parametrów stosu i zwracanych wartości. Przyjmuje dwa argumenty, **słowo** i **vararg**.
+Ten przykład pokazuje deklarację **proto** dla funkcji o nazwie `addup3` , która używa **blisko** wywołania do przesłania domyślnego modelu 16-bitowego dla wywołań procedur i używa konwencji wywoływania **C** dla parametrów stosu i zwracanych wartości. Przyjmuje dwa argumenty, **słowo** i **vararg**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
-[.\ odwołania do modelu](dot-model.md)
+[. Odwołanie do modelu](dot-model.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

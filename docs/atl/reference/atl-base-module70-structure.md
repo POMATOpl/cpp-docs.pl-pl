@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury _ATL_BASE_MODULE70
 title: Struktura _ATL_BASE_MODULE70
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 3893e4ce4fcd24f48d9e981ad24505f82dc98833
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 5bcf2083f9c8991871c05535fd3e20a39bfeb822
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165514"
 ---
 # <a name="_atl_base_module70-structure"></a>Struktura _ATL_BASE_MODULE70
 
@@ -41,7 +42,7 @@ struct _ATL_BASE_MODULE70 {
 Rozmiar struktury używany do przechowywania wersji.
 
 `m_hInst`<br/>
-`hInstance` Dla tego modułu (exe lub dll).
+`hInstance`Dla tego modułu (exe lub dll).
 
 `m_hInstResource`<br/>
 Domyślne dojście do zasobu wystąpienia.
@@ -69,6 +70,6 @@ Tablica służąca do wyszukiwania zasobów we wszystkich wystąpieniach zasobó
 
 **Nagłówek:** atlcore. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../../atl/reference/atl-classes.md)

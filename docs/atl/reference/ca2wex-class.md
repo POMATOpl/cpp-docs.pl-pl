@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CA2WEX'
 title: Klasa CA2WEX
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: a710034c5d94a8fb093a2b6a2a52373e2bab2d6d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 59d0624176f01ee266b8162060b281202ef977c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165098"
 ---
 # <a name="ca2wex-class"></a>Klasa CA2WEX
 
@@ -64,7 +65,7 @@ O ile nie jest wymagana dodatkowa funkcjonalność, użyj CA2TEX, CA2CTEX, CT2WE
 
 Ta klasa zawiera bufor statyczny o stałym rozmiarze, który jest używany do przechowywania wyniku konwersji. Jeśli wynik jest zbyt duży, aby zmieścił się w buforze statycznym, Klasa przydziela pamięć przy użyciu **malloc**, zwalniając pamięć, gdy obiekt wykracza poza zakres. Dzięki temu, w przeciwieństwie do makr konwersji tekstu dostępnych we wcześniejszych wersjach ATL, ta klasa jest bezpieczna do użycia w pętlach i nie przechodzą stosu.
 
-Jeśli klasa próbuje przydzielić pamięć na stercie i kończy się niepowodzeniem, `AtlThrow` wywoła z argumentem E_OUTOFMEMORY.
+Jeśli klasa próbuje przydzielić pamięć na stercie i kończy się niepowodzeniem, wywoła `AtlThrow` z argumentem E_OUTOFMEMORY.
 
 Domyślnie klasy konwersji ATL i makra używają strony kodowej ANSI bieżącego wątku dla konwersji. Jeśli chcesz przesłonić to zachowanie dla określonej konwersji, określ stronę kodową jako drugi parametr konstruktora dla klasy.
 
@@ -92,7 +93,7 @@ Zobacz [makra konwersji ciągów ATL i MFC,](string-conversion-macros.md) aby za
 
 **Nagłówek:** atlconv. h
 
-## <a name="ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX
+## <a name="ca2wexca2wex"></a><a name="ca2wex"></a> CA2WEX::CA2WEX
 
 Konstruktor.
 
@@ -113,7 +114,7 @@ Strona kodowa użyta do przeprowadzenia konwersji. Aby uzyskać więcej informac
 
 Przypisuje bufor używany w procesie tłumaczenia.
 
-## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX:: ~ CA2WEX
+## <a name="ca2wexca2wex"></a><a name="dtor"></a> CA2WEX:: ~ CA2WEX
 
 Destruktor.
 
@@ -125,7 +126,7 @@ Destruktor.
 
 Zwalnia przydzieloną bufor.
 
-## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX:: m_psz
+## <a name="ca2wexm_psz"></a><a name="m_psz"></a> CA2WEX:: m_psz
 
 Element członkowski danych przechowujący ciąg źródłowy.
 
@@ -133,7 +134,7 @@ Element członkowski danych przechowujący ciąg źródłowy.
 LPWSTR m_psz;
 ```
 
-## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX:: m_szBuffer
+## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a> CA2WEX:: m_szBuffer
 
 Bufor statyczny używany do przechowywania przekonwertowanego ciągu.
 
@@ -141,7 +142,7 @@ Bufor statyczny używany do przechowywania przekonwertowanego ciągu.
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX:: operator LPWSTR
+## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a> CA2WEX:: operator LPWSTR
 
 Operator konwersji.
 
@@ -153,7 +154,7 @@ operator LPWSTR() const throw();
 
 Zwraca ciąg tekstowy jako typ LPWSTR.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
 [Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>

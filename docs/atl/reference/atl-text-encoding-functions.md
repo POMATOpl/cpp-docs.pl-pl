@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach kodowania tekstu ATL'
 title: Funkcje kodowania tekstu ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 330a73e0d41bf384a799635d5f2e6f09f7e3dd03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1cc0848fed5832d0d91752c4c52d1e7310df0932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165254"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkcje kodowania tekstu ATL
 

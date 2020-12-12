@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: kreatorach ATL i oknach dialogowych'
 title: Kreatorzy ATL i okna dialogowe
 ms.date: 06/26/2020
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-ms.openlocfilehash: f2ba981c771572f93e9a452db83c722c817b6428
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 531758560ef5d639112a1f15ef591b3b3ca7ed65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165124"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Kreatorzy ATL i okna dialogowe
 

@@ -1,67 +1,68 @@
 ---
+description: Dowiedz się więcej o funkcjach ATL
 title: Funkcje ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - functions [ATL]
 - ATL, global functions
 ms.assetid: 69db0cb2-de1d-445b-b692-020d6e8c2173
-ms.openlocfilehash: 9f0c6ccaa049290d3e183ae682c19ab7e497c2b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29c29d2b70a3c0dea266b937a20cdf6b2d831473
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165384"
 ---
 # <a name="atl-functions"></a>Funkcje ATL
 
 Aby znaleźć funkcję ATL według kategorii, zobacz następujące tematy.
 
 [Funkcje ścieżki ATL](../../atl/reference/com-map-global-functions.md)<br/>
-Zapewnia obsługę manipulowania ścieżki pliku.
+Zapewnianie pomocy technicznej na potrzeby manipulowania ścieżkami plików.
 
-[Funkcje globalne mapy interfejsu COM](../../atl/reference/com-map-global-functions.md)<br/>
-Zapewnia obsługę mapy interfejsu COM `IUnknown` implementacji.
+[Globalne funkcje mapowania modelu COM](../../atl/reference/com-map-global-functions.md)<br/>
+Zapewnia obsługę implementacji mapowań COM `IUnknown` .
 
-[Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)<br/>
-Zapewniają obsługę do utworzenia okien dialogowych i tworzenie, hostowanie i licencjonowanie kontrolek ActiveX.
+[Funkcje globalne kontrolki złożonej](../../atl/reference/composite-control-global-functions.md)<br/>
+Zapewnianie pomocy technicznej dla tworzenia okien dialogowych oraz do tworzenia, hostingu i licencjonowania formantów ActiveX.
 
 [Funkcje globalne punktu połączenia](../../atl/reference/connection-point-global-functions.md)<br/>
-Obsługuje punkty połączenia i mapy wychwytywania.
+Zapewnianie pomocy technicznej dla punktów połączenia i map ujścia.
 
 [Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
-Udostępniać przydatne narzędzia do debugowania i śledzenia.
+Zapewniają przydatne funkcje debugowania i śledzenia.
 
 [Funkcje globalne kontekstu urządzenia](../../atl/reference/device-context-global-functions.md)<br/>
 Tworzy kontekst urządzenia dla danego urządzenia.
 
 [Funkcje globalne obsługi zdarzeń](../../atl/reference/event-handling-global-functions.md)<br/>
-Udostępnia program obsługi zdarzeń.
+Zapewnia obsługę zdarzeń.
 
-[Funkcje globalne kierowania](../../atl/reference/marshaling-global-functions.md)<br/>
-Zapewnia obsługę organizowania i konwertowania kierowania danych do wskaźniki interfejsu.
+[Kierowanie funkcji globalnych](../../atl/reference/marshaling-global-functions.md)<br/>
+Zapewnianie obsługi organizowania i konwertowania danych kierujących na wskaźniki interfejsu.
 
-[Funkcje globalne konwersji HIMETRIC/pikseli](../../atl/reference/pixel-himetric-conversion-global-functions.md)<br/>
-Zapewnia obsługę konwersji do i z pikseli i jednostkach HIMETRIC.
+[Funkcje globalne konwersji pikseli/HIMETRIC](../../atl/reference/pixel-himetric-conversion-global-functions.md)<br/>
+Zapewnianie obsługi konwersji do i z pikseli i HIMETRIC jednostek.
 
-[Funkcje globalne rejestru i elementu TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)<br/>
-Zapewnia obsługę ładowania i rejestrowania biblioteki typów.
+[Rejestr i funkcje globalne biblioteki typów](../../atl/reference/registry-and-typelib-global-functions.md)<br/>
+Zapewnianie obsługi ładowania i rejestrowania biblioteki typów.
 
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)<br/>
-Modyfikowanie obiektów SID i listę ACL zapewniają obsługę.
+Zapewnianie obsługi modyfikacji identyfikatorów SID i obiektów listy ACL.
 
 [Funkcje globalne identyfikatora zabezpieczeń](../../atl/reference/security-identifier-global-functions.md)<br/>
-Zwraca typowe znaną wartością identyfikatora SID obiektów.
+Zwracaj typowe dobrze znane obiekty SID.
 
 [Funkcje globalne rejestracji serwera](../../atl/reference/server-registration-global-functions.md)<br/>
-Zapewnia obsługę zarejestrować lub wyrejestrować serwer obiektów na mapie obiektu.
+Zapewnianie obsługi rejestrowania i wyrejestrowywania obiektów serwera w mapie obiektów.
 
-[Funkcje globalne elementu WinModule](../../atl/reference/winmodule-global-functions.md)<br/>
-Zapewnia pomoc techniczną dla `_AtlCreateWndData` struktury operacji.
+[WinModule funkcje globalne](../../atl/reference/winmodule-global-functions.md)<br/>
+Zapewnianie pomocy technicznej dla `_AtlCreateWndData` operacji struktury.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
 [Makra](../../atl/reference/atl-macros.md)<br/>
 [Zmienne globalne](../../atl/reference/atl-global-variables.md)<br/>
-[Typedefs](../../atl/reference/atl-typedefs.md)<br/>
+[Definicje typów](../../atl/reference/atl-typedefs.md)<br/>
 [Klasy i struktury](../../atl/reference/atl-classes.md)

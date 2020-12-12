@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: PROC'
 title: PROC
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: fe811ed1723dc1a41014720d97b6f21ab596c2e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126038"
 ---
 # <a name="proc"></a>PROC
 
@@ -19,20 +20,20 @@ Oznacza początek i koniec bloku procedury o nazwie *Label*. Instrukcje w bloku 
 
 ## <a name="syntax"></a>Składnia
 
-> *etykieta* **proc** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ **Public** | **Private** | **Export** ⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**używa** *reglist*⟧ ⟦ __,__ *Parameter* ⟦ __:__ *tag*⟧... ⟧\
-> ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ \
-> *instrukcje*\
+> *etykieta* **proc** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ **Public**  |  **Private**  |  **Export** ⟧ ⟦ __\<__*prologuearg*__>__ ⟧ ⟦**używa** *reglist*⟧ ⟦__,__ *Parameter* ⟦__:__*tag*⟧... ⟧\
+> ⟦**Frame** ⟦__:__*ehandler-Address*⟧ ⟧ \
+> *zatwierdzeni*\
 > *etykieta* **ENDP**
 
 ## <a name="remarks"></a>Uwagi
 
-Argumenty *⟧ ⟦* *odległości*⟧ i ⟦ są prawidłowe tylko w 32-bitowym MASM.
+Argumenty *⟧ ⟦**odległości*⟧ i ⟦ są prawidłowe tylko w 32-bitowym MASM.
 
-⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ jest prawidłowa tylko z ml64. exe i powoduje, że MASM generuje wpis tabeli funkcji w. pdata i unwind in
+⟦**Frame** ⟦__:__*ehandler-Address*⟧ ⟧ jest prawidłowa tylko z ml64.exe i powoduje, że program MASM generuje wpis tabeli funkcji w. pdata i unwind Information in. xdata dla zachowania funkcji unwind dla wyjątku strukturalnego.
 
 Gdy atrybut **Frame** jest używany, musi następować po nim [. ENDPROLOG](dot-endprolog.md) .
 
-Zobacz [MASM for x64 (ml64. exe)](masm-for-x64-ml64-exe.md) , aby uzyskać więcej informacji na temat korzystania z programu ml64. exe.
+Aby uzyskać więcej informacji na temat używania ml64.exe, zobacz [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -79,7 +80,7 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

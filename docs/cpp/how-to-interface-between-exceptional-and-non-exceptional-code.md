@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej o tym, jak: interfejs między wyjątkowym i niewyjątkowym kodem'
 title: 'Instrukcje: interfejs między wyjątkowym i niewyjątkowym kodem'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 34a0966d496e5e22099de051a74f3458d1cc05d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114029"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Instrukcje: interfejs między wyjątkowym i niewyjątkowym kodem
 
 W tym artykule opisano, jak zaimplementować spójną obsługę wyjątków w module języka C++, a także jak przetłumaczyć te wyjątki na i z kodów błędów na granicach wyjątków.
 
-Czasami moduł C++ ma interfejs z kodem, który nie używa wyjątków (kod niewyjątkowy). Taki interfejs jest znany jako *granica wyjątku*. Na przykład możesz chcieć wywołać funkcję Win32 `CreateFile` w programie języka C++. `CreateFile`nie zgłasza wyjątków; Zamiast tego ustawia kody błędów, które mogą być pobierane przez `GetLastError` funkcję. Jeśli Twój program w języku C++ nie jest prosty, prawdopodobnie wolisz mieć spójne zasady obsługi błędów oparte na wyjątkach. Prawdopodobnie nie chcesz porzucać wyjątków tylko z powodu interfejsu z niewyjątkowym kodem i nie chcesz mieszać zasad błędów opartych na wyjątkach i nieopartych na wyjątkach w module języka C++.
+Czasami moduł C++ ma interfejs z kodem, który nie używa wyjątków (kod niewyjątkowy). Taki interfejs jest znany jako *granica wyjątku*. Na przykład możesz chcieć wywołać funkcję Win32 `CreateFile` w programie języka C++. `CreateFile` nie zgłasza wyjątków; Zamiast tego ustawia kody błędów, które mogą być pobierane przez `GetLastError` funkcję. Jeśli Twój program w języku C++ nie jest prosty, prawdopodobnie wolisz mieć spójne zasady obsługi błędów oparte na wyjątkach. Prawdopodobnie nie chcesz porzucać wyjątków tylko z powodu interfejsu z niewyjątkowym kodem i nie chcesz mieszać zasad błędów opartych na wyjątkach i nieopartych na wyjątkach w module języka C++.
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>Wywoływanie niewyjątkowych funkcji z C++
 
@@ -234,7 +235,7 @@ bool DiffFiles3(const string& file1, const string& file2)
 
 Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expressions](lambda-expressions-in-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](errors-and-exception-handling-modern-cpp.md)<br/>
 [Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków](how-to-design-for-exception-safety.md)<br/>
