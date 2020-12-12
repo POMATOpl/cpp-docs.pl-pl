@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __pctype_func'
 title: __pctype_func
 ms.date: 4/2/2020
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: a7972744d322cf16d056f70fff83f529a183020e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 80374d17015336e553c3ca566dd6752963dd3eef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213471"
 ---
 # <a name="__pctype_func"></a>__pctype_func
 
@@ -56,6 +57,6 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |-------------|---------------------|
 |__pctype_func|CType. h|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)

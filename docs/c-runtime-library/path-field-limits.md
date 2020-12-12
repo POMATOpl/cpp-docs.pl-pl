@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat limitów pól ścieżki
 title: Stałe pola ścieżki
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41698d946e45a78f9b89f40fdd3c7c58af5d4354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213484"
 ---
 # <a name="path-field-limits"></a>Stałe pola ścieżki
 
@@ -39,7 +40,7 @@ ms.locfileid: "80171401"
 
 Te stałe definiują maksymalną długość ścieżki i dla poszczególnych pól w ścieżce.
 
-|Stały|Znaczenie|
+|Stała|Znaczenie|
 |--------------|-------------|
 |`_MAX_DIR`|Maksymalna długość składnika katalogu|
 |`_MAX_DRIVE`|Maksymalna długość składnika dysku|
@@ -48,7 +49,7 @@ Te stałe definiują maksymalną długość ścieżki i dla poszczególnych pól
 |`_MAX_PATH`|Maksymalna długość pełnej ścieżki|
 
 > [!NOTE]
-> Środowisko uruchomieniowe języka C obsługuje długość ścieżki do 32768 znaków, ale jest do systemu operacyjnego, w odróżnieniu od systemu plików, do obsługi tych większej ścieżki. Suma pól nie powinna przekraczać `_MAX_PATH`, aby zapewnić pełną zgodność z poprzednimi wersjami z systemami plików FAT32. System plików systemu Windows NTFS obsługuje ścieżki o długości do 32768 znaków, ale tylko w przypadku korzystania z interfejsów API Unicode. W przypadku używania długich nazw ścieżek prefiks ścieżki ze znakami \\\\? \ i użyj wersji Unicode funkcji środowiska uruchomieniowego języka C.
+> Środowisko uruchomieniowe języka C obsługuje długość ścieżki do 32768 znaków, ale jest do systemu operacyjnego, w odróżnieniu od systemu plików, do obsługi tych większej ścieżki. Suma pól nie powinna przekraczać `_MAX_PATH` pełnej zgodności z poprzednimi wersjami z systemami plików FAT32. System plików systemu Windows NTFS obsługuje ścieżki o długości do 32768 znaków, ale tylko w przypadku korzystania z interfejsów API Unicode. W przypadku używania długich nazw ścieżek prefiks ścieżki ze znakami \\ \\ ? \ i użyj wersji Unicode funkcji środowiska uruchomieniowego języka C.
 
 ## <a name="see-also"></a>Zobacz też
 
