@@ -1,5 +1,6 @@
 ---
-title: '&lt;Zobacz > (C++ Komentarze do dokumentacji)'
+description: 'Dowiedz się więcej na temat: &lt; Zobacz&gt;'
+title: '&lt;Zobacz> (Komentarze w dokumentacji C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b4f8f9a2312a3db1ce2840209668b7b23837ab31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224741"
 ---
-# <a name="ltseegt"></a>&lt;Zobacz&gt;
+# <a name="ltseegt"></a>&lt;wyświetlania&gt;
 
-\<Zobacz > tag pozwala określić łącze z poziomu tekstu. Użyj [\<seealso — >](seealso-visual-cpp.md) , aby wskazać tekst, który może być wyświetlany w sekcji Zobacz też.
+\<see>Tag pozwala określić łącze z poziomu tekstu. Użyj, [\<seealso>](seealso-visual-cpp.md) Aby wskazać tekst, który może być wyświetlany w sekcji Zobacz też.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,15 +31,15 @@ ms.locfileid: "74988615"
 *członkiem*<br/>
 Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji.  Ujmij nazwę w pojedyncze lub podwójne cudzysłowy.
 
-Kompilator sprawdza, czy dany element kodu istnieje i rozwiązuje `member` do nazwy elementu w wyjściowym kodzie XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.
+Kompilator sprawdza, czy dany element kodu istnieje i jest rozpoznawany jako `member` Nazwa elementu w wyjściowym kodzie XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member` .
 
 ## <a name="remarks"></a>Uwagi
 
 Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
-Zobacz [\<podsumowanie >](summary-visual-cpp.md) , aby zobaczyć przykład użycia \<>.
+Zobacz [\<summary>](summary-visual-cpp.md) , aby zobaczyć przykład użycia \<see> .
 
-Kompilator MSVC podejmie próbę rozpoznania odwołań cref w jednym przejściu poprzez Komentarze do dokumentacji.  W związku z tym, C++ w przypadku używania reguł odnośników nie znaleziono symbolu przez kompilator, odwołanie zostanie oznaczone jako nierozwiązane. Aby uzyskać więcej informacji, zobacz [\<seealso — >](seealso-visual-cpp.md) .
+Kompilator MSVC podejmie próbę rozpoznania odwołań cref w jednym przejściu poprzez Komentarze do dokumentacji.  W związku z tym, w przypadku używania reguł wyszukiwania C++ symbol nie zostanie znaleziony przez kompilator, odwołanie zostanie oznaczone jako nierozwiązane. [\<seealso>](seealso-visual-cpp.md)Aby uzyskać więcej informacji, zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -69,6 +70,6 @@ generic<class T>
 ref class C {};
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja XML](xml-documentation-visual-cpp.md)

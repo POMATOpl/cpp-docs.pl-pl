@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/SECTION (polecenia EDITBIN)
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 51d1305ca4f3e0e8222ae9408b44563a4c480d57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224871"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -28,7 +29,7 @@ Ta opcja zmienia atrybuty sekcji, zastępując atrybuty ustawione, gdy plik obie
 
 Po dwukropku ( **:** ) Określ *nazwę* sekcji. Aby zmienić nazwę sekcji, należy użyć *nazwy* z znakiem równości (=) i *nowa_nazwa* dla sekcji.
 
-Aby ustawić lub zmienić `attributes`sekcji, określ przecinek ( **,** ), po którym następuje jeden lub więcej atrybutów znaków. Aby Negate atrybut, poprzedź go znakiem wykrzyknika (!). Następujące znaki określają atrybuty pamięci:
+Aby ustawić lub zmienić sekcję `attributes` , określ przecinek (**,**), po którym następuje jeden lub więcej atrybutów znaków. Aby Negate atrybut, poprzedź go znakiem wykrzyknika (!). Następujące znaki określają atrybuty pamięci:
 
 |Atrybut|Ustawienie|
 |---------------|-------------|
@@ -36,14 +37,14 @@ Aby ustawić lub zmienić `attributes`sekcji, określ przecinek ( **,** ), po kt
 |d|Odrzucanie|
 |e|plik|
 |mogę|zainicjowane dane|
-|K|buforowana pamięć wirtualna|
+|k|buforowana pamięć wirtualna|
 |m|Usuwanie linku|
 |o|Informacje o linku|
 |p|stronicowana pamięć wirtualna|
 |r|przeczytaj|
 |s|udostępnione|
 |u|Niezainicjowane dane|
-|w|pisz|
+|w|write (zapis)|
 
 Aby kontrolować *wyrównanie*, określ znak **a** , po którym następuje jeden z następujących znaków, aby ustawić rozmiar wyrównania w bajtach w następujący sposób:
 
@@ -58,8 +59,8 @@ Aby kontrolować *wyrównanie*, określ znak **a** , po którym następuje jeden
 |s|64|
 |x|bez wyrównania|
 
-Określ `attributes` i *wyrównania* jako ciąg bez białych znaków. W znakach nie jest rozróżniana wielkość liter.
+Określ `attributes` znaki i *wyrównania* jako ciąg bez odstępów. W znakach nie jest rozróżniana wielkość liter.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje EDITBIN](editbin-options.md)
+[Opcje polecenia EDITBIN](editbin-options.md)

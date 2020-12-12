@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej na temat:/Qsafe_fp_loads
 title: /Qsafe_fp_loads
 ms.date: 01/24/2018
-ms.openlocfilehash: 57aece79dfab617121371e0489aa80f18e143372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e569b308d2da982c72775699ff2149daa45a8f2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225521"
 ---
-# <a name="qsafefploads"></a>/Qsafe_fp_loads
+# <a name="qsafe_fp_loads"></a>/Qsafe_fp_loads
 
-Wymaga całkowitoliczbowych instrukcji przeniesienia dla wartości zmiennopozycyjnych i wyłącza niektóre optymalizację ładowania zmiennoprzecinkowych.
+Wymaga instrukcji przenoszenia liczby całkowitej dla wartości zmiennoprzecinkowych i wyłącza pewne optymalizacje ładowania zmiennoprzecinkowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -18,28 +19,28 @@ Wymaga całkowitoliczbowych instrukcji przeniesienia dla wartości zmiennopozycy
 
 ## <a name="remarks"></a>Uwagi
 
-**/ Qsafe_fp_loads** jest dostępna tylko w kompilatorach przeznaczone na platformę x86; nie jest dostępna w kompilatorach, których platformą docelową x64 lub ARM.
+**/Qsafe_fp_loads** jest dostępna tylko w kompilatorach przeznaczonych dla architektury x86; nie jest on dostępny w kompilatorach przeznaczonych dla architektury x64 lub ARM.
 
-**/ Qsafe_fp_loads** rejestruje kompilatorowi używanie całkowitoliczbowych instrukcji przeniesienia zamiast instrukcji zmiennoprzecinkowych przeniesienia do przenoszenia danych między pamięcią i MMX wymusza. Ta opcja powoduje wyłączenie optymalizacji obciążenia rejestru dla wartości zmiennoprzecinkowych, które mogą być ładowane w wielu ścieżek kontroli, gdy wartość może spowodować wyjątek podczas ładowania — na przykład, wartość NaN.
+**/Qsafe_fp_loads** wymusza użycie przez kompilator instrukcji przenoszenia liczb całkowitych zamiast zmiennoprzecinkowych instrukcji przenoszenia w celu przenoszenia danych między pamięcią a rejestrami MMX. Ta opcja wyłącza również funkcję Rejestruj optymalizację obciążenia dla wartości zmiennoprzecinkowych, które mogą być ładowane w wielu ścieżkach kontrolnych, gdy wartość może spowodować wyjątek podczas ładowania — na przykład wartość NaN.
 
-Ta opcja jest zastępowany przez [/FP: except](fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** określa podzestaw zachowanie kompilatora, który jest określony przez **/FP: except**.
+Ta opcja jest zastępowana przez [/FP: except](fp-specify-floating-point-behavior.md). **/Qsafe_fp_loads** określa podzestaw zachowania kompilatora, który jest określony przez **/FP: z wyjątkiem**.
 
-**/ Qsafe_fp_loads** jest niezgodny z [/CLR](clr-common-language-runtime-compilation.md) i [Fast](fp-specify-floating-point-behavior.md). Aby uzyskać więcej informacji na temat punktu zmiennoprzecinkowego — opcje kompilatora, zobacz [/FP (określenie zachowania zmiennopozycyjna)](fp-specify-floating-point-behavior.md).
+**/Qsafe_fp_loads** jest niezgodne z [/CLR](clr-common-language-runtime-compilation.md) i [/FP: Fast](fp-specify-floating-point-behavior.md). Aby uzyskać więcej informacji na temat opcji kompilatora zmiennoprzecinkowego, zobacz [/FP (Określ zachowanie Floating-Point)](fp-specify-floating-point-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
-1. Wpisz opcję kompilatora w **dodatkowe opcje** pole. Wybierz **OK** do zastosowania zmiany.
+1. Wprowadź opcję kompilatora w polu **dodatkowe opcje** . Wybierz **przycisk OK** , aby zastosować zmianę.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/Q Opcje (Operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
+[/Q opcje (operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o ścieżce wyszukiwania w regułach
 title: Ścieżki wyszukiwania w zasadach
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - inference rules in NMAKE
 - rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-ms.openlocfilehash: eab6e9d32940aaf5729ce82c4e8258a3a3132208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf070fc57907b68eb458b8a5276698282ef30f9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318865"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224884"
 ---
 # <a name="search-paths-in-rules"></a>Ścieżki wyszukiwania w zasadach
 
@@ -22,7 +23,7 @@ ms.locfileid: "62318865"
 
 ## <a name="remarks"></a>Uwagi
 
-Reguła wnioskowania dotyczy zależność, tylko wtedy, gdy ścieżki określane w zależność dokładnie odpowiadać ścieżki w regule wnioskowania. Określ katalog zależnego w *frompath* i katalog docelowy w *topath*; spacje nie są dozwolone. Określ tylko jedną ścieżkę dla każdego rozszerzenia. Ścieżki na jedno rozszerzenie wymaga ścieżki na drugi. Aby określić bieżącego katalogu, użyj kropki (.) lub pustych nawiasów klamrowych ({}). Makra mogą reprezentować *frompath* i *topath*; są one wywoływane podczas przetwarzania wstępnego.
+Reguła wnioskowania ma zastosowanie do zależności tylko wtedy, gdy ścieżki określone w zależności są dokładnie zgodne z ścieżkami reguł wnioskowania. Określ katalog zależny w *frompath* i katalog docelowy w *topath*; spacje nie są dozwolone. Określ tylko jedną ścieżkę dla każdego rozszerzenia. Ścieżka do jednego rozszerzenia wymaga ścieżki w drugiej. Aby określić bieżący katalog, użyj kropki (.) lub pustych nawiasów klamrowych ({}). Makra mogą reprezentować *frompath* i *topath*; są one wywoływane podczas przetwarzania wstępnego.
 
 ## <a name="example"></a>Przykład
 
@@ -57,6 +58,6 @@ Reguła wnioskowania dotyczy zależność, tylko wtedy, gdy ścieżki określane
         $(CC) $(CFLAGS) $<
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Definiowanie zasady](defining-a-rule.md)
+[Definiowanie reguły](defining-a-rule.md)

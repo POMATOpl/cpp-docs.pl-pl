@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat:/Qpar (autoparalelizacji)
 title: /Qpar (Automatyczny paralelizator)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: effe1ad7799022ea85184513de1dc48c72d6bfcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f0d4264acc4224aaad518f936dcb885d592d3007
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225586"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (Automatyczny paralelizator)
 
@@ -31,7 +32,7 @@ Aby uzyskać informacje o sposobie włączania komunikatów wyjściowych dla aut
 
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora/Qpar w programie Visual Studio
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
 
 1. W oknie dialogowym **strony właściwości** w obszarze **C/C++** wybierz pozycję **wiersz polecenia**.
 
@@ -46,6 +47,6 @@ Aby uzyskać informacje o sposobie włączania komunikatów wyjściowych dla aut
 [/Q opcje (operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
 [/Qpar-report (poziom raportowania autoparalelizacji)](qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Pętla #pragma ()](../../preprocessor/loop.md)<br/>
 [Kod natywny wektoryzacji w programie Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

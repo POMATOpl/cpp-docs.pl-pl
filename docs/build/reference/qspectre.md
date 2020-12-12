@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej na temat:/Qspectre
 title: /Qspectre
 ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: a4872d18fed4523e235aee70839f1e482d78f345
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 576052a9db8a4ce63c82afaf644f41fa847ad9a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225495"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -22,7 +23,7 @@ Określa generowanie kompilatora instrukcji w celu ograniczenia niektórych luk 
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja **/Qspectre** jest dostępna w programie visual Studio 2017 w wersji 15.5.5 i nowszych oraz w programie visual Studio 2015 Update 3 do [KB 4338871](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Powoduje, że kompilator wstawia instrukcje w celu ograniczenia niektórych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach są nazywane *atakami z kanału po stronie wykonywania* . Wpływają one na wiele systemów operacyjnych i nowoczesnych procesorów, w tym procesory z procesorów Intel, AMD i ARM.
+Opcja **/Qspectre** jest dostępna w programie visual Studio 2017 w wersji 15.5.5 i nowszych oraz w programie visual Studio 2015 Update 3 do [KB 4338871](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Powoduje, że kompilator wstawia instrukcje w celu ograniczenia niektórych [luk w zabezpieczeniach Spectre](https://spectreattack.com/spectre.pdf). Te luki w zabezpieczeniach są nazywane *atakami z kanału po stronie wykonywania*. Wpływają one na wiele systemów operacyjnych i nowoczesnych procesorów, w tym procesory z procesorów Intel, AMD i ARM.
 
 Opcja **/Qspectre** jest domyślnie wyłączona.
 
@@ -30,7 +31,7 @@ W początkowej wersji opcji **/Qspectre** działał tylko na zoptymalizowanym ko
 
 Biblioteki Microsoft Visual C++ są również dostępne w wersjach z ograniczeniami Spectre. Biblioteki Spectre-z ograniczeniami dla programu Visual Studio 2017 i nowszych można pobrać w Instalator programu Visual Studio. Znajdują się one na karcie **poszczególne składniki** w obszarze **kompilatory, narzędzia kompilacji i środowiska uruchomieniowe** i mają w nazwie "libs for Spectre". Dostępne są zarówno biblioteki DLL, jak i statyczne środowiska uruchomieniowe z włączonym ograniczaniem ryzyka dla podzestawu Visual C++ środowiska uruchomieniowe: kod uruchamiania VC + +, vcruntime140, msvcp140, concrt140 i vcamp140. Biblioteki DLL są obsługiwane tylko dla wdrożenia lokalnego aplikacji. Zawartość pakietu redystrybucyjnego Visual C++ 2017 i nowszych bibliotek środowiska uruchomieniowego nie została zmodyfikowana.
 
-Można także zainstalować biblioteki z ograniczeniami Spectre dla MFC i ATL. Znajdują się one na karcie **poszczególne składniki** w zestawach **SDK, biblioteki i struktury** .
+Można także zainstalować biblioteki z ograniczeniami Spectre dla MFC i ATL. Znajdują się one na karcie **poszczególne składniki** w zestawach **SDK, biblioteki i struktury**.
 
 > [!NOTE]
 > W przypadku aplikacji lub składników uniwersalnego systemu Windows (platformy UWP) nie ma żadnych wersji bibliotek Spectre. Wdrażanie takich bibliotek przez aplikację nie jest możliwe.
@@ -43,13 +44,13 @@ Jeśli Twój kod operuje na danych, które przecinają granicę zaufania, zaleca
 
 Opcja **/Qspectre** jest dostępna w programie Visual Studio 2017 w wersji 15.5.5 i we wszystkich aktualizacjach kompilatorów języka Microsoft C++ (MSVC) wykonanych w dniu lub po 23 stycznia 2018. Użyj Instalator programu Visual Studio, aby zaktualizować kompilator i zainstalować biblioteki z ograniczeniami Spectre jako poszczególne składniki. Opcja **/Qspectre** jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą poprawki. Aby uzyskać więcej informacji, zobacz [artykuł KB 4338871](https://support.microsoft.com/help/4338871).
 
-Wszystkie wersje programu Visual Studio 2017 w wersji 15,5 oraz zapoznaj się ze wszystkimi wersjami zapoznawczymi programu Visual Studio 2017 w wersji 15,6. Uwzględnij nieudokumentowaną opcję, **/d2guardspecload** . Jest to równoważne z początkowym zachowaniem **/Qspectre** . Możesz użyć **/d2guardspecload** , aby zastosować te same środki zaradcze do kodu w tych wersjach kompilatora. Zalecamy zaktualizowanie kompilacji tak, aby korzystała z **/Qspectre** w kompilatorach, które obsługują tę opcję. Opcja **/Qspectre** może również obsługiwać nowe środki zaradcze w nowszych wersjach kompilatora.
+Wszystkie wersje programu Visual Studio 2017 w wersji 15,5 oraz zapoznaj się ze wszystkimi wersjami zapoznawczymi programu Visual Studio 2017 w wersji 15,6. Uwzględnij nieudokumentowaną opcję, **/d2guardspecload**. Jest to równoważne z początkowym zachowaniem **/Qspectre**. Możesz użyć **/d2guardspecload** , aby zastosować te same środki zaradcze do kodu w tych wersjach kompilatora. Zalecamy zaktualizowanie kompilacji tak, aby korzystała z **/Qspectre** w kompilatorach, które obsługują tę opcję. Opcja **/Qspectre** może również obsługiwać nowe środki zaradcze w nowszych wersjach kompilatora.
 
 ### <a name="effect"></a>Efekt
 
 Opcja **/Qspectre** wyprowadza kod w celu ograniczenia Specter wariant 1, Pominięcie sprawdzania granic, [CVE-2017-5753](https://nvd.nist.gov/vuln/detail/CVE-2017-5753). Działa po wstawieniu instrukcji, które działają jako spekulacyjnej bariery wykonywania kodu. Szczegółowe instrukcje stosowane w celu ograniczenia spekulacji procesora zależą od procesora i jego mikroarchitektury oraz mogą ulec zmianie w przyszłych wersjach kompilatora.
 
-Po włączeniu opcji **/Qspectre** kompilator próbuje zidentyfikować wystąpienia, w przypadku których wykonanie spekulacyjne może ominąć ograniczenia. Jest to miejsce, w którym wstawia instrukcje dotyczące bariery. Ważne jest, aby mieć świadomość limitów analizy, które kompilator może wykonać, aby zidentyfikować wystąpienia wariantu 1. W związku z tym nie ma gwarancji, że wszystkie możliwe wystąpienia wariantu 1 są Instrumentacją w ramach **/Qspectre** .
+Po włączeniu opcji **/Qspectre** kompilator próbuje zidentyfikować wystąpienia, w przypadku których wykonanie spekulacyjne może ominąć ograniczenia. Jest to miejsce, w którym wstawia instrukcje dotyczące bariery. Ważne jest, aby mieć świadomość limitów analizy, które kompilator może wykonać, aby zidentyfikować wystąpienia wariantu 1. W związku z tym nie ma gwarancji, że wszystkie możliwe wystąpienia wariantu 1 są Instrumentacją w ramach **/Qspectre**.
 
 ### <a name="performance-impact"></a>Wpływ na wydajność
 
@@ -63,7 +64,7 @@ Opcja kompilatora **/Qspectre** generuje kod, który niejawnie łączy wersje bi
 - Visual C++ ATL dla \[ (x86/x64) | ARM | ARM64] z ograniczeniami Spectre
 - Visual C++ MFC dla \[ architektury x86/x64 | ARM | ARM64] z ograniczeniami Spectre
 
-Jeśli kompilujesz kod przy użyciu **/Qspectre** , a te biblioteki nie są zainstalowane, system kompilacji raportuje **MSB8038: Spectre jest włączone, ale nie znaleziono bibliotek z ograniczeniami** . Jeśli kompilacja kodu MFC lub ATL nie powiedzie się, a konsolidator zgłosi błąd, taki jak **błąd krytyczny LNK1104: nie można otworzyć pliku "OLDNAMES. lib"** , te brakujące biblioteki mogą być przyczyną.
+Jeśli kompilujesz kod przy użyciu **/Qspectre** , a te biblioteki nie są zainstalowane, system kompilacji raportuje **MSB8038: Spectre jest włączone, ale nie znaleziono bibliotek z ograniczeniami**. Jeśli kompilacja kodu MFC lub ATL nie powiedzie się, a konsolidator zgłosi błąd, taki jak **błąd krytyczny LNK1104: nie można otworzyć pliku "OLDNAMES. lib"**, te brakujące biblioteki mogą być przyczyną.
 
 ### <a name="additional-information"></a>Dodatkowe informacje
 
@@ -75,7 +76,7 @@ Aby uzyskać więcej informacji, zapoznaj się z oficjalnym [poradnikiem dotycz�
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties** > stronę właściwości konfiguracja generowania kodu **C/C++** > **Code Generation** .
+1. Wybierz  > stronę właściwości konfiguracja generowania kodu **C/C++** >  .
 
 1. Wybierz nową wartość właściwości **ograniczenia Spectre** . Wybierz **przycisk OK** , aby zastosować zmianę.
 
@@ -85,7 +86,7 @@ Aby uzyskać więcej informacji, zapoznaj się z oficjalnym [poradnikiem dotycz�
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties** > stronę właściwości konfiguracja wiersza polecenia **C/C++** > **Command Line** .
+1. Wybierz  > stronę właściwości konfiguracja wiersza polecenia **C/C++** >  .
 
 1. Wprowadź opcję kompilatora **/Qspectre** w polu **dodatkowe opcje** . Wybierz **przycisk OK** , aby zastosować zmianę.
 
@@ -95,7 +96,7 @@ Aby uzyskać więcej informacji, zapoznaj się z oficjalnym [poradnikiem dotycz�
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Q opcje (operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>

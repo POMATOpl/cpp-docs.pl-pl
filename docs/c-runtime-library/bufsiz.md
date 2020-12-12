@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: BUFSIZ'
 title: BUFSIZ
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BUFSIZ constant
 ms.assetid: 94ac04a3-d154-476b-bd89-eefbc7b949ae
-ms.openlocfilehash: 820e9bb0a8b21c2bacb54c9d0df3fe4a20d36241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65f4e7613be2a50adaf17dea0b8496048737a9a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221725"
 ---
 # <a name="bufsiz"></a>BUFSIZ
 
@@ -23,9 +24,9 @@ ms.locfileid: "62290329"
 
 ## <a name="remarks"></a>Uwagi
 
-`BUFSIZ` jest wymagany bufor przydzielony przez użytkownika dla [setvbuf —](../c-runtime-library/reference/setvbuf.md) procedury.
+`BUFSIZ` jest wymaganym buforem przydzielonym przez użytkownika dla procedury [setvbuf —](../c-runtime-library/reference/setvbuf.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Stream operacji We/Wy](../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../c-runtime-library/stream-i-o.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

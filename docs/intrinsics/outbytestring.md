@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __outbytestring'
 title: __outbytestring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: feadb0b4275e370de88bfc04c8a10f90c41d0844
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222427"
 ---
 # <a name="__outbytestring"></a>__outbytestring
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję, która wysyła pierwsze `Count` bajty danych wskazywane przez `Buffer` port określony przez `Port`. `rep outsb`
+Generuje `rep outsb` instrukcję, która wysyła pierwsze `Count` bajty danych wskazywane przez `Buffer` port określony przez `Port` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,7 +49,7 @@ podczas Liczba bajtów danych do wysłania.
 |---------------|------------------|
 |`__outbytestring`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -56,6 +57,6 @@ Ta procedura jest dostępna tylko jako wewnętrzna.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

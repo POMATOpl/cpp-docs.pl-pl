@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/OPT (optymalizacje)
 title: /OPT (Optymalizacje)
 ms.date: 05/18/2018
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 7f576d971425a67fc533bb417583173617615e3b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 73cdb182941ddf865695d58f6d60a96002f5005a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040408"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221959"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optymalizacje)
 
@@ -31,7 +32,7 @@ Kontroluje optymalizacje, które LINK wykonuje podczas kompilacji.
 ## <a name="syntax"></a>Składnia
 
 > **/OPT:**{**ref** \| **NOREF**} \
-> **/OPT:**{**ICF** \[ **=** _iteracje_ICF] \| **NOICF**} \
+> **/OPT:**{ \[ **=** _iteracje_ ICF] \| **NOICF**} \
 > **/OPT:**{**LBR** \| **NOLBR**}
 
 ## <a name="arguments"></a>Argumenty
@@ -50,14 +51,14 @@ Jeśli jest określona opcja [/Debug](debug-generate-debug-info.md) , wartości�
 
 **Zapora ICF** \[ **=** _iteracje_] &#124; **NOICF**
 
-Użyj iteracji usługi **ICF** \[ **=** _iterations_], aby wykonać identyczne składanie COMDAT. Zbędne dane COMDAT mogą być usunięte z danych wyjściowych konsolidatora. Opcjonalne parametry *iteracji* określają, ile razy mają być przenoszone symbole dla duplikatów. Domyślna liczba iteracji wynosi 1. Dodatkowe iteracje mogą zlokalizować więcej duplikatów, które zostaną odkryte przez składanie w poprzedniej iteracji.
+Użyj iteracji usługi **ICF** \[ **=** ], aby wykonać identyczne składanie COMDAT. Zbędne dane COMDAT mogą być usunięte z danych wyjściowych konsolidatora. Opcjonalne parametry *iteracji* określają, ile razy mają być przenoszone symbole dla duplikatów. Domyślna liczba iteracji wynosi 1. Dodatkowe iteracje mogą zlokalizować więcej duplikatów, które zostaną odkryte przez składanie w poprzedniej iteracji.
 
 Domyślnie **/OPT: Zapora ICF** jest włączana przez konsolidator, chyba że określono **/OPT: NOICF** lub [/Debug](debug-generate-debug-info.md) . Aby zastąpić to ustawienie domyślne i zapobiec składaniu COMDAT w programie, należy określić **/OPT: NOICF**.
 
 W kompilacji debugowania należy jawnie określić **/OPT: ICF** , aby umożliwić składanie COMDAT. Jednak ponieważ **/OPT: ICF** może scalać identyczne dane lub funkcje, może zmienić nazwy funkcji, które pojawiają się w śladach stosu. Może również uniemożliwić ustawienie punktów przerwania w niektórych funkcjach lub przeanalizować niektóre dane w debugerze i może przejść do nieoczekiwanych funkcji podczas wykonywania pojedynczych kroków w kodzie. Zachowanie kodu jest identyczne, ale Prezentacja debugera może być bardzo myląca. W związku z tym nie zaleca się używania **/OPT: ICF** w kompilacjach debugowania, chyba że zalety mniejszego kodu przekraczają te wady.
 
 > [!NOTE]
-> Ponieważ **/OPT: ICF** może spowodować, że ten sam adres zostanie przypisany do różnych funkcji lub elementów członkowskich danych tylko do odczytu (czyli **`const`** zmienne po skompilowaniu za pomocą **/Gy**), może przerwać program, który zależy od unikatowych adresów dla funkcji lub elementów członkowskich danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [/Gy (Włącz łączenie na poziomie funkcji)](gy-enable-function-level-linking.md).
+> Ponieważ **/OPT: ICF** może spowodować, że ten sam adres zostanie przypisany do różnych funkcji lub elementów członkowskich danych tylko do odczytu (czyli **`const`** zmienne po skompilowaniu za pomocą **/Gy**), może przerwać program, który zależy od unikatowych adresów dla funkcji lub elementów członkowskich danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [/Gy (Włączanie łączenia Function-Level)](gy-enable-function-level-linking.md).
 
 **LBR** &#124; **NOLBR**
 
@@ -83,19 +84,19 @@ Argumenty **/opt** są często ustawiane dla projektów utworzonych przy użyciu
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  **Linker**  >  stronę właściwości**optymalizacji** konsolidatora właściwości konfiguracji.
+1. Wybierz   >    >  stronę właściwości **optymalizacji** konsolidatora właściwości konfiguracji.
 
 1. Zmodyfikuj jedną z tych właściwości:
 
    - **Włącz zwijanie COMDAT**
 
-   - **Dokumentacja**
+   - **Materiały źródłowe**
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić opcję konsolidatora OPT:LBR w środowisku programowania Visual Studio
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja właściwości**  >  **Linker**  >  **wiersza polecenia** konsolidatora.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
 1. Wprowadź opcję w opcjach **dodatkowych**:
 
@@ -105,7 +106,7 @@ Argumenty **/opt** są często ustawiane dla projektów utworzonych przy użyciu
 
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
 - [MSVC Opcje konsolidatora](linker-options.md)

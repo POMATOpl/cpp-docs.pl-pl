@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: wartości'
 title: Wartości
 ms.date: 11/04/2016
 ms.assetid: 24003f89-220f-4f93-be7a-b650c26157d7
-ms.openlocfilehash: b8c02e425776359cdf3cf8d8b8a3e26871de003c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2eb9326a40a6182aafebb205ead43d0b6025fec0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221881"
 ---
 # <a name="values"></a>Wartości
 
@@ -19,6 +20,6 @@ ms.locfileid: "87213674"
 
 **`long double`** Typ jest różny, ale ma taką samą reprezentację jak typ **`double`** w kompilatorze języka Microsoft C.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obliczenia matematyczne zmiennoprzecinkowe](../c-language/floating-point-math.md)

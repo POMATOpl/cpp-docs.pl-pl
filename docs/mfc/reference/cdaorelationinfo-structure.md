@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze CDaoRelationInfo —
 title: CDaoRelationInfo — Struktura
 ms.date: 06/25/2018
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-ms.openlocfilehash: 7d1c86732966d8222582dc6d4527af89963a5cdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efcc880d30dd18108005d9c4f265238b81551532
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222245"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo — Struktura
 
-`CDaoRelationInfo` Struktura zawiera informacje dotyczące relacji zdefiniowanych między polami dwiema tabelami w [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiektu.
+`CDaoRelationInfo`Struktura zawiera informacje o relacji zdefiniowanej między polami dwóch tabel w obiekcie [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,49 +39,49 @@ struct CDaoRelationInfo
 #### <a name="parameters"></a>Parametry
 
 *m_strName*<br/>
-Unikatowej nazwy obiektu relacji. Aby uzyskać więcej informacji zobacz temat "Nazwa właściwości" w Pomocy programu DAO.
+Unikatowa nazwa obiektu relacji. Aby uzyskać więcej informacji, zobacz temat "Nazwa właściwości" w pomocy DAO.
 
 *m_strTable*<br/>
-Nazwy tabeli podstawowej w relacji.
+Nazwa główna tabeli w relacji.
 
 *m_strForeignTable*<br/>
-Nazwy tabeli obcego w relacji. Obcy jest tabela zawiera klucze obce. Ogólnie rzecz biorąc obcego tabela służy do nawiązywania lub wymuszają więzy integralności. Obcy tabeli jest zazwyczaj na wielu stronach relacji jeden do wielu. Przykładami tabel obcych tabele zawierające kody stanów Ameryki ani kanadyjski prowincje zamówienia.
+Nazywa tabelę obcą w relacji. Tabela obca jest tabelą używaną do przechowywania kluczy obcych. Ogólnie rzecz biorąc, można użyć tabeli obcej do ustanowienia lub wymuszenia integralności referencyjnej. Tabela obca zazwyczaj znajduje się na wielu stronach relacji jeden-do-wielu. Przykłady tabel obcych zawierają tabele zawierające kody dla województw amerykańskich lub kanadyjskich lub zamówień klientów.
 
 *m_lAttributes*<br/>
-Zawiera informacje o typie relacji. Wartość tego elementu członkowskiego może być dowolny z następujących czynności:
+Zawiera informacje o typie relacji. Wartość tego elementu członkowskiego może być dowolna z następujących:
 
-- `dbRelationUnique` Jest to relacja jeden do jednego.
+- `dbRelationUnique` Relacja to jeden do jednego.
 
-- `dbRelationDontEnforce` Relacja nie jest wymuszane (integralność referencyjna).
+- `dbRelationDontEnforce` Relacja nie jest wymuszana (bez integralności referencyjnej).
 
-- `dbRelationInherited` Relacja istnieje w bazie danych, innych niż bieżące, która zawiera dwie tabele dołączone.
+- `dbRelationInherited` Relacja istnieje w nieaktualnej bazie danych, która zawiera dwie dołączone tabele.
 
-- `dbRelationLeft` Relacja jest lewego sprzężenia. Lewe sprzężenie zewnętrzne obejmuje wszystkie rekordy z pierwszego (po lewej stronie) z dwóch tabel, nawet w przypadku braku pasujących wartości w rekordach w drugiej tabeli (po prawej stronie).
+- `dbRelationLeft` Relacja to lewe sprzężenie. Lewe sprzężenie zewnętrzne zawiera wszystkie rekordy z pierwszej (lewej strony) dwóch tabel, nawet jeśli nie ma pasujących wartości dla rekordów w drugiej tabeli (po prawej stronie).
 
-- `dbRelationRight` Relacja jest prawego sprzężenia. Prawe sprzężenie zewnętrzne obejmuje wszystkie rekordy z drugim (po prawej stronie) z dwóch tabel, nawet w przypadku braku pasujących wartości dla rekordów w pierwszej tabeli (po lewej stronie).
+- `dbRelationRight` Relacja jest odpowiednim sprzężeniem. Prawe sprzężenie zewnętrzne zawiera wszystkie rekordy z drugiej strony (po prawej stronie) dwóch tabel, nawet jeśli nie ma pasujących wartości dla rekordów w pierwszej tabeli (po lewej stronie).
 
-- `dbRelationUpdateCascade` Aktualizacje będą narastać kaskadowo.
+- `dbRelationUpdateCascade` Aktualizacje będą kaskadowo.
 
-- `dbRelationDeleteCascade` Kaskadowo zostaną usunięte.
+- `dbRelationDeleteCascade` Usunięcia zostaną kaskadowo.
 
 *m_pFieldInfos*<br/>
-Wskaźnik do tablicy [cdaorelationfieldinfo —](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Tablica zawiera jeden obiekt dla każdego pola w relacji. `m_nFields` Element członkowski danych podaje liczbę elementów tablicy.
+Wskaźnik do tablicy struktur [CDaoRelationFieldInfo —](../../mfc/reference/cdaorelationfieldinfo-structure.md) . Tablica zawiera jeden obiekt dla każdego pola w relacji. `m_nFields`Element członkowski danych daje liczbę elementów tablicy.
 
 *m_nFields*<br/>
-Liczba `CDaoRelationFieldInfo` obiekty w `m_pFieldInfos` element członkowski danych.
+Liczba `CDaoRelationFieldInfo` obiektów w `m_pFieldInfos` elemencie członkowskim danych.
 
 ## <a name="remarks"></a>Uwagi
 
-Odwołania do podstawowym i pomocniczym powyżej wskazują, jak informacji jest zwróconych przez [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) funkcja elementu członkowskiego w klasie `CDaoDatabase`.
+Odwołania do podstawowych i pomocniczych powyżej wskazują, jak informacje są zwracane przez funkcję składową [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) w klasie `CDaoDatabase` .
 
-Obiekty relacji nie są reprezentowane przez klasę MFC. Zamiast tego, obiekt DAO MFC obiektu bazowego `CDaoDatabase` klasa przechowuje kolekcję obiektów relacji: `CDaoDatabase` dostarcza funkcji elementów członkowskich na dostęp do niektórych poszczególnych elementów informacji o relacji, lub można uzyskiwać do nich dostęp w całości z `CDaoRelationInfo` obiektu przez wywołanie metody `GetRelationInfo` funkcja elementu członkowskiego krawędzi zawierającego go obiektu bazy danych.
+Obiekty relacji nie są reprezentowane przez klasę MFC. Zamiast tego obiekt DAO, który jest obiektem MFC `CDaoDatabase` klasy, przechowuje kolekcję obiektów relacji: `CDaoDatabase` dostarcza funkcje członkowskie do uzyskiwania dostępu do niektórych poszczególnych elementów informacji o relacji lub można uzyskać do nich dostęp jednocześnie przy użyciu `CDaoRelationInfo` obiektu przez wywołanie `GetRelationInfo` funkcji członkowskiej zawierającego obiekt bazy danych.
 
-Informacje o pobrane przez [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) funkcja członkowska jest przechowywany w `CDaoRelationInfo` struktury. `CDaoRelationInfo` definiuje również `Dump` kompilacje funkcja elementu członkowskiego podczas debugowania. Możesz użyć `Dump` do porzucenia zawartość `CDaoRelationInfo` obiektu.
+Informacje pobierane przez funkcję członkowską [CDaoDatabase:: GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) są przechowywane w `CDaoRelationInfo` strukturze. `CDaoRelationInfo` definiuje również `Dump` funkcję członkowską w kompilacjach debugowania. Możesz użyć, `Dump` aby zrzucić zawartość `CDaoRelationInfo` obiektu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdao.h
+**Nagłówek:** afxdao. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Struktura CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+[CDaoRelationFieldInfo —, struktura](../../mfc/reference/cdaorelationfieldinfo-structure.md)

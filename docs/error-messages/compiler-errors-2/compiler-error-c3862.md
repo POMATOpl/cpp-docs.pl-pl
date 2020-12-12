@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3862'
 title: Błąd kompilatora C3862
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-ms.openlocfilehash: 0b9c1e1213949d7d700094caa6687232df881ce6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b8955a69bcd04c0a40aed8fab722c6c734bfa65b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222895"
 ---
 # <a name="compiler-error-c3862"></a>Błąd kompilatora C3862
 
@@ -21,7 +22,7 @@ ms.locfileid: "80165486"
 
 **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Kompilacja z **/CLR: Pure** lub **/CLR: Safe** spowoduje wygenerowanie obrazu tylko MSIL, obrazu bez kodu natywnego (niezarządzanego).  W związku z tym nie można używać dyrektywy pragma `unmanaged` w przypadku kompilacji z **opcją/CLR: Pure** lub **/CLR: Safe** .
+Kompilacja z **/CLR: Pure** lub **/CLR: Safe** spowoduje wygenerowanie obrazu tylko MSIL, obrazu bez kodu natywnego (niezarządzanego).  W związku z tym nie można używać `unmanaged` dyrektywy pragma w kompilacji **/CLR: Pure** lub **/CLR: Safe** .
 
 Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) i [zarządzana, niezarządzana](../../preprocessor/managed-unmanaged.md).
 

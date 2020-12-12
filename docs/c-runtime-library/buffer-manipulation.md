@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: manipulowanie buforem'
 title: Manipulowanie buforem
 ms.date: 04/04/2018
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8389faf1e2e3de44507784755c7b4831952b9ffe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221738"
 ---
 # <a name="buffer-manipulation"></a>Manipulowanie buforem
 
@@ -18,7 +19,7 @@ Te procedury służą do pracy z obszarami pamięci w oparciu o bajt po bajcie.
 
 ## <a name="buffer-manipulation-routines"></a>Procedury manipulowania buforem
 
-|Procedura|Użycie|
+|Procedura|Zastosowanie|
 |-------------|---------|
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|Kopiuj znaki z jednego buforu do innego do momentu skopiowania danego znaku lub podanej liczby znaków|
 |[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|Zwróć wskaźnik do pierwszego wystąpienia w określonej liczbie znaków, danego znaku w buforze|
@@ -33,4 +34,4 @@ Gdy obszary źródłowe i docelowe nakładają się na siebie, tylko **memmove**
 
 ## <a name="see-also"></a>Zobacz też
 
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)

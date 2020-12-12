@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CWnd'
 title: Klasa CWnd
 ms.date: 11/19/2018
 f1_keywords:
@@ -818,12 +819,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 62298872def1a6e0e262c5339d323b83ad9bbc3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c77beb57f62e4395ec5c08b2f0deb65ab114fc1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220516"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -1275,7 +1276,7 @@ class CWnd : public CCmdTarget
 
 `CWnd`Obiekt różni się od okna systemu Windows, ale te dwa są ściśle połączone. `CWnd`Obiekt jest tworzony lub niszczony przez `CWnd` konstruktora i destruktora. Okno systemu Windows, z drugiej strony, jest strukturą danych wewnętrzną dla systemu Windows, która jest tworzona przez `Create` funkcję członkowską i zniszczona przez `CWnd` destruktor wirtualny. Funkcja [DestroyWindow](#destroywindow) niszczy okno systemu Windows bez niszczenia obiektu.
 
-`CWnd`Klasa i mechanizm mapy komunikatów ukrywają `WndProc` funkcję. Przychodzące komunikaty powiadomień systemu Windows są automatycznie kierowane przez mapę wiadomości **do odpowiednich**<em>Message</em> `CWnd` funkcji elementów członkowskich wiadomości. Przesłonisz funkcję elementu członkowskiego<em>komunikatu</em> **, aby**obsłużyć konkretny komunikat w klasach pochodnych.
+`CWnd`Klasa i mechanizm mapy komunikatów ukrywają `WndProc` funkcję. Przychodzące komunikaty powiadomień systemu Windows są automatycznie kierowane przez mapę wiadomości **do odpowiednich**<em></em> `CWnd` funkcji elementów członkowskich wiadomości. Przesłonisz funkcję elementu członkowskiego <em>komunikatu</em> **, aby** obsłużyć konkretny komunikat w klasach pochodnych.
 
 `CWnd`Klasa umożliwia również tworzenie okna podrzędnego systemu Windows dla aplikacji. Utwórz klasę z `CWnd` , a następnie Dodaj Zmienne Członkowskie do klasy pochodnej w celu przechowywania danych specyficznych dla aplikacji. Implementuj funkcje składowe programu obsługi komunikatów i mapę komunikatów w klasie pochodnej, aby określić, co się dzieje w przypadku kierowania komunikatów do okna.
 
@@ -2153,7 +2154,7 @@ Kombinacja bitowa (lub) [stylów okna](styles-used-by-mfc.md#window-styles); w p
 *x*<br/>
 Początkowa odległość okna od lewej strony ekranu lub okna nadrzędnego.
 
-*t*<br/>
+*Y*<br/>
 Początkowa odległość w pionie okna od góry ekranu lub okna nadrzędnego.
 
 *nWidth*<br/>
@@ -2453,7 +2454,7 @@ Parametr *lpPathSpec* ma następującą postać:
 
 W tym przykładzie *dysk* jest literą dysku, *katalog* jest prawidłową nazwą katalogu, a *Nazwa pliku* to prawidłowa nazwa pliku, która musi zawierać co najmniej jeden symbol wieloznaczny. Symbole wieloznaczne są znakiem zapytania (**?**), co oznacza dopasowanie dowolnego znaku i gwiazdką ( <strong>\*</strong> ), co odpowiada dowolnej liczbie znaków.
 
-Jeśli określisz ciąg o zerowej długości dla *lpPathSpec*lub określisz tylko nazwę katalogu, ale nie dołączysz żadnej specyfikacji pliku, ciąg zostanie zmieniony na " \* . \* ".
+Jeśli określisz ciąg o zerowej długości dla *lpPathSpec* lub określisz tylko nazwę katalogu, ale nie dołączysz żadnej specyfikacji pliku, ciąg zostanie zmieniony na " \* . \* ".
 
 Jeśli *lpPathSpec* zawiera nazwę dysku i/lub katalogu, bieżący dysk i katalog są zmieniane na wystawiony dysk i katalog, zanim pole listy zostanie wypełnione. Kontrolka tekstowa określona przez *nIDStaticPath* jest również aktualizowana przy użyciu nowego dysku i/lub nazwy katalogu.
 
@@ -2873,7 +2874,7 @@ Aby uzyskać więcej informacji na temat tej struktury, zobacz [TOOLINFO](/windo
 
 Po prostu wywołanie `EnableToolTips` nie jest wystarczające, aby wyświetlić etykietki narzędzi dla formantów podrzędnych, chyba że okno nadrzędne pochodzi od `CFrameWnd` . Dzieje się tak `CFrameWnd` , ponieważ program udostępnia domyślną procedurę obsługi dla powiadomienia TTN_NEEDTEXT. Jeśli okno nadrzędne nie pochodzi od `CFrameWnd` , to oznacza, że jeśli jest to okno dialogowe lub widok formularza, etykietki narzędzi dla formantów podrzędnych nie będą wyświetlane prawidłowo, chyba że zostanie pobrana procedura obsługi powiadomienia etykietki narzędzia TTN_NEEDTEXT. Zobacz [etykietki narzędzi](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-Domyślne porady dotyczące narzędzi podane dla systemu Windows przez nie `EnableToolTips` mają skojarzonych z nimi tekstu. Aby pobrać tekst etykietki narzędzia do wyświetlenia, powiadomienie TTN_NEEDTEXT jest wysyłane do okna nadrzędnego kontrolki etykietki narzędzia tuż przed wyświetleniem okna etykietki narzędzia. Jeśli nie ma programu obsługi dla tej wiadomości, aby przypisać pewne wartości do *pszText* elementu członkowskiego pszText `TOOLTIPTEXT` struktury, nie będzie wyświetlany tekst etykietki narzędzia.
+Domyślne porady dotyczące narzędzi podane dla systemu Windows przez nie `EnableToolTips` mają skojarzonych z nimi tekstu. Aby pobrać tekst etykietki narzędzia do wyświetlenia, powiadomienie TTN_NEEDTEXT jest wysyłane do okna nadrzędnego kontrolki etykietki narzędzia tuż przed wyświetleniem okna etykietki narzędzia. Jeśli nie ma programu obsługi dla tej wiadomości, aby przypisać pewne wartości do  elementu członkowskiego pszText `TOOLTIPTEXT` struktury, nie będzie wyświetlany tekst etykietki narzędzia.
 
 ### <a name="example"></a>Przykład
 
@@ -3821,7 +3822,7 @@ CDC* GetDCEx(
 *prgnClip*<br/>
 Identyfikuje region przycinania, który może być połączony z widocznym regionem okna klienta.
 
-*flagi*<br/>
+*znaczników*<br/>
 Może mieć jedną z następujących wartości wstępnie ustawionych:
 
 - DCX_CACHE zwraca kontekst urządzenia z pamięci podręcznej, a nie okna OWNDC lub CLASSDC. Zastępuje CS_OWNDC i CS_CLASSDC.
@@ -5098,7 +5099,7 @@ Aby ustawić region okna okna, wywołaj [CWnd:: SetWindowRgn](#setwindowrgn).
 
 ## <a name="cwndgetwindowtext"></a><a name="getwindowtext"></a> CWnd:: GetWindowText
 
-Kopiuje `CWnd` tytuł podpisu (jeśli ma jeden) do buforu wskazywanym przez *LpszStringBuf* lub *rString*docelowy ciąg.
+Kopiuje `CWnd` tytuł podpisu (jeśli ma jeden) do buforu wskazywanym przez *LpszStringBuf* lub *rString* docelowy ciąg.
 
 ```
 int GetWindowText(
@@ -5323,7 +5324,7 @@ Dany region musi być wcześniej utworzony przez jedną z funkcji regionu.
 
 ## <a name="cwndinvokehelper"></a><a name="invokehelper"></a> CWnd:: InvokeHelper
 
-Wywołaj tę funkcję elementu członkowskiego, aby wywołać metodę lub właściwość kontrolki ActiveX określoną przez *dwDispID*w kontekście określonym przez *wFlags*.
+Wywołaj tę funkcję elementu członkowskiego, aby wywołać metodę lub właściwość kontrolki ActiveX określoną przez *dwDispID* w kontekście określonym przez *wFlags*.
 
 ```cpp
 void AFX_CDECL InvokeHelper(
@@ -5808,7 +5809,7 @@ void MoveWindow(
 *x*<br/>
 Określa nową pozycję po lewej stronie `CWnd` .
 
-*t*<br/>
+*Y*<br/>
 Określa nową pozycję górnej części `CWnd` .
 
 *nWidth*<br/>
@@ -6909,7 +6910,7 @@ Jest wywoływana, aby przygotować niezweryfikowany region do malowania.
 
 Domyślna implementacja powoduje wymazanie tła przy użyciu pędzla klasy okna określonego przez `hbrBackground` element członkowski struktury klasy okna.
 
-Jeśli `hbrBackground` element członkowski ma wartość null, zastąpiona wersja `OnEraseBkgnd` powinna wymazać kolor tła. Twoja wersja powinna również wyrównać początek zamierzonego pędzla przy użyciu `CWnd` współrzędnych, po pierwsze wywołanie funkcji dla pędzla, a następnie wybranie pędzla. [UnrealizeObject](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject)
+Jeśli `hbrBackground` element członkowski ma wartość null, zastąpiona wersja `OnEraseBkgnd` powinna wymazać kolor tła. Twoja wersja powinna również wyrównać początek zamierzonego pędzla przy użyciu `CWnd` współrzędnych, po pierwsze wywołanie funkcji dla pędzla, a następnie wybranie pędzla. [](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject)
 
 Zastąpiony `OnEraseBkgnd` powinien zwrócić wartość różną od zera w odpowiedzi na WM_ERASEBKGND, jeśli przetwarza komunikat i wymazuje tło; oznacza to, że nie jest wymagane dalsze wymazywanie. Jeśli zwraca wartość 0, okno pozostanie oznaczone jako wymagające wymazania. (Zazwyczaj oznacza to, że `fErase` element członkowski `PAINTSTRUCT` struktury ma wartość true).
 
@@ -8145,7 +8146,7 @@ afx_msg void OnMove(
 *x*<br/>
 Określa nową lokalizację współrzędnej x lewego górnego rogu obszaru klienckiego. Ta nowa lokalizacja jest podawana na współrzędne ekranu dla nakładających się i wyskakujących okienek oraz współrzędnych klientów nadrzędnych dla okien podrzędnych.
 
-*t*<br/>
+*Y*<br/>
 Określa nową lokalizację współrzędnej y lewego górnego rogu obszaru klienckiego. Ta nowa lokalizacja jest podawana na współrzędne ekranu dla nakładających się i wyskakujących okienek oraz współrzędnych klientów nadrzędnych dla okien podrzędnych.
 
 ### <a name="remarks"></a>Uwagi
@@ -8222,7 +8223,7 @@ Wskazuje [NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_pa
 
 Przetwarzanie tego komunikatu powoduje, że aplikacja może kontrolować zawartość obszaru klienta okna, gdy zmienia się rozmiar lub położenie okna.
 
-Niezależnie od wartości *bCalcValidRects*pierwszy prostokąt w tablicy określony przez `rgrc` element członkowski struktury `NCCALCSIZE_PARAMS` struktury zawiera współrzędne okna. W przypadku okna podrzędnego współrzędne są względne względem obszaru klienckiego okna nadrzędnego. W przypadku okien najwyższego poziomu współrzędne są współrzędne ekranu. Aplikacja powinna zmodyfikować prostokąt, `rgrc[0]` aby odzwierciedlał rozmiar i położenie obszaru klienta.
+Niezależnie od wartości *bCalcValidRects* pierwszy prostokąt w tablicy określony przez `rgrc` element członkowski struktury `NCCALCSIZE_PARAMS` struktury zawiera współrzędne okna. W przypadku okna podrzędnego współrzędne są względne względem obszaru klienckiego okna nadrzędnego. W przypadku okien najwyższego poziomu współrzędne są współrzędne ekranu. Aplikacja powinna zmodyfikować prostokąt, `rgrc[0]` aby odzwierciedlał rozmiar i położenie obszaru klienta.
 
 `rgrc[1]` `rgrc[2]` Prostokąty i są prawidłowe tylko wtedy, gdy *bCalcValidRects* ma wartość true. W takim przypadku `rgrc[1]` prostokąt zawiera współrzędne okna przed jego przeniesieniem lub rozmiarem. `rgrc[2]`Prostokąt zawiera współrzędne obszaru klienta okna przed przeniesieniem okna. Wszystkie współrzędne są względne dla okna nadrzędnego lub ekranu.
 
@@ -8890,7 +8891,7 @@ afx_msg void OnParentNotify(
 ### <a name="parameters"></a>Parametry
 
 *Komunikat*<br/>
-Określa zdarzenie, dla którego zostanie powiadomiony element nadrzędny, oraz identyfikator okna podrzędnego. To zdarzenie jest słowem o niskim poziomie kolejności *komunikatów*. Jeśli zdarzenie jest WM_CREATE lub WM_DESTROY, *to jest identyfikator* okna podrzędnego z wysokim priorytetem. w przeciwnym razie nie jest zdefiniowany wyraz o wysokiej kolejności. Zdarzenie ( *słowo w niskim porządku) może*być jedną z następujących wartości:
+Określa zdarzenie, dla którego zostanie powiadomiony element nadrzędny, oraz identyfikator okna podrzędnego. To zdarzenie jest słowem o niskim poziomie kolejności *komunikatów*. Jeśli zdarzenie jest WM_CREATE lub WM_DESTROY, *to jest identyfikator* okna podrzędnego z wysokim priorytetem. w przeciwnym razie nie jest zdefiniowany wyraz o wysokiej kolejności. Zdarzenie ( *słowo w niskim porządku) może* być jedną z następujących wartości:
 
 - WM_CREATE tworzonego okna podrzędnego.
 
@@ -9794,7 +9795,7 @@ Gdy kod kontekstu to 0, komunikat WM_SYSKEYUP otrzymany przez `OnSysKeyUp` może
 
 W przypadku klawiatury IBM Enhanced 101 i 102 klawiszy ulepszone klucze są prawym klawiszem ALT i klawiszem CTRL w sekcji głównej klawiatury; klawisze INS, DEL, HOME, END, PAGE UP, PAGE DOWN i Strzałka w klastrach z lewej strony na klawiaturze numerycznej; i ukośnika (/) i klawisz ENTER na klawiaturze numerycznej. Niektóre inne klawiatury mogą obsługiwać bit klucza rozszerzonego w *nFlags*.
 
-W przypadku, gdy klawiatura "non-U. S" ma rozszerzoną 102 klawiszy, prawy klawisz ALT jest obsługiwany jako kombinacja klawiszy CTRL + ALT. Poniżej przedstawiono sekwencję komunikatów i wywołań tego wyniku, gdy użytkownik naciśnie i zwolni ten klucz:
+Dla innych niż U. S. Udoskonalone klawiatury o 102 klawiszy, prawy klawisz ALT jest obsługiwany jako kombinacja klawiszy CTRL + ALT. Poniżej przedstawiono sekwencję komunikatów i wywołań tego wyniku, gdy użytkownik naciśnie i zwolni ten klucz:
 
 |Sequence|Dostęp do funkcji|Komunikat przeszedł|
 |--------------|-----------------------|--------------------|
@@ -10785,7 +10786,7 @@ Wskazuje [strukturę recta](/windows/win32/api/windef/ns-windef-rect) zawierają
 *prgnUpdate*<br/>
 Identyfikuje region aktualizacji. Jeśli zarówno *prgnUpdate* , jak i *lpRectUpdate* mają wartość null, cały obszar klienta zostanie dodany do regionu aktualizacji.
 
-*flagi*<br/>
+*znaczników*<br/>
 Następujące flagi są używane do unieważnienia okna:
 
 - RDW_ERASE powoduje, że okno odbiera komunikat [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) po odświeżeniu okna. Należy również określić flagę RDW_INVALIDATE; w przeciwnym razie RDW_ERASE nie ma żadnego wpływu.
@@ -11084,7 +11085,7 @@ Określa region, który został zmodyfikowany, aby pomieścić region unieważni
 *lpRectUpdate*<br/>
 Wskazuje na `RECT` strukturę, która będzie odbierać granice prostokąta unieważnionego przez przewijanie. Ten parametr może mieć wartość NULL.
 
-*flagi*<br/>
+*znaczników*<br/>
 Może mieć jedną z następujących wartości:
 
 - SW_ERASE, jeśli określono za pomocą SW_INVALIDATE, program wymazuje nowo unieważniony region, wysyłając do okna komunikat [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) .
@@ -11107,7 +11108,7 @@ Jeśli okno ma styl [WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-crea
 
 Jeśli flaga [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) jest określona, system Windows nie będzie poprawnie aktualizować ekranu, jeśli część okna podrzędnego jest przewijana. Część przewijanego okna podrzędnego, które leży poza prostokątem źródłowym nie zostanie wymazana i nie zostanie poprawnie narysowana w nowym miejscu docelowym. Użyj funkcji [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) systemu Windows, aby przenieść okna podrzędne, które nie znajdują się w całości w prostokącie *lpRectScroll* . Kursor jest zmieniany, jeśli flaga SW_SCROLLCHILDREN jest ustawiona, a prostokąt karetki przecina prostokąt przewijania.
 
-Wszystkie współrzędne danych wejściowych i wyjściowych (dla *lpRectScroll*, *lpRectClip*, *lpRectUpdate*i *prgnUpdate*) są zakładane jako współrzędne klienta, niezależnie od tego, czy okno ma styl klasy CS_OWNDC czy CS_CLASSDC. Użyj funkcji systemu Windows [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) i [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) , aby przekonwertować współrzędne logiczne na i z nich, w razie potrzeby.
+Wszystkie współrzędne danych wejściowych i wyjściowych (dla *lpRectScroll*, *lpRectClip*, *lpRectUpdate* i *prgnUpdate*) są zakładane jako współrzędne klienta, niezależnie od tego, czy okno ma styl klasy CS_OWNDC czy CS_CLASSDC. Użyj funkcji systemu Windows [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) i [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) , aby przekonwertować współrzędne logiczne na i z nich, w razie potrzeby.
 
 ## <a name="cwndsendchildnotifylastmsg"></a><a name="sendchildnotifylastmsg"></a> CWnd:: SendChildNotifyLastMsg
 
@@ -11910,7 +11911,7 @@ Aby uzyskać reguły dotyczące korzystania z tego parametru, zobacz sekcję "uw
 *x*<br/>
 Określa nową pozycję po lewej stronie okna.
 
-*t*<br/>
+*Y*<br/>
 Określa nową pozycję górnej części okna.
 
 *CX*<br/>
@@ -11974,7 +11975,7 @@ Okno, które nie znajduje się na poziomie, może być własnością najwyższeg
 
 W przypadku systemu Windows w wersji 3,1 lub nowszej, system Windows można przenieść na górę i w dół w celu ustawienia ich WS_EX_TOPMOST style. Takie okno jest przechowywane w najwyższej pozycji nawet po zdezaktywowaniu. Na przykład wybranie polecenia WinHelp Always On Top powoduje, że okno Pomoc zostanie umieszczone na górze, a następnie pozostanie widoczne po powrocie do aplikacji.
 
-Aby utworzyć okno najwyższego poziomu, wywołaj `SetWindowPos` z parametrem *pWndInsertAfter*&równym ** wndTopMost**, lub ustaw styl WS_EX_TOPMOST podczas tworzenia okna.
+Aby utworzyć okno najwyższego poziomu, wywołaj `SetWindowPos` z parametrem *pWndInsertAfter*&równym **wndTopMost**, lub ustaw styl WS_EX_TOPMOST podczas tworzenia okna.
 
 Jeśli porządek osi Z zawiera wszystkie okna z stylem WS_EX_TOPMOST, okno przeniesione z **&wartość wndTopMost** jest umieszczane w górnej części wszystkich okien, które nie znajdują się w najwyższego poziomu, ale poniżej wszystkich okien z góry. Gdy aplikacja aktywuje nieaktywne okno bez WS_EX_TOPMOST bitowej, okno jest przenoszone powyżej wszystkich okien, które nie są w najwyższego poziomu, ale nie są widoczne w górnych oknach.
 
@@ -12252,7 +12253,7 @@ Flaga wskazująca, czy okno dialogowe jest inicjowane (FAŁSZ) czy trwa pobieran
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0. Jeśli *bSaveAndValidat*e ma wartość true, wartość zwracana przez zero oznacza, że dane zostały pomyślnie zweryfikowane.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0. Jeśli *bSaveAndValidat* e ma wartość true, wartość zwracana przez zero oznacza, że dane zostały pomyślnie zweryfikowane.
 
 ### <a name="remarks"></a>Uwagi
 

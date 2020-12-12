@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej na temat:/Qvec-Report (poziom raportowania autowektoryzator)
 title: /Qvec-raport (Poziom raportowania automatycznej wektoryzacji)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: 2007e80db0ee0aec362869315767505ec06ab109
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 734dabffa3bf19ecaba42d35d208eb27ec7b2968
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225469"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-raport (Poziom raportowania automatycznej wektoryzacji)
 
@@ -31,7 +32,7 @@ Aby uzyskać informacje na temat kodów przyczyn i komunikatów, zobacz [wektory
 
 ### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora/Qvec-Report w programie Visual Studio
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
 
 1. W oknie dialogowym **strony właściwości** w obszarze **C/C++** wybierz pozycję **wiersz polecenia**.
 
@@ -45,5 +46,5 @@ Aby uzyskać informacje na temat kodów przyczyn i komunikatów, zobacz [wektory
 
 [/Q opcje (operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Kod natywny wektoryzacji w programie Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

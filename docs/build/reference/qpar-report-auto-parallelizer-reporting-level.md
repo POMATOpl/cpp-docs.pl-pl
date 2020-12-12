@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej na temat:/Qpar-report (poziom raportowania autoparalelizacji)
 title: /Qpar-raport (Poziom raportowania automatycznej paralelizacji)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 3a154bdf50e951ee932173cdb65f9e1514011245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 573ab7535b63ba8d3f19f2917c17709ac7726b38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225534"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-raport (Poziom raportowania automatycznej paralelizacji)
 
@@ -31,7 +32,7 @@ Komunikaty są raportowane do stdout. Jeśli nie zgłoszono żadnych komunikató
 
 ### <a name="to-set-the-qpar-report-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora/Qpar-report w programie Visual Studio
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
 
 1. W oknie dialogowym **strony właściwości** w obszarze **C/C++** wybierz pozycję **wiersz polecenia**.
 
@@ -45,5 +46,5 @@ Komunikaty są raportowane do stdout. Jeśli nie zgłoszono żadnych komunikató
 
 [/Q opcje (operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Kod natywny wektoryzacji w programie Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

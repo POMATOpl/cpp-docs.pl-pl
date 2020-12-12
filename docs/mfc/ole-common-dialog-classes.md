@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: klasy wspólnych okien dialogowych OLE'
 title: Klasy wspólnych okien dialogowych OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: 1854d19c540f5e3e64b47786f465a05213eced86
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c30871c8f49be608f5ceeea3d84c86d483e20a81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222284"
 ---
 # <a name="ole-common-dialog-classes"></a>Klasy wspólnych okien dialogowych OLE
 
 Te klasy obsługują typowe zadania OLE, implementując wiele standardowych okien dialogowych OLE. Zapewniają także spójny interfejs użytkownika dla funkcji OLE.
 
 [COleDialog](reference/coledialog-class.md)<br/>
-Używane przez platformę do przechowywania wspólnych implementacji dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejs użytkownika są wyprowadzane z tej klasy bazowej. `COleDialog`nie można używać bezpośrednio.
+Używane przez platformę do przechowywania wspólnych implementacji dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejs użytkownika są wyprowadzane z tej klasy bazowej. `COleDialog` nie można używać bezpośrednio.
 
 [COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
 Wyświetla okno dialogowe Wstawianie obiektu, standardowy interfejs użytkownika służący do wstawiania nowych połączonych lub osadzonych elementów OLE.

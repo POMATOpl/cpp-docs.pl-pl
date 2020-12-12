@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o zarządzaniu pamięcią: przykłady'
 title: 'Zarządzanie pamięcią: przykłady'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: 0568b3abbcd5776eab4d0ab9748bcbcd79c2a84b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dcd7ba9ce5fee0af932766494f0a7afd64684e77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222297"
 ---
 # <a name="memory-management-examples"></a>Zarządzanie pamięcią: przykłady
 
@@ -36,7 +37,7 @@ W tym artykule opisano, jak MFC wykonuje alokacje ramek i alokacje sterty dla ka
 
 - [Obiekt](#_core_allocation_of_an_object)
 
-## <a name="allocation-of-an-array-of-bytes"></a><a name="_core_allocation_of_an_array_of_bytes"></a>Alokacja tablicy bajtów
+## <a name="allocation-of-an-array-of-bytes"></a><a name="_core_allocation_of_an_array_of_bytes"></a> Alokacja tablicy bajtów
 
 #### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Aby przydzielić tablicę bajtów w ramce
 
@@ -56,7 +57,7 @@ W tym artykule opisano, jak MFC wykonuje alokacje ramek i alokacje sterty dla ka
 
    [!code-cpp[NVC_MFC_Utilities#3](codesnippet/cpp/memory-management-examples_3.cpp)]
 
-## <a name="allocation-of-a-data-structure"></a><a name="_core_allocation_of_a_data_structure"></a>Alokacja struktury danych
+## <a name="allocation-of-a-data-structure"></a><a name="_core_allocation_of_a_data_structure"></a> Alokacja struktury danych
 
 #### <a name="to-allocate-a-data-structure-on-the-frame"></a>Aby przydzielić strukturę danych w ramce
 
@@ -72,7 +73,7 @@ W tym artykule opisano, jak MFC wykonuje alokacje ramek i alokacje sterty dla ka
 
    [!code-cpp[NVC_MFC_Utilities#5](codesnippet/cpp/memory-management-examples_5.cpp)]
 
-## <a name="allocation-of-an-object"></a><a name="_core_allocation_of_an_object"></a>Alokacja obiektu
+## <a name="allocation-of-an-object"></a><a name="_core_allocation_of_an_object"></a> Alokacja obiektu
 
 #### <a name="to-allocate-an-object-on-the-frame"></a>Aby przydzielić obiekt w ramce
 
@@ -98,6 +99,6 @@ W tym artykule opisano, jak MFC wykonuje alokacje ramek i alokacje sterty dla ka
 
    [!code-cpp[NVC_MFC_Utilities#9](codesnippet/cpp/memory-management-examples_9.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie pamięcią: Alokacja sterty](memory-management-heap-allocation.md)

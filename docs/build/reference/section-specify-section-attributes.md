@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/SECTION (Określ atrybuty sekcji)
 title: /SECTION (Określ atrybuty sekcji)
 ms.date: 12/29/2017
 f1_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: 0a52e9c9dcd53b01f17dc36825732b34771c75bb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8731f720e04ae2893f288e4b96aeaa019af43350
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224793"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Określ atrybuty sekcji)
 
-> **/Section:** _Nazwa_[[ **!** ] {**DEKPRSW**}] [ **, Align =** _Number_]
+> **/Section:**_Nazwa_[[**!**] {**DEKPRSW**}] [**, Align =**_Number_]
 
 ## <a name="remarks"></a>Uwagi
 
 Opcja **/Section** zmienia atrybuty sekcji, zastępując atrybuty ustawione, gdy plik. obj sekcji został skompilowany.
 
-*Sekcja* w przenośnym pliku wykonywalnym (PE) jest nazwanym ciągłym blokiem pamięci, który zawiera kod lub dane. Niektóre sekcje zawierają kod lub dane, które program deklaruje i używa bezpośrednio, podczas gdy inne sekcje danych są tworzone przez konsolidatora i Menedżera bibliotek (lib. exe) i zawierają informacje istotne dla systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [Format PE](/windows/win32/Debug/pe-format).
+*Sekcja* w przenośnym pliku wykonywalnym (PE) jest nazwanym ciągłym blokiem pamięci, który zawiera kod lub dane. Niektóre sekcje zawierają kod lub dane, które program deklaruje i używa bezpośrednio, podczas gdy inne sekcje danych są tworzone przez konsolidatora i Menedżera bibliotek (lib.exe) i zawierają informacje istotne dla systemu operacyjnego. Aby uzyskać więcej informacji, zobacz [Format PE](/windows/win32/Debug/pe-format).
 
-Określ dwukropek (:) i *Nazwa*sekcji. *Nazwa* uwzględnia wielkość liter.
+Określ dwukropek (:) i *Nazwa* sekcji. *Nazwa* uwzględnia wielkość liter.
 
 Nie używaj następujących nazw, ponieważ powodują konflikt z nazwami standardowymi. Na przykład. sdata jest używany na platformach RISC:
 
@@ -33,23 +34,23 @@ Nie używaj następujących nazw, ponieważ powodują konflikt z nazwami standar
 
 - . BSS
 
-- .data
+- . dane
 
 - .edata
 
 - .idata
 
-- .pdata
+- . pdata
 
 - . RDATA
 
-- .reloc
+- . reloc
 
 - . RSRC
 
-- .sbss
+- . sbss
 
-- .sdata
+- . sdata
 
 - .srdata
 
@@ -63,10 +64,10 @@ Aby Negate atrybut, poprzedź go znakiem wykrzyknika (!). W tej tabeli przedstaw
 
 |Znak|Atrybut|Znaczenie|
 |---------------|---------------|-------------|
-|E|Wykonana|Sekcja jest plikiem wykonywalnym|
+|E|Wykonaj polecenie|Sekcja jest plikiem wykonywalnym|
 |R|Odczyt|Zezwala na operacje odczytu danych|
-|W|Write|Zezwala na operacje zapisu w danych|
-|S|Shared|Udostępnia sekcję wśród wszystkich procesów, które ładują obraz|
+|W|Zapisywanie|Zezwala na operacje zapisu w danych|
+|S|Udostępniona|Udostępnia sekcję wśród wszystkich procesów, które ładują obraz|
 |D|Odrzucanie|Oznacza sekcję jako odrzucony|
 |K|Podlega buforowaniu|Oznacza sekcję jako niebędącą w pamięci podręcznej|
 |P|Stronicowalnej|Oznacza sekcję jako niestronicowaną|
@@ -75,21 +76,21 @@ K i P są nietypowe w tym, że flagi sekcji, które odpowiadają, są używane w
 
 Sekcja w pliku PE, która nie ma zestawu E, R lub W, jest prawdopodobnie nieprawidłowa.
 
-Argument **align =** _Number_ pozwala określić wartość wyrównania dla określonej sekcji. Argument _Number_ jest w bajtach i musi być potęgą liczby 2. Aby uzyskać więcej informacji, zobacz [/align](align-section-alignment.md) .
+Argument **align =**_Number_ pozwala określić wartość wyrównania dla określonej sekcji. Argument _Number_ jest w bajtach i musi być potęgą liczby 2. Aby uzyskać więcej informacji, zobacz [/align](align-section-alignment.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja właściwości** > **wiersza polecenia** **konsolidatora** > .
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
 1. Wprowadź opcję w polu **dodatkowe opcje** . Wybierz **przycisk OK** lub **Zastosuj** , aby zastosować zmianę.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

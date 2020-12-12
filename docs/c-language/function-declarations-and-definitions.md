@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: deklaracje i definicje funkcji'
 title: Deklaracje i definicje funkcji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - external linkage, function declarations
 - declaring functions
 ms.assetid: 43fd98eb-7441-4473-a5d9-fc88c75577f7
-ms.openlocfilehash: fafec2379f2eb06331ed4db112e924a7d1f9849b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fa1e5805b3462e58c04ff73bdbcac337c5a75b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221946"
 ---
 # <a name="function-declarations-and-definitions"></a>Deklaracje i definicje funkcji
 
