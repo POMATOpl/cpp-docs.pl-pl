@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Dostosowywanie dla MFC'
 title: Dostosowywanie na potrzeby MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - customizations, MFC Extensions
 ms.assetid: 3b1b7532-8cc9-48dc-9bbe-7fd4060530b5
-ms.openlocfilehash: 3b7597c3709ed700e82af94c78450ee5aff2d99b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 50df32d4743381e1212eae53b695e2355bc8d0e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309410"
 ---
 # <a name="customization-for-mfc"></a>Dostosowywanie na potrzeby MFC
 
@@ -19,7 +20,7 @@ Ten temat zawiera wskazówki dotyczące dostosowywania aplikacji MFC.
 
 Stan aplikacji można zapisać i załadować do rejestru. Po włączeniu tej opcji aplikacja będzie ładować stan początkowy z rejestru. Jeśli zmienisz początkowy układ dokowania dla aplikacji, musisz wyczyścić dane rejestru dla swojej aplikacji. W przeciwnym razie dane w rejestrze zastąpią wszelkie zmiany wprowadzone w układzie początkowym.
 
-## <a name="class-specific-customizations"></a>Dostosowania specyficzne dla klasy
+## <a name="class-specific-customizations"></a>Class-Specific dostosowania
 
 Dodatkowe wskazówki dotyczące dostosowywania można znaleźć w następujących tematach:
 
@@ -40,4 +41,4 @@ Dodatkowe wskazówki dotyczące dostosowywania można znaleźć w następującyc
 ## <a name="see-also"></a>Zobacz też
 
 [Aplikacje klasyczne MFC](mfc-desktop-applications.md)<br/>
-[Konsekwencje dostosowania związane z zabezpieczeniami](security-implications-of-customization.md)
+[Implikacje zabezpieczeń dotyczące dostosowywania](security-implications-of-customization.md)

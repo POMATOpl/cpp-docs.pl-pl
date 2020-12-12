@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strtime_s, _wstrtime_s'
 title: _strtime_s, _wstrtime_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7bc12d4749f0d79f00ff60901620e272a7c69917
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309150"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -93,7 +94,7 @@ Jeśli wystąpi błąd, zostanie wywołana procedura obsługi nieprawidłowego p
 
 ## <a name="security-issues"></a>Problemy z zabezpieczeniami
 
-Przekazanie nieprawidłowej wartości innej niż**null** dla buforu spowoduje naruszenie zasad dostępu, jeśli parametr *NumberOfElements* jest większy niż 9.
+Przekazanie nieprawidłowej wartości innej niż **null** dla buforu spowoduje naruszenie zasad dostępu, jeśli parametr *NumberOfElements* jest większy niż 9.
 
 Przekazywanie wartości dla *NumberOfElements* , która jest większa niż rzeczywisty rozmiar buforu, spowoduje przepełnienie buforu.
 
@@ -109,7 +110,7 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
-### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
+### <a name="generic-text-routine-mapping"></a>Generic-Text mapowanie procedury:
 
 |Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -119,8 +120,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtime_s**|\<> godziny. h|
-|**_wstrtime_s**|\<Time. h> lub \<WCHAR. h>|
+|**_strtime_s**|\<time.h>|
+|**_wstrtime_s**|\<time.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -167,7 +168,7 @@ OS time:            14:37:49
 OS date:            04/25/03
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

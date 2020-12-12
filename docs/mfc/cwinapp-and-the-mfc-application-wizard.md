@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: CWinApp i Kreator aplikacji MFC'
 title: Klasa CWinApp i kreator aplikacji MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: f57b3b2b37a97093aa6d81b59a12c8cf023e3157
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1ce1f0a84aa5a0f123f9fa8654d1ce286c47d1d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309267"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>Klasa CWinApp i kreator aplikacji MFC
 
@@ -31,6 +32,6 @@ Dostarczone implementacje standardowe i mapa komunikatów są odpowiednie dla wi
 
 ## <a name="see-also"></a>Zobacz też
 
-[CWinApp: klasa aplikacji](cwinapp-the-application-class.md)<br/>
-[Funkcje składowe CWinApp z możliwością zastąpienia](overridable-cwinapp-member-functions.md)<br/>
+[CWinApp: Klasa aplikacji](cwinapp-the-application-class.md)<br/>
+[CWinApp funkcje członkowskie](overridable-cwinapp-member-functions.md)<br/>
 [Specjalne usługi CWinApp](special-cwinapp-services.md)
