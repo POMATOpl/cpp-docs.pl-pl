@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/hotpatch (Tworzenie obrazu możliwy do poprawiania)
 title: /hotpatch (Utwórz obraz możliwy do poprawiania w trakcie działania)
 ms.date: 11/12/2018
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fc5fe629afcb1e721943b852c6f92351900ab7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199873"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Utwórz obraz możliwy do poprawiania w trakcie działania)
 
-Przygotowuje obraz do poprawki.
+Przygotowuje obraz do stosowania poprawek na gorąco.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,27 +30,27 @@ Przygotowuje obraz do poprawki.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **/hotpatch** jest używany w zestawieniu, kompilator zapewnia, że pierwsza instrukcja każdej funkcji jest co najmniej dwa bajty, który jest wymagany dla poprawki.
+Gdy **/hotpatch** jest używany w kompilacji, kompilator zapewnia, że pierwsza instrukcja każdej funkcji wynosi co najmniej dwa bajty, co jest wymagane w przypadku stosowania poprawek na gorąco.
 
-Aby zakończyć przygotowania do hotpatchable obraz po użyciu **/hotpatch** skompilować, należy użyć [/FUNCTIONPADMIN (Utwórz obraz Hotpatchable)](functionpadmin-create-hotpatchable-image.md) połączyć. Gdy kompilujesz i łączysz obraz za pomocą jednego wywołanie cl.exe, **/hotpatch** oznacza **/functionpadmin**.
+Aby ukończyć przygotowanie do tworzenia obrazu możliwy do poprawiania, po użyciu **/hotpatch** do skompilowania należy użyć [/functionpadmin (Utwórz obraz możliwy do poprawiania)](functionpadmin-create-hotpatchable-image.md) do połączenia. Podczas kompilowania i łączenia obrazu przy użyciu jednego wywołania cl.exe **/hotpatch** implikuje **/functionpadmin**.
 
-Ponieważ instrukcje mają zawsze dwa bajty lub większym na architekturze ARM i dlatego x64 kompilacji jest zawsze traktowany tak, jakby **/hotpatch** została określona, nie trzeba określać **/hotpatch** po Kompiluj dla tych celów; Jednakże nadal należy połączyć przy użyciu **/functionpadmin** do tworzenia obrazów hotpatchable dla nich. **/Hotpatch** kompilacja wpływa na x86 tylko opcji kompilatora.
+Ponieważ instrukcje są zawsze dwa bajty lub większe w architekturze ARM, a kompilacja x64 jest zawsze traktowana jak w przypadku określenia **/hotpatch** , nie trzeba określać **/hotpatch** podczas kompilowania tych elementów docelowych. jednak nadal musisz połączyć się za pomocą **/functionpadmin** , aby utworzyć dla nich obrazy możliwy do poprawiania. Opcja kompilatora **/hotpatch** ma wpływ tylko na kompilację x86.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **C/C++** folderu.
+1. Wybierz folder **C/C++** .
 
-1. Wybierz **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **wiersza polecenia** .
 
-1. Dodaj opcję kompilatora **dodatkowe opcje** pole.
+1. Dodaj opcję kompilatora do pola **dodatkowe opcje** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

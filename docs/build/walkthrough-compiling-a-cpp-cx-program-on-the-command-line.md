@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: kompilowanie programu C++/CX w wierszu polecenia'
 title: 'Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 8dcd27ca8fff826f33ee8bd752cd32f2d44d3691
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10bee181f347864fdef1703f88ca002a6c7c40b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836715"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198950"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CX w wierszu polecenia
 

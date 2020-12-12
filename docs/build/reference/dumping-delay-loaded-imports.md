@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zatopienia Delay-Loaded Importy'
 title: Zrzucanie importów załadowanych z opóźnieniem
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,17 +7,17 @@ helpviewer_keywords:
 - imports (delay-loaded)
 - delay-loaded imports
 ms.assetid: f766acf4-9df8-4b85-8cf6-0be3ffc4c124
-ms.openlocfilehash: 368c6b851340dd2a39df9a758f15d52ff5104479
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c57ff6bb4a3dce16b4cb1eb85fdffff4ef272396
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201082"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Zrzucanie importów załadowanych z opóźnieniem
 
-Może być zrzucany importów załadowanych z opóźnieniem przy użyciu [dumpbin/Imports —](imports-dumpbin.md) i są wyświetlane z informacji nieco inne niż standardowe importuje. Czy można podzielić na własnej sekcji/Imports — zrzucanie, a są jawnie oznaczone jako importów załadowanych z opóźnieniem. Jeśli jest zwolnienie informacji zawartych w obrazie, który podano. W przypadku powiązania informacji zawartych wraz z powiązanej adresy polecenie importuje zauważyć sygnaturę daty/godziny docelowej biblioteki DLL.
+Importy z opóźnieniem mogą być zrzucane przy użyciu [polecenia DUMPBIN/Imports —](imports-dumpbin.md) i wyświetlane z nieco różnymi informacjami niż standardowe Importy. Są one podzielone na własne części dumpingu/Imports — i są jawnie oznaczone jako Importy ładowane z opóźnieniem. Jeśli na obrazie znajdują się informacje o zwolnieniu, zanotowano ich wypróbowanie. Jeśli istnieją informacje o powiązaniu, sygnatura czasowa i Data docelowej biblioteki DLL jest zapisywana wraz z adresami związanymi z importami.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)
+[Obsługa konsolidatora dla Delay-Loaded bibliotek DLL](linker-support-for-delay-loaded-dlls.md)

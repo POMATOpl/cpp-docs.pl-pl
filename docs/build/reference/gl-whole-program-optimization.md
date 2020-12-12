@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/GL (Optymalizacja całego programu)
 title: /GL (Optymalizacja całego programu)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: 875865a32dcb80cb8a6d8fa53646260f3d9413a5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ad42eaeeacf897686831c9b415aa62026b5644f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200198"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Optymalizacja całego programu)
 
@@ -30,7 +31,7 @@ Włącza optymalizację całego programu.
 
 Optymalizacja całego programu umożliwia kompilatorowi wykonywanie optymalizacji z informacjami na wszystkich modułach w programie. Bez optymalizacji całego programu, optymalizacje są wykonywane dla każdego modułu (jednostka kompilacji).
 
-Optymalizacja całego programu jest domyślnie wyłączona i należy ją jawnie włączyć. Można jednak jawnie wyłączyć go za pomocą **/GL-** .
+Optymalizacja całego programu jest domyślnie wyłączona i należy ją jawnie włączyć. Można jednak jawnie wyłączyć go za pomocą **/GL-**.
 
 Wraz z informacjami na temat wszystkich modułów kompilator może:
 
@@ -48,7 +49,7 @@ Jeśli kompilujesz program z **/GL** i [/c](c-compile-without-linking.md), nale�
 
 Nie można używać [/Zi](z7-zi-zi-debug-information-format.md) z **/GL**
 
-Format plików utworzonych przy użyciu **/GL** w bieżącej wersji może nie być możliwy do odczytania przez kolejne wersje wizualizacji C++. Nie należy dostarczać pliku lib składającego się z plików. obj, które zostały utworzone za pomocą **/GL** , chyba że chcemy przesłać kopie pliku lib dla wszystkich wersji wizualizacji C++ , których użytkownicy będą mogli używać, teraz i w przyszłości.
+W kolejnych wersjach Visual C++ nie można odczytać formatu plików utworzonych za pomocą **/GL** w bieżącej wersji. Nie należy dostarczać pliku lib składającego się z plików. obj, które zostały utworzone za pomocą **/GL** , chyba że chcemy przesłać kopie pliku lib dla wszystkich wersji Visual C++, których użytkownicy będą mogli używać, teraz i w przyszłości.
 
 pliki. obj tworzone za pomocą **/GL** i prekompilowanych plików nagłówkowych nie powinny być używane do kompilowania pliku. lib, chyba że plik. lib zostanie połączony na tym samym komputerze, na którym wyprodukowała plik **/GL** . obj. Informacje z prekompilowanego pliku nagłówkowego pliku. obj będą wymagały czasu połączenia.
 
@@ -65,4 +66,4 @@ Aby uzyskać więcej informacji na temat optymalizacji dostępnych wraz z ograni
 ## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie kompilacji debugowania do sprawdzania zastępowania pamięci'
 title: Korzystanie z kompilacji debugowania do sprawdzania nadpisywania pamięci
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 152f72749d2ebdacd46dd3e4db671bc5705d4b6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 03981696a0314632aebb959d6fa1d986145c087c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199067"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Korzystanie z kompilacji debugowania do sprawdzania nadpisywania pamięci
 
@@ -39,6 +40,6 @@ Jeśli pierwsze potwierdzenie powiedzie się, a druga nie powiedzie się, oznacz
 
 W zależności od charakteru aplikacji może się okazać, że `afxMemDF` program uruchamia zbyt wolno, aby testy były nawet niewolniejsze. `afxMemDF`Zmienna powoduje `AfxCheckMemory` wywoływanie dla każdego wywołania do New i DELETE. W takim przypadku należy wyrównać własne wywołania do `AfxCheckMemory` (), jak pokazano powyżej, i spróbować wyizolować zastępowanie pamięci w ten sposób.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozwiązywanie problemów z kompilacją wersji](fixing-release-build-problems.md)

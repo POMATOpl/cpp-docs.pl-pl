@@ -1,30 +1,31 @@
 ---
+description: 'Dowiedz się więcej o: makra i NMAKE'
 title: Makra i NMAKE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE macros
 - macros, NMAKE
 ms.assetid: d424fd47-63eb-4982-9410-6f412730c265
-ms.openlocfilehash: b9cd96cc18a0d6ec43f7ad535aeb90cd802a6604
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a3bf1a3a6df89589fd58da1e207f31855b8ae2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199145"
 ---
 # <a name="macros-and-nmake"></a>Makra i NMAKE
 
-Makra Zamień określonego ciągu w pliku reguł programu make innego ciągu. Używanie makr, można wykonywać następujące czynności:
+Makra zastępują określony ciąg w pliku reguł programu make innym ciągiem. Za pomocą makr można:
 
-- Tworzenie pliku reguł programu make, które można tworzyć w różnych projektach.
+- Utwórz plik reguł programu make, który może tworzyć różne projekty.
 
-- Określ opcje polecenia.
+- Określ opcje dla poleceń.
 
-- Ustawianie zmiennych środowiskowych.
+- Ustaw zmienne środowiskowe.
 
-Można zdefiniować [własne makra](defining-an-nmake-macro.md) lub użyj w NMAKE [wstępnie zdefiniowane makra](special-nmake-macros.md).
+Możesz definiować [własne makra](defining-an-nmake-macro.md) lub używać [wstępnie zdefiniowanych makr](special-nmake-macros.md)NMAKE.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 [Definiowanie makro NMAKE](defining-an-nmake-macro.md)
 
@@ -32,6 +33,6 @@ Można zdefiniować [własne makra](defining-an-nmake-macro.md) lub użyj w NMAK
 
 [Specjalne makra NMAKE](special-nmake-macros.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[NMAKE — dokumentacja](nmake-reference.md)
+[Odwołanie NMAKE](nmake-reference.md)

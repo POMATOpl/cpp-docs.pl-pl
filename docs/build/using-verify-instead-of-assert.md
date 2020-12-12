@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Używanie funkcji VERIFY zamiast potwierdzenia'
 title: Korzystanie z VERIFY zamiast ASSERT
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: bfc0847677ae232fef67ab6200c626472f042bdb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbb878e9184536a6888b84f7861a3e8b7b9ab2b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199054"
 ---
 # <a name="using-verify-instead-of-assert"></a>Korzystanie z VERIFY zamiast ASSERT
 
@@ -42,9 +43,9 @@ Ten kod działa doskonale w wersji debugowej aplikacji MFC. Jeśli wywołanie `c
 
 - wywołanie `calloc( )` nigdy nie następuje, pozostawiając `buf` niezainicjowane lub
 
-- `strcpy_s( )`Kopiuje "`Hello, World`" do losowej części pamięci, prawdopodobnie uległa awarii aplikacji lub powoduje, że system przestanie odpowiadać lub
+- `strcpy_s( )` Kopiuje " `Hello, World` " do losowej części pamięci, prawdopodobnie uległa awarii aplikacji lub powoduje, że system przestanie odpowiadać lub
 
-- `free()`próbuje zwolnić pamięć, która nigdy nie została przyznana.
+- `free()` próbuje zwolnić pamięć, która nigdy nie została przyznana.
 
 Aby użyć poprawnego potwierdzenia, należy zmienić przykład kodu na następujący:
 
@@ -73,4 +74,4 @@ free( buf );
 
 ## <a name="see-also"></a>Zobacz też
 
-[Naprawianie problemów kompilacji wydania](fixing-release-build-problems.md)
+[Rozwiązywanie problemów z kompilacją wersji](fixing-release-build-problems.md)

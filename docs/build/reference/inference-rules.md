@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: reguły wnioskowania'
 title: Zasady wnioskowania
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rules, inference
 - NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-ms.openlocfilehash: d3d7ca41d96d3845237b445edefff05044dacdc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fc063f71ff88442ce6f7fc02c5b22f015ce0010c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199756"
 ---
 # <a name="inference-rules"></a>Zasady wnioskowania
 
@@ -21,16 +22,16 @@ Jeśli nieaktualna zależność nie ma poleceń i jeśli [. SUFIKSy](dot-directi
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
-[Definiowanie reguły](defining-a-rule.md)
+[Definiowanie zasady](defining-a-rule.md)
 
-[Reguły trybu wsadowego](batch-mode-rules.md)
+[Zasady dotyczące trybu partii](batch-mode-rules.md)
 
-[Wstępnie zdefiniowane reguły](predefined-rules.md)
+[Wstępnie zdefiniowane zasady](predefined-rules.md)
 
-[Wywnioskowane zależności i reguły](inferred-dependents-and-rules.md)
+[Zależności wywnioskowane oraz zasady](inferred-dependents-and-rules.md)
 
-[Pierwszeństwo w regułach wnioskowania](precedence-in-inference-rules.md)
+[Pierwszeństwo w zasadach wnioskowania](precedence-in-inference-rules.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[NMAKE — dokumentacja](nmake-reference.md)
+[Odwołanie NMAKE](nmake-reference.md)

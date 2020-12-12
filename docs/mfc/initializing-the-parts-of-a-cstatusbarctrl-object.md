@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Inicjowanie części obiektu CStatusBarCtrl'
 title: Inicjowanie części obiektu CStatusBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - icons, using in status bars
 - CStatusBarCtrl class [MFC], declaring parts of
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
-ms.openlocfilehash: bd099a67d9f11cc3657a91b4141d3f18c6fa719d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 52eb738f5fe54a54e54a6415a602a68123869b32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197533"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inicjowanie części obiektu CStatusBarCtrl
 
@@ -31,5 +32,5 @@ Aby uzyskać więcej informacji na temat ustawiania trybu `CStatusBarCtrl` prost
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie ze CStatusBarCtrl](using-cstatusbarctrl.md)<br/>
+[Korzystanie z CStatusBarCtrl](using-cstatusbarctrl.md)<br/>
 [Formanty](controls-mfc.md)

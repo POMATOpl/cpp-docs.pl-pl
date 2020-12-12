@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/LARGEADDRESSAWARE (obsługa dużych adresów)
 title: /LARGEADDRESSAWARE (Obsługa dużych adresów)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -LARGEADDRESSAWARE linker option
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-ms.openlocfilehash: 81a560ebf083e2f93d9bb514fc401186291d7f41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72b2ba20b2ea2b91ecd234497c433bcdd9e9ee42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199574"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Obsługa dużych adresów)
 
@@ -24,25 +25,25 @@ ms.locfileid: "62269557"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/largeaddressaware informuje konsolidator, że aplikacja może obsługiwać adresy większe niż 2 gigabajty. W 64-bitowych kompilatorów ta opcja jest domyślnie. W 32-bitowych kompilatorów ustawione jest/largeaddressaware Jeśli/largeaddressaware nie jest określona inaczej w linii konsolidatora.
+Opcja/LARGEADDRESSAWARE informuje konsolidator, że aplikacja może obsłużyć adresy większe niż 2 gigabajty. W przypadku kompilatorów 64-bitowych ta opcja jest domyślnie włączona. W kompilatorach 32-bitowych/LARGEADDRESSAWARE: nie jest włączone, jeśli/LARGEADDRESSAWARE nie określono inaczej w linii konsolidatora.
 
-Jeśli aplikacja została połączona z/largeaddressaware, DUMPBIN [/HEADERS](headers.md) spowoduje to wyświetlenie informacji w tym celu.
+Jeśli aplikacja została połączona z/LARGEADDRESSAWARE, polecenia DUMPBIN [/Headers](headers.md) będzie wyświetlała informacje w tym efekcie.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **systemu** stronę właściwości.
+1. Kliknij stronę właściwości **systemu** .
 
-1. Modyfikowanie **Włącz duże adresy** właściwości.
+1. Zmodyfikuj właściwość **enable Large addresss** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

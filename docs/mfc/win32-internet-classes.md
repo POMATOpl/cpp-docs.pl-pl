@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy internetowe Win32'
 title: Klasy internetowe Win32
 ms.date: 09/12/2018
 f1_keywords:
@@ -9,37 +10,37 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b6acad5f867444c33ed86cb7e70f4f1eec42df0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197481"
 ---
 # <a name="win32-internet-classes"></a>Klasy internetowe Win32
 
-MFC opakowuje internetowe Win32 (WinInet) i technologii ActiveX, aby ułatwić Programowanie w Internecie.
+MFC zawija Internet (WinInet) i technologię ActiveX, aby ułatwić programowanie Internetu.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](activex-controls.md).
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
-Tworzy i inicjuje sesji internetowej jeden lub kilka jednoczesnych sesji internetowej, a jeśli to konieczne, w tym artykule opisano połączenie z serwerem proxy.
+Tworzy i inicjuje jedną sesję internetową lub kilka równoczesnych sesji internetowych oraz, w razie potrzeby, opisuje połączenie z serwerem proxy.
 
 [CInternetConnection](../mfc/reference/cinternetconnection-class.md)<br/>
-Zarządza połączeniem z serwerem Internet.
+Zarządza połączeniem z serwerem internetowym.
 
 [CInternetFile](../mfc/reference/cinternetfile-class.md)<br/>
-Ta klasa i jej klasy pochodne zezwolić na dostęp do plików w systemach zdalnych, które korzystają z protokołów internetowych.
+Ta klasa i jej klasy pochodne umożliwiają dostęp do plików w systemach zdalnych, które korzystają z protokołów internetowych.
 
 [CHttpConnection](../mfc/reference/chttpconnection-class.md)<br/>
 Zarządza połączeniem z serwerem HTTP.
 
 [CHttpFile](../mfc/reference/chttpfile-class.md)<br/>
-Oferuje funkcje w celu odnalezienia i odczytania plików na serwerze HTTP.
+Oferuje funkcje znajdowania i odczytywania plików na serwerze HTTP.
 
 [CGopherFile](../mfc/reference/cgopherfile-class.md)<br/>
-Oferuje funkcje w celu odnalezienia i odczytania plików na serwerze gophera.
+Oferuje funkcje znajdowania i odczytywania plików na serwerze gopher.
 
 [CFtpConnection](../mfc/reference/cftpconnection-class.md)<br/>
 Zarządza połączeniem z serwerem FTP.
@@ -48,20 +49,20 @@ Zarządza połączeniem z serwerem FTP.
 Zarządza połączeniem z serwerem gopher.
 
 [CFileFind](../mfc/reference/cfilefind-class.md)<br/>
-Przeprowadza lokalne i internetowych plikach wyszukiwania.
+Wykonuje wyszukiwanie plików lokalnych i internetowych.
 
 [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)<br/>
-Pomoc Internetowych plikach wyszukiwania serwerów FTP.
+Pomoc dla wyszukiwania w pliku internetowym w przypadku serwerów FTP.
 
 [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)<br/>
-Pomoc Internetowych plikach wyszukiwania serwerów gopher.
+Pomoc dla wyszukiwania w pliku internetowym serwerów Gopher.
 
 [CGopherLocator](../mfc/reference/cgopherlocator-class.md)<br/>
-Pobiera "Lokalizator" gopher z serwera gopher, określa typ lokalizatora i udostępnia go do `CGopherFileFind`.
+Pobiera gopher "lokalizator" z serwera gopher, określa typ lokalizatora i udostępnia lokalizator `CGopherFileFind` .
 
 [CInternetException](../mfc/reference/cinternetexception-class.md)<br/>
-Przedstawia warunek wyjątku związany z operacją Internet.
+Reprezentuje warunek wyjątku związany z operacją internetową.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

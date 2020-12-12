@@ -1,5 +1,6 @@
 ---
-title: '&lt;Dołącz > (C++ Komentarze do dokumentacji)'
+description: 'Dowiedz się więcej na temat: &lt; dołączanie&gt;'
+title: '&lt;Uwzględnij> (Komentarze w dokumentacji C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <include>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 577281b293fcca9b9b0b9491dd239240d435f32c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199782"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
-\<include tag > umożliwia odwoływanie się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa dla umieszczania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.  Można na przykład użyć \<dołączenie > do wstawiania standardowych komentarzy, które są używane przez zespół lub firmę.
+\<include>Tag umożliwia odwoływanie się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa dla umieszczania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.  Na przykład, można użyć, \<include> Aby wstawić standardowe "typowe" Komentarze, które są używane przez zespół lub firmę.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,26 +28,26 @@ ms.locfileid: "79439507"
 #### <a name="parameters"></a>Parametry
 
 *Nazwa pliku*<br/>
-Nazwa pliku zawierającego dokumentację. Nazwa pliku może być kwalifikowana za pomocą ścieżki.  Ujmij nazwę w pojedyncze lub podwójne cudzysłowy.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `filename`.
+Nazwa pliku zawierającego dokumentację. Nazwa pliku może być kwalifikowana za pomocą ścieżki.  Ujmij nazwę w pojedyncze lub podwójne cudzysłowy.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `filename` .
 
 *tagpath*<br/>
 Prawidłowe wyrażenie XPath, które wybiera żądany zestaw węzłów zawarty w pliku.
 
 *Nazwij*<br/>
-Specyfikator nazwy w tagu, który poprzedza Komentarze; `name` będzie `id`.
+Specyfikator nazwy w tagu, który poprzedza Komentarze; `name` ma `id` .
 
 *id*<br/>
 Identyfikator tagu, który poprzedza Komentarze.  Ujmij nazwę w pojedyncze lub podwójne cudzysłowy.
 
 ## <a name="remarks"></a>Uwagi
 
-\<include tag > używa składni XML XPath. Zapoznaj się z dokumentacją XPath, aby dostosowywać sposoby dostosowywania przy użyciu \<>.
+\<include>Tag używa SKŁADNI XML XPath. Zapoznaj się z dokumentacją XPath, aby uzyskać informacje na temat sposobów dostosowywania za pomocą programu \<include> .
 
 Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 
-Jest to przykład wieloplikowy. Pierwszy plik, który używa \<zawiera >, zawiera następujące komentarze dokumentacji:
+Jest to przykład wieloplikowy. Pierwszy plik, który używa \<include> , zawiera następujące komentarze dokumentacji:
 
 ```cpp
 // xml_include_tag.cpp
@@ -66,7 +67,7 @@ public ref class Test2 {
 };
 ```
 
-Drugi plik, xml_include_tag. doc, zawiera następujące komentarze dokumentacji:
+Drugi plik, xml_include_tag.doc, zawiera następujące komentarze dokumentacji:
 
 ```xml
 <MyDocs>

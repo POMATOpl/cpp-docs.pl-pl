@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:. Pliki lib jako dane wejściowe konsolidatora
 title: Pliki .Lib — Wejście konsolidatora
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,34 +15,34 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4a3b6c6487947772fb72135fb26f67857f0937e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201264"
 ---
 # <a name="lib-files-as-linker-input"></a>Pliki .Lib — Wejście konsolidatora
 
-LINK akceptuje COFF standardowych bibliotek i COFF importowania bibliotek, które zwykle z rozszerzeniem. lib. Standardowe biblioteki zawiera obiektów i są tworzone za pomocą narzędzia LIB. Bibliotek importu zawierają informacje dotyczące eksportu w innych programach i są tworzone przez łącze, opiera się program, który zawiera eksporty albo za pomocą narzędzia LIB. Aby uzyskać informacji na temat używania biblioteki do tworzenia standardowych lub Importuj biblioteki, zobacz [odwołanie do biblioteki LIB](lib-reference.md). Szczegółowe informacje na temat przy użyciu LINKU, aby utworzyć bibliotekę importu, [/dll](dll-build-a-dll.md) opcji.
+LINK akceptuje biblioteki standardowe COFF i biblioteki importu COFF, które zwykle mają rozszerzenie lib. Biblioteki standardowe zawierają obiekty i są tworzone za pomocą narzędzia LIB. Biblioteki importowane zawierają informacje o eksportach w innych programach i są tworzone przez LINK podczas kompilowania programu zawierającego eksporty lub narzędzia LIB. Aby uzyskać informacje na temat tworzenia bibliotek standardowych lub importowanych przy użyciu biblioteki LIB, zobacz [Dokumentacja biblioteki lib](lib-reference.md). Aby uzyskać szczegółowe informacje na temat używania LINKu do tworzenia biblioteki importu, zobacz [/dll](dll-build-a-dll.md) opcji.
 
-Biblioteka określono LINK jako argument nazwy pliku lub domyślna biblioteka. LINK rozpoznawania odwołań zewnętrznych, wyszukując najpierw w bibliotekach określone w wierszu polecenia, a następnie w domyślnych bibliotek określony za pomocą [/DEFAULTLIB](defaultlib-specify-default-library.md) opcji, a następnie w domyślnych bibliotek nazwę w plikach .obj. Jeśli ścieżka jest określona za pomocą nazwy biblioteki, łącze szuka biblioteki, w tym katalogu. Jeśli ścieżka nie zostanie określona, łączy wygląda pierwszy w katalogu, który łączy jest uruchamiana z, a następnie w dowolnym katalogi określone w zmiennej środowiskowej LIB.
+Biblioteka jest określona do łączenia jako argument nazwy pliku lub biblioteki domyślnej. LINK rozwiązuje odwołania zewnętrzne przez wyszukanie najpierw w bibliotekach określonych w wierszu polecenia, a następnie w bibliotekach domyślnych określonych przy użyciu opcji [/DEFAULTLIB](defaultlib-specify-default-library.md) , a następnie w bibliotekach domyślnych o nazwach w plikach. obj. Jeśli ścieżka jest określona za pomocą nazwy biblioteki, LINK szuka biblioteki w tym katalogu. Jeśli ścieżka nie zostanie określona, LINK najpierw znajduje się w katalogu, z którego łączy, a następnie w dowolnych katalogach określonych w zmiennej środowiskowej LIB.
 
-## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>Aby dodać pliki .lib — wejście konsolidatora w środowisku programistycznym
+## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>Aby dodać pliki lib jako dane wejściowe konsolidatora w środowisku programistycznym
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **dane wejściowe** — strona właściwości w **konsolidatora** folderu.
+1. Wybierz stronę właściwości **danych wejściowych** w folderze **konsolidatora** .
 
-1. Modyfikowanie **dodatkowe zależności** właściwości, aby dodać pliki lib.
+1. Zmodyfikuj właściwość **dodatkowe zależności** , aby dodać pliki. lib.
 
-## <a name="to-programmatically-add-lib-files-as-linker-input"></a>Aby programowo dodać pliki .lib — wejście konsolidatora
+## <a name="to-programmatically-add-lib-files-as-linker-input"></a>Aby programowo dodać pliki lib jako dane wejściowe konsolidatora
 
 - Zobacz [AdditionalDependencies](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak tworzenie i używanie pliku. lib. Najpierw należy utworzyć plik .lib:
+Poniższy przykład pokazuje, jak skompilować plik. lib i korzystać z niego. Najpierw Skompiluj plik. lib:
 
 ```cpp
 // lib_link_input_1.cpp
@@ -51,7 +52,7 @@ __declspec(dllexport) int Test() {
 }
 ```
 
-A następnie skompilować ten przykład za pomocą pliku .lib, który został utworzony:
+Następnie Skompiluj ten przykład przy użyciu utworzonego właśnie pliku lib:
 
 ```cpp
 // lib_link_input_2.cpp
@@ -67,7 +68,7 @@ int main() {
 213
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Pliki wejściowe LINK](link-input-files.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[Połącz pliki wejściowe](link-input-files.md)<br/>
+[MSVC Opcje konsolidatora](linker-options.md)

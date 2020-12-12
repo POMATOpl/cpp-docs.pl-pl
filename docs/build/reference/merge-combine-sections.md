@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/MERGE (Połącz sekcje)
 title: /MERGE (Połącz sekcje)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -MERGE linker option
 - MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-ms.openlocfilehash: f0e770425f8068b15522f405ffdcf7cf52999fe0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 579e5432facd6deb8d2b26b997d9b61f167d2b3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199106"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Połącz sekcje)
 
@@ -27,27 +28,27 @@ ms.locfileid: "62321220"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/merge Scala pierwszą sekcję (*z*) z drugą sekcją (*do*), nazywając wynikową sekcję *do*. Na przykład `/merge:.rdata=.text`.
+Opcja/MERGE łączy pierwszą sekcję (*od*) z drugą sekcją (*do*), nazywaną sekcją *.* Na przykład `/merge:.rdata=.text`.
 
-Jeśli druga sekcja nie istnieje, LINK zmienia nazwę sekcji *z* jako *do*.
+Jeśli druga sekcja nie istnieje, LINK zmienia nazwę sekcji *z* *na*.
 
-Opcja/merge Scala jest przydatne do tworzenia urządzenia vxd i zastępowanie nazwy sekcji generowanych przez kompilator.
+Opcja/MERGE jest przydatna do tworzenia VxDs i przesłaniania nazw sekcji generowanych przez kompilator.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **zaawansowane** stronę właściwości.
+1. Kliknij stronę właściwości **Zaawansowane** .
 
-1. Modyfikowanie **Scal sekcje** właściwości.
+1. Zmodyfikuj właściwość **scalone sekcje** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

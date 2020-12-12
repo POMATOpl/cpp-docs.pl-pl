@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: jak wybierać spośród ukończonych zadań'
 title: 'Porady: wybieranie spośród zadań wykonanych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: fd9940dad0cd2f202bdc734a81a7eb37cd79420c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a23092e4572188898f5e544f25406febc63d0c06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197339"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Porady: wybieranie spośród zadań wykonanych
 
@@ -51,7 +52,7 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 > **cl.exe/EHsc Find-Employee. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

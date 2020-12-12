@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: jak określić określone zasady harmonogramu'
 title: 'Porady: określanie specjalnych zasad harmonogramu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: bd5edfbdf6b0fda9c7e327dab9538bbf6b5e4b12
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c4aeeea04d69613ef3eb80f36863b16530e18e37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197260"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Porady: określanie specjalnych zasad harmonogramu
 
@@ -45,12 +46,12 @@ Mimo że oba zestawy zadań tworzą ten sam wynik, wersja, która używa zasad n
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `scheduler-policy.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie, `scheduler-policy.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-> **CL. exe/EHsc Scheduler-Policy. cpp**
+> **cl.exe/EHsc Scheduler-Policy. cpp**
 
 ## <a name="see-also"></a>Zobacz też
 
-[Zasady harmonogramu](../../parallel/concrt/scheduler-policies.md)<br/>
-[Instrukcje: zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
-[Instrukcje: tworzenie agentów korzystających ze specjalnych zasad harmonogramu](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+[Zasady usługi Scheduler](../../parallel/concrt/scheduler-policies.md)<br/>
+[Instrukcje: Zarządzanie wystąpieniem harmonogramu](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Instrukcje: Tworzenie agentów korzystających z określonych zasad usługi Scheduler](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

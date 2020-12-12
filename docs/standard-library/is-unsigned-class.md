@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_unsigned
 title: is_unsigned — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: 3da9f71543815b507307f2cf4969e8f19c79e8c5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2ad1aff24d578c2073aa649fb78b73d28ab1a6cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197208"
 ---
-# <a name="isunsigned-class"></a>is_unsigned — Klasa
+# <a name="is_unsigned-class"></a>is_unsigned — Klasa
 
 Testuje, czy typ jest liczbą całkowitą bez znaku.
 
@@ -32,7 +33,7 @@ Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem całkowitym bez znaku lub typem `cv-qualified` całkowitym bez znaku, w przeciwnym razie ma wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem całkowitym bez znaku lub `cv-qualified` typem całkowitym bez znaku, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -71,11 +72,11 @@ is_unsigned<float> == false
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[is_signed, klasa](../standard-library/is-signed-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa is_signed](../standard-library/is-signed-class.md)

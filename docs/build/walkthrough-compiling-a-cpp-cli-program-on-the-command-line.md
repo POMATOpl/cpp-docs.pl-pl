@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: kompilowanie programu C++/CLI w wierszu polecenia'
 title: 'Wskazówki: kompilowanie programu w języku C++/CLI w wierszu polecenia'
 ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 075ac90f08f62fb75c9a220b398f34841eafa60d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199002"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CLI w wierszu polecenia
 
@@ -29,9 +30,9 @@ Aby włączyć kompilację dla/CLI C++, należy użyć opcji kompilatora [/CLR](
 
 1. Otwórz okno **wiersz polecenia dla deweloperów** . Aby uzyskać szczegółowe instrukcje, zobacz, [Aby otworzyć okno wiersza polecenia dla deweloperów](building-on-the-command-line.md#developer_command_prompt).
 
-   Do pomyślnego skompilowania kodu w zależności od systemu operacyjnego i konfiguracji komputera może być wymagane poświadczenie administratora. Aby uruchomić okno wiersza polecenia jako administrator, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla wiersza polecenia, a następnie wybierz polecenie **więcej** > **Uruchom jako administrator**.
+   Do pomyślnego skompilowania kodu w zależności od systemu operacyjnego i konfiguracji komputera może być wymagane poświadczenie administratora. Aby uruchomić okno wiersza polecenia jako administrator, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla wiersza polecenia, a następnie wybierz polecenie **więcej**  >  **Uruchom jako administrator**.
 
-1. W wierszu polecenia wpisz `notepad basicclr.cpp`polecenie.
+1. W wierszu polecenia wpisz polecenie `notepad basicclr.cpp` .
 
    Wybierz opcję **tak** po wyświetleniu monitu o utworzenie pliku.
 
@@ -44,13 +45,13 @@ Aby włączyć kompilację dla/CLI C++, należy użyć opcji kompilatora [/CLR](
    }
    ```
 
-1. Na pasku menu wybierz **plik** > **Zapisz**.
+1. Na pasku menu wybierz **plik**  >  **Zapisz**.
 
-   Utworzono plik źródłowy Visual C++, który używa klasy .NET Framework (<xref:System.Console>) w <xref:System> przestrzeni nazw.
+   Utworzono plik źródłowy Visual C++, który używa klasy .NET Framework ( <xref:System.Console> ) w <xref:System> przestrzeni nazw.
 
-1. W wierszu polecenia wpisz `cl /clr basicclr.cpp`polecenie. Kompilator CL. exe kompiluje kod źródłowy do pliku. obj, który zawiera MSIL, a następnie uruchamia konsolidator w celu wygenerowania programu wykonywalnego o nazwie basicclr. exe.
+1. W wierszu polecenia wpisz polecenie `cl /clr basicclr.cpp` . Kompilator cl.exe kompiluje kod źródłowy do pliku. obj, który zawiera MSIL, a następnie uruchamia konsolidator w celu wygenerowania programu wykonywalnego o nazwie basicclr.exe.
 
-1. Aby uruchomić program basicclr. exe, w wierszu polecenia wpisz `basicclr`polecenie.
+1. Aby uruchomić program basicclr.exe, w wierszu polecenia wpisz polecenie `basicclr` .
 
    Program wyświetla ten tekst i opuszcza:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak udostępniać funkcje pracy do klas wywołań i transformatora'
 title: 'Porady: zapewnianie funkcji pracy dla wywoływania oraz klasy transformatora'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: b629d0e0e11388e212c56b8e1f6bea290368c884
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 05def4dcc8357e73a8606fbc4ce741eebb647d37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197364"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Porady: zapewnianie funkcji pracy dla wywoływania oraz klasy transformatora
 
@@ -57,7 +58,7 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 > **cl.exe/EHsc. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

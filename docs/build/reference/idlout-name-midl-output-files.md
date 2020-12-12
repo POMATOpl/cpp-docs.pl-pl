@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/IDLOUT (nazwa MIDL plików wyjściowych)
 title: /IDLOUT (Nazwij wyjściowe pliki MIDL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 8dc26a0564a979c918d1eb1eb85e63e9c73caba0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9835721d3e9b376feca51d87d375efa79dc43df7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506933"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199847"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Nazwij wyjściowe pliki MIDL)
 
@@ -44,9 +45,9 @@ Kompilator MIDL jest wywoływany przez konsolidator MSVC podczas łączenia proj
 
 - *filename*. tlb
 
-- *Nazwa pliku*_p. c
+- *Nazwa pliku* _p. c
 
-- *Nazwa pliku*_i. c
+- *Nazwa pliku* _i. c
 
 - *nazwa_pliku*. h
 

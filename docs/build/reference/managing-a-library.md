@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat zarządzania biblioteką
 title: Zarządzanie biblioteką
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,65 +41,65 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: de55059834a0887d487b7be38377af9984512b75
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f862dfd460bb51cdf6e855c87b08b7426a5642d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199132"
 ---
 # <a name="managing-a-library"></a>Zarządzanie biblioteką
 
-Domyślnym trybem lib jest tworzenie lub modyfikowanie biblioteki obiektów COFF. LIB działa w tym trybie, gdy nie określisz /EXTRACT (skopiować obiekt do pliku) lub /DEF (aby utworzyć bibliotekę importu).
+Domyślnym trybem LIB jest Kompilowanie lub modyfikowanie biblioteki obiektów COFF. LIB działa w tym trybie, jeśli nie określisz elementu/EXTRACT (w celu skopiowania obiektu do pliku) lub/DEF (w celu utworzenia biblioteki importu).
 
-Aby utworzyć bibliotekę z obiektów i/lub bibliotek, należy użyć następującej składni:
+Aby skompilować bibliotekę z obiektów i/lub bibliotek, należy użyć następującej składni:
 
 ```
 LIB [options...] files...
 ```
 
-To polecenie tworzy bibliotekę z jednego lub kilku *plików*wejściowych . *Pliki* mogą być plikami obiektów COFF, 32-bitowymi plikami obiektów OMF lub istniejącymi bibliotekami COFF. LIB tworzy jedną bibliotekę zawierającą wszystkie obiekty w określonych plikach. Jeśli plik wejściowy jest 32-bitowym plikiem obiektu OMF, LIB konwertuje go na COFF przed zbudowaniem biblioteki. LIB nie może zaakceptować 32-bitowego obiektu OMF, który znajduje się w bibliotece utworzonej przez 16-bitową wersję lib. Aby wyodrębnić obiekt, należy najpierw użyć 16-bitowej biblioteki LIB; następnie można użyć wyodrębnionego pliku obiektu jako danych wejściowych do 32-bitowej biblioteki LIB.
+To polecenie tworzy bibliotekę z jednego lub więcej *plików* wejściowych. *Pliki* mogą być plikami obiektów COFF, 32-bitowymi plikami obiektów OMF lub istniejącymi bibliotekami COFF. LIB tworzy jedną bibliotekę, która zawiera wszystkie obiekty w określonych plikach. Jeśli plik wejściowy jest 32-bitowym plikiem obiektu OMF, LIB konwertuje go na COFF przed skompilowaniem biblioteki. Biblioteka LIB nie może akceptować 32-bitowego obiektu OMF, który znajduje się w bibliotece utworzonej przez 16-bitową wersję biblioteki LIB. Aby wyodrębnić obiekt, należy najpierw użyć biblioteki 16-bitowej. następnie można użyć wyodrębnionego pliku obiektu jako dane wejściowe do biblioteki 32-bitowej.
 
-Domyślnie LIB nazywa plik wyjściowy przy użyciu nazwy podstawowej pierwszego pliku obiektu lub biblioteki oraz rozszerzenia .lib. Plik wyjściowy jest umieszczany w bieżącym katalogu. Jeśli plik już istnieje o tej samej nazwie, plik wyjściowy zastępuje istniejący plik. Aby zachować istniejącą bibliotekę, użyj opcji /OUT, aby określić nazwę pliku wyjściowego.
+Domyślnie LIB nazywa plik wyjściowy przy użyciu podstawowej nazwy pierwszego obiektu lub pliku biblioteki i rozszerzenia. lib. Plik wyjściowy zostanie umieszczony w bieżącym katalogu. Jeśli istnieje już plik o tej samej nazwie, plik wyjściowy zastępuje istniejący plik. Aby zachować istniejącą bibliotekę, użyj opcji/OUT, aby określić nazwę pliku wyjściowego.
 
 Następujące opcje dotyczą tworzenia i modyfikowania biblioteki:
 
-**/LIBPATH:** *reż.*<br/>
-Zastępuje ścieżkę biblioteki środowiska. Szczegółowe informacje można znaleźć w opisie opcji LINK [/LIBPATH.](libpath-additional-libpath.md)
+**/LIBPATH:** *dir*<br/>
+Zastępuje ścieżkę biblioteki środowiska. Aby uzyskać szczegółowe informacje, zobacz opis opcji LINK [/LIBPATH](libpath-additional-libpath.md) .
 
-**/LISTA**<br/>
-Wyświetla informacje o bibliotece danych wyjściowych na standardowe dane wyjściowe. Dane wyjściowe można przekierować do pliku. Można użyć /LIST, aby określić zawartość istniejącej biblioteki bez modyfikowania go.
+**/LIST**<br/>
+Wyświetla informacje o bibliotece wyjściowej do wyjścia standardowego. Dane wyjściowe można przekierować do pliku. Można użyć/LIST, aby określić zawartość istniejącej biblioteki bez jej modyfikowania.
 
-**/NAME:** *nazwa pliku*<br/>
-Podczas tworzenia biblioteki importu określa nazwę biblioteki DLL, dla której jest budowana biblioteka importu.
+**/Name:** *filename*<br/>
+Podczas kompilowania biblioteki importowanej, określa nazwę biblioteki DLL, dla której jest tworzona biblioteka importu.
 
 **/NODEFAULTLIB**<br/>
-Usuwa jedną lub więcej bibliotek domyślnych z listy bibliotek, które wyszukuje podczas rozpoznawania odwołań zewnętrznych. Zobacz [/NODEFAULTLIB aby](nodefaultlib-ignore-libraries.md) uzyskać więcej informacji.
+Usuwa co najmniej jedną domyślną bibliotekę z listy bibliotek przeszukiwanych podczas rozpoznawania odwołań zewnętrznych. Aby uzyskać więcej informacji, zobacz [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) .
 
-**/OUT:** *nazwa pliku*<br/>
-Zastępuje domyślną wyjściową nazwę pliku. Domyślnie biblioteka danych wyjściowych jest tworzona w bieżącym katalogu, z nazwą podstawową pierwszej biblioteki lub pliku obiektu w wierszu polecenia i rozszerzeniem .lib.
+**/Out:** *filename*<br/>
+Przesłania domyślną nazwę pliku wyjściowego. Domyślnie Biblioteka wyjściowa jest tworzona w bieżącym katalogu, z nazwą podstawową pierwszej biblioteki lub pliku obiektu w wierszu polecenia i rozszerzeniu. lib.
 
-**/REMOVE:** *obiekt*<br/>
-Pomija określony *obiekt* z biblioteki danych wyjściowych. LIB tworzy bibliotekę danych wyjściowych, łącząc wszystkie obiekty (w plikach obiektów lub bibliotekach), a następnie usuwając wszystkie obiekty określone za pomocą /REMOVE.
+**/Remove:** *obiekt*<br/>
+Pomija określony *obiekt* z biblioteki wyjściowej. LIB tworzy bibliotekę wyjściową, łącząc wszystkie obiekty (w plikach lub bibliotekach obiektów), a następnie usuwając wszystkie obiekty określone za pomocą/REMOVE.
 
-**/SUBSYSTEM:**{ &#124; **EFI_APPLICATION** **EFI_APPLICATION &#124;** EFI_BOOT_SERVICE_DRIVER **&#124;** &#124; EFI_ROM EFI_ROM &#124; **EFI_ROM** **EFI_RUNTIME_DRIVER &#124;** &#124; **POSIX** &#124; **NATIVE** WINDOWS &#124; **WINDOWSCE** }[,#[.##]] **WINDOWSCE**<br/>
-Informuje system operacyjny, jak uruchomić program utworzony przez połączenie z biblioteką danych wyjściowych. Aby uzyskać więcej informacji, zobacz opis opcji [ŁĄCZE /PODSYSTEM.](subsystem-specify-subsystem.md)
+**/SUBSYSTEM:**{**CONSOLE** &#124; **EFI_APPLICATION** &#124; **EFI_BOOT_SERVICE_DRIVER** &#124; **EFI_ROM** &#124; **EFI_RUNTIME_DRIVER** &#124; **Native** &#124; **POSIX** &#124; **Windows** &#124; **WindowsCE**} [, # [. # #]]<br/>
+Informuje system operacyjny, jak uruchomić program utworzony przez połączenie z biblioteką wyjściową. Aby uzyskać więcej informacji, zobacz opis opcji LINK [/Subsystem](subsystem-specify-subsystem.md) .
 
-W opcjach LIB określonych w wierszu polecenia nie jest rozróżniana wielkość liter.
+W przypadku opcji LIB określonych w wierszu polecenia nie jest rozróżniana wielkość liter.
 
-Za pomocą biblioteki LIB można wykonywać następujące zadania związane z zarządzaniem biblioteką:
+Za pomocą LIB można wykonać następujące zadania zarządzania biblioteką:
 
-- Aby dodać obiekty do biblioteki, określ nazwę pliku istniejącej biblioteki i nazwy plików dla nowych obiektów.
+- Aby dodać obiekty do biblioteki, określ nazwę pliku dla istniejącej biblioteki i nazwę pliku dla nowych obiektów.
 
 - Aby połączyć biblioteki, określ nazwy plików biblioteki. Można dodawać obiekty i łączyć biblioteki za pomocą jednego polecenia LIB.
 
-- Aby zastąpić członka biblioteki nowym obiektem, określ bibliotekę zawierającą obiekt członkowski, który ma zostać zastąpiony, oraz nazwę pliku nowego obiektu (lub biblioteki, która go zawiera). Jeśli obiekt o tej samej nazwie istnieje w więcej niż jednym pliku wejściowym, lib umieszcza ostatni obiekt określony w poleceniu LIB w bibliotece wyjściowej. Podczas zastępowania elementu członkowskiego biblioteki należy określić nowy obiekt lub bibliotekę po bibliotece zawierającej stary obiekt.
+- Aby zastąpić element członkowski biblioteki nowym obiektem, Określ bibliotekę zawierającą obiekt członkowski do zamienienia i nazwę pliku dla nowego obiektu (lub biblioteki, która go zawiera). Gdy obiekt, który ma taką samą nazwę, istnieje w więcej niż jednym pliku wejściowym, LIB umieszcza ostatni obiekt określony w LIB polecenie w bibliotece wyjściowej. Podczas zastępowania elementu członkowskiego biblioteki należy pamiętać o określeniu nowego obiektu lub biblioteki po bibliotece zawierającej stary obiekt.
 
-- Aby usunąć członka z biblioteki, użyj opcji /REMOVE. LIB przetwarza wszelkie specyfikacje /REMOVE po połączeniu wszystkich obiektów wejściowych, niezależnie od kolejności wiersza polecenia.
+- Aby usunąć element członkowski z biblioteki, użyj opcji/REMOVE. LIB przetwarza wszystkie specyfikacje/REMOVE po połączeniu wszystkich obiektów wejściowych, niezależnie od kolejności wiersza polecenia.
 
 > [!NOTE]
-> Nie można zarówno usunąć członka i wyodrębnić go do pliku w tym samym kroku. Najpierw należy wyodrębnić obiekt elementu członkowskiego przy użyciu /EXTRACT, a następnie ponownie uruchomić LIB za pomocą /REMOVE. To zachowanie różni się od 16-bitowej biblioteki LIB (dla bibliotek OMF) dostępnej w innych produktach firmy Microsoft.
+> Nie można usunąć elementu członkowskiego i wyodrębnić go do pliku w tym samym kroku. Najpierw należy wyodrębnić Obiekt członkowski za pomocą elementu/EXTRACT, a następnie ponownie uruchomić LIB przy użyciu/REMOVE. To zachowanie różni się od wersji 16-bitowej biblioteki (dla bibliotek OMF) udostępnianej w innych produktach firmy Microsoft.
 
 ## <a name="see-also"></a>Zobacz też
 
-[LIB — dokumentacja](lib-reference.md)
+[Dokumentacja biblioteki LIB](lib-reference.md)
