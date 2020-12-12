@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ToUpper, _toupper, towupper, _toupper_l, _towupper_l'
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 943b66bf03420dc707415fd5da0ddf8cc3107d85
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cb2a121d1fa96c0149a329520f5c71c1cc4f4d9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318315"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -126,9 +127,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ToUpper**|\<CType. h>|
-|**_toupper**|\<CType. h>|
-|**towupper**|\<CType. h> lub \<WCHAR. h>|
+|**ToUpper**|\<ctype.h>|
+|**_toupper**|\<ctype.h>|
+|**towupper**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -138,7 +139,7 @@ Zapoznaj się z przykładem w [funkcji](../../c-runtime-library/to-functions.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
 [do funkcji](../../c-runtime-library/to-functions.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

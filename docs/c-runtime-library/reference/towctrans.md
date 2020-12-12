@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: towctrans'
 title: towctrans
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-ms.openlocfilehash: d63fc343647cd0f949f282e2a64d4a0636e62bd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b8ecdd38ca45eb658d5e9f61bf05549878228bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318302"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -46,10 +47,10 @@ wint_t towctrans(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*s*<br/>
 Znak, który ma zostać przekształcony.
 
-*category*<br/>
+*kategorii*<br/>
 Identyfikator, który zawiera wartość zwracaną z [wctrans](wctrans.md).
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -72,6 +73,6 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz **wctrans** , aby uzyskać przykład, który korzysta z **towctrans**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>

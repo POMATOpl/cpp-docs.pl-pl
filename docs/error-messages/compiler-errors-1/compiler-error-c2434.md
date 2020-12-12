@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2434'
 title: Błąd kompilatora C2434
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-ms.openlocfilehash: 869db3b49075fa477860e045e59306e22a381ca4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e24eb3fdf2ae60dadc270bed1bdda251acfc70a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189967"
 ---
 # <a name="compiler-error-c2434"></a>Błąd kompilatora C2434
 
@@ -25,7 +26,7 @@ Nie można dynamicznie zainicjować zmiennej dla procesu w opcji **/CLR: Pure**.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2434. Aby rozwiązać ten problem, należy użyć stałych do zainicjowania zmiennych `process`.
+Poniższy przykład generuje C2434. Aby rozwiązać ten problem, należy użyć stałych do zainicjowania `process` zmiennych.
 
 ```cpp
 // C2434.cpp

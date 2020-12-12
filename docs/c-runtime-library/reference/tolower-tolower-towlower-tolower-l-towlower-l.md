@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ToLower, _tolower, towlower, _tolower_l, _towlower_l'
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
 ms.date: 4/2/2020
 api_name:
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: c8b27c4cc618d34d9da9b5884c6db2f525fd2388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5b686d9b511fe4864724f85be78ac511a6351ef7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318328"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
@@ -119,9 +120,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ToLower**|\<CType. h>|
-|**_tolower**|\<CType. h>|
-|**towlower**|\<CType. h> lub \<WCHAR. h>|
+|**ToLower**|\<ctype.h>|
+|**_tolower**|\<ctype.h>|
+|**towlower**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -132,7 +133,7 @@ Zapoznaj się z przykładem w [funkcji](../../c-runtime-library/to-functions.md)
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
 [do funkcji](../../c-runtime-library/to-functions.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

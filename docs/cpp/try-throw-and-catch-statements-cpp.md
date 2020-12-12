@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Instrukcje try, throw i catch (C++)'
 title: Instrukcje try, throw i catch (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: 4108d24b2c285b9d55d514dffae7b2efda1b3f86
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78dc76a9db5a4b1b6b8c23d1807b683d0dbae969
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186431"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instrukcje try, throw i catch (C++)
 
@@ -32,7 +33,7 @@ Aby zaimplementować obsługę wyjątków w języku C++, należy **`try`** uży�
 
 Najpierw należy użyć **`try`** bloku, aby ująć jedną lub więcej instrukcji, które mogą zgłosić wyjątek.
 
-**`throw`** Wyrażenie sygnalizuje, że wyjątkowe warunki — często, błąd — wystąpił w **`try`** bloku. Można użyć obiektu dowolnego typu jako operandu **`throw`** wyrażenia. Obiekt ten jest zazwyczaj używany do przekazywania informacji o błędzie. W większości przypadków zaleca się użycie klasy [std:: Exception](../standard-library/exception-class.md) lub jednej z klas pochodnych, które są zdefiniowane w standardowej bibliotece. Jeśli jeden z tych elementów nie jest odpowiedni, zalecamy uzyskanie własnej klasy wyjątków z `std::exception` .
+**`throw`** Wyrażenie sygnalizuje, że wyjątkowe warunki — często, błąd — wystąpił w **`try`** bloku. Można użyć obiektu dowolnego typu jako operandu **`throw`** wyrażenia. Obiekt ten jest zazwyczaj używany do przekazywania informacji o błędzie. W większości przypadków zaleca się użycie klasy [std:: Exception](../standard-library/exception-class.md) lub jednej z klas pochodnych, które są zdefiniowane w standardowej bibliotece. Jeśli jeden z tych elementów nie jest odpowiedni, zalecamy uzyskanie własnej klasy wyjątków z  `std::exception` .
 
 Aby obsłużyć wyjątki, które mogą być zgłaszane, zaimplementuj jeden lub więcej **`catch`** bloków bezpośrednio po **`try`** bloku. Każdy **`catch`** blok określa typ wyjątku, który może obsłużyć.
 
@@ -91,7 +92,7 @@ catch(...) {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

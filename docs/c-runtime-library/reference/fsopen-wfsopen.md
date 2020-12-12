@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fsopen, _wfsopen'
 title: _fsopen, _wfsopen
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 7c7f079d8867416ab4f091d7c95a01ab9e40c0e8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c7b54a6735939e26c8ff0153abc640e3dc2c8b41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910155"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318341"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
@@ -90,7 +91,7 @@ Funkcja **_fsopen** otwiera plik określony przez *filename* jako strumień i pr
 
 *Tryb* ciągu znaków określa typ dostępu żądanego dla pliku, jak pokazano w poniższej tabeli.
 
-|Termin|Definicja|
+|Okres|Definicja|
 |----------|----------------|
 |**®**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można go znaleźć, wywołanie **_fsopen** nie powiedzie się.|
 |**k**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
@@ -103,7 +104,7 @@ Używaj typów **"w"** i **"w +"** z ostrożnością, ponieważ mogą one zniszc
 
 Gdy plik zostanie otwarty z typem dostępu **"a"** lub **"a +"** , wszystkie operacje zapisu są wykonywane na końcu pliku. Wskaźnik pliku można zmienić za pomocą [fseek](fseek-fseeki64.md) lub do [tyłu](rewind.md), ale zawsze jest on przenoszony z powrotem do końca pliku przed przeprowadzeniem operacji zapisu. W rezultacie istniejące dane nie mogą być zastępowane. W przypadku określenia typu dostępu **"r +"**, **"z +"** lub **"a +** " są dozwolone operacje odczytu i zapisu (plik jest otwierany do aktualizacji). Jednak podczas przełączania między operacjami odczytu i zapisu musi istnieć interwencja [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)lub do [tyłu](rewind.md) . W razie potrzeby można określić bieżącą pozycję dla operacji [fsetpos](fsetpos.md) lub [fseek](fseek-fseeki64.md) . Oprócz powyższych wartości jeden z następujących znaków może zostać uwzględniony w *trybie* do określenia trybu tłumaczenia dla nowych wierszy i zarządzania plikami.
 
-|Termin|Definicja|
+|Okres|Definicja|
 |----------|----------------|
 |**&**|Otwiera plik w trybie tekst (przetłumaczony). W tym trybie kombinacje wysuwu wiersza (CR-LF) są tłumaczone na pojedyncze linie informacyjne (LF) na znaki wejściowe i LF są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W plikach otwartych do odczytu lub odczytu/zapisu **_fsopen** sprawdza, czy Ctrl + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Dzieje się tak, ponieważ użycie [fseek](fseek-fseeki64.md) i [ftell](ftell-ftelli64.md) do przenoszenia w pliku, który kończy się na Ctrl + z, może spowodować niewłaściwe zachowanie [fseek](fseek-fseeki64.md) na końcu pliku.|
 |**b**|Otwiera plik w trybie binarnym (nieprzetłumaczonym); Powyższe tłumaczenia są pomijane.|
@@ -116,7 +117,7 @@ Jeśli **t** lub **b** nie jest określony w *trybie*, tryb tłumaczenia jest de
 
 Argument *Shflag* jest wyrażeniem stałym składającym się z jednej z następujących stałych manifestu, zdefiniowanych w udziale. h.
 
-|Termin|Definicja|
+|Okres|Definicja|
 |----------|----------------|
 |**_SH_COMPAT**|Ustawia tryb zgodności dla aplikacji 16-bitowych.|
 |**_SH_DENYNO**|Zezwala na dostęp do odczytu i zapisu.|
@@ -136,8 +137,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
 |--------------|---------------------|----------------------|
-|**_fsopen**|\<stdio. h>|\<Udostępnianie. h><br /><br /> Dla stałej manifestu dla parametru *Shflag* .|
-|**_wfsopen**|\<stdio. h> lub \<WCHAR. h>|\<Udostępnianie. h><br /><br /> Dla stałej manifestu dla parametru *Shflag* .|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Dla stałej manifestu dla parametru *Shflag* .|
+|**_wfsopen**|\<stdio.h> lub \<wchar.h>|\<share.h><br /><br /> Dla stałej manifestu dla parametru *Shflag* .|
 
 ## <a name="example"></a>Przykład
 
@@ -171,7 +172,7 @@ int main( void )
 No one else in the network can write to this file until we are done.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

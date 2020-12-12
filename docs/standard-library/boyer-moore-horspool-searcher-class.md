@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej na temat klasy boyer_moore_horspool_searcher
 title: Klasa boyer_moore_horspool_searcher
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_horspool_searcher
 helpviewer_keywords:
 - std::boyer_moore_horspool_searcher [C++]
-ms.openlocfilehash: 1eb1f099ca2976dd4b0ea80ebdfb93a8b5c61f70
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 727af034dbb20bd1a0d09ae7de8f88da16a6ba36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039836"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325428"
 ---
 # <a name="boyer_moore_horspool_searcher-class"></a>Klasa boyer_moore_horspool_searcher
 
@@ -75,7 +76,7 @@ Opcjonalny predykat porównania równości dla elementów sekwencji. Jeśli typ 
 
 ### <a name="remarks"></a>Uwagi
 
-Zgłasza każdy wyjątek zgłoszony przez Konstruktor kopiujący typów *BinaryPredicate*, *hash*lub *RandomAccessIterator* lub operator wywołania *BinaryPredicate* lub *hash*.
+Zgłasza każdy wyjątek zgłoszony przez Konstruktor kopiujący typów *BinaryPredicate*, *hash* lub *RandomAccessIterator* lub operator wywołania *BinaryPredicate* lub *hash*.
 
 Ta klasa jest nowa w języku C++ 17.
 
@@ -104,7 +105,7 @@ Jeśli wzorzec wyszukiwania `[pat_first, pat_last)` jest pusty, zwraca `make_pai
 
 Ta klasa jest nowa w języku C++ 17.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<functional>](functional.md)\
 [funkcje algorytmu](algorithm-functions.md)\

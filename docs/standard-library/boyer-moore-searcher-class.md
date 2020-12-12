@@ -1,20 +1,21 @@
 ---
+description: Dowiedz się więcej na temat klasy boyer_moore_searcher
 title: Klasa boyer_moore_searcher
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: d6fa4dd203336107614ca3431f38846f0c3c89af
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7d8efe145870847aae8e961dad1b4a92fec8bd57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325414"
 ---
 # <a name="boyer_moore_searcher-class"></a>Klasa boyer_moore_searcher
 
-`boyer_moore_searcher`Klasa jest typem obiektu funkcji, który używa algorytmu Boyer-Moore do wyszukiwania sekwencji określonej w konstruktorze obiektu. Wyszukiwanie jest wykonywane w innej sekwencji dostarczonej do operatora wywołania funkcji obiektu. Ta klasa jest przenoszona jako parametr do jednego z przeciążeń [std:: Search](algorithm-functions.md#search).
+`boyer_moore_searcher`Klasa jest typem obiektu funkcji, który używa algorytmu Boyer-Moore, aby wyszukać sekwencję określoną w konstruktorze obiektu. Wyszukiwanie jest wykonywane w innej sekwencji dostarczonej do operatora wywołania funkcji obiektu. Ta klasa jest przenoszona jako parametr do jednego z przeciążeń [std:: Search](algorithm-functions.md#search).
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,7 +76,7 @@ Opcjonalny predykat porównania równości dla elementów sekwencji. Jeśli typ 
 
 ### <a name="remarks"></a>Uwagi
 
-Zgłasza każdy wyjątek zgłoszony przez Konstruktor kopiujący typów *BinaryPredicate*, *hash*lub *RandomAccessIterator* lub operator wywołania *BinaryPredicate* lub *hash*.
+Zgłasza każdy wyjątek zgłoszony przez Konstruktor kopiujący typów *BinaryPredicate*, *hash* lub *RandomAccessIterator* lub operator wywołania *BinaryPredicate* lub *hash*.
 
 Ta klasa jest nowa w języku C++ 17.
 
@@ -104,7 +105,7 @@ Jeśli wzorzec wyszukiwania `[pat_first, pat_last)` jest pusty, zwraca `make_pai
 
 Ta klasa jest nowa w języku C++ 17.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<functional>](functional.md)\
 [funkcje algorytmu](algorithm-functions.md)\
