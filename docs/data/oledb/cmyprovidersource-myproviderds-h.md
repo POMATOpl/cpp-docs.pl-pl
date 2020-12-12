@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: CCustomSource (CustomDS. h)'
 title: CCustomSource (CustomDS.H)
 ms.date: 10/22/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 8e92c30e8d62ade095167880917ad70da8e59b36
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6fbb9fe0676521b01caa3bba5f5bb2be03d0fe6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170441"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS. h)
 
@@ -153,7 +154,7 @@ Jeśli chcesz zmienić wartość domyślną właściwości (należy zauważyć, 
 
 Jeśli chcesz zdefiniować własny zestaw właściwości, możesz dodać jeden, tworząc dodatkową kombinację BEGIN_PROPSET_MAP/END_PROPSET_MAP. Zdefiniuj identyfikator GUID dla zestawu właściwości, a następnie zdefiniuj własne właściwości. Jeśli masz właściwości specyficzne dla dostawcy, Dodaj je do nowego zestawu właściwości zamiast przy użyciu istniejącego. Pozwala to uniknąć problemów z nowszymi wersjami OLE DB.
 
-## <a name="user-defined-property-sets"></a>Zestawy właściwości zdefiniowane przez użytkownika
+## <a name="user-defined-property-sets"></a>User-Defined zestawy właściwości
 
 Visual C++ obsługuje zestawy właściwości zdefiniowane przez użytkownika. Nie musisz przesłonić `GetProperties` lub `GetPropertyInfo` . Zamiast tego, szablony wykrywają dowolny zdefiniowany przez użytkownika zestaw właściwości i dodają go do odpowiedniego obiektu.
 
@@ -167,4 +168,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki generowane przez kreatora dostawcy](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[Pliki Wizard-Generated dostawcy](../../data/oledb/provider-wizard-generated-files.md)<br/>

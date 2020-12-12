@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDynamicStringAccessorA —'
 title: CDynamicStringAccessorA — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-ms.openlocfilehash: 3a0da9c779230fc1bf58bfa1d685623f844012c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45a4d10c8a50c4009151fa90e51172405047a21a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231041"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170727"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA — Klasa
 
-Umożliwia dostęp do źródła danych, gdy masz nie znajomości schematu bazy danych (wewnętrzna struktura).
+Pozwala uzyskać dostęp do źródła danych, gdy nie ma informacji o schemacie bazy danych (struktura bazowa).
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,20 +26,20 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 
 ## <a name="remarks"></a>Uwagi
 
-Oba żądania, że dostawca pobrać wszystkie dane używane z magazynu danych jako dane ciągu, ale `CDynamicStringAccessor` dane ciągowe żądań ANSI.
+Oba żądania umożliwiają pobranie przez dostawcę wszystkich danych, do których uzyskano dostęp z magazynu danych jako dane ciągu, ale `CDynamicStringAccessor` żądanie danych ciągu ANSI.
 
-`CDynamicStringAccessorA` dziedziczy `GetString` i `SetString` z `CDynamicStringAccessor`. Jeśli używasz tych metod w `CDynamicStringAccessorA` obiektu `BaseType` jest **CHAR**.
+`CDynamicStringAccessorA` dziedziczy `GetString` i `SetString` od `CDynamicStringAccessor` . Użycie tych metod w `CDynamicStringAccessorA` obiekcie `BaseType` ma wartość **char**.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: atldbcli.h
+**Nagłówek**: atldbcli. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)<br/>
-[CDynamicAccessor, klasa](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicStringAccessor, klasa](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasa CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[Klasa CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[Klasa CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
+[Klasa CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[Klasa CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

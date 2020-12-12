@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDynamicParameterAccessor'
 title: CDynamicParameterAccessor — Klasa
 ms.date: 02/14/2018
 f1_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 4596f5181dd197b16786ee4d4d16cf06721b13b6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5470ced8b4479124f0db3878fe2562a658547f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170779"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor — Klasa
 
@@ -313,7 +314,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 podczas Numer parametru (przesunięcie od 1). Parametr 0 jest zarezerwowany dla wartości zwracanych. Numer parametru jest indeksem parametru na podstawie jego kolejności w wywołaniu procedury SQL lub procedura składowana. Na przykład zobacz [SetParam](#setparam) .
 
 *pStatus*<br/>
-określoną Wskaźnik do zmiennej zawierającej stan DBSTATUS określonego parametru. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB*lub Wyszukaj stan DBW OLEDB. h.
+określoną Wskaźnik do zmiennej zawierającej stan DBSTATUS określonego parametru. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB* lub Wyszukaj stan DBW OLEDB. h.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -425,7 +426,7 @@ podczas Nazwa parametru.
 podczas Wskaźnik do pamięci zawierającej dane, które mają być zapisywane w buforze.
 
 *Stany*<br/>
-podczas Stan kolumny DBSTATUS. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB*lub Wyszukaj stan DBW OLEDB. h.
+podczas Stan kolumny DBSTATUS. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB* lub Wyszukaj stan DBW OLEDB. h.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -473,7 +474,7 @@ bool SetParamStatus(DBORDINAL nParam,
 podczas Numer parametru (przesunięcie od 1). Parametr 0 jest zarezerwowany dla wartości zwracanych. Numer parametru jest indeksem parametru na podstawie jego kolejności w wywołaniu procedury SQL lub procedura składowana. Na przykład zobacz [SetParam](#setparam) .
 
 *Stany*<br/>
-podczas Stan DBSTATUS określonego parametru. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB*lub Wyszukaj stan DBW OLEDB. h.
+podczas Stan DBSTATUS określonego parametru. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB* lub Wyszukaj stan DBW OLEDB. h.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -502,7 +503,7 @@ podczas Numer parametru (przesunięcie od 1). Parametr 0 jest zarezerwowany dla 
 podczas Wskaźnik do danych ciągu ANSI (**char**) lub Unicode (**WCHAR**) określonego parametru. Zobacz DBSTATUS w OLEDB. h.
 
 *Stany*<br/>
-podczas Stan DBSTATUS określonego parametru. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB*lub Wyszukaj stan DBW OLEDB. h.
+podczas Stan DBSTATUS określonego parametru. Aby uzyskać informacje na temat wartości DBSTATUS, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB* lub Wyszukaj stan DBW OLEDB. h.
 
 ### <a name="remarks"></a>Uwagi
 

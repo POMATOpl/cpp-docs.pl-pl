@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CNoMultipleResults —'
 title: CNoMultipleResults — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 793b820264d001fbfbf7920fd322a55b98e90f0d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1fd2ddfb19ed8fb4ba4fa3f957a77a2cc8312e1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170350"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults — Klasa
 
@@ -36,4 +37,4 @@ Jeśli chcesz, aby polecenie obsługiwało wiele zestawów wyników, zamiast teg
 ## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
