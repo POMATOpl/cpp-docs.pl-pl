@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _RTC_SetErrorFuncW'
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e1f92b791f986c7881f0c65a22c24432c03160e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341428"
 ---
 # <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -58,17 +59,17 @@ Wcześniej zdefiniowana funkcja błędu; lub **wartość null** , jeśli nie ma 
 
 ## <a name="remarks"></a>Uwagi
 
-W nowym kodzie Używaj tylko **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** znajduje się tylko w bibliotece w celu zapewnienia zgodności z poprzednimi wersjami.
+W obszarze nowy kod Użyj tylko **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** jest dostępna tylko w bibliotece w celu zapewnienia zgodności z poprzednimi wersjami.
 
 Wywołanie zwrotne **_RTC_SetErrorFuncW** ma zastosowanie tylko do składnika, w którym został on połączony, ale nie globalnie.
 
-Upewnij się, że adres przekazany do **_RTC_SetErrorFuncW** ma prawidłową funkcję obsługi błędów.
+Upewnij się, że adres, który został przekazany do **_RTC_SetErrorFuncW** jest prawidłowym funkcją obsługi błędów.
 
-Jeśli do błędu przypisano typ-1 za pomocą [_RTC_SetErrorType](rtc-seterrortype.md), funkcja obsługi błędów nie jest wywoływana.
+Jeśli do błędu przypisano typ-1 za pomocą [_RTC_SetErrorType](rtc-seterrortype.md), funkcja obsługi błędów nie zostanie wywołana.
 
-Aby można było wywołać tę funkcję, należy najpierw wywołać jedną z funkcji inicjowania sprawdzania błędów w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Używanie testów w czasie wykonywania bez biblioteki uruchomieniowej C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
+Aby można było wywołać tę funkcję, należy najpierw wywołać jedną z funkcji inicjowania sprawdzania błędów w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Using Run-Time checks bez biblioteki C Run-Time](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
-**_RTC_error_fnW** jest zdefiniowany w następujący sposób:
+**_RTC_error_fnW** definiuje się w następujący sposób:
 
 ```cpp
 typedef int (__cdecl * _RTC_error_fnW)(
@@ -94,10 +95,10 @@ Wiersz w *nazwie pliku* , w którym wystąpił błąd, lub 0, jeśli informacje 
 *moduleName*<br/>
 Nazwa pliku DLL lub pliku wykonywalnego, w którym wystąpił błąd.
 
-*format*<br/>
+*Formatowanie*<br/>
 printf ciąg stylu, aby wyświetlić komunikat o błędzie przy użyciu pozostałych parametrów. Pierwszym argumentem VA_ARGLIST jest numer błędu RTC, który wystąpił.
 
-Aby zapoznać się z przykładem, który pokazuje, jak korzystać z **_RTC_error_fnW**, zobacz [natywne sprawdzanie w czasie wykonywania](/visualstudio/debugger/native-run-time-checks-customization).
+Aby zapoznać się z przykładem, który pokazuje, jak używać **_RTC_error_fnW**, zobacz [Native Run-Time checks](/visualstudio/debugger/native-run-time-checks-customization).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -111,7 +112,7 @@ Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/com
 
 Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)<br/>
 [Sprawdzanie błędów czasu wykonywania](../../c-runtime-library/run-time-error-checking.md)<br/>

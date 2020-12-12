@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDragListBox'
 title: Klasa CDragListBox
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: b260d3a88fc8c3f2d341005c1e47cfd9ab668e1e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0dfa61503bd9c1aa3017d37b873a8948f61e68e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184768"
 ---
 # <a name="cdraglistbox-class"></a>Klasa CDragListBox
 

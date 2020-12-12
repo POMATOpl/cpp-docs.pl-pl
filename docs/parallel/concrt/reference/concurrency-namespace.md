@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: przestrzeni nazw współbieżności'
 title: concurrency — Przestrzeń nazwy
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c17e058c6666f944ea9f34b90995e9b9d343b40e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335804"
 ---
 # <a name="concurrency-namespace"></a>concurrency — Przestrzeń nazwy
 
@@ -179,7 +180,7 @@ namespace concurrency;
 |[asend, funkcja](concurrency-namespace-functions.md#asend)|Przeciążone. Asynchroniczna operacja wysyłania, która planuje zadanie propagacji danych do docelowego bloku.|
 |[Funkcja cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Anuluje aktualnie wykonywane zadanie. Ta funkcja może zostać wywołana z poziomu treści zadania, aby przerwać wykonywanie zadania i spowodować, że `canceled` przestanie on działać.<br /><br /> Nie jest to obsługiwany scenariusz do wywołania tej funkcji, jeśli nie znajdujesz się w treści `task` . Wykonanie tej czynności spowoduje niezdefiniowane zachowanie, takie jak awaria lub brak odpowiedzi w aplikacji.|
 |[Funkcja create_async](concurrency-namespace-functions.md#create_async)|Tworzy środowisko wykonawcze systemu Windows asynchronicznej na podstawie podanego przez użytkownika obiektu lambda lub funkcji. Zwracany typ `create_async` to jeden z `IAsyncAction^` , `IAsyncActionWithProgress<TProgress>^` , `IAsyncOperation<TResult>^` , lub `IAsyncOperationWithProgress<TResult, TProgress>^` na podstawie podpisu wyrażenia lambda przesłanego do metody.|
-|[Funkcja create_task](concurrency-namespace-functions.md#create_task)|Przeciążone. Tworzy obiekt [zadania](task-class.md) PPL. `create_task`mogą być używane wszędzie, gdzie użyto konstruktora zadań. Jest ona świadczona głównie dla wygody, ponieważ umożliwia użycie **`auto`** słowa kluczowego podczas tworzenia zadań.|
+|[Funkcja create_task](concurrency-namespace-functions.md#create_task)|Przeciążone. Tworzy obiekt [zadania](task-class.md) PPL. `create_task` mogą być używane wszędzie, gdzie użyto konstruktora zadań. Jest ona świadczona głównie dla wygody, ponieważ umożliwia użycie **`auto`** słowa kluczowego podczas tworzenia zadań.|
 |[Serviceresourcemanager — funkcja](concurrency-namespace-functions.md#createresourcemanager)|Zwraca interfejs, który reprezentuje pojedyncze wystąpienie Menedżer zasobów środowisko uruchomieniowe współbieżności. Menedżer zasobów jest odpowiedzialny za przypisywanie zasobów do harmonogramów, które chcą współpracować ze sobą.|
 |[DisableTracing —, funkcja](concurrency-namespace-functions.md#disabletracing)|Wyłącza śledzenie w środowisko uruchomieniowe współbieżności. Ta funkcja jest przestarzała, ponieważ śledzenie ETW jest domyślnie wyrejestrowane.|
 |[EnableTracing —, funkcja](concurrency-namespace-functions.md#enabletracing)|Włącza śledzenie w środowisko uruchomieniowe współbieżności. Ta funkcja jest przestarzała, ponieważ śledzenie ETW jest teraz domyślnie włączone.|
@@ -197,11 +198,11 @@ namespace concurrency;
 |[Funkcja make_join](concurrency-namespace-functions.md#make_join)|Przeciążone. Konstruuje `non_greedy multitype_join` blok komunikatów z opcjonalnych `Scheduler` lub co najmniej `ScheduleGroup` dwóch źródeł danych wejściowych.|
 |[Funkcja make_task](concurrency-namespace-functions.md#make_task)|Metoda fabryki służąca do tworzenia `task_handle` obiektu.|
 |[Funkcja parallel_buffered_sort](concurrency-namespace-functions.md#parallel_buffered_sort)|Przeciążone. Rozmieszcza elementy w określonym zakresie w kolejności niemalejącej lub zgodnie z kryterium porządkowania określonym przez Predykat binarny równolegle. Ta funkcja jest semantyką podobną do `std::sort` w przypadku, gdy jest to porównanie, niestabilne, w miejscu, z wyjątkiem tego, że wymaga `O(n)` dodatkowego miejsca, i wymaga inicjalizacji domyślnej dla elementów, które są sortowane.|
-|[Funkcja parallel_for](concurrency-namespace-functions.md#parallel_for)|Przeciążone. `parallel_for`wykonuje iterację w zakresie indeksów i wykonuje funkcję dostarczoną przez użytkownika w każdej iteracji równolegle.|
-|[Funkcja parallel_for_each](concurrency-namespace-functions.md#parallel_for_each)|Przeciążone. `parallel_for_each`stosuje określoną funkcję do każdego elementu w obrębie zakresu równolegle. Jest semantycznie odpowiednikiem `for_each` funkcji w `std` przestrzeni nazw, z tą różnicą, że iteracja w elementach jest wykonywana równolegle, a kolejność iteracji nie została określona. Argument `_Func` musi obsługiwać operator wywołania funkcji w formularzu, `operator()(T)` gdzie parametr `T` jest typem elementu kontenera, w którym jest wykonywane iteracja.|
+|[Funkcja parallel_for](concurrency-namespace-functions.md#parallel_for)|Przeciążone. `parallel_for` wykonuje iterację w zakresie indeksów i wykonuje funkcję dostarczoną przez użytkownika w każdej iteracji równolegle.|
+|[Funkcja parallel_for_each](concurrency-namespace-functions.md#parallel_for_each)|Przeciążone. `parallel_for_each` stosuje określoną funkcję do każdego elementu w obrębie zakresu równolegle. Jest semantycznie odpowiednikiem `for_each` funkcji w `std` przestrzeni nazw, z tą różnicą, że iteracja w elementach jest wykonywana równolegle, a kolejność iteracji nie została określona. Argument `_Func` musi obsługiwać operator wywołania funkcji w formularzu, `operator()(T)` gdzie parametr `T` jest typem elementu kontenera, w którym jest wykonywane iteracja.|
 |[Funkcja parallel_invoke](concurrency-namespace-functions.md#parallel_invoke)|Przeciążone. Wykonuje obiekty funkcji dostarczone jako parametry równolegle i bloki do momentu zakończenia wykonywania. Każdy obiekt funkcji może być wyrażeniem lambda, wskaźnikiem do funkcji lub dowolnym obiektem, który obsługuje operator wywołania funkcji z sygnaturą `void operator()()` .|
 |[Funkcja parallel_radixsort](concurrency-namespace-functions.md#parallel_radixsort)|Przeciążone. Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności przy użyciu algorytmu sortowania podstawy. Jest to stabilna funkcja sortowania, która wymaga funkcji projekcji, która może projektować elementy do posortowania na klucze podobne do liczby całkowitej. Dla elementów, które są sortowane, wymagana jest Inicjalizacja domyślna.|
-|[Funkcja parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Przeciążone. Oblicza sumę wszystkich elementów w określonym zakresie przez Obliczanie kolejnych sum częściowych lub oblicza wynik kolejnych częściowe wyniki, podobnie jak w przypadku użycia określonej operacji binarnej innej niż suma, równolegle. `parallel_reduce`jest semantycznie podobny do `std::accumulate` , z tą różnicą, że wymaga skojarzenia operacji binarnej i wymaga wartości tożsamości zamiast początkowej wartości.|
+|[Funkcja parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Przeciążone. Oblicza sumę wszystkich elementów w określonym zakresie przez Obliczanie kolejnych sum częściowych lub oblicza wynik kolejnych częściowe wyniki, podobnie jak w przypadku użycia określonej operacji binarnej innej niż suma, równolegle. `parallel_reduce` jest semantycznie podobny do `std::accumulate` , z tą różnicą, że wymaga skojarzenia operacji binarnej i wymaga wartości tożsamości zamiast początkowej wartości.|
 |[Funkcja parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Przeciążone. Rozmieszcza elementy w określonym zakresie w kolejności niemalejącej lub zgodnie z kryterium porządkowania określonym przez Predykat binarny równolegle. Ta funkcja jest semantyką podobną do `std::sort` w przypadku, gdy jest to porównanie, niestabilne i w miejscu.|
 |[Funkcja parallel_transform](concurrency-namespace-functions.md#parallel_transform)|Przeciążone. Stosuje określony obiekt Function do każdego elementu w zakresie źródłowym lub do pary elementów z dwóch zakresów źródłowych i kopiuje wartości zwracane obiektu Function do zakresu docelowego równolegle. Ta funkcjonalność jest semantycznie równoważna z `std::transform` .|
 |[Funkcja Receive](concurrency-namespace-functions.md#receive)|Przeciążone. Ogólna implementacja odbierania, która zezwala na kontekst oczekiwania na dane z dokładnie jednego źródła i filtruje akceptowane wartości.|
@@ -223,12 +224,12 @@ namespace concurrency;
 |Nazwa|Opis|
 |----------|-----------------|
 |[operator! =](concurrency-namespace-operators.md#operator_neq)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora nie jest równy `concurrent_vector` obiektowi po prawej stronie.|
-|[&&operatora](concurrency-namespace-operators.md#operator_amp_amp)|Przeciążone. Tworzy zadanie, które zostanie ukończone pomyślnie, gdy oba zadania dostarczone jako argumenty zakończą się pomyślnie.|
-|[&#124;&#124;operatora](concurrency-namespace-operators.md#operator_lor)|Przeciążone. Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczonych jako argumenty zakończy się pomyślnie.|
-|[<operatora](concurrency-namespace-operators.md#operator_lt)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy od `concurrent_vector` obiektu po prawej stronie.|
+|[&&operatora ](concurrency-namespace-operators.md#operator_amp_amp)|Przeciążone. Tworzy zadanie, które zostanie ukończone pomyślnie, gdy oba zadania dostarczone jako argumenty zakończą się pomyślnie.|
+|[&#124;&#124;operatora ](concurrency-namespace-operators.md#operator_lor)|Przeciążone. Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczonych jako argumenty zakończy się pomyślnie.|
+|[<operatora ](concurrency-namespace-operators.md#operator_lt)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy od `concurrent_vector` obiektu po prawej stronie.|
 |[<operatora =](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy od lub równy `concurrent_vector` obiektowi po prawej stronie.|
 |[operator = =](concurrency-namespace-operators.md#operator_eq_eq)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest równy `concurrent_vector` obiektowi po prawej stronie.|
-|[>operatora](concurrency-namespace-operators.md#operator_gt)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest większy niż `concurrent_vector` obiekt po prawej stronie.|
+|[>operatora ](concurrency-namespace-operators.md#operator_gt)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest większy niż `concurrent_vector` obiekt po prawej stronie.|
 |[>operatora =](concurrency-namespace-operators.md#operator_lt_eq)|Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest większy niż lub równy `concurrent_vector` obiektowi po prawej stronie.|
 
 ### <a name="constants"></a>Stałe
@@ -258,6 +259,6 @@ namespace concurrency;
 
 **Nagłówek:** agenci. h, ConcRT. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, PPL. h, pplcancellation_token. h, pplconcrt. h, pplinterface. h, ppltasks. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Odwołanie](reference-concurrency-runtime.md)

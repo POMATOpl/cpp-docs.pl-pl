@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Szablony funkcji'
 title: Szablony funkcji
 ms.date: 07/15/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f64041e2fdd8b9acc30a4f71e445d9f73bb7db37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341389"
 ---
 # <a name="function-templates"></a>Szablony funkcji
 
@@ -57,7 +58,7 @@ int main(int j) {
 
 Gdy argument szablonu jest określony jawnie, wykonywane są zwykłe konwersje niejawne, aby przekonwertować argument funkcji na typ odpowiadający parametrom szablonu funkcji. W powyższym przykładzie kompilator zostanie skonwertowany `j` do typu **`char`** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony](../cpp/templates-cpp.md)<br/>
 [Tworzenie wystąpienia szablonu funkcji](../cpp/function-template-instantiation.md)<br/>

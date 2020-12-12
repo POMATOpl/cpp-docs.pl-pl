@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _crtDbgFlag'
 title: _crtDbgFlag
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - enable memory allocation tracking flag
 - memory, tracking on the debug heap
 ms.assetid: 9e7adb47-8ab9-4e19-81d5-e2f237979973
-ms.openlocfilehash: a967b436d53acab6d76fa36fdf9b13c7c24d49c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3c72b89ea9e5e557a567af9a9c52c8e85370ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246766"
 ---
-# <a name="crtdbgflag"></a>_crtDbgFlag
+# <a name="_crtdbgflag"></a>_crtDbgFlag
 
-**_CrtDbgFlag** flagi składa się z pól bitowych pięć, które kontrolują sposób alokacji pamięci w wersji do debugowania sterty są śledzone, zweryfikowane, zgłaszane i zrzucany. Pola bitowe flagi są ustawiane przy użyciu [_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md) funkcji. Ta flaga i jego pola bitowe są deklarowane w pliku Crtdbg.h. Ta flaga jest dostępna tylko podczas [_DEBUG](../c-runtime-library/debug.md) Flaga został zdefiniowany w aplikacji.
+Flaga **_crtDbgFlag** składa się z pięciu pól bitowych, które kontrolują sposób, w jaki alokacje pamięci w debugowanej wersji sterty są śledzone, weryfikowane, raportowane i zrzucane. Pola bitowe flagi są ustawiane za pomocą funkcji [_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md) . Ta flaga i jego pola bitowe są zadeklarowane w CRTDBG. h. Ta flaga jest dostępna tylko wtedy, gdy flaga [_DEBUG](../c-runtime-library/debug.md) została zdefiniowana w aplikacji.
 
-Aby uzyskać więcej informacji o używaniu tej flagi w połączeniu z innymi funkcjami debugowania, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji na temat używania tej flagi w połączeniu z innymi funkcjami debugowania, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Flagi kontrolne](../c-runtime-library/control-flags.md)
+[Flagi kontrolki](../c-runtime-library/control-flags.md)

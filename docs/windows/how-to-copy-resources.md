@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej: jak zarządzać zasobami (C++)'
 title: 'Instrukcje: zarządzanie zasobami (C++)'
 ms.date: 02/14/2019
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3720cb5f3ab3b99ecba798abce1e4fdba25f8646
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329380"
 ---
 # <a name="how-to-manage-resources-c"></a>Instrukcje: zarządzanie zasobami (C++)
 
@@ -46,7 +47,7 @@ Można kopiować zasoby z jednego pliku do innego bez zmieniania ich lub zmiany 
 Można łatwo kopiować zasoby z istniejącego zasobu lub pliku wykonywalnego do bieżącego pliku zasobów. Aby skopiować zasoby, należy otworzyć oba pliki zawierające zasoby w tym samym czasie i przeciągnąć elementy z jednego pliku do innego lub skopiować i wkleić między dwoma plikami. Ta metoda działa w przypadku plików skryptów zasobów (. RC) i plików szablonów zasobów (. rct) oraz plików wykonywalnych (exe).
 
 > [!NOTE]
-> Wizualizacja C++ zawiera przykładowe pliki zasobów, których można użyć we własnej aplikacji. Aby uzyskać więcej informacji, zobacz [clipart: Common sources](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
+> Visual C++ obejmuje przykładowe pliki zasobów, których można użyć we własnej aplikacji. Aby uzyskać więcej informacji, zobacz [clipart: Common sources](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
 
 Nie można przeciągać i upuszczać, kopiować, wycinać ani wklejać plików zasobów w projekcie (**Widok zasobów**) i autonomicznych plikach. RC otwartych w oknach dokumentów. Można to zrobić w poprzednich wersjach produktu. Należy używać metody przeciągania i upuszczania między plikami. RC, które są otwarte poza projektem.
 
@@ -58,7 +59,7 @@ Nie można przeciągać i upuszczać, kopiować, wycinać ani wklejać plików z
 
    - Korzystanie z metody przeciągania i upuszczania
 
-      1. Wybierz zasób, który chcesz skopiować. Na przykład w *Source1. RC*wybierz pozycję **IDD_DIALOG1**.
+      1. Wybierz zasób, który chcesz skopiować. Na przykład w *Source1. RC* wybierz pozycję **IDD_DIALOG1**.
 
       1. Przytrzymaj wciśnięty klawisz **Ctrl** i przeciągnij zasób do drugiego pliku. rc. Na przykład przeciągnij **IDD_DIALOG1** z *Source1. RC* do *SOURCE2. RC*.
 
@@ -72,7 +73,7 @@ Nie można przeciągać i upuszczać, kopiować, wycinać ani wklejać plików z
       1. Kliknij prawym przyciskiem myszy plik zasobów, do którego chcesz wkleić zasób (na przykład *SOURCE2. RC*), a następnie wybierz polecenie **Wklej**.
 
 > [!NOTE]
-> Aby uniknąć konfliktów z nazwami symboli lub wartościami w istniejącym pliku, C++ Wizualizacja może zmienić wartość symbolu lub nazwę symbolu oraz wartość w czasie kopiowania do nowego pliku.
+> Aby uniknąć konfliktów z nazwami symboli lub wartościami w istniejącym pliku, Visual C++ może zmienić wartość symboliczną lub nazwę symbolu i wartość w czasie kopiowania do nowego pliku.
 
 Podczas kopiowania w ramach zasobu można zmienić jego właściwość języka lub Właściwość Condition albo oba te elementy.
 
@@ -80,7 +81,7 @@ Podczas kopiowania w ramach zasobu można zmienić jego właściwość języka l
 
 - Warunek zasobu jest zdefiniowanym symbolem, który identyfikuje warunek, pod którym ta konkretna kopia zasobu ma być używana.
 
-Język i warunek zasobu są wyświetlane w nawiasach po nazwie zasobu w oknie **obszaru roboczego** . W tym miejscu zasób o nazwie `IDD_AboutBox` używa `Finnish`, ponieważ jego język i jego warunek są `XX33`:
+Język i warunek zasobu są wyświetlane w nawiasach po nazwie zasobu w oknie **obszaru roboczego** . W tym miejscu zasób o nazwie `IDD_AboutBox` jest używany `Finnish` jako język i jego warunek `XX33` :
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -98,9 +99,9 @@ W pliku *. RC* lub w oknie [Widok zasobów](how-to-create-a-resource-script-file
 
 Pliki zasobów zarządzanych (. resx) to pliki XML. Po dodaniu zarządzanego pliku zasobów do projektu z okna dialogowego **Dodaj nowy element** domyślnie zostanie otwarty **Edytor zarządzanych zasobów** .
 
-## <a name="import-and-export-resources"></a>Importowanie i eksportowanie zasobów
+## <a name="import-and-export-resources"></a>importowanie i eksportowanie zasobów
 
-Możesz importować zasoby graficzne (mapy bitowe, ikony, kursory i paski narzędzi), pliki HTML i zasoby niestandardowe do użycia w wizualizacji C++. Można eksportować te same typy plików z projektu programu Visual Studio C++ do oddzielnych plików, które mogą być używane poza środowiskiem programistycznym.
+Możesz importować zasoby graficzne (mapy bitowe, ikony, kursory i paski narzędzi), pliki HTML i zasoby niestandardowe do użycia w Visual C++. Można eksportować te same typy plików z projektu Visual Studio C++ do oddzielnych plików, które mogą być używane poza środowiskiem programistycznym.
 
 > [!NOTE]
 > Typów zasobów, takich jak akceleratory, okna dialogowe i tabele ciągów nie można importować ani eksportować, ponieważ nie są to typy plików autonomicznych.
@@ -116,7 +117,7 @@ Możesz importować zasoby graficzne (mapy bitowe, ikony, kursory i paski narzę
 > [!NOTE]
 > Proces importowania działa tak samo niezależnie od wybranego typu zasobu. Zaimportowany zasób jest automatycznie dodawany do poprawnego węzła tego typu zasobu.
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Aby wyeksportować zasób do użycia poza wizualizacjąC++
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Aby wyeksportować zasób do użycia poza Visual C++
 
 1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy zasób, który chcesz wyeksportować, a następnie wybierz pozycję **Eksportuj**. Możesz zaakceptować bieżącą nazwę pliku lub wpisać nową.
 
@@ -130,4 +131,4 @@ Win32
 
 [Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 [Instrukcje: Tworzenie zasobów](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Instrukcje: dołączanie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md)
+[Instrukcje: uwzględnianie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md)

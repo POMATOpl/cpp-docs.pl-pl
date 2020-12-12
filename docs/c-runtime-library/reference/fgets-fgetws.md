@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: fgets, fgetws'
 title: fgets, fgetws
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 5c1d63eea6561af6ab7f51c147c92e184d3d11f8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 21c360f621ed19f076af129f618e80aa27102e86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329293"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -98,8 +99,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fgets**|\<stdio. h>|
-|**fgetws**|\<stdio. h> lub \<WCHAR. h>|
+|**fgets**|\<stdio.h>|
+|**fgetws**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -128,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_fgetstxt"></a>Dane wejściowe: crt_fgets. txt
+### <a name="input-crt_fgetstxt"></a>Dane wejściowe: crt_fgets.txt
 
 ```Input
 Line one.

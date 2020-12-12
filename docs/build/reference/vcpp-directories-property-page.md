@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Strona właściwości katalogów VC + + (system Windows)'
 title: Strona właściwości katalogów VC++
 ms.date: 07/17/2019
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6d5b30e635003aa4db35e3aef9e1a32f8fa3176c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247140"
 ---
 # <a name="vc-directories-property-page-windows"></a>Strona właściwości katalogów VC + + (system Windows)
 
@@ -40,7 +41,7 @@ Należy pamiętać, że strona właściwości **katalogów VC + +** dla projekt�
 
 Jeśli nie znasz *właściwości projektu* w programie Visual Studio, warto zapoznać się z tematem pierwsze odczytywanie [ustawienia kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-Ustawienia domyślne właściwości **katalogów VC + +** zależą od typu projektu. W przypadku projektów klasycznych obejmują lokalizacje narzędzi C++ dla określonego zestawu narzędzi platformy i lokalizacji Windows SDK. Zestaw **narzędzi platformy** i **wersję Windows SDK** można zmienić na stronie Ogólne **Właściwości konfiguracji**  >  **General** .
+Ustawienia domyślne właściwości **katalogów VC + +** zależą od typu projektu. W przypadku projektów klasycznych obejmują lokalizacje narzędzi C++ dla określonego zestawu narzędzi platformy i lokalizacji Windows SDK. Zestaw **narzędzi platformy** i **wersję Windows SDK** można zmienić na stronie Ogólne **Właściwości konfiguracji**  >   .
 
 Aby wyświetlić wartości dla dowolnego katalogu:
 
@@ -90,7 +91,7 @@ Katalogi, w których należy szukać dołączanych plików, do których istniej�
 Katalogi, w których mają być wyszukiwane pliki zestawów i modułów (metadane), które są przywoływane w kodzie źródłowym przez dyrektywę [#using](../../preprocessor/hash-using-directive-cpp.md) . Odnosi się do zmiennej środowiskowej **LIBPATH** .
 
 **Katalogi bibliotek**<br/>
-Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odpowiada zmiennej środowiskowej **lib** . To ustawienie nie ma zastosowania do plików. obj; Aby utworzyć link do pliku. obj, na **Configuration Properties**  >  stronie właściwości ogólne**konsolidatora**właściwości konfiguracji  >  **General** wybierz pozycję **dodatkowe zależności biblioteki** , a następnie określ ścieżkę względną pliku. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](linker-property-pages.md).
+Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odpowiada zmiennej środowiskowej **lib** . To ustawienie nie ma zastosowania do plików. obj; Aby utworzyć link do pliku. obj, na   >  stronie właściwości ogólne **konsolidatora** właściwości konfiguracji  >   wybierz pozycję **dodatkowe zależności biblioteki** , a następnie określ ścieżkę względną pliku. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](linker-property-pages.md).
 
 **Katalogi WinRT**<br/>
 Katalogi do wyszukiwania plików biblioteki WinRT do użycia w aplikacjach platforma uniwersalna systemu Windows (platformy UWP).

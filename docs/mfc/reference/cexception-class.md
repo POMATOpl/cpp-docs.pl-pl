@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CException'
 title: Klasa CException
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 39d3266817ee1be20acde0b01c7c5d1aa90313cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184663"
 ---
 # <a name="cexception-class"></a>Klasa CException
 
@@ -115,7 +116,7 @@ Podczas usuwania `CException` obiektu należy użyć `Delete` funkcji elementu c
 
 Można określić, czy obiekt ma zostać usunięty podczas konstruowania obiektu. Aby uzyskać więcej informacji, zobacz [CException:: CException](#cexception).
 
-Musisz wywołać tylko w `Delete` przypadku korzystania z mechanizmu języka C++ **`try`** -  **`catch`** . W przypadku korzystania z makr MFC **spróbuj** i **Przechwyć**te makra będą automatycznie wywoływały tę funkcję.
+Musisz wywołać tylko w `Delete` przypadku korzystania z mechanizmu języka C++ **`try`** -  **`catch`** . W przypadku korzystania z makr MFC **spróbuj** i **Przechwyć** te makra będą automatycznie wywoływały tę funkcję.
 
 ### <a name="example"></a>Przykład
 

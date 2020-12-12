@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_filebuf
 title: basic_filebuf — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fedda394d2b10d07cda0580197f6763453455c4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335779"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf — Klasa
 
@@ -71,7 +72,7 @@ Cechy podstawowego elementu buforu plików (zazwyczaj `char_traits<Char_T>` ).
 Szablon klasy opisuje bufor strumienia, który kontroluje przekazywanie elementów typu *Char_T*, których cechy znakowe są określane przez klasę *TR*, do i z sekwencji elementów przechowywanych w zewnętrznym pliku.
 
 > [!NOTE]
-> Obiekty typu `basic_filebuf` są tworzone z wewnętrznym buforem typu __ \* char__ niezależnie od `char_type` określonego przez parametr typu *Char_T*. Oznacza to, że ciąg Unicode (zawierający **`wchar_t`** znaki) zostanie przekonwertowany na ciąg ANSI (zawierający **`char`** znaki) przed zapisaniem w buforze wewnętrznym. Aby przechowywać ciągi Unicode w buforze, Utwórz nowy bufor typu **`wchar_t`** i ustaw go przy użyciu [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metody. Aby zobaczyć przykład demonstrujący to zachowanie, zobacz poniżej.
+> Obiekty typu `basic_filebuf` są tworzone z wewnętrznym buforem typu __\* char__ niezależnie od `char_type` określonego przez parametr typu *Char_T*. Oznacza to, że ciąg Unicode (zawierający **`wchar_t`** znaki) zostanie przekonwertowany na ciąg ANSI (zawierający **`char`** znaki) przed zapisaniem w buforze wewnętrznym. Aby przechowywać ciągi Unicode w buforze, Utwórz nowy bufor typu **`wchar_t`** i ustaw go przy użyciu [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metody. Aby zobaczyć przykład demonstrujący to zachowanie, zobacz poniżej.
 
 Obiekt klasy `basic_filebuf<Char_T, Tr>` przechowuje wskaźnik pliku, który określa `FILE` obiekt, który kontroluje strumień skojarzony z otwartym plikiem. Przechowuje również wskaźniki do dwóch zestawów reguł konwersji plików do użycia przez [przepełnienie](#overflow) i [niedomiar](#underflow)chronionych elementów członkowskich. Aby uzyskać więcej informacji, zobacz [`basic_filebuf::open`](#open).
 
@@ -233,7 +234,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a>basic_filebuf:: basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a> basic_filebuf:: basic_filebuf
 
 Konstruuje obiekt typu `basic_filebuf` .
 
@@ -249,7 +250,7 @@ Pierwszy Konstruktor przechowuje wskaźnik o wartości null we wszystkich wskaź
 
 Drugi Konstruktor inicjuje obiekt z zawartością *prawa*, traktowany jako odwołanie rvalue.
 
-## <a name="basic_filebufchar_type"></a><a name="char_type"></a>basic_filebuf:: char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a> basic_filebuf:: char_type
 
 Kojarzy nazwę typu z `Char_T` parametrem szablonu.
 
@@ -257,7 +258,7 @@ Kojarzy nazwę typu z `Char_T` parametrem szablonu.
 typedef Char_T char_type;
 ```
 
-## <a name="basic_filebufclose"></a><a name="close"></a>basic_filebuf:: Close
+## <a name="basic_filebufclose"></a><a name="close"></a> basic_filebuf:: Close
 
 Zamyka plik.
 
@@ -271,7 +272,7 @@ Funkcja członkowska zwraca wskaźnik o wartości null, jeśli wskaźnik pliku j
 
 ### <a name="remarks"></a>Uwagi
 
-`close`wywołania `fclose(fp)` . Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca, **`this`** Aby wskazać, że plik został pomyślnie zamknięty.
+`close` wywołania `fclose(fp)` . Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca, **`this`** Aby wskazać, że plik został pomyślnie zamknięty.
 
 W przypadku strumienia szerokiego, jeśli jakieś wstawienia wystąpiły od momentu otwarcia strumienia lub od momentu ostatniego wywołania do `streampos` , funkcja wywołuje [`overflow`](#overflow) . Wstawia również wszystkie sekwencje potrzebne do przywrócenia pierwotnego stanu konwersji przy użyciu zestawu reguł konwersji plików `fac` do wywołania `fac.unshift` w razie potrzeby. Każdy wygenerowany element `byte` typu **`char`** jest zapisywana w skojarzonym strumieniu wydzielonym przez wskaźnik pliku `fp` , tak jak w przypadku kolejnych wywołań formularza `fputc(byte, fp)` . Jeśli wywołanie `fac.unshift` lub dowolny zapis nie powiedzie się, funkcja nie powiedzie się.
 
@@ -324,7 +325,7 @@ s
 1
 ```
 
-## <a name="basic_filebufint_type"></a><a name="int_type"></a>basic_filebuf:: int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a> basic_filebuf:: int_type
 
 Powoduje, że ten typ w `basic_filebuf` zakresie jest równoważny z typem o tej samej nazwie w `Tr` zakresie.
 
@@ -332,7 +333,7 @@ Powoduje, że ten typ w `basic_filebuf` zakresie jest równoważny z typem o tej
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_filebufis_open"></a><a name="is_open"></a>basic_filebuf:: is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a> basic_filebuf:: is_open
 
 Wskazuje, czy plik jest otwarty.
 
@@ -368,7 +369,7 @@ false
 true
 ```
 
-## <a name="basic_filebufoff_type"></a><a name="off_type"></a>basic_filebuf:: off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a> basic_filebuf:: off_type
 
 Powoduje, że ten typ w `basic_filebuf` zakresie jest równoważny z typem o tej samej nazwie w `Tr` zakresie.
 
@@ -376,7 +377,7 @@ Powoduje, że ten typ w `basic_filebuf` zakresie jest równoważny z typem o tej
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_filebufopen"></a><a name="open"></a>basic_filebuf:: Open
+## <a name="basic_filebufopen"></a><a name="open"></a> basic_filebuf:: Open
 
 Otwiera plik.
 
@@ -419,17 +420,17 @@ Jeśli bufor jest już otwarty lub wskaźnik pliku jest wskaźnikiem typu null, 
 
 Ta funkcja używa `FILE *` do wywołania zwrotnego, `basic_filebuf` jakby został wywołany [`fopen/wfopen`](../c-runtime-library/reference/fopen-wfopen.md) `(filename, strmode)` . `strmode`jest określany na podstawie `mode & ~(` [`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode) `)` :
 
-- `ios_base::in`zmienia się `"r"` (otwiera istniejący plik do odczytu).
+- `ios_base::in` zmienia się `"r"` (otwiera istniejący plik do odczytu).
 - [ios_base:: out](../standard-library/ios-base-class.md#fmtflags) lub `ios_base::out | ios_base::trunc` nie `"w"` (obcina istniejący plik lub tworzy do zapisu).
-- `ios_base::out | app`zmienia się `"a"` (otwiera istniejący plik do dołączania wszystkich zapisów).
-- `ios_base::in | ios_base::out`zmienia się `"r+"` (otwiera istniejący plik do odczytu i zapisu).
-- `ios_base::in | ios_base::out | ios_base::trunc`zmienia się `"w+"` (obcina istniejący plik lub tworzy do odczytu i zapisu).
-- `ios_base::in | ios_base::out | ios_base::app`zmienia się `"a+"` (otwiera istniejący plik do odczytu i do dołączania wszystkich zapisów).
+- `ios_base::out | app` zmienia się `"a"` (otwiera istniejący plik do dołączania wszystkich zapisów).
+- `ios_base::in | ios_base::out` zmienia się `"r+"` (otwiera istniejący plik do odczytu i zapisu).
+- `ios_base::in | ios_base::out | ios_base::trunc` zmienia się `"w+"` (obcina istniejący plik lub tworzy do odczytu i zapisu).
+- `ios_base::in | ios_base::out | ios_base::app` zmienia się `"a+"` (otwiera istniejący plik do odczytu i do dołączania wszystkich zapisów).
 
 Jeśli `mode & ios_base::binary` jest różna od zera, funkcja dołącza `b` do, `strmode` Aby otworzyć strumień binarny zamiast strumienia tekstu.
 Jeśli `mode & ios_base::ate` jest różna od zera, a plik został pomyślnie otwarty, bieżąca lokalizacja w strumieniu jest umieszczana na końcu pliku. Jeśli to się nie powiedzie, plik zostanie zamknięty.
 
-Jeśli powyższe operacje zostały wykonane pomyślnie, zestaw reguł konwersji plików jest określany: `use_facet<codecvt<Char_T, char, traits_type::` [`state_type`](../standard-library/char-traits-struct.md#state_type) `> >(` [`getloc`](../standard-library/basic-streambuf-class.md#getloc) `)` , do użycia [underflow](#underflow) przez [niedopełnienie i overflow](#overflow).
+Jeśli powyższe operacje zostały wykonane pomyślnie, zestaw reguł konwersji plików jest określany: `use_facet<codecvt<Char_T, char, traits_type::` [`state_type`](../standard-library/char-traits-struct.md#state_type) `> >(` [`getloc`](../standard-library/basic-streambuf-class.md#getloc) `)` , do użycia [](#underflow) przez [niedopełnienie i overflow](#overflow).
 
 Jeśli plik nie mógł zostać pomyślnie otwarty, zwracana jest wartość null.
 
@@ -437,7 +438,7 @@ Jeśli plik nie mógł zostać pomyślnie otwarty, zwracana jest wartość null.
 
 Zobacz [`basic_filebuf::close`](#close) , aby zapoznać się z przykładem, który używa `open` .
 
-## <a name="basic_filebufoperator"></a><a name="op_eq"></a>basic_filebuf:: operator =
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a> basic_filebuf:: operator =
 
 Przypisz zawartość tego obiektu buforu strumienia. Jest to przypisanie przenoszenia obejmujące rvalue, które nie pozostawia kopii w tle.
 
@@ -458,7 +459,7 @@ Zwraca __* this__.
 
 Operator elementu członkowskiego zastępuje zawartość obiektu przy użyciu zawartości *Right*, traktowanej jako odwołanie rvalue. Aby uzyskać więcej informacji, zobacz [rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="basic_filebufoverflow"></a><a name="overflow"></a>basic_filebuf:: overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a> basic_filebuf:: overflow
 
 Wywoływana, gdy nowy znak zostanie wstawiony do pełnego buforu.
 
@@ -485,7 +486,7 @@ Jeśli `_Meta != traits_type::` [`eof`](../standard-library/char-traits-struct.m
 
 - Można skonwertować wszystkie oczekujące dane wyjściowe w buforze wyjściowym, a następnie za `ch` pomocą zestawu reguł konwersji plików `fac` do wywołania `fac.out` w razie potrzeby. Każdy wygenerowany element `ch` typu *char* jest zapisywana w skojarzonym strumieniu wydzielonym przez wskaźnik pliku `fp` , tak jak w przypadku kolejnych wywołań formularza `fputc(ch, fp)` . Jeśli jakakolwiek konwersja lub zapis nie powiedzie się, funkcja nie powiedzie się.
 
-## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a>basic_filebuf::p nie powiodło się
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a> basic_filebuf::p nie powiodło się
 
 Próbuje umieścić element w strumieniu wejściowym, a następnie uczynić go bieżącym elementem (wskazywanym przez następny wskaźnik).
 
@@ -512,7 +513,7 @@ Chroniona funkcja wirtualna elementu członkowskiego umieszcza element w buforze
 
 - Jeśli funkcja może wypchnąć element do strumienia wejściowego, może to zrobić, na przykład przez wywołanie `ungetc` elementu typu **`char`** .
 
-## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf::p os_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a> basic_filebuf::p os_type
 
 Powoduje, że ten typ w `basic_filebuf` zakresie jest równoważny z typem o tej samej nazwie w `Tr` zakresie.
 
@@ -520,7 +521,7 @@ Powoduje, że ten typ w `basic_filebuf` zakresie jest równoważny z typem o tej
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_filebufseekoff"></a><a name="seekoff"></a>basic_filebuf:: seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a> basic_filebuf:: seekoff
 
 Próbuje zmienić bieżące położenie dla kontrolowanych strumieni.
 
@@ -554,7 +555,7 @@ W przypadku pliku otwartego do odczytu i zapisu zarówno strumienie wejściowe, 
 
 Jeśli wskaźnik pliku `fp` jest wskaźnikiem typu null, funkcja kończy się niepowodzeniem. W przeciwnym razie próbuje zmienić pozycję strumienia poprzez wywołanie `fseek(fp, _Off, _Way)` . Jeśli ta funkcja się powiedzie, a wynikiem działania `fposn` można określić przez wywołanie `fgetpos(fp, &fposn)` , funkcja się powiedzie. Jeśli funkcja się powiedzie, zwraca wartość typu `pos_type` zawierającego `fposn` . W przeciwnym razie zwraca nieprawidłową pozycję strumienia.
 
-## <a name="basic_filebufseekpos"></a><a name="seekpos"></a>basic_filebuf:: seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a> basic_filebuf:: seekpos
 
 Próbuje zmienić bieżące położenie dla kontrolowanych strumieni.
 
@@ -584,7 +585,7 @@ W przypadku pliku otwartego do odczytu i zapisu zarówno strumienie wejściowe, 
 
 W przypadku strumienia szerokiego, jeśli jakieś wstawienia wystąpiły od momentu otwarcia strumienia lub od ostatniego wywołania do `streampos` , funkcja wywołuje [przepełnienie](#overflow). Wstawia również wszystkie sekwencje potrzebne do przywrócenia pierwotnego stanu konwersji przy użyciu zestawu reguł konwersji plików `fac` do wywołania `fac.unshift` w razie potrzeby. Każdy wygenerowany element `byte` typu **`char`** jest zapisywana w skojarzonym strumieniu wydzielonym przez wskaźnik pliku `fp` , tak jak w przypadku kolejnych wywołań formularza `fputc(byte, fp)` . Jeśli wywołanie `fac.unshift` lub dowolny zapis nie powiedzie się, funkcja nie powiedzie się.
 
-## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf:: setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a> basic_filebuf:: setbuf
 
 Wykonuje operację konkretną dla każdego pochodnego buforu strumienia.
 
@@ -608,9 +609,9 @@ Funkcja chronionej składowej zwraca zero, jeśli wskaźnik pliku `fp` jest wska
 
 ### <a name="remarks"></a>Uwagi
 
-`setbuf`wywołania, `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` Aby zaoferować tablicę `count` elementów rozpoczynającą się w *_Buffer* jako bufor strumienia. Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie powraca **`this`** do sukcesu sygnału.
+`setbuf` wywołania, `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` Aby zaoferować tablicę `count` elementów rozpoczynającą się w *_Buffer* jako bufor strumienia. Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie powraca **`this`** do sukcesu sygnału.
 
-## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf:: swap
+## <a name="basic_filebufswap"></a><a name="swap"></a> basic_filebuf:: swap
 
 Wymienia zawartość tego elementu `basic_filebuf` na zawartość podanego elementu `basic_filebuf` .
 
@@ -623,7 +624,7 @@ void swap(basic_filebuf& right);
 *Kliknij*\
 Odwołanie lvalue do innego `basic_filebuf` .
 
-## <a name="basic_filebufsync"></a><a name="sync"></a>basic_filebuf:: Sync
+## <a name="basic_filebufsync"></a><a name="sync"></a> basic_filebuf:: Sync
 
 Próbuje zsynchronizować kontrolowane strumienie ze wszystkimi skojarzonymi strumieniami zewnętrznymi.
 
@@ -635,7 +636,7 @@ virtual int sync();
 
 Zwraca zero, jeśli wskaźnik pliku `fp` jest wskaźnikiem o wartości null. W przeciwnym razie zwraca zero tylko wtedy, gdy wywołania zarówno do [przepełnienia](#overflow) , jak i `fflush(fp)` pomyślnie opróżniają wszystkie oczekujące dane wyjściowe do strumienia.
 
-## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a>basic_filebuf:: traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a> basic_filebuf:: traits_type
 
 Kojarzy nazwę typu z `Tr` parametrem szablonu.
 
@@ -643,7 +644,7 @@ Kojarzy nazwę typu z `Tr` parametrem szablonu.
 typedef Tr traits_type;
 ```
 
-## <a name="basic_filebufunderflow"></a><a name="underflow"></a>basic_filebuf:: niedopełnienie
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a> basic_filebuf:: niedopełnienie
 
 Wyodrębnia bieżący element ze strumienia wejściowego.
 
@@ -663,7 +664,7 @@ Chroniona funkcja wirtualna elementu członkowskiego próbuje wyodrębnić bież
 
 - Może odczytywać jeden lub więcej elementów typu **`char`** , tak jak przez kolejne wywołania formularza `fgetc(fp)` , i przekonwertować je na element `ch` typu `Char_T` za pomocą zestawu reguł konwersji plików `fac` do wywołania `fac.in` w razie potrzeby. W przypadku niepowodzenia odczytu lub konwersji funkcja nie powiedzie się.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<fstream>](../standard-library/fstream.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -1,30 +1,31 @@
 ---
+description: 'Dowiedz się więcej na temat: zawartość pliku reguł programu make'
 title: Zawartość pliku reguł programu Make
 ms.date: 11/04/2016
 helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: db2ad308a45264a176daf5fb54c974153d314a3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196988"
 ---
 # <a name="contents-of-a-makefile"></a>Zawartość pliku reguł programu Make
 
 Plik reguł programu make zawiera:
 
-- [Bloki opisu](description-blocks.md)
+- [Bloki opisów](description-blocks.md)
 
 - [Polecenia](commands-in-a-makefile.md)
 
-- [Utworze](macros-and-nmake.md)
+- [Makra](macros-and-nmake.md)
 
 - [Zasady wnioskowania](inference-rules.md)
 
-- [Dyrektywy dot](dot-directives.md)
+- [Dyrektywy Dot](dot-directives.md)
 
 - [Dyrektywy przetwarzania wstępnego](makefile-preprocessing.md)
 
@@ -36,4 +37,4 @@ Aby uzyskać przykład, zobacz [przykład pliku reguł programu make](sample-mak
 
 ## <a name="see-also"></a>Zobacz też
 
-[NMAKE — dokumentacja](nmake-reference.md)
+[Odwołanie NMAKE](nmake-reference.md)

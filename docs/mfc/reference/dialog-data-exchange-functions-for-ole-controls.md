@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje wymiany danych w oknie dialogowym dla formantów OLE'
 title: Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 9133c30dd1ac069145862d4bf61ba0bc0d504838
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed2a3c36655ce5fccf482c0a7dedad0a4c67baa5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219957"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 
@@ -69,7 +70,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -103,7 +104,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -137,7 +138,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -171,7 +172,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -211,7 +212,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -251,7 +252,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -291,7 +292,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -331,7 +332,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -365,7 +366,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -399,7 +400,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -433,7 +434,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -467,7 +468,7 @@ Identyfikator kontrolki OLE w oknie dialogowym, widoku Formularz lub w obiekcie 
 *DISPID*<br/>
 Identyfikator wysyłania właściwości formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi

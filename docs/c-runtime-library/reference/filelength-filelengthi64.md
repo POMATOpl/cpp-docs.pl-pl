@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _filelength, _filelengthi64'
 title: _filelength, _filelengthi64
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 5fea019591fc5a90aab07f0347aa3f02fe0d43f3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 21004112e731827240b66c343b69cc00133aa6ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329278"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
@@ -74,8 +75,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_filelength**|\<IO. h>|
-|**_filelengthi64**|\<IO. h>|
+|**_filelength**|\<io.h>|
+|**_filelengthi64**|\<io.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

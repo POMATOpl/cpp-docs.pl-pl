@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Obsługa zestawów znaków wielobajtowych (zestawy MBCS)'
 title: Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,63 +8,63 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ab6af7aa77942b39785faf68ea6a530867abff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335767"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
 
-Wielobajtowe zestawy znaków (MBCSs) to starsze podejście do potrzeby obsługi zestawów znaków, takich jak japoński i chiński, które nie mogą być reprezentowane w jednym bajcie. Jeśli robisz nowe rozwoju, należy użyć Unicode dla wszystkich ciągów tekstowych, z wyjątkiem być może ciągów systemowych, które nie są widoczne dla użytkowników końcowych. MBCS jest starszą technologią i nie jest zalecany do nowego rozwoju.
+Zestawy znaków wielobajtowych (zestawy MBCS) to starsze podejście do obsługi zestawów znaków, takich jak japoński i chiński, które nie mogą być reprezentowane w pojedynczym bajcie. W przypadku tworzenia nowych aplikacji należy używać standardu Unicode dla wszystkich ciągów tekstowych, z wyjątkiem takich ciągów systemu, które nie są widoczne dla użytkowników końcowych. MBCS jest starszą technologią i nie jest zalecana w przypadku nowych rozwiązań programistycznych.
 
-Najczęstszą implementacją MBCS są zestawy znaków dwu bajtowych (DBCSs). Visual C++ w ogóle, a MFC w szczególności jest w pełni włączone dla DBCS.
+Najbardziej powszechną implementacją MBCS są zestawy znaków dwubajtowych (DBCS). Ogólnie Visual C++, a MFC w szczególności jest w pełni włączone dla DBCS.
 
-Aby uzyskać przykłady, zobacz pliki kodu źródłowego MFC.
+Aby zapoznać się z przykładami, zobacz pliki kodu źródłowego MFC.
 
-W przypadku platform używanych na rynkach, których języki używają dużych zestawów znaków, najlepszą alternatywą dla Unicode jest MBCS. MFC obsługuje MBCS przy użyciu międzynarodowo różnych typów danych i funkcji wykonywania języka C. Należy zrobić to samo w kodzie.
+W przypadku platform używanych na rynkach, których Języki używają dużych zestawów znaków, Najlepsza alternatywą dla standardu Unicode jest MBCS. MFC obsługuje MBCS przy użyciu typów danych internationalizable i funkcji czasu wykonywania języka C. Należy to zrobić w kodzie.
 
-W obszarze MBCS znaki są kodowane w 1 lub 2 bajtach. W znakach 2-bajtowych pierwszy lub bajt wiodący sygnalizuje, że zarówno on, jak i następujący bajt mają być interpretowane jako jeden znak. Pierwszy bajt pochodzi z zakresu kodów zarezerwowanych do użycia jako bajty potencjalnych potencjalnych. Zakresy bajtów mogą być bajtami potencjalnych potencjalnych potencjalnych klienty, zależy od używanej strony kodowej. Na przykład japońska strona kodowa 932 używa zakresu od 0x81 do 0x9F jako bajtów potencjalnych potencjalnych potencjalnych klient, ale koreańska strona kodowa 949 używa innego zakresu.
+W obszarze MBCS znaki są kodowane w 1 lub 2 bajtach. W przypadku znaków 2-bajtowych pierwszy lub potencjalny bajt wiodący sygnalizuje, że oba te i następujące bajty mają być interpretowane jako jeden znak. Pierwszy bajt pochodzi z zakresu kodów zastrzeżonego do użycia jako bajty potencjalnego klienta. Które zakresy bajtów mogą być potencjalnymi bajtami, zależy od używanej strony kodowej. Na przykład strona kodowa Japońska 932 używa zakresu 0x81 za pośrednictwem 0x9F jako bajtów potencjalnych, ale Koreańska strona kodowa 949 używa innego zakresu.
 
-Rozważmy wszystkie poniższe elementy w programowaniu MBCS.
+Rozważ wszystkie następujące kwestie w programowaniu MBCS.
 
-Znaki MBCS w środowisku znaków MBCS mogą pojawiać się w ciągach, takich jak nazwy plików i katalogów.
+Znaki MBCS w środowisku MBCS znaki mogą pojawić się w ciągach, takich jak nazwy plików i katalogów.
 
-### <a name="editing-operations"></a>Operacje edycji
+### <a name="editing-operations"></a>Edytowanie operacji
 
-Operacje edycji w aplikacjach MBCS powinny działać na znakach, a nie bajtach. Przekaz nie powinien dzielić znaku, klawisz **strzałki** w prawo powinien przesuwać się w prawo o jeden znak itd. **Usuń** powinien usunąć znak; **Cofnij,** należy ponownie włożyć go.
+Operacje edycji w aplikacjach MBCS powinny działać na znakach, a nie w bajtach. Karetka nie powinna dzielić znaku, klawisz **Strzałka w prawo** powinna przenieść jeden znak w prawo itd. **Usuń** należy usunąć znak; Operacja **Cofnij** powinna ponownie wstawić.
 
 ### <a name="string-handling"></a>Obsługa ciągów
 
-W aplikacji, która używa MBCS obsługi ciągów stwarza specjalne problemy. Znaki o obu szerokościach są mieszane w jednym ciągu; w związku z tym należy pamiętać, aby sprawdzić bajtów potencjalnych potencjalnych.
+W aplikacji, która używa MBCS, obsługa ciągów stanowi specjalne problemy. Znaki obu szerokości są mieszane w pojedynczym ciągu; w związku z tym należy pamiętać o sprawdzeniu potencjalnych bajtów.
 
-### <a name="run-time-library-support"></a>Obsługa biblioteki w czasie wykonywania
+### <a name="run-time-library-support"></a>Obsługa bibliotek w czasie wykonywania
 
-Biblioteka wykonywania języka C i MFC obsługują programowanie jedno bajtowe, MBCS i Unicode. Ciągi jedno bajtowe są `str` przetwarzane z rodziną funkcji w czasie wykonywania, ciągi MBCS są przetwarzane z odpowiednimi `_mbs` funkcjami, a ciągi Unicode są przetwarzane z odpowiednimi `wcs` funkcjami. Implementacje funkcji elementów członkowskich klasy MFC używają przenośnych funkcji w `str` czasie wykonywania, które mapują, w odpowiednich okolicznościach, do normalnej rodziny funkcji, funkcji MBCS lub funkcji Unicode, zgodnie z opisem w "MBCS/Unicode portability".
+Biblioteka wykonawcza C i MFC obsługują programowanie jednobajtowe, MBCS i Unicode. Ciągi jednobajtowe są przetwarzane z `str` rodziną funkcji czasu wykonywania, ciągi MBCS są przetwarzane przy użyciu odpowiednich `_mbs` funkcji, a ciągi Unicode są przetwarzane przy użyciu odpowiednich `wcs` funkcji. Implementacje funkcji składowych klasy MFC używają przenośnych funkcji czasu wykonywania, które mapują w odpowiednich przypadkach do normalnej `str` rodziny funkcji, funkcji MBCS lub funkcji Unicode, zgodnie z opisem w "przenośność MBCS/Unicode".
 
-### <a name="mbcsunicode-portability"></a>Przenoszenie MBCS/Unicode
+### <a name="mbcsunicode-portability"></a>Przenośność MBCS/Unicode
 
-Za pomocą pliku nagłówka tchar.h można tworzyć aplikacje jedno bajtowe, MBCS i Unicode z tych samych źródeł. Tchar.h definiuje makra poprzedzone *_tcs* , które `str`mapują do , `_mbs`lub `wcs` funkcje, w stosownych przypadkach. Aby zbudować MBCS, `_MBCS`zdefiniuj symbol . Aby utworzyć unicode, `_UNICODE`zdefiniuj symbol . Domyślnie `_UNICODE` jest zdefiniowany dla aplikacji MFC. Aby uzyskać więcej informacji, zobacz [Mapowania tekstu ogólnego w tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+Korzystając z pliku nagłówkowego używanie TCHAR. h, można tworzyć aplikacje z jednym bajtem, MBCS i Unicode z tych samych źródeł. Używanie TCHAR. h definiuje makra poprzedzone *_tcs* , które mapują do `str` , `_mbs` lub, w `wcs` zależności od potrzeb. Aby skompilować MBCS, zdefiniuj symbol `_MBCS` . Aby skompilować kod Unicode, zdefiniuj symbol `_UNICODE` . Domyślnie program `_UNICODE` jest zdefiniowany dla aplikacji MFC. Aby uzyskać więcej informacji, zobacz [Mapowanie tekstu ogólnego w używanie TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
-> Zachowanie jest niezdefiniowane, `_UNICODE` `_MBCS`jeśli zdefiniujesz zarówno i .
+> Zachowanie jest niezdefiniowane, jeśli zdefiniujesz jednocześnie `_UNICODE` i `_MBCS` .
 
-Pliki nagłówkowe Mbctype.h i Mbstring.h definiują funkcje i makra specyficzne dla MBCS, które w niektórych przypadkach mogą być potrzebne. Na przykład `_ismbblead` informuje, czy określony bajt w ciągu jest bajtem wiodącym.
+Pliki nagłówkowe Mbctype. h i mbstring. h definiują funkcje i makra specyficzne dla MBCS, które mogą być potrzebne w niektórych przypadkach. Na przykład `_ismbblead` informuje, czy określony bajt w ciągu jest bajtem wiodącym.
 
-Aby uzyskać możliwość przenoszenia międzynarodowego, zakoduj program za pomocą zestawów znaków [Unicode](../text/support-for-unicode.md) lub wielobajtowych (MBCS).
+W przypadku portów międzynarodowych należy zakodować program za pomocą zestawów znaków [Unicode](../text/support-for-unicode.md) lub wielobajtowych (zestawy MBCS).
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Włączanie MBC w programie](../text/international-enabling.md)
+- [Włącz MBCS w moim programie](../text/international-enabling.md)
 
-- [Włączanie zarówno Unicode, jak i MBCS w moim programie](../text/internationalization-strategies.md)
+- [Włącz zarówno kod Unicode, jak i MBCS w moim programie](../text/internationalization-strategies.md)
 
-- [Tworzenie umięsionego programu za pomocą mbcs](../text/mbcs-programming-tips.md)
+- [Korzystanie z MBCS do tworzenia międzynarodowego programu](../text/mbcs-programming-tips.md)
 
-- [Zobacz podsumowanie programowania MBCS](../text/mbcs-programming-tips.md)
+- [Zobacz Podsumowanie programowania MBCS](../text/mbcs-programming-tips.md)
 
-- [Dowiedz się więcej o mapowaniach tekstu ogólnego w celu przenoszenia szerokości bajtów](../text/generic-text-mappings-in-tchar-h.md)
+- [Dowiedz się więcej o mapowaniu tekstu ogólnego dla przenośności szerokości bajtów](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>Zobacz też
 

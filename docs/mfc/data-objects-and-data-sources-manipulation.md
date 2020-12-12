@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: obiekty danych i źródła danych: manipulowanie'
 title: 'Obiekty danych i źródła danych: operowanie'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: f1a83511edbf240d9a05d6d489f6cda9453ccea9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a9611fefc94e8437f9e0e5361e0d95972f867984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291236"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródła danych: operowanie
 
@@ -29,7 +30,7 @@ Po utworzeniu obiektu danych lub źródła danych można wykonać kilka typowych
 
 - [Pobieranie danych z obiektu danych](#_core_retrieving_data_from_a_data_object)
 
-## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>Wstawianie danych do źródła danych
+## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a> Wstawianie danych do źródła danych
 
 Sposób wstawiania danych do źródła danych zależy od tego, czy dane są dostarczane bezpośrednio, czy na żądanie, i w którym dostarczanym nośniku. Te możliwości są następujące.
 
@@ -51,7 +52,7 @@ To jest zaawansowany temat.
 
 - Jeśli używasz `CFile` obiektu do dostarczania danych, wywołaj `COleDataSource::DelayRenderFileData` zamiast `COleDataSource::DelayRenderData` w poprzedniej opcji. Gdy dane są żądane, struktura będzie wywoływała `COleDataSource::OnRenderFileData` , która musi zostać przesłonięta.
 
-## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>Określanie formatów dostępnych w obiekcie danych
+## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a> Określanie formatów dostępnych w obiekcie danych
 
 Aby użytkownik mógł wkleić do niego dane, musi wiedzieć, czy w schowku znajdują się formaty, które może obsłużyć. W tym celu aplikacja powinna wykonać następujące czynności:
 
@@ -69,7 +70,7 @@ Aby użytkownik mógł wkleić do niego dane, musi wiedzieć, czy w schowku znaj
 
 Jeśli używasz **ON_UPDATE_COMMAND_UI**, możesz teraz włączyć opcję Wklej i, ewentualnie Wklej elementy specjalne w menu Edycja. W tym celu należy wywołać metodę `CMenu::EnableMenuItem` or lub `CCmdUI::Enable` . Aby uzyskać więcej informacji na temat aplikacji kontenera, które powinny być wykonywane z elementami menu i, zobacz [menu i zasoby: Dodatki do kontenera](menus-and-resources-container-additions.md).
 
-## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>Pobieranie danych z obiektu danych
+## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a> Pobieranie danych z obiektu danych
 
 Gdy użytkownik zdecyduje się na format danych, wszystko to, co pozostanie na pobranie danych z obiektu danych. W tym celu użytkownik decyduje, gdzie umieścić dane, a aplikacja wywołuje odpowiednią funkcję. Dane będą dostępne w jednym z następujących nośników:
 
@@ -95,4 +96,4 @@ Użytkownik może teraz wstawiać dane do dokumentu tak samo jak w przypadku inn
 
 [Obiekty danych i źródła danych (OLE)](data-objects-and-data-sources-ole.md)<br/>
 [Klasa COleDataObject](reference/coledataobject-class.md)<br/>
-[Klasa COleDataSource](reference/coledatasource-class.md)
+[Klasa by uzyskać COleDataSource](reference/coledatasource-class.md)

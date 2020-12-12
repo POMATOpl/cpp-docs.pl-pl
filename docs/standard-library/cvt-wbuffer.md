@@ -1,5 +1,6 @@
 ---
-title: '&lt;cvt — wbuffer &gt;'
+description: 'Dowiedz się więcej na temat: &lt; CVT/wbuffer&gt;'
+title: '&lt;CVT — wbuffer&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - stdext.cvt.<cvt/wbuffer>
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wbuffer header
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
-ms.openlocfilehash: a360b9cd0b163615bed71ee4b070f8d97848fa66
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: afc88236d744e3556fd0eb3563da4db1f6d57dd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233035"
 ---
-# <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer &gt;
+# <a name="ltcvtwbuffergt"></a>&lt;CVT/wbuffer&gt;
 
-Nagłówek `<cvt/wstring>` w poprzednich wersjach programu Visual Studio określił [klasę wbuffer_convert](../standard-library/wbuffer-convert-class.md) szablonu klasy w przestrzeni nazw stdext:: CVT. Nagłówek jest zachowany w celu zapewnienia zgodności z poprzednimi wersjami. Nowy kod powinien korzystać z wersji klasy zdefiniowanej w [\<locale >](../standard-library/locale.md) w przestrzeni nazw `std`
+Nagłówek `<cvt/wstring>` w poprzednich wersjach programu Visual Studio określił szablon klasy [wbuffer_convert klasy](../standard-library/wbuffer-convert-class.md) w przestrzeni nazw stdext:: CVT. Nagłówek jest zachowany w celu zapewnienia zgodności z poprzednimi wersjami. Nowy kod powinien korzystać z wersji klasy, która jest zdefiniowana w [\<locale>](../standard-library/locale.md) `std` przestrzeni nazw
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,6 +26,6 @@ Nagłówek `<cvt/wstring>` w poprzednich wersjach programu Visual Studio określ
 #include <cvt/wbuffer>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

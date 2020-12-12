@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; cstdio&gt;'
 title: '&lt;cstdio&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdio header
 ms.assetid: 838ca50b-dea5-4ee3-a39c-e7c23a6ee016
-ms.openlocfilehash: b5896bdc79c7f494fa83a4c741df0260ae4f6b61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2ddb7f4e56042432fdc8237b8f888d04226e06b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233243"
 ---
 # <a name="ltcstdiogt"></a>&lt;cstdio&gt;
 
-Zawiera nagłówek \<standardowej biblioteki C STDIO. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
+Zawiera nagłówek standardowej biblioteki C \<stdio.h> i dodaje skojarzone nazwy do `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,10 +26,10 @@ Zawiera nagłówek \<standardowej biblioteki C STDIO. h > i dodaje skojarzone na
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
+Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

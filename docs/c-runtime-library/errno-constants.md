@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: errno stałych'
 title: errno — Stałe
 ms.date: 09/17/2018
 f1_keywords:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 4eb92b66970f1ef9455a0d7dd741ad02a60c26d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329334"
 ---
 # <a name="errno-constants"></a>errno — Stałe
 
@@ -171,6 +172,6 @@ Poniższe wartości są obsługiwane w celu zapewnienia zgodności z systemem PO
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe globalne](../c-runtime-library/global-constants.md)

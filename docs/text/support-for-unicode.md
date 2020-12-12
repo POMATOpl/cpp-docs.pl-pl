@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: obsługa formatu Unicode'
 title: Obsługa formatu Unicode
 ms.date: 01/09/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-ms.openlocfilehash: 90c07874b61656a8bec0f9ef373f2ee8f339e994
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3226f488afc8d9899777ac0b717dd012fec2cc3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335752"
 ---
 # <a name="support-for-unicode"></a>Obsługa formatu Unicode
 
@@ -33,8 +34,8 @@ Platforma MFC jest włączona w systemie Unicode, a MFC umożliwia włączenie s
 |Nieprzenośny typ danych|Zastąpione przez to makro|
 |-----------------------------|----------------------------|
 |**`char`**, **`wchar_t`**|`_TCHAR`|
-|**`char*`**, `LPSTR` (Typ danych Win32),`LPWSTR`|`LPTSTR`|
-|`const char*`, `LPCSTR` (Typ danych Win32),`LPCWSTR`|`LPCTSTR`|
+|**`char*`**, `LPSTR` (Typ danych Win32), `LPWSTR`|`LPTSTR`|
+|`const char*`, `LPCSTR` (Typ danych Win32), `LPCWSTR`|`LPCTSTR`|
 
 Klasa `CString` używa `_TCHAR` jako bazy i zawiera konstruktory i operatory do łatwego konwersji. Większość operacji na ciągach dla Unicode można napisać przy użyciu tej samej logiki, która jest używana do obsługi zestawu znaków ANSI systemu Windows, z tą różnicą, że podstawowa jednostka operacji jest 16-bitowym znakiem, a nie 8-bitowym bajtem. W przeciwieństwie do pracy z zestawami znaków wielobajtowych nie ma potrzeby traktowania znaków Unicode, tak jakby były dwa odrębne bajty. Należy jednak koniecznie zaradzić sobie z możliwością pojedynczego znaku reprezentowanego przez wieloskładnikową parę znaków. Ogólnie rzecz biorąc nie należy pisać kodu, który zakłada, że długość ciągu jest taka sama jak liczba znaków w wąskim lub szerokim, która zawiera.
 
@@ -56,7 +57,7 @@ Klasa `CString` używa `_TCHAR` jako bazy i zawiera konstruktory i operatory do 
 
 - [Dowiedz się więcej o mapowaniu tekstu ogólnego dla przenośności szerokości bajtów](../text/generic-text-mappings-in-tchar-h.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Obsługa używania wmain](../text/support-for-using-wmain.md)

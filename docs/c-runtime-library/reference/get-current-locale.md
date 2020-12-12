@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_current_locale'
 title: _get_current_locale
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 672914875aebbe020fbfab0c4958ce2963958432
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341493"
 ---
 # <a name="_get_current_locale"></a>_get_current_locale
 
@@ -54,7 +55,7 @@ Obiekt ustawień regionalnych reprezentujący bieżące ustawienia regionalne.
 
 Funkcja **_get_current_locale** pobiera aktualnie ustawione ustawienia regionalne dla wątku i zwraca obiekt ustawień regionalnych reprezentujący te ustawienia regionalne.
 
-Poprzednia nazwa tej funkcji, **__get_current_locale** (z dwoma wiodącymi podkreśleniami), jest przestarzała.
+Poprzednia nazwa tej funkcji, **__get_current_locale** (z dwoma znakami wiodącymi), jest przestarzała.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -64,7 +65,7 @@ Poprzednia nazwa tej funkcji, **__get_current_locale** (z dwoma wiodącymi podkr
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>

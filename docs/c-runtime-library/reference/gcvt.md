@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _gcvt'
 title: _gcvt
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 942f233e3b0e4c1ac3bc96d1fa64fd46cdccbcc2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341506"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -56,7 +57,7 @@ char *_gcvt(
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość do przekonwertowania.
 
 *cyfry*<br/>
@@ -83,7 +84,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_gcvt**|\<STDLIB. h>|
+|**_gcvt**|\<stdlib.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -143,7 +144,7 @@ buffer: '-0.123456789012' (15 chars)
 buffer: '-1.23456789012e-002' (19 chars)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

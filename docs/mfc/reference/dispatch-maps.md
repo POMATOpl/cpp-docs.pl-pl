@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mapy wysyłania'
 title: Mapy wysyłania
 ms.date: 06/20/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: 24921f2da404a2e5103d9a3cd2abba03109f0681
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3b160040af52e8346cbcbb09cc05c301f607052b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219970"
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 
@@ -29,7 +30,7 @@ Automatyzacja OLE zapewnia sposoby wywoływania metod i dostępu do właściwoś
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Definiuje Właściwość automatyzacji OLE, która pobiera parametry i nazywa funkcje get i Set.|
 |[DISP_DEFVALUE](#disp_defvalue)|Tworzy istniejącą właściwość jako wartość domyślną obiektu.|
 
-## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a> DECLARE_DISPATCH_MAP
 
 Jeśli `CCmdTarget` Klasa pochodna w programie obsługuje automatyzację OLE, ta klasa musi udostępnić mapę wysyłania, aby uwidocznić jej metody i właściwości.
 
@@ -54,7 +55,7 @@ Kreator aplikacji i kreatory kodu pomagają w tworzeniu klas automatyzacji i zac
 
 **Nagłówek:** afxwin. h
 
-## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a> BEGIN_DISPATCH_MAP
 
 Deklaruje definicję mapy wysyłania.
 
@@ -78,7 +79,7 @@ W pliku implementacji (. cpp), który definiuje funkcje elementu członkowskiego
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a> END_DISPATCH_MAP
 
 Zamyka definicję mapy wysyłania.
 
@@ -94,7 +95,7 @@ Musi być używana w połączeniu z BEGIN_DISPATCH_MAP.
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="disp_function"></a><a name="disp_function"></a>DISP_FUNCTION
+## <a name="disp_function"></a><a name="disp_function"></a> DISP_FUNCTION
 
 Definiuje funkcję automatyzacji OLE na mapie wysyłania.
 
@@ -167,9 +168,9 @@ Określa listę zawierającą krótką liczbę całkowitą, a następnie wskaźn
 |VTS_VARIANT|`const VARIANT*` lub `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
 |VTS_PI2|__wybierak\*__|
-|VTS_PI4|__liczba długa\*__|
+|VTS_PI4|__długi\*__|
 |VTS_PR4|__float\*__|
-|VTS_PR8|__Double\*__|
+|VTS_PR8|__double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -184,7 +185,7 @@ Określa listę zawierającą krótką liczbę całkowitą, a następnie wskaźn
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="disp_property"></a><a name="disp_property"></a>DISP_PROPERTY
+## <a name="disp_property"></a><a name="disp_property"></a> DISP_PROPERTY
 
 Definiuje Właściwość automatyzacji OLE na mapie wysyłania.
 
@@ -235,7 +236,7 @@ Gdy Klient zewnętrzny zmieni właściwość, wartość zmiennej składowej okre
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="disp_property_ex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a><a name="disp_property_ex"></a> DISP_PROPERTY_EX
 
 Definiuje Właściwość automatyzacji OLE i nazwij funkcje używane do pobierania i ustawiania wartości właściwości w mapie wysyłania.
 
@@ -275,7 +276,7 @@ Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są p
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="disp_property_notify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a><a name="disp_property_notify"></a> DISP_PROPERTY_NOTIFY
 
 Definiuje Właściwość automatyzacji OLE z powiadomieniem w mapie wysyłania.
 
@@ -330,7 +331,7 @@ Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są p
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="disp_property_param"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM
+## <a name="disp_property_param"></a><a name="disp_property_param"></a> DISP_PROPERTY_PARAM
 
 Definiuje właściwość, do której można uzyskać dostęp za pomocą oddzielnych `Get` `Set` funkcji i elementów członkowskich.
 
@@ -390,7 +391,7 @@ Są one odnoszące się do następującego DISP_PROPERTY_PARAM makra na mapie wy
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="disp_defvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE
+## <a name="disp_defvalue"></a><a name="disp_defvalue"></a> DISP_DEFVALUE
 
 Tworzy istniejącą właściwość jako wartość domyślną obiektu.
 
@@ -416,6 +417,6 @@ Użycie wartości domyślnej może sprawiać, że programowanie obiektu automaty
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

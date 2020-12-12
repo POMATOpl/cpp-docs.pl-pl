@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CType'
 title: ctype — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-ms.openlocfilehash: a0e3aad99c335f1a907189ee84e55a38e41b62e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ef23707aa08e0fb3ad7edcff07bd2c6a4ae3814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233087"
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 
@@ -100,7 +101,7 @@ Wszystkie inne operacje są wykonywane na **`char`** wartościach w taki sam spo
 |[do_tolower](#do_tolower)|Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich małe litery.|
 |[do_toupper](#do_toupper)|Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich wielkie litery.|
 |[do_widen](#do_widen)|Funkcja wirtualna wywoływana w celu przekonwertowania znaku typu **`char`** w natywnym zestawie znaków do odpowiedniego znaku typu `CharType` używanego przez ustawienia regionalne.|
-|[była](#is)|Sprawdza, czy pojedynczy znak ma określony atrybut, lub klasyfikuje atrybuty każdego znaku w zakresie i przechowuje je w tablicy.|
+|[is](#is)|Sprawdza, czy pojedynczy znak ma określony atrybut, lub klasyfikuje atrybuty każdego znaku w zakresie i przechowuje je w tablicy.|
 |[narrow](#narrow)|Konwertuje znak typu `CharType` używany przez ustawienia regionalne do odpowiedniego znaku typu char w macierzystym zestawie znaków.|
 |[scan_is](#scan_is)|Lokalizuje pierwszy znak w zakresie, który pasuje do określonej maski.|
 |[scan_not](#scan_not)|Lokalizuje pierwszy znak w zakresie, który nie pasuje do określonej maski.|
@@ -114,7 +115,7 @@ Wszystkie inne operacje są wykonywane na **`char`** wartościach w taki sam spo
 
 **Przestrzeń nazw:** std
 
-## <a name="ctypechar_type"></a><a name="char_type"></a>CType:: char_type
+## <a name="ctypechar_type"></a><a name="char_type"></a> CType:: char_type
 
 Typ, który opisuje znak używany przez ustawienie regionalne.
 
@@ -130,7 +131,7 @@ Typ jest synonimem dla parametru szablonu *CharType*.
 
 Zapoznaj się z [przykładem funkcja](#widen) członkowska, która używa `char_type` jako wartości zwracanej.
 
-## <a name="ctypectype"></a><a name="ctype"></a>CType:: CType
+## <a name="ctypectype"></a><a name="ctype"></a> CType:: CType
 
 Konstruktor dla obiektów klasy CType, które stanowią zestawy reguł ustawień regionalnych dla znaków.
 
@@ -151,13 +152,13 @@ Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
 - 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \>1: te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
 Konstruktor inicjuje swój `locale::facet` obiekt podstawowy przy użyciu **ustawień regionalnych::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="ctypedo_is"></a><a name="do_is"></a>CType::d o_is
+## <a name="ctypedo_is"></a><a name="do_is"></a> CType::d o_is
 
 Funkcja wirtualna wywoływana w celu sprawdzenia, czy pojedynczy znak ma określony atrybut, lub sklasyfikowania atrybutów każdego znaku w zakresie i przechowywania ich w tablicy.
 
@@ -203,7 +204,7 @@ Wartości masek klasyfikacji atrybutów znaków są udostępniane przez klasę [
 
 Zapoznaj [się](#is)z przykładem, który wywołuje `do_is` .
 
-## <a name="ctypedo_narrow"></a><a name="do_narrow"></a>CType::d o_narrow
+## <a name="ctypedo_narrow"></a><a name="do_narrow"></a> CType::d o_narrow
 
 Funkcja wirtualna wywoływana w celu przekonwertowania znaku typu `CharType` używanego przez ustawienia regionalne do odpowiedniego znaku typu **`char`** w natywnym zestawie znaków.
 
@@ -250,7 +251,7 @@ Druga funkcja szablonu chronionego elementu członkowskiego przechowuje w `dest`
 
 Zapoznaj się z przykładem [wąskich](#narrow)wywołań `do_narrow` .
 
-## <a name="ctypedo_scan_is"></a><a name="do_scan_is"></a>CType::d o_scan_is
+## <a name="ctypedo_scan_is"></a><a name="do_scan_is"></a> CType::d o_scan_is
 
 Wirtualna funkcja wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który pasuje do określonej maski.
 
@@ -284,7 +285,7 @@ Funkcja chronionego elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` 
 
 Zapoznaj się z przykładem dla [scan_is](#scan_is), które wywołuje `do_scan_is` .
 
-## <a name="ctypedo_scan_not"></a><a name="do_scan_not"></a>CType::d o_scan_not
+## <a name="ctypedo_scan_not"></a><a name="do_scan_not"></a> CType::d o_scan_not
 
 Funkcja wirtualna wywoływana w celu zlokalizowania pierwszego znaku w zakresie, który nie pasuje do określonej maski.
 
@@ -318,7 +319,7 @@ Funkcja chronionego elementu członkowskiego zwraca najmniejszy wskaźnik `ptr` 
 
 Zapoznaj się z przykładem dla [scan_not](#scan_not), które wywołuje `do_scan_not` .
 
-## <a name="ctypedo_tolower"></a><a name="do_tolower"></a>CType::d o_tolower
+## <a name="ctypedo_tolower"></a><a name="do_tolower"></a> CType::d o_tolower
 
 Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na małe litery.
 
@@ -353,7 +354,7 @@ Druga funkcja szablonu chronionego elementu członkowskiego zastępuje każdy el
 
 Zobacz przykład dla [ToLower](#tolower), który wywołuje `do_tolower` .
 
-## <a name="ctypedo_toupper"></a><a name="do_toupper"></a>CType::d o_toupper
+## <a name="ctypedo_toupper"></a><a name="do_toupper"></a> CType::d o_toupper
 
 Funkcja wirtualna wywoływana w celu konwersji znaku lub zakresu znaków na ich wielkie litery.
 
@@ -388,7 +389,7 @@ Druga funkcja szablonu chronionego elementu członkowskiego zastępuje każdy el
 
 Zobacz przykład dla [ToUpper](#toupper), który wywołuje `do_toupper` .
 
-## <a name="ctypedo_widen"></a><a name="do_widen"></a>CType::d o_widen
+## <a name="ctypedo_widen"></a><a name="do_widen"></a> CType::d o_widen
 
 Funkcja wirtualna wywoływana w celu przekonwertowania znaku typu **`char`** w natywnym zestawie znaków do odpowiedniego znaku typu `CharType` używanego przez ustawienia regionalne.
 
@@ -429,7 +430,7 @@ Druga funkcja szablonu chronionego elementu członkowskiego `dest` przechowuje `
 
 Zobacz przykład dla [rozszerzenia](#widen), które wywołuje `do_widen` .
 
-## <a name="ctypeis"></a><a name="is"></a>CType:: is
+## <a name="ctypeis"></a><a name="is"></a> CType:: is
 
 Testuje, czy pojedynczy znak ma określony atrybut, lub klasyfikuje atrybuty każdego znaku w zakresie i zapisuje je w tablicy.
 
@@ -508,7 +509,7 @@ int main() {
 }
 ```
 
-## <a name="ctypenarrow"></a><a name="narrow"></a>CType:: Narrow
+## <a name="ctypenarrow"></a><a name="narrow"></a> CType:: Narrow
 
 Konwertuje znaki typu `CharType` używane przez ustawienia regionalne do odpowiednich znaków typu **`char`** w natywnym zestawie znaków.
 
@@ -575,7 +576,7 @@ int main( )
 Xhello everyone
 ```
 
-## <a name="ctypescan_is"></a><a name="scan_is"></a>CType:: scan_is
+## <a name="ctypescan_is"></a><a name="scan_is"></a> CType:: scan_is
 
 Lokalizuje pierwszy znak w zakresie, który pasuje do określonej maski.
 
@@ -631,7 +632,7 @@ int main( )
 The first punctuation is "," at position: 5
 ```
 
-## <a name="ctypescan_not"></a><a name="scan_not"></a>CType:: scan_not
+## <a name="ctypescan_not"></a><a name="scan_not"></a> CType:: scan_not
 
 Lokalizuje pierwszy znak w zakresie, który nie pasuje do określonej maski.
 
@@ -687,7 +688,7 @@ int main( )
 First nonalpha character is "," at position: 5
 ```
 
-## <a name="ctypetolower"></a><a name="tolower"></a>CType:: ToLower
+## <a name="ctypetolower"></a><a name="tolower"></a> CType:: ToLower
 
 Konwertuje znak lub zakres znaków na małe litery.
 
@@ -743,7 +744,7 @@ int main( )
 The lowercase string is: hello, my name is john
 ```
 
-## <a name="ctypetoupper"></a><a name="toupper"></a>CType:: ToUpper
+## <a name="ctypetoupper"></a><a name="toupper"></a> CType:: ToUpper
 
 Konwertuje znak lub zakres znaków na wielkie litery.
 
@@ -798,7 +799,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN
 ```
 
-## <a name="ctypewiden"></a><a name="widen"></a>CType:: rozszerzając
+## <a name="ctypewiden"></a><a name="widen"></a> CType:: rozszerzając
 
 Konwertuje znak typu **`char`** w macierzystym zestawie znaków do odpowiedniego znaku typu `CharType` używanego przez ustawienia regionalne.
 

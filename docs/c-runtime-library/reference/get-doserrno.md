@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_doserrno'
 title: _get_doserrno
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-ms.openlocfilehash: 7b889bccc0b1f1fd99a9a0526bbfb42a2e520970
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ecd2dd79fa50cc8b723556399c7a637ce59e8461
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341467"
 ---
 # <a name="_get_doserrno"></a>_get_doserrno
 
@@ -62,7 +63,7 @@ Po rozpoczęciu uruchamiania procesu, **_doserrno** makro globalne ma wartość 
 
 Zalecamy [_get_errno](get-errno.md) zamiast **_get_doserrno** dla przenośnych kodów błędów.
 
-Możliwe wartości **_doserrno** są zdefiniowane w \<> errno. h.
+Możliwe wartości **_doserrno** są zdefiniowane w \<errno.h> .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -70,7 +71,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_get_doserrno**|\<STDLIB. h>, \<cstdlib> (C++)|\<errno. h>, \<cerrno> (C++)|
+|**_get_doserrno**|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
 
 **_get_doserrno** to rozszerzenie firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

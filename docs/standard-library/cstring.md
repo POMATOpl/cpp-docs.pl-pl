@@ -1,5 +1,6 @@
 ---
-title: '&lt;cstring&gt;'
+description: 'Dowiedz się więcej na temat: &lt; CString&gt;'
+title: '&lt;CString&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <cstring>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - <cstring> header
 - cstring header
 ms.assetid: d665429f-5d39-4712-9c0a-68c8abcc3536
-ms.openlocfilehash: 0aa92bc366e6f669c01932c2b44413cfc587c16d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f357ca9606b3ba76aacd7322c019156ffb15cb35
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233191"
 ---
-# <a name="ltcstringgt"></a>&lt;cstring&gt;
+# <a name="ltcstringgt"></a>&lt;CString&gt;
 
-Zawiera ciąg nagłówka \<standardowej biblioteki C. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
+Zawiera nagłówek standardowej biblioteki C \<string.h> i dodaje skojarzone nazwy do `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +27,7 @@ Zawiera ciąg nagłówka \<standardowej biblioteki C. h > i dodaje skojarzone na
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
+Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="constants"></a>Stałe
 
@@ -70,8 +71,8 @@ char* strerror(int errnum);
 size_t strlen(const char* s);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

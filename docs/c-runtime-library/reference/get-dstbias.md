@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_dstbias'
 title: _get_dstbias
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 00c5cef0e7c1e5e79cbcc2ce37a13e3f56d27029
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341454"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -73,7 +74,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_dstbias**|\<> godziny. h|
+|**_get_dstbias**|\<time.h>|
 
 Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: CTime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64'
 title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: 7dc87f417db93f8ad0d90de1270c19997669fb7c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e50e5dca470b7e764a7b71a596d4c253d023083b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329308"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -93,7 +94,7 @@ Wskaźnik do wyniku ciągu znaków. **Wartość null** zostanie zwrócona, jeśl
 
 - Jeśli używasz **_ctime64** lub **_wctime64** i *sourceTime* reprezentuje datę późniejszą niż 23:59:59, 31 grudnia 3000, UTC.
 
-**CTime** to wbudowana funkcja, która oblicza **_ctime64** i **time_t** jest równoważna **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t**32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. To spowoduje, że **CTime** będzie obliczać **_ctime32**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
+**CTime** to wbudowana funkcja, która oblicza **_ctime64** i **time_t** jest równoważna **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t** 32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. To spowoduje, że **CTime** będzie obliczać **_ctime32**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -107,9 +108,9 @@ Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Znak 
 
 Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Zapoznaj się z funkcjami [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)i [localtime](localtime-localtime32-localtime64.md) , aby uzyskać informacje dotyczące konfigurowania czasu lokalnego i funkcji [_tzset](tzset.md) w celu uzyskania szczegółowych informacji na temat definiowania środowiska strefy czasowej i zmiennych globalnych.
 
-Wywołanie **CTime** modyfikuje pojedynczy statycznie przydzielonego bufora używany przez funkcje **gmtime** i **localtime** . Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania. **CTime** udostępnia bufor statyczny za pomocą funkcji **asctime** . W rezultacie wywołanie **CTime** niszczy wyniki dowolnego poprzedniego wywołania do **asctime**, **localtime**lub **gmtime**.
+Wywołanie **CTime** modyfikuje pojedynczy statycznie przydzielonego bufora używany przez funkcje **gmtime** i **localtime** . Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania. **CTime** udostępnia bufor statyczny za pomocą funkcji **asctime** . W rezultacie wywołanie **CTime** niszczy wyniki dowolnego poprzedniego wywołania do **asctime**, **localtime** lub **gmtime**.
 
-**_wctime** i **_wctime64** są wersjami znaków **CTime** i **_ctime64**; Zwracanie wskaźnika do ciągu o szerokim znaku. W przeciwnym razie **_ctime64**, **_wctime**i **_wctime64** zachowują się identycznie w **CTime**.
+**_wctime** i **_wctime64** są wersjami znaków **CTime** i **_ctime64**; Zwracanie wskaźnika do ciągu o szerokim znaku. W przeciwnym razie **_ctime64**, **_wctime** i **_wctime64** zachowują się identycznie w **CTime**.
 
 Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *sourceTime* jest wskaźnikiem typu null lub jeśli wartość *sourceTime* jest ujemna, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają **wartość null** i ustawiają **errno** na **EINVAL**.
 
@@ -127,12 +128,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**CTime**|\<> godziny. h|
-|**_ctime32**|\<> godziny. h|
-|**_ctime64**|\<> godziny. h|
-|**_wctime**|\<Time. h> lub \<WCHAR. h>|
-|**_wctime32**|\<Time. h> lub \<WCHAR. h>|
-|**_wctime64**|\<Time. h> lub \<WCHAR. h>|
+|**CTime**|\<time.h>|
+|**_ctime32**|\<time.h>|
+|**_ctime64**|\<time.h>|
+|**_wctime**|\<time.h> lub \<wchar.h>|
+|**_wctime32**|\<time.h> lub \<wchar.h>|
+|**_wctime64**|\<time.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -163,7 +164,7 @@ int main( void )
 The time is Wed Feb 13 16:04:43 2002
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

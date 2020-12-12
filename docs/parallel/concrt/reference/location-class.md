@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie Location
 title: location — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ae6ce0ac58d504f1fb99f5c38db04bb402dc31c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335801"
 ---
 # <a name="location-class"></a>location — Klasa
 
@@ -61,7 +62,7 @@ class location;
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="location"></a><a name="dtor"></a>~ Lokalizacja
+## <a name="location"></a><a name="dtor"></a> ~ Lokalizacja
 
 Niszczy `location` obiekt.
 
@@ -69,7 +70,7 @@ Niszczy `location` obiekt.
 ~location();
 ```
 
-## <a name="current"></a><a name="current"></a>obecne
+## <a name="current"></a><a name="current"></a> obecne
 
 Zwraca `location` obiekt reprezentujący najbardziej charakterystyczne miejsce wykonywane przez wątek wywołujący.
 
@@ -81,7 +82,7 @@ static location __cdecl current();
 
 Lokalizacja reprezentująca najbardziej charakterystyczne miejsce wykonywane przez wątek wywołujący.
 
-## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a> from_numa_node
 
 Zwraca `location` obiekt, który reprezentuje dany węzeł NUMA.
 
@@ -98,7 +99,7 @@ Numer węzła NUMA służący do konstruowania lokalizacji.
 
 Lokalizacja reprezentująca węzeł NUMA określony przez `_NumaNodeNumber` parametr.
 
-## <a name="location"></a><a name="ctor"></a>przeniesienie
+## <a name="location"></a><a name="ctor"></a> przeniesienie
 
 Konstruuje `location` obiekt.
 
@@ -132,7 +133,7 @@ Obowiązkowe Wskaźnik powiązania.
 
 Domyślna lokalizacja skonstruowana reprezentuje system jako całość.
 
-## <a name="operator"></a><a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a> operator! =
 
 Określa, czy dwa `location` obiekty reprezentują różne lokalizacje.
 
@@ -149,7 +150,7 @@ Argument operacji `location` .
 
 **`true`** Jeśli dwie lokalizacje są różne, **`false`** w przeciwnym razie.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 Przypisuje do tego zawartość innego `location` obiektu.
 
@@ -164,7 +165,7 @@ Obiekt źródłowy `location` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operator = =
 
 Określa, czy dwa `location` obiekty reprezentują tę samą lokalizację.
 
@@ -181,6 +182,6 @@ Argument operacji `location` .
 
 **`true`** Jeśli dwie lokalizacje są identyczne i **`false`** w przeciwnym razie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

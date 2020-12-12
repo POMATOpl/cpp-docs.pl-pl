@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: implementowanie interfejsu'
 title: Implementowanie interfejsu
 ms.date: 11/12/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 202471577ec72f4cc28fa5cdceb3566d60e04653
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313219"
 ---
 # <a name="implement-an-interface"></a>Implementowanie interfejsu
 
@@ -59,7 +60,7 @@ Aby zapoznać się z omówieniem interfejsów i implementacji, zobacz [interfejs
   |Opcja|Opis|
   |------------|-----------------|
   |**Project**|Biblioteka typów jest częścią projektu.|
-  |**Registry**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowane biblioteki typów są wymienione w **dostępnych bibliotekach typów**.|
+  |**Rejestr**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowane biblioteki typów są wymienione w **dostępnych bibliotekach typów**.|
   |**Plik**|Biblioteka typów nie musi być zarejestrowana w systemie, ale jest przechowywana w pliku. Podaj lokalizację pliku w **lokalizacji**.|
 
 - **Dostępne biblioteki typów**
@@ -89,4 +90,4 @@ Aby zapoznać się z omówieniem interfejsów i implementacji, zobacz [interfejs
   Wyświetla nazwy interfejsów, które zostały wybrane do zaimplementowania w obiekcie.
 
   > [!NOTE]
-  > Jeśli dołączysz więcej niż jeden interfejs, który `IDispatch`pochodzi z, lub jeśli spróbujesz zaimplementować interfejs pochodzący z innego interfejsu, który jest już w klasie, należy odróżnić wpisy COM_MAP. Aby uzyskać więcej informacji, zobacz [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2).
+  > Jeśli dołączysz więcej niż jeden interfejs, który pochodzi z `IDispatch` lub jeśli spróbujesz zaimplementować interfejs pochodzący z innego interfejsu, który znajduje się już w klasie, należy odróżnić wpisy COM_MAP. Aby uzyskać więcej informacji, zobacz [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2).
