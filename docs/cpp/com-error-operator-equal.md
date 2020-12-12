@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _com_error:: operator ='
 title: _com_error::operator =
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error [C++]
 ms.assetid: b9cc4094-d055-450c-b45a-0a95317488f8
-ms.openlocfilehash: 7f24076a0286da910378d6633f483e6f050858b2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c27fcd612fcf2fd67b09ac1217286edd69e1557
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295799"
 ---
 # <a name="_com_erroroperator-"></a>_com_error::operator =
 
 **Specyficzne dla firmy Microsoft**
 
-Przypisuje istniejący obiekt `_com_error` do innego.
+Przypisuje istniejący `_com_error` obiekt do innego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,4 +37,4 @@ Obiekt `_com_error`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[_com_error, klasa](../cpp/com-error-class.md)
+[Klasa _com_error](../cpp/com-error-class.md)

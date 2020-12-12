@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z używanie TCHAR. H typy danych z kodem _MBCS'
 title: Używanie typów danych TCHAR.H z kodem _MBCS
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4672ba210e0df0af1a4f4ee106d31cc978bdf2fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306589"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>Używanie typów danych TCHAR.H z kodem _MBCS
 
@@ -61,8 +62,8 @@ Poniżej przedstawiono trzy rozwiązania uniemożliwiające konflikt tego typu (
     #define _tcschr _mbschr
     ```
 
-   Po podniesieniu tego podejścia należy zachować ostrożność, aby zapewnić użycie odpowiednich typów danych dla argumentów ciągów i wartości zwracanych przez ciąg. Można użyć rzutowania typu, aby zapewnić odpowiedni typ dopasowania lub użyć `_TXCHAR` typu danych rodzajowych. `_TXCHAR`mapuje do typu **`char`** w kodzie SBCS, ale mapuje do typu **`unsigned char`** w kodzie MBCS. Aby uzyskać więcej informacji na temat makr tekstu ogólnego, zobacz [Mapowanie tekstu ogólnego](../c-runtime-library/generic-text-mappings.md) w *dokumentacji biblioteki wykonawczej*.
+   Po podniesieniu tego podejścia należy zachować ostrożność, aby zapewnić użycie odpowiednich typów danych dla argumentów ciągów i wartości zwracanych przez ciąg. Można użyć rzutowania typu, aby zapewnić odpowiedni typ dopasowania lub użyć `_TXCHAR` typu danych rodzajowych. `_TXCHAR` mapuje do typu **`char`** w kodzie SBCS, ale mapuje do typu **`unsigned char`** w kodzie MBCS. Aby uzyskać więcej informacji na temat makr tekstu ogólnego, zobacz [Mapowanie tekstu ogólnego](../c-runtime-library/generic-text-mappings.md) w *dokumentacji biblioteki wykonawczej*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Mapowania tekstu ogólnego w używanie TCHAR. h](../text/generic-text-mappings-in-tchar-h.md)

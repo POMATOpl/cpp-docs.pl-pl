@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4572'
 title: Ostrzeżenie kompilatora (poziom 1) C4572
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
-ms.openlocfilehash: 4a1931032f6d1f8db0679dd782ff2f0ce7ff428c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab447bc7ef5d702599b1583ae94ac0fa94d29a14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332234"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>Ostrzeżenie kompilatora (poziom 1) C4572
 
 Atrybut [ParamArray] jest przestarzały z opcją/CLR, użyj "..." INSTEAD
 
-Użyto przestarzałego stylu określającego listę argumentów zmiennych. Podczas kompilowania dla środowiska CLR należy użyć składni wielokropka zamiast <xref:System.ParamArrayAttribute>. Aby uzyskać więcej informacji, zobacz [listę zmiennych argumentów (...)C++(/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Użyto przestarzałego stylu określającego listę argumentów zmiennych. Podczas kompilowania dla środowiska CLR należy użyć składni wielokropka zamiast <xref:System.ParamArrayAttribute> . Aby uzyskać więcej informacji, zobacz [listę zmiennych argumentów (...) (C++/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

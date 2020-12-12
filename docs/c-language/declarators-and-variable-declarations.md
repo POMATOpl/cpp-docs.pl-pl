@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Deklaratory i deklaracje zmiennych'
 title: Deklaratory i deklaracje zmiennych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 920c44e3345c6143489815de55ea81470e46d279
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306420"
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklaratory i deklaracje zmiennych
 
@@ -20,7 +21,7 @@ W pozostałej części tej sekcji opisano formę i znaczenie deklaracji typów z
 |Typ zmiennej|Opis|
 |----------------------|-----------------|
 |[Zmienne proste](../c-language/simple-variable-declarations.md)|Zmienne pojedynczej wartości z typem całkowitym lub zmiennoprzecinkowym|
-|[Macierze](../c-language/array-declarations.md)|Zmienne złożone z kolekcji elementów tego samego typu|
+|[Tablice](../c-language/array-declarations.md)|Zmienne złożone z kolekcji elementów tego samego typu|
 |[Wskaźniki](../c-language/pointer-declarations.md)|Zmienne wskazujące na inne zmienne i zawierają lokalizacje zmiennych (w postaci adresów), a nie wartości|
 |[Zmienne wyliczenia](../c-language/c-enumeration-declarations.md)|Proste zmienne z typem całkowitym zawierającym jedną wartość z zestawu nazwanych stałych całkowitych|
 |[Struktury](../c-language/structure-declarations.md)|Zmienne złożone z kolekcji wartości, które mogą mieć różne typy|
@@ -45,18 +46,18 @@ Używasz Deklaratory do deklarowania tablic wartości, wskaźników do wartości
 ## <a name="syntax"></a>Składnia
 
 *deklarator*:<br/>
-&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
+&nbsp;&nbsp;<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
 *deklarator Direct*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(**  *deklarator*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***[***wybór wyrażenia stałego*<sub>opt</sub> **]**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***[***wybór wyrażenia stałego*<sub></sub> **]**    <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator*  **(**  *Typ parametru-list*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***opt z listą identyfikatorów*<sub>opt</sub> **)**    
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***opt z listą identyfikatorów*<sub></sub> **)**    
 
 *wskaźnik*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>wybór</sub> listy<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>opt</sub> *wskaźnik* wyboru listy
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub></sub> *wskaźnik* wyboru listy
 
 *kwalifikator typu-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*kwalifikator typu*<br/>
@@ -85,6 +86,6 @@ Kompilator języka Microsoft C nie ogranicza liczby deklaratory, która może mo
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

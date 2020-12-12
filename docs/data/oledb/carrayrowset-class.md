@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CArrayRowset'
 title: CArrayRowset — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 929f8744671cecc54e7c192d4f3ddc17e27287cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213185"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset — Klasa
 
@@ -78,7 +79,7 @@ Typ klasy akcesora, która ma być używana przez zestaw wierszy.
 | Nazwa | Opis |
 |--|--|
 | [CArrayRowset](#carrayrowset) | Konstruktor. |
-| [Snapshot](#snapshot) | Odczytuje cały zestaw wierszy do pamięci. |
+| [Zdjęcie](#snapshot) | Odczytuje cały zestaw wierszy do pamięci. |
 
 ### <a name="operators"></a>Operatory
 

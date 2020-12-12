@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: module:: GenericReleaseNotifier, Klasa'
 title: Module::GenericReleaseNotifier — Klasa
 ms.date: 09/17/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 7437f4e1f6874d4c708780a146e1761ac6d98305
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd82da7c1b6b9a77c68b6d451bfa6dac31f51180
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186379"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier — Klasa
 
@@ -68,7 +69,7 @@ Nazwa                                                                          |
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>Module:: GenericReleaseNotifier:: callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a> Module:: GenericReleaseNotifier:: callback_
 
 Przechowuje procedurę obsługi zdarzeń lambda, Funktor lub wskaźnika do funkcji skojarzoną z bieżącym `Module::GenericReleaseNotifier` obiektem.
 
@@ -76,7 +77,7 @@ Przechowuje procedurę obsługi zdarzeń lambda, Funktor lub wskaźnika do funkc
 T callback_;
 ```
 
-## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>Module:: GenericReleaseNotifier:: GenericReleaseNotifier
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a> Module:: GenericReleaseNotifier:: GenericReleaseNotifier
 
 Inicjuje nowe wystąpienie klasy `Module::GenericReleaseNotifier`.
 
@@ -95,7 +96,7 @@ Procedura obsługi zdarzeń lambda, Funktor lub wskaźnika do funkcji, która mo
 *Usuwanie*<br/>
 Określ **`true`** , aby włączyć wywoływanie źródłowego [modułu:: ReleaseNotifier:: Release ()](module-releasenotifier-class.md#releasenotifier-release) ; w przeciwnym razie Określ **`false`** .
 
-## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>Module:: GenericReleaseNotifier:: Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a> Module:: GenericReleaseNotifier:: Invoke
 
 Wywołuje procedurę obsługi zdarzeń skojarzoną z bieżącym `Module::GenericReleaseNotifier` obiektem.
 

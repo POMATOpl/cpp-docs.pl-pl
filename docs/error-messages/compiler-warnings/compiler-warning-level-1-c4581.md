@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4581'
 title: Ostrzeżenie kompilatora (poziom 1) C4581
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 491121bc236c54ce5b74c76abfa6a650ff7a99ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fffa3f7ea74cb17eae7fe4af2575e1d574084fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332218"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Ostrzeżenie kompilatora (poziom 1) C4581
 
 przestarzałe zachowanie: element "" ciąg1 "" został zastąpiony przez "ciąg2" atrybutem procesu
 
-Ten błąd może być wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: sprawdzanie parametrów wizualizacji C++ .
+Ten błąd może być wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: sprawdzanie parametrów dla Visual C++ atrybutów.
 
 W poprzednich wersjach wartości atrybutów zostały zaakceptowane niezależnie od tego, czy zostały ujęte w cudzysłów. Jeśli wartość jest wyliczeniem, nie może być ujęta w cudzysłów.
 

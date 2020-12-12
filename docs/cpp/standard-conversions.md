@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Konwersje standardowe'
 title: Konwersje standardowe
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: cb4960c2f981b99fbc798098357a0ac65e8ddaa6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cfebc861fca1ccf8119c6055b37f112df7d4dca0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318042"
 ---
 # <a name="standard-conversions"></a>Konwersje standardowe
 
@@ -57,7 +58,7 @@ Wynik konwersji jest wartością l, tylko wtedy, gdy tworzy typ referencyjny. Na
 
 Obiekty typu całkowitego mogą być konwertowane na inne szerszego typu całkowitego, czyli typu, który może reprezentować większy zestaw wartości. Ten rozszerzony typ konwersji nazywa się *promocją integralną*. Dzięki promocji typu całkowitego można użyć następujących typów w wyrażeniu, w którym można wykorzystać inny typ całkowity:
 
-- Obiekty, literały i stałe typu **`char`** i**`short int`**
+- Obiekty, literały i stałe typu **`char`** i **`short int`**
 
 - Typów wyliczeniowych
 
@@ -69,11 +70,11 @@ Promocje w języku C++ są "z zachowaniem wartości", ponieważ wartość po pod
 
 Zachowujące wartość promocje i promocje, które zachowują znak zazwyczaj generują te same wyniki. Jednak mogą generować różne wyniki, jeśli podwyższony obiekt jest wyświetlany jako:
 
-- Operand `/` ,,, `%` , `/=` , `%=` , `<` `<=` `>` lub`>=`
+- Operand `/` ,,, `%` , `/=` , `%=` , `<` `<=` `>` lub `>=`
 
    Operatory te opierają się na znaku w celu określenia wyniku. Zachowywanie wartości i oszczędność z zachowaniem konta daje różne wyniki w przypadku zastosowania do tych operandów.
 
-- Lewy operand `>>` lub`>>=`
+- Lewy operand `>>` lub `>>=`
 
    Te operatory traktują podpisane i niepodpisane liczby inaczej w operacji przesunięcia. W przypadku cyfr ze znakiem operacja przesunięcia w prawo propaguje bit znaku do pozycji opuszczone bit, natomiast pozycje bitu opuszczone są puste od zera w niepodpisanych ilościach.
 
@@ -139,7 +140,7 @@ Wartość maksymalna do zaprezentowania przez typ **`float`** to 3.402823466 E38
 
 Niektóre wyrażenia mogą spowodować przekonwertowanie obiektów typu zmiennoprzecinkowego na typy całkowite lub odwrotnie. Gdy obiekt typu całkowitego jest konwertowany na typ zmiennoprzecinkowy, a oryginalna wartość nie jest możliwa do zaprezentowania dokładnie, wynikiem jest kolejna wyższa lub Następna Dolna wartość.
 
-Gdy obiekt typu zmiennoprzecinkowego jest konwertowany na typ całkowity, część ułamkowa jest *obcinana*lub zaokrąglana w kierunku zera. Liczba, na przykład 1,3, jest konwertowana na 1, a-1,3 jest konwertowana na-1. Jeśli wartość obcięta jest większa niż największa wartość, lub mniejsza niż najmniejsza wartość, wynik jest niezdefiniowany.
+Gdy obiekt typu zmiennoprzecinkowego jest konwertowany na typ całkowity, część ułamkowa jest *obcinana* lub zaokrąglana w kierunku zera. Liczba, na przykład 1,3, jest konwertowana na 1, a-1,3 jest konwertowana na-1. Jeśli wartość obcięta jest większa niż największa wartość, lub mniejsza niż najmniejsza wartość, wynik jest niezdefiniowany.
 
 ## <a name="arithmetic-conversions"></a>Konwersje arytmetyczne
 
@@ -190,21 +191,21 @@ Pierwszym przypadkiem jest to, że określona klasa bazowa jest dostępna, a kon
 Określa, czy klasa bazowa jest dostępna, zależy od rodzaju dziedziczenia używanego do wyprowadzania. Rozważ dziedziczenie zilustrowane na poniższej ilustracji.
 
 ![Wykres dziedziczenia pokazujący dostępność klasy podstawowej&#45;](../cpp/media/vc38xa1.gif "Wykres dziedziczenia pokazujący dostępność klasy podstawowej&#45;") <br/>
-Wykres dziedziczenia dla zilustrowania dostępności klasy podstawowej
+Wykres dziedziczenia dla ilustracji Base-Class ułatwienia dostępu
 
 W poniższej tabeli przedstawiono dostępność klasy podstawowej dla sytuacji zilustrowanej na rysunku.
 
 |Typ funkcji|Pochodnych|Konwersja z<br /><br /> B * na \* prawną?|
 |----------------------|----------------|-------------------------------------------|
-|Funkcja zewnętrzna (nieobjęta zakresem klasy)|Prywatne|Nie|
+|Funkcja zewnętrzna (nieobjęta zakresem klasy)|Prywatny|Nie|
 ||Protected|Nie|
-||Publiczny|Tak|
-|B funkcja członkowska (w zakresie B)|Prywatne|Tak|
+||Publiczne|Tak|
+|B funkcja członkowska (w zakresie B)|Prywatny|Tak|
 ||Protected|Tak|
-||Publiczny|Tak|
-|Funkcja członkowska języka c (w zakresie języka C)|Prywatne|Nie|
+||Publiczne|Tak|
+|Funkcja członkowska języka c (w zakresie języka C)|Prywatny|Nie|
 ||Protected|Tak|
-||Publiczny|Tak|
+||Publiczne|Tak|
 
 Drugi przypadek, w którym wskaźnik do klasy może być konwertowany na wskaźnik do klasy bazowej, jest używany w przypadku jawnej konwersji typu. Aby uzyskać więcej informacji na temat jawnych konwersji typów, zobacz [operator Explicit konwersji typu](explicit-type-conversion-operator-parens.md).
 
@@ -327,6 +328,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

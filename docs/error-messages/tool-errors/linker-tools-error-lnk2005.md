@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK2005'
 title: Błąd narzędzi konsolidatora LNK2005
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-ms.openlocfilehash: 278f05b8338ac4238d6862fd7b9bd7744f6c8ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6de300bc731104f51056911515d0cc7a95e05f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338497"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Błąd narzędzi konsolidatora LNK2005
 
@@ -93,7 +94,7 @@ Poniżej przedstawiono kilka typowych przyczyn tego błędu.
 
 - Ten błąd może wystąpić w przypadku połączenia więcej niż jednej wersji biblioteki standardowej lub CRT. Na przykład, jeśli spróbujesz połączyć zarówno bibliotekę sieci sprzedaży detalicznej, jak i debugowania, lub zarówno statyczną, jak i dynamiczną wersję biblioteki lub dwie różne wersje biblioteki standardowej do pliku wykonywalnego, ten błąd może być raportowany wiele razy. Aby rozwiązać ten problem, Usuń wszystkie kopie oprócz jednej biblioteki z polecenia link. Nie zalecamy używania bibliotek detalicznych i debugowania ani różnych wersji biblioteki w tym samym pliku wykonywalnym.
 
-   Aby określić, że konsolidator ma używać bibliotek innych niż domyślne, w wierszu polecenia określ biblioteki, które mają być używane, i użyj opcji [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) , aby wyłączyć domyślne biblioteki. W środowisku IDE Dodaj odwołania do projektu, aby określić biblioteki, które mają być używane, a następnie otwórz okno dialogowe **strony właściwości** dla projektu, a następnie na stronie właściwości **konsolidatora**, **wprowadź** wartość **Zignoruj wszystkie biblioteki domyślne**lub **Ignoruj określone właściwości bibliotek** domyślnych, aby wyłączyć domyślne biblioteki.
+   Aby określić, że konsolidator ma używać bibliotek innych niż domyślne, w wierszu polecenia określ biblioteki, które mają być używane, i użyj opcji [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) , aby wyłączyć domyślne biblioteki. W środowisku IDE Dodaj odwołania do projektu, aby określić biblioteki, które mają być używane, a następnie otwórz okno dialogowe **strony właściwości** dla projektu, a następnie na stronie właściwości **konsolidatora**, **wprowadź** wartość **Zignoruj wszystkie biblioteki domyślne** lub **Ignoruj określone właściwości bibliotek** domyślnych, aby wyłączyć domyślne biblioteki.
 
 - Ten błąd może wystąpić, jeśli podczas korzystania z bibliotek statycznych i dynamicznych używasz opcji [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . Na przykład ten błąd może wystąpić, jeśli utworzysz bibliotekę DLL do użycia w pliku wykonywalnym, który łączy się ze statyczną CRT. Aby rozwiązać ten problem, należy użyć tylko bibliotek statycznych lub tylko bibliotek dynamicznych dla całego pliku wykonywalnego i dla wszystkich bibliotek, które są kompilowane do użycia w pliku wykonywalnym.
 

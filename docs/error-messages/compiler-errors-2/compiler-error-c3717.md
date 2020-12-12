@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3717'
 title: Błąd kompilatora C3717
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3717
 ms.assetid: ae4fceb1-2583-4577-b2f1-40971a017055
-ms.openlocfilehash: cd9a97f1b0d9c9eecfa6a42f735f21a42fd846e9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fecd417af1eceb40ef8b8e48fda40b3ec5e5b36a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189434"
 ---
 # <a name="compiler-error-c3717"></a>Błąd kompilatora C3717
 
 "Metoda": metoda, która wyzwala zdarzenia nie może być zdefiniowana
 
-Zadeklarowano metodę zdarzenia, która zawiera implementację. Deklaracja metody [__event](../../cpp/event.md) nie może mieć definicji. Aby naprawić ten błąd, upewnij się, że żadne deklaracje metody zdarzeń nie mają definicji. Na przykład, w poniższym kodzie, Usuń treść funkcji z deklaracji `event1`, jak wskazano w komentarzach.
+Zadeklarowano metodę zdarzenia, która zawiera implementację. Deklaracja metody [__event](../../cpp/event.md) nie może mieć definicji. Aby naprawić ten błąd, upewnij się, że żadne deklaracje metody zdarzeń nie mają definicji. Na przykład, w poniższym kodzie, Usuń treść funkcji z `event1` deklaracji, jak wskazano w komentarzach.
 
 Poniższy przykład generuje C3717:
 

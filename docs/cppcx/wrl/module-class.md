@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie modułu
 title: Module — Klasa
 ms.date: 10/18/2018
 ms.topic: reference
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: f7930247c979c111a7f4798e35ebe7aa95209f37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00063bca4d35ca2d7eab09ad9d03d57dcdc85593
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186392"
 ---
 # <a name="module-class"></a>Module — Klasa
 
@@ -148,7 +149,7 @@ Nazwa                                                                   | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="modulemodule"></a><a name="tilde-module"></a>Module:: ~ — moduł
+## <a name="modulemodule"></a><a name="tilde-module"></a> Module:: ~ — moduł
 
 Deinicjalizuje bieżące wystąpienie `Module` klasy.
 
@@ -156,7 +157,7 @@ Deinicjalizuje bieżące wystąpienie `Module` klasy.
 virtual ~Module();
 ```
 
-## <a name="modulecreate"></a><a name="create"></a>Module:: Create
+## <a name="modulecreate"></a><a name="create"></a> Module:: Create
 
 Tworzy wystąpienie modułu.
 
@@ -181,7 +182,7 @@ Typ modułu.
 *wywołania zwrotnego*<br/>
 Wywoływana, gdy jest wydano ostatni obiekt wystąpienia modułu.
 
-*object*<br/>
+*Stream*<br/>
 Parametry *obiektu* i *metody* są używane w połączeniu. Wskazuje ostatni obiekt wystąpienia po wydaniu ostatniego obiektu wystąpienia w module.
 
 *Method*<br/>
@@ -191,7 +192,7 @@ Parametry *obiektu* i *metody* są używane w połączeniu. Wskazuje metodę ost
 
 Odwołanie do modułu.
 
-## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>Moduł::D ecrementObjectCount
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a> Moduł::D ecrementObjectCount
 
 Zmniejsza liczbę obiektów śledzonych przez moduł.
 
@@ -203,7 +204,7 @@ virtual long DecrementObjectCount();
 
 Liczba przed operacją zmniejszania.
 
-## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>Module:: GetActivationFactory —
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a> Module:: GetActivationFactory —
 
 Pobiera fabrykę aktywacji dla modułu.
 
@@ -230,7 +231,7 @@ Nazwa podzestawu fabryk klas w bieżącym module. Określ nazwę serwera używan
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie HRESULT zwrócony przez GetActivationFactory —.
 
-## <a name="modulegetclassobject"></a><a name="getclassobject"></a>Module:: GetClassObject
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a> Module:: GetClassObject
 
 Pobiera kolejki pamięć podręczną fabryk klas.
 
@@ -263,7 +264,7 @@ Nazwa serwera określona w parametrze `ActivatableClassWithFactory` , `Activatab
 
 Tej metody należy używać tylko dla modelu COM, a nie środowisko wykonawcze systemu Windows. Ta metoda ujawnia tylko `IClassFactory` metody.
 
-## <a name="modulegetmodule"></a><a name="getmodule"></a>Module:: GetModule
+## <a name="modulegetmodule"></a><a name="getmodule"></a> Module:: GetModule
 
 Tworzy wystąpienie modułu.
 
@@ -276,7 +277,7 @@ WRL_NOTHROW static Module& GetModule();
 
 Odwołanie do modułu.
 
-## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>Module:: Getobjectcount —
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a> Module:: Getobjectcount —
 
 Pobiera liczbę obiektów zarządzanych przez ten moduł.
 
@@ -288,7 +289,7 @@ virtual long GetObjectCount() const;
 
 Bieżąca liczba obiektów zarządzanych przez ten moduł.
 
-## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>Module:: IncrementObjectCount —
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a> Module:: IncrementObjectCount —
 
 Zwiększa liczbę obiektów śledzonych przez moduł.
 
@@ -300,7 +301,7 @@ virtual long IncrementObjectCount();
 
 Liczba przed operacją przyrostu.
 
-## <a name="modulemodule"></a><a name="module"></a>Module:: module
+## <a name="modulemodule"></a><a name="module"></a> Module:: module
 
 Inicjuje nowe wystąpienie klasy `Module`.
 
@@ -312,7 +313,7 @@ Module();
 
 Ten konstruktor jest chroniony i nie można go wywołać za pomocą **`new`** słowa kluczowego. Zamiast tego wywołaj dowolny [moduł:: GetModule](#getmodule) lub [module:: Create](#create).
 
-## <a name="moduleobjectcount_"></a><a name="objectcount"></a>Module:: objectCount_
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a> Module:: objectCount_
 
 Śledzi liczbę klas, które zostały utworzone za pomocą funkcji [Make](make-function.md) .
 
@@ -320,7 +321,7 @@ Ten konstruktor jest chroniony i nie można go wywołać za pomocą **`new`** s�
 volatile long objectCount_;
 ```
 
-## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>Module:: Registercomobject —
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a> Module:: Registercomobject —
 
 Rejestruje jeden lub więcej obiektów COM, tak aby inne aplikacje mogły się z nimi łączyć.
 
@@ -360,7 +361,7 @@ Obiekty COM są rejestrowane za pomocą modułu wyliczającego CLSCTX_LOCAL_SERV
 
 Typ połączenia z zarejestrowanymi obiektami jest określany przez kombinację bieżącego parametru szablonu *comflag* oraz modułu wyliczającego REGCLS_SUSPENDED wyliczenia REGCLS.
 
-## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>Module:: Registerobjects —
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a> Module:: Registerobjects —
 
 Rejestruje obiekty COM lub środowisko wykonawcze systemu Windows, aby inne aplikacje mogły się z nimi łączyć.
 
@@ -382,7 +383,7 @@ Nazwa serwera, który utworzył obiekty.
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT wskazuje przyczynę niepowodzenia operacji.
 
-## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>Module:: Registerwinrtobject —
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a> Module:: Registerwinrtobject —
 
 Rejestruje jeden lub więcej obiektów środowisko wykonawcze systemu Windows, tak aby inne aplikacje mogły się z nimi łączyć.
 
@@ -411,7 +412,7 @@ Liczba obiektów do zarejestrowania.
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie błąd HRESULT, taki jak CO_E_OBJISREG, który wskazuje przyczynę niepowodzenia operacji.
 
-## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>Module:: releaseNotifier_
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a> Module:: releaseNotifier_
 
 Przechowuje wskaźnik do `ReleaseNotifier` obiektu.
 
@@ -419,7 +420,7 @@ Przechowuje wskaźnik do `ReleaseNotifier` obiektu.
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="moduleterminate"></a><a name="terminate"></a>Module:: terminate
+## <a name="moduleterminate"></a><a name="terminate"></a> Module:: terminate
 
 Powoduje zamknięcie wszystkich fabryk utworzonych przez moduł.
 
@@ -431,7 +432,7 @@ void Terminate();
 
 Zwalnia fabryky w pamięci podręcznej.
 
-## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>Module:: Unregistercomobject —
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a> Module:: Unregistercomobject —
 
 Wyrejestrowuje jeden lub więcej obiektów COM, co uniemożliwia innym aplikacjom łączenie się z nimi.
 
@@ -457,7 +458,7 @@ Liczba klas do wyrejestrowania.
 
 S_OK, jeśli ta operacja zakończyła się pomyślnie; w przeciwnym razie błąd HRESULT wskazujący przyczynę niepowodzenia operacji.
 
-## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>Module:: Unregisterobjects —
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a> Module:: Unregisterobjects —
 
 Wyrejestrowuje obiekty w określonym module, dzięki czemu inne aplikacje nie mogą się z nimi łączyć.
 
@@ -479,7 +480,7 @@ Nazwa kwalifikująca, która określa podzbiór obiektów, których dotyczy ta o
 
 S_OK, jeśli ta operacja zakończyła się pomyślnie; w przeciwnym razie błąd HRESULT wskazujący przyczynę niepowodzenia tej operacji.
 
-## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>Module:: Unregisterwinrtobject —
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a> Module:: Unregisterwinrtobject —
 
 Wyrejestrowuje jeden lub więcej obiektów środowisko wykonawcze systemu Windows, tak aby inne aplikacje nie mógł się z nimi połączyć.
 

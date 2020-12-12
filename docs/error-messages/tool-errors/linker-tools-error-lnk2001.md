@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK2001'
 title: Błąd narzędzi konsolidatora LNK2001
 ms.date: 12/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 59915b3aa0ad25b5638a43a6d09dccc2b42825ab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 790c75b290b49fe40362ad1bc4ee93e90cc2d018
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338527"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Błąd narzędzi konsolidatora LNK2001
 
@@ -27,7 +28,7 @@ Istnieje wiele sposobów uzyskiwania błędów LNK2001. Wszystkie z nich obejmuj
 
 *Symbol* to wewnętrzna nazwa dla funkcji lub zmiennej globalnej. Jest to forma nazwy używana lub zdefiniowana w skompilowanym pliku lub bibliotece obiektu. Zmienna globalna jest zdefiniowana w pliku obiektu, w którym jest przypisywany magazyn. Funkcja jest zdefiniowana w pliku obiektu, w którym jest umieszczany skompilowany kod dla treści funkcji. *Symbol zewnętrzny* jest przywoływany w jednym pliku obiektu, ale zdefiniowany w innej bibliotece lub pliku obiektu. *Wyeksportowany symbol* jest taki, który jest udostępniany publicznie przez plik lub bibliotekę obiektów, która go definiuje.
 
-Aby utworzyć aplikację lub bibliotekę DLL, każdy używany symbol musi mieć definicję. Konsolidator musi *rozwiązać*lub znaleźć definicję dopasowania dla, każdy symbol zewnętrzny, do którego odwołuje się każdy plik obiektu. Konsolidator generuje błąd, gdy nie może rozpoznać symbolu zewnętrznego. Oznacza to, że konsolidator nie może znaleźć pasującej definicji symbolu wyeksportowanego w żadnym z połączonych plików.
+Aby utworzyć aplikację lub bibliotekę DLL, każdy używany symbol musi mieć definicję. Konsolidator musi *rozwiązać* lub znaleźć definicję dopasowania dla, każdy symbol zewnętrzny, do którego odwołuje się każdy plik obiektu. Konsolidator generuje błąd, gdy nie może rozpoznać symbolu zewnętrznego. Oznacza to, że konsolidator nie może znaleźć pasującej definicji symbolu wyeksportowanego w żadnym z połączonych plików.
 
 ## <a name="compilation-and-link-issues"></a>Kompilacja i łączenie problemów
 
@@ -107,6 +108,6 @@ Aby ułatwić znalezienie przyczyny problemu, komunikat o błędzie pokazuje dwi
 
 - W niektórych przypadkach konsolidator może zgłosić tylko dekoracyjną nazwę symbolu. Możesz użyć narzędzia wiersza polecenia UNDNAME, aby uzyskać niedekoracyjną postać nazwy dekoracyjnej.
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 Aby uzyskać więcej informacji, zobacz pytanie Stack Overflow ["co to jest błąd niezdefiniowanego odwołania/nierozpoznany symbol zewnętrzny i jak go naprawić?"](https://stackoverflow.com/q/12573816/2002113).

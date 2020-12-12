@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4256'
 title: Ostrzeżenie kompilatora (poziom 4) C4256
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 1ec3e64548cead53cea906cdf2abd3dd25ee06d4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3ccd8447f930f40df5e488714cdcfb52e54d9928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189304"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Ostrzeżenie kompilatora (poziom 4) C4256
 
-"Function": Konstruktor dla klasy z wirtualnymi bazami ma "..."; wywołania mogą nie być zgodne ze starszymi wersjami wizualizacjiC++
+"Function": Konstruktor dla klasy z wirtualnymi bazami ma "..."; wywołania mogą nie być zgodne ze starszymi wersjami Visual C++
 
 Możliwa niezgodność.
 
-Spójrz na poniższy przykład kodu. Jeśli definicja konstruktora S2:: S2 (int i,...) została skompilowana przy użyciu wersji kompilatora firmy Microsoft C++ , która jest wcześniejsza niż wersja 7, ale Poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora dla S3 nie działa poprawnie ze względu na szczególną zmianę w konwencji wywoływania przypadku. Jeśli obie zostały skompilowane przy użyciu C++ języka Visual 6,0, wywołanie nie będzie działało całkowicie po prawej stronie, chyba że żadne parametry nie zostały przesłane dla wielokropka.
+Spójrz na poniższy przykład kodu. Jeśli definicja konstruktora S2:: S2 (int i,...) została skompilowana przy użyciu wersji kompilatora języka Microsoft C++ przed wersją 7, ale Poniższy przykład jest kompilowany przy użyciu bieżącej wersji, wywołanie konstruktora dla S3 nie działa prawidłowo z powodu zmiany konwencji wywoływania przypadku specjalnego. Jeśli obie zostały skompilowane przy użyciu Visual C++ 6,0, wywołanie nie będzie działało całkowicie w żaden sposób, chyba że żadne parametry nie zostały przesłane dla wielokropka.
 
 Aby usunąć to ostrzeżenie,
 

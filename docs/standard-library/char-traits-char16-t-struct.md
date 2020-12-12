@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: char_traits &lt; char16_t &gt; struktury'
 title: '&lt;struktura char16_t &gt; char_traits'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: 53a77ff993d3a99cae1ec8e48a06dd7800ce74c7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ad725b514d6804edfdea6d4ba72c2cfd44c4f21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325265"
 ---
 # <a name="char_traitsltchar16_tgt-struct"></a>&lt;struktura char16_t &gt; char_traits
 
-Struktura, która jest specjalizacją struktury szablonu **char_traits \<CharType> ** do elementu typu **`char16_t`** .
+Struktura, która jest specjalizacją struktury szablonu **char_traits \<CharType>** do elementu typu **`char16_t`** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +36,7 @@ Specjalizacja umożliwia strukturze korzystanie z funkcji bibliotek, które mani
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<string>](../standard-library/string.md)\
 [Struktura char_traits](../standard-library/char-traits-struct.md)\

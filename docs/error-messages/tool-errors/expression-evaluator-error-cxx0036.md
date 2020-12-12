@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd ewaluatora wyrażeń CXX0036'
 title: Błąd CXX0036 programu Expression Evaluator
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fa595c590b6e59b74d693f3b6ff777055b5af2c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338534"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Błąd CXX0036 programu Expression Evaluator
 
@@ -20,7 +21,7 @@ zły kontekst {...} specyfikacja
 
 Ten komunikat może być generowany przez dowolny z kilku błędów podczas korzystania z operatora kontekstu ( **{}** ).
 
-- Składnia operatora kontekstu ( **{}** ) została nieprawidłowo określona.
+- Nieprawidłowa składnia operatora kontekstu ( **{}** ).
 
    Składnia operatora kontekstu to:
 
@@ -28,7 +29,7 @@ Ten komunikat może być generowany przez dowolny z kilku błędów podczas korz
 
    Określa kontekst *wyrażenia*. Operator kontekstu ma takie samo pierwszeństwo i użycie jak rzutowanie typu.
 
-   Końcowe przecinki można pominąć. Jeśli którakolwiek z *funkcji*, *modułów*lub *dll* zawiera przecinek literału, należy ująć całą nazwę w nawiasy.
+   Końcowe przecinki można pominąć. Jeśli którakolwiek z *funkcji*, *modułów* lub *dll* zawiera przecinek literału, należy ująć całą nazwę w nawiasy.
 
 - Nazwa funkcji została wpisana niepoprawnie lub nie istnieje w określonym module lub bibliotece dołączanej dynamicznie.
 

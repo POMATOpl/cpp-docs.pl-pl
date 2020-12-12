@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy cache_freelist
 title: cache_freelist — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: bbe0ff0f2297afcec99bd162ebe6a6d3e10f9bce
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9d5b3da272cff39b0c9d7d69df2c744d6952cd03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325385"
 ---
 # <a name="cache_freelist-class"></a>cache_freelist — Klasa
 
