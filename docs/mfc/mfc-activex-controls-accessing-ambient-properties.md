@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otoczenia'
 title: 'Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: e5c78c9943f8baeadcc1198ee8c96f2023ac0215
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6b553c73873a6f96cab3ab55b576a51045c06609
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203071"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających
 

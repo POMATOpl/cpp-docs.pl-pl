@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o obsłudze komunikatów i mapowaniu
 title: Obsługa i mapowanie komunikatów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: a27f8220055630873b02dd7ff975c04744ad9e8e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 50a55f4718b47054690325e882177fa9acad2f46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203201"
 ---
 # <a name="message-handling-and-mapping"></a>Obsługa i mapowanie komunikatów
 
@@ -41,11 +42,11 @@ Aby uzyskać ogólne informacje o komunikatach i kolejkach komunikatów w system
 
 - [Dynamiczna aktualizacja obiektów interfejsu użytkownika](how-to-update-user-interface-objects.md)
 
-- [Instrukcje: tworzenie mapy komunikatów dla klasy szablonów](how-to-create-a-message-map-for-a-template-class.md)
+- [Instrukcje: Tworzenie mapy komunikatów dla klasy szablonów](how-to-create-a-message-map-for-a-template-class.md)
 
 ## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](mfc-concepts.md)<br/>
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)<br/>
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)<br/>
 [Klasa CWnd](reference/cwnd-class.md)<br/>
 [Klasa CCmdTarget](reference/ccmdtarget-class.md)

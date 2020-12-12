@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: Dodawanie niestandardowych zdarzeń'
 title: 'Formanty MFC ActiveX: dodawanie zdarzeń niestandardowych'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 70b0e08bc638b5f630d423ec0db8a169a0119175
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1c41db073e5cfd74861a1ca836916c2b4bfdc9b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619952"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203045"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Formanty MFC ActiveX: dodawanie zdarzeń niestandardowych
 
 Zdarzenia niestandardowe różnią się od zdarzeń podstawowych w tym, że nie są automatycznie uruchamiane przez klasę `COleControl` . Zdarzenie niestandardowe rozpoznaje pewne działania określone przez dewelopera kontroli jako zdarzenie. Wpisy mapy zdarzeń dla zdarzeń niestandardowych są reprezentowane przez makro EVENT_CUSTOM. Poniższa sekcja implementuje niestandardowe zdarzenie dla projektu kontrolki ActiveX, który został utworzony za pomocą Kreatora kontrolki ActiveX.
 
-## <a name="adding-a-custom-event-with-the-add-event-wizard"></a><a name="_core_adding_a_custom_event_with_classwizard"></a>Dodawanie zdarzenia niestandardowego za pomocą Kreatora dodawania zdarzenia
+## <a name="adding-a-custom-event-with-the-add-event-wizard"></a><a name="_core_adding_a_custom_event_with_classwizard"></a> Dodawanie zdarzenia niestandardowego za pomocą Kreatora dodawania zdarzenia
 
 Poniższa procedura umożliwia dodanie określonego zdarzenia niestandardowego. Ta procedura służy do dodawania innych zdarzeń niestandardowych. Zastąp niestandardową nazwę zdarzenia i jej parametry dla nazwy i parametrów zdarzenia kliknij.
 
@@ -34,7 +35,7 @@ Poniższa procedura umożliwia dodanie określonego zdarzenia niestandardowego. 
 
 1. Załaduj projekt kontrolki.
 
-1. W **Widok klasy**kliknij prawym przyciskiem myszy klasę kontrolki ActiveX, aby otworzyć menu skrótów.
+1. W **Widok klasy** kliknij prawym przyciskiem myszy klasę kontrolki ActiveX, aby otworzyć menu skrótów.
 
 1. W menu skrótów kliknij pozycję **Dodaj** , a następnie kliknij pozycję **Dodaj zdarzenie**.
 
@@ -50,7 +51,7 @@ Poniższa procedura umożliwia dodanie określonego zdarzenia niestandardowego. 
 
 1. Kliknij przycisk **Zakończ** , aby utworzyć zdarzenie.
 
-## <a name="add-event-wizard-changes-for-custom-events"></a><a name="_core_classwizard_changes_for_custom_events"></a>Dodawanie zmian Kreatora zdarzeń dla zdarzeń niestandardowych
+## <a name="add-event-wizard-changes-for-custom-events"></a><a name="_core_classwizard_changes_for_custom_events"></a> Dodawanie zmian Kreatora zdarzeń dla zdarzeń niestandardowych
 
 Po dodaniu zdarzenia niestandardowego Kreator dodawania zdarzenia wprowadza zmiany do klasy kontrolek. H,. CPP i. Pliki IDL. Poniższe przykłady kodu są specyficzne dla zdarzenia kliknięcia.
 
@@ -72,7 +73,7 @@ Na koniec Poniższy wiersz jest dodawany do kontrolki. Plik IDL:
 
 Ten wiersz służy do przypisywania zdarzenia kliknij określonego numeru IDENTYFIKACYJNego z pozycji zdarzenia na liście zdarzeń Kreatora dodawania zdarzenia. Wpis na liście zdarzeń umożliwia kontenerowi przewidzenie zdarzenia. Może na przykład dostarczyć kod procedury obsługi, który ma zostać wykonany po uruchomieniu zdarzenia.
 
-## <a name="calling-fireclickin"></a><a name="_core_calling_fireclickin"></a>Wywoływanie FireClickIn
+## <a name="calling-fireclickin"></a><a name="_core_calling_fireclickin"></a> Wywoływanie FireClickIn
 
 Po dodaniu zdarzenia niestandardowego kliknięcia przy użyciu Kreatora dodawania zdarzenia należy określić, kiedy to zdarzenie ma zostać wyzwolone. Można to zrobić przez wywołanie `FireClickIn` , gdy wystąpi odpowiednie działanie. W tej dyskusji formant używa `InCircle` funkcji wewnątrz `WM_LBUTTONDOWN` procedury obsługi komunikatów do uruchamiania zdarzenia kliknięcia, gdy użytkownik kliknie wewnątrz regionu cyklicznego lub eliptycznego. Poniższa procedura dodaje procedurę `WM_LBUTTONDOWN` obsługi.
 
@@ -80,13 +81,13 @@ Po dodaniu zdarzenia niestandardowego kliknięcia przy użyciu Kreatora dodawani
 
 1. Załaduj projekt kontrolki.
 
-1. W **Widok klasy**wybierz klasę kontrolki ActiveX.
+1. W **Widok klasy** wybierz klasę kontrolki ActiveX.
 
 1. W oknie **Właściwości** zostanie wyświetlona lista komunikatów, które mogą być obsługiwane przez kontrolkę ActiveX. Każdy komunikat wyświetlany w pogrubieniu ma już przypisaną funkcję obsługi.
 
 1. Wybierz komunikat, który chcesz obsłużyć. Na potrzeby tego przykładu wybierz opcję `WM_LBUTTONDOWN` .
 
-1. W polu listy rozwijanej po prawej stronie wybierz pozycję ** \<Add> OnLButtonDown**.
+1. W polu listy rozwijanej po prawej stronie wybierz pozycję **\<Add> OnLButtonDown**.
 
 1. Kliknij dwukrotnie nową funkcję obsługi w **Widok klasy** , aby przejść do kodu procedury obsługi komunikatów w implementacji (. CPP) pliku kontrolki ActiveX.
 
@@ -105,7 +106,7 @@ Konieczne będzie również dodanie następującej deklaracji `InCircle` funkcji
 
 [!code-cpp[NVC_MFC_AxUI#12](codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]
 
-## <a name="custom-events-with-stock-names"></a><a name="_core_custom_events_with_stock_names"></a>Zdarzenia niestandardowe z nazwami zasobów
+## <a name="custom-events-with-stock-names"></a><a name="_core_custom_events_with_stock_names"></a> Zdarzenia niestandardowe z nazwami zasobów
 
 Można utworzyć zdarzenia niestandardowe o takiej samej nazwie jak zdarzenia podstawowe, ale nie można zaimplementować obu w tej samej kontrolce. Na przykład możesz chcieć utworzyć niestandardowe zdarzenie o nazwie kliknij, które nie uruchamia się po kliknięciu zdarzenia giełdowego normalnie. Następnie można uruchomić zdarzenie kliknięcia w dowolnym momencie, wywołując funkcję uruchamiania.
 
@@ -115,7 +116,7 @@ Poniższa procedura umożliwia dodanie niestandardowego zdarzenia kliknięcia.
 
 1. Załaduj projekt kontrolki.
 
-1. W **Widok klasy**kliknij prawym przyciskiem myszy klasę kontrolki ActiveX, aby otworzyć menu skrótów.
+1. W **Widok klasy** kliknij prawym przyciskiem myszy klasę kontrolki ActiveX, aby otworzyć menu skrótów.
 
 1. W menu skrótów kliknij pozycję **Dodaj** , a następnie kliknij pozycję **Dodaj zdarzenie**.
 
@@ -123,7 +124,7 @@ Poniższa procedura umożliwia dodanie niestandardowego zdarzenia kliknięcia.
 
 1. Z listy rozwijanej **Nazwa zdarzenia** wybierz nazwę zdarzenia giełdowego. Na potrzeby tego przykładu wybierz **pozycję kliknij**.
 
-1. W obszarze **Typ zdarzenia**wybierz pozycję **niestandardowy**.
+1. W obszarze **Typ zdarzenia** wybierz pozycję **niestandardowy**.
 
 1. Kliknij przycisk **Zakończ** , aby utworzyć zdarzenie.
 
