@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wctrans'
 title: wctrans
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 59efe03f5851525d38c5ebd93520367338a97a79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229655"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -48,12 +49,12 @@ wctrans_t wctrans(
 
 ### <a name="parameters"></a>Parametry
 
-*właściwość*<br/>
+*wartość*<br/>
 Ciąg określający jeden z prawidłowych transformacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli kategoria **LC_CTYPE** bieżących ustawień regionalnych nie definiuje mapowania, którego nazwa jest zgodna z *właściwością*ciągu właściwości, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość różną od zera odpowiednią do użycia jako drugi argument dla kolejnego wywołania do [towctrans](towctrans.md).
+Jeśli kategoria **LC_CTYPE** bieżących ustawień regionalnych nie definiuje mapowania, którego nazwa jest zgodna z *właściwością* ciągu właściwości, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość różną od zera odpowiednią do użycia jako drugi argument dla kolejnego wywołania do [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Uwagi
 

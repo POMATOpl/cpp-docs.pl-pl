@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CD2DBitmap'
 title: Klasa CD2DBitmap
 ms.date: 11/04/2016
 f1_keywords:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: a3cabb00ded7dbc5f9c396a1de767058443a4436
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: ab023caa92683b24098db1a03d081922e3dfd48b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227653"
 ---
 # <a name="cd2dbitmap-class"></a>Klasa CD2DBitmap
 
@@ -75,7 +76,7 @@ class CD2DBitmap : public CD2DResource;
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Przeciążone. Konstruuje obiekt CD2DBitmap z HBITMAP.|
-|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Destruktor. Wywoływane, gdy obiekt d2d bitmapy jest niszczony.|
+|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Destruktor. Wywołuje się, gdy obiekt mapy bitowej D2D jest niszczony.|
 
 ### <a name="protected-constructors"></a>Konstruktory chronione
 
@@ -87,19 +88,19 @@ class CD2DBitmap : public CD2DResource;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DBitmap::Dołącz](#attach)|Dołącza istniejący interfejs zasobu do obiektu|
+|[CD2DBitmap:: Attach](#attach)|Dołącza istniejący interfejs zasobów do obiektu|
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Kopiuje określony region z określonej mapy bitowej do bieżącej mapy bitowej|
 |[CD2DBitmap::CopyFromMemory](#copyfrommemory)|Kopiuje określony region z pamięci do bieżącej mapy bitowej|
-|[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Kopiuje określony region z określonego obiektu docelowego renderowania do bieżącej mapy bitowej|
-|[CD2DBitmap::Tworzenie](#create)|Tworzy mapę CD2DBitmap. (Zastępuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DBitmap::Destroja](#destroy)|Niszczy obiekt CD2DBitmap. (Zastępuje [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DBitmap::Detach](#detach)|Odłącza interfejs zasobu od obiektu|
-|[CD2DBitmap::Pobierz](#get)|Zwraca interfejs ID2D1Bitmap|
-|[CD2DBitmap::GetDPI](#getdpi)|Zwracanie punktów na cal (DPI) mapy bitowej|
-|[CD2DBitmap::GetPixelFormat](#getpixelformat)|Pobiera format piksela i tryb alfa mapy bitowej|
-|[CD2DBitmap::GetPixelSize](#getpixelsize)|Zwraca rozmiar mapy bitowej (pikseli) w jednostkach zależnych od urządzenia (pikselach)|
-|[CD2DBitmap::GetSize](#getsize)|Zwraca rozmiar mapy bitowej (DPS) w pikselach niezależnych od urządzenia|
-|[CD2DBitmap::IsValid](#isvalid)|Sprawdza ważność zasobu (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Kopiuje określony region z określonego elementu docelowego renderowania do bieżącej mapy bitowej|
+|[CD2DBitmap:: Create](#create)|Tworzy element CD2DBitmap. (Przesłania [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DBitmap::D Estroy](#destroy)|Niszczy obiekt CD2DBitmap. (Przesłania [CD2DResource::D Estroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DBitmap::D etach](#detach)|Odłącza interfejs zasobów od obiektu|
+|[CD2DBitmap:: Get](#get)|Zwraca interfejs ID2D1Bitmap|
+|[CD2DBitmap:: GetDPI](#getdpi)|Zwróć punkty na cal (DPI) mapy bitowej|
+|[CD2DBitmap::GetPixelFormat](#getpixelformat)|Pobiera format pikseli i tryb alfa mapy bitowej|
+|[CD2DBitmap::GetPixelSize](#getpixelsize)|Zwraca rozmiar mapy bitowej w jednostkach zależnych od urządzenia (pikselach)|
+|[CD2DBitmap:: GetSize](#getsize)|Zwraca rozmiar w pikselach niezależnych od urządzenia (DIP) mapy bitowej|
+|[CD2DBitmap:: IsValid](#isvalid)|Sprawdza poprawność zasobów (Przesłania [CD2DResource:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)).|
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -111,41 +112,41 @@ class CD2DBitmap : public CD2DResource;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DBitmap::operator ID2D1Bitmap*](#operator_id2d1bitmap_star)|Zwraca interfejs ID2D1Bitmap|
+|[CD2DBitmap:: operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|Zwraca interfejs ID2D1Bitmap|
 
-### <a name="protected-data-members"></a>Członkowie chronionych danych
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|PRAWDA, jeśli m_hBmpSrc powinny zostać zniszczone; w przeciwnym razie FALSE.|
-|[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Źródłowy uchwyt mapy bitowej.|
-|[CD2DBitmap::m_lpszType](#m_lpsztype)|Typ zasobu.|
-|[CD2DBitmap::m_pBitmap](#m_pbitmap)|Przechowuje wskaźnik do obiektu ID2D1Bitmap.|
-|[CD2DBitmap::m_sizeDest](#m_sizedest)|Rozmiar miejsca docelowego mapy bitowej.|
-|[CD2DBitmap::m_strPath](#m_strpath)|Ścieżka pliku botmapy.|
-|[CD2DBitmap::m_uiResID](#m_uiresid)|Identyfikator zasobu mapy bitowej.|
+|[CD2DBitmap:: m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|Ma wartość TRUE, jeśli m_hBmpSrc powinna zostać zniszczona; w przeciwnym razie FALSE.|
+|[CD2DBitmap:: m_hBmpSrc](#m_hbmpsrc)|Uchwyt mapy bitowej źródła.|
+|[CD2DBitmap:: m_lpszType](#m_lpsztype)|Typ zasobu.|
+|[CD2DBitmap:: m_pBitmap](#m_pbitmap)|Przechowuje wskaźnik do obiektu ID2D1Bitmap.|
+|[CD2DBitmap:: m_sizeDest](#m_sizedest)|Rozmiar docelowy mapy bitowej.|
+|[CD2DBitmap:: m_strPath](#m_strpath)|Ścieżka pliku Botmap.|
+|[CD2DBitmap:: m_uiResID](#m_uiresid)|Identyfikator zasobu mapy bitowej.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DŹródło](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DBitmap`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxrendertarget.h
+**Nagłówek:** afxrendertarget. h
 
-## <a name="cd2dbitmapcd2dbitmap"></a><a name="_dtorcd2dbitmap"></a>CD2DBitmap::~CD2DBitmap
+## <a name="cd2dbitmapcd2dbitmap"></a><a name="_dtorcd2dbitmap"></a> CD2DBitmap:: ~ CD2DBitmap
 
-Destruktor. Wywoływane, gdy obiekt d2d bitmapy jest niszczony.
+Destruktor. Wywołuje się, gdy obiekt mapy bitowej D2D jest niszczony.
 
 ```
 virtual ~CD2DBitmap();
 ```
 
-## <a name="cd2dbitmapattach"></a><a name="attach"></a>CD2DBitmap::Dołącz
+## <a name="cd2dbitmapattach"></a><a name="attach"></a> CD2DBitmap:: Attach
 
 Dołącza istniejący interfejs zasobów do obiektu.
 
@@ -155,10 +156,10 @@ void Attach(ID2D1Bitmap* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pŹródło*<br/>
-Istniejący interfejs zasobów. Nie może być null.
+*Źródło*<br/>
+Istniejący interfejs zasobów. Nie może mieć wartości NULL.
 
-## <a name="cd2dbitmapcd2dbitmap"></a><a name="cd2dbitmap"></a>CD2DBitmap::CD2DBitmap
+## <a name="cd2dbitmapcd2dbitmap"></a><a name="cd2dbitmap"></a> CD2DBitmap::CD2DBitmap
 
 Konstruuje obiekt CD2DBitmap z zasobu.
 
@@ -190,27 +191,27 @@ CD2DBitmap(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Wskaźnik do obiektu docelowego renderowania.
+Wskaźnik do elementu docelowego renderowania.
 
-*interfejs użytkownika uiResID*<br/>
+*uiResID*<br/>
 Numer identyfikatora zasobu.
 
-*lpszType (typ)*<br/>
-Wskaźnik do ciągu zakończonego z wartością null, który zawiera typ zasobu.
+*lpszType*<br/>
+Wskaźnik na ciąg zakończony znakiem null, który zawiera typ zasobu.
 
-*rozmiarDest*<br/>
+*o największej wielkości*<br/>
 Rozmiar docelowy mapy bitowej.
 
-*bAutoDestroj*<br/>
+*bAutoDestroy*<br/>
 Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).
 
-*lpszPath (lpszPath)*<br/>
-Wskaźnik do ciągu zakończonego wartością null, który zawiera nazwę pliku.
+*lpszPath*<br/>
+Wskaźnik na ciąg zakończony znakiem null, który zawiera nazwę pliku.
 
 *hbmpSrc*<br/>
-Uchwyt do mapy bitowej.
+Dojście do mapy bitowej.
 
-## <a name="cd2dbitmapcommoninit"></a><a name="commoninit"></a>CD2DBitmap::CommonInit
+## <a name="cd2dbitmapcommoninit"></a><a name="commoninit"></a> CD2DBitmap::CommonInit
 
 Inicjuje obiekt.
 
@@ -218,7 +219,7 @@ Inicjuje obiekt.
 void CommonInit();
 ```
 
-## <a name="cd2dbitmapcopyfrombitmap"></a><a name="copyfrombitmap"></a>CD2DBitmap::CopyFromBitmap
+## <a name="cd2dbitmapcopyfrombitmap"></a><a name="copyfrombitmap"></a> CD2DBitmap::CopyFromBitmap
 
 Kopiuje określony region z określonej mapy bitowej do bieżącej mapy bitowej.
 
@@ -231,20 +232,20 @@ HRESULT CopyFromBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*pBitmapa*<br/>
+*pBitmap*<br/>
 Mapa bitowa do skopiowania.
 
-*punkt destPoint*<br/>
-W bieżącej mapie bitowej w lewym górnym rogu obszaru, do którego jest kopiowany region określony przez srcRect.
+*destPoint*<br/>
+W bieżącej mapie bitowej górny lewy róg obszaru, do którego jest kopiowany region określony przez srcRect.
 
 *srcRect*<br/>
 Obszar mapy bitowej do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda się powiedzie, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-## <a name="cd2dbitmapcopyfrommemory"></a><a name="copyfrommemory"></a>CD2DBitmap::CopyFromMemory
+## <a name="cd2dbitmapcopyfrommemory"></a><a name="copyfrommemory"></a> CD2DBitmap::CopyFromMemory
 
 Kopiuje określony region z pamięci do bieżącej mapy bitowej.
 
@@ -260,17 +261,17 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 Dane do skopiowania.
 
-*Boisku*<br/>
-Krok lub podziałka źródłowej mapy bitowej przechowywanej w srcData. Krok jest liczbą bajtów linii skanowania (jeden wiersz pikseli w pamięci). Krok można obliczyć na podstawie następującej formuły: bajty szerokości \* piksela na piksel + dopełnienie pamięci.
+*tonu*<br/>
+Krok lub gęstość źródłowej mapy bitowej przechowywanej w srcData. Krok to liczba bajtów scanline (jeden wiersz pikseli w pamięci). Krok można obliczyć z następującej formuły: bajty o szerokości pikseli \* na piksel + dopełnienie pamięci.
 
-*odstrekciaj*<br/>
-W bieżącej mapie bitowej w lewym górnym rogu obszaru, do którego jest kopiowany region określony przez srcRect.
+*destRect*<br/>
+W bieżącej mapie bitowej górny lewy róg obszaru, do którego jest kopiowany region określony przez srcRect.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda się powiedzie, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-## <a name="cd2dbitmapcopyfromrendertarget"></a><a name="copyfromrendertarget"></a>CD2DBitmap::CopyFromRenderTarget
+## <a name="cd2dbitmapcopyfromrendertarget"></a><a name="copyfromrendertarget"></a> CD2DBitmap::CopyFromRenderTarget
 
 Kopiuje określony region z określonego obiektu docelowego renderowania do bieżącej mapy bitowej.
 
@@ -284,21 +285,21 @@ HRESULT CopyFromRenderTarget(
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Obiekt docelowy renderowania, który zawiera region do skopiowania.
+Obiekt docelowy renderowania zawierający region do skopiowania.
 
-*punkt destPoint*<br/>
-W bieżącej mapie bitowej w lewym górnym rogu obszaru, do którego jest kopiowany region określony przez srcRect.
+*destPoint*<br/>
+W bieżącej mapie bitowej górny lewy róg obszaru, do którego jest kopiowany region określony przez srcRect.
 
 *srcRect*<br/>
-Obszar renderTarget do kopiowania.
+Obszar renderTarget do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda się powiedzie, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-## <a name="cd2dbitmapcreate"></a><a name="create"></a>CD2DBitmap::Tworzenie
+## <a name="cd2dbitmapcreate"></a><a name="create"></a> CD2DBitmap:: Create
 
-Tworzy mapę CD2DBitmap.
+Tworzy element CD2DBitmap.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -307,13 +308,13 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do obiektu docelowego renderowania.
+Wskaźnik do elementu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda się powiedzie, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-## <a name="cd2dbitmapdestroy"></a><a name="destroy"></a>CD2DBitmap::Destroja
+## <a name="cd2dbitmapdestroy"></a><a name="destroy"></a> CD2DBitmap::D Estroy
 
 Niszczy obiekt CD2DBitmap.
 
@@ -321,9 +322,9 @@ Niszczy obiekt CD2DBitmap.
 virtual void Destroy();
 ```
 
-## <a name="cd2dbitmapdetach"></a><a name="detach"></a>CD2DBitmap::Detach
+## <a name="cd2dbitmapdetach"></a><a name="detach"></a> CD2DBitmap::D etach
 
-Odłącza interfejs zasobu od obiektu.
+Odłącza interfejs zasobów od obiektu.
 
 ```
 ID2D1Bitmap* Detach();
@@ -331,9 +332,9 @@ ID2D1Bitmap* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do odłączony interfejs zasobu.
+Wskaźnik do odłączonego interfejsu zasobu.
 
-## <a name="cd2dbitmapget"></a><a name="get"></a>CD2DBitmap::Pobierz
+## <a name="cd2dbitmapget"></a><a name="get"></a> CD2DBitmap:: Get
 
 Zwraca interfejs ID2D1Bitmap.
 
@@ -343,11 +344,11 @@ ID2D1Bitmap* Get();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1Bitmap lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1Bitmap lub NULL, jeśli obiekt nie jest jeszcze zainicjowany.
 
-## <a name="cd2dbitmapgetdpi"></a><a name="getdpi"></a>CD2DBitmap::GetDPI
+## <a name="cd2dbitmapgetdpi"></a><a name="getdpi"></a> CD2DBitmap:: GetDPI
 
-Zwraca kropki na cal (DPI) mapy bitowej.
+Zwróć punkty na cal (DPI) mapy bitowej.
 
 ```
 CD2DSizeF GetDPI() const;
@@ -355,11 +356,11 @@ CD2DSizeF GetDPI() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pozioma i pionowa dpi mapy bitowej.
+Pozioma i pionowa wartość DPI mapy bitowej.
 
-## <a name="cd2dbitmapgetpixelformat"></a><a name="getpixelformat"></a>CD2DBitmap::GetPixelFormat
+## <a name="cd2dbitmapgetpixelformat"></a><a name="getpixelformat"></a> CD2DBitmap::GetPixelFormat
 
-Pobiera format piksela i tryb alfa mapy bitowej
+Pobiera format pikseli i tryb alfa mapy bitowej
 
 ```
 D2D1_PIXEL_FORMAT GetPixelFormat() const;
@@ -369,9 +370,9 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 
 Format pikseli i tryb alfa mapy bitowej.
 
-## <a name="cd2dbitmapgetpixelsize"></a><a name="getpixelsize"></a>CD2DBitmap::GetPixelSize
+## <a name="cd2dbitmapgetpixelsize"></a><a name="getpixelsize"></a> CD2DBitmap::GetPixelSize
 
-Zwraca rozmiar mapy bitowej (pikseli) w jednostkach zależnych od urządzenia (pikselach).
+Zwraca rozmiar mapy bitowej w jednostkach zależnych od urządzenia (pikselach).
 
 ```
 CD2DSizeU GetPixelSize() const;
@@ -379,9 +380,9 @@ CD2DSizeU GetPixelSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar mapy bitowej w pikselach..
+Rozmiar mapy bitowej (w pikselach).
 
-## <a name="cd2dbitmapgetsize"></a><a name="getsize"></a>CD2DBitmap::GetSize
+## <a name="cd2dbitmapgetsize"></a><a name="getsize"></a> CD2DBitmap:: GetSize
 
 Zwraca rozmiar mapy bitowej w pikselach niezależnych od urządzenia (DIP).
 
@@ -391,11 +392,11 @@ CD2DSizeF GetSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar mapy bitowej w programach DPs.
+Rozmiar mapy bitowej (w wartości DIP).
 
-## <a name="cd2dbitmapisvalid"></a><a name="isvalid"></a>CD2DBitmap::IsValid
+## <a name="cd2dbitmapisvalid"></a><a name="isvalid"></a> CD2DBitmap:: IsValid
 
-Sprawdza ważność zasobu.
+Sprawdza poprawność zasobów.
 
 ```
 virtual BOOL IsValid() const;
@@ -405,23 +406,23 @@ virtual BOOL IsValid() const;
 
 PRAWDA, jeśli zasób jest prawidłowy; w przeciwnym razie FALSE.
 
-## <a name="cd2dbitmapm_bautodestroyhbmp"></a><a name="m_bautodestroyhbmp"></a>CD2DBitmap::m_bAutoDestroyHBMP
+## <a name="cd2dbitmapm_bautodestroyhbmp"></a><a name="m_bautodestroyhbmp"></a> CD2DBitmap:: m_bAutoDestroyHBMP
 
-PRAWDA, jeśli m_hBmpSrc powinny zostać zniszczone; w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli m_hBmpSrc powinna zostać zniszczona; w przeciwnym razie FALSE.
 
 ```
 BOOL m_bAutoDestroyHBMP;
 ```
 
-## <a name="cd2dbitmapm_hbmpsrc"></a><a name="m_hbmpsrc"></a>CD2DBitmap::m_hBmpSrc
+## <a name="cd2dbitmapm_hbmpsrc"></a><a name="m_hbmpsrc"></a> CD2DBitmap:: m_hBmpSrc
 
-Źródłowy uchwyt mapy bitowej.
+Uchwyt mapy bitowej źródła.
 
 ```
 HBITMAP m_hBmpSrc;
 ```
 
-## <a name="cd2dbitmapm_lpsztype"></a><a name="m_lpsztype"></a>CD2DBitmap::m_lpszType
+## <a name="cd2dbitmapm_lpsztype"></a><a name="m_lpsztype"></a> CD2DBitmap:: m_lpszType
 
 Typ zasobu.
 
@@ -429,7 +430,7 @@ Typ zasobu.
 LPCTSTR m_lpszType;
 ```
 
-## <a name="cd2dbitmapm_pbitmap"></a><a name="m_pbitmap"></a>CD2DBitmap::m_pBitmap
+## <a name="cd2dbitmapm_pbitmap"></a><a name="m_pbitmap"></a> CD2DBitmap:: m_pBitmap
 
 Przechowuje wskaźnik do obiektu ID2D1Bitmap.
 
@@ -437,23 +438,23 @@ Przechowuje wskaźnik do obiektu ID2D1Bitmap.
 ID2D1Bitmap* m_pBitmap;
 ```
 
-## <a name="cd2dbitmapm_sizedest"></a><a name="m_sizedest"></a>CD2DBitmap::m_sizeDest
+## <a name="cd2dbitmapm_sizedest"></a><a name="m_sizedest"></a> CD2DBitmap:: m_sizeDest
 
-Rozmiar miejsca docelowego mapy bitowej.
+Rozmiar docelowy mapy bitowej.
 
 ```
 CD2DSizeU m_sizeDest;
 ```
 
-## <a name="cd2dbitmapm_strpath"></a><a name="m_strpath"></a>CD2DBitmap::m_strPath
+## <a name="cd2dbitmapm_strpath"></a><a name="m_strpath"></a> CD2DBitmap:: m_strPath
 
-Ścieżka pliku botmapy.
+Ścieżka pliku Botmap.
 
 ```
 CString m_strPath;
 ```
 
-## <a name="cd2dbitmapm_uiresid"></a><a name="m_uiresid"></a>CD2DBitmap::m_uiResID
+## <a name="cd2dbitmapm_uiresid"></a><a name="m_uiresid"></a> CD2DBitmap:: m_uiResID
 
 Identyfikator zasobu mapy bitowej.
 
@@ -461,7 +462,7 @@ Identyfikator zasobu mapy bitowej.
 UINT m_uiResID;
 ```
 
-## <a name="cd2dbitmapoperator-id2d1bitmap"></a><a name="operator_id2d1bitmap_star"></a>CD2DBitmap::operator ID2D1Bitmap*
+## <a name="cd2dbitmapoperator-id2d1bitmap"></a><a name="operator_id2d1bitmap_star"></a> CD2DBitmap:: operator ID2D1Bitmap *
 
 Zwraca interfejs ID2D1Bitmap
 
@@ -471,7 +472,7 @@ operator ID2D1Bitmap*();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1Bitmap lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1Bitmap lub NULL, jeśli obiekt nie jest jeszcze zainicjowany.
 
 ## <a name="see-also"></a>Zobacz też
 

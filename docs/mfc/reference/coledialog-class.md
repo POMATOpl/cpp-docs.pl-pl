@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleDialog'
 title: Klasa COleDialog
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: 6a1983d426e97dd8063aee2857dc36557aa20677
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9bdb532d58136ac2aac622fa88f674e60ec7221e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227302"
 ---
 # <a name="coledialog-class"></a>Klasa COleDialog
 
-Udostępnia funkcje typowe dla okien dialogowych ole.
+Udostępnia funkcje wspólne dla okien dialogowych OLE.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,11 +32,11 @@ class COleDialog : public CCommonDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleDialog::GetLastError](#getlasterror)|Pobiera kod błędu zwrócony przez okno dialogowe.|
+|[COleDialog:: GetLastError](#getlasterror)|Pobiera kod błędu zwracany przez okno dialogowe.|
 
 ## <a name="remarks"></a>Uwagi
 
-Biblioteka klas Microsoft Foundation zawiera `COleDialog`kilka klas pochodzących z:
+Biblioteka MFC zawiera kilka klas pochodnych z `COleDialog` :
 
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
 
@@ -55,29 +56,29 @@ Biblioteka klas Microsoft Foundation zawiera `COleDialog`kilka klas pochodzącyc
 
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
-Aby uzyskać więcej informacji na temat okien dialogowych specyficznych dla ole, zobacz [artykuł Okna dialogowe w ole](../../mfc/dialog-boxes-in-ole.md).
+Aby uzyskać więcej informacji o oknach dialogowych specyficznych dla OLE, zobacz [okna dialogowe artykułu w OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cdialog](../../mfc/reference/cdialog-class.md)
+[CDialog](../../mfc/reference/cdialog-class.md)
 
-[CKlogialny](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
 `COleDialog`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxodlgs.h
+**Nagłówek:** afxodlgs. h
 
-## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a>COleDialog::GetLastError
+## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a> COleDialog:: GetLastError
 
-Wywołanie `GetLastError` funkcji elementu członkowskiego, `DoModal` aby uzyskać dodatkowe informacje o błędzie po zwróceniu IDABORT.
+Wywołaj `GetLastError` funkcję członkowską, aby uzyskać dodatkowe informacje o błędzie podczas `DoModal` zwraca IDABORT.
 
 ```
 UINT GetLastError() const;
@@ -85,11 +86,11 @@ UINT GetLastError() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kody błędów `GetLastError` zwracane przez zależą od wyświetlanego określonego okna dialogowego.
+Kody błędów zwracane przez `GetLastError` zależą od wyświetlonego okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz `DoModal` funkcję elementu członkowskiego w klasach pochodnych, aby uzyskać informacje o określonych komunikatach o błędach.
+Zobacz `DoModal` funkcja członkowska w klasach pochodnych, aby uzyskać informacje o określonych komunikatach o błędach.
 
 ## <a name="see-also"></a>Zobacz też
 

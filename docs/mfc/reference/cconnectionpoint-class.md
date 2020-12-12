@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CConnectionPoint'
 title: Klasa CConnectionPoint
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: f428ec597e0e4a56788fae2455eff80b286fda39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62525428d8f9bf5303f379140837d75e53cbb387
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227848"
 ---
 # <a name="cconnectionpoint-class"></a>Klasa CConnectionPoint
 
@@ -102,7 +103,7 @@ Aby uzyskać więcej informacji na temat korzystania z programu `CConnectionPoin
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint
+## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a> CConnectionPoint::CConnectionPoint
 
 Konstruuje `CConnectionPoint` obiekt.
 
@@ -110,7 +111,7 @@ Konstruuje `CConnectionPoint` obiekt.
 CConnectionPoint();
 ```
 
-## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint:: GetConnections
+## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a> CConnectionPoint:: GetConnections
 
 Wywołaj tę funkcję, aby pobrać wszystkie aktywne połączenia dla punktu połączenia.
 
@@ -122,7 +123,7 @@ const CPtrArray* GetConnections();
 
 Wskaźnik do tablicy aktywnych połączeń (ujścia). Niektóre wskaźniki w tablicy mogą mieć wartość NULL. Każdy wskaźnik o wartości innej niż NULL w tej tablicy może być bezpiecznie konwertowany na wskaźnik do interfejsu ujścia przy użyciu operatora rzutowania.
 
-## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint:: getcontainerer
+## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a> CConnectionPoint:: getcontainerer
 
 Wywoływane przez platformę, by pobrać `IConnectionPointContainer` dla punktu połączenia.
 
@@ -138,7 +139,7 @@ Jeśli to się powiedzie, wskaźnik do kontenera; w przeciwnym razie wartość N
 
 Ta funkcja jest zwykle implementowana przez makro BEGIN_CONNECTION_PART.
 
-## <a name="cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint::GetIID
+## <a name="cconnectionpointgetiid"></a><a name="getiid"></a> CConnectionPoint::GetIID
 
 Wywoływane przez platformę, by pobrać identyfikator interfejsu punktu połączenia.
 
@@ -154,7 +155,7 @@ Odwołanie do identyfikatora interfejsu punktu połączenia.
 
 Przesłoń tę funkcję, aby zwrócić identyfikator interfejsu dla tego punktu połączenia.
 
-## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections
+## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a> CConnectionPoint::GetMaxConnections
 
 Wywoływane przez platformę, by pobrać maksymalną liczbę połączeń obsługiwaną przez punkt połączenia.
 
@@ -172,7 +173,7 @@ Domyślna implementacja zwraca-1, co oznacza brak limitu.
 
 Zastąp tę funkcję, jeśli chcesz ograniczyć liczbę zlewów, które mogą łączyć się z kontrolką.
 
-## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint::GetNextConnection
+## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a> CConnectionPoint::GetNextConnection
 
 Pobiera wskaźnik do elementu Connection w *punkcie sprzedaży*.
 
@@ -187,7 +188,7 @@ Określa odwołanie do wartości pozycji zwróconej przez poprzednie `GetNextCon
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do elementu Connection określonego przez *pos*lub null.
+Wskaźnik do elementu Connection określonego przez *pos* lub null.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -197,7 +198,7 @@ Ta funkcja jest najbardziej przydatna do iterowania przez wszystkie elementy na 
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition
+## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a> CConnectionPoint::GetStartPosition
 
 Uruchamia iterację mapy przez zwrócenie wartości pozycji, która może zostać przeniesiona do wywołania [GetNextConnection](#getnextconnection) .
 
@@ -217,7 +218,7 @@ Sekwencja iteracji nie jest przewidywalna; w związku z tym "pierwszy element w 
 
   Zobacz przykład dla [CConnectionPoint:: GetNextConnection](#getnextconnection).
 
-## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint:: onadvise
+## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a> CConnectionPoint:: onadvise
 
 Wywoływane przez platformę, gdy połączenie jest ustanawiane lub zerwane.
 
@@ -236,7 +237,7 @@ Domyślna implementacja nie robi nic.
 
 Zastąp tę funkcję, jeśli chcesz, aby powiadomienie, gdy ujścia lub odłączą się od punktu połączenia.
 
-## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface
+## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a> CConnectionPoint::QuerySinkInterface
 
 Pobiera wskaźnik do żądanego interfejsu ujścia.
 
@@ -258,7 +259,7 @@ Wskaźnik do wskaźnika interfejsu identyfikowanego przez *pUnkSink*. Jeśli obi
 
 Standardowa wartość HRESULT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

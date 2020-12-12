@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleDataObject'
 title: Klasa COleDataObject
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 4a24fcab0eb34bbba597ba0b5c1fac22a929c0c0
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: ae94ed51f3f644efa73847c8e80300ebc5543190
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470943"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227367"
 ---
 # <a name="coledataobject-class"></a>Klasa COleDataObject
 
@@ -70,7 +71,7 @@ class COleDataObject
 
 ## <a name="remarks"></a>Uwagi
 
-`COleDataObject`nie ma klasy bazowej.
+`COleDataObject` nie ma klasy bazowej.
 
 Te rodzaje transferów danych obejmują źródło i miejsce docelowe. Źródło danych jest implementowane jako obiekt klasy [by uzyskać COleDataSource](../../mfc/reference/coledatasource-class.md) . Za każdym razem, gdy w aplikacji docelowej znajdują się w niej dane lub jest wyświetlany monit o wykonanie operacji wklejenia ze schowka, `COleDataObject` należy utworzyć obiekt klasy.
 
@@ -88,7 +89,7 @@ Aby uzyskać więcej informacji na temat używania obiektów danych w aplikacji,
 
 **Nagłówek:** Afxole. h
 
-## <a name="coledataobjectattach"></a><a name="attach"></a>COleDataObject:: Attach
+## <a name="coledataobjectattach"></a><a name="attach"></a> COleDataObject:: Attach
 
 Wywołaj tę funkcję, aby skojarzyć `COleDataObject` obiekt z obiektem danych OLE.
 
@@ -110,7 +111,7 @@ Ma wartość TRUE, jeśli obiekt danych OLE ma zostać wydzierżawiony, gdy `COl
 
 Aby uzyskać więcej informacji, zobacz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) w Windows SDK.
 
-## <a name="coledataobjectattachclipboard"></a><a name="attachclipboard"></a>COleDataObject::AttachClipboard
+## <a name="coledataobjectattachclipboard"></a><a name="attachclipboard"></a> COleDataObject::AttachClipboard
 
 Wywołaj tę funkcję, aby dołączyć obiekt danych, który znajduje się obecnie w schowku do `COleDataObject` obiektu.
 
@@ -127,7 +128,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 > [!NOTE]
 > Wywołanie tej funkcji powoduje zablokowanie schowka do momentu zwolnienia tego obiektu danych. Obiekt danych jest wydawany w destruktorze dla `COleDataObject` . Aby uzyskać więcej informacji, zobacz [OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) i [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) w dokumencie Win32.
 
-## <a name="coledataobjectbeginenumformats"></a><a name="beginenumformats"></a>COleDataObject::BeginEnumFormats
+## <a name="coledataobjectbeginenumformats"></a><a name="beginenumformats"></a> COleDataObject::BeginEnumFormats
 
 Wywołaj tę funkcję, aby przygotować się do kolejnych wywołań do `GetNextFormat` pobierania listy formatów danych z elementu.
 
@@ -143,7 +144,7 @@ Aby sprawdzić dostępność danych w danym formacie, użyj [COleDataObject:: Is
 
 Aby uzyskać więcej informacji, zobacz [IDataObject:: EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) w Windows SDK.
 
-## <a name="coledataobjectcoledataobject"></a><a name="coledataobject"></a>COleDataObject::COleDataObject
+## <a name="coledataobjectcoledataobject"></a><a name="coledataobject"></a> COleDataObject::COleDataObject
 
 Konstruuje `COleDataObject` obiekt.
 
@@ -158,7 +159,7 @@ Wywołanie [COleDataObject:: Attach](#attach) lub [COleDataObject:: AttachClipbo
 > [!NOTE]
 > Ponieważ jeden z parametrów obsługi przeciągania i upuszczania jest wskaźnikiem do `COleDataObject` , nie ma potrzeby wywoływania tego konstruktora w celu obsługi przeciągania i upuszczania.
 
-## <a name="coledataobjectdetach"></a><a name="detach"></a>COleDataObject::D etach
+## <a name="coledataobjectdetach"></a><a name="detach"></a> COleDataObject::D etach
 
 Wywołaj tę funkcję, aby odłączyć `COleDataObject` obiekt od skojarzonego obiektu danych OLE bez zwalniania obiektu danych.
 
@@ -172,7 +173,7 @@ Wskaźnik do obiektu danych OLE, który został odłączony.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="coledataobjectgetdata"></a><a name="getdata"></a>COleDataObject:: GetData
+## <a name="coledataobjectgetdata"></a><a name="getdata"></a> COleDataObject:: GetData
 
 Wywołaj tę funkcję, aby pobrać dane z elementu w określonym formacie.
 
@@ -204,7 +205,7 @@ Aby uzyskać więcej informacji, zobacz [IDataObject:: GetData](/windows/win32/a
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledataobjectgetfiledata"></a><a name="getfiledata"></a>COleDataObject::GetFileData
+## <a name="coledataobjectgetfiledata"></a><a name="getfiledata"></a> COleDataObject::GetFileData
 
 Wywołaj tę funkcję, aby `CFile` utworzyć `CFile` obiekt pochodny i pobrać dane w określonym formacie do `CFile` wskaźnika.
 
@@ -237,7 +238,7 @@ Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/win32/api/objidl/ns
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledataobjectgetglobaldata"></a><a name="getglobaldata"></a>COleDataObject::GetGlobalData
+## <a name="coledataobjectgetglobaldata"></a><a name="getglobaldata"></a> COleDataObject::GetGlobalData
 
 Wywołaj tę funkcję, aby przydzielić blok pamięci globalnej i pobrać dane w określonym formacie do HGLOBAL.
 
@@ -265,7 +266,7 @@ Aby uzyskać więcej informacji, zobacz [FORMATETC](/windows/win32/api/objidl/ns
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledataobjectgetnextformat"></a><a name="getnextformat"></a>COleDataObject::GetNextFormat
+## <a name="coledataobjectgetnextformat"></a><a name="getnextformat"></a> COleDataObject::GetNextFormat
 
 Wywołaj tę funkcję wielokrotnie, aby uzyskać wszystkie formaty dostępne do pobierania danych z elementu.
 
@@ -290,7 +291,7 @@ Aby sprawdzić dostępność danego formatu, wywołaj [COleDataObject:: IsDataAv
 
 Aby uzyskać więcej informacji, zobacz [IEnumXXXX:: Next](/previous-versions/ms695273\(v=vs.85\)) w Windows SDK.
 
-## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::IsDataAvailable
+## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a> COleDataObject::IsDataAvailable
 
 Wywołaj tę funkcję, aby określić, czy konkretny format jest dostępny do pobierania danych z elementu OLE.
 
@@ -324,7 +325,7 @@ Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32
 
   Zobacz przykład dla [CRichEditView:: QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).
 
-## <a name="coledataobjectrelease"></a><a name="release"></a>COleDataObject:: Release
+## <a name="coledataobjectrelease"></a><a name="release"></a> COleDataObject:: Release
 
 Wywołaj tę funkcję, aby zwolnić własność obiektu [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) , który został wcześniej skojarzony z `COleDataObject` obiektem.
 
@@ -336,7 +337,7 @@ void Release();
 
 `IDataObject`Zostało skojarzone z `COleDataObject` przez wywołanie metody `Attach` lub `AttachClipboard` bezpośrednio lub przez platformę. Jeśli parametr *bAutoRelease* `Attach` ma wartość false, `IDataObject` obiekt nie zostanie wypublikowany. W takim przypadku obiekt wywołujący jest odpowiedzialny za zwolnienie `IDataObject` przez wywołanie [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>

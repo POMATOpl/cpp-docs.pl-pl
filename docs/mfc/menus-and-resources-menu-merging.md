@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: menu i zasoby: scalanie menu'
 title: 'Menu i zasoby: scalanie menu'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 03d27443f90634b5d787eee25acc951d24178f42
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b326e02fb4dbdaaef0ae6015fef6b647cc85b907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227978"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu i zasoby: scalanie menu
 
@@ -27,7 +28,7 @@ Tematy omówione w tym artykule obejmują:
 
 - [Paski narzędzi i paski stanu](#_core_toolbars_and_status_bars)
 
-## <a name="menu-layouts"></a><a name="_core_menu_layouts"></a>Układy menu
+## <a name="menu-layouts"></a><a name="_core_menu_layouts"></a> Układy menu
 
 Pierwszym krokiem jest koordynowanie układów menu. Aplikacje kontenerów powinny tworzyć nowe menu, które mają być używane tylko po aktywowaniu elementów osadzonych. Co najmniej, to menu powinno zawierać następujące elementy w podanej kolejności:
 
@@ -99,9 +100,9 @@ Tabele akceleratorów skojarzone z menu w miejscu powinny być również dostarc
 
 Gdy element osadzony jest aktywowany na miejscu, struktura ładuje menu w miejscu. Następnie pyta do aplikacji serwera dla aktywacji w miejscu i wstawia ją w miejscu, gdzie separatory są. Jest to sposób łączenia menu. Uzyskasz dostęp do menu z kontenera na potrzeby obsługi plików i umieszczania okna, a następnie uzyskasz menu z serwera na potrzeby obsługi tego elementu.
 
-## <a name="toolbars-and-status-bars"></a><a name="_core_toolbars_and_status_bars"></a>Paski narzędzi i paski stanu
+## <a name="toolbars-and-status-bars"></a><a name="_core_toolbars_and_status_bars"></a> Paski narzędzi i paski stanu
 
-Aplikacje serwera powinny utworzyć nowy pasek narzędzi i przechowywać jego mapę bitową w osobnym pliku. Aplikacje generowane przez Kreatora aplikacji przechowują tę mapę bitową w pliku o nazwie ITOOLBAR. BMP. Nowy pasek narzędzi zastępuje pasek narzędzi aplikacji kontenera, gdy jest aktywowany element serwera i powinien zawierać te same elementy co normalny pasek narzędzi, ale Usuń ikony reprezentujące elementy w menu plik i okno.
+Aplikacje serwera powinny utworzyć nowy pasek narzędzi i przechowywać jego mapę bitową w osobnym pliku. Aplikacje generowane przez Kreatora aplikacji przechowują tę mapę bitową w pliku o nazwie ITOOLBAR.BMP. Nowy pasek narzędzi zastępuje pasek narzędzi aplikacji kontenera, gdy jest aktywowany element serwera i powinien zawierać te same elementy co normalny pasek narzędzi, ale Usuń ikony reprezentujące elementy w menu plik i okno.
 
 Ten pasek narzędzi jest ładowany w `COleIPFrameWnd` klasie pochodnej utworzonej przez Kreatora aplikacji. Pasek stanu jest obsługiwany przez aplikację kontenera. Aby uzyskać więcej informacji na temat implementacji okien ramowych w miejscu, zobacz [serwery: implementowanie serwera](servers-implementing-a-server.md).
 

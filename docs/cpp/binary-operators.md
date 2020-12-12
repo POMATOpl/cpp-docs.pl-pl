@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operatory binarne'
 title: Operatory binarne
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cfb897a3df7cdb3d76f7af82f694e1cf09284cc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229603"
 ---
 # <a name="binary-operators"></a>Operatory binarne
 
@@ -69,6 +70,6 @@ gdzie *RET-Type* i *op* są zgodnie z opisem dla funkcji operatora składowych, 
 > [!NOTE]
 > Nie ma ograniczeń dla zwracanych typów operatorów binarnych; Jednak większość operatorów binarnych zdefiniowanych przez użytkownika zwraca typ klasy lub odwołanie do typu klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeciążanie operatora](../cpp/operator-overloading.md)

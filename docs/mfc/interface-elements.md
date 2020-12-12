@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: elementy interfejsu'
 title: Elementy interfejsu
 ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 4d4d81287cb30a7d3608025085cdb3f9a208147a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0aa762455f6bfe97d371244682c66dbd141a761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619991"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228056"
 ---
 # <a name="interface-elements"></a>Elementy interfejsu
 
@@ -40,7 +41,7 @@ Witryna Docker (lub okno ramki głównej) jest właścicielem wszystkich okienek
 
 ## <a name="dock-bars"></a>Słupki dokowania
 
-Każde okno głównej ramki może umieścić na nim *paski dokowania* . Pasek dokowania jest okienkiem, które należy do [klasy CDockSite](reference/cdocksite-class.md). Paski dokowania mogą akceptować obiekty pochodne od [CPane](reference/cpane-class.md), takie jak paski narzędzi. Aby utworzyć paski dokowania po zainicjowaniu okna głównego ramki, wywołaj `EnableDocking` . Aby włączyć Autoukrywanie pasków, wywołaj `EnableAutoHideBars` . `EnableAutoHideBars`tworzy obiekty [CAutoHideDockSite](reference/cautohidedocksite-class.md) i umieszcza je obok każdego paska dokowania.
+Każde okno głównej ramki może umieścić na nim *paski dokowania* . Pasek dokowania jest okienkiem, które należy do [klasy CDockSite](reference/cdocksite-class.md). Paski dokowania mogą akceptować obiekty pochodne od [CPane](reference/cpane-class.md), takie jak paski narzędzi. Aby utworzyć paski dokowania po zainicjowaniu okna głównego ramki, wywołaj `EnableDocking` . Aby włączyć Autoukrywanie pasków, wywołaj `EnableAutoHideBars` . `EnableAutoHideBars` tworzy obiekty [CAutoHideDockSite](reference/cautohidedocksite-class.md) i umieszcza je obok każdego paska dokowania.
 
 Każdy słupek dokowania jest podzielony na wiersze dokowania. Wiersze dokowania są reprezentowane przez [klasę CDockingPanesRow](reference/cdockingpanesrow-class.md). Każdy wiersz dokowania zawiera listę pasków narzędzi. Jeśli użytkownik zadokuje pasek narzędzi lub przenosi pasek narzędzi z jednego wiersza do drugiego w obrębie tego samego paska dokowania, struktura utworzy nowy wiersz i zmienia rozmiar paska dokowania odpowiednio lub umieszcza pasek narzędzi w istniejącym wierszu.
 
@@ -52,7 +53,7 @@ Okienko przestawne znajduje się w oknie mini-frame. Okna mini-frame są repreze
 
 Podziały okienka (również nazwane suwaki lub rozdzielacze) są reprezentowane przez [klasę CPaneDivider](reference/cpanedivider-class.md). Gdy użytkownik zadokuje okienko, struktura tworzy dzielniki okienka, niezależnie od tego, czy okienko jest zadokowane w witrynie Dock lub w innym okienku. Gdy okienko zostanie zadokowane w witrynie Docker, dzielnik okienka jest nazywany *domyślnym separatorem okienka*. Domyślny podział okienka jest odpowiedzialny za układ wszystkich okienek dokowania w witrynie Docker. Menedżer Docker utrzymuje listę domyślnych podziałów okien i listę okienek. Menedżery dokowania są odpowiedzialne za układ wszystkich okienek dokowania.
 
-## <a name="containers"></a>Containers
+## <a name="containers"></a>Kontenery
 
 Wszystkie okienka o zmiennym rozmiarze, gdy są zadokowane do siebie, są utrzymywane w kontenerach. Kontenery są reprezentowane przez [klasę CPaneContainer](reference/cpanecontainer-class.md). Każdy kontener ma wskaźniki do lewego okienka, prawego okienka, lewego kontenera podrzędnego, podkontenera praw i rozdzielacza między częścią lewą i prawą. (*Lewe* i *prawe* nie odnoszą się do fizycznych stron, ale zamiast identyfikować gałęzie struktury drzewa). W ten sposób możemy skompilować drzewo okienek i rozdzielaczy, a tym samym uzyskać złożone układy okienek, które mogą być zmieniane razem. `CPaneContainer`Klasa utrzymuje drzewo kontenerów, a także utrzymuje dwie listy okienek i suwaków, które znajdują się w tym drzewie. Menedżerowie kontenerów okienka są zwykle osadzani w domyślnych suwakach i oknach z ramkami mini, które zawierają wiele okienek.
 
@@ -62,7 +63,7 @@ Domyślnie każda z nich `CDockablePane` obsługuje funkcję Autoukrywanie. Gdy 
 
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>Paski kontroli z kartami i paski programu Outlook
 
-[Klasa CMFCBaseTabCtrl](reference/cmfcbasetabctrl-class.md) implementuje podstawowe funkcje okna z kartami z kartami do odłączenia. Aby użyć `CMFCBaseTabCtrl` obiektu, zainicjuj [klasę CBaseTabbedPane](reference/cbasetabbedpane-class.md) w aplikacji. `CBaseTabbedPane`pochodzi od `CDockablePane` i utrzymuje wskaźnik do `CMFCBaseTabCtrl` obiektu. `CBaseTabbedPane`Umożliwia użytkownikom dokowanie i zmienianie rozmiaru pasków sterowania z kartami. Użyj [CDockablePane:: AttachToTabWnd](reference/cdockablepane-class.md#attachtotabwnd) , aby dynamicznie utworzyć paski sterowania, które są zadokowane i z zakładkami.
+[Klasa CMFCBaseTabCtrl](reference/cmfcbasetabctrl-class.md) implementuje podstawowe funkcje okna z kartami z kartami do odłączenia. Aby użyć `CMFCBaseTabCtrl` obiektu, zainicjuj [klasę CBaseTabbedPane](reference/cbasetabbedpane-class.md) w aplikacji. `CBaseTabbedPane` pochodzi od `CDockablePane` i utrzymuje wskaźnik do `CMFCBaseTabCtrl` obiektu. `CBaseTabbedPane`Umożliwia użytkownikom dokowanie i zmienianie rozmiaru pasków sterowania z kartami. Użyj [CDockablePane:: AttachToTabWnd](reference/cdockablepane-class.md#attachtotabwnd) , aby dynamicznie utworzyć paski sterowania, które są zadokowane i z zakładkami.
 
 Kontrolka pasek programu Outlook jest również oparta na paskach kart. [Klasa CMFCOutlookBar](reference/cmfcoutlookbar-class.md) jest pochodną klasy `CBaseTabbedPane` . Aby uzyskać więcej informacji na temat korzystania z paska Outlook, zobacz [CMFCOutlookBar Class](reference/cmfcoutlookbar-class.md).
 

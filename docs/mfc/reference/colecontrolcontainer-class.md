@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleControlContainer'
 title: Klasa COleControlContainer
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 2c2c97090fc8255c06e1678a377fe2dcc968ffd2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a798b7556e22ec2d2ed2a118182e946753452b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227536"
 ---
 # <a name="colecontrolcontainer-class"></a>Klasa COleControlContainer
 
@@ -141,7 +142,7 @@ class COleControlContainer : public CCmdTarget
 
 ## <a name="remarks"></a>Uwagi
 
-W tym celu należy zapewnić obsługę co najmniej jednej witryny kontrolki ActiveX (zaimplementowane przez `COleControlSite` ). `COleControlContainer`w pełni implementuje interfejsy [IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe) i [IOleContainer](/windows/win32/api/oleidl/nn-oleidl-iolecontainer) , dzięki czemu zawarte kontrolki ActiveX mogą spełnić swoje kwalifikacje jako elementy w miejscu.
+W tym celu należy zapewnić obsługę co najmniej jednej witryny kontrolki ActiveX (zaimplementowane przez `COleControlSite` ). `COleControlContainer` w pełni implementuje interfejsy [IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe) i [IOleContainer](/windows/win32/api/oleidl/nn-oleidl-iolecontainer) , dzięki czemu zawarte kontrolki ActiveX mogą spełnić swoje kwalifikacje jako elementy w miejscu.
 
 Często ta klasa jest używana w połączeniu z `COccManager` i `COleControlSite` do implementowania niestandardowego kontenera kontrolek ActiveX z lokacjami niestandardowymi dla co najmniej jednej kontrolki ActiveX.
 
@@ -157,7 +158,7 @@ Często ta klasa jest używana w połączeniu z `COccManager` i `COleControlSite
 
 **Nagłówek:** afxocc. h
 
-## <a name="colecontrolcontainerattachcontrolsite"></a><a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite
+## <a name="colecontrolcontainerattachcontrolsite"></a><a name="attachcontrolsite"></a> COleControlContainer::AttachControlSite
 
 Wywoływane przez platformę, aby utworzyć i dołączyć lokację kontroli.
 
@@ -186,7 +187,7 @@ Zastąp tę funkcję, jeśli chcesz dostosować ten proces.
 > [!NOTE]
 > Użyj pierwszej formy tej funkcji, jeśli łączysz się statycznie z biblioteką MFC. Jeśli łączysz się dynamicznie z biblioteką MFC, użyj drugiej formy.
 
-## <a name="colecontrolcontainerbroadcastambientpropertychange"></a><a name="broadcastambientpropertychange"></a>COleControlContainer::BroadcastAmbientPropertyChange
+## <a name="colecontrolcontainerbroadcastambientpropertychange"></a><a name="broadcastambientpropertychange"></a> COleControlContainer::BroadcastAmbientPropertyChange
 
 Informuje wszystkie formanty hostowane, że Właściwość otoczenia została zmieniona.
 
@@ -203,7 +204,7 @@ Identyfikator wysyłania właściwości otoczenia.
 
 Ta funkcja jest wywoływana przez platformę, gdy właściwość otoczenia zmieniła wartość. Zastąp tę funkcję, aby dostosować to zachowanie.
 
-## <a name="colecontrolcontainercheckdlgbutton"></a><a name="checkdlgbutton"></a>COleControlContainer::CheckDlgButton
+## <a name="colecontrolcontainercheckdlgbutton"></a><a name="checkdlgbutton"></a> COleControlContainer::CheckDlgButton
 
 Modyfikuje bieżący stan przycisku.
 
@@ -227,7 +228,7 @@ Określa stan przycisku. Może być jedną z następujących czynności:
 
 - BST_UNCHECKED ustawia stan przycisku na wyczyszczony.
 
-## <a name="colecontrolcontainercheckradiobutton"></a><a name="checkradiobutton"></a>COleControlContainer::CheckRadioButton
+## <a name="colecontrolcontainercheckradiobutton"></a><a name="checkradiobutton"></a> COleControlContainer::CheckRadioButton
 
 Wybiera określony przycisk radiowy w grupie i czyści pozostałe przyciski w grupie.
 
@@ -249,7 +250,7 @@ Określa identyfikator ostatniego przycisku radiowego w grupie.
 *nIDCheckButton*<br/>
 Określa identyfikator przycisku radiowego, który ma zostać sprawdzony.
 
-## <a name="colecontrolcontainercolecontrolcontainer"></a><a name="colecontrolcontainer"></a>COleControlContainer::COleControlContainer
+## <a name="colecontrolcontainercolecontrolcontainer"></a><a name="colecontrolcontainer"></a> COleControlContainer::COleControlContainer
 
 Konstruuje `COleControlContainer` obiekt.
 
@@ -266,7 +267,7 @@ Wskaźnik do okna nadrzędnego kontenera kontrolek.
 
 Po pomyślnym utworzeniu obiektu Dodaj niestandardową lokację kontrolną z wywołaniem do `AttachControlSite` .
 
-## <a name="colecontrolcontainercreatecontrol"></a><a name="createcontrol"></a>COleControlContainer:: IsControl
+## <a name="colecontrolcontainercreatecontrol"></a><a name="createcontrol"></a> COleControlContainer:: IsControl
 
 Tworzy kontrolkę ActiveX hostowaną przez określony `COleControlSite` obiekt.
 
@@ -355,7 +356,7 @@ Tylko podzbiór flag *DwStyle* systemu Windows jest obsługiwany przez `CreateCo
 
 Użyj drugiego przeciążenia, aby utworzyć kontrolki o rozmiarze domyślnym.
 
-## <a name="colecontrolcontainercreateolefont"></a><a name="createolefont"></a>COleControlContainer::CreateOleFont
+## <a name="colecontrolcontainercreateolefont"></a><a name="createolefont"></a> COleControlContainer::CreateOleFont
 
 Tworzy czcionkę OLE.
 
@@ -368,7 +369,7 @@ void CreateOleFont(CFont* pFont);
 *pFont*<br/>
 Wskaźnik do czcionki, która ma być używana przez kontener sterowania.
 
-## <a name="colecontrolcontainerfinditem"></a><a name="finditem"></a>COleControlContainer::FindItem
+## <a name="colecontrolcontainerfinditem"></a><a name="finditem"></a> COleControlContainer::FindItem
 
 Znajduje lokację niestandardową, która hostuje określony element.
 
@@ -385,7 +386,7 @@ Identyfikator elementu, który ma zostać znaleziony.
 
 Wskaźnik do niestandardowej witryny określonego elementu.
 
-## <a name="colecontrolcontainerfreezeallevents"></a><a name="freezeallevents"></a>COleControlContainer::FreezeAllEvents
+## <a name="colecontrolcontainerfreezeallevents"></a><a name="freezeallevents"></a> COleControlContainer::FreezeAllEvents
 
 Określa, czy kontener będzie ignorować zdarzenia z dołączonych lokacji sterowania, czy je zaakceptować.
 
@@ -403,7 +404,7 @@ Niezerowe, jeśli zdarzenia zostaną przetworzone; w przeciwnym razie 0.
 > [!NOTE]
 > Kontrolka nie jest wymagana, aby zatrzymać Wyzwalanie zdarzeń, jeśli są żądane przez kontener sterowania. Może kontynuować proces uruchamiania, ale wszystkie kolejne zdarzenia zostaną zignorowane przez kontener sterowania.
 
-## <a name="colecontrolcontainergetambientprop"></a><a name="getambientprop"></a>COleControlContainer::GetAmbientProp
+## <a name="colecontrolcontainergetambientprop"></a><a name="getambientprop"></a> COleControlContainer::GetAmbientProp
 
 Pobiera wartość określonej właściwości otoczenia.
 
@@ -429,7 +430,7 @@ Wskaźnik do wartości właściwości otoczenia.
 
 Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
-## <a name="colecontrolcontainergetdlgitem"></a><a name="getdlgitem"></a>COleControlContainer::GetDlgItem
+## <a name="colecontrolcontainergetdlgitem"></a><a name="getdlgitem"></a> COleControlContainer::GetDlgItem
 
 Pobiera wskaźnik do określonego formantu lub okna podrzędnego w oknie dialogowym lub w innym oknie.
 
@@ -453,7 +454,7 @@ Wskaźnik do uchwytu obiektu okna określonego okna dialogowego.
 
 Wskaźnik do okna elementu okna dialogowego.
 
-## <a name="colecontrolcontainergetdlgitemint"></a><a name="getdlgitemint"></a>COleControlContainer::GetDlgItemInt
+## <a name="colecontrolcontainergetdlgitemint"></a><a name="getdlgitemint"></a> COleControlContainer::GetDlgItemInt
 
 Pobiera wartość przetłumaczonego tekstu danej kontrolki.
 
@@ -489,7 +490,7 @@ Funkcja tłumaczy pobrany tekst, oddzielając wszelkie dodatkowe spacje na pocz�
 
 Ta funkcja zwraca zero, jeśli przetłumaczona wartość jest większa niż INT_MAX (dla cyfr ze znakiem) lub UINT_MAX (dla liczb bez znaku).
 
-## <a name="colecontrolcontainergetdlgitemtext"></a><a name="getdlgitemtext"></a>COleControlContainer::GetDlgItemText
+## <a name="colecontrolcontainergetdlgitemtext"></a><a name="getdlgitemtext"></a> COleControlContainer::GetDlgItemText
 
 Pobiera tekst danej kontrolki.
 
@@ -517,7 +518,7 @@ Jeśli funkcja się powiedzie, wartość zwracana określa liczbę znaków skopi
 
 Jeśli funkcja się nie powiedzie, zwracana wartość jest równa zero. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
-## <a name="colecontrolcontainerhandlesetfocus"></a><a name="handlesetfocus"></a>COleControlContainer::HandleSetFocus
+## <a name="colecontrolcontainerhandlesetfocus"></a><a name="handlesetfocus"></a> COleControlContainer::HandleSetFocus
 
 Określa, czy kontener obsługuje wiadomości WM_SETFOCUS.
 
@@ -529,7 +530,7 @@ virtual BOOL HandleSetFocus();
 
 Różne od zera, jeśli kontener obsługuje komunikaty WM_SETFOCUS; w przeciwnym razie zero.
 
-## <a name="colecontrolcontainerhandlewindowlessmessage"></a><a name="handlewindowlessmessage"></a>COleControlContainer::HandleWindowlessMessage
+## <a name="colecontrolcontainerhandlewindowlessmessage"></a><a name="handlewindowlessmessage"></a> COleControlContainer::HandleWindowlessMessage
 
 Przetwarza komunikaty okna dla kontrolek bez okien.
 
@@ -563,7 +564,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 Zastąp tę funkcję, aby dostosować obsługę komunikatów kontroli bez okien.
 
-## <a name="colecontrolcontainerisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonChecked
+## <a name="colecontrolcontainerisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a> COleControlContainer::IsDlgButtonChecked
 
 Określa stan określonego przycisku.
 
@@ -590,7 +591,7 @@ Wartość zwracana z przycisku utworzonego za pomocą stylu BS_AUTOCHECKBOX, BS_
 
 Jeśli przycisk jest formantem z trzema stanami, funkcja członkowska określa, czy jest ona wygaszona, zaznaczona, czy nie.
 
-## <a name="colecontrolcontainerm_crback"></a><a name="m_crback"></a>COleControlContainer:: m_crBack
+## <a name="colecontrolcontainerm_crback"></a><a name="m_crback"></a> COleControlContainer:: m_crBack
 
 Kolor tła kontenera.
 
@@ -598,7 +599,7 @@ Kolor tła kontenera.
 COLORREF m_crBack;
 ```
 
-## <a name="colecontrolcontainerm_crfore"></a><a name="m_crfore"></a>COleControlContainer:: m_crFore
+## <a name="colecontrolcontainerm_crfore"></a><a name="m_crfore"></a> COleControlContainer:: m_crFore
 
 Kolor pierwszego planu kontenera.
 
@@ -606,7 +607,7 @@ Kolor pierwszego planu kontenera.
 COLORREF m_crFore;
 ```
 
-## <a name="colecontrolcontainerm_listsitesorwnds"></a><a name="m_listsitesorwnds"></a>COleControlContainer:: m_listSitesOrWnds
+## <a name="colecontrolcontainerm_listsitesorwnds"></a><a name="m_listsitesorwnds"></a> COleControlContainer:: m_listSitesOrWnds
 
 Lista lokacji formantów hostowanych przez kontener.
 
@@ -614,7 +615,7 @@ Lista lokacji formantów hostowanych przez kontener.
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;
 ```
 
-## <a name="colecontrolcontainerm_nwindowlesscontrols"></a><a name="m_nwindowlesscontrols"></a>COleControlContainer:: m_nWindowlessControls
+## <a name="colecontrolcontainerm_nwindowlesscontrols"></a><a name="m_nwindowlesscontrols"></a> COleControlContainer:: m_nWindowlessControls
 
 Liczba kontrolek bez okien hostowanych przez kontener formantów.
 
@@ -622,7 +623,7 @@ Liczba kontrolek bez okien hostowanych przez kontener formantów.
 int m_nWindowlessControls;
 ```
 
-## <a name="colecontrolcontainerm_polefont"></a><a name="m_polefont"></a>COleControlContainer:: m_pOleFont
+## <a name="colecontrolcontainerm_polefont"></a><a name="m_polefont"></a> COleControlContainer:: m_pOleFont
 
 Wskaźnik do czcionki OLE niestandardowej strony kontrolki.
 
@@ -630,7 +631,7 @@ Wskaźnik do czcionki OLE niestandardowej strony kontrolki.
 LPFONTDISP m_pOleFont;
 ```
 
-## <a name="colecontrolcontainerm_psitecapture"></a><a name="m_psitecapture"></a>COleControlContainer:: m_pSiteCapture
+## <a name="colecontrolcontainerm_psitecapture"></a><a name="m_psitecapture"></a> COleControlContainer:: m_pSiteCapture
 
 Wskaźnik do witryny sterowania przechwytywaniem.
 
@@ -638,7 +639,7 @@ Wskaźnik do witryny sterowania przechwytywaniem.
 COleControlSite* m_pSiteCapture;
 ```
 
-## <a name="colecontrolcontainerm_psitefocus"></a><a name="m_psitefocus"></a>COleControlContainer:: m_pSiteFocus
+## <a name="colecontrolcontainerm_psitefocus"></a><a name="m_psitefocus"></a> COleControlContainer:: m_pSiteFocus
 
 Wskaźnik do lokacji kontrolki, która aktualnie ma fokus wprowadzania.
 
@@ -646,7 +647,7 @@ Wskaźnik do lokacji kontrolki, która aktualnie ma fokus wprowadzania.
 COleControlSite* m_pSiteFocus;
 ```
 
-## <a name="colecontrolcontainerm_psiteuiactive"></a><a name="m_psiteuiactive"></a>COleControlContainer:: m_pSiteUIActive
+## <a name="colecontrolcontainerm_psiteuiactive"></a><a name="m_psiteuiactive"></a> COleControlContainer:: m_pSiteUIActive
 
 Wskaźnik do lokacji kontrolki, która jest aktywowana w miejscu.
 
@@ -654,7 +655,7 @@ Wskaźnik do lokacji kontrolki, która jest aktywowana w miejscu.
 COleControlSite* m_pSiteUIActive;
 ```
 
-## <a name="colecontrolcontainerm_pwnd"></a><a name="m_pwnd"></a>COleControlContainer:: m_pWnd
+## <a name="colecontrolcontainerm_pwnd"></a><a name="m_pwnd"></a> COleControlContainer:: m_pWnd
 
 Wskaźnik do obiektu okna skojarzonego z kontenerem.
 
@@ -662,7 +663,7 @@ Wskaźnik do obiektu okna skojarzonego z kontenerem.
 CWnd* m_pWnd;
 ```
 
-## <a name="colecontrolcontainerm_sitemap"></a><a name="m_sitemap"></a>COleControlContainer:: m_siteMap
+## <a name="colecontrolcontainerm_sitemap"></a><a name="m_sitemap"></a> COleControlContainer:: m_siteMap
 
 Mapa witryny.
 
@@ -670,7 +671,7 @@ Mapa witryny.
 CMapPtrToPtr m_siteMap;
 ```
 
-## <a name="colecontrolcontaineronpaint"></a><a name="onpaint"></a>COleControlContainer:: OnPaint
+## <a name="colecontrolcontaineronpaint"></a><a name="onpaint"></a> COleControlContainer:: OnPaint
 
 Wywoływane przez platformę, aby obsługiwać żądania WM_PAINT.
 
@@ -691,9 +692,9 @@ Niezerowe, jeśli komunikat został obsłużony; w przeciwnym razie zero.
 
 Zastąp tę funkcję, aby dostosować proces malowania.
 
-## <a name="colecontrolcontaineronuiactivate"></a><a name="onuiactivate"></a>COleControlContainer::OnUIActivate
+## <a name="colecontrolcontaineronuiactivate"></a><a name="onuiactivate"></a> COleControlContainer::OnUIActivate
 
-Wywoływane przez platformę, gdy lokacja kontrolna wskazywana przez *pSite*ma zostać aktywowana w miejscu.
+Wywoływane przez platformę, gdy lokacja kontrolna wskazywana przez *pSite* ma zostać aktywowana w miejscu.
 
 ```
 virtual void OnUIActivate(COleControlSite* pSite);
@@ -708,7 +709,7 @@ Wskaźnik do witryny sterowania, który ma zostać aktywowany w miejscu.
 
 Aktywacja w miejscu oznacza, że menu główne kontenera jest zastępowane menu złożonym w miejscu.
 
-## <a name="colecontrolcontaineronuideactivate"></a><a name="onuideactivate"></a>COleControlContainer::OnUIDeactivate
+## <a name="colecontrolcontaineronuideactivate"></a><a name="onuideactivate"></a> COleControlContainer::OnUIDeactivate
 
 Wywoływane przez platformę, gdy lokacja kontroli, wskazywana przez *pSite*, zostanie zdezaktywowana.
 
@@ -725,7 +726,7 @@ Wskaźnik do lokacji sterowania, który ma zostać zdezaktywowany.
 
 Po otrzymaniu tego powiadomienia kontener powinien ponownie zainstalować interfejs użytkownika i zastosować fokus.
 
-## <a name="colecontrolcontainerscrollchildren"></a><a name="scrollchildren"></a>COleControlContainer::ScrollChildren
+## <a name="colecontrolcontainerscrollchildren"></a><a name="scrollchildren"></a> COleControlContainer::ScrollChildren
 
 Wywoływane przez platformę, gdy komunikaty przewijania są odbierane z okna podrzędnego.
 
@@ -743,7 +744,7 @@ Ilość, w pikselach, przewijania wzdłuż osi x.
 *dy*<br/>
 Kwota przewijania wzdłuż osi y (w pikselach).
 
-## <a name="colecontrolcontainersenddlgitemmessage"></a><a name="senddlgitemmessage"></a>COleControlContainer::SendDlgItemMessage
+## <a name="colecontrolcontainersenddlgitemmessage"></a><a name="senddlgitemmessage"></a> COleControlContainer::SendDlgItemMessage
 
 Wysyła komunikat do określonej kontrolki.
 
@@ -769,7 +770,7 @@ Określa dodatkowe informacje dotyczące wiadomości.
 *lParam*<br/>
 Określa dodatkowe informacje dotyczące wiadomości.
 
-## <a name="colecontrolcontainersetdlgitemint"></a><a name="setdlgitemint"></a>COleControlContainer::SetDlgItemInt
+## <a name="colecontrolcontainersetdlgitemint"></a><a name="setdlgitemint"></a> COleControlContainer::SetDlgItemInt
 
 Ustawia tekst kontrolki w oknie dialogowym na ciąg reprezentujący określoną liczbę całkowitą.
 
@@ -791,7 +792,7 @@ Wartość całkowita, która ma zostać wyświetlona.
 *bSigned*<br/>
 Określa, czy parametr *nWartość* jest podpisany czy niepodpisany. Jeśli ten parametr ma wartość TRUE, *nWartość* jest podpisana. Jeśli ten parametr ma wartość TRUE, a *nWartość* jest mniejsza od zera, znak minus jest umieszczany przed pierwszą cyfrą w ciągu. Jeśli ten parametr ma wartość FALSE, *nWartość* jest niepodpisany.
 
-## <a name="colecontrolcontainersetdlgitemtext"></a><a name="setdlgitemtext"></a>COleControlContainer::SetDlgItemText
+## <a name="colecontrolcontainersetdlgitemtext"></a><a name="setdlgitemtext"></a> COleControlContainer::SetDlgItemText
 
 Ustawia tekst określonego formantu przy użyciu tekstu zawartego w *lpszString*.
 
@@ -809,7 +810,7 @@ Identyfikator kontrolki.
 *lpszString*<br/>
 Wskaźnik na tekst kontrolki.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

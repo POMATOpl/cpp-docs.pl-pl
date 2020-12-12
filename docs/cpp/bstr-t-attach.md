@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _bstr_t:: Attach'
 title: _bstr_t::Attach
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b3f29c8eaf81a492f7e3c4282227d3d6d246988e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229434"
 ---
 # <a name="_bstr_tattach"></a>_bstr_t::Attach
 
 **Specyficzne dla firmy Microsoft**
 
-Łączy `_bstr_t` otokę z `BSTR`.
+Łączy `_bstr_t` otokę z `BSTR` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,19 +30,19 @@ void Attach(
 
 #### <a name="parameters"></a>Parametry
 
-*S*<br/>
-A `BSTR` do skojarzenia ze zmienną lub `_bstr_t` przypisanej do niej.
+*s*<br/>
+Element `BSTR` , który ma być skojarzony z lub przypisany do `_bstr_t` zmiennej.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli `_bstr_t` wcześniej został dołączony do `BSTR`innego `_bstr_t` , będzie `BSTR` oczyścić zasób, jeśli żadne inne `_bstr_t` zmienne nie używają `BSTR`.
+Jeśli `_bstr_t` wcześniej była dołączona do innego `BSTR` , `_bstr_t` spowoduje to oczyszczenie `BSTR` zasobu, jeśli żadne inne zmienne nie `_bstr_t` używają `BSTR` .
 
 ## <a name="example"></a>Przykład
 
-Zobacz [_bstr_t::Przypisywanie](../cpp/bstr-t-assign.md) przykładu za pomocą **dołączania**.
+Zobacz [_bstr_t:: Assign](../cpp/bstr-t-assign.md) dla przykładu przy użyciu **dołączania**.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[_bstr_t, klasa](../cpp/bstr-t-class.md)
+[Klasa _bstr_t](../cpp/bstr-t-class.md)

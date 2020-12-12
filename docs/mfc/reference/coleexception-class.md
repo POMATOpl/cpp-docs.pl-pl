@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleException'
 title: Klasa COleException
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: c82099d816bc8ee8c179e9d4656f474156a629a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb11e9c285180c6e54701c210c5329714d7dccb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227094"
 ---
 # <a name="coleexception-class"></a>Klasa COleException
 
@@ -61,7 +62,7 @@ Aby uzyskać więcej informacji o wyjątkach, zobacz [Obsługa wyjątków artyku
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleException:: m_sc
+## <a name="coleexceptionm_sc"></a><a name="m_sc"></a> COleException:: m_sc
 
 Ten element członkowski danych przechowuje kod stanu OLE, który wskazuje przyczynę wyjątku.
 
@@ -79,7 +80,7 @@ Aby uzyskać więcej informacji na temat SCODE, zobacz [strukturę kodów błęd
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-## <a name="coleexceptionprocess"></a><a name="process"></a>COleException::P procesu
+## <a name="coleexceptionprocess"></a><a name="process"></a> COleException::P procesu
 
 Wywołaj funkcję elementu członkowskiego **procesu** , aby przetłumaczyć przechwycony wyjątek na kod stanu OLE.
 
@@ -107,7 +108,7 @@ Aby uzyskać więcej informacji na temat SCODE, zobacz [strukturę kodów błęd
 
   Zobacz przykład dla [COleDispatchDriver::](../../mfc/reference/coledispatchdriver-class.md#createdispatch)...
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład CALCDRIV MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>

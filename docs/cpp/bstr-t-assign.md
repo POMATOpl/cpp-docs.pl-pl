@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _bstr_t:: Assign'
 title: _bstr_t::Assign
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: e11c7e6abd2d5832c57d0379473c6783128f63e3
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b2081aaf71640a778a479a32f3f1816ca79db147
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229447"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
@@ -29,7 +30,7 @@ void Assign(
 
 #### <a name="parameters"></a>Parametry
 
-*wolumin*<br/>
+*s*<br/>
 Element `BSTR` do skopiowania do `BSTR` opakowany przez `_bstr_t` .
 
 ## <a name="remarks"></a>Uwagi
@@ -111,6 +112,6 @@ bstrWrapper2 = some text
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa _bstr_t](../cpp/bstr-t-class.md)

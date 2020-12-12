@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa by uzyskać COleDataSource'
 title: Klasa by uzyskać COleDataSource
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 2cce7b888f929da9d313babc51a7724a4eb43482
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 1fc6dd8a7df1d8b841c4f95a14c2bd1708c94fd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227328"
 ---
 # <a name="coledatasource-class"></a>Klasa by uzyskać COleDataSource
 
@@ -100,7 +101,7 @@ Aby uzyskać więcej informacji o źródłach danych i transferze danych, zobacz
 
 **Nagłówek:** Afxole. h
 
-## <a name="coledatasourcecachedata"></a><a name="cachedata"></a>By uzyskać COleDataSource:: CacheData
+## <a name="coledatasourcecachedata"></a><a name="cachedata"></a> By uzyskać COleDataSource:: CacheData
 
 Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
@@ -136,7 +137,7 @@ Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a>By uzyskać COleDataSource:: CacheGlobalData
+## <a name="coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a> By uzyskać COleDataSource:: CacheGlobalData
 
 Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
@@ -168,7 +169,7 @@ Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/window
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledatasourcecoledatasource"></a><a name="coledatasource"></a>By uzyskać COleDataSource:: by uzyskać COleDataSource
+## <a name="coledatasourcecoledatasource"></a><a name="coledatasource"></a> By uzyskać COleDataSource:: by uzyskać COleDataSource
 
 Konstruuje `COleDataSource` obiekt.
 
@@ -176,7 +177,7 @@ Konstruuje `COleDataSource` obiekt.
 COleDataSource();
 ```
 
-## <a name="coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a>By uzyskać COleDataSource::D elayRenderData
+## <a name="coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a> By uzyskać COleDataSource::D elayRenderData
 
 Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
@@ -206,7 +207,7 @@ Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/window
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a>By uzyskać COleDataSource::D elayRenderFileData
+## <a name="coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a> By uzyskać COleDataSource::D elayRenderFileData
 
 Wywołaj tę funkcję, aby określić format, w którym dane są oferowane podczas operacji transferu danych.
 
@@ -236,7 +237,7 @@ Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/window
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledatasourcedelaysetdata"></a><a name="delaysetdata"></a>By uzyskać COleDataSource::D elaySetData
+## <a name="coledatasourcedelaysetdata"></a><a name="delaysetdata"></a> By uzyskać COleDataSource::D elaySetData
 
 Wywołaj tę funkcję, aby obsłużyć zmianę zawartości źródła danych.
 
@@ -256,13 +257,13 @@ Wskazuje strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) o
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie [OnSetData](#onsetdata) zostanie wywołane przez platformę, gdy wystąpi taka sytuacja. Jest on używany tylko wtedy, gdy struktura zwraca źródło danych z [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Jeśli `DelaySetData` nie jest wywoływana, `OnSetData` Funkcja nigdy nie będzie wywoływana. `DelaySetData`należy wywołać dla każdego `FORMATETC` obsługiwanego Schowka lub formatu.
+Wywołanie [OnSetData](#onsetdata) zostanie wywołane przez platformę, gdy wystąpi taka sytuacja. Jest on używany tylko wtedy, gdy struktura zwraca źródło danych z [COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Jeśli `DelaySetData` nie jest wywoływana, `OnSetData` Funkcja nigdy nie będzie wywoływana. `DelaySetData` należy wywołać dla każdego `FORMATETC` obsługiwanego Schowka lub formatu.
 
 Aby uzyskać więcej informacji, zapoznaj się ze strukturą [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) w Windows SDK.
 
 Aby uzyskać więcej informacji, zobacz [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) w Windows SDK.
 
-## <a name="coledatasourcedodragdrop"></a><a name="dodragdrop"></a>By uzyskać COleDataSource::D oDragDrop
+## <a name="coledatasourcedodragdrop"></a><a name="dodragdrop"></a> By uzyskać COleDataSource::D oDragDrop
 
 Wywołaj `DoDragDrop` funkcję elementu członkowskiego, aby wykonać operację przeciągania i upuszczania dla tego źródła danych, zwykle w programie obsługi [CWnd:: OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) .
 
@@ -312,7 +313,7 @@ Aby uzyskać więcej informacji na temat sposobu przechowywania informacji o op�
 
 Aby uzyskać więcej informacji, zobacz artykuł [OLE — przeciąganie i upuszczanie](../../mfc/drag-and-drop-ole.md).
 
-## <a name="coledatasourceempty"></a><a name="empty"></a>By uzyskać COleDataSource:: Empty
+## <a name="coledatasourceempty"></a><a name="empty"></a> By uzyskać COleDataSource:: Empty
 
 Wywołaj tę funkcję, aby opróżnić `COleDataSource` obiekt danych.
 
@@ -326,7 +327,7 @@ Buforowane i opóźnione formaty renderowania są opróżniane, aby mogły być 
 
 Aby uzyskać więcej informacji, zobacz [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) w Windows SDK.
 
-## <a name="coledatasourceflushclipboard"></a><a name="flushclipboard"></a>By uzyskać COleDataSource:: FlushClipboard
+## <a name="coledatasourceflushclipboard"></a><a name="flushclipboard"></a> By uzyskać COleDataSource:: FlushClipboard
 
 Renderuje dane znajdujące się w schowku, a następnie umożliwia wklejanie danych ze schowka po zamknięciu aplikacji.
 
@@ -338,7 +339,7 @@ static void PASCAL FlushClipboard();
 
 Użyj [setClipboard](#setclipboard) , aby umieścić dane w Schowku.
 
-## <a name="coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a>By uzyskać COleDataSource:: GetClipboardOwner
+## <a name="coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a> By uzyskać COleDataSource:: GetClipboardOwner
 
 Określa, czy dane ze schowka uległy zmianie od czasu ostatniego wywołania programu [setClipboard](#setclipboard) i, jeśli tak, identyfikują bieżącego właściciela.
 
@@ -350,7 +351,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 
 Źródło danych znajdujące się obecnie w schowku lub ma wartość NULL, jeśli nie ma niczego w schowku lub jeśli Schowek nie należy do aplikacji wywołującej.
 
-## <a name="coledatasourceonrenderdata"></a><a name="onrenderdata"></a>By uzyskać COleDataSource:: OnRenderData
+## <a name="coledatasourceonrenderdata"></a><a name="onrenderdata"></a> By uzyskać COleDataSource:: OnRenderData
 
 Wywoływane przez platformę, by pobrać dane w określonym formacie.
 
@@ -382,7 +383,7 @@ Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby dostar
 
 Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , typ wyliczenia [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-## <a name="coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a>By uzyskać COleDataSource:: OnRenderFileData
+## <a name="coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a> By uzyskać COleDataSource:: OnRenderFileData
 
 Wywoływane przez platformę, by pobrać dane w określonym formacie, gdy określony nośnik magazynu jest plikiem.
 
@@ -412,7 +413,7 @@ Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby dostar
 
 Aby uzyskać więcej informacji, zobacz strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-## <a name="coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a>By uzyskać COleDataSource:: OnRenderGlobalData
+## <a name="coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a> By uzyskać COleDataSource:: OnRenderGlobalData
 
 Wywoływane przez platformę, aby pobrać dane w określonym formacie, gdy określony nośnik magazynu ma pamięć globalną.
 
@@ -444,7 +445,7 @@ Jest to zaawansowany możliwy do zaawansowania. Zastąp tę funkcję, aby dostar
 
 Aby uzyskać więcej informacji, zobacz strukturę [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-## <a name="coledatasourceonsetdata"></a><a name="onsetdata"></a>By uzyskać COleDataSource:: OnSetData
+## <a name="coledatasourceonsetdata"></a><a name="onsetdata"></a> By uzyskać COleDataSource:: OnSetData
 
 Wywoływane przez platformę w celu ustawienia lub zastąpienia danych w `COleDataSource` obiekcie w określonym formacie.
 
@@ -478,7 +479,7 @@ Domyślna implementacja nie robi nic. Zastąp tę funkcję, aby zastąpić dane 
 
 Aby uzyskać więcej informacji, zobacz struktury [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) i [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) oraz [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) i [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) w Windows SDK.
 
-## <a name="coledatasourcesetclipboard"></a><a name="setclipboard"></a>By uzyskać COleDataSource:: setClipboard
+## <a name="coledatasourcesetclipboard"></a><a name="setclipboard"></a> By uzyskać COleDataSource:: setClipboard
 
 Umieszcza dane zawarte w `COleDataSource` obiekcie w Schowku po wywołaniu jednej z następujących funkcji: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata)lub [DelayRenderFileData](#delayrenderfiledata).
 
@@ -486,7 +487,7 @@ Umieszcza dane zawarte w `COleDataSource` obiekcie w Schowku po wywołaniu jedne
 void SetClipboard();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład HIERSVR MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>
