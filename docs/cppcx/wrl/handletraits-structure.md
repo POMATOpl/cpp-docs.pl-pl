@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze HANDLETraits
 title: HANDLETraits — Struktura
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3eef03c724b1ba868ba67ed251acdb310d8b66f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250026"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits — Struktura
 
@@ -53,7 +54,7 @@ Nazwa                                              | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits:: Close
+## <a name="handletraitsclose"></a><a name="close"></a> HANDLETraits:: Close
 
 Zamyka określone dojście.
 
@@ -65,14 +66,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*h*<br/>
 Uchwyt do zamknięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 **`true`** Jeśli dojście *h* zostało zamknięte pomyślnie; w przeciwnym razie **`false`** .
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits:: GetInvalidValue —
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> HANDLETraits:: GetInvalidValue —
 
 Reprezentuje nieprawidłowe dojście.
 

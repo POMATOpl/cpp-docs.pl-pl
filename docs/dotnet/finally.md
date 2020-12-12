@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: finally'
 title: finally
 ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: b3331c17fc2313cbd6146db3beb015cd8d8c1eeb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 039c3fab7854d045c9b4917d2a0bc9f01fdc61a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252158"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +20,7 @@ Oprócz **`try`** **`catch`** klauzul i, obsługa wyjątków CLR obsługuje **`f
 
 Celem **`finally`** bloku jest wyczyszczenie wszystkich zasobów pozostawionych po wystąpieniu wyjątku. Należy zauważyć, że **`finally`** blok jest zawsze wykonywany, nawet jeśli nie zgłoszono żadnego wyjątku. **`catch`** Blok jest wykonywany tylko wtedy, gdy w skojarzonym bloku zostanie zgłoszony wyjątek zarządzany **`try`** .
 
-`finally`jest kontekstowego słowa kluczowego; Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](../extensions/context-sensitive-keywords-cpp-component-extensions.md) .
+`finally` jest kontekstowego słowa kluczowego; Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](../extensions/context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -56,6 +57,6 @@ MyException
 in finally
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](../extensions/exception-handling-cpp-component-extensions.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zapewnianie aktywacji bez okien'
 title: Zapewnianie aktywacji niepowiązanej z oknami
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,40 +8,40 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-ms.openlocfilehash: 9d60c309d5644c106e6c85a0c7b3988916be7193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9b86c977926e57bd3593ec861498eb5d909f37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248635"
 ---
 # <a name="providing-windowless-activation"></a>Zapewnianie aktywacji niepowiązanej z oknami
 
-Kod tworzenia okna (czyli wszystko, co się dzieje, gdy wywołujesz `CreateWindow`) jest kosztowne do wykonania. Formant, który przechowuje na ekranie okna musi zarządzać wiadomości dla okna. Od kontrolek bez okien są zatem szybciej niż formanty z systemem windows.
+Kod tworzenia okna (czyli wszystko, co się dzieje po wywołaniu `CreateWindow` ) jest kosztowny do wykonania. Kontrolka, która utrzymuje okno na ekranie, musi zarządzać komunikatami dla tego okna. Kontrolki bez okien są z tego powodu szybsze niż kontrolki z systemem Windows.
 
-Kolejną zaletą kontrolek bez okien to, że w przeciwieństwie do formantów okna od kontrolek bez okien obsługi malowanie przezroczyste i regiony ekranu prostokątny. Typowym przykładem przezroczyste kontroli jest kontrolki tekstu z przezroczystym tłem. Formanty do malowania tekst, ale nie w tle, więc niezależnie od rodzaju znajduje się w tekście pojawia się za pośrednictwem. Nowsze formy, że często użytkowania nieprostokątne formanty, takie jak strzałki i zaokrąglanie przycisków.
+Dodatkowa zaletą formantów bez okien jest to, w przeciwieństwie do kontrolek okienkowych, kontrolki bez okien obsługują przezroczyste malowanie i nieprostokątne regiony ekranu. Typowym przykładem przezroczystej kontrolki jest kontrolka tekstowa z przezroczystym tłem. Kontrolki malują tekst, ale nie w tle, więc w dowolnym obszarze tekstu jest wyświetlany tekst. Nowsze formularze często wykorzystują kontrolki nieprostokątne, takie jak strzałki i okrągłe przyciski.
 
-Często formant nie wymaga własnego okna i, zamiast tego mogą korzystać z usług okna swojego kontenera, pod warunkiem, że kontener został zapisany do obsługi obiektów bez okien. Od kontrolek bez okien są zgodne z poprzednimi wersjami z kontenerami starszych. W starszych kontenery nie są zapisywane do kontrolek bez okien obsługi kontrolek bez okien Tworzenie okna, gdy jest ona aktywna.
+Często formant nie musi mieć własnego okna, a zamiast tego może korzystać z usług systemu Windows jego kontenera, pod warunkiem, że kontener został zapisany do obsługi obiektów bez okien. Kontrolki bez okien są zgodne z poprzednimi kontenerami. W starszych kontenerach, które nie są zapisywane do obsługi kontrolek bez okien, formanty bez okien tworzą okno, gdy aktywne.
 
-Ponieważ kontrolek bez okien nie mają własne systemu windows, kontener, (która ma okno) jest odpowiedzialne za świadczenie usług, które mogłyby zostały podane przez okno własne kontrolki. Na przykład jeśli formant musi zapytania fokus klawiatury, przechwytywanie myszy lub uzyskać kontekst urządzenia, te operacje są zarządzane przez kontener. Kontener kieruje komunikaty wejściowe użytkownika wysyłane do okna do odpowiedniej kontroli niepowiązanej z oknami, za pomocą `IOleInPlaceObjectWindowless` interfejsu. (Zobacz *ActiveX SDK* opis tego interfejsu.) `COleControl` elementu członkowskiego wywołają procedurę obsługi tych usług, z kontenera.
+Ponieważ kontrolki bez okien nie mają własnych okien, kontener (z oknem) jest odpowiedzialny za świadczenie usług, które w przeciwnym razie byłyby udostępniane przez własne okno kontrolki. Na przykład, Jeśli kontrolka musi zbadać fokus klawiatury, przechwycić mysz lub uzyskać kontekst urządzenia, te operacje są zarządzane przez kontener. Kontener kieruje komunikaty wejściowe użytkownika wysyłane do okna do odpowiedniej kontrolki bez okna przy użyciu `IOleInPlaceObjectWindowless` interfejsu. (Zobacz *zestaw SDK ActiveX* , aby uzyskać opis tego interfejsu). `COleControl` funkcje członkowskie wywołują te usługi z kontenera.
 
-Aby użyć aktywacji niepowiązanej z oknami kontrolki, obejmują **windowlessActivate** flagi w zestawie flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:
+Aby formant używał bezokienkowej aktywacji, należy uwzględnić flagę **windowlessActivate** w zestawie flag zwracanych przez [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:
 
 [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]
 [!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]
 [!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-windowless-activation_3.cpp)]
 
-Kod, aby dołączyć tę flagę, jest generowany automatycznie po wybraniu **aktywacji niepowiązanej z oknami** opcja [ustawienia kontroli](../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony kreatora kontrolek ActiveX MFC.
+Kod do uwzględnienia tej flagi jest generowany automatycznie po wybraniu opcji **Aktywacja bez okien** na stronie [Ustawienia kontrolki](../mfc/reference/control-settings-mfc-activex-control-wizard.md) kreatora kontrolek ActiveX MFC.
 
-Po włączeniu aktywacji niepowiązanej z oknami kontenera oddeleguje komunikaty wejściowe z formantem `IOleInPlaceObjectWindowless` interfejsu. `COleControl`przez implementację tego interfejsu alokuje wiadomości formantu mapy komunikatów, po dostosowanie myszy służy do koordynowania odpowiednio. Może przetwarzać komunikaty, takie jak komunikaty zwykłych okna, dodając odpowiednie wpisy mapy komunikatów. W procedurach obsługi dla tych komunikatów należy unikać *m_hWnd* zmienną członkowską (lub dowolnej funkcji elementu członkowskiego, która korzysta z niego) bez wcześniejszego sprawdzenia, że jego wartość nie jest **NULL**.
+Gdy Aktywacja bez okien jest włączona, kontener przekaże komunikaty wejściowe do interfejsu kontrolki `IOleInPlaceObjectWindowless` . `COleControl`implementacja tego interfejsu wysyła komunikaty za pomocą mapy komunikatów kontrolki, po dopasowaniu odpowiednio współrzędnych myszy. Komunikaty, takie jak zwykłe komunikaty okna, można przetwarzać przez dodanie odpowiednich wpisów do mapy komunikatów. W przypadku obsługi tych komunikatów należy unikać używania *m_hWnd* zmiennej składowej (lub żadnej funkcji składowej, która go używa) bez uprzedniego sprawdzenia, czy jej wartość nie jest **równa null**.
 
-`COleControl` dostarcza funkcji elementów członkowskich, które wywołują przechwytywanie myszy fokus klawiatury, przewijania i innymi usługami okna z kontenera, zgodnie z potrzebami, w tym:
+`COleControl` Program udostępnia funkcje członkowskie, które wywołują funkcję przechwytywania myszy, fokus klawiatury, przewijanie i inne usługi okna z kontenera, w tym:
 
-- [Przy uzyskaniu fokusu](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)
+- [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)
 
-- [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)
+- [Getcapture](../mfc/reference/colecontrol-class.md#getcapture), [setcapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)
 
-- [GetDC](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)
+- [GetDC —](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)
 
 - [InvalidateRgn](../mfc/reference/colecontrol-class.md#invalidatergn)
 
@@ -48,12 +49,12 @@ Po włączeniu aktywacji niepowiązanej z oknami kontenera oddeleguje komunikaty
 
 - [GetClientRect](../mfc/reference/colecontrol-class.md#getclientrect)
 
-W kontrolkach niepowiązanej z oknami, należy zawsze używać `COleControl` zamiast odpowiednich elementów członkowskich `CWnd` funkcji składowych lub ich pokrewnych funkcji Win32 API.
+W kontrolkach bez okien należy zawsze używać `COleControl` funkcji składowych zamiast odpowiednich `CWnd` funkcji składowych lub powiązanych z nimi funkcji Win32 API.
 
-Możesz chcieć kontrolce jako obiekt docelowy operacji przeciągania i upuszczania OLE. Zwykle wymagałoby to, że okno Kontrola zostać zarejestrowana jako miejsca docelowego. Ponieważ kontrolka nie ma żadnych własnego okna, kontener używa osobnym oknie jako miejsca docelowego. Kontrolka zawiera implementację `IDropTarget` interfejsu, do którego kontener mogą delegować uprawnienia do wywołania w odpowiednim czasie. Aby udostępnić ten interfejs do kontenera, należy zastąpić [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Na przykład:
+Możesz chcieć, aby kontrolka bez okien była elementem docelowym operacji przeciągania i upuszczania OLE. Zwykle jest to wymagane, aby okno kontrolki było rejestrowane jako miejsce docelowe upuszczania. Ponieważ kontrolka nie ma własnego okna, kontener używa własnego okna jako elementu docelowego upuszczania. Formant zawiera implementację `IDropTarget` interfejsu, do którego kontener może delegować wywołania w odpowiednim czasie. Aby udostępnić ten interfejs do kontenera, Zastąp [COleControl:: GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Na przykład:
 
 [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+[Kontrolki ActiveX MFC: Optymalizacja](../mfc/mfc-activex-controls-optimization.md)

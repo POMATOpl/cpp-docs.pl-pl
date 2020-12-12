@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: zaprzyjaźnione zestawy (C++)'
 title: Przyjazne zestawy (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: a42caaf07f6ec0c71f63d6a0df8a79fff6f737e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f5a7dcd8833d6d396acfff5f42f6c1709327b2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252132"
 ---
 # <a name="friend-assemblies-c"></a>Przyjazne zestawy (C++)
 
@@ -184,6 +185,6 @@ int main() {
 Class1::Test_Public
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Component Extensions dla platform środowiska uruchomieniowego](../extensions/component-extensions-for-runtime-platforms.md)

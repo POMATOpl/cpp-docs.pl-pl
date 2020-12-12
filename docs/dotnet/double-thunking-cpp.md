@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Double podwójna (C++)'
 title: Podwójna konwersja bitowa adresów (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 3f0fc5567baaa0c4f3fea410770963adf51e8366
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 7c09e60ce534dd10567b93ece0eb6cb4bf8cc24a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252184"
 ---
 # <a name="double-thunking-c"></a>Podwójna konwersja bitowa adresów (C++)
 
@@ -33,7 +34,7 @@ Kompilator został zaktualizowany, aby zmniejszyć niepotrzebne podwójne podwó
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład ilustruje podwójny podwójna. W przypadku skompilowania natywnego (bez **/CLR**) wywołanie funkcji wirtualnej w programie `main` generuje jedno wywołanie `T` konstruktora kopiującego i jedno wywołanie do destruktora. Podobne zachowanie jest realizowane, gdy funkcja wirtualna jest zadeklarowana z **/CLR** i `__clrcall` . Jednak po prostu skompilowane z **/CLR**wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale istnieje inne wywołanie konstruktora kopiującego ze względu na natywny thunk.
+Poniższy przykład ilustruje podwójny podwójna. W przypadku skompilowania natywnego (bez **/CLR**) wywołanie funkcji wirtualnej w programie `main` generuje jedno wywołanie `T` konstruktora kopiującego i jedno wywołanie do destruktora. Podobne zachowanie jest realizowane, gdy funkcja wirtualna jest zadeklarowana z **/CLR** i `__clrcall` . Jednak po prostu skompilowane z **/CLR** wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale istnieje inne wywołanie konstruktora kopiującego ze względu na natywny thunk.
 
 ### <a name="code"></a>Kod
 
@@ -137,6 +138,6 @@ int main() {
 after calling struct S
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

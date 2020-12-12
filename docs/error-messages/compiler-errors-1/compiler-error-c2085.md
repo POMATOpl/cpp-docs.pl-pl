@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2085'
 title: Błąd kompilatora C2085
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2085
 ms.assetid: 0a86785c-8e6f-481b-8c7b-412220c1950d
-ms.openlocfilehash: 7dbf7266a6330a1fdb46d7f2df90e7684f026d9a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2cd828c9a18c06c5794bef01ba861f702af2e096
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252119"
 ---
 # <a name="compiler-error-c2085"></a>Błąd kompilatora C2085
 
@@ -35,4 +36,4 @@ void func1( void );
 int main( void ) {}
 ```
 
-Gdy brakuje średnika, `func1()` wygląda jak definicja funkcji, a nie prototyp, więc `main` jest zdefiniowany w `func1()`, generując C2085 błędów dla `main`identyfikatora.
+Gdy brakuje średnika, `func1()` wygląda jak definicja funkcji, a nie prototyp, więc `main` jest zdefiniowana w ramach `func1()` , generując błąd C2085 dla identyfikatora `main` .

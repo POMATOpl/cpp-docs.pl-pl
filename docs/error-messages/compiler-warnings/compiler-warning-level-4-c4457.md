@@ -1,27 +1,28 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4457
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4457'
+title: Ostrzeżenie kompilatora (poziom 4) C4457
 ms.date: 11/04/2016
 f1_keywords:
 - C4457
 helpviewer_keywords:
 - C4457
 ms.assetid: 02fd149a-917d-4f67-97a6-eb714572271f
-ms.openlocfilehash: 11307ddc3b13a9cd9b36f1ee927082104792b07f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8898189668eba95619e6bd0d0ccf1cb8ca3afdfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251417"
 ---
-# <a name="compiler-warning-level-4-c4457"></a>Kompilator ostrzeżenie (poziom 4) C4457
+# <a name="compiler-warning-level-4-c4457"></a>Ostrzeżenie kompilatora (poziom 4) C4457
 
-> Deklaracja "*identyfikator*" powoduje ukrycie parametru funkcji
+> Deklaracja elementu "*Identifier*" powoduje ukrycie parametru funkcji
 
-Deklaracja *identyfikator* w zakresie lokalnym ukrywa deklarację parametru funkcji takiej samej nazwie. To ostrzeżenie informuje o tym, który odwołuje się do *identyfikator* w zakresie lokalnym rozwiązać wersji lokalnie zadeklarowane, nie parametrze, co może spowodować lub może nie być zgodne z zamiarami użytkownika. Aby rozwiązać ten problem, zalecane jest nadać nazwy zmiennych lokalnych, które nie wchodzą w konflikt z nazwy parametru.
+Deklaracja *identyfikatora* w zakresie lokalnym ukrywa deklarację parametru funkcji o identycznej nazwie. To ostrzeżenie informuje o tym, że odwołania do *identyfikatora* w zakresie lokalnym są rozpoznawane jako wersja zadeklarowana lokalnie, a nie do parametru, który może lub nie być zamiarem. Aby rozwiązać ten problem, zalecamy nadawanie nazw zmiennych lokalnych, które nie powodują konfliktu z nazwami parametrów.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4457, ponieważ parametr `x` i zmienną lokalną `x` w `member_fn` takich samych nazwach. Aby rozwiązać ten problem, należy używać różnych nazw parametrów i zmiennych lokalnych.
+Poniższy przykład generuje C4457, ponieważ parametr `x` i zmienna lokalna `x` w `member_fn` mają takie same nazwy. Aby rozwiązać ten problem, Użyj różnych nazw dla parametrów i zmiennych lokalnych.
 
 ```cpp
 // C4457_hide.cpp

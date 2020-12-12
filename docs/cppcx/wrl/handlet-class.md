@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: obsługa klasy'
 title: HandleT — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: 661d3cb92b20fc929a9bae3cad7bb55740e5e096
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 608433193729e3d9be5b9490c469bf0b04d3531c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250013"
 ---
 # <a name="handlet-class"></a>HandleT — Klasa
 
@@ -103,7 +104,7 @@ Nazwa                        | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL:: otoki
 
-## <a name="handlethandlet"></a><a name="tilde-handlet"></a>Obsługa:: ~ obsługa
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a> Obsługa:: ~ obsługa
 
 Umożliwia odinicjowanie wystąpienia `HandleT` klasy.
 
@@ -111,7 +112,7 @@ Umożliwia odinicjowanie wystąpienia `HandleT` klasy.
 ~HandleT();
 ```
 
-## <a name="handletattach"></a><a name="attach"></a>Uchwyt:: Attach
+## <a name="handletattach"></a><a name="attach"></a> Uchwyt:: Attach
 
 Kojarzy określone dojście z bieżącym `HandleT` obiektem.
 
@@ -123,10 +124,10 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*h*<br/>
 Uchwyt.
 
-## <a name="handletclose"></a><a name="close"></a>Obsługa:: Close
+## <a name="handletclose"></a><a name="close"></a> Obsługa:: Close
 
 Zamyka bieżący `HandleT` obiekt.
 
@@ -140,7 +141,7 @@ Dojście, które jest zależne od bieżącego `HandleT` jest zamknięte, a `Hand
 
 Jeśli uchwyt nie zostanie zamknięty prawidłowo, wyjątek jest wywoływany w wątku wywołującym.
 
-## <a name="handletdetach"></a><a name="detach"></a>Obsługa::D etach
+## <a name="handletdetach"></a><a name="detach"></a> Obsługa::D etach
 
 Odkojarzy bieżący `HandleT` obiekt z jego bazowego uchwytu.
 
@@ -156,7 +157,7 @@ Podstawowy uchwyt.
 
 Po zakończeniu tej operacji bieżący `HandleT` stan jest ustawiony na nieprawidłowy.
 
-## <a name="handletget"></a><a name="get"></a>Obsługa:: Get
+## <a name="handletget"></a><a name="get"></a> Obsługa:: Get
 
 Pobiera wartość bazowego dojścia.
 
@@ -168,7 +169,7 @@ typename HandleTraits::Type Get() const;
 
 Uchwyt.
 
-## <a name="handlethandle_"></a><a name="handle"></a>Obsługa:: handle_
+## <a name="handlethandle_"></a><a name="handle"></a> Obsługa:: handle_
 
 Zawiera dojście reprezentowane przez `HandleT` obiekt.
 
@@ -176,7 +177,7 @@ Zawiera dojście reprezentowane przez `HandleT` obiekt.
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlethandlet"></a><a name="handlet"></a>Obsługa:: obsługa
+## <a name="handlethandlet"></a><a name="handlet"></a> Obsługa:: obsługa
 
 Inicjuje nowe wystąpienie klasy `HandleT`.
 
@@ -193,14 +194,14 @@ HandleT(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*h*<br/>
 Uchwyt.
 
 ### <a name="remarks"></a>Uwagi
 
 Pierwszy Konstruktor inicjuje `HandleT` obiekt, który nie jest prawidłowym dojściem do obiektu. Drugi Konstruktor tworzy nowy `HandleT` obiekt z parametru *h*.
 
-## <a name="handletinternalclose"></a><a name="internalclose"></a>Obsługa:: InternalClose —
+## <a name="handletinternalclose"></a><a name="internalclose"></a> Obsługa:: InternalClose —
 
 Zamyka bieżący `HandleT` obiekt.
 
@@ -214,9 +215,9 @@ virtual bool InternalClose();
 
 ### <a name="remarks"></a>Uwagi
 
-`InternalClose()`jest **`protected`** .
+`InternalClose()` jest **`protected`** .
 
-## <a name="handletisvalid"></a><a name="isvalid"></a>Obsługa:: IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a> Obsługa:: IsValid
 
 Wskazuje, czy bieżący `HandleT` obiekt reprezentuje uchwyt.
 
@@ -228,7 +229,7 @@ bool IsValid() const;
 
 **`true`** Jeśli `HandleT` reprezentuje uchwyt; w przeciwnym razie, **`false`** .
 
-## <a name="handletoperator"></a><a name="operator-assign"></a>Handle:: operator =
+## <a name="handletoperator"></a><a name="operator-assign"></a> Handle:: operator =
 
 Przenosi wartość określonego `HandleT` obiektu do bieżącego `HandleT` obiektu.
 
@@ -240,7 +241,7 @@ HandleT& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*h*<br/>
 Rvalue odwołanie do dojścia.
 
 ### <a name="return-value"></a>Wartość zwracana

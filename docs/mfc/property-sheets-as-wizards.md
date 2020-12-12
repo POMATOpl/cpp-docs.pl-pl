@@ -1,23 +1,24 @@
 ---
+description: 'Dowiedz się więcej o: arkusze właściwości jako kreatory'
 title: Arkusze właściwości jako kreatorzy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
-ms.openlocfilehash: c60148c099b34993bef0c9808e6561e37c26cc7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a68a16936e8ab134bab2fe78dac0d29c125b4db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248869"
 ---
 # <a name="property-sheets-as-wizards"></a>Arkusze właściwości jako kreatorzy
 
-Jedną z najważniejszych cech arkusz właściwości Kreator jest nawigacji jest udostępniany przycisków Dalej lub Zakończ Wstecz i Anuluj zamiast tabulatorów. Należy wywołać [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) przed wywołaniem [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) na obiekt arkusza właściwości, aby móc korzystać z tej funkcji.
+Kluczową cechą arkusza właściwości kreatora jest to, że nawigacja jest udostępniana za pomocą przycisków dalej lub Zakończ, wstecz i Anuluj zamiast tabulatorów. Przed wywołaniem metody [CPropertySheet::D omodal](../mfc/reference/cpropertysheet-class.md#domodal) w obiekcie arkusza właściwości należy wywołać metodę [CPropertySheet:: SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) .
 
-Użytkownik otrzymuje taki sam [CPropertyPage::OnSetActive](../mfc/reference/cpropertypage-class.md#onsetactive) i [CPropertyPage::OnKillActive](../mfc/reference/cpropertypage-class.md#onkillactive) powiadomienia podczas przenoszenia z jednej strony do innej strony. Dalej i Zakończ przyciski są formanty wzajemnie się wykluczają; oznacza to, że tylko jeden z nich pojawią się w danym momencie. Na pierwszej stronie można włączyć przycisk Dalej. Jeśli użytkownik znajduje się na ostatniej stronie, powinno być włączone przycisk Zakończ. Nie jest to wykonywane automatycznie przez platformę. Trzeba wywoływać [CPropertySheet::SetWizardButton](../mfc/reference/cpropertysheet-class.md#setwizardbuttons) na ostatniej stronie, aby to osiągnąć.
+Użytkownik otrzymuje te same [CPropertyPage:: OnSetActive](../mfc/reference/cpropertypage-class.md#onsetactive) i [CPropertyPage:: OnKillActive](../mfc/reference/cpropertypage-class.md#onkillactive) podczas przechodzenia z jednej strony na inną. Przyciski Dalej i Zakończ są wzajemnie wykluczające się kontrole; oznacza to, że w danym momencie będzie wyświetlana tylko jedna z nich. Na pierwszej stronie należy włączyć przycisk Dalej. Jeśli użytkownik znajduje się na ostatniej stronie, należy włączyć przycisk Zakończ. Nie jest to wykonywane automatycznie przez platformę. Musisz wywołać [CPropertySheet:: SetWizardButton](../mfc/reference/cpropertysheet-class.md#setwizardbuttons) na ostatniej stronie, aby to osiągnąć.
 
-Aby wyświetlić wszystkie przyciski domyślne, możesz mush Pokaż przycisk Zakończ i Przenieś przycisk Dalej. Następnie przenieś przycisk Wstecz, utrzymywanie jej położenie względne, do przycisk Dalej.
+Aby wyświetlić wszystkie domyślne przyciski, mush Pokaż przycisk Zakończ i Przenieś przycisk Dalej. Następnie przenieś przycisk Wstecz, aby zachować jego względną pozycję do przycisku Dalej.
 
 ## <a name="example"></a>Przykład
 

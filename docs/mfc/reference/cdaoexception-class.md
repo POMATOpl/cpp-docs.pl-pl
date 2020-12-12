@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDaoException'
 title: Klasa CDaoException
 ms.date: 09/17/2019
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: fcbd88e8a9ef632b61096ac2577d7a1a7094d4b5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb7da6746d2ce539a2ee7b0b28a9a4e9c6c6de64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250897"
 ---
 # <a name="cdaoexception-class"></a>Klasa CDaoException
 
@@ -60,7 +61,7 @@ class CDaoException : public CException
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa zawiera publiczne elementy członkowskie danych, których można użyć do określenia przyczyny wyjątku. `CDaoException`obiekty są konstruowane i zgłaszane przez funkcje składowe klas baz danych DAO.
+Klasa zawiera publiczne elementy członkowskie danych, których można użyć do określenia przyczyny wyjątku. `CDaoException` obiekty są konstruowane i zgłaszane przez funkcje składowe klas baz danych DAO.
 
 > [!NOTE]
 > Klasy bazy danych DAO różnią się od klas baz danych MFC opartych na Open Database Connectivity (ODBC). Wszystkie nazwy klas baz danych DAO mają prefiks "CDao". Nadal można uzyskać dostęp do źródeł danych ODBC przy użyciu klas DAO. Ogólnie rzecz biorąc, klasy MFC oparte na obiektach DAO są bardziej możliwością niż klasy MFC oparte na ODBC; klasy oparte na DAO mogą uzyskiwać dostęp do danych, w tym za pośrednictwem sterowników ODBC, za pośrednictwem własnego aparatu bazy danych. Klasy oparte na obiektach DAO obsługują również operacje języka definicji danych (DDL), takie jak Dodawanie tabel za pośrednictwem klas, bez konieczności bezpośredniego wywoływania obiektów DAO. Aby uzyskać informacje o wyjątkach zgłaszanych przez klasy ODBC, zobacz [CDBException](../../mfc/reference/cdbexception-class.md).
@@ -69,7 +70,7 @@ Można uzyskać dostęp do obiektów wyjątków w zakresie wyrażenia [catch](..
 
 W MFC wszystkie błędy obiektów DAO są wyrażane jako wyjątki typu `CDaoException` . Podczas przechwytywania wyjątku tego typu, można użyć `CDaoException` funkcji składowych, aby pobrać informacje z dowolnego obiektów błędów DAO przechowywanych w kolekcji błędów aparatu bazy danych. W przypadku wystąpienia każdego błędu jeden lub więcej obiektów błędów jest umieszczanych w kolekcji błędy. (Zazwyczaj kolekcja zawiera tylko jeden obiekt błędu). Jeśli używasz źródła danych ODBC, najtrudniejsze jest uzyskanie wielu obiektów błędów. Gdy inna operacja DAO generuje błąd, kolekcja błędy zostanie wyczyszczona, a nowy obiekt błędu zostanie umieszczony w kolekcji błędów. Operacje DAO, które nie generują błędu, nie mają wpływu na zbieranie błędów.
 
-W przypadku kodów błędów DAO zobacz plik DAOERR. C. Aby uzyskać powiązane informacje, zobacz temat "błędy dostępu do danych z pułapkami" w pomocy programu DAO.
+W przypadku kodów błędów DAO zobacz plik DAOERR. H. Aby uzyskać powiązane informacje, zobacz temat "błędy dostępu do danych z pułapkami" w pomocy programu DAO.
 
 Aby uzyskać więcej informacji na temat obsługi wyjątków ogólnych lub o `CDaoException` obiektach, zobacz [Obsługa wyjątków artykułów (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md). Drugi artykuł zawiera przykładowy kod, który ilustruje obsługę wyjątków w DAO.
 
@@ -85,7 +86,7 @@ Aby uzyskać więcej informacji na temat obsługi wyjątków ogólnych lub o `CD
 
 **Nagłówek:** afxdao. h
 
-## <a name="cdaoexceptioncdaoexception"></a><a name="cdaoexception"></a>CDaoException::CDaoException
+## <a name="cdaoexceptioncdaoexception"></a><a name="cdaoexception"></a> CDaoException::CDaoException
 
 Konstruuje `CDaoException` obiekt.
 
@@ -115,7 +116,7 @@ Można jednak jawnie utworzyć obiekt wyjątku, jeśli wykonujesz bezpośrednie 
 
 Aby uzyskać więcej informacji na temat obsługi błędów w klasach MFC DAO, zobacz [wyjątki w artykule: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
 
-## <a name="cdaoexceptiongeterrorcount"></a><a name="geterrorcount"></a>CDaoException::GetErrorCount
+## <a name="cdaoexceptiongeterrorcount"></a><a name="geterrorcount"></a> CDaoException::GetErrorCount
 
 Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę obiektów błędów DAO w kolekcji błędów aparatu bazy danych.
 
@@ -134,7 +135,7 @@ Te informacje są przydatne w przypadku zapętlenia w kolekcji błędy w celu po
 > [!NOTE]
 > Zwykle w kolekcji błędów występuje tylko jeden obiekt Error. Jeśli pracujesz ze źródłem danych ODBC, jednak może istnieć więcej niż jeden.
 
-## <a name="cdaoexceptiongeterrorinfo"></a><a name="geterrorinfo"></a>CDaoException:: GetErrorInfo
+## <a name="cdaoexceptiongeterrorinfo"></a><a name="geterrorinfo"></a> CDaoException:: GetErrorInfo
 
 Zwraca informacje o błędzie dotyczące konkretnego obiektu błędu w kolekcji błędów.
 
@@ -161,11 +162,11 @@ Wywołaj tę funkcję elementu członkowskiego, aby uzyskać następujące rodza
 
 - Kontekst pomocy
 
-`GetErrorInfo`przechowuje informacje w `m_pErrorInfo` elemencie członkowskim danych obiektu Exception. Aby uzyskać krótki opis zwracanych informacji, zobacz [m_pErrorInfo](#m_perrorinfo). W przypadku przechwycenia wyjątku typu `CDaoException` zgłoszonego przez MFC, `m_pErrorInfo` element członkowski zostanie już wypełniony. W przypadku wybrania bezpośredniego wywoływania obiektów DAO należy wywoływać `GetErrorInfo` funkcję elementu członkowskiego obiektu wyjątku do wypełnienia `m_pErrorInfo` . Aby uzyskać bardziej szczegółowy opis, zobacz strukturę [CDaoErrorInfo —](../../mfc/reference/cdaoerrorinfo-structure.md) .
+`GetErrorInfo` przechowuje informacje w `m_pErrorInfo` elemencie członkowskim danych obiektu Exception. Aby uzyskać krótki opis zwracanych informacji, zobacz [m_pErrorInfo](#m_perrorinfo). W przypadku przechwycenia wyjątku typu `CDaoException` zgłoszonego przez MFC, `m_pErrorInfo` element członkowski zostanie już wypełniony. W przypadku wybrania bezpośredniego wywoływania obiektów DAO należy wywoływać `GetErrorInfo` funkcję elementu członkowskiego obiektu wyjątku do wypełnienia `m_pErrorInfo` . Aby uzyskać bardziej szczegółowy opis, zobacz strukturę [CDaoErrorInfo —](../../mfc/reference/cdaoerrorinfo-structure.md) .
 
 Aby uzyskać informacje o wyjątkach DAO i przykładowym kodzie, zobacz [wyjątki w artykule: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
 
-## <a name="cdaoexceptionm_nafxdaoerror"></a><a name="m_nafxdaoerror"></a>CDaoException:: m_nAfxDaoError
+## <a name="cdaoexceptionm_nafxdaoerror"></a><a name="m_nafxdaoerror"></a> CDaoException:: m_nAfxDaoError
 
 Zawiera rozszerzony kod błędu MFC.
 
@@ -183,7 +184,7 @@ Możliwe wartości:
 
 - AFX_DAO_ERROR_OBJECT_NOT_OPEN podjęto próbę otwarcia zestawu rekordów na podstawie obiektu querydef lub tabledef, który nie był w stanie otwartym.
 
-## <a name="cdaoexceptionm_perrorinfo"></a><a name="m_perrorinfo"></a>CDaoException:: m_pErrorInfo
+## <a name="cdaoexceptionm_perrorinfo"></a><a name="m_perrorinfo"></a> CDaoException:: m_pErrorInfo
 
 Zawiera wskaźnik do `CDaoErrorInfo` struktury, która zawiera informacje dotyczące obiektu błędu DAO, który został ostatnio pobrany przez wywołanie metody [GetErrorInfo](#geterrorinfo).
 
@@ -191,17 +192,17 @@ Zawiera wskaźnik do `CDaoErrorInfo` struktury, która zawiera informacje dotycz
 
 Ten obiekt zawiera następujące informacje:
 
-|CDaoErrorInfo — element członkowski|Informacyjny|Znaczenie|
+|CDaoErrorInfo — element członkowski|Informacje|Znaczenie|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Kod błędu|Kod błędu DAO|
-|`m_strSource`|Element źródłowy|Nazwa obiektu lub aplikacji, która pierwotnie wygenerowała błąd|
+|`m_strSource`|Źródło|Nazwa obiektu lub aplikacji, która pierwotnie wygenerowała błąd|
 |`m_strDescription`|Opis|Opisowy ciąg skojarzony z błędem|
 |`m_strHelpFile`|Plik pomocy|Ścieżka do pliku pomocy systemu Windows, w którym użytkownik może uzyskać informacje o problemie|
 |`m_lHelpContext`|Kontekst pomocy|Identyfikator kontekstu tematu w pliku pomocy DAO|
 
 Aby uzyskać szczegółowe informacje na temat informacji zawartych w `CDaoErrorInfo` obiekcie, zobacz strukturę [CDaoErrorInfo —](../../mfc/reference/cdaoerrorinfo-structure.md) .
 
-## <a name="cdaoexceptionm_scode"></a><a name="m_scode"></a>CDaoException:: m_scode
+## <a name="cdaoexceptionm_scode"></a><a name="m_scode"></a> CDaoException:: m_scode
 
 Zawiera wartość typu `SCODE` opisującą błąd.
 
@@ -211,7 +212,7 @@ Jest to kod OLE. Rzadko trzeba będzie używać tej wartości, ponieważ w prawi
 
 Aby uzyskać informacje na temat SCODE, zobacz [strukturę tematu kodów błędów OLE](/windows/win32/com/structure-of-com-error-codes) w Windows SDK. Typ danych SCODE jest mapowany na typ danych HRESULT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

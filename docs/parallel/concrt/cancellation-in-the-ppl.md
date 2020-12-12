@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Anulowanie w PPL'
 title: Anulowanie w PPL
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -9,19 +10,19 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: e85de9a07b625030976e6f03c9e965d34c3134d4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c15d3901df8968dd6d410e8305880585637a3fee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250676"
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 
 W tym dokumencie wyjaśniono rolę anulowania w bibliotece równoległych wzorców (PPL), jak anulować pracę równoległą i jak ustalić, kiedy równoległe działanie zostało anulowane.
 
 > [!NOTE]
-> Środowisko uruchomieniowe używa obsługi wyjątków w celu zaimplementowania anulowania. Nie należy przechwytywać ani obsługiwać tych wyjątków w kodzie. Ponadto zalecamy napisać kod bezpieczny dla wyjątków w treści funkcji dla zadań podrzędnych. Na przykład można użyć wzorca *pozyskiwania zasobów* (RAII), aby upewnić się, że zasoby są prawidłowo obsługiwane, gdy w treści zadania zostanie zgłoszony wyjątek. Aby zapoznać się z kompletnym przykładem, który używa wzorca RAII do czyszczenia zasobu w zadaniu, zobacz [Przewodnik: usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
+> Środowisko uruchomieniowe używa obsługi wyjątków w celu zaimplementowania anulowania. Nie należy przechwytywać ani obsługiwać tych wyjątków w kodzie. Ponadto zalecamy napisać kod bezpieczny dla wyjątków w treści funkcji dla zadań podrzędnych. Na przykład można użyć wzorca *pozyskiwania zasobów* (RAII), aby upewnić się, że zasoby są prawidłowo obsługiwane, gdy w treści zadania zostanie zgłoszony wyjątek. Aby zapoznać się z kompletnym przykładem, który używa wzorca RAII do czyszczenia zasobu w zadaniu, zobacz [Przewodnik: usuwanie pracy z wątku User-Interface](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
 
 ## <a name="key-points"></a>Kwestie kluczowe
 
@@ -37,7 +38,7 @@ W tym dokumencie wyjaśniono rolę anulowania w bibliotece równoległych wzorc�
 
 - Użyj metody [concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) , gdy wywołasz konstruktora lub funkcję, która pobiera `cancellation_token` obiekt, ale nie chcesz, aby operacja nie została anulowana. Ponadto, jeśli token anulowania nie zostanie przekazany do funkcji [concurrency:: Task](../../parallel/concrt/reference/task-class.md) konstruktora lub [concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) , to zadanie nie zostanie anulowane.
 
-## <a name="in-this-document"></a><a name="top"></a>W tym dokumencie
+## <a name="in-this-document"></a><a name="top"></a> W tym dokumencie
 
 - [Równoległe drzewa robocze](#trees)
 
@@ -53,7 +54,7 @@ W tym dokumencie wyjaśniono rolę anulowania w bibliotece równoległych wzorc�
 
 - [Kiedy nie używać anulowania](#when)
 
-## <a name="parallel-work-trees"></a><a name="trees"></a>Równoległe drzewa robocze
+## <a name="parallel-work-trees"></a><a name="trees"></a> Równoległe drzewa robocze
 
 PPL używa zadań i grup zadań do zarządzania szczegółowymi zadaniami i obliczeniami. Grupy zadań można zagnieżdżać w celu utworzenia *drzew* pracy równoległej. Na poniższej ilustracji przedstawiono równoległe drzewo robocze. Na tej ilustracji `tg1` i `tg2` reprezentuje grupy zadań,, `t1` , `t2` `t3` `t4` i `t5` reprezentuje prace wykonywane przez grupy zadań.
 
@@ -67,19 +68,19 @@ Można również użyć klasy [concurrency:: task_group](reference/task-group-cl
 
 [[Top](#top)]
 
-## <a name="canceling-parallel-tasks"></a><a name="tasks"></a>Anulowanie zadań równoległych
+## <a name="canceling-parallel-tasks"></a><a name="tasks"></a> Anulowanie zadań równoległych
 
 Istnieje wiele sposobów anulowania równoległych zadań. Preferowanym sposobem jest użycie tokenu anulowania. Grupy zadań obsługują również metodę [concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) oraz metodę [concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . Końcowym sposobem jest zgłoszenie wyjątku w treści funkcji pracy zadania. Niezależnie od wybranej metody, wyjaśnienie, że anulowanie nie następuje natychmiast. Chociaż nie uruchomiono nowego zadania, jeśli zadanie lub grupa zadań została anulowana, aktywna służbowa musi sprawdzić i odpowiedzieć na anulowanie.
 
 Aby uzyskać więcej przykładów, które anulują zadania równoległe, zobacz Wskazówki [: łączenie za pomocą zadań i żądań HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [jak: użyć anulowania do przerwania z pętli równoległej](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)i [jak: użyć obsługi wyjątków, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
-### <a name="using-a-cancellation-token-to-cancel-parallel-work"></a><a name="tokens"></a>Anulowanie równoległej pracy przy użyciu tokenu anulowania
+### <a name="using-a-cancellation-token-to-cancel-parallel-work"></a><a name="tokens"></a> Anulowanie równoległej pracy przy użyciu tokenu anulowania
 
 `task`Klasy, `task_group` i `structured_task_group` obsługują anulowanie przy użyciu tokenów anulowania. PPL definiuje w tym celu klasy [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) i [concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . W przypadku anulowania pracy przy użyciu tokenu anulowania środowisko uruchomieniowe nie uruchamia nowej pracy, która subskrybuje ten token. Działa, która jest już aktywna, może używać funkcji składowej [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) do monitorowania tokenu anulowania i zatrzymania, gdy będzie to możliwe.
 
 Aby zainicjować anulowanie, wywołaj metodę [concurrency:: cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) . Możesz odpowiedzieć na anulowanie w następujący sposób:
 
-- W przypadku `task` obiektów Użyj funkcji [concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) . `cancel_current_task`anuluje bieżące zadanie i wszystkie kontynuacje oparte na wartościach. (Nie anuluje *tokenu* anulowania, który jest skojarzony z zadaniem lub jego kontynuacji).
+- W przypadku `task` obiektów Użyj funkcji [concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) . `cancel_current_task` anuluje bieżące zadanie i wszystkie kontynuacje oparte na wartościach. (Nie anuluje *tokenu* anulowania, który jest skojarzony z zadaniem lub jego kontynuacji).
 
 - W przypadku grup zadań i algorytmów równoległych należy użyć funkcji [concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) w celu wykrycia anulowania i powrotu jak najszybciej z treści zadania, gdy ta funkcja zwróci wartość **`true`** . (Nie wywołuj `cancel_current_task` z grupy zadań).
 
@@ -142,7 +143,7 @@ Po podaniu tokenu anulowania do `when_all` `when_any` funkcji i funkcja ta anulu
 
 [[Top](#top)]
 
-### <a name="using-the-cancel-method-to-cancel-parallel-work"></a><a name="cancel"></a>Anulowanie pracy równoległej za pomocą metody Cancel
+### <a name="using-the-cancel-method-to-cancel-parallel-work"></a><a name="cancel"></a> Anulowanie pracy równoległej za pomocą metody Cancel
 
 [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) i [concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) Metoda ustawia grupę zadań na stan anulowane. Po wywołaniu `cancel` , grupa zadań nie uruchamia przyszłych zadań. `cancel`Metody mogą być wywoływane przez wiele zadań podrzędnych. Anulowane zadanie powoduje, że metody [concurrency:: task_group:: wait](reference/task-group-class.md#wait) i [concurrency:: structured_task_group:: wait](reference/structured-task-group-class.md#wait) , aby zwracały [concurrency:: anulowane](reference/concurrency-namespace-enums.md#task_group_status).
 
@@ -175,7 +176,7 @@ Ten drugi przykład przypomina pierwszy z nich, z tą różnicą, że zadanie an
 
 [[Top](#top)]
 
-### <a name="using-exceptions-to-cancel-parallel-work"></a><a name="exceptions"></a>Anulowanie pracy równoległej przy użyciu wyjątków
+### <a name="using-exceptions-to-cancel-parallel-work"></a><a name="exceptions"></a> Anulowanie pracy równoległej przy użyciu wyjątków
 
 Użycie tokenów anulowania i `cancel` metody jest bardziej wydajne niż obsługa wyjątków podczas anulowania równoległego drzewa pracy. Tokeny anulowania i `cancel` Metoda anulują zadanie i zadania podrzędne w sposób w dół. Odwrotnie, obsługa wyjątków działa w sposób dolny i musi anulować każdą podrzędną grupę zadań niezależnie, ponieważ wyjątek jest propagowany w górę. [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) w temacie wyjaśnia, jak środowisko uruchomieniowe współbieżności używa wyjątków do komunikacji z błędami. Jednak nie wszystkie wyjątki wskazują na błąd. Na przykład algorytm wyszukiwania może anulować skojarzone z nim zadanie, gdy odnajdzie wynik. Jednak jak wspomniano wcześniej, obsługa wyjątków jest mniej wydajna niż użycie `cancel` metody do anulowania równoległych zadań.
 
@@ -196,7 +197,7 @@ Ponieważ `task_group::wait` metody i `structured_task_group::wait` generują gd
 
 [[Top](#top)]
 
-## <a name="canceling-parallel-algorithms"></a><a name="algorithms"></a>Anulowanie algorytmów równoległych
+## <a name="canceling-parallel-algorithms"></a><a name="algorithms"></a> Anulowanie algorytmów równoległych
 
 Algorytmy równoległe w PPL, na przykład, `parallel_for` kompilacja w grupach zadań. W związku z tym można użyć wielu z tych samych technik, aby anulować algorytm równoległy.
 
@@ -234,7 +235,7 @@ Każda metoda anulowania ma zalety dla innych. Wybierz metodę odpowiadającą k
 
 [[Top](#top)]
 
-## <a name="when-not-to-use-cancellation"></a><a name="when"></a>Kiedy nie używać anulowania
+## <a name="when-not-to-use-cancellation"></a><a name="when"></a> Kiedy nie używać anulowania
 
 Użycie anulowania jest odpowiednie, gdy każdy członek grupy powiązanych zadań może wyjść w odpowiednim czasie. Istnieją jednak sytuacje, w których anulowanie może nie być odpowiednie dla Twojej aplikacji. Na przykład ze względu na to, że anulowanie zadania jest wspólne, cały zestaw zadań nie zostanie anulowany, jeśli każde zadanie zostanie zablokowane. Na przykład jeśli jedno zadanie jeszcze nie zostało uruchomione, ale odblokowuje inne aktywne zadanie, nie zostanie ono uruchomione, jeśli grupa zadań zostanie anulowana. Może to spowodować wystąpienie zakleszczenia w aplikacji. Drugi przykład, w którym użycie anulowania może być nieodpowiednie, ma miejsce, gdy zadanie zostało anulowane, ale jego zadanie podrzędne wykonuje ważne operacje, takie jak zwalnianie zasobów. Ponieważ cały zestaw zadań jest anulowany po anulowaniu zadania nadrzędnego, ta operacja nie zostanie wykonana. Przykład, który ilustruje ten punkt, znajduje się w sekcji [zrozumienie, jak anulowanie i obsługa wyjątków wpływają na sekcję niszczenie obiektów](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) w temacie najlepsze rozwiązania w bibliotece równoległych wzorców.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4463'
 title: Ostrzeżenie kompilatora (poziom 4) C4463
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fe4ea13c50e16bf5b72f5753fa989970db3cadde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251326"
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Ostrzeżenie kompilatora (poziom 4) C4463
 
 > przepływ Przypisywanie *wartości* do pola bitowego, które może zawierać tylko wartości z *low_value* do *high_value*
 
-Przypisana *wartość* znajduje się poza zakresem wartości, które może zawierać pole bitowe. Podpisane typy pól bitowych używają bitu o wysokiej kolejności dla znaku, więc jeśli *n* to rozmiar pola bitowego, zakres podpisanych pól bitowych to-2<sup>n-1</sup> do 2<sup>n-</sup>1-1, podczas gdy pola bitowe bez znaku mają zakres od 0 do 2<sup>n</sup>-1.
+Przypisana *wartość* znajduje się poza zakresem wartości, które może zawierać pole bitowe. Podpisane typy pól bitowych używają bitu o wysokiej kolejności dla znaku, więc jeśli *n* to rozmiar pola bitowego, zakres podpisanych pól bitowych to-2 <sup>n-1</sup> do 2 <sup>n-</sup>1-1, podczas gdy pola bitowe bez znaku mają zakres od 0 do 2 <sup>n</sup>-1.
 
 ## <a name="example"></a>Przykład
 

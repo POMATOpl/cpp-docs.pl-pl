@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDaoFieldExchange'
 title: Klasa CDaoFieldExchange
 ms.date: 09/17/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: 62e9d1917e2d1eea19b9e8db4b6c56b6ad25d9e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 41389ca9f1f9321abc828f9625f1fef3e745054d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250910"
 ---
 # <a name="cdaofieldexchange-class"></a>Klasa CDaoFieldExchange
 
@@ -51,7 +52,7 @@ class CDaoFieldExchange
 
 ## <a name="remarks"></a>Uwagi
 
-`CDaoFieldExchange`nie ma klasy bazowej.
+`CDaoFieldExchange` nie ma klasy bazowej.
 
 Użyj tej klasy, jeśli piszesz procedury wymiany danych dla niestandardowych typów danych; w przeciwnym razie nie będziesz bezpośrednio używać tej klasy. DFX wymienia dane między elementami członkowskimi danych pola obiektu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) i odpowiednimi polami bieżącego rekordu w źródle danych. DFX zarządza wymianą w obu kierunkach ze źródła danych i źródła danych. Aby uzyskać informacje o tworzeniu niestandardowych procedur DFX, zobacz [Uwagi techniczne 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) .
 
@@ -61,11 +62,11 @@ Użyj tej klasy, jeśli piszesz procedury wymiany danych dla niestandardowych ty
 > [!NOTE]
 > Wymiana pól rekordów DAO (DFX) jest bardzo podobna do wymiany pól rekordów (RFX) w klasach baz danych MFC opartych na ODBC ( `CDatabase` , `CRecordset` ). Jeśli rozumiesz RFX, będziesz w łatwy sposób korzystać z DFX.
 
-`CDaoFieldExchange`Obiekt zawiera informacje kontekstu, które są konieczne do wymiany pól rekordów DAO. `CDaoFieldExchange`obiekty obsługują wiele operacji, w tym parametry powiązania i elementy członkowskie danych pól oraz ustawienia różnych flag dla pól bieżącego rekordu. Operacje DFX są wykonywane na elementach członkowskich danych klasy zestawu rekordów typów zdefiniowanych przez wartość **`enum`** **FieldType** w `CDaoFieldExchange` . Możliwe wartości **FieldType** to:
+`CDaoFieldExchange`Obiekt zawiera informacje kontekstu, które są konieczne do wymiany pól rekordów DAO. `CDaoFieldExchange` obiekty obsługują wiele operacji, w tym parametry powiązania i elementy członkowskie danych pól oraz ustawienia różnych flag dla pól bieżącego rekordu. Operacje DFX są wykonywane na elementach członkowskich danych klasy zestawu rekordów typów zdefiniowanych przez wartość **`enum`** **FieldType** w `CDaoFieldExchange` . Możliwe wartości **FieldType** to:
 
-- `CDaoFieldExchange::outputColumn`dla elementów członkowskich danych pola.
+- `CDaoFieldExchange::outputColumn` dla elementów członkowskich danych pola.
 
-- `CDaoFieldExchange::param`dla elementów członkowskich danych parametru.
+- `CDaoFieldExchange::param` dla elementów członkowskich danych parametru.
 
 Funkcja członkowska [IsValidOperation](#isvalidoperation) jest udostępniana do pisania własnych niestandardowych procedur DFX. Funkcja [SetFieldType](#setfieldtype) jest często używana w funkcjach [CDaoRecordset::D ofieldexchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) . Szczegółowe informacje o funkcjach globalnych DFX można znaleźć w temacie [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md). Aby uzyskać informacje o tworzeniu niestandardowych procedur DFX dla własnych typów danych, zobacz [Uwagi techniczne 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).
 
@@ -77,7 +78,7 @@ Funkcja członkowska [IsValidOperation](#isvalidoperation) jest udostępniana do
 
 **Nagłówek:** afxdao. h
 
-## <a name="cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation
+## <a name="cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a> CDaoFieldExchange::IsValidOperation
 
 Jeśli piszesz własną funkcję DFX, wywołaj `IsValidOperation` na początku funkcji, aby określić, czy bieżącą operację można wykonać na konkretnym typie elementu członkowskiego danych pola (a `CDaoFieldExchange::outputColumn` lub a `CDaoFieldExchange::param` ).
 
@@ -95,7 +96,7 @@ Niektóre operacje wykonywane przez mechanizm DFX mają zastosowanie tylko do je
 
 Aby uzyskać dodatkowe informacje na temat pisania niestandardowych procedur DFX, zobacz [Uwagi techniczne 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).
 
-## <a name="cdaofieldexchangem_noperation"></a><a name="m_noperation"></a>CDaoFieldExchange:: m_nOperation
+## <a name="cdaofieldexchangem_noperation"></a><a name="m_noperation"></a> CDaoFieldExchange:: m_nOperation
 
 Identyfikuje operację wykonywaną na obiekcie [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) skojarzonym z obiektem wymiany pól.
 
@@ -126,13 +127,13 @@ Możliwe wartości `m_nOperation` :
 |`DumpField`|Zrzuca zawartość pola (tylko debugowanie).|
 |`MaxDFXOperation`|Używany do sprawdzania danych wejściowych.|
 
-## <a name="cdaofieldexchangem_prs"></a><a name="m_prs"></a>CDaoFieldExchange:: m_prs
+## <a name="cdaofieldexchangem_prs"></a><a name="m_prs"></a> CDaoFieldExchange:: m_prs
 
 Zawiera wskaźnik do obiektu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) skojarzonego z `CDaoFieldExchange` obiektem.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CDaoFieldExchange:: SetFieldType
+## <a name="cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a> CDaoFieldExchange:: SetFieldType
 
 Wywołanie `SetFieldType` w `CDaoRecordset` `DoFieldExchange` przesłonięciu klasy.
 
@@ -143,7 +144,7 @@ void SetFieldType(UINT nFieldType);
 ### <a name="parameters"></a>Parametry
 
 *nFieldType*<br/>
-Wartość **pola EnumType**zadeklarowana w `CDaoFieldExchange` , która może mieć jedną z następujących wartości:
+Wartość **pola EnumType** zadeklarowana w `CDaoFieldExchange` , która może mieć jedną z następujących wartości:
 
 - `CDaoFieldExchange::outputColumn`
 
@@ -157,7 +158,7 @@ W przypadku Sparametryzuj klasy zestawu rekordów należy dodać wywołania DFX 
 
 Ogólnie rzecz biorąc każda grupa wywołań funkcji DFX skojarzonych z elementami członkowskimi danych pól lub składowymi danych parametrów musi być poprzedzona wywołaniem metody `SetFieldType` . Parametr *nFieldType* każdego `SetFieldType` wywołania identyfikuje typ elementów członkowskich danych reprezentowanych przez wywołania funkcji DFX, które są zgodne z `SetFieldType` wywołaniem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)

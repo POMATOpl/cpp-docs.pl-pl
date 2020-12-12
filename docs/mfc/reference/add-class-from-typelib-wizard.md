@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Kreator dodawania klasy z biblioteki typów'
 title: Kreator dodawania klasy z biblioteki typów
 ms.date: 05/09/2019
 helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: 73f2668883add0e711f0ef73e5602dd9cdc4ab28
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: fa70b7978cc8a7fecce7fa5dc2aa702fc8d11a2c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248453"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Kreator dodawania klasy z biblioteki typów
 
@@ -29,8 +30,8 @@ Użyj tego kreatora, aby dodać klasę MFC z dostępnej biblioteki typów. Kreat
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Rejestr**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowane biblioteki typów są wymienione w **dostępnych bibliotekach typów** .|
-   |**Plik**|Biblioteka typów nie musi być zarejestrowana w systemie, ale jest zawarta w pliku. Należy podać lokalizację pliku w **lokalizacji** .|
+   |**Rejestr**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowane biblioteki typów są wymienione w **dostępnych bibliotekach typów**.|
+   |**Plik**|Biblioteka typów nie musi być zarejestrowana w systemie, ale jest zawarta w pliku. Należy podać lokalizację pliku w **lokalizacji**.|
 
 - **Dostępne biblioteki typów**
 
@@ -38,7 +39,7 @@ Użyj tego kreatora, aby dodać klasę MFC z dostępnej biblioteki typów. Kreat
 
 - **Lokalizacja**
 
-   Określa lokalizację biblioteki typów. Jeśli klikniesz pozycję **plik** w obszarze **Dodaj klasę z** , możesz podać lokalizację pliku zawierającego bibliotekę typów. Aby przejść do lokalizacji pliku, kliknij przycisk wielokropka.
+   Określa lokalizację biblioteki typów. Jeśli klikniesz pozycję **plik** w obszarze **Dodaj klasę z**, możesz podać lokalizację pliku zawierającego bibliotekę typów. Aby przejść do lokalizacji pliku, kliknij przycisk wielokropka.
 
 - **Interfejsy**
 
@@ -53,23 +54,23 @@ Użyj tego kreatora, aby dodać klasę MFC z dostępnej biblioteki typów. Kreat
 
 - **Wygenerowane klasy**
 
-   Określa nazwy klas do wygenerowania z interfejsów dodanych za pomocą **>** przycisku lub **>>** . Możesz kliknąć to pole, aby wybrać klasę, a następnie użyć klawiszy w górę lub w dół, aby przewijać listę, wyświetlając każdą nazwę klasy w polu **Klasa** i nazwę pliku w polu **plik** generowanym przez kreatora po kliknięciu przycisku **Zakończ** . W tym polu można wybrać tylko jedną klasę naraz.
+   Określa nazwy klas do wygenerowania z interfejsów dodanych za pomocą **>** przycisku lub **>>** . Możesz kliknąć to pole, aby wybrać klasę, a następnie użyć klawiszy w górę lub w dół, aby przewijać listę, wyświetlając każdą nazwę klasy w polu **Klasa** i nazwę pliku w polu **plik** generowanym przez kreatora po kliknięciu przycisku **Zakończ**. W tym polu można wybrać tylko jedną klasę naraz.
 
    Możesz usunąć klasę, wybierając ją na tej liście i klikając **<** . Nie trzeba wybierać klasy w polu wygenerowane klasy, aby usunąć wszystkie klasy; klikając **<<** , należy usunąć wszystkie klasy w polu **wygenerowane klasy** .
 
 - **Klasa**
 
-   Określa nazwę klasy wybranej w polu **wygenerowane klasy** , którą Kreator dodaje po kliknięciu przycisku **Zakończ** . Nazwę można edytować w polu Class ( **Klasa** ).
+   Określa nazwę klasy wybranej w polu **wygenerowane klasy** , którą Kreator dodaje po kliknięciu przycisku **Zakończ**. Nazwę można edytować w polu Class ( **Klasa** ).
 
 - **Plik**
 
-   Ustawia nazwę pliku nagłówka dla nowej klasy. Domyślnie ta nazwa jest oparta na nazwie dostarczanej w **wygenerowanych klasach** . Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz przycisku **Zakończ** w kreatorze.
+   Ustawia nazwę pliku nagłówka dla nowej klasy. Domyślnie ta nazwa jest oparta na nazwie dostarczanej w **wygenerowanych klasach**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz przycisku **Zakończ** w kreatorze.
 
    Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu przycisku **Zakończ** Kreator monituje o wskazanie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa MFC z biblioteki typów](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
 [Klienci automatyzacji: korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)

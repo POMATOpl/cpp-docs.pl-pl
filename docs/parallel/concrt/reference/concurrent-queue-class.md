@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy concurrent_queue
 title: concurrent_queue — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: a117a040adbf7f3aa316c346489bd2731d6c2402
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7ac9686b03073016b509ce8e2bddaa664c3141f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250611"
 ---
 # <a name="concurrent_queue-class"></a>concurrent_queue — Klasa
 
@@ -91,7 +92,7 @@ Aby uzyskać więcej informacji, zobacz [Parallel Containers and Objects](../../
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="clear"></a><a name="clear"></a>Wyczyść
+## <a name="clear"></a><a name="clear"></a> Wyczyść
 
 Czyści kolejkę współbieżną, zniszczyć wszystkie elementy znajdujące się w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -99,7 +100,7 @@ Czyści kolejkę współbieżną, zniszczyć wszystkie elementy znajdujące się
 void clear();
 ```
 
-## <a name="concurrent_queue"></a><a name="ctor"></a>concurrent_queue
+## <a name="concurrent_queue"></a><a name="ctor"></a> concurrent_queue
 
 Konstruuje kolejkę współbieżną.
 
@@ -149,7 +150,7 @@ Trzeci konstruktor określa przechodzenie współbieżnej kolejki `_OtherQ` .
 
 Czwarty Konstruktor Określa wartości dostarczone przez zakres iteratora [ `_Begin` , `_End` ).
 
-## <a name="concurrent_queue"></a><a name="dtor"></a>~ concurrent_queue
+## <a name="concurrent_queue"></a><a name="dtor"></a> ~ concurrent_queue
 
 Niszczy współbieżną kolejkę.
 
@@ -157,7 +158,7 @@ Niszczy współbieżną kolejkę.
 ~concurrent_queue();
 ```
 
-## <a name="empty"></a><a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a> ciągiem
 
 Testuje, czy kolejka współbieżna jest pusta w chwili, gdy ta metoda jest wywoływana. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -173,7 +174,7 @@ bool empty() const;
 
 Chociaż ta metoda jest bezpieczna pod względem współbieżności w odniesieniu do wywołań metod `push` , `try_pop` i `empty` , zwracana wartość może być niepoprawna przez czas, który jest sprawdzany przez wątek wywołujący.
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Zwraca kopię alokatora używaną do konstruowania kolejki współbieżnej. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -185,7 +186,7 @@ allocator_type get_allocator() const;
 
 Kopia alokatora użyta do skonstruowania kolejki współbieżnej.
 
-## <a name="push"></a><a name="push"></a>wydajności
+## <a name="push"></a><a name="push"></a> wydajności
 
 Enqueues element na końcu końca kolejki współbieżnej. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -202,9 +203,9 @@ Element, który ma zostać dodany do kolejki.
 
 ### <a name="remarks"></a>Uwagi
 
-`push`jest bezpiecznym współbieżnością w odniesieniu do wywołań metod `push` , `try_pop` i `empty` .
+`push` jest bezpiecznym współbieżnością w odniesieniu do wywołań metod `push` , `try_pop` i `empty` .
 
-## <a name="try_pop"></a><a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a> try_pop
 
 Usuwa element z kolejki, jeśli jest dostępny. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -225,9 +226,9 @@ Odwołanie do lokalizacji do przechowywania podkolejki elementu.
 
 Jeśli element został pomyślnie usunięty z kolejki, parametr `_Dest` otrzymuje wartość unqueued, oryginalna wartość przechowywana w kolejce zostanie zniszczona i ta funkcja zwraca wartość **`true`** . Jeśli nie ma żadnego elementu do wygenerowania z kolejki, ta funkcja zwraca **`false`** bez blokowania, a zawartość `_Dest` parametru jest niezdefiniowana.
 
-`try_pop`jest bezpiecznym współbieżnością w odniesieniu do wywołań metod `push` , `try_pop` i `empty` .
+`try_pop` jest bezpiecznym współbieżnością w odniesieniu do wywołań metod `push` , `try_pop` i `empty` .
 
-## <a name="unsafe_begin"></a><a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a><a name="unsafe_begin"></a> unsafe_begin
 
 Zwraca iterator typu `iterator` lub `const_iterator` do początku kolejki współbieżnej. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -245,7 +246,7 @@ Iterator typu `iterator` lub `const_iterator` do początku jednowspółbieżnego
 
 Iteratory dla `concurrent_queue` klasy są przeznaczone głównie do debugowania, ponieważ są wolne, a iteracja nie jest bezpieczna pod względem współbieżności w odniesieniu do innych operacji w kolejce.
 
-## <a name="unsafe_end"></a><a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a><a name="unsafe_end"></a> unsafe_end
 
 Zwraca iterator typu `iterator` lub `const_iterator` do końca kolejki współbieżnej. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -263,7 +264,7 @@ Iterator typu `iterator` lub `const_iterator` do końca kolejki współbieżnej.
 
 Iteratory dla `concurrent_queue` klasy są przeznaczone głównie do debugowania, ponieważ są wolne, a iteracja nie jest bezpieczna pod względem współbieżności w odniesieniu do innych operacji w kolejce.
 
-## <a name="unsafe_size"></a><a name="unsafe_size"></a>unsafe_size
+## <a name="unsafe_size"></a><a name="unsafe_size"></a> unsafe_size
 
 Zwraca liczbę elementów w kolejce. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -277,8 +278,8 @@ Rozmiar kolejki współbieżnej.
 
 ### <a name="remarks"></a>Uwagi
 
-`unsafe_size`nie jest bezpieczna pod kątem współbieżności i może generować nieprawidłowe wyniki, jeśli jest wywoływana współbieżnie z wywołaniami metod `push` , `try_pop` , i `empty` .
+`unsafe_size` nie jest bezpieczna pod kątem współbieżności i może generować nieprawidłowe wyniki, jeśli jest wywoływana współbieżnie z wywołaniami metod `push` , `try_pop` , i `empty` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)
