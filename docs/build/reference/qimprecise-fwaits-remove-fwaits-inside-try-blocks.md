@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/Qimprecise_fwaits (usuwanie fwaits wewnątrz bloków try)
 title: /Qimprecise_fwaits (Usuwanie fwaits wewnątrz bloków Try)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-ms.openlocfilehash: 424feda66f6925cb305256249101ea4013e3090f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5f3d96656d062a7e5b0c4ad78ba7cd536069e013
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225625"
 ---
 # <a name="qimprecise_fwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (Usuwanie fwaits wewnątrz bloków Try)
 
@@ -42,8 +43,8 @@ Ta opcja nie działa, jeśli nie określono również **/FP: except** . W przypa
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Q opcje (operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)
