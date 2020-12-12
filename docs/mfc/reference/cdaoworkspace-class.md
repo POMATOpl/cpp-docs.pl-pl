@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDaoWorkspace'
 title: Klasa CDaoWorkspace
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: eea3fb29f219890ebe596c5d8109257e9d422054
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 73236019db3ecf4a79ef93e19a55d909e6e0d61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248000"
 ---
 # <a name="cdaoworkspace-class"></a>Klasa CDaoWorkspace
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDaoTableDef'
 title: Klasa CDaoTableDef
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 61e16ef2998f2b807e96368973711dfdb31dcc45
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ead41d1dae2d248324809690e778e8f623a73caf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248024"
 ---
 # <a name="cdaotabledef-class"></a>Klasa CDaoTableDef
 
@@ -168,7 +169,7 @@ Będziesz manipulować definicją tabeli przy użyciu `CDaoTableDef` obiektu. Mo
 
    - Aby utworzyć nową tabelę, wywołaj funkcję [tworzenia](#create) elementu członkowskiego obiektu tabledef, podając nazwę tabeli. Wywołaj metody [onfield](#createfield) i [onindex](#createindex) , aby dodać pola i indeksy do tabeli.
 
-   - Zadzwoń do [dołączenia](#append) , aby zapisać tabelę przez dołączenie jej do kolekcji TableDefs bazy danych. `Create`umieszcza tabledef w stanie otwartym, dlatego po wywołaniu `Create` nie jest wywoływana `Open` .
+   - Zadzwoń do [dołączenia](#append) , aby zapisać tabelę przez dołączenie jej do kolekcji TableDefs bazy danych. `Create` umieszcza tabledef w stanie otwartym, dlatego po wywołaniu `Create` nie jest wywoływana `Open` .
 
         > [!TIP]
         >  Najprostszym sposobem tworzenia zapisanych tabel jest ich utworzenie i zapisanie ich w bazie danych przy użyciu programu Microsoft Access. Następnie możesz otworzyć i używać ich w kodzie MFC.
@@ -189,7 +190,7 @@ Po zakończeniu korzystania z obiektu tabledef należy wywołać jego funkcję [
 
 **Nagłówek:** afxdao. h
 
-## <a name="cdaotabledefappend"></a><a name="append"></a>CDaoTableDef:: Append
+## <a name="cdaotabledefappend"></a><a name="append"></a> CDaoTableDef:: Append
 
 Wywołaj tę funkcję elementu członkowskiego po wywołaniu metody [Create](#create) , aby utworzyć nowy obiekt tabledef, aby zapisać tabledef w bazie danych.
 
@@ -206,7 +207,7 @@ Funkcja dołącza obiekt do kolekcji TableDefs bazy danych. Można użyć tabled
 
 Aby uzyskać powiązane informacje, zobacz temat "Metoda dołączania" w pomocy DAO.
 
-## <a name="cdaotabledefcanupdate"></a><a name="canupdate"></a>CDaoTableDef:: Update
+## <a name="cdaotabledefcanupdate"></a><a name="canupdate"></a> CDaoTableDef:: Update
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić, czy definicja tabeli bazowej `CDaoTableDef` obiektu może zostać zmieniona.
 
@@ -224,7 +225,7 @@ Domyślnie nowo utworzona tabela źródłowa `CDaoTableDef` obiektu może zosta�
 
 Aby uzyskać powiązane informacje, zobacz temat "Aktualizowalna właściwość" w pomocy DAO.
 
-## <a name="cdaotabledefcdaotabledef"></a><a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef
+## <a name="cdaotabledefcdaotabledef"></a><a name="cdaotabledef"></a> CDaoTableDef::CDaoTableDef
 
 Konstruuje `CDaoTableDef` obiekt.
 
@@ -241,7 +242,7 @@ Wskaźnik do obiektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) .
 
 Po utworzeniu obiektu należy wywołać funkcję [tworzenia](#create) lub [otwierania](#open) elementu członkowskiego. Po zakończeniu pracy z obiektem należy wywołać jego funkcję [zamykającego](#close) elementu członkowskiego i zniszczyć `CDaoTableDef` obiekt.
 
-## <a name="cdaotabledefclose"></a><a name="close"></a>CDaoTableDef:: Close
+## <a name="cdaotabledefclose"></a><a name="close"></a> CDaoTableDef:: Close
 
 Wywołaj tę funkcję elementu członkowskiego, aby zamknąć i zwolnić obiekt tabledef.
 
@@ -257,7 +258,7 @@ Możesz wywołać operację [Otwórz](#open) ponownie po wywołaniu `Close` . Um
 
 Aby uzyskać powiązane informacje, zobacz temat "metoda Close" w pomocy DAO.
 
-## <a name="cdaotabledefcreate"></a><a name="create"></a>CDaoTableDef:: Create
+## <a name="cdaotabledefcreate"></a><a name="create"></a> CDaoTableDef:: Create
 
 Wywołaj tę funkcję elementu członkowskiego, aby utworzyć nową zapisaną tabelę.
 
@@ -277,7 +278,7 @@ Wskaźnik do ciągu zawierającego nazwę tabeli.
 *lAttributes*<br/>
 Wartość odpowiadająca charakterystyce tabeli reprezentowanej przez obiekt tabledef. Można użyć bitowego lub do łączenia dowolnej z następujących stałych:
 
-|Stały|Opis|
+|Stała|Opis|
 |--------------|-----------------|
 |`dbAttachExclusive`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że tabela jest dołączoną tabelą otwartą do wyłącznego użytku.|
 |`dbAttachSavePWD`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że identyfikator użytkownika i hasło do dołączonej tabeli są zapisywane wraz z informacjami o połączeniu.|
@@ -296,7 +297,7 @@ Po nazwie tabledef można następnie wywołać [dołączenie](#append) w celu za
 
 Aby uzyskać powiązane informacje, zobacz temat "Metoda CreateTableDef" w pomocy DAO.
 
-## <a name="cdaotabledefcreatefield"></a><a name="createfield"></a>CDaoTableDef:: onfield
+## <a name="cdaotabledefcreatefield"></a><a name="createfield"></a> CDaoTableDef:: onfield
 
 Wywołaj tę funkcję elementu członkowskiego, aby dodać pole do tabeli.
 
@@ -338,7 +339,7 @@ Wartość wskazująca maksymalny rozmiar (w bajtach) pola, które zawiera tekst,
 *lAttributes*<br/>
 Wartość odpowiadająca charakterystyce pola i, która może być łączona przy użyciu bitowej lub.
 
-|Stały|Opis|
+|Stała|Opis|
 |--------------|-----------------|
 |`dbFixedField`|Rozmiar pola jest stały (domyślnie dla pól liczbowych).|
 |`dbVariableField`|Rozmiar pola to zmienna (tylko pola tekstowe).|
@@ -369,7 +370,7 @@ Pozostałe elementy członkowskie elementu `CDaoFieldInfo` powinny mieć wartoś
 
 Aby uzyskać powiązane informacje, zobacz temat "Metoda onfield" w pomocy DAO.
 
-## <a name="cdaotabledefcreateindex"></a><a name="createindex"></a>CDaoTableDef:: isindex
+## <a name="cdaotabledefcreateindex"></a><a name="createindex"></a> CDaoTableDef:: isindex
 
 Wywołaj tę funkcję, aby dodać indeks do tabeli.
 
@@ -390,15 +391,15 @@ Nie ma potrzeby tworzenia indeksów dla tabel, ale w dużych, nieindeksowanych t
 
 Należy ustawić następujące elementy członkowskie `CDaoIndexInfo` struktury:
 
-- `m_strName`Należy podać nazwę.
+- `m_strName` Należy podać nazwę.
 
-- `m_pFieldInfos`Musi wskazywać na tablicę `CDaoIndexFieldInfo` struktur.
+- `m_pFieldInfos` Musi wskazywać na tablicę `CDaoIndexFieldInfo` struktur.
 
-- `m_nFields`Należy określić liczbę pól w tablicy `CDaoFieldInfo` struktur.
+- `m_nFields` Należy określić liczbę pól w tablicy `CDaoFieldInfo` struktur.
 
 Pozostałe elementy członkowskie zostaną zignorowane, jeśli ustawiono wartość FALSE. Ponadto `m_lDistinctCount` element członkowski jest ignorowany podczas tworzenia indeksu.
 
-## <a name="cdaotabledefdeletefield"></a><a name="deletefield"></a>CDaoTableDef::D eleteField
+## <a name="cdaotabledefdeletefield"></a><a name="deletefield"></a> CDaoTableDef::D eleteField
 
 Wywołaj tę funkcję elementu członkowskiego, aby usunąć pole i uniemożliwić dostęp do niego.
 
@@ -421,7 +422,7 @@ Można użyć tej funkcji elementu członkowskiego na nowym obiekcie, który nie
 
 Aby uzyskać powiązane informacje, zobacz temat "Delete Method" w pomocy DAO.
 
-## <a name="cdaotabledefdeleteindex"></a><a name="deleteindex"></a>CDaoTableDef::D eleteIndex
+## <a name="cdaotabledefdeleteindex"></a><a name="deleteindex"></a> CDaoTableDef::D eleteIndex
 
 Wywołaj tę funkcję elementu członkowskiego, aby usunąć indeks w źródłowej tabeli.
 
@@ -444,7 +445,7 @@ Można użyć tej funkcji elementu członkowskiego na nowym obiekcie, który nie
 
 Aby uzyskać powiązane informacje, zobacz temat "Delete Method" w pomocy DAO.
 
-## <a name="cdaotabledefgetattributes"></a><a name="getattributes"></a>CDaoTableDef:: GetAttributes
+## <a name="cdaotabledefgetattributes"></a><a name="getattributes"></a> CDaoTableDef:: GetAttributes
 
 Dla `CDaoTableDef` obiektu zwracana wartość określa charakterystykę tabeli reprezentowanej przez `CDaoTableDef` obiekt i może być sumą tych stałych:
 
@@ -458,7 +459,7 @@ Zwraca wartość, która wskazuje co najmniej jedną charakterystykę `CDaoTable
 
 ### <a name="remarks"></a>Uwagi
 
-|Stały|Opis|
+|Stała|Opis|
 |--------------|-----------------|
 |`dbAttachExclusive`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że tabela jest dołączoną tabelą otwartą do wyłącznego użytku.|
 |`dbAttachSavePWD`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że identyfikator użytkownika i hasło do dołączonej tabeli są zapisywane wraz z informacjami o połączeniu.|
@@ -473,7 +474,7 @@ Ukryta tabela jest tabelą utworzoną do tymczasowego użytku przez aparat bazy 
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość Attributes" w pomocy DAO.
 
-## <a name="cdaotabledefgetconnect"></a><a name="getconnect"></a>CDaoTableDef:: GetConnect
+## <a name="cdaotabledefgetconnect"></a><a name="getconnect"></a> CDaoTableDef:: GetConnect
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać parametry połączenia dla źródła danych.
 
@@ -499,7 +500,7 @@ Jeśli hasło jest wymagane, ale nie podano, sterownik ODBC wyświetla okno dial
 
 Aby uzyskać powiązane informacje, zobacz temat "Connect Property" w pomocy DAO.
 
-## <a name="cdaotabledefgetdatecreated"></a><a name="getdatecreated"></a>CDaoTableDef::GetDateCreated
+## <a name="cdaotabledefgetdatecreated"></a><a name="getdatecreated"></a> CDaoTableDef::GetDateCreated
 
 Wywołaj tę funkcję, aby określić datę i godzinę utworzenia tabeli powiązanej z `CDaoTableDef` obiektem.
 
@@ -517,7 +518,7 @@ Ustawienia daty i godziny są wyprowadzane z komputera, na którym utworzono lub
 
 Aby uzyskać powiązane informacje, zobacz temat "DateCreated, LastUpdated Properties" w pomocy DAO.
 
-## <a name="cdaotabledefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated
+## <a name="cdaotabledefgetdatelastupdated"></a><a name="getdatelastupdated"></a> CDaoTableDef::GetDateLastUpdated
 
 Wywołaj tę funkcję, aby określić datę i godzinę `CDaoTableDef` ostatniej aktualizacji tabeli.
 
@@ -535,7 +536,7 @@ Ustawienia daty i godziny są wyprowadzane z komputera, na którym utworzono lub
 
 Aby uzyskać powiązane informacje, zobacz temat "DateCreated, LastUpdated Properties" w pomocy DAO.
 
-## <a name="cdaotabledefgetfieldcount"></a><a name="getfieldcount"></a>CDaoTableDef::GetFieldCount
+## <a name="cdaotabledefgetfieldcount"></a><a name="getfieldcount"></a> CDaoTableDef::GetFieldCount
 
 Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę pól zdefiniowanych w tabeli.
 
@@ -553,7 +554,7 @@ Jeśli wartość wynosi 0, w kolekcji nie ma żadnych obiektów.
 
 Aby uzyskać powiązane informacje, zobacz temat "Count Property" w pomocy DAO.
 
-## <a name="cdaotabledefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoTableDef:: GetFieldInfo
+## <a name="cdaotabledefgetfieldinfo"></a><a name="getfieldinfo"></a> CDaoTableDef:: GetFieldInfo
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać różne rodzaje informacji dotyczących pola zdefiniowanego w tabledef.
 
@@ -580,11 +581,11 @@ Odwołanie do struktury [CDaoFieldInfo —](../../mfc/reference/cdaofieldinfo-st
 *dwInfoOptions*<br/>
 Opcje określające, które informacje o polu pobrać. Dostępne opcje są wymienione tutaj wraz z tym, co powodują, że funkcja zwraca:
 
-- `AFX_DAO_PRIMARY_INFO`Wartooć Nazwa, typ, rozmiar, atrybuty. Użyj tej opcji, aby uzyskać najszybszą wydajność.
+- `AFX_DAO_PRIMARY_INFO` Wartooć Nazwa, typ, rozmiar, atrybuty. Użyj tej opcji, aby uzyskać najszybszą wydajność.
 
-- `AFX_DAO_SECONDARY_INFO`Informacje podstawowe, plus: pozycja porządkowa, wymagane, Zezwalaj na zerową długość, kolejność sortowania, Nazwa obca, pole źródłowe, tabela źródłowa
+- `AFX_DAO_SECONDARY_INFO` Informacje podstawowe, plus: pozycja porządkowa, wymagane, Zezwalaj na zerową długość, kolejność sortowania, Nazwa obca, pole źródłowe, tabela źródłowa
 
-- `AFX_DAO_ALL_INFO`Informacje podstawowe i pomocnicze oraz: reguła walidacji, tekst walidacji, wartość domyślna
+- `AFX_DAO_ALL_INFO` Informacje podstawowe i pomocnicze oraz: reguła walidacji, tekst walidacji, wartość domyślna
 
 *lpszName*<br/>
 Wskaźnik do nazwy obiektu pola, dla wyszukiwania według nazwy. Nazwa jest ciągiem z maksymalnie 64 znaków, które jednoznacznie nazywają pole.
@@ -597,7 +598,7 @@ Aby uzyskać opis zwracanych informacji, zobacz strukturę [CDaoFieldInfo —](.
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość Attributes" w pomocy DAO.
 
-## <a name="cdaotabledefgetindexcount"></a><a name="getindexcount"></a>CDaoTableDef::GetIndexCount
+## <a name="cdaotabledefgetindexcount"></a><a name="getindexcount"></a> CDaoTableDef::GetIndexCount
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać liczbę indeksów dla tabeli.
 
@@ -615,7 +616,7 @@ Jeśli wartość wynosi 0, w kolekcji nie ma indeksów.
 
 Aby uzyskać powiązane informacje, zobacz temat "Count Property" w pomocy DAO.
 
-## <a name="cdaotabledefgetindexinfo"></a><a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo
+## <a name="cdaotabledefgetindexinfo"></a><a name="getindexinfo"></a> CDaoTableDef::GetIndexInfo
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać różne rodzaje informacji o indeksie zdefiniowanym w tabledef.
 
@@ -642,11 +643,11 @@ Odwołanie do struktury [CDaoIndexInfo —](../../mfc/reference/cdaoindexinfo-st
 *dwInfoOptions*<br/>
 Opcje określające, które informacje o indeksie mają zostać pobrane. Dostępne opcje są wymienione tutaj wraz z tym, co powodują, że funkcja zwraca:
 
-- `AFX_DAO_PRIMARY_INFO`Nazwa, informacje o polu, pola. Użyj tej opcji, aby uzyskać najszybszą wydajność.
+- `AFX_DAO_PRIMARY_INFO` Nazwa, informacje o polu, pola. Użyj tej opcji, aby uzyskać najszybszą wydajność.
 
-- `AFX_DAO_SECONDARY_INFO`Informacje podstawowe oraz: podstawowe, unikatowe, klastrowane, Ignoruj wartości null, wymagane, obce
+- `AFX_DAO_SECONDARY_INFO` Informacje podstawowe oraz: podstawowe, unikatowe, klastrowane, Ignoruj wartości null, wymagane, obce
 
-- `AFX_DAO_ALL_INFO`Informacje podstawowe i pomocnicze oraz: liczność unikatowych
+- `AFX_DAO_ALL_INFO` Informacje podstawowe i pomocnicze oraz: liczność unikatowych
 
 *lpszName*<br/>
 Wskaźnik do nazwy obiektu indeksu dla wyszukiwania według nazwy.
@@ -659,7 +660,7 @@ Aby uzyskać opis zwracanych informacji, zobacz strukturę [CDaoIndexInfo —](.
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość Attributes" w pomocy DAO.
 
-## <a name="cdaotabledefgetname"></a><a name="getname"></a>CDaoTableDef:: GetName
+## <a name="cdaotabledefgetname"></a><a name="getname"></a> CDaoTableDef:: GetName
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać zdefiniowaną przez użytkownika nazwę tabeli źródłowej.
 
@@ -677,7 +678,7 @@ Ta nazwa rozpoczyna się od litery i może zawierać maksymalnie 64 znaków. Mo�
 
 Aby uzyskać powiązane informacje, zobacz temat "Nazwa właściwości" w pomocy DAO.
 
-## <a name="cdaotabledefgetrecordcount"></a><a name="getrecordcount"></a>CDaoTableDef::GetRecordCount
+## <a name="cdaotabledefgetrecordcount"></a><a name="getrecordcount"></a> CDaoTableDef::GetRecordCount
 
 Wywołaj tę funkcję elementu członkowskiego, aby dowiedzieć się, ile rekordów znajduje się w `CDaoTableDef` obiekcie.
 
@@ -695,7 +696,7 @@ Wywołanie `GetRecordCount` dla obiektu typu tabeli `CDaoTableDef` odzwierciedla
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość RecordCount" w pomocy DAO.
 
-## <a name="cdaotabledefgetsourcetablename"></a><a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName
+## <a name="cdaotabledefgetsourcetablename"></a><a name="getsourcetablename"></a> CDaoTableDef::GetSourceTableName
 
 Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę dołączonej tabeli w źródłowej bazie danych.
 
@@ -713,7 +714,7 @@ Dołączona tabela jest tabelą w innej bazie danych połączonej z bazą danych
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość SourceTableName" w pomocy DAO.
 
-## <a name="cdaotabledefgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoTableDef:: GetValidationRule
+## <a name="cdaotabledefgetvalidationrule"></a><a name="getvalidationrule"></a> CDaoTableDef:: GetValidationRule
 
 Wywołaj tę funkcję elementu członkowskiego, aby pobrać regułę walidacji dla elementu tabledef.
 
@@ -731,7 +732,7 @@ Reguły walidacji są używane w połączeniu z operacjami aktualizacji. Jeśli 
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość ValidationRule" w pomocy DAO.
 
-## <a name="cdaotabledefgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoTableDef::GetValidationText
+## <a name="cdaotabledefgetvalidationtext"></a><a name="getvalidationtext"></a> CDaoTableDef::GetValidationText
 
 Wywołaj tę funkcję, aby pobrać ciąg, który ma być wyświetlany, gdy użytkownik wprowadzi dane, które nie pasują do reguły walidacji.
 
@@ -749,7 +750,7 @@ Dla `CDaoTableDef` obiektu `CString` jest to tylko do odczytu dla dołączonej t
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość ValidationText" w pomocy DAO.
 
-## <a name="cdaotabledefisopen"></a><a name="isopen"></a>CDaoTableDef:: IsOpen
+## <a name="cdaotabledefisopen"></a><a name="isopen"></a> CDaoTableDef:: IsOpen
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić, czy `CDaoTableDef` obiekt jest aktualnie otwarty.
 
@@ -763,13 +764,13 @@ Niezerowe, jeśli `CDaoTableDef` obiekt jest otwarty; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cdaotabledefm_pdatabase"></a><a name="m_pdatabase"></a>CDaoTableDef:: m_pDatabase
+## <a name="cdaotabledefm_pdatabase"></a><a name="m_pdatabase"></a> CDaoTableDef:: m_pDatabase
 
 Zawiera wskaźnik do obiektu [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) dla tej tabeli.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cdaotabledefm_pdaotabledef"></a><a name="m_pdaotabledef"></a>CDaoTableDef:: m_pDAOTableDef
+## <a name="cdaotabledefm_pdaotabledef"></a><a name="m_pdaotabledef"></a> CDaoTableDef:: m_pDAOTableDef
 
 Zawiera wskaźnik do interfejsu OLE dla obiektu DAO tabledef, który jest `CDaoTableDef` obiektem.
 
@@ -777,7 +778,7 @@ Zawiera wskaźnik do interfejsu OLE dla obiektu DAO tabledef, który jest `CDaoT
 
 Użyj tego wskaźnika, jeśli musisz bezpośrednio uzyskać dostęp do interfejsu DAO.
 
-## <a name="cdaotabledefopen"></a><a name="open"></a>CDaoTableDef:: Open
+## <a name="cdaotabledefopen"></a><a name="open"></a> CDaoTableDef:: Open
 
 Wywołaj tę funkcję elementu członkowskiego, aby otworzyć tabledef poprzednio zapisane w kolekcji TableDef's bazy danych.
 
@@ -792,7 +793,7 @@ Wskaźnik do ciągu, który określa nazwę tabeli.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cdaotabledefrefreshlink"></a><a name="refreshlink"></a>CDaoTableDef::RefreshLink
+## <a name="cdaotabledefrefreshlink"></a><a name="refreshlink"></a> CDaoTableDef::RefreshLink
 
 Wywołaj tę funkcję elementu członkowskiego, aby zaktualizować informacje o połączeniu dla dołączonej tabeli.
 
@@ -808,7 +809,7 @@ Aby wymusić modyfikację zmodyfikowanych informacji dotyczących połączenia, 
 
 Aby uzyskać powiązane informacje, zobacz temat "Metoda RefreshLink" w pomocy DAO.
 
-## <a name="cdaotabledefsetattributes"></a><a name="setattributes"></a>CDaoTableDef:: SetAttributes
+## <a name="cdaotabledefsetattributes"></a><a name="setattributes"></a> CDaoTableDef:: SetAttributes
 
 Ustawia wartość wskazującą co najmniej jedną charakterystykę `CDaoTableDef` obiektu.
 
@@ -821,7 +822,7 @@ void SetAttributes(long lAttributes);
 *lAttributes*<br/>
 Charakterystyki tabeli reprezentowanej przez `CDaoTableDef` obiekt i mogą być sumą tych stałych:
 
-|Stały|Opis|
+|Stała|Opis|
 |--------------|-----------------|
 |`dbAttachExclusive`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że tabela jest dołączoną tabelą otwartą do wyłącznego użytku.|
 |`dbAttachSavePWD`|W przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet wskazuje, że identyfikator użytkownika i hasło do dołączonej tabeli są zapisywane wraz z informacjami o połączeniu.|
@@ -838,7 +839,7 @@ Podczas ustawiania wielu atrybutów, można połączyć je, sumując odpowiednie
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość Attributes" w pomocy DAO.
 
-## <a name="cdaotabledefsetconnect"></a><a name="setconnect"></a>CDaoTableDef:: SetConnect
+## <a name="cdaotabledefsetconnect"></a><a name="setconnect"></a> CDaoTableDef:: SetConnect
 
 Dla `CDaoTableDef` obiektu, który reprezentuje załączoną tabelę, obiekt String składa się z jednej lub dwóch części (specyfikatora typu bazy danych i ścieżki do bazy danych).
 
@@ -890,7 +891,7 @@ Parametry połączenia dla obiektu można ustawić `CDaoTableDef` , dostarczają
 
 Aby uzyskać powiązane informacje, zobacz temat "Connect Property" w pomocy DAO.
 
-## <a name="cdaotabledefsetname"></a><a name="setname"></a>CDaoTableDef:: SetName
+## <a name="cdaotabledefsetname"></a><a name="setname"></a> CDaoTableDef:: SetName
 
 Wywołaj tę funkcję elementu członkowskiego, aby ustawić zdefiniowaną przez użytkownika nazwę tabeli.
 
@@ -909,7 +910,7 @@ Nazwa musi zaczynać się od litery i może zawierać maksymalnie 64 znaków. Mo
 
 Aby uzyskać powiązane informacje, zobacz temat "Nazwa właściwości" w pomocy DAO.
 
-## <a name="cdaotabledefsetsourcetablename"></a><a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName
+## <a name="cdaotabledefsetsourcetablename"></a><a name="setsourcetablename"></a> CDaoTableDef::SetSourceTableName
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić nazwę dołączonej tabeli lub nazwę tabeli podstawowej, na której `CDaoTableDef` bazuje obiekt, jak istnieje w oryginalnym źródle danych.
 
@@ -928,7 +929,7 @@ Następnie należy wywołać [RefreshLink](#refreshlink). To ustawienie właści
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość SourceTableName" w pomocy DAO.
 
-## <a name="cdaotabledefsetvalidationrule"></a><a name="setvalidationrule"></a>CDaoTableDef:: setvalidationrule
+## <a name="cdaotabledefsetvalidationrule"></a><a name="setvalidationrule"></a> CDaoTableDef:: setvalidationrule
 
 Wywołaj tę funkcję elementu członkowskiego, aby ustawić regułę walidacji dla tabledef.
 
@@ -947,13 +948,13 @@ Reguły walidacji są używane w połączeniu z operacjami aktualizacji. Jeśli 
 
 Walidacja jest obsługiwana tylko w przypadku baz danych korzystających z aparatu bazy danych Microsoft Jet. Wyrażenie nie może odwoływać się do funkcji zdefiniowanych przez użytkownika, funkcji agregujących domeny, funkcji agregujących SQL ani zapytań. Reguła walidacji `CDaoTableDef` obiektu może odwoływać się do wielu pól w tym obiekcie.
 
-Na przykład w przypadku pól o nazwach *hire_date* i *termination_date*może być stosowana reguła walidacji:
+Na przykład w przypadku pól o nazwach *hire_date* i *termination_date* może być stosowana reguła walidacji:
 
 [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość ValidationRule" w pomocy DAO.
 
-## <a name="cdaotabledefsetvalidationtext"></a><a name="setvalidationtext"></a>CDaoTableDef::SetValidationText
+## <a name="cdaotabledefsetvalidationtext"></a><a name="setvalidationtext"></a> CDaoTableDef::SetValidationText
 
 Wywołaj tę funkcję elementu członkowskiego, aby ustawić tekst wyjątku reguły walidacji dla `CDaoTableDef` obiektu z podstawową tabelą obsługiwaną przez aparat bazy danych Microsoft Jet.
 
@@ -972,7 +973,7 @@ Nie można ustawić tekstu walidacji dołączonej tabeli.
 
 Aby uzyskać powiązane informacje, zobacz temat "Właściwość ValidationText" w pomocy DAO.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
