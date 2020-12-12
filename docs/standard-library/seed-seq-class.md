@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy seed_seq
 title: seed_seq — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - std::seed_seq [C++], size
 - std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
-ms.openlocfilehash: d2dc561a9160188507a61ec3734cfbf9f3e74199
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c92bda66b37162bcaaf9c614185f2c31f29d22c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197039"
 ---
-# <a name="seedseq-class"></a>seed_seq — Klasa
+# <a name="seed_seq-class"></a>seed_seq — Klasa
 
 Przechowuje wektor niepodpisanych wartości całkowitych, które mogą dostarczyć losowy inicjator dla silnika liczb losowych.
 
@@ -56,7 +57,7 @@ public:
    };
 ```
 
-## <a name="types"></a>Types
+## <a name="types"></a>Typy
 
 ```cpp
 typedef unsigned int result_type;
@@ -64,7 +65,7 @@ typedef unsigned int result_type;
 
 Typ elementów sekwencji inicjatora. 32-bitowy typ liczby całkowitej bez znaku.
 
-## <a name="constructors"></a>Konstruktorów
+## <a name="constructors"></a>Konstruktory
 
 ```cpp
 seed_seq();
@@ -78,7 +79,7 @@ seed_seq(initializer_list<T> initlist);
 ```
 
 Używa `initlist` do ustawiania sekwencji wewnętrznej.
-`T`musi być typem liczbą całkowitą.
+`T` musi być typem liczbą całkowitą.
 
 ```cpp
 template<class InputIterator>
@@ -86,7 +87,7 @@ seed_seq(InputIterator begin, InputIterator end);
 ```
 
 Inicjuje wewnętrzną sekwencję przy użyciu wszystkich elementów w podanym zakresie iteratora wejściowego.
-`iterator_traits<InputIterator>::value_type`musi być typem liczbą całkowitą.
+`iterator_traits<InputIterator>::value_type` musi być typem liczbą całkowitą.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -98,8 +99,8 @@ void generate(RandomAccessIterator begin,
           RandomAccessIterator end);
 ```
 
-Wypełnia elementy podanej sekwencji przy użyciu wewnętrznego algorytmu. Ten algorytm ma wpływ na sekwencję wewnętrzną, `seed_seq` która została zainicjowana.
-Nic nie robi `begin == end`.
+Wypełnia elementy podanej sekwencji przy użyciu wewnętrznego algorytmu. Ten algorytm ma wpływ na sekwencję wewnętrzną, która `seed_seq` została zainicjowana.
+Nic nie robi `begin == end` .
 
 ### <a name="property-functions"></a>Funkcje właściwości
 
@@ -107,18 +108,18 @@ Nic nie robi `begin == end`.
 size_t size() const;
 ```
 
-Zwraca liczbę elementów w `seed_seq`.
+Zwraca liczbę elementów w `seed_seq` .
 
 ```cpp
 template<class OutputIterator>
 void param(OutputIterator dest) const;
 ```
 
-Kopiuje sekwencję wewnętrzną do iteratora `dest`danych wyjściowych.
+Kopiuje sekwencję wewnętrzną do iteratora danych wyjściowych `dest` .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu wykonuje trzy konstruktory i generuje dane wyjściowe z wynikowych `seed_seq` wystąpień po przypisaniu do tablicy. Przykład, który używa `seed_seq` z generatorem liczb losowych, można znaleźć w temacie [ \<Random >](../standard-library/random.md).
+Poniższy przykład kodu wykonuje trzy konstruktory i generuje dane wyjściowe z wynikowych `seed_seq` wystąpień po przypisaniu do tablicy. Przykład, który używa `seed_seq` z generatorem liczb losowych, znajduje się w temacie [\<random>](../standard-library/random.md) .
 
 ```cpp
 #include <iostream>
@@ -191,10 +192,10 @@ Funkcje członkowskie tej klasy nie generują wyjątków.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:**\<random>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<random>](../standard-library/random.md)

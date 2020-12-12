@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: localeconv'
 title: localeconv
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 488a6e9dbc913f1102be3a53685dc68b38fb833b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218640"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195674"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -47,7 +48,7 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**localeconv** zwraca wskaźnik do wypełnionego obiektu typu [struct lconv](../../c-runtime-library/standard-types.md). Wartości zawarte w obiekcie są kopiowane z ustawień regionalnych w magazynie wątków lokalnych i mogą zostać zastąpione przez kolejne wywołania do **localeconv**. Zmiany wprowadzone w wartościach w tym obiekcie nie modyfikują ustawień ustawień regionalnych. Wywołania metody [setlocaling](setlocale-wsetlocale.md) z wartościami *kategorii* **LC_ALL**, **LC_MONETARY**lub **LC_NUMERIC** zastępują zawartość struktury.
+**localeconv** zwraca wskaźnik do wypełnionego obiektu typu [struct lconv](../../c-runtime-library/standard-types.md). Wartości zawarte w obiekcie są kopiowane z ustawień regionalnych w magazynie wątków lokalnych i mogą zostać zastąpione przez kolejne wywołania do **localeconv**. Zmiany wprowadzone w wartościach w tym obiekcie nie modyfikują ustawień ustawień regionalnych. Wywołania metody [setlocaling](setlocale-wsetlocale.md) z wartościami *kategorii* **LC_ALL**, **LC_MONETARY** lub **LC_NUMERIC** zastępują zawartość struktury.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -132,7 +133,7 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 
 ## <a name="see-also"></a>Zobacz też
 
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
 [Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>

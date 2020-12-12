@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyrażeniach w nawiasach'
 title: Wyrażenia w nawiasach
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
-ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd33cab851f7ec55c395fee62e4300d42365f00f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196376"
 ---
 # <a name="expressions-in-parentheses"></a>Wyrażenia w nawiasach
 
@@ -22,7 +23,7 @@ Każdy operand można ująć w nawiasy bez zmiany typu lub wartości wyrażenia 
 ( 10 + 5 ) / 5
 ```
 
-nawiasy wokół `10 + 5` oznaczają, że wartość `10 + 5` jest szacowana jako pierwsza, a następnie przechodzi do lewego operandu operatora dzielenia (**/**). Wynik `( 10 + 5 ) / 5` wynosi 3. Bez nawiasów, `10 + 5 / 5` wynikiem będzie 11.
+nawiasy wokół `10 + 5` oznaczają, że wartość `10 + 5` jest szacowana jako pierwsza, a następnie przechodzi do lewego operandu operatora dzielenia ( **/** ). Wynik `( 10 + 5 ) / 5` wynosi 3. Bez nawiasów, `10 + 5 / 5` wynikiem będzie 11.
 
 Chociaż nawiasy mają wpływ na sposób grupowania argumentów operacji w wyrażeniu, nie mogą one zagwarantować określonej kolejności oceny we wszystkich przypadkach. Na przykład ani nawiasy, ani grupowanie od lewej do prawej w następującym wyrażeniu gwarantuje, jakie wartości `i` będą znajdować się w dowolnym z podwyrażeń:
 

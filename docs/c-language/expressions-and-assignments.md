@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyrażeniach i przypisaniach'
 title: Wyrażenia i przydziały
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - assigning values in C
 - Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
-ms.openlocfilehash: 30c076bcaf80a0d51a7f8aefc9c1b1806a12e42f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5edf337467fd3fc6b4d8ce1e73a408cec3763e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196415"
 ---
 # <a name="expressions-and-assignments"></a>Wyrażenia i przydziały
 
 W tej sekcji opisano sposób tworzenia wyrażeń i przypisywania wartości w języku C. Stałe, identyfikatory, ciągi i wywołania funkcji to wszystkie operandy, które są manipulowane w wyrażeniach. Język C ma wszystkie normalne operatory języka. Ta sekcja obejmuje te operatory oraz operatory, które są unikatowe dla języka C lub Microsoft C. Omówione tematy obejmują:
 
-- [Wyrażenia wartości L i r](../c-language/l-value-and-r-value-expressions.md)
+- [Wyrażenia wartości L i R](../c-language/l-value-and-r-value-expressions.md)
 
 - [Wyrażenia stałe](../c-language/c-constant-expressions.md)
 
