@@ -1,28 +1,29 @@
 ---
-title: Cstring — semantyka
+description: 'Dowiedz się więcej o: semantyki CString'
+title: Semantyka CString
 ms.date: 11/04/2016
 helpviewer_keywords:
 - semantics in Cstring
 - CString objects, assignment semantics
 - assignment statements, assigning CString objects
 ms.assetid: d4023480-526f-499a-85f6-324b4de5b85f
-ms.openlocfilehash: b5398f8a0f17ffcc93c7f5f6158ecc56606e9279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c6dde91e7f87908c0c6bc2d49ff455eb79f6eb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167048"
 ---
-# <a name="cstring-semantics"></a>Cstring — semantyka
+# <a name="cstring-semantics"></a>Semantyka CString
 
-Mimo że [CString](../atl-mfc-shared/reference/cstringt-class.md) obiekty są dynamiczne obiekty, które można powiększać, mogą zachowywać się jak prosty klasy i wbudowanych typami pierwotnymi. Każdy `CString` obiekt reprezentuje unikatową wartość. `CString` obiekty należy traktować jako rzeczywisty ciągi, a nie jako wskaźnikami do ciągów.
+Mimo że obiekty [CString](../atl-mfc-shared/reference/cstringt-class.md) są obiektami dynamicznymi, które mogą rosnąć, działają jak wbudowane typy pierwotne i proste klasy. Każdy `CString` obiekt reprezentuje unikatową wartość. `CString` obiekty powinny być uważane za rzeczywiste ciągi, a nie jako wskaźniki do ciągów.
 
-Można przypisać jedną `CString` obiektu do drugiego. Jednak po zmodyfikowaniu jedną z dwóch `CString` obiektów innych `CString` obiekt nie jest modyfikowany, jak pokazano na poniższym przykładzie:
+Można przypisać jeden `CString` obiekt do innego. Jednak po zmodyfikowaniu jednego z tych dwóch `CString` obiektów inny `CString` obiekt nie jest modyfikowany, jak pokazano na poniższym przykładzie:
 
 [!code-cpp[NVC_ATLMFC_Utilities#188](../atl-mfc-shared/codesnippet/cpp/cstring-semantics_1.cpp)]
 
-Uwaga w przykładzie, dwa `CString` obiekty są traktowane jako "equal", ponieważ stanowią one ten sam ciąg znaków. `CString` Klasy przeciążenia operatora równości (`==`) do porównywania dwóch `CString` obiektów na podstawie ich wartości (zawartość) zamiast ich tożsamości (adres).
+Zwróć uwagę na przykład, że dwa `CString` obiekty są uważane za równe, ponieważ reprezentują ten sam ciąg znaków. `CString`Klasa przeciąża operator równości ( `==` ) w celu porównania dwóch `CString` obiektów na podstawie ich wartości (zawartości), a nie ich tożsamości (adresu).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

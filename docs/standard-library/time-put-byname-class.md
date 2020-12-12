@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy time_put_byname
 title: time_put_byname — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b519b28b7af8f5b54f9150d1d84f68cd6695bc49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167256"
 ---
 # <a name="time_put_byname-class"></a>time_put_byname — Klasa
 
-Szablon klasy pochodnej opisuje obiekt, który może być używany jako zestaw reguł ustawień regionalnych typu `time_put` \< CharType, OutputIterator >.
+Szablon klasy pochodnej opisuje obiekt, który może być używany jako zestaw reguł ustawień regionalnych typu `time_put` \< CharType, OutputIterator > .
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,23 +41,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname* \
+*_Locname*\
 Nazwa ustawień regionalnych.
 
-*_Refs* \
+*_Refs*\
 Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych [o nazwie
-](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_put](../standard-library/time-put-class.md#time_put) \<CharType, OutputIterator > (`_Refs`).
+Jego zachowanie zależy od nazwanych [o nazwie](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [time_put](../standard-library/time-put-class.md#time_put) \<CharType, OutputIterator> ( `_Refs` ).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:**\<locale>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

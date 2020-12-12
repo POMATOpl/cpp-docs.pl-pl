@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: DF'
 title: DF
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DF directive
 ms.assetid: b5587c29-3da9-4c46-aa3a-1ec42d6fa703
-ms.openlocfilehash: fb2d81312f2508dafe1975a1b6b55303f93e5f20
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 87088c980ad1b685390f5bf6169e6d8dc7f79385
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120786"
 ---
 # <a name="df"></a>DF
 
@@ -19,13 +20,13 @@ Przydziela i opcjonalnie inicjuje 6 bajtów magazynu dla każdego *inicjatora*. 
 
 ## <a name="syntax"></a>Składnia
 
-> ⟦*Nazwa*⟧ *inicjatora* DF ⟦ __,__ *inicjator* ... ⟧
+> ⟦*Nazwa*⟧  *inicjatora* DF ⟦__,__ *inicjator* ... ⟧
 
 ## <a name="remarks"></a>Uwagi
 
 Można też użyć jako specyfikatora typu, gdziekolwiek typ jest dozwolony.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

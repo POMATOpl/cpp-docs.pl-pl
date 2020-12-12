@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze InterfaceTraits
 title: InterfaceTraits — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8dfa540119b0a120ea7b8d9365a0e8b8203939b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124530"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits — Struktura
 
@@ -61,7 +62,7 @@ Drugi szablon jest specjalizacją dla maskowanych interfejsów. Trzeci szablon j
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a><a name="public-typedefs"></a> Publiczne definicje typów
 
 Nazwa   | Opis
 ------ | ------------------------------------------
@@ -93,7 +94,7 @@ Nazwa                                   | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits:: CanCastTo —
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a> InterfaceTraits:: CanCastTo —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -127,7 +128,7 @@ Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base` .
 
 Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits:: CastToBase —
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a> InterfaceTraits:: CastToBase —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -156,7 +157,7 @@ Rzutuje określony wskaźnik na wskaźnik `Base` .
 
 Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits:: CastToUnknown —
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a> InterfaceTraits:: CastToUnknown —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -185,7 +186,7 @@ Rzutuje określony wskaźnik na wskaźnik `IUnknown` .
 
 Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits:: FillArrayWithIid —
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a> InterfaceTraits:: FillArrayWithIid —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -212,7 +213,7 @@ W przeciwieństwie do nazwy tego interfejsu API modyfikowany jest tylko jeden el
 
 Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits:: IidCount —
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a> InterfaceTraits:: IidCount —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -224,7 +225,7 @@ static const unsigned long IidCount = 1;
 
 Przechowuje liczbę identyfikatorów interfejsów skojarzonych z bieżącym `InterfaceTraits` obiektem.
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits:: Verify
+## <a name="interfacetraitsverify"></a><a name="verify"></a> InterfaceTraits:: Verify
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 

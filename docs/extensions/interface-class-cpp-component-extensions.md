@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy interfejsu (C++/CLI i C++/CX)
 title: klasa interfejsu  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 8d6fd1eda0ddaaf6ab995e09ad1d84f78fcc91be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119024"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>klasa interfejsu  (C++/CLI i C++/CX)
 
@@ -40,7 +41,7 @@ Nazwa interfejsu.
 Dostępność *base_interface*.  Jedyna dozwolona dostępność dla interfejsu podstawowego to **`public`** (domyślnie).
 
 *base_interface*<br/>
-Obowiązkowe Interfejs podstawowy dla *nazwy*interfejsu.
+Obowiązkowe Interfejs podstawowy dla *nazwy* interfejsu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -72,7 +73,7 @@ W środowisku programistycznym możesz uzyskać pomoc dotyczącą F1 dla tych s�
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -82,7 +83,7 @@ Opcja kompilatora:`/ZW`
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -217,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

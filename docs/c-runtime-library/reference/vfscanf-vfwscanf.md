@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: vfscanf, vfwscanf'
 title: vfscanf, vfwscanf
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c087451d7b5a11b8c7cb6af63c9e009971ee87a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120595"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -52,10 +53,10 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
+*produkcyjne*<br/>
 Wskaźnik do struktury **pliku** .
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu.
 
 *arglist*<br/>
@@ -69,13 +70,13 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumień* lub *
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **vfscanf** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji, które są określone przez listę argumentów *arglist* . Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf**; Opis *formatu*można znaleźć w temacie [scanf](scanf-scanf-l-wscanf-wscanf-l.md) .
+Funkcja **vfscanf** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji, które są określone przez listę argumentów *arglist* . Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf**; Opis *formatu* można znaleźć w temacie [scanf](scanf-scanf-l-wscanf-wscanf-l.md) .
 
 **vfwscanf** to dwubajtowa wersja **vfscanf**; argument formatu **vfwscanf** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vfscanf** nie obsługuje danych wejściowych ze strumienia Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftscanf**|**vfscanf**|**vfscanf**|**vfwscanf**|
 
@@ -86,7 +87,7 @@ Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**vfscanf**|\<stdio.h>|
-|**vfwscanf**|\<stdio. h > lub \<WCHAR. h >|
+|**vfwscanf**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -159,7 +160,7 @@ x
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

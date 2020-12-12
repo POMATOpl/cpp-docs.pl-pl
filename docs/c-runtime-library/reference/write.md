@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _write'
 title: _write
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15988f803b37f9ce128a49662c2311a4aa6ca8fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117162"
 ---
 # <a name="_write"></a>_write
 
@@ -68,7 +69,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 Jeśli plik jest otwarty w trybie tekstowym, każdy znak wysuwu wiersza zostanie zastąpiony parą wysuwu wiersza powrotu karetki w danych wyjściowych. Zastąpienie nie ma wpływu na wartość zwracaną.
 
-Gdy plik jest otwarty w trybie translacji Unicode — na przykład, jeśli *FD* zostanie otwarty przy użyciu **_open** lub **_sopen** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**, lub **_O_U8TEXT**, lub jeśli zostanie otwarty przy użyciu **FOPEN** i parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do tablicy **`wchar_t`** zawierającej dane **UTF-16** . Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
+Gdy plik jest otwarty w trybie translacji Unicode — na przykład, jeśli *FD* zostanie otwarty przy użyciu **_open** lub **_sopen** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**, lub **_O_U8TEXT**, lub jeśli zostanie otwarty przy użyciu **FOPEN** i parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE** lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do tablicy **`wchar_t`** zawierającej dane **UTF-16** . Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
 
 ## <a name="remarks"></a>Uwagi
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: `__asm`'
 title: __asm
 ms.date: 10/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 14a40bef5b2edba76fc130604414c45eee589bcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa4e64bdb9ae4fc01e6e379de3e8a6771959e80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118059"
 ---
 # `__asm`
 
@@ -49,7 +50,7 @@ __asm int 3
 
 nie powoduje, że kod natywny został wygenerowany po skompilowaniu z **/CLR**; Kompilator przetłumaczy instrukcję do instrukcji break środowiska CLR.
 
-`__asm int 3`teraz wynikiem jest generowanie kodu natywnego dla funkcji. Jeśli chcesz, aby funkcja powodowała punkt przerwania w kodzie i jeśli chcesz, aby ta funkcja była skompilowana do MSIL, użyj [__debugbreak](../../intrinsics/debugbreak.md).
+`__asm int 3` teraz wynikiem jest generowanie kodu natywnego dla funkcji. Jeśli chcesz, aby funkcja powodowała punkt przerwania w kodzie i jeśli chcesz, aby ta funkcja była skompilowana do MSIL, użyj [__debugbreak](../../intrinsics/debugbreak.md).
 
 W celu zapewnienia zgodności z poprzednimi wersjami, **`_asm`** jest synonimem, **`__asm`** Jeśli opcja kompilatora [/za \( wyłączone rozszerzenia językowe](../../build/reference/za-ze-disable-language-extensions.md) nie została określona.
 
@@ -85,7 +86,7 @@ W przeciwieństwie do nawiasów klamrowych w C i C++, nawiasy klamrowe otaczają
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../../cpp/keywords-cpp.md)<br/>
 [Asembler wbudowany](../../assembler/inline/inline-assembler.md)<br/>

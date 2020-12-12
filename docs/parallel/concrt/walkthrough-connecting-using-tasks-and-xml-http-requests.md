@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: Łączenie przy użyciu zadań i żądań HTTP XML'
 title: 'Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: cdcdd4747e7f32d1d4c0e91959f4b49a45721269
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 88f58639b09c1b996922261c889c4844f1da4963
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167568"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Wskazówki: Łączenie za pomocą zadań i żądań XML HTTP
 
@@ -27,7 +28,7 @@ W tym dokumencie najpierw pokazano, jak utworzyć klasę `HttpRequest` i jej kla
 Aby zapoznać się z przykładem, który używa `IXMLHTTPRequest2` , ale nie używa zadań, zobacz [Szybki Start: Nawiązywanie połączenia za pomocą XML żądanie HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
-> `IXMLHTTPRequest2`i `IXMLHTTPRequest2Callback` są interfejsami zalecanymi do użycia w aplikacji platformy UWP. Niniejszy przykład można również przystosować do aplikacji klasycznej.
+> `IXMLHTTPRequest2` i `IXMLHTTPRequest2Callback` są interfejsami zalecanymi do użycia w aplikacji platformy UWP. Niniejszy przykład można również przystosować do aplikacji klasycznej.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -110,7 +111,7 @@ Oto działająca aplikacja:
 
 [Instruktaże środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Anulowanie w PPL](cancellation-in-the-ppl.md)<br/>

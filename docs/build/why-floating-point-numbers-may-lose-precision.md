@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dlaczego Floating-Point liczby mogą utracić dokładnooć'
 title: Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 97daabd7342e94022f309937c9986b61cbc8668c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120773"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność
 
@@ -64,4 +65,4 @@ W przypadku wartości EPSILON można użyć stałych FLT_EPSILON, które są zde
 
 ## <a name="see-also"></a>Zobacz też
 
-[Optymalizacja kodu](optimizing-your-code.md)
+[Optymalizowanie kodu](optimizing-your-code.md)

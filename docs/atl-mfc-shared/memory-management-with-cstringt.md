@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o zarządzaniu pamięcią za pomocą CStringT
 title: Zarządzanie pamięcią za pomocą CStringT
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-ms.openlocfilehash: bf1f99b92761c84d59b6f7bfb9aef67d7e097893
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8306159aac44a2a8185052880459c9150b0cfda2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166931"
 ---
 # <a name="memory-management-with-cstringt"></a>Zarządzanie pamięcią za pomocą CStringT
 
@@ -29,6 +30,6 @@ Klasa [CStringT](../atl-mfc-shared/reference/cstringt-class.md) jest klasą szab
 
 - [CFixedStringT: przykład niestandardowego menedżera ciągów](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład CustomString](../overview/visual-cpp-samples.md)

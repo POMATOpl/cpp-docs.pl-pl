@@ -1,27 +1,28 @@
 ---
-title: high_method_prefix — atrybut importowania
+description: 'Dowiedz się więcej na temat: high_method_prefix Importowanie atrybutu'
+title: high_method_prefix atrybut importowania
 ms.date: 08/29/2019
 f1_keywords:
 - high_method_prefix
 helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-ms.openlocfilehash: 357ac528a921a9f864f0f7e30252281a4d10e33c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0ebf73892ad1ea544f3deee726695bb8e209cb2c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167490"
 ---
-# <a name="high_method_prefix-import-attribute"></a>high_method_prefix — atrybut importowania
+# <a name="high_method_prefix-import-attribute"></a>high_method_prefix atrybut importowania
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Określa prefiks do użycia podczas nazywania właściwości i metod wysokiego poziomu.
 
 ## <a name="syntax"></a>Składnia
 
-> **#import** *Biblioteka typów* **high_method_prefix (** "*prefix*" **)**
+> **#import** high_method_prefix *biblioteki typów* **(** "*prefiks*" **)**
 
 ### <a name="parameters"></a>Parametry
 
@@ -32,9 +33,9 @@ Prefiks do użycia.
 
 Domyślnie właściwości i metody obsługi błędów wysokiego poziomu są udostępniane przez funkcje składowe o nazwie bez prefiksu. Nazwy pochodzą z biblioteki typów.
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: debugowanie i listy dla zestawu wbudowanego'
 title: Debugowanie i listy dla zestawu wbudowanego
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - debugging [C++], inline assembly code
 - inline assembly, debugging
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
-ms.openlocfilehash: 6e97c2528f480268599f561e8cf4a1df2518c6b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4608a0176de5e061d7dc7f15b8758d9bd3a94b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117873"
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Debugowanie i listy dla zestawu wbudowanego
 
@@ -30,6 +31,6 @@ Jeśli utworzysz Źródło mieszane i listę zestawu przy użyciu opcji kompilat
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z języka zestawu w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

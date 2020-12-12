@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: hdrstop pragma'
 title: hdrstop, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-ms.openlocfilehash: f540f0f01fe654213af15afa8fbf5cbd94e4b7e2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1fec99503adfb1d81f7da324db83e4c2b56a3912
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167516"
 ---
 # <a name="hdrstop-pragma"></a>hdrstop, pragma
 
@@ -27,9 +28,9 @@ Zapewnia dodatkową kontrolę nad nazwami plików prekompilacji i w lokalizacji,
 
 Nazwa *pliku* jest nazwą prekompilowanego pliku nagłówkowego do użycia lub utworzenia (w zależności od tego, czy określono [/Yu](../build/reference/yu-use-precompiled-header-file.md) lub [/YC](../build/reference/yc-create-precompiled-header-file.md) ). Jeśli *Nazwa pliku* nie zawiera specyfikacji ścieżki, zakłada się, że prekompilowany plik nagłówkowy znajduje się w tym samym katalogu, w którym znajduje się plik źródłowy.
 
-Jeśli plik C lub C++ zawiera **hdrstop** pragma podczas kompilowania z `/Yc`, kompilator zapisuje stan kompilacji do lokalizacji dyrektywy pragma. Skompilowany stan dowolnego kodu, który następuje po pragma, nie jest zapisywany.
+Jeśli plik C lub C++ zawiera **hdrstop** pragma podczas kompilowania z `/Yc` , kompilator zapisuje stan kompilacji do lokalizacji dyrektywy pragma. Skompilowany stan dowolnego kodu, który następuje po pragma, nie jest zapisywany.
 
-Użyj nazwy *pliku* , aby nawiązać nazwę prekompilowanego pliku nagłówkowego, w którym jest zapisywany skompilowany stan. Spacja między **hdrstop** i *filename* jest opcjonalna. Nazwa pliku określona w **hdrstop** pragma jest ciągiem i w związku z tym podlega ograniczeniom dowolnego języka C lub C++ String. W szczególności, musisz ująć go w znaki cudzysłowu i używać znaku ucieczki (ukośnik odwrotny), aby określić nazwy katalogów. Na przykład:
+Użyj nazwy *pliku* , aby nawiązać nazwę prekompilowanego pliku nagłówkowego, w którym jest zapisywany skompilowany stan. Spacja między **hdrstop** i *filename* jest opcjonalna. Nazwa pliku określona w **hdrstop** pragma jest ciągiem i w związku z tym podlega ograniczeniom dowolnego ciągu C lub C++. W szczególności, musisz ująć go w znaki cudzysłowu i używać znaku ucieczki (ukośnik odwrotny), aby określić nazwy katalogów. Na przykład:
 
 ```C
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )
@@ -43,7 +44,7 @@ Nazwa wstępnie skompilowanego pliku nagłówkowego jest określana zgodnie z na
 
 3. Nazwa podstawowa pliku źródłowego z rozszerzeniem .PCH
 
-W przypadku opcji `/Yu` i, jeśli żadna z dwóch opcji kompilacji ani hdrstop pragma nie określa nazwy pliku, podstawowa nazwa pliku źródłowego jest używana jako podstawowa nazwa prekompilowanego pliku nagłówkowego `/Yc` .
+W przypadku `/Yc` `/Yu` opcji i, jeśli żadna z dwóch opcji kompilacji ani **hdrstop** pragma nie określa nazwy pliku, podstawowa nazwa pliku źródłowego jest używana jako podstawowa nazwa prekompilowanego pliku nagłówkowego.
 
 Możesz również użyć poleceń przetwarzania wstępnego, aby wykonać makro zastępujące w następujący sposób:
 
@@ -75,8 +76,8 @@ __inline Disp( char *szToDisplay )   // Define an inline function
 #pragma hdrstop
 ```
 
-W tym przykładzie pragma **hdrstop** pojawia się po dołączeniu dwóch plików i zdefiniowaniu wbudowanej funkcji. W pierwszej kolejności może pojawić się nieparzyste położenie dla dyrektywy pragma. Należy jednak wziąć pod uwagę, że przy użyciu opcji `/Yc` ręcznego wstępnej kompilacji i `/Yu`z pragmy **hdrstop** , można wstępnie skompilować całe pliki źródłowe — nawet kod wbudowany. Kompilator Microsoft nie ogranicza do kompilacji wstępnej tylko deklaracji danych.
+W tym przykładzie pragma **hdrstop** pojawia się po dołączeniu dwóch plików i zdefiniowaniu wbudowanej funkcji. W pierwszej kolejności może pojawić się nieparzyste położenie dla dyrektywy pragma. Należy jednak wziąć pod uwagę, że przy użyciu opcji ręcznego wstępnej kompilacji `/Yc` i `/Yu` z pragmy **hdrstop** , można wstępnie skompilować całe pliki źródłowe — nawet kod wbudowany. Kompilator Microsoft nie ogranicza do kompilacji wstępnej tylko deklaracji danych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __lzcnt16, __lzcnt, __lzcnt64'
 title: __lzcnt16, __lzcnt, __lzcnt64
 ms.date: 09/02/2019
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: fcd801717974a230fbd19cc7802d8f6a011774f7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 75e2c105d05cfe4620f558a4f44c8ae8b9cd6f8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167737"
 ---
 # <a name="__lzcnt16-__lzcnt-__lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Oblicza liczbę zer wiodących w 16-, 32-lub 64-bitowej liczbie całkowitej.
 
@@ -54,19 +55,19 @@ Liczba wiodących bitów zerowych w `value` parametrze. Jeśli `value` jest rów
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__lzcnt16`|AMD: Zaawansowane manipulowanie bitowymi (ABM)<br /><br /> Stronę Haswell|
-|`__lzcnt`|AMD: Zaawansowane manipulowanie bitowymi (ABM)<br /><br /> Stronę Haswell|
-|`__lzcnt64`|AMD: Zaawansowane manipulowanie bitowymi (ABM) w trybie 64-bitowym.<br /><br /> Stronę Haswell|
+|`__lzcnt16`|AMD: Zaawansowane manipulowanie Bitmi (ABM)<br /><br /> Intel: Haswell|
+|`__lzcnt`|AMD: Zaawansowane manipulowanie Bitmi (ABM)<br /><br /> Intel: Haswell|
+|`__lzcnt64`|AMD: Zaawansowane manipulowanie bitowymi (ABM) w trybie 64-bitowym.<br /><br /> Intel: Haswell|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
 Każda z elementów wewnętrznych generuje `lzcnt` instrukcję.  Rozmiar wartości `lzcnt` zwracanej przez instrukcję jest taki sam, jak rozmiar tego argumentu.  W trybie 32-bitowym nie ma żadnych 64-bitowych rejestrów ogólnego przeznaczenia, dlatego 64-bit `lzcnt` nie jest obsługiwane.
 
-Aby określić obsługę `lzcnt` sprzętową instrukcji, `__cpuid` Wywołaj wewnętrzne z `InfoType=0x80000001` i sprawdź bit 5 z `CPUInfo[2] (ECX)`. Ten bit będzie miał wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod, który używa wewnętrznego na sprzęcie, który nie obsługuje `lzcnt` instrukcji, wyniki są nieprzewidywalne.
+Aby określić obsługę sprzętową `lzcnt` instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 5 z `CPUInfo[2] (ECX)` . Ten bit będzie miał wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod, który używa wewnętrznego na sprzęcie, który nie obsługuje `lzcnt` instrukcji, wyniki są nieprzewidywalne.
 
-W przypadku procesorów Intel, które nie `lzcnt` obsługują instrukcji, kodowanie bajtów instrukcji jest wykonywane jako `bsr` (skanowanie w odwrotnej wersji). Jeśli przenośność kodu jest istotna, rozważ użycie `_BitScanReverse` wewnętrznie zamiast. Aby uzyskać więcej informacji, zobacz [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).
+W przypadku procesorów Intel, które nie obsługują `lzcnt` instrukcji, kodowanie bajtów instrukcji jest wykonywane jako `bsr` (skanowanie w odwrotnej wersji). Jeśli przenośność kodu jest istotna, rozważ użycie `_BitScanReverse` wewnętrznie zamiast. Aby uzyskać więcej informacji, zobacz [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).
 
 ## <a name="example"></a>Przykład
 
@@ -109,6 +110,6 @@ __lzcnt(0xffffffff) = 0
 
 Częścią tej zawartości są Copyright 2007 (Advanced Micro Devices, Inc.). Wszelkie prawa zastrzeżone. Wygenerowane z uprawnieniami z zaawansowanych urządzeń Micro Devices, Inc.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

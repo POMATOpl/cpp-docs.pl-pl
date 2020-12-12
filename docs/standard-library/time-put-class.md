@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy time_put
 title: time_put — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 4f7b609493e16d3d1c0a9ab6274ed6f5bfd7b033
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 135bd8c619907b789f448e41e742fcc256d9b6eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167269"
 ---
 # <a name="time_put-class"></a>time_put — Klasa
 
@@ -71,7 +72,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="time_putchar_type"></a><a name="char_type"></a>time_put:: char_type
+## <a name="time_putchar_type"></a><a name="char_type"></a> time_put:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -83,7 +84,7 @@ typedef CharType char_type;
 
 Typ jest synonimem dla parametru szablonu `CharType` .
 
-## <a name="time_putdo_put"></a><a name="do_put"></a>time_put::d o_put
+## <a name="time_putdo_put"></a><a name="do_put"></a> time_put::d o_put
 
 Funkcja wirtualna, która wyprowadza informacje o dacie i godzinie jako sekwencję `CharType` s.
 
@@ -127,7 +128,7 @@ Dane wyjściowe są generowane przez te same reguły, które są używane przez 
 
 Zobacz przykład [umieszczania](#put)wywołań `do_put` .
 
-## <a name="time_putiter_type"></a><a name="iter_type"></a>time_put:: iter_type
+## <a name="time_putiter_type"></a><a name="iter_type"></a> time_put:: iter_type
 
 Typ, który opisuje iterator danych wyjściowych.
 
@@ -139,7 +140,7 @@ typedef OutputIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu `OutputIterator` .
 
-## <a name="time_putput"></a><a name="put"></a>time_put::p UT
+## <a name="time_putput"></a><a name="put"></a> time_put::p UT
 
 Wyprowadza informacje o dacie i godzinie jako sekwencję `CharType` s.
 
@@ -237,7 +238,7 @@ num_put( ) = x: 05:30:40 07/04/00
 strftime( ) = x: 05:30:40 07/04/00
 ```
 
-## <a name="time_puttime_put"></a><a name="time_put"></a>time_put:: time_put
+## <a name="time_puttime_put"></a><a name="time_put"></a> time_put:: time_put
 
 Konstruktor dla obiektów typu `time_put` .
 
@@ -258,11 +259,11 @@ Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
 - 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \>1: te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Konstruktor inicjuje swój obiekt podstawowy przy użyciu [ustawień regionalnych:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<locale>](../standard-library/locale.md)\
 [Klasa time_base](../standard-library/time-base-class.md)\

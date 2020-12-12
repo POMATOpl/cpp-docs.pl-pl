@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mm_cvttss_si64x'
 title: _mm_cvttss_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4af7b726d0f15099586bc94348ab4ba7ebf5b8e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167633"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Specyficzne dla firmy Microsoft**
 
-Emituje rozszerzoną wersję x64 konwersji z obcinaniem liczb zmiennoprzecinkowych o pojedynczej precyzji do 64-bitowej liczby całkowitej ( `cvttss2si` ).
+Emituje rozszerzoną wersję architektury Convert z obcinaniem Single-Precision Floating-Point liczbą do 64-bitową liczbę całkowitą ( `cvttss2si` ).
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,7 +88,7 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [__m128](../cpp/m128.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

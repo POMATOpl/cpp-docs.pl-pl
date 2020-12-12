@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __mulh'
 title: __mulh
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0cee31b6a9e1088d76200cd46482fd4aaf80474b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118943"
 ---
 # <a name="__mulh"></a>__mulh
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Zwraca wysoki 64 bitów iloczynu 2 64-bitowych liczb całkowitych ze znakiem.
 
@@ -44,9 +45,9 @@ Wysokie 64 bitów wynik 128-bitowego mnożenia.
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__mulh`|X64|
+|`__mulh`|x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -81,6 +82,6 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

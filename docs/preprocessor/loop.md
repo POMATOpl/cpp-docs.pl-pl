@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: pragma pętli'
 title: loop, pragma
 ms.date: 08/29/2019
 f1_keywords:
 - loop_CPP
 - vc-pragma.loop
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-ms.openlocfilehash: 83dc8753392f9177f810746fce641437ed0ffec8
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b54d62a6c9a29a4688453992ad9647d9bc21afd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167464"
 ---
 # <a name="loop-pragma"></a>loop, pragma
 
@@ -39,7 +40,7 @@ Wskazówka kompilatora do ignorowania zależności wektora dla tej pętli.
 
 Aby użyć dyrektywy pragma **pętli** , umieść ją bezpośrednio przed, a nie w, definicję pętli. Pragma obowiązuje dla zakresu pętli, która następuje po niej. Można zastosować wiele pragmów do pętli w dowolnej kolejności, ale każdy z nich musi być każdy w oddzielnej instrukcji pragma.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Autoprzetwarzanie równoległe i autowektoryzacji](../parallel/auto-parallelization-and-auto-vectorization.md)\
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

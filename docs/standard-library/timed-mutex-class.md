@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy timed_mutex
 title: timed_mutex — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 3329c46f0760a13693507de18a09b974b6b646e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af701a8f1f3777fb7f760c3eed561bd3dae5f21f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167230"
 ---
 # <a name="timed_mutex-class"></a>timed_mutex — Klasa
 
@@ -60,7 +61,7 @@ class timed_mutex;
 
 **Przestrzeń nazw:** std
 
-## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex:: Lock
+## <a name="timed_mutexlock"></a><a name="lock"></a> timed_mutex:: Lock
 
 Blokuje wątek wywołujący do momentu, aż wątek uzyska własność `mutex` .
 
@@ -72,7 +73,7 @@ void lock();
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , zachowanie jest niezdefiniowane.
 
-## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>timed_mutex:: timed_mutex, Konstruktor
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a> timed_mutex:: timed_mutex, Konstruktor
 
 Konstruuje `timed_mutex` obiekt, który nie jest zablokowany.
 
@@ -80,7 +81,7 @@ Konstruuje `timed_mutex` obiekt, który nie jest zablokowany.
 timed_mutex();
 ```
 
-## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>timed_mutex:: ~ timed_mutex, destruktor
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a> timed_mutex:: ~ timed_mutex, destruktor
 
 Zwalnia wszystkie zasoby, które są używane przez `mutex` obiekt.
 
@@ -92,7 +93,7 @@ Zwalnia wszystkie zasoby, które są używane przez `mutex` obiekt.
 
 Jeśli obiekt jest zablokowany podczas działania destruktora, zachowanie jest niezdefiniowane.
 
-## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex:: try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a> timed_mutex:: try_lock
 
 Próbuje uzyskać własność `mutex` bez blokowania.
 
@@ -108,7 +109,7 @@ bool try_lock();
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , zachowanie jest niezdefiniowane.
 
-## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex:: try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a> timed_mutex:: try_lock_for
 
 Próbuje uzyskać własność `mutex` bez blokowania.
 
@@ -130,7 +131,7 @@ Obiekt [chrono::d wersja](../standard-library/duration-class.md) , który okreś
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , zachowanie jest niezdefiniowane.
 
-## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex:: try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a> timed_mutex:: try_lock_until
 
 Próbuje uzyskać własność `mutex` bez blokowania.
 
@@ -154,7 +155,7 @@ Punkt w czasie, który określa próg, po którym metoda nie próbuje uzyskać w
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , zachowanie jest niezdefiniowane.
 
-## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex:: Unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a> timed_mutex:: Unlock
 
 Zwalnia własność `mutex` .
 
@@ -166,7 +167,7 @@ void unlock();
 
 Jeśli wątek wywołujący nie `mutex` jest własnym, zachowanie jest niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

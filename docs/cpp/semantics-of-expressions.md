@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: semantyki wyrażeń'
 title: Semantyka wyrażeń
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5e038d8ea6de55463a60d7b21104c2e71accec1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116993"
 ---
 # <a name="semantics-of-expressions"></a>Semantyka wyrażeń
 
@@ -20,7 +21,7 @@ Wyrażenia są oceniane zgodnie z pierwszeństwem i grupowaniem operatorów. ([P
 
 ## <a name="order-of-evaluation"></a>Kolejność obliczeń
 
-Rozważmy następujący przykład:
+Rozważ taki przykład:
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -116,6 +117,6 @@ Definicja języka C++ nie określa obecnie punktów sekwencji. Microsoft C++ uż
 
 - Wyrażenie w instrukcji return. Wyrażenie jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi zakończonymi przed zwróceniem sterowania do funkcji wywołującej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia](../cpp/expressions-cpp.md)

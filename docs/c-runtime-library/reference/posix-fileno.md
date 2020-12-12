@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fileno'
 title: fileno
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - fileno function
 ms.assetid: 8f33e1e0-0dc8-4311-b690-ec6e577a64b5
-ms.openlocfilehash: 798334e4139209be50c665d112f502f60909ed0f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d99d053bc8385c36af082549e2b6f3aaabdd9cc8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117331"
 ---
 # <a name="fileno"></a>fileno
 

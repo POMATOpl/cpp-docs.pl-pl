@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze InterfaceList —
 title: InterfaceList — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 660ae5137b7ff41129ce3866f0d289045f7dee9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124582"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList — Struktura
 
@@ -27,21 +28,21 @@ struct InterfaceList;
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Nazwa interfejsu; Pierwszy interfejs na liście cyklicznej.
 
-*'T*<br/>
+*U*<br/>
 Nazwa interfejsu; Pozostałe interfejsy na liście cyklicznej.
 
 ## <a name="remarks"></a>Uwagi
 
 Służy do tworzenia cyklicznej listy interfejsów.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`FirstT`|Synonim dla parametru szablonu *T*.|
 |`RestT`|Synonim dla parametru szablonu *U*.|
@@ -58,4 +59,4 @@ Służy do tworzenia cyklicznej listy interfejsów.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)
