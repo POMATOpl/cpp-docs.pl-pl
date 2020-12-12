@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: concurrency:: fast_math Namespace'
 title: Concurrency::fast_math — Przestrzeń nazw
 ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99638e3d8b0a452774d1e92d408ce3edddfa861c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122372"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math — Przestrzeń nazw
 
@@ -58,7 +59,7 @@ namespace fast_math;
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Pobiera mantysy i wykładnik _X|
 |[frexpf —](concurrency-fast-math-namespace-functions.md#frexpf)|Pobiera mantysy i wykładnik _X|
 |[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Określa, czy argument ma skończoną wartość|
-|[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Określa, czy argument jest nieskończonością|
+|[isinf —](concurrency-fast-math-namespace-functions.md#isinf)|Określa, czy argument jest nieskończonością|
 |[isNaN](concurrency-fast-math-namespace-functions.md#isnan)|Określa, czy argument jest NaN|
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Oblicza liczbę rzeczywistą z mantysy i wykładnika|
 |[ldexpf —](concurrency-fast-math-namespace-functions.md#ldexpf)|Oblicza liczbę rzeczywistą z mantysy i wykładnika|
@@ -99,6 +100,6 @@ namespace fast_math;
 
 **Przestrzeń nazw:** Concurrency:: fast_math
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

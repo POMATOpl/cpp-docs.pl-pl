@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CCachedDataPathProperty'
 title: Klasa CCachedDataPathProperty
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: ebab34433f23b119e3444b3eaa8b0ad6313555af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a61d2553afc4415da29399293843deb1be5f113d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122502"
 ---
 # <a name="ccacheddatapathproperty-class"></a>Klasa CCachedDataPathProperty
 
-Implementuje właściwość kontroli OLE przekazywane asynchronicznie i buforowane w pliku pamięci.
+Implementuje właściwość kontrolki OLE przetransferowaną asynchronicznie i buforowaną w pliku pamięci.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,43 +40,43 @@ class CCachedDataPathProperty : public CDataPathProperty
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`obiekt, w którym mają być buforowane dane.|
+|[CCachedDataPathProperty:: m_Cache](#m_cache)|`CMemFile` Obiekt, w którym mają być buforowane dane.|
 
 ## <a name="remarks"></a>Uwagi
 
 Plik pamięci jest przechowywany w pamięci RAM, a nie na dysku i jest przydatny do szybkich transferów tymczasowych.
 
-Wraz `CAysncMonikerFile` z `CDataPathProperty` `CCachedDataPathProperty` i , zapewnia funkcjonalność do korzystania z asynchronicznych monikers w formanty OLE. Za `CCachedDataPathProperty` pomocą obiektów można przesyłać dane asynchronicznie z adresu URL lub źródła plików `m_Cache` i przechowywać go w pliku pamięci za pośrednictwem zmiennej publicznej. Wszystkie dane są przechowywane w pliku pamięci i nie ma potrzeby zastępowania [OnDataAvailable,](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) chyba że chcesz obserwować powiadomienia i odpowiadać. Na przykład, jeśli przenosisz duży plik . GIF i chcesz powiadomić kontrolę, że więcej danych dotarło i należy `OnDataAvailable` go przerysować, zastąpić, aby dokonać powiadomienia.
+Wraz z `CAysncMonikerFile` programem `CDataPathProperty` i `CCachedDataPathProperty` oferuje funkcje używania monikerów asynchronicznych w kontrolkach OLE. `CCachedDataPathProperty`Obiekty umożliwiają transfer danych asynchronicznie z adresu URL lub źródła pliku i przechowywanie ich w pliku pamięci za pośrednictwem `m_Cache` zmiennej publicznej. Wszystkie dane są przechowywane w pliku pamięci i nie ma potrzeby przesłonięcia [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) , chyba że chcesz oglądać powiadomienia i reagować. Na przykład, jeśli przesyłasz duże. Plik GIF i chcesz powiadomić swój formant o dostarczeniu większej ilości danych, który powinien zostać ponownie narysowany, Przesłoń, `OnDataAvailable` Aby zgłosić powiadomienie.
 
-Klasa `CCachedDataPathProperty` jest pochodną `CDataPathProperty`.
+Klasa `CCachedDataPathProperty` pochodzi od `CDataPathProperty` .
 
-Aby uzyskać więcej informacji na temat używania monikerów asynchronicznych i formantów ActiveX w aplikacjach internetowych, zobacz następujące tematy:
+Więcej informacji o sposobach korzystania z monikerów asynchronicznych i kontrolek ActiveX w aplikacjach internetowych znajduje się w następujących tematach:
 
-- [Pierwsze kroki w Internecie: Formanty ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Internet — pierwsze kroki: kontrolki ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [Pierwsze kroki internetowe: Asynchroniczne Monikers](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Pierwsze kroki w Internecie: monikery asynchroniczne](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Colestreamfile](../../mfc/reference/colestreamfile-class.md)
+[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
-[Plik CMoniker](../../mfc/reference/cmonikerfile-class.md)
+[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)
 
-[Casyncmonikerfile](../../mfc/reference/casyncmonikerfile-class.md)
+[CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
 
-[Cdatapathproperty](../../mfc/reference/cdatapathproperty-class.md)
+[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)
 
 `CCachedDataPathProperty`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxctl.h
+**Nagłówek:** 'afxctl. h
 
-## <a name="ccacheddatapathpropertyccacheddatapathproperty"></a><a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty
+## <a name="ccacheddatapathpropertyccacheddatapathproperty"></a><a name="ccacheddatapathproperty"></a> CCachedDataPathProperty::CCachedDataPathProperty
 
 Konstruuje `CCachedDataPathProperty` obiekt.
 
@@ -89,19 +90,19 @@ CCachedDataPathProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*pKontroluj*<br/>
-Wskaźnik do obiektu sterującego ActiveX, który `CCachedDataPathProperty` ma być skojarzony z tym obiektem.
+*pControl*<br/>
+Wskaźnik do obiektu kontrolki ActiveX, który ma zostać skojarzony z tym `CCachedDataPathProperty` obiektem.
 
-*lpszPath (lpszPath)*<br/>
-Ścieżka, która może być bezwzględna lub względna, używana do tworzenia asynchroniiowego monikera, który odwołuje się do rzeczywistej bezwzględnej lokalizacji właściwości. `CCachedDataPathProperty`używa adresów URL, a nie nazwy plików. Jeśli chcesz `CCachedDataPathProperty` obiekt dla pliku, należy dołączyć file:// do ścieżki.
+*lpszPath*<br/>
+Ścieżka, która może być bezwzględna lub względna, użyta do utworzenia asynchronicznej monikera, która odwołuje się do rzeczywistej absolutnej lokalizacji właściwości. `CCachedDataPathProperty` używa adresów URL, a nie nazw plików. Jeśli chcesz, aby `CCachedDataPathProperty` obiekt dla pliku, poprzedź File://do ścieżki.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `COleControl` wskazywane przez *pControl* jest używany przez [Open](../../mfc/reference/cdatapathproperty-class.md#open) i pobierane przez klasy pochodne. Jeśli *pControl* ma wartość NULL, formant używany z `Open` należy ustawić z [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Jeśli *lpszPath* ma wartość NULL, można `Open` przejść w ścieżce lub ustawić ją za pomocą [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).
+`COleControl`Obiekt wskazywany przez *pControl* jest używany przez [otwieranie](../../mfc/reference/cdatapathproperty-class.md#open) i pobieranie przez klasy pochodne. Jeśli *pControl* ma wartość null, formant używany z elementem `Open` powinien być ustawiony za pomocą [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Jeśli *lpszPath* ma wartość null, można przekazać ścieżkę przez `Open` lub ustawić ją przy użyciu [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).
 
-## <a name="ccacheddatapathpropertym_cache"></a><a name="m_cache"></a>CCachedDataPathProperty::m_Cache
+## <a name="ccacheddatapathpropertym_cache"></a><a name="m_cache"></a> CCachedDataPathProperty:: m_Cache
 
-Zawiera nazwę klasy pliku pamięci, do którego są buforowane dane.
+Zawiera nazwę klasy pliku pamięci, w której znajdują się dane przechowywane w pamięci podręcznej.
 
 ```
 CMemFile m_Cache;
