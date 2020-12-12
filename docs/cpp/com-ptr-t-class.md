@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy _com_ptr_t
 title: _com_ptr_t — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-ms.openlocfilehash: 2c299ea4a5aaabba847c85500a6023d7b112d492
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a68b522806cec14baffe7857c71ac171ed0407f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295617"
 ---
 # <a name="_com_ptr_t-class"></a>_com_ptr_t — Klasa
 
@@ -25,7 +26,7 @@ Inteligentny wskaźnik zazwyczaj odwołuje się do definicji typedef dostarczone
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 ```
 
-deklaruje **_com_ptr_t** specjalizację _com_ptr_t `IMyInterfacePtr` .
+deklaruje  specjalizację _com_ptr_t `IMyInterfacePtr` .
 
 Zestaw [szablonów funkcji](../cpp/relational-function-templates.md), nie należących do tej klasy szablonu, obsługują porównania z inteligentnym wskaźnikiem po prawej stronie operatora porównania.
 
@@ -35,7 +36,7 @@ Zestaw [szablonów funkcji](../cpp/relational-function-templates.md), nie należ
 |-|-|
 |[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Konstruuje obiekt **_com_ptr_t** .|
 
-### <a name="low-level-operations"></a>Operacje niskiego poziomu
+### <a name="low-level-operations"></a>Operacje Low-Level
 
 | Nazwa | Opis |
 |-|-|

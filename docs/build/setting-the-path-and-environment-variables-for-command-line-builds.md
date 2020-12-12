@@ -1,5 +1,6 @@
 ---
-title: Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia
+description: 'Dowiedz się więcej o: Ustaw zmienne dotyczące ścieżki i środowiska dla kompilacji Command-Line'
+title: Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji Command-Line
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: aeafe806e5d29b89c243586974814aa7cfc16d1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3accc1cf56b86822298e1f1298bcae7d41c28332
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275389"
 ---
-# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia
+# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji Command-Line
 
 Narzędzia do kompilowania wiersza polecenia w języku Microsoft C++ (MSVC) wymagają kilku zmiennych środowiskowych, które są dostosowane do instalacji i konfiguracji kompilacji. Gdy obciążenie języka C++ jest instalowane przez Instalatora programu Visual Studio, tworzy dostosowane pliki poleceń lub pliki wsadowe, które ustawiają wymagane zmienne środowiskowe. Instalator następnie używa tych plików poleceń do tworzenia skrótów dla menu Start systemu Windows, aby otworzyć okno wiersza polecenia dla deweloperów. Te skróty służą do konfigurowania zmiennych środowiskowych dla określonej konfiguracji kompilacji. Jeśli chcesz użyć narzędzi wiersza polecenia, możesz uruchomić jeden z tych skrótów lub otworzyć zwykłe okno wiersza polecenia, a następnie uruchomić jeden z niestandardowych plików poleceń, aby samodzielnie ustawić środowisko konfiguracji kompilacji. Aby uzyskać więcej informacji, zobacz Korzystanie z zestawu [narzędzi MSVC w wierszu polecenia](building-on-the-command-line.md). Aby użyć plików poleceń z zwykłym wierszem polecenia, zapoznaj się z sekcją zatytułowaną [lokalizacje plików poleceń deweloperskich](building-on-the-command-line.md#developer_command_file_locations).
 
@@ -36,6 +37,6 @@ Aby zobaczyć, które zmienne środowiskowe są ustawiane przez skrót do wiersz
 
 [Używanie zestawu narzędzi MSVC z poziomu wiersza polecenia](building-on-the-command-line.md)<br/>
 [Dokumentacja konsolidatora MSVC](reference/linking.md)<br/>
-[Opcje konsolidatora MSVC](reference/linker-options.md)<br/>
+[MSVC Opcje konsolidatora](reference/linker-options.md)<br/>
 [Dokumentacja kompilatora MSVC](reference/compiling-a-c-cpp-program.md)<br/>
 [Opcje kompilatora MSVC](reference/compiler-options.md)

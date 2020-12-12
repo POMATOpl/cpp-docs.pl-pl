@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strchr, wcschr, _mbschr, _mbschr_l'
 title: strchr, wcschr, _mbschr, _mbschr_l
 ms.date: 4/2/2020
 api_name:
@@ -47,19 +48,19 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: a7cea0b2c640b7cb87d7097cea7bdf94a73abfb8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8971022e529a03199a890d769843fd77ec44c5af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229314"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306225"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
 Znajduje znak w ciągu, przy użyciu bieżących ustawień regionalnych lub określonej LC_CTYPEj kategorii stanu konwersji.
 
 > [!IMPORTANT]
-> `_mbschr`i `_mbschr_l` nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbschr` i `_mbschr_l` nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -125,18 +126,18 @@ Ciąg źródłowy zakończony wartością null.
 *s*<br/>
 Znak, który ma zostać zlokalizowany.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do pierwszego wystąpienia *c* w *str*lub wartość null, jeśli nie odnaleziono języka *c* .
+Każda z tych funkcji zwraca wskaźnik do pierwszego wystąpienia *c* w *str* lub wartość null, jeśli nie odnaleziono języka *c* .
 
 ## <a name="remarks"></a>Uwagi
 
-`strchr`Funkcja znajduje pierwsze wystąpienie *c* w *str*lub zwraca wartość null, jeśli nie znaleziono języka *c* . Znak końcowy o wartości null jest uwzględniany w wyszukiwaniu.
+`strchr`Funkcja znajduje pierwsze wystąpienie *c* w *str* lub zwraca wartość null, jeśli nie znaleziono języka *c* . Znak końcowy o wartości null jest uwzględniany w wyszukiwaniu.
 
-`wcschr``_mbschr`i `_mbschr_l` są wersjami znaków dwubajtowych `strchr` . Argumenty i wartość zwracana przez `wcschr` są ciągami znaków `_mbschr` dwubajtowych; te z są ciągami znaków wieloznacznych. `_mbschr`rozpoznaje sekwencje znaków wielobajtowych. Ponadto, jeśli ciąg jest wskaźnikiem typu null, `_mbschr` wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbschr` zwraca wartość null i ustawia `errno` do EINVAL. `strchr`i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
+`wcschr``_mbschr`i `_mbschr_l` są wersjami znaków dwubajtowych `strchr` . Argumenty i wartość zwracana przez `wcschr` są ciągami znaków `_mbschr` dwubajtowych; te z są ciągami znaków wieloznacznych. `_mbschr` rozpoznaje sekwencje znaków wielobajtowych. Ponadto, jeśli ciąg jest wskaźnikiem typu null, `_mbschr` wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbschr` zwraca wartość null i ustawia `errno` do EINVAL. `strchr` i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
 Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii LC_CTYPE ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -221,8 +222,8 @@ Result:   last r found at position 30
 ## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
-[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

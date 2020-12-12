@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: idl_quote'
 title: idl_quote (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5aa389214283c188f71190eec41e22d396d887cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275441"
 ---
 # <a name="idl_quote"></a>idl_quote
 
@@ -25,7 +26,7 @@ Umożliwia korzystanie z konstrukcji IDL, które nie są obsługiwane w bieżąc
 
 ### <a name="parameters"></a>Parametry
 
-*Opis*<br/>
+*tekst*<br/>
 Nazwa atrybutu, który ma zostać przekazany przez kompilator języka Microsoft C++ do wygenerowanego pliku IDL bez zwrócenia błędu kompilatora.
 
 ## <a name="remarks"></a>Uwagi
@@ -76,7 +77,7 @@ Ten kod powoduje `MYFLOT` i `MYDUB` i wpis *tekstowy* , który ma zostać umiesz
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Dowolne miejsce|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

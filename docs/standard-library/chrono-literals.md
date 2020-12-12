@@ -1,17 +1,18 @@
 ---
+description: 'Dowiedz się więcej o: literały Chrono'
 title: literały chrono
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 497094d920a25635496fb0aa30295d378571418c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325158"
 ---
 # <a name="chrono-literals"></a>literały chrono
 
-(C++ 14) \<chrono>Nagłówek definiuje 12 [literałów zdefiniowanych przez użytkownika](../cpp/user-defined-literals-cpp.md) , aby ułatwić korzystanie z literałów, które reprezentują godziny, minuty, sekundy, milisekundy, mikrosekundy i nanosekund. Każdy literał zdefiniowany przez użytkownika ma całkowite i Przeciążenie zmiennoprzecinkowe. Literały są zdefiniowane w literałach:: chrono_literals wbudowanej przestrzeni nazw, która jest przenoszona do zakresu automatycznie, gdy std:: chrono znajduje się w zakresie.
+(C++ 14) \<chrono> Nagłówek definiuje 12 [literałów zdefiniowanych przez użytkownika](../cpp/user-defined-literals-cpp.md) , aby ułatwić korzystanie z literałów, które reprezentują godziny, minuty, sekundy, milisekundy, mikrosekundy i nanosekund. Każdy literał zdefiniowany przez użytkownika ma całkowite i Przeciążenie zmiennoprzecinkowe. Literały są zdefiniowane w literałach:: chrono_literals wbudowanej przestrzeni nazw, która jest przenoszona do zakresu automatycznie, gdy std:: chrono znajduje się w zakresie.
 
 ## <a name="syntax"></a>Składnia
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: odczyt'
 title: przeczytaj
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - read function
 ms.assetid: 9e0eead4-d38c-4f65-87f5-f6c12da40ead
-ms.openlocfilehash: 881a6b6c3592a169fffbfb42e05567e362376ee4
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 1d34427023a187b19bdbd20e3f07967f9ab25a77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253042"
 ---
 # <a name="read"></a>przeczytaj
 

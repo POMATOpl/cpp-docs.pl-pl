@@ -1,18 +1,19 @@
 ---
-title: chars_format Wyliczenie
+description: 'Dowiedz się więcej na temat: chars_format enum'
+title: chars_format, wyliczenie
 ms.date: 08/03/2020
 f1_keywords:
 - charconv/std::chars_format
 helpviewer_keywords:
 - std::chars_format
-ms.openlocfilehash: d7f95d9bd1522fa0896ccdbac6c1dbc770f2b272
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: af458f96e3e9dbe4db9d1adab1c529403cefcaa6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325184"
 ---
-# <a name="chars_format-enum"></a>chars_format Wyliczenie
+# <a name="chars_format-enum"></a>chars_format, wyliczenie
 
 Używany z [\<charconv>](charconv.md) biblioteką do określenia formatu zmiennoprzecinkowego konwersji liczb pierwotnych.
 
@@ -34,7 +35,7 @@ enum class chars_format {
 | `scientific` | Powoduje `from_chars()` oczekiwanie i przeanalizowanie wykładnika. Przypomina `printf()` specyfikator formatu `'e'` , który formatuje notację wykładniczą, np `"1.729e+01"` . |
 | `fixed` | Powoduje `from_chars()` , że nie oczekuje się lub nie przeanalizuje wykładnika. Przypomina `printf()` specyfikator formatu `'f'` , który formatuje zmiennoprzecinkowe, na przykład `"17.29"` .|
 | `hex` | Powoduje `from_chars()` , że liczba jest oczekiwana w formacie szesnastkowym, ale bez wiodącego `0x` . |
-| `general` | Powoduje `from_chars()` zaakceptowanie (ale nie wymaganie) wykładnika. Dla `to_chars()` , jest podobny do `printf()` specyfikatora formatu `'g'` , który przełącza między notacją naukową lub naprawioną. Należy wziąć pod uwagę znaczenie wykładnika, która będzie mogła generować odpowiednio zwarte dane wyjściowe. Na przykład: `1e-5` wyniki w `"1e-05"` , ale są `1e-4` wynikiem `"0.001"` . `1e5`wyniki w `100000` `1e6` `1e+06` . `1e0`tworzy `1` .|
+| `general` | Powoduje `from_chars()` zaakceptowanie (ale nie wymaganie) wykładnika. Dla `to_chars()` , jest podobny do `printf()` specyfikatora formatu `'g'` , który przełącza między notacją naukową lub naprawioną. Należy wziąć pod uwagę znaczenie wykładnika, która będzie mogła generować odpowiednio zwarte dane wyjściowe. Na przykład: `1e-5` wyniki w `"1e-05"` , ale są `1e-4` wynikiem `"0.001"` . `1e5` wyniki w `100000` `1e6` `1e+06` . `1e0` tworzy `1` .|
 
 ## <a name="remarks"></a>Uwagi
 

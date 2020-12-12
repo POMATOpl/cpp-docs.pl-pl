@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: COLLATE klasy'
 title: collate — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: ccdf05a7a41fc7f646852e7d326832b86c41dde8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cef6d30167aa61c674913ac7844f6eb021a82529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325065"
 ---
 # <a name="collate-class"></a>collate — Klasa
 
@@ -79,7 +80,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="collatechar_type"></a><a name="char_type"></a>COLLATE:: char_type
+## <a name="collatechar_type"></a><a name="char_type"></a> COLLATE:: char_type
 
 Typ, który opisuje znak typu `CharType` .
 
@@ -91,7 +92,7 @@ typedef CharType char_type;
 
 Typ jest synonimem dla parametru szablonu `CharType` .
 
-## <a name="collatecollate"></a><a name="collate"></a>COLLATE:: COLLATE
+## <a name="collatecollate"></a><a name="collate"></a> COLLATE:: COLLATE
 
 Konstruktor dla obiektów klasy COLLATE, który służy jako zestaw reguł ustawień regionalnych do obsługi Konwencji sortowania ciągów.
 
@@ -122,11 +123,11 @@ Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
 - 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \>1: te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="collatecompare"></a><a name="compare"></a>COLLATE:: Compare
+## <a name="collatecompare"></a><a name="compare"></a> COLLATE:: Compare
 
 Porównuje dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.
 
@@ -192,7 +193,7 @@ int main() {
 }
 ```
 
-## <a name="collatedo_compare"></a><a name="do_compare"></a>sortowanie::d o_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a> sortowanie::d o_compare
 
 Funkcja wirtualna porównująca dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.
 
@@ -235,7 +236,7 @@ Chroniona funkcja wirtualna elementu członkowskiego porównuje sekwencję z [* 
 
 Zobacz przykład dla [COLLATE:: Compare](#compare), które wywołania `do_compare` .
 
-## <a name="collatedo_hash"></a><a name="do_hash"></a>sortowanie::d o_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a> sortowanie::d o_hash
 
 Funkcja wirtualna wywoływana w celu określenia wartości mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.
 
@@ -263,7 +264,7 @@ Wartość skrótu może być przydatna na przykład w przypadku dystrybuowania s
 
 Zobacz przykład dla [skrótu](#hash), który wywołuje `do_hash` .
 
-## <a name="collatedo_transform"></a><a name="do_transform"></a>sortowanie::d o_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a> sortowanie::d o_transform
 
 Funkcja wirtualna wywoływana w celu konwersji sekwencji znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.
 
@@ -291,7 +292,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwraca obiekt klasy [string
 
 Zobacz przykład [transformacji](#transform), która wywołuje `do_transform` .
 
-## <a name="collatehash"></a><a name="hash"></a>COLLATE:: hash
+## <a name="collatehash"></a><a name="hash"></a> COLLATE:: hash
 
 Określa wartość mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.
 
@@ -345,7 +346,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="collatestring_type"></a><a name="string_type"></a>COLLATE:: string_type
+## <a name="collatestring_type"></a><a name="string_type"></a> COLLATE:: string_type
 
 Typ, który opisuje ciąg `basic_string` zawierający znaki typu `CharType` .
 
@@ -361,7 +362,7 @@ Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/bas
 
 Aby zapoznać się z przykładem sposobu deklarowania i używania `string_type` , zobacz [Transform](#transform).
 
-## <a name="collatetransform"></a><a name="transform"></a>COLLATE:: Transform
+## <a name="collatetransform"></a><a name="transform"></a> COLLATE:: Transform
 
 Konwertuje sekwencję znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.
 

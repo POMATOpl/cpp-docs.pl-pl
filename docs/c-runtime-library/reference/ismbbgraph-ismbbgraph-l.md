@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbbgraph, _ismbbgraph_l'
 title: _ismbbgraph, _ismbbgraph_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: 60b8a974ab27878a379e3a9ad2596a23ed31757f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 093d7d2ca9b9bde427078f390f2036866529d8da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306355"
 ---
 # <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph, _ismbbgraph_l
 
@@ -71,7 +72,7 @@ Zwraca wartość różną od zera, jeśli wyrażenie:
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-jest różna od zera dla *c*lub 0, jeśli nie jest. **_ismbbgraph** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_ismbbgraph_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+jest różna od zera dla *c* lub 0, jeśli nie jest. **_ismbbgraph** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_ismbbgraph_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -81,8 +82,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbgraph**|\<Mbctype. h>|
-|**_ismbbgraph_l**|\<Mbctype. h>|
+|**_ismbbgraph**|\<mbctype.h>|
+|**_ismbbgraph_l**|\<mbctype.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -93,4 +94,4 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

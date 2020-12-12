@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: static_cast — operator'
 title: Operator static_cast
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8551d41417647ee4f759e2547e2c1909c59d78cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d76b4e21adea6561d7d6822871631c242aaf9c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317964"
 ---
 # <a name="static_cast-operator"></a>Operator static_cast
 
@@ -105,7 +106,7 @@ Każde wyrażenie może być jawnie konwertowane na typ void przez **`static_cas
 
 **/CLI C++:** Ze względu na niebezpieczeństwo wykonywania niezaznaczonych rzutów w stosunku do ponownego lokalizowania modułu wyrzucania elementów bezużytecznych, użycie **`static_cast`** powinna być tylko w kodzie krytycznym dla wydajności, gdy jest to konieczne. Jeśli musisz użyć **`static_cast`** w trybie wydania, zastąp go [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) w kompilacjach debugowania, aby upewnić się, że powodzenie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory rzutowania](../cpp/casting-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

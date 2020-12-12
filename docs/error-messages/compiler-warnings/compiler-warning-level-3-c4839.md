@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 3) C4839'
 title: Ostrzeżenie kompilatora (poziom 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a8ae0d3e3c74c62d05163edd981679e5390fb184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332061"
 ---
 # <a name="compiler-warning-level-3-c4839"></a>Ostrzeżenie kompilatora (poziom 3) C4839
 
 > niestandardowe użycie klasy "*Type*" jako argumentu funkcji wariadyczne
 
-Klasy lub struktury, które są przesyłane do funkcji wariadyczne, takie jak `printf`, muszą być składowane w sposób prosty. Podczas przekazywania takich obiektów kompilator po prostu wykonuje kopię bitową i nie wywołuje konstruktora ani destruktora.
+Klasy lub struktury, które są przenoszone do funkcji wariadyczne, takie jak, `printf` muszą być w sposób prosty skopiowane. Podczas przekazywania takich obiektów kompilator po prostu wykonuje kopię bitową i nie wywołuje konstruktora ani destruktora.
 
 To ostrzeżenie jest dostępne począwszy od programu Visual Studio 2017.
 
@@ -51,7 +52,7 @@ Aby poprawić błąd, można wywołać funkcję członkowską, która zwraca typ
     printf("%i\n", i.load());
 ```
 
-W przypadku ciągów skompilowanych i zarządzanych przy użyciu `CStringW`, podane `operator LPCWSTR()` powinny być używane do rzutowania obiektu `CStringW` na wskaźnik C oczekiwany przez ciąg formatu.
+W przypadku ciągów skompilowanych i zarządzanych przy użyciu `CStringW` , dostarczone, `operator LPCWSTR()` powinno być używane do rzutowania `CStringW` obiektu na wskaźnik C oczekiwany przez ciąg formatu.
 
 ```cpp
     CStringW str1;

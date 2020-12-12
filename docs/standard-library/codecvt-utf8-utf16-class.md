@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: codecvt_utf8_utf16'
 title: codecvt_utf8_utf16
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf8_utf16 class
 ms.assetid: 4c12c881-5dba-4e39-b338-0b9caff5af29
-ms.openlocfilehash: 879ebe6a75d76a84ef4250b95c41e02eccba5517
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e80cdaa01ef77b9ce28a773eb4e05056220718a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325078"
 ---
-# <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
+# <a name="codecvt_utf8_utf16"></a>codecvt_utf8_utf16
 
 Reprezentuje zestaw reguł [ustawień regionalnych](../standard-library/locale-class.md) , który konwertuje między znaki szerokie kodowane jako UTF-16 i strumień bajtów zakodowany jako UTF-8.
 
@@ -39,6 +40,6 @@ Strumień bajtów można zapisać w pliku binarnym lub pliku tekstowym.
 
 ## <a name="requirements"></a>Wymagania
 
-Nagłówek: \<codecvt >
+Nagłówki \<codecvt>
 
 Przestrzeń nazw: std

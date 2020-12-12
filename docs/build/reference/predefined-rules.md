@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: wstępnie zdefiniowane reguły'
 title: Wstępnie zdefiniowane zasady
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,33 +7,33 @@ helpviewer_keywords:
 - NMAKE program, predefined rules
 - predefined rules in NMAKE
 ms.assetid: 638cdc3f-4aba-4b4f-96e3-ad65b0364f12
-ms.openlocfilehash: 7a922a239306f10121791caa8f9f088cea88c019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 302c649980050764d1bb2f0e9a43b785d0175a09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225833"
 ---
 # <a name="predefined-rules"></a>Wstępnie zdefiniowane zasady
 
-Zasady wnioskowania wstępnie zdefiniowanych Użyj dostarczonej w NMAKE makra poleceń i opcji.
+Wstępnie zdefiniowane reguły wnioskowania używają makr poleceń i opcji dostarczonych przez NMAKE.
 
-|Reguła|Polecenie|Domyślny<br /><br /> Akcja|Batch<br /><br /> Reguła|Platforma nmake działa na|
+|Reguła|Polecenie|Domyślny<br /><br /> akcja|Batch<br /><br /> Reguła|NMAKE platformy działa na|
 |----------|-------------|------------------------|--------------------|----------------------------|
-|. asm.exe|$(AS) $(AFLAGS) $<|ml $<|Brak|x86|
-|.asm.obj|$(AS) $(AFLAGS) /c $<|uczenie maszynowe/c $<|tak|x86|
-|. asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|Brak|X64|
-|.asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|tak|X64|
-|.c.exe|$(CC) $(CFLAGS) $<|cl $<|Brak|wszystkie|
-|.c.obj|$(CC) $(CFLAGS) /c $<|Cl /c $<|tak|wszystkie|
-|.cc.exe|$(CC) $(CFLAGS) $<|cl $<|Brak|wszystkie|
-|. cc.obj|$(CC) $(CFLAGS) /c $<|Cl /c $<|tak|wszystkie|
-|.cpp.exe|$(CPP) $(CPPFLAGS) $<|cl $<|Brak|wszystkie|
-|.cpp.obj|$(CPP) $(CPPFLAGS) /c $<|Cl /c $<|tak|wszystkie|
-|.cxx.exe|$(CXX) $(CXXFLAGS) $<|cl $<|Brak|wszystkie|
-|.cxx.obj|$(CXX) $(CXXFLAGS) /c $<|Cl /c $<|tak|wszystkie|
-|.rc.res|$(RC) $(RFLAGS) /r $<|rc /r $<|Brak|wszystkie|
+|.asm.exe|$ (AS) $ (AFLAGS) $<|< ml $|nie|x86|
+|. asm. obj|$ (AS) $ (AFLAGS)/c $<|ml/c $<|tak|x86|
+|.asm.exe|$ (AS) $ (AFLAGS) $<|ML64 $<|nie|x64|
+|. asm. obj|$ (AS) $ (AFLAGS)/c $<|ML64/c $<|tak|x64|
+|.c.exe|$ (CC) $ (CFLAGS) $<|CL $<|nie|all|
+|. c. obj|$ (CC) $ (CFLAGS)/c $<|cl/c $<|tak|all|
+|.cc.exe|$ (CC) $ (CFLAGS) $<|CL $<|nie|all|
+|. DW. obj|$ (CC) $ (CFLAGS)/c $<|cl/c $<|tak|all|
+|.cpp.exe|$ (CPP) $ (CPPFLAGS) $<|CL $<|nie|all|
+|. cpp. obj|$ (CPP) $ (CPPFLAGS)/c $<|cl/c $<|tak|all|
+|.cxx.exe|$ (CXX) $ (CXXFLAGS) $<|CL $<|nie|all|
+|. cxx. obj|$ (CXX) $ (CXXFLAGS)/c $<|cl/c $<|tak|all|
+|. rc. res|$ (RC) $ (RFLAGS)/r $<|RC/r $<|nie|all|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zasady wnioskowania](inference-rules.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbbalnum, _ismbbalnum_l'
 title: _ismbbalnum, _ismbbalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: abbc664170c274929875ef2e4b7af70bc5812a94
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e4caf523d788cba4466d3d21beb6470d80b9aefd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306335"
 ---
 # <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum, _ismbbalnum_l
 
@@ -70,7 +71,7 @@ Ustawienia regionalne do użycia.
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-jest różna od zera dla *c*lub 0, jeśli nie jest.
+jest różna od zera dla *c* lub 0, jeśli nie jest.
 
 Wersja tej funkcji z sufiksem **_l** jest identyczna, z tą różnicą, że używa przeszukanych ustawień regionalnych zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych.
 
@@ -82,8 +83,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbalnum**|\<Mbctype. h>|
-|**_ismbbalnum_l**|\<Mbctype. h>|
+|**_ismbbalnum**|\<mbctype.h>|
+|**_ismbbalnum_l**|\<mbctype.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -94,4 +95,4 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

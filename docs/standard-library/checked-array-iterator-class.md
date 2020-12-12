@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy checked_array_iterator
 title: checked_array_iterator — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 467a94212d7b1e9d28a3229660b8a8619993b201
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 0db327613826105ccd65800246ad1bd16ffbf923
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325197"
 ---
 # <a name="checked_array_iterator-class"></a>checked_array_iterator — Klasa
 
@@ -989,7 +990,7 @@ Aby uzyskać przykład kodu, zobacz [checked_array_iterator:: operator []](#op_a
 
 Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<iterator>](../standard-library/iterator.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

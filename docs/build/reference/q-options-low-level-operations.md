@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/Q opcje (operacje na niskim poziomie)
 title: /Q Opcje (Operacje na niskim poziomie)
 ms.date: 01/08/2020
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: f5342071cef76bcc736f128c344279898a61c462
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f01781dd670c128f65717a05c6a9367e126550e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225716"
 ---
 # <a name="q-options-low-level-operations"></a>/Q Opcje (Operacje na niskim poziomie)
 
@@ -40,7 +41,7 @@ Można użyć **/q** opcji kompilatora, aby wykonać następujące operacje komp
 
 - [/Qvec-Report (poziom raportowania automatycznej wektoryzator)](qvec-report-auto-vectorizer-reporting-level.md): włącza poziomy raportowania dla automatycznej wektoryzacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

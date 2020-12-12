@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4462'
 title: Ostrzeżenie kompilatora (poziom 1) C4462
 ms.date: 10/25/2017
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-ms.openlocfilehash: bd4d5c1fd7dd8d7419fc901149ceab7e769e7076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81696df228b2cbe6278521f602d2a6f986cacb13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212535"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>Ostrzeżenie kompilatora (poziom 1) C4462
 
 > nie można określić GUID typu. Program może ulec awarii w czasie wykonywania.
 
-Ostrzeżenie C4462 występuje w środowiska uruchomieniowego Windows aplikacji lub składnika, gdy publiczny `TypedEventHandler` ma jako jeden z jego parametrów typu odwołanie do klasy otaczającej.
+Ostrzeżenie C4462 występuje w aplikacji lub składniku środowisko wykonawcze systemu Windows, gdy publiczny `TypedEventHandler` ma jeden z parametrów typu jako odwołanie do otaczającej klasy.
 
-To ostrzeżenie zostanie automatycznie podwyższony do błędu. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Na przykład aby C4462 do poziomu 4 ostrzeżenie problem, Dodaj ten wiersz do pliku kodu źródłowego:
+To ostrzeżenie jest automatycznie podwyższana do błędu. Jeśli chcesz zmodyfikować to zachowanie, użyj [#pragma ostrzeżenie](../../preprocessor/warning.md). Na przykład, aby C4462 na problem z ostrzeżeniem poziomu 4, Dodaj ten wiersz do pliku kodu źródłowego:
 
 ```cpp
 #pragma warning(4:4462)
@@ -67,4 +68,4 @@ public ref struct R sealed : [Windows::Foundation::Metadata::Default] IR
 };
 ```
 
-Identyfikator GUID typu `Windows::Foundation::TypedEventHandler<R^, EventArgs^>^` jest używany tylko, gdy typ jest dostępny z innego składnika. Pierwsza metoda obejścia problemu jest skuteczna, ponieważ może on być dostępny wyłącznie w ramach własnego składnika po zastosowaniu obejścia. W przeciwnym razie kompilator musi założyć najgorszy przypadek i wygenerować ostrzeżenie.
+Identyfikator GUID typu `Windows::Foundation::TypedEventHandler<R^, EventArgs^>^` jest używany tylko podczas uzyskiwania dostępu do typu z innego składnika. Pierwsza metoda obejścia problemu jest skuteczna, ponieważ może on być dostępny wyłącznie w ramach własnego składnika po zastosowaniu obejścia. W przeciwnym razie kompilator musi założyć najgorszy przypadek i wygenerować ostrzeżenie.

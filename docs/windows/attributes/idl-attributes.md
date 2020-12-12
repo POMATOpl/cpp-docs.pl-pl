@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o atrybutach IDL
 title: Atrybuty IDL (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 8cceae2f1c4880b72f1ffc30070d6aa6bf8e3a51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1db49b6c68d0dd4e4f4c6c5dcfb148cafc39159d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275467"
 ---
 # <a name="idl-attributes"></a>atrybuty IDL
 
@@ -47,7 +48,7 @@ Należy pamiętać, że [idl_quote](idl-quote.md) umożliwia korzystanie z konst
 |[defaultvtable](defaultvtable.md)|Definiuje interfejs jako domyślny interfejs tablicy metod dla kontrolki.|
 |[dispinterface](dispinterface.md)|Umieszcza interfejs w pliku. idl jako interfejs wysyłania.|
 |[displaybind](displaybind.md)|Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jako możliwy do powiązania.|
-|[dual](dual.md)|Umieszcza interfejs w pliku. idl jako podwójny interfejs.|
+|[obsługi](dual.md)|Umieszcza interfejs w pliku. idl jako podwójny interfejs.|
 |[Autotekstu](entry.md)|Określa wyeksportowaną funkcję lub stałą w module, identyfikując punkt wejścia w bibliotece DLL.|
 |[first_is](first-is.md)|Określa indeks pierwszego elementu tablicy, który ma zostać przesłany.|
 |[helpcontext](helpcontext.md)|Określa identyfikator kontekstu, który umożliwia użytkownikowi wyświetlanie informacji o tym elemencie w pliku pomocy.|
@@ -55,7 +56,7 @@ Należy pamiętać, że [idl_quote](idl-quote.md) umożliwia korzystanie z konst
 |[helpstringcontext](helpstringcontext.md)|Określa identyfikator tematu pomocy w pliku HLP lub chm.|
 |[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, która ma być używana do przeszukiwania ciągu dokumentu (lokalizacja).|
 |[helpstring](helpstring.md)|Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie.|
-|[hidden](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
+|[ukryte](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
 |[idl_module](idl-module.md)|Określa punkt wejścia w bibliotece DLL.|
 |[idl_quote](idl-quote.md)|Umożliwia korzystanie z atrybutów lub konstrukcji IDL, które nie są obsługiwane w bieżącej wersji Visual C++.|
 |[id](id.md)|Określa identyfikator DISPID dla funkcji składowej (właściwości lub metody w interfejsie lub dispinterface).|
@@ -65,7 +66,7 @@ Należy pamiętać, że [idl_quote](idl-quote.md) umożliwia korzystanie z konst
 |[zaimportować](import.md)|Określa inny plik IDL, ODL lub nagłówkowy zawierający definicje, które chcesz odwołać z głównego pliku. idl.|
 |[być](include-cpp.md)|Określa co najmniej jeden plik nagłówka do uwzględnienia w wygenerowanym pliku IDL.|
 |[includelib —](includelib-cpp.md)|Powoduje, że plik IDL lub h zostanie uwzględniony w wygenerowanym pliku IDL.|
-|[in](in-cpp.md)|Wskazuje, że parametr ma być przekazywać z procedury wywołującej do procedury wywoływanej.|
+|[podczas](in-cpp.md)|Wskazuje, że parametr ma być przekazywać z procedury wywołującej do procedury wywoływanej.|
 |[last_is](last-is.md)|Określa indeks ostatniego elementu tablicy, który ma zostać przesłany.|
 |[lcid](lcid.md)|Umożliwia przekazanie identyfikatora ustawień regionalnych do funkcji.|
 |[length_is](length-is.md)|Określa liczbę elementów tablicy do przesłania.|
@@ -78,7 +79,7 @@ Należy pamiętać, że [idl_quote](idl-quote.md) umożliwia korzystanie z konst
 |[nonbrowsable](nonbrowsable.md)|Wskazuje, że element członkowski interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|
 |[noncreatable](noncreatable.md)|Definiuje obiekt, którego nie można utworzyć na podstawie samego siebie.|
 |[nonextensible](nonextensible.md)|Określa, że `IDispatch` implementacja zawiera tylko właściwości i metody wymienione w opisie interfejsu i nie można go rozszerzyć z dodatkowymi elementami członkowskimi w czasie wykonywania.|
-|[object](object-cpp.md)|Identyfikuje niestandardowy interfejs; synonim z atrybutem niestandardowym.|
+|[Stream](object-cpp.md)|Identyfikuje niestandardowy interfejs; synonim z atrybutem niestandardowym.|
 |[odl](odl.md)|Identyfikuje interfejs jako interfejs ODL (Object Description Language).|
 |[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodny z automatyzacją.|
 |[obowiązkowe](optional-cpp.md)|Określa opcjonalny parametr funkcji składowej.|
@@ -104,7 +105,7 @@ Należy pamiętać, że [idl_quote](idl-quote.md) umożliwia korzystanie z konst
 |[switch_type](switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|
 |[transmit_as](transmit-as.md)|Instruuje kompilator, aby skojarzyć przedstawiony typ, który obsługuje aplikacje klienta i serwera, z przesyłanym typem.|
 |[uidefault](uidefault.md)|Wskazuje, że element członkowski informacji o typie jest domyślnym elementem członkowskim do wyświetlania w interfejsie użytkownika.|
-|[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
+|[unikatowy](unique-cpp.md)|Określa unikatowy wskaźnik.|
 |[usesgetlasterror](usesgetlasterror.md)|Instruuje obiekt wywołujący, że jeśli wystąpi błąd podczas wywoływania tej funkcji, wywołujący może następnie wywołać, `GetLastError` Aby pobrać kod błędu.|
 |[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator klasy lub interfejsu.|
 |[v1_enum](v1-enum.md)|Określa, że określony typ wyliczeniowy ma być przekazywany jako jednostka 32-bitowa, a nie wartość domyślna 16-bitowa.|
@@ -112,6 +113,6 @@ Należy pamiętać, że [idl_quote](idl-quote.md) umożliwia korzystanie z konst
 |[vi_progid](vi-progid.md)|Określa niezależną od wersji identyfikator ProgID.|
 |[wire_marshal](wire-marshal.md)|Określa typ danych, który będzie używany do przesyłania zamiast typu danych specyficznego dla aplikacji.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty według grupy](attributes-by-group.md)

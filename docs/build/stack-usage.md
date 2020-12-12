@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: użycie stosu x64'
 title: Użycie stosu x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: b1b1e0a8c30d5e24e81372912d5c488efce14841
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 564b5888f59d06199cd0f2c175b928c725e26e1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275363"
 ---
 # <a name="x64-stack-usage"></a>Użycie stosu x64
 
@@ -49,7 +50,7 @@ Funkcja liścia to taka, która nie wymaga wpisu tabeli funkcji. Nie można wpro
 
 Funkcja [malloc](../c-runtime-library/reference/malloc.md) gwarantuje, że pamięć jest odpowiednio wyrównana do przechowywania dowolnego obiektu, który ma podstawowe wyrównanie i który może pasować do ilości pamięci, która została przypisana. *Podstawowe wyrównanie* to wyrównanie, które jest mniejsze niż lub równe największemu wyrównaniu, które jest obsługiwane przez implementację bez określenia wyrównania. (W Visual C++ jest to wyrównanie wymagane dla **`double`** lub 8 bajtów. W kodzie, który jest przeznaczony dla platform 64-bitowych, wynosi 16 bajtów. Na przykład alokacja z czterema bajtami byłaby wyrównana na granicy, która obsługuje dowolny z czterech bajtów lub mniejszych obiektów.
 
-Visual C++ zezwala na typy, które mają rozszerzone wyrównanie, które są również *znane jako* *przesunięte*typy. Na przykład typy SSE [__m128](../cpp/m128.md) i i `__m256` typy, które są zadeklarowane za pomocą `__declspec(align( n ))` gdzie `n` jest większy niż 8, mają rozszerzone wyrównanie. Wyrównanie pamięci na granicy, która jest odpowiednia dla obiektu, który wymaga rozszerzonego wyrównania, nie jest gwarantowane przez `malloc` . Aby przydzielić pamięć dla niewyrównanych typów, użyj [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) i powiązanych funkcji.
+Visual C++ zezwala na typy, które mają rozszerzone wyrównanie, które są również *znane jako* *przesunięte* typy. Na przykład typy SSE [__m128](../cpp/m128.md) i i `__m256` typy, które są zadeklarowane za pomocą `__declspec(align( n ))` gdzie `n` jest większy niż 8, mają rozszerzone wyrównanie. Wyrównanie pamięci na granicy, która jest odpowiednia dla obiektu, który wymaga rozszerzonego wyrównania, nie jest gwarantowane przez `malloc` . Aby przydzielić pamięć dla niewyrównanych typów, użyj [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) i powiązanych funkcji.
 
 ## <a name="alloca"></a>alloca
 
@@ -57,7 +58,7 @@ Visual C++ zezwala na typy, które mają rozszerzone wyrównanie, które są ró
 
 Przydzielonego stosu musi zawierać miejsce po nim dla parametrów, które następnie nazywają funkcję, zgodnie z opisem w temacie [Alokacja stosu](#stack-allocation).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwencje kodowania x64](../build/x64-software-conventions.md)<br/>
 [dostosowania](../cpp/align-cpp.md)<br/>

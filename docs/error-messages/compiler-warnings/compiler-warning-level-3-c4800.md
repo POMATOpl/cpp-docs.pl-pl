@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4800'
 title: Ostrzeżenie kompilatora (poziom 4) C4800
 ms.date: 03/14/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: bcc98b9bb24f77e39a31332b8fbe2f7dcc5a7638
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bb46807e6225d4b73b589f8b1b95ea777f69d5b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332120"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>Ostrzeżenie kompilatora (poziom 4) C4800
 
 ::: moniker range=">= msvc-160"
 Program Visual Studio 2019 lub nowszy:
-> Niejawna konwersja z *typu "Type* " na typ bool. Możliwa utrata informacji
+> Niejawna konwersja z *typu "Type*" na typ bool. Możliwa utrata informacji
 ::: moniker-end
 
 C4800 to ostrzeżenie poziomu 3 w programie Visual Studio 2015 i jego wcześniejszych wersjach:
-> " *Type* ": wymuszanie wartości logicznej "true" lub "false" (ostrzeżenie o wydajności)
+> "*Type*": wymuszanie wartości logicznej "true" lub "false" (ostrzeżenie o wydajności)
 
 To ostrzeżenie jest generowane, gdy wartość jest niejawnie konwertowana na typ **`bool`** . Zazwyczaj ten komunikat jest spowodowany przypisaniem **`int`** zmiennych do zmiennych, w **`bool`** których **`int`** zmienna zawiera tylko wartości **`true`** i **`false`** i może być ponownie zadeklarowana jako typ **`bool`** . Jeśli nie możesz ponownie zapisać wyrażenia w celu użycia typu **`bool`** , możesz dodać " `!=0` " do wyrażenia, które zwraca typ wyrażenia **`bool`** . Rzutowanie wyrażenia do typu **`bool`** nie powoduje wyłączenia ostrzeżenia, które jest zgodne z projektem.
 

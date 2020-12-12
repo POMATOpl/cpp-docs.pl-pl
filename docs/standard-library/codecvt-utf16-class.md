@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: codecvt_utf16'
 title: codecvt_utf16
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 264324d0f827e8999b065205010874ebf62ca501
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325091"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -30,7 +31,7 @@ Typ elementu dwubajtowego.
 *Maxcode*\
 Maksymalna liczba znaków dla zestawu reguł ustawień regionalnych.
 
-\ *trybu*
+*Wyst*\
 Informacje o konfiguracji zestawu reguł ustawień regionalnych.
 
 ## <a name="remarks"></a>Uwagi
@@ -41,6 +42,6 @@ Strumień bajtów powinien być zapisany w pliku binarnym; może być uszkodzona
 
 ## <a name="requirements"></a>Wymagania
 
-Nagłówek: \<codecvt >
+Nagłówki \<codecvt>
 
 Przestrzeń nazw: std

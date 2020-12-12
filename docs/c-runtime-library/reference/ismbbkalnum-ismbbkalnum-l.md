@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbbkalnum, _ismbbkalnum_l'
 title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9f18a80882b9f0bc703b0fbf5caace9746a486e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306316"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -77,12 +78,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbkalnum**|\<Mbctype. h>|
-|**_ismbbkalnum_l**|\<Mbctype. h>|
+|**_ismbbkalnum**|\<mbctype.h>|
+|**_ismbbkalnum_l**|\<mbctype.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

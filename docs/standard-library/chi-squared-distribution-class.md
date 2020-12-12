@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy chi_squared_distribution
 title: chi_squared_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 5d7a7e2ba3c962a1ef63b14fed5d4bfb67c38b44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ee63e0331a8412ca5104dd7dfbfc427d6b7f627
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325171"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution — Klasa
 
@@ -74,7 +75,7 @@ Jednolity aparat generatora liczb losowych. Aby zapoznać się z możliwymi typa
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem chi kwadrat. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem Chi-Squared. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 [chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)\
 [param_type](#param_type)

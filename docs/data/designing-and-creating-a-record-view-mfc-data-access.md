@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: projektowanie i Tworzenie widoku rekordu (dostęp do danych MFC)'
 title: Projektowanie i Tworzenie widoku rekordu (dostęp do danych MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: dfd486c397dffa87295839f5ef62de0bd1ba812a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6bcf388abb164c4f20bb639dc19c427bd3fbcad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317912"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Projektowanie i Tworzenie widoku rekordu (dostęp do danych MFC)
 
-Możesz utworzyć klasę widoku rekordu przy użyciu [Kreatora aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md). Jeśli używasz Kreatora aplikacji, tworzy on klasę widok rekordu i zasób szablonu okna dialogowego dla niego (bez kontrolek). Aby dodać kontrolki do C++ zasobu szablon okna dialogowego, należy użyć edytora okna dialogowego wizualizacji. Z drugiej strony, jeśli używasz **Dodaj klasy**, musisz najpierw utworzyć zasób szablon okna dialogowego w edytorze okien dialogowych, a następnie utworzyć klasę widok rekordu.
+Możesz utworzyć klasę widoku rekordu przy użyciu [Kreatora aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md). Jeśli używasz Kreatora aplikacji, tworzy on klasę widok rekordu i zasób szablonu okna dialogowego dla niego (bez kontrolek). Aby dodać kontrolki do zasobu szablon okna dialogowego, należy użyć edytora okna dialogowego Visual C++. Z drugiej strony, jeśli używasz **Dodaj klasy**, musisz najpierw utworzyć zasób szablon okna dialogowego w edytorze okien dialogowych, a następnie utworzyć klasę widok rekordu.
 
 #### <a name="to-create-your-record-view-with-the-mfc-application-wizard"></a>Aby utworzyć widok rekordu przy użyciu Kreatora aplikacji MFC
 
