@@ -1,46 +1,47 @@
 ---
-title: 'Windows Sockets: Gniazda Stream'
+description: 'Dowiedz się więcej o programie: Windows Sockets: gniazda strumienia'
+title: 'Windows Sockets: gniazda strumieni'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9e40be06ebb1de04466b5f13a46fe82fb3b0bd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207647"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Gniazda Stream
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: gniazda strumieni
 
-W tym artykule opisano gniazda strumieni, jeden z dwóch typów gniazda Windows dostępne. (Jest innego typu [gniazdo datagramu](../mfc/windows-sockets-datagram-sockets.md).)
+W tym artykule opisano gniazda strumienia, jeden z dwóch dostępnych typów gniazd systemu Windows. (Drugi typ to [gniazdo datagramu](../mfc/windows-sockets-datagram-sockets.md)).
 
-Gniazda Stream zapewnienia przepływu danych, bez rekordów granic: strumień bajtów, które mogą być dwukierunkowe (aplikacja jest pełny dupleks: go mogą przesyłać i odbierać za pośrednictwem gniazda). Strumienie mogą być powoływane dostarczać sekwencji, unduplicated danych. ("Sekwencjonowania" oznacza, że pakiety są dostarczane w kolejności wysyłane. "Unduplicated" oznacza, że pobieranie określonego pakietu tylko raz.) Strumień komunikatach jest gwarantowane i strumieni dobrze nadają się do obsługi dużych ilości danych.
+Gniazda strumienia zapewniają przepływ danych bez granic rekordów: strumień bajtów, który może być dwukierunkowy (aplikacja jest pełna: może wysyłać i odbierać dane za pomocą gniazda). Strumienie mogą opierać się na dostarczaniu sekwencyjnych, niezduplikowanych danych. ("Sekwencyjne" oznacza, że pakiety są dostarczane w wysłanej kolejności. "Unduplikowane" oznacza, że otrzymujesz konkretny pakiet tylko raz.) Przesyłanie komunikatów strumieniowych jest gwarantowane, a strumienie są dobrze dopasowane do obsługi dużych ilości danych.
 
-Warstwa transportu sieciowego może podzielić lub grupowania danych w pakiety odpowiednią wielkość. `CSocket` Klasy będzie obsługiwać, pakowanie i rozpakowywanie dla Ciebie.
+Warstwa transportu sieciowego może rozbić lub grupować dane w pakietach o rozsądnym rozmiarze. `CSocket`Klasa będzie obsługiwać pakowanie i rozpakowywanie.
 
-Strumienie są oparte na jawne połączeń: gniazda, A żądania połączenia gniazda B; gniazda B zaakceptuje lub odrzuci żądanie połączenia.
+Strumienie są oparte na jawnych połączeniach: gniazdo A żąda połączenia z gniazdem B; Gniazdo B akceptuje lub odrzuca żądanie połączenia.
 
-Połączenia telefonicznego zapewnia dobre odpowiednio dla strumienia. W normalnych warunkach otrzymującej rozmawia wypowiadanych w kolejności, powiedz, bez duplikacji i utraty. Gniazda Stream są właściwe, na przykład w przypadku implementacji takich jak protokół FTP (File Transfer), mechanizm przesyłania ASCII lub pliki binarne o dowolnym rozmiarze.
+Połączenie telefoniczne zapewnia dobrą analogową obsługę strumienia. W normalnych warunkach Strona otrzymująca słyszy to, co powiedzieć, w kolejności, w jakiej zostało napisane, bez duplikowania ani utraty. Gniazda strumienia są odpowiednie, na przykład w przypadku implementacji takich jak protokół transferu plików (FTP), które ułatwiają transferowanie plików ASCII lub binarnych o dowolnym rozmiarze.
 
-Gniazda Stream są preferowane w porównaniu do przesyłania datagramów, gdy dane muszą być dotrą do celu i gdy rozmiar danych jest duży. Aby uzyskać więcej informacji na temat gniazda strumieni zobacz specyfikację Windows Sockets. Specyfikacja jest dostępna w zestawie Windows SDK.
+Gniazda strumienia są preferowane w celu przechodzenia do gniazd, gdy dane muszą zostać dostarczone i gdy rozmiar danych jest duży. Aby uzyskać więcej informacji na temat gniazd strumienia, zobacz specyfikację Windows Sockets. Specyfikacja jest dostępna w Windows SDK.
 
-Korzystanie z gniazda strumieni może być nadrzędne w stosunku do aplikacje przeznaczone do użytku rozgłaszania do wszystkich gniazd odbieranie w sieci, ponieważ gniazdo datagram
+Korzystanie z gniazd strumienia może być nadrzędne dla aplikacji zaprojektowanych do korzystania z gniazda datagramów do rozgłaszania do wszystkich gniazd otrzymujących w sieci, ponieważ
 
-- Problemy z siecią powódź (lub "storm") podlega opłacie emisji modelu.
+- Model rozgłaszania podlega problemom z zalaniem sieci (lub "burzą").
 
-- Modelu klient serwer, późniejsze jest bardziej wydajne.
+- Model klient-serwer został przyjęty w późniejszym czasie.
 
-- Modelu strumienia dostaw transfer danych niezawodne, gdzie model datagramów nie.
+- Model strumienia dostarcza niezawodnego transferu danych, gdzie model datagramu nie jest obsługiwany.
 
-- Końcowego modelu wykorzystuje mającym uprawienia do komunikacji między ANSI i Unicode aplikacji wykorzystujących gniazda tej klasy, które CArchive przyczyni się do klasy CSocket.
+- Ostatni model wykorzystuje możliwość komunikowania się między aplikacjami z gniazdami Unicode i ANSI, które Klasa CArchive przyjmuje do klasy CSocket.
 
     > [!NOTE]
-    >  Jeśli używasz klasy `CSocket`, należy użyć strumienia. Potwierdzenie MFC zakończy się niepowodzeniem, jeśli określony typ gniazda jako **SOCK_DGRAM**.
+    >  Jeśli używasz klasy `CSocket` , musisz użyć strumienia. Potwierdzenie MFC kończy się niepowodzeniem, jeśli typ gniazda zostanie określony jako **SOCK_DGRAM**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [Windows Sockets: Tło](../mfc/windows-sockets-background.md)

@@ -1,12 +1,13 @@
 ---
+description: 'Dowiedz się więcej o programie: Programowanie gier w języku C++'
 title: Programowanie gier w języku C++
 ms.date: 02/26/2019
-ms.openlocfilehash: ddb50e948bc0ffaa46581a4bb59c5d0911437f0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e8d78348fcac5ec25d5a37573f7264f38c609b15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207621"
 ---
 # <a name="game-development-with-c"></a>Programowanie gier w języku C++
 

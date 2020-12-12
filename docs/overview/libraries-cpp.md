@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o bibliotece: biblioteki'
 title: Biblioteki
 ms.date: 11/18/2018
-ms.openlocfilehash: dc139fea346be8034fa80236844abb2303fa345d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d5d8eec966db4834615a95382cd725670567350
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80075607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207608"
 ---
 # <a name="libraries"></a>Biblioteki
 
-Visual Studio zawiera następujące biblioteki podczas instalowania co najmniej jednego z obciążeń języka C++. Aby uzyskać informacje dotyczące instalowania bibliotek innych firm, zobacz [vcpkg: A C++ package manager for Windows, Linux and MacOS](../build/vcpkg.md).
+Program Visual Studio zawiera następujące biblioteki, gdy instalujesz co najmniej jedno z obciążeń języka C++. Aby uzyskać informacje na temat instalowania bibliotek innych firm, zobacz [vcpkg: a C++ Package Manager for Windows, Linux i MacOS](../build/vcpkg.md).
 
 ## <a name="standard-libraries"></a>Biblioteki standardowe
 
@@ -21,6 +22,6 @@ Visual Studio zawiera następujące biblioteki podczas instalowania co najmniej 
 
 ## <a name="libraries-for-windows-applications"></a>Biblioteki dla aplikacji systemu Windows
 
-[MFC/ATL](../mfc/mfc-and-atl.md)<br/>
+[Biblioteka MFC/ATL](../mfc/mfc-and-atl.md)<br/>
 [Biblioteki równoległe](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 [Biblioteki dostępu do danych](../data/data-access-in-cpp.md)

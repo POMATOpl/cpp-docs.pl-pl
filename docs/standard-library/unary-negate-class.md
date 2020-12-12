@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy unary_negate
 title: unary_negate — Klasa
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 33907bce7e03005488d23b3ac39666b6310b0e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207413"
 ---
 # <a name="unary_negate-class"></a>unary_negate — Klasa
 
@@ -31,10 +32,10 @@ class unary_negate
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *Func*
+*Func*\
 Funkcja Jednoargumentowa, która ma być negacją.
 
-\ *lewo*
+*lewym*\
 Operand funkcji jednoargumentowej, która ma być negacją.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -43,9 +44,9 @@ Negacja funkcji jednoargumentowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy przechowuje kopię jednoargumentowego obiektu *\_Func*. Definiuje jej funkcję członkowską `operator()` jako zwracającą `!_Func(left)`.
+Szablon klasy przechowuje kopię *\_ funkcji obiektu* jednoargumentowego. Definiuje swoją funkcję członkowską `operator()` jako zwracaną `!_Func(left)` .
 
-Konstruktor `unary_negate` jest rzadko używany bezpośrednio. Funkcja pomocnika [not1 —](../standard-library/functional-functions.md#not1) zapewnia łatwiejszy sposób deklarowania i używania predykatu adaptacji **unary_negator** .
+Konstruktor `unary_negate` jest rzadko używany bezpośrednio. Funkcja pomocnika [not1 —](../standard-library/functional-functions.md#not1) zapewnia łatwiejszy sposób deklarowania i używania predykatu **unary_negator** adaptera.
 
 ## <a name="example"></a>Przykład
 

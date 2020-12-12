@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie wątku
 title: thread — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: 19f7ae1fc95f531f509273f0eb9998c73fe7d47b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b9afa8e649fd2b3fb0fdaf339e4a6fbead5b4ef6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207465"
 ---
 # <a name="thread-class"></a>thread — Klasa
 
@@ -84,7 +85,7 @@ Każdy wątek wykonywania ma unikatowy identyfikator typu `thread::id`. Funkcja 
 
 **Przestrzeń nazw:** std
 
-## <a name="threaddetach"></a><a name="detach"></a>Wątek::d etach
+## <a name="threaddetach"></a><a name="detach"></a> Wątek::d etach
 
 Odłącza skojarzony wątek. System operacyjny jest odpowiedzialny za zwolnienie zasobów wątku po zakończeniu.
 
@@ -100,7 +101,7 @@ Jeśli wątek, który jest skojarzony z obiektem wywołującym nie jest przyłą
 
 Jeśli wątek skojarzony z obiektem wywołującym jest nieprawidłowy, funkcja zgłasza, `system_error` że ma kod błędu `no_such_process` .
 
-## <a name="threadget_id"></a><a name="get_id"></a>Wątek:: get_id
+## <a name="threadget_id"></a><a name="get_id"></a> Wątek:: get_id
 
 Zwraca unikatowy identyfikator skojarzonego wątku.
 
@@ -112,7 +113,7 @@ id get_id() const noexcept;
 
 [Wątek:: ID](#id_class) , który jednoznacznie identyfikuje skojarzony wątek, lub `thread::id()` Jeśli żaden wątek nie jest skojarzony z obiektem.
 
-## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a>Wątek:: hardware_concurrency
+## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a> Wątek:: hardware_concurrency
 
 Metoda statyczna zwracająca szacunkową liczbę kontekstów wątków sprzętowych.
 
@@ -124,7 +125,7 @@ static unsigned int hardware_concurrency() noexcept;
 
 Oszacowanie liczby kontekstów wątków sprzętowych. Jeśli wartość nie może być obliczona lub nie jest prawidłowo zdefiniowana, ta metoda zwraca 0.
 
-## <a name="threadid-class"></a><a name="id_class"></a>Thread:: ID — Klasa
+## <a name="threadid-class"></a><a name="id_class"></a> Thread:: ID — Klasa
 
 Zapewnia unikatowy identyfikator dla każdego wątku wykonywania w procesie.
 
@@ -140,7 +141,7 @@ Konstruktor domyślny tworzy obiekt, który nie jest porównywany z `thread::id`
 
 Wszystkie obiekty skonstruowane domyślnie są `thread::id` równe.
 
-## <a name="threadjoin"></a><a name="join"></a>Wątek:: join
+## <a name="threadjoin"></a><a name="join"></a> Wątek:: join
 
 Bloki do momentu, aż wątek wykonywania skojarzony z wywoływanym obiektem zostanie zakończony.
 
@@ -152,7 +153,7 @@ void join();
 
 Jeśli wywołanie powiedzie się, kolejne wywołania [get_id](#get_id) dla obiektu wywołującego zwracają domyślny [wątek:: ID](#id_class) , który nie jest porównywany `thread::id` z żadnym istniejącym wątkiem. Jeśli wywołanie nie powiedzie się, wartość zwracana przez `get_id` jest niezmieniona.
 
-## <a name="threadjoinable"></a><a name="joinable"></a>Wątek:: join
+## <a name="threadjoinable"></a><a name="joinable"></a> Wątek:: join
 
 Określa, czy skojarzony wątek jest *przyłączony*.
 
@@ -168,7 +169,7 @@ bool joinable() const noexcept;
 
 Obiekt wątku jest *przyłączany* , jeśli `get_id() != id()` .
 
-## <a name="threadnative_handle"></a><a name="native_handle"></a>Wątek:: native_handle
+## <a name="threadnative_handle"></a><a name="native_handle"></a> Wątek:: native_handle
 
 Zwraca typ zależny od implementacji, który reprezentuje dojście wątku. Uchwyt wątku może być używany w sposób specyficzny dla implementacji.
 
@@ -178,9 +179,9 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`native_handle_type`jest definiowana jako system Win32 `HANDLE` , który jest rzutowany jako `void *` .
+`native_handle_type` jest definiowana jako system Win32 `HANDLE` , który jest rzutowany jako `void *` .
 
-## <a name="threadoperator"></a><a name="op_eq"></a>Thread:: operator =
+## <a name="threadoperator"></a><a name="op_eq"></a> Thread:: operator =
 
 Kojarzy wątek określonego obiektu z bieżącym obiektem.
 
@@ -203,7 +204,7 @@ Wywołania metody odłączają się, gdy wywołujący obiekt jest przyłączany.
 
 Po utworzeniu skojarzenia `Other` jest ustawiany domyślny stan skonstruowany.
 
-## <a name="threadswap"></a><a name="swap"></a>Wątek:: swap
+## <a name="threadswap"></a><a name="swap"></a> Wątek:: swap
 
 Zamienia stan obiektu na określony `thread` obiekt.
 
@@ -216,7 +217,7 @@ void swap(thread& Other) noexcept;
 *Różnych*\
 Obiekt `thread`.
 
-## <a name="threadthread-constructor"></a><a name="thread"></a>Thread:: Thread — Konstruktor
+## <a name="threadthread-constructor"></a><a name="thread"></a> Thread:: Thread — Konstruktor
 
 Konstruuje `thread` obiekt.
 
@@ -245,9 +246,9 @@ Pierwszy Konstruktor konstruuje obiekt, który nie jest skojarzony z wątkiem wy
 
 Drugi Konstruktor konstruuje obiekt, który jest skojarzony z nowym wątkiem wykonywania i wykonuje pseudo funkcja `INVOKE` , która jest zdefiniowana w [\<functional>](../standard-library/functional.md) . Jeśli za mało zasobów jest dostępnych do uruchomienia nowego wątku, funkcja zgłasza obiekt [system_error](../standard-library/system-error-class.md) , który ma kod błędu `resource_unavailable_try_again` . Jeśli wywołanie *F* kończy się nieprzechwyconym wyjątkem, zostanie wywołane [zakończenie](../standard-library/exception-functions.md#terminate) .
 
-Trzeci Konstruktor konstruuje obiekt, który jest skojarzony z wątkiem, który jest skojarzony z `Other` . `Other`jest następnie ustawiany na stan skonstruowany domyślnie.
+Trzeci Konstruktor konstruuje obiekt, który jest skojarzony z wątkiem, który jest skojarzony z `Other` . `Other` jest następnie ustawiany na stan skonstruowany domyślnie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<thread>](../standard-library/thread.md)
