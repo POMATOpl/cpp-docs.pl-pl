@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa DontUseNewUseMake'
 title: DontUseNewUseMake — Klasa
 ms.date: 09/21/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::DontUseNewUseMake class
 - Microsoft::WRL::Details::DontUseNewUseMake::operator new operator
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
-ms.openlocfilehash: ae67373b4f2f2d4a199b939b06e6f526f1365446
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f6b6740e472123e59565e3bad16e4a535a4e17fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272906"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake — Klasa
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +29,7 @@ class DontUseNewUseMake;
 
 ## <a name="remarks"></a>Uwagi
 
-Zapobiega używaniu `new` `RuntimeClass`operatora w pliku . W związku z tym należy użyć [Make funkcji](make-function.md) zamiast tego.
+Uniemożliwia używanie operatora `new` w `RuntimeClass` . W związku z tym należy zamiast tego użyć [funkcji Make](make-function.md) .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -36,7 +37,7 @@ Zapobiega używaniu `new` `RuntimeClass`operatora w pliku . W związku z tym nal
 
 Nazwa                                             | Opis
 ------------------------------------------------ | ---------------------------------------------------------------------------
-[DontUseNewUseMake::operator nowy](#operator-new) | Przeciąża `new` operatora i zapobiega jego `RuntimeClass`użyciu w .
+[DontUseNewUseMake:: operator new](#operator-new) | Operator overloads `new` i uniemożliwia używanie go w programie `RuntimeClass` .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -44,13 +45,13 @@ Nazwa                                             | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Obszar nazw:** Microsoft::WRL::Dszczegóły
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="dontusenewusemakeoperator-new"></a><a name="operator-new"></a>DontUseNewUseMake::operator nowy
+## <a name="dontusenewusemakeoperator-new"></a><a name="operator-new"></a> DontUseNewUseMake:: operator new
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 void* operator new(
@@ -64,13 +65,13 @@ void* operator new(
 *__unnamed0*<br/>
 Nienazwany parametr, który określa liczbę bajtów pamięci do przydzielenia.
 
-*Umieszczenie*<br/>
-Typ, który ma zostać przydzielony.
+*jęcia*<br/>
+Typ do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Umożliwia przekazywanie dodatkowych argumentów w `new`przypadku przeciążenia operatora .
+Zapewnia sposób przekazania dodatkowych argumentów w przypadku przeciążania operatora `new` .
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciąża `new` operatora i zapobiega jego `RuntimeClass`użyciu w .
+Operator overloads `new` i uniemożliwia używanie go w programie `RuntimeClass` .

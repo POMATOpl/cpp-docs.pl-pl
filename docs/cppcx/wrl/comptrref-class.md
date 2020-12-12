@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa ComPtrRef'
 title: ComPtrRef — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-ms.openlocfilehash: f92a3e14018cf8c02dec40b664b72a0956f6220e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42a0698c8eb393c84422b52ee112013b91fe39e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273153"
 ---
 # <a name="comptrref-class"></a>ComPtrRef — Klasa
 
@@ -90,7 +91,7 @@ Nazwa                                                                     | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef:: ComPtrRef
+## <a name="comptrrefcomptrref"></a><a name="comptrref"></a> ComPtrRef:: ComPtrRef
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -109,7 +110,7 @@ Wartość bazowa innego `ComPtrRef` obiektu.
 
 Inicjuje nowe wystąpienie `ComPtrRef` klasy od określonego wskaźnika do innego `ComPtrRef` obiektu.
 
-## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef:: GetAddressOf
+## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a> ComPtrRef:: GetAddressOf
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -125,7 +126,7 @@ Adres wskaźnika do interfejsu reprezentowanego przez bieżący `ComPtrRef` obie
 
 Pobiera adres wskaźnika do interfejsu reprezentowanego przez bieżący `ComPtrRef` obiekt.
 
-## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef:: operator = =
+## <a name="comptrrefoperator"></a><a name="operator-equality"></a> ComPtrRef:: operator = =
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -176,7 +177,7 @@ Czwarte i piąte operatory dają **`true`** , czy obiekt *a* jest równy obiekto
 
 Wskazuje, czy dwa `ComPtrRef` obiekty są równe.
 
-## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef:: operator! =
+## <a name="comptrrefoperator"></a><a name="operator-inequality"></a> ComPtrRef:: operator! =
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -227,7 +228,7 @@ Czwarte i piąte operatory dają **`true`** , czy obiekt *a* nie jest równy obi
 
 Wskazuje, czy dwa `ComPtrRef` obiekty nie są równe.
 
-## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef:: operator InterfaceType\*\*
+## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a> ComPtrRef:: operator InterfaceType\*\*
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -239,7 +240,7 @@ operator InterfaceType**();
 
 Usuwa bieżący `ComPtrRef` obiekt i zwraca wskaźnik do interfejsu, który został reprezentowany przez `ComPtrRef` obiekt.
 
-## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef:: operator *
+## <a name="comptrrefoperator"></a><a name="operator-star"></a> ComPtrRef:: operator *
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -255,7 +256,7 @@ Wskaźnik do interfejsu reprezentowanego przez bieżący `ComPtrRef` obiekt.
 
 Pobiera wskaźnik do interfejsu reprezentowanego przez bieżący `ComPtrRef` obiekt.
 
-## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef:: operator T *
+## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a> ComPtrRef:: operator T *
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -267,7 +268,7 @@ operator T*();
 
 Zwraca wartość elementu członkowskiego danych [ptr_](comptrrefbase-class.md#ptr) bieżącego `ComPtrRef` obiektu.
 
-## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef:: operator void\*\*
+## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a> ComPtrRef:: operator void\*\*
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -279,7 +280,7 @@ operator void**() const;
 
 Usuwa bieżący `ComPtrRef` obiekt, rzutuje wskaźnik do interfejsu, który został reprezentowany przez `ComPtrRef` obiekt jako wskaźnik do wskaźnika do **`void`** , a następnie zwraca wskaźnik rzutowania.
 
-## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtrRef:: ReleaseAndGetAddressOf —
+## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a> ComPtrRef:: ReleaseAndGetAddressOf —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 

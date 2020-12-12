@@ -1,46 +1,47 @@
 ---
+description: 'Dowiedz się więcej na temat: środowisko wykonawcze systemu Windows i szablony zarządzane (C++/CLI i C++/CX)'
 title: Środowisko wykonawcze systemu Windows i zarządzane szablony (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75b39c58bc42c23da313525f125dc98abdb0866b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274037"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Środowisko wykonawcze systemu Windows i zarządzane szablony (C++/CLI i C++/CX)
 
-Szablony umożliwiają zdefiniowanie prototypu środowiska wykonawczego systemu Windows lub typ środowiska wykonawczego języka wspólnego, a następnie tworzenie wystąpienia odmian tego typu przy użyciu różnych parametrów typu szablonu.
+Szablony umożliwiają zdefiniowanie prototypu środowisko wykonawcze systemu Windows lub typu środowiska uruchomieniowego języka wspólnego, a następnie wystąpienie wariacji tego typu przy użyciu różnych parametrów typu szablonu.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-Można tworzyć szablony na podstawie wartości lub typów odwołań.  Aby uzyskać więcej informacji na temat tworzenia typów wartości lub odwołań, zobacz [Klasy i struktury](classes-and-structs-cpp-component-extensions.md).
+Możesz tworzyć szablony z typów wartości lub odwołań.  Aby uzyskać więcej informacji na temat tworzenia typów wartości lub odwołań, zobacz [klasy i struktury](classes-and-structs-cpp-component-extensions.md).
 
-Aby uzyskać więcej informacji na temat standardowych szablonów klas języka C++, zobacz [Szablony klas](../cpp/class-templates.md).
+Aby uzyskać więcej informacji na temat szablonów klas standardowego języka C++, zobacz [Szablony klas](../cpp/class-templates.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-(Nie ma żadnych uwag dotyczących tej funkcji języka, które dotyczą tylko środowiska wykonawczego systemu Windows).
+(Nie ma żadnych uwag dla tej funkcji języka, które mają zastosowanie tylko do środowisko wykonawcze systemu Windows).
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Istnieją pewne ograniczenia tworzenia szablonów klas z typów zarządzanych, które są przedstawione w poniższych przykładach kodu.
+Istnieją pewne ograniczenia dotyczące tworzenia szablonów klas z typów zarządzanych, które przedstawiono w poniższych przykładach kodu.
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Istnieje możliwość wystąpienia typu ogólnego z parametrem szablonu typu zarządzanego, ale nie można utworzyć wystąpienia szablonu zarządzanego z parametrem szablonu typu ogólnego. Jest tak, ponieważ typy ogólne są rozpoznawane w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Ogólne i szablony (C++/CLI)](generics-and-templates-visual-cpp.md).
+Istnieje możliwość utworzenia wystąpienia typu ogólnego z parametrem szablonu typu zarządzanego, ale nie można utworzyć wystąpienia szablonu zarządzanego z parametrem szablonu typu ogólnego. Wynika to z faktu, że typy ogólne są rozwiązane w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [typy ogólne i szablony (C++/CLI)](generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -62,7 +63,7 @@ ref class R {
 };
 ```
 
-Typ lub funkcja rodzajowa nie może być zagnieżdżona w szablonie zarządzanym.
+Typ ogólny lub funkcja nie może być zagnieżdżona w zarządzanym szablonie.
 
 ```cpp
 // managed_templates_2.cpp
@@ -73,7 +74,7 @@ template<class T> public ref class R {
 };
 ```
 
-Nie można uzyskać dostępu do szablonów zdefiniowanych w zestawie odniesienia ze składnią języka C++/CLI, ale można użyć odbicia. Jeśli szablon nie jest tworzone, nie jest emitowany w metadanych. Jeśli szablon jest wystąpienia, tylko funkcje członkowskie odniesienia będą wyświetlane w metadanych.
+Nie można uzyskać dostępu do szablonów zdefiniowanych w przywoływanym zestawie przy użyciu składni języka C++/CLI, ale można użyć odbicia. Jeśli szablon nie jest skonkretyzowany, nie jest emitowany w metadanych. Jeśli zostanie utworzone wystąpienie szablonu, w metadanych będą wyświetlane tylko funkcje członkowskie, do których się odwoływano.
 
 ```cpp
 // managed_templates_3.cpp
@@ -103,7 +104,7 @@ int main() {
 }
 ```
 
-Można zmienić modyfikator zarządzany klasy w częściowej specjalizacji lub jawnej specjalizacji szablonu klasy.
+Można zmienić zarządzany modyfikator klasy w częściowej specjalizacji lub jawnej specjalizacji szablonu klasy.
 
 ```cpp
 // managed_templates_4.cpp
@@ -132,4 +133,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

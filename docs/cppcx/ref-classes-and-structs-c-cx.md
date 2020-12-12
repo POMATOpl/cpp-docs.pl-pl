@@ -1,17 +1,18 @@
 ---
+description: 'Dowiedz się więcej o: klasach ref i strukturach (C++/CX)'
 title: Klasy i struktury odwołania (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: d128734f8c78c9198f0731b415c1be35b0c58e65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e87709febd03c185ec50845ff6fbb1a5ee27aba7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273231"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Klasy i struktury odwołania (C++/CX)
 
-C++/CX obsługuje zdefiniowane przez użytkownika *klasy referencyjne* i *struktury ref*oraz *klasy wartości* zdefiniowane przez użytkownika i *struktury wartości*. Te struktury danych są głównymi kontenerami, za pomocą których C++/CX obsługuje system typów środowisko wykonawcze systemu Windows. Zawartość jest emitowana do metadanych zgodnie z określonymi regułami i umożliwia przekazywanie ich między składnikami środowisko wykonawcze systemu Windows i platforma uniwersalna systemu Windows aplikacjami, które są zapisywane w języku C++ lub innych językach.
+C++/CX obsługuje zdefiniowane przez użytkownika *klasy referencyjne* i *struktury ref* oraz *klasy wartości* zdefiniowane przez użytkownika i *struktury wartości*. Te struktury danych są głównymi kontenerami, za pomocą których C++/CX obsługuje system typów środowisko wykonawcze systemu Windows. Zawartość jest emitowana do metadanych zgodnie z określonymi regułami i umożliwia przekazywanie ich między składnikami środowisko wykonawcze systemu Windows i platforma uniwersalna systemu Windows aplikacjami, które są zapisywane w języku C++ lub innych językach.
 
 Klasa referencyjna lub struktura ref ma następujące podstawowe funkcje:
 
@@ -39,7 +40,7 @@ Ten przykład kodu pokazuje implementację `Person` klasy ref:
 
 [!code-cpp[cx_classes#04](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#04)]
 
-## <a name="usage"></a>Sposób użycia
+## <a name="usage"></a>Użycie
 
 Następny przykład kodu pokazuje, jak kod klienta używa `Person` klasy ref.
 
@@ -97,7 +98,7 @@ Nie jest dozwolona żadna inna kombinacja dostępności, wirtualizacji i zamkni�
 
 Zachowanie jest niezdefiniowane, jeśli próbujesz uzyskać dostęp do elementów członkowskich klasy, która ma już uruchomiony destruktor; najprawdopodobniej spowoduje to awarię programu. Wywołanie `delete t` na typie, który nie ma destruktora publicznego nie ma żadnego wpływu. Wywoływanie `delete this` typu lub klasy bazowej, która ma znany **`private`** lub **`protected private`** destruktor z w hierarchii typów, również nie ma żadnego wpływu.
 
-Podczas deklarowania destruktora publicznego kompilator generuje kod, tak aby Klasa ref implementuje `Platform::IDisposable` i destruktor implementuje `Dispose` metodę. `Platform::IDisposable`jest rzutowaniem/CX języka C++ `Windows::Foundation::IClosable` . Nigdy nie implementuje jawnie tych interfejsów.
+Podczas deklarowania destruktora publicznego kompilator generuje kod, tak aby Klasa ref implementuje `Platform::IDisposable` i destruktor implementuje `Dispose` metodę. `Platform::IDisposable` jest rzutowaniem/CX języka C++ `Windows::Foundation::IClosable` . Nigdy nie implementuje jawnie tych interfejsów.
 
 ## <a name="inheritance"></a>Dziedziczenie
 
@@ -127,7 +128,7 @@ Poniższy przykład pokazuje, jak uwidocznić publiczną klasę referencyjną, k
 
 [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Klasy i struktury wartości](../cppcx/value-classes-and-structs-c-cx.md)<br/>

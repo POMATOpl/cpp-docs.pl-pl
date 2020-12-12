@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jawne zastąpienia (C++)'
 title: Jawne przesłonięcia (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4abb57c16f8fc4105b4fe3bb598cb84f66d07de9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189029"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273413"
 ---
 # <a name="explicit-overrides-c"></a>Jawne przesłonięcia (C++)
 
@@ -21,7 +22,7 @@ ms.locfileid: "80189029"
 
 Jeśli ta sama funkcja wirtualna jest zadeklarowana w co najmniej dwóch [interfejsach](../cpp/interface.md) i jeśli klasa pochodzi od tych interfejsów, można jawnie zastępować każdą funkcję wirtualną.
 
-Aby uzyskać informacje na temat jawnych zastąpień w kodzie zarządzanym za pomocą C++/CLI, zobacz [jawne zastąpienia](../extensions/explicit-overrides-cpp-component-extensions.md).
+Aby uzyskać informacje na temat jawnych zastąpień w kodzie zarządzanym przy użyciu języka C++/CLI, zobacz [jawne zastąpienia](../extensions/explicit-overrides-cpp-component-extensions.md).
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 

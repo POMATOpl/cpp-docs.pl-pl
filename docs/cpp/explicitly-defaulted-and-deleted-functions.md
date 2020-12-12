@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: jawnie domyślnych i usuniętych funkcji'
 title: Jawnie domyślne i usunięte funkcje
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: fd3fb53dec0cc08274b7ea54176c2a15dbab45d7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a3c4789996d39acd4ddd3bbc186ce39509a1d62f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273361"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Jawnie domyślne i usunięte funkcje
 
@@ -15,7 +16,7 @@ W języku C++ 11 funkcje domyślne i usunięte zapewniają jawną kontrolę nad 
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Zalety funkcji jawnie domyślnych i usuniętych
 
-W języku C++, kompilator automatycznie generuje konstruktor domyślny, konstruktor kopiujący, operator przypisania kopii oraz destruktor dla typu, jeśli ten nie deklaruje samodzielnie. Te funkcje są znane jako *specjalne funkcje składowe*i są, co sprawia, że proste typy zdefiniowane przez użytkownika w języku C++ zachowują się jak struktury w C. Oznacza to, że można je tworzyć, kopiować i niszczyć bez dodatkowych nakładów związanych z programowaniem. W standardzie C++11 dodano do języka przenoszenie semantyki oraz konstruktor przenoszący i operator przypisania przeniesienia do listy specjalnych funkcji członkowskich, które kompilator może wygenerować automatycznie.
+W języku C++, kompilator automatycznie generuje konstruktor domyślny, konstruktor kopiujący, operator przypisania kopii oraz destruktor dla typu, jeśli ten nie deklaruje samodzielnie. Te funkcje są znane jako *specjalne funkcje składowe* i są, co sprawia, że proste typy zdefiniowane przez użytkownika w języku C++ zachowują się jak struktury w C. Oznacza to, że można je tworzyć, kopiować i niszczyć bez dodatkowych nakładów związanych z programowaniem. W standardzie C++11 dodano do języka przenoszenie semantyki oraz konstruktor przenoszący i operator przypisania przeniesienia do listy specjalnych funkcji członkowskich, które kompilator może wygenerować automatycznie.
 
 Jest to wygodne dla typów prostych, ale typy złożone często definiują co najmniej jedną specjalną funkcję członkowską i może to uniemożliwić automatyczne generowanie innych specjalnych funkcji Członkowskich. W ramach ćwiczenia:
 

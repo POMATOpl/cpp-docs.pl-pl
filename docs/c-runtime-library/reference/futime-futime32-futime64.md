@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _futime, _futime32, _futime64'
 title: _futime, _futime32, _futime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: 615e436abf9d763e73d26db61d9063d5e586232b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d0e438c14d8fa7ba472be77d9d6f064b41d61431
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273764"
 ---
 # <a name="_futime-_futime32-_futime64"></a>_futime, _futime32, _futime64
 
@@ -76,7 +77,7 @@ Wskaźnik do struktury zawierającej nową datę modyfikacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwróć wartość 0, jeśli powodzenie. Jeśli wystąpi błąd, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EBADF**, wskazującą nieprawidłowy deskryptor pliku lub **EINVAL**wskazujący nieprawidłowy parametr.
+Zwróć wartość 0, jeśli powodzenie. Jeśli wystąpi błąd, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EBADF**, wskazującą nieprawidłowy deskryptor pliku lub **EINVAL** wskazujący nieprawidłowy parametr.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -90,9 +91,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_futime**|\<sys/utime. h>|\<errno. h>|
-|**_futime32**|\<sys/utime. h>|\<errno. h>|
-|**_futime64**|\<sys/utime. h>|\<errno. h>|
+|**_futime**|\<sys/utime.h>|\<errno.h>|
+|**_futime32**|\<sys/utime.h>|\<errno.h>|
+|**_futime64**|\<sys/utime.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

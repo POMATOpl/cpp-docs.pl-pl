@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej: regularne biblioteki MFC DLL statycznie połączone z MFC'
 title: Regularne biblioteki MFC DLL statycznie połączone z MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b213be6bf076557fc57a5bcac62cbf9767587bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273803"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Regularne biblioteki MFC DLL statycznie połączone z MFC
 
@@ -62,7 +63,7 @@ Można bezpiecznie przekazać wskaźniki do pamięci, która została przypisana
 
 Biblioteka DLL statycznie połączona z MFC nie może również dynamicznie łączyć się z udostępnionymi bibliotekami DLL MFC. Biblioteka DLL, która jest statycznie połączona z MFC, jest dynamicznie powiązana z aplikacją tak samo jak inna Biblioteka DLL; aplikacje mają do nich połączenie, podobnie jak każda inna Biblioteka DLL.
 
-Standardowe biblioteki statyczne DLL MFC są nazywane zgodnie z Konwencją opisaną w [konwencjach nazewnictwa dla bibliotek DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Jednak w przypadku MFC w wersji 3,0 i nowszych nie jest już konieczne ręczne określenie konsolidatora wersji biblioteki MFC, która ma zostać połączona. Zamiast tego pliki nagłówkowe MFC automatycznie określają poprawną wersję biblioteki MFC do łączenia w oparciu o zdefiniowane Definicje preprocesora, takie jak ** \_ DEBUG** lub **_UNICODE**. Pliki nagłówkowe MFC dodają dyrektywy/DEFAULTLIB, które nakazuje konsolidatorowi łączenie się z określoną wersją biblioteki MFC.
+Standardowe biblioteki statyczne DLL MFC są nazywane zgodnie z Konwencją opisaną w [konwencjach nazewnictwa dla bibliotek DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Jednak w przypadku MFC w wersji 3,0 i nowszych nie jest już konieczne ręczne określenie konsolidatora wersji biblioteki MFC, która ma zostać połączona. Zamiast tego pliki nagłówkowe MFC automatycznie określają poprawną wersję biblioteki MFC do łączenia w oparciu o zdefiniowane Definicje preprocesora, takie jak **\_ DEBUG** lub **_UNICODE**. Pliki nagłówkowe MFC dodają dyrektywy/DEFAULTLIB, które nakazuje konsolidatorowi łączenie się z określoną wersją biblioteki MFC.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
@@ -80,6 +81,6 @@ Standardowe biblioteki statyczne DLL MFC są nazywane zgodnie z Konwencją opisa
 
 - [Biblioteki DLL rozszerzeń MFC](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rodzaje bibliotek DLL](kinds-of-dlls.md)

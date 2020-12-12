@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa DeferrableEventArgs'
 title: DeferrableEventArgs — klasa
 ms.date: 10/03/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 066918bf2c76b17f06871ee08be674be9b36c161
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 23dae7fef88ff7978790e79a0486a83815467f5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272932"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs — klasa
 
@@ -32,10 +33,10 @@ class DeferrableEventArgs : public TEventArgsInterface;
 ### <a name="parameters"></a>Parametry
 
 *TEventArgsInterface*<br/>
-Typ interfejsu, który deklaruje argumenty dla zdarzenia odroczonego.
+Typ interfejsu, który deklaruje argumenty dla odroczonego zdarzenia.
 
-*Klasa TEventArgs*<br/>
-Klasa, która implementuje *TEventArgsInterface*.
+*TEventArgsClass*<br/>
+Klasa implementująca *TEventArgsInterface*.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -43,24 +44,24 @@ Klasa, która implementuje *TEventArgsInterface*.
 
 | Nazwa | Opis |
 |--|--|
-| [DeferrableEventArgs::GetDeferral](#getdeferral) | Pobiera odwołanie do [Odroczenie](/uwp/api/windows.foundation.deferral) obiektu, który reprezentuje odroczone zdarzenie. |
-| [DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Wywołano, aby wskazać, że wszystkie przetwarzanie do obsługi odroczonego zdarzenia jest zakończona. |
+| [DeferrableEventArgs:: getodroczenie](#getdeferral) | Pobiera odwołanie do obiektu [odroczenia](/uwp/api/windows.foundation.deferral) , który reprezentuje odroczone zdarzenie. |
+| [DeferrableEventArgs:: InvokeAllFinished](#invokeallfinished) | Wywołuje się, by wskazać, że wszystkie przetwarzanie do obsługi zdarzenia odroczonego zostało zakończone. |
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienia tej klasy są przekazywane do programów obsługi zdarzeń dla zdarzeń odroczonych. Parametry szablonu reprezentują interfejs, który definiuje szczegóły argumentów zdarzenia dla określonego typu zdarzenia odroczonego i klasy, która implementuje ten interfejs.
+Wystąpienia tej klasy są przekazane do obsługi zdarzeń dla zdarzeń odroczonych. Parametry szablonu reprezentują interfejs, który definiuje szczegóły argumentów zdarzeń dla określonego typu zdarzenia odroczonego i klasy implementującej ten interfejs.
 
-Klasa pojawia się jako pierwszy argument do obsługi zdarzeń dla odroczonego zdarzenia. Można wywołać [GetDeferral](#getdeferral) metody, aby uzyskać [Odroczenie obiektu,](/uwp/api/windows.foundation.deferral) z którego można uzyskać wszystkie informacje o odroczone zdarzenie. Po zakończeniu obsługi zdarzeń, należy wywołać Complete na Odroczenie obiektu. Następnie należy wywołać [InvokeAllFinished](#invokeallfinished) na końcu metody obsługi zdarzeń, co zapewnia, że zakończenie wszystkich odroczonych zdarzeń jest komunikowany poprawnie.
+Klasa jest wyświetlana jako pierwszy argument programu obsługi zdarzeń odroczonego zdarzenia. Metodę [Getodroczenia](#getdeferral) można wywołać, aby uzyskać obiekt [odroczenia](/uwp/api/windows.foundation.deferral) , z którego można uzyskać wszystkie informacje o odroczonym zdarzeniu. Po zakończeniu obsługi zdarzeń należy wywołać metodę Complete dla obiektu odroczenia. Następnie należy wywołać [InvokeAllFinished](#invokeallfinished) na końcu metody obsługi zdarzeń, co gwarantuje, że ukończenie wszystkich odroczonych zdarzeń zostanie prawidłowo przekazane.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** event.h
+**Nagłówek:** Event. h
 
-**Obszar nazw:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="deferrableeventargsgetdeferral"></a><a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
+## <a name="deferrableeventargsgetdeferral"></a><a name="getdeferral"></a> DeferrableEventArgs:: getodroczenie
 
-Pobiera odwołanie do [Odroczenie](/uwp/api/windows.foundation.deferral) obiektu, który reprezentuje odroczone zdarzenie.
+Pobiera odwołanie do obiektu [odroczenia](/uwp/api/windows.foundation.deferral) , który reprezentuje odroczone zdarzenie.
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -68,16 +69,16 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 
 ### <a name="parameters"></a>Parametry
 
-*Wynik*<br/>
-Wskaźnik, który odwołuje się do [odroczenia](/uwp/api/windows.foundation.deferral) obiektu po zakończeniu wywołania.
+*wynika*<br/>
+Wskaźnik, który będzie odwoływać się do obiektu [odroczenia](/uwp/api/windows.foundation.deferral) po zakończeniu wywołania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który wskazuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
-## <a name="deferrableeventargsinvokeallfinished"></a><a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinished
+## <a name="deferrableeventargsinvokeallfinished"></a><a name="invokeallfinished"></a> DeferrableEventArgs:: InvokeAllFinished
 
-Wywołano, aby wskazać, że wszystkie przetwarzanie do obsługi odroczonego zdarzenia jest zakończona.
+Wywołuje się, by wskazać, że wszystkie przetwarzanie do obsługi zdarzenia odroczonego zostało zakończone.
 
 ```cpp
 void InvokeAllFinished()
@@ -85,4 +86,4 @@ void InvokeAllFinished()
 
 ### <a name="remarks"></a>Uwagi
 
-Tę metodę należy wywołać po wywołaniu źródła zdarzeń [InvokeAll](eventsource-class.md#invokeall). Wywołanie tej metody zapobiega dalsze odroczenia z podejmowane i wymusza obsługi zakończenia do wykonania, jeśli nie odroczenia zostały podjęte.
+Należy wywołać tę metodę po wywołaniu źródła zdarzenia [InvokeAll —](eventsource-class.md#invokeall). Wywołanie tej metody zapobiega podejmowaniu dalszych odroczeń i wymusza wykonywanie procedury obsługi uzupełniania, jeśli nie wykonano żadnych odroczeń.

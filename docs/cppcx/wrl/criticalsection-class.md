@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CriticalSection'
 title: CriticalSection — Klasa
 ms.date: 09/24/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: b95e512f89ee1ff32ca9f1bea51bce643d185a2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e570dfaef8fcf16084792d205fc3e322cf8be908
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273036"
 ---
 # <a name="criticalsection-class"></a>CriticalSection — Klasa
 
@@ -69,7 +70,7 @@ Nazwa                        | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL:: otoki
 
-## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>CriticalSection:: ~ CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a> CriticalSection:: ~ CriticalSection
 
 Deinicjalizuje i niszczy bieżący `CriticalSection` obiekt.
 
@@ -77,7 +78,7 @@ Deinicjalizuje i niszczy bieżący `CriticalSection` obiekt.
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>CriticalSection:: CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a> CriticalSection:: CriticalSection
 
 Inicjuje obiekt synchronizacji podobny do obiektu mutex, ale może być używany tylko przez wątki pojedynczego procesu.
 
@@ -96,7 +97,7 @@ Liczba obrotów dla obiektu sekcji krytycznej. Wartość domyślna to 0.
 
 Aby uzyskać więcej informacji na temat krytycznych sekcji i spincounts, zobacz `InitializeCriticalSectionAndSpinCount` funkcję w `Synchronization` sekcji interfejsu API systemu Windows zawiera.
 
-## <a name="criticalsectioncs_"></a><a name="cs"></a>CriticalSection:: cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a> CriticalSection:: cs_
 
 Deklaruje element członkowski danych sekcji krytycznej.
 
@@ -108,7 +109,7 @@ CRITICAL_SECTION cs_;
 
 Ten element członkowski danych jest chroniony.
 
-## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>CriticalSection:: IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a> CriticalSection:: IsValid
 
 Wskazuje, czy bieżąca Sekcja krytyczna jest prawidłowa.
 
@@ -120,7 +121,7 @@ bool IsValid() const;
 
 Domyślnie program zawsze zwraca wartość **`true`** .
 
-## <a name="criticalsectionlock"></a><a name="lock"></a>CriticalSection:: Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a> CriticalSection:: Lock
 
 Czeka na własność określonego obiektu sekcji krytycznej. Funkcja zwraca, gdy przydzielono wątek wywołujący własność.
 
@@ -145,7 +146,7 @@ Obiekt blokady, który może służyć do odblokowania bieżącej sekcji krytycz
 
 Pierwsza `Lock` Funkcja ma wpływ na bieżący obiekt sekcji krytycznej. Druga `Lock` Funkcja ma wpływ na sekcję krytyczną określoną przez użytkownika.
 
-## <a name="criticalsectiontrylock"></a><a name="trylock"></a>CriticalSection:: TryLock —
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a> CriticalSection:: TryLock —
 
 Próbuje wprowadzić sekcję krytyczną bez blokowania. Jeśli wywołanie powiedzie się, wątek wywołujący przejmuje własność sekcji krytycznej.
 

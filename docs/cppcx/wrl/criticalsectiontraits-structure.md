@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze CriticalSectionTraits
 title: CriticalSectionTraits — Struktura
 ms.date: 09/26/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: 3573cad21734a97629cbc12b76d73b99024cbc2f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20e4b7dd47acf6f632c888c9bfdedeb3f4e60270
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272945"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits — Struktura
 
@@ -34,7 +35,7 @@ struct CriticalSectionTraits;
 
 Nazwa   | Opis
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | A **`typedef`** , który definiuje wskaźnik do sekcji krytycznej. `Type`jest zdefiniowane jako `typedef CRITICAL_SECTION* Type;` .
+`Type` | A **`typedef`** , który definiuje wskaźnik do sekcji krytycznej. `Type` jest zdefiniowane jako `typedef CRITICAL_SECTION* Type;` .
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -53,7 +54,7 @@ Nazwa                                                       | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits:: GetInvalidValue —
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> CriticalSectionTraits:: GetInvalidValue —
 
 `CriticalSection`Określa szablon w taki sposób, aby szablon był zawsze nieprawidłowy.
 
@@ -69,7 +70,7 @@ Zawsze zwraca wskaźnik do nieprawidłowej sekcji krytycznej.
 
 `Type`Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;` .
 
-## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits:: Unlock
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a> CriticalSectionTraits:: Unlock
 
 Specjalizacja `CriticalSection` szablonu, aby obsługiwał możliwość zwalniania własności określonego obiektu sekcji krytycznej.
 

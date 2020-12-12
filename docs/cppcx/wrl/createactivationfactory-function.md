@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcja CreateActivationFactory —'
 title: CreateActivationFactory — Funkcja
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 25f2181a00bb018361b05ea6570ebbadc6f7a975
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273111"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory — Funkcja
 
@@ -33,7 +34,7 @@ template<typename Factory>
 *znaczników*<br/>
 Kombinacja co najmniej jednej wartości wyliczenia [RuntimeClassType —](runtimeclasstype-enumeration.md) .
 
-*entry*<br/>
+*Autotekstu*<br/>
 Wskaźnik do [CreatorMap](creatormap-structure.md) , który zawiera informacje o inicjacji i rejestracji parametru *riid*.
 
 *riid*<br/>
@@ -48,7 +49,7 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na bł
 
 ## <a name="remarks"></a>Uwagi
 
-Błąd potwierdzenia jest emitowany, jeśli *fabryka* parametrów szablonu nie pochodzi od `IActivationFactory`interfejsu.
+Błąd potwierdzenia jest emitowany, jeśli *fabryka* parametrów szablonu nie pochodzi od interfejsu `IActivationFactory` .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -58,4 +59,4 @@ Błąd potwierdzenia jest emitowany, jeśli *fabryka* parametrów szablonu nie p
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Wrappers::Details, przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft:: WRL:: otoki::D etails przestrzeń nazw](microsoft-wrl-wrappers-details-namespace.md)

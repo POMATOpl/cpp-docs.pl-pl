@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Testowanie dostawcy Read-Only'
 title: Testowanie dostawcy tylko do odczytu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: dc3c4ea36aa9dac64f2aa7861fd5d51927c77ecd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2fbe0e7fb67b83cae65848939fa63bce42dab173
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272698"
 ---
 # <a name="testing-the-read-only-provider"></a>Testowanie dostawcy tylko do odczytu
 
@@ -22,9 +23,9 @@ W przykładzie w tym temacie opisano tworzenie domyślnej aplikacji Kreatora apl
 
 ## <a name="to-create-the-test-application"></a>Aby utworzyć aplikację testową
 
-1. W menu **plik** kliknij pozycję **Nowy**, a następnie kliknij pozycję **projekt**.
+1. W menu **Plik** kliknij pozycję **Nowy**, a następnie kliknij pozycję **Projekt**.
 
-1. W okienku **typy projektów** wybierz pozycję **zainstalowany** > **Visual C++**  > **MFC/ATL** . W okienku **Szablony** wybierz pozycję **aplikacja MFC**.
+1. W okienku **typy projektów** wybierz **zainstalowaną**  >  **Visual C++**  >  **MFC/ATL** . W okienku **Szablony** wybierz pozycję **aplikacja MFC**.
 
 1. W polu Nazwa projektu wprowadź *TestProv*, a następnie kliknij przycisk **OK**.
 
@@ -35,9 +36,9 @@ W przykładzie w tym temacie opisano tworzenie domyślnej aplikacji Kreatora apl
 1. Na stronie **funkcje zaawansowane** wybierz opcję **Automatyzacja**, a następnie kliknij przycisk **Zakończ**.
 
 > [!NOTE]
-> Aplikacja nie wymaga obsługi automatyzacji w przypadku dodania `CoInitialize` w `CTestProvApp::InitInstance`.
+> Aplikacja nie wymaga obsługi automatyzacji w przypadku dodania `CoInitialize` do programu `CTestProvApp::InitInstance` .
 
-Możesz wyświetlić i edytować okno dialogowe **TestProv** (IDD_TESTPROV_DIALOG), wybierając je w **Widok zasobów**. Umieść dwa pola listy, jeden dla każdego ciągu w zestawie wierszy, w oknie dialogowym. Wyłącz Właściwość sortowania dla obu pól listy, naciskając klawisz **Alt**+**Enter** , gdy pole listy jest zaznaczone, i ustawiając właściwość **Sortuj** na **false**. Ponadto umieść przycisk **Run (Uruchom** ) w oknie dialogowym, aby pobrać plik. Okno dialogowe zakończono **TestProv** powinno mieć dwa pola listy z etykietą "String 1" i "String 2" odpowiednio; ma także przyciski **OK**, **Anuluj**i **Uruchom** .
+Możesz wyświetlić i edytować okno dialogowe **TestProv** (IDD_TESTPROV_DIALOG), wybierając je w **Widok zasobów**. Umieść dwa pola listy, jeden dla każdego ciągu w zestawie wierszy, w oknie dialogowym. Wyłącz Właściwość sortowania dla obu pól listy, naciskając klawisz **Alt** + **Enter** , gdy pole listy jest zaznaczone, i ustawiając właściwość **Sortuj** na **false**. Ponadto umieść przycisk **Run (Uruchom** ) w oknie dialogowym, aby pobrać plik. Okno dialogowe zakończono **TestProv** powinno mieć dwa pola listy z etykietą "String 1" i "String 2" odpowiednio; ma także przyciski **OK**, **Anuluj** i **Uruchom** .
 
 Otwórz plik nagłówkowy dla klasy okna dialogowego (w tym przypadku TestProvDlg. h). Dodaj następujący kod do pliku nagłówkowego (poza dowolnymi deklaracjami klas):
 
@@ -61,7 +62,7 @@ END_COLUMN_MAP()
 };
 ```
 
-Kod reprezentuje rekord użytkownika, który definiuje, jakie kolumny będą znajdować się w zestawie wierszy. Gdy klient wywołuje `IAccessor::CreateAccessor`, używa tych wpisów, aby określić, które kolumny mają być powiązane. Szablony konsumentów OLE DB umożliwiają również dynamiczne wiązanie kolumn. Makra COLUMN_ENTRY to wersja po stronie klienta PROVIDER_COLUMN_ENTRY makr. Dwa COLUMN_ENTRY makra określają numer porządkowy, typ, długość i składową danych dla dwóch ciągów.
+Kod reprezentuje rekord użytkownika, który definiuje, jakie kolumny będą znajdować się w zestawie wierszy. Gdy klient wywołuje `IAccessor::CreateAccessor` program, używa tych wpisów, aby określić, które kolumny mają być powiązane. Szablony konsumentów OLE DB umożliwiają również dynamiczne wiązanie kolumn. Makra COLUMN_ENTRY to wersja po stronie klienta PROVIDER_COLUMN_ENTRY makr. Dwa COLUMN_ENTRY makra określają numer porządkowy, typ, długość i składową danych dla dwóch ciągów.
 
 Dodaj funkcję obsługi dla przycisku **Uruchom** , naciskając klawisz **Ctrl** i klikając dwukrotnie przycisk **Uruchom** . Umieść następujący kod w funkcji:
 
@@ -92,15 +93,15 @@ void CTestProvDlg::OnRun()
 }
 ```
 
-Klasy `CCommand`, `CDataSource`i `CSession` wszystkie należą do szablonów konsumentów OLE DB. Każda Klasa śladuje obiekt COM w dostawcy. Obiekt `CCommand` przyjmuje klasę `CProvider`, zadeklarowaną w pliku nagłówkowym jako parametr szablonu. Parametr `CProvider` reprezentuje powiązania, które są używane w celu uzyskania dostępu do danych od dostawcy.
+`CCommand` `CDataSource` `CSession` Wszystkie klasy należą do OLE DB szablonów konsumentów. Każda Klasa śladuje obiekt COM w dostawcy. `CCommand`Obiekt przyjmuje `CProvider` klasę zadeklarowaną w pliku nagłówkowym jako parametr szablonu. `CProvider`Parametr reprezentuje powiązania, które są używane w celu uzyskania dostępu do danych od dostawcy.
 
-Wiersze, aby otworzyć każdą z klas, tworzą każdy obiekt COM w dostawcy. Aby zlokalizować dostawcę, użyj `ProgID` dostawcy. `ProgID` można uzyskać z rejestru systemowego lub w pliku Custom. RGS (Otwórz katalog dostawcy i Wyszukaj klucz `ProgID`).
+Wiersze, aby otworzyć każdą z klas, tworzą każdy obiekt COM w dostawcy. Aby zlokalizować dostawcę, użyj `ProgID` dostawcy. Możesz uzyskać `ProgID` z rejestru systemowego lub w pliku Custom. RGS (Otwórz katalog dostawcy i wyszukać `ProgID` klucz).
 
-Plik webdata. txt jest dołączony do przykładu `MyProv`. Aby utworzyć własny plik, użyj edytora i wpisz parzystą liczbę ciągów, naciskając klawisz **Enter** między każdym ciągiem. Zmień nazwę ścieżki, jeśli plik zostanie przeniesiony.
+Plik MyData.txt jest dołączony do `MyProv` przykładu. Aby utworzyć własny plik, użyj edytora i wpisz parzystą liczbę ciągów, naciskając klawisz **Enter** między każdym ciągiem. Zmień nazwę ścieżki, jeśli plik zostanie przeniesiony.
 
-Przekaż ciąg "c:\\\Samples\\\myprov\\\MyData.txt" w wierszu `table.Open`. Jeśli przejdziesz do wywołania `Open`, zobaczysz, że ten ciąg jest przesyłany do metody `SetCommandText` dostawcy. Należy zauważyć, że metoda `ICommandText::Execute` używała tego ciągu.
+Przekaż ciąg "c: \\ \Samples \\ \myprov \\\MyData.txt" w `table.Open` wierszu. Jeśli przejdziesz do `Open` wywołania, zobaczysz, że ten ciąg jest przesyłany do `SetCommandText` metody w dostawcy. Należy zauważyć, że `ICommandText::Execute` Metoda używała tego ciągu.
 
-Aby pobrać dane, wywołaj `MoveNext` tabeli. `MoveNext` wywołuje funkcje `IRowset::GetNextRows`, `GetRowCount`i `GetData`. Gdy nie ma więcej wierszy (czyli bieżąca pozycja w zestawie wierszy jest większa niż `GetRowCount`), pętla kończy się.
+Aby pobrać dane, wywołaj `MoveNext` tabelę. `MoveNext` wywołuje `IRowset::GetNextRows` funkcje, `GetRowCount` i `GetData` . Gdy nie ma więcej wierszy (czyli bieżąca pozycja w zestawie wierszy jest większa niż `GetRowCount` ), pętla kończy się.
 
 Gdy nie ma więcej wierszy, dostawcy zwracają DB_S_ENDOFROWSET. Wartość DB_S_ENDOFROWSET nie jest błędem. Należy zawsze sprawdzać S_OK, aby anulować pętlę pobierania danych i nie używać pomyślnego makra.
 
@@ -108,4 +109,4 @@ Teraz powinno być możliwe skompilowanie i przetestowanie programu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[Ulepszanie prostego dostawcy Read-Only](../../data/oledb/enhancing-the-simple-read-only-provider.md)

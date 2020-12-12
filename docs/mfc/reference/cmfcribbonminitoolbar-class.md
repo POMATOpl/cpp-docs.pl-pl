@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCRibbonMiniToolBar'
 title: Klasa CMFCRibbonMiniToolBar
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 5e5ac6c923640b7584d89a9c6f75d941deadddf3
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 7215349323f8039bccb24860e4e5ad663bd24bcd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273946"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Klasa CMFCRibbonMiniToolBar
 
-Implementuje kontekstowy pasek narzędzi wyskakujących.
+Implementuje kontekstowy podręczny pasek narzędzi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,40 +40,40 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Domyślny konstruktor.|
-|`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Destruktora.|
+|`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Konstruktor domyślny.|
+|`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCRibbonMiniToolBar::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
-|`CMFCRibbonMiniToolBar::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
-|[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
+|`CMFCRibbonMiniToolBar::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|`CMFCRibbonMiniToolBar::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCRibbonMiniToolBar:: ismode](#iscontextmenumode)||
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Przesłania `CMFCPopupMenu::IsRibbonMiniToolBar`).|
-|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Ustawia listę poleceń, które mają być wyświetlane na pasku narzędzi.|
-|[CMFCRibbonMiniToolBar::Pokaż](#show)|Wyświetla minipasek narzędzi na określonych współrzędnych ekranu.|
-|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Wyświetla mini pasek narzędzi wraz z menu kontekstowym.|
+|[CMFCRibbonMiniToolBar:: SetCommands](#setcommands)|Ustawia listę poleceń, które mają być wyświetlane na pasku narzędzi.|
+|[CMFCRibbonMiniToolBar:: show](#show)|Wyświetla minipasek narzędzi na określonych współrzędnych ekranu.|
+|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Wyświetla minipasek narzędzi wraz z menu kontekstowym.|
 
 ## <a name="remarks"></a>Uwagi
 
-Minipasek narzędzi jest zazwyczaj wyświetlany po wybraniu obiektu przez użytkownika w dokumencie. Na przykład po wybraniu przez użytkownika bloku tekstu w programie do przetwarzania tekstu aplikacja wyświetli mini pasek narzędzi zawierający polecenia formatowania tekstu.
+Minipasek narzędzi jest zwykle wyświetlany po wybraniu przez użytkownika obiektu w dokumencie. Na przykład, gdy użytkownik wybierze blok tekstu w edytorze tekstów, aplikacja wyświetli minipasek narzędzi, który zawiera polecenia formatowania tekstu.
 
-Minipasek narzędzi staje się przezroczysty, gdy wskaźnik myszy znajduje się poza granicami mini paska narzędzi.
+Minipasek narzędzi jest przezroczysty, gdy wskaźnik myszy znajduje się poza granicami minipaska narzędzi.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[CMiniFrameWnd (CMiniFrameWnd)](../../mfc/reference/cminiframewnd-class.md)
+[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
-[Cmfcpopupmenu](../../mfc/reference/cmfcpopupmenu-class.md)
+[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
 
 `CMFCRibbonPanelMenu`
 
@@ -80,9 +81,9 @@ Minipasek narzędzi staje się przezroczysty, gdy wskaźnik myszy znajduje się 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxRibbonMiniToolBar.h
+**Nagłówek:** afxRibbonMiniToolBar. h
 
-## <a name="cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands
+## <a name="cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a> CMFCRibbonMiniToolBar:: SetCommands
 
 Ustawia listę poleceń, które mają być wyświetlane na pasku narzędzi.
 
@@ -94,23 +95,23 @@ void SetCommands(
 
 ### <a name="parameters"></a>Parametry
 
-*pRibbonBar (pRibbonBar)*<br/>
-[w] Pasek wstążki, który mini pasek narzędzi wyszukuje przyciski do wyświetlenia.
+*pRibbonBar*<br/>
+podczas Pasek wstążki, który umożliwia wyszukiwanie przycisków na ekranie przy użyciu minipaska narzędzi.
 
-*lstCommands ( lstCommands )*<br/>
-[w] Lista poleceń wyświetlanych na mini pasku narzędzi. Przeszukiwane są wszystkie kategorie wstążki w celu znalezienia skojarzonych przycisków.
+*lstCommands*<br/>
+podczas Lista poleceń, które mają być wyświetlane na minipasku narzędzi. Wszystkie kategorie wstążki są przeszukiwane, aby znaleźć skojarzone przyciski.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja służy do ustawiania listy poleceń wyświetlanych na mini pasku narzędzi.
+Ta funkcja służy do ustawiania listy poleceń, które mają być wyświetlane na minipasku narzędzi.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak używać `SetCommands` metody `CMFCRibbonMiniToolBar` klasy. Ten fragment kodu jest częścią [przykładu demo pakietu MS Office 2007](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia `SetCommands` metody `CMFCRibbonMiniToolBar` klasy. Ten fragment kodu jest częścią [przykładu demonstracyjnego pakietu MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]
 
-## <a name="cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFCRibbonMiniToolBar::Pokaż
+## <a name="cmfcribbonminitoolbarshow"></a><a name="show"></a> CMFCRibbonMiniToolBar:: show
 
 Wyświetla minipasek narzędzi na określonych współrzędnych ekranu.
 
@@ -122,19 +123,19 @@ BOOL Show(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-[w] Określa poziome położenie minipaska narzędzi we współrzędnych ekranu.
+*x*<br/>
+podczas Określa położenie w poziomie minipaska narzędzi na współrzędne ekranu.
 
 *Y*<br/>
-[w] Określa położenie w pionie minipaska narzędzi we współrzędnych ekranu.
+podczas Określa pionową pozycję minipaska narzędzi w współrzędnych ekranu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli mini pasek narzędzi został wyświetlony pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli minipasek narzędzi został pomyślnie wyświetlony; w przeciwnym razie FALSE.
 
-## <a name="cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu
+## <a name="cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a> CMFCRibbonMiniToolBar::ShowWithContextMenu
 
-Wyświetla mini pasek narzędzi wraz z menu kontekstowym.
+Wyświetla minipasek narzędzi wraz z menu kontekstowym.
 
 ```
 BOOL ShowWithContextMenu(
@@ -146,29 +147,29 @@ BOOL ShowWithContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-[w] Określa poziome położenie menu kontekstowego we współrzędnych ekranu.
+*x*<br/>
+podczas Określa położenie menu kontekstowego w poziomie.
 
 *Y*<br/>
-[w] Określa pionowe położenie menu kontekstowego we współrzędnych ekranu.
+podczas Określa położenie menu kontekstowego w obszarze Współrzędne ekranu.
 
-*interfejs użytkownika uiMenuResID*<br/>
-[w] Określa identyfikator zasobu menu kontekstowego do wyświetlenia.
+*uiMenuResID*<br/>
+podczas Określa identyfikator zasobu menu kontekstowego do wyświetlenia.
 
 *pWndOwner*<br/>
-[w] Identyfikuje okno, które odbiera wiadomości z menu kontekstowego.
+podczas Identyfikuje okno, które odbiera komunikaty z menu kontekstowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli menu kontekstowe zostało wyświetlone pomyślnie; w przeciwnym razie FALSE.
+Wartość TRUE, jeśli menu kontekstowe zostało wyświetlone pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja służy do wyświetlania mini paska narzędzi z menu kontekstowym. Menu kontekstowe znajduje się 15 pikseli poniżej mini paska narzędzi.
+Użyj tej funkcji, aby wyświetlić minipasek narzędzi z menu kontekstowym. Menu kontekstowe jest rozmieszczone 15 pikseli poniżej minipaska narzędzi.
 
-## <a name="cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode
+## <a name="cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a> CMFCRibbonMiniToolBar:: ismode
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC \\ atlmfc \\ src \\ MFC** instalacji programu Visual Studio.
 
 ```
 BOOL IsContextMenuMode() const;
@@ -178,9 +179,9 @@ BOOL IsContextMenuMode() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+## <a name="cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a> CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC \\ atlmfc \\ src \\ MFC** instalacji programu Visual Studio.
 
 ```
 virtual BOOL IsRibbonMiniToolBar() const;

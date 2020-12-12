@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: regularne biblioteki DLL MFC połączone dynamicznie z MFC'
 title: Regularne biblioteki DLL MFC połączone dynamicznie z MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16320427d881e2d37dd2afedc0566a759d59b9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273867"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Regularne biblioteki DLL MFC połączone dynamicznie z MFC
 
@@ -39,19 +40,19 @@ Zwykła Biblioteka MFC DLL, dynamicznie połączona z MFC, ma następujące wyma
 
 - Te biblioteki DLL są kompilowane ze zdefiniowanym **_AFXDLL** , podobnie jak plik wykonywalny, który jest dynamicznie połączony z biblioteką DLL MFC. Ale **_USRDLL** jest również zdefiniowana, podobnie jak zwykła Biblioteka DLL MFC, która jest statycznie połączona z MFC.
 
-- Ten typ biblioteki DLL musi utworzyć wystąpienie `CWinApp`klasy pochodnej.
+- Ten typ biblioteki DLL musi utworzyć wystąpienie `CWinApp` klasy pochodnej.
 
-- Ten typ biblioteki DLL używa `DllMain` dostarczone przez MFC. Umieść wszystkie kod inicjalizacji specyficzny dla biblioteki `InitInstance` dll w funkcji członkowskiej i `ExitInstance` kod zakończenia w taki sposób, jak w przypadku normalnej aplikacji MFC.
+- Ten typ biblioteki DLL używa `DllMain` dostarczone przez MFC. Umieść wszystkie kod inicjalizacji specyficzny dla biblioteki DLL w `InitInstance` funkcji członkowskiej i kod zakończenia w `ExitInstance` taki sposób, jak w przypadku normalnej aplikacji MFC.
 
 Ponieważ ten rodzaj biblioteki DLL używa biblioteki MFC z dołączaniem dynamicznym, należy jawnie ustawić bieżący stan modułu dla biblioteki DLL. Aby to zrobić, użyj makra [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) na początku każdej funkcji wyeksportowanej z biblioteki DLL.
 
-regularne biblioteki DLL MFC muszą mieć `CWinApp`klasę pochodną i pojedynczy obiekt tej klasy aplikacji, tak jak aplikacja MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma głównej pompki komunikatów, ponieważ `CWinApp` obiekt aplikacji.
+regularne biblioteki DLL MFC muszą mieć `CWinApp` klasę pochodną i pojedynczy obiekt tej klasy aplikacji, tak jak aplikacja MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma głównej pompki komunikatów, ponieważ `CWinApp` obiekt aplikacji.
 
-Należy zauważyć, `CWinApp::Run` że mechanizm nie ma zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem głównej pompy komunikatów. Jeśli biblioteka DLL wywołuje Niemodalne okna dialogowe lub ma własne główne okno ramek, główna pompa komunikatów aplikacji musi wywołać procedurę wyeksportowanej biblioteki DLL, która wywołuje `CWinApp::PreTranslateMessage`.
+Należy zauważyć, że mechanizm nie ma `CWinApp::Run` zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem głównej pompy komunikatów. Jeśli biblioteka DLL wywołuje Niemodalne okna dialogowe lub ma własne główne okno ramek, główna pompa komunikatów aplikacji musi wywołać procedurę wyeksportowanej biblioteki DLL, która wywołuje `CWinApp::PreTranslateMessage` .
 
-Umieść wszystkie inicjalizacje specyficzne dla biblioteki DLL `CWinApp::InitInstance` w funkcji składowej tak jak w przypadku normalnej aplikacji MFC. Funkcja `CWinApp::ExitInstance` członkowska klasy `CWinApp` pochodnej jest wywoływana z funkcji dostarczonej `DllMain` przez MFC, zanim Biblioteka DLL zostanie zwolniona.
+Umieść wszystkie inicjalizacje specyficzne dla biblioteki DLL w `CWinApp::InitInstance` funkcji składowej tak jak w przypadku normalnej aplikacji MFC. `CWinApp::ExitInstance`Funkcja członkowska `CWinApp` klasy pochodnej jest wywoływana z funkcji dostarczonej przez MFC, `DllMain` zanim Biblioteka DLL zostanie zwolniona.
 
-W aplikacji należy dystrybuować udostępnione biblioteki DLL MFCx0. dll i pliku MSVCR * 0. dll (lub podobne pliki).
+W aplikacji należy dystrybuować udostępnione biblioteki DLL MFCx0.dll i pliku MSVCR * 0.dll (lub podobne pliki).
 
 Biblioteka DLL, która jest dynamicznie połączona z MFC, nie może również statycznie łączyć się z MFC. Aplikacje łączą się z regularnymi bibliotekami DLL MFC połączonymi dynamicznie z MFC, podobnie jak w przypadku każdej innej biblioteki DLL.
 

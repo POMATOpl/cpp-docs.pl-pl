@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fwrite'
 title: fwrite
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b604819391629d057850c17466807e7c329c472d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6d650e03af95b527c3e0752f975d8dceb03e5eb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273660"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -69,9 +70,9 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fwrite** zapisuje maksymalnie *liczbę* elementów *o długości każdego z* *bufora* do *strumienia*wyjściowego. Wskaźnik pliku skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę bajtów rzeczywiście zapisywana. Jeśli *strumień* jest otwarty w trybie tekstowym, każde źródło wierszy jest zastępowane parą wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.
+Funkcja **fwrite** zapisuje maksymalnie *liczbę* elementów *o długości każdego z* *bufora* do *strumienia* wyjściowego. Wskaźnik pliku skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę bajtów rzeczywiście zapisywana. Jeśli *strumień* jest otwarty w trybie tekstowym, każde źródło wierszy jest zastępowane parą wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.
 
-Gdy *strumień* jest otwarty w trybie tłumaczenia Unicode — na przykład jeśli *strumień* jest otwarty przez wywołanie **fopen** i użycie parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**—*bufor* jest interpretowany jako wskaźnik do tablicy **`wchar_t`** zawierającej dane UTF-16. Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
+Gdy *strumień* jest otwarty w trybie tłumaczenia Unicode — na przykład jeśli *strumień* jest otwarty przez wywołanie **fopen** i użycie parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE** lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT** lub **_O_U8TEXT**—*bufor* jest interpretowany jako wskaźnik do tablicy **`wchar_t`** zawierającej dane UTF-16. Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
 
 Ponieważ ta funkcja blokuje wątek wywołujący, jest bezpieczny wątkowo. W przypadku wersji, która nie jest blokowana, zobacz **_fwrite_nolock**.
 
@@ -89,7 +90,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład dla [fread](fread.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_setmode](setmode.md)<br/>
