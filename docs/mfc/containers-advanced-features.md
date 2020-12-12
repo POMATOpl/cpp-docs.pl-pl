@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Containers: funkcje zaawansowane'
 title: 'Kontenery: funkcje zaawansowane'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 1ef4ed9865d3a88a6ff85f777984b856d03cc48e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d49f699ec0349e5c53b95996c6ee4b5d151dce5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310515"
 ---
 # <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
 
@@ -27,7 +28,7 @@ W tym artykule opisano kroki niezbędne do uwzględnienia opcjonalnych zaawansow
 
 - [Łącze OLE do osadzonego obiektu](#_core_links_to_embedded_objects)
 
-## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Tworzenie aplikacji kontenera/serwera
+## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a> Tworzenie aplikacji kontenera/serwera
 
 Aplikacja kontenera/serwera to aplikacja, która działa zarówno jako kontener, jak i serwer. Przykładem tego programu jest program Microsoft Word dla systemu Windows. Możesz osadzić program Word for Windows Documents w innych aplikacjach, a także osadzić elementy w programie Word dla dokumentów systemu Windows. Proces modyfikowania aplikacji kontenera jako kontenera i pełnego serwera (nie można utworzyć kombinacji kontenera/aplikacji miniserver) jest podobny do procesu tworzenia pełnego serwera.
 
@@ -45,7 +46,7 @@ Jeśli tworzysz nową aplikację i chcesz, aby działała ona jako aplikacja kon
 
 Należy pamiętać, że nie można wstawić aplikacji MDI do samej siebie. Aplikacji, która jest kontenerem/serwerem, nie można wstawić do samego siebie, chyba że jest to aplikacja SDI.
 
-## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Linki do osadzonych obiektów
+## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a> Linki do osadzonych obiektów
 
 Funkcja linków do obiektów osadzonych umożliwia użytkownikowi utworzenie dokumentu z linkiem OLE do osadzonego obiektu wewnątrz aplikacji kontenera. Na przykład Utwórz dokument w edytorze tekstów zawierający osadzony arkusz kalkulacyjny. Jeśli aplikacja obsługuje linki do osadzonych obiektów, może wkleić link do arkusza kalkulacyjnego zawartego w dokumencie edytora tekstów. Ta funkcja pozwala aplikacji na korzystanie z informacji zawartych w arkuszu kalkulacyjnym bez znajomości tego, gdzie został pierwotnie uzyskany przez procesor wyrazów.
 

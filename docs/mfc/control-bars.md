@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: paski sterowania'
 title: Paski sterowania
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-ms.openlocfilehash: a2d3683b744493bb5566456b9e1358c1ddc418d4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 985201b2c09c4d60996e9ee64b2507fe1593e5ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310151"
 ---
 # <a name="control-bars"></a>Paski sterowania
 
@@ -36,13 +37,13 @@ Paski sterowania to okna, w których są wyświetlane wiersze formantów, z któ
 - Paski w klasie [CReBar](reference/crebar-class.md)
 
 > [!IMPORTANT]
-> Począwszy od wersji 4,0, paski narzędzi, paski stanu i wskazówki dotyczące narzędzi są implementowane przy użyciu funkcji systemu wdrożonej w *comctl32. dll* zamiast poprzedniej implementacji specyficznej dla MFC. W bibliotece MFC w wersji 6,0, `CReBar` która również otacza funkcję comctl32. dll, została dodana.
+> Począwszy od wersji 4,0, paski narzędzi, paski stanu i wskazówki dotyczące narzędzi są implementowane przy użyciu funkcji systemu wdrożonej w *comctl32.dll* zamiast poprzedniej implementacji specyficznej dla MFC. W bibliotece MFC w wersji 6,0, `CReBar` która również otacza funkcje comctl32.dll, została dodana.
 
 Krótkie wprowadzenie do typów pasków kontrolek. Aby uzyskać więcej informacji, zobacz poniższe linki.
 
 ## <a name="control-bars"></a>Paski sterowania
 
-Paski sterowania znacznie rozszerzają użyteczność programu, dostarczając szybkie, jednoetapowe akcje poleceń. Klasa `CControlBar` udostępnia typowe funkcje wszystkich pasków narzędzi, pasków stanu i pasków dialogowych. `CControlBar`oferuje funkcje do pozycjonowania paska sterowania w oknie ramki nadrzędnej. Ponieważ pasek sterowania jest zwykle oknem podrzędnym okna ramki nadrzędnej, jest to "równorzędne" do widoku klienta lub klienta MDI okna ramki. Obiekt paska sterowania używa informacji o prostokącie klienta okna nadrzędnego, aby pomieścić siebie. Następnie zmienia pozostały prostokąt okna klienta elementu nadrzędnego, aby widok klienta lub okno klienta MDI wypełnił resztę okna klienta.
+Paski sterowania znacznie rozszerzają użyteczność programu, dostarczając szybkie, jednoetapowe akcje poleceń. Klasa `CControlBar` udostępnia typowe funkcje wszystkich pasków narzędzi, pasków stanu i pasków dialogowych. `CControlBar` oferuje funkcje do pozycjonowania paska sterowania w oknie ramki nadrzędnej. Ponieważ pasek sterowania jest zwykle oknem podrzędnym okna ramki nadrzędnej, jest to "równorzędne" do widoku klienta lub klienta MDI okna ramki. Obiekt paska sterowania używa informacji o prostokącie klienta okna nadrzędnego, aby pomieścić siebie. Następnie zmienia pozostały prostokąt okna klienta elementu nadrzędnego, aby widok klienta lub okno klienta MDI wypełnił resztę okna klienta.
 
 > [!NOTE]
 > Jeśli przycisk na pasku sterowania nie ma procedury obsługi **polecenia** lub **UPDATE_COMMAND_UI** , struktura automatycznie wyłącza przycisk.

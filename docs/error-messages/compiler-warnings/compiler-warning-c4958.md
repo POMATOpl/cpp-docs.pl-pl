@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Ostrzeżenie kompilatora C4958'
 title: Ostrzeżenie kompilatora C4958
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 63371d91367902c1eab539cb370e55440fcbf917
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1a6260a441b619923e8c2ddf8c7a5d891a3c3844
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314805"
 ---
 # <a name="compiler-warning-c4958"></a>Ostrzeżenie kompilatora C4958
 
@@ -21,7 +22,7 @@ ms.locfileid: "80164888"
 
 Użycie funkcji arytmetycznej wskaźnika spowoduje utworzenie obrazu, który będzie możliwy do zweryfikowania.
 
-Aby uzyskać więcej informacji, zobacz [czysty i możliwy doC++zweryfikowania kod (/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [czysty i możliwy do zweryfikowania kod (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 Opcja " **/CLR: Safe** Compiler" jest przestarzała w programie visual Studio 2015 i nie jest obsługiwana w programie visual Studio 2017.
 

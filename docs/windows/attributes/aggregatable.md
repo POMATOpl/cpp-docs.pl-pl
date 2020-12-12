@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: agregowanie'
 title: agregowany (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ba6c96f1b12deb2db91c20f0558961ef1ed6f61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314259"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -25,7 +26,7 @@ Wskazuje, że Klasa obsługuje agregację.
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Obowiązkowe Parametr wskazujący, kiedy można agregować obiekt COM:
 
 - `never` Nie można agregować obiektu COM.
@@ -71,7 +72,7 @@ class CMyClass {};
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass` , `progid` , lub `vi_progid` .|
 |**Nieprawidłowe atrybuty**|Brak|
 
@@ -82,4 +83,4 @@ Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteks
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregacji](/windows/win32/com/aggregation)
+[Agregacja](/windows/win32/com/aggregation)

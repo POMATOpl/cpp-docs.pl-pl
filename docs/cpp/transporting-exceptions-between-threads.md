@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: transportowanie wyjątków między wątkami'
 title: Transport wyjątków między wątkami
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8b62937c95c755304ab5766185168fad618a53aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313674"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport wyjątków między wątkami
 
@@ -88,7 +89,7 @@ Tylko następujące połączenie opcji kompilatora i instrukcji programowania mo
 
 - Opcja kompilatora **/EHa** i **`catch`** instrukcja może transportować wyjątki SEH i C++.
 
-- Opcje kompilatora **/EHa**, **/EHS**i **/EHsc** , a **`catch`** instrukcja mogą transportować wyjątki C++.
+- Opcje kompilatora **/EHa**, **/EHS** i **/EHsc** , a **`catch`** instrukcja mogą transportować wyjątki C++.
 
 - Opcja kompilatora **/CLR** i **`catch`** instrukcja może transportować wyjątki C++. Opcja kompilatora **/CLR** implikuje specyfikację opcji **/EHa** . Należy zauważyć, że kompilator nie obsługuje transportowania wyjątków zarządzanych. Wynika to z faktu, że zarządzane wyjątki, które pochodzą z [klasy System. Exception](../standard-library/exception-class.md), są już obiektami, które można przenosić między wątkami przy użyciu obiektów wspólnego środowiska uruchomieniowego języka.
 

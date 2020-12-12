@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat kontrolek (MFC)
 title: Formanty (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: accbee66cdee4e7b849da2b034d253b1c206d8f1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 94406928741eecd00794dbde230effe4d89ab3f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310138"
 ---
 # <a name="controls-mfc"></a>Formanty (MFC)
 
@@ -43,11 +44,11 @@ Oprócz klas, które hermetyzują wszystkie formanty standardowe systemu Windows
 
 - [CDragListBox](reference/cdraglistbox-class.md)
 
-## <a name="finding-information-about-windows-common-controls"></a><a name="_core_finding_information_about_windows_common_controls"></a>Znajdowanie informacji o typowych formantach systemu Windows
+## <a name="finding-information-about-windows-common-controls"></a><a name="_core_finding_information_about_windows_common_controls"></a> Znajdowanie informacji o typowych formantach systemu Windows
 
 W poniższej tabeli przedstawiono krótki opis wszystkich formantów wspólnych systemu Windows, w tym klasy otoki MFC kontrolki.
 
-### <a name="windows-common-controls-and-mfc-classes"></a><a name="_core_windows_common_controls_and_mfc_classes"></a>Formanty standardowe systemu Windows i klasy MFC
+### <a name="windows-common-controls-and-mfc-classes"></a><a name="_core_windows_common_controls_and_mfc_classes"></a> Formanty standardowe systemu Windows i klasy MFC
 
 |Kontrola|Klasa MFC|Opis|Nowość w systemie Windows 95|
 |-------------|---------------|-----------------|------------------------|
@@ -57,7 +58,7 @@ W poniższej tabeli przedstawiono krótki opis wszystkich formantów wspólnych 
 |[Selektor daty i godziny](using-cdatetimectrl.md)|[Korzystanie CDateTimeCtrl](reference/cdatetimectrl-class.md)|Zezwala użytkownikowi na wybranie określonej wartości daty lub godziny|Tak|
 |pole edycji|[CEdit](reference/cedit-class.md)|Pola do wprowadzania tekstu|Nie|
 |[rozszerzone pole kombi](using-ccomboboxex.md)|[Korzystanie CComboBoxEx](reference/ccomboboxex-class.md)|Kontrolka pola kombi z możliwością wyświetlania obrazów|Tak|
-|[header](using-cheaderctrl.md)|[CHeaderCtrl](reference/cheaderctrl-class.md)|Przycisk, który pojawia się powyżej kolumny tekstu; kontroluje szerokość wyświetlanego tekstu|Tak|
+|[nagłówki](using-cheaderctrl.md)|[CHeaderCtrl](reference/cheaderctrl-class.md)|Przycisk, który pojawia się powyżej kolumny tekstu; kontroluje szerokość wyświetlanego tekstu|Tak|
 |[sekwencj](using-chotkeyctrl.md)|[CHotKeyCtrl](reference/chotkeyctrl-class.md)|Okno, które umożliwia użytkownikowi tworzenie "klawisza gorąca", aby szybko wykonać akcję|Tak|
 |[Lista obrazów](using-cimagelist.md)|[Korzystanie CImageList](reference/cimagelist-class.md)|Kolekcja obrazów używanych do zarządzania dużymi zestawami ikon lub map bitowych (lista obrazów nie jest w rzeczywistości kontrolką; obsługuje ona listy używane przez inne kontrolki).|Tak|
 |[list](using-clistctrl.md)|[CListCtrl](reference/clistctrl-class.md)|Okno, w którym jest wyświetlana lista tekstów z ikonami|Tak|
@@ -70,11 +71,11 @@ W poniższej tabeli przedstawiono krótki opis wszystkich formantów wspólnych 
 |[skakując](using-csliderctrl.md)|[Korzystanie CSliderCtrl](reference/csliderctrl-class.md)|Okno zawierające kontrolkę suwaka z opcjonalnymi znacznikami osi|Tak|
 |[przycisk pokrętła](using-cspinbuttonctrl.md)|[Korzystanie CSpinButtonCtrl](reference/cspinbuttonctrl-class.md)|Para przycisków strzałek, które użytkownik może kliknąć, aby zwiększyć lub zmniejszyć wartość|Tak|
 |tekst statyczny|[CStatic](reference/cstatic-class.md)|Tekst do etykietowania innych kontrolek|Nie|
-|[pasek stanu](using-cstatusbarctrl.md)|[CStatusBarCtrl](reference/cstatusbarctrl-class.md)|Okno do wyświetlania informacji o stanie, podobnie jak Klasa MFC`CStatusBar`|Tak|
+|[pasek stanu](using-cstatusbarctrl.md)|[CStatusBarCtrl](reference/cstatusbarctrl-class.md)|Okno do wyświetlania informacji o stanie, podobnie jak Klasa MFC `CStatusBar`|Tak|
 |[tabulator](using-ctabctrl.md)|[CTabCtrl](reference/ctabctrl-class.md)|Analogiczne do dzielników w notesie; używane w "oknach dialogowych kart" lub arkuszach właściwości|Tak|
-|[pasku narzędzi](using-ctoolbarctrl.md)|[CToolBarCtrl](reference/ctoolbarctrl-class.md)|Okno z przyciskami generującymi polecenia, podobnymi do klasy MFC`CToolBar`|Tak|
+|[pasku narzędzi](using-ctoolbarctrl.md)|[CToolBarCtrl](reference/ctoolbarctrl-class.md)|Okno z przyciskami generującymi polecenia, podobnymi do klasy MFC `CToolBar`|Tak|
 |[etykietka narzędzia](using-ctooltipctrl.md)|[CToolTipCtrl](reference/ctooltipctrl-class.md)|Małe okno podręczne, które opisuje przeznaczenie przycisku paska narzędzi lub innego narzędzia|Tak|
-|[tree](using-ctreectrl.md)|[CTreeCtrl](reference/ctreectrl-class.md)|Okno, które wyświetla hierarchiczną listę elementów|Tak|
+|[drzewa](using-ctreectrl.md)|[CTreeCtrl](reference/ctreectrl-class.md)|Okno, które wyświetla hierarchiczną listę elementów|Tak|
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zagnieżdżone deklaracje klas'
 title: Zagnieżdżone deklaracje klas
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8247a969be59cb35752f141ea281a271de24f87b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313687"
 ---
 # <a name="nested-class-declarations"></a>Zagnieżdżone deklaracje klas
 
@@ -54,7 +55,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput`i `BufferedIO::BufferedOutput` są zadeklarowane w `BufferedIO` . Nazwy klas nie są widoczne w zakresie klasy `BufferedIO`. Jednak obiekt typu `BufferedIO` nie zawiera żadnych obiektów typu `BufferedInput` lub `BufferedOutput`.
+`BufferedIO::BufferedInput` i `BufferedIO::BufferedOutput` są zadeklarowane w `BufferedIO` . Nazwy klas nie są widoczne w zakresie klasy `BufferedIO`. Jednak obiekt typu `BufferedIO` nie zawiera żadnych obiektów typu `BufferedInput` lub `BufferedOutput`.
 
 Klasy zagnieżdżone mogą bezpośrednio korzystać z nazw, nazwy typów, nazw statycznych składowych i wyliczeń tylko z otaczającej klasy. Aby używać nazw innych składowych klasy, należy użyć wskaźników, odwołań lub nazw obiektów.
 
@@ -206,6 +207,6 @@ int GetExtendedErrorStatus( char *message )
 
 W powyższym interfejsie kilka klas może korzystać z usług tej funkcji przez przekazanie lokalizacji pamięci, w której ma zostać skopiowany komunikat o błędzie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

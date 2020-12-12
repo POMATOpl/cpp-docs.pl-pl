@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: tworzenie nowych dokumentów, okien i widoków'
 title: Tworzenie nowych dokumentów, okien i widoków
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 7a714b5d7ba97c12b7134fa4890bddf5ed095c5b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 718d24d63811d4e3b5cc847b5d0ef69361c6fdf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309878"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Tworzenie nowych dokumentów, okien i widoków
 
@@ -48,7 +49,7 @@ Sekwencja w tworzeniu widoku
 
 Aby uzyskać informacje na temat sposobu inicjowania przez platformę nowych obiektów dokumentów, widoków i okien ramowych, zobacz klasy [CDocument](reference/cdocument-class.md), [CView](reference/cview-class.md), [obiektu CFrameWnd](reference/cframewnd-class.md), [CMDIFrameWnd](reference/cmdiframewnd-class.md)i [CMDIChildWnd](reference/cmdichildwnd-class.md) w dokumentacji biblioteki MFC. Zapoznaj się również z [uwagą techniczną 22](tn022-standard-commands-implementation.md), która wyjaśnia procesy tworzenia i inicjowania w ramach dyskusji na temat standardowych poleceń struktury dla **nowych** i **otwartych** elementów w menu **plik** .
 
-## <a name="initializing-your-own-additions-to-these-classes"></a><a name="_core_initializing_your_own_additions_to_these_classes"></a>Inicjowanie własnych dodatków do tych klas
+## <a name="initializing-your-own-additions-to-these-classes"></a><a name="_core_initializing_your_own_additions_to_these_classes"></a> Inicjowanie własnych dodatków do tych klas
 
 Powyższe cyfry również sugerują punkty, w których można przesłonić funkcje składowe w celu zainicjowania obiektów aplikacji. Przesłonięcie `OnInitialUpdate` klasy widoku jest najlepszym miejscem, aby zainicjować widok. `OnInitialUpdate`Wywołanie odbywa się natychmiast po utworzeniu okna ramki, a widok w oknie ramki jest dołączony do dokumentu. Na przykład jeśli widok jest widokiem przewijania (pochodnym od `CScrollView` zamiast `CView` ), należy ustawić rozmiar widoku na podstawie rozmiaru dokumentu w `OnInitialUpdate` przesłonięciu. (Ten proces jest opisany w opisie klasy [CScrollView](reference/cscrollview-class.md)). Można przesłonić `CDocument` funkcje składowe `OnNewDocument` i `OnOpenDocument` w celu podania zainicjowanej przez aplikację dokumentu inicjującego. Zazwyczaj należy przesłonić oba, ponieważ dokument można utworzyć na dwa sposoby.
 

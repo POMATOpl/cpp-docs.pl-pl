@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Containers: Client-Item Notifications'
 title: 'Kontenery: powiadomienia dotyczące elementów klienckich'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: 54b1b2a64685b00fb265e0f80c1f6ad878a7da85
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2918ea29bcd656e76735db8e003d33dce21c6b63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310476"
 ---
 # <a name="containers-client-item-notifications"></a>Kontenery: powiadomienia dotyczące elementów klienckich
 
@@ -30,7 +31,7 @@ Struktura powiadamia aplikację kontenera o zmianach za pomocą wywołania do `C
 |**OLE_CHANGED_STATE**|Element OLE został zmieniony z jednego stanu na inny.|
 |**OLE_CHANGED_ASPECT**|Aspekt rysowania elementu OLE został zmieniony przez strukturę.|
 
-Te wartości pochodzą z wyliczenia **OLE_NOTIFICATION** , które jest zdefiniowane w Afxole. C.
+Te wartości pochodzą z wyliczenia **OLE_NOTIFICATION** , które jest zdefiniowane w Afxole. H.
 
 Drugi argument tej funkcji określa, w jaki sposób element został zmieniony lub jaki stan został wprowadzony:
 
@@ -38,9 +39,9 @@ Drugi argument tej funkcji określa, w jaki sposób element został zmieniony lu
 |----------------------------|---------------------|
 |**OLE_SAVED** lub **OLE_CLOSED**|Nie jest używany.|
 |**OLE_CHANGED**|Określa aspekt elementu OLE, który został zmieniony.|
-|**OLE_CHANGED_STATE**|Opisuje wprowadzony stan (*emptyState*, *loadedState*, *openState*, *activeState*lub *activeUIState*).|
+|**OLE_CHANGED_STATE**|Opisuje wprowadzony stan (*emptyState*, *loadedState*, *openState*, *activeState* lub *activeUIState*).|
 
-Aby uzyskać więcej informacji o stanach, które może założyć element klienta, zobacz [kontenery: Stany elementów klienta](containers-client-item-states.md).
+Aby uzyskać więcej informacji o stanach, które może założyć element klienta, zobacz [Containers: stany Client-Item](containers-client-item-states.md).
 
 Struktura wywołuje, `COleClientItem::OnGetItemPosition` gdy element jest aktywowany do edycji w miejscu. Implementacja jest wymagana w przypadku aplikacji obsługujących edycję w miejscu. Kreator aplikacji MFC udostępnia podstawową implementację, która przypisuje współrzędne elementu do `CRect` obiektu, który jest przesyłany jako argument do `OnGetItemPosition` .
 
@@ -49,5 +50,5 @@ W przypadku zmiany położenia lub rozmiaru elementu OLE podczas edycji w miejsc
 ## <a name="see-also"></a>Zobacz też
 
 [Containers](containers.md)<br/>
-[Kontenery: stany elementu klienckiego](containers-client-item-states.md)<br/>
+[Kontenery: Stany Client-Item](containers-client-item-states.md)<br/>
 [COleClientItem:: OnChangeItemPosition](reference/coleclientitem-class.md#onchangeitemposition)

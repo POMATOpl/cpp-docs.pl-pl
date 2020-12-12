@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: kontenery: implementowanie kontenera'
 title: 'Kontenery: implementowanie kontenera'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ba8d4aea6b69fdbfeedfba59449d0d30433eb94
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 24e3c7f7d4546ebe9b103af0e9ca0d9694b25d2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310326"
 ---
 # <a name="containers-implementing-a-container"></a>Kontenery: implementowanie kontenera
 
@@ -65,4 +66,4 @@ Może być również konieczne obsłudze niektórych z następujących funkcji w
 ## <a name="see-also"></a>Zobacz też
 
 [Containers](containers.md)<br/>
-[Kontenery: elementy klienckie](containers-client-items.md)
+[Kontenery: elementy klienta](containers-client-items.md)

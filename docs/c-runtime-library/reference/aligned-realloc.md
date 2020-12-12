@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _aligned_realloc'
 title: _aligned_realloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_realloc function
 - _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
-ms.openlocfilehash: 28c47507fb6b1ee175842159bf6fab8807f29f76
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 305610f7eed8be180c9324f0e1e56e4af2f6a79b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312491"
 ---
 # <a name="_aligned_realloc"></a>_aligned_realloc
 
@@ -54,7 +55,7 @@ void * _aligned_realloc(
 *memblock*<br/>
 Bieżący wskaźnik bloku pamięci.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar alokacji żądanej pamięci.
 
 *struktury*<br/>
@@ -62,7 +63,7 @@ Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_aligned_realloc** zwraca wskaźnik void do ponownie przydzielony blok pamięci (i prawdopodobnie przeniesiony). Wartość zwracana ma wartość **null** , jeśli rozmiar ma wartość zero, a argument buforu nie ma **wartości null**lub jeśli nie ma wystarczającej ilości dostępnej pamięci, aby rozszerzyć blok na dany rozmiar. W pierwszym przypadku, oryginalny blok jest zwolniony. W drugim bloku oryginalny nie jest zmieniany. Wartość zwracana wskazuje miejsce do magazynowania, które jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż void, należy użyć rzutowania typu dla zwracanej wartości.
+**_aligned_realloc** zwraca wskaźnik void do ponownie przydzielony blok pamięci (i prawdopodobnie przeniesiony). Wartość zwracana ma wartość **null** , jeśli rozmiar ma wartość zero, a argument buforu nie ma **wartości null** lub jeśli nie ma wystarczającej ilości dostępnej pamięci, aby rozszerzyć blok na dany rozmiar. W pierwszym przypadku, oryginalny blok jest zwolniony. W drugim bloku oryginalny nie jest zmieniany. Wartość zwracana wskazuje miejsce do magazynowania, które jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż void, należy użyć rzutowania typu dla zwracanej wartości.
 
 Wystąpił błąd podczas ponownego przydzielenia pamięci i zmiany wyrównania bloku.
 
@@ -78,7 +79,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_aligned_realloc**|\<malloc. h>|
+|**_aligned_realloc**|\<malloc.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -86,4 +87,4 @@ Aby uzyskać więcej informacji, zobacz [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wyrównywanie danych](../../c-runtime-library/data-alignment.md)<br/>
+[Wyrównanie danych](../../c-runtime-library/data-alignment.md)<br/>

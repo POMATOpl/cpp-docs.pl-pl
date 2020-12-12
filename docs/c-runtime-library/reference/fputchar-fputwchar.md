@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fputchar, _fputwchar'
 title: _fputchar, _fputwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f682f134c3435392176155865f4808a6178ce35a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314194"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -67,13 +68,13 @@ Znak do zapisania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca znak zapisany. Dla **_fputchar**wartość zwracana przez **EOF** wskazuje na błąd. Dla **_fputwchar**wartość zwracana **WEOF** wskazuje na błąd. Jeśli c ma **wartość null**, te funkcje generują wyjątek nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwraca **znacznik EOF** (lub **WEOF**) i ustaw **errno** na **EINVAL**.
+Każda z tych funkcji zwraca znak zapisany. Dla **_fputchar** wartość zwracana przez **EOF** wskazuje na błąd. Dla **_fputwchar** wartość zwracana **WEOF** wskazuje na błąd. Jeśli c ma **wartość null**, te funkcje generują wyjątek nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwraca **znacznik EOF** (lub **WEOF**) i ustaw **errno** na **EINVAL**.
 
 Aby uzyskać więcej informacji o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Obie te funkcje zapisują pojedynczy znak *c* do **stdout** i przesuwają wskaźnik odpowiednio do potrzeb. **_fputchar** jest równoważne `fputc( stdout )`. Jest to również równoznaczne z **putchar**, ale zaimplementowane tylko jako funkcja, a nie jako funkcja i makro. W przeciwieństwie do **fputc** i **putchar**, te funkcje nie są zgodne ze standardem ANSI.
+Obie te funkcje zapisują pojedynczy znak *c* do **stdout** i przesuwają wskaźnik odpowiednio do potrzeb. **_fputchar** jest równoważne `fputc( stdout )` . Jest to również równoznaczne z **putchar**, ale zaimplementowane tylko jako funkcja, a nie jako funkcja i makro. W przeciwieństwie do **fputc** i **putchar**, te funkcje nie są zgodne ze standardem ANSI.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -87,10 +88,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fputchar**|\<stdio. h>|
-|**_fputwchar**|\<stdio. h> lub \<WCHAR. h>|
+|**_fputchar**|\<stdio.h>|
+|**_fputwchar**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout** i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -117,7 +118,7 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: &lt; wariant&gt;'
 title: '&lt;typu&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 994bd18a66dd78c8f6042afea10df69ff08a1487
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312475"
 ---
 # <a name="ltvariantgt"></a>&lt;typu&gt;
 
@@ -35,7 +36,7 @@ Obiekt Variant utrzymuje wartość i zarządza nią. Jeśli wariant utrzymuje wa
 |[>operatora ](../standard-library/forward-list-operators.md#op_gt)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest większy niż obiekt VARIANT po prawej stronie.|
 |[>operatora =](../standard-library/forward-list-operators.md#op_lt_eq)|Testuje, czy obiekt VARIANT po lewej stronie operatora jest większy niż lub równy obiektowi Variant po prawej stronie.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

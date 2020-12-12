@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CD2DEllipse'
 title: Klasa CD2DEllipse
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 827ba5515cb4b20cb8e5b10012590a001e01c08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313063"
 ---
 # <a name="cd2dellipse-class"></a>Klasa CD2DEllipse
 
-Otoka dla `D2D1_ELLIPSE`.
+Otoka dla `D2D1_ELLIPSE` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +32,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Przeciążone. Konstruuje `CD2DEllipse` obiekt `D2D1_ELLIPSE` z obiektu.|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Przeciążone. Konstruuje `CD2DEllipse` obiekt z `D2D1_ELLIPSE` obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,9 +42,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxrendertarget.h
+**Nagłówek:** afxrendertarget. h
 
-## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a> CD2DEllipse::CD2DEllipse
 
 Konstruuje obiekt CD2DEllipse z obiektu CD2DRectF.
 
@@ -59,17 +60,17 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
+*cinania*<br/>
 prostokąt źródłowy
 
-*ellipse*<br/>
-elipsa źródłona
+*środka*<br/>
+Elipsa źródłowa
 
-*ptCenter (centrum)*<br/>
-Punkt środkowy elipsy.
+*ptCenter*<br/>
+Punkt środkowy wielokropka.
 
-*rozmiarRadius*<br/>
-Promień X i Promień Y elipsy.
+*sizeRadius*<br/>
+X-RADIUS i Y-promień wielokropka.
 
 ## <a name="see-also"></a>Zobacz też
 

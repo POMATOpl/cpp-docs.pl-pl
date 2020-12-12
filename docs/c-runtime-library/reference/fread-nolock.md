@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fread_nolock'
 title: _fread_nolock
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 7d18d32c25a3026e54742fb3d936ac52d80e7d2e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4c46f484d59f6adfc95311853dd398ead04d9e17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314090"
 ---
 # <a name="_fread_nolock"></a>_fread_nolock
 
@@ -58,7 +59,7 @@ size_t _fread_nolock(
 *buforu*<br/>
 Lokalizacja magazynu dla danych.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar elementu w bajtach.
 
 *liczbą*<br/>
@@ -81,7 +82,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fread_nolock**|\<stdio. h>|
+|**_fread_nolock**|\<stdio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

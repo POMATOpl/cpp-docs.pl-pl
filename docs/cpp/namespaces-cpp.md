@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: przestrzenie nazw (C++)'
 title: Przestrzenie nazw (C++)
 ms.date: 08/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 234df334a8c385859440175cb9a1aab5b2e26ead
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a655b5e772d16df34e64c5e4808ce68de64f49f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313765"
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 
@@ -58,7 +59,7 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a name="using-directives"></a><a id="using_directives"></a>dyrektywy using
+## <a name="using-directives"></a><a id="using_directives"></a> dyrektywy using
 
 **`using`** Dyrektywa zezwala na wszystkie nazwy w, **`namespace`** które mają być używane bez *nazwy przestrzeni nazw* jako jawnego kwalifikatora. Użyj dyrektywy using w pliku implementacji (tj. *. cpp), jeśli używasz kilku różnych identyfikatorów w przestrzeni nazw; Jeśli używasz tylko jednego lub dwóch identyfikatorów, rozważ użycie deklaracji using, aby przenieść te identyfikatory tylko do zakresu, a nie wszystkich identyfikatorów w przestrzeni nazw. Jeśli zmienna lokalna ma taką samą nazwę jak zmienna przestrzeni nazw, zmienna przestrzeni nazw jest ukryta. Błędem jest zmienna przestrzeni nazw o takiej samej nazwie jak zmienna globalna.
 
@@ -241,7 +242,7 @@ namespace Contoso
 }
 ```
 
-## <a name="namespace-aliases"></a><a id="namespace_aliases"></a>Aliasy przestrzeni nazw
+## <a name="namespace-aliases"></a><a id="namespace_aliases"></a> Aliasy przestrzeni nazw
 
 Nazwy przestrzeni nazw muszą być unikatowe, co oznacza, że często nie powinny być za krótkie. Jeśli długość nazwy utrudnia odczytywanie kodu lub żmudnym do wpisywania w pliku nagłówkowym, gdzie nie można użyć dyrektyw, można utworzyć alias przestrzeni nazw, który służy jako skrót dla rzeczywistej nazwy. Na przykład:
 
@@ -264,6 +265,6 @@ namespace
 
 Jest to nazywane nienazwanymi lub anonimowymi przestrzeniami nazw i jest przydatne, gdy chcesz, aby deklaracje zmiennych były niewidoczne w kodzie w innych plikach (tj. powiązać wewnętrzne powiązania) bez konieczności tworzenia nazwanego obszaru nazw. Cały kod w tym samym pliku może zobaczyć identyfikatory w nienazwanym obszarze nazw, ale identyfikatory, wraz z samą przestrzenią nazw, nie są widoczne poza tym plikiem — lub dokładniej poza jednostką tłumaczenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i definicje](declarations-and-definitions-cpp.md)

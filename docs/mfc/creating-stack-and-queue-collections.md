@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Tworzenie kolekcji stosów i kolejek'
 title: Tworzenie kolekcji stosów i kolejek
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 5db90422f78fc6ca3bc2a182f9569c33db56cad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e6c3d4a2ade4262e01bd5d84529aa57d308a8623
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309774"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Tworzenie kolekcji stosów i kolejek
 
 W tym artykule wyjaśniono, jak utworzyć inne struktury danych, takie jak [stosy](#_core_stacks) i [kolejki](#_core_queues), z klas MFC list. Przykłady używają klas pochodnych z `CList` , ale można ich używać `CList` bezpośrednio, o ile nie trzeba dodawać funkcjonalności.
 
-## <a name="stacks"></a><a name="_core_stacks"></a>Stack
+## <a name="stacks"></a><a name="_core_stacks"></a> Stack
 
 Ponieważ standardowa kolekcja list ma zarówno nagłówek, jak i ogon, można łatwo utworzyć kolekcję list pochodnych, która śladuje zachowanie pierwszego stosu. Stos przypomina stos zasobników w Cafeteria. Gdy zasobniki są dodawane do stosu, są one umieszczane na stosie. Ostatni dodany zasobnik jest pierwszym, który ma zostać usunięty. Funkcja członkowska kolekcji list `AddHead` i `RemoveHead` może służyć do dodawania i usuwania elementów specyficznych dla nagłówka listy. w ten sposób ostatnio dodany element jest pierwszy do usunięcia.
 
@@ -36,7 +37,7 @@ Ponieważ standardowa kolekcja list ma zarówno nagłówek, jak i ogon, można �
 
 Należy zauważyć, że takie podejście ujawnia `CObList` klasę bazową. Użytkownik może wywołać dowolną `CObList` funkcję członkowską, niezależnie od tego, czy ma sens dla stosu, czy nie.
 
-## <a name="queues"></a><a name="_core_queues"></a>Tworzone
+## <a name="queues"></a><a name="_core_queues"></a> Tworzone
 
 Ponieważ standardowa kolekcja list ma zarówno nagłówek, jak i ogon, można również łatwo utworzyć kolekcję list pochodnych, która naśladuje zachowanie kolejki pierwszej w pierwszej kolejności. Kolejka jest taka sama jak linia osób w Cafeteria. Pierwszy użytkownik w wierszu jest pierwszym, który ma być obsługiwany. W miarę jak coraz więcej osób przechodzi do końca wiersza w celu zaczekania. Funkcja członkowska kolekcji list `AddTail` i `RemoveHead` może służyć do dodawania i usuwania elementów specyficznych dla głowy lub ogona listy. w ten sposób ostatnio dodany element jest zawsze ostatni do usunięcia.
 

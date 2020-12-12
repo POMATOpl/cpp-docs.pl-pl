@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej o problemach migracji zmiennoprzecinkowej
 title: Problemy przy migracji liczb zmiennoprzecinkowych
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 079706570a52d164f4308941924d0a96ca5d44ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312907"
 ---
 # <a name="floating-point-migration-issues"></a>Problemy przy migracji liczb zmiennoprzecinkowych
 
@@ -15,7 +16,7 @@ Czasami gdy uaktualniasz projekty do nowszej wersji programu Visual Studio, moż
 
 ## <a name="new-math-functions-and-universal-crt-changes"></a>Nowe funkcje matematyczne i uniwersalne zmiany CRT
 
-Większość funkcji matematycznych w języku CRT jest dostępnych w programie Visual Studio przez lata, ale począwszy od Visual Studio 2013, uwzględniane są wszystkie funkcje wymagane przez C99 ISO. Te funkcje są implementowane w celu zrównoważenia wydajności z korekcją. Ponieważ generowanie prawidłowo zaokrąglonego wyniku w każdym przypadku może być niezwykle kosztowne, te funkcje są zaprojektowane w celu wydajnego tworzenia zbliżonego do poprawnego zaokrąglonego wyniku. W większości przypadków wynik wynoszący mieści się w jednostkach +/-1 jednostki o największej precyzji lub *ULP*w wyniku prawidłowo zaokrąglonego, chociaż mogą wystąpić sytuacje, w których występuje większa niedokładność. Jeśli używasz innej biblioteki matematycznej do uzyskiwania tych funkcji przed, różnice implementacji mogą być odpowiedzialne za zmianę w wynikach.
+Większość funkcji matematycznych w języku CRT jest dostępnych w programie Visual Studio przez lata, ale począwszy od Visual Studio 2013, uwzględniane są wszystkie funkcje wymagane przez C99 ISO. Te funkcje są implementowane w celu zrównoważenia wydajności z korekcją. Ponieważ generowanie prawidłowo zaokrąglonego wyniku w każdym przypadku może być niezwykle kosztowne, te funkcje są zaprojektowane w celu wydajnego tworzenia zbliżonego do poprawnego zaokrąglonego wyniku. W większości przypadków wynik wynoszący mieści się w jednostkach +/-1 jednostki o największej precyzji lub *ULP* w wyniku prawidłowo zaokrąglonego, chociaż mogą wystąpić sytuacje, w których występuje większa niedokładność. Jeśli używasz innej biblioteki matematycznej do uzyskiwania tych funkcji przed, różnice implementacji mogą być odpowiedzialne za zmianę w wynikach.
 
 Gdy funkcje matematyczne zostały przeniesione do uniwersalnej CRT w programie Visual Studio 2015, zostały użyte niektóre nowe algorytmy, a niektóre usterki w implementacji funkcji, które były nowe w Visual Studio 2013 zostały naprawione. Te zmiany mogą prowadzić do wykrywalnych różnic w wynikach obliczeń zmiennoprzecinkowych korzystających z tych funkcji. Funkcje, które wystąpiły problemy z usterką, to ERF, exp2 —, reszta, remquo —, scalbln i scalbn —, a ich zmiennoprzecinkowe i długie podwójne odmiany.  Inne zmiany w programie Visual Studio 2015 Rozwiązano problemy z zachowaniem stanu zmiennoprzecinkowego i informacji o stanie wyjątku w funkcjach _clear87, _clearfp, fegetenv, fesetenv i feholdexcept.
 
@@ -23,7 +24,7 @@ Gdy funkcje matematyczne zostały przeniesione do uniwersalnej CRT w programie V
 
 Wiele funkcji wielozmiennoprzecinkowych bibliotek matematycznych ma różne implementacje dla różnych architektur procesora. Na przykład 32-bitowa architektura x86 CRT może mieć inną implementację niż 64-bit x64 CRT. Ponadto niektóre funkcje mogą mieć wiele implementacji dla danej architektury procesora CPU. Najbardziej wydajna implementacja jest wybierana dynamicznie w czasie wykonywania w zależności od zestawów instrukcji obsługiwanych przez procesor CPU. Na przykład w 32-bitowej architekturze x86, niektóre funkcje mają implementację x87 i implementację SSE2. W przypadku uruchamiania na PROCESORze, który obsługuje SSE2, używana jest szybsza implementacja SSE2. W przypadku uruchamiania na PROCESORze, który nie obsługuje SSE2, używana jest wolniejsza implementacja x87. Ten proces może zostać wyświetlony podczas migrowania starego kodu, ponieważ domyślna opcja architektury kompilatora x86 została zmieniona na [/arch: SSE2](../build/reference/arch-x86.md) w programie Visual Studio 2012. Ponieważ różne implementacje funkcji biblioteki matematycznej mogą korzystać z różnych instrukcji procesora CPU i różnych algorytmów w celu wygenerowania ich wyników, funkcje mogą generować różne wyniki na różnych platformach. W większości przypadków wyniki znajdują się w przedziale od +/-1 ULP prawidłowo zaokrąglonego wyniku, ale rzeczywiste wyniki mogą się różnić w zależności od procesorów.
 
-Ulepszenia poprawności generowania kodu w różnych trybach zmiennoprzecinkowych w programie Visual Studio mogą również wpływać na wyniki operacji zmiennoprzecinkowych, gdy stary kod jest porównywany z nowym kodem, nawet w przypadku używania tych samych flag kompilatora. Na przykład kod wygenerowany przez program Visual Studio 2010, gdy [/FP: precyzyjne](../build/reference/fp-specify-floating-point-behavior.md) (wartość domyślna) lub `/fp:strict` został określony, może nie mieć propagowanych wartości pośrednich nieliczbowych (NaN) za pośrednictwem wyrażeń. W związku z tym niektóre wyrażenia, które spowodowały wynik liczbowy w starszych kompilatorach, mogą teraz prawidłowo generować wynik NaN. Możesz również zobaczyć różnice, ponieważ optymalizacje kodu włączone dla `/fp:fast` teraz korzystają z większej liczby funkcji procesora. Optymalizacje mogą korzystać z mniej instrukcji, ale mogą mieć wpływ na wygenerowane wyniki, ponieważ niektóre poprzednio widoczne operacje pośrednie zostały usunięte.
+Ulepszenia poprawności generowania kodu w różnych trybach zmiennoprzecinkowych w programie Visual Studio mogą również wpływać na wyniki operacji zmiennoprzecinkowych, gdy stary kod jest porównywany z nowym kodem, nawet w przypadku używania tych samych flag kompilatora. Na przykład kod wygenerowany przez program Visual Studio 2010, gdy [/FP: precyzyjne](../build/reference/fp-specify-floating-point-behavior.md) (wartość domyślna) lub `/fp:strict` został określony, może nie mieć propagowanych wartości pośrednich nieliczbowych (NaN) za pośrednictwem wyrażeń. W związku z tym niektóre wyrażenia, które spowodowały wynik liczbowy w starszych kompilatorach, mogą teraz prawidłowo generować wynik NaN. Możesz również zobaczyć różnice, ponieważ optymalizacje kodu z włączoną funkcją `/fp:fast` teraz korzystają z większej liczby funkcji procesora. Optymalizacje mogą korzystać z mniej instrukcji, ale mogą mieć wpływ na wygenerowane wyniki, ponieważ niektóre poprzednio widoczne operacje pośrednie zostały usunięte.
 
 ## <a name="how-to-get-identical-results"></a>Jak uzyskać identyczne wyniki
 
@@ -31,6 +32,6 @@ W większości przypadków zmiany zmiennoprzecinkowe w najnowszych kompilatorach
 
 ## <a name="see-also"></a>Zobacz też
 
-[Uaktualnianie projektów ze starszych wersji wizualizacjiC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Uaktualnianie projektów z wcześniejszych wersji Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Visual C++ — historia zmian w latach 2003–2015](visual-cpp-change-history-2003-2015.md)

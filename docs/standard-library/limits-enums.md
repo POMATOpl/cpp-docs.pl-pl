@@ -1,20 +1,21 @@
 ---
-title: '&lt;limity&gt; wyliczeń'
+description: 'Dowiedz się więcej o: &lt; limity &gt; wyliczeń'
+title: '&lt;limity typów &gt; wyliczeniowych'
 ms.date: 11/04/2016
 f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 115122a4901298018df8809be56a7fc69249d700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312868"
 ---
-# <a name="ltlimitsgt-enums"></a>&lt;limity&gt; wyliczeń
+# <a name="ltlimitsgt-enums"></a>&lt;limity typów &gt; wyliczeniowych
 
-## <a name="float_denorm_style"></a>float_denorm_style
+## <a name="float_denorm_style"></a><a name="float_denorm_style"></a> float_denorm_style
 
 Wyliczenie opisuje różne metody, które można wybrać do reprezentowania nieznormalizowanej wartości zmiennoprzecinkowej — jeden za mały, aby reprezentować jako znormalizowaną wartość:
 
@@ -25,21 +26,21 @@ enum float_denorm_style {
     denorm_present = 1    };
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wyliczenie zwraca:
 
 - `denorm_indeterminate` Jeśli nie można określić obecności lub braku nieznormalizowanych formularzy w czasie tłumaczenia.
 
-- `denorm_absent` w przypadku nieobecności nieznormalizowanych formularzy.
+- `denorm_absent` Jeśli nieznormalizowane formularze są nieobecne.
 
-- `denorm_present`, jeśli istnieją nieznormalizowane formularze.
+- `denorm_present` Jeśli istnieją nieznormalizowane formularze.
 
 ### <a name="example"></a>Przykład
 
 Zobacz [numeric_limits:: has_denorm](../standard-library/numeric-limits-class.md#has_denorm) , aby zapoznać się z przykładem, w którym można uzyskać dostęp do wartości tego wyliczenia.
 
-## <a name="float_round_style"></a>float_round_style
+## <a name="float_round_style"></a><a name="float_round_style"></a> float_round_style
 
 Wyliczenie opisuje różne metody, które można wybrać, aby zaokrąglić wartość zmiennoprzecinkową do wartości całkowitej.
 
@@ -52,19 +53,19 @@ enum float_round_style {
     round_toward_neg_infinity = 3    };
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wyliczenie zwraca:
 
-- `round_indeterminate`, jeśli nie można ustalić metody zaokrąglania.
+- `round_indeterminate` Jeśli nie można ustalić metody zaokrąglania.
 
-- `round_toward_zero`, jeśli zaokrąglisz w kierunku zera.
+- `round_toward_zero` Jeśli wartość jest zaokrąglana w kierunku zera.
 
-- `round_to_nearest`, jeśli Zaokrąglij do najbliższej liczby całkowitej.
+- `round_to_nearest` Jeśli Zaokrąglij do najbliższej liczby całkowitej.
 
-- `round_toward_infinity`, jeśli wartość jest zaokrąglana w kierunku od zera.
+- `round_toward_infinity` Jeśli wartość jest zaokrąglana w kierunku od zera.
 
-- `round_toward_neg_infinity`, jeśli zaokrąglanie do bardziej ujemnej liczby całkowitej.
+- `round_toward_neg_infinity` Jeśli Zaokrąglij do bardziej ujemną liczbę całkowitą.
 
 ### <a name="example"></a>Przykład
 

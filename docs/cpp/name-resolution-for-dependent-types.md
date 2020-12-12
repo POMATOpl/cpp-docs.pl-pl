@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej: Rozpoznawanie nazw dla typów zależnych'
 title: Rozpoznawanie nazwy dla typów zależnych
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f50b067062f01d04ce26374ad969d572e1a7fe08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313791"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozpoznawanie nazwy dla typów zależnych
 
@@ -121,6 +122,6 @@ int main() {
 
 Zgodność z regułami uściślania jest wymagana, ponieważ domyślnie język C++ zakłada, że `AY::Rebind` nie jest to szablon i dlatego kompilator interpretuje następujący element " `<` " jako mniej niż. Musi wiedzieć, że `Rebind` jest to szablon, tak aby mógł prawidłowo analizować " `<` " jako nawias ostry.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozpoznawanie nazw](../cpp/templates-and-name-resolution.md)

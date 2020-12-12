@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _free_dbg'
 title: _free_dbg
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-ms.openlocfilehash: 43591ce8710dd25ad33832a5f084ca6e84bba979
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4baba591349c197b301b0dcd11b1998adfc7a971
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314038"
 ---
 # <a name="_free_dbg"></a>_free_dbg
 
@@ -53,13 +54,13 @@ void _free_dbg(
 Wskaźnik do przydziału bloku pamięci, który ma zostać zwolniony.
 
 *BlockType*<br/>
-Typ przydzielony blok pamięci do zwolnienia: **_CLIENT_BLOCK**, **_NORMAL_BLOCK**lub **_IGNORE_BLOCK**.
+Typ przydzielony blok pamięci do zwolnienia: **_CLIENT_BLOCK**, **_NORMAL_BLOCK** lub **_IGNORE_BLOCK**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_free_dbg** jest wersją do debugowania [bezpłatnej](free.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_free_dbg** jest ograniczone do wywołania **bezpłatne**. Zarówno **bezpłatny** , jak i **_free_dbg** bezpłatny blok pamięci w stercie bazowym, ale **_free_dbg** obsługuje dwie funkcje debugowania: możliwość utrzymywania zwolnionych bloków na połączonej liście sterty w celu symulowania warunków niedostatecznej ilości pamięci i parametru typu bloku do bezpłatne typy alokacji.
+Funkcja **_free_dbg** jest wersją debugowania [bezpłatnej](free.md) funkcji. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_free_dbg** zostanie zredukowane do wywołania **bezpłatnego**. Zarówno **bezpłatny** , jak i **_free_dbg** Zwolnij blok pamięci w stercie podstawowej, ale **_free_dbg** obsługuje dwie funkcje debugowania: możliwość przechowywania zwolnionych bloków na połączonej liście sterty w celu symulowania warunków niedostatecznej ilości pamięci i parametru typu bloku w celu zwolnienia określonych typów alokacji.
 
-**_free_dbg** wykonuje sprawdzanie poprawności wszystkich określonych plików i lokalizacji blokowania przed wykonaniem operacji bezpłatnej. Aplikacja nie powinna podawać tych informacji. Gdy blok pamięci jest zwolniony, Menedżer sterty debugowania automatycznie sprawdza integralność buforów po obu stronach części użytkownika i wystawia raport o błędach, jeśli nastąpiło zastąpienie. Jeśli ustawiono pole bitowe **_CRTDBG_DELAY_FREE_MEM_DF** flagi [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) , zwolniony blok zostanie wypełniony wartością 0xDD, przypisanym typem bloku **_FREE_BLOCK** i przechowywanym na połączonej liście bloków pamięci sterty.
+**_free_dbg** wykonuje sprawdzanie poprawności wszystkich określonych plików i lokalizacji blokowania przed wykonaniem operacji bezpłatnej. Aplikacja nie powinna podawać tych informacji. Gdy blok pamięci jest zwolniony, Menedżer sterty debugowania automatycznie sprawdza integralność buforów po obu stronach części użytkownika i wystawia raport o błędach, jeśli nastąpiło zastąpienie. Jeśli ustawiono **_CRTDBG_DELAY_FREE_MEM_DF** pole bitowe flagi [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) , zwolniony blok zostanie wypełniony wartością 0xDD, przypisanym typem bloku **_FREE_BLOCK** i przechowywanym na połączonej liście bloków pamięci sterty.
 
 Jeśli wystąpi błąd podczas zwalniania pamięci, **errno** jest ustawiany z informacjami z systemu operacyjnego w przypadku awarii. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -75,9 +76,9 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 ## <a name="example"></a>Przykład
 
-Aby zapoznać się z przykładem sposobu korzystania z **_free_dbg**, zobacz [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Przykład używania **_free_dbg** można znaleźć w temacie [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

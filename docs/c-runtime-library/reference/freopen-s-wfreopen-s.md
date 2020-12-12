@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: freopen_s, _wfreopen_s'
 title: freopen_s, _wfreopen_s
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 9ccd2f52f8d746c3e555c9ad04fc6ae07c53a665
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbb10582128073501433a1a12c59e195bec011d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314012"
 ---
 # <a name="freopen_s-_wfreopen_s"></a>freopen_s, _wfreopen_s
 
@@ -85,7 +86,7 @@ Każda z tych funkcji zwraca kod błędu. Jeśli wystąpi błąd, oryginalny pli
 
 Funkcja **freopen_s** zamyka plik aktualnie skojarzony ze *strumieniem* i ponownie przypisze *strumień* do pliku określonego przez *ścieżkę*. **_wfreopen_s** to dwubajtowa wersja **_freopen_s**; argumenty *Path* i *mode* **_wfreopen_s** są ciągami znaków dwubajtowych. **_wfreopen_s** i **_freopen_s** zachowują się identycznie w inny sposób.
 
-Jeśli którykolwiek z *pfile*, *Path*, *mode*lub *Stream* ma **wartość null**lub jeśli *ścieżka* jest pustym ciągiem, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
+Jeśli którykolwiek z *pfile*, *Path*, *mode* lub *Stream* ma **wartość null** lub jeśli *ścieżka* jest pustym ciągiem, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -95,9 +96,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
-**freopen_s** jest zwykle używany do przekierowywania wstępnie otwartych plików **stdin**, **stdout**i **stderr** do plików określonych przez użytkownika. Nowy plik skojarzony ze *strumieniem* jest otwarty z *trybem*, który jest ciągiem znaków określającym typ dostępu żądany dla pliku, w następujący sposób:
+**freopen_s** jest zwykle używany do przekierowywania wstępnie otwartych plików **stdin**, **stdout** i **stderr** do plików określonych przez użytkownika. Nowy plik skojarzony ze *strumieniem* jest otwarty z *trybem*, który jest ciągiem znaków określającym typ dostępu żądany dla pliku, w następujący sposób:
 
-|*wyst*|Dostęp|
+|*wyst*|Access|
 |-|-|
 | **®** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można go znaleźć, wywołanie **freopen_s** nie powiedzie się. |
 | **k** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
@@ -129,10 +130,10 @@ Aby zapoznać się z omówieniem trybów tekstowych i binarnych, zobacz [plik te
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**freopen_s**|\<stdio. h>|
-|**_wfreopen_s**|\<stdio. h> lub \<WCHAR. h>|
+|**freopen_s**|\<stdio.h>|
+|**_wfreopen_s**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -169,7 +170,7 @@ successfully reassigned
 This will go to the file 'freopen.out'
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [freopen, _wfreopen](freopen-wfreopen.md)<br/>

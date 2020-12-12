@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _set_new_handler'
 title: _set_new_handler
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1e693e010bcbb9489426fc5c67e888d50f430765
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312400"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -167,7 +168,7 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

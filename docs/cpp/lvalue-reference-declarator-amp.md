@@ -1,5 +1,6 @@
 ---
-title: Deklarator odwołania lvalue:&amp;
+description: 'Dowiedz się więcej na temat: lvalue Reference deklarator: &amp;'
+title: 'Deklarator odwołania lvalue: &amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 30dd6ba9cb91395f72124cad71908a4e6bcdf7dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99160f0eac10922e95b131d4246f898b3f59705e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312283"
 ---
-# <a name="lvalue-reference-declarator-amp"></a>Deklarator odwołania lvalue:&amp;
+# <a name="lvalue-reference-declarator-amp"></a>Deklarator odwołania lvalue: &amp;
 
 Przechowuje adres obiektu, ale zachowuje się syntaktycznie jak obiekt.
 
@@ -71,9 +72,9 @@ int main()
 Bill is 40
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja](../cpp/references-cpp.md)<br/>
+[Materiały źródłowe](../cpp/references-cpp.md)<br/>
 [Argumenty funkcji typu odwołania](../cpp/reference-type-function-arguments.md)<br/>
 [Funkcja typu odwołania zwraca](../cpp/reference-type-function-returns.md)<br/>
 [Odwołania do wskaźników](../cpp/references-to-pointers.md)

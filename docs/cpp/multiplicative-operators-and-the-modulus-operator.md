@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operatory mnożenia i operator modulo'
 title: Operatory mnożenia i Operator modulo
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: c277c93640201de69a4cb29060bc5191aa91629c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e3e3e3823abb255922bf31be90b4a116fb100efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313869"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatory mnożenia i Operator modulo
 
@@ -92,7 +93,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

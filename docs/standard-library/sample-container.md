@@ -1,24 +1,25 @@
 ---
-title: '&lt;pojemnik na próbki&gt;'
+description: Dowiedz się więcej na temat &lt; przykładowego kontenera&gt;
+title: '&lt;Przykładowy kontener&gt;'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - headers, C++ sample container
 - sample container
 - container headers
 ms.assetid: 4ab3dcf9-49c3-4e49-b5d6-1ec573e2aee4
-ms.openlocfilehash: e89f15c7dd485a73d143b7cbee27ccd354e3892c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65726e60dcdec522d93da70fb38cc06dce01e609
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312855"
 ---
-# <a name="ltsample-containergt"></a>&lt;pojemnik na próbki&gt;
+# <a name="ltsample-containergt"></a>&lt;Przykładowy kontener&gt;
 
 > [!NOTE]
-> Ten temat znajduje się w dokumentacji języka Microsoft C++ jako niefunkcjonalny przykład kontenerów używanych w bibliotece standardowej języka C++. Aby uzyskać więcej informacji, zobacz [Kontenery biblioteki standardowej języka C++](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji języka Microsoft C++ jako niefunkcjonalny przykład kontenerów używanych w standardowej bibliotece języka C++. Aby uzyskać więcej informacji, zobacz [kontenery standardowej biblioteki języka C++](../standard-library/stl-containers.md).
 
-Pokazuje strukturę nagłówków kontenerów w bibliotece standardowej języka C++.
+Pokazuje strukturę nagłówków kontenera w standardowej bibliotece języka C++.
 
 ## <a name="syntax"></a>Składnia
 

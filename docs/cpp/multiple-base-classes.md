@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wiele klas podstawowych'
 title: Wiele klas podstawowych
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: 0e663f33213a5fd57f2adbdcc53233c6af29954e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6e9e839e5906fba4a45e4e2edd4965817816a298
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314103"
 ---
 # <a name="multiple-base-classes"></a>Wiele klas podstawowych
 
@@ -38,7 +39,7 @@ Kolejność, w której określane są klasy bazowe nie ma znaczenia z wyjątkiem
     > [!NOTE]
     >  Kolejność specyfikacji klas bazowych może wpływać na układ pamięci klasy. Nie należy podejmować żadnych decyzji programistycznych na podstawie kolejności elementów podstawowych w pamięci.
 
-Podczas określania *listy podstawowej*nie można określić tej samej nazwy klasy więcej niż raz. Jednak klasa może być pośrednią podstawą dla klasy pochodnej więcej niż raz.
+Podczas określania *listy podstawowej* nie można określić tej samej nazwy klasy więcej niż raz. Jednak klasa może być pośrednią podstawą dla klasy pochodnej więcej niż raz.
 
 ## <a name="virtual-base-classes"></a>Wirtualne klasy bazowe
 
@@ -213,6 +214,6 @@ Wirtualne a niewirtualne wyprowadzanie
 
 Na rysunku dostęp do dowolnego elementu członkowskiego klasy `A` za pomocą niewirtualnych klas bazowych powoduje niejednoznaczność; kompilator nie ma informacji, które wyjaśniają, czy należy używać podobiektu skojarzonego z `B` lub podobiektem skojarzonym z `C` . Jednak jeśli `A` określono jako wirtualną klasę bazową, nie ma pytania, do którego jest uzyskiwany dostęp do obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dziedziczenie](../cpp/inheritance-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: fputc, fputwc'
 title: fputc, fputwc
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 85958ce10bd70a13d246be70890d552b7ffdcd3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314181"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -68,13 +69,13 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca znak zapisany. Dla **fputc**wartość zwracana przez **EOF** wskazuje na błąd. Dla **fputwc**wartość zwracana przez **WEOF** wskazuje na błąd. Jeśli *strumień* ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają **eof** i ustawiają **errno** na **EINVAL**.
+Każda z tych funkcji zwraca znak zapisany. Dla **fputc** wartość zwracana przez **EOF** wskazuje na błąd. Dla **fputwc** wartość zwracana przez **WEOF** wskazuje na błąd. Jeśli *strumień* ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają **eof** i ustawiają **errno** na **EINVAL**.
 
 Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji zapisuje pojedynczy znak *c* do pliku w pozycji wskazywanej przez wskaźnik położenia skojarzonego pliku (jeśli jest zdefiniowany) i przesuwa wskaźnik odpowiednio do potrzeb. W przypadku **fputc** i **fputwc**plik jest skojarzony ze *strumieniem*. Jeśli plik nie może obsługiwać żądań pozycjonowania lub został otwarty w trybie dołączania, znak jest dołączany na końcu strumienia.
+Każda z tych funkcji zapisuje pojedynczy znak *c* do pliku w pozycji wskazywanej przez wskaźnik położenia skojarzonego pliku (jeśli jest zdefiniowany) i przesuwa wskaźnik odpowiednio do potrzeb. W przypadku **fputc** i **fputwc** plik jest skojarzony ze *strumieniem*. Jeśli plik nie może obsługiwać żądań pozycjonowania lub został otwarty w trybie dołączania, znak jest dołączany na końcu strumienia.
 
 Dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **fputc** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
@@ -99,10 +100,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fputc**|\<stdio. h>|
-|**fputwc**|\<stdio. h> lub \<WCHAR. h>|
+|**fputc**|\<stdio.h>|
+|**fputwc**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout** i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -129,7 +130,7 @@ int main( void )
 This is a test of fputc!!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

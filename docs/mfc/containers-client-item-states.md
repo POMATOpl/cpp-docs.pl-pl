@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat kontenerów: Client-Item Stany'
 title: 'Kontenery: stany elementu klienckiego'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 660b544a0f061ae2e4435777cdd934367f2e7652
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2f6560b5694bcd7a55b7547593d9ba2dc9a93389
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310463"
 ---
 # <a name="containers-client-item-states"></a>Kontenery: stany elementu klienckiego
 
@@ -38,10 +39,10 @@ Gdy element zostanie otwarty w oknie serwera, a nie w miejscu w dokumencie konte
 
 Gdy element został aktywowany w miejscu, przekazuje, zazwyczaj tylko krótko, w stanie aktywnym. Następnie przechodzi do stanu aktywności interfejsu użytkownika, w którym serwer został scalony z menu, paskami narzędzi i innymi składnikami interfejsu użytkownika z tymi kontenerami. Obecność tych składników interfejsu użytkownika odróżnia stan aktywności interfejsu użytkownika ze stanu aktywnego. W przeciwnym razie stan aktywny jest podobny do stanu aktywnego interfejsu użytkownika. Jeśli serwer obsługuje cofanie, serwer jest wymagany do zachowania informacji o stanie cofnięcia elementu OLE do momentu osiągnięcia stanu załadowane lub otwarte.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Containers](containers.md)<br/>
 [Uaktywnienie](activation-cpp.md)<br/>
-[Kontenery: powiadomienia dotyczące elementów klienta](containers-client-item-notifications.md)<br/>
+[Kontenery: powiadomienia Client-Item](containers-client-item-notifications.md)<br/>
 [Trackery](trackers.md)<br/>
 [Klasa CRectTracker](reference/crecttracker-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Ostrzeżenie kompilatora C4950'
 title: Ostrzeżenie kompilatora C4950
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e1bb05501fcac6c836bfd4aa89f72807b625c292
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314883"
 ---
 # <a name="compiler-warning-c4950"></a>Ostrzeżenie kompilatora C4950
 
 "type_or_member": oznaczono jako przestarzały
 
-Element członkowski lub typ został oznaczony jako przestarzały z atrybutem <xref:System.ObsoleteAttribute>.
+Element członkowski lub typ został oznaczony jako przestarzały przy użyciu <xref:System.ObsoleteAttribute> atrybutu.
 
 C4950 jest zawsze wystawiony jako błąd. To ostrzeżenie można wyłączyć za pomocą dyrektywy pragma [Warning](../../preprocessor/warning.md) lub opcji kompilatora [/WD](../../build/reference/compiler-option-warning-level.md) .
 
