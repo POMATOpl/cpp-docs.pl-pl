@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _InterlockedCompareExchangePointer funkcje wewnętrzne'
 title: Funkcje wewnętrzne _InterlockedCompareExchangePointer
 ms.date: 09/02/2019
 f1_keywords:
@@ -24,18 +25,18 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cd8d42c6a7036a6c779af6fc32a7176b7e48a73c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168062"
 ---
 # <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedCompareExchangePointer
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wykonuje niepodzielną operację, która `Exchange` przechowuje adres `Destination` w `Destination` adresie, `Comparand` Jeśli wartość i adres są równe.
+Wykonuje niepodzielną operację, która przechowuje `Exchange` adres w `Destination` adresie, jeśli wartość `Comparand` i `Destination` adres są równe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,7 +83,7 @@ long _InterlockedCompareExchangePointer_rel (
 *Punktu*\
 [in. out] Wskaźnik na wskaźnik do wartości docelowej. Znak jest ignorowany.
 
-*Zamian*\
+*Exchange*\
 podczas Wskaźnik programu Exchange. Znak jest ignorowany.
 
 *Argument porównania określony*\
@@ -94,7 +95,7 @@ Wartość zwracana jest początkową wartością miejsca docelowego.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
@@ -102,23 +103,23 @@ Wartość zwracana jest początkową wartością miejsca docelowego.
 
 ## <a name="remarks"></a>Uwagi
 
-`_InterlockedCompareExchangePointer`wykonuje niepodzielną porównanie `Destination` adresu `Comparand` z adresem. Jeśli adres jest równy `Comparand` adresowi, `Exchange` adres jest przechowywany w adresie określonym przez `Destination`. `Destination` W przeciwnym razie nie jest wykonywana żadna operacja.
+`_InterlockedCompareExchangePointer` wykonuje niepodzielną porównanie `Destination` adresu z `Comparand` adresem. Jeśli `Destination` adres jest równy `Comparand` adresowi, `Exchange` adres jest przechowywany w adresie określonym przez `Destination` . W przeciwnym razie nie jest wykonywana żadna operacja.
 
-`_InterlockedCompareExchangePointer`zapewnia wewnętrzną obsługę kompilatora dla funkcji [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) Win32 Windows SDK.
+`_InterlockedCompareExchangePointer` zapewnia wewnętrzną obsługę kompilatora dla funkcji [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) Win32 Windows SDK.
 
-Przykład użycia `_InterlockedCompareExchangePointer`programu można znaleźć w temacie [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Przykład użycia programu można `_InterlockedCompareExchangePointer` znaleźć w temacie [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 Na platformach ARM Użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksów, jeśli potrzebujesz uzyskiwania i wydawania semantyki, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne ARM z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
 Elementy wewnętrzne z `_np` sufiksem ("No Fetch") uniemożliwiają wstawienie przez kompilator możliwej operacji pobierania z wyprzedzeniem.
 
-Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), `_HLEAcquire` wewnętrzne `_HLERelease` z i sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
+Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
 
 Te procedury są dostępne tylko jako elementy wewnętrzne.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

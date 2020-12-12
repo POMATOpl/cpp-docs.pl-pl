@@ -1,25 +1,26 @@
 ---
+description: 'Dowiedz się więcej na temat: wewnętrzne dostępne we wszystkich architekturach'
 title: Funkcje wewnętrzne dostępne we wszystkich architekturach
 ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: b2f3a1371b250230e09c60301478787fe17ea7cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167945"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Funkcje wewnętrzne dostępne we wszystkich architekturach
 
-Kompilator Microsoft C/C++ Compiler i uniwersalna biblioteka środowiska uruchomieniowego C (UCRT) sprawiają, że niektóre funkcje wewnętrzne są dostępne we wszystkich architekturach.
+Kompilator Microsoft C/C++ i Biblioteka uniwersalnego środowiska uruchomieniowego C (UCRT) sprawiają, że niektóre funkcje wewnętrzne są dostępne we wszystkich architekturach.
 
 ## <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 
 Następujące elementy wewnętrzne są dostępne w architekturze x86, AMD64, ARM i ARM64:
 
-|Wewnętrznej|nagłówek|
+|Wewnętrznej|Nagłówek|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin. h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin. h|
@@ -73,7 +74,7 @@ Następujące elementy wewnętrzne są dostępne w architekturze x86, AMD64, ARM
 
 Następujące funkcje UCRT mają wewnętrzne formularze dla wszystkich architektur:
 
-|Wewnętrznej|nagłówek|
+|Wewnętrznej|Nagłówek|
 |---------------|------------|
 |[ABS](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|STDLIB. h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|STDLIB. h|
@@ -160,9 +161,9 @@ Następujące funkcje UCRT mają wewnętrzne formularze dla wszystkich architekt
 |[wcslen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|ciąg. h|
 |[_wcsset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|ciąg. h|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-\ [wewnętrzne ARM](../intrinsics/arm-intrinsics.md)
-[Arm64 wewnętrzne](../intrinsics/arm64-intrinsics.md)\
-[Lista elementów wewnętrznych x86](../intrinsics/x86-intrinsics-list.md)\
+[Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)\
+[ARM64 wewnętrzne](../intrinsics/arm64-intrinsics.md)\
+[Lista funkcji wewnętrznych x86](../intrinsics/x86-intrinsics-list.md)\
 [Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)

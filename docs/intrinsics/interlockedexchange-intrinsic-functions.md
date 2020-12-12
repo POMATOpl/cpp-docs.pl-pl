@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _InterlockedExchange funkcje wewnętrzne'
 title: Funkcje wewnętrzne _InterlockedExchange
 ms.date: 09/02/2019
 f1_keywords:
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: de2f8a084cc5604051234fa9e01d5f5cc0974d74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168049"
 ---
 # <a name="_interlockedexchange-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedExchange
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje niepodzielną instrukcję ustawiania określonej wartości.
 
@@ -148,44 +149,44 @@ __int64 _InterlockedExchange64_rel(
 [in. out] Wskaźnik na wartość, która ma zostać nadana wymianie. Funkcja ustawia tę zmienną na `Value` i zwraca jej poprzednią wartość.
 
 *Wartościami*\
-podczas Wartość, która ma być wymieniana z wartością wskazywaną `Target`przez.
+podczas Wartość, która ma być wymieniana z wartością wskazywaną przez `Target` .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca początkową wartość wskazywaną przez `Target`.
+Zwraca początkową wartość wskazywaną przez `Target` .
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
 |`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchange64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM, ARM64|\<intrin.h>|
 |`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`|x86, x64|\<immintrin.h>|
-|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|X64|\<immintrin.h>|
+|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
-`_InterlockedExchange`zapewnia wewnętrzną obsługę kompilatora dla funkcji [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) Win32 Windows SDK.
+`_InterlockedExchange` zapewnia wewnętrzną obsługę kompilatora dla funkcji [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) Win32 Windows SDK.
 
 Istnieją różne różnice `_InterlockedExchange` , które różnią się w zależności od typów danych, których dotyczą, oraz od tego, czy jest używana specyficzna dla procesora wersja semantyki.
 
-Chociaż funkcja działa na 32-bitowych liczb całkowitych, `_InterlockedExchange8` działa na wartościach 8-bitowych liczb `_InterlockedExchange16` całkowitych, działa na 16-bitowych wartościach całkowitych i `_InterlockedExchange64` działa w przypadku wartości 64-bitowych liczb całkowitych. `_InterlockedExchange`
+Chociaż `_InterlockedExchange` Funkcja działa na 32-bitowych liczb całkowitych, `_InterlockedExchange8` działa na wartościach 8-bitowych liczb całkowitych, `_InterlockedExchange16` działa na 16-bitowych wartościach całkowitych i `_InterlockedExchange64` działa w przypadku wartości 64-bitowych liczb całkowitych.
 
 Na platformach ARM Użyj wewnętrznych z `_acq` i `_rel` sufiksów dla semantyki pozyskiwania i wydawania, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
-Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), `_HLEAcquire` wewnętrzne `_HLERelease` z i sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
+Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
 
 Te procedury są dostępne tylko jako elementy wewnętrzne.
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać przykład sposobu użycia `_InterlockedExchange`, zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Aby uzyskać przykład sposobu użycia `_InterlockedExchange` , zobacz [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
-[Keywords](../cpp/keywords-cpp.md)\
+[Służąc](../cpp/keywords-cpp.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

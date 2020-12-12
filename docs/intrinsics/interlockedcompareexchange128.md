@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _InterlockedCompareExchange128 funkcje wewnętrzne'
 title: Funkcje wewnętrzne _InterlockedCompareExchange128
 ms.date: 09/02/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 6f6b36b238945f7d46e9817cdc85977d666e1e9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ee04a71dafe37d6075a054946cd947f6f3829092
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077626"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168140"
 ---
 # <a name="_interlockedcompareexchange128-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedCompareExchange128
 
@@ -62,7 +63,7 @@ unsigned char _InterlockedCompareExchange128_rel(
 
 ### <a name="parameters"></a>Parametry
 
-\ *docelowy*
+*Punktu*\
 [in. out] Wskaźnik do miejsca docelowego, który jest tablicą 2 64-bitowych liczb całkowitych uznawanych za pole 128-bitowe. Dane docelowe muszą być wyrównane do 16 bajtów, aby uniknąć ogólnego błędu ochrony.
 
 *ExchangeHigh*\
@@ -76,7 +77,7 @@ podczas 64-bitowa liczba całkowita, która może być wymieniana z niską czę�
 
 ## <a name="return-value"></a>Wartość zwracana
 
-1, jeśli 128-bitowy argument porównania określony jest równa oryginalnej wartości docelowej. `ExchangeHigh` i `ExchangeLow` zastąpić 128-bitowe miejsce docelowe.
+1, jeśli 128-bitowy argument porównania określony jest równa oryginalnej wartości docelowej. `ExchangeHigh` i `ExchangeLow` Zastąp wartość 128-bitowym miejscem docelowym.
 
 0, jeśli argument porównania określony nie jest równa oryginalnej wartości docelowej. Wartość miejsca docelowego jest niezmieniona, a wartość argument porównania określony jest zastępowana wartością docelową.
 
@@ -88,28 +89,28 @@ podczas 64-bitowa liczba całkowita, która może być wymieniana z niską czę�
 |`_InterlockedCompareExchange128_acq`, `_InterlockedCompareExchange128_nf`, `_InterlockedCompareExchange128_rel`|ARM64|
 |`_InterlockedCompareExchange128_np`|x64|
 
-**Plik nagłówkowy** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-`_InterlockedCompareExchange128` wewnętrznie generuje instrukcję `cmpxchg16b` (z prefiksem `lock`) w celu wykonania 128-bitowego zablokowanego porównania i programu Exchange. Wczesne wersje sprzętu AMD 64-bit nie obsługują tej instrukcji. Aby sprawdzić obsługę sprzętową instrukcji `cmpxchg16b`, wywołaj `__cpuid` wewnętrzna z `InfoType=0x00000001 (standard function 1)`. Bit 13 z `CPUInfo[2]` (ECX) to 1, jeśli instrukcja jest obsługiwana.
+`_InterlockedCompareExchange128`Wewnętrznie generuje `cmpxchg16b` instrukcję (z `lock` prefiksem), aby wykonać 128-bitowe blokowanie porównania i programu Exchange. Wczesne wersje sprzętu AMD 64-bit nie obsługują tej instrukcji. Aby sprawdzić obsługę sprzętową `cmpxchg16b` instrukcji, wywołaj metodę `__cpuid` wewnętrzną za pomocą `InfoType=0x00000001 (standard function 1)` . Bit 13 of `CPUInfo[2]` (ECX) to 1, jeśli instrukcja jest obsługiwana.
 
 > [!NOTE]
-> Wartość `ComparandResult` jest zawsze zastępowana. Po instrukcji `lock` Ta wewnętrzna natychmiast kopiuje początkową wartość `Destination` do `ComparandResult`. Z tego powodu `ComparandResult` i `Destination` powinny wskazywać osobne lokalizacje pamięci, aby uniknąć nieoczekiwanego zachowania.
+> Wartość `ComparandResult` jest zawsze zastępowana. Po `lock` instrukcji ten element wewnętrzny natychmiast kopiuje wartość początkową `Destination` do `ComparandResult` . Z tego powodu `ComparandResult` `Destination` należy wskazać osobne lokalizacje pamięci, aby uniknąć nieoczekiwanego zachowania.
 
-Chociaż można używać `_InterlockedCompareExchange128` do synchronizacji wątków niskiego poziomu, nie trzeba synchronizować ponad 128 bitów, jeśli zamiast tego można użyć mniejszych funkcji synchronizacji (takich jak inne `_InterlockedCompareExchange` wewnętrzne). Użyj `_InterlockedCompareExchange128`, jeśli chcesz, aby w pamięci był dostęp do wartości 128-bitowej.
+Chociaż można używać `_InterlockedCompareExchange128` do synchronizacji wątków niskiego poziomu, nie trzeba synchronizować ponad 128 bitów, jeśli można użyć mniejszych funkcji synchronizacji (takich jak inne `_InterlockedCompareExchange` wewnętrzne). Użyj `_InterlockedCompareExchange128` , jeśli chcesz, aby dostęp niepodzielny do 128-bitowej wartości w pamięci.
 
-Jeśli uruchamiasz kod, który używa wewnętrznego na sprzęcie, który nie obsługuje instrukcji `cmpxchg16b`, wyniki są nieprzewidywalne.
+Jeśli uruchamiasz kod, który używa wewnętrznego na sprzęcie, który nie obsługuje `cmpxchg16b` instrukcji, wyniki są nieprzewidywalne.
 
-Na platformach ARM Użyj wewnętrznych z sufiksów `_acq` i `_rel` do uzyskiwania i wydawania semantyki, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne ARM z sufiksem `_nf` ("No ogrodzeni") nie działają jako bariera pamięci.
+Na platformach ARM Użyj wewnętrznych z `_acq` i `_rel` sufiksów dla semantyki pozyskiwania i wydawania, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne ARM z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
-Elementy wewnętrzne z sufiksem `_np` ("No Fetch") uniemożliwiają wstawienie przez kompilator możliwej operacji pobierania z wyprzedzeniem.
+Elementy wewnętrzne z `_np` sufiksem ("No Fetch") uniemożliwiają wstawienie przez kompilator możliwej operacji pobierania z wyprzedzeniem.
 
 Ta procedura jest dostępna tylko jako wewnętrzna.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie używa się `_InterlockedCompareExchange128`, aby zamienić duże słowo macierzy 2 64-bitowych liczb całkowitych na sumę jej dużych i małych słów oraz zwiększyć dolny wyraz. Dostęp do tablicy `BigInt.Int` jest niepodzielny, ale w tym przykładzie użyto jednego wątku i ignoruje blokadę dla uproszczenia.
+W tym przykładzie używa `_InterlockedCompareExchange128` się, aby zastąpić wielką część tablicy 2 64-bitową liczbę całkowitą z sumą jej dużych i małych słów i aby zwiększyć dolny wyraz. Dostęp do `BigInt.Int` tablicy jest niepodzielny, ale w tym przykładzie użyto jednego wątku i ignoruje blokadę dla uproszczenia.
 
 ```cpp
 // cmpxchg16b.c
@@ -161,6 +162,6 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 
 ## <a name="see-also"></a>Zobacz też
 
-\ [Wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
-[_InterlockedCompareExchange funkcje wewnętrzne](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
+[Funkcje wewnętrzne _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

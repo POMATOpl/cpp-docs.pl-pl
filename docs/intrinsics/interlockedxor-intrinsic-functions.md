@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _InterlockedXor funkcje wewnętrzne'
 title: Funkcje wewnętrzne _InterlockedXor
 ms.date: 09/02/2019
 f1_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: 22cb9edd5fa4ffd8ffae7363ab07dc48f519fff0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 47fb057f4a7e70b8cb8bcee1a5b05ad55d5918e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167971"
 ---
 # <a name="_interlockedxor-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedXor
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Wykonaj niepodzielną, niezależną lub (XOR) operację na zmiennej udostępnionej przez wiele wątków.
 
@@ -162,14 +163,14 @@ Oryginalna wartość pierwszego operandu.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
 |`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedXor64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM, ARM64|\<intrin.h>|
-|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|
+|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|x64|\<intrin.h>|
 |`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`|x86, x64|\<immintrin.h>|
-|`_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|X64|\<immintrin.h>|
+|`_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -179,7 +180,7 @@ Na platformach ARM Użyj funkcji wewnętrznych z `_acq` i `_rel` sufiksów, jeś
 
 Elementy wewnętrzne z `_np` sufiksem ("No Fetch") uniemożliwiają wstawienie przez kompilator możliwej operacji pobierania z wyprzedzeniem.
 
-Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), `_HLEAcquire` wewnętrzne `_HLERelease` z i sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
+Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
 
 ## <a name="example"></a>Przykład
 
@@ -206,7 +207,7 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
