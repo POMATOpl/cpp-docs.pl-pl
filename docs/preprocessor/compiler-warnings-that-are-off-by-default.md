@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: ostrzeżenia kompilatora, które są domyślnie wyłączone'
 title: Domyślnie wyłączone ostrzeżenia kompilatora
 ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 3727777c6abd3ae5ba19f147e2b6fbe559251813
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5bc482d12026bb8358d773be6a0c8b32cc2317fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269383"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Domyślnie wyłączone ostrzeżenia kompilatora
 
@@ -32,7 +33,7 @@ Ostrzeżenia, które są zwykle wyłączone domyślnie, można włączyć przy u
 
    `/Wall` włącza wszystkie ostrzeżenia, które są domyślnie wyłączone. W przypadku użycia tej opcji można wyłączyć poszczególne ostrzeżenia przy użyciu opcji [/WD](../build/reference/compiler-option-warning-level.md) .
 
-- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
+- [/w *Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
    Ta opcja włącza ostrzeżenie *nnnn* na poziomie *L*.
 
@@ -42,8 +43,8 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 
 |Ostrzeżenie|Wiadomość|
 |-|-|
-|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia *"enum" nie*jest jawnie obsługiwany przez etykietę case|
-|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia *"enum" nie*jest obsługiwany|
+|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia *"enum" nie* jest jawnie obsługiwany przez etykietę case|
+|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (poziom 4)|moduł wyliczający "*Identifier*" w przełączniku wyliczenia *"enum" nie* jest obsługiwany|
 | [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (poziom 1) | "HRESULT" jest konwertowany na "bool"; Czy na pewno chcesz to zrobić? |
 | [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (poziom 3)|"*operator*": niebezpieczna konwersja z "*type_of_expression*" na "*type_required*"|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (poziom 4)|"*Identyfikator*": konwersja z "*Type1*" na "*Type2*", możliwa utrata danych|
@@ -57,7 +58,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |[C4289](../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md) (poziom 4)|użyto niestandardowego rozszerzenia: "*var*": Zmienna sterująca pętli zadeklarowana w pętli for jest używana poza zakresem pętli for|
 |[C4296](../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md) (poziom 4)|"*operator*": wyrażenie ma zawsze wartość false|
 |[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md) (poziom 4)|"*Type*": użycie niezdefiniowanego typu wykryte w metadanych CLR — użycie tego typu może prowadzić do wyjątku czasu wykonywania|
-|[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md) (poziom 1)|zmiana zachowania: wywołano*funkcję "Function*", ale operator składowej został wywołany w poprzednich wersjach|
+|[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md) (poziom 1)|zmiana zachowania: wywołano *funkcję "Function*", ale operator składowej został wywołany w poprzednich wersjach|
 |[C4350](../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md) (poziom 1)|zmiana zachowania: wywołano "*member1*" zamiast "*member2*"|
 |[C4355](../error-messages/compiler-warnings/compiler-warning-c4355.md)|'this': używany na liście inicjatora bazowego elementu członkowskiego|
 |[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md) (poziom 4)|"*Action*": konwersja z "*type_1*" na "*type_2*", niezgodność ze znakiem/bez znaku|
@@ -90,8 +91,8 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C4588 (poziom 1)|"*anonymous_structure*": zmiana zachowania: destruktor nie jest już wywoływany niejawnie|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (poziom 4)|"*Identyfikator*": niedozwolona kwalifikowana nazwa w deklaracji składowej <sup>14,3</sup> <sup>uprawnienie</sup>|
 |C4598 (poziom 1 i 3)|*nagłówek*"#include" ": nagłówek z numerem nagłówka *-numer* w prekompilowanym nagłówku nie jest zgodny z bieżącą kompilacją w tej pozycji <sup>14,3</sup>|
-|C4599 (poziom 3)|"*option* *ścieżka*opcji": *numer* argumentu wiersza polecenia nie pasuje do wstępnie skompilowanego nagłówka <sup>14,3</sup>|
-|C4605 (poziom 1)|"/D*makro*" określone w bieżącym wierszu polecenia, ale nie zostało określone podczas kompilowania prekompilowanego nagłówka|
+|C4599 (poziom 3)|" *ścieżka* opcji": *numer* argumentu wiersza polecenia nie pasuje do wstępnie skompilowanego nagłówka <sup>14,3</sup>|
+|C4605 (poziom 1)|"/D *makro*" określone w bieżącym wierszu polecenia, ale nie zostało określone podczas kompilowania prekompilowanego nagłówka|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (poziom 3)|element "*union_member*" został już zainicjowany przez inny element członkowski Unii na liście inicjatora "*union_member*" <sup>uprawnienie</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (poziom 3)|Ostrzeżenie #pragma: Brak ostrzeżenia numer "*numer*"|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (poziom 4)|„klasa pochodna”: nie można wygenerować konstruktora domyślnego, ponieważ domyślny konstruktor klasy bazowej jest niedostępny|
@@ -102,7 +103,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 | C4643 (poziom 4) | Deklarowanie "*Identifier*" w przestrzeni nazw std nie jest dozwolone w standardzie C++. <sup>15,8</sup> |
 |C4647 (poziom 3)|zmiana zachowania: __is_pod (*Typ*) ma inną wartość w poprzednich wersjach|
 |C4654 (poziom 4)|Kod umieszczony przed dołączeniem do wiersza prekompilowanego nagłówka zostanie zignorowany. Dodaj kod do prekompilowanego nagłówka. <sup>14,1</sup>|
-|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (poziom 4)|"*symbol*" nie jest zdefiniowany jako makro preprocesora, zastępując znakiem "0" dla*dyrektywy*"|
+|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (poziom 4)|"*symbol*" nie jest zdefiniowany jako makro preprocesora, zastępując znakiem "0" dla *dyrektywy*"|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (poziom 4)|"*symbol*": brak określonego atrybutu parametru kierunkowego, wartość domyślna to [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (poziom 3)|"*Typ zdefiniowany przez użytkownika*": możliwa zmiana w zachowaniu, zmiana w Konwencji WYWOŁYWANIA powrotu UDT|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (poziom 1)|"*Function*": Sygnatura nieprywatnej składowej zawiera natywny prywatny Typ zestawu "*NATIVE_TYPE*"|
@@ -115,7 +116,7 @@ Następujące ostrzeżenia są domyślnie wyłączone w programie Visual Studio 
 |C4774 (poziom 4)|"*String*": ciąg formatu oczekiwany w *numerze* argumentu nie jest literałem ciągu|
 |C4777 (poziom 4)|"*Function*": ciąg formatu "*String*" wymaga argumentu typu "*Type1*", ale wariadyczne argument *Number* ma typ "*Type2*"|
 |C4786 (poziom 3)|"*symbol*": Nazwa obiektu została obcięta do znaków "*Number*" w informacjach o debugowaniu|
-| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (poziom 4) | Niejawna konwersja z*typu "Type*" na typ bool. Możliwa utrata informacji <sup>16,0</sup> |
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (poziom 4) | Niejawna konwersja z *typu "Type*" na typ bool. Możliwa utrata informacji <sup>16,0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (poziom 4)|dopełnienie bajtów "*Bytes*" po konstrukcji "*MEMBER_NAME*"|
 | [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (poziom 1) | "*member*": Funkcja składowa klasy lokalnej nie ma treści |
 |C4826 (poziom 2)|Konwersja z "*Type1*" na "*Type2*" jest rozszerzona. Może to spowodować nieoczekiwane zachowanie w czasie wykonywania.|

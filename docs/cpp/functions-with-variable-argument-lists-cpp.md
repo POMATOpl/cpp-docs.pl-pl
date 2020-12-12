@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje z listami zmiennych argumentów (C++)'
 title: Funkcje z listami zmiennych argumentów (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-ms.openlocfilehash: 99f1f5cec2350f99bf2993947870f25e357ffc23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 035f389a6aa1686464cd30982ccdbf07a3305d1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268850"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Funkcje z listami zmiennych argumentów (C++)
 
@@ -34,7 +35,7 @@ Deklaracja funkcji, która przyjmuje zmienną liczbę argumentów, wymaga co naj
 
 Gdy argumenty typu **`char`** są przekazane jako argumenty zmiennych, są konwertowane na typ **`int`** . Podobnie, gdy argumenty typu **`float`** są przekazane jako argumenty zmiennych, są konwertowane na typ **`double`** . Argumenty innych typów podlegają zwykłym, całkowitym i przepływającym awansom. Zobacz [standardowe konwersje](standard-conversions.md) , aby uzyskać więcej informacji.
 
-Funkcje, które wymagają list zmiennych, są deklarowane przy użyciu wielokropka (...) na liście argumentów. Użyj typów i makr, które są opisane w polu \<stdarg.h> Dołącz plik do dostępu do argumentów, które są przekazane przez listę zmiennych. Aby uzyskać więcej informacji na temat tych makr, zobacz [va_arg, va_copy, va_end va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). w dokumentacji biblioteki wykonawczej C.
+Funkcje, które wymagają list zmiennych, są deklarowane przy użyciu wielokropka (...) na liście argumentów. Użyj typów i makr, które są opisane w polu \<stdarg.h> Dołącz plik do dostępu do argumentów, które są przekazane przez listę zmiennych. Aby uzyskać więcej informacji na temat tych makr, zobacz [va_arg, va_copy, va_end va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). w dokumentacji biblioteki języka C Run-Time.
 
 Poniższy przykład pokazuje, jak makra współpracują ze sobą z typem (zadeklarowanym w \<stdarg.h> ):
 

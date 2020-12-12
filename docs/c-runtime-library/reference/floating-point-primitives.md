@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: elementy pierwotne zmiennoprzecinkowe'
 title: Zmiennoprzecinkowe typy pierwotne
 ms.date: 4/2/2020
 api_name:
@@ -157,12 +158,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05422620a4da907820ed86a61d4e8dc16b37d3f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268967"
 ---
 # <a name="floating-point-primitives"></a>Zmiennoprzecinkowe typy pierwotne
 
@@ -294,7 +295,7 @@ Wykładnik jako typ całkowity.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe przyjmują wskaźnik do wartości zmiennoprzecinkowej *px* i wartości wykładnika, a następnie usuwają część ułamkową wartości zmiennoprzecinkowej poniżej danego wykładniku *, jeśli*jest to możliwe. Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej w *pikselach* , jeśli jest to NaN lub nieskończoność, a wartość wyjściowa (w *pikselach* ) w przeciwnym razie.
+Te elementy podstawowe zmiennoprzecinkowe przyjmują wskaźnik do wartości zmiennoprzecinkowej *px* i wartości wykładnika, a następnie usuwają część ułamkową wartości zmiennoprzecinkowej poniżej danego wykładniku *, jeśli* jest to możliwe. Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej w *pikselach* , jeśli jest to NaN lub nieskończoność, a wartość wyjściowa (w *pikselach* ) w przeciwnym razie.
 
 ## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
@@ -338,7 +339,7 @@ Wskaźnik do argumentu zmiennoprzecinkowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe łamią wartość zmiennoprzecinkową, która została przestawiona *na mantysę* (mantysy) i wykładnik, jeśli jest to możliwe. Mantysę jest skalowany w taki sposób, że wartość bezwzględna jest większa lub równa 0,5 i mniejsza niż 1,0. Wykładnik jest wartością *n*, gdzie oryginalna wartość zmiennoprzecinkowa jest równa skalowanej mantysę razy 2<sup>*n*</sup>. Ten wykładnik liczby całkowitej *n* jest przechowywany w lokalizacji wskazywanej przez *pexp*. Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej w *pikselach* , jeśli jest to NaN lub nieskończoność, a na wartość wyjściową w przeciwnym razie. W przypadku przenośności Preferuj funkcje [frexp —, frexpf —, frexpl](frexp.md) .
+Te elementy podstawowe zmiennoprzecinkowe łamią wartość zmiennoprzecinkową, która została przestawiona *na mantysę* (mantysy) i wykładnik, jeśli jest to możliwe. Mantysę jest skalowany w taki sposób, że wartość bezwzględna jest większa lub równa 0,5 i mniejsza niż 1,0. Wykładnik jest wartością *n*, gdzie oryginalna wartość zmiennoprzecinkowa jest równa skalowanej mantysę razy 2 <sup>*n*</sup>. Ten wykładnik liczby całkowitej *n* jest przechowywany w lokalizacji wskazywanej przez *pexp*. Zwracana wartość jest wynikiem **fpclassify —** wartości wejściowej w *pikselach* , jeśli jest to NaN lub nieskończoność, a na wartość wyjściową w przeciwnym razie. W przypadku przenośności Preferuj funkcje [frexp —, frexpf —, frexpl](frexp.md) .
 
 ## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
@@ -352,7 +353,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
+*Y*<br/>
 Argument funkcji zmiennoprzecinkowej.
 
 *piks.*<br/>
@@ -381,7 +382,7 @@ Wskaźnik na bitową reprezentację wartości zmiennoprzecinkowej wyrażonej jak
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe normalizią część ułamkową bezosiowej wartości zmiennoprzecinkowej i dostosowują *charakterystykę*lub wykładnikę, aby dopasować. Wartość jest przenoszona jako bitowa reprezentacja typu zmiennoprzecinkowego konwertowana na tablicę **`unsigned short`** przez `_double_val` , `_ldouble_val` lub `_float_val` typu punning Union zadeklarowanej w Math. h. Wartość zwracana jest wynikiem **fpclassify —** wartości wejściowej zmiennoprzecinkowej, jeśli jest to NaN lub nieskończoność, a wartość wyjściowa w przeciwnym razie.
+Te elementy podstawowe zmiennoprzecinkowe normalizią część ułamkową bezosiowej wartości zmiennoprzecinkowej i dostosowują *charakterystykę* lub wykładnikę, aby dopasować. Wartość jest przenoszona jako bitowa reprezentacja typu zmiennoprzecinkowego konwertowana na tablicę **`unsigned short`** przez `_double_val` , `_ldouble_val` lub `_float_val` typu punning Union zadeklarowanej w Math. h. Wartość zwracana jest wynikiem **fpclassify —** wartości wejściowej zmiennoprzecinkowej, jeśli jest to NaN lub nieskończoność, a wartość wyjściowa w przeciwnym razie.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -398,15 +399,15 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 *x*<br/>
 Argument funkcji zmiennoprzecinkowej.
 
-*tabele*<br/>
+*table*<br/>
 Wskaźnik do tabeli stałych współczynników dla wielomianu.
 
-*Azotan*<br/>
+*n*<br/>
 Kolejność wielomianu do obliczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy pierwotne zmiennoprzecinkowe zwracają ocenę *x* w wielomianie kolejności *n* , której współczynniki są reprezentowane przez odpowiadające im wartości stałe w *tabeli*. Na przykład jeśli *tabela* \[ 0] = 3,0, *tabela* \[ 1] = 4,0, *tabela* \[ 2] = 5,0 i *n* = 2, reprezentuje wielomian 5.0 x<sup>2</sup> + 4.0 x + 3,0. W przypadku obliczenia tego wielomianu dla *x* z 2,0, wynik wynosi 31,0. Te funkcje nie są używane wewnętrznie.
+Te elementy pierwotne zmiennoprzecinkowe zwracają ocenę *x* w wielomianie kolejności *n* , której współczynniki są reprezentowane przez odpowiadające im wartości stałe w *tabeli*. Na przykład jeśli *tabela* \[ 0] = 3,0, *tabela* \[ 1] = 4,0, *tabela* \[ 2] = 5,0 i *n* = 2, reprezentuje wielomian 5.0 x <sup>2</sup> + 4.0 x + 3,0. W przypadku obliczenia tego wielomianu dla *x* z 2,0, wynik wynosi 31,0. Te funkcje nie są używane wewnętrznie.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -428,7 +429,7 @@ Flaga, która kontroluje podstawę do użycia, 0 dla podstawy *e* i zero dla pod
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy pierwotne zmiennoprzecinkowe zwracają naturalny dziennik *x*, ln (*x*) lub log<sub>*e*</sub>(*x*), gdy *base_flag* wynosi 0. Zwracają one bazę dzienników 10 *x*lub<sub>10</sub>(*x*), gdy *base_flag* jest różna od zera. Te funkcje nie są używane wewnętrznie. W przypadku przenośności wolisz rejestrować usługi Functions [, logf —, logl, log10 —, log10f — i log10l](log-logf-log10-log10f.md).
+Te elementy pierwotne zmiennoprzecinkowe zwracają naturalny dziennik *x*, ln (*x*) lub log <sub>*e*</sub>(*x*), gdy *base_flag* wynosi 0. Zwracają one bazę dzienników 10 *x* lub <sub>10</sub>(*x*), gdy *base_flag* jest różna od zera. Te funkcje nie są używane wewnętrznie. W przypadku przenośności wolisz rejestrować usługi Functions [, logf —, logl, log10 —, log10f — i log10l](log-logf-log10-log10f.md).
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
@@ -454,17 +455,17 @@ Te elementy pierwotne zmiennoprzecinkowe zwracają sinus przesunięcia *x* do *�
 
 ## <a name="requirements"></a>Wymagania
 
-Nagłówki\<math.h>
+Nagłówki \<math.h>
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa liczb zmiennoprzecinkowych](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf —](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CRowsetImpl'
 title: CRowsetImpl — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: cca74504c80b964b14742e7405953ad68764aa62
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e517806cc7083700d4fad7fc053777b11a7de665
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268447"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl — Klasa
 

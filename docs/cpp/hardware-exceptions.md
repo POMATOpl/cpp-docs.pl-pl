@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyjątki sprzętowe'
 title: Wyjątki sprzętowe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 8adfd59eab0960ab14b2becb8d9864c77196c909
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3fccda4f23aa260f737f81e877d2ea9d673ebafe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268720"
 ---
 # <a name="hardware-exceptions"></a>Wyjątki sprzętowe
 
@@ -27,7 +28,7 @@ Wyjątki sprzętowe rozpoznawane przez system Windows zestawiono w poniższej ta
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Odczyt lub zapis do niedostępnej lokalizacji pamięci.|
 |STATUS_BREAKPOINT|Napotkanie punktu przerwania zdefiniowanego przez sprzęt; używane tylko przez debugery.|
-|STATUS_DATATYPE_MISALIGNMENT|Odczyt lub zapis danych na adres, który jest nieodpowiednio wyrównany; na przykład jednostki 16-bitowe muszą być wyrównane do 2-bajtowych granic. (Nie dotyczy procesorów Intel 80*x*86).|
+|STATUS_DATATYPE_MISALIGNMENT|Odczyt lub zapis danych na adres, który jest nieodpowiednio wyrównany; na przykład jednostki 16-bitowe muszą być wyrównane do 2-bajtowych granic. (Nie dotyczy procesorów Intel 80 *x* 86).|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Dzielenie liczb typu zmiennoprzecinkowego przez 0.0.|
 |STATUS_FLOAT_OVERFLOW|Przekroczenie maksymalnego dodatniego wykładnika typu zmiennoprzecinkowego.|
 |STATUS_FLOAT_UNDERFLOW|Przekroczenie wielkości najmniejszego ujemnego wykładnika typu zmiennoprzecinkowego.|
@@ -42,5 +43,5 @@ Wiele wyjątków wymienionych w powyższej tabeli jest przeznaczonych do obsług
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pisanie procedury obsługi wyjątków](../cpp/writing-an-exception-handler.md)<br/>
+[Pisanie programu do obsługi wyjątku](../cpp/writing-an-exception-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

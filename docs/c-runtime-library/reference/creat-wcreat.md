@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _creat, _wcreat'
 title: _creat, _wcreat
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 379a4adbf17755341fed6a48c649afe29e150fe5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 716f0d11af408ba30cb91744fd770300272dc26b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269045"
 ---
 # <a name="_creat-_wcreat"></a>_creat, _wcreat
 
@@ -96,7 +97,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-Jeśli plik określony przez *filename* nie istnieje, zostanie utworzony nowy plik z danym ustawieniem uprawnień i zostanie on otwarty do zapisu. Jeśli plik już istnieje, a jego uprawnienia zezwalają na pisanie, **_creat** obcina plik do długości 0, niszczy poprzednią zawartość i otwiera je do zapisu. Ustawienie uprawnienia *PMODE*ma zastosowanie tylko do nowo utworzonych plików. Nowy plik otrzymuje określone ustawienie uprawnienia po jego pierwszym zamknięciu. Wyrażenie Integer *PMODE* zawiera jedną lub obie stałe manifestu **_S_IWRITE** i **_S_IREAD**, zdefiniowane w SYS\Stat.h. Po otrzymaniu obu stałych są one przyłączone do operatora bitowego or ( **&#124;** ). Parametr *PMODE* jest ustawiony na jedną z następujących wartości.
+Jeśli plik określony przez *filename* nie istnieje, zostanie utworzony nowy plik z danym ustawieniem uprawnień i zostanie on otwarty do zapisu. Jeśli plik już istnieje, a jego uprawnienia zezwalają na pisanie, **_creat** obcina plik do długości 0, niszczy poprzednią zawartość i otwiera je do zapisu. Ustawienie uprawnienia *PMODE* ma zastosowanie tylko do nowo utworzonych plików. Nowy plik otrzymuje określone ustawienie uprawnienia po jego pierwszym zamknięciu. Wyrażenie Integer *PMODE* zawiera jedną lub obie stałe manifestu **_S_IWRITE** i **_S_IREAD**, zdefiniowane w SYS\Stat.h. Po otrzymaniu obu stałych są one przyłączone do operatora bitowego or ( **&#124;** ). Parametr *PMODE* jest ustawiony na jedną z następujących wartości.
 
 |Wartość|Definicja|
 |-----------|----------------|
@@ -104,7 +105,7 @@ Jeśli plik określony przez *filename* nie istnieje, zostanie utworzony nowy pl
 |**_S_IREAD**|Odczytywanie dozwolone.|
 |**_S_IREAD** &#124; **_S_IWRITE**|Dozwolone odczytywanie i zapisywanie.|
 
-Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. Wszystkie pliki są zawsze do odczytu; nie można przyznać uprawnień tylko do zapisu. Tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** są równoważne. Pliki otwarte przy użyciu **_creat** są zawsze otwierane w trybie zgodności (zobacz [_sopen](sopen-wsopen.md)) z **_SH_DENYNO**.
+Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. Wszystkie pliki są zawsze do odczytu; nie można przyznać uprawnień tylko do zapisu. Tryby **_S_IWRITE** i **_S_IREAD**  |  **_S_IWRITE** są równoważne. Pliki otwarte przy użyciu **_creat** są zawsze otwierane w trybie zgodności (zobacz [_sopen](sopen-wsopen.md)) z **_SH_DENYNO**.
 
 **_creat** przed ustawieniem uprawnień (patrz [_umask](umask.md)) stosuje się do *PMODE* bieżącej maski uprawnień pliku. **_creat** jest zapewniana głównie w celu zapewnienia zgodności z poprzednimi bibliotekami. Wywołanie **_open** z **_O_CREAT** i **_O_TRUNC** w parametrze *Oflag* jest równoważne z **_creat** i jest preferowane dla nowego kodu.
 
@@ -112,8 +113,8 @@ Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. Wszystkie p
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_creat**|\<IO. h>|\<sys/Types. h>, \<sys/stat. h>, \<errno. h>|
-|**_wcreat**|\<IO. h> lub \<WCHAR. h>|\<sys/Types. h>, \<sys/stat. h>, \<errno. h>|
+|**_creat**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wcreat**|\<io.h> lub \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -152,7 +153,7 @@ int main( void )
 Created data file.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>

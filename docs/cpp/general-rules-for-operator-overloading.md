@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: ogólne reguły przeciążania operatorów'
 title: Zasady ogólne dotyczące przeciążania operatorów
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-ms.openlocfilehash: da0bf04435118c819fc29efd3082d8d312e43006
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 224bc6fb8de566519ef848471905d1ed76a020db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268733"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
 
@@ -68,6 +69,6 @@ Ta tożsamość nie może polegać na typach klasy, które przeciążają operat
 > [!NOTE]
 > Aby zapewnić spójność, najlepiej posługiwać się modelem typów wbudowanych podczas definiowania operatorów przeciążonych. Jeżeli semantyka operatorów przeciążonych różni się znacznie od ich znaczenia w innych kontekstach, może być to bardziej skomplikowane niż użyteczne.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeciążanie operatora](../cpp/operator-overloading.md)

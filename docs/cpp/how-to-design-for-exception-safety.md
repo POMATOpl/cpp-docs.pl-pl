@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o tym, jak: projektowanie pod kątem bezpieczeństwa wyjątków'
 title: 'Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4b957803d822b495ae6d44bb6640dcbb4535397
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268642"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków
 
@@ -89,7 +90,7 @@ Aby zapewnić bezpieczeństwo przed wyjątkami, funkcja musi upewnić się, że 
 
 ## <a name="the-three-exception-guarantees"></a>Trzy gwarancje wyjątków
 
-Zazwyczaj bezpieczeństwo wyjątków jest omówione w warunkach trzech gwarancji, że funkcja może zapewnić: *Gwarancja braku niepowodzenia*, *silna gwarancja*i *gwarancja podstawowa*.
+Zazwyczaj bezpieczeństwo wyjątków jest omówione w warunkach trzech gwarancji, że funkcja może zapewnić: *Gwarancja braku niepowodzenia*, *silna gwarancja* i *gwarancja podstawowa*.
 
 ### <a name="no-fail-guarantee"></a>Gwarancja braku niepowodzenia
 
@@ -119,7 +120,7 @@ Wszystkie typy wbudowane gwarantują brak niepowodzenia, a typy w bibliotece sta
 
 - Nie pozwól, aby jakikolwiek wyjątek został pominięty przez destruktora. Podstawowy aksjomat języka C++ mówi, że destruktory nigdy nie powinny pozwalać na przekazywanie wyjątków do wyższych poziomów stosu wywołań. Jeśli destruktor musi wykonać operację, która może się skończyć zgłoszeniem wyjątku, musi zrobić to w bloku „try catch” i wchłonąć wyjątek. Standardowa biblioteka zapewnia tę gwarancję wszystkim destruktorom, które definiuje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](errors-and-exception-handling-modern-cpp.md)<br/>
 [Instrukcje: interfejs między wyjątkowym i niewyjątkowym kodem](how-to-interface-between-exceptional-and-non-exceptional-code.md)

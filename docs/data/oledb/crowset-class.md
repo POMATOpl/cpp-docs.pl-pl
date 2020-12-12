@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CRowset'
 title: Klasa CRowset
 ms.date: 11/04/2016
 f1_keywords:
@@ -228,12 +229,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: b351530326e0dc4ed0b72db50d17717824eb6bb4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2d767803dcf5aac6dd4954d970ca753b3cfb24c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268538"
 ---
 # <a name="crowset-class"></a>Klasa CRowset
 
@@ -602,7 +603,7 @@ Wstawianie może zakończyć się niepowodzeniem, jeśli co najmniej jedna kolum
 
 Poniższy przykład pokazuje, jak uzyskać dostęp do źródła danych za pośrednictwem zestawu wierszy, a następnie wstawić ciąg za pomocą tabeli w zestawie wierszy.
 
-Najpierw Utwórz klasę tabeli, wstawiając nowy obiekt ATL do projektu. Na przykład kliknij prawym przyciskiem myszy projekt w okienku obszaru roboczego i wybierz polecenie **nowy obiekt ATL**. W kategorii **dostęp do danych** wybierz pozycję **Klient**. Utwórz obiekt odbiorcy typu **Table**. (Wybranie opcji **tabela** powoduje utworzenie zestawu wierszy bezpośrednio z tabeli; wybranie **polecenia** powoduje utworzenie zestawu wierszy za pośrednictwem polecenia SQL). Wybierz źródło danych, określając tabelę, za pomocą której chcesz uzyskać dostęp do tego źródła danych. Jeśli wywołasz **CCustomerTable**obiektu konsumenta, zaimplementuj kod wstawiania w następujący sposób:
+Najpierw Utwórz klasę tabeli, wstawiając nowy obiekt ATL do projektu. Na przykład kliknij prawym przyciskiem myszy projekt w okienku obszaru roboczego i wybierz polecenie **nowy obiekt ATL**. W kategorii **dostęp do danych** wybierz pozycję **Klient**. Utwórz obiekt odbiorcy typu **Table**. (Wybranie opcji **tabela** powoduje utworzenie zestawu wierszy bezpośrednio z tabeli; wybranie **polecenia** powoduje utworzenie zestawu wierszy za pośrednictwem polecenia SQL). Wybierz źródło danych, określając tabelę, za pomocą której chcesz uzyskać dostęp do tego źródła danych. Jeśli wywołasz **CCustomerTable** obiektu konsumenta, zaimplementuj kod wstawiania w następujący sposób:
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 

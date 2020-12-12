@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: New — Operator (C++)'
 title: new — Operator (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 0c3ed59262ec5ad061572d23c1166b2153cb16ca
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5bfc6fdc59348defc87d26dae1056ae80dab3ec5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268629"
 ---
 # <a name="new-operator-c"></a>new — Operator (C++)
 
@@ -230,14 +231,14 @@ Gdy wskaźnik `AnotherArray` wykracza poza zakres w tym przykładzie, nie można
 
 - Zwraca wskaźnik do obiektów typu wskaźnika pochodzącego od *nowej nazwy typu* lub *nazwy typu*. Program używa tego wskaźnika do dostępu do nowo przydzielonego obiektu.
 
-**`new`** Operator wywołuje **operator funkcji New**. W przypadku tablic dowolnego typu, a w przypadku obiektów, które nie **`class`** są **`struct`** typu,, lub **`union`** , funkcja globalna **:: operator new**jest wywoływana w celu przydzielenia magazynu. Obiekty typu klasy mogą definiować własne, **nowe** statyczne funkcje członkowskie dla poszczególnych klas.
+**`new`** Operator wywołuje **operator funkcji New**. W przypadku tablic dowolnego typu, a w przypadku obiektów, które nie **`class`** są **`struct`** typu,, lub **`union`** , funkcja globalna **:: operator new** jest wywoływana w celu przydzielenia magazynu. Obiekty typu klasy mogą definiować własne, **nowe** statyczne funkcje członkowskie dla poszczególnych klas.
 
 Gdy kompilator napotka **`new`** operator do przydzielenia obiektu **typu typu**, wystawia wywołanie `type` **:: operator new (sizeof (** `type` **))** lub, jeśli nie zdefiniowano **operatora** zdefiniowanego przez użytkownika, **:: operator new (sizeof (** `type` **))**. W związku z tym **`new`** operator może przydzielić poprawną ilość pamięci dla obiektu.
 
 > [!NOTE]
 > Argumentem **operatora new** jest typ `size_t` . Ten typ jest zdefiniowany w,,,,,,, \<direct.h> \<malloc.h> \<memory.h> \<search.h> \<stddef.h> \<stdio.h> \<stdlib.h> \<string.h> , i \<time.h> .
 
-Opcja gramatyki umożliwia określenie *położenia* (patrz Gramatyka dla [operatora new](../cpp/new-operator-cpp.md)). Parametru *umieszczania* można używać tylko dla implementacji **operatora new**zdefiniowanego przez użytkownika; umożliwia przekazywanie dodatkowych informacji do **operatora new**. Wyrażenie zawierające pole *umieszczania* , takie jak, `T *TObject = new ( 0x0040 ) T;` jest tłumaczone na `T *TObject = T::operator new( sizeof( T ), 0x0040 );` , jeśli Klasa T ma operator członkowski New, w przeciwnym razie `T *TObject = ::operator new( sizeof( T ), 0x0040 );` .
+Opcja gramatyki umożliwia określenie *położenia* (patrz Gramatyka dla [operatora new](../cpp/new-operator-cpp.md)). Parametru *umieszczania* można używać tylko dla implementacji **operatora new** zdefiniowanego przez użytkownika; umożliwia przekazywanie dodatkowych informacji do **operatora new**. Wyrażenie zawierające pole *umieszczania* , takie jak, `T *TObject = new ( 0x0040 ) T;` jest tłumaczone na `T *TObject = T::operator new( sizeof( T ), 0x0040 );` , jeśli Klasa T ma operator członkowski New, w przeciwnym razie `T *TObject = ::operator new( sizeof( T ), 0x0040 );` .
 
 Pierwotny zamiar pola *położenie* polega na przydzieleniu obiektów zależnych od sprzętu w adresach określonych przez użytkownika.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: typy wbudowane (C++)'
 title: Typy wbudowane (C++)
 ms.date: 07/22/2020
 f1_keywords:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 73486dd4d81fc91007f078ec5c509bcb963d2706
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 601bd0742002506272ec3da7af448a4bdba96065
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268746"
 ---
 # <a name="built-in-types-c"></a>Typy wbudowane (C++)
 
-Typy wbudowane (zwane również *typami podstawowymi*) są określane przez Standard języka C++ i są wbudowane w kompilator. Wbudowane typy nie są zdefiniowane w żadnym pliku nagłówkowym. Typy wbudowane są podzielone na trzy główne kategorie: *Całka*, *zmiennoprzecinkowa*i *void*. Typy całkowite reprezentują liczby całkowite. Typy zmiennoprzecinkowe mogą określać wartości, które mogą mieć części ułamkowe. Większość typów wbudowanych jest traktowana jako odrębne typy przez kompilator. Jednak niektóre typy są *synonimami*lub traktowane jako równoważne typy przez kompilator.
+Typy wbudowane (zwane również *typami podstawowymi*) są określane przez Standard języka C++ i są wbudowane w kompilator. Wbudowane typy nie są zdefiniowane w żadnym pliku nagłówkowym. Typy wbudowane są podzielone na trzy główne kategorie: *Całka*, *zmiennoprzecinkowa* i *void*. Typy całkowite reprezentują liczby całkowite. Typy zmiennoprzecinkowe mogą określać wartości, które mogą mieć części ułamkowe. Większość typów wbudowanych jest traktowana jako odrębne typy przez kompilator. Jednak niektóre typy są *synonimami* lub traktowane jako równoważne typy przez kompilator.
 
 ## <a name="void-type"></a>Typ void
 
@@ -85,7 +86,7 @@ Zmienna typu **`wchar_t`** jest typu szerokiego lub wielobajtowego. Użyj **`L`*
 
 **Specyficzne dla firmy Microsoft**: Domyślnie **`wchar_t`** jest typem natywnym, ale można użyć, [`/Zc:wchar_t-`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby utworzyć **`wchar_t`** element typedef dla **`unsigned short`** . **`__wchar_t`** Typ jest synonimem specyficznym dla firmy Microsoft dla typu natywnego **`wchar_t`** .
 
-**`char8_t`** Typ jest używany dla reprezentacji znaków UTF-8. Ma taką samą reprezentację jak **`unsigned char`** , ale jest traktowana jako odrębny typ przez kompilator. **`char8_t`** Typ jest nowy w języku c++ 20. **Specyficzne dla firmy Microsoft**: użycie **`char8_t`** wymaga [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opcji kompilatora.
+**`char8_t`** Typ jest używany dla reprezentacji znaków UTF-8. Ma taką samą reprezentację jak **`unsigned char`** , ale jest traktowana jako odrębny typ przez kompilator. **`char8_t`** Typ jest nowy w języku c++ 20. **Specyficzne dla firmy Microsoft**: użycie **`char8_t`**  wymaga [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opcji kompilatora.
 
 **`char16_t`** Typ jest używany dla reprezentacji znaków UTF-16. Musi być wystarczająco duży, aby reprezentować dowolną jednostkę kodu w formacie UTF-16. Jest on traktowany jako typ odrębny przez kompilator.
 
@@ -154,6 +155,6 @@ Zobacz [zakresy typów danych](data-type-ranges.md) , aby uzyskać podsumowanie 
 
 Aby uzyskać więcej informacji na temat konwersji typów, zobacz [Konwersje standardowe](standard-conversions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zakresy typu danych](data-type-ranges.md)

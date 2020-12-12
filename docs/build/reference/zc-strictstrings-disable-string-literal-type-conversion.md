@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: `/Zc:strictStrings` (wyłączanie konwersji typów literału ciągu)'
 title: /Zc:strictStrings (Wyłączanie konwersji typów literału ciągu)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: df880ed64fa472ff55eb5ee0d17caacf56228ab6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38c0ac2fe69acd81762fbf26797eece659ee63a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269058"
 ---
-# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings`(Wyłącz konwersję typu literału ciągu)
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings` (Wyłącz konwersję typu literału ciągu)
 
 Gdy jest określony, kompilator wymaga ścisłej zgodności **`const`** dla wskaźników inicjowanych za pomocą literałów ciągów.
 
@@ -66,10 +67,10 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **`/Zc:strictStrings`** , a następnie wybierz przycisk **OK**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[`/Zc`Zgodności](zc-conformance.md)<br/>
+[`/Zc` Zgodności](zc-conformance.md)<br/>

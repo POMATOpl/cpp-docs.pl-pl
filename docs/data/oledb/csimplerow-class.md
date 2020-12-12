@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CSimpleRow'
 title: CSimpleRow — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7390a8d82e8996c81761065541eebbbccae510ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268421"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow — Klasa
 

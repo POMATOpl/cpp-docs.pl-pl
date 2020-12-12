@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: funkcje (C++)'
 title: Funkcje (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: 5beadbbf283a64f12dab7f0ee39a267ec1797861
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da338e0fcc6c30f0f1482cb900803c0a98f854ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268928"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -26,7 +27,7 @@ int sum(int a, int b)
 }
 ```
 
-Funkcja może być wywoływana lub *wywoływana*z dowolnej liczby miejsc w programie. Wartości, które są przekazane do funkcji, są *argumentami*, których typy muszą być zgodne z typami parametrów w definicji funkcji.
+Funkcja może być wywoływana lub *wywoływana* z dowolnej liczby miejsc w programie. Wartości, które są przekazane do funkcji, są *argumentami*, których typy muszą być zgodne z typami parametrów w definicji funkcji.
 
 ```cpp
 int main()
@@ -261,7 +262,7 @@ Zmienna zadeklarowana wewnątrz treści funkcji jest nazywana *zmienną lokalną
 
 W języku C++ zmienna lokalna może być zadeklarowana jako statyczna. Zmienna jest widoczna tylko wewnątrz treści funkcji, ale jedna kopia zmiennej istnieje dla wszystkich wystąpień funkcji. Lokalne obiekty statyczne są niszczone podczas kończenia określonego przez `atexit` . Jeśli obiekt statyczny nie został skonstruowany, ponieważ przepływ sterowania programu został pominięty w jego deklaracji, nie podjęto próby zniszczenia tego obiektu.
 
-## <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>Typ odejmowania w typach zwracanych (C++ 14)
+## <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a> Typ odejmowania w typach zwracanych (C++ 14)
 
 W języku C++ 14 można użyć, **`auto`** aby nakazać kompilatorowi wywnioskowanie typu zwracanego z treści funkcji bez konieczności podawania końcowego typu zwracanego. Należy pamiętać, że program **`auto`** zawsze określa wartość zwracaną przez. Użyj, `auto&&` aby nakazać kompilatorowi wywnioskowanie odwołania.
 
@@ -295,7 +296,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>Zwracanie wielu wartości z funkcji
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a> Zwracanie wielu wartości z funkcji
 
 Istnieją różne sposoby zwracania więcej niż jednej wartości z funkcji:
 
@@ -423,7 +424,7 @@ int (*myFunction(char* s))(int);
 
 Poprzednia deklaracja jest równoważna z deklaracją używaną **`typedef`** powyżej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeciążanie funkcji](../cpp/function-overloading.md)<br/>
 [Funkcje z listami zmiennych argumentów](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
