@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: literały ciągu języka C'
 title: Literały ciągu języka C
 ms.date: 08/31/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-ms.openlocfilehash: 0df7126efe5a5b2caa3a4fee51465d0dbe892e89
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c18a13dcc44203399aa6518f53031d29b00a5a4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207088"
 ---
 # <a name="c-string-literals"></a>Literały ciągu języka C
 
@@ -21,7 +22,7 @@ ms.locfileid: "67400583"
 
 *literał ciągu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-Sequence*<sub>opt</sub> **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s-char-Sequence*<sub>opt</sub> **"**
+&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s-char-Sequence*<sub></sub> **"**
 
 *s-char-Sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*s-char*
@@ -29,7 +30,7 @@ ms.locfileid: "67400583"
 &nbsp;&nbsp;&nbsp;&nbsp;*s-char-Sequence* *s-char*
 
 *s-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Każdy element członkowski zestawu znaków źródłowych z wyjątkiem podwójnego cudzysłowu ("), ukośnika odwrotnego (\\) lub znaku nowego wiersza
+&nbsp;&nbsp;&nbsp;&nbsp;Każdy element członkowski zestawu znaków źródłowych z wyjątkiem podwójnego cudzysłowu ("), ukośnika odwrotnego ( \\ ) lub znaku nowego wiersza
 
 &nbsp;&nbsp;&nbsp;&nbsp;*Sekwencja ucieczki*
 
@@ -41,7 +42,7 @@ Poniższy przykład jest prostym literałem ciągu:
 char *amessage = "This is a string literal.";
 ```
 
-Wszystkie kody ucieczki wymienione w tabeli [sequences Escape](../c-language/escape-sequences.md) są prawidłowe w literałach ciągu. Aby przedstawić podwójny cudzysłów w literale ciągu, użyj sekwencji ** \\**unikowej ". Znak pojedynczego cudzysłowu (**'**) może być reprezentowany bez sekwencji ucieczki. Po znaku ukośnika**\\**odwrotnego () musi następować drugi ukośnik odwrotny (**\\**), gdy występuje w ciągu. Gdy ukośnik odwrotny pojawia się na końcu wiersza, jest zawsze interpretowany jako znak kontynuacji wiersza.
+Wszystkie kody ucieczki wymienione w tabeli [sequences Escape](../c-language/escape-sequences.md) są prawidłowe w literałach ciągu. Aby przedstawić podwójny cudzysłów w literale ciągu, użyj sekwencji unikowej **\\ "**. Znak pojedynczego cudzysłowu (**'**) może być reprezentowany bez sekwencji ucieczki. Po znaku ukośnika odwrotnego ( **\\** ) musi następować drugi ukośnik odwrotny ( **\\\\** ), gdy występuje w ciągu. Gdy ukośnik odwrotny pojawia się na końcu wiersza, jest zawsze interpretowany jako znak kontynuacji wiersza.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _unlink, _wunlink'
 title: _unlink, _wunlink
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 742df45211b6e19314a3b3f89880d7f2cd83fb2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909276"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205151"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
@@ -87,14 +88,14 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_unlink**|\<IO. h> i \<stdio. h>|
-|**_wunlink**|\<IO. h> lub \<WCHAR. h>|
+|**_unlink**|\<io.h> i \<stdio.h>|
+|**_wunlink**|\<io.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="code-example"></a>Przykład kodu
 
-Ten program używa _unlink do usuwania CRT_UNLINK. Zawierającego.
+Ten program używa _unlink do usuwania CRT_UNLINK.TXT.
 
 ```C
 // crt_unlink.c
@@ -110,7 +111,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_unlinktxt"></a>Dane wejściowe: crt_unlink. txt
+### <a name="input-crt_unlinktxt"></a>Dane wejściowe: crt_unlink.txt
 
 ```Input
 This file will be deleted.

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/constexpr (ocena constexpr kontrolki)
 title: /constexpr (Szacowanie kontrolki constexpr)
 ms.date: 08/15/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 7b3ae1cd732fe1ec234e2734ea4c6fa86db9d5af
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9274321933fb0fbcf965943b0168db85c8a8d5c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205346"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (Szacowanie kontrolki constexpr)
 
@@ -44,7 +45,7 @@ Opcje **/constexpr** są dostępne począwszy od programu Visual Studio 2015.
 
 1. Otwórz okno dialogowe **strony właściwości** projektu.
 
-2. W obszarze **Właściwości konfiguracji**rozwiń folder **C/C++** i wybierz stronę właściwości **wiersza polecenia** .
+2. W obszarze **Właściwości konfiguracji** rozwiń folder **C/C++** i wybierz stronę właściwości **wiersza polecenia** .
 
 3. W polu **dodatkowe opcje** wprowadź wszystkie opcje kompilatora **/constexpr** . Wybierz **przycisk OK** lub **Zastosuj** , aby zapisać zmiany.
 
@@ -52,7 +53,7 @@ Opcje **/constexpr** są dostępne począwszy od programu Visual Studio 2015.
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

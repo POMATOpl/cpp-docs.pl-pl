@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _recalloc'
 title: _recalloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: 45f483bcaa397969a81097768ebbd1ed4cda288b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 09cecc0b7fe006ca5f52340254534fcc67b70e84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205177"
 ---
 # <a name="_recalloc"></a>_recalloc
 
@@ -54,7 +55,7 @@ void *_recalloc(
 *memblock*<br/>
 Wskaźnik do wcześniej przydzielony blok pamięci.
 
-*liczba*<br/>
+*Liczba*<br/>
 Liczba elementów.
 
 *zmienia*<br/>
@@ -100,7 +101,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [_recalloc_dbg](recalloc-dbg.md)<br/>

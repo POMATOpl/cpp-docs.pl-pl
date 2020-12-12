@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; &gt; Operatory tablic'
 title: '&lt;&gt;Operatory tablic'
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d799bd584f45e93668c1ac2a753c82f41220773
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1cd51fa2a4a34dfa4fb8548ef3437662abce401b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205528"
 ---
 # <a name="ltarraygt-operators"></a>&lt;&gt;Operatory tablic
 
-\<array>Nagłówek zawiera te funkcje **array** szablonu porównania, które nie są elementami członkowskimi.
+\<array>Nagłówek zawiera te funkcje  szablonu porównania, które nie są elementami członkowskimi.
 
 [operator! =](#op_neq)\
 [zakład&gt;](#op_gt)\
@@ -465,6 +466,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<array>](../standard-library/array.md)

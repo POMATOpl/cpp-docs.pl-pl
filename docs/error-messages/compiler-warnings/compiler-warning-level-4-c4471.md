@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4471'
 title: Ostrzeżenie kompilatora (poziom 4) C4471
 ms.date: 04/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5b8c3ef419a4c6eaf9a674827cd5545a1f1b2bfe
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cef492bf8aab33f46b3f590a13ffa5462a7ca41d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203500"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Ostrzeżenie kompilatora (poziom 4) C4471
 
@@ -19,7 +20,7 @@ ms.locfileid: "90685505"
 
 Nie znaleziono deklaracji do przodu wyliczenia nienależącego do zakresu bez specyfikatora dla typu źródłowego. Domyślnie Visual C++ zakłada się, **`int`** że jest typem podstawowym dla wyliczenia. Może to powodować problemy, jeśli inny typ jest używany w definicji wyliczenia, na przykład, jeśli określono inny jawny typ lub inny typ jest niejawnie ustawiany przez inicjatora. Możesz również mieć problemy z przenośnością; Inne kompilatory nie zakładają **`int`** , że jest podstawowym typem wyliczenia.
 
-To ostrzeżenie jest domyślnie wyłączone; Możesz użyć/Wall lub/w*N*4471, aby włączyć go w wierszu polecenia, lub użyć [ostrzeżenia](../../preprocessor/warning.md) #pragma w pliku źródłowym.
+To ostrzeżenie jest domyślnie wyłączone; Możesz użyć/Wall lub/w *N* 4471, aby włączyć go w wierszu polecenia, lub użyć [ostrzeżenia](../../preprocessor/warning.md) #pragma w pliku źródłowym.
 
 ## <a name="examples"></a>Przykłady
 

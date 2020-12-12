@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak używać transformatora w potoku danych'
 title: 'Porady: używanie transformatora w potoku danych'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: 4eb490ecf51abea324f20395279bff2d74b7af77
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97b0af16a3ce89b940952117bb8639d281363a23
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205619"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>Porady: używanie transformatora w potoku danych
 
-Ten temat zawiera podstawowy przykład, który pokazuje, jak używać klasy [concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) w potoku danych. Aby uzyskać pełniejszy przykład użycia potoku danych do przetwarzania obrazu, zobacz [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Ten temat zawiera podstawowy przykład, który pokazuje, jak używać klasy [concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) w potoku danych. Aby zapoznać się z bardziej kompletnym przykładem, który używa potoku danych do przetwarzania obrazu, zobacz [Przewodnik: tworzenie sieci Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 *Przetwarzanie potokowe danych* jest typowym wzorcem w współbieżnym programowaniu. Potok danych składa się z serii etapów, w których każdy etap wykonuje prace, a następnie przekazuje wynik pracy do następnego etapu. `transformer`Klasa a składnika w potokach danych, ponieważ odbiera wartość wejściową, wykonuje prace nad tą wartością, a następnie tworzy wynik dla innego składnika do użycia.
 
@@ -54,8 +55,8 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 > **cl.exe/EHsc Data-Pipeline. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
+[Przewodnik: tworzenie sieci Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)

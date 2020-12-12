@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: konwersje User-Defined (C++/CLI)'
 title: Konwersje zdefiniowane przez użytkownika (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0b07ab3201bfd379a17922f020486d0b17a59558
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204267"
 ---
 # <a name="user-defined-conversions-ccli"></a>Konwersje zdefiniowane przez użytkownika (C++/CLI)
 
@@ -69,7 +70,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in N::N
@@ -80,7 +81,7 @@ in N::N
 
 Operatory Convert-from tworzą obiekt klasy, w której operator jest zdefiniowany na podstawie obiektu innej klasy.
 
-Standard C++ nie obsługuje operatorów Convert-from; w C++ tym celu Standard używa konstruktorów. Jednak w przypadku korzystania z typów CLR Wizualizacja C++ zapewnia obsługę składni dla wywoływania operatorów Convert-from.
+Standard C++ nie obsługuje operatorów Convert-from; w tym celu w standardzie C++ są stosowane konstruktory. Jednak w przypadku używania typów CLR Visual C++ zapewnia obsługę składni dla wywoływania operatorów Convert-from.
 
 Aby dobrze współdziałać z innymi językami zgodnymi ze specyfikacją CLS, warto otoczyć każdy zdefiniowany przez użytkownika Konstruktor jednoargumentowy dla danej klasy z odpowiednim operatorem konwersji.
 
@@ -133,7 +134,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in operator
@@ -168,7 +169,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 10
@@ -197,7 +198,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 10.3
@@ -232,7 +233,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 True
@@ -267,7 +268,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 5
@@ -310,7 +311,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 13
@@ -319,6 +320,6 @@ int main() {
 2000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)

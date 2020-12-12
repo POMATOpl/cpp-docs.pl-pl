@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l'
 title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 5f2c8b595de323994aa670a8e0fee9e562897e49
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 08233d05dc558bf659c1c2ee00c3a381be2d1257
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206932"
 ---
 # <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
@@ -156,16 +157,16 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbcgraph**|\<mbstring. h>|
-|**_ismbcgraph_l**|\<mbstring. h>|
-|**_ismbcprint**|\<mbstring. h>|
-|**_ismbcprint_l**|\<mbstring. h>|
-|**_ismbcpunct**|\<mbstring. h>|
-|**_ismbcpunct_l**|\<mbstring. h>|
-|**_ismbcblank**|\<mbstring. h>|
-|**_ismbcblank_l**|\<mbstring. h>|
-|**_ismbcspace**|\<mbstring. h>|
-|**_ismbcspace_l**|\<mbstring. h>|
+|**_ismbcgraph**|\<mbstring.h>|
+|**_ismbcgraph_l**|\<mbstring.h>|
+|**_ismbcprint**|\<mbstring.h>|
+|**_ismbcprint_l**|\<mbstring.h>|
+|**_ismbcpunct**|\<mbstring.h>|
+|**_ismbcpunct_l**|\<mbstring.h>|
+|**_ismbcblank**|\<mbstring.h>|
+|**_ismbcblank_l**|\<mbstring.h>|
+|**_ismbcspace**|\<mbstring.h>|
+|**_ismbcspace_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -177,7 +178,7 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Procedury _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

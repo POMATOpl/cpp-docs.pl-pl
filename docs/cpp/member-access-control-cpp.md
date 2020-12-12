@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: składowej Access Control (C++)'
 title: Kontrola dostępu do elementów członkowskich (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2cce7cb98e76098f3c20a6c2404f91ccf40db1cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206880"
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 
@@ -62,7 +63,7 @@ W poniższej tabeli przedstawiono interakcje między tymi czynnikami i sposób o
 
 ### <a name="member-access-in-base-class"></a>Dostęp do elementu członkowskiego w klasie bazowej
 
-|private|protected|Publiczny|
+|private|protected|Publiczne|
 |-------------|---------------|------------|
 |Zawsze niedostępna niezależnie od dostępu do wartości pochodnych|Prywatna w klasie pochodnej, jeśli używasz użycia prywatnego|Prywatna w klasie pochodnej, jeśli używasz użycia prywatnego|
 ||Chroniona w klasie pochodnej, jeśli używasz ochrony pochodnej|Chroniona w klasie pochodnej, jeśli używasz ochrony pochodnej|
@@ -112,7 +113,7 @@ int main()
 }
 ```
 
-W programie `DerivedClass1` funkcja członkowska `PublicFunc` jest publiczną składową i `ProtectedFunc` jest chronionym elementem członkowskim, ponieważ `BaseClass` jest publiczną klasą bazową. `PrivateFunc`jest prywatny dla `BaseClass` i nie jest dostępny dla żadnej klasy pochodnej.
+W programie `DerivedClass1` funkcja członkowska `PublicFunc` jest publiczną składową i `ProtectedFunc` jest chronionym elementem członkowskim, ponieważ `BaseClass` jest publiczną klasą bazową. `PrivateFunc` jest prywatny dla `BaseClass` i nie jest dostępny dla żadnej klasy pochodnej.
 
 W programie `DerivedClass2` funkcje `PublicFunc` i `ProtectedFunc` są uznawane za prywatne składowe, ponieważ `BaseClass` jest prywatną klasą bazową. `PrivateFunc`Jest on ponownie prywatny `BaseClass` i nie jest dostępny dla żadnej klasy pochodnej.
 
@@ -239,6 +240,6 @@ Dostęp wzdłuż ścieżki grafu dziedziczenia
 
 Na rysunku nazwa zadeklarowana w klasie `VBase` jest zawsze osiągana przez klasę `RightPath` . Właściwa ścieżka jest bardziej dostępna `RightPath` , ponieważ deklaruje `VBase` jako publiczną klasę bazową, natomiast `LeftPath` deklaruje `VBase` jako prywatną.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

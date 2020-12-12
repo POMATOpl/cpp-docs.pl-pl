@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: programy obsługi komunikatów'
 title: Programy obsługi komunikatów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-ms.openlocfilehash: f9c5272b513a92dc6dcfa37559b00ae79b658918
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dc3f52956f125542ef0c5d879543f1e8a49e803b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203370"
 ---
 # <a name="message-handlers"></a>Programy obsługi komunikatów
 
-W MFC, dedykowana funkcja *obsługi* przetwarza każdą oddzielny komunikat. Funkcje programu obsługi komunikatów są funkcjami składowymi klasy. Ta dokumentacja używa zamiennej *funkcji elementu członkowskiego obsługi*komunikatów, *funkcji obsługi komunikatów*, *obsługi komunikatów*i *programu obsługi* . Niektóre rodzaje obsługi komunikatów są również nazywane "programami obsługi poleceń".
+W MFC, dedykowana funkcja *obsługi* przetwarza każdą oddzielny komunikat. Funkcje programu obsługi komunikatów są funkcjami składowymi klasy. Ta dokumentacja używa zamiennej *funkcji elementu członkowskiego obsługi* komunikatów, *funkcji obsługi komunikatów*, *obsługi komunikatów* i *programu obsługi* . Niektóre rodzaje obsługi komunikatów są również nazywane "programami obsługi poleceń".
 
 Pisanie programów obsługi komunikatów dla dużej części pracy podczas pisania aplikacji struktury. W tym artykule opisano, jak działa mechanizm przetwarzania komunikatów.
 

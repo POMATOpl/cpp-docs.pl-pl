@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej o programie: lekkie zadania'
 title: Zadania lekkie
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: be417052ffab19c1bc2d2ba6f35094f98e315812
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 328d556eacb2e33bdf3077b722defa81669a525c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205567"
 ---
 # <a name="lightweight-tasks"></a>Zadania lekkie
 
-W tym dokumencie opisano rolę uproszczonych zadań w środowisko uruchomieniowe współbieżności. *Uproszczone zadanie* to zadanie, które można zaplanować bezpośrednio z obiektu `concurrency::Scheduler` lub `concurrency::ScheduleGroup`. Uproszczone zadanie jest podobne do funkcji dostarczanej do funkcji [wielowątkowości](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) interfejsu API systemu Windows. W związku z tym lekkie zadania są przydatne podczas dostosowywania istniejącego kodu do korzystania z funkcji planowania środowisko uruchomieniowe współbieżności. Środowisko uruchomieniowe współbieżności sam używa uproszczonych zadań do zaplanowania agentów asynchronicznych i wysyłania komunikatów między blokami komunikatów asynchronicznych.
+W tym dokumencie opisano rolę uproszczonych zadań w środowisko uruchomieniowe współbieżności. *Uproszczone zadanie* to zadanie, które można zaplanować bezpośrednio z `concurrency::Scheduler` obiektu lub `concurrency::ScheduleGroup` . Uproszczone zadanie jest podobne do funkcji dostarczanej do funkcji [wielowątkowości](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) interfejsu API systemu Windows. W związku z tym lekkie zadania są przydatne podczas dostosowywania istniejącego kodu do korzystania z funkcji planowania środowisko uruchomieniowe współbieżności. Środowisko uruchomieniowe współbieżności sam używa uproszczonych zadań do zaplanowania agentów asynchronicznych i wysyłania komunikatów między blokami komunikatów asynchronicznych.
 
 > [!TIP]
 > Środowisko uruchomieniowe współbieżności udostępnia domyślny harmonogram i dlatego nie jest konieczne tworzenie go w aplikacji. Ponieważ Harmonogram zadań ułatwia dostosowanie wydajności aplikacji, zalecamy rozpoczęcie od [biblioteki równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) , jeśli są one nowe dla środowisko uruchomieniowe współbieżności.
@@ -31,4 +32,4 @@ Aby zapoznać się z przykładem, który pokazuje, jak dostosować istniejący k
 ## <a name="see-also"></a>Zobacz też
 
 [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Przewodnik: adaptacja istniejącego kodu do potrzeb zadań lekkich](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
+[Wskazówki: adaptacja istniejącego kodu do korzystania z uproszczonych zadań](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)

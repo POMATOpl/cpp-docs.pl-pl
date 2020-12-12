@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zestaw rekordów: sortowanie rekordów (ODBC)'
 title: 'Zestaw rekordów: sortowanie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,28 +7,28 @@ helpviewer_keywords:
 - ODBC recordsets, sorting
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-ms.openlocfilehash: 8b4deea1d8cbd4abe01ccc7a4114131378abe463
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbf2ef3c42061bac9b41550a0c44a20f68c099b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204423"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Zestaw rekordów: sortowanie rekordów (ODBC)
 
 Ten temat dotyczy klas MFC ODBC.
 
-W tym temacie wyjaśniono, jak sortować swój rekord. Można określić jedną lub więcej kolumn, na których ma być opierać sortowanie, i można określić kolejność rosnącą lub malejącą (**ASC** lub **DESC**; **ASC** jest ustawieniem domyślnym) dla każdej określonej kolumny. Na przykład jeśli określisz dwie kolumny, rekordy są sortowane najpierw w pierwszej kolumnie o nazwie, a następnie w drugiej kolumnie o nazwie. Klauzula SQL **ORDER BY** definiuje sortowanie. Gdy struktura dołącza **order by** klauzuli do kwerendy SQL pliku recordset, klauzula kontroluje kolejność zaznaczenia.
+W tym temacie opisano sposób sortowania zestawu rekordów. Można określić co najmniej jedną kolumnę, na podstawie której ma zostać wykonane sortowanie, i można określić kolejność rosnącą lub malejącą (**ASC** lub **DESC**; Wartość **ASC** jest domyślna) dla każdej określonej kolumny. Na przykład w przypadku określenia dwóch kolumn rekordy są sortowane najpierw w pierwszej kolumnie o nazwie, a następnie w drugiej kolumnie o nazwie. Klauzula **order by** języka SQL definiuje sortowanie. Gdy struktura dołącza klauzulę **order by** do zapytania SQL zestawu rekordów, klauzula kontroluje kolejność zaznaczania.
 
-Należy ustanowić kolejność sortowania pliku recordset po skonstruowaniu `Open` obiektu, ale przed wywołaniem jego funkcji elementu członkowskiego (lub przed wywołaniem funkcji `Requery` elementu członkowskiego dla istniejącego obiektu pliku rekordów, którego `Open` funkcja elementu członkowskiego została wcześniej wywołana).
+Należy określić kolejność sortowania zestawu rekordów po utworzeniu obiektu, ale przed wywołaniem `Open` funkcji składowej (lub przed wywołaniem funkcji składowej `Requery` dla istniejącego obiektu zestawu rekordów, którego `Open` funkcja członkowska została wywołana wcześniej).
 
-#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Aby określić kolejność sortowania obiektu obiektu aktu rekordów
+#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Aby określić kolejność sortowania dla obiektu zestawu rekordów
 
-1. Skonstruuj nowy obiekt pliku `Requery` recordset (lub przygotuj się do wywołania istniejącego).
+1. Utwórz nowy obiekt zestawu rekordów (lub Przygotuj się do wywołania `Requery` istniejącej).
 
-1. Ustaw wartość elementu członkowskiego [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) danych obiektu.
+1. Ustaw wartość elementu członkowskiego danych [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) obiektu.
 
-   Sortowanie jest ciągiem zakończonym z wartością null. Zawiera zawartość klauzuli **ORDER BY,** ale nie słowo kluczowe **ORDER BY**. Możesz na przykład użyć następujących usług:
+   Sortowanie jest ciągiem zakończonym wartością null. Zawiera zawartość klauzuli **order by** , ale nie słowo kluczowe **order by**. Możesz na przykład użyć następujących usług:
 
     ```
     recordset.m_strSort = "LastName DESC, FirstName DESC";
@@ -41,9 +42,9 @@ Należy ustanowić kolejność sortowania pliku recordset po skonstruowaniu `Ope
 
 1. Ustaw inne potrzebne opcje, takie jak filtr, tryb blokowania lub parametry.
 
-1. Wywołanie `Open` nowego obiektu `Requery` (lub istniejącego obiektu).
+1. Wywołaj `Open` dla nowego obiektu (lub `Requery` dla istniejącego obiektu).
 
-Wybrane rekordy są uporządkowane w sposób określony. Na przykład, aby posortować zestaw rekordów uczniów w kolejności malejącej według nazwiska, a następnie imienia, wykonaj następujące czynności:
+Wybrane rekordy są uporządkowane według określonych. Na przykład, aby posortować zestaw rekordów uczniów w kolejności malejącej według nazwiska, najpierw należy wykonać następujące czynności:
 
 ```cpp
 // Construct the recordset
@@ -54,13 +55,13 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );
 ```
 
-Plik recordset zawiera wszystkie rekordy uczniów, posortowane w kolejności malejącej (Z do A) według nazwiska, a następnie według imienia.
+Zestaw rekordów zawiera wszystkie rekordy uczniów, posortowane w kolejności malejącej (od z do A) według nazwiska, a następnie według imienia i nazwiska.
 
 > [!NOTE]
-> Jeśli zdecydujesz się zastąpić domyślny ciąg SQL zestawu rekordów, przekazując własny ciąg SQL do `Open`, nie ustawiaj sortowania, jeśli ciąg niestandardowy ma klauzulę ORDER **BY.**
+> Jeśli zdecydujesz się zastąpić domyślny ciąg SQL zestawu rekordów, przekazując własny ciąg SQL do `Open` , nie ustawiaj sortowania, jeśli niestandardowy ciąg ma klauzulę **order by** .
 
 ## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: parametryzacja zestawu rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Zestaw rekordów: parametryzacja a zestaw rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [Zestaw rekordów: filtrowanie rekordów (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

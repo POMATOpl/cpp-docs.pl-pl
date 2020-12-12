@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o błędzie środowiska uruchomieniowego C R6033
 title: Błąd czasu wykonania języka C R6033
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
-ms.openlocfilehash: 86ac98a2635975b811c7b50020e4d4782675ae4d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 377f872957af4ab4a844e7d93345a612a16c0490
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206607"
 ---
 # <a name="c-runtime-error-r6033"></a>Błąd czasu wykonania języka C R6033
 
@@ -29,4 +30,4 @@ Próba użycia kodu MSIL z tego zestawu podczas inicjowania kodu natywnego. Wska
 
 **Informacje dla programistów**
 
-Ta Diagnostyka wskazuje, że instrukcje MSIL zostały wykonane podczas blokady modułu ładującego. Taka sytuacja może wystąpić, jeśli skompilowano C++ natywne przy użyciu flagi/CLR. W modułach, które zawierają kod zarządzany, należy używać tylko flagi/CLR. Aby uzyskać więcej informacji, zobacz [Inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md).
+Ta Diagnostyka wskazuje, że instrukcje MSIL zostały wykonane podczas blokady modułu ładującego. Taka sytuacja może wystąpić, jeśli skompilowano natywne C++ przy użyciu flagi/CLR. W modułach, które zawierają kod zarządzany, należy używać tylko flagi/CLR. Aby uzyskać więcej informacji, zobacz [Inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md).

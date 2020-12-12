@@ -1,5 +1,6 @@
 ---
 title: Specyfikatory typu danych i odpowiedniki
+description: Opisuje Specyfikatory typu danych Microsoft Visual C i ich odpowiedniki.
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type specifiers [C++], list
@@ -11,17 +12,16 @@ helpviewer_keywords:
 - data types [C++], specifiers
 - simple types, names
 - type names [C++], simple
-ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: cc8ba746bea7f6ea885beb625de414d83367b53f
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6a1231bc19617dddf1cc01d4c5e7db2863f1055f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207049"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specyfikatory typu danych i odpowiedniki
 
-Ta książka zazwyczaj używa formularzy specyfikatorów typu wymienionych w poniższej tabeli, a nie w postaci długich, i zakłada, że **`char`** Typ jest podpisany domyślnie. W związku z tym, w tej książce, **`char`** jest równoważne **`signed char`** .
+Ta dokumentacja zazwyczaj używa formularzy specyfikatorów typu wymienionych w poniższej tabeli, a nie na długich formularzach. Przyjęto również założenie, że **`char`** Typ jest podpisany domyślnie. W tej dokumentacji **`char`** jest równoważne **`signed char`** .
 
 ## <a name="type-specifiers-and-equivalents"></a>Specyfikatory typów i równoważne
 
@@ -44,10 +44,10 @@ Ta książka zazwyczaj używa formularzy specyfikatorów typu wymienionych w pon
 
 **Specyficzne dla firmy Microsoft**
 
-Możesz określić **`/J`** opcję kompilatora, aby zmienić domyślny **`char`** Typ z **`signed char`** na **`unsigned char`** . Gdy ta opcja jest stosowana, **`char`** oznacza to samo, co **`unsigned char`** , i musisz użyć **`signed`** słowa kluczowego, aby zadeklarować wartość znaku ze znakiem. Jeśli **`char`** wartość jest zadeklarowana jawnie **`signed`** , ta **`/J`** opcja nie ma wpływu na tę opcję, a wartość jest podpisywany po rozszerzeniu do **`int`** typu. **`char`** Typ ma wartość zero-Extended, gdy zostanie rozszerzony do **`int`** typu.
+Możesz określić **`/J`** opcję kompilatora, aby zmienić domyślny **`char`** Typ z **`signed char`** na **`unsigned char`** . Gdy ta opcja jest stosowana, **`char`** oznacza to samo, co **`unsigned char`** , i musisz użyć **`signed`** słowa kluczowego, aby zadeklarować wartość znaku ze znakiem. Jeśli **`char`** wartość jest zadeklarowana jawnie **`signed`** , ta **`/J`** opcja nie ma wpływu na ją, a wartość jest podwyższenie poziomu, gdy zostanie powiększona do **`int`** typu. **`char`** Typ ma wartość zero-Extended, gdy zostanie rozszerzony do **`int`** typu.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Specyfikatory typu C](../c-language/c-type-specifiers.md)

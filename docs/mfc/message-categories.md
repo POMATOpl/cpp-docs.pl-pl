@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kategorie komunikatów'
 title: Kategorie komunikatów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: 3875a6931b4380f0531e4c1786de6dddfccb76ca
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 66635101a8727e560d21d44546e2e12ace6f33ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203383"
 ---
 # <a name="message-categories"></a>Kategorie komunikatów
 
@@ -35,11 +36,11 @@ Jakiego rodzaju komunikaty są przeznaczone do obsługi zapisu, istnieją trzy g
 
    Obejmuje to WM_COMMAND komunikatów powiadomień z obiektów interfejsu użytkownika: menu, przyciski paska narzędzi i klawisze skrótów. Struktura przetwarza polecenia inaczej niż inne komunikaty i może być obsługiwana przez więcej rodzajów obiektów, jak wyjaśniono w [obiektach docelowych poleceń](command-targets.md).
 
-## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a>Komunikaty systemu Windows i kontrolki — komunikaty powiadomień
+## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a> Komunikaty systemu Windows i komunikaty Control-Notification
 
 Komunikaty w kategoriach 1 i 2 — komunikaty systemu Windows i powiadomienia dotyczące kontroli — są obsługiwane przez system Windows: obiekty klas pochodnych od klasy `CWnd` . Obejmuje to,,,, `CFrameWnd` `CMDIFrameWnd` `CMDIChildWnd` `CView` `CDialog` i własne klasy pochodne od tych klas podstawowych. Takie obiekty hermetyzują `HWND` uchwyt do okna systemu Windows.
 
-## <a name="command-messages"></a><a name="_core_command_messages"></a>Komunikaty poleceń
+## <a name="command-messages"></a><a name="_core_command_messages"></a> Komunikaty poleceń
 
 Komunikaty w kategorii 3 — polecenia — mogą być obsługiwane przez szersze wiele obiektów: dokumenty, szablony dokumentów i sam obiekt aplikacji oprócz systemu Windows i widoków. Gdy polecenie bezpośrednio wpływa na określony obiekt, warto mieć ten obiekt, aby obsłużyć polecenie. Na przykład polecenie Otwórz w menu plik jest logicznie skojarzone z aplikacją: aplikacja otwiera określony dokument po odebraniu polecenia. Dlatego program obsługi polecenia Otwórz jest funkcją członkowską klasy aplikacji. Aby uzyskać więcej informacji o poleceniach i sposobie ich kierowania do obiektów, zobacz [jak struktura wywołuje program obsługi](how-the-framework-calls-a-handler.md).
 

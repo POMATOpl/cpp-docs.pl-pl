@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: jak używać klasy kontekstu do implementowania wspólnego semafora'
 title: 'Porady: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 77cf33288761c75d056649ebe27f9d74c6fa62dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d80d364a9dcd27ee7012da5f710d38208c7a9e1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205658"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Porady: korzystanie z klasy kontekstu do wdrażania a kooperatywnego semafora
 
@@ -88,7 +89,7 @@ Poniższy przykład modyfikuje treść funkcji pracy przekazanej do `parallel_fo
 
 [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konteksty](../../parallel/concrt/contexts.md)<br/>
 [Równoległe kontenery i obiekty](../../parallel/concrt/parallel-containers-and-objects.md)

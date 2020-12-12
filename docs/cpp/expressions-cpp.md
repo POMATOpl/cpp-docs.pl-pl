@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej na temat wyrażeń: (C++)'
 title: Wyrażenia (C++)
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0576a2e76925bb6808a57dc9eee54231e5a06677
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204735"
 ---
 # <a name="expressions-c"></a>Wyrażenia (C++)
 
-W tej sekcji C++ opisano wyrażenia. Wyrażenia to sekwencje operatorów i operandów, które są używane dla co najmniej jednego z tych celów:
+W tej sekcji opisano wyrażenia języka C++. Wyrażenia to sekwencje operatorów i operandów, które są używane dla co najmniej jednego z tych celów:
 
 - Obliczanie wartości z operandów.
 
@@ -22,17 +23,17 @@ W tej sekcji C++ opisano wyrażenia. Wyrażenia to sekwencje operatorów i opera
 
 - Generowanie "efektów ubocznych". (Efekty uboczne to wszystkie akcje inne niż Obliczanie wyrażenia — na przykład modyfikacja wartości obiektu).
 
-W C++programie operatory mogą być przeciążone, a ich znaczenie może być zdefiniowane przez użytkownika. Nie można jednak zmodyfikować ich pierwszeństwa i liczby podejmowanych przez nie argumentów operacji. W tej sekcji opisano składnię i semantykę operatorów w miarę ich dostarczania w języku, a nie przeciążony. Oprócz [typów wyrażeń](../cpp/types-of-expressions.md) i [semantyki wyrażeń](../cpp/semantics-of-expressions.md), omówione są następujące tematy:
+W języku C++ operatory mogą być przeciążone, a ich znaczenie może być zdefiniowane przez użytkownika. Nie można jednak zmodyfikować ich pierwszeństwa i liczby podejmowanych przez nie argumentów operacji. W tej sekcji opisano składnię i semantykę operatorów w miarę ich dostarczania w języku, a nie przeciążony. Oprócz [typów wyrażeń](../cpp/types-of-expressions.md) i [semantyki wyrażeń](../cpp/semantics-of-expressions.md), omówione są następujące tematy:
 
 - [Wyrażenia podstawowe](../cpp/primary-expressions.md)
 
 - [Operator rozpoznawania zakresu](../cpp/scope-resolution-operator.md)
 
-- [Wyrażenia przyrostkowe](../cpp/postfix-expressions.md)
+- [Wyrażenia przyrostków](../cpp/postfix-expressions.md)
 
 - [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)
 
-- [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)
+- [Wyrażenia z operatorami binarnymi](../cpp/expressions-with-binary-operators.md)
 
 - [Operator warunkowy](../cpp/conditional-operator-q.md)
 

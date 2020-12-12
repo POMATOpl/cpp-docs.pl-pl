@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak używać parallel_invoke, aby napisać równoległą procedurę sortowania'
 title: 'Porady: używanie parallel_invoke do napisania procedury sortowania równoległego'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 9d84cdbecb7cc6d39cb30077780c558db85888c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4146bed939e265f611d79c465681c10ef28a1ebe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205671"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Porady: używanie parallel_invoke do napisania procedury sortowania równoległego
 
@@ -24,7 +25,7 @@ Chociaż sortowanie bitonicznego jest przykładem *sieci sortowania* , która so
 > [!NOTE]
 > W tym przykładzie zastosowano równoległą procedurę sortowania dla ilustracji. Można również użyć wbudowanych algorytmów sortowania, które zapewnia PPL: [concurrency::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)i [concurrency::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Aby uzyskać więcej informacji, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 W tym dokumencie opisano następujące zadania:
 
@@ -32,7 +33,7 @@ W tym dokumencie opisano następujące zadania:
 
 - [Używanie parallel_invoke do równoległego sortowania bitonicznego](#parallel)
 
-## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a>Wykonywanie sortowania bitonicznego w sposób szeregowy
+## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a> Wykonywanie sortowania bitonicznego w sposób szeregowy
 
 Poniższy przykład pokazuje wersję seryjną algorytmu sortowania bitonicznego. `bitonic_sort`Funkcja dzieli sekwencję na dwie partycje, sortuje te partycje w odwrotnych kierunkach, a następnie scala wyniki. Ta funkcja wywołuje dwa razy cyklicznie, aby posortować każdą partycję.
 
@@ -40,7 +41,7 @@ Poniższy przykład pokazuje wersję seryjną algorytmu sortowania bitonicznego.
 
 [[Top](#top)]
 
-## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a>Używanie parallel_invoke do równoległego sortowania bitonicznego
+## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a> Używanie parallel_invoke do równoległego sortowania bitonicznego
 
 W tej sekcji opisano, jak używać `parallel_invoke` algorytmu do równoległego wykonywania algorytmu sortowania bitonicznego.
 
@@ -99,7 +100,7 @@ Równoległe wersje niektórych algorytmów działają lepiej tylko wtedy, gdy j
 
 Podobnie jak w przypadku dowolnego algorytmu równoległego, zalecamy profilowanie i dostrajanie kodu zgodnie z potrzebami.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Funkcja parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)

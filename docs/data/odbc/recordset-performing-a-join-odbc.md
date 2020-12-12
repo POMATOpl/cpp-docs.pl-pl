@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zestaw rekordów: wykonywanie sprzężenia (ODBC)'
 title: 'Zestaw rekordów: wykonywanie sprzężenia (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-ms.openlocfilehash: 7e8d42f2b96911cd57aca7c132b53ed7c10162be
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1c7aa7bfb6925d9f7e916ddb6cd60061667d7859
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204514"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>Zestaw rekordów: wykonywanie sprzężenia (ODBC)
 
@@ -40,4 +41,4 @@ Można sprzęgać więcej niż dwie tabele w taki sam sposób, jak równe wiele 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
 [Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Zestaw rekordów: ponowne wysyłanie zapytania do zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+[Zestaw rekordów: badanie zestawu rekordów (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

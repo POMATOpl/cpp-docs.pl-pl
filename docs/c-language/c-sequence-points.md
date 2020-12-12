@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej o punktach sekwencji języka C
 title: Punkty sekwencji języka C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
-ms.openlocfilehash: 0147f51063127cb26ce8caf70bc46eadc87b8d3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7ba46978271cafbdc6b06fd01d69673dbf905d33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207114"
 ---
 # <a name="c-sequence-points"></a>Punkty sekwencji języka C
 
@@ -37,6 +38,6 @@ Między kolejnymi "punktami sekwencji" wartość obiektu może być modyfikowana
 
 - Wyrażenie w **`return`** instrukcji. Wyrażenie jest obliczane w całości i wszystkie efekty uboczne zakończone przed powracaniem do funkcji wywołującej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obliczanie wyrażeń](../c-language/expression-evaluation-c.md)

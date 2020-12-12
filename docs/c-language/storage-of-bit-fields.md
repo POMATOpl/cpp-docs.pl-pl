@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: przechowywanie pól bitowych'
 title: Magazynowanie pól bitowych
 ms.date: 11/04/2016
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
-ms.openlocfilehash: 4dbfb3c6ad27fb023881dafde74bb27132959085
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43066fe648bc380a8278168f336ebcf10cbbbdf5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157893"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205307"
 ---
 # <a name="storage-of-bit-fields"></a>Magazynowanie pól bitowych
 

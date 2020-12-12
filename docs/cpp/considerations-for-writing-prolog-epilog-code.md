@@ -1,5 +1,6 @@
 ---
-title: Zagadnienia dotyczące pisania kodu prologu/epilogu
+description: 'Dowiedz się więcej na temat: zagadnienia dotyczące pisania kodu prologu/Epiloguu'
+title: Zagadnienia dotyczące pisania kodu Prolog-Epilog
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stack frame layout
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-ms.openlocfilehash: cda6a6c82efcf30a916aced121024095d7ce8138
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6deb6e9120c83992a7fe2529d0c9366b8e191056
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204774"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Zagadnienia dotyczące pisania kodu prologu/epilogu
 
 **Specyficzne dla firmy Microsoft**
 
-Przed napisaniem własnych sekwencji kodu prologu i epilogu, ważne jest, aby zrozumieć, jak ramka stosu jest rozmieszczona. Warto również wiedzieć, jak używać `__LOCAL_SIZE` symbolu.
+Przed zapisaniem własnych sekwencji kodu prologu i epilogu ważne jest, aby zrozumieć, jak Ramka stosu jest rozłożone. Warto również wiedzieć, jak używać `__LOCAL_SIZE` symbolu.
 
-## <a name="stack-frame-layout"></a><a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Układ ramki stosu
+## <a name="stack-frame-layout"></a><a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Układ ramki stosu
 
 W tym przykładzie pokazano standardowy kod prologu, który może pojawić się w 32-bitowej funkcji:
 
@@ -41,20 +42,20 @@ pop         ebp           ; Restore ebp
 ret                       ; Return from function
 ```
 
-Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar mieszkańców zaczyna `ebp-4`się od . Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.
+Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych zaczyna się od `ebp-4` . Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.
 
-## <a name="__local_size"></a><a name="_pluslang___local_size"></a>__LOCAL_SIZE
+## <a name="__local_size"></a><a name="_pluslang___local_size"></a> __LOCAL_SIZE
 
-Kompilator zawiera symbol, `__LOCAL_SIZE`do użytku w bloku asemblera wbudowanego kodu prologu funkcji. Ten symbol jest używany do przydzielania miejsca dla zmiennych lokalnych w ramce stosu w niestandardowym kodzie prologu.
+Kompilator udostępnia symbol, `__LOCAL_SIZE` , do użycia w bloku asemblera wbudowanego kodu prologu funkcji. Ten symbol służy do przydzielania przestrzeni dla zmiennych lokalnych w ramce stosu w niestandardowym kodzie prologu.
 
-Kompilator określa wartość `__LOCAL_SIZE`. . Jego wartość jest całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i kompilator generowane zmienne tymczasowe. `__LOCAL_SIZE`może być używany tylko jako natychmiastowy operand; nie można go używać w wyrażeniu. Nie wolno zmieniać ani ponownie definiować wartości tego symbolu. Przykład:
+Kompilator określa wartość `__LOCAL_SIZE` . Wartość jest całkowitą liczbą bajtów wszystkich zdefiniowanych przez użytkownika zmiennych lokalnych i zmiennych tymczasowych generowanych przez kompilator. `__LOCAL_SIZE` może być używany tylko jako bezpośredni operand; nie można jej użyć w wyrażeniu. Nie należy zmieniać ani ponownie definiować wartości tego symbolu. Na przykład:
 
 ```
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-Poniższy przykład nagiej funkcji zawierającej niestandardowe sekwencje `__LOCAL_SIZE` prologu i epilogu używa symbolu w sekwencji prologu:
+Poniższy przykład funkcji, która zawiera niestandardowe Prolog i sekwencje epilogu używa `__LOCAL_SIZE` symbolu w sekwencji prologu:
 
 ```cpp
 // the__local_size_symbol.cpp
@@ -78,8 +79,8 @@ __declspec ( naked ) int main() {
 }
 ```
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wywołania funkcji Naked](../cpp/naked-function-calls.md)
+[Wywołania funkcji bez nadruku](../cpp/naked-function-calls.md)
