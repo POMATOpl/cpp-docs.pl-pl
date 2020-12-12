@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: przegląd typów ogólnych w języku C++/CLI'
 title: Przegląd typów ogólnych w języku C++/CLI
 ms.date: 10/12/2018
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 875fc3334d326315890396ee02e55b5880e8692e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b84d16f7d76824f732865e3bf8b7bbfe674a1bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274154"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Przegląd typów ogólnych w języku C++/CLI
 
@@ -130,6 +131,6 @@ Domyślne wystąpienie parametru typu można utworzyć za pomocą `()` operatora
 
 gdzie `T` jest parametrem typu w klasie generycznej lub definicji metody, inicjuje zmienną do jej wartości domyślnej. Jeśli `T` jest klasą referencyjną, będzie pusty wskaźnik; Jeśli `T` jest klasą wartości, obiekt jest zainicjowany do zera. Jest to nazywane *inicjatorem domyślnym*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

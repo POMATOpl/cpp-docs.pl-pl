@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: catanh, catanhf, catanhl'
 title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-ms.openlocfilehash: 9b21427eb4ab1a3ec8eab10d52e636bf253bc947
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f69ee7644c295fe36b0d907d858d33db27f1c99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943232"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275168"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
@@ -66,12 +67,12 @@ _Lcomplex catanhl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Odwrotny tangens hiperboliczny *z z, w*radianach. Wynik nie jest powiązany wzdłuż osi rzeczywistej, a w interwale [-iπ/2; + iπ/2] wzdłuż osi urojonej. Wystąpi błąd domeny, jeśli *z* jest spoza interwału [-1, + 1]. Jeśli *z* ma wartość-1 lub + 1, wystąpi błąd.
+Odwrotny tangens hiperboliczny *z z, w* radianach. Wynik nie jest powiązany wzdłuż osi rzeczywistej, a w interwale [-iπ/2; + iπ/2] wzdłuż osi urojonej. Wystąpi błąd domeny, jeśli *z* jest spoza interwału [-1, + 1]. Jeśli *z* ma wartość-1 lub + 1, wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -79,13 +80,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cat
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
+|**catanh**,               **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>

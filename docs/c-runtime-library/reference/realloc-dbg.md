@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _realloc_dbg'
 title: _realloc_dbg
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-ms.openlocfilehash: 58d12ed6f4b013996f3f59cba1b146b823adbee6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a211ac886de34d6b251622dec2f4500bb290d14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274791"
 ---
 # <a name="_realloc_dbg"></a>_realloc_dbg
 
@@ -60,7 +61,7 @@ Wskaźnik do wcześniej przydzielony blok pamięci.
 Żądany rozmiar bloku ponownie przydzielony (bajty).
 
 *BlockType*<br/>
-Żądany typ dla zaalokowanych bloków: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
+Żądany typ dla bloku ponownie przydzieloną: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
 
 *Nazwa pliku*<br/>
 Wskaźnik na nazwę pliku źródłowego, który zażądał operacji **przealokacji** lub **wartości null**.
@@ -76,11 +77,11 @@ Po pomyślnym zakończeniu ta funkcja zwraca wskaźnik do części użytkownika 
 
 ## <a name="remarks"></a>Uwagi
 
-**_realloc_dbg** to wersja debugowania funkcji [realloc](realloc.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_realloc_dbg** jest ograniczone do wywołania **realloc**. Zarówno zmiana **alokacji** , jak i **_realloc_dbg** przydzielenie bloku pamięci w stercie podstawowej, ale **_realloc_dbg** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku, aby przetestować pod kątem wycieków, parametr typu bloku do Śledź określone typy *alokacji i*/*LineNumber* informacje w celu ustalenia pochodzenia żądań alokacji.
+**_realloc_dbg** jest wersją debugowania funkcji [realloc](realloc.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_realloc_dbg** zostanie zredukowane do wywołania **realloc**. Zarówno zmiana **alokacji** , jak i **_realloc_dbg** ponownie przydzielić blok pamięci w stercie bazowym, ale **_realloc_dbg** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku, aby przetestować pod kątem przecieków, parametr typu bloku służący do śledzenia określonych typów alokacji i *filename* / *LineNumber* informacji w celu określenia pochodzenia żądań alokacji.
 
-**_realloc_dbg** ponownie przydziela określony blok pamięci o nieco większym miejscu niż żądany *NewSize*. wartość *NewSize* może być większa lub mniejsza od rozmiaru pierwotnie przydzielonych bloków pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowna Alokacja może spowodować przeniesienie oryginalnego bloku pamięci do innej lokalizacji w stercie, a także zmianę rozmiaru bloku pamięci. Jeśli blok pamięci jest przenoszony, zawartość oryginalnego bloku zostanie zapisywana.
+**_realloc_dbg** ponownie przydzieli określony blok pamięci o nieco większym miejscu niż żądany *NewSize*. wartość *NewSize* może być większa lub mniejsza od rozmiaru pierwotnie przydzielonych bloków pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowna Alokacja może spowodować przeniesienie oryginalnego bloku pamięci do innej lokalizacji w stercie, a także zmianę rozmiaru bloku pamięci. Jeśli blok pamięci jest przenoszony, zawartość oryginalnego bloku zostanie zapisywana.
 
-**_realloc_dbg** ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiedzie się lub jeśli ilość wymaganej pamięci (łącznie z powyższym obciążeniem) przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_realloc_dbg** ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiedzie się lub jeśli wymagana ilość pamięci (łącznie z powyższym obciążeniem) przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o typach bloków alokacji i sposobach ich użycia, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywołaniem standardowej funkcji sterty i jej wersji debugowania w kompilacji debugowania aplikacji, zobacz [debugowanie wersji funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -100,7 +101,7 @@ Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-librar
 
 Zobacz przykład w temacie [_msize_dbg](msize-dbg.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>
