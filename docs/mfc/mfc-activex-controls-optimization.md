@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: Optymalizacja'
 title: 'Kontrolki ActiveX MFC: optymalizacja'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: b4e12889ca1bb5f4bb423a1f1ede1c396f8d60b5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: db7fc1f1bdcdc3a3ffbf3b14d1809806389f0862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615402"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294109"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Kontrolki ActiveX MFC: optymalizacja
 
@@ -40,30 +41,30 @@ Wiele z tych optymalizacji można zaimplementować za pomocą [Kreatora kontrole
 
 |Ustawienie kontrolki w Kreatorze kontrolek ActiveX MFC|Akcja|Więcej informacji|
 |-------------------------------------------------------|------------|----------------------|
-|**Aktywuj, gdy** pole wyboru jest widoczne|Clear|[Wyłączanie opcji Aktywuj, gdy widoczna](turning-off-the-activate-when-visible-option.md)|
-|Pole wyboru **Aktywacja bez okien**|Wybierz pozycję|[Zapewnianie aktywacji niepowiązanej z oknami](providing-windowless-activation.md)|
-|Pole wyboru **odciętego kontekstu urządzenia**|Wybierz pozycję|[Używanie nieobcinanego kontekstu urządzenia](using-an-unclipped-device-context.md)|
-|Pole wyboru **Aktywacja bez migotania**|Wybierz pozycję|[Zapewnianie aktywacji pozbawionej migotania](providing-flicker-free-activation.md)|
-|**Powiadomienia wskaźnika myszy, gdy pole wyboru nieaktywne**|Wybierz pozycję|[Zapewnianie interakcji z myszą przy braku aktywności](providing-mouse-interaction-while-inactive.md)|
-|Pole wyboru **zoptymalizowanego kodu rysowania**|Wybierz pozycję|[Optymalizacja rysowania kontrolek](optimizing-control-drawing.md)|
+|**Aktywuj, gdy** pole wyboru jest widoczne|Czyste|[Wyłączanie opcji Aktywuj, gdy widoczna](turning-off-the-activate-when-visible-option.md)|
+|Pole wyboru **Aktywacja bez okien**|Wybierz pozycję|[Zapewnianie aktywacji bez okien](providing-windowless-activation.md)|
+|Pole wyboru **odciętego kontekstu urządzenia**|Wybierz pozycję|[Korzystanie z nieprzycinanego kontekstu urządzenia](using-an-unclipped-device-context.md)|
+|Pole wyboru **Aktywacja bez migotania**|Wybierz pozycję|[Zapewnianie aktywacji Flicker-Free](providing-flicker-free-activation.md)|
+|**Powiadomienia wskaźnika myszy, gdy pole wyboru nieaktywne**|Wybierz pozycję|[Zapewnianie interakcji z myszą przy nieaktywnym](providing-mouse-interaction-while-inactive.md)|
+|Pole wyboru **zoptymalizowanego kodu rysowania**|Wybierz pozycję|[Optymalizacja rysowania formantów](optimizing-control-drawing.md)|
 
 Aby uzyskać szczegółowe informacje na temat funkcji Członkowskich implementujących te optymalizacje, zobacz [COleControl](reference/colecontrol-class.md).
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Optymalizacja stanu trwałego i inicjalizacji](optimizing-persistence-and-initialization.md)
+- [Optymalizacja trwałości i inicjalizacji](optimizing-persistence-and-initialization.md)
 
-- [Zapewnianie aktywacji niepowiązanej z oknami](providing-windowless-activation.md)
+- [Zapewnianie aktywacji bez okien](providing-windowless-activation.md)
 
 - [Wyłączanie opcji Aktywuj, gdy widoczna](turning-off-the-activate-when-visible-option.md)
 
-- [Zapewnianie interakcji z myszą przy braku aktywności](providing-mouse-interaction-while-inactive.md)
+- [Zapewnianie interakcji z myszą przy nieaktywnym](providing-mouse-interaction-while-inactive.md)
 
-- [Zapewnianie aktywacji pozbawionej migotania](providing-flicker-free-activation.md)
+- [Zapewnianie aktywacji Flicker-Free](providing-flicker-free-activation.md)
 
-- [Używanie nieobcinanego kontekstu urządzenia](using-an-unclipped-device-context.md)
+- [Korzystanie z nieprzycinanego kontekstu urządzenia](using-an-unclipped-device-context.md)
 
-- [Optymalizacja rysowania kontrolek](optimizing-control-drawing.md)
+- [Optymalizacja rysowania formantów](optimizing-control-drawing.md)
 
 ## <a name="see-also"></a>Zobacz też
 

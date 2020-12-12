@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: lfind'
 title: lfind
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
-ms.openlocfilehash: 7a1ac69bbebfea45345c7dae17b18f02b84228cd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a67a28a1369127785d9c8a6f5f33c51b97aa9271
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296371"
 ---
 # <a name="lfind"></a>lfind
 

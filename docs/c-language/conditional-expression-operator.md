@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Conditional-Expression — operator'
 title: Operator wyrażenia warunkowego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b11b0f3ed132459f4e1608922e111c3b5bf2a98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293316"
 ---
 # <a name="conditional-expression-operator"></a>Operator wyrażenia warunkowego
 
@@ -25,7 +26,7 @@ C ma jeden operator Trzyelementowy: operator wyrażenia warunkowego (**?:**).
 
 *Wyrażenie logiczne or* musi mieć typ całkowity, zmiennoprzecinkowy lub wskaźnik. Jest on oceniany pod względem równoważności do 0. Punkt sekwencji jest następujący: *logiczny-lub-Expression*. Obliczanie operandów odbywa się w następujący sposób:
 
-- Jeśli *logiczne-lub-Expression* nie jest równe 0, *wyrażenie* jest oceniane. Wynik obliczania wyrażenia jest określony przez *wyrażenie*niebędące terminalem. (Oznacza to, że *wyrażenie* jest oceniane tylko wtedy *, gdy wyrażenie logiczne or* ma wartość true).
+- Jeśli *logiczne-lub-Expression* nie jest równe 0, *wyrażenie* jest oceniane. Wynik obliczania wyrażenia jest określony przez *wyrażenie* niebędące terminalem. (Oznacza to, że *wyrażenie* jest oceniane tylko wtedy *, gdy wyrażenie logiczne or* ma wartość true).
 
 - Jeśli *wyrażenie logiczne or* jest równe 0, obliczane jest *wyrażenie warunkowe* . Wynikiem wyrażenia jest wartość *wyrażenia warunkowego*. (Oznacza to, że *wyrażenie warunkowe* jest oceniane tylko wtedy *, gdy logiczne-lub-Expression* ma wartość false.)
 
@@ -68,6 +69,6 @@ int y;
 
 W tym przykładzie `f1` są zadeklarowane dwie funkcje, i `f2` , dwie zmienne `x` i `y` . W dalszej części programu, jeśli dwie zmienne mają tę samą wartość, funkcja `f1` jest wywoływana. W przeciwnym razie `f2` jest wywoływana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator warunkowy: ? :](../cpp/conditional-operator-q.md)

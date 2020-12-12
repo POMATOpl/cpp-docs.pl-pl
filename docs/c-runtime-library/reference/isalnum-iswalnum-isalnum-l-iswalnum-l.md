@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isalnum, iswalnum, _isalnum_l, _iswalnum_l'
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fbd1b686a02938317f36d7a9ec0e61c3fc2ae73f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296384"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -94,10 +95,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isalnum**|\<CType. h>|
-|**iswalnum**|\<CType. h> lub \<WCHAR. h>|
-|**_isalnum_l**|\<CType. h>|
-|**_iswalnum_l**|\<CType. h> lub \<WCHAR. h>|
+|**isalnum**|\<ctype.h>|
+|**iswalnum**|\<ctype.h> lub \<wchar.h>|
+|**_isalnum_l**|\<ctype.h>|
+|**_iswalnum_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -105,4 +106,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

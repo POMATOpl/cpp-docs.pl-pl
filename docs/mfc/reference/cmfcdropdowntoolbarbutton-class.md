@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCDropDownToolbarButton'
 title: Klasa CMFCDropDownToolbarButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: f09a2f3fe66abb86a8f220dbdf6744813ad9db0d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b2a62b22a04047f2fbe4a99b2bceb12e271a2d85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293927"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Klasa CMFCDropDownToolbarButton
 
-Typ przycisku paska narzędzi, który zachowuje się jak zwykły przycisk po kliknięciu. Jednak otwiera rozwijany pasek narzędzi ( [CMFCDropDownToolBar Class,](../../mfc/reference/cmfcdropdowntoolbar-class.md) jeśli użytkownik naciśnie i przytrzymuje przycisk paska narzędzi w dół.
+Typ przycisku paska narzędzi, który zachowuje się jak zwykły przycisk po kliknięciu. Jednak otwiera pasek narzędzi listy rozwijanej ( [Klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) , jeśli użytkownik naciśnie przycisk, a następnie połączy pasek narzędzi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,59 +67,59 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|Konstruuje `CMFCDropDownToolbarButton` obiekt.|
-|`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|Destruktora.|
+|`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Kopiuje właściwości innego przycisku paska narzędzi do bieżącego przycisku. (Zastępuje [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
-|`CMFCDropDownToolbarButton::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
-|[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Otwiera rozwijany pasek narzędzi.|
-|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Kopiuje tekst z przycisku paska narzędzi do menu. (Zastępuje [przycisk CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|
-|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Pobiera rozwijany pasek narzędzi skojarzony z przyciskiem.|
-|`CMFCDropDownToolbarButton::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
-|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Określa, czy rozwijany pasek narzędzi jest aktualnie otwarty.|
-|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Określa, czy przycisk może być wyświetlany z rozszerzonym obramowaniem. (Zastępuje [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|
-|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Wywoływana przez strukturę, aby obliczyć rozmiar przycisku dla określonego kontekstu urządzenia i stanu dokowania. (Zastępuje [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
-|`CMFCDropDownToolbarButton::OnCancelMode`|Wywoływana przez platformę do obsługi [komunikatu WM_CANCELMODE.](/windows/win32/winmsg/wm-cancelmode) (Przesłania `CMCToolBarButton::OnCancelMode`).|
-|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Wywoływana przez strukturę, gdy przycisk jest wstawiany do nowego paska narzędzi. (Zastępuje [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|
-|[CMFCDropDownToolbarButton::OnClick](#onclick)|Wywoływana przez strukturę, gdy użytkownik kliknie przycisk myszy. (Zastępuje [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
-|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Wywoływane przez strukturę, gdy użytkownik zwalnia przycisk myszy. (Zastępuje [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|
-|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Wywoływane przez platformę, gdy nadrzędny pasek narzędzi obsługuje komunikat WM_HELPHITTEST. (Zastępuje [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
-|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Modyfikuje podane menu, gdy aplikacja wyświetla menu skrótów na nadrzędnym pasku narzędzi. (Zastępuje [przycisk CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|
-|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Wywoływane przez strukturę, aby narysować przycisk przy użyciu określonych stylów i opcji. (Zastępuje [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
-|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Wywoływane przez strukturę, aby narysować przycisk w okienku **Polecenia** okna dialogowego **Dostosowywanie.** (Zastępuje [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
-|[CMFCDropDownToolbarButton::Serialize](#serialize)|Odczytuje ten obiekt z archiwum lub zapisuje go w archiwum. (Zastępuje [przycisk CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
-|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|Ustawia domyślne polecenie używane przez platformę, gdy użytkownik kliknie przycisk.|
+|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Kopiuje właściwości innego przycisku paska narzędzi do bieżącego przycisku. (Przesłania [CMFCToolBarButton:: CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|`CMFCDropDownToolbarButton::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|[CMFCDropDownToolbarButton::D ropDownToolbar](#dropdowntoolbar)|Otwiera pasek narzędzi listy rozwijanej.|
+|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Kopiuje tekst z przycisku paska narzędzi do menu. (Przesłania [CMFCToolBarButton:: ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|
+|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Pobiera pasek narzędzi listy rozwijanej, który jest skojarzony z przyciskiem.|
+|`CMFCDropDownToolbarButton::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCDropDownToolbarButton:: IsDropDown](#isdropdown)|Określa, czy pasek narzędzi listy rozwijanej jest aktualnie otwarty.|
+|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Określa, czy przycisk może być wyświetlany z rozszerzonym obramowaniem. (Przesłania [CMFCToolBarButton:: IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|
+|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Wywoływane przez platformę, by obliczyć rozmiar przycisku dla określonego kontekstu urządzenia i stanu dokowania. (Przesłania [CMFCToolBarButton:: OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
+|`CMFCDropDownToolbarButton::OnCancelMode`|Wywoływane przez platformę, aby obsłużyć [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) komunikat. (Przesłania `CMCToolBarButton::OnCancelMode`).|
+|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Wywoływane przez platformę, gdy przycisk zostanie wstawiony do nowego paska narzędzi. (Przesłania [CMFCToolBarButton:: OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|
+|[CMFCDropDownToolbarButton:: onkliknięcia](#onclick)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk myszy. (Przesłania [CMFCToolBarButton:: onkliknięciu](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
+|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy. (Przesłania [CMFCToolBarButton:: OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|
+|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Wywoływane przez platformę, gdy nadrzędny pasek narzędzi obsługuje komunikat WM_HELPHITTEST. (Przesłania [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
+|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Modyfikuje udostępnione menu, gdy aplikacja wyświetli menu skrótów na nadrzędnym pasku narzędzi. (Przesłania [CMFCToolBarButton:: OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|
+|[CMFCDropDownToolbarButton:: OnDraw](#ondraw)|Wywoływane przez platformę, by narysować przycisk przy użyciu określonych stylów i opcji. (Przesłania [CMFCToolBarButton:: OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
+|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Wywoływane przez platformę, aby narysować przycisk w okienku **polecenia** okna dialogowego **Dostosowywanie** . (Przesłania [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
+|[CMFCDropDownToolbarButton:: serializować](#serialize)|Odczytuje ten obiekt z archiwum lub zapisuje je w archiwum. (Przesłania [CMFCToolBarButton:: serializować](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)).|
+|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|Ustawia domyślne polecenie, które jest używane przez platformę, gdy użytkownik kliknie przycisk.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Określa czas, przez który użytkownik musi przytrzymać przycisk myszy przed wyświetleniem rozwijanego paska narzędzi.|
+|[CMFCDropDownToolbarButton:: m_uiShowBarDelay](#m_uishowbardelay)|Określa czas, przez który użytkownik musi trzymać przycisk myszy w dół przed wyświetleniem paska narzędzi listy rozwijanej.|
 
 ## <a name="remarks"></a>Uwagi
 
-A `CMFCDropDownToolBarButton` różni się od zwykłego przycisku tym, że ma małą strzałkę w prawym dolnym rogu przycisku. Po wybraniu przez użytkownika przycisku z rozwijanego paska narzędzi, struktura wyświetla swoją ikonę na przycisku paska narzędzi najwyższego poziomu (przycisk z małą strzałką w prawym dolnym rogu).
+`CMFCDropDownToolBarButton`Różni się od zwykłego przycisku w tym, że ma małą strzałkę w prawym dolnym rogu przycisku. Gdy użytkownik wybierze przycisk z paska narzędzi listy rozwijanej, struktura wyświetli jego ikonę na przycisku paska narzędzi najwyższego poziomu (przycisk z małą strzałką w prawym dolnym rogu).
 
-Aby uzyskać informacje dotyczące sposobu implementacji rozwijanego paska narzędzi, zobacz [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md).
+Aby uzyskać informacje na temat sposobu implementowania paska narzędzi listy rozwijanej, zobacz [Klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
-Obiekt `CMFCDropDownToolBarButton` może być eksportowany do obiektu [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md) i wyświetlany jako przycisk menu z wyskakującym menu.
+`CMFCDropDownToolBarButton`Obiekt może zostać wyeksportowany do obiektu [klasy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) i wyświetlany jako przycisk menu z menu podręcznym.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctoolbarbutton](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
 [CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdropdowntoolbar.h
+**Nagłówek:** afxdropdowntoolbar. h
 
-## <a name="cmfcdropdowntoolbarbuttoncopyfrom"></a><a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom
+## <a name="cmfcdropdowntoolbarbuttoncopyfrom"></a><a name="copyfrom"></a> CMFCDropDownToolbarButton::CopyFrom
 
 Kopiuje właściwości innego przycisku paska narzędzi do bieżącego przycisku.
 
@@ -129,13 +130,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-[w] Odwołanie do przycisku źródłowego, z którego mają być kopiowane.
+podczas Odwołanie do przycisku źródła, z którego ma zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej metody, aby skopiować inny przycisk paska narzędzi do tego przycisku paska narzędzi. *src* musi być `CMFCDropDownToolbarButton`typu .
+Wywołaj tę metodę, aby skopiować kolejny przycisk paska narzędzi do tego przycisku paska narzędzi. *src* musi być typu `CMFCDropDownToolbarButton` .
 
-## <a name="cmfcdropdowntoolbarbuttoncmfcdropdowntoolbarbutton"></a><a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton
+## <a name="cmfcdropdowntoolbarbuttoncmfcdropdowntoolbarbutton"></a><a name="cmfcdropdowntoolbarbutton"></a> CMFCDropDownToolbarButton::CMFCDropDownToolbarButton
 
 Konstruuje `CMFCDropDownToolbarButton` obiekt.
 
@@ -149,27 +150,27 @@ CMFCDropDownToolbarButton(
 
 ### <a name="parameters"></a>Parametry
 
-*Lpszname*<br/>
-[w] Domyślny tekst przycisku.
+*lpszName*<br/>
+podczas Domyślny tekst przycisku.
 
-*pToolBar (pToolBar)*<br/>
-[w] Wskaźnik do `CMFCDropDownToolBar` obiektu, który jest wyświetlany po naciśnięciu przycisku przez użytkownika.
+*pToolBar*<br/>
+podczas Wskaźnik do `CMFCDropDownToolBar` obiektu, który jest wyświetlany, gdy użytkownik naciśnie przycisk.
 
 ### <a name="remarks"></a>Uwagi
 
-Drugie przeciążenie konstruktora kopiuje do przycisku rozwijanego pierwszy przycisk z paska narzędzi, który określa *pToolBar.*
+Drugie przeciążenie konstruktora jest kopiowane do przycisku rozwijanego pierwszy przycisk z paska narzędzi, który *pToolBar* określa.
 
-Zazwyczaj przycisk rozwijanego paska narzędzi używa tekstu z ostatnio używanego przycisku na pasku narzędzi, który określa *pToolBar.* Używa tekstu określonego przez *lpszName,* gdy przycisk jest konwertowany na przycisk menu lub jest wyświetlany na karcie **Polecenia** okna dialogowego **Dostosowywanie.** Aby uzyskać więcej informacji na temat okna dialogowego **Dostosowywanie,** zobacz [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).
+Zwykle przycisk paska narzędzi listy rozwijanej używa tekstu z ostatnio używanego przycisku na pasku narzędzi, który *pToolBar* określa. Używa tekstu określonego przez *lpszName* , gdy przycisk jest konwertowany do przycisku menu lub jest wyświetlany na karcie **polecenia** okna dialogowego **Dostosowywanie** . Aby uzyskać więcej informacji na temat **dostosowywania** okna dialogowego, zobacz [Klasa CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCDropDownToolbarButton` skonstruować obiekt klasy. Ten fragment kodu jest częścią [przykładu demo programu Visual Studio.](../../overview/visual-cpp-samples.md)
+Poniższy przykład ilustruje sposób konstruowania obiektu `CMFCDropDownToolbarButton` klasy. Ten fragment kodu jest częścią [przykładu demonstracyjnego Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]
 
-## <a name="cmfcdropdowntoolbarbuttondropdowntoolbar"></a><a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar
+## <a name="cmfcdropdowntoolbarbuttondropdowntoolbar"></a><a name="dropdowntoolbar"></a> CMFCDropDownToolbarButton::D ropDownToolbar
 
-Otwiera rozwijany pasek narzędzi.
+Otwiera pasek narzędzi listy rozwijanej.
 
 ```
 BOOL DropDownToolbar(CWnd* pWnd);
@@ -177,22 +178,22 @@ BOOL DropDownToolbar(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*Pwnd*<br/>
-[w] Okno nadrzędne ramki rozwijanej lub NULL do używania okna nadrzędnego przycisku paska narzędzi rozwijanego.
+*pWnd*<br/>
+podczas Okno nadrzędne ramki rozwijanej lub wartość NULL, aby użyć okna nadrzędnego przycisku paska narzędzi listy rozwijanej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-[CMFCDropDownToolbarButton::OnClick](#onclick) metoda wywołuje tę metodę, aby otworzyć pasek narzędzi rozwijanych, gdy użytkownik naciska i przytrzymuje przycisk paska narzędzi w dół.
+Metoda [CMFCDropDownToolbarButton:: onkliknięciu](#onclick) wywołuje tę metodę, aby otworzyć pasek narzędzi listy rozwijanej, gdy użytkownik naciśnie przycisk, a następnie przytrzyma pasek narzędzi.
 
-Ta metoda tworzy pasek narzędzi listy rozwijanej przy użyciu [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) metody. Jeśli nadrzędny pasek narzędzi jest zadokowany w pionie, ta metoda umieszcza pasek narzędzi rozwijany po lewej lub prawej stronie nadrzędnego paska narzędzi, w zależności od dopasowania. W przeciwnym razie ta metoda umieszcza rozwijany pasek narzędzi pod nadrzędnym paskiem narzędzi.
+Te metody tworzą pasek narzędzi listy rozwijanej przy użyciu metody [CMFCDropDownFrame:: Create](../../mfc/reference/cmfcdropdownframe-class.md#create) . Jeśli nadrzędny pasek narzędzi jest zadokowany w pionie, ta metoda umieszcza pasek narzędzi listy rozwijanej do lewej lub prawej strony nadrzędnego paska narzędzi, w zależności od dopasowania. W przeciwnym razie ta metoda umieszcza pasek narzędzi listy rozwijanej pod nadrzędnym paskiem narzędzi.
 
-Ta metoda kończy się niepowodzeniem, jeśli *pWnd* ma wartość NULL, a przycisk rozwijanego paska narzędzi nie ma okna nadrzędnego.
+Ta metoda kończy się niepowodzeniem, jeśli *pWnd* ma wartość null, a przycisk paska narzędzi listy rozwijanej nie ma okna nadrzędnego.
 
-## <a name="cmfcdropdowntoolbarbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton
+## <a name="cmfcdropdowntoolbarbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a> CMFCDropDownToolbarButton::ExportToMenuButton
 
 Kopiuje tekst z przycisku paska narzędzi do menu.
 
@@ -203,21 +204,21 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="parameters"></a>Parametry
 
 *menuButton*<br/>
-[w] Odwołanie do przycisku menu docelowego.
+podczas Odwołanie do przycisku menu docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli metoda powiedzie się; w przeciwnym razie 0.
+Niezerowe, jeśli metoda się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje implementacji klasy podstawowej [(CMFCToolBarButton::ExportToMenuButton),](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)a następnie dołącza do przycisku menu docelowego menu podręcznego, który zawiera każdy element menu paska narzędzi w tym przycisku. Ta metoda nie dołącza podmenu do menu podręcznego.
+Ta metoda wywołuje implementację klasy bazowej ( [CMFCToolBarButton:: ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)), a następnie dołącza do docelowego przycisku menu w menu podręcznym zawierającym każdy element menu paska narzędzi na tym przycisku. Ta metoda nie dołącza podmenu do menu podręcznego.
 
-Ta metoda kończy się niepowodzeniem, jeśli nadrzędny pasek narzędzi , `m_pToolBar`ma wartość NULL lub implementacja klasy podstawowej zwraca wartość FAŁSZ.
+Ta metoda kończy się niepowodzeniem, jeśli nadrzędny pasek narzędzi, `m_pToolBar` , ma wartość null lub Implementacja klasy bazowej zwraca wartość false.
 
-## <a name="cmfcdropdowntoolbarbuttongetdropdowntoolbar"></a><a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar
+## <a name="cmfcdropdowntoolbarbuttongetdropdowntoolbar"></a><a name="getdropdowntoolbar"></a> CMFCDropDownToolbarButton::GetDropDownToolBar
 
-Pobiera rozwijany pasek narzędzi skojarzony z przyciskiem.
+Pobiera pasek narzędzi listy rozwijanej, który jest skojarzony z przyciskiem.
 
 ```
 CMFCToolBar* GetDropDownToolBar() const;
@@ -225,15 +226,15 @@ CMFCToolBar* GetDropDownToolBar() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozwijany pasek narzędzi skojarzony z przyciskiem.
+Pasek narzędzi listy rozwijanej, który jest skojarzony z przyciskiem.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda `m_pToolBar` zwraca element członkowski danych.
+Ta metoda zwraca `m_pToolBar` element członkowski danych.
 
-## <a name="cmfcdropdowntoolbarbuttonisdropdown"></a><a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown
+## <a name="cmfcdropdowntoolbarbuttonisdropdown"></a><a name="isdropdown"></a> CMFCDropDownToolbarButton:: IsDropDown
 
-Określa, czy rozwijany pasek narzędzi jest aktualnie otwarty.
+Określa, czy pasek narzędzi listy rozwijanej jest aktualnie otwarty.
 
 ```
 BOOL IsDropDown() const;
@@ -241,13 +242,13 @@ BOOL IsDropDown() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli rozwijany pasek narzędzi jest aktualnie otwarty; w przeciwnym razie 0.
+Różne od zera, jeśli pasek narzędzi listy rozwijanej jest aktualnie otwarty; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura otwiera pasek narzędzi rozwijanych przy użyciu [CMFCDropDownToolbutton::DropDownToolbar](#dropdowntoolbar) metody. Struktura zamyka pasek narzędzi rozwijanych, gdy użytkownik naciśnie lewy przycisk myszy w obszarze nie-klient rozwijanego paska narzędzi.
+Struktura otwiera pasek narzędzi listy rozwijanej przy użyciu metody [CMFCDropDownToolbarButton::D ropdowntoolbar](#dropdowntoolbar) . Struktura zamyka pasek narzędzi listy rozwijanej, gdy użytkownik naciśnie przycisk myszy z lewej strony w nieklienckim obszarze paska narzędzi listy rozwijanej.
 
-## <a name="cmfcdropdowntoolbarbuttonisextrasize"></a><a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize
+## <a name="cmfcdropdowntoolbarbuttonisextrasize"></a><a name="isextrasize"></a> CMFCDropDownToolbarButton::IsExtraSize
 
 Określa, czy przycisk może być wyświetlany z rozszerzonym obramowaniem.
 
@@ -257,15 +258,15 @@ virtual BOOL IsExtraSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli przycisk paska narzędzi może być wyświetlany z rozszerzonym obramowaniem; w przeciwnym razie 0.
+Różne od zera, jeśli przycisk paska narzędzi może być wyświetlany z rozszerzoną krawędzią; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat rozszerzonych obramowań, zobacz [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).
+Aby uzyskać więcej informacji o rozszerzonych obramowaniu, zobacz [CMFCToolBarButton:: IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).
 
-## <a name="cmfcdropdowntoolbarbuttonm_uishowbardelay"></a><a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay
+## <a name="cmfcdropdowntoolbarbuttonm_uishowbardelay"></a><a name="m_uishowbardelay"></a> CMFCDropDownToolbarButton:: m_uiShowBarDelay
 
-Określa czas, przez który użytkownik musi przytrzymać przycisk myszy przed wyświetleniem rozwijanego paska narzędzi.
+Określa czas, przez który użytkownik musi trzymać przycisk myszy w dół przed wyświetleniem paska narzędzi listy rozwijanej.
 
 ```
 static UINT m_uiShowBarDelay;
@@ -273,11 +274,11 @@ static UINT m_uiShowBarDelay;
 
 ### <a name="remarks"></a>Uwagi
 
-Czas opóźnienia jest mierzony w milisekundach. Wartość domyślna to 500. Można ustawić kolejne opóźnienie, zmieniając wartość tego udostępnionego elementu członkowskiego danych.
+Czas opóźnienia jest mierzony w milisekundach. Wartość domyślna to 500. Możesz ustawić inne opóźnienie, zmieniając wartość tego udostępnionego elementu członkowskiego danych.
 
-## <a name="cmfcdropdowntoolbarbuttononcalculatesize"></a><a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize
+## <a name="cmfcdropdowntoolbarbuttononcalculatesize"></a><a name="oncalculatesize"></a> CMFCDropDownToolbarButton::OnCalculateSize
 
-Wywoływana przez strukturę, aby obliczyć rozmiar przycisku dla określonego kontekstu urządzenia i stanu dokowania.
+Wywoływane przez platformę, by obliczyć rozmiar przycisku dla określonego kontekstu urządzenia i stanu dokowania.
 
 ```
 virtual SIZE OnCalculateSize(
@@ -288,26 +289,26 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Kontekst urządzenia, który wyświetla przycisk.
+*Domeny*<br/>
+podczas Kontekst urządzenia, który wyświetla przycisk.
 
-*rozmiarDefault*<br/>
-[w] Domyślny rozmiar przycisku.
+*sizeDefault*<br/>
+podczas Domyślny rozmiar przycisku.
 
-*Bhorz*<br/>
-[w] Stan dokującej nadrzędnego paska narzędzi. Ten parametr ma wartość PRAWDA, jeśli pasek narzędzi jest zadokowany poziomo lub jest przestawny, lub FALSE, jeśli pasek narzędzi jest zadokowany w pionie.
+*bHorz*<br/>
+podczas Stan dokowania nadrzędnego paska narzędzi. Ten parametr ma wartość TRUE, jeśli pasek narzędzi jest zadokowany w poziomie lub jest przenoszony lub FAŁSZ, jeśli pasek narzędzi jest zadokowany w pionie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Struktura `SIZE` zawierająca wymiary przycisku w pikselach.
+`SIZE`Struktura, która zawiera wymiary przycisku (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda rozszerza implementacji klasy podstawowej ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) przez dodanie szerokości strzałki rozwijanej do wymiaru poziomego rozmiaru przycisku.
+Ta metoda rozszerza implementację klasy bazowej ( [CMFCToolBarButton:: OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) przez dodanie szerokości strzałki listy rozwijanej do poziomego wymiaru przycisku.
 
-## <a name="cmfcdropdowntoolbarbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd
+## <a name="cmfcdropdowntoolbarbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a> CMFCDropDownToolbarButton::OnChangeParentWnd
 
-Wywoływana przez strukturę, gdy przycisk jest wstawiany do nowego paska narzędzi.
+Wywoływane przez platformę, gdy przycisk zostanie wstawiony do nowego paska narzędzi.
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -315,16 +316,16 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*pWndRodziciela*<br/>
-[w] Nowe okno nadrzędne.
+*pWndParent*<br/>
+podczas Nowe okno nadrzędne.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zastępuje implementację klasy podstawowej ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) przez wyczyszczenie etykiety tekstowej ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) i ustawienie [CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) i [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) elementów członkowskich danych na FALSE.
+Ta metoda przesłania implementację klasy bazowej ( [CMFCToolBarButton:: OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) przez wyczyszczenie etykiety tekstowej ( [CMFCToolBarButton:: m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) i ustawienie elementów członkowskich danych [CMFCToolBarButton:: m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) i [CMFCToolBarButton:: m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) na wartość false.
 
-## <a name="cmfcdropdowntoolbarbuttononclick"></a><a name="onclick"></a>CMFCDropDownToolbarButton::OnClick
+## <a name="cmfcdropdowntoolbarbuttononclick"></a><a name="onclick"></a> CMFCDropDownToolbarButton:: onkliknięcia
 
-Wywoływana przez strukturę, gdy użytkownik kliknie przycisk myszy.
+Wywoływane przez platformę, gdy użytkownik kliknie przycisk myszy.
 
 ```
 virtual BOOL OnClick(
@@ -334,25 +335,25 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parametry
 
-*Pwnd*<br/>
-[w] Okno nadrzędne przycisku paska narzędzi.
+*pWnd*<br/>
+podczas Okno nadrzędne przycisku paska narzędzi.
 
-*bDelay (własówce)*<br/>
-[w] PRAWDA, jeśli wiadomość powinna być obsługiwana z opóźnieniem.
+*bDelay*<br/>
+podczas Ma wartość TRUE, jeśli komunikat powinien być obsłużony z opóźnieniem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli przycisk przetwarza komunikat kliknięcia; w przeciwnym razie 0.
+Niezerowe, jeśli przycisk przetwarza komunikat kliknięcia; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda rozszerza implementacji klasy [podstawowej, CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), aktualizując stan paska narzędzi rozwijanych.
+Ta metoda rozszerza implementację klasy bazowej, [CMFCToolBarButton:: onkliknięcia](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), aktualizując stan paska narzędzi listy rozwijanej.
 
-Gdy użytkownik kliknie przycisk paska narzędzi, ta metoda tworzy czasomierz, który czeka czas określony przez [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) element członkowski danych, a następnie otwiera rozwijany pasek narzędzi przy użyciu [CMFCDropDownToolButton::DropDownToolbar](#dropdowntoolbar) metody. Ta metoda zamyka pasek narzędzi rozwijanych po raz drugi użytkownik kliknie przycisk paska narzędzi.
+Gdy użytkownik kliknie przycisk paska narzędzi, ta metoda tworzy czasomierz, który czeka na czas określony przez element członkowski danych [CMFCDropDownToolbarButton:: m_uiShowBarDelay](#m_uishowbardelay) , a następnie otwiera pasek narzędzi listy rozwijanej przy użyciu metody [CMFCDropDownToolbarButton::D ropdowntoolbar](#dropdowntoolbar) . Ta metoda zamyka pasek narzędzi listy rozwijanej, gdy użytkownik kliknie przycisk paska narzędzi.
 
-## <a name="cmfcdropdowntoolbarbuttononclickup"></a><a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp
+## <a name="cmfcdropdowntoolbarbuttononclickup"></a><a name="onclickup"></a> CMFCDropDownToolbarButton::OnClickUp
 
-Wywoływane przez strukturę, gdy użytkownik zwalnia przycisk myszy.
+Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy.
 
 ```
 virtual BOOL OnClickUp();
@@ -360,17 +361,17 @@ virtual BOOL OnClickUp();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli przycisk przetwarza komunikat kliknięcia; w przeciwnym razie 0.
+Niezerowe, jeśli przycisk przetwarza komunikat kliknięcia; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda rozszerza implementacji klasy podstawowej, [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), aktualizując stan paska narzędzi rozwijanych.
+Ta metoda rozszerza implementację klasy bazowej, [CMFCToolBarButton:: OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), aktualizując stan paska narzędzi listy rozwijanej.
 
-Ta metoda zatrzymuje czasomierz rozwijany paska narzędzi, jeśli jest aktywny. Zamyka rozwijany pasek narzędzi, jeśli jest otwarty.
+Ta metoda przerywa czasomierz paska narzędzi listy rozwijanej, jeśli jest aktywny. Gdy jest otwarty, zamyka pasek narzędzi listy rozwijanej.
 
-Aby uzyskać więcej informacji na temat rozwijanego paska narzędzi i czasu na pasku narzędzi rozwijanego, zobacz [CMFCDropDownToolbarButton::OnClick](#onclick).
+Aby uzyskać więcej informacji na temat paska narzędzi listy rozwijanej i czasomierza paska narzędzi listy rozwijanej, zobacz [CMFCDropDownToolbarButton:: onkliknięciu](#onclick).
 
-## <a name="cmfcdropdowntoolbarbuttononcontexthelp"></a><a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp
+## <a name="cmfcdropdowntoolbarbuttononcontexthelp"></a><a name="oncontexthelp"></a> CMFCDropDownToolbarButton::OnContextHelp
 
 Wywoływane przez platformę, gdy nadrzędny pasek narzędzi obsługuje komunikat WM_HELPHITTEST.
 
@@ -380,22 +381,22 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*Pwnd*<br/>
-[w] Okno nadrzędne przycisku paska narzędzi.
+*pWnd*<br/>
+podczas Okno nadrzędne przycisku paska narzędzi.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli przycisk przetwarza komunikat pomocy; w przeciwnym razie 0.
+Różne od zera, jeśli przycisk przetwarza komunikat pomocy; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda rozszerza implementacji klasy podstawowej ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) przez wywołanie [CMFCDropDownToolbarButton::OnClick](#onclick) metody z *bDelay* ustawiony na FALSE. Ta metoda zwraca wartość zwracaną przez [CMFCDropDownToolbarButton::OnClick](#onclick).
+Ta metoda rozszerza implementację klasy bazowej ( [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) przez wywołanie metody [CMFCDropDownToolbarButton:: onkliknięciu](#onclick) z parametrem *BDELAY* ustawionym na wartość false. Ta metoda zwraca wartość, która jest zwracana przez [CMFCDropDownToolbarButton:: onkliknięciu](#onclick).
 
-Aby uzyskać więcej informacji na temat komunikatu WM_HELPHITTEST, zobacz [TN028: Pomoc kontekstowa](../../mfc/tn028-context-sensitive-help-support.md).
+Aby uzyskać więcej informacji na temat komunikatu WM_HELPHITTEST, zobacz [TN028: Context-Sensitive help support](../../mfc/tn028-context-sensitive-help-support.md).
 
-## <a name="cmfcdropdowntoolbarbuttononcustomizemenu"></a><a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu
+## <a name="cmfcdropdowntoolbarbuttononcustomizemenu"></a><a name="oncustomizemenu"></a> CMFCDropDownToolbarButton::OnCustomizeMenu
 
-Modyfikuje podane menu, gdy aplikacja wyświetla menu skrótów na nadrzędnym pasku narzędzi.
+Modyfikuje udostępnione menu, gdy aplikacja wyświetli menu skrótów na nadrzędnym pasku narzędzi.
 
 ```
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
@@ -404,7 +405,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ### <a name="parameters"></a>Parametry
 
 *pMenu*<br/>
-[w] Menu do dostosowania.
+podczas Menu do dostosowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -412,23 +413,23 @@ Ta metoda zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda rozszerza implementację klasy podstawowej ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)), wyłączając następujące elementy menu:
+Ta metoda rozszerza implementację klasy bazowej ( [CMFCToolBarButton:: OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) przez wyłączenie następujących elementów menu:
 
-- **Obraz przycisku Kopiowania**
+- **Kopiuj obraz przycisku**
 
 - **Wygląd przycisku**
 
-- **Image (Obraz)**
+- **Obraz**
 
 - **Tekst**
 
 - **Obraz i tekst**
 
-Zastąd w tej metodzie należy zmodyfikować menu skrótów wyświetlane w trybie dostosowywania.
+Zastąp tę metodę, aby zmodyfikować menu skrótów, które jest wyświetlane przez strukturę w trybie dostosowywania.
 
-## <a name="cmfcdropdowntoolbarbuttonondraw"></a><a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw
+## <a name="cmfcdropdowntoolbarbuttonondraw"></a><a name="ondraw"></a> CMFCDropDownToolbarButton:: OnDraw
 
-Wywoływane przez strukturę, aby narysować przycisk przy użyciu określonych stylów i opcji.
+Wywoływane przez platformę, by narysować przycisk przy użyciu określonych stylów i opcji.
 
 ```
 virtual void OnDraw(
@@ -444,37 +445,37 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Kontekst urządzenia, który wyświetla przycisk.
+*Domeny*<br/>
+podczas Kontekst urządzenia, który wyświetla przycisk.
 
-*Rect*<br/>
-[w] Prostokąt ograniczający przycisku.
+*cinania*<br/>
+podczas Prostokąt ograniczający przycisku.
 
-*pImages (Zdjęcia)*<br/>
-[w] Kolekcja obrazów paska narzędzi skojarzonych z przyciskiem.
+*pImages*<br/>
+podczas Kolekcja obrazów pasków narzędzi skojarzonych z przyciskiem.
 
-*Bhorz*<br/>
-[w] Stan dokującej nadrzędnego paska narzędzi. Ten parametr ma wartość PRAWDA, gdy przycisk jest zadokowany poziomo i FALSE, gdy przycisk jest zadokowany w pionie.
+*bHorz*<br/>
+podczas Stan dokowania nadrzędnego paska narzędzi. Ten parametr ma wartość TRUE, jeśli przycisk jest zadokowany w poziomie i FAŁSZ, gdy przycisk jest zadokowany w pionie.
 
-*b Tryb dokuczowania*<br/>
-[w] Określa, czy pasek narzędzi jest w trybie dostosowywania. Ten parametr ma wartość TRUE, gdy pasek narzędzi jest w trybie dostosowywania i FALSE, gdy pasek narzędzi nie jest w trybie dostosowywania.
+*bCustomizeMode*<br/>
+podczas Określa, czy pasek narzędzi jest w trybie dostosowywania. Ten parametr ma wartość TRUE, jeśli pasek narzędzi jest w trybie dostosowywania i ma wartość FAŁSZ, jeśli pasek narzędzi nie jest w trybie dostosowywania.
 
-*bWyświetlenie*<br/>
-[w] Określa, czy przycisk jest wyróżniony. Ten parametr ma wartość PRAWDA, gdy przycisk jest podświetlony i FALSE, gdy przycisk nie jest podświetlony.
+*bHighlight*<br/>
+podczas Określa, czy przycisk jest wyróżniony. Ten parametr ma wartość TRUE, jeśli przycisk jest wyróżniony i ma wartość FALSE, gdy przycisk nie jest wyróżniony.
 
 *bDrawBorder*<br/>
-[w] Określa, czy przycisk ma być wyświetlany w obramowanie. Ten parametr ma wartość PRAWDA, gdy przycisk powinien wyświetlać obramowanie i FAŁSZ, gdy przycisk nie powinien wyświetlać obramowania.
+podczas Określa, czy przycisk ma wyświetlać jego obramowanie. Ten parametr ma wartość TRUE, gdy przycisk powinien wyświetlać jego obramowanie i FAŁSZ, gdy przycisk nie powinien wyświetlać jego obramowania.
 
 *bGrayDisabledButtons*<br/>
-[w] Określa, czy przyciski wyłączone mają być cieniowane, czy używane do korzystania z kolekcji obrazów wyłączonych. Ten parametr ma wartość PRAWDA, gdy wyłączone przyciski powinny być cieniowane i FALSE, gdy ta metoda powinna używać kolekcji wyłączonych obrazów.
+podczas Określa, czy wyłączać wyłączone przyciski, czy użyć kolekcji disabled images. Ten parametr ma wartość TRUE, jeśli przyciski wyłączone powinny być cieniowane i FAŁSZ, gdy ta metoda powinna używać kolekcji disabled images.
 
 ### <a name="remarks"></a>Uwagi
 
 Zastąp tę metodę, aby dostosować rysowanie przycisków paska narzędzi.
 
-## <a name="cmfcdropdowntoolbarbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList
+## <a name="cmfcdropdowntoolbarbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a> CMFCDropDownToolbarButton::OnDrawOnCustomizeList
 
-Wywoływane przez strukturę, aby narysować przycisk w okienku **Polecenia** okna dialogowego **Dostosowywanie.**
+Wywoływane przez platformę, aby narysować przycisk w okienku **polecenia** okna dialogowego **Dostosowywanie** .
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -485,28 +486,28 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Kontekst urządzenia, który wyświetla przycisk.
+*Domeny*<br/>
+podczas Kontekst urządzenia, który wyświetla przycisk.
 
-*Rect*<br/>
-[w] Prostokąt ograniczający przycisku.
+*cinania*<br/>
+podczas Prostokąt ograniczający przycisku.
 
-*bWybrany*<br/>
-[w] Czy wybrano przycisk. Jeśli ten parametr ma wartość PRAWDA, zostanie wybrany przycisk. Jeśli ten parametr ma wartość FAŁSZ, przycisk nie jest zaznaczony.
+*bSelected*<br/>
+podczas Określa, czy przycisk jest wybrany. Jeśli ten parametr ma wartość TRUE, przycisk jest zaznaczony. Jeśli ten parametr ma wartość FALSE, przycisk nie jest zaznaczony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Szerokość przycisku w określonym kontekście urządzenia w pikselach.
+Szerokość przycisku w określonym kontekście urządzenia (w pikselach).
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez okno dialogowe dostosowywania (karta **Polecenia),** gdy przycisk jest wymagany do wyświetlenia się w polu listy rysowania właściciela.
+Ta metoda jest wywoływana przez okno dialogowe dostosowywania (karta **polecenia** ), gdy przycisk jest wymagany do wyświetlania siebie w polu listy rozwijanej przez właściciela.
 
-Ta metoda rozszerza implementacji klasy podstawowej ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) zmieniając etykietę tekstową przycisku na nazwę przycisku (czyli do wartości *parametru lpszName,* który został przekazany do konstruktora).
+Ta metoda rozszerza implementację klasy bazowej ( [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) przez zmianę etykiety tekstowej przycisku na nazwę przycisku (czyli do wartości parametru *lpszName* , który został przesłany do konstruktora).
 
-## <a name="cmfcdropdowntoolbarbuttonserialize"></a><a name="serialize"></a>CMFCDropDownToolbarButton::Serialize
+## <a name="cmfcdropdowntoolbarbuttonserialize"></a><a name="serialize"></a> CMFCDropDownToolbarButton:: serializować
 
-Odczytuje ten obiekt z archiwum lub zapisuje go w archiwum.
+Odczytuje ten obiekt z archiwum lub zapisuje je w archiwum.
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -514,16 +515,16 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*Ar*<br/>
-[w] Obiekt, `CArchive` z którego lub do którego serialize.
+*ty*<br/>
+podczas `CArchive` Obiekt, z którego lub do serializacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda rozszerza implementacji klasy podstawowej ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) przez serializacji identyfikator zasobu nadrzędnego paska narzędzi. Podczas ładowania archiwum ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) zwraca wartość niezerową), ta metoda ustawia element członkowski `m_pToolBar` danych na pasku narzędzi, który zawiera identyfikator zasobu szeregowego.
+Ta metoda rozszerza implementację klasy bazowej ( [CMFCToolBarButton:: serializować](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) przez Serializowanie identyfikatora zasobu nadrzędnego paska narzędzi. Podczas ładowania archiwum ( [CArchive:: IsLoading](../../mfc/reference/carchive-class.md#isloading) zwraca wartość różną od zera) Ta metoda ustawia `m_pToolBar` element członkowski danych na pasek narzędzi zawierający serializowany identyfikator zasobu.
 
-## <a name="cmfcdropdowntoolbarbuttonsetdefaultcommand"></a><a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand
+## <a name="cmfcdropdowntoolbarbuttonsetdefaultcommand"></a><a name="setdefaultcommand"></a> CMFCDropDownToolbarButton::SetDefaultCommand
 
-Ustawia domyślne polecenie używane przez platformę, gdy użytkownik kliknie przycisk.
+Ustawia domyślne polecenie, które jest używane przez platformę, gdy użytkownik kliknie przycisk.
 
 ```cpp
 void SetDefaultCommand(UINT uiCmd);
@@ -531,12 +532,12 @@ void SetDefaultCommand(UINT uiCmd);
 
 ### <a name="parameters"></a>Parametry
 
-*Uicmd*<br/>
-[w] Identyfikator polecenia domyślnego.
+*uiCmd*<br/>
+podczas Identyfikator polecenia domyślnego.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej metody, aby określić domyślne polecenie, które wykonuje framework, gdy użytkownik kliknie przycisk. Element o identyfikatorze polecenia określonym przez *uiCmd* musi znajdować się na nadrzędnym pasku narzędzi.
+Wywołaj tę metodę, aby określić domyślne polecenie, które jest wykonywane przez tę platformę, gdy użytkownik kliknie przycisk. Element o IDENTYFIKATORze polecenia określony przez *uiCmd* musi znajdować się na liście rozwijanej nadrzędnego paska narzędzi.
 
 ## <a name="see-also"></a>Zobacz też
 

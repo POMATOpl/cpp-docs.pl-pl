@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCRibbonComboBox'
 title: Klasa CMFCRibbonComboBox
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,16 +41,16 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 5846b1c5590a756f0a0820583af3d0b159968ea2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be4078145817d06fafddb76f2cefbd0df0083503
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293669"
 ---
 # <a name="cmfcribboncombobox-class"></a>Klasa CMFCRibbonComboBox
 
-Klasa `CMFCRibbonComboBox` implementuje formant pola kombi, który można dodać do paska wstążki, panelu wstążki lub menu podręcznego wstążki.
+`CMFCRibbonComboBox`Klasa implementuje formant pola kombi, który można dodać do paska wstążki, panelu wstążki lub menu podręcznego wstążki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,60 +60,60 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Konstruuje OBIEKT CMFCRibbonComboBox.|
+|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Konstruuje obiekt CMFCRibbonComboBox.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonComboBox::AddItem](#additem)|Dołącza unikatowy element do pola listy.|
-|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Usuwa określony element z pola listy.|
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Określa, czy pole listy może zmieniać rozmiar po jego spadku.|
-|[CMFCRibbonComboBox::ZnajdźItem](#finditem)|Zwraca indeks pierwszego elementu w polu listy, który pasuje do określonego ciągu.|
-|[CMFCRibbonComboBox::GetCount](#getcount)|Zwraca liczbę elementów w polu listy.|
-|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Pobiera indeks aktualnie zaznaczonego elementu w polu listy.|
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Pobiera wysokość pola listy, gdy pole listy jest upuszczony w dół.|
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Zwraca rozmiar pola kombi wyświetlany w trybie pośrednim.|
-|[CMFCRibbonComboBox::GetItem](#getitem)|Zwraca ciąg skojarzony z elementem przy określonym indeksie w polu listy.|
-|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Zwraca dane skojarzone z elementem przy określonym indeksie w polu listy.|
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Wskazuje, czy formant zawiera pole edycji.|
-|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Wskazuje, czy można zwymiarować pole listy.|
-|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Wywoływane przez strukturę, gdy użytkownik wybiera element w polu listy.|
-|[CMFCRibbonComboBox::UsuńWszystkie](#removeallitems)|Usuwa wszystkie elementy z pola listy i czyści pole edycji.|
+|[CMFCRibbonComboBox:: AddItem](#additem)|Dołącza unikatowy element do pola listy.|
+|[CMFCRibbonComboBox::D eleteItem](#deleteitem)|Usuwa określony element z pola listy.|
+|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Określa, czy pole listy może zmieniać rozmiar, gdy zostanie on porzucany.|
+|[CMFCRibbonComboBox::FindItem](#finditem)|Zwraca indeks pierwszego elementu w polu listy, który pasuje do określonego ciągu.|
+|[CMFCRibbonComboBox:: GetCount](#getcount)|Zwraca liczbę elementów w polu listy.|
+|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Pobiera indeks aktualnie wybranego elementu w polu listy.|
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Pobiera wysokość pola listy, gdy pole listy zostanie usunięte.|
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Zwraca rozmiar pola kombi wyświetlanego w trybie pośrednim.|
+|[CMFCRibbonComboBox:: GetItem](#getitem)|Zwraca ciąg skojarzony z elementem w określonym indeksie w polu listy.|
+|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Zwraca dane skojarzone z elementem w określonym indeksie w polu listy.|
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Wskazuje, czy kontrolka zawiera pole edycji.|
+|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Wskazuje, czy można zmienić rozmiar pola listy.|
+|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Wywoływane przez platformę, gdy użytkownik wybierze element w polu listy.|
+|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Usuwa wszystkie elementy z pola listy i czyści pole edycji.|
 |[CMFCRibbonComboBox::SelectItem](#selectitem)|Wybiera element w polu listy.|
-|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Ustawia wysokość pola listy po jego upuszczeniu.|
+|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Ustawia wysokość pola listy, gdy zostanie ono usunięte.|
 
 ## <a name="remarks"></a>Uwagi
 
-Pole kombi wstążki składa się z pola listy połączonego z etykietą statyczną lub etykietą, które mogą być edytowane przez użytkownika. Podczas tworzenia pola kombi wstążki należy określić typ, który ma zostać utworzony.
+Pole kombi wstążki składa się z pola listy połączonego z etykietą statyczną lub etykietą, która może być edytowana przez użytkownika. Należy określić typ, który ma być używany podczas tworzenia pola kombi wstążki.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCRibbonComboBox` skonstruować obiekt klasy, dodać element do pola kombi, zaznacz element w polu kombi i dodać pole kombi do panelu.
+Poniższy przykład ilustruje sposób konstruowania obiektu `CMFCRibbonComboBox` klasy, Dodawanie elementu do pola kombi, Zaznaczanie elementu w polu kombi i Dodawanie pola kombi do panelu.
 
 [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[Cmfcribbonedit](../../mfc/reference/cmfcribbonedit-class.md)
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)
 
 [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxribboncombobox.h
+**Nagłówek:** afxribboncombobox. h
 
-## <a name="cmfcribboncomboboxadditem"></a><a name="additem"></a>CMFCRibbonComboBox::AddItem
+## <a name="cmfcribboncomboboxadditem"></a><a name="additem"></a> CMFCRibbonComboBox:: AddItem
 
 Dołącza unikatowy element do pola listy.
 
@@ -125,16 +126,16 @@ virtual INT_PTR AddItem(
 ### <a name="parameters"></a>Parametry
 
 *lpszItem*<br/>
-[w] Ciąg elementu do dodania.
+podczas Ciąg elementu do dodania.
 
-*dwData (dane)*<br/>
-[w] Dane skojarzone z elementem do dodania.
+*dwData*<br/>
+podczas Dane skojarzone z elementem do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera dołączonego towaru.
+Indeks (liczony od zera) dołączonego elementu.
 
-## <a name="cmfcribboncomboboxcmfcribboncombobox"></a><a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox
+## <a name="cmfcribboncomboboxcmfcribboncombobox"></a><a name="cmfcribboncombobox"></a> CMFCRibbonComboBox::CMFCRibbonComboBox
 
 Konstruuje `CMFCRibbonComboBox` obiekt.
 
@@ -153,26 +154,26 @@ CMFCRibbonComboBox();
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
-[w] Identyfikator pola kombi.
+*nID*<br/>
+podczas Identyfikator pola kombi.
 
 *bHasEditBox*<br/>
-[w] PRAWDA, jeśli chcesz, aby pole edycji w formancie; FAŁSZ inaczej.
+podczas PRAWDA, jeśli chcesz, aby pole edycji było w formancie; W przeciwnym razie zwraca wartość FALSE.
 
-*nWidth (ww.*<br/>
-[w] Szerokość pola kombi w pikselach; lub -1 dla domyślnej szerokości.
+*nWidth*<br/>
+podczas Szerokość pola kombi w pikselach; lub-1 dla szerokości domyślnej.
 
-*lpszLabel (lpszLabel)*<br/>
-[w] Etykieta wyświetlana pola kombi.
+*lpszLabel*<br/>
+podczas Etykieta wyświetlania pola kombi.
 
-*nImage (Obraz)*<br/>
-[w] Mały indeks obrazu pola kombi.
+*Nokreślono*<br/>
+podczas Indeks małego obrazu pola kombi.
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślna szerokość to 108 pikseli.
 
-## <a name="cmfcribboncomboboxdeleteitem"></a><a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem
+## <a name="cmfcribboncomboboxdeleteitem"></a><a name="deleteitem"></a> CMFCRibbonComboBox::D eleteItem
 
 Usuwa określony element z pola listy.
 
@@ -185,24 +186,24 @@ BOOL DeleteItem(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-*Iindex*<br/>
-[w] Indeks od zera elementu do usunięcia.
+*iIndex*<br/>
+podczas Indeks (liczony od zera) elementu, który ma zostać usunięty.
 
-*dwData (dane)*<br/>
-[w] Dane skojarzone z elementem do usunięcia.
+*dwData*<br/>
+podczas Dane skojarzone z elementem, który ma zostać usunięty.
 
-*lpszText (tekst)*<br/>
-[w] Ciąg elementu, który ma zostać usunięty. Jeśli istnieje wiele elementów z tym samym ciągiem, pierwszy element jest usuwany.
+*lpszText*<br/>
+podczas Ciąg elementu, który ma zostać usunięty. Jeśli istnieje wiele elementów z tym samym ciągiem, pierwszy element jest usuwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli określony element został usunięty; w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli określony element został usunięty; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxenabledropdownlistresize"></a><a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize
+## <a name="cmfcribboncomboboxenabledropdownlistresize"></a><a name="enabledropdownlistresize"></a> CMFCRibbonComboBox::EnableDropDownListResize
 
-Określa, czy pole listy może zmieniać rozmiar po jego spadku.
+Określa, czy pole listy może zmieniać rozmiar, gdy zostanie on porzucany.
 
 ```cpp
 void EnableDropDownListResize(BOOL bEnable=FALSE);
@@ -210,14 +211,14 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłaszą*<br/>
-[w] PRAWDA, aby włączyć zmiany rozmiaru; FALSE, aby wyłączyć zmiany rozmiaru.
+*bEnable*<br/>
+podczas Wartość TRUE, aby włączyć zmianę rozmiarów; Wartość FALSE powoduje wyłączenie zmiany rozmiarów.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy zmiana rozmiaru jest włączona, pole listy zmieni rozmiar, aby dopasować je do wyświetlanych elementów.
+Gdy zmiana rozmiaru jest włączona, pole listy zmieni rozmiar w celu dopasowania do wyświetlanych elementów.
 
-## <a name="cmfcribboncomboboxfinditem"></a><a name="finditem"></a>CMFCRibbonComboBox::ZnajdźItem
+## <a name="cmfcribboncomboboxfinditem"></a><a name="finditem"></a> CMFCRibbonComboBox::FindItem
 
 Zwraca indeks pierwszego elementu w polu listy, który pasuje do określonego ciągu.
 
@@ -227,16 +228,16 @@ int FindItem(LPCTSTR lpszText) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText (tekst)*<br/>
-[w] Ciąg elementu w polu listy.
+*lpszText*<br/>
+podczas Ciąg elementu w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera towaru; lub -1, jeśli element nie zostanie znaleziony.
+Indeks (liczony od zera) elementu; lub-1, jeśli element nie zostanie znaleziony.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxgetcount"></a><a name="getcount"></a>CMFCRibbonComboBox::GetCount
+## <a name="cmfcribboncomboboxgetcount"></a><a name="getcount"></a> CMFCRibbonComboBox:: GetCount
 
 Zwraca liczbę elementów w polu listy.
 
@@ -250,9 +251,9 @@ Liczba elementów w polu listy lub 0, jeśli pole listy nie zawiera żadnych ele
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxgetcursel"></a><a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel
+## <a name="cmfcribboncomboboxgetcursel"></a><a name="getcursel"></a> CMFCRibbonComboBox::GetCurSel
 
-Pobiera indeks aktualnie zaznaczonego elementu w polu listy.
+Pobiera indeks aktualnie wybranego elementu w polu listy.
 
 ```cpp
 int GetCurSel() const;
@@ -260,11 +261,11 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera aktualnie zaznaczonego elementu w polu listy; lub -1, jeśli nie wybrano żadnego elementu.
+Indeks (liczony od zera) aktualnie zaznaczonego elementu w polu listy; lub-1, jeśli nie wybrano żadnego elementu.
 
-## <a name="cmfcribboncomboboxgetdropdownheight"></a><a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight
+## <a name="cmfcribboncomboboxgetdropdownheight"></a><a name="getdropdownheight"></a> CMFCRibbonComboBox::GetDropDownHeight
 
-Pobiera wysokość pola listy, gdy pole listy jest upuszczony w dół.
+Pobiera wysokość pola listy, gdy pole listy zostanie usunięte.
 
 ```cpp
 int GetDropDownHeight();
@@ -272,13 +273,13 @@ int GetDropDownHeight();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość w pikselach pola listy.
+Wysokość pola listy w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize
+## <a name="cmfcribboncomboboxgetintermediatesize"></a><a name="getintermediatesize"></a> CMFCRibbonComboBox::GetIntermediateSize
 
-Zwraca rozmiar pola kombi wyświetlany w trybie pośrednim.
+Zwraca rozmiar pola kombi wyświetlanego w trybie pośrednim.
 
 ```cpp
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -286,8 +287,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia dla pola kombi.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia dla pola kombi.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -295,11 +296,11 @@ Rozmiar pola kombi.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwrócony rozmiar zależy od rozmiaru pola kombi, gdy wyświetla małe obrazy.
+Zwrócony rozmiar jest oparty na rozmiarze pola kombi, gdy wyświetla małe obrazy.
 
-## <a name="cmfcribboncomboboxgetitem"></a><a name="getitem"></a>CMFCRibbonComboBox::GetItem
+## <a name="cmfcribboncomboboxgetitem"></a><a name="getitem"></a> CMFCRibbonComboBox:: GetItem
 
-Zwraca ciąg skojarzony z elementem przy określonym indeksie w polu listy.
+Zwraca ciąg skojarzony z elementem w określonym indeksie w polu listy.
 
 ```cpp
 LPCTSTR GetItem(int iIndex) const;
@@ -307,18 +308,18 @@ LPCTSTR GetItem(int iIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Iindex*<br/>
-[w] Indeks od zera elementu w polu listy.
+*iIndex*<br/>
+podczas Indeks (liczony od zera) elementu w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do ciągu, który jest skojarzony z elementem; w przeciwnym razie NULL, jeśli parametr indeksu jest nieprawidłowy lub jeśli parametr indeksu wynosi -1 i nie ma żadnego elementu wybranego w polu kombi.
+Wskaźnik do ciągu, który jest skojarzony z elementem; w przeciwnym razie wartość NULL, jeśli parametr index jest nieprawidłowy, lub jeśli parametr index to-1 i nie wybrano elementu w polu kombi.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxgetitemdata"></a><a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData
+## <a name="cmfcribboncomboboxgetitemdata"></a><a name="getitemdata"></a> CMFCRibbonComboBox::GetItemData
 
-Zwraca dane skojarzone z elementem przy określonym indeksie w polu listy.
+Zwraca dane skojarzone z elementem w określonym indeksie w polu listy.
 
 ```cpp
 DWORD_PTR GetItemData(int iIndex) const;
@@ -326,16 +327,16 @@ DWORD_PTR GetItemData(int iIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Iindex*<br/>
-[w] Indeks od zera elementu w polu listy.
+*iIndex*<br/>
+podczas Indeks (liczony od zera) elementu w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dane skojarzone z elementem; lub 0, jeśli element nie istnieje lub jeśli parametr indeksu wynosi -1 i nie ma zaznaczonego elementu w polu listy.
+Dane skojarzone z elementem; lub 0, jeśli element nie istnieje, lub jeśli parametr index ma wartość-1, a w polu listy nie ma wybranego elementu.
 
-## <a name="cmfcribboncomboboxhaseditbox"></a><a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox
+## <a name="cmfcribboncomboboxhaseditbox"></a><a name="haseditbox"></a> CMFCRibbonComboBox::HasEditBox
 
-Wskazuje, czy formant zawiera pole edycji.
+Wskazuje, czy kontrolka zawiera pole edycji.
 
 ```cpp
 BOOL HasEditBox() const;
@@ -343,13 +344,13 @@ BOOL HasEditBox() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli formant zawiera pole edycji; w przeciwnym razie FALSE.
+TRUE, Jeśli kontrolka zawiera pole edycji; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxisresizedropdownlist"></a><a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList
+## <a name="cmfcribboncomboboxisresizedropdownlist"></a><a name="isresizedropdownlist"></a> CMFCRibbonComboBox::IsResizeDropDownList
 
-Wskazuje, czy można zwymiarować pole listy.
+Wskazuje, czy można zmienić rozmiar pola listy.
 
 ```cpp
 BOOL IsResizeDropDownList() const;
@@ -357,15 +358,15 @@ BOOL IsResizeDropDownList() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli można zwymiarować pole listy; w przeciwnym razie FALSE. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)
+Wartość TRUE, jeśli można zmienić rozmiar pola listy; w przeciwnym razie FALSE. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)
 
 ### <a name="remarks"></a>Uwagi
 
-Zmiana rozmiaru pola listy można włączyć przy użyciu [metody CMFCRibbonComboBox::EnableDropDownListResize.](#enabledropdownlistresize)
+Można włączyć zmianę rozmiarów pola listy przy użyciu metody [CMFCRibbonComboBox:: EnableDropDownListResize](#enabledropdownlistresize) .
 
-## <a name="cmfcribboncomboboxonselectitem"></a><a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem
+## <a name="cmfcribboncomboboxonselectitem"></a><a name="onselectitem"></a> CMFCRibbonComboBox::OnSelectItem
 
-Wywoływane przez strukturę, gdy użytkownik wybiera element w polu listy.
+Wywoływane przez platformę, gdy użytkownik wybierze element w polu listy.
 
 ```cpp
 virtual void OnSelectItem(int nItem);
@@ -373,14 +374,14 @@ virtual void OnSelectItem(int nItem);
 
 ### <a name="parameters"></a>Parametry
 
-*nJejsza*<br/>
-[w] Indeks wybranego elementu.
+*nItem*<br/>
+podczas Indeks wybranego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąd w tej metodzie należy zastążać, jeśli chcesz przetworzyć wybór danych wejściowych użytkownika.
+Zastąp tę metodę, jeśli chcesz przetworzyć wybór danych wejściowych użytkownika.
 
-## <a name="cmfcribboncomboboxremoveallitems"></a><a name="removeallitems"></a>CMFCRibbonComboBox::UsuńWszystkie
+## <a name="cmfcribboncomboboxremoveallitems"></a><a name="removeallitems"></a> CMFCRibbonComboBox::RemoveAllItems
 
 Usuwa wszystkie elementy z pola listy i czyści pole edycji.
 
@@ -390,7 +391,7 @@ void RemoveAllItems();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxselectitem"></a><a name="selectitem"></a>CMFCRibbonComboBox::SelectItem
+## <a name="cmfcribboncomboboxselectitem"></a><a name="selectitem"></a> CMFCRibbonComboBox::SelectItem
 
 Wybiera element w polu listy.
 
@@ -403,24 +404,24 @@ BOOL SelectItem(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-*Iindex*<br/>
-[w] Indeks od zera elementu w polu listy.
+*iIndex*<br/>
+podczas Indeks (liczony od zera) elementu w polu listy.
 
-*dwData (dane)*<br/>
-[w] Dane skojarzone z elementem w polu listy.
+*dwData*<br/>
+podczas Dane skojarzone z elementem w polu listy.
 
-*lpszText (tekst)*<br/>
-[w] Ciąg elementu w polu listy.
+*lpszText*<br/>
+podczas Ciąg elementu w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribboncomboboxsetdropdownheight"></a><a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight
+## <a name="cmfcribboncomboboxsetdropdownheight"></a><a name="setdropdownheight"></a> CMFCRibbonComboBox::SetDropDownHeight
 
-Ustawia wysokość pola listy po jego upuszczeniu.
+Ustawia wysokość pola listy, gdy zostanie ono usunięte.
 
 ```cpp
 void SetDropDownHeight(int nHeight);
@@ -428,8 +429,8 @@ void SetDropDownHeight(int nHeight);
 
 ### <a name="parameters"></a>Parametry
 
-*nFeksja*<br/>
-[w] Wysokość w pikselach pola listy.
+*nHeight*<br/>
+podczas Wysokość pola listy w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 

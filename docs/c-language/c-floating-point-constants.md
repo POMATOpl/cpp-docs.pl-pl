@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o stałych Floating-Point C
 title: Stałe zmiennoprzecinkowe języka C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 8777f04b047516ef29ae7bf67ddaf4195e3aaf6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bad45db33cd40060c4d20312c5318d443efc60f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293563"
 ---
 # <a name="c-floating-point-constants"></a>Stałe zmiennoprzecinkowe języka C
 
@@ -23,16 +24,16 @@ ms.locfileid: "87228027"
 ## <a name="syntax"></a>Składnia
 
 *zmiennoprzecinkowe — stała*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;dwuargumentowy *—* *wykładnik*<sub>opt</sub> stałej —<sub>wybór</sub> *sufiksu zmiennoprzecinkowego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wykładnik* *sekwencji cyfr* —<sub>wybór</sub> *sufiksu zmiennoprzecinkowego*części
+&nbsp;&nbsp;&nbsp;&nbsp;dwuargumentowy *—* *wykładnik*<sub></sub> stałej —<sub>wybór</sub> *sufiksu zmiennoprzecinkowego*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wykładnik* *sekwencji cyfr* —<sub>wybór</sub> *sufiksu zmiennoprzecinkowego* części
 
 *stała ułamkowa*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wybór sekwencji cyfr*<sub>opt</sub> **.** *Sekwencja cyfr*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wybór sekwencji cyfr*<sub></sub> **.** *Sekwencja cyfr*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*  **.**
 
 *część wykładnika*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;cyfra za *podpisanie*<sub>opt</sub> **e** *-sekwencji*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Cyfra za *podpisanie*<sub>opt</sub> **E** *-sekwencji*
+&nbsp;&nbsp;&nbsp;&nbsp;cyfra za *podpisanie*<sub></sub> **e** *-sekwencji*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Cyfra za *podpisanie*<sub></sub> **E** *-sekwencji*
 
 *znak*: jedno z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
@@ -58,7 +59,7 @@ Poniższe przykłady ilustrują niektóre formy stałych i wyrażeń zmiennoprze
 
 Stałe zmiennoprzecinkowe są dodatnie, chyba że są poprzedzone znakiem minus ( **-** ). W takim przypadku znak minus jest traktowany jako jednoargumentowy operator negacji arytmetycznej. Stałe zmiennoprzecinkowe mają typ **`float`** , **`double`** lub **`long double`** .
 
-Stała zmiennoprzecinkowa bez sufiksu **f**, **f**, **l**lub **l** ma typ **`double`** . Jeśli litera **f** lub **f** jest sufiksem, stała ma typ **`float`** . Jeśli sufiks jest poprzedzony literą **l** lub **l**, ma typ **`long double`** . Na przykład:
+Stała zmiennoprzecinkowa bez sufiksu **f**, **f**, **l** lub **l** ma typ **`double`** . Jeśli litera **f** lub **f** jest sufiksem, stała ma typ **`float`** . Jeśli sufiks jest poprzedzony literą **l** lub **l**, ma typ **`long double`** . Na przykład:
 
 ```C
 10.0L  /* Has type long double  */
@@ -76,6 +77,6 @@ Można pominąć część całkowitą stałej zmiennoprzecinkowej, jak pokazano 
 75e-2
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe języka C](../c-language/c-constants.md)

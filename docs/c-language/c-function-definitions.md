@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat definicji funkcji języka C
 title: Definicje funkcji języka C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: a26f95f8fef2b52dac36dd5d33f826c73fd84eee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9e664224608a741897bf8ae6208a0d9011cdb3c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296930"
 ---
 # <a name="c-function-definitions"></a>Definicje funkcji języka C
 
@@ -29,7 +30,7 @@ Definicja funkcji określa nazwę funkcji, typy i liczbę parametrów, które oc
 &nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* *jednostki tłumaczenia*
 
-*deklaracja zewnętrzna*:/ \* dozwolone tylko w zewnętrznym zakresie (pliku)\*/<br/>
+*deklaracja zewnętrzna*:/ \* dozwolone tylko w zewnętrznym zakresie (pliku) \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Definicja funkcji*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*
 
@@ -42,23 +43,23 @@ Parametry prototypu:
 
 *specyfikatory deklaracji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja* *specyfikatora klasy magazynu* —<sub>wybór</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub></sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub></sub>
 
 *Deklaracja-lista*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* *declaration*
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* 
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/ \* A funkcja deklarator\*/<br/>
+*Direct-deklarator*:/ \* A funkcja deklarator \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***Typ parametru-list***)**  / \* New-Style deklarator      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność*listy identyfikatorów*<sub>opt</sub> **)**  / \* — przestarzałe style deklarator    \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność *listy identyfikatorów*<sub></sub> **)**  / \* — przestarzałe style deklarator    \*/
 
 Lista parametrów w definicji używa następującej składni:
 
-*Typ parametru-list*:/ \* Lista parametrów\*/<br/>
+*Typ parametru-list*:/ \* Lista parametrów \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
 
@@ -72,7 +73,7 @@ Lista parametrów w definicji używa następującej składni:
 
 Lista parametrów w definicji funkcji starego stylu używa następującej składni:
 
-*Identyfikator-list*:/ \* używany w definicjach i deklaracjach funkcji przestarzałego stylu\*/<br/>
+*Identyfikator-list*:/ \* używany w definicjach i deklaracjach funkcji przestarzałego stylu \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator — lista* **,**  *Identyfikator*
 
@@ -93,6 +94,6 @@ Opcjonalne *specyfikatory deklaracji* i obowiązkowe *deklarator* razem określa
 
 Sekcje [atrybutów funkcji](../c-language/function-attributes.md), [klasy magazynu](../c-language/storage-class.md), [typu zwracanego](../c-language/return-type.md), [parametrów](../c-language/parameters.md)i [treści funkcji](../c-language/function-body.md) opisują składniki definicji funkcji szczegółowo.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../c-language/functions-c.md)

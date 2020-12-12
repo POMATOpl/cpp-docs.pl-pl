@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _splitpath_s, _wsplitpath_s'
 title: _splitpath_s, _wsplitpath_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f14ea8a31d241abae3a214067cae1e4d34e97861
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292347"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -103,7 +104,7 @@ Litera dysku, po którym następuje dwukropek (**:**). Jeśli nie potrzebujesz l
 Rozmiar buforu *dysku* w znakach jednobajtowych lub szerokich. Jeśli *dysk* ma wartość **null**, ta wartość musi być równa 0.
 
 *katalogów*<br/>
-Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników **/** (), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
+Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników ( **/** ), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
 
 *dirNumberOfElements*<br/>
 Rozmiar buforu *dir* w znakach jednobajtowych lub szerokich. Jeśli *dir* ma wartość **null**, ta wartość musi być równa 0.
@@ -130,17 +131,17 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 |---------------|------------------|
 |*ścieżka* ma **wartość null**|**EINVAL**|
 |*dysk* ma **wartość null**, *driveNumberOfElements* jest różny od zera.|**EINVAL**|
-|*dysk* ma wartość różną od**null**, *driveNumberOfElements* ma wartość zero|**EINVAL**|
+|*dysk* ma wartość różną od **null**, *driveNumberOfElements* ma wartość zero|**EINVAL**|
 |*dir* ma **wartość null**, *dirNumberOfElements* jest różna od zera.|**EINVAL**|
-|*dir* ma wartość różną od**null**, *dirNumberOfElements* ma wartość zero|**EINVAL**|
+|*dir* ma wartość różną od **null**, *dirNumberOfElements* ma wartość zero|**EINVAL**|
 |*fname* ma **wartość null**, *nameNumberOfElements* jest różna od zera|**EINVAL**|
-|*fname* jest różna od**null**, *nameNumberOfElements* jest zerem|**EINVAL**|
+|*fname* jest różna od **null**, *nameNumberOfElements* jest zerem|**EINVAL**|
 |*EXT* ma **wartość null**, *extNumberOfElements* jest różna od zera.|**EINVAL**|
-|*EXT* ma wartość różną od**null**, *extNumberOfElements* jest zerem|**EINVAL**|
+|*EXT* ma wartość różną od **null**, *extNumberOfElements* jest zerem|**EINVAL**|
 
 Jeśli wystąpi którykolwiek z powyższych warunków, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **EINVAL**.
 
-Jeśli którykolwiek z buforów jest zbyt krótki, aby pomieścić wynik, te funkcje Wyczyść wszystkie bufory do pustych ciągów, ustaw **errno** na **ERANGE**i zwróć **ERANGE**.
+Jeśli którykolwiek z buforów jest zbyt krótki, aby pomieścić wynik, te funkcje Wyczyść wszystkie bufory do pustych ciągów, ustaw **errno** na **ERANGE** i zwróć **ERANGE**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -154,7 +155,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Każdy składnik pełnej ścieżki jest przechowywany w osobnym buforze; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**i **_MAX_EXT** (zdefiniowane w STDLIB. H) Określ maksymalny dozwolony rozmiar każdego składnika plików. Składniki plików większe niż odpowiednie stałe manifestu powodują uszkodzenie sterty.
+Każdy składnik pełnej ścieżki jest przechowywany w osobnym buforze; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME** i **_MAX_EXT** (zdefiniowane w STDLIB. H) Określ maksymalny dozwolony rozmiar każdego składnika plików. Składniki plików większe niż odpowiednie stałe manifestu powodują uszkodzenie sterty.
 
 Poniższa tabela zawiera listę wartości stałych manifestu.
 
@@ -175,8 +176,8 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_splitpath_s**|\<STDLIB. h>|
-|**_wsplitpath_s**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_splitpath_s**|\<stdlib.h>|
+|**_wsplitpath_s**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

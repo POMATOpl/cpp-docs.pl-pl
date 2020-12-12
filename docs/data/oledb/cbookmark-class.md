@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CBookmark'
 title: Klasa CBookmark
 ms.date: 11/04/2016
 f1_keywords:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7c138776e282c287eb7e7e09b93196ac0792f7ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295071"
 ---
 # <a name="cbookmark-class"></a>Klasa CBookmark
 
@@ -135,7 +136,7 @@ podczas Rozmiar buforu zakładki w bajtach.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja ustawia bufor na wartość NULL, a rozmiar buforu na 0. Druga funkcja ustawia rozmiar buforu na *nSize*i bufor na tablicę bajtową bajtów *nSize* .
+Pierwsza funkcja ustawia bufor na wartość NULL, a rozmiar buforu na 0. Druga funkcja ustawia rozmiar buforu na *nSize* i bufor na tablicę bajtową bajtów *nSize* .
 
 > [!NOTE]
 > Ta funkcja jest dostępna tylko w `CBookmark<0>` .

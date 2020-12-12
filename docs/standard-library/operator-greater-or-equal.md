@@ -1,5 +1,6 @@
 ---
-title: '&gt; operatora ='
+description: 'Dowiedz się więcej na temat: operator&gt;='
+title: zakład&gt;=
 ms.date: 11/04/2016
 f1_keywords:
 - operator>=
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 08c73602d87cbfc31364148d9565071da7b732c4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1821647ebb281020cef1798cf056fbf816aa855c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297073"
 ---
-# <a name="operatorgt"></a>&gt; operatora =
+# <a name="operatorgt"></a>zakład&gt;=
 
 > [!NOTE]
-> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji języka Microsoft C++ jako niefunkcjonalny przykład kontenerów używanych w standardowej bibliotece języka C++. Aby uzyskać więcej informacji, zobacz [kontenery standardowej biblioteki języka C++](../standard-library/stl-containers.md).
 
-Operator przeciążeń **> =** do porównania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)szablonu klasy.
+Operator przeciążeń **>=** do porównania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)szablonu klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,8 +39,8 @@ bool operator>=(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `!(left < right)`.
+Zwraca wartość `!(left < right)`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<sample kontener >](../standard-library/sample-container.md)
+[\<sample container>](../standard-library/sample-container.md)

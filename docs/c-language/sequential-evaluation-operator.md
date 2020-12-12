@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Sequential-Evaluation — operator'
 title: Operator obliczania sekwencyjnego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: ec2c866b512bc0b398375041b03c0ea697d3a0d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7bbe9bd6f70f32bd51e46df28f6e072edf9b6c15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292796"
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 
@@ -46,6 +47,6 @@ func_two( (x--, y + 2), z );
 
 W wywołaniu funkcji do `func_one` , trzy argumenty, oddzielone przecinkami, są przenoszone: `x` , `y + 2` , i `z` . W wywołaniu funkcji do `func_two` , nawiasy wymuszają, aby kompilator interpretował pierwszy przecinek jako operator oceny sekwencyjnej. To wywołanie funkcji przekazuje dwa argumenty do `func_two` . Pierwszy argument jest wynikiem operacji sekwencyjnej oceny `(x--, y + 2)` , która ma wartość i typ wyrażenia `y + 2` ; drugim argumentem jest `z` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator przecinkowy:,](../cpp/comma-operator.md)

@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej o typach znaków
 title: Typy znaku
 ms.date: 11/04/2016
 helpviewer_keywords:
 - character data types [C]
 - types [C], character
 ms.assetid: d3ca8cda-c0d7-43af-9472-697e8ef015ce
-ms.openlocfilehash: 5b1306c70cdab423c8758bf3e6c9ac4e9d6507da
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270c1831422d81fe88519a2aee3de8306727d0d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226493"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293537"
 ---
 # <a name="character-types"></a>Typy znaku
 
@@ -26,6 +27,6 @@ wchar_t wchar = L'x';   /* A wide-character constant for
 
 Stałe o szerokim znaku są 16-bitowym i określają elementy członkowskie zestawu znaków wykonywania rozszerzonego. Umożliwiają one wyrażanie znaków w alfabecie, które są zbyt duże, aby były reprezentowane przez typ **`char`** . Zobacz [znaki wielobajtowe i szerokie,](../c-language/multibyte-and-wide-characters.md) Aby uzyskać więcej informacji o szerokich znakach.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe znakowe języka C](../c-language/c-character-constants.md)

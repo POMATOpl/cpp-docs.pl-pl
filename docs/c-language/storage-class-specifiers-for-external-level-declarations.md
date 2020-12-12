@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat Storage-Class specyfikatorów External-Level deklaracji
 title: Specyfikatory klasy magazynowania dla deklaracji na poziomie zewnętrznym (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-ms.openlocfilehash: 6c30b8a12c0bf26bc35905872fb6fa527b367ef4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a048ebcf6eea87c77cba23ed50ab117d014c95e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296852"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Specyfikatory klasy magazynowania dla deklaracji na poziomie zewnętrznym (C)
 
@@ -125,6 +126,6 @@ Wszystkie trzy funkcje `main`, `next` i `other`, wykonują to samo zadanie: zwi�
 
 Jeśli zmienna `i` nie została zainicjowana, wartość zostanie ustawiona na 0 automatycznie. W tym przypadku byłyby wypisane wartości 1, 2 i 3. Zobacz [Inicjowanie](../c-language/initialization.md) informacji o inicjacji zmiennej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy magazynu w języku C](../c-language/c-storage-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: concurrency::p recise_math Namespace'
 title: Concurrency::precise_math — Przestrzeń nazw
 ms.date: 11/04/2016
 f1_keywords:
@@ -133,16 +134,16 @@ f1_keywords:
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-ms.openlocfilehash: 448219eff5f30e87509e04289608c7c933e944f0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 3b9b74c24075f3c8c2feaea7892ad8278ba991f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297151"
 ---
 # <a name="concurrencyprecise_math-namespace"></a>Concurrency::precise_math — Przestrzeń nazw
 
-Funkcje w przestrzeni nazw `precise_math` są zgodne z C99. Dołączane są zarówno wersje o pojedynczej precyzji, jak i podwójnej precyzji każdej funkcji. Na przykład `acos` jest wersją o podwójnej precyzji, a `acosf` jest wersją o pojedynczej precyzji. Te funkcje, w tym funkcje o pojedynczej precyzji, wymagają rozszerzonej obsługi podwójnej precyzji dla akceleratora. Możesz użyć [akceleratora:: supports_double_precision](accelerator-class.md#supports_double_precision) , aby określić, czy można uruchamiać te funkcje na określonym akceleratorze.
+Funkcje w `precise_math` przestrzeni nazw są zgodne z C99. Dołączane są zarówno wersje o pojedynczej precyzji, jak i podwójnej precyzji każdej funkcji. Na przykład `acos` jest to wersja o podwójnej precyzji i `acosf` jest wersją o pojedynczej precyzji. Te funkcje, w tym funkcje o pojedynczej precyzji, wymagają rozszerzonej obsługi podwójnej precyzji dla akceleratora. Możesz użyć [akceleratora:: supports_double_precision](accelerator-class.md#supports_double_precision) , aby określić, czy można uruchamiać te funkcje na określonym akceleratorze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -152,11 +153,11 @@ namespace precise_math;
 
 ### <a name="parameters"></a>Parametry
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="functions"></a>Funkcje
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Acos](concurrency-precise-math-namespace-functions.md#acos)|Przeciążone. Oblicza arcus cosinus argumentu|
 |[acosf —](concurrency-precise-math-namespace-functions.md#acosf)|Oblicza arcus cosinus argumentu|
@@ -212,7 +213,7 @@ namespace precise_math;
 |[fmaxf —](concurrency-precise-math-namespace-functions.md#fmaxf)|Określanie maksymalnej wartości liczbowej argumentów|
 |[fmin —](concurrency-precise-math-namespace-functions.md#fmin)|Przeciążone. Określ minimalną wartość liczbową argumentów|
 |[fminf —](concurrency-precise-math-namespace-functions.md#fminf)|Określ minimalną wartość liczbową argumentów|
-|[Funkcja FMOD — (C++ amp)](concurrency-precise-math-namespace-functions.md#fmod)|Przeciążone. Oblicza pozostałą liczbę zmiennoprzecinkową _X/_Y|
+|[Funkcja FMOD — (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Przeciążone. Oblicza pozostałą liczbę zmiennoprzecinkową _X/_Y|
 |[fmodf —](concurrency-precise-math-namespace-functions.md#fmodf)|Oblicza pozostałą liczbę zmiennoprzecinkową _X/_Y|
 |[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Przeciążone. Klasyfikuje wartość argumentu jako NaN, nieskończone, normalne, subnormalne, zero|
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Przeciążone. Pobiera mantysy i wykładnik _X|
@@ -222,7 +223,7 @@ namespace precise_math;
 |[ilogb —](concurrency-precise-math-namespace-functions.md#ilogb)|Przeciążone. Wyodrębnij wykładnik _X jako podpisaną wartość int|
 |[ilogbf —](concurrency-precise-math-namespace-functions.md#ilogbf)|Wyodrębnij wykładnik _X jako podpisaną wartość int|
 |[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Przeciążone. Określa, czy argument ma skończoną wartość|
-|[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Przeciążone. Określa, czy argument jest nieskończonością|
+|[isinf —](concurrency-precise-math-namespace-functions.md#isinf)|Przeciążone. Określa, czy argument jest nieskończonością|
 |[isNaN](concurrency-precise-math-namespace-functions.md#isnan)|Przeciążone. Określa, czy argument jest NaN|
 |[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Przeciążone. Określa, czy argument jest normalny|
 |[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Przeciążone. Oblicza liczbę rzeczywistą z mantysy i wykładnika|

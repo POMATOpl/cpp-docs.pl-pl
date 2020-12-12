@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: reguły i ograniczenia dotyczące elementu dllimport/dllexport'
 title: Reguły i ograniczenia dotyczące elementu dllimport-dllexport
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: c2f121d978962fe7fc03aa453fb0a16650aa2727
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6d7de92b7d58eacc9334859a865e0e1456fffcb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292887"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Reguły i ograniczenia dotyczące atrybutów dllimport/dllexport
 
@@ -96,6 +97,6 @@ ms.locfileid: "87220876"
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje importowania i eksportowania biblioteki DLL](../c-language/dll-import-and-export-functions.md)

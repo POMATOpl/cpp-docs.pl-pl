@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCDragFrameImpl'
 title: Klasa CMFCDragFrameImpl
 ms.date: 10/18/2018
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 527fd089962e05c44a7e47b1ae52345116da4470
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9885b750ace86d11ca573f23c7ee1c03d8926921
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294057"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Klasa CMFCDragFrameImpl
 
-Klasa `CMFCDragFrameImpl` rysuje prostokąt przeciągania, który pojawia się, gdy użytkownik przeciąga okienko w trybie standardowej stacji dokującej.
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
+`CMFCDragFrameImpl`Klasa rysuje prostokąt przeciągany, który pojawia się, gdy użytkownik przeciąga okienko w standardowym trybie dokowania.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC \\ atlmfc \\ src \\ MFC** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,9 +27,9 @@ class CMFCDragFrameImpl
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt tej klasy jest osadzony w każdym [obiekcie CPane Class.](../../mfc/reference/cpane-class.md) W związku z tym każde `CanFloat` okienko, które używa metody wyświetla prostokąt przeciągania, gdy użytkownik przeciąga go.
+Obiekt tej klasy jest osadzony w każdym obiekcie [klasy CPane](../../mfc/reference/cpane-class.md) . W tym przypadku każde okienko używające `CanFloat` metody wyświetla prostokąt przeciągany, gdy użytkownik przeciągnie go.
 
-Grubość prostokąta przeciągania można kontrolować za pomocą [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) i [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).
+Możesz kontrolować grubość prostokąta przeciągania przy użyciu [AFX_GLOBAL_DATA:: m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) i [AFX_GLOBAL_DATA:: m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -36,9 +37,9 @@ Grubość prostokąta przeciągania można kontrolować za pomocą [AFX_GLOBAL_D
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdragframeimpl.h
+**Nagłówek:** afxdragframeimpl. h
 
-## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCDragFrameImpl::EndDrawDragFrame
+## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a> CMFCDragFrameImpl::EndDrawDragFrame
 
 ```cpp
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
@@ -46,11 +47,11 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *bClearInternalRects*<br/>
+podczas *bClearInternalRects*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcdragframeimplinit"></a><a name="init"></a>CMFCDragFrameImpl::Init
+## <a name="cmfcdragframeimplinit"></a><a name="init"></a> CMFCDragFrameImpl:: init
 
 ```cpp
 void Init(CWnd* pDraggedWnd);
@@ -58,11 +59,11 @@ void Init(CWnd* pDraggedWnd);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pDraggedWnd (właśc.*<br/>
+podczas *pDraggedWnd*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCDragFrameImpl::MoveDragFrame
+## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a> CMFCDragFrameImpl::MoveDragFrame
 
 ```cpp
 void MoveDragFrame(BOOL bForceMove = FALSE);
@@ -70,11 +71,11 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *bForceMove (Ruch Sił)*<br/>
+podczas *bForceMove*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCDragFrameImpl::PlaceTabPreDocking
+## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a> CMFCDragFrameImpl::P laceTabPreDocking
 
 ```cpp
 void PlaceTabPreDocking(
@@ -86,15 +87,15 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pTabbedBar (Bar)*<br/>
+podczas *pTabbedBar*<br/>
 
-[w] *bFirstTime (Czas powierszy)*<br/>
+podczas *bFirstTime*<br/>
 
-[w] *pCBarToPlaceOn*<br/>
+podczas *pCBarToPlaceOn*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCDragFrameImpl::RemoveTabPreDocking
+## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a> CMFCDragFrameImpl::RemoveTabPreDocking
 
 ```cpp
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
@@ -102,11 +103,11 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pOldTargetBar (Pasek celów)*<br/>
+podczas *pOldTargetBar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCDragFrameImpl::ResetState
+## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a> CMFCDragFrameImpl:: elementu ResetState
 
 ```cpp
 void ResetState();

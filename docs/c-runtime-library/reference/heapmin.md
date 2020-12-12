@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _heapmin'
 title: _heapmin
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 9a98dfffc784d05a93f65a51a5250c31fe1dd596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 06ec2d7b0269927d8d67c9fe7431f2f550728aae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296449"
 ---
 # <a name="_heapmin"></a>_heapmin
 
@@ -65,7 +66,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_heapmin**|\<malloc. h>|\<errno. h>|
+|**_heapmin**|\<malloc.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

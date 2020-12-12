@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: konwersje do i z typów wskaźnika'
 title: Konwersje do i z typów wskaźnika
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: 6358216e72f054becf33d18aadb6a3a51bab8363
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8eb987358cb3e8375e62b9d03cd21a5e02b9f5c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293095"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Konwersje do i z typów wskaźnika
 
@@ -36,6 +37,6 @@ I odwrotnie typ całkowity może być konwertowany na typ wskaźnika, zgodnie z 
 
 Całkowite wyrażenie stałe z wartością 0 lub takie rzutowanie wyrażenia na typ **`void`** <strong>\*</strong> może być konwertowane przez rzutowanie typu, przez przypisanie lub przez porównanie do wskaźnika dowolnego typu. Daje to pusty wskaźnik równy innemu pustemu wskaźnikowi tego samego typu, ale taki pusty wskaźnik nie jest równy żadnemu innemu wskaźnikowi do funkcji lub obiektu. Wartości całkowite inne niż stała 0 można przekonwertować na typ wskaźnika, ale wynik nie jest przenośny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

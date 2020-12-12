@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o identyfikatorach C
 title: Identyfikatory języka C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 926af854e9c6a84e84cac6e063a2b8db710c26b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293550"
 ---
 # <a name="c-identifiers"></a>Identyfikatory języka C
 
@@ -40,8 +41,8 @@ W instrukcjach można używać specjalnego rodzaju identyfikatora o nazwie etyki
 
 *Identyfikator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*dowolny*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *niecyfrowy* identyfikator<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *cyfra* identyfikatora
+&nbsp;&nbsp;&nbsp;&nbsp; *niecyfrowy* identyfikator<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *cyfra* identyfikatora
 
 *niecyfrowe*: jedno z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**_ a b c d e f g h i j k l litera p q r s t u w x y z**<br/>
@@ -96,6 +97,6 @@ W konsolidatorze firmy Microsoft jest rozróżniana wielkość liter. Wszystkie 
 
 Identyfikator ma wartość "Scope", czyli region programu, w którym jest znany i "powiązanie", które określa, czy ta sama nazwa w innym zakresie odwołuje się do tego samego identyfikatora. Te tematy zostały wyjaśnione w [okresie istnienia, zakresu, widoczności i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy języka C](../c-language/elements-of-c.md)

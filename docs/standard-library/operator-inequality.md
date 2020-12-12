@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operator! ='
 title: operator!=
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: 89d41d099d151f77d91cd94b22047824779dcf54
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 3b5efe9cc1c3157becd9afe4cf5c4e8020ec9e0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297060"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji języka Microsoft C++ jako niefunkcjonalny przykład kontenerów używanych w standardowej bibliotece języka C++. Aby uzyskać więcej informacji, zobacz [kontenery standardowej biblioteki języka C++](../standard-library/stl-containers.md).
 
 Przeciążenia `operator!=` do porównywania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)szablonów klas.
 
@@ -38,8 +39,8 @@ bool operator!=(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca `!(left == right)`.
+Zwraca wartość `!(left == right)`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<sample kontener >](../standard-library/sample-container.md)
+[\<sample container>](../standard-library/sample-container.md)

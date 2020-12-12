@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: zmiany w prawo'
 title: Przesunięcia w prawo
 ms.date: 11/04/2016
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
-ms.openlocfilehash: 4b83aa231e6e7904fe5682b32a861ffe301b9747
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5bc359357e8a3a2e00d0c75012e0e6044d8055f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292926"
 ---
 # <a name="right-shifts"></a>Przesunięcia w prawo
 
@@ -19,6 +20,6 @@ Prawy Shift zachowuje bit znaku podpisanych typów całkowitych. Gdy liczba cał
 
 Gdy liczba całkowita bez znaku zostaje przesunięta w prawo, najbardziej znaczący bit jest wyczyszczony. Na przykład jeśli 0xF000 jest niepodpisana, wynikiem jest 0x7800. Przesunięcie **`unsigned`** lub dodatnie **`int`** prawo 32 razy produkuje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Liczb całkowitych](../c-language/integers.md)
+[Liczby całkowite](../c-language/integers.md)

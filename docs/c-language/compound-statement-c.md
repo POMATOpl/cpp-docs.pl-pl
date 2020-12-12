@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: instrukcja złożona (C)'
 title: Instrukcja złożona (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: 473a4acfa9f6fa2c9089f242a24962570cae4f1c
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: b4c1ee15bc081c34cbc12bfe2c3e997ca181b7be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293446"
 ---
 # <a name="compound-statement-c"></a>Instrukcja złożona (C)
 
@@ -23,7 +24,7 @@ Instrukcja złożona (nazywana również "blokiem") jest zwykle wyświetlana jak
 
 *Deklaracja-lista*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* *declaration*
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* 
 
 *Lista instrukcji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Merge*<br/>
@@ -50,6 +51,6 @@ if ( i > 0 )
 
 W tym przykładzie, jeśli `i` jest większa niż 0, wszystkie instrukcje wewnątrz instrukcji złożonej są wykonywane w kolejności.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: efektów ubocznych'
 title: Efekty uboczne
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expression evaluation, side effects
 - side effects in expression evaluation
 ms.assetid: d9b3004a-830e-43a0-bea5-8989d501d670
-ms.openlocfilehash: de5e398afd8b95cfe5596f487a36b6a2d27e3287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78a08cb2c6290a3cb9c0c61a714cb2bcfe61a4cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158476"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292783"
 ---
 # <a name="side-effects"></a>Efekty uboczne
 
@@ -21,13 +22,13 @@ add( i + 1, i = j + 2 );
 myproc( getc(), getc() );
 ```
 
-Argumenty wywołania funkcji można ocenić w dowolnej kolejności. Wyrażenie `i + 1` może być oceniane przed `i = j + 2`, lub `i = j + 2` może być oceniane przed. `i + 1` W każdym przypadku wynik jest różny. Podobnie nie jest możliwe zagwarantowanie, jakie znaki są faktycznie przesyłane do `myproc`. Ponieważ operacje przyrostu jednoargumentowego i zmniejszania obejmują przydziały, operacje te mogą powodować efekty uboczne, jak pokazano w następującym przykładzie:
+Argumenty wywołania funkcji można ocenić w dowolnej kolejności. Wyrażenie `i + 1` może być oceniane przed `i = j + 2` , lub `i = j + 2` może być oceniane przed `i + 1` . W każdym przypadku wynik jest różny. Podobnie nie jest możliwe zagwarantowanie, jakie znaki są faktycznie przesyłane do `myproc` . Ponieważ operacje przyrostu jednoargumentowego i zmniejszania obejmują przydziały, operacje te mogą powodować efekty uboczne, jak pokazano w następującym przykładzie:
 
 ```
 x[i] = i++;
 ```
 
-W tym przykładzie wartość `x` modyfikowana jest nieprzewidywalne. Wartość indeksu dolnego może być nową lub starą wartością `i`. Wyniki mogą się różnić w zależności od różnych kompilatorów lub różnych poziomów optymalizacji.
+W tym przykładzie wartość `x` modyfikowana jest nieprzewidywalne. Wartość indeksu dolnego może być nową lub starą wartością `i` . Wyniki mogą się różnić w zależności od różnych kompilatorów lub różnych poziomów optymalizacji.
 
 Ponieważ C nie definiuje kolejności oceny efektów ubocznych, obie metody oceny omówione powyżej są poprawne i mogą być zaimplementowane. Aby upewnić się, że kod jest przenośny i czysty, należy unikać instrukcji, które są zależne od określonej kolejności oceny efektów ubocznych.
 

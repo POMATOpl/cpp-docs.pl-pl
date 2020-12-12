@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _splitpath, _wsplitpath'
 title: _splitpath, _wsplitpath
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: 1d24565a912d74060e60024dcfd90b8018cae32d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d270cf15c00c42f350dafe0cd45dddbb2f6594c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292315"
 ---
 # <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -78,7 +79,7 @@ Pełna ścieżka.
 Litera dysku, po którym następuje dwukropek (**:**). Jeśli nie potrzebujesz litery dysku, możesz przekazać **wartość null** dla tego parametru.
 
 *katalogów*<br/>
-Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników **/** (), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
+Ścieżka katalogu, włącznie z końcowym ukośnikiem. Można używać ukośników ( **/** ), ukośników odwrotnych ( **\\** ) lub obu tych wartości. Jeśli ścieżka katalogu nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
 
 *fname*<br/>
 Podstawowa nazwa pliku (bez rozszerzenia). Jeśli nazwa pliku nie jest potrzebna, można przekazać **wartość null** dla tego parametru.
@@ -100,7 +101,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Każdy składnik pełnej ścieżki jest przechowywany w osobnym buforze; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**i **_MAX_EXT** (zdefiniowane w STDLIB. H) Określ maksymalny rozmiar każdego składnika plików. Składniki plików, które są większe niż odpowiednie stałe manifestu powodują uszkodzenie sterty.
+Każdy składnik pełnej ścieżki jest przechowywany w osobnym buforze; stałe manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME** i **_MAX_EXT** (zdefiniowane w STDLIB. H) Określ maksymalny rozmiar każdego składnika plików. Składniki plików, które są większe niż odpowiednie stałe manifestu powodują uszkodzenie sterty.
 
 Każdy bufor musi być tak duży, jak odpowiadający mu stała manifestu, aby uniknąć potencjalnego przepełnienia buforu.
 
@@ -123,8 +124,8 @@ Jeśli *ścieżka* ma **wartość null**, zostanie wywołana procedura obsługi 
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_splitpath**|\<STDLIB. h>|
-|**_wsplitpath**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_splitpath**|\<stdlib.h>|
+|**_wsplitpath**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

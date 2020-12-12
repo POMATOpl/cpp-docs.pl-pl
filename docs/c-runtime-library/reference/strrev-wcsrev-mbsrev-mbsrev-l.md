@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strrev, _wcsrev, _mbsrev _mbsrev_l'
 title: _strrev, _wcsrev, _mbsrev, _mbsrev_l
 ms.date: 4/2/2020
 api_name:
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: d0f03f84045d6fc036e6c8111da7b8484f2b8622
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c3e1e0483220daca9182f6ee8a312dfc6589caf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296176"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
@@ -99,7 +100,7 @@ Zwraca wskaźnik do zmienionego ciągu. Żadna wartość zwracana nie jest zarez
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strrev** odwraca kolejność znaków w *str*. Końcowy znak null pozostaje na miejscu. **_wcsrev** i **_mbsrev** są wersjami znaków dwubajtowych i **_strrev**. Argumenty i zwracaną wartość **_wcsrev** są ciągami znaków dwubajtowych; te **_mbsrev** są ciągami znaków wielobajtowych. W przypadku **_mbsrev**kolejność bajtów w każdym znaku wielobajtowym w *str* nie jest zmieniana. Te trzy funkcje zachowują się identycznie w inny sposób.
+Funkcja **_strrev** odwraca kolejność znaków w *str*. Końcowy znak null pozostaje na miejscu. **_wcsrev** i **_mbsrev** są wersjami znaków dwubajtowych i **_strrev**. Argumenty i zwracaną wartość **_wcsrev** są ciągami znaków dwubajtowych; te **_mbsrev** są ciągami znaków wielobajtowych. W przypadku **_mbsrev** kolejność bajtów w każdym znaku wielobajtowym w *str* nie jest zmieniana. Te trzy funkcje zachowują się identycznie w inny sposób.
 
 **_mbsrev** sprawdza poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbsrev** zwraca **wartość null** i ustawia **errno** na **EINVAL**. **_strrev** i **_wcsrev** nie weryfikują ich parametrów.
 
@@ -121,9 +122,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strrev**|\<> String. h|
-|**_wcsrev**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsrev**, **_mbsrev_l**|\<mbstring. h>|
+|**_strrev**|\<string.h>|
+|**_wcsrev**|\<string.h> lub \<wchar.h>|
+|**_mbsrev**, **_mbsrev_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -157,10 +158,10 @@ int main( void )
 The string "Able was I ere I saw Elba" is a palindrome
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

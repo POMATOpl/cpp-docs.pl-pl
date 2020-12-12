@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Kiedy są wywoływane programy obsługi aktualizacji'
 title: Kiedy są wywoływane programy obsługi aktualizacji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,25 +17,25 @@ helpviewer_keywords:
 - command routing [MFC], update handlers
 - update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
-ms.openlocfilehash: 4a52c147d1abf02b7c5e89abf868f87a07ab32cc
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ee5d402eea4121c9ceb4bcbd48e752549c55b1c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297177"
 ---
 # <a name="when-update-handlers-are-called"></a>Kiedy są wywoływane programy obsługi aktualizacji
 
-Załóżmy, że użytkownik kliknie przycisk myszy w menu Plik, która generuje komunikat WM_INITMENUPOPUP. Mechanizm struktury zbiorczo uaktualnienia wszystkie elementy w menu Plik, zanim menu zostanie rozwinięte, dzięki czemu użytkownik może wyświetlić go.
+Załóżmy, że użytkownik kliknie mysz w menu plik, co spowoduje wygenerowanie komunikatu WM_INITMENUPOPUP. Mechanizm aktualizacji struktury zbiorczo aktualizuje wszystkie elementy w menu plik przed porzucaniem menu, aby użytkownik mógł je zobaczyć.
 
-Aby to zrobić, trasy framework zaktualizować poleceń dla wszystkich elementów menu w menu podręcznym wzdłuż standardowego routingu poleceń. Obiekty docelowe poleceń na routing mógł zaktualizować wszystkie elementy menu, dopasowując polecenia update z wpisem odpowiednie mapy komunikatów (w postaci `ON_UPDATE_COMMAND_UI`) i wywoływania funkcji "procedury obsługi aktualizacji". W związku z tym do menu z elementami menu sześć sześć polecenia aktualizacji są wysyłane. Jeśli istnieje procedura obsługi aktualizacji dla Identyfikatora polecenia elementu menu, jest on nazywany wykonać aktualizację. Jeśli nie, w ramach sprawdza istnienie programu obsługi dla tego Identyfikatora polecenia i włącza lub wyłącza elementu menu, zgodnie z potrzebami.
+W tym celu struktura kieruje polecenia aktualizacji dla wszystkich elementów menu w menu podręcznym do standardowego routingu poleceń. Elementy docelowe poleceń w ramach routingu mają szansę zaktualizowania wszystkich elementów menu, dopasowując polecenie Update do odpowiedniego wpisu mapy komunikatów (formularza `ON_UPDATE_COMMAND_UI` ) i wywołując funkcję "procedura obsługi aktualizacji". W tym celu w przypadku menu z sześcioma elementami menu są wysyłane sześć poleceń aktualizacji. Jeśli istnieje procedura obsługi aktualizacji dla identyfikatora polecenia elementu menu, jest wywoływana, aby wykonać aktualizację. Jeśli nie, struktura sprawdza obecność programu obsługi dla tego identyfikatora polecenia i włącza lub wyłącza element menu stosownie do potrzeb.
 
-Jeśli struktura nie może znaleźć `ON_UPDATE_COMMAND_UI` zapisu podczas routingu poleceń, automatycznie umożliwia obiektu interfejsu użytkownika w przypadku `ON_COMMAND` wpis gdzieś przy użyciu tego samego identyfikatora polecenia. W przeciwnym razie wyłącza obiektu interfejsu użytkownika. W związku z tym aby upewnić się, że obiekt interfejsu użytkownika jest włączona, należy dostarczyć obsługi dla polecenia, które generuje obiekt lub podać procedury obsługi aktualizacji. Zobacz ilustrację w temacie [obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md).
+Jeśli struktura nie znajdzie `ON_UPDATE_COMMAND_UI` wpisu podczas routingu poleceń, automatycznie włącza obiekt interfejsu użytkownika, jeśli istnieje `ON_COMMAND` wpis z tym samym identyfikatorem polecenia. W przeciwnym razie powoduje wyłączenie obiektu interfejsu użytkownika. W związku z tym, aby upewnić się, że obiekt interfejsu użytkownika jest włączony, podaj procedurę obsługi dla polecenia, które generuje lub dostarczą procedurę obsługi aktualizacji dla tego obiektu. Zobacz rysunek w temacie [obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md).
 
-Istnieje możliwość wyłączyć domyślne wyłączenie obiektów interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) składowej klasy `CFrameWnd` w *odwołanie MFC*.
+Istnieje możliwość wyłączenia domyślnego wyłączenia obiektów interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) składową klasy `CFrameWnd` w *Kompendium MFC*.
 
-Inicjowanie menu odbywa się automatycznie w ramach, wykonywane, kiedy aplikacja otrzymuje komunikat WM_INITMENUPOPUP. Podczas wykonywania pętli bezczynności struktura wyszukuje polecenia routing programy obsługi aktualizacji przycisk w taki sam sposób jak w przypadku menu.
+Inicjalizacja menu jest wykonywana automatycznie w strukturze, gdy aplikacja otrzymuje komunikat WM_INITMENUPOPUP. W pętli bezczynności struktura przeszukuje routing poleceń dla programów obsługi aktualizacji przycisków w taki sam sposób, jak w przypadku menu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Instrukcje: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
+[Instrukcje: Aktualizowanie obiektów User-Interface](../mfc/how-to-update-user-interface-objects.md)

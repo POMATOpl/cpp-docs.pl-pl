@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Porównywanie znaków'
 title: Porównywanie znaków
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,32 +7,32 @@ helpviewer_keywords:
 - MBCS [C++], character comparison
 - characters [C++], comparing
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
-ms.openlocfilehash: 075a22634f254c2ea634a1171ee157971fe5918e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e00e087074a70145f1a73694293edc3c522d69f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297008"
 ---
 # <a name="character-comparison"></a>Porównywanie znaków
 
-Użyj następujących wskazówek:
+Skorzystaj z następujących wskazówek:
 
-- Porównywanie znanych bajt znaku ASCII działa prawidłowo:
+- Porównywanie znanego bajtu wiodącego ze znakiem ASCII działa prawidłowo:
 
     ```cpp
     if( *sz1 == 'A' )
     ```
 
-- Porównywanie dwóch znaków nieznany wymagane jest użycie jednego makra zdefiniowane w Mbstring.h:
+- Porównanie dwóch nieznanych znaków wymaga użycia jednego z makr zdefiniowanych w mbstring. h:
 
     ```cpp
     if( !_mbccmp( sz1, sz2) )
     ```
 
-   Daje to gwarancję, że oba bajty znaków dwubajtowych, są porównywane pod kątem równości.
+   Gwarantuje to, że oba bajty znaku dwubajtowego są porównywane pod kątem równości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)<br/>
+[Wskazówki dotyczące programowania MBCS](../text/mbcs-programming-tips.md)<br/>
 [Przepełnienie buforu](../text/buffer-overflow.md)

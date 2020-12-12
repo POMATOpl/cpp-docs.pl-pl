@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l'
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 4/2/2020
 api_name:
@@ -50,19 +51,19 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: fbde746cba02605be7fa42e941a30bfa02d0561a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2dd5da437ef0b6f9f319f3ba7a9543f7922bfd9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296254"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 Skanuje ciągi znaków w określonych zestawach znaków.
 
 > [!IMPORTANT]
-> `_mbspbrk`i `_mbspbrk_l` nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbspbrk` i `_mbspbrk_l` nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -128,22 +129,22 @@ Zakończony zerem, przeszukiwany ciąg.
 *strCharSet*<br/>
 Zestaw znaków zakończony znakiem null.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do pierwszego wystąpienia dowolnego znaku z *strCharSet* w *str*lub wskaźnik o wartości null, jeśli dwa argumenty ciągu nie mają wspólnych znaków.
+Zwraca wskaźnik do pierwszego wystąpienia dowolnego znaku z *strCharSet* w *str* lub wskaźnik o wartości null, jeśli dwa argumenty ciągu nie mają wspólnych znaków.
 
 ## <a name="remarks"></a>Uwagi
 
 `strpbrk`Funkcja zwraca wskaźnik do pierwszego wystąpienia znaku w *str* , który należy do zestawu znaków w *strCharSet*. Wyszukiwanie nie zawiera kończącego znaku null.
 
-`wcspbrk`i `_mbspbrk` są wersjami znaków dwubajtowych i znakami wieloznacznymi `strpbrk` . Argumenty i wartość zwracana przez `wcspbrk` są ciągami znaków `_mbspbrk` dwubajtowych; te z są ciągami znaków wieloznacznych.
+`wcspbrk` i `_mbspbrk` są wersjami znaków dwubajtowych i znakami wieloznacznymi `strpbrk` . Argumenty i wartość zwracana przez `wcspbrk` są ciągami znaków `_mbspbrk` dwubajtowych; te z są ciągami znaków wieloznacznych.
 
-`_mbspbrk`sprawdza poprawność swoich parametrów. Jeśli *str* lub *strCharSet* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbspbrk` zwraca wartość null i ustawia `errno` do EINVAL. `strpbrk`i `wcspbrk` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
+`_mbspbrk` sprawdza poprawność swoich parametrów. Jeśli *str* lub *strCharSet* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbspbrk` zwraca wartość null i ustawia `errno` do EINVAL. `strpbrk` i `wcspbrk` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-`_mbspbrk`jest podobna do `_mbscspn` except, która `_mbspbrk` zwraca wskaźnik zamiast wartości typu [size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk` jest podobna do `_mbscspn` except, która `_mbspbrk` zwraca wskaźnik zamiast wartości typu [size_t](../../c-runtime-library/standard-types.md).
 
 W języku C te funkcje przyjmują **`const`** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do **`const`** zwraca wskaźnik do **`const`** ; wersja, która przyjmuje wskaźnik do **`const`** niezwracanego wskaźnika do niebędącego elementem **`const`** . Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli **`const`** są dostępne zarówno i nie **`const`** wersje tych funkcji. Jeśli wymagane jest **`const`** zachowanie niezachowania dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
 
@@ -205,8 +206,8 @@ int main( void )
 ## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
-[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>

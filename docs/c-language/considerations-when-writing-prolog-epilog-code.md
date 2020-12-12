@@ -1,5 +1,6 @@
 ---
-title: Zagadnienia dotyczące pisania kodu prologu epilogu
+description: 'Dowiedz się więcej na temat: zagadnienia dotyczące pisania kodu prologu/epilogu'
+title: Zagadnienia dotyczące pisania kodu Prolog-Epilog
 ms.date: 11/04/2016
 helpviewer_keywords:
 - layouts, stack frame
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65416e915afa95a27658e2c7517da8f2868dfef9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293290"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Zagadnienia dotyczące pisania kodu prologu/epilogu
 
@@ -20,7 +21,7 @@ ms.locfileid: "81334578"
 
 Przed zapisaniem własnych sekwencji kodu prologu i epilogu ważne jest, aby zrozumieć, jak Ramka stosu jest rozłożone. Warto również wiedzieć, jak używać wstępnie zdefiniowanej stałej **__LOCAL_SIZE** .
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Układ ramki CStack
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a> Układ ramki CStack
 
 W tym przykładzie pokazano standardowy kod prologu, który może pojawić się w 32-bitowej funkcji:
 
@@ -42,11 +43,11 @@ ret                          ; Return from function
 
 Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych rozpoczyna się od `ebp-2`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.
 
-## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a>__LOCAL_SIZE stała
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a> __LOCAL_SIZE stała
 
 Kompilator dostarcza stałą, **__LOCAL_SIZE**, do użycia w bloku asemblera wbudowanego kodu prologu funkcji. Stała jest używana do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.
 
-Kompilator określa wartość **__LOCAL_SIZE**. Wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. **__LOCAL_SIZE** można używać tylko jako bezpośredniego operandu; nie można jej użyć w wyrażeniu. Nie wolno zmieniać lub ponownie definiować wartości tej stałej. Przykład:
+Kompilator określa wartość **__LOCAL_SIZE**. Wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. **__LOCAL_SIZE** można używać tylko jako bezpośredniego operandu; nie można jej użyć w wyrażeniu. Nie wolno zmieniać lub ponownie definiować wartości tej stałej. Na przykład:
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
@@ -83,4 +84,4 @@ __declspec ( naked ) func()
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcje Naked](../c-language/naked-functions.md)
+[Funkcje bez nadruku](../c-language/naked-functions.md)
