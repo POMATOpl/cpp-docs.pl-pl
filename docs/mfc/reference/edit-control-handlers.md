@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: procedury obsługi kontrolek edycji'
 title: Edytowanie programów obsługi sterowania
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,28 +22,28 @@ helpviewer_keywords:
 - ON_EN_KILLFOCUS macro [MFC]
 - edit controls [MFC], edit control handlers
 ms.assetid: 55b88b5e-12b5-4422-b03e-c8c2f27d095c
-ms.openlocfilehash: 53586de574fca6ab88b93444c9d571c62354cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee73dac1ae0c304c4a233532b1470cc696b8e00d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219892"
 ---
 # <a name="edit-control-handlers"></a>Edytowanie programów obsługi sterowania
 
-Następujące wpisy mapy odpowiadają prototypu funkcji.
+Następujące wpisy mapy odpowiadają prototypowi funkcji.
 
 |Wpis mapy|Prototyp funkcji|
 |---------------|------------------------|
-|ON_EN_CHANGE( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
-|ON_EN_ERRSPACE ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
-|ON_EN_HSCROLL( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
-|ON_EN_KILLFOCUS( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
-|ON_EN_MAXTEXT ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
-|ON_EN_SETFOCUS( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
-|ON_EN_UPDATE ( \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
-|ON_EN_VSCROLL( \<id>, \<memberFxn> )|() void memberFxn afx_msg;|
+|ON_EN_CHANGE ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
+|ON_EN_ERRSPACE ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
+|ON_EN_HSCROLL ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
+|ON_EN_KILLFOCUS ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
+|ON_EN_MAXTEXT ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
+|ON_EN_SETFOCUS ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
+|ON_EN_UPDATE ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
+|ON_EN_VSCROLL ( \<id> , \<memberFxn> )|afx_msg void memberFxn ();|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)

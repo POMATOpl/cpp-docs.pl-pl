@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: strony właściwości (MFC)'
 title: Strony właściwości (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fa395272ba74c6b3900d5a1500d4cf47ade4e535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218969"
 ---
 # <a name="property-pages-mfc"></a>Strony właściwości (MFC)
 
@@ -429,7 +430,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 *class_name*<br/>
 Nazwa klasy kontrolki, dla której są określone strony właściwości.
 
-*count*<br/>
+*liczbą*<br/>
 Liczba stron właściwości używanych przez klasę formantu.
 
 ### <a name="remarks"></a>Uwagi

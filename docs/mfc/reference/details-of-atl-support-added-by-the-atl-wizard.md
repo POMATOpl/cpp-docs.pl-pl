@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: szczegóły obsługi ATL dodanej przez kreatora ATL'
 title: Szczegóły obsługi ATL dodanej przez kreatora ATL
 ms.date: 08/20/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: aeac01ce58deb429f14058c06524dff53abde060
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 2ae574ac2c4d56e1522fa8c794c18b6f9b6635ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220139"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Szczegóły obsługi ATL dodanej przez kreatora ATL
 
@@ -38,7 +39,7 @@ Po [dodaniu obsługi ATL do istniejącego pliku wykonywalnego MFC lub dll](../..
 
 Po dodaniu obsługi ATL do projektu MFC DLL, pojawią się pewne różnice. Kod jest dodawany do `DLLRegisterServer` funkcji i `DLLUnregisterServer` w celu zarejestrowania i WYREJESTROWANIA biblioteki DLL. Kod jest również dodawany do [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) i [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa ATL w projekcie MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

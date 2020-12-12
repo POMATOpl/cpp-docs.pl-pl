@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mapy zdarzeń DHTML'
 title: Mapy zdarzeń DHTML
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 099a08298357d99a3d09ed6fc1209d463f6a4526
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b9df8f1aa59472de033943efd28f5c688c61e706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220126"
 ---
 # <a name="dhtml-event-maps"></a>Mapy zdarzeń DHTML
 

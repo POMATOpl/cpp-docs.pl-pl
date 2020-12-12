@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje wymiany pól rekordów'
 title: Funkcje wymiany pól rekordów
 ms.date: 09/17/2019
 f1_keywords:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2ba3a83bdda21f91913d7eda435a845b0977e8a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218956"
 ---
 # <a name="record-field-exchange-functions"></a>Funkcje wymiany pól rekordów
 
@@ -137,7 +138,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu [CByteArray](cbytearray-class.md)jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *nMaxLength*<br/>
@@ -176,7 +177,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu BOOL jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -208,7 +209,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu BYTE jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -250,7 +251,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanej składowej danych; wartość, która ma zostać przeniesiona. Różne wersje funkcji mają różne typy danych dla wartości:
 
 Pierwsza wersja funkcji przyjmuje odwołanie do obiektu [CTime](../../atl-mfc-shared/reference/ctime-class.md) . W przypadku transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
@@ -290,7 +291,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`double`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -322,7 +323,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`int`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -355,7 +356,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`long`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -387,7 +388,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu `CLongBinary` jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -419,7 +420,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`float`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -454,7 +455,7 @@ Wskaźnik do obiektu klasy `CFieldExchange` . Ten obiekt zawiera informacje słu
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu `CString` jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *nMaxLength*<br/>
@@ -756,7 +757,7 @@ Wskaźnik do obiektu klasy [CFieldExchange](cfieldexchange-class.md). Ten obiekt
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`int`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 ### <a name="example"></a>Przykład
@@ -950,7 +951,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu [CByteArray](cbytearray-class.md)jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *nPreAllocSize*<br/>
@@ -996,7 +997,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu BOOL jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1039,7 +1040,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu BYTE jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1082,7 +1083,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z określonego elementu członkowskiego danych typu [COleCurrency](colecurrency-class.md). W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1125,7 +1126,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. Funkcja przyjmuje odwołanie do obiektu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) . W przypadku transferu z zestawu rekordów do źródła danych ta wartość jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1171,7 +1172,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`double`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1214,7 +1215,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`long`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1258,7 +1259,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu [CLongBinary](clongbinary-class.md)jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwPreAllocSize*<br/>
@@ -1304,7 +1305,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`short`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1350,7 +1351,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu **`float`** jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *dwBindOptions*<br/>
@@ -1394,7 +1395,7 @@ Wskaźnik do obiektu klasy [CDaoFieldExchange](cdaofieldexchange-class.md). Ten 
 *szName*<br/>
 Nazwa kolumny danych.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość przechowywana we wskazanym elemencie członkowskim danych — wartość do przeniesienia. W przypadku transferu z zestawu rekordów do źródła danych wartość typu [CString](../../atl-mfc-shared/reference/cstringt-class.md)jest pobierana z określonego elementu członkowskiego danych. W przypadku transferu ze źródła danych do zestawu rekordów wartość jest przechowywana w określonym elemencie członkowskim danych.
 
 *nPreAllocSize*<br/>

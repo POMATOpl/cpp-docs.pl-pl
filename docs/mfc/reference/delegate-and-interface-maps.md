@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: delegowanie i mapowanie interfejsów makr'
 title: Makra delegata i mapy interfejsu (MFC)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: 01f5cbfb1f751823d218761410bc9091b73cb0a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 222625514fa0d6d1d683a6ee4098812298f7ed72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220152"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Makra delegata i mapy interfejsu
 

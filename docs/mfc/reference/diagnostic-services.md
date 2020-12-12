@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat usług diagnostycznych
 title: Usługi diagnostyczne
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 931545e6a79ecaa59d147e48265649ef20466fbd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d2b7bd303fc062aa520497e649430f53f7667c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220074"
 ---
 # <a name="diagnostic-services"></a>Usługi diagnostyczne
 
@@ -43,7 +44,7 @@ W bibliotece debugowania wszystkie przydzielono bloków pamięci są zamykane z 
 
 w pliku implementacji wszystkie wywołania **`new`** będą przechowywać nazwę pliku i numer wiersza, w którym miało miejsce alokacja pamięci. Funkcja [CMemoryState::D umpallobjectssince](cmemorystate-structure.md#dumpallobjectssince) wyświetli te dodatkowe informacje, co umożliwia zidentyfikowanie przecieków pamięci. Zapoznaj się również z klasą [CDumpContext](../../mfc/reference/cdumpcontext-class.md) , aby uzyskać dodatkowe informacje na temat danych wyjściowych diagnostyki.
 
-Ponadto Biblioteka wykonawcza C obsługuje również zestaw funkcji diagnostycznych, których można użyć do debugowania aplikacji. Aby uzyskać więcej informacji, zobacz [procedury debugowania](../../c-runtime-library/debug-routines.md) w dokumentacji dotyczącej biblioteki wykonawczej.
+Ponadto Biblioteka wykonawcza C obsługuje również zestaw funkcji diagnostycznych, których można użyć do debugowania aplikacji. Aby uzyskać więcej informacji, zobacz [procedury debugowania](../../c-runtime-library/debug-routines.md) w dokumentacji biblioteki Run-Time.
 
 ### <a name="mfc-general-diagnostic-macros"></a>Ogólne makra diagnostyczne MFC
 
@@ -416,7 +417,7 @@ CDumpContext  afxDump;
 
 `afxDump` jest wstępnie zdefiniowanym obiektem [CDumpContext](../../mfc/reference/cdumpcontext-class.md) , który umożliwia wysyłanie `CDumpContext` informacji do okna danych wyjściowych debugera lub do terminalu debugowania. Zazwyczaj dostarcza się `afxDump` jako parametr do `CObject::Dump` .
 
-W systemie Windows NT i wszystkich wersjach systemu Windows `afxDump` dane wyjściowe są wysyłane do okna debugowania danych wyjściowych Visual C++ podczas debugowania aplikacji.
+W systemie Windows NT i wszystkich wersjach systemu Windows `afxDump` dane wyjściowe są wysyłane do okna Output-Debug Visual C++ podczas debugowania aplikacji.
 
 Ta zmienna jest definiowana tylko w wersji debugowania MFC. Aby uzyskać więcej informacji na temat `afxDump` , zobacz [debugowanie aplikacji MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
@@ -921,7 +922,7 @@ Obiekty stosu, globalne lub osadzone nie są wyliczane. Wskaźnik przesłany do 
 
 [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i Globals](mfc-macros-and-globals.md)<br/>
 [CObject::D UMP](cobject-class.md#dump)
