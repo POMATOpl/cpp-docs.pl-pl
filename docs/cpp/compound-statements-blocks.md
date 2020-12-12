@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat instrukcji złożonych (bloków)
 title: Instrukcje złożone (bloki)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - blocks, about blocks
 - compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
-ms.openlocfilehash: a06a3d9ce887150ba3333e8e9e874ab337f8b4df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7defb11a30466949d5a9ca5e86ca1e865fbfe4fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318016"
 ---
 # <a name="compound-statements-blocks"></a>Instrukcje złożone (bloki)
 
@@ -44,6 +45,6 @@ else
 > [!NOTE]
 > Ponieważ deklaracja jest instrukcją, deklaracja może być jedną z instrukcji na *liście instrukcji*. W związku z tym nazwy zadeklarowane wewnątrz instrukcji złożonej, ale nie są jawnie zadeklarowane jako static, mają zakres lokalny i (dla obiektów) okres istnienia. Zobacz [zakres](../cpp/scope-visual-cpp.md) , aby uzyskać szczegółowe informacje na temat traktowania nazw z zakresem lokalnym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Omówienie instrukcji języka C++](../cpp/overview-of-cpp-statements.md)

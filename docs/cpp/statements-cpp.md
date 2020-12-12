@@ -1,43 +1,44 @@
 ---
+description: 'Dowiedz się więcej o: instrukcjach (C++)'
 title: Instrukcje (C++)
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-ms.openlocfilehash: c82afd68761b8429f69190510bd64445a28b8216
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6ff61402761fe892d3c94f447d9cd0c4c75f3eee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318003"
 ---
 # <a name="statements-c"></a>Instrukcje (C++)
 
-Instrukcje C++ są elementy programu, które kontrolują, jak i w jakiej kolejności obiekty są manipulowane. Ta część zawiera:
+Instrukcje języka C++ to elementy programu kontrolujące sposób manipulowania obiektami kolejności. Ta część zawiera:
 
 - [Omówienie](../cpp/overview-of-cpp-statements.md)
 
-- [Instrukcje oznaczone etykietą](../cpp/labeled-statements.md)
+- [Instrukcje z etykietami](../cpp/labeled-statements.md)
 
-- Kategorie oświadczeń
+- Kategorie instrukcji
 
-  - [Instrukcje wyrażeń](../cpp/expression-statement.md). Te instrukcje ocenić wyrażenie dla jego skutków ubocznych lub jego wartości zwracanej.
+  - [Instrukcje wyrażeń](../cpp/expression-statement.md). Te instrukcje służą do obliczenia wyrażenia dla jego efektów ubocznych lub wartości zwracanej.
 
-  - [Instrukcje null](../cpp/null-statement.md). Te instrukcje mogą być dostarczane, gdy instrukcja jest wymagana przez składnię C++, ale gdzie nie ma być podjęta żadna akcja.
+  - [Instrukcje o wartości null](../cpp/null-statement.md). Te instrukcje można podać w przypadku, gdy instrukcja jest wymagana przez składnię języka C++, ale gdy nie ma być wykonywana żadna akcja.
 
-  - [Instrukcje złożone](../cpp/compound-statements-blocks.md). Instrukcje te są grupami instrukcji ujętymi w nawiasy klamrowe ({ }). Mogą być używane wszędzie tam, gdzie można użyć jednej instrukcji.
+  - [Złożone instrukcje](../cpp/compound-statements-blocks.md). Te instrukcje są grupami instrukcji ujętych w nawiasy klamrowe ({}). Można ich używać wszędzie tam, gdzie można użyć pojedynczej instrukcji.
 
-  - [Instrukcje wyboru](../cpp/selection-statements-cpp.md). Te instrukcje wykonać test; następnie wykonują jedną sekcję kodu, jeśli test ma wartość true (nonzero). Mogą one wykonać inną sekcję kodu, jeśli test ma wartość false.
+  - [Instrukcje wyboru](../cpp/selection-statements-cpp.md). Te instrukcje wykonują test; następnie wykonują jedną część kodu, jeśli test ma wartość true (niezerową). Mogą wykonać kolejną sekcję kodu, jeśli test ma wartość false.
 
-  - [Instrukcje iteracji](../cpp/iteration-statements-cpp.md). Instrukcje te przewidują wielokrotne wykonywanie bloku kodu, dopóki nie zostanie spełnione określone kryterium zakończenia.
+  - [Instrukcje iteracji](../cpp/iteration-statements-cpp.md). Te instrukcje zapewniają wielokrotne wykonywanie bloku kodu do momentu spełnienia określonego kryterium zakończenia.
 
-  - [Instrukcje skoku](../cpp/jump-statements-cpp.md). Te instrukcje albo przenieść kontrolę natychmiast do innej lokalizacji w funkcji lub return kontroli z funkcji.
+  - [Instrukcje skoku](../cpp/jump-statements-cpp.md). Te instrukcje umożliwiają natychmiastowe przeniesienie kontroli do innej lokalizacji w funkcji lub Sterowanie zwracaną przez funkcję.
 
-  - [Oświadczenia deklaracji](declarations-and-definitions-cpp.md). Deklaracje wprowadzają nazwę do programu.
+  - [Instrukcje deklaracji](declarations-and-definitions-cpp.md). Deklaracje wprowadzają nazwę do programu.
 
-Aby uzyskać informacje na temat instrukcji obsługi wyjątków, zobacz [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md).
+Aby uzyskać informacje dotyczące instrukcji obsługi wyjątków, zobacz [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Odwołanie do języka języka C++](../cpp/cpp-language-reference.md)
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)

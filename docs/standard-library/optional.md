@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: &lt; opcjonalne&gt;'
 title: '&lt;optional&gt;'
 ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: 31a3d9aad539e45bb835331a4ef63690d0e16f49
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c1f1e6f99278abf296c361515953a931109f47ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201836"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
@@ -38,7 +39,7 @@ Definiuje szablon klasy kontenera `optional` i kilka szablonów pomocniczych.
 > [!NOTE]
 > Oprócz porównania relacyjnego \<optional> Operatory obsługują również porównanie z **nullopt** i `T` .
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
