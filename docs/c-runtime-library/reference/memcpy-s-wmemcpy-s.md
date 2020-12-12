@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: memcpy_s, wmemcpy_s'
 title: memcpy_s, wmemcpy_s
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77c71e594d9a3853438987e85e43700d1f467718
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304743"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -81,10 +82,10 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 
 |*dest*|*destSize*|*src*|*liczbą*|Wartość zwracana|Zawartość miejsca *docelowego*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|ile|ile|ile|0|0|Nie zmodyfikowano|
-|**NULL**|ile|ile|wartość niezerowa|**EINVAL**|Nie zmodyfikowano|
-|ile|ile|**NULL**|wartość niezerowa|**EINVAL**|wartość *docelowy* jest zerowa|
-|ile|< *liczbą*|ile|wartość niezerowa|**ERANGE**|wartość *docelowy* jest zerowa|
+|dowolny|dowolny|dowolny|0|0|Nie zmodyfikowano|
+|**NULL**|dowolny|dowolny|wartość niezerowa|**EINVAL**|Nie zmodyfikowano|
+|dowolny|dowolny|**NULL**|wartość niezerowa|**EINVAL**|wartość *docelowy* jest zerowa|
+|dowolny|< *liczbą*|dowolny|wartość niezerowa|**ERANGE**|wartość *docelowy* jest zerowa|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -98,8 +99,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memcpy_s**|\<> pamięci. h> \<lub String. h|
-|**wmemcpy_s**|\<WCHAR. h>|
+|**memcpy_s**|\<memory.h> lub \<string.h>|
+|**wmemcpy_s**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -143,7 +144,7 @@ int main()
 0 1 4 9 16 25 36 49 64 81
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

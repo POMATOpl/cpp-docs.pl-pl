@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _execlpe, _wexeclpe'
 title: _execlpe, _wexeclpe
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: 0783e07c945de7d65a11247efc6346c5e315c900
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 22f484166b2b70b0d54cefa4f12da36f9af098fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304755"
 ---
 # <a name="_execlpe-_wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -100,8 +101,8 @@ Funkcje **_execlpe** sprawdzają poprawność swoich parametrów. Jeśli *cmdnam
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_execlpe**|\<Process. h >|\<errno. h >|
-|**_wexeclpe**|\<Process. h > lub \<WCHAR. h >|\<errno. h >|
+|**_execlpe**|\<process.h>|\<errno.h>|
+|**_wexeclpe**|\<process.h> lub \<wchar.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -111,11 +112,11 @@ Zobacz przykład w [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-
 
 ## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec, _wexec, funkcje](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[przerwij](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funkcje _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

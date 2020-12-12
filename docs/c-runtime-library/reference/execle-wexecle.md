@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _execle, _wexecle'
 title: _execle, _wexecle
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-ms.openlocfilehash: 3480b2220c71984dcc30cec54d00deac1f4dfbc7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 28e05222d0ee91f44f96717056117a67afe5c0b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304899"
 ---
 # <a name="_execle-_wexecle"></a>_execle, _wexecle
 
@@ -101,7 +102,7 @@ Funkcje **_execle** sprawdzają poprawność swoich parametrów. Jeśli *cmdname
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
 |**_execle**|\<process.h>|\<errno.h>|
-|**_wexecle**|\<Process. h > lub \<WCHAR. h >|\<errno.h>|
+|**_wexecle**|\<process.h> lub \<wchar.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -109,13 +110,13 @@ Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/com
 
 Zobacz przykład w [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec, _wexec, funkcje](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[przerwij](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funkcje _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

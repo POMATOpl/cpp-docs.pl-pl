@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _execl, _wexecl'
 title: _execl, _wexecl
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-ms.openlocfilehash: 714ef80c4909e92100c4fa869b7544239f8edeb7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8775dbae1f566ff42aeadaedf310323cfca410ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305003"
 ---
 # <a name="_execl-_wexecl"></a>_execl, _wexecl
 
@@ -85,16 +86,16 @@ Jeśli to się powiedzie, te funkcje nie zwracają do procesu wywołującego. Zw
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji ładuje i uruchamia nowy proces, przekazując każdy argument wiersza polecenia jako oddzielny parametr. Pierwszy argument jest poleceniem lub nazwą pliku wykonywalnego, a drugi argument powinien być taki sam jak pierwszy. Zostanie `argv[0]` ona przeprowadzony w procesie. Trzeci argument jest pierwszym argumentem `argv[1]`, z którego wykonywany jest proces.
+Każda z tych funkcji ładuje i uruchamia nowy proces, przekazując każdy argument wiersza polecenia jako oddzielny parametr. Pierwszy argument jest poleceniem lub nazwą pliku wykonywalnego, a drugi argument powinien być taki sam jak pierwszy. Zostanie ona `argv[0]` przeprowadzony w procesie. Trzeci argument jest pierwszym argumentem, `argv[1]` z którego wykonywany jest proces.
 
-Funkcje **_execl** sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *arg0* jest wskaźnikiem o wartości null lub pustym ciągiem, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) , jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na  **EINVAL** i Return-1. Żaden nowy proces nie jest wykonywany.
+Funkcje **_execl** sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *arg0* jest wskaźnikiem o wartości null lub pustym ciągiem, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) , jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają-1. Żaden nowy proces nie jest wykonywany.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
 |**_execl**|\<process.h>|\<errno.h>|
-|**_wexecl**|\<Process. h > lub \<WCHAR. h >|\<errno.h>|
+|**_wexecl**|\<process.h> lub \<wchar.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -102,13 +103,13 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Zobacz przykład w [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec, _wexec, funkcje](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[przerwij](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funkcje _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

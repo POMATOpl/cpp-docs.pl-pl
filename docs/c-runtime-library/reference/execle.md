@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: execle'
 title: execle
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - execle function
 ms.assetid: 5985b615-fe90-4d1c-9c1d-13ec87c8e306
-ms.openlocfilehash: 1d97d847ae16c0f0224eca9fba42ad1ab5452b10
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e482847d002b6ef300e9eeb84bb3db55c71c7fb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304847"
 ---
 # <a name="execle"></a>execle
 

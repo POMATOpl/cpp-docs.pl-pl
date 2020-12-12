@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll _mbsnbicoll_l'
 title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcsncoll_l function
 - _tcsnicoll_l function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: 491a652f19e9e1895aa62092c5c890923008f6e1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 97dc0c8664b16b775529184c93b155f8746b3d7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304717"
 ---
 # <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
@@ -112,7 +113,7 @@ Jeśli *ciąg1* lub *ciąg2* ma **wartość null** lub *Liczba* jest większa ni
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji sortuje, najwyżej *, pierwsze* bajty w parametrach *ciąg1* i *ciąg2* i zwraca wartość wskazującą zależność między wynikowymi podciągami wartości *ciąg1* i *ciąg2*. Jeśli końcowy bajt w podciągu *ciąg1* lub *ciąg2* jest bajtem wiodącym, nie jest uwzględniany w porównaniu; te funkcje porównują tylko kompletne znaki w podciągach. **_mbsnbicoll** to wersja **_mbsnbcoll**niezależna od wielkości liter. Podobnie jak [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) i [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** i **_mbsnbicoll** sortują dwa ciągi znaków wielobajtowych zgodnie z kolejnością leksykograficznych określoną przez obecnie używaną [stronę kodową](../../c-runtime-library/code-pages.md) wielobajtowego.
+Każda z tych funkcji sortuje, najwyżej *, pierwsze* bajty w parametrach *ciąg1* i *ciąg2* i zwraca wartość wskazującą zależność między wynikowymi podciągami wartości *ciąg1* i *ciąg2*. Jeśli końcowy bajt w podciągu *ciąg1* lub *ciąg2* jest bajtem wiodącym, nie jest uwzględniany w porównaniu; te funkcje porównują tylko kompletne znaki w podciągach. **_mbsnbicoll** to wersja **_mbsnbcoll** niezależna od wielkości liter. Podobnie jak [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) i [_mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **_mbsnbcoll** i **_mbsnbicoll** sortują dwa ciągi znaków wielobajtowych zgodnie z kolejnością leksykograficznych określoną przez obecnie używaną [stronę kodową](../../c-runtime-library/code-pages.md) wielobajtowego.
 
 W przypadku niektórych stron kodowych i odpowiednich zestawów znaków kolejność znaków w zestawie znaków może różnić się od kolejności znaków leksykograficznych. W ustawieniach regionalnych języka C nie jest to przypadek: kolejność znaków w zestawie znaków ASCII jest taka sama jak kolejność leksykograficznych znaków. Jednak w niektórych europejskich stronach kodowych, na przykład, znak "a" (wartość 0x61) poprzedza znak "ä" (wartość 0xE4) w zestawie znaków, ale znak "ä" poprzedza znak "a" lexicographically. Aby wykonać leksykograficznych porównanie ciągów przez bajty w takich przypadkach, użyj **_mbsnbcoll** , a nie **_mbsnbcmp**; Aby sprawdzić tylko dla równości ciągów, użyj **_mbsnbcmp**.
 
@@ -135,10 +136,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcoll**|\<mbstring. h>|
-|**_mbsnbcoll_l**|\<mbstring. h>|
-|**_mbsnbicoll**|\<mbstring. h>|
-|**_mbsnbicoll_l**|\<mbstring. h>|
+|**_mbsnbcoll**|\<mbstring.h>|
+|**_mbsnbcoll_l**|\<mbstring.h>|
+|**_mbsnbicoll**|\<mbstring.h>|
+|**_mbsnbicoll_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -148,6 +149,6 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
