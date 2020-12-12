@@ -1,5 +1,6 @@
 ---
-title: Dodaj zdarzenie
+description: 'Dowiedz się więcej na temat: Dodawanie zdarzenia'
+title: Dodawanie zdarzenia
 ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.event.overview
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - events [C++], ActiveX controls
 - add event wizard [C++]
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-ms.openlocfilehash: 1d5a8f5666dd04e00f8a438fdbf00320c37e14f4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c369be0fe241867b101ab458344ae706b1fd440d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240822"
 ---
-# <a name="add-an-event"></a>Dodaj zdarzenie
+# <a name="add-an-event"></a>Dodawanie zdarzenia
 
-W widoku klas można dodać zdarzenia przy użyciu [Kreator dodawania zdarzenia](#add-event-wizard) tylko do klasy formantu w swojej [kontrolki MFC ActiveX](../mfc/reference/creating-an-mfc-activex-control.md) projektu. Jeśli chcesz dodać wydarzenie do innego typu projektu, użyj **zdarzenia** znajdujący się w [okno właściwości](/visualstudio/ide/reference/properties-window).
+Z Widok klasy można dodać zdarzenie przy użyciu [Kreatora dodawania zdarzenia](#add-event-wizard) tylko do klasy Control w projekcie [kontrolki ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md) . Jeśli chcesz dodać zdarzenie do innego typu projektu, użyj przycisku **zdarzenia** w [okno właściwości](/visualstudio/ide/reference/properties-window).
 
-**Aby dodać wydarzenie do swojego projektu kontrolki MFC ActiveX:**
+**Aby dodać zdarzenie do projektu kontrolki ActiveX MFC:**
 
-1. W widoku klas rozwiń węzeł projektu, aby wyświetlić klasy w projekcie.
+1. W Widok klasy rozwiń węzeł projektu, aby wyświetlić klasy w projekcie.
 
-1. Kliknij prawym przyciskiem myszy klasy formantu projektu.
+1. Kliknij prawym przyciskiem myszy klasę formantów projektu.
 
-1. W menu skrótów wybierz **Dodaj**, a następnie wybierz **Dodawanie zdarzenia** do wyświetlenia Kreator dodawania zdarzenia.
+1. W menu skrótów wybierz polecenie **Dodaj**, a następnie wybierz polecenie **Dodaj zdarzenie** , aby wyświetlić Kreatora dodawania zdarzenia.
 
-1. Podaj informacje o zdarzeniu w polach odpowiedniego kreatora.
+1. Podaj informacje o zdarzeniu w odpowiednich oknach kreatora.
 
-1. Wybierz **Zakończ** do zdarzenia do projektu.
+1. Wybierz pozycję **Zakończ** , aby dodać zdarzenie do projektu.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -38,46 +39,46 @@ W widoku klas można dodać zdarzenia przy użyciu [Kreator dodawania zdarzenia]
 
 ## <a name="add-event-wizard"></a>Kreator dodawania zdarzenia
 
-Ten kreator dodaje zdarzenie do projektu kontrolki MFC ActiveX. Można określić własne zdarzenia, dostosować typowe Zdarzenie standardowe lub wybierz z listy standardowych zdarzeń.
+Ten Kreator dodaje zdarzenie do projektu kontrolki ActiveX MFC. Możesz określić własne zdarzenie, dostosować typowe wydarzenie podstawowe lub wybrać opcję z listy wydarzeń giełdowych.
 
 - **Nazwa zdarzenia**
 
-   Ustawia nazwę używaną przez klientów automatyzacji do żądania zdarzenia z klasy. Wprowadź nazwę lub wybierz ją z listy.
+   Ustawia nazwę używaną przez klientów usługi Automation do żądania zdarzenia od klasy. Wprowadź nazwę lub wybierz ją z listy.
 
 - **Typ zdarzenia**
 
-   Wskazuje typ zdarzenia do dodania. Dostępne tylko w przypadku wybrania z **Nazwa zdarzenia** listy.
+   Wskazuje typ zdarzenia do dodania. Dostępne tylko w przypadku wybrania z listy **Nazwa zdarzenia** .
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Zapasów**|Określa, że zdarzenie, takie jak kliknięcie przycisku, zostaną zaimplementowane dla tej klasy. Zdarzenia podstawowe są definiowane w bibliotece Microsoft Foundation Class (MFC).|
-   |**Custom**|Określa, że używasz własnej implementacji zdarzenia.|
+   |**Stanu**|Określa, że dla tej klasy zostanie zaimplementowane wydarzenie podstawowe, takie jak przycisk. Zdarzenia giełdowe są zdefiniowane w bibliotece Microsoft Foundation Class (MFC).|
+   |**Niestandardowe**|Określa, że używasz własnej implementacji zdarzenia.|
 
 - **Nazwa wewnętrzna**
 
-   Ustawia nazwę funkcji składowej, która wysyła zdarzenie. Dostępne tylko dla niestandardowych zdarzeń. Nazwa opiera się na **Nazwa zdarzenia**. Można zmienić nazw wewnętrznych, jeśli chcesz podać nazwę różni się od **Nazwa zdarzenia**.
+   Ustawia nazwę funkcji składowej, która wysyła zdarzenie. Dostępne tylko dla zdarzeń niestandardowych. Nazwa jest oparta na **nazwie zdarzenia**. Można zmienić nazwę wewnętrzną, jeśli chcesz podać nazwę inną niż **Nazwa zdarzenia**.
 
 - **Typ parametru**
 
-   Ustawia typ **Nazwa parametru**. Wybierz typ z listy.
+   Ustawia typ **nazwy parametru**. Wybierz typ z listy.
 
 - **Nazwa parametru**
 
-   Określa nazwę parametru do przekazywania zdarzenia. Po wpisaniu nazwy, musisz wybrać **Dodaj** ją dodać listę parametrów.
+   Ustawia nazwę parametru, który ma zostać przekazany przez zdarzenie. Po wpisaniu nazwy, należy wybrać pozycję **Dodaj** , aby dodać ją do listy parametrów.
 
-   Po wybraniu **Dodaj**, nazwa parametru jest wyświetlana w **listy parametrów**.
+   Po wybraniu opcji **Dodaj** Nazwa parametru zostanie wyświetlona na **liście parametrów**.
 
    > [!NOTE]
-   > Jeśli należy podać nazwę parametru, a następnie wybierz pozycję **Zakończ** przed wybraniem **Dodaj**, parametr nie jest dodawana do zdarzenia. Należy znaleźć metody i wstawić parametr ręcznie.
+   > Jeśli podasz nazwę parametru, a następnie wybierz pozycję **Zakończ** przed wybraniem opcji **Dodaj**, parametr nie zostanie dodany do zdarzenia. Należy znaleźć metodę i wstawić parametr ręcznie.
 
-- **Add**
+- **Dodaj**
 
-   Dodaje parametr należy określić w **Nazwa parametru**, a jego typ do **listy parametrów**. Wybierz **Dodaj** Aby dodać parametr do listy.
+   Dodaje parametr określony w polu **Nazwa parametru** oraz jego typ do **listy parametrów**. Wybierz pozycję **Dodaj** , aby dodać parametr do listy.
 
 - **Usuń**
 
-   Usuwa parametr w **listy parametrów** z listy.
+   Usuwa parametr wybrany na **liście parametrów** z listy.
 
 - **Lista parametrów**
 
-   Wyświetla wszystkie parametry i ich typy, które aktualnie dodane w metodzie. W miarę dodawania parametrów, kreator dokona aktualizacji **listy parametrów** do wyświetlenia każdego z parametrów za pomocą jego typu.
+   Wyświetla wszystkie parametry i ich typy, które są obecnie dodawane do metody. Podczas dodawania parametrów Kreator aktualizuje **listę parametrów** , aby wyświetlić każdy parametr z typem.

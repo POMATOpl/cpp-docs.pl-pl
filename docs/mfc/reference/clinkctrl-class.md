@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CLinkCtrl'
 title: Klasa CLinkCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 80548015ff9f24127280ee94421c8fbda7a647ea
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a9a106d7511757fac0abfd19194081729a7d4977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236761"
 ---
 # <a name="clinkctrl-class"></a>Klasa CLinkCtrl
 

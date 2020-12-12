@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _umask_s'
 title: _umask_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: 712313314c67d15987326e3e3a920cd5f1039239
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2a6877b656b17f38dfdf09419da5b64115575a9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239938"
 ---
 # <a name="_umask_s"></a>_umask_s
 
@@ -68,14 +69,14 @@ Zwraca kod błędu, jeśli w *trybie* nie określono prawidłowego trybu lub wsk
 
 |*wyst*|*pOldMode*|Wartość zwracana|Zawartość *pOldMode*|
 |------------|----------------|----------------------|--------------------------------|
-|ile|**NULL**|**EINVAL**|nie zmodyfikowano|
-|Nieprawidłowy tryb|ile|**EINVAL**|nie zmodyfikowano|
+|dowolny|**NULL**|**EINVAL**|nie zmodyfikowano|
+|Nieprawidłowy tryb|dowolny|**EINVAL**|nie zmodyfikowano|
 
 Jeśli wystąpi jeden z powyższych warunków, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_umask_s** zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_umask_s** Ustawia maskę uprawnień pliku bieżącego procesu do trybu określonego przez *tryb*. Maska uprawnień plików modyfikuje ustawienie uprawnień nowych plików utworzonych przez **_creat**, **_open**lub **_sopen**. Jeśli bit w masce wynosi 1, odpowiadający mu bit w wartości żądanego uprawnienia pliku jest ustawiony na 0 (niedozwolone). Jeśli bit w masce ma wartość 0, odpowiedni bit pozostaje niezmieniony. Ustawienie uprawnienia dla nowego pliku nie jest ustawione do momentu zamknięcia pliku po raz pierwszy.
+Funkcja **_umask_s** Ustawia maskę uprawnień pliku bieżącego procesu do trybu określonego przez *tryb*. Maska uprawnień plików modyfikuje ustawienie uprawnień nowych plików utworzonych przez **_creat**, **_open** lub **_sopen**. Jeśli bit w masce wynosi 1, odpowiadający mu bit w wartości żądanego uprawnienia pliku jest ustawiony na 0 (niedozwolone). Jeśli bit w masce ma wartość 0, odpowiedni bit pozostaje niezmieniony. Ustawienie uprawnienia dla nowego pliku nie jest ustawione do momentu zamknięcia pliku po raz pierwszy.
 
 Wyrażenie Integer *PMODE* zawiera jedną lub obie następujące stałe manifestu zdefiniowane w SYS\STAT. C
 
@@ -95,7 +96,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_umask_s**|\<IO. h> i \<sys/stat. h> i \<sys/Types. h>|
+|**_umask_s**|\<io.h> i \<sys/stat.h> i \<sys/types.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -133,7 +134,7 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>

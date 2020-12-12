@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie funkcji za pomocą kreatorów kodu (C++)'
 title: Dodawanie funkcji za pomocą kreatorów kodu (C++)
 ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 651eac8c630636455dd1ffa04fdd02b71fa3cf62
-ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
+ms.openlocfilehash: b411f3d36ebfa7af63e59a77ee85968de1dc3d24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96188916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240744"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 

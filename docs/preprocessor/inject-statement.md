@@ -1,27 +1,28 @@
 ---
-title: inject_statement — atrybut importowania
+description: 'Dowiedz się więcej na temat: inject_statement Importowanie atrybutu'
+title: inject_statement atrybut importowania
 ms.date: 08/29/2019
 f1_keywords:
 - inject_statement
 helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-ms.openlocfilehash: 25dee621ff8af2c9a39e605b9da2c29d80f9570a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: b7ab8059e95ed3799857fe1b899ef2efff729ffb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236428"
 ---
-# <a name="inject_statement-import-attribute"></a>inject_statement — atrybut importowania
+# <a name="inject_statement-import-attribute"></a>inject_statement atrybut importowania
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Wstawia swój argument jako tekst źródłowy do nagłówka biblioteki typów.
 
 ## <a name="syntax"></a>Składnia
 
-> **#import** *Biblioteka typów* **inject_statement (** "*Źródło tekstu*" **)**
+> **#import** inject_statement *biblioteki typów* **(** "*Źródło tekstu*" **)**
 
 ### <a name="parameters"></a>Parametry
 
@@ -32,9 +33,9 @@ Tekst źródłowy, który ma zostać wstawiony do pliku nagłówkowego bibliotek
 
 Tekst jest umieszczany na początku deklaracji przestrzeni nazw, która otacza zawartość *biblioteki typów* w pliku nagłówkowym.
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

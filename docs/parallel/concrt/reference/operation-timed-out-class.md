@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy operation_timed_out
 title: operation_timed_out — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-ms.openlocfilehash: 7a2513d30aa68798707f3bb16318db9b594b9e16
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 476dfc2d7f29b2769c076ff525f3d0eb1e20a8f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236558"
 ---
 # <a name="operation_timed_out-class"></a>operation_timed_out — Klasa
 
@@ -25,13 +26,13 @@ Ta klasa opisuje wyjątek zgłoszony, gdy upłynął limit czasu operacji.
 class operation_timed_out : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[operation_timed_out](#ctor)|Przeciążone. Konstruuje obiekt `operation_timed_out`.|
+|[operation_timed_out](#ctor)|Przeciążone. Konstruuje `operation_timed_out` obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,9 +46,9 @@ class operation_timed_out : public std::exception;
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>operation_timed_out
+## <a name="operation_timed_out"></a><a name="ctor"></a> operation_timed_out
 
-Konstruuje obiekt `operation_timed_out`.
+Konstruuje `operation_timed_out` obiekt.
 
 ```cpp
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();

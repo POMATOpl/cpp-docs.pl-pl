@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy network_link_registry
 title: network_link_registry — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 18fabd0e741c144201f299271cdd01eb9ac55fac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d14ec5758b399d46d5a5f04200b9422b030305f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222683"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236597"
 ---
 # <a name="network_link_registry-class"></a>network_link_registry — Klasa
 
@@ -70,7 +71,7 @@ Typ danych bloku przechowywanych w `network_link_registry` .
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="add"></a><a name="add"></a>dodana
+## <a name="add"></a><a name="add"></a> dodana
 
 Gdy jest zastępowany w klasie pochodnej, dodaje łącze do `network_link_registry` obiektu.
 
@@ -83,7 +84,7 @@ virtual void add(_EType _Link) = 0;
 *_Link*<br/>
 Wskaźnik do bloku, który ma zostać dodany.
 
-## <a name="begin"></a><a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a> zaczną
 
 Gdy jest zastępowany w klasie pochodnej, zwraca iterator do pierwszego elementu w `network_link_registry` obiekcie.
 
@@ -99,7 +100,7 @@ Iterator odnoszący się do pierwszego elementu w `network_link_registry` obiekc
 
 Końcowy stan iteratora jest wskazywany przez `NULL` łącze.
 
-## <a name="contains"></a><a name="contains"></a>wyświetlana
+## <a name="contains"></a><a name="contains"></a> wyświetlana
 
 Gdy jest zastępowany w klasie pochodnej, przeszukuje `network_link_registry` obiekt pod kątem określonego bloku.
 
@@ -116,7 +117,7 @@ Wskaźnik do bloku, który jest wyszukiwany w `network_link_registry` obiekcie.
 
 **`true`** Jeśli blok został znaleziony, **`false`** w przeciwnym razie.
 
-## <a name="count"></a><a name="count"></a>liczbą
+## <a name="count"></a><a name="count"></a> liczbą
 
 Gdy jest zastępowany w klasie pochodnej, zwraca liczbę elementów w `network_link_registry` obiekcie.
 
@@ -128,7 +129,7 @@ virtual size_t count() = 0;
 
 Liczba elementów w `network_link_registry` obiekcie.
 
-## <a name="remove"></a><a name="remove"></a>usuwa
+## <a name="remove"></a><a name="remove"></a> usuwa
 
 Gdy jest zastępowany w klasie pochodnej, usuwa określony blok z `network_link_registry` obiektu.
 
@@ -145,7 +146,7 @@ Wskaźnik do usunięcia bloku, jeśli został znaleziony.
 
 **`true`** Jeśli łącze zostało odnalezione i usunięte, **`false`** w przeciwnym razie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa single_link_registry](single-link-registry-class.md)<br/>

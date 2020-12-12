@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: aliasy i definicje typów (C++)'
 title: Aliasy i definicje typów (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 6054b7119614d9325bd099dd39b8aa1365d97ed7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b5924fd30fe1d22e6a82fb82e2d252409d782ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239860"
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy i definicje typów (C++)
 
@@ -347,7 +348,7 @@ typedef struct {
 } POINT;
 ```
 
-Powyższy przykład deklaruje klasę o nazwie `POINT` przy użyciu nienazwanej **`typedef`** składni klasy. `POINT`jest traktowany jako nazwa klasy; jednak następujące ograniczenia dotyczą nazw wprowadzonych w ten sposób:
+Powyższy przykład deklaruje klasę o nazwie `POINT` przy użyciu nienazwanej **`typedef`** składni klasy. `POINT` jest traktowany jako nazwa klasy; jednak następujące ograniczenia dotyczą nazw wprowadzonych w ten sposób:
 
 - Nazwa (synonim) nie może występować po **`class`** **`struct`** prefiksie,, ani **`union`** .
 

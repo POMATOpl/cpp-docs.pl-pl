@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CList'
 title: Klasa CList
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 7ba85445e3aba1df853d7d3666c92fdabdfa3970
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e216bda53c37c325ffb8aeb943d4cefb223ac1d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236688"
 ---
 # <a name="clist-class"></a>Klasa CList
 
@@ -112,7 +113,7 @@ Typ używany do odwoływania się do obiektów znajdujących się na liście. Mo
 
 ## <a name="remarks"></a>Uwagi
 
-`CList`listy zachowują się jak listy połączone podwójnie.
+`CList` listy zachowują się jak listy połączone podwójnie.
 
 Zmienna typu pozycja jest kluczem dla listy. Można użyć zmiennej POSITION jako iteratora w celu przechodzenia listy sekwencyjnie i jako zakładki do przechowania. Pozycja nie jest jednak taka sama jak indeks.
 
@@ -138,7 +139,7 @@ Aby uzyskać więcej informacji na temat korzystania z programu `CList` , zobacz
 
 **Nagłówek:** afxtempl. h
 
-## <a name="clistaddhead"></a><a name="addhead"></a>CList:: addszef
+## <a name="clistaddhead"></a><a name="addhead"></a> CList:: addszef
 
 Dodaje nowy element lub listę elementów do nagłówka tej listy.
 
@@ -170,7 +171,7 @@ Lista może być pusta przed operacją.
 
 [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]
 
-## <a name="clistaddtail"></a><a name="addtail"></a>CList:: AddTail
+## <a name="clistaddtail"></a><a name="addtail"></a> CList:: AddTail
 
 Dodaje nowy element lub listę elementów do ogona tej listy.
 
@@ -202,7 +203,7 @@ Lista może być pusta przed operacją.
 
 [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]
 
-## <a name="clistclist"></a><a name="clist"></a>CList::CList
+## <a name="clistclist"></a><a name="clist"></a> CList::CList
 
 Tworzy pustą listę uporządkowaną.
 
@@ -223,7 +224,7 @@ Gdy lista zostanie powiększona, pamięć jest przypisana w jednostkach wpisów 
 
 [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]
 
-## <a name="clistfind"></a><a name="find"></a>CList:: find
+## <a name="clistfind"></a><a name="find"></a> CList:: find
 
 Wyszukuje pierwszy element pasujący do określonego *searchValue*.
 
@@ -252,7 +253,7 @@ Wartość pozycji, która może być używana do pobierania iteracji lub wskaźn
 
 [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]
 
-## <a name="clistfindindex"></a><a name="findindex"></a>CList:: FindIndex —
+## <a name="clistfindindex"></a><a name="findindex"></a> CList:: FindIndex —
 
 Używa wartości *nIndex* jako indeksu do listy.
 
@@ -277,7 +278,7 @@ Rozpocznie skanowanie sekwencyjne od szefa listy, zatrzymując na *n*-tym elemen
 
 [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]
 
-## <a name="clistgetat"></a><a name="getat"></a>CList::GetAt
+## <a name="clistgetat"></a><a name="getat"></a> CList::GetAt
 
 Pobiera element listy w danym położeniu.
 
@@ -300,7 +301,7 @@ Zobacz opis wartości zwracanej dla `GetHead` .
 
 ### <a name="remarks"></a>Uwagi
 
-`GetAt`Zwraca element (lub odwołanie do elementu) skojarzony z daną pozycją. Nie jest taki sam jak indeks i nie można wykonać operacji na wartości pozycji samodzielnie. Zmienna typu pozycja jest kluczem dla listy.
+`GetAt` Zwraca element (lub odwołanie do elementu) skojarzony z daną pozycją. Nie jest taki sam jak indeks i nie można wykonać operacji na wartości pozycji samodzielnie. Zmienna typu pozycja jest kluczem dla listy.
 
 Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowana biblioteka MFC potwierdzenia.
 
@@ -308,7 +309,7 @@ Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję n
 
   Zobacz przykład dla [CList:: GetHeadPosition](#getheadposition).
 
-## <a name="clistgetcount"></a><a name="getcount"></a>CList:: GetCount
+## <a name="clistgetcount"></a><a name="getcount"></a> CList:: GetCount
 
 Pobiera liczbę elementów na tej liście.
 
@@ -328,7 +329,7 @@ Wywołanie tej metody spowoduje wygenerowanie tego samego wyniku co Metoda [CLis
 
   Zobacz przykład dla [CList:: RemoveHead](#removehead).
 
-## <a name="clistgethead"></a><a name="gethead"></a>CList:: getszef
+## <a name="clistgethead"></a><a name="gethead"></a> CList:: getszef
 
 Pobiera element główny (lub odwołanie do elementu głównego) tej listy.
 
@@ -357,7 +358,7 @@ Przed wywołaniem należy upewnić się, że lista nie jest pusta `GetHead` . Je
 
 [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]
 
-## <a name="clistgetheadposition"></a><a name="getheadposition"></a>CList::GetHeadPosition
+## <a name="clistgetheadposition"></a><a name="getheadposition"></a> CList::GetHeadPosition
 
 Pobiera pozycję elementu nagłówkowego tej listy.
 
@@ -373,7 +374,7 @@ Wartość pozycji, która może być używana do pobierania iteracji lub wskaźn
 
 [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]
 
-## <a name="clistgetnext"></a><a name="getnext"></a>CList:: GetNext
+## <a name="clistgetnext"></a><a name="getnext"></a> CList:: GetNext
 
 Pobiera element list identyfikowany przez *elemencie rPosition*, a następnie ustawia *elemencie RPOSITION* na wartość pozycji następnego wpisu na liście.
 
@@ -408,7 +409,7 @@ Jeśli pobrany element jest ostatni na liście, Nowa wartość jest równa `rPos
 
 [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]
 
-## <a name="clistgetprev"></a><a name="getprev"></a>CList:: getpoprz
+## <a name="clistgetprev"></a><a name="getprev"></a> CList:: getpoprz
 
 Pobiera element listy identyfikowany przez `rPosition` , a następnie ustawia `rPosition` wartość pozycji powyższej pozycji na liście.
 
@@ -443,7 +444,7 @@ Jeśli pobrany element jest pierwszy na liście, Nowa wartość *elemencie rPosi
 
 [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]
 
-## <a name="clistgetsize"></a><a name="getsize"></a>CList:: GetSize
+## <a name="clistgetsize"></a><a name="getsize"></a> CList:: GetSize
 
 Zwraca liczbę elementów listy.
 
@@ -463,7 +464,7 @@ Wywołaj tę metodę, aby pobrać liczbę elementów na liście.  Wywołanie tej
 
 [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]
 
-## <a name="clistgettail"></a><a name="gettail"></a>CList:: GetTail
+## <a name="clistgettail"></a><a name="gettail"></a> CList:: GetTail
 
 Pobiera `CObject` wskaźnik reprezentujący element końcowy tej listy.
 
@@ -489,7 +490,7 @@ Przed wywołaniem należy upewnić się, że lista nie jest pusta `GetTail` . Je
 
 [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]
 
-## <a name="clistgettailposition"></a><a name="gettailposition"></a>CList::GetTailPosition
+## <a name="clistgettailposition"></a><a name="gettailposition"></a> CList::GetTailPosition
 
 Pobiera pozycję elementu końcowego z tej listy. Wartość NULL, jeśli lista jest pusta.
 
@@ -505,7 +506,7 @@ Wartość pozycji, która może być używana do pobierania iteracji lub wskaźn
 
 [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]
 
-## <a name="clistinsertafter"></a><a name="insertafter"></a>CList::InsertAfter
+## <a name="clistinsertafter"></a><a name="insertafter"></a> CList::InsertAfter
 
 Dodaje element do tej listy po elemencie na określonej pozycji.
 
@@ -532,7 +533,7 @@ Wartość pozycji, która może być używana do pobierania iteracji lub element
 
 [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]
 
-## <a name="clistinsertbefore"></a><a name="insertbefore"></a>CList::InsertBefore
+## <a name="clistinsertbefore"></a><a name="insertbefore"></a> CList::InsertBefore
 
 Dodaje element do tej listy przed elementem w określonej pozycji.
 
@@ -563,7 +564,7 @@ Jeśli *pozycja* ma wartość null, element zostanie wstawiony na początku list
 
 [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]
 
-## <a name="clistisempty"></a><a name="isempty"></a>CList:: IsEmpty
+## <a name="clistisempty"></a><a name="isempty"></a> CList:: IsEmpty
 
 Wskazuje, czy ta lista nie zawiera żadnych elementów.
 
@@ -579,7 +580,7 @@ Różne od zera, jeśli ta lista jest pusta; w przeciwnym razie 0.
 
 [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]
 
-## <a name="clistremoveall"></a><a name="removeall"></a>CList::
+## <a name="clistremoveall"></a><a name="removeall"></a> CList::
 
 Usuwa wszystkie elementy z tej listy i zwalnia skojarzoną pamięć.
 
@@ -595,7 +596,7 @@ Nie Wygenerowano żadnego błędu, jeśli lista jest już pusta.
 
 [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]
 
-## <a name="clistremoveat"></a><a name="removeat"></a>CList::RemoveAt
+## <a name="clistremoveat"></a><a name="removeat"></a> CList::RemoveAt
 
 Usuwa określony element z tej listy.
 
@@ -616,7 +617,7 @@ Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję n
 
 [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]
 
-## <a name="clistremovehead"></a><a name="removehead"></a>CList::RemoveHead
+## <a name="clistremovehead"></a><a name="removehead"></a> CList::RemoveHead
 
 Usuwa element z nagłówka listy i zwraca do niego wskaźnik.
 
@@ -641,7 +642,7 @@ Przed wywołaniem należy upewnić się, że lista nie jest pusta `RemoveHead` .
 
 [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]
 
-## <a name="clistremovetail"></a><a name="removetail"></a>CList::RemoveTail
+## <a name="clistremovetail"></a><a name="removetail"></a> CList::RemoveTail
 
 Usuwa element z ogona listy i zwraca do niego wskaźnik.
 
@@ -666,7 +667,7 @@ Przed wywołaniem należy upewnić się, że lista nie jest pusta `RemoveTail` .
 
 [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]
 
-## <a name="clistsetat"></a><a name="setat"></a>CList::SetAt
+## <a name="clistsetat"></a><a name="setat"></a> CList::SetAt
 
 Zmienna typu pozycja jest kluczem dla listy.
 
@@ -687,7 +688,7 @@ Element, który ma zostać dodany do listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie jest taki sam jak indeks i nie można wykonać operacji na wartości pozycji samodzielnie. `SetAt`zapisuje element do określonej pozycji na liście.
+Nie jest taki sam jak indeks i nie można wykonać operacji na wartości pozycji samodzielnie. `SetAt` zapisuje element do określonej pozycji na liście.
 
 Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowana biblioteka MFC potwierdzenia.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: init_seg pragma'
 title: init_seg, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: 5e57ea0eedfc1df6e196391c5edd3acfbad0a7c7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cab1c82acd3e06a0ace4d55be3ce82e8fd7aed1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236467"
 ---
 # <a name="init_seg-pragma"></a>init_seg, pragma
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Określa słowo kluczowe lub kod, który ma wpływ na kolejność, w której jest wykonywany kod uruchomienia.
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma init_seg (** { **kompilator** | **User** **lib** | | "*Nazwa sekcji*" [ **,** *Func-Name* ]} **)**
+> **#pragma init_seg (** { **kompilator**  |    |  **User** lib | "*Nazwa sekcji*" [ **,** *Func-Name* ]} **)**
 
 ## <a name="remarks"></a>Uwagi
 
@@ -57,7 +58,7 @@ Określa funkcję, która ma być wywoływana zamiast `atexit` momentu zakończe
 int __cdecl myexit (void (__cdecl *pf)(void))
 ```
 
-następnie funkcja zostanie wywołana zamiast biblioteki `atexit`wykonawczej C. Umożliwia utworzenie listy destruktorów do wywołania, gdy wszystko jest gotowe do zniszczenia obiektów.
+następnie funkcja zostanie wywołana zamiast biblioteki wykonawczej C `atexit` . Umożliwia utworzenie listy destruktorów do wywołania, gdy wszystko jest gotowe do zniszczenia obiektów.
 
 Jeśli konieczne jest odroczenie inicjalizacji (na przykład w bibliotece DLL), można określić nazwę sekcji jawnie. Kod musi następnie wywołać konstruktory dla każdego obiektu statycznego.
 
@@ -67,7 +68,7 @@ Obiekty będą nadal umieszczane w sekcjach zdefiniowanych przez inne `XXX_seg` 
 
 Obiekty, które są zadeklarowane w module nie są automatycznie inicjowane przez czas wykonywania języka C. Kod musi wykonać inicjalizację.
 
-Domyślnie `init_seg` sekcje są tylko do odczytu. Jeśli nazwa sekcji to `.CRT`, kompilator dyskretnie zmienia atrybut na tylko do odczytu, nawet jeśli jest oznaczony jako Odczyt, zapis.
+Domyślnie `init_seg` sekcje są tylko do odczytu. Jeśli nazwa sekcji to `.CRT` , kompilator dyskretnie zmienia atrybut na tylko do odczytu, nawet jeśli jest oznaczony jako Odczyt, zapis.
 
 Nie można określić **init_seg** więcej niż raz w jednostce translacji.
 

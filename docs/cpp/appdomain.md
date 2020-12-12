@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: AppDomain'
 title: appdomain
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,24 +8,24 @@ helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-ms.openlocfilehash: 7ac74e8774204b316712a15975f7af3fb8835a9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d817c71058c37b032e2ed6581de3a0fa8c169132
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239808"
 ---
 # <a name="appdomain"></a>appdomain
 
-Określa, że każda domena aplikacji zarządzanej powinna mieć własną kopię określonej zmiennej globalnej lub statycznej zmiennej członkowskiej. Aby uzyskać więcej informacji [, C++ Zobacz domeny aplikacji i wizualizację](../dotnet/application-domains-and-visual-cpp.md) .
+Określa, że każda domena aplikacji zarządzanej powinna mieć własną kopię określonej zmiennej globalnej lub statycznej zmiennej członkowskiej. Aby uzyskać więcej informacji [, zobacz domeny aplikacji i Visual C++](../dotnet/application-domains-and-visual-cpp.md) .
 
 Każda domena aplikacji ma własną kopię zmiennej dla elementu AppDomain. Konstruktor zmiennej AppDomain jest wykonywany, gdy zestaw jest ładowany do domeny aplikacji, a destruktor jest wykonywany, gdy domena aplikacji jest zwolniona.
 
-Jeśli chcesz, aby wszystkie domeny aplikacji w ramach procesu w środowisku uruchomieniowym języka wspólnego współużytkują zmienną globalną, użyj modyfikatora `__declspec(process)`. `__declspec(process)` jest domyślnie włączona w opcji [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
+Jeśli chcesz, aby wszystkie domeny aplikacji w ramach procesu w środowisku uruchomieniowym języka wspólnego współużytkują zmienną globalną, użyj `__declspec(process)` modyfikatora. `__declspec(process)` działa domyślnie w opcji [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-`__declspec(appdomain)` jest prawidłowy tylko wtedy, gdy jest używana jedna z opcji kompilatora **/CLR** . Tylko zmienna globalna, statyczna zmienna członkowska lub statyczna zmienna lokalna może być oznaczona `__declspec(appdomain)`. Wystąpił błąd, aby zastosować `__declspec(appdomain)` do statycznych elementów członkowskich typów zarządzanych, ponieważ zawsze mają one takie zachowanie.
+`__declspec(appdomain)` jest prawidłowy tylko wtedy, gdy jest używana jedna z opcji kompilatora **/CLR** . Tylko zmienna globalna, statyczna zmienna członkowska lub statyczna zmienna lokalna może być oznaczona przy użyciu `__declspec(appdomain)` . Jest to błąd do zastosowania `__declspec(appdomain)` do statycznych elementów członkowskich typów zarządzanych, ponieważ zawsze mają one takie zachowanie.
 
-Używanie `__declspec(appdomain)` jest podobne do używania [lokalnego magazynu wątków (TLS)](../parallel/thread-local-storage-tls.md). Wątki mają własny magazyn, jako domeny aplikacji. Użycie `__declspec(appdomain)` zapewnia, że zmienna globalna ma własny magazyn w każdej domenie aplikacji utworzonej dla tej aplikacji.
+Użycie `__declspec(appdomain)` jest podobne do korzystania z [lokalnego magazynu wątków (TLS)](../parallel/thread-local-storage-tls.md). Wątki mają własny magazyn, jako domeny aplikacji. Użycie `__declspec(appdomain)` gwarantuje, że zmienna globalna ma własny magazyn w każdej domenie aplikacji utworzonej dla tej aplikacji.
 
 Istnieją ograniczenia związane z mieszaniem użycia poszczególnych procesów i zmiennych dla domeny AppDomain; Aby uzyskać więcej informacji, zobacz [proces](../cpp/process.md) .
 
@@ -134,7 +135,7 @@ __declspec(appdomain) CGlobal::~CGlobal destructor
 __declspec(process) CGlobal::~CGlobal destructor
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

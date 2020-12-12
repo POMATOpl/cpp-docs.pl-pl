@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej: fabryki klas i Licencjonowanie'
 title: Fabryki klas i licencjonowanie
 ms.date: 11/04/2016
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: 939d7156a9bd7bf0778d2ab4a40acb2afe10cf6e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7470a5828df358a28db5a30832f98314e09a133e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236844"
 ---
 # <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie
 

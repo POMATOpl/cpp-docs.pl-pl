@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: inline_depth pragma'
 title: inline_depth, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: 73540ec19c4ecc18a740dace0d23a37ad43182c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10ac7f5543108018eb7b51e8916dfed149363899
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236402"
 ---
 # <a name="inline_depth-pragma"></a>inline_depth, pragma
 
@@ -40,7 +41,7 @@ Dyrektywa pragma **inline_depth** nie ma wpływu na funkcje oznaczone atrybutem 
 > [!NOTE]
 > Funkcje cykliczne mogą zostać zastąpione w wierszu do maksymalnej głębokości 16 wywołań.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [inline_recursion](../preprocessor/inline-recursion.md)

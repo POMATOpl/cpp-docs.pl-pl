@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd ewaluatora wyrażeń CXX0030'
 title: Błąd CXX0030 programu Expression Evaluator
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CAN0030
 - CXX0030
 ms.assetid: ada8b48c-09c8-49bf-ae23-313ed663c4fe
-ms.openlocfilehash: 477ec31d18924e91baf2d8b7b732bc7a50eee53b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d9679d260ce81c2cb9bb8be4c082ffe8c1cfc6a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237430"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>Błąd CXX0030 programu Expression Evaluator
 

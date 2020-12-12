@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wyprowadzanie klasy z CObject'
 title: Wyprowadzanie klasy z obiektu CObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: f4c01538877d8517cf3394d9e0108ce3a9df2900
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c6c2ea75354d783b234bc3f7cac7a08dac4f05da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240705"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Wyprowadzanie klasy z obiektu CObject
 
@@ -40,12 +41,12 @@ Możesz wybrać poziom funkcjonalności przy użyciu określonych makr deklaracj
 
 W poniższej tabeli przedstawiono relacje między makrami używanymi do obsługi serializacji i informacji w czasie wykonywania.
 
-### <a name="macros-used-for-serialization-and-run-time-information"></a>Makra używane do serializacji i informacje w czasie wykonywania
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Makra używane do serializacji i Run-Time informacji
 
 |Użyte makro|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive:: operator>><br /><br /> CArchive:: operator<<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
 |Podstawowe `CObject` funkcje|Nie|Nie|Nie|
-|`DECLARE_DYNAMIC`|Yes|Nie|Nie|
+|`DECLARE_DYNAMIC`|Tak|Nie|Nie|
 |`DECLARE_DYNCREATE`|Tak|Tak|Nie|
 |`DECLARE_SERIAL`|Tak|Tak|Tak|
 
