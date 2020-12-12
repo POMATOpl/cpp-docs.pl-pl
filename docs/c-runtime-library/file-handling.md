@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: obsługa plików'
 title: Obsługa plików
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 2a5c6ec3a70a85bf81f00b104d0c505677f609ac
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5727f2c4f1d0d79a471b8ec5a76ed719380e2d83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135775"
 ---
 # <a name="file-handling"></a>Obsługa plików
 
@@ -21,7 +22,7 @@ Te procedury służą do tworzenia, usuwania i manipulowania plikami oraz do ust
 
 Biblioteki uruchomieniowe C mają limit 512 dla liczby plików, które można otworzyć w dowolnym momencie. Próba otwarcia więcej niż maksymalnej liczby deskryptorów plików lub strumieni plików powoduje awarię programu. Użyj [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) , aby zmienić tę liczbę.
 
-## <a name="file-handling-routines-file-descriptor"></a>Procedury obsługi plików (deskryptor pliku)
+## <a name="file-handling-routines-file-descriptor"></a>Procedury File-Handling (deskryptor pliku)
 
 Procedury te działają na plikach wydzielonych przez deskryptor pliku.
 
@@ -36,25 +37,25 @@ Procedury te działają na plikach wydzielonych przez deskryptor pliku.
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Skojarz deskryptor pliku C w czasie wykonywania z istniejącym dojściem do pliku systemu operacyjnego|
 |[_setmode](../c-runtime-library/reference/setmode.md)|Ustawianie trybu tłumaczenia plików|
 
-## <a name="file-handling-routines-path-or-filename"></a>Procedury obsługi plików (ścieżka lub nazwa pliku)
+## <a name="file-handling-routines-path-or-filename"></a>Procedury File-Handling (ścieżka lub nazwa pliku)
 
 Procedury te działają na plikach określonych przez ścieżkę lub nazwę pliku.
 
 |Procedura|Zastosowanie|
 |-------------|---------|
-|[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Sprawdź ustawienie uprawnienia do pliku|
+|[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Sprawdź ustawienie uprawnienia do pliku|
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Zmień ustawienie uprawnienia do pliku|
 |[_fullpath, _wfullpath](../c-runtime-library/reference/fullpath-wfullpath.md)|Rozwiń ścieżkę względną do nazwy ścieżki bezwzględnej|
-|[_makepath, _wmakepath](../c-runtime-library/reference/makepath-wmakepath.md), [_makepath_s, _wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|Scalanie składników ścieżki w jedną, pełną ścieżkę|
-|[_mktemp, _wmktemp](../c-runtime-library/reference/mktemp-wmktemp.md), [_mktemp_s, _wmktemp_s](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)|Utwórz unikatową nazwę pliku|
+|[_makepath, _wmakepath](../c-runtime-library/reference/makepath-wmakepath.md), [_makepath_s _wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|Scalanie składników ścieżki w jedną, pełną ścieżkę|
+|[_mktemp, _wmktemp](../c-runtime-library/reference/mktemp-wmktemp.md), [_mktemp_s _wmktemp_s](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)|Utwórz unikatową nazwę pliku|
 |[remove, _wremove](../c-runtime-library/reference/remove-wremove.md)|Usuń plik|
 |[rename, _wrename](../c-runtime-library/reference/rename-wrename.md)|Zmień nazwę pliku|
-|[_splitpath, _wsplitpath](../c-runtime-library/reference/splitpath-wsplitpath.md), [_splitpath_s, _wsplitpath_s](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)|Analizowanie ścieżki do składników|
-|[_stat, _stat64, _stati64, _wstat, _wstat64, _wstati64](../c-runtime-library/reference/stat-functions.md)|Pobierz informacje o stanie pliku dla nazwanego pliku|
+|[_splitpath, _wsplitpath](../c-runtime-library/reference/splitpath-wsplitpath.md), [_splitpath_s _wsplitpath_s](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)|Analizowanie ścieżki do składników|
+|[_stat, _stat64, _stati64, _wstat, _wstat64 _wstati64](../c-runtime-library/reference/stat-functions.md)|Pobierz informacje o stanie pliku dla nazwanego pliku|
 |[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|Ustaw domyślną maskę uprawnień dla nowych plików utworzonych przez program|
 |[_unlink, _wunlink](../c-runtime-library/reference/unlink-wunlink.md)|Usuń plik|
 
-## <a name="file-handling-routines-open-file"></a>Procedury obsługi plików (otwarty plik)
+## <a name="file-handling-routines-open-file"></a>Procedury File-Handling (Otwórz plik)
 
 Te procedury otwierają pliki.
 
@@ -63,7 +64,7 @@ Te procedury otwierają pliki.
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Otwiera plik i zwraca wskaźnik do otwartego pliku.|
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Otwórz strumień z funkcją udostępniania plików i zwraca wskaźnik do otwartego pliku.|
 |[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Otwiera plik i zwraca deskryptor pliku do otwartego pliku.|
-|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otwórz plik z funkcją udostępniania plików i zwraca deskryptor pliku do otwartego pliku.|
+|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otwórz plik z funkcją udostępniania plików i zwraca deskryptor pliku do otwartego pliku.|
 |[_pipe](../c-runtime-library/reference/pipe.md)|Tworzy potok do odczytu i zapisu.|
 |[freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s, _wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|Ponownie Przypisz wskaźnik do pliku.|
 
@@ -84,8 +85,8 @@ Następujące funkcje Win32 również otwierają pliki i potoki:
 
 - [CreateNamedPipe](/windows/win32/api/winbase/nf-winbase-createnamedpipea)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Kontrola katalogu](../c-runtime-library/directory-control.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Kontrolka katalogu](../c-runtime-library/directory-control.md)<br/>
 [Wywołania systemowe](../c-runtime-library/system-calls.md)<br/>

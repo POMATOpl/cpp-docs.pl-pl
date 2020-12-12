@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:. MODEL (32-bitowy MASM)
 title: .MODEL
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: f4f69b88a2041a13a0b92445c61c4a84d43e442f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131433"
 ---
 # <a name="model-32-bit-masm"></a>. MODEL (32-bitowy MASM)
 
@@ -19,26 +20,26 @@ Inicjuje model pamięci programu. (tylko 32-bitowy MASM).
 
 ## <a name="syntax"></a>Składnia
 
-> **. Model** *pamięci* modelu ⟦ __,__ *Language-Type*⟧ ⟦ __,__ *Stack-Option*⟧
+> **. Model** *pamięci* modelu ⟦__,__ *Language-Type*⟧ ⟦__,__ *Stack-Option*⟧
 
 ### <a name="parameters"></a>Parametry
 
-\ *modelu pamięci*
+*model pamięci*\
 Wymagany parametr określający rozmiar kodu i wskaźników danych.
 
-\ *typu języka*
+*typ języka*\
 Opcjonalny parametr, który ustawia konwencje wywoływania i nazewnictwa dla procedur i symboli publicznych.
 
-\ *opcji stosu*
+*Stack — opcja*\
 Parametr opcjonalny.
 
 *stos-opcja* nie jest używana, jeśli *model pamięci* jest **płaski**.
 
-Określanie grup **NEARSTACK** segment stosu w pojedynczym segmencie fizycznym (**DGROUP**) wraz z danymi. Przyjęto założenie, że rejestr segmentów stosu ma ten sam adres co rejestr segmentu danych (**ds** **).** **FARSTACK** nie grupuje stosu z **DGROUP**; w tym przypadku **SS** nie jest równe **ds**.
+Określanie grup **NEARSTACK** segment stosu w pojedynczym segmencie fizycznym (**DGROUP**) wraz z danymi. Przyjęto założenie, że rejestr segmentów stosu ma ten sam adres co rejestr segmentu danych (**ds****).** **FARSTACK** nie grupuje stosu z **DGROUP**; w tym przypadku **SS** nie jest równe **ds**.
 
 ## <a name="remarks"></a>Uwagi
 
-**. MODEL** nie jest używany w programie [MASM for x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
+**. MODEL** nie jest używany w [MASM dla architektury x64 (ml64.exe)](masm-for-x64-ml64-exe.md).
 
 Poniższa tabela zawiera listę możliwych wartości dla każdego parametru, które są przeznaczone dla platform 16-bitowych i 32-bitowych:
 
@@ -50,9 +51,9 @@ Poniższa tabela zawiera listę możliwych wartości dla każdego parametru, kt�
 
 ## <a name="code"></a>Kod
 
-W przypadku przykładów związanych z MASM Pobierz przykłady kompilatora z [przykładów wizualizacji C++ i powiązanej dokumentacji dla programu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
+W przypadku przykładów związanych z MASM Pobierz przykłady kompilatora z [przykładów Visual C++ i powiązanej dokumentacji dla programu Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-Poniższy przykład demonstruje użycie dyrektywy `.MODEL`.
+Poniższy przykład demonstruje użycie `.MODEL` dyrektywy.
 
 ## <a name="example"></a>Przykład
 

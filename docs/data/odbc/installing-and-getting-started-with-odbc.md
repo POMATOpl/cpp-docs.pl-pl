@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: Instalowanie i Wprowadzenie przy użyciu ODBC'
 title: Instalowanie ODBC i wprowadzenie do ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - installing ODBC
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-ms.openlocfilehash: 7e4c9bc1e4ba418ec588e054654e544b6fd3e239
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 64aa86fce9162f618aae915224d50dad0e6b3a77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145590"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalowanie ODBC i wprowadzenie do ODBC
 
@@ -18,7 +19,7 @@ W poniższych tematach znajdują się informacje ułatwiające zainstalowanie sk
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Zainstaluj sterowniki ODBC dostarczane z wizualizacjąC++](../../data/odbc/odbc-administrator.md)
+- [Zainstaluj sterowniki ODBC dostarczane z usługą Visual C++](../../data/odbc/odbc-administrator.md)
 
 - [Ponowne dystrybuowanie składników ODBC do klientów](../../data/odbc/odbc-basics.md)
 

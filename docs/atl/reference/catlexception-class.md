@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAtlException'
 title: Klasa CAtlException
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: f09d9b2f46233cf356f5ade8a5b90e08a213d276
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: b6d788bc8d852fa0b8d091682ff7740aa4ebbbed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147475"
 ---
 # <a name="catlexception-class"></a>Klasa CAtlException
 
@@ -48,15 +49,15 @@ class CAtlException
 
 ## <a name="remarks"></a>Uwagi
 
-`CAtlException` Obiekt reprezentuje warunek wyjątku związany z operacją ATL. `CAtlException` Klasa zawiera publiczny element członkowski danych, który przechowuje kod stanu wskazujący przyczynę wyjątku i operatora rzutowania, który umożliwia traktowanie wyjątku, tak jakby był to wynik HRESULT.
+`CAtlException`Obiekt reprezentuje warunek wyjątku związany z operacją ATL. `CAtlException`Klasa zawiera publiczny element członkowski danych, który przechowuje kod stanu wskazujący przyczynę wyjątku i operatora rzutowania, który umożliwia traktowanie wyjątku, tak jakby był to wynik HRESULT.
 
-Ogólnie rzecz biorąc `AtlThrow` zamiast bezpośrednio utworzyć `CAtlException` obiekt.
+Ogólnie rzecz biorąc `AtlThrow` zamiast `CAtlException` bezpośrednio utworzyć obiekt.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlexcept. h
 
-## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a> CAtlException::CAtlException
 
 Konstruktor.
 
@@ -67,10 +68,10 @@ CAtlException() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*wysoki*<br/>
+*godz.*<br/>
 Kod błędu HRESULT.
 
-## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException:: operator HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a> CAtlException:: operator HRESULT
 
 Rzutuje bieżący obiekt na wartość HRESULT.
 
@@ -78,7 +79,7 @@ Rzutuje bieżący obiekt na wartość HRESULT.
 operator HRESULT() const throw ();
 ```
 
-## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException:: m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a> CAtlException:: m_hr
 
 Element członkowski danych HRESULT.
 
@@ -90,7 +91,7 @@ HRESULT m_hr;
 
 Element członkowski danych, który przechowuje warunek błędu. Wartość HRESULT jest ustawiana przez konstruktora, [CAtlException:: CAtlException](#catlexception).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcji AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

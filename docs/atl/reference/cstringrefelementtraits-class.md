@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CStringRefElementTraits'
 title: Klasa CStringRefElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: 6fa8772033a5a82940cf30b2a73d6ea356269d67
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5523a2a451fc1825c443cf2d2e518b1c8dc2b340
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140390"
 ---
 # <a name="cstringrefelementtraits-class"></a>Klasa CStringRefElementTraits
 
@@ -59,7 +60,7 @@ Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-colle
 
 **Nagłówek:** atlcoll. h
 
-## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements
+## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a> CStringRefElementTraits::CompareElements
 
 Wywołaj tę funkcję statyczną, aby porównać dwa elementy ciągu dla równości.
 
@@ -79,7 +80,7 @@ Drugi element ciągu.
 
 Zwraca wartość true, jeśli elementy są równe, w przeciwnym razie false.
 
-## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered
+## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a> CStringRefElementTraits::CompareElementsOrdered
 
 Wywołaj tę funkcję statyczną, aby porównać dwa elementy ciągu.
 
@@ -97,9 +98,9 @@ Drugi element ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli ciągi są identyczne, < 0 Jeśli wartość *str1* jest mniejsza niż *str2*lub > 0, jeśli *str1* jest większa niż *str2*. Metoda [CStringT:: Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) służy do przeprowadzenia porównania.
+Zero, jeśli ciągi są identyczne, < 0 Jeśli wartość *str1* jest mniejsza niż *str2* lub > 0, jeśli *str1* jest większa niż *str2*. Metoda [CStringT:: Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) służy do przeprowadzenia porównania.
 
-## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits:: hash
+## <a name="cstringrefelementtraitshash"></a><a name="hash"></a> CStringRefElementTraits:: hash
 
 Wywołaj tę funkcję statyczną, aby obliczyć wartość skrótu dla danego elementu ciągu.
 
@@ -116,7 +117,7 @@ Element String.
 
 Zwraca wartość skrótu obliczaną przy użyciu zawartości ciągu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

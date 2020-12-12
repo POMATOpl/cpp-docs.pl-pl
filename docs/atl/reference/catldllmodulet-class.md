@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAtlDllModuleT'
 title: Klasa CAtlDllModuleT
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-ms.openlocfilehash: e0896a28c24877465213a71ac5207c537c731003
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: b6b6f87fc77187b150824fcd67fae254eb6d8f57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147436"
 ---
 # <a name="catldllmodulet-class"></a>Klasa CAtlDllModuleT
 
@@ -35,7 +36,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa pochodna `CAtlDllModuleT`.
+Klasa pochodna `CAtlDllModuleT` .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -59,7 +60,7 @@ Klasa pochodna `CAtlDllModuleT`.
 
 ## <a name="remarks"></a>Uwagi
 
-`CAtlDllModuleT`reprezentuje moduł dla biblioteki dołączanej dynamicznie (DLL) i udostępnia funkcje używane przez wszystkie projekty DLL. Ta specjalizacja klasy [CAtlModuleT](../../atl/reference/catlmodulet-class.md) obejmuje obsługę rejestracji.
+`CAtlDllModuleT` reprezentuje moduł dla biblioteki dołączanej dynamicznie (DLL) i udostępnia funkcje używane przez wszystkie projekty DLL. Ta specjalizacja klasy [CAtlModuleT](../../atl/reference/catlmodulet-class.md) obejmuje obsługę rejestracji.
 
 Aby uzyskać więcej informacji na temat modułów w ATL, zobacz [klasy modułów ATL](../../atl/atl-module-classes.md).
 
@@ -77,7 +78,7 @@ Aby uzyskać więcej informacji na temat modułów w ATL, zobacz [klasy modułó
 
 **Nagłówek:** atlbase. h
 
-## <a name="catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT
+## <a name="catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a> CAtlDllModuleT::CAtlDllModuleT
 
 Konstruktor.
 
@@ -85,7 +86,7 @@ Konstruktor.
 CAtlDllModuleT() throw();
 ```
 
-## <a name="catldllmoduletcatldllmodulet"></a><a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT
+## <a name="catldllmoduletcatldllmodulet"></a><a name="dtor"></a> CAtlDllModuleT:: ~ CAtlDllModuleT
 
 Destruktor.
 
@@ -93,7 +94,7 @@ Destruktor.
 ~CAtlDllModuleT() throw();
 ```
 
-## <a name="catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a>CAtlDllModuleT::D llCanUnloadNow
+## <a name="catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a> CAtlDllModuleT::D llCanUnloadNow
 
 Testuje, czy biblioteka DLL może zostać zwolniona.
 
@@ -105,7 +106,7 @@ HRESULT DllCanUnloadNow() throw();
 
 Zwraca S_OK, jeśli biblioteka DLL może zostać zwolniona, lub S_FALSE, jeśli nie może.
 
-## <a name="catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a>CAtlDllModuleT::D llGetClassObject
+## <a name="catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a> CAtlDllModuleT::D llGetClassObject
 
 Zwraca fabrykę klas.
 
@@ -131,7 +132,7 @@ Wskaźnik do wskaźnika interfejsu identyfikowanego przez *riid*. Jeśli obiekt 
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="catldllmoduletdllmain"></a><a name="dllmain"></a>CAtlDllModuleT::D llMain
+## <a name="catldllmoduletdllmain"></a><a name="dllmain"></a> CAtlDllModuleT::D llMain
 
 Opcjonalny punkt wejścia do biblioteki dołączanej dynamicznie (DLL).
 
@@ -155,7 +156,7 @@ Zawsze zwraca wartość TRUE.
 
 Wyłączenie wywołań powiadomień DLL_THREAD_ATTACH i DLL_THREAD_DETACH może być przydatną optymalizacją dla aplikacji wielowątkowych, które mają wiele bibliotek DLL, które często tworzą i usuwają wątki, a biblioteki DLL nie potrzebują tych powiadomień na poziomie wątku w przypadku załączników/odłączeń.
 
-## <a name="catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a>CAtlDllModuleT::D llRegisterServer
+## <a name="catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a> CAtlDllModuleT::D llRegisterServer
 
 Dodaje wpisy do rejestru systemowego dla obiektów w bibliotece DLL.
 
@@ -172,7 +173,7 @@ Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana. Wartość
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a>CAtlDllModuleT::D llUnregisterServer
+## <a name="catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a> CAtlDllModuleT::D llUnregisterServer
 
 Usuwa wpisy z rejestru systemowego dla obiektów w bibliotece DLL.
 
@@ -189,7 +190,7 @@ Ma wartość TRUE, jeśli biblioteka typów ma zostać usunięta z rejestru. War
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="catldllmoduletgetclassobject"></a><a name="getclassobject"></a>CAtlDllModuleT:: GetClassObject
+## <a name="catldllmoduletgetclassobject"></a><a name="getclassobject"></a> CAtlDllModuleT:: GetClassObject
 
 Tworzy obiekt o określonym identyfikatorze CLSID.
 
@@ -219,7 +220,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Ta metoda jest wywoływana przez [CAtlDllModuleT::D llgetclassobject](#dllgetclassobject) i jest dołączana do zgodności z poprzednimi wersjami.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
 [Klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>

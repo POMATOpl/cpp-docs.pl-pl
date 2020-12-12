@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej o operatorze typeid
 title: typeid — operator
 ms.date: 10/04/2019
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: e17b88d81d9987ec586401e025e108cfbe88cb3b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8e036cbdcc540eca224b97b09d174362c454da6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145863"
 ---
 # <a name="typeid-operator"></a>typeid — operator
 
@@ -32,7 +33,7 @@ Wynik **`typeid`** jest `const type_info&` . Wartość jest odwołaniem do `type
 
 - Odwołaniem do klasy
 
-- Wskaźnik, do którego odwołuje się`*`
+- Wskaźnik, do którego odwołuje się `*`
 
 - Wskaźnik indeksu dolnego ( `[ ]` ). (Użycie indeksu dolnego ze wskaźnikiem do typu polimorficznego nie jest bezpieczne.)
 
@@ -90,7 +91,7 @@ T max( T arg1, T arg2 ) {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Informacje o typie w czasie wykonywania](../cpp/run-time-type-information.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

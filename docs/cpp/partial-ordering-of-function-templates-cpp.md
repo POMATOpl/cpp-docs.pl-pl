@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej o programie: częściowe porządkowanie szablonów funkcji (C++)'
 title: Częściowe porządkowanie szablonów funkcji (C++)
 ms.date: 07/30/2019
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-ms.openlocfilehash: 0c4f11b4b3e02504c4786ea34441362b542959d6
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 701c97aa819d0294f69f2fe2a71ffb9bf0210afa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145902"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Częściowe porządkowanie szablonów funkcji (C++)
 
 Dostępnych może być wiele szablonów funkcji, które odpowiadają liście argumentów wywołania funkcji. C++ definiuje częściowe ustalanie kolejności szablonów funkcji w celu określenia, którą funkcję należy wywołać. Ustalanie kolejności jest częściowe, ponieważ może istnieć wiele szablonów, które są uważane za jednakowo specjalistyczne.
 
-Kompilator wybiera najbardziej wyspecjalizowaną funkcję szablonu dostępną z możliwych dopasowań. Na przykład jeśli szablon funkcji przyjmuje typ `T` i jest dostępny inny szablon funkcji, który jest wymagany `T*` , `T*` wersja jest określana jako bardziej wyspecjalizowana. Jest preferowana w porównaniu z `T` wersją ogólną, gdy argument jest typem wskaźnika, mimo że oba byłyby dozwolone.
+Kompilator wybiera najbardziej wyspecjalizowaną funkcję szablonu dostępną z możliwych dopasowań. Na przykład jeśli szablon funkcji przyjmuje typ `T` i jest dostępny inny szablon funkcji, który `T*` jest wymagany, wersja jest określana jako `T*` bardziej wyspecjalizowana. Jest preferowana w porównaniu z `T` wersją ogólną, gdy argument jest typem wskaźnika, mimo że oba byłyby dozwolone.
 
 Użyj następującego procesu w celu określenia, czy jeden z kandydatów szablonów funkcji jest bardziej wyspecjalizowany:
 
@@ -33,11 +34,11 @@ Użyj następującego procesu w celu określenia, czy jeden z kandydatów szablo
 
    1. Specjalizacja szablonu dla określonego typu jest bardziej wyspecjalizowana niż ta, która przyjmuje argument typu ogólnego.
 
-   1. Szablon przyjmujący tylko `T*` , że jest bardziej wyspecjalizowany, `T`tylko wtedy, gdy typ `X*` hipotetyczny jest prawidłowym argumentem `T` dla argumentu szablonu, `X` ale nie jest prawidłowym argumentem dla `T*`argument szablonu.
+   1. Szablon przyjmujący tylko `T*` , że jest bardziej wyspecjalizowany, tylko wtedy `T` , gdy typ hipotetyczny `X*` jest prawidłowym argumentem dla `T` argumentu szablonu, ale `X` nie jest prawidłowym argumentem `T*` argumentu szablonu.
 
-   1. `const T`jest bardziej wyspecjalizowany `T`niż, `const X` ponieważ jest prawidłowym argumentem `T` dla argumentu szablonu, `X` `const T` ale nie jest prawidłowym argumentem argumentu szablonu.
+   1. `const T` jest bardziej wyspecjalizowany niż `T` , ponieważ `const X` jest prawidłowym argumentem dla `T` argumentu szablonu, ale `X` nie jest prawidłowym argumentem `const T` argumentu szablonu.
 
-   1. `const T*`jest bardziej wyspecjalizowany `T*`niż, `const X*` ponieważ jest prawidłowym argumentem `T*` dla argumentu szablonu, `X*` `const T*` ale nie jest prawidłowym argumentem argumentu szablonu.
+   1. `const T*` jest bardziej wyspecjalizowany niż `T*` , ponieważ `const X*` jest prawidłowym argumentem dla `T*` argumentu szablonu, ale `X*` nie jest prawidłowym argumentem `const T*` argumentu szablonu.
 
 ## <a name="example"></a>Przykład
 
@@ -81,6 +82,6 @@ More specialized function called
 Even more specialized function for const T*
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony funkcji](../cpp/function-templates.md)

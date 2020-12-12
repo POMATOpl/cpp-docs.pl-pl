@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _CrtSetReportHook2, _CrtSetReportHookW2'
 title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eab1ad4da90d5a86b821c374aae0aeceb97d7518
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135723"
 ---
 # <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -68,11 +69,11 @@ Punkt zaczepienia raportu do zainstalowania lub usunięcia w wersji wąskich lub
 
 ## <a name="remarks"></a>Uwagi
 
-**_CrtSetReportHook2** i **_CrtSetReportHookW2** umożliwiają podpinanie lub odpinanie funkcji, natomiast [_CrtSetReportHook](crtsetreporthook.md) umożliwia podpinanie funkcji.
+**_CrtSetReportHook2** i **_CrtSetReportHookW2** umożliwiają przepinanie lub odpinanie funkcji, a w przypadku [_CrtSetReportHook](crtsetreporthook.md) tylko można podpiąć funkcję.
 
-**_CrtSetReportHook2** lub **_CrtSetReportHookW2** należy używać zamiast **_CrtSetReportHook** , gdy wywołanie punktu zaczepienia jest nawiązywane w bibliotece DLL i gdy wiele bibliotek DLL może być załadowanych i ustawić własne funkcje Hook. W takiej sytuacji biblioteki DLL mogą zostać zwolnione w innej kolejności niż w przypadku ich załadowania, a funkcja podłączania może pozostała wskazywać w nieładowanej bibliotece DLL. Wszystkie dane wyjściowe debugowania przeprowadziją proces, jeśli funkcje haka zostały dodane z **_CrtSetReportHook**.
+Nie należy używać **_CrtSetReportHook2** lub **_CrtSetReportHookW2** zamiast **_CrtSetReportHook** , gdy wywołanie punktu zaczepienia zostanie wykonane w bibliotece DLL i gdy wiele bibliotek DLL może być załadowanych i ustawić własne funkcje Hook. W takiej sytuacji biblioteki DLL mogą zostać zwolnione w innej kolejności niż w przypadku ich załadowania, a funkcja podłączania może pozostała wskazywać w nieładowanej bibliotece DLL. Wszystkie dane wyjściowe debugowania przeprowadziją proces, jeśli funkcje haka zostały dodane z **_CrtSetReportHook**.
 
-Wszystkie funkcje haka dodane przy użyciu **_CrtSetReportHook** są wywoływane, jeśli nie ma żadnych funkcji haka dodanych z **_CrtSetReportHook2** lub **_CrtSetReportHookW2** lub jeśli wszystkie funkcje haka dodane z **_CrtSetReportHook2** i **_ CrtSetReportHookW2** zwracają **wartość false**.
+Wszystkie funkcje haka dodane z **_CrtSetReportHook** są wywoływane, jeśli nie ma żadnych funkcji haka dodanych z **_CrtSetReportHook2** lub **_CrtSetReportHookW2** lub jeśli wszystkie funkcje haka dodane z **_CrtSetReportHook2** i **_CrtSetReportHookW2** zwracają **wartość false**.
 
 Dostępna jest wersja znaku dwubajtowego tej funkcji. Funkcja podłączania raportów przyjmuje ciąg, którego typ (szerokie lub wąskie znaki) musi być zgodny z używaną wersją tej funkcji. Użyj poniższego prototypu funkcji dla punktów zaczepienia raportu używanych z wersją znaku dwubajtowego tej funkcji:
 
@@ -252,6 +253,6 @@ _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook2) returned 0
 _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook1) returned 0
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: przeciążanie operatorów jednoargumentowych'
 title: Przeładowanie operatorów jednoargumentowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,32 +12,32 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-ms.openlocfilehash: a21c62549f02dddda951c79a06617671ccfe2526
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e0a2d2b902403ee5ed34a95b6d282d7c2199795
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146058"
 ---
 # <a name="overloading-unary-operators"></a>Przeładowanie operatorów jednoargumentowych
 
 Operatory jednoargumentowe, które mogą być przeciążone, są następujące:
 
-1. `!`([logiczne not](../cpp/logical-negation-operator-exclpt.md))
+1. `!` ([logiczne not](../cpp/logical-negation-operator-exclpt.md))
 
-1. `&`([adres-z](../cpp/address-of-operator-amp.md))
+1. `&` ([adres-z](../cpp/address-of-operator-amp.md))
 
-1. `~`([uzupełnienie jednego](../cpp/one-s-complement-operator-tilde.md))
+1. `~` ([uzupełnienie jednego](../cpp/one-s-complement-operator-tilde.md))
 
-1. `*`([odwołuje](../cpp/indirection-operator-star.md)się do wskaźnika)
+1. `*` ([odwołuje](../cpp/indirection-operator-star.md)się do wskaźnika)
 
-1. `+`([jednoargumentowy Plus](../cpp/additive-operators-plus-and.md))
+1. `+` ([jednoargumentowy Plus](../cpp/additive-operators-plus-and.md))
 
-1. `-`([Negacja Jednoargumentowa](../cpp/additive-operators-plus-and.md))
+1. `-` ([Negacja Jednoargumentowa](../cpp/additive-operators-plus-and.md))
 
-1. `++`([Zwiększ](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+1. `++` ([Zwiększ](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
 
-1. `--`([zmniejszenie](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+1. `--` ([zmniejszenie](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
 
 1. operatory konwersji
 
@@ -59,6 +60,6 @@ gdzie *RET-Type* i *op* są zgodnie z opisem dla funkcji operatora składowych, 
 > [!NOTE]
 > Nie ma żadnych ograniczeń pod względem typów zwracanych operatorów jednoargumentowych. Załóżmy na przykład, że dla logicznego nie ( `!` ) ma zostać zwrócona wartość całkowita, ale nie jest wymuszana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeciążanie operatora](../cpp/operator-overloading.md)

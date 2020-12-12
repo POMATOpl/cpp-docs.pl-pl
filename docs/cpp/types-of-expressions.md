@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej na temat: typy wyrażeń'
 title: Typy wyrażeń
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++], types
 ms.assetid: 1e7540b0-8fdb-49ab-b3e1-6ec439ff473a
-ms.openlocfilehash: 587715cd1fd38bf6481ba833b1532f5e492d4803
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c68f89ac981d8918c60e2d67418d3f00778ca664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145785"
 ---
 # <a name="types-of-expressions"></a>Typy wyrażeń
 
-C++wyrażenia są podzielone na kilka kategorii:
+Wyrażenia języka C++ są podzielone na kilka kategorii:
 
 - [Wyrażenia podstawowe](../cpp/primary-expressions.md). Są to bloki konstrukcyjne, z których tworzone są wszystkie inne wyrażenia.
 
@@ -24,7 +25,7 @@ C++wyrażenia są podzielone na kilka kategorii:
 
 - [Wyrażenia utworzone za pomocą operatorów binarnych](../cpp/expressions-with-binary-operators.md). Operatory dwuargumentowe oddziałują na dwa operandy w wyrażeniu.
 
-- [Wyrażenia z operatorem warunkowym](../cpp/conditional-operator-q.md). Operator warunkowy jest operatorem Trzyelementowy — jedynym tym operatorem w C++ języku — i pobiera trzy operandy.
+- [Wyrażenia z operatorem warunkowym](../cpp/conditional-operator-q.md). Operator warunkowy jest operatorem Trzyelementowy — jedynym tym operatorem w języku C++ i ma trzy operandy.
 
 - [Wyrażenia stałe](../cpp/cpp-constant-expressions.md). Wyrażenia stałe są tworzone w całości z danych stałych.
 

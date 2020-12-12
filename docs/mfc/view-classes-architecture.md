@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy widoków (architektura)'
 title: Klasy widoków (architektura)
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 7235ccfea1f41dd185f0b5b6be9b39ea16250d94
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fe883c34ad8bd3948ee65ecec25151cc4dd2416c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143133"
 ---
 # <a name="view-classes-architecture"></a>Klasy widoków (architektura)
 
@@ -21,10 +22,10 @@ ms.locfileid: "79447165"
 Klasa widoku jest skojarzona z klasą dokumentu i klasą okna ramowego przy użyciu obiektu szablonu dokumentu.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-Klasa bazowa dla widoków specyficznych dla aplikacji w danych dokumentu. Wyświetla dane i akceptują dane wejściowe użytkownika w celu edytowania lub zaznaczania danych. Utwórz klasy widoków z `CView`.
+Klasa bazowa dla widoków specyficznych dla aplikacji w danych dokumentu. Wyświetla dane i akceptują dane wejściowe użytkownika w celu edytowania lub zaznaczania danych. Utwórz klasy widoków z `CView` .
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Klasa bazowa dla widoków z możliwościami przewijania. Utwórz klasę widoku od `CScrollView`, aby przewijać automatyczne.
+Klasa bazowa dla widoków z możliwościami przewijania. Utwórz klasę widoku od `CScrollView` do automatycznego przewijania.
 
 ## <a name="form-and-record-views"></a>Widoki formularzy i rekordów
 
@@ -33,10 +34,10 @@ Widoki formularzy są również przewijane. Są one oparte na szablonie okna dia
 Widoki rekordów są wyprowadzane z widoków formularza. Oprócz szablonu okna dialogowego mają także połączenie z bazą danych.
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-Widok przewijania, którego układ jest zdefiniowany w szablonie okna dialogowego. Utwórz klasę z `CFormView`, aby zaimplementować interfejs użytkownika na podstawie szablonu okna dialogowego.
+Widok przewijania, którego układ jest zdefiniowany w szablonie okna dialogowego. Utwórz klasę z `CFormView` , aby zaimplementować interfejs użytkownika w oparciu o szablon okna dialogowego.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Udostępnia widok formularza bezpośrednio połączony z obiektem zestawu rekordów obiektu dostępu do danych (DAO). Podobnie jak w przypadku wszystkich widoków formularzy `CDaoRecordView` jest oparty na szablonie okna dialogowego. Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
+Udostępnia widok formularza bezpośrednio połączony z obiektem zestawu rekordów obiektu dostępu do danych (DAO). Podobnie jak w przypadku wszystkich widoków formularzy, `CDaoRecordView` jest oparty na szablonie okna dialogowego. Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 Obsługuje kontrolkę przeglądania sieci Web w aplikacji. Kontrolka obsługuje dynamiczny kod HTML w MFC.
@@ -45,7 +46,7 @@ Obsługuje kontrolkę przeglądania sieci Web w aplikacji. Kontrolka obsługuje 
 Zapewnia obsługę OLE DB MFC w widokach formularzy.
 
 [Formularzy CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Udostępnia widok formularza połączony bezpośrednio z obiektem zestawu rekordów Open Database Connectivity (ODBC). Podobnie jak w przypadku wszystkich widoków formularzy `CRecordView` jest oparty na szablonie okna dialogowego.
+Udostępnia widok formularza połączony bezpośrednio z obiektem zestawu rekordów Open Database Connectivity (ODBC). Podobnie jak w przypadku wszystkich widoków formularzy, `CRecordView` jest oparty na szablonie okna dialogowego.
 
 ## <a name="control-views"></a>Widoki formantów
 

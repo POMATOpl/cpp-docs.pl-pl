@@ -1,50 +1,51 @@
 ---
-title: Klasy implementacji interfejsu IUnknown (ATL)
+description: Dowiedz się więcej na temat klas implementacji IUnknown
+title: Klasy implementacji IUnknown (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IUnknown implementation classes
 ms.assetid: 47b69bb5-69d8-4a9c-84a8-329bdde2bb3f
-ms.openlocfilehash: 26751c013d65142393377394006a9833e6c8f7bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a28bd14be86501fd6566b8038b73a51efcc1c18d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147657"
 ---
-# <a name="iunknown-implementation-classes"></a>Klasy implementacji interfejsu IUnknown
+# <a name="iunknown-implementation-classes"></a>Klasy implementacji IUnknown
 
-Następujące klasy implementacji `IUnknown` i powiązanych metod:
+Następujące klasy implementują `IUnknown` i powiązane metody:
 
-- [Klasy CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) zarządza zliczanie zagregowane i nieagregowane obiektów. Zezwala na określanie modelu wątkowości.
+- [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) Zarządza zliczaniem odwołań dla obiektów zagregowanych i niezagregowanych. Pozwala określić model wątkowości.
 
-- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) zarządza zliczanie zagregowane i nieagregowane obiektów. Korzysta z domyślnego modelu serwera wątków.
+- [Klasy CComObjectRoot](../atl/reference/ccomobjectroot-class.md) Zarządza zliczaniem odwołań dla obiektów zagregowanych i niezagregowanych. Używa domyślnego modelu wątkowego serwera.
 
-- [CComAggObject](../atl/reference/ccomaggobject-class.md) implementuje `IUnknown` dla obiektu zagregowanego.
+- [CComAggObject](../atl/reference/ccomaggobject-class.md) Implementuje `IUnknown` dla obiektu agregowanego.
 
-- [CComObject](../atl/reference/ccomobject-class.md) implementuje `IUnknown` nieagregowane obiektu.
+- [CComObject](../atl/reference/ccomobject-class.md) Implementuje `IUnknown` dla niezagregowanego obiektu.
 
-- [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` zagregowane i nieagregowane obiektów. Za pomocą `CComPolyObject` pozwala uniknąć konieczności zarówno `CComAggObject` i `CComObject` w module. Pojedynczy `CComPolyObject` obiektu obsługuje zarówno zagregowane i nieagregowane przypadkach.
+- [CComPolyObject](../atl/reference/ccompolyobject-class.md) Implementuje `IUnknown` dla obiektów zagregowanych i niezagregowanych. Przy użyciu `CComPolyObject` unika się zarówno `CComAggObject` , jak i `CComObject` w module. Pojedynczy `CComPolyObject` obiekt obsługuje zarówno zagregowane, jak i niezagregowane przypadki.
 
-- [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementuje `IUnknown` nieagregowane obiektu, bez konieczności modyfikacji liczbę blokad modułu.
+- [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) Implementuje `IUnknown` dla obiektu niezagregowanego, bez modyfikowania liczby blokad modułu.
 
-- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementuje `IUnknown` odrywania interfejsu.
+- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) Implementuje `IUnknown` dla interfejsu odrywanego.
 
-- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementuje `IUnknown` "buforowane" interfejsu odrywania.
+- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) Implementuje `IUnknown` dla interfejsu "buforowane" odrywania.
 
-- [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementuje `IUnknown` dla wewnętrznego obiektu agregacji lub interfejs odrywania.
+- [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) Implementuje `IUnknown` dla obiektu wewnętrznego agregacji lub interfejsu odnoszącego się do odrywania.
 
-- [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) zarządza licznik odwołań do modułu, aby upewnić się, obiekt nie zostanie usunięty.
+- [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) Zarządza liczbą odwołań w module, aby upewnić się, że obiekt nie zostanie usunięty.
 
-- [CComObjectStack](../atl/reference/ccomobjectstack-class.md) tworzy tymczasowy obiekt COM za pomocą implementacji szkieletowych `IUnknown`.
+- [CComObjectStack](../atl/reference/ccomobjectstack-class.md) Tworzy tymczasowy obiekt COM przy użyciu implementacji szkieletowej `IUnknown` .
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
-[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
+[Podstawowe informacje o obiektach COM ATL](../atl/fundamentals-of-atl-com-objects.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../atl/atl-class-overview.md)<br/>
 [Makra agregacji i fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)<br/>
 [Makra mapy modelu COM](../atl/reference/com-map-macros.md)<br/>
-[Funkcje globalne mapy interfejsu COM](../atl/reference/com-map-global-functions.md)
+[Globalne funkcje mapowania modelu COM](../atl/reference/com-map-global-functions.md)

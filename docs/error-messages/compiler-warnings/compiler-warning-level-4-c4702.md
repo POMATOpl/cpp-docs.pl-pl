@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4702'
 title: Ostrzeżenie kompilatora (poziom 4) C4702
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: a2d1f6f4bdc20a35638274e2099c00428f4f6ddf
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9a171641a2c923083471d510e27fbdb3ebd08832
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133799"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>Ostrzeżenie kompilatora (poziom 4) C4702
 
@@ -36,7 +37,7 @@ int main() {
 }
 ```
 
-W przypadku kompilowania z **/GX**, **/EHC**, **/EHsc**lub **/EHac** i używania funkcji extern c kod może stać się nieosiągalny, ponieważ nie są zakładane funkcje extern c, w związku z czym blok catch nie jest dostępny.  Jeśli uważasz, że to ostrzeżenie jest nieprawidłowe, ponieważ funkcja może zgłosić, skompilować przy użyciu **/EHa** lub **/EHS**, w zależności od zgłoszonego wyjątku.
+W przypadku kompilowania z **/GX**, **/EHC**, **/EHsc** lub **/EHac** i używania funkcji extern c kod może stać się nieosiągalny, ponieważ nie są zakładane funkcje extern c, w związku z czym blok catch nie jest dostępny.  Jeśli uważasz, że to ostrzeżenie jest nieprawidłowe, ponieważ funkcja może zgłosić, skompilować przy użyciu **/EHa** lub **/EHS**, w zależności od zgłoszonego wyjątku.
 
 Aby uzyskać więcej informacji, zobacz [/EH (model obsługi wyjątków)](../../build/reference/eh-exception-handling-model.md) , aby uzyskać więcej informacji.
 

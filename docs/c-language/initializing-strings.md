@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Inicjowanie ciągów'
 title: inicjowanie ciągów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - strings [C++], initializing
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
-ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 145fc55eaccd64b30bae2736dd78317dc5db7d7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137582"
 ---
 # <a name="initializing-strings"></a>inicjowanie ciągów
 
-Można inicjować tablicę znaków (lub szerokich znaków) za pomocą literału ciągu (lub szerokiego literału ciągu). Przykład:
+Można inicjować tablicę znaków (lub szerokich znaków) za pomocą literału ciągu (lub szerokiego literału ciągu). Na przykład:
 
 ```
 char code[ ] = "abc";
@@ -29,7 +30,7 @@ Lista identyfikatorów może być tylko tak długo, jak liczba identyfikatorów 
 char code[3] = "abcd";
 ```
 
-Tylko trzy pierwsze znaki inicjatora są przypisane do `code`. Znak `d` i znak kończący null są odrzucane. Należy zauważyć, że spowoduje to utworzenie niekończącego ciągu (czyli jednego bez wartości 0 w celu oznaczenia jego końca) i wygenerowanie komunikatu diagnostycznego wskazującego ten warunek.
+Tylko trzy pierwsze znaki inicjatora są przypisane do `code` . Znak `d` i znak kończący null są odrzucane. Należy zauważyć, że spowoduje to utworzenie niekończącego ciągu (czyli jednego bez wartości 0 w celu oznaczenia jego końca) i wygenerowanie komunikatu diagnostycznego wskazującego ten warunek.
 
 Deklaracja
 
@@ -54,4 +55,4 @@ W Microsoft C, literały ciągu mogą mieć długość do 2048 bajtów.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Inicjowanie](../c-language/initialization.md)
+[Inicjalizacja](../c-language/initialization.md)

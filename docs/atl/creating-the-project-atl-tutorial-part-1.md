@@ -1,14 +1,15 @@
 ---
+description: 'Dowiedz się więcej na temat: Tworzenie projektu (samouczek ATL, część 1)'
 title: Tworzenie projektu (ALT — Samouczek, część 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 8a0374fcaf9a18c82e90bde2abc032158ecc537a
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: f594294b5d97222791a3f3f43c147fae9514889b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148089"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 
@@ -16,7 +17,7 @@ Ten samouczek przeprowadzi Cię krok po kroku przez Projekt ATL nienależący do
 
 > [!NOTE]
 > W tym samouczku jest tworzony ten sam kod źródłowy, który jest przykładem wielokąta. Jeśli chcesz, aby nie wprowadzać kodu źródłowego ręcznie, możesz pobrać go z [przykładowej abstrakcyjnej próbki wielokąta](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Następnie można odwoływać się do kodu źródłowego Wielokąt podczas pracy w samouczku lub użyć go do sprawdzenia błędów w projekcie.
-> Aby skompilować, Otwórz plik *PCH. h* ( *stdafx. h* w programie Visual Studio 2017 i starsze) i Zastąp:
+> Aby skompilować, Otwórz plik *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i starsze) i Zastąp:
 >
 > ```
 > #ifndef WINVER
@@ -37,16 +38,16 @@ Ten samouczek przeprowadzi Cię krok po kroku przez Projekt ATL nienależący do
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Aby utworzyć początkowy Projekt ATL przy użyciu Kreatora projektu ATL
 
-1. W programie Visual Studio 2017 i starszych: **plik**  >  **Nowy**  >  **projekt** . Otwórz kartę **Visual C++** i wybierz pozycję **MFC/ATL** . Wybierz **Projekt ATL** .
+1. W programie Visual Studio 2017 i starszych: **plik**  >  **Nowy**  >  **projekt**. Otwórz kartę **Visual C++** i wybierz pozycję **MFC/ATL**. Wybierz **Projekt ATL**.
 
-   W programie Visual Studio 2019: wybierz pozycję **plik**  >  **Nowy**  >  **projekt** , wpisz "ATL" w polu wyszukiwania, a następnie wybierz pozycję **Projekt ATL** .
+   W programie Visual Studio 2019: wybierz pozycję **plik**  >  **Nowy**  >  **projekt**, wpisz "ATL" w polu wyszukiwania, a następnie wybierz pozycję **Projekt ATL**.
 
 1. Umożliwia wpisanie *wielokąta* jako nazwy projektu.
 
     Lokalizacja dla kodu źródłowego zwykle będzie domyślnie \Users \\ \<username> \source\repos, a nowy folder zostanie utworzony automatycznie.
 
-1. W programie Visual Studio 2019 zaakceptuj wartości domyślne i kliknij przycisk **OK** .
-   W programie Visual Studio 2017 kliknij przycisk **OK** , aby otworzyć kreatora **Projekt ATL** . Kliknij pozycję **Ustawienia aplikacji** , aby wyświetlić dostępne opcje. Ponieważ ten projekt tworzy formant i formant musi być serwerem działającym w procesie, pozostaw **Typ aplikacji** jako bibliotekę DLL. Kliknij pozycję **OK** .
+1. W programie Visual Studio 2019 zaakceptuj wartości domyślne i kliknij przycisk **OK**.
+   W programie Visual Studio 2017 kliknij przycisk **OK** , aby otworzyć kreatora **Projekt ATL** . Kliknij pozycję **Ustawienia aplikacji** , aby wyświetlić dostępne opcje. Ponieważ ten projekt tworzy formant i formant musi być serwerem działającym w procesie, pozostaw **Typ aplikacji** jako bibliotekę DLL. Kliknij przycisk **OK**.
 
 Program Visual Studio utworzy projekt, generując kilka plików. Można wyświetlić te pliki w **Eksplorator rozwiązań** przez powiększanie `Polygon` obiektu. Poniżej znajdują się pliki.
 
@@ -61,7 +62,7 @@ Program Visual Studio utworzy projekt, generując kilka plików. Można wyświet
 |Wielokąt. RC|Plik zasobu, który początkowo zawiera informacje o wersji i ciąg zawierający nazwę projektu.|
 |Resource.h|Plik nagłówkowy pliku zasobów.|
 |Polygonps. def|Ten plik definicji modułu udostępnia konsolidator z informacjami o eksportach wymaganych przez serwer proxy i Kod zastępczy obsługujący wywołania w apartamentach.|
-|stdafx.cpp|Plik, który będzie `#include` *stdafx. h* .|
+|stdafx.cpp|Plik, który będzie `#include` *stdafx. h*.|
 |stdafx.h|Plik, który będzie `#include` i prekompilował pliki nagłówkowe ATL.|
 
 ::: moniker-end
@@ -77,23 +78,23 @@ Program Visual Studio utworzy projekt, generując kilka plików. Można wyświet
 |Wielokąt. RC|Plik zasobu, który początkowo zawiera informacje o wersji i ciąg zawierający nazwę projektu.|
 |Resource.h|Plik nagłówkowy pliku zasobów.|
 |Polygonps. def|Ten plik definicji modułu udostępnia konsolidator z informacjami o eksportach wymaganych przez serwer proxy i Kod zastępczy obsługujący wywołania w apartamentach.|
-|PCH. cpp|Plik, który będzie `#include` *PCH. h* .|
+|PCH. cpp|Plik, który będzie `#include` *PCH. h*.|
 |PCH. h|Plik, który będzie `#include` i prekompilował pliki nagłówkowe ATL.|
 
 ::: moniker-end
 
 1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy `Polygon` projekt.
 
-1. W menu skrótów kliknij polecenie **Właściwości** .
+1. W menu skrótów kliknij polecenie **Właściwości**.
 
-1. Kliknij **konsolidator** . Zmień opcję **na-UserRedirection** na **wartość tak** .
+1. Kliknij **konsolidator**. Zmień opcję **na-UserRedirection** na **wartość tak**.
 
-1. Kliknij pozycję **OK** .
+1. Kliknij przycisk **OK**.
 
 W następnym kroku dodasz kontrolkę do projektu.
 
 [Do kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CW2CWEX'
 title: Klasa CW2CWEX
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-ms.openlocfilehash: 07dd0319586054403d8ed0c8efc813b4061e355a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 769dcedf1a9dc15129b09e3305330de33242562e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140234"
 ---
 # <a name="cw2cwex-class"></a>Klasa CW2CWEX
 
 Ta klasa jest używana przez makra konwersji ciągów CW2CTEX i CT2CWEX oraz typedef CW2W.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,7 +34,7 @@ class CW2CWEX
 #### <a name="parameters"></a>Parametry
 
 *t_nBufferLength*<br/>
-Rozmiar buforu używanego w procesie tłumaczenia. Domyślna długość to 128 bajtów.
+Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,47 +43,47 @@ Rozmiar buforu używanego w procesie tłumaczenia. Domyślna długość to 128 b
 |Nazwa|Opis|
 |----------|-----------------|
 |[CW2CWEX::CW2CWEX](#cw2cwex)|Konstruktor.|
-|[CW2CWEX::~CW2CWEX](#dtor)|Destruktor.|
+|[CW2CWEX:: ~ CW2CWEX](#dtor)|Destruktor.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|Operator konwersji.|
+|[CW2CWEX:: operator LPCWSTR](#operator_lpcwstr)|Operator konwersji.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CW2CWEX::m_psz](#m_psz)|Element członkowski danych, który przechowuje ciąg źródłowy.|
+|[CW2CWEX:: m_psz](#m_psz)|Element członkowski danych przechowujący ciąg źródłowy.|
 
 ## <a name="remarks"></a>Uwagi
 
 O ile nie jest wymagana dodatkowa funkcjonalność, użyj CW2CTEX, CT2CWEX lub CW2W w kodzie.
 
-Ta klasa jest bezpieczny w użyciu w pętlach i nie przepełnia stosu. Domyślnie klasy konwersji ATL i makra używają strony kodowej ANSI bieżącego wątku do konwersji.
+Ta klasa jest bezpieczna do użycia w pętlach i nie przechodzą na stos. Domyślnie klasy konwersji ATL i makra używają strony kodowej ANSI bieżącego wątku dla konwersji.
 
 Następujące makra są oparte na tej klasie:
 
-- CW2CTEX ( CW2CTEX )
+- CW2CTEX
 
-- CT2CWEX (CT2CWEX)
+- CT2CWEX
 
-Następująca typedef jest oparta na tej klasie:
+Następujący element typedef jest oparty na tej klasie:
 
-- CW2W ( CW2W )
+- CW2W
 
-Aby zapoznać się z tymi makrami konwersji tekstu, zobacz [Makra konwersji ciągów ATL i MFC](string-conversion-macros.md).
+Aby zapoznać się z tymi makrami konwersji tekstu, zobacz [makra konwersji ATL i MFC String](string-conversion-macros.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz [ATL i MFC String Konwersja Makra](string-conversion-macros.md) na przykład przy użyciu tych makr konwersji ciągów.
+Zobacz [makra konwersji ciągów ATL i MFC,](string-conversion-macros.md) aby zapoznać się z przykładem użycia tych makr konwersji ciągów.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlconv.h
+**Nagłówek:** atlconv. h
 
-## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a> CW2CWEX::CW2CWEX
 
 Konstruktor.
 
@@ -93,17 +94,17 @@ CW2CWEX(LPCWSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Psz*<br/>
-Ciąg tekstowy do konwersji.
+*psz*<br/>
+Ciąg tekstowy do przekonwertowania.
 
-*strona nCodePage*<br/>
-Strona kodowa. Nie jest używany w tej klasie.
+*nCodePage*<br/>
+Strona kodowa. Nieużywane w tej klasie.
 
 ### <a name="remarks"></a>Uwagi
 
-Przydziela bufor używany w procesie tłumaczenia.
+Przypisuje bufor używany w procesie tłumaczenia.
 
-## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX::~CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a> CW2CWEX:: ~ CW2CWEX
 
 Destruktor.
 
@@ -113,17 +114,17 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia przydzielony bufor.
+Zwalnia przydzieloną bufor.
 
-## <a name="cw2cwexm_psz"></a><a name="m_psz"></a>CW2CWEX::m_psz
+## <a name="cw2cwexm_psz"></a><a name="m_psz"></a> CW2CWEX:: m_psz
 
-Element członkowski danych, który przechowuje ciąg źródłowy.
+Element członkowski danych przechowujący ciąg źródłowy.
 
 ```
 LPCWSTR m_psz;
 ```
 
-## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR
+## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a> CW2CWEX:: operator LPCWSTR
 
 Operator konwersji.
 

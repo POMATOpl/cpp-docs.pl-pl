@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: MIDL strony właściwości'
 title: Strony właściwości kompilatora MIDL
 ms.date: 07/24/2019
 ms.topic: article
@@ -47,46 +48,46 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: d6833230baca892836c187799df7f0658aa16772
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 12cc0791bfadf7611d62ab16fc788081f4c7b7e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336252"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137829"
 ---
 # <a name="midl-property-pages"></a>Strony właściwości MIDL
 
-Strony właściwości MIDL są dostępne jako właściwość elementu w pliku . IDL w projekcie języka C++, który używa modelu COM. Użyj ich do skonfigurowania [kompilatora MIDL](/windows/win32/midl/using-the-midl-compiler-2). Aby uzyskać informacje na temat programowego dostępu do opcji <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> MIDL dla projektów W++, zobacz obiekt. Zobacz też [Ogólna składnia wiersza polecenia MIDL](/windows/win32/midl/general-midl-command-line-syntax).
+Strony właściwości MIDL są dostępne jako właściwość elementu w. Plik IDL w projekcie języka C++, który używa modelu COM. Użyj ich do skonfigurowania [kompilatora MIDL](/windows/win32/midl/using-the-midl-compiler-2). Aby uzyskać informacje na temat sposobu programistycznego dostępu do opcji MIDL dla projektów C++, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> obiekt. Zobacz również [Ogólne MIDL składni wiersza polecenia](/windows/win32/midl/general-midl-command-line-syntax).
 
-## <a name="general-property-page"></a>Strona właściwości ogólnych
+## <a name="general-property-page"></a>Ogólna strona właściwości
 
 ### <a name="preprocessor-definitions"></a>Definicje preprocesora
 
-Określa jedną lub więcej zdefiniowanych, w tym makra\]MIDL ([/D](/windows/win32/midl/-d)).\[).
+Określa co najmniej jedną definicję, w tym makra MIDL ([/d](/windows/win32/midl/-d)) \[ \] .
 
-### <a name="additional-include-directories"></a>Dodatkowe katalogi dołączania
+### <a name="additional-include-directories"></a>Dodatkowe katalogi dołączane
 
-Określa jeden lub więcej katalogów do dodania do\]ścieżki dołączania ([/I](/windows/win32/midl/-i)\[).
+Określa co najmniej jeden katalog do dodania do ścieżki dołączania (ścieżka[/i](/windows/win32/midl/-i) \[ \] ).
 
 ### <a name="additional-metadata-directories"></a>Dodatkowe katalogi metadanych
 
-Określ katalog zawierający plik Windows.Foundation.WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[path\]).
+Określ katalog zawierający plik Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[ ścieżka \] ).
 
-### <a name="enable-windows-runtime"></a>Włączanie środowiska wykonawczego systemu Windows
+### <a name="enable-windows-runtime"></a>Włącz środowisko wykonawcze systemu Windows
 
-Włącz semantykę środowiska wykonawczego systemu Windows, aby utworzyć plik metadanych systemu Windows ([/winrt](/windows/win32/midl/-winrt)).
+Włącz semantykę środowisko wykonawcze systemu Windows, aby utworzyć plik metadanych systemu Windows ([/WinRT](/windows/win32/midl/-winrt)).
 
-### <a name="ignore-standard-include-path"></a>Ignoruj standardową ścieżkę dołączania
+### <a name="ignore-standard-include-path"></a>Ignoruj standardowe ścieżki dołączania
 
-Ignoruj bieżące i dołącz katalogi ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
+Zignoruj bieżące i katalogi dołączania ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
 
-### <a name="mktyplib-compatible"></a>Kompatybilny z MkTypLib
+### <a name="mktyplib-compatible"></a>Zgodne MkTypLib
 
-Wymusza kompatybilność z mktyplib.exe w wersji 2.03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
+Wymusza zgodność z mktyplib.exe wersja 2,03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
 
-### <a name="warning-level"></a>Poziom ostrzeżenia
+### <a name="warning-level"></a>Poziom ostrzeżeń
 
-Wybiera surowość błędów kodu MIDL ([/W](/windows/win32/midl/-w)).
+Wybiera rygorystyczność błędów kodu MIDL ([/w](/windows/win32/midl/-w)).
 
 **Choices**
 
@@ -96,44 +97,44 @@ Wybiera surowość błędów kodu MIDL ([/W](/windows/win32/midl/-w)).
 - **3**
 - **4**
 
-### <a name="treat-warnings-as-errors"></a>Potraktuj ostrzeżenia jako błędy
+### <a name="treat-warnings-as-errors"></a>Traktuj ostrzeżenia jako błędy
 
-Umożliwia midl traktować wszystkie ostrzeżenia jako błędy ([/WX](/windows/win32/midl/-wx)).
+Umożliwia MIDL traktowanie wszystkich ostrzeżeń jako błędów ([/WX](/windows/win32/midl/-wx)).
 
-### <a name="suppress-startup-banner"></a>Pomijanie banera startowego
+### <a name="suppress-startup-banner"></a>Pomiń transparent startowy
 
-Pomiń wyświetlanie banera startowego i komunikatu informacyjnego ([/nologo](/windows/win32/midl/-nologo)).
+Pomijaj wyświetlanie banera startowego i komunikatu informacyjnego ([/nologo](/windows/win32/midl/-nologo)).
 
-### <a name="c-compiler-char-type"></a>Typ char kompilatora C
+### <a name="c-compiler-char-type"></a>Typ char kompilatora języka C
 
-Określa domyślny typ znaku kompilatora C, który będzie używany do kompilowania wygenerowanego kodu. ([/char](/windows/win32/midl/-char) signed|unsigned|ascii7).
+Określa domyślny typ znaku kompilatora języka C, który będzie używany do kompilowania wygenerowanego kodu. ([/char](/windows/win32/midl/-char) podpisane | niepodpisane | ascii7).
 
 **Choices**
 
-- **Podpisano** — podpisano
-- **Niepodpisane** — niepodpisane
-- **Ascii** - Ascii
+- **Podpisane z** podpisem
+- **Bez** znaku — bez znaku
+- **ASCII** — ASCII
 
 ### <a name="target-environment"></a>Środowisko docelowe
 
-Określa, które środowisko ma być kierowane ([/env](/windows/win32/midl/-env) arm32|win32|ia64|x64).
+Określa środowisko docelowe ([/ENV](/windows/win32/midl/-env) arm32 | Win32 | IA64 | x64).
 
 **Choices**
 
-- **Nie ustawiono** - Win32
-- **Microsoft Windows 32-bitowy** - Win32
-- **Microsoft Windows 64-bit na Itanium** - IA64
-- **Microsoft Windows ARM** - ARM
-- **Microsoft Windows ARM64** - ARM64
-- **Microsoft Windows 64-bit na x64** - X64
+- **Nie ustawiono** — Win32
+- **Microsoft Windows 32-bit** -Win32
+- **Microsoft Windows 64-bit na Itanium** — ia64
+- **Microsoft Windows ARM** — ARM
+- **Microsoft Windows arm64** — arm64
+- **Microsoft Windows 64 — bit x64** — x64
 
-### <a name="generate-stubless-proxies"></a>Generowanie serwerów proxy bez stubless
+### <a name="generate-stubless-proxies"></a>Generuj proxy bez klas zastępczych
 
-Generowanie w pełni interpretowanych wycinków z rozszerzeniami i bez stubless proxy dla interfejsów obiektów ([/Oicf](/windows/win32/midl/-oi), [/Oif](/windows/win32/midl/-oi) ).
+Generuj w pełni interpretowane klasy zastępcze z rozszerzeniami oraz proxy bez klas zastępczych dla interfejsów obiektów ([/Oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Pomijanie ostrzeżeń kompilatora
 
-Pomijanie komunikatów ostrzegawczych kompilatora ([/no_warn](/windows/win32/midl/-no-warn)).
+Pomijaj komunikaty ostrzegawcze kompilatora ([/no_warn](/windows/win32/midl/-no-warn)).
 
 ### <a name="application-configuration-mode"></a>Tryb konfiguracji aplikacji
 
@@ -141,13 +142,13 @@ Zezwalaj na wybrane atrybuty ACF w pliku IDL ([/app_config](/windows/win32/midl/
 
 ### <a name="locale-id"></a>Identyfikator ustawień regionalnych
 
-Określa identyfikator LCID dla plików wejściowych, nazw plików i ścieżek katalogów ([/lcid](/windows/win32/midl/-lcid) DECIMAL).
+Określa identyfikator LCID dla plików wejściowych, nazw plików i ścieżek katalogów ([/LCID](/windows/win32/midl/-lcid) Decimal).
 
 ### <a name="multi-processor-compilation"></a>Kompilacja wieloprocesorowa
 
-Uruchom wiele wystąpień w tym samym czasie.
+Uruchom jednocześnie wiele wystąpień.
 
-## <a name="output-property-page"></a>Strona właściwości wyjściowej
+## <a name="output-property-page"></a>Strona właściwości danych wyjściowych
 
 ### <a name="output-directory"></a>Katalog wyjściowy
 
@@ -159,7 +160,7 @@ Określa nazwę wygenerowanego pliku metadanych ([/winmd](/windows/win32/midl/-w
 
 ### <a name="header-file"></a>Plik nagłówka
 
-Określa nazwę wygenerowanego pliku nagłówka ([/h](/windows/win32/midl/-h) nazwa pliku).
+Określa nazwę wygenerowanego pliku nagłówka ([/h](/windows/win32/midl/-h) filename).
 
 ### <a name="dlldata-file"></a>Plik DllData
 
@@ -167,102 +168,102 @@ Określa nazwę pliku DLLDATA ([/dlldata](/windows/win32/midl/-dlldata) filename
 
 ### <a name="iid-file"></a>Plik IID
 
-Określa nazwę pliku identyfikatora interfejsu ([/iid](/windows/win32/midl/-iid) filename).
+Określa nazwę pliku identyfikatora interfejsu ([/IID](/windows/win32/midl/-iid) filename).
 
 ### <a name="proxy-file"></a>Plik proxy
 
-Określa nazwę pliku proxy ([/proxy](/windows/win32/midl/-proxy) filename).
+Określa nazwę pliku serwera proxy ([/proxy](/windows/win32/midl/-proxy) filename).
 
-### <a name="generate-type-library"></a>Generowanie biblioteki typów
+### <a name="generate-type-library"></a>Generuj bibliotekę typów
 
-Określ, aby nie generować biblioteki typów ([/notlb] dla nie).
+Określ, aby nie generować biblioteki typów ([/notlb] dla elementu No).
 
 ### <a name="type-library"></a>Biblioteka typów
 
-Określa nazwę pliku biblioteki typów ([/tlb](/windows/win32/midl/-tlb) nazwa pliku).
+Określa nazwę pliku biblioteki typów ([/TLB](/windows/win32/midl/-tlb) filename).
 
-### <a name="generate-client-stub-files"></a>Generowanie plików skrótowych klienta
+### <a name="generate-client-stub-files"></a>Generuj pliki szczątkowe klienta
 
-Wygeneruj tylko plik skrótowy klienta ([/client](/windows/win32/midl/-client) [stub|none]).
-
-**Choices**
-
-- **Odcinek** - Odcinek
-- **Brak** - Brak
-
-### <a name="generate-server-stub-files"></a>Generowanie plików skrótowych serwera
-
-Generowanie tylko pliku skrótowego serwera ([/server](/windows/win32/midl/-server) [stub|none]).
+Generuj tylko plik szczątkowy klienta ([/Client](/windows/win32/midl/-client) [stub | none]).
 
 **Choices**
 
-- **Odcinek** - Odcinek
-- **Brak** - Brak
+- **Stub** — stub
+- **Brak** — brak
 
-### <a name="client-stub-file"></a>Plik skrótowy klienta
+### <a name="generate-server-stub-files"></a>Generuj pliki szczątkowe serwera
 
-Określ plik skrótowy klienta ([/cstub](/windows/win32/midl/-cstub) [plik]).
+Generuj tylko plik szczątkowy serwera ([/Server](/windows/win32/midl/-server) [stub | none]).
 
-### <a name="server-stub-file"></a>Plik skrótowy serwera
+**Choices**
 
-Określ plik skrótowy serwera ([/sstub](/windows/win32/midl/-sstub) [plik]).
+- **Stub** — stub
+- **Brak** — brak
+
+### <a name="client-stub-file"></a>Plik szczątkowy klienta
+
+Określ plik szczątkowy klienta ([/cstub](/windows/win32/midl/-cstub) [plik]).
+
+### <a name="server-stub-file"></a>Plik szczątkowy serwera
+
+Określ plik szczątkowy serwera ([/sstub](/windows/win32/midl/-sstub) [plik]).
 
 ### <a name="type-library-format"></a>Format biblioteki typów
 
-Określa format pliku biblioteki typów ([/oldtlb|/newtlb]).
+Określa format pliku biblioteki typów ([/oldtlb |/newtlb]).
 
 **Choices**
 
-- **NewFormat** - nowy format
-- **OldFormat** - Stary format
+- **NewFormat** — nowy format
+- **OldFormat** — stary format
 
-## <a name="advanced-property-page"></a>Strona właściwości zaawansowanej
+## <a name="advanced-property-page"></a>Zaawansowana Strona właściwości
 
 ### <a name="c-preprocess-options"></a>Opcje przetwarzania wstępnego C
 
-Określa przełączniki, które mają być przerzucane do preprocesora kompilatora C ([/cpp_opt](/windows/win32/midl/-cpp-opt) przełączników).
+Określa przełączniki do przekazania do preprocesora kompilatora języka C ([/przełączniki cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
-### <a name="undefine-preprocessor-definitions"></a>Definicje przederocesora przeddefine
+### <a name="undefine-preprocessor-definitions"></a>Usuń Definicje preprocesora
 
-Określa jeden lub więcej niezdrobnień, w tym makra MIDL ([/U](/windows/win32/midl/-U) [makra]).
+Określa co najmniej jedną definicję, w tym makra MIDL ([/u](/windows/win32/midl/-U)  [makra]).
 
 ### <a name="enable-error-checking"></a>Włącz sprawdzanie błędów
 
-Wybierz opcję sprawdzania błędów ([/error all|none]).
+Wybierz opcję sprawdzania błędów ([/Error All | none]).
 
 **Choices**
 
-- **EnableCustom** — wszystkie
-- **Wszystkie** - Wszystkie
-- **Brak** - Brak
+- **EnableCustom** — wszystko
+- **Wszystko** — wszystkie
+- **Brak** — brak
 
 ### <a name="check-allocations"></a>Sprawdź alokacje
 
-Sprawdź, czy nie ma błędów pamięci ([/error](/windows/win32/midl/-error) allocation).
+Sprawdź, czy nie występują błędy pamięci (alokacja[/Error](/windows/win32/midl/-error) ).
 
 ### <a name="check-bounds"></a>Sprawdź granice
 
-Sprawdź rozmiar a specyfikację długości transmisji ([/error](/windows/win32/midl/-error) bounds_check).
+Sprawdź rozmiar i określ długość transmisji ([/error](/windows/win32/midl/-error) bounds_check).
 
-### <a name="check-enum-range"></a>Sprawdź zakres wyliczenia
+### <a name="check-enum-range"></a>Sprawdź zakres wyliczania
 
-Sprawdź wartości wyliczenia, które mają znajdować się w dopuszczalnym zakresie ([/error](/windows/win32/midl/-error) enum).
+Sprawdź, czy wartości wyliczeniowe mają być w dozwolonym zakresie ([/Error](/windows/win32/midl/-error) enum).
 
-### <a name="check-reference-pointers"></a>Sprawdź wskaźniki referencyjne
+### <a name="check-reference-pointers"></a>Sprawdź wskaźniki odwołań
 
-Sprawdź wskaźniki ref jako inne niż null ([/error](/windows/win32/midl/-error) ref).
+Sprawdź, czy wskaźniki ref nie mają wartości null ([/Error](/windows/win32/midl/-error) ref).
 
-### <a name="check-stub-data"></a>Sprawdź dane skrótowe
+### <a name="check-stub-data"></a>Sprawdź dane szczątkowe
 
-Emituj dodatkowe sprawdzanie ważności danych skrótowych po stronie serwera ([/error](/windows/win32/midl/-error) stub_data).
+Emituj dodatkowe sprawdzenie poprawności danych szczątkowych po stronie serwera ([/error](/windows/win32/midl/-error) stub_data).
 
-### <a name="prepend-with-abi-namespace"></a>Poprzedzaj obszar nazw "ABI"
+### <a name="prepend-with-abi-namespace"></a>Poprzedź z przestrzenią nazw "ABI"
 
-Przedaj obszar nazw "ABI" do wszystkich typów.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
+Dołącz przestrzeń nazw "ABI" do wszystkich typów.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
-### <a name="validate-parameters"></a>Sprawdzanie poprawności parametrów
+### <a name="validate-parameters"></a>Weryfikuj parametry
 
-Generowanie dodatkowych informacji w celu sprawdzenia poprawności parametrów ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Generuj dodatkowe informacje, aby sprawdzić poprawność parametrów ([/Robust](/windows/win32/midl/-robust)  |  [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Wyrównanie elementu członkowskiego struktury
 
@@ -271,15 +272,15 @@ Określa poziom pakowania struktur w systemie docelowym (/ZpN).
 **Choices**
 
 - **Nie ustawiono** — nie ustawiono
-- **1 Bajt** - Zp1
-- **2 Bajt** - Zp2
-- **4 Bajt** - Zp4
-- **8 Bajt** - Zp8
+- **1 bajt** — ZP1
+- **2 bajty** — Zp2
+- **4 bajt** — Zp4
+- **8-bajtowy** — ZP8
 
 ### <a name="redirect-output"></a>Przekieruj dane wyjściowe
 
-Przekierowuje dane wyjściowe z ekranu do pliku ([/o).](/windows/win32/midl/-o)
+Przekierowuje dane wyjściowe z ekranu do pliku ([/o](/windows/win32/midl/-o) plik).
 
 ### <a name="minimum-target-system"></a>Minimalny system docelowy
 
-Ustaw minimalny system docelowy ([/target](/windows/win32/midl/-target) STRING).
+Ustaw minimalny system docelowy ([/Target](/windows/win32/midl/-target) ciąg).

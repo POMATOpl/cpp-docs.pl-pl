@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: przeciążanie operatora'
 title: Przeciążanie operatora
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: 822bd5efb3125e69ff60aa42ba6419969cace403
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23a35a87f9f370a9bb8f268ac1637a4a899ee5f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146032"
 ---
 # <a name="operator-overloading"></a>Przeładowanie operatora
 
@@ -176,7 +177,7 @@ int main() {
 
 - [Dostęp do elementu członkowskiego](../cpp/member-access.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

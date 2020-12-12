@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy uniform_real_distribution
 title: uniform_real_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: ba2ec419e524ca571120fe82c7cbf63c1a97eaaa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ae272955cb7586342d403e332b981ca8a1005256
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132681"
 ---
 # <a name="uniform_real_distribution-class"></a>uniform_real_distribution — Klasa
 

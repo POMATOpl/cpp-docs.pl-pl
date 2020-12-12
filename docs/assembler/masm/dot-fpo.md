@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:. FPO (32-bitowy MASM)
 title: .FPO
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: ec08be4941f81abed55420884b34dc817caf3f13
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 058189329cbe849086a3b1540ac7883ecac4d026
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131706"
 ---
 # <a name="fpo-32-bit-masm"></a>. FPO (32-bitowy MASM)
 
@@ -41,7 +42,7 @@ Wskazuje, czy rejestr EBP został przydzielony. wartość 0 lub 1.
 *cbFrame*\
 Wskazuje typ ramki.  Aby uzyskać więcej informacji, zobacz [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

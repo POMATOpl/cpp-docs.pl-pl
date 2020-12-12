@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: o wartości null'
 title: Instrukcja o wartości Null
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
-ms.openlocfilehash: 167a1e579c15fd59da1979efd9aa979184318115
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1aa488da395cf84ae9ef6d78939f1f1e3019c572
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177810"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146175"
 ---
 # <a name="null-statement"></a>Instrukcja o wartości Null
 
@@ -43,4 +44,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz też
 
-[Instrukcja wyrażeń](../cpp/expression-statement.md)
+[Instrukcja wyrażenia](../cpp/expression-statement.md)

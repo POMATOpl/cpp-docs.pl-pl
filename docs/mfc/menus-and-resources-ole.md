@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: menu i zasoby (OLE)'
 title: Menu i zasoby (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: e705f28476df7b594f9648aee8317759211c66c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a6ec4f2750a99935cb0113a3ad607be8a80d4bfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626213"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133149"
 ---
 # <a name="menus-and-resources-ole"></a>Menu i zasoby (OLE)
 
@@ -43,7 +44,7 @@ Aktywacja w miejscu wymaga, aby aplikacje kontenera i serwera musiały być nego
 
 Ze względu na te problemy aplikacje dokumentów OLE utworzone za pomocą Kreatora aplikacji mogą mieć do czterech oddzielnych menu i zasobów tabel akceleratorów. Są one używane z następujących powodów:
 
-|Nazwa zasobu|Użycie|
+|Nazwa zasobu|Zastosowanie|
 |-------------------|---------|
 |IDR_MAINFRAME|Używane w aplikacji MDI, jeśli żaden plik nie jest otwarty lub w aplikacji SDI niezależnie od otwartych plików. Jest to standardowe menu używane w aplikacjach innych niż OLE.|
 |\<project>typ IDR_|Używany w aplikacji MDI, jeśli pliki są otwarte. Używany, gdy aplikacja działa autonomicznie. Jest to standardowe menu używane w aplikacjach innych niż OLE.|
@@ -54,9 +55,9 @@ Każda z tych nazw zasobów reprezentuje menu i, zazwyczaj, tabelę akceleratora
 
 W poniższych artykułach omówiono tematy związane z kontenerami, serwerami oraz scalaniem menu, które jest niezbędne do wdrożenia aktywacji w miejscu:
 
-- [Menu i zasoby: dodatki do kontenera](menus-and-resources-container-additions.md)
+- [Menu i zasoby: Dodatki do kontenera](menus-and-resources-container-additions.md)
 
-- [Menu i zasoby: dodatki do serwera](menus-and-resources-server-additions.md)
+- [Menu i zasoby: Dodatki do serwera](menus-and-resources-server-additions.md)
 
 - [Menu i zasoby: scalanie menu](menus-and-resources-menu-merging.md)
 

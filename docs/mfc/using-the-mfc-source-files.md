@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: korzystanie z plików źródłowych MFC'
 title: Korzystanie z plików źródłowych MFC
 ms.date: 08/19/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-ms.openlocfilehash: acd702f5a032f9dca3480d287142583070701e84
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42dc285bf4877c4bef70e430b6d2982f43e08d51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143263"
 ---
 # <a name="using-the-mfc-source-files"></a>Korzystanie z plików źródłowych MFC
 
@@ -38,7 +39,7 @@ Zarówno w przypadku plików źródłowych MFC, jak i plików nagłówkowych two
 
 `// Implementation`
 
-## <a name="an-example-of-the-comments"></a><a name="an-example-of-the-comments"></a>Przykład komentarzy
+## <a name="an-example-of-the-comments"></a><a name="an-example-of-the-comments"></a> Przykład komentarzy
 
 W poniższej częściowej liście klas `CStdioFile` użyto większości standardowych komentarzy, które MFC wykorzystują w swoich klasach, aby podzielić elementy członkowskie klasy na używane sposoby:
 
@@ -135,6 +136,6 @@ Na `CStdioFile` liście pod [przykładem komentarzy](#an-example-of-the-comments
 > [!NOTE]
 > Komentarze do pozostałych typów mogą znajdować się powyżej lub poniżej `// Implementation` komentarza. W obu przypadkach opisują rodzaje członków zadeklarowanych poniżej. Jeśli występują one poniżej `// Implementation` komentarza, należy zastanowić się, że elementy członkowskie mogą ulec zmianie w przyszłych wersjach MFC.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ogólne tematy dotyczące MFC](../mfc/general-mfc-topics.md)

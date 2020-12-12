@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: specyfikator przesłonięcia'
 title: override, specyfikator
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: da29c5c37ff834513736bda02745d031fe3d92aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146006"
 ---
 # <a name="override-specifier"></a>override, specyfikator
 
@@ -82,5 +83,5 @@ Aby określić, że funkcje nie mogą być zastępowane i że klasy nie mogą by
 
 ## <a name="see-also"></a>Zobacz też
 
-[final, specyfikator](../cpp/final-specifier.md)<br/>
+[końcowy specyfikator](../cpp/final-specifier.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

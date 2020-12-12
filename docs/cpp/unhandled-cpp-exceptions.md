@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Nieobsłużone wyjątki C++'
 title: Nieobsługiwane wyjątki języka C++
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 48b417c48a3cbb903f3fabaf31b1423e79a1a414
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 68bd8740d86df3faf4a83b7b2f269def5eeb5eca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145746"
 ---
 # <a name="unhandled-c-exceptions"></a>Nieobsługiwane wyjątki języka C++
 
@@ -54,6 +55,6 @@ term_func was called by terminate.
 
 `term_func`Funkcja powinna kończyć program lub bieżący wątek, najlepiej przez wywołanie metody `exit` . Jeśli nie, i zamiast tego powraca do obiektu wywołującego, `abort` jest wywoływana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md)

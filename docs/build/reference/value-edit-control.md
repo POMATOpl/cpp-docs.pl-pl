@@ -1,20 +1,21 @@
 ---
+description: Dowiedz się więcej o kontrolce Edycja wartości
 title: Kontrola nad edytowaniem wartości
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Value edit control
 ms.assetid: 129d8f74-2629-4a29-981f-ddb3c1e174cd
-ms.openlocfilehash: 2638b904482503ae4645302264f1b06bf6ba3ded
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4e2d0dc1f04ef084342afb3307b5b9934bc0e54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137725"
 ---
 # <a name="value-edit-control"></a>Kontrola nad edytowaniem wartości
 
-Aby użyć formantu, wprowadź wartość, wklej go ze Schowka, lub przeciągnij i upuść go z debugera do tej kontrolki edycji. Wprowadź wartość w postaci szesnastkowej lub dziesiętna, a następnie kliknij przycisk **odszukaj**. Wartości szesnastkowe powinien być poprzedzony 0 x; prawidłowe znaki to 0-9, A-F i a-f. Wartości dziesiętnych może być poprzedzona przez znak minus (-); prawidłowe znaki to 0 – 9.
+Aby użyć kontrolki, wprowadź wartość, wklej ją ze schowka lub przeciągnij i upuść w debugerze do tej kontrolki edycji. Wprowadź wartość w formacie szesnastkowym lub dziesiętnym, a następnie kliknij przycisk **Wyszukaj**. Wartości szesnastkowe powinny być poprzedzone 0x; prawidłowe znaki to 0-9, A-F i a-f. Wartości dziesiętne mogą być poprzedzone znakiem minus (-); prawidłowe znaki to 0-9.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[ERRLOOK — dokumentacja](errlook-reference.md)
+[Odwołanie ERRLOOK](errlook-reference.md)

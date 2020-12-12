@@ -1,18 +1,19 @@
 ---
+description: Dowiedz się więcej o programie Mechanizm pimpl hermetyzacji for Compile-Time Encapsulation (nowoczesny C++)
 title: Mechanizm pimpl hermetyzacji w czasie kompilacji (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: f1eb06ad3a52be486f085babf699677951b1ee71
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 95d1ca4f377cc911e862885e86f846d8536d3b1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145889"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Mechanizm pimpl hermetyzacji w czasie kompilacji (Modern C++)
 
-*Mechanizm pimpl hermetyzacji idiom* jest nowoczesnym C++ techniką do ukrycia implementacji, minimalizowania sprzęgu i oddzielenia interfejsów. Mechanizm pimpl hermetyzacji jest krótkie dla "wskaźnika do implementacji". Użytkownik może już znać koncepcję, ale znać inne nazwy, takie jak Cheshire Cat lub kompilator idiom.
+*Mechanizm pimpl hermetyzacji idiom* jest nowoczesnym techniką języka C++ do ukrycia implementacji, minimalizowania sprzęgu i oddzielenia interfejsów. Mechanizm pimpl hermetyzacji jest krótkie dla "wskaźnika do implementacji". Użytkownik może już znać koncepcję, ale znać inne nazwy, takie jak Cheshire Cat lub kompilator idiom.
 
 ## <a name="why-use-pimpl"></a>Dlaczego warto używać Mechanizm pimpl hermetyzacji?
 
@@ -39,7 +40,7 @@ Mechanizm pimpl hermetyzacji idiom pozwala uniknąć ponownego kompilowania kask
 
 ## <a name="pimpl-implementation"></a>Implementacja Mechanizm pimpl hermetyzacji
 
-Zdefiniuj klasę `impl` w pliku CPP.
+Zdefiniuj `impl` klasę w pliku CPP.
 
 ```cpp
 // my_class.cpp
@@ -53,12 +54,12 @@ my_class::my_class(): pimpl( new impl )
 }
 ```
 
-## <a name="best-practices"></a>Najlepsze praktyki
+## <a name="best-practices"></a>Najlepsze rozwiązania
 
 Weź pod uwagę, czy dodać obsługę niezgłaszanej specjalizacji wymiany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zapraszamy ponownie doC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Witamy ponownie w języku C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)
+[Standardowa biblioteka języka C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa valarray'
 title: valarray — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: 177840ffea711395b7cace6e47426d979f8fe329
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 53b2c2160b522bd28e316eb29f0661447fb84b11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132629"
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 
@@ -69,14 +70,14 @@ W szczególności nie mogą istnieć żadne delikatne różnice między konstruk
 |-|-|
 |[value_type](#value_type)|Typ, który reprezentuje typ elementu przechowywanego w `valarray` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
 |[stosowa](#apply)|Stosuje określoną funkcję do każdego elementu `valarray` .|
 |[cshift](#cshift)|Cyklicznie przesuwa wszystkie elementy w a `valarray` o określoną liczbę pozycji.|
 |[zwolniony](#free)|Zwalnia pamięć używaną przez program `valarray` .|
-|[max](#max)|Znajduje największy element w `valarray` .|
+|[Maksymalny](#max)|Znajduje największy element w `valarray` .|
 |[min](#min)|Znajduje najmniejszy element w `valarray` .|
 |[Zmień rozmiar](#resize)|Zmienia liczbę elementów w odniesieniu `valarray` do określonej liczby, dodając lub usuwając elementy zgodnie z wymaganiami.|
 |[nocn](#shift)|Przenosi wszystkie elementy w a `valarray` o określoną liczbę pozycji.|
@@ -129,7 +130,7 @@ Element valarray, którego elementy `_Func` zastosowały elementy do elementów 
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca obiekt klasy [valarray](../standard-library/valarray-class.md) **\<Type>** , o długości [size](#size), z których każdy ma elementy *I* `_Func((*this)[I])` .
+Funkcja członkowska zwraca obiekt klasy [valarray](../standard-library/valarray-class.md) **\<Type>** , o długości [size](#size), z których każdy ma elementy  `_Func((*this)[I])` .
 
 ### <a name="example"></a>Przykład
 
@@ -532,7 +533,7 @@ Element valarray, którego elementy są logicznymi elementem `AND` argumentu ope
 
 Operacji bitowej można używać tylko do manipulowania bitami w **`char`** **`int`** typach danych i Variant, a nie w **`float`** , **`double`** , **longdouble**, **`void`** , **`bool`** lub innych, bardziej złożonych typów danych.
 
-Bitowe i ma tę samą tabelę prawdy co wartość logiczna, `AND` ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Dane bity *b*1 i *b*2, *b*1 `AND` *b*2 to **`true`** Jeśli obie bity są prawdziwe; **`false`** Jeśli co najmniej jeden z nich ma wartość false.
+Bitowe i ma tę samą tabelę prawdy co wartość logiczna, `AND` ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Dane bity *b* 1 i *b* 2, *b* 1 `AND` *b* 2 to **`true`** Jeśli obie bity są prawdziwe; **`false`** Jeśli co najmniej jeden z nich ma wartość false.
 
 ### <a name="example"></a>Przykład
 
@@ -1287,7 +1288,7 @@ Valarray, którego elementy są elementami elementu, wyłączną logiczną **XOR
 
 ### <a name="remarks"></a>Uwagi
 
-Wyłączne logiczne lub, zwane jako **XOR**, ma następującą semantykę: dane elementy *e*1 i *e*2, *e*1 **XOR** *e*2 to **`true`** jeśli dokładnie jeden z tych elementów jest prawdziwy; **`false`** Jeśli oba elementy mają wartość false lub jeśli oba elementy mają wartość true.
+Wyłączne logiczne lub, zwane jako **XOR**, ma następującą semantykę: dane elementy *e* 1 i *e* 2, *e* 1 **XOR** *e* 2 to **`true`** jeśli dokładnie jeden z tych elementów jest prawdziwy; **`false`** Jeśli oba elementy mają wartość false lub jeśli oba elementy mają wartość true.
 
 ### <a name="example"></a>Przykład
 
@@ -1364,7 +1365,7 @@ Element valarray, którego elementy są elementem bitowym `OR` z argumentem oper
 
 Operacji bitowej można używać tylko do manipulowania bitami w **`char`** **`int`** typach danych i Variant, a nie w **`float`** , **`double`** , **longdouble**, **`void`** , **`bool`** lub innych, bardziej złożonych typów danych.
 
-Wartość bitowa `OR` ma taką samą tabelę prawdy jak wartość logiczna, `OR` ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Dane bity *b*1 i *b*2, *b*1 `OR` *b*2 są, **`true`** Jeśli co najmniej jeden z bitów ma wartość true; **`false`** Jeśli obie bity mają wartość false.
+Wartość bitowa `OR` ma taką samą tabelę prawdy jak wartość logiczna, `OR` ale ma zastosowanie do typu danych na poziomie poszczególnych bitów. Dane bity *b* 1 i *b* 2, *b* 1 `OR` *b* 2 są, **`true`** Jeśli co najmniej jeden z bitów ma wartość true; **`false`** Jeśli obie bity mają wartość false.
 
 ### <a name="example"></a>Przykład
 
@@ -2008,6 +2009,6 @@ The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
