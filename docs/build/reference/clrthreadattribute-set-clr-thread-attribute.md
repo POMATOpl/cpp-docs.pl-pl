@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/CLRTHREADATTRIBUTE (ustaw atrybut wątku CLR)
 title: /CLRTHREADATTRIBUTE (Ustaw atrybut wątku CTR)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 119797ee10ed0c08477b8e08635605e4299ffd41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179125"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Ustaw atrybut wątku CTR)
 
-Określ jawnie atrybut wątkowości dla punktu wejścia programu CLR.
+Jawnie określ atrybut wątkowości dla punktu wejścia programu CLR.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,41 +30,41 @@ Określ jawnie atrybut wątkowości dla punktu wejścia programu CLR.
 **MTA**<br/>
 Stosuje atrybut MTAThreadAttribute do punktu wejścia programu.
 
-**BRAK**<br/>
-Taka sama jak /CLRTHREADATTRIBUTE nie został podany.  Umożliwia języka wspólnego środowiska uruchomieniowego (CLR) Ustaw domyślnego atrybutu wątkowości.
+**DAWAJ**<br/>
+Analogicznie jak nieokreślanie/CLRTHREADATTRIBUTE.  Umożliwia ustawienie domyślnego atrybutu Threading środowiska uruchomieniowego języka wspólnego (CLR).
 
-**STA.**<br/>
+**STA**<br/>
 Stosuje atrybut STAThreadAttribute do punktu wejścia programu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ustawienie atrybutu wątku jest prawidłowy tylko podczas kompilowania .exe, jak ma to wpływ na punkt wejścia w wątku głównym.
+Ustawienie atrybutu wątku jest prawidłowe tylko w przypadku kompilowania pliku. exe, ponieważ ma wpływ na punkt wejścia głównego wątku.
 
-Jeśli używasz domyślnego punktu wejścia (main lub wmain, na przykład) Określ model wątkowości, za pomocą /CLRTHREADATTRIBUTE lub przez umieszczenie wątkowości atrybutu (STAThreadAttribute lub MTAThreadAttribute) na domyślnej funkcji wpis.
+Jeśli używasz domyślnego punktu wejścia (na przykład Main lub wmain), określ model wątkowości za pomocą/CLRTHREADATTRIBUTE lub przez umieszczenie atrybutu Threading (STAThreadAttribute lub MTAThreadAttribute) w funkcji default entry.
 
-Korzystając z punktem wejścia innych niż domyślne, określ model wątkowy przy użyciu /CLRTHREADATTRIBUTE lub umieszczając wątkowości atrybutu na funkcji wejścia innych niż domyślne, a następnie określ punkt wejścia innych niż domyślne, za pomocą [/Entry](entry-entry-point-symbol.md) .
+W przypadku użycia punktu wejścia innego niż domyślny należy określić model wątkowości przy użyciu/CLRTHREADATTRIBUTE lub poprzez umieszczenie atrybutu Threading w funkcji wprowadzania niedomyślnego, a następnie określić niedomyślny punkt wejścia z [/entry](entry-entry-point-symbol.md).
 
-Jeśli model wątkowy określona w kodzie źródłowym nie zgadza się z modelu wątkowości określony za pomocą /CLRTHREADATTRIBUTE, konsolidator zignoruje /CLRTHREADATTRIBUTE i zastosowanie modelu wątkowości, określona w kodzie źródłowym.
+Jeśli model wątkowości określony w kodzie źródłowym nie zgadza się z modelem wątkowości określonym za pomocą/CLRTHREADATTRIBUTE, konsolidator zignoruje/CLRTHREADATTRIBUTE i zastosuje model wątkowości określony w kodzie źródłowym.
 
-Będzie trzeba użyć pojedynczego wątków na przykład CLR program udostępnia obiekt COM, który korzysta z wątków w jednym.  Jeśli Twoje CLR program używa wielowątkowości, nie można go hosta obiektu COM, który korzysta z wątków w jednym.
+Będzie to konieczne, aby można było używać jednowątkowego, na przykład jeśli program CLR hostuje obiekt COM używający jednowątkowego.  Jeśli program CLR używa wielowątkowości, nie może hostować obiektu COM, który używa jednowątkowego.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** .
 
-1. Rozwiń **konsolidatora** węzła.
+1. Rozwiń węzeł **konsolidatora** .
 
-1. Wybierz **zaawansowane** stronę właściwości.
+1. Wybierz stronę właściwości **Zaawansowane** .
 
-1. Modyfikowanie **atrybut wątku CLR** właściwości.
+1. Zmodyfikuj właściwość **atrybutu wątku CLR** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

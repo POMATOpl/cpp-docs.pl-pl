@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat:/Zc: wchar_t (wchar_t jest typem natywnym)'
 title: /Zc:wchar_t (wchar_t jest typem natywnym)
 ms.date: 03/01/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: 114ed4a279b66571c0dc81fc1139dcdc59c17eae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3dc826bf60c760f45464bcab73dc5fcb79edc3cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234318"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178904"
 ---
 # <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t jest typem natywnym)
 
@@ -39,7 +40,7 @@ Firma Microsoft implementuje **`wchar_t`** jako dwubajtową wartość bez znaku.
 
 Jeśli piszesz nowy kod, który ma współpracować ze starszym kodem, który nadal używa **`typedef`** wersji programu **`wchar_t`** , możesz zapewnić przeciążenia zarówno dla programu **`unsigned short`** , jak i dla każdej **`__wchar_t`** z **`wchar_t`** nich, aby kod można było połączyć z kodem skompilowanym z **/Zc: wchar_t** lub kodu skompilowanego bez tego. W przeciwnym razie trzeba będzie udostępnić dwa różne kompilacje biblioteki, jeden z i jeden bez **/Zc: wchar_t** włączone. Nawet w tym przypadku zaleca się kompilowanie starszego kodu za pomocą tego samego kompilatora, którego używa się do kompilowania nowego kodu. Nigdy nie mieszaj plików binarnych skompilowanych różnymi kompilatorami.
 
-Gdy **/Zc: wchar_t** jest określony, definiowane są ** \_ WCHAR \_ t \_ zdefiniowane** i ** \_ natywne \_ \_ \_ zdefiniowane symbole WCHAR t** . Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).
+Gdy **/Zc: wchar_t** jest określony, definiowane są **\_ WCHAR \_ t \_ zdefiniowane** i **\_ natywne \_ \_ \_ zdefiniowane symbole WCHAR t** . Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md).
 
 Jeśli w kodzie są używane funkcje globalne kompilatora COM, ponieważ **/Zc: wchar_t** jest teraz domyślnie włączone, zalecamy zmianę jawnych odwołań do comsupp. lib (z [komentarza pragma](../../preprocessor/comment-c-cpp.md) lub w wierszu polecenia) na comsuppw. lib lub comsuppwd. lib. (Jeśli musisz skompilować przy użyciu **/Zc: wchar_t-**, użyj comsupp. lib). Jeśli dołączysz plik nagłówka comdef. h, poprawna biblioteka zostanie określona dla Ciebie. Informacje o obsłudze kompilatora COM można znaleźć w temacie [Obsługa kompilatora com](../../cpp/compiler-com-support.md).
 
@@ -49,7 +50,7 @@ Jeśli w kodzie są używane funkcje globalne kompilatora COM, ponieważ **/Zc: 
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę języka**C/C++** właściwości konfiguracji  >  **Language** .
+1. Wybierz   >  stronę języka **C/C++** właściwości konfiguracji  >   .
 
 1. Zmodyfikuj **Wchar_t Traktuj jako właściwość typu wbudowanego** .
 
@@ -57,6 +58,6 @@ Jeśli w kodzie są używane funkcje globalne kompilatora COM, ponieważ **/Zc: 
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.TreatWChar_tAsBuiltInType%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Zc (Zgodność)](zc-conformance.md)<br/>

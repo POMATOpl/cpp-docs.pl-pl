@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Compiler-Controlled opcje łącza'
 title: Opcje LINK kontrolowane przez kompilator
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: f631d0ebbbd9e60fe5d54aac6fb158461d3f4d38
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86f03f53fe19f6788528dca421fb6030289fca99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178982"
 ---
 # <a name="compiler-controlled-link-options"></a>Opcje LINK kontrolowane przez kompilator
 
@@ -43,4 +44,4 @@ Aby uzyskać więcej informacji, zobacz [Opcje kompilatora MSVC](compiler-option
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

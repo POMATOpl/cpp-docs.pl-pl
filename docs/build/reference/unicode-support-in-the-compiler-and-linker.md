@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: obsługa standardu Unicode w kompilatorze i konsolidatorze'
 title: Obsługa formatu Unicode w kompilatorze i konsolidatorze
 ms.date: 12/15/2017
 f1_keywords:
@@ -8,20 +9,20 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c853907dd0d70a4ab7311c41f51d8d73bb25cf20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178956"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Obsługa formatu Unicode w kompilatorze i konsolidatorze
 
-Większość narzędzi C++ do tworzenia wizualizacji obsługuje dane wejściowe i wyjściowe w formacie Unicode.
+Większość Visual C++ narzędzia kompilacji obsługują dane wejściowe i wyjściowe w formacie Unicode.
 
 ## <a name="filenames"></a>Nazwy plików
 
-Nazwy plików określone w wierszu polecenia lub w dyrektywach kompilatora (takie jak `#include`) mogą zawierać znaki Unicode.
+Nazwy plików określone w wierszu polecenia lub w dyrektywach kompilatora (takich jak `#include` ) mogą zawierać znaki Unicode.
 
 ## <a name="source-code-files"></a>Pliki kodu źródłowego
 
@@ -33,7 +34,7 @@ Unicode może być wejściowy do pliku kodu źródłowego w następujących kodo
 
 - Big endian UTF-16 z lub bez BOM
 
-- UTF-8 z BOM
+- UTF-8 with BOM
 
 ## <a name="output"></a>Dane wyjściowe
 
@@ -45,7 +46,7 @@ Pliki odpowiedzi i DEF plików mogą być w formacie UTF-16 z BOM lub ANSI.
 
 ## <a name="asm-and-cod-dumps"></a>zrzuty. ASM i. COD
 
-zrzuty. ASM i. COD są domyślnie w standardzie ANSI w celu zapewnienia zgodności z MASM. Użyj [/FAU](fa-fa-listing-file.md) do wyprowadzania UTF-8. Należy pamiętać, że w przypadku określenia **/FAS**Źródło wymieszaniu zostanie bezpośrednio wydrukowane i może być zniekształcone, na przykład jeśli kod źródłowy to UTF-8 i nie określono **/FAsu**.
+zrzuty. ASM i. COD są domyślnie w standardzie ANSI w celu zapewnienia zgodności z MASM. Użyj [/FAU](fa-fa-listing-file.md) do wyprowadzania UTF-8. Należy pamiętać, że w przypadku określenia **/FAS** Źródło wymieszaniu zostanie bezpośrednio wydrukowane i może być zniekształcone, na przykład jeśli kod źródłowy to UTF-8 i nie określono **/FAsu**.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: typowe makra dla poleceń i właściwości programu MSBuild'
 title: Typowe makra dla poleceń i właściwości programu MSBuild
 ms.date: 08/02/2019
 helpviewer_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3911e3285ca09fefce51f0522690943b1f8b2c27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179112"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Typowe makra dla poleceń i właściwości programu MSBuild
 
@@ -103,7 +104,7 @@ W zależności od opcji instalacji program Visual Studio może udostępnić Ci s
 
 ## <a name="view-the-current-properties-and-macros"></a>Wyświetlanie bieżących właściwości i makr
 
-Aby wyświetlić wszystkie aktualnie dostępne makra, w oknie dialogowym **strony właściwości** w obszarze **Katalogi VC + +** wybierz strzałkę listy rozwijanej na końcu wiersza właściwości. Kliknij przycisk **Edytuj** , a następnie w oknie dialogowym Edycja wybierz przycisk **makra** . Bieżący zestaw właściwości i makr widoczny dla programu Visual Studio jest wyświetlany wraz z bieżącą wartością dla każdej z nich. Aby uzyskać więcej informacji, zobacz sekcję **Określanie wartości zdefiniowanych przez użytkownika** na [ C++ stronie właściwości projektu](property-pages-visual-cpp.md).
+Aby wyświetlić wszystkie aktualnie dostępne makra, w oknie dialogowym **strony właściwości** w obszarze **Katalogi VC + +** wybierz strzałkę listy rozwijanej na końcu wiersza właściwości. Kliknij przycisk **Edytuj** , a następnie w oknie dialogowym Edycja wybierz przycisk **makra** . Bieżący zestaw właściwości i makr widoczny dla programu Visual Studio jest wyświetlany wraz z bieżącą wartością dla każdej z nich. Aby uzyskać więcej informacji, zobacz sekcję **Określanie wartości User-Definedowych** w temacie [Informacje o stronie właściwości projektu C++](property-pages-visual-cpp.md).
 
 ![Przycisk makr VC + +](../media/vcppdir_libdir_macros.png "Menu MACROS")
 
@@ -111,10 +112,10 @@ Aby wyświetlić wszystkie aktualnie dostępne makra, w oknie dialogowym **stron
 
 W tej tabeli opisano często używany podzbiór dostępnych makr; w tym miejscu istnieje wiele innych informacji. Przejdź do okna dialogowego **makra** , aby wyświetlić wszystkie właściwości i ich bieżące wartości w projekcie. Aby uzyskać szczegółowe informacje na temat sposobu tworzenia i używania definicji właściwości programu MSBuild jako makr w plikach. props,. targets i. vcxproj, zobacz [Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties).
 
-|Macro|Opis|
+|Makro|Opis|
 |-----------|-----------------|
 |**$ (Konfiguracja)**|Nazwa bieżącej konfiguracji projektu, na przykład "Debugowanie".|
-|**$ (DevEnvDir)**|Katalog instalacyjny programu Visual Studio (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\".|
+|**$ (DevEnvDir)**|Katalog instalacyjny programu Visual Studio (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny " \\ ".|
 |**$ (FrameworkDir)**|Katalog, w którym zainstalowano .NET Framework.|
 |**$ (FrameworkSDKDir)**|Katalog, w którym zainstalowano .NET Framework. .NET Framework można zainstalować jako część programu Visual Studio lub oddzielnie.|
 |**$ (FrameworkVersion)**|Wersja .NET Framework używana przez program Visual Studio. W połączeniu z **$ (FrameworkDir)** pełna ścieżka do wersji .NET Framework używana przez program Visual Studio.|
@@ -123,47 +124,47 @@ W tej tabeli opisano często używany podzbiór dostępnych makr; w tym miejscu 
 |**$ (OutDir)**|Ścieżka do katalogu pliku wyjściowego. Jeśli jest ścieżką względną, pliki wyjściowe przejdą do tej ścieżki dołączenia do katalogu projektu. Ta ścieżka powinna mieć końcowy ukośnik. Jest on rozpoznawany jako wartość właściwości **katalogu wyjściowego** . Nie używaj **$ (IntDir)** do definiowania tej właściwości.|
 |**$ (Platforma)**|Nazwa bieżącej platformy projektu, na przykład "Win32".|
 |**$ (Nazwaskróconaplatformy)**|Krótka nazwa bieżącej architektury, na przykład "x86" lub "x64".|
-|**$ (ProjectDir)**|Katalog projektu (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\".|
+|**$ (ProjectDir)**|Katalog projektu (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny " \\ ".|
 |**$ (ProjectExt)**|Rozszerzenie pliku projektu. Zawiera "." przed rozszerzeniem pliku.|
 |**$ (ProjectFileName)**|Nazwa pliku projektu (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku).|
 |**$ (ProjectName)**|Podstawowa nazwa projektu.|
 |**$ (ProjectPath)**|Nazwa ścieżki bezwzględnej projektu (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku).|
-|**$ (PublishDir)**|Lokalizacja wyjściowa dla elementu docelowego publikowania; zawiera końcowy ukośnik odwrotny "\\". Domyślnie jest to folder **$ (OutDir) App.\\Publish** .|
-|**$ (RemoteMachine)**|Ustaw wartość właściwości **maszyna zdalna** na stronie właściwości debugowania. Aby uzyskać więcej informacji [, zobacz Zmiana ustawieńC++ projektu dla konfiguracji C/Debug](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
+|**$ (PublishDir)**|Lokalizacja wyjściowa dla elementu docelowego publikowania; zawiera końcowy ukośnik odwrotny " \\ ". Domyślnie jest to folder **$ (OutDir) App. \\ Publish** .|
+|**$ (RemoteMachine)**|Ustaw wartość właściwości **maszyna zdalna** na stronie właściwości debugowania. Aby uzyskać więcej informacji [, zobacz Zmiana ustawień projektu dla konfiguracji debugowania C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
 |**$ (RootNameSpace)**|Przestrzeń nazw (jeśli istnieje) zawierająca aplikację.|
-|**$ (SolutionDir)**|Katalog rozwiązania (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\". Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
+|**$ (SolutionDir)**|Katalog rozwiązania (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny " \\ ". Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (SolutionExt)**|Rozszerzenie pliku rozwiązania. Zawiera "." przed rozszerzeniem pliku. Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (SolutionFileName)**|Nazwa pliku rozwiązania (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku). Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (SolutionName)**|Podstawowa nazwa rozwiązania. Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
 |**$ (SolutionPath)**|Nazwa ścieżki bezwzględnej rozwiązania (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku). Zdefiniowane tylko w przypadku kompilowania rozwiązania w środowisku IDE.|
-|**$ (TargetDir)**|Katalog podstawowego pliku wyjściowego dla kompilacji (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\".|
+|**$ (TargetDir)**|Katalog podstawowego pliku wyjściowego dla kompilacji (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny " \\ ".|
 |**$ (TargetExt)**|Rozszerzenie pliku podstawowego pliku wyjściowego dla kompilacji. Zawiera "." przed rozszerzeniem pliku.|
 |**$ (TargetFileName)**|Nazwa pliku podstawowego pliku wyjściowego dla kompilacji (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku).|
 |**$ (TargetName)**|Podstawowa nazwa podstawowego pliku wyjściowego dla kompilacji.|
 |**$ (TargetPath)**|Nazwa ścieżki bezwzględnej podstawowego pliku wyjściowego dla kompilacji (zdefiniowana jako dysk + ścieżka + nazwa podstawowa + rozszerzenie pliku).|
-|**$ (VCInstallDir)**|Katalog zawierający C++ zawartość instalacji programu Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi firmy Microsoft C++ (MSVC), który może być inny niż host Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v140`, **$ (VCInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2015.|
-|**$ (VSInstallDir)**|Katalog, w którym zainstalowano program Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi programu Visual Studio, który może być inny niż host programu Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v110`, **$ (VSInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2012.|
+|**$ (VCInstallDir)**|Katalog zawierający zawartość języka C++ instalacji programu Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi Microsoft C++ (MSVC), który może być inny niż host programu Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v140` , **$ (VCInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2015.|
+|**$ (VSInstallDir)**|Katalog, w którym zainstalowano program Visual Studio. Ta właściwość zawiera wersję zestawu narzędzi programu Visual Studio, który może być inny niż host programu Visual Studio. Na przykład podczas kompilowania z `$(PlatformToolset) = v110` , **$ (VSInstallDir)** zawiera ścieżkę do instalacji programu Visual Studio 2012.|
 |**$ (WebDeployPath)**|Ścieżka względna od elementu głównego wdrożenia sieci Web do lokalizacji, do której należą dane wyjściowe projektu.|
-|**$ (WebDeployRoot)**|Ścieżka bezwzględna do lokalizacji **\<localhost >** . Na przykład c:\inetpub\wwwroot.|
+|**$ (WebDeployRoot)**|Ścieżka bezwzględna do lokalizacji **\<localhost>** . Na przykład c:\inetpub\wwwroot.|
 
 ## <a name="obsolete-macros"></a>Przestarzałe makra
 
-System kompilacji dla programu C++ został znacząco zmieniony między programem visual Studio 2008 i visual Studio 2010. Wiele makr używanych we wcześniejszych typach projektów zostało zmienionych na nowe. Te makra nie są już używane lub zostały zastąpione przez jedną lub więcej wartości równoważnych lub [makr metadanych elementu](/visualstudio/msbuild/itemmetadata-element-msbuild) (_Nazwa_ **%(** **)** ). Makra oznaczone jako "zmigrowane" można aktualizować za pomocą narzędzia migracji projektu. Jeśli projekt zawierający makro jest migrowany z programu Visual Studio 2008 lub starszego do programu Visual Studio 2010, program Visual Studio konwertuje makro na równoważne bieżące makro. Nowsze wersje programu Visual Studio nie mogą konwertować projektów z programu Visual Studio 2008 i wcześniej do nowego typu projektu. Należy przekonwertować te projekty w dwóch krokach; najpierw przekonwertuj je na program Visual Studio 2010, a następnie Przekształć wynik na nowszą wersję programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Omówienie potencjalnych problemów z uaktualnianiem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
+System kompilacji dla języka C++ został znacząco zmieniony między programem Visual Studio 2008 i Visual Studio 2010. Wiele makr używanych we wcześniejszych typach projektów zostało zmienionych na nowe. Te makra nie są już używane lub zostały zastąpione przez jedną lub więcej wartości równoważnych lub [makr metadanych elementu](/visualstudio/msbuild/itemmetadata-element-msbuild) (_Nazwa_**%(****)**). Makra oznaczone jako "zmigrowane" można aktualizować za pomocą narzędzia migracji projektu. Jeśli projekt zawierający makro jest migrowany z programu Visual Studio 2008 lub starszego do programu Visual Studio 2010, program Visual Studio konwertuje makro na równoważne bieżące makro. Nowsze wersje programu Visual Studio nie mogą konwertować projektów z programu Visual Studio 2008 i wcześniej do nowego typu projektu. Należy przekonwertować te projekty w dwóch krokach; najpierw przekonwertuj je na program Visual Studio 2010, a następnie Przekształć wynik na nowszą wersję programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Omówienie potencjalnych problemów z uaktualnianiem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
 
-|Macro|Opis|
+|Makro|Opis|
 |-----------|-----------------|
-|**$ (InputDir)**|(Migrowane). Katalog pliku wejściowego (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny "\\". Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectDir)** .|
-|**$ (InputExt)**|(Migrowane). Rozszerzenie pliku wejściowego. Zawiera "." przed rozszerzeniem pliku. Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectExt)** . W przypadku plików źródłowych jest to **% (rozszerzenie)** .|
-|**$ (InputFileName)**|(Migrowane). Nazwa pliku wejściowego (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku). Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectFileName)** . W przypadku plików źródłowych jest to **% (tożsamość)** .|
-|**$ (InputName)**|(Migrowane). Podstawowa nazwa pliku wejściowego. Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectName)** . W przypadku plików źródłowych jest to **% (filename)** .|
-|**$ (InputPath)**|(Migrowane). Nazwa ścieżki bezwzględnej pliku wejściowego (zdefiniowanego jako Drive + Path + nazwa podstawowa + rozszerzenie pliku). Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectPath)** . W przypadku plików źródłowych jest to **% (FullPath)** .|
+|**$ (InputDir)**|(Migrowane). Katalog pliku wejściowego (zdefiniowany jako Drive + Path); zawiera końcowy ukośnik odwrotny " \\ ". Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectDir)**.|
+|**$ (InputExt)**|(Migrowane). Rozszerzenie pliku wejściowego. Zawiera "." przed rozszerzeniem pliku. Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectExt)**. W przypadku plików źródłowych jest to **% (rozszerzenie)**.|
+|**$ (InputFileName)**|(Migrowane). Nazwa pliku wejściowego (zdefiniowana jako nazwa podstawowa + rozszerzenie pliku). Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectFileName)**. W przypadku plików źródłowych jest to **% (tożsamość)**.|
+|**$ (InputName)**|(Migrowane). Podstawowa nazwa pliku wejściowego. Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectName)**. W przypadku plików źródłowych jest to **% (filename)**.|
+|**$ (InputPath)**|(Migrowane). Nazwa ścieżki bezwzględnej pliku wejściowego (zdefiniowanego jako Drive + Path + nazwa podstawowa + rozszerzenie pliku). Jeśli projekt jest danymi wejściowymi, to makro jest równoważne z **$ (ProjectPath)**. W przypadku plików źródłowych jest to **% (FullPath)**.|
 |**$ (Parentname)**|Nazwa elementu zawierającego ten element projektu. Będzie to nazwa folderu nadrzędnego lub nazwa projektu.|
 |**$ (SafeInputName)**|Nazwa pliku jako prawidłowej nazwy klasy, pomniejszonej o rozszerzenie pliku. Ta właściwość nie ma dokładnego odpowiednika.|
 |**$ (SafeParentName)**|Nazwa bezpośredniego elementu nadrzędnego w prawidłowym formacie nazwy. Na przykład formularz jest elementem nadrzędnym pliku resx. Ta właściwość nie ma dokładnego odpowiednika.|
-|**$ (SafeRootNamespace)**|Nazwa przestrzeni nazw, w której Kreatorzy projektu dodają kod. Ta nazwa przestrzeni nazw będzie zawierać tylko znaki, które byłyby dozwolone w C++ prawidłowym identyfikatorze. Ta właściwość nie ma dokładnego odpowiednika.|
+|**$ (SafeRootNamespace)**|Nazwa przestrzeni nazw, w której Kreatorzy projektu dodają kod. Ta nazwa przestrzeni nazw będzie zawierać tylko znaki, które byłyby dozwolone w prawidłowym identyfikatorze C++. Ta właściwość nie ma dokładnego odpowiednika.|
 
 ## <a name="see-also"></a>Zobacz też
 
-[Projekty programu Visual Studio C++ —](../creating-and-managing-visual-cpp-projects.md)\
-[Wizualne C++ przenoszenie i uaktualnianie](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
-[Omówienie potencjalnych problemów z uaktualnianiem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)
+[Projekty programu Visual Studio — C++](../creating-and-managing-visual-cpp-projects.md)\
+[Visual C++ przenoszenie i uaktualnianie przewodnika](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Omówienie potencjalnych problemów z uaktualnieniem](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

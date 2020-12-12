@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: mbrtoc16, mbrtoc32'
 title: mbrtoc16, mbrtoc323
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4132be867186567b31c9e297e6acb4ada68a66ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234071"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178618"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -82,8 +83,8 @@ Po powodzeniu zwraca wartość pierwszego z tych warunków, które mają zastoso
 |Wartość|Warunek|
 |-----------|---------------|
 |0|Kolejne *max_bytes* lub mniej znaków przekonwertowane ze *źródła* odpowiadają znakom dwubajtowym null, czyli wartością przechowywaną, jeśli *miejsce docelowe* nie ma wartości null.<br /><br /> *stan* zawiera początkowy stan przesunięcia.|
-|Od 1 do *max_bytes*włącznie|Zwracana wartość to liczba bajtów *źródła* , które ukończyły prawidłowy znak wielobajtowy. Przekonwertowany znak dwubajtowy jest przechowywany, jeśli *miejsce docelowe* nie ma wartości null.|
-|-3|Następny znak dwubajtowy wynikający z poprzedniego wywołania funkcji został zapisany w *miejscu docelowym* , jeśli *miejsce docelowe* nie ma wartości null. Żadne bajty ze *źródła* nie są używane przez to wywołanie funkcji.<br /><br /> Gdy *Źródło* wskazuje znak wielobajtowy UTF-8, który wymaga więcej niż jeden dwubajtowy znak do reprezentowania (na przykład para zastępcza), wartość *stanu* jest aktualizowana, tak aby następne wywołanie funkcji zapisywał dodatkowy znak.|
+|Od 1 do *max_bytes* włącznie|Zwracana wartość to liczba bajtów *źródła* , które ukończyły prawidłowy znak wielobajtowy. Przekonwertowany znak dwubajtowy jest przechowywany, jeśli *miejsce docelowe* nie ma wartości null.|
+|–3|Następny znak dwubajtowy wynikający z poprzedniego wywołania funkcji został zapisany w *miejscu docelowym* , jeśli *miejsce docelowe* nie ma wartości null. Żadne bajty ze *źródła* nie są używane przez to wywołanie funkcji.<br /><br /> Gdy  *Źródło* wskazuje znak wielobajtowy UTF-8, który wymaga więcej niż jeden dwubajtowy znak do reprezentowania (na przykład para zastępcza), wartość *stanu* jest aktualizowana, tak aby następne wywołanie funkcji zapisywał dodatkowy znak.|
 |-2|Kolejne *max_bytes* bajty reprezentują niekompletny, ale może być prawidłowym znakiem wielobajtowym UTF-8. Żadna wartość nie jest przechowywana w *miejscu docelowym*. Ten wynik może wystąpić, jeśli *max_bytes* wynosi zero.|
 |-1|Wystąpił błąd kodowania. Następny *max_bytes* lub mniej bajtów nie przyczynia się do pełnego i prawidłowego znaku wielobajtowego UTF-8. Żadna wartość nie jest przechowywana w *miejscu docelowym*.<br /><br /> **EILSEQ** jest przechowywany w **errno** i nie *określono wartości stanu* konwersji.|
 
@@ -91,7 +92,7 @@ Po powodzeniu zwraca wartość pierwszego z tych warunków, które mają zastoso
 
 Funkcja **mbrtoc16** odczytuje do *max_bytes* bajty ze *źródła* , aby znaleźć pierwszy kompletny, prawidłowy znak wielobajtowy UTF-8, a następnie przechowuje odpowiedni znak UTF-16 w *miejscu docelowym*. Jeśli znak wymaga więcej niż jednego znaku wyjściowego UTF-16, takiego jak para zastępcza, wartość *stanu* jest ustawiona na przechowywanie następnego znaku UTF-16 w *miejscu docelowym* przy następnym wywołaniu **mbrtoc16**. Funkcja **mbrtoc32** jest taka sama, ale dane wyjściowe są przechowywane jako znaki UTF-32.
 
-Jeśli *Źródło* ma wartość null, te funkcje zwracają odpowiednik wywołania wykonanego przy użyciu argumentów o **wartości null** dla *miejsca docelowego* `""` (pusty ciąg zakończony wartością null) dla *źródła*i 1 dla *max_bytes*. Przekazanie wartości *docelowej* i *max_bytes* są ignorowane.
+Jeśli *Źródło* ma wartość null, te funkcje zwracają odpowiednik wywołania wykonanego przy użyciu argumentów o **wartości null** dla *miejsca docelowego* `""` (pusty ciąg zakończony wartością null) dla *źródła* i 1 dla *max_bytes*. Przekazanie wartości *docelowej* i *max_bytes* są ignorowane.
 
 Jeśli *Źródło* nie ma wartości null, funkcja rozpoczyna się na początku ciągu i sprawdza, czy *max_bytes* bajtów, aby określić liczbę bajtów potrzebnych do ukończenia następnego znaku wielobajtowego UTF-8, w tym wszystkie sekwencje przesunięcia. Jeśli badane bajty zawierają prawidłowy i kompletny znak wielobajtowy UTF-8, funkcja konwertuje znak na równoważny 16-bitowy lub 32-bitowy znak lub znaki. Jeśli *miejsce docelowe* nie ma wartości null, funkcja przechowuje pierwszy (i możliwy tylko) znak wyniku w miejscu docelowym. Jeśli wymagane są dodatkowe znaki wyjściowe, wartość jest ustawiona w *stanie*, więc kolejne wywołania funkcji wyprowadzają znaki dodatkowe i zwracają wartość-3. Jeśli nie są wymagane żadne znaki wyjściowe, *stan* jest ustawiany na początkowy stan przesunięcia.
 
@@ -107,7 +108,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../data-conversion.md)\
 [Ustawienie](../locale.md)\

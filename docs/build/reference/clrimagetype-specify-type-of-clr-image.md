@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/CLRIMAGETYPE (Określ typ obrazu CLR)
 title: /CLRIMAGETYPE (Określenie typu obrazu CLR)
 ms.date: 05/16/2019
 f1_keywords:
@@ -8,46 +9,46 @@ helpviewer_keywords:
 - /CLRIMAGETYPE linker option
 - -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
-ms.openlocfilehash: ee2e2ce359a4b877551adf9af71e0187b42cfd42
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 7c499eeddcacd674a9dfc2134e059fd8b3b9a6b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179151"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE (Określenie typu obrazu CLR)
 
-Ustaw typ obrazu CLR w obraz połączony.
+Ustaw typ obrazu CLR w połączonym obrazie.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ CLRIMAGETYPE:**{**IJW**|**CZYSTEJ**|**BEZPIECZNE**|**SAFE32BITPREFERRED**}
+> **/CLRIMAGETYPE:**{ | **SAFE32BITPREFERRED Pure** | **bezpieczne** | 
 
 ## <a name="remarks"></a>Uwagi
 
-Program łączący akceptuje obiekty rodzime i również instrukcje obiektów MSIL, które są kompilowane przy użyciu [/CLR](clr-common-language-runtime-compilation.md). **/CLR: pure** i **/CLR: Safe** opcje kompilatora zostały zaniechane w programie Visual Studio 2015 i są nieobsługiwane w programie Visual Studio 2017 i nowsze. Jeśli przekazano mieszane obiekty w samej kompilacji, możliwość weryfikacji wynikowej pliku wyjściowego jest domyślnie równa najniższego poziomu możliwość weryfikacji modułów wejściowych. Na przykład, jeśli przekażesz obraz macierzysty i obraz w trybie mieszanym (skompilowany przy użyciu **/CLR**), obraz wynikowy będzie obrazem w trybie mieszanym.
+Konsolidator akceptuje obiekty natywne, a także obiekty MSIL, które są kompilowane przy użyciu [/CLR](clr-common-language-runtime-compilation.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego zostały zaniechane w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017 lub nowszym. Po przekazaniu mieszanych obiektów w tej samej kompilacji, zweryfikowanie wynikowego pliku wyjściowego jest domyślnie równe najniższyemu poziomowi weryfikacji modułów wejściowych. Na przykład w przypadku przekazania obrazu natywnego i obrazu w trybie mieszanym (skompilowane przy użyciu **/CLR**) obraz wyników będzie obrazem trybu mieszanego.
 
-Możesz użyć **/clrimagetype** do określenia niższego poziomu możliwość weryfikacji, jeśli jest to, czego potrzebujesz.
+Możesz użyć **/CLRIMAGETYPE** , aby określić niższy poziom weryfikacji, jeśli jest to potrzebne.
 
-Aby uzyskać informacji dotyczących sposobu ustalenia typu obrazu CLR pliku, zobacz [/CLRHEADER](clrheader.md).
+Aby uzyskać informacje na temat sposobu określania typu obrazu CLR dla pliku, zobacz [/CLRHEADER](clrheader.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** .
 
-1. Rozwiń **konsolidatora** węzła.
+1. Rozwiń węzeł **konsolidatora** .
 
-1. Wybierz **zaawansowane** stronę właściwości.
+1. Wybierz stronę właściwości **Zaawansowane** .
 
-1. Modyfikowanie **typu obrazu CLR** właściwości.
+1. Zmodyfikuj właściwość **Typ obrazu CLR** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRImageType%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRImageType%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
-- [Opcje konsolidatora MSVC](linker-options.md)
+- [MSVC Opcje konsolidatora](linker-options.md)
