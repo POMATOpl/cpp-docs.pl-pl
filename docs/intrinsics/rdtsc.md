@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __rdtsc'
 title: __rdtsc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 930c8fbd0ae762c8674a85e379899bc4fe4d3394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257514"
 ---
 # <a name="__rdtsc"></a>__rdtsc
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-`rdtsc` Generuje instrukcję zwracającą sygnaturę czasową procesora. Sygnatura czasowa procesora rejestruje liczbę cykli zegara od momentu ostatniego resetowania.
+Generuje `rdtsc` instrukcję zwracającą sygnaturę czasową procesora. Sygnatura czasowa procesora rejestruje liczbę cykli zegara od momentu ostatniego resetowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,7 +38,7 @@ unsigned __int64 __rdtsc();
 |---------------|------------------|
 |`__rdtsc`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -69,6 +70,6 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

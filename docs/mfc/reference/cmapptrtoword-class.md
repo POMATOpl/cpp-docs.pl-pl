@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMapPtrToWord'
 title: Klasa CMapPtrToWord
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1b9742b6693c07b27c22a77b8c45d5b20500bb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259490"
 ---
 # <a name="cmapptrtoword-class"></a>Klasa CMapPtrToWord
 
@@ -93,7 +94,7 @@ na przykład tłumaczy na
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapWordToPtr`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
+`CMapWordToPtr` obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
 Mapy wskaźników do słów nie mogą być serializowane.
 
@@ -111,7 +112,7 @@ Aby uzyskać więcej informacji na temat `CMapPtrToWord` , zobacz [kolekcje](../
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: grafika (C++ AMP)'
 title: Grafika (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 79e908ac673fb8fcc5ac370d6900697b3274585c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254550"
 ---
 # <a name="graphics-c-amp"></a>Grafika (C++ AMP)
 
@@ -21,7 +22,7 @@ C++ AMP zawiera kilka interfejsów API w przestrzeni nazw [concurrency:: Graphic
 
 ## <a name="the-norm-and-unorm-types"></a>Typy norm i unorm
 
-`norm`Typy i `unorm` są typami skalarnymi, które ograniczają zakres **`float`** wartości; jest to nazywane *clamping* ogranicznikiem. Te typy mogą być jawnie skonstruowane z innych typów skalarnych. W przypadku rzutowania wartość jest najpierw rzutowana na **`float`** , a następnie zamocowana do odpowiedniego regionu, który jest dozwolony przez normę [-1,0, 1,0] lub unorm [0,0, 1,0]. Rzutowanie z +/-nieskończone zwraca +/-1. Rzutowanie z NaN jest niezdefiniowane. Norma może być niejawnie skonstruowana z unorm, a dane nie są tracone. Operator niejawnej konwersji na wartość zmiennoprzecinkową jest zdefiniowany dla tych typów. Operatory binarne są zdefiniowane między tymi typami i innymi wbudowanymi typami skalarnymi, takimi jak **`float`** i **`int`** : +,-, \* ,/, = =,! =, >, \<, > =, <=. Operatory przypisania złożonego są również obsługiwane: + =,-=, \* =,/=. Jednoargumentowy operator negacji (-) jest zdefiniowany dla typów norm.
+`norm`Typy i `unorm` są typami skalarnymi, które ograniczają zakres **`float`** wartości; jest to nazywane ogranicznikiem. Te typy mogą być jawnie skonstruowane z innych typów skalarnych. W przypadku rzutowania wartość jest najpierw rzutowana na **`float`** , a następnie zamocowana do odpowiedniego regionu, który jest dozwolony przez normę [-1,0, 1,0] lub unorm [0,0, 1,0]. Rzutowanie z +/-nieskończone zwraca +/-1. Rzutowanie z NaN jest niezdefiniowane. Norma może być niejawnie skonstruowana z unorm, a dane nie są tracone. Operator niejawnej konwersji na wartość zmiennoprzecinkową jest zdefiniowany dla tych typów. Operatory binarne są zdefiniowane między tymi typami i innymi wbudowanymi typami skalarnymi, takimi jak **`float`** i **`int`** : +,-, \* ,/, = =,! =, >, \<, > =, <=. Operatory przypisania złożonego są również obsługiwane: + =,-=, \* =,/=. Jednoargumentowy operator negacji (-) jest zdefiniowany dla typów norm.
 
 ## <a name="short-vector-library"></a>Krótka Biblioteka wektorów
 
@@ -57,13 +58,13 @@ Operacja jest wykonywana w składniku między każdym składnikiem krótkiej wek
 
 ### <a name="swizzling-expressions"></a>Wyrażenia przemieniane
 
-Krótka Biblioteka wektorów obsługuje `vector_type.identifier` konstrukcję akcesora, aby uzyskać dostęp do składników krótkiego wektora. `identifier`Element, który jest znany jako *wyrażenie przemieniane* , określa składniki wektora. Wyrażenie może być l-wartością lub r-wartością. Poszczególne znaki w identyfikatorze mogą być: x, y, z i w; lub r, g, b i. "x" i "r" oznaczają składnik zero, "y" i "g" oznaczają pierwszy składnik itd. (Zauważ, że w tym samym identyfikatorze nie można używać "x" i "r"). W związku z tym "RGBA" i "xyzw" zwracają ten sam wynik. Metody dostępu jednoskładnikowego, takie jak "x" i "y", są typami wartości skalarnych. Metody dostępu wieloskładnikowego to krótkie typy wektorów. Na przykład jeśli utworzysz `int_4` wektor o nazwie `fourInts` i zawiera wartości 2, 4, 6 i 8, `fourInts.y` Funkcja zwraca liczbę całkowitą 4 i `fourInts.rg` zwraca `int_2` obiekt, który ma wartości 2 i 4.
+Krótka Biblioteka wektorów obsługuje `vector_type.identifier` konstrukcję akcesora, aby uzyskać dostęp do składników krótkiego wektora. `identifier`Element, który jest znany jako *wyrażenie przemieniane*, określa składniki wektora. Wyrażenie może być l-wartością lub r-wartością. Poszczególne znaki w identyfikatorze mogą być: x, y, z i w; lub r, g, b i. "x" i "r" oznaczają składnik zero, "y" i "g" oznaczają pierwszy składnik itd. (Zauważ, że w tym samym identyfikatorze nie można używać "x" i "r"). W związku z tym "RGBA" i "xyzw" zwracają ten sam wynik. Metody dostępu jednoskładnikowego, takie jak "x" i "y", są typami wartości skalarnych. Metody dostępu wieloskładnikowego to krótkie typy wektorów. Na przykład jeśli utworzysz `int_4` wektor o nazwie `fourInts` i zawiera wartości 2, 4, 6 i 8, `fourInts.y` Funkcja zwraca liczbę całkowitą 4 i `fourInts.rg` zwraca `int_2` obiekt, który ma wartości 2 i 4.
 
 ## <a name="texture-classes"></a>Klasy tekstury
 
 Wiele procesorów GPU ma sprzęt i pamięć podręczną zoptymalizowane pod kątem pobierania pikseli i tekseli oraz do renderowania obrazów i tekstur. Klasa [tekstury \<T,N> ](../../parallel/amp/reference/texture-class.md) , która jest klasą kontenera dla obiektów Texel, udostępnia funkcje tekstury tych procesorów GPU. Texel może:
 
-- **`int`** ,,,, `uint` **`float`** **`double`** `norm` Lub `unorm` skalarne.
+- **`int`**,,,, `uint` **`float`** **`double`** `norm` Lub `unorm` skalarne.
 
 - Krótki wektor, który ma dwa lub cztery składniki. Jedynym wyjątkiem jest `double_4` , co jest niedozwolone.
 

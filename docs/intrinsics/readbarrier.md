@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ReadBarrier'
 title: _ReadBarrier
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - _ReadBarrier intrinsic
 ms.assetid: f9e54a92-61bc-4f55-8195-b8932065a796
-ms.openlocfilehash: 8bbcecf95daeef6ea2d40877d37e0eb6b7f3a0e8
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 94ade7c8f602cf279ac75a5f0a56387c344d0fb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257498"
 ---
 # <a name="_readbarrier"></a>_ReadBarrier
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Ogranicza optymalizacje kompilatora, które mogą zmienić kolejność operacji dostępu do pamięci w punkcie wywołania.
 
 > [!CAUTION]
-> Elementy wewnętrzne `_WriteBarrier`,ii `_ReadWriteBarrier` makrosąprzestarzałeiniepowinnybyćużywane.`MemoryBarrier` `_ReadBarrier` W przypadku komunikacji między wątkami należy używać mechanizmów takich jak [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) i [std::\<Atom T >](../standard-library/atomic.md) , które są zdefiniowane w [ C++ standardowej bibliotece](../standard-library/cpp-standard-library-reference.md). Aby uzyskać dostęp do sprzętu, użyj opcji kompilatora [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) wraz ze słowem kluczowym [volatile](../cpp/volatile-cpp.md) .
+> Elementy `_ReadBarrier` `_WriteBarrier` wewnętrzne, i i `_ReadWriteBarrier` `MemoryBarrier` makro są przestarzałe i nie powinny być używane. W przypadku komunikacji między wątkami należy używać takich mechanizmów jak [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) i [std: \<T> :](../standard-library/atomic.md) informowanie, które są zdefiniowane w [standardowej bibliotece języka C++](../standard-library/cpp-standard-library-reference.md). Aby uzyskać dostęp do sprzętu, użyj opcji kompilatora [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) wraz ze słowem kluczowym [volatile](../cpp/volatile-cpp.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,15 +35,15 @@ void _ReadBarrier(void);
 |---------------|------------------|
 |`_ReadBarrier`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-`_ReadBarrier` Wewnętrzna ogranicza optymalizacje kompilatora, które mogą usuwać lub zmienić kolejność operacji dostępu do pamięci w punkcie wywołania.
+`_ReadBarrier`Wewnętrzna ogranicza optymalizacje kompilatora, które mogą usuwać lub zmienić kolejność operacji dostępu do pamięci w punkcie wywołania.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

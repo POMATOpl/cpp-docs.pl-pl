@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy accelerator_view_removed
 title: accelerator_view_removed — klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: 9a3f6f349fc3103893639fe209dcf23a07ffec56
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 86a5b89d3b8065bccd8eec8b10bade9ed26d6a05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254498"
 ---
 # <a name="accelerator_view_removed-class"></a>accelerator_view_removed — klasa
 
@@ -26,19 +27,19 @@ Wyjątek, który jest generowany, gdy bazowe wywołanie programu DirectX nie pow
 class accelerator_view_removed : public runtime_exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor accelerator_view_removed](#ctor)|Inicjuje nowe wystąpienie klasy `accelerator_view_removed`.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[get_view_removed_reason](#get_view_removed_reason)|Zwraca kod błędu HRESULT wskazujący przyczynę usunięcia obiektu `accelerator_view`.|
+|[get_view_removed_reason](#get_view_removed_reason)|Zwraca kod błędu HRESULT wskazujący przyczynę `accelerator_view` usunięcia obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -54,7 +55,7 @@ class accelerator_view_removed : public runtime_exception;
 
 **Przestrzeń nazw:** Współbieżności
 
-## <a name="ctor"></a>accelerator_view_removed
+## <a name="accelerator_view_removed"></a><a name="ctor"></a> accelerator_view_removed
 
 Inicjuje nowe wystąpienie klasy [accelerator_view_removed](accelerator-view-removed-class.md) .
 
@@ -71,19 +72,19 @@ explicit accelerator_view_removed(
 
 ### <a name="parameters"></a>Parametry
 
-*komunikat*<br/>
+*Komunikat*<br/>
 Opis błędu.
 
 *view_removed_reason*<br/>
-Kod błędu HRESULT wskazujący przyczynę usunięcia obiektu `accelerator_view`.
+Kod błędu HRESULT wskazujący przyczynę usunięcia `accelerator_view` obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Nowe wystąpienie klasy `accelerator_view_removed`.
+Nowe wystąpienie `accelerator_view_removed` klasy.
 
-## <a name="get_view_removed_reason"></a>get_view_removed_reason
+## <a name="get_view_removed_reason"></a><a name="get_view_removed_reason"></a> get_view_removed_reason
 
-Zwraca kod błędu HRESULT wskazujący przyczynę usunięcia obiektu `accelerator_view`.
+Zwraca kod błędu HRESULT wskazujący przyczynę `accelerator_view` usunięcia obiektu.
 
 ### <a name="syntax"></a>Składnia
 

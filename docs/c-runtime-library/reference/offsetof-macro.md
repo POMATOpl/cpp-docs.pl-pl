@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: makro makro OffsetOf'
 title: makro OffsetOf — makro
 ms.date: 11/04/2016
 api_location:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 055bda67bae178143561acd91b517c431f77cac0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256272"
 ---
 # <a name="offsetof-macro"></a>makro OffsetOf — makro
 
@@ -73,6 +74,6 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>

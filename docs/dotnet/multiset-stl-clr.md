@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: zestaw wielokrotny (STL/CLR)'
 title: multiset (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -97,12 +98,12 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-ms.openlocfilehash: a6bb7a262df21a835f1e870f2bce29480467c543
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1b2300fe7b856e989dd470f47da559496374961b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255655"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -759,7 +760,7 @@ Wartość klucza do wymazania.
 *ostatniego*<br/>
 Koniec zakresu do wymazania.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
@@ -768,7 +769,7 @@ Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany p
 
 Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [ `first` , `last` ) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()` Jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
-Trzecia funkcja członkowska usuwa każdy element kontrolowanej sekwencji, którego klucz ma równoważne porządkowanie do *klucza*i zwraca liczbę usuniętych elementów. Służy do usuwania i zliczania wszystkich elementów, które pasują do określonego klucza.
+Trzecia funkcja członkowska usuwa każdy element kontrolowanej sekwencji, którego klucz ma równoważne porządkowanie do *klucza* i zwraca liczbę usuniętych elementów. Służy do usuwania i zliczania wszystkich elementów, które pasują do określonego klucza.
 
 Każdy element wymazuje czas proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji.
 
@@ -1134,16 +1135,16 @@ Wyliczenie do wstawienia.
 *użyte*<br/>
 Wartość klucza do wstawienia.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Gdzie w kontenerze do wstawienia (tylko Wskazówka).
 
 ### <a name="remarks"></a>Uwagi
 
 Każda funkcja członkowska wstawia sekwencję określoną przez pozostałe operandy.
 
-Pierwsza funkcja członkowska wstawia element z wartością *Val*i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu.
+Pierwsza funkcja członkowska wstawia element z wartością *Val* i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu.
 
-Druga funkcja członkowska wstawia element z wartością *Val*przy użyciu instrukcji *WHERE* jako wskazówkę (w celu zwiększenia wydajności) i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu, który może być przyległy do elementu, który znasz.
+Druga funkcja członkowska wstawia element z wartością *Val* przy użyciu instrukcji *WHERE* jako wskazówkę (w celu zwiększenia wydajności) i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu, który może być przyległy do elementu, który znasz.
 
 Trzecia funkcja członkowska wstawia sekwencję [ `first` , `last` ). Służy do wstawiania elementów, które zostały skopiowane z innej sekwencji.
 
@@ -1392,7 +1393,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *klucza*parametru szablonu.
+Typ jest synonimem dla *klucza* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1581,13 +1582,13 @@ Konstruktor:
 
 `multiset(multiset<Key>% right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [ `right.begin()` , `right.end()` ) z domyślnym predykatem kolejności. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt zestawu*wielokrotnego z zastosowaniem domyślnego predykatu kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right.begin()` , `right.end()` ) z domyślnym predykatem kolejności. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt zestawu* wielokrotnego z zastosowaniem domyślnego predykatu kolejności.
 
 Konstruktor:
 
 `multiset(multiset<Key>^ right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [ `right->begin()` , `right->end()` ) z domyślnym predykatem kolejności. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt zestawu*wielokrotnego z zastosowaniem domyślnego predykatu kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right->begin()` , `right->end()` ) z domyślnym predykatem kolejności. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt zestawu* wielokrotnego z zastosowaniem domyślnego predykatu kolejności.
 
 Konstruktor:
 
@@ -1605,13 +1606,13 @@ Konstruktor:
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*przy użyciu domyślnego predykatu porządkowania. Jest on używany do kontrolowania kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z domyślnym predykatem kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie* przy użyciu domyślnego predykatu porządkowania. Jest on używany do kontrolowania kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z domyślnym predykatem kolejności.
 
 Konstruktor:
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*z predykatem porządkowania *pred*. Jest on używany do kontrolowania kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie* z predykatem porządkowania *pred*. Jest on używany do kontrolowania kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem kolejności.
 
 ### <a name="example"></a>Przykład
 

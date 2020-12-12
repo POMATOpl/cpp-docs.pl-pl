@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _getcwd_dbg, _wgetcwd_dbg'
 title: _getcwd_dbg, _wgetcwd_dbg
 ms.date: 11/04/2016
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-ms.openlocfilehash: 982a7c94ef3cbe5adf1e8e8a8a4c28443d8a5b8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e470402cc258bf0fa0512136229eeace5bac466e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256604"
 ---
 # <a name="_getcwd_dbg-_wgetcwd_dbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -108,8 +109,8 @@ Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast t
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
-[Wersja debugowania funkcji alokacji stosu](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
+[Wersje debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

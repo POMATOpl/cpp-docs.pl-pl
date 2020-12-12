@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: IsLower, iswlower, _islower_l, _iswlower_l'
 title: islower, iswlower, _islower_l, _iswlower_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-ms.openlocfilehash: 4add576b9abe2bedda227d76cf3fc57890cfcbc1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cf4b127e46a18308da9e51880b7c10b2e2f4aa06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256448"
 ---
 # <a name="islower-iswlower-_islower_l-_iswlower_l"></a>islower, iswlower, _islower_l, _iswlower_l
 
@@ -88,7 +89,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją małych liter. Funkcja **IsLower** zwraca wartość różną od zera, jeśli *c* jest znakiem małej litery (a – z). **iswlower** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odnosi się do małej litery, lub jeśli *c* jest jednym z zestawów znaków dwubajtowych zdefiniowanych w implementacji, dla których żadna z **iswcntrl**, **iswdigit**, **iswpunct**lub **iswspace** nie jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją małych liter. Funkcja **IsLower** zwraca wartość różną od zera, jeśli *c* jest znakiem małej litery (a – z). **iswlower** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odnosi się do małej litery, lub jeśli *c* jest jednym z zestawów znaków dwubajtowych zdefiniowanych w implementacji, dla których żadna z **iswcntrl**, **iswdigit**, **iswpunct** lub **iswspace** nie jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
 Wersje tych funkcji, które mają sufiks **_l** używają ustawień regionalnych, które zostały przesłane zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -109,10 +110,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**IsLower**|\<CType. h>|
-|**iswlower**|\<CType. h> lub \<WCHAR. h>|
-|**_islower_l**|\<CType. h>|
-|**_swlower_l**|\<CType. h> lub \<WCHAR. h>|
+|**IsLower**|\<ctype.h>|
+|**iswlower**|\<ctype.h> lub \<wchar.h>|
+|**_islower_l**|\<ctype.h>|
+|**_swlower_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -120,4 +121,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

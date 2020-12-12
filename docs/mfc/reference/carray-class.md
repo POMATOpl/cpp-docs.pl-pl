@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CArray'
 title: Klasa CArray
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: f73666f3a20488d14a82b7c56d682f3f5b2386df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2aea88178347fd146720a8205974049e4baf039f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259646"
 ---
 # <a name="carray-class"></a>Klasa CArray
 
@@ -102,7 +103,7 @@ Parametr szablonu, który określa typ argumentu, który jest używany do uzyski
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[&#91;&#93;operatora](#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
+|[&#91;&#93;operatora ](#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -134,7 +135,7 @@ Więcej informacji o sposobach korzystania z programu `CArray` znajduje się w s
 
 **Nagłówek:** afxtempl. h
 
-## <a name="carrayadd"></a><a name="add"></a>CArray:: Add
+## <a name="carrayadd"></a><a name="add"></a> CArray:: Add
 
 Dodaje nowy element na końcu tablicy, zwiększając tablicę o 1.
 
@@ -162,7 +163,7 @@ Jeśli wartość [SetSize](#setsize) została użyta z `nGrowBy` wartością wi�
 
 [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]
 
-## <a name="carrayappend"></a><a name="append"></a>CArray:: Append
+## <a name="carrayappend"></a><a name="append"></a> CArray:: Append
 
 Wywołaj tę funkcję elementu członkowskiego, aby dodać zawartość jednej tablicy do końca innej.
 
@@ -189,7 +190,7 @@ W razie potrzeby `Append` może przydzielić dodatkową pamięć, aby pomieści�
 
 [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]
 
-## <a name="carraycarray"></a><a name="carray"></a>CArray::CArray
+## <a name="carraycarray"></a><a name="carray"></a> CArray::CArray
 
 Konstruuje pustą tablicę.
 
@@ -205,7 +206,7 @@ Tablica powiększa jeden element jednocześnie.
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
-## <a name="carraycopy"></a><a name="copy"></a>CArray:: Copy
+## <a name="carraycopy"></a><a name="copy"></a> CArray:: Copy
 
 Użyj tej funkcji elementu członkowskiego, aby skopiować elementy jednej tablicy do innej.
 
@@ -222,13 +223,13 @@ void Copy(const CArray& src);
 
 Wywołaj tę funkcję elementu członkowskiego, aby zastąpić elementy jednej tablicy elementami innej tablicy.
 
-`Copy`nie Zwolnij pamięci; Jednak w razie potrzeby `Copy` może przydzielić dodatkową pamięć, aby pomieścić elementy skopiowane do tablicy.
+`Copy` nie Zwolnij pamięci; Jednak w razie potrzeby `Copy` może przydzielić dodatkową pamięć, aby pomieścić elementy skopiowane do tablicy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]
 
-## <a name="carrayelementat"></a><a name="elementat"></a>CArray::ElementAt
+## <a name="carrayelementat"></a><a name="elementat"></a> CArray::ElementAt
 
 Zwraca tymczasowe odwołanie do określonego elementu w tablicy.
 
@@ -254,7 +255,7 @@ Służy do implementacji operatora przypisania lewej strony dla tablic.
 
   Zobacz przykład dla elementu [GetSize](#getsize).
 
-## <a name="carrayfreeextra"></a><a name="freeextra"></a>CArray::FreeExtra
+## <a name="carrayfreeextra"></a><a name="freeextra"></a> CArray::FreeExtra
 
 Zwalnia wszelkie dodatkowe pamięci, które zostały przydzieloną podczas uprawy tablicy.
 
@@ -270,7 +271,7 @@ Ta funkcja nie ma wpływu na rozmiar ani górną granicę tablicy.
 
   Zobacz przykład dla elementu [GetData](#getdata).
 
-## <a name="carraygetat"></a><a name="getat"></a>CArray::GetAt
+## <a name="carraygetat"></a><a name="getat"></a> CArray::GetAt
 
 Zwraca element array o określonym indeksie.
 
@@ -299,7 +300,7 @@ Przekazanie wartości ujemnej lub wartości większej niż wartość zwrócona p
 
 [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]
 
-## <a name="carraygetcount"></a><a name="getcount"></a>CArray:: GetCount
+## <a name="carraygetcount"></a><a name="getcount"></a> CArray:: GetCount
 
 Zwraca liczbę elementów tablicy.
 
@@ -319,7 +320,7 @@ Wywołaj tę metodę, aby pobrać liczbę elementów w tablicy. Ponieważ indeks
 
 [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]
 
-## <a name="carraygetdata"></a><a name="getdata"></a>CArray:: GetData
+## <a name="carraygetdata"></a><a name="getdata"></a> CArray:: GetData
 
 Użyj tej funkcji elementu członkowskiego, aby uzyskać bezpośredni dostęp do elementów w tablicy.
 
@@ -347,7 +348,7 @@ Mimo że bezpośredni dostęp do elementów tablicy może ułatwić pracę szybc
 
 [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]
 
-## <a name="carraygetsize"></a><a name="getsize"></a>CArray:: GetSize
+## <a name="carraygetsize"></a><a name="getsize"></a> CArray:: GetSize
 
 Zwraca rozmiar tablicy.
 
@@ -363,7 +364,7 @@ Ponieważ indeksy są oparte na zero, rozmiar jest większy niż największy ind
 
 [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]
 
-## <a name="carraygetupperbound"></a><a name="getupperbound"></a>CArray::GetUpperBound
+## <a name="carraygetupperbound"></a><a name="getupperbound"></a> CArray::GetUpperBound
 
 Zwraca bieżącą górną granicę tej tablicy.
 
@@ -381,7 +382,7 @@ Warunek `GetUpperBound( )` =-1 wskazuje, że tablica nie zawiera żadnych elemen
 
   Zobacz przykład dla [CArray:: GetAt](#getat).
 
-## <a name="carrayinsertat"></a><a name="insertat"></a>CArray::InsertAt
+## <a name="carrayinsertat"></a><a name="insertat"></a> CArray::InsertAt
 
 Pierwsza wersja `InsertAt` wstawia jeden element (lub wiele kopii elementu) o określonym indeksie w tablicy.
 
@@ -428,7 +429,7 @@ Druga wersja wstawia wszystkie elementy z innej `CArray` kolekcji, rozpoczynają
 
 [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]
 
-## <a name="carrayisempty"></a><a name="isempty"></a>CArray:: IsEmpty
+## <a name="carrayisempty"></a><a name="isempty"></a> CArray:: IsEmpty
 
 Określa, czy tablica jest pusta.
 
@@ -440,7 +441,7 @@ BOOL IsEmpty() const;
 
 Różne od zera, jeśli tablica nie zawiera żadnych elementów; w przeciwnym razie 0.
 
-## <a name="carrayoperator-"></a><a name="operator_at"></a>CArray:: operator\[\]
+## <a name="carrayoperator-"></a><a name="operator_at"></a> CArray:: operator \[\]
 
 Te operatory indeksów dolnych są wygodnym substytutem funkcji [SetAt](#setat) i [GetAt](#getat) .
 
@@ -467,7 +468,7 @@ Wersja debugowania biblioteki potwierdza, czy indeks dolny (w lewej lub prawej s
 
 [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]
 
-## <a name="carrayrelocateelements"></a><a name="relocateelements"></a>CArray::RelocateElements
+## <a name="carrayrelocateelements"></a><a name="relocateelements"></a> CArray::RelocateElements
 
 Lokalizuje dane do nowego buforu, gdy tablica powinna zostać powiększona lub pomniejsza.
 
@@ -498,7 +499,7 @@ Implementacja [CArray](../../mfc/reference/carray-class.md) używa tej metody do
 
 W przypadku tablic, w których element zawiera wskaźnik do jednego z jego elementów członkowskich lub inna struktura zawiera wskaźnik do jednego z elementów tablicy, wskaźniki nie są aktualizowane w postaci zwykłego kopiowania. W takim przypadku można poprawić wskaźniki przez implementację specjalizacji `RelocateElements` z odpowiednimi typami. Użytkownik jest również odpowiedzialny za kopiowanie danych.
 
-## <a name="carrayremoveall"></a><a name="removeall"></a>CArray::
+## <a name="carrayremoveall"></a><a name="removeall"></a> CArray::
 
 Usuwa wszystkie elementy z tej tablicy.
 
@@ -514,7 +515,7 @@ Jeśli tablica jest już pusta, funkcja nadal działa.
 
 [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]
 
-## <a name="carrayremoveat"></a><a name="removeat"></a>CArray::RemoveAt
+## <a name="carrayremoveat"></a><a name="removeat"></a> CArray::RemoveAt
 
 Usuwa jeden lub więcej elementów, zaczynając od określonego indeksu w tablicy.
 
@@ -542,7 +543,7 @@ Jeśli spróbujesz usunąć więcej elementów niż znajduje się w tablicy powy
 
 [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]
 
-## <a name="carraysetat"></a><a name="setat"></a>CArray::SetAt
+## <a name="carraysetat"></a><a name="setat"></a> CArray::SetAt
 
 Ustawia element Array pod określonym indeksem.
 
@@ -563,7 +564,7 @@ Wartość nowego elementu, która ma być przechowywana w określonym położeni
 
 ### <a name="remarks"></a>Uwagi
 
-`SetAt`nie spowoduje wzrostu rozmiaru tablicy. Użyj [SetAtGrow](#setatgrow) , jeśli chcesz, aby tablica była powiększana automatycznie.
+`SetAt` nie spowoduje wzrostu rozmiaru tablicy. Użyj [SetAtGrow](#setatgrow) , jeśli chcesz, aby tablica była powiększana automatycznie.
 
 Musisz się upewnić, że wartość indeksu reprezentuje prawidłową pozycję w tablicy. Jeśli znajduje się poza zakresem, wówczas wersja do debugowania zostanie przeprowadzona.
 
@@ -571,7 +572,7 @@ Musisz się upewnić, że wartość indeksu reprezentuje prawidłową pozycję w
 
   Zobacz przykład dla [GetAt](#getat).
 
-## <a name="carraysetatgrow"></a><a name="setatgrow"></a>CArray::SetAtGrow
+## <a name="carraysetatgrow"></a><a name="setatgrow"></a> CArray::SetAtGrow
 
 Ustawia element Array pod określonym indeksem.
 
@@ -598,7 +599,7 @@ Tablica powiększa się automatycznie w razie potrzeby (to znaczy górną granic
 
 [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]
 
-## <a name="carraysetsize"></a><a name="setsize"></a>CArray:: setSize
+## <a name="carraysetsize"></a><a name="setsize"></a> CArray:: setSize
 
 Ustala rozmiar pustej lub istniejącej tablicy; przydziela pamięć w razie potrzeby.
 
@@ -628,7 +629,7 @@ Parametr *nGrowBy* ma wpływ na alokację pamięci wewnętrznej podczas wzrostu 
 
   Zobacz przykład dla elementu [GetData](#getdata).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [ZBIERANIE próbek MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>

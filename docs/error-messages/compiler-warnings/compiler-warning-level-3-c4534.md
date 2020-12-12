@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 3) C4534'
 title: Ostrzeżenie kompilatora (poziom 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: 7d8ff442e84aa7563b1787e5a030297c034e1871
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6a13b27716488fa04f6342da76fdcd32c5635f2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257891"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>Ostrzeżenie kompilatora (poziom 3) C4534
 
 Konstruktor nie będzie konstruktorem domyślnym klasy "Class" z powodu argumentu domyślnego
 
-Klasa niezarządzana może mieć Konstruktor z parametrami, które mają wartości domyślne, a kompilator użyje go jako domyślnego konstruktora. Klasa oznaczona za pomocą słowa kluczowego `value` nie będzie używać konstruktora z wartościami domyślnymi dla jego parametrów jako konstruktora domyślnego.
+Klasa niezarządzana może mieć Konstruktor z parametrami, które mają wartości domyślne, a kompilator użyje go jako domyślnego konstruktora. Klasa oznaczona przy użyciu `value` słowa kluczowego nie będzie używać konstruktora z wartościami domyślnymi dla jego parametrów jako konstruktora domyślnego.
 
 Aby uzyskać więcej informacji, zobacz [klasy i struktury](../../extensions/classes-and-structs-cpp-component-extensions.md).
 

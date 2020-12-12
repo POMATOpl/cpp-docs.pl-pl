@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _getdcwd, _wgetdcwd'
 title: _getdcwd, _wgetdcwd
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 47681e78cb010af2b495091419dec01e40f703a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256552"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -122,7 +123,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Zobacz przykład w [_getdrive](getdrive.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

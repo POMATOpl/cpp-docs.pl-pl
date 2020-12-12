@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __readcr3'
 title: __readcr3
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-ms.openlocfilehash: b03ff46fabc99839d9c0bbd5c72e1b76d25814c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f430694af6a54dde4839292a10a5267c000ccb86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257345"
 ---
 # <a name="__readcr3"></a>__readcr3
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczytuje rejestr CR3 i zwraca jego wartość.
 
@@ -35,7 +36,7 @@ Wartość w rejestrze CR3.
 |---------------|------------------|
 |`__readcr3`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -43,6 +44,6 @@ Element wewnętrzny jest dostępny tylko w trybie jądra, a procedura jest dost�
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

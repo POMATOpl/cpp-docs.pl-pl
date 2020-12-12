@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: printf, _printf_l, wprintf, _wprintf_l'
 title: printf, _printf_l, wprintf, _wprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 73de90667479fff647e399068f9b97453819d27c
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: cd38713b4646536fb2ee5186810fd7630478743f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252834"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -83,12 +84,12 @@ Kontrolka formatu.
 *argument*<br/>
 Argumenty opcjonalne.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę znaków drukowanych lub wartość ujemną, jeśli wystąpi błąd. Jeśli *Format* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**. Jeśli w *argumencie*występuje **znacznik EOF** (0xFFFF), funkcja zwraca wartość-1.
+Zwraca liczbę znaków drukowanych lub wartość ujemną, jeśli wystąpi błąd. Jeśli *Format* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**. Jeśli w *argumencie* występuje **znacznik EOF** (0xFFFF), funkcja zwraca wartość-1.
 
 Aby uzyskać informacje o **errno** i kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -138,7 +139,7 @@ Line one
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 > [!IMPORTANT]
 > Począwszy od systemu Windows 10 w wersji 2004 (kompilacja 19041), `printf` Rodzina funkcji drukuje dokładne, reprezentacja liczb zmiennoprzecinkowych zgodnie z regułami IEEE 754 do zaokrąglania. W poprzednich wersjach systemu Windows, dokładnie zaprezentowane liczby zmiennoprzecinkowe kończące się znakiem "5", zawsze są zaokrąglane w górę. IEEE 754 stwierdza, że muszą zaokrąglić do najbliższej parzystej cyfry (znanej również jako "zaokrąglenie w banku"). Na przykład zarówno 1,5, jak i 2,5 powinny zaokrąglić do 2. Wcześniej 1,5 byłyby zaokrąglane do 2 i 2,5, do 3. Ta zmiana ma wpływ tylko na dokładnie zaprezentowane numery. Na przykład 2,35 (które, gdy reprezentowane w pamięci, jest bliżej 2.35000000000000008), w dalszym ciągu zaokrągla się do 2,4. Zaokrąglanie wykonane przez te funkcje teraz uwzględnia również tryb zaokrąglania zmiennoprzecinkowego ustawiony przez [fesetround](fegetround-fesetround2.md). Wcześniej zaokrąglanie zawsze wybiera FE_TONEAREST zachowanie. Ta zmiana dotyczy tylko programów utworzonych przy użyciu programu Visual Studio 2019 w wersji 16,2 lub nowszej. Aby użyć starszego zachowania zaokrąglania zmiennoprzecinkowego, Połącz z [legacy_stdio_float_rounding. obj](../link-options.md).
@@ -229,12 +230,12 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składnia specyfikacji formatu: funkcje printf i wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

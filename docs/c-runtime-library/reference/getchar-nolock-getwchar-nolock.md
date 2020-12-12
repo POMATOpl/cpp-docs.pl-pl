@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _getchar_nolock, _getwchar_nolock'
 title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-ms.openlocfilehash: df7d07d4478d8feee1d5a0b35c40e4158a93be82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 776eb6185cad072e416699e7ec253ab34bd146a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256695"
 ---
 # <a name="_getchar_nolock-_getwchar_nolock"></a>_getchar_nolock, _getwchar_nolock
 
@@ -69,9 +70,9 @@ Zobacz [GetChar, getwchar](getchar-getwchar.md).
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_getchar_nolock**|\<stdio.h>|
-|**_getwchar_nolock**|\<stdio. h > lub \<WCHAR. h >|
+|**_getwchar_nolock**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -106,7 +107,7 @@ This textInput was: This text
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

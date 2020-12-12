@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMapPtrToPtr'
 title: Klasa CMapPtrToPtr
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3cc561f7420e9c3c7bc2b2f6460536a80d7ef7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259542"
 ---
 # <a name="cmapptrtoptr-class"></a>Klasa CMapPtrToPtr
 
@@ -93,7 +94,7 @@ na przykład tłumaczy na
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapPtrToPtr`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy (wartości wskaźnika), musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
+`CMapPtrToPtr` obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy (wartości wskaźnika), musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
 Mapowania wskaźnika do wskaźnika nie mogą być serializowane.
 
@@ -111,7 +112,7 @@ Aby uzyskać więcej informacji na temat `CMapPtrToPtr` , zobacz [kolekcje](../.
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)
