@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Jak konwertować system:: String na ciąg standardowy'
 title: 'Porady: konwertowanie obiektu System::String na ciąg standardowy'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: 7dd73b8fed98918135b66af1b6351977426cd26e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2bcdaef743f2856f2db20dae8b804bb33546ea0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181335"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>Porady: konwertowanie obiektu System::String na ciąg standardowy
 
-<xref:System.String> można przekonwertować na `std::string` lub `std::wstring`bez użycia `PtrToStringChars` w Vcclr. h.
+Można przekonwertować <xref:System.String> na `std::string` lub `std::wstring` , bez używania `PtrToStringChars` w Vcclr. h.
 
 ## <a name="example"></a>Przykład
 
@@ -65,4 +66,4 @@ efgh
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
