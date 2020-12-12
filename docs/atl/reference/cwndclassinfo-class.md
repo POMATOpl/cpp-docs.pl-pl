@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CWndClassInfo'
 title: Klasa CWndClassInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: c1b516f6e92f98d660f7757870a3e634dcef4518
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7a857812fa35743fbab0968fb94095bf8fdcabcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140026"
 ---
 # <a name="cwndclassinfo-class"></a>Klasa CWndClassInfo
 
@@ -137,7 +138,7 @@ TCHAR m_szAutoName[13];
 
 ### <a name="remarks"></a>Uwagi
 
-`CWndClassInfo`używa `m_szAutoName` tylko wtedy, gdy dla parametru DECLARE_WND_CLASS jest przenoszona wartość null `WndClassName` , [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) lub [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) ATL będzie konstruować nazwę, gdy zarejestrowano klasę Window.
+`CWndClassInfo`używa `m_szAutoName` tylko wtedy, gdy dla parametru DECLARE_WND_CLASS jest przenoszona wartość null `WndClassName` , [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) lub [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). [](window-class-macros.md#declare_wnd_class) ATL będzie konstruować nazwę, gdy zarejestrowano klasę Window.
 
 ## <a name="cwndclassinfom_wc"></a><a name="m_wc"></a> CWndClassInfo:: m_wc
 

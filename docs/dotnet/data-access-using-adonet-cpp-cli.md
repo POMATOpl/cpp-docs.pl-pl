@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: dostęp do danych za pomocą ADO.NET (C++/CLI)'
 title: Dostęp do danych za pomocą ADO.NET (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 3f3980c98890382e77d9d89db2944bebf7b12319
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 93af8a8a2dc4ebc8d9fe6073b9f3a70f4868bee8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124270"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Dostęp do danych za pomocą ADO.NET (C++/CLI)
 
@@ -35,7 +36,7 @@ ADO.NET jest interfejsem API .NET Framework dostępu do danych i zapewnia możli
 
 ADO.NET działa w środowisku uruchomieniowym języka wspólnego (CLR). W związku z tym wszystkie aplikacje, które współdziałają z ADO.NET, również muszą wskazywać na środowisko CLR. Nie oznacza to jednak, że natywne aplikacje nie mogą używać ADO.NET. Te przykłady pokazują, jak korzystać z bazy danych ADO.NET z kodu natywnego.
 
-## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a>Kierowanie ciągów ANSI dla ADO.NET
+## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a> Kierowanie ciągów ANSI dla ADO.NET
 
 Pokazuje, jak dodać ciąg macierzysty ( `char *` ) do bazy danych i jak zorganizować obiekt <xref:System.String?displayProperty=fullName> z bazy danych do ciągu natywnego.
 
@@ -161,7 +162,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a>Kierowanie ciągów BSTR dla ADO.NET
+## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a> Kierowanie ciągów BSTR dla ADO.NET
 
 Pokazuje, jak dodać ciąg COM ( `BSTR` ) do bazy danych i jak skierować obiekt <xref:System.String?displayProperty=fullName> z bazy danych do programu `BSTR` .
 
@@ -295,7 +296,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a>Kierowanie ciągów Unicode dla ADO.NET
+## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a> Kierowanie ciągów Unicode dla ADO.NET
 
 Pokazuje, jak dodać natywny ciąg Unicode ( `wchar_t *` ) do bazy danych i jak zorganizować obiekt <xref:System.String?displayProperty=fullName> z bazy danych na natywny ciąg Unicode.
 
@@ -421,7 +422,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_wide.cpp
     ```
 
-## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a>Kierowanie WARIANTu do ADO.NET
+## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a> Kierowanie WARIANTu do ADO.NET
 
 Pokazuje, jak dodać natywny `VARIANT` do bazy danych i jak zorganizować <xref:System.Object?displayProperty=fullName> bazę z bazy danych do natywnej `VARIANT` .
 
@@ -562,7 +563,7 @@ ObjectCol: 42
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp
     ```
 
-## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a>Kierowanie elementu SAFEARRAY dla ADO.NET
+## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a> Kierowanie elementu SAFEARRAY dla ADO.NET
 
 Pokazuje, jak dodać natywny `SAFEARRAY` do bazy danych i jak skierować zarządzaną tablicę z bazy danych do natywnej `SAFEARRAY` .
 
@@ -725,7 +726,7 @@ Aby uzyskać informacje dotyczące problemów z zabezpieczeniami związanych z u
 |-------------|-----------------|
 |[ADO.NET](/dotnet/framework/data/adonet/index)|Zawiera omówienie ADO.NET, zestaw klas, które uwidaczniają usługi dostępu do danych w programie .NET programmer's.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

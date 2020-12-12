@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa WeakReference'
 title: WeakReference — Klasa
 ms.date: 09/24/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: 9a367a61a029abe1be599b1e262e279402149ccd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 743a705fae93d015d190df24d2534de62613e542
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116552"
 ---
 # <a name="weakreference-class"></a>WeakReference — Klasa
 
@@ -74,7 +75,7 @@ Nazwa                                                                 | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a> WeakReference:: ~ WeakReference
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -88,7 +89,7 @@ virtual ~WeakReference();
 
 Deinicjalizuje bieżące wystąpienie `WeakReference` klasy.
 
-## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>WeakReference::D ecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a> WeakReference::D ecrementStrongReference
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -106,7 +107,7 @@ Gdy silna liczba odwołań będzie równa zero, silne odwołanie jest ustawione 
 
 Zmniejszona silna liczba odwołań.
 
-## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>WeakReference:: IncrementStrongReference —
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a> WeakReference:: IncrementStrongReference —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -122,7 +123,7 @@ Przyrostowa silna liczba odwołań.
 
 Zwiększa silną liczbę odwołań bieżącego `WeakReference` obiektu.
 
-## <a name="weakreferenceresolve"></a><a name="resolve"></a>WeakReference:: Rozwiąż
+## <a name="weakreferenceresolve"></a><a name="resolve"></a> WeakReference:: Rozwiąż
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -153,7 +154,7 @@ Gdy ta operacja zostanie ukończona, kopia bieżącego silnego odwołania, jeśl
 
 Ustawia określony wskaźnik na bieżącą silną wartość odniesienia, jeśli silna liczba odwołań jest różna od zera.
 
-## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>WeakReference:: unknown
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a> WeakReference:: unknown
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -172,7 +173,7 @@ Wskaźnik do `IUnknown` interfejsu obiektu.
 
 Ustawia silną referencję bieżącego `WeakReference` obiektu do określonego wskaźnika interfejsu.
 
-## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>WeakReference:: WeakReference
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a> WeakReference:: WeakReference
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 

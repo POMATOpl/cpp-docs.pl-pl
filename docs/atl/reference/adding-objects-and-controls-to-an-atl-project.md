@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie obiektów i kontrolek do projektu ATL'
 title: Dodawanie obiektów i kontrolek do projektu ATL
 ms.date: 05/09/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 979e15a6fe27599e68841e82ef03a457d66d3bf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499310"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165592"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontrolek do projektu ATL
 
@@ -40,7 +41,7 @@ Można użyć jednego z kreatorów kodu ATL, aby dodać obiekt lub formant do pr
 
 ## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Aby dodać obiekt lub kontrolkę przy użyciu kreatora kontrolki ATL
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu, a następnie kliknij polecenie **Dodaj** z menu skrótów. Kliknij pozycję **Dodaj klasę**.
+1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy węzeł projektu, a następnie kliknij polecenie **Dodaj** z menu skrótów. Kliknij pozycję **Dodaj klasę**.
 
    Pojawi się okno dialogowe [Dodaj klasę](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) .
 
@@ -56,5 +57,5 @@ Można użyć jednego z kreatorów kodu ATL, aby dodać obiekt lub formant do pr
 [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Typy projektów C++ w programie Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Podstawowe informacje o obiektach COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Programowanie za pomocą kodu ATL i języka uruchomieniowego C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programowanie za pomocą kodu ATL i języka C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)

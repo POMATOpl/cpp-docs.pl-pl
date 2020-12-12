@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie składnika strony Active Server ATL'
 title: Dodawanie składnika strony Active Server Page ATL
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 08d49baa547342843b525f871de9570d4e752068
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4d56e7e55571ca477881175b5aa17e9a627edab6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165735"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server Page ATL
 
@@ -33,13 +34,13 @@ Składniki stron Active Server są częścią architektury Internet Information 
 
 1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać składnik strony Active Server ATL.
 
-1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij przycisk **Dodaj klasę** .
+1. W menu skrótów kliknij polecenie **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
 
-1. W oknie dialogowym [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) w okienku **Szablony** kliknij pozycję **ATL Active Server Strona składnika** , a następnie kliknij przycisk **otwórz** , aby wyświetlić [Kreatora składnika strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. W oknie dialogowym [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) w okienku **Szablony** kliknij pozycję **ATL Active Server Strona składnika**, a następnie kliknij przycisk **otwórz** , aby wyświetlić [Kreatora składnika strony Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Dodawanie nowego interfejsu w projekcie ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
