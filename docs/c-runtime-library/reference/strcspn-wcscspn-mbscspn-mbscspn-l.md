@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strcspn, wcscspn, _mbscspn, _mbscspn_l'
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 4/2/2020
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 8fb3e0fe7590dac9fc3ce107b3c1b2a5800c867b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a453d14541bb6e74b63d869c4d9dcc5d6d4f49e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176161"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
@@ -119,9 +120,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strcspn**|\<> String. h|
-|**wcscspn**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbscspn**, **_mbscspn_l**|\<mbstring. h>|
+|**strcspn**|\<string.h>|
+|**wcscspn**|\<string.h> lub \<wchar.h>|
+|**_mbscspn**, **_mbscspn_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -159,11 +160,11 @@ strcspn( "", "abc" ) = 0
 strcspn( "", "" ) = 0
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

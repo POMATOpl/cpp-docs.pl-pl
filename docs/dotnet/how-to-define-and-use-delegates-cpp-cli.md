@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: jak definiować i używać delegatów (C++/CLI)'
 title: 'Porady: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4229af2015db3a9a77722e9e4cc24b80aa05a49b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175758"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Porady: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich
 
@@ -502,6 +503,6 @@ int main() {
 14
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [delegate (C++ Component Extensions)](../extensions/delegate-cpp-component-extensions.md)

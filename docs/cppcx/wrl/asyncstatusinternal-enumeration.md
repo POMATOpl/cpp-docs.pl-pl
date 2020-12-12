@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: AsyncStatusInternal — Enumeration'
 title: AsyncStatusInternal — Wyliczenie
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: 0eadd1e3a287feecd36b00b231b42c31218352c1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3227699a0e7b8933dc5839e65fb3489328d3b1f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175797"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal — Wyliczenie
 
@@ -26,9 +27,9 @@ enum AsyncStatusInternal;
 
 ## <a name="remarks"></a>Uwagi
 
-Określa mapowanie między wyliczeniem wewnętrznym dla stanu operacji asynchronicznych i wyliczeniem `Windows::Foundation::AsyncStatus`.
+Określa mapowanie między wyliczeniami wewnętrznymi dla stanu operacji asynchronicznych i `Windows::Foundation::AsyncStatus` wyliczenia.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 `_Created`<br/>
 Równoważne `::Windows::Foundation::AsyncStatus::Created`
@@ -53,4 +54,4 @@ Równoważne `::Windows::Foundation::AsyncStatus::Error`
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)

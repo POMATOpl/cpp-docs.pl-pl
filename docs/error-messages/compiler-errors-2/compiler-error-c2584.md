@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2584'
 title: Błąd kompilatora C2584
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7820019c3ec49928f59980adbd9ec814d67c3499
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177682"
 ---
 # <a name="compiler-error-c2584"></a>Błąd kompilatora C2584
 
 "Klasa": bezpośrednia baza "Base2 —" jest niedostępna; jest już podstawą elementu "Base1 —"
 
-`Class` już bezpośrednio z `Base1`. `Base2` również pochodzi z `Base1`. `Class` nie może pochodzić od `Base2`, ponieważ spowodowałoby to, że dziedziczy (pośrednio) od `Base1` ponownie, co nie jest dozwolone, ponieważ `Base1` jest już bezpośrednią klasą bazową.
+`Class` już pochodzi bezpośrednio z programu `Base1` . `Base2` wynika również z `Base1` . `Class` nie można dziedziczyć z `Base2` , ponieważ spowodowałoby to, że dziedziczy (pośrednio) od `Base1` ponownie, co nie jest dozwolone, ponieważ `Base1` jest już bezpośrednią klasą bazową.
 
 ## <a name="example"></a>Przykład
 

@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: generowanie manifestu w Visual Studio'
 title: Generowanie manifestu w Visual Studio
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88d6cac19e7a0c24a28252edda5ac22ca3cadd64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176447"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generowanie manifestu w Visual Studio
 
@@ -31,4 +32,4 @@ Manifest jest osadzony w końcowym pliku binarnym jako zasób tekstowy i można 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ogólne informacje o tworzeniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
+[Informacje o generowaniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

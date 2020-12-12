@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Clipboard: Dodawanie innych formatów'
 title: 'Schowek: dodawanie innych formatów'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 52089364a6be423c69a7031cd0d99e1924de1444
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3259660725f324436cc606574eb36499f74e7054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176642"
 ---
 # <a name="clipboard-adding-other-formats"></a>Schowek: dodawanie innych formatów
 
-W tym temacie wyjaśniono, jak rozszerzyć listę obsługiwanych formatów, szczególnie w przypadku obsługi OLE. Schowek tematu [: kopiowanie i wklejanie danych](clipboard-copying-and-pasting-data.md) zawiera opis minimalnej implementacji niezbędnej do obsługi kopiowania i wklejania ze schowka. Jeśli wszystko jest zaimplementowane, jedynym formatem umieszczonym w schowku są **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**i możliwie **CF_LINKSOURCE**. Większość aplikacji będzie potrzebować więcej formatów w schowku niż te trzy.
+W tym temacie wyjaśniono, jak rozszerzyć listę obsługiwanych formatów, szczególnie w przypadku obsługi OLE. Schowek tematu [: kopiowanie i wklejanie danych](clipboard-copying-and-pasting-data.md) zawiera opis minimalnej implementacji niezbędnej do obsługi kopiowania i wklejania ze schowka. Jeśli wszystko jest zaimplementowane, jedynym formatem umieszczonym w schowku są **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR** i możliwie **CF_LINKSOURCE**. Większość aplikacji będzie potrzebować więcej formatów w schowku niż te trzy.
 
-## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a>Rejestrowanie formatów niestandardowych
+## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a> Rejestrowanie formatów niestandardowych
 
 Aby utworzyć własne niestandardowe formaty, postępuj zgodnie z tą samą procedurą, która będzie używana podczas rejestrowania dowolnego niestandardowego formatu Schowka: przekaż nazwę formatu do funkcji **RegisterClipboardFormat** i użyj jej wartości zwracanej jako identyfikatora formatu.
 
-## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a>Umieszczanie formatów w schowku
+## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a> Umieszczanie formatów w schowku
 
 Aby dodać więcej formatów do tych umieszczonych w schowku, należy zastąpić `OnGetClipboardData` funkcję w klasie pochodnej `COleClientItem` lub `COleServerItem` (w zależności od tego, czy dane do skopiowania są natywne). W tej funkcji należy wykonać poniższą procedurę.
 
@@ -48,4 +49,4 @@ Ta technika jest używana w przykładowym programie MFC OLE [HIERSVR](../overvie
 
 ## <a name="see-also"></a>Zobacz też
 
-[Schowek: korzystanie z mechanizmu schowka OLE](clipboard-using-the-ole-clipboard-mechanism.md)
+[Schowek: korzystanie z mechanizmu Schowka OLE](clipboard-using-the-ole-clipboard-mechanism.md)

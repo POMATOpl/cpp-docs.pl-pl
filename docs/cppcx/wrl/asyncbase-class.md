@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa AsyncBase'
 title: AsyncBase — Klasa
 ms.date: 10/08/2018
 ms.topic: reference
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 8684096e76c08456a9c6813b7f04d79b820e41e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e09e9ecb3a9b1ebf466989edd09cba747782028
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175836"
 ---
 # <a name="asyncbase-class"></a>AsyncBase — Klasa
 
@@ -143,7 +144,7 @@ Nazwa                                                                         | 
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="asyncbaseasyncbase"></a><a name="asyncbase"></a>AsyncBase:: AsyncBase
+## <a name="asyncbaseasyncbase"></a><a name="asyncbase"></a> AsyncBase:: AsyncBase
 
 Inicjuje wystąpienie klasy `AsyncBase`.
 
@@ -151,7 +152,7 @@ Inicjuje wystąpienie klasy `AsyncBase`.
 AsyncBase();
 ```
 
-## <a name="asyncbasecancel"></a><a name="cancel"></a>AsyncBase:: Cancel
+## <a name="asyncbasecancel"></a><a name="cancel"></a> AsyncBase:: Cancel
 
 Anuluje operację asynchroniczną.
 
@@ -167,9 +168,9 @@ Domyślnie zawsze zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-`Cancel()`jest domyślną implementacją `IAsyncInfo::Cancel` i nie ma rzeczywistej pracy. Aby faktycznie anulować operację asynchroniczną, Zastąp `OnCancel()` czystą metodę wirtualną.
+`Cancel()` jest domyślną implementacją `IAsyncInfo::Cancel` i nie ma rzeczywistej pracy. Aby faktycznie anulować operację asynchroniczną, Zastąp `OnCancel()` czystą metodę wirtualną.
 
-## <a name="asyncbasecheckvalidstatefordelegatecall"></a><a name="checkvalidstatefordelegatecall"></a>AsyncBase:: CheckValidStateForDelegateCall —
+## <a name="asyncbasecheckvalidstatefordelegatecall"></a><a name="checkvalidstatefordelegatecall"></a> AsyncBase:: CheckValidStateForDelegateCall —
 
 Testuje, czy właściwości delegatów mogą być modyfikowane w bieżącym stanie asynchronicznym.
 
@@ -181,7 +182,7 @@ inline HRESULT CheckValidStateForDelegateCall();
 
 S_OK, czy można modyfikować właściwości delegata; w przeciwnym razie E_ILLEGAL_METHOD_CALL.
 
-## <a name="asyncbasecheckvalidstateforresultscall"></a><a name="checkvalidstateforresultscall"></a>AsyncBase:: CheckValidStateForResultsCall —
+## <a name="asyncbasecheckvalidstateforresultscall"></a><a name="checkvalidstateforresultscall"></a> AsyncBase:: CheckValidStateForResultsCall —
 
 Testuje, czy wyniki operacji asynchronicznej mogą być zbierane w bieżącym stanie asynchronicznym.
 
@@ -193,7 +194,7 @@ inline HRESULT CheckValidStateForResultsCall();
 
 S_OK, czy można zbierać wyniki; w przeciwnym razie E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.
 
-## <a name="asyncbaseclose"></a><a name="close"></a>AsyncBase:: Close
+## <a name="asyncbaseclose"></a><a name="close"></a> AsyncBase:: Close
 
 Zamyka operację asynchroniczną.
 
@@ -209,9 +210,9 @@ S_OK, jeśli operacja zostanie zamknięta lub jest już ZAMKNIĘTA; w przeciwnym
 
 ### <a name="remarks"></a>Uwagi
 
-`Close()`jest domyślną implementacją `IAsyncInfo::Close` i nie ma rzeczywistej pracy. Aby rzeczywiście zamknąć operację asynchroniczną, Zastąp `OnClose()` czystą metodę wirtualną.
+`Close()` jest domyślną implementacją `IAsyncInfo::Close` i nie ma rzeczywistej pracy. Aby rzeczywiście zamknąć operację asynchroniczną, Zastąp `OnClose()` czystą metodę wirtualną.
 
-## <a name="asyncbasecontinueasyncoperation"></a><a name="continueasyncoperation"></a>AsyncBase:: ContinueAsyncOperation —
+## <a name="asyncbasecontinueasyncoperation"></a><a name="continueasyncoperation"></a> AsyncBase:: ContinueAsyncOperation —
 
 Określa, czy operacja asynchroniczna ma kontynuować przetwarzanie lub czy ma zostać zatrzymana.
 
@@ -223,7 +224,7 @@ inline bool ContinueAsyncOperation();
 
 **`true`** Jeśli bieżący stan operacji asynchronicznej jest *rozpoczęty*, co oznacza, że operacja powinna być kontynuowana. W przeciwnym razie **`false`** , co oznacza, że operacja powinna zostać zatrzymana.
 
-## <a name="asyncbasecurrentstatus"></a><a name="currentstatus"></a>AsyncBase:: currentStatus —
+## <a name="asyncbasecurrentstatus"></a><a name="currentstatus"></a> AsyncBase:: currentStatus —
 
 Pobiera stan bieżącej operacji asynchronicznej.
 
@@ -242,7 +243,7 @@ Lokalizacja, w której ta operacja przechowuje bieżący stan.
 
 Ta operacja jest bezpieczna wątkowo.
 
-## <a name="asyncbaseerrorcode"></a><a name="errorcode"></a>AsyncBase:: ErrorCode
+## <a name="asyncbaseerrorcode"></a><a name="errorcode"></a> AsyncBase:: ErrorCode
 
 Pobiera kod błędu dla bieżącej operacji asynchronicznej.
 
@@ -261,7 +262,7 @@ Lokalizacja, w której ta operacja przechowuje bieżący kod błędu.
 
 Ta operacja jest bezpieczna wątkowo.
 
-## <a name="asyncbasefirecompletion"></a><a name="firecompletion"></a>AsyncBase:: FireCompletion —
+## <a name="asyncbasefirecompletion"></a><a name="firecompletion"></a> AsyncBase:: FireCompletion —
 
 Wywołuje program obsługi zdarzeń ukończenia lub resetuje delegata postępu wewnętrznego.
 
@@ -277,7 +278,7 @@ virtual void FireCompletion();
 
 Pierwsza wersja `FireCompletion()` resetuje zmienną oddelegowania postępu wewnętrznego. Druga wersja wywołuje program obsługi zdarzeń zakończenia w przypadku ukończenia operacji asynchronicznej.
 
-## <a name="asyncbasefireprogress"></a><a name="fireprogress"></a>AsyncBase:: FireProgress —
+## <a name="asyncbasefireprogress"></a><a name="fireprogress"></a> AsyncBase:: FireProgress —
 
 Wywołuje bieżącą procedurę obsługi zdarzeń postępu.
 
@@ -294,9 +295,9 @@ Metoda obsługi zdarzeń do wywołania.
 
 ### <a name="remarks"></a>Uwagi
 
-`ProgressTraits`jest pochodną [struktury ArgTraitsHelper](argtraitshelper-structure.md).
+`ProgressTraits` jest pochodną [struktury ArgTraitsHelper](argtraitshelper-structure.md).
 
-## <a name="asyncbaseget_errorcode"></a><a name="get-errorcode"></a>AsyncBase:: get_ErrorCode
+## <a name="asyncbaseget_errorcode"></a><a name="get-errorcode"></a> AsyncBase:: get_ErrorCode
 
 Pobiera kod błędu dla bieżącej operacji asynchronicznej.
 
@@ -308,14 +309,14 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*Kodzie*<br/>
+*errorCode*<br/>
 Lokalizacja, w której jest przechowywany bieżący kod błędu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie E_ILLEGAL_METHOD_CALL, jeśli bieżąca operacja asynchroniczna jest zamknięta.
 
-## <a name="asyncbaseget_id"></a><a name="get-id"></a>AsyncBase:: get_Id
+## <a name="asyncbaseget_id"></a><a name="get-id"></a> AsyncBase:: get_Id
 
 Pobiera dojście operacji asynchronicznej.
 
@@ -338,7 +339,7 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie E_ILLEGAL_METHOD_CALL.
 
 Ta metoda implementuje `IAsyncInfo::get_Id` .
 
-## <a name="asyncbaseget_status"></a><a name="get-status"></a>AsyncBase:: get_Status
+## <a name="asyncbaseget_status"></a><a name="get-status"></a> AsyncBase:: get_Status
 
 Pobiera wartość wskazującą stan operacji asynchronicznej.
 
@@ -361,7 +362,7 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie E_ILLEGAL_METHOD_CALL.
 
 Ta metoda implementuje `IAsyncInfo::get_Status` .
 
-## <a name="asyncbasegetoncomplete"></a><a name="getoncomplete"></a>AsyncBase:: GetOnComplete —
+## <a name="asyncbasegetoncomplete"></a><a name="getoncomplete"></a> AsyncBase:: GetOnComplete —
 
 Kopiuje adres bieżącego programu obsługi zdarzeń ukończenia do określonej zmiennej.
 
@@ -380,7 +381,7 @@ Lokalizacja, w której jest przechowywany adres bieżącego programu obsługi zd
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie E_ILLEGAL_METHOD_CALL.
 
-## <a name="asyncbasegetonprogress"></a><a name="getonprogress"></a>AsyncBase:: GetOnProgress —
+## <a name="asyncbasegetonprogress"></a><a name="getonprogress"></a> AsyncBase:: GetOnProgress —
 
 Kopiuje adres bieżącego programu obsługi zdarzeń postępu do określonej zmiennej.
 
@@ -399,7 +400,7 @@ Lokalizacja, w której jest przechowywany adres bieżącego programu obsługi zd
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie E_ILLEGAL_METHOD_CALL.
 
-## <a name="asyncbaseoncancel"></a><a name="oncancel"></a>AsyncBase:: OnCancel
+## <a name="asyncbaseoncancel"></a><a name="oncancel"></a> AsyncBase:: OnCancel
 
 Gdy jest zastępowany w klasie pochodnej, anuluje operację asynchroniczną.
 
@@ -409,7 +410,7 @@ virtual void OnCancel(
 ) = 0;
 ```
 
-## <a name="asyncbaseonclose"></a><a name="onclose"></a>AsyncBase:: OnClose
+## <a name="asyncbaseonclose"></a><a name="onclose"></a> AsyncBase:: OnClose
 
 Gdy jest zastępowany w klasie pochodnej, zamyka operację asynchroniczną.
 
@@ -419,7 +420,7 @@ virtual void OnClose(
 ) = 0;
 ```
 
-## <a name="asyncbaseonstart"></a><a name="onstart"></a>AsyncBase:: OnStart
+## <a name="asyncbaseonstart"></a><a name="onstart"></a> AsyncBase:: OnStart
 
 Gdy jest zastępowany w klasie pochodnej, uruchamia operację asynchroniczną.
 
@@ -429,7 +430,7 @@ virtual HRESULT OnStart(
 ) = 0;
 ```
 
-## <a name="asyncbaseput_id"></a><a name="put-id"></a>AsyncBase::p ut_Id
+## <a name="asyncbaseput_id"></a><a name="put-id"></a> AsyncBase::p ut_Id
 
 Ustawia dojście operacji asynchronicznej.
 
@@ -448,7 +449,7 @@ Niezerowy uchwyt.
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie E_INVALIDARG lub E_ILLEGAL_METHOD_CALL.
 
-## <a name="asyncbaseputoncomplete"></a><a name="putoncomplete"></a>AsyncBase::P utOnComplete
+## <a name="asyncbaseputoncomplete"></a><a name="putoncomplete"></a> AsyncBase::P utOnComplete
 
 Ustawia adres programu obsługi zdarzeń zakończenia dla określonej wartości.
 
@@ -467,7 +468,7 @@ Adres, na który jest ustawiony program obsługi zdarzeń ukończenia.
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie E_ILLEGAL_METHOD_CALL.
 
-## <a name="asyncbaseputonprogress"></a><a name="putonprogress"></a>AsyncBase::P utOnProgress
+## <a name="asyncbaseputonprogress"></a><a name="putonprogress"></a> AsyncBase::P utOnProgress
 
 Ustawia adres programu obsługi zdarzeń postępu dla określonej wartości.
 
@@ -486,7 +487,7 @@ Adres, na który jest ustawiony program obsługi zdarzeń postępu.
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie E_ILLEGAL_METHOD_CALL.
 
-## <a name="asyncbasestart"></a><a name="start"></a>AsyncBase:: Start
+## <a name="asyncbasestart"></a><a name="start"></a> AsyncBase:: Start
 
 Uruchamia operację asynchroniczną.
 
@@ -502,9 +503,9 @@ S_OK, jeśli operacja jest uruchomiona lub jest już uruchomiona; w przeciwnym r
 
 ### <a name="remarks"></a>Uwagi
 
-`Start()`jest metodą chronioną, która nie jest widoczna zewnętrznie, ponieważ operacje asynchroniczne "gorąca" są używane przed powrotem do obiektu wywołującego.
+`Start()` jest metodą chronioną, która nie jest widoczna zewnętrznie, ponieważ operacje asynchroniczne "gorąca" są używane przed powrotem do obiektu wywołującego.
 
-## <a name="asyncbasetrytransitiontocompleted"></a><a name="trytransitiontocompleted"></a>AsyncBase:: TryTransitionToCompleted —
+## <a name="asyncbasetrytransitiontocompleted"></a><a name="trytransitiontocompleted"></a> AsyncBase:: TryTransitionToCompleted —
 
 Wskazuje, czy bieżąca operacja asynchroniczna została ukończona.
 
@@ -518,7 +519,7 @@ bool TryTransitionToCompleted(
 
 **`true`** Jeśli operacja asynchroniczna została ukończona; w przeciwnym razie **`false`** .
 
-## <a name="asyncbasetrytransitiontoerror"></a><a name="trytransitiontoerror"></a>AsyncBase:: TryTransitionToError —
+## <a name="asyncbasetrytransitiontoerror"></a><a name="trytransitiontoerror"></a> AsyncBase:: TryTransitionToError —
 
 Wskazuje, czy określony kod błędu może zmodyfikować stan błędu wewnętrznego.
 

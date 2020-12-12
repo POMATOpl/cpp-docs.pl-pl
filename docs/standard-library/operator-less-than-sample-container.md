@@ -1,5 +1,6 @@
 ---
-title: '&lt; operatora (&lt;przykładowego kontenera&gt;)'
+description: 'Dowiedz się więcej na temat: operator &lt; ( &lt; przykład kontenera &gt; )'
+title: operator &lt; ( &lt; przykładowy kontener &gt; )
 ms.date: 11/04/2016
 f1_keywords:
 - std::operator<
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7bba9be33a2dc4dea6257b159966c867bb33929
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176486"
 ---
-# <a name="operatorlt-ltsample-containergt"></a>&lt; operatora (&lt;przykładowego kontenera&gt;)
+# <a name="operatorlt-ltsample-containergt"></a>operator &lt; ( &lt; przykładowy kontener &gt; )
 
 > [!NOTE]
-> Ten temat znajduje się w dokumentacji C++ firmy Microsoft jako przykład niefunkcjonalny kontenerów używanych w C++ standardowej bibliotece. Aby uzyskać więcej informacji, zobacz [ C++ Kontenery biblioteki standardowej](../standard-library/stl-containers.md).
+> Ten temat znajduje się w dokumentacji języka Microsoft C++ jako niefunkcjonalny przykład kontenerów używanych w standardowej bibliotece języka C++. Aby uzyskać więcej informacji, zobacz [kontenery standardowej biblioteki języka C++](../standard-library/stl-containers.md).
 
-**Operator przeciążenia <** do porównywania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)szablonu klasy.
+**Operator przeciążenia<** do porównywania dwóch obiektów [kontenera](../standard-library/sample-container-class.md)szablonu klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,6 +44,6 @@ Zwraca wartość `lexicographical_compare(left.begin, left.end, right.begin, rig
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<przykładowego kontenera >](../standard-library/sample-container.md)\
-[rozpocznij](../standard-library/container-class-begin.md)\
+[\<sample container>](../standard-library/sample-container.md)\
+[zaczną](../standard-library/container-class-begin.md)\
 [punktów](../standard-library/container-class-end.md)

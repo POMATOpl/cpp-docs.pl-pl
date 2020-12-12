@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o wersji (C/C++)
 title: WERSJA (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - VERSION .def file statement
 ms.assetid: 3533b97c-5183-45f9-9ca8-4e63462b5d26
-ms.openlocfilehash: abc0b751440d09dcaad7e449d7b151b479c51911
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a63435c752220ab9fef54628ab101a14ef58582
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176395"
 ---
 # <a name="version-cc"></a>WERSJA (C/C++)
 
-Informuje LINK, aby umieścić numer w nagłówku pliku .exe lub DLL.
+Informuje LINK, aby umieścić numer w nagłówku pliku. exe lub DLL.
 
 ```
 VERSION major[.minor]
@@ -23,10 +24,10 @@ VERSION major[.minor]
 
 ## <a name="remarks"></a>Uwagi
 
-*Głównych* i *pomocnicza* argumenty są liczbami dziesiętnymi z zakresu od 0 do 65 535. Wartość domyślna to wersja 0,0.
+Argumenty *Główne* i *pomocnicze* są liczbami dziesiętnymi z zakresu od 0 do 65 535. Wartość domyślna to 0,0.
 
-Równoważne sposobem Określ numer wersji jest użycie [informacje o wersji](version-version-information.md) (/ wersji) opcji.
+Odpowiednikiem metody określania numeru wersji jest opcja [Informacje o wersji](version-version-information.md) (/Version).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)
+[Reguły dla instrukcji Module-Definition](rules-for-module-definition-statements.md)

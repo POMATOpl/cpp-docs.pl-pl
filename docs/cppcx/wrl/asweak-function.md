@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcja AsWeak —'
 title: AsWeak — Funkcja
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a02776f06aab4d7505b38fbb1120c36a82e97368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175849"
 ---
 # <a name="asweak-function"></a>AsWeak — Funkcja
 
@@ -30,7 +31,7 @@ HRESULT AsWeak(
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Wskaźnik do typu parametru *p*.
 
 *St*<br/>
@@ -51,4 +52,4 @@ S_OK, jeśli ta operacja zakończyła się pomyślnie; w przeciwnym razie błąd
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft:: WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

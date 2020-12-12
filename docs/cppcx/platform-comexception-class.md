@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: COMException, Klasa'
 title: 'Platform:: COMException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71f6c3fa6d29a884627f2bf5aae07fbc0349ec9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176122"
 ---
 # <a name="platformcomexception-class"></a>Platform:: COMException, Klasa
 
@@ -55,7 +56,7 @@ Klasa COMException ma następujące właściwości.
 
 Następujące wstępnie zdefiniowane wyjątki pochodzą od COMException. Różnią się one od COMException tylko pod nazwą, nazwą jego konstruktora i podstawową wartością HRESULT.
 
-|Name (Nazwa)|Bazowy wynik HRESULT|Opis|
+|Nazwa|Bazowy wynik HRESULT|Opis|
 |----------|------------------------|-----------------|
 |COMException|*wartość HRESULT zdefiniowana przez użytkownika*|Zgłaszany, gdy Nierozpoznana wartość HRESULT jest zwracana z wywołania metody COM.|
 |AccessDeniedException|E_ACCESSDENIED|Zgłaszany w przypadku odmowy dostępu do zasobu lub funkcji.|
@@ -81,7 +82,7 @@ Następujące wstępnie zdefiniowane wyjątki pochodzą od COMException. Różni
 
 **Metadane:** obiekt platform. winmd
 
-## <a name="ctor"></a>COMException:: COMException — Konstruktor
+## <a name="comexceptioncomexception-constructor"></a><a name="ctor"></a> COMException:: COMException — Konstruktor
 
 Aktywuje nowe wystąpienie klasy COMException.
 
@@ -96,7 +97,7 @@ COMException( int hresult )
 *wynik*<br/>
 Błąd HRESULT, który jest reprezentowany przez wyjątek.
 
-## <a name="hresult"></a>COMException:: HResult — Właściwość
+## <a name="comexceptionhresult-property"></a><a name="hresult"></a> COMException:: HResult — Właściwość
 
 WYNIK HRESULT, który odnosi się do wyjątku.
 
@@ -115,7 +116,7 @@ Wartość HRESULT, która określa błąd.
 
 Aby uzyskać więcej informacji na temat interpretowania wartości HRESULT, zobacz [struktury kodów błędów modelu COM](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a>COMException:: Message — właściwość
+## <a name="comexceptionmessage-property"></a><a name="message"></a> COMException:: Message — właściwość
 
 Komunikat, który opisuje wyjątek.
 

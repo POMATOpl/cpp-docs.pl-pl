@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: Collections:: VectorViewIterator, Klasa'
 title: 'Platform:: Collections:: VectorViewIterator, Klasa'
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 3fed25b975eefe33f9eb7014ca91a52ba419c936
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f10d6c31e60c4f8deac2ba924ec5f9de6faec30c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176135"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform:: Collections:: VectorViewIterator, Klasa
 
 Zapewnia wzorzec standardowej biblioteki szablonów dla obiektów pochodzących z `IVectorView` interfejsu środowisko wykonawcze systemu Windows.
 
-`ViewVectorIterator`to iterator proxy, który przechowuje elementy typu `VectorProxy<T>` . Jednak obiekt proxy jest prawie nigdy niewidoczny dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcje (C++/CX)](../cppcx/collections-c-cx.md).
+`ViewVectorIterator` to iterator proxy, który przechowuje elementy typu `VectorProxy<T>` . Jednak obiekt proxy jest prawie nigdy niewidoczny dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcje (C++/CX)](../cppcx/collections-c-cx.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -96,7 +97,7 @@ Wartość elementu, do którego odwołuje się bieżąca VectorViewIterator.
 
 Typ wartości zwracanej jest nieokreślonym typem wewnętrznym, który jest wymagany dla implementacji tego operatora.
 
-## <a name="vectorviewiteratoroperator---operator"></a><a name="operator-decrement"></a>VectorViewIterator:: operator--— operator
+## <a name="vectorviewiteratoroperator---operator"></a><a name="operator-decrement"></a> VectorViewIterator:: operator--— operator
 
 Zmniejsza bieżącą VectorViewIterator.
 
@@ -131,7 +132,7 @@ reference operator*() const;
 
 Element określony przez bieżący VectorViewIterator.
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-equality"></a>VectorViewIterator:: operator = = — operator
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-equality"></a> VectorViewIterator:: operator = = — operator
 
 Wskazuje, czy bieżący VectorViewIterator jest równy określonemu VectorViewIterator.
 
@@ -170,7 +171,7 @@ Inny VectorViewIterator.
 
 **`true`** Jeśli bieżący VectorViewIterator jest większy niż *inny*; w przeciwnym razie **`false`** .
 
-## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>VectorViewIterator:: operator &gt; = — operator
+## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a> VectorViewIterator:: operator &gt; = — operator
 
 Wskazuje, czy bieżąca `VectorViewIterator` jest większa lub równa określonej wartości `VectorViewIterator` .
 
@@ -190,7 +191,7 @@ Inny VectorViewIterator.
 
 **`true`** Jeśli bieżąca `VectorViewIterator` wartość jest większa lub równa *innej*; w przeciwnym razie **`false`** .
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-increment"></a>Operator VectorViewIterator:: operator + +
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-increment"></a> Operator VectorViewIterator:: operator + +
 
 Zwiększa bieżącą VectorViewIterator.
 
@@ -212,7 +213,7 @@ Pierwsza składnia VectorViewIterator wstępnie zwiększa bieżącą VectorViewI
 
 Druga składnia post-zwiększa bieżącą VectorViewIterator. **`int`** Typ w drugiej składni wskazuje operację po przyrostie, a nie rzeczywisty argument operacji całkowitej.
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-inequality"></a>Operator VectorViewIterator:: operator! =
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-inequality"></a> Operator VectorViewIterator:: operator! =
 
 Wskazuje, czy bieżący VectorViewIterator nie jest równy określonemu VectorViewIterator.
 
@@ -250,7 +251,7 @@ Inny `VectorIterator` .
 
 **`true`** Jeśli bieżąca `VectorIterator` wartość jest mniejsza niż *inne*; w przeciwnym razie **`false`** .
 
-## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>VectorViewIterator:: operator &lt; = — operator
+## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a> VectorViewIterator:: operator &lt; = — operator
 
 Wskazuje, czy bieżące `VectorIterator` jest mniejsze niż lub równe określonej liczbie `VectorIterator` .
 
@@ -270,7 +271,7 @@ Inny `VectorIterator` .
 
 **`true`** Jeśli bieżąca `VectorIterator` wartość jest mniejsza lub równa *innej*; w przeciwnym razie **`false`** .
 
-## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus"></a>Operator VectorViewIterator:: operator-
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus"></a> Operator VectorViewIterator:: operator-
 
 Odejmuje określoną liczbę elementów od bieżącego iteratora, który uzyskuje nowy iterator, lub określony iterator z bieżącego iteratora zwracające liczbę elementów między iteratorami.
 
@@ -285,7 +286,7 @@ difference_type operator-(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*<br/>
+*n*<br/>
 Liczba elementów.
 
 *różnych*<br/>
@@ -295,7 +296,7 @@ Inny VectorViewIterator.
 
 Pierwsza składnia operatora zwraca obiekt VectorViewIterator, który jest elementem `n` mniejszym od bieżącego VectorViewIterator. Druga składnia operatora zwraca liczbę elementów między bieżącą i `other` VectorViewIterator.
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus-equals"></a>Operator VectorViewIterator:: operator + =
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus-equals"></a> Operator VectorViewIterator:: operator + =
 
 Zwiększa bieżącą VectorViewIterator według określonego przemieszczenia.
 
@@ -307,14 +308,14 @@ VectorViewIterator& operator+=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*<br/>
+*n*<br/>
 Przemieszczenie liczb całkowitych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zaktualizowana VectorViewIterator.
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus"></a>VectorViewIterator:: operator + — operator
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus"></a> VectorViewIterator:: operator + — operator
 
 Zwraca VectorViewIterator, który odwołuje się do elementu w określonym przemieszczenia z określonego VectorViewIterator.
 
@@ -335,7 +336,7 @@ inline VectorViewIterator<T> operator+
 *T*<br/>
 W drugiej składni atrybut TypeName VectorViewIterator.
 
-*Azotan*<br/>
+*n*<br/>
 Przemieszczenie liczb całkowitych.
 
 *i*<br/>
@@ -347,7 +348,7 @@ W pierwszej składni element VectorViewIterator, który odwołuje się do elemen
 
 W drugiej składni VectorViewIterator, który odwołuje się do elementu w określonym przemieszczenia od początku parametru `i` .
 
-## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus-assign"></a>Operator VectorViewIterator:: operator-=
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus-assign"></a> Operator VectorViewIterator:: operator-=
 
 Zmniejsza bieżącą VectorIterator przez określone przemieszczenie.
 
@@ -359,14 +360,14 @@ VectorViewIterator& operator-=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*<br/>
+*n*<br/>
 Przemieszczenie liczb całkowitych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zaktualizowana VectorIterator.
 
-## <a name="vectorviewiteratoroperator"></a><a name="operator-at"></a>VectorViewIterator:: operator\[\]
+## <a name="vectorviewiteratoroperator"></a><a name="operator-at"></a> VectorViewIterator:: operator\[\]
 
 Pobiera odwołanie do elementu, który jest określonym przemieszczeniem z bieżącego VectorViewIterator.
 
@@ -378,14 +379,14 @@ reference operator[](difference_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Azotan*<br/>
+*n*<br/>
 Przemieszczenie liczb całkowitych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Element, który jest przemieszczenia przez `n` elementy z bieżącego VectorViewIterator.
 
-## <a name="vectorviewiteratorvectorviewiterator-constructor"></a><a name="ctor"></a>VectorViewIterator:: VectorViewIterator — Konstruktor
+## <a name="vectorviewiteratorvectorviewiterator-constructor"></a><a name="ctor"></a> VectorViewIterator:: VectorViewIterator — Konstruktor
 
 Inicjuje nowe wystąpienie klasy VectorViewIterator.
 
@@ -409,6 +410,6 @@ Obiekt IVectorView \<T> .
 
 Pierwszy przykład składni jest konstruktorem domyślnym. Drugim przykładem składni jest jawny Konstruktor, który jest używany do konstruowania elementu VectorViewIterator z \<T> obiektu IVectorView.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](platform-namespace-c-cx.md)

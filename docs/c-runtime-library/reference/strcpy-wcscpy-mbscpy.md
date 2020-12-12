@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strcpy, wcscpy, _mbscpy'
 title: strcpy, wcscpy, _mbscpy
 ms.date: 4/2/2020
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8417fa8cf473552dcc509272a2ce660b4be7a68d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176187"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
@@ -124,9 +125,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strcpy**|\<> String. h|
-|**wcscpy**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbscpy**|\<mbstring. h>|
+|**strcpy**|\<string.h>|
+|**wcscpy**|\<string.h> lub \<wchar.h>|
+|**_mbscpy**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -165,7 +166,7 @@ int main( void )
 String = Hello world from strcpy and strcat!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

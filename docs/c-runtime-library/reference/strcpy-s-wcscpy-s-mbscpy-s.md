@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strcpy_s, wcscpy_s, _mbscpy_s _mbscpy_s_l'
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 ms.date: 5/28/2020
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a20f16971ccc7d1f85fe92c5d2d14386e7e55022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176200"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -121,7 +122,7 @@ Rozmiar buforu ciągu docelowego w **`char`** jednostkach dla wąskich i wieloba
 *src*<br/>
 Bufor ciągu źródła zakończony znakiem null.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -231,7 +232,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>

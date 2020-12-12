@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/VERSION (informacje o wersji)
 title: /VERSION (Informacje o wersji)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /VERSION linker option
 - VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
-ms.openlocfilehash: 626461fc7a9fc6dd7b6578e836733d154a66862a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c6a27e4829c4acf66db2887e01a147aceb1c5d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176369"
 ---
 # <a name="version-version-information"></a>/VERSION (Informacje o wersji)
 
@@ -26,34 +27,34 @@ ms.locfileid: "62316499"
 
 ## <a name="arguments"></a>Argumenty
 
-*główne* i *pomocnicza*<br/>
-Numer wersji, które mają w nagłówku pliku .exe lub .dll.
+*Główne* i *pomocnicze*<br/>
+Żądany numer wersji w nagłówku pliku. exe lub. dll.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja / Version informuje konsolidator, aby umieścił numer wersji w nagłówku pliku .exe lub .dll. Użyj polecenia DUMPBIN [/HEADERS](headers.md) aby zobaczyć pole wersji obrazu OPCJONALNYCH wartości NAGŁÓWKA, aby zobaczyć efekt Version.
+Opcja/VERSION nakazuje konsolidatorowi umieszczenie numeru wersji w nagłówku pliku. exe lub. dll. Użyj polecenia DUMPBIN [/Headers](headers.md) , aby wyświetlić pole wersja obrazu opcjonalnych wartości nagłówka, aby zobaczyć efekt/Version.
 
-*Głównych* i *pomocnicza* argumenty są liczbami dziesiętnymi z zakresu od 0 do 65 535. Wartość domyślna to wersja 0,0.
+Argumenty *Główne* i *pomocnicze* są liczbami dziesiętnymi z zakresu od 0 do 65 535. Wartość domyślna to 0,0.
 
-Informacje o określony za pomocą Version nie ma wpływu na informacje o wersji, który pojawia się dla aplikacji, gdy wyświetlić jego właściwości w Eksploratorze plików. Czy informacje o wersji pochodzą z pliku zasobu, który jest używany do tworzenia aplikacji. Zobacz [Edytor informacji o wersji](../../windows/version-information-editor.md) Aby uzyskać więcej informacji.
+Informacje podane w pliku/VERSION nie mają wpływu na informacje o wersji, które pojawiają się dla aplikacji podczas przeglądania jej właściwości w Eksploratorze plików. Informacje o tej wersji pochodzą z pliku zasobów, który jest używany do kompilowania aplikacji. Aby uzyskać więcej informacji, zobacz [Edytor informacji o wersji](../../windows/version-information-editor.md) .
 
-Innym sposobem, aby wstawić numer wersji jest [wersji](version-c-cpp.md) instrukcji definicji modułu.
+Innym sposobem wstawienia numeru wersji jest instrukcja [Version](version-c-cpp.md) -Definition.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **ogólne** stronę właściwości.
+1. Kliknij stronę właściwości **Ogólne** .
 
-1. Modyfikowanie **wersji** właściwości.
+1. Zmodyfikuj właściwość **Version** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

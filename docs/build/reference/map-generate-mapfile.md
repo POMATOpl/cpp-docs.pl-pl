@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/MAP (Generuj Mapfile)
 title: /MAP (Generuj plik mapy)
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - mapfiles, specifying file name
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e3823099b4893dcf344a0b1aae99577d850821
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176434"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (Generuj plik mapy)
 
@@ -31,43 +32,43 @@ ms.locfileid: "62321608"
 ## <a name="arguments"></a>Argumenty
 
 *Nazwa pliku*<br/>
-Określone przez użytkownika nazwa pliku mapfile. Zastępuje ona nazwę domyślną.
+Określona przez użytkownika nazwa mapfile. Zastępuje domyślną nazwę.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/map informuje konsolidator, aby utworzył plik mapowania.
+Opcja/MAP informuje konsolidator, aby utworzył mapfile.
 
-Domyślnie konsolidator nazwy pliku mapfile z podstawowej nazwy programu i map rozszerzenia. Opcjonalny *filename* służy do przesłaniania domyślnej nazwy dla pliku mapowania.
+Domyślnie konsolidator nazywa mapfile z nazwą podstawową programu i rozszerzeniem. map. Opcjonalna nazwa *pliku* pozwala zastąpić domyślną nazwę mapfile.
 
-Plik mapy jest plik tekstowy, który zawiera następujące informacje o podłączanym programie:
+Mapfile to plik tekstowy, który zawiera następujące informacje o połączonym programie:
 
-- Nazwa modułu, który jest nazwa podstawowa pliku
+- Nazwa modułu, która jest podstawową nazwą pliku
 
-- Sygnaturę czasową od nagłówka pliku programu, (a nie z systemu plików)
+- Sygnatura czasowa z nagłówka pliku programu (nie z systemu plików)
 
-- Lista grup w programie, przy użyciu adresu początkowego każdej grupy (jako *sekcji*:*przesunięcie*), długość, nazwę grupy i klasy
+- Lista grup w programie, z adresem początkowym każdej grupy ( *sekcja*:*przesunięcie*), długość, nazwa grupy i Klasa
 
-- Lista symboli publicznych, przy użyciu poszczególnych adresów (jako *sekcji*:*przesunięcie*), symbolu nazwę, adres płaskie i pliku .obj, na którym jest zdefiniowany symbol
+- Lista symboli publicznych, z każdym adresem ( *sekcja*:*przesunięcie*), nazwą symbolu, adresem płaskim i plikiem. obj, gdzie symbol jest zdefiniowany
 
-- Punkt wejścia (jako *sekcji*:*przesunięcie*)
+- Punkt wejścia ( *sekcja*:*przesunięcie*)
 
-[/MapInfo](mapinfo-include-information-in-mapfile.md) opcja określa dodatkowe informacje, które mają zostać uwzględnione w pliku mapfile.
+Opcja [/MapInfo](mapinfo-include-information-in-mapfile.md) określa dodatkowe informacje do uwzględnienia w mapfile.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **debugowania** stronę właściwości.
+1. Kliknij stronę właściwości **debugowania** .
 
-1. Modyfikowanie **Generuj plik mapy** właściwości.
+1. Zmodyfikuj właściwość **Generuj plik mapy** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>.
+1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A> .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

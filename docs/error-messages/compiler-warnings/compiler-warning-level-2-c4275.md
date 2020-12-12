@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 2) C4275'
 title: Ostrzeżenie kompilatora (poziom 2) C4275
 ms.date: 02/08/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: ad12c1c27006a57c8339e9dad82e4d8e1a239a6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0dd212d7439b73c28a5426574b72ff8150abe93c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173652"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Ostrzeżenie kompilatora (poziom 2) C4275
 
@@ -33,7 +34,7 @@ Aby zminimalizować prawdopodobieństwo uszkodzenia danych podczas eksportowania
 
 Można uniknąć eksportowania klas przez zdefiniowanie biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi, oraz funkcje, które można wywołać w celu utworzenia wystąpienia i usunięcia obiektów typu.  Następnie można wywołać funkcje wirtualne w typie.
 
-C4275 można zignorować w wizualizacji C++ , jeśli pochodzą z typu w bibliotece C++ standardowej, kompilując wersję debug ( **/MTD**) i gdzie komunikat o błędzie kompilatora odnosi się do `_Container_base`.
+C4275 można zignorować w Visual C++, jeśli pochodzą z typu w standardowej bibliotece języka C++, kompilacja wydania debugowania (**/MTD**) i miejsce, do którego odwołuje się komunikat błędu kompilatora `_Container_base` .
 
 ```cpp
 // C4275.cpp

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat słów kluczowych: Context-Sensitive (C++/CLI i C++/CX)'
 title: Kontekstowe słowa kluczowe  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c005b1a6149f010b9729db5459fa3951bc50521
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176863"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontekstowe słowa kluczowe  (C++/CLI i C++/CX)
 
@@ -46,7 +47,7 @@ Poniżej znajduje się lista kontekstowych słów kluczowych:
 
 - [sealed](sealed-cpp-component-extensions.md)
 
-- `where`(część [rodzajów](generics-cpp-component-extensions.md))
+- `where` (część [rodzajów](generics-cpp-component-extensions.md))
 
 Na potrzeby czytelności można ograniczyć użycie słów kluczowych kontekstowych jako symboli zdefiniowanych przez użytkownika.
 
@@ -58,7 +59,7 @@ Na potrzeby czytelności można ograniczyć użycie słów kluczowych kontekstow
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -68,7 +69,7 @@ Opcja kompilatora:`/ZW`
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -99,6 +100,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

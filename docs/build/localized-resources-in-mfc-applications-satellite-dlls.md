@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zlokalizowane zasoby w aplikacjach MFC: satelitarne biblioteki DLL'
 title: 'Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: 1f512cc17832564b5eb530b97f8bfb2642c43d43
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 4af771999c97af40ffe50399c77e91aec1af992a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176473"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite
 
@@ -39,19 +40,19 @@ MFC próbuje załadować bibliotekę DLL zasobów dla każdego z następujących
 
 Jeśli MFC nie odnajdzie żadnych satelitarnych bibliotek DLL, używa wszelkich zasobów zawartych w samej aplikacji.
 
-Załóżmy na przykład, że aplikacja LangExample. exe używa MFC i działa w systemie wielu interfejsów użytkownika; język interfejsu użytkownika systemu to plk [angielski (Stany Zjednoczone), a bieżący język interfejsu użytkownika jest ustawiony na FRC [kanadyjski francuski]. MFC wyszukuje następujące biblioteki DLL w następującej kolejności:
+Załóżmy na przykład, że aplikacja LangExample.exe używa MFC i działa w systemie wielu interfejsów użytkownika; język interfejsu użytkownika systemu to plk [angielski (Stany Zjednoczone), a bieżący język interfejsu użytkownika jest ustawiony na FRC [kanadyjski francuski]. MFC wyszukuje następujące biblioteki DLL w następującej kolejności:
 
-1. LangExampleFRC. dll (język UI użytkownika).
+1. LangExampleFRC.dll (język interfejsu użytkownika).
 
-1. LangExampleFRA. dll (język interfejsu użytkownika (bez języka), w tym przykładzie francuskim (Francja).
+1. W tym przykładzie w języku francuskim (Francja) LangExampleFRA.dll (język interfejsu użytkownika i bez języka).
 
-1. LangExampleENU. dll (język interfejsu użytkownika systemu).
+1. LangExampleENU.dll (język interfejsu użytkownika systemu).
 
-1. LangExampleLOC. dll.
+1. LangExampleLOC.dll.
 
-Jeśli żadna z tych bibliotek DLL nie zostanie znaleziona, MFC używa zasobów w LangExample. exe.
+Jeśli żadna z tych bibliotek DLL nie zostanie znaleziona, MFC używa zasobów w LangExample.exe.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)<br/>
-[TN057: lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)
+[TN057: Lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)

@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej na temat: zmiana nazwy atrybutu importu'
 title: Zmień nazwę atrybutu importu
 ms.date: 08/29/2019
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: 520369f0308078fead2947e27a512f25a3ad3fab
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3003300887dadbab5cf05396ff3fa38b6dd29026
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176603"
 ---
 # <a name="rename-import-attribute"></a>Zmień nazwę atrybutu importu
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Działa wokół problemów z kolizją nazw.
 
@@ -23,7 +24,7 @@ Działa wokół problemów z kolizją nazw.
 
 ### <a name="parameters"></a>Parametry
 
-*Staranazwa*\
+*StaraNazwa*\
 Stara nazwa w bibliotece typów.
 
 *NewName*\
@@ -38,7 +39,7 @@ Atrybutu **zmiany nazwy** można użyć, gdy nazwa w bibliotece typów jest zgod
 > [!NOTE]
 > Zastąpienie dotyczy nazwy użytej w bibliotece typów, a nie nazwy użytej w pliku nagłówkowym.
 
-Załóżmy na przykład, że właściwość o nazwie `MyParent` istnieje w bibliotece typów, a makro `GetMyParent` jest zdefiniowane w pliku nagłówkowym i używane przed `#import`. Ponieważ `GetMyParent` jest domyślną nazwą funkcji otoki dla właściwości `get` obsługi błędów, występuje kolizja nazw. Aby obejść ten problem, użyj następującego atrybutu w instrukcji `#import`:
+Załóżmy na przykład, że właściwość o nazwie `MyParent` istnieje w bibliotece typów, a makro `GetMyParent` jest zdefiniowane w pliku nagłówkowym i używane wcześniej `#import` . Ponieważ `GetMyParent` jest to domyślna nazwa funkcji otoki dla właściwości obsługa błędów `get` , zostanie wystąpiła kolizja nazw. Aby obejść ten problem, użyj następującego atrybutu w `#import` instrukcji:
 
 ```cpp
 #import MyTypeLib.tlb rename("MyParent","MyParentX")
@@ -50,11 +51,11 @@ który zmienia nazwę `MyParent` w bibliotece typów. Próba zmiany nazwy `GetMy
 #import MyTypeLib.tlb rename("GetMyParent","GetMyParentX")
 ```
 
-Jest to spowodowane tym, że nazwa `GetMyParent` występuje tylko w pliku nagłówkowym biblioteki typów.
+Jest to spowodowane faktem, że nazwa `GetMyParent` występuje tylko w pliku nagłówkowym biblioteki typów.
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
 ## <a name="see-also"></a>Zobacz też
 
-[#import atrybuty](../preprocessor/hash-import-attributes-cpp.md)\
+[Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)
