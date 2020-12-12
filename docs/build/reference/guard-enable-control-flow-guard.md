@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej o:/Guard (Włącz ochronę przepływu sterowania)
 title: /guard (włącz ochronę przepływu sterowania)
 ms.date: 11/04/2016
 f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8661f94e0ee35f8d5e2c8caba1fc01bbf4072876
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65a027a845ab7ea53fbe2ef1a6ba6bcd4a3dde87
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191774"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (włącz ochronę przepływu sterowania)
 
@@ -30,7 +31,7 @@ Opcja **/Guard: CF** powoduje, że kompilator analizuje przepływ sterowania dla
 
 Gdy jest określona opcja **/Guard: CF** Control Flow Guard (cfg), kompilator i konsolidator Wstaw dodatkowe środowisko uruchomieniowe sprawdza zabezpieczenia w celu wykrycia prób złamania zabezpieczeń kodu. Podczas kompilowania i łączenia wszystkie wywołania pośrednie w kodzie są analizowane w celu znalezienia każdej lokalizacji, do której kod może dotrzeć, gdy zostanie prawidłowo uruchomiony. Te informacje są przechowywane w dodatkowych strukturach w nagłówkach plików binarnych. Kompilator wprowadza również kontrolę przed każdym pośrednim wywołaniem w kodzie, który gwarantuje, że obiekt docelowy jest jedną z zweryfikowanych lokalizacji. Jeśli sprawdzenie zakończy się niepowodzeniem w czasie wykonywania w systemie operacyjnym z obsługą CFG, system operacyjny zamknie program.
 
-Typowy atak na oprogramowanie wykorzystuje usterki w obsłudze skrajnych lub nieoczekiwanych danych wejściowych. Starannie spreparowane dane wejściowe do aplikacji mogą zastąpić lokalizację, która zawiera wskaźnik do kodu wykonywalnego. Może służyć do przekierowania przepływu sterowania do kodu kontrolowanego przez osobę atakującą. Testy środowiska uruchomieniowego CFG nie rozwiązują usterek uszkodzenia danych w pliku wykonywalnym. Zamiast tego utrudniają osobom atakującym korzystanie z dowolnego kodu. CFG to narzędzie ograniczenia, które uniemożliwia wywołania do lokalizacji innych niż punkty wejścia funkcji w kodzie. Jest to podobne do sposobu, w jaki funkcja zapobiegania wykonywaniu danych (DEP), sprawdzenia stosu [/GS](gs-buffer-security-check.md) i [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) i [/HIGHENTROPYVAe](highentropyva-support-64-bit-aslr.md) generowanie losowe układu przestrzeni adresowej (ASLR) zmniejszają prawdopodobieństwo, że kod stał się wektorem wykorzystującym luki w zabezpieczeniach.
+Typowy atak na oprogramowanie wykorzystuje usterki w obsłudze skrajnych lub nieoczekiwanych danych wejściowych. Starannie spreparowane dane wejściowe do aplikacji mogą zastąpić lokalizację, która zawiera wskaźnik do kodu wykonywalnego. Może służyć do przekierowania przepływu sterowania do kodu kontrolowanego przez osobę atakującą. Testy środowiska uruchomieniowego CFG nie rozwiązują usterek uszkodzenia danych w pliku wykonywalnym. Zamiast tego utrudniają osobom atakującym korzystanie z dowolnego kodu. CFG to narzędzie ograniczenia, które uniemożliwia wywołania do lokalizacji innych niż punkty wejścia funkcji w kodzie. Jest to podobne do sposobu, w jaki funkcja zapobiegania wykonywaniu danych (DEP), sprawdzenia stosu  [/GS](gs-buffer-security-check.md) i [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) i [/HIGHENTROPYVAe](highentropyva-support-64-bit-aslr.md) generowanie losowe układu przestrzeni adresowej (ASLR) zmniejszają prawdopodobieństwo, że kod stał się wektorem wykorzystującym luki w zabezpieczeniach.
 
 Opcja **/Guard: CF** musi być przenoszona do kompilatora i konsolidatora, aby kompilować kod wykorzystujący technikę zapobiegania korzystaniu z usługi cfg. Jeśli dane binarne są kompilowane przy użyciu jednego `cl` polecenia, kompilator przekazuje opcję do konsolidatora. Jeśli kompilujesz i łączysz oddzielnie, opcja musi być ustawiona zarówno dla kompilatora, jak i konsolidatora. Opcja konsolidatora/DYNAMICBASE jest również wymagana. Aby sprawdzić, czy plik binarny zawiera dane CFG, użyj `dumpbin /headers /loadconfig` polecenia. Pliki binarne z włączoną funkcją CFG zawierają `Guard` listę właściwości exe lub dll, a flagi ochrony obejmują `CF Instrumented` i `FID table present` .
 
@@ -48,7 +49,7 @@ Kod skompilowany za pomocą **/Guard: CF** może być połączony z bibliotekami
 
 1. W kontrolce menu rozwijanego wybierz opcję **tak** , aby włączyć ochronę przepływu sterowania, lub przycisk **nie** , aby go wyłączyć.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

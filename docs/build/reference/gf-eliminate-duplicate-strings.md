@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/GF (eliminowanie ciągów zduplikowanych)
 title: /GF (Eliminowanie ciągów zduplikowanych)
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: e0d23004c7b710f51065db52410fbb15b7cca040
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65c8cca610b9e01cf49939c2074a698b00c6e338
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191943"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminowanie ciągów zduplikowanych)
 
-Umożliwia kompilatorowi utworzyć pojedynczą kopię identycznych ciągów w obrazie programu i w pamięci podczas wykonywania. Jest to optymalizacja o nazwie *buforowanie ciągów,* która może tworzyć mniejsze programy.
+Umożliwia kompilatorowi utworzenie pojedynczej kopii identycznych ciągów w obrazie programu i w pamięci podczas wykonywania. Jest to Optymalizacja nazywana *buforowaniem ciągów* , która może tworzyć mniejsze programy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,11 +34,11 @@ Umożliwia kompilatorowi utworzyć pojedynczą kopię identycznych ciągów w ob
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli używasz **/GF**, system operacyjny nie zamienia część ciągu pamięci i może odczytać ciągi z powrotem z pliku obrazu.
+Jeśli używasz **/GF**, system operacyjny nie zamienia części ciągu pamięci i może odczytywać ciągi z powrotem z pliku obrazu.
 
-**/GF** puluje ciągi jako tylko do odczytu. Jeśli spróbujesz zmodyfikować ciągi w **/GF**, wystąpi błąd aplikacji.
+**/GF** pule ciągów jako tylko do odczytu. Jeśli spróbujesz zmodyfikować ciągi w obszarze **/GF**, wystąpi błąd aplikacji.
 
-Buforowanie ciągów umożliwia, co było przeznaczone jako wiele wskaźników do wielu buforów, aby być wiele wskaźników do jednego buforu. W poniższym `s` kodzie i `t` są inicjowane z tym samym ciągiem. Buforowanie ciągów powoduje, że wskazują one tę samą pamięć:
+Buforowanie ciągów pozwala na to, co było przeznaczone jako wiele wskaźników do wielu buforów, aby można było wiele wskaźników do jednego buforu. W poniższym kodzie `s` i `t` są inicjowane z tym samym ciągiem. Buforowanie ciągów powoduje, że wskazują one na tę samą pamięć:
 
 ```
 char *s = "This is a character buffer";
@@ -45,22 +46,22 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
-> Opcja [/ZI,](z7-zi-zi-debug-information-format.md) używana do edycji i kontynuowania, automatycznie ustawia opcję **/GF.**
+> Opcja [/Zi](z7-zi-zi-debug-information-format.md) używana do edycji i kontynuowania powoduje automatyczne ustawienie opcji **/GF** .
 
 > [!NOTE]
-> Opcja kompilatora **/GF** tworzy adresowalną sekcję dla każdego unikatowego ciągu. Domyślnie plik obiektu może zawierać maksymalnie 65 536 adresowalnych sekcji. Jeśli program zawiera więcej niż 65 536 ciągów, użyj opcji kompilatora [/bigobj,](bigobj-increase-number-of-sections-in-dot-obj-file.md) aby utworzyć więcej sekcji.
+> Opcja kompilatora **/GF** tworzy sekcję adresowaną dla każdego unikatowego ciągu. Domyślnie plik obiektu może zawierać do 65 536 sekcji do adresowania. Jeśli program zawiera więcej niż 65 536 ciągów, użyj opcji kompilatora [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) , aby utworzyć więcej sekcji.
 
-**/GF** obowiązuje, gdy używany jest [/O1](o1-o2-minimize-size-maximize-speed.md) lub [/O2.](o1-o2-minimize-size-maximize-speed.md)
+**/GF** obowiązuje, gdy używany jest [/O1](o1-o2-minimize-size-maximize-speed.md) lub [/O2](o1-o2-minimize-size-maximize-speed.md) .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij folder **C/C++.**
+1. Kliknij folder **C/C++** .
 
-1. Kliknij stronę właściwości **Generowanie kodu.**
+1. Kliknij stronę właściwości **generowanie kodu** .
 
-1. Zmodyfikuj właściwość **Włącz buforowanie ciągów.**
+1. Zmodyfikuj właściwość **Włącz buforowanie ciągów** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -69,4 +70,4 @@ char *t = "This is a character buffer";
 ## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pliki podpowiedzi'
 title: Pliki wskazówki
 ms.date: 02/26/2019
 f1_keywords:
@@ -11,34 +12,34 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9dc4655bde832011afcf03aa7f9a5be34807420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322313"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191657"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 
-*Plik wskazówki* zawiera makra, które w przeciwnym razie spowodowałyby pominięcie regionów kodu przez analizator bazy danych przeglądania języka C++. Po otwarciu projektu Visual Studio C++ analizator analizuje kod w każdym pliku źródłowym w projekcie i tworzy bazę danych z informacjami o każdym identyfikatorze. IDE używa tych informacji do obsługi funkcji przeglądania kodu, takich jak **przeglądarka widok klasy** i **pasek nawigacyjny**.
+*Plik podpowiedzi* zawiera makra, które w przeciwnym razie mogłyby spowodować pominięcie regionów kodu przez analizator bazy danych przeglądania C++. Po otwarciu projektu Visual Studio C++ Analizator analizuje kod w każdym pliku źródłowym w projekcie i tworzy bazę danych z informacjami o każdym identyfikatorze. IDE używa tych informacji do obsługi funkcji przeglądania kodu, takich jak przeglądarka **Widok klasy** i **pasek nawigacyjny**.
 
-Analizator bazy danych przeglądania języka C++ jest analizatorem rozmytym, który może analizować duże ilości kodu w krótkim czasie. Jednym z powodów, dla których jest szybki, jest to, że pomija zawartość bloków. Na przykład rejestruje tylko lokalizację i parametry funkcji i ignoruje jej zawartość. Niektóre makra mogą powodować problemy z heurystyką używaną do określenia początku i końca bloku. Te problemy powodują, że regiony kodu mają być rejestrowane nieprawidłowo.
+Analizator bazy danych przeglądania C++ jest analizatorem rozmytym, który może analizować duże ilości kodu w krótkim czasie. Jednym z powodów, że jest to możliwe, ponieważ pomija zawartość bloków. Na przykład tylko rejestruje lokalizację i parametry funkcji i ignoruje jej zawartość. Niektóre makra mogą powodować problemy z algorytmami heurystycznymi używanymi do określenia początku i końca bloku. Te problemy powodują, że regiony kodu mają być nieprawidłowo zarejestrowane.
 
-Te pominięte regiony mogą objawiać się na wiele sposobów:
+Te pominięte regiony można zamanifestować na wiele sposobów:
 
-- Brakujące typy i funkcje w **widoku klasy,** przejdź do i **pasku** **nawigacyjnym**
+- Brak typów i funkcji na **Widok klasy**, **Przejdź do** i **pasek nawigacyjny**
 
-- Nieprawidłowe zakresy na pasku **nawigacyjnym**
+- Niepoprawne zakresy na **pasku nawigacyjnym**
 
-- Sugestie **tworzenia deklaracji/definicji** dla funkcji, które są już zdefiniowane
+- Sugestie dotyczące **tworzenia deklaracji/definicji** dla funkcji, które są już zdefiniowane
 
-Plik wskazówki zawiera wskazówki, które można dostosowywać przez użytkownika, które mają taką samą składnię jak definicje makr C/C++. Visual C++ zawiera wbudowany plik wskazówek, który jest wystarczający dla większości projektów. Można jednak utworzyć własne pliki podpowiedzi, aby poprawić analizatora specjalnie dla projektu.
+Plik wskazówki zawiera wskazówki dostosowywane przez użytkownika, które mają taką samą składnię jak definicje makr C/C++. Visual C++ zawiera wbudowany plik wskazówek, który jest wystarczający dla większości projektów. Można jednak utworzyć własne pliki wskazówek, aby poprawić parser przeznaczony dla projektu.
 
 > [!IMPORTANT]
-> Jeśli zmodyfikujesz lub dodasz plik podpowiedzi, musisz podjąć dodatkowe kroki, aby zmiany zostały wprowadzone:
+> W przypadku zmodyfikowania lub dodania pliku wskazówki należy wykonać dodatkowe czynności, aby zmiany zaczęły obowiązywać:
 >
-> - W wersjach przed programem Visual Studio 2017 w wersji 15.6: Usuń plik sdf i/lub plik VC.db w rozwiązaniu dla wszystkich zmian.
-> - W programie Visual Studio 2017 w wersji 15.6 i nowszych: Zamknij i ponownie otwórz rozwiązanie po dodaniu nowych plików wskazówek.
+> - W wersjach wcześniejszych niż program Visual Studio 2017 w wersji 15,6: Usuń plik. sdf i/lub plik VC. DB w rozwiązaniu, aby uzyskać wszystkie zmiany.
+> - W programie Visual Studio 2017 w wersji 15,6 lub nowszej: Zamknij i ponownie otwórz rozwiązanie po dodaniu nowych plików podpowiedzi.
 
 ## <a name="scenario"></a>Scenariusz
 
@@ -49,37 +50,37 @@ void Function() NOEXCEPT
 }
 ```
 
-Bez pliku podpowiedzi `Function` nie jest widoczny w widoku **klasy**, Przejdź **do** lub pasku **nawigacyjnym**. Po dodaniu pliku podpowiedzi z tą definicją makra `NOEXCEPT` analizator teraz rozumie i zastępuje makro, co pozwala na poprawne analizowanie funkcji:
+Bez pliku podpowiedzi nie jest `Function` wyświetlany w **Widok klasy**, **Przejdź do** lub na **pasku nawigacyjnym**. Po dodaniu pliku wskazówki z tą definicją makra analizator składni teraz rozumie i zastępuje `NOEXCEPT` makro, co umożliwia jego prawidłowe przeanalizowanie funkcji:
 
 ```cpp.hint
 #define NOEXCEPT
 ```
 
-## <a name="disruptive-macros"></a>Destrukcyjne makra
+## <a name="disruptive-macros"></a>Makra zakłócające
 
-Istnieją dwie kategorie makr, które zakłócają analizator:
+Istnieją dwie kategorie makr, które zakłócają analizator składni:
 
-- Makra hermetyzujące słowa kluczowe, które zdobią funkcję
+- Makra, które hermetyzują słowa kluczowe, które umieszczają funkcję
 
    ```cpp
    #define NOEXCEPT noexcept
    #define STDMETHODCALLTYPE __stdcall
    ```
 
-   W przypadku tych typów makr w pliku podpowiedzi wymagana jest tylko nazwa makra:
+   W przypadku tych typów makr w pliku wskazówki jest wymagana tylko nazwa makra:
 
    ```cpp.hint
    #define NOEXCEPT
    #define STDMETHODCALLTYPE
    ```
 
-- Makra zawierające niesymetryzowe nawiasy
+- Makra zawierające nawiasy niezrównoważone
 
    ```cpp
    #define BEGIN {
    ```
 
-   W przypadku tych typów makr zarówno nazwa makra, jak i jego zawartość są wymagane w pliku podpowiedzi:
+   W przypadku tych typów makr nazwa makra i jego zawartość są wymagane w pliku wskazówki:
 
    ```cpp.hint
    #define BEGIN {
@@ -87,93 +88,93 @@ Istnieją dwie kategorie makr, które zakłócają analizator:
 
 ## <a name="editor-support"></a>Obsługa edytora
 
-Począwszy od programu Visual Studio 2017 w wersji 15.8 istnieje kilka funkcji umożliwiających identyfikację przełomowych makr:
+Począwszy od programu Visual Studio 2017 w wersji 15,8, istnieje kilka funkcji umożliwiających zidentyfikowanie makr zakłócających:
 
-- Wyróżniane są makra znajdujące się wewnątrz regionów pominiętych przez analizatora.
+- Makra, które znajdują się wewnątrz regionów pominiętych przez parser, są wyróżnione.
 
-- Istnieje szybka akcja, aby utworzyć plik podpowiedzi, który zawiera podświetlone makro lub jeśli istnieje istniejący plik podpowiedzi, aby dodać makro do pliku podpowiedzi.
+- Istnieje szybka akcja umożliwiająca utworzenie pliku podpowiedzi zawierającego wyróżnione makro lub istniejący plik podpowiedzi, aby dodać makro do pliku wskazówki.
 
-![Podświetlone makro.](media/hint-squiggle-and-actions.png "Podpowiedź squiggle i szybkie akcje")
+![Wyróżnione makro.](media/hint-squiggle-and-actions.png "Podpowiedź i szybkie akcje")
 
-Po wykonaniu jednej z szybkich akcji analizator ponownie analizuje pliki, których dotyczy plik podpowiedzi.
+Po wykonaniu jednej z szybkich akcji Analizator analizuje pliki, na które ma wpływ plik wskazówki.
 
-Domyślnie makro problemu jest wyróżnione jako sugestia. Podświetlenie można zmienić na coś bardziej zauważalnego, na przykład czerwoną lub zieloną faliskę. Użyj opcji **Makra w pominiętych regionach przeglądania** w sekcji **Squiggles kodu** w obszarze**Opcje** >  **narzędzi** > **Edytor** > tekstu**Widok C/C++.** > **View**
+Domyślnie makro problemu jest wyróżnione jako sugestia. Wyróżnienie można zmienić na coś bardziej zauważalnego, na przykład czerwonego lub zielonego. Użyj **makr w obszarze pominięte regiony przeglądania** w sekcji **kod** zygzaks w obszarze **Narzędzia**  >  **Opcje**  >  **Edytor tekstu**  >  **C/C++**  >  .
 
-![Makra w opcji Pominięte regiony przeglądania.](media/skipped-regions-squiggle-option.png "Pominięte regiony squiggle opcji.")
+![Makra w pominiętych opcjach regionów przeglądania.](media/skipped-regions-squiggle-option.png "Opcja zygzakowata regionów pominiętych.")
 
-## <a name="display-browsing-database-errors"></a>Wyświetlanie błędów przeglądania bazy danych
+## <a name="display-browsing-database-errors"></a>Wyświetl błędy przeglądania bazy danych
 
-Polecenie Menu Błędy przeglądania bazy danych **w programie Project** > **Display** wyświetla wszystkie regiony, w których nie można przeanalizować na **liście błędów**. Polecenie ma usprawnić tworzenie początkowego pliku podpowiedzi. Jednak analizator nie może stwierdzić, czy przyczyną błędu było destrukcyjne makro, więc należy ocenić każdy błąd. Uruchom polecenie **Wyświetl błędy bazy danych przeglądania** i przejdź do każdego błędu, aby załadować plik, którego dotyczy problem w edytorze. Po załadowaniu pliku, jeśli makra znajdują się wewnątrz regionu, są one wyróżnione. Można wywołać szybkie akcje, aby dodać je do pliku podpowiedzi. Po aktualizacji pliku podpowiedzi lista błędów jest aktualizowana automatycznie. Alternatywnie, jeśli modyfikujesz plik podpowiedzi ręcznie, możesz użyć polecenia **Rescan Solution,** aby wyzwolić aktualizację.
+  >  Polecenie menu **Wyświetl błędy bazy danych** w projekcie wyświetla wszystkie regiony, które nie zostały przeanalizowane w **Lista błędów**. Polecenie jest przeznaczone do usprawnienia tworzenia pliku wskazówki początkowej. Analizator nie może jednak stwierdzić, czy przyczyną błędu było makro zakłócające, dlatego należy ocenić każdy błąd. Uruchom polecenie **Wyświetl błędy bazy danych** i przejdź do każdego błędu, aby załadować odnośny plik w edytorze. Po załadowaniu pliku, jeśli którykolwiek z makr znajduje się w regionie, są one wyróżnione. Można wywołać szybkie akcje, aby dodać je do pliku wskazówki. Po aktualizacji pliku podpowiedzi Lista błędów zostanie automatycznie zaktualizowana. Alternatywnie, jeśli modyfikujesz plik wskazówki ręcznie, możesz użyć polecenia Skanuj ponownie **rozwiązanie** , aby wyzwolić aktualizację.
 
 ## <a name="architecture"></a>Architektura
 
-Pliki wskazówek odnoszą się do katalogów fizycznych, a nie katalogów logicznych wyświetlanych w **Eksploratorze rozwiązań**. Nie trzeba dodawać pliku podpowiedzi do projektu, aby plik podpowiedzi miał wpływ. System analizowania używa plików wskazówek tylko wtedy, gdy analizuje pliki źródłowe.
+Pliki wskazówek odnoszą się do katalogów fizycznych, a nie katalogów logicznych przedstawionych w **Eksplorator rozwiązań**. Nie trzeba dodawać pliku wskazówki do projektu, aby plik wskazówki miał efekt. System analizowania używa plików podpowiedzi tylko wtedy, gdy analizuje pliki źródłowe.
 
-Każdy plik podpowiedzi nosi nazwę **cpp.hint**. Wiele katalogów może zawierać plik podpowiedzi, ale w określonym katalogu może wystąpić tylko jeden plik podpowiedzi.
+Każdy plik wskazówki ma nazwę **cpp. Wskazówka**. Wiele katalogów może zawierać plik wskazówki, ale tylko jeden plik podpowiedzi może wystąpić w określonym katalogu.
 
-Na projekt może mieć wpływ zero lub więcej plików podpowiedzi. Jeśli nie ma żadnych plików wskazówek, system analizowania używa technik odzyskiwania błędów, aby zignorować nieczytelny kod źródłowy. W przeciwnym razie system analizowania używa następującej strategii, aby znaleźć i zebrać wskazówki.
+Na Twój projekt może mieć wpływ zero lub więcej plików podpowiedzi. W przypadku braku plików podpowiedzi system analizowania używa technik odzyskiwania błędów, aby zignorować nierozpoznawalny kod źródłowy. W przeciwnym razie system analizowania używa następującej strategii do znajdowania i zbierania wskazówek.
 
 ### <a name="search-order"></a>Kolejność wyszukiwania
 
-System analizowania przeszukuje katalogi w poszukiwaniu plików podpowiedzi w następującej kolejności.
+System analizowania Przeszukuje katalogi pod kątem plików podpowiedzi w następującej kolejności.
 
-- Katalog zawierający pakiet instalacyjny dla programu Visual C++ (**vcpackages**). Ten katalog zawiera wbudowany plik podpowiedzi opisujący symbole w często używanych plikach systemowych, takich jak **windows.h**. W związku z tym projekt automatycznie dziedziczy większość wskazówek, które potrzebuje.
+- Katalog zawierający pakiet instalacyjny programu Visual C++ (**vcpackages**). Ten katalog zawiera wbudowaną wskazówkę opisującą symbole w często używanych plikach systemowych, takich jak **Windows. h**. W związku z tym projekt automatycznie dziedziczy większość wskazówek, których potrzebuje.
 
-- Ścieżka z katalogu głównego pliku źródłowego do katalogu zawierającego sam plik źródłowy. W typowym projekcie Programu Visual Studio C++ katalog główny zawiera plik rozwiązania lub projektu.
+- Ścieżka z katalogu głównego pliku źródłowego do katalogu, który zawiera sam plik źródłowy. W typowym projekcie programu Visual Studio C++ katalog główny zawiera rozwiązanie lub plik projektu.
 
-   Wyjątkiem od tej reguły jest, jeśli *plik zatrzymania* znajduje się w ścieżce do pliku źródłowego. Plik zatrzymania to dowolny plik o nazwie **cpp.stop**. Plik zatrzymania zapewnia dodatkową kontrolę nad kolejnością wyszukiwania. Zamiast zaczynać od katalogu głównego, system analizowania przeszukuje katalog zawierający plik zatrzymania do katalogu zawierającego plik źródłowy. W typowym projekcie nie potrzebujesz pliku zatrzymania.
+   Wyjątkiem od tej reguły jest, czy *plik zatrzymania* znajduje się w ścieżce do pliku źródłowego. Plik Stop to każdy plik o nazwie **cpp. Stop**. Plik Stop zapewnia dodatkową kontrolę nad kolejnością wyszukiwania. Zamiast rozpoczynać się od katalogu głównego, system analizowania wyszukuje z katalogu zawierającego plik zatrzymania do katalogu, który zawiera plik źródłowy. W typowym projekcie nie jest potrzebny plik Stop.
 
-### <a name="hint-gathering"></a>Zbieranie podpowiedzi
+### <a name="hint-gathering"></a>Zbieranie wskazówek
 
-Plik wskazówki zawiera zero lub więcej *wskazówek*. Wskazówka jest definiowana lub usuwana podobnie jak makro C/C++. Oznacza to, `#define` że dyrektywa preprocesora tworzy lub na `#undef` nowo definiuje wskazówkę, a dyrektywa usuwa wskazówkę.
+Plik podpowiedzi zawiera zero lub więcej *wskazówek*. Wskazówka jest definiowana lub usuwana podobnie jak makro C/C++. Oznacza to, że `#define` dyrektywa preprocesora tworzy lub ponownie definiuje wskazówkę, a `#undef` dyrektywa usuwa wskazówkę.
 
-System analizowania otwiera każdy plik podpowiedzi w opisanej wcześniej kolejności wyszukiwania. Gromadzi wskazówki każdego pliku w zestaw *skutecznych wskazówek,* a następnie używa skutecznych wskazówek do interpretacji identyfikatorów w kodzie.
+System analizowania otwiera każdy plik podpowiedzi w kolejności wyszukiwania opisanej wcześniej. Gromadzi wskazówki poszczególnych plików do zestawu *skutecznych wskazówek*, a następnie używa obowiązujących wskazówek do interpretowania identyfikatorów w kodzie.
 
 System analizowania używa tych reguł do gromadzenia wskazówek:
 
-- Jeśli nowa wskazówka określa nazwę, która nie jest jeszcze zdefiniowana, nowa wskazówka dodaje nazwę do skutecznych wskazówek.
+- Jeśli nowa Wskazówka określa nazwę, która nie jest jeszcze zdefiniowana, Nowa Wskazówka dodaje nazwę do obowiązujących wskazówek.
 
-- Jeśli nowa wskazówka określa nazwę, która jest już zdefiniowana, nowa wskazówka na nowo definiuje istniejącą wskazówkę.
+- Jeśli nowa Wskazówka określa nazwę, która jest już zdefiniowana, Nowa Wskazówka ponownie definiuje istniejącą wskazówkę.
 
-- Jeśli nowa wskazówka `#undef` jest dyrektywa, która określa istniejącą wskazówkę skuteczne, nowa wskazówka usuwa istniejącą wskazówkę.
+- Jeśli nową wskazówką jest `#undef` dyrektywa, która określa istniejącą skuteczną wskazówkę, Nowa Wskazówka Usuwa istniejącą wskazówkę.
 
-Pierwsza reguła oznacza, że skuteczne wskazówki są dziedziczone z wcześniej otwartych plików podpowiedzi. Dwie ostatnie reguły oznaczają, że wskazówki w dalszej kolejności wyszukiwania mogą zastąpić wcześniejsze wskazówki. Na przykład można zastąpić wszystkie poprzednie wskazówki, jeśli utworzysz plik wskazówki w katalogu zawierającym plik źródłowy.
+Pierwsza reguła oznacza, że skuteczne wskazówki są dziedziczone z wcześniej otwartych plików wskazówek. Ostatnie dwie reguły oznaczają, że wskazówki w dalszej kolejności wyszukiwania mogą przesłonić wcześniejsze wskazówki. Na przykład można zastąpić wszystkie poprzednie wskazówki w przypadku utworzenia pliku podpowiedzi w katalogu, który zawiera plik źródłowy.
 
-Aby uzyskać przedstawienie sposobu zbierania wskazówek, zobacz [przykładową](#example) sekcję.
+Aby poznać sposób, w jaki są zbierane wskazówki, zapoznaj się z sekcją [przykładową](#example) .
 
 ### <a name="syntax"></a>Składnia
 
-Wskazówki można tworzyć i usuwać przy użyciu tej samej składni co dyrektywy preprocesora do tworzenia i usuwania makr. W rzeczywistości system analizowania używa preprocesora C/C++ do oceny wskazówek. Aby uzyskać więcej informacji na temat dyrektyw preprocesora, zobacz [#define dyrektywy (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md) i [#undef directive (C/C++).](../../preprocessor/hash-undef-directive-c-cpp.md)
+Wskazówki można tworzyć i usuwać za pomocą tej samej składni co dyrektywy preprocesora do tworzenia i usuwania makr. W rzeczywistości system analizy używa preprocesora C/C++ do szacowania wskazówek. Aby uzyskać więcej informacji na temat dyrektyw preprocesora, zobacz [#define dyrektywie (c/c++)](../../preprocessor/hash-define-directive-c-cpp.md) i [#undef (c/c++)](../../preprocessor/hash-undef-directive-c-cpp.md).
 
-Jedynymi nietypowymi elementami `@<`składni są `@=`ciągi , i `@>` zastępcze. Te ciągi zastępcze specyficzne dla pliku wskazówki są używane tylko w makrach *map.* Mapa to zestaw makr, które odnoszą się do danych, funkcji lub zdarzeń do innych danych, funkcji lub programów obsługi zdarzeń. Na przykład `MFC` używa map do tworzenia `ATL` map [wiadomości](../../mfc/reference/message-maps-mfc.md)i używa map do tworzenia map [obiektów.](../../atl/reference/object-map-macros.md) Ciągi zastępowania specyficzne dla pliku wskazówki oznaczają początkowe, pośrednie i końcowe elementy mapy. Znaczenie makr mapy jest znacząca. W związku z tym każdy ciąg zastępczy celowo ukrywa implementację makra.
+Jedynym nietypowymi elementami składni są `@<` `@=` ciągi, i `@>` . Te wskazówki — ciągi zamienne charakterystyczne dla pliku są używane tylko w makrach *mapy* . Mapa to zestaw makr, które wiążą dane, funkcje lub zdarzenia z innymi danymi, funkcjami lub obsługą zdarzeń. Na przykład `MFC` używa map do tworzenia [map komunikatów](../../mfc/reference/message-maps-mfc.md)i `ATL` używa map do tworzenia [map obiektów](../../atl/reference/object-map-macros.md). Wskazówka-specyficzne dla pliku ciągi zamienne oznaczają początkowe, pośrednie i końcowe elementy mapy. Tylko nazwa makra mapy jest znacząca. W związku z tym każdy ciąg zamienny celowo ukrywa implementację makra.
 
-Wskazówki używają tej składni:
+Wskazówki używają następującej składni:
 
 |Składnia|Znaczenie|
 |------------|-------------|
-|`#define`*ciąg zastępczy* *podpowiedzi*<br /><br /> `#define`*hint-name* `(` *parametr*, ... `)` *ciąg zastępczy*|Dyrektywa preprocesora, która definiuje nową wskazówkę lub na nowo definiuje istniejącą wskazówkę. Po dyrektywie preprocesor zastępuje każde wystąpienie *nazwy podpowiedzi* w kodzie źródłowym *ciągiem zastępczym.*<br /><br /> Drugi formularz składni definiuje wskazówkę podobną do funkcji. Jeśli wskazówka podobna do funkcji występuje w kodzie źródłowym, preprocesor najpierw zastępuje każde wystąpienie *parametru* w *replacement-string* odpowiednim argumentem w kodzie źródłowym, a następnie zastępuje *nazwę wskazówki* *ciągiem zastępczym*.|
-|`@<`|Ciąg *zastępczy* specyficzny dla pliku wskazówki, który wskazuje początek zestawu elementów mapy.|
-|`@=`|Ciąg *zastępczy* specyficzny dla pliku wskazówki, który wskazuje pośredni element mapy. Mapa może mieć wiele elementów mapy.|
-|`@>`|Ciąg *zastępczy* specyficzny dla pliku wskazówki, który wskazuje koniec zestawu elementów mapy.|
-|`#undef`*nazwa podpowiedzi*|Dyrektywa preprocesora, która usuwa istniejącą wskazówkę. Nazwa wskazówki jest dostarczana przez identyfikator *nazwy podpowiedzi.*|
+|`#define`*Hint —* *ciąg zamiany* nazwy<br /><br /> `#define`*Wskazówka-nazwa* `(` *parametr*,... `)` *ciąg zastępczy*|Dyrektywa preprocesora, która definiuje nową wskazówkę lub ponownie definiuje istniejącą wskazówkę. Po dyrektywie preprocesor zastępuje każde wystąpienie *nazwy wskazówki* w kodzie źródłowym *ciągiem zastępczym*.<br /><br /> Druga forma składni definiuje wskazówkę podobną do funkcji. Jeśli w kodzie źródłowym występuje Wskazówka przypominająca funkcję, preprocesor zastępuje każde wystąpienie *parametru* w *ciągu wymiany* z odpowiednim argumentem w kodzie źródłowym, a następnie zamienia *nazwę wskazówki* na *ciąg zastępczy*.|
+|`@<`|Wskazówka — *ciąg zastępczy* określony dla pliku, który wskazuje początek zestawu elementów mapy.|
+|`@=`|Wskazówka — *ciąg zastępczy* określony dla pliku, który wskazuje pośredni element mapy. Mapa może mieć wiele elementów mapy.|
+|`@>`|Wskazówka — *ciąg zastępczy* określony dla pliku, który wskazuje koniec zestawu elementów mapy.|
+|`#undef`*Wskazówka-nazwa*|Dyrektywa preprocesora, która usuwa istniejącą wskazówkę. Nazwa wskazówki jest zapewniana przez identyfikator *nazwy wskazówki* .|
 |`//`*komentarz*|Komentarz jednowierszowy.|
 |`/*`*komentarz*`*/`|Komentarz wielowierszowy.|
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie pokazano, jak wskazówki są gromadzone z plików podpowiedzi. Zatrzymaj pliki nie są używane w tym przykładzie.
+Ten przykład pokazuje, jak są gromadzone wskazówki z plików wskazówek. Pliki Stop nie są używane w tym przykładzie.
 
-Ilustracja przedstawia niektóre katalogi fizyczne w projekcie Visual Studio C++. W katalogach znajdują `vcpackages` `Debug`się `A1`pliki `A2` podpowiedzi.
+Na ilustracji przedstawiono niektóre katalogi fizyczne w projekcie Visual Studio C++. Istnieją pliki podpowiedzi w `vcpackages` `Debug` katalogach,, `A1` i `A2` .
 
-### <a name="hint-file-directories"></a>Katalogi plików podpowiedzi
+### <a name="hint-file-directories"></a>Podpowiedź katalogów plików
 
-![Typowe i&#45;określonych katalogów plików wskazówek.](media/hintfile.png "Plik hintfile")
+![Common i Project&#45;poszczególnych katalogów plików podpowiedzi.](media/hintfile.png "HintFile")
 
-### <a name="directories-and-hint-file-contents"></a>Katalogi i zawartość pliku wskazówki
+### <a name="directories-and-hint-file-contents"></a>Katalog i zawartość pliku wskazówki
 
-Ta lista zawiera katalogi w tym projekcie, które zawierają pliki wskazówek, oraz zawartość tych plików wskazówek. Tylko niektóre z wielu wskazówek `vcpackages` w pliku podpowiedzi katalogu są wymienione:
+Ta lista zawiera katalogi w tym projekcie, które zawierają pliki podpowiedzi oraz zawartość tych plików wskazówek. Na liście są wyświetlane tylko niektóre wskazówki dotyczące wielu wskazówek `vcpackages` :
 
-- opakowania vc
+- vcpackages
 
     ```cpp.hint
     // vcpackages (partial list)
@@ -211,13 +212,13 @@ Ta lista zawiera katalogi w tym projekcie, które zawierają pliki wskazówek, o
     #undef CBRACE
     ```
 
-### <a name="effective-hints"></a>Skuteczne wskazówki
+### <a name="effective-hints"></a>Efektywne wskazówki
 
-W tej tabeli wymieniono skuteczne wskazówki dotyczące plików źródłowych w tym projekcie:
+W tej tabeli wymieniono efektywne wskazówki dotyczące plików źródłowych w tym projekcie:
 
-- Plik źródłowy: A1_A2_B.cpp
+- Plik źródłowy: A1_A2_B. cpp
 
-- Skuteczne wskazówki:
+- Efektywne wskazówki:
 
     ```cpp.hint
     // vcpackages (partial list)
@@ -233,19 +234,19 @@ W tej tabeli wymieniono skuteczne wskazówki dotyczące plików źródłowych w 
     #define END_NAMESPACE }
     ```
 
-Uwagi te odnoszą się do powyższej listy:
+Te informacje dotyczą powyższej listy:
 
-- Skuteczne wskazówki są `vcpackages`z `Debug` `A1`, `A2` , i katalogów.
+- Efektywne wskazówki pochodzą z `vcpackages` katalogów,, `Debug` `A1` i `A2` .
 
-- Dyrektywa **#undef** w pliku `Debug` podpowiedzi `#define _In_` usunęła wskazówkę w pliku podpowiedzi `vcpackages` katalogu.
+- Dyrektywa **#undef** w `Debug` pliku wskazówki usunął `#define _In_` wskazówkę w `vcpackages` pliku wskazówki katalogu.
 
-- Plik wskazówki `A1` w katalogu `START_NAMESPACE`na nowo definiuje plik .
+- Plik wskazówki w katalogu jest ponownie `A1` definiowany `START_NAMESPACE` .
 
-- `#undef` Wskazówka w `A2` katalogu usunęła `OBRACE` wskazówki dotyczące i `CBRACE` w pliku podpowiedzi `Debug` katalogu.
+- `#undef`Wskazówka w `A2` katalogu usunęła wskazówki dla `OBRACE` i `CBRACE` w `Debug` pliku wskazówki katalogu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Typy plików utworzone dla projektów programu Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
-[#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
+[Typy plików utworzone dla projektów Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
+[#define — dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef — dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Adnotacje SAL](../../c-runtime-library/sal-annotations.md)<br>

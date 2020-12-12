@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/GS (sprawdzanie zabezpieczeń bufora)
 title: /GS (Sprawdzanie zabezpieczeń bufora)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 92d296e8079a9ecd8d366c46bbdad8b2ee5dc313
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d7fa3c2220260914c9ff931c2f2e7c76bf12ea1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191878"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Sprawdzanie zabezpieczeń bufora)
 
@@ -32,7 +33,7 @@ Wykrywa niektóre przepełnienia buforów, które zastępują adres zwrotny funk
 
 ## <a name="remarks"></a>Uwagi
 
-**/GS** jest domyślnie włączony. Jeśli oczekujesz, że aplikacja nie ma żadnych zagrożeń bezpieczeństwa, użyj **/GS-** . Aby uzyskać więcej informacji na temat pomijania wykrywania przepełnienia buforu, zobacz [safebuffers](../../cpp/safebuffers.md).
+**/GS** jest domyślnie włączony. Jeśli oczekujesz, że aplikacja nie ma żadnych zagrożeń bezpieczeństwa, użyj **/GS-**. Aby uzyskać więcej informacji na temat pomijania wykrywania przepełnienia buforu, zobacz [safebuffers](../../cpp/safebuffers.md).
 
 ## <a name="security-checks"></a>Sprawdzanie zabezpieczeń
 
@@ -99,7 +100,7 @@ Kompilator nie tworzy kopii zagrożonych parametrów w następujących sytuacjac
 
 - Funkcje o zmiennej liczbie argumentów (...).
 
-- Funkcje, które są oznaczone [naked](../../cpp/naked-cpp.md)jako wykorzystane.
+- Funkcje, które są oznaczone [](../../cpp/naked-cpp.md)jako wykorzystane.
 
 - Funkcje, które w pierwszej instrukcji zawierają wbudowany kod zestawu.
 
@@ -113,11 +114,11 @@ Nawet jeśli używasz **/GS**, zawsze próbuj napisać bezpieczny kod, który ni
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt, a następnie kliknij polecenie **Właściwości**.
+1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy projekt, a następnie kliknij polecenie **Właściwości**.
 
-   Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+   Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. W oknie dialogowym **strony właściwości** kliknij folder **C/C++**  .
+1. W oknie dialogowym **strony właściwości** kliknij folder **C/C++** .
 
 1. Kliknij stronę właściwości **generowanie kodu** .
 
@@ -157,4 +158,4 @@ int main() {
 ## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

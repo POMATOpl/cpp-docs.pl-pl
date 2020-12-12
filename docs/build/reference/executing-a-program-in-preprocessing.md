@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej na temat: wykonywanie programu w procesie przetwarzania wstępnego'
 title: Wykonywanie programu w przetwarzaniu wstępnym
 ms.date: 11/04/2016
 helpviewer_keywords:
 - program execution [C++]
 ms.assetid: 5ecf123a-20e5-40cd-b8d8-dd5a9fdd4b24
-ms.openlocfilehash: 564e4aebb3a0502f18550fb9d323e8b30f1303f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72743fe1b75e170ce1aa7ea04dd5a0c70440de59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192372"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Wykonywanie programu w przetwarzaniu wstępnym
 
-Aby użyć kod zakończenia polecenia podczas przetwarzania wstępnego, należy określić polecenia, za pomocą argumenty w nawiasy kwadratowe ([]). Wszystkie makra zostaną rozwinięte przed wykonaniem polecenia. NMAKE zastępuje Specyfikacja polecenia z kodem zakończenia polecenia, którego można użyć do kontrolowania przetwarzania wstępnego w wyrażeniu.
+Aby użyć kodu zakończenia polecenia podczas przetwarzania wstępnego, określ polecenie z dowolnymi argumentami w nawiasach kwadratowych ([]). Wszystkie makra są rozwinięte przed wykonaniem polecenia. NMAKE zastępuje specyfikację polecenia kodem zakończenia polecenia, który może być używany w wyrażeniu w celu kontrolowania przetwarzania wstępnego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make](expressions-in-makefile-preprocessing.md)
+[Wyrażenia w procesie przetwarzania wstępnego pliku reguł programu make](expressions-in-makefile-preprocessing.md)

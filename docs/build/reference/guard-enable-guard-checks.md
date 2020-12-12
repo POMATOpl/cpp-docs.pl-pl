@@ -1,17 +1,18 @@
 ---
+description: Dowiedz się więcej na temat:/GUARD (Włączanie testów ochrony)
 title: /GUARD (włączenie sprawdzeń za pomocą wyrażenia Guard)
 ms.date: 11/04/2016
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-ms.openlocfilehash: e48921e57977cc7a1ca6a580fed78a6a2a960a02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f76de815bc10f8e1203510b25b237fe8db93444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191722"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (włączenie sprawdzeń za pomocą wyrażenia Guard)
 
-Określa obsługę kontroli ochrony przepływu sterowania w obrazu pliku wykonywalnego.
+Określa obsługę kontroli ochrony przepływu sterowania w obrazie wykonywalnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,22 +22,22 @@ Określa obsługę kontroli ochrony przepływu sterowania w obrazu pliku wykonyw
 
 ## <a name="remarks"></a>Uwagi
 
-Kiedy/GUARD: CF jest określona, konsolidator modyfikuje nagłówek .dll i .exe, aby wskazać, obsługa testy środowiska uruchomieniowego kontroli Flow Guard (CFG). Konsolidator dodaje także dane adresu docelowego przepływu wymaganej kontrolki z nagłówkiem. Domyślnie/GUARD: CF jest wyłączona. Jego można jawnie wyłączyć za pomocą /GUARD:NO. Zaczęła obowiązywać, wymaga również/GUARD: CF [opcja/DynamicBase (randomizacji układu przestrzeni adresowej Użyj)](dynamicbase-use-address-space-layout-randomization.md) — opcja konsolidatora, która jest domyślnie włączone.
+Gdy jest określony/GUARD: CF, konsolidator modyfikuje nagłówek pliku. dll lub. exe, aby wskazać obsługę testów środowiska uruchomieniowego ochrony przepływu sterowania (CFG). Konsolidator dodaje również wymagane dane adresu docelowego przepływu sterowania do nagłówka. Domyślnie/GUARD: CF jest wyłączone. Można ją jawnie wyłączyć przy użyciu/GUARD: NO. Aby była skuteczna,/GUARD: CF również wymaga opcji konsolidatora [/DYNAMICBASE (Użyj losowo układu przestrzeni adresowej)](dynamicbase-use-address-space-layout-randomization.md) , która jest domyślnie włączona.
 
-Podczas kompilowania kodu źródłowego za pomocą [/GUARD: CF](guard-enable-control-flow-guard.md) opcja, kompilator analizuje przepływ sterowania, sprawdzając wszystkie wywołania pośredniego dla adresów możliwe miejsce docelowe. Kompilator wstawi kod, aby sprawdzić, czy adres docelowy instrukcji pośrednie wywołanie jest na liście adresów docelowych znane w czasie wykonywania. Sprawdź systemy operacyjne obsługujące CFG Zatrzymaj program, który zakończy się niepowodzeniem w środowisku uruchomieniowym CFG. Dzięki temu utrudnia osobie atakującej wykonać złośliwy kod za pomocą uszkodzenia danych, aby zmienić cel wywołania.
+Gdy kod źródłowy jest kompilowany przy użyciu opcji [/Guard: CF](guard-enable-control-flow-guard.md) , kompilator analizuje przepływ sterowania, sprawdzając wszystkie wywołania pośrednie dla możliwych adresów docelowych. Kompilator wstawia kod, aby sprawdzić, czy adres docelowy instrukcji wywołania pośredniego znajduje się na liście znanych adresów docelowych w czasie wykonywania. Systemy operacyjne obsługujące CFG zatrzymują program, który nie może sprawdzić, czy środowisko uruchomieniowe CFG zostało wykonane. Utrudnia to osobie atakującej wykonywanie złośliwego kodu przy użyciu uszkodzenia danych w celu zmiany celu wywołania.
 
-Opcja/GUARD: CF musi być określona kompilatora i konsolidatora do utworzenia włączone CFG obrazów pliku wykonywalnego. Kod skompilowany, ale nie jest połączona za pomocą/GUARD: CF wiąże się koszt testy środowiska uruchomieniowego, ale nie umożliwia ochrony CFG. Gdy są określone opcji/GUARD: CF `cl` polecenie, aby skompilować i łącze w jednym kroku, kompilator przekazuje flagę do konsolidatora. Gdy **ochrony przepływu sterowania** właściwość jest ustawiona w programie Visual Studio, opcja/GUARD: CF jest przekazywany do kompilatora i konsolidatora. Gdy oddzielnie zostały skompilowane pliki obiektów i bibliotek, opcja musi być jawnie określona w `link` polecenia.
+Aby można było tworzyć obrazy wykonywalne z obsługą CFG, należy określić opcję/GUARD: CF zarówno do kompilatora, jak i konsolidatora. Kod skompilowany, ale niepołączony za pomocą/GUARD: CF ponosi koszt kontroli środowiska uruchomieniowego, ale nie włącza ochrony CFG. Gdy opcja/GUARD: CF jest określona dla `cl` polecenia do kompilowania i łączenia w jednym kroku, kompilator przekazuje flagę do konsolidatora. Gdy w programie Visual Studio jest ustawiona właściwość **Ochrona przepływu sterowania** ,/Guard: CF opcja jest przenoszona do kompilatora i konsolidatora. Gdy pliki lub biblioteki obiektów zostały skompilowane oddzielnie, opcja musi być jawnie określona w `link` poleceniu.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji**, **konsolidatora**, **wiersza polecenia**.
+1. Rozwiń węzeł **Właściwości konfiguracji**, **konsolidator**, **wiersz polecenia**.
 
-1. W **dodatkowe opcje**, wprowadź `/GUARD:CF`.
+1. W obszarze **Opcje dodatkowe** wprowadź `/GUARD:CF` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/guard (Włącz ochronę przepływu sterowania)](guard-enable-control-flow-guard.md)<br/>
+[/guard (włącz ochronę przepływu sterowania)](guard-enable-control-flow-guard.md)<br/>
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

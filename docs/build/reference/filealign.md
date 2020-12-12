@@ -1,5 +1,6 @@
 ---
-title: / FILEALIGN (Wyrównaj sekcje w plikach)
+description: Dowiedz się więcej na temat:/FILEALIGN (Wyrównaj sekcje w plikach)
+title: /FILEALIGN (Wyrównaj sekcje w plikach)
 ms.date: 10/23/2017
 f1_keywords:
 - /filealign
@@ -9,47 +10,47 @@ helpviewer_keywords:
 - -FILEALIGN linker option
 - FILEALIGN linker option
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
-ms.openlocfilehash: 43cfdd6efb163013d05877e91c8375eb592295a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a67cf682c8fe55b80b2253864e08919e08242f74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192165"
 ---
-# <a name="filealign-align-sections-in-files"></a>/ FILEALIGN (Wyrównaj sekcje w plikach)
+# <a name="filealign-align-sections-in-files"></a>/FILEALIGN (Wyrównaj sekcje w plikach)
 
-**/Filealign** — opcja konsolidatora umożliwia określanie wyrównania sekcji zapisywane do pliku danych wyjściowych jako wielokrotności określonego rozmiaru.
+Opcja konsolidatora **/FILEALIGN** umożliwia określenie wyrównania sekcji zapisaną w pliku wyjściowym jako wielokrotność określonego rozmiaru.
 
 ## <a name="syntax"></a>Składnia
 
-> __/ FILEALIGN:__*rozmiar*
+> __/FILEALIGN:__*rozmiar*
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-Wyrównanie sekcji rozmiar w bajtach, które musi być potęgą liczby dwa.
+*zmienia*<br/>
+Rozmiar wyrównania sekcji w bajtach, który musi być potęgą liczby dwa.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Filealign** opcji powoduje, że konsolidator wyrównanie każdej sekcji w pliku danych wyjściowych na granicy, która jest wielokrotnością liczby *rozmiar* wartość. Domyślnie konsolidator nie używa o rozmiarze stałym wyrównania.
+Opcja **/FILEALIGN** powoduje, że konsolidator wyrównuje każdą sekcję w pliku wyjściowym na granicy, która jest wielokrotnością wartości *rozmiaru* . Domyślnie konsolidator nie używa stałego rozmiaru wyrównania.
 
-**/Filealign** opcji można wprowadzić bardziej efektywne wykorzystanie dysku lub aby strona ładuje z dysku szybciej. Mniejszy rozmiar sekcji może być przydatne w przypadku aplikacji działających w mniejszych urządzeniach lub zachować mniejsze pliki do pobrania. Wyrównanie sekcji na dysku nie ma wpływu na wyrównania w pamięci.
+Opcji **/FILEALIGN** można użyć, aby zwiększyć wydajność dysku lub zwiększyć szybkość ładowania strony z dysku. Mniejszy rozmiar sekcji może być przydatny w przypadku aplikacji uruchamianych na mniejszych urządzeniach lub do przechowywania mniejszych plików do pobrania. Wyrównanie sekcji na dysku nie ma wpływu na wyrównanie w pamięci.
 
-Użyj [DUMPBIN](dumpbin-reference.md) Aby wyświetlić informacje o sekcji w pliku danych wyjściowych.
+Użyj [polecenia DUMPBIN](dumpbin-reference.md) , aby wyświetlić informacje o sekcjach w pliku wyjściowym.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **wiersza polecenia** — strona właściwości w **konsolidatora** folderu.
+1. Wybierz stronę właściwości **wiersza polecenia** w folderze **konsolidatora** .
 
-1. Wpisz opcje nazwy **/filealign:** i rozmiar w **dodatkowe opcje** pole.
+1. Wpisz nazwę opcji **/FILEALIGN:** i rozmiar w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/Fe (Nazwij plik EXE)
 title: /Fe (Nazwij plik EXE)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: 72eada34c6a64a8b4591afbee03b686f3da3ee11
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 551c6f54ba75c71d9229b5a60ff0fdb192dbf100
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192281"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Nazwij plik EXE)
 
@@ -43,7 +44,7 @@ W przypadku określenia opcji [/c (Kompiluj bez konsolidacji)](c-compile-without
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Otwórz **Configuration Properties**  >  **Linker**  >  stronę właściwości**Ogólne** konsolidatora właściwości konfiguracji.
+1. Otwórz   >    >  stronę właściwości **Ogólne** konsolidatora właściwości konfiguracji.
 
 1. Zmodyfikuj właściwość **pliku wyjściowego** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
@@ -65,9 +66,9 @@ Poniższy wiersz polecenia tworzy plik wykonywalny w programie `C:\BIN` z tą sa
 CL /FeC:\BIN\ *.C
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje pliku wyjściowego (/F)](output-file-f-options.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Określanie nazwy ścieżki](specifying-the-pathname.md)<br/>

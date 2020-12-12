@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jawne zwalnianie Delay-Loaded DLL'
 title: Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-ms.openlocfilehash: 9909a3e179aa6c0af3a622c7bf1b545326f90bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03df08487acc1be05226021d6b7c1593eb0f031b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192385"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem
 
-[/Opóźnienie](delay-delay-load-import-settings.md): unload — opcja konsolidatora pozwala wyładować bibliotekę DLL, które było ładowane z opóźnieniem. Domyślnie, gdy kod zwalnia DLL (przy użyciu/DELAY: Unload i **__FUnloadDelayLoadedDLL2**), importów załadowanych z opóźnieniem pozostają w tabeli adresów importowania (IAT). Jednak jeśli używasz/DELAY: Unload w wierszu polecenia konsolidatora funkcji pomocnika będzie obsługiwać jawne zwalnianie bibliotek DLL, zresetowanie IAT do ich oryginalnej formie; wskaźniki obecnie nieprawidłowym zostaną zastąpione. IAT jest polem w [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) zawierający adres kopię oryginalnego IAT (jeśli istnieje).
+Opcja konsolidatora [/delay](delay-delay-load-import-settings.md): Unload umożliwia zwolnienie biblioteki DLL, która została załadowana z opóźnieniem. Domyślnie, gdy kod zwalnia bibliotekę DLL (przy użyciu/Delay: unload i **__FUnloadDelayLoadedDLL2**), Importy ładowane z opóźnieniem pozostają w tabeli adresów importu (IAT). Jeśli jednak używasz/Delay: Unload w wierszu polecenia konsolidatora, funkcja pomocnika będzie obsługiwać jawne wyładowywanie biblioteki DLL, resetowanie IAT do jego oryginalnej postaci; wskaźniki teraz są zastępowane. IAT to pole w [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) , które zawiera adres kopii oryginalnego IAT (jeśli istnieje).
 
 ## <a name="example"></a>Przykład
 
@@ -49,14 +50,14 @@ int main()
 
 ### <a name="comments"></a>Komentarze
 
-Ważne uwagi na zwalnianie bibliotek DLL ładowanych z opóźnieniem:
+Ważne uwagi dotyczące zwalniania biblioteki DLL załadowanej z opóźnieniem:
 
-- Można znaleźć implementacji **__FUnloadDelayLoadedDLL2** funkcji w pliku \VC7\INCLUDE\DELAYHLP. CPP.
+- Implementację funkcji **__FUnloadDelayLoadedDLL2** można znaleźć w pliku \VC7\INCLUDE\DELAYHLP. CPP.
 
-- Nazwa parametru **__FUnloadDelayLoadedDLL2** funkcja musi dokładnie odpowiadać (z uwzględnieniem wielkości liter) biblioteki importowanej zawartość (czyli ciąg też w Tabela importu na obrazie). Można wyświetlić zawartość biblioteki importu za pomocą [DUMPBIN /DEPENDENTS](dependents.md). Jeśli konieczne jest dopasowanie bez uwzględniania wielkości liter ciągu, możesz zaktualizować **__FUnloadDelayLoadedDLL2** użycia jednej z funkcji CRT w ciągu lub wywołanie interfejsu API Windows.
+- Parametr name funkcji **__FUnloadDelayLoadedDLL2** musi dokładnie pasować (włącznie z uwzględnieniem wielkości liter), jaka Biblioteka importowana zawiera (ten ciąg znajduje się również w tabeli import na obrazie). Zawartość biblioteki Import można wyświetlić za pomocą [polecenia DUMPBIN/DEPENDENTS](dependents.md). Jeśli pożądane jest dopasowanie ciągu bez uwzględniania wielkości liter, można zaktualizować **__FUnloadDelayLoadedDLL2** , aby użyć jednej z funkcji ciągów CRT lub wywołania interfejsu API systemu Windows.
 
-Zobacz [zwalnianie bibliotek DLL z Delay-Loaded](unloading-a-delay-loaded-dll.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji [, zobacz zwalnianie Delay-Loaded dll](unloading-a-delay-loaded-dll.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)
+[Obsługa konsolidatora dla Delay-Loaded bibliotek DLL](linker-support-for-delay-loaded-dlls.md)

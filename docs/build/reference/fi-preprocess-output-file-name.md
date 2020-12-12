@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: `/Fi` (Przetwarzaj wstępnie nazwę pliku wyjściowego)'
 title: /Fi (Przetwarzaj wstępnie nazwę pliku wyjściowego)
 ms.date: 08/12/2020
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 82bf09a8f01f656f90ad9971530b05f108fc95a4
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: c598730b19b843aa312df71d745ed363d082cc43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192229"
 ---
 # <a name="fi-preprocess-output-file-name"></a>`/Fi` (Przetwarzaj wstępnie nazwę pliku wyjściowego)
 
@@ -53,11 +54,11 @@ CL /P /Fi".\\preprocessed\\" main.cpp helper.cpp
 
 1. Otwórz plik źródłowy lub okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracji preprocesora**C/C++**  >  **Preprocessor** .
+1. Wybierz   >  stronę właściwości konfiguracji preprocesora **C/C++**  >   .
 
 1. Ustaw dla **procesu wstępnego właściwość pliku** na **wartość tak**.
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Wprowadź **`/Fi`** opcję kompilatora i *`pathname`* w polu **dodatkowe opcje** . Podczas ustawiania tej właściwości dla projektu należy określić tylko ścieżkę katalogu, a nie nazwę pliku.
 

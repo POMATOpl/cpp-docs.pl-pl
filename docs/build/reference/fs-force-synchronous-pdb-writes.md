@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/FS (Wymuś synchroniczne zapisy PDB)
 title: /FS (Wymuś synchroniczne zapisy do bazy PDB)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - -FS compiler option [C++]
 - /FS compiler option [C++]
 ms.assetid: b2caaffe-f6e1-4963-b068-648f06b105e0
-ms.openlocfilehash: 97ffb9529087329cf327ba704523b93d5d9b99b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dcddd046cc7232f40be5a54d73e659ed099e85d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192034"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Wymuś synchroniczne zapisy do bazy PDB)
 
-Wymusza zapisanie pliku bazy danych (PDB) programu — utworzone przez [/zi](z7-zi-zi-debug-information-format.md) lub [/zi](z7-zi-zi-debug-information-format.md)— w celu serializowana za pośrednictwem MSPDBSRV. PLIK EXE.
+Wymusza zapis do pliku bazy danych programu (PDB) — utworzonego przez [/Zi](z7-zi-zi-debug-information-format.md) lub [/Zi](z7-zi-zi-debug-information-format.md)— do serializacji za pomocą MSPDBSRV.EXE.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,25 +27,25 @@ Wymusza zapisanie pliku bazy danych (PDB) programu — utworzone przez [/zi](z7-
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie gdy **/zi** lub **/zi** jest określony, kompilator blokuje pliki PDB można zapisać informacje o typie i symboliczne informacje debugowania. Może to znacznie zmniejszyć czas kompilatora do generowania informacji o typie, gdy liczba typów jest duży. Jeśli inny proces tymczasowo blokuje plik PDB — na przykład program antywirusowy — operacje zapisu przez kompilator może zakończyć się niepowodzeniem i może wystąpić błąd krytyczny. Ten problem może również się zdarzyć, gdy wiele kopii cl.exe uzyskują dostęp do tego samego pliku PDB — na przykład, jeśli rozwiązanie ma niezależny projektów, które używały tych samych pośredniego katalogi lub wyjścia katalogów i równoległe kompilacje są włączone. **/FS** — opcja kompilatora zabezpiecza kompilator przed zablokowaniem pliku PDB i wymusza przechodzić przez MSPDBSRV. EXE, który serializuje dostępu. Może być znacznie dłuższe kompilacji, a nie uniemożliwia wszystkie błędy, które mogą wystąpić, gdy wiele wystąpień programu cl.exe uzyskują dostęp do pliku PDB w tym samym czasie. Firma Microsoft zaleca, możesz zmienić swoje rozwiązanie, aby projektów niezależnych zapisu do oddzielania pośrednich i lokalizacji danych wyjściowych, lub wprowadzić jeden z projektów zależne od innych kompilacji projektu życie serializacji.
+Domyślnie, gdy jest określony **/Zi** lub **/Zi** , kompilator blokuje pliki PDB, aby zapisywać informacje o typie i symboliczne informacje o debugowaniu. Może to znacząco skrócić czas, przez jaki kompilator generuje informacje o typie, gdy liczba typów jest duża. Jeśli inny proces tymczasowo blokuje plik PDB — na przykład program antywirusowy — zapis w kompilatorze może zakończyć się niepowodzeniem i może wystąpić błąd krytyczny. Ten problem może również wystąpić, gdy wiele kopii cl.exe uzyskać dostęp do tego samego pliku PDB — na przykład jeśli rozwiązanie ma niezależne projekty, które używają tych samych katalogów pośrednich lub katalogów wyjściowych, a kompilacje równoległe są włączone. Opcja kompilatora **/FS** uniemożliwia kompilatorowi zablokowanie pliku PDB i wymuszenie zapisu do przechodzenia przez MSPDBSRV.EXE, który serializować dostęp. Może to znacznie wydłużyć kompilacje i nie uniemożliwia wszystkich błędów, które mogą wystąpić, gdy wiele wystąpień cl.exe dostępu do pliku PDB w tym samym czasie. Zalecamy zmianę rozwiązania tak, aby niezależne projekty zapisu w oddzielnych lokalizacjach pośrednich i wyjściowych, lub że jeden z projektów zależy od innych, aby wymusić kompilacje serializowanych projektów.
 
-[/MP](mp-build-with-multiple-processes.md) opcji umożliwia **/FS** domyślnie.
+Opcja [/MP](mp-build-with-multiple-processes.md) domyślnie włącza **/FS** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **C/C++** folderu.
+1. Wybierz folder **C/C++** .
 
-1. Wybierz **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **wiersza polecenia** .
 
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia `/FS` , a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić `/FS` , a następnie wybierz przycisk **OK**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)
