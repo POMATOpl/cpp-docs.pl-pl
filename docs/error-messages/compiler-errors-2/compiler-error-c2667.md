@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2667'
 title: Błąd kompilatora C2667
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2667
 ms.assetid: 3c91d9d1-18fa-4e0d-a9ba-984d38980ca3
-ms.openlocfilehash: 34c9ab0d5420941b76a674b3f7f77fff64b66e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e534736e4bb5435ab68cad724bce9c9be28391e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386853"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210767"
 ---
 # <a name="compiler-error-c2667"></a>Błąd kompilatora C2667
 
-'Funkcja': żadne z przeciążeń numer nie posiada najlepszej konwersji
+"Function": żadne przeciążenia numerów nie mają najlepszej konwersji
 
-Wywołanie przeciążonej funkcji jest niejednoznaczne i nie można rozpoznać.
+Przeciążone wywołanie funkcji jest niejednoznaczne i nie można go rozpoznać.
 
-Konwersja muszą odpowiadać rzeczywistych parametrów w wywołaniu funkcji do jednej z przeciążonych funkcji musi być ściśle lepsze niż konwersje wymagane przez wszystkie inne przeciążonej funkcji.
+Konwersja wymagana do dopasowania parametrów w wywołaniu funkcji do jednej z przeciążonych funkcji musi być ściśle lepsza niż konwersje wymagane przez wszystkie inne przeciążone funkcje.

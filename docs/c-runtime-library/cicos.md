@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _CIcos'
 title: _CIcos
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: a9b18c2eb0a76885f3c3aad7bb1f03d7dea52c5c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1fcae85f03878a60d57c52d55cad683433f69d21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209714"
 ---
 # <a name="_cicos"></a>_CIcos
 

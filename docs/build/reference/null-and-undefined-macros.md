@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: puste i niezdefiniowane makra'
 title: Makra niezdefiniowane oraz makra o wartości zerowej
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,17 +9,17 @@ helpviewer_keywords:
 - undefined macros and NMAKE
 - NMAKE program, null macros
 ms.assetid: 1db4611a-1755-4328-b00f-d35365af8b6c
-ms.openlocfilehash: 0f4905473dd6914547ad6ac129d34e438992c2af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 639afda727f1ebb1f4d7d602ed7cf01d6c914a33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209727"
 ---
 # <a name="null-and-undefined-macros"></a>Makra niezdefiniowane oraz makra o wartości zerowej
 
-Zarówno zerowe i niezdefiniowane makra rozbudowywać ciągów o wartości null, ale makro zdefiniowany jako pusty ciąg jest uważany za zdefiniowany w przetwarzaniu wstępnym wyrażeń. Aby zdefiniować makro jako ciąg pusty, należy określić żadnych znaków, z wyjątkiem znaków tabulacji lub spacji po znaku równości (=), w wierszu polecenia lub pliku poleceń i ująć w znaki cudzysłowu pusty ciąg lub definicji (""). Aby Usuń definicję makra, należy użyć **! UNDEF.** Aby uzyskać więcej informacji, zobacz [dyrektywy przetwarzania wstępnego pliku reguł programu make](makefile-preprocessing-directives.md).
+Makra o wartości null i undefines są rozwijane do ciągów o wartości null, ale makro zdefiniowane jako ciąg o wartości null jest uznawane za zdefiniowane w wyrażeniach przetwarzania wstępnego. Aby zdefiniować makro jako ciąg pusty, należy określić brak znaków z wyjątkiem spacji lub tabulatorów po znaku równości (=) w wierszu polecenia lub pliku polecenia i ująć ciąg null lub definicję w podwójny cudzysłów (""). Aby wydefiniować makro, użyj **! UNDEF.** Aby uzyskać więcej informacji, zobacz [dyrektywy wstępnego przetwarzania plików reguł programu make](makefile-preprocessing-directives.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Definiowanie makro NMAKE](defining-an-nmake-macro.md)
+[Definiowanie makra NMAKE](defining-an-nmake-macro.md)

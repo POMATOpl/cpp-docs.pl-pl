@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _CIlog'
 title: _CIlog
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: 405af59eab918498578c2d62c66be1017ecf156f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6eac8270a741f4378e860f3a6c486897e6d418e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918060"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209662"
 ---
 # <a name="_cilog"></a>_CIlog
 

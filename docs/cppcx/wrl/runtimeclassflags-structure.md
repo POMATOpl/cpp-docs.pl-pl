@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze RuntimeClassFlags
 title: RuntimeClassFlags — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClassFlags structure
 - Microsoft::WRL::RuntimeClassFlags::value constant
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
-ms.openlocfilehash: 9fed5bb31b077288495a78aefcbd8401b3520bb6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7874447fbbbe429884c5a79d0c70bb93e617ec61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209272"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags — Struktura
 
-Zawiera typ wystąpienia [runtimeclass](runtimeclass-class.md).
+Zawiera typ wystąpienia elementu [RuntimeClass](runtimeclass-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,8 +30,8 @@ struct RuntimeClassFlags;
 
 ### <a name="parameters"></a>Parametry
 
-*flagi*<br/>
-Wartość [wyliczenia typu RuntimeClassType.](runtimeclasstype-enumeration.md)
+*znaczników*<br/>
+Wartość [wyliczenia RuntimeClassType —](runtimeclasstype-enumeration.md) .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -38,7 +39,7 @@ Wartość [wyliczenia typu RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[RuntimeClassFlags::value, stała](#value-constant)|Zawiera wartość [wyliczenia typu RuntimeClassType.](runtimeclasstype-enumeration.md)|
+|[RuntimeClassFlags::value, stała](#value-constant)|Zawiera wartość [wyliczenia RuntimeClassType —](runtimeclasstype-enumeration.md) .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -46,13 +47,13 @@ Wartość [wyliczenia typu RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Obszar nazw:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="runtimeclassflagsvalue-constant"></a><a name="value-constant"></a>RuntimeClassFlags::wartość stała
+## <a name="runtimeclassflagsvalue-constant"></a><a name="value-constant"></a> RuntimeClassFlags:: value — stała
 
-Pole zawierające wartość [wyliczenia runtimeClassType.](runtimeclasstype-enumeration.md)
+Pole, które zawiera wartość [wyliczenia RuntimeClassType —](runtimeclasstype-enumeration.md) .
 
 ```cpp
 static const unsigned int value = flags;

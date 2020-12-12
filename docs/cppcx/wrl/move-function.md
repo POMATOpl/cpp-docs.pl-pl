@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Move Function'
 title: Move — Funkcja
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eada3cac16abc445a9c48d01240f4ccf46d78372
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209311"
 ---
 # <a name="move-function"></a>Move — Funkcja
 
@@ -29,7 +30,7 @@ inline typename RemoveReference<T>::Type&& Move(
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Typ argumentu.
 
 *ARG*<br/>
@@ -43,7 +44,7 @@ Argument do przeniesienia.
 
 Przenosi określony argument z jednej lokalizacji do innej.
 
-Aby uzyskać więcej informacji, zobacz sekcję **przenoszenie semantyki** [rvalue Reference deklarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Aby uzyskać więcej informacji, zobacz sekcję **przenoszenie semantyki** [rvalue Reference deklarator:  &&](../../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -53,4 +54,4 @@ Aby uzyskać więcej informacji, zobacz sekcję **przenoszenie semantyki** [rval
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)

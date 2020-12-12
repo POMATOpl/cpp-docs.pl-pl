@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: memcpy, wmemcpy'
 title: memcpy, wmemcpy
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: bf7f12cd00780347f23252764aace449dd6f5722
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: f8645a01dee79f86f1ba23e74b3284d9b51de5aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209558"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -58,7 +59,7 @@ wchar_t *wmemcpy(
 *dest*<br/>
 Nowy bufor.
 
-*SRC*<br/>
+*src*<br/>
 Bufor do skopiowania.
 
 *liczbą*<br/>
@@ -76,7 +77,7 @@ Wartość miejsca *docelowego*.
 > Upewnij się, że bufor docelowy ma ten sam rozmiar lub większy niż bufor źródłowy. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Ze względu na to, że wiele przepełnień buforu i w związku z tym potencjalne luki w zabezpieczeniach zostały prześledzone w niewłaściwy sposób przy użyciu **memcpy**, ta funkcja jest wymieniona wśród funkcji "zakazane" w ramach cyklu projektowania zabezpieczeń (SDL).  Można zauważyć, że niektóre klasy bibliotek VC + + nadal używają **memcpy**.  Ponadto można zauważyć, że optymalizator kompilatora VC + + czasami emituje wywołania do **memcpy**.  Produkt wizualny C++ jest opracowywany zgodnie z procesem SDL i w ten sposób użycie tej funkcji jest ściśle oceniane.  W przypadku użycia biblioteki, wywołania zostały starannie scrutinized, aby zapewnić, że przepełnienia buforu nie będą dozwolone za pomocą tych wywołań.  W przypadku kompilatora czasami pewne wzorce kodu są rozpoznawane jako identyczne z wzorcem **memcpy**i są w ten sposób zastępowane wywołaniem funkcji.  W takich przypadkach użycie **memcpy** nie jest ryzykowne niż oryginalne instrukcje byłyby; zostały one po prostu zoptymalizowane pod kątem wywołania funkcji **memcpy** dostrajania wydajności.  Tak samo jak korzystanie z funkcji CRT "Safe" nie gwarantuje bezpieczeństwa (po prostu utrudnia to ich niebezpieczeństwo), korzystanie z funkcji "zabronione" nie gwarantuje niebezpieczeństwa (po prostu wymagają większej kontroli, aby zapewnić bezpieczeństwo).
+> Ze względu na to, że wiele przepełnień buforu i w związku z tym potencjalne luki w zabezpieczeniach zostały prześledzone w niewłaściwy sposób przy użyciu **memcpy**, ta funkcja jest wymieniona wśród funkcji "zakazane" w ramach cyklu projektowania zabezpieczeń (SDL).  Można zauważyć, że niektóre klasy bibliotek VC + + nadal używają **memcpy**.  Ponadto można zauważyć, że optymalizator kompilatora VC + + czasami emituje wywołania do **memcpy**.  Produkt Visual C++ jest opracowywany zgodnie z procesem SDL i w ten sposób użycie tej funkcji jest ściśle oceniane.  W przypadku użycia biblioteki, wywołania zostały starannie scrutinized, aby zapewnić, że przepełnienia buforu nie będą dozwolone za pomocą tych wywołań.  W przypadku kompilatora czasami pewne wzorce kodu są rozpoznawane jako identyczne z wzorcem **memcpy** i są w ten sposób zastępowane wywołaniem funkcji.  W takich przypadkach użycie **memcpy** nie jest ryzykowne niż oryginalne instrukcje byłyby; zostały one po prostu zoptymalizowane pod kątem wywołania funkcji **memcpy** dostrajania wydajności.  Tak samo jak korzystanie z funkcji CRT "Safe" nie gwarantuje bezpieczeństwa (po prostu utrudnia to ich niebezpieczeństwo), korzystanie z funkcji "zabronione" nie gwarantuje niebezpieczeństwa (po prostu wymagają większej kontroli, aby zapewnić bezpieczeństwo).
 >
 > Ponieważ **memcpy** użycie przez kompilator i biblioteki VC + + zostało tak starannie scrutinized, te wywołania są dozwolone w kodzie, który jest w inny sposób zgodny z SDL.  wywołania **memcpy** wprowadzone w kodzie źródłowym aplikacji są zgodne z IDENTYFIKATORem SDL, gdy takie użycie zostało sprawdzone przez ekspertów ds. zabezpieczeń.
 
@@ -98,8 +99,8 @@ lub
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memcpy**|\<Memory. h > lub \<String. h >|
-|**wmemcpy**|\<WCHAR. h >|
+|**memcpy**|\<memory.h> lub \<string.h>|
+|**wmemcpy**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -107,7 +108,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz [memmove](memmove-wmemmove.md) , aby uzyskać przykład korzystania z **memcpy**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

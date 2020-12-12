@@ -1,23 +1,24 @@
 ---
-title: 'Instrukcje: Korzystanie z tablic w C++sposób niezamierzony'
+description: 'Dowiedz się więcej na temat: jak używać tablic w języku C++/CLI'
+title: 'Porady: korzystanie z tablic w języku C++/interfejsie wiersza polecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: 65d384cbac7691d000ae6e895c9cf63e71726689
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d88f1b0b936c6a2f8589e78ac7ae585e4550fec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387191"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209220"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Instrukcje: Korzystanie z tablic w C++sposób niezamierzony
+# <a name="how-to-use-arrays-in-ccli"></a>Porady: korzystanie z tablic w języku C++/interfejsie wiersza polecenia
 
-W tym artykule opisano sposób używania tablic w C++sposób niezamierzony.
+W tym artykule opisano sposób używania tablic w języku C++/CLI.
 
-## <a name="single-dimension-arrays"></a>Tablice jednowymiarowej
+## <a name="single-dimension-arrays"></a>Tablice z jednym wymiarem
 
-Poniższy przykład pokazuje sposób tworzenia tablic jednowymiarowej odwołania, wartości i typami wskaźnika natywnej. Pokazuje także sposobu zwracania tablicy jednowymiarowej z funkcji oraz sposób przekazywania tablicy jednowymiarowej jako argument do funkcji.
+Poniższy przykład pokazuje, jak utworzyć tablice z pojedynczym wymiarem typu referencyjnego, wartości i wskaźnika natywnego. Pokazano również, jak zwrócić tablicę z jednym wymiarem z funkcji i jak przekazać tablicę z jednym wymiarem jako argument do funkcji.
 
 ```cpp
 // mcppv2_sdarrays.cpp
@@ -151,7 +152,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41
 ```
 
-Następny przykład pokazuje, jak wykonać inicjowania agregacji na jednowymiarowej zarządzanych tablic.
+Następny przykład pokazuje, jak przeprowadzić inicjalizację agregacji dla tablic zarządzanych z jednym wymiarem.
 
 ```cpp
 // mcppv2_sdarrays_aggregate_init.cpp
@@ -204,7 +205,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11
 ```
 
-W tym przykładzie pokazano, jak wykonać inicjowania agregacji na zarządzanych tablicą wielowymiarową:
+Ten przykład pokazuje, jak przeprowadzić inicjalizację agregacji w zarządzanej macierzy wielowymiarowej:
 
 ```cpp
 // mcppv2_mdarrays_aggregate_initialization.cpp
@@ -250,7 +251,7 @@ int main() {
 
 ## <a name="jagged-arrays"></a>Tablice nieregularne
 
-W tej sekcji przedstawiono sposób tworzenia jednowymiarowej tablic zarządzanych tablic odwołania, wartości i typami wskaźnika natywnej. Pokazuje także sposobu zwracania tablicy jednowymiarowej, tablic zarządzanych przez funkcję oraz sposób przekazywania tablicy jednowymiarowej jako argument do funkcji.
+W tej sekcji przedstawiono sposób tworzenia tablic o pojedynczym wymiarze dla zarządzanych tablic referencyjnych, wartości i natywnych typów wskaźnikowych. Pokazano również, jak zwrócić tablicę z jednym wymiarem z tablic zarządzanych z funkcji i jak przekazać tablicę jednowymiarową jako argument do funkcji.
 
 ```cpp
 // mcppv2_array_of_arrays.cpp
@@ -347,7 +348,7 @@ IntArray[1] = 11
 41
 ```
 
-Poniższy przykład pokazuje sposób wykonywania inicjowania agregacji za pomocą Tablice nieregularne.
+Poniższy przykład pokazuje, jak przeprowadzić inicjalizację agregacji z tablicami nieregularnymi.
 
 ```cpp
 // mcppv2_array_of_arrays_aggregate_init.cpp
@@ -452,9 +453,9 @@ MyClass0[1] = 1
 [ g h ]
 ```
 
-## <a name="managed-arrays-as-template-type-parameters"></a>Zarządzane tablice jako parametrów typu szablonu
+## <a name="managed-arrays-as-template-type-parameters"></a>Zarządzane tablice jako parametry typu szablonu
 
-W tym przykładzie pokazano, jak używać tablicy zarządzanej jako parametr do szablonu:
+Ten przykład pokazuje, jak używać zarządzanej tablicy jako parametru do szablonu:
 
 ```cpp
 // mcppv2_template_type_params.cpp
@@ -482,9 +483,9 @@ int main() {
 Return Code: 0
 ```
 
-## <a name="typedefs-for-managed-arrays"></a>definicje typów dla tablic zarządzanych
+## <a name="typedefs-for-managed-arrays"></a>elementy typedef dla tablic zarządzanych
 
-W tym przykładzie przedstawiono sposób wprowadzania element typedef dla zarządzanej tablicy:
+Ten przykład pokazuje, jak utworzyć element typedef dla zarządzanej tablicy:
 
 ```cpp
 // mcppv2_typedef_arrays.cpp
@@ -501,9 +502,9 @@ int main() {
 
 ## <a name="sorting-arrays"></a>Sortowanie tablic
 
-W odróżnieniu od tablic standard C++ zarządzane tablice niejawnie pochodzą z klasy bazowej tablicy, z którego dziedziczą wspólnego zachowania. Na przykład `Sort` metody, która może służyć do kolejność elementów w tablicy.
+W przeciwieństwie do standardowych tablic C++, zarządzane tablice są niejawnie wyprowadzane z klasy bazowej tablicy, z której dziedziczą typowe zachowanie. Przykładem jest `Sort` Metoda, która może służyć do porządkowania elementów w dowolnej tablicy.
 
-Dla tablic, które zawierają typy wewnętrzne podstawowe, wywołując `Sort` metody. Można zmienić kryteria sortowania, i jest to wymagane posortować dla tablic typów złożonych. W tym przypadku typ elementu tablicy musi implementować <xref:System.IComparable.CompareTo%2A> metody.
+W przypadku tablic zawierających podstawowe typy wewnętrzne można wywołać `Sort` metodę. Możesz przesłonić kryteria sortowania i tak, aby były one wymagane do sortowania tablic typów złożonych. W takim przypadku typ elementu tablicy musi implementować <xref:System.IComparable.CompareTo%2A> metodę.
 
 ```cpp
 // array_sort.cpp
@@ -520,9 +521,9 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Sortowanie tablic przy użyciu kryteriów niestandardowych
 
-Aby posortować tablic, które zawierają podstawowe typy wewnętrzne, po prostu Wywołaj `Array::Sort` metody. Jednak do tablic sortowania, które zawierają typów złożonych lub aby zastąpić domyślne kryteriów sortowania, należy zastąpić <xref:System.IComparable.CompareTo%2A> metody.
+Aby posortować tablice zawierające podstawowe typy wewnętrzne, po prostu wywołaj `Array::Sort` metodę. Aby jednak sortować tablice zawierające typy złożone lub przesłonić domyślne kryteria sortowania, Zastąp <xref:System.IComparable.CompareTo%2A> metodę.
 
-W poniższym przykładzie strukturę o nazwie `Element` jest tworzony na podstawie <xref:System.IComparable>i dostarczać <xref:System.IComparable.CompareTo%2A> metodę, która wykorzystuje średnią dwóch liczb całkowitych jako kryterium sortowania.
+W poniższym przykładzie struktura o nazwie pochodzi `Element` od <xref:System.IComparable> i zapisywana w celu udostępnienia <xref:System.IComparable.CompareTo%2A> metody, która używa średniej z dwóch liczb całkowitych jako kryterium sortowania.
 
 ```cpp
 using namespace System;
@@ -568,7 +569,7 @@ int main() {
 
 ## <a name="array-covariance"></a>Kowariancja tablicy
 
-Biorąc pod uwagę klasy odwołania w D, który ma bezpośredniej lub pośredniej klasy bazowej B, tablicę typu D mogą być przypisane do zmiennej tablicy typu b.
+Dana klasa referencyjna D, która ma bezpośrednią lub pośrednią klasę bazową B, tablica typu D może być przypisana do zmiennej tablicowej typu B.
 
 ```cpp
 // clr_array_covariance.cpp
@@ -581,9 +582,9 @@ int main() {
 }
 ```
 
-Przypisania do elementu tablicy musi być zgodny z przypisania z dynamicznym typem tablicy. Powoduje, że przypisanie do elementu tablicy, która ma niezgodny typ `System::ArrayTypeMismatchException` zostanie wygenerowany.
+Przypisanie do elementu tablicy musi być zgodne z typem dynamicznym tablicy. Przypisanie do elementu tablicy, który ma niezgodny typ, `System::ArrayTypeMismatchException` zostanie zgłoszone.
 
-Kowariancja tablicy nie ma zastosowania do tablic wartości typu klasy. Na przykład, tablice Int32 nie można przekonwertować na obiekt ^ tablic, nawet za pomocą pakowania.
+Kowariancja tablicy nie ma zastosowania do tablic typu klasy wartości. Na przykład tablice Int32 nie mogą być konwertowane na tablicę obiektu ^, a nie nawet przy użyciu opakowania.
 
 ```cpp
 // clr_array_covariance2.cpp
@@ -618,6 +619,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tablice](../extensions/arrays-cpp-component-extensions.md)

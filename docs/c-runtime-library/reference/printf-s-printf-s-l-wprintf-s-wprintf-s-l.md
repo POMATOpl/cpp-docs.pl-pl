@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: printf_s, _printf_s_l, wprintf_s _wprintf_s_l'
 title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -39,16 +40,16 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-ms.openlocfilehash: f8b324b5f3c23b324bdcd43e3529ad3a3d4d6847
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d26f18a45f218f6d1921a8603ffed15df24dcc90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209480"
 ---
 # <a name="printf_s-_printf_s_l-wprintf_s-_wprintf_s_l"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
-Drukuje sformatowane dane wyjściowe w standardowym strumieniu wyjściowym. Te wersje [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Drukuje sformatowane dane wyjściowe w standardowym strumieniu wyjściowym. Te wersje [printf, _printf_l, wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,13 +76,13 @@ int _wprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Kontrolka formatu.
 
 *argument*<br/>
 Argumenty opcjonalne.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -92,11 +93,11 @@ Zwraca liczbę znaków drukowanych lub wartość ujemną, jeśli wystąpi błąd
 
 Funkcja **printf_s** formatuje i drukuje serie znaków i wartości do standardowego strumienia wyjściowego **stdout**. Jeśli argumenty są zgodne z ciągiem *formatu* , ciąg *formatu* musi zawierać specyfikacje, które określają format wyjściowy dla argumentów.
 
-Główna różnica między **printf_s** i **printf** polega na tym, że **printf_s** sprawdza ciąg formatu pod kątem prawidłowych znaków formatowania, natomiast **printf** sprawdza tylko, czy ciąg formatu jest wskaźnikiem o wartości null. Jeśli sprawdzenie zakończy się niepowodzeniem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
+Główną różnicą między **printf_s** i **printf** jest to, że **printf_s** sprawdza ciąg formatu pod kątem prawidłowych znaków formatowania, natomiast **printf** sprawdza tylko, czy ciąg formatu jest wskaźnikiem o wartości null. Jeśli sprawdzenie zakończy się niepowodzeniem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
 Aby uzyskać informacje o **errno** i kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**printf_s** i **fprintf_s** zachowują się identycznie, z tą różnicą, że **printf_s** zapisuje dane wyjściowe w strumieniu **stdout** zamiast do miejsca docelowego typu **plik**. Aby uzyskać więcej informacji, zobacz [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**printf_s** i **fprintf_s** zachowują się identycznie, z tą różnicą, że **printf_s** zapisuje dane wyjściowe w strumieniu **stdout** zamiast do miejsca docelowego typu **plik**. Aby uzyskać więcej informacji, zobacz [fprintf_s, _fprintf_s_l, fwprintf_s _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
 **wprintf_s** to dwubajtowa wersja **printf_s**; *Format* jest ciągiem znaków dwubajtowych. **wprintf_s** i **printf_s** zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **printf_s** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
@@ -104,7 +105,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowany|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|zdefiniowano _unicode|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
@@ -132,9 +133,9 @@ Line one
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**printf_s**, **_printf_s_l**|\<stdio.h>|
-|**wprintf_s**, **_wprintf_s_l**|\<stdio. h > lub \<WCHAR. h >|
+|**wprintf_s**, **_wprintf_s_l**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -213,13 +214,13 @@ Real numbers:
 Address as:   0012FF78
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>

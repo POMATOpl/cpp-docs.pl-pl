@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: jak zaimplementować różne wzorce Producer-Consumer'
 title: 'Porady: implementowanie różnych wzorców producent — konsument'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-ms.openlocfilehash: 70813adf6715a2bcaf4af7370ce43d99c44263bd
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 5742d3ba213997efc54aeca360c99fd11b0cf712
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209909"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>Porady: implementowanie różnych wzorców producent — konsument
 
@@ -64,7 +65,7 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 **cl.exe/EHsc Producer-Consumer. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)<br/>

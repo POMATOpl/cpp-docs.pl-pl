@@ -1,61 +1,62 @@
 ---
+description: 'Dowiedz się więcej o: punkty zaczepienia powiadomień'
 title: Punkty zaczepienia powiadomień
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 716d2b31faa71c77ec436662ce00368d15afc4b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209753"
 ---
 # <a name="notification-hooks"></a>Punkty zaczepienia powiadomień
 
-Punkty zaczepienia powiadomień są wywoływane tuż przed, w procedurze pomocnika podejmowane są następujące akcje:
+Punkty zaczepienia powiadomień są wywoływane tuż przed wykonaniem następujących akcji w procedurze pomocnika:
 
-- Przechowywane uchwyt do biblioteki programu jest sprawdzenie jeśli jego został już załadowany.
+- Zachowane dojście do biblioteki jest sprawdzane w celu sprawdzenia, czy zostało już załadowane.
 
-- **LoadLibrary** jest wywoływana, aby spróbować obciążenia biblioteki dll.
+- Funkcja **LoadLibrary** jest wywoływana w celu próby ZAŁADOWANIA biblioteki DLL.
 
-- **GetProcAddress** jest wywoływana, aby spróbować uzyskać adres procedury.
+- Wywołanie **GetProcAddress** jest wywoływane w celu uzyskania adresu procedury.
 
-- Wróć do Opóźnij importowanie ładowania thunk.
+- Wróć do opóźnienia importowania thunk.
 
-Włączono punkt zaczepienia powiadomień:
+Punkt zaczepienia powiadomienia jest włączony:
 
-- Podając nową definicję wskaźnika **__pfnDliNotifyHook2** który jest inicjowany, aby wskazać własną funkcję, która odbiera powiadomienia.
+- Dostarczając nową definicję **__pfnDliNotifyHook2** wskaźnika, która została zainicjowana, aby wskazywała własną funkcję, która otrzymuje powiadomienia.
 
-   \-lub —
+   \-oraz
 
-- Ustawiając kursor **__pfnDliNotifyHook2** do funkcji punktów zaczepienia przed wszelkie wywołania do biblioteki DLL, który program jest opóźnienie ładowania.
+- Ustawiając **__pfnDliNotifyHook2** wskaźnika na funkcję haka przed dowolnymi wywołaniami do biblioteki DLL, które program jest opóźniony ładowania.
 
-Jeśli powiadomienie jest **dliStartProcessing**, funkcja podłączania może zwrócić:
+Jeśli powiadomienie jest **dliStartProcessing**, funkcja Hook może zwrócić:
 
 - NULL
 
-   Pomocnik domyślne obsługuje ładowanie biblioteki DLL. Dzięki takiemu grupowaniu można wywoływać tylko dla celów informacyjnych.
+   Domyślny pomocnik obsługuje ładowanie biblioteki DLL. Jest to przydatne do wywoływania wyłącznie w celach informacyjnych.
 
-- Wskaźnik funkcji
+- wskaźnik funkcji
 
-   Pominąć domyślna obsługa załadować z opóźnieniem. Dzięki temu możesz podać własne obsługi obciążenia.
+   Pomiń domyślną obsługę ładowania opóźnienia. Pozwala to na dostarczenie własnego programu obsługi obciążenia.
 
-Jeśli powiadomienie jest **dliNotePreLoadLibrary**, funkcja podłączania może zwrócić:
+Jeśli powiadomienie jest **dliNotePreLoadLibrary**, funkcja Hook może zwrócić:
 
-- 0, jeśli tylko powiadomienia informacyjne.
+- 0, jeśli tylko chcą otrzymywać powiadomienia informacyjne.
 
-- HMODULE załadować biblioteki dll, jeśli go załadować biblioteki DLL, sam.
+- HMODULE dla załadowanej biblioteki DLL, jeśli załadowana sama Biblioteka DLL.
 
-Jeśli powiadomienie jest **dliNotePreGetProcAddress**, funkcja podłączania może zwrócić:
+Jeśli powiadomienie jest **dliNotePreGetProcAddress**, funkcja Hook może zwrócić:
 
-- 0, jeśli tylko powiadomienia informacyjne.
+- 0, jeśli tylko chcą otrzymywać powiadomienia informacyjne.
 
-- Adres funkcji importowanych, jeśli funkcja podłączania pobiera adres.
+- Adres zaimportowanej funkcji, jeśli funkcja Hook Pobiera adres.
 
-Jeśli powiadomienie jest **dliNoteEndProcessing**, funkcja podłączania zwracana wartość jest ignorowana.
+Jeśli powiadomienie jest **dliNoteEndProcessing**, zwracana wartość funkcji Hook jest ignorowana.
 
-Jeśli ten wskaźnik jest zainicjowany (niezerowe), pomocnika obciążenia opóźnienia spowoduje wywołanie funkcji w niektórych punktach powiadomień w całym jej wykonanie. Wskaźnik funkcji ma następującą definicję:
+Jeśli ten wskaźnik zostanie zainicjowany (niezerowy), pomocnik ładowania opóźnienia wywoła funkcję w określonych punktach powiadomień w trakcie jego wykonywania. Wskaźnik funkcji ma następującą definicję:
 
 ```C
 // The "notify hook" gets called for every call to the
@@ -77,8 +78,8 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-Przekaż powiadomienia **DelayLoadInfo** strukturę do funkcji punktów zaczepienia wraz z wartością powiadomień. Te dane są używaną przez procedury pomocnika obciążenia opóźnienia. Wartość powiadomień będzie jedna z wartości zdefiniowanych w [struktura i stała — definicje](structure-and-constant-definitions.md).
+Powiadomienia są przekazywane w strukturze **DelayLoadInfo** do funkcji Hook wraz z wartością powiadomienia. Te dane są identyczne z tymi, które są używane przez procedurę pomocnika ładowania opóźnień. Wartość powiadomienia będzie jedną z wartości zdefiniowanych w [strukturze i stałych definicjach](structure-and-constant-definitions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa błędów oraz powiadomienia](error-handling-and-notification.md)
+[Obsługa błędów i powiadomienia](error-handling-and-notification.md)
