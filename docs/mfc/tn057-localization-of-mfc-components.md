@@ -1,5 +1,6 @@
 ---
-title: 'TN057: Lokalizacja składników MFC'
+description: 'Dowiedz się więcej na temat: TN057: Lokalizacja składników MFC'
+title: 'TN057: lokalizacja składników MFC'
 ms.date: 06/28/2018
 helpviewer_keywords:
 - components [MFC], localizing
@@ -11,31 +12,31 @@ helpviewer_keywords:
 - DLLs [MFC], localizing MFC
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
-ms.openlocfilehash: 552b925bae00e8bb171c543a6ed16e801186bf89
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: d4a331e74acd2b5b38ae059ea180a0a2148e3a0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214809"
 ---
-# <a name="tn057-localization-of-mfc-components"></a>TN057: Lokalizacja składników MFC
+# <a name="tn057-localization-of-mfc-components"></a>TN057: lokalizacja składników MFC
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-Ta uwaga opisuje niektóre projekty i procedury, których można użyć do zlokalizowania składnik, jeśli je kontrolować aplikację lub OLE lub biblioteki DLL, która używa biblioteki MFC.
+Ta Uwaga opisuje niektóre projekty i procedury, których można użyć do zlokalizowania składnika, jeśli jest to aplikacja lub kontrolka OLE lub biblioteka DLL, która używa MFC.
 
 ## <a name="overview"></a>Omówienie
 
-Istnieją dwa problemy można rozwiązać, gdy lokalizacja składnik, który korzysta z MFC. Najpierw musisz zlokalizować własne zasoby — ciągi, okna dialogowe i inne zasoby, które są specyficzne dla danego składnika. Większość składników utworzone przy użyciu biblioteki MFC, również zawierać i korzystają z szeregu zasobów, które są zdefiniowane przez MFC. Należy podać także zlokalizowane zasoby MFC. Na szczęście w niektórych językach są już udostępniane przez MFC sam.
+Istnieją dwie problemy, które należy rozwiązać podczas lokalizowania składnika korzystającego z MFC. Najpierw należy zlokalizować własne zasoby — ciągi, okna dialogowe i inne zasoby, które są specyficzne dla danego składnika. Większość składników utworzonych przy użyciu MFC obejmuje również wiele zasobów, które są zdefiniowane przez MFC. Należy również zapewnić zlokalizowane zasoby MFC. Na szczęście kilka języków jest już dostarczonych przez MFC.
 
-Ponadto składnika powinna być przygotowana do uruchamiania w środowisku docelowym (środowisko Europejskiego lub włączone DBCS). W większości przypadków to zależy od aplikacji traktowanie znaki z zestawu wysokobitowych poprawnie i obsługa ciągów znaków dwubajtowych. MFC jest włączona, domyślnie dla obu tych środowiskach taki sposób, że można mieć jedną wartość binarną na całym świecie, jest używana na wszystkich platformach z zasobami po prostu inny podłączony w trakcie instalacji.
+Ponadto składnik powinien być przygotowany do uruchamiania w jego środowisku docelowym (w środowisku z obsługą standardu lub DBCS). W większości przypadków jest to zależne od aplikacji, która wymaga poprawnego skonfigurowania znaków z dużą liczbą bitów i obsługi ciągów zawierających znaki dwubajtowe. MFC jest włączona domyślnie dla obu tych środowisk, w taki sposób, że możliwe jest posiadanie pojedynczego pliku binarnego na całym świecie, który jest używany na wszystkich platformach, które są połączone w czasie instalacji.
 
-## <a name="localizing-your-components-resources"></a>Lokalizowanie zasobów danego składnika
+## <a name="localizing-your-components-resources"></a>Lokalizowanie zasobów składnika
 
-Lokalizowanie aplikacji lub biblioteki DLL powinny obejmować zasoby, które jest zgodny z językiem docelowym po prostu zastępując zasobów. W przypadku własnych zasobów jest stosunkowo prosta: edytowanie zasobów w edytorze zasobów i skompilowaniu aplikacji usługi. Jeśli Twój kod jest zapisywane poprawnie nie będzie żadnych parametrów i tekst, który chcesz zlokalizować ustaloną do kodu źródłowego języka C++ — wszystkie lokalizacji może odbywać się po prostu modyfikując zasobów. W rzeczywistości można zaimplementować składnik, taki sposób, że wszystkie dostarczania zlokalizowanych wersji nawet pociąga za sobą kompilację oryginalny kod. Jest bardziej skomplikowana, ale jest warte i jest mechanizmem, który został wybrany dla MFC sam. Istnieje również możliwość lokalizowanie aplikacji ładowania pliku EXE lub DLL do edytora zasobów, a także bezpośrednio edytować zasoby. Ile jest to możliwe wymaga ponownego tych zmian za każdym razem, gdy tworzysz nową wersję aplikacji.
+Lokalizowanie aplikacji lub biblioteki DLL powinno wiązać się z zastępowaniem zasobów, które pasują do języka docelowego. W przypadku własnych zasobów jest to stosunkowo proste: Edytuj zasoby w edytorze zasobów i skompiluj aplikację. Jeśli kod jest prawidłowo zapisany, nie będzie żadnych ciągów ani tekstów, które mają być lokalizowane w kodzie źródłowym języka C++ — wszystkie lokalizacje można wykonać, modyfikując zasoby. W rzeczywistości można zaimplementować składnik, w taki sposób, że wszystkie udostępnienie zlokalizowanej wersji nie obejmuje nawet kompilacji oryginalnego kodu. Jest to bardziej skomplikowane, ale jest dobrze dobrane i jest mechanizmem wybranym dla MFC. Istnieje również możliwość zlokalizowania aplikacji przez załadowanie pliku EXE lub DLL do edytora zasobów i bezpośrednie edytowanie zasobów. Gdy jest to możliwe, wymaga ponownego zastosowania tych zmian przy każdej kompilacji nowej wersji aplikacji.
 
-Jest jednym ze sposobów, aby uniknąć, aby zlokalizować wszystkie zasoby w oddzielnym pliku DLL czasami nazywane satelitarną bibliotekę DLL. Ta biblioteka DLL jest następnie ładowany dynamicznie w czasie wykonywania i zasoby są ładowane z tej biblioteki DLL zamiast z głównego modułu z całego kodu. Biblioteka MFC obsługuje bezpośrednio tego podejścia. Rozważmy aplikację o nazwie MYAPP. PLIK EXE; może mieć wszystkich jej zasobów znajdujących się w bibliotece DLL o nazwie MYRES. BIBLIOTEKI DLL. Przy stosowaniu `InitInstance` ją wykonać następujące polecenie, aby załadować tej biblioteki DLL i spowodować, że MFC, aby załadować zasoby z tej lokalizacji:
+Jednym ze sposobów, aby uniknąć odnalezienia wszystkich zasobów w oddzielnej bibliotece DLL, nazywanych czasami satelitarną biblioteką DLL. Ta biblioteka DLL jest następnie ładowana dynamicznie w czasie wykonywania, a zasoby są ładowane z tej biblioteki DLL, a nie z modułu głównego ze wszystkimi kodami. MFC bezpośrednio obsługuje to podejście. Rozważmy aplikację o nazwie MYAPP.EXE; wszystkie jego zasoby mogą znajdować się w bibliotece DLL o nazwie MYRES.DLL. W aplikacji `InitInstance` można wykonać następujące czynności w celu załadowania biblioteki DLL i spowodowania załadowania przez MFC zasobów z tej lokalizacji:
 
 ```cpp
 CMyApp::InitInstance()
@@ -51,26 +52,26 @@ CMyApp::InitInstance()
 }
 ```
 
-Od tego momentu MFC załaduje zasoby z tej biblioteki DLL zamiast z myapp.exe. Wszystkie zasoby, jednak musi występować w tej bibliotece DLL; MFC nie wyszukiwanie wystąpienia aplikacji, w poszukiwaniu danego zasobu. Ta technika dotyczy równie dobrze do regularnego biblioteki MFC dll, a także formantów OLE. Program instalacyjny może spowodować skopiowanie odpowiednią wersję MYRES. Biblioteki DLL, w zależności od ustawień regionalnych zasobów, które użytkownik chce.
+Od tego dnia MFC będzie ładować zasoby z tej biblioteki DLL, a nie z myapp.exe. Wszystkie zasoby, jednak muszą być obecne w tej bibliotece DLL; MFC nie będzie przeszukiwania wystąpienia aplikacji w wyszukiwaniu danego zasobu. Ta technika stosuje się równie dobrze do zwykłych bibliotek DLL MFC, jak i formantów OLE. Program instalacyjny skopiuje odpowiednią wersję MYRES.DLL w zależności od ustawień regionalnych zasobów, które użytkownik chce.
 
-Stosunkowo łatwo utworzyć zasób tylko biblioteki DLL. Utwórz projekt biblioteki DLL, Dodawanie użytkownika. RC do niego i Dodaj wymagane zasoby. Jeśli masz istniejący projekt, który nie korzysta z tej techniki, możesz skopiować zasoby z tego projektu. Po dodaniu pliku zasobów do projektu, jesteś już prawie gotowe skompilować projekt. Jedyną czynnością, należy wykonać, jest, ustaw dla konsolidatora opcje dołączania **/noentry**. Informuje konsolidator, że biblioteka DLL nie ma punktu wejścia — ponieważ ma ona żadnego kodu, go nie ma punktu wejścia.
+Tworzenie bibliotek DLL dotyczących tylko zasobów jest stosunkowo proste. Tworzysz projekt DLL, Dodaj. RC i Dodaj wymagane zasoby. Jeśli masz istniejący projekt, który nie korzysta z tej techniki, możesz skopiować zasoby z tego projektu. Po dodaniu pliku zasobów do projektu prawie gotowe do skompilowania projektu. Jedyną czynnością, którą należy wykonać, jest ustawienie opcji konsolidatora do uwzględnienia **/NOENTRY**. Nakazuje konsolidatorowi, że biblioteka DLL nie ma punktu wejścia — ponieważ nie ma kodu, nie ma punktu wejścia.
 
 > [!NOTE]
-> Edytor zasobów w Visual C++ 4.0 lub nowszym obsługuje wiele języków na. Plik RC. To może znacznie ułatwiają zarządzanie Twojej lokalizacji w jednym projekcie. Zasoby dla każdego języka są kontrolowane przez dyrektywy preprocesora, generowane przez Edytor zasobów.
+> Edytor zasobów w Visual C++ 4,0 i nowszych obsługuje wiele języków na. Plik RC. Może to ułatwić zarządzanie lokalizacją w pojedynczym projekcie. Zasoby dla każdego języka są kontrolowane przez dyrektywy preprocesora wygenerowane przez Edytor zasobów.
 
-## <a name="using-the-provided-mfc-localized-resources"></a>Przy użyciu podanego MFC zlokalizowane zasoby
+## <a name="using-the-provided-mfc-localized-resources"></a>Korzystanie z dostarczonych zlokalizowanych zasobów MFC
 
-Dowolnej aplikacji MFC, który kompilujesz ponownie używa dwie rzeczy z MFC: kod i zasoby. Oznacza to MFC posiada różne komunikaty o błędach, wbudowanych okien dialogowych i innych zasobów, które są używane przez klasy MFC. Aby całkowicie zlokalizować aplikację, musisz zlokalizować nie tylko zasobów aplikacji, ale również zasobów, które pochodzą bezpośrednio z MFC. Biblioteka MFC zawiera szereg różnych języka pliki zasobów automatycznie, tak, że jeśli język, którego obiektem docelowym jest jednym z języków, które już obsługuje MFC, wystarczy się upewnić, że używasz tych zlokalizowanych zasobów.
+Każda aplikacja MFC, która kompiluje się ponownie używa dwóch rzeczy z MFC: Code i Resources. Oznacza to, że MFC zawiera różne komunikaty o błędach, wbudowane okna dialogowe i inne zasoby, które są używane przez klasy MFC. Aby można było całkowicie zlokalizować aplikację, należy zlokalizować nie tylko zasoby aplikacji, ale również zasoby, które pochodzą bezpośrednio z MFC. MFC udostępnia wiele różnych plików zasobów językowych automatycznie, dzięki czemu w przypadku, gdy językiem docelowym jest jeden z obsługiwanych języków MFC, wystarczy upewnić się, że są używane te zlokalizowane zasoby.
 
-Na chwilę obecną, biblioteka MFC obsługuje chiński, niemiecki, hiszpański, francuski, włoski, japoński i koreańskim. Pliki, które zawierają te zlokalizowane wersje znajdują się w MFC\INCLUDE\L.* (oznaczonym literą "L" oznacza lokalizowanej) katalogów. Niemiecki pliki są MFC\INCLUDE\L.DEU, na przykład. Aby spowodować, że aplikacja korzysta z tych plików RC zamiast plików znajdujących się w MFC\INCLUDE, należy dodać `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` RC linii polecenia (jest to tylko przykładowe; należy zastąpić ustawienia regionalne, wybór, a także katalogu, w którym jest zainstalowany program Visual C ++).
+Zgodnie z tym pisaniem MFC obsługuje język chiński, niemiecki, hiszpański, francuski, włoski, japoński i koreański. Pliki zawierające te zlokalizowane wersje znajdują się w MFC\INCLUDE\L. * ("L" oznacza katalogi zlokalizowane). Pliki w języku niemieckim są na przykład MFC\INCLUDE\L.DEU. Aby spowodować, że aplikacja będzie używać tych plików z wersji RC zamiast plików znajdujących się w MFC\INCLUDE, Dodaj `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` do wiersza polecenia RC (to jest tylko przykład: należy zastąpić wybrane ustawienia regionalne, a także katalog, w którym zainstalowano Visual C++).
 
-Powyższe instrukcje będą działać, jeśli aplikacja łączy się statycznie z MFC. Większość aplikacji łączenie dynamiczne (ponieważ jest to domyślny przez kreatora AppWizard). W tym scenariuszu nie tylko kod jest dynamicznie połączone — dlatego są zasoby. W rezultacie można lokalizować zasoby w aplikacji, ale zasoby implementacji MFC będą nadal ładowane z MFC7x.DLL (lub nowszy) lub MFC7xLOC.DLL jeśli taki istnieje. Można to podejście, z dwoma różnymi kątami.
+Powyższe instrukcje będą działały, jeśli aplikacja jest statycznie łączona z MFC. Większość łączy z większością aplikacji (ponieważ jest to AppWizard domyślna). W tym scenariuszu nie tylko kod jest połączony dynamicznie — jest to zasoby. W związku z tym można zlokalizować zasoby w aplikacji, ale zasoby implementacji MFC nadal będą ładowane z MFC7x.DLL (lub nowszej wersji) lub z MFC7xLOC.DLL, jeśli istnieje. Można to podejścia z dwóch różnych kątów.
 
-Bardziej skomplikowane podejście polega na statku, jeden zlokalizowane MFC7xLOC.DLLs (na przykład MFC7xDEU dla języka niemieckiego, MFC7xESP.DLL, hiszpański, itp.) lub nowszej wersji, a następnie zainstaluj odpowiednie MFC7xLOC.DLL w katalogu system, po użytkownik instaluje aplikację. To może być bardzo skomplikowane, dla deweloperów i użytkownika końcowego i jako takie nie jest zalecane. Zobacz [techniczne 56 Uwaga](../mfc/tn056-installation-of-localized-mfc-components.md) więcej informacji na temat tej techniki i jego ostrzeżenia.
+Bardziej skomplikowane podejście polega na dostarczeniu jednego z zlokalizowanych MFC7xLOC.DLLs (takich jak MFC7xDEU, na potrzeby języka niemieckiego, MFC7xESP.DLL dla języka hiszpańskiego itp.) lub w nowszej wersji, a następnie zainstalowanie odpowiedniej MFC7xLOC.DLL w katalogu systemowym, gdy użytkownik zainstaluje aplikację. Może to być bardzo skomplikowany zarówno dla dewelopera, jak i dla użytkownika końcowego, ponieważ nie jest to zalecane. Aby uzyskać więcej informacji na temat tej techniki i jej zamiarów, zobacz [Uwagi techniczne 56](../mfc/tn056-installation-of-localized-mfc-components.md) .
 
-Najprostszy i najbezpieczniejszy podejście ma zawierają zlokalizowane zasoby MFC w aplikacji lub biblioteki DLL samego (lub jego satelitarnej biblioteki DLL, korzystając z jednego). Umożliwia to uniknięcie problemów instalowania MFC7xLOC.DLL prawidłowo. Aby to zrobić, postępuj zgodnie z tych samych instrukcji, w przypadku statycznej podanej powyżej (ustawienie RC wiersza polecenia poprawnie, aby wskazać zlokalizowane zasoby), z wyjątkiem, musisz również usunąć `/D_AFXDLL` definiowanie, która została dodana przez kreatora AppWizard. Gdy `/D_AFXDLL` jest zdefiniowany, AFXRES. H (i inne pliki MFC RC) nie definiowania wszystkich zasobów (ponieważ one będzie pobierany z biblioteki MFC dll zamiast).
+Najprostszym i najbezpieczniejszym podejściem jest dołączenie zlokalizowanych zasobów MFC do samej aplikacji lub biblioteki DLL (lub jej satelickiej biblioteki DLL, jeśli są używane). Pozwala to uniknąć problemów z instalacją MFC7xLOC.DLL prawidłowo. W tym celu należy postępować zgodnie z takimi samymi instrukcjami, jak w przypadku przypadku statycznego podanego powyżej (odpowiednio ustawiając wiersz polecenia RC, aby wskazywał zlokalizowane zasoby), z tą różnicą, że należy również usunąć `/D_AFXDLL` definicję, która została dodana przez AppWizard. Gdy `/D_AFXDLL` jest zdefiniowany, plik AFXRES. H (i inne pliki MFC RC) nie definiują żadnych zasobów (ponieważ zostaną pobrane z bibliotek MFC DLL).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

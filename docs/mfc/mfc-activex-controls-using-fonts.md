@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: Używanie czcionek'
 title: 'Formanty MFC ActiveX: używanie czcionek'
 ms.date: 11/19/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5f0c495ee92dbcfcb27627628f3bcf92982f719f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206009"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Formanty MFC ActiveX: używanie czcionek
 
@@ -58,7 +59,7 @@ Zgodnie z opisem w [kontrolce ActiveX MFC: właściwości](mfc-activex-controls-
 
 1. W polu **Nazwa właściwości** kliknij pozycję **czcionka**.
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 Kreator dodawania właściwości dodaje następujący wiersz do mapy wysyłania kontrolki znajdującej się w pliku implementacji klasy kontroli:
 
@@ -84,7 +85,7 @@ Właściwość Caption giełdowy jest przykładem właściwości text, którą m
 
 1. W polu **Nazwa właściwości** kliknij pozycję **podpis**.
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 Kreator dodawania właściwości dodaje następujący wiersz do mapy wysyłania kontrolki znajdującej się w pliku implementacji klasy kontroli:
 
@@ -126,11 +127,11 @@ Aby zaimplementować niestandardową Właściwość czcionki, należy użyć Kre
 
 1. W polu **Nazwa właściwości** wpisz nazwę właściwości. Na potrzeby tego przykładu Użyj **HeadingFont**.
 
-1. W obszarze **Typ implementacji**kliknij pozycję **Pobierz/ustaw metody**.
+1. W obszarze **Typ implementacji** kliknij pozycję **Pobierz/ustaw metody**.
 
 1. W polu **Typ właściwości** wybierz opcję **IDispatch** <strong>\*</strong> dla typu właściwości.
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 Kreator dodawania właściwości tworzy kod, aby dodać `HeadingFont` właściwość niestandardową do `CSampleCtrl` klasy i przykładu. Plik IDL. Ponieważ `HeadingFont` jest typem właściwości get/set, Kreator dodawania właściwości modyfikuje `CSampleCtrl` mapę wysyłania klasy w celu uwzględnienia DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](reference/dispatch-maps.md#disp_property_ex) wpis makra:
 

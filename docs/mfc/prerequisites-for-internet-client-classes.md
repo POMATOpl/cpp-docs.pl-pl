@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wymagania wstępne dotyczące klas klientów internetowych'
 title: Wymagania wstępne dotyczące klas klientów internetowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: aaf5756df69728e8ae89fb278bc0671bfc6840b7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9159aa6b3ae4918e406524be05e00fca66cd28a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205879"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Wymagania wstępne dotyczące klas klientów internetowych
 
@@ -64,7 +65,7 @@ Niektóre akcje podejmowane przez klienta internetowego (na przykład odczytują
 |Akcja|Wymaganie wstępne|
 |------------|------------------|
 |Ustanów połączenie gopher.|Utwórz [CInternetSession](reference/cinternetsession-class.md) jako podstawę tej aplikacji klienckiej internetowej. Wywołanie [CInternetSession:: GetGopherConnection](reference/cinternetsession-class.md#getgopherconnection) w celu utworzenia [CGopherConnection](reference/cgopherconnection-class.md).|
-|Znajdź pierwszy plik w bieżącym katalogu.|Ustanów połączenie gopher. Utwórz obiekt [CGopherFileFind](reference/cgopherfilefind-class.md) . Wywołaj [CGopherConnection::](reference/cgopherconnection-class.md#createlocator) CGopherLocator, aby utworzyć obiekt [CGopherLocator](reference/cgopherlocator-class.md) . Przekaż lokalizator do [CGopherFileFind:: FindFile —](reference/cgopherfilefind-class.md#findfile). Zadzwoń do [CGopherFileFind:: Getlocatorer](reference/cgopherfilefind-class.md#getlocator) , aby uzyskać lokalizator pliku, jeśli będzie potrzebny później.|
+|Znajdź pierwszy plik w bieżącym katalogu.|Ustanów połączenie gopher. Utwórz obiekt [CGopherFileFind](reference/cgopherfilefind-class.md) . Wywołaj [CGopherConnection::](reference/cgopherconnection-class.md#createlocator) CGopherLocator, aby utworzyć obiekt [](reference/cgopherlocator-class.md) . Przekaż lokalizator do [CGopherFileFind:: FindFile —](reference/cgopherfilefind-class.md#findfile). Zadzwoń do [CGopherFileFind:: Getlocatorer](reference/cgopherfilefind-class.md#getlocator) , aby uzyskać lokalizator pliku, jeśli będzie potrzebny później.|
 |Wylicz wszystkie dostępne pliki.|Znajdź pierwszy plik. Wywołanie [CGopherFileFind:: FindNextFile](reference/cgopherfilefind-class.md#findnextfile) , dopóki nie zwróci wartości false.|
 |Otwórz plik gopher.|Ustanów połączenie gopher. Utwórz lokalizator gopher z [CGopherConnection::](reference/cgopherconnection-class.md#createlocator) CGopherFileFind lub Znajdź lokalizator z [:: getlocatorer](reference/cgopherfilefind-class.md#getlocator). Wywołanie [CGopherConnection:: OpenFile](reference/cgopherconnection-class.md#openfile).|
 |Odczytaj plik gopher.|Otwórz plik gopher. Użyj [CGopherFile](reference/cgopherfile-class.md).|
@@ -72,5 +73,5 @@ Niektóre akcje podejmowane przez klienta internetowego (na przykład odczytują
 ## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia internetowe Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
-[Klasy MFC do tworzenia klienckich aplikacji internetowych](mfc-classes-for-creating-internet-client-applications.md)<br/>
-[Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[Klasy MFC do tworzenia aplikacji internetowych klienta](mfc-classes-for-creating-internet-client-applications.md)<br/>
+[Pisanie aplikacji klienckiej internetowej przy użyciu klas MFC WinInet](writing-an-internet-client-application-using-mfc-wininet-classes.md)

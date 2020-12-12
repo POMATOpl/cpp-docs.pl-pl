@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: kontrolki ActiveX MFC: Używanie powiązania danych w kontrolce ActiveX'
 title: 'Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb6a6ea52dee7aaf1fcb4c9f15db89cfa5f25deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206087"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 
@@ -31,7 +32,7 @@ Jednym z bardziej zaawansowanych sposobów użycia formantów ActiveX jest powi�
 Ten artykuł dotyczy strony kontrolki zadania. Zaimplementowanie interakcji z powiązaniem danych z bazą danych jest obowiązkiem kontenera kontroli. Zarządzanie interakcjami bazy danych w kontenerze wykracza poza zakres tej dokumentacji. Sposób przygotowania kontroli dla powiązania danych znajduje się w dalszej części tego artykułu.
 
 ![Diagram koncepcyjny kontrolki powiązanej&#45;danych](../mfc/media/vc374v1.gif "Diagram koncepcyjny kontrolki powiązanej&#45;danych") <br/>
-Diagram koncepcyjny kontrolki powiązanej z danymi
+Diagram koncepcyjny kontrolki Data-Bound
 
 `COleControl`Klasa zawiera dwie funkcje członkowskie, które tworzą powiązanie danych z łatwym procesem implementacji. Pierwsza funkcja, [BoundPropertyRequestEdit](reference/colecontrol-class.md#boundpropertyrequestedit), jest używana do żądania uprawnień do zmiany wartości właściwości. [BoundPropertyChanged](reference/colecontrol-class.md#boundpropertychanged), druga funkcja jest wywoływana po pomyślnym zmianie wartości właściwości.
 
@@ -41,7 +42,7 @@ W tym artykule omówiono następujące tematy:
 
 - [Tworzenie metody get/set możliwej do powiązania](#vchowcreatingbindablegetsetmethod)
 
-## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a>Tworzenie właściwości zasobów możliwej do powiązania
+## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a> Tworzenie właściwości zasobów możliwej do powiązania
 
 Istnieje możliwość utworzenia właściwości podstawowych powiązanych z danymi, chociaż jest to bardziej prawdopodobne, że należy użyć [metody get/set do powiązania](#vchowcreatingbindablegetsetmethod).
 
@@ -70,7 +71,7 @@ W tym momencie formant może wyświetlać dane ze źródła danych, ale użytkow
 
 Teraz można skompilować projekt, który będzie rejestrował formant. Po wstawieniu kontrolki w oknie dialogowym zostaną dodane **pola danych** i właściwości **źródła danych** , a teraz można wybrać źródło danych i pole do wyświetlenia w formancie.
 
-## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a>Tworzenie metody get/set możliwej do powiązania
+## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a> Tworzenie metody get/set możliwej do powiązania
 
 Oprócz metody get/set powiązanej z danymi można także utworzyć [Właściwość zasobów](#vchowcreatingbindablestockproperty)możliwej do powiązania.
 
@@ -95,11 +96,11 @@ Oprócz metody get/set powiązanej z danymi można także utworzyć [Właściwo�
 
 1. Wybierz typ danych z listy rozwijanej **Typ właściwości** . Użyj **`short`** w tym przykładzie.
 
-1. W obszarze **Typ implementacji**kliknij pozycję **Pobierz/ustaw metody**.
+1. W obszarze **Typ implementacji** kliknij pozycję **Pobierz/ustaw metody**.
 
-1. Zaznacz następujące pola wyboru na karcie atrybuty IDL: możliwe do **powiązania**, **requestedit**, **displaybind**i **defaultbind** , aby dodać atrybuty do definicji właściwości w projekcie. Plik IDL. Te atrybuty sprawiają, że formant jest widoczny dla użytkownika i ustaw właściwość Stock jako domyślną właściwość, którą można powiązać.
+1. Zaznacz następujące pola wyboru na karcie atrybuty IDL: możliwe do **powiązania**, **requestedit**, **displaybind** i **defaultbind** , aby dodać atrybuty do definicji właściwości w projekcie. Plik IDL. Te atrybuty sprawiają, że formant jest widoczny dla użytkownika i ustaw właściwość Stock jako domyślną właściwość, którą można powiązać.
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 1. Zmodyfikuj treść `SetMyProp` funkcji, tak aby zawierała następujący kod:
 
@@ -133,6 +134,6 @@ Oprócz metody get/set powiązanej z danymi można także utworzyć [Właściwo�
 
 Teraz można skompilować projekt, który będzie rejestrował formant. Po wstawieniu kontrolki w oknie dialogowym zostaną dodane **pola danych** i właściwości **źródła danych** , a teraz można wybrać źródło danych i pole do wyświetlenia w formancie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)

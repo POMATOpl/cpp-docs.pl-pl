@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: &lt; mutex&gt;'
 title: '&lt;mutex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b04b62629253e725e650009f373702f907b9116a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338250"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -61,7 +62,7 @@ Typ muteksu jest również znany jako *Typ podlegającego blokowaniu*. Jeśli ni
 |[Klasa timed_mutex](../standard-library/timed-mutex-class.md)|Reprezentuje typ muteksu czasu. Użyj obiektów tego typu, aby wymusić wzajemne wykluczenia, które mają ograniczone czasowo blokowanie w ramach programu.|
 |[Klasa unique_lock](../standard-library/unique-lock-class.md)|Reprezentuje szablon, który może być skonkretyzowany do tworzenia obiektów, które zarządzają blokowaniem i odblokowywaniem `mutex` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

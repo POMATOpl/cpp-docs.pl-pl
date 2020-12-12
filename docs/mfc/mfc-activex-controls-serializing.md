@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: kontrolki ActiveX MFC: serializacja'
 title: 'Kontrolki ActiveX MFC: serializacja'
 ms.date: 09/12/2018
 f1_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24f49aa1dfb37c6ac981035f33d0f60e6fa398f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206048"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Kontrolki ActiveX MFC: serializacja
 
-W tym artykule omówiono sposób serializacji kontrolki ActiveX. Serializacja jest procesem odczytu lub zapisu do trwałego nośnika magazynu, takiego jak plik dysku. Biblioteka Microsoft Foundation Class (MFC) zawiera wbudowaną obsługę serializacji w klasie `CObject` . `COleControl`rozszerza tę obsługę na kontrolki ActiveX przy użyciu mechanizmu wymiany właściwości.
+W tym artykule omówiono sposób serializacji kontrolki ActiveX. Serializacja jest procesem odczytu lub zapisu do trwałego nośnika magazynu, takiego jak plik dysku. Biblioteka Microsoft Foundation Class (MFC) zawiera wbudowaną obsługę serializacji w klasie `CObject` . `COleControl` rozszerza tę obsługę na kontrolki ActiveX przy użyciu mechanizmu wymiany właściwości.
 
 >[!IMPORTANT]
 > Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](activex-controls.md).
@@ -39,7 +40,7 @@ W poniższych tematach omówiono główne problemy związane z serializowaniem k
 
 - [Implementowanie obsługi wersji](#_core_implementing_version_support)
 
-## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a>Implementowanie funkcji DoPropExchange
+## <a name="implementing-the-dopropexchange-function"></a><a name="_core_implementing_the_dopropexchange_function"></a> Implementowanie funkcji DoPropExchange
 
 W przypadku wygenerowania projektu kontrolki za pomocą Kreatora kontrolek ActiveX kilka domyślnych funkcji programu obsługi jest automatycznie dodawanych do klasy kontrolki, łącznie z domyślną implementacją [COleControl::D opropexchange](reference/colecontrol-class.md#dopropexchange). Poniższy przykład pokazuje kod dodany do klas utworzonych za pomocą Kreatora kontrolek ActiveX:
 
@@ -71,11 +72,11 @@ Poniższa tabela zawiera listę możliwych funkcji wymiany właściwości, któr
 
 Aby uzyskać więcej informacji na temat tych funkcji wymiany właściwości, zobacz [trwałość formantów OLE](reference/persistence-of-ole-controls.md) w *Kompendium MFC*.
 
-## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>Dostosowywanie domyślnego zachowania DoPropExchange
+## <a name="customizing-the-default-behavior-of-dopropexchange"></a><a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Dostosowywanie domyślnego zachowania DoPropExchange
 
 Domyślna implementacja programu `DoPropertyExchange` (jak pokazano w poprzednim temacie) wywołuje klasę bazową `COleControl` . Powoduje to serializacji zestawu właściwości obsługiwanych automatycznie przez `COleControl` program, który używa większej ilości miejsca do magazynowania niż Serializacja tylko właściwości niestandardowych formantu. Usunięcie tego wywołania umożliwia obiektowi Serializowanie tylko tych właściwości, które są uważane za ważne. We wszystkich właściwościach stanu zaimplementowany formant nie zostanie Zserializowany podczas zapisywania lub ładowania obiektu sterowania, chyba że jawnie dodasz **PX_** wywołania.
 
-## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a>Implementowanie obsługi wersji
+## <a name="implementing-version-support"></a><a name="_core_implementing_version_support"></a> Implementowanie obsługi wersji
 
 Obsługa wersji umożliwia skorygowanie kontrolki ActiveX do dodawania nowych trwałych właściwości i nadal umożliwia wykrywanie i ładowanie stanu trwałego utworzonego przez wcześniejszą wersję formantu. Aby udostępnić wersję kontrolki jako część danych trwałych, wywołaj [COleControl:: ExchangeVersion](reference/colecontrol-class.md#exchangeversion) w `DoPropExchange` funkcji formantu. To wywołanie jest automatycznie wstawiane, jeśli Kontrolka ActiveX została utworzona za pomocą Kreatora kontrolki ActiveX. Można je usunąć, jeśli obsługa wersji nie jest wymagana. Jednak koszt w ramach kontroli jest bardzo mały (4 bajty), aby zwiększyć elastyczność oferowaną przez obsługę wersji.
 
@@ -93,6 +94,6 @@ W poniższym przykładzie wersja 1 tej kontrolki przykładowej ma tylko właści
 
 Domyślnie kontrolka "konwertuje" stare dane do najnowszego formatu. Na przykład jeśli wersja 2 kontrolki wczytuje dane zapisane w wersji 1, program zapisze format wersji 2 po ponownym zapisaniu. Jeśli chcesz, aby formant zapisywał dane w formacie ostatnim odczytu, Przekaż **false** jako trzeci parametr podczas wywoływania `ExchangeVersion` . Ten trzeci parametr jest opcjonalny i domyślnie ma **wartość true** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)

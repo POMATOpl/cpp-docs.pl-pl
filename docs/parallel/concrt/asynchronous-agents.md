@@ -1,66 +1,67 @@
 ---
+description: 'Dowiedz się więcej o: agenci asynchroniczni'
 title: Agenci asynchroniczni
 ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38d2325404d83443ed0bd054793ca200a562359f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338293"
 ---
 # <a name="asynchronous-agents"></a>Agenci asynchroniczni
 
-*Agent asynchroniczny* (lub po prostu *agenta*) jest składnik aplikacji asynchronicznie współpracuje z innymi czynnikami, aby rozwiązać bardziej złożone zadania obliczeniowe. Agenta można traktować jako zadanie, które ma ustawiony cykl życia. Na przykład jednego agenta może odczytać danych z urządzenia z systemem wejścia/wyjścia (np. klawiatura, plik na dysku lub połączenia sieciowego) i innego agenta może wykonywać działania na tych danych, po jej udostępnieniu. Pierwszy agent używa przekazywania komunikatów drugi agent poinformować, że dostępnych jest więcej danych. Harmonogram zadań w środowisku uruchomieniowym współbieżności: zapewnia wydajny mechanizm, aby włączyć agentów zablokować i uzyskanie wspólne bez konieczności wywłaszczania mniej wydajne rozwiązanie.
+*Agent asynchroniczny* (lub tylko *Agent*) to składnik aplikacji, który działa asynchronicznie z innymi agentami w celu rozwiązywania większych zadań obliczeniowych. Należy traktować agenta jako zadanie, które ma ustawiony cykl życia. Na przykład jeden Agent może odczytywać dane z urządzenia wejściowego/wyjściowego (takiego jak klawiatura, plik na dysku lub połączenie sieciowe), a inny agent może wykonać akcję na tych danych, gdy staną się dostępne. Pierwszy Agent korzysta z przekazywania komunikatów w celu informowania drugiego agenta o dostępności większej ilości danych. Harmonogram zadań środowisko uruchomieniowe współbieżności zapewnia wydajny mechanizm umożliwiający agentom zablokowanie i uzyskanie sprawności w zakresie współpracy bez konieczności przeprowadzenia mniejszego poziomu zastępujący.
 
-Biblioteka agentów definiuje [concurrency::agent](../../parallel/concrt/reference/agent-class.md) klasy do reprezentowania agent asynchroniczny. `agent` jest klasą abstrakcyjną, która deklaruje metodę wirtualną [concurrency::agent::run](reference/agent-class.md#run). `run` Metoda wykonuje zadanie, które jest wykonywane przez agenta. Ponieważ `run` jest abstrakcyjny, musisz zaimplementować tę metodę w każdej klasy, która pochodzi z `agent`.
+Biblioteka agentów definiuje klasę [concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) do reprezentowania agenta asynchronicznego. `agent` jest klasą abstrakcyjną, która deklaruje metodę wirtualną [concurrency:: Agent:: Run](reference/agent-class.md#run). `run`Metoda wykonuje zadanie wykonywane przez agenta. Ponieważ `run` jest abstrakcyjna, należy zaimplementować tę metodę w każdej klasie, z której pochodzą `agent` .
 
 ## <a name="agent-life-cycle"></a>Cykl życia agenta
 
-Agenci mają ustawiony cykl życia. [Concurrency::agent_status](reference/concurrency-namespace-enums.md#agent_status) wyliczenie definiuje różne stany agenta. Na poniższej ilustracji jest diagram stanu, który pokazuje, jak agentów postępu z jednego stanu do drugiego. Na tej ilustracji linia ciągła reprezentowania metody, które można wywoływać z aplikacji; Wiersze dotted przedstawiają metody, które są wywoływane ze środowiska wykonawczego.
+Agenci mają ustawiony cykl życia. Wyliczenie [concurrency:: agent_status](reference/concurrency-namespace-enums.md#agent_status) definiuje różne stany agenta. Poniższa ilustracja przedstawia Diagram stanu, który pokazuje, jak agenci postępują z jednego stanu do drugiego. Na tej ilustracji pełny wiersz reprezentuje metody, które są wywoływane z aplikacji; linie kropkowane reprezentują metody, które są wywoływane z środowiska uruchomieniowego.
 
 ![Diagram stanu agenta](../../parallel/concrt/media/agentstate.png "Diagram stanu agenta")
 
-W poniższej tabeli opisano każdy stan w `agent_status` wyliczenia.
+W poniższej tabeli opisano każdy stan w `agent_status` wyliczeniu.
 
-|Stan agenta.|Opis|
+|Stan agenta|Opis|
 |-----------------|-----------------|
-|`agent_created`|Agent nie został zaplanowany do wykonania.|
-|`agent_runnable`|Środowisko uruchomieniowe jest planowanie agenta do wykonania.|
-|`agent_started`|Agent została uruchomiona i działa.|
-|`agent_done`|Zakończono agenta.|
-|`agent_canceled`|Agent została anulowana przed jej wprowadzeniem `started` stanu.|
+|`agent_created`|Nie zaplanowano wykonania agenta.|
+|`agent_runnable`|Środowisko uruchomieniowe planuje wykonanie.|
+|`agent_started`|Agent został uruchomiony i jest uruchomiony.|
+|`agent_done`|Agent został ukończony.|
+|`agent_canceled`|Agent został anulowany przed wprowadzeniem `started` stanu.|
 
-`agent_created` jest wstępny stan agenta, `agent_runnable` i `agent_started` są aktywne stany i `agent_done` i `agent_canceled` są Stany terminala.
+`agent_created` jest początkowym stanem agenta `agent_runnable` i są stanami `agent_started` aktywnymi, a `agent_done` i `agent_canceled` są stanami końcowymi.
 
-Użyj [concurrency::agent::status](reference/agent-class.md#status) metodę, która pobierze bieżący stan `agent` obiektu. Mimo że `status` metoda jest bezpieczna pod kątem współbieżności, stan agenta można zmienić do czasu `status` metoda zwraca. Przykładowo agent może być `agent_started` stanu po wywołaniu `status` metody, ale przeniesiony do `agent_done` stanu tuż za `status` metoda zwraca.
+Użyj metody [concurrency:: Agent:: status](reference/agent-class.md#status) , aby pobrać bieżący stan `agent` obiektu. Mimo że `status` Metoda jest bezpieczna pod kątem współbieżności, stan agenta może ulec zmianie przez moment, gdy `status` Metoda zwraca. Na przykład Agent może być w `agent_started` stanie w momencie wywołania `status` metody, ale jest przenoszony do `agent_done` stanu tuż po `status` powrocie metody.
 
 ## <a name="methods-and-features"></a>Metody i funkcje
 
-W poniższej tabeli przedstawiono niektóre ważne metody, które należą do `agent` klasy. Aby uzyskać więcej informacji na temat wszystkich `agent` metody klasy, zobacz [agent, klasa](../../parallel/concrt/reference/agent-class.md).
+W poniższej tabeli przedstawiono niektóre ważne metody należące do `agent` klasy. Aby uzyskać więcej informacji na temat wszystkich `agent` metod klasy, zobacz [Klasa agenta](../../parallel/concrt/reference/agent-class.md).
 
 |Metoda|Opis|
 |------------|-----------------|
-|[start](reference/agent-class.md#start)|Harmonogramy `agent` obiektu do wykonania i ustawia ją na `agent_runnable` stanu.|
-|[run](reference/agent-class.md#run)|Wykonuje zadanie, które ma być wykonywane przez `agent` obiektu.|
-|[Gotowe](reference/agent-class.md#done)|Przenosi agenta pod kątem `agent_done` stanu.|
-|[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Jeśli agent nie został uruchomiony, ta metoda powoduje anulowanie wykonywania agenta i ustawia ją na `agent_canceled` stanu.|
-|[status](reference/agent-class.md#status)|Pobiera bieżący stan `agent` obiektu.|
-|[Czekaj](reference/agent-class.md#wait)|Czeka, aż `agent` obiektu, aby wprowadzić `agent_done` lub `agent_canceled` stanu.|
-|[wait_for_all](reference/agent-class.md#wait_for_all)|Czeka, aż wszystkie podane `agent` obiektów, aby wprowadzić `agent_done` lub `agent_canceled` stanu.|
-|[wait_for_one](reference/agent-class.md#wait_for_one)|Czeka na co najmniej jednego z dostarczonych `agent` obiektów, aby wprowadzić `agent_done` lub `agent_canceled` stanu.|
+|[Start](reference/agent-class.md#start)|Planuje `agent` wykonanie obiektu i ustawia go na `agent_runnable` stan.|
+|[wykonane](reference/agent-class.md#run)|Wykonuje zadanie, które ma zostać wykonane przez `agent` obiekt.|
+|[gotowe](reference/agent-class.md#done)|Przenosi agenta do `agent_done` stanu.|
+|[Anuluj](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Jeśli Agent nie został uruchomiony, ta metoda anuluje wykonywanie agenta i ustawia go na `agent_canceled` stan.|
+|[Stany](reference/agent-class.md#status)|Pobiera bieżący stan `agent` obiektu.|
+|[trwa](reference/agent-class.md#wait)|Czeka, aż `agent` obiekt wprowadzi wartość `agent_done` lub `agent_canceled` .|
+|[wait_for_all](reference/agent-class.md#wait_for_all)|Czeka, aż wszystkie podane `agent` obiekty `agent_done` `agent_canceled` przestaną lub.|
+|[wait_for_one](reference/agent-class.md#wait_for_one)|Czeka na co najmniej jeden z podanych `agent` obiektów, aby wprowadzić `agent_done` `agent_canceled` stan lub.|
 
-Po utworzeniu obiektu agenta należy wywołać [concurrency::agent::start](reference/agent-class.md#start) metodę, aby zaplanować jego wykonywania. Środowisko uruchomieniowe wywołuje `run` metoda po planuje agenta i ustawia ją na `agent_runnable` stanu.
+Po utworzeniu obiektu agenta Wywołaj metodę [concurrency:: Agent:: Start](reference/agent-class.md#start) , aby zaplanować jej wykonanie. Środowisko uruchomieniowe wywołuje `run` metodę po zaplanowanym agencie i ustawi ją na `agent_runnable` stan.
 
-Środowisko wykonawcze nie zarządza wyjątki wyrzucane przez agentów asynchronicznych. Aby uzyskać więcej informacji na temat obsługi wyjątków i agentów, zobacz [wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+Środowisko uruchomieniowe nie zarządza wyjątkami zgłoszonymi przez agentów asynchronicznych. Aby uzyskać więcej informacji na temat obsługi wyjątków i agentów, zobacz [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać przykład pokazujący sposób tworzenia podstawowych aplikacji opartej o agentów, zobacz [instruktażu: Tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
+Aby zapoznać się z przykładem, który pokazuje, jak utworzyć podstawową aplikację opartą na agencie, zobacz [Przewodnik: Tworzenie aplikacji Agent-Based](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)

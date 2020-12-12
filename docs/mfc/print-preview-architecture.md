@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat architektury drukowania w wersji zapoznawczej
 title: Architektura podglądu wydruku
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-ms.openlocfilehash: 1956313d4e904255ba59e79690fe3d7144669a29
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 34dcd02b189a0065b34cff756596c5c5b1576dc6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205866"
 ---
 # <a name="print-preview-architecture"></a>Architektura podglądu wydruku
 
@@ -25,7 +26,7 @@ W tym artykule wyjaśniono, jak platforma MFC implementuje funkcję podglądu wy
 
 Podgląd wydruku jest nieco różny od wyświetlania ekranu i drukowania, ponieważ zamiast bezpośredniego rysowania obrazu na urządzeniu aplikacja musi symulować drukarkę przy użyciu ekranu. Aby to umożliwić, biblioteka MFC definiuje specjalną (nieudokumentowaną) klasę pochodną [klasy przechwytywania](reference/cdc-class.md)o nazwie `CPreviewDC` . Wszystkie `CDC` obiekty zawierają dwa konteksty urządzenia, ale zazwyczaj są identyczne. W `CPreviewDC` obiekcie są różne: pierwszy reprezentuje symulowaną drukarkę, a drugi reprezentuje ekran, na którym są wyświetlane dane wyjściowe.
 
-## <a name="the-print-preview-process"></a><a name="_core_the_print_preview_process"></a>Proces podglądu wydruku
+## <a name="the-print-preview-process"></a><a name="_core_the_print_preview_process"></a> Proces podglądu wydruku
 
 Gdy użytkownik wybierze polecenie Drukuj podgląd z menu **plik** , struktura utworzy `CPreviewDC` obiekt. Za każdym razem, gdy aplikacja wykonuje operację, która ustawia charakterystykę kontekstu urządzenia drukarki, struktura wykonuje także podobną operację w kontekście urządzenia ekranu. Na przykład jeśli aplikacja wybierze czcionkę do drukowania, struktura wybiera czcionkę na potrzeby wyświetlania ekranu, która symuluje czcionkę drukarki. Za każdym razem, gdy aplikacja wyśle dane wyjściowe do drukarki, struktura wysyła dane wyjściowe do ekranu.
 
@@ -33,7 +34,7 @@ Podgląd wydruku różni się także od drukowania w kolejności, w której każ
 
 Funkcja [CView:: OnPreparePrinting](reference/cview-class.md#onprepareprinting) jest wywoływana w przypadku wywołania trybu podglądu, podobnie jak na początku zadania drukowania. Struktura [struktury CPrintInfo](reference/cprintinfo-structure.md) przeniesiona do funkcji zawiera kilka elementów członkowskich, których wartości można ustawić w celu dostosowania określonych cech operacji podglądu wydruku. Na przykład można ustawić składową *m_nNumPreviewPages* , aby określić, czy dokument ma być wyświetlany w trybie jednej strony, czy na dwie strony.
 
-## <a name="modifying-print-preview"></a><a name="_core_modifying_print_preview"></a>Modyfikowanie podglądu wydruku
+## <a name="modifying-print-preview"></a><a name="_core_modifying_print_preview"></a> Modyfikowanie podglądu wydruku
 
 Możesz łatwo modyfikować zachowanie i wygląd podglądu wydruku na wiele sposobów. Można na przykład, między innymi:
 
@@ -57,7 +58,7 @@ Czasami możesz chcieć `OnPreparePrinting` wykonać inne inicjalizacje w zależ
 
 ## <a name="see-also"></a>Zobacz też
 
-[Drukowanie i podgląd wydruku](printing-and-print-preview.md)<br/>
+[Drukowanie i Podgląd wydruku](printing-and-print-preview.md)<br/>
 [Drukowanie](printing.md)<br/>
 [Klasa CView](reference/cview-class.md)<br/>
-[Klasa CDC](reference/cdc-class.md)
+[Klasa przechwytywania](reference/cdc-class.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat okien ramowych
 title: Okna ramowe
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 39c0b4b866fa123d8bcae639342c925570d96e1b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ee993b7f8314c28dba38c9ca607366f6fb93da1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193503"
 ---
 # <a name="frame-windows"></a>Okna ramowe
 
@@ -45,7 +46,7 @@ Innym typowym rozmieszczeniem jest to, aby okno ramki było ramką wielu widokó
 
 - [Klasy okien ramowych](frame-window-classes.md)
 
-- [Klasy okien ramowych tworzone przez Kreatora aplikacji](frame-window-classes-created-by-the-application-wizard.md)
+- [Frame-Window klas utworzonych przez Kreatora aplikacji](frame-window-classes-created-by-the-application-wizard.md)
 
 - [Style okna ramowego](frame-window-styles-cpp.md)
 
@@ -53,7 +54,7 @@ Innym typowym rozmieszczeniem jest to, aby okno ramki było ramką wielu widokó
 
 **Tematy dotyczące korzystania z okien ramowych**
 
-- [Korzystanie z okien ramowych](using-frame-windows.md)
+- [Używanie okien ramowych](using-frame-windows.md)
 
 - [Tworzenie okien ramowych dokumentu](creating-document-frame-windows.md)
 
@@ -77,7 +78,7 @@ Innym typowym rozmieszczeniem jest to, aby okno ramki było ramką wielu widokó
 
 **Tematy dotyczące innych rodzajów okien**
 
-- [Używanie widoków](using-views.md)
+- [Korzystanie z widoków](using-views.md)
 
 - [Okna dialogowe](dialog-boxes.md)
 

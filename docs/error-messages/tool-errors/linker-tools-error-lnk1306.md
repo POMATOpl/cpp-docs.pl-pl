@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK1306'
 title: Błąd narzędzi konsolidatora LNK1306
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-ms.openlocfilehash: ddaa8797e0cf8ff617408aedc770b21cc656cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa6386da7c836eea8365d8a4ffde0bbd80d0fa81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193659"
 ---
 # <a name="linker-tools-error-lnk1306"></a>Błąd narzędzi konsolidatora LNK1306
 
-> Funkcja punktu wejścia biblioteki DLL nie może być zarządzany; skompilować Native
+> Funkcja punktu wejścia biblioteki DLL nie może być zarządzana; Kompiluj do natywnego
 
-`DllMain` Nie można skompilować do MSIL; muszą być skompilowane na natywny.
+`DllMain` nie można kompilować do MSIL; musi być skompilowany do natywny.
 
-Aby rozwiązać ten problem
+Aby rozwiązać ten problem,
 
-- Skompiluj plik, który zawiera punkt wejścia bez **/CLR**.
+- Kompiluj plik zawierający punkt wejścia bez **/CLR**.
 
 - Umieść punkt wejścia w `#pragma unmanaged` sekcji.
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
 
 - [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md)
 
@@ -37,7 +38,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie LNK1306.
+Poniższy przykład generuje LNK1306.
 
 ```cpp
 // LNK1306.cpp
@@ -49,7 +50,7 @@ int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
 }
 ```
 
-Aby rozwiązać ten problem, nie należy używać opcji/CLR Aby skompilować ten plik, lub użyj `#pragma` dyrektywy, należy umieścić w niezarządzanych sekcji definicji punktu wejścia, jak pokazano w poniższym przykładzie:
+Aby rozwiązać ten problem, nie używaj opcji/CLR do kompilowania tego pliku lub Użyj `#pragma` dyrektywy, aby umieścić definicję punktu wejścia w niezarządzanej sekcji, jak pokazano w tym przykładzie:
 
 ```cpp
 // LNK1306fix.cpp

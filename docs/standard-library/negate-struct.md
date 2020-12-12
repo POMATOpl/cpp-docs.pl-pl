@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze Negate
 title: negate — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fccc583d38b797a856ed4e0915e5e0255bb9eaee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338242"
 ---
 # <a name="negate-struct"></a>negate — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację arytmetyczną negację (jednoargumentowy `operator-`) na jej argument.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje arytmetyczną operację negacji (Jednoargumentowa `operator-` ) w argumencie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,15 +40,15 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Dowolny typ, który obsługuje `operator-` która przyjmuje argument typu określonego lub wywnioskowane uprawnienie.
+*Wprowadź*\
+Dowolny typ, który obsługuje element `operator-` , który przyjmuje operand typu określonego lub wywnioskowanego.
 
-*po lewej stronie*\
-Argument operacji jest ujemna. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *typu*.
+*Lewym*\
+Operand, który ma być negacją. Wyspecjalizowany szablon robi doskonałe przekazywanie argumentów odwołania lvalue i rvalue *typu* wywnioskowanego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `-Left`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez jednoargumentowy `operator-`.
+Wynik `-Left` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez jednoargumentowy `operator-` .
 
 ## <a name="example"></a>Przykład
 

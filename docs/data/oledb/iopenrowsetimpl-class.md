@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IOpenRowsetImpl'
 title: IOpenRowsetImpl — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: a3c94c75db21218aae1205bf9c5c379ab772a7f8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4ec7f8ebdab132854172f7e5f4dff7387e46717f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317431"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl — Klasa
 
@@ -103,7 +104,7 @@ Zobacz [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda nie została znaleziona w ATLDB. C. Jest tworzony przez kreatora obiektów ATL podczas tworzenia dostawcy.
+Ta metoda nie została znaleziona w ATLDB. H. Jest tworzony przez kreatora obiektów ATL podczas tworzenia dostawcy.
 
 ## <a name="see-also"></a>Zobacz też
 

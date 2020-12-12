@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: informacje internetowe według zadania'
 title: Informacje internetowe według zadań
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-ms.openlocfilehash: ba359aaba2129af3ab4af9543a46b8810cf4fb6e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1f0b1651198518b195e4a53f2b4d9d24cf39e686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338351"
 ---
 # <a name="internet-information-by-task"></a>Informacje internetowe według zadań
 
@@ -26,7 +27,7 @@ W tym temacie wymieniono następujące kategorie zadań:
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
 
-### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a>Kontrolki ActiveX, dokumenty i synchroniczne zadania monikera
+### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Kontrolki ActiveX, dokumenty i synchroniczne zadania monikera
 
 - [Dowiedz się więcej na temat monikerów asynchronicznych](asynchronous-monikers-on-the-internet.md)
 
@@ -34,7 +35,7 @@ W tym temacie wymieniono następujące kategorie zadań:
 
 - [Optymalizowanie formantu ActiveX](mfc-activex-controls-optimization.md)
 
-### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a>Zadania WinInet
+### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a> Zadania WinInet
 
 - [Dowiedz się więcej o usłudze WinInet, Win32 API funkcji dla dostępu do Internetu](wininet-basics.md)
 
@@ -50,4 +51,4 @@ W tym temacie wymieniono następujące kategorie zadań:
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)
+[Podstawy programowania internetowego MFC](mfc-internet-programming-basics.md)

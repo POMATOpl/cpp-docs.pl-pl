@@ -1,46 +1,47 @@
 ---
+description: 'Dowiedz się więcej na temat: Biblioteka agentów asynchronicznych'
 title: Biblioteki agentów asynchronicznych
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 39ae785b602b3928f0c32f9fc599527dab5558f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d56bd84078d4c1a89fc489fba37edeb03b3739f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338304"
 ---
 # <a name="asynchronous-agents-library"></a>Biblioteki agentów asynchronicznych
 
-Bibliotekę asynchronicznych agentów (lub po prostu *biblioteki agentów*) zapewnia model programowania, który pozwala zwiększyć niezawodność rozwoju aplikacji z możliwością współbieżności. Biblioteka agentów jest najwyższym model programowania oparty na aktora i komunikatów w trakcie przekazywania dla gruboziarnistych przepływu danych i ich przetwarzanie potokowe zadań Biblioteka szablonów języka C++. Biblioteka agentów opiera się na planowanie i składniki zarządzania w czasie wykonywania współbieżności.
+Biblioteka agentów asynchronicznych (lub tylko *Biblioteka agentów*) zapewnia model programowania, który pozwala zwiększyć niezawodność tworzenia aplikacji obsługujących współbieżność. Biblioteka agentów jest biblioteką szablonów języka C++, która wspiera model programowania oparty na aktorze i przetwarza komunikat w procesie, który jest przekazywany przez duże i przepływu danych zadania przetwarzania potokowego. Biblioteka agenci jest oparta na składnikach planowania i zarządzania zasobami środowisko uruchomieniowe współbieżności.
 
 ## <a name="programming-model"></a>Model programowania
 
-Biblioteka agentów zawiera alternatywy dla udostępnionego stanu, umożliwiając łączenie izolowane składniki za pomocą modelu komunikacji asynchronicznej, oparty na przepływ danych zamiast przepływu sterowania. *Przepływ danych* odwołuje się do programowania modelu, w których są wykonane obliczeń, gdy wszystkie wymagane dane są dostępne; *przepływ sterowania* odwołuje się do modelu programowania, gdzie obliczenia są wykonywane w określonej kolejności.
+Biblioteka agenci zapewnia alternatywy dla udostępnionego stanu, umożliwiając łączenie izolowanych składników za pośrednictwem asynchronicznego modelu komunikacji opartego na przepływu danych zamiast przepływu sterowania. *Przepływu danych* odnosi się do modelu programowania, w którym obliczenia są wykonywane, gdy wszystkie wymagane dane są dostępne; *przepływ sterowania* odnosi się do modelu programowania, w którym obliczenia są wykonywane we wstępnie określonej kolejności.
 
-Model programowania przepływu danych jest powiązany z koncepcji *przekazywania komunikatów*, gdzie niezależnie od składników programu komunikować się ze sobą, wysyłając komunikaty.
+Model programowania przepływu danych jest powiązany z koncepcją *przekazywania komunikatów*, gdzie niezależne składniki programu komunikują się ze sobą przez wysyłanie komunikatów.
 
-Biblioteka agentów składa się z trzech składników: *agentów asynchronicznych*, *bloki komunikatów asynchronicznych*, i *funkcje przekazywania komunikatów*. Agenci zarządzania stanem i bloki komunikatów i funkcje przekazywania komunikatów mogą komunikować się ze sobą i przy użyciu składników zewnętrznych. Funkcje przekazywania komunikatów umożliwiają agentów, aby wysyłać i odbierać komunikaty z zewnętrznej składników. Bloki komunikatów asynchronicznych przechowywania komunikatów i włączyć agentów do komunikowania się w sposób zsynchronizowane.
+Biblioteka agentów składa się z trzech składników: *agentów asynchronicznych*, *bloków komunikatów asynchronicznych* i *funkcji przekazywania komunikatów*. Agenci utrzymują stan i używają bloków komunikatów oraz funkcji przekazywania komunikatów, aby komunikować się ze sobą i ze składnikami zewnętrznymi. Funkcje przekazywania komunikatów umożliwiają agentom wysyłanie i odbieranie komunikatów do i ze składników zewnętrznych. Bloki komunikatów asynchronicznych przechowują komunikaty i umożliwiają agentom komunikowanie się w sposób zsynchronizowany.
 
-Na poniższej ilustracji przedstawiono jak dwóch agentów bloki komunikatów użycia i funkcje przekazywania komunikatów do komunikowania się. Na tej ilustracji `agent1` wysyła komunikat `agent2` przy użyciu [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcji i [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiektu. `agent2` używa [concurrency::receive](reference/concurrency-namespace-functions.md#receive) funkcję, aby odczytać wiadomość. `agent2` wykorzystuje tę samą metodę można wysłać wiadomości do `agent1`. Kreskowane strzałki przedstawiają przepływ danych między agentami. Stałe strzałki nawiązać bloki komunikatów, które one zapisu lub odczytu z agentów.
+Na poniższej ilustracji przedstawiono, jak dwa agenci używają bloków komunikatów i funkcji przekazywania komunikatów do komunikacji. Na tej ilustracji `agent1` wysyła komunikat do `agent2` przy użyciu obiektu [concurrency:: Send](reference/concurrency-namespace-functions.md#send) i [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) . `agent2` używa funkcji [concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) , aby odczytać komunikat. `agent2` używa tej samej metody do wysyłania komunikatu do `agent1` . Strzałki kreskowane reprezentują przepływ danych między agentami. Pełne strzałki łączą agentów z blokami komunikatów, do których zapisują lub odczytują.
 
-![Składniki biblioteki agentów](../../parallel/concrt/media/agent_librarycomp.png "składniki biblioteki agentów")
+![Składniki biblioteki agentów](../../parallel/concrt/media/agent_librarycomp.png "Składniki biblioteki agentów")
 
-Przykładowy kod, który implementuje na tej ilustracji przedstawiono w dalszej części tego tematu.
+Przykład kodu, który implementuje tę ilustrację, przedstawiono w dalszej części tego tematu.
 
-Model programowania agent ma kilka zalet za pośrednictwem innych mechanizmów współbieżność i synchronizacji, na przykład zdarzenia. Jedną z zalet to, czy przy użyciu przekazywania komunikatów do przesłania zmian stanu między obiektami, możesz odizolować dostęp do zasobów udostępnionych i tym samym poprawienia skalowalności. Zaletą przekazywania komunikatów jest wiąże synchronizacji danych zamiast wiązanie go do obiektu zewnętrznego synchronizacji. To ułatwia przesyłanie danych między składnikami i wyeliminować błędy programowania w swoich aplikacjach.
+Model programowania agentów ma kilka zalet niż inne mechanizmy współbieżności i synchronizacji, na przykład zdarzenia. Jedną z zalety jest to, że dzięki użyciu przekazywania komunikatów do przesyłania zmian stanu między obiektami można izolować dostęp do zasobów udostępnionych, a tym samym zwiększyć skalowalność. Zalety przekazywania komunikatów polega na tym, że wiąże się z synchronizacją danych, zamiast połączyć ją z zewnętrznym obiektem synchronizacji. Upraszcza to przesyłanie danych między składnikami i może wyeliminować błędy programistyczne w aplikacjach.
 
 ## <a name="when-to-use-the-agents-library"></a>Kiedy należy używać biblioteki agentów
 
-Jeśli masz wiele operacji, które muszą asynchronicznie komunikować się ze sobą, należy używać biblioteki agentów. Bloki komunikatów i funkcje przekazywania komunikatów pozwalają tworzyć aplikacje równoległe bez konieczności mechanizmy synchronizacji, takie jak blokad. Dzięki temu deweloper może skupić się na logice aplikacji.
+Biblioteka agentów jest używana, gdy istnieje wiele operacji, które muszą komunikować się ze sobą asynchronicznie. Bloki komunikatów i funkcje przekazywania komunikatów umożliwiają pisanie aplikacji równoległych, które nie wymagają mechanizmów synchronizacji, takich jak blokady. Dzięki temu można skoncentrować się na logice aplikacji.
 
-Model programowania agenta jest często używany do tworzenia *potoków danych* lub *sieci*. Potok danych jest szeregu składników, z których każdy wykonuje określone zadanie, które przyczynia się do ogólnego celu. Każdy składnik w potoku przepływu danych wykonuje pracę, gdy odbiera wiadomości z innego składnika. Wynikiem tej pracy jest przekazywany do innych składników w potoku lub sieci. Składniki funkcji można używać więcej szczegółowych współbieżności z innych bibliotek, na przykład, [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
+Model programowania agentów jest często używany do tworzenia *potoków danych* lub *sieci*. Potok danych to seria składników, z których każdy wykonuje konkretne zadanie, które przyczynia się do większego celu. Każdy składnik w potoku przepływu danych wykonuje działanie, gdy odbierze komunikat z innego składnika. Wynik tej pracy jest przesyłany do innych składników w potoku lub sieci. Składniki mogą korzystać z bardziej precyzyjnych funkcji współbieżności z innych bibliotek, na przykład [biblioteki równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład implementuje ilustracji przedstawione wcześniej w tym temacie.
+Poniższy przykład implementuje ilustrację przedstawioną wcześniej w tym temacie.
 
 [!code-cpp[concrt-basic-agents#1](../../parallel/concrt/codesnippet/cpp/asynchronous-agents-library_1.cpp)]
 
@@ -58,34 +59,34 @@ W poniższych tematach opisano funkcje używane w tym przykładzie.
 ## <a name="related-topics"></a>Tematy pokrewne
 
 [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)<br/>
-W tym artykule opisano rolę agentów asynchronicznych w rozwiązaniu bardziej złożone zadania obliczeniowe.
+Opisuje rolę agentów asynchronicznych w rozwiązywaniu większych zadań obliczeniowych.
 
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-Zawiera opis różnych typów bloku komunikatu, które są dostarczane przez biblioteki agentów.
+Opisuje różne typy bloku komunikatów dostarczone przez bibliotekę agentów.
 
 [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)<br/>
-W tym artykule opisano różne procedur przekazywanie wiadomości, które są dostarczane przez biblioteki agentów.
+Opisuje różne procedury przekazywania komunikatów, które są dostarczane przez bibliotekę agentów.
 
-[Instrukcje: implementowanie różnych wzorców producent — konsument](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br/>
-Opisuje sposób implementacji wzorca producent — konsument w aplikacji.
+[Instrukcje: implementowanie różnych wzorców Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br/>
+W tym artykule opisano sposób implementacji wzorca producenta klienta w aplikacji.
 
-[Instrukcje: zapewnianie funkcji pracy dla wywoływania oraz klasy transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br/>
-Pokazano kilka sposobów zapewnianie funkcji pracy do [concurrency::call](../../parallel/concrt/reference/call-class.md) i [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy.
+[Instrukcje: zapewnianie funkcji pracy dla klas wywołania i transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br/>
+Ilustruje kilka sposobów udostępniania funkcji roboczych do klas [concurrency:: Call](../../parallel/concrt/reference/call-class.md) i [concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) .
 
 [Instrukcje: używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br/>
-Ilustruje sposób używania [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) klasy w potoku danych.
+Pokazuje, w jaki sposób używać klasy [concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) w potoku danych.
 
-[Instrukcje: wybieranie spośród zadań wykonanych](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br/>
-Ilustruje sposób używania [concurrency::choice](../../parallel/concrt/reference/choice-class.md) i [concurrency::join](../../parallel/concrt/reference/join-class.md) klasy zaznacz pierwsze zadanie do wykonania algorytmu wyszukiwania.
+[Instrukcje: wybieranie spośród ukończonych zadań](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br/>
+Pokazuje, w jaki sposób używać klas [concurrency:: Choice](../../parallel/concrt/reference/choice-class.md) i [concurrency:: join](../../parallel/concrt/reference/join-class.md) , aby wybrać pierwsze zadanie do ukończenia algorytmu wyszukiwania.
 
-[Instrukcje: wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br/>
-Ilustruje sposób używania [concurrency::timer](../../parallel/concrt/reference/timer-class.md) klasy do wysyłania komunikatu w regularnych odstępach czasu.
+[Instrukcje: Wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br/>
+Pokazuje, w jaki sposób używać klasy [concurrency:: Timer](../../parallel/concrt/reference/timer-class.md) do wysyłania komunikatu w regularnych odstępach czasu.
 
-[Instrukcje: korzystanie z filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)<br/>
-Pokazuje, jak włączyć blokiem komunikatów asynchronicznych o zaakceptowanie lub odrzucenie wiadomości za pomocą filtru.
+[Instrukcje: korzystanie z filtru bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)<br/>
+Pokazuje, jak użyć filtru, aby włączyć asynchroniczny blok komunikatów do akceptowania lub odrzucania wiadomości.
 
-[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
-Opisuje sposób używania różnych równoległych wzorców, takich jak algorytmy równoległe w swoich aplikacjach.
+[Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+Opisuje sposób używania różnych równoległych wzorców, takich jak algorytmy równoległe, w aplikacjach.
 
-[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)<br/>
-W tym artykule opisano środowisko uruchomieniowe współbieżności, upraszczający Programowanie równoległe i zawiera linki do powiązanych tematów.
+[Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)<br/>
+Opisuje środowisko uruchomieniowe współbieżności, które upraszczają programowanie równoległe i zawiera linki do powiązanych tematów.
