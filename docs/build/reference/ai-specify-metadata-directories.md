@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/AI (Określ katalogi metadanych)
 title: /AI (Określ katalogi metadanych)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,44 +12,44 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: 3633cfe34a4f9c627f84cf401cb559f02f8c8229
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30711b1da2d41204bf56520d56dd5101f3168b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179749"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Określ katalogi metadanych)
 
-Określa katalog, który kompilator będzie przeszukiwał, aby rozwiązać odwołania do plików przekazywane do `#using` dyrektywy.
+Określa katalog, który będzie przeszukiwany przez kompilator w celu rozpoznania odwołań do plików przesłanych do `#using` dyrektywy.
 
 ## <a name="syntax"></a>Składnia
 
-> **/AI**_katalogu_
+> _Katalog_ /AI
 
 ## <a name="arguments"></a>Argumenty
 
-*directory*<br/>
+*katalogi*<br/>
 Katalog lub ścieżka, w której kompilator będzie wyszukiwał.
 
 ## <a name="remarks"></a>Uwagi
 
-Tylko jeden katalog może być przekazywany do **/AI** wywołania. Określ jedną **/AI** opcję dla każdej ścieżki, w której kompilator ma wyszukiwać. Na przykład, aby dodać do ścieżki wyszukiwania kompilatora dla zarówno C:\Project\Meta, jak i C:\Common\Meta `#using` dyrektyw, Dodaj `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` do wiersza polecenia kompilatora lub Dodaj każdy katalog do **dodatkowe # katalogi using** właściwości w programie Visual Studio.
+Tylko jeden katalog można przesłać do wywołania **/AI** . Określ jedną opcję **/AI** dla każdej ścieżki, która ma być wyszukiwany przez kompilator. Na przykład, aby dodać zarówno C:\Project\Meta, jak i C:\Common\Meta do ścieżki wyszukiwania kompilatora dla `#using` dyrektyw, należy dodać `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` do wiersza polecenia kompilatora lub dodać każdy katalog do właściwości **Dodatkowe katalogi #using** w programie Visual Studio.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **ogólne** stronę właściwości.
+1. Wybierz   >  stronę właściwości ogólne **C/C++** właściwości konfiguracji  >   .
 
-1. Modyfikowanie **dodatkowe # katalogi using** właściwości.
+1. Zmodyfikuj właściwość **Dodatkowe katalogi #using** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalUsingDirectories%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalUsingDirectories%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [#using — dyrektywa](../../preprocessor/hash-using-directive-cpp.md)

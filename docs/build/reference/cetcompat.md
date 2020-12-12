@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/CETCOMPAT (zgodny ze stosem w tle)
 title: /CETCOMPAT (zgodny ze stosem w tle)
 ms.date: 09/01/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: 923272a3b3829d0b00f22d2f8c9474f02b7306d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179281"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (zgodny ze stosem w tle)
 
@@ -51,7 +52,7 @@ W poprzednich wersjach programu Visual Studio 2019:
 
 1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja właściwości**  >  **Linker**  >  **wiersza polecenia** konsolidatora.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
 1. W obszarze **Opcje dodatkowe** Edytuj kontrolkę Dodaj, *`/CETCOMPAT`* Aby oznaczyć plik binarny jako zgodny ze stosem w tle, lub *`/CETCOMPAT:NO`* Aby jawnie oznaczyć go jako niezgodny.
 

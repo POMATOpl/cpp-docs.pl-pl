@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Identyfikator'
 title: ID (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 04f7144e1c6f8b6655b0b6be23e0ffa4f22dc27c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180204"
 ---
 # <a name="id"></a>identyfikator
 
@@ -41,7 +42,7 @@ Zapoznaj się z przykładem [powiązania](bindable.md) z przykładem użycia **i
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

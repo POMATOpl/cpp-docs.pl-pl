@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __outdwordstring'
 title: __outdwordstring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 3fbba7dd128666b591305326695e656befd9cada
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180397"
 ---
 # <a name="__outdwordstring"></a>__outdwordstring
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję, która wysyła `Count` doublewords, rozpoczynając `Buffer` od portu we/wy określonego przez `Port`. `rep outsd`
+Generuje `rep outsd` instrukcję, która wysyła `Count` doublewords, rozpoczynając od `Buffer` portu we/wy określonego przez `Port` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,7 +49,7 @@ podczas Liczba doublewords do wysłania.
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -56,6 +57,6 @@ Ta procedura jest dostępna tylko jako wewnętrzna.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

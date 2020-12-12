@@ -1,18 +1,19 @@
 ---
-title: 'Biblioteki DLL inne niż MFC: omówienie'
+description: 'Dowiedz się więcej o: biblioteki DLL inne niż MFC: Omówienie'
+title: 'Biblioteki innego typu niż DLL MFC: Omówienie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 88afb41205e63a837d7bc134133c3c36eccf5dc1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2b71653be8a665684b7e79dcb48ac54d86834be0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179840"
 ---
-# <a name="non-mfc-dlls-overview"></a>Biblioteki DLL inne niż MFC: omówienie
+# <a name="non-mfc-dlls-overview"></a>Biblioteki innego typu niż DLL MFC: Omówienie
 
 Biblioteka DLL inna niż MFC jest biblioteką DLL, która nie używa wewnętrznie MFC, a eksportowane funkcje w bibliotece DLL mogą być wywoływane przez pliki wykonywalne MFC lub inne niż MFC. Funkcje są zwykle eksportowane z biblioteki DLL innej niż MFC przy użyciu standardowego interfejsu języka C.
 
@@ -34,7 +35,7 @@ Aby uzyskać więcej informacji o bibliotekach DLL innych niż MFC, zobacz [bibl
 
 - [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Biblioteki DLL rozszerzeń MFC: omówienie](extension-dlls-overview.md)
+- [Biblioteki DLL rozszerzeń MFC: Omówienie](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Zobacz też
 

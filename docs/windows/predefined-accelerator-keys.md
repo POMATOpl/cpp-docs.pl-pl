@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o kluczach akceleratora (C++)
 title: Klawisze skrótów (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 4f838caa8ca9e4a996fa4cb8018d663c6c7aecea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 397e0735ba33af6adf8f10c6188f73d6f504e68b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180100"
 ---
 # <a name="accelerator-keys-c"></a>Klawisze skrótów (C++)
 
@@ -57,7 +58,7 @@ Istnieje wiele wstępnie zdefiniowanych klawiszy skrótów, które mogą być cz
 |VK_OEM_2|Systemy W przypadku standardowej klawiatury AMERYKAŃSKIej **/?** key|
 |VK_OEM_3|Systemy Dla standardowej klawiatury AMERYKAŃSKIej, **`~** klucz|
 |VK_OEM_4|Systemy W przypadku standardowej klawiatury AMERYKAŃSKIej **[{** Key|
-|VK_OEM_5|Systemy Dla standardowej klawiatury AMERYKAŃSKIej, klucz ** \\&#124;**|
+|VK_OEM_5|Systemy Dla standardowej klawiatury AMERYKAŃSKIej, klucz **\\&#124;**|
 |VK_OEM_6|Systemy Dla standardowej klawiatury AMERYKAŃSKIej, klucz **]}**|
 |VK_OEM_7|Systemy W przypadku standardowej klawiatury AMERYKAŃSKIej klucz "Single-Quote/Double-Quote"|
 |VK_OEM_COMMA|Systemy Dla każdego kraju/regionu, klucz **,**|

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o programie Image Editor dla ikon (C++)
 title: Edytor obrazów dla ikon (C++)
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,16 +40,16 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: bb028833aa0e9f0615ec7575dbe41feb173efedb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 778f6deb3ccb6ba8b3ecff52b6f11524a1073092
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180243"
 ---
 # <a name="image-editor-for-icons-c"></a>Edytor obrazów dla ikon (C++)
 
-Po wybraniu pliku obrazu (takiego jak ICO, BMP, PNG) w **Eksplorator rozwiązań**obraz zostanie otwarty w **Edytorze obrazów** w taki sam sposób, jak pliki kodu otwierają się w **edytorze kodu**. Gdy karta **Edytor obrazu** jest aktywna, są wyświetlane paski narzędzi z wieloma narzędziami do tworzenia i edytowania obrazów. Oprócz map bitowych, ikon i kursorów można edytować obrazy w formacie GIF lub JPEG przy użyciu poleceń z menu **obraz** i narzędzi na pasku narzędzi **edytora obrazu** .
+Po wybraniu pliku obrazu (takiego jak ICO, BMP, PNG) w **Eksplorator rozwiązań** obraz zostanie otwarty w **Edytorze obrazów** w taki sam sposób, jak pliki kodu otwierają się w **edytorze kodu**. Gdy karta **Edytor obrazu** jest aktywna, są wyświetlane paski narzędzi z wieloma narzędziami do tworzenia i edytowania obrazów. Oprócz map bitowych, ikon i kursorów można edytować obrazy w formacie GIF lub JPEG przy użyciu poleceń z menu **obraz** i narzędzi na pasku narzędzi **edytora obrazu** .
 
 Zasoby graficzne to obrazy zdefiniowane dla aplikacji. Możesz rysować odręczne lub rysować przy użyciu kształtów. Można wybrać fragmenty obrazu do edycji, odwrócenia lub zmiany rozmiarów lub można utworzyć niestandardowy pędzel z wybranej części obrazu i rysować z tym pędzlem. Można definiować właściwości obrazu, zapisywać obrazy w różnych formatach i konwertować obrazy z jednego formatu na inny.
 
@@ -94,14 +95,14 @@ Okno dialogowe **Ustawienia siatki** umożliwia określenie ustawień siatki obr
 |---|---|
 |**Siatka pikseli**|Po zaznaczeniu tej opcji wyświetlana jest siatka dookoła każdego piksela w **Edytorze obrazu**.<br/><br/>Siatka pojawia się tylko na 4 × i wyższych rozdzielczościach.|
 |**Siatka kafelków**|Po wybraniu Wyświetla siatkę dookoła bloków pikseli w **Edytorze obrazu**, określoną przez wartości odstępów siatki.|
-|**Szerokość**|Określa szerokość każdego bloku kafelków.<br/><br/>Ta właściwość jest przydatna podczas rysowania map bitowych zawierających wiele obrazów, które są ułożone w regularnych odstępach czasu.|
-|**Proporcj**|Określa wysokość każdego bloku kafelków.<br/><br/>Ta właściwość jest przydatna podczas rysowania map bitowych zawierających wiele obrazów, które są ułożone w regularnych odstępach czasu.|
+|**Width**|Określa szerokość każdego bloku kafelków.<br/><br/>Ta właściwość jest przydatna podczas rysowania map bitowych zawierających wiele obrazów, które są ułożone w regularnych odstępach czasu.|
+|**Height**|Określa wysokość każdego bloku kafelków.<br/><br/>Ta właściwość jest przydatna podczas rysowania map bitowych zawierających wiele obrazów, które są ułożone w regularnych odstępach czasu.|
 
 ## <a name="toolbar"></a>Pasek narzędzi
 
 Pasek narzędzi **edytora obrazów** zawiera narzędzia do rysowania, malowania, wprowadzania tekstu, wymazywania i manipulowania widokami. Zawiera również selektor opcji, za pomocą którego można wybrać opcje używania poszczególnych narzędzi. Można na przykład wybrać różne szerokości pędzla, współczynniki powiększenia i style linii.
 
-Wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazów** są również dostępne w **Image**  >  **narzędziach**obrazu menu. Aby użyć paska narzędzi **edytora obrazów** i selektora **opcji** , wybierz odpowiednie narzędzie lub opcję.
+Wszystkie narzędzia dostępne na pasku narzędzi **edytora obrazów** są również dostępne w   >  **narzędziach** obrazu menu. Aby użyć paska narzędzi **edytora obrazów** i selektora **opcji** , wybierz odpowiednie narzędzie lub opcję.
 
 ![Pasek narzędzi edytora obrazów](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Pasek narzędzi **edytora obrazów**
@@ -111,7 +112,7 @@ Pasek narzędzi **edytora obrazów**
 
 Ponieważ wiele narzędzi do rysowania jest dostępnych na [klawiaturze](../windows/accelerator-keys-image-editor-for-icons.md), czasami warto ukryć pasek narzędzi **edytora obrazu** .
 
-- Aby wyświetlić lub ukryć pasek narzędzi **edytora obrazów** , przejdź do **widoku**menu  >  **paski narzędzi** i wybierz **Edytor obrazów**.
+- Aby wyświetlić lub ukryć pasek narzędzi **edytora obrazów** , przejdź do **widoku** menu  >  **paski narzędzi** i wybierz **Edytor obrazów**.
 
 > [!NOTE]
 > Elementy z tego paska narzędzi będą wyświetlane jako niedostępne, gdy plik obrazu z bieżącego projektu lub rozwiązania nie zostanie otwarty w **Edytorze obrazu**.
@@ -127,7 +128,7 @@ Selektor **opcji** na pasku narzędzi **edytora obrazów**
 
 Za pomocą okna dialogowego **Narzędzie tekstowe** można dodać tekst do kursora, mapy bitowej lub zasobu ikony.
 
-Aby uzyskać dostęp do tego okna dialogowego, Otwórz **Edytor obrazów** i przejdź do menu **Image**  >  **Narzędzia**obrazu, a następnie wybierz polecenie **tekst narzędzia** .
+Aby uzyskać dostęp do tego okna dialogowego, Otwórz **Edytor obrazów** i przejdź do menu   >  **Narzędzia** obrazu, a następnie wybierz polecenie **tekst narzędzia** .
 
 > [!TIP]
 > Możesz kliknąć prawym przyciskiem myszy okno dialogowe **narzędzia tekstowe** , aby uzyskać dostęp do domyślnego menu skrótów zawierającego listę standardowych poleceń systemu Windows.
@@ -150,13 +151,13 @@ Oto przykład sposobu dodawania tekstu do ikony w aplikacji systemu Windows i ma
 
 1. Utwórz aplikację w języku C++ Windows Forms. Aby uzyskać szczegółowe informacje, zobacz [How to: Create Windows Forms Applications](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Plik *. ico aplikacji* jest domyślnie dodawany do projektu.
 
-1. W **Eksplorator rozwiązań**kliknij dwukrotnie plik *App. ico*. Zostanie otwarty **Edytor obrazów** .
+1. W **Eksplorator rozwiązań** kliknij dwukrotnie plik *App. ico*. Zostanie otwarty **Edytor obrazów** .
 
-1. Przejdź do menu **Image**  >  **Narzędzia** obrazu i wybierz **Narzędzie Tekst**.
+1. Przejdź do menu   >  **Narzędzia** obrazu i wybierz **Narzędzie Tekst**.
 
 1. W oknie dialogowym **Narzędzie tekstowe** wpisz *C++* w pustym obszarze tekstowym. Ten tekst będzie widoczny w polu o zmiennym rozmiarze znajdującym się w lewym górnym rogu *aplikacji App. ico* w **Edytorze obrazu**.
 
-1. W **Edytorze obrazów**przeciągnij pole o zmiennym rozmiarze do centrum *App. ico* , aby zwiększyć czytelność tekstu.
+1. W **Edytorze obrazów** przeciągnij pole o zmiennym rozmiarze do centrum *App. ico* , aby zwiększyć czytelność tekstu.
 
 1. W oknie dialogowym **Narzędzie tekstowe** wybierz przycisk **czcionka** .
 
@@ -197,7 +198,7 @@ Domyślnie **Edytor obrazów** wyświetla widok w okienku po lewej stronie w rze
 
 1. Wybierz okienko **edytora obrazu** , którego współczynnik powiększenia chcesz zmienić.
 
-1. Na pasku narzędzi **edytora obrazu** wybierz strzałkę po prawej stronie narzędzia **Powiększ** i wybierz współczynnik powiększenia z podmenu: **1x**, **2x**, **6X**lub **8x**.
+1. Na pasku narzędzi **edytora obrazu** wybierz strzałkę po prawej stronie narzędzia **Powiększ** i wybierz współczynnik powiększenia z podmenu: **1x**, **2x**, **6X** lub **8x**.
 
    > [!NOTE]
    > Aby wybrać współczynnik powiększenia inny niż wymienione w narzędziu **Powiększ** , użyj klawiszy skrótów.
@@ -206,7 +207,7 @@ Domyślnie **Edytor obrazów** wyświetla widok w okienku po lewej stronie w rze
 
 Dla wszystkich okienek **edytora obrazu** o współczynniku powiększenia równym 4 lub większym, można wyświetlić siatkę, która ogranicza poszczególne piksele w obrazie.
 
-1. Przejdź do pozycji **Image**menu  >  **Ustawienia siatki**obrazu.
+1. Przejdź do pozycji menu  >  **Ustawienia siatki** obrazu.
 
 1. Zaznacz pole wyboru **Siatka pikseli** , aby wyświetlić siatkę, lub wyczyść pole, aby ukryć siatkę.
 

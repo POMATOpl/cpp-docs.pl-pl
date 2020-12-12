@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/ALLOWISOLATION
 title: /ALLOWISOLATION
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: 3dae8ee83e25492fab0ba2c6a55681728d5f3453
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7d935bc122b5f32bb8f1193feae58b5fc61e7faa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440373"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179593"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -32,12 +33,12 @@ Określa zachowanie wyszukiwania manifestu.
 
 Wartość domyślna to **/ALLOWISOLATION** .
 
-**/ALLOWISOLATION: nie** wskazuje, że pliki wykonywalne są załadowane tak, jakby nie istniały manifest, i powoduje [odwołanie polecenia EDITBIN](editbin-reference.md) do ustawienia bitu `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` w polu `DllCharacteristics` nagłówka opcjonalnego.
+**/ALLOWISOLATION: nie** wskazuje, że pliki wykonywalne są ładowane tak, jakby nie było manifestu, i powoduje [odwołanie polecenia EDITBIN](editbin-reference.md) do ustawiania `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bitu w polu opcjonalnego nagłówka `DllCharacteristics` .
 
 Gdy izolacja jest wyłączona dla pliku wykonywalnego, moduł ładujący systemu Windows nie próbuje znaleźć manifestu aplikacji dla nowo utworzonego procesu. Nowy proces nie ma domyślnego kontekstu aktywacji, nawet jeśli istnieje manifest w samym pliku wykonywalnym lub jeśli istnieje manifest o nazwie *Executable-Name*. exe. manifest.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje EDITBIN](editbin-options.md)<br/>
-[/ALLOWISOLATION (Przeszukiwanie manifestu)](allowisolation-manifest-lookup.md)<br/>
+[Opcje polecenia EDITBIN](editbin-options.md)<br/>
+[/ALLOWISOLATION (odnośnik manifestu)](allowisolation-manifest-lookup.md)<br/>
 [Dokumentacja plików manifestu](/windows/win32/SbsCs/manifest-files-reference)

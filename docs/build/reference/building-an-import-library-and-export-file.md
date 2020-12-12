@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Kompilowanie biblioteki importu i pliku eksportu'
 title: Kompilowanie biblioteki importowanej oraz pliku eksportowanego
 ms.date: 09/05/2018
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8fbd06ce06d77721e64294b88632933b3ad71a03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179515"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Kompilowanie biblioteki importowanej oraz pliku eksportowanego
 
@@ -66,6 +67,6 @@ Dodaje określony *symbol* do tabeli symboli. Ta opcja jest przydatna do wymusza
 
 Należy pamiętać, że jeśli utworzysz bibliotekę importu w ramach wstępnego kroku przed utworzeniem biblioteki. dll, musisz przekazać ten sam zestaw plików obiektów podczas kompilowania biblioteki.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z bibliotekami importu i plikami eksportu](working-with-import-libraries-and-export-files.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o programie: Omówienie programowania w systemie Windows w języku C++'
 title: Omówienie programowania w systemie Windows w języku C++
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 0aa667168f88f48458ae3a9b3541d4944f7530cc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 812fef686208f5f9d4f1c23cd5eb9b2cb8b227bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180113"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Omówienie programowania w systemie Windows w języku C++
 

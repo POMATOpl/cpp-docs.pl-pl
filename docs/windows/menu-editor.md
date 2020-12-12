@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Edytor menu (C++)'
 title: Edytor menu (C++)
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,16 +40,16 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab4b0c3f2fe7986b7b30b3c9bce9c6558b09fc60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180178"
 ---
 # <a name="menu-editor-c"></a>Edytor menu (C++)
 
-Menu umożliwiają rozmieszczenie poleceń w logicznym i łatwym w użyciu sposób. Za pomocą **edytora menu**można tworzyć i edytować menu, pracując bezpośrednio z paskiem menu, który jest ściśle podobny do tego w ukończonej aplikacji.
+Menu umożliwiają rozmieszczenie poleceń w logicznym i łatwym w użyciu sposób. Za pomocą **edytora menu** można tworzyć i edytować menu, pracując bezpośrednio z paskiem menu, który jest ściśle podobny do tego w ukończonej aplikacji.
 
 > [!TIP]
 > Korzystając z **edytora menu**, w wielu przypadkach można kliknąć prawym przyciskiem myszy, aby wyświetlić menu podręczne dla często używanych poleceń. Dostępne polecenia zależą od elementów wskazywanych przez wskaźnik.
@@ -59,7 +60,7 @@ Menu umożliwiają rozmieszczenie poleceń w logicznym i łatwym w użyciu spos�
 
 ### <a name="to-create-a-standard-menu"></a>Aby utworzyć menu standardowe
 
-1. Przejdź do **widoku** menu, > **inne** > **Widok zasobów** i kliknij prawym przyciskiem myszy nagłówek **menu** . Wybierz pozycję **Dodaj zasób**, a następnie **menu**.
+1. Przejdź do menu **Wyświetl**  >  **inne okna**  >  **Widok zasobów** i kliknij prawym przyciskiem myszy nagłówek **menu** . Wybierz pozycję **Dodaj zasób**, a następnie **menu**.
 
 1. Zaznacz pole **nowy element** (prostokąt zawierający *tekst*) na pasku menu.
 
@@ -96,7 +97,7 @@ Wybierz istniejącą nazwę menu i naciśnij klawisz **INSERT** lub kliknij praw
 
 1. Utwórz menu. Następnie wybierz nazwę menu, na przykład **plik**.
 
-   Każde menu spowoduje rozwinięcie i udostępnienie nowego pola elementu dla poleceń. Można na przykład dodać polecenia **New**, **Open**i **Close** do menu **plik** .
+   Każde menu spowoduje rozwinięcie i udostępnienie nowego pola elementu dla poleceń. Można na przykład dodać polecenia **New**, **Open** i **Close** do menu **plik** .
 
 1. W polu Nowy element wpisz nazwę nowego polecenia menu.
 
@@ -104,7 +105,7 @@ Wybierz istniejącą nazwę menu i naciśnij klawisz **INSERT** lub kliknij praw
    > Wpisany tekst jest wyświetlany w **Edytorze menu** i w polu **podpis** w [oknie właściwości](/visualstudio/ide/reference/properties-window). Można edytować właściwości nowego menu w jednej z tych lokalizacji.
 
    > [!TIP]
-   > Można zdefiniować klawisz skrótu (klawisz dostępu), który umożliwia użytkownikowi wybranie polecenia menu. Wpisz znak handlowego "i" (`&`) przed literą, aby określić go jako element. Użytkownik może wybrać polecenie menu, wpisując tę literę.
+   > Można zdefiniować klawisz skrótu (klawisz dostępu), który umożliwia użytkownikowi wybranie polecenia menu. Wpisz znak handlowego "i" ( `&` ) przed literą, aby określić go jako element. Użytkownik może wybrać polecenie menu, wpisując tę literę.
 
 1. W oknie **Właściwości** wybierz właściwości polecenia menu, które mają zastosowanie. Aby uzyskać szczegółowe informacje, zobacz [Właściwości polecenia menu](../windows/menu-command-properties.md).
 
@@ -113,7 +114,7 @@ Wybierz istniejącą nazwę menu i naciśnij klawisz **INSERT** lub kliknij praw
    Ten krok powoduje utworzenie wpisu w tabeli ciągów z tym samym identyfikatorem zasobu co utworzone polecenie menu.
 
    > [!NOTE]
-   > Polecenia monitujące mogą dotyczyć tylko elementów menu z **Popup** właściwością popup **równą true**. Na przykład elementy menu najwyższego poziomu mogą mieć zapytanie, czy mają elementy menu podrzędnego. W celu **wyświetlenia monitu** należy wskazać, co się stanie, jeśli użytkownik wybierze element menu.
+   > Polecenia monitujące mogą dotyczyć tylko elementów menu z  właściwością popup **równą true**. Na przykład elementy menu najwyższego poziomu mogą mieć zapytanie, czy mają elementy menu podrzędnego. W celu **wyświetlenia monitu** należy wskazać, co się stanie, jeśli użytkownik wybierze element menu.
 
 1. Naciśnij klawisz **Enter** , aby zakończyć polecenie menu.
 
@@ -181,7 +182,7 @@ Po utworzeniu zasobu menu kod aplikacji musi załadować zasób menu i użyć [T
    > [!NOTE]
    > [CPoint](../atl-mfc-shared/reference/cpoint-class.md) , który został przesłany przez procedurę obsługi komunikatów, ma współrzędne ekranu.
 
-Zwykle podczas pracy w **Edytorze menu**zasób menu jest wyświetlany jako pasek menu. Mogą jednak znajdować się zasoby menu, które są dodawane do paska menu aplikacji, gdy program jest uruchomiony.
+Zwykle podczas pracy w **Edytorze menu** zasób menu jest wyświetlany jako pasek menu. Mogą jednak znajdować się zasoby menu, które są dodawane do paska menu aplikacji, gdy program jest uruchomiony.
 
 - Aby wyświetlić zasób menu jako menu podręczne, kliknij prawym przyciskiem myszy menu i wybierz polecenie **Wyświetl jako okno podręczne**.
 

@@ -1,39 +1,40 @@
 ---
+description: 'Dowiedz się więcej o programie: Wybieranie formatu plików wejściowych modułu.'
 title: Wybieranie formatu plików wejściowych .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: b4d4b80e4b9195d184b9d97cea67bbaaa3d7d843
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed7e448879e983ace7d96cdc7585bf0303378114
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179209"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Wybieranie formatu plików wejściowych .netmodule
 
-Plik MSIL .obj (skompilowany z [/clr)](clr-common-language-runtime-compilation.md)może być również używany jako plik .netmodule.  Pliki obj zawierają metadane i symbole macierzyste.  .netmodules zawierają tylko metadane.
+Plik MSIL. obj (skompilowany za pomocą [/CLR](clr-common-language-runtime-compilation.md)) może być również używany jako plik modułu.  pliki. obj zawierają metadane i symbole natywne.  . moduły zawierają tylko metadane.
 
-Plik MSIL .obj można przekazać do dowolnego innego kompilatora programu Visual Studio za pośrednictwem opcji kompilatora /addmodule (ale należy pamiętać, że plik obj staje się częścią wynikowego zestawu i musi być dostarczany z zestawem).  Na przykład Visual C# i Visual Basic mają opcję kompilatora /addmodule.
+Plik MSIL. obj można przekazać do dowolnego innego kompilatora programu Visual Studio za pomocą opcji kompilatora/addmodule (ale należy pamiętać, że plik. obj stanie się częścią zestawu, i musi być dostarczany z zestawem).  Na przykład Visual C# i Visual Basic mają opcję kompilatora/addmodule.
 
 > [!NOTE]
-> W większości przypadków należy przekazać do konsolidatora plik obj z kompilacji, która utworzyła moduł .net.  Przekazanie pliku modułu .dll lub .netmodule MSIL do konsolidatora może spowodować LNK1107.
+> W większości przypadków należy przekazać do konsolidatora plik. obj z kompilacji, która utworzyła moduł .NET.  Przekazanie pliku modułu MSIL. dll lub. module do konsolidatora może spowodować LNK1107.
 
-.obj plików, wraz z ich skojarzonych .h plików, do których odwołujesz się za pośrednictwem #include w źródle, umożliwiają aplikacjom Języka C++ korzystanie z typów macierzystych w module, podczas gdy w pliku .netmodule tylko typy zarządzane mogą być używane przez aplikację C++.  Jeśli spróbujesz przekazać plik obj do #using, informacje o typach natywnych nie będą dostępne; #include pliku .obj .h.
+pliki. obj, wraz ze skojarzonymi z nimi plikami. h, do których odwołuje się #include w źródle, umożliwiają aplikacjom C++ korzystanie z natywnych typów w module, a w pliku module.  Jeśli próbujesz przekazać plik. obj do #using, informacje o typach natywnych nie będą dostępne; Zamiast tego #include plik. obj pliku. h.
 
-Inne kompilatory programu Visual Studio mogą korzystać tylko z typów zarządzanych z modułu.
+Inne kompilatory programu Visual Studio mogą korzystać tylko z zarządzanych typów z modułu.
 
-Aby ustalić, czy należy użyć pliku .netmodule, czy pliku obj jako wejścia modułu do konsolidatora MSVC, należy użyć pliku .netmodule lub obj:
+Użyj poniższego elementu, aby określić, czy do konsolidatora MSVC należy użyć pliku.
 
-- Jeśli tworzysz za pomocą kompilatora programu Visual Studio innych niż Visual C++, wyprodukuj .netmodule i użyj .netmodule jako dane wejściowe do konsolidatora.
+- Jeśli tworzysz przy użyciu kompilatora programu Visual Studio innego niż Visual C++, program tworzy moduł. webmodule i użyjemy modułu jako dane wejściowe do konsolidatora.
 
-- Jeśli używasz kompilatora MSVC do tworzenia modułów i jeśli moduły będą używane do tworzenia czegoś innego niż biblioteka, użyj plików obj wyprodukowanych przez kompilator jako dane wejściowe modułu do konsolidatora; nie używaj pliku .netmodule jako danych wejściowych.
+- Jeśli używasz kompilatora MSVC do tworzenia modułów i jeśli moduły zostaną użyte do kompilowania czegoś innego niż biblioteka, Użyj plików obj utworzonych przez kompilator jako dane wejściowe modułu dla konsolidatora; nie należy używać pliku. module jako danych wejściowych.
 
-- Jeśli moduły będą używane do tworzenia natywnej (nie zarządzanej) biblioteki, użyj plików obj jako danych wejściowych modułu do konsolidatora i wygeneruj plik biblioteki .lib.
+- Jeśli moduły zostaną użyte do skompilowania natywnej biblioteki (nie zarządzanej), Użyj plików. obj jako danych wejściowych modułu dla konsolidatora i wygeneruj plik biblioteki lib.
 
-- Jeśli moduły będą używane do tworzenia biblioteki zarządzanej, a wszystkie dane wejściowe modułu do konsolidatora będą weryfikowalne (produkowane za pomocą /clr:safe), użyj plików .obj jako wejścia modułu do konsolidatora i wygeneruj plik biblioteki .dll (assembly) lub .netmodule (moduł).
+- Jeśli moduły zostaną użyte do skompilowania biblioteki zarządzanej, a wszystkie dane wejściowe modułu dla konsolidatora zostaną zweryfikowane (utworzone za pomocą/CLR: safe), Użyj plików. obj jako danych wejściowych modułu dla konsolidatora i wygeneruj plik biblioteki. dll (zestawu) lub. module (modułu).
 
-- Jeśli moduły będą używane do tworzenia biblioteki zarządzanej, a jeśli jeden lub więcej modułów wejściowych do konsolidatora będą produkowane z tylko /clr, użyj .obj plików jako wejście modułu do konsolidatora i wygenerować .dll (zestaw).  Jeśli chcesz udostępnić typy zarządzane z biblioteki i jeśli chcesz również, aby aplikacje języka C++ wykorzystywały typy macierzyste w bibliotece, biblioteka będzie składać się z plików obj dla modułów składników bibliotek (należy również wysłać pliki .h dla każdego modułu, aby można było odwoływać się do nich z #include z kodu źródłowego).
+- Jeśli moduły zostaną użyte do skompilowania biblioteki zarządzanej, a dane wejściowe jednego lub większej liczby modułów do konsolidatora zostaną wygenerowane z zaledwie/CLR, Użyj plików. obj jako danych wejściowych modułu dla konsolidatora i wygeneruj plik. dll (zestaw).  Jeśli chcesz uwidocznić zarządzane typy z biblioteki, a jeśli chcesz, aby aplikacje C++ korzystały z natywnych typów w bibliotece, biblioteka będzie składać się z plików. obj dla modułów składnika biblioteki (należy również dostarczyć pliki. h dla każdego modułu, aby można było odwoływać się do #include z kodu źródłowego).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki .netmodule — wejście konsolidatora](netmodule-files-as-linker-input.md)
+[Pliki. module — Wejście konsolidatora](netmodule-files-as-linker-input.md)

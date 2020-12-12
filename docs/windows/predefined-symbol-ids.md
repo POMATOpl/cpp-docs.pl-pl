@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: wstępnie zdefiniowanych identyfikatorów symboli'
 title: Wstępnie zdefiniowane symbole identyfikatorów
 ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 8f7fcba864f4e1a47d217d684b87c257503aeb13
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f28f41b3194e65824b0c06285c0c4e73cfce8b39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180035"
 ---
 # <a name="predefined-symbol-ids"></a>Wstępnie zdefiniowane symbole identyfikatorów
 

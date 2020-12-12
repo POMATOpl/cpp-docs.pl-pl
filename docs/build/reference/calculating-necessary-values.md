@@ -1,23 +1,24 @@
 ---
+description: 'Dowiedz się więcej na temat: Obliczanie niezbędnych wartości'
 title: Obliczanie niezbędnych wartości
 ms.date: 11/04/2016
 helpviewer_keywords:
 - helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-ms.openlocfilehash: 75952bbcdf823aa675b35702841c81e511105ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d8462be2db55dbc10375629b133d9286560878
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179346"
 ---
 # <a name="calculating-necessary-values"></a>Obliczanie niezbędnych wartości
 
-Dwa najistotniejsze informacje konieczne jest obliczana przez procedury pomocnika opóźnienia. W tym celu istnieją dwie funkcje wbudowane w delayhlp.cpp do obliczania tych informacji.
+Dwie krytyczne elementy informacji muszą zostać obliczone przez procedurę pomocnika opóźnień. W tym celu istnieją dwie funkcje wbudowane w Delayhlp. cpp do obliczania tych informacji.
 
-- Pierwszy oblicza Indeks bieżącej importowania do trzech różnych tabelach (Importowanie tabeli adresów (IAT), tabeli adresów importowania powiązanego (BIAT) i tabeli adresów importowania niepowiązanych (UIAT)).
+- Najpierw oblicza Indeks bieżącego importu w trzech różnych tabelach (tabela adresów importu (IAT), powiązanej tabeli adresów importowania (BIAT) i niepowiązanej tabeli adresów importu (UIAT)).
 
-- Drugi zlicza Importy w IAT prawidłowe.
+- Druga liczy liczbę importów w prawidłowym IAT.
 
 ```cpp
 // utility function for calculating the index of the current import
@@ -41,6 +42,6 @@ CountOfImports(PCImgThunkData pitdBase) {
     }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)
+[Zrozumienie funkcji pomocnika](understanding-the-helper-function.md)

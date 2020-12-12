@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/C (Zachowaj komentarze podczas przetwarzania wstępnego)
 title: /C (Zachowaj komentarze podczas przetwarzania wstępnego)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: f80ebf45dd396a3f92d9b755c56522d4731bb2d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2cf5bf562db78dcb6c570d7313b56ad4a9fc5adb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179359"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachowaj komentarze podczas przetwarzania wstępnego)
 
@@ -30,7 +31,7 @@ Zachowuje komentarze podczas przetwarzania wstępnego.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja kompilatora wymaga opcji **/e**, **/p**lub **/EP** .
+Ta opcja kompilatora wymaga opcji **/e**, **/p** lub **/EP** .
 
 Poniższy przykład kodu wyświetli komentarz do kodu źródłowego.
 
@@ -49,9 +50,9 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij folder **C/C++**  .
+1. Kliknij folder **C/C++** .
 
 1. Kliknij stronę właściwości **preprocesora** .
 
@@ -64,7 +65,7 @@ int i;   // a variable
 ## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [/E (Przetwarzaj wstępnie do stdout)](e-preprocess-to-stdout.md)<br/>
 [/P (Przetwarzaj wstępnie do pliku)](p-preprocess-to-a-file.md)<br/>
-[/EP (Wstępnie przetwórz do stdout bez dyrektyw #line)](ep-preprocess-to-stdout-without-hash-line-directives.md)
+[/EP (wstępnie przetwórz do stdout bez dyrektyw #line)](ep-preprocess-to-stdout-without-hash-line-directives.md)

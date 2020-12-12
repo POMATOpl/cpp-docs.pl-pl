@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Redystrybuowanie aplikacji ATL'
 title: Ponowna dystrybucja aplikacji ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,34 +8,18 @@ helpviewer_keywords:
 - redistributing OLE DB templates
 - OLE DB templates, redistributing
 ms.assetid: 9a696b22-2345-43ec-826b-be7cb8cfd676
-ms.openlocfilehash: a1da92a00d6bf88f41801f8eb99433d0c64812b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58021416eb7f258e1d436ff099ebf9c647dfc0bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179957"
 ---
 # <a name="redistributing-an-atl-application"></a>Ponowna dystrybucja aplikacji ATL
 
-Począwszy od programu Visual Studio 2012 Active Template Library (ATL) jest biblioteką tylko nagłówek. Projekt ATL nie ma dynamiczne łącze do ATL opcji. Nie biblioteki ATL jest wymagany.
+Począwszy od programu Visual Studio 2012, Active Template Library (ATL) jest biblioteką tylko do nagłówka. Projekty ATL nie mają opcji dynamicznego łączenia z ATL. Biblioteka ATL redystrybucyjna nie jest wymagana.
 
-Jeśli ponownie dystrybuujesz pliku wykonywalnego aplikacji biblioteki ATL, wydając polecenie należy zarejestrować plik .exe (i zawarte w niej wszystkie formanty):
-
-```
-filename /regserver
-```
-
-gdzie `filename` jest nazwą pliku wykonywalnego.
-
-W programie Visual Studio 2010 można utworzyć Projekt ATL dla MinDependency lub konfigurację MinSize. Konfiguracja MinDependency jest właśnie te elementy otrzymasz po ustawieniu **użycie ATL** właściwości **statyczne łącze do ATL** na **ogólne** stronę właściwości i ustaw  **Biblioteka środowiska uruchomieniowego** właściwości **wielowątkowych (/ MT)** na **generowania kodu** strony właściwości (C/C++ folder).
-
-Konfiguracja MinSize jest właśnie te elementy otrzymasz po ustawieniu **użycie ATL** właściwości **dynamiczne łącze do ATL** na **ogólne** strona właściwości lub zestawu **środowiska uruchomieniowego Biblioteka** właściwości **Multi-threaded biblioteki DLL (/ MD)** na **generowania kodu** strony właściwości (C/C++ folder).
-
-MinSize sprawia, że dane wyjściowe pliku tak małej, jak to możliwe, ale wymaga, aby ATL100.dll i rozdystrybuować Msvcr100.dll (w przypadku wybrania **Multi-threaded biblioteki DLL (/ MD)** opcja) znajdują się na komputerze docelowym. ATL100.dll powinny być rejestrowane na komputerze docelowym, aby upewnić się, że wszystkie funkcje ATL jest obecny. ATL100.dll zawiera ANSI i eksportuje Unicode.
-
-Jeśli tworzysz Projekt ATL lub szablony OLE DB dla elementu docelowego MinDependency, nie trzeba o zainstalowanie i zarejestrowanie ATL100.dll na komputerze docelowym, mimo że można uzyskać większy obraz programu.
-
-Jeśli ponownie dystrybuujesz pliku wykonywalnego aplikacji biblioteki ATL, wydając polecenie należy zarejestrować plik .exe (i zawarte w niej wszystkie formanty):
+W przypadku ponownej dystrybucji aplikacji wykonywalnej ATL należy zarejestrować plik exe (i wszystkie kontrolki wewnątrz niego), wydając następujące polecenie:
 
 ```
 filename /regserver
@@ -42,6 +27,22 @@ filename /regserver
 
 gdzie `filename` jest nazwą pliku wykonywalnego.
 
-## <a name="see-also"></a>Zobacz także
+W programie Visual Studio 2010 Projekt ATL można skompilować dla konfiguracji MinDependency lub MinSize. Konfiguracja MinDependency jest pobierana podczas ustawiania **użycia właściwości ATL** do **statycznego łącza do ATL** na stronie właściwości **Ogólne** i ustawiania właściwości **Biblioteka środowiska uruchomieniowego** na **wiele wątków (/MT)** na stronie właściwości **generowania kodu** (folder C/C++).
+
+Konfiguracja MinSize jest pobierana, gdy ustawiasz użycie właściwości **ATL** na **dynamiczny link do ATL** na stronie właściwości **Ogólne** lub ustaw właściwość **Biblioteka środowiska uruchomieniowego** na **wielowątkową bibliotekę DLL (/MD)** na stronie właściwości **generowania kodu** (folder C/C++).
+
+MinSize sprawia, że plik wyjściowy jest możliwie mały, ale wymaga ATL100.dll i Msvcr100.dll (w przypadku wybrania opcji **/MD)** na komputerze docelowym. ATL100.dll powinna być zarejestrowana na komputerze docelowym, aby upewnić się, że wszystkie funkcje ATL są obecne. ATL100.dll zawiera operacje eksportowania ANSI i Unicode.
+
+Jeśli tworzysz projekt szablonów ATL lub OLE DB dla elementu docelowego MinDependency, nie musisz instalować ani rejestrować ATL100.dll na komputerze docelowym, ale może zostać wyświetlony większy obraz programu.
+
+W przypadku ponownej dystrybucji aplikacji wykonywalnej ATL należy zarejestrować plik exe (i wszystkie kontrolki wewnątrz niego), wydając następujące polecenie:
+
+```
+filename /regserver
+```
+
+gdzie `filename` jest nazwą pliku wykonywalnego.
+
+## <a name="see-also"></a>Zobacz też
 
 [Ponowne dystrybuowanie plików programu Visual C++](redistributing-visual-cpp-files.md)

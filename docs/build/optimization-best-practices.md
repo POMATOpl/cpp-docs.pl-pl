@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej: najlepsze rozwiązania dotyczące optymalizacji'
 title: Najlepsze rozwiązania dotyczące optymalizacji
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 06588225838da3b52216fa0ae3eb51b7538ee58d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179827"
 ---
 # <a name="optimization-best-practices"></a>Najlepsze rozwiązania dotyczące optymalizacji
 
@@ -30,7 +31,7 @@ Aby uzyskać więcej informacji, zobacz [ `/GL` (Optymalizacja całego programu)
 
 Jeśli to możliwe, ostateczne kompilacje wydania powinny być kompilowane przy użyciu optymalizacji profilowanej. Jeśli nie jest możliwe Kompilowanie przy użyciu usługi PGO, niezależnie od tego, czy z powodu niewystarczającej infrastruktury do uruchamiania kompilacji z instrumentacją lub nie ma dostępu do scenariuszy, zalecamy Kompilowanie za pomocą całościowej optymalizacji programu.
 
-**`/Gy`** Przełącznik jest również bardzo przydatny. Generuje osobne COMDAT dla każdej funkcji, dzięki czemu konsolidator ma większą elastyczność, gdy nastąpi usunięcie COMDAT i złożenia COMDAT. Jedyną minusemą do użycia **`/Gy`** jest to, że może to spowodować problemy podczas debugowania. W związku z tym zwykle zaleca się jej użycie. Aby uzyskać więcej informacji, zobacz [ `/Gy` (Włącz łączenie na poziomie funkcji)](reference/gy-enable-function-level-linking.md).
+**`/Gy`** Przełącznik jest również bardzo przydatny. Generuje osobne COMDAT dla każdej funkcji, dzięki czemu konsolidator ma większą elastyczność, gdy nastąpi usunięcie COMDAT i złożenia COMDAT. Jedyną minusemą do użycia **`/Gy`** jest to, że może to spowodować problemy podczas debugowania. W związku z tym zwykle zaleca się jej użycie. Aby uzyskać więcej informacji, zobacz [ `/Gy` (Włączanie Function-Level łączenia)](reference/gy-enable-function-level-linking.md).
 
 W przypadku łączenia w środowiskach 64-bitowych zaleca się użycie **`/OPT:REF,ICF`** opcji konsolidatora i w środowiskach 32-bitowych **`/OPT:REF`** . Aby uzyskać więcej informacji, zobacz [/opt (optymalizacje)](reference/opt-optimizations.md).
 
@@ -47,7 +48,7 @@ Zdecydowanie zaleca się również generowanie symboli debugowania, nawet w przy
 |**`/fp:strict`**|Zalecane, jeśli wymagane są dokładne wyjątki zmiennoprzecinkowe i zachowanie IEEE. Spowoduje to wolniejszą wydajność.|
 |**`/fp:except[-]`**|Może być używany w połączeniu z **`/fp:strict`** lub **`/fp:precise`** , ale nie **`/fp:fast`** .|
 
-Aby uzyskać więcej informacji, zobacz [ `/fp` (Określanie zachowania zmiennoprzecinkowego)](reference/fp-specify-floating-point-behavior.md).
+Aby uzyskać więcej informacji, zobacz [ `/fp` (określ zachowanie Floating-Point)](reference/fp-specify-floating-point-behavior.md).
 
 ## <a name="optimization-declspecs"></a>Optymalizacja declspecs
 

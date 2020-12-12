@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej na temat: PgoAutoSweep'
 title: PgoAutoSweep
 ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 8310b86f8ef7db011ed7340cef4e42def79a0927
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179788"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep`zapisuje informacje o bieżącym liczniku profilu do pliku, a następnie resetuje liczniki. Użyj funkcji podczas szkolenia z przewodnikiem po profilowaniu, aby zapisać wszystkie dane profilu z działającego programu do `.pgc` pliku do późniejszego użycia w kompilacji optymalizacji.
+`PgoAutoSweep` zapisuje informacje o bieżącym liczniku profilu do pliku, a następnie resetuje liczniki. Użyj funkcji podczas szkolenia z przewodnikiem po profilowaniu, aby zapisać wszystkie dane profilu z działającego programu do `.pgc` pliku do późniejszego użycia w kompilacji optymalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,27 +31,27 @@ Ciąg identyfikacyjny dla zapisanego `.pgc` pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz wywołać `PgoAutoSweep` z aplikacji, aby zapisać i zresetować dane profilu w dowolnym momencie podczas wykonywania aplikacji. W przypadku kompilacji z instrumentacją `PgoAutoSweep` program przechwytuje bieżące dane profilowania, zapisuje je w pliku i resetuje liczniki profilu. Jest to odpowiednik wywołania polecenia [pgosweep](pgosweep.md) w określonym punkcie w pliku wykonywalnym. W zoptymalizowanej kompilacji `PgoAutoSweep` to no-op.
+Możesz wywołać `PgoAutoSweep` z aplikacji, aby zapisać i zresetować dane profilu w dowolnym momencie podczas wykonywania aplikacji. W przypadku kompilacji z instrumentacją program `PgoAutoSweep` przechwytuje bieżące dane profilowania, zapisuje je w pliku i resetuje liczniki profilu. Jest to odpowiednik wywołania polecenia [pgosweep](pgosweep.md) w określonym punkcie w pliku wykonywalnym. W zoptymalizowanej kompilacji `PgoAutoSweep` to no-op.
 
-Zapisane dane licznika profilu są umieszczane w pliku o nazwie *base_name*-*name*! *Value*. PGC, gdzie *base_name* jest podstawową nazwą pliku wykonywalnego, *Nazwa* jest parametrem przesłanym do `PgoAutoSweep`, a *wartość* jest unikatową wartością, zazwyczaj monotonicznie zwiększania liczby, aby zapobiec kolizjom nazw plików.
+Zapisane dane licznika profilu są umieszczane w pliku o nazwie *base_name* - *name*!*Value*. PGC, gdzie *base_name* jest podstawową nazwą pliku wykonywalnego, *Nazwa* jest parametrem przesłanym do `PgoAutoSweep` , a *wartość* jest unikatową wartością, zazwyczaj monotonicznie zwiększania liczby, aby zapobiec kolizjom nazw plików.
 
-`.pgc` Pliki utworzone przez `PgoAutoSweep` program muszą zostać scalone w `.pgd` pliku, który ma zostać użyty do utworzenia zoptymalizowanego pliku wykonywalnego. Aby wykonać scalanie, można użyć polecenia [pgomgr](pgomgr.md) .
+`.pgc`Pliki utworzone przez program `PgoAutoSweep` muszą zostać scalone w `.pgd` pliku, który ma zostać użyty do utworzenia zoptymalizowanego pliku wykonywalnego. Aby wykonać scalanie, można użyć polecenia [pgomgr](pgomgr.md) .
 
 Podczas kompilowania optymalizacji można przekazać nazwę scalonego `.pgd` pliku do konsolidatora przy użyciu argumentu **PGD =**_filename_ do [/USEPROFILE](reference/useprofile.md) opcji konsolidatora lub przy użyciu opcji konsolidatora **/PGD** . W przypadku scalania `.pgc` plików do pliku o nazwie *base_name*. PGD nie trzeba określać nazwy pliku w wierszu polecenia, ponieważ konsolidator domyślnie wybiera tę nazwę pliku.
 
-`PgoAutoSweep` Funkcja utrzymuje ustawienie bezpieczeństwa wątku określone podczas tworzenia konstruowanej kompilacji. Jeśli używasz ustawienia domyślnego lub określono argument **noexact** dla opcji konsolidatora [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , wywołania do nie są bezpieczne `PgoAutoSweep` dla wątków. **Dokładny** argument tworzy bezpieczny wątkowo i bardziej precyzyjny, ale wolniejszy, instrumentację pliku wykonywalnego.
+`PgoAutoSweep`Funkcja utrzymuje ustawienie bezpieczeństwa wątku określone podczas tworzenia konstruowanej kompilacji. Jeśli używasz ustawienia domyślnego lub określono argument **noexact** dla opcji konsolidatora [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , wywołania do `PgoAutoSweep` nie są bezpieczne dla wątków. **Dokładny** argument tworzy bezpieczny wątkowo i bardziej precyzyjny, ale wolniejszy, instrumentację pliku wykonywalnego.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`PgoAutoSweep`|\<pgobootrun. h>|
+|`PgoAutoSweep`|\<pgobootrun.h>|
 
 Plik wykonywalny musi zawierać pgobootrun. lib w połączonych bibliotekach. Ten plik jest dołączany do instalacji programu Visual Studio w katalogu bibliotek VC dla każdej obsługiwanej architektury.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład używa `PgoAutoSweep` do tworzenia dwóch `.pgc` plików w różnych punktach podczas wykonywania. Pierwszy zawiera dane opisujące zachowanie środowiska uruchomieniowego do `count` momentu, gdy wartość jest równa 3, a druga zawiera dane zebrane po tym punkcie do momentu zakończenia działania aplikacji.
+Poniższy przykład używa `PgoAutoSweep` do tworzenia dwóch `.pgc` plików w różnych punktach podczas wykonywania. Pierwszy zawiera dane opisujące zachowanie środowiska uruchomieniowego do momentu `count` , gdy wartość jest równa 3, a druga zawiera dane zebrane po tym punkcie do momentu zakończenia działania aplikacji.
 
 ```cpp
 // pgoautosweep.cpp
@@ -160,5 +161,5 @@ Finished generating code
 
 ## <a name="see-also"></a>Zobacz też
 
-[Optymalizacje sterowane profilem](profile-guided-optimizations.md)<br/>
+[Optymalizacje profilowane](profile-guided-optimizations.md)<br/>
 [pgosweep](pgosweep.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o tym, jak zoptymalizować kod
 title: Optymalizacja kodu
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: 00356cf50ca8e50c80e8a1142adf654816490c9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 893e3dce64400d47026e478b081283e3f1d82262
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179801"
 ---
 # <a name="optimizing-your-code"></a>Optymalizacja kodu
 
@@ -52,7 +53,7 @@ Paradoxically, Optymalizacja programu w celu przyspieszenia może spowodować wo
 
 W poniższych tematach omówiono dobre praktyki programistyczne.
 
-[Wskazówki dotyczące poprawiania kodu krytycznego czasowo](tips-for-improving-time-critical-code.md) \
+[Wskazówki dotyczące ulepszania kodu Time-Critical](tips-for-improving-time-critical-code.md) \
 Lepsze techniki kodowania mogą przynieść lepszą wydajność. W tym temacie przedstawiono techniki kodowania, które mogą pomóc w upewnieniu się, że krytyczne elementy kodu działają prawidłowo.
 
 [Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md) \
@@ -64,19 +65,19 @@ Ponieważ Optymalizacja może zmienić kod utworzony przez kompilator, zalecamy 
 
 W poniższych tematach znajdują się informacje o sposobie debugowania kompilacji wydania.
 
-- [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Debugowanie w Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
 - [Porady: debugowanie zoptymalizowanego kodu](/visualstudio/debugger/how-to-debug-optimized-code)
 
-- [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](why-floating-point-numbers-may-lose-precision.md)
+- [Dlaczego liczby Floating-Point mogą utracić dokładnooć](why-floating-point-numbers-may-lose-precision.md)
 
 W poniższych tematach przedstawiono informacje na temat optymalizowania kompilowania, ładowania i wykonywania kodu.
 
-- [Poprawianie wydajności kompilatora](improving-compiler-throughput.md)
+- [Optymalizowanie przepływności kompilatora](improving-compiler-throughput.md)
 
 - [Korzystanie z nazwy funkcji bez () nie tworzy kodu](using-function-name-without-parens-produces-no-code.md)
 
-- [Optymalizacja wbudowanego asemblera](../assembler/inline/optimizing-inline-assembly.md)
+- [Optymalizacja wbudowanego zestawu](../assembler/inline/optimizing-inline-assembly.md)
 
 - [Określanie optymalizacji kompilatora dla projektu ATL](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
@@ -86,17 +87,17 @@ W poniższych tematach przedstawiono informacje na temat optymalizowania kompilo
 
 [Dyrektywy pragma i słowa kluczowe optymalizacji](optimization-pragmas-and-keywords.md) \
 [Optymalizowanie przepływności kompilatora](improving-compiler-throughput.md) \
-[Dlaczego liczby zmiennoprzecinkowe mogą utracić dokładnooć](why-floating-point-numbers-may-lose-precision.md) \
-[Reprezentacja zmiennoprzecinkowa IEEE](ieee-floating-point-representation.md) \
-[Wskazówki dotyczące poprawiania kodu krytycznego czasowo](tips-for-improving-time-critical-code.md) \
+[Dlaczego liczby Floating-Point mogą utracić dokładnooć](why-floating-point-numbers-may-lose-precision.md) \
+[Reprezentacja IEEE Floating-Point](ieee-floating-point-representation.md) \
+[Wskazówki dotyczące ulepszania kodu Time-Critical](tips-for-improving-time-critical-code.md) \
 [Korzystanie z nazwy funkcji bez () nie tworzy kodu](using-function-name-without-parens-produces-no-code.md) \
 [Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md) \
 [Optymalizacje profilowane](profile-guided-optimizations.md) \
-[Zmienne środowiskowe dla optymalizacji profilowanych](environment-variables-for-profile-guided-optimizations.md) \
+[Zmienne środowiskowe dla optymalizacji Profile-Guided](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \
-[Porady: scalanie wielu profili PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
+[Instrukcje: scalanie wielu profili PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Zobacz też
 

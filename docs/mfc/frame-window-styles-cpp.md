@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: style Frame-Window (C++)'
 title: Style okna ramowego (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - MFC, frame windows
 - styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
-ms.openlocfilehash: 3c22944537370a44aee1af1cf71281264ed4969b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5d7b0effe4b7cea17eb0b5bd8208563ba552ba99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180346"
 ---
 # <a name="frame-window-styles-c"></a>Style okna ramowego (C++)
 
-Ramki systemu Windows, które są używane w środowisku, są odpowiednie dla większości programów, ale możesz uzyskać dodatkową elastyczność, korzystając z zaawansowanych funkcji [PreCreateWindow](reference/cwnd-class.md#precreatewindow) i globalną funkcję MFC [AfxRegisterWndClass —](reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow`jest funkcją składową `CWnd` .
+Ramki systemu Windows, które są używane w środowisku, są odpowiednie dla większości programów, ale możesz uzyskać dodatkową elastyczność, korzystając z zaawansowanych funkcji [PreCreateWindow](reference/cwnd-class.md#precreatewindow) i globalną funkcję MFC [AfxRegisterWndClass —](reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` jest funkcją składową `CWnd` .
 
 Jeśli zastosujesz style **WS_HSCROLL** i **WS_VSCROLL** do okna ramki głównej, zostaną one zastosowane do okna **MDICLIENT** , aby użytkownicy mogli przewijać obszar **MDICLIENT** .
 

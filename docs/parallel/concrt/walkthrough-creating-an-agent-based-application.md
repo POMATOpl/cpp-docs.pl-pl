@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: Tworzenie aplikacji Agent-Based'
 title: 'Wskazówki: tworzenie aplikacji opartej o agentów'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 9d9fdd3ddface01f84f6426dd334600cf88b84e7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: cca3fc5e8467b7eb5699e4e9f513e35d5b97da93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180380"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Wskazówki: tworzenie aplikacji opartej o agentów
 
@@ -48,13 +49,13 @@ W tej sekcji pokazano, jak utworzyć aplikację konsolową w języku C++, która
 
 1. Z menu głównego wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego Ustaw  **Język** na **C++** , ustaw **platformę** na **Windows** i ustaw **Typ projektu** na **Console** .
+1. W górnej części okna dialogowego Ustaw  **Język** na **C++**, ustaw **platformę** na **Windows** i ustaw **Typ projektu** na **Console**.
 
-1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej** . Na następnej stronie wprowadź `BasicAgent` jako nazwę projektu i określ lokalizację projektu w razie potrzeby.
+1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej**. Na następnej stronie wprowadź `BasicAgent` jako nazwę projektu i określ lokalizację projektu w razie potrzeby.
 
 1. Wybierz przycisk **Utwórz** , aby utworzyć projekt.
 
-1. Kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości** . We **właściwościach konfiguracji** prekompilowane nagłówki prekompilowanego  >  **nagłówka C/C++**  >  **Precompiled Headers**  >  **Precompiled header** wybierz pozycję **Utwórz** .
+1. Kliknij prawym przyciskiem myszy węzeł projektu w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**. We **właściwościach konfiguracji** prekompilowane nagłówki prekompilowanego  >  **nagłówka C/C++**  >    >   wybierz pozycję **Utwórz**.
 
 ::: moniker-end
 
@@ -62,21 +63,21 @@ W tej sekcji pokazano, jak utworzyć aplikację konsolową w języku C++, która
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>Aby utworzyć aplikację konsolową w języku C++ w programie Visual Studio 2017 i starszych
 
-1. W menu **plik** kliknij pozycję **Nowy** , a następnie kliknij pozycję **projekt** , aby wyświetlić okno dialogowe **Nowy projekt** .
+1. W menu **plik** kliknij pozycję **Nowy**, a następnie kliknij pozycję **projekt** , aby wyświetlić okno dialogowe **Nowy projekt** .
 
-1. W oknie dialogowym **Nowy projekt** wybierz węzeł **Visual C++** w okienku **typy projektów** , a następnie wybierz pozycję **aplikacja konsoli Win32** w okienku **Szablony** . Wpisz nazwę projektu, na przykład, `BasicAgent` a następnie kliknij przycisk **OK** , aby wyświetlić **Kreatora aplikacji konsolowej Win32** .
+1. W oknie dialogowym **Nowy projekt** wybierz węzeł **Visual C++** w okienku **typy projektów** , a następnie wybierz pozycję **aplikacja konsoli Win32** w okienku **Szablony** . Wpisz nazwę projektu, na przykład, `BasicAgent` a następnie kliknij przycisk **OK** , aby wyświetlić **Kreatora aplikacji konsolowej Win32**.
 
-1. W oknie dialogowym **Kreator aplikacji konsolowej Win32** kliknij przycisk **Zakończ** .
+1. W oknie dialogowym **Kreator aplikacji konsolowej Win32** kliknij przycisk **Zakończ**.
 
 ::: moniker-end
 
-1. W *PCH. h* ( *stdafx. h* w programie Visual Studio 2017 i starszych) Dodaj następujący kod:
+1. W *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i starszych) Dodaj następujący kod:
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
    Plik nagłówkowy. h zawiera funkcje klasy [concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) .
 
-1. Sprawdź, czy aplikacja została utworzona pomyślnie, kompilując ją i uruchamiając. Aby skompilować aplikację, w menu **kompilacja** kliknij polecenie **Kompiluj rozwiązanie** . Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, klikając polecenie **Rozpocznij debugowanie** w menu **debugowanie** .
+1. Sprawdź, czy aplikacja została utworzona pomyślnie, kompilując ją i uruchamiając. Aby skompilować aplikację, w menu **kompilacja** kliknij polecenie **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, klikając polecenie **Rozpocznij debugowanie** w menu **debugowanie** .
 
 [[Top](#top)]
 
@@ -86,7 +87,7 @@ W tej sekcji pokazano, jak utworzyć `file_reader` klasę. Środowisko uruchomie
 
 #### <a name="to-create-the-file_reader-class"></a>Aby utworzyć klasę file_reader
 
-1. Dodaj nowy plik nagłówkowy C++ do projektu. Aby to zrobić, kliknij prawym przyciskiem myszy węzeł **pliki nagłówkowe** w **Eksplorator rozwiązań** , kliknij przycisk **Dodaj** , a następnie kliknij przycisk **nowy element** . W okienku **Szablony** wybierz pozycję **plik nagłówka (. h)** . W oknie dialogowym **Dodaj nowy element** wpisz `file_reader.h` w polu **Nazwa** , a następnie kliknij przycisk **Dodaj** .
+1. Dodaj nowy plik nagłówkowy C++ do projektu. Aby to zrobić, kliknij prawym przyciskiem myszy węzeł **pliki nagłówkowe** w **Eksplorator rozwiązań**, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **nowy element**. W okienku **Szablony** wybierz pozycję **plik nagłówka (. h)**. W oknie dialogowym **Dodaj nowy element** wpisz `file_reader.h` w polu **Nazwa** , a następnie kliknij przycisk **Dodaj**.
 
 1. W file_reader. h Dodaj następujący kod.
 
@@ -202,7 +203,7 @@ Zawsze Wywołaj metodę [concurrency:: Agent::d jedną](reference/agent-class.md
 
 Aby zapoznać się z innym przykładem aplikacji opartej na agencie, zobacz [Przewodnik: Używanie funkcji join w celu zapobiegania zakleszczeniom](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

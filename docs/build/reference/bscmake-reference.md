@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: BSCMAKE Reference'
 title: Odwołanie BSCMAKE
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -10,32 +11,32 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: f95e34b9599de628463b9f92ebf8f01036237891
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 11a90561e22b9fb3a39f022ba188e5c9d155e45e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179432"
 ---
 # <a name="bscmake-reference"></a>Odwołanie BSCMAKE
 
 > [!WARNING]
-> Mimo że BSCMAKE jest nadal zainstalowany w programie Visual Studio, nie jest już używany przez IDE. Od programu Visual Studio 2008 informacje o przeglądaniu i symbolach są automatycznie przechowywane w pliku sdf programu SQL Server w folderze rozwiązania.
+> Mimo że usługa BSCMAKE jest nadal zainstalowana z programem Visual Studio, nie jest już używana przez IDE. Od programu Visual Studio 2008 informacje dotyczące przeglądania i symboli są przechowywane automatycznie w pliku SQL Server. sdf w folderze rozwiązania.
 
-Narzędzie do konserwacji informacji przeglądania przez firmę Microsoft (BSCMAKE. EXE) tworzy plik informacji przeglądania (.bsc) z plików .sbr utworzonych podczas kompilacji. Niektóre narzędzia innych firm używają plików .bsc do analizy kodu.
+Narzędzie do konserwacji przeglądanych informacji firmy Microsoft (BSCMAKE.EXE) kompiluje plik informacji o przeglądaniu (BSC) z plików. sbr utworzonych podczas kompilacji. Niektóre narzędzia innych firm wykorzystują pliki BSC do analizy kodu.
 
-Podczas tworzenia programu, można utworzyć plik informacji przeglądania dla programu automatycznie, za pomocą BSCMAKE do budowy pliku. Nie trzeba wiedzieć, jak uruchomić BSCMAKE, jeśli tworzysz plik informacji przeglądania w środowisku deweloperskim programu Visual Studio. Jednak można przeczytać ten temat, aby zrozumieć dostępne opcje.
+Podczas kompilowania programu można automatycznie utworzyć plik informacji o przeglądaniu dla programu przy użyciu BSCMAKE do skompilowania pliku. Nie musisz wiedzieć, jak uruchomić program BSCMAKE, jeśli tworzysz plik informacji o przeglądaniu w środowisku deweloperskim programu Visual Studio. Warto jednak zapoznać się z tym tematem, aby poznać dostępne opcje.
 
-Jeśli tworzysz program poza środowiskiem programistycznym, nadal można utworzyć niestandardowe .bsc, które można zbadać w środowisku. Uruchom BSCMAKE na plikach .sbr utworzonych podczas kompilacji.
+Jeśli kompilujesz program poza środowiskiem programistycznym, można nadal utworzyć niestandardowy. bsc, który można przeanalizować w środowisku. Uruchom BSCMAKE na plikach SBR, które zostały utworzone podczas kompilacji.
 
 > [!NOTE]
-> To narzędzie można uruchomić tylko z wiersza polecenia programu Visual Studio Developer. Nie można go uruchomić z wiersza polecenia systemowego lub z Eksploratora plików.
+> To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio Developer. Nie można uruchomić go z poziomu wiersza polecenia systemu lub Eksploratora plików.
 
 Ta sekcja zawiera następujące tematy:
 
-- [Kompilowanie plików przeglądania informacji: Przegląd](building-browse-information-files-overview.md)
+- [Kompilowanie plików informacji o przeglądaniu: Omówienie](building-browse-information-files-overview.md)
 
-- [Tworzenie pliku bsc](building-a-dot-bsc-file.md)
+- [Kompilowanie pliku. bsc](building-a-dot-bsc-file.md)
 
 - [Wiersz polecenia BSCMAKE](bscmake-command-line.md)
 
@@ -43,8 +44,8 @@ Ta sekcja zawiera następujące tematy:
 
 - [Opcje BSCMAKE](bscmake-options.md)
 
-- [Kody wyjściowe BSCMAKE](bscmake-exit-codes.md)
+- [Kody zakończenia BSCMAKE](bscmake-exit-codes.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dodatkowe narzędzia do budowania MSVC](c-cpp-build-tools.md)
+[Dodatkowe narzędzia do kompilacji MSVC](c-cpp-build-tools.md)
