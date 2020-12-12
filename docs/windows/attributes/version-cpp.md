@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o wersji (C++)
 title: wersja (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 7d21761a556455cec27087896984bdc721841d9d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5b6d13e59b36fe37d71c9e2cca6fe7d75587f77b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118306"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -42,7 +43,7 @@ Zobacz przykład [powiązania](bindable.md) dla przykładowego użycia **wersji*
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|**coclass**|
 |**Nieprawidłowe atrybuty**|Brak|
 

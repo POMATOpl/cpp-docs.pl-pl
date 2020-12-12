@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strtoui64, _wcstoui64, _strtoui64_l _wcstoui64_l'
 title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: dc70cc5a2a7c1c8975e90d5e8d1d5225522e0592
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f8ab4663ab64b5b3f6787b5514cf1d0f779680f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124855"
 ---
 # <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 
@@ -97,14 +98,14 @@ Wskaźnik do znaku, który powoduje zatrzymanie skanowania.
 *base*<br/>
 Numer bazowy do użycia.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 **_strtoui64** zwraca wartość reprezentowaną w ciągu *strSource*, z wyjątkiem sytuacji, gdy reprezentacja spowodowałoby przepełnienie, w takim przypadku zwraca **_UI64_MAX**. **_strtoui64** zwraca wartość 0, jeśli nie można wykonać konwersji.
 
-**_UI64_MAX** jest zdefiniowany w limitach. C.
+**_UI64_MAX** jest zdefiniowany w Limits. H.
 
 Jeśli *strSource* ma **wartość null** lub *podstawa* jest różna od zera i jest mniejsza niż 2 lub większa niż 36, **errno** jest ustawiona na **EINVAL**.
 
@@ -131,7 +132,7 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 **_strtoui64** oczekuje, że *strSource* wskaże ciąg o następującej postaci:
 
-> [*odstęp*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cyfry* &#124; *litery*]
+> [*odstęp*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cyfry*  &#124; *litery*]
 
 *Odstępy* mogą zawierać spacje i znaki tabulacji, które są ignorowane. *cyfry* to co najmniej jedna cyfra dziesiętna. *litery* są jedną lub większą literą od "a" do "z" (lub od "a" do "z"). Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie. Jeśli *baza* jest z przedziału od 2 do 36, zostanie użyta jako podstawa liczby. Jeśli *Base* ma wartość 0, początkowe znaki ciągu wskazywane przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugi znak nie jest "x" lub "X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszy znak to "0", a drugi znak to "x" lub "X", ciąg jest interpretowany jako Szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "a" do "z" (lub "A" do "z") mają przypisane wartości od 10 do 35; dozwolone są tylko litery, których przypisane wartości są mniejsze niż *podstawowe* . Pierwszy znak poza zakresem podstawy powoduje zatrzymanie skanowania. Na przykład jeśli *Base* ma wartość 0, a pierwszy znak skanowany to "0", zakłada się liczbę całkowitą, a znak "8" lub "9" spowoduje zatrzymanie skanowania.
 
@@ -169,7 +170,7 @@ u = 18446744073709551615
 ## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

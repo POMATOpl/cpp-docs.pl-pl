@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fsetpos'
 title: fsetpos
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-ms.openlocfilehash: 8fa6ec1f37703ce51e0c9c565d766c56cf164322
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e8259bcf4dba951bf6603fb5d4984db6ece0e266
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114224"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -63,7 +64,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotu, zobacz [_
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fsetpos** ustawia wskaźnik położenia plików dla *strumienia* do wartości *punktu sprzedaży*, która jest uzyskiwana we wcześniejszej wywołaniu **fgetpos** względem *strumienia*. Funkcja czyści wskaźnik końca pliku i cofa wszystkie efekty [ungetc —](ungetc-ungetwc.md) w *strumieniu*. Po wywołaniu **fsetpos**kolejna operacja na *strumieniu* może być wartością wejściową lub wyjściową.
+Funkcja **fsetpos** ustawia wskaźnik położenia plików dla *strumienia* do wartości *punktu sprzedaży*, która jest uzyskiwana we wcześniejszej wywołaniu **fgetpos** względem *strumienia*. Funkcja czyści wskaźnik końca pliku i cofa wszystkie efekty [ungetc —](ungetc-ungetwc.md) w *strumieniu*. Po wywołaniu **fsetpos** kolejna operacja na *strumieniu* może być wartością wejściową lub wyjściową.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -71,7 +72,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fsetpos**|\<stdio. h>|
+|**fsetpos**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

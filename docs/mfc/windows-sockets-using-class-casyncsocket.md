@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Windows Sockets: Using Class CAsyncSocket'
 title: 'Windows Sockets: używanie klasy CAsyncSocket'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: 6a3b3469b908eaf6f8062b8db7fc4287606b7f02
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9fbf385a2e327588685fdcb996465386628e5e4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228508"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118605"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: używanie klasy CAsyncSocket
 
-W tym artykule wyjaśniono, jak używać klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Należy pamiętać, że ta klasa hermetyzuje interfejs API Windows Sockets na bardzo niskim poziomie. `CAsyncSocket`jest przeznaczony dla programistów, którzy znają informacje o komunikacji sieciowej, ale chcą korzystać z funkcji wywołania zwrotnego do powiadamiania o zdarzeniach sieciowych. W oparciu o to założenie, ten artykuł zawiera tylko podstawową instrukcję. Należy rozważyć użycie, `CAsyncSocket` Jeśli chcesz, aby system Windows Sockets ułatwiał zajmowanie się wieloma protokołami sieciowymi w aplikacji MFC, ale nie chcesz wymusić elastyczności. Możesz również zastanowić się, że możesz uzyskać lepszą wydajność przez bezpośrednie programowanie komunikacji, niż można użyć bardziej ogólnego, alternatywnego modelu klasy `CSocket` .
+W tym artykule wyjaśniono, jak używać klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Należy pamiętać, że ta klasa hermetyzuje interfejs API Windows Sockets na bardzo niskim poziomie. `CAsyncSocket` jest przeznaczony dla programistów, którzy znają informacje o komunikacji sieciowej, ale chcą korzystać z funkcji wywołania zwrotnego do powiadamiania o zdarzeniach sieciowych. W oparciu o to założenie, ten artykuł zawiera tylko podstawową instrukcję. Należy rozważyć użycie, `CAsyncSocket` Jeśli chcesz, aby system Windows Sockets ułatwiał zajmowanie się wieloma protokołami sieciowymi w aplikacji MFC, ale nie chcesz wymusić elastyczności. Możesz również zastanowić się, że możesz uzyskać lepszą wydajność przez bezpośrednie programowanie komunikacji, niż można użyć bardziej ogólnego, alternatywnego modelu klasy `CSocket` .
 
-`CAsyncSocket`opisano w dokumentacji *MFC*. Visual C++ również dostarcza specyfikację Windows Sockets, która znajduje się w Windows SDK. Szczegóły są pozostały do Ciebie. Visual C++ nie dostarcza przykładowej aplikacji dla programu `CAsyncSocket` .
+`CAsyncSocket` opisano w dokumentacji *MFC*. Visual C++ również dostarcza specyfikację Windows Sockets, która znajduje się w Windows SDK. Szczegóły są pozostały do Ciebie. Visual C++ nie dostarcza przykładowej aplikacji dla programu `CAsyncSocket` .
 
 Jeśli nie masz wysoce znajomości komunikacji sieciowej i potrzebujesz prostego rozwiązania, użyj klasy [CSocket](../mfc/reference/csocket-class.md) z `CArchive` obiektem. Aby uzyskać więcej informacji, zobacz [Windows Sockets: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md) .
 
@@ -30,7 +31,7 @@ W tym artykule omówiono następujące zagadnienia:
 
 - [Twoje obowiązki z CAsyncSocket](#_core_your_responsibilities_with_casyncsocket).
 
-## <a name="creating-and-using-a-casyncsocket-object"></a><a name="_core_creating_and_using_a_casyncsocket_object"></a>Tworzenie i używanie obiektu CAsyncSocket
+## <a name="creating-and-using-a-casyncsocket-object"></a><a name="_core_creating_and_using_a_casyncsocket_object"></a> Tworzenie i używanie obiektu CAsyncSocket
 
 #### <a name="to-use-casyncsocket"></a>Aby użyć CAsyncSocket
 
@@ -85,7 +86,7 @@ W tym artykule omówiono następujące zagadnienia:
 
 Przykład tej sekwencji w kodzie (rzeczywiście dla `CSocket` obiektu) można znaleźć w temacie [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md).
 
-## <a name="your-responsibilities-with-casyncsocket"></a><a name="_core_your_responsibilities_with_casyncsocket"></a>Twoje obowiązki z CAsyncSocket
+## <a name="your-responsibilities-with-casyncsocket"></a><a name="_core_your_responsibilities_with_casyncsocket"></a> Twoje obowiązki z CAsyncSocket
 
 Podczas tworzenia obiektu klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), obiekt hermetyzuje uchwyt **gniazda** systemu Windows i dostarcza operacje na tym obsłudze. W przypadku korzystania `CAsyncSocket` z programu należy zaradzić sobie ze wszystkimi problemami, które mogą wystąpić, jeśli używasz interfejsu API bezpośrednio. Na przykład:
 
@@ -97,7 +98,7 @@ Podczas tworzenia obiektu klasy [CAsyncSocket](../mfc/reference/casyncsocket-cla
 
 Aby zapoznać się z definicjami tych warunków i dodatkowych informacji, zobacz [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md), [Windows Sockets: porządkowanie bajtów](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).
 
-Pomimo tych problemów, Klasa `CAsycnSocket` może być właściwym wyborem w przypadku, gdy aplikacja wymaga całej elastyczności i kontroli, którą można uzyskać. W przeciwnym razie należy rozważyć użycie klasy `CSocket` . `CSocket`ukrywa wiele szczegółów: kieruje komunikatami systemu Windows podczas blokowania wywołań i daje dostęp do `CArchive` , który zarządza różnicami w kolejności bajtów i konwersją ciągów.
+Pomimo tych problemów, Klasa `CAsycnSocket` może być właściwym wyborem w przypadku, gdy aplikacja wymaga całej elastyczności i kontroli, którą można uzyskać. W przeciwnym razie należy rozważyć użycie klasy `CSocket` . `CSocket` ukrywa wiele szczegółów: kieruje komunikatami systemu Windows podczas blokowania wywołań i daje dostęp do `CArchive` , który zarządza różnicami w kolejności bajtów i konwersją ciągów.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -107,6 +108,6 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Windows Sockets: gniazda datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)

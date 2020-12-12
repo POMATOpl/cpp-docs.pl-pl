@@ -1,31 +1,32 @@
 ---
-title: Compiler Error C2842
+description: 'Dowiedz się więcej o: błąd kompilatora C2842'
+title: Błąd kompilatora C2842
 ms.date: 11/04/2016
 f1_keywords:
 - C2842
 helpviewer_keywords:
 - C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
-ms.openlocfilehash: 99b2c86d1e914c9425c2664d4e858bba6cb99486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f086c6c5fcfa451f320d96470615e4f5f4d5674a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119986"
 ---
-# <a name="compiler-error-c2842"></a>Compiler Error C2842
+# <a name="compiler-error-c2842"></a>Błąd kompilatora C2842
 
-> "*klasy*": zarządzanej lub typu WinRT nie musi definiować własnego "operator new" ani "operator delete"
+> "*Class*": typ zarządzany lub WinRT nie może definiować własnego "operator new" ani "operator delete"
 
 ## <a name="remarks"></a>Uwagi
 
-Definiowanie swoich własnych **nowy operator** lub **operatora delete** Zarządzanie alokacji pamięci na natywnej stercie. Odwołanie do klasy nie można jednak zdefiniować te operatory, ponieważ są przydzielane tylko na stosie zarządzanym.
+Możesz zdefiniować własny **operator new** lub **operator delete** , aby zarządzać alokacją pamięci na stercie natywnym. Jednak klasy referencyjne nie mogą definiować tych operatorów, ponieważ są one przydzielane tylko na zarządzanej stercie.
 
-Aby uzyskać więcej informacji, zobacz [operatory zdefiniowane przez użytkownika (C++sposób niezamierzony)](../../dotnet/user-defined-operators-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [Operatory zdefiniowane przez użytkownika (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2842.
+Poniższy przykład generuje C2842.
 
 ```cpp
 // C2842.cpp

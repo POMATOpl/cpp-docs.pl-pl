@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Command-Line Warning D9036'
 title: Ostrzeżenie D9036 dla wiersza polecenia
 ms.date: 12/10/2018
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - D9036
 ms.assetid: 68276e84-8d4e-4d4a-a9db-2874c81dfe66
-ms.openlocfilehash: 16e97819c7e3752285b8f8caa69517d5a06a4701
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5b514108661b4299c5d54a6771463fa2ea027289
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119883"
 ---
 # <a name="command-line-warning-d9036"></a>Ostrzeżenie D9036 dla wiersza polecenia
 
-> "*option\_2*" zamiast "*Option\_1*"
+> "*Option \_ 2*" zamiast "*Option \_ 1*"
 
 ## <a name="remarks"></a>Uwagi
 

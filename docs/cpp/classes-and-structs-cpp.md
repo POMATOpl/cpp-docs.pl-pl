@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy i struktury (C++)'
 title: Klasy i struktury (C++)
 ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: d593f6575fec64aa0eb14c7aa0fcbb5c4eb66691
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d845cf130c2cbf06e182a49f3d83c78745864d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114068"
 ---
 # <a name="classes-and-structs-c"></a>Klasy i struktury (C++)
 
@@ -53,10 +54,10 @@ Aby uzyskać więcej informacji na temat Unii, zobacz [Unions](../cpp/unions.md)
 
 |Struktury|Klasy|Unie|
 |----------------|-------------|------------|
-|klucz klasy to**`struct`**|klucz klasy to**`class`**|klucz klasy to**`union`**|
+|klucz klasy to **`struct`**|klucz klasy to **`class`**|klucz klasy to **`union`**|
 |Domyślny dostęp jest publiczny|Domyślny dostęp jest prywatny|Domyślny dostęp jest publiczny|
 |Brak ograniczeń użycia|Brak ograniczeń użycia|Używaj tylko jednej składowej naraz|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

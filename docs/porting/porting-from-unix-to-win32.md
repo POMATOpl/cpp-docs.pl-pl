@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: uruchamianie programów systemu Linux w systemie Windows'
 title: Uruchamianie programów systemu Linux w systemie Windows
 ms.date: 07/31/2019
 helpviewer_keywords:
 - Linux [C++], porting to Win32
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: f13777c1c366d2f6b9497296f8819454dda7647e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0822fbb12198622232ff094435894e1a24c36635
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115186"
 ---
 # <a name="running-linux-programs-on-windows"></a>Uruchamianie programów systemu Linux w systemie Windows
 

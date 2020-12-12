@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: konwersje typów User-Defined (C++)'
 title: Konwersje typów zdefiniowane przez użytkownika (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-ms.openlocfilehash: e7889a7365a6b3a362804d3dad4b2fefc3780d01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac3a373a7c6075e75c79f636e54f15425301ec3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116876"
 ---
 # <a name="user-defined-type-conversions-c"></a>Konwersje typów zdefiniowane przez użytkownika (C++)
 
@@ -71,7 +72,7 @@ Jednym dobrze znanym przykładem niejawnej konwersji, która może spowodować p
 
 **`explicit`** Słowo kluczowe może być stosowane do konstruktorów konwersji od c++ 98 oraz do konwersji funkcji od c++ 11. Poniższe sekcje zawierają więcej informacji na temat używania **`explicit`** słowa kluczowego.
 
-## <a name="conversion-constructors"></a><a name="ConvCTOR"></a>Konstruktory konwersji
+## <a name="conversion-constructors"></a><a name="ConvCTOR"></a> Konstruktory konwersji
 
 Konstruktory konwersji definiują konwersje ze zdefiniowanych przez użytkownika lub typów wbudowanych do typu zdefiniowanego przez użytkownika. Poniższy przykład demonstruje Konstruktor konwersji, który konwertuje z typu wbudowanego **`double`** na typ zdefiniowany przez użytkownika `Money` .
 
@@ -155,7 +156,7 @@ W tym przykładzie należy zauważyć, że można nadal używać konstruktora ja
 
 Chociaż wygoda dopuszczania niejawnych konwersji może być trudna, może to spowodować powstanie błędów. Reguła kciuka polega na tym, że wszystkie konstruktory konwersji są jawne, z wyjątkiem sytuacji, gdy na pewno chcesz, aby określona konwersja była wykonywana niejawnie.
 
-## <a name="conversion-functions"></a><a name="ConvFunc"></a>Funkcje konwersji
+## <a name="conversion-functions"></a><a name="ConvFunc"></a> Funkcje konwersji
 
 Funkcje konwersji definiują konwersje z typu zdefiniowanego przez użytkownika na inne typy. Te funkcje są czasami określane jako "Operatory rzutowania", ponieważ wraz z konstruktorami konwersji są wywoływane, gdy wartość jest rzutowana na inny typ. Poniższy przykład ilustruje funkcję konwersji, która konwertuje z typu zdefiniowanego przez użytkownika, `Money` do typu wbudowanego **`double`** :
 
@@ -181,7 +182,7 @@ void display_balance(const Money balance)
 
 Zwróć uwagę, że zmienna członkowska `amount` jest prywatna i że funkcja konwersji publicznej do typu **`double`** jest wprowadzana tylko w celu zwrócenia wartości `amount` . W funkcji `display_balance` , niejawna konwersja występuje, gdy wartość `balance` jest przesyłana strumieniowo do wyjścia standardowego przy użyciu operatora wstawiania strumienia `<<` . Ponieważ żaden operator wstawiania strumienia nie jest zdefiniowany dla typu zdefiniowanego przez użytkownika `Money` , ale istnieje jeden dla typu wbudowanego **`double`** , kompilator może użyć funkcji konwersji z `Money` do, **`double`** Aby spełnić operator wstawiania strumienia.
 
-Funkcje konwersji są dziedziczone przez klasy pochodne. Funkcje konwersji w klasie pochodnej przesłonią dziedziczone funkcje konwersji tylko wtedy, gdy konwertują się na dokładnie ten sam typ. Na przykład funkcja konwersji zdefiniowanej przez użytkownika w **operatorze** klasy pochodnej int nie przesłania się — lub nawet ma wpływ — zdefiniowana przez użytkownika funkcja konwersji **operatora**klasy bazowej, mimo że Konwersje standardowe definiują relację konwersji między **`int`** i **`short`** .
+Funkcje konwersji są dziedziczone przez klasy pochodne. Funkcje konwersji w klasie pochodnej przesłonią dziedziczone funkcje konwersji tylko wtedy, gdy konwertują się na dokładnie ten sam typ. Na przykład funkcja konwersji zdefiniowanej przez użytkownika w **operatorze** klasy pochodnej int nie przesłania się — lub nawet ma wpływ — zdefiniowana przez użytkownika funkcja konwersji **operatora** klasy bazowej, mimo że Konwersje standardowe definiują relację konwersji między **`int`** i **`short`** .
 
 ### <a name="declaring-conversion-functions"></a>Deklarowanie funkcji konwersji
 

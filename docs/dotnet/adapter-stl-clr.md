@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Adapter (STL/CLR)'
 title: adapter (STL/CLR)
 ms.date: 06/15/2018
 ms.topic: reference
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: 3278371cc7afb08f0d461c77cde9578e1f2840c6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 66e6346c644bc0d176d90701722cfcd90cbb3590
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116422"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -873,7 +874,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *wartości*parametru szablonu, jeśli jest obecny w specjalizacji; w przeciwnym razie jest synonimem dla `System::Object^` .
+Typ jest synonimem dla *wartości* parametru szablonu, jeśli jest obecny w specjalizacji; w przeciwnym razie jest synonimem dla `System::Object^` .
 
 ### <a name="example"></a>Przykład
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mktemp_s, _wmktemp_s'
 title: _mktemp_s, _wmktemp_s
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c1dcaa7817de70a3478e9bf8014b4ab223837c34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114307"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -86,9 +87,9 @@ Obie te funkcje zwracają zero po sukcesie; kod błędu w przypadku niepowodzeni
 
 |*nameTemplate*|*sizeInChars*|Wartość zwracana|Nowa wartość w *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|ile|**EINVAL**|**NULL**|
-|Niepoprawny format (patrz sekcja uwagi w poszukiwaniu poprawnego formatu)|ile|**EINVAL**|pusty ciąg|
-|ile|<= liczba elementów X|**EINVAL**|pusty ciąg|
+|**NULL**|dowolny|**EINVAL**|**NULL**|
+|Niepoprawny format (patrz sekcja uwagi w poszukiwaniu poprawnego formatu)|dowolny|**EINVAL**|pusty ciąg|
+|dowolny|<= liczba elementów X|**EINVAL**|pusty ciąg|
 
 Jeśli wystąpi którykolwiek z powyższych warunków błędu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcje zwracają **EINVAL**.
 
@@ -108,7 +109,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 Argument *nameTemplate* ma postać **baseXXXXXX**, gdzie *Base* jest częścią nowej nazwy pliku, która jest dostarczana, a każdy X jest symbolem zastępczym dla znaku dostarczonego przez **_mktemp_s**. Każdy znak zastępczy w *nameTemplate* musi być wielką literą x. **_mktemp_s** zachowuje *podstawową* i zastępuje pierwszy znak x symbolem alfabetycznym. **_mktemp_s** zastępuje następujące znaki końcowe X wartością z pięciu cyfr; Ta wartość jest unikatowym numerem identyfikującym proces wywołujący lub w programach wielowątkowych, wątek wywołujący.
 
-Każde pomyślne wywołanie do **_mktemp_s** modyfikuje *nameTemplate*. W każdym kolejnym wywołaniu z tego samego procesu lub wątku z tym samym *nameTemplate* argumentem nameTemplate **_mktemp_s** sprawdza nazwy plików, które są zgodne z nazwami zwracanymi przez **_mktemp_s** w poprzednich wywołaniach. Jeśli plik nie istnieje dla danej nazwy, **_mktemp_s** zwraca tę nazwę. Jeśli istnieją pliki dla wszystkich poprzednio zwróconych nazw, **_mktemp_s** tworzy nową nazwę przez zastąpienie znaku alfabetycznego, który został użyty w wcześniej zwróconej nazwie z następną dostępną małą literą, w kolejności od "a" do "z". Na przykład jeśli *podstawowa* :
+Każde pomyślne wywołanie do **_mktemp_s** modyfikuje *nameTemplate*. W każdym kolejnym wywołaniu z tego samego procesu lub wątku z tym samym  argumentem nameTemplate **_mktemp_s** sprawdza nazwy plików, które są zgodne z nazwami zwracanymi przez **_mktemp_s** w poprzednich wywołaniach. Jeśli plik nie istnieje dla danej nazwy, **_mktemp_s** zwraca tę nazwę. Jeśli istnieją pliki dla wszystkich poprzednio zwróconych nazw, **_mktemp_s** tworzy nową nazwę przez zastąpienie znaku alfabetycznego, który został użyty w wcześniej zwróconej nazwie z następną dostępną małą literą, w kolejności od "a" do "z". Na przykład jeśli *podstawowa* :
 
 > **Fn**
 
@@ -132,8 +133,8 @@ W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia s
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mktemp_s**|\<IO. h>|
-|**_wmktemp_s**|\<IO. h> lub \<WCHAR. h>|
+|**_mktemp_s**|\<io.h>|
+|**_wmktemp_s**|\<io.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

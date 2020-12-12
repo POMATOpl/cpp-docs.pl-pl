@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy reader_writer_lock
 title: reader_writer_lock — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: e4c38a6e1f1a1c6f4beda43ff2c055b6070258b8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 68f42fbce607f05ceb489967d2b13cd08068d0cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115225"
 ---
 # <a name="reader_writer_lock-class"></a>reader_writer_lock — Klasa
 
@@ -72,7 +73,7 @@ Aby uzyskać więcej informacji, zobacz [struktury danych synchronizacji](../../
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="lock"></a><a name="lock"></a>skręt
+## <a name="lock"></a><a name="lock"></a> skręt
 
 Uzyskuje blokadę modułu odczytującego jako składnik zapisywania.
 
@@ -90,7 +91,7 @@ Moduły zapisujące są połączone w łańcuch, dzięki czemu moduł zapisując
 
 Jeśli blokada jest już zatrzymywana przez kontekst wywołujący, zostanie zgłoszony wyjątek [improper_lock](improper-lock-class.md) .
 
-## <a name="lock_read"></a><a name="lock_read"></a>lock_read
+## <a name="lock_read"></a><a name="lock_read"></a> lock_read
 
 Uzyskuje blokadę modułu odczytującego jako czytelnika. Jeśli istnieją moduły zapisujące, aktywni czytelnicy muszą czekać, aż zostaną wykonane. Czytelnik po prostu rejestruje zainteresowania w blokadzie i czeka na jego wydanie przez autorów.
 
@@ -104,7 +105,7 @@ Często bezpieczniejsze jest wykorzystanie konstrukcji [scoped_lock_read](#scope
 
 W przypadku, gdy wszyscy autorzy oczekują na blokadę, czytnik zaczeka, aż wszystkie moduły zapisujące w wierszu uzyskają i udostępnią blokadę. Ta blokada jest obciążona wkładami autorów i może zablokować dostęp czytelników w ramach ciągłego ładowania autorów.
 
-## <a name="reader_writer_lock"></a><a name="ctor"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="ctor"></a> reader_writer_lock
 
 Tworzy nowy `reader_writer_lock` obiekt.
 
@@ -112,7 +113,7 @@ Tworzy nowy `reader_writer_lock` obiekt.
 reader_writer_lock();
 ```
 
-## <a name="reader_writer_lock"></a><a name="dtor"></a>~ reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="dtor"></a> ~ reader_writer_lock
 
 Niszczy `reader_writer_lock` obiekt.
 
@@ -124,7 +125,7 @@ Niszczy `reader_writer_lock` obiekt.
 
 Oczekuje się, że blokada nie jest już utrzymywana podczas działania destruktora. Zezwolenie na blokadę modułu zapisywania czytnika do destruktora z blokadą nadal ma wynik niezdefiniowanego zachowania.
 
-## <a name="reader_writer_lockscoped_lock-class"></a><a name="scoped_lock_class"></a>reader_writer_lock:: scoped_lock, Klasa
+## <a name="reader_writer_lockscoped_lock-class"></a><a name="scoped_lock_class"></a> reader_writer_lock:: scoped_lock, Klasa
 
 Wyjątek bezpieczny RAII otoki, który może służyć do uzyskiwania `reader_writer_lock` obiektów Lock jako składnika zapisywania.
 
@@ -132,7 +133,7 @@ Wyjątek bezpieczny RAII otoki, który może służyć do uzyskiwania `reader_wr
 class scoped_lock;
 ```
 
-## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_ctor"></a>scoped_lock:: scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_ctor"></a> scoped_lock:: scoped_lock
 
 Konstruuje `scoped_lock` obiekt i uzyskuje `reader_writer_lock` obiekt przekazaną w `_Reader_writer_lock` parametrze jako składnik zapisywania. Jeśli blokada jest utrzymywana przez inny wątek, to wywołanie zostanie zablokowane.
 
@@ -145,7 +146,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 *_Reader_writer_lock*<br/>
 `reader_writer_lock`Obiekt, który ma zostać przejęty jako składnik zapisywania.
 
-## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
 
 Niszczy `reader_writer_lock` obiekt i zwalnia blokadę podaną w konstruktorze.
 
@@ -153,7 +154,7 @@ Niszczy `reader_writer_lock` obiekt i zwalnia blokadę podaną w konstruktorze.
 ~scoped_lock();
 ```
 
-## <a name="reader_writer_lockscoped_lock_read-class"></a><a name="scoped_lock_read_class"></a>reader_writer_lock:: scoped_lock_read, Klasa
+## <a name="reader_writer_lockscoped_lock_read-class"></a><a name="scoped_lock_read_class"></a> reader_writer_lock:: scoped_lock_read, Klasa
 
 Wyjątek bezpieczny RAII otoki, który może służyć do uzyskiwania `reader_writer_lock` obiektów Lock jako czytelnik.
 
@@ -161,7 +162,7 @@ Wyjątek bezpieczny RAII otoki, który może służyć do uzyskiwania `reader_wr
 class scoped_lock_read;
 ```
 
-## <a name="scoped_lock_readscoped_lock_read"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read:: scoped_lock_read
+## <a name="scoped_lock_readscoped_lock_read"></a><a name="scoped_lock_read_ctor"></a> scoped_lock_read:: scoped_lock_read
 
 Konstruuje `scoped_lock_read` obiekt i uzyskuje `reader_writer_lock` obiekt przekazaną w `_Reader_writer_lock` parametrze jako czytelnik. Jeśli blokada jest utrzymywana przez inny wątek jako składnik zapisywania lub istnieją oczekujące moduły zapisujące, to wywołanie zostanie zablokowane.
 
@@ -174,7 +175,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 *_Reader_writer_lock*<br/>
 `reader_writer_lock`Obiekt, który ma zostać przejęty jako czytelnik.
 
-## <a name="a-namescoped_lock_read_dtor--reader_writer_lockscoped_lock_readscoped_lock_read-destructor"></a><a name="scoped_lock_read_dtor">reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read destruktor
+## <a name="a-namescoped_lock_read_dtor--reader_writer_lockscoped_lock_readscoped_lock_read-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read destruktor
 
 Niszczy `scoped_lock_read` obiekt i zwalnia blokadę podaną w konstruktorze.
 
@@ -182,7 +183,7 @@ Niszczy `scoped_lock_read` obiekt i zwalnia blokadę podaną w konstruktorze.
 ~scoped_lock_read();
 ```
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Próbuje uzyskać blokadę modułu zapisywania czytnika jako moduł zapisujący bez blokowania.
 
@@ -196,7 +197,7 @@ bool try_lock();
 
 Jeśli blokada została uzyskana, wartość **`true`** ; w przeciwnym razie wartość **`false`** .
 
-## <a name="try_lock_read"></a><a name="try_lock_read"></a>try_lock_read
+## <a name="try_lock_read"></a><a name="try_lock_read"></a> try_lock_read
 
 Próbuje uzyskać blokadę modułu odczytującego czytnika jako czytnik bez blokowania.
 
@@ -208,7 +209,7 @@ bool try_lock_read();
 
 Jeśli blokada została uzyskana, wartość **`true`** ; w przeciwnym razie wartość **`false`** .
 
-## <a name="unlock"></a><a name="unlock"></a>odblokowania
+## <a name="unlock"></a><a name="unlock"></a> odblokowania
 
 Odblokowuje blokadę modułu odczytującego na podstawie osoby, która ją zablokowała, czytelnik lub składnik zapisywania.
 
@@ -220,7 +221,7 @@ void unlock();
 
 W przypadku, gdy wszyscy autorzy oczekują na blokadę, wydanie blokady zawsze przechodzi do następnego składnika zapisywania w kolejności FIFO. Ta blokada jest obciążona wkładami autorów i może zablokować dostęp czytelników w ramach ciągłego ładowania autorów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa critical_section](critical-section-class.md)

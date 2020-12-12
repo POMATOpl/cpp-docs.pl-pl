@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: lokalny magazyn wątków'
 title: Lokalny magazyn wątków
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 188646ec6ae980cc61bd5882c15e2e9040e4a7ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114341"
 ---
 # <a name="thread-local-storage"></a>Lokalny magazyn wątków
 
@@ -75,7 +76,7 @@ Te wskazówki muszą być przestrzegane, gdy deklarując statycznie powiązane z
     int *p = &tls_i;      /* Error */
     ```
 
-- C zezwala na inicjowanie zmiennej z wyrażeniem, w którym uczestniczy odwołanie do samego siebie, ale tylko dla obiektów niestatycznych. Przykład:
+- C zezwala na inicjowanie zmiennej z wyrażeniem, w którym uczestniczy odwołanie do samego siebie, ale tylko dla obiektów niestatycznych. Na przykład:
 
     ```C
     #define Thread   __declspec( thread )
@@ -86,7 +87,7 @@ Te wskazówki muszą być przestrzegane, gdy deklarując statycznie powiązane z
 
    Należy zauważyć, że wyrażenie sizeof zawierające zainicjowaną zmienną nie stanowi odwołania do samego siebie i jest dozwolone.
 
-- Korzystanie z ** \_ \_declspec (thread)** może zakłócać [ładowanie](../build/reference/linker-support-for-delay-loaded-dlls.md) importów dll.
+- Korzystanie z **\_ \_ declspec (thread)** może zakłócać [ładowanie](../build/reference/linker-support-for-delay-loaded-dlls.md) importów dll.
 
 Aby uzyskać więcej informacji o używaniu atrybutu thread, zobacz [temat wielowątkowość](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
@@ -94,4 +95,4 @@ Aby uzyskać więcej informacji o używaniu atrybutu thread, zobacz [temat wielo
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)
+[Rozszerzone atrybuty Storage-Class języka C](../c-language/c-extended-storage-class-attributes.md)

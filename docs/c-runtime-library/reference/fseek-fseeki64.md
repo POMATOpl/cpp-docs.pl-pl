@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fseek, _fseeki64'
 title: fseek, _fseeki64
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: c9bfc9a575504d890d0021937713c720c4557441
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e15bd7cd273da2f73a58c2bd012670216c1938c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114328"
 ---
 # <a name="fseek-_fseeki64"></a>fseek, _fseeki64
 
@@ -68,7 +69,7 @@ Wskaźnik do struktury **pliku** .
 *Przesunięcie*<br/>
 Liczba bajtów od *początku*.
 
-*źródł*<br/>
+*połączenie pierwotne*<br/>
 Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -77,7 +78,7 @@ Jeśli to się powiedzie, **fseek** i **_fseeki64** zwraca 0. W przeciwnym razie
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **fseek** i **_fseeki64** przesuwają wskaźnik pliku (jeśli istnieje) skojarzony ze *strumieniem* do nowej lokalizacji, która jest *przesunięta* o bajty od *początku*. Kolejna operacja w strumieniu odbywa się w nowej lokalizacji. W przypadku otwartego strumienia na potrzeby aktualizacji kolejną operacją może być odczyt lub zapis. Pochodzenie *origin* argumentu musi być jedną z następujących stałych zdefiniowanych w stdio. C
+Funkcje **fseek** i **_fseeki64** przesuwają wskaźnik pliku (jeśli istnieje) skojarzony ze *strumieniem* do nowej lokalizacji, która jest *przesunięta* o bajty od *początku*. Kolejna operacja w strumieniu odbywa się w nowej lokalizacji. W przypadku otwartego strumienia na potrzeby aktualizacji kolejną operacją może być odczyt lub zapis. Pochodzenie  argumentu musi być jedną z następujących stałych zdefiniowanych w stdio. C
 
 |wartość pochodzenia|Znaczenie|
 |-|-|
@@ -107,8 +108,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fseek**|\<stdio. h>|
-|**_fseeki64**|\<stdio. h>|
+|**fseek**|\<stdio.h>|
+|**_fseeki64**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -152,10 +153,10 @@ File pointer is set to middle of first line.
 This is the file 'fseek.out'.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
-[rewind](rewind.md)<br/>
+[przewijanie](rewind.md)<br/>

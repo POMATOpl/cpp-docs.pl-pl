@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: obsługa bibliotek dla zestawów mieszanych'
 title: Obsługa bibliotek dla zestawów mieszanych
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -7,40 +8,40 @@ helpviewer_keywords:
 - msvcmrt[d].lib
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-ms.openlocfilehash: 42116c09d5b31cf669eb6d5d1e75eae60b2610a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20069c2caa1cf46ebdb54907de586630d4ee71c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113717"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Obsługa bibliotek dla zestawów mieszanych
 
-Visual C++ obsługuje używanie standardowej biblioteki C++, biblioteki środowiska uruchomieniowego języka C (CRT), ATL i MFC dla aplikacje skompilowane przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md). Dzięki temu istniejące aplikacje korzystające z tych bibliotek do użycia jak również funkcje środowiska .NET Framework.
+Visual C++ obsługuje użycie standardowej biblioteki języka C++, biblioteki środowiska uruchomieniowego języka C (CRT), ATL i MFC dla aplikacji skompilowanych za pomocą opcji [/CLR (Kompilacja środowiska uruchomieniowego CLR)](../build/reference/clr-common-language-runtime-compilation.md). Dzięki temu istniejące aplikacje, które używają tych bibliotek, mogą również używać funkcji .NET Framework.
 
 > [!IMPORTANT]
-> **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+> **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
 Ta obsługa obejmuje następujące biblioteki DLL i importowania:
 
-- .Lib Msvcmrt [d] Jeśli kompilujesz z opcją **/CLR**. Zestawy mieszane link do tej biblioteki importu.
+- Msvcmrt [d]. lib w przypadku kompilowania z **/CLR**. Linki zestawów mieszanych z tą biblioteką importu.
 
-Ta funkcja zapewnia kilka korzyści związanych z nimi:
+Ta obsługa obejmuje kilka pokrewnych korzyści:
 
-- CRT i standardowej biblioteki języka C++ są dostępne dla kodu mieszanego. CRT i standardowej biblioteki języka C++, pod warunkiem nie są możliwe do zweryfikowania; ostatecznie wywołania nadal są kierowane do tego samego CRT i standardowej biblioteki języka C++, w przypadku korzystania z kodu natywnego.
+- Standardowa Biblioteka CRT i C++ jest dostępna do kodu mieszanego. Udostępniona biblioteka standardowa CRT i C++ nie jest możliwa do zweryfikowania; ostatecznie Twoje wywołania są nadal kierowane do tej samej standardowej biblioteki CRT i C++, jak używane z kodu natywnego.
 
-- Poprawne ujednoliconej obsługi wyjątków w mieszanych obrazów.
+- Popraw ujednoliconą obsługę wyjątków w obrazach mieszanych.
 
-- Statyczne inicjowanie zmienne języka C++ w obrazach mieszane.
+- Statyczne Inicjowanie zmiennych C++ w mieszanych obrazach.
 
-- Obsługa zmiennych per-AppDomain i na proces w kodzie zarządzanym.
+- Obsługa zmiennych dla poszczególnych domen i procesów w kodzie zarządzanym.
 
-- Rozwiązanie problemów blokady modułu ładującego, które dotyczą mieszanych bibliotek DLL, skompilowany w Visual Studio 2003 i wcześniejszych wersjach.
+- Rozwiązuje problemy z blokadą modułu ładującego stosowane do mieszanych bibliotek DLL skompilowanych w programie Visual Studio 2003 i wcześniejszych.
 
-Ponadto ta funkcja prezentuje następujące ograniczenia:
+Ponadto w tej obsłudze przedstawiono następujące ograniczenia:
 
-- Tylko model CRT DLL jest obsługiwana dla kodu skompilowanego z **/CLR**. Brak statycznego bibliotek CRT, które obsługują **/CLR** kompilacji.
+- Tylko model CRT DLL jest obsługiwany dla kodu skompilowanego z **/CLR**. Nie istnieją statyczne biblioteki CRT obsługujące kompilacje **/CLR** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

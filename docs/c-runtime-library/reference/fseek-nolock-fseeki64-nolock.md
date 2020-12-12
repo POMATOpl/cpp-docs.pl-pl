@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fseek_nolock, _fseeki64_nolock'
 title: _fseek_nolock, _fseeki64_nolock
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3a8701dcb7380bee31d1d04aa92209169682e54d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114264"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -70,7 +71,7 @@ Wskaźnik do struktury **pliku** .
 *Przesunięcie*<br/>
 Liczba bajtów od *początku*.
 
-*źródł*<br/>
+*połączenie pierwotne*<br/>
 Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,7 +88,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fseek_nolock**, **_fseeki64_nolock**|\<stdio. h>|
+|**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -96,4 +97,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
-[rewind](rewind.md)<br/>
+[przewijanie](rewind.md)<br/>

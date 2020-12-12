@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Omówienie potencjalnych problemów z uaktualnianiem (Visual C++)'
 title: Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42060fc7bd1aeedebf6cdfc7f645ad8eea38153c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115212"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 
@@ -125,7 +126,7 @@ Jeśli błąd to C2371, a `stdint` Typ jest uwzględniany, prawdopodobnie oznacz
 
 Możesz nacisnąć klawisz **F12** (**Przejdź do definicji**), aby zobaczyć, gdzie jest zdefiniowany dany typ.
 
-Opcja kompilatora [/showIncludes](../build/reference/showincludes-list-include-files.md) może być przydatna w tym miejscu. W oknie dialogowym **strony właściwości** dla projektu Otwórz stronę Zaawansowane **C/C++**  >  **Advanced** i wybierz opcję **Pokaż** dołączenie na **tak**. Następnie ponownie skompiluj projekt i Zobacz listę `#include` s w oknie danych wyjściowych. Każdy nagłówek jest wcięty w nagłówku, który go zawiera.
+Opcja kompilatora [/showIncludes](../build/reference/showincludes-list-include-files.md) może być przydatna w tym miejscu. W oknie dialogowym **strony właściwości** dla projektu Otwórz stronę Zaawansowane **C/C++**  >   i wybierz opcję **Pokaż** dołączenie na **tak**. Następnie ponownie skompiluj projekt i Zobacz listę `#include` s w oknie danych wyjściowych. Każdy nagłówek jest wcięty w nagłówku, który go zawiera.
 
 ## <a name="errors-involving-crt-functions"></a>Błędy dotyczące funkcji CRT
 
@@ -133,7 +134,7 @@ Wprowadzono wiele zmian w środowisku uruchomieniowym języka C przez lata. Doda
 
 Jeśli błąd obejmuje funkcję CRT, Wyszukaj [Visual C++ historię zmian 2003-2015](visual-cpp-change-history-2003-2015.md) lub [C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md) , aby sprawdzić, czy te artykuły zawierają dodatkowe informacje. Jeśli błąd to LNK2019, nierozwiązana zewnętrzna, upewnij się, że funkcja nie została usunięta. W przeciwnym razie, jeśli masz pewność, że funkcja nadal istnieje, a kod wywołujący jest poprawny, sprawdź, czy Twój projekt używa `/NODEFAULTLIB` . W takim przypadku należy zaktualizować listę bibliotek, aby projekt korzystał z nowych bibliotek uniwersalnych (UCRT). Aby uzyskać więcej informacji, zobacz sekcję powyżej biblioteki i zależności.
 
-Jeśli błąd dotyczy `printf` lub `scanf` , należy się upewnić, że nie masz prywatnej definicji żadnej funkcji bez uwzględnienia stdio. h. Jeśli tak, Usuń definicje prywatne lub Połącz ze starszymi \_ stdio \_ definicjami. lib. Tę bibliotekę można ustawić w oknie dialogowym **strony właściwości** w obszarze **Właściwości konfiguracji**  >  **Linker**  >  **dane wejściowe**konsolidatora we właściwości **dodatkowe zależności** . Jeśli łączysz się z Windows SDK 8,1 lub wcześniejszym, Dodaj starsze \_ definicje stdio \_ . lib.
+Jeśli błąd dotyczy `printf` lub `scanf` , należy się upewnić, że nie masz prywatnej definicji żadnej funkcji bez uwzględnienia stdio. h. Jeśli tak, Usuń definicje prywatne lub Połącz ze starszymi \_ stdio \_ definicjami. lib. Tę bibliotekę można ustawić w oknie dialogowym **strony właściwości** w obszarze **Właściwości konfiguracji**  >    >  **dane wejściowe** konsolidatora we właściwości **dodatkowe zależności** . Jeśli łączysz się z Windows SDK 8,1 lub wcześniejszym, Dodaj starsze \_ definicje stdio \_ . lib.
 
 Jeśli błąd obejmuje argumenty ciągu formatu, prawdopodobnie kompilator jest bardziej rygorystyczny, aby wymuszać Standard. Aby uzyskać więcej informacji, zobacz historię zmian. Zwróć uwagę na wszystkie błędy w tym miejscu, ponieważ mogą one stanowić zagrożenie dla bezpieczeństwa.
 
@@ -149,7 +150,7 @@ Standard C++ określa teraz, że konwersje z niepodpisanej do podpisanych warto�
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>Ostrzeżenia dotyczące używania funkcji Secure CRT
 
-W ciągu lat wprowadzono bezpieczne wersje funkcji środowiska uruchomieniowego języka C. Mimo że stare, niezabezpieczone wersje są nadal dostępne, zaleca się zmianę kodu w celu używania bezpiecznych wersji. Kompilator wyda ostrzeżenie dotyczące użycia niezabezpieczonych wersji. Można wybrać opcję wyłączenia lub zignorowania tych ostrzeżeń. Aby wyłączyć Ostrzeżenie dla wszystkich projektów w rozwiązaniu, Otwórz **Widok**  >  **Menedżer właściwości**, zaznacz wszystkie projekty, dla których chcesz wyłączyć ostrzeżenie, a następnie kliknij prawym przyciskiem myszy wybrane elementy i wybierz polecenie **Właściwości**. W oknie dialogowym **strony właściwości** w obszarze **Właściwości konfiguracji**  >  **C/C++**  >  **Zaawansowane**wybierz opcję **Wyłącz określone ostrzeżenia**. Kliknij strzałkę listy rozwijanej, a następnie kliknij pozycję **Edytuj**. Wprowadź 4996 w polu tekstowym. (Nie dołączaj prefiksu "C"). Aby uzyskać więcej informacji, zobacz [przenoszenie do używania bezpiecznego CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
+W ciągu lat wprowadzono bezpieczne wersje funkcji środowiska uruchomieniowego języka C. Mimo że stare, niezabezpieczone wersje są nadal dostępne, zaleca się zmianę kodu w celu używania bezpiecznych wersji. Kompilator wyda ostrzeżenie dotyczące użycia niezabezpieczonych wersji. Można wybrać opcję wyłączenia lub zignorowania tych ostrzeżeń. Aby wyłączyć Ostrzeżenie dla wszystkich projektów w rozwiązaniu, Otwórz **Widok**  >  **Menedżer właściwości**, zaznacz wszystkie projekty, dla których chcesz wyłączyć ostrzeżenie, a następnie kliknij prawym przyciskiem myszy wybrane elementy i wybierz polecenie **Właściwości**. W oknie dialogowym **strony właściwości** w obszarze **Właściwości konfiguracji**  >  **C/C++**  >  **Zaawansowane** wybierz opcję **Wyłącz określone ostrzeżenia**. Kliknij strzałkę listy rozwijanej, a następnie kliknij pozycję **Edytuj**. Wprowadź 4996 w polu tekstowym. (Nie dołączaj prefiksu "C"). Aby uzyskać więcej informacji, zobacz [przenoszenie do używania bezpiecznego CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Błędy spowodowane zmianami w interfejsie API systemu Windows lub przestarzałymi zestawami SDK
 

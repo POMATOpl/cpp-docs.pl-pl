@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: komunikaty diagnostyczne asemblera ARM'
 title: Komunikaty diagnostyczne asemblera ARM
 ms.date: 08/30/2018
 f1_keywords:
@@ -20,36 +21,36 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 91e4640c161cbb58522c3680ae5decdb4cc1e992
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118202"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Komunikaty diagnostyczne asemblera ARM
 
-Asemblera ARM firmy Microsoft (*armasm*) emituje diagnostycznych ostrzeżenia i błędy po ich napotkaniu. W tym artykule opisano najbardziej często napotykanych wiadomości.
+Asembler Microsoft ARM (*armasm*) emituje ostrzeżenia diagnostyczne i błędy podczas ich napotkania. W tym artykule opisano najczęściej spotykane komunikaty.
 
 ## <a name="syntax"></a>Składnia
 
-> <em>Nazwa pliku</em> **(** <em>numer wiersza</em> **):** \[ **błąd**|**ostrzeżenie** ] **A**<em>numer</em> **:** *wiadomości*
+> <em>filename</em>**(**<em>numer wiersza</em>**):** \[ **Ostrzeżenie o błędzie** | ] <em>numer</em>**:** *komunikat*
 
 ## <a name="diagnostic-messages---errors"></a>Komunikaty diagnostyczne — błędy
 
 > A2193: Ta instrukcja generuje nieprzewidywalne zachowanie
 
-Architektura ARM nie może zagwarantować, co się dzieje podczas wykonywania tej instrukcji.  Aby uzyskać szczegółowe informacje o dobrze zdefiniowanych formularzy tej instrukcji, zapoznaj się [ARM architektury Reference Manual](https://go.microsoft.com/fwlink/p/?linkid=246464).
+Architektura ARM nie gwarantuje, co się dzieje, gdy ta instrukcja zostanie wykonana.  Aby uzyskać szczegółowe informacje o dobrze zdefiniowanych formularzach tej instrukcji, zapoznaj się z [instrukcją dotyczącą architektury ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
 ```
 
-> A2196: instrukcja nie może być zakodowany za pomocą 16 bitów
+> A2196: nie można zakodować instrukcji w 16 bitach
 
-Określona instrukcja nie może zostać zakodowana jako instrukcji Thumb 16-bitowych.  Określ instrukcję 32-bitowych lub rozmieszczanie kodu w celu umożliwienia etykietą docelową szereg instrukcji 16-bitowych.
+Nie można zakodować określonej instrukcji jako 16-bitowej instrukcji kciuka.  Określ 32-bitową instrukcję lub Zmień rozmieszczenie kodu w celu przełączenia etykiety docelowej do zakresu instrukcji 16-bitowej.
 
-Asembler może podejmować prób kodowanie gałąź w 16 bitów i zakończyć się niepowodzeniem z powodu następującego błędu, nawet jeśli gałąź 32-bitowych jest można kodować. Ten problem można rozwiązać, używając `.W` specyfikator, aby wyraźnie oznaczyć gałąź jako 32-bitowych.
+Asembler może próbować zakodować gałąź w 16 bitach i zakończyć się niepowodzeniem z powodu tego błędu, nawet jeśli 32-bitowa rozgałęzienie jest encodable. Możesz rozwiązać ten problem, używając `.W` specyfikatora, aby jawnie oznaczyć gałąź jako 32-bitową.
 
 ```asm
     ADD.N r0, r1, r2      ; A2196: instruction cannot be encoded in 16 bits
@@ -60,27 +61,27 @@ Asembler może podejmować prób kodowanie gałąź w 16 bitów i zakończyć si
 label
 ```
 
-> A2202: Składnia instrukcji Pre-UAL nie są dozwolone w regionie THUMB
+> A2202: składnia instrukcji pre-rejestrowania dostępu użytkowników nie jest dozwolona w regionie KCIUKa
 
-Kod Thumb należy użyć składni Unified języka asemblera (UAL, Distributed File System).  Stara składnia nie jest akceptowane.
+Kod kciuka musi używać składni ujednoliconego języka asemblera (rejestrowania dostępu użytkowników).  Stara składnia nie jest już zaakceptowana
 
 ```asm
     ADDEQS r0, r1         ; A2202: Pre-UAL instruction syntax not allowed in THUMB region
     ADDSEQ r0, r1         ; OK
 ```
 
-> A2513: Obrót musi być parzysta
+> A2513: obrót musi być parzysty
 
-W trybie ARM istnieje alternatywny składnia określająca stałe.  Zamiast pisania `#<const>`, można napisać `#<byte>,#<rot>`, która reprezentuje stałą wartość, która uzyskuje się przez obracanie wartość `<byte>` bezpośrednio przez `<rot>`.  Gdy używasz tej składni, należy wartość `<rot>` nawet.
+W trybie ARM istnieje alternatywna Składnia służąca do określania stałych.  Zamiast pisać, można `#<const>` napisać `#<byte>,#<rot>` , który reprezentuje wartość stałą, która jest uzyskiwana przez obrócenie wartości `<byte>` bezpośrednio przez `<rot>` .  W przypadku korzystania z tej składni należy wprowadzić wartość `<rot>` parzystą.
 
 ```asm
     MOV r0, #4, #2       ; OK
     MOV r0, #4, #1       ; A2513: Rotation must be even
 ```
 
-> A2557: Nieprawidłowa liczba bajtów do zapisania z powrotem
+> A2557: niepoprawna liczba bajtów do zapisu
 
-W strukturze NEON ładować i przechowywać instrukcje (`VLDn`, `VSTn`), istnieje alternatywny składnia określająca zapisywania zwrotnego podstawowy rejestrowania się.  Zamiast umieszczać wykrzyknika (!), po adresem, można określić natychmiastowego wartość, która wskazuje przesunięcie ma zostać dodany do rejestru podstawowej.  Jeśli używasz tej składni, należy określić dokładną liczbę bajtów, które zostały załadowane lub przechowywane przez instrukcję.
+Zgodnie z instrukcjami dotyczącymi ładowania i przechowywania struktury NEONu ( `VLDn` , `VSTn` ) istnieje alternatywna Składnia służąca do określania zapisu zwrotnego w rejestrze podstawowym.  Zamiast umieszczać wykrzyknika (!) po adresie, można określić natychmiastową wartość wskazującą przesunięcie, które ma zostać dodane do rejestru podstawowego.  W przypadku użycia tej składni należy określić dokładną liczbę bajtów, które zostały załadowane lub zapisane przez instrukcję.
 
 ```asm
     VLD1.8 {d0-d3}, [r0]!         ; OK
@@ -90,11 +91,11 @@ W strukturze NEON ładować i przechowywać instrukcje (`VLDn`, `VSTn`), istniej
 
 ## <a name="diagnostic-messages---warnings"></a>Komunikaty diagnostyczne — ostrzeżenia
 
-> A4228: Wartość wyrównania przekracza wyrównania obszaru; wyrównanie nie jest gwarantowana
+> A4228: wartość wyrównania przekracza Wyrównanie obszaru; Wyrównanie nie jest gwarantowane
 
-Wyrównanie, który jest określony w `ALIGN` dyrektywa jest większa niż wyrównanie otaczający `AREA`.  W rezultacie asembler nie może zagwarantować, że `ALIGN` dyrektywy będą uznawane.
+Wyrównanie określone w `ALIGN` dyrektywie jest większe niż wyrównanie otaczającej `AREA` .  W związku z tym asembler nie może zagwarantować, że dyrektywa zostanie wykorzystana `ALIGN` .
 
-Aby rozwiązać ten problem, można określić na `AREA` dyrektywy `ALIGN` atrybut, który jest równy lub większy niż żądany wyrównania.
+Aby rozwiązać ten problem, można określić w `AREA` dyrektywie `ALIGN` atrybut, który jest równy lub większy od żądanego wyrównania.
 
 ```asm
 AREA |.myarea1|
@@ -104,26 +105,26 @@ AREA |.myarea2|,ALIGN=3
 ALIGN 8           ; OK
 ```
 
-> A4508: Użyj tej stałej obrócony jest przestarzały.
+> A4508: użycie tej obróconej stałej jest przestarzałe
 
-W trybie ARM istnieje alternatywny składnia określająca stałe.  Zamiast pisania `#<const>`, można napisać `#<byte>,#<rot>`, która reprezentuje stałą wartość, która uzyskuje się przez obracanie wartość `<byte>` bezpośrednio przez `<rot>`.  W niektórych kontekstach ARM jest przestarzała użytkowania tych obrócony stałych. W takich przypadkach należy użyć podstawowa `#<const>` składni zamiast tego.
+W trybie ARM istnieje alternatywna Składnia służąca do określania stałych.  Zamiast pisać, można `#<const>` napisać `#<byte>,#<rot>` , który reprezentuje wartość stałą, która jest uzyskiwana przez obrócenie wartości `<byte>` bezpośrednio przez `<rot>` .  W niektórych kontekstach ARM nie korzystały z tych obróconych stałych. W takich przypadkach zamiast tego należy użyć `#<const>` składni podstawowej.
 
 ```asm
     ANDS r0, r0, #1                ; OK
     ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecated
 ```
 
-> A4509: Ta forma instrukcji warunkowych jest przestarzały.
+> A4509: Ta forma instrukcji warunkowej jest przestarzała
 
-Ta forma instrukcji warunkowych została zastąpiona przez ARM w architekturze ARMv8. Firma Microsoft zaleca zmianę kod, aby użyć rozgałęzień warunkowych. Aby zobaczyć, które instrukcje warunkowe są nadal obsługiwane, zapoznaj się z [ARM architektury Reference Manual](https://go.microsoft.com/fwlink/p/?linkid=246464).
+Ta forma instrukcji warunkowej została zaniechana przez ARM w architekturze ARMv8. Zalecamy zmianę kodu w celu użycia gałęzi warunkowych. Aby sprawdzić, które instrukcje warunkowe są nadal obsługiwane, zapoznaj się z [instrukcją referencyjną dotyczącej architektury ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
-To ostrzeżenie nie jest emitowane, kiedy **- oldit** przełącznik wiersza polecenia jest używany.
+To ostrzeżenie nie jest emitowane po użyciu przełącznika wiersza polecenia **-oldit** .
 
 ```asm
     ADDEQ r0, r1, r8              ; A4509: This form of conditional instruction is deprecated
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja wiersza polecenia asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
-[Dyrektywy ARM dotycząca asemblera](../../assembler/arm/arm-assembler-directives.md)<br/>
+[Informacje Command-Line asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
+[Dyrektywy asemblera ARM](../../assembler/arm/arm-assembler-directives.md)<br/>

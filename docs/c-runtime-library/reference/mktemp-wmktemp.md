@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mktemp, _wmktemp'
 title: _mktemp, _wmktemp
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 536a63841c6e29fa003eb8b99c896f6d1cf5519f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 06f75f8fd46bdd7ece42c292fd8ab6272ad39250
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919100"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114173"
 ---
 # <a name="_mktemp-_wmktemp"></a>_mktemp, _wmktemp
 
@@ -90,9 +91,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-Argument *nameTemplate* ma postać *Base*XXXXXX, gdzie *Base* jest częścią nowej nazwy pliku, którą dostarczasz, a każdy X jest symbolem zastępczym znaku dostarczonego przez **_mktemp**. Każdy znak zastępczy w *nameTemplate* musi być wielką literą x. **_mktemp** zachowuje *podstawową* i zastępuje pierwszy znak x symbolem alfabetycznym. **_mktemp** zastępuje następujące znaki końcowe X wartością z pięciu cyfr; Ta wartość jest unikatowym numerem identyfikującym proces wywołujący lub w programach wielowątkowych, wątek wywołujący.
+Argument *nameTemplate* ma postać *Base* XXXXXX, gdzie *Base* jest częścią nowej nazwy pliku, którą dostarczasz, a każdy X jest symbolem zastępczym znaku dostarczonego przez **_mktemp**. Każdy znak zastępczy w *nameTemplate* musi być wielką literą x. **_mktemp** zachowuje *podstawową* i zastępuje pierwszy znak x symbolem alfabetycznym. **_mktemp** zastępuje następujące znaki końcowe X wartością z pięciu cyfr; Ta wartość jest unikatowym numerem identyfikującym proces wywołujący lub w programach wielowątkowych, wątek wywołujący.
 
-Każde pomyślne wywołanie do **_mktemp** modyfikuje *nameTemplate*. W każdym kolejnym wywołaniu z tego samego procesu lub wątku z tym samym *nameTemplate* argumentem nameTemplate **_mktemp** sprawdza nazwy plików, które są zgodne z nazwami zwracanymi przez **_mktemp** w poprzednich wywołaniach. Jeśli plik nie istnieje dla danej nazwy, **_mktemp** zwraca tę nazwę. Jeśli istnieją pliki dla wszystkich poprzednio zwróconych nazw, **_mktemp** tworzy nową nazwę przez zastąpienie znaku alfabetycznego, który został użyty w wcześniej zwróconej nazwie z następną dostępną małą literą, w kolejności od "a" do "z". Na przykład jeśli *podstawowa* :
+Każde pomyślne wywołanie do **_mktemp** modyfikuje *nameTemplate*. W każdym kolejnym wywołaniu z tego samego procesu lub wątku z tym samym  argumentem nameTemplate **_mktemp** sprawdza nazwy plików, które są zgodne z nazwami zwracanymi przez **_mktemp** w poprzednich wywołaniach. Jeśli plik nie istnieje dla danej nazwy, **_mktemp** zwraca tę nazwę. Jeśli istnieją pliki dla wszystkich poprzednio zwróconych nazw, **_mktemp** tworzy nową nazwę przez zastąpienie znaku alfabetycznego, który został użyty w wcześniej zwróconej nazwie z następną dostępną małą literą, w kolejności od "a" do "z". Na przykład jeśli *podstawowa* :
 
 > **Fn**
 
@@ -118,8 +119,8 @@ W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mktemp**|\<IO. h>|
-|**_wmktemp**|\<IO. h> lub \<WCHAR. h>|
+|**_mktemp**|\<io.h>|
+|**_wmktemp**|\<io.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -209,7 +210,7 @@ Problem creating the template.
 Out of unique filenames.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

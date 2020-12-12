@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: feraiseexcept'
 title: feraiseexcept
 ms.date: 04/05/2018
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 8e7a06006cfdc768fdaa306bc293857f1c375b90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124946"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -46,13 +47,13 @@ int feraiseexcept(
 *Oprócz*<br/>
 Wyjątki zmiennoprzecinkowe do podniesienia.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
 Jeśli wszystkie określone wyjątki są zgłaszane pomyślnie, zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **feraiseexcept** próbuje podnieść wyjątki zmiennoprzecinkowe określone przez *except*.   Funkcja **feraiseexcept** obsługuje te makra wyjątków zdefiniowane w \<fenv. h >:
+Funkcja **feraiseexcept** próbuje podnieść wyjątki zmiennoprzecinkowe określone przez *except*.   Funkcja **feraiseexcept** obsługuje te makra wyjątków zdefiniowane w \<fenv.h> :
 
 |Makro wyjątku|Opis|
 |---------------------|-----------------|
@@ -65,19 +66,19 @@ Funkcja **feraiseexcept** próbuje podnieść wyjątki zmiennoprzecinkowe okreś
 
 Argument *except* może mieć wartość zero, jedną z wartości makra wyjątku lub bitową lub dwa lub więcej obsługiwanych makr wyjątków. Jeśli jedno z określonych makr wyjątków jest FE_OVERFLOW lub FE_UNDERFLOW, wyjątek FE_INEXACT może być podniesiony jako efekt uboczny.
 
-Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu dyrektywy `#pragma fenv_access(on)` przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 **Specyficzne dla firmy Microsoft:** Wyjątki określone w wyjątkach są *wywoływane w kolejności* FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Jednakże FE_INEXACT mogą być wywoływane, gdy zostanie zgłoszony FE_OVERFLOW lub FE_UNDERFLOW, nawet jeśli nie zostanie określony w *z wyjątkiem*.
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>

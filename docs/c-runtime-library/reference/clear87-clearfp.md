@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _clear87, _clearfp'
 title: _clear87, _clearfp
 ms.date: 04/05/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-ms.openlocfilehash: 4ca49895b881d9e307c1116681bc36f86b167c25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c15dd66f9a6598f351a54f0269619d9768eaa152
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942954"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124959"
 ---
 # <a name="_clear87-_clearfp"></a>_clear87, _clearfp
 
@@ -52,13 +53,13 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Bity w zwracanej wartości wskazują stan zmiennoprzecinkowy przed wywołaniem metody **_clear87** lub **_clearfp**. Aby uzyskać pełną definicję bitów zwracanych przez **_clear87**, zobacz float. h. Wiele funkcji biblioteki matematycznej modyfikuje wyraz o stanie 8087/80287 z nieprzewidywalnymi wynikami. Wartości zwracane z **_clear87** i **_status87** stają się bardziej niezawodne, ponieważ mniej operacji zmiennoprzecinkowych jest wykonywanych między znanymi Stanami wyrazu stanu zmiennoprzecinkowego.
+Bity w zwracanej wartości wskazują stan zmiennoprzecinkowy przed wywołaniem do **_clear87** lub **_clearfp**. Aby uzyskać pełną definicję bitów zwracanych przez **_clear87**, zobacz float. h. Wiele funkcji biblioteki matematycznej modyfikuje wyraz o stanie 8087/80287 z nieprzewidywalnymi wynikami. Wartości zwracane z **_clear87** i **_status87** stają się bardziej niezawodne, ponieważ mniej operacji zmiennoprzecinkowych jest wykonywanych między znanymi Stanami wyrazu stanu zmiennoprzecinkowego.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_clear87** czyści flagi wyjątku w słowie stanu zmiennoprzecinkowego, ustawia bit zajęty na 0 i zwraca słowo stanu. Słowo stanu zmiennoprzecinkowego jest kombinacją słowa stanu 8087/80287 i innych warunków wykrytych przez program obsługi wyjątków 8087/80287, takich jak przepływy stosu zmiennoprzecinkowe i niedopełnienie.
+Funkcja **_clear87** czyści flagi wyjątku w słowie stanu zmiennoprzecinkowego, ustawia bit zajętości na 0 i zwraca wyraz stanu. Słowo stanu zmiennoprzecinkowego jest kombinacją słowa stanu 8087/80287 i innych warunków wykrytych przez program obsługi wyjątków 8087/80287, takich jak przepływy stosu zmiennoprzecinkowe i niedopełnienie.
 
-**_clearfp** to niezależna od platformy, Przenośna wersja procedury **_clear87** . Jest on identyczny z **_clear87** na platformach firmy Intel (x86) i jest również obsługiwany przez platformy x64 i ARM. Aby upewnić się, że kod zmiennoprzecinkowy jest przenośny z architekturą x64 i ARM, użyj **_clearfp**. Jeśli masz tylko platformy x86, możesz użyć opcji **_clear87** lub **_clearfp**.
+**_clearfp** to niezależna od platformy, Przenośna wersja procedury **_clear87** . Jest on identyczny z **_clear87** na platformach firmy Intel (x86) i jest również obsługiwany przez platformy x64 i ARM. Aby upewnić się, że kod zmiennoprzecinkowy jest przenośny z architekturą x64 i ARM, użyj **_clearfp**. Jeśli masz tylko platformy x86, możesz użyć obu **_clear87** lub **_clearfp**.
 
 Te funkcje są przestarzałe podczas kompilowania z [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) , ponieważ środowisko uruchomieniowe języka wspólnego obsługuje tylko domyślną precyzję zmiennoprzecinkową.
 
@@ -112,6 +113,6 @@ Status: 80000 - denormal
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[_control87, _controlfp, \_ _control87_2](control87-controlfp-control87-2.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

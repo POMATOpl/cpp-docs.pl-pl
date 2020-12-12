@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: podtytuł'
 title: SUBTITLE
 ms.date: 12/16/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - SUBTITLE directive
 ms.assetid: b882ae31-9998-46ed-bd88-6656263143e7
-ms.openlocfilehash: cba9c43a7d070ee4a028f302a1c1517258ed1b9a
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: aa56292c2900e8cb1544fb66df66130f2b5d2586
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75319206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97125336"
 ---
 # <a name="subtitle"></a>SUBTITLE
 
@@ -21,7 +22,7 @@ Definiuje podtytuł listy. Analogicznie jak [SUBTTL](subttl.md).
 
 > *Tekst* **podtytułu**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

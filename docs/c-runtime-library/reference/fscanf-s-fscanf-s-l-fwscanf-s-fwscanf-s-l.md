@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fscanf_s, _fscanf_s_l, fwscanf_s _fwscanf_s_l'
 title: fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ae5d0c953cb46850cf56a4ce4113e5831518ae5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124920"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -92,7 +93,7 @@ Ciąg kontroli formatu.
 *argument*<br/>
 Argumenty opcjonalne.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -105,7 +106,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumień* jest 
 
 Funkcja **fscanf_s** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji, które są określone przez *argument* (jeśli istnieje). Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf_s**; Zobacz sekcję [Specyfikacja formatu: scanf i wscanf funkcje](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) opisujące *Format*.  **fwscanf_s** to dwubajtowa wersja **fscanf_s**; argument formatu **fwscanf_s** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **fscanf_s** nie obsługuje obecnie danych wejściowych ze strumienia Unicode.
 
-Główna różnica między bardziej bezpiecznymi funkcjami (z sufiksem **_s** ) i innymi wersjami polega na tym, że bezpieczniejsze funkcje wymagają rozmiaru w znakach każdego języka **c**, **c**, **s**, **s**i pola **[** Type, które mają być przesyłane jako argumenty bezpośrednio po zmiennej. Aby uzyskać więcej informacji, zobacz [scanf_s, _scanf_s_l, wscanf_s _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
+Główna różnica między bardziej bezpiecznymi funkcjami (z sufiksem **_s** ) i innymi wersjami polega na tym, że bezpieczniejsze funkcje wymagają rozmiaru w znakach każdego języka **c**, **c**, **s**, **s** i pola **[** Type, które mają być przesyłane jako argumenty bezpośrednio po zmiennej. Aby uzyskać więcej informacji, zobacz [scanf_s, _scanf_s_l, wscanf_s _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Parametr size ma typ, a **`unsigned`** nie **size_t**.

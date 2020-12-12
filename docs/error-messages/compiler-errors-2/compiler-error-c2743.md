@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2743'
 title: Błąd kompilatora C2743
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
-ms.openlocfilehash: d679ce0df0d43772a6c32aa8e00869ac1a4a082b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2619d4a0dd2b89d36f11944b59c2ab4993d95fd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123061"
 ---
 # <a name="compiler-error-c2743"></a>Błąd kompilatora C2743
 
@@ -19,7 +20,7 @@ ms.locfileid: "74759649"
 
 Moduł skompilowany za pomocą **/CLR** próbował przechwycić wyjątek typu natywnego i gdzie destruktor lub Konstruktor kopiujący typu używa `__clrcall` konwencji wywoływania.
 
-Podczas kompilowania z **/CLR**obsługa wyjątków oczekuje, że funkcje składowe w typie natywnym mają być [__cdecl](../../cpp/cdecl.md) , a nie [__clrcall](../../cpp/clrcall.md). Typy natywne z funkcjami składowymi używającymi konwencji wywoływania `__clrcall` nie mogą być przechwytywane w module skompilowanym za pomocą **/CLR**.
+Podczas kompilowania z **/CLR** obsługa wyjątków oczekuje, że funkcje składowe w typie natywnym mają być [__cdecl](../../cpp/cdecl.md) , a nie [__clrcall](../../cpp/clrcall.md). Typy natywne z funkcjami składowymi używającymi `__clrcall` konwencji wywoływania nie mogą być przechwytywane w module skompilowanym za pomocą **/CLR**.
 
 Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 

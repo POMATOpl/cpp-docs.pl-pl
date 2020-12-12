@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _emit pseudoinstruction'
 title: Pseudoinstrukcja _emit
 ms.date: 08/30/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - byte defining (inline assembly)
 - _emit pseudoinstruction
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
-ms.openlocfilehash: 8be250aadf20dc4a7dee6a0b565ece21840339d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3e2a39312c94ff0e4868bed9afa74011051a129
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117812"
 ---
 # <a name="_emit-pseudoinstruction"></a>Pseudoinstrukcja _emit
 
@@ -33,10 +34,10 @@ __asm {
 ```
 
 > [!CAUTION]
-> Jeśli `_emit` generuje instrukcje modyfikujące rejestry i kompilowania aplikacji przy użyciu optymalizacji, kompilator nie może określić, których rejestrów dotyczy. Na przykład jeśli `_emit` generuje instrukcję modyfikującą rejestr **RAX** , kompilator nie wie, że **RAX** uległy zmianie. Kompilator może następnie wprowadzić nieprawidłowe założenie dotyczące wartości w tym rejestrze po wykonaniu kodu asemblera wbudowanego. W związku z tym aplikacja może wykazywać nieprzewidywalne zachowanie podczas jego uruchamiania.
+> W przypadku `_emit` generowania instrukcji modyfikujących rejestry i kompilowania aplikacji przy użyciu optymalizacji kompilator nie może określić, których rejestrów dotyczy. Na przykład jeśli `_emit` generuje instrukcję modyfikującą rejestr **RAX** , kompilator nie wie, że **RAX** uległy zmianie. Kompilator może następnie wprowadzić nieprawidłowe założenie dotyczące wartości w tym rejestrze po wykonaniu kodu asemblera wbudowanego. W związku z tym aplikacja może wykazywać nieprzewidywalne zachowanie podczas jego uruchamiania.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>
+[Korzystanie z języka zestawu w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>
