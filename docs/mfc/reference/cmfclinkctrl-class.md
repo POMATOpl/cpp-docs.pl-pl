@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCLinkCtrl'
 title: Klasa CMFCLinkCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 79edff8be6e2c37baa938fc5b624253932609e17
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 6951f086ac99c4b8a8260a79ee08d54476694350
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265223"
 ---
 # <a name="cmfclinkctrl-class"></a>Klasa CMFCLinkCtrl
 
-Klasa `CMFCLinkCtrl` wyświetla przycisk jako hiperłącze i wywołuje miejsce docelowe łącza po kliknięciu przycisku.
+`CMFCLinkCtrl`Klasa wyświetla przycisk jako hiperłącze i wywołuje obiekt docelowy linku po kliknięciu przycisku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,48 +38,48 @@ class CMFCLinkCtrl : public CMFCButton
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCLinkCtrl::SetURL](#seturl)|Wyświetla określony adres URL jako tekst przycisku.|
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Ustawia protokół niejawny (na przykład "http:") adresu URL.|
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Rozmiar przycisku powoduje, że jest on zawierał tekst lub mapę bitową.|
+|[CMFCLinkCtrl:: SetURL](#seturl)|Wyświetla określony adres URL jako tekst przycisku.|
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Ustawia niejawny protokół (na przykład "http:") adresu URL.|
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Zmienia rozmiar przycisku, aby zawierał tekst lub mapę bitową przycisku.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Wywoływana przez strukturę przed prostokątfot fokus przycisku jest rysowana.|
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Wywoływane przez platformę przed narysowaniem prostokąta fokusu przycisku.|
 
 ## <a name="remarks"></a>Uwagi
 
-Po kliknięciu przycisku, który `CMFCLinkCtrl` pochodzi z klasy, ramach przekazuje adres URL `ShellExecute` przycisku jako parametr do metody. Następnie `ShellExecute` metoda otwiera miejsce docelowe adresu URL.
+Po kliknięciu przycisku, który jest pochodną `CMFCLinkCtrl` klasy, struktura przekazuje adres URL przycisku jako parametr do `ShellExecute` metody. Następnie `ShellExecute` Metoda otwiera obiekt docelowy adresu URL.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCLinkCtrl` ustawić rozmiar obiektu i jak ustawić adres `CMFCLinkCtrl` URL i etykietkę narzędzia w obiekcie. W tym przykładzie jest częścią [new controls próbki](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób ustawiania rozmiaru `CMFCLinkCtrl` obiektu oraz ustawiania adresu URL i etykietki narzędzia w `CMFCLinkCtrl` obiekcie. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cbutton](../../mfc/reference/cbutton-class.md)
+[CButton](../../mfc/reference/cbutton-class.md)
 
-[Cmfcbutton](../../mfc/reference/cmfcbutton-class.md)
+[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
 
-[CMFCLinkCtrl (CMFCLinkCtrl)](../../mfc/reference/cmfclinkctrl-class.md)
+[CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxlinkctrl.h
+**Nagłówek:** afxlinkctrl. h
 
-## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect
+## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a> CMFCLinkCtrl::OnDrawFocusRect
 
-Wywoływana przez strukturę przed prostokątfot fokus przycisku jest rysowana.
+Wywoływane przez platformę przed narysowaniem prostokąta fokusu przycisku.
 
 ```
 virtual void OnDrawFocusRect(
@@ -88,17 +89,17 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
-[w] Prostokąt, który ogranicza formant łącza.
+podczas Prostokąt, który jest powiązany z kontrolką łącza.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, jeśli chcesz użyć własnego kodu, aby narysować prostokąt fokusu przycisku.
+Zastąp tę metodę, jeśli chcesz użyć własnego kodu do rysowania prostokąta fokus przycisku.
 
-## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl::SetURL
+## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a> CMFCLinkCtrl:: SetURL
 
 Wyświetla określony adres URL jako tekst przycisku.
 
@@ -109,13 +110,13 @@ void SetURL(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-[w] Tekst przycisku do wyświetlenia.
+podczas Tekst przycisku do wyświetlenia.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix
+## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a> CMFCLinkCtrl::SetURLPrefix
 
-Ustawia protokół niejawny (na przykład "http:") adresu URL.
+Ustawia niejawny protokół (na przykład "http:") adresu URL.
 
 ```cpp
 void SetURLPrefix(LPCTSTR lpszPrefix);
@@ -124,15 +125,15 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="parameters"></a>Parametry
 
 *lpszPrefix*<br/>
-[w] Prefiks protokołu URL.
+podczas Prefiks protokołu adresu URL.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do ustawiania prefiksu adresu URL. Prefiks nie jest wyświetlany na twarzy przycisku, ale można go użyć, aby ułatwić przeglądanie adresu docelowego adresu URL.
+Użyj tej metody, aby ustawić prefiks adresu URL. Prefiks nie jest wyświetlany na głowie przycisku, ale można go użyć, aby przejść do docelowego adresu URL.
 
-## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent
+## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a> CMFCLinkCtrl::SizeToContent
 
-Rozmiar przycisku powoduje, że jest on zawierał tekst lub mapę bitową.
+Zmienia rozmiar przycisku, aby zawierał tekst lub mapę bitową przycisku.
 
 ```
 virtual CSize SizeToContent(
@@ -142,15 +143,15 @@ virtual CSize SizeToContent(
 
 ### <a name="parameters"></a>Parametry
 
-*bVCentrer*<br/>
-[w] PRAWDA, aby wyśrodkować tekst przycisku i mapę bitową w pionie między górną i dolną częścią formantu łącza; w przeciwnym razie FALSE. Wartością domyślną jest FAŁSZ.
+*bVCenter*<br/>
+podczas TRUE, aby wyśrodkować tekst przycisku i mapę bitową w pionie między górną i dolną krawędzią kontrolki linku; w przeciwnym razie FALSE. Wartość domyślna to FALSE.
 
-*bHCentra*<br/>
-[w] PRAWDA, aby wyśrodkować tekst przycisku i mapę bitową w poziomie między lewą i prawą stronami formantu łącza; w przeciwnym razie FALSE. Wartością domyślną jest FAŁSZ.
+*bHCenter*<br/>
+podczas Wartość TRUE, aby wyśrodkować tekst przycisku i mapę bitową w poziomie między lewą i prawą krawędzią kontrolki link. w przeciwnym razie FALSE. Wartość domyślna to FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt [CSize,](../../atl-mfc-shared/reference/csize-class.md) który zawiera nowy rozmiar formantu łącza.
+Obiekt [CSize](../../atl-mfc-shared/reference/csize-class.md) , który zawiera nowy rozmiar kontrolki łącza.
 
 ### <a name="remarks"></a>Uwagi
 

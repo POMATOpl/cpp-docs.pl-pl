@@ -1,17 +1,18 @@
 ---
+description: 'Dowiedz się więcej na temat: Błędy i ostrzeżenia kompilatora zasobów (RCxxxx, RWxxxx)'
 title: Błędy i ostrzeżenia kompilatora zasobów
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
-ms.openlocfilehash: dec141723e911c09fc63d7868a2783fb399e6fc3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 328a64cfba23ef4904f9591c90168fab3a1b08ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265756"
 ---
 # <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Błędy i ostrzeżenia kompilatora zasobów (RCxxxx, RWxxxx)
 
-Ta sekcja jest odwołaniem do błędów generowanych przez kompilator zasobów. Błędy i ostrzeżenia kompilatora zasobów mają postać RC*xxxx* lub RW*xxxx*, gdzie *xxxx* to liczba z czterema cyframi.
+Ta sekcja jest odwołaniem do błędów generowanych przez kompilator zasobów. Błędy i ostrzeżenia kompilatora zasobów mają postać RC *xxxx* lub RW *xxxx*, gdzie *xxxx* to liczba z czterema cyframi.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -97,7 +98,7 @@ Ta sekcja jest odwołaniem do błędów generowanych przez kompilator zasobów. 
 [Ostrzeżenie kompilatora zasobów RW4003](resource-compiler-warning-rw4003.md) \
 [Ostrzeżenie kompilatora zasobów RW4004](resource-compiler-warning-rw4004.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kompilator zasobówC++ błędów i](../compiler-errors-1/c-cpp-build-errors.md)
-kompilatorów narzędzi języka C/kompilatora i kompilacji[](/windows/win32/menurc/resource-compiler)
+[Błędy i ostrzeżenia](../compiler-errors-1/c-cpp-build-errors.md) 
+ dotyczące kompilatora i narzędzi kompilacji C/C++ [Kompilator zasobów](/windows/win32/menurc/resource-compiler)

@@ -1,58 +1,59 @@
 ---
+description: 'Dowiedz się więcej o programie: Narzędzia zdefiniowane przez użytkownika'
 title: Narzędzia zdefiniowane przez użytkownika
 ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cccd0a68751a2f196c8c2e652088e8939e3f162
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263637"
 ---
 # <a name="user-defined-tools"></a>Narzędzia zdefiniowane przez użytkownika
 
-Biblioteka MFC obsługuje narzędzia zdefiniowane przez użytkownika. Narzędzia zdefiniowane przez użytkownika jest specjalnych poleceń, które wykonuje program zewnętrznych, określonych przez użytkownika. Proces dostosowywania służy do zarządzania narzędzia zdefiniowane przez użytkownika. Jednak nie można używać tego procesu, jeśli obiekt aplikacji nie pochodzi od [klasa CWinAppEx](../mfc/reference/cwinappex-class.md). Aby uzyskać więcej informacji na temat dostosowywania, zobacz [Dostosowywanie na potrzeby MFC](../mfc/customization-for-mfc.md).
+MFC obsługuje narzędzia zdefiniowane przez użytkownika. Narzędzie zdefiniowane przez użytkownika to specjalne polecenie, które wykonuje zewnętrzny, określony przez użytkownika program. Aby zarządzać narzędziami zdefiniowanymi przez użytkownika, można użyć procesu dostosowywania. Nie można jednak użyć tego procesu, jeśli obiekt aplikacji nie pochodzi od [klasy CWinAppEx](../mfc/reference/cwinappex-class.md). Aby uzyskać więcej informacji na temat dostosowywania, zobacz [Dostosowywanie dla MFC](../mfc/customization-for-mfc.md).
 
-Jeśli włączona jest obsługa narzędzi zdefiniowane przez użytkownika, w oknie dialogowym dostosowywania automatycznie uwzględnia **narzędzia** kartę. Poniższa ilustracja przedstawia **narzędzia** strony.
+Jeśli włączono obsługę narzędzi zdefiniowanych przez użytkownika, w oknie dialogowym dostosowanie zostanie automatycznie wykorzystana karta **Narzędzia** . Na poniższej ilustracji przedstawiono stronę **Narzędzia** .
 
-![Narzędzia karty w oknie dialogowym Dostosuj](../mfc/media/custdialogboxtoolstab.png "narzędzia karta w oknie dialogowym Dostosuj") <br/>
-Karta narzędzia okna dialogowego Dostosowywanie
+![Karta narzędzia w oknie dialogowym Dostosowywanie](../mfc/media/custdialogboxtoolstab.png "Karta narzędzia w oknie dialogowym Dostosowywanie") <br/>
+Karta narzędzi okna dialogowego dostosowywania
 
-## <a name="enabling-user-defined-tools-support"></a>Włączanie użytkownika narzędzia pomocy technicznej
+## <a name="enabling-user-defined-tools-support"></a>Włączanie obsługi narzędzi zdefiniowanych przez użytkownika
 
-Aby włączyć narzędzia zdefiniowane przez użytkownika w aplikacji, należy wywołać [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools). Jednakże należy najpierw zdefiniować kilka stałych w plikach zasobów aplikacji do użycia jako parametry dla tego wywołania.
+Aby włączyć narzędzia zdefiniowane przez użytkownika w aplikacji, wywołaj [CWinAppEx:: EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools). Należy jednak najpierw zdefiniować kilka stałych w plikach zasobów aplikacji, aby użyć ich jako parametrów dla tego wywołania.
 
-W edytorze zasobów Utwórz zastępczy polecenia, które używa identyfikatora odpowiednie polecenie. W poniższym przykładzie użyto `ID_TOOLS_ENTRY` jako identyfikator polecenia. Ten identyfikator polecenia oznacza lokalizację w jednym lub kilku menu, gdy struktura wstawi narzędzia zdefiniowane przez użytkownika.
+W edytorze zasobów Utwórz fikcyjne polecenie, które używa odpowiedniego identyfikatora polecenia. W poniższym przykładzie użyto `ID_TOOLS_ENTRY` jako identyfikatora polecenia. Ten identyfikator polecenia oznacza lokalizację w jednym lub kilku menu, w których struktura wstawi narzędzia zdefiniowane przez użytkownika.
 
-Należy ustawić na bok kilka kolejnych identyfikatorów w tabeli ciągów do reprezentowania narzędzia zdefiniowane przez użytkownika. Liczba ciągów, które należy zarezerwować jest równa maksymalnej liczbie narzędzi użytkownika, które użytkownicy mogą definiować. W poniższym przykładzie są one nazywane `ID_USER_TOOL1` za pośrednictwem `ID_USER_TOOL10`.
+Należy ustawić kilka kolejnych identyfikatorów w tabeli ciągów, aby przedstawić narzędzia zdefiniowane przez użytkownika. Liczba wyznaczonych ciągów jest równa maksymalnej liczbie narzędzi użytkownika, które użytkownicy mogą definiować. W poniższym przykładzie są one nazwane `ID_USER_TOOL1` przez `ID_USER_TOOL10` .
 
-Sugestie można zaoferować użytkownikom, aby pomóc im Wybierz katalogi i argumenty dla zewnętrznych programów, które będą wywoływane jako narzędzia. Aby to zrobić, należy utworzyć dwa menu podręczne w edytorze zasobów. W poniższym przykładzie są one nazywane `IDR_MENU_ARGS` i `IDR_MENU_DIRS`. Dla każdego polecenia w menu należy zdefiniować ciąg w tabeli ciągów aplikacji. Identyfikator zasobu ciągu musi być taki sam identyfikator polecenia.
+Możesz zaoferować użytkownikom sugestie dotyczące wybranych katalogów i argumentów dla programów zewnętrznych, które będą wywoływane jako narzędzia. W tym celu Utwórz dwa menu podręczne w edytorze zasobów. W poniższym przykładzie są one nazwane `IDR_MENU_ARGS` i `IDR_MENU_DIRS` . Dla każdego polecenia w tych menu Zdefiniuj ciąg w tabeli ciągów aplikacji. Identyfikator zasobu ciągu musi być równy IDENTYFIKATORowi polecenia.
 
-Można również tworzyć klasy pochodnej od [klasa CUserTool](../mfc/reference/cusertool-class.md) zastąpić domyślną implementację. Aby to zrobić, należy przekazać informacje środowiska uruchomieniowego dla klasy pochodnej jako czwarty parametr w CWinAppEx::EnableUserTools zamiast RUNTIME_CLASS ([klasa CUserTool](../mfc/reference/cusertool-class.md)).
+Możesz również utworzyć klasę pochodną z [klasy CUserTool](../mfc/reference/cusertool-class.md) , aby zastąpić implementację domyślną. W tym celu Przekaż informacje o środowisku uruchomieniowym klasy pochodnej jako czwarty parametr w CWinAppEx:: EnableUserTools, a nie RUNTIME_CLASS ([Klasa CUserTool](../mfc/reference/cusertool-class.md)).
 
-Po zdefiniowaniu odpowiednie stałe, należy wywołać [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools) umożliwiające narzędzia zdefiniowane przez użytkownika.
+Po zdefiniowaniu odpowiednich stałych Wywołaj [CWinAppEx:: EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools) , aby włączyć narzędzia zdefiniowane przez użytkownika.
 
-Poniższe wywołanie metody przedstawia sposób użycia tych stałe:
+Następujące wywołanie metody pokazuje, jak używać tych stałych:
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/cpp/user-defined-tools_1.cpp)]
 
-W tym przykładzie jest uwzględniane na karcie Narzędzia **dostosowywania** okno dialogowe. Struktura spowoduje zastąpienie dowolnego polecenia, który jest zgodny z Identyfikatorem polecenia `ID_TOOLS_ENTRY` dowolnego menu za pomocą zestawu narzędzi użytkownika aktualnie zdefiniowanych w każdym przypadku, gdy użytkownik otwiera menu. Identyfikatory poleceń `ID_USER_TOOL1` za pośrednictwem `ID_USER_TOOL10` są zarezerwowane do użytku dla narzędzia zdefiniowane przez użytkownika. Klasa [klasa CUserTool](../mfc/reference/cusertool-class.md) obsługuje wywołania do narzędzi użytkownika. Na karcie Narzędzia **dostosowywania** okno dialogowe zawiera przyciski po prawej stronie pola wprowadzania argumentu i katalog na dostęp do menu **IDR_MENU_ARGS** i **IDR_MENU_DIRS**. Gdy użytkownik wybierze polecenie z jednego z tych menu, platformę dołącza do pola tekstowego odpowiedni ciąg, który ma identyfikator zasobu równa identyfikator polecenia.
+W tym przykładzie karta Tools zostanie uwzględniona w oknie dialogowym **dostosowywania** . Struktura zamieni wszystkie polecenia, które są zgodne z IDENTYFIKATORem polecenia `ID_TOOLS_ENTRY` w dowolnym menu z zestawem aktualnie zdefiniowanych narzędzi użytkownika za każdym razem, gdy użytkownik otworzy to menu. Identyfikatory poleceń w `ID_USER_TOOL1` `ID_USER_TOOL10` programie są zastrzeżone do użycia dla narzędzi zdefiniowanych przez użytkownika. Klasa [CUserTool](../mfc/reference/cusertool-class.md) obsługuje wywołania do narzędzi użytkownika. Karta narzędzia okna dialogowego **Dostosowywanie** zawiera przyciski z prawej strony pola pozycji argumentu i katalogu, aby uzyskać dostęp do menu **IDR_MENU_ARGS** i **IDR_MENU_DIRS**. Gdy użytkownik wybierze polecenie z jednego z tych menu, struktura dołącza do odpowiedniego pola tekstowego ciąg o IDENTYFIKATORze zasobu równy IDENTYFIKATORowi polecenia.
 
-### <a name="including-predefined-tools"></a>W tym narzędzia wstępnie zdefiniowane
+### <a name="including-predefined-tools"></a>Dołączanie wstępnie zdefiniowanych narzędzi
 
-Jeśli chcesz wstępnie niektóre narzędzia podczas uruchamiania aplikacji, konieczne jest przesłonięcie [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) metoda okna głównego aplikacji. W przypadku tej metody należy wykonać następujące czynności.
+Jeśli chcesz wstępnie zdefiniować niektóre narzędzia do uruchamiania aplikacji, musisz zastąpić metodę [obiektu CFrameWnd:: LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) głównego okna aplikacji. W tej metodzie należy wykonać następujące czynności.
 
-##### <a name="to-add-new-tools-in-loadframe"></a>Aby dodać nowe narzędzia w loadframe —
+##### <a name="to-add-new-tools-in-loadframe"></a>Aby dodać nowe narzędzia w LoadFrame
 
-1. Uzyskiwanie wskaźnika do [klasa CUserToolsManager](../mfc/reference/cusertoolsmanager-class.md) obiektu przez wywołanie metody [CWinAppEx::GetUserToolsManager](../mfc/reference/cwinappex-class.md#getusertoolsmanager).
+1. Uzyskaj wskaźnik do obiektu [klasy CUserToolsManager](../mfc/reference/cusertoolsmanager-class.md) przez wywołanie metody [CWinAppEx:: GetUserToolsManager](../mfc/reference/cwinappex-class.md#getusertoolsmanager).
 
-1. Każdego narzędzia, który ma zostać utworzona, należy wywołać [CUserToolsManager::CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool). Ta metoda zwraca wskaźnik do [klasa CUserTool](../mfc/reference/cusertool-class.md) obiektu i dodaje narzędzie nowo utworzone przez użytkownika do wewnętrznego zestaw narzędzi. Jeśli podane informacje środowiska uruchomieniowego dla klasy pochodnej [klasa CUserTool](../mfc/reference/cusertool-class.md) jako czwarty parametr [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools), [CUserToolsManager::CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool) będzie wystąpienia i zamiast tego Zwraca wystąpienie tej klasy.
+1. Dla każdego narzędzia, które chcesz utworzyć, wywołaj [CUserToolsManager:: CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool). Ta metoda zwraca wskaźnik do obiektu [klasy CUserTool](../mfc/reference/cusertool-class.md) i dodaje nowo utworzone narzędzie użytkownika do wewnętrznej kolekcji narzędzi. Jeśli podano informacje o środowisku uruchomieniowym klasy pochodnej [klasy CUserTool](../mfc/reference/cusertool-class.md) jako czwarty parametr [CWinAppEx:: EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools), [CUserToolsManager:: CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool) spowoduje wystąpienie i zwrócenie wystąpienia tej klasy.
 
-1. Dla każdego z tych narzędzi należy ustawić jej etykietę tekstową, ustawiając `CUserTool::m_strLabel` i ustaw jego polecenia przez wywołanie metody `CUserTool::SetCommand`. Domyślna implementacja klasy [klasa CUserTool](../mfc/reference/cusertool-class.md) automatycznie pobiera dostępna ikon z programu, który jest określony w wywołaniu `SetCommand`.
+1. Dla każdego narzędzia Ustaw jego etykietę tekstową przez ustawienie `CUserTool::m_strLabel` i ustaw jego polecenie, wywołując metodę `CUserTool::SetCommand` . Domyślna implementacja [klasy CUserTool](../mfc/reference/cusertool-class.md) automatycznie pobiera dostępne ikony z programu, który jest określony w wywołaniu `SetCommand` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dostosowywanie na potrzeby MFC](../mfc/customization-for-mfc.md)<br/>
 [Klasa CUserTool](../mfc/reference/cusertool-class.md)<br/>

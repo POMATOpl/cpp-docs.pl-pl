@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie kontrolki wspólnej jako okna podrzędnego'
 title: Używanie formantu wspólnego jako okna podrzędnego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,28 +9,28 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a5fda2cbf8d0bf16ccb17f2766b31d24e5c0c67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263559"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Używanie formantu wspólnego jako okna podrzędnego
 
-Dowolny wspólnych formantów Windows może służyć jako okna podrzędnego inne okna. Poniższa procedura opisuje sposób dynamicznie tworzenie wspólne kontrolki, a następnie pracować z nią.
+Każdy z formantów wspólnych systemu Windows może być używany jako okno podrzędne dowolnego innego okna. Poniższa procedura opisuje sposób dynamicznego tworzenia kontrolki, a następnie pracy z nią.
 
 ### <a name="to-use-a-common-control-as-a-child-window"></a>Aby użyć formantu wspólnego jako okna podrzędnego
 
-1. Zdefiniuj kontrolki w powiązanych klas lub program obsługi.
+1. Zdefiniuj formant w powiązanej klasie lub obsłudze.
 
-1. Użyj formantu zastępowania metody [CWnd::Create](../mfc/reference/cwnd-class.md#create) metodę, aby utworzyć formant Windows.
+1. Użyj przesłonięcia kontrolki [CWnd:: Create](../mfc/reference/cwnd-class.md#create) w celu utworzenia formantu systemu Windows.
 
-1. Po utworzeniu kontrolki (jako wczesne jako `OnCreate` obsługi Jeśli podklasą kontrolki), można manipulować kontroli przy użyciu jego elementów członkowskich. Zobacz opisy poszczególnych formantów na [formantów](../mfc/controls-mfc.md) szczegółowe informacje na temat metody.
+1. Po utworzeniu kontrolki (jak wcześniej jako `OnCreate` procedura obsługi w przypadku podklasy kontrolki) można manipulować formantem za pomocą jego funkcji składowych. Aby uzyskać szczegółowe informacje na temat metod, zobacz opisy poszczególnych kontrolek w [kontrolce](../mfc/controls-mfc.md) .
 
-1. Po zakończeniu za pomocą kontrolki, użyj [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) do zniszczenia kontrolki.
+1. Po zakończeniu kontroli Użyj [CWnd::D estroywindow](../mfc/reference/cwnd-class.md#destroywindow) , aby zniszczyć formant.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCImageEditorDialog'
 title: Klasa CMFCImageEditorDialog
 ms.date: 11/19/2018
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 23c2a919428689fe107b82041bd87b758ede2bc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c25cf4a1a8d0cc5852049a06c3a140cbb00a118
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265392"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Klasa CMFCImageEditorDialog
 
-Klasa `CMFCImageEditorDialog` obsługuje okno dialogowe edytora obrazów.
+`CMFCImageEditorDialog`Klasa obsługuje okno dialogowe Edytor obrazów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,41 +36,41 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `CMFCImageEditorDialog` zawiera okno dialogowe, które zawiera:
+`CMFCImageEditorDialog`Klasa zawiera okno dialogowe, które zawiera:
 
-- Obszar obrazu używany do modyfikowania pojedynczych pikseli obrazu.
+- Obszar obrazu, który służy do modyfikowania pojedynczych pikseli w obrazie.
 
-- Narzędzia do rysowania w celu zmodyfikowania pikseli w obszarze obrazu.
+- Narzędzia do rysowania pozwalające modyfikować piksele w obszarze obrazu.
 
 - Paleta kolorów określająca kolor używany przez narzędzia do rysowania.
 
 - Obszar podglądu, który wyświetla efekt edycji.
 
-Na poniższej ilustracji przedstawiono okno dialogowe edytora obrazów.
+Na poniższej ilustracji przedstawiono okno dialogowe Edytor obrazu.
 
-![OKNO dialogowe CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "OKNO dialogowe CMFCImageEditorDialog")
+![CMFCImageEditorDialog — okno dialogowe](../../mfc/reference/media/imageedit.png "CMFCImageEditorDialog — okno dialogowe")
 
-Jednym ze sposobów `CMFCImageEditorDialog` użycia obiektu jest `CBitmap` przekazanie go obrazowi do edycji. Nie należy tworzyć dużego obrazu, ponieważ obszar edycji obrazu ma ograniczony rozmiar, a rozmiar piksela logicznego jest dostosowany do obszaru. Wywołanie `DoModal` metody, aby rozpocząć modalne okno dialogowe.
+Jednym ze sposobów używania `CMFCImageEditorDialog` obiektu jest przekazanie `CBitmap` obrazu do edycji. Nie twórz dużego obrazu, ponieważ obszar edycji obrazu ma ograniczony rozmiar, a rozmiar logicznego piksela jest dopasowywany do obszaru. Wywołaj `DoModal` metodę, aby uruchomić modalne okno dialogowe.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cdialog](../../mfc/reference/cdialog-class.md)
+[CDialog](../../mfc/reference/cdialog-class.md)
 
-[Cdialogex](../../mfc/reference/cdialogex-class.md)
+[CDialogEx](../../mfc/reference/cdialogex-class.md)
 
-[Cmfcimageeditordialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+[CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afximageeditordialog.h
+**Nagłówek:** afximageeditordialog. h
 
-## <a name="cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a>CMFCImageEditorDialog::CMFCImageEditorDialog
+## <a name="cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a> CMFCImageEditorDialog::CMFCImageEditorDialog
 
 Konstruuje `CMFCImageEditorDialog` obiekt.
 
@@ -82,24 +83,24 @@ CMFCImageEditorDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*pBitmapa*<br/>
+*pBitmap*<br/>
 Wskaźnik do obrazu.
 
-*pRoczysz*<br/>
-Wskaźnik do okna nadrzędnego bieżącego okna dialogowego edytora obrazów.
+*pParent*<br/>
+Wskaźnik do okna nadrzędnego w bieżącym edytorze obrazu okna dialogowego.
 
-*nBitsPixel (100)*<br/>
-Liczba bitów używanych do reprezentowania koloru pojedynczego piksela, który jest również określany jako głębia kolorów.  Jeśli parametr *nBitsPixel* wynosi -1, głębia kolorów jest wyprowadzana z obrazu określonego przez parametr *pBitmap.* Wartość domyślna to -1.
+*nBitsPixel*<br/>
+Liczba bitów używanych do reprezentowania koloru pojedynczego piksela, która jest również określana jako głębia koloru.  Jeśli parametr *nBitsPixel* ma wartość-1, głębia kolorów pochodzi od obrazu określonego przez parametr *pBitmap* . Wartość domyślna to -1.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Aby zmodyfikować obraz, przekaż wskaźnik `CMFCImageEditorDialog` obrazu do konstruktora. Następnie wywołaj metodę, `DoModal` aby otworzyć modalne okno dialogowe. Gdy `DoModal` metoda zwraca, mapa bitowa zawiera nowy obraz.
+Aby zmodyfikować obraz, Przekaż wskaźnik obrazu do `CMFCImageEditorDialog` konstruktora. Następnie Wywołaj `DoModal` metodę, aby otworzyć modalne okno dialogowe. Gdy `DoModal` Metoda zwraca, mapa bitowa zawiera nowy obraz.
 
 ### <a name="remarks"></a>Uwagi
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCImageEditorDialog` skonstruować obiekt klasy. W tym przykładzie jest częścią [new controls próbki](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób konstruowania obiektu `CMFCImageEditorDialog` klasy. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]

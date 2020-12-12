@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie paska dialogowego z kontrolką paska pomocniczego'
 title: Używanie paska dialogowego z formantem paska pomocniczego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: e4e786d3670ec74b734739e29aa7e3e33b5af384
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 97fb8ca5c356d91fa4b4ba44753fbdc9bf298435
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263533"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Używanie paska dialogowego z formantem paska pomocniczego
 
@@ -23,7 +24,7 @@ Poniższa procedura zawiera szczegółowe instrukcje niezbędne do osiągnięcia
 
 ### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Aby zaimplementować przezroczysty pasek okna dialogowego w paśmie paska pomocniczego
 
-1. Za pomocą [okna dialogowego Dodaj klasę](../mfc/reference/adding-an-mfc-class.md)Dodaj nową klasę (na przykład `CMyDlgBar`) implementującą obiekt paska dialogowego.
+1. Za pomocą [okna dialogowego Dodaj klasę](../mfc/reference/adding-an-mfc-class.md)Dodaj nową klasę (na przykład `CMyDlgBar` ) implementującą obiekt paska dialogowego.
 
 1. Dodaj procedurę obsługi dla komunikatu WM_ERASEBKGND.
 
@@ -39,7 +40,7 @@ Poniższa procedura zawiera szczegółowe instrukcje niezbędne do osiągnięcia
 
 Nowe programy obsługi symulują przezroczystość paska dialogowego przez przekazanie komunikatu WM_ERASEBKGND do okna nadrzędnego i wymuszenie odświeżenia za każdym razem, gdy obiekt paska okna dialogowego zostanie przeniesiony.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

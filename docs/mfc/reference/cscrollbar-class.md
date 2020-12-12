@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CScrollBar'
 title: Klasa CScrollBar
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 1ab25ad26357abe9091d273637f3ae9f77457342
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a557fe490b2cdce81d5639f9ce15fd6462442029
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264742"
 ---
 # <a name="cscrollbar-class"></a>Klasa CScrollBar
 
@@ -99,7 +100,7 @@ Aby uzyskać informacje dotyczące korzystania z usługi `CScrollBar` , zobacz [
 
 **Nagłówek:** afxwin. h
 
-## <a name="cscrollbarcreate"></a><a name="create"></a>CScrollBar:: Create
+## <a name="cscrollbarcreate"></a><a name="create"></a> CScrollBar:: Create
 
 Tworzy pasek przewijania systemu Windows i dołącza go do `CScrollBar` obiektu.
 
@@ -147,7 +148,7 @@ Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#wi
 
 [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]
 
-## <a name="cscrollbarcscrollbar"></a><a name="cscrollbar"></a>CScrollBar::CScrollBar
+## <a name="cscrollbarcscrollbar"></a><a name="cscrollbar"></a> CScrollBar::CScrollBar
 
 Konstruuje `CScrollBar` obiekt.
 
@@ -163,7 +164,7 @@ Po skonstruowaniu obiektu Wywołaj `Create` funkcję członkowską, aby utworzy�
 
 [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]
 
-## <a name="cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a>CScrollBar::EnableScrollBar
+## <a name="cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a> CScrollBar::EnableScrollBar
 
 Włącza lub wyłącza jedną strzałkę paska przewijania.
 
@@ -192,7 +193,7 @@ Różne od zera, jeśli strzałki są włączone lub wyłączone w określony sp
 
   Zobacz przykład dla [CScrollBar:: SetScrollRange](#setscrollrange).
 
-## <a name="cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CScrollBar:: GetScrollBarInfo
+## <a name="cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a> CScrollBar:: GetScrollBarInfo
 
 Pobiera informacje `SCROLLBARINFO` przechowywane przez strukturę na pasku przewijania.
 
@@ -213,7 +214,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>CScrollBar::GetScrollInfo
+## <a name="cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a> CScrollBar::GetScrollInfo
 
 Pobiera informacje `SCROLLINFO` przechowywane przez strukturę na pasku przewijania.
 
@@ -237,17 +238,17 @@ Jeśli komunikat pobrał wartości, zwracana jest wartość TRUE. W przeciwnym r
 
 ### <a name="remarks"></a>Uwagi
 
-`GetScrollInfo`umożliwia aplikacjom używanie 32-bitowych pozycji przewijania.
+`GetScrollInfo` umożliwia aplikacjom używanie 32-bitowych pozycji przewijania.
 
 Struktura [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) zawiera informacje o pasku przewijania, w tym o minimalnych i maksymalnych położeniach przewijania, rozmiarze strony i pozycji pola przewijania (kciuk). Zobacz `SCROLLINFO` temat struktura w Windows SDK, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.
 
-Procedury obsługi komunikatów systemu Windows MFC wskazujące położenie paska przewijania, [CWnd:: OnHScroll i [CWnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), zapewniają tylko 16 bitów danych pozycji. `GetScrollInfo`i `SetScrollInfo` podaj 32 bitów danych pozycji paska przewijania. W ten sposób aplikacja może wywołać `GetScrollInfo` podczas przetwarzania `CWnd::OnHScroll` lub, `CWnd::OnVScroll` Aby uzyskać 32-bitowe dane pozycji paska przewijania.
+Procedury obsługi komunikatów systemu Windows MFC wskazujące położenie paska przewijania, [CWnd:: OnHScroll i [CWnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), zapewniają tylko 16 bitów danych pozycji. `GetScrollInfo` i `SetScrollInfo` podaj 32 bitów danych pozycji paska przewijania. W ten sposób aplikacja może wywołać `GetScrollInfo` podczas przetwarzania `CWnd::OnHScroll` lub, `CWnd::OnVScroll` Aby uzyskać 32-bitowe dane pozycji paska przewijania.
 
 ### <a name="example"></a>Przykład
 
   Zobacz przykład dla [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar::GetScrollLimit
+## <a name="cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a> CScrollBar::GetScrollLimit
 
 Pobiera maksymalną pozycję przewijania paska przewijania.
 
@@ -263,7 +264,7 @@ Określa maksymalną pozycję paska przewijania, jeśli to się powiedzie; w prz
 
   Zobacz przykład dla [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar::GetScrollPos
+## <a name="cscrollbargetscrollpos"></a><a name="getscrollpos"></a> CScrollBar::GetScrollPos
 
 Pobiera bieżącą pozycję pola przewijania.
 
@@ -283,7 +284,7 @@ Bieżąca pozycja jest wartością względną, która zależy od bieżącego zak
 
   Zobacz przykład dla [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar::GetScrollRange
+## <a name="cscrollbargetscrollrange"></a><a name="getscrollrange"></a> CScrollBar::GetScrollRange
 
 Kopiuje bieżące minimalne i maksymalne położenie paska przewijania dla danego paska przewijania do lokalizacji określonych przez *lpMinPos* i *lpMaxPos*.
 
@@ -309,7 +310,7 @@ Domyślny zakres dla kontrolki paska przewijania jest pusty (obie wartości są 
 
   Zobacz przykład dla [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
-## <a name="cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>CScrollBar::SetScrollInfo
+## <a name="cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a> CScrollBar::SetScrollInfo
 
 Ustawia informacje `SCROLLINFO` przechowywane przez strukturę na pasku przewijania.
 
@@ -341,7 +342,7 @@ Należy podać wartości wymagane przez `SCROLLINFO` parametry struktury, w tym 
 
 [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]
 
-## <a name="cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>CScrollBar::SetScrollPos
+## <a name="cscrollbarsetscrollpos"></a><a name="setscrollpos"></a> CScrollBar::SetScrollPos
 
 Ustawia bieżące położenie pola przewijania do określonego przez *nPos* i, jeśli jest określony, ponownie rysuje pasek przewijania w celu odzwierciedlenia nowego położenia.
 
@@ -371,7 +372,7 @@ Ustaw *bRedraw* na false za każdym razem, gdy pasek przewijania zostanie ponown
 
   Zobacz przykład dla [CScrollBar:: SetScrollRange](#setscrollrange).
 
-## <a name="cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar::SetScrollRange
+## <a name="cscrollbarsetscrollrange"></a><a name="setscrollrange"></a> CScrollBar::SetScrollRange
 
 Ustawia wartości minimalne i maksymalne pozycji dla danego paska przewijania.
 
@@ -407,7 +408,7 @@ Różnica między wartościami określonymi przez *nMinPos* i *nMaxPos* nie moż
 
 [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]
 
-## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar:: ShowScrollBar
+## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a> CScrollBar:: ShowScrollBar
 
 Pokazuje lub ukrywa pasek przewijania.
 
@@ -428,7 +429,7 @@ Aplikacja nie powinna wywoływać tej funkcji, aby ukryć pasek przewijania podc
 
   Zobacz przykład dla [CScrollBar:: Create](#create).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

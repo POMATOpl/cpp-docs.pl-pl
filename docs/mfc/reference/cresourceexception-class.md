@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CResourceException'
 title: Klasa CResourceException
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-ms.openlocfilehash: 557bfe1cc41c3dda65bd95d7d687820c0b9862b7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c76635ae2cfa6c55bf54da7e73f6afbb44506fee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264872"
 ---
 # <a name="cresourceexception-class"></a>Klasa CResourceException
 
@@ -35,25 +36,25 @@ class CResourceException : public CSimpleException
 
 ## <a name="remarks"></a>Uwagi
 
-Dalsze kwalifikacje nie są konieczne ani możliwe.
+Dalsze kwalifikacje nie są wymagane ani możliwe.
 
-Aby uzyskać więcej `CResourceException`informacji na temat używania , zobacz artykuł [Obsługa wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md).
+Aby uzyskać więcej informacji na temat korzystania z programu `CResourceException` , zobacz [Obsługa wyjątków artykułów (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cexception](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
-[Csimpleexception](../../mfc/reference/csimpleexception-class.md)
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
 `CResourceException`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-## <a name="cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>CResourceException::CResourceException
+## <a name="cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a> CResourceException::CResourceException
 
 Konstruuje `CResourceException` obiekt.
 
@@ -63,7 +64,7 @@ CResourceException();
 
 ### <a name="remarks"></a>Uwagi
 
-Nie należy używać tego konstruktora bezpośrednio, ale raczej wywołać funkcję globalną [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). Aby uzyskać więcej informacji na temat wyjątków, zobacz artykuł [Obsługa wyjątków w MFC](../exception-handling-in-mfc.md).
+Nie używaj tego konstruktora bezpośrednio, ale zamiast tego wywołaj funkcję globalną [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). Aby uzyskać więcej informacji o wyjątkach, zobacz [Obsługa wyjątków artykułów w MFC](../exception-handling-in-mfc.md).
 
 ## <a name="see-also"></a>Zobacz też
 

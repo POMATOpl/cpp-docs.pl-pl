@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCFontInfo'
 title: Klasa CMFCFontInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 6e87971e2afefc9cf1574abe951920c254dcd2ae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0922e07f268509cd4b5552a6123d8d3465a426bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265418"
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
 
-Klasa `CMFCFontInfo` opisuje nazwę i inne atrybuty czcionki.
+`CMFCFontInfo`Klasa opisuje nazwę i inne atrybuty czcionki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,33 +48,33 @@ class CMFCFontInfo : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCFontInfo::GetFullName](#getfullname)|Pobiera połączone nazwy czcionki i jej zestaw znaków (skrypt).|
+|[CMFCFontInfo:: getfullname](#getfullname)|Pobiera połączone nazwy czcionki i jej zestawu znaków (skrypt).|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Wartość określająca zestaw znaków (skrypt) skojarzony z czcionką.|
-|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Wartość określająca wysokość i rodzinę czcionki.|
-|[CMFCFontInfo::m_nType](#m_ntype)|Wartość określająca typ czcionki.|
-|[CMFCFontInfo::m_strName](#m_strname)|Nazwa czcionki; na przykład **Arial**.|
-|[CMFCFontInfo::m_strScript](#m_strscript)|Nazwa zestawu znaków (skryptu) skojarzonego z czcionką.|
+|[CMFCFontInfo:: m_nCharSet](#m_ncharset)|Wartość określająca zestaw znaków (skrypt) skojarzony z czcionką.|
+|[CMFCFontInfo:: m_nPitchAndFamily](#m_npitchandfamily)|Wartość określająca gęstość i rodzinę czcionki.|
+|[CMFCFontInfo:: m_nType](#m_ntype)|Wartość, która określa typ czcionki.|
+|[CMFCFontInfo:: m_strName](#m_strname)|Nazwa czcionki; na przykład **Arial**.|
+|[CMFCFontInfo:: m_strScript](#m_strscript)|Nazwa zestawu znaków (skrypt) skojarzonego z czcionką.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt można `CMFCFontInfo` dołączyć do elementu klasy [CMFCToolBarFontComboBox.](../../mfc/reference/cmfctoolbarfontcombobox-class.md) Wywołanie [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) metody, aby pobrać `CMFCFontInfo` wskaźnik do obiektu.
+Można dołączyć `CMFCFontInfo` obiekt do elementu klasy [klasy CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) . Wywołaj metodę [CMFCToolBarFontComboBox:: GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) , aby pobrać wskaźnik do `CMFCFontInfo` obiektu.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCFontInfo` używać różnych członków klasy. W przykładzie pokazano, `CMFCFontInfo` jak uzyskać `CMFCRibbonFontComboBox`obiekt z programu i jak uzyskać dostęp do jego zmiennych lokalnych. W tym przykładzie jest częścią [msoffice 2007 Demo próbki](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać różnych elementów członkowskich `CMFCFontInfo` klasy. W przykładzie pokazano, jak uzyskać `CMFCFontInfo` obiekt z `CMFCRibbonFontComboBox` i, jak uzyskać dostęp do zmiennych lokalnych. Ten przykład jest częścią [przykładu demonstracyjnego na MSOffice 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtoolbarfontcombobox.h
+**Nagłówek:** afxtoolbarfontcombobox. h
 
-## <a name="cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo
+## <a name="cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a> CMFCFontInfo::CMFCFontInfo
 
 Konstruuje `CMFCFontInfo` obiekt.
 
@@ -90,33 +91,33 @@ CMFCFontInfo(const CMFCFontInfo& src);
 
 ### <a name="parameters"></a>Parametry
 
-*Lpszname*<br/>
-[w] Nazwa czcionki. Aby uzyskać więcej `lfFaceName` informacji, zobacz element członkowski struktury [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
+*lpszName*<br/>
+podczas Nazwa czcionki. Aby uzyskać więcej informacji, zobacz `lfFaceName` element członkowski struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
 *lpszScript*<br/>
-[w] Nazwa skryptu (zestawu znaków) czcionki.
+podczas Nazwa skryptu (zestawu znaków) czcionki.
 
-*nCharSet (Zestaw chybianie)*<br/>
-[w] Wartość określająca zestaw znaków (skrypt) czcionki. Aby uzyskać więcej `lfCharSet` informacji, zobacz element członkowski struktury [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
+*nCharSet*<br/>
+podczas Wartość określająca zestaw znaków (skrypt) czcionki. Aby uzyskać więcej informacji, zobacz `lfCharSet` element członkowski struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
-*nPitchAndRodzina*<br/>
-[w] Wartość określająca wysokość i rodzinę czcionki. Aby uzyskać więcej `lfPitchAndFamily` informacji, zobacz element członkowski struktury [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
+*nPitchAndFamily*<br/>
+podczas Wartość określająca gęstość i rodzinę czcionki. Aby uzyskać więcej informacji, zobacz `lfPitchAndFamily` element członkowski struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
-*nTyp*<br/>
-[w] Wartość określająca typ czcionki. Ten parametr może być kombinacją bitową (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE.
+*Npowiadomienia*<br/>
+podczas Wartość, która określa typ czcionki. Ten parametr może być kombinacją bitową (lub) DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE.
 
 *src*<br/>
-[w] Istniejący `CMFCFontInfo` obiekt, którego elementy `CMFCFontInfo` członkowskie są używane do konstruowania tego obiektu.
+podczas Istniejący `CMFCFontInfo` obiekt, którego członkowie są używani do konstruowania tego `CMFCFontInfo` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-W tej dokumentacji użyto *terminów zestaw znaków* i *skrypt* zamiennie. Skrypt *script*, który jest również znany jako system pisania, jest zbiorem znaków i reguł pisania tych znaków w jednym lub kilku językach. Kolekcja znaków zawiera alfabet i znaki interpunkcyjne używane w tym skrypcie. Na przykład skrypt łaciński jest używany w języku angielskim, ponieważ jest używany w Stanach Zjednoczonych, a jego alfabet zawiera znaki od A do Z. Element `lfCharSet` członkowski struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) określa zestaw znaków. Na przykład wartość ANSI_CHARSET określa zestaw znaków ANSI, który zawiera alfabet skryptu łacińskiego.
+W tej dokumentacji zastosowano *zestaw znaków* terminów i *skrypt* zamiennie. *Skrypt*, który jest również znany jako system pisania, to kolekcja znaków i zasad służących do pisania tych znaków w jednym lub kilku językach. Kolekcja znaków zawiera alfabet i interpunkcję używaną w tym skrypcie. Na przykład skrypt łaciński jest używany w języku angielskim, ponieważ jest mówiony w Stany Zjednoczone, a jego alfabet zawiera znaki od A do Z. `lfCharSet` Element członkowski struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) określa zestaw znaków. Na przykład wartość ANSI_CHARSET określa zestaw znaków ANSI, który zawiera alfabet łacińskiego skryptu.
 
-## <a name="cmfcfontinfogetfullname"></a><a name="getfullname"></a>CMFCFontInfo::GetFullName
+## <a name="cmfcfontinfogetfullname"></a><a name="getfullname"></a> CMFCFontInfo:: getfullname
 
-Pobiera połączone nazwy czcionki i jej zestaw znaków (skrypt).
+Pobiera połączone nazwy czcionki i jej zestawu znaków (skrypt).
 
 ```
 CString GetFullName() const;
@@ -124,13 +125,13 @@ CString GetFullName() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg zawierający nazwę czcionki i skrypt.
+Ciąg, który zawiera nazwę czcionki i skrypt.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do uzyskania pełnej nazwy czcionki. Na przykład, jeśli nazwa czcionki to **Arial,** a skrypt czcionki jest **cyrylicą,** ta metoda zwraca "Arial (cyrylica)".
+Użyj tej metody, aby uzyskać pełną nazwę czcionki. Na przykład jeśli nazwa czcionki jest czcionką **Arial** , a skrypt czcionki to **cyrylica**, Metoda ta zwraca czcionkę Arial (cyrylica).
 
-## <a name="cmfcfontinfom_ncharset"></a><a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet
+## <a name="cmfcfontinfom_ncharset"></a><a name="m_ncharset"></a> CMFCFontInfo:: m_nCharSet
 
 Wartość określająca zestaw znaków (skrypt) skojarzony z czcionką.
 
@@ -140,11 +141,11 @@ const BYTE m_nCharSet;
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz *parametr nCharSet* konstruktora [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
+Aby uzyskać więcej informacji, zobacz parametr *nCharSet* konstruktora [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
-## <a name="cmfcfontinfom_npitchandfamily"></a><a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily
+## <a name="cmfcfontinfom_npitchandfamily"></a><a name="m_npitchandfamily"></a> CMFCFontInfo:: m_nPitchAndFamily
 
-Wartość określająca wysokość (rozmiar punktu) i rodzinę (na przykład szeryfową, bezszeryfową i monoprzestrzeń) czcionki.
+Wartość określająca gęstość (rozmiar punktu) i rodzinę (na przykład szeryfową, sans-serif i znak) czcionki.
 
 ```
 const BYTE m_nPitchAndFamily;
@@ -152,11 +153,11 @@ const BYTE m_nPitchAndFamily;
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz *nPitchAndFamily* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.
+Aby uzyskać więcej informacji, zobacz parametr *nPitchAndFamily* konstruktora [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
-## <a name="cmfcfontinfom_ntype"></a><a name="m_ntype"></a>CMFCFontInfo::m_nType
+## <a name="cmfcfontinfom_ntype"></a><a name="m_ntype"></a> CMFCFontInfo:: m_nType
 
-Wartość określająca typ czcionki.
+Wartość, która określa typ czcionki.
 
 ```
 const int m_nType;
@@ -164,9 +165,9 @@ const int m_nType;
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz *parametr nType* konstruktora [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
+Aby uzyskać więcej informacji, zobacz parametr *npowiadomienia* konstruktora [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
-## <a name="cmfcfontinfom_strname"></a><a name="m_strname"></a>CMFCFontInfo::m_strName
+## <a name="cmfcfontinfom_strname"></a><a name="m_strname"></a> CMFCFontInfo:: m_strName
 
 Nazwa czcionki: na przykład **Arial**.
 
@@ -176,11 +177,11 @@ const CString m_strName;
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz *parametr lpszName* konstruktora [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
+Aby uzyskać więcej informacji, zobacz parametr *lpszName* konstruktora [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
-## <a name="cmfcfontinfom_strscript"></a><a name="m_strscript"></a>CMFCFontInfo::m_strScript
+## <a name="cmfcfontinfom_strscript"></a><a name="m_strscript"></a> CMFCFontInfo:: m_strScript
 
-Nazwa zestawu znaków (skryptu) skojarzonego z czcionką.
+Nazwa zestawu znaków (skrypt) skojarzonego z czcionką.
 
 ```
 const CString m_strScript;
@@ -188,7 +189,7 @@ const CString m_strScript;
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz parametr *lpszScript* konstruktora [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
+Aby uzyskać więcej informacji, zobacz parametr *lpszScript* konstruktora [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4237'
 title: Ostrzeżenie kompilatora (poziom 1) C4237
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4237
 ms.assetid: f2e86c4b-80d8-460e-9429-83c5f3f5d7ca
-ms.openlocfilehash: 31ceb972edf975055f930d4ff70a6663a5760922
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a83c40d54a5bd711fbc399ac4880a211f3cf9bd7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266250"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>Ostrzeżenie kompilatora (poziom 1) C4237
 
 słowo kluczowe "Keyword" nie jest jeszcze obsługiwane, ale zarezerwowane do użytku w przyszłości
 
-Słowo kluczowe w C++ specyfikacji nie jest zaimplementowane w kompilatorze firmy C++ Microsoft, ale słowo kluczowe nie jest dostępne jako symbol zdefiniowany przez użytkownika.
+Słowo kluczowe w specyfikacji języka C++ nie jest zaimplementowane w kompilatorze języka Microsoft C++, ale słowo kluczowe nie jest dostępne jako symbol zdefiniowany przez użytkownika.
 
 Poniższy przykład generuje C4237:
 

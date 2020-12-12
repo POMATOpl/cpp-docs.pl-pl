@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa korzystanie CSliderCtrl'
 title: Klasa korzystanie CSliderCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 8dfdcf34474027180708045131a19bf6f7e14512
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 556366f429b39344f4ae2f20acd3c20fd9760552
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264547"
 ---
 # <a name="csliderctrl-class"></a>Klasa korzystanie CSliderCtrl
 

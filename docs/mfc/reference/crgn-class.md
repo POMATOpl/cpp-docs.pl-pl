@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CRgn'
 title: Klasa CRgn
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: e84526eec8f4fd4b1935fa39bc7f4ed3c4d5dd71
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 7506f7fa839c36e079ffe986052a3564ddf0169e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264859"
 ---
 # <a name="crgn-class"></a>Klasa CRgn
 
@@ -69,61 +70,61 @@ class CRgn : public CGdiObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRgn::CRgn](#crgn)|Konstruuje `CRgn` obiekt.|
+|[CRgn:: CRgn](#crgn)|Konstruuje `CRgn` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRgn::Combinergn](#combinergn)|Ustawia `CRgn` obiekt tak, aby był odpowiednikiem `CRgn` unii dwóch określonych obiektów.|
-|[CRgn::CopyRgn](#copyrgn)|Ustawia `CRgn` obiekt tak, aby był kopią określonego `CRgn` obiektu.|
-|[CRgn::CreateEllipticrgn](#createellipticrgn)|Inicjuje `CRgn` obiekt z regionem eliptycznym.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicjuje `CRgn` obiekt z regionem eliptycznym zdefiniowanym przez strukturę [RECT.](/windows/win32/api/windef/ns-windef-rect)|
-|[CRgn::CreateFromData](#createfromdata)|Tworzy region z danego regionu i danych transformacji.|
-|[CRgn::CreateFromPath](#createfrompath)|Tworzy region ze ścieżki wybranej w danym kontekście urządzenia.|
-|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicjuje `CRgn` obiekt z regionem wielokątnym. System zamyka wielokąt automatycznie, jeśli to konieczne, rysując linię od ostatniego wierzchołka do pierwszego.|
-|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicjuje `CRgn` obiekt z regionem składającym się z serii zamkniętych wielokątów. Wielokąty mogą być rozłączne lub mogą się pokrywać.|
-|[CRgn::CreateRectrgn](#createrectrgn)|Inicjuje `CRgn` obiekt z prostokątnym regionem.|
-|[CRgn::CreateRectrgnIndirect](#createrectrgnindirect)|Inicjuje `CRgn` obiekt z prostokątnym regionem zdefiniowanym przez tructure [RECT.](/windows/win32/api/windef/ns-windef-rect)|
-|[CRgn::CreateRoundRectrgn](#createroundrectrgn)|Inicjuje `CRgn` obiekt z prostokątnym obszarem z zaokrąglonymi narożnikami.|
-|[CRgn::Equalrgn](#equalrgn)|Sprawdza `CRgn` dwa obiekty, aby ustalić, czy są one równoważne.|
-|[CRgn::OdRążej](#fromhandle)|Zwraca wskaźnik do `CRgn` obiektu po podaniu dojścia do regionu systemu Windows.|
-|[CRgn::GetRegionData](#getregiondata)|Wypełnia określony bufor danymi opisującymi dany region.|
-|[CRgn::GetRgnBox](#getrgnbox)|Pobiera współrzędne prostokąta ograniczającego `CRgn` obiektu.|
-|[CRgn::OffsetRgn](#offsetrgn)|Przenosi `CRgn` obiekt o określone odsunięcia.|
-|[CRgn::PtRegion](#ptinregion)|Określa, czy określony punkt znajduje się w regionie.|
-|[CRgn::RectInRegion](#rectinregion)|Określa, czy dowolna część określonego prostokąta znajduje się w granicach regionu.|
-|[CRgn::SetRectrgn](#setrectrgn)|Ustawia `CRgn` obiekt na określony prostokątny obszar.|
+|[CRgn:: CombineRgn](#combinergn)|Ustawia `CRgn` obiekt tak, aby był równoważny z złożeniem dwóch określonych `CRgn` obiektów.|
+|[CRgn:: CopyRgn](#copyrgn)|Ustawia `CRgn` obiekt tak, aby był to kopia określonego `CRgn` obiektu.|
+|[CRgn:: CreateEllipticRgn](#createellipticrgn)|Inicjuje `CRgn` obiekt z regionem eliptycznym.|
+|[CRgn:: CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicjuje `CRgn` obiekt z regionem eliptycznego zdefiniowanym przez strukturę [Rect](/windows/win32/api/windef/ns-windef-rect) .|
+|[CRgn:: CreateFromData](#createfromdata)|Tworzy region z danego regionu i danych transformacji.|
+|[CRgn:: CreateFromPath](#createfrompath)|Tworzy region na podstawie ścieżki wybranej w danym kontekście urządzenia.|
+|[CRgn:: CreatePolygonRgn](#createpolygonrgn)|Inicjuje `CRgn` obiekt z wielobokówowym regionem. System automatycznie zamknie Wielokąt, w razie potrzeby, rysując linię od ostatniego wierzchołka do pierwszego.|
+|[CRgn:: CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicjuje `CRgn` obiekt z regionem składającym się z serii zamkniętych wielokątów. Wielokąty mogą być rozłączane lub mogą się nakładać.|
+|[CRgn:: CreateRectRgn](#createrectrgn)|Inicjuje `CRgn` obiekt z prostokątnym regionem.|
+|[CRgn:: CreateRectRgnIndirect](#createrectrgnindirect)|Inicjuje `CRgn` obiekt z prostokątnym regionem zdefiniowanym przez element [Rect](/windows/win32/api/windef/ns-windef-rect)trukturę.|
+|[CRgn:: CreateRoundRectRgn](#createroundrectrgn)|Inicjuje `CRgn` obiekt z prostokątnym regionem z zaokrąglonymi rogami.|
+|[CRgn:: EqualRgn](#equalrgn)|Sprawdza dwa `CRgn` obiekty, aby określić, czy są one równoważne.|
+|[CRgn:: FromHandle](#fromhandle)|Zwraca wskaźnik do obiektu, `CRgn` gdy ma dojść do regionu systemu Windows.|
+|[CRgn:: GetRegionData](#getregiondata)|Wypełnia określony bufor danymi opisującymi dany region.|
+|[CRgn:: GetRgnBox](#getrgnbox)|Pobiera współrzędne prostokąta związanego z `CRgn` obiektem.|
+|[CRgn:: OffsetRgn](#offsetrgn)|Przenosi `CRgn` obiekt o określone przesunięcia.|
+|[CRgn::P tInRegion](#ptinregion)|Określa, czy określony punkt znajduje się w regionie.|
+|[CRgn:: RectInRegion](#rectinregion)|Określa, czy jakakolwiek część określonego prostokąta znajduje się w granicach regionu.|
+|[CRgn:: SetRectRgn](#setrectrgn)|Ustawia `CRgn` obiekt do określonego prostokątnego regionu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRgn::operator HRGN](#operator_hrgn)|Zwraca uchwyt systemu Windows `CRgn` zawarty w obiekcie.|
+|[CRgn:: operator HRGN](#operator_hrgn)|Zwraca dojście systemu Windows zawarte w `CRgn` obiekcie.|
 
 ## <a name="remarks"></a>Uwagi
 
-Region jest obszarem eliptycznym lub wielokątnym w oknie. Aby użyć regionów, należy użyć funkcji `CRgn` członkowskich klasy z funkcjami `CDC`przycinania zdefiniowanymi jako członkowie klasy .
+Region jest obszarem eliptycznym lub wielokąta w oknie. Aby użyć regionów, użyj funkcji składowych klasy `CRgn` z funkcjami przycinania zdefiniowanymi jako elementy członkowskie klasy `CDC` .
 
-Funkcje członkowskie `CRgn` tworzenia, modyfikowania i pobierania informacji o obiekcie regionu, dla którego są wywoływane.
+Funkcje składowe programu `CRgn` tworzą, zmieniają i pobierają informacje o obiekcie region, dla którego są wywoływane.
 
-Aby uzyskać więcej `CRgn`informacji na temat używania programu , zobacz [Obiekty graficzne](../../mfc/graphic-objects.md).
+Aby uzyskać więcej informacji o używaniu programu `CRgn` , zobacz [grafika Objects](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cgdiobject](../../mfc/reference/cgdiobject-class.md)
+[CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
 `CRgn`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-## <a name="crgncombinergn"></a><a name="combinergn"></a>CRgn::Combinergn
+## <a name="crgncombinergn"></a><a name="combinergn"></a> CRgn:: CombineRgn
 
-Tworzy nowy region GDI, łącząc dwa istniejące regiony.
+Tworzy nowy region GDI przez połączenie dwóch istniejących regionów.
 
 ```
 int CombineRgn(
@@ -140,46 +141,46 @@ Identyfikuje istniejący region.
 *pRgn2*<br/>
 Identyfikuje istniejący region.
 
-*nKombinowaćmode*<br/>
-Określa operację, która ma być wykonywana podczas łączenia dwóch regionów źródłowych. Może to być jedna z następujących wartości:
+*nCombineMode*<br/>
+Określa operację, która ma zostać wykonana podczas łączenia dwóch regionów źródłowych. Może to być jedna z następujących wartości:
 
-- RGN_AND Używa nakładających się obszarów obu regionów (przecięcia).
+- RGN_AND używa nakładających się obszarów obu regionów (część wspólna).
 
-- RGN_COPY Tworzy kopię regionu 1 (identyfikowaną przez *pRgn1*).
+- RGN_COPY tworzy kopię regionu 1 (identyfikowaną przez *pRgn1*).
 
-- RGN_DIFF Tworzy region składający się z obszarów regionu 1 (oznaczonych za pomocą *pRgn1),* które nie są częścią regionu 2 (oznaczone przez *pRgn2*).
+- RGN_DIFF tworzy region zawierający obszary regionu 1 (identyfikowane przez *pRgn1*), które nie są częścią regionu 2 (identyfikowane przez *pRgn2*).
 
-- RGN_OR Łączy oba regiony w całości (unia).
+- RGN_OR łączy oba regiony w całości (Unia).
 
-- RGN_XOR Łączy oba regiony, ale usuwa nakładające się obszary.
+- RGN_XOR łączy oba regiony, ale usuwa nakładające się obszary.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Określa typ regionu wynikowego. Może to być jedna z następujących wartości:
+Określa typ regionu będącego wynikiem. Może to być jedna z następujących wartości:
 
-- COMPLEXREGION Nowy region ma nakładające się obramowania.
+- Nowy region COMPLEXREGION ma nakładające się obramowania.
 
-- BŁĄD Nie utworzono nowego regionu.
+- BŁĄD nie utworzono nowego regionu.
 
-- NULLREGION Nowy region jest pusty.
+- NULLREGION nowy region jest pusty.
 
-- SIMPLEREGION Nowy region nie ma nakładających się granic.
+- SIMPLEREGION nowy region nie ma nakładających się obramowań.
 
 ### <a name="remarks"></a>Uwagi
 
-Regiony są łączone zgodnie z *nCombineMode*.
+Regiony są łączone w sposób określony przez *nCombineMode*.
 
-Dwa określone regiony są łączone, a wynikowy `CRgn` dojście regionu jest przechowywany w obiekcie. W związku z tym `CRgn` niezależnie od regionu jest przechowywany w obiekcie jest zastępowany przez region połączony.
+Dwa określone regiony są łączone, a dojście w regionie jest przechowywane w `CRgn` obiekcie. W ten sposób każdy region jest przechowywany w `CRgn` obiekcie jest zastępowany przez połączony region.
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Użyj [CopyRgn,](#copyrgn) aby po prostu skopiować jeden region do innego regionu.
+Użyj [CopyRgn](#copyrgn) , aby po prostu skopiować jeden region do innego regionu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]
 
-## <a name="crgncopyrgn"></a><a name="copyrgn"></a>CRgn::CopyRgn
+## <a name="crgncopyrgn"></a><a name="copyrgn"></a> CRgn:: CopyRgn
 
 Kopiuje region zdefiniowany przez *pRgnSrc* do `CRgn` obiektu.
 
@@ -194,25 +195,25 @@ Identyfikuje istniejący region.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Określa typ regionu wynikowego. Może to być jedna z następujących wartości:
+Określa typ regionu będącego wynikiem. Może to być jedna z następujących wartości:
 
-- COMPLEXREGION Nowy region ma nakładające się obramowania.
+- Nowy region COMPLEXREGION ma nakładające się obramowania.
 
-- BŁĄD Nie utworzono nowego regionu.
+- BŁĄD nie utworzono nowego regionu.
 
-- NULLREGION Nowy region jest pusty.
+- NULLREGION nowy region jest pusty.
 
-- SIMPLEREGION Nowy region nie ma nakładających się granic.
+- SIMPLEREGION nowy region nie ma nakładających się obramowań.
 
 ### <a name="remarks"></a>Uwagi
 
-Nowy region zastępuje region wcześniej przechowywany `CRgn` w obiekcie. Ta funkcja jest szczególnym przypadkiem funkcji elementu członkowskiego [CombineRgn.](#combinergn)
+Nowy region zastępuje region dawniej przechowywany w `CRgn` obiekcie. Ta funkcja jest szczególnym przypadkiem funkcji składowej [CombineRgn](#combinergn) .
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRgn::CreateEllipticRgn](#createellipticrgn).
+  Zobacz przykład dla [CRgn:: CreateEllipticRgn](#createellipticrgn).
 
-## <a name="crgncreateellipticrgn"></a><a name="createellipticrgn"></a>CRgn::CreateEllipticrgn
+## <a name="crgncreateellipticrgn"></a><a name="createellipticrgn"></a> CRgn:: CreateEllipticRgn
 
 Tworzy region eliptyczny.
 
@@ -227,34 +228,34 @@ BOOL CreateEllipticRgn(
 ### <a name="parameters"></a>Parametry
 
 *x1*<br/>
-Określa logiczną współrzędną x lewego górnego rogu prostokąta ograniczającego elipsy.
+Określa logiczną współrzędną x lewego górnego rogu wielokropka.
 
-*y1*<br/>
-Określa logiczną współrzędną y lewego górnego rogu prostokąta ograniczającego elipsy.
+*Y1*<br/>
+Określa logiczną współrzędną y lewego górnego rogu prostokąta obwiedni.
 
 *x2*<br/>
-Określa logiczną współrzędną x w prawym dolnym rogu prostokąta ograniczającego elipsy.
+Określa logiczną współrzędną x dolnego prawego dolnego rogu elipsy.
 
-*y2*<br/>
-Określa logiczną współrzędną y w prawym dolnym rogu prostokąta ograniczającego elipsy.
+*Y2*<br/>
+Określa logiczną współrzędną y dolnego prawego dolnego rogu elipsy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli operacja powiodła się; w przeciwnym razie 0.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Region jest definiowany przez prostokąt ograniczający określony przez *x1*, *y1*, *x2*i *y2*. Region jest przechowywany `CRgn` w obiekcie.
+Region jest definiowany przez prostokąt ograniczający określony przez *x1*, *Y1*, *X2* i *Y2*. Region jest przechowywany w `CRgn` obiekcie.
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Po zakończeniu korzystania z regionu `CreateEllipticRgn` utworzonego za pomocą funkcji, aplikacja powinna wybrać `DeleteObject` region z kontekstu urządzenia i użyć funkcji, aby go usunąć.
+Po zakończeniu korzystania z regionu utworzonego za pomocą `CreateEllipticRgn` funkcji aplikacja powinna wybrać region z kontekstu urządzenia i użyć `DeleteObject` funkcji, aby ją usunąć.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]
 
-## <a name="crgncreateellipticrgnindirect"></a><a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect
+## <a name="crgncreateellipticrgnindirect"></a><a name="createellipticrgnindirect"></a> CRgn:: CreateEllipticRgnIndirect
 
 Tworzy region eliptyczny.
 
@@ -264,26 +265,26 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*Lprect*<br/>
-Wskazuje na `RECT` strukturę `CRect` lub obiekt zawierający współrzędne logiczne lewego górnego i prawego dolnego rogu prostokąta ograniczającego elipsy.
+*lpRect*<br/>
+Wskazuje na `RECT` strukturę lub `CRect` obiekt, który zawiera współrzędne logiczne lewego górnego i prawego dolnego rogu prostokąta.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli operacja powiodła się; w przeciwnym razie 0.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Region jest zdefiniowany przez strukturę lub obiekt wskazany przez `CRgn` *lpRect* i jest przechowywany w obiekcie.
+Region jest zdefiniowany przez strukturę lub obiekt wskazywany przez *lpRect* i jest przechowywany w `CRgn` obiekcie.
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Po zakończeniu korzystania z regionu `CreateEllipticRgnIndirect` utworzonego za pomocą funkcji, aplikacja powinna wybrać `DeleteObject` region z kontekstu urządzenia i użyć funkcji, aby go usunąć.
+Po zakończeniu korzystania z regionu utworzonego za pomocą `CreateEllipticRgnIndirect` funkcji aplikacja powinna wybrać region z kontekstu urządzenia i użyć `DeleteObject` funkcji, aby ją usunąć.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).
+  Zobacz przykład dla [CRgn:: CreateRectRgnIndirect](#createrectrgnindirect).
 
-## <a name="crgncreatefromdata"></a><a name="createfromdata"></a>CRgn::CreateFromData
+## <a name="crgncreatefromdata"></a><a name="createfromdata"></a> CRgn:: CreateFromData
 
 Tworzy region z danego regionu i danych transformacji.
 
@@ -296,14 +297,14 @@ BOOL CreateFromData(
 
 ### <a name="parameters"></a>Parametry
 
-*lpXForm (lpXForm)*<br/>
-Wskazuje strukturę [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)ata, która definiuje transformację, która ma być wykonywana w regionie. Jeśli ten wskaźnik ma wartość NULL, używana jest transformacja tożsamości.
+*lpXForm*<br/>
+Wskazuje strukturę usługi [Xform](/windows/win32/api/wingdi/ns-wingdi-xform)ATA, która definiuje transformację do wykonania w regionie. Jeśli ten wskaźnik ma wartość NULL, zostanie użyta transformacja tożsamości.
 
-*Ncount*<br/>
-Określa liczbę bajtów wskazywali przez *pRgnData*.
+*nCount*<br/>
+Określa liczbę bajtów wskazywanych przez *pRgnData*.
 
 *pRgnData*<br/>
-Wskazuje strukturę danych [RGNDATA,](/windows/win32/api/wingdi/ns-wingdi-rgndata) która zawiera dane regionu.
+Wskazuje strukturę danych [rgnData](/windows/win32/api/wingdi/ns-wingdi-rgndata) , która zawiera dane regionu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -311,11 +312,11 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Aplikacja może pobierać dane dla regionu, wywołując `CRgn::GetRegionData` funkcję.
+Aplikacja może pobrać dane dla regionu przez wywołanie `CRgn::GetRegionData` funkcji.
 
-## <a name="crgncreatefrompath"></a><a name="createfrompath"></a>CRgn::CreateFromPath
+## <a name="crgncreatefrompath"></a><a name="createfrompath"></a> CRgn:: CreateFromPath
 
-Tworzy region ze ścieżki wybranej w danym kontekście urządzenia.
+Tworzy region na podstawie ścieżki wybranej w danym kontekście urządzenia.
 
 ```
 BOOL CreateFromPath(CDC* pDC);
@@ -323,8 +324,8 @@ BOOL CreateFromPath(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-Identyfikuje kontekst urządzenia, który zawiera zamkniętą ścieżkę.
+*Domeny*<br/>
+Identyfikuje kontekst urządzenia, który zawiera ścieżkę zamkniętą.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -332,11 +333,11 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Kontekst urządzenia identyfikowany przez parametr *pDC* musi zawierać zamkniętą ścieżkę. Po `CreateFromPath` przekonwertowaniu ścieżki na region system Windows odrzuca zamkniętą ścieżkę z kontekstu urządzenia.
+Kontekst urządzenia identyfikowany przez parametr *PDC* musi zawierać ścieżkę zamkniętą. Po `CreateFromPath` przekonwertowaniu ścieżki do regionu system Windows odrzuca ścieżkę zamkniętą z kontekstu urządzenia.
 
-## <a name="crgncreatepolygonrgn"></a><a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn
+## <a name="crgncreatepolygonrgn"></a><a name="createpolygonrgn"></a> CRgn:: CreatePolygonRgn
 
-Tworzy region wielokątny.
+Tworzy region wielokąta.
 
 ```
 BOOL CreatePolygonRgn(
@@ -347,8 +348,8 @@ BOOL CreatePolygonRgn(
 
 ### <a name="parameters"></a>Parametry
 
-*lpPunkty*<br/>
-Wskazuje tablicę `POINT` struktur lub tablicę `CPoint` obiektów. Każda struktura określa współrzędną x i współrzędną y jednego wierzchołka wielokąta. Struktura `POINT` ma następującą formę:
+*lpPoints*<br/>
+Wskazuje tablicę `POINT` struktur lub tablicę `CPoint` obiektów. Każda struktura Określa współrzędną x i Współrzędne y jednego wierzchołka wielokąta. `POINT`Struktura ma następującą postać:
 
 ```cpp
 typedef struct tagPOINT {
@@ -357,33 +358,33 @@ typedef struct tagPOINT {
 } POINT;
 ```
 
-*Ncount*<br/>
-Określa liczbę `POINT` struktur lub `CPoint` obiektów w tablicy wskazywionej przez punkty *lp*.
+*nCount*<br/>
+Określa liczbę `POINT` struktur lub `CPoint` obiektów w tablicy wskazywanych przez *lpPoints*.
 
 *nMode*<br/>
-Określa tryb napełniania dla regionu. Ten parametr może być alternatywny lub nawijany.
+Określa tryb wypełniania dla regionu. Ten parametr może być ALTERNATYWą lub ZAMKNIĘCIEm.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli operacja powiodła się; w przeciwnym razie 0.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-System zamyka wielokąt automatycznie, jeśli to konieczne, rysując linię od ostatniego wierzchołka do pierwszego. Wynikowy region jest przechowywany `CRgn` w obiekcie.
+System automatycznie zamknie Wielokąt, w razie potrzeby, rysując linię od ostatniego wierzchołka do pierwszego. Ten region jest przechowywany w `CRgn` obiekcie.
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Gdy tryb wypełniania wielokątów jest alternatywny, system wypełnia obszar między nieparzystymi i parzystymi bokami wielokątów w każdej linii skanowania. Oznacza to, że system wypełnia obszar między pierwszą i drugą stroną, między trzecią i czwartą stroną i tak dalej.
+Gdy tryb wypełniania wielokątów jest ALTERNATYWny, system wypełnia obszar między nieparzystymi i parzystymi krawędziami w każdym wierszu skanowania. Oznacza to, że system wypełnia obszar między pierwszą i drugą stroną, między trzecią i czwartą stroną itd.
 
-Gdy tryb wypełniania wielokąta jest KRĘTY, system używa kierunku, w którym rysowano figurę, aby określić, czy wypełnić obszar. Każdy segment linii w wielokąt jest rysowany w kierunku zgodnym z ruchem wskazówek zegara lub w kierunku przeciwnym do ruchu wskazówek zegara. Za każdym razem, gdy wyimaginowana linia rysowana z zamkniętego obszaru na zewnątrz figury przechodzi przez segment linii zgodnie z ruchem wskazówek zegara, liczba jest zwiększana. Gdy linia przechodzi przez segment linii przeciwnej do ruchu wskazówek zegara, liczba jest zmniejszana. Obszar jest wypełniany, jeśli liczba jest niezerowa, gdy linia osiągnie zewnętrzną część rysunku.
+Gdy tryb wypełniania wielokątów jest ZAWIJAny, system używa kierunku, w którym rysowany jest rysunek, aby określić, czy ma zostać wypełniony obszar. Każdy segment linii w wielokąta jest rysowany w trybie w prawo lub w lewo. Za każdym razem, gdy linia urojona rysowana od obszaru zamkniętego do zewnątrz przechodzą przez segment linii w prawo, liczba jest zwiększana. Gdy linia przechodzi przez segment linii w lewo, licznik jest zmniejszany. Obszar jest wypełniany, jeśli liczba jest różna od zera, gdy linia osiągnie się poza rysunkiem.
 
-Po zakończeniu aplikacji przy użyciu regionu utworzonego za `CreatePolygonRgn` pomocą funkcji, należy wybrać `DeleteObject` region z kontekstu urządzenia i użyć funkcji, aby go usunąć.
+Gdy aplikacja została ukończona przy użyciu regionu utworzonego za pomocą `CreatePolygonRgn` funkcji, powinien wybrać region z kontekstu urządzenia i użyć `DeleteObject` funkcji, aby ją usunąć.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]
 
-## <a name="crgncreatepolypolygonrgn"></a><a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn
+## <a name="crgncreatepolypolygonrgn"></a><a name="createpolypolygonrgn"></a> CRgn:: CreatePolyPolygonRgn
 
 Tworzy region składający się z serii zamkniętych wielokątów.
 
@@ -397,8 +398,8 @@ BOOL CreatePolyPolygonRgn(
 
 ### <a name="parameters"></a>Parametry
 
-*lpPunkty*<br/>
-Wskazuje tablicę `POINT` struktur lub tablicę `CPoint` obiektów definiuj wierzchołki wielokątów. Każdy wielokąt musi być jawnie zamknięty, ponieważ system nie zamyka ich automatycznie. Wielokąty są określane kolejno. Struktura `POINT` ma następującą formę:
+*lpPoints*<br/>
+Wskazuje tablicę `POINT` struktur lub tablicę `CPoint` obiektów, która definiuje wierzchołki wielokątów. Każdy Wielokąt musi być jawnie zamknięty, ponieważ system nie zamyka ich automatycznie. Wielokąty są określane po kolei. `POINT`Struktura ma następującą postać:
 
 ```cpp
 typedef struct tagPOINT {
@@ -408,35 +409,35 @@ typedef struct tagPOINT {
 ```
 
 *lpPolyCounts*<br/>
-Wskazuje tablicę liczby całkowitych. Pierwsza liczba całkowita określa liczbę wierzchołków w pierwszym wielokąta w *tablicy lpPoints,* druga liczba całkowita określa liczbę wierzchołków w drugim wielokącie i tak dalej.
+Wskazuje tablicę liczb całkowitych. Pierwsza liczba całkowita określa liczbę wierzchołków w pierwszym wielokąta w tablicy *lpPoints* , drugą liczbę całkowitą określa liczbę wierzchołków w drugim wielokąta itd.
 
-*Ncount*<br/>
-Określa całkowitą liczbę liczb całkowitych w *tablicy lpPolyCounts.*
+*nCount*<br/>
+Określa łączną liczbę liczb całkowitych w tablicy *lpPolyCounts* .
 
-*nPolyFillMode (Polski)*<br/>
-Określa tryb wypełniania wielokątów. Wartość ta może być alternatywna lub nawijana.
+*nPolyFillMode*<br/>
+Określa tryb wypełniania wielokątów. Ta wartość może być ALTERNATYWą lub ZAMKNIĘCIEm.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli operacja powiodła się; w przeciwnym razie 0.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Wynikowy region jest przechowywany `CRgn` w obiekcie.
+Ten region jest przechowywany w `CRgn` obiekcie.
 
-Wielokąty mogą być rozłączne lub mogą się pokrywać.
+Wielokąty mogą być rozłączane lub mogą się nakładać.
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Gdy tryb wypełniania wielokątów jest alternatywny, system wypełnia obszar między nieparzystymi i parzystymi bokami wielokątów w każdej linii skanowania. Oznacza to, że system wypełnia obszar między pierwszą i drugą stroną, między trzecią i czwartą stroną i tak dalej.
+Gdy tryb wypełniania wielokątów jest ALTERNATYWny, system wypełnia obszar między nieparzystymi i parzystymi krawędziami w każdym wierszu skanowania. Oznacza to, że system wypełnia obszar między pierwszą i drugą stroną, między trzecią i czwartą stroną itd.
 
-Gdy tryb wypełniania wielokąta jest KRĘTY, system używa kierunku, w którym rysowano figurę, aby określić, czy wypełnić obszar. Każdy segment linii w wielokąt jest rysowany w kierunku zgodnym z ruchem wskazówek zegara lub w kierunku przeciwnym do ruchu wskazówek zegara. Za każdym razem, gdy wyimaginowana linia rysowana z zamkniętego obszaru na zewnątrz figury przechodzi przez segment linii zgodnie z ruchem wskazówek zegara, liczba jest zwiększana. Gdy linia przechodzi przez segment linii przeciwnej do ruchu wskazówek zegara, liczba jest zmniejszana. Obszar jest wypełniany, jeśli liczba jest niezerowa, gdy linia osiągnie zewnętrzną część rysunku.
+Gdy tryb wypełniania wielokątów jest ZAWIJAny, system używa kierunku, w którym rysowany jest rysunek, aby określić, czy ma zostać wypełniony obszar. Każdy segment linii w wielokąta jest rysowany w trybie w prawo lub w lewo. Za każdym razem, gdy linia urojona rysowana od obszaru zamkniętego do zewnątrz przechodzą przez segment linii w prawo, liczba jest zwiększana. Gdy linia przechodzi przez segment linii w lewo, licznik jest zmniejszany. Obszar jest wypełniany, jeśli liczba jest różna od zera, gdy linia osiągnie się poza rysunkiem.
 
-Po zakończeniu aplikacji przy użyciu regionu utworzonego za pomocą `CreatePolyPolygonRgn` funkcji, należy wybrać region z kontekstu urządzenia i użyć [CGDIObject::DeleteObject funkcji członkowskiej,](../../mfc/reference/cgdiobject-class.md#deleteobject) aby go usunąć.
+Gdy aplikacja została ukończona przy użyciu regionu utworzonego za pomocą `CreatePolyPolygonRgn` funkcji, należy wybrać region z kontekstu urządzenia i użyć funkcji [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) , aby ją usunąć.
 
-## <a name="crgncreaterectrgn"></a><a name="createrectrgn"></a>CRgn::CreateRectrgn
+## <a name="crgncreaterectrgn"></a><a name="createrectrgn"></a> CRgn:: CreateRectRgn
 
-Tworzy prostokątny obszar, który jest `CRgn` przechowywany w obiekcie.
+Tworzy prostokątny region, który jest przechowywany w `CRgn` obiekcie.
 
 ```
 BOOL CreateRectRgn(
@@ -451,34 +452,34 @@ BOOL CreateRectRgn(
 *x1*<br/>
 Określa logiczną współrzędną x lewego górnego rogu regionu.
 
-*y1*<br/>
+*Y1*<br/>
 Określa logiczną współrzędną y lewego górnego rogu regionu.
 
 *x2*<br/>
 Określa logiczną współrzędną x w prawym dolnym rogu regionu.
 
-*y2*<br/>
+*Y2*<br/>
 Określa logiczną współrzędną y w prawym dolnym rogu regionu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli operacja powiodła się; w przeciwnym razie 0.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Po zakończeniu korzystania z regionu utworzonego przez `CreateRectRgn`aplikację należy użyć [CGDIObject::DeleteObject funkcji członkowskiej,](../../mfc/reference/cgdiobject-class.md#deleteobject) aby usunąć region.
+Po zakończeniu korzystania z regionu utworzonego przez `CreateRectRgn` program, aby usunąć region, aplikacja powinna używać funkcji członkowskiej [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]
 
-Aby uzyskać dodatkowy przykład, zobacz [CRgn::CombineRgn](#combinergn).
+Aby uzyskać dodatkowy przykład, zobacz [CRgn:: CombineRgn](#combinergn).
 
-## <a name="crgncreaterectrgnindirect"></a><a name="createrectrgnindirect"></a>CRgn::CreateRectrgnIndirect
+## <a name="crgncreaterectrgnindirect"></a><a name="createrectrgnindirect"></a> CRgn:: CreateRectRgnIndirect
 
-Tworzy prostokątny obszar, który jest `CRgn` przechowywany w obiekcie.
+Tworzy prostokątny region, który jest przechowywany w `CRgn` obiekcie.
 
 ```
 BOOL CreateRectRgnIndirect(LPCRECT lpRect);
@@ -486,8 +487,8 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*Lprect*<br/>
-Wskazuje strukturę `RECT` `CRect` lub obiekt zawierający współrzędne logiczne lewego górnego i prawego dolnego rogu regionu. Struktura `RECT` ma następującą formę:
+*lpRect*<br/>
+Wskazuje `RECT` strukturę lub `CRect` obiekt, który zawiera współrzędne logiczne lewego górnego i prawego dolnego rogu regionu. `RECT`Struktura ma następującą postać:
 
 ```cpp
 typedef struct tagRECT {
@@ -500,21 +501,21 @@ typedef struct tagRECT {
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli operacja powiodła się; w przeciwnym razie 0.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Po zakończeniu korzystania z regionu utworzonego przez `CreateRectRgnIndirect`aplikację należy użyć [CGDIObject::DeleteObject funkcji członkowskiej,](../../mfc/reference/cgdiobject-class.md#deleteobject) aby usunąć region.
+Po zakończeniu korzystania z regionu utworzonego przez `CreateRectRgnIndirect` program, aby usunąć region, aplikacja powinna używać funkcji członkowskiej [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]
 
-## <a name="crgncreateroundrectrgn"></a><a name="createroundrectrgn"></a>CRgn::CreateRoundRectrgn
+## <a name="crgncreateroundrectrgn"></a><a name="createroundrectrgn"></a> CRgn:: CreateRoundRectRgn
 
-Tworzy prostokątny obszar z zaokrąglonymi `CRgn` narożnikami, który jest przechowywany w obiekcie.
+Tworzy prostokątny region z zaokrąglonymi rogami, które są przechowywane w `CRgn` obiekcie.
 
 ```
 BOOL CreateRoundRectRgn(
@@ -531,36 +532,36 @@ BOOL CreateRoundRectRgn(
 *x1*<br/>
 Określa logiczną współrzędną x lewego górnego rogu regionu.
 
-*y1*<br/>
+*Y1*<br/>
 Określa logiczną współrzędną y lewego górnego rogu regionu.
 
 *x2*<br/>
 Określa logiczną współrzędną x w prawym dolnym rogu regionu.
 
-*y2*<br/>
+*Y2*<br/>
 Określa logiczną współrzędną y w prawym dolnym rogu regionu.
 
 *x3*<br/>
-Określa szerokość elipsy używanej do tworzenia zaokrąglonych narożników.
+Określa szerokość elipsy używanej do tworzenia zaokrąglonych rogów.
 
-*3.*<br/>
-Określa wysokość elipsy używanej do tworzenia zaokrąglonych narożników.
+*Y3*<br/>
+Określa wysokość elipsy używanej do tworzenia zaokrąglonych rogów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli operacja powiodła się; w przeciwnym razie 0.
+Niezerowe, jeśli operacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Rozmiar regionu jest ograniczony do 32 767 na 32 767 jednostek logicznych lub 64K pamięci, w zależności od tego, która z tych wartości jest mniejsza.
+Rozmiar regionu jest ograniczony do 32 767 przez 32 767 jednostek logicznych lub 64 KB pamięci, w zależności od tego, co jest mniejsze.
 
-Po zakończeniu aplikacji przy użyciu regionu utworzonego za pomocą `CreateRoundRectRgn` funkcji, należy wybrać region z kontekstu urządzenia i użyć [CGDIObject::DeleteObject funkcji członkowskiej,](../../mfc/reference/cgdiobject-class.md#deleteobject) aby go usunąć.
+Gdy aplikacja została ukończona przy użyciu regionu utworzonego za pomocą `CreateRoundRectRgn` funkcji, należy wybrać region z kontekstu urządzenia i użyć funkcji [CGDIObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) , aby ją usunąć.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]
 
-## <a name="crgncrgn"></a><a name="crgn"></a>CRgn::CRgn
+## <a name="crgncrgn"></a><a name="crgn"></a> CRgn:: CRgn
 
 Konstruuje `CRgn` obiekt.
 
@@ -570,15 +571,15 @@ CRgn();
 
 ### <a name="remarks"></a>Uwagi
 
-Element `m_hObject` członkowski danych nie zawiera prawidłowego regionu GDI systemu Windows, `CRgn` dopóki obiekt nie zostanie zainicjowany przy jednej lub kilku innych funkcjach członkowskich.
+`m_hObject`Element członkowski danych nie zawiera prawidłowego regionu GDI systemu Windows, dopóki obiekt nie zostanie zainicjowany przy użyciu co najmniej jednej z innych `CRgn` funkcji Członkowskich.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRgn::CreateRoundRectRgn](#createroundrectrgn).
+  Zobacz przykład dla [CRgn:: CreateRoundRectRgn](#createroundrectrgn).
 
-## <a name="crgnequalrgn"></a><a name="equalrgn"></a>CRgn::Equalrgn
+## <a name="crgnequalrgn"></a><a name="equalrgn"></a> CRgn:: EqualRgn
 
-Określa, czy dany region jest odpowiednikiem `CRgn` regionu przechowywanego w obiekcie.
+Określa, czy dany region jest odpowiednikiem regionu przechowywanego w `CRgn` obiekcie.
 
 ```
 BOOL EqualRgn(CRgn* pRgn) const;
@@ -591,15 +592,15 @@ Identyfikuje region.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli oba regiony są równoważne; w przeciwnym razie 0.
+Różne od zera, jeśli dwa regiony są równoważne; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]
 
-## <a name="crgnfromhandle"></a><a name="fromhandle"></a>CRgn::OdRążej
+## <a name="crgnfromhandle"></a><a name="fromhandle"></a> CRgn:: FromHandle
 
-Zwraca wskaźnik do `CRgn` obiektu po podaniu dojścia do regionu systemu Windows.
+Zwraca wskaźnik do obiektu, `CRgn` gdy ma dojść do regionu systemu Windows.
 
 ```
 static CRgn* PASCAL FromHandle(HRGN hRgn);
@@ -607,18 +608,18 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 
 ### <a name="parameters"></a>Parametry
 
-*hRgn ( hRgn )*<br/>
-Określa dojście do regionu systemu Windows.
+*hRgn*<br/>
+Określa uchwyt do regionu systemu Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CRgn` obiektu. Jeśli funkcja nie powiodła się, zwracana wartość to NULL.
+Wskaźnik do `CRgn` obiektu. Jeśli funkcja zakończyła się niepowodzeniem, zwracana wartość ma wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `CRgn` obiekt nie jest jeszcze dołączony do `CRgn` uchwytu, tworzony i dołączany jest obiekt tymczasowy. Ten `CRgn` obiekt tymczasowy jest prawidłowy tylko do następnego czasu, gdy aplikacja ma czas bezczynny w pętli zdarzeń, w którym to czasie wszystkie tymczasowe obiekty graficzne są usuwane. Innym sposobem mówienia jest to, że obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania komunikatu okna.
+Jeśli `CRgn` obiekt nie jest jeszcze dołączony do dojścia, `CRgn` tworzony jest obiekt tymczasowy i jest on dołączony. Ten `CRgn` obiekt tymczasowy jest prawidłowy tylko do następnego czasu, gdy aplikacja ma czas bezczynności w pętli zdarzeń, podczas gdy wszystkie tymczasowe obiekty graficzne są usuwane. Innym sposobem wymawiania tego jest to, że obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania jednego komunikatu w oknie.
 
-## <a name="crgngetregiondata"></a><a name="getregiondata"></a>CRgn::GetRegionData
+## <a name="crgngetregiondata"></a><a name="getregiondata"></a> CRgn:: GetRegionData
 
 Wypełnia określony bufor danymi opisującymi region.
 
@@ -631,22 +632,22 @@ int GetRegionData(
 ### <a name="parameters"></a>Parametry
 
 *lpRgnData*<br/>
-Wskazuje strukturę danych [RGNDATA,](/windows/win32/api/wingdi/ns-wingdi-rgndata) która odbiera informacje. Jeśli ten parametr ma wartość NULL, zwracana wartość zawiera liczbę bajtów potrzebnych dla danych regionu.
+Wskazuje strukturę danych [rgnData](/windows/win32/api/wingdi/ns-wingdi-rgndata) , która otrzymuje informacje. Jeśli ten parametr ma wartość NULL, wartość zwracana zawiera liczbę bajtów wymaganych dla danych regionu.
 
-*Ncount*<br/>
-Określa rozmiar w bajtach buforu *lpRgnData.*
+*nCount*<br/>
+Określa rozmiar (w bajtach) bufora *lpRgnData* .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja powiedzie się i *nCount* określa odpowiednią liczbę bajtów, zwracana wartość jest zawsze *nCount*. Jeśli funkcja nie powiedzie się lub *jeśli nCount* określa mniej niż odpowiednią liczbę bajtów, zwracana wartość wynosi 0 (błąd).
+Jeśli funkcja się powiedzie i *nCount* określa odpowiednią liczbę bajtów, zwracana wartość jest zawsze *nCount*. Jeśli funkcja nie powiedzie się lub jeśli *nCount* określa mniejszą liczbę bajtów, wartość zwracana to 0 (błąd).
 
 ### <a name="remarks"></a>Uwagi
 
-Dane te obejmują wymiary prostokątów, które tworzą region. Ta funkcja jest używana `CRgn::CreateFromData` w połączeniu z funkcją.
+Te dane obejmują wymiary prostokątów składających się na region. Ta funkcja jest używana w połączeniu z `CRgn::CreateFromData` funkcją.
 
-## <a name="crgngetrgnbox"></a><a name="getrgnbox"></a>CRgn::GetRgnBox
+## <a name="crgngetrgnbox"></a><a name="getrgnbox"></a> CRgn:: GetRgnBox
 
-Pobiera współrzędne prostokąta obwiedni `CRgn` obiektu.
+Pobiera współrzędne prostokąta związanego z `CRgn` obiektem.
 
 ```
 int GetRgnBox(LPRECT lpRect) const;
@@ -654,8 +655,8 @@ int GetRgnBox(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Lprect*<br/>
-Wskazuje na `RECT` strukturę lub `CRect` obiekt, aby otrzymać współrzędne prostokąta ograniczającego. Struktura `RECT` ma następującą formę:
+*lpRect*<br/>
+Wskazuje `RECT` strukturę lub obiekt, `CRect` Aby otrzymywać współrzędne prostokąta ograniczenia. `RECT`Struktura ma następującą postać:
 
 `typedef struct tagRECT {`
 
@@ -673,21 +674,21 @@ Wskazuje na `RECT` strukturę lub `CRect` obiekt, aby otrzymać współrzędne p
 
 Określa typ regionu. Może to być dowolna z następujących wartości:
 
-- COMPLEXREGION Region ma nakładające się obramowania.
+- Region COMPLEXREGION ma nakładające się obramowania.
 
 - Region NULLREGION jest pusty.
 
-- BŁĄD, `CRgn` obiekt nie określa prawidłowego regionu.
+- Obiekt ERROR nie `CRgn` określa prawidłowego regionu.
 
-- REGION SIMPLEREGION nie ma nakładających się granic.
+- Region SIMPLEREGION nie ma nakładających się obramowań.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRgn::CreatePolygonRgn](#createpolygonrgn).
+  Zobacz przykład dla [CRgn:: CreatePolygonRgn](#createpolygonrgn).
 
-## <a name="crgnoffsetrgn"></a><a name="offsetrgn"></a>CRgn::OffsetRgn
+## <a name="crgnoffsetrgn"></a><a name="offsetrgn"></a> CRgn:: OffsetRgn
 
-Przenosi region przechowywany `CRgn` w obiekcie o określone przesunięcia.
+Przenosi region przechowywany w `CRgn` obiekcie o określone przesunięcia.
 
 ```
 int OffsetRgn(
@@ -699,40 +700,40 @@ int OffsetRgn(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Określa liczbę jednostek, które mają być przesuwne w lewo lub w prawo.
+*x*<br/>
+Określa liczbę jednostek do przeniesienia w lewo lub w prawo.
 
 *Y*<br/>
-Określa liczbę jednostek, które mają być przesuń w górę lub w dół.
+Określa liczbę jednostek, które mają zostać przesunięte w górę lub w dół.
 
-*Punkt*<br/>
-Współrzędna x *punktu* określa liczbę jednostek, które mają być przesuwne w lewo lub w prawo. Współrzędna y *punktu* określa liczbę jednostek do przesuń w górę lub w dół. Parametr *punktu* może być `POINT` strukturą `CPoint` lub obiektem.
+*moment*<br/>
+Współrzędna x *punktu* określa liczbę jednostek do przeniesienia w lewo lub w prawo. Współrzędna y *punktu* określa liczbę jednostek do przeniesienia w górę lub w dół. Parametr *Point* może być `POINT` strukturą lub `CPoint` obiektem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Typ nowego regionu. Może to być jedna z następujących wartości:
 
-- COMPLEXREGION Region ma nakładające się obramowania.
+- Region COMPLEXREGION ma nakładające się obramowania.
 
-- Uchwyt regionu BŁĄD jest nieprawidłowy.
+- Dojście do regionu błędu jest nieprawidłowe.
 
 - Region NULLREGION jest pusty.
 
-- REGION SIMPLEREGION nie ma nakładających się granic.
+- Region SIMPLEREGION nie ma nakładających się obramowań.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja przesuwa jednostki regionu *x* wzdłuż osi x i *y* wzdłuż osi y.
+Funkcja przenosi jednostki *x* regionu wzdłuż osi x i *y* wzdłuż osi y.
 
-Wartości współrzędnych regionu muszą być mniejsze lub równe 32 767 i większe lub równe -32 768. Parametry *x* i *y* muszą być starannie dobrane, aby zapobiec nieprawidłowym współrzędne regionu.
+Wartości współrzędnych regionu muszą być mniejsze niż lub równe 32 767 i większe niż lub równe-32 768. Parametry *x* i *y* muszą być starannie wybrane, aby zapobiec nieprawidłowym współrzędnymi regionów.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CRgn::CreateEllipticRgn](#createellipticrgn).
+  Zobacz przykład dla [CRgn:: CreateEllipticRgn](#createellipticrgn).
 
-## <a name="crgnoperator-hrgn"></a><a name="operator_hrgn"></a>CRgn::operator HRGN
+## <a name="crgnoperator-hrgn"></a><a name="operator_hrgn"></a> CRgn:: operator HRGN
 
-Użyj tego operatora, aby uzyskać dołączony uchwyt `CRgn` GDI systemu Windows obiektu.
+Użyj tego operatora, aby uzyskać dojście do dołączonego interfejsu GDI systemu Windows `CRgn` .
 
 ```
 operator HRGN() const;
@@ -740,17 +741,17 @@ operator HRGN() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, dojście do obiektu `CRgn` GDI systemu Windows reprezentowanego przez obiekt; w przeciwnym razie NULL.
+Jeśli to się powiedzie, dojście do obiektu GDI systemu Windows reprezentowane przez `CRgn` obiekt; w przeciwnym razie wartość null.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator jest operatorem odlewania, który obsługuje bezpośrednie korzystanie z obiektu HRGN.
+Ten operator jest operatorem rzutowania, który obsługuje bezpośrednie użycie obiektu HRGN.
 
-Aby uzyskać więcej informacji na temat używania obiektów graficznych, zobacz artykuł [Obiekty graficzne](/windows/win32/gdi/graphic-objects) w sdk systemu Windows.
+Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiekty graficzne](/windows/win32/gdi/graphic-objects) w Windows SDK.
 
-## <a name="crgnptinregion"></a><a name="ptinregion"></a>CRgn::PtRegion
+## <a name="crgnptinregion"></a><a name="ptinregion"></a> CRgn::P tInRegion
 
-Sprawdza, czy punkt podany przez *x* i *y* znajduje się w regionie przechowywanym `CRgn` w obiekcie.
+Sprawdza, czy punkt określony przez *x* i *y* znajduje się w regionie przechowywanym w `CRgn` obiekcie.
 
 ```
 BOOL PtInRegion(
@@ -762,22 +763,22 @@ BOOL PtInRegion(POINT point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*x*<br/>
 Określa logiczną współrzędną x punktu do przetestowania.
 
 *Y*<br/>
 Określa logiczną współrzędną y punktu do przetestowania.
 
-*Punkt*<br/>
-Współrzędne *punktu* x- i y określają współrzędne x- i y punktu, aby przetestować wartość. Parametrem *punktu* może być `POINT` struktura `CPoint` lub obiekt.
+*moment*<br/>
+Współrzędne x i y *punktu* określają współrzędne x i y punktu, w którym ma zostać przetestowana wartość. Parametr *Point* może być `POINT` strukturą lub `CPoint` obiektem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli punkt znajduje się w regionie; w przeciwnym razie 0.
+Różne od zera, jeśli punkt znajduje się w regionie; w przeciwnym razie 0.
 
-## <a name="crgnrectinregion"></a><a name="rectinregion"></a>CRgn::RectInRegion
+## <a name="crgnrectinregion"></a><a name="rectinregion"></a> CRgn:: RectInRegion
 
-Określa, czy dowolna część prostokąta określona przez *lpRect* znajduje się `CRgn` w granicach regionu przechowywanego w obiekcie.
+Określa, czy jakakolwiek część prostokąta określona przez *lpRect* znajduje się w granicach regionu przechowywanego w `CRgn` obiekcie.
 
 ```
 BOOL RectInRegion(LPCRECT lpRect) const;
@@ -785,8 +786,8 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Lprect*<br/>
-Wskazuje na `RECT` strukturę lub `CRect` obiekt. Struktura `RECT` ma następującą formę:
+*lpRect*<br/>
+Wskazuje `RECT` strukturę lub `CRect` obiekt. `RECT`Struktura ma następującą postać:
 
 ```cpp
 typedef struct tagRECT {
@@ -799,11 +800,11 @@ typedef struct tagRECT {
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli dowolna część określonego prostokąta znajduje się w granicach regionu; w przeciwnym razie 0.
+Różne od zera, jeśli jakakolwiek część określonego prostokąta znajduje się w granicach regionu; w przeciwnym razie 0.
 
-## <a name="crgnsetrectrgn"></a><a name="setrectrgn"></a>CRgn::SetRectrgn
+## <a name="crgnsetrectrgn"></a><a name="setrectrgn"></a> CRgn:: SetRectRgn
 
-Tworzy prostokątny region.
+Tworzy region prostokątny.
 
 ```cpp
 void SetRectRgn(
@@ -818,25 +819,25 @@ void SetRectRgn(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *x1*<br/>
-Określa współrzędną x lewego górnego rogu prostokątnego regionu.
+Określa współrzędną x lewego górnego rogu prostokąta.
 
-*y1*<br/>
-Określa współrzędną y lewego górnego rogu prostokątnego regionu.
+*Y1*<br/>
+Określa współrzędną y lewego górnego rogu prostokąta.
 
 *x2*<br/>
-Określa współrzędną x w prawym dolnym rogu prostokątnego regionu.
+Określa współrzędną x w prawym dolnym rogu prostokątnego obszaru.
 
-*y2*<br/>
-Określa współrzędną y w prawym dolnym rogu prostokątnego regionu.
+*Y2*<br/>
+Określa współrzędną y prawego dolnego rogu prostokątnego obszaru.
 
-*Lprect*<br/>
-Określa prostokątny obszar. Może być wskaźnikiem do `RECT` struktury `CRect` lub obiektu.
+*lpRect*<br/>
+Określa region prostokątny. Może być wskaźnikiem do `RECT` struktury lub `CRect` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do [CreateRectRgn](#createrectrgn), jednak nie przydziela żadnej dodatkowej pamięci z lokalnej sterty aplikacji systemu Windows. Zamiast tego używa miejsca przydzielonego dla regionu `CRgn` przechowywanego w obiekcie. Oznacza to, `CRgn` że obiekt musi już zostać zainicjowany `SetRectRgn`z prawidłowym regionem systemu Windows przed wywołaniem . Punkty podane przez *x1*, *y1*, *x2*i *y2* określają minimalny rozmiar przydzielonego miejsca.
+W przeciwieństwie do [CreateRectRgn](#createrectrgn), jednak nie przydziela żadnej dodatkowej pamięci ze sterty aplikacji lokalnych systemu Windows. Zamiast tego używa miejsca przydzieloną dla regionu przechowywanego w `CRgn` obiekcie. Oznacza to, że `CRgn` obiekt musi już być zainicjowany z prawidłowym regionem systemu Windows przed wywołaniem `SetRectRgn` . Punkty podane przez *x1*, *Y1*, *X2* i *Y2* określają minimalny rozmiar przydzielonego miejsca.
 
-Użyj tej funkcji zamiast `CreateRectRgn` funkcji elementu członkowskiego, aby uniknąć wywołań do lokalnego menedżera pamięci.
+Użyj tej funkcji zamiast `CreateRectRgn` funkcji członkowskiej, aby uniknąć wywołań Menedżera pamięci lokalnej.
 
 ## <a name="see-also"></a>Zobacz też
 
