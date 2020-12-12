@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2007'
 title: Błąd kompilatora C2007
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2007
 ms.assetid: ecd09d99-5036-408b-9e46-bc15488f049e
-ms.openlocfilehash: 15ac3f76e99b3d101788fdcfd6760f6f9b284f34
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fa2ad780269079ef081f22d2c222e106443200e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298490"
 ---
 # <a name="compiler-error-c2007"></a>Błąd kompilatora C2007
 
-\#zdefiniować składnię
+\#Zdefiniuj składnię
 
-Po `#define`nie jest wyświetlany żaden identyfikator. Aby rozwiązać ten problem, należy użyć identyfikatora.
+Po elemencie nie występuje żaden identyfikator `#define` . Aby rozwiązać ten problem, należy użyć identyfikatora.
 
 Poniższy przykład generuje C2007:
 
