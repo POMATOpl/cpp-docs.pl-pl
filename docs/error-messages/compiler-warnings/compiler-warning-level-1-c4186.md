@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4186'
 title: Ostrzeżenie kompilatora (poziom 1) C4186
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4186
 ms.assetid: caf3f7d8-f305-426b-8d4e-2b96f5c269ea
-ms.openlocfilehash: 6772e384b5908cbe81f85758f86eabe4c8240e6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 08ab6c490c404d9dabef1d5222cd388b5db7a891
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266614"
 ---
 # <a name="compiler-warning-level-1-c4186"></a>Ostrzeżenie kompilatora (poziom 1) C4186
 
-\#atrybutu importu "Attribute" wymaga argumentów Count; Ignoruj
+\#Atrybut import "Attribute" wymaga argumentów Count; Ignoruj
 
-Atrybut `#import` ma nieprawidłową liczbę argumentów.
+`#import`Atrybut ma nieprawidłową liczbę argumentów.
 
 ## <a name="example"></a>Przykład
 
@@ -27,4 +28,4 @@ Atrybut `#import` ma nieprawidłową liczbę argumentów.
 #import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186
 ```
 
-Atrybut `no_namespace` nie przyjmuje argumentów. Atrybut **zmiany nazwy** przyjmuje tylko dwa argumenty.
+`no_namespace`Atrybut nie przyjmuje argumentów. Atrybut **zmiany nazwy** przyjmuje tylko dwa argumenty.
