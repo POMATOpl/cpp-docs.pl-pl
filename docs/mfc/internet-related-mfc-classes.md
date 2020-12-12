@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Internet-Related klas MFC'
 title: Klasy MFC związane z Internetem
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet classes
 ms.assetid: e50c6b39-4b65-4b8a-8101-8934d0780723
-ms.openlocfilehash: 1c784e9ae98e2fb51a31521511967b1755c3ea12
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e1cdbbbb1079ae63d07a6f31c021a2c765f61964
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335855"
 ---
 # <a name="internet-related-mfc-classes"></a>Klasy MFC związane z Internetem
 
@@ -67,4 +68,4 @@ Aby uzyskać informacje dotyczące klas i funkcji związanych z Internetem, zoba
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)
+[Podstawy programowania internetowego MFC](mfc-internet-programming-basics.md)

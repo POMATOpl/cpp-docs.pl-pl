@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDHtmlDialog'
 title: Klasa CDHtmlDialog
 ms.date: 03/27/2019
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cc01c94357d7aac7fa6fa98127628a60746e1e8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa99d10b0d0ff6920f839d7588d80f489b971384
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185287"
 ---
 # <a name="cdhtmldialog-class"></a>Klasa CDHtmlDialog
 
@@ -402,7 +403,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość wymieniana.
 
 ### <a name="example"></a>Przykład
@@ -468,7 +469,7 @@ Wartość określona dla parametru identyfikatora kontrolki HTML.
 *dispId*<br/>
 Identyfikator wysyłania elementu HTML, z którym chcesz wymienić dane.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość wymieniana.
 
 ## <a name="cdhtmldialogddx_dhtml_radio"></a><a name="ddx_dhtml_radio"></a> CDHtmlDialog::D DX_DHtml_Radio
@@ -490,7 +491,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość wymieniana.
 
 ## <a name="cdhtmldialogddx_dhtml_selectindex"></a><a name="ddx_dhtml_selectindex"></a> CDHtmlDialog::D DX_DHtml_SelectIndex
@@ -512,7 +513,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Wartość określona dla parametru kontrolki HTML `id` .
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość wymieniana.
 
 ## <a name="cdhtmldialogddx_dhtml_selectstring"></a><a name="ddx_dhtml_selectstring"></a> CDHtmlDialog::D DX_DHtml_SelectString
@@ -534,7 +535,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość wymieniana.
 
 ## <a name="cdhtmldialogddx_dhtml_selectvalue"></a><a name="ddx_dhtml_selectvalue"></a> CDHtmlDialog::D DX_DHtml_SelectValue
@@ -556,7 +557,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *szId*<br/>
 Wartość określona dla parametru identyfikatora kontrolki HTML.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość wymieniana.
 
 ### <a name="example"></a>Przykład
@@ -703,7 +704,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 
 ### <a name="parameters"></a>Parametry
 
-* \* \* pphtmlDoc* wskaźnik do wskaźnika do dokumentu HTML.
+*\* \* pphtmlDoc* wskaźnik do wskaźnika do dokumentu HTML.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1012,7 +1013,7 @@ BOOL m_bUseHtmlTitle;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli **m**_ **bUseHtmlTitle** ma wartość true, podpis okna dialogowego jest USTAWIANY jako tytuł dokumentu HTML; w przeciwnym razie jest używany podpis w zasobie okna dialogowego.
+Jeśli **m** _ **bUseHtmlTitle** ma wartość true, podpis okna dialogowego jest USTAWIANY jako tytuł dokumentu HTML; w przeciwnym razie jest używany podpis w zasobie okna dialogowego.
 
 ## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a> CDHtmlDialog:: m_nHtmlResID
 

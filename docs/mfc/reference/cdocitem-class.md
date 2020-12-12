@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDocItem'
 title: Klasa CDocItem
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: 438bc2a03239946dbfca53d5f2989c731b682ab0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e126d4351248165a3961739c13cc6ce7330c10c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375623"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185144"
 ---
 # <a name="cdocitem-class"></a>Klasa CDocItem
 
-Klasa podstawowa dla elementów dokumentu, które są składnikami danych dokumentu.
+Klasa bazowa dla elementów dokumentu, które są składnikami danych dokumentu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,30 +34,30 @@ class CDocItem : public CCmdTarget
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDocItem::GetDocument](#getdocument)|Zwraca dokument zawierający element.|
-|[CDocItem::IsBlank](#isblank)|Określa, czy element zawiera jakiekolwiek informacje.|
+|[CDocItem:: GetDocument](#getdocument)|Zwraca dokument zawierający element.|
+|[CDocItem:: ISBLANK](#isblank)|Określa, czy element zawiera wszystkie informacje.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CDocItem`obiekty są używane do reprezentowania elementów OLE w dokumentach klienta i serwera.
+`CDocItem` obiekty służą do reprezentowania elementów OLE w dokumentach klienta i serwera.
 
-Aby uzyskać więcej informacji, zobacz artykuł [Kontenery: Implementowanie kontenera](../../mfc/containers-implementing-a-container.md).
+Aby uzyskać więcej informacji, zobacz [kontenery artykułów: implementowanie kontenera](../../mfc/containers-implementing-a-container.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 `CDocItem`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxole.h
+**Nagłówek:** Afxole. h
 
-## <a name="cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem::GetDocument
+## <a name="cdocitemgetdocument"></a><a name="getdocument"></a> CDocItem:: GetDocument
 
-Wywołanie tej funkcji, aby uzyskać dokument, który zawiera element.
+Wywołaj tę funkcję, aby pobrać dokument zawierający element.
 
 ```
 CDocument* GetDocument() const;
@@ -64,15 +65,15 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do dokumentu, który zawiera element; NULL, jeśli element nie jest częścią dokumentu.
+Wskaźnik do dokumentu zawierającego element; Wartość NULL, jeśli element nie jest częścią dokumentu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zastępowana w klasach pochodnych [COleClientItem](../../mfc/reference/coleclientitem-class.md) i [COleServerItem](../../mfc/reference/coleserveritem-class.md), zwracając wskaźnik do [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)lub [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) obiektu.
+Ta funkcja jest zastępowana w klasach pochodnych [COleClientItem](../../mfc/reference/coleclientitem-class.md) i [COleServerItem](../../mfc/reference/coleserveritem-class.md), zwracająca wskaźnik do obiektu [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)lub [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) .
 
-## <a name="cdocitemisblank"></a><a name="isblank"></a>CDocItem::IsBlank
+## <a name="cdocitemisblank"></a><a name="isblank"></a> CDocItem:: ISBLANK
 
-Wywoływana przez platformę, gdy występuje domyślna serializacja.
+Wywoływane przez platformę, gdy występuje Serializacja domyślna.
 
 ```
 virtual BOOL IsBlank() const;
@@ -80,13 +81,13 @@ virtual BOOL IsBlank() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli element nie zawiera żadnych informacji; w przeciwnym razie 0.
+Niezerowe, jeśli element nie zawiera żadnych informacji; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `CDocItem` obiekty nie są puste. [COleClientItem](../../mfc/reference/coleclientitem-class.md) obiekty są czasami puste, ponieważ `CDocItem`pochodzą bezpośrednio z . Jednak [COleServerItem](../../mfc/reference/coleserveritem-class.md) obiekty są zawsze puste. Domyślnie aplikacje OLE `COleClientItem` zawierające obiekty, które nie mają zakresu x lub y są serializowane. Odbywa się to przez zwrócenie true z `IsBlank` zastąpienia, gdy element nie ma zakresu x lub y.
+Domyślnie `CDocItem` obiekty nie są puste. Obiekty [COleClientItem](../../mfc/reference/coleclientitem-class.md) są czasami puste, ponieważ pochodzą bezpośrednio z programu `CDocItem` . Jednak obiekty [COleServerItem](../../mfc/reference/coleserveritem-class.md) są zawsze puste. Domyślnie aplikacje OLE zawierające `COleClientItem` obiekty, które nie mają zakresu x lub y, są serializowane. Jest to realizowane przez zwrócenie wartości TRUE z przesłonięcia, `IsBlank` gdy element nie ma zakresu x lub y.
 
-Zastąd w tej funkcji, jeśli chcesz zaimplementować inne akcje podczas serializacji.
+Zastąp tę funkcję, jeśli chcesz zaimplementować inne akcje podczas serializacji.
 
 ## <a name="see-also"></a>Zobacz też
 

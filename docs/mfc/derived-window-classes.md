@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pochodne klasy okien'
 title: Pochodne klasy okien
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-ms.openlocfilehash: c84284b765e740fa0a13972e9902e7737e15bbab
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9219267b5351f972257d9770f8e8b38039b85788
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335900"
 ---
 # <a name="derived-window-classes"></a>Pochodne klasy okien
 
@@ -56,7 +57,7 @@ Okna podrzędne zawierające formanty. Przykłady obejmują paski narzędzi i pa
 
 Zapoznaj się z [wykresem hierarchii MFC](hierarchy-chart.md) w *dokumentacji MFC*. Widoki są objaśnione w temacie [Document/View Architecture](document-view-architecture.md). Okna dialogowe są wyjaśnione [w oknach dialogowych](dialog-boxes.md).
 
-## <a name="creating-your-own-special-purpose-window-classes"></a>Tworzenie własnych klas okien specjalnego przeznaczenia
+## <a name="creating-your-own-special-purpose-window-classes"></a>Tworzenie własnych klas okna Special-Purpose
 
 Oprócz klas okien dostarczonych przez bibliotekę klas, mogą być potrzebne specjalne okna podrzędne. Aby utworzyć takie okno, należy utworzyć własną klasę pochodną [CWnd](reference/cwnd-class.md)i uczynić ją oknem podrzędnym ramki lub widoku. Należy pamiętać, że struktura zarządza zakresem obszaru klienta okna ramki dokumentu. Większość obszaru klienta jest zarządzana przez widok, ale inne okna, takie jak paski sterowania lub własne niestandardowe okna, mogą udostępniać miejsce z widokiem. Może być konieczne współdziałanie z mechanizmami w klasach [CView](reference/cview-class.md) i [CControlBar](reference/ccontrolbar-class.md) w celu umieszczenia okien podrzędnych w obszarze klienckim okna ramki.
 
@@ -64,4 +65,4 @@ Oprócz klas okien dostarczonych przez bibliotekę klas, mogą być potrzebne sp
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obiekty okien](window-objects.md)
+[Obiekty okna](window-objects.md)

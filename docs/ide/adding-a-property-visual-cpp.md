@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie właściwości'
 title: Dodawanie właściwości
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bc5a93d42e8694d000da11cd667d48812a075f27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504693"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208089"
 ---
 # <a name="add-a-property"></a>Dodawanie właściwości
 
@@ -73,11 +74,11 @@ Użyj tego kreatora, aby dodać właściwość do interfejsu.
 
 - **Nazwa zmiennej**
 
-  Tylko MFC dispinterfaces. Dostępne tylko wtedy, gdy w obszarze **Typ implementacji**określono **zmienną członkowską** . Ustawia nazwę zmiennej członkowskiej, z którą skojarzona jest właściwość. Domyślnie nazwa zmiennej jest ustawiona na `m_` *PropertyName*. Można edytować tę nazwę.
+  Tylko MFC dispinterfaces. Dostępne tylko wtedy, gdy w obszarze **Typ implementacji** określono **zmienną członkowską** . Ustawia nazwę zmiennej członkowskiej, z którą skojarzona jest właściwość. Domyślnie nazwa zmiennej jest ustawiona na `m_` *PropertyName*. Można edytować tę nazwę.
 
 - **Funkcja powiadomień**
 
-  Tylko MFC dispinterfaces. Dostępne tylko wtedy, gdy w obszarze **Typ implementacji**określono **zmienną członkowską** . Ustawia nazwę funkcji powiadomień wywoływanej, jeśli właściwość zostanie zmieniona. Domyślnie nazwa funkcji powiadomień jest ustawiona na `On` *PropertyName* `Changed` . Można edytować tę nazwę.
+  Tylko MFC dispinterfaces. Dostępne tylko wtedy, gdy w obszarze **Typ implementacji** określono **zmienną członkowską** . Ustawia nazwę funkcji powiadomień wywoływanej, jeśli właściwość zostanie zmieniona. Domyślnie nazwa funkcji powiadomień jest ustawiona na `On` *PropertyName* `Changed` . Można edytować tę nazwę.
 
 - **Get, funkcja**
 
@@ -93,17 +94,17 @@ Użyj tego kreatora, aby dodać właściwość do interfejsu.
 
   |Typ implementacji|Opis|
   |-------------------------|-----------------|
-  |**Stanu**|Określa implementację giełdową właściwości wybranej w polu **Nazwa właściwości**. Domyślnie. Aby uzyskać więcej informacji, zobacz [Właściwości giełdowe](#stock-properties).<br /><br /> W przypadku określenia **akcji**, **Typ właściwości**, **Typ parametru**i **Nazwa parametru** są wygaszone.|
+  |**Stanu**|Określa implementację giełdową właściwości wybranej w polu **Nazwa właściwości**. Domyślnie. Aby uzyskać więcej informacji, zobacz [Właściwości giełdowe](#stock-properties).<br /><br /> W przypadku określenia **akcji**, **Typ właściwości**, **Typ parametru** i **Nazwa parametru** są wygaszone.|
   |**Zmienna członkowska**|Określa, że właściwość jest dodawana jako zmienna członkowska. Możesz dodać właściwości niestandardowe lub większość właściwości podstawowych jako zmienne składowe. Nie można określić **zmiennej składowej** dla `Caption` `hWnd` właściwości, i `Text` .<br /><br /> Zawiera nazwy domyślne w obszarze **Nazwa zmiennej** i **Funkcja powiadomień**. Można edytować tę nazwę.|
   |**Metody get/set**|Określa, że właściwość jest domyślnie dodawana jako `Get` Funkcja *PropertyName* i `Set` *PropertyName* . Te nazwy są wyświetlane w obszarze **Pobierz funkcję** i **Ustaw funkcję**.<br /><br /> Można zmienić domyślny **Typ właściwości**, który przekazuje wartość funkcji get. Można określić parametry dla `Get` `Set` funkcji i.|
 
 - **Get, funkcja**
 
-  Dla interfejsów ATL. Ustawia właściwość jako czytelną; oznacza to, że tworzy `Get` metodę pobierania tej właściwości z obiektu. Wybierz pozycję **Get**, **Put**lub oba.
+  Dla interfejsów ATL. Ustawia właściwość jako czytelną; oznacza to, że tworzy `Get` metodę pobierania tej właściwości z obiektu. Wybierz pozycję **Get**, **Put** lub oba.
 
 - **Put — funkcja**
 
-  Tylko interfejsy ATL. Ustawia właściwość do zapisu; oznacza to, że tworzy `Put` metodę ustawiania lub "umieszczania" tej właściwości obiektu. Wybierz pozycję **Get**, **Put**lub oba. W przypadku wybrania tej opcji można wybrać jeden z następujących dwóch sposobów implementacji metody:
+  Tylko interfejsy ATL. Ustawia właściwość do zapisu; oznacza to, że tworzy `Put` metodę ustawiania lub "umieszczania" tej właściwości obiektu. Wybierz pozycję **Get**, **Put** lub oba. W przypadku wybrania tej opcji można wybrać jeden z następujących dwóch sposobów implementacji metody:
 
   |Opcja|Opis|
   |------------|-----------------|
@@ -125,7 +126,7 @@ Użyj tego kreatora, aby dodać właściwość do interfejsu.
 
 - **Nazwa parametru**
 
-  Ustawia nazwę parametru, który jest dodawany do właściwości, jeśli właściwość ma parametry. Po wybraniu opcji **Dodaj**Nazwa parametru zostanie wyświetlona na **liście parametrów**.
+  Ustawia nazwę parametru, który jest dodawany do właściwości, jeśli właściwość ma parametry. Po wybraniu opcji **Dodaj** Nazwa parametru zostanie wyświetlona na **liście parametrów**.
 
 - **Lista parametrów**
 
@@ -157,7 +158,7 @@ Użyj tej strony Kreatora dodawania właściwości, aby określić ustawienia j�
 
 - `helpstring`
 
-  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Domyślnie jest ono ustawione na **`property`** &nbsp; * &nbsp; nazwę właściwości*. Zobacz [HelpString](/windows/win32/Midl/helpstring) w *dokumentacji MIDL*.
+  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Domyślnie jest ono ustawione na **`property`** &nbsp; *&nbsp; nazwę właściwości*. Zobacz [HelpString](/windows/win32/Midl/helpstring) w *dokumentacji MIDL*.
 
 ### <a name="other-options"></a>Inne opcje
 

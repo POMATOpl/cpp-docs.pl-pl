@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDialog'
 title: Klasa CDialog
 ms.date: 09/07/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 03d58221fc22ef1a0efc5db1a3ac3077a45c382b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63f5d738148fd3bbbb73fa2bc9bc7b655009b0b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212543"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185235"
 ---
 # <a name="cdialog-class"></a>Klasa CDialog
 
@@ -109,11 +110,11 @@ Aby utworzyć modalne okno dialogowe, Skonstruuj obiekt na stosie przy użyciu k
 
 Możesz również utworzyć szablon w pamięci przy użyciu struktury danych [DLGTEMPLATE](/windows/win32/api/winuser/ns-winuser-dlgtemplate) , zgodnie z opisem w Windows SDK. Po utworzeniu `CDialog` obiektu Wywołaj polecenie " [nodirect](#createindirect) ", aby utworzyć niemodalne okno dialogowe, lub wywołaj [InitModalIndirect](#initmodalindirect) i [DoModal](#domodal) , aby utworzyć modalne okno dialogowe.
 
-Mapa danych wymiany i walidacji jest zapisywana w przesłonięciu `CWnd::DoDataExchange` , który jest dodawany do nowej klasy okna dialogowego. [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) `CWnd` Aby uzyskać więcej informacji na temat funkcji wymiany i walidacji, zobacz funkcja członkowska DoDataExchange.
+Mapa danych wymiany i walidacji jest zapisywana w przesłonięciu `CWnd::DoDataExchange` , który jest dodawany do nowej klasy okna dialogowego. [](../../mfc/reference/cwnd-class.md#dodataexchange) `CWnd` Aby uzyskać więcej informacji na temat funkcji wymiany i walidacji, zobacz funkcja członkowska DoDataExchange.
 
 Zarówno programista, jak i struktura są wywoływane `DoDataExchange` pośrednio przez wywołanie [CWnd:: UpdateData](../../mfc/reference/cwnd-class.md#updatedata).
 
-Struktura wywołuje się, `UpdateData` gdy użytkownik klika przycisk OK, aby zamknąć modalne okno dialogowe. (Dane nie są pobierane, jeśli kliknięto przycisk Anuluj). Domyślna implementacja [OnInitDialog](#oninitdialog) jest również wywoływana w `UpdateData` celu ustawienia wartości początkowych kontrolek. Zwykle przesłonimy `OnInitDialog` do dalszych zainicjowania kontrolek. `OnInitDialog`jest wywoływana po utworzeniu wszystkich kontrolek okna dialogowego, gdy zostanie wyświetlone okno dialogowe.
+Struktura wywołuje się, `UpdateData` gdy użytkownik klika przycisk OK, aby zamknąć modalne okno dialogowe. (Dane nie są pobierane, jeśli kliknięto przycisk Anuluj). Domyślna implementacja [OnInitDialog](#oninitdialog) jest również wywoływana w `UpdateData` celu ustawienia wartości początkowych kontrolek. Zwykle przesłonimy `OnInitDialog` do dalszych zainicjowania kontrolek. `OnInitDialog` jest wywoływana po utworzeniu wszystkich kontrolek okna dialogowego, gdy zostanie wyświetlone okno dialogowe.
 
 Można wywołać `CWnd::UpdateData` w dowolnym momencie podczas wykonywania modalnych lub niemodalnych okien dialogowych.
 
@@ -139,7 +140,7 @@ Aby uzyskać więcej informacji na temat `CDialog` , zobacz [okna dialogowe](../
 
 **Nagłówek:** afxwin. h
 
-## <a name="cdialogcdialog"></a><a name="cdialog"></a>CDialog:: CDialog
+## <a name="cdialogcdialog"></a><a name="cdialog"></a> CDialog:: CDialog
 
 Aby skonstruować modalne okno dialogowe oparte na zasobach, wywołaj albo publiczną postać konstruktora.
 
@@ -176,7 +177,7 @@ Po utworzeniu modalnego okna dialogowego z jedną z powyższych metod, należy w
 
 Aby utworzyć niemodalne okno dialogowe, użyj chronionej formy `CDialog` konstruktora. Konstruktor jest chroniony, ponieważ należy utworzyć własną klasę okna dialogowego, aby zaimplementować niemodalne okno dialogowe. Konstrukcja niemodalnego okna dialogowego jest procesem dwuetapowym. Najpierw Wywołaj konstruktora; następnie Wywołaj `Create` funkcję członkowską, aby utworzyć okno dialogowe oparte na zasobach, lub wywołaj, `CreateIndirect` Aby utworzyć okno dialogowe z szablonu w pamięci.
 
-## <a name="cdialogcreate"></a><a name="create"></a>CDialog:: Create
+## <a name="cdialogcreate"></a><a name="create"></a> CDialog:: Create
 
 Wywołaj, `Create` Aby utworzyć niemodalne okno dialogowe przy użyciu szablonu okna dialogowego z zasobu.
 
@@ -223,7 +224,7 @@ Użyj `CWnd::DestroyWindow` funkcji, aby zniszczyć okno dialogowe utworzone prz
 
 [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]
 
-## <a name="cdialogcreateindirect"></a><a name="createindirect"></a>CDialog:: IsDirect
+## <a name="cdialogcreateindirect"></a><a name="createindirect"></a> CDialog:: IsDirect
 
 Wywołaj tę funkcję elementu członkowskiego, aby utworzyć niemodalne okno dialogowe z szablonu okna dialogowego w pamięci.
 
@@ -266,7 +267,7 @@ Użyj `CWnd::DestroyWindow` funkcji, aby zniszczyć okno dialogowe utworzone prz
 
 Okna dialogowe zawierające kontrolki ActiveX wymagają dodatkowych informacji podanych w zasobie DLGINIT.
 
-## <a name="cdialogdomodal"></a><a name="domodal"></a>CDialog::D oModal
+## <a name="cdialogdomodal"></a><a name="domodal"></a> CDialog::D oModal
 
 Wywołaj tę funkcję elementu członkowskiego, aby wywołać modalne okno dialogowe i zwrócić wynik okna dialogowego po zakończeniu.
 
@@ -285,13 +286,13 @@ Ta funkcja członkowska obsługuje całą interakcję z użytkownikiem, gdy okno
 Jeśli użytkownik kliknie jeden z elementów w oknie dialogowym, na przykład OK lub Anuluj, funkcja członkowska obsługi komunikatów, taka jak [OnOK —](#onok) lub [OnCancel](#oncancel), jest wywoływana w celu zamknięcia okna dialogowego. Domyślna `OnOK` funkcja członkowska sprawdzi i zaktualizuje dane okna dialogowego i zamknie okno dialogowe z wynikiem IDOK, a domyślna `OnCancel` funkcja członkowska zamknie okno dialogowe z wynikowym IDCANCEL bez weryfikowania ani aktualizowania danych okna dialogowego. Można zastąpić te funkcje programu obsługi komunikatów, aby zmienić ich zachowanie.
 
 > [!NOTE]
-> `PreTranslateMessage`jest teraz wywoływana dla modalnego przetwarzania komunikatów okna dialogowego.
+> `PreTranslateMessage` jest teraz wywoływana dla modalnego przetwarzania komunikatów okna dialogowego.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]
 
-## <a name="cdialogenddialog"></a><a name="enddialog"></a>CDialog:: zdarzenie EndDialog
+## <a name="cdialogenddialog"></a><a name="enddialog"></a> CDialog:: zdarzenie EndDialog
 
 Wywołaj tę funkcję elementu członkowskiego, aby zakończyć modalne okno dialogowe.
 
@@ -310,7 +311,7 @@ Ta funkcja członkowska zwraca *nwynik* jako wartość zwracaną `DoModal` . Nal
 
 Możesz wywołać `EndDialog` w dowolnym momencie, nawet w [OnInitDialog](#oninitdialog), w którym przypadku należy zamknąć okno dialogowe, zanim zostanie ono wyświetlone lub przed ustawieniem fokus wprowadzania.
 
-`EndDialog`nie zamyka natychmiast okna dialogowego. Zamiast tego ustawia flagę, która kieruje okno dialogowe, aby zamknąć, gdy tylko bieżąca procedura obsługi komunikatów zwróci wartość.
+`EndDialog` nie zamyka natychmiast okna dialogowego. Zamiast tego ustawia flagę, która kieruje okno dialogowe, aby zamknąć, gdy tylko bieżąca procedura obsługi komunikatów zwróci wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -318,7 +319,7 @@ Możesz wywołać `EndDialog` w dowolnym momencie, nawet w [OnInitDialog](#onini
 
 [!code-cpp[NVC_MFCControlLadenDialog#65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]
 
-## <a name="cdialoggetdefid"></a><a name="getdefid"></a>CDialog:: GetDefID
+## <a name="cdialoggetdefid"></a><a name="getdefid"></a> CDialog:: GetDefID
 
 Wywołaj `GetDefID` funkcję członkowską, aby uzyskać identyfikator domyślnej kontrolki łącznika dla okna dialogowego.
 
@@ -334,7 +335,7 @@ Wartość 32-bitowa ( `DWORD` ). Jeśli domyślny przycisk ma wartość identyfi
 
 Jest to zazwyczaj przycisk OK.
 
-## <a name="cdialoggotodlgctrl"></a><a name="gotodlgctrl"></a>CDialog:: GotoDlgCtrl
+## <a name="cdialoggotodlgctrl"></a><a name="gotodlgctrl"></a> CDialog:: GotoDlgCtrl
 
 Przenosi fokus do określonego formantu w oknie dialogowym.
 
@@ -355,7 +356,7 @@ Aby uzyskać wskaźnik do kontrolki (okno potomne) do przekazania jako *pWndCtrl
 
   Zobacz przykład dla [CWnd:: GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).
 
-## <a name="cdialoginitmodalindirect"></a><a name="initmodalindirect"></a>CDialog:: InitModalIndirect
+## <a name="cdialoginitmodalindirect"></a><a name="initmodalindirect"></a> CDialog:: InitModalIndirect
 
 Wywołaj tę funkcję elementu członkowskiego, aby zainicjować modalny obiekt okna dialogowego przy użyciu szablonu okna dialogowego, który został skonstruowany w pamięci.
 
@@ -394,7 +395,7 @@ Aby bezpośrednio utworzyć modalne okno dialogowe, należy najpierw przydzieli�
 
 Okna dialogowe zawierające kontrolki ActiveX wymagają dodatkowych informacji podanych w zasobie DLGINIT.
 
-## <a name="cdialogmapdialogrect"></a><a name="mapdialogrect"></a>CDialog:: MapDialogRect
+## <a name="cdialogmapdialogrect"></a><a name="mapdialogrect"></a> CDialog:: MapDialogRect
 
 Wywołaj, aby przekonwertować jednostki okna dialogowego prostokąta na jednostki ekranu.
 
@@ -415,7 +416,7 @@ Jednostki okna dialogowego są określane jako bieżąca jednostka bazowa okna d
 
 `MapDialogRect`Funkcja członkowska zastępuje jednostki okna dialogowego w *lpRect* za pomocą jednostek ekranu (pikseli), dzięki czemu prostokąt może służyć do tworzenia okna dialogowego lub umieszczania kontrolki w obrębie pola.
 
-## <a name="cdialognextdlgctrl"></a><a name="nextdlgctrl"></a>CDialog:: NextDlgCtrl
+## <a name="cdialognextdlgctrl"></a><a name="nextdlgctrl"></a> CDialog:: NextDlgCtrl
 
 Przenosi fokus do następnego formantu w oknie dialogowym.
 
@@ -427,7 +428,7 @@ void NextDlgCtrl() const;
 
 Jeśli fokus znajduje się na ostatnim formancie w oknie dialogowym, przenosi do pierwszej kontrolki.
 
-## <a name="cdialogoncancel"></a><a name="oncancel"></a>CDialog:: OnCancel
+## <a name="cdialogoncancel"></a><a name="oncancel"></a> CDialog:: OnCancel
 
 Struktura wywołuje tę metodę, gdy użytkownik kliknie przycisk **Anuluj** lub NACIŚNIE klawisz ESC w modalnym lub niemodalnym oknie dialogowym.
 
@@ -448,7 +449,7 @@ W przypadku zaimplementowania przycisku **Anuluj** w niemodalnym oknie dialogowy
 
 [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]
 
-## <a name="cdialogoninitdialog"></a><a name="oninitdialog"></a>CDialog:: OnInitDialog
+## <a name="cdialogoninitdialog"></a><a name="oninitdialog"></a> CDialog:: OnInitDialog
 
 Ta metoda jest wywoływana w odpowiedzi na `WM_INITDIALOG` komunikat.
 
@@ -462,7 +463,7 @@ Określa, czy aplikacja ustawi fokus wprowadzania na jeden z kontrolek w oknie d
 
 ### <a name="remarks"></a>Uwagi
 
-System Windows wysyła `WM_INITDIALOG` komunikat do okna dialogowego podczas wywołań [Create](#create), DoModal [CreateIndirect](#createindirect)lub [DoModal](#domodal) , które występują bezpośrednio przed wyświetleniem okna dialogowego.
+System Windows wysyła `WM_INITDIALOG` komunikat do okna dialogowego podczas wywołań [Create](#create), DoModal [](#createindirect)lub [](#domodal) , które występują bezpośrednio przed wyświetleniem okna dialogowego.
 
 Zastąp tę metodę, jeśli chcesz przeprowadzić przetwarzanie specjalne po zainicjowaniu okna dialogowego. W zastąpionej wersji, najpierw Wywołaj klasę bazową, `OnInitDialog` ale zignoruj jej wartość zwracaną. Zwykle wrócisz `TRUE` z przesłoniętej metody.
 
@@ -475,7 +476,7 @@ System Windows wywołuje `OnInitDialog` funkcję przy użyciu standardowej globa
 
 [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]
 
-## <a name="cdialogonok"></a><a name="onok"></a>CDialog:: OnOK —
+## <a name="cdialogonok"></a><a name="onok"></a> CDialog:: OnOK —
 
 Wywoływana, gdy użytkownik kliknie przycisk **OK** (przycisk z identyfikatorem IDOK).
 
@@ -496,7 +497,7 @@ W przypadku zaimplementowania przycisku **OK** w niemodalnym oknie dialogowym na
 
 [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]
 
-## <a name="cdialogonsetfont"></a><a name="onsetfont"></a>CDialog:: OnSetFont
+## <a name="cdialogonsetfont"></a><a name="onsetfont"></a> CDialog:: OnSetFont
 
 Określa czcionkę, która będzie używana przez formant okna dialogowego podczas rysowania tekstu.
 
@@ -518,7 +519,7 @@ Edytor okien dialogowych zwykle ustawia czcionkę okna dialogowego jako część
 > [!NOTE]
 > Nie można zastąpić tej metody, jeśli używasz `CFileDialog` obiektu w programie, który jest kompilowany w systemie Windows Vista lub nowszych systemach operacyjnych. Aby uzyskać więcej informacji na temat zmian w `CFileDialog` systemie Windows Vista i nowszych, zobacz [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).
 
-## <a name="cdialogprevdlgctrl"></a><a name="prevdlgctrl"></a>CDialog::P revDlgCtrl
+## <a name="cdialogprevdlgctrl"></a><a name="prevdlgctrl"></a> CDialog::P revDlgCtrl
 
 Ustawia fokus na poprzednią kontrolkę w oknie dialogowym.
 
@@ -530,7 +531,7 @@ void PrevDlgCtrl() const;
 
 Jeśli fokus jest ustawiony na pierwszej kontrolce w oknie dialogowym, przenosi się do ostatniej kontrolki w polu.
 
-## <a name="cdialogsetdefid"></a><a name="setdefid"></a>CDialog:: SetDefID
+## <a name="cdialogsetdefid"></a><a name="setdefid"></a> CDialog:: SetDefID
 
 Zmienia domyślny formant z kontrolką dla okna dialogowego.
 
@@ -543,7 +544,7 @@ void SetDefID(UINT nID);
 *nID*<br/>
 Określa identyfikator kontrolki przycisk, która stanie się wartością domyślną.
 
-## <a name="cdialogsethelpid"></a><a name="sethelpid"></a>CDialog:: SetHelpID
+## <a name="cdialogsethelpid"></a><a name="sethelpid"></a> CDialog:: SetHelpID
 
 Ustawia identyfikator pomocy kontekstowej dla okna dialogowego.
 
@@ -556,7 +557,7 @@ void SetHelpID(UINT nIDR);
 *nIDR*<br/>
 Określa identyfikator pomocy kontekstowej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład DLGCBR32 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład DLGTEMPL MFC](../../overview/visual-cpp-samples.md)<br/>

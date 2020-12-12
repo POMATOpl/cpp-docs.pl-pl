@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o tym, jak interpretować dane wprowadzane przez użytkownika przez widok
 title: Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CView class [MFC], interpreting user input
 - user input [MFC], interpreting through view class [MFC]
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
-ms.openlocfilehash: 43fb903fa169233ce532e41ecdf02c23ab6037c8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3442a13bc60b7424840e23673806c1e5120c4ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335836"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku
 
@@ -41,4 +42,4 @@ Widok może również obsługiwać niektóre polecenia menu, takie jak te z menu
 
 ## <a name="see-also"></a>Zobacz też
 
-[Używanie widoków](using-views.md)
+[Korzystanie z widoków](using-views.md)
