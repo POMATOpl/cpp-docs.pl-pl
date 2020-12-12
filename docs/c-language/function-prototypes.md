@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: prototypach funkcji'
 title: Prototypy funkcji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 76e8abdaa2e2d0d8ba14209b45982b6a7f63f2e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d8e83e68daaa610387f3a23c06ad5ee49a8b3944
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151843"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcji
 
@@ -28,8 +29,8 @@ Deklaracja funkcji poprzedza definicję funkcji i określa nazwę, typ zwracany,
 
 *specyfikatory deklaracji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja* *specyfikatora klasy magazynu* —<sub>wybór</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub></sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub></sub>
 
 *init-deklarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator*<br/>
@@ -40,11 +41,11 @@ Deklaracja funkcji poprzedza definicję funkcji i określa nazwę, typ zwracany,
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjator*
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/ \* A funkcja deklarator\*/<br/>
+*Direct-deklarator*:/ \* A funkcja deklarator \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***Typ parametru-list***)**   / \* New-Style deklarator      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność*listy identyfikatorów*<sub>opt</sub> **)**  / \* — przestarzałe style deklarator    \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność *listy identyfikatorów*<sub></sub> **)**  / \* — przestarzałe style deklarator    \*/
 
 Prototyp ma ten sam formularz, który jest definicją funkcji, z tą różnicą, że jest zakończony średnikiem bezpośrednio po nawiasie zamykającym i w związku z tym nie ma treści. W obu przypadkach typ zwracany musi zgadzać się z typem zwracanym określonym w definicji funkcji.
 
@@ -83,8 +84,8 @@ struct S;
 void func1( struct S * );
 ```
 
-W obszarze **/ze**tag nadal jest wprowadzany w zakresie globalnym.
+W obszarze **/ze** tag nadal jest wprowadzany w zakresie globalnym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../c-language/functions-c.md)

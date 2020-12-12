@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: stałe sterty'
 title: Heap — Stałe
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - _HEAPBADPTR constants
 - heap constants
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
-ms.openlocfilehash: 44c7a280ebffd0073f1dfb3a0a3cbdbd2efee0fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da90be1855f9a4714bc2d441651ac721ede84c1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120698"
 ---
 # <a name="heap-constants"></a>Heap — Stałe
 
@@ -40,18 +41,18 @@ ms.locfileid: "62289601"
 
 ## <a name="remarks"></a>Uwagi
 
-Te stałe nadać wartość zwracaną, wskazujący stan sterty.
+Te stałe dają wartość zwracaną wskazującą stan sterty.
 
 |Stała|Znaczenie|
 |--------------|-------------|
-|`_HEAPBADBEGIN`|Informacje o nagłówku początkowy nie został znaleziony lub jest ono nieprawidłowe.|
-|`_HEAPBADNODE`|Znaleziono nieprawidłowy węzeł lub uszkodzenia sterty.|
-|`_HEAPBADPTR`|**_pentry** pole **_heapinfo —** struktury nie zawiera prawidłowego wskaźnika do sterty (`_heapwalk` procedury tylko).|
-|`_HEAPEMPTY`|Nie zainicjowano stosu.|
-|`_HEAPEND`|Koniec sterty osiągnięty został pomyślnie (`_heapwalk` procedury tylko).|
-|`_HEAPOK`|Sterta to spójne (`_heapset` i `_heapchk` procedury tylko). Brak błędów do tej pory; **_Heapinfo —** struktura zawiera informacje o następnej pozycji (`_heapwalk` procedury tylko).|
+|`_HEAPBADBEGIN`|Nie znaleziono informacji o nagłówku początkowym lub są one nieprawidłowe.|
+|`_HEAPBADNODE`|Znaleziono zły węzeł lub sterta jest uszkodzona.|
+|`_HEAPBADPTR`|pole **_pentry** struktury **_HEAPINFO** nie zawiera prawidłowego wskaźnika do sterty ( `_heapwalk` tylko procedura).|
+|`_HEAPEMPTY`|Sterta nie została zainicjowana.|
+|`_HEAPEND`|Koniec sterty został pomyślnie osiągnięty ( `_heapwalk` tylko procedura).|
+|`_HEAPOK`|Sterta jest spójna ( `_heapset` `_heapchk` tylko procedura). Brak błędów do tej pory; Struktura **_HEAPINFO** zawiera informacje o następnym wpisie ( `_heapwalk` tylko procedura).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

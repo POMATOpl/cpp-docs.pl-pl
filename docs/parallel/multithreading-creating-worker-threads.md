@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Wielowątkowość: Tworzenie wątków roboczych w MFC'
 title: 'Wielowątkowość: Tworzenie wątków roboczych w MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: ab5b05b64ebcfbd6d15bd2229ee19d18fa7f919d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 75fa3122518f6fc342fe53a3df9fb9e5a78e2483
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149958"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Wielowątkowość: Tworzenie wątków roboczych w MFC
 
@@ -27,11 +28,11 @@ Wątek roboczy jest często używany do obsługi zadań w tle, które użytkowni
 
 - [Przykład](#_core_controlling_function_example)
 
-Tworzenie wątku roboczego jest stosunkowo prostym zadaniem. Do uruchomienia wątku są wymagane tylko dwa kroki: Implementowanie funkcji kontrolującej i uruchamianie wątku. Nie jest konieczne wyprowadzenie klasy z [CWinThread](../mfc/reference/cwinthread-class.md). Klasy można utworzyć, jeśli potrzebujesz specjalnej wersji `CWinThread`, ale nie jest to wymagane w przypadku większości prostych wątków roboczych. Możesz użyć `CWinThread` bez modyfikacji.
+Tworzenie wątku roboczego jest stosunkowo prostym zadaniem. Do uruchomienia wątku są wymagane tylko dwa kroki: Implementowanie funkcji kontrolującej i uruchamianie wątku. Nie jest konieczne wyprowadzenie klasy z [CWinThread](../mfc/reference/cwinthread-class.md). Klasy można utworzyć, jeśli potrzebujesz specjalnej wersji `CWinThread` , ale nie jest to wymagane w przypadku większości prostych wątków roboczych. Możesz użyć `CWinThread` bez modyfikacji.
 
-## <a name="_core_starting_the_thread"></a>Uruchamianie wątku
+## <a name="starting-the-thread"></a><a name="_core_starting_the_thread"></a> Uruchamianie wątku
 
-Istnieją dwie przeciążone wersje `AfxBeginThread`: te, które mogą tworzyć tylko wątki robocze, i takie, które mogą tworzyć wątki interfejsu użytkownika i wątki robocze. Aby rozpocząć wykonywanie wątku roboczego przy użyciu pierwszego przeciążenia, wywołaj [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:
+Istnieją dwie przeciążone wersje programu `AfxBeginThread` : takie, które mogą tworzyć tylko wątki robocze, a także te, które mogą tworzyć wątki interfejsu użytkownika i wątki robocze. Aby rozpocząć wykonywanie wątku roboczego przy użyciu pierwszego przeciążenia, wywołaj [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), podając następujące informacje:
 
 - Adres funkcji kontrolującej.
 
@@ -45,9 +46,9 @@ Istnieją dwie przeciążone wersje `AfxBeginThread`: te, które mogą tworzyć 
 
 - Obowiązkowe Wymagane atrybuty zabezpieczeń. Wartość domyślna to ten sam dostęp co wątek nadrzędny. Aby uzyskać więcej informacji na temat formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) w Windows SDK.
 
-`AfxBeginThread` tworzy i inicjuje obiekt `CWinThread`, uruchamia go i zwraca swój adres, aby można było później odwołać się do niego. Kontrole są wykonywane w ramach procedury, aby upewnić się, że wszystkie obiekty są prawidłowo nieprzypisane, jeśli jakakolwiek część procesu tworzenia nie powiedzie się.
+`AfxBeginThread` tworzy i inicjuje `CWinThread` obiekt dla Ciebie, uruchamia go i zwraca swój adres, aby można było później odwołać się do niego. Kontrole są wykonywane w ramach procedury, aby upewnić się, że wszystkie obiekty są prawidłowo nieprzypisane, jeśli jakakolwiek część procesu tworzenia nie powiedzie się.
 
-## <a name="_core_implementing_the_controlling_function"></a>Implementowanie funkcji kontroli
+## <a name="implementing-the-controlling-function"></a><a name="_core_implementing_the_controlling_function"></a> Implementowanie funkcji kontroli
 
 Funkcja kontrolująca definiuje wątek. Gdy ta funkcja zostanie wprowadzona, wątek rozpoczyna się, a kiedy kończy, wątek kończy. Ta funkcja powinna mieć następujący prototyp:
 
@@ -61,7 +62,7 @@ Po zakończeniu działania funkcja powinna zwrócić wartość UINT wskazującą
 
 Istnieją pewne ograniczenia dotyczące tego, co można zrobić w programie wielowątkowym zapisanym za pomocą biblioteki MFC. Opisy tych ograniczeń oraz inne porady dotyczące korzystania z wątków można znaleźć w temacie [wielowątkowość: porady dotyczące programowania](multithreading-programming-tips.md).
 
-## <a name="_core_controlling_function_example"></a>Przykład kontroli funkcji
+## <a name="controlling-function-example"></a><a name="_core_controlling_function_example"></a> Przykład kontroli funkcji
 
 Poniższy przykład pokazuje, jak zdefiniować funkcję kontroli i użyć jej z innej części programu.
 
@@ -92,7 +93,7 @@ AfxBeginThread(MyThreadProc, pNewObject);
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
-- [Wielowątkowość: tworzenie wątków interfejsu użytkownika](multithreading-creating-user-interface-threads.md)
+- [Wielowątkowość: Tworzenie wątków User-Interface](multithreading-creating-user-interface-threads.md)
 
 ## <a name="see-also"></a>Zobacz też
 

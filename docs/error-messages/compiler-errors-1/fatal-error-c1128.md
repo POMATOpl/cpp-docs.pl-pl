@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny C1128'
 title: Błąd krytyczny C1128
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-ms.openlocfilehash: 64671c9abe8ed1375df1e91ca7509e6a597366ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c63a875df2fa5edca57d6d0c3876c09a30ce1115
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123672"
 ---
 # <a name="fatal-error-c1128"></a>Błąd krytyczny C1128
 
@@ -23,7 +24,7 @@ Osiągnięcie tego ograniczenia sekcji może wynikać z używania [/Gy](../../bu
 
 C1128 może być również spowodowany tym, że jest zbyt wiele funkcji wbudowanych.
 
-Aby naprawić ten błąd, Podziel plik źródłowy na wiele plików kodu źródłowego, Kompiluj bez **/Gy**lub Kompiluj z [/bigobj (Zwiększ liczbę sekcji w. Plik obj)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md).  Jeśli nie kompilujesz z **/Gy**, musisz określić optymalizacje pojedynczo, ponieważ **/O2** i **/O1** obydwie oznaczają **/Gy**.
+Aby naprawić ten błąd, Podziel plik źródłowy na wiele plików kodu źródłowego, Kompiluj bez **/Gy** lub Kompiluj z [/bigobj (Zwiększ liczbę sekcji w. Plik obj)](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md).  Jeśli nie kompilujesz z **/Gy**, musisz określić optymalizacje pojedynczo, ponieważ **/O2** i **/O1** obydwie oznaczają **/Gy**.
 
 Jeśli to możliwe, Kompiluj bez debugowania informacji.
 

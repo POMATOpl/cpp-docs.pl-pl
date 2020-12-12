@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: HelpString'
 title: HelpString (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 57f7a5bfd5bd0e7a6509797ec34e88531304ec92
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3b3aa2470080f33fd4a9dea4f063e908c0431d5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148814"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -41,7 +42,7 @@ Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) , aby zapoznać si
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejs**, **`typedef`** , **`class`** , metoda, właściwość|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

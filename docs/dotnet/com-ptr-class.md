@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: com::p TR Class'
 title: com::ptr — Klasa
 ms.date: 01/16/2019
 ms.topic: reference
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 9cb0ad23450d06bb314b0e2d6fa1d01784d633e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73016d425d06ecbda12702afc1793a4bab81ccc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124400"
 ---
 # <a name="comptr-class"></a>com::ptr — Klasa
 
@@ -198,7 +199,7 @@ int main() {
 
 **Przestrzeń nazw** msclr:: com
 
-## <a name="ptrptr"></a><a name="ptr"></a>PTR::p TR
+## <a name="ptrptr"></a><a name="ptr"></a> PTR::p TR
 
 Zwraca wskaźnik do posiadanego obiektu COM.
 
@@ -285,7 +286,7 @@ int main() {
 }
 ```
 
-## <a name="ptrptr"></a><a name="tilde-ptr"></a>PTR:: ~ PTR
+## <a name="ptrptr"></a><a name="tilde-ptr"></a> PTR:: ~ PTR
 
 Destruktory `com::ptr` .
 
@@ -360,7 +361,7 @@ int main() {
 }
 ```
 
-## <a name="ptrattach"></a><a name="attach"></a>PTR:: Attach
+## <a name="ptrattach"></a><a name="attach"></a> PTR:: Attach
 
 Dołącza obiekt COM do `com::ptr` .
 
@@ -461,7 +462,7 @@ int main() {
 }
 ```
 
-## <a name="ptrcreateinstance"></a><a name="createInstance"></a>PTR:: CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a> PTR:: CreateInstance
 
 Tworzy wystąpienie obiektu COM w obrębie `com::ptr` .
 
@@ -516,7 +517,7 @@ Wskaźnik do interfejsu IUnknown obiektu zagregowanego (kontrolka IUnknown). Je�
 Kontekst, w którym zostanie uruchomiony kod zarządzający nowo utworzonym obiektem. Wartości są pobierane z `CLSCTX` wyliczenia. Jeśli `cls_context` nie jest określony, zostanie użyta wartość CLSCTX_ALL.
 
 *rclsid*<br/>
-`CLSID`skojarzone z danymi i kodem, który zostanie użyty do utworzenia obiektu.
+`CLSID` skojarzone z danymi i kodem, który zostanie użyty do utworzenia obiektu.
 
 ### <a name="exceptions"></a>Wyjątki
 
@@ -526,7 +527,7 @@ Ta funkcja wywołuje `CoCreateInstance` i używa <xref:System.Runtime.InteropSer
 
 ### <a name="remarks"></a>Uwagi
 
-`CreateInstance`używa `CoCreateInstance` do tworzenia nowego wystąpienia określonego obiektu, identyfikowanego przez ProgID lub CLSID. `com::ptr`Odwołuje się do nowo utworzonego obiektu i automatycznie zwolni wszystkie posiadane odwołania po zniszczeniu.
+`CreateInstance` używa `CoCreateInstance` do tworzenia nowego wystąpienia określonego obiektu, identyfikowanego przez ProgID lub CLSID. `com::ptr`Odwołuje się do nowo utworzonego obiektu i automatycznie zwolni wszystkie posiadane odwołania po zniszczeniu.
 
 ### <a name="example"></a>Przykład
 
@@ -579,7 +580,7 @@ int main() {
 }
 ```
 
-## <a name="ptrdetach"></a><a name="detach"></a>PTR::D etach
+## <a name="ptrdetach"></a><a name="detach"></a> PTR::D etach
 
 Zwraca własność obiektu COM, zwracając wskaźnik do obiektu.
 
@@ -599,7 +600,7 @@ Wewnętrznie, `QueryInterface` jest wywoływana w obiekcie com należącym do u�
 
 ### <a name="remarks"></a>Uwagi
 
-`Detach`najpierw dodaje odwołanie do obiektu COM w imieniu obiektu wywołującego, a następnie zwalnia wszystkie odwołania należące do użytkownika `com::ptr` .  Obiekt wywołujący musi ostatecznie zwolnić zwrócony obiekt, aby zniszczyć go.
+`Detach` najpierw dodaje odwołanie do obiektu COM w imieniu obiektu wywołującego, a następnie zwalnia wszystkie odwołania należące do użytkownika `com::ptr` .  Obiekt wywołujący musi ostatecznie zwolnić zwrócony obiekt, aby zniszczyć go.
 
 ### <a name="example"></a>Przykład
 
@@ -684,7 +685,7 @@ int main() {
 }
 ```
 
-## <a name="ptrgetinterface"></a><a name="getInterface"></a>PTR:: GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a> PTR:: GetInterface
 
 Zwraca wskaźnik do posiadanego obiektu COM.
 
@@ -826,7 +827,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>PTR:: QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a> PTR:: QueryInterface
 
 Wysyła zapytanie do obiektu COM należącego do interfejsu i dołącza wynik do innego `com::ptr` .
 
@@ -957,7 +958,7 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="ptrrelease"></a><a name="release"></a>PTR:: Release
+## <a name="ptrrelease"></a><a name="release"></a> PTR:: Release
 
 Zwalnia wszystkie odwołania należące do obiektu COM.
 
@@ -1045,7 +1046,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>PTR:: operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a> PTR:: operator-&gt;
 
 Operator dostępu do elementów członkowskich używany do wywoływania metod w obiekcie COM należącym do użytkownika.
 
@@ -1187,7 +1188,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptroperator"></a><a name="operator-assign"></a>PTR:: operator =
+## <a name="ptroperator"></a><a name="operator-assign"></a> PTR:: operator =
 
 Dołącza obiekt COM do `com::ptr` .
 
@@ -1292,7 +1293,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-bool"></a><a name="operator-bool"></a>PTR:: operator — bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a> PTR:: operator — bool
 
 Operator do użycia `com::ptr` w wyrażeniu warunkowym.
 
@@ -1363,7 +1364,7 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="ptroperator"></a><a name="operator-logical-not"></a>PTR:: operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a> PTR:: operator!
 
 Operatora, aby określić, czy właścicielem obiektu COM jest nieprawidłowy.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2483'
 title: Błąd kompilatora C2483
 ms.date: 09/15/2017
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-ms.openlocfilehash: 20b08c0d2cd89224ed3d3b8b34915deb947b0b4b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5edafbbb0852eb622f34698421ce9a2b794f9209
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123880"
 ---
 # <a name="compiler-error-c2483"></a>Błąd kompilatora C2483
 
 >"*Identyfikator*": obiekt z konstruktorem lub destruktorem nie może być zadeklarowany jako "Thread"
 
-Ten komunikat o błędzie jest przestarzały w programie Visual Studio 2015 i nowszych wersjach. W poprzednich wersjach zmienne zadeklarowane z atrybutem `thread` nie mogą być inicjowane za pomocą konstruktora lub innego wyrażenia, które wymaga oceny czasu wykonywania. Do zainicjowania `thread` danych jest wymagane wyrażenie statyczne.
+Ten komunikat o błędzie jest przestarzały w programie Visual Studio 2015 i nowszych wersjach. W poprzednich wersjach zmienne zadeklarowane z `thread` atrybutem nie mogą być inicjowane za pomocą konstruktora lub innego wyrażenia, które wymaga oceny czasu wykonywania. Do zainicjowania danych jest wymagane wyrażenie statyczne `thread` .
 
 ## <a name="example"></a>Przykład
 

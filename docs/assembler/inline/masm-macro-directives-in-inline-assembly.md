@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: dyrektywy makra MASM w zestawie wbudowanym'
 title: Dyrektywy makra MASM w zestawie wbudowanym
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - macros, directives
 - MASM (Microsoft Macro Assembler), inline assembly macro directives
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
-ms.openlocfilehash: 964f70aeef6e0e62ac4b941b2cc26d3e7c7ef466
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 131066ad117e0f314ba0900e8ecd19eb4843c25b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117565"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>Dyrektywy makra MASM w zestawie wbudowanym
 
@@ -22,6 +23,6 @@ Asembler wbudowany nie jest asemblerem makra. Nie można użyć dyrektyw makra M
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z języka zestawu w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

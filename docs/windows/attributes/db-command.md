@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: db_command'
 title: db_command (atrybut C++ COM)
 ms.date: 07/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 109dea1fe2070ef6a0acc9370d4065a9e6a9a575
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504593"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122177"
 ---
 # <a name="db_command"></a>db_command
 
@@ -44,7 +45,7 @@ Składnia *polecenia* jest następująca:
 
 *Blok parametrów powiązania* jest definiowany w następujący sposób:
 
-> **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
+> **( \[** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
 gdzie:
 
@@ -52,15 +53,15 @@ gdzie:
 
 - **\[***BindType* **]** to jeden z następujących ciągów bez uwzględniania wielkości liter:
 
-  - ** \[ Db_column]** wiąże wszystkie zmienne Członkowskie z kolumną w zestawie wierszy.
+  - **\[ Db_column]** wiąże wszystkie zmienne Członkowskie z kolumną w zestawie wierszy.
 
-  - ** \[ BindTo]** (tak samo jak ** \[ Db_column]**).
+  - **\[ BindTo]** (tak samo jak **\[ Db_column]**).
 
-  - ** \[ in]** wiąże Zmienne Członkowskie jako parametry wejściowe.
+  - **\[ in]** wiąże Zmienne Członkowskie jako parametry wejściowe.
 
-  - ** \[ out]** tworzy powiązania zmiennych składowych jako parametrów wyjściowych.
+  - **\[ out]** tworzy powiązania zmiennych składowych jako parametrów wyjściowych.
 
-  - ** \[ w, out]** tworzy zmienne składowe jako parametry wejściowe/wyjściowe.
+  - **\[ w, out]** tworzy zmienne składowe jako parametry wejściowe/wyjściowe.
 
 - *szVarX*, *nVarX* jest rozpoznawana jako zmienna członkowska w bieżącym zakresie.
 
@@ -87,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 ```
 
 *Nazwij*<br/>
-Obowiązkowe Nazwa dojścia używanego do pracy z zestawem wierszy. Jeśli określisz *nazwę*, **db_command** generuje klasę o określonej *nazwie*, która może być używana do przechodzenia zestawu wierszy lub wykonywania wielu zapytań akcji. Jeśli *Nazwa*nie zostanie określona, nie będzie możliwe zwrócenie więcej niż jednego wiersza wyników do użytkownika.
+Obowiązkowe Nazwa dojścia używanego do pracy z zestawem wierszy. Jeśli określisz *nazwę*, **db_command** generuje klasę o określonej *nazwie*, która może być używana do przechodzenia zestawu wierszy lub wykonywania wielu zapytań akcji. Jeśli *Nazwa* nie zostanie określona, nie będzie możliwe zwrócenie więcej niż jednego wiersza wyników do użytkownika.
 
 *source_name*<br/>
 Obowiązkowe `CSession` Zmienna lub wystąpienie klasy, `db_source` do której zastosowano polecenie. Zobacz [db_source](db-source.md).
@@ -237,7 +238,7 @@ int main() {
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

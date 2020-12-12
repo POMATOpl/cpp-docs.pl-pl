@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CBaseTabbedPane'
 title: Klasa CBaseTabbedPane
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 21f2821392d2b9e71837997f5a9a10ab80ba073f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 980f2691aa9e129b0e47070d7ff095d486c45b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122749"
 ---
 # <a name="cbasetabbedpane-class"></a>Klasa CBaseTabbedPane
 
@@ -444,7 +445,7 @@ określoną `CSize` Obiekt, który jest wypełniony minimalnym dozwolonym rozmia
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli aktywna jest spójna obsługa minimalnych rozmiarów okien ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniony minimalnym dozwolonym rozmiarem karty aktywne. w przeciwnym razie *rozmiar* jest wypełniony wartością zwracaną [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
+Jeśli aktywna jest spójna obsługa minimalnych rozmiarów okien ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniony minimalnym dozwolonym rozmiarem karty aktywnej. W przeciwnym razie *rozmiar* jest wypełniony wartością zwracaną [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
 
 ## <a name="cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a> CBaseTabbedPane::GetPaneIcon
 
@@ -461,7 +462,7 @@ określoną `CSize` Obiekt, który jest wypełniony minimalnym dozwolonym rozmia
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli aktywna jest spójna obsługa minimalnych rozmiarów okien ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniony minimalnym dozwolonym rozmiarem karty aktywne. w przeciwnym razie *rozmiar* jest wypełniony wartością zwracaną [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
+Jeśli aktywna jest spójna obsługa minimalnych rozmiarów okien ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniony minimalnym dozwolonym rozmiarem karty aktywnej. W przeciwnym razie *rozmiar* jest wypełniony wartością zwracaną [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
 
 ## <a name="cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a> CBaseTabbedPane:: getpanelname
 

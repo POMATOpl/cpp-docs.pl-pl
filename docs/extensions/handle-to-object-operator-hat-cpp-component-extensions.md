@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: uchwyt do operatora obiektu (^) (C++/CLI i C++/CX)'
 title: Operator uchwytu do obiektu (^)  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: c8927ef0e34f2c2b12722d453e0dde6f7357eb33
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 67c553b70ce1d39a18b75cd38833184c74037864
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119385"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operator uchwytu do obiektu (^)  (C++/CLI i C++/CX)
 

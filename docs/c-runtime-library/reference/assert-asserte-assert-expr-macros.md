@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ASSERT, _ASSERTE, _ASSERT_EXPR makra'
 title: _ASSERT, _ASSERTE, _ASSERT_EXPR makra
 ms.date: 11/04/2016
 api_location:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-ms.openlocfilehash: d07fbe5de7afdc62f952727660447c5e4f0b78aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28c90d2c92feb298b2416633e783c5d0a87e4bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117578"
 ---
 # <a name="_assert-_asserte-_assert_expr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR makra
 
@@ -60,7 +61,7 @@ Szeroki ciąg, który ma być wyświetlany jako część raportu.
 
 Makra **_ASSERT_EXPR**, **_ASSERT** i **_ASSERTE** zapewniają aplikację z czystym i prostym mechanizmem do sprawdzania założeń w procesie debugowania. Są one bardzo elastyczne, ponieważ nie muszą być ujęte w `#ifdef` instrukcje, aby uniemożliwić ich wywoływanie w ramach kompilacji detalicznej aplikacji. Tę elastyczność uzyskuje się za pomocą makra [_DEBUG](../../c-runtime-library/debug.md) . **_ASSERT_EXPR**, **_ASSERT** i **_ASSERTE** są dostępne tylko wtedy, gdy **_DEBUG** jest zdefiniowana w czasie kompilacji. Gdy **_DEBUG** nie jest zdefiniowany, wywołania tych makr są usuwane podczas przetwarzania wstępnego.
 
-**_ASSERT_EXPR**, **_ASSERT** i **_ASSERTE** Oceń swój argument *booleanExpression* i kiedy wynik wynosi **`false`** (0), drukuje komunikat diagnostyczny i Wywołaj [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) , aby wygenerować raport debugowania. Makro **_ASSERT** drukuje prosty komunikat diagnostyczny, **_ASSERTE** zawiera ciąg reprezentujący wyrażenie zakończone niepowodzeniem w komunikacie, a **_ASSERT_EXPR** zawiera ciąg *komunikatu* w komunikacie diagnostycznym. Te makra nie wykonują żadnych operacji, gdy *booleanExpression* oblicza wartość różną od zera.
+**_ASSERT_EXPR**, **_ASSERT** i **_ASSERTE** Oceń swój argument *booleanExpression* i kiedy wynik wynosi **`false`** (0), drukuje komunikat diagnostyczny i Wywołaj [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) , aby wygenerować raport debugowania. Makro **_ASSERT** drukuje prosty komunikat diagnostyczny,  **_ASSERTE** zawiera ciąg reprezentujący wyrażenie zakończone niepowodzeniem w komunikacie, a **_ASSERT_EXPR** zawiera ciąg *komunikatu* w komunikacie diagnostycznym. Te makra nie wykonują żadnych operacji, gdy *booleanExpression* oblicza wartość różną od zera.
 
 **_ASSERT_EXPR**, **_ASSERT** i **_ASSERTE** Invoke **_CrtDbgReportW**, co powoduje, że wszystkie dane wyjściowe powinny być w postaci szerokich znaków. **_ASSERTE** prawidłowo drukuje znaki Unicode w *booleanExpression* i **_ASSERT_EXPR** drukuje znaki Unicode w *wiadomości*.
 
@@ -164,7 +165,7 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
 'I am p1' != 'I am p2'
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
 [potwierdzj makro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie języka C lub C++ w blokach __asm'
 title: Korzystanie z C lub C++ w blokach __asm
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 05e63d666f3fc39126d6f48e8fc523c4a02e76df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fc1987339fcbabee07e2b626c3ae764c3d5e2e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121930"
 ---
 # <a name="using-c-or-c-in-__asm-blocks"></a>Korzystanie z C lub C++ w blokach __asm
 
@@ -35,7 +36,7 @@ Ponieważ instrukcje wbudowanego zestawu mogą być mieszane przy użyciu instru
 
 - Makra i dyrektywy preprocesora
 
-- Komentarze ( __ / \* \* zarówno / __ i __//__ )
+- Komentarze ( __/ \* \* zarówno /__ i __//__ )
 
 - Nazwy typów (wszędzie tam, gdzie typ MASM byłby dozwolony)
 
@@ -55,6 +56,6 @@ W **`__asm`** bloku można określić stałe całkowite przy użyciu notacji C l
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Asembler wbudowany](../../assembler/inline/inline-assembler.md)<br/>

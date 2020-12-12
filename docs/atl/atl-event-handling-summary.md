@@ -1,51 +1,52 @@
 ---
+description: 'Dowiedz się więcej na temat: Podsumowanie obsługi zdarzeń ATL'
 title: Podsumowanie obsługi zdarzeń ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-ms.openlocfilehash: 0e3a47719e3160170ed1bfa64b315415ddc7a1c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c041de6cbd0e0852d5ce0e51d892c21c7d9a23d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148658"
 ---
 # <a name="atl-event-handling-summary"></a>Podsumowanie obsługi zdarzeń ATL
 
-Ogólnie rzecz biorąc Obsługa zdarzeń COM jest stosunkowo prosty proces. Istnieją trzy podstawowe kroki:
+Ogólnie rzecz biorąc, obsługa zdarzeń COM to stosunkowo prosty proces. Istnieją trzy główne kroki:
 
-- Zaimplementuj interfejs zdarzenia dla obiektu.
+- Zaimplementuj interfejs zdarzenia w obiekcie.
 
-- Aby źródło zdarzenia obiektu chce odbierać zdarzenia.
+- Należy polecić Źródło zdarzenia, że obiekt chce otrzymywać zdarzenia.
 
-- Unadvise źródła zdarzeń, gdy obiekt nie musi już odbierać zdarzenia.
+- Jeśli obiekt nie musi już odbierać zdarzeń, należy wykonać niezalecanie źródła zdarzeń.
 
 ## <a name="implementing-the-interface"></a>Implementowanie interfejsu
 
-Istnieją cztery główne sposoby implementacji interfejsu, za pomocą ATL.
+Istnieją cztery główne sposoby implementacji interfejsu przy użyciu biblioteki ATL.
 
-|Pochodzi od|Odpowiednie dla typu interfejsu|Wymaga wdrożenia wszystkich metod *|Wymaga biblioteki typów w czasie wykonywania|
+|Pochodny od|Odpowiednie dla typu interfejsu|Wymaga zaimplementowania wszystkich metod *|Wymaga biblioteki typów w czasie wykonywania|
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|
-|Interfejs|Vtable|Yes|Nie|
-|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Podwójne|Yes|Yes|
-|[Z interfejsu IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|Nie|Yes|
+|Interfejs|Tablic|Tak|Nie|
+|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Podwójne|Tak|Tak|
+|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|Nie|Tak|
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|Nie|Nie|
 
-\* Korzystając z klasy obsługi biblioteki ATL, nigdy nie należy implementować `IUnknown` lub `IDispatch` metody ręcznie.
+\* W przypadku korzystania z klas obsługi ATL, nigdy nie jest wymagane, `IUnknown` Aby `IDispatch` ręcznie zaimplementować metody lub.
 
-## <a name="advising-and-unadvising-the-event-source"></a>Doradztwa i Unadvising źródła zdarzeń
+## <a name="advising-and-unadvising-the-event-source"></a>Doradzanie i niedoradzanie źródła zdarzeń
 
-Istnieją trzy główne sposoby wniosku oraz unadvising źródła zdarzeń za pomocą ATL.
+Istnieją trzy główne sposoby doradzania i niedoradzania źródła zdarzeń przy użyciu biblioteki ATL.
 
-|Aby — funkcja|Unadvise — funkcja|Najbardziej odpowiedni do użytku z programem|Wymaga informacji o pliku cookie|Komentarze|
+|Advise — funkcja|Unadvise — funkcja|Najbardziej odpowiednie do użycia z|Wymaga śledzenia pliku cookie|Komentarze|
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable lub podwójne interfejsy|Tak|`AtlAdvise` jest funkcją globalną ATL. `CComPtrBase::Advise` jest używany przez [CComPtr](../atl/reference/ccomptr-class.md) i [CComQIPtr](../atl/reference/ccomqiptr-class.md).|
-|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) lub [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Nie|Mniej parametrów niż `AtlAdvise` ponieważ klasa bazowa wykonuje więcej pracy.|
-|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|Kontrolki ActiveX w formanty złożone|Nie|`CComCompositeControl::AdviseSinkMap` Zaleca się, że wszystkie wpisy w zdarzeniu ujścia mapy. Tę samą funkcję unadvises wpisów. Ta metoda jest wywoływana automatycznie przez `CComCompositeControl` klasy.|
-|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|Kontrolki ActiveX w oknie dialogowym|Nie|`CAxDialogImpl::AdviseSinkMap` z informacją o tym i unadvises wszystkich kontrolek ActiveX w zasobu okna dialogowego. Odbywa się to automatycznie dla Ciebie.|
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Tablice lub podwójne interfejsy|Tak|`AtlAdvise` jest globalną funkcją ATL. `CComPtrBase::Advise` jest używany przez [CComPtr](../atl/reference/ccomptr-class.md) i [CComQIPtr](../atl/reference/ccomqiptr-class.md).|
+|[IDispEventSimpleImpl::D ispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::D ispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) lub [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Nie|Mniejsza liczba parametrów niż `AtlAdvise` ponieważ klasa bazowa wykonuje więcej pracy.|
+|[CComCompositeControl:: AdviseSinkMap (TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl:: AdviseSinkMap (FAŁSZ)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|Kontrolki ActiveX w kontrolkach złożonych|Nie|`CComCompositeControl::AdviseSinkMap` zaleca wszystkie wpisy na mapie ujścia zdarzeń. Ta sama funkcja Niezaleca wpisów. Ta metoda jest wywoływana automatycznie przez `CComCompositeControl` klasę.|
+|[CAxDialogImpl:: AdviseSinkMap (TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl:: AdviseSinkMap (FAŁSZ)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|Kontrolki ActiveX w oknie dialogowym|Nie|`CAxDialogImpl::AdviseSinkMap` doradza i niedoradza wszystkim kontrolkom ActiveX w zasobie okna dialogowego. Jest to wykonywane automatycznie.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zdarzeń](../atl/event-handling-and-atl.md)<br/>
 [Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: przyrostowe i zmniejszenie przeciążania operatora (C++)'
 title: Przeładowanie operatorów inkrementacji i dekrementacji (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 10cda57b74a7da57f2d48b91854b5d37c8d181f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f2704a1c10375bf8422324d90f41c6e3ac245505
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113925"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Przeładowanie operatorów inkrementacji i dekrementacji (C++)
 
@@ -126,6 +127,6 @@ int main()
 
 Nie ma składni do przekazywania tych wartości innych niż jawne wywołanie, jak pokazano w powyższym kodzie. Bardziej prostym sposobem implementacji tej funkcji jest Przeciążenie operatora dodawania/przypisywania ( **+=** ).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeciążanie operatora](../cpp/operator-overloading.md)

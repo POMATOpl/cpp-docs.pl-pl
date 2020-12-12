@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: przeciąganie obrazów z listy obrazów'
 title: Przeciąganie obrazów z listy obrazów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-ms.openlocfilehash: 5d15b0b66d2270174dbfbcfd21bb77f5f41558c7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4d81be73484d32d9b26e5aa4ae48b7e550306493
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626482"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118852"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Przeciąganie obrazów z listy obrazów
 
@@ -22,7 +23,7 @@ Funkcja członkowska [BeginDrag](reference/cimagelist-class.md#begindrag) rozpoc
 
 Funkcja członkowska [DragEnter](reference/cimagelist-class.md#dragenter) ustawia początkową pozycję przeciąganego obrazu w oknie i rysuje obraz na pozycji. Parametry obejmują wskaźnik do okna, w którym narysujesz obraz, i punkt, który określa współrzędne początkowej pozycji w oknie. Współrzędne są względem lewego górnego rogu okna, a nie obszaru klienckiego. To samo jest prawdziwe dla wszystkich funkcji przeciągania obrazu, które przyjmują współrzędne jako parametry. Oznacza to, że należy wyrównać szerokość elementów okna, takich jak obramowanie, pasek tytułu i pasek menu, podczas określania współrzędnych. Jeśli określisz uchwyt okna o **wartości null** podczas wywoływania `DragEnter` , funkcja przeciągania rysuje obraz w kontekście urządzenia skojarzonym z oknem pulpitu, a współrzędne są względne w lewym górnym rogu ekranu.
 
-`DragEnter`blokuje wszystkie pozostałe aktualizacje danego okna podczas operacji przeciągania. Jeśli musisz wykonać dowolny rysunek podczas operacji przeciągania, na przykład podświetlić obiekt docelowy operacji przeciągania i upuszczania, możesz tymczasowo ukryć przeciągany obraz przy użyciu funkcji składowej [zdarzenie DragLeave](reference/cimagelist-class.md#dragleave) . Można również użyć funkcji składowej [DragShowNoLock](reference/cimagelist-class.md#dragshownolock) .
+`DragEnter` blokuje wszystkie pozostałe aktualizacje danego okna podczas operacji przeciągania. Jeśli musisz wykonać dowolny rysunek podczas operacji przeciągania, na przykład podświetlić obiekt docelowy operacji przeciągania i upuszczania, możesz tymczasowo ukryć przeciągany obraz przy użyciu funkcji składowej [zdarzenie DragLeave](reference/cimagelist-class.md#dragleave) . Można również użyć funkcji składowej [DragShowNoLock](reference/cimagelist-class.md#dragshownolock) .
 
 Wywołaj [endDrag](reference/cimagelist-class.md#enddrag) , gdy skończysz przeciąganie obrazu.
 

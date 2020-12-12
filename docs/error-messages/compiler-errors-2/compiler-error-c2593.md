@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2593'
 title: Błąd kompilatora C2593
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
-ms.openlocfilehash: 2a385e35376ddce528678980705595bfb98aca95
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 849cd79b1d469d957cf1bde499ce66bd54a64074
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120168"
 ---
 # <a name="compiler-error-c2593"></a>Błąd kompilatora C2593
 
@@ -39,9 +40,9 @@ int main() {
 }
 ```
 
-Ten błąd może być spowodowany serializacji zmiennej zmiennoprzecinkowej przy użyciu obiektu `CArchive`. Kompilator identyfikuje operatora `<<` jako niejednoznaczny. Tylko typy pierwotne C++ , które `CArchive` mogą serializować, są typami o ustalonym rozmiarze `BYTE`, `WORD`, `DWORD`i `LONG`. Wszystkie typy całkowite muszą być rzutowane na jeden z tych typów do serializacji. Typy zmiennoprzecinkowe muszą być archiwizowane przy użyciu funkcji składowej `CArchive::Write()`.
+Ten błąd może być spowodowany serializacji zmiennej zmiennoprzecinkowej przy użyciu `CArchive` obiektu. Kompilator identyfikuje `<<` operatora jako niejednoznaczny. Jedyne pierwotne typy C++, które `CArchive` mogą serializować, to typy o stałym rozmiarze `BYTE` ,, `WORD` `DWORD` i `LONG` . Wszystkie typy całkowite muszą być rzutowane na jeden z tych typów do serializacji. Typy zmiennoprzecinkowe muszą być archiwizowane przy użyciu `CArchive::Write()` funkcji składowej.
 
-Poniższy przykład pokazuje, jak zarchiwizować zmienną zmiennoprzecinkową (`f`) do `ar`archiwum:
+Poniższy przykład pokazuje, jak zarchiwizować zmienną zmiennoprzecinkową ( `f` ) w celu archiwizacji `ar` :
 
 ```
 ar.Write(&f, sizeof( float ));

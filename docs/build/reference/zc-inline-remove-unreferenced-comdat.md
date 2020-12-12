@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat:/Zc: inline (Usuń COMDAT bez odwołania)'
 title: /Zc:inline (usuwanie nieużywanej sekcji COMDAT)
 ms.date: 09/05/2019
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 290252262254521c024d7b0d6355472199d1f55d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9a3ac488057059d53925b8f505b9a3ad7f6674a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117552"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (usuwanie nieużywanej sekcji COMDAT)
 
-Usuwa nieużywane dane lub funkcje, które są COMDAT lub mają tylko połączenie wewnętrzne. W obszarze **/Zc: inline**kompilator określa, że jednostki translacji z danymi wbudowanymi lub funkcjami muszą również zawierać ich definicje.
+Usuwa nieużywane dane lub funkcje, które są COMDAT lub mają tylko połączenie wewnętrzne. W obszarze **/Zc: inline** kompilator określa, że jednostki translacji z danymi wbudowanymi lub funkcjami muszą również zawierać ich definicje.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,7 +30,7 @@ Usuwa nieużywane dane lub funkcje, które są COMDAT lub mają tylko połączen
 
 Gdy jest określony **/Zc: inline** , kompilator nie emituje informacji o symbolach dla nieużywanych funkcji COMDAT lub danych. Lub, w przypadku danych lub funkcji, które mają tylko wewnętrzny związek. Ta optymalizacja upraszcza część pracy konsolidatora w kompilacjach wydania lub w przypadku określenia opcji [/OPT: ref](opt-optimizations.md) konsolidatora. Optymalizacja kompilatora może znacznie zmniejszyć rozmiar pliku. obj i zwiększyć szybkość konsolidatora. Opcja kompilatora nie jest włączona w przypadku wyłączenia optymalizacji ([/od](od-disable-debug.md)). Lub, po określeniu [/GL (Optymalizacja całego programu)](gl-whole-program-optimization.md).
 
-Domyślnie ta opcja jest wyłączona (**/Zc: inline-**) w kompilacjach w wierszu polecenia. Opcja [/permissive-](permissive-standards-conformance.md) nie włącza **/Zc: inline**. W projektach programu MSBuild opcja jest ustawiana za pomocą **Właściwości konfiguracji**  >  **Język C/C++**  >  **Language**  >  Usuń kod, którego nie można**odwołać i Właściwość danych** , która domyślnie ma wartość **tak** .
+Domyślnie ta opcja jest wyłączona (**/Zc: inline-**) w kompilacjach w wierszu polecenia. Opcja [/permissive-](permissive-standards-conformance.md) nie włącza **/Zc: inline**. W projektach programu MSBuild opcja jest ustawiana za pomocą **Właściwości konfiguracji**  >  **Język C/C++**  >    >  Usuń kod, którego nie można **odwołać i Właściwość danych** , która domyślnie ma wartość **tak** .
 
 Jeśli określono **/Zc: inline** , kompilator wymusza wymóg języka c++ 11, że wszystkie zadeklarowane funkcje **`inline`** muszą mieć definicję dostępną w tej samej jednostce translacji, jeśli są używane. Gdy ta opcja nie jest określona, kompilator firmy Microsoft zezwala na niezgodny kod, który wywołuje funkcje zadeklarowane, **`inline`** nawet jeśli żadna definicja nie jest widoczna. Aby uzyskać więcej informacji, zobacz Standard C++ 11, w sekcji 3,2 i ppkt 7.1.2. Ta opcja kompilatora została wprowadzona w Visual Studio 2013 Update 2.
 
@@ -125,10 +126,10 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja języka**C/C++**  >  **Language** .
+1. Wybierz   >  stronę właściwości konfiguracja języka **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Usuń kod i dane bez odwołań** , a następnie wybierz przycisk **OK**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Zc (Zgodność)](zc-conformance.md)<br/>

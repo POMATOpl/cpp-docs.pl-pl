@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Powtórz'
 title: REPEAT
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - REPEAT directive
 ms.assetid: 26a72d91-d6b0-4d32-b5ba-4f5074e7973b
-ms.openlocfilehash: 4f900430e851fb91228d583a681e0e89c47576c7
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: cbd48b8edd0f8d01ee2820b5fc34db288ffe2887
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97125635"
 ---
 # <a name="repeat"></a>REPEAT
 
@@ -19,11 +20,11 @@ Oznacza blok, który ma *być powtarzany* . Analogicznie jak [powt](rept.md).
 
 ## <a name="syntax"></a>Składnia
 
-> \ *wyrażenia* **powtarzania**
-> *instrukcje*\
+> *Wyrażenie* **powtarzania**\
+> *zatwierdzeni*\
 > **ENDM**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

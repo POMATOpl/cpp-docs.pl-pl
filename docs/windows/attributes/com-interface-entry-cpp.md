@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: com_interface_entry (C++)'
 title: com_interface_entry (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 8339afb97df57f5080629dfed08823c5c091c5a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f182149eeac887292391cbb06f625aff261e91f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114888"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -108,7 +109,7 @@ END_COM_MAP()
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
-|**Powtarzalne**|Tak|
+|**Powtarzalność**|Tak|
 |**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass` , `progid` , lub `vi_progid` .|
 |**Nieprawidłowe atrybuty**|Brak|
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CButton'
 title: Klasa CButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 7e2156c7fba6d5c621ab9e73b4739be45941fcc5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: af7b9bec8298942bcb414e83be24257dd62652cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122580"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -153,7 +154,7 @@ Jeśli chcesz obsługiwać komunikaty powiadomień systemu Windows wysyłane prz
 
 Każdy wpis mapy komunikatów przyjmuje następującą formę:
 
-**Na \_ ** _Powiadomienie_ **(** _ID_, _memberFxn_ **)**
+**Na \_** _Powiadomienie_ **(** _ID_, _memberFxn_ **)**
 
 gdzie *ID* określa identyfikator okna podrzędnego kontrolki wysyłającej powiadomienie, a *memberFxn* jest nazwą nadrzędnej funkcji składowej, która została zapisywana w celu obsługi powiadomienia.
 

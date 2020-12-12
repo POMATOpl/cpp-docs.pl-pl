@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l'
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 4/2/2020
 api_name:
@@ -59,12 +60,12 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28db01c76da7789b5887d5209d133a63dede8d4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117526"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
@@ -83,7 +84,7 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość Double, long double lub float, która jest generowana przez konwersję ciągu na wartość zmiennoprzecinkową. Te wartości są opakowane w strukturę.
 
 *str*<br/>
@@ -94,7 +95,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli powodzenie. Możliwe kody błędów to **_UNDERFLOW** lub **_OVERFLOW**, które są zdefiniowane w pliku \<nagłówkowym Math. h>.
+Zwraca wartość 0, jeśli powodzenie. Możliwe kody błędów to **_UNDERFLOW** lub **_OVERFLOW**, które są zdefiniowane w pliku nagłówkowym \<math.h> .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -110,7 +111,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<STDLIB. h>|
+|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -168,7 +169,7 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

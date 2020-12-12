@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: atexit —'
 title: atexit
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-ms.openlocfilehash: b91e6dad81f006b0b94ac17a940e840386f6d2b1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82c0bbfdb9af62faff9239781b5db340183e25fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117539"
 ---
 # <a name="atexit"></a>atexit
 
@@ -54,11 +55,11 @@ Funkcja, która ma zostać wywołana.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **atexit —** przekazuje adres funkcji *Func* do wywołania, gdy program kończy normalne działanie. Kolejne wywołania do **atexit —** umożliwiają utworzenie rejestru funkcji, które są wykonywane w kolejności od ostatniej do końca (LIFO). Funkcje przesłane do **atexit —** nie mogą przyjmować parametrów. **atexit —** i **_onexit** używają sterty do przechowywania rejestru funkcji. W ten sposób liczba funkcji, które mogą być rejestrowane, jest ograniczona tylko przez pamięć sterty.
+Funkcja **atexit —** przekazuje adres funkcji *Func* do wywołania, gdy program kończy normalne działanie. Kolejne wywołania do **atexit —** umożliwiają utworzenie rejestru funkcji, które są wykonywane w kolejności od ostatniej do końca (LIFO). Funkcje przesłane do **atexit —** nie mogą przyjmować parametrów. **atexit —** i **_onexit** używać sterty do przechowywania rejestru funkcji. W ten sposób liczba funkcji, które mogą być rejestrowane, jest ograniczona tylko przez pamięć sterty.
 
 Kod w funkcji **atexit —** nie powinien zawierać żadnej zależności od żadnej biblioteki DLL, która mogła zostać już zwolniona, gdy wywoływana jest funkcja **atexit —** .
 
-Aby wygenerować aplikację zgodną ze standardem ANSI, należy użyć funkcji **atexit —** standard ANSI (zamiast podobnej funkcji **_onexit** ).
+Aby wygenerować aplikację zgodną ze standardem ANSI, użyj funkcji **atexit —** standardowego ANSI (zamiast podobnej funkcji **_onexit** ).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -112,9 +113,9 @@ This is executed first.
 This is executed next.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[przerwij](abort.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>

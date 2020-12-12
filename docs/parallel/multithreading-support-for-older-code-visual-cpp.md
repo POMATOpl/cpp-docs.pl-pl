@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: obsługa wielowątkowości dla starszego kodu (Visual C++)'
 title: Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-ms.openlocfilehash: 6f76ff42d2e28afe251ce234220051111736d3c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3b04fdde01e2576d37d41f2860526fcf5ba1691
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149906"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)
 
-Wizualizacja C++ pozwala na jednoczesne uruchamianie wielu współbieżnych wątków. W przypadku wielowątkowości można wyłączać zadania w tle, zarządzać jednoczesnymi strumieniami danych wejściowych, zarządzać interfejsem użytkownika i wiele innych.
+Visual C++ umożliwia jednoczesne uruchamianie wielu współbieżnych wątków wykonywania. W przypadku wielowątkowości można wyłączać zadania w tle, zarządzać jednoczesnymi strumieniami danych wejściowych, zarządzać interfejsem użytkownika i wiele innych.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -30,7 +31,7 @@ Zapewnia obsługę tworzenia aplikacji wielowątkowej w systemie Microsoft Windo
 Opisuje procesy i wątki oraz to, co jest podejściem MFC do wielowątkowości.
 
 [Wielowątkowość i ustawienia regionalne](multithreading-and-locales.md)<br/>
-Omawia problemy, które powstają w przypadku korzystania z funkcji regionalnych biblioteki środowiska uruchomieniowego C i C++ biblioteki standardowej w aplikacji wielowątkowej.
+Omawia problemy, które powstają w przypadku korzystania z funkcji regionalnych biblioteki środowiska uruchomieniowego C i standardowej biblioteki języka C++ w aplikacji wielowątkowej.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

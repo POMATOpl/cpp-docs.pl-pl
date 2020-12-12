@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operator pośredni: *'
 title: 'Operator bezpośredni: *'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d82e65676178fcfc9a62b10a780360c0c69d0d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113912"
 ---
 # <a name="indirection-operator-"></a>Operator bezpośredni: *
 
@@ -24,7 +25,7 @@ ms.locfileid: "80178283"
 
 ## <a name="remarks"></a>Uwagi
 
-Jednoargumentowy operator pośredni (<strong>\*</strong>) odwołuje wskaźnik; oznacza to, że konwertuje wartość wskaźnika na wartość l. Argument operacji operatora pośredni musi być wskaźnikiem do typu. Wynik wyrażenia pośredniego jest typem, z którego pochodzi typ wskaźnika. Użycie operatora <strong>\*</strong> w tym kontekście różni się od jego znaczenia jako operatora binarnego, który jest wynikiem mnożenia.
+Operator jednoargumentowy ( <strong>\*</strong> ) odwołuje się do wskaźnika; oznacza to, że konwertuje wartość wskaźnika na wartość l. Argument operacji operatora pośredni musi być wskaźnikiem do typu. Wynik wyrażenia pośredniego jest typem, z którego pochodzi typ wskaźnika. Użycie <strong>\*</strong> operatora w tym kontekście różni się od jego znaczenia jako operatora binarnego, który jest wynikiem mnożenia.
 
 Jeśli operand wskazuje funkcję, wynik jest oznaczeniem funkcji. Jeśli wskazuje on lokalizację magazynu, wynikiem jest l-wartość opisująca lokalizację magazynu.
 
@@ -65,4 +66,4 @@ Jeśli wartość wskaźnika jest nieprawidłowa, wynik jest niezdefiniowany. Nas
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operator Address-of: &](../cpp/address-of-operator-amp.md)<br/>
-[Operatory pośrednie i „Address-of”](../c-language/indirection-and-address-of-operators.md)
+[Operatory pośrednie i Address-of](../c-language/indirection-and-address-of-operators.md)

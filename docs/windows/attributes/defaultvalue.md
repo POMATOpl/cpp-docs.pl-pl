@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: DefaultValue'
 title: DefaultValue (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: 53b6a50bd7156eb9d6873e5ef08f6d75508fa3e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 907c736861d39064103af28917f35a97c0c7b1e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122164"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -25,7 +26,7 @@ Umożliwia określenie wartości domyślnej dla wpisanego parametru opcjonalnego
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość domyślna parametru.
 
 ## <a name="remarks"></a>Uwagi
@@ -59,7 +60,7 @@ __interface IFireTabCtrl : IDispatch {
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Parametr interfejsu|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
@@ -73,4 +74,4 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-co
 [retval](retval.md)<br/>
 [podczas](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
-[unique](unique-cpp.md)
+[unikatowy](unique-cpp.md)

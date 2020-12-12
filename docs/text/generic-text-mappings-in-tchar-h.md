@@ -1,5 +1,6 @@
 ---
-title: Mapowania tekstu ogólnego w używanie TCHAR. h
+description: 'Dowiedz się więcej o: mapowania Generic-Text w używanie TCHAR. h'
+title: Mapowania Generic-Text w używanie TCHAR. h
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: c317e7d67cc3d086dacbe0f24b0103d389afefda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f083dc03eab7db25b54955d8d34a13f2b5b7197b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118351"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Mapowania tekstu ogólnego w używanie TCHAR. h
+# <a name="generic-text-mappings-in-tcharh"></a>Mapowania Generic-Text w używanie TCHAR. h
 
 Aby uprościć transportowanie kodu do użytku międzynarodowego, Biblioteka wykonawcza firmy Microsoft zapewnia mapowanie tekstu ogólnego specyficznego dla firmy Microsoft dla wielu typów danych, procedur i innych obiektów. Można użyć tych mapowań, które są zdefiniowane w używanie TCHAR. h, do pisania kodu generycznego, który może być skompilowany dla zestawów znaków jednobajtowych, wielowymiarowych lub Unicode, w zależności od stałej manifestu zdefiniowanej przy użyciu `#define` instrukcji. Mapowania tekstu ogólnego są rozszerzeniami firmy Microsoft, które nie są zgodne ze standardem ANSI.
 
@@ -33,28 +34,28 @@ Ponieważ niektóre funkcje obsługi ciągów z pojedynczym zestawem znaków (SB
 
 1. Użyj bezpiecznej ze statycznie połączonej biblioteki funkcji sekcje thunk w używanie TCHAR. h. Aby to zrobić, Zdefiniuj stałą `_NO_INLINING` w wierszu polecenia. Jest to najwolniejsza Metoda, ale najbardziej bezpieczna typ.
 
-### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora dla mapowań tekstu ogólnego
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora dla mapowań Generic-Text
 
 |# Definiuj|Skompilowana wersja|Przykład|
 |---------------|----------------------|-------------|
-|`_UNICODE`|Unicode (znak dwubajtowy)|`_tcsrev`mapuje do`_wcsrev`|
-|`_MBCS`|Znaki wielobajtowe|`_tcsrev`mapuje do`_mbsrev`|
-|Brak (wartość domyślna nie ma ani nie została `_UNICODE` `_MBCS` zdefiniowana)|SBCS (ASCII)|`_tcsrev`mapuje do`strrev`|
+|`_UNICODE`|Unicode (znak dwubajtowy)|`_tcsrev` mapuje do `_wcsrev`|
+|`_MBCS`|Znaki wielobajtowe|`_tcsrev` mapuje do `_mbsrev`|
+|Brak (wartość domyślna nie ma ani nie została `_UNICODE` `_MBCS` zdefiniowana)|SBCS (ASCII)|`_tcsrev` mapuje do `strrev`|
 
 Na przykład funkcja generyczna tekstu `_tcsrev` , która jest zdefiniowana w używanie TCHAR. h, mapuje do, `_mbsrev` Jeśli została zdefiniowana `_MBCS` w programie lub `_wcsrev` zdefiniowana `_UNICODE` . W przeciwnym razie `_tcsrev` mapuje na `strrev` . Inne mapowania typu danych są dostępne w używanie TCHAR. h na potrzeby wygody programowania, ale `_TCHAR` są najbardziej przydatne.
 
-### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych tekstu ogólnego
+### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych Generic-Text
 
-|Tekst ogólny<br /> Nazwa typu danych|_UNICODE &<br /> Nie zdefiniowano _MBCS|_MBCS<br /> Określonych|_UNICODE<br /> Określonych|
+|Generic-Text<br /> Nazwa typu danych|_UNICODE &<br /> Nie zdefiniowano _MBCS|_MBCS<br /> Określonych|_UNICODE<br /> Określonych|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
 |`_TINT`|**`int`**|**`unsigned int`**|`wint_t`|
 |`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
 |`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
 |`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
-|`_T` lub `_TEXT`|Brak efektu (usunięty przez preprocesor)|Brak efektu (usunięty przez preprocesor)|`L`(konwertuje następujący znak lub ciąg na odpowiedni odpowiednik Unicode)|
+|`_T` lub `_TEXT`|Brak efektu (usunięty przez preprocesor)|Brak efektu (usunięty przez preprocesor)|`L` (konwertuje następujący znak lub ciąg na odpowiedni odpowiednik Unicode)|
 
-Aby uzyskać listę mapowań tekstu ogólnego procedur, zmiennych i innych obiektów, zobacz [Mapowanie tekstu ogólnego](../c-runtime-library/generic-text-mappings.md) w odwołaniu do biblioteki wykonawczej.
+Aby uzyskać listę mapowań tekstu ogólnego procedur, zmiennych i innych obiektów, zobacz [Mapowanie tekstu ogólnego](../c-runtime-library/generic-text-mappings.md) w dokumentacji biblioteki Run-Time.
 
 > [!NOTE]
 > Nie używaj `str` rodziny funkcji z ciągami Unicode, które mogą zawierać osadzone bajty o wartości null. Podobnie nie należy używać `wcs` rodziny funkcji z ciągami MBCS (lub SBCS).

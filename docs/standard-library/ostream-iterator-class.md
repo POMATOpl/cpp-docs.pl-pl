@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy ostream_iterator
 title: ostream_iterator — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-ms.openlocfilehash: 97367c19d0b1bdb4b9c16d5d12621210c8562485
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2123c2a9addb5024877364a1906800b244b91edb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224672"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118371"
 ---
 # <a name="ostream_iterator-class"></a>ostream_iterator — Klasa
 
@@ -71,7 +72,7 @@ Klasa ostream_iterator musi spełniać wymagania dla iteratora wyjściowego. Alg
 
 **Przestrzeń nazw:** std
 
-## <a name="ostream_iteratorchar_type"></a><a name="char_type"></a>ostream_iterator:: char_type
+## <a name="ostream_iteratorchar_type"></a><a name="char_type"></a> ostream_iterator:: char_type
 
 Typ, który zapewnia typ znaku iteratora.
 
@@ -120,7 +121,7 @@ by intOut are:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_star"></a>ostream_iterator:: operator *
+## <a name="ostream_iteratoroperator"></a><a name="op_star"></a> ostream_iterator:: operator *
 
 Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* *II*  =  *x*.
 
@@ -134,7 +135,7 @@ Odwołanie do `ostream_iterator` .
 
 ### <a name="remarks"></a>Uwagi
 
-Wymagania dla iteratora danych wyjściowych, które `ostream_iterator` muszą spełniać, wymagają, aby tylko wyrażenie \* *II*  =  *t* było prawidłowe i nie zachodzi o **`operator`** ani `operator=` na własne. Operator elementu członkowskiego w tej implementacji zwraca ** \* ten**element.
+Wymagania dla iteratora danych wyjściowych, które `ostream_iterator` muszą spełniać, wymagają, aby tylko wyrażenie \* *II*  =  *t* było prawidłowe i nie zachodzi o **`operator`** ani `operator=` na własne. Operator elementu członkowskiego w tej implementacji zwraca **\* ten** element.
 
 ### <a name="example"></a>Przykład
 
@@ -169,7 +170,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_add_add"></a>ostream_iterator:: operator + +
+## <a name="ostream_iteratoroperator"></a><a name="op_add_add"></a> ostream_iterator:: operator + +
 
 Niefunkcjonalny operator przyrostu zwracający `ostream_iterator` do tego samego obiektu, do którego odnosił się przed wywołaniem operacji.
 
@@ -184,7 +185,7 @@ Odwołanie do `ostream_iterator` .
 
 ### <a name="remarks"></a>Uwagi
 
-Te operatory elementów członkowskich zwracają ** \* tę**funkcję.
+Te operatory elementów członkowskich zwracają **\* tę** funkcję.
 
 ### <a name="example"></a>Przykład
 
@@ -219,7 +220,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_eq"></a>ostream_iterator:: operator =
+## <a name="ostream_iteratoroperator"></a><a name="op_eq"></a> ostream_iterator:: operator =
 
 Operator przypisania używany do implementowania wyrażenia output_iterator do \* `i`  =  `x` zapisu w strumieniu wyjściowym.
 
@@ -273,7 +274,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratorostream_iterator"></a><a name="ostream_iterator"></a>ostream_iterator:: ostream_iterator
+## <a name="ostream_iteratorostream_iterator"></a><a name="ostream_iterator"></a> ostream_iterator:: ostream_iterator
 
 Tworzy obiekt `ostream_iterator` , który jest zainicjowany i rozdzielony do zapisu w strumieniu wyjściowym.
 
@@ -347,7 +348,7 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 */
 ```
 
-## <a name="ostream_iteratorostream_type"></a><a name="ostream_type"></a>ostream_iterator:: ostream_type
+## <a name="ostream_iteratorostream_type"></a><a name="ostream_type"></a> ostream_iterator:: ostream_type
 
 Typ, który zapewnia typ strumienia iteratora.
 
@@ -363,7 +364,7 @@ Typ jest synonimem dla [basic_ostream](../standard-library/basic-ostream-class.m
 
 Zobacz [ostream_iterator](#ostream_iterator) , aby zapoznać się z przykładem sposobu deklarowania i używania `ostream_type` .
 
-## <a name="ostream_iteratortraits_type"></a><a name="traits_type"></a>ostream_iterator:: traits_type
+## <a name="ostream_iteratortraits_type"></a><a name="traits_type"></a> ostream_iterator:: traits_type
 
 Typ, który zapewnia typ cechy znakowej iteratora.
 

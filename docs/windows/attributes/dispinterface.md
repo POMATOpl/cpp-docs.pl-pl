@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: dispinterface'
 title: dispinterface (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: dd2a0883418ff79af53285d3cf51dba7601a363c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe39e537ccbc350f3733653a710dfd0f0d817339
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122138"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -47,7 +48,7 @@ Zapoznaj się z przykładem dla [powiązania](bindable.md) z przykładem użycia
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejsu**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
@@ -58,7 +59,7 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-co
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty według użycia](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
-[dual](dual.md)<br/>
+[obsługi](dual.md)<br/>
 [celnej](custom-cpp.md)<br/>
-[object](object-cpp.md)<br/>
+[Stream](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: składnik rejestru ATL (Rejestrator)'
 title: Składnik rejestru ALT (Rejestrator)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,29 +11,29 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: 9b4492ea393c01b3fa382828d3ca6097d52493f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b02d1d8bc1584c3f17349b8e3c0f9e8a3e98cb4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148619"
 ---
 # <a name="atl-registry-component-registrar"></a>Składnik rejestru ALT (Rejestrator)
 
-Rejestrator ATL zapewnia zoptymalizowany dostęp do rejestru systemowego za pośrednictwem niestandardowego interfejsu. Rejestrator jest bezwątpowy i umożliwia statyczne łączenie kodu dla klientów języka C++.
+Rejestrator ATL zapewnia zoptymalizowany dostęp do rejestru systemowego za pomocą niestandardowego interfejsu. Rejestrator jest bezpłatny wątek i umożliwia statyczne łączenie kodu dla klientów C++.
 
 > [!NOTE]
-> Kod źródłowy rejestratora ATL można znaleźć w pliku atlmfc\include\atliface.h.
+> Kod źródłowy rejestratora ATL można znaleźć w atlmfc\include\atliface.h.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)<br/>
-Przewodnik po tworzeniu skryptów rejestratora. Zawiera tematy dotyczące składni BNF, drzew analizy, przykładów skryptów rejestru, przy użyciu wymiennych parametrów i wywoływania skryptów.
+Przewodnik tworzenia skryptów rejestratora. Obejmuje tematy dotyczące składni BNF oraz analizowanie drzew, przykłady skryptów rejestru, używanie parametrów wymiennych i Wywoływanie skryptów.
 
-[Konfigurowanie łącza statycznego do kodu rejestratora (tylko c++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
-Wyświetla listę kroków konfigurowania statycznego łącza do rejestratora.
+[Konfigurowanie statycznego linku do kodu rejestratora (tylko C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
+Zawiera listę czynności, które należy wykonać, aby skonfigurować łączenie statyczne z rejestratorem.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Zawiera łącza do tematów koncepcyjnych dotyczących programowania przy użyciu aktywnej biblioteki szablonów.
+Zawiera łącza do tematów koncepcyjnych dotyczących sposobu programowania przy użyciu Active Template Library.

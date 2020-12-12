@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Wielowątkowość: przerywanie wątków w MFC'
 title: 'Wielowątkowość: przerywanie wątków w MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 0625be0a628a6ae991acd2fa1f7118a4deabccda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dc353bc0edf14d718ee11e140fca11e4c0545588
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149880"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Wielowątkowość: przerywanie wątków w MFC
 
@@ -28,19 +29,19 @@ Dwie normalne sytuacje powodują zakończenie wątku: funkcja kontrolująca koń
 
 - [Pobieranie kodu zakończenia wątku](#_core_retrieving_the_exit_code_of_a_thread)
 
-## <a name="normal-thread-termination"></a><a name="_core_normal_thread_termination"></a>Normalne zakończenie wątku
+## <a name="normal-thread-termination"></a><a name="_core_normal_thread_termination"></a> Normalne zakończenie wątku
 
 W przypadku wątku roboczego normalne zakończenie wątku jest proste: zamyka funkcję kontroli i zwraca wartość, która oznacza przyczynę zakończenia. Można użyć funkcji [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) lub **`return`** instrukcji. Zazwyczaj 0 oznacza pomyślne zakończenie, ale jest to konieczne.
 
 W przypadku wątku interfejsu użytkownika proces jest równie prosty: z poziomu wątku interfejsu użytkownika, wywołaj [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) w Windows SDK. Jedynym parametrem, który `PostQuitMessage` Pobiera jest kod zakończenia wątku. Podobnie jak w przypadku wątków roboczych, 0 zazwyczaj oznacza pomyślne zakończenie.
 
-## <a name="premature-thread-termination"></a><a name="_core_premature_thread_termination"></a>Przedwczesne zakończenie wątku
+## <a name="premature-thread-termination"></a><a name="_core_premature_thread_termination"></a> Przedwczesne zakończenie wątku
 
 Przedwczesne zakończenie wątku jest niemal proste: Wywołaj [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z wewnątrz wątku. Przekaż żądany kod zakończenia jako jedyny parametr. Spowoduje to zatrzymanie wykonywania wątku, oddzielenie stosu wątku, odłączenie wszystkich bibliotek DLL dołączonych do wątku i usunięcie obiektu wątku z pamięci.
 
-`AfxEndThread`musi być wywołana z poziomu wątku, aby zakończyć. Jeśli chcesz przerwać wątek z innego wątku, należy skonfigurować metodę komunikacji między dwoma wątkami.
+`AfxEndThread` musi być wywołana z poziomu wątku, aby zakończyć. Jeśli chcesz przerwać wątek z innego wątku, należy skonfigurować metodę komunikacji między dwoma wątkami.
 
-## <a name="retrieving-the-exit-code-of-a-thread"></a><a name="_core_retrieving_the_exit_code_of_a_thread"></a>Pobieranie kodu zakończenia wątku
+## <a name="retrieving-the-exit-code-of-a-thread"></a><a name="_core_retrieving_the_exit_code_of_a_thread"></a> Pobieranie kodu zakończenia wątku
 
 Aby uzyskać kod zakończenia procesu roboczego lub wątku interfejsu użytkownika, wywołaj funkcję [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) . Aby uzyskać informacje na temat tej funkcji, zobacz Windows SDK. Ta funkcja pobiera uchwyt do wątku (przechowywanego w `m_hThread` elemencie członkowskim danych `CWinThread` obiektów) i adres typu DWORD.
 
@@ -54,7 +55,7 @@ Pobieranie kodu zakończenia obiektów [CWinThread](../mfc/reference/cwinthread-
 
 Każda z tych metod pozwala określić, dlaczego `CWinThread` obiekt został przerwany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wielowątkowość z C++ i MFC](multithreading-with-cpp-and-mfc.md)<br/>
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)<br/>

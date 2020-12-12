@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Maska operatora'
 title: operator MASK
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MASK operator
 - operator MASK
 ms.assetid: bf997f99-17c8-4230-ab69-7a9774a75d93
-ms.openlocfilehash: 064022b3fb49a498a8ab7f8513b89d4c9964e346
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 22c480b59d20bb2d42eef7d28a31ae4f519b0a98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97127182"
 ---
 # <a name="operator-mask"></a>operator MASK
 
@@ -21,9 +22,9 @@ Zwraca maskę bitową, w której są ustawiane bity w *recordfieldname* lub *rek
 
 ## <a name="syntax"></a>Składnia
 
-> **Maskowanie** {*recordfieldname* | *Record*}
+> **Maskowanie** {*recordfieldname*  |  *Record*}
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Odwołania operatorów](operators-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

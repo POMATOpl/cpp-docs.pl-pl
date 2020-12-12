@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: organizacja kodu źródłowego (szablony C++)'
 title: Organizacja kodu źródłowego (szablony C++)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: ecd682056f27200ae31c27295c1aabaf72c74a18
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72777c550cf36fd635432a8ce840af92f0a3f893
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113873"
 ---
 # <a name="source-code-organization-c-templates"></a>Organizacja kodu źródłowego (szablony C++)
 

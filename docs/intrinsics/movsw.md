@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __movsw'
 title: __movsw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 500a2bc3af83887cdd5d65501695c9db60ef60f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119033"
 ---
 # <a name="__movsw"></a>__movsw
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję Move String (`rep movsw`).
+Generuje instrukcję Move String ( `rep movsw` ).
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,11 +49,11 @@ podczas Liczba słów do skopiowania.
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Wynikiem tego jest to, że pierwsze słowa liczbowe wskazywane przez *Źródło* są kopiowane do ciągu *docelowego* .
+Wynikiem tego jest to, że pierwsze słowa *liczbowe* wskazywane przez *Źródło* są kopiowane do ciągu *docelowego* .
 
 Ta procedura jest dostępna tylko jako wewnętrzna.
 
@@ -84,6 +85,6 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
