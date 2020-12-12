@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _matherr'
 title: _matherr
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 340e3b8562e1f0f564810bc63cf6bd2e87ffdf63
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 406f9fe43ed64b24637f94cc5bf1ef01d4c94567
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299634"
 ---
 # <a name="_matherr"></a>_matherr
 
@@ -49,7 +50,7 @@ Wskaźnik do struktury zawierającej informacje o błędzie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_matherr** zwraca 0, aby wskazać błąd, lub wartość różną od zera, aby wskazać powodzenie. Jeśli **_matherr** zwraca wartość 0, może zostać wyświetlony komunikat o błędzie, a **errno** jest ustawiona na odpowiednią wartość błędu. Jeśli **_matherr** zwraca wartość różną od zera, żaden komunikat o błędzie nie jest wyświetlany i **errno** pozostaje niezmieniony.
+**_matherr** zwraca wartość 0, aby wskazać błąd, lub zero, aby wskazać powodzenie. Jeśli **_matherr** zwraca wartość 0, może zostać wyświetlony komunikat o błędzie, a **errno** jest ustawiona na odpowiednią wartość błędu. Jeśli **_matherr** zwraca wartość różną od zera, żaden komunikat o błędzie nie jest wyświetlany i **errno** pozostaje niezmieniony.
 
 Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -57,9 +58,9 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [_doserrno, e
 
 Funkcja **_matherr** przetwarza błędy generowane przez funkcje zmiennoprzecinkowe biblioteki matematycznej. Te funkcje wywołują **_matherr** w przypadku wykrycia błędu.
 
-W przypadku specjalnej obsługi błędów można podać inną definicję **_matherr**. W przypadku korzystania z dynamicznie połączonej wersji biblioteki wykonawczej C (CRT) można zastąpić domyślną procedurę **_matherr** w pliku wykonywalnym klienta za pomocą wersji zdefiniowanej przez użytkownika. Nie można jednak zastąpić domyślnej procedury **_matherr** w kliencie DLL biblioteki DLL CRT.
+W przypadku specjalnej obsługi błędów można podać inną definicję **_matherr**. W przypadku korzystania z dynamicznie połączonej wersji biblioteki wykonawczej C (CRT) można zastąpić domyślną procedurę **_matherr** w pliku wykonywalnym klienta przy użyciu wersji zdefiniowanej przez użytkownika. Nie można jednak zastąpić domyślnej procedury **_matherr** w kliencie DLL biblioteki DLL CRT.
 
-Gdy wystąpi błąd w procedurze matematycznej, **_matherr** jest wywoływana ze wskaźnikiem do struktury typu **_exception** (zdefiniowanego w \<Math. h >) jako argument. Struktura **_exception** zawiera następujące elementy.
+Gdy wystąpi błąd w procedurze matematycznej, **_matherr** jest wywoływana ze wskaźnikiem do struktury typu **_exception** (zdefiniowane w \<math.h> ) jako argument. Struktura **_exception** zawiera następujące elementy.
 
 ```C
 struct _exception
@@ -72,9 +73,9 @@ struct _exception
 };
 ```
 
-Element członkowski **typu** określa typ błędu matematycznego. Jest to jedna z następujących wartości zdefiniowana w \<Math. h >:
+Element członkowski **typu** określa typ błędu matematycznego. Jest to jedna z następujących wartości zdefiniowana w \<math.h> :
 
-|Macro|Znaczenie|
+|Makro|Znaczenie|
 |-|-|
 | **_DOMAIN** | Błąd domeny argumentu |
 | **_SING** | Argument Singularity |
@@ -159,4 +160,4 @@ Normal: log( 0.0 ) = -inf
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

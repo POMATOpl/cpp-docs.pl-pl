@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wektor (STL/CLR)'
 title: vector (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -91,12 +92,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 9abecfa6e0bbdf74514e2b7162d1d22a84fa01b2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5997a70fb6b6e37fd4b1ff19c34fdc15750bbe4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298737"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -919,7 +920,7 @@ Początek zakresu do wymazania.
 *ostatniego*<br/>
 Koniec zakresu do wymazania.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1350,7 +1351,7 @@ Wyliczenie do wstawienia.
 *użyte*<br/>
 Wartość elementu do wstawienia.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Gdzie w kontenerze należy wstawić przed.
 
 ### <a name="remarks"></a>Uwagi
@@ -2221,7 +2222,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *wartości*parametru szablonu.
+Typ jest synonimem dla *wartości* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

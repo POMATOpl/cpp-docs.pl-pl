@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: malloc'
 title: malloc
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: a093dbdbc4849b1c2f3d86e85a5e2b25a7b988e2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8026cf24ee49999026c58787b83b2c8c0a238a2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299790"
 ---
 # <a name="malloc"></a>malloc
 
@@ -61,7 +62,7 @@ Funkcja **malloc** przypisuje blok pamięci o *rozmiarze* co najmniej bajtów. B
 
 Funkcja **malloc** ustawia **errno** do **ENOMEM** , jeśli alokacja pamięci nie powiedzie się lub jeśli żądana ilość pamięci przekroczy **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Kod uruchamiania używa usługi **malloc** do przydzielania pamięci dla zmiennych **_environ**, *envp*i *argv* . Następujące funkcje i ich odpowiedniki znakowe są również wywołaniem **malloc**.
+Kod uruchamiania używa usługi **malloc** do przydzielania pamięci dla zmiennych **_environ**, *envp* i *argv* . Następujące funkcje i ich odpowiedniki znakowe są również wywołaniem **malloc**.
 
 :::row:::
    :::column span="":::
@@ -169,7 +170,7 @@ Memory space allocated for path name
 Memory freed
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

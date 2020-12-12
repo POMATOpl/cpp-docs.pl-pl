@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze InvokeHelper
 title: InvokeHelper — Struktura
 ms.date: 10/18/2018
 ms.topic: reference
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b9bb8abb59cce5a3c25d795d0946ffbe88d0076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299023"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper — Struktura
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -106,41 +107,41 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 *TDelegateInterface*<br/>
 Typ interfejsu delegata.
 
-*TCallback (Powrót do systemu)*<br/>
+*TCallback*<br/>
 Typ funkcji obsługi zdarzeń.
 
-*argCount (ArgCount)*<br/>
+*argCount*<br/>
 Liczba argumentów w `InvokeHelper` specjalizacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Zapewnia implementację `Invoke()` metody na podstawie określonej liczby i typu argumentów.
+Zapewnia implementację `Invoke()` metody w oparciu o określoną liczbę i typ argumentów.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 Nazwa     | Opis
 -------- | -----------------------------------------------------------------------------
-`Traits` | Synonim dla klasy, która definiuje typ każdego argumentu obsługi zdarzeń.
+`Traits` | Synonim klasy, która definiuje typ każdego argumentu procedury obsługi zdarzeń.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 Nazwa                                        | Opis
 ------------------------------------------- | -------------------------------------------------------
-[InvokeHelper::InvokeHelper](#invokehelper) | Inicjuje nowe wystąpienie klasy `InvokeHelper`.
+[InvokeHelper:: InvokeHelper](#invokehelper) | Inicjuje nowe wystąpienie klasy `InvokeHelper`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                            | Opis
 ------------------------------- | -----------------------------------------------------------------------------------
-[InvokeHelper::Wywołaj](#invoke) | Wywołuje program obsługi zdarzeń, którego podpis zawiera określoną liczbę argumentów.
+[InvokeHelper:: Invoke](#invoke) | Wywołuje program obsługi zdarzeń, którego podpis zawiera określoną liczbę argumentów.
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 Nazwa                                 | Opis
 ------------------------------------ | ----------------------------------------------------------
-[InvokeHelper::callback_](#callback) | Reprezentuje program obsługi zdarzeń do wywołania, gdy wystąpi zdarzenie.
+[InvokeHelper:: callback_](#callback) | Reprezentuje procedurę obsługi zdarzeń do wywołania w przypadku wystąpienia zdarzenia.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -148,13 +149,13 @@ Nazwa                                 | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** event.h
+**Nagłówek:** Event. h
 
-**Obszar nazw:** Microsoft::WRL::Dszczegóły
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="invokehelpercallback_"></a><a name="callback"></a>InvokeHelper::callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a> InvokeHelper:: callback_
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 TCallback callback_;
@@ -162,13 +163,13 @@ TCallback callback_;
 
 ### <a name="remarks"></a>Uwagi
 
-Reprezentuje program obsługi zdarzeń do wywołania, gdy wystąpi zdarzenie.
+Reprezentuje procedurę obsługi zdarzeń do wywołania w przypadku wystąpienia zdarzenia.
 
-Parametr `TCallback` szablonu określa typ programu obsługi zdarzeń.
+`TCallback`Parametr szablonu określa typ programu obsługi zdarzeń.
 
-## <a name="invokehelperinvoke"></a><a name="invoke"></a>InvokeHelper::Wywołaj
+## <a name="invokehelperinvoke"></a><a name="invoke"></a> InvokeHelper:: Invoke
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 STDMETHOD(
@@ -205,44 +206,44 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*argument1*<br/>
+*arg1*<br/>
 Argument 1.
 
-*argument 2*<br/>
+*arg2*<br/>
 Argument 2.
 
-*arg3 ( arg3 )*<br/>
+*arg3*<br/>
 Argument 3.
 
-*arg4 ( arg4 )*<br/>
+*arg4*<br/>
 Argument 4.
 
-*argument 5*<br/>
+*arg5*<br/>
 Argument 5.
 
-*arg6 (arg6)*<br/>
+*arg6*<br/>
 Argument 6.
 
-*argument 7*<br/>
+*arg7*<br/>
 Argument 7.
 
-*arg8 (8)*<br/>
+*arg8*<br/>
 Argument 8.
 
-*argument 9*<br/>
+*arg9*<br/>
 Argument 9.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie hresult, który opisuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT, który opisuje błąd.
 
 ### <a name="remarks"></a>Uwagi
 
 Wywołuje program obsługi zdarzeń, którego podpis zawiera określoną liczbę argumentów.
 
-## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>InvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a> InvokeHelper:: InvokeHelper
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 explicit InvokeHelper(
@@ -252,11 +253,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>Parametry
 
-*Wywołania zwrotnego*<br/>
-Program obsługi zdarzeń.
+*wywołania zwrotnego*<br/>
+Procedura obsługi zdarzeń.
 
 ### <a name="remarks"></a>Uwagi
 
 Inicjuje nowe wystąpienie klasy `InvokeHelper`.
 
-Parametr `TCallback` szablonu określa typ programu obsługi zdarzeń.
+`TCallback`Parametr szablonu określa typ programu obsługi zdarzeń.

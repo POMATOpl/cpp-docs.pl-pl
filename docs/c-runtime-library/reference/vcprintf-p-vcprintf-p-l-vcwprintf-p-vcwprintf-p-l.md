@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _vcprintf_p, _vcprintf_p_l, _vcwprintf_p _vcwprintf_p_l'
 title: _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: a0cfcd5ff6c99ae521d1521c9467288daaf05913
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3fb9cf8ca2bb561da6d859a1bbeff487b6b2e801
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299257"
 ---
 # <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -83,13 +84,13 @@ int _vcwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik do listy argumentów.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz [składnia specyfikacji formatowania: printf i wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
@@ -100,9 +101,9 @@ Liczba znaków, które są zapisywane lub wartość ujemna, jeśli wystąpi bł�
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie używa funkcji **_putch** do formatowania i zapisywania danych w konsoli. ( **_vcwprintf_p** używa **_putwch** zamiast **_putch**. **_vcwprintf_p** to dwubajtowa wersja **_vcprintf_p**. Ciąg znaków dwubajtowych przyjmuje wartość argumentu.
+Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie używa funkcji **_putch** do formatowania i zapisywania danych w konsoli. (**_vcwprintf_p** używa **_putwch** zamiast **_putch**. **_vcwprintf_p** to wersja znaku dwubajtowego **_vcprintf_p**. Ciąg znaków dwubajtowych przyjmuje wartość argumentu.
 
-Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że korzystają z parametru ustawień regionalnych, który został przesłany zamiast bieżących ustawień regionalnych.
+Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że korzystają z parametru ustawień regionalnych, który został przekazaną, zamiast bieżących ustawień regionalnych.
 
 Każdy *argument* (jeśli istnieje) jest konwertowany i jest wyprowadzany zgodnie z odpowiadającą specyfikacją formatu w *formacie*. Specyfikacja formatu obsługuje parametry pozycyjne, aby można było określić kolejność, w której argumenty są używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [Printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
@@ -111,7 +112,7 @@ Te funkcje nie tłumaczą znaków wysuwu wiersza w kombinacje wysuwu wiersza (CR
 > [!IMPORTANT]
 > Upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Te funkcje weryfikują wskaźnik wejściowy i ciąg formatu. Jeśli *Format* lub *argument* ma **wartość null**lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
+Te funkcje weryfikują wskaźnik wejściowy i ciąg formatu. Jeśli *Format* lub *argument* ma **wartość null** lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -124,8 +125,8 @@ Te funkcje weryfikują wskaźnik wejściowy i ciąg formatu. Jeśli *Format* lub
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_vcprintf_p**, **_vcprintf_p_l**|\<CONIO. h > i \<STDARG. h >|
-|**_vcwprintf_p**, **_vcwprintf_p_l**|\<CONIO. h > i \<STDARG. h >|
+|**_vcprintf_p**, **_vcprintf_p_l**|\<conio.h> i \<stdarg.h>|
+|**_vcwprintf_p**, **_vcwprintf_p_l**|\<conio.h> i \<stdarg.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -165,4 +166,4 @@ parameter 2 = 222; parameter 1 = one
 [We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
-[printf_p Parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

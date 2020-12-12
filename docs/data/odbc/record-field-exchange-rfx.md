@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Wymiana pól rekordów (RFX)'
 title: Wymiana pól rekordów (RFX)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,46 +9,46 @@ helpviewer_keywords:
 - data [MFC]
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
-ms.openlocfilehash: 6f965b90e1e0bbcfd3ad04bb5b40644d61050b2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d181d779f74096dc035e9d492e50ef1823982b24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367162"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298893"
 ---
 # <a name="record-field-exchange-rfx"></a>Wymiana pól rekordów (RFX)
 
-Klasy bazy danych MFC ODBC automatyzują przenoszenie danych między źródłem danych a obiektem [zestawem rekordów.](../../data/odbc/recordset-odbc.md) Po wyprowadzeniu klasy z [CRecordset](../../mfc/reference/crecordset-class.md) i nie używać pobierania wiersza zbiorczego, dane są przesyłane przez mechanizm wymiany pól rekordów (RFX).
+Klasy baz danych MFC ODBC automatyzują przeniesienie danych między źródłem danych a obiektem [zestawu rekordów](../../data/odbc/recordset-odbc.md) . Podczas wyprowadzania klasy z [CRecordset](../../mfc/reference/crecordset-class.md) i nie używaj pobierania wierszy zbiorczych dane są przesyłane przez mechanizm wymiany pól rekordów (RFX).
 
 > [!NOTE]
-> Jeśli zaimplementowano pobieranie wiersza `CRecordset` zbiorczego w klasie pochodnej, struktura używa mechanizmu zbiorczej wymiany pól rekordów (Bulk RFX) do przesyłania danych. Aby uzyskać więcej informacji, zobacz [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Jeśli zaimplementowano pobieranie wierszy zbiorczych w klasie pochodnej `CRecordset` , środowisko używa mechanizmu wymiany zbiorczych pól rekordów (bulk RFX) do transferowania danych. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: pobieranie rekordów zbiorczo (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-RFX jest podobny do wymiany danych dialogowych (DDX). Przenoszenie danych między źródłem danych a członkami danych pola zestawu rekordów wymaga wielu wywołań funkcji [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) w zbiorze rekordów oraz znacznej interakcji między platformą a [odbc.](../../data/odbc/odbc-basics.md) Mechanizm RFX jest bezpieczny dla typu i pozwala zaoszczędzić pracę `::SQLBindCol`wywoływania funkcji ODBC, takich jak . Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md).
+RFX przypomina wymianę danych okna dialogowego (DDX). Przeniesienie danych między źródłem danych a elementami członkowskimi danych pola zestawu rekordów wymaga wielu wywołań funkcji [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) zestawu rekordów i znacznej interakcji między platformą i [ODBC](../../data/odbc/odbc-basics.md). Mechanizm RFX jest bezpieczny dla typów i zapisuje zadania wywoływania funkcji ODBC, takich jak `::SQLBindCol` . Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md).
 
-RFX jest w większości przezroczysty dla Ciebie. Jeśli deklarujesz swoje klasy recordset za pomocą Kreatora aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta odbc MFC),](../../mfc/reference/adding-an-mfc-odbc-consumer.md)RFX jest wbudowany w nich automatycznie. Klasa zestawu rekordów musi pochodzić `CRecordset` z klasy podstawowej dostarczonej przez platformę. Kreator aplikacji MFC umożliwia utworzenie początkowej klasy pliku recordset. **Dodaj klasę** umożliwia dodawanie innych klas akcesoryjnych, zgodnie z potrzebami. Aby uzyskać więcej informacji i przykładów, zobacz [Dodawanie konsumenta odbc MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+RFX jest w większości przezroczyste dla Ciebie. W przypadku deklarowania klas zestawu rekordów przy użyciu Kreatora aplikacji MFC lub **dodawania klasy** (zgodnie z opisem w temacie [Dodawanie użytkownika MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) RFX jest automatycznie wbudowany. Klasa zestawu rekordów musi pochodzić od klasy bazowej `CRecordset` dostarczonej przez platformę. Kreator aplikacji MFC umożliwia utworzenie początkowej klasy zestawu rekordów. Opcja **Dodaj klasę** umożliwia dodanie innych klas zestawu rekordów w miarę potrzeb. Aby uzyskać więcej informacji i przykładów, zobacz [Dodawanie użytkownika MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
-Należy ręcznie dodać niewielką ilość kodu RFX w trzech przypadkach, jeśli chcesz:
+Należy ręcznie dodać niewielką ilość kodu RFX w trzech przypadkach, gdy chcesz:
 
-- Użyj sparametryzowanych zapytań. Aby uzyskać więcej informacji, zobacz [Recordset: Parametrizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+- Użyj zapytań sparametryzowanych. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: parametryzacja a zestaw rekordów (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-- Wykonywanie sprzężeń (przy użyciu jednego akumulatu rekordów dla kolumn z dwóch lub więcej tabel). Aby uzyskać więcej informacji, zobacz [Recordset: Performing a Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+- Wykonaj sprzężenia (przy użyciu jednego zestawu rekordów dla kolumn z dwóch lub więcej tabel). Aby uzyskać więcej informacji, zobacz [zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
-- Dynamiczne powiąż kolumny danych. Jest to mniej powszechne niż parametryzacja. Aby uzyskać więcej informacji, zobacz [Zestaw rekordów: Dynamicznie wiążące kolumny danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Dynamiczne wiązanie kolumn danych. Jest to mniej typowe niż parametryzacja. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dynamiczne wiązanie kolumn danych (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Jeśli potrzebujesz bardziej zaawansowanego zrozumienia RFX, zobacz [Wymiana pól rekordu: Jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Jeśli potrzebujesz bardziej zaawansowanej wiedzy na temat RFX, zobacz [wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-Następujące tematy wyjaśniają szczegóły korzystania z obiektów programu recordset:
+W poniższych tematach opisano szczegóły dotyczące korzystania z obiektów zestawu rekordów:
 
 - [Wymiana pól rekordów: używanie RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Wymiana pól rekordów: używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Wymiana pól rekordów: Używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
 - [Wymiana pól rekordów: jak działa RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Łączność z otwartą bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[MFC ODBC zużywają](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
-[Obsługa bazy danych, kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>
+[Korzystanie z MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Obsługa bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>
 [Klasa CRecordset](../../mfc/reference/crecordset-class.md)

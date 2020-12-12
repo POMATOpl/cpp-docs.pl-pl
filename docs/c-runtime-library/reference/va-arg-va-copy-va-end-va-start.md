@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: va_arg, va_copy, va_end va_start'
 title: va_arg, va_copy, va_end, va_start
 ms.date: 11/04/2016
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: d35cf3aea99b7e832afb7d2a8e0aaa9d008226fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 368a08e3ceb78d09d11a9f661772c6b0abef471f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299283"
 ---
 # <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
@@ -97,7 +98,7 @@ Parametr poprzedzający pierwszy argument opcjonalny.
 
 ## <a name="remarks"></a>Uwagi
 
-Makra **va_arg**, **va_copy**, **va_end**i **va_start** zapewniają przenośny sposób dostępu do argumentów do funkcji, gdy funkcja przyjmuje zmienną liczbę argumentów. Istnieją dwie wersje makr: makra zdefiniowane w STDARG. H jest zgodna ze standardem ISO C99; makra zdefiniowane w VARARGS. H są przestarzałe, ale są zachowywane w celu zachowania zgodności z poprzednimi wersjami z kodem, który został zapisany przed standardem ANSI c89.
+Makra **va_arg**, **va_copy**, **va_end** i **va_start** zapewniają przenośny sposób dostępu do argumentów do funkcji, gdy funkcja przyjmuje zmienną liczbę argumentów. Istnieją dwie wersje makr: makra zdefiniowane w STDARG. H jest zgodna ze standardem ISO C99; makra zdefiniowane w VARARGS. H są przestarzałe, ale są zachowywane w celu zachowania zgodności z poprzednimi wersjami z kodem, który został zapisany przed standardem ANSI c89.
 
 W tych makrach przyjęto założenie, że funkcja przyjmuje określoną liczbę wymaganych argumentów, a następnie zmienną liczbę argumentów opcjonalnych. Wymagane argumenty są deklarowane jako parametry zwykłe do funkcji i można do nich uzyskać dostęp za pomocą nazw parametrów. Opcjonalne argumenty są dostępne za pomocą makr w STDARG. H (lub VARARGS. H dla kodu, który został zapisany przed standardem ANSI C89), który ustawia wskaźnik do pierwszego opcjonalnego argumentu na liście argumentów, pobiera argumenty z listy i resetuje wskaźnik po zakończeniu przetwarzania argumentów.
 
@@ -105,14 +106,14 @@ Standardowe makra języka C zdefiniowane w STDARG. H, są używane w następują
 
 - **va_start** ustawia *arg_ptr* do pierwszego opcjonalnego argumentu na liście argumentów, które są przekazane do funkcji. Argument *arg_ptr* musi mieć typ **va_list** . Argument *prev_param* jest nazwą wymaganego parametru, który bezpośrednio poprzedza pierwszy opcjonalny argument na liście argumentów. Jeśli *prev_param* jest zadeklarowana z klasą magazynu Register, zachowanie makra jest niezdefiniowane. **va_start** należy użyć przed upływem **va_arg** po raz pierwszy.
 
-- **va_arg** Pobiera wartość *typu* z lokalizacji podawanej przez *arg_ptr*i zwiększa *arg_ptr* , aby wskazywały na następny argument na liście przy użyciu rozmiaru *typu* , aby określić, gdzie zostanie uruchomiony następny argument. do pobierania argumentów z listy można użyć dowolnej liczby razy w funkcji **va_arg** .
+- **va_arg** Pobiera wartość *typu* z lokalizacji podawanej przez *arg_ptr* i zwiększa *arg_ptr* , aby wskazywały na następny argument na liście przy użyciu rozmiaru *typu* , aby określić, gdzie zostanie uruchomiony następny argument. do pobierania argumentów z listy można użyć dowolnej liczby razy w funkcji **va_arg** .
 
 - **va_copy** wykonuje kopię listy argumentów w bieżącym stanie. Parametr *src* musi już być zainicjowany przy użyciu **va_start**; mógł zostać zaktualizowany przy użyciu **va_arg** wywołań, ale nie może zostać zresetowany przy użyciu **va_end**. Następny argument pobrany przez **va_arg** z miejsca *docelowego* jest taki sam jak następny argument pobrany z elementu *src*.
 
 - Po pobraniu wszystkich argumentów **va_end** resetuje wskaźnik do **wartości null**. **va_end** musi być wywoływana na każdej liście argumentów, która została zainicjowana z **va_start** lub **va_copy** przed zwróceniem funkcji.
 
 > [!NOTE]
-> Makra w VARARGS. H są przestarzałe i są zachowywane tylko w celu zapewnienia zgodności z poprzednimi wersjami z kodem, który został zapisany przed standardem ANSI c89. We wszystkich innych przypadkach Użyj makr w STDARGS. C.
+> Makra w VARARGS. H są przestarzałe i są zachowywane tylko w celu zapewnienia zgodności z poprzednimi wersjami z kodem, który został zapisany przed standardem ANSI c89. We wszystkich innych przypadkach Użyj makr w STDARGS. H.
 
 Gdy są kompilowane przy użyciu opcji [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md), programy korzystające z tych makr mogą generować nieoczekiwane wyniki ze względu na różnice między systemami typów środowiska uruchomieniowego języka macierzystego (CLR). Weź pod uwagę następujący program:
 
@@ -156,7 +157,7 @@ Należy zauważyć, że **testit** oczekuje, że drugi parametr jest albo **`int
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdio.h> lub\<stdarg.h>
+**Nagłówek:** \<stdio.h> lub \<stdarg.h>
 
 **Przestarzały nagłówek:**\<varargs.h>
 

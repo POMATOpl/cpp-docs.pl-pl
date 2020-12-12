@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tmpfile'
 title: tmpfile
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27760a7d1369a0292c6719667b8cb182ce7df815
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299517"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -53,7 +54,7 @@ Funkcja **tmpfile** tworzy plik tymczasowy i zwraca wskaźnik do tego strumienia
 
 Jeśli nie można otworzyć pliku, **tmpfile** zwraca wskaźnik o **wartości null** . Ten plik tymczasowy jest automatycznie usuwany po zamknięciu pliku, gdy program kończy się normalnie lub gdy **_rmtmp** jest wywoływana, przy założeniu, że bieżący katalog roboczy nie zmienia się. Plik tymczasowy jest otwierany w trybie w **+ b** (binarny odczyt/zapis).
 
-Błąd może wystąpić, Jeśli podjęto próbę więcej niż TMP_MAX (patrz STDIO. H) wywołania z **tmpfile**.
+Błąd może wystąpić, Jeśli podjęto próbę więcej niż TMP_MAX (zobacz STDIO. H) wywołania z **tmpfile**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -102,8 +103,8 @@ Temporary file 3 was created
 3 temporary files deleted
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

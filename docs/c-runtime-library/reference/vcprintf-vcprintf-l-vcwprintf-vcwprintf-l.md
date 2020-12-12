@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _vcprintf, _vcprintf_l, _vcwprintf _vcwprintf_l'
 title: _vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: 2f2aa3dafc730b060e84558dfa03de5328e52893
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 84bc79f113d13882811368aaf8918a936dab7f3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299205"
 ---
 # <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
-Zapisuje sformatowane dane wyjściowe do konsoli za pomocą wskaźnika do listy argumentów. Bardziej bezpieczne wersje tych funkcji są dostępne, zobacz [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
+Zapisuje sformatowane dane wyjściowe do konsoli za pomocą wskaźnika do listy argumentów. Bardziej bezpieczne wersje tych funkcji są dostępne, zobacz [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s _vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
 
 > [!IMPORTANT]
 > Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -85,13 +86,13 @@ int _vcwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik na listę argumentów.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
@@ -102,7 +103,7 @@ Liczba znaków pisanych lub wartość ujemna, jeśli wystąpi błąd danych wyj�
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w konsoli. **_vcwprintf** to dwubajtowa wersja **_vcprintf**. Ciąg znaków dwubajtowych przyjmuje jako argument.
+Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie formatuje i zapisuje dane w konsoli. **_vcwprintf** to wersja znaku dwubajtowego **_vcprintf**. Ciąg znaków dwubajtowych przyjmuje jako argument.
 
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych.
 
@@ -111,7 +112,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
 |**_vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
@@ -120,10 +121,10 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_vcprintf**, **_vcprintf_l**|\<CONIO. h > i \<STDARG. h >|\<varargs.h>*|
-|**_vcwprintf**, **_vcwprintf_l**|\<CONIO. h > lub \<WCHAR. h > i \<STDARG. h >|\<varargs.h>*|
+|**_vcprintf**, **_vcprintf_l**|\<conio.h> i \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf**, **_vcwprintf_l**|\<conio.h> lub \<wchar.h> , i \<stdarg.h>|\<varargs.h>*|
 
-\*Wymagane w przypadku zgodności z systemem UNIX V.
+\* Wymagane w przypadku zgodności z systemem UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -161,10 +162,10 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

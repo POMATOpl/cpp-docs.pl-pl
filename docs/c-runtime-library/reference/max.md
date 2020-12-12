@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __max'
 title: __max
 ms.date: 04/05/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 709bbb7aee48e65fdd3feb21eb1984135faae2f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299655"
 ---
 # <a name="__max"></a>__max
 
@@ -56,13 +57,13 @@ Wartości dowolnego typu liczbowego do porównania.
 
 Makro **__max** porównuje dwie wartości i zwraca wartość większą. Argumenty mogą być dowolnego typu danych liczbowych, podpisane lub niepodpisane. Oba argumenty i wartość zwracana muszą być tego samego typu danych.
 
-Zwracany argument jest obliczany dwukrotnie przez makro. Może to prowadzić do nieoczekiwanych wyników, jeśli argument jest wyrażeniem, które zmienia jego wartość podczas oceniania, np. `*p++`.
+Zwracany argument jest obliczany dwukrotnie przez makro. Może to prowadzić do nieoczekiwanych wyników, jeśli argument jest wyrażeniem, które zmienia jego wartość podczas oceniania, np `*p++` ..
 
 ## <a name="requirements"></a>Wymagania
 
-|Macro|Wymagany nagłówek|
+|Makro|Wymagany nagłówek|
 |-------------|---------------------|
-|**__max**|\<STDLIB. h >|
+|**__max**|\<stdlib.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -70,5 +71,5 @@ Aby uzyskać więcej informacji, zobacz przykład dla [__min](min.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

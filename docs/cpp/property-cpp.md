@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Właściwość (C++)'
 title: właściwość (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ed996ecadd16837af1e28b71bbedd9b4e3c1abaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299166"
 ---
 # <a name="property-c"></a>właściwość (C++)
 
@@ -30,7 +31,7 @@ Ten atrybut może być stosowany do niestatycznych "wirtualnych elementów czło
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy kompilator widzi składową danych zadeklarowaną z tym atrybutem po prawej stronie operatora wyboru elementu członkowskiego (" **.** " lub " **->** "), konwertuje operację na funkcję `get` lub `put`, w zależności od tego, czy takie wyrażenie jest wartością l lub r-Value. W bardziej skomplikowanych kontekstach, takich jak "`+=`", wielokrotne pisanie odbywa się przez wykonanie obu `get` i `put`.
+Gdy kompilator widzi składową danych zadeklarowaną z tym atrybutem po prawej stronie operatora wyboru elementu członkowskiego ("**.**" lub " **->** "), konwertuje operację na `get` funkcję lub, w `put` zależności od tego, czy wyrażenie jest wartością l lub r-Value. W bardziej skomplikowanych kontekstach, takich jak " `+=` ", ponowne zapisywanie jest wykonywane przez wykonanie obu `get` i `put` .
 
 Ten atrybut może być również używany w deklaracji pustej tablicy w definicji klasy lub struktury. Na przykład:
 
@@ -38,7 +39,7 @@ Ten atrybut może być również używany w deklaracji pustej tablicy w definicj
 __declspec(property(get=GetX, put=PutX)) int x[];
 ```
 
-Powyższa instrukcja wskazuje, że `x[]` mogą być używane z co najmniej jednym indeksem tablicy. W takim przypadku `i=p->x[a][b]` zostanie włączona do `i=p->GetX(a, b)`, a `p->x[a][b] = i` zostanie włączona `p->PutX(a, b, i);`
+Powyższa instrukcja wskazuje, że `x[]` może być używana z co najmniej jednym indeksem tablicy. W tym przypadku `i=p->x[a][b]` zostanie on włączony `i=p->GetX(a, b)` i `p->x[a][b] = i` zostanie włączony `p->PutX(a, b, i);`
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
@@ -66,7 +67,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

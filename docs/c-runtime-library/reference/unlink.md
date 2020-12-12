@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: rozłączanie'
 title: rozłącz
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - unlink function
 ms.assetid: 2cd82055-5770-48be-88ee-4b2c70541c46
-ms.openlocfilehash: 5d8251c77a3c4d16ec6328c1c8e6d73d935db139
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2ea1c3b05d5e86807d774e07fb1c8ae7e56c6941
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299374"
 ---
 # <a name="unlink"></a>rozłącz
 

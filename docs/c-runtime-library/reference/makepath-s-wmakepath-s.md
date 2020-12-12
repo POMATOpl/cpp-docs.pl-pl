@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _makepath_s, _wmakepath_s'
 title: _makepath_s, _wmakepath_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8096061c80c2cfb7da3148e1ba8e7a0d2f193c4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299907"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -99,7 +100,7 @@ Rozmiar buforu w bajtach.
 Zawiera literę (A, B i tak dalej) odpowiadającą żądanym dyskowi i opcjonalnym dwukropkiem. **_makepath_s** automatycznie wstawia dwukropek w ścieżce złożonej, jeśli nie istnieje. Jeśli *dysk* ma **wartość null** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wyświetlona litera dysku.
 
 *katalogów*<br/>
-Zawiera ścieżkę katalogów, w tym oznaczenie dysku lub rzeczywistą nazwę pliku. Końcowy ukośnik jest opcjonalny, a ukośnik (/) lub ukośnik odwrotny (\\) mogą być używane w pojedynczym argumencie *dir* . Jeśli nie zostanie określony końcowy ukośnik (/ \\lub), zostanie on wstawiony automatycznie. Jeśli *dir* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona ścieżka katalogu.
+Zawiera ścieżkę katalogów, w tym oznaczenie dysku lub rzeczywistą nazwę pliku. Końcowy ukośnik jest opcjonalny, a ukośnik (/) lub ukośnik odwrotny ( \\ ) mogą być używane w pojedynczym argumencie *dir* . Jeśli nie zostanie określony końcowy ukośnik (/lub \\ ), zostanie on wstawiony automatycznie. Jeśli *dir* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona ścieżka katalogu.
 
 *fname*<br/>
 Zawiera podstawową nazwę pliku bez rozszerzeń nazw plików. Jeśli *fname* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona nazwa pliku.
@@ -113,12 +114,12 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*ścieżka*|*sizeInWords* / *sizeInBytes*|Przesłać|Zawartość *ścieżki*|
+|*ścieżka*|*sizeInWords*  /  *sizeInBytes*|Przesłać|Zawartość *ścieżki*|
 |------------|------------------------------------|------------|------------------------|
-|**NULL**|ile|**EINVAL**|nie zmodyfikowano|
-|ile|<= 0|**EINVAL**|nie zmodyfikowano|
+|**NULL**|dowolny|**EINVAL**|nie zmodyfikowano|
+|dowolny|<= 0|**EINVAL**|nie zmodyfikowano|
 
-Jeśli wystąpi którykolwiek z powyższych warunków błędu, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcje zwracają **EINVAL**. Dla parametrów *Drive*, *fname*i *EXT*jest dozwolona **wartość null** . Aby uzyskać informacje o zachowaniu, gdy te parametry mają wskaźniki o wartości null lub puste ciągi, zobacz sekcję Uwagi.
+Jeśli wystąpi którykolwiek z powyższych warunków błędu, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcje zwracają **EINVAL**. Dla parametrów *Drive*, *fname* i *EXT* jest dozwolona **wartość null** . Aby uzyskać informacje o zachowaniu, gdy te parametry mają wskaźniki o wartości null lub puste ciągi, zobacz sekcję Uwagi.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -144,8 +145,8 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_makepath_s**|\<STDLIB. h>|
-|**_wmakepath_s**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_makepath_s**|\<stdlib.h>|
+|**_wmakepath_s**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -199,7 +200,7 @@ Path extracted with _splitpath_s:
    Ext: .c
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>

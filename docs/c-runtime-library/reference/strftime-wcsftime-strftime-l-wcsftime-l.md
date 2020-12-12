@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strftime, wcsftime, _strftime_l, _wcsftime_l'
 title: strftime, wcsftime, _strftime_l, _wcsftime_l
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f6297af6ad7c0f6f9a0280cc47ea7a0caa6440af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299569"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -98,7 +99,7 @@ Ciąg kontroli formatu.
 *timeptr*<br/>
 Struktura danych **TM** .
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -113,7 +114,7 @@ Liczba znaków w *strDest* jest równa liczbie znaków literału w *formacie* , 
 
 Funkcje **strftime** i **wcsftime** formatują wartość czasu **TM** w *timeptr* zgodnie z podanym argumentem *formatu* i przechowują wynik w buforze *strDest*. Co najwyżej *, maksymalna* liczba znaków jest umieszczana w ciągu. Aby uzyskać opis pól w strukturze *timeptr* , zobacz [asctime](asctime-wasctime.md). **wcsftime** jest odpowiednikiem szerokiego znaku **strftime**; argument wskaźnika ciągu wskazuje na ciąg znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *strDest*, *Format*lub *timeptr* jest wskaźnikiem typu null lub jeśli struktura danych **TM** zadana przez *timeptr* jest nieprawidłowa (na przykład jeśli zawiera wartości spoza zakresu dla godziny lub daty), lub jeśli ciąg *formatu* zawiera nieprawidłowy kod formatowania, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość 0 i ustawia **errno** na **EINVAL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *strDest*, *Format* lub *timeptr* jest wskaźnikiem typu null lub jeśli struktura danych **TM** zadana przez *timeptr* jest nieprawidłowa (na przykład jeśli zawiera wartości spoza zakresu dla godziny lub daty), lub jeśli ciąg *formatu* zawiera nieprawidłowy kod formatowania, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość 0 i ustawia **errno** na **EINVAL**.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -174,9 +175,9 @@ Podobnie jak w funkcji **printf** , **#** Flaga może mieć prefiks kodu formato
 |**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **% #h**, **% #n**, **%**#p, **%** **#t,% #u**, **% #w**, **%** **#X,** **% #z****%#%**|**#** Flaga jest ignorowana.|
 |**% #c**|Długa reprezentacja daty i godziny, odpowiednia dla ustawień regionalnych. Na przykład: "wtorek, 14 marca 1995, 12:41:29".|
 |**% #x**|Reprezentacja daty długiej, odpowiednia dla ustawień regionalnych. Na przykład: "wtorek, 14 marca 1995".|
-|**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **% #j**,% **%#W**#m, **%**#M, **%**#r, **% #R**, **%**#S, **%**#T **%#m** **%#U** **%#V** **%#y** **%#Y**|Usuń Wiodące zera lub spacje (jeśli istnieją).|
+|**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **% #j**,% #m, **%**#M, **%**#r, **% #R**, **%**#S, **%**#T     |Usuń Wiodące zera lub spacje (jeśli istnieją).|
 
-Tydzień w formacie ISO 8601 i rok oparty na tygodniu wyprodukowanym przez **% V**, **% g**i **% g**, używa tygodnia rozpoczynającego się w poniedziałek, gdzie tydzień 1 jest tygodniem, który zawiera czwarty tydzień, który zawiera co najmniej cztery dni roku. Jeśli pierwszy poniedziałek roku jest drugi, trzeci lub czwarty, powyższe dni są częścią ostatniego tygodnia poprzedniego roku. W tych dniach **% V** jest zastępowana przez 53, a oba **% g** i **% g** są zastępowane cyframi z poprzedniego roku.
+Tydzień w formacie ISO 8601 i rok oparty na tygodniu wyprodukowanym przez **% V**, **% g** i **% g**, używa tygodnia rozpoczynającego się w poniedziałek, gdzie tydzień 1 jest tygodniem, który zawiera czwarty tydzień, który zawiera co najmniej cztery dni roku. Jeśli pierwszy poniedziałek roku jest drugi, trzeci lub czwarty, powyższe dni są częścią ostatniego tygodnia poprzedniego roku. W tych dniach **% V** jest zastępowana przez 53, a oba **% g** i **% g** są zastępowane cyframi z poprzedniego roku.
 
 > [!NOTE]
 > W przypadku korzystania z jednej z `strftime` funkcji ze `tm` wskaźnikiem zwróconym przez `gmtime` , wartości wydrukowane `%Z` przez `%z` specyfikatory i nie będą dokładne. Wynika to z faktu, że `tm` Struktura określona przez standard C nie zawiera informacji o nazwie strefy czasowej ani przesunięciu. Zamiast tego informacje o strefie czasowej są wypełniane za pośrednictwem zmiennych globalnych [ `_timezone` i `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
@@ -198,7 +199,7 @@ Zobacz przykład [czasu](time-time32-time64.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Regionalne](../../c-runtime-library/locale.md) <br/>
+[Ustawienie](../../c-runtime-library/locale.md) <br/>
 [Zarządzanie czasem](../../c-runtime-library/time-management.md) <br/>
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>

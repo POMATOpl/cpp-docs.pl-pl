@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64'
 title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 ms.date: 4/2/2020
 api_name:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: dbff557cd116eb1df44f015b17716408c8dc54c2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7ec25f60c508464abf8232419f8867bc3f0a20fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912129"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299348"
 ---
 # <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -131,7 +132,7 @@ Datę można zmienić dla pliku, jeśli data zmiany przypada po północy, 1 sty
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_utime** ustawia czas modyfikacji pliku określonego przez *nazwę*pliku. Aby można było zmienić czas, proces musi mieć dostęp do zapisu w pliku. W systemie operacyjnym Windows można zmienić czas dostępu i czas modyfikacji w strukturze **_utimbuf** . Jeśli *czas* jest wskaźnikiem o **wartości null** , czas modyfikacji jest ustawiany na bieżący czas lokalny. W przeciwnym razie *czasy* muszą wskazywać na strukturę typu **_utimbuf**, zdefiniowane w SYS\UTIME. C.
+Funkcja **_utime** ustawia czas modyfikacji pliku określonego przez *nazwę* pliku. Aby można było zmienić czas, proces musi mieć dostęp do zapisu w pliku. W systemie operacyjnym Windows można zmienić czas dostępu i czas modyfikacji w strukturze **_utimbuf** . Jeśli *czas* jest wskaźnikiem o **wartości null** , czas modyfikacji jest ustawiany na bieżący czas lokalny. W przeciwnym razie *czasy* muszą wskazywać na strukturę typu **_utimbuf**, zdefiniowane w SYS\UTIME.H.
 
 W strukturze **_utimbuf** są przechowywane czasy dostępu i modyfikacji plików używane przez **_utime** w celu zmiany daty modyfikacji pliku. Struktura zawiera następujące pola, które są zarówno typu **time_t**:
 
@@ -160,9 +161,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagane nagłówki|Opcjonalne nagłówki|
 |-------------|----------------------|----------------------|
-|**_utime**, **_utime32**, **_utime64**|\<sys/utime. h>|\<errno. h>|
-|**_utime64**|\<sys/utime. h>|\<errno. h>|
-|**_wutime**|\<utime. h> lub \<WCHAR. h>|\<errno. h>|
+|**_utime**, **_utime32**, **_utime64**|\<sys/utime.h>|\<errno.h>|
+|**_utime64**|\<sys/utime.h>|\<errno.h>|
+|**_wutime**|\<utime.h> lub \<wchar.h>|\<errno.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

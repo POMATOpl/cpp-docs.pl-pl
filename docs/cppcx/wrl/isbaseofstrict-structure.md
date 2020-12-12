@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze IsBaseOfStrict
 title: IsBaseOfStrict — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 11acb4c7162a17ff763a574c27c186061ae476a7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bcdab9c4b6b5a2ab108b59d3127c08b53589e16a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298958"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict — Struktura
 
@@ -62,7 +63,7 @@ Nazwa                            | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict:: value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a> IsBaseOfStrict:: value
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -74,4 +75,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 Wskazuje, czy jeden typ jest podstawą innego.
 
-`value`jest **`true`** Jeśli typ `Base` jest klasą bazową typu `Derived` , w przeciwnym razie **`false`** .
+`value` jest **`true`** Jeśli typ `Base` jest klasą bazową typu `Derived` , w przeciwnym razie **`false`** .

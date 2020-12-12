@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbbtype, _mbbtype_l'
 title: _mbbtype, _mbbtype_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: dca59f2d31cc5ad843a48e9825ef6a617d46ae4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6a646682144acb346827eaa78382915f026fa455
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299608"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype, _mbbtype_l
 
@@ -99,10 +100,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_mbbtype**|\<mbstring. h>|\<Mbctype. h> *|
-|**_mbbtype_l**|\<mbstring. h>|\<Mbctype. h> *|
+|**_mbbtype**|\<mbstring.h>|\<mbctype.h>*|
+|**_mbbtype_l**|\<mbstring.h>|\<mbctype.h>*|
 
-\*Dla definicji stałych manifestu, które są używane jako wartości zwracane.
+\* Dla definicji stałych manifestu, które są używane jako wartości zwracane.
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

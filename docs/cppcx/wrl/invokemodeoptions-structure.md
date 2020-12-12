@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze InvokeModeOptions
 title: InvokeModeOptions, struktura
 ms.date: 03/22/2018
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-ms.openlocfilehash: 9bca49479d97ee371f6728f90a9aa96da0387f54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1e1382242c95c47355239c220c43c278280dd451
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298984"
 ---
 # <a name="invokemodeoptions-structure"></a>InvokeModeOptions, struktura
 
-Określa, czy mają być wyzwalane wszystkie zdarzenia w kolejce delegatów, czy też zatrzymać wywoływanie po wystąpieniu błędu. Wartości dozwolone są określone w wyliczeniu `InvokeMode`.
+Określa, czy mają być wyzwalane wszystkie zdarzenia w kolejce delegatów, czy też zatrzymać wywoływanie po wystąpieniu błędu. Wartości dozwolone są określone w `InvokeMode` wyliczeniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,5 +42,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)<br/>
+[Microsoft:: WRL, przestrzeń nazw](microsoft-wrl-namespace.md)<br/>
 [Microsoft:: WRL:: AgileEventSource, Klasa](agileeventsource-class.md)
