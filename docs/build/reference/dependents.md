@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/DEPENDENTS
 title: /DEPENDENTS
 ms.date: 07/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /DEPENDENTS dumpbin option
 - DEPENDENTS dumpbin option
 ms.assetid: 9b31da2a-75ac-4bbf-a3f1-adf8b0ecbbb4
-ms.openlocfilehash: 88f0062a6bbca3f9199a12f739c2ade5f9d912cd
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: a0354f65dea51cb5db61b62d853392e32c14a3f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192983"
 ---
 # <a name="dependents"></a>/DEPENDENTS
 
@@ -33,7 +34,7 @@ Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w
 
 ## <a name="example"></a>Przykład
 
-Ten przykład przedstawia dane wyjściowe polecenia DUMPBIN opcji **/DEPENDENTS** w pliku wykonywalnym klienta wbudowane w [przewodniku: Tworzenie własnej biblioteki](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)dołączanej dynamicznie i korzystanie z niej:
+Ten przykład przedstawia dane wyjściowe polecenia DUMPBIN opcji **/DEPENDENTS** w pliku wykonywalnym klienta wbudowane w [przewodniku: Tworzenie własnej biblioteki dołączanej dynamicznie i korzystanie z niej](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md):
 
 ```cmd
 C:\Users\username\Source\Repos\MathClient\Debug>dumpbin /DEPENDENTS MathClient.exe
@@ -66,6 +67,6 @@ File Type: EXECUTABLE IMAGE
        10000 .textbss
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje DUMPBIN](dumpbin-options.md)
+[Opcje polecenia DUMPBIN](dumpbin-options.md)

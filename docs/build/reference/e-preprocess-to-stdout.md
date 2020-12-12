@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/E (Przetwarzaj wstępnie do STDOUT)
 title: /E (Przetwarzaj wstępnie do stdout)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d6c9ea3a5fcf8e7ba06ede6e7e70d933b5c921a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192613"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Przetwarzaj wstępnie do stdout)
 
-Wstępnie przetwarza pliki źródłowe C i C++ i kopiuje pliki wstępnie przetworzony do urządzenia wyjścia standardowego.
+Wstępnie przetwarza pliki źródłowe C i C++ i kopiuje wstępnie przetworzone pliki na standardowe urządzenie wyjściowe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,21 +29,21 @@ Wstępnie przetwarza pliki źródłowe C i C++ i kopiuje pliki wstępnie przetwo
 
 ## <a name="remarks"></a>Uwagi
 
-W ramach tego procesu są przeprowadzane wszystkie dyrektywy preprocesora, makra rozszerzenia są wykonywane i komentarze są usuwane. Aby zachować komentarzy w wstępnie przetworzone produkty wyjściowe, należy użyć [/C (Zachowaj komentarze podczas przetwarzania wstępnego)](c-preserve-comments-during-preprocessing.md) również opcję kompilatora.
+W tym procesie wszystkie dyrektywy preprocesora są wykonywane, rozwinięcia makr i komentarze są usuwane. Aby zachować komentarze w wstępnie przetworzonym danych wyjściowych, należy użyć opcji [/c (Zachowaj komentarze podczas przetwarzania wstępnego)](c-preserve-comments-during-preprocessing.md) .
 
-**/E** dodaje `#line` dyrektywy danych wyjściowych na początku i końcu każdego dołączony plik i wokół wierszy usuniętych przez dyrektywy preprocesora dla kompilacji warunkowej. Te dyrektywy numerowania wierszy wstępnie przetworzonego pliku. W rezultacie wygenerowane błędy podczas późniejszych etapach przetwarzania można znaleźć numery wierszy oryginalnego pliku źródłowego, a nie wiersze z wstępnie przetworzonego pliku.
+**/E** dodaje `#line` dyrektywy do danych wyjściowych na początku i na końcu każdego dołączonego pliku oraz wokół wierszy usuniętych przez dyrektywy preprocesora dla kompilacji warunkowej. Dyrektywy te ponownie przenoszą wiersze wstępnie przetworzonego pliku. W związku z tym błędy generowane podczas późniejszych etapów przetwarzania odnoszą się do numerów wierszy oryginalnego pliku źródłowego, a nie wierszy w pliku wstępnie przetworzonym.
 
-**/E** opcja pomija kompilację. Należy ponownie przesłać wstępnie przetworzony plik dla kompilacji. **/E** powoduje również pominięcie pliki wyjściowe z **/FA**, **/Fa**, i **/Fm** opcje. Aby uzyskać więcej informacji, zobacz [/FA, /Fa (wyświetlanie listy plików)](fa-fa-listing-file.md) i [/Fm (nazwa Mapfile)](fm-name-mapfile.md).
+Opcja **/e** pomija kompilację. Musisz ponownie przesłać wstępnie przetworzony plik do kompilacji. **/E** również pomija pliki wyjściowe z opcji **/FA**, **/FA** i **/FM** . Aby uzyskać więcej informacji, zobacz [/FA,/FA (Listing File)](fa-fa-listing-file.md) i [/FM (Name Mapfile)](fm-name-mapfile.md).
 
-Aby pominąć `#line` użyć dyrektyw, [/EP (wstępnie Przetwórz do stdout bez dyrektyw #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) zamiast opcji.
+Aby pominąć `#line` dyrektywy, należy zamiast tego użyć opcji [/EP (wstępnie przetwórz do stdout bez dyrektyw #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) .
 
-Aby wysłać wstępnie przetworzone produkty wyjściowe do pliku, nie do `stdout`, użyj [/P (Przetwarzaj wstępnie do pliku)](p-preprocess-to-a-file.md) zamiast opcji.
+Aby wysłać wstępnie przetworzone dane wyjściowe do pliku zamiast do, należy `stdout` zamiast tego użyć [/p (wstępnie przetwórz plik do pliku)](p-preprocess-to-a-file.md) .
 
-Aby pominąć `#line` dyrektywy i wysyłanie wstępnie przetworzone produkty wyjściowe do pliku, użyj **/P** i **/EP** ze sobą.
+Aby pominąć `#line` dyrektywy i wysłać wstępnie przetworzone dane wyjściowe do pliku, należy użyć **/P** i **/EP** razem.
 
-Nie można użyć wstępnie skompilowanych nagłówków z **/E** opcji.
+Nie można używać prekompilowanych nagłówków z opcją **/e** .
 
-Należy pamiętać, że podczas przetwarzania wstępnego w oddzielnym pliku, spacje nie są emitowane po tokenów. To spowodować niedozwolony program, lub mieć niezamierzone efekty uboczne. Następujący program kompiluje się pomyślnie:
+Należy pamiętać, że podczas wstępnego przetwarzania do oddzielnego pliku spacje nie są emitowane po tokenach. Może to spowodować niedozwolony program lub mieć niezamierzone efekty uboczne. Pomyślnie skompilowano następujący program:
 
 ```
 #define m(x) x
@@ -52,37 +53,37 @@ m(int)main( )
 }
 ```
 
-Jednakże jeśli kompilujesz z opcją:
+Jednak w przypadku kompilowania przy użyciu:
 
 ```
 cl -E test.cpp > test2.cpp
 ```
 
-`int main` w test2.cpp niepoprawnie będzie `intmain`.
+`int main` w TEST2. cpp będzie nieprawidłowo `intmain` .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++** .
 
-1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+1. Kliknij stronę właściwości **wiersza polecenia** .
 
-1. Wpisz opcje kompilatora w **dodatkowe opcje**pole.
+1. Wpisz opcję kompilatora w polu **dodatkowe opcje**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie w wierszu wstępnie przetwarza `ADD.C`, zachowuje komentarze, dodaje `#line` dyrektyw i wyświetla wynik na urządzeniu standardowe dane wyjściowe:
+Następujące wstępnie przetwarzane wiersze polecenia `ADD.C` , zachowuje komentarze, dodaje `#line` dyrektywy i wyświetla wynik na standardowym urządzeniu wyjściowym:
 
 ```
 CL /E /C ADD.C
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

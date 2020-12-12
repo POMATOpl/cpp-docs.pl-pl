@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2819'
 title: Błąd kompilatora C2819
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
-ms.openlocfilehash: 9a3768cb23c65eb3e2d818f81ff7c6a561c8d7ec
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fa30432399913c6bdd00bb2728931d213c14064c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97194751"
 ---
 # <a name="compiler-error-c2819"></a>Błąd kompilatora C2819
 
 Typ "Type" nie ma przeciążonej składowej "operator->"
 
-Musisz zdefiniować `operator->()`, aby użyć tej operacji wskaźnika.
+Należy zdefiniować, `operator->()` Aby używać tej operacji wskaźnika.
 
 Poniższy przykład generuje C2819:
 
@@ -49,7 +50,7 @@ void F(D j) {
 }
 ```
 
-C2819 może również wystąpić w przypadku korzystania z [ C++ semantyki stosu dla typów referencyjnych](../../dotnet/cpp-stack-semantics-for-reference-types.md). Poniższy przykład generuje C2819:
+C2819 może również wystąpić w przypadku używania [semantyki stosu języka C++ dla typów referencyjnych](../../dotnet/cpp-stack-semantics-for-reference-types.md). Poniższy przykład generuje C2819:
 
 ```cpp
 // C2819_b.cpp

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: lub'
 title: lub
 ms.date: 11/04/2016
 api_location:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - or function
 ms.assetid: 6523b3ac-0a18-44ec-9e9a-b9bab8525ead
-ms.openlocfilehash: 0a3a6800fba71a6b6edc77cca91ec40fe5476509
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fbbd5720e2274b01773532051bba2b5c3c840f0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195557"
 ---
 # <a name="or"></a>lub
 
-Alternatywa dla &#124; &#124; operatora.
+Alternatywa dla operatora &#124;&#124; .
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,7 +44,7 @@ Alternatywa dla &#124; &#124; operatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Makro daje operator &#124; &#124;.
+Makro daje operatorowi &#124;&#124;.
 
 ## <a name="example"></a>Przykład
 
@@ -75,4 +76,4 @@ true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iso646. h >
+**Nagłówek:**\<iso646.h>

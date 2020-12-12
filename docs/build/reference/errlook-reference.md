@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: ERRLOOK Reference'
 title: Odwołanie ERRLOOK
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 8d005f37af0c406c45ef2da52fce2b578c6e864a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d516afb0edf8c46f633583788c6c1511e456542b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192502"
 ---
 # <a name="errlook-reference"></a>Odwołanie ERRLOOK
 
@@ -35,4 +36,4 @@ Opisuje przycisk wyszukiwania w ERRLOOK.
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [Dodatkowe narzędzia do kompilacji MSVC](c-cpp-build-tools.md)<br/>
-Zawiera łącza do tematów omawiających narzędzia do kompilacjiC++ C/build udostępniane w C++wizualizacji.
+Zawiera łącza do tematów omawiających narzędzia kompilacji C/C++ dostępne w Visual C++.

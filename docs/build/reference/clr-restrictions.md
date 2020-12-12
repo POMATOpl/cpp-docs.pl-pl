@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat ograniczeń:/CLR
 title: /clr Ograniczenia
 ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 641e83cb85b6282e8c4c82dfed8c4b44fc4a7e8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb74aea8f1d6fcae4738f17f5fae2a4761350341
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193009"
 ---
 # <a name="clr-restrictions"></a>/clr Ograniczenia
 
@@ -17,7 +18,7 @@ Należy pamiętać o następujących ograniczeniach dotyczących używania **/CL
 
 - W programie obsługi wyjątków strukturalnych istnieją ograniczenia dotyczące używania `_alloca` kompilacji z **/CLR**. Aby uzyskać więcej informacji, zobacz [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Użycie testów błędów w czasie wykonywania jest nieprawidłowe z **/CLR**. Aby uzyskać więcej informacji, zobacz [jak: korzystanie z natywnych testów w czasie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Użycie testów błędów w czasie wykonywania jest nieprawidłowe z **/CLR**. Aby uzyskać więcej informacji, zobacz [How to: use Native Run-Time checks](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Gdy **/CLR** jest używany do kompilowania programu, który używa tylko standardowej składni języka C++, następujące wskazówki dotyczą użycia wbudowanego zestawu:
 
@@ -27,7 +28,7 @@ Należy pamiętać o następujących ograniczeniach dotyczących używania **/CL
 
 - Nie można wywołać [funkcji vprintf —](../../c-runtime-library/vprintf-functions.md) z programu skompilowanego z **/CLR**.
 
-- Modyfikator [naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) owies jest ignorowany w obszarze/CLR.
+- Modyfikator [](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) owies jest ignorowany w obszarze/CLR.
 
 - Funkcja translator ustawiona przez [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) będzie miała wpływ tylko na przechwytywanie w kodzie niezarządzanym. Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków](../../extensions/exception-handling-cpp-component-extensions.md) .
 
@@ -39,7 +40,7 @@ Należy pamiętać o następujących ograniczeniach dotyczących używania **/CL
 
   - **/EHsc** i **/EHS** (**/CLR** implikuje **/EHa** (patrz [/EH (model obsługi wyjątków)](eh-exception-handling-model.md))
 
-  - **/FP: Strict** i **/FP: except** (patrz [/FP (Określanie zachowania zmiennoprzecinkowego)](fp-specify-floating-point-behavior.md))
+  - **/FP: Strict** i **/FP: except** (patrz [/FP (Określ zachowanie Floating-Point)](fp-specify-floating-point-behavior.md))
 
   - [/Zd](z7-zi-zi-debug-information-format.md)
 
@@ -53,7 +54,7 @@ Należy pamiętać o następujących ograniczeniach dotyczących używania **/CL
 
 - Kombinacja `_STATIC_CPPLIB` definicji preprocesora ( `/D_STATIC_CPPLIB` ) i opcji kompilatora **/CLR** nie jest obsługiwana. Jest tak dlatego, że definicja spowodowałaby połączenie aplikacji ze statyczną wielowątkową biblioteką języka C++, która nie jest obsługiwana. Aby uzyskać więcej informacji, zobacz temat [/MD,/MT,/LD (Use Run-Time Library)](md-mt-ld-use-run-time-library.md) .
 
-- W przypadku korzystania z programu **/Zi** z **/CLR**istnieją konsekwencje związane z wydajnością. Aby uzyskać więcej informacji, zobacz [/Zi](z7-zi-zi-debug-information-format.md).
+- W przypadku korzystania z programu **/Zi** z **/CLR** istnieją konsekwencje związane z wydajnością. Aby uzyskać więcej informacji, zobacz [/Zi](z7-zi-zi-debug-information-format.md).
 
 - Przekazywanie znaku dwubajtowego do procedury wyjściowej .NET Framework bez również określania [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) lub bez rzutowania znaku do **`__wchar_t`** spowoduje wyświetlenie danych wyjściowych jako `unsigned short int` . Na przykład:
 
@@ -70,7 +71,7 @@ Należy pamiętać o następujących ograniczeniach dotyczących używania **/CL
 
 - Funkcje, które przyjmują zmienną liczbę argumentów (VarArgs), zostaną wygenerowane jako funkcje natywne. Wszystkie typy danych zarządzanych w pozycji argumentu zmienna będą przekazywane do typów natywnych. Należy zauważyć, że <xref:System.String?displayProperty=fullName> typy są ciągami znaków dwubajtowych, ale są one organizowane w postaci ciągów znaków jednostronicowych. Tak więc jeśli specyfikator printf to% S (wchar_t *), będzie on organizować ciąg% s zamiast.
 
-- Przy użyciu makra va_arg, podczas kompilowania z **/CLR: Pure**mogą wystąpić nieoczekiwane wyniki. Aby uzyskać więcej informacji, zobacz [va_arg, va_copy, va_end va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017 lub nowszym. Kod, który musi mieć wartość "Pure" lub "Safe", należy przenieść do języka C#.
+- Przy użyciu makra va_arg, podczas kompilowania z **/CLR: Pure** mogą wystąpić nieoczekiwane wyniki. Aby uzyskać więcej informacji, zobacz [va_arg, va_copy, va_end va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017 lub nowszym. Kod, który musi mieć wartość "Pure" lub "Safe", należy przenieść do języka C#.
 
 - Nie należy wywoływać, z kodu zarządzanego, wszystkich funkcji, które przeprowadzą stos w celu uzyskania informacji o parametrach (argumenty funkcji); warstwa P/Invoke powoduje, że te informacje powinny być bardziej przypadające na stosie.  Na przykład nie Kompiluj proxy/stub z **/CLR**.
 
@@ -86,6 +87,6 @@ Należy pamiętać o następujących ograniczeniach dotyczących używania **/CL
 
   - Funkcja, która zawiera odwołania do typów wyrównanych, czyli typów zadeklarowanych za pomocą `__declspec(align(...))` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md)

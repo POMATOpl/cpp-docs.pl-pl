@@ -1,5 +1,6 @@
 ---
-title: Platform::details Namespace
+description: Dowiedz się więcej o platformie::D etails przestrzeń nazw
+title: Platforma::D etails przestrzeń nazw
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693dea2aa366868fe6a118baf5c57ac58b338cf8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195375"
 ---
-# <a name="platformdetails-namespace"></a>Platform::details Namespace
+# <a name="platformdetails-namespace"></a>Platforma::D etails przestrzeń nazw
 
 Ta przestrzeń nazw jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
 
@@ -28,22 +29,22 @@ namespace Platform {
 
 ### <a name="members"></a>Elementy członkowskie
 
-Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przeglądarki można wyświetlić następujące elementy członkowskie tej przestrzeni nazw.
+Mimo że ta przestrzeń nazw jest przeznaczona do użytku wewnętrznego, przeglądarki mogą wyświetlać następujące elementy członkowskie tej przestrzeni nazw.
 
-|Nazwa|Uwagi|
+|Nazwa|Dyskusji|
 |----------|------------|
-|Konsola|Klasa. Wyświetla dane wyjściowe w testach jednostkowych.|
-|_GUID|Struct|
-|Sterty|Class|
+|Konsola|Określonej. Wyświetla dane wyjściowe w testach jednostkowych.|
+|_GUID|Struktura|
+|Sterta|Klasa|
 |HeapAllocationTrackingLevel|Wyliczenie|
-|HeapEntryHandler|Delegate|
-|IActivationFactory|Interface|
-|IAgileObject|Interface|
-|IClassFactory|Interface|
-|IEquatable|Interface|
-|IPrintable|Interface|
-|IWeakReference|Interface|
-|IWeakReferenceSource|Interface|
+|HeapEntryHandler|Delegat|
+|IActivationFactory|Interfejs|
+|IAgileObject|Interfejs|
+|Elementu IClassFactory|Interfejs|
+|IEquatable|Interfejs|
+|IPrintable|Interfejs|
+|IWeakReference|Interfejs|
+|IWeakReferenceSource|Interfejs|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -51,10 +52,10 @@ Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przegl�
 
 ### <a name="requirements"></a>Wymagania
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-**Namespace:** Platform::Details
+**Przestrzeń nazw:** Platforma::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: polecenia DUMPBIN wiersz polecenia'
 title: Wiersz polecenia DUMPBIN
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-ms.openlocfilehash: 4f663a74fd57f52aa559270d61df4a130cf7e86f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 96b4216307201613c82a4671b9eb10bddab18e90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440071"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192684"
 ---
 # <a name="dumpbin-command-line"></a>Wiersz polecenia DUMPBIN
 
@@ -23,9 +24,9 @@ Określ co najmniej jeden plik binarny wraz z wszelkimi opcjami wymaganymi do ko
 
 Gdy uruchamiasz polecenia DUMPBIN w pliku bez określenia opcji, polecenia DUMPBIN wyświetla dane wyjściowe/SUMMARY.
 
-Gdy wpiszesz polecenie `dumpbin` bez żadnych innych danych wejściowych wiersza polecenia, polecenia DUMPBIN wyświetli instrukcję Usage, która podsumowuje jej opcje.
+Po wpisaniu polecenia `dumpbin` bez innych danych wejściowych wiersza polecenia polecenia DUMPBIN wyświetla instrukcję Usage, która podsumowuje jego opcje.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Dodatkowe narzędzia do kompilacji MSVC](c-cpp-build-tools.md)<br/>
-[DUMPBIN — dokumentacja](dumpbin-reference.md)
+[Odwołanie polecenia DUMPBIN](dumpbin-reference.md)

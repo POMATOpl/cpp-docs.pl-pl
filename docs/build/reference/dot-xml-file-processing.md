@@ -1,88 +1,89 @@
 ---
+description: Dowiedz się więcej na temat:. Przetwarzanie pliku XML
 title: Przetwarzanie pliku .Xml
 ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 1a0d231a066209307041681232cc3410210d4d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ded4551adcc4bec4aef27fe38f47470065ea9ef4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192697"
 ---
 # <a name="xml-file-processing"></a>Przetwarzanie pliku .Xml
 
-Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. Aby uzyskać więcej informacji, zobacz [zalecane tagi komentarzy dokumentacji](recommended-tags-for-documentation-comments-visual-cpp.md). Ciąg Identyfikatora jednoznacznie identyfikuje konstrukcja. Programów przetwarzających pliku XML, który umożliwia Zidentyfikuj odpowiednie środowiska .NET Framework metadane lub odbicie element dotyczy dokumentacji ciąg Identyfikatora.
+Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. Aby uzyskać więcej informacji, zobacz [Komentarze dokumentacji dotyczącej polecanych tagów](recommended-tags-for-documentation-comments-visual-cpp.md). Ciąg identyfikatora jednoznacznie identyfikuje konstrukcję. Programy, które przetwarzają plik. XML, mogą używać ciągu identyfikatora do identyfikowania odpowiednich metadanych .NET Framework lub elementu odbicia, do którego odnosi się dokumentacja.
 
-Pliku XML, który nie jest hierarchiczną reprezentację kodu, jest płaska lista identyfikatorem wygenerowany dla każdego elementu.
+Plik. XML nie jest hierarchiczną reprezentacją kodu, jest to płaska lista z wygenerowanym IDENTYFIKATORem dla każdego elementu.
 
-Kompilator stosuje następujące reguły podczas generowania ciągi identyfikatorów:
+Podczas generowania ciągów identyfikatorów kompilator przestrzega następujących reguł:
 
-- Biały znak nie zostanie umieszczony w ciągu.
+- Brak białego znaku w ciągu.
 
-- Pierwsza część ciąg Identyfikatora określa rodzaj elementu członkowskiego są identyfikowane za pomocą pojedynczy znak z dwukropkiem. Używane są następujące typy elementu członkowskiego:
+- Pierwsza część ciągu identyfikatora identyfikuje rodzaj identyfikowanego elementu członkowskiego z pojedynczym znakiem, po którym następuje dwukropek. Używane są następujące typy elementów członkowskich:
 
   | Znak | Opis |
   |---------------|-----------------|
-  | N | — przestrzeń nazw<br /><br /> Nie można dodać komentarze dokumentacji do przestrzeni nazw, możliwe są cref odwołania do przestrzeni nazw. |
-  | T | Typ: klasy, interfejsu, struktury, wyliczenia, delegat |
-  | D | — klasa typedef |
+  | N | namespace<br /><br /> Nie można dodać komentarzy do dokumentacji do przestrzeni nazw, cref odwołania do przestrzeni nazw są możliwe. |
+  | T | Typ: Klasa, interfejs, struktura, Wyliczenie, delegat |
+  | D |  — klasa typedef |
   | F | pole |
-  | P | właściwości (w tym indeksatory lub innych właściwości indeksowane) |
-  | M | metody (w tym specjalnych metodami, takimi jak konstruktory, operatorów i tak dalej) |
-  | E | zdarzenie |
-  | ! | Ciąg błędu<br /><br /> Pozostała część ciągu zawiera informacje o tym błędzie. Kompilator MSVC generuje informacje o błędzie dla łączy, których nie można rozpoznać. |
+  | P | Właściwość (w tym indeksatory lub inne właściwości indeksowane) |
+  | M | Metoda (łącznie z takimi metodami specjalnymi jak konstruktory, operatory itd.) |
+  | E | event |
+  | ! | ciąg błędu<br /><br /> Pozostała część ciągu zawiera informacje o błędzie. Kompilator MSVC generuje informacje o błędzie dla linków, których nie można rozpoznać. |
 
-- Druga część ciągu jest w pełni kwalifikowana nazwa elementu, począwszy od głównego obszaru nazw. Nazwa elementu, jego otaczającego typu lub typów i przestrzeni nazw są oddzielone kropkami. Jeśli nazwa elementu zawiera kropek, są one zastąpione przez znak kratki (#). Zakłada się, że żaden element ma znak kratki bezpośrednio w jego nazwę. Na przykład w pełni kwalifikowanej nazwy `String` Konstruktor może być "System.String.#ctor".
+- Druga część ciągu to w pełni kwalifikowana nazwa elementu, rozpoczynając od elementu głównego przestrzeni nazw. Nazwa elementu, jego typ lub typy oraz przestrzeń nazw są oddzielone kropkami. Jeśli nazwa samego elementu ma okresy, są one zastępowane przez znak hash ("#"). Przyjęto założenie, że żaden element nie ma znaku skrótu bezpośrednio w nazwie. Na przykład w pełni kwalifikowana nazwa `String` konstruktora byłaby "System. String. #ctor".
 
-- Dla właściwości i metod w przypadku argumentów dla metody, na liście argumentów w nawiasach jest zgodna. Jeśli nie ma żadnych argumentów, nawiasy nie są obecne. Argumenty są oddzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio, jak jest zakodowany w podpisie .NET Framework:
+- W przypadku właściwości i metod, jeśli istnieją argumenty metody, lista argumentów ujęta w nawiasy. Jeśli nie ma żadnych argumentów, nie ma nawiasów. Argumenty są rozdzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio po zakodowaniu w sygnaturze .NET Framework:
 
-  - Typy podstawowe. Regularne typów (ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE) są reprezentowane jako w pełni kwalifikowaną nazwę typu.
+  - Typy podstawowe. Zwykłe typy (ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE) są reprezentowane jako w pełni kwalifikowana nazwa typu.
 
-  - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4 ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowaną nazwę odpowiedniego typu pełną, na przykład **System.Int32** lub **System.TypedReference**.
+  - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING ELEMENT_TYPE_TYPEDBYREF. i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowana nazwa odpowiedniego pełnego typu, na przykład **System. Int32** lub **System. TypedReference**.
 
-  - ELEMENT_TYPE_PTR jest reprezentowany jako "*" zgodnie z zmodyfikowany typ.
+  - ELEMENT_TYPE_PTR jest reprezentowane jako "*" po zmodyfikowanym typie.
 
-  - Pole jest reprezentowany jako "\@" po modyfikacji typu.
+  - ELEMENT_TYPE_BYREF jest reprezentowane jako " \@ " po zmodyfikowanym typie.
 
-  - ELEMENT_TYPE_PINNED jest reprezentowany jako "^" po modyfikacji typu. Kompilator MSVC nigdy nie generuje to.
+  - ELEMENT_TYPE_PINNED jest reprezentowane jako "^" po zmodyfikowanym typie. Kompilator MSVC nigdy nie generuje tego.
 
-  - ELEMENT_TYPE_CMOD_REQ jest reprezentowany jako "&#124;" i w pełni kwalifikowaną nazwę klasy modyfikator, zmodyfikowany typ następujące. Kompilator MSVC nigdy nie generuje to.
+  - ELEMENT_TYPE_CMOD_REQ jest reprezentowane jako "&#124;" i w pełni kwalifikowana nazwa klasy modyfikującej, po zmodyfikowanym typie. Kompilator MSVC nigdy nie generuje tego.
 
-  - ELEMENT_TYPE_CMOD_OPT jest reprezentowany jako "!" i w pełni kwalifikowaną nazwę klasy modyfikator, zmodyfikowany typ następujące.
+  - ELEMENT_TYPE_CMOD_OPT jest reprezentowane jako "!" i w pełni kwalifikowana nazwa klasy modyfikującej, po zmodyfikowanym typie.
 
-  - ELEMENT_TYPE_SZARRAY jest reprezentowany jako "[]", zgodnie z typem elementu tablicy.
+  - ELEMENT_TYPE_SZARRAY jest reprezentowane jako "[]" po typie elementu tablicy.
 
-  - ELEMENT_TYPE_GENERICARRAY jest reprezentowany jako "[?]" po typ elementu tablicy. Kompilator MSVC nigdy nie generuje to.
+  - ELEMENT_TYPE_GENERICARRAY jest reprezentowane jako "[?]" po typie elementu tablicy. Kompilator MSVC nigdy nie generuje tego.
 
-  - ELEMENT_TYPE_ARRAY jest reprezentowany jako [*ich*:`size`,*ich*:`size`] gdzie liczba przecinków jest ranga - 1 i dolne granice i rozmiaru każdego wymiaru, jeśli znane są reprezentowane w zapisie dziesiętnym. Jeśli dolna granica lub rozmiar nie zostanie określony, po prostu zostanie pominięta. W przypadku pominięcia dolną granicę i rozmiar dla określonego wymiaru ":" pominięto w także. Na przykład, to 2-wymiarowej tablicy przy użyciu 1 jako nieokreślony rozmiary i dolne granice [1:, 1:].
+  - ELEMENT_TYPE_ARRAY jest reprezentowane jako [*lowerbound*: `size` ,*lowerbound*: `size` ], gdzie liczba przecinków jest rangą 1, a dolne granice i rozmiar każdego wymiaru, jeśli są znane, są reprezentowane w postaci dziesiętnej. Jeśli Dolna granica nie zostanie określona, zostanie ona po prostu pominięta. Jeśli Dolna granica i rozmiar określonego wymiaru zostaną pominięte, znak ":" również zostanie pominięty. Na przykład tablica 2-wymiarową z 1 jako dolne granice i nieokreślone rozmiary to [1:, 1:].
 
-  - ELEMENT_TYPE_FNPTR jest reprezentowany jako "= FUNC:`type`(*podpisu*)", gdzie `type` jest zwracany typ i *podpisu* jest argumenty metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. Kompilator MSVC nigdy nie generuje to.
+  - ELEMENT_TYPE_FNPTR jest reprezentowana jako "= FUNC: `type` (*Signature*)", gdzie `type` jest typem zwracanym, a *Signature* to argumenty metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. Kompilator MSVC nigdy nie generuje tego.
 
-  Następujące składniki podpis nie są reprezentowane, ponieważ nigdy nie są one używane do różnicujący przeciążonych metod:
+  Następujące składniki podpisu nie są reprezentowane, ponieważ nie są nigdy używane do odróżniania przeciążonych metod:
 
   - Konwencja wywoływania
 
-  - Zwracany typ
+  - Typ zwracany
 
   - ELEMENT_TYPE_SENTINEL
 
-- Tylko operatory konwersji, aby uzyskać wartość zwracaną metody jest zakodowane jako "~" następuje zwracany typ, jak wcześniej zakodowany.
+- W przypadku tylko operatorów konwersji wartość zwracana metody jest zaszyfrowana jako "~", po której następuje zwracany typ, jak poprzednio zakodowany.
 
-- Dla typów ogólnych Nazwa typu zostanie uzupełniona o znaczników Wstecz, a następnie na liczbę wskazującą liczbę parametrów typu genetycznego.  Na przykład
+- W przypadku typów ogólnych nazwa typu będzie następować przez cykl tylny, a następnie liczbę, która wskazuje liczbę parametrów typu ogólnego.  Przykład:
 
     ```xml
     <member name="T:MyClass`2">
     ```
 
-  Dla typu, który jest zdefiniowany jako `public class MyClass<T, U>`.
+  Dla typu, który jest zdefiniowany jako `public class MyClass<T, U>` .
 
-  Dla metod biorąc typów podstawowych jako parametrów, parametry typu ogólnego są określane jako numery poprzedzone znakiem wstecz znaczniki (na przykład \`0, \`1).  Liczba, każda reprezentująca notacji tablicę indeksowaną od zera dla ogólnych parametrów typu.
+  Dla metod przyjmujących typy ogólne jako parametry parametry typu generycznego są określane jako liczby poprzedzone znakami powrotuka (na przykład \` 0, \` 1).  Każda liczba reprezentująca notację tablicową opartą na zero dla ogólnych parametrów typu.
 
 ## <a name="example"></a>Przykład
 
-W poniższych przykładach pokazano, jak identyfikator ciągi dla klasy i jej elementów członkowskich zostanie wygenerowany.
+W poniższych przykładach pokazano, jak można generować ciągi identyfikatorów dla klasy i jej elementów członkowskich.
 
 ```cpp
 // xml_id_strings.cpp
@@ -178,6 +179,6 @@ namespace N {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja XML](xml-documentation-visual-cpp.md)
