@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: kbhit'
 title: kbhit
 ms.date: 12/16/2019
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - kbhit function
 ms.assetid: 73f1eed7-b3ef-4887-8ec6-755367de1d7d
-ms.openlocfilehash: 501b85e1184e2e10cc288f5e3dfb144ca2aff2a6
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7c3cdb295e57c7e44eb21a66a6fc147920044795
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326924"
 ---
 # <a name="kbhit"></a>kbhit
 
-Nazwa funkcji specyficznej dla firmy Microsoft `kbhit` jest przestarzałym aliasem dla funkcji [_kbhit](kbhit.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
+Nazwa funkcji specyficznej dla firmy Microsoft `kbhit` jest przestarzałym aliasem funkcji [_kbhit](kbhit.md) . Domyślnie generuje [Ostrzeżenie kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwa jest przestarzała, ponieważ nie jest zgodna z regułami standard C dla nazw specyficznych dla implementacji. Jednak funkcja jest nadal obsługiwana.
 
 Zalecamy używanie [_kbhit](kbhit.md) . Możesz również nadal używać tej nazwy funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.
 

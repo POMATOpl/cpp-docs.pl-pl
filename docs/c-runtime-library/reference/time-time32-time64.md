@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: czas, _time32, _time64'
 title: time, _time32, _time64
 ms.date: 11/06/2018
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8602e485c15b11b8f4e740ceead382aa88f8f5f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326157"
 ---
 # <a name="time-_time32-_time64"></a>time, _time32, _time64
 
@@ -68,13 +69,13 @@ Zwraca czas (w sekundach), który upłynął od północy, 1 stycznia, 1970 lub-
 
 Funkcja **Time** zwraca liczbę sekund, które upłynęły od północy (00:00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC), zgodnie z zegarem systemowym. Wartość zwracana jest przechowywana w lokalizacji podawanej przez *destTime*. Ten parametr może mieć wartość **null**, w takim przypadku nie jest przechowywana wartość zwracana.
 
-**czas** to otoka dla **_time64** i **time_t** jest domyślnie odpowiednikiem **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary 32-bitowy **time_t**, można zdefiniować **_USE_32BIT_TIME_T**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.
+**czas** jest otoką dla **_time64** i **time_t** jest domyślnie równoważne **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t** 32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038; Użycie tego makra jest niedozwolone na platformach 64-bitowych.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Wymagany nagłówek C|Wymagany C++ nagłówek|
+|Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
 |-------|------|---------------------|
-|**Time**  **,\_time32**, **time64 \_**|\<time.h>|\<CTime > lub \<Time. h >|
+|**Time**, **\_ time32**, **\_ time64**|\<time.h>|\<ctime> lub \<time.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

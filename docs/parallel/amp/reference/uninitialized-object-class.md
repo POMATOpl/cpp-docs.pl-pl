@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy uninitialized_object
 title: uninitialized_object — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4929de9e865492c9fb468f5fac336f67fb307efb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326393"
 ---
 # <a name="uninitialized_object-class"></a>uninitialized_object — Klasa
 
@@ -25,11 +26,11 @@ Wyjątek, który jest generowany, gdy jest używany Niezainicjowany obiekt.
 class uninitialized_object : public runtime_exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor uninitialized_object](#uninitialized_object)|Inicjuje nowe wystąpienie klasy `uninitialized_object`.|
 
@@ -47,9 +48,9 @@ class uninitialized_object : public runtime_exception;
 
 **Przestrzeń nazw:** Współbieżności
 
-## <a name="uninitialized_object"></a>uninitialized_object
+## <a name="uninitialized_object"></a><a name="uninitialized_object"></a> uninitialized_object
 
-Tworzy nowe wystąpienie wyjątku `uninitialized_object`.
+Tworzy nowe wystąpienie `uninitialized_object` wyjątku.
 
 ### <a name="syntax"></a>Składnia
 
@@ -65,9 +66,9 @@ uninitialized_object() throw();
 *_Message*<br/>
 Opis błędu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Obiekt wyjątku `uninitialized_object`.
+`uninitialized_object`Obiekt wyjątku.
 
 ## <a name="see-also"></a>Zobacz też
 

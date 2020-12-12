@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l'
 title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-ms.openlocfilehash: 6e650c15ca2b7d3b448d5480a6b1f09769100171
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5a8a985224a1b54fb774cad8ba8848fda1c7e7ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326312"
 ---
 # <a name="_ismbcalnum-_ismbcalnum_l-_ismbcalpha-_ismbcalpha_l-_ismbcdigit-_ismbcdigit_l"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -132,9 +133,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring. h>|
-|**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring. h>|
-|**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring. h>|
+|**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring.h>|
+|**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -142,5 +143,5 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Procedury _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

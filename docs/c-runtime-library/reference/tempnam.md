@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tempnam'
 title: tempnam
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - tempnam function
 ms.assetid: 42446733-f131-470f-b4d0-96918becab11
-ms.openlocfilehash: d4c7945b68a0cd8dd99fcf15e7484aad877c401d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 14bf6b9e4614ee82af4fe7f0aee10f81d97194cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326186"
 ---
 # <a name="tempnam"></a>tempnam
 

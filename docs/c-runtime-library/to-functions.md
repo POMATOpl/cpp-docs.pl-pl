@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: do funkcji'
 title: do funkcji
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4e2e8993bfe3ecc85071ab53bcd38c38c9da3370
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836081"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326870"
 ---
 # <a name="to-functions"></a>do funkcji
 
@@ -52,7 +53,7 @@ Funkcje **do** i konwersje makr są następujące.
 |`_toupper`|`_toupper`|Konwertuje `c` na wielkie litery|
 |`towupper`|Brak|Konwertuje znak c na odpowiadającą wielką literę litery|
 
-Aby użyć wersji funkcji **do** procedur, które są również zdefiniowane jako makra, Usuń definicje makr z `#undef` dyrektywami lub nie dodawaj CType. C. Jeśli używasz opcji kompilatora/za, kompilator używa wersji funkcji `toupper` lub `tolower` . Deklaracje `toupper` i `tolower` funkcji są w STDLIB. C.
+Aby użyć wersji funkcji **do** procedur, które są również zdefiniowane jako makra, Usuń definicje makr z `#undef` dyrektywami lub nie dodawaj CType. H. Jeśli używasz opcji kompilatora/za, kompilator używa wersji funkcji `toupper` lub `tolower` . Deklaracje `toupper` i `tolower` funkcji znajdują się w STDLIB. H.
 
 `__toascii`Procedura ustawia wszystkie poza kolejnością 7 bitów o wartości `c` 0, tak aby przekonwertowana wartość reprezentuje znak w zestawie znaków ASCII. Jeśli `c` już reprezentuje znak ASCII, `c` jest niezmieniony.
 
@@ -114,8 +115,8 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../c-runtime-library/data-conversion.md)<br/>
-[Regionalne](../c-runtime-library/locale.md)<br/>
+[Ustawienie](../c-runtime-library/locale.md)<br/>
 [to, ISW, procedury](../c-runtime-library/is-isw-routines.md)

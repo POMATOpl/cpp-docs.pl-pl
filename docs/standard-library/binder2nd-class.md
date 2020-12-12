@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa binder2nd —'
 title: binder2nd — Klasa
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: a3c76fcea22045ee7e723ad3ad51390c39f602ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325495"
 ---
 # <a name="binder2nd-class"></a>binder2nd — Klasa
 
@@ -38,24 +39,24 @@ class binder2nd
 
 ### <a name="parameters"></a>Parametry
 
-\ *Func*
+*Func*\
 Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 
-*prawa* \
+*Kliknij*\
 Wartość, do której należy powiązać drugi argument obiektu funkcji binarnej.
 
-\ *lewo*
+*lewym*\
 Wartość argumentu, który dostosowany obiekt binarny porównuje do ustalonej wartości drugiego argumentu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania drugiego argumentu obiektu funkcji binarnej z *prawą*wartością.
+Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania drugiego argumentu obiektu funkcji binarnej z *prawą* wartością.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy przechowuje kopię obiektu funkcji binarnej *Func* w `op`i kopię *prawa* w `value`. Definiuje jej funkcję członkowską `operator()` jako zwracającą `op(left, value)`.
+Szablon klasy przechowuje kopię obiektu funkcji binarnej *Func* w `op` i kopię z *prawej strony* `value` . Definiuje swoją funkcję członkowską `operator()` jako zwracaną `op(left, value)` .
 
-Jeśli *Func* jest obiektem typu `Operation`, a c jest stałą, wówczas`(func, c)` [bind2nd —](../standard-library/functional-functions.md#bind2nd) jest odpowiednikiem konstruktora klasy `binder2nd` `binder2nd<Operation>(func, c)`i wygodniejsze.
+Jeśli *Func* jest obiektem typu, `Operation` a c jest stałą, [bind2nd —](../standard-library/functional-functions.md#bind2nd) `(func, c)` jest odpowiednikiem `binder2nd` konstruktora klasy `binder2nd<Operation>(func, c)` i wygodniejsze.
 
 ## <a name="example"></a>Przykład
 

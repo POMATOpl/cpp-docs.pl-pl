@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _dup, _dup2'
 title: _dup, _dup2
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e9801cc11b6d7a8d4250f61780c5c9b23dd3e1ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327009"
 ---
 # <a name="_dup-_dup2"></a>_dup, _dup2
 
@@ -70,7 +71,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 Funkcje **_dup** i **_dup2** kojarzą drugi deskryptor pliku z aktualnie otwartym plikiem. Te funkcje mogą służyć do kojarzenia wstępnie zdefiniowanego deskryptora pliku, takiego jak w przypadku strumienia **stdout**, z innym plikiem. Operacje na pliku można wykonać przy użyciu deskryptora pliku. Nie ma to wpływ na typ dostępu dozwolony dla danego pliku. **_dup** zwraca następnego dostępnego deskryptora pliku dla danego pliku. **_dup2** wymusza odwołujące *się do tego* samego pliku co *FD1*. Jeśli *FD2* jest skojarzony z otwartym plikiem w momencie wywołania, ten plik jest zamknięty.
 
-Zarówno **_dup** , jak i **_dup2** akceptują deskryptory plików jako parametry. Aby przekazać strumień (`FILE *`) do jednej z tych funkcji, użyj [_fileno](fileno.md). Procedura **fileno** zwraca deskryptor pliku aktualnie skojarzony z danym strumieniem. Poniższy przykład pokazuje, jak skojarzyć **stderr** (zdefiniowany jako `FILE *` w stdio. h) z deskryptorem pliku:
+Zarówno **_dup** , jak i **_dup2** akceptują deskryptory plików jako parametry. Aby przekazać strumień ( `FILE *` ) do jednej z tych funkcji, użyj [_fileno](fileno.md). Procedura **fileno** zwraca deskryptor pliku aktualnie skojarzony z danym strumieniem. Poniższy przykład pokazuje, jak skojarzyć **stderr** (zdefiniowany jako `FILE *` w stdio. h) z deskryptorem pliku:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -82,10 +83,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_dup**|\<IO. h>|
-|**_dup2**|\<IO. h>|
+|**_dup**|\<io.h>|
+|**_dup2**|\<io.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -148,7 +149,7 @@ The file 'data' contains:
 This goes to file 'data'
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>

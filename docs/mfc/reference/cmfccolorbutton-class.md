@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCColorButton'
 title: Klasa CMFCColorButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 7abe37969799d7fcd78d525a5ec1c6faa9d876ee
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b3f3e40f1e52c1a387563fde2aa1027046d557f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327693"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
 
@@ -73,7 +74,7 @@ class CMFCColorButton : public CMFCButton
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Włącza i wyłącza przycisk "automatyczny" umieszczony powyżej przycisków zwykłych kolorów. (Standardowy przycisk systemowy jest **automatycznie**oznaczony etykietą).|
+|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Włącza i wyłącza przycisk "automatyczny" umieszczony powyżej przycisków zwykłych kolorów. (Standardowy przycisk systemowy jest **automatycznie** oznaczony etykietą).|
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Włącza i wyłącza przycisk "inne", który jest umieszczony poniżej zwykłych przycisków kolorów. (Standardowy przycisk "inny" ma etykietę **więcej kolorów**).|
 |[CMFCColorButton::GetAutomaticColor](#getautomaticcolor)|Pobiera bieżący automatyczny kolor.|
 |[CMFCColorButton:: GetColor](#getcolor)|Pobiera kolor przycisku.|

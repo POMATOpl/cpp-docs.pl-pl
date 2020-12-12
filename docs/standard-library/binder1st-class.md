@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa binder1st —'
 title: binder1st — Klasa
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1311d598c8300f3bba4d27acdaab879cbd054696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325508"
 ---
 # <a name="binder1st-class"></a>binder1st — Klasa
 
@@ -43,13 +44,13 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*binary_fn* \
+*binary_fn*\
 Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 
-\ *lewo*
+*lewym*\
 Wartość, do której należy powiązać pierwszy argument obiektu funkcji binarnej.
 
-*prawa* \
+*Kliknij*\
 Wartość argumentu, który dostosowany obiekt binarny porównuje do ustalonej wartości drugiego argumentu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -58,9 +59,9 @@ Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania pierwszego arg
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy przechowuje kopię obiektu funkcji binarnej *binary_fn* w `op` i kopię *pozostawioną* w `value`. Definiuje jej funkcję członkowską `operator()` jako zwracającą `op(value, right)`.
+Szablon klasy przechowuje kopię obiektu funkcji binarnej *binary_fn* w `op` i kopię *po lewej stronie* `value` . Definiuje swoją funkcję członkowską `operator()` jako zwracaną `op(value, right)` .
 
-Jeśli *binary_fn* jest obiektem typu `Operation` i `c` jest stałą, `bind1st(binary_fn, c)` jest bardziej wygodnym odpowiednikiem `binder1st<Operation>(binary_fn, c)`. Aby uzyskać więcej informacji, zobacz [bind1st —](../standard-library/functional-functions.md#bind1st).
+Jeśli *binary_fn* jest obiektem typu `Operation` i `c` jest stałą, `bind1st(binary_fn, c)` to bardziej wygodny odpowiednik `binder1st<Operation>(binary_fn, c)` . Aby uzyskać więcej informacji, zobacz [bind1st —](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Przykład
 

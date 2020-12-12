@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa bitset'
 title: bitset — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 623593e723b26244cc82e9eeed3e32657cca0b94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 061bbe77a701e2161b3a33ffa94d3b8231b9f541
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846488"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325468"
 ---
 # <a name="bitset-class"></a>bitset — Klasa
 
@@ -59,7 +60,7 @@ Określa liczbę bitów w obiekcie bitset o niezerowej liczbie całkowitej typu 
 
 ## <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do podobnej [ \<bool> klasy wektorowej](../standard-library/vector-bool-class.md)Klasa bitset nie ma iteratorów i nie jest kontenerem standardowej biblioteki języka C++. Różni się on również od wektora \<bool> przez wyznaczony rozmiar, który jest ustalany w czasie kompilacji zgodnie z rozmiarem określonym przez parametr szablonu *N* , gdy **bitset \<N\> ** jest zadeklarowana.
+W przeciwieństwie do podobnej [ \<bool> klasy wektorowej](../standard-library/vector-bool-class.md)Klasa bitset nie ma iteratorów i nie jest kontenerem standardowej biblioteki języka C++. Różni się on również od wektora \<bool> przez wyznaczony rozmiar, który jest ustalany w czasie kompilacji zgodnie z rozmiarem określonym przez parametr szablonu *N* , gdy **bitset \<N\>** jest zadeklarowana.
 
 Bit jest ustawiony, jeśli jego wartość jest równa 1 i zresetowana, jeśli jej wartość wynosi 0. Aby przerzucić lub odwrócić bit, należy zmienić jego wartość z 1 na 0 lub z 0 na 1. *N* bitów w bitset są indeksowane wartości całkowite z przedziału od 0 do *N* -1, gdzie 0 indeksuje pierwszą pozycję bitową i *N* -1 ostatniej pozycji bitu.
 
@@ -77,13 +78,13 @@ Bit jest ustawiony, jeśli jego wartość jest równa 1 i zresetowana, jeśli je
 |-|-|
 |[element_type](#element_type)|Typ, który jest synonimem dla typu danych **`bool`** i może służyć do odwoływania się do bitów elementów w `bitset` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
 |[całą](#all)|Testuje wszystkie bity w tym `bitset` celu, aby określić, czy są one ustawione na **`true`** .|
 |[ile](#any)|Funkcja członkowska testuje, czy dowolny bit w sekwencji jest ustawiony na 1.|
-|[count](#count)|Funkcja członkowska zwraca liczbę bitów ustawionych w sekwencji bitowej.|
+|[liczbą](#count)|Funkcja członkowska zwraca liczbę bitów ustawionych w sekwencji bitowej.|
 |[stosowane](#flip)|Odwraca wartość wszystkich bitów w `bitset` lub odwraca pojedynczy bit w określonym położeniu.|
 |[brak](#none)|Testuje, czy żaden bit nie został ustawiony na 1 w `bitset` obiekcie.|
 |[zresetować](#reset)|Resetuje wszystkie bity w a `bitset` do 0 lub resetuje bit w określonym położeniu do 0.|
@@ -472,7 +473,7 @@ Kopia zmodyfikowanego bitset, dla którego wywołano funkcję członkowską.
 
 #### <a name="remarks"></a>Uwagi
 
-Druga funkcja członkowska zgłasza wyjątek [out_of_range](../standard-library/out-of-range-class.md) , jeśli pozycja określona jako parametr jest większa niż rozmiar *N* **bitset \<** *N* **> ** , którego bit został odwrócony.
+Druga funkcja członkowska zgłasza wyjątek [out_of_range](../standard-library/out-of-range-class.md) , jeśli pozycja określona jako parametr jest większa niż rozmiar *N* **bitset \<** *N* **>** , którego bit został odwrócony.
 
 #### <a name="example"></a>Przykład
 
@@ -737,7 +738,7 @@ Zmodyfikowany bitset z bitami przenoszonymi w lewo do wymaganej liczby pozycji.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja operator elementu członkowskiego zwraca **bitset**( ** \* this**) **<<= POS,** gdzie [<<=](#op_lshift_eq) przenosi bity w bitset do lewej określoną liczbę pozycji i zwraca wynik do bitsetu.
+Funkcja operator elementu członkowskiego zwraca **bitset**( **\* this**) **<<= POS,** gdzie [<<=](#op_lshift_eq) przenosi bity w bitset do lewej określoną liczbę pozycji i zwraca wynik do bitsetu.
 
 #### <a name="example"></a>Przykład
 
@@ -1231,7 +1232,7 @@ Odwołanie do bitu w bitset określonym przez pozycję argumentu dla pierwszej, 
 
 #### <a name="remarks"></a>Uwagi
 
-Klasa `reference` istnieje tylko jako Klasa pomocnika dla bitset `operator[]` . Klasa członkowska opisuje obiekt, który może uzyskać dostęp do pojedynczego bitu w bitset. Niech *b* jest obiektem typu **`bool`** , *x* i *y* obiektów typu **bitset \<** *N* **> **i i i *j* prawidłowymi pozycjami w ramach takiego obiektu. *i* Notacja *x [i]* odwołuje się do bitu na pozycji *i* w bitset *x*. Funkcje składowe klasy `reference` zapewniają w kolejności następujące operacje:
+Klasa `reference` istnieje tylko jako Klasa pomocnika dla bitset `operator[]` . Klasa członkowska opisuje obiekt, który może uzyskać dostęp do pojedynczego bitu w bitset. Niech *b* jest obiektem typu **`bool`** , *x* i *y* obiektów typu **bitset \<** *N* **>** i i i *j* prawidłowymi pozycjami w ramach takiego obiektu.  Notacja *x [i]* odwołuje się do bitu na pozycji *i* w bitset *x*. Funkcje składowe klasy `reference` zapewniają w kolejności następujące operacje:
 
 |Operacja|Definicja|
 |---------------|----------------|

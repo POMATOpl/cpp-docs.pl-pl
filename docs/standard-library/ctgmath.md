@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; ctgmath&gt;'
 title: '&lt;ctgmath&gt;'
 ms.date: 07/11/2019
 f1_keywords:
@@ -7,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: f1033a944699f4c124114c49e0e30f8b30804a1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324698"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-W C++ efekcie zawiera nagłówki \<biblioteki standardowej złożone > i \<cmath >, które udostępniają niestandardowe makra matematyczne \<typu, równoważne tgmath. h >.
+W efekcie obejmuje nagłówki standardowej biblioteki C++ \<complex> i \<cmath> , które udostępniają niestandardowe makra matematyczne typu, równoważne \<tgmath.h> .
 
 > [!NOTE]
-> Nagłówek tgmath. > \<h standardowej biblioteki C nie jest \<zawarty w ctgmath >, ponieważ jest efektywnie C++ \<zastępowany przez przeciążenia złożone > i \<cmath >. Sprawia, że \<nagłówek > ctgmath jest nadmiarowy. Nagłówek > tgmath. h jest przestarzały w programie C++ \< Nagłówek \<> ctgmath jest przestarzały w języku c++ 17 i został usunięty z wersji Standard c++ 20.
+> Nagłówek standardowej biblioteki C \<tgmath.h> nie jest zawarty w \<ctgmath> , ponieważ jest efektywnie zastępowany przez przeciążenia C++ w \<complex> i \<cmath> . Powoduje to, że \<ctgmath> nagłówek jest nadmiarowy. \<tgmath.h>Nagłówek jest przestarzały w języku C++. \<ctgmath>Nagłówek jest przestarzały w języku c++ 17 i został usunięty z wersji Standard c++ 20.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<ctgmath >
+**Nagłówek:**\<ctgmath>
 
 **Przestrzeń nazw:** std
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja nagłówka \<standardowej biblioteki C tgmath. h > jest zapewniana przez przeciążenia w \<złożonej > i \<cmath >.
+Funkcja nagłówka standardowej biblioteki C \<tgmath.h> jest dostarczana przez przeciążenia w \<complex> i \<cmath> .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<złożone >](complex.md)\
+[\<complex>](complex.md)\
 [\<cmath>](cmath.md)\
 [Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](cpp-standard-library-overview.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](thread-safety-in-the-cpp-standard-library.md)
+[Omówienie standardowej biblioteki języka C++](cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](thread-safety-in-the-cpp-standard-library.md)

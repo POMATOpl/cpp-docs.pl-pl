@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _tempnam_dbg, _wtempnam_dbg'
 title: _tempnam_dbg, _wtempnam_dbg
 ms.date: 11/04/2016
 api_name:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-ms.openlocfilehash: 73642730995ac5c0b47519fac64b30400d47767c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0f8788eb00d6cfd19f5675824838ce37e905b8ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326213"
 ---
 # <a name="_tempnam_dbg-_wtempnam_dbg"></a>_tempnam_dbg, _wtempnam_dbg
 
-Wersje funkcji [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) , w których jest używana wersja do debugowania **malloc**, **_malloc_dbg**.
+Wersje funkcji [_tempnam, _wtempnam, tmpnam _wtmpnam,](tempnam-wtempnam-tmpnam-wtmpnam.md) w których jest używana wersja do debugowania **malloc**, **_malloc_dbg**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,7 +69,7 @@ wchar_t *_wtempnam_dbg(
 *katalogów*<br/>
 Ścieżka użyta w nazwie pliku, jeśli nie istnieje zmienna środowiskowa TMP lub jeśli TMP nie jest prawidłowym katalogiem.
 
-*prefix*<br/>
+*prefiks*<br/>
 Ciąg, który będzie wstępnie oczekiwał na nazwy zwrócone przez **_tempnam**.
 
 *BlockType*<br/>
@@ -85,17 +86,17 @@ Numer wiersza w pliku źródłowym, w którym zażądano operacji alokacji lub *
 Każda funkcja zwraca wskaźnik do wygenerowanej nazwy lub **wartości null** , jeśli wystąpi błąd. Błąd może wystąpić, jeśli w zmiennej środowiskowej TMP określono nieprawidłową nazwę katalogu i w parametrze *dir* .
 
 > [!NOTE]
-> **bezpłatnie** (lub **free_dbg**) musi być wywoływana dla wskaźników przyznanych przez **_tempnam_dbg** i **_wtempnam_dbg**.
+> **wolne** (lub **free_dbg**) musi zostać wywołane dla wskaźników przyznanych przez **_tempnam_dbg** i **_wtempnam_dbg**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_tempnam_dbg** i **_wtempnam_dbg** są identyczne z **_tempnam** i **_wtempnam** , z tą różnicą, że w przypadku zdefiniowania elementu **_DEBUG** , te funkcje używają wersji do debugowania funkcji **malloc** i **_malloc_dbg**, do Przydziel pamięć, jeśli **wartość null** jest przenoszona jako pierwszy parametr. Aby uzyskać więcej informacji, zobacz [_malloc_dbg](malloc-dbg.md).
+**_Tempnam_dbg** i **_wtempnam_dbg** funkcje są takie same jak **_tempnam** i **_wtempnam** , z wyjątkiem tego, że w przypadku zdefiniowania **_DEBUG** te funkcje używają wersji **i** **_malloc_dbg** debugowania, aby przydzielić pamięć, jeśli **wartość null** zostanie przeniesiona jako pierwszy parametr. Aby uzyskać więcej informacji, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_tempnam** i **_wtempnam** są ponownie mapowane odpowiednio do **_tempnam_dbg** i **_wtempnam_dbg**, z atrybutem *BlockType* ustawionym na wartość **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_tempnam** i **_wtempnam** są ponownie mapowane do **_tempnam_dbg** i **_wtempnam_dbg**, z ustawieniem *BlockType* na **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttempnam_dbg**|**_tempnam_dbg**|**_tempnam_dbg**|**_wtempnam_dbg**|
 
@@ -107,8 +108,8 @@ Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast t
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [Wersje debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

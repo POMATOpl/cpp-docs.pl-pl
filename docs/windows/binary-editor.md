@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Edytor binarny (C++)'
 title: Edytor binarny (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 078d702232cde49a4666551a8d9fcbb320173450
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8abe63f662d25b5e8108d0671dd17490143a07fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327216"
 ---
 # <a name="binary-editor-c"></a>Edytor binarny (C++)
 
@@ -45,7 +46,7 @@ ms.locfileid: "91503532"
 Tylko niektóre wartości ASCII są reprezentowane w **edytorze binarnym** (0X20 – 0x7E). Znaki rozszerzone są wyświetlane jako okresy w sekcji wartość ASCII w prawym panelu w **edytorze binarnym**. Drukowalne znaki to wartości ASCII od 32 do 126.
 
 > [!TIP]
-> Korzystając z **edytora binarnego**, w wielu wystąpieniach można kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń dotyczących zasobów. Dostępne polecenia zależą od elementów wskazywanych przez kursor. Na przykład po kliknięciu prawym przyciskiem myszy, gdy wskażesz **Edytor binarny** z wybranymi wartościami szesnastkowymi, menu skrótów pokaże polecenia **wycinania**, **kopiowania**i **wklejania** .
+> Korzystając z **edytora binarnego**, w wielu wystąpieniach można kliknąć prawym przyciskiem myszy, aby wyświetlić menu skrótów poleceń dotyczących zasobów. Dostępne polecenia zależą od elementów wskazywanych przez kursor. Na przykład po kliknięciu prawym przyciskiem myszy, gdy wskażesz **Edytor binarny** z wybranymi wartościami szesnastkowymi, menu skrótów pokaże polecenia **wycinania**, **kopiowania** i **wklejania** .
 
 ## <a name="how-to"></a>Instrukcje
 
@@ -62,7 +63,7 @@ Tylko niektóre wartości ASCII są reprezentowane w **edytorze binarnym** (0X20
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Aby otworzyć zasób zarządzany na potrzeby edycji plików binarnych
 
-1. W **Eksplorator rozwiązań**wybierz określony plik zasobów, który chcesz edytować.
+1. W **Eksplorator rozwiązań** wybierz określony plik zasobów, który chcesz edytować.
 
 1. Kliknij prawym przyciskiem myszy zasób i wybierz polecenie **Otwórz za pomocą**.
 
@@ -104,7 +105,7 @@ Nowy zasób niestandardowy lub dane można utworzyć, umieszczając zasób w oso
 
    Możesz wpisać dane niestandardowe w pliku. RC jako ciągi cudzysłowów zakończonych znakiem null lub jako liczby całkowite w formacie dziesiętnym, szesnastkowym lub ósemkowym.
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik. rc projektu i wybierz pozycję **zasób zawiera**.
+1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy plik. rc projektu i wybierz pozycję **zasób zawiera**.
 
 1. W polu **dyrektywy czasu kompilacji** wpisz `#include` instrukcję, która zawiera nazwę pliku zawierającego zasób niestandardowy, na przykład:
 

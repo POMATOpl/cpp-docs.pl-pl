@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Aktywacja: czasowniki'
 title: 'Aktywacja: zlecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: 03edba0a4336fdc147ef6dd10c7a8154aca19d3a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2c680452d87f1fcfd1ee2a0b8362dbaab8c0affd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325935"
 ---
 # <a name="activation-verbs"></a>Aktywacja: zlecenia
 
@@ -29,7 +30,7 @@ Wiele typów elementów OLE obsługuje tylko jedno zlecenie, a Edycja jest najba
 
 Używane jest często inne zlecenie. Otwarte zlecenie jest identyczne z edytowaniem, z tą różnicą, że aplikacja serwera jest uruchamiana w osobnym oknie. Tego zlecenia należy używać, gdy aplikacja kontenera lub aplikacja serwera nie obsługuje aktywacji w miejscu.
 
-Wszystkie czasowniki inne niż zlecenia podstawowe muszą być wywoływane za pomocą polecenia podmenu, gdy element jest zaznaczony. To podmenu zawiera wszystkie czasowniki obsługiwane przez element i jest zazwyczaj osiągane przez polecenie *typename* **obiektu** TypeName w menu **Edycja** . Aby uzyskać informacje na temat polecenia **obiektu** *TypeName* , zobacz [menu artykułów i zasoby: Dodatki do kontenera](menus-and-resources-container-additions.md).
+Wszystkie czasowniki inne niż zlecenia podstawowe muszą być wywoływane za pomocą polecenia podmenu, gdy element jest zaznaczony. To podmenu zawiera wszystkie czasowniki obsługiwane przez element i jest zazwyczaj osiągane przez polecenie  **obiektu** TypeName w menu **Edycja** . Aby uzyskać informacje na temat polecenia **obiektu** *TypeName* , zobacz [menu artykułów i zasoby: Dodatki do kontenera](menus-and-resources-container-additions.md).
 
 Zlecenia obsługiwane przez aplikację serwera są wymienione w bazie danych rejestracji systemu Windows. Jeśli aplikacja serwera jest zapisywana biblioteka MFC, wszystkie zlecenia zostaną automatycznie zarejestrowane po uruchomieniu serwera. W przeciwnym razie należy je zarejestrować podczas fazy inicjowania aplikacji serwera. Aby uzyskać więcej informacji, zobacz [rejestracja](registration.md)artykułu.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCColorBar'
 title: Klasa CMFCColorBar
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: ca28f8a07938e787fcf2d91d714c9dc82092194f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 5a2935c71a5579dddb2133f2ac6589a6bd447ef6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327711"
 ---
 # <a name="cmfccolorbar-class"></a>Klasa CMFCColorBar
 
@@ -478,7 +479,7 @@ PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda używa parametrów *Rect*, *nColumns*i *pPalette* do obliczenia odpowiedniej liczby lub wierszy i kolumn w kontrolce pasek koloru, a następnie wywołuje metodę [CMFCColorBar:: Create](#create) .
+Ta metoda używa parametrów *Rect*, *nColumns* i *pPalette* do obliczenia odpowiedniej liczby lub wierszy i kolumn w kontrolce pasek koloru, a następnie wywołuje metodę [CMFCColorBar:: Create](#create) .
 
 ## <a name="cmfccolorbarcreatepalette"></a><a name="createpalette"></a> CMFCColorBar:: ispalette
 

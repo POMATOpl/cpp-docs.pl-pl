@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_istringstream
 title: basic_istringstream — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: fd2ab79466c01343cbdadbcb649e3b05eee3c2a0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 34073c660b5ede3d7df54e9e067ef5c3963671f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561781"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325683"
 ---
 # <a name="basic_istringstream-class"></a>basic_istringstream — Klasa
 
@@ -45,7 +46,7 @@ Cechy znaków wyspecjalizowane dla elementu Basic ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR**, `Alloc`>, z elementami typu *elem*, których cechy znakowe są określane przez klasę *TR*i których elementy są przydzielane przez alokatora klasy *Alloc*. Obiekt przechowuje obiekt klasy basic_stringbuf< **elem**, **TR**, `Alloc`>.
+Szablon klasy opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **elem**, **TR**, `Alloc`>, z elementami typu *elem*, których cechy znakowe są określane przez klasę *TR* i których elementy są przydzielane przez alokatora klasy *Alloc*. Obiekt przechowuje obiekt klasy basic_stringbuf< **elem**, **TR**, `Alloc`>.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -173,7 +174,7 @@ Nowy ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca obiekt klasy [basic_string](../standard-library/basic-string-class.md) <  **elem**, **TR** `Alloc`>, którego kontrolowana sekwencja jest kopią sekwencji kontrolowanej przez ** \* ten**element.
+Zwraca obiekt klasy [basic_string](../standard-library/basic-string-class.md) <  **elem**, **TR** `Alloc`>, którego kontrolowana sekwencja jest kopią sekwencji kontrolowanej przez **\* ten** element.
 
 ### <a name="remarks"></a>Uwagi
 

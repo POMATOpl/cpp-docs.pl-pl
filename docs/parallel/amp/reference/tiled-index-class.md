@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy tiled_index
 title: tiled_index — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 9d295093031eaee0a2d4dd83aa931060e6eebc07
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 072735a9f98efc522c2f054d837d3c2f89e8958b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325827"
 ---
 # <a name="tiled_index-class"></a>tiled_index — Klasa
 

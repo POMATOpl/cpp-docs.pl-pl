@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy binary_negate
 title: binary_negate — Klasa
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f97b1ec31623ece91c76b1195c87f75e8cdfd2eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325535"
 ---
 # <a name="binary_negate-class"></a>binary_negate — Klasa
 
@@ -33,13 +34,13 @@ class binary_negate
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *Func*
+*Func*\
 Funkcja binarna, która ma być negacją.
 
-\ *lewo*
+*lewym*\
 Lewy operand funkcji binarnej, która ma być negacją.
 
-*prawa* \
+*Kliknij*\
 Prawy operand funkcji binarnej, która ma być negacją.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -48,9 +49,9 @@ Negacja funkcji binarnej.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy przechowuje kopię *obiektu funkcji*binarnej. Definiuje jej funkcję członkowską `operator()` jako zwracającą `!Func(left, right)`.
+Szablon klasy przechowuje kopię *obiektu funkcji* binarnej. Definiuje swoją funkcję członkowską `operator()` jako zwracaną `!Func(left, right)` .
 
-Konstruktor `binary_negate` jest rzadko używany bezpośrednio. Funkcja pomocnika [not2 —](../standard-library/functional-functions.md#not2) jest zwykle preferowana do zadeklarowania i użycia predykatu adaptera **binary_negator** .
+Konstruktor `binary_negate` jest rzadko używany bezpośrednio. Funkcja pomocnika [not2 —](../standard-library/functional-functions.md#not2) jest zwykle preferowana do deklarowania i użycia predykatu **binary_negator** adaptera.
 
 ## <a name="example"></a>Przykład
 

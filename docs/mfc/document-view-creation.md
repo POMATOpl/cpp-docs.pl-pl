@@ -1,5 +1,6 @@
 ---
-title: Tworzenie dokumentu-widok
+description: 'Dowiedz się więcej na temat: Tworzenie dokumentu/widoku'
+title: Tworzenie Document-View
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], creating
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: 5441827188f5bff98638cc85cd29e2efd79f8ae8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 128b68eb53bd596ba2e4b4df4f2c5e865452fe2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326438"
 ---
 # <a name="documentview-creation"></a>Tworzenie dokumentu/widoku
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_regex
 title: basic_regex — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 4348941e065680a54f9bd0c9f5b7ab2ff1af5e56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 450f3945faeb088c975bb1657d69496bcf078ccd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325629"
 ---
 # <a name="basic_regex-class"></a>basic_regex — Klasa
 
@@ -40,15 +41,15 @@ Argument szablonu *RXtraits* opisuje różne ważne właściwości składni wyra
 
 Niektóre funkcje przyjmują sekwencję operandów, która definiuje wyrażenie regularne. Można określić taką sekwencję operandów na kilka sposobów:
 
-`ptr`--sekwencję zakończoną znakiem null (taką jak ciąg C, dla *elem* typu **`char`** ) rozpoczynającą się od `ptr` (która nie może być pustym wskaźnikiem), gdzie element kończący jest wartością `value_type()` i nie jest częścią sekwencji operandu
+`ptr` --sekwencję zakończoną znakiem null (taką jak ciąg C, dla *elem* typu **`char`** ) rozpoczynającą się od `ptr` (która nie może być pustym wskaźnikiem), gdzie element kończący jest wartością `value_type()` i nie jest częścią sekwencji operandu
 
 `ptr`, `count` --sekwencja `count` elementów rozpoczynająca się o `ptr` (nie może być pustym wskaźnikiem)
 
-`str`--Sekwencja określona przez `basic_string` obiekt`str`
+`str` --Sekwencja określona przez `basic_string` obiekt `str`
 
-`first`, `last` --sekwencja elementów rozdzielanych przez Iteratory `first` i `last` , z zakresu`[first, last)`
+`first`, `last` --sekwencja elementów rozdzielanych przez Iteratory `first` i `last` , z zakresu `[first, last)`
 
-`right`-- `basic_regex` obiekt`right`
+`right` -- `basic_regex` obiekt `right`
 
 Te funkcje składowe również przyjmują argument `flags` , który określa różne opcje interpretacji wyrażenia regularnego, a także te opisane przez typ *RXtraits* .
 
@@ -86,8 +87,8 @@ Te funkcje składowe również przyjmują argument `flags` , który określa ró
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[przypisać](#assign)|Przypisuje wartość do obiektu wyrażenia regularnego.|
-|[flagi](#flags)|Zwraca flagi opcji składni.|
+|[ponownie](#assign)|Przypisuje wartość do obiektu wyrażenia regularnego.|
+|[znaczników](#flags)|Zwraca flagi opcji składni.|
 |[getloc](#getloc)|Zwraca przechowywany obiekt locale.|
 |[imbue —](#imbue)|Zmienia przechowywany obiekt locale.|
 |[mark_count](#mark_count)|Zwraca liczbę dopasowanych podwyrażeń.|
@@ -196,7 +197,7 @@ getloc == imbued == true
 match("abc") == true
 ```
 
-## <a name="basic_regexassign"></a><a name="assign"></a>basic_regex:: Assign
+## <a name="basic_regexassign"></a><a name="assign"></a> basic_regex:: Assign
 
 Przypisuje wartość do obiektu wyrażenia regularnego.
 
@@ -267,7 +268,7 @@ Initializer_list do skopiowania.
 
 Wszystkie funkcje składowe zastępują wyrażenie regularne przechowywane przez **`*this`** wyrażenie regularne opisane przez sekwencję operandu, a następnie zwracają **`*this`** .
 
-## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a>basic_regex:: basic_regex
+## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a> basic_regex:: basic_regex
 
 Konstruowanie obiektu wyrażenia regularnego.
 
@@ -345,7 +346,7 @@ Pierwszy Konstruktor konstruuje pusty `basic_regex` obiekt. Inne konstruktory ko
 
 Pusty `basic_regex` obiekt nie pasuje do żadnej sekwencji znaków podczas przekazywania do [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)lub [regex_replace](../standard-library/regex-functions.md#regex_replace).
 
-## <a name="basic_regexflag_type"></a><a name="flag_type"></a>basic_regex:: flag_type
+## <a name="basic_regexflag_type"></a><a name="flag_type"></a> basic_regex:: flag_type
 
 Typ flag opcji składni.
 
@@ -357,7 +358,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 Typ jest synonimem dla [regex_constants:: syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
-## <a name="basic_regexflags"></a><a name="flags"></a>basic_regex:: flags
+## <a name="basic_regexflags"></a><a name="flags"></a> basic_regex:: flags
 
 Zwraca flagi opcji składni.
 
@@ -369,7 +370,7 @@ flag_type flags() const;
 
 Funkcja członkowska zwraca wartość `flag_type` argumentu przekazywanego do ostatniego wywołania do jednej z [basic_regex:: Assign](#assign) funkcje Członkowskie lub, jeśli takie wywołanie nie zostało wykonane, wartość przekazano do konstruktora.
 
-## <a name="basic_regexgetloc"></a><a name="getloc"></a>basic_regex:: getloc
+## <a name="basic_regexgetloc"></a><a name="getloc"></a> basic_regex:: getloc
 
 Zwraca przechowywany obiekt locale.
 
@@ -381,7 +382,7 @@ locale_type getloc() const;
 
 Funkcja członkowska zwraca `traits.` [regex_traits:: getloc](../standard-library/regex-traits-class.md#getloc) `()` .
 
-## <a name="basic_regeximbue"></a><a name="imbue"></a>basic_regex:: imbue —
+## <a name="basic_regeximbue"></a><a name="imbue"></a> basic_regex:: imbue —
 
 Zmienia przechowywany obiekt locale.
 
@@ -398,7 +399,7 @@ Obiekt ustawień regionalnych do przechowywania.
 
 Funkcja członkowska opróżnia **`*this`** i zwraca `traits.` [regex_traits:: imbue —](../standard-library/regex-traits-class.md#imbue) `(loc)` .
 
-## <a name="basic_regexlocale_type"></a><a name="locale_type"></a>basic_regex:: locale_type
+## <a name="basic_regexlocale_type"></a><a name="locale_type"></a> basic_regex:: locale_type
 
 Typ przechowywanego obiektu ustawień regionalnych.
 
@@ -410,7 +411,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 Typ jest synonimem dla [regex_traits:: locale_type](../standard-library/regex-traits-class.md#locale_type).
 
-## <a name="basic_regexmark_count"></a><a name="mark_count"></a>basic_regex:: mark_count
+## <a name="basic_regexmark_count"></a><a name="mark_count"></a> basic_regex:: mark_count
 
 Zwraca liczbę dopasowanych podwyrażeń.
 
@@ -422,7 +423,7 @@ unsigned mark_count() const;
 
 Funkcja członkowska zwraca liczbę grup przechwytywania w wyrażeniu regularnym.
 
-## <a name="basic_regexoperator"></a><a name="op_eq"></a>basic_regex:: operator =
+## <a name="basic_regexoperator"></a><a name="op_eq"></a> basic_regex:: operator =
 
 Przypisuje wartość do obiektu wyrażenia regularnego.
 
@@ -453,7 +454,7 @@ Ciąg do skopiowania.
 
 Operatorzy każdy zastępują wyrażenie regularne przechowywane przy **`*this`** użyciu wyrażenia regularnego opisanego przez sekwencję operandu, a następnie zwracają **`*this`** .
 
-## <a name="basic_regexswap"></a><a name="swap"></a>basic_regex:: swap
+## <a name="basic_regexswap"></a><a name="swap"></a> basic_regex:: swap
 
 Zamienia dwa obiekty wyrażeń regularnych.
 
@@ -470,7 +471,7 @@ Obiekt wyrażenia regularnego do zamiany.
 
 Funkcja członkowska zamienia wyrażenia regularne między **`*this`** i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków.
 
-## <a name="basic_regexvalue_type"></a><a name="value_type"></a>basic_regex:: value_type
+## <a name="basic_regexvalue_type"></a><a name="value_type"></a> basic_regex:: value_type
 
 Typ elementu.
 
@@ -482,7 +483,7 @@ typedef Elem value_type;
 
 Typ jest synonimem dla parametru szablonu *elem*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<regex>](../standard-library/regex.md)\
 [regex_match](../standard-library/regex-functions.md#regex_match)\

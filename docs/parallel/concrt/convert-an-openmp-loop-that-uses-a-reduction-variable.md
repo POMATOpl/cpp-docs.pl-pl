@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej o tym, jak: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania z środowisko uruchomieniowe współbieżności'
 title: 'Porady: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze współbieżności środowiska wykonawczego'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: 06418bc1a331a5c77653087434a5cc621f92e7d7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 131585caf3e06a11ed45bda4b58efa541272006f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325761"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Porady: konwertowanie pętli OpenMP używającej zmiennej redukcji do korzystania ze współbieżności środowiska wykonawczego
 
-W tym przykładzie pokazano, jak przekonwertować [równoległą](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)pętlę OpenMP[dla](../openmp/reference/openmp-directives.md#for-openmp) pętli [reduction](../openmp/reference/openmp-clauses.md#reduction) , która używa środowisko uruchomieniowe współbieżności.
+W tym przykładzie pokazano, jak przekonwertować [równoległą](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)pętlę OpenMP[dla](../openmp/reference/openmp-directives.md#for-openmp) pętli [](../openmp/reference/openmp-clauses.md#reduction) , która używa środowisko uruchomieniowe współbieżności.
 
 Klauzula OpenMP `reduction` pozwala określić jedną lub więcej zmiennych prywatnych wątku, które podlegają operacji zmniejszania na końcu regionu równoległego. OpenMP wstępnie definiuje zestaw operatorów redukcji. Każda zmienna redukcyjna musi być skalarna (na przykład,, **`int`** **`long`** i **`float`** ). OpenMP definiuje również pewne ograniczenia dotyczące sposobu używania zmiennych redukcji w regionie równoległym.
 

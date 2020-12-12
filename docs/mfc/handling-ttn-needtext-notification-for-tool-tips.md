@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: obsługa TTN_NEEDTEXT powiadomienia o etykietach narzędzi'
 title: Obsługa powiadomienia TTN_NEEDTEXT w przypadku etykietek narzędzi
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 75850dbf92587cf654d4f7a39ea54af1fd9dd5bd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 793f6c42e0e43c341884b999e5e1aed0be448b00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620084"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326421"
 ---
 # <a name="handling-ttn_needtext-notification-for-tool-tips"></a>Obsługa powiadomienia TTN_NEEDTEXT w przypadku etykietek narzędzi
 
@@ -32,7 +33,7 @@ Zadeklaruj funkcję programu obsługi w definicji klasy w następujący sposób:
 
 gdzie są pisane kursywnie parametry:
 
-*#c1*<br/>
+*id*<br/>
 Identyfikator kontrolki, która wysłała powiadomienie. Nie używany. Identyfikator kontrolki jest pobierany ze struktury **NMHDR** .
 
 *pNMHDR*<br/>

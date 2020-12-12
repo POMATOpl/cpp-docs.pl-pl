@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3724'
 title: Błąd kompilatora C3724
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3724
 ms.assetid: cab8aba7-14fc-406f-8cc6-32744c8f31c1
-ms.openlocfilehash: b107137652c4efde43fdfe9c991240767eb5ced7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 509467b964f8b4db35d3823ff9f89be0223061f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326591"
 ---
 # <a name="compiler-error-c3724"></a>Błąd kompilatora C3724
 
-Aby używać wielowątkowości ze zdarzeniami, należy #include \<Windows. h >
+musi #include \<windows.h> używać wielowątkowości ze zdarzeniami
 
-Plik Windows. h jest wymagany w przypadku używania wielowątkowości ze zdarzeniami. Aby naprawić ten błąd, Dodaj `#include <windows.h>` na początku pliku, w którym są zdefiniowane źródła zdarzeń i odbiorcy zdarzeń.
+Plik Windows. h jest wymagany w przypadku używania wielowątkowości ze zdarzeniami. Aby naprawić ten błąd, Dodaj `#include <windows.h>` do góry pliku, w którym są zdefiniowane źródła zdarzeń i odbiorcy zdarzeń.
 
 ```cpp
 // C3724.cpp

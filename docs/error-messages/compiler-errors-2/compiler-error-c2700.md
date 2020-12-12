@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2700'
 title: Błąd kompilatora C2700
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2700
 ms.assetid: a231eb86-bdae-4b37-a606-06854f47929f
-ms.openlocfilehash: ee2f129cb285c446ebb358e2ae4a45adfba05d7a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7027a8d28d71cf063dffbb15371f29aa9f706125
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326605"
 ---
 # <a name="compiler-error-c2700"></a>Błąd kompilatora C2700
 

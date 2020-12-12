@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l'
 title: strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 3ab3f978d4162f968f518272612c18767247f2fb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ce49d725673e909cd2befb322bbd90450bfba2e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326268"
 ---
 # <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -116,7 +117,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
-W ustawieniach regionalnych "C" kolejność znaków w zestawie znaków (zestaw znaków ASCII) jest taka sama jak kolejność leksykograficznych znaków. Jednak w innych ustawieniach regionalnych kolejność znaków w zestawie znaków może różnić się od kolejności znaków leksykograficznych. Na przykład w niektórych europejskich ustawieniach regionalnych znak "a" (wartość 0x61) poprzedza znak "&\#x00E4;". (Value 0xE4) w zestawie znaków, ale znak "ä" poprzedza znak "a" lexicographically.
+W ustawieniach regionalnych "C" kolejność znaków w zestawie znaków (zestaw znaków ASCII) jest taka sama jak kolejność leksykograficznych znaków. Jednak w innych ustawieniach regionalnych kolejność znaków w zestawie znaków może różnić się od kolejności znaków leksykograficznych. Na przykład w niektórych europejskich ustawieniach regionalnych znak "a" (wartość 0x61) poprzedza znak "&\# x00E4;". (Value 0xE4) w zestawie znaków, ale znak "ä" poprzedza znak "a" lexicographically.
 
 W ustawieniach regionalnych, dla których zestaw znaków i kolejność znaków leksykograficznych są różne, użyj **strxfrm** dla oryginalnych ciągów, a następnie **strcmp** na wynikowych ciągach, aby utworzyć porównanie ciągów leksykograficznych zgodnie z ustawieniami kategorii **LC_COLLATE** bieżących ustawień regionalnych. W tym celu należy porównać dwa ciągi lexicographically w powyższych ustawieniach regionalnych, użyć **strxfrm** dla oryginalnych ciągów, a następnie **strcmp** na wynikowych ciągach. Alternatywnie możesz użyć **strcoll —** zamiast **strcmp** w oryginalnych ciągach.
 
@@ -137,10 +138,10 @@ return( strlen( _string1 ) );
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strxfrm**|\<> String. h|
-|**wcsxfrm**|\<ciąg. h> lub \<WCHAR. h>|
-|**_strxfrm_l**|\<> String. h|
-|**_wcsxfrm_l**|\<ciąg. h> lub \<WCHAR. h>|
+|**strxfrm**|\<string.h>|
+|**wcsxfrm**|\<string.h> lub \<wchar.h>|
+|**_strxfrm_l**|\<string.h>|
+|**_wcsxfrm_l**|\<string.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -151,6 +152,6 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

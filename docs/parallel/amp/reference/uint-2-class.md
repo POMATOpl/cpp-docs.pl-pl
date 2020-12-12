@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy uint_2
 title: uint_2 — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6cf10e10baad6cedb06cef4358feebb11e6ce076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126213"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325813"
 ---
 # <a name="uint_2-class"></a>uint_2 — Klasa
 
@@ -45,74 +46,74 @@ Reprezentuje krótki wektor dwóch liczb całkowitych bez znaku.
 class uint_2;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor uint_2](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|uint_2::get_x||
-|uint_2::get_xy||
-|uint_2::get_y||
-|uint_2::get_yx||
-|uint_2::ref_g_Method||
-|uint_2::ref_r_Method||
+|uint_2:: get_x||
+|uint_2:: get_xy||
+|uint_2:: get_y||
+|uint_2:: get_yx||
+|uint_2:: ref_g_Method||
+|uint_2:: ref_r_Method||
 |uint_2:: ref_x_Method||
-|uint_2::ref_y_Method||
-|uint_2::set_x||
-|uint_2::set_xy||
-|uint_2::set_y||
-|uint_2::set_yx||
+|uint_2:: ref_y_Method||
+|uint_2:: set_x||
+|uint_2:: set_xy||
+|uint_2:: set_y||
+|uint_2:: set_yx||
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |uint_2:: operator--||
 |uint_2:: operator% =||
-|uint_2::operator&=||
+|uint_2:: operator&=||
 |uint_2:: operator * =||
 |uint_2:: operator/=||
-|uint_2::operator^=||
-|uint_2::operator&#124;=||
+|uint_2:: operator ^ =||
+|uint_2:: operator&#124;=||
 |uint_2:: operator ~||
 |uint_2:: operator + +||
 |uint_2:: operator + =||
-|uint_2:: operator <\<=||
-|uint_2::operator=||
+|uint_2:: operator<\<=||
+|uint_2:: operator =||
 |uint_2:: operator-=||
-|uint_2:: operator > > =||
+|uint_2:: operator>>=||
 
 ### <a name="public-constants"></a>Stałe publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Stała rozmiaru](#uint_2__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|uint_2::g||
-|uint_2::gr||
-|uint_2::r||
-|uint_2::rg||
-|uint_2::x||
-|uint_2::xy||
+|uint_2:: g||
+|uint_2:: GR||
+|uint_2:: r||
+|uint_2:: RG||
+|uint_2:: x||
+|uint_2:: XY||
 |uint_2:: y||
-|uint_2::yx||
+|uint_2:: yx||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -124,7 +125,7 @@ class uint_2;
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="ctor"></a>uint_2
+## <a name="uint_2"></a><a name="ctor"></a> uint_2
 
 Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
@@ -180,7 +181,7 @@ Wartość dla inicjalizacji.
 *_Other*<br/>
 Obiekt używany do inicjowania.
 
-## <a name="uint_2__size"></a>zmienia
+## <a name="size"></a><a name="uint_2__size"></a> zmienia
 
 ```cpp
 static const int size = 2;
@@ -188,4 +189,4 @@ static const int size = 2;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

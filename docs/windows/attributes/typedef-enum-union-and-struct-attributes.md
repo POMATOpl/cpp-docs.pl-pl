@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej o atrybutach typedef, enum, Union i struct
 title: Atrybuty typedef, enum, Union i struct (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 5e9eccd5e4464e92757d6dd78dd0f5187372ea3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f72f5ff45709287d31aa4da05b2569a0b37baff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327242"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atrybuty Typedef, Enum, Union oraz Struct
 
@@ -33,7 +34,7 @@ Następujące atrybuty mają zastosowanie do słów kluczowych [typedef](../../c
 |[ref](ref-cpp.md)|Identyfikuje wskaźnik odwołania.|
 |[switch_is](switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera element członkowski Union.|
 |[switch_type](switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|
-|[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
+|[unikatowy](unique-cpp.md)|Określa unikatowy wskaźnik.|
 |[wire_marshal](wire-marshal.md)|Określa typ danych, który będzie używany do przesyłania zamiast typu danych specyficznego dla aplikacji.|
 
 ### <a name="enum"></a>enum
@@ -56,7 +57,7 @@ Następujące atrybuty mają zastosowanie do słów kluczowych [typedef](../../c
 |[length_is](length-is.md)|Określa liczbę elementów tablicy do przesłania.|
 |[max_is](max-is.md)|Określa maksymalną wartość prawidłowego indeksu tablicy.|
 |[size_is](size-is.md)|Określa rozmiar pamięci przydzieloną dla wskaźników rozmiaru, wskaźniki rozmiaru do wskaźników rozmiaru i tablic pojedynczych lub wielowymiarowych.|
-|[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
+|[unikatowy](unique-cpp.md)|Określa unikatowy wskaźnik.|
 |[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator klasy lub interfejsu.|
 
 ### <a name="nonencapsulated-union"></a>Niehermetyzowany związek
@@ -88,7 +89,7 @@ Następujące atrybuty mają zastosowanie do słów kluczowych [typedef](../../c
 |[event_source](event-source.md)|Tworzy Źródło zdarzenia.|
 |[wywozu](export.md)|Powoduje, że struktura danych zostanie umieszczona w pliku IDL.|
 |[first_is](first-is.md)|Określa indeks pierwszego elementu tablicy, który ma zostać przesłany.|
-|[hidden](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
+|[ukryte](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
 |[implements_category](implements-category.md)|Określa kategorie zaimplementowanych składników dla klasy.|
 |[last_is](last-is.md)|Określa indeks ostatniego elementu tablicy, który ma zostać przesłany.|
 |[length_is](length-is.md)|Określa liczbę elementów tablicy do przesłania.|
@@ -97,11 +98,11 @@ Następujące atrybuty mają zastosowanie do słów kluczowych [typedef](../../c
 |[size_is](size-is.md)|Określa rozmiar pamięci przydzieloną dla wskaźników rozmiaru, wskaźniki rozmiaru do wskaźników rozmiaru i tablic pojedynczych lub wielowymiarowych.|
 |[zewnętrz](source-cpp.md)|Na klasie Określa interfejsy źródłowe obiektu COM dla punktów połączenia. Na właściwości lub metodzie wskazuje, że element członkowski zwraca obiekt lub wariant, który jest źródłem zdarzeń.|
 |[Threading](threading-cpp.md)|Określa model wątkowości dla obiektu COM.|
-|[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
+|[unikatowy](unique-cpp.md)|Określa unikatowy wskaźnik.|
 |[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator klasy lub interfejsu.|
 |[Wersja](version-cpp.md)|Identyfikuje konkretną wersję w wielu wersjach klasy.|
 |[vi_progid](vi-progid.md)|Określa niezależną od wersji identyfikator ProgID.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty według użycia](attributes-by-usage.md)

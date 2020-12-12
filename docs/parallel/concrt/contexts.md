@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej o: kontekstach'
 title: Konteksty
 ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: 7df75ae7c1ac2b1d8c0b73ff1f1e3f2800d559b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70c97b74afaaa755a85532c7bc08a3a5c5fe3e17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325774"
 ---
 # <a name="contexts"></a>Konteksty
 
-W tym dokumencie opisano rolę kontekstów w środowisko uruchomieniowe współbieżności. Wątek, który jest dołączony do harmonogramu, jest znany jako *kontekst wykonywania*lub po prostu *kontekst*. Funkcja [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) oraz Klasa concurrency::[Context](../../parallel/concrt/reference/context-class.md) umożliwiają sterowanie zachowaniem kontekstów. Użyj `wait` funkcji, aby zawiesić bieżący kontekst przez określony czas. Użyj `Context` klasy, gdy potrzebujesz większej kontroli nad tym, kiedy konteksty blokują, odblokują i implikują, lub gdy chcesz zasubskrybować bieżący kontekst.
+W tym dokumencie opisano rolę kontekstów w środowisko uruchomieniowe współbieżności. Wątek, który jest dołączony do harmonogramu, jest znany jako *kontekst wykonywania* lub po prostu *kontekst*. Funkcja [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) oraz Klasa concurrency::[Context](../../parallel/concrt/reference/context-class.md) umożliwiają sterowanie zachowaniem kontekstów. Użyj `wait` funkcji, aby zawiesić bieżący kontekst przez określony czas. Użyj `Context` klasy, gdy potrzebujesz większej kontroli nad tym, kiedy konteksty blokują, odblokują i implikują, lub gdy chcesz zasubskrybować bieżący kontekst.
 
 > [!TIP]
 > Środowisko uruchomieniowe współbieżności udostępnia domyślny harmonogram i dlatego nie jest konieczne tworzenie go w aplikacji. Ponieważ Harmonogram zadań ułatwia dostosowanie wydajności aplikacji, zalecamy rozpoczęcie od [biblioteki równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) , jeśli są one nowe dla środowisko uruchomieniowe współbieżności.
@@ -68,7 +69,7 @@ Można włączyć nadsubskrypcję wiele razy z bieżącego kontekstu, ale należ
 
 Aby zapoznać się z przykładem, który używa nadsubskrypcji w celu przesunięcia opóźnienia, który jest spowodowany odczytem danych z połączenia sieciowego, zobacz [jak: używanie nadsubskrypcji w celu przesunięcia opóźnienia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instrukcje: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>

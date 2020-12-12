@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pop_macro pragma'
 title: pop_macro, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 395e107586b9534b2e9db616f30ddd88b15b93ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325709"
 ---
 # <a name="pop_macro-pragma"></a>pop_macro, pragma
 
@@ -21,7 +22,7 @@ Ustawia wartość makra *Nazwa makra* na wartość w górnej części stosu dla 
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma pop_macro (** "*Macro-Name*" **)**
+> **#pragma pop_macro (** "*Nazwa makra*" **)**
 
 ## <a name="remarks"></a>Uwagi
 

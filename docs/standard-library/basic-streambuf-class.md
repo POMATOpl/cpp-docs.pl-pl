@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_streambuf
 title: basic_streambuf — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 7600c60c501c1922deeabca11d41c89bc37548a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325616"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf — Klasa
 
@@ -457,7 +458,7 @@ Jeśli funkcja nie może się powieść, zwraca **traits_type:: eof** lub zgłas
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli * \_ meta* nie porównano równe **traits_type:: EOF**, chroniona wirtualna funkcja członkowska przedsięwzięciach do wstawienia elementu **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(* \_ meta*) do strumienia wyjściowego. Można to zrobić na różne sposoby:
+Jeśli *\_ meta* nie porównano równe **traits_type:: EOF**, chroniona wirtualna funkcja członkowska przedsięwzięciach do wstawienia elementu **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_ meta*) do strumienia wyjściowego. Można to zrobić na różne sposoby:
 
 - Jeśli `write position` jest dostępny, można zapisać element w pozycji zapisu i zwiększyć następny wskaźnik dla buforu wyjściowego.
 
@@ -492,7 +493,7 @@ Jeśli funkcja nie może się powieść, zwraca **traits_type:: eof** lub zgłas
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli * \_ meta* porównuje równe **traits_type:: EOF**, element do wypchnięcia jest skutecznym obiektem już w strumieniu przed bieżącym elementem. W przeciwnym razie ten element jest zastępowany przez **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(* \_ meta*). Funkcja może umieścić element na różne sposoby:
+Jeśli *\_ meta* porównuje równe **traits_type:: EOF**, element do wypchnięcia jest skutecznym obiektem już w strumieniu przed bieżącym elementem. W przeciwnym razie ten element jest zastępowany przez **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_ meta*). Funkcja może umieścić element na różne sposoby:
 
 - Jeśli pozycja putback jest dostępna, może ona przechowywać element w pozycji putback i zmniejszać następny wskaźnik dla buforu wejściowego.
 

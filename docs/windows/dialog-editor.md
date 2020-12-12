@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Edytor okien dialogowych (C++)'
 title: Edytor okien dialogowych (C++)
 ms.date: 02/15/2019
 f1_keywords:
@@ -23,20 +24,20 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 6a83640bd50d4af40be3cdb7a47b29ae5ffb3f09
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 547d00208cc2a05814a9820e219cdfc5c7163436
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327164"
 ---
 # <a name="dialog-editor-c"></a>Edytor okien dialogowych (C++)
 
 **Edytor okien** dialogowych umożliwia tworzenie i edytowanie zasobów okien dialogowych.
 
-- Aby otworzyć Edytor, kliknij dwukrotnie plik. RC okna dialogowego w oknie **Widok zasobów** , lub przejdź do **widoku**menu  >  **inne widok zasobów systemu Windows**  >  **Resource View**.
+- Aby otworzyć Edytor, kliknij dwukrotnie plik. RC okna dialogowego w oknie **Widok zasobów** , lub przejdź do **widoku** menu  >  **inne widok zasobów systemu Windows**  >  .
 
-Jednym z pierwszych kroków w tworzeniu nowego okna dialogowego lub szablonu okna dialogowego jest dodawanie kontrolek. W **edytorze okien dialogowych**można rozmieścić kontrolki tak, aby mieściły się w określonym rozmiarze, kształcie lub wyrównaniu, albo przenieść je do pracy w oknie dialogowym. W łatwy sposób można również usunąć formant.
+Jednym z pierwszych kroków w tworzeniu nowego okna dialogowego lub szablonu okna dialogowego jest dodawanie kontrolek. W **edytorze okien dialogowych** można rozmieścić kontrolki tak, aby mieściły się w określonym rozmiarze, kształcie lub wyrównaniu, albo przenieść je do pracy w oknie dialogowym. W łatwy sposób można również usunąć formant.
 
 Okno dialogowe można przechowywać jako szablon w celu ponownego użycia. Można także łatwo przełączyć się między projektowaniem okna dialogowego a edycją kodu, który go implementuje.
 
@@ -65,7 +66,7 @@ Pasek narzędzi **edytora okien dialogowych** zawiera przyciski służące do or
 |![Przycisk Wyśrodkuj w pionie](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Pionowa|![Przycisk przełączania siatki](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Przełączanie siatki|
 |![Przycisk Wyśrodkuj w poziomie](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Pozioma|![Przycisk przełączania prowadnic](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Przełącz prowadnice|
 
-- Aby pokazać lub ukryć pasek narzędzi **edytora okien dialogowych** , przejdź do **widoku**menu  >  **Toolbars**  >  **okna dialogowe Edytor okienek**.
+- Aby pokazać lub ukryć pasek narzędzi **edytora okien dialogowych** , przejdź do **widoku** menu  >    >  **okna dialogowe Edytor okienek**.
 
 Po otwarciu **edytora okien dialogowych** w projekcie języka C++ pasek narzędzi **edytora okien dialogowych** automatycznie pojawia się u góry rozwiązania, jednak jeśli jawnie zamknięto ten pasek narzędzi, należy wywołać go przy następnym otwarciu **edytora okien dialogowych**. Możesz przełączać jej wyświetlanie, wybierając ją z listy dostępnych pasków narzędzi i okien.
 
@@ -112,7 +113,7 @@ Poniżej znajdują się domyślne klawisze skrótów dla poleceń **edytora okie
 |Format.TestDialog|**Ctrl**  +  **T**|Uruchamia okno dialogowe, aby przetestować wygląd i zachowanie.|
 |Format.ToggleGuides|**Ctrl**  +  **G**|Przełączanie między nie siatką, wskazówkami i siatką w celu edytowania okna dialogowego.|
 
-- Aby zmienić klawisze skrótów, przejdź do menu **Tools**  >  **Opcje**narzędzia, a następnie wybierz polecenie **Klawiatura** pod folderem **środowisko** .
+- Aby zmienić klawisze skrótów, przejdź do menu   >  **Opcje** narzędzia, a następnie wybierz polecenie **Klawiatura** pod folderem **środowisko** .
 
    Aby uzyskać więcej informacji, zobacz [Identyfikowanie i Dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 

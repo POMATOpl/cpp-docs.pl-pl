@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tmpfile_s'
 title: tmpfile_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b5830375644cdcdd3d0c400d00735319b3af671
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326143"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -78,7 +79,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**tmpfile_s**|\<stdio. h>|
+|**tmpfile_s**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

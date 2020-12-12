@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _tempnam, _wtempnam, tmpnam, _wtmpnam'
 title: _tempnam, _wtempnam, tmpnam, _wtmpnam
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 9fd1eb9f2f718afec5b7d5555145fcd7e5cc17cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee127a7d3ee59ec697dc0032fefb04b84b839c4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326199"
 ---
 # <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -75,7 +76,7 @@ wchar_t *_wtmpnam(
 
 ### <a name="parameters"></a>Parametry
 
-*prefix*<br/>
+*prefiks*<br/>
 Ciąg, który będzie wstępnie oczekiwał na nazwy zwrócone przez **_tempnam**.
 
 *katalogów*<br/>
@@ -86,34 +87,34 @@ Wskaźnik, który będzie przechowywać wygenerowaną nazwę i będzie taka sama
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do wygenerowanej nazwy lub **wartości null** , jeśli wystąpił błąd. Błąd może wystąpić, Jeśli podjęto próbę więcej niż **TMP_MAX** (patrz stdio. H) wywołania z **tmpnam** lub w przypadku używania **_tempnam** , w zmiennej środowiskowej tmp i w parametrze *dir* jest określona Nieprawidłowa nazwa katalogu.
+Każda z tych funkcji zwraca wskaźnik do wygenerowanej nazwy lub **wartości null** , jeśli wystąpił błąd. Błąd może wystąpić, Jeśli podjęto próbę więcej niż **TMP_MAX** (zobacz stdio. H) wywołania z **tmpnam** lub jeśli używasz **_tempnam** i w zmiennej środowiskowej tmp określono nieprawidłową nazwę katalogu i w parametrze *dir* .
 
 > [!NOTE]
-> Wskaźniki zwracane przez **tmpnam** i **_wtmpnam** wskazują wewnętrzne bufory statyczne. nie należy wywoływać [bezpłatnej](free.md) , aby cofnąć te wskaźniki. należy wywołać **bezpłatne** dla wskaźników przyznanych przez **_tempnam** i **_wtempnam**.
+> Wskaźniki zwracane przez **tmpnam** i punkty **_wtmpnam** do wewnętrznych buforów statycznych. nie należy wywoływać [bezpłatnej](free.md) , aby cofnąć te wskaźniki. należy wywołać **bezpłatne** dla wskaźników przyznanych przez **_tempnam** i **_wtempnam**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. **tmpnam** zwraca nazwę, która jest unikatowa w wydzielonym katalogu tymczasowym systemu Windows zwróconym przez [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). tempnam generuje unikatową nazwę w katalogu innym niż wyznaczono.  **\_** Zwróć uwagę, że nazwa pliku jest wstępnie zainstalowana z ukośnikiem odwrotnym i bez informacji o ścieżce, takich jak \fname21, oznacza to, że nazwa jest prawidłowa dla bieżącego katalogu roboczego.
+Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. **tmpnam** zwraca nazwę, która jest unikatowa w wydzielonym katalogu tymczasowym systemu Windows zwróconym przez [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). **\_ tempnam** generuje unikatową nazwę w katalogu innym niż wyznaczono. Zwróć uwagę, że nazwa pliku jest wstępnie zainstalowana z ukośnikiem odwrotnym i bez informacji o ścieżce, takich jak \fname21, oznacza to, że nazwa jest prawidłowa dla bieżącego katalogu roboczego.
 
-W przypadku **tmpnam**można zapisać tę wygenerowaną nazwę pliku w *str*. Jeśli *str* ma **wartość null**, **tmpnam** pozostawia wynik w wewnętrznym buforze statycznym. W ten sposób wszystkie kolejne wywołania powodują zniszczenie tej wartości. Nazwa wygenerowana przez **tmpnam** składa się z nazwy pliku generowanej przez program i, po pierwszym wywołaniu do **tmpnam**, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (. 1-. vvu, gdy **TMP_MAX** w stdio. H to 32 767).
+W przypadku **tmpnam** można zapisać tę wygenerowaną nazwę pliku w *str*. Jeśli *str* ma **wartość null**, **tmpnam** pozostawia wynik w wewnętrznym buforze statycznym. W ten sposób wszystkie kolejne wywołania powodują zniszczenie tej wartości. Nazwa wygenerowana przez **tmpnam** składa się z nazwy pliku generowanej przez program i, po pierwszym wywołaniu do **tmpnam**, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (. 1-. vvu, gdy **TMP_MAX** w stdio. H to 32 767).
 
-**_tempnam** wygeneruje unikatową nazwę pliku dla katalogu wybranego przez następujące reguły:
+**_tempnam** generuje unikatową nazwę pliku dla katalogu wybranego przez następujące reguły:
 
 - Jeśli zmienna środowiskowa TMP jest zdefiniowana i ma ustawioną prawidłową nazwę katalogu, dla katalogu określonego przez TMP należy generować unikatowe nazwy plików.
 
 - Jeśli zmienna środowiskowa TMP nie jest zdefiniowana lub jeśli jest ustawiona na nazwę katalogu, który nie istnieje, **_tempnam** użyje parametru *dir* jako ścieżki, dla której zostaną wygenerowane unikatowe nazwy.
 
-- Jeśli zmienna środowiskowa TMP nie jest zdefiniowana lub jest ustawiona na nazwę katalogu, który nie istnieje, a jeśli *dir* ma **wartość null** lub jest ustawiona na nazwę katalogu, który nie istnieje, **_tempnam** będzie używać bieżącego katalogu roboczego do genu Oceń unikatowe nazwy. Obecnie Jeśli zarówno TMP, jak i *dir* określają nazwy katalogów, które nie istnieją, wywołanie funkcji **_tempnam** zakończy się niepowodzeniem.
+- Jeśli zmienna środowiskowa TMP nie jest zdefiniowana lub jest ustawiona na nazwę katalogu, który nie istnieje, a jeśli *dir* ma **wartość null** lub jest ustawiona na nazwę katalogu, który nie istnieje, **_tempnam** będzie używać bieżącego katalogu roboczego do generowania unikatowych nazw. Obecnie Jeśli zarówno TMP, jak i *dir* określają nazwy katalogów, które nie istnieją, wywołanie funkcji **_tempnam** zakończy się niepowodzeniem.
 
 Nazwa zwrócona przez **_tempnam** będzie łączyć *prefiks* i numer sekwencyjny, który zostanie połączony w celu utworzenia unikatowej nazwy pliku dla określonego katalogu. **_tempnam** generuje nazwy plików, które nie mają rozszerzenia. **_tempnam** używa [malloc](malloc.md) do przydzielenia miejsca na nazwę pliku; Program jest odpowiedzialny za zwolnienie tego miejsca, gdy nie jest już potrzebne.
 
-**_tempnam** i **tmpnam** automatycznie obsługują argumenty ciągu znaków wielobajtowych, aby rozpoznawać sekwencje znaków wielobajtowych zgodnie ze stroną kodową OEM uzyskaną z systemu operacyjnego. **_wtempnam** to dwubajtowa wersja **_tempnam**; argumenty i wartość zwracana przez **_wtempnam** są ciągami znaków dwubajtowych. **_wtempnam** i **_tempnam** zachowują się identycznie, z tą różnicą, że **_wtempnam** nie obsługują ciągów znaków wielobajtowych. **_wtmpnam** to dwubajtowa wersja **tmpnam**; argument i wartość zwracana przez **_wtmpnam** są ciągami znaków dwubajtowych. **_wtmpnam** i **tmpnam** zachowują się identycznie, z tą różnicą, że **_wtmpnam** nie obsługują ciągów znaków wielobajtowych.
+**_tempnam** i **tmpnam** automatycznie obsługują argumenty ciągu znaków wielobajtowych, aby rozpoznać sekwencje znaków wielobajtowych zgodnie ze stroną kodową OEM uzyskaną od systemu operacyjnego. **_wtempnam** to dwubajtowa wersja **_tempnam**; argumenty i zwracaną wartość **_wtempnam** są ciągami znaków dwubajtowych. **_wtempnam** i **_tempnam** zachowują się identycznie, z tą różnicą, że **_wtempnam** nie obsługują ciągów znaków wielobajtowych. **_wtmpnam** to dwubajtowa wersja **tmpnam**; argument i zwracana wartość **_wtmpnam** są ciągami znaków dwubajtowych. **_wtmpnam** i **tmpnam** zachowują się identycznie, z tą różnicą, że **_wtmpnam** nie obsługują ciągów znaków wielobajtowych.
 
 Jeśli **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, **_tempnam** i **_wtempnam** są zastępowane przez wywołania [_tempnam_dbg i _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam**|**tmpnam**|**tmpnam**|**_wtmpnam**|
 |**_ttempnam**|**_tempnam**|**_tempnam**|**_wtempnam**|
@@ -123,7 +124,7 @@ Jeśli **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, **_tempnam** i **_wt
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_tempnam**|\<stdio.h>|
-|**_wtempnam**, **_wtmpnam**|\<stdio. h > lub \<WCHAR. h >|
+|**_wtempnam**, **_wtmpnam**|\<stdio.h> lub \<wchar.h>|
 |**tmpnam**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
@@ -201,7 +202,7 @@ c:\tmp\stq3 is safe to use as a temporary file.
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [malloc](malloc.md)<br/>
 [_setmbcp](setmbcp.md)<br/>

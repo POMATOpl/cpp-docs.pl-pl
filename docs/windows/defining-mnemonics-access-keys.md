@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak definiować dostęp i wartości kontroli (C++)'
 title: 'Instrukcje: definiowanie dostępu i wartości kontroli (C++)'
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 59d81c0b835171132ebf29739a4e130191a87769
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cedaa5c455dc5810c78158bec628f57c7f6e52b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327122"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Instrukcje: definiowanie dostępu i wartości kontroli (C++)
 
@@ -40,7 +41,7 @@ Nawet kontrolki, które nie mają właściwości **TabStop** ustawionej na **war
 > [!NOTE]
 > Jeśli okno dialogowe zawiera nakładające się kontrolki, zmiana kolejności tabulacji może zmienić sposób wyświetlania kontrolek. Formanty, które są późniejsze w kolejności tabulacji, są zawsze wyświetlane na wszystkich nakładających się kontrolkach, które poprzedzają je w kolejności tabulacji.
 
-- Aby wyświetlić bieżącą kolejność tabulacji dla wszystkich kontrolek, przejdź do menu **Format**  >  **kolejność tabulacji**lub naciśnij klawisz **Ctrl**  +  **D**.
+- Aby wyświetlić bieżącą kolejność tabulacji dla wszystkich kontrolek, przejdź do menu **Format**  >  **kolejność tabulacji** lub naciśnij klawisz **Ctrl**  +  **D**.
 
    Liczba w lewym górnym rogu każdej kontrolki pokazuje jej miejsce w bieżącej kolejności tabulacji.
 
@@ -67,7 +68,7 @@ Zwykle Użytkownicy klawiatury przesuwają fokus wprowadzania z jednej kontrolki
 
 1.  Naciśnij klawisz **Enter**.
 
-   W wyświetlonym nagłówku zostanie wyświetlone podkreślenie wskazujące na klucz dostępu, na przykład **R**adio1.
+   W wyświetlonym nagłówku zostanie wyświetlone podkreślenie wskazujące na klucz dostępu, na przykład **R** adio1.
 
 ### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Aby zdefiniować klucz dostępu dla kontrolki bez widocznego podpisu
 
@@ -78,14 +79,14 @@ Zwykle Użytkownicy klawiatury przesuwają fokus wprowadzania z jednej kontrolki
 1. Upewnij się, że formant tekstu statycznego bezpośrednio poprzedza formant, który jest etykietą w kolejności tabulacji.
 
 > [!NOTE]
-> Wszystkie klucze dostępu w oknie dialogowym powinny być unikatowe. Aby sprawdzić zduplikowane klucze dostępu, przejdź do pozycji menu **Formatowanie**  >  **Check Mnemonics**.
+> Wszystkie klucze dostępu w oknie dialogowym powinny być unikatowe. Aby sprawdzić zduplikowane klucze dostępu, przejdź do pozycji menu **Formatowanie**  >  .
 
 ## <a name="combo-box-values"></a>Wartości pola kombi
 
 Możesz dodać wartości do kontrolki pola kombi, o ile jest otwarty **Edytor okien dialogowych** .
 
 > [!TIP]
-> Dobrym pomysłem jest dodanie wszystkich wartości do pola kombi *przed przystąpieniem* do pola w **edytorze okien dialogowych**lub obcinaniem tekstu, który powinien być wyświetlany w kontrolce kombi.
+> Dobrym pomysłem jest dodanie wszystkich wartości do pola kombi *przed przystąpieniem* do pola w **edytorze okien dialogowych** lub obcinaniem tekstu, który powinien być wyświetlany w kontrolce kombi.
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Aby wprowadzić wartości do kontrolki pola kombi
 
@@ -103,7 +104,7 @@ Możesz dodać wartości do kontrolki pola kombi, o ile jest otwarty **Edytor ok
 
 1. Naciśnij klawisz **Enter** po zakończeniu dodawania wartości.
 
-Aby uzyskać informacje na temat powiększania części listy rozwijanej pola kombi, zobacz [Ustawianie rozmiaru pola kombi i jego listy rozwijanej](./arrangement-of-controls-on-dialog-boxes.md).
+Aby uzyskać informacje na temat powiększania części listy rozwijanej pola kombi, zobacz [Ustawianie rozmiaru pola kombi i jego listy Drop-Down](./arrangement-of-controls-on-dialog-boxes.md).
 
 > [!NOTE]
 > Nie można dodawać wartości do projektów Win32 przy użyciu tej procedury (Właściwość **Data** jest wyszarzona dla projektów Win32). Ponieważ projekty Win32 nie mają bibliotek, które dodają tę możliwość, należy programowo dodać wartości do pola kombi z projektem Win32.

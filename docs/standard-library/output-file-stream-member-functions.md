@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: funkcje członkowskie strumienia plików wyjściowych'
 title: Funkcje elementów członkowskich strumienia pliku danych wyjściowych
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f2e9bde7bcac8ebccc668c68f222b495b53e0889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327560"
 ---
 # <a name="output-file-stream-member-functions"></a>Funkcje elementów członkowskich strumienia pliku danych wyjściowych
 
@@ -98,7 +99,7 @@ Strumień pliku wyjściowego przechowuje wewnętrzny wskaźnik wskazujący poło
 
 Destruktor strumienia wyjściowego automatycznie zamyka plik strumienia tylko wtedy, gdy Konstruktor lub `open` funkcja członkowska otworzyła plik. Jeśli przekazujesz konstruktora deskryptora pliku dla już otwartego pliku lub Użyj `attach` funkcji składowej, musisz zamknąć plik jawnie.
 
-## <a name="error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a>Błąd podczas przetwarzania funkcji
+## <a name="error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Błąd podczas przetwarzania funkcji
 
 Użyj tych funkcji elementów członkowskich do testowania pod kątem błędów podczas zapisywania do strumienia:
 
@@ -137,6 +138,6 @@ if(!cout.fail())...
 
 Operator **void \* ()** nie jest odpowiednikiem, `good` ponieważ nie sprawdza końca pliku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strumienie wyjściowe](../standard-library/output-streams.md)

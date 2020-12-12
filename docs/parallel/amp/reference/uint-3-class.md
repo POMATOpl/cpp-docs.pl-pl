@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy uint_3
 title: uint_3 — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: 40c8486b96ac4359e84d52697b8a34d3718e00e2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2bbfb289d8c5417b751aadb6ee335d20e15d5b28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325800"
 ---
 # <a name="uint_3-class"></a>uint_3 — Klasa
 
@@ -89,120 +90,120 @@ Reprezentuje krótki wektor trzech liczb całkowitych bez znaku.
 class uint_3;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor uint_3](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|uint_3::get_x||
-|uint_3::get_xy||
-|uint_3::get_xyz||
-|uint_3::get_xz||
-|uint_3::get_xzy||
-|uint_3::get_y||
-|uint_3::get_yx||
-|uint_3::get_yxz||
-|uint_3::get_yz||
-|uint_3::get_yzx||
-|uint_3::get_z||
-|uint_3::get_zx||
-|uint_3::get_zxy||
-|uint_3::get_zy||
-|uint_3::get_zyx||
-|uint_t::ref_b||
-|uint_t::ref_g||
-|uint_t::ref_r||
-|uint_t::ref_x||
-|uint_t::ref_y||
-|uint_t::ref_z||
-|uint_3::set_x||
-|uint_3::set_xy||
-|uint_3::set_xyz||
-|uint_3::set_xz||
-|uint_3::set_xzy||
-|uint_3::set_y||
-|uint_3::set_yx||
-|uint_3::set_yxz||
-|uint_3::set_yz||
-|uint_3::set_yzx||
-|uint_3::set_z||
-|uint_3::set_zx||
-|uint_3::set_zxy||
-|uint_3::set_zy||
-|uint_3::set_zyx||
+|uint_3:: get_x||
+|uint_3:: get_xy||
+|uint_3:: get_xyz||
+|uint_3:: get_xz||
+|uint_3:: get_xzy||
+|uint_3:: get_y||
+|uint_3:: get_yx||
+|uint_3:: get_yxz||
+|uint_3:: get_yz||
+|uint_3:: get_yzx||
+|uint_3:: get_z||
+|uint_3:: get_zx||
+|uint_3:: get_zxy||
+|uint_3:: get_zy||
+|uint_3:: get_zyx||
+|uint_t:: ref_b||
+|uint_t:: ref_g||
+|uint_t:: ref_r||
+|uint_t:: ref_x||
+|uint_t:: ref_y||
+|uint_t:: ref_z||
+|uint_3:: set_x||
+|uint_3:: set_xy||
+|uint_3:: set_xyz||
+|uint_3:: set_xz||
+|uint_3:: set_xzy||
+|uint_3:: set_y||
+|uint_3:: set_yx||
+|uint_3:: set_yxz||
+|uint_3:: set_yz||
+|uint_3:: set_yzx||
+|uint_3:: set_z||
+|uint_3:: set_zx||
+|uint_3:: set_zxy||
+|uint_3:: set_zy||
+|uint_3:: set_zyx||
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |uint_3:: operator--||
 |uint_3:: operator% =||
-|uint_3:: operator & =||
+|uint_3:: operator&=||
 |uint_3:: operator * =||
 |uint_3:: operator/=||
 |uint_3:: operator ^ =||
-|uint_3::operator&#124;=||
+|uint_3:: operator&#124;=||
 |uint_3:: operator ~||
 |uint_3:: operator + +||
 |uint_3:: operator + =||
-|uint_3:: operator <\<=||
-|uint_3::operator=||
+|uint_3:: operator<\<=||
+|uint_3:: operator =||
 |uint_3:: operator-=||
-|uint_3:: operator > > =||
+|uint_3:: operator>>=||
 
 ### <a name="public-constants"></a>Stałe publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Stała rozmiaru](#uint_3__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|uint_3::b||
-|uint_3::bg||
-|uint_3::bgr||
-|uint_3::br||
-|uint_3::brg||
-|uint_3::g||
-|uint_3::gb||
-|uint_3::gbr||
+|uint_3:: b||
+|uint_3:: BG||
+|uint_3:: BGR||
+|uint_3:: br||
+|uint_3:: BRG||
+|uint_3:: g||
+|uint_3:: GB||
+|uint_3:: GBR||
 |uint_3:: GR||
-|uint_3::grb||
-|uint_3::r||
-|uint_3::rb||
-|uint_3::rbg||
-|uint_3::rg||
-|uint_3::rgb||
-|uint_3::x||
+|uint_3:: GRB||
+|uint_3:: r||
+|uint_3:: RB||
+|uint_3:: RBG||
+|uint_3:: RG||
+|uint_3:: RGB||
+|uint_3:: x||
 |uint_3:: XY||
-|uint_3::xyz||
-|uint_3::xz||
-|uint_3::xzy||
+|uint_3:: XYZ||
+|uint_3:: XZ||
+|uint_3:: xzy||
 |uint_3:: y||
-|uint_3::yx||
-|uint_3::yxz||
-|uint_3::yz||
-|uint_3::yzx||
-|uint_3::z||
-|uint_3::zx||
-|uint_3::zxy||
-|uint_3::zy||
-|uint_3::zyx||
+|uint_3:: yx||
+|uint_3:: YXZ||
+|uint_3:: YZ||
+|uint_3:: YZX||
+|uint_3:: z||
+|uint_3:: ZX||
+|uint_3:: zxy||
+|uint_3:: zy||
+|uint_3:: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -214,7 +215,7 @@ class uint_3;
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="ctor"></a>uint_3
+## <a name="uint_3"></a><a name="ctor"></a> uint_3
 
 Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
@@ -274,7 +275,7 @@ Wartość dla inicjalizacji.
 *_Other*<br/>
 Obiekt używany do inicjowania.
 
-## <a name="uint_3__size"></a>zmienia
+## <a name="size"></a><a name="uint_3__size"></a> zmienia
 
 ```cpp
 static const int size = 3;
@@ -282,4 +283,4 @@ static const int size = 3;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

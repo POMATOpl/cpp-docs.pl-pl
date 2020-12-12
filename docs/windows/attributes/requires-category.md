@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: requires_category'
 title: requires_category (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: d566e74a9019259e526fa27aec26500e9ef3e1c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4d2a68e682c4247174ffba630126b5d2f6061788
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846007"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327306"
 ---
 # <a name="requires_category"></a>requires_category
 
@@ -58,7 +59,7 @@ class CMyClass {};
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass` , `progid` , lub `vi_progid` .|
 |**Nieprawidłowe atrybuty**|Brak|
 

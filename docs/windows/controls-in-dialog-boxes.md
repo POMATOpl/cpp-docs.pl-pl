@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki okna dialogowego (C++)'
 title: Kontrolki okna dialogowego (C++) | Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e68547ebd550797d4ad195c6bef4c3f2a71e769e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327151"
 ---
 # <a name="dialog-box-controls-c"></a>Kontrolki okna dialogowego (C++)
 

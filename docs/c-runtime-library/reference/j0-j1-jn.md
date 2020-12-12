@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: J0, J1, JN'
 title: j0, j1, jn
 ms.date: 12/16/2019
 api_name:
@@ -29,15 +30,15 @@ helpviewer_keywords:
 - j1 function
 - j0 function
 ms.assetid: ec8a9512-aacb-423c-a845-fc8927e6e21d
-ms.openlocfilehash: a3dc02c1e85a57be119899a962d284d923cb42d8
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 3faff60b89448f296db9a5c64c716e68a5b442a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326979"
 ---
 # <a name="j0-j1-jn"></a>j0, j1, jn
 
-Zaimplementowana przez firmę Microsoft nazwa funkcji POSIX `j0`, `j1`i `jn` są przestarzałe aliasy dla funkcji [_j0, _j1 i _jn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . Domyślnie generują [ostrzeżenia kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwy są przestarzałe, ponieważ nie przestrzegają standardowych reguł języka C dla nazw specyficznych dla implementacji. Jednak funkcje są nadal obsługiwane.
+Zaimplementowane przez firmę Microsoft nazwy `j0` funkcji `j1` i `jn` są przestarzałe aliasy dla funkcji [_j0, _j1 i _jn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . Domyślnie generują [ostrzeżenia kompilatora (poziom 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Nazwy są przestarzałe, ponieważ nie przestrzegają standardowych reguł języka C dla nazw specyficznych dla implementacji. Jednak funkcje są nadal obsługiwane.
 
 Zalecamy używanie [_j0, _j1 i _jn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . Możesz również nadal używać tych nazw funkcji i wyłączyć ostrzeżenie. Aby uzyskać więcej informacji, zobacz Wyłączanie [nazw funkcji](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names) [Warning](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) i POSIX.

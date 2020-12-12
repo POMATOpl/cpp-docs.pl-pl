@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy float_3
 title: float_3 — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 02318728c0047c3eec39ac35d681f542450904e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325840"
 ---
 # <a name="float_3-class"></a>float_3 — Klasa
 
@@ -91,64 +92,64 @@ Reprezentuje krótki wektor trzech zmiennoprzecinkowych.
 class float_3;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor float_3](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|float_3::get_x||
-|float_3::get_xy||
-|float_3::get_xyz||
-|float_3::get_xz||
-|float_3::get_xzy||
-|float_3::get_y||
+|float_3:: get_x||
+|float_3:: get_xy||
+|float_3:: get_xyz||
+|float_3:: get_xz||
+|float_3:: get_xzy||
+|float_3:: get_y||
 |float_3:: get_yx||
-|float_3::get_yxz||
-|float_3::get_yz||
-|float_3::get_yzx||
-|float_3::get_z||
-|float_3::get_zx||
-|float_3::get_zxy||
-|float_3::get_zy||
-|float_3::get_zyx||
-|float_3::ref_b||
-|float_3::ref_g||
-|float_3::ref_r||
+|float_3:: get_yxz||
+|float_3:: get_yz||
+|float_3:: get_yzx||
+|float_3:: get_z||
+|float_3:: get_zx||
+|float_3:: get_zxy||
+|float_3:: get_zy||
+|float_3:: get_zyx||
+|float_3:: ref_b||
+|float_3:: ref_g||
+|float_3:: ref_r||
 |float_3:: ref_x||
 |float_3:: ref_y||
-|float_3::ref_z||
+|float_3:: ref_z||
 |float_3:: set_x||
-|float_3::set_xy||
-|float_3::set_xyz||
-|float_3::set_xz||
-|float_3::set_xzy||
+|float_3:: set_xy||
+|float_3:: set_xyz||
+|float_3:: set_xz||
+|float_3:: set_xzy||
 |float_3:: set_y||
 |float_3:: set_yx||
 |float_3:: set_yxz||
-|float_3::set_yz||
-|float_3::set_yzx||
-|float_3::set_z||
-|float_3::set_zx||
-|float_3::set_zxy||
-|float_3::set_zy||
-|float_3::set_zyx||
+|float_3:: set_yz||
+|float_3:: set_yzx||
+|float_3:: set_z||
+|float_3:: set_zx||
+|float_3:: set_zxy||
+|float_3:: set_zy||
+|float_3:: set_zyx||
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |float_3:: operator-||
 |float_3:: operator--||
@@ -161,19 +162,19 @@ class float_3;
 
 ### <a name="public-constants"></a>Stałe publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Stała rozmiaru](#float_3__size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |float_3:: b||
-|float_3::bg||
+|float_3:: BG||
 |float_3:: BGR||
 |float_3:: br||
-|float_3::brg||
+|float_3:: BRG||
 |float_3:: g||
 |float_3:: GB||
 |float_3:: GBR||
@@ -181,7 +182,7 @@ class float_3;
 |float_3:: GRB||
 |float_3:: r||
 |float_3:: RB||
-|float_3::rbg||
+|float_3:: RBG||
 |float_3:: RG||
 |float_3:: RGB||
 |float_3:: x||
@@ -210,7 +211,7 @@ class float_3;
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="ctor"></a>float_3
+## <a name="float_3"></a><a name="ctor"></a> float_3
 
 Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
@@ -270,7 +271,7 @@ Wartość dla inicjalizacji.
 *_Other*<br/>
 Obiekt używany do inicjowania.
 
-## <a name="float_3__size"></a>zmienia
+## <a name="size"></a><a name="float_3__size"></a> zmienia
 
 ```cpp
 static const int size = 3;
@@ -278,4 +279,4 @@ static const int size = 3;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

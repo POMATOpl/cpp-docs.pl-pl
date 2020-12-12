@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: środowisko uruchomieniowe współbieżności'
 title: Współbieżność środowiska wykonawczego
 ms.date: 07/20/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: ce75d7a78fec69922c08479f6c130c6b6ccec566
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1bc161e8c70f98fe469feffa1c472ecaf6a7f161
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325787"
 ---
 # <a name="concurrency-runtime"></a>Współbieżność środowiska wykonawczego
 
@@ -39,7 +40,7 @@ Dokumentacja referencyjna znajduje się w temacie [Reference](../../parallel/con
 |-|-|
 |[Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Instrukcje: używanie parallel_invoke do pisania równoległej procedury sortowania](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Instrukcje: używanie parallel_invoke do wykonywania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Instrukcje: Tworzenie zadania, które kończy się po opóźnieniu](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Opisuje zadania i grupy zadań, które mogą ułatwić pisanie kodu asynchronicznego i rozkładanie pracy równoległej na mniejsze części.|
 |[Przewodnik: wdrażanie przyszłych](../../parallel/concrt/walkthrough-implementing-futures.md)|Pokazuje, jak połączyć funkcje środowisko uruchomieniowe współbieżności, aby zrobić coś więcej.|
-|[Przewodnik: usuwanie pracy z wątku interfejsu użytkownika](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Pokazuje, w jaki sposób przenieść zadania wykonywane przez wątek interfejsu użytkownika w aplikacji MFC do wątku roboczego.|
+|[Wskazówki: usuwanie pracy z wątku User-Interface](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Pokazuje, w jaki sposób przenieść zadania wykonywane przez wątek interfejsu użytkownika w aplikacji MFC do wątku roboczego.|
 |[Najlepsze rozwiązania w bibliotece równoległych wzorców](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Ogólne najlepsze rozwiązania w środowisko uruchomieniowe współbieżności](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Zawiera wskazówki i najlepsze rozwiązania dotyczące pracy z PPL.|
 
 ## <a name="data-parallelism-in-the-ppl"></a>Równoległość danych w PPL
@@ -69,9 +70,9 @@ Dokumentacja referencyjna znajduje się w temacie [Reference](../../parallel/con
 
 |Artykuł|Opis|
 |-|-|
-|[Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)<br /><br /> [Instrukcje: implementowanie różnych wzorców producentów i konsumentów](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [Instrukcje: zapewnianie funkcji pracy dla klas wywołania i transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [Instrukcje: używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [Instrukcje: wybieranie spośród ukończonych zadań](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [Instrukcje: Wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [Instrukcje: korzystanie z filtru bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)|Opisuje agentów asynchronicznych, bloków komunikatów i funkcji przekazywania komunikatów, które są blokami konstrukcyjnymi do wykonywania operacji przepływu danych w środowisko uruchomieniowe współbieżności.|
-|[Przewodnik: Tworzenie aplikacji opartej na agencie](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Pokazuje, jak tworzyć podstawowe aplikacje oparte na agentach.|
-|[Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|Pokazuje, jak utworzyć sieć asynchronicznych bloków komunikatów, które wykonują przetwarzanie obrazu.|
+|[Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)<br /><br /> [Instrukcje: implementowanie różnych wzorców Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [Instrukcje: zapewnianie funkcji pracy dla klas wywołania i transformatora](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [Instrukcje: używanie transformatora w potoku danych](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [Instrukcje: wybieranie spośród ukończonych zadań](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [Instrukcje: Wysyłanie komunikatu w regularnych odstępach czasu](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [Instrukcje: korzystanie z filtru bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)|Opisuje agentów asynchronicznych, bloków komunikatów i funkcji przekazywania komunikatów, które są blokami konstrukcyjnymi do wykonywania operacji przepływu danych w środowisko uruchomieniowe współbieżności.|
+|[Przewodnik: Tworzenie aplikacji Agent-Based](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Pokazuje, jak tworzyć podstawowe aplikacje oparte na agentach.|
+|[Przewodnik: tworzenie sieci Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|Pokazuje, jak utworzyć sieć asynchronicznych bloków komunikatów, które wykonują przetwarzanie obrazu.|
 |[Przewodnik: używanie sprzężenia w celu zapobiegania zakleszczeniom](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|Używa problemu rekomendowanych lokali ucztujących, aby zilustrować, w jaki sposób używać środowisko uruchomieniowe współbieżności, aby zapobiec zakleszczeniom w aplikacji.|
 |[Przewodnik: Tworzenie niestandardowego bloku komunikatów](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)|Pokazuje, jak utworzyć niestandardowy typ bloku komunikatów, który porządkuje wiadomości przychodzące według priorytetu.|
 |[Najlepsze rozwiązania w bibliotece agentów asynchronicznych](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br /><br /> [Ogólne najlepsze rozwiązania w środowisko uruchomieniowe współbieżności](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Zawiera wskazówki i najlepsze rozwiązania dotyczące pracy z agentami.|

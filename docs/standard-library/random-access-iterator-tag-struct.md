@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury random_access_iterator_tag
 title: random_access_iterator_tag — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-ms.openlocfilehash: edbd7ad33b2487060840ec690b363d7b934fec27
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0186f451d5fbd98b8eebcd30fe469e75577954d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327558"
 ---
-# <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag — Struktura
+# <a name="random_access_iterator_tag-struct"></a>random_access_iterator_tag — Struktura
 
 Klasa udostępniająca typ zwracany dla `iterator_category` funkcji, która reprezentuje Iterator dostępu swobodnego.
 
@@ -26,9 +27,9 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy tagów kategorii są używane jako Tagi kompilacji do wyboru algorytmów. Funkcja szablonu musi znaleźć najbardziej specyficzną kategorię jego argumentu iteratora, aby można było używać najbardziej wydajnego algorytmu w czasie kompilacji. Dla każdego iteratora typu `Iterator`, `iterator_traits` < ::iterator_category musi być zdefiniowana jako najbardziej konkretny tag kategorii, który opisuje zachowanie iteratora.  `Iterator` > 
+Klasy tagów kategorii są używane jako Tagi kompilacji do wyboru algorytmów. Funkcja szablonu musi znaleźć najbardziej specyficzną kategorię jego argumentu iteratora, aby można było używać najbardziej wydajnego algorytmu w czasie kompilacji. Dla każdego iteratora typu `Iterator` , `iterator_traits` <  `Iterator` >  **:: iterator_category** musi być zdefiniowana jako najbardziej konkretny tag kategorii, który opisuje zachowanie iteratora.
 
-Typ jest taki sam jak **iterator** \< **ITER**>  **:: iterator_category** , gdy `Iter` opisuje obiekt, który może być używany jako Iterator dostępu swobodnego.
+Typ jest taki sam jak **iterator** \< **Iter**> **:: iterator_category** , gdy `Iter` opisuje obiekt, który może być używany jako Iterator dostępu swobodnego.
 
 ## <a name="example"></a>Przykład
 
@@ -98,12 +99,12 @@ The iterators are not the same.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> iteratora
+**Nagłówek:**\<iterator>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[bidirectional_iterator_tag, struktura](../standard-library/bidirectional-iterator-tag-struct.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Struktura bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

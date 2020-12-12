@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_ofstream
 title: basic_ofstream — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], rdbuf
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
-ms.openlocfilehash: d825dbbe278325e755af6fdffe01a34ac0a4080d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10bb7ee14ea6b126ee907cbb8b56b3b3c31188a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325670"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream — Klasa
 
@@ -98,7 +99,7 @@ int main(int argc, char **argv)
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a>basic_ofstream:: basic_ofstream
+## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a> basic_ofstream:: basic_ofstream
 
 Tworzy obiekt typu `basic_ofstream` .
 
@@ -163,7 +164,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="basic_ofstreamclose"></a><a name="close"></a>basic_ofstream:: Close
+## <a name="basic_ofstreamclose"></a><a name="close"></a> basic_ofstream:: Close
 
 Zamyka plik.
 
@@ -179,7 +180,7 @@ Funkcja członkowska wywołuje [rdbuf](../standard-library/basic-ifstream-class.
 
 Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem, który używa `close` .
 
-## <a name="basic_ofstreamis_open"></a><a name="is_open"></a>basic_ofstream:: is_open
+## <a name="basic_ofstreamis_open"></a><a name="is_open"></a> basic_ofstream:: is_open
 
 Wskazuje, czy plik jest otwarty.
 
@@ -217,7 +218,7 @@ int main( )
 }
 ```
 
-## <a name="basic_ofstreamopen"></a><a name="open"></a>basic_ofstream:: Open
+## <a name="basic_ofstreamopen"></a><a name="open"></a> basic_ofstream:: Open
 
 Otwiera plik.
 
@@ -260,7 +261,7 @@ Funkcja członkowska wywołuje [rdbuf](#rdbuf) **->** [Open](../standard-library
 
 Zobacz [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) , aby zapoznać się z przykładem, który używa `open` .
 
-## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a>basic_ofstream:: operator =
+## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a> basic_ofstream:: operator =
 
 Przypisuje zawartość tego obiektu strumienia. Jest to przypisanie przenoszenia obejmujące element `rvalue reference` , który nie pozostawia kopii w tle.
 
@@ -281,7 +282,7 @@ Zwraca wartość **`*this`** .
 
 Operator elementu członkowskiego zastępuje zawartość obiektu przy użyciu zawartości *Right*, traktowanej jako odwołanie rvalue.
 
-## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a>basic_ofstream:: rdbuf
+## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a> basic_ofstream:: rdbuf
 
 Zwraca adres buforu zapisanego strumienia.
 
@@ -297,7 +298,7 @@ Zwraca adres buforu zapisanego strumienia.
 
 Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem, który używa `rdbuf` .
 
-## <a name="basic_ofstreamswap"></a><a name="swap"></a>basic_ofstream:: swap
+## <a name="basic_ofstreamswap"></a><a name="swap"></a> basic_ofstream:: swap
 
 Wymienia zawartość dwóch `basic_ofstream` obiektów.
 
@@ -314,7 +315,7 @@ void swap(basic_ofstream& right);
 
 Funkcja członkowska zamienia zawartość tego obiektu na zawartość z *prawej strony*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa basic_ostream](../standard-library/basic-ostream-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

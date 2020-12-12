@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak utworzyć ikonę lub inny obraz'
 title: 'Instrukcje: Tworzenie ikony lub innego obrazu'
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -79,12 +80,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: bbaa008d8dac74588fc15bfebbc7cb2611260349
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fee71fdfa073365b0ba63b1a789e0928bb1557ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327136"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Instrukcje: Tworzenie ikony lub innego obrazu
 
@@ -162,8 +163,8 @@ Okno dialogowe **obraz niestandardowy** umożliwia tworzenie nowego obrazu z nie
 
 |Właściwość|Opis|
 |---|---|
-|**Szerokość**|Miejsce na wprowadzenie szerokości obrazu niestandardowego w pikselach (1-512, limit 2048).|
-|**Proporcj**|Miejsce, w którym można wprowadzić wysokość obrazu niestandardowego w pikselach (1-512, limit 2048).|
+|**Width**|Miejsce na wprowadzenie szerokości obrazu niestandardowego w pikselach (1-512, limit 2048).|
+|**Height**|Miejsce, w którym można wprowadzić wysokość obrazu niestandardowego w pikselach (1-512, limit 2048).|
 |**Kolory**|Miejsce, w którym można wybrać liczbę kolorów obrazu niestandardowego: 2, 16 lub 256.|
 
 Za pomocą okna dialogowego **Otwórz &lt; &gt; obraz urządzenia** można otworzyć obrazy urządzeń w projektach języka C++. Wyświetla listę istniejących obrazów urządzeń w bieżącym zasobie (obrazy, które są częścią bieżącego zasobu). Uwzględniona jest następująca Właściwość:
@@ -182,7 +183,7 @@ Za pomocą okna dialogowego **Otwórz &lt; &gt; obraz urządzenia** można otwor
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Aby dodać obraz dla innego urządzenia wyświetlającego
 
-1. Przejdź do menu **obrazu**  >  **nowy obraz urządzenia**lub kliknij prawym przyciskiem myszy w **okienku Edytora obrazów** i wybierz polecenie **nowy obraz urządzenia**.
+1. Przejdź do menu **obrazu**  >  **nowy obraz urządzenia** lub kliknij prawym przyciskiem myszy w **okienku Edytora obrazów** i wybierz polecenie **nowy obraz urządzenia**.
 
 1. Wybierz typ obrazu, który chcesz dodać. Możesz również wybrać opcję **niestandardowe** , aby utworzyć ikonę, której rozmiar nie jest dostępny na liście domyślnej.
 
@@ -271,9 +272,9 @@ Podczas tworzenia mapy bitowej obraz jest tworzony w formacie mapy bitowej (. bm
 > [!NOTE]
 > Ten proces nie dotyczy ikon i kursorów.
 
-1. Przejdź do **pliku**menu  >  **Otwórz**, a następnie wybierz pozycję **plik**.
+1. Przejdź do **pliku** menu  >  **Otwórz**, a następnie wybierz pozycję **plik**.
 
-1. W **oknie dialogowym Nowy plik**wybierz folder **Visual C++** , a następnie wybierz pozycję **plik mapy bitowej (. bmp)** w polu **Szablony** i wybierz pozycję **Otwórz**.
+1. W **oknie dialogowym Nowy plik** wybierz folder **Visual C++** , a następnie wybierz pozycję **plik mapy bitowej (. bmp)** w polu **Szablony** i wybierz pozycję **Otwórz**.
 
    Mapa bitowa zostanie otwarta w **Edytorze obrazu**.
 
@@ -294,7 +295,7 @@ Obrazy GIF lub JPEG można otwierać w **Edytorze obrazów** i zapisywać je jak
 
 1. Otwórz obraz w **Edytorze obrazu**.
 
-1. Przejdź do **pliku**menu  >  **Zapisz *nazwę pliku* jako**.
+1. Przejdź do **pliku** menu  >  **Zapisz *nazwę pliku* jako**.
 
 1. W oknie dialogowym **Zapisz plik jako** w polu **Nazwa pliku** wpisz nazwę pliku i rozszerzenie, które oznacza żądany format.
 
@@ -304,13 +305,13 @@ Obrazy GIF lub JPEG można otwierać w **Edytorze obrazów** i zapisywać je jak
 
 1. W [Widok zasobów](how-to-create-a-resource-script-file.md#create-resources)kliknij prawym przyciskiem myszy plik *. RC* , a następnie wybierz polecenie **Wstaw zasób**. Jeśli masz już istniejący zasób obrazu w pliku *. RC* , taki jak kursor, możesz po prostu kliknąć prawym przyciskiem myszy folder **kursor** i wybrać polecenie **Wstaw kursor**.
 
-1. W [oknie dialogowym Wstawianie zasobu](./how-to-create-a-resource-script-file.md)wybierz typ zasobu obrazu, który chcesz utworzyć (na przykład**Mapa bitowa**), a następnie wybierz pozycję **Nowy**.
+1. W [oknie dialogowym Wstawianie zasobu](./how-to-create-a-resource-script-file.md)wybierz typ zasobu obrazu, który chcesz utworzyć (na przykład **Mapa bitowa**), a następnie wybierz pozycję **Nowy**.
 
    Jeśli znak plus ( **+** ) pojawia się obok pola Typ zasobu obrazu w oknie dialogowym **Wstawianie zasobu** , oznacza to, że dostępne są szablony paska narzędzi. Wybierz znak plus, aby rozwinąć listę szablonów, wybierz szablon i wybierz pozycję **Nowy**.
 
 ### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Aby dodać nowy zasób obrazu do projektu w języku programowania .NET
 
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy folder projektu (na przykład *WindowsApplication1*).
+1. W **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy folder projektu (na przykład *WindowsApplication1*).
 
 1. W menu skrótów wybierz polecenie **Dodaj**, a następnie wybierz polecenie **Dodaj nowy element**.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: binarne pliki wyjściowe'
 title: Binarne pliki wyjściowe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-ms.openlocfilehash: 4562f5c1167aeadc6689313e73545ed1ad9bbcf8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: acbefe8eb7f091bf3d323f25ff00464068d9b1f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325521"
 ---
 # <a name="binary-output-files"></a>Binarne pliki wyjściowe
 
@@ -30,7 +31,7 @@ int main( )
 }
 ```
 
-Może się spodziewać, że ten program będzie wyprowadzać sekwencję bajtów {99, 0, 10, 0}; Zamiast tego zwraca {99, 0, 13, 10, 0}, co powoduje problemy dla programu oczekiwanie na dane wejściowe binarne. Jeśli potrzebujesz prawdziwe dane wyjściowe binarne, w których znaki są zapisywane nieprzetłumaczone, możesz określić binarne dane wyjściowe przy użyciu argumentu konstruktora `openmode` [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream):
+Może się spodziewać, że ten program będzie wyprowadzać sekwencję bajtów {99, 0, 10, 0}; Zamiast tego zwraca {99, 0, 13, 10, 0}, co powoduje problemy dla programu oczekiwanie na dane wejściowe binarne. Jeśli potrzebujesz prawdziwe dane wyjściowe binarne, w których znaki są zapisywane nieprzetłumaczone, możesz określić binarne dane wyjściowe przy użyciu argumentu [](../standard-library/basic-ofstream-class.md#basic_ofstream) konstruktora ofstream `openmode` :
 
 ```cpp
 // binary_output_files2.cpp
@@ -48,6 +49,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strumienie wyjściowe](../standard-library/output-streams.md)

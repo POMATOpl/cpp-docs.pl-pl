@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy unorm_2
 title: unorm_2 — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1a91c1c203466f6ece535d45d5c2c828c8150dbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326379"
 ---
 # <a name="unorm_2-class"></a>unorm_2 — Klasa
 
@@ -45,40 +46,40 @@ Reprezentuje krótki wektor dwóch nieoznaczonych liczb zwykłych.
 class unorm_2;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor unorm_2](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|unorm_2::get_x||
-|unorm_2::get_xy||
+|unorm_2:: get_x||
+|unorm_2:: get_xy||
 |unorm_2:: get_y||
-|unorm_2::get_yx||
-|unorm_2::ref_g||
+|unorm_2:: get_yx||
+|unorm_2:: ref_g||
 |unorm_2:: ref_r||
-|unorm_2::ref_x||
+|unorm_2:: ref_x||
 |unorm_2:: ref_y||
-|unorm_2::set_x||
+|unorm_2:: set_x||
 |unorm_2:: set_xy||
 |unorm_2:: set_y||
 |unorm_2:: set_yx||
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |unorm_2:: operator--||
 |unorm_2:: operator * =||
@@ -90,18 +91,18 @@ class unorm_2;
 
 ### <a name="public-constants"></a>Stałe publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |unorm_2::size — Stała||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |unorm_2:: g||
 |unorm_2:: GR||
 |unorm_2:: r||
-|unorm_2::rg||
+|unorm_2:: RG||
 |unorm_2:: x||
 |unorm_2:: XY||
 |unorm_2:: y||
@@ -117,7 +118,7 @@ class unorm_2;
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="ctor"></a>unorm_2
+## <a name="unorm_2"></a><a name="ctor"></a> unorm_2
 
 Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
@@ -182,7 +183,7 @@ Wartość dla inicjalizacji.
 *_Other*<br/>
 Obiekt używany do inicjowania.
 
-## <a name="unorm_2__size"></a>zmienia
+## <a name="size"></a><a name="unorm_2__size"></a> zmienia
 
 ```cpp
 static const int size = 2;
@@ -190,4 +191,4 @@ static const int size = 2;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

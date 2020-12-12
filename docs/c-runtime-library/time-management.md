@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: zarządzanie czasem'
 title: Zarządzanie czasem
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 096207465b1be2eba70e95cff2c226924fc91bd7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8a5b65c66ab89506149c92bd32999be3503c700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326911"
 ---
 # <a name="time-management"></a>Zarządzanie czasem
 
@@ -25,7 +26,7 @@ Procedury **_ftime** i **localtime** korzystają ze **zmiennej środowiskowej** 
 |Funkcja|Zastosowanie|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Przekształć czas z typu **struct TM** na ciąg znaków. Wersje tych funkcji z sufiksem **_s** są bezpieczniejsze.|
-|[zegar](../c-runtime-library/reference/clock.md)|Zwróć czas, który upłynął dla procesu.|
+|[Zegarek](../c-runtime-library/reference/clock.md)|Zwróć czas, który upłynął dla procesu.|
 |[CTime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), _ctime_s, _ctime32_s, [_ctime64_s,](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md) _wctime_s, _wctime32_s, _wctime64_s|Przekształć godzinę z typu **time_t**, **__time32_t** lub **__time64_t** na ciąg znaków. Wersje tych funkcji z sufiksem **_s** są bezpieczniejsze.|
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Różnica obliczeniowa między dwoma razy.|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md) _ftime64_s|Przechowuj bieżącą godzinę systemową w zmiennej typu **struct _timeb** lub **struct typu __timeb64** wersje tych funkcji z sufiksem **_sm** są bezpieczniejsze.|
@@ -37,7 +38,7 @@ Procedury **_ftime** i **localtime** korzystają ze **zmiennej środowiskowej** 
 |[_strdate, _wstrdate](../c-runtime-library/reference/strdate-wstrdate.md), [_strdate_s _wstrdate_s](../c-runtime-library/reference/strdate-s-wstrdate-s.md)|Zwróć bieżącą datę systemową jako ciąg. Wersje tych funkcji z sufiksem **_s** są bezpieczniejsze.|
 |[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|Sformatuj ciąg daty i godziny dla użytku międzynarodowego.|
 |[_strtime, _wstrtime](../c-runtime-library/reference/strtime-wstrtime.md), [_strtime_s _wstrtime_s](../c-runtime-library/reference/strtime-s-wstrtime-s.md)|Zwróć bieżącą godzinę systemową jako ciąg. Wersje tych funkcji z sufiksem **_s** są bezpieczniejsze.|
-|[time, _time32, _time64](../c-runtime-library/reference/time-time32-time64.md)|Pobierz bieżącą godzinę systemową jako typ **time_t**, **__time32_t** lub jako **__time64_t**typu.|
+|[time, _time32, _time64](../c-runtime-library/reference/time-time32-time64.md)|Pobierz bieżącą godzinę systemową jako typ **time_t**, **__time32_t** lub jako **__time64_t** typu.|
 |[_tzset](../c-runtime-library/reference/tzset.md)|Ustaw zewnętrzne zmienne czasowe w zmiennej czasowej **środowiska.**|
 |[_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)|Ustawianie czasu modyfikacji dla określonego pliku przy użyciu bieżącej wartości czasu lub godziny przechowywanej w strukturze.|
 
@@ -47,6 +48,6 @@ Procedury **_ftime** i **localtime** korzystają ze **zmiennej środowiskowej** 
 > [!NOTE]
 > W wersjach Visual C++ i Microsoft C/C++ przed Visual Studio 2005 **time_t** była **`long int`** (32 bity) i dlatego nie można jej użyć dla dat wcześniejszych niż 3:14:07 19 stycznia 2038, UTC. **time_t** jest teraz odpowiednikiem **__time64_t** domyślnie, ale zdefiniowanie **_USE_32BIT_TIME_T** zmian **time_t** w **__time32_t** i zmusza wiele funkcji czasu do wywoływania wersji, które mają 32-bitowe **time_t**. Aby uzyskać więcej informacji, zobacz [typy standardowe](../c-runtime-library/standard-types.md) i komentarze w dokumentacji dotyczące poszczególnych funkcji czasu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

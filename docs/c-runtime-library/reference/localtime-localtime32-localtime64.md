@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: localtime, _localtime32, _localtime64'
 title: localtime, _localtime32, _localtime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: cacc0317bf48b7f4d33027558c3dc6c739e474dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e19e419be52788bfd0e4f4a67c72ef8a6737993e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326298"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -74,7 +75,7 @@ Zwraca wskaźnik do wyniku struktury lub **wartość null** , jeśli data przeka
 
 **_localtime64**, która korzysta ze struktury **__time64_t** , umożliwia określenie dat do 23:59:59, 31 grudnia 3000, uniwersalny czas koordynowany (UTC), a **_localtime32** reprezentuje daty do 23:59:59 18 stycznia, 2038, UTC.
 
-**localtime** to wbudowana funkcja, która oblicza **_localtime64**, a **time_t** jest równoważna **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t**32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. To spowoduje, że **localtime** będzie obliczać **_localtime32**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
+**localtime** to wbudowana funkcja, która oblicza **_localtime64**, a **time_t** jest równoważna **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t** 32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. To spowoduje, że **localtime** będzie obliczać **_localtime32**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
 Pola typu struktury [TM](../../c-runtime-library/standard-types.md) przechowują następujące wartości, z których każdy jest **`int`** :
 
@@ -98,7 +99,7 @@ Funkcja **localtime** konwertuje czas przechowywania jako wartość [time_t](../
 
 Zarówno 32-bitowe, jak i 64-bitowe wersje [gmtime](gmtime-gmtime32-gmtime64.md), [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)i **localtime** używają pojedynczej struktury **TM** dla każdej wątku dla konwersji. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania.
 
-**localtime** jest poprawna dla lokalnej strefy czasowej, jeśli użytkownik najpierw ustawi globalną **zmienną**środowiskową. Gdy **jest ustawiona wartość opcji** $, trzy inne zmienne środowiskowe (**_timezone**, **_daylight**i **_tzname**) również są ustawiane automatycznie. Jeśli zmienna **$** nie jest ustawiona, **localtime** próbuje użyć informacji o strefie czasowej określonych w aplikacji Data/godzina w panelu sterowania. Jeśli te informacje nie zostaną uzyskane, PST8PDT, który oznacza strefę czasową pacyficznego, jest używany domyślnie. Aby uzyskać opis tych zmiennych, zobacz [_tzset](tzset.md) . $ **To rozszerzenie** firmy Microsoft, a nie część standardowej definicji ANSI **localtime**.
+**localtime** jest poprawna dla lokalnej strefy czasowej, jeśli użytkownik najpierw ustawi globalną **zmienną** środowiskową. Gdy **jest ustawiona wartość opcji** $, trzy inne zmienne środowiskowe (**_timezone**, **_daylight** i **_tzname**) również są ustawiane automatycznie. Jeśli zmienna **$** nie jest ustawiona, **localtime** próbuje użyć informacji o strefie czasowej określonych w aplikacji Data/godzina w panelu sterowania. Jeśli te informacje nie zostaną uzyskane, PST8PDT, który oznacza strefę czasową pacyficznego, jest używany domyślnie. Aby uzyskać opis tych zmiennych, zobacz [_tzset](tzset.md) . $ **To rozszerzenie** firmy Microsoft, a nie część standardowej definicji ANSI **localtime**.
 
 > [!NOTE]
 > Środowisko docelowe powinno próbować określić, czy obowiązuje czas letni.

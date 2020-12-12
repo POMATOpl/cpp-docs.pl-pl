@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: TMP_MAX, L_tmpnam'
 title: TMP_MAX, L_tmpnam
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - L_tmpnam constant
 - TMP_MAX constant
 ms.assetid: ab19fd0c-b5b7-49f7-b23d-da9dfbcf0c1f
-ms.openlocfilehash: 680ce31065711684dcbe3077e3114ed6efec5704
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90daf329fc275ba7044807d475a2d4ec1283699e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326883"
 ---
-# <a name="tmpmax-ltmpnam"></a>TMP_MAX, L_tmpnam
+# <a name="tmp_max-l_tmpnam"></a>TMP_MAX, L_tmpnam
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,8 +27,8 @@ ms.locfileid: "62304374"
 
 ## <a name="remarks"></a>Uwagi
 
-`TMP_MAX` jest maksymalną liczbę unikatowych nazw plików, `tmpnam` może wygenerować funkcji. `L_tmpnam` to długość nazwy plików tymczasowych, generowane przez `tmpnam`.
+`TMP_MAX` to maksymalna liczba unikatowych nazw plików, które `tmpnam` może wygenerować funkcja. `L_tmpnam` jest długością tymczasowych nazw plików generowanych przez `tmpnam` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe globalne](../c-runtime-library/global-constants.md)

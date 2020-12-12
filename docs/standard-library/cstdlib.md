@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; cstdlib&gt;'
 title: '&lt;cstdlib&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 1b20e13a43c5d223332af70a91e096cedc284a43
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ab3ecc7a2db1d1cf90c69230c34a301587fc1e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324725"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
 Zawiera nagłówek standardowej biblioteki C \<stdlib.h> i dodaje skojarzone nazwy do `std` przestrzeni nazw. Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 > [!NOTE]
-> \<stdlib.h>nie zawiera typu **`wchar_t`** .
+> \<stdlib.h> nie zawiera typu **`wchar_t`** .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**:\<cstdlib>
+**Nagłówek**: \<cstdlib>
 
 **Przestrzeń nazw:** std
 
@@ -65,7 +66,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 |[getenv](#getenv)|Zobacz standardowe informacje o bibliotece języka C.|
 |[system](#system)|Zobacz standardowe informacje o bibliotece języka C.|
 
-### <a name="_exit"></a><a name="_exit"></a>_Exit
+### <a name="_exit"></a><a name="_exit"></a> _Exit
 
 ```cpp
 [[noreturn]] void _Exit(int status) noexcept;
@@ -75,7 +76,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 Program zostaje zakończony bez wykonywania destruktorów dla obiektów typu automatyczny, wątek lub statyczny czas przechowywania oraz bez wywoływania funkcji zakończonych do `atexit()` . Funkcja `_Exit` jest w bezpiecznym sygnale.
 
-### <a name="abort"></a><a name="abort"></a>Anuluj
+### <a name="abort"></a><a name="abort"></a> Anuluj
 
 ```cpp
 [[noreturn]] void abort() noexcept;
@@ -85,7 +86,7 @@ Program zostaje zakończony bez wykonywania destruktorów dla obiektów typu aut
 
 Program zostaje zakończony bez wykonywania destruktorów dla obiektów typu automatyczny, wątek lub statyczny czas przechowywania oraz bez wywoływania funkcji zakończonych do `atexit()` . Funkcja `abort` jest w bezpiecznym sygnale.
 
-### <a name="at_quick_exit"></a><a name="at_quick_exit"></a>at_quick_exit
+### <a name="at_quick_exit"></a><a name="at_quick_exit"></a> at_quick_exit
 
 ```cpp
 int at_quick_exit(c-atexit-handler * func) noexcept;
@@ -98,9 +99,9 @@ Zero, jeśli rejestracja powiedzie się, jeśli nie powiedzie się.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja `at_quick_exit()` rejestruje funkcję funkcji, *func*która jest wywoływana bez argumentów, gdy `quick_exit` jest wywoływana. Wywołanie `at_quick_exit()` , które nie występuje, zanim wszystkie wywołania programu `quick_exit` mogą się nie powieść. `at_quick_exit()`Funkcje nie wprowadzają wyścigu do danych. Kolejność rejestracji może być nieokreślona, jeśli `at_quick_exit` została wywołana z więcej niż jednego wątku. Ponieważ `at_quick_exit` rejestracje różnią się od `atexit` rejestracji, aplikacje mogą wymagać wywołania obu funkcji rejestracji przy użyciu tego samego argumentu. MSVC obsługuje rejestrację co najmniej 32 funkcji.
+Funkcja `at_quick_exit()` rejestruje funkcję funkcji, która jest wywoływana bez argumentów, gdy `quick_exit` jest wywoływana. Wywołanie `at_quick_exit()` , które nie występuje, zanim wszystkie wywołania programu `quick_exit` mogą się nie powieść. `at_quick_exit()`Funkcje nie wprowadzają wyścigu do danych. Kolejność rejestracji może być nieokreślona, jeśli `at_quick_exit` została wywołana z więcej niż jednego wątku. Ponieważ `at_quick_exit` rejestracje różnią się od `atexit` rejestracji, aplikacje mogą wymagać wywołania obu funkcji rejestracji przy użyciu tego samego argumentu. MSVC obsługuje rejestrację co najmniej 32 funkcji.
 
-### <a name="atexit"></a><a name="atexit"></a>atexit —
+### <a name="atexit"></a><a name="atexit"></a> atexit —
 
 ```cpp
 int atexit(c-atexit-handler * func) noexcept;
@@ -115,7 +116,7 @@ int atexit(atexit-handler * func) noexcept;
 
 Zwraca zero, jeśli rejestracja kończy się niepowodzeniem, jeśli nie powiedzie się.
 
-### <a name="exit"></a><a name="exit"></a>Opuść
+### <a name="exit"></a><a name="exit"></a> Opuść
 
 ```cpp
 [[noreturn]] void exit(int status);
@@ -131,13 +132,13 @@ Następnie wszystkie otwarte strumienie języka C (zgodnie z opisem w temacie \<
 
 Na koniec kontrola jest zwracana do środowiska hosta. Gdy *stan* ma wartość zero lub EXIT_SUCCESS, zwracany jest formularz o stanie pomyślne zakończenie stanu. MSVC zwraca wartość zero. Jeśli *stan* jest EXIT_FAILURE, MSVC zwraca wartość 3. W przeciwnym razie MSVC zwraca wartość parametru *stanu* .
 
-### <a name="getenv"></a><a name="getenv"></a>getenv
+### <a name="getenv"></a><a name="getenv"></a> getenv
 
 ```cpp
 char* getenv(const char* name);
 ```
 
-### <a name="quick_exit"></a><a name="quick_exit"></a>quick_exit
+### <a name="quick_exit"></a><a name="quick_exit"></a> quick_exit
 
 ```cpp
 [[noreturn]] void quick_exit(int status) noexcept;
@@ -147,7 +148,7 @@ char* getenv(const char* name);
 
 Ogólnie rzecz biorąc, funkcje zarejestrowane przez wywołania `at_quick_exit` są wywoływane w odwrotnej kolejności rejestracji. Ta kolejność nie ma zastosowania do funkcji zarejestrowanych po zarejestrowaniu innych funkcji, które zostały już wywołane. Gdy jest wywoływana, żadne obiekty nie są niszczone `quick_exit` . Jeśli kontrolka opuszcza zarejestrowana funkcja wywołana przez `quick_exit` , ponieważ funkcja nie dostarcza procedury obsługi dla zgłoszonego wyjątku, `std::terminate()` jest wywoływana. Funkcja zarejestrowana za pośrednictwem `at_quick_exit` jest wywoływana przez wątek wywołujący `quick_exit` , który może być innym wątkiem niż ten, który go zarejestrował. Oznacza to, że zarejestrowane funkcje nie należy polegać na tożsamości obiektów, które mają czas trwania magazynu wątków. Po wywołaniu zarejestrowanych funkcji `quick_exit` wywołania `_Exit(status)` . Standardowe bufory plików nie są opróżniane. Funkcja `quick_exit` jest bezpieczna sygnałem, gdy funkcje zarejestrowane w `at_quick_exit` są.
 
-### <a name="system"></a><a name="system"></a>systemami
+### <a name="system"></a><a name="system"></a> systemami
 
 ```cpp
 int system(const char* string);
@@ -256,7 +257,7 @@ lldiv_t lldiv(long long int numer, long long int denom);
 
 Te funkcje mają semantykę określoną w standardowej bibliotece języka C.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\

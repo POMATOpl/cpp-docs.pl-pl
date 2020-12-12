@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Casin, casinf, casinl'
 title: casin, casinf, casinl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 222e1b99bcc366b3d3d6656bd438d69f670f75eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326340"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
@@ -66,12 +67,12 @@ _Lcomplex casinl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus *sinus z z, w*radianach. Wynik nie jest powiązany wzdłuż osi urojonej, a w interwale [-π/2, + π/2] wzdłuż osi rzeczywistej.
+Arcus *sinus z z, w* radianach. Wynik nie jest powiązany wzdłuż osi urojonej, a w interwale [-π/2, + π/2] wzdłuż osi rzeczywistej.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -79,13 +80,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Cas
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**Casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
+|**Casin**,               **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

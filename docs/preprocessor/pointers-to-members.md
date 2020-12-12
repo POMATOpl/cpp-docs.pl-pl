@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pointers_to_members pragma'
 title: pointers_to_members, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-ms.openlocfilehash: 6058e3e4855eb745a01410e31eb9f454ef131ab1
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 5e1b66ce39f49889a1225facd4bf358231863063
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325722"
 ---
 # <a name="pointers_to_members-pragma"></a>pointers_to_members, pragma
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Określa, czy wskaźnik do składowej klasy może być zadeklarowany przed jego definicją klasy skojarzonej. Służy do kontrolowania rozmiaru wskaźnika i kodu wymaganego do interpretacji wskaźnika.
 
@@ -44,10 +45,10 @@ Argument *najbardziej ogólna reprezentacja* określa najmniejszą reprezentacj�
 |--------------|--------------|
 | **single_inheritance** | Najbardziej ogólną reprezentacją jest pojedyncze dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wielokrotny lub wirtualny. |
 | **multiple_inheritance** | Najbardziej ogólną reprezentacją jest wielokrotne dziedziczenie, wskaźnik do funkcji członkowskiej. Powoduje błąd, jeśli model dziedziczenia definicji klasy, do której zgłaszany jest wskaźnik do składowej, jest wirtualny. |
-| **virtual_inheritance** | Najbardziej ogólną reprezentacją jest wirtualne dziedziczenie, wskaźnik do funkcji członkowskiej. Nigdy nie powoduje błędu. **virtual_inheritance** jest domyślnym argumentem, gdy jest używany `#pragma pointers_to_members(full_generality)`. |
+| **virtual_inheritance** | Najbardziej ogólną reprezentacją jest wirtualne dziedziczenie, wskaźnik do funkcji członkowskiej. Nigdy nie powoduje błędu. **virtual_inheritance** jest domyślnym argumentem, gdy `#pragma pointers_to_members(full_generality)` jest używany. |
 
 > [!CAUTION]
-> Firma Microsoft zaleca umieszczenie dyrektywy pragma **pointers_to_members** tylko w pliku kodu źródłowego, który ma mieć wpływ, i tylko po dowolnych dyrektywach `#include`. Ta metoda zmniejsza ryzyko, że pragma wpłynie na inne pliki i przypadkowo określi wiele definicji dla tej samej zmiennej, funkcji lub nazwy klasy.
+> Firma Microsoft zaleca umieszczenie dyrektywy pragma **pointers_to_members** tylko w pliku kodu źródłowego, który ma mieć wpływ, i tylko po dodaniu `#include` dyrektyw. Ta metoda zmniejsza ryzyko, że pragma wpłynie na inne pliki i przypadkowo określi wiele definicji dla tej samej zmiennej, funkcji lub nazwy klasy.
 
 ## <a name="example"></a>Przykład
 
@@ -56,8 +57,8 @@ Argument *najbardziej ogólna reprezentacja* określa najmniejszą reprezentacj�
 #pragma pointers_to_members( full_generality, single_inheritance )
 ```
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
