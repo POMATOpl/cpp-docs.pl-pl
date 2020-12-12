@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: asctime, _wasctime'
 title: asctime, _wasctime
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ae075481b364af01bfa75f1cc29423de9fcdbf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260803"
 ---
 # <a name="asctime-_wasctime"></a>asctime, _wasctime
 
@@ -71,7 +72,7 @@ Struktura czasu/daty.
 
 Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu znaków. Wartość *timeptr* jest zazwyczaj uzyskiwana z wywołania **gmtime** lub **localtime**, które zwracają wskaźnik do struktury **TM** , zdefiniowane w czasie. C.
+Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu znaków. Wartość *timeptr* jest zazwyczaj uzyskiwana z wywołania **gmtime** lub **localtime**, które zwracają wskaźnik do struktury **TM** , zdefiniowane w Time. H.
 
 |timeptr element członkowski|Wartość|
 |--------------------|-----------|
@@ -87,7 +88,7 @@ Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu
 
 Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Aby uzyskać informacje o konfigurowaniu czasu lokalnego, zobacz funkcje [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)i [localtime](localtime-localtime32-localtime64.md) oraz funkcja [_tzset](tzset.md) , aby uzyskać informacje na temat definiowania środowiska strefy czasowej i zmiennych globalnych.
 
-Wynik ciągu utworzony przez **asctime** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Znak nowego wiersza i znak null zajmują ostatnie dwa pozycje ciągu. **asctime** używa pojedynczego, przydzieloną statycznie buforu do przechowywania zwracanego ciągu. Każde wywołanie tej funkcji niszczy wynik poprzedniego wywołania.
+Wynik ciągu utworzony przez **asctime** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0` . Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Znak nowego wiersza i znak null zajmują ostatnie dwa pozycje ciągu. **asctime** używa pojedynczego, przydzieloną statycznie buforu do przechowywania zwracanego ciągu. Każde wywołanie tej funkcji niszczy wynik poprzedniego wywołania.
 
 **_wasctime** to dwubajtowa wersja **asctime**. **_wasctime** i **asctime** zachowują się identycznie w inny sposób.
 
@@ -95,7 +96,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *timeptr* jest ws
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
-### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego
+### <a name="generic-text-routine-mapping"></a>Generic-Text mapowanie procedury
 
 |Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -105,12 +106,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**asctime**|\<> godziny. h|
-|**_wasctime**|\<Time. h> lub \<WCHAR. h>|
+|**asctime**|\<time.h>|
+|**_wasctime**|\<time.h> lub \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 
-Ten program umieszcza czas systemowy w **aclockej**liczbie całkowitej, tłumaczy je na strukturę **newtime** , a następnie konwertuje ją na format ciągu dla danych wyjściowych przy użyciu funkcji **asctime** .
+Ten program umieszcza czas systemowy w **aclockej** liczbie całkowitej, tłumaczy je na strukturę **newtime** , a następnie konwertuje ją na format ciągu dla danych wyjściowych przy użyciu funkcji **asctime** .
 
 ```C
 // crt_asctime.c

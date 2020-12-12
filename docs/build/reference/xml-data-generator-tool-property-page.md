@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Strona właściwości narzędzia generatora danych XML'
 title: Strona właściwości Narzędzia generowania danych XML
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,35 +9,35 @@ f1_keywords:
 helpviewer_keywords:
 - XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
-ms.openlocfilehash: 51042e3eab0c789d2e923f40de2d0ee82d06a5ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d6548deb3ae872e002f2a445acbd2a28619c9c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260985"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>Strona właściwości Narzędzia generowania danych XML
 
-**Narzędzie generowania danych XML** strona właściwości staje się dostępna po dodaniu zestawu danych do projektu.
+Strona właściwości **narzędzia generatora danych XML** zostanie udostępniona po dodaniu zestawu danych do projektu.
 
-**Narzędzie generowania danych XML** strona właściwości zawiera następujące właściwości:
+Strona właściwości **narzędzia generatora danych XML** zawiera następujące właściwości:
 
 - **Plik wyjściowy**
 
    Określa nazwę pliku wyjściowego do użycia.
 
-- **Pomijaj transparent startowy**
+- **Pomiń transparent startowy**
 
-   Pomija wyświetlanie komunikatów uruchomienia transparent i informacji.
+   Pomija wyświetlanie transparentu startowego i komunikatów informacyjnych.
 
-- **Język wygenerowany serwer Proxy**
+- **Wygenerowany język proxy**
 
-   Określa, czy nie można wyemitować kodu zarządzanego.
+   Określa, czy ma być emitowany kod zarządzany.
 
-Aby uzyskać informacje dotyczące uzyskiwania dostępu do **narzędzie generowania danych XML** strony właściwości, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+Aby uzyskać informacje na temat uzyskiwania dostępu do strony właściwości **narzędzia generatora danych XML** , zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-Aby uzyskać informacje na temat sposobu programowego dostępu do elementów członkowskich tego obiektu zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>
+Aby uzyskać informacje na temat sposobu programistycznego dostępu do elementów członkowskich tego obiektu, zobacz. <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja strony właściwości projektu C++](property-pages-visual-cpp.md)
+[Odwołanie do strony właściwości projektu C++](property-pages-visual-cpp.md)

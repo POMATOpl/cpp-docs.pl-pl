@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie array (standardowa biblioteka C++)
 title: Array — Klasa (standardowa biblioteka C++) | Microsoft Docs
 ms.date: 11/13/2019
 f1_keywords:
@@ -96,12 +97,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 058d1a6f3ad49392271f553fe381cc31624be360
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261128"
 ---
 # <a name="array-class-c-standard-library"></a>Array — Klasa (standardowa biblioteka C++)
 
@@ -141,7 +142,7 @@ Liczba elementów.
 |Funkcja elementów członkowskich|Opis|
 |-|-|
 |[array](#array)|Konstruuje obiekt Array.|
-|[przypisać](#assign)|Zbędn. Użyj `fill` .) Zamienia wszystkie elementy.|
+|[ponownie](#assign)|Zbędn. Użyj `fill` .) Zamienia wszystkie elementy.|
 |[w](#at)|Uzyskuje dostęp do elementu w określonej pozycji.|
 |[Wstecz](#back)|Uzyskuje dostęp do ostatniego elementu.|
 |[zaczną](#begin)|Określa początek kontrolowanej sekwencji.|
@@ -1600,6 +1601,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<array>](../standard-library/array.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbsnbcmp, _mbsnbcmp_l'
 title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b382843f9b9519cef0589d22f33afa971bb88c20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260621"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -88,11 +89,11 @@ Wartość zwracana wskazuje porządkową relację między podciągami wartości 
 |0|podciąg *ciąg1* jest identyczny z podciągiem *ciąg2* .|
 |> 0|podciąg *ciąg1* jest dłuższy niż *ciąg2* podciągu.|
 
-W przypadku błędu walidacji parametru **_mbsnbcmp** i **_mbsnbcmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<> String. h i \<mbstring. h>.
+W przypadku błędu walidacji parametru **_mbsnbcmp** i **_mbsnbcmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<string.h> i \<mbstring.h> .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_mbsnbcmp** porównują co najwyżej pierwszą *liczbę* bajtów w *ciąg1* i *ciąg2* i zwracają wartość, która wskazuje relację między podciągami. **_mbsnbcmp** to wersja **_mbsnbicmp**z uwzględnieniem wielkości liter. W przeciwieństwie do **_mbsnbcoll**, kolejność sortowania ustawień regionalnych nie ma na **_mbsnbcmp** . **_mbsnbcmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą [stroną kodową](../../c-runtime-library/code-pages.md)wielobajtowego.
+Funkcje **_mbsnbcmp** porównują co najwyżej pierwszą *liczbę* bajtów w *ciąg1* i *ciąg2* i zwracają wartość, która wskazuje relację między podciągami. **_mbsnbcmp** to wersja **_mbsnbicmp** z uwzględnieniem wielkości liter. W przeciwieństwie do **_mbsnbcoll**, kolejność sortowania ustawień regionalnych nie ma na **_mbsnbcmp** . **_mbsnbcmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą [stroną kodową](../../c-runtime-library/code-pages.md)wielobajtowego.
 
 **_mbsnbcmp** przypomina **_mbsncmp**, z tą różnicą, że **_mbsncmp** porównuje ciągi przez znaki zamiast bajtów.
 
@@ -113,8 +114,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcmp**|\<mbstring. h>|
-|**_mbsnbcmp_l**|\<mbstring. h>|
+|**_mbsnbcmp**|\<mbstring.h>|
+|**_mbsnbcmp_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -177,4 +178,4 @@ Result:   String 1 is equal to string 2
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

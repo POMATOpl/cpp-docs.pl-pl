@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: clearerr'
 title: clearerr
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3085039b142f4aa5eec84259626deef961e37fa0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916981"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260790"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,7 +55,7 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **clearerr** resetuje wskaźnik błędu i wskaźnik końca pliku dla *strumienia*. Wskaźniki błędów nie są automatycznie czyszczone; gdy zostanie ustawiony wskaźnik błędu dla określonego strumienia, operacje w tym strumieniu nadal zwracają wartość błędu do momentu wywołania **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijania do tyłu](rewind.md) .
+Funkcja **clearerr** resetuje wskaźnik błędu i wskaźnik końca pliku dla *strumienia*. Wskaźniki błędów nie są automatycznie czyszczone; gdy zostanie ustawiony wskaźnik błędu dla określonego strumienia, operacje w tym strumieniu nadal zwracają wartość błędu do momentu wywołania **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos** lub [przewijania do tyłu](rewind.md) .
 
 Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca. Aby uzyskać więcej informacji o **errno** i kodach błędów, zobacz [errno stałe](../../c-runtime-library/errno-constants.md).
 
@@ -66,7 +67,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**clearerr**|\<stdio. h>|
+|**clearerr**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

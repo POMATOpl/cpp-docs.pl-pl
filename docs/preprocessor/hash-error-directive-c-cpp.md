@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: #error dyrektywie (C/C++)'
 title: '#error, dyrektywa (C/C++)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - preprocessor, directives
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-ms.openlocfilehash: bfb5c18f20319e6e6d345f28d3e1850714334b71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fd6503de9590893ee0ec53cbbfa59429a0cfdcfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261154"
 ---
-# <a name="error-directive-cc"></a>#error — dyrektywa (CC++/)
+# <a name="error-directive-cc"></a>#error — dyrektywa (C/C++)
 
 Dyrektywa **#error** emituje określony przez użytkownika komunikat o błędzie w czasie kompilacji, a następnie kończy kompilację.
 
 ## <a name="syntax"></a>Składnia
 
-> **#error** *token — ciąg*
+> token **#error** *— ciąg*
 
 ## <a name="remarks"></a>Uwagi
 
@@ -33,6 +34,6 @@ Komunikat o błędzie, który jest emitowany przez tę dyrektywę, zawiera param
 #endif
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

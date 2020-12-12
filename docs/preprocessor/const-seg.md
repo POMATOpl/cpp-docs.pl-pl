@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: const_seg pragma'
 title: const_seg, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: 04467df1205bd6d4c70687422572aef898d46f68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 596f44a030aa6c09824d5798e54a3b126ce34544
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261206"
 ---
 # <a name="const_seg-pragma"></a>const_seg, pragma
 
@@ -33,7 +34,7 @@ Obowiązkowe Umieszcza rekord na wewnętrznym stosie kompilatora. **Wypchnięcie
 Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. **Punkt obecności** może mieć *Identyfikator* i *nazwę sekcji*. Można wyskakujące wiele rekordów przy użyciu tylko jednego polecenia **pop** przy użyciu *identyfikatora*. *Nazwa sekcji* zmieni się na nazwę aktywnej stałej sekcji po punkcie pop.
 
 *identyfikatora*\
-Obowiązkowe W przypadku użycia z opcją **push**przypisuje nazwę rekordu na wewnętrznym stosie kompilatora. Gdy jest używany z **pop**, dyrektywa pop rejestruje wewnętrzny stos do momentu usunięcia *identyfikatora* . Jeśli na stosie wewnętrznym nie znaleziono *identyfikatora* , nic nie jest zdjęte.
+Obowiązkowe W przypadku użycia z opcją **push** przypisuje nazwę rekordu na wewnętrznym stosie kompilatora. Gdy jest używany z **pop**, dyrektywa pop rejestruje wewnętrzny stos do momentu usunięcia *identyfikatora* . Jeśli na stosie wewnętrznym nie znaleziono *identyfikatora* , nic nie jest zdjęte.
 
 "*Nazwa sekcji*" \
 Obowiązkowe Nazwa sekcji. Gdy jest używany z **punktem obecności**, stos jest zdjęte, a *sekcja Name* to nazwa sekcji aktywnej stałej.

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _Cmulcr, _FCmulcr, _LCmulcr'
 title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-ms.openlocfilehash: cbff1c2cb0e66da77b6fdc8127b78fb475aa5080
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ea1dbbcea6890246b1e318da238fb8cc2ee3abb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260725"
 ---
 # <a name="_cmulcr-_fcmulcr-_lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
@@ -56,26 +57,26 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 *x*<br/>
 Jeden z złożonych argumentów operacji do pomnożenia.
 
-*y*<br/>
+*Y*<br/>
 Operand zmiennoprzecinkowy do pomnożenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Struktura **_Dcomplex**, **_Fcomplex**lub **_Lcomplex** , która reprezentuje złożony produkt z liczbą zespoloną *x* i flaoting-Point *y*.
+Struktura **_Dcomplex**, **_Fcomplex** lub **_Lcomplex** , która reprezentuje złożony produkt z liczbą zespoloną *x* i *flaoting.*
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ wbudowane operatory arytmetyczne nie działają w implementacji firmy Microsoft typów złożonych, funkcje **_Cmulcr**, **_FCmulcr**i **_LCmulcr** upraszczają mnożenie typów złożonych przez typy zmiennoprzecinkowe.
+Ponieważ wbudowane operatory arytmetyczne nie działają w implementacji firmy Microsoft typów złożonych, funkcje **_Cmulcr**, **_FCmulcr** i **_LCmulcr** upraszczają mnożenie typów złożonych przez typy zmiennoprzecinkowe.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**i **_Lcomplex** są odpowiednikami specyficznymi dla firmy Microsoft dla niewdrożonych typów natywnych C99, odpowiednio **_Complex**, **float _Complex**i **Long podwójnie _Complex**. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex** i **_Lcomplex** są odpowiednikami specyficznymi dla firmy Microsoft dla niewdrożonych typów natywnych C99 **podwójne _Complex**, **float _Complex** i **Long podwójnie _Complex**. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>

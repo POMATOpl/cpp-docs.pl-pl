@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: `/X` (Ignoruj standardowe ścieżki dołączania)'
 title: /X (Ignoruj standardowe ścieżki dołączanych plików)
 ms.date: 07/31/2020
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 652feeb200b7106aaca1ed7264f1e25c088a3dab
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 69936b80893de2c45622ec9973a218a94e8029a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261011"
 ---
-# <a name="x-ignore-standard-include-paths"></a>`/X`(Ignoruj standardowe ścieżki dołączane)
+# <a name="x-ignore-standard-include-paths"></a>`/X` (Ignoruj standardowe ścieżki dołączane)
 
 Uniemożliwia kompilatorowi wyszukiwanie plików dołączanych w katalogach określonych w ścieżce i zawiera zmienne środowiskowe.
 
@@ -37,7 +38,7 @@ Możesz użyć tej opcji z opcją [ `/I` (Dodatkowe katalogi dołączane)](i-add
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracji preprocesora**C/C++**  >  **Preprocessor** .
+1. Wybierz   >  stronę właściwości konfiguracji preprocesora **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Ignorowanie standardowej ścieżki dołączania** .
 
@@ -53,7 +54,7 @@ W poniższym poleceniu **`/X`** nakazuje kompilatorowi ignorowanie lokalizacji o
 CL /X /I \ALT\INCLUDE MAIN.C
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fp_contract pragma'
 title: fp_contract, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cefcf0519f08b3fd68a0f8b464938ea7cdbda6d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261180"
 ---
 # <a name="fp_contract-pragma"></a>fp_contract, pragma
 
@@ -21,13 +22,13 @@ Określa, czy ma miejsce zamówienie zmiennoprzecinkowe. Umowka zmiennoprzecinko
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma fp_contract (** { **on** | **off** } **)**
+> **#pragma fp_contract (** { **on**  |  **off** } **)**
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie **fp_contract** jest **włączone**. Oznacza to, że kompilator będzie używać instrukcji kontraktu zmiennoprzecinkowego, jeśli jest to możliwe. Ustaw opcję **fp_contract** na **off** , aby zachować poszczególne instrukcje zmiennoprzecinkowe.
+Domyślnie **fp_contract** jest **włączona**. Oznacza to, że kompilator będzie używać instrukcji kontraktu zmiennoprzecinkowego, jeśli jest to możliwe. Ustaw **fp_contract** na **off** , aby zachować poszczególne instrukcje zmiennoprzecinkowe.
 
-Aby uzyskać więcej informacji o zachowaniu liczb zmiennoprzecinkowych, zobacz [/FP (Określ zachowanie zmiennoprzecinkowe)](../build/reference/fp-specify-floating-point-behavior.md).
+Aby uzyskać więcej informacji na temat zachowania zmiennoprzecinkowego, zobacz [/FP (Określ zachowanie Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Inne pragmy zmiennoprzecinkowe obejmują:
 
@@ -37,7 +38,7 @@ Inne pragmy zmiennoprzecinkowe obejmują:
 
 ## <a name="example"></a>Przykład
 
-Kod wygenerowany na podstawie tego przykładu nie używa instrukcji "pomnożyć-", nawet jeśli jest ona dostępna na docelowym procesorze. W przypadku dodania komentarza `#pragma fp_contract (off)`do wygenerowanego kodu może zostać wykorzystana instrukcja "podzielna", jeśli jest dostępna.
+Kod wygenerowany na podstawie tego przykładu nie używa instrukcji "pomnożyć-", nawet jeśli jest ona dostępna na docelowym procesorze. W przypadku dodania komentarza `#pragma fp_contract (off)` do wygenerowanego kodu może zostać wykorzystana instrukcja "podzielna", jeśli jest dostępna.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -75,6 +76,6 @@ out = 3.629600000000000e+03
 out = 4.587525000000000e+03
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
