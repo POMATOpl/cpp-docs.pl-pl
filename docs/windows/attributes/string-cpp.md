@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: ciąg (C++)'
 title: String (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 119e0aa60d123324c60825a9418e0b8c93696c5f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fadfd0b12a8054dedb275e9e2c33c23206856102
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329585"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -49,7 +50,7 @@ __interface IFireTabCtrl
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Tablica lub wskaźnik do tablicy, parametr interfejsu, metoda interfejsu|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

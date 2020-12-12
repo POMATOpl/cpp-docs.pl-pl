@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: jak dostosować pasek narzędzi Szybki dostęp'
 title: 'Porady: dostosowywanie paska narzędzi Szybki dostęp'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cb7935f9e340734f8af0e7ec9197e139c30af894
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330235"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Porady: dostosowywanie paska narzędzi Szybki dostęp
 
@@ -23,7 +24,7 @@ Aby dostosować pasek narzędzi Szybki dostęp, otwórz go w oknie **Właściwo�
 
 1. W programie Visual Studio, w menu **Widok** kliknij **Widok zasobów**.
 
-1. W **Widok zasobów**kliknij dwukrotnie zasób wstążki, aby wyświetlić go na powierzchni projektowej.
+1. W **Widok zasobów** kliknij dwukrotnie zasób wstążki, aby wyświetlić go na powierzchni projektowej.
 
 1. Na powierzchni projektowej kliknij prawym przyciskiem myszy menu paska narzędzi Szybki dostęp, a następnie kliknij polecenie **Właściwości**.
 
@@ -50,7 +51,7 @@ Polecenia paska narzędzi Szybki dostęp nie są wyświetlane na powierzchni pro
 
 #### <a name="to-preview-the-ribbon-control"></a>Aby wyświetlić podgląd kontrolki wstążki
 
-- Na **pasku narzędzi edytora wstążki**kliknij pozycję **Testuj wstążka**.
+- Na **pasku narzędzi edytora wstążki** kliknij pozycję **Testuj wstążka**.
 
 ## <a name="see-also"></a>Zobacz też
 

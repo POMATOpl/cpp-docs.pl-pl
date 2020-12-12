@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Public (atrybuty C++)'
 title: Public (atrybuty C++) (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 6a19a9a2718ad5f0e7ac59c71e9b4df6a7e92dd2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ee6fb641dc122c7d31c25d3433e2a427710ef40a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329654"
 ---
 # <a name="public-c-attributes"></a>public (Atrybuty C++)
 
@@ -50,7 +51,7 @@ __interface IFireTabCtrl : IDispatch
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`typedef`**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

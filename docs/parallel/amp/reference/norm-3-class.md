@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy norm_3
 title: norm_3 — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ac5419ac8bfaa0f0359d15399f163307cf4a6859
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329977"
 ---
 # <a name="norm_3-class"></a>norm_3 — Klasa
 
@@ -89,64 +90,64 @@ Reprezentuje krótki wektor trzech liczb normalnych.
 class norm_3;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor norm_3](#ctor)|Przeciążone. Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|norm_3::get_x||
-|norm_3::get_xy||
-|norm_3::get_xyz||
-|norm_3::get_xz||
-|norm_3::get_xzy||
+|norm_3:: get_x||
+|norm_3:: get_xy||
+|norm_3:: get_xyz||
+|norm_3:: get_xz||
+|norm_3:: get_xzy||
 |norm_3:: get_y||
 |norm_3:: get_yx||
-|norm_3::get_yxz||
-|norm_3::get_yz||
-|norm_3::get_yzx||
-|norm_3::get_z||
-|norm_3::get_zx||
-|norm_3::get_zxy||
-|norm_3::get_zy||
-|norm_3::get_zyx||
-|norm_3::ref_b||
-|norm_3::ref_g||
+|norm_3:: get_yxz||
+|norm_3:: get_yz||
+|norm_3:: get_yzx||
+|norm_3:: get_z||
+|norm_3:: get_zx||
+|norm_3:: get_zxy||
+|norm_3:: get_zy||
+|norm_3:: get_zyx||
+|norm_3:: ref_b||
+|norm_3:: ref_g||
 |norm_3:: ref_r||
-|norm_3::ref_x||
+|norm_3:: ref_x||
 |norm_3:: ref_y||
-|norm_3::ref_z||
-|norm_3::set_x||
-|norm_3::set_xy||
-|norm_3::set_xyz||
-|norm_3::set_xz||
-|norm_3::set_xzy||
+|norm_3:: ref_z||
+|norm_3:: set_x||
+|norm_3:: set_xy||
+|norm_3:: set_xyz||
+|norm_3:: set_xz||
+|norm_3:: set_xzy||
 |norm_3:: set_y||
 |norm_3:: set_yx||
-|norm_3::set_yxz||
-|norm_3::set_yz||
-|norm_3::set_yzx||
-|norm_3::set_z||
-|norm_3::set_zx||
-|norm_3::set_zxy||
-|norm_3::set_zy||
-|norm_3::set_zyx||
+|norm_3:: set_yxz||
+|norm_3:: set_yz||
+|norm_3:: set_yzx||
+|norm_3:: set_z||
+|norm_3:: set_zx||
+|norm_3:: set_zxy||
+|norm_3:: set_zy||
+|norm_3:: set_zyx||
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |norm_3:: operator-||
 |norm_3:: operator--||
@@ -159,16 +160,16 @@ class norm_3;
 
 ### <a name="public-constants"></a>Stałe publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Stała rozmiaru](#size)||
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |norm_3:: b||
-|norm_3::bg||
+|norm_3:: BG||
 |norm_3:: BGR||
 |norm_3:: br||
 |norm_3:: BRG||
@@ -178,25 +179,25 @@ class norm_3;
 |norm_3:: GR||
 |norm_3:: GRB||
 |norm_3:: r||
-|norm_3::rb||
-|norm_3::rbg||
+|norm_3:: RB||
+|norm_3:: RBG||
 |norm_3:: RG||
 |norm_3:: RGB||
 |norm_3:: x||
 |norm_3:: XY||
-|norm_3::xyz||
+|norm_3:: XYZ||
 |norm_3:: XZ||
-|norm_3::xzy||
+|norm_3:: xzy||
 |norm_3:: y||
 |norm_3:: yx||
 |norm_3:: YXZ||
 |norm_3:: YZ||
 |norm_3:: YZX||
-|norm_3::z||
+|norm_3:: z||
 |norm_3:: ZX||
 |norm_3:: zxy||
-|norm_3::zy||
-|norm_3::zyx||
+|norm_3:: zy||
+|norm_3:: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -208,7 +209,7 @@ class norm_3;
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="ctor"></a>Konstruktor norm_3
+## <a name="norm_3-constructor"></a><a name="ctor"></a> Konstruktor norm_3
 
 Konstruktor domyślny, inicjuje wszystkie elementy z wartością 0.
 
@@ -274,7 +275,7 @@ Wartość dla inicjalizacji.
 *_Other*<br/>
 Obiekt używany do inicjowania.
 
-## <a name="a-namesize-size-constant"></a>Stała <a name="size"> rozmiaru
+## <a name="a-namesize-size-constant"></a><a name="size"> Stała rozmiaru
 
 ### <a name="syntax"></a>Składnia
 
@@ -284,4 +285,4 @@ static const int size = 3;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

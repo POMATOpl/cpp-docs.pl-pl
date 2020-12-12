@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Atoll, _atoll_l, _wtoll, _wtoll_l'
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9476588e937dba3b6452d1c51a1ada518ff0459
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331012"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -76,14 +77,14 @@ long long _wtoll_l(
 *str*<br/>
 Ciąg do przekonwertowania.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 Każda funkcja zwraca **`long long`** wartość, która jest generowana przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana dla **Atoll** jest równa 0, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
 
-W przypadku przepełnienia z dużymi dodatnimi wartościami całkowitymi funkcja **Atoll** zwraca **LLONG_MAX**i w przypadku przepełnienia z dużymi negatywnymi wartościami całkowitymi zwraca **LLONG_MIN**.
+W przypadku przepełnienia z dużymi dodatnimi wartościami całkowitymi funkcja **Atoll** zwraca **LLONG_MAX** i w przypadku przepełnienia z dużymi negatywnymi wartościami całkowitymi zwraca **LLONG_MIN**.
 
 We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. Jeśli parametr, który jest przesyłany, ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają 0.
 
@@ -170,11 +171,11 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

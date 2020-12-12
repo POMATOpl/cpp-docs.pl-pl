@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: LNK4224 narzędzi KONSOLIDATORA ostrzeżenia narzędzi konsolidatora'
 title: Ostrzeżenie LNK4224 narzędzi konsolidatora
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4224
 ms.assetid: 8624b70e-0b93-43cf-b457-834d38632d0b
-ms.openlocfilehash: 9e52dd533d897e729aba5f2b43ea6c019a024d43
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 35cae5c46b91493a40d4d52650f781010f6d6379
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327906"
 ---
 # <a name="linker-tools-warning-lnk4224"></a>Ostrzeżenie LNK4224 narzędzi konsolidatora
 
@@ -21,7 +22,7 @@ ms.locfileid: "80182984"
 
 Określono nieprawidłową, przestarzałą opcję konsolidatora i została zignorowana.
 
-Na przykład LNK4224 narzędzi KONSOLIDATORA może wystąpić, jeśli dyrektywa/Comment pojawia się w. obj. Dyrektywa/Comment zostałaby dodana za pośrednictwem [komentarza (CC++/)](../../preprocessor/comment-c-cpp.md) pragma przy użyciu przestarzałej opcji exestr. Użyj polecenia DUMPBIN [/All](../../build/reference/all.md) , aby wyświetlić dyrektywy konsolidatora w pliku. obj.
+Na przykład LNK4224 narzędzi KONSOLIDATORA może wystąpić, jeśli dyrektywa/Comment pojawia się w. obj. Dyrektywa/Comment zostałaby dodana za pomocą [komentarza (C/C++)](../../preprocessor/comment-c-cpp.md) pragma przy użyciu przestarzałej opcji exestr. Użyj polecenia DUMPBIN [/All](../../build/reference/all.md) , aby wyświetlić dyrektywy konsolidatora w pliku. obj.
 
 Jeśli to możliwe, zmodyfikuj Źródło dla. obj i Usuń pragmę. Jeśli zignorujesz to ostrzeżenie, istnieje możliwość, że plik wykonywalny skompilowany za pomocą **/CLR: Pure** nie będzie działać zgodnie z oczekiwaniami. **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 

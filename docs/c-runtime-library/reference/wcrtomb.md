@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wcrtomb'
 title: wcrtomb
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: effa442cee4aa0924fa976ee9138f40b22217375
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331061"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -77,7 +78,7 @@ Funkcja **wcrtomb** konwertuje znak dwubajtowy, zaczynając od określonego stan
 
 Jeśli *mbstate* ma wartość null, używany jest wewnętrzny obiekt **mbstate_t** zawierający Stan konwersji *mbchar* . Jeśli *WCHAR* sekwencji znaków nie ma odpowiadającej reprezentacji znaków wielobajtowych, zwracana jest wartość-1, a **errno** jest ustawiona na **EILSEQ**.
 
-Funkcja **wcrtomb** różni się od [wctomb, _wctomb_l](wctomb-wctomb-l.md) według jej ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie. Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcsnlen**, jeśli zamiast **wcstombs**użyto kolejnego wywołania **wcsrtombs** .
+Funkcja **wcrtomb** różni się od [wctomb, _wctomb_l](wctomb-wctomb-l.md) według jej ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie. Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcsnlen**, jeśli zamiast **wcstombs** użyto kolejnego wywołania **wcsrtombs** .
 
 W języku C++ ta funkcja ma Przeciążenie szablonu, które wywołuje nowsze i bezpieczne odpowiedniki tej funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
@@ -134,11 +135,11 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wcrtomb**|\<WCHAR. h>|
+|**wcrtomb**|\<wchar.h>|
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

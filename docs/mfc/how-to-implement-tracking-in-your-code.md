@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: Instrukcje: implementowanie śledzenia w kodzie'
 title: 'Porady: implementowanie śledzenia w kodzie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 3d71543261021c7e20041d317401b7b7b8d0616e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1b9211978c6ba5169a2d55e272b7e3ddf0678fd6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330211"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Porady: implementowanie śledzenia w kodzie
 
@@ -55,4 +56,4 @@ W aplikacji są wykonywane zdarzenia wymagające kodu śledzenia, takie jak zmia
 
 ## <a name="see-also"></a>Zobacz też
 
-[Trackery: implementowanie trackerów w aplikacji OLE](trackers-implementing-trackers-in-your-ole-application.md)
+[Śledzenie: implementowanie śledzenia w aplikacji OLE](trackers-implementing-trackers-in-your-ole-application.md)

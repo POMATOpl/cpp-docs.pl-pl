@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach przestrzeni nazw współbieżności'
 title: Funkcje przestrzeni nazw współbieżności
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 25cd74e20102bbc1a75e4b4efe1bf234845f7fcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: db49a58084e8e6fbbe4e3ea1ccd9253c7743baea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331286"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeni nazw współbieżności
 
@@ -1526,7 +1527,7 @@ void __cdecl set_task_execution_resources(
 *_ProcessAffinityMask*<br/>
 Maska koligacji, do której mają być ograniczone wątki robocze środowisko uruchomieniowe współbieżności. Tej metody należy użyć w systemie z więcej niż 64 wątków sprzętowych tylko wtedy, gdy chcesz ograniczyć środowisko uruchomieniowe współbieżności do podzbioru bieżącej grupy procesorów. Ogólnie rzecz biorąc należy użyć wersji metody, która akceptuje tablicę koligacji grup jako parametr, aby ograniczyć koligację na maszynach z ponad 64 wątkami sprzętowymi.
 
-*count*<br/>
+*liczbą*<br/>
 Liczba `GROUP_AFFINITY` wpisów w tablicy określonej przez parametr `_PGroupAffinity` .
 
 *_PGroupAffinity*<br/>

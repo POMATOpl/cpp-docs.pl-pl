@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCCaptionButton'
 title: Klasa CMFCCaptionButton
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-ms.openlocfilehash: 1b0a999f1fd1e3df1b0a971220454397cead02a9
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 6c3c1cbeea4a548f2951276b3ad43cb598cf22a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327746"
 ---
 # <a name="cmfccaptionbutton-class"></a>Klasa CMFCCaptionButton
 
-Klasa `CMFCCaptionButton` implementuje przycisk, który jest wyświetlany na pasku podpisu dla okienka dokowania lub okna mini-ramki. Zazwyczaj struktura tworzy przyciski podpisu automatycznie.
+`CMFCCaptionButton`Klasa implementuje przycisk, który jest wyświetlany na pasku podpisu dla okienka dokującego lub okna mini-frame. Zazwyczaj struktura tworzy przyciski podpisu automatycznie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,7 +44,7 @@ class CMFCCaptionButton : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -55,40 +56,40 @@ class CMFCCaptionButton : public CObject
 |----------|-----------------|
 |[CMFCCaptionButton::GetHit](#gethit)|Zwraca polecenie reprezentowane przez przycisk.|
 |[CMFCCaptionButton::GetIconID](#geticonid)|Zwraca identyfikator obrazu skojarzony z przyciskiem.|
-|[CMFCCaptionButton::GetRect](#getrect)|Zwraca prostokąt zajmowany przez przycisk.|
-|[CMFCCaptionButton::GetSize](#getsize)|Zwraca szerokość i wysokość przycisku.|
-|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Wskazuje, czy wysokość paska tytułu jest ustawiona na mini rozmiar.|
-|[CMFCCaptionButton::Przenieś](#move)|Ustawia lokalizację rysowania przycisków i stan pokazu okna.|
-|[CMFCCaptionButton::OnDraw](#ondraw)|Rysuje przycisk podpisu.|
-|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Ustawia mini rozmiar paska tytułu.|
+|[CMFCCaptionButton:: getRect](#getrect)|Zwraca prostokąt zajmowany przez przycisk.|
+|[CMFCCaptionButton:: GetSize](#getsize)|Zwraca szerokość i wysokość przycisku.|
+|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Wskazuje, czy wysokość paska tytułu jest ustawiona na rozmiar minimalny.|
+|[CMFCCaptionButton:: Move](#move)|Ustawia lokalizację rysowania przycisku i okna Pokaż stan.|
+|[CMFCCaptionButton:: OnDraw](#ondraw)|Rysuje przycisk podpis.|
+|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Ustawia rozmiar mini paska tytułu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasę można wyprowadzić z [klasy CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) i użyć `AddButton`metody chronionej , aby dodać przyciski podpisu do okna mini ramki.
+Można utworzyć klasę z [klasy CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) i użyć metody chronionej, `AddButton` Aby dodać przyciski podpisów do okna mini frame.
 
-CPaneFrameWnd.h definiuje identyfikatory poleceń dla dwóch typów przycisków podpisu:
+CPaneFrameWnd. h definiuje identyfikatory poleceń dla dwóch typów przycisków podpisów:
 
-- AFX_CAPTION_BTN_PIN, który wyświetla przycisk pin, gdy okienko dokowania obsługuje tryb automatycznego ukrywania.
+- AFX_CAPTION_BTN_PIN, w którym jest wyświetlany przycisk Przypnij, gdy okienko dokujące obsługuje tryb autoukrywania.
 
-- AFX_CAPTION_BTN_CLOSE, który wyświetla przycisk **Zamknij,** gdy okienko może zostać zamknięte lub ukryte.
+- AFX_CAPTION_BTN_CLOSE, który wyświetla przycisk **Zamknij** , gdy okienko może być zamknięte lub ukryte.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak skonstruować `CMFCCaptionButton` obiekt i ustawić mini rozmiar paska tytułu.
+Poniższy przykład ilustruje sposób konstruowania `CMFCCaptionButton` obiektu i ustawiania rozmiaru minipaska na pasku tytułu.
 
 [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CmfcCaptionButton (Przycisk CMFCCaption)](../../mfc/reference/cmfccaptionbutton-class.md)
+[CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcaptionbutton.h
+**Nagłówek:** afxcaptionbutton. h
 
-## <a name="cmfccaptionbuttoncmfccaptionbutton"></a><a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton
+## <a name="cmfccaptionbuttoncmfccaptionbutton"></a><a name="cmfccaptionbutton"></a> CMFCCaptionButton::CMFCCaptionButton
 
 Konstruuje `CMFCCaptionButton` obiekt.
 
@@ -103,30 +104,30 @@ CMFCCaptionButton(
 ### <a name="parameters"></a>Parametry
 
 *nHit*<br/>
-[w] Polecenie skojarzone z przyciskiem.
+podczas Polecenie skojarzone z przyciskiem.
 
-*bUchołka*<br/>
-[w] Określa, czy przycisk jest wyrównany do lewej.
+*bLeftAlign*<br/>
+podczas Określa, czy przycisk jest wyrównany do lewej.
 
-W poniższej tabeli wymieniono możliwe wartości parametru *nHit.*
+Poniższa tabela zawiera listę możliwych wartości parametru *nHit* .
 
 |Wartość|Polecenie|
 |-----------|-------------|
-|AFX_HTCLOSE|Zamknij przycisk.|
-|HTMINBUTTON ( HTMINBUTTON )|Przycisk Minimalizuj.|
-|HTMAXBUTTON ( HTMAXBUTTON )|Przycisk Maksymalizuj.|
-|AFX_HTLEFTBUTTON|Strzałka w lewo.|
-|AFX_HTRIGHTBUTTON|Strzałka w prawo.|
-|AFX_HTMENU|Przycisk menu strzałki w dół.|
-|HTNOWHERE|Wartość domyślna; reprezentuje brak polecenia.|
+|AFX_HTCLOSE|Przycisk Zamknij.|
+|HTMINBUTTON|Przycisk Minimalizuj.|
+|HTMAXBUTTON|Przycisk Maksymalizuj.|
+|AFX_HTLEFTBUTTON|Przycisk strzałki w lewo.|
+|AFX_HTRIGHTBUTTON|Przycisk strzałki w prawo.|
+|AFX_HTMENU|Przycisk menu Strzałka w dół.|
+|HTNOWHERE|Wartość domyślna; reprezentuje polecenie No.|
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie przyciski podpisu nie są skojarzone z poleceniem.
+Domyślnie przyciski podpisów nie są skojarzone z poleceniem.
 
-Przyciski podpisu są wyrównane po prawej lub lewej stronie.
+Przyciski podpisu są wyrównane do prawej lub lewej.
 
-## <a name="cmfccaptionbuttongethit"></a><a name="gethit"></a>CMFCCaptionButton::GetHit
+## <a name="cmfccaptionbuttongethit"></a><a name="gethit"></a> CMFCCaptionButton::GetHit
 
 Zwraca polecenie reprezentowane przez przycisk.
 
@@ -138,19 +139,19 @@ UINT GetHit() const;
 
 Polecenie reprezentowane przez przycisk.
 
-W poniższej tabeli wymieniono możliwe wartości zwracane.
+Poniższa tabela zawiera listę możliwych wartości zwracanych.
 
 |Wartość|Polecenie|
 |-----------|-------------|
-|AFX_HTCLOSE|Zamknij przycisk.|
-|HTMINBUTTON ( HTMINBUTTON )|Przycisk Minimalizuj.|
-|HTMAXBUTTON ( HTMAXBUTTON )|Przycisk Maksymalizuj.|
-|AFX_HTLEFTBUTTON|Strzałka w lewo.|
-|AFX_HTRIGHTBUTTON|Strzałka w prawo.|
-|AFX_HTMENU|Przycisk menu strzałki w dół.|
-|HTNOWHERE|Wartość domyślna; reprezentuje brak polecenia.|
+|AFX_HTCLOSE|Przycisk Zamknij.|
+|HTMINBUTTON|Przycisk Minimalizuj.|
+|HTMAXBUTTON|Przycisk Maksymalizuj.|
+|AFX_HTLEFTBUTTON|Przycisk strzałki w lewo.|
+|AFX_HTRIGHTBUTTON|Przycisk strzałki w prawo.|
+|AFX_HTMENU|Przycisk menu Strzałka w dół.|
+|HTNOWHERE|Wartość domyślna; reprezentuje polecenie No.|
 
-## <a name="cmfccaptionbuttongeticonid"></a><a name="geticonid"></a>CMFCCaptionButton::GetIconID
+## <a name="cmfccaptionbuttongeticonid"></a><a name="geticonid"></a> CMFCCaptionButton::GetIconID
 
 Zwraca identyfikator obrazu skojarzony z przyciskiem.
 
@@ -162,11 +163,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 
 ### <a name="parameters"></a>Parametry
 
-*Bhorz*<br/>
-[w] PRAWDA dla identyfikatorów obrazów ze strzałką w lewo lub w prawo; FAŁSZ dla identyfikatorów obrazów strzałki w górę lub w dół.
+*bHorz*<br/>
+podczas Wartość TRUE dla identyfikatora obrazu z lewej strony lub strzałki w prawo; Wartość FALSE dla identyfikatora obrazu strzałki w górę lub w dół.
 
 *bMaximized*<br/>
-[w] PRAWDA dla maksymalizacji identyfikatora obrazu; FAŁSZ dla zminimalizowania identyfikatora obrazu.
+podczas Wartość TRUE dla maksymalizowanego identyfikatora obrazu; Wartość FALSE dla identyfikatora obrazu minimalizowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -174,9 +175,9 @@ Identyfikator obrazu.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametry określają identyfikatory obrazów, aby zminimalizować lub zmaksymalizować przyciski podpisów.
+Parametry określają identyfikatory obrazu dla przycisków minimalizowania lub maksymalizowania podpisów.
 
-## <a name="cmfccaptionbuttongetrect"></a><a name="getrect"></a>CMFCCaptionButton::GetRect
+## <a name="cmfccaptionbuttongetrect"></a><a name="getrect"></a> CMFCCaptionButton:: getRect
 
 Zwraca prostokąt zajmowany przez przycisk.
 
@@ -190,9 +191,9 @@ Prostokąt reprezentujący lokalizację przycisku.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nie widać przycisku, zwrócony rozmiar wynosi 0.
+Jeśli nie widzisz przycisku, zwracany rozmiar wynosi 0.
 
-## <a name="cmfccaptionbuttongetsize"></a><a name="getsize"></a>CMFCCaptionButton::GetSize
+## <a name="cmfccaptionbuttongetsize"></a><a name="getsize"></a> CMFCCaptionButton:: GetSize
 
 Zwraca szerokość i wysokość przycisku.
 
@@ -208,9 +209,9 @@ Zewnętrzne wymiary przycisku.
 
 Zwrócony rozmiar zawiera margines przycisku i obramowanie.
 
-## <a name="cmfccaptionbuttonisminiframebutton"></a><a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton
+## <a name="cmfccaptionbuttonisminiframebutton"></a><a name="isminiframebutton"></a> CMFCCaptionButton::IsMiniFrameButton
 
-Wskazuje, czy wysokość paska tytułu jest ustawiona na mini rozmiar.
+Wskazuje, czy wysokość paska tytułu jest ustawiona na rozmiar minimalny.
 
 ```
 BOOL IsMiniFrameButton() const;
@@ -218,13 +219,13 @@ BOOL IsMiniFrameButton() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli podpis jest ustawiony na mini rozmiar; w przeciwnym razie FALSE.
+Ma wartość TRUE, jeśli podpis jest ustawiony na rozmiar mini; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfccaptionbuttonmove"></a><a name="move"></a>CMFCCaptionButton::Przenieś
+## <a name="cmfccaptionbuttonmove"></a><a name="move"></a> CMFCCaptionButton:: Move
 
-Ustawia lokalizację rysowania przycisków i stan pokazu okna.
+Ustawia lokalizację rysowania przycisku i okna Pokaż stan.
 
 ```cpp
 void Move(
@@ -235,14 +236,14 @@ void Move(
 ### <a name="parameters"></a>Parametry
 
 *ptTo*<br/>
-[w] Nowa lokalizacja.
+podczas Nowa lokalizacja.
 
-*bHide (ur.*<br/>
-[w] Czy chcesz wyświetlić przycisk.
+*bHide*<br/>
+podczas Określa, czy przycisk ma być wyświetlany.
 
-## <a name="cmfccaptionbuttonondraw"></a><a name="ondraw"></a>CMFCCaptionButton::OnDraw
+## <a name="cmfccaptionbuttonondraw"></a><a name="ondraw"></a> CMFCCaptionButton:: OnDraw
 
-Rysuje przycisk podpisu.
+Rysuje przycisk podpis.
 
 ```
 virtual void OnDraw(
@@ -255,28 +256,28 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia dla przycisku.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia dla przycisku.
 
-*bAktywny*<br/>
-[w] Czy narysować aktywny obraz przycisku.
+*bActive*<br/>
+podczas Określa, czy ma być rysowany aktywny obraz przycisku.
 
-*Bhorz*<br/>
-[w] Zarezerwowane do użycia w klasie pochodnej.
+*bHorz*<br/>
+podczas Zarezerwowane do użycia w klasie pochodnej.
 
 *bMaximized*<br/>
-[w] Czy narysować zmaksymalizowany obraz przycisku.
+podczas Określa, czy ma być rysowany zmaksymalizowany obraz przycisku.
 
-*bWydaj*<br/>
-[w] Czy narysować włączony obraz przycisku.
+*Poddany*<br/>
+podczas Określa, czy ma być rysowany aktywny obraz przycisku.
 
 ### <a name="remarks"></a>Uwagi
 
-*BMaximized* parametr jest używany, gdy przycisk jest przycisk maksymalizacji lub zminimalizowania.
+Parametr *bMaximized* jest używany, gdy przycisk jest przyciskiem Maksymalizuj lub Minimalizuj.
 
-## <a name="cmfccaptionbuttonsetminiframebutton"></a><a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton
+## <a name="cmfccaptionbuttonsetminiframebutton"></a><a name="setminiframebutton"></a> CMFCCaptionButton::SetMiniFrameButton
 
-Ustawia mini rozmiar paska tytułu.
+Ustawia rozmiar mini paska tytułu.
 
 ```cpp
 void SetMiniFramebutton(BOOL bSet = TRUE);
@@ -284,8 +285,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bStaw*<br/>
-[w] PRAWDA dla wysokości mini paska tytułu; FAŁSZ dla domyślnej wysokości paska tytułu.
+*bSet*<br/>
+podczas Wartość TRUE dla minimalnej wysokości paska tytułu; Wartość FALSE dla domyślnej wysokości paska tytułu.
 
 ## <a name="see-also"></a>Zobacz też
 

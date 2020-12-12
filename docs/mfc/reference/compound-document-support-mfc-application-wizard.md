@@ -1,25 +1,26 @@
 ---
+description: 'Dowiedz się więcej na temat: Obsługa dokumentu złożonego, Kreator aplikacji MFC'
 title: Obsługa dokumentów złożonych, kreator aplikacji MFC
 ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ccd95812c7b8a4379528b4c784a3d7ca09f538f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331364"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Obsługa dokumentów złożonych, kreator aplikacji MFC
 
-Na tej stronie Kreatora aplikacji MFC wskazuje, jaki poziom aplikacji zapewnia obsługę złożone i aktywnego dokumentu. Aplikacja musi obsługiwać architektury dokument/widok do obsługi złożonych dokumentów i szablonów dokumentów.
+Na tej stronie Kreatora aplikacji MFC wskaż, jaki poziom aplikacji zapewnia wsparcie złożone i dokumenty aktywne. Aplikacja musi obsługiwać architekturę dokumentu/widoku do obsługi dokumentów złożonych i szablonów dokumentów.
 
-Domyślnie ta aplikacja zawiera nie obsługuje dokumentów złożonych. Jeśli zdecydujesz się zaakceptować ustawienie domyślne, aplikacja nie może obsługiwać dokumenty aktywne lub pliki złożone.
+Domyślnie aplikacja nie zawiera obsługi dokumentu złożonego. W przypadku zaakceptowania tego ustawienia domyślnego aplikacja nie może obsługiwać dokumentów aktywnych ani plików złożonych.
 
-- **Obsługa dokumentów złożonych**
+- **Obsługa dokumentu złożonego**
 
-  Określa, czy aplikacja udostępnia obsługi kontenerów i pomoc techniczna dotycząca serwera. Aby uzyskać więcej informacji na temat tego obszaru zobacz:
+  Określa, czy aplikacja zapewnia obsługę kontenerów, obsługę serwera lub oba te elementy. Aby uzyskać więcej informacji na temat tego obszaru, zobacz:
 
   - [Kontenery: implementowanie kontenera](../../mfc/containers-implementing-a-container.md)
 
@@ -27,22 +28,22 @@ Domyślnie ta aplikacja zawiera nie obsługuje dokumentów złożonych. Jeśli z
 
   |Opcja|Opis|
   |------------|-----------------|
-  |**Brak**|Wskazuje brak obsługi łączenie i osadzanie (OLE). Domyślnie Kreator aplikacji tworzy aplikację bez obsługi ActiveX.|
-  |**Kontener**|Zawiera obiekty połączone i osadzone.|
-  |**Mini serwer**|Wskazuje aplikacji można tworzyć i zarządzać obiektami w dokumencie złożonym. Należy zauważyć, że nie można uruchomić miniserwery autonomiczne i obsługują tylko elementów osadzonych.|
-  |**Pełny serwer**|Wskazuje aplikacji można tworzyć i zarządzać obiektami w dokumencie złożonym. Pełnych będą mogli uruchamiać autonomicznego i pomocy technicznej, obie połączone i osadzone elementy.|
-  |**Kontener/pełny serwer**|Wskazuje, że aplikacja może być zarówno kontenera, jak i serwera. Kontener jest aplikacja, która można zastosować osadzony lub połączony elementy w swoich własnych dokumentów. Serwer jest aplikacja, która można tworzyć elementy automatyzacji do użytku przez aplikacje kontenera.|
+  |**Brak**|Wskazuje brak obsługi łączenia i osadzania obiektów (OLE). Domyślnie Kreator aplikacji tworzy aplikację bez obsługi ActiveX.|
+  |**Kontener**|Zawiera połączone i osadzone obiekty.|
+  |**Serwer mini**|Wskazuje, że aplikacja może tworzyć obiekty dokumentu złożonego i zarządzać nimi. Należy zauważyć, że serwery mini nie mogą działać autonomicznie i obsługują tylko elementy osadzone.|
+  |**Pełny serwer**|Wskazuje, że aplikacja może tworzyć obiekty dokumentu złożonego i zarządzać nimi. Pełne serwery mogą uruchamiać się autonomicznie i obsługiwać zarówno elementy połączone, jak i osadzone.|
+  |**Kontener/pełny serwer**|Wskazuje, że aplikacja może być zarówno kontenerem, jak i serwerem. Kontener to aplikacja, która może zawierać osadzone lub połączone elementy w swoich własnych dokumentach. Serwer to aplikacja, która może tworzyć elementy automatyzacji do użycia przez aplikacje kontenerów.|
 
-- **Dodatkowe opcje**
+- **Opcje dodatkowe**
 
-  Wskazuje, czy aplikacja obsługuje dokumenty aktywne. Zobacz [dokumenty aktywne](../../mfc/active-documents.md) Aby uzyskać więcej informacji na temat tej funkcji.
+  Wskazuje, czy aplikacja obsługuje dokumenty aktywne. Aby uzyskać więcej informacji na temat tej funkcji, zobacz sekcję [Active Documents](../../mfc/active-documents.md) .
 
   |Opcja|Opis|
   |------------|-----------------|
-  |**Serwer aktywnego dokumentu**|Wskazuje aplikacji można tworzyć i zarządzać dokumenty aktywne. Jeśli wybierzesz tę opcję, należy określić rozszerzenie pliku dla serwera aktywnego dokumentu w **rozszerzenie pliku** pole w [ciągi szablonu dokumentu](../../mfc/reference/document-template-strings-mfc-application-wizard.md) strony kreatora. Zobacz [serwery dokumentów aktywnych](../../mfc/active-document-servers.md) Aby uzyskać więcej informacji.|
-  |**Kontener dokumentów aktywnych**|Wskazuje, że aplikacja może zawierać dokumenty aktywne wewnątrz ramki. Dokumenty aktywne mogą obejmować na przykład dokumentów programu Internet Explorer lub dokumentów pakietu Office, takie jak pliki programu Microsoft Word lub arkuszy kalkulacyjnych programu Excel. Zobacz [zawieranie dokumentów aktywnych](../../mfc/active-document-containment.md) Aby uzyskać więcej informacji.|
-  |**Obsługa plików złożonych**|Nie serializować aplikacji kontenera dokumentów przy użyciu formatu pliku złożone. Ta opcja wymusza ładowanie cały plik zawierający obiekty do pamięci. Zapisuje przyrostowe na poszczególne obiekty nie są dostępne. Jeśli jeden obiekt zmienione, a następnie zapisany, wszystkie obiekty w pliku są zapisywane.|
+  |**Serwer aktywnego dokumentu**|Wskazuje, że aplikacja może tworzyć aktywne dokumenty i zarządzać nimi. W przypadku wybrania tej opcji należy określić rozszerzenie pliku aktywnego serwera dokumentów w polu **rozszerzenie pliku** na stronie [ciągi szablonu dokumentu](../../mfc/reference/document-template-strings-mfc-application-wizard.md) kreatora. Aby uzyskać więcej informacji, zobacz [serwery dokumentów aktywnych](../../mfc/active-document-servers.md) .|
+  |**Kontener aktywnego dokumentu**|Wskazuje, że aplikacja może zawierać aktywne dokumenty w ramce. Dokumenty aktywne mogą obejmować na przykład dokumenty programu Internet Explorer lub dokumenty pakietu Office, takie jak pliki Microsoft Word lub arkusze kalkulacyjne programu Excel. Aby uzyskać więcej informacji, zobacz sekcję [zawieranie dokumentów aktywnych](../../mfc/active-document-containment.md) .|
+  |**Obsługa plików złożonych**|Nie wykonuje serializacji dokumentów aplikacji kontenera przy użyciu formatu pliku złożonego. Ta opcja wymusza ładowanie całego pliku zawierającego obiekty do pamięci. Zapisywanie przyrostowe w pojedynczych obiektach jest niedostępne. Jeśli jeden obiekt zostanie zmieniony, a następnie zapisany, wszystkie obiekty w pliku są zapisywane.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)

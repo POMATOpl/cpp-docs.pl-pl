@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy runtime_exception
 title: runtime_exception — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: ff54357055d373db98f469b071edc75fce75e0b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fa5750473ee5a9b84255313832bbcbbba406394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329936"
 ---
 # <a name="runtime_exception-class"></a>runtime_exception — Klasa
 
@@ -32,8 +33,8 @@ class runtime_exception : public std::exception;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[konstruktor runtime_exception](#ctor)|Inicjuje nowe wystąpienie klasy `runtime_exception`.|
-|[~runtime_exception Destruktor](#dtor)|Niszczy `runtime_exception` obiekt.|
+|[Konstruktor runtime_exception](#ctor)|Inicjuje nowe wystąpienie klasy `runtime_exception`.|
+|[~ runtime_exception destruktor](#dtor)|Niszczy `runtime_exception` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
@@ -45,7 +46,7 @@ class runtime_exception : public std::exception;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[operator=](#operator_eq)|Kopiuje zawartość określonego `runtime_exception` obiektu do tego obiektu.|
+|[operator =](#operator_eq)|Kopiuje zawartość określonego `runtime_exception` obiektu do tego elementu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -55,11 +56,11 @@ class runtime_exception : public std::exception;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amprt.h
+**Nagłówek:** amprt. h
 
-**Obszar nazw:** Współbieżności
+**Przestrzeń nazw:** Współbieżności
 
-## <a name="runtime_exception-constructor"></a><a name="ctor"></a>konstruktor runtime_exception
+## <a name="runtime_exception-constructor"></a><a name="ctor"></a> Konstruktor runtime_exception
 
 Inicjuje nowe wystąpienie klasy.
 
@@ -83,16 +84,16 @@ runtime_exception(
 Opis błędu, który spowodował wyjątek.
 
 *_Hresult*<br/>
-HRESULT błędu, który spowodował wyjątek.
+WYNIK HRESULT błędu, który spowodował wyjątek.
 
 *_Other*<br/>
-Obiekt `runtime_exception` do skopiowania.
+`runtime_exception`Obiekt do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Obiekt `runtime_exception`.
 
-## <a name="runtime_exception-destructor"></a><a name="dtor"></a>~runtime_exception Destruktor
+## <a name="runtime_exception-destructor"></a><a name="dtor"></a>  ~ runtime_exception destruktor
 
 Niszczy obiekt.
 
@@ -102,7 +103,7 @@ Niszczy obiekt.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="get_error_code"></a><a name="get_error_code"></a>get_error_code
+## <a name="get_error_code"></a><a name="get_error_code"></a> get_error_code
 
 Zwraca kod błędu, który spowodował wyjątek.
 
@@ -114,11 +115,11 @@ HRESULT get_error_code() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-HRESULT błędu, który spowodował wyjątek.
+WYNIK HRESULT błędu, który spowodował wyjątek.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator=
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
-Kopiuje zawartość określonego `runtime_exception` obiektu do tego obiektu.
+Kopiuje zawartość określonego `runtime_exception` obiektu do tego elementu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -129,12 +130,12 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ### <a name="parameters"></a>Parametry
 
 *_Other*<br/>
-Obiekt `runtime_exception` do skopiowania.
+`runtime_exception`Obiekt do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do `runtime_exception` tego obiektu.
+Odwołanie do tego `runtime_exception` obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obszar nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

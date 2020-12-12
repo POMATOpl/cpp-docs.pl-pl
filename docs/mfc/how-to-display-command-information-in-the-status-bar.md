@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Instrukcje: wyświetlanie informacji o poleceniu na pasku stanu'
 title: 'Porady: wyświetlanie informacji o poleceniu na pasku stanu'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: bff5d5b20ecc9b20b7b1e8335cda34d582441425
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 568e8d356659d5267e8c4947f2981cd6243a7056
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330216"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Porady: wyświetlanie informacji o poleceniu na pasku stanu
 
@@ -20,7 +21,7 @@ Po uruchomieniu Kreatora aplikacji w celu utworzenia szkieletu aplikacji można 
 
 Możesz dodać do tej pomocy na pasku stanu, definiując ciągi monitów dla elementów menu dodawanych do programu. W tym celu Podaj ciągi monitu podczas edycji właściwości elementu menu w edytorze menu. Definiowane ciągi są przechowywane w pliku zasobów aplikacji. mają one takie same identyfikatory, jak polecenia objaśniające.
 
-Domyślnie Kreator aplikacji dodaje **AFX_IDS_IDLEMESSAGE**, identyfikator standardowego komunikatu "gotowe", który jest wyświetlany, gdy program czeka na nowe komunikaty. Jeśli określisz opcję pomocy kontekstowej w Kreatorze aplikacji, komunikat zostanie zmieniony na "Aby uzyskać pomoc, naciśnij klawisz F1."
+Domyślnie Kreator aplikacji dodaje **AFX_IDS_IDLEMESSAGE**, identyfikator standardowego komunikatu "gotowe", który jest wyświetlany, gdy program czeka na nowe komunikaty. Jeśli określisz opcję pomocy Context-Sensitive w Kreatorze aplikacji, komunikat zostanie zmieniony na "Aby uzyskać pomoc, naciśnij klawisz F1".
 
 ## <a name="see-also"></a>Zobacz też
 

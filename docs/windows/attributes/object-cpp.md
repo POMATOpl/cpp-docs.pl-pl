@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: obiekt (C++)'
 title: Object (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: c0c0ff552d8a33ebe70f56b9b186e963cc8e9b3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 82f259f6ca36c44f33eb68970d8b76ae2acc5853
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329755"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -38,7 +39,7 @@ Zobacz [nonbrowsable](nonbrowsable.md) , aby zapoznać się z przykładem użyci
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejsu**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
@@ -48,7 +49,7 @@ Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteks
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
-[dual](dual.md)<br/>
+[obsługi](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [celnej](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

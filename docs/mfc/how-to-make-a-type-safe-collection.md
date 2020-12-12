@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Instrukcje: Tworzenie kolekcji Type-Safe'
 title: 'Porady: tworzenie bezpiecznej kolekcji'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c4e474979a6ea5e17a771e2340df71782a59bab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330177"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Porady: tworzenie bezpiecznej kolekcji
 
@@ -29,7 +30,7 @@ W tym artykule wyjaśniono, jak zapewnić bezpieczne tworzenie kolekcji dla wła
 
 Biblioteka MFC zapewnia wstępnie zdefiniowane bezpieczne kolekcje na podstawie szablonów języka C++. Ponieważ są to szablony, te klasy pomagają zapewnić bezpieczeństwo typów i łatwość użycia bez rzutowania typów i innych dodatkowych zadań związanych z użyciem w tym celu klasy niebędącej szablonami. [Zbieranie](../overview/visual-cpp-samples.md) próbek MFC ilustruje użycie klas kolekcji opartych na szablonach w aplikacji MFC. Ogólnie rzecz biorąc, Użyj tych klas przy każdej pisaniu nowego kodu kolekcji.
 
-## <a name="using-template-based-classes-for-type-safety"></a><a name="_core_using_template.2d.based_classes_for_type_safety"></a>Korzystanie z klas opartych na szablonach w celu zapewnienia bezpieczeństwa typów
+## <a name="using-template-based-classes-for-type-safety"></a><a name="_core_using_template.2d.based_classes_for_type_safety"></a> Korzystanie z klas Template-Based na potrzeby bezpieczeństwa typów
 
 #### <a name="to-use-template-based-classes"></a>Aby używać klas opartych na szablonach
 
@@ -45,11 +46,11 @@ Biblioteka MFC zapewnia wstępnie zdefiniowane bezpieczne kolekcje na podstawie 
 
 Ten przykład pokazuje deklarację listy liczb całkowitych. Pierwszy parametr w kroku 1 jest typem danych przechowywanych jako elementy listy. Drugi parametr określa, w jaki sposób dane mają być przesyłane do i zwracane z funkcji członkowskich klasy kolekcji, takich jak `Add` i `GetAt` .
 
-## <a name="implementing-helper-functions"></a><a name="_core_implementing_helper_functions"></a>Implementowanie funkcji pomocnika
+## <a name="implementing-helper-functions"></a><a name="_core_implementing_helper_functions"></a> Implementowanie funkcji pomocnika
 
 Klasy kolekcji oparte na szablonach `CArray` `CList` i `CMap` używają pięciu globalnych funkcji pomocniczych, które można dostosować zgodnie z potrzebami dla klasy kolekcji pochodnej. Aby uzyskać informacje na temat tych funkcji pomocnika, zobacz sekcję [klasy kolekcji pomocników](reference/collection-class-helpers.md) w *dokumentacji MFC*. Implementacja funkcji serializacji jest niezbędna w przypadku większości przypadków użycia klas kolekcji opartych na szablonach.
 
-### <a name="serializing-elements"></a><a name="_core_serializing_elements"></a>Serializowanie elementów
+### <a name="serializing-elements"></a><a name="_core_serializing_elements"></a> Serializowanie elementów
 
 `CArray`Klasy, `CList` i są `CMap` wywoływane `SerializeElements` w celu przechowywania elementów kolekcji lub odczytywania ich z archiwum.
 
@@ -61,7 +62,7 @@ Jeśli w kolekcji są przechowywane obiekty pochodne `CObject` i używasz `IMPLE
 
 Przeciążone operatory wstawiania dla `CArchive` wywołania `CObject::Serialize` (lub przesłonięcia tej funkcji) dla każdego `CPerson` obiektu.
 
-## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>Korzystanie z klas kolekcji nieszablonowych
+## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a> Korzystanie z klas kolekcji nieszablonowych
 
 MFC obsługuje również klasy kolekcji wprowadzone z MFC w wersji 1,0. Te klasy nie są oparte na szablonach. Mogą one służyć do przechowywania danych obsługiwanych typów `CObject*` ,, `UINT` `DWORD` i `CString` . Za pomocą tych wstępnie zdefiniowanych kolekcji (takich jak `CObList` ) można przechowywać kolekcje wszystkich obiektów pochodzących od `CObject` . MFC udostępnia również inne wstępnie zdefiniowane kolekcje do przechowywania typów pierwotnych, takich jak `UINT` i wskaźników void ( **`void*`** ). Ogólnie rzecz biorąc, często warto definiować własne kolekcje bezpieczne dla typów w celu przechowywania obiektów z bardziej konkretną klasą i jej pochodnych. Należy pamiętać, że wykonanie tej operacji z klasami kolekcji, które nie są oparte na szablonach, nie działa dłużej niż przy użyciu klas opartych na szablonach.
 
@@ -97,6 +98,6 @@ Istnieją dwa sposoby tworzenia bezpiecznych kolekcji z kolekcjami nienależący
 
    Możesz również dodać nową funkcję, definiując nowe funkcje, które zwiększają możliwości kolekcji, a nie tylko umieszczając istniejące funkcje w otokach bezpiecznych dla typów. Na przykład artykuł [usuwanie wszystkich obiektów w kolekcji CObject](deleting-all-objects-in-a-cobject-collection.md) zawiera opis funkcji usuwania wszystkich obiektów znajdujących się na liście. Tę funkcję można dodać do klasy pochodnej jako funkcji składowej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kolekcje](collections.md)

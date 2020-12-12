@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa index'
 title: index — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 50222015e6b365dc161fd4334067c26c7f288337
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 46b49a7e0f65f06ad64ed32367cdfe6f6ca5ed1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330048"
 ---
 # <a name="index-class"></a>index — Klasa
 
-Definiuje wektor indeksu N-wymiarowego. *N*
+Definiuje wektor indeksu *N*-wymiarowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,27 +38,27 @@ Ranga lub liczba wymiarów.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Konstruktor indeksu](#index_ctor)|Inicjuje nowe wystąpienie klasy `index`.|
+|[Konstruktor indeksów](#index_ctor)|Inicjuje nowe wystąpienie klasy `index`.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[operator --](#operator--)|Zmniejsza każdy element `index` obiektu.|
-|[operator%=](#operator_mod_eq)|Oblicza moduł (pozostałość) każdego elementu `index` w obiekcie, gdy ten element jest podzielony przez liczbę.|
-|[operator*=](#operator_star_eq)|Mnoży każdy `index` element obiektu przez liczbę.|
+|[operator--](#operator--)|Zmniejsza każdy element `index` obiektu.|
+|[operator% =](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w obiekcie, `index` gdy ten element jest podzielony przez liczbę.|
+|[operator * =](#operator_star_eq)|Mnoży każdy element `index` obiektu przez liczbę.|
 |[operator/=](#operator_div_eq)|Dzieli każdy element `index` obiektu przez liczbę.|
-|[indeks::operator\[\]](#operator_at)|Zwraca element, który znajduje się w określonym indeksie.|
-|[operator++](#operator_add_add)|Zwiększa każdy element `index` obiektu.|
-|[operator+=](#operator_add_eq)|Dodaje określoną liczbę do `index` każdego elementu obiektu.|
-|[operator=](#operator_eq)|Kopiuje zawartość określonego `index` obiektu do tego obiektu.|
-|[operator-=](#operator_-_eq)|Odejmuje określoną liczbę od `index` każdego elementu obiektu.|
+|[index:: operator\[\]](#operator_at)|Zwraca element, który znajduje się w określonym indeksie.|
+|[operator + +](#operator_add_add)|Zwiększa każdy element `index` obiektu.|
+|[operator + =](#operator_add_eq)|Dodaje określoną liczbę do każdego elementu `index` obiektu.|
+|[operator =](#operator_eq)|Kopiuje zawartość określonego `index` obiektu do tego elementu.|
+|[operator-=](#operator_-_eq)|Odejmuje określoną liczbę od każdego elementu `index` obiektu.|
 
 ### <a name="public-constants"></a>Stałe publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Stała ranga](#rank)|Przechowuje rangę `index` obiektu.|
+|[Stała rangi](#rank)|Przechowuje rangę `index` obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -65,17 +66,17 @@ Ranga lub liczba wymiarów.
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura `index` reprezentuje wektor współrzędnych *N* liczby całkowite, który określa unikatową pozycję w przestrzeni *N*-wymiarowe. Wartości wektora są uporządkowane od najbardziej znaczących do najmniej znaczących. Wartości komponentów można pobrać za pomocą [operatora=](#operator_eq).
+`index`Struktura reprezentuje wektor współrzędnej *N* liczb całkowitych, który określa unikatową pozycję w przestrzeni *n*-wymiarowej. Wartości w wektorze są uporządkowane od najbardziej do najmniej znaczących. Wartości składników można pobrać przy użyciu [operatora =](#operator_eq).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp.h
+**Nagłówek:** amp. h
 
-**Obszar nazw:** Współbieżności
+**Przestrzeń nazw:** Współbieżności
 
-## <a name="index-constructor"></a><a name="index_ctor"></a>Konstruktor indeksu
+## <a name="index-constructor"></a><a name="index_ctor"></a> Konstruktor indeksów
 
-Inicjuje nowe wystąpienie klasy indeksu.
+Inicjuje nowe wystąpienie klasy index.
 
 ```cpp
 index() restrict(amp,cpu);
@@ -107,26 +108,26 @@ explicit index(
 ### <a name="parameters"></a>Parametry
 
 *_Array*<br/>
-Tablica jednowymiarowa z wartościami rangi.
+Jednowymiarowa tablica z wartościami rangi.
 
 *_I*<br/>
 Lokalizacja indeksu w indeksie jednowymiarowym.
 
 *_I0*<br/>
-Długość najważniejszego wymiaru.
+Długość najbardziej znaczącego wymiaru.
 
 *_I1*<br/>
-Długość wymiaru następnego do najbardziej znaczącego.
+Długość kolejnego najbardziej znaczącego wymiaru.
 
 *_I2*<br/>
-Długość najmniej istotnego wymiaru.
+Długość najmniej znaczącego wymiaru.
 
 *_Other*<br/>
-Obiekt indeksu, na którym opiera się nowy obiekt indeksu.
+Obiekt indeksu, na którym bazuje Nowy obiekt indeksu.
 
-## <a name="operator--"></a><a name="operator--"></a>operator --
+## <a name="operator--"></a><a name="operator--"></a> operator--
 
-Zmniejsza każdy element obiektu indeksu.
+Zmniejsza każdy element obiektu index.
 
 ```cpp
 index<_Rank>& operator--() restrict(amp,cpu);
@@ -136,13 +137,13 @@ index operator--(
 ) restrict(amp,cpu);
 ```
 
-### <a name="return-values"></a>Zwracane wartości
+### <a name="return-values"></a>Wartości zwracane
 
-Dla operatora prefiksu obiektu indeksu (*this). Dla operatora sufiksu nowy obiekt indeksu.
+Dla operatora prefiksu obiekt indeksu (* this). Dla operatora sufiksu nowy obiekt indeksu.
 
-## <a name="operator"></a><a name="operator_mod_eq"></a>operator%=
+## <a name="operator"></a><a name="operator_mod_eq"></a> operator% =
 
-Oblicza moduł (reszta) każdego elementu w obiekcie indeksu, gdy ten element jest podzielony przez określoną liczbę.
+Oblicza moduł (resztę) każdego elementu w obiekcie index, gdy ten element jest podzielony przez określoną liczbę.
 
 ```cpp
 index<_Rank>& operator%=(
@@ -153,15 +154,15 @@ index<_Rank>& operator%=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Liczba do podzielenia przez, aby znaleźć moduł.
+Liczba, która ma zostać podzielna przez w celu znalezienia modułu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obiekt indeksu.
+Obiekt index.
 
-## <a name="operator"></a><a name="operator_star_eq"></a>operator*=
+## <a name="operator"></a><a name="operator_star_eq"></a> operator * =
 
-Mnoży każdy element w obiekcie indeksu przez określoną liczbę.
+Mnoży każdy element w obiekcie index przez określoną liczbę.
 
 ```cpp
 index<_Rank>& operator*=(
@@ -174,9 +175,9 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 Liczba do pomnożenia.
 
-## <a name="operator"></a><a name="operator_div_eq"></a>operator/=
+## <a name="operator"></a><a name="operator_div_eq"></a> operator/=
 
-Dzieli każdy element w obiekcie indeksu przez określoną liczbę.
+Dzieli każdy element w obiekcie index przez określoną liczbę.
 
 ```cpp
 index<_Rank>& operator/=(
@@ -187,9 +188,9 @@ index<_Rank>& operator/=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Liczba do podzielenia.
+Liczba, przez którą ma zostać podzielona wartość.
 
-## <a name="operator"></a><a name="operator_at"></a>Operator\[\]
+## <a name="operator"></a><a name="operator_at"></a> zakład\[\]
 
 Zwraca składnik indeksu w określonej lokalizacji.
 
@@ -206,15 +207,15 @@ int& operator[] (
 ### <a name="parameters"></a>Parametry
 
 *_Index*<br/>
-Liczba całkowita od 0 do rangi minus 1.
+Liczba całkowita z zakresu od 0 do rangi minus 1.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element, który jest w określonym indeksie.
+Element o określonym indeksie.
 
 ### <a name="remarks"></a>Uwagi
 
-W tym przykładzie są wyświetlane wartości składowe indeksu.
+Poniższy przykład wyświetla wartości składnika indeksu.
 
 ```cpp
 // Prints 1 2 3.
@@ -224,9 +225,9 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator"></a><a name="operator_add_add"></a>operator++
+## <a name="operator"></a><a name="operator_add_add"></a> operator + +
 
-Zwiększa każdy element obiektu indeksu.
+Zwiększa każdy element obiektu index.
 
 ```cpp
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -238,11 +239,11 @@ index<_Rank> operator++(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dla operatora prefiksu obiektu indeksu (*this). Dla operatora sufiksu nowy obiekt indeksu.
+Dla operatora prefiksu obiekt indeksu (* this). Dla operatora sufiksu nowy obiekt indeksu.
 
-## <a name="operator"></a><a name="operator_add_eq"></a>operator+=
+## <a name="operator"></a><a name="operator_add_eq"></a> operator + =
 
-Dodaje określoną liczbę do każdego elementu obiektu indeksu.
+Dodaje określoną liczbę do każdego elementu obiektu index.
 
 ```cpp
 index<_Rank>& operator+=(
@@ -257,15 +258,15 @@ index<_Rank>& operator+=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Liczba do dodania.
+Liczba, która ma zostać dodana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt indeksu.
+Obiekt index.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator=
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
-Kopiuje zawartość określonego obiektu indeksu do tego obiektu.
+Kopiuje zawartość określonego obiektu index do tego.
 
 ```cpp
 index<_Rank>& operator=(
@@ -276,15 +277,15 @@ index<_Rank>& operator=(
 ### <a name="parameters"></a>Parametry
 
 *_Other*<br/>
-Obiekt indeksu do skopiowania z.
+Obiekt indeksu do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do tego obiektu indeksu.
 
-## <a name="operator-"></a><a name="operator_-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator_-_eq"></a> operator-=
 
-Odejmuje określoną liczbę od każdego elementu obiektu indeksu.
+Odejmuje określoną liczbę od każdego elementu obiektu index.
 
 ```cpp
 index<_Rank>& operator-=(
@@ -299,15 +300,15 @@ index<_Rank>& operator-=(
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Liczba do odjęcie.
+Liczba do odjęcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt indeksu.
+Obiekt index.
 
-## <a name="rank"></a><a name="rank"></a>Rank
+## <a name="rank"></a><a name="rank"></a> Stopni
 
-Pobiera rangę obiektu indeksu.
+Pobiera rangę obiektu index.
 
 ```cpp
 static const int rank = _Rank;
@@ -315,4 +316,4 @@ static const int rank = _Rank;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obszar nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

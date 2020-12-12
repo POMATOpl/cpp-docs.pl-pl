@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wyprowadzanie klasy dokumentu z CDocument'
 title: Wyprowadzanie klasy dokumentów z obiektu CDocument
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-ms.openlocfilehash: 399230446977636cc8769efe32b8f86fad466b83
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9f6dccb5400ba0e62b2f11a3c2d4074cb9bb2f25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327887"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Wyprowadzanie klasy dokumentów z obiektu CDocument
 
@@ -23,7 +24,7 @@ Dokumenty zawierają dane aplikacji i zarządzają nimi. Aby użyć klasy dokume
 
 - Dodaj Zmienne Członkowskie do przechowywania danych poszczególnych dokumentów.
 
-- Przesłoń `CDocument` `Serialize` funkcję członkowską w klasie dokumentu. `Serialize`zapisuje i odczytuje dane dokumentu z i z dysku.
+- Przesłoń `CDocument` `Serialize` funkcję członkowską w klasie dokumentu. `Serialize` zapisuje i odczytuje dane dokumentu z i z dysku.
 
 ## <a name="other-document-functions-often-overridden"></a>Inne funkcje dokumentu są często zastępowane
 

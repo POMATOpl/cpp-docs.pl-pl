@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: przewodniku przenoszenia: Spy + +'
 title: 'Przewodnik przenoszenia: Narzędzie Spy++'
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 6f63f082d96f33246592b0e7f39b6788417f8a32
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c417a6f313ba6f77e0330bd9511b40c8e1285b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331255"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Narzędzie Spy++
 
@@ -19,7 +20,7 @@ Program Spy + + jest szeroko używanym graficznym interfejsem użytkownika narz�
 
 Uważamy, że jest to typowe dla portów aplikacji klasycznych systemu Windows korzystających z MFC i Win32 API, szczególnie w przypadku starych projektów, które nie zostały zaktualizowane przy użyciu poszczególnych wersji Visual C++ od Visual C++ 6,0.
 
-## <a name="step-1-converting-the-project-file"></a><a name="convert_project_file"></a>Krok 1. Konwertowanie pliku projektu.
+## <a name="step-1-converting-the-project-file"></a><a name="convert_project_file"></a> Krok 1. Konwertowanie pliku projektu.
 
 Plik projektu, dwa stare pliki DSW z Visual C++ 6,0, można łatwo skonwertować bez problemów, które wymagają dalszej uwagi. Jeden projekt jest aplikacją programu Spy + +. Druga to SpyHk, zapisywana w C, Pomocnicza biblioteka DLL. Bardziej złożone projekty mogą nie zostać uaktualnione tak szybko, jak opisano [tutaj](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
@@ -29,7 +30,7 @@ Po uaktualnieniu dwóch projektów nasze rozwiązanie wygląda następująco:
 
 Mamy dwa projekty — jeden z dużą liczbą plików C++ i inną bibliotekę DLL, która jest zapisywana w C.
 
-## <a name="step-2-header-file-problems"></a><a name="header_file_problems"></a>Krok 2. Problemy z plikiem nagłówka
+## <a name="step-2-header-file-problems"></a><a name="header_file_problems"></a> Krok 2. Problemy z plikiem nagłówka
 
 Po utworzeniu nowo przekonwertowanego projektu jedną z pierwszych rzeczy, które często się znajdują, jest to, że nie można odnaleźć plików nagłówkowych używanych przez projekt.
 
@@ -41,7 +42,7 @@ Jeden z plików, których nie można znaleźć w programie Spy + +, to verstamp.
 
 Najprostszym sposobem znalezienia symbolu w dostępnych plikach dołączania jest użycie **Znajdź w plikach** (**Ctrl** + **SHIFT** + **F**) i określanie **Visual C++ dołączania katalogów**. Znaleźliśmy ją w ntverp. h. Zamieniono verstamp. h na ntverp. h i ten błąd znika.
 
-## <a name="step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a>Krok 3. Ustawienie Plik_wyjściowy konsolidatora
+## <a name="step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a> Krok 3. Ustawienie Plik_wyjściowy konsolidatora
 
 Starsze projekty czasami mają pliki umieszczane w niekonwencjonalnych lokalizacjach, które mogą spowodować problemy po uaktualnieniu. W takim przypadku musimy dodać `$(SolutionDir)` do ścieżki **dołączania** we właściwościach projektu, aby upewnić się, że program Visual Studio może znaleźć w tym miejscu pliki nagłówkowe, a nie w jednym z folderów projektu.
 
@@ -53,9 +54,9 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 
 **Link. plik_wyjściowy** to dane wyjściowe kompilacji (exe, DLL, na przykład) i są zwykle konstruowane z `$(TargetDir)$(TargetName)$(TargetExt)` , podając ścieżkę, nazwę pliku i rozszerzenie. Jest to typowy błąd podczas migrowania projektów ze starego narzędzia do kompilacji Visual C++ (vcbuild.exe) do nowego narzędzia kompilacji (MSBuild.exe). Ze względu na to, że narzędzie kompilacji zmieniło się w programie Visual Studio 2010, ten problem może wystąpić po każdym przeprowadzeniu migracji projektu poprzedzającego 2010 do wersji 2010 lub nowszej. Podstawowy problem polega na tym, że Kreator migracji projektu nie aktualizuje wartości **link. plik_wyjściowy** , ponieważ nie zawsze jest możliwe ustalenie, jaka wartość powinna być oparta na innych ustawieniach projektu. W związku z tym zazwyczaj trzeba ustawić ją ręcznie. Aby uzyskać więcej informacji, zobacz ten [wpis](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) w blogu Visual C++.
 
-W takim przypadku Właściwość **link. plik_wyjściowy** w przekonwertowanym projekcie została ustawiona na .\Debug\Spyxx.exe i .\Release\Spyxx.exe dla projektu Spy + +, w zależności od konfiguracji. Najlepszym trafieniem jest po prostu zastąpienie tych wartości stałe `$(TargetDir)$(TargetName)$(TargetExt)` dla **wszystkich konfiguracji**. Jeśli to nie zadziała, można dostosować się z tego miejsca lub zmienić właściwości w sekcji **Ogólne** , w której są ustawione wartości (właściwości są **katalogiem wyjściowym**, **nazwą docelową**i **rozszerzeniem docelowym**. Pamiętaj, że jeśli właściwość, którą przeglądasz, używa makr, możesz wybrać opcję **Edytuj** na liście rozwijanej, aby wyświetlić okno dialogowe, w którym jest wyświetlany ostatni ciąg z utworzonymi podstawieniami makr. Możesz wyświetlić wszystkie dostępne makra i ich bieżące wartości, wybierając przycisk **makra** .
+W takim przypadku Właściwość **link. plik_wyjściowy** w przekonwertowanym projekcie została ustawiona na .\Debug\Spyxx.exe i .\Release\Spyxx.exe dla projektu Spy + +, w zależności od konfiguracji. Najlepszym trafieniem jest po prostu zastąpienie tych wartości stałe `$(TargetDir)$(TargetName)$(TargetExt)` dla **wszystkich konfiguracji**. Jeśli to nie zadziała, można dostosować się z tego miejsca lub zmienić właściwości w sekcji **Ogólne** , w której są ustawione wartości (właściwości są **katalogiem wyjściowym**, **nazwą docelową** i **rozszerzeniem docelowym**. Pamiętaj, że jeśli właściwość, którą przeglądasz, używa makr, możesz wybrać opcję **Edytuj** na liście rozwijanej, aby wyświetlić okno dialogowe, w którym jest wyświetlany ostatni ciąg z utworzonymi podstawieniami makr. Możesz wyświetlić wszystkie dostępne makra i ich bieżące wartości, wybierając przycisk **makra** .
 
-## <a name="step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a>Krok 4. Aktualizowanie docelowej wersji systemu Windows
+## <a name="step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a> Krok 4. Aktualizowanie docelowej wersji systemu Windows
 
 Następny błąd wskazuje, że wersja programu WINVER nie jest już obsługiwana w MFC. W programie WINVER dla systemu Windows XP jest 0x0501.
 
@@ -81,7 +82,7 @@ WINVER ustawimy na system Windows 7. Można łatwiej odczytywać kod później, 
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7
 ```
 
-## <a name="step-5-linker-errors"></a><a name="linker_errors"></a>Krok 5. Błędy konsolidatora
+## <a name="step-5-linker-errors"></a><a name="linker_errors"></a> Krok 5. Błędy konsolidatora
 
 Po wprowadzeniu tych zmian projekt SpyHk (DLL) kompiluje, ale generuje błąd konsolidatora.
 
@@ -98,7 +99,7 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
 
 Projekt C DLL, SpyHK.dll, teraz kompiluje i linki bez błędu.
 
-## <a name="step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a>Krok 6. Więcej nieaktualnych plików nagłówkowych
+## <a name="step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a> Krok 6. Więcej nieaktualnych plików nagłówkowych
 
 W tym momencie rozpoczynamy pracę nad głównym projektem wykonywalnym, spyxx.
 
@@ -106,7 +107,7 @@ Nie można znaleźć kilku innych plików dołączanych: ctl3d. h i penwin. h. M
 
 W przypadku projektu z wieloma błędami kompilacji, które stopniowo eliminują, nie jest to realistyczne, aby znaleźć wszystkie zastosowania nieaktualnego interfejsu API natychmiast po usunięciu `#include` dyrektywy. Nie wykryjemy go natychmiast, ale zamiast tego w późniejszym momencie wystąpił błąd, który WM_DLGBORDER był niezdefiniowany. W rzeczywistości jest tylko jeden niezdefiniowany symbol, który pochodzi z ctl3d. h. Po ustaleniu, że odnosi się on do nieaktualnego interfejsu API, usunęliśmy wszystkie odwołania w kodzie.
 
-## <a name="step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a>Krok 7. Aktualizowanie starego kodu iostreams
+## <a name="step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a> Krok 7. Aktualizowanie starego kodu iostreams
 
 Następny błąd jest typowy dla starego kodu C++, który używa iostreams.
 
@@ -241,7 +242,7 @@ MOUT makro jest rozpoznawana jako `*g_pmout` obiekt typu `mstream` . `mstream`Kl
 1>  winmsgs.cpp(4612): note: while trying to match the argument list '(CMsgStream, const wchar_t [10])'
 ```
 
-Istnieje wiele operatorów, ** <<** definicje, których ten rodzaj błędu może być zastraszanie. Po dokładniejszym zajrzeć od dostępnych przeciążeń można zobaczyć, że większość z nich nie jest istotna i że dokładniej jest w `mstream` definicji klasy, zidentyfikowano następującą funkcję, która zdaniem powinna zostać wywołana w tym przypadku.
+Istnieje wiele operatorów, **<<** definicje, których ten rodzaj błędu może być zastraszanie. Po dokładniejszym zajrzeć od dostępnych przeciążeń można zobaczyć, że większość z nich nie jest istotna i że dokładniej jest w `mstream` definicji klasy, zidentyfikowano następującą funkcję, która zdaniem powinna zostać wywołana w tym przypadku.
 
 ```cpp
 mstream& operator<<(LPTSTR psz)
@@ -254,7 +255,7 @@ Powód, dla którego ta funkcja nie jest wywoływana, jest spowodowany tym, że 
 
 Ten typ konwersji jest dozwolony w ramach starszego, mniej rygorystycznego kompilatora, ale więcej najnowszych zmian zgodności wymaga bardziej poprawnego kodu.
 
-## <a name="step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a>Krok 8. Bardziej rygorystyczne konwersje kompilatora
+## <a name="step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a> Krok 8. Bardziej rygorystyczne konwersje kompilatora
 
 Występuje również wiele błędów, takich jak następujące:
 
@@ -294,7 +295,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 Ze względu na to, że w różnych klasach pochodzących od CWnd znajduje się około dziesięciu wystąpień tej funkcji, warto użyć funkcji **Przejdź do definicji** (klawiatura: **F12**) i **Przejdź do deklaracji** (klawiatura: **Ctrl** + **F12**), gdy kursor znajduje się w działaniu w edytorze, aby je zlokalizować i przejść do nich z okna narzędzia **Znajdź symbol** . **Przechodzenie do definicji** jest zazwyczaj bardziej przydatne w przypadku obu tych elementów. Polecenie **Przejdź do deklaracji** będzie znajdować deklaracje inne niż definicje klasy definiującej, takie jak zaprzyjaźnione deklaracje klas lub odwołania do przodu.
 
-## <a name="step-9-mfc-changes"></a><a name="mfc_changes"></a>Krok 9. Zmiany MFC
+## <a name="step-9-mfc-changes"></a><a name="mfc_changes"></a> Krok 9. Zmiany MFC
 
 Następny błąd dotyczy również zmienionego typu deklaracji i występuje również w makrze.
 
@@ -316,7 +317,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
 
 W tym momencie możemy skompilować projekt. Istnieje kilka ostrzeżeń, które mogą być wykonywane przez program, ale istnieją opcjonalne części uaktualnienia, takie jak konwertowanie z MBCS na Unicode lub zwiększanie bezpieczeństwa przy użyciu funkcji Secure CRT.
 
-## <a name="step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a>Krok 10. Rozwiązywanie ostrzeżeń kompilatora
+## <a name="step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a> Krok 10. Rozwiązywanie ostrzeżeń kompilatora
 
 Aby uzyskać pełną listę ostrzeżeń, należy wykonać ponowną kompilację **wszystkich** rozwiązań w rozwiązaniu zamiast zwykłej kompilacji, aby upewnić się, że wszystkie skompilowane wcześniej elementy zostaną ponownie skompilowane, ponieważ tylko raporty z bieżącej kompilacji są wyświetlane. Innym pytaniem jest zaakceptowanie bieżącego poziomu ostrzeżeń lub użycie wyższego poziomu ostrzeżeń.  W przypadku przenoszenia dużej ilości kodu, szczególnie starego kodu, może być odpowiednie użycie wyższego poziomu ostrzegawczego.  Możesz również zacząć od domyślnego poziomu ostrzeżeń, a następnie zwiększyć poziom ostrzeżeń w celu uzyskania wszystkich ostrzeżeń. W przypadku korzystania z programu `/Wall` w plikach nagłówkowych systemu są wyświetlane ostrzeżenia, przez co wiele osób używa `/W4` do uzyskiwania najbardziej ostrzeżeń dotyczących kodu bez otrzymywania ostrzeżeń dotyczących nagłówków systemowych. Jeśli chcesz, aby ostrzeżenia były wyświetlane jako błędy, Dodaj `/WX` opcję. Te ustawienia znajdują się w sekcji **C/C++** okna dialogowego **właściwości projektu** .
 
@@ -500,7 +501,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 Ten problem występuje, gdy zmienna została po raz pierwszy zadeklarowana **`extern`** , później zadeklarowana **`static`** . Znaczenie tych dwóch specyfikatorów klas magazynu wykluczają się wzajemnie, ale jest to dozwolone jako rozszerzenie firmy Microsoft. Jeśli chcesz, aby kod był przenośny do innych kompilatorów lub chcesz go skompilować z `/Za` (zgodność ze standardem ANSI), należy zmienić deklaracje tak, aby miały pasujące specyfikatory klasy magazynu.
 
-## <a name="step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a>Krok 11. Przenoszenie z MBCS do Unicode
+## <a name="step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a> Krok 11. Przenoszenie z MBCS do Unicode
 
 Należy pamiętać, że w świecie systemu Windows, gdy jesteśmy w formacie Unicode, zwykle jest to UTF-16. W przypadku innych systemów operacyjnych, takich jak Linux, są używane UTF-8, ale system Windows zazwyczaj nie. Wersja MBCS MFC była przestarzała w Visual Studio 2013 i 2015, ale nie jest już przestarzała w programie Visual Studio 2017. Jeśli jest używany Visual Studio 2013 lub 2015, przed przeprowadzeniem kroku do rzeczywistego portu MBCS kod w kodzie Unicode UTF-16, firma Microsoft może chcieć tymczasowo wyeliminować ostrzeżenia, które MBCS są przestarzałe, aby można było wykonać inne zadania lub odroczyć port do dogodnego czasu. Bieżący kod korzysta z MBCS i aby kontynuować, że musimy zainstalować wersję MFC/MBCS w wersji ANSI. Biblioteka MFC nie jest częścią domyślnej instalacji programu Visual Studio **Desktop z instalacją języka C++** , dlatego należy ją wybrać z opcjonalnych składników w instalatorze. Zobacz [dodatek MFC MBCS dll](../mfc/mfc-mbcs-dll-add-on.md). Po pobraniu i ponownym uruchomieniu programu Visual Studio można kompilować i łączyć się z MBCS wersją MFC, ale aby usunąć ostrzeżenia o MBCS, jeśli używasz Visual Studio 2013 lub 2015, należy również dodać NO_WARN_MBCS_MFC_DEPRECATION do listy wstępnie zdefiniowanych makr w sekcji **preprocesora** we właściwościach projektu lub na początku pliku nagłówkowego *stdafx. h* lub innego wspólnego pliku nagłówkowego.
 
@@ -566,11 +567,11 @@ pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];
 _tcscpy(pParentNode->m_szText, strTitle);
 ```
 
-Podobnie zmieniono LPSTR (długi wskaźnik na ciąg) i LPCSTR (długi wskaźnik na ciąg stały) na LPTSTR (długi wskaźnik do używanie TCHAR ciąg) i LPCTSTR (długi wskaźnik do stałego ciągu używanie TCHAR), gdy jest to uzasadnione przez błąd kompilatora. Nie wybraliśmy takich zamian przy użyciu wyszukiwania globalnego i zastępowania, ponieważ każda z nich musiała zostać zbadana pojedynczo. W niektórych przypadkach **`char`** wymagana wersja, taka jak podczas przetwarzania niektórych komunikatów systemu Windows korzystających ze struktur systemu Windows, które mają **A** sufiks. W interfejsie API systemu Windows sufiks **a** oznacza ASCII lub ANSI (a także dotyczy MBCS), a sufiks **w** przypadku znaków dwubajtowych lub UTF-16 Unicode. Ten wzorzec nazewnictwa jest używany w nagłówkach systemu Windows, ale również został użyty w kodzie Spy + +, gdy musiałem zostać dodana wersja Unicode funkcji, która została już zdefiniowana w wersji MBCS.
+Podobnie zmieniono LPSTR (długi wskaźnik na ciąg) i LPCSTR (długi wskaźnik na ciąg stały) na LPTSTR (długi wskaźnik do używanie TCHAR ciąg) i LPCTSTR (długi wskaźnik do stałego ciągu używanie TCHAR), gdy jest to uzasadnione przez błąd kompilatora. Nie wybraliśmy takich zamian przy użyciu wyszukiwania globalnego i zastępowania, ponieważ każda z nich musiała zostać zbadana pojedynczo. W niektórych przypadkach **`char`** wymagana wersja, taka jak podczas przetwarzania niektórych komunikatów systemu Windows korzystających ze struktur systemu Windows, które mają  sufiks. W interfejsie API systemu Windows sufiks **a** oznacza ASCII lub ANSI (a także dotyczy MBCS), a sufiks **w** przypadku znaków dwubajtowych lub UTF-16 Unicode. Ten wzorzec nazewnictwa jest używany w nagłówkach systemu Windows, ale również został użyty w kodzie Spy + +, gdy musiałem zostać dodana wersja Unicode funkcji, która została już zdefiniowana w wersji MBCS.
 
 W niektórych przypadkach wymagało zamiany typu w celu użycia wersji, która jest rozpoznawana poprawnie (WNDCLASS zamiast WNDCLASSA na przykład).
 
-W wielu przypadkach musiałeś użyć wersji ogólnej (makra) Win32 API, na przykład `GetClassName` (zamiast `GetClassNameA` ). W przypadku instrukcji switch programu obsługi komunikatów niektóre komunikaty są MBCS lub Unicode, w takich przypadkach musiałeś zmienić kod, aby jawnie wywołać wersję MBCS, ponieważ zastępujemy funkcje o nazwie i **w** określonych funkcjach i **A** dodaliśmy makro dla nazwy ogólnej, która jest rozpoznawana jako poprawna nazwa **a** lub **w** na podstawie tego, czy Unicode jest zdefiniowany.  W wielu częściach kodu, gdy przełączymy się w celu zdefiniowania \_ standardu Unicode, wersja W w wersji jest teraz **A** wybierana nawet wtedy, gdy wersja jest wymagana.
+W wielu przypadkach musiałeś użyć wersji ogólnej (makra) Win32 API, na przykład `GetClassName` (zamiast `GetClassNameA` ). W przypadku instrukcji switch programu obsługi komunikatów niektóre komunikaty są MBCS lub Unicode, w takich przypadkach musiałeś zmienić kod, aby jawnie wywołać wersję MBCS, ponieważ zastępujemy funkcje o nazwie i **w** określonych funkcjach i  dodaliśmy makro dla nazwy ogólnej, która jest rozpoznawana jako poprawna nazwa **a** lub **w** na podstawie tego, czy Unicode jest zdefiniowany.  W wielu częściach kodu, gdy przełączymy się w celu zdefiniowania \_ standardu Unicode, wersja W w wersji jest teraz  wybierana nawet wtedy, gdy wersja jest wymagana.
 
 Istnieje kilka miejsc, w których należy podjąć specjalne działania. Użycie `WideCharToMultiByte` lub `MultiByteToWideChar` może wymagać bliższego wyglądu. Oto przykład `WideCharToMultiByte` użycia.
 
@@ -616,7 +617,7 @@ Jako sprawdzenie naszej pracy należy zresetować **zestaw znaków** , aby **uż
 
 W naszej pracy z tym rozwiązaniem Spy + + zajęło ona około dwóch dni roboczych na przekonwertowanie kodu na format Unicode. , Które nie obejmowały czasu przetestowania.
 
-## <a name="step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a>Krok 12. Przenoszenie do używania bezpiecznego CRT
+## <a name="step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a> Krok 12. Przenoszenie do używania bezpiecznego CRT
 
 Przenoszenie kodu w celu używania bezpiecznych wersji (wersje z sufiksem **_s** ) funkcji CRT jest dalej. W takim przypadku ogólna strategia polega na zastępowaniu funkcji z wersją **_s** , a następnie, zazwyczaj dodać wymagane dodatkowe parametry rozmiaru buforu. W wielu przypadkach jest to proste, ponieważ rozmiar jest znany. W innych przypadkach, w których rozmiar nie jest natychmiast dostępny, konieczne jest dodanie dodatkowych parametrów do funkcji, która używa funkcji CRT, lub może sprawdzić użycie buforu docelowego i zobaczyć, jakie są odpowiednie limity rozmiaru.
 
@@ -634,7 +635,7 @@ Niektóre typowe przypadki: dla `memcpy` , podczas przełączania do `memcpy_s` 
 
 Przy użyciu tych technik trwało około pół dnia, aby przekonwertować kod w celu użycia funkcji Secure CRT. Jeśli wybierzesz pozycję nie do przeciążenia szablonu i dodasz parametry rozmiaru ręcznie, prawdopodobnie trwa dwa razy lub trzy razy więcej czasu.
 
-## <a name="step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a>Krok 13. /Zc: forScope — jest przestarzałe
+## <a name="step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a> Krok 13. /Zc: forScope — jest przestarzałe
 
 Ponieważ Visual C++ 6,0, kompilator jest zgodny z bieżącym standardem, który ogranicza zakres zmiennych zadeklarowanych w pętli do zakresu pętli. Opcja kompilatora [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**Wymuszaj zgodność z zakresem pętli** we właściwościach projektu) określa, czy jest to raportowany jako błąd. Należy zaktualizować nasz kod, aby był zgodny, i dodać deklaracje tylko poza pętlą. Aby uniknąć wprowadzania zmian w kodzie, można zmienić to ustawienie w sekcji **Język** właściwości projektu C++ na `No (/Zc:forScope-)` . Należy jednak pamiętać, że `/Zc:forScope-` mogą zostać usunięte w przyszłych wydaniach Visual C++, więc w efekcie kod będzie musiał ulec zmianie, aby był zgodny ze standardem.
 
@@ -671,7 +672,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 Przenoszenie programu Spy + + od oryginalnego kodu Visual C++ 6,0 do najnowszego kompilatora zajęło około 20 godzin czasu kodowania w ciągu tygodnia. Firma Microsoft została uaktualniona bezpośrednio przez osiem wydań produktu z programu Visual Studio 6,0 do programu Visual Studio 2015. Jest to teraz zalecane rozwiązanie dla wszystkich uaktualnień w projektach dużych i małych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Poprzednia analiza przypadku: COM Spy](../porting/porting-guide-com-spy.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wyliczenia przestrzeni nazw współbieżności'
 title: Wyliczenia przestrzeni nazw współbieżności
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 8b9aec0a3464b921ca80f731ac4a3c26e72ef34e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d4f5e2fcdb2beb19d65f96687b53e52ba03ed8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832246"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331296"
 ---
 # <a name="concurrency-namespace-enums"></a>Wyliczenia przestrzeni nazw współbieżności
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: procedurach obsługi wyjątków'
 title: Obsługa wyjątków — Procedury
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - exception handling, routines
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
-ms.openlocfilehash: 8def356793906074e6fc4b8d7a139ce1915a5f9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d241c3ef7f32a96f08d4ad499887963fda031967
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331098"
 ---
 # <a name="exception-handling-routines"></a>Obsługa wyjątków — Procedury
 
-Użyj funkcji obsługi wyjątków języka C++, aby odzyskać z nieoczekiwanych zdarzeń podczas wykonywania programu.
+Użyj funkcji obsługi wyjątków C++ do odzyskania z nieoczekiwanych zdarzeń podczas wykonywania programu.
 
-## <a name="exception-handling-functions"></a>Funkcje obsługi wyjątków
+## <a name="exception-handling-functions"></a>Funkcje Exception-Handling
 
 |Funkcja|Zastosowanie|
 |--------------|---------|
-|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Win32 obsługi wyjątków (wyjątki strukturalne C), co kod C++ wpisane wyjątków|
-|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Zainstaluj własną procedurę kończenia żądań ma zostać wywołana przez **zakończenia**|
-|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Zainstaluj własną funkcję zakończenia ma zostać wywołana przez **nieoczekiwany**|
-|[Zakończenie](../c-runtime-library/reference/terminate-crt.md)|Wywołuje się automatycznie w pewnych okolicznościach po wyrzuceniu wyjątku. **Zakończyć** wywołaniach funkcji **przerwać** funkcji można określić za pomocą **set_terminate**|
-|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Wywołania **zakończyć** funkcji można określić za pomocą **set_unexpected**. **Nieoczekiwany** funkcja nie jest używany w bieżącej implementacji obsługi wyjątków C++ firmy Microsoft|
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Obsługuj wyjątki Win32 (wyjątki strukturalne C) jako wyjątki z definicją języka C++|
+|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Zainstaluj własną procedurę zakończenia, która ma zostać wywołana przez **zakończenie**|
+|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Zainstaluj własną funkcję zakończenia, która ma zostać wywołana przez **nieoczekiwane**|
+|[kończyć](../c-runtime-library/reference/terminate-crt.md)|Wywoływana automatycznie w pewnych okolicznościach po wystąpieniu wyjątku. Funkcja **Terminate** wywołuje **metodę Abort** lub funkcję określoną przy użyciu **set_terminate**|
+|[oczekiwan](../c-runtime-library/reference/unexpected-crt.md)|Wywołania **zakończone** lub funkcja określona przy użyciu **set_unexpected**. **Nieoczekiwana** funkcja nie jest używana w bieżącej implementacji obsługi wyjątków Microsoft C++|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4840'
 title: Ostrzeżenie kompilatora (poziom 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a365dc38aff1ab9811407924f7f6e554d91c6f1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330464"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>Ostrzeżenie kompilatora (poziom 4) C4840
 
@@ -49,7 +50,7 @@ int main()
 }
 ```
 
-W przypadku ciągów skompilowanych i zarządzanych przy użyciu `CStringW`, podane `operator LPCWSTR()` powinny być używane do rzutowania obiektu `CStringW` na wskaźnik ciągu w stylu C oczekiwany przez ciąg formatu:
+W przypadku ciągów skompilowanych i zarządzanych przy użyciu `CStringW` , dostarczone, `operator LPCWSTR()` powinno być używane do rzutowania `CStringW` obiektu na wskaźnik ciągu w stylu C oczekiwany przez ciąg formatu:
 
 ```cpp
     CStringW str1;

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: locale'
 title: Regionalne
 ms.date: 04/11/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 660a4fb0103de8c1ac06272c711e02fcd6d12289
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331071"
 ---
 # <a name="locale"></a>Regionalne
 
@@ -27,7 +28,7 @@ Użyj [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md
 
 Dostępne są bardziej bezpieczne wersje funkcji w poniższej tabeli, wskazywane przez sufiks **_s** ("Secure"). Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).
 
-## <a name="locale-dependent-routines"></a>Procedury zależne od ustawień regionalnych
+## <a name="locale-dependent-routines"></a>Procedury Locale-Dependent
 
 |Procedura|Zastosowanie|Ustaw zależność ustawienia kategorii **ustawień regionalnych**|
 |-------------|---------|---------------------------------------------|
@@ -69,7 +70,7 @@ Dostępne są bardziej bezpieczne wersje funkcji w poniższej tabeli, wskazywane
 > [!NOTE]
 > W przypadku procedur wielobajtowych strona kodowa wielobajtowego musi być równoważna ustawieniom regionalnym ustawionym na wartość [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). [_setmbcp](../c-runtime-library/reference/setmbcp.md), z argumentem **_MB_CP_LOCALE** powoduje, że strona kodowa wielobajtowego jest taka sama jak strona kodowa **setlocale** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Internacjonalizacja](../c-runtime-library/internationalization.md)<br/>
 [Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

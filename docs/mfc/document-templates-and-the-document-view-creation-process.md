@@ -1,5 +1,6 @@
 ---
-title: Szablony dokumentów i proces tworzenia dokumentu-widoku
+description: 'Dowiedz się więcej o programie: szablony dokumentów i proces tworzenia dokumentu/widoku'
+title: Szablony dokumentów i proces tworzenia Document-View
 ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: b96a11926927e89890ca268dcff7d347079b25fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 324d46df1027c03e7f41564691742c5c065cf85c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330252"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Szablony dokumentów i proces tworzenia dokumentu/widoku
 
@@ -37,7 +38,7 @@ Na przykład szablon dokumentu jest trzecią z trzech dla aplikacji. Jeśli w ap
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)<br/>
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)<br/>
 [Tworzenie szablonu dokumentu](document-template-creation.md)<br/>
 [Tworzenie dokumentu/widoku](document-view-creation.md)<br/>
 [Relacje między obiektami MFC](relationships-among-mfc-objects.md)<br/>

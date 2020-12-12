@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze ChainInterfaces
 title: ChainInterfaces — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: 48b663f2042ff0095466d83fe872ef6196112f76
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc943b16d587a3b542e49d72e6bdc24ba2546e16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328868"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces — Struktura
 
@@ -138,7 +139,7 @@ Nazwa                                   | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces:: CanCastTo —
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a> ChainInterfaces:: CanCastTo —
 
 Wskazuje, czy określony identyfikator interfejsu może być rzutowany do każdej specjalizacji zdefiniowanej przez parametry szablonu inne niż domyślne.
 
@@ -161,7 +162,7 @@ Wskaźnik do ostatniego identyfikatora interfejsu, który został pomyślnie prz
 
 **`true`** Jeśli wszystkie operacje rzutowania zakończyły się powodzeniem; w przeciwnym razie **`false`** .
 
-## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces:: CastToUnknown —
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a> ChainInterfaces:: CastToUnknown —
 
 Rzutuje wskaźnik interfejsu typu zdefiniowanego przez parametr szablonu *I0* na wskaźnik do `IUnknown` .
 
@@ -173,7 +174,7 @@ __forceinline IUnknown* CastToUnknown();
 
 Wskaźnik do `IUnknown` .
 
-## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces:: FillArrayWithIid —
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a> ChainInterfaces:: FillArrayWithIid —
 
 Przechowuje identyfikator interfejsu zdefiniowany przez parametr szablonu *I0* w określonej lokalizacji w określonej tablicy identyfikatorów interfejsu.
 
@@ -192,7 +193,7 @@ Wskaźnik na wartość indeksu do tablicy *IID* .
 *IID*<br/>
 Tablica identyfikatorów interfejsów.
 
-## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces:: IidCount —
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a> ChainInterfaces:: IidCount —
 
 Całkowita liczba identyfikatorów interfejsów zawartych w interfejsach określonych przez parametry szablonu *I0* do *i9*.
 
@@ -208,7 +209,7 @@ Całkowita liczba identyfikatorów interfejsów.
 
 Parametry szablonu *I0* i *I1* są wymagane, a parametry *I2* do *i9* są opcjonalne. Liczba IID każdego interfejsu jest zwykle 1.
 
-## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces:: Verify
+## <a name="chaininterfacesverify"></a><a name="verify"></a> ChainInterfaces:: Verify
 
 Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *i9* dziedziczy z `IUnknown` i/lub `IInspectable` , i że *I0* dziedziczy z elementów *I1* za pośrednictwem *i9*.
 

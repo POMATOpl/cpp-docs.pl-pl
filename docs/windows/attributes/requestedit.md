@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: requestedit'
 title: requestedit (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: d5cf2bb8fab75c64d74a2f28964b3019200dad51
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4511777077d573831c7cd04623b010cae5e0e108
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329633"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -36,7 +37,7 @@ Zobacz przykład dla [powiązania](bindable.md) z przykładowym wykorzystaniem *
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

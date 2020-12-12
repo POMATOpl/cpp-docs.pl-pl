@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: importidl'
 title: importidl (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b10caa9f4b1467727c70b6d968ca6aa33b58da0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329879"
 ---
 # <a name="importidl"></a>importidl
 
@@ -48,7 +49,7 @@ Możesz użyć **importidl**, na przykład, jeśli chcesz użyć ręcznie zakodo
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Dowolne miejsce|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

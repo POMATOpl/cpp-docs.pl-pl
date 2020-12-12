@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: kontrolki listy wirtualnej'
 title: Wirtualne formanty listy
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-ms.openlocfilehash: 12200697af90a3c83fea3df676bd4d2488598d45
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1d441fc74ab6b1ae395ce0b23bcba08c1703213f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331352"
 ---
 # <a name="virtual-list-controls"></a>Wirtualne formanty listy
 
@@ -21,7 +22,7 @@ Formant listy wirtualnej to kontrolka widoku listy, która ma styl LVS_OWNERDATA
 > [!NOTE]
 > Oprócz udostępniania funkcji listy wirtualnej w programie `CListCtrl` MFC zapewnia również te same funkcje w klasie [CListView](../mfc/reference/clistview-class.md) .
 
-Istnieją pewne problemy ze zgodnością, które należy wziąć pod uwagę podczas tworzenia formantów listy wirtualnej. Aby uzyskać więcej informacji, zobacz sekcję problemy ze zgodnością w temacie kontrolki widoku listy w Windows SDK.
+Istnieją pewne problemy ze zgodnością, które należy wziąć pod uwagę podczas tworzenia formantów listy wirtualnej. Aby uzyskać więcej informacji, zobacz sekcję problemy ze zgodnością w temacie List-View Controls w Windows SDK.
 
 ## <a name="handling-the-lvn_getdispinfo-notification"></a>Obsługa powiadomienia LVN_GETDISPINFO
 
@@ -31,15 +32,15 @@ Kontrolki listy wirtualnej utrzymują bardzo małe informacje o elemencie. Opró
 
 W programie obsługi komunikatu powiadomienia o LVN_GETDISPINFO należy sprawdzić, czy jest wyświetlany żądany typ informacji. Możliwe wartości są następujące:
 
-- `LVIF_TEXT`Składowa *pszText* musi być wypełniona.
+- `LVIF_TEXT` Składowa *pszText* musi być wypełniona.
 
-- `LVIF_IMAGE`Składowa *IImage* musi być wypełniona.
+- `LVIF_IMAGE` Składowa *IImage* musi być wypełniona.
 
-- `LVIF_INDENT`Składowa *iIndent* musi być wypełniona.
+- `LVIF_INDENT` Składowa *iIndent* musi być wypełniona.
 
-- `LVIF_PARAM`Składowa *lParam* musi być wypełniona. (Nieobecne dla elementów podrzędnych).
+- `LVIF_PARAM` Składowa *lParam* musi być wypełniona. (Nieobecne dla elementów podrzędnych).
 
-- `LVIF_STATE`Należy podać element członkowski *stanu* .
+- `LVIF_STATE` Należy podać element członkowski *stanu* .
 
 Następnie należy podać, jakie informacje są wymagane z powrotem do struktury.
 
@@ -55,7 +56,7 @@ Poniższy przykład aktualizuje pamięć podręczną z zakresem przesłanym do f
 
 [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/cpp/virtual-list-controls_3.cpp)]
 
-Aby uzyskać więcej informacji na temat przygotowywania i konserwowania pamięci podręcznej, zobacz sekcję Zarządzanie pamięcią podręczną w temacie kontrolki widoku listy w Windows SDK.
+Aby uzyskać więcej informacji na temat przygotowywania i konserwowania pamięci podręcznej, zobacz sekcję Zarządzanie pamięcią podręczną w temacie List-View Controls w Windows SDK.
 
 ## <a name="finding-specific-items"></a>Znajdowanie określonych elementów
 
@@ -63,7 +64,7 @@ Komunikat z powiadomieniem LVN_ODFINDITEM jest wysyłany przez kontrolkę listy 
 
 Należy przygotować się do wyszukania elementu, który odpowiada informacjom podanym przez formant widoku listy. Należy zwrócić indeks elementu, jeśli to się powiedzie, lub-1, jeśli nie zostanie znaleziony pasujący element.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Formanty](../mfc/controls-mfc.md)

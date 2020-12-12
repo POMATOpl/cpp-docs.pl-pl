@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie Event
 title: event — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c33096795d1980ea78cbce8c38fa9305ee45cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331250"
 ---
 # <a name="event-class"></a>event — Klasa
 
@@ -65,7 +66,7 @@ Aby uzyskać więcej informacji, zobacz [struktury danych synchronizacji](../../
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="event"></a><a name="ctor"></a>wydarzen
+## <a name="event"></a><a name="ctor"></a> wydarzen
 
 Tworzy nowe zdarzenie.
 
@@ -75,7 +76,7 @@ _CRTIMP event();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="event"></a><a name="dtor"></a>~ zdarzenie
+## <a name="event"></a><a name="dtor"></a> ~ zdarzenie
 
 Niszczy zdarzenie.
 
@@ -87,7 +88,7 @@ Niszczy zdarzenie.
 
 Oczekuje się, że nie ma wątków oczekujących na zdarzenie, gdy destruktor jest uruchomiony. Umożliwienie zdarzeniu destruktora z wątkami nadal czeka na to zachowanie niezdefiniowane.
 
-## <a name="reset"></a><a name="reset"></a>zresetować
+## <a name="reset"></a><a name="reset"></a> zresetować
 
 Resetuje zdarzenie do stanu niesygnalizowanego.
 
@@ -95,7 +96,7 @@ Resetuje zdarzenie do stanu niesygnalizowanego.
 void reset();
 ```
 
-## <a name="set"></a><a name="set"></a>zbiór
+## <a name="set"></a><a name="set"></a> zbiór
 
 Sygnalizuje zdarzenie.
 
@@ -107,7 +108,7 @@ void set();
 
 Sygnalizowanie zdarzenia może spowodować dowolną liczbę kontekstów oczekujących na zdarzenie, aby stał się możliwy do uruchomienia.
 
-## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a> timeout_infinite
 
 Wartość wskazująca, że oczekiwania nigdy nie powinien przekraczać limitu czasu.
 
@@ -115,7 +116,7 @@ Wartość wskazująca, że oczekiwania nigdy nie powinien przekraczać limitu cz
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a><a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a> trwa
 
 Czeka, aż zdarzenie zostanie zasygnalizowane.
 
@@ -135,7 +136,7 @@ Jeśli oczekiwanie zakończyło się, wartość `0` jest zwracana; w przeciwnym 
 > [!IMPORTANT]
 > W aplikacji platforma uniwersalna systemu Windows (platformy UWP) Nie wywołuj do `wait` wątku ASTA, ponieważ to wywołanie może blokować bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać.
 
-## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a> wait_for_multiple
 
 Czeka na zasygnalizowanie wielu zdarzeń.
 
@@ -172,6 +173,6 @@ Jeśli parametr `_FWaitAll` jest ustawiony na wartość, **`true`** Aby wskazać
 > [!IMPORTANT]
 > W aplikacji platforma uniwersalna systemu Windows (platformy UWP) Nie wywołuj do `wait_for_multiple` wątku ASTA, ponieważ to wywołanie może blokować bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

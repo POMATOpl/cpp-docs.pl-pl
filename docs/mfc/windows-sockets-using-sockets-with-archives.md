@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Windows Sockets: używanie gniazd z archiwami'
 title: 'Windows Sockets: używanie gniazd z archiwami'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,78 +8,78 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 55b4f9a5412c1447fe2b3bde10cb934b91abf008
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bd5f239a0fdcee4bf6c6141994c4ca5002bdc6b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331341"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: używanie gniazd z archiwami
 
-W tym artykule opisano [model programowania CSocket](#_core_the_csocket_programming_model). Klasa [CSocket](../mfc/reference/csocket-class.md) dostarcza obsługę gniazda na wyższym poziomie abstrakcji niż klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket`używa wersji protokołu serializacji MFC do przekazywania danych do i z obiektu gniazda za pośrednictwem obiektu MFC [CArchive.](../mfc/reference/carchive-class.md) `CSocket`zapewnia blokowanie (podczas zarządzania przetwarzaniem w tle `CArchive`wiadomości systemu Windows) i daje dostęp do , który zarządza wieloma `CAsyncSocket`aspektami komunikacji, które trzeba zrobić samodzielnie za pomocą surowego interfejsu API lub klasy .
+W tym artykule opisano [model programowania CSocket](#_core_the_csocket_programming_model). Klasy [CSocket](../mfc/reference/csocket-class.md) udostępniają wsparcie dla gniazda na wyższym poziomie abstrakcji niż w klasie [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` używa wersji protokołu serializacji MFC do przekazywania danych do i z obiektu gniazda za pośrednictwem obiektu MFC [CArchive](../mfc/reference/carchive-class.md) . `CSocket` zapewnia blokowanie (podczas zarządzania przetwarzaniem komunikatów systemu Windows w tle) i zapewnia dostęp do programu `CArchive` , który zarządza wieloma aspektami komunikacji, które trzeba wykonać samodzielnie przy użyciu raw API lub klasy `CAsyncSocket` .
 
 > [!TIP]
-> Można użyć `CSocket` klasy samodzielnie, jako wygodniejszej wersji `CAsyncSocket`programu , ale `CSocket` najprostszym `CArchive` modelem programowania jest użycie z obiektem.
+> Możesz użyć samej klasy `CSocket` , jako bardziej wygodnej wersji `CAsyncSocket` , ale najprostszy model programowania jest używany `CSocket` z `CArchive` obiektem.
 
-Aby uzyskać więcej informacji o tym, jak działa implementacja gniazd z archiwami, zobacz [Gniazda systemu Windows: Jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md). Na przykład kod, zobacz [Windows Sockets: Sequence of Operations](../mfc/windows-sockets-sequence-of-operations.md) i Windows [Sockets: Przykład gniazd przy użyciu archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md). Aby uzyskać informacje na temat niektórych funkcji, które można uzyskać, wyprowadzając własne klasy z klas gniazd, zobacz [Gniazda systemu Windows: Pochodne z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Aby uzyskać więcej informacji na temat sposobu działania implementacji gniazd z archiwami, zobacz [Windows Sockets: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md). Na przykład kod można znaleźć w temacie [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md) i [Windows Sockets: przykład gniazd korzystających z archiwów](../mfc/windows-sockets-example-of-sockets-using-archives.md). Aby uzyskać informacje o niektórych funkcjach, które można uzyskać przez wyjęcie własnych klas z klas Sockets, zobacz [Windows Sockets: pochodne z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 > [!NOTE]
-> Jeśli piszesz program kliencki MFC do komunikowania się z ustalonymi serwerami (nie-MFC), nie wysyłaj obiektów C++ za pośrednictwem archiwum. Chyba że serwer jest aplikacją MFC, która rozumie rodzaje obiektów, które chcesz wysłać, nie będzie w stanie odbierać i deserializacji obiektów. Dla powiązanych materiałów na temat komunikowania się z aplikacjami innych niż MFC, zobacz także artykuł [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md).
+> W przypadku pisania programu klienckiego MFC w celu komunikowania się z ustalonymi serwerami (bez MFC) nie należy wysyłać obiektów C++ za pomocą archiwum. Chyba że serwer jest aplikacją MFC, która zrozumie rodzaje obiektów, które chcesz wysłać, nie będzie można odbierać i deserializować obiektów. W przypadku pokrewnego materiału z tematu komunikowania się z aplikacjami nienależącymi do MFC Zobacz również artykuł [Windows Sockets: porządkowanie bajtów](../mfc/windows-sockets-byte-ordering.md).
 
-## <a name="the-csocket-programming-model"></a><a name="_core_the_csocket_programming_model"></a>Model programowania CSocket
+## <a name="the-csocket-programming-model"></a><a name="_core_the_csocket_programming_model"></a> Model programowania CSocket
 
-Za `CSocket` pomocą obiektu obejmuje tworzenie i kojarzenie ze sobą kilka obiektów klasy MFC. W ogólnej procedurze poniżej każdy krok jest podejmowana przez gniazdo serwera i gniazdo klienta, z wyjątkiem kroku 3, w którym każdy typ gniazda wymaga innej akcji.
+Użycie `CSocket` obiektu obejmuje tworzenie i kojarzenie razem kilku obiektów klas MFC. W ogólnej procedurze poniżej każdy krok jest podejmowany zarówno przez gniazdo serwera, jak i gniazdo klienta, z wyjątkiem kroku 3, w którym każdy typ gniazda wymaga innej akcji.
 
 > [!TIP]
-> W czasie wykonywania aplikacja serwera zwykle uruchamia się najpierw, aby być gotowym i "nasłuchiwaniem", gdy aplikacja kliencka szuka połączenia. Jeśli serwer nie jest gotowy, gdy klient próbuje się połączyć, zazwyczaj wymaga się, aby aplikacja użytkownika, aby spróbować połączyć się ponownie później.
+> W czasie wykonywania aplikacja serwera zwykle zaczyna być gotowa i "nasłuchuje", gdy aplikacja kliencka wyszukuje połączenie. Jeśli serwer nie jest gotowy, gdy klient próbuje nawiązać połączenie, zazwyczaj aplikacja użytkownika wymaga ponownego nawiązania połączenia później.
 
-#### <a name="to-set-up-communication-between-a-server-socket-and-a-client-socket"></a>Aby skonfigurować komunikację między gniazdem serwera a gniazdem klienta
+#### <a name="to-set-up-communication-between-a-server-socket-and-a-client-socket"></a>Aby skonfigurować komunikację między gniazdem serwera i gniazdem klienta
 
-1. Konstruuj [obiekt CSocket.](../mfc/reference/csocket-class.md)
+1. Utwórz obiekt [CSocket](../mfc/reference/csocket-class.md) .
 
-1. Użyj obiektu, aby utworzyć podstawowy uchwyt **SOCKET.**
+1. Użyj obiektu, aby utworzyć podstawowy uchwyt **gniazda** .
 
-   W `CSocket` przypadku obiektu klienta zwykle należy używać parametrów domyślnych do [tworzenia](../mfc/reference/casyncsocket-class.md#create), chyba że potrzebne jest gniazdo datagramu. W `CSocket` przypadku obiektu serwera należy określić `Create` port w wywołaniu.
-
-    > [!NOTE]
-    >  `CArchive`nie działa z gniazdami datagramu. Jeśli chcesz użyć `CSocket` dla gniazda datagramu, należy użyć klasy, jak można użyć `CAsyncSocket`, to znaczy, bez archiwum. Ponieważ datagramy są zawodne (nie gwarantuje się dotrzeć i mogą być powtarzane lub poza kolejnością), nie są one zgodne z serializacji za pośrednictwem archiwum. Można oczekiwać, że operacja serializacji zakończyć niezawodnie i w sekwencji. Jeśli spróbujesz `CSocket` użyć `CArchive` obiektu dla datagramu, potwierdzenie MFC kończy się niepowodzeniem.
-
-1. Jeśli gniazdo jest klientem, wywołaj [CAsyncSocket::Connect,](../mfc/reference/casyncsocket-class.md#connect) aby podłączyć obiekt gniazda do gniazda serwera.
-
-     — lub —
-
-   Jeśli gniazdo jest serwerem, wywołaj [CAsyncSocket::Listen,](../mfc/reference/casyncsocket-class.md#listen) aby rozpocząć nasłuchiwanie prób połączenia z klienta. Po otrzymaniu żądania połączenia, zaakceptuj go, dzwoniąc [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   W przypadku `CSocket` obiektu klienta zazwyczaj należy używać domyślnych parametrów do [utworzenia](../mfc/reference/casyncsocket-class.md#create), chyba że potrzebujesz gniazda datagramu. Dla `CSocket` obiektu serwera należy określić port w `Create` wywołaniu.
 
     > [!NOTE]
-    >  Funkcja `Accept` elementu członkowskiego przyjmuje odwołanie do `CSocket` nowego, pustego obiektu jako parametru. Należy skonstruować ten obiekt `Accept`przed wywołaniem . Jeśli ten obiekt gniazda wykracza poza zakres, połączenie zostanie zamknięte. Nie należy `Create` wywoływać tego nowego obiektu gniazda.
+    >  `CArchive` Program nie współpracuje z gniazdami datagramów. Jeśli chcesz użyć `CSocket` dla gniazda datagramu, musisz użyć klasy, `CAsyncSocket` która ma być używana, czyli bez archiwum. Ze względu na to, że datagramy są niezawodne (niegwarantowane i mogą być powtórzone lub z sekwencji), nie są zgodne z serializacji za pomocą archiwum. Oczekuje się, że operacja serializacji zostanie wykonana niezawodnie i w kolejności. Jeśli spróbujesz użyć `CSocket` z `CArchive` obiektem dla datagramu, potwierdzenie MFC zakończy się niepowodzeniem.
 
-1. Utwórz obiekt [CSocketFile,](../mfc/reference/csocketfile-class.md) `CSocket` kojarząc z nim obiekt.
+1. Jeśli gniazdo jest klientem, wywołaj [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect) , aby połączyć obiekt Socket z gniazdem serwera.
 
-1. Utwórz [CArchive](../mfc/reference/carchive-class.md) obiektu do ładowania (odbieranie) lub przechowywania (wysyłanie) danych. Archiwum jest skojarzone `CSocketFile` z obiektem.
+     -lub-
 
-   Należy pamiętać, `CArchive` że nie działa z gniazdami datagramu.
-
-1. Obiekt `CArchive` służy do przekazywania danych między gniazdami klienta i serwera.
-
-   Należy pamiętać, że `CArchive` dany obiekt przenosi dane tylko w jednym kierunku: do ładowania (odbierania) lub przechowywania (wysyłania). W niektórych przypadkach użyjesz dwóch `CArchive` obiektów: jednego do wysyłania danych, drugiego do odbierania potwierdzeń.
-
-   Po zaakceptowaniu połączenia i skonfigurowaniu archiwum można wykonywać takie zadania, jak sprawdzanie poprawności haseł.
-
-1. Zniszcz obiekty archiwum, pliku gniazda i gniazda.
+   Jeśli gniazdo jest serwerem, wywołaj [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) , aby rozpocząć nasłuchiwanie prób połączenia od klienta. Po odebraniu żądania połączenia zaakceptuj je przez wywołanie [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
 
     > [!NOTE]
-    >  Klasa `CArchive` dostarcza `IsBufferEmpty` funkcję elementu członkowskiego specjalnie `CSocket`do użytku z klasą . Jeśli bufor zawiera wiele komunikatów danych, na przykład należy pętli, dopóki wszystkie z nich są odczytywane i bufor jest wyczyszczone. W przeciwnym razie następne powiadomienie, że istnieją dane do odebrania, może być bezterminowo opóźnione. Służy `IsBufferEmpty` do zapewnienia, że można pobrać wszystkie dane.
+    >  `Accept`Funkcja członkowska przyjmuje odwołanie do nowego, pustego `CSocket` obiektu jako jego parametru. Należy skonstruować ten obiekt przed wywołaniem `Accept` . Jeśli ten obiekt gniazda wykracza poza zakres, połączenie zostanie zamknięte. Nie wywołuj `Create` dla tego nowego obiektu gniazda.
 
-Artykuł [Windows Sockets: Sequence of Operations](../mfc/windows-sockets-sequence-of-operations.md) ilustruje obie strony tego procesu za pomocą przykładowego kodu.
+1. Utwórz obiekt [CSocketFile](../mfc/reference/csocketfile-class.md) , kojarząc `CSocket` z nim obiekt.
+
+1. Utwórz obiekt [CArchive](../mfc/reference/carchive-class.md) do ładowania (otrzymywania) lub zapisywania (wysyłania) danych. Archiwum jest skojarzone z `CSocketFile` obiektem.
+
+   Należy pamiętać, że program nie `CArchive` współpracuje z gniazdami datagramów.
+
+1. Użyj `CArchive` obiektu, aby przekazać dane między gniazdem klienta i serwera.
+
+   Należy pamiętać, że dany `CArchive` obiekt przenosi dane tylko w jednym kierunku: w przypadku ładowania (otrzymywania) lub przechowywania (wysyłania). W niektórych przypadkach zostaną użyte dwa `CArchive` obiekty: jeden do wysyłania danych, drugi do otrzymywania potwierdzeń.
+
+   Po zaakceptowaniu połączenia i skonfigurowaniu archiwum można wykonać takie zadania jak Walidacja haseł.
+
+1. Zniszcz obiekty archiwalne, Socket i Sockets.
+
+    > [!NOTE]
+    >  Klasa `CArchive` dostarcza `IsBufferEmpty` funkcję elementu członkowskiego, która jest przeznaczona do użycia z klasą `CSocket` . Jeśli bufor zawiera wiele komunikatów danych, na przykład należy wykonać pętlę do momentu, aż wszystkie z nich zostaną odczytane i bufor zostanie wyczyszczony. W przeciwnym razie Twoje następne powiadomienie o otrzymaniu danych może być nieczasowo opóźnione. Użyj `IsBufferEmpty` , aby upewnić się, że pobierasz wszystkie dane.
+
+Artykuł [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md) ilustruje obie strony tego procesu za pomocą przykładowego kodu.
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: gniazda strumienia](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: gniazda datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[CSocket::Tworzenie](../mfc/reference/csocket-class.md#create)
+[Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[CSocket:: Create](../mfc/reference/csocket-class.md#create)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mkdir, _wmkdir'
 title: _mkdir, _wmkdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75be13432a5ba0cdc2aa47d2c0e8cbb35e8f982e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330978"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -79,7 +80,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mkdir** tworzy nowy katalog z określonym *dirname.* **_mkdir** może utworzyć tylko jeden nowy katalog dla każdego wywołania, więc tylko ostatni składnik *dirname* może nazywać nowym katalogiem. **_mkdir** nie tłumaczy ograniczników ścieżki. W systemie Windows NT zarówno ukośnik odwrotny ( \\), jak i ukośnik (/) są prawidłowymi ogranicznikami ścieżki w ciągach znaków w procedurach w czasie wykonywania.
+Funkcja **_mkdir** tworzy nowy katalog z określonym *dirname.* **_mkdir** może utworzyć tylko jeden nowy katalog dla każdego wywołania, więc tylko ostatni składnik *dirname* może nazywać nowym katalogiem. **_mkdir** nie tłumaczy ograniczników ścieżki. W systemie Windows NT zarówno ukośnik odwrotny ( \\ ), jak i ukośnik (/) są prawidłowymi ogranicznikami ścieżki w ciągach znaków w procedurach w czasie wykonywania.
 
 **_wmkdir** to dwubajtowa wersja **_mkdir**; argument *dirname* **_wmkdir** jest ciągiem znaków dwubajtowych. **_wmkdir** i **_mkdir** zachowują się identycznie w inny sposób.
 
@@ -95,8 +96,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mkdir**|\<> Direct. h|
-|**_wmkdir**|\<Direct. h> lub \<WCHAR. h>|
+|**_mkdir**|\<direct.h>|
+|**_wmkdir**|\<direct.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -147,6 +148,6 @@ Directory '\testtmp' was successfully removed
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>

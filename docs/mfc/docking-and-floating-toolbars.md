@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: dokowanie i przestawne paski narzędzi'
 title: Zadokowane i przestawne paski narzędzi
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: f40d8860f2e514bf3c9e9364a664326250c9627a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0cd4595dcc9353255408ce0bd1d3bb23e9b005f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615836"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330302"
 ---
 # <a name="docking-and-floating-toolbars"></a>Zadokowane i przestawne paski narzędzi
 
@@ -52,23 +53,23 @@ Inne tematy omówione w tym artykule obejmują:
 
 Przykłady można znaleźć w temacie General Sample [DOCKTOOL](../overview/visual-cpp-samples.md) MFC.
 
-## <a name="enabling-docking-in-a-frame-window"></a><a name="_core_enabling_docking_in_a_frame_window"></a>Włączanie dokowania w oknie ramki
+## <a name="enabling-docking-in-a-frame-window"></a><a name="_core_enabling_docking_in_a_frame_window"></a> Włączanie dokowania w oknie ramki
 
 Aby zadokować paski narzędzi do okna ramki, należy włączyć okno ramki (lub miejsce docelowe), aby umożliwić dokowanie. Jest to realizowane przy użyciu funkcji [obiektu CFrameWnd:: EnableDocking](reference/cframewnd-class.md#enabledocking) , która przyjmuje jeden parametr *DWORD* , który jest zestawem bitów w stylu wskazującym, która strona okna ramki akceptuje dokowanie. Jeśli pasek narzędzi ma zostać zadokowany i istnieje wiele stron, do których może zostać zadokowany, strony określone w parametrze przekazana do `EnableDocking` są używane w następującej kolejności: Góra, dół, lewo, prawo. Jeśli chcesz mieć możliwość dokowania pasków sterowania w dowolnym miejscu, Przekaż **CBRS_ALIGN_ANY** do `EnableDocking` .
 
-## <a name="enabling-docking-for-a-toolbar"></a><a name="_core_enabling_docking_for_a_toolbar"></a>Włączanie dokowania dla paska narzędzi
+## <a name="enabling-docking-for-a-toolbar"></a><a name="_core_enabling_docking_for_a_toolbar"></a> Włączanie dokowania dla paska narzędzi
 
 Po przygotowaniu miejsca docelowego do dokowania należy przygotować pasek narzędzi (lub źródło) w podobny sposób. Wywołaj [CControlBar:: EnableDocking](reference/ccontrolbar-class.md#enabledocking) dla każdego z pasków narzędzi, które chcesz zadokować, określając miejsce docelowe strony, do której ma zostać zadokowany pasek narzędzi. Jeśli żadna ze stron określonych w wywołaniu nie `CControlBar::EnableDocking` dopasowuje się do stron z włączoną funkcją dockowania w oknie ramki, pasek narzędzi nie może zostać zadokowany — będzie on przepływał. Gdy zostanie on przestawiony, pozostaje swobodny pasek narzędzi, nie można zadokować do okna ramki.
 
 Jeśli odpowiedni efekt jest trwale swobodny pasek narzędzi, wywołaj `EnableDocking` z parametrem 0. Następnie Wywołaj [obiektu CFrameWnd:: FloatControlBar](reference/cframewnd-class.md#floatcontrolbar). Pasek narzędzi pozostaje swobodny, a na stałe nie można go zadokować w dowolnym miejscu.
 
-## <a name="docking-the-toolbar"></a><a name="_core_docking_the_toolbar"></a>Dokowanie paska narzędzi
+## <a name="docking-the-toolbar"></a><a name="_core_docking_the_toolbar"></a> Dokowanie paska narzędzi
 
 Struktura wywołuje [obiektu CFrameWnd::D ockcontrolbar](reference/cframewnd-class.md#dockcontrolbar) , gdy użytkownik próbuje upuścić pasek narzędzi po stronie okna ramki, który umożliwia dokowanie.
 
 Ponadto można wywołać tę funkcję w dowolnym momencie, aby zadokować paski sterowania do okna ramki. Jest to zwykle wykonywane podczas inicjowania. Więcej niż jeden pasek narzędzi można zadokować do określonej strony okna ramki.
 
-## <a name="floating-the-toolbar"></a><a name="_core_floating_the_toolbar"></a>Przestawka paska narzędzi
+## <a name="floating-the-toolbar"></a><a name="_core_floating_the_toolbar"></a> Przestawka paska narzędzi
 
 Odłączanie paska narzędzi było dokować z okna ramki jest nazywane przestawnym paskiem narzędzi. Wywołaj [obiektu CFrameWnd:: FloatControlBar](reference/cframewnd-class.md#floatcontrolbar) , aby to zrobić. Określ pasek narzędzi, który ma zostać przestawiony, miejsce, w którym powinien się znajdować, oraz styl wyrównania, który określa, czy swobodny pasek narzędzi jest poziomy, czy pionowy.
 
@@ -76,7 +77,7 @@ Struktura wywołuje tę funkcję, gdy użytkownik przewinie pasek narzędzi poza
 
 Implementacja MFC narzędzi było dokować nie udostępnia niektórych funkcji rozszerzonych dostępnych w niektórych aplikacjach, które obsługują paski narzędzi było dokować. Nie podano takich funkcji, jak paski narzędzi, które można dostosować.
 
-## <a name="dynamically-resizing-the-toolbar"></a><a name="_core_dynamically_resizing_the_toolbar"></a>Dynamiczne zmienianie rozmiarów paska narzędzi
+## <a name="dynamically-resizing-the-toolbar"></a><a name="_core_dynamically_resizing_the_toolbar"></a> Dynamiczne zmienianie rozmiarów paska narzędzi
 
 Począwszy od Visual C++ w wersji 4,0, można umożliwić użytkownikom aplikacji dynamiczne Zmienianie rozmiaru przestawnych pasków narzędzi. Zwykle pasek narzędzi ma długi, liniowy kształt, wyświetlany w poziomie. Można jednak zmienić orientację i kształt paska narzędzi. Na przykład gdy użytkownik zadokuje pasek narzędzi względem jednej z pionowych stron okna ramki, kształt zmieni się na układ pionowy. Możliwe jest również Przekształć paska narzędzi w prostokąt z wieloma wierszami przycisków.
 
@@ -86,7 +87,7 @@ Można:
 
 - Określ ustalony rozmiar jako charakterystykę paska narzędzi.
 
-Aby zapewnić tę pomoc techniczną, istnieją dwa nowe style pasków narzędzi do użycia w wywołaniach funkcji elementu członkowskiego [CToolBar:: Create](reference/ctoolbar-class.md#create) . Oto one:
+Aby zapewnić tę pomoc techniczną, istnieją dwa nowe style pasków narzędzi do użycia w wywołaniach funkcji elementu członkowskiego [CToolBar:: Create](reference/ctoolbar-class.md#create) . Są to:
 
 - **CBRS_SIZE_DYNAMIC** Pasek sterowania jest dynamiczny.
 
@@ -98,7 +99,7 @@ Styl stałego rozmiaru zachowuje Stany zawijania paska narzędzi, ustalając poz
 
 Można również użyć [CToolBar:: Getbutton](reference/ctoolbar-class.md#getbuttonstyle) , aby przywrócić stan i styl przycisków na paskach narzędzi. Styl przycisku określa, jak pojawia się przycisk i jak reaguje na dane wejściowe użytkownika; stan wskazuje, czy przycisk jest w stanie zawiniętym.
 
-## <a name="setting-wrap-positions-for-a-fixed-style-toolbar"></a><a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>Ustawianie pozycji zawijania dla paska narzędzi o stałym stylu
+## <a name="setting-wrap-positions-for-a-fixed-style-toolbar"></a><a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Ustawianie pozycji zawijania dla Fixed-Style pasku narzędzi
 
 W przypadku paska narzędzi o stałym stylu rozmiaru wyznaczanie indeksów przycisków paska narzędzi, przy których pasek narzędzi będzie zawijany. Poniższy kod pokazuje, jak to zrobić w przesłonięciu głównego okna ramki `OnCreate` :
 
@@ -108,12 +109,12 @@ Ogólne przykładowe [DOCKTOOL](../overview/visual-cpp-samples.md) MFC pokazuje,
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Podstawy paska narzędzi](toolbar-fundamentals.md)
+- [Paski narzędzi — podstawowe założenia](toolbar-fundamentals.md)
 
-- [Wskazówki dotyczące narzędzia paska narzędzi](toolbar-tool-tips.md)
+- [Etykietki narzędzi paska narzędzi](toolbar-tool-tips.md)
 
-- [Używanie starych pasków narzędzi](using-your-old-toolbars.md)
+- [Używanie swoich starych pasków narzędzi](using-your-old-toolbars.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC, implementacja paska narzędzi](mfc-toolbar-implementation.md)
+[Implementacja paska narzędzi MFC](mfc-toolbar-implementation.md)

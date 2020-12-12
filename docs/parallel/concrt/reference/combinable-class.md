@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa z kombinacją'
 title: combinable — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 117441be8ff7a54543adb419a1cb908d2eb9bec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331322"
 ---
 # <a name="combinable-class"></a>combinable — Klasa
 
@@ -73,7 +74,7 @@ Aby uzyskać więcej informacji, zobacz [Parallel Containers and Objects](../../
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="clear"></a><a name="clear"></a>Wyczyść
+## <a name="clear"></a><a name="clear"></a> Wyczyść
 
 Czyści wszystkie pośrednie wyniki obliczeniowe z poprzedniego użycia.
 
@@ -81,7 +82,7 @@ Czyści wszystkie pośrednie wyniki obliczeniowe z poprzedniego użycia.
 void clear();
 ```
 
-## <a name="combinable"></a><a name="ctor"></a>combinable
+## <a name="combinable"></a><a name="ctor"></a> combinable
 
 Tworzy nowy `combinable` obiekt.
 
@@ -113,7 +114,7 @@ Drugi Konstruktor inicjuje nowe elementy przy użyciu Funktor inicjacji dostarcz
 
 Trzeci konstruktor jest konstruktorem kopiującym.
 
-## <a name="combinable"></a><a name="dtor"></a>~ z kombinacją
+## <a name="combinable"></a><a name="dtor"></a> ~ z kombinacją
 
 Niszczy `combinable` obiekt.
 
@@ -121,7 +122,7 @@ Niszczy `combinable` obiekt.
 ~combinable();
 ```
 
-## <a name="combine"></a><a name="combine"></a>żądany
+## <a name="combine"></a><a name="combine"></a> żądany
 
 Oblicza wartość końcową z zestawu podobliczeń wątku lokalnego przez wywołanie dostarczonego Funktor łączenia.
 
@@ -142,7 +143,7 @@ Funktor, który jest używany do łączenia obliczeń podrzędnych. Jego podpis 
 
 Końcowy wynik łączenia wszystkich podobliczeń wątku-Private.
 
-## <a name="combine_each"></a><a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a> combine_each
 
 Oblicza wartość końcową z zestawu podobliczeń wątku lokalnego przez wywołanie dostarczonego Funktor, gdy podobliczanie wątku jest podręczne. Końcowy wynik jest kumulowany przez obiekt Function.
 
@@ -159,7 +160,7 @@ Typ obiektu funkcji, który zostanie wywołany w celu połączenia pojedynczego 
 *_FnCombine*<br/>
 Funktor, który jest używany do łączenia jednego obliczenia podrzędnego. Jego podpis jest `void (T)` lub `void (const T&)` , i musi być asocjacyjny i komutatywna.
 
-## <a name="local"></a><a name="local"></a>LAN
+## <a name="local"></a><a name="local"></a> LAN
 
 Zwraca odwołanie do podobliczenia wątku-Private.
 
@@ -178,7 +179,7 @@ Odwołanie do wartości logicznej. Wartość logiczna, do której odwołuje się
 
 Odwołanie do podobliczenia wątku-Private.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 Przypisuje do `combinable` obiektu z innego `combinable` obiektu.
 
@@ -195,6 +196,6 @@ Istniejący `combinable` obiekt do skopiowania do tego obiektu.
 
 Odwołanie do tego `combinable` obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

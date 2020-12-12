@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o tym, jak usługa WinInet ułatwia tworzenie aplikacji internetowych klienta
 title: Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-ms.openlocfilehash: 54f63da7451dfef39a33e6b437be938cb1652326
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: efee0b201a165fab8aaf838eedb2ba83b9a5b946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330128"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych
 
@@ -48,4 +49,4 @@ Wiele operacji, które mogą być wykonywane przez komputer, jako klient do inny
 ## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia internetowe Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
-[Jak MFC ułatwia tworzenie klienckich aplikacji internetowych](how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+[Jak MFC ułatwia tworzenie aplikacji internetowych klienta](how-mfc-makes-it-easier-to-create-internet-client-applications.md)

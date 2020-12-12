@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDataSource'
 title: CDataSource — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0fc764341c0077b305b8a0ad23f66b8691f1e520
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328763"
 ---
 # <a name="cdatasource-class"></a>CDataSource — Klasa
 

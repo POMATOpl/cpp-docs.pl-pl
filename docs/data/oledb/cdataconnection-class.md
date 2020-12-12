@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDataConnection'
 title: CDataConnection — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7cdcb681c40d1ef4e93baee5dc4e4395e6ea9c5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328809"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection — Klasa
 

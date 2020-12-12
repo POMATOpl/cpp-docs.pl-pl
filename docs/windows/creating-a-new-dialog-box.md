@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak utworzyć okno dialogowe (C++)'
 title: 'Instrukcje: Tworzenie okna dialogowego (C++)'
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 0d5e4836933f1ce32f28c7fd03c81be5b7d09fd9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c02d0d85d20b51c867b3f3ba0e5f945595ed130
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329492"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Instrukcje: Tworzenie okna dialogowego (C++)
 
@@ -73,7 +74,7 @@ W [oknie właściwości](/visualstudio/ide/reference/properties-window) można u
 
 - Właściwość **dopasowania bezwzględnego** , która wpływa na pozycję.
 
-   Jeśli **wartość jest równa true**, współrzędne są względem ekranu. W przypadku **wartości false**współrzędne są względne w stosunku do okna właściciela okna dialogowego.
+   Jeśli **wartość jest równa true**, współrzędne są względem ekranu. W przypadku **wartości false** współrzędne są względne w stosunku do okna właściciela okna dialogowego.
 
 ### <a name="to-test-a-dialog-box"></a>Aby przetestować okno dialogowe
 
@@ -92,7 +93,7 @@ Podczas projektowania okna dialogowego można symulować i testować jego zachow
 
 Po przetestowaniu okna dialogowego zwykle jest ono wyświetlane w lokalizacji względem okna głównego programu. Jeśli ustawisz właściwość **bezwzględną Wyrównaj** okno dialogowe na **wartość true**, okno dialogowe jest wyświetlane w pozycji względem lewego górnego rogu ekranu.
 
-1. Gdy **Edytor okien dialogowych** jest aktywnym oknem, przejdź do **Format**  >  **okna dialogowego**formatowanie menu.
+1. Gdy **Edytor okien dialogowych** jest aktywnym oknem, przejdź do   >  **okna dialogowego** formatowanie menu.
 
 1. Aby zakończyć symulację, naciśnij klawisz **ESC** lub wybierz przycisk **Zamknij** w oknie dialogowym, które chcesz przetestować.
 
@@ -100,7 +101,7 @@ Po przetestowaniu okna dialogowego zwykle jest ono wyświetlane w lokalizacji wz
 
 Win32
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
 [Instrukcje: Zarządzanie kontrolkami okna dialogowego](../windows/controls-in-dialog-boxes.md)<br/>

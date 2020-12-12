@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: max_is'
 title: max_is (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 409211bc59d9df8a82a9f452efeff6b6db0fde39
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 305acba3a2831448cf677eb16810c567b3561b3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329801"
 ---
 # <a name="max_is"></a>max_is
 
@@ -25,7 +26,7 @@ Określa maksymalną wartość prawidłowego indeksu tablicy.
 
 ### <a name="parameters"></a>Parametry
 
-*wyrażenia*<br/>
+*expression*<br/>
 Co najmniej jedno wyrażenie języka C. Puste gniazda argumentów są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
@@ -37,7 +38,7 @@ Atrybut **max_is** C++ ma takie same funkcje jak atrybut [max_is](/windows/win32
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Pole w **`struct`** lub **`union`** , parametr interfejsu, metoda interfejsu|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|**size_is**|
 

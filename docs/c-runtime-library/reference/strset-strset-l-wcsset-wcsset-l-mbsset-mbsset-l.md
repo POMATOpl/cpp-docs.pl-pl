@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l'
 title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 ms.date: 4/2/2020
 api_name:
@@ -67,12 +68,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f8c3e0d9f6cb9cdb372ad5eac9a0f5d2c6d8cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329174"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -121,7 +122,7 @@ Ciąg zakończony znakiem null, który ma zostać ustawiony.
 *s*<br/>
 Ustawienie znaku.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -187,8 +188,8 @@ After:  *******************************
 ## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
-[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

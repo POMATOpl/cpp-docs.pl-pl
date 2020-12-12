@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: stałe uprawnień pliku'
 title: Stałe uprawnień pliku
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: 9f6126b867e29ca37468c6ff383224a483639c78
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a220ec404202b1f962a4c0bf51d20b7eea2720ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443276"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331078"
 ---
 # <a name="file-permission-constants"></a>Stałe uprawnień pliku
 
@@ -26,19 +27,19 @@ ms.locfileid: "79443276"
 
 ## <a name="remarks"></a>Uwagi
 
-Jedna z tych stałych jest wymagana w przypadku określenia `_O_CREAT` (`_open`, `_sopen`).
+Jedna z tych stałych jest wymagana `_O_CREAT` , gdy ( `_open` , `_sopen` ) jest określony.
 
-`pmode` argument określa ustawienia uprawnień pliku w następujący sposób.
+`pmode`Argument określa ustawienia uprawnień pliku w następujący sposób.
 
-|Stały|Znaczenie|
+|Stała|Znaczenie|
 |--------------|-------------|
 |`_S_IREAD`|Odczytywanie dozwolone|
 |`_S_IWRITE`|Dozwolone zapisywanie|
 |`_S_IREAD` &#124; `_S_IWRITE`|Dozwolone odczytywanie i zapisywanie|
 
-W przypadku użycia jako argumentu `pmode` dla `_umask`, stała manifestu ustawia ustawienie uprawnień w następujący sposób.
+Gdy jest używany jako `pmode` argument dla `_umask` , stała manifestu ustawia ustawienie uprawnień w następujący sposób.
 
-|Stały|Znaczenie|
+|Stała|Znaczenie|
 |--------------|-------------|
 |`_S_IREAD`|Zapisywanie nie jest dozwolone (plik jest tylko do odczytu)|
 |`_S_IWRITE`|Odczytywanie jest niedozwolone (plik jest tylko do zapisu)|
@@ -49,5 +50,5 @@ W przypadku użycia jako argumentu `pmode` dla `_umask`, stała manifestu ustawi
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_umask](../c-runtime-library/reference/umask.md)<br/>
-[Standardowe typy](../c-runtime-library/standard-types.md)<br/>
+[Typy standardowe](../c-runtime-library/standard-types.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

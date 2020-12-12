@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleVariant'
 title: Klasa COleVariant
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 63bce4695e4e1142b797f24cfbbae71638177d04
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: dcf59fe1d9f67ce47a1a8587209649f56147a9f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331400"
 ---
 # <a name="colevariant-class"></a>Klasa COleVariant
 
@@ -89,7 +90,7 @@ Aby uzyskać więcej informacji na temat `COleVariant` klasy i jej użycia w aut
 
 **Nagłówek:** AFXDISP. h
 
-## <a name="colevariantattach"></a><a name="attach"></a>COleVariant:: Attach
+## <a name="colevariantattach"></a><a name="attach"></a> COleVariant:: Attach
 
 Wywołaj tę funkcję, aby dołączyć dany obiekt [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) do bieżącego `COleVariant` obiektu.
 
@@ -108,7 +109,7 @@ Ta funkcja ustawia typ VARTYPE elementu *varSrc* na VT_EMPTY.
 
 Aby uzyskać więcej informacji, zobacz zapisy [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) i [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum) w Windows SDK.
 
-## <a name="colevariantcolevariant"></a><a name="colevariant"></a>COleVariant::COleVariant
+## <a name="colevariantcolevariant"></a><a name="colevariant"></a> COleVariant::COleVariant
 
 Konstruuje `COleVariant` obiekt.
 
@@ -208,7 +209,7 @@ Wszystkie te konstruktory tworzą nowe `COleVariant` obiekty zainicjowane do okr
 
 Aby uzyskać więcej informacji na temat SCODE, zobacz [strukturę kodów błędów modelu COM](/windows/win32/com/structure-of-com-error-codes) w Windows SDK.
 
-## <a name="colevariantchangetype"></a><a name="changetype"></a>COleVariant:: ChangeType
+## <a name="colevariantchangetype"></a><a name="changetype"></a> COleVariant:: ChangeType
 
 Konwertuje typ wartości wariantu w tym `COleVariant` obiekcie.
 
@@ -228,7 +229,7 @@ Wskaźnik do obiektu [wariantu](/windows/win32/api/oaidl/ns-oaidl-variant) do pr
 
 Aby uzyskać więcej informacji, zobacz wpisy [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)i [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) w Windows SDK.
 
-## <a name="colevariantclear"></a><a name="clear"></a>COleVariant:: Clear
+## <a name="colevariantclear"></a><a name="clear"></a> COleVariant:: Clear
 
 Czyści `VARIANT` .
 
@@ -242,7 +243,7 @@ Ustawia typ VARTYPE dla tego obiektu na VT_EMPTY. `COleVariant`Destruktor wywoł
 
 Aby uzyskać więcej informacji, zobacz `VARIANT` , VARTYPE i `VariantClear` wpisów w Windows SDK.
 
-## <a name="colevariantdetach"></a><a name="detach"></a>COleVariant::D etach
+## <a name="colevariantdetach"></a><a name="detach"></a> COleVariant::D etach
 
 Odłącza źródłowy obiekt [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) od tego `COleVariant` obiektu.
 
@@ -259,7 +260,7 @@ Ta funkcja ustawia typ VARTYPE dla tego `COleVariant` obiektu na VT_EMPTY.
 
 Aby uzyskać więcej informacji, zobacz wpisy [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)i [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) w Windows SDK.
 
-## <a name="colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray
+## <a name="colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a> COleVariant::GetByteArrayFromVariantArray
 
 Pobiera tablicę bajtową z istniejącej tablicy wariantów
 
@@ -272,7 +273,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 *szybkość*<br/>
 Odwołanie do istniejącego obiektu [CByteArray](../../mfc/reference/cbytearray-class.md) .
 
-## <a name="colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleVariant:: operator LPCVARIANT
+## <a name="colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a> COleVariant:: operator LPCVARIANT
 
 Ten operator rzutowania zwraca `VARIANT` strukturę, której wartość jest kopiowana z tego `COleVariant` obiektu.
 
@@ -282,7 +283,7 @@ operator LPCVARIANT() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleVariant:: operator LPVARIANT
+## <a name="colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a> COleVariant:: operator LPVARIANT
 
 Wywołaj ten operator rzutowania, aby uzyskać dostęp do źródłowej `VARIANT` struktury tego `COleVariant` obiektu.
 
@@ -295,7 +296,7 @@ operator LPVARIANT();
 > [!CAUTION]
 > Zmiana wartości w strukturze, `VARIANT` do której uzyskuje dostęp wskaźnik zwracany przez tę funkcję, spowoduje zmianę wartości tego `COleVariant` obiektu.
 
-## <a name="colevariantoperator-"></a><a name="operator_eq"></a>COleVariant:: operator =
+## <a name="colevariantoperator-"></a><a name="operator_eq"></a> COleVariant:: operator =
 
 Te przeciążone operatory przypisania kopiują wartość źródłową do tego `COleVariant` obiektu.
 
@@ -346,7 +347,7 @@ Poniżej znajduje się krótki opis każdego z następujących operatorów:
 
 Aby uzyskać więcej informacji, zobacz zapisy [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) i [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum) w Windows SDK.
 
-## <a name="colevariantoperator-"></a><a name="operator_eq_eq"></a>COleVariant:: operator = =
+## <a name="colevariantoperator-"></a><a name="operator_eq_eq"></a> COleVariant:: operator = =
 
 Ten operator porównuje dwie wartości wariantów i zwraca wartość różną od zera, jeśli są równe; w przeciwnym razie 0.
 
@@ -377,7 +378,7 @@ friend CArchive& AFXAPI operator>>(
 
 `COleVariant`Operator Wstaw ( **\<\<**) operator supports diagnostic dumping and storing to an archive. The extraction (**>>** ) obsługuje ładowanie z archiwum.
 
-## <a name="colevariantsetstring"></a><a name="setstring"></a>COleVariant:: SetString
+## <a name="colevariantsetstring"></a><a name="setstring"></a> COleVariant:: SetString
 
 Ustawia ciąg na konkretny typ.
 
@@ -395,10 +396,10 @@ Wartość VARTYPE dla nowego `COleVariant` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *vtSrc* musi mieć wartość VT_BSTR (Unicode) lub VT_BSTRT (ANSI). `SetString`jest zazwyczaj używany do ustawiania ciągów do ANSI, ponieważ wartością domyślną dla konstruktora [COleVariant:: COleVariant](#colevariant) z parametrem ciągu lub ciągiem wskaźnika, a żadna VARTYPE nie jest Unicode.
+Parametr *vtSrc* musi mieć wartość VT_BSTR (Unicode) lub VT_BSTRT (ANSI). `SetString` jest zazwyczaj używany do ustawiania ciągów do ANSI, ponieważ wartością domyślną dla konstruktora [COleVariant:: COleVariant](#colevariant) z parametrem ciągu lub ciągiem wskaźnika, a żadna VARTYPE nie jest Unicode.
 
 Zestaw rekordów DAO w kompilacji inne niż UNICODE oczekuje ciągów jako ANSI. W tym celu w przypadku funkcji DAO, które używają `COleVariant` obiektów, jeśli nie tworzysz zestawu rekordów Unicode, należy użyć formy **COleVariant:: COleVariant (** *lpszSrc* **,** *vtSrc* **)** konstruktora z *vtSrc* set to VT_BSTRT (ANSI) lub użyć `SetString` z *vtSrc* ustawionym na VT_BSTRT do tworzenia ciągów ANSI. Na przykład `CDaoRecordset` funkcje [CDaoRecordset:: Seek](../../mfc/reference/cdaorecordset-class.md#seek) i [CDaoRecordset:: SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) używają `COleVariant` obiektów jako parametrów. Te obiekty muszą mieć wartość ANSI, jeśli zestaw rekordów DAO nie jest UNICODE.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

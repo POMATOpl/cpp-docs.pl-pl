@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Tworzenie szablonu dokumentu'
 title: Tworzenie szablonu dokumentu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC, document templates
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
-ms.openlocfilehash: 952a383792eb3a4d0a4ed1b3e24dd82f7fa644cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 60f85cf0a1c16e1aaa6057160c5b986001e18d84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330259"
 ---
 # <a name="document-template-creation"></a>Tworzenie szablonu dokumentu
 
@@ -23,7 +24,7 @@ Konstruktor dokumentu-szablonu określa typy dokumentów, okien i widoków, któ
 
 [!code-cpp[NVC_MFCDocView#7](codesnippet/cpp/document-template-creation_1.cpp)]
 
-Wskaźnik do nowego `CMultiDocTemplate` obiektu jest używany jako argument do [AddDocTemplate](reference/cwinapp-class.md#adddoctemplate). Argumenty `CMultiDocTemplate` konstruktora obejmują identyfikator zasobu skojarzony z menu i akceleratory typu dokumentu oraz trzy zastosowania makra [RUNTIME_CLASS](reference/run-time-object-model-services.md#runtime_class) . `RUNTIME_CLASS`zwraca obiekt [CRuntimeClass](reference/cruntimeclass-structure.md) dla klasy C++ o nazwie jako argument. Trzy obiekty przenoszone `CRuntimeClass` do konstruktora dokumentu-szablonu dostarczają informacje konieczne do utworzenia nowych obiektów określonych klas podczas procesu tworzenia dokumentu. W przykładzie pokazano Tworzenie szablonu dokumentu, który tworzy `CScribDoc` obiekty z `CScribView` dołączonymi obiektami. Widoki są obramowane według standardowych okienek podrzędnych MDI.
+Wskaźnik do nowego `CMultiDocTemplate` obiektu jest używany jako argument do [AddDocTemplate](reference/cwinapp-class.md#adddoctemplate). Argumenty `CMultiDocTemplate` konstruktora obejmują identyfikator zasobu skojarzony z menu i akceleratory typu dokumentu oraz trzy zastosowania makra [RUNTIME_CLASS](reference/run-time-object-model-services.md#runtime_class) . `RUNTIME_CLASS` zwraca obiekt [CRuntimeClass](reference/cruntimeclass-structure.md) dla klasy C++ o nazwie jako argument. Trzy obiekty przenoszone `CRuntimeClass` do konstruktora dokumentu-szablonu dostarczają informacje konieczne do utworzenia nowych obiektów określonych klas podczas procesu tworzenia dokumentu. W przykładzie pokazano Tworzenie szablonu dokumentu, który tworzy `CScribDoc` obiekty z `CScribView` dołączonymi obiektami. Widoki są obramowane według standardowych okienek podrzędnych MDI.
 
 ## <a name="see-also"></a>Zobacz też
 

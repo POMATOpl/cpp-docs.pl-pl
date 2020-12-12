@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o obsłudze błędów (CRT)
 title: Obsługa błędów (CRT)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-ms.openlocfilehash: d38aaf76a4901b12290782957db90049d815d278
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4aa81f1152fe991398b38f6b433993aecb8be401
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331148"
 ---
 # <a name="error-handling-crt"></a>Obsługa błędów (CRT)
 
@@ -20,7 +21,7 @@ Użyj tych procedur, aby obsłużyć błędy programu.
 
 ## <a name="error-handling-routines"></a>Procedury obsługi błędów
 
-|Procedura|Użycie|
+|Procedura|Zastosowanie|
 |-------------|---------|
 |[Assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro|Testowanie błędów logiki programowania; dostępne zarówno w wersji wersji, jak i debugowej biblioteki wykonawczej.|
 |[_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobnie jak w przypadku **potwierdzeń**, ale dostępne tylko w wersjach debugowych biblioteki wykonawczej.|
@@ -34,4 +35,4 @@ Użyj tych procedur, aby obsłużyć błędy programu.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)
+- [Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy concurrent_priority_queue
 title: concurrent_priority_queue — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: 024bd2a100b8a0b871d98a5e6001858b55977565
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6097e8f3bdb56ed792509460349bba8f9aef25a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329876"
 ---
 # <a name="concurrent_priority_queue-class"></a>concurrent_priority_queue — Klasa
 
@@ -97,7 +98,7 @@ Aby uzyskać szczegółowe informacje na temat `concurrent_priority_queue` klasy
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="clear"></a><a name="clear"></a>Wyczyść
+## <a name="clear"></a><a name="clear"></a> Wyczyść
 
 Kasuje wszystkie elementy w współbieżnym priorytecie. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -107,9 +108,9 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-`clear`nie jest bezpieczny dla współbieżności. Należy upewnić się, że żadne inne wątki nie wywołuje metod w kolejce współbieżnych priorytetów podczas wywoływania tej metody. `clear`nie Zwolnij pamięci.
+`clear` nie jest bezpieczny dla współbieżności. Należy upewnić się, że żadne inne wątki nie wywołuje metod w kolejce współbieżnych priorytetów podczas wywoływania tej metody. `clear` nie Zwolnij pamięci.
 
-## <a name="concurrent_priority_queue"></a><a name="ctor"></a>concurrent_priority_queue
+## <a name="concurrent_priority_queue"></a><a name="ctor"></a> concurrent_priority_queue
 
 Tworzy kolejkę współbieżnych priorytetów.
 
@@ -175,7 +176,7 @@ Czwarty i piąty konstruktory określają kopię kolejki priorytetów `_Src` .
 
 Szóste i siódme konstruktory określają przeniesienie kolejki priorytetów `_Src` .
 
-## <a name="empty"></a><a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a> ciągiem
 
 Testuje, czy kolejka współbieżnych priorytetów jest pusta w momencie wywołania tej metody. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -187,7 +188,7 @@ bool empty() const;
 
 **`true`** Jeśli kolejka priorytetów była pusta w momencie wywołania funkcji, **`false`** w przeciwnym razie.
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Zwraca kopię alokatora używaną do konstruowania kolejki współbieżnych priorytetów. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -199,7 +200,7 @@ allocator_type get_allocator() const;
 
 Kopia alokatora użyta do skonstruowania `concurrent_priority_queue` obiektu.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 Przypisuje zawartość innego `concurrent_priority_queue` obiektu do tego elementu. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -218,7 +219,7 @@ Obiekt źródłowy `concurrent_priority_queue` .
 
 Odwołanie do tego `concurrent_priority_queue` obiektu.
 
-## <a name="push"></a><a name="push"></a>wydajności
+## <a name="push"></a><a name="push"></a> wydajności
 
 Dodaje element do kolejki współbieżnych priorytetów. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -233,7 +234,7 @@ void push(value_type&& _Elem);
 *_Elem*<br/>
 Element, który ma zostać dodany do kolejki współbieżnych priorytetów.
 
-## <a name="size"></a><a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a> zmienia
 
 Zwraca liczbę elementów w kolejce współbieżnych priorytetów. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -249,7 +250,7 @@ Liczba elementów w tym `concurrent_priority_queue` obiekcie.
 
 Zwrócony rozmiar jest gwarantowany do uwzględnienia wszystkich elementów dodanych przez wywołania funkcji `push` . Może jednak nie odzwierciedlać wyników oczekujących operacji współbieżnych.
 
-## <a name="swap"></a><a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a> wymiany
 
 Zamienia zawartość dwóch współbieżnych kolejek priorytetowych. Ta metoda nie jest bezpieczna pod kątem współbieżności.
 
@@ -262,7 +263,7 @@ void swap(concurrent_priority_queue& _Queue);
 *_Queue*<br/>
 `concurrent_priority_queue`Obiekt, za pomocą którego ma zostać zamieniony zawartość.
 
-## <a name="try_pop"></a><a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a> try_pop
 
 Usuwa i zwraca element o najwyższym priorytecie z kolejki, jeśli kolejka nie jest pusta. Ta metoda jest bezpieczna pod kątem współbieżności.
 
@@ -279,7 +280,7 @@ Odwołanie do zmiennej, która zostanie wypełniona z najwyższym priorytetem el
 
 **`true`** Jeśli wartość została zdjętea, **`false`** w przeciwnym razie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Równoległe kontenery i obiekty](../../../parallel/concrt/parallel-containers-and-objects.md)

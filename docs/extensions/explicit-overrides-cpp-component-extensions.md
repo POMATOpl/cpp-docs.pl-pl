@@ -1,18 +1,19 @@
 ---
-title: Jawne zastąpienia (C++/CLI i C++/CX)
+description: 'Dowiedz się więcej na temat: jawne zastąpienia (C++/CLI i C++/CX)'
+title: Jawne zastąpienia  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a24460f8135ff5379f14533dbaff83bde8918e4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330340"
 ---
-# <a name="explicit-overrides--ccli-and-ccx"></a>Jawne zastąpienia (C++/CLI i C++/CX)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Jawne zastąpienia  (C++/CLI i C++/CX)
 
 W tym temacie omówiono sposób jawnego przesłaniania elementu członkowskiego klasy bazowej lub interfejsu. Zastępowanie nazwane (jawne) powinno być używane tylko w celu przesłaniania metody z użyciem metody pochodnej, która ma inną nazwę.
 
@@ -30,7 +31,7 @@ overriding-function-declarator = function { overriding-function-definition }
 *przesłanianie-funkcja-deklarator*<br/>
 Typ zwracany, nazwa i lista argumentów funkcji przesłaniania.  Należy zauważyć, że funkcja przesłaniania nie musi mieć takiej samej nazwy jak zastępowana funkcja.
 
-*type*<br/>
+*Wprowadź*<br/>
 Typ podstawowy, który zawiera funkcję, która ma zostać przesłonięta.
 
 *funkcyjn*<br/>
@@ -55,7 +56,7 @@ Opcja kompilatora: `/ZW`
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje o jawnych zastąpień w kodzie natywnym lub kodzie skompilowanym za pomocą `/clr:oldSyntax`, zobacz [jawne zastąpienia](../cpp/explicit-overrides-cpp.md).
+Aby uzyskać informacje na temat jawnych zastąpień w kodzie natywnym lub kodzie skompilowanym za pomocą `/clr:oldSyntax` , zobacz [Explicit Overrides](../cpp/explicit-overrides-cpp.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -174,4 +175,4 @@ public:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

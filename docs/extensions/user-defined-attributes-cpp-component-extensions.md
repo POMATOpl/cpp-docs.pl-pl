@@ -1,25 +1,26 @@
 ---
-title: Atrybuty zdefiniowane przez użytkownika (C++/CLI i C++/CX)
+description: Dowiedz się więcej na temat atrybutów User-Defined (C++/CLI i C++/CX)
+title: Atrybuty zdefiniowane przez użytkownika  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2fab2cc1317522b43cd4bddbb56ae174907607d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327902"
 ---
-# <a name="user-defined-attributes--ccli-and-ccx"></a>Atrybuty zdefiniowane przez użytkownika (C++/CLI i C++/CX)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Atrybuty zdefiniowane przez użytkownika  (C++/CLI i C++/CX)
 
-C++/CLI i C++/CX umożliwiają tworzenie atrybutów specyficznych dla platformy, które zwiększają metadane interfejsu, klasy lub struktury, metody, parametru lub wyliczenia. Te atrybuty różnią się od [standardowych C++ atrybutów](../cpp/attributes.md).
+C++/CLI i C++/CX umożliwiają tworzenie atrybutów specyficznych dla platformy, które zwiększają metadane interfejsu, klasy lub struktury, metody, parametru lub wyliczenia. Te atrybuty różnią się od [standardowych atrybutów języka C++](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Można zastosować C++atrybuty/CX do właściwości, ale nie do konstruktorów lub metod.
+Można zastosować atrybuty C++/CX do właściwości, ale nie do konstruktorów lub metod.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -29,15 +30,15 @@ Opcja kompilatora: `/ZW`
 
 Informacje i składnia przedstawione w tym temacie mają na celu zastąpienie informacji przedstawionych w [atrybucie](../windows/attributes/attribute.md).
 
-Można zdefiniować atrybut niestandardowy, definiując typ i wprowadzając <xref:System.Attribute> klasę bazową dla typu i opcjonalnie stosując atrybut <xref:System.AttributeUsageAttribute>.
+Można zdefiniować atrybut niestandardowy, definiując typ i tworząc <xref:System.Attribute> klasę bazową dla typu i opcjonalnie stosując <xref:System.AttributeUsageAttribute> atrybut.
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Docelowe atrybuty](attribute-targets-cpp-component-extensions.md)
+- [Cele atrybutu](attribute-targets-cpp-component-extensions.md)
 
 - [Typy parametrów atrybutu](attribute-parameter-types-cpp-component-extensions.md)
 
-Aby uzyskać informacje dotyczące podpisywania zestawów w C++wizualizacji, zobacz [zestawy o silnych nazwachC++(podpisywanie zestawów) (/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Aby uzyskać informacje dotyczące podpisywania zestawów w Visual C++, zobacz [zestawy o silnych nazwach (podpisywanie zestawów) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -151,7 +152,7 @@ Service Priority = 1
 Service Access = Read
 ```
 
-Typ `Object^` zastępuje typ danych Variant. W poniższym przykładzie zdefiniowano atrybut niestandardowy, który pobiera tablicę `Object^` jako parametry.
+`Object^`Typ zastępuje typ danych Variant. W poniższym przykładzie zdefiniowano atrybut niestandardowy, który pobiera tablicę `Object^` jako parametry.
 
 Argumenty atrybutu muszą być stałymi czasu kompilacji; w większości przypadków powinny to być literały stałe.
 
@@ -194,4 +195,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

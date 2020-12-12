@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: niszczenie okna dialogowego'
 title: Niszczenie okna dialogowego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-ms.openlocfilehash: 9b1244b03dc3f6f418730dd782050448f3bf8934
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f46c86e5f3e869f321b8306470e5821658ceafcb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327844"
 ---
 # <a name="destroying-the-dialog-box"></a>Niszczenie okna dialogowego
 

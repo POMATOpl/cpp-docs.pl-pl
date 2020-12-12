@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: niszczenie obiektów okien'
 title: Likwidowanie obiektów okien
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c2837ba6b9f568d7f6ab0175ae3ad99c31ccdc7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621861"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327819"
 ---
 # <a name="destroying-window-objects"></a>Likwidowanie obiektów okien
 
@@ -22,14 +23,14 @@ Należy zachować ostrożność przy użyciu własnych okien podrzędnych, aby z
 
 - [Sekwencja niszczenia okna](window-destruction-sequence.md)
 
-- [Przydzielanie i cofanie alokacji pamięci okna](allocating-and-deallocating-window-memory.md)
+- [Alokowanie i dealokowanie pamięci okna](allocating-and-deallocating-window-memory.md)
 
-- [Odłączanie elementu CWnd od jego elementu HWND](detaching-a-cwnd-from-its-hwnd.md)
+- [Odłączanie obiektu CWnd od jego właściwości HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-- [Ogólna sekwencja tworzenia okna](general-window-creation-sequence.md)
+- [Ogólna Sekwencja tworzenia okna](general-window-creation-sequence.md)
 
 - [Niszczenie okien ramowych](destroying-frame-windows.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obiekty okien](window-objects.md)
+[Obiekty okna](window-objects.md)

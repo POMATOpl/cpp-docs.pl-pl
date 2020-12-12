@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Pomocnicy klasy kolekcji'
 title: Pomocnicy klasy kolekcji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d3838ba0ba05441debb183e47d7df4e39229742
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331385"
 ---
 # <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
 
-Klasy kolekcji, `CMap` `CList` i `CArray` używają globalnych funkcji pomocników z szablonami do takich celów jak porównywanie, kopiowanie i Serializowanie elementów. W ramach implementacji klas opartych na `CMap` , `CList` , i `CArray` , należy przesłonić te funkcje w miarę potrzeb z wersjami dostosowany do typu danych przechowywanych na mapie, liście lub tablicy. Aby uzyskać informacje na temat zastępowania funkcji pomocnika, takich jak `SerializeElements` , zobacz [kolekcje artykułów: jak utworzyć bezpieczną metodę zbierania danych](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że `ConstructElements` `DestructElements` są one przestarzałe.
+Klasy kolekcji, `CMap` `CList` i `CArray` używają globalnych funkcji pomocników z szablonami do takich celów jak porównywanie, kopiowanie i Serializowanie elementów. W ramach implementacji klas opartych na `CMap` , `CList` , i `CArray` , należy przesłonić te funkcje w miarę potrzeb z wersjami dostosowany do typu danych przechowywanych na mapie, liście lub tablicy. Aby uzyskać informacje na temat zastępowania funkcji pomocnika, takich jak `SerializeElements` , zobacz [kolekcje artykułów: jak utworzyć kolekcję Type-Safe](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że `ConstructElements` `DestructElements` są one przestarzałe.
 
 Biblioteka MFC udostępnia następujące funkcje globalne w afxtempl. h, które ułatwiają Dostosowywanie klas kolekcji:
 
@@ -65,7 +66,7 @@ Niezerowe, jeśli obiekt wskazany przez *pElement1* jest równy obiektowi wskazy
 
 `CMap`Wywołania używają `CMap` *klucza* parametrów szablonu i *ARG_KEY*.
 
-Domyślna implementacja zwraca wynik porównania * \* pElement1* i * \* pElement2*. Zastąp tę funkcję, aby porównuje elementy w sposób odpowiedni dla Twojej aplikacji.
+Domyślna implementacja zwraca wynik porównania *\* pElement1* i *\* pElement2*. Zastąp tę funkcję, aby porównuje elementy w sposób odpowiedni dla Twojej aplikacji.
 
 Język C++ definiuje operator porównania ( `==` ) dla typów prostych ( **`char`** ,,, **`int`** itd **`float`** .), ale nie definiuje operatora porównania dla klas i struktur. Jeśli chcesz użyć `CompareElements` lub aby utworzyć wystąpienie jednej z klas kolekcji, która używa tego elementu, musisz zdefiniować operator porównania lub Przeciążenie `CompareElements` z wersją, która zwraca odpowiednie wartości.
 
@@ -103,7 +104,7 @@ Liczba elementów, które mają zostać skopiowane.
 
 Implementacja domyślna używa prostego operatora przypisania ( **=** ) do wykonania operacji kopiowania. Jeśli kopiowany typ nie ma przeciążonego operatora =, to domyślna implementacja wykonuje kopię bitową.
 
-Aby uzyskać informacje na temat wdrażania tej i innych funkcji pomocnika, zobacz [kolekcje artykułów: jak utworzyć bezpieczną metodę zbierania danych](../how-to-make-a-type-safe-collection.md).
+Aby uzyskać informacje na temat wdrażania tej i innych funkcji pomocnika, zobacz [kolekcje artykułów: jak utworzyć kolekcję Type-Safe](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Wymagania
 
@@ -214,11 +215,11 @@ Liczba archiwizowanych elementów
 
 Domyślna implementacja to bitowy odczyt lub zapis.
 
-Aby uzyskać informacje na temat wdrażania tej i innych funkcji pomocnika, zobacz [kolekcje artykułów: jak utworzyć bezpieczną metodę zbierania danych](../how-to-make-a-type-safe-collection.md).
+Aby uzyskać informacje na temat wdrażania tej i innych funkcji pomocnika, zobacz [kolekcje artykułów: jak utworzyć kolekcję Type-Safe](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w artykule [kolekcje artykułów: jak utworzyć bezpieczną metodę zbierania danych](../how-to-make-a-type-safe-collection.md).
+Zobacz przykład w artykule kolekcje artykułów [: jak utworzyć kolekcję Type-Safe](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Wymagania
 

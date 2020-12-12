@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2688'
 title: Błąd kompilatora C2688
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 17219fe6f4358b73ace0435e60d8fc2b7a9b6df8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330686"
 ---
 # <a name="compiler-error-c2688"></a>Błąd kompilatora C2688
 
 "C2:: fgrv": zwracane elementy zwracające wiele lub wirtualne dziedziczenie nie są obsługiwane dla funkcji VarArgs
 
-Typy zwrotne typu "Variant" nie są C++ obsługiwane w wizualizacji, gdy funkcja zawiera argumenty zmiennych.
+Typy zwrotne typu "Variant" nie są obsługiwane w Visual C++, gdy funkcja zawiera argumenty zmiennych.
 
 Aby rozwiązać ten problem, należy zdefiniować funkcje tak, aby nie korzystały z argumentów zmiennych ani wprowadzać wartości zwracane dla wszystkich funkcji wirtualnych.
 

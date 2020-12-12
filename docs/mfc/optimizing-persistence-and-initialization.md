@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o tym, jak zoptymalizować trwałość i inicjalizację
 title: Optymalizacja stanu trwałego i inicjalizacji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-ms.openlocfilehash: 57b98f7e2e4f9e23175b8b01c2e37ff49c499949
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 440239daa0ecfc4a5955a0ccbecb33bf801da7ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330156"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optymalizacja stanu trwałego i inicjalizacji
 
@@ -32,7 +33,7 @@ Aby zwiększyć wydajność danych binarnych tej kontrolki, można przesłonić 
 
 `dwVersion`Zmienna lokalna może służyć do wykrywania wersji trwałego lub zapisywanych Stanów trwałych kontrolek. Tej zmiennej można użyć zamiast wywołania [CPropExchange:: GetVersion](reference/cpropexchange-class.md#getversion).
 
-Aby zaoszczędzić małe miejsce w trwałym formacie dla właściwości **bool** (i zachować zgodność z formatem utworzonym przez `PX_Bool` ), można przechowywać właściwość jako **bajt**w następujący sposób:
+Aby zaoszczędzić małe miejsce w trwałym formacie dla właściwości **bool** (i zachować zgodność z formatem utworzonym przez `PX_Bool` ), można przechowywać właściwość jako **bajt** w następujący sposób:
 
 [!code-cpp[NVC_MFC_AxOpt#3](codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]
 
@@ -46,4 +47,4 @@ Chociaż `Serialize` i `OnResetState` zostały zastąpione, `DoPropExchange` fun
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC: optymalizacja](mfc-activex-controls-optimization.md)
+[Kontrolki ActiveX MFC: Optymalizacja](mfc-activex-controls-optimization.md)

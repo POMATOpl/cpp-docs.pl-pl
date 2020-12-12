@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: RDX'
 title: RDX (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f61eaf535102c8885e828176434acf221dfe2457
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31e33bcc1883bfb787b21ec8f5c1f8bed60208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329646"
 ---
 # <a name="rdx"></a>rdx
 
@@ -45,7 +46,7 @@ Ten atrybut może być używany w połączeniu z atrybutami [coclass](coclass.md
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`** lub **`struct`** członek|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

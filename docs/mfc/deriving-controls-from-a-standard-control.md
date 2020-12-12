@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyprowadzanie formantów z formantu standardowego'
 title: Wyprowadzanie formantów z formantu standardowego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-ms.openlocfilehash: 54e43c8445bb6b8db4c6a7a4b28890e81be52d6c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 80e63464a7ad6d869582c66d5047a255e303a6a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327867"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Wyprowadzanie formantów z formantu standardowego
 
@@ -36,7 +37,7 @@ Użycie kontrolki pochodnej w oknie dialogowym wymaga dodatkowej pracy. Typy i p
 
 1. Przesłoń `OnInitDialog` funkcję członkowską w swojej klasie okna dialogowego, aby wywołać `SubclassDlgItem` funkcję członkowską dla kontrolki pochodnej.
 
-`SubclassDlgItem`"dynamicznie podklasy" kontrolki utworzonej na podstawie szablonu okna dialogowego. Gdy kontrolka jest w sposób dynamiczny podklasą, można przełączać się do systemu Windows, przetwarzać niektóre komunikaty w aplikacji, a następnie przekazać pozostałe komunikaty do systemu Windows. Aby uzyskać więcej informacji, zobacz funkcja członkowska [SubclassDlgItem](reference/cwnd-class.md#subclassdlgitem) klasy `CWnd` w *Kompendium MFC*. Poniższy przykład pokazuje, jak napisać przesłonięcie `OnInitDialog` do wywołania `SubclassDlgItem` :
+`SubclassDlgItem` "dynamicznie podklasy" kontrolki utworzonej na podstawie szablonu okna dialogowego. Gdy kontrolka jest w sposób dynamiczny podklasą, można przełączać się do systemu Windows, przetwarzać niektóre komunikaty w aplikacji, a następnie przekazać pozostałe komunikaty do systemu Windows. Aby uzyskać więcej informacji, zobacz funkcja członkowska [SubclassDlgItem](reference/cwnd-class.md#subclassdlgitem) klasy `CWnd` w *Kompendium MFC*. Poniższy przykład pokazuje, jak napisać przesłonięcie `OnInitDialog` do wywołania `SubclassDlgItem` :
 
 [!code-cpp[NVC_MFCControlLadenDialog#3](codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]
 

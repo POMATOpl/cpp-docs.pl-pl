@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pointer_default'
 title: pointer_default (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: e4e5ce03e8c0e6ca19814f5d228305b0d97322f9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0c7768227a5922bca7e1b48b3ad82821bb62ea54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329687"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -25,8 +26,8 @@ Określa domyślny atrybut wskaźnika dla wszystkich wskaźników, z wyjątkiem 
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
-Wartość opisująca typ wskaźnika: **PTR**, **ref**lub **Unique**.
+*wartość*<br/>
+Wartość opisująca typ wskaźnika: **PTR**, **ref** lub **Unique**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -41,7 +42,7 @@ Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) dla przykładowego
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejsu**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
