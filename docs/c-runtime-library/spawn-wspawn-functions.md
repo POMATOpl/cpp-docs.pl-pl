@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _spawn, _wspawn Functions'
 title: _spawn, _wspawn — Funkcje
 ms.date: 11/04/2016
 api_location:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4b5fe1b386358095880c69fbf956c7c0a4a08ba9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276910"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn — Funkcje
 
@@ -76,7 +77,7 @@ Każda z tych `_spawn` funkcji tworzy i uruchamia nowy proces:
 
 Litery na końcu nazwy funkcji określają odmianę.
 
-|Litera|Wariant|
+|Letter|Wariant|
 |-|-|
 | `e`  | `envp`Tablica wskaźników do ustawień środowiska jest przenoszona do nowego procesu.  |
 | `l`  | Argumenty wiersza polecenia są przesyłane pojedynczo do `_spawn` funkcji. Ten sufiks jest zwykle używany, gdy kilka parametrów nowego procesu jest znany z wyprzedzeniem.  |
@@ -237,7 +238,7 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Proces i kontrola środowiska](../c-runtime-library/process-and-environment-control.md)<br/>
 [przerwij](../c-runtime-library/reference/abort.md)<br/>

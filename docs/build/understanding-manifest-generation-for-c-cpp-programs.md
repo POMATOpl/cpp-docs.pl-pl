@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej o tym, jak zrozumieć generowanie manifestu dla programów C/C++
 title: Ogólne informacje o tworzeniu manifestu dla programów C/C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: 16d5efc5c5f7ce81b4b60269b0c666fd5d24266e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78169dd6d8185e1ae8470dea93ab145fc05dbc7b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277274"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Ogólne informacje o tworzeniu manifestu dla programów C/C++
 
@@ -21,5 +22,5 @@ Nagłówki Visual C++ bibliotek zawierają informacje o zestawie i gdy bibliotek
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
-[Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Koncepcje izolowanych aplikacji i zestawów równoległych](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
+[Kompilowanie aplikacji izolowanych C/C++ i zestawów równoległych](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

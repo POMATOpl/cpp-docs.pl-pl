@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Security-Enhanced wersje funkcji CRT'
 title: Wersje funkcji CRT z rozszerzonymi zabezpieczeniami
 ms.date: 03/21/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 9cc44caa047e087b2f3de9b5af142d1ea868e893
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 95e94eb7790ef589fee3287b6cee8997faac7ab6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277209"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Wersje funkcji CRT z rozszerzonymi zabezpieczeniami
 
@@ -44,7 +45,7 @@ Dostępne są bardziej bezpieczne wersje procedur biblioteki wykonawczej. Aby uz
 |[_gcvt](../c-runtime-library/reference/gcvt.md)|[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Przekonwertuj wartość zmiennoprzecinkową na ciąg i Zapisz ją w buforze.|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)|[getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Pobierz wartość z bieżącego środowiska.|
 |[Pobiera, getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Pobierz wiersz ze `stdin` strumienia|
-|[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)|[_gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Konwertuj czas od typu `time_t` do `struct tm` lub z typu `__time64_t` na`struct tm`|
+|[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)|[_gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Konwertuj czas od typu `time_t` do `struct tm` lub z typu `__time64_t` na `struct tm`|
 |[itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow](../c-runtime-library/reference/itoa-itow.md)|[_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s](../c-runtime-library/reference/itoa-s-itow-s.md)|Konwertuj typ całkowity na ciąg|
 |[_lfind](../c-runtime-library/reference/lfind.md)|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Wykonaj wyszukiwanie liniowe dla określonego klucza|
 |[localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)|[localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|Konwertuj czas od typu `time_t` do `struct tm` lub z typu `__time64_t` na typ `struct tm` z korektą lokalną|
@@ -99,6 +100,6 @@ Dostępne są bardziej bezpieczne wersje procedur biblioteki wykonawczej. Aby uz
 |[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)|[wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Konwertuj sekwencję szerokich znaków do odpowiedniej sekwencji znaków wielobajtowych|
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Konwertuj znak szeroki do odpowiedniego znaku wielobajtowego|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)

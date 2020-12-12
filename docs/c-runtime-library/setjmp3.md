@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _setjmp3'
 title: _setjmp3
 ms.date: 11/04/2016
 api_name:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: d7120ddd10322d0b7391608fd388d9f45c1600e8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07a84601a6f57eca3e7dc71638a964428579b1c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277066"
 ---
 # <a name="_setjmp3"></a>_setjmp3
 
@@ -49,10 +50,10 @@ int _setjmp3(
 określoną Adres buforu do przechowywania informacji o stanie.
 
 *liczbą*<br/>
-podczas Liczba dodatkowych `DWORD`informacji, które są przechowywane `optional parameters`w.
+podczas Liczba dodatkowych `DWORD` informacji, które są przechowywane w `optional parameters` .
 
 *Parametry opcjonalne*<br/>
-podczas Dodatkowe dane wypychane przez `setjmp` wewnętrznie. Pierwszy `DWORD` to wskaźnik funkcji, który jest używany do odwinięcia dodatkowych danych i powrotu do nietrwałego stanu rejestru. Drugi `DWORD` to poziom try, który ma zostać przywrócony. Wszelkie dalsze dane są zapisywane w ogólnej tablicy danych w `jmp_buf`.
+podczas Dodatkowe dane wypychane przez `setjmp` wewnętrznie. Pierwszy `DWORD` to wskaźnik funkcji, który jest używany do odwinięcia dodatkowych danych i powrotu do nietrwałego stanu rejestru. Drugi `DWORD` to poziom try, który ma zostać przywrócony. Wszelkie dalsze dane są zapisywane w ogólnej tablicy danych w `jmp_buf` .
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -60,11 +61,11 @@ Zawsze zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Nie należy używać tej funkcji w C++ programie. Jest to funkcja wewnętrzna, która nie obsługuje C++. Aby uzyskać więcej informacji o sposobach `setjmp`korzystania z programu, zobacz [using setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
+Nie należy używać tej funkcji w programie C++. Jest to funkcja wewnętrzna, która nie obsługuje języka C++. Aby uzyskać więcej informacji o sposobach korzystania z programu `setjmp` , zobacz [using setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
 
 ## <a name="requirements"></a>Wymagania
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [setjmp](../c-runtime-library/reference/setjmp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: stałych tarła'
 title: spawn — Stałe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bac30346c974fa63d65da78a097cb24768cb313
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276962"
 ---
 # <a name="spawn-constants"></a>spawn — Stałe
 
@@ -37,16 +38,16 @@ ms.locfileid: "62267888"
 
 ## <a name="remarks"></a>Uwagi
 
-`mode` Argument określa akcję podejmowaną przez proces wywołujący, przed, jak i podczas operacji wielokrotnego. Następujące wartości dla `mode` są możliwe:
+`mode`Argument określa akcję wykonywaną przez proces wywołujący przed i podczas operacji duplikowania. Dostępne są następujące wartości `mode` :
 
 |Stała|Znaczenie|
 |--------------|-------------|
-|`_P_OVERLAY`|Nakładki procesu przy użyciu nowego procesu wywołującego, niszczenie procesu wywołującego (efektu przez takie same jak `_exec` wywołania).|
-|`_P_WAIT`|Wstrzymuje działanie wątku wywołującego do momentu wykonania nowego procesu (synchroniczne `_spawn`).|
-|`_P_NOWAIT`, `_P_NOWAITO`|Kontynuuje wykonywanie procesu wywołującego wątkom nowego procesu (asynchroniczne `_spawn`).|
-|`_P_DETACH`|Kontynuuje wykonywanie procesu wywołującego; nowy proces jest uruchamiany w tle bez dostępu do konsoli lub klawiatury. Wywołania `_cwait` względem nowy proces zakończy się niepowodzeniem. Jest to asynchronicznego `_spawn`.|
+|`_P_OVERLAY`|Nakłada proces wywoływania z nowym procesem, niszczy proces wywołujący (ten sam efekt jak `_exec` wywołania).|
+|`_P_WAIT`|Wstrzymuje wywoływanie wątku do momentu wykonania nowego procesu (synchronicznego `_spawn` ).|
+|`_P_NOWAIT`, `_P_NOWAITO`|Kontynuuje wykonywanie procesu wywołującego współbieżnie z nowym procesem (asynchronicznym `_spawn` ).|
+|`_P_DETACH`|Kontynuuje wykonywanie procesu wywołującego; nowy proces jest uruchamiany w tle bez dostępu do konsoli lub klawiatury. Wywołania `_cwait` względem nowego procesu zakończą się niepowodzeniem. Jest to asynchroniczny `_spawn` .|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[_spawn, _wspawn, funkcje](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funkcje _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

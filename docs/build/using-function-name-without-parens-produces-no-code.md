@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: Używanie funkcji Name bez () nie tworzy kodu'
 title: Korzystanie z nazwy funkcji bez () nie tworzy kodu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-ms.openlocfilehash: 51be77dc8f4fe072ea6cc46dd51e38862649feda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fedc296422a759878c26469ccc20955043b3913
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277261"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Korzystanie z nazwy funkcji bez () nie tworzy kodu
 
@@ -23,7 +24,7 @@ a;      // no code generated here either
 
 W Visual C++, nawet przy użyciu poziomu ostrzeżeń 4 nie generuje danych wyjściowych. Nie wydano ostrzeżenia; nie jest tworzony żaden kod.
 
-Przykładowy kod poniżej kompiluje (z ostrzeżeniem) i łączy się prawidłowo bez błędów, ale nie tworzy kodu w odwołaniu do `funcn( )`. Aby to działanie działało prawidłowo, Dodaj operator wywołania funkcji "()".
+Przykładowy kod poniżej kompiluje (z ostrzeżeniem) i łączy się prawidłowo bez błędów, ale nie tworzy kodu w odwołaniu do `funcn( )` . Aby to działanie działało prawidłowo, Dodaj operator wywołania funkcji "()".
 
 ```
 #include <stdio.h>
@@ -41,4 +42,4 @@ void funcn() {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Optymalizacja kodu](optimizing-your-code.md)
+[Optymalizowanie kodu](optimizing-your-code.md)

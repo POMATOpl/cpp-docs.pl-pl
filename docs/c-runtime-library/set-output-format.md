@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _set_output_format'
 title: _set_output_format
 ms.date: 11/04/2016
 api_name:
@@ -25,19 +26,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0e45f4f7ce2a6837bce1e583ec3afd5a70f108a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360917"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277183"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
 Dostosowuje formaty wyjściowe używane przez sformatowane funkcje we/wy.
 
 > [!IMPORTANT]
-> Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+> Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,20 +50,20 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>Parametry
 
-*Formacie*<br/>
-[w] Wartość reprezentująca format do użycia.
+*Formatowanie*<br/>
+podczas Wartość reprezentująca format do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Poprzedni format wyjściowy.
+Poprzedni format danych wyjściowych.
 
 ## <a name="remarks"></a>Uwagi
 
-`_set_output_format`służy do konfigurowania danych wyjściowych sformatowanych funkcji we/wy, takich jak [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Obecnie jedyną konwencją formatowania, którą można zmienić za pomocą tej funkcji, jest liczba cyfr wyświetlanych w wykładnikach w danych wyjściowych liczb zmiennoprzecinkowych.
+`_set_output_format` służy do konfigurowania danych wyjściowych sformatowanych funkcji we/wy, takich jak [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). W tej chwili jedyną Konwencją formatowania, którą można zmienić za pomocą tej funkcji, jest liczba cyfr wyświetlanych w wykładnikach w danych wyjściowych liczb zmiennoprzecinkowych.
 
-Domyślnie dane wyjściowe liczb zmiennoprzecinkowych według funkcji, takich jak `printf_s`, `wprintf_s`i powiązanych funkcji w visual C++ Standard C biblioteki drukuje trzy cyfry wykładnika, nawet jeśli trzy cyfry nie są wymagane do reprezentowania wartości wykładnika. Zera są używane do wyładowywać wartość do trzech cyfr. `_set_output_format`umożliwia zmianę tego zachowania tak, aby tylko dwie cyfry były drukowane w wykładniczym, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnika.
+Domyślnie dane wyjściowe liczb zmiennoprzecinkowych za pomocą funkcji, takich jak `printf_s` , `wprintf_s` i powiązane funkcje w Visual C++ standardowej bibliotece C drukują trzy cyfry dla wykładnika, nawet jeśli trzy cyfry nie są wymagane do reprezentowania wartości wykładnika. Zera są używane do uzupełniania wartości do trzech cyfr. `_set_output_format` pozwala zmienić to zachowanie, tak aby tylko dwie cyfry były drukowane w wykładniku, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnika.
 
-Aby włączyć wykładniki dwucyfrowe, należy wywołać `_TWO_DIGIT_EXPONENT`tę funkcję z parametrem , jak pokazano w przykładzie. Aby wyłączyć wykładniki dwucyfrowe, należy wywołać tę funkcję z argumentem 0.
+Aby włączyć dwucyfrowe wykładniki, Wywołaj tę funkcję z parametrem `_TWO_DIGIT_EXPONENT` , jak pokazano w przykładzie. Aby wyłączyć dwa wykładniki cyfr, Wywołaj tę funkcję z argumentem 0.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,7 +71,7 @@ Aby włączyć wykładniki dwucyfrowe, należy wywołać `_TWO_DIGIT_EXPONENT`t�
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../c-runtime-library/compatibility.md) we wstępie.
+Aby uzyskać więcej informacji o zgodności, zobacz temat [zgodność](../c-runtime-library/compatibility.md) we wprowadzeniu.
 
 ## <a name="example"></a>Przykład
 
@@ -122,7 +123,7 @@ int main()
 1.211E-005  2.306E-112
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_get_output_format](../c-runtime-library/get-output-format.md)

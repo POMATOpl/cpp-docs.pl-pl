@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: IDisposable Interface'
 title: 'Platform:: IDisposable, interfejs'
 ms.date: 02/03/2017
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-ms.openlocfilehash: 0024edbad0bb3311a0497be67fc8bcfc954602e1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0a1e7b44861d48f496f21d634d4d28ff1c968bcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276780"
 ---
 # <a name="platformidisposable-interface"></a>Platform:: IDisposable, interfejs
 
@@ -30,7 +31,7 @@ public interface class IDisposable
 
 **VersionAttribute**(NTDDI_WIN8)
 
-### <a name="members"></a>Members
+### <a name="members"></a>Elementy członkowskie
 
 Interfejs IDisposable dziedziczy z interfejsu IUnknown. Interfejs IDisposable ma również następujące typy elementów członkowskich:
 
@@ -40,7 +41,7 @@ Interfejs IDisposable ma następujące metody.
 
 |Metoda|Opis|
 |------------|-----------------|
-|Zużyt|Używane do zwalniania niezarządzanych zasobów.|
+|Dispose|Używane do zwalniania niezarządzanych zasobów.|
 
 ### <a name="requirements"></a>Wymagania
 

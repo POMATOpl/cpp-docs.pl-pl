@@ -1,5 +1,6 @@
 ---
-title: Platform::AccessDeniedException, klasa
+description: 'Dowiedz się więcej na temat: platform:: AccessDeniedException, Klasa'
+title: 'Platform:: AccessDeniedException, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-ms.openlocfilehash: 4abbac977a256ff27f99caaf77393450d3ccf858
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dd1e543093000521bceb0abed128a1dac27a6e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276793"
 ---
-# <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException, klasa
+# <a name="platformaccessdeniedexception-class"></a>Platform:: AccessDeniedException, Klasa
 
-Zgłoszone podczas dostępu do zasobu lub funkcji jest zabroniony.
+Zgłaszany w przypadku odmowy dostępu do zasobu lub funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,18 +28,18 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli napotkasz ten wyjątek, upewnij się, że żądana odpowiednia możliwość i wprowadzone wymagane deklaracji w manifeście pakietu aplikacji. Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.
+Jeśli osiągnięto ten wyjątek, upewnij się, że zażądano odpowiedniej możliwości i przeprowadzono wymagane deklaracje w manifeście pakietu aplikacji. Aby uzyskać więcej informacji, zobacz Klasa [COMException](../cppcx/platform-comexception-class.md) .
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+[Platform:: COMException, Klasa](../cppcx/platform-comexception-class.md)
