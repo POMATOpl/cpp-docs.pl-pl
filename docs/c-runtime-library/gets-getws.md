@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Pobiera, _getws'
 title: gets, _getws
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 1c60cf14334a0dcc0492b23da10a36c3219bb699
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cb2bf89bfcec8e10e05fa479cd7c9d78d9c6d80e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919899"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181725"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
@@ -77,11 +78,11 @@ Lokalizacja magazynu dla ciągu wejściowego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca swój argument, jeśli powodzenie. Wskaźnik o **wartości null** wskazuje błąd lub stan końca pliku. Użyjelement lub [feof](../c-runtime-library/reference/feof.md) [, aby](../c-runtime-library/reference/ferror.md) określić, który z nich wystąpił. Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają errno `EINVAL`na.
+Zwraca swój argument, jeśli powodzenie. Wskaźnik o **wartości null** wskazuje błąd lub stan końca pliku. Użyjelement lub [feof](../c-runtime-library/reference/feof.md) [, aby](../c-runtime-library/reference/ferror.md) określić, który z nich wystąpił. Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają errno na `EINVAL` .
 
 ## <a name="remarks"></a>Uwagi
 
-`gets` Funkcja odczytuje wiersz ze standardowego strumienia `stdin` wejściowego i zapisuje go w `buffer`. Wiersz składa się ze wszystkich znaków do i łącznie z pierwszym znakiem nowego wiersza ("\n"). `gets`następnie zastępuje znak nowego wiersza znakiem null (' \ 0 ') przed zwróceniem wiersza. W przeciwieństwie `fgets` funkcja zachowuje znak nowego wiersza. `_getws`to wersja znaku dwubajtowego `gets`; jego argument i wartość zwracana są ciągami znaków dwubajtowych.
+`gets`Funkcja odczytuje wiersz ze standardowego strumienia wejściowego `stdin` i zapisuje go w `buffer` . Wiersz składa się ze wszystkich znaków do i łącznie z pierwszym znakiem nowego wiersza ("\n"). `gets` następnie zastępuje znak nowego wiersza znakiem null (' \ 0 ') przed zwróceniem wiersza. W przeciwieństwie `fgets` Funkcja zachowuje znak nowego wiersza. `_getws` jest wersją znaków dwubajtowych `gets` ; jej argument i wartość zwracana są ciągami znaków dwubajtowych.
 
 > [!IMPORTANT]
 > Ponieważ nie ma możliwości ograniczenia liczby znaków odczytywanych przez pobranie, niezaufane dane wejściowe mogą łatwo spowodować przepełnienie buforu. Zamiast tego użyj polecenia cmdlet `fgets`.
@@ -100,8 +101,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`gets`|\<stdio. h>|
-|`_getws`|\<stdio. h> lub \<WCHAR. h>|
+|`gets`|\<stdio.h>|
+|`_getws`|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 

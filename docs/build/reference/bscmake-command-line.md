@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej o: BSCMAKE wiersz polecenia'
 title: Wiersz polecenia BSCMAKE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: 61035ce0f211e6a474bb83fc7de7d95b4a29cf3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0d6cb81fb207c30cd89fbfe3a988380a865a399
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182661"
 ---
 # <a name="bscmake-command-line"></a>Wiersz polecenia BSCMAKE
 
 > [!WARNING]
-> Mimo że BSCMAKE jest nadal zainstalowany za pomocą programu Visual Studio, nie jest już jest używany przez środowisko IDE. Od programu Visual Studio 2008 przeglądania i symbol informacji znajduje się automatycznie w plik sdf programu SQL Server, w folderze rozwiązania.
+> Mimo że usługa BSCMAKE jest nadal zainstalowana z programem Visual Studio, nie jest już używana przez IDE. Od programu Visual Studio 2008 informacje dotyczące przeglądania i symboli są przechowywane automatycznie w pliku SQL Server. sdf w folderze rozwiązania.
 
 Aby uruchomić BSCMAKE, użyj następującej składni wiersza polecenia:
 
@@ -22,22 +23,22 @@ Aby uruchomić BSCMAKE, użyj następującej składni wiersza polecenia:
 BSCMAKE [options] sbrfiles
 ```
 
-Opcje mogą być wyświetlane tylko w `options` pola w wierszu polecenia.
+Opcje mogą występować tylko w `options` polu w wierszu polecenia.
 
-*Sbrfiles* pole określa jeden lub więcej plików SBR, utworzony przez kompilator lub asemblera. Rozdziel nazwy plików SBR tabulacji lub spacji. Należy określić rozszerzenia. nie jest domyślnie. Można określić ścieżkę przy użyciu nazwy pliku, a następnie można użyć symboli wieloznacznych systemu operacyjnego (\* i?).
+Pole *Sbrfiles* określa jeden lub więcej plików. sbr utworzonych przez kompilator lub asembler. Rozdziel nazwy plików. sbr za pomocą spacji lub kart. Należy określić rozszerzenie; nie jest to ustawienie domyślne. Można określić ścieżkę z nazwą pliku i można użyć symboli wieloznacznych systemu operacyjnego ( \* i?).
 
-Podczas kompilacji przyrostowej można określić nowe pliki SBR, które nie były częścią oryginalnego kompilacji. Jeśli chcesz, aby wszystkie współtworzone elementy pozostaną w pliku informacyjnego przeglądarki, należy określić wszystkie pliki SBR (w tym pliki obcięte), które zostały pierwotnie użyte do utworzenia pliku .bsc. Jeżeli pominięto plik SBR wkładu tego pliku do pliku informacyjnego przeglądarki zostaną usunięte.
+Podczas kompilacji przyrostowej można określić nowe pliki SBR, które nie były częścią oryginalnej kompilacji. Jeśli chcesz, aby wszystkie wkłady pozostały w pliku informacji o przeglądaniu, musisz określić wszystkie pliki. SBR (w tym pliki obcinane), które pierwotnie były używane do tworzenia pliku. BSC. Jeśli pominięto plik. sbr, udział tego pliku w pliku informacji o przeglądaniu zostanie usunięty.
 
-Nie należy określać plik SBR obcięte dla pełnej kompilacji. Pełna kompilacja wymaga wkłady wszystkich plików SBR określony. Przed wykonaniem pełnej kompilacji należy ponownie skompilować projekt i Utwórz nowy plik SBR dla każdego pliku puste.
+Nie określaj obciętego pliku SBR dla pełnej kompilacji. Pełna kompilacja wymaga udziału ze wszystkich określonych plików. sbr. Przed wykonaniem pełnej kompilacji należy ponownie skompilować projekt i utworzyć nowy plik. sbr dla każdego pustego pliku.
 
-Następujące polecenie uruchamia BSCMAKE do tworzenia pliku o nazwie MAIN.bsc z trzech plików SBR:
+Następujące polecenie uruchamia BSCMAKE w celu skompilowania pliku o nazwie MAIN. bsc z trzech plików. sbr:
 
 ```
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-Aby uzyskać powiązane informacje, zobacz [plik polecenia BSCMAKE](bscmake-command-file-response-file.md) i [opcje BSCMAKE](bscmake-options.md).
+Aby uzyskać powiązane informacje, zobacz [BSCMAKE Command File](bscmake-command-file-response-file.md) and [BSCMAKE Options](bscmake-options.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[BSCMAKE — dokumentacja](bscmake-reference.md)
+[Odwołanie BSCMAKE](bscmake-reference.md)

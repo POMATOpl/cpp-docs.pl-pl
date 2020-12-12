@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy sync_per_thread
 title: sync_per_thread — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 24c5463dc9fb80703361e374efb99fae9e103e7c
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: dbce0441e32c97907bdf2cc5831a94c9af125453
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183298"
 ---
 # <a name="sync_per_thread-class"></a>sync_per_thread — Klasa
 
@@ -45,7 +46,7 @@ Przydziały korzystające z programu `sync_per_thread` mogą porównać wartoś�
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
 |[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
-|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[ubiegł](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 

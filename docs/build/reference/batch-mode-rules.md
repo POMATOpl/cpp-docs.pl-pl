@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Batch-Mode reguł'
 title: Zasady dotyczące trybu partii
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73439082b4e2ad8e33b104329d861ddd1919ec63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182739"
 ---
 # <a name="batch-mode-rules"></a>Zasady dotyczące trybu partii
 
@@ -20,18 +21,18 @@ ms.locfileid: "81328411"
    commands
 ```
 
-Reguły wnioskowania w trybie wsadowym zapewniają tylko jedno wywołanie reguły wnioskowania, gdy polecenia N przechodzą przez tę regułę wnioskowania. Bez reguł wnioskowania w trybie wsadowym wymagałoby n polecenia do wywołania. N to liczba osób zależnych, które wyzwalają regułę wnioskowania.
+Zasady wnioskowania w trybie wsadowym zapewniają tylko jedno wywołanie reguły wnioskowania, gdy N poleceń przechodzą przez tę regułę wnioskowania. Bez reguł wnioskowania w trybie wsadowym wymagane jest wywołanie N poleceń. N to liczba elementów zależnych, które wyzwalają regułę wnioskowania.
 
-Pliki makefiles, które zawierają reguły wnioskowania w trybie wsadowym, muszą używać NMAKE w wersji 1.62 lub nowszej. Aby sprawdzić wersję NMAKE, uruchom makro _NMAKE_VER dostępne z NMAKE w wersji 1.62 lub nowszej. To makro zwraca ciąg reprezentujący wersję produktu Visual C++.
+Pliki reguł programu make zawierające reguły wnioskowania w trybie wsadowym muszą używać NMAKE w wersji 1,62 lub nowszej. Aby sprawdzić wersję NMAKE, uruchom makro _NMAKE_VER dostępne z NMAKE w wersji 1,62 lub nowszej. To makro zwraca ciąg reprezentujący wersję produktu Visual C++.
 
-Jedyną różnicą syntaktyczną od reguły wnioskowania standardowego jest to, że reguła wnioskowania w trybie wsadowym jest kończyona podwójnym dwukropkiem (::).
+Jedyną różnicą składniową z reguły wnioskowania standardowego jest to, że reguła wnioskowania w trybie wsadowym jest przerywana z dwukropkiem (::).
 
 > [!NOTE]
-> Wywoływane narzędzie musi być w stanie obsłużyć wiele plików. Reguła wnioskowania w trybie wsadowym musi być używana `$<` jako makro, aby uzyskać dostęp do plików zależnych.
+> Wywoływane narzędzie musi być w stanie obsłużyć wiele plików. Reguła wnioskowania w trybie wsadowym musi używać `$<` jako makro do uzyskiwania dostępu do plików zależnych.
 
-Reguły wnioskowania w trybie wsadowym mogą przyspieszyć proces kompilacji. Jest szybsze dostarczanie plików do kompilatora w partii, ponieważ sterownik kompilatora jest wywoływany tylko raz. Na przykład kompilator C i C++ działa lepiej podczas obsługi zestawu plików, ponieważ może pozostać rezydentem pamięci podczas procesu.
+Zasady wnioskowania w trybie wsadowym mogą przyspieszyć proces kompilacji. Szybsze dostarczanie plików do kompilatora w usłudze Batch jest możliwe, ponieważ sterownik kompilatora jest wywoływany tylko raz. Na przykład kompilator C i C++ wykonuje lepsze podczas obsługi zestawu plików, ponieważ może pozostać rezydentem pamięci podczas procesu.
 
-W poniższym przykładzie pokazano, jak używać reguł wnioskowania w trybie wsadowym:
+Poniższy przykład pokazuje, jak używać zasad wnioskowania w trybie wsadowym:
 
 ```
 #
@@ -73,7 +74,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE daje następujący wynik z regułami wnioskowania w trybie wsadowym:
+NMAKE generuje następujący wynik z regułami wnioskowania w trybie wsadowym:
 
 ```
 E:\tmp> nmake -f test.mak -a

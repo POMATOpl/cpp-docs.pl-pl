@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z Visual C++ Dodawanie nowych szablonów elementów'
 title: Używanie szablonów Dodaj nowy element programu Visual C++
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -7,53 +8,53 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 11e7057f563ac446daf8e7506896a5af778fdac4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182206"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Używanie szablonów Dodaj nowy element programu Visual C++
 
-Możesz łatwo dodawać elementy, które są wspólne dla projektów programu Visual Studio przy użyciu **Dodaj nowy element** polecenia. Kiedy używasz **Dodaj nowy element** polecenia `Add New Item` pojawi się okno dialogowe z listy szablonów elementów, które dodają odpowiednie pliki do projektu.
+Można łatwo dodawać elementy, które są wspólne dla projektów programu Visual Studio za pomocą polecenia **Dodaj nowy element** . Gdy używasz polecenia **Dodaj nowy element** , okno `Add New Item` dialogowe zostanie wyświetlone z listą szablonów elementów, które dodają odpowiednie pliki do projektu.
 
-Poniższa tabela jest alfabetyczną listę szablonów programu Visual Studio Dodaj nowy element.
+Poniższa tabela zawiera alfabetyczną listę szablonów dodawania nowych elementów programu Visual Studio.
 
-|Szablon|Opis|
+|Template|Opis|
 |--------------|-----------------|
-|Plik zasobów zestawu (.resx)|Tworzy plik zawierający zasoby CLR.|
-|Plik mapy bitowej (bmp)|Tworzy plik mapy bitowej systemu Win32.|
-|Plik C++ (.cpp)|Tworzy pliku źródłowego języka C++.|
-|Diagram klasy (.cd)|Tworzy pustą klasę diagramu.|
-|Zestaw reguł analizy kodu (.ruleset)|Tworzy plik ustawień na potrzeby konfigurowania analizy kodu.|
-|Plik konfiguracyjny (app.config)|Tworzy pusty plik konfiguracyjny.|
-|Klasa składników|Dodaje klasę składnika przy użyciu funkcji z aparatem CLR.|
-|Plik kursora (.cur)|Tworzy plik kursora systemu Win32.|
-|Plik odnajdywania, statyczne (.disco)|Tworzy plik statyczne odnajdowanie, czyli dokumentu XML, który zawiera łącza do innych zasobów, które opisują usługi sieci Web XML, umożliwia programowe odnajdywania usługi XML sieci Web.|
-|Ramek (.htm)|Dodaje plik HTML, który zawiera wiele stron HTML.|
-|Plik nagłówka (.h)|Tworzy plik nagłówka C++.|
-|Strony HTML (.htm)|Tworzy pusty plik HTML.|
-|Plik ikony (.ico)|Tworzy plik ikona Win32.|
-|Klasa Instalatora|Dodaje klasę, która dziedziczy <xref:System.Configuration.Install.Installer> przy użyciu funkcji z aparatem CLR.|
-|Plik MIDL (.idl)|Tworzy plik języka definicji interfejsu.|
-|Plik definicji modułu (.def)|Tworzy plik definicji eksportowania biblioteki DLL.|
-|Arkusz właściwości (.props)|Tworzy plik arkusza właściwości.|
-|Skrypt rejestrowania (.rgs)|Tworzy plik skryptu rejestrowania biblioteki ATL.|
-|Raportu (.rdlc)|Tworzy plik raportu.|
-|Plik zasobów (.rc)|Tworzy plik zasobów Win32.|
-|Plik szablonu zasobu (.rct)|Tworzy plik szablonu zasobów.|
-|Wstążka (.mfcribbon-ms)|Tworzy plik wstążki.|
-|Plik odpowiedzi serwera (.srf)|Tworzy plik odpowiedzi serwera, który jest używany przez serwer ATL.|
-|Plik skryptu SQL (.sql)|Tworzy plik skryptu SQL. **Uwaga:**  Ten szablon nie jest funkcją w wersji Professional.|
-|Arkusz stylów (CSS)|Dodaje kaskadowy arkusz stylów używany do szczegółowych definicji stylów HTML.|
-|Plik tekstowy (txt)|Dodaje pusty plik tekstowy.|
-|Kontrolka użytkownika|Dodaje formant użytkownika przy użyciu funkcji z aparatem CLR.|
-|Formularz Windows|Dodaje formularza Windows przy użyciu funkcji z aparatem CLR.|
-|Plik XML (.xml)|Dodaje pusty plik XML.|
-|Plik schematu XML (XSD)|Tworzy plik, który jest używany do definiowania schematu dokumentów XML.|
-|XSLT File (.xslt)|Tworzy plik wykorzystywany do transformacji dokumentów XML.|
+|Plik zasobów zestawu (. resx)|Tworzy plik zawierający zasoby CLR.|
+|Plik mapy bitowej (. bmp)|Tworzy plik mapy bitowej Win32.|
+|Plik C++ (. cpp)|Tworzy plik źródłowy języka C++.|
+|Diagram klas (. CD)|Tworzy pusty Diagram klas.|
+|Zestaw reguł analizy kodu (zestaw reguł)|Tworzy plik ustawień na potrzeby konfigurowania analizy kodu.|
+|Plik konfiguracji (app.config)|Tworzy pusty plik konfiguracji.|
+|Klasa składnika|Dodaje klasę składnika przy użyciu funkcji CLR.|
+|Plik kursora (. CUR)|Tworzy plik kursora Win32.|
+|Plik odnajdywania, statyczny (. disco)|Tworzy statyczny plik odnajdywania, który jest dokumentem XML zawierającym linki do innych zasobów, które opisują usługę sieci Web XML, umożliwia programowe wykrywanie usługi sieci Web XML.|
+|Zestaw ramek (. htm)|Dodaje plik HTML, który zawiera wiele stron HTML.|
+|Plik nagłówka (. h)|Tworzy plik nagłówkowy języka C++.|
+|Strona HTML (. htm)|Tworzy pusty plik HTML.|
+|Plik ikony (. ico)|Tworzy plik ikony Win32.|
+|Klasa Instalatora|Dodaje klasę, która dziedziczy po <xref:System.Configuration.Install.Installer> użyciu funkcji CLR.|
+|Plik MIDL (. idl)|Tworzy plik języka definicji interfejsu.|
+|Plik Module-Definition (. def)|Tworzy plik definicji eksportu biblioteki DLL.|
+|Arkusz właściwości (. props)|Tworzy plik arkusza właściwości.|
+|Skrypt rejestracyjny (. RGS)|Tworzy plik skryptu rejestracji ATL.|
+|Raport (. rdlc)|Tworzy plik raportu.|
+|Plik zasobów (. RC)|Tworzy plik zasobów Win32.|
+|Plik szablonu zasobu (. rct)|Tworzy plik szablonu zasobu.|
+|Wstążka (. mfcribbon-ms)|Tworzy plik wstążki.|
+|Plik odpowiedzi serwera (. SRF)|Tworzy plik odpowiedzi serwera używany z serwerem ATL.|
+|Plik skryptu SQL (. SQL)|Tworzy plik skryptu SQL. **Uwaga:**  Ten szablon nie jest funkcją wersji Professional.|
+|Arkusz stylów (. CSS)|Dodaje kaskadowy arkusz stylów używany do definiowania sformatowanych stylów HTML.|
+|Plik tekstowy (. txt)|Dodaje pusty plik tekstowy.|
+|Kontrolka użytkownika|Dodaje kontrolkę użytkownika przy użyciu funkcji CLR.|
+|Formularz systemu Windows|Dodaje formularz systemu Windows przy użyciu funkcji CLR.|
+|Plik XML (. xml)|Dodaje pusty plik XML.|
+|Plik schematu XML (XSD)|Tworzy plik, który jest używany do definiowania schematu dla dokumentów XML.|
+|Plik XSLT (. XSLT)|Tworzy plik służący do przekształcania dokumentów XML.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)

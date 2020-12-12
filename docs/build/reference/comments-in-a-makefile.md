@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej o: komentarzach w pliku reguł programu make'
 title: Komentarze w pliku reguł programu Make
 ms.date: 11/04/2016
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-ms.openlocfilehash: c66819210d2112f9a68243ed4d3b34f491caae9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9edee594c0299d8e93928c1284b7244af71f61e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182297"
 ---
 # <a name="comments-in-a-makefile"></a>Komentarze w pliku reguł programu Make
 
-Należy poprzedzić komentarz znakiem numeru (#). NMAKE pomija z znak liczby na następny znak nowego wiersza. Przykłady:
+Poprzedź komentarz znakiem numeru (#). NMAKE ignoruje tekst od znaku cyfry do następnego znaku nowego wiersza. Przykłady:
 
 ```
 # Comment on line by itself
@@ -33,12 +34,12 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this
 ```
 
-Aby określić znak numeru literału, należy poprzedzić znak daszka (**^**), wykonując następujące czynności:
+Aby określić znak numeru literału, poprzedź go znakiem daszka ( **^** ) w następujący sposób:
 
 ```
 DEF = ^#define  #Macro for a C preprocessing directive
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zawartość pliku reguł programu Make](contents-of-a-makefile.md)
+[Zawartość pliku reguł programu make](contents-of-a-makefile.md)

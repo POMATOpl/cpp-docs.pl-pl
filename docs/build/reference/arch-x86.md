@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej o:/arch (x86)
 title: /arch (x86)
 ms.date: 10/01/2019
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: b1e5501f6edd3eb016395380ff476250c0c388b9
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: a37f0b5cfe1907108bdd5fb71de774a84f585676
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816317"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183064"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -55,7 +56,7 @@ Opcje **/Arch** odnoszą się do rozszerzeń zestawu instrukcji o następującyc
 
 - **AVX** wprowadził alternatywne kodowanie instrukcji dla wektorów i zmiennoprzecinkowych instrukcji skalarnych, które umożliwiają wektorów 128 bitów lub 256 bitów, a zero — rozszerza wszystkie wyniki wektorów do pełnego rozmiaru wektora. (W przypadku starszej zgodności, instrukcje wektora stylu SSE zachowują wszystkie bity poza bitowym 127). Większość operacji zmiennoprzecinkowych jest przedłużona do 256 bitów.
 
-- **AVX2** rozszerza większość operacji całkowitych na 256-bitowe wektory i umożliwia korzystanie z odpornych instrukcji typu "pomnóż-Add" (FMA).
+- **AVX2** rozszerza większość operacji całkowitych na 256-bitowe wektory i umożliwia korzystanie z wymowych instrukcji Multiply-Add (FMA).
 
 - **AVX512** wprowadza inny formularz kodowania instrukcji, który umożliwia 512-bitowe wektory oraz niektóre inne funkcje opcjonalne. Dodano również instrukcje dotyczące dodatkowych operacji.
 
@@ -63,7 +64,7 @@ Optymalizator wybiera, kiedy i jak używać instrukcji wektorowych w zależnośc
 
 Oprócz wektorów i zmiennoprzecinkowych instrukcji skalarnych każda opcja **/Arch** może także umożliwić użycie innych instrukcji innych niż wektorowe, które są skojarzone z tą opcją. Przykładem jest rodzina instrukcji CMOVcc, która po raz pierwszy pojawiła się na procesorach Intel Pentium Pro. Ponieważ instrukcje SSE zostały wprowadzone wraz z kolejnym procesorem Intel Pentium III, instrukcje CMOVcc można generować z wyjątkiem przypadków, gdy określono **/arch: ia32** .
 
-Operacje zmiennoprzecinkowe są zwykle zaokrąglane do podwójnej precyzji (64-bitowe) w kodzie x87, ale można użyć `_controlfp`, aby zmodyfikować słowo kontrolne FP, włącznie z ustawieniem kontroli dokładności na rozszerzoną precyzję (80-bitową) lub pojedynczej precyzji (32-bit). Aby uzyskać więcej informacji, zobacz [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE i AVX mają oddzielne instrukcje o pojedynczej precyzji i podwójnej precyzji dla każdej operacji, więc nie istnieje odpowiednik kodu SSE/AVX. Może to zmienić sposób zaokrąglania wyników, gdy wynik operacji zmiennoprzecinkowej jest używany bezpośrednio do dalszej obliczeń zamiast przypisywania go do zmiennej użytkownika. Rozważ następujące źródła:
+Operacje zmiennoprzecinkowe są zwykle zaokrąglane do podwójnej precyzji (64-bitowe) w kodzie x87, ale można użyć `_controlfp` do modyfikacji słowa kontroli FP, w tym ustawiania kontroli dokładności na rozszerzoną precyzję (80-bitowe) lub pojedynczej precyzji (32-bit). Aby uzyskać więcej informacji, zobacz [_control87, _controlfp, \_ _control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). SSE i AVX mają oddzielne instrukcje o pojedynczej precyzji i podwójnej precyzji dla każdej operacji, więc nie istnieje odpowiednik kodu SSE/AVX. Może to zmienić sposób zaokrąglania wyników, gdy wynik operacji zmiennoprzecinkowej jest używany bezpośrednio do dalszej obliczeń zamiast przypisywania go do zmiennej użytkownika. Rozważ następujące źródła:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -89,13 +90,13 @@ int convert_double_to_int(double x) {
 }
 ```
 
-Makra `_M_IX86_FP`, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX512BW__`, `__AVX512DQ__` i `__AVX512VL__` wskazują, które, w przypadku użycia opcji kompilatora **/Arch** . Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md). Opcja **/arch: AVX2** i makro `__AVX2__` zostały wprowadzone w Visual Studio 2013 Update 2 w wersji 12.0.34567.1. Ograniczona obsługa **/arch: AVX512** została dodana w programie visual Studio 2017 i rozwinięta w programie visual Studio 2019.
+`_M_IX86_FP`Makra, `__AVX__` , `__AVX2__` ,,, `__AVX512F__` `__AVX512CD__` `__AVX512BW__` `__AVX512DQ__` i `__AVX512VL__` wskazują, które, jeśli są używane opcje kompilatora **/Arch** . Aby uzyskać więcej informacji, zobacz [wstępnie zdefiniowane makra](../../preprocessor/predefined-macros.md). Opcja **/arch: AVX2** i `__AVX2__` makro została wprowadzona w Visual Studio 2013 Update 2 w wersji 12.0.34567.1. Ograniczona obsługa **/arch: AVX512** została dodana w programie visual Studio 2017 i rozwinięta w programie visual Studio 2019.
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>Aby ustawić tę opcję kompilatora dla AVX, AVX2, AVX512, IA32, SSE lub SSE2 w programie Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Właściwości konfiguracji**, **C/C++**  folder.
+1. Wybierz **Właściwości konfiguracji**, folder **C/C++** .
 
 1. Wybierz stronę właściwości **generowanie kodu** .
 
@@ -103,10 +104,10 @@ Makra `_M_IX86_FP`, `__AVX__`, `__AVX2__`, `__AVX512F__`, `__AVX512CD__`, `__AVX
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/arch (Minimalna architektura procesora CPU)](arch-minimum-cpu-architecture.md)<br/>
+[/arch (minimalna architektura procesora CPU)](arch-minimum-cpu-architecture.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

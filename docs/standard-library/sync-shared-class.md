@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy sync_shared
 title: sync_shared — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 8b516762f0ae2f6d25c4d5109cbc9870f1254b89
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4093b85ce6f10552cba462074aee2a448cc5ce3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562080"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183285"
 ---
 # <a name="sync_shared-class"></a>sync_shared — Klasa
 
@@ -41,7 +42,7 @@ Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [`c
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
 |[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
-|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[ubiegł](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 

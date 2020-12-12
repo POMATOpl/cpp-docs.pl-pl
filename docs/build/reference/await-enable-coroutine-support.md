@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/Await (Włącz obsługę wspólną)
 title: /await (Włącz obsługę koprocedury)
 ms.date: 08/15/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: 526216ba2ae259b53bcf77691ebd09a6152b83f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a36c2233085a1c38ed61aed7d6ea757762179cc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182765"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (Włącz obsługę koprocedury)
 
@@ -34,7 +35,7 @@ Opcja **/await** jest dostępna, zaczynając od programu Visual Studio 2015.
 
 1. Otwórz okno dialogowe **strony właściwości** projektu.
 
-1. W obszarze **Właściwości konfiguracji**rozwiń folder **C/C++** i wybierz stronę właściwości **wiersza polecenia** .
+1. W obszarze **Właściwości konfiguracji** rozwiń folder **C/C++** i wybierz stronę właściwości **wiersza polecenia** .
 
 1. Wprowadź opcję kompilatora **/await** w polu **dodatkowe opcje** . Wybierz **przycisk OK** lub **Zastosuj** , aby zapisać zmiany.
 
@@ -42,7 +43,7 @@ Opcja **/await** jest dostępna, zaczynając od programu Visual Studio 2015.
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

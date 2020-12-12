@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/bigobj (Zwiększ liczbę sekcji w. Plik obj)
 title: /bigobj (Zwiększ ilość sekcji w pliku .Obj)
 ms.date: 03/26/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 30c02c72496e3bb91da3b39e1870f1dc5a2c040a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e820211ec46ad2a2d125552f95fb8a82c6f57ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182700"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Zwiększ ilość sekcji w pliku .Obj)
 
@@ -33,17 +34,17 @@ Aby uzyskać informacje na temat formatu pliku. PE-COFF, zobacz [Format PE](/win
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **wiersz polecenia** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Wprowadź opcję kompilatora **/bigobj** w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

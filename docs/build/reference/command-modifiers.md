@@ -1,27 +1,28 @@
 ---
+description: 'Dowiedz się więcej o: Modyfikatory poleceń'
 title: Modyfikatory poleceń
 ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, command modifiers
 - command modifiers
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
-ms.openlocfilehash: 6131b94a6ee78026b8d5337061a6238df785b64d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d17d5f25719dfe5638ca6688105517d385bdf68e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182375"
 ---
 # <a name="command-modifiers"></a>Modyfikatory poleceń
 
-Można określić co najmniej jeden Modyfikatory poleceń poprzedzającego polecenia, opcjonalnie rozdzielonych spacjami lub karty. Podobnie jak w przypadku poleceń, można wcięcia modyfikatory.
+Można określić jeden lub więcej modyfikatorów poleceń poprzedzających polecenie, opcjonalnie oddzielone spacjami lub tabulatorami. Podobnie jak w przypadku poleceń Modyfikatory muszą mieć wcięcia.
 
-|Modyfikator|Cel|
+|Modyfikator|Przeznaczenie|
 |--------------|-------------|
-|\@*Polecenie*|Uniemożliwia wyświetlanie polecenia. Wyświetlanie za pomocą poleceń nie jest pomijane. Domyślnie NMAKE funkcją wszystkie wykonane polecenia. Umożliwia /S Pomiń wyświetlanie dla całego pliku reguł programu make; Użyj **. DYSKRETNEJ** Pomija wyświetlanie części pliku reguł programu make.|
-|**-**\[*Liczba*] *polecenia*|Wyłącza sprawdzanie błędów *polecenia*. Domyślnie NMAKE zatrzymuje, gdy polecenie zwróci kod zakończenia różny od zera. IF -*numer* jest używany, NMAKE zatrzymuje, jeśli kod zakończenia przekracza *numer*. Spacje lub tabulatory nie może występować między kreska i *numer.* Co najmniej jeden spacja lub tabulator musi znajdować się między `number` i *polecenia*. Użyj/i wyłączyć sprawdzanie błędów dotyczących całego pliku reguł programu make; Użyj **. Ignoruj** wyłączyć sprawdzanie część pliku reguł programu make.|
-|**\!** *Polecenie*|Wykonuje *polecenia* dla każdego pliku zależnego Jeśli *polecenia* używa <strong>$ \* \*</strong> (wszystkie pliki zależne w zależności) lub **$?** (wszystkie pliki zależne powstanie zależności z sygnaturą czasową nowszy niż element docelowy).|
+|\@*dotyczące*|Zapobiega wyświetlaniu polecenia. Polecenia Display by nie są pomijane. Domyślnie NMAKE ECHA wszystkie wykonane polecenia. Użyj/S, aby pominąć wyświetlanie dla całego pliku reguł programu make; Użyj **. DYSKRETNy** , aby pominąć wyświetlanie dla części pliku reguł programu make.|
+|**-**\[*Liczba*] *polecenie*|Wyłącza sprawdzanie błędów dla *polecenia*. Domyślnie NMAKE zatrzymuje się, gdy polecenie zwraca kod zakończenia różny od zera. Jeśli jest używana *wartość-Number* , NMAKE przestaje działać, jeśli kod zakończenia przekroczy *liczbę*. Spacje lub znaki tabulacji nie mogą występować między kreską i *cyfrą.* Między `number` i *poleceniem* musi znajdować się co najmniej jedno miejsce lub karta. Użyj/I, aby wyłączyć sprawdzanie błędów dla całego pliku reguł programu make; Użyj **. Ignoruj** , aby wyłączyć sprawdzanie błędów dla części pliku reguł programu make.|
+|**!** *dotyczące*|Wykonuje *polecenie* dla każdego pliku zależnego, jeśli używa *polecenia* <strong>$\*\*</strong> (wszystkie pliki zależne w zależności) lub **$?** (wszystkie pliki zależne w zależności od późniejszej sygnatury czasowej).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Polecenia w pliku reguł programu Make](commands-in-a-makefile.md)
+[Polecenia w pliku reguł programu make](commands-in-a-makefile.md)

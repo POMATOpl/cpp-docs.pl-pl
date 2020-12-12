@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: inicjowanie typów skalarnych'
 title: Inicjowanie typów skalarnych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: 063761abcbb1541893b9cbab463e3d121684d00a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9294f04f39e6984a2068c5c8f79e48641834236
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211830"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181829"
 ---
 # <a name="initializing-scalar-types"></a>Inicjowanie typów skalarnych
 
@@ -104,6 +105,6 @@ int function( void )
 
 Zmienna globalna `GLOBAL` jest zadeklarowana na poziomie zewnętrznym, więc ma globalny okres istnienia. Zmienna lokalna `LOCAL` ma **`auto`** klasę magazynu i ma tylko adres podczas wykonywania funkcji, w której jest zadeklarowana. W związku z tym próba zainicjowania **`static`** zmiennej wskaźnika `lp` o adresie `LOCAL` jest niedozwolona. **`static`** Zmienna wskaźnikowa `gp` może zostać zainicjowana na adres, `GLOBAL` ponieważ ten adres jest zawsze taki sam. Podobnie, `*rp` można zainicjować, ponieważ `rp` jest zmienną lokalną i może mieć inicjator niestały. Za każdym razem, gdy zostanie wprowadzony blok, `LOCAL` ma nowy adres, który następnie jest przypisany do `rp` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Inicjalizacja](../c-language/initialization.md)

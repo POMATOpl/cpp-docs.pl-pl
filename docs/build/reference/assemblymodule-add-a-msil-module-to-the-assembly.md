@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/ASSEMBLYMODULE (Dodaj moduł MSIL do zestawu)
 title: /ASSEMBLYMODULE (Dodaj moduł MSIL do zestawu)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /ASSEMBLYMODULE linker option
 - -ASSEMBLYMODULE linker option
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
-ms.openlocfilehash: 728e8a84ff8d1afac99f99dbb975c7fd9360bcc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56895b6bec05efda1104e319e93a040f818e06e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182947"
 ---
 # <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE (Dodaj moduł MSIL do zestawu)
 
@@ -27,55 +28,55 @@ ms.locfileid: "62273023"
 ## <a name="arguments"></a>Argumenty
 
 *Nazwa pliku*<br/>
-Moduł, który chcesz uwzględnić w tym zestawie.
+Moduł, który ma zostać uwzględniony w tym zestawie.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja assemblymodule pozwala dodać odwołanie do zestawu modułu. Informacje o typie w module nie będzie dostępne dla programu zestawu, który dodaje odwołania do modułu. Jednak informacje o typie w module będzie dostępny dla dowolnego programu, który odwołuje się do zestawu.
+Opcja/ASSEMBLYMODULE umożliwia dodanie odwołania modułu do zestawu. Informacje o typie w module nie będą dostępne dla programu zestawu, który dodał odwołanie do modułu. Jednak informacje o typie w module będą dostępne dla każdego programu, który odwołuje się do zestawu.
 
-Użyj [#using](../../preprocessor/hash-using-directive-cpp.md) do dodania odwołania modułu do zestawu i udostępnia informacje o typie modułu dla programu zestawu.
+Użyj [#using](../../preprocessor/hash-using-directive-cpp.md) , aby dodać odwołanie do modułu do zestawu i udostępnić informacje o typie modułu dla programu zestawu.
 
 Na przykład rozważmy następujący scenariusz:
 
-1. Utwórz moduł przy użyciu [/LN](ln-create-msil-module.md).
+1. Utwórz moduł z [/LN](ln-create-msil-module.md).
 
-1. Użyj assemblymodule z innego projektu, aby uwzględnić moduł w bieżącej kompilacji, które spowoduje utworzenie zestawu. Ten projekt nie zostanie wprowadzone odniesienie moduł za pomocą `#using`.
+1. Użyj/ASSEMBLYMODULE w innym projekcie w celu uwzględnienia modułu w bieżącej kompilacji, który spowoduje utworzenie zestawu. Ten projekt nie będzie odwoływać się do modułu za pomocą `#using` .
 
-1. Jakiegokolwiek projektu, który odwołuje się do tego zestawu można teraz również używać typów z modułu.
+1. Każdy projekt odwołujący się do tego zestawu może teraz również używać typów z modułu.
 
-Są także inne opcje konsolidatora, które mają wpływ na Generowanie zestawu:
+Inne Opcje konsolidatora, które wpływają na generowanie zestawu, to:
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/ DELAYSIGN](delaysign-partially-sign-an-assembly.md)
+- [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)
 
-- [/ NOASSEMBLY](noassembly-create-a-msil-module.md)
+- [/NOASSEMBLY](noassembly-create-a-msil-module.md)
 
 - [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/ KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-Konsolidator MSVC akceptuje pliki .netmodule — wejście plik wyjściowy, generowany przez konsolidator. zostanie ona zestaw lub moduł .netmodule z ma zależności środowiska wykonawczego na żadnym z modułów .netmodule, że dane wejściowe do konsolidatora.  Aby uzyskać więcej informacji, zobacz [pliki .netmodule — wejście konsolidatora](netmodule-files-as-linker-input.md).
+MSVC konsolidator akceptuje pliki. module jako dane wejściowe i plik wyjściowy utworzony przez konsolidator będzie zestawem lub modułem, który nie jest zależny od czasu wykonywania w żadnym z modułów.  Aby uzyskać więcej informacji, zobacz [. moduły plików jako dane wejściowe konsolidatora](netmodule-files-as-linker-input.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **dane wejściowe** stronę właściwości.
+1. Kliknij stronę właściwości **dane wejściowe** .
 
-1. Modyfikowanie **Dodaj moduł do zestawu** właściwości.
+1. Zmodyfikuj właściwość **Dodaj moduł do zestawu** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AddModuleNamesToAssembly%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AddModuleNamesToAssembly%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: w tym nazwy plików w nawiasach klamrowych'
 title: Łącznie z nazwami plików w nawiasach
 ms.date: 11/04/2016
 ms.assetid: 6a4e5411-c35e-48b8-90ef-b37ac324ed94
-ms.openlocfilehash: 87de00814f58ed86ee33abdcf96dd210f418c5ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e54792b5feb7d5419896641c25a4367e97d80977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182050"
 ---
 # <a name="including-bracketed-filenames"></a>Łącznie z nazwami plików w nawiasach
 

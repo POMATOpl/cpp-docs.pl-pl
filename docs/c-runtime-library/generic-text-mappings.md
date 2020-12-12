@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: mapowania Generic-Text'
 title: Mapowania zwykłego tekstu
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,26 +8,26 @@ helpviewer_keywords:
 - generic-text mappings
 - mappings, generic-text
 ms.assetid: 1ed02e02-3649-42dd-a697-e1b4af25bb02
-ms.openlocfilehash: d4bf4fdc44cc8807bebacdad3700d2040c628b0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f993b4bd9d00f0acf4988fb8311a35383a70156
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181790"
 ---
 # <a name="generic-text-mappings"></a>Mapowania zwykłego tekstu
 
-Aby ułatwić pisanie kodu na rynki międzynarodowe, mapowania typ ogólny tekst są definiowane w TCHAR. H dla:
+Aby uprościć pisanie kodu dla rynków międzynarodowych, mapowania tekstu ogólnego są zdefiniowane w używanie TCHAR. H dla:
 
 - [Typy danych](../c-runtime-library/data-type-mappings.md)
 
 - [Stałe i zmienne globalne](../c-runtime-library/constant-and-global-variable-mappings.md)
 
-- [Mapowania procedur](../c-runtime-library/routine-mappings.md)
+- [Mapowanie procedur](../c-runtime-library/routine-mappings.md)
 
-Aby uzyskać więcej informacji, zobacz [przy użyciu mapowania typ ogólny-tekst](../c-runtime-library/using-generic-text-mappings.md). Mapowania zwykłego tekstu są rozszerzeniami Microsoft, które nie są zgodny ze standardem ANSI.
+Aby uzyskać więcej informacji, zobacz [Using Generic-Text Mappings](../c-runtime-library/using-generic-text-mappings.md). Mapowania tekstu ogólnego są rozszerzeniami firmy Microsoft, które nie są zgodne ze standardem ANSI.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Mapowania typu danych](../c-runtime-library/data-type-mappings.md)<br/>
-[Przykładowy ogólny program tekstowy](../c-runtime-library/a-sample-generic-text-program.md)
+[Mapowania typów danych](../c-runtime-library/data-type-mappings.md)<br/>
+[Przykładowy program Generic-Text](../c-runtime-library/a-sample-generic-text-program.md)

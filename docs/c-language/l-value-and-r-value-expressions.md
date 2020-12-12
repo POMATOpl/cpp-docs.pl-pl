@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat wyrażeń wartości L i R.
 title: Wyrażenia wartości L i R
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-ms.openlocfilehash: 0c287c45f2d7ea121c9c706b3b761ff7ce6ec232
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84812e211ddd008226773436bc26e22f6150c852
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181816"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Wyrażenia wartości L i R
 
@@ -28,7 +29,7 @@ Każde z następujących wyrażeń C może być wyrażeniem l-wartości:
 
 - Wyrażenie indeksu dolnego (**[]**), które nie jest szacowane do tablicy
 
-- Wyrażenie wyboru elementu członkowskiego ( **->** lub **.**)
+- Wyrażenie wyboru elementu członkowskiego ( **->** lub )
 
 - Wyrażenie jednoargumentowe ( <strong>\*</strong> ), które nie odwołuje się do tablicy
 
@@ -55,6 +56,6 @@ Domyślnym ustawieniem dla Microsoft C jest włączenie rozszerzeń Microsoft. A
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operandy i wyrażenia](../c-language/operands-and-expressions.md)

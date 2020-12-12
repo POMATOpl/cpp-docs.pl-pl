@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Instrukcja if (C)'
 title: if — instrukcja (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 6fe92d3f2927cd6c5b3df16850e2925fc42055d0
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 07d350329d047e35948ed9819de640e98c5bc13b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182141"
 ---
 # <a name="if-statement-c"></a>if — instrukcja (C)
 
@@ -26,7 +27,7 @@ ms.locfileid: "90684147"
 
 SELECT *-Statement*: **if (***wyrażenie***)***instrukcja*      
 
-**if (***wyrażenie***)** instrukcja*instrukcji* **`else`** *statement*          
+**if (***wyrażenie***)** instrukcja *instrukcji* **`else`**           
 
 W obu formach **`if`** instrukcji, wyrażenia, które mogą mieć dowolną wartość z wyjątkiem struktury, są oceniane, łącznie ze wszystkimi efektami ubocznymi.
 
@@ -70,6 +71,6 @@ else
 
 Nawiasy klamrowe otaczające wewnętrzną **`if`** instrukcję w tym przykładzie tworzą **`else`** klauzulę instrukcji zewnętrznej **`if`** . Jeśli `i` jest mniejsza lub równa 0, `i` jest przypisana do `x` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [if-else — instrukcja (C++)](../cpp/if-else-statement-cpp.md)

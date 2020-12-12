@@ -1,5 +1,6 @@
 ---
-title: Inicjowanie
+description: 'Dowiedz się więcej o: inicjalizacji'
+title: Inicjalizacja
 ms.date: 11/04/2016
 helpviewer_keywords:
 - initializers, variable
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - initializing variables
 - initializers
 ms.assetid: f009ee12-3df6-4260-b7e4-a6149ebb95aa
-ms.openlocfilehash: f3e8951e4d1900746cc71215df665ad27d3f329f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54d1617fce20d0ba987773f8eb474524412f6b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182037"
 ---
-# <a name="initialization"></a>Inicjowanie
+# <a name="initialization"></a>Inicjalizacja
 
 "Inicjator" jest wartością lub sekwencją wartości, które mają być przypisane do zadeklarowanej zmiennej. Można ustawić zmienną na wartość początkową, stosując inicjator do deklarator w deklaracji zmiennej. Wartość lub wartości inicjatora są przypisywane do zmiennej.
 

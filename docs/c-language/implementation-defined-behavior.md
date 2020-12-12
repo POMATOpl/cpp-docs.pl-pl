@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Implementation-Defined zachowanie'
 title: Zachowanie zdefiniowane w implementacji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - implementation-defined behavior
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
-ms.openlocfilehash: 7355f814be1cc34cc067fff648e2a137d35a00a5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8c6dcc2e8401fb85f4498ff23bb2c1294194a21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182128"
 ---
 # <a name="implementation-defined-behavior"></a>Zachowanie zdefiniowane w implementacji
 
-ANSI x 3.159-1989 - , *American National Standard dla systemów informacyjnych**Język* - programowania*C*, zawiera sekcję o nazwie "problemy z przenośnością". Sekcja ANSI zawiera listę obszarów języka C, które są otwarte w formacie ANSI dla każdej konkretnej implementacji. W tej sekcji opisano, jak program Microsoft C obsługuje te obszary zdefiniowane w implementacji języka C.
+ANSI x 3.159-1989, *American National Standard dla systemów informacyjnych*  -  *język programowania*  -  *C*, zawiera sekcję o nazwie "problemy z przenośnością". Sekcja ANSI zawiera listę obszarów języka C, które są otwarte w formacie ANSI dla każdej konkretnej implementacji. W tej sekcji opisano, jak program Microsoft C obsługuje te obszary zdefiniowane w implementacji języka C.
 
 Ta sekcja jest zgodna z tą samą kolejnością, w której znajduje się sekcja ANSI. Każdy objęty element zawiera odwołania do ANSI, które objaśnia zachowanie zdefiniowane w implementacji.
 
