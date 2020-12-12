@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: znaków wielobajtowych i szerokich'
 title: Znaki wielobajtowe i dwubajtowe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - character codes [C++], wide
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
-ms.openlocfilehash: 8e27a1832284c109cc2d8a4655f6d093bf7a2d99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48063824b66df42d41b51ca491b0eec5f7679274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243396"
 ---
 # <a name="multibyte-and-wide-characters"></a>Znaki wielobajtowe i dwubajtowe
 
@@ -35,6 +36,6 @@ Literał ciągu znaków dwubajtowych jest `L"hello"` tablicą sześciu liczb ca�
 
 Specyfikacja Unicode jest specyfikacją dla znaków dwubajtowych. Procedury biblioteki wykonawczej do translacji między znakami wielobajtowymi i szerokimi obejmują `mbstowcs` , `mbtowc` , `wcstombs` , i `wctomb` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Identyfikatory języka C](../c-language/c-identifiers.md)

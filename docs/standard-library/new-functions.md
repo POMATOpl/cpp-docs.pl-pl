@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; nowe &gt; funkcje'
 title: '&lt;nowe &gt; funkcje'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b46a21223fcee4f1e208f97e087e47445d5526c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212179"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338188"
 ---
 # <a name="ltnewgt-functions"></a>&lt;nowe &gt; funkcje
 
-## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a> get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -25,7 +26,7 @@ new_handler get_new_handler() noexcept;
 
 Zwraca bieżącą wartość `new_handler` .
 
-## <a name="launder"></a><a name="launder"></a>brudn
+## <a name="launder"></a><a name="launder"></a> brudn
 
 ```cpp
 template <class T>
@@ -39,7 +40,7 @@ Adres bajtu w pamięci, który zawiera obiekt, którego typ jest podobny do *T*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość typu *T \* * , która wskazuje na X.
+Wartość typu *T \** , która wskazuje na X.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -59,7 +60,7 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a><a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a> nothrow
 
 Dostarcza obiekt, który ma być używany jako argument dla **`nothrow`** wersji **`new`** i **`delete`** .
 
@@ -75,7 +76,7 @@ Obiekt jest używany jako argument funkcji do dopasowania do typu parametru [std
 
 Zobacz [operator new](../standard-library/new-operators.md#op_new) i [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) , aby poznać przykłady `std::nothrow_t` użycia jako parametru funkcji.
 
-## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a> set_new_handler
 
 Instaluje funkcję użytkownika, która ma być wywoływana, gdy **operator new** nie powiedzie się w trakcie próby przydzielenia pamięci.
 

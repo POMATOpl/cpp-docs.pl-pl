@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy condition_variable_any
 title: condition_variable_any — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 853944a8eab0698fae6a12cace4ce9426ada8f3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325000"
 ---
 # <a name="condition_variable_any-class"></a>condition_variable_any — Klasa
 
@@ -43,7 +44,7 @@ class condition_variable_any;
 |-|-|
 |[condition_variable_any](#condition_variable_any)|Konstruuje `condition_variable_any` obiekt.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

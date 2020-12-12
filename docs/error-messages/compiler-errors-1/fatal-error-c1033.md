@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny C1033'
 title: Błąd krytyczny C1033
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1033
 ms.assetid: 09976c03-8450-4cf7-8b43-1b91c2c2b9f9
-ms.openlocfilehash: f0422747eb14acd3fc744a0d1713c5d0a68bf040
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ede887170032330350198b0c2347fd9d7ca8523
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345501"
 ---
 # <a name="fatal-error-c1033"></a>Błąd krytyczny C1033
 
-Nie można otworzyć pliku pdb bazy danych programu
+nie można otworzyć programu PDB bazy danych
 
-Ten błąd może być spowodowany przez błąd dysku, blokadę tymczasowych utworzonych przez program antywirusowy, poprzednie wystąpienie debugera, który nie został w pełni kończy pracę, lub procesami mspdbsrv.exe równoległych kompilacji, które próba dostępu do tego samego pliku, między innymi możliwymi przyczynami.
+Przyczyną tego błędu może być błąd dysku, tymczasowa blokada utworzona przez program antywirusowy, poprzednie wystąpienie debugera, które nie zostało w pełni zamknięte, lub Parallel mspdbsrv.exe procesy, które próbują uzyskać dostęp do tego samego pliku, między innymi możliwymi przyczynami.

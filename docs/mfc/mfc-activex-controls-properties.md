@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: właściwości'
 title: 'Kontrolki ActiveX MFC: właściwości'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-ms.openlocfilehash: c7ed0fddea660409f5089159b71d39a29b01d538
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9331be68c2e09fe3a4ad83d21e3ed58bbdfdd61e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206139"
 ---
 # <a name="mfc-activex-controls-properties"></a>Kontrolki ActiveX MFC: właściwości
 
@@ -27,13 +28,13 @@ Właściwości niestandardowe i podstawowe, takie jak metody, są obsługiwane p
 
 W poniższych artykułach szczegółowo omówiono właściwości kontrolki ActiveX:
 
-- [Kontrolki ActiveX MFC: dodawanie właściwości standardowych](mfc-activex-controls-adding-stock-properties.md)
+- [Kontrolki ActiveX MFC: Dodawanie właściwości podstawowych](mfc-activex-controls-adding-stock-properties.md)
 
-- [Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych](mfc-activex-controls-adding-custom-properties.md)
+- [Kontrolki ActiveX MFC: Dodawanie właściwości niestandardowych](mfc-activex-controls-adding-custom-properties.md)
 
 - [Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych](mfc-activex-controls-advanced-property-implementation.md)
 
-- [Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających](mfc-activex-controls-accessing-ambient-properties.md)
+- [Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otoczenia](mfc-activex-controls-accessing-ambient-properties.md)
 
 ## <a name="see-also"></a>Zobacz też
 

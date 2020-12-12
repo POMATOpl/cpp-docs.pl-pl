@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; złożone &gt; Operatory'
 title: '&lt;&gt;Operatory złożone'
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 325e194e9cc5b597ae010477ecbe313be11b179a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 88930dbf0b96d42c5c643305b56121cec8a1bacd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325013"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;&gt;Operatory złożone
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje pod kątem nierówności między dwoma złożonymi liczbami, jedną lub obie, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -163,7 +164,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="operator"></a><a name="op_star"></a>zakład\*
+## <a name="operator"></a><a name="op_star"></a> zakład\*
 
 Mnoży dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -260,7 +261,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a> operator +
 
 Dodaje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -400,7 +401,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>zakład
+## <a name="operator-"></a><a name="operator-"></a> zakład
 
 Odejmuje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -542,7 +543,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div"></a>zakład
+## <a name="operator"></a><a name="op_div"></a> zakład
 
 Dzieli dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -662,7 +663,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>zakład&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> zakład&lt;&lt;
 
 Wstawia liczbę zespoloną określoną w strumieniu wyjściowym.
 
@@ -724,7 +725,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje równość między dwoma złożonymi liczbami, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -863,7 +864,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>zakład&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> zakład&gt;&gt;
 
 Wyodrębnia wartość złożoną ze strumienia wejściowego.
 

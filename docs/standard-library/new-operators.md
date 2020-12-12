@@ -1,26 +1,27 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; nowe &gt; Operatory i wyliczenia'
 title: '&lt;nowe &gt; Operatory i wyliczenia'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 2af2b3bc24e045d66626607781bc97f83686d559
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5b6a675b200c80dc56778a66d63d5940561eb1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338169"
 ---
 # <a name="ltnewgt-operators-and-enums"></a>&lt;nowe &gt; Operatory i wyliczenia
 
-## <a name="enum-align_val_t"></a><a name="op_align_val_t"></a>align_val_t enum
+## <a name="enum-align_val_t"></a><a name="op_align_val_t"></a> align_val_t enum
 
 ```cpp
 enum class align_val_t : size_t {};
 ```
 
-## <a name="operator-delete"></a><a name="op_delete"></a>Usuwanie operatora
+## <a name="operator-delete"></a><a name="op_delete"></a> Usuwanie operatora
 
 Funkcja wywołana przez wyrażenie delete do cofnięcia przydziału magazynu dla poszczególnych obiektów.
 
@@ -49,7 +50,7 @@ Trzecia funkcja jest wywoływana przez wyrażenie usuwania umieszczania odpowiad
 
 Zobacz [operator new](../standard-library/new-operators.md#op_new) dla przykładu, który używa **operatora delete**.
 
-## <a name="operator-delete"></a><a name="op_delete_arr"></a>Usuwanie operatora []
+## <a name="operator-delete"></a><a name="op_delete_arr"></a> Usuwanie operatora []
 
 Funkcja wywołana przez wyrażenie delete do dealokacji magazynu dla tablicy obiektów.
 
@@ -76,7 +77,7 @@ Trzecia funkcja jest wywoływana przez wyrażenie usuwania umieszczania odpowiad
 
 Przykłady użycia programu można znaleźć w temacie [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) `operator delete[]` .
 
-## <a name="operator-new"></a><a name="op_new"></a>Nowy operator
+## <a name="operator-new"></a><a name="op_new"></a> Nowy operator
 
 Funkcja wywołana przez nowe wyrażenie do przydzielania pamięci dla pojedynczych obiektów.
 
@@ -171,7 +172,7 @@ int main( )
 }
 ```
 
-## <a name="operator-new"></a><a name="op_new_arr"></a>operator new []
+## <a name="operator-new"></a><a name="op_new_arr"></a> operator new []
 
 Funkcja alokacji wywołana przez nowe wyrażenie do przydzielenia magazynu dla tablicy obiektów.
 

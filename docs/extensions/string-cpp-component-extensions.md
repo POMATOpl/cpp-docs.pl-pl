@@ -1,25 +1,26 @@
 ---
-title: Ciąg (C++/CLI i C++/CX)
+description: 'Dowiedz się więcej o: ciąg (C++/CLI i C++/CX)'
+title: Ciąg  (C++/CLI i C++/CX)
 ms.date: 10/08/2018
 ms.topic: reference
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a47842713d1e7349717eaaeddcd4f3cba86fbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206334"
 ---
-# <a name="string--ccli-and-ccx"></a>Ciąg (C++/CLI i C++/CX)
+# <a name="string--ccli-and-ccx"></a>Ciąg  (C++/CLI i C++/CX)
 
 Środowisko wykonawcze systemu Windows i środowisko uruchomieniowe języka wspólnego reprezentuje ciągi jako obiekty, których przydzieloną pamięć jest zarządzana automatycznie. Oznacza to, że nie jest wymagane jawne odrzucanie pamięci ciągu, gdy zmienna ciągu wykracza poza zakres lub że aplikacja zostanie zakończona. Aby wskazać, że okres istnienia obiektu ciągu ma być zarządzany automatycznie, zadeklaruj typ ciągu z modyfikatorem [dojście do obiektu (^)](handle-to-object-operator-hat-cpp-component-extensions.md) .
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Architektura środowisko wykonawcze systemu Windows wymaga, aby typ danych `String` znajdował się w przestrzeni nazw `Platform`. Dla wygody wizualizacji C++ udostępnia również typ danych `string`, który jest synonimem dla `Platform::String`, w przestrzeni nazw `default`.
+Architektura środowisko wykonawcze systemu Windows wymaga, aby typ danych znajdował się `String` w `Platform` przestrzeni nazw. Dla wygody Visual C++ udostępnia również `string` Typ danych, który jest synonimem dla `Platform::String` , w `default` przestrzeni nazw.
 
 ### <a name="syntax"></a>Składnia
 
@@ -38,11 +39,11 @@ Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Podczas kompilowania z `/clr`kompilator konwertuje literały ciągu na ciągi typu <xref:System.String>. Aby zachować zgodność z poprzednimi wersjami z istniejącym kodem, istnieją dwa wyjątki:
+Podczas kompilowania z `/clr` , kompilator konwertuje literały ciągu na ciągi typu <xref:System.String> . Aby zachować zgodność z poprzednimi wersjami z istniejącym kodem, istnieją dwa wyjątki:
 
 - Obsługa wyjątków. Gdy generowany jest literał ciągu, kompilator przechwytuje go jako literał ciągu.
 
-- Odliczanie szablonu. Gdy literał ciągu jest przenoszona jako argument szablonu, kompilator nie przekonwertuje go na <xref:System.String>. Zauważ, że literały ciągu przesyłane jako argument generyczne zostaną podwyższenie poziomu do <xref:System.String>.
+- Odliczanie szablonu. Gdy literał ciągu jest przenoszona jako argument szablonu, kompilator nie przekonwertuje go na <xref:System.String> . Zauważ, że literały ciągu przesyłane jako argument generyczne zostaną podwyższenie poziomu do <xref:System.String> .
 
 Kompilator ma także wbudowaną obsługę trzech operatorów, które można przesłonić w celu dostosowania ich zachowania:
 
@@ -52,10 +53,10 @@ Kompilator ma także wbudowaną obsługę trzech operatorów, które można prze
 
 - System:: String ^ operator + (system:: String, system:: Object);
 
-Gdy przeszedł <xref:System.String>, kompilator będzie Box, w razie potrzeby, a następnie łączy obiekt (z ToString) z ciągiem.
+Po przekazaniu <xref:System.String> , kompilator będzie Box, w razie potrzeby, a następnie połączyć obiekt (z ToString) z ciągiem.
 
 > [!NOTE]
-> Daszek ("^") wskazuje, że zadeklarowana zmienna jest dojściem C++do obiektu zarządzanego/CLI.
+> Daszek ("^") wskazuje, że zadeklarowana zmienna jest dojściem do obiektu zarządzanego C++/CLI.
 
 Aby uzyskać więcej informacji, zobacz [literały ciągów i znaków](../cpp/string-and-character-literals-cpp.md).
 
@@ -152,7 +153,7 @@ abc
 n is empty
 ```
 
-Poniższy przykład pokazuje, że można przeciążać operatory dostarczone przez kompilator i że kompilator znajdzie Przeciążenie funkcji na podstawie typu <xref:System.String>.
+Poniższy przykład pokazuje, że można przeciążać operatory dostarczone przez kompilator i że kompilator znajdzie Przeciążenie funkcji na podstawie <xref:System.String> typu.
 
 ```cpp
 // string_operators_2.cpp
@@ -210,7 +211,7 @@ String^ a
 const char * a
 ```
 
-Poniższy przykład pokazuje, że kompilator rozróżnia ciągi natywne i ciągi <xref:System.String>.
+Poniższy przykład pokazuje, że kompilator rozróżnia ciągi natywne i <xref:System.String> ciągi.
 
 ```cpp
 // string_operators_3.cpp
@@ -261,6 +262,6 @@ System.String
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
-[Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)<br/>
-[/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Literały ciągów i znaków](../cpp/string-and-character-literals-cpp.md)<br/>
+[/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)

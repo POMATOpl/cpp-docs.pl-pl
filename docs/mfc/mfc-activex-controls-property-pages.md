@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: strony właściwości'
 title: 'Formanty MFC ActiveX: strony właściwości'
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 3d22085daa503a7c778111718445920f98b98a89
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 40267857b12b2f23c07f03d0ee77b2ae8e6bf1a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206152"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Formanty MFC ActiveX: strony właściwości
 
@@ -35,7 +36,7 @@ Okno dialogowe właściwości (pokazane na poniższym rysunku) składa się z ob
 ![Okno dialogowe właściwości dla Circ3](../mfc/media/vc373i1.gif "Okno dialogowe właściwości dla Circ3") <br/>
 Okno dialogowe właściwości
 
-W tym artykule opisano tematy związane z korzystaniem ze stron właściwości w kontrolce ActiveX. Należą do nich następujące elementy:
+W tym artykule opisano tematy związane z korzystaniem ze stron właściwości w kontrolce ActiveX. Są one następujące:
 
 - [Implementowanie domyślnej strony właściwości kontrolki ActiveX](#_core_implementing_the_default_property_page)
 
@@ -45,13 +46,13 @@ W tym artykule opisano tematy związane z korzystaniem ze stron właściwości w
 
 Aby uzyskać więcej informacji na temat używania stron właściwości w kontrolce ActiveX, zobacz następujące artykuły:
 
-- [Formanty MFC ActiveX: dodawanie dodatkowej niestandardowej strony właściwości](mfc-activex-controls-adding-another-custom-property-page.md)
+- [Kontrolki ActiveX MFC: Dodawanie innej niestandardowej strony właściwości](mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](mfc-activex-controls-using-stock-property-pages.md)
+- [Kontrolki ActiveX MFC: używanie stron właściwości podstawowych](mfc-activex-controls-using-stock-property-pages.md)
 
 Aby uzyskać informacje na temat używania arkuszy właściwości w aplikacji MFC innej niż Kontrolka ActiveX, zobacz [arkusze właściwości](property-sheets-mfc.md).
 
-## <a name="implementing-the-default-property-page"></a><a name="_core_implementing_the_default_property_page"></a>Implementowanie domyślnej strony właściwości
+## <a name="implementing-the-default-property-page"></a><a name="_core_implementing_the_default_property_page"></a> Implementowanie domyślnej strony właściwości
 
 Jeśli do utworzenia projektu kontrolki używasz Kreatora kontrolek ActiveX, Kreator kontrolek ActiveX udostępnia domyślną klasę strony właściwości dla formantu pochodnego od [klasy COlePropertyPage](reference/colepropertypage-class.md). Początkowo ta strona właściwości jest pusta, ale można dodać do niej dowolną kontrolkę okna dialogowego lub zestaw kontrolek. Ponieważ Kreator kontrolek ActiveX tworzy tylko jedną klasę strony właściwości, należy utworzyć dodatkowe klasy stron właściwości (pochodzące również z `COlePropertyPage` ) przy użyciu widok klasy. Aby uzyskać więcej informacji na temat tej procedury, zobacz [kontrolki ActiveX MFC: Dodawanie innej niestandardowej strony właściwości](mfc-activex-controls-adding-another-custom-property-page.md).
 
@@ -67,7 +68,7 @@ Zaimplementowanie strony właściwości (w tym przypadku domyślnie) jest proces
 
 Na przykład w poniższych procedurach użyto prostej kontrolki (o nazwie "sample"). Przykład został utworzony za pomocą Kreatora kontrolki ActiveX i zawiera tylko Właściwość Caption.
 
-## <a name="adding-controls-to-a-property-page"></a><a name="_core_adding_controls_to_a_property_page"></a>Dodawanie kontrolek do strony właściwości
+## <a name="adding-controls-to-a-property-page"></a><a name="_core_adding_controls_to_a_property_page"></a> Dodawanie kontrolek do strony właściwości
 
 #### <a name="to-add-controls-to-a-property-page"></a>Aby dodać kontrolki do strony właściwości
 
@@ -87,7 +88,7 @@ Na przykład w poniższych procedurach użyto prostej kontrolki (o nazwie "sampl
 
 Teraz, gdy interfejs użytkownika został zmodyfikowany, należy połączyć pole edycji z właściwością Caption. W tym celu należy wykonać czynności opisane w poniższej sekcji, edytując `CSamplePropPage::DoDataExchange` funkcję.
 
-## <a name="customizing-the-dodataexchange-function"></a><a name="_core_customizing_the_dodataexchange_function"></a>Dostosowywanie funkcji DoDataExchange
+## <a name="customizing-the-dodataexchange-function"></a><a name="_core_customizing_the_dodataexchange_function"></a> Dostosowywanie funkcji DoDataExchange
 
 Strona właściwości [CWnd::D odataexchange](reference/cwnd-class.md#dodataexchange) funkcja umożliwia łączenie wartości strony właściwości z rzeczywistymi wartościami właściwości w formancie. Aby ustanowić linki, należy zamapować odpowiednie pola strony właściwości na odpowiednie właściwości kontrolki.
 

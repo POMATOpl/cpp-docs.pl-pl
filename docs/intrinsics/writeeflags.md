@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __writeeflags'
 title: __writeeflags
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-ms.openlocfilehash: 6b9b6976369ed810789e5749a2e30029cad4c2d7
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 9c439194782f52b474ec6c6365705ebd8756c6b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331860"
 ---
 # <a name="__writeeflags"></a>__writeeflags
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Zapisuje określoną wartość do rejestru stan programu i kontrola (EFLAGS).
 
@@ -28,8 +29,8 @@ void __writeeflags(unsigned __int64 Value); /* x64 */
 
 ### <a name="parameters"></a>Parametry
 
-\ *wartości*
-podczas Wartość, która ma zostać zapisana w rejestrze EFLAGS. Parametr `Value` to 32 bitów Long dla platformy 32-bitowej i 64 bity long dla platformy 64-bitowej.
+*Wartościami*\
+podczas Wartość, która ma zostać zapisana w rejestrze EFLAGS. `Value`Parametr jest 32 bity long dla platformy 32-bitowej i 64 bity long dla platformy 64-bitowej.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -37,15 +38,15 @@ Te procedury są dostępne tylko jako elementy wewnętrzne.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__writeeflags`|x86, x64|
 
-**Plik nagłówkowy** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-\ [Wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

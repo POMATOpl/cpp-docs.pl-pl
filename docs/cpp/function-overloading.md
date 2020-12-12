@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: przeciążanie funkcji'
 title: Przeładowywanie funkcji
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 0eaaf5c8fd18d4d00652107a5a2071b2f5774d7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59fb43c849518251170b6f84a74cd8cbc2e2ed22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345553"
 ---
 # <a name="function-overloading"></a>Przeładowywanie funkcji
 
 C++ umożliwia określenie więcej niż jednej funkcji o tej samej nazwie w tym samym zakresie. Te funkcje są nazywane *przeciążonymi* funkcjami. Przeciążone funkcje umożliwiają dostarczenie różnych semantyki dla funkcji, w zależności od typów i liczby argumentów.
 
-Na przykład `print` Funkcja, która przyjmuje argument, `std::string` może wykonywać bardzo różne zadania niż jeden, który przyjmuje argument typu **`double`** . Przeciążanie powoduje, że nie trzeba używać nazw takich jak `print_string` lub `print_double` . W czasie kompilacji kompilator wybiera, którego przeciążenia użyć na podstawie typu argumentów przekazaną przez wywołującego.  Po wywołaniu `print(42.0)` , `void print(double d)` Funkcja zostanie wywołana. Jeśli wywołasz `print("hello world")` , `void print(std::string)` Przeciążenie zostanie wywołane.
+Na przykład `print` Funkcja, która przyjmuje argument, `std::string`  może wykonywać bardzo różne zadania niż jeden, który przyjmuje argument typu **`double`** . Przeciążanie powoduje, że nie trzeba używać nazw takich jak `print_string` lub `print_double` . W czasie kompilacji kompilator wybiera, którego przeciążenia użyć na podstawie typu argumentów przekazaną przez wywołującego.  Po wywołaniu `print(42.0)` , `void print(double d)` Funkcja zostanie wywołana. Jeśli wywołasz `print("hello world")` , `void print(std::string)` Przeciążenie zostanie wywołane.
 
 Można przeciążać zarówno funkcje członkowskie, jak i funkcje, które nie są elementami członkowskimi. W poniższej tabeli przedstawiono, które części deklaracji funkcji język C++ używa do rozróżniania grup funkcji o tej samej nazwie w tym samym zakresie.
 
@@ -31,7 +32,7 @@ Można przeciążać zarówno funkcje członkowskie, jak i funkcje, które nie s
 |Obecność lub brak wielokropka|Tak|
 |Użycie **`typedef`** nazw|Nie|
 |Nieokreślone granice tablic|Nie|
-|**`const`** oraz**`volatile`**|Tak, po zastosowaniu do całej funkcji|
+|**`const`** oraz **`volatile`**|Tak, po zastosowaniu do całej funkcji|
 |[Kwalifikatory ref](#ref-qualifiers)|Tak|
 
 ## <a name="example"></a>Przykład
@@ -155,7 +156,7 @@ F1 = Add( F2, 23 );
 
 Poprzednia instrukcja kompiluje dwa zestawy:
 
-|Set 1: funkcje kandydujące, które mają pierwszy argument typu ułamek|Set 2: funkcje kandydujące, których drugi argument można przekonwertować na typ**`int`**|
+|Set 1: funkcje kandydujące, które mają pierwszy argument typu ułamek|Set 2: funkcje kandydujące, których drugi argument można przekonwertować na typ **`int`**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 |Wariant 1|Wariant 1 ( **`int`** można przekonwertować, aby **`long`** użyć konwersji standardowej)|
 |Wariant 3||
@@ -170,7 +171,7 @@ F1 = Add( 3, 6 );
 
 Poprzednie wywołanie funkcji kompiluje następujące zestawy:
 
-|Set 1: funkcje kandydujące, które mają pierwszy argument typu**`int`**|Set 2: funkcje kandydujące, które mają drugi argument typu**`int`**|
+|Set 1: funkcje kandydujące, które mają pierwszy argument typu **`int`**|Set 2: funkcje kandydujące, które mają drugi argument typu **`int`**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Wariant 2 ( **`int`** można dokonać konwersji, aby **`long`** użyć konwersji standardowej)|Wariant 1 ( **`int`** można przekonwertować, aby **`long`** użyć konwersji standardowej)|
 
@@ -398,7 +399,7 @@ obj.name
 
 Lewy operand `->*` `.*` operatorów i (wskaźnik do składowej) jest traktowany tak samo jak `.` `->` Operatory i (wybór elementów członkowskich) w odniesieniu do dopasowywania argumentów.
 
-## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a>Kwalifikatory ref w funkcjach składowych
+## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a> Kwalifikatory ref w funkcjach składowych
 
 Kwalifikatory ref umożliwiają przeciążanie funkcji składowej w oparciu o to, czy obiekt wskazywany przez **`this`** jest elementem rvalue czy lvalue.  Ta funkcja umożliwia uniknięcie niepotrzebnych operacji kopiowania w scenariuszach, w których nie można zapewnić dostępu do danych za pomocą wskaźnika. Załóżmy na przykład, że Klasa `C` inicjuje pewne dane w konstruktorze i zwraca kopię tych danych w funkcji członkowskiej `get_data()` . Jeśli obiekt typu `C` jest rvalue, który ma zostać zniszczony, kompilator wybierze `get_data() &&` Przeciążenie, które przenosi dane zamiast kopiować.
 
@@ -462,7 +463,7 @@ Można przeciążać **operator new** wyłącznie na podstawie typu zwracanego �
     void Print( PSTR szToPrint );
     ```
 
-   Poprzednie dwie funkcje mają identyczne listy argumentów. `PSTR`jest synonimem typu `char *` . W zakresie elementu członkowskiego ten kod generuje błąd.
+   Poprzednie dwie funkcje mają identyczne listy argumentów. `PSTR` jest synonimem typu `char *` . W zakresie elementu członkowskiego ten kod generuje błąd.
 
 - Typy wyliczeniowe są różnymi typami i mogą być używane do rozróżniania między przeciążonymi funkcjami.
 
@@ -569,6 +570,6 @@ double Account::Deposit( double dAmount, char *szPassword )
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje (C++)](../cpp/functions-cpp.md)

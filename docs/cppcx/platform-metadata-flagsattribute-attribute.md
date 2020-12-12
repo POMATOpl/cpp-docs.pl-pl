@@ -1,5 +1,6 @@
 ---
-title: 'Platform::METADATA:: flagsattribute, atrybut'
+description: 'Dowiedz się więcej na temat: platform:: Metadata:: FlagsAttribute Attribute'
+title: 'Platform:: Metadata:: FlagsAttribute, atrybut'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-ms.openlocfilehash: 3a09aa89cbe73469e994271179192ef7713e3a0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 943f70eead655b3e429c538ca41689cd24159a67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291964"
 ---
-# <a name="platformmetadataflagsattribute-attribute"></a>Platform::METADATA:: flagsattribute, atrybut
+# <a name="platformmetadataflagsattribute-attribute"></a>Platform:: Metadata:: FlagsAttribute, atrybut
 
-Wskazuje, że wyliczenie może być traktowana jako pole bitowe; oznacza to, że zestaw flag.
+Wskazuje, że Wyliczenie może być traktowane jako pole bitowe; oznacza to zestaw flag.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,22 +27,22 @@ public ref class Flags abstract : Attribute
 
 ## <a name="inheritance"></a>Dziedziczenie
 
-[Platform::Object](../cppcx/platform-object-class.md)
+[Platform:: Object](../cppcx/platform-object-class.md)
 
-[Platform::METADATA:: attribute](../cppcx/platform-metadata-attribute-attribute.md)
+[Platform:: Metadata:: Attribute — atrybut](../cppcx/platform-metadata-attribute-attribute.md)
 
 ### <a name="remarks"></a>Uwagi
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platform::METADATA
+**Przestrzeń nazw:** Platform:: Metadata
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Platform::Metadata, przestrzeń nazw](../cppcx/platform-metadata-namespace.md)
+[Platform:: Metadata — przestrzeń nazw](../cppcx/platform-metadata-namespace.md)

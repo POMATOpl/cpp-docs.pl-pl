@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: okres istnienia'
 title: Okres istnienia
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - lifetime
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
-ms.openlocfilehash: 752230db54727516e0c48c0621eaadc59486e2e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 11db85cb6df76de320b78f274061499d838151da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243526"
 ---
 # <a name="lifetime"></a>Okres istnienia
 
@@ -42,6 +43,6 @@ Chociaż identyfikator z globalnym okresem istnienia istnieje w trakcie wykonywa
 
 Pamięć może być przydzielenia w razie potrzeby (dynamicznie), jeżeli użytkownik użyje specjalnie utworzonej biblioteki procedur, takiej jak `malloc`. Ponieważ dynamiczna alokacja pamięci używa biblioteki procedur, nie uważa się tego za część języka. Zobacz funkcja [malloc](../c-runtime-library/reference/malloc.md) w *dokumentacji dotyczącej biblioteki wykonawczej*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)
