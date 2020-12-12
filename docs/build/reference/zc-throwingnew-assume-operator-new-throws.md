@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o:/Zc: throwingNew (przyjmij operator new throw)'
 title: /Zc:throwingNew (Przyjmowanie nowych zgłoszeń operatora)
 ms.date: 03/01/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: 7593107a280995145d252efa76e0a88bddbd2275
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83a78c62328853bdaf9515b55bef72503d166b58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271203"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (Przyjmowanie nowych zgłoszeń operatora)
 
@@ -48,14 +49,14 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++
 
 1. Z menu rozwijanego **Konfiguracja** wybierz pozycję **wszystkie konfiguracje**.
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **/Zc: throwingNew** lub **/Zc: throwingNew-** , a następnie wybierz **przycisk OK**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [/Zc (Zgodność)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Specyfikacje wyjątków (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>

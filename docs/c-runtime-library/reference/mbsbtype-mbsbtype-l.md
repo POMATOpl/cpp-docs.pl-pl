@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbsbtype, _mbsbtype_l'
 title: _mbsbtype, _mbsbtype_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: c1431a2d0886ffd3d16b43abf82b7342c166273a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a1d17a947d830281b05291601c74ee944cebdb10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271060"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
@@ -98,10 +99,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_mbsbtype**|\<mbstring. h>|\<Mbctype. h> *|
-|**_mbsbtype_l**|\<mbstring. h>|\<Mbctype. h> *|
+|**_mbsbtype**|\<mbstring.h>|\<mbctype.h>*|
+|**_mbsbtype_l**|\<mbstring.h>|\<mbctype.h>*|
 
-\*Dla stałych manifestu używanych jako wartości zwracane.
+\* Dla stałych manifestu używanych jako wartości zwracane.
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

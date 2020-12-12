@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _putchar_nolock, _putwchar_nolock'
 title: _putchar_nolock, _putwchar_nolock
 ms.date: 11/04/2016
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-ms.openlocfilehash: 4dba6537c5fb7ec66a812f2c34831b1b908fc3e4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ee4981ce05ab233c387bdbd56fa90edbd5b0af1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271034"
 ---
 # <a name="_putchar_nolock-_putwchar_nolock"></a>_putchar_nolock, _putwchar_nolock
 
@@ -59,7 +60,7 @@ wint_t _putwchar_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*s*<br/>
 Znak do zapisania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -81,9 +82,9 @@ Zobacz **putchar, putwchar**.
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_putchar_nolock**|\<stdio.h>|
-|**_putwchar_nolock**|\<stdio. h > lub \<WCHAR. h >|
+|**_putwchar_nolock**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
@@ -119,8 +120,8 @@ int main( void )
 This is the line of output
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
