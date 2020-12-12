@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: cacosh, cacoshf, cacoshl'
 title: cacosh, cacoshf, cacoshl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c822a63021d68c7b07768b19c55be344f258e195
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171572"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -66,12 +67,12 @@ _Lcomplex cacoshl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus cosinus hiperboliczny *z z, w*radianach. Wynik nie jest ograniczony i nieujemny wzdłuż rzeczywistej osi, a w interwale [-iπ, + iπ] wzdłuż osi urojonej.
+Arcus cosinus hiperboliczny *z z, w* radianach. Wynik nie jest ograniczony i nieujemny wzdłuż rzeczywistej osi, a w interwale [-iπ, + iπ] wzdłuż osi urojonej.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -79,13 +80,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cac
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

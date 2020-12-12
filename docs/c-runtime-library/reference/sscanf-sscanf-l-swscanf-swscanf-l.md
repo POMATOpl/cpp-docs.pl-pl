@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: sscanf, _sscanf_l, swscanf, _swscanf_l'
 title: sscanf, _sscanf_l, swscanf, _swscanf_l
 ms.date: 08/29/2019
 api_name:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: e3b453166278fff4c3230cb51895c487319e33d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f5681e1f8e122c6f24151ae5e8d37186d8bd066e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171273"
 ---
 # <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
-Odczytaj sformatowane dane z ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Odczytaj sformatowane dane z ciągu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [sscanf_s, _sscanf_s_l, swscanf_s _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,16 +84,16 @@ int _swscanf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Przechowywane dane
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *argument*<br/>
 Argumenty opcjonalne
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -110,7 +111,7 @@ Funkcja **sscanf** odczytuje dane z *buforu* do lokalizacji podanej przez każdy
 Aby uzyskać informacje o znakach pola typu scanf, zobacz [scanf znaków pola typu](../scanf-type-field-characters.md). Aby uzyskać informacje na temat pól specyfikacji formatu scanf, zobacz [pola specyfikacji formatu](../format-specification-fields-scanf-and-wscanf-functions.md).
 
 > [!IMPORTANT]
-> Podczas odczytywania ciągu z **sscanf**, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"** ); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą łatwo spowodować przepełnienie buforu.
+> Podczas odczytywania ciągu z **sscanf**, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"**); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą łatwo spowodować przepełnienie buforu.
 
 **swscanf** to dwubajtowa wersja **sscanf**; argumenty **swscanf** są ciągami znaków dwubajtowych. **sscanf** nie obsługuje wielobajtowych znaków szesnastkowych. **swscanf** nie obsługuje znaków szesnastkowych o pełnej szerokości Unicode lub "strefy zgodności". W przeciwnym razie **swscanf** i **sscanf** zachowują się identycznie.
 
@@ -118,7 +119,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stscanf**|**sscanf**|**sscanf**|**swscanf**|
 |**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
@@ -128,7 +129,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**sscanf**, **_sscanf_l**|\<stdio.h>|
-|**swscanf**, **_swscanf_l**|\<stdio. h > lub \<WCHAR. h >|
+|**swscanf**, **_swscanf_l**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -175,8 +176,8 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

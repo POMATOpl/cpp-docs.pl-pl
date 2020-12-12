@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: cacos, cacosf, cacosl'
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d7a4fcc10da68d170d0cf3b2d9cce0d486b4318
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171599"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
@@ -59,12 +60,12 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus *cosinus z z, w*radianach. Wynik jest niepowiązany wzdłuż osi urojonej i w przedziale [0, π] wzdłuż osi rzeczywistej. Wystąpi błąd domeny, jeśli *z* jest spoza interwału [-1, + 1].
+Arcus *cosinus z z, w* radianach. Wynik jest niepowiązany wzdłuż osi urojonej i w przedziale [0, π] wzdłuż osi rzeczywistej. Wystąpi błąd domeny, jeśli *z* jest spoza interwału [-1, + 1].
 
 ## <a name="remarks"></a>Uwagi
 
@@ -72,13 +73,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cac
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

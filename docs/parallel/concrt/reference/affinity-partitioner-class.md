@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy affinity_partitioner
 title: affinity_partitioner — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-ms.openlocfilehash: 0ae6bbee49d1b8873190a7054e55f65b40b31b13
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 44aa693d5007507e33f062a673713d1ddbda3172
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172326"
 ---
 # <a name="affinity_partitioner-class"></a>affinity_partitioner — Klasa
 
-Klasa `affinity_partitioner` jest podobna do klasy `static_partitioner`, ale zwiększa koligację pamięci podręcznej przez wybór zakresu mapowania na wątki robocze. Może znacząco poprawić wydajność, gdy pętla jest ponownie wykonywana nad tym samym zestawem danych, a dane pasują do pamięci podręcznej. Należy zauważyć, że ten sam obiekt `affinity_partitioner` musi być używany z kolejnymi iteracjami pętli równoległej, który jest wykonywany w określonym zestawie danych, aby można było korzystać z lokalizacji danych.
+`affinity_partitioner`Klasa jest podobna do `static_partitioner` klasy, ale zwiększa koligację pamięci podręcznej przez wybór zakresu mapowania na wątki robocze. Może znacząco poprawić wydajność, gdy pętla jest ponownie wykonywana nad tym samym zestawem danych, a dane pasują do pamięci podręcznej. Należy zauważyć, że ten sam `affinity_partitioner` obiekt musi być używany z kolejnymi iteracjami pętli równoległej, która jest wykonywana w określonym zestawie danych, aby można było skorzystać z lokalizacji danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,14 +26,14 @@ Klasa `affinity_partitioner` jest podobna do klasy `static_partitioner`, ale zwi
 class affinity_partitioner;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[affinity_partitioner](#ctor)|Konstruuje obiekt `affinity_partitioner`.|
-|[~ affinity_partitioner destruktor](#dtor)|Niszczy obiekt `affinity_partitioner`.|
+|[affinity_partitioner](#ctor)|Konstruuje `affinity_partitioner` obiekt.|
+|[~ affinity_partitioner destruktor](#dtor)|Niszczy `affinity_partitioner` obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -44,17 +45,17 @@ class affinity_partitioner;
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="dtor"></a>~ affinity_partitioner
+## <a name="affinity_partitioner"></a><a name="dtor"></a> ~ affinity_partitioner
 
-Niszczy obiekt `affinity_partitioner`.
+Niszczy `affinity_partitioner` obiekt.
 
 ```cpp
 ~affinity_partitioner();
 ```
 
-## <a name="ctor"></a>affinity_partitioner
+## <a name="affinity_partitioner"></a><a name="ctor"></a> affinity_partitioner
 
-Konstruuje obiekt `affinity_partitioner`.
+Konstruuje `affinity_partitioner` obiekt.
 
 ```cpp
 affinity_partitioner();

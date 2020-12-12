@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: łączenie pliku wykonywalnego z biblioteką DLL'
 title: Łączenie pliku wykonywalnego z biblioteką DLL
 ms.date: 08/22/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfcc1f506b1e9c8da14549795a9c282b66788c6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172053"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL
 
@@ -143,6 +144,6 @@ W przeciwieństwie do tego przykładu, w większości przypadków należy wywoł
 
 - [Kolejność wyszukiwania biblioteki dołączanej dynamicznie](/windows/win32/Dlls/dynamic-link-library-search-order)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

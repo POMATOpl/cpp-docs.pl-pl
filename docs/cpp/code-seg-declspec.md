@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: code_seg (__declspec)'
 title: code_seg (__declspec)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
-ms.openlocfilehash: 22703e92b1a127378c965ce12bcc4e5475b3e452
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b382e0a758c28ffab297badda7670c1de3b08d32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180839"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171099"
 ---
 # <a name="code_seg-__declspec"></a>code_seg (__declspec)
 
@@ -27,11 +28,11 @@ __declspec(code_seg("segname")) declarator
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut `__declspec(code_seg(...))` umożliwia rozmieszczenie kodu do oddzielnych segmentów nazwanych, które mogą być stronicowane lub blokowane w pamięci osobno. Możesz używać tego atrybutu, aby kontrolować rozmieszczenie wystąpień szablonów i kodu generowanego przez kompilator.
+Ten `__declspec(code_seg(...))` atrybut umożliwia umieszczanie kodu w oddzielnych segmentach o nazwach, które mogą być stronicowane lub blokowane w pamięci osobno. Możesz używać tego atrybutu, aby kontrolować rozmieszczenie wystąpień szablonów i kodu generowanego przez kompilator.
 
 *Segment* to nazwany blok danych w pliku. obj, który jest ładowany do pamięci jako jednostka. *Segment tekstu* jest segmentem zawierającym kod wykonywalny. *Sekcja* termin jest często używana zamiennie z segmentem.
 
-Kod obiektu, który jest generowany, gdy `declarator` jest zdefiniowany, jest umieszczany w segmencie tekstowym określonym przez `segname`, który jest literałem wąskim ciągiem. Nazwa `segname` nie musi być określona w [sekcji](../preprocessor/section.md) pragma, zanim będzie mogła zostać użyta w deklaracji. Domyślnie, gdy nie `code_seg` jest określony, kod obiektu jest umieszczany w segmencie o nazwie. Text. Atrybut **code_seg** zastępuje wszelkie istniejące [#pragma code_seg](../preprocessor/code-seg.md) dyrektywie. Atrybut **code_seg** stosowany do funkcji składowej przesłania dowolny atrybut **code_seg** zastosowany do otaczającej klasy.
+Kod obiektu, który jest generowany, gdy `declarator` jest zdefiniowany, jest umieszczany w segmencie tekstu określonym przez `segname` , który jest literałem o wąskim ciągu. Nazwa nie `segname` musi być określona w [sekcji](../preprocessor/section.md) pragma, zanim będzie mogła zostać użyta w deklaracji. Domyślnie, gdy nie `code_seg` jest określony, kod obiektu jest umieszczany w segmencie o nazwie. Text. Atrybut **code_seg** zastępuje wszelkie istniejące [#pragma code_seg](../preprocessor/code-seg.md) dyrektywie. Atrybut **code_seg** stosowany do funkcji składowej przesłania dowolny atrybut **code_seg** zastosowany do otaczającej klasy.
 
 Jeśli jednostka ma atrybut **code_seg** , wszystkie deklaracje i definicje tej samej jednostki muszą mieć identyczne atrybuty **code_seg** . Jeśli klasa podstawowa ma atrybut **code_seg** , klasy pochodne muszą mieć ten sam atrybut.
 
@@ -39,7 +40,7 @@ Gdy atrybut **code_seg** jest stosowany do funkcji zakresu przestrzeni nazw lub 
 
 Gdy atrybut **code_seg** jest stosowany do klasy szablonu lub funkcji szablonu, wszystkie niejawne specjalizacje szablonu są umieszczane w określonym segmencie. Jawne lub częściowe specjalizacje nie dziedziczą atrybutu **code_seg** z podstawowego szablonu. Możesz określić ten sam lub inny atrybut **code_seg** dla specjalizacji. Nie można zastosować atrybutu **code_seg** do jawnego tworzenia wystąpienia szablonu.
 
-Domyślnie, kod generowany przez kompilator, taki jak funkcja specjalna elementu członkowskiego, jest umieszczany w segmencie .text. Dyrektywa `#pragma code_seg` nie przesłania tego ustawienia domyślnego. Użyj atrybutu **code_seg** dla klasy, szablonu klasy lub szablonu funkcji, aby kontrolować miejsce umieszczenia kodu generowanego przez kompilator.
+Domyślnie, kod generowany przez kompilator, taki jak funkcja specjalna elementu członkowskiego, jest umieszczany w segmencie .text. `#pragma code_seg`Dyrektywa nie przesłania tego ustawienia domyślnego. Użyj atrybutu **code_seg** dla klasy, szablonu klasy lub szablonu funkcji, aby kontrolować miejsce umieszczenia kodu generowanego przez kompilator.
 
 Wyrażenia lambda dziedziczą atrybuty **code_seg** z ich zakresu otaczającego. Aby określić segment dla wyrażenia lambda, zastosuj atrybut **code_seg** po klauzuli deklaracji parametru i przed jakąkolwiek specyfikacją lub wyjątkami o typie zwracanym, wszelkie końcowe specyfikacje typu powrotu i treści lambda. Aby uzyskać więcej informacji, zobacz [składnia wyrażenia lambda](../cpp/lambda-expression-syntax.md). Ten przykład definiuje lambdę w segmencie o nazwie PagedMem:
 

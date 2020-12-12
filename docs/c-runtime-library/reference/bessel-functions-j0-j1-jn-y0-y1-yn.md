@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat funkcji Bessela: _j0, _j1, _jn, _y0, _y1, _yn'
 title: 'Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8ada869b615e26d004e10ccc3355e83c9772888f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171871"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -86,25 +87,25 @@ double _yn(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
-*Azotan*<br/>
+*n*<br/>
 Kolejność liczb całkowitych funkcji Bessela.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca funkcję Bessela *x*. Jeśli *x* jest wartością ujemną w funkcjach **_y0**, **_y1**lub **_yn** , procedura ustawia **errno** na **Edom**, drukuje **_DOMAIN** komunikat o błędzie do **stderr**i zwraca **_HUGE_VAL**. Obsługę błędów można modyfikować za pomocą **_matherr**.
+Każda z tych procedur zwraca funkcję Bessela *x*. Jeśli *x* jest wartością ujemną w funkcjach **_y0**, **_y1** lub **_yn** , procedura ustawia **errno** na **Edom**, drukuje **_DOMAIN** komunikat o błędzie do **stderr** i zwraca **_HUGE_VAL**. Obsługę błędów można modyfikować za pomocą **_matherr**.
 
 ## <a name="remarks"></a>Uwagi
 
-Procedury **_j0**, **_j1**i **_jn** zwracają funkcje Bessela pierwszego rodzaju: Orders 0, 1 i n, odpowiednio.
+Procedury **_j0**, **_j1** i **_jn** zwracają funkcje Bessela pierwszego rodzaju: Orders 0, 1 i n, odpowiednio.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
 |**QNAN**, **IND**|**Nieprawidłowy**|**_DOMAIN**|
 
-Procedury **_y0**, **_y1**i **_yn** zwracają funkcje Bessela drugiego rodzaju: zamówienia 0, 1 i n, odpowiednio.
+Procedury **_y0**, **_y1** i **_yn** zwracają funkcje Bessela drugiego rodzaju: zamówienia 0, 1 i n, odpowiednio.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
@@ -118,7 +119,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**_yn **_yn**|\<cmath> (C++), \<Math. h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1** _yn |\<cmath> (C++), \<math.h> (C, C++)|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -163,7 +164,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

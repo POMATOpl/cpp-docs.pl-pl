@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa agenta'
 title: agent — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: f1d98cdc6237f182e0240a85f2fdce3410232195
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74be31ad13eab6a026a11dbcc2b20719e98ee868
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172274"
 ---
 # <a name="agent-class"></a>agent — Klasa
 
@@ -48,7 +49,7 @@ class agent;
 |Nazwa|Opis|
 |----------|-----------------|
 |[Anuluj](#cancel)|Przenosi agenta z `agent_created` lub `agent_runnable` Stanów do `agent_canceled` stanu.|
-|[start](#start)|Przenosi agenta ze `agent_created` stanu do `agent_runnable` stanu i planuje jego wykonanie.|
+|[Start](#start)|Przenosi agenta ze `agent_created` stanu do `agent_runnable` stanu i planuje jego wykonanie.|
 |[Stany](#status)|Synchroniczne źródło informacji o stanie od agenta.|
 |[status_port](#status_port)|Asynchroniczne źródło informacji o stanie od agenta.|
 |[trwa](#wait)|Czeka, aż Agent ukończy zadanie.|
@@ -60,7 +61,7 @@ class agent;
 |Nazwa|Opis|
 |----------|-----------------|
 |[gotowe](#done)|Przenosi agenta do `agent_done` stanu, wskazując, że Agent został ukończony.|
-|[wykonane](#run)|Reprezentuje główne zadanie agenta. `run`powinien zostać zastąpiony w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.|
+|[wykonane](#run)|Reprezentuje główne zadanie agenta. `run` powinien zostać zastąpiony w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -76,7 +77,7 @@ Aby uzyskać więcej informacji, zobacz [agenci asynchroniczni](../../../paralle
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="agent"></a><a name="ctor"></a>Odczynnik
+## <a name="agent"></a><a name="ctor"></a> Odczynnik
 
 Konstruuje agenta.
 
@@ -100,7 +101,7 @@ agent(ScheduleGroup& _PGroup);
 
 Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określono `_PScheduler` `_PGroup` parametrów lub.
 
-## <a name="agent"></a><a name="dtor"></a>~ Agent
+## <a name="agent"></a><a name="dtor"></a> ~ Agent
 
 Niszczy agenta.
 
@@ -112,7 +113,7 @@ virtual ~agent();
 
 Wystąpił błąd podczas niszczenia agenta, który nie znajduje się w stanie terminalu ( `agent_done` lub `agent_canceled` ). Można to uniknąć, czekając, aż Agent osiągnie stan terminalu w destruktorze klasy, która dziedziczy z `agent` klasy.
 
-## <a name="cancel"></a><a name="cancel"></a>Anuluj
+## <a name="cancel"></a><a name="cancel"></a> Anuluj
 
 Przenosi agenta z `agent_created` lub `agent_runnable` Stanów do `agent_canceled` stanu.
 
@@ -124,7 +125,7 @@ bool cancel();
 
 **`true`** Jeśli Agent został anulowany, **`false`** w przeciwnym razie. Nie można anulować agenta, jeśli został już uruchomiony lub został już ukończony.
 
-## <a name="done"></a><a name="done"></a>odbywać
+## <a name="done"></a><a name="done"></a> odbywać
 
 Przenosi agenta do `agent_done` stanu, wskazując, że Agent został ukończony.
 
@@ -140,9 +141,9 @@ bool done();
 
 Ta metoda powinna być wywoływana na końcu `run` metody, gdy wiadomo, że wykonywanie agenta zakończyło się pomyślnie.
 
-## <a name="run"></a><a name="run"></a>wykonane
+## <a name="run"></a><a name="run"></a> wykonane
 
-Reprezentuje główne zadanie agenta. `run`powinien zostać zastąpiony w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.
+Reprezentuje główne zadanie agenta. `run` powinien zostać zastąpiony w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.
 
 ```cpp
 virtual void run() = 0;
@@ -152,7 +153,7 @@ virtual void run() = 0;
 
 Stan agenta jest zmieniany na `agent_started` prawidłowy przed wywołaniem tej metody. Metoda powinna zostać wywołana `done` na agencie przy użyciu odpowiedniego stanu przed zwróceniem i może nie generować żadnych wyjątków.
 
-## <a name="start"></a><a name="start"></a>Start
+## <a name="start"></a><a name="start"></a> Start
 
 Przenosi agenta ze `agent_created` stanu do `agent_runnable` stanu i planuje jego wykonanie.
 
@@ -164,7 +165,7 @@ bool start();
 
 **`true`** Jeśli Agent został uruchomiony prawidłowo, **`false`** w przeciwnym razie. Nie można uruchomić agenta, który został anulowany.
 
-## <a name="status"></a><a name="status"></a>Stany
+## <a name="status"></a><a name="status"></a> Stany
 
 Synchroniczne źródło informacji o stanie od agenta.
 
@@ -176,7 +177,7 @@ agent_status status();
 
 Zwraca bieżący stan agenta. Zwróć uwagę, że ten zwrócony stan może ulec zmianie natychmiast po zwróceniu.
 
-## <a name="status_port"></a><a name="status_port"></a>status_port
+## <a name="status_port"></a><a name="status_port"></a> status_port
 
 Asynchroniczne źródło informacji o stanie od agenta.
 
@@ -188,7 +189,7 @@ ISource<agent_status>* status_port();
 
 Zwraca źródło komunikatu, które może wysyłać komunikaty o bieżącym stanie agenta.
 
-## <a name="wait"></a><a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a> trwa
 
 Czeka, aż Agent ukończy zadanie.
 
@@ -216,7 +217,7 @@ Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `age
 
 Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE` , zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu, zanim Agent ukończy jego zadanie.
 
-## <a name="wait_for_all"></a><a name="wait_for_all"></a>wait_for_all
+## <a name="wait_for_all"></a><a name="wait_for_all"></a> wait_for_all
 
 Czeka wszystkim określonym agentom na ukończenie zadań.
 
@@ -248,7 +249,7 @@ Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `age
 
 Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE` , zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu, zanim Agent ukończy jego zadanie.
 
-## <a name="wait_for_one"></a><a name="wait_for_one"></a>wait_for_one
+## <a name="wait_for_one"></a><a name="wait_for_one"></a> wait_for_one
 
 Czeka, aż jeden z określonych agentów ukończy zadanie.
 
@@ -284,6 +285,6 @@ Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `age
 
 Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE` , zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu, zanim Agent ukończy jego zadanie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

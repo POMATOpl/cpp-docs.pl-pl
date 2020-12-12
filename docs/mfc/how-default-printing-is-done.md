@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak odbywa się drukowanie domyślne'
 title: Jak jest wykonywane drukowanie domyślne
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - printing [MFC], default
 - defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
-ms.openlocfilehash: 9ca79ec69037b960e7c455f6ab8abd8833b9a8a0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cd2be6cea4e038775f2134dfde434580839d0280
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172872"
 ---
 # <a name="how-default-printing-is-done"></a>Jak jest wykonywane drukowanie domyślne
 
 W tym artykule wyjaśniono domyślny proces drukowania w systemie Windows pod kątem platformy MFC.
 
-W aplikacjach MFC Klasa widoku ma funkcję członkowską o nazwie `OnDraw` , która zawiera cały kod rysowania. `OnDraw`Pobiera wskaźnik do obiektu [przechwytywania](reference/cdc-class.md) jako parametr. Ten `CDC` obiekt reprezentuje kontekst urządzenia do odbierania obrazu utworzonego przez program `OnDraw` . Gdy okno wyświetlania dokumentu otrzymuje komunikat [WM_PAINT](/windows/win32/gdi/wm-paint) , struktura wywołuje `OnDraw` i przekazuje do niego kontekst urządzenia dla ekranu (obiekt [CPaintDC](reference/cpaintdc-class.md) , aby był określony). W związku z tym `OnDraw` dane wyjściowe trafiają do ekranu.
+W aplikacjach MFC Klasa widoku ma funkcję członkowską o nazwie `OnDraw` , która zawiera cały kod rysowania. `OnDraw` Pobiera wskaźnik do obiektu [przechwytywania](reference/cdc-class.md) jako parametr. Ten `CDC` obiekt reprezentuje kontekst urządzenia do odbierania obrazu utworzonego przez program `OnDraw` . Gdy okno wyświetlania dokumentu otrzymuje komunikat [WM_PAINT](/windows/win32/gdi/wm-paint) , struktura wywołuje `OnDraw` i przekazuje do niego kontekst urządzenia dla ekranu (obiekt [CPaintDC](reference/cpaintdc-class.md) , aby był określony). W związku z tym `OnDraw` dane wyjściowe trafiają do ekranu.
 
 W programowaniu dla systemu Windows wysyłanie danych wyjściowych do drukarki jest bardzo podobne do wysyłania danych wyjściowych do ekranu. Wynika to z faktu, że interfejs urządzenia graficznego (GDI) systemu Windows jest niezależny od sprzętu. Możesz użyć tych samych funkcji GDI do wyświetlania ekranu lub do drukowania po prostu przy użyciu odpowiedniego kontekstu urządzenia. Jeśli `CDC` `OnDraw` otrzymany obiekt reprezentuje drukarkę, `OnDraw` dane wyjściowe trafiają do drukarki.
 

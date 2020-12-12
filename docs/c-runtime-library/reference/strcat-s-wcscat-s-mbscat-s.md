@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strcat_s, wcscat_s, _mbscat_s _mbscat_s_l'
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 ms.date: 4/2/2020
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: f7d890a753638112c4a1bb56cf6093a9510dbee2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c0ac9643593b509d4eeae1aca2d60aaa8269aa73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171130"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -126,9 +127,9 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 
 |*strDestination*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Wartość zerowa** lub niezakończona|ile|ile|**EINVAL**|nie zmodyfikowano|
-|ile|ile|**NULL**|**EINVAL**|*strDestination*[0] ustaw na 0|
-|ile|0 lub za mały|ile|**ERANGE**|*strDestination*[0] ustaw na 0|
+|**Wartość zerowa** lub niezakończona|dowolny|dowolny|**EINVAL**|nie zmodyfikowano|
+|dowolny|dowolny|**NULL**|**EINVAL**|*strDestination*[0] ustaw na 0|
+|dowolny|0 lub za mały|dowolny|**ERANGE**|*strDestination*[0] ustaw na 0|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -165,9 +166,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strcat_s**|\<> String. h|
-|**wcscat_s**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbscat_s**|\<mbstring. h>|
+|**strcat_s**|\<string.h>|
+|**wcscat_s**|\<string.h> lub \<wchar.h>|
+|**_mbscat_s**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

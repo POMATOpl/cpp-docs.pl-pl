@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: jak używać Alloc i Free, aby zwiększyć wydajność pamięci'
 title: 'Porady: używanie z funkcji Alloc i Free do poprawiania wydajności pamięci'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: e5e5207fe435e73df60b757d4f595aacbb70fe72
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: ab9a7bb9ad067bd7a5650b9e66d1708f08ffc183
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172573"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Porady: używanie z funkcji Alloc i Free do poprawiania wydajności pamięci
 
@@ -58,7 +59,7 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 > **cl.exe przy/EHsceń. cpp**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje zarządzania pamięcią](../../parallel/concrt/memory-management-functions.md)<br/>
 [Alloc — funkcja](reference/concurrency-namespace-functions.md#alloc)<br/>

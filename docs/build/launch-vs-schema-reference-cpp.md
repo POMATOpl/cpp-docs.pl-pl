@@ -1,14 +1,15 @@
 ---
+description: 'Dowiedz się więcej na temat: launch.vs.jsw odwołaniu do schematu (C++)'
 title: launch.vs.jsodwołanie do schematu (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a7b18de57208017003717b3cda38fb214fad7f79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172066"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.jsodwołanie do schematu (C++)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Równoległe kontenery i obiekty'
 title: Równoległe kontenery oraz obiekty
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 7387173378e79a4707008a11846eab19d7ae4341
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d0b6b491fbe41ea74ad0e6c138cb270558f6e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172443"
 ---
 # <a name="parallel-containers-and-objects"></a>Równoległe kontenery oraz obiekty
 
@@ -87,7 +88,7 @@ Obiekty współbieżne:
 
 - Środowisko uruchomieniowe nie definiuje wyspecjalizowanej wersji programu `concurrent_vector` dla typu **`bool`** .
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Operacje dotyczące współbieżności
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Operacje Concurrency-Safe
 
 Wszystkie metody, które dołączają lub zwiększają rozmiar `concurrent_vector` obiektu lub uzyskują dostęp do elementu w `concurrent_vector` obiekcie, są bezpieczne dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia. Wyjątkiem od tej reguły jest `resize` Metoda.
 
@@ -176,7 +177,7 @@ Klasa [concurrency:: concurrent_queue](../../parallel/concrt/reference/concurren
 
 - `concurrent_queue`Klasa udostępnia metodę [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) zamiast `size` metody. `unsafe_size`Metoda nie jest bezpieczna pod kątem współbieżności.
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Operacje dotyczące współbieżności
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Operacje Concurrency-Safe
 
 Wszystkie metody, które znajdują się w kolejce lub Dequeue z `concurrent_queue` obiektu, są bezpieczne dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia.
 
@@ -254,7 +255,7 @@ Przykład, który używa `concurrent_unordered_map` do wykonywania mapy i zmniej
 
 Aby uniknąć zakleszczenia, żadna metoda nie `concurrent_unordered_map` jest blokowana w przypadku wywołania programu przydzielania pamięci, funkcji mieszania lub innego kodu zdefiniowanego przez użytkownika. Ponadto należy upewnić się, że funkcja skrótu zawsze oblicza równe klucze do tej samej wartości. Funkcja Najlepsza wartość skrótu dystrybuuje klucze jednolicie w przestrzeni kodu skrótu.
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Operacje dotyczące współbieżności
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Operacje Concurrency-Safe
 
 `concurrent_unordered_map`Klasa umożliwia bezpieczne wykonywanie operacji wstawiania i dostępu do elementów. Operacje INSERT nie weryfikują istniejących wskaźników lub iteratorów. Operacje dostępu i przechodzenia iteratora są również bezpieczne dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia. W poniższej tabeli przedstawiono najczęściej używane `concurrent_unordered_map` metody i operatory, które są bezpieczne pod względem współbieżności.
 

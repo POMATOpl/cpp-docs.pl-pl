@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _beginthread, _beginthreadex'
 title: _beginthread, _beginthreadex
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 5060c4b34005c1cc066e002d20ca70cbfea0fbef
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: f4357186a970914e70116650bd1c218521327f99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171910"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -80,7 +81,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>Parametry
 
 *start_address*<br/>
-Adres początkowy procedury, która rozpoczyna wykonywanie nowego wątku. W przypadku **_beginthread**Konwencja wywoływania jest [__cdecl](../../cpp/cdecl.md) (dla kodu natywnego) lub [__clrcall](../../cpp/clrcall.md) (dla kodu zarządzanego); w przypadku **_beginthreadex**jest to [__stdcall](../../cpp/stdcall.md) (dla kodu natywnego) lub [__clrcall](../../cpp/clrcall.md) (dla kodu zarządzanego).
+Adres początkowy procedury, która rozpoczyna wykonywanie nowego wątku. W przypadku **_beginthread** Konwencja wywoływania jest [__cdecl](../../cpp/cdecl.md) (dla kodu natywnego) lub [__clrcall](../../cpp/clrcall.md) (dla kodu zarządzanego); w przypadku **_beginthreadex** jest to [__stdcall](../../cpp/stdcall.md) (dla kodu natywnego) lub [__clrcall](../../cpp/clrcall.md) (dla kodu zarządzanego).
 
 *stack_size*<br/>
 Rozmiar stosu dla nowego wątku lub 0.
@@ -113,7 +114,7 @@ Funkcja **_beginthread** tworzy wątek, który rozpoczyna wykonywanie procedury 
 
 **_beginthreadex** przypomina interfejs API [wielowątkowości](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) Win32 bardziej blisko niż **_beginthread** . **_beginthreadex** różni się od **_beginthread** w następujący sposób:
 
-- **_beginthreadex** ma trzy dodatkowe parametry: *initflag*, *Security*i **threadaddr**. Nowy wątek można utworzyć w stanie wstrzymania z określonym zabezpieczeniami i można uzyskać do niego dostęp przy użyciu *thrdaddr*, który jest identyfikatorem wątku.
+- **_beginthreadex** ma trzy dodatkowe parametry: *initflag*, *Security* i **threadaddr**. Nowy wątek można utworzyć w stanie wstrzymania z określonym zabezpieczeniami i można uzyskać do niego dostęp przy użyciu *thrdaddr*, który jest identyfikatorem wątku.
 
 - Procedura w *start_address* , która jest przenoszona do **_beginthreadex** musi używać **`__stdcall`** konwencji wywoływania (dla kodu natywnego) lub **__clrcall** (dla kodu zarządzanego) i musi zwrócić kod zakończenia wątku.
 
@@ -121,7 +122,7 @@ Funkcja **_beginthread** tworzy wątek, który rozpoczyna wykonywanie procedury 
 
 - Wątek, który jest tworzony przy użyciu **_beginthreadex** jest zakończony przez wywołanie do [_endthreadex](endthread-endthreadex.md).
 
-Funkcja **_beginthreadex** zapewnia większą kontrolę nad sposobem tworzenia wątku niż **_beginthread** . Funkcja **_endthreadex** jest również bardziej elastyczna. Na przykład w przypadku **_beginthreadex**można użyć informacji o zabezpieczeniach, ustawić stan początkowy wątku (uruchomiony lub zawieszony) i uzyskać identyfikator wątku nowo utworzonego wątku. Możesz również użyć uchwytu wątku, który jest zwracany przez **_beginthreadex** z interfejsami API synchronizacji, których nie można zrobić z **_beginthread**.
+Funkcja **_beginthreadex** zapewnia większą kontrolę nad sposobem tworzenia wątku niż **_beginthread** . Funkcja **_endthreadex** jest również bardziej elastyczna. Na przykład w przypadku **_beginthreadex** można użyć informacji o zabezpieczeniach, ustawić stan początkowy wątku (uruchomiony lub zawieszony) i uzyskać identyfikator wątku nowo utworzonego wątku. Możesz również użyć uchwytu wątku, który jest zwracany przez **_beginthreadex** z interfejsami API synchronizacji, których nie można zrobić z **_beginthread**.
 
 Używanie **_beginthreadex** niż **_beginthread**. Jeśli wątek, który jest generowany przez **_beginthread** zamyka szybko, uchwyt, który jest zwracany do obiektu wywołującego **_beginthread** może być nieprawidłowy lub wskazywać na inny wątek. Jednakże uchwyt zwracany przez **_beginthreadex** musi być zamknięty przez obiekt wywołujący **_beginthreadex**, więc jest to prawidłowe dojście, jeśli **_beginthreadex** nie zwrócił błędu.
 
@@ -134,11 +135,11 @@ Możesz wywołać [_endthread](endthread-endthreadex.md) lub **_endthreadex** ja
 
 System operacyjny obsługuje alokację stosu w przypadku wywołania **_beginthread** lub **_beginthreadex** . nie trzeba przekazywać adresu stosu wątków do żadnej z tych funkcji. Ponadto argument *stack_size* może mieć wartość 0, w takim przypadku system operacyjny używa takiej samej wartości jak stos określony dla wątku głównego.
 
-*arglist* jest parametrem, który ma zostać przesłany do nowo utworzonego wątku. Zwykle jest to adres elementu danych, na przykład ciąg znaków. *arglist* może mieć **wartość null** , jeśli nie jest to konieczne, ale **_beginthread** i **_beginthreadex** muszą mieć określoną wartość do przekazania do nowego wątku. Wszystkie wątki są przerywane, Jeśli dowolne wywołania wątku [przerywają](abort.md), **opuszczają**, **_exit**lub **ExitProcess —**.
+*arglist* jest parametrem, który ma zostać przesłany do nowo utworzonego wątku. Zwykle jest to adres elementu danych, na przykład ciąg znaków. *arglist* może mieć **wartość null** , jeśli nie jest to konieczne, ale **_beginthread** i **_beginthreadex** muszą mieć określoną wartość do przekazania do nowego wątku. Wszystkie wątki są przerywane, Jeśli dowolne wywołania wątku [przerywają](abort.md), **opuszczają**, **_exit** lub **ExitProcess —**.
 
 Ustawienia regionalne nowego wątku są inicjowane przy użyciu globalnie bieżących informacji o ustawieniach regionalnych dla poszczególnych procesów. Jeśli ustawienia regionalne dla wątku są włączone przez wywołanie do [_configthreadlocale](configthreadlocale.md) (globalnie lub tylko dla nowych wątków), wątek może zmienić ustawienia regionalne niezależnie od innych wątków, wywołując metodę **setlocale** lub **_wsetlocale**. Wątki, które nie mają ustawionej flagi ustawień regionalnych dla wątku, mogą mieć wpływ na informacje o ustawieniach regionalnych we wszystkich innych wątkach, które również nie mają ustawionej flagi ustawień regionalnych dla wątku, a także wszystkie nowo utworzone wątki. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W **/clr** przypadku kodu/CLR **_beginthread** i **_beginthreadex** mają dwa przeciążenia. Jeden z nich przyjmuje natywny wskaźnik funkcji konwencji wywoływania, a drugi przyjmuje **__clrcall** wskaźnik funkcji. Pierwsze Przeciążenie nie jest bezpieczne dla domeny aplikacji i nigdy nie będzie. Jeśli piszesz kod **/CLR** , musisz upewnić się, że nowy wątek przejdzie do właściwej domeny aplikacji przed uzyskaniem dostępu do zarządzanych zasobów. Można to zrobić na przykład przy użyciu [funkcji call_in_appdomain](../../dotnet/call-in-appdomain-function.md). Drugie Przeciążenie jest bezpieczne dla domeny aplikacji; nowo utworzony wątek zawsze będzie kończyć się w domenie aplikacji obiektu wywołującego **_beginthread** lub **_beginthreadex**.
+W  przypadku kodu/CLR **_beginthread** i **_beginthreadex** mają dwa przeciążenia. Jeden z nich przyjmuje natywny wskaźnik funkcji konwencji wywoływania, a drugi przyjmuje **__clrcall** wskaźnik funkcji. Pierwsze Przeciążenie nie jest bezpieczne dla domeny aplikacji i nigdy nie będzie. Jeśli piszesz kod **/CLR** , musisz upewnić się, że nowy wątek przejdzie do właściwej domeny aplikacji przed uzyskaniem dostępu do zarządzanych zasobów. Można to zrobić na przykład przy użyciu [funkcji call_in_appdomain](../../dotnet/call-in-appdomain-function.md). Drugie Przeciążenie jest bezpieczne dla domeny aplikacji; nowo utworzony wątek zawsze będzie kończyć się w domenie aplikacji obiektu wywołującego **_beginthread** lub **_beginthreadex**.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -325,7 +326,7 @@ In second thread...
 Counter should be 1000000; it is-> 1000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread, _endthreadex](endthread-endthreadex.md)

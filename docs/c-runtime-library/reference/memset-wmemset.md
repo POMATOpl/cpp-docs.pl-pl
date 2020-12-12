@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcji memset, wmemset'
 title: memset, wmemset
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 6e1db021da70f0af7b045e2a3100dbaaa81e5a50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 547cbbcab4966291ab540b6e57f68d4057995ff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171351"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -60,7 +61,7 @@ wchar_t *wmemset(
 *dest*<br/>
 Wskaźnik do miejsca docelowego.
 
-*c*<br/>
+*s*<br/>
 Znak do ustawienia.
 
 *liczbą*<br/>
@@ -80,8 +81,8 @@ Ustawia pierwszą *liczbę* znaków miejsca *docelowego* na znak *c*.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memset**|\<> pamięci. h > \<lub String. h|
-|**wmemset**|\<WCHAR. h >|
+|**funkcji memset**|\<memory.h> lub \<string.h>|
+|**wmemset**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -145,7 +146,7 @@ Before: This is a test of the wmemset function
 After:  **** is a test of the wmemset function
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

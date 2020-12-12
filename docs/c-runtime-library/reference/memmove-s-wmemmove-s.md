@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: memmove_s, wmemmove_s'
 title: memmove_s, wmemmove_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: faa68f073949c9c1bcd3d96bb48472484adc312c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171403"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -80,9 +81,9 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia
 
 |*dest*|*numberOfElements*|*src*|Wartość zwracana|Zawartość miejsca *docelowego*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|ile|ile|**EINVAL**|nie zmodyfikowano|
-|ile|ile|**NULL**|**EINVAL**|nie zmodyfikowano|
-|ile|< *liczbą*|ile|**ERANGE**|nie zmodyfikowano|
+|**NULL**|dowolny|dowolny|**EINVAL**|nie zmodyfikowano|
+|dowolny|dowolny|**NULL**|**EINVAL**|nie zmodyfikowano|
+|dowolny|< *liczbą*|dowolny|**ERANGE**|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -96,8 +97,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memmove_s**|\<> String. h|
-|**wmemmove_s**|\<WCHAR. h>|
+|**memmove_s**|\<string.h>|
+|**wmemmove_s**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

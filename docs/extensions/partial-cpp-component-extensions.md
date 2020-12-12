@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: częściowe (C++/CLI i C++/CX)'
 title: częściowo  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 0f9de5dda1b0838a624431e579e6bc6b328d9013
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 8e6506e0ae5af40f1783241b5783228cfc919862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173106"
 ---
 # <a name="partial--ccli-and-ccx"></a>częściowo  (C++/CLI i C++/CX)
 
@@ -44,7 +45,7 @@ class-key identifier {
 ### <a name="parameters"></a>Parametry
 
 *klucz klasy*<br/>
-Słowo kluczowe, które deklaruje klasę lub strukturę obsługiwaną przez środowisko wykonawcze systemu Windows. **Klasa ref** , **Klasa wartości** , **Struktura ref** lub **Struktura wartości**.
+Słowo kluczowe, które deklaruje klasę lub strukturę obsługiwaną przez środowisko wykonawcze systemu Windows. **Klasa ref**, **Klasa wartości**, **Struktura ref** lub **Struktura wartości**.
 
 *identyfikatora*<br/>
 Nazwa zdefiniowanego typu.

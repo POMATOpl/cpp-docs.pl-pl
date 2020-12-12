@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Parallel narzędzia diagnostyczne (środowisko uruchomieniowe współbieżności)'
 title: Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 34b2421dfc53deeb35dcc659a8d555983e583737
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 44d885e8e6c7529bd15fa0aa2e7930773400361f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172430"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Równoległe narzędzia diagnostyczne (współbieżność środowiska wykonawczego)
 
@@ -17,7 +18,7 @@ Program Visual Studio zapewnia szeroką obsługę debugowania i profilowania apl
 
 ## <a name="debugging"></a>Debugowanie
 
-Debuger programu Visual Studio zawiera okno **stosów równoległych** , okno **zadań równoległych** i okno **czujki równoległej** . Aby uzyskać więcej informacji, [zobacz Przewodnik: Debugowanie aplikacji](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) równoległej i [instrukcje: Użyj okna](/visualstudio/debugger/how-to-use-the-parallel-watch-window)czujki równoległej.
+Debuger programu Visual Studio zawiera okno **stosów równoległych** , okno **zadań równoległych** i okno **czujki równoległej** . Aby uzyskać więcej informacji, zobacz [Przewodnik: debugowanie aplikacji równoległej](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) i [instrukcje: korzystanie z okna czujki równoległej](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
 
 ## <a name="profiling"></a>Profilowanie
 
@@ -55,14 +56,14 @@ W poniższej tabeli opisano zdarzenia, które wywołuje środowisko uruchomienio
 
 - [concurrency:: ResourceManagerEventGuid —](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
 
-Element [concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) Enumeration określa możliwe operacje śledzone przez zdarzenie. Na przykład w momencie wejścia `parallel_for` algorytmu środowisko uruchomieniowe `PPLParallelForEventGuid` wywołuje zdarzenie i zapewnia `CONCRT_EVENT_START` jako operację. Przed zwróceniem `PPLParallelForEventGuid`algorytmuśrodowisko uruchomieniowe ponownie wywołuje zdarzenie i zapewnia `CONCRT_EVENT_END` jako operację. `parallel_for`
+Wyliczenie [concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) określa możliwe operacje śledzone przez zdarzenie. Na przykład w momencie wejścia `parallel_for` algorytmu środowisko uruchomieniowe wywołuje `PPLParallelForEventGuid` zdarzenie i zapewnia `CONCRT_EVENT_START` jako operację. Przed `parallel_for` zwróceniem algorytmu środowisko uruchomieniowe ponownie wywołuje `PPLParallelForEventGuid` zdarzenie i zapewnia `CONCRT_EVENT_END` jako operację.
 
-Poniższy przykład ilustruje, jak włączyć śledzenie dla wywołania `parallel_for`. Środowisko uruchomieniowe nie śledzi pierwszego wywołania do `parallel_for` , ponieważ śledzenie nie jest włączone. Wywołanie `EnableTracing` umożliwiające środowisko uruchomieniowe śledzenia drugiego wywołania do `parallel_for`.
+Poniższy przykład ilustruje, jak włączyć śledzenie dla wywołania `parallel_for` . Środowisko uruchomieniowe nie śledzi pierwszego wywołania do, `parallel_for` ponieważ śledzenie nie jest włączone. Wywołanie umożliwiające `EnableTracing` środowisko uruchomieniowe śledzenia drugiego wywołania do `parallel_for` .
 
 [!code-cpp[concrt-etw#1](../../parallel/concrt/codesnippet/cpp/parallel-diagnostic-tools-concurrency-runtime_1.cpp)]
 
-Środowisko uruchomieniowe śledzi liczbę wywołań `EnableTracing` i. `DisableTracing` W związku z tym, `EnableTracing` Jeśli wywołasz wiele razy, `DisableTracing` należy wywołać tę samą liczbę razy, aby wyłączyć śledzenie.
+Środowisko uruchomieniowe śledzi liczbę wywołań `EnableTracing` i `DisableTracing` . W związku z tym, jeśli wywołasz `EnableTracing` wiele razy, należy wywołać `DisableTracing` tę samą liczbę razy, aby wyłączyć śledzenie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)
+[Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)

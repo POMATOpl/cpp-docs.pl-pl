@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: safe_cast (C++/CLI i C++/CX)'
 title: safe_cast (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 2eb09680ef6e7d1ee90b62eee8c8971fb4963212
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7753af357fd782a513ce941b42ad0433ca24b0dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172950"
 ---
 # <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI i C++/CX)
 
@@ -45,7 +46,7 @@ Operacja **safe_cast** zwraca określone wyrażenie jako określony typ, jeśli 
 *Identyfikator typu*<br/>
 Typ, do którego ma zostać przekształcone *wyrażenie* . Dojście do typu odwołania lub wartości, typ wartości lub odwołanie śledzące do typu odwołania lub wartości.
 
-*wyrażenia*<br/>
+*expression*<br/>
 Wyrażenie, które oblicza do dojścia do typu odwołania lub wartości, typu wartości lub odwołania śledzenia do typu odwołania lub wartości.
 
 ### <a name="remarks"></a>Uwagi
@@ -54,7 +55,7 @@ Wyrażenie, które oblicza do dojścia do typu odwołania lub wartości, typu wa
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ### <a name="examples"></a>Przykłady
 
@@ -105,12 +106,12 @@ Caught expected exception: InvalidCastException
 *Identyfikator typu*<br/>
 Dojście do typu odwołania lub wartości, typ wartości lub odwołanie śledzące do typu odwołania lub wartości.
 
-*wyrażenia*<br/>
+*expression*<br/>
 Wyrażenie, które oblicza do dojścia do typu odwołania lub wartości, typu wartości lub odwołania śledzenia do typu odwołania lub wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyrażenie `safe_cast<` *identyfikatora typu*wyrażenia `>(` *expression* `)` konwertuje *wyrażenie* operandu na obiekt typu Type *-ID*.
+Wyrażenie `safe_cast<` *identyfikatora typu* wyrażenia `>(`  `)` konwertuje *wyrażenie* operandu na obiekt typu Type *-ID*.
 
 Kompilator przyjmie [static_cast](../cpp/static-cast-operator.md) w większości przypadków, gdy zostanie zaakceptowany **safe_cast**.  Niemniej jednak **safe_cast** ma na celu wygenerowanie zweryfikowanego MSIL, gdzie **`static_cast`** może utworzyć niemożliwy do sprawdzenia MSIL.  Aby uzyskać więcej informacji na temat kodu możliwego do zweryfikowania, zobacz [czysty i możliwy do zweryfikowania kod (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) i [Peverify.exe (narzędzie PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) .
 
@@ -130,11 +131,11 @@ Aby uzyskać więcej informacji na temat **safe_cast**, zobacz:
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Przykład, w którym kompilator nie akceptuje, **`static_cast`** ale akceptuje **safe_cast** jest dla rzutowania między niepowiązanymi typami interfejsów.  W przypadku **safe_cast**kompilator nie będzie wystawiał błędu konwersji i wykona sprawdzenie w czasie wykonywania, aby sprawdzić, czy Rzutowanie jest możliwe
+Przykład, w którym kompilator nie akceptuje, **`static_cast`** ale akceptuje **safe_cast** jest dla rzutowania między niepowiązanymi typami interfejsów.  W przypadku **safe_cast** kompilator nie będzie wystawiał błędu konwersji i wykona sprawdzenie w czasie wykonywania, aby sprawdzić, czy Rzutowanie jest możliwe
 
 ```cpp
 // safe_cast.cpp
@@ -164,6 +165,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

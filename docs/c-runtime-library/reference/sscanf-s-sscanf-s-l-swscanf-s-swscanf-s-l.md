@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: sscanf_s, _sscanf_s_l, swscanf_s _swscanf_s_l'
 title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f61292932ea6b77b4694588726094d78b8405cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171312"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -93,7 +94,7 @@ Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [Formatowanie p�
 *argument*<br/>
 Argumenty opcjonalne
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -106,7 +107,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **sscanf_s** odczytuje dane z *buforu* do lokalizacji podanej przez każdy *argument*. Argumenty po ciągu formatu określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), parametr rozmiaru buforu jest wymagany w przypadku używania znaków pola typu **c**, **c**, **s**, **s**lub, które są ujęte w **[]**. Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga. Na przykład, jeśli odczytujesz do ciągu, rozmiar buforu dla tego ciągu jest przesyłany w następujący sposób:
+Funkcja **sscanf_s** odczytuje dane z *buforu* do lokalizacji podanej przez każdy *argument*. Argumenty po ciągu formatu określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), parametr rozmiaru buforu jest wymagany w przypadku używania znaków pola typu **c**, **c**, **s**, **s** lub, które są ujęte w **[]**. Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga. Na przykład, jeśli odczytujesz do ciągu, rozmiar buforu dla tego ciągu jest przesyłany w następujący sposób:
 
 ```C
 wchar_t ws[10];

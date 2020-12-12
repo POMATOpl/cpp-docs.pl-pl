@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: OOZ, cabsf, OOZ'
 title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ae24a0b7c158c2a13a595e946ee79b0760d75ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171663"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -81,11 +82,11 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **OOZ
 
 |Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**OOZ**, **cabsf**, **OOZ**|\<complex.h>|\<ccomplex>|
+|**OOZ**,               **cabsf**, **OOZ**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

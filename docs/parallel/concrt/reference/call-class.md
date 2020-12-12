@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wywołaniu klasy'
 title: Klasa wywołania
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: d3dc730e19aaadfed171816e92837ba2766883cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1d489063d7eb301bbfdb923f6b2f3c351d01f5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172222"
 ---
 # <a name="call-class"></a>Klasa wywołania
 
@@ -76,7 +77,7 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="call"></a><a name="ctor"></a>połączeń
+## <a name="call"></a><a name="ctor"></a> połączeń
 
 Tworzy `call` blok komunikatów.
 
@@ -129,7 +130,7 @@ Typ `_Call_method` to Funktor z podpisem `void (T const &)` , który jest wywoł
 
 Typ `filter_method` to Funktor z podpisem `bool (T const &)` , który jest wywoływany przez ten `call` blok komunikatów, aby określić, czy powinien on akceptować oferowany komunikat.
 
-## <a name="call"></a><a name="dtor"></a>~ Wywołanie
+## <a name="call"></a><a name="dtor"></a> ~ Wywołanie
 
 Niszczy `call` blok komunikatów.
 
@@ -137,7 +138,7 @@ Niszczy `call` blok komunikatów.
 ~call();
 ```
 
-## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a> process_input_messages
 
 Wykonuje funkcję Call w komunikatach wejściowych.
 
@@ -150,7 +151,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 Wskaźnik do komunikatu, który ma zostać obsłużony.
 
-## <a name="process_message"></a><a name="process_message"></a>process_message
+## <a name="process_message"></a><a name="process_message"></a> process_message
 
 Przetwarza komunikat, który został zaakceptowany przez ten `call` blok komunikatów.
 
@@ -163,7 +164,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 Wskaźnik do komunikatu, który ma zostać obsłużony.
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `call` bloku obsługi komunikatów. Jest wywoływana przez `propagate` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -185,7 +186,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 Synchronicznie przekazuje komunikat z `ISource` bloku do tego `call` bloku obsługi komunikatów. Jest wywoływana przez `send` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -207,7 +208,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Przesłania `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty, które są przez nie połączone, za pomocą źródła, które nie jest połączony.
 
@@ -219,7 +220,7 @@ virtual bool supports_anonymous_source();
 
 **`true`** ponieważ blok nie odkłada proponowanych komunikatów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [transformator — Klasa](transformer-class.md)

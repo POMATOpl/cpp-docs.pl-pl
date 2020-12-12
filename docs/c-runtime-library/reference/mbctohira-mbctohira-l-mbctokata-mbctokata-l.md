@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbctohira, _mbctohira_l, _mbctokata _mbctokata_l'
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aca32a81f1a7c74241be5d4574307a39731b1b6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171494"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -110,10 +111,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbctohira**|\<mbstring. h>|
-|**_mbctohira_l**|\<mbstring. h>|
-|**_mbctokata**|\<mbstring. h>|
-|**_mbctokata_l**|\<mbstring. h>|
+|**_mbctohira**|\<mbstring.h>|
+|**_mbctohira_l**|\<mbstring.h>|
+|**_mbctokata**|\<mbstring.h>|
+|**_mbctokata_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

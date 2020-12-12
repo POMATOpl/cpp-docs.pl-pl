@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: c16rtomb, c32rtomb'
 title: c16rtomb, c32rtomb
 ms.date: 10/22/2019
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: 8f480d9b450b528275fea78ae878269fa6a4fa54
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 35fb8f46693008cca9ee2a28e5b2656f009e4a6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171676"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -60,10 +61,10 @@ size_t c32rtomb(
 *mbchar*\
 Wskaźnik na tablicę do przechowywania przekonwertowanego znaku wielobajtowego UTF-8.
 
-*wchar*\
+*WCHAR*\
 Znak dwubajtowy do przekonwertowania.
 
-\ *stanu*
+*Państwu*\
 Wskaźnik do obiektu **mbstate_t** .
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -86,14 +87,14 @@ Aby skonwertować znaki UTF-16 na znaki wielobajtowe inne niż UTF-8, użyj funk
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**c16rtomb**, **c32rtomb**|C, C++:\<uchar. h >|
+|**c16rtomb**, **c32rtomb**|C, C++: \<uchar.h>|
 
 Aby uzyskać informacje o zgodności, zobacz [zgodność](../compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-\ [konwersji danych](../data-conversion.md)
-\ [ustawień regionalnych](../locale.md)
+[Konwersja danych](../data-conversion.md)\
+[Ustawienie](../locale.md)\
 [Interpretacja sekwencji znaków wielobajtowych](../interpretation-of-multibyte-character-sequences.md)\
 [mbrtoc16, mbrtoc32](mbrtoc16-mbrtoc323.md)\
 [wcrtomb](wcrtomb.md)\

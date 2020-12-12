@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy bad_target
 title: bad_target — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0bade57ef06ee1ecf675d69531da918fc2a3510f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142857"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172248"
 ---
 # <a name="bad_target-class"></a>bad_target — Klasa
 
@@ -25,13 +26,13 @@ Ta klasa opisuje wyjątek zgłoszony, gdy blok komunikatów otrzymuje wskaźnik 
 class bad_target : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[bad_target](#ctor)|Przeciążone. Konstruuje obiekt `bad_target`.|
+|[bad_target](#ctor)|Przeciążone. Konstruuje `bad_target` obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -49,9 +50,9 @@ Ten wyjątek jest zazwyczaj generowany z powodów, takich jak obiekt docelowy pr
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>bad_target
+## <a name="bad_target"></a><a name="ctor"></a> bad_target
 
-Konstruuje obiekt `bad_target`.
+Konstruuje `bad_target` obiekt.
 
 ```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();

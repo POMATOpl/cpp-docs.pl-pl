@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32'
 title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 4/2/2020
 api_name:
@@ -118,12 +119,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0aa9c825821608aaf7f71bc9e3d8331efea8a82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171260"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -196,7 +197,7 @@ Każda z tych funkcji zwraca wartość 0, jeśli zostanie uzyskane informacje o 
 
 Aby uzyskać więcej informacji na ten temat, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-Sygnatura daty w pliku może być reprezentowana, jeśli jest późniejsza niż północ, 1 stycznia 1970 i przed 23:59:59, 31 grudnia 3000, UTC, chyba że zostanie użyta **_stat32** lub **_wstat32**lub zdefiniowano **_USE_32BIT_TIME_T**, w takim przypadku data może być reprezentowana tylko do 23:59:59 stycznia 18, 2038, UTC.
+Sygnatura daty w pliku może być reprezentowana, jeśli jest późniejsza niż północ, 1 stycznia 1970 i przed 23:59:59, 31 grudnia 3000, UTC, chyba że zostanie użyta **_stat32** lub **_wstat32** lub zdefiniowano **_USE_32BIT_TIME_T**, w takim przypadku data może być reprezentowana tylko do 23:59:59 stycznia 18, 2038, UTC.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -246,7 +247,7 @@ Struktura **_stat** zdefiniowana w SYS\STAT. H, zawiera następujące pola.
 | **st_atime** | Godzina ostatniego dostępu do pliku. Prawidłowy w systemie plików NTFS, ale nie na dyskach twardych w formacie FAT. |
 | **st_ctime** | Czas utworzenia pliku. Prawidłowy w systemie plików NTFS, ale nie na dyskach twardych w formacie FAT. |
 | **st_dev** | Numer dysku zawierającego plik (taki sam jak **st_rdev**). |
-| **st_ino** | Numer węzła informacji ( **inode**) dla pliku (specyficznego dla systemu UNIX). W systemach plików UNIX **inode** opisuje datę i sygnatury czasowe pliku, uprawnienia i zawartość. Gdy pliki są ze sobą twarde, współużytkują te same **inode**. **Inode**i dlatego **st_ino**nie ma znaczenia w systemach plików FAT, HPFS i NTFS. |
+| **st_ino** | Numer węzła informacji ( **inode**) dla pliku (specyficznego dla systemu UNIX). W systemach plików UNIX **inode** opisuje datę i sygnatury czasowe pliku, uprawnienia i zawartość. Gdy pliki są ze sobą twarde, współużytkują te same **inode**. **Inode** i dlatego **st_ino** nie ma znaczenia w systemach plików FAT, HPFS i NTFS. |
 | **st_mode** | Maska bitów dla informacji w trybie plików. **_S_IFDIR** bit jest ustawiony, jeśli *Path* określa katalog; **_S_IFREG** bit jest ustawiony, jeśli *Path* określa zwykły plik lub urządzenie. Bity odczytu/zapisu użytkownika są ustawiane zgodnie z trybem uprawnień pliku; bity wykonywania użytkownika są ustawiane zgodnie z rozszerzeniem nazwy pliku. |
 | **st_mtime** | Godzina ostatniej modyfikacji pliku. |
 | **st_nlink** | Zawsze 1 w systemach plików innych niż NTFS. |
@@ -254,14 +255,14 @@ Struktura **_stat** zdefiniowana w SYS\STAT. H, zawiera następujące pola.
 | **st_size** | Rozmiar pliku w bajtach; 64-bitowa liczba całkowita dla odmian z sufiksem **I64** . |
 | **st_uid** | Liczbowy identyfikator użytkownika, który jest właścicielem pliku (specyficznego dla systemu UNIX). To pole będzie zawsze zerowe w systemach Windows. Przekierowany plik jest sklasyfikowany jako plik systemu Windows. |
 
-Jeśli *ścieżka* odwołuje się do urządzenia, **st_size**, różne pola czasu, **st_dev**i **st_rdev** pola w strukturze **_stat** są bezużyteczne. Ponieważ STAT. H używa typu [_dev_t](../../c-runtime-library/standard-types.md) , który jest zdefiniowany w typach. H, należy uwzględnić typy. H przed STAT. H w kodzie.
+Jeśli *ścieżka* odwołuje się do urządzenia, **st_size**, różne pola czasu, **st_dev** i **st_rdev** pola w strukturze **_stat** są bezużyteczne. Ponieważ STAT. H używa typu [_dev_t](../../c-runtime-library/standard-types.md) , który jest zdefiniowany w typach. H, należy uwzględnić typy. H przed STAT. H w kodzie.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**_stat64i32 **_stat64i32**|\<sys/types.h>a następnie\<sys/stat.h>|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**_wstat64i32 **_wstat64i32**|\<sys/types.h>po którym następuje program \<sys/stat.h> lub\<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64** _stat64i32 |\<sys/types.h> a następnie \<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64** _wstat64i32 |\<sys/types.h> po którym następuje program \<sys/stat.h> lub \<wchar.h>|\<errno.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
