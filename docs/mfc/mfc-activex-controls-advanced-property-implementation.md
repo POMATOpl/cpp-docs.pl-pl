@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: implementacja właściwości zaawansowanych'
 title: 'Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 017959c5809d324af6ab13247fd093a6df280dab
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3cdd4353348d4c233b71dd25d2950adaac2ef06f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202837"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych
 
@@ -24,7 +25,7 @@ W tym artykule opisano tematy związane z wdrażaniem zaawansowanych właściwo�
 
 - [Zwracanie kodów błędów z właściwości](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Właściwości tylko do odczytu i tylko do zapisu
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Właściwości Read-Only i Write-Only
 
 Kreator dodawania właściwości zapewnia szybką i łatwą metodę zaimplementowania właściwości tylko do odczytu lub tylko do zapisu dla kontrolki.
 
@@ -42,13 +43,13 @@ Kreator dodawania właściwości zapewnia szybką i łatwą metodę zaimplemento
 
 1. W polu **Nazwa właściwości** wpisz nazwę swojej właściwości.
 
-1. W obszarze **Typ implementacji**kliknij pozycję **Pobierz/ustaw metody**.
+1. W obszarze **Typ implementacji** kliknij pozycję **Pobierz/ustaw metody**.
 
 1. W polu **Typ właściwości** wybierz odpowiedni typ dla właściwości.
 
 1. Jeśli chcesz ustawić właściwość tylko do odczytu, usuń zaznaczenie pola wyboru Nazwa funkcji. Jeśli chcesz mieć właściwość tylko do zapisu, wyczyść pole wyboru Pobierz nazwę funkcji.
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 Gdy to zrobisz, Kreator dodawania właściwości Wstawia funkcję `SetNotSupported` lub `GetNotSupported` we wpisie mapy wysyłania zamiast normalnego zestawu lub funkcji get.
 
@@ -58,7 +59,7 @@ Jeśli chcesz, aby właściwość była warunkowo tylko do odczytu lub tylko do 
 
 [!code-cpp[NVC_MFC_AxUI#29](codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
-Ten przykładowy kod wywołuje `SetNotSupported` , jeśli `m_bReadOnlyMode` element członkowski danych ma **wartość true**. W przypadku **wartości false**właściwość jest ustawiana na nową wartość.
+Ten przykładowy kod wywołuje `SetNotSupported` , jeśli `m_bReadOnlyMode` element członkowski danych ma **wartość true**. W przypadku **wartości false** właściwość jest ustawiana na nową wartość.
 
 ## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a> Zwracanie kodów błędów z właściwości
 

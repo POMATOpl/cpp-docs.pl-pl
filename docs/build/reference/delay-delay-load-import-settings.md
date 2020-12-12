@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/DELAY (ustawienia opóźnienia importowania ładowania)
 title: /DELAY (Ustawienia opóźnienia importowania ładowania)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /DELAY linker option
 - -DELAY linker option
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
-ms.openlocfilehash: ef6f5f768cf86f470d1322fa2a7bee6db794c2ef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f06a47280d563c138e184fdbdcdf033da705ce60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493007"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201524"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (Ustawienia opóźnienia importowania ładowania)
 
@@ -44,17 +45,17 @@ Aby określić biblioteki DLL do opóźnienia ładowania, użyj opcji [/DELAYLOA
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [ C++ Ustawianie kompilatora i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
 1. Rozwiń węzeł **Właściwości konfiguracji**, **konsolidator**, a następnie wybierz pozycję **Zaawansowane**.
 
-1. Zmodyfikuj właściwość **dll** załadowanej z opóźnieniem.
+1. Zmodyfikuj właściwość **dll załadowanej z opóźnieniem** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

@@ -1,34 +1,35 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z formantu klawisza dostępu'
 title: Używanie formantu klawisza dostępu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-ms.openlocfilehash: d9178fe989e476111a3da55861642e9aa6311872
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 078cd4b3d4746723d5996959edad20dd44e9abec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180534"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202707"
 ---
 # <a name="using-a-hot-key-control"></a>Używanie formantu klawisza dostępu
 
-Typowe użycie formantu klawisza dostępu jest zgodny ze wzorcem poniżej:
+Typowy sposób użycia kontrolki klawisza skrótu jest następujący:
 
-- Formant zostanie utworzony. Kontrolka została określona w szablonu okna dialogowego, tworzenie przebiega automatycznie podczas tworzenia okna dialogowego. (Powinien mieć [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) elementu członkowskiego w swojej klasie okna dialogowego, która odnosi się do formantu klawisza dostępu.) Alternatywnie, można użyć [Utwórz](../mfc/reference/chotkeyctrl-class.md#create) funkcja elementu członkowskiego, aby utworzyć formant jako okna podrzędnego każdego okna.
+- Formant zostanie utworzony. Jeśli formant jest określony w szablonie okna dialogowego, tworzenie jest automatyczne po utworzeniu okna dialogowego. (W klasie okna dialogowego powinien znajdować się element [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) , który odpowiada kontrolce klawisza skrótu). Alternatywnie możesz użyć funkcji [Utwórz](../mfc/reference/chotkeyctrl-class.md#create) element członkowski, aby utworzyć formant jako okno podrzędne dowolnego okna.
 
-- Jeśli chcesz ustawić wartość domyślną dla formantu, wywołaj [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) funkcja elementu członkowskiego. Jeśli chcesz zabronić określone stany shift, wywołaj [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). W przypadku kontrolek w oknie dialogowym jest odpowiedni moment, aby to zrobić, w oknie dialogowym [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji.
+- Jeśli chcesz ustawić wartość domyślną dla kontrolki, wywołaj funkcję członkowską [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) . Jeśli chcesz zabronić niektórych stanów przesunięcia, wywołaj metodę [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). W przypadku kontrolek w oknie dialogowym dobry czas, który należy wykonać, jest w funkcji [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) okna dialogowego.
 
-- Użytkownik wchodzi w interakcję z kontrolką naciskając kombinację klawiszy dostępu, po aktywowaniu formantu klawisza dostępu. Użytkownik następnie jakiś sposób wskazuje, że to zadanie jest zakończone, być może, klikając przycisk w oknie dialogowym.
+- Użytkownik współdziała z kontrolką, naciskając kombinację klawisza skrótu, gdy fokus jest aktywny. Następnie użytkownik może określić, że to zadanie zostało ukończone, na przykład przez kliknięcie przycisku w oknie dialogowym.
 
-- Gdy program jest powiadamiany o to, że użytkownik wybrał klawisza dostępu, powinna korzystać funkcja elementu członkowskiego [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) można pobrać wartości wirtualnego stanu key- and -shift z formantu klawisza dostępu.
+- Gdy program zostanie powiadomiony o tym, że użytkownik wybrał klawisz dostępu, powinien użyć funkcji elementu członkowskiego [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) do pobrania wartości klucza wirtualnego i zmiany stanu z formantu klawisza dostępu.
 
-- Jeśli znasz już klucza co wybrany przez użytkownika, można ustawić klawisza dostępu przy użyciu jednej z metod opisanych w [Ustawianie klawisza dostępu](../mfc/setting-a-hot-key.md).
+- Gdy wiesz, jaki klucz użytkownik zaznaczył, możesz ustawić klawisz dostępu przy użyciu jednej z metod opisanych w temacie [Ustawianie klawisza dostępu](../mfc/setting-a-hot-key.md).
 
-- Jeśli formantu klawisza dostępu znajduje się w oknie dialogowym go i `CHotKeyCtrl` obiekt jest niszczony automatycznie. Jeśli nie, musisz upewnij się, że obie kontrolki i `CHotKeyCtrl` obiektu są poprawnie niszczone.
+- Jeśli kontrolka klawisza gorąca znajduje się w oknie dialogowym, a `CHotKeyCtrl` obiekt zostanie zniszczony automatycznie. Jeśli nie, musisz upewnić się, że zarówno kontrolka, jak i `CHotKeyCtrl` obiekt są prawidłowo niszczone.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

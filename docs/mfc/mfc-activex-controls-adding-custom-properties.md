@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: Dodawanie właściwości niestandardowych'
 title: 'Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: efae1c7cedc2202a2a40974393be881466442b84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202941"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych
 
@@ -60,13 +61,13 @@ Tę samą procedurę można także użyć w celu dodania innych niestandardowych
 
 1. W polu **Nazwa właściwości** wpisz *CircleOffset*.
 
-1. W obszarze **Typ implementacji**kliknij pozycję **Pobierz/ustaw metody**.
+1. W obszarze **Typ implementacji** kliknij pozycję **Pobierz/ustaw metody**.
 
 1. W polu **Typ właściwości** wybierz opcję **`short`** .
 
 1. Wpisz unikatowe nazwy dla funkcji get i set lub zaakceptuj nazwy domyślne.
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 ## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a> Dodawanie zmian kreatora właściwości dla właściwości niestandardowych
 
