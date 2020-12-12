@@ -1,27 +1,28 @@
 ---
+description: 'Dowiedz się więcej o: implementowanie obszarów roboczych w kontrolkach listy'
 title: Implementowanie obszarów roboczych w formantach listy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: abbf9dd823e13fab252b7af8f32338b0d801079b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 04eb935531dff0ac1ee240dec8690bd7ce1378a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290079"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementowanie obszarów roboczych w formantach listy
 
-Domyślnie kontrolka listy Rozmieszcza wszystkie elementy w standardowej siatce. Jednak inna metoda jest obsługiwana, obszary robocze, które układają elementy listy w prostokątne grupy. Aby uzyskać obraz formantu listy, który implementuje obszary robocze, zobacz Używanie kontrolek widok listy w Windows SDK.
+Domyślnie kontrolka listy Rozmieszcza wszystkie elementy w standardowej siatce. Jednak inna metoda jest obsługiwana, obszary robocze, które układają elementy listy w prostokątne grupy. Aby zapoznać się z obrazem kontrolki listy, która implementuje obszary robocze, zobacz Używanie formantów List-View w Windows SDK.
 
 > [!NOTE]
 > Obszary robocze są widoczne tylko wtedy, gdy kontrolka listy jest w trybie ikon lub małych ikon. Jednak wszystkie bieżące obszary robocze są utrzymywane, gdy widok zostanie przełączony do trybu raportu lub listy.
 
 Obszary robocze mogą być używane do wyświetlania pustego obramowania (po lewej, górnej i/lub prawej części elementów) lub spowodować, że poziomy pasek przewijania ma być wyświetlany, gdy zwykle nie będzie to możliwe. Innym typowym użyciem jest utworzenie wielu obszarów roboczych, do których można przenieść lub porzucić elementy. Za pomocą tej metody można tworzyć obszary w jednym widoku, które mają różne znaczenie. Użytkownik może następnie klasyfikować elementy, umieszczając je w innym obszarze. Przykładem może być widok systemu plików, który ma obszar dla plików odczytu/zapisu i inny obszar dla plików tylko do odczytu. Jeśli element pliku został przeniesiony do obszaru tylko do odczytu, będzie on automatycznie tylko do odczytu. Przeniesienie pliku z obszaru tylko do odczytu do obszaru odczytu/zapisu spowoduje, że plik zostanie odczytany/zapisany.
 
-`CListCtrl`Program udostępnia kilka funkcji Członkowskich do tworzenia obszarów roboczych i zarządzania nimi w kontrolce listy. [GetWorkAreas](reference/clistctrl-class.md#getworkareas) i [SetWorkAreas](reference/clistctrl-class.md#setworkareas) pobierają i ustawiają tablicę `CRect` obiektów (lub `RECT` struktur), które przechowują aktualnie zaimplementowane obszary robocze dla formantu listy. Ponadto [GetNumberOfWorkAreas](reference/clistctrl-class.md#getnumberofworkareas) pobiera bieżącą liczbę obszarów roboczych dla kontrolki listy (domyślnie zero).
+`CListCtrl` Program udostępnia kilka funkcji Członkowskich do tworzenia obszarów roboczych i zarządzania nimi w kontrolce listy. [GetWorkAreas](reference/clistctrl-class.md#getworkareas) i [SetWorkAreas](reference/clistctrl-class.md#setworkareas) pobierają i ustawiają tablicę `CRect` obiektów (lub `RECT` struktur), które przechowują aktualnie zaimplementowane obszary robocze dla formantu listy. Ponadto [GetNumberOfWorkAreas](reference/clistctrl-class.md#getnumberofworkareas) pobiera bieżącą liczbę obszarów roboczych dla kontrolki listy (domyślnie zero).
 
 ## <a name="items-and-working-areas"></a>Elementy i obszary robocze
 

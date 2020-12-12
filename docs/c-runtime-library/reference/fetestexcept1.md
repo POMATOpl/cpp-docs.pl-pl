@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fetestexcept'
 title: fetestexcept
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 8a62ae33f2965916bd16e2e854555bf22d87a0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972160"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289390"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -49,13 +50,13 @@ int fetestexcept(
 *Oprócz*<br/>
 Bitowe lub zmiennoprzecinkowe flagi stanu do przetestowania.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
 Po powodzeniu funkcja zwraca maskę bitów zawierającą bitowe lub zmiennoprzecinkowe makra wyjątków, które odpowiadają aktualnie ustawionymi flagami stanu wyjątku. Zwraca wartość 0, jeśli żaden z wyjątków nie jest ustawiony.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj funkcji fetestexcept, aby określić, które wyjątki zostały zgłoszone przez operację zmiennoprzecinkową. Użyj parametru *except* , aby określić, które flagi stanu wyjątku mają zostać przetestowane. Funkcja **fetestexcept** używa tych makr wyjątków zdefiniowanych w \<fenv. h > w *z wyjątkiem* i wartości zwracanej:
+Użyj funkcji fetestexcept, aby określić, które wyjątki zostały zgłoszone przez operację zmiennoprzecinkową. Użyj parametru *except* , aby określić, które flagi stanu wyjątku mają zostać przetestowane. Funkcja **fetestexcept** używa tych makr wyjątków zdefiniowanych w \<fenv.h> programie *poza* i zwracaną wartością:
 
 |Makro wyjątku|Opis|
 |---------------------|-----------------|
@@ -68,17 +69,17 @@ Użyj funkcji fetestexcept, aby określić, które wyjątki zostały zgłoszone 
 
 Określony argument *except* może mieć wartość 0, jedno z obsługiwanych makr wyjątków zmiennoprzecinkowych lub bitowe lub dwa lub więcej makr. Efekt każdej innej *z wyjątkiem* wartości argumentu jest niezdefiniowany.
 
-Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu dyrektywy `#pragma fenv_access(on)` przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**fetestexcept**|\<fenv.h>|\<cfenv>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>

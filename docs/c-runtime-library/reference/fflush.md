@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fflush'
 title: fflush
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a23b4f580e0ed258bb111064b8564a6603562f64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289260"
 ---
 # <a name="fflush"></a>fflush
 
@@ -57,11 +58,11 @@ Wskaźnik do struktury **pliku** .
 **fflush** zwraca wartość 0, jeśli bufor został pomyślnie opróżniony. Wartość 0 jest również zwracana w przypadkach, w których określony strumień nie ma buforu lub jest otwarty tylko do odczytu. Wartość zwracana przez **znacznik EOF** wskazuje na błąd.
 
 > [!NOTE]
-> Jeśli **fflush** zwraca **znacznik EOF**, dane mogły zostać utracone z powodu błędu zapisu. Podczas konfigurowania programu obsługi błędów krytycznych najbezpieczniejszym sposobem jest wyłączenie buforowania przy użyciu funkcji **setvbuf —** lub użycie procedur we/wy niskiego poziomu, takich jak **_open**, **_close**i **_write** zamiast funkcji we/wy strumienia.
+> Jeśli **fflush** zwraca **znacznik EOF**, dane mogły zostać utracone z powodu błędu zapisu. Podczas konfigurowania programu obsługi błędów krytycznych najbezpieczniejszym sposobem jest wyłączenie buforowania przy użyciu funkcji **setvbuf —** lub użycie procedur we/wy niskiego poziomu, takich jak **_open**, **_close** i **_write** zamiast funkcji we/wy strumienia.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fflush** opróżnia *strumień*strumienia. Jeśli strumień został otwarty w trybie zapisu lub został otwarty w trybie aktualizacji, a Ostatnia operacja była zapisu, zawartość buforu strumienia jest zapisywana w źródłowym pliku lub urządzeniu i bufor jest odrzucany. Jeśli strumień został otwarty w trybie odczytu lub strumień nie ma buforu, wywołanie do **fflush** nie ma żadnego efektu i wszystkie bufory są zachowywane. Wywołanie **fflush** powoduje negację efektu dowolnego wcześniejszego wywołania **ungetc —** strumienia. Strumień pozostaje otwarty po wywołaniu.
+Funkcja **fflush** opróżnia *strumień* strumienia. Jeśli strumień został otwarty w trybie zapisu lub został otwarty w trybie aktualizacji, a Ostatnia operacja była zapisu, zawartość buforu strumienia jest zapisywana w źródłowym pliku lub urządzeniu i bufor jest odrzucany. Jeśli strumień został otwarty w trybie odczytu lub strumień nie ma buforu, wywołanie do **fflush** nie ma żadnego efektu i wszystkie bufory są zachowywane. Wywołanie **fflush** powoduje negację efektu dowolnego wcześniejszego wywołania **ungetc —** strumienia. Strumień pozostaje otwarty po wywołaniu.
 
 Jeśli *strumień* ma **wartość null**, zachowanie jest takie samo jak wywołanie **fflush** w każdym otwartym strumieniu. Wszystkie strumienie otwarte w trybie zapisu i wszystkie strumienie otwarte w trybie aktualizacji, w których Ostatnia operacja była zapisu, są opróżniane. Wywołanie nie ma wpływu na inne strumienie.
 
@@ -77,7 +78,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fflush**|\<stdio. h>|
+|**fflush**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -131,7 +132,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

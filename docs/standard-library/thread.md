@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; Thread&gt;'
 title: '&lt;wątek&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-ms.openlocfilehash: 251a423829a048e3d67b0bcf83107f52c3fdafca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3387d96772f1ed3322ce79b744e17b6bf494140d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289624"
 ---
 # <a name="ltthreadgt"></a>&lt;wątek&gt;
 
@@ -64,7 +65,7 @@ Dołącz standardowy nagłówek, \<thread> Aby zdefiniować klasę `thread` i r�
 |[operator = = — operator](../standard-library/thread-operators.md#op_eq_eq)|Porównuje dwa `thread::id` obiekty pod kątem równości.|
 |[operator<< operatora](../standard-library/thread-operators.md#op_lt_lt)|Wstawia tekstową reprezentację `thread::id` obiektu do strumienia.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

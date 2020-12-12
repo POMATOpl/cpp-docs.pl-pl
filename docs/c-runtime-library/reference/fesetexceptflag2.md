@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fesetexceptflag'
 title: fesetexceptflag
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: da37c4a032533ae35c8481413c27ca1cb2e8c3c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972145"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289416"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -53,13 +54,13 @@ Wskaźnik do obiektu **fexcept_t** zawierającego wartości, do których mają z
 *Oprócz*<br/>
 Flagi stanu wyjątku zmiennoprzecinkowego do ustawienia.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
 Jeśli wszystkie określone flagi stanu wyjątku zostały pomyślnie ustawione, zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fesetexceptflag** ustawia stan wyjątków zmiennoprzecinkowych, określonych przez, *z wyjątkiem* odpowiednich wartości ustawionych w obiekcie **fexcept_t** wskazywanym przez *pstatus*.  Nie zgłasza wyjątków. Wskaźnik *pstatus* musi wskazywać prawidłowy obiekt **fexcept_t** lub kolejne zachowanie jest niezdefiniowane. Funkcja **fesetexceptflag** obsługuje te wartości makr wyjątków w programie, *z wyjątkiem*zdefiniowanych w \<fenv. h >:
+Funkcja **fesetexceptflag** ustawia stan wyjątków zmiennoprzecinkowych, określonych przez, *z wyjątkiem* odpowiednich wartości ustawionych w obiekcie **fexcept_t** wskazywanym przez *pstatus*.  Nie zgłasza wyjątków. Wskaźnik *pstatus* musi wskazywać prawidłowy obiekt **fexcept_t** lub kolejne zachowanie jest niezdefiniowane. Funkcja **fesetexceptflag** obsługuje te wartości makr wyjątków w *wyjątkiem*, zdefiniowanych w \<fenv.h> :
 
 |Makro wyjątku|Opis|
 |---------------------|-----------------|
@@ -72,17 +73,17 @@ Funkcja **fesetexceptflag** ustawia stan wyjątków zmiennoprzecinkowych, okreś
 
 Argument *except* może mieć wartość zero, jedno z obsługiwanych makr wyjątków zmiennoprzecinkowych lub bitowe lub dwa lub więcej makr. Wynik innej wartości argumentu jest niezdefiniowany.
 
-Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu dyrektywy `#pragma fenv_access(on)` przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [fegetexceptflag](fegetexceptflag2.md)<br/>

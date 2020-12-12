@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyjątki: zmiany w makrach wyjątków w wersji 3,0'
 title: 'Wyjątki: zmiany w makrach wyjątków w wersji 3.0'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 72b343641b0b43d408c5820ca2a2af1de94ce327
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3135e78885d0b4f14eb8588419b3b9d1852cf1c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290729"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: zmiany w makrach wyjątków w wersji 3.0
 
@@ -26,7 +27,7 @@ W tym artykule omówiono następujące tematy:
 
 - [Ponowne wyrzucanie wyjątków](#_core_re.2d.throwing_exceptions)
 
-## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>Typy wyjątków i makro CATCH
+## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a> Typy wyjątków i makro CATCH
 
 We wcześniejszych wersjach MFC makro **catch** używało informacji o typie czasu wykonywania MFC do określenia typu wyjątku; Typ wyjątku jest określany innymi słowy w witrynie catch. W przypadku wyjątków języka C++ typ wyjątku jest zawsze określany w witrynie throw przez typ generowanego obiektu wyjątku. Spowoduje to niezgodności w rzadkich przypadkach, gdy typ wskaźnika do wygenerowanego obiektu różni się od typu wygenerowanego obiektu.
 
@@ -48,7 +49,7 @@ Kod podobny do tego jest nietypowy. Zwykle pojawia się, gdy obiekt wyjątku jes
 
 Aby obejść ten problem, Przenieś wyrażenie throw z funkcji do kodu wywołującego i Zgłoś wyjątek rzeczywistego typu znanego dla kompilatora w momencie wygenerowania wyjątku.
 
-## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>Ponowne wyrzucanie wyjątków
+## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a> Wyjątki Re-Throwing
 
 Blok catch nie może zgłosić tego samego wskaźnika wyjątku, który został przechwycony.
 
@@ -60,6 +61,6 @@ Użycie instrukcji **throw** w bloku catch powoduje usunięcie wskaźnika `e` , 
 
 Aby uzyskać więcej informacji, zobacz [wyjątki: Przechwytywanie i usuwanie wyjątków](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: układ dynamiczny'
 title: Układ dynamiczny
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-ms.openlocfilehash: 3108e7bae0be216dfb877d03c87fdc17ef7d69f2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 284109c4f34bd3d325c9748ccc1698a9a5b3fe02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291080"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 
@@ -35,9 +36,9 @@ Można ustawić zachowanie układu dynamicznego dla okna dialogowego bez koniecz
 
    ![Otwórz okno dialogowe w edytorze zasobów.](../mfc/media/mfcdynamiclayout3.png "Otwórz okno dialogowe w edytorze zasobów.")
 
-1. Zaznacz formant i w oknie **Właściwości** (w **Widok klasy**) ustaw jego właściwości układu dynamicznego. Sekcja **układ dynamiczny** w oknie **Właściwości** zawiera właściwości **przenoszenia typu**, **Typ zmiany**i, w zależności od wartości wybranych dla tych właściwości, określonych właściwości, które definiują szybkość przenoszenia lub zmiany rozmiaru. **Typ przenoszenia** określa sposób przenoszenia kontrolki, gdy zmienia się rozmiar okna dialogowego; **Typ rozmiaru** określa sposób zmiany rozmiaru kontrolki, ponieważ rozmiar okna dialogowego został zmieniony. Typ **przenoszonego** typu i **typu zmiany** mogą być **poziome**, **pionowe**, **oba**lub **nie** , w zależności od wymiarów, które mają być dynamicznie zmieniane. Pozioma to wymiar X; Pionowa to kierunek Y.
+1. Zaznacz formant i w oknie **Właściwości** (w **Widok klasy**) ustaw jego właściwości układu dynamicznego. Sekcja **układ dynamiczny** w oknie **Właściwości** zawiera właściwości **przenoszenia typu**, **Typ zmiany** i, w zależności od wartości wybranych dla tych właściwości, określonych właściwości, które definiują szybkość przenoszenia lub zmiany rozmiaru. **Typ przenoszenia** określa sposób przenoszenia kontrolki, gdy zmienia się rozmiar okna dialogowego; **Typ rozmiaru** określa sposób zmiany rozmiaru kontrolki, ponieważ rozmiar okna dialogowego został zmieniony. Typ **przenoszonego** typu i **typu zmiany** mogą być **poziome**, **pionowe**, **oba** lub **nie** , w zależności od wymiarów, które mają być dynamicznie zmieniane. Pozioma to wymiar X; Pionowa to kierunek Y.
 
-1. Jeśli chcesz, aby kontrolka, taka jak przycisk, ma stały rozmiar i pozostać w miejscu w prawym dolnym rogu, tak jak w przypadku przycisków **OK** lub **Anuluj** , ustaw **Typ zmiany** na **Brak**i ustaw **Typ przesunięcia** na **oba**. Dla **przesuwanych wartości X** i **przeniesień Y** w obszarze **Typ przeniesienia**Ustaw 100%, aby formant miał stałą odległość od prawego dolnego rogu.
+1. Jeśli chcesz, aby kontrolka, taka jak przycisk, ma stały rozmiar i pozostać w miejscu w prawym dolnym rogu, tak jak w przypadku przycisków **OK** lub **Anuluj** , ustaw **Typ zmiany** na **Brak** i ustaw **Typ przesunięcia** na **oba**. Dla **przesuwanych wartości X** i **przeniesień Y** w obszarze **Typ przeniesienia** Ustaw 100%, aby formant miał stałą odległość od prawego dolnego rogu.
 
    ![Układ dynamiczny](../mfc/media/mfcdynamiclayout1.png "Układ dynamiczny")
 
@@ -55,7 +56,7 @@ Poprzednia procedura jest przydatna do określania właściwości układu dynami
 
 1. Znajdź lub Utwórz miejsce w kodzie implementacji klasy okna dialogowego, w którym chcesz określić układ dynamiczny okna dialogowego. Na przykład możesz chcieć dodać metodę, taką jak `AdjustLayout` w oknie dialogowym, i wywoływać ją z miejsc, w których układ musi zostać zmieniony. Użytkownik może najpierw wywołać ten program z konstruktora lub po wprowadzeniu zmian w oknie dialogowym.
 
-1. Dla okna dialogowego Wywołaj [GetDynamicLayout](reference/cwnd-class.md#getdynamiclayout), metodę `CWnd` klasy. `GetDynamicLayout`Zwraca wskaźnik do `CMFCDynamicLayout` obiektu.
+1. Dla okna dialogowego Wywołaj [GetDynamicLayout](reference/cwnd-class.md#getdynamiclayout), metodę `CWnd` klasy. `GetDynamicLayout` Zwraca wskaźnik do `CMFCDynamicLayout` obiektu.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();

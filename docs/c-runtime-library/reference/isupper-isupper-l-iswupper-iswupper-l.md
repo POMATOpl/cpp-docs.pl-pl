@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: IsUpper, _isupper_l, iswupper, _iswupper_l'
 title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-ms.openlocfilehash: 49aab47a72e7065cbd90935a431f59ec74b562ac
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d9af298cd1577473cac0db1ab6eda0be895d0c1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289143"
 ---
 # <a name="isupper-_isupper_l-iswupper-_iswupper_l"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -80,7 +81,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją wielkiej litery. Funkcja **IsUpper** zwraca wartość różną od zera, jeśli *c* jest znakiem wielką literą (a – z). **iswupper** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odnosi się do Wielkiej litery, lub jeśli *c* jest jednym z zestawów znaków dwubajtowych zdefiniowanych w implementacji, dla których żadna z **iswcntrl**, **iswdigit**, **iswpunct**lub **iswspace** nie jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją wielkiej litery. Funkcja **IsUpper** zwraca wartość różną od zera, jeśli *c* jest znakiem wielką literą (a – z). **iswupper** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, który odnosi się do Wielkiej litery, lub jeśli *c* jest jednym z zestawów znaków dwubajtowych zdefiniowanych w implementacji, dla których żadna z **iswcntrl**, **iswdigit**, **iswpunct** lub **iswspace** nie jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
 Wersje tych funkcji, które mają sufiks **_l** używają ustawień regionalnych, które zostały przesłane zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -101,10 +102,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**IsUpper**|\<CType. h>|
-|**_isupper_l**|\<CType. h>|
-|**iswupper**|\<CType. h> lub \<WCHAR. h>|
-|**_iswupper_l**|\<CType. h>|
+|**IsUpper**|\<ctype.h>|
+|**_isupper_l**|\<ctype.h>|
+|**iswupper**|\<ctype.h> lub \<wchar.h>|
+|**_iswupper_l**|\<ctype.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -112,4 +113,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: implements_category'
 title: implements_category (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: cd9a4de8834bc22368393e9ea4639884785af0f2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0efc240394c67ab7d470523b8dfe5025b7a0f978
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289546"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -56,7 +57,7 @@ class CMyClass {};
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`**|
-|**Powtarzalne**|Tak|
+|**Powtarzalność**|Tak|
 |**Wymagane atrybuty**|Jeden z następujących: `coclass` , `progid` , lub `vi_progid`|
 |**Nieprawidłowe atrybuty**|Brak|
 

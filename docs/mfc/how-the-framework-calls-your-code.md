@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: jak struktura wywołuje kod'
 title: Jak struktura wywołuje kod
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: eebc431d8ba4d0edf7eddfe113d6f6559087be70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290378"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jak struktura wywołuje kod
 
@@ -33,4 +34,4 @@ Aby uzyskać więcej informacji, zobacz [Klasa CWinApp: Klasa aplikacji](cwinapp
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opieranie się na strukturze](building-on-the-framework.md)
+[Kompilowanie na platformie](building-on-the-framework.md)

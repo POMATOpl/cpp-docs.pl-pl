@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury iterator_traits
 title: iterator_traits — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ac97b84ff7bcedc00f2b069ce05f734ac65618ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289684"
 ---
 # <a name="iterator_traits-struct"></a>iterator_traits — Struktura
 
@@ -35,19 +36,19 @@ struct iterator_traits {
 
 Struktura szablonu definiuje typy elementów członkowskich
 
-- `iterator_category`: synonim `Iterator::iterator_category`.
+- `iterator_category`: synonim dla `Iterator::iterator_category` .
 
-- `value_type`: synonim `Iterator::value_type`.
+- `value_type`: synonim dla `Iterator::value_type` .
 
-- `difference_type`: synonim `Iterator::difference_type`.
+- `difference_type`: synonim dla `Iterator::difference_type` .
 
 - `distance_type`: synonim dla `Iterator::difference_type.`
 
-- `pointer`: synonim `Iterator::pointer`.
+- `pointer`: synonim dla `Iterator::pointer` .
 
-- `reference`: synonim `Iterator::reference`.
+- `reference`: synonim dla `Iterator::reference` .
 
-Częściowe specjalizacje określają typy krytyczne skojarzone ze wskaźnikiem **obiektu typu** <strong>\*</strong> lub **typu const** <strong>\*</strong>.
+Częściowe specjalizacje określają typy krytyczne skojarzone ze wskaźnikiem **obiektu typu Type** <strong>\*</strong> lub **const** <strong>\*</strong> .
 
 W tej implementacji można także użyć kilku funkcji szablonu, które nie używają częściowej specjalizacji:
 
@@ -118,12 +119,12 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iterator >
+**Nagłówek:**\<iterator>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<iterator >](../standard-library/iterator.md) \
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCPropertyGridProperty'
 title: Klasa CMFCPropertyGridProperty
 ms.date: 11/04/2016
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: cabff68a356bfa2d91d7c8db9c806e8a9f013705
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 7893d58933f9f13744a42b14fd6fa7c47bec56c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289910"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Klasa CMFCPropertyGridProperty
 
@@ -510,9 +511,9 @@ Wskaźnik do kontrolki do edycji w przypadku pomyślnego przeprowadzenia tej met
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda używa wartości parametrów *varValue*, *lpszEditMask*, *lpszEditTemplate*i *lpszValidChars* , które są określone w konstruktorze klasy [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) . Domyślnie ta metoda obsługuje typy wariantów *varValue* . Obejmuje to VT_BSTR, VT_R4, VT_R8, VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4 i VT_BOOL.
+Ta metoda używa wartości parametrów *varValue*, *lpszEditMask*, *lpszEditTemplate* i *lpszValidChars* , które są określone w konstruktorze klasy [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) . Domyślnie ta metoda obsługuje typy wariantów *varValue* . Obejmuje to VT_BSTR, VT_R4, VT_R8, VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4 i VT_BOOL.
 
-Ta metoda tworzy formant [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) , jeśli określono co najmniej jeden parametr *lpszEditMask*, *lpszEditTemplate*lub *lpszValidChars* ; w przeciwnym razie tworzy formant [CEdit](../../mfc/reference/cedit-class.md) .
+Ta metoda tworzy formant [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) , jeśli określono co najmniej jeden parametr *lpszEditMask*, *lpszEditTemplate* lub *lpszValidChars* ; w przeciwnym razie tworzy formant [CEdit](../../mfc/reference/cedit-class.md) .
 
 ## <a name="cmfcpropertygridpropertycreatespincontrol"></a><a name="createspincontrol"></a> CMFCPropertyGridProperty::CreateSpinControl
 

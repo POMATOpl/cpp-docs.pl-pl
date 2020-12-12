@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: fgetc, fgetwc'
 title: fgetc, fgetwc
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9567c6d24fe0ae978a3680171167168061339f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289234"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -147,7 +148,7 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

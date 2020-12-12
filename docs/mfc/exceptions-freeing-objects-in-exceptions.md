@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyjątki: zwalnianie obiektów w wyjątkach'
 title: 'Wyjątki: zwalnianie obiektów w wyjątkach'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 47b10f3ecb96875ceee986eadda4595d2afbb77e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290560"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Wyjątki: zwalnianie obiektów w wyjątkach
 
@@ -40,7 +41,7 @@ Te dwa podejścia przedstawiono poniżej jako rozwiązania następujących przyk
 
 Jak napisano powyżej, `myPerson` nie zostanie usunięty, jeśli wyjątek jest zgłaszany przez `SomeFunc` . Wykonanie przechodzi bezpośrednio do następnej zewnętrznej procedury obsługi wyjątków, pomijając normalne wyjście funkcji i kod, który usuwa obiekt. Wskaźnik do obiektu wykracza poza zakres, gdy wyjątek opuszcza funkcję, a Pamięć zajęta przez obiekt nigdy nie zostanie odzyskana, o ile program jest uruchomiony. Jest to przeciek pamięci; zostanie on wykryty przy użyciu diagnostyki pamięci.
 
-## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>Obsługa wyjątku lokalnie
+## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a> Obsługa wyjątku lokalnie
 
 Model **try/catch** oferuje obronną metodę programowania do unikania przecieków pamięci i zapewnianie zniszczenia obiektów w przypadku wystąpienia wyjątków. Przykładowo przedstawiony wcześniej w tym artykule można napisać ponownie w następujący sposób:
 
@@ -48,7 +49,7 @@ Model **try/catch** oferuje obronną metodę programowania do unikania przeciek�
 
 Ten nowy przykład konfiguruje procedurę obsługi wyjątków, aby przechwycić wyjątek i obsłużyć ją lokalnie. Następnie zamyka funkcję normalnie i niszczy obiekt. Ważnym aspektem tego przykładu jest to, że kontekst przechwytywania wyjątku jest ustanawiany za pomocą bloków **try/catch** . Bez lokalnej ramki wyjątku funkcja nigdy nie wie, że wyjątek został zgłoszony i nie może wyjść normalnie i zniszczyć obiekt.
 
-## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Zgłaszanie wyjątków po usunięciu obiektów
+## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a> Zgłaszanie wyjątków po usunięciu obiektów
 
 Innym sposobem obsługi wyjątków jest przekazanie ich do następnego zewnętrznego kontekstu obsługi wyjątków. W **`catch`** bloku można przeprowadzić oczyszczanie lokalnie przyznanych obiektów, a następnie zgłosić wyjątek na potrzeby dalszej obróbki.
 
@@ -64,6 +65,6 @@ Jeśli wywołasz funkcje, które mogą zgłaszać wyjątki, możesz użyć blok�
 
 Aby uzyskać więcej informacji, zobacz [wyjątki: Przechwytywanie i usuwanie wyjątków](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; Operatory iteratorów &gt;'
 title: '&lt;Operatory iteratorów &gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 36851eab86a32fab9294129cf1918e0add528eb3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe47669bcd2ab72cd91bc9eee36afea975fab3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289702"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;Operatory iteratorów &gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje, czy obiekt iteratora po lewej stronie operatora nie jest równy obiektowi iteratora po prawej stronie.
 
@@ -119,7 +120,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest równy obiektowi iteratora po prawej stronie.
 
@@ -225,7 +226,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż obiekt iteratora po prawej stronie.
 
@@ -316,7 +317,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest mniejszy niż lub równy obiektowi iteratora po prawej stronie.
 
@@ -411,7 +412,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż obiekt iteratora po prawej stronie.
 
@@ -500,7 +501,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Testuje, czy obiekt iteratora po lewej stronie operatora jest większy niż lub równy obiektowi iteratora po prawej stronie.
 
@@ -595,7 +596,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operator"></a><a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a> operator +
 
 Dodaje przesunięcie do iteratora i zwraca lub odnoszący `move_iterator` `reverse_iterator` się do wstawionego elementu w nowym położeniu przesunięcia.
 
@@ -623,7 +624,7 @@ Iterator, który ma zostać przesunięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca sumę _Off *prawo*  +  *_Off*.
+Zwraca sumę _Off *prawo*  +  .
 
 ### <a name="example"></a>Przykład
 
@@ -674,7 +675,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>zakład
+## <a name="operator-"></a><a name="operator-"></a> zakład
 
 Odejmuje jeden iterator od innego i zwraca różnicę.
 
@@ -700,7 +701,7 @@ Iterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różnica między dwoma iteratorami`.`
+Różnica między dwoma iteratorami `.`
 
 ### <a name="remarks"></a>Uwagi
 
@@ -708,7 +709,7 @@ Pierwszy operator szablonu zwraca wartość `left.base() - right.base()` .
 
 Drugi operator szablonu zwraca wartość `right.current - left.current` .
 
-`Tdiff`jest określany na podstawie typu zwracanego wyrażenia. W przeciwnym razie jest to `RandomIterator1::difference_type` .
+`Tdiff` jest określany na podstawie typu zwracanego wyrażenia. W przeciwnym razie jest to `RandomIterator1::difference_type` .
 
 ### <a name="example"></a>Przykład
 

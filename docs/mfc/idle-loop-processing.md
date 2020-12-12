@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: przetwarzanie pętli bezczynności'
 title: Przetwarzanie pętli bezczynności
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 74ca89d91cf4e60b09a063551b526f177caed161
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8972a2bafe5c9d35af2a5f4452082a7ca82f28dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290157"
 ---
 # <a name="idle-loop-processing"></a>Przetwarzanie pętli bezczynności
 
@@ -35,16 +36,16 @@ W tym artykule objaśniono dwa sposoby bezczynnościowego przetwarzania w aplika
 
 - Osadzenie innej pętli **PeekMessage** w innym miejscu w aplikacji.
 
-## <a name="peekmessage-in-the-mfc-message-loop"></a><a name="_core_peekmessage_in_the_mfc_message_loop"></a>PeekMessage w pętli komunikatów MFC
+## <a name="peekmessage-in-the-mfc-message-loop"></a><a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage w pętli komunikatów MFC
 
 W aplikacji opracowanej przy użyciu MFC, główna pętla komunikatów w `CWinThread` klasie zawiera pętlę komunikatów, która wywołuje Win32 API [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) . Ta pętla również wywołuje `OnIdle` funkcję członkowską `CWinThread` między komunikatami. Aplikacja może przetwarzać komunikaty w tym czasie bezczynności, zastępując `OnIdle` funkcję.
 
 > [!NOTE]
-> `Run`, `OnIdle` , i niektóre inne funkcje członkowskie są teraz członkami klasy, a `CWinThread` nie z klasą `CWinApp` . `CWinApp`pochodzi od `CWinThread` .
+> `Run`, `OnIdle` , i niektóre inne funkcje członkowskie są teraz członkami klasy, a `CWinThread` nie z klasą `CWinApp` . `CWinApp` pochodzi od `CWinThread` .
 
 Aby uzyskać więcej informacji na temat wykonywania bezczynnego przetwarzania, zobacz [OnIdle](reference/cwinthread-class.md#onidle) w *dokumentacji MFC*.
 
-## <a name="peekmessage-elsewhere-in-your-application"></a><a name="_core_peekmessage_elsewhere_in_your_application"></a>PeekMessage w innym miejscu aplikacji
+## <a name="peekmessage-elsewhere-in-your-application"></a><a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage w innym miejscu aplikacji
 
 Inna metoda wykonywania przetwarzania bezczynnego w aplikacji polega na osadzeniu pętli komunikatów w jednej z funkcji. Ta pętla komunikatów jest bardzo podobna do głównej pętli komunikatów MFC, którą można znaleźć w [CWinThread:: Run](reference/cwinthread-class.md#run). Oznacza to, że pętla w aplikacji opracowanej przy użyciu MFC musi wykonywać wiele z tych samych funkcji co główna pętla komunikatów. Poniższy fragment kodu ilustruje zapisywanie pętli komunikatów, która jest zgodna z MFC:
 
@@ -58,4 +59,4 @@ Aby uzyskać więcej informacji o wykonywaniu bezczynności, zobacz [OnIdle](ref
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)

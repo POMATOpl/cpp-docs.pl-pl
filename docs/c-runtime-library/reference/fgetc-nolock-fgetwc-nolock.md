@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fgetc_nolock, _fgetwc_nolock'
 title: _fgetc_nolock, _fgetwc_nolock
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 2744dc17c79fc1e3e568dd3b7a62602b75603be0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbab4186b3f6edfe95fde8319d3bace5c5d73ac6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289221"
 ---
 # <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock, _fgetwc_nolock
 
@@ -88,8 +89,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fgetc_nolock**|\<stdio. h>|
-|**_fgetwc_nolock**|\<stdio. h> lub \<WCHAR. h>|
+|**_fgetc_nolock**|\<stdio.h>|
+|**_fgetwc_nolock**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -129,7 +130,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crt_fgetc_nolocktxt"></a>Dane wejściowe: crt_fgetc_nolock. txt
+## <a name="input-crt_fgetc_nolocktxt"></a>Dane wejściowe: crt_fgetc_nolock.txt
 
 ```Input
 Line one.

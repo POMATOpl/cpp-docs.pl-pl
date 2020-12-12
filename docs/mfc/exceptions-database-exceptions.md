@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyjątki: wyjątki bazy danych'
 title: 'Wyjątki: wyjątki bazy danych'
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3e45f887d51b4b81196cd08d11f426f4ee6d4481
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290651"
 ---
 # <a name="exceptions-database-exceptions"></a>Wyjątki: wyjątki bazy danych
 
@@ -26,7 +27,7 @@ W tym artykule wyjaśniono, jak obsługiwać wyjątki bazy danych. Większość 
 
 - [Przykład obsługi wyjątku bazy danych](#_core_a_database_exception.2d.handling_example)
 
-## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a>Podejścia do obsługi wyjątków
+## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a> Podejścia do obsługi wyjątków
 
 Podejście jest takie samo niezależnie od tego, czy pracujesz z DAO (przestarzałe) czy ODBC.
 
@@ -52,7 +53,7 @@ W przypadku wyjątków DAO więcej informacji jest zwykle dostępnych. Informacj
 
 Dodatkowe informacje o błędach DAO, typie obiektu błędu DAO i kolekcji błędów DAO są dostępne w klasie [CDaoException](reference/cdaoexception-class.md).
 
-## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>Przykład obsługi wyjątku bazy danych
+## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a> Przykład Exception-Handling bazy danych
 
 Poniższy przykład próbuje utworzyć obiekt pochodny [CRecordset](reference/crecordset-class.md)na stercie z **`new`** operatorem, a następnie otworzyć zestaw rekordów (dla źródła danych ODBC). Podobnie jak w przypadku klas DAO, zobacz sekcję "przykład wyjątku DAO" poniżej.
 
@@ -74,6 +75,6 @@ Aby zapoznać się z informacjami o błędzie zwracanymi przez `CDaoException` o
 
 Podczas pracy z bazami danych Microsoft Jet (. mdb) i w większości przypadków podczas pracy z ODBC, będzie dostępny tylko jeden obiekt błędu. W rzadkich przypadkach, gdy używasz źródła danych ODBC i występuje wiele błędów, można wykonać pętlę przez zbieranie błędów DAO na podstawie liczby błędów zwróconych przez [CDaoException:: GetErrorCount](reference/cdaoexception-class.md#geterrorcount). Za każdym razem przez pętlę Wywołaj [CDaoException:: GetErrorInfo](reference/cdaoexception-class.md#geterrorinfo) , aby uzupełnić `m_pErrorInfo` element członkowski danych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)

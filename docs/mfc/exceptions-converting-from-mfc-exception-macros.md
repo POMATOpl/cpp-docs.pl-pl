@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyjątki: konwertowanie z makr wyjątków MFC'
 title: 'Wyjątki: konwertowanie z makr wyjątków MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83d4522dff902681e26a2bd098b46fea92bf1c6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290703"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Wyjątki: konwertowanie z makr wyjątków MFC
 
 To jest zaawansowany temat.
 
-W tym artykule wyjaśniono, jak przekonwertować istniejący kod zapisany przy użyciu makr klas Microsoft Foundation — **Wypróbuj**, **catch**, **throw**itd., aby użyć słów kluczowych obsługi wyjątków języka C++ **`try`** , **`catch`** i **`throw`** . Tematy obejmują:
+W tym artykule wyjaśniono, jak przekonwertować istniejący kod zapisany przy użyciu makr klas Microsoft Foundation — **Wypróbuj**, **catch**, **throw** itd., aby użyć słów kluczowych obsługi wyjątków języka C++ **`try`** , **`catch`** i **`throw`** . Tematy obejmują:
 
 - [Zalety konwersji](#_core_advantages_of_converting)
 
 - [Konwertowanie kodu z makrami wyjątków w celu używania wyjątków C++](#_core_doing_the_conversion)
 
-## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>Zalety konwersji
+## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a> Zalety konwersji
 
 Prawdopodobnie nie trzeba konwertować istniejącego kodu, chociaż należy pamiętać o różnicach między implementacjami makr w MFC w wersji 3,0 i implementacjami we wcześniejszych wersjach. Te różnice i kolejne zmiany w zachowaniu kodu zostały omówione w [wyjątkach: zmiany w makrach wyjątków w wersji 3,0](exceptions-changes-to-exception-macros-in-version-3-0.md).
 
@@ -69,11 +70,11 @@ Kolejną różnicą jest składnia. Składnia makr i słów kluczowych różni s
 
    Makra używają **THROW_LAST** , aby ponownie zgłosić bieżący wyjątek. **`throw`** Słowo kluczowe bez argumentu ma ten sam efekt.
 
-## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>Wykonywanie konwersji
+## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a> Wykonywanie konwersji
 
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Aby skonwertować kod przy użyciu makr, aby użyć słów kluczowych obsługi wyjątków C++
 
-1. Znajdź wszystkie wystąpienia makr MFC **try**, **catch**, **AND_CATCH**, **END_CATCH**, **throw**i **THROW_LAST**.
+1. Znajdź wszystkie wystąpienia makr MFC **try**, **catch**, **AND_CATCH**, **END_CATCH**, **throw** i **THROW_LAST**.
 
 2. Zamień lub Usuń wszystkie wystąpienia następujących makr:
 
@@ -95,7 +96,7 @@ Kolejną różnicą jest składnia. Składnia makr i słów kluczowych różni s
 
    [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   na
+   na wartość
 
    [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
@@ -111,6 +112,6 @@ Kod w następnym przykładzie używa słów kluczowych wyjątków języka C++, w
 
 Aby uzyskać więcej informacji, zobacz [wyjątki: używanie makr MFC i wyjątków C++](exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)<br/>

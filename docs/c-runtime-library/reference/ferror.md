@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: odwołującym'
 title: ferror
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc4034b1099bb4deed55f363b4a024371ad84e48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289468"
 ---
 # <a name="ferror"></a>ferror
 
@@ -54,7 +55,7 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli w *strumieniu*nie wystąpił błąd **, obiekt** żądający zwróci wartość 0. W przeciwnym razie zwraca wartość różną od zera. Jeśli strumień ma **wartość null**, obiekt wywołujący **wywoła procedurę** obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
+Jeśli w *strumieniu* nie wystąpił błąd **, obiekt** żądający zwróci wartość 0. W przeciwnym razie zwraca wartość różną od zera. Jeśli strumień ma **wartość null**, obiekt wywołujący **wywoła procedurę** obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
 Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
@@ -68,7 +69,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**ferror**|\<stdio. h>|
+|**ferror**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

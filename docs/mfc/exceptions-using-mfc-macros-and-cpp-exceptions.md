@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyjątki: używanie makr MFC i wyjątków C++'
 title: 'Wyjątki: używanie makr MFC i wyjątków języka C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 9e97eb545dedd3ac38dd93471f82aecc382717ae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f46cdff236f37ccdccde8215c7937300014aca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290453"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Wyjątki: używanie makr MFC i wyjątków języka C++
 
@@ -33,7 +34,7 @@ W tym artykule omówiono następujące tematy:
 
 - [Wypróbuj bloki wewnątrz bloków catch](#_core_try_blocks_inside_catch_blocks)
 
-## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Mieszanie słów kluczowych wyjątków i makr
+## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a> Mieszanie słów kluczowych wyjątków i makr
 
 Można mieszać makra wyjątków MFC i słowa kluczowe wyjątków C++ w tym samym programie. Ale nie można mieszać makr MFC ze słowami kluczowymi wyjątków C++ w tym samym bloku, ponieważ makra usuwają obiekty wyjątków automatycznie, gdy wykraczają poza zakres, natomiast kod używający słów kluczowych obsługujących wyjątek nie. Aby uzyskać więcej informacji, zobacz [wyjątki artykułów: Przechwytywanie i usuwanie wyjątków](exceptions-catching-and-deleting-exceptions.md).
 
@@ -47,7 +48,7 @@ Problem występuje, ponieważ `e` jest usuwany po zakończeniu wykonywania z blo
 
 [!code-cpp[NVC_MFCExceptions#11](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Wypróbuj bloki wewnątrz bloków catch
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a> Wypróbuj bloki wewnątrz bloków catch
 
 Nie można ponownie zgłosić bieżącego wyjątku z **`try`** bloku znajdującego się w bloku **catch** . Następujący przykład jest nieprawidłowy:
 
@@ -55,6 +56,6 @@ Nie można ponownie zgłosić bieżącego wyjątku z **`try`** bloku znajdujące
 
 Aby uzyskać więcej informacji, zobacz [wyjątki: Badanie zawartości wyjątku](exceptions-examining-exception-contents.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)
