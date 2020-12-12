@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: przegląd funkcji'
 title: Przegląd funkcji
 ms.date: 11/04/2016
 helpviewer_keywords:
 - functions [C++]
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
-ms.openlocfilehash: 89c9f24b049ee8e9a33557f3262cd6abcc624957
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68591d9300cb1a2f63c37c78f4cc03406e9d68f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243149"
 ---
 # <a name="overview-of-functions"></a>Przegląd funkcji
 
@@ -22,6 +23,6 @@ Kompilator używa prototypu do porównywania typów argumentów w kolejnych wywo
 
 Wywołanie funkcji przekazuje sterowanie wykonywaniem z funkcji wywołującej do wywołanej funkcji. Argumenty, jeśli istnieją, są przekazane przez wartość do wywołanej funkcji. Wykonanie **`return`** instrukcji w wywołanej funkcji zwraca kontrolę i prawdopodobnie wartość funkcji wywołującej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../c-language/functions-c.md)

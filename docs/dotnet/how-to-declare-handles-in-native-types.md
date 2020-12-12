@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Instrukcje: deklarowanie dojść w typach natywnych'
 title: 'Porady: deklarowanie dojść w typach natywnych'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: deba9804b9c5c278b3ffcef2923bc8f89fefa676
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 09eba3d04db4dd87de00346e1cccde7805f63100
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245931"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Porady: deklarowanie dojść w typach natywnych
 
@@ -109,6 +110,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

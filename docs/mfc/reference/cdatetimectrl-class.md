@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa korzystanie CDateTimeCtrl'
 title: Klasa korzystanie CDateTimeCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: f04cce93aa6a86d11c2d9ec953992a0f90f635c5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: cfed57d74e16f8433a5199ca912379b90a4f48cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561950"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247935"
 ---
 # <a name="cdatetimectrl-class"></a>Klasa korzystanie CDateTimeCtrl
 
@@ -594,7 +595,7 @@ Ta funkcja członkowska implementuje zachowanie [DTM_SETSYSTEMTIME](/windows/win
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykład CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

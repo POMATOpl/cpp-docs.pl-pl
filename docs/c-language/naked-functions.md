@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach niezwiązanych'
 title: Funkcje Naked
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - prolog code
 - epilog code
 ms.assetid: 2543c8af-00d4-4a2a-8a87-e746da1f9929
-ms.openlocfilehash: b752dd6fa378bc1275e8a7da90420aa2b8247e4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cea9bf2497a14bc7007f97b2c3db68eafc15059
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232819"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243357"
 ---
 # <a name="naked-functions"></a>Funkcje Naked
 
 **Specyficzne dla firmy Microsoft**
 
-Atrybut `naked` klasy magazynowania to specyficzne dla firmy Microsoft rozszerzenie języka C. W przypadku funkcji zadeklarowanych `naked` z atrybutem klasy magazynowania kompilator generuje kod bez kodu prologu i epilogu. Za pomocą tej funkcji można napisać własne sekwencje kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Wbudowane funkcje są szczególnie przydatne podczas pisania sterowników urządzeń wirtualnych.
+`naked`Atrybut klasy magazynowania to specyficzne dla firmy Microsoft rozszerzenie języka C. W przypadku funkcji zadeklarowanych z `naked` atrybutem klasy magazynowania kompilator generuje kod bez kodu prologu i epilogu. Za pomocą tej funkcji można napisać własne sekwencje kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Wbudowane funkcje są szczególnie przydatne podczas pisania sterowników urządzeń wirtualnych.
 
-Ponieważ `naked` atrybut ma zastosowanie tylko do definicji funkcji i nie jest modyfikatorem typu, funkcja bezużytecznych użyj składni atrybutów rozszerzonych, opisanej w temacie [rozszerzone atrybuty klasy magazynu](../c-language/c-extended-storage-class-attributes.md).
+Ponieważ `naked` atrybut ma zastosowanie tylko do definicji funkcji i nie jest modyfikatorem typu, funkcja bezużytecznych użyj składni atrybutów rozszerzonych, opisanej w [rozszerzonym Storage-Class atrybutów](../c-language/c-extended-storage-class-attributes.md).
 
 W poniższym przykładzie zdefiniowano funkcję z `naked` atrybutem:
 
@@ -42,14 +43,14 @@ Naked int func( formal_parameters )
 }
 ```
 
-Ten `naked` atrybut ma wpływ tylko na charakter generowania kodu kompilatora dla sekwencji Prolog i epilogu funkcji. Nie ma to wpływu na kod, który jest generowany do wywoływania takich funkcji. W `naked` ten sposób atrybut nie jest uważany za część typu funkcji, a wskaźniki funkcji nie mogą mieć `naked` atrybutu. Ponadto nie można `naked` zastosować atrybutu do definicji danych. Na przykład poniższy kod generuje błędy:
+Ten `naked` atrybut ma wpływ tylko na charakter generowania kodu kompilatora dla sekwencji Prolog i epilogu funkcji. Nie ma to wpływu na kod, który jest generowany do wywoływania takich funkcji. W ten sposób `naked` atrybut nie jest uważany za część typu funkcji, a wskaźniki funkcji nie mogą mieć `naked` atrybutu. Ponadto `naked` nie można zastosować atrybutu do definicji danych. Na przykład poniższy kod generuje błędy:
 
 ```
 __declspec( naked ) int i;  /* Error--naked attribute not */
                             /* permitted on data declarations. */
 ```
 
-`naked` Atrybut jest istotny tylko dla definicji funkcji i nie może być określony w prototypie funkcji. Następująca deklaracja generuje błąd kompilatora:
+`naked`Atrybut jest istotny tylko dla definicji funkcji i nie może być określony w prototypie funkcji. Następująca deklaracja generuje błąd kompilatora:
 
 ```
 __declspec( naked ) int func();   /* Error--naked attribute not */

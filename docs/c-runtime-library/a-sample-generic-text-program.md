@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: przykładowego programu Generic-Textowego'
 title: Przykładowy ogólny program tekstowy
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - TCHAR type
 - TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
-ms.openlocfilehash: bc339bb11d0910eea2ef115a8f9013fa5c0270a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c8b9e0d201cf4891f74e54a1f5ee929d864f6b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290472"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242785"
 ---
 # <a name="a-sample-generic-text-program"></a>Przykładowy ogólny program tekstowy
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Następujący program GENTEXT. C, oferuje bardziej szczegółowe ilustruje użycie mapowania typ ogólny tekst zdefiniowany w TCHAR. GODZ.:
+Następujący program, GENTEXT. C, zawiera bardziej szczegółową ilustrację użycia mapowań tekstu ogólnego zdefiniowanego w używanie TCHAR. C
 
 ```C
 // GENTEXT.C
@@ -59,7 +60,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
 }
 ```
 
-Jeśli `_MBCS` została zdefiniowana, GENTEXT. Następujący program MBCS mapy i C:
+Jeśli `_MBCS` został zdefiniowany, GENTEXT. Język C jest mapowany na następujący program MBCS:
 
 ```C
 // crt_mbcsgtxt.c
@@ -97,7 +98,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
-Jeśli `_UNICODE` została zdefiniowana, GENTEXT. C jest mapowany na Unicode następującą wersję programu. Aby uzyskać więcej informacji o korzystaniu z `wmain` w programach Unicode jako zamiennika `main`, zobacz [korzystanie z wmain](../c-language/using-wmain.md) w *Skorowidz języka c*.
+Jeśli `_UNICODE` został zdefiniowany, GENTEXT. Język C jest mapowany do następującej wersji Unicode programu. Aby uzyskać więcej informacji o używaniu `wmain` programu w programach Unicode jako zamiennika programu `main` , zobacz [using wmain](../c-language/using-wmain.md) in *C Reference Language*.
 
 ```C
 // crt_unicgtxt.c
@@ -135,7 +136,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }
 ```
 
-Jeśli żadna `_MBCS` ani `_UNICODE` została zdefiniowana, GENTEXT. C mapuje kodowi ASCII jednobajtowe w następujący sposób:
+Jeśli ani nie został `_MBCS` `_UNICODE` zdefiniowany, GENTEXT. C mapuje na jednobajtowy kod ASCII w następujący sposób:
 
 ```C
 // crt_sbcsgtxt.c
@@ -172,12 +173,12 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
-[Mapowania typu danych](../c-runtime-library/data-type-mappings.md)<br/>
-[Mapowania zmiennych globalnych i stałych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
+[Mapowania tekstu ogólnego](../c-runtime-library/generic-text-mappings.md)<br/>
+[Mapowania typów danych](../c-runtime-library/data-type-mappings.md)<br/>
+[Stałe i globalne mapowania zmiennych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Mapowania procedur](../c-runtime-library/routine-mappings.md)<br/>
-[Mapowania zwykłego tekstu](../c-runtime-library/using-generic-text-mappings.md)
+[Używanie mapowań Generic-Text](../c-runtime-library/using-generic-text-mappings.md)

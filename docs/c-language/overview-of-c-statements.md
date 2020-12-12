@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Omówienie instrukcji języka C'
 title: Przegląd instrukcji C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 6b6cf9ee7aab3f14b3cb4b48c10e59125391c14c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d2d6e7161f63e8508cb7e94d28b7bbafe44146e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243175"
 ---
 # <a name="overview-of-c-statements"></a>Przegląd instrukcji C
 
@@ -33,7 +34,7 @@ Instrukcje języka C składają się z tokenów, wyrażeń i innych instrukcji. 
 
 [skoku — instrukcja](../c-language/break-statement-c.md)
 
-[try-except-Statement](../c-language/try-except-statement-c.md) /* specyficzne dla firmy Microsoft\*/
+[try-except-Statement](../c-language/try-except-statement-c.md) /* specyficzne dla firmy Microsoft \*/
 
 [try-finally-Statement](../c-language/try-finally-statement-c.md)  / \* Specyficzne dla firmy Microsoft\*/
 
@@ -43,6 +44,6 @@ Instrukcja Expression zawiera wyrażenie C, które może zawierać operatory ary
 
 Każda instrukcja języka C może rozpoczynać się od etykiety identyfikującej składającej się z nazwy i dwukropka. Ponieważ tylko **`goto`** instrukcja rozpoznaje etykiety instrukcji, etykiety instrukcji są omawiane z **`goto`** . Aby uzyskać więcej informacji [, zobacz instrukcje goto i labeled](../c-language/goto-and-labeled-statements-c.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

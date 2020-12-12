@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Queue (STL/CLR)'
 title: queue (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1cbe30dff567c81840f2b78498b04648954399dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245879"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -1222,7 +1223,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *wartości*parametru szablonu.
+Typ jest synonimem dla *wartości* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

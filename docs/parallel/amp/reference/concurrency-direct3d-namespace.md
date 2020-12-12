@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: concurrency::d irect3d Namespace'
 title: Concurrency::direct3d — Przestrzeń nazw
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 9fb0e7d4f5abbccbd9cd931fe2c4520e9410cbc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247738"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d — Przestrzeń nazw
 
-Przestrzeń nazw `direct3d` zawiera funkcje, które obsługują współdziałanie D3D. Umożliwia korzystanie z zasobów D3D do obliczeń w kodzie AMP. Umożliwia również korzystanie z zasobów utworzonych w AMP w kodzie D3D bez tworzenia nadmiarowych kopii pośrednich. Możesz stopniowo przyspieszyć sekcje intensywnych obliczeń aplikacji DirectX, używając C++ amp, i korzystając z interfejsu API D3D na danych wyprodukowanych z obliczeń amp.
+`direct3d`Przestrzeń nazw zawiera funkcje, które obsługują współdziałanie D3D. Umożliwia korzystanie z zasobów D3D do obliczeń w kodzie AMP. Umożliwia również korzystanie z zasobów utworzonych w AMP w kodzie D3D bez tworzenia nadmiarowych kopii pośrednich. Można stopniowo przyspieszyć obszary obliczeniowe w aplikacjach DirectX za pomocą C++ AMP i korzystać z interfejsu API D3D na danych wyprodukowanych z obliczeń AMP.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,23 +28,23 @@ Przestrzeń nazw `direct3d` zawiera funkcje, które obsługują współdziałani
 namespace direct3d;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="classes"></a>Klasy
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[scoped_d3d_access_lock, klasa](scoped-d3d-access-lock-class.md)|Otoka RAII dla blokady dostępu D3D na obiekcie `accelerator_view`.|
+|[Klasa scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Otoka RAII dla blokady dostępu D3D na `accelerator_view` obiekcie.|
 
 ### <a name="structures"></a>Struktury
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[adopt_d3d_access_lock_t, struktura](adopt-d3d-access-lock-t-structure.md)|Typ tagu wskazujący, że blokada dostępu D3D powinna zostać przyjęta, a nie pobrana.|
+|[adopt_d3d_access_lock_t — Struktura](adopt-d3d-access-lock-t-structure.md)|Typ tagu wskazujący, że blokada dostępu D3D powinna zostać przyjęta, a nie pobrana.|
 
 ### <a name="functions"></a>Funkcje
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[ABS](concurrency-direct3d-namespace-functions-amp.md#abs)|Zwraca wartość bezwzględną argumentu.|
 |[opraw](concurrency-direct3d-namespace-functions-amp.md#clamp)|Przeciążone. Ogranicza _X do określonego _Min i zakresu _Max|
@@ -55,12 +56,12 @@ namespace direct3d;
 |[firstbithigh —](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Pobiera lokalizację pierwszego zestawu bit w _X, rozpoczynając od najwyższego porządku i działającego w dół|
 |[firstbitlow —](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Pobiera lokalizację pierwszego zestawu bit w _X, rozpoczynając od najniższego bitu kolejności i działającego w górę|
 |[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Pobierz interfejs buforu D3D jako tablicę źródłową.|
-|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Porównuje dwie wartości, zwracając wartość, która jest większa.|
+|[Imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Porównuje dwie wartości, zwracając wartość, która jest większa.|
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Porównuje dwie wartości, zwracając wartość, która jest mniejsza.|
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Zwraca flagę logiczną wskazującą, czy limit czasu jest wyłączony dla określonego accelerator_view.|
-|[Mad —](concurrency-direct3d-namespace-functions-amp.md#mad)|Przeciążone. Wykonuje arytmetyczną operację mnożenia/dodawania na trzech argumentach: _X \* _Y + _Z|
+|[Mad —](concurrency-direct3d-namespace-functions-amp.md#mad)|Przeciążone. Wykonuje arytmetyczną operację mnożenia/dodawania na trzech argumentach: _X \* _Y i _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Utwórz tablicę ze wskaźnika interfejsu buforu D3D.|
-|[emitowan](concurrency-direct3d-namespace-functions-amp.md#noise)|Generuje losową wartość przy użyciu algorytmu szumu w języku Perl|
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Generuje losową wartość przy użyciu algorytmu szumu w języku Perl|
 |[radianach](concurrency-direct3d-namespace-functions-amp.md#radians)|Konwertuje _X z stopni na radiany|
 |[Analiza](concurrency-direct3d-namespace-functions-amp.md#rcp)|Oblicza szybką i przybliżoną odwrotność argumentu|
 |[reversebits —](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Odwraca kolejność bitów w _X|

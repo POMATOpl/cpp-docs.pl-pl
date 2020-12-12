@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: LNK4254 narzędzi KONSOLIDATORA ostrzeżenia narzędzi konsolidatora'
 title: Ostrzeżenie LNK4254 narzędzi konsolidatora
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-ms.openlocfilehash: 8431bd2d89fd5df5cf076ad006ab04006f552c4c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 410a904af6af2015a817ac9e254dff7f09811b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244475"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>Ostrzeżenie LNK4254 narzędzi konsolidatora
 
@@ -21,7 +22,7 @@ Zawartość jednej sekcji została scalona w innej, ale atrybuty obu sekcji są 
 
 Aby rozwiązać LNK4254 narzędzi KONSOLIDATORA, zmodyfikuj lub Usuń żądanie scalenia.
 
-W przypadku komputerów z procesorem x86 i elementów docelowych Windows CE (ARM, MIPS, SH4 i kciuk C++) z wizualizacją. Sekcja CRT jest tylko do odczytu. Jeśli kod zależy od poprzedniego zachowania (. Sekcje CRT są do odczytu/zapisu, ale można zobaczyć nieoczekiwane zachowanie.
+W przypadku urządzeń docelowych z procesorami x86 i Windows CE (ARM, MIPS, SH4 i kciuk) z Visual C++,. Sekcja CRT jest tylko do odczytu. Jeśli kod zależy od poprzedniego zachowania (. Sekcje CRT są do odczytu/zapisu, ale można zobaczyć nieoczekiwane zachowanie.
 
 Aby uzyskać więcej informacji, zobacz,
 

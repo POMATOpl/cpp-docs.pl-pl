@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDBVariant'
 title: Klasa CDBVariant
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 45a478a5ca6cfb4d9b976a29eae2ae7d98fdd6ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 54fc432998a15d79ab51165b280e4cc4ced94455
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247945"
 ---
 # <a name="cdbvariant-class"></a>Klasa CDBVariant
 
@@ -89,9 +90,9 @@ class CDBVariant
 
 ## <a name="remarks"></a>Uwagi
 
-`CDBVariant`nie ma klasy bazowej.
+`CDBVariant` nie ma klasy bazowej.
 
-`CDBVariant`jest podobny do [COleVariant](../../mfc/reference/colevariant-class.md); nie `CDBVariant` używa jednak OLE. `CDBVariant`umożliwia przechowywanie wartości bez obaw o typ danych wartości. `CDBVariant`śledzi typ danych bieżącej wartości, który jest przechowywany w Unii.
+`CDBVariant` jest podobny do [COleVariant](../../mfc/reference/colevariant-class.md); nie `CDBVariant` używa jednak OLE. `CDBVariant` umożliwia przechowywanie wartości bez obaw o typ danych wartości. `CDBVariant` śledzi typ danych bieżącej wartości, który jest przechowywany w Unii.
 
 Klasa [CRecordset](../../mfc/reference/crecordset-class.md) wykorzystuje `CDBVariant` obiekty w trzech funkcjach członkowskich: `GetFieldValue` , `GetBookmark` , i `SetBookmark` . Na przykład program `GetFieldValue` umożliwia dynamiczne pobieranie danych w kolumnie. Ponieważ typ danych kolumny może nie być znany w czasie wykonywania, program `GetFieldValue` używa `CDBVariant` obiektu do przechowywania danych tej kolumny.
 
@@ -103,7 +104,7 @@ Klasa [CRecordset](../../mfc/reference/crecordset-class.md) wykorzystuje `CDBVar
 
 **Nagłówek:** AFXDB. h
 
-## <a name="cdbvariantcdbvariant"></a><a name="cdbvariant"></a>CDBVariant::CDBVariant
+## <a name="cdbvariantcdbvariant"></a><a name="cdbvariant"></a> CDBVariant::CDBVariant
 
 Tworzy obiekt o wartości NULL `CDBVariant` .
 
@@ -115,7 +116,7 @@ CDBVariant();
 
 Ustawia element członkowski danych [m_dwType](#m_dwtype) na DBVT_NULL.
 
-## <a name="cdbvariantclear"></a><a name="clear"></a>CDBVariant:: Clear
+## <a name="cdbvariantclear"></a><a name="clear"></a> CDBVariant:: Clear
 
 Wywołaj tę funkcję elementu członkowskiego, aby wyczyścić `CDBVariant` obiekt.
 
@@ -125,11 +126,11 @@ void Clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość [m_dwType](#m_dwtype) elementu członkowskiego danych jest DBVT_DATE, DBVT_STRING lub DBVT_BINARY, `Clear` zwalnia pamięć skojarzoną z elementem członkowskim wskaźnika Union. `Clear`ustawia `m_dwType` DBVT_NULL.
+Jeśli wartość [m_dwType](#m_dwtype) elementu członkowskiego danych jest DBVT_DATE, DBVT_STRING lub DBVT_BINARY, `Clear` zwalnia pamięć skojarzoną z elementem członkowskim wskaźnika Union. `Clear` ustawia `m_dwType` DBVT_NULL.
 
 `CDBVariant`Destruktor wywołuje `Clear` .
 
-## <a name="cdbvariantm_boolval"></a><a name="m_boolval"></a>CDBVariant:: m_boolVal
+## <a name="cdbvariantm_boolval"></a><a name="m_boolval"></a> CDBVariant:: m_boolVal
 
 Przechowuje wartość typu BOOL.
 
@@ -137,7 +138,7 @@ Przechowuje wartość typu BOOL.
 
 `m_boolVal`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_boolVal` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_BOOL, `m_boolVal` będzie zawierać prawidłową wartość. w przeciwnym razie dostęp do nich `m_boolVal` spowoduje powstanie wiarygodnych wyników.
 
-## <a name="cdbvariantm_chval"></a><a name="m_chval"></a>CDBVariant:: m_chVal
+## <a name="cdbvariantm_chval"></a><a name="m_chval"></a> CDBVariant:: m_chVal
 
 Przechowuje wartość typu **`unsigned char`** .
 
@@ -145,7 +146,7 @@ Przechowuje wartość typu **`unsigned char`** .
 
 `m_chVal`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_chVal` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_UCHAR, `m_chVal` zawiera prawidłową wartość. w przeciwnym razie uzyskanie dostępu `m_chVal` spowoduje niezawodne wyniki.
 
-## <a name="cdbvariantm_dblval"></a><a name="m_dblval"></a>CDBVariant:: m_dblVal
+## <a name="cdbvariantm_dblval"></a><a name="m_dblval"></a> CDBVariant:: m_dblVal
 
 Przechowuje wartość typu **`double`** .
 
@@ -153,7 +154,7 @@ Przechowuje wartość typu **`double`** .
 
 `m_dblVal`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_dblVal` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_DOUBLE, `m_dblVal` zawiera prawidłową wartość. w przeciwnym razie uzyskanie dostępu `m_dblVal` spowoduje niezawodne wyniki.
 
-## <a name="cdbvariantm_dwtype"></a><a name="m_dwtype"></a>CDBVariant:: m_dwType
+## <a name="cdbvariantm_dwtype"></a><a name="m_dwtype"></a> CDBVariant:: m_dwType
 
 Ten element członkowski danych zawiera typ danych dla wartości, która jest obecnie przechowywana w `CDBVariant` elemencie członkowskim danych Union obiektu.
 
@@ -176,7 +177,7 @@ Przed uzyskaniem dostępu do tego związku należy sprawdzić wartość `m_dwTyp
 |DBVT_ASTRING|[m_pstringA](#m_pstringa)|
 |DBVT_WSTRING|[m_pstringW](#m_pstringw)|
 
-## <a name="cdbvariantm_fltval"></a><a name="m_fltval"></a>CDBVariant:: m_fltVal
+## <a name="cdbvariantm_fltval"></a><a name="m_fltval"></a> CDBVariant:: m_fltVal
 
 Przechowuje wartość typu **`float`** .
 
@@ -184,7 +185,7 @@ Przechowuje wartość typu **`float`** .
 
 `m_fltVal`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_fltVal` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_SINGLE, `m_fltVal` zawiera prawidłową wartość. w przeciwnym razie uzyskanie dostępu `m_fltVal` spowoduje niezawodne wyniki.
 
-## <a name="cdbvariantm_ival"></a><a name="m_ival"></a>CDBVariant:: m_iVal
+## <a name="cdbvariantm_ival"></a><a name="m_ival"></a> CDBVariant:: m_iVal
 
 Przechowuje wartość typu **`short`** .
 
@@ -192,7 +193,7 @@ Przechowuje wartość typu **`short`** .
 
 `m_iVal`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_iVal` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_SHORT, `m_iVal` zawiera prawidłową wartość. w przeciwnym razie uzyskanie dostępu `m_iVal` spowoduje niezawodne wyniki.
 
-## <a name="cdbvariantm_lval"></a><a name="m_lval"></a>CDBVariant:: m_lVal
+## <a name="cdbvariantm_lval"></a><a name="m_lval"></a> CDBVariant:: m_lVal
 
 Przechowuje wartość typu **`long`** .
 
@@ -200,7 +201,7 @@ Przechowuje wartość typu **`long`** .
 
 `m_lVal`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_lVal` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_LONG, `m_lVal` zawiera prawidłową wartość. w przeciwnym razie uzyskanie dostępu `m_lVal` spowoduje niezawodne wyniki.
 
-## <a name="cdbvariantm_pbinary"></a><a name="m_pbinary"></a>CDBVariant:: m_pbinary
+## <a name="cdbvariantm_pbinary"></a><a name="m_pbinary"></a> CDBVariant:: m_pbinary
 
 Przechowuje wskaźnik do obiektu typu [CLongBinary](../../mfc/reference/clongbinary-class.md).
 
@@ -208,7 +209,7 @@ Przechowuje wskaźnik do obiektu typu [CLongBinary](../../mfc/reference/clongbin
 
 `m_pbinary`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_pbinary` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_BINARY, `m_pbinary` zawiera prawidłowy wskaźnik; w przeciwnym razie uzyskanie dostępu `m_pbinary` spowoduje uzyskanie wiarygodnych wyników.
 
-## <a name="cdbvariantm_pdate"></a><a name="m_pdate"></a>CDBVariant:: m_pdate
+## <a name="cdbvariantm_pdate"></a><a name="m_pdate"></a> CDBVariant:: m_pdate
 
 Przechowuje wskaźnik do obiektu typu TIMESTAMP_STRUCT.
 
@@ -218,7 +219,7 @@ Przechowuje wskaźnik do obiektu typu TIMESTAMP_STRUCT.
 
 Aby uzyskać więcej informacji na temat typu danych TIMESTAMP_STRUCT, zobacz temat [typy danych](/sql/odbc/reference/appendixes/c-data-types) w temacie C w dodatku D *odwołania ODBC programmer's* w Windows SDK.
 
-## <a name="cdbvariantm_pstring"></a><a name="m_pstring"></a>CDBVariant:: m_pstring
+## <a name="cdbvariantm_pstring"></a><a name="m_pstring"></a> CDBVariant:: m_pstring
 
 Przechowuje wskaźnik do obiektu typu [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
@@ -226,7 +227,7 @@ Przechowuje wskaźnik do obiektu typu [CString](../../atl-mfc-shared/reference/c
 
 `m_pstring`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_pstring` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_STRING, `m_pstring` zawiera prawidłowy wskaźnik; w przeciwnym razie uzyskanie dostępu `m_pstring` spowoduje uzyskanie wiarygodnych wyników.
 
-## <a name="cdbvariantm_pstringa"></a><a name="m_pstringa"></a>CDBVariant:: m_pstringA
+## <a name="cdbvariantm_pstringa"></a><a name="m_pstringa"></a> CDBVariant:: m_pstringA
 
 Przechowuje wskaźnik do obiektu [CSTRING](../../atl-mfc-shared/reference/cstringt-class.md) ASCII.
 
@@ -234,7 +235,7 @@ Przechowuje wskaźnik do obiektu [CSTRING](../../atl-mfc-shared/reference/cstrin
 
 `m_pstringA`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_pstringA` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_ASTRING, `m_pstringA` zawiera prawidłowy wskaźnik; w przeciwnym razie uzyskanie dostępu `m_pstringA` spowoduje uzyskanie wiarygodnych wyników.
 
-## <a name="cdbvariantm_pstringw"></a><a name="m_pstringw"></a>CDBVariant:: m_pstringW
+## <a name="cdbvariantm_pstringw"></a><a name="m_pstringw"></a> CDBVariant:: m_pstringW
 
 Przechowuje wskaźnik do szerokiego obiektu [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
 
@@ -242,7 +243,7 @@ Przechowuje wskaźnik do szerokiego obiektu [CString](../../atl-mfc-shared/refer
 
 `m_pstringW`Element członkowski danych należy do Unii. Przed uzyskaniem dostępu `m_pstringW` należy najpierw sprawdzić wartość [CDBVariant:: m_dwType](#m_dwtype). Jeśli `m_dwType` jest ustawiona na DBVT_WSTRING, `m_pstringW` zawiera prawidłowy wskaźnik; w przeciwnym razie uzyskanie dostępu `m_pstringW` spowoduje uzyskanie wiarygodnych wyników.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CRecordset](../../mfc/reference/crecordset-class.md)
