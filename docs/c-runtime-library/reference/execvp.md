@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: execvp'
 title: execvp
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - execvp function
 ms.assetid: a0d0e898-9f06-4aa9-94ce-3ad317318c3a
-ms.openlocfilehash: 8df4164a4f3d9e0377e84adbe2d6950c0b3ceeca
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 66980da760b0c1849428495ce60e7469f0738e50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236116"
 ---
 # <a name="execvp"></a>execvp
 
