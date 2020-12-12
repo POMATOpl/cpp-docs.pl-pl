@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CHtmlEditCtrl'
 title: Klasa CHtmlEditCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 05063c62e9f7a5d88d3fecde842f979725200f98
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d395f0f9f3e8b5ae10ad0ce35b2b1e410633e8d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184000"
 ---
 # <a name="chtmleditctrl-class"></a>Klasa CHtmlEditCtrl
 
-Zapewnia funkcjonalność WebBrowser ActiveX kontroli w oknie MFC.
+Oferuje funkcje kontrolki ActiveX WebBrowser w oknie MFC.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,31 +45,31 @@ class CHtmlEditCtrl: public CWnd,
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHtmlEditCtrl::Utwórz](#create)|Tworzy formant ActiveX przeglądarki WebBrowser `CHtmlEditCtrl` i dołącza go do obiektu. Ta funkcja automatycznie przełącza kontrolki WebBrowser ActiveX w tryb edycji.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Pobiera interfejs [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) w dokumencie aktualnie załadowanym w formancie zawierającego webbrowsera.|
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Pobiera adres URL do domyślnego dokumentu, aby załadować w kontrolce zawartej przeglądarki WebBrowser.|
+|[CHtmlEditCtrl:: Create](#create)|Tworzy formant ActiveX WebBrowser i dołącza go do `CHtmlEditCtrl` obiektu. Ta funkcja automatycznie umieszcza formant ActiveX WebBrowser w trybie edycji.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Pobiera Interfejs [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) w dokumencie aktualnie załadowanym do zawartej kontrolki WebBrowser.|
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Pobiera adres URL do dokumentu domyślnego do załadowania w zawartej kontrolce WebBrowser.|
 
 ## <a name="remarks"></a>Uwagi
 
-Hostowany formant webbrowser jest automatycznie umieszczany w trybie edycji po jego utworzeniu.
+Hostowany formant WebBrowser jest automatycznie umieszczany w trybie edycji po jego utworzeniu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Baza CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
+[CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 `CHtmlEditCtrl`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxhtml.h
+**Nagłówek:** afxhtml. h
 
-## <a name="chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl
+## <a name="chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a> CHtmlEditCtrl::CHtmlEditCtrl
 
 Konstruuje `CHtmlEditCtrl` obiekt.
 
@@ -76,9 +77,9 @@ Konstruuje `CHtmlEditCtrl` obiekt.
 CHtmlEditCtrl();
 ```
 
-## <a name="chtmleditctrlcreate"></a><a name="create"></a>CHtmlEditCtrl::Utwórz
+## <a name="chtmleditctrlcreate"></a><a name="create"></a> CHtmlEditCtrl:: Create
 
-Tworzy formant ActiveX przeglądarki WebBrowser `CHtmlEditCtrl` i dołącza go do obiektu. Formant WebBrowser ActiveX automatycznie przechodzi do dokumentu domyślnego, a następnie jest umieszczany w trybie edycji przez tę funkcję.
+Tworzy formant ActiveX WebBrowser i dołącza go do `CHtmlEditCtrl` obiektu. Kontrolka ActiveX WebBrowser automatycznie nawiguje do dokumentu domyślnego, a następnie jest umieszczana w trybie edycji przez tę funkcję.
 
 ```
 virtual BOOL Create(
@@ -93,30 +94,30 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszWindowName*<br/>
-Ten parametr jest nieużywane.
+Ten parametr jest nieużywany.
 
-*Dwstyle*<br/>
-Ten parametr jest nieużywane.
+*dwStyle*<br/>
+Ten parametr jest nieużywany.
 
-*Rect*<br/>
-Określa rozmiar i położenie formantu.
+*cinania*<br/>
+Określa rozmiar i położenie kontrolki.
 
 *pParentWnd*<br/>
-Określa okno nadrzędne formantu. Nie może być null.
+Określa okno nadrzędne kontrolki. Nie może mieć wartości NULL.
 
-*Nid*<br/>
-Określa identyfikator formantu.
+*nID*<br/>
+Określa identyfikator kontrolki.
 
-*Pcontext*<br/>
-Ten parametr jest nieużywane.
+*pContext*<br/>
+Ten parametr jest nieużywany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-## <a name="chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument
+## <a name="chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a> CHtmlEditCtrl::GetDHtmlDocument
 
-Pobiera interfejs [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) w dokumencie aktualnie załadowanym w kontrolce zawartej w uprzeglądarce Sieci Web
+Pobiera Interfejs [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) w dokumencie aktualnie załadowanym do zawartej kontrolki WebBrowser
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -124,12 +125,12 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ppDocument (Dokument ppDocument)*<br/>
+*ppDocument*<br/>
 Interfejs dokumentu.
 
-## <a name="chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument
+## <a name="chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a> CHtmlEditCtrl::GetStartDocument
 
-Pobiera adres URL do domyślnego dokumentu, aby załadować w kontrolce zawartej przeglądarki WebBrowser.
+Pobiera adres URL do dokumentu domyślnego do załadowania w zawartej kontrolce WebBrowser.
 
 ```
 virtual LPCTSTR GetStartDocument();

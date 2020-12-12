@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy sync_per_container
 title: sync_per_container — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 51a88e6ec4eca693c652635e1574e3611d7217cd
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 83dc2f3d874fdc1910a3da4fdc34fb18c432cc25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183315"
 ---
 # <a name="sync_per_container-class"></a>sync_per_container — Klasa
 
@@ -35,7 +36,7 @@ Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [`c
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[ubiegł](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 

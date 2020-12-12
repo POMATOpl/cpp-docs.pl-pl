@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; &gt; Operatory ciągów'
 title: '&lt;&gt;Operatory ciągów'
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9a23b4539fbb84533de83a541458deddbd13615e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183714"
 ---
 # <a name="ltstringgt-operators"></a>&lt;&gt;Operatory ciągów
 
@@ -579,7 +580,7 @@ Zapisuje wartość określonego ciągu do strumienia wyjściowego *_Ostr*.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator przeciążania funkcji szablonu **<<** , aby wstawić obiekt *str* [basic_string](../standard-library/basic-string-class.md) szablonu klasy do strumienia * \_ ostr*. Funkcja efektywnie zwraca wartość `_Ostr.write( str.c_str, str.size )` .
+Operator przeciążania funkcji szablonu **<<** , aby wstawić obiekt *str* [basic_string](../standard-library/basic-string-class.md) szablonu klasy do strumienia *\_ ostr*. Funkcja efektywnie zwraca wartość `_Ostr.write( str.c_str, str.size )` .
 
 ## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
@@ -845,6 +846,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<string>](../standard-library/string.md)

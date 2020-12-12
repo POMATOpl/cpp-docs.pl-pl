@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy student_t_distribution
 title: student_t_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24740a5fa15d9d77cb966184fe27e37956b3412e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183454"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution — Klasa
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CFtpConnection'
 title: Klasa CFtpConnection
 ms.date: 08/29/2019
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 4ad2262b17208dd634b59f5df4d6e60c300bb3c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 97c7c848a5724a670f324e1d1d26ea781265be27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184260"
 ---
 # <a name="cftpconnection-class"></a>Klasa CFtpConnection
 
@@ -140,7 +141,7 @@ Wskaźnik do ciągu zakończonego wartością null, który określa hasło, któ
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL lub ""|NULL lub ""|anonimowe|Nazwa e-mail użytkownika|
 |Ciąg o wartości innej niż NULL|NULL lub ""|*pstrUserName*|" "|
-|Pusty ciąg o wartości innej niż NULL|BŁĄD|BŁĄD||
+|Pusty ciąg o wartości innej niż NULL|ERROR|ERROR||
 |Ciąg o wartości innej niż NULL|Ciąg o wartości innej niż NULL|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>

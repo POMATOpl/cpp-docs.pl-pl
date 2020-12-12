@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa strstreambuf'
 title: strstreambuf — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: e6b4df60f4d28839419d02fd3ed6d7cbf73d327f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7eaed8a540fc4d9e53f7c6c5b8bbb69b3a7c4653
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202197"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183506"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf — Klasa
 
@@ -83,7 +84,7 @@ Obiekt przechowuje również wskaźniki do dwóch funkcji kontrolujących `strst
 
 **Przestrzeń nazw:** std
 
-## <a name="strstreambuffreeze"></a><a name="freeze"></a>strstreambuf:: Zablokuj
+## <a name="strstreambuffreeze"></a><a name="freeze"></a> strstreambuf:: Zablokuj
 
 Powoduje, że bufor strumienia nie jest dostępny za pomocą operacji buforu strumienia.
 
@@ -171,7 +172,7 @@ after clearing stream: stream good
 test1test3
 ```
 
-## <a name="strstreambufoverflow"></a><a name="overflow"></a>strstreambuf:: overflow
+## <a name="strstreambufoverflow"></a><a name="overflow"></a> strstreambuf:: overflow
 
 Chroniona funkcja wirtualna, która może być wywoływana, gdy nowy znak zostanie wstawiony do pełnego buforu.
 
@@ -186,17 +187,17 @@ Znak, który ma zostać wstawiony do buforu lub `EOF` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca wartość `EOF` . W * \_ przeciwnym razie*  ==  `EOF` zwraca wartość inną niż `EOF` . W przeciwnym razie zwraca * \_ meta*.
+Jeśli funkcja nie może się powieść, zwraca wartość `EOF` . W *\_ przeciwnym razie*  ==  `EOF` zwraca wartość inną niż `EOF` . W przeciwnym razie zwraca *\_ meta*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli * \_ meta* ! = `EOF` , chroniona funkcja wirtualna elementu członkowskiego próbuje wstawić element `(char)_Meta` do buforu wyjściowego. Można to zrobić na różne sposoby:
+Jeśli *\_ meta* ! = `EOF` , chroniona funkcja wirtualna elementu członkowskiego próbuje wstawić element `(char)_Meta` do buforu wyjściowego. Można to zrobić na różne sposoby:
 
 - Jeśli dostępna jest pozycja zapisu, może ona przechowywać element w pozycji zapisu i zwiększać następny wskaźnik dla buforu wyjściowego.
 
 - Jeśli w trybie zapisanego strstreambuf jest wyświetlana kontrolowana sekwencja jest modyfikowalna, rozszerzalna i niezamrożona, funkcja może ustawić pozycję zapisu, przydzielając nowe dla buforu wyjściowego. Rozszerzanie buforu wyjściowego w ten sposób rozszerza również każdy skojarzony bufor wejściowy.
 
-## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a>strstreambuf: niepowodzenie:p
+## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a> strstreambuf: niepowodzenie:p
 
 Chroniona funkcja wirtualna elementu członkowskiego próbująca umieścić element w strumieniu wejściowym, a następnie sprawia, że staje się on bieżącym elementem (wskazywanym przez następny wskaźnik).
 
@@ -211,19 +212,19 @@ Znak, który ma zostać wstawiony do buforu lub `EOF` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja nie może się powieść, zwraca wartość `EOF` . W * \_ przeciwnym razie*  ==  `EOF` zwraca wartość inną niż `EOF` . W przeciwnym razie zwraca * \_ meta*.
+Jeśli funkcja nie może się powieść, zwraca wartość `EOF` . W *\_ przeciwnym razie*  ==  `EOF` zwraca wartość inną niż `EOF` . W przeciwnym razie zwraca *\_ meta*.
 
 ### <a name="remarks"></a>Uwagi
 
 Chroniona funkcja wirtualna elementu członkowskiego próbuje umieścić element w buforze wejściowym, a następnie uczynić go bieżącym elementem (wskazywanym przez następny wskaźnik).
 
-Jeśli * \_ meta*  ==  `EOF` , element do wypchnięcia jest efektywnie tym, że jest już w strumieniu przed bieżącym elementem. W przeciwnym razie ten element zostanie zastąpiony przez `ch = (char)_Meta` . Funkcja może umieścić element na różne sposoby:
+Jeśli *\_ meta*  ==  `EOF` , element do wypchnięcia jest efektywnie tym, że jest już w strumieniu przed bieżącym elementem. W przeciwnym razie ten element zostanie zastąpiony przez `ch = (char)_Meta` . Funkcja może umieścić element na różne sposoby:
 
 - Jeśli pozycja putback jest dostępna, a element przechowywany jest porównuje równy `ch` , może zmniejszyć następny wskaźnik dla buforu wejściowego.
 
 - Jeśli pozycja putback jest dostępna i jeśli tryb strstreambuf wskazuje, że kontrolowana sekwencja jest modyfikowalna, funkcja może być przechowywana `ch` w pozycji putback i zmniejszać następny wskaźnik dla buforu wejściowego.
 
-## <a name="strstreambufpcount"></a><a name="pcount"></a>strstreambuf: liczba:p
+## <a name="strstreambufpcount"></a><a name="pcount"></a> strstreambuf: liczba:p
 
 Zwraca liczbę elementów, które są zapisywane w kontrolowanej sekwencji.
 
@@ -258,7 +259,7 @@ int main( )
 }
 ```
 
-## <a name="strstreambufseekoff"></a><a name="seekoff"></a>strstreambuf:: seekoff
+## <a name="strstreambufseekoff"></a><a name="seekoff"></a> strstreambuf:: seekoff
 
 Chroniona funkcja wirtualna elementu członkowskiego, która próbuje zmienić bieżące położenie dla kontrolowanych strumieni.
 
@@ -299,7 +300,7 @@ Jeśli `_Which & ios_base::in` jest różna od zera, a bufor wejściowy istnieje
 
 W przeciwnym razie, jeśli `_Which & ios_base::out` jest różna od zera i istnieje bufor wyjściowy, funkcja zmienia następną pozycję do zapisu w buforze wyjściowym. W przeciwnym razie operacja pozycjonowania zakończy się niepowodzeniem. Aby operacja pozycjonowania zakończyła się pomyślnie, pochodząca pozycja w strumieniu musi znajdować się w kontrolowanej sekwencji.
 
-## <a name="strstreambufseekpos"></a><a name="seekpos"></a>strstreambuf:: seekpos
+## <a name="strstreambufseekpos"></a><a name="seekpos"></a> strstreambuf:: seekpos
 
 Chroniona funkcja wirtualna elementu członkowskiego, która próbuje zmienić bieżące położenie dla kontrolowanych strumieni.
 
@@ -325,7 +326,7 @@ Chroniona wirtualna funkcja członkowska przedsięwzięciach, aby zmienić bież
 
 Jeśli `_Which`  &  **ios_base:: in** ma wartość różną od zera, a bufor wejściowy istnieje, funkcja zmienia następną pozycję do odczytu w buforze wejściowym. Jeśli wartość `_Which`  &  `ios_base::out` jest różna od zera i istnieje bufor wyjściowy, funkcja ustawia również następną pozycję do zapisu w celu dopasowania do kolejnej pozycji do odczytu. W przeciwnym razie, jeśli `_Which`  &  `ios_base::out` jest różna od zera i istnieje bufor wyjściowy, funkcja zmienia następną pozycję do zapisu w buforze wyjściowym. W przeciwnym razie operacja pozycjonowania zakończy się niepowodzeniem. Aby operacja pozycjonowania zakończyła się pomyślnie, pochodząca pozycja w strumieniu musi znajdować się w kontrolowanej sekwencji.
 
-## <a name="strstreambufstr"></a><a name="str"></a>strstreambuf:: str
+## <a name="strstreambufstr"></a><a name="str"></a> strstreambuf:: str
 
 Wywołania [zawieszają](#freeze)się, a następnie zwracają wskaźnik do początku kontrolowanej sekwencji.
 
@@ -345,7 +346,7 @@ Nie istnieje żaden element kończący null, chyba że zostanie jawnie wstawiony
 
 Zobacz [strstreambuf:: Zablokuj](#freeze) , aby uzyskać przykład, który używa **str**.
 
-## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a>strstreambuf:: strstreambuf
+## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a> strstreambuf:: strstreambuf
 
 Konstruuje obiekt typu `strstreambuf` .
 
@@ -420,7 +421,7 @@ zachowuje się również jak pierwszy, z tą różnicą, że *getptr* określa o
 
 - Jeśli (*licznik* > 0), to *N* jest *liczbą*.
 
-- Jeśli (*Count* = = 0), oznacza *N* to N `strlen((const char *) getptr )` .
+- Jeśli (*Count* = = 0), oznacza  to N `strlen((const char *) getptr )` .
 
 - Jeśli (*count* < 0), to *N* jest **INT_MAX**.
 
@@ -466,7 +467,7 @@ streambuf((char *)getptr, count);
 
 z tą różnicą, że tryb przechowywania sprawia, że kontrolowana sekwencja nie jest modyfikowalna ani rozszerzona.
 
-## <a name="strstreambufunderflow"></a><a name="underflow"></a>strstreambuf:: nadmiarowy
+## <a name="strstreambufunderflow"></a><a name="underflow"></a> strstreambuf:: nadmiarowy
 
 Chroniona funkcja wirtualna do wyodrębnienia bieżącego elementu ze strumienia wejściowego.
 
@@ -482,7 +483,7 @@ Jeśli funkcja nie może się powieść, zwraca wartość `EOF` . W przeciwnym r
 
 Chroniona funkcja wirtualna elementu członkowskiego przedsięwzięciach do wyodrębnienia bieżącego elementu `ch` z bufora wejściowego, a następnie przechodzenia do bieżącego położenia strumienia i zwracania elementu jako `(int)(unsigned char)ch` . Można to zrobić tylko w jeden sposób: Jeśli pozycja odczytu jest dostępna, przyjmuje się `ch` jako element zapisany w pozycji odczytu i przesuwa następny wskaźnik dla buforu wejściowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

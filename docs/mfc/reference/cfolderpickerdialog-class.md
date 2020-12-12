@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CFolderPickerDialog'
 title: Klasa CFolderPickerDialog
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f4a5bcc3162a5fffcc723d7ec420685b02be10f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184429"
 ---
 # <a name="cfolderpickerdialog-class"></a>Klasa CFolderPickerDialog
 
-CFolderPickerDialog klasa implementuje CFileDialog w trybie selektora folderów.
+Klasa CFolderPickerDialog implementuje CFileDialog w trybie selektora folderów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,32 +32,32 @@ class CFolderPickerDialog : public CFileDialog;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFolderPickerDialog::~CFolderPickerDialog](#_dtorcfolderpickerdialog)|Destruktora.|
+|[CFolderPickerDialog:: ~ CFolderPickerDialog](#_dtorcfolderpickerdialog)|Destruktor.|
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor.|
 
 ## <a name="remarks"></a>Uwagi
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cdialog](../../mfc/reference/cdialog-class.md)
+[CDialog](../../mfc/reference/cdialog-class.md)
 
-[CKlogialny](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
-[Cfiledialog](../../mfc/reference/cfiledialog-class.md)
+[CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
 `CFolderPickerDialog`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdlgs.h
+**Nagłówek:** afxdlgs. h
 
-## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a> CFolderPickerDialog::CFolderPickerDialog
 
 Konstruktor.
 
@@ -70,23 +71,23 @@ explicit CFolderPickerDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFolder (lpszFolder)*<br/>
+*lpszFolder*<br/>
 Folder początkowy.
 
-*Dwflags*<br/>
-Kombinacja co najmniej jednej flagi, która umożliwia dostosowanie okna dialogowego.
+*flagiDW*<br/>
+Kombinacja jednej lub wielu flag, które umożliwiają dostosowanie okna dialogowego.
 
 *pParentWnd*<br/>
-Wskaźnik do okna nadrzędnego lub okna właściciela obiektu okna dialogowego.
+Wskaźnik do okna nadrzędnego lub właściciela obiektu okna dialogowego.
 
-*dwSize (rozmiar)*<br/>
-Rozmiar struktury OPENFILENAME.
+*dwSize*<br/>
+Rozmiar struktury OPENFILEname.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog::~CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a> CFolderPickerDialog:: ~ CFolderPickerDialog
 
-Destruktora.
+Destruktor.
 
 ```
 virtual ~CFolderPickerDialog();

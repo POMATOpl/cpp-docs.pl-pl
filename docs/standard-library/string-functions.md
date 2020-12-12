@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej &lt; o &gt; funkcjach ciągów
 title: '&lt;&gt;Funkcje ciągów'
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 350a66481c7061322f08a768ec1628598f4af68e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 859cb6db2e02ad5e915b5d8f3ed31aaf7e443580
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183740"
 ---
 # <a name="ltstringgt-functions"></a>&lt;&gt;Funkcje ciągów
 
@@ -451,7 +452,7 @@ Inny ciąg, którego elementy mają zostać zamienione na pierwszy ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-*Funkcja Template*wykonuje wyspecjalizowaną funkcję członkowską. [swap](../standard-library/basic-string-class.md#swap)(*Right*) dla ciągów, które gwarantują stałą złożoność.
+*Funkcja Template* wykonuje wyspecjalizowaną funkcję członkowską. [swap](../standard-library/basic-string-class.md#swap)(*Right*) dla ciągów, które gwarantują stałą złożoność.
 
 ### <a name="example"></a>Przykład
 

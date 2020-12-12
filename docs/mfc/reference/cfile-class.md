@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CFile'
 title: Klasa CFile
 ms.date: 06/12/2018
 f1_keywords:
@@ -60,12 +61,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 5be6a578fdd1d4e329c5b55d307d924a6c539e3d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: edccd571edf3594d36679a6c4ed6e52df878a705
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184546"
 ---
 # <a name="cfile-class"></a>Klasa CFile
 
@@ -166,7 +167,7 @@ virtual void Abort();
 
 Jeśli plik nie został zamknięty przed zniszczeniem obiektu, destruktor zamknie go.
 
-Obsługa wyjątków różni się `CFile::Abort` od `CFile::Close` na dwa sposoby. Najpierw `Abort` Funkcja nie zgłosi wyjątku w przypadku błędów, ponieważ błędy są ignorowane przez `Abort` . `Abort`Jeśli plik nie **ASSERT** został otwarty lub został wcześniej zamknięty, nie zostanie zaakceptowany.
+Obsługa wyjątków różni się `CFile::Abort` od `CFile::Close` na dwa sposoby. Najpierw `Abort` Funkcja nie zgłosi wyjątku w przypadku błędów, ponieważ błędy są ignorowane przez `Abort` . `Abort`Jeśli plik nie  został otwarty lub został wcześniej zamknięty, nie zostanie zaakceptowany.
 
 Jeśli użyto **`new`** do przydzielenia `CFile` obiektu na stercie, należy go usunąć po zamknięciu pliku. `Abort` ustawia `m_hFile` jako `CFile::hFileNull` .
 
@@ -600,9 +601,9 @@ W poniższej tabeli opisano możliwe wyniki działania programu `Open` .
 
 | `pError` | Wystąpił błąd | Wartość zwracana | Zawartość CFileException |
 |--|--|--|--|
-| NULL | Nie | TRUE | nie dotyczy |
+| NULL | Nie | TRUE | n/d |
 | PTR na `CFileException` | Nie | TRUE | bez zmian |
-| NULL | Tak | FALSE | nie dotyczy |
+| NULL | Tak | FALSE | n/d |
 | PTR na `CFileException` | Tak | FALSE | zainicjowany do opisywania błędu |
 
 ### <a name="example"></a>Przykład
@@ -757,7 +758,7 @@ void SeekToBegin();
 
 ### <a name="remarks"></a>Uwagi
 
-`SeekToBegin()` jest odpowiednikiem `Seek( 0L, CFile::begin )` .
+`SeekToBegin()` jest równoważne `Seek( 0L, CFile::begin )`.
 
 ### <a name="example"></a>Przykład
 
@@ -777,7 +778,7 @@ Długość pliku w bajtach.
 
 ### <a name="remarks"></a>Uwagi
 
-`SeekToEnd()` jest odpowiednikiem `CFile::Seek( 0L, CFile::end )` .
+`SeekToEnd()` jest równoważne `CFile::Seek( 0L, CFile::end )`.
 
 ### <a name="example"></a>Przykład
 
@@ -916,7 +917,7 @@ Liczba bajtów, które mają zostać przeniesione z bufora. W przypadku plików 
 
 Zobacz również przykłady dla [CFile:: CFile](#cfile) i [CFile:: Open](#open).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład DRAWCLI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>

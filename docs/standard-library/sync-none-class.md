@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy sync_none
 title: sync_none — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: dac4dc1182de32af485d37a00ff96370ea8d8943
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 34c4f42962b1dc8b8dc58f07cd54384e049789a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183350"
 ---
 # <a name="sync_none-class"></a>sync_none — Klasa
 
@@ -41,7 +42,7 @@ Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [`c
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
 |[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
-|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[ubiegł](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 

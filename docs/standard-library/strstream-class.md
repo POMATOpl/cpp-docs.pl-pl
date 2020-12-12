@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa strstream'
 title: strstream — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 796bf1b3ac41a4b5a6ab5bc16239d50616f554df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c37a2ec46872b34e256710fe61f216a84cb0359d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183532"
 ---
 # <a name="strstream-class"></a>strstream — Klasa
 
@@ -57,7 +58,7 @@ Obiekt przechowuje obiekt klasy `strstreambuf` .
 
 **Przestrzeń nazw:** std
 
-## <a name="strstreamfreeze"></a><a name="freeze"></a>strstream:: Zablokuj
+## <a name="strstreamfreeze"></a><a name="freeze"></a> strstream:: Zablokuj
 
 Powoduje, że bufor strumienia nie jest dostępny za pomocą operacji buforu strumienia.
 
@@ -78,7 +79,7 @@ Funkcja członkowska wywołuje [rdbuf](#rdbuf)  ->  [Zablokuj](../standard-libra
 
 Zobacz [strstreambuf:: Zablokuj](../standard-library/strstreambuf-class.md#freeze) , aby zapoznać się z przykładem, który używa `freeze` .
 
-## <a name="strstreampcount"></a><a name="pcount"></a>strstream: liczba:p
+## <a name="strstreampcount"></a><a name="pcount"></a> strstream: liczba:p
 
 Zwraca liczbę elementów, które są zapisywane w kontrolowanej sekwencji.
 
@@ -98,7 +99,7 @@ Funkcja członkowska zwraca [rdbuf](#rdbuf)  ->  [pcount](../standard-library/st
 
 Zobacz [strstreambuf::p Count](../standard-library/strstreambuf-class.md#pcount) , aby uzyskać przykład użycia pcount.
 
-## <a name="strstreamrdbuf"></a><a name="rdbuf"></a>strstream:: rdbuf
+## <a name="strstreamrdbuf"></a><a name="rdbuf"></a> strstream:: rdbuf
 
 Zwraca wskaźnik do obiektu strstreambuf skojarzonego ze strumieniem.
 
@@ -118,7 +119,7 @@ Funkcja członkowska zwraca adres bufora zapisanego strumienia typu `pointer` do
 
 Zobacz [strstreambuf: liczba:p](../standard-library/strstreambuf-class.md#pcount) dla przykładu, który używa `rdbuf` .
 
-## <a name="strstreamstr"></a><a name="str"></a>strstream:: str
+## <a name="strstreamstr"></a><a name="str"></a> strstream:: str
 
 Wywołania [zawieszają](../standard-library/strstreambuf-class.md#freeze)się, a następnie zwracają wskaźnik do początku kontrolowanej sekwencji.
 
@@ -138,7 +139,7 @@ Funkcja członkowska zwraca [rdbuf](#rdbuf)  ->  [str](../standard-library/strst
 
 Zobacz [strstreambuf:: str](../standard-library/strstreambuf-class.md#str) , aby uzyskać przykład, który używa `str` .
 
-## <a name="strstreamstrstream"></a><a name="strstream"></a>strstream:: strstream
+## <a name="strstreamstrstream"></a><a name="strstream"></a> strstream:: strstream
 
 Konstruuje obiekt typu `strstream` .
 
@@ -169,7 +170,7 @@ Oba konstruktory inicjują klasę bazową przez wywołanie [streambuf](../standa
 
 - W przeciwnym razie *PTR* musi wyznaczyć pierwszy element tablicy elementów count, który zawiera ciąg C, którego pierwszy element jest wyznaczony przez *PTR*, a Konstruktor wywołuje `strstreambuf` ( `ptr` , `count` , `ptr`  +  `strlen` ( `ptr` )).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [iostream](../standard-library/istream-typedefs.md#iostream)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

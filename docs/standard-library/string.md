@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; ciąg&gt;'
 title: '&lt;string&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4a5598189be96cb15ff423f57e45fd91e2d93216
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183545"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -73,7 +74,7 @@ Język C++ i Standardowa biblioteka C++ obsługują dwa typy ciągów:
 |[to_string](../standard-library/string-functions.md#to_string)|Konwertuje wartość na `string` .|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Konwertuje wartość na szeroką `string` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|

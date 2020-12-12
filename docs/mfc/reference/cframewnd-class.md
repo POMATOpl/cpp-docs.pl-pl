@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa obiektu CFrameWnd'
 title: Klasa obiektu CFrameWnd
 ms.date: 11/04/2016
 f1_keywords:
@@ -106,12 +107,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 5e40f08447d24eed51588b5c2dfa87e289d99eed
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 85bad5ad63a07b58f245df06a44d82f58d6a561c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184286"
 ---
 # <a name="cframewnd-class"></a>Klasa obiektu CFrameWnd
 

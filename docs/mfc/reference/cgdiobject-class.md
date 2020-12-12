@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CGdiObject'
 title: Klasa CGdiObject
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 759b25a8f77bb4e6b372431b637b4a97aca8e149
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a6a3d783dbfb7c25c63739330045151670208ebb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184169"
 ---
 # <a name="cgdiobject-class"></a>Klasa CGdiObject
 
@@ -100,7 +101,7 @@ Aby uzyskać więcej informacji na temat `CGdiObject` , zobacz [grafika Objects]
 
 **Nagłówek:** afxwin. h
 
-## <a name="cgdiobjectattach"></a><a name="attach"></a>CGdiObject:: Attach
+## <a name="cgdiobjectattach"></a><a name="attach"></a> CGdiObject:: Attach
 
 Dołącza obiekt GDI systemu Windows do `CGdiObject` obiektu.
 
@@ -117,7 +118,7 @@ Dojście do obiektu GDI systemu Windows (na przykład HPEN lub HBRUSH).
 
 Niezerowe, jeśli załącznik zakończył się pomyślnie; w przeciwnym razie 0.
 
-## <a name="cgdiobjectcgdiobject"></a><a name="cgdiobject"></a>CGdiObject::CGdiObject
+## <a name="cgdiobjectcgdiobject"></a><a name="cgdiobject"></a> CGdiObject::CGdiObject
 
 Konstruuje `CGdiObject` obiekt.
 
@@ -129,7 +130,7 @@ CGdiObject();
 
 Nigdy nie utworzysz `CGdiObject` bezpośredniego. Zamiast tego należy utworzyć obiekt z jednej z klas pochodnych, takich jak `CPen` lub `Cbrush` .
 
-## <a name="cgdiobjectcreatestockobject"></a><a name="createstockobject"></a>CGdiObject::
+## <a name="cgdiobjectcreatestockobject"></a><a name="createstockobject"></a> CGdiObject::
 
 Pobiera dojście do jednego ze wstępnie zdefiniowanych piór, pędzli lub czcionek systemu Windows, a także dołącza obiekt GDI do `CGdiObject` obiektu.
 
@@ -150,7 +151,7 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 Wywołaj tę funkcję z jedną z klas pochodnych, która odpowiada typowi obiektu GDI systemu Windows, na przykład `CPen` dla pióra podstawowego.
 
-## <a name="cgdiobjectdeleteobject"></a><a name="deleteobject"></a>CGdiObject::D eleteObject
+## <a name="cgdiobjectdeleteobject"></a><a name="deleteobject"></a> CGdiObject::D eleteObject
 
 Usuwa dołączony obiekt GDI systemu Windows z pamięci, zwalniając wszystkie magazyny systemowe skojarzone z obiektem GDI systemu Windows.
 
@@ -168,7 +169,7 @@ To wywołanie nie ma wpływ na magazyn skojarzony z `CGdiObject` obiektem. Aplik
 
 Po usunięciu pędzla wzorca Mapa bitowa skojarzona z pędzlem nie zostanie usunięta. Mapa bitowa musi zostać usunięta niezależnie.
 
-## <a name="cgdiobjectdeletetempmap"></a><a name="deletetempmap"></a>CGdiObject::D eleteTempMap
+## <a name="cgdiobjectdeletetempmap"></a><a name="deletetempmap"></a> CGdiObject::D eleteTempMap
 
 Wywoływana automatycznie przez `CWinApp` program obsługi czasu bezczynności, `DeleteTempMap` usuwa wszystkie `CGdiObject` obiekty tymczasowe utworzone przez `FromHandle` .
 
@@ -178,13 +179,13 @@ static void PASCAL DeleteTempMap();
 
 ### <a name="remarks"></a>Uwagi
 
-`DeleteTempMap`odłącza obiekt GDI systemu Windows dołączony do obiektu tymczasowego `CGdiObject` przed usunięciem `CGdiObject` obiektu.
+`DeleteTempMap` odłącza obiekt GDI systemu Windows dołączony do obiektu tymczasowego `CGdiObject` przed usunięciem `CGdiObject` obiektu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]
 
-## <a name="cgdiobjectdetach"></a><a name="detach"></a>CGdiObject::D etach
+## <a name="cgdiobjectdetach"></a><a name="detach"></a> CGdiObject::D etach
 
 Odłącza obiekt interfejsu GDI systemu Windows z `CGdiObject` obiektu i zwraca dojście do obiektu GDI systemu Windows.
 
@@ -196,7 +197,7 @@ HGDIOBJ Detach();
 
 `HANDLE`Do obiektu GDI systemu Windows odłączono; w przeciwnym razie wartość null, jeśli nie dołączono żadnego obiektu GDI.
 
-## <a name="cgdiobjectfromhandle"></a><a name="fromhandle"></a>CGdiObject::FromHandle
+## <a name="cgdiobjectfromhandle"></a><a name="fromhandle"></a> CGdiObject::FromHandle
 
 Zwraca wskaźnik do obiektu, który ma `CGdiObject` dojście do obiektu GDI systemu Windows.
 
@@ -219,7 +220,7 @@ Jeśli `CGdiObject` obiekt nie jest jeszcze dołączony do obiektu GDI systemu W
 
 Ten `CGdiObject` obiekt tymczasowy jest prawidłowy tylko do następnego momentu, gdy aplikacja ma czas bezczynności w pętli zdarzeń, podczas gdy wszystkie tymczasowe obiekty graficzne są usuwane. Innym sposobem wymawiania tego jest to, że obiekt tymczasowy jest prawidłowy tylko podczas przetwarzania jednego komunikatu w oknie.
 
-## <a name="cgdiobjectgetobject"></a><a name="getobject"></a>CGdiObject:: GetObject
+## <a name="cgdiobjectgetobject"></a><a name="getobject"></a> CGdiObject:: GetObject
 
 Wypełnia bufor danymi, które definiują określony obiekt.
 
@@ -258,7 +259,7 @@ Jeśli obiekt jest `CBitmap` obiektem, `GetObject` zwraca tylko informacje o sze
 
 Jeśli obiekt jest `CPalette` obiektem, `GetObject` program pobiera słowo, które określa liczbę wpisów w palecie. Funkcja nie pobiera struktury [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) , która definiuje paletę. Aplikacja może uzyskać informacje dotyczące wpisów palety, wywołując [CPalette:: GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).
 
-## <a name="cgdiobjectgetobjecttype"></a><a name="getobjecttype"></a>CGdiObject:: GetObjectType
+## <a name="cgdiobjectgetobjecttype"></a><a name="getobjecttype"></a> CGdiObject:: GetObjectType
 
 Pobiera typ obiektu GDI.
 
@@ -296,7 +297,7 @@ Typ obiektu, jeśli powodzenie; w przeciwnym razie 0. Może to być jedna z nast
 
 - Kontekst urządzenia OBJ_ENHMETADC Enhanced Metafile
 
-## <a name="cgdiobjectgetsafehandle"></a><a name="getsafehandle"></a>CGdiObject:: GetSafeHandle
+## <a name="cgdiobjectgetsafehandle"></a><a name="getsafehandle"></a> CGdiObject:: GetSafeHandle
 
 Zwraca `m_hObject` , chyba że **`this`** ma wartość null, a w tym przypadku zwracana jest wartość null.
 
@@ -316,7 +317,7 @@ Jest to część ogólnego modelu interfejsu uchwytu i jest przydatna, gdy warto
 
   Zobacz przykład dla [CWnd:: IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).
 
-## <a name="cgdiobjectm_hobject"></a><a name="m_hobject"></a>CGdiObject:: m_hObject
+## <a name="cgdiobjectm_hobject"></a><a name="m_hobject"></a> CGdiObject:: m_hObject
 
 Dojście zawierające elementy HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE lub HFONT dołączone do tego obiektu.
 
@@ -324,7 +325,7 @@ Dojście zawierające elementy HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE lub HFONT d
 HGDIOBJ m_hObject;
 ```
 
-## <a name="cgdiobjectoperator-"></a><a name="operator_neq"></a>CGdiObject:: operator! =
+## <a name="cgdiobjectoperator-"></a><a name="operator_neq"></a> CGdiObject:: operator! =
 
 Określa, czy dwa obiekty GDI są logicznie nierówne.
 
@@ -341,7 +342,7 @@ Wskaźnik do istniejącego `CGdiObject` .
 
 Określa, czy obiekt GDI po lewej stronie nie jest równy obiektowi GDI po prawej stronie.
 
-## <a name="cgdiobjectoperator-"></a><a name="operator_eq_eq"></a>CGdiObject:: operator = =
+## <a name="cgdiobjectoperator-"></a><a name="operator_eq_eq"></a> CGdiObject:: operator = =
 
 Określa, czy dwa obiekty GDI są logicznie równe.
 
@@ -358,7 +359,7 @@ Odwołanie do istniejącej `CGdiObject` .
 
 Określa, czy obiekt GDI po lewej stronie jest równy obiektowi GDI po prawej stronie.
 
-## <a name="cgdiobjectoperator-hgdiobj"></a><a name="operator_hgdiobj"></a>CGdiObject:: operator HGDIOBJ
+## <a name="cgdiobjectoperator-hgdiobj"></a><a name="operator_hgdiobj"></a> CGdiObject:: operator HGDIOBJ
 
 Pobiera dojście do dołączonego obiektu GDI systemu Windows; w przeciwnym razie wartość NULL, jeśli żaden obiekt nie jest dołączony.
 
@@ -366,7 +367,7 @@ Pobiera dojście do dołączonego obiektu GDI systemu Windows; w przeciwnym razi
 operator HGDIOBJ() const;
 ```
 
-## <a name="cgdiobjectunrealizeobject"></a><a name="unrealizeobject"></a>CGdiObject:: unzrozumieobject
+## <a name="cgdiobjectunrealizeobject"></a><a name="unrealizeobject"></a> CGdiObject:: unzrozumieobject
 
 Resetuje początek pędzla lub resetuje paletę logiczną.
 
@@ -386,7 +387,7 @@ W przypadku `CBrush` obiektów program `UnrealizeObject` kieruje system do zrese
 
 `UnrealizeObject`Funkcja nie powinna być używana z obiektami podstawowymi. `UnrealizeObject`Funkcja musi być wywoływana za każdym razem, gdy jest ustawiony nowy punkt początkowy pędzla (za pomocą funkcji [przechwytywania zmian:: SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) ). `UnrealizeObject`Funkcja nie może być wywoływana dla aktualnie wybranego pędzla lub aktualnie wybranej palety dowolnego kontekstu wyświetlania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CBitmap](../../mfc/reference/cbitmap-class.md)<br/>
