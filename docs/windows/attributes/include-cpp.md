@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: include (C++)'
 title: include (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6b75df74ee69ee4f89eb7bf18fb6bcd77d8a6284
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c6d12b9d8826ce84de0c01aaf055f5a4176fea10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321366"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -50,7 +51,7 @@ Poniższy kod przedstawia przykład użycia metody **include**. W tym przykładz
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Dowolne miejsce|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

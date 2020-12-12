@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; &gt; funkcje iomanip'
 title: '&lt;&gt;funkcje iomanip'
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ddcea6b524c0413bc1c68c2b75ec910b529d22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323931"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;&gt;funkcje iomanip
 
@@ -656,6 +657,6 @@ l4 = 4096
 l5 = 65536
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<iomanip>](../standard-library/iomanip.md)

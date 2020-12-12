@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_fstream
 title: basic_fstream — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-ms.openlocfilehash: a2b62b85953a5f4ec829053c8af93582eec76618
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: df8ad83696422737b5b368b39bf21c82506e8b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321576"
 ---
 # <a name="basic_fstream-class"></a>basic_fstream — Klasa
 
@@ -105,7 +106,7 @@ Writing to a basic_fstream object...
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_fstreambasic_fstream"></a><a name="basic_fstream"></a>basic_fstream:: basic_fstream
+## <a name="basic_fstreambasic_fstream"></a><a name="basic_fstream"></a> basic_fstream:: basic_fstream
 
 Konstruuje obiekt typu `basic_fstream` .
 
@@ -148,7 +149,7 @@ Czwarty Konstruktor inicjuje obiekt z zawartością `right` , traktowany jako od
 
 Zobacz [streampos](../standard-library/ios-typedefs.md#streampos) , aby uzyskać przykład, który używa programu `basic_fstream` .
 
-## <a name="basic_fstreamclose"></a><a name="close"></a>basic_fstream:: Close
+## <a name="basic_fstreamclose"></a><a name="close"></a> basic_fstream:: Close
 
 Zamyka plik.
 
@@ -164,7 +165,7 @@ Funkcja członkowska wywołuje [rdbuf](#rdbuf) **->** [Close](../standard-librar
 
 Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem sposobu korzystania z programu `close` .
 
-## <a name="basic_fstreamis_open"></a><a name="is_open"></a>basic_fstream:: is_open
+## <a name="basic_fstreamis_open"></a><a name="is_open"></a> basic_fstream:: is_open
 
 Określa, czy plik jest otwarty.
 
@@ -184,7 +185,7 @@ Funkcja członkowska zwraca [rdbuf](#rdbuf) **->** [is_open](../standard-library
 
 Zobacz [basic_filebuf:: is_open](../standard-library/basic-filebuf-class.md#is_open) , aby zapoznać się z przykładem użycia programu `is_open` .
 
-## <a name="basic_fstreamopen"></a><a name="open"></a>basic_fstream:: Open
+## <a name="basic_fstreamopen"></a><a name="open"></a> basic_fstream:: Open
 
 Otwiera plik.
 
@@ -227,7 +228,7 @@ Funkcja członkowska wywołuje [rdbuf](#rdbuf) **->** [Open](../standard-library
 
 Zobacz [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) , aby zapoznać się z przykładem użycia programu `open` .
 
-## <a name="basic_fstreamoperator"></a><a name="op_eq"></a>basic_fstream:: operator =
+## <a name="basic_fstreamoperator"></a><a name="op_eq"></a> basic_fstream:: operator =
 
 Przypisuje do tego obiektu zawartość z określonego obiektu strumienia. Jest to przypisanie przenoszenia, które obejmuje rvalue, które nie pozostawia kopii w tle.
 
@@ -248,7 +249,7 @@ Zwraca wartość **`*this`** .
 
 Operator elementu członkowskiego zastępuje zawartość obiektu przy użyciu zawartości *Right*, traktowanej jako odwołanie rvalue.
 
-## <a name="basic_fstreamrdbuf"></a><a name="rdbuf"></a>basic_fstream:: rdbuf
+## <a name="basic_fstreamrdbuf"></a><a name="rdbuf"></a> basic_fstream:: rdbuf
 
 Zwraca adres buforu zapisanego strumienia, typu wskaźnika do [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**> .
 
@@ -264,7 +265,7 @@ Adres buforu przechowywanego strumienia.
 
 Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem sposobu korzystania z programu `rdbuf` .
 
-## <a name="basic_fstreamswap"></a><a name="swap"></a>basic_fstream:: swap
+## <a name="basic_fstreamswap"></a><a name="swap"></a> basic_fstream:: swap
 
 Wymienia zawartość dwóch `basic_fstream` obiektów.
 
@@ -281,7 +282,7 @@ void swap(basic_fstream& right);
 
 Funkcja członkowska wymienia zawartość tego obiektu *i jego zawartość.*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\

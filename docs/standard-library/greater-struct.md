@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: większa struktura'
 title: greater — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - greater struct
 - greater function
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
-ms.openlocfilehash: aca47223810bdae31e7711492d107fbfa2814391
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fabee76d20d201f63b9f5397c20409ad62125657
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243734"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324177"
 ---
 # <a name="greater-struct"></a>greater — Struktura
 
-Predykat binarny, który wykonuje większą-niż operacji (`operator>`) na jego argumenty.
+Predykat binarny, który wykonuje operację większą niż ( `operator>` ) w jej argumentach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,21 +44,21 @@ struct greater<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator>` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Dowolny typ, który obsługuje element `operator>` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-*po lewej stronie*\
-Lewy operand większą-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand operacji większej niż. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand większą-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand operacji większej niż. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left > Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator>`.
+Wynik `Left > Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator>` .
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat dwuelementowy `greater` < `Type`> udostępnia ścisłe słabe porządkowanie zestaw wartości elementów typu *typu* na klasy równoważności, tylko wtedy, gdy ten typ spełnia standard matematyczne wymagania dotyczące więc szeregowane. Specjalizacje dla dowolnego typu wskaźnika yield, łączna liczba kolejność elementów, w tym, że wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
+> predykatu binarnego `greater` < `Type` zapewnia ścisłą słabą kolejność zestawu wartości elementów *typu* w klasach równoważności, jeśli i tylko wtedy, gdy ten typ spełnia standardowe wymagania matematyczne w celu ich uporządkowania. Specjalizacje dla dowolnego typu wskaźnika dają łączną kolejność elementów, w którym wszystkie elementy różnych wartości są uporządkowane względem siebie.
 
 ## <a name="example"></a>Przykład
 

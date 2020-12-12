@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej na temat typów podstawowych (C++/CX)
 title: Typy podstawowe (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: 3d484d9490a0a5b2ee2e7f92381528124b47701c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40e0a849d0b838f53ddaea26c8993dcfe625ed5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321008"
 ---
 # <a name="fundamental-types-ccx"></a>Typy podstawowe (C++/CX)
 
@@ -19,7 +20,7 @@ Poniższa tabela zawiera listę wbudowanych typów wartości logicznych i znakó
 
 |Przestrzeń nazw|Nazwa/CX języka C++|Definicja|Standardowa nazwa języka C++|Zakres wartości|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Platforma|Wartość logiczna|8-bitowa wartość logiczna.|bool|**`true`**(niezerowe) i **`false`** (zero)|
+|Platforma|Wartość logiczna|8-bitowa wartość logiczna.|bool|**`true`** (niezerowe) i **`false`** (zero)|
 |default|char16|16-bitowa wartość nieliczbowa, która reprezentuje punkt kodowy Unicode (UTF-16).|wchar_t<br /><br /> -lub-<br /><br /> L'c'|(Określony przez standard Unicode)|
 
 ## <a name="numeric-types"></a>Typy liczbowe
@@ -46,7 +47,7 @@ W poniższej tabeli wymieniono niektóre dodatkowe typy, które są zdefiniowane
 |Nazwa|Definicja|
 |----------|----------------|
 |Obiekt|Reprezentuje dowolny typ środowisko wykonawcze systemu Windows.|
-|String|Ciąg znaków, który reprezentuje tekst.|
+|Ciąg|Ciąg znaków, który reprezentuje tekst.|
 |Rect|Zestaw czterech liczb zmiennoprzecinkowych, które reprezentują lokalizację i rozmiar prostokąta.|
 |SizeT|Uporządkowana para liczb zmiennoprzecinkowych, które określają wysokość i szerokość.|
 |Moment|Uporządkowana para zmiennoprzecinkowych współrzędnych x i Współrzędne y, które definiują punkt w płaszczyźnie dwuwymiarowej.|
@@ -54,6 +55,6 @@ W poniższej tabeli wymieniono niektóre dodatkowe typy, które są zdefiniowane
 |UIntPtr|(Tylko do użytku wewnętrznego). Nieniepodpisana wartość 64-bitowa, która jest używana jako wskaźnik.|
 |IntPtr|(Tylko do użytku wewnętrznego).  Podpisana wartość 64-bitowa, która jest używana jako wskaźnik.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)

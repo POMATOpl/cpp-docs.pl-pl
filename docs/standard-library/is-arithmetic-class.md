@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_arithmetic
 title: is_arithmetic — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_arithmetic class
 - is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
-ms.openlocfilehash: e2c148b7cb58cf38e5f73d4e3d2297eac099ef7e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 75673950a162b34815db297a3012fa7152e61375
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323876"
 ---
-# <a name="isarithmetic-class"></a>is_arithmetic — Klasa
+# <a name="is_arithmetic-class"></a>is_arithmetic — Klasa
 
 Testuje, czy typ jest arytmetyczny.
 
@@ -68,12 +69,12 @@ is_arithmetic<float> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa is_floating_point](../standard-library/is-floating-point-class.md)\
-[is_integral, klasa](../standard-library/is-integral-class.md)
+[Klasa is_integral](../standard-library/is-integral-class.md)

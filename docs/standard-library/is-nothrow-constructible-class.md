@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_nothrow_constructible
 title: Klasa is_nothrow_constructible
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: e52b16965d849f992731c4ff4254fd218b944269
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bb822a42d149a552f18ff4d1b1c723ef9b88172
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323585"
 ---
 # <a name="is_nothrow_constructible-class"></a>Klasa is_nothrow_constructible
 
@@ -42,6 +43,6 @@ Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest konstrukcyjn�
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

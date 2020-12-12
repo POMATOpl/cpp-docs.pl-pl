@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy discard_block_engine
 title: discard_block_engine — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 6f7b11c360f58e6a838b22fbf2c68366dce973a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0879dacac70afc78a9c77314ce5042580c6cbb39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324519"
 ---
 # <a name="discard_block_engine-class"></a>discard_block_engine — Klasa
 

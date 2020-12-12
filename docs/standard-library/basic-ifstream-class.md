@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_ifstream
 title: basic_ifstream — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: f4f5ddd3d1c0c595dd1661fab73f5267fb161593
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6968c6f1987a5261d06d53af24616281d84a0e3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321563"
 ---
 # <a name="basic_ifstream-class"></a>basic_ifstream — Klasa
 
@@ -111,7 +112,7 @@ This is the contents of basic_ifstream_class.txt.
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_ifstreambasic_ifstream"></a><a name="basic_ifstream"></a>basic_ifstream:: basic_ifstream
+## <a name="basic_ifstreambasic_ifstream"></a><a name="basic_ifstream"></a> basic_ifstream:: basic_ifstream
 
 Konstruuje obiekt typu `basic_ifstream` .
 
@@ -175,7 +176,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="basic_ifstreamclose"></a><a name="close"></a>basic_ifstream:: Close
+## <a name="basic_ifstreamclose"></a><a name="close"></a> basic_ifstream:: Close
 
 Zamyka plik.
 
@@ -191,7 +192,7 @@ Funkcja członkowska wywołuje [rdbuf](#rdbuf) **->** [Close](../standard-librar
 
 Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem, który używa `close` .
 
-## <a name="basic_ifstreamis_open"></a><a name="is_open"></a>basic_ifstream:: is_open
+## <a name="basic_ifstreamis_open"></a><a name="is_open"></a> basic_ifstream:: is_open
 
 Określa, czy plik jest otwarty.
 
@@ -211,7 +212,7 @@ Funkcja członkowska zwraca [rdbuf](#rdbuf) **->** [is_open](../standard-library
 
 Zobacz [basic_filebuf:: is_open](../standard-library/basic-filebuf-class.md#is_open) , aby zapoznać się z przykładem `is_open` .
 
-## <a name="basic_ifstreamopen"></a><a name="open"></a>basic_ifstream:: Open
+## <a name="basic_ifstreamopen"></a><a name="open"></a> basic_ifstream:: Open
 
 Otwiera plik.
 
@@ -254,7 +255,7 @@ Funkcja członkowska wywołuje [rdbuf](#rdbuf) **->** [Open](../standard-library
 
 Zobacz [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) , aby zapoznać się z przykładem, który używa `open` .
 
-## <a name="basic_ifstreamoperator"></a><a name="op_eq"></a>basic_ifstream:: operator =
+## <a name="basic_ifstreamoperator"></a><a name="op_eq"></a> basic_ifstream:: operator =
 
 Przypisuje zawartość tego obiektu strumienia. Jest to przypisanie przenoszenia obejmujące rvalue, które nie pozostawia kopii w tle.
 
@@ -275,7 +276,7 @@ Zwraca wartość **`*this`** .
 
 Operator elementu członkowskiego zastępuje zawartość obiektu przy użyciu zawartości *Right*, traktowanej jako odwołanie rvalue. Aby uzyskać więcej informacji, zobacz [lvalues i rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
-## <a name="basic_ifstreamrdbuf"></a><a name="rdbuf"></a>basic_ifstream:: rdbuf
+## <a name="basic_ifstreamrdbuf"></a><a name="rdbuf"></a> basic_ifstream:: rdbuf
 
 Zwraca adres buforu zapisanego strumienia.
 
@@ -291,7 +292,7 @@ Wskaźnik do obiektu [basic_filebuf](../standard-library/basic-filebuf-class.md)
 
 Zobacz [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) , aby zapoznać się z przykładem, który używa `rdbuf` .
 
-## <a name="basic_ifstreamswap"></a><a name="swap"></a>basic_ifstream:: swap
+## <a name="basic_ifstreamswap"></a><a name="swap"></a> basic_ifstream:: swap
 
 Wymienia zawartość dwóch `basic_ifstream` obiektów.
 
@@ -308,7 +309,7 @@ Odwołanie do innego buforu strumienia.
 
 Funkcja członkowska zamienia zawartość tego obiektu na zawartość z *prawej strony*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\

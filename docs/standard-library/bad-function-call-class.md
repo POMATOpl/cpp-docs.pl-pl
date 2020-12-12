@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy bad_function_call
 title: bad_function_call — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - bad_function_call class
 ms.assetid: b70a0268-43ff-4f3b-a283-faf1cb172d4c
-ms.openlocfilehash: 6d0a3f5f5b6ac48d23b937b04b4521799ba31502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 659630874f84ea9e7d164b560408b162f07e1f68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321602"
 ---
-# <a name="badfunctioncall-class"></a>bad_function_call — Klasa
+# <a name="bad_function_call-class"></a>bad_function_call — Klasa
 
-Raporty wywołania funkcji zła.
+Zgłasza nieprawidłowe wywołanie funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,4 +26,4 @@ class bad_function_call : public std::exception {};
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje wyjątek generowany w celu wskazania, że wywołanie `operator()` na [funkcji klasy](../standard-library/function-class.md)
+Klasa opisuje wyjątek zgłoszony, aby wskazać, że wywołanie `operator()` w [klasie funkcji](../standard-library/function-class.md)

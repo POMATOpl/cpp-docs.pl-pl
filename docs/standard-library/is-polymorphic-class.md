@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_polymorphic
 title: is_polymorphic — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_polymorphic class
 - is_polymorphic
 ms.assetid: 4e1704db-d6f9-4154-a100-0ba02a373f20
-ms.openlocfilehash: 662d68d13e076733e9923d0fad7e9272cd01b559
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 983c27e0e314a5a4e9b3e71a3be8824e7de12512
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323528"
 ---
-# <a name="ispolymorphic-class"></a>is_polymorphic — Klasa
+# <a name="is_polymorphic-class"></a>is_polymorphic — Klasa
 
 Testuje, czy typ ma funkcję wirtualną.
 
@@ -86,11 +87,11 @@ is_polymorphic<throws> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[is_abstract, klasa](../standard-library/is-abstract-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa is_abstract](../standard-library/is-abstract-class.md)

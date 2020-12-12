@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy linear_congruential_engine
 title: linear_congruential_engine — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 8701570787275e853543e723f6461b8ad460f96f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2171623190180cabc46dd760debabdefb9afd77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323541"
 ---
 # <a name="linear_congruential_engine-class"></a>linear_congruential_engine — Klasa
 
@@ -52,7 +53,7 @@ Typ wyniku bez znaku liczby całkowitej. Aby zapoznać się z możliwymi typami,
 **Mnożnik**. **Warunek wstępny**: patrz sekcja uwagi.
 
 *S*\
-**Zwiększ**wartość. **Warunek wstępny**: patrz sekcja uwagi.
+**Zwiększ** wartość. **Warunek wstępny**: patrz sekcja uwagi.
 
 *Mol*\
 **Moduł**. **Warunek wstępny**: Zobacz uwagi.

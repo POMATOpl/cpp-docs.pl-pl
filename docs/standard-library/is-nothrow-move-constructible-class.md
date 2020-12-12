@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_nothrow_move_constructible
 title: is_nothrow_move_constructible — klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: 115a1b6c2157a139786c0b8762a9a614bbcd6deb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ab9d1dfdba532bfda3111831f389a94a49af936
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323599"
 ---
 # <a name="is_nothrow_move_constructible-class"></a>is_nothrow_move_constructible — klasa
 
@@ -39,6 +40,6 @@ Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* ma Konstruktor pr
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: przewodniku przenoszenia: COM Spy'
 title: 'Przewodnik przenoszenia: narzędzie Spy modelu COM'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: c21049a2faa8bb34ecd1ba75a5beda1db119f0fc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69a97a04d255e64fdde0d863e637d72dfb238967
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322639"
 ---
 # <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: narzędzie Spy modelu COM
 
@@ -31,7 +32,7 @@ Jednym z częstych problemów w uaktualnianiu projektów jest to, że w oknie di
 
 Podczas kompilowania projektu portowego występuje wiele błędów i ostrzeżeń.
 
-`ComSpyCtl`nie kompiluje się, chociaż z powodu błędu kompilatora:
+`ComSpyCtl` nie kompiluje się, chociaż z powodu błędu kompilatora:
 
 ```Output
 atlcom.h(611): error C2664: 'HRESULT CComSpy::IPersistStreamInit_Save(LPSTREAM,BOOL,ATL::ATL_PROPMAP_ENTRY *)': cannot convert argument 3 from 'const ATL::ATL_PROPMAP_ENTRY *' to 'ATL::ATL_PROPMAP_ENTRY *'atlcom.h(611): note: Conversion loses qualifiersatlcom.h(608): note: while compiling class template member function 'HRESULT ATL::IPersistStreamInitImpl<CComSpy>::Save(LPSTREAM,BOOL)'\spy\spy\comspyctl\ccomspy.h(28): note: see reference to class template instantiation 'ATL::IPersistStreamInitImpl<CComSpy>' being compiled
@@ -168,7 +169,7 @@ private void button1_Click(object sender, EventArgs e)
 
 Ta czynność została uruchomiona bez problemów, a model COM Spy działa i jest skonfigurowany do monitorowania `Dog` składnika, pojawi się wiele danych pokazujących działanie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Następny przykład: Spy + +](../porting/porting-guide-spy-increment.md)<br/>

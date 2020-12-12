@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury high_resolution_clock
 title: Struktura high_resolution_clock | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
@@ -12,12 +13,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341cae04742d72fdcc7483e74977bf413854df82
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2c5272413636e40dadf9201f684d32aaaa6708ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324057"
 ---
 # <a name="high_resolution_clock-struct"></a>Struktura high_resolution_clock
 

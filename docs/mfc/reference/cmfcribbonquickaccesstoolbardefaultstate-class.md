@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCRibbonQuickAccessToolBarDefaultState'
 title: Klasa CMFCRibbonQuickAccessToolBarDefaultState
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: eb6b36066f34036ae599a94f4d1c07b2c633e730
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d6cd0c32cd8698259de0a78a6a6a7dc42012e92f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321808"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Klasa CMFCRibbonQuickAccessToolBarDefaultState
 
-Klasa pomocnika, która zarządza domyślnym stanem paska narzędzi Szybki dostęp, który znajduje się na pasku wstążki [(CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)).
+Klasa pomocnika, która zarządza stanem domyślnym dla paska narzędzi Szybki dostęp, który jest ustawiony na pasku wstążki ( [Klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)).
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,13 +44,13 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Dodaje polecenie do stanu domyślnego paska narzędzi Szybki dostęp. Nie powoduje to zmiany samego paska narzędzi.|
-|[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Kopiuje właściwości jednego paska narzędzi Szybki dostęp do drugiego.|
-|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Usuwa wszystkie polecenia z paska narzędzi Szybki dostęp. Nie powoduje to zmiany samego paska narzędzi.|
+|[CMFCRibbonQuickAccessToolBarDefaultState:: Add— polecenie](#addcommand)|Dodaje polecenie do domyślnego stanu paska narzędzi Szybki dostęp. Nie powoduje to zmiany samego paska narzędzi.|
+|[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Kopiuje właściwości jednego paska narzędzi Szybki dostęp do innego.|
+|[CMFCRibbonQuickAccessToolBarDefaultState::](#removeall)|Usuwa wszystkie polecenia z paska narzędzi Szybki dostęp. Nie powoduje to zmiany samego paska narzędzi.|
 
 ## <a name="remarks"></a>Uwagi
 
-Po utworzeniu paska narzędzi Szybki dostęp w aplikacji zaleca się ustawienie jego stanu domyślnego przez wywołanie [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Ten stan domyślny jest przywracany, gdy użytkownik kliknie przycisk **Resetowanie** na **stronie** Okno dialogowe **Opcje** aplikacji.
+Po utworzeniu paska narzędzi Szybki dostęp w aplikacji zalecamy ustawienie jego stanu domyślnego przez wywołanie [CMFCRibbonBar:: SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Ten stan domyślny jest przywracany, gdy użytkownik kliknie przycisk **Resetuj** na stronie **Dostosowywanie** w oknie dialogowym **Opcje** aplikacji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -57,17 +58,17 @@ Po utworzeniu paska narzędzi Szybki dostęp w aplikacji zaleca się ustawienie 
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCRibbonQuickAccessToolbarDefaultState` skonstruować obiekt klasy i jak dodać polecenie do stanu domyślnego paska narzędzi Szybki dostęp.
+Poniższy przykład ilustruje sposób konstruowania obiektu `CMFCRibbonQuickAccessToolbarDefaultState` klasy i sposób dodawania polecenia do stanu domyślnego paska narzędzi Szybki dostęp.
 
 [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxribbonquickaccesstoolbar.h
+**Nagłówek:** afxribbonquickaccesstoolbar. h
 
-## <a name="cmfcribbonquickaccesstoolbardefaultstateaddcommand"></a><a name="addcommand"></a>CMFCRibbonQuickAccessToolBarDefaultState::AddCommand
+## <a name="cmfcribbonquickaccesstoolbardefaultstateaddcommand"></a><a name="addcommand"></a> CMFCRibbonQuickAccessToolBarDefaultState:: Add— polecenie
 
-Dodaje polecenie do stanu domyślnego paska narzędzi Szybki dostęp.
+Dodaje polecenie do domyślnego stanu paska narzędzi Szybki dostęp.
 
 ```cpp
 void AddCommand(
@@ -77,19 +78,19 @@ void AddCommand(
 
 ### <a name="parameters"></a>Parametry
 
-*[w] uiCmd*<br/>
+*[in] uiCmd*<br/>
 Określa identyfikator polecenia.
 
-*[w] bIsVisible*<br/>
+*[in] bIsVisible*<br/>
 Ustawia widoczność polecenia, gdy pasek narzędzi Szybki dostęp jest w stanie domyślnym.
 
 ### <a name="remarks"></a>Uwagi
 
-Dodanie polecenia do CMFCRibbonQuickAccessToolBarDefaultState osiąga trzy wyniki. Najpierw każde dodane polecenie jest wyświetlane na liście rozwijanej po prawej stronie paska narzędzi Szybki dostęp. W ten sposób użytkownik może łatwo dodać lub usunąć to polecenie z paska narzędzi Szybki dostęp. Po drugie, pasek narzędzi Szybki dostęp jest resetowany, aby wyświetlić tylko te polecenia, które są wyświetlane jako widoczne w stanie domyślnym, gdy użytkownik kliknie przycisk **Reset w** oknie dialogowym **Dostosowywanie.** Po trzecie, jeśli nie zostały wywołane [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), pasek narzędzi Szybki dostęp używa widocznych poleceń z tej listy jako domyślne polecenia widoczne przy pierwszym uruchomieniu aplikacji przez użytkownika. Po dodaniu wszystkich poleceń, które chcesz, wywołaj [CMFCRibbonBar::SetQuickAccessDefaultState,](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) aby ustawić to wystąpienie jako stan domyślny dla paska narzędzi Szybki dostęp tego paska wstążki.
+Dodanie polecenia do CMFCRibbonQuickAccessToolBarDefaultState daje trzy wyniki. Najpierw Każde dodane polecenie jest wyświetlane na liście rozwijanej po prawej stronie paska narzędzi Szybki dostęp. W ten sposób użytkownik może łatwo dodać lub usunąć to polecenie z paska narzędzi Szybki dostęp. Po drugie pasek narzędzi Szybki dostęp jest resetowany, aby pokazać tylko te polecenia, które są wyświetlane jako widoczne w stanie domyślnym, gdy użytkownik kliknie przycisk **Resetuj** w oknie dialogowym **Dostosuj** . Trzeci, jeśli nie został wywołany [CMFCRibbonBar:: SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), pasek narzędzi Szybki dostęp używa widocznych poleceń z tej listy jako domyślnych poleceń widocznych podczas pierwszego uruchomienia aplikacji przez użytkownika. Po dodaniu wszystkich żądanych poleceń Wywołaj [CMFCRibbonBar:: SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) , aby ustawić to wystąpienie jako stan domyślny dla paska narzędzi Szybki dostęp na tym pasku wstążki.
 
-## <a name="cmfcribbonquickaccesstoolbardefaultstatecopyfrom"></a><a name="copyfrom"></a>CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom
+## <a name="cmfcribbonquickaccesstoolbardefaultstatecopyfrom"></a><a name="copyfrom"></a> CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom
 
-Kopiuje właściwości jednego paska narzędzi Szybki dostęp do drugiego.
+Kopiuje właściwości jednego paska narzędzi Szybki dostęp do innego.
 
 ```cpp
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
@@ -98,15 +99,15 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-[w] Odwołanie do obiektu `CMFCRibbonQuickAccessToolBarDefaultState` źródłowego do skopiowania z.
+podczas Odwołanie do `CMFCRibbonQuickAccessToolBarDefaultState` obiektu źródłowego do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda kopiuje każde `CMFCRibbonQuickAccessToolBarDefaultState` polecenie z obiektu źródłowego do tego obiektu przy użyciu [metody CMFCRibbonQuickAccessToolBarDefaultState::AddCommand.](#addcommand)
+Ta metoda kopiuje każde polecenie z obiektu źródłowego `CMFCRibbonQuickAccessToolBarDefaultState` do tego obiektu za pomocą metody [CMFCRibbonQuickAccessToolBarDefaultState:: AddCommand](#addcommand) .
 
-## <a name="cmfcribbonquickaccesstoolbardefaultstatecmfcribbonquickaccesstoolbardefaultstate"></a><a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState
+## <a name="cmfcribbonquickaccesstoolbardefaultstatecmfcribbonquickaccesstoolbardefaultstate"></a><a name="cmfcribbonquickaccesstoolbardefaultstate"></a> CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState
 
-Konstruuje domyślny obiekt stanu paska narzędzi Szybki dostęp.
+Tworzy obiekt domyślnego stanu paska narzędzi Szybki dostęp.
 
 ```
 CMFCRibbonQuickAccessToolBarDefaultState();
@@ -114,9 +115,9 @@ CMFCRibbonQuickAccessToolBarDefaultState();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie lista poleceń, które zawiera nowe wystąpienie [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) jest pusta.
+Domyślnie lista poleceń, które zawiera nowe wystąpienie elementu [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) , jest pusta.
 
-## <a name="cmfcribbonquickaccesstoolbardefaultstateremoveall"></a><a name="removeall"></a>CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll
+## <a name="cmfcribbonquickaccesstoolbardefaultstateremoveall"></a><a name="removeall"></a> CMFCRibbonQuickAccessToolBarDefaultState::
 
 Czyści listę poleceń domyślnych na pasku narzędzi Szybki dostęp.
 
@@ -126,7 +127,7 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja usuwa z tego wystąpienia wszystkie polecenia, które poprzednie wywołania [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) dodał.
+Ta funkcja usuwa z tego wystąpienia wszystkie polecenia, które zostały dodane przez poprzednie wywołanie [CMFCRibbonQuickAccessToolBarDefaultState:: AddCommand](#addcommand) .
 
 ## <a name="see-also"></a>Zobacz też
 

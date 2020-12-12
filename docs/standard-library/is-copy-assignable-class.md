@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_copy_assignable
 title: Klasa is_copy_assignable
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_assignable
 ms.assetid: 3ae6bca1-85fb-4829-9ee9-0183b081ff50
-ms.openlocfilehash: 5fedd32f026828e49ea29cb2975a2529ca28c862
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f13752ce74f316f180fb874572efaf15d1c06c31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323801"
 ---
-# <a name="iscopyassignable-class"></a>Klasa is_copy_assignable
+# <a name="is_copy_assignable-class"></a>Klasa is_copy_assignable
 
 Testuje, czy typ ma być kopiowany podczas przypisywania.
 
@@ -31,14 +32,14 @@ Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma operator przypisania kopii, w przeciwnym razie ma wartość false. Odpowiednik is_assignable\<ty &, const Ty & >.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest klasą, która ma operator przypisania kopii, w przeciwnym razie ma wartość false. Równoważne is_assignable \<Ty&, const Ty&> .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

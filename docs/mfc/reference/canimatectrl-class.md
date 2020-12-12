@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa korzystanie CAnimateCtrl'
 title: Klasa korzystanie CAnimateCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 651b5775886374f3fcc95ab6b2cb3d892d9d77e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fe63e30ae53e6f5b3d308c8e09f0bfbaad76b2ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322749"
 ---
 # <a name="canimatectrl-class"></a>Klasa korzystanie CAnimateCtrl
 
@@ -56,7 +57,7 @@ class CAnimateCtrl : public CWnd
 |[Korzystanie CAnimateCtrl:: Close](#close)|Zamyka klip AVI.|
 |[Korzystanie CAnimateCtrl:: Create](#create)|Tworzy kontrolkę animacji i dołącza ją do `CAnimateCtrl` obiektu.|
 |[Korzystanie CAnimateCtrl:: CreateEx](#createex)|Tworzy formant animacji z określonymi stylami rozszerzonymi systemu Windows i dołącza go do `CAnimateCtrl` obiektu.|
-|[Korzystanie CAnimateCtrl:: isPlay](#isplaying)|Wskazuje, czy jest odtwarzany klip audio-wideo z przeplotem (AVI).|
+|[Korzystanie CAnimateCtrl:: isPlay](#isplaying)|Wskazuje, czy jest odtwarzany klip Audio-Video z przeplotem (AVI).|
 |[Korzystanie CAnimateCtrl:: Open](#open)|Otwiera klip AVI z pliku lub zasobu i wyświetla pierwszą ramkę.|
 |[Korzystanie CAnimateCtrl::P](#play)|Odtwarza klip AVI bez dźwięku.|
 |[Korzystanie CAnimateCtrl:: Seek](#seek)|Wyświetla wybraną pojedynczą ramkę klipu AVI.|
@@ -102,7 +103,7 @@ Aby uzyskać więcej informacji na temat korzystania z programu `CAnimateCtrl` ,
 
 **Nagłówek:** afxcmn. h
 
-## <a name="canimatectrlcanimatectrl"></a><a name="canimatectrl"></a>Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl
+## <a name="canimatectrlcanimatectrl"></a><a name="canimatectrl"></a> Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl
 
 Konstruuje `CAnimateCtrl` obiekt.
 
@@ -118,7 +119,7 @@ Aby można było wykonywać inne operacje na tworzonym obiekcie, należy wywoła
 
 [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]
 
-## <a name="canimatectrlclose"></a><a name="close"></a>Korzystanie CAnimateCtrl:: Close
+## <a name="canimatectrlclose"></a><a name="close"></a> Korzystanie CAnimateCtrl:: Close
 
 Zamyka klip AVI, który został wcześniej otwarty w kontrolce animacji (jeśli istnieje) i usuwa go z pamięci.
 
@@ -134,7 +135,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
   Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlcreate"></a><a name="create"></a>Korzystanie CAnimateCtrl:: Create
+## <a name="canimatectrlcreate"></a><a name="create"></a> Korzystanie CAnimateCtrl:: Create
 
 Tworzy kontrolkę animacji i dołącza ją do `CAnimateCtrl` obiektu.
 
@@ -184,7 +185,7 @@ Oprócz stylów okna wymienionych powyżej, można zastosować jeden lub więcej
 
   Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlcreateex"></a><a name="createex"></a>Korzystanie CAnimateCtrl:: CreateEx
+## <a name="canimatectrlcreateex"></a><a name="createex"></a> Korzystanie CAnimateCtrl:: CreateEx
 
 Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CAnimateCtrl` obiektem.
 
@@ -222,9 +223,9 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez **WS_EX_** przedniej stylu rozszerzonego systemu Windows.
 
-## <a name="canimatectrlisplaying"></a><a name="isplaying"></a>Korzystanie CAnimateCtrl:: isPlay
+## <a name="canimatectrlisplaying"></a><a name="isplaying"></a> Korzystanie CAnimateCtrl:: isPlay
 
-Wskazuje, czy jest odtwarzany klip audio-wideo z przeplotem (AVI).
+Wskazuje, czy jest odtwarzany klip Audio-Video z przeplotem (AVI).
 
 ```
 BOOL IsPlaying() const;
@@ -238,7 +239,7 @@ Ma wartość TRUE, jeśli jest odtwarzany klip AVI; w przeciwnym razie FALSE.
 
 Ta metoda wysyła komunikat [ACM_ISPLAYING](/windows/win32/Controls/acm-isplaying) , który jest opisany w Windows SDK.
 
-## <a name="canimatectrlopen"></a><a name="open"></a>Korzystanie CAnimateCtrl:: Open
+## <a name="canimatectrlopen"></a><a name="open"></a> Korzystanie CAnimateCtrl:: Open
 
 Wywołaj tę funkcję, aby otworzyć klip AVI i wyświetlić jego pierwszą ramkę.
 
@@ -263,7 +264,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 Zasób AVI jest ładowany z modułu, który utworzył kontrolkę animacji.
 
-`Open`nie obsługuje dźwięku w klipie AVI; można otwierać tylko ciche klipy AVI.
+`Open` nie obsługuje dźwięku w klipie AVI; można otwierać tylko ciche klipy AVI.
 
 Jeśli kontrolka animacji ma `ACS_AUTOPLAY` styl, kontrolka animacji automatycznie rozpocznie odtwarzanie klipu natychmiast po jego otwarciu. Odtwarzanie klipu w tle będzie kontynuowane, gdy wątek kontynuuje wykonywanie. Po zakończeniu odtwarzania klipu zostanie on automatycznie powtórzony.
 
@@ -275,7 +276,7 @@ Jeśli kontrolka animacji ma `ACS_TRANSPARENT` styl, pierwsza ramka zostanie nar
 
   Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlplay"></a><a name="play"></a>Korzystanie CAnimateCtrl::P
+## <a name="canimatectrlplay"></a><a name="play"></a> Korzystanie CAnimateCtrl::P
 
 Wywołaj tę funkcję, aby odtworzyć klip AVI w kontrolce animacji.
 
@@ -309,7 +310,7 @@ Kontrolka animacji będzie odtwarzać klip w tle, gdy wątek kontynuuje wykonywa
 
   Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlseek"></a><a name="seek"></a>Korzystanie CAnimateCtrl:: Seek
+## <a name="canimatectrlseek"></a><a name="seek"></a> Korzystanie CAnimateCtrl:: Seek
 
 Wywołaj tę funkcję, aby statycznie wyświetlić pojedynczą ramkę klipu AVI.
 
@@ -334,7 +335,7 @@ Jeśli kontrolka animacji ma `ACS_TRANSPARENT` styl, klip AVI zostanie narysowan
 
 Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlstop"></a><a name="stop"></a>Korzystanie CAnimateCtrl:: Stop
+## <a name="canimatectrlstop"></a><a name="stop"></a> Korzystanie CAnimateCtrl:: Stop
 
 Wywołaj tę funkcję, aby zatrzymać odtwarzanie klipu AVI w kontrolce animacji.
 
@@ -350,7 +351,7 @@ Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
   Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

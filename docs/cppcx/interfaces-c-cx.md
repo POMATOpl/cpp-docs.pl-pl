@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej o interfejsach (C++/CX)
 title: Interfejsy (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: df010468d5e90fe61ac2cf57c754ac5ed01b1c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 590b1b80ada186f90bfd38ed9dcdc8a35c34020f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320936"
 ---
 # <a name="interfaces-ccx"></a>Interfejsy (C++/CX)
 
@@ -89,13 +90,13 @@ Poniżej przedstawiono sposób, w jaki typy środowisko wykonawcze systemu Windo
 
 - Zamknięty interfejs ogólny ma niejawnie wygenerowany identyfikator UUID. Użytkownik nie może określić identyfikatora UUID.
 
-- W interfejsie wszystkie odwołania do bieżącego interfejsu — w parametrze metody, wartości zwracanej lub właściwości — jest założono, że odwołuje się do bieżącego wystąpienia. Na przykład *IMyIntf* oznacza *IMyIntf \<T> *.
+- W interfejsie wszystkie odwołania do bieżącego interfejsu — w parametrze metody, wartości zwracanej lub właściwości — jest założono, że odwołuje się do bieżącego wystąpienia. Na przykład *IMyIntf* oznacza *IMyIntf \<T>*.
 
 - Gdy typ parametru metody jest parametrem typu, deklaracja tego parametru lub zmiennej używa nazwy parametru typu bez żadnego wskaźnika, natywnego odwołania lub uchwytu Deklaratory. Inaczej mówiąc, nigdy nie piszesz "T ^".
 
 - Klasy ref z szablonami muszą być prywatne. Mogą implementować interfejsy generyczne i mogą przekazywać parametry szablonu *t* do argumentu ogólnego *t*. Każde wystąpienie klasy ref z szablonami jest samą klasą ref.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

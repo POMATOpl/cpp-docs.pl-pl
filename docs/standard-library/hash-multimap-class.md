@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy hash_multimap
 title: hash_multimap — Klasa
 ms.date: 10/18/2018
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 089204ac77403923d38f198d53b3ff711e6a4963
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b8cbf11bf633940140fb9a90b58ee1128b9efca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324112"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap — Klasa
 
@@ -197,7 +198,7 @@ Iterator dostarczony przez klasę hash_multimap jest iteratorem dwukierunkowym, 
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w `hash_multimap` .|
 |[equal_range](#equal_range)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w `hash_multimap` .|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów `hash_multimap` z określonych pozycji|
-|[find](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_multimap` , który ma klucz równoważny określonemu kluczowi.|
+|[wyświetlić](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_multimap` , który ma klucz równoważny określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu użytego do skonstruowania `hash_multimap` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `hash_multimap` określonego położenia.|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w obiekcie `hash_multimap` .|
@@ -1720,7 +1721,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_compare` jest synonimem *cech*parametrów szablonu.
+`key_compare` jest synonimem *cech* parametrów szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_multimap](../standard-library/hash-multimap-class.md) .
 
@@ -1741,7 +1742,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_type` jest synonimem dla *klucza*parametru szablonu.
+`key_type` jest synonimem dla *klucza* parametru szablonu.
 
 Aby uzyskać więcej informacji o *kluczu*, zobacz sekcję Uwagi w temacie [hash_multimap Class](../standard-library/hash-multimap-class.md) .
 
@@ -1857,7 +1858,7 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`mapped_type` jest synonimem dla *typu*parametru szablonu.
+`mapped_type` jest synonimem dla *typu* parametru szablonu.
 
 Aby uzyskać więcej informacji na temat *typu* , zobacz temat [Klasa hash_multimap](../standard-library/hash-multimap-class.md) .
 
@@ -2606,7 +2607,7 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

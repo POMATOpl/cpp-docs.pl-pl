@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: Tworzenie konsumenta bez użycia Kreatora'
 title: Tworzenie konsumenta bez użycia kreatora
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4c642e0b346bd9825d590f54c3de3f6536722d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323264"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Tworzenie konsumenta bez użycia kreatora
 
@@ -27,7 +28,7 @@ Aby dodać obsługę OLE DB konsumenta bez użycia **kreatora ATL OLE DB użytko
 
 Programowo, konsument zazwyczaj wykonuje następującą sekwencję operacji:
 
-1. Utwórz klasę rekordów użytkowników, która wiąże kolumny ze zmiennymi lokalnymi. W tym przykładzie `CMyTableNameAccessor` jest klasą rekordów użytkowników (zobacz [rekordy użytkowników](../../data/oledb/user-records.md)). Ta klasa zawiera mapę kolumn i mapę parametrów. Zadeklaruj element członkowski danych w klasie rekordów użytkowników dla każdego pola określonego w mapie kolumn; dla każdego z tych elementów członkowskich danych deklaruje także element członkowski danych stanu i długość elementu członkowskiego danych. Aby uzyskać więcej informacji, zobacz informacje o [stanie pola elementy członkowskie danych w przystawce metod dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
+1. Utwórz klasę rekordów użytkowników, która wiąże kolumny ze zmiennymi lokalnymi. W tym przykładzie `CMyTableNameAccessor` jest klasą rekordów użytkowników (zobacz [rekordy użytkowników](../../data/oledb/user-records.md)). Ta klasa zawiera mapę kolumn i mapę parametrów. Zadeklaruj element członkowski danych w klasie rekordów użytkowników dla każdego pola określonego w mapie kolumn; dla każdego z tych elementów członkowskich danych deklaruje także element członkowski danych stanu i długość elementu członkowskiego danych. Aby uzyskać więcej informacji, zobacz informacje o [stanie pola elementy członkowskie danych w Wizard-Generated metod dostępu](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
     > [!NOTE]
     > W przypadku pisania własnego użytkownika zmienne danych muszą występować przed zmiennymi stan i długość.
@@ -56,7 +57,7 @@ Programowo, konsument zazwyczaj wykonuje następującą sekwencję operacji:
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- Opcjonalnie ustaw właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty` i przekaż je jako parametr do `rs.Open` . Aby zapoznać się z przykładem, jak to zrobić, zobacz `GetRowsetProperties` w [metodach generowanych przez kreatora klienta](../../data/oledb/consumer-wizard-generated-methods.md).
+- Opcjonalnie ustaw właściwości zestawu wierszy przy użyciu `CDBPropSet::AddProperty` i przekaż je jako parametr do `rs.Open` . Aby zapoznać się z przykładem, jak to zrobić, zobacz `GetRowsetProperties` w temacie [metody Wizard-Generated konsumenta](../../data/oledb/consumer-wizard-generated-methods.md).
 
 - Można teraz używać zestawu wierszy do pobierania i manipulowania danymi.
 

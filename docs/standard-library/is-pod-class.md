@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_pod
 title: is_pod — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5fd263a0f17831daf7a187c4f0f32a5a635a9d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323554"
 ---
 # <a name="is_pod-class"></a>is_pod — Klasa
 
@@ -100,6 +101,6 @@ is_pod<throws> == false
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mm_extract_si64, _mm_extracti_si64'
 title: _mm_extract_si64, _mm_extracti_si64
 ms.date: 09/02/2019
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-ms.openlocfilehash: cfd7029966c29f876f0e4f671830e20e2eacc940
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 39a07c7310727de8d752c060c3d38481469ff1a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217400"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322870"
 ---
 # <a name="_mm_extract_si64-_mm_extracti_si64"></a>_mm_extract_si64, _mm_extracti_si64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-`extrq` Generuje instrukcję wyodrębniania określonych bitów z najniższych 64 bitów pierwszego argumentu.
+Generuje `extrq` instrukcję wyodrębniania określonych bitów z najniższych 64 bitów pierwszego argumentu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,17 +62,17 @@ Pole 128-bitowe z wyodrębnionym polem w najmniej znaczących bitach.
 |`_mm_extract_si64`|SSE4a|
 |`_mm_extracti_si64`|SSE4a|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
 Te elementy wewnętrzne generują `extrq` instrukcję wyodrębniania bitów ze *źródła*. Istnieją dwie wersje: `_mm_extracti_si64` jest natychmiastowa wersja i `_mm_extract_si64` jest nienatychmiastowa. Każda wersja wyodrębnia ze *źródła* pole bitowe zdefiniowane przez jego długość i indeks jego najmniej znaczącego bitu. Wartości długości i indeksu są brane pod kątem mod 64, dlatego oba-1 i 127 są interpretowane jako 63. Jeśli sum (zredukowany) indeks i (zmniejszony) długość pola jest większa niż 64, wyniki są niezdefiniowane. Wartość zero dla długości pola jest interpretowana jako 64. Jeśli długość pola i indeks bitu są równe zero, są wyodrębniane bity 63:0 ze *źródła* . Jeśli długość pola wynosi zero, ale indeks bitowy jest różny od zera, wyniki są niezdefiniowane.
 
-W wywołaniu do `_mm_extract_si64`, *deskryptor* zawiera indeks w bitach 13:8 i długość pola danych, które mają zostać wyodrębnione w bitach 5:0.
+W wywołaniu do `_mm_extract_si64` , *deskryptor* zawiera indeks w bitach 13:8 i długość pola danych, które mają zostać wyodrębnione w bitach 5:0.
 
-W przypadku wywołania `_mm_extracti_si64` z argumentami, które kompilator nie może ustalić jako stałych całkowitych, kompilator generuje kod, aby spakować te wartości do rejestru XMM(deskryptora) i `_mm_extract_si64`wywołać.
+W przypadku wywołania `_mm_extracti_si64` z argumentami, które kompilator nie może ustalić jako stałych całkowitych, kompilator generuje kod, aby spakować te wartości do rejestru XMM (*deskryptora*) i wywołać `_mm_extract_si64` .
 
-Aby określić obsługę `extrq` sprzętową instrukcji, `__cpuid` Wywołaj wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 z `CPUInfo[2] (ECX)`. Ten bit będzie miał wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod korzystający z `extrq` tego wewnętrznego sprzętu, który nie obsługuje instrukcji, wyniki są nieprzewidywalne.
+Aby określić obsługę sprzętową `extrq` instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 z `CPUInfo[2] (ECX)` . Ten bit będzie miał wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod korzystający z tego wewnętrznego sprzętu, który nie obsługuje `extrq` instrukcji, wyniki są nieprzewidywalne.
 
 ## <a name="example"></a>Przykład
 
@@ -112,7 +113,7 @@ result3 = 0x30eca86
 
 Fragmenty Copyright 2007 przez Advanced Micro Devices, Inc. Wszelkie prawa zastrzeżone. Wygenerowane z uprawnieniami z zaawansowanych urządzeń Micro Devices, Inc.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

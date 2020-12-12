@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy auto_ptr
 title: auto_ptr — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e656da9f5ffdaf4dfe85b1cbd75ef79ba41adb64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834781"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321669"
 ---
 # <a name="auto_ptr-class"></a>auto_ptr — Klasa
 
@@ -81,7 +82,7 @@ Można przekazać `auto_ptr<Type>` obiekt według wartości jako argumentu wywo�
 |-|-|
 |[element_type](#element_type)|Typ jest synonimem dla parametru szablonu `Type` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -278,7 +279,7 @@ Odwołanie do obiektu typu `auto_ptr<Type>` .
 
 #### <a name="remarks"></a>Uwagi
 
-Przypisanie oblicza wyrażenie `delete myptr` , ale tylko wtedy, gdy przechowywany wskaźnik zmienia się `myptr` w wyniku przypisania. Następnie przenosi własność wskaźnika przechowywanego *po prawej stronie*, przechowując *prawo*. [wydanie](#release) w `myptr` . Funkcja zwraca __ \* ten__wynik.
+Przypisanie oblicza wyrażenie `delete myptr` , ale tylko wtedy, gdy przechowywany wskaźnik zmienia się `myptr` w wyniku przypisania. Następnie przenosi własność wskaźnika przechowywanego *po prawej stronie*, przechowując *prawo*. [wydanie](#release) w `myptr` . Funkcja zwraca __\* ten__ wynik.
 
 #### <a name="example"></a>Przykład
 
@@ -318,7 +319,7 @@ Element członkowski obiektu, do którego `auto_ptr` należy.
 
 #### <a name="remarks"></a>Uwagi
 
-Operator wyboru zwraca wartość [Get](#get) `( )` , dzięki czemu *ap* ->  **element członkowski** AP wyrażenia zachowuje się tak samo jak ( *AP*). **Get**()) **— >,** gdzie *AP* jest obiektem klasy `auto_ptr` \< **Type**> . W związku z tym, składowany wskaźnik nie może mieć wartości null i `Type` musi być klasą, strukturą lub typem Unii z `member` elementem członkowskim.
+Operator wyboru zwraca wartość [Get](#get) `( )` , dzięki czemu  ->  **element członkowski** AP wyrażenia zachowuje się tak samo jak ( *AP*). **Get**()) **— >,** gdzie *AP* jest obiektem klasy `auto_ptr` \< **Type**> . W związku z tym, składowany wskaźnik nie może mieć wartości null i `Type` musi być klasą, strukturą lub typem Unii z `member` elementem członkowskim.
 
 #### <a name="example"></a>Przykład
 
@@ -335,7 +336,7 @@ operator auto _ptr<Other>() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Operator rzutowania typu zwraca `auto_ptr` \< **Other**> ( ** \* this**).
+Operator rzutowania typu zwraca `auto_ptr` \< **Other**> ( **\* this**).
 
 #### <a name="example"></a>Przykład
 
@@ -365,7 +366,7 @@ operator auto _ptr  _ref<Other>() throw();
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Operator rzutowania typu zwraca **auto_ptr_ref** \< **Other**> ( ** \* this**).
+Operator rzutowania typu zwraca **auto_ptr_ref** \< **Other**> ( **\* this**).
 
 #### <a name="example"></a>Przykład
 
@@ -537,6 +538,6 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa unique_ptr](../standard-library/unique-ptr-class.md)

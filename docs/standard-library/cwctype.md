@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; cwctype&gt;'
 title: '&lt;cwctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cwctype header
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
-ms.openlocfilehash: 26fbefa7dbaf68ac559e79c702a5a7a2c31266a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 604cffe5acb61a90fc36e7733db01f2f92aa6155
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324617"
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype&gt;
 
-Zawiera nagłówek \<standardowej biblioteki C wctype. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
+Zawiera nagłówek standardowej biblioteki C \<wctype.h> i dodaje skojarzone nazwy do `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,7 +26,7 @@ Zawiera nagłówek \<standardowej biblioteki C wctype. h > i dodaje skojarzone n
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
+Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 ## <a name="constants"></a>Stałe
 
@@ -62,8 +63,8 @@ wint_t towctrans(wint_t wc, wctrans_t desc);
 wctrans_t wctrans(const char* property);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

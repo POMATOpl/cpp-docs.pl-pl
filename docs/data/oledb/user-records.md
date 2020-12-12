@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: rekordy użytkowników'
 title: Rekordy użytkownika
 ms.date: 05/09/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d31ef93bb1b06925306c84d436d7a7837a08431
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322328"
 ---
 # <a name="user-records"></a>Rekordy użytkownika
 
@@ -56,9 +57,9 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="wizard-generated-user-records"></a>Rekordy użytkowników generowane przez Kreatora
+## <a name="wizard-generated-user-records"></a>Wizard-Generated rekordy użytkowników
 
-Jeśli użytkownik korzysta z **kreatora ATL OLE DB Consumer** do wygenerowania konsumenta, będziesz mieć możliwość użycia szablonów OLE DB lub atrybutów OLE DB. Wygenerowany kod jest różny w każdym przypadku. Aby uzyskać więcej informacji na temat tego kodu, zobacz [klasy klienta generowane przez kreatora](../../data/oledb/consumer-wizard-generated-classes.md).
+Jeśli użytkownik korzysta z **kreatora ATL OLE DB Consumer** do wygenerowania konsumenta, będziesz mieć możliwość użycia szablonów OLE DB lub atrybutów OLE DB. Wygenerowany kod jest różny w każdym przypadku. Aby uzyskać więcej informacji na temat tego kodu, zobacz [klasy Wizard-Generated konsumenta](../../data/oledb/consumer-wizard-generated-classes.md).
 
 ## <a name="user-record-support-for-multiple-accessors"></a>Obsługa rekordów użytkowników dla wielu metod dostępu
 

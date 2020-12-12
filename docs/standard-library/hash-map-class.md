@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy hash_map
 title: hash_map — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: 67f891ae7e0b9eab10b1cceda8736661a24641bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6f842e846d7ae171ecf754f9051794c56c04d4b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324138"
 ---
 # <a name="hash_map-class"></a>hash_map — Klasa
 
@@ -148,7 +149,7 @@ Wybór typu kontenera powinien ogólnie być oparty o typ wyszukiwania i wstawia
 
 Hash_map powinna być kontenerem asocjacyjnym wyboru, gdy warunki kojarzenia wartości z kluczami są spełnione przez aplikację. Model dla tego typu struktury jest uporządkowaną listą jednoznacznie występujących słów kluczowych ze skojarzonymi wartościami ciągu, które dostarczają, mówią, definicje. Jeśli zamiast tego, wyrazy zawierały więcej niż jedną poprawną definicję, więc klucze nie były unikatowe, a następnie hash_multimap będzie kontenerem wyboru. Jeśli z drugiej strony jest przechowywanych tylko Lista wyrazów, hash_set będzie prawidłowym kontenerem. Jeśli dozwolone jest wiele wystąpień wyrazów, hash_multiset będzie odpowiednią strukturą kontenera.
 
-Hash_map porządkuje sekwencję, którą kontroluje, przez wywołanie zapisanego obiektu *cechy* skrótu klasy [value_compare](../standard-library/value-compare-class.md). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [key_comp](#key_comp). Taki obiekt funkcji musi zachowywać się tak samo jak obiekt klasy [hash_compare](../standard-library/hash-compare-class.md)<klucz, mniej \<Key>>. W odniesieniu do *Key* wszystkich wartości klucza *typu,* wywołanie `Traits` ( `Key` ) daje rozkład wartości typu `size_t` .
+Hash_map porządkuje sekwencję, którą kontroluje, przez wywołanie zapisanego obiektu *cechy* skrótu klasy [value_compare](../standard-library/value-compare-class.md). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [key_comp](#key_comp). Taki obiekt funkcji musi zachowywać się tak samo jak obiekt klasy [hash_compare](../standard-library/hash-compare-class.md)<klucz, mniej \<Key>>. W odniesieniu do  wszystkich wartości klucza *typu,* wywołanie `Traits` ( `Key` ) daje rozkład wartości typu `size_t` .
 
 Ogólnie rzecz biorąc, elementy muszą być nieco mniej porównywalne, aby ustalić kolejność: tak aby, mając dowolne dwa elementy, można było określić, czy są one równoważne (w sensie, żaden nie jest mniejszy niż ten drugi) lub, że jeden jest mniejszy niż ten drugi. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Ze strony bardziej technicznej, funkcja porównywania jest predykatem binarnym, który wymusza ścisłe słabe porządkowanie w standardowym sensie matematycznym. Predykat binarny f (x y) jest obiektem funkcji, który ma dwa obiekty argumentu `x` i `y` i zwraca wartość **`true`** lub **`false`** . Kolejność nałożona na hash_map jest ściśle słabym porządkowaniem, jeśli Predykat binarny jest niezwrotny, niesymetryczny i przechodni oraz jeśli równoważność jest przechodnia, gdzie dwa obiekty x i y są zdefiniowane jako równoważne, gdy zarówno f (x, y), jak i f (y, x) mają wartość false. Jeśli silniejszy warunek równości pomiędzy kluczami zastąpi ten równoważności, to porządkowanie będzie całkowite (w sensie, że wszystkie elementy są uporządkowane względem siebie), a dopasowane klucze będą od siebie nieodróżnialne.
 
@@ -200,7 +201,7 @@ Iterator dostarczony przez klasę hash_map jest iteratorem dwukierunkowym, ale f
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w `hash_map` .|
 |[equal_range](#equal_range)|Zwraca parę iteratorów odpowiednio do pierwszego elementu w a `hash_map` z kluczem, który jest większy niż określony klucz i do pierwszego elementu w `hash_map` kluczu, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów `hash_map` z określonych pozycji|
-|[find](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_map` , który ma klucz równoważny określonemu kluczowi.|
+|[wyświetlić](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_map` , który ma klucz równoważny określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu użytego do skonstruowania `hash_map` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `hash_map` .|
 |[key_comp](#key_comp)|Zwraca iterator do pierwszego elementu w elemencie `hash_map` z wartością klucza, która jest równa lub większa od określonego klucza.|
@@ -1615,7 +1616,7 @@ Pozycja tuż poza ostatnim elementem, który ma zostać skopiowany z hash_map.
 
 Pierwsza `insert` funkcja członkowska zwraca parę, której składnik bool zwraca wartość true (prawda), jeśli wstawiono, i wartość false, jeśli hash_map już zawiera element, którego klucz ma odpowiednik wartości w kolejności, a Składnik iteratora zwraca adres, w którym został wstawiony nowy element lub gdzie już znajduje się element.
 
-Aby uzyskać dostęp do składnika iteratora pary `pr` zwracanej przez tę funkcję elementu członkowskiego, użyj `pr` . **najpierw**, aby usunąć odwołanie do niego, użyj \* ( `pr` . **pierwszy**). Aby uzyskać dostęp do **`bool`** składnika pary `pr` zwracanej przez tę funkcję elementu członkowskiego, użyj `pr` . **drugi**i aby usunąć odwołanie do niego, użyj \* ( `pr` . **sekundę**).
+Aby uzyskać dostęp do składnika iteratora pary `pr` zwracanej przez tę funkcję elementu członkowskiego, użyj `pr` . **najpierw**, aby usunąć odwołanie do niego, użyj \* ( `pr` . **pierwszy**). Aby uzyskać dostęp do **`bool`** składnika pary `pr` zwracanej przez tę funkcję elementu członkowskiego, użyj `pr` . **drugi** i aby usunąć odwołanie do niego, użyj \* ( `pr` . **sekundę**).
 
 Druga `insert` funkcja członkowska, wersja wskazówki, zwraca iterator, który wskazuje na położenie, w którym nowy element został wstawiony do hash_map.
 
@@ -2442,7 +2443,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 Typ `reverse_iterator` nie może zmodyfikować wartości elementu i służy do iterowania przez hash_map w odwrocie.
 
-`reverse_iterator`Zdefiniowane przez hash_map wskazuje elementy, które są obiektami [value_type](#value_type), które są typu ** \<const Key, Type> pary**, których pierwszy element członkowski jest kluczem do elementu, a drugi element członkowski jest zmapowaną podstawą posiadaną przez element.
+`reverse_iterator`Zdefiniowane przez hash_map wskazuje elementy, które są obiektami [value_type](#value_type), które są typu **\<const Key, Type> pary**, których pierwszy element członkowski jest kluczem do elementu, a drugi element członkowski jest zmapowaną podstawą posiadaną przez element.
 
 Aby usunąć odwołanie do `reverse_iterator` `rIter` elementu w hash_map, użyj operatora->.
 
@@ -2814,7 +2815,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 30.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

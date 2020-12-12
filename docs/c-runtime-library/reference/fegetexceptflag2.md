@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fegetexceptflag'
 title: fegetexceptflag
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: b840408ce704ad5519fbf233de41c8d5422006ad
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 9690263168c9eef46b5a8b684fa00dfd9d6f8715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322566"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -53,13 +54,13 @@ Wskaźnik do obiektu **fexcept_t** , aby zawierał bieżące wartości flag wyj�
 *Oprócz*<br/>
 Flagi wyjątków zmiennoprzecinkowych do przechowywania w *pstatus*.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
 Po pomyślnym zwraca wartość 0. W przeciwnym razie zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fegetexceptflag** przechowuje bieżący stan wyjątków zmiennoprzecinkowych określony przez, *z wyjątkiem* obiektu **fexcept_t** wskazywanego przez *pstatus*.  *pstatus* musi wskazywać prawidłowy obiekt **fexcept_t** lub kolejne zachowanie jest niezdefiniowane. Funkcja **fegetexceptflag** obsługuje te makra wyjątków zdefiniowane w \<fenv. h >:
+Funkcja **fegetexceptflag** przechowuje bieżący stan wyjątków zmiennoprzecinkowych określony przez, *z wyjątkiem* obiektu **fexcept_t** wskazywanego przez *pstatus*.  *pstatus* musi wskazywać prawidłowy obiekt **fexcept_t** lub kolejne zachowanie jest niezdefiniowane. Funkcja **fegetexceptflag** obsługuje te makra wyjątków zdefiniowane w \<fenv.h> :
 
 |Makro wyjątku|Opis|
 |---------------------|-----------------|
@@ -72,17 +73,17 @@ Funkcja **fegetexceptflag** przechowuje bieżący stan wyjątków zmiennoprzecin
 
 Argument *except* może mieć wartość zero, jedno z obsługiwanych makr wyjątków zmiennoprzecinkowych lub bitowe lub dwa lub więcej makr. Wynik innej wartości argumentu jest niezdefiniowany.
 
-Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu dyrektywy `#pragma fenv_access(on)` przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
+Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**fegetexceptflag**|\<fenv.h>|\<cfenv>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>

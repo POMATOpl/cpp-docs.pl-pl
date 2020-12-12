@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max __mb_cur_max'
 title: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: 8287e2e7cab8880d35fef170287713adcc103c7e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1308dbe969f8b6638835f52ec1e7a2cdcd63bb7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321165"
 ---
 # <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 
@@ -64,7 +65,7 @@ Maksymalna liczba bajtów w znaku wielobajtowym dla bieżących ustawień region
 
 Jest to wewnętrzna funkcja wykorzystywana przez CRT do pobrania bieżącej wartości makra [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) z lokalnego magazynu wątków. Zalecamy użycie `MB_CUR_MAX` makra w kodzie do przenośności.
 
-`__mb_cur_max` Makro jest wygodnym sposobem wywołania `___mb_cur_max_func()` funkcji. `__p___mb_cur_max` Funkcja jest zdefiniowana pod kątem zgodności z Visual C++ 5,0 i wcześniejszymi wersjami.
+`__mb_cur_max`Makro jest wygodnym sposobem wywołania `___mb_cur_max_func()` funkcji. `__p___mb_cur_max`Funkcja jest zdefiniowana pod kątem zgodności z Visual C++ 5,0 i wcześniejszymi wersjami.
 
 Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
@@ -74,7 +75,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<CType. h>, \<STDLIB. h>|
+|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>, \<stdlib.h>|
 
 ## <a name="see-also"></a>Zobacz też
 

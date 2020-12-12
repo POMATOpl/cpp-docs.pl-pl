@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy error_code
 title: error_code — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-ms.openlocfilehash: 5bbd67d2967a1a6d070ece54ea464a2a5a2deac9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0fb084a7d33cc6c1b7d0d4a821a770e0e49a923e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324426"
 ---
 # <a name="error_code-class"></a>error_code — Klasa
 
@@ -54,11 +55,11 @@ Obiekt typu `error_code` Class przechowuje wartość kodu błędu i wskaźnik do
 |-|-|
 |[value_type](#value_type)|Typ reprezentujący przechowywaną wartość kodu błędu.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
-|[przypisać](#assign)|Przypisuje wartość kodu błędu i kategorię do kodu błędu.|
+|[ponownie](#assign)|Przypisuje wartość kodu błędu i kategorię do kodu błędu.|
 |[kategorii](#category)|Zwraca kategorię błędu.|
 |[Wyczyść](#clear)|Czyści wartość kodu błędu i kategorię.|
 |[default_error_condition](#default_error_condition)|Zwraca domyślny warunek błędu.|

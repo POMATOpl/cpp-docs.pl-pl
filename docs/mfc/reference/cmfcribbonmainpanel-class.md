@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCRibbonMainPanel'
 title: Klasa CMFCRibbonMainPanel
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 0fd1cd2fec31f9da0c2bec36d08586780f4f95c3
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 823a1ce8a8684ca791f838346a1fb50727096a62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321815"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Klasa CMFCRibbonMainPanel
 
-Implementuje panel wstążki, który jest wyświetlany po kliknięciu [przycisku CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+Implementuje panel wstążki, który jest wyświetlany po kliknięciu [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,46 +40,46 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Domyślny konstruktor.|
-|`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Destruktora.|
+|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Konstruktor domyślny.|
+|`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonMainPanel::Dodaj](#add)|Dodaje element wstążki do lewego okienka panelu przycisków aplikacji. (Zastępuje [CMFCRibbonPanel::Dodaj](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Dodaje ciąg tekstowy do menu listy ostatnich plików.|
+|[CMFCRibbonMainPanel:: Add](#add)|Dodaje element wstążki do lewego okienka panelu przycisku aplikacji. (Przesłania [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
+|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Dodaje ciąg tekstowy do menu listy ostatnio używanych plików.|
 |[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Dodaje element wstążki do dolnego okienka panelu aplikacji wstążki.|
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Dodaje element wstążki do prawego okienka panelu przycisków aplikacji.|
-|`CMFCRibbonMainPanel::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Zwraca prostokąt reprezentujący obszar panelu głównego wstążki.|
-|`CMFCRibbonMainPanel::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
+|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Dodaje element wstążki do prawego okienka panelu przycisku aplikacji.|
+|`CMFCRibbonMainPanel::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Zwraca prostokąt, który reprezentuje obszar głównego panelu wstążki.|
+|`CMFCRibbonMainPanel::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura wyświetla `CMFCRibbonMainPanel` po otwarciu panelu aplikacji. Zawiera trzy okienka:
+Struktura zostanie wyświetlona `CMFCRibbonMainPanel` po otwarciu panelu aplikacji. Zawiera trzy okienka:
 
-- Lewe okienko zawiera polecenia skojarzone z plikami, takie jak **Otwórz,** **Zapisz,** **Drukuj**i **Zamknij**. Aby dodać polecenie do tego okienka, zadzwoń do [CMFCRibbonMainPanel::Dodaj](#add).
+- Okienko po lewej stronie zawiera polecenia skojarzone z plikami, takie jak **Otwórz**, **Zapisz**, **Drukuj** i **Zamknij**. Aby dodać polecenie do tego okienka, wywołaj [CMFCRibbonMainPanel:: Add](#add).
 
-- Prawe okienko zawiera opcje modyfikujące polecenie, które klikniesz w lewym okienku. Jeśli na przykład z lewego okienka zostanie kliknąć przycisk **Zapisz jako,** prawe okienko będzie wyświetlać dostępne typy plików. Aby dodać element do tego okienka, zadzwoń do [CMFCRibbonMainPanel::AddToRight](#addtoright).
+- Prawe okienko zawiera opcje modyfikujące polecenie kliknięte w okienku po lewej stronie. Jeśli na przykład klikniesz pozycję **Zapisz jako** w okienku po lewej stronie, w okienku po prawej stronie będzie można wyświetlić dostępne typy plików. Aby dodać element do tego okienka, wywołaj [CMFCRibbonMainPanel:: AddToRight](#addtoright).
 
-- Dolne okienko zawiera przyciski, które umożliwiają zmianę ustawień aplikacji i wyjście z programu. Aby dodać element do tego okienka, zadzwoń [do CMFCRibbonMainPanel::AddToBottom](#addtobottom).
+- Dolne okienko zawiera przyciski umożliwiające zmianę ustawień aplikacji i wyjście z programu. Aby dodać element do tego okienka, wywołaj [CMFCRibbonMainPanel:: AddToBottom](#addtobottom).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[PANEL CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
+[CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
 
 [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxRibbonMainPanel.h
+**Nagłówek:** afxRibbonMainPanel. h
 
-## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCRibbonMainPanel::Dodaj
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a> CMFCRibbonMainPanel:: Add
 
-Dodaje element wstążki do lewego okienka panelu przycisków aplikacji.
+Dodaje element wstążki do lewego okienka panelu przycisku aplikacji.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -86,16 +87,16 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Parametry
 
-*pElem (właśc.*<br/>
-[w, na zewnątrz] Wskaźnik do elementu wstążki, który ma być dodawany do panelu głównego.
+*pElem*<br/>
+[in. out] Wskaźnik do elementu wstążki, który ma zostać dodany do panelu głównego.
 
 ### <a name="remarks"></a>Uwagi
 
 Dodaje element wstążki do panelu. Elementy dodane przy użyciu tej metody będą znajdować się w lewej kolumnie panelu głównego.
 
-## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a> CMFCRibbonMainPanel::AddRecentFilesList
 
-Dodaje ciąg tekstowy do menu listy ostatnich plików.
+Dodaje ciąg tekstowy do menu listy ostatnio używanych plików.
 
 ```cpp
 void AddRecentFilesList(
@@ -105,15 +106,15 @@ void AddRecentFilesList(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszLabel (lpszLabel)*<br/>
-Określa ciąg, który ma być dodawany do listy ostatnich plików.
+*lpszLabel*<br/>
+Określa ciąg, który ma zostać dodany do listy ostatnio używanych plików.
 
-*nWidth (ww.*<br/>
-Określa szerokość panelu listy ostatnich plików w pikselach.
+*nWidth*<br/>
+Określa szerokość (w pikselach) panelu listy ostatnio używanych plików.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a> CMFCRibbonMainPanel::AddToBottom
 
 Dodaje element wstążki do dolnego okienka panelu aplikacji wstążki.
 
@@ -123,14 +124,14 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>Parametry
 
-*pElem (właśc.*<br/>
-[w, na zewnątrz] Wskaźnik do elementu wstążki, aby dodać do dołu panelu głównego.
+*pElem*<br/>
+[in. out] Wskaźnik do elementu wstążki, który ma zostać dodany do dolnej części panelu głównego.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a> CMFCRibbonMainPanel::AddToRight
 
-Dodaje element wstążki do prawego okienka panelu przycisków aplikacji.
+Dodaje element wstążki do prawego okienka panelu przycisku aplikacji.
 
 ```cpp
 void AddToRight(
@@ -140,19 +141,19 @@ void AddToRight(
 
 ### <a name="parameters"></a>Parametry
 
-*pElem (właśc.*<br/>
+*pElem*<br/>
 Wskaźnik do elementu wstążki, który ma zostać dodany po prawej stronie panelu głównego.
 
-*nWidth (ww.*<br/>
-Określa szerokość prawego panelu w pikselach.
+*nWidth*<br/>
+Określa szerokość (w pikselach) prawego panelu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja służy do dodawania elementu wstążki do prawego panelu. Prawy panel zazwyczaj wyświetla listę ostatnich plików, ale w tym miejscu można dodać dowolny inny element wstążki.
+Użyj tej funkcji, aby dodać element wstążki do prawego panelu. Prawy panel zazwyczaj wyświetla listę ostatnio używanych plików, ale można dodać każdy inny element wstążki tutaj.
 
-## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a> CMFCRibbonMainPanel::GetCommandsFrame
 
-Zwraca prostokąt reprezentujący obszar panelu głównego wstążki.
+Zwraca prostokąt, który reprezentuje obszar głównego panelu wstążki.
 
 ```
 CRect GetCommandsFrame() const;
@@ -160,7 +161,7 @@ CRect GetCommandsFrame() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Prostokąt reprezentujący obszar panelu głównego wstążki.
+Prostokąt, który reprezentuje obszar głównego panelu wstążki.
 
 ## <a name="see-also"></a>Zobacz też
 

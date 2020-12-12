@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_osfhandle'
 title: _get_osfhandle
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: 085bf20a12d9b77be0977521bde2ab75d9b2636a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 72f6a2f695868bdc4a5d13c09d1d34152cf9e51e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321139"
 ---
 # <a name="_get_osfhandle"></a>_get_osfhandle
 
@@ -59,7 +60,7 @@ Istniejący deskryptor pliku.
 Zwraca dojście do pliku systemu operacyjnego, jeśli *FD* jest prawidłowy. W przeciwnym razie procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwraca **INVALID_HANDLE_VALUE** (-1). Ustawia również **errno** na **EBADF**, wskazując nieprawidłowe dojście do pliku. Aby uniknąć ostrzeżenia, gdy wynik jest używany jako uchwyt plików Win32, należy rzutować go na typ **dojścia** .
 
 > [!NOTE]
-> Gdy **stdin**, **stdout**i **stderr** nie są skojarzone ze strumieniem (na przykład w aplikacji systemu Windows bez okna konsoli), wartości deskryptora pliku dla tych strumieni są zwracane z [_fileno](fileno.md) jako wartość Specjalna-2. Podobnie, jeśli zamiast wyniku wywołania do **_fileno**użyto wartości 0, 1 lub 2 jako parametru deskryptora pliku, **_get_osfhandle** również zwróci wartość Specjalna-2, gdy deskryptor pliku nie jest skojarzony ze strumieniem i nie ustawi **errno**. Nie jest to jednak prawidłowa wartość dojścia do pliku, a kolejne wywołania, które próbują użyć, prawdopodobnie zakończą się niepowodzeniem.
+> Gdy **stdin**, **stdout** i **stderr** nie są skojarzone ze strumieniem (na przykład w aplikacji systemu Windows bez okna konsoli), wartości deskryptora pliku dla tych strumieni są zwracane z [_fileno](fileno.md) jako wartość Specjalna-2. Podobnie, jeśli zamiast wyniku wywołania do **_fileno** użyto wartości 0, 1 lub 2 jako parametru deskryptora pliku, **_get_osfhandle** również zwróci wartość Specjalna-2, gdy deskryptor pliku nie jest skojarzony ze strumieniem i nie ustawi **errno**. Nie jest to jednak prawidłowa wartość dojścia do pliku, a kolejne wywołania, które próbują użyć, prawdopodobnie zakończą się niepowodzeniem.
 
 Aby uzyskać więcej informacji o **EBADF** i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -73,7 +74,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_osfhandle**|\<IO. h>|
+|**_get_osfhandle**|\<io.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

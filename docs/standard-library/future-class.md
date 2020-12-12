@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: przyszłość klasy'
 title: future — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: ac52429919f83a90a87141399952e248e18e0862
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ca73a3d0273014c4f22e8e807c2bf7c3d6e43320
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324229"
 ---
 # <a name="future-class"></a>future — Klasa
 
@@ -73,7 +74,7 @@ Każdy standardowy *dostawca asynchroniczny* zwraca obiekt, którego typ jest wy
 
 **Przestrzeń nazw:** std
 
-## <a name="futurefuture-constructor"></a><a name="future"></a>Future:: Future — Konstruktor
+## <a name="futurefuture-constructor"></a><a name="future"></a> Future:: Future — Konstruktor
 
 Konstruuje `future` obiekt.
 
@@ -91,9 +92,9 @@ Obiekt `future`.
 
 Pierwszy Konstruktor konstruuje `future` obiekt, który nie ma skojarzonego stanu asynchronicznego.
 
-Drugi Konstruktor konstruuje `future` obiekt i transferuje związany z nim stan asynchroniczny. *Other* *Inne* nie mają już skojarzonego stanu asynchronicznego.
+Drugi Konstruktor konstruuje `future` obiekt i transferuje związany z nim stan asynchroniczny.  *Inne* nie mają już skojarzonego stanu asynchronicznego.
 
-## <a name="futureget"></a><a name="get"></a>przyszłość:: Get
+## <a name="futureget"></a><a name="get"></a> przyszłość:: Get
 
 Pobiera wynik, który jest przechowywany w skojarzonym stanie asynchronicznym.
 
@@ -115,7 +116,7 @@ Ponieważ nie istnieje przechowywana wartość dla specjalizacji `future<void>` 
 
 W innych specjalizacjach Metoda przenosi wartość zwracaną z wartości przechowywanej. W związku z tym należy wywołać tę metodę tylko raz.
 
-## <a name="futureoperator"></a><a name="op_eq"></a>Future:: operator =
+## <a name="futureoperator"></a><a name="op_eq"></a> Future:: operator =
 
 Przenosi skojarzony stan asynchroniczny z określonego obiektu.
 
@@ -136,7 +137,7 @@ Obiekt `future`.
 
 Po przeniesieniu *nie ma* już skojarzonego stanu asynchronicznego.
 
-## <a name="futureshare"></a><a name="share"></a>przyszłość:: udostępnianie
+## <a name="futureshare"></a><a name="share"></a> przyszłość:: udostępnianie
 
 Konwertuje obiekt na obiekt [shared_future](../standard-library/shared-future-class.md) .
 
@@ -148,7 +149,7 @@ shared_future<Ty> share();
 
 `shared_future(move(*this))`
 
-## <a name="futurevalid"></a><a name="valid"></a>przyszłość:: prawidłowe
+## <a name="futurevalid"></a><a name="valid"></a> przyszłość:: prawidłowe
 
 Określa, czy obiekt ma skojarzony stan asynchroniczny.
 
@@ -160,7 +161,7 @@ bool valid() noexcept;
 
 **`true`** Jeśli obiekt ma skojarzony stan asynchroniczny; w przeciwnym razie **`false`** .
 
-## <a name="futurewait"></a><a name="wait"></a>przyszłość:: czekaj
+## <a name="futurewait"></a><a name="wait"></a> przyszłość:: czekaj
 
 Blokuje bieżący wątek do momentu, gdy skojarzony stan asynchroniczny jest *gotowy*.
 
@@ -172,7 +173,7 @@ void wait() const;
 
 Skojarzony stan asynchroniczny jest *gotowy* tylko wtedy, gdy jego dostawca asynchroniczny przechowuje wartość zwracaną lub zgłosił wyjątek.
 
-## <a name="futurewait_for"></a><a name="wait_for"></a>przyszłość:: wait_for
+## <a name="futurewait_for"></a><a name="wait_for"></a> przyszłość:: wait_for
 
 Blokuje bieżący wątek do momentu, aż skojarzony stan asynchroniczny jest *gotowy* lub dopóki nie upłynie określony przedział czasu.
 
@@ -194,7 +195,7 @@ Obiekt [chrono::d wersja](../standard-library/duration-class.md) , który okreś
 
 Skojarzony stan asynchroniczny jest gotowy tylko wtedy, gdy jego dostawca asynchroniczny przechowuje wartość zwracaną lub zgłosił wyjątek.
 
-## <a name="futurewait_until"></a><a name="wait_until"></a>przyszłość:: wait_until
+## <a name="futurewait_until"></a><a name="wait_until"></a> przyszłość:: wait_until
 
 Blokuje bieżący wątek do momentu, aż skojarzony stan asynchroniczny jest *gotowy* lub do momentu po określonym punkcie czasu.
 
@@ -216,7 +217,7 @@ Obiekt [chrono:: time_point](../standard-library/time-point-class.md) , który o
 
 Skojarzony stan asynchroniczny jest *gotowy* tylko wtedy, gdy jego dostawca asynchroniczny przechowuje wartość zwracaną lub zgłosił wyjątek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<future>](../standard-library/future.md)

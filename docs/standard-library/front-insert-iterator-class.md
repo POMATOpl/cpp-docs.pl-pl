@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy front_insert_iterator
 title: front_insert_iterator — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 8f60b2e5e21b559edb630be2aee377341d4480f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79690f51ce108357a6131c6ab811cee23c6c4529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203276"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324281"
 ---
 # <a name="front_insert_iterator-class"></a>front_insert_iterator — Klasa
 
@@ -60,11 +61,11 @@ Kontener musi spełniać wymagania dla sekwencji wstawiania na przód, gdzie jes
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**:\<iterator>
+**Nagłówek**: \<iterator>
 
 **Przestrzeń nazw:** std
 
-## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator:: container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a> front_insert_iterator:: container_type
 
 Typ, który reprezentuje kontener, w którym ma być przeprowadzone wstawienie na przód.
 
@@ -74,7 +75,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *kontenera*parametrów szablonu.
+Typ jest synonimem dla *kontenera* parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -106,7 +107,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator:: front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a> front_insert_iterator:: front_insert_iterator
 
 Tworzy iterator, który może wstawić elementy z przodu określonego obiektu kontenera.
 
@@ -169,7 +170,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator:: operator\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a> front_insert_iterator:: operator\*
 
 Usuwa odwołanie do iteratora INSERT zwracające element, który zawiera.
 
@@ -183,7 +184,7 @@ Funkcja członkowska zwraca wartość elementu, do którego się odnosi.
 
 ### <a name="remarks"></a>Uwagi
 
-Służy do implementowania wyrażenia iteratora danych wyjściowych ** \* ITER**  =  **value**. Jeśli `Iter` jest iteratorem, który dotyczy elementu w sekwencji, a następnie ** \* ITER**  =  **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
+Służy do implementowania wyrażenia iteratora danych wyjściowych **\* ITER**  =  . Jeśli `Iter` jest iteratorem, który dotyczy elementu w sekwencji, a następnie **\* ITER**  =  **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -230,7 +231,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator:: operator + +
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a> front_insert_iterator:: operator + +
 
 Zwiększa `back_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.
 
@@ -281,7 +282,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator:: operator =
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a> front_insert_iterator:: operator =
 
 Dołącza (wypchnięcia) wartość na wierzchu kontenera.
 
@@ -343,7 +344,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator:: Reference
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a> front_insert_iterator:: Reference
 
 Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.
 

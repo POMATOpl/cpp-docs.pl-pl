@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: fegetround, fesetround'
 title: fegetround, fesetround
 ms.date: 04/05/2018
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3c112efc1c380ac4ce4495f4365e2a47a1d8fd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941209"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322553"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -63,16 +64,16 @@ Po powodzeniu funkcja **fesetround** zwraca wartość 0. W przeciwnym razie zwra
 
 ## <a name="remarks"></a>Uwagi
 
-Operacje zmiennoprzecinkowe mogą korzystać z jednego z kilku trybów zaokrąglania. Te kontrolki wskazujące kierunek wykonywania operacji zmiennoprzecinkowych są zaokrąglane do momentu, w którym są przechowywane wyniki. Są to nazwy i zachowania w przypadku makr zaokrągleń zmiennoprzecinkowego zdefiniowanych w \<fenv. h >:
+Operacje zmiennoprzecinkowe mogą korzystać z jednego z kilku trybów zaokrąglania. Te kontrolki wskazujące kierunek wykonywania operacji zmiennoprzecinkowych są zaokrąglane do momentu, w którym są przechowywane wyniki. Są to nazwy i zachowania w przypadku makr zaokrągleń zmiennoprzecinkowego zdefiniowanych w \<fenv.h> :
 
-|Macro|Opis|
+|Makro|Opis|
 |-----------|-----------------|
 |FE_DOWNWARD|Zaokrąglij do ujemnej nieskończoności.|
 |FE_TONEAREST|Zaokrąglij do najbliższej.|
 |FE_TOWARDZERO|Zaokrąglij do zera.|
 |FE_UPWARD|Zaokrąglij do nieskończoności dodatniej.|
 
-Domyślnym zachowaniem FE_TONEAREST jest zaokrąglanie wyników w połowie między wartościami do wartości najbliższej a parzystą (0) mniejszą liczbą.
+Domyślnym zachowaniem FE_TONEAREST jest zaokrąglenie wyników w połowie wartości w przybliżeniu do najbliższej wartości z parzystą (0) najmniej znaczącym bitem.
 
 Bieżący tryb zaokrąglania ma wpływ na te operacje:
 
@@ -80,13 +81,13 @@ Bieżący tryb zaokrąglania ma wpływ na te operacje:
 
 - Wyniki operatorów arytmetycznych zmiennoprzecinkowych spoza wyrażeń stałych.
 
-- Funkcje zaokrąglania biblioteki, takie jak **rukuj** i **nearbyint —** .
+- Funkcje zaokrąglania biblioteki, takie jak **rukuj** i **nearbyint —**.
 
 - Zwraca wartości z funkcji matematycznych biblioteki standardowej.
 
 Bieżący tryb zaokrąglania nie ma wpływu na te operacje:
 
-- Funkcje biblioteki **TRUNC —** , **ceil —** , **Floor**i **lround** .
+- Funkcje biblioteki **TRUNC —**, **ceil —**, **Floor** i **lround** .
 
 - Wartości zmiennoprzecinkowe do niejawnych rzutowania i konwersji, które zawsze są zaokrąglane w kierunku zera.
 
@@ -96,13 +97,13 @@ Aby korzystać z tych funkcji, należy wyłączyć optymalizacje zmiennoprzecink
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**fegetround**, **fesetround**|\<fenv.h>|\<cfenv>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>

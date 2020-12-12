@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: feholdexcept'
 title: feholdexcept
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 89ccf9bedb05752202152f6bd862b11b2f765322
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322527"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -47,7 +48,7 @@ int feholdexcept(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Wskaźnik do obiektu **fenv_t** , który zawiera kopię środowiska zmiennoprzecinkowego.
+Wskaźnik do obiektu **fenv_t** , aby zawierał kopię środowiska zmiennoprzecinkowego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -55,7 +56,7 @@ Zwraca wartość zero, jeśli i tylko wtedy, gdy funkcja może pomyślnie włąc
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **feholdexcept** służy do przechowywania stanu bieżącego środowiska zmiennoprzecinkowego w obiekcie **fenv_t** wskazanym przez *PENV*oraz do ustawienia środowiska, aby nie przerywać wykonywania w wyjątkach zmiennoprzecinkowych. Jest to tzw. Tryb niezatrzymania.  Ten tryb jest kontynuowany do momentu przywrócenia środowiska przy użyciu [fesetenv](fesetenv1.md) lub [feupdateenv](feupdateenv.md).
+Funkcja **feholdexcept** służy do przechowywania stanu bieżącego środowiska zmiennoprzecinkowego w obiekcie **fenv_t** wskazywanym przez *PENV*, a w celu ustawienia środowiska nie przerywa wykonywania w wyjątkach zmiennoprzecinkowych. Jest to tzw. Tryb niezatrzymania.  Ten tryb jest kontynuowany do momentu przywrócenia środowiska przy użyciu [fesetenv](fesetenv1.md) lub [feupdateenv](feupdateenv.md).
 
 Tej funkcji można użyć na początku procedury podrzędnej, która wymaga ukrycia co najmniej jednego wyjątku zmiennoprzecinkowego z obiektu wywołującego. Aby zgłosić wyjątek, można po prostu usunąć niepożądane wyjątki przy użyciu [feclearexcept,](feclearexcept1.md) a następnie zakończyć tryb niezatrzymania z wywołaniem do **feupdateenv**.
 
@@ -63,13 +64,13 @@ Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, kt
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**feholdexcept**|\<fenv.h>|\<cfenv>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>

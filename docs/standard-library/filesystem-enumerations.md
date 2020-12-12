@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; wyliczenia systemu plików &gt;'
 title: '&lt;wyliczenia systemu plików &gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 8d8320dd18f017f97442e2b88dff2775d96d3d44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324337"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;wyliczenia systemu plików &gt;
 
@@ -161,7 +162,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fdopen, _wfdopen'
 title: _fdopen, _wfdopen
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: 227f9e31c689b0259c429e2ffd9fce074903bd71
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e7b255017f0c4de060a91307bc816eb46af03d20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322624"
 ---
 # <a name="_fdopen-_wfdopen"></a>_fdopen, _wfdopen
 
@@ -81,19 +82,19 @@ Aby uzyskać więcej informacji o tych i innych kodach błędów, zobacz [_doser
 
 Funkcja **_fdopen** kojarzy strumień we/wy z plikiem, który jest identyfikowany przez *FD*, i w ten sposób zezwala na plik otwarty dla operacji we/wy niskiego poziomu, które mają być buforowane i sformatowane. **_wfdopen** to dwubajtowa wersja **_fdopen**; argument *trybu* do **_wfdopen** jest ciągiem znaków dwubajtowych. **_wfdopen** i **_fdopen** zachowują się identycznie.
 
-Deskryptory plików przesłane do **_fdopen** są własnością zwróconego **&#42;pliku** strumienia. W przypadku pomyślnego **_fdopen** nie należy wywoływać metody [ \_Close](close.md) dla deskryptora pliku. Wywołanie [fclose](fclose-fcloseall.md) w zwróconym **pliku &#42;** również zamyka deskryptora pliku.
+Deskryptory plików przesłane do **_fdopen** są własnością zwróconego **&#42;pliku** strumienia. W przypadku pomyślnego **_fdopen** nie należy wywoływać metody [ \_ Close](close.md) dla deskryptora pliku. Wywołanie [fclose](fclose-fcloseall.md) w zwróconym **pliku &#42;** również zamyka deskryptora pliku.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura tchar.h|\_Nie zdefiniowano znaków UNICODE i \_MBCS|\_MBCS zdefiniowany|\_Zdefiniowany UNICODE|
+|Procedura tchar.h|\_\_Nie zdefiniowano znaków Unicode i MBCS|\_MBCS zdefiniowany|\_Zdefiniowany UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
 Ciąg znaków *trybu* określa typ żądanego dostępu do pliku:
 
-| *wyst* | Dostęp |
+| *wyst* | Access |
 |--------|--------|
 | **®** | Otwiera do odczytu. Jeśli plik nie istnieje lub nie można go znaleźć, wywołanie **fopen** kończy się niepowodzeniem. |
 | **k** | Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona. |
@@ -111,33 +112,33 @@ Oprócz powyższych wartości, w *trybie* można również dołączać do trybu 
 | **&** | Otwórz w trybie tekst (przetłumaczony). W tym trybie kombinacje wysuwu wiersza (CR-LF) są tłumaczone na jednowierszowe kanały informacyjne (LF) na wejściu, a znaki LF są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto Ctrl + Z jest interpretowany jako znak końca pliku na wejściu. |
 | **b** | Otwórz w trybie binarnym (nieprzetłumaczonym). Wszystkie tłumaczenia z trybu **t** są pomijane. |
 | **s** | Włącz flagę zatwierdzania dla skojarzonej *nazwy pliku* , aby zawartość bufora plików była zapisywana bezpośrednio na dysk, jeśli zostanie wywołana **fflush** lub **_flushall** . |
-| **Azotan** | Zresetuj flagę zatwierdzania dla skojarzonej *nazwy pliku* na wartość "No-Commit". Domyślnie włączone. Zastępuje ona również globalną flagę zatwierdzania w przypadku łączenia programu z towarami. obj. Globalna flaga zatwierdzania ma wartość "No-Commit", chyba że jawnie połączysz program z towarami. obj. |
+| **n** | Zresetuj flagę zatwierdzania dla skojarzonej *nazwy pliku* na wartość "No-Commit". Jest to opcja domyślna. Zastępuje ona również globalną flagę zatwierdzania w przypadku łączenia programu z towarami. obj. Globalna flaga zatwierdzania ma wartość "No-Commit", chyba że jawnie połączysz program z towarami. obj. |
 
-Opcje *trybu* **t**, **c**i **n** to rozszerzenia Microsoft dla **fopen** i **_fdopen**. Nie należy używać ich, jeśli chcesz zachować możliwość przenoszenia ANSI.
+Opcje *trybu* **t**, **c** i **n** to rozszerzenia Microsoft dla **fopen** i **_fdopen**. Nie należy używać ich, jeśli chcesz zachować możliwość przenoszenia ANSI.
 
-Jeśli **t** lub **b** nie jest określony w *trybie*, domyślny tryb tłumaczenia jest definiowany przez zmienną [ \_](../../c-runtime-library/fmode.md)globalną Fmode. Jeśli **t** lub **b** jest poprzedzony argumentem, funkcja kończy się niepowodzeniem i zwraca wartość null. Aby zapoznać się z omówieniem trybów tekstowych i binarnych, zobacz [plik tekstowy i tryb binarny we/wy](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Jeśli **t** lub **b** nie jest określony w *trybie*, domyślny tryb tłumaczenia jest definiowany przez zmienną globalną [ \_ Fmode](../../c-runtime-library/fmode.md). Jeśli **t** lub **b** jest poprzedzony argumentem, funkcja kończy się niepowodzeniem i zwraca wartość null. Aby zapoznać się z omówieniem trybów tekstowych i binarnych, zobacz [plik tekstowy i tryb binarny we/wy](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Prawidłowe znaki w ciągu *trybu* używane w **fopen** i **_fdopen** odpowiadają argumentom *Oflag* używanym w [ \_otwartych](open-wopen.md) i [ \_sopen](sopen-wsopen.md), jak pokazano w poniższej tabeli:
+Prawidłowe znaki w ciągu *trybu* używane w **fopen** i **_fdopen** odpowiadają argumentom *Oflag* używanym w [ \_ otwartych](open-wopen.md) i [ \_ sopen](sopen-wsopen.md), jak pokazano w poniższej tabeli:
 
 |Znaki w ciągu *trybu*|Równoważna wartość *Oflag* dla **_open** i **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**z**|**\_O\_WRONLY &#124; \_o\_dołączenie** (zazwyczaj ** \_O\_WRONLY &#124; \_o\_tworzenie &#124; \_o\_dołączeniu**)|
-|**a +**|**\_O\_RDWR &#124; \_o\_dołączenie** (zazwyczaj ** \_O\_RDWR &#124; \_\_o \_dołączenie &#124; o\_** tworzenie)|
-|**®**|**\_O\_RDONLY**|
-|**Język r +**|**\_O\_RDWR**|
-|**k**|**\_O\_WRONLY** (zazwyczaj ** \_o\_WRONLY &#124; \_o\_&#124; \_o\_TRUNC —**)|
-|**w +**|**\_O\_RDWR** (zazwyczaj ** \_o\_RDWR &#124; \_o\_&#124; \_o\_TRUNC —**)|
-|**b**|**\_O\_plik binarny**|
-|**&**|**\_O\_tekst**|
+|**z**|**\_ O \_ WRONLY &#124; \_ o \_ dołączenie** (zazwyczaj **\_ O \_ WRONLY &#124; \_ o tworzenie \_ &#124; \_ o \_ dołączeniu**)|
+|**a +**|**\_ O \_ RDWR &#124; \_ o \_ dołączenie** (zazwyczaj **\_ O \_ RDWR &#124; \_ o \_ dołączenie &#124; \_ o \_** tworzenie)|
+|**®**|**\_O \_ RDONLY**|
+|**Język r +**|**\_O \_ RDWR**|
+|**w**|**\_ O \_ WRONLY** (zazwyczaj **\_ o \_ WRONLY &#124; \_ o \_ &#124; \_ o \_ TRUNC —**)|
+|**w +**|**\_ O \_ RDWR** (zazwyczaj **\_ o \_ RDWR &#124; \_ o \_ &#124; \_ o \_ TRUNC —**)|
+|**b**|**\_O \_ plik binarny**|
+|**&**|**\_O \_ tekst**|
 |**s**|Brak|
-|**Azotan**|Brak|
+|**n**|Brak|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fdopen**|\<stdio. h>|
-|**_wfdopen**|\<stdio. h> lub \<WCHAR. h>|
+|**_fdopen**|\<stdio.h>|
+|**_wfdopen**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -178,7 +179,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_fdopentxt"></a>Dane wejściowe: crt_fdopen. txt
+### <a name="input-crt_fdopentxt"></a>Dane wejściowe: crt_fdopen.txt
 
 ```Input
 Line one
@@ -194,8 +195,8 @@ Lines in file: 2
 ## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[\_DUP, \_dUP2](dup-dup2.md)<br/>
-[fclose, \_fcloseall](fclose-fcloseall.md)<br/>
-[fopen, \_wfopen](fopen-wfopen.md)<br/>
-[freopen, \_wfreopen](freopen-wfreopen.md)<br/>
-[\_Otwórz, \_wOpen](open-wopen.md)<br/>
+[\_DUP, \_ dUP2](dup-dup2.md)<br/>
+[fclose, \_ fcloseall](fclose-fcloseall.md)<br/>
+[fopen, \_ wfopen](fopen-wfopen.md)<br/>
+[freopen, \_ wfreopen](freopen-wfreopen.md)<br/>
+[\_Otwórz, \_ wOpen](open-wopen.md)<br/>

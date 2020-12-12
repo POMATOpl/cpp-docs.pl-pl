@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat kontroli aplikacji
 title: Sterowanie aplikacjami
 ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 40ac3b6871d13420797279629a2661b22545d1d8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 20a777f5b7bb20870e9156ee090ff24ec4690f14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322827"
 ---
 # <a name="application-control"></a>Sterowanie aplikacjami
 

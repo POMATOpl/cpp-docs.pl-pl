@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej o strukturze niepodzielnej
 title: atomic — Struktura
 ms.date: 04/20/2018
 f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-ms.openlocfilehash: 738f79f966b8b0482baf4f78120c0d690425a4bf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9698e0e14129d8fa020bd1432912aea85498ff6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321697"
 ---
 # <a name="atomic-structure"></a>atomic — Struktura
 
@@ -52,7 +53,7 @@ struct atomic;
 
 ## <a name="remarks"></a>Uwagi
 
-Typ *ty* musi być jednocześnie *kopiowany*. Oznacza to, że użycie [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) do kopiowania jego bajtów musi generować prawidłowy obiekt *ty* , który porównuje równy pierwotnemu obiektowi. [Compare_exchange_weak](#compare_exchange_weak) i [compare_exchange_strong](#compare_exchange_strong) funkcje członkowskie używają [funkcji memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) do określenia, *czy dwie wartości* są równe. Te funkcje nie będą używały zdefiniowanego przez *ty*elementu `operator==` . Funkcje składowe `atomic` używane `memcpy` do kopiowania wartości typu *ty*.
+Typ *ty* musi być jednocześnie *kopiowany*. Oznacza to, że użycie [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) do kopiowania jego bajtów musi generować prawidłowy obiekt *ty* , który porównuje równy pierwotnemu obiektowi. [Compare_exchange_weak](#compare_exchange_weak) i [compare_exchange_strong](#compare_exchange_strong) funkcje członkowskie używają [funkcji memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) do określenia, *czy dwie wartości* są równe. Te funkcje nie będą używały zdefiniowanego przez *ty* elementu `operator==` . Funkcje składowe `atomic` używane `memcpy` do kopiowania wartości typu *ty*.
 
 Częściowa specjalizacja, `atomic<Ty*>` , istnieje dla wszystkich typów wskaźnika. Specjalizacja umożliwia dodanie przesunięcia do wartości wskaźnika zarządzanego lub odejmowania przesunięcia. Operacje arytmetyczne przyjmują argument typu `ptrdiff_t` i dostosowują ten argument zgodnie z rozmiarem *ty* , aby był spójny ze zwykłym arytmetycznym adresem.
 
@@ -115,7 +116,7 @@ atomic<int> ai1(0);
 
 ## <a name="atomicoperator-ty"></a><a name="op_ty"></a> niepodzielna:: operator *ty*
 
-Operator dla typu określonego dla szablonu, niepodzielny \<*Ty*> . Pobiera wartość przechowywaną w ** \* tym**elemencie.
+Operator dla typu określonego dla szablonu, niepodzielny \<*Ty*> . Pobiera wartość przechowywaną w **\* tym** elemencie.
 
 ```cpp
 atomic<Ty>::operator Ty() const volatile noexcept;
@@ -232,7 +233,7 @@ Ten operator używa `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
 ## <a name="atomicoperator"></a><a name="op_and_eq"></a> niepodzielna:: operator&=
 
-Wykonuje wartości bitowe i w określonej wartości oraz przechowywaną ** \* wartość.** Używane tylko przez całkowitą specjalizację.
+Wykonuje wartości bitowe i w określonej wartości oraz przechowywaną **\* wartość.** Używane tylko przez całkowitą specjalizację.
 
 ```cpp
 atomic<Ty>::operator&= (
@@ -254,11 +255,11 @@ Wynik bitowy i.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość ** \* tego** elementu wartością bitową i *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość **\* tego** elementu wartością bitową i *wartość* oraz bieżącą wartość przechowywaną w **\* tym** zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
 ## <a name="atomicoperator124"></a><a name="op_or_eq"></a> niepodzielna:: operator&#124;=
 
-Wykonuje wartość bitową lub dla określonej wartości i wartości przechowywanej. ** \* ** Używane tylko przez całkowitą specjalizację.
+Wykonuje wartość bitową lub dla określonej wartości i wartości przechowywanej. **\*** Używane tylko przez całkowitą specjalizację.
 
 ```cpp
 atomic<Ty>::operator|= (
@@ -280,11 +281,11 @@ Wynik bitowy lub.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość ** \* tej** wartości wartością bitową lub *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md) .
+Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość **\* tej** wartości wartością bitową lub *wartość* oraz bieżącą wartość przechowywaną w **\* tym** zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md) .
 
 ## <a name="atomicoperator"></a><a name="op_xor_eq"></a> niepodzielna:: operator ^ =
 
-Wykonuje bitowe wykluczające lub na określoną wartość oraz przechowywaną ** \* wartość.** Używane tylko przez całkowitą specjalizację.
+Wykonuje bitowe wykluczające lub na określoną wartość oraz przechowywaną **\* wartość.** Używane tylko przez całkowitą specjalizację.
 
 ```cpp
 atomic<Ty>::operator^= (
@@ -306,11 +307,11 @@ Wynik bitowy wyłącznych lub.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość ** \* tego** elementu wartością bitową wykluczającą lub *, a bieżącą* wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md) .
+Ten operator wykonuje operację odczytu i zapisu, aby zastąpić przechowywaną wartość **\* tego** elementu wartością bitową wykluczającą lub *, a bieżącą* wartość przechowywaną w **\* tym** zakresie w ramach ograniczeń `memory_order_seq_cst` [memory_order](atomic-enums.md) .
 
 ## <a name="atomiccompare_exchange_strong"></a><a name="compare_exchange_strong"></a> niepodzielna:: compare_exchange_strong
 
-Wykonuje w ** \* tym**celu niepodzielną operację porównania i wymiany.
+Wykonuje w **\* tym** celu niepodzielną operację porównania i wymiany.
 
 ```cpp
 bool compare_exchange_strong(
@@ -357,7 +358,7 @@ Drugi `memory_order` argument.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta niepodzielna operacja porównania i wymiany porównuje wartość przechowywaną w ** \* tym** elemencie z *EXP*. Jeśli wartości są równe, operacja zastępuje wartość, która jest przechowywana w ** \* tym** elemencie z *wartością* przy użyciu operacji odczytu-modify-write i stosując ograniczenia zlecenia pamięci, które są określone przez *Order1*. Jeśli wartości nie są równe, operacja używa wartości przechowywanej w ** \* tym** elemencie, aby zastąpić polecenie *EXP* i zastosować ograniczenia kolejności pamięci, które są określone przez *Order2*.
+Ta niepodzielna operacja porównania i wymiany porównuje wartość przechowywaną w **\* tym** elemencie z *EXP*. Jeśli wartości są równe, operacja zastępuje wartość, która jest przechowywana w **\* tym** elemencie z *wartością* przy użyciu operacji odczytu-modify-write i stosując ograniczenia zlecenia pamięci, które są określone przez *Order1*. Jeśli wartości nie są równe, operacja używa wartości przechowywanej w **\* tym** elemencie, aby zastąpić polecenie *EXP* i zastosować ograniczenia kolejności pamięci, które są określone przez *Order2*.
 
 Przeciążenia, które nie mają sekundy, `memory_order` używają niejawnego *Order2* , który jest oparty na wartości *Order1*. Jeśli *Order1* jest `memory_order_acq_rel` , *Order2* jest `memory_order_acquire` . Jeśli *Order1* jest `memory_order_release` , *Order2* jest `memory_order_relaxed` . We wszystkich innych przypadkach *Order2* jest równa *Order1*.
 
@@ -365,7 +366,7 @@ W przypadku przeciążeń przyjmujących dwa `memory_order` parametry wartość 
 
 ## <a name="atomiccompare_exchange_weak"></a><a name="compare_exchange_weak"></a> niepodzielna:: compare_exchange_weak
 
-Wykonuje na ** \* tym**samym słabą niepodzielną operację porównania i wymiany.
+Wykonuje na **\* tym** samym słabą niepodzielną operację porównania i wymiany.
 
 ```cpp
 bool compare_exchange_weak(
@@ -412,7 +413,7 @@ Drugi `memory_order` argument.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta niepodzielna operacja porównania i wymiany porównuje wartość przechowywaną w ** \* tym** elemencie z *EXP*. Jeśli wartości są równe, operacja zastępuje wartość, która jest przechowywana w ** \* tym** elemencie z*wartością* przy użyciu operacji odczytu-modify-write i stosując ograniczenia zlecenia pamięci, które są określone przez *Order1*. Jeśli wartości nie są równe, operacja używa wartości przechowywanej w ** \* tym** elemencie, aby zastąpić polecenie *EXP* i zastosować ograniczenia kolejności pamięci, które są określone przez *Order2*.
+Ta niepodzielna operacja porównania i wymiany porównuje wartość przechowywaną w **\* tym** elemencie z *EXP*. Jeśli wartości są równe, operacja zastępuje wartość, która jest przechowywana w **\* tym** elemencie z *wartością* przy użyciu operacji odczytu-modify-write i stosując ograniczenia zlecenia pamięci, które są określone przez *Order1*. Jeśli wartości nie są równe, operacja używa wartości przechowywanej w **\* tym** elemencie, aby zastąpić polecenie *EXP* i zastosować ograniczenia kolejności pamięci, które są określone przez *Order2*.
 
 Słaba, niepodzielna operacja porównania i wymiany wykonuje wymianę, jeśli porównywane wartości są równe. Jeśli wartości nie są równe, operacja nie jest gwarantowana do wykonania wymiany.
 
@@ -422,7 +423,7 @@ W przypadku przeciążeń przyjmujących dwa `memory_order` parametry wartość 
 
 ## <a name="atomicexchange"></a><a name="exchange"></a> niepodzielna:: Exchange
 
-Używa określonej wartości w celu zastąpienia przechowywanej wartości ** \* tego**elementu.
+Używa określonej wartości w celu zastąpienia przechowywanej wartości **\* tego** elementu.
 
 ```cpp
 Ty atomic<Ty>::exchange(
@@ -445,15 +446,15 @@ Klasa `memory_order`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość przechowywana ** \* tego** elementu przed wymianą.
+Wartość przechowywana **\* tego** elementu przed wymianą.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta operacja wykonuje operację odczytu/modyfikacji i zapisu *, aby zastąpić* wartość przechowywaną w ** \* tym**elemencie w ramach ograniczeń pamięci określonych przez *kolejność*.
+Ta operacja wykonuje operację odczytu/modyfikacji i zapisu *, aby zastąpić* wartość przechowywaną w **\* tym** elemencie w ramach ograniczeń pamięci określonych przez *kolejność*.
 
 ## <a name="atomicfetch_add"></a><a name="fetch_add"></a> niepodzielna:: fetch_add
 
-Pobiera wartość przechowywaną w ** \* tym**elemencie, a następnie dodaje określoną wartość do przechowywanej wartości.
+Pobiera wartość przechowywaną w **\* tym** elemencie, a następnie dodaje określoną wartość do przechowywanej wartości.
 
 ```cpp
 Ty atomic<Ty>::fetch_add (
@@ -476,15 +477,15 @@ Klasa `memory_order`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt *ty* , który zawiera wartość przechowywaną w ** \* tym** elemencie przed dodaniem.
+Obiekt *ty* , który zawiera wartość przechowywaną w **\* tym** elemencie przed dodaniem.
 
 ### <a name="remarks"></a>Uwagi
 
-`fetch_add`Metoda wykonuje operację odczytu i modyfikacji zapisu, aby dodać niepodzielną wartość *Value* do wartości przechowywanej w ** \* tym**miejscu i stosuje ograniczenia pamięci, które są określone przez *kolejność*.
+`fetch_add`Metoda wykonuje operację odczytu i modyfikacji zapisu, aby dodać niepodzielną wartość  do wartości przechowywanej w **\* tym** miejscu i stosuje ograniczenia pamięci, które są określone przez *kolejność*.
 
 ## <a name="atomicfetch_and"></a><a name="fetch_and"></a> niepodzielna:: fetch_and
 
-Wykonuje wartości bitowe i na wartość oraz istniejącą wartość, która jest przechowywana w ** \* tym**elemencie.
+Wykonuje wartości bitowe i na wartość oraz istniejącą wartość, która jest przechowywana w **\* tym** elemencie.
 
 ```cpp
 Ty atomic<Ty>::fetch_and (
@@ -511,11 +512,11 @@ Obiekt *ty* , który zawiera wynik bitowy i.
 
 ### <a name="remarks"></a>Uwagi
 
-`fetch_and`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość ** \* tego** elementu wartością bitową i *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń pamięci określonych przez *kolejność*.
+`fetch_and`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość **\* tego** elementu wartością bitową i *wartość* oraz bieżącą wartość przechowywaną w **\* tym** zakresie w ramach ograniczeń pamięci określonych przez *kolejność*.
 
 ## <a name="atomicfetch_or"></a><a name="fetch_or"></a> niepodzielna:: fetch_or
 
-Wykonuje wartość bitową lub wartości i istniejącą wartość, która jest przechowywana w ** \* tym**elemencie.
+Wykonuje wartość bitową lub wartości i istniejącą wartość, która jest przechowywana w **\* tym** elemencie.
 
 ```cpp
 Ty atomic<Ty>::fetch_or (
@@ -542,7 +543,7 @@ Obiekt *ty* , który zawiera wynik bitowy lub.
 
 ### <a name="remarks"></a>Uwagi
 
-`fetch_or`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość ** \* tej** wartości wartością bitową lub *wartość* oraz bieżącą wartość przechowywaną w ** \* tym**zakresie w ramach ograniczeń pamięci, które są określone przez *kolejność*.
+`fetch_or`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość **\* tej** wartości wartością bitową lub *wartość* oraz bieżącą wartość przechowywaną w **\* tym** zakresie w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
 ## <a name="atomicfetch_sub"></a><a name="fetch_sub"></a> niepodzielna:: fetch_sub
 
@@ -573,11 +574,11 @@ Obiekt *ty* , który zawiera wynik odejmowania.
 
 ### <a name="remarks"></a>Uwagi
 
-`fetch_sub`Metoda wykonuje operację odczytu i modyfikacji zapisu w celu odejmowania niepodzielnych *wartości* z wartości przechowywanej w ** \* tym**miejscu w ramach ograniczeń pamięci, które są określone przez *kolejność*.
+`fetch_sub`Metoda wykonuje operację odczytu i modyfikacji zapisu w celu odejmowania niepodzielnych *wartości* z wartości przechowywanej w **\* tym** miejscu w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
 ## <a name="atomicfetch_xor"></a><a name="fetch_xor"></a> niepodzielna:: fetch_xor
 
-Wykonuje bitowe wartościowe lub na wartość i istniejącą wartość, która jest przechowywana w ** \* tym**elemencie.
+Wykonuje bitowe wartościowe lub na wartość i istniejącą wartość, która jest przechowywana w **\* tym** elemencie.
 
 ```cpp
 Ty atomic<Ty>::fetch_xor (
@@ -604,11 +605,11 @@ Obiekt *ty* zawierający wynik bitowe wyłącznych lub.
 
 ### <a name="remarks"></a>Uwagi
 
-`fetch_xor`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość ** \* tego** *elementu wartością* bitową wykluczającą lub i bieżącą wartość, która jest przechowywana w ** \* tym**miejscu, i stosuje ograniczenia pamięci, które są określone w *kolejności*.
+`fetch_xor`Metoda wykonuje operację odczytu-modify-write, aby zastąpić przechowywaną wartość **\* tego** *elementu wartością* bitową wykluczającą lub i bieżącą wartość, która jest przechowywana w **\* tym** miejscu, i stosuje ograniczenia pamięci, które są określone w *kolejności*.
 
 ## <a name="atomicis_lock_free"></a><a name="is_lock_free"></a> niepodzielna:: is_lock_free
 
-Określa, czy operacje niepodzielne w ** \* tej** usłudze są wolne od blokady.
+Określa, czy operacje niepodzielne w **\* tej** usłudze są wolne od blokady.
 
 ```cpp
 bool is_lock_free() const volatile noexcept;
@@ -616,7 +617,7 @@ bool is_lock_free() const volatile noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-prawda, jeśli operacje niepodzielne na ** \* tym** serwerze są wolne od blokady; w przeciwnym razie, FAŁSZ.
+prawda, jeśli operacje niepodzielne na **\* tym** serwerze są wolne od blokady; w przeciwnym razie, FAŁSZ.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -624,7 +625,7 @@ Typ niepodzielny jest zablokowany, jeśli żadna niepodzielna operacja nie używ
 
 ## <a name="atomicload"></a><a name="load"></a> niepodzielna:: Load
 
-Pobiera wartość przechowywaną w ** \* ramach**określonych ograniczeń pamięci.
+Pobiera wartość przechowywaną w **\* ramach** określonych ograniczeń pamięci.
 
 ```cpp
 Ty atomic::load(
@@ -642,7 +643,7 @@ Klasa `memory_order`. *Kolejność* nie może być `memory_order_release` lub `m
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pobrana wartość, która jest przechowywana w ** \* tym**elemencie.
+Pobrana wartość, która jest przechowywana w **\* tym** elemencie.
 
 ## <a name="atomicstore"></a><a name="store"></a> niepodzielna:: Store
 

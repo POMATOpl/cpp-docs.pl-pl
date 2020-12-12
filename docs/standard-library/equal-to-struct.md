@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury equal_to
 title: equal_to — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cae0531c31396d16d447e3b0123dc679bbfd5aa6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324439"
 ---
-# <a name="equalto-struct"></a>equal_to — Struktura
+# <a name="equal_to-struct"></a>equal_to — Struktura
 
-Predykat binarny, który wykonuje operacje równości (`operator==`) na jego argumenty.
+Predykat binarny, który wykonuje operację równości ( `operator==` ) na jego argumentach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,21 +41,21 @@ struct equal_to<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator==` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Dowolny typ, który obsługuje element `operator==` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-*po lewej stronie*\
-Lewy operand operacji porównania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand operacji równości. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand operacji porównania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand operacji równości. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left == Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator==`.
+Wynik `Left == Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator==` .
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty typu *typu* musi umożliwiać porównywanie równości. Takie rozwiązanie wymaga `operator==` zdefiniowane na zestaw obiektów spełnia matematyczne właściwości relacji równoważności. Wszystkie wbudowane typy liczbowe i wskaźnik spełnienia tego wymagania.
+Obiekty *typu Type muszą być* porównywalne ze równośćmi. Wymaga to, aby `operator==` zdefiniowane na zestawie obiektów spełniały właściwości matematyczne relacji równoważności. Wszystkie wbudowane typy liczbowe i wskaźniki spełniają to wymaganie.
 
 ## <a name="example"></a>Przykład
 

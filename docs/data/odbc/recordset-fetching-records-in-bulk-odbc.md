@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)'
 title: 'Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: ccdc4668f0c19f63ec86ee9a6d788532eb4d9d38
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 6f77186a640971e6763160dde397f5aeb0b97f3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403715"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322354"
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Zestaw rekordów: zbiorcze pobieranie rekordów (ODBC)
 
@@ -35,7 +36,7 @@ W tym temacie objaśniono:
 
 - [Jak zaimplementować wymianę pól rekordów zbiorczych](#_core_how_to_implement_bulk_record_field_exchange).
 
-## <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Jak CRecordset obsługuje pobieranie wierszy zbiorczych
+## <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Jak CRecordset obsługuje pobieranie wierszy zbiorczych
 
 Przed otwarciem obiektu zestawu rekordów można zdefiniować rozmiar zestawu wierszy przy użyciu `SetRowsetSize` funkcji składowej. Rozmiar zestawu wierszy określa, ile rekordów ma być pobieranych podczas pojedynczego pobierania. Po zaimplementowaniu pobierania wierszy zbiorczych domyślny rozmiar zestawu wierszy wynosi 25. Jeśli pobieranie wierszy zbiorczych nie jest zaimplementowane, rozmiar zestawu wierszy pozostaje ustalony na 1.
 
@@ -54,7 +55,7 @@ W poniższej tabeli wymieniono funkcje elementów członkowskich zapewniane prze
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Przenosi kursor do określonego wiersza w zestawie wierszy.|
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Funkcja wirtualna, która zmienia ustawienie rozmiaru zestawu wierszy na określoną wartość.|
 
-## <a name="special-considerations"></a><a name="_core_special_considerations"></a>Uwagi specjalne
+## <a name="special-considerations"></a><a name="_core_special_considerations"></a> Uwagi specjalne
 
 Chociaż pobieranie wierszy zbiorczych jest wzrostem wydajności, niektóre funkcje działają inaczej. Przed podjęciem decyzji o zaimplementowaniu pobierania wierszy zbiorczych należy wziąć pod uwagę następujące kwestie:
 
@@ -62,11 +63,11 @@ Chociaż pobieranie wierszy zbiorczych jest wzrostem wydajności, niektóre funk
 
 - Funkcje członkowskie `IsDeleted` ,, `IsFieldDirty` , `IsFieldNull` `IsFieldNullable` `SetFieldDirty` i `SetFieldNull` nie mogą być używane w zestawach rekordów, które implementują pobieranie wierszy zbiorczych. Można jednak wywołać zamiast `GetRowStatus` `IsDeleted` , i zamiast `GetODBCFieldInfo` `IsFieldNullable` .
 
-- `Move`Operacje zmieniają położenie zestawu wierszy. Załóżmy na przykład, że otworzysz zestaw rekordów, który ma 100 rekordów o początkowym rozmiarze zestawu wierszy 10. `Open`Pobiera wiersze od 1 do 10 z bieżącym rekordem umieszczonym w wierszu 1. Wywołanie `MoveNext` pobierania następnego zestawu wierszy, a nie następnego wiersza. Ten zestaw wierszy składa się z wierszy od 11 do 20 z bieżącym rekordem umieszczonym w wierszu 11. Należy pamiętać, że `MoveNext` `Move( 1 )` nie są one równoważne, gdy implementowane jest pobieranie wierszy zbiorczych. `Move( 1 )`Pobiera zestaw wierszy, który rozpoczyna 1 wiersz od bieżącego rekordu. W tym przykładzie wywoływanie `Move( 1 )` po wywołaniu `Open` Pobiera zestaw wierszy składający się z wierszy od 2 do 11 z bieżącym rekordem umieszczonym w wierszu 2. Aby uzyskać więcej informacji, zobacz Funkcja [przenoszenia](../../mfc/reference/crecordset-class.md#move) elementu członkowskiego.
+- `Move`Operacje zmieniają położenie zestawu wierszy. Załóżmy na przykład, że otworzysz zestaw rekordów, który ma 100 rekordów o początkowym rozmiarze zestawu wierszy 10. `Open` Pobiera wiersze od 1 do 10 z bieżącym rekordem umieszczonym w wierszu 1. Wywołanie `MoveNext` pobierania następnego zestawu wierszy, a nie następnego wiersza. Ten zestaw wierszy składa się z wierszy od 11 do 20 z bieżącym rekordem umieszczonym w wierszu 11. Należy pamiętać, że `MoveNext` `Move( 1 )` nie są one równoważne, gdy implementowane jest pobieranie wierszy zbiorczych. `Move( 1 )` Pobiera zestaw wierszy, który rozpoczyna 1 wiersz od bieżącego rekordu. W tym przykładzie wywoływanie `Move( 1 )` po wywołaniu `Open` Pobiera zestaw wierszy składający się z wierszy od 2 do 11 z bieżącym rekordem umieszczonym w wierszu 2. Aby uzyskać więcej informacji, zobacz Funkcja [przenoszenia](../../mfc/reference/crecordset-class.md#move) elementu członkowskiego.
 
 - W przeciwieństwie do wymiany pól rekordów kreatorzy nie obsługują wymiany pól rekordów zbiorczych. Oznacza to, że należy ręcznie zadeklarować elementy członkowskie danych pola i ręcznie przesłonić `DoBulkFieldExchange` , pisząc wywołania funkcji Bulk RFX. Aby uzyskać więcej informacji, zobacz [Rejestrowanie funkcji wymiany pól](../../mfc/reference/record-field-exchange-functions.md) w *dokumentacji biblioteki klas*.
 
-## <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Jak zaimplementować wymianę pól rekordów zbiorczych
+## <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a> Jak zaimplementować wymianę pól rekordów zbiorczych
 
 Wymiana pól rekordów zbiorczych przenosi zestaw wierszy danych ze źródła danych do obiektu recordset. Funkcje Bulk RFX używają tablic do przechowywania tych danych, a także tablic do przechowywania długości każdego elementu danych w zestawie wierszy. W definicji klasy należy zdefiniować elementy członkowskie danych pola jako wskaźniki umożliwiające dostęp do tablic danych. Ponadto należy zdefiniować zestaw wskaźników, aby uzyskać dostęp do tablic długości. Wszystkie elementy członkowskie danych parametrów nie powinny być deklarowane jako wskaźniki; Deklarowanie elementów członkowskich danych podczas korzystania z wymiany pól rekordów zbiorczych jest taka sama jak deklarująca je podczas korzystania z wymiany pól rekordów. Poniższy kod przedstawia prosty przykład:
 

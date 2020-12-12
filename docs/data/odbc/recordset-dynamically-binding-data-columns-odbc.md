@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zestaw rekordów: dynamiczne wiązanie kolumn danych (ODBC)'
 title: 'Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb141874fa39b06e8e000c03e538021650facf91
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322382"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)
 
@@ -146,7 +147,7 @@ Następnie skonfiguruj lokalizacje magazynu dla kolumn, które mają być powią
 Wynikiem powyższych procedur jest dwie główne listy: kolumny do powiązania — dynamicznie zawierające nazwy kolumn i wartości dynamiczne kolumn zawierające wartości w kolumnach dla bieżącego rekordu.
 
 > [!TIP]
-> Jeśli nowe kolumny nie są tego samego typu danych, można chcieć utworzyć dodatkową równoległą listę zawierającą elementy, które w jakiś sposób definiują typ każdego odpowiadającego elementu na liście kolumn. (W razie potrzeby można użyć wartości AFX_RFX_BOOL, AFX_RFX_BYTE i tak dalej. Te stałe są zdefiniowane w AFXDB. H.) wybierz typ listy na podstawie sposobu reprezentowania typów danych kolumny.
+> Jeśli nowe kolumny nie są tego samego typu danych, można chcieć utworzyć dodatkową równoległą listę zawierającą elementy, które w jakiś sposób definiują typ każdego odpowiadającego elementu na liście kolumn. (W razie potrzeby można użyć wartości AFX_RFX_BOOL, AFX_RFX_BYTE i tak dalej. Te stałe są zdefiniowane w AFXDB. H.) Wybierz typ listy na podstawie sposobu reprezentowania typów danych kolumny.
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Dodawanie wywołań RFX w celu powiązania kolumn
 

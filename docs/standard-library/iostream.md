@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; iostream&gt;'
 title: '&lt;iostream&gt;'
 ms.date: 09/20/2017
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 5805d441b4fc2fc2927b57f4d94ba8b8ccecb22a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 882b7de8add9339a0580efeac18740205cc175aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845474"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323904"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -121,7 +122,7 @@ Obiekt [IStream](../standard-library/istream-typedefs.md#istream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt kontroluje wyodrębnianie ze standardowego wejścia jako strumień bajtów. Gdy obiekt zostanie skonstruowany, wywołanie Call `cin.` [tie](../standard-library/basic-ios-class.md#tie) zwraca `&` [cout](#cout).
+Obiekt kontroluje wyodrębnianie ze standardowego wejścia jako strumień bajtów. Gdy obiekt zostanie skonstruowany, wywołanie Call `cin.` [](../standard-library/basic-ios-class.md#tie) zwraca `&` [cout](#cout).
 
 #### <a name="example"></a>Przykład
 
@@ -232,7 +233,7 @@ Obiekt [wistream](../standard-library/istream-typedefs.md#wistream) .
 
 #### <a name="remarks"></a>Uwagi
 
-Obiekt kontroluje wyodrębnianie ze standardowego wejścia jako strumień szeroki. Gdy obiekt zostanie skonstruowany, wywołanie Call `wcin.` [tie](../standard-library/basic-ios-class.md#tie) zwraca `&` [wcout](#wcout).
+Obiekt kontroluje wyodrębnianie ze standardowego wejścia jako strumień szeroki. Gdy obiekt zostanie skonstruowany, wywołanie Call `wcin.` [](../standard-library/basic-ios-class.md#tie) zwraca `&` [wcout](#wcout).
 
 #### <a name="example"></a>Przykład
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fegetenv'
 title: fegetenv
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f4d6ab3de440d2d8d7e145111339577f04699f8b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322579"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -55,19 +56,19 @@ Zwraca wartość 0, jeśli środowisko zmiennoprzecinkowe zostało pomyślnie za
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fegetenv** przechowuje bieżące środowisko zmiennoprzecinkowe w obiekcie wskazywanym przez *PENV*. Środowisko zmiennoprzecinkowe jest zestawem flag stanu i trybów kontroli, które wpływają na obliczenia zmiennoprzecinkowe. Obejmuje to tryb kierunku zaokrąglenia oraz flagi stanu dla wyjątków zmiennoprzecinkowych.  Jeśli *PENV* nie wskazuje prawidłowego obiektu **fenv_t** , następne zachowanie jest niezdefiniowane.
+Funkcja **fegetenv** przechowuje bieżące środowisko zmiennoprzecinkowe w obiekcie wskazywanym przez *PENV*. Środowisko zmiennoprzecinkowe jest zestawem flag stanu i trybów kontroli, które wpływają na obliczenia zmiennoprzecinkowe. Obejmuje to tryb kierunku zaokrąglenia oraz flagi stanu dla wyjątków zmiennoprzecinkowych.  Jeśli *PENV* nie wskazuje prawidłowego obiektu **fenv_t** , kolejne zachowanie jest niezdefiniowane.
 
 Aby użyć tej funkcji, należy wyłączyć optymalizacje zmiennoprzecinkowe, które mogą uniemożliwić dostęp przy użyciu `#pragma fenv_access(on)` dyrektywy przed wywołaniem. Aby uzyskać więcej informacji, zobacz [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
 |**fegetenv**|\<fenv.h>|\<cfenv>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [fesetenv](fesetenv1.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie klas do pisania aplikacji dla systemu Windows'
 title: Używanie klas do pisania aplikacji dla systemu Windows
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,46 +10,46 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b94155b565872b614efa291699cecbaf4770fdaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322715"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Używanie klas do pisania aplikacji dla systemu Windows
 
-Razem wzięte klas w bibliotece Microsoft Foundation Class (MFC) tworzą "strukturę aplikacji," na którym tworzysz aplikację dla systemu operacyjnego Windows. Na poziomie bardzo ogólne struktura definiuje szkielet aplikacji i dostarcza implementacji standardowego interfejsu użytkownika, które mogą być umieszczane na szkielet. Zadanie jako programisty jest wypełnienie w pozostałej części szkielet, służą do powyższych czynności, które są specyficzne dla aplikacji. Za pomocą Kreatora aplikacji MFC do tworzenia plików dla aplikacji dokładnego modułu uruchamiającego, możesz uzyskać łatwiej rozpocząć pracę. Microsoft Visual C++ edytory zasobów wizualnie projektować elementów interfejsu użytkownika widoku klasy polecenia, aby nawiązać połączenie z tych elementów kodu i biblioteki klas umożliwia zaimplementować logikę specyficzne dla aplikacji.
+Razem klasy w bibliotece Microsoft Foundation Class (MFC) składają się na "platformę aplikacji", na której tworzysz aplikację dla systemu operacyjnego Windows. Na bardzo ogólnym poziomie struktura definiuje szkielet aplikacji i dostarcza standardowe implementacje interfejsu użytkownika, które można umieścić w sieci szkieletowej. Zadaniem programisty jest wypełnienie reszty szkieletu, które są charakterystyczne dla danej aplikacji. Możesz uzyskać początek przy użyciu Kreatora aplikacji MFC, aby utworzyć pliki dla bardzo dokładnej aplikacji początkowej. Za pomocą edytorów zasobów Microsoft Visual C++ można zaprojektować elementy interfejsu użytkownika wizualnie, Widok klasy polecenia, aby połączyć te elementy z kodem, i bibliotekę klas, aby zaimplementować logikę specyficzną dla aplikacji.
 
-W wersji 3.0 i nowszych programu MFC framework obsługuje programowania na platformach Win32, łącznie z systemu Microsoft Windows 95 lub nowszy i wersji systemu Windows NT 3.51 lub nowszej. Obsługa MFC Win32 obejmuje wielowątkowości. Użyj wersji 1.5*x* Jeśli musisz wykonać programowania 16-bitowych.
+Wersja 3,0 i nowsza w ramach platformy MFC obsługuje programowanie dla platform Win32, w tym Microsoft Windows 95 i nowszych, oraz Windows NT w wersji 3,51 i nowszych. Obsługa MFC Win32 obejmuje wielowątkowość. Użyj wersji 1,5 *x* , jeśli konieczne jest programowanie 16-bitowe.
 
-Tej rodziny artykuły przedstawia ogólne omówienie struktury aplikacji. On również odkrywa główne obiekty, które tworzą aplikację i jak są tworzone. Wśród omówione w tych artykułach są następujące:
+Ta rodzina artykułów przedstawia szeroki przegląd struktury aplikacji. Eksploruje również główne obiekty tworzące aplikację i sposób ich tworzenia. Wśród tematów wymienionych w poniższych artykułach są następujące:
 
 - [Struktura](../mfc/framework-mfc.md).
 
-- Podział pracy między, a kod, zgodnie z opisem w ramach [opieranie się na strukturze](../mfc/building-on-the-framework.md).
+- Dzielenie zawodów między platformą i kodem, zgodnie z opisem w temacie [Tworzenie na platformie](../mfc/building-on-the-framework.md).
 
-- [Klasa aplikacji](../mfc/cwinapp-the-application-class.md), która hermetyzuje funkcjonalność na poziomie aplikacji.
+- [Klasa aplikacji](../mfc/cwinapp-the-application-class.md), która hermetyzuje funkcje na poziomie aplikacji.
 
-- Jak [szablony dokumentów](../mfc/document-templates-and-the-document-view-creation-process.md) tworzenia i zarządzania dokumentami i ich skojarzone widoków i okna ramowe.
+- Jak [Szablony dokumentów](../mfc/document-templates-and-the-document-view-creation-process.md) tworzą dokumenty i okna z ramkami oraz zarządzają nimi.
 
-- Klasa [CWnd](../mfc/window-objects.md), klasa bazowa wszystkich okien.
+- Klasa [CWnd](../mfc/window-objects.md), główna Klasa podstawowa wszystkich okien.
 
-- [Obiekty graficzne](../mfc/graphic-objects.md), takich jak pióra i pędzle.
+- [Obiekty graficzne](../mfc/graphic-objects.md), takie jak pióra i pędzle.
 
-Inne części ramach obejmują:
+Inne części platformy obejmują:
 
-- [Obiekty okna: omówienie](../mfc/window-objects.md)
+- [Obiekty okien: przegląd](../mfc/window-objects.md)
 
 - [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
 
-- [CObject, klasa bazowa w MFC](../mfc/using-cobject.md)
+- [CObject, główna Klasa bazowa w MFC](../mfc/using-cobject.md)
 
-- [Architektura dokument/widok](../mfc/document-view-architecture.md)
+- [Architektura dokumentu/widoku](../mfc/document-view-architecture.md)
 
 - [Okna dialogowe](../mfc/dialog-boxes.md)
 
-- [Kontrolki](../mfc/controls-mfc.md)
+- [Formanty](../mfc/controls-mfc.md)
 
 - [Paski sterowania](../mfc/control-bars.md)
 
@@ -56,20 +57,20 @@ Inne części ramach obejmują:
 
 - [Zarządzanie pamięcią](../mfc/memory-management.md)
 
-   Oprócz zapewnia korzyści w pisaniu aplikacji dla systemu operacyjnego Windows, MFC sprawia, że jej znacznie łatwiejsze do pisania aplikacji, które w szczególności użyj OLE, łączenie i osadzanie technologii. Możesz przekształcić aplikacji OLE edytowania kontenera i/lub serwerem OLE edycji visual obrazu, i tak, aby inne aplikacje mogą używać obiektów z aplikacji lub nawet dysku zdalnie, można dodać usługi Automation.
+   Oprócz tego, że można pisać aplikacje dla systemu operacyjnego Windows, MFC ułatwia również pisanie aplikacji korzystających z funkcji łączenia i osadzania obiektów OLE. Możesz dodać aplikację do kontenera edycji wizualnej OLE, serwera edycji wizualnej wizualizacji lub obu tych elementów, aby inne aplikacje mogły korzystać z obiektów z aplikacji lub nawet zdalnie na dysku.
 
 - [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-   Kontrolki OLE deweloperski (CDK) jest teraz w pełni zintegrowana z architekturą. Tej rodziny artykułu dostarcza przegląd Tworzenie formantów ActiveX z MFC. (Formantów ActiveX były wcześniej znane jako formantów OLE).
+   Zestaw narzędzi OLE Control Development Kit (CDK) jest teraz w pełni zintegrowany z platformą. Ten rodzina artykułów zawiera omówienie programowania formantów ActiveX za pomocą MFC. (Formanty ActiveX były wcześniej znane jako formanty OLE).
 
-- [Programowanie bazy danych](../data/data-access-programming-mfc-atl.md)
+- [Programowanie baz danych](../data/data-access-programming-mfc-atl.md)
 
-   MFC dostarcza również dwa zestawy klasy bazy danych, które upraszczają zapis dostęp do danych aplikacji. Używanie klas baz danych ODBC, może nawiązać połączenie z bazami danych za pośrednictwem sterownika Open Database Connectivity (ODBC), wybierz rekordy z tabel i wyświetlania rekordów informacji w formularza na ekranie. Przy użyciu klas dostępu do obiektu DAO (Data), można pracować z bazami danych za pomocą aparatu bazy danych Microsoft Jet lub źródeł danych zewnętrznych (inne niż Jet), w tym źródeł danych ODBC.
+   MFC udostępnia również dwa zestawy klas baz danych, które upraszczają zapisywanie aplikacji dostępu do danych. Korzystając z klas baz danych ODBC, można łączyć się z bazami danych za pośrednictwem sterownika Open Database Connectivity (ODBC), wybierać rekordy z tabel i wyświetlać informacje o rekordach w formularzu na ekranie. Korzystając z klas obiektów dostępu do danych (DAO), można współpracować z bazami danych za pośrednictwem aparatu bazy danych Microsoft Jet lub zewnętrznych źródeł danych (innych niż Jet), w tym źródeł danych ODBC.
 
-   Ponadto pełnym włączeniem MFC do tworzenia aplikacji, które używają Unicode i (znaków MBCS) zestawów znaków wielobajtowych, zestawy znaków specjalnie znaków dwubajtowych (DBCS).
+   Ponadto MFC jest w pełni włączone do pisania aplikacji, które używają zestawów znaków Unicode i wielobajtowych (MBCS), w tym zestawów znaków dwubajtowych (DBCS).
 
-Ogólne wskazówki dokumentacji MFC, zobacz [tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md).
+Ogólne Przewodnik dotyczący dokumentacji MFC zawiera temat ogólne informacje dotyczące [MFC](../mfc/general-mfc-topics.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
+[Ogólne tematy dotyczące MFC](../mfc/general-mfc-topics.md)

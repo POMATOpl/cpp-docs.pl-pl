@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strdup_dbg, _wcsdup_dbg'
 title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
 api_name:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-ms.openlocfilehash: 9f7d4fd8781269ee37f7515fdcab72e5195fdf00
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7001d7948f733977213267fdabd9faee4ddffd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322484"
 ---
 # <a name="_strdup_dbg-_wcsdup_dbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Wersje programu [_strdup i _wcsdup](strdup-wcsdup-mbsdup.md) korzystające z wersji programu **malloc**.
+Wersje [_strdup i _wcsdup](strdup-wcsdup-mbsdup.md) używające **wersji.**
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,13 +83,13 @@ Każda z tych funkcji zwraca wskaźnik do lokalizacji magazynu dla skopiowanego 
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_strdup_dbg** i **_wcsdup_dbg** są identyczne z **_strdup** i **_wcsdup** , z tą różnicą, że w przypadku zdefiniowania elementu **_DEBUG** te funkcje korzystają z wersji do obsługi debugowania **malloc**, **_malloc_dbg**, aby alokować pamięć dla zduplikowanego ciągu. Aby uzyskać informacje na temat funkcji debugowania **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
+**_Strdup_dbg** i **_wcsdup_dbg** funkcje są takie same jak **_strdup** i **_wcsdup** , z wyjątkiem tego, że w przypadku zdefiniowania **_DEBUG** te funkcje używają wersji do debugowania, która **_malloc_dbg** **, do** przydzielenia pamięci dla zduplikowanego ciągu. Aby uzyskać informacje na temat funkcji debugowania **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_strdup** i **_wcsdup** są ponownie mapowane odpowiednio do **_strdup_dbg** i **_wcsdup_dbg**, z atrybutem *BlockType* ustawionym na wartość **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_strdup** i **_wcsdup** są ponownie mapowane do **_strdup_dbg** i **_wcsdup_dbg**, z ustawieniem *BlockType* na **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup_dbg**|**_strdup_dbg**|**_mbsdup**|**_wcsdup_dbg**|
 
@@ -104,7 +105,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Wszystkie wersje debugowania [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdup, _wcsdup, _mbsdup](strdup-wcsdup-mbsdup.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: usuwanie, _wremove'
 title: remove, _wremove
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17215803e03e1e59df86b6049249a824d5615c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322514"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
@@ -85,8 +86,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**usuwa**|\<stdio. h> lub \<IO. h>|
-|**_wremove**|\<stdio. h> lub \<WCHAR. h>|
+|**usuwa**|\<stdio.h> lub \<io.h>|
+|**_wremove**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -111,7 +112,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_removetxt"></a>Dane wejściowe: crt_remove. txt
+### <a name="input-crt_removetxt"></a>Dane wejściowe: crt_remove.txt
 
 ```Input
 This file will be deleted.

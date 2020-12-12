@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy geometric_distribution
 title: geometric_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 98ecbc96d104a900d222c660de7f16563f566a9c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c5d4d2e3a00043506e1870095768647d19c81c92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324190"
 ---
 # <a name="geometric_distribution-class"></a>geometric_distribution — Klasa
 

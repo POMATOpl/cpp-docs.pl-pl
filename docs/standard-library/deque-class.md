@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa deque'
 title: deque — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: 1edcabf526d0f3aa2ba52ba3fd0fc656c5ae6b9c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f46c3c31dd23f7603a1d4ef6289e435c9b38e823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324578"
 ---
 # <a name="deque-class"></a>deque — Klasa
 
@@ -112,7 +113,7 @@ class deque
 Typ danych elementu, który ma być przechowywany w deque.
 
 *Alokator*\
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dealokacji deque pamięci. Ten argument jest opcjonalny, a wartość domyślna to **Alokator \<Type> **.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dealokacji deque pamięci. Ten argument jest opcjonalny, a wartość domyślna to **Alokator \<Type>**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -157,11 +158,11 @@ W przeciwnym razie Wstawianie lub wymazywanie elementu unieważnia wszystkie Ite
 |[size_type](#size_type)|Typ, który zlicza liczbę elementów w `deque` .|
 |[value_type](#value_type)|Typ, który reprezentuje typ danych przechowywany w `deque` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
-|[przypisać](#assign)|Wymazuje elementy z `deque` i kopiuje nową sekwencję elementów do obiektu docelowego `deque` .|
+|[ponownie](#assign)|Wymazuje elementy z `deque` i kopiuje nową sekwencję elementów do obiektu docelowego `deque` .|
 |[w](#at)|Zwraca odwołanie do elementu w określonej lokalizacji w `deque` .|
 |[Wstecz](#back)|Zwraca odwołanie do ostatniego elementu `deque` .|
 |[zaczną](#begin)|Zwraca iterator dostępu swobodnego, odnoszący się do pierwszego elementu w `deque` .|
@@ -2371,7 +2372,7 @@ int main( )
 44
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie zakresów
 title: extent — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d3db49db99d2cb7a241ca3b69c48fa6bcf2cb490
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324389"
 ---
 # <a name="extent-class"></a>extent — Klasa
 
@@ -30,12 +31,12 @@ struct extent;
 *Br*\
 Typ do zapytania.
 
-*MAM*\
+*Mam*\
 Tablica powiązana z kwerendą.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *ty* jest typem tablicy, który ma co najmniej *I* wymiary, zapytanie typu przechowuje liczbę elementów w wymiarze określonym przez *i*. Jeśli *ty* nie jest typem tablicy lub jego rangą jest mniejsza niż *I*lub jeśli *i* jest zero i *ty* jest `U`typu "tablica nieznanej granicy", zapytanie typu utrzymuje wartość 0.
+Jeśli *ty* jest typem tablicy, który ma co najmniej *I* wymiary, zapytanie typu przechowuje liczbę elementów w wymiarze określonym przez *i*. Jeśli *ty* nie jest typem tablicy lub jego rangą jest mniejsza niż *I* lub jeśli *i* jest zero i *ty* jest typu "tablica nieznanej granicy `U` ", zapytanie typu utrzymuje wartość 0.
 
 ## <a name="example"></a>Przykład
 
@@ -63,12 +64,12 @@ extent 1 == 10
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa remove_all_extents](../standard-library/remove-all-extents-class.md)\
-[remove_extent, klasa](../standard-library/remove-extent-class.md)
+[Klasa remove_extent](../standard-library/remove-extent-class.md)

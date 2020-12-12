@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCRibbonLabel'
 title: Klasa CMFCRibbonLabel
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0699e76dfe90b87cd813d18d076adf23f8512bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321829"
 ---
 # <a name="cmfcribbonlabel-class"></a>Klasa CMFCRibbonLabel
 
-Implementuje niekliceną etykietę tekstową wstążki.
+Implementuje nieklikniętą etykietę tekstową dla wstążki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,25 +35,25 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Konstruuje i inicjuje `CMFCRibbonLabel` obiekt z określonym ciągiem tekstowym.|
-|`CMFCRibbonLabel::~CMFCRibbonLabel`|Destruktora.|
+|`CMFCRibbonLabel::~CMFCRibbonLabel`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCRibbonLabel::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
-|`CMFCRibbonLabel::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Określa dane ułatwień dostępu dla bieżącego elementu etykiety wstążki. (Zastępuje [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|`CMFCRibbonLabel::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
+|`CMFCRibbonLabel::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Określa dane ułatwień dostępu dla bieżącego elementu etykiety wstążki. (Przesłania [CMFCRibbonButton:: SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu etykiety wstążki dodaj ją do panelu, wywołując [polecenie CMFCRibbonPanel::Dodaj](../../mfc/reference/cmfcribbonpanel-class.md#add).
+Po utworzeniu etykiety wstążki Dodaj ją do panelu przez wywołanie [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
-Do paska narzędzi Szybki dostęp nie można dodać etykiety wstążki.
+Nie można dodać etykiety wstążki do paska narzędzi Szybki dostęp.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
@@ -62,11 +63,11 @@ Do paska narzędzi Szybki dostęp nie można dodać etykiety wstążki.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxRibbonLabel.h
+**Nagłówek:** afxRibbonLabel. h
 
-## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a> CMFCRibbonLabel::CMFCRibbonLabel
 
-Konstruuje i inicjuje [OBIEKT CMFCRibbonLabel,](../../mfc/reference/cmfcribbonlabel-class.md) który wyświetla określony ciąg tekstowy.
+Tworzy i inicjuje obiekt [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) , który wyświetla określony ciąg tekstowy.
 
 ```
 CMFCRibbonLabel(
@@ -76,13 +77,13 @@ CMFCRibbonLabel(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText (tekst)*<br/>
-[w] Tekst ma być wyświetlany na etykiecie.
+*lpszText*<br/>
+podczas Tekst, który ma być wyświetlany w etykiecie.
 
 *bIsMultiLine*<br/>
-[w] TRUE, aby określić, że etykieta jest etykietą wielowierszową; w przeciwnym razie FALSE.
+podczas PRAWDA, aby określić, że etykieta jest etykieta wielowierszowa; w przeciwnym razie FALSE.
 
-## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a> CMFCRibbonLabel::SetACCData
 
 Określa dane ułatwień dostępu dla bieżącego elementu etykiety wstążki.
 
@@ -94,15 +95,15 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Parametry
 
-*pRoczysz*<br/>
-[w] Reprezentuje okno nadrzędne bieżącej etykiety wstążki.
+*pParent*<br/>
+podczas Reprezentuje okno nadrzędne bieżącej etykiety wstążki.
 
-*Danych*<br/>
-[na zewnątrz] Obiekt typu, `CAccessibilityData` który jest wypełniany danymi ułatwień dostępu bieżącej etykiety wstążki.
+*data*<br/>
+określoną Obiekt typu `CAccessibilityData` , który jest wypełniony danymi dostępności bieżącej etykiety wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli parametr *danych* został pomyślnie wypełniony danymi ułatwień dostępu bieżącej etykiety wstążki; w przeciwnym razie FALSE.
+Wartość TRUE, jeśli parametr *danych* został pomyślnie wypełniony danymi dostępności bieżącej etykiety wstążki; w przeciwnym razie FALSE.
 
 ## <a name="see-also"></a>Zobacz też
 

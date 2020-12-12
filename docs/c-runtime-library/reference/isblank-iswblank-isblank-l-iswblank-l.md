@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ISBLANK, iswblank, _isblank_l, _iswblank_l'
 title: isblank, iswblank, _isblank_l, _iswblank_l
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: 1c45319d7da48fad21af5375b0c310330d0f575a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a2731468cda3a2d3bf059133f116b22fa2b019f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321116"
 ---
 # <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -94,10 +95,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ISBLANK**|\<CType. h>|
-|**iswblank**|\<CType. h> lub \<WCHAR. h>|
-|**_isblank_l**|\<CType. h>|
-|**_iswblank_l**|\<CType. h> lub \<WCHAR. h>|
+|**ISBLANK**|\<ctype.h>|
+|**iswblank**|\<ctype.h> lub \<wchar.h>|
+|**_isblank_l**|\<ctype.h>|
+|**_iswblank_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -105,4 +106,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

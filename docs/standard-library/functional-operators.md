@@ -1,5 +1,6 @@
 ---
-title: '&lt;funkcjonalne operatory&gt;'
+description: 'Dowiedz się więcej o: &lt; &gt; Operatory funkcjonalne'
+title: '&lt;&gt;Operatory funkcjonalne'
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::operator!=
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a22e9203e89c041d5ed1925d55d1cd3aa6d61ba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324242"
 ---
-# <a name="ltfunctionalgt-operators"></a>&lt;funkcjonalne operatory&gt;
+# <a name="ltfunctionalgt-operators"></a>&lt;&gt;Operatory funkcjonalne
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje, czy możliwy do przeprowadzenia obiekt jest pusty.
 
@@ -33,7 +34,7 @@ template <class Fty>
 *Fty*\
 Typ funkcji do oblewania.
 
-\ *f*
+*n*\
 Obiekt Function
 
 *npc*\
@@ -41,7 +42,7 @@ Wskaźnik o wartości null.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory przyjmują argument, który jest odwołaniem do obiektu `function` i argumentem, który jest stałą wskaźnika o wartości null. Oba zwracają wartość true tylko wtedy, gdy obiekt `function` jest pusty.
+Operatory przyjmują argument, który jest odwołaniem do `function` obiektu i argumentem, który jest stałą wskaźnika o wartości null. Oba zwracają wartość true tylko wtedy, gdy `function` obiekt jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -75,7 +76,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje, czy możliwy do przeprowadzenia obiekt nie jest pusty.
 
@@ -92,7 +93,7 @@ template <class Fty>
 *Fty*\
 Typ funkcji do oblewania.
 
-\ *f*
+*n*\
 Obiekt Function
 
 *npc*\
@@ -100,7 +101,7 @@ Wskaźnik o wartości null.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory przyjmują argument, który jest odwołaniem do obiektu `function` i argumentem, który jest stałą wskaźnika o wartości null. Oba zwracają wartość true tylko wtedy, gdy obiekt `function` nie jest pusty.
+Operatory przyjmują argument, który jest odwołaniem do `function` obiektu i argumentem, który jest stałą wskaźnika o wartości null. Oba zwracają wartość true tylko wtedy, gdy `function` obiekt nie jest pusty.
 
 ### <a name="example"></a>Przykład
 

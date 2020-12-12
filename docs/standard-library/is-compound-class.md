@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_compound
 title: is_compound — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: ae2e3c66b3abf22bbefbcb0fcd3292f0a3dbdbe2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bdd1b2f8c7ab827d9bed1025e30140244381c3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215715"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323833"
 ---
 # <a name="is_compound-class"></a>is_compound — Klasa
 
@@ -81,7 +82,7 @@ is_compound<int> == false
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Klasa is_class](../standard-library/is-class-class.md)

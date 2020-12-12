@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_constructible
 title: Klasa is_constructible
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: a968efa5a867a3fd0e60594784cdb11122a974b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 66d17141693933850ce78dc15abe108664d56c8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323818"
 ---
 # <a name="is_constructible-class"></a>Klasa is_constructible
 
@@ -42,6 +43,6 @@ Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest konstrukcyjn�
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

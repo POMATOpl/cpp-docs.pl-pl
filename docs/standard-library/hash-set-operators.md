@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: &lt; hash_set &gt; Operatory'
 title: '&lt;&gt;operatory hash_set'
 ms.date: 03/27/2019
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 04b662ea260ca650fc51b17c804594fe25434f61
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a52c749df2bdd690fcd936c9a361251728696ccd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324086"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;&gt;operatory hash_set
 
@@ -285,6 +286,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [<hash_set>](../standard-library/hash-set.md)

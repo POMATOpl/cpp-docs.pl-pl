@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: zmiana nazwy, _wrename'
 title: rename, _wrename
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2a68bff031f321a2566c0da99aacc053ba475928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322501"
 ---
 # <a name="rename-_wrename"></a>rename, _wrename
 
@@ -102,8 +103,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ZmieńNazwę**|\<IO. h> lub \<stdio. h>|
-|**_wrename**|\<stdio. h> lub \<WCHAR. h>|
+|**ZmieńNazwę**|\<io.h> lub \<stdio.h>|
+|**_wrename**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

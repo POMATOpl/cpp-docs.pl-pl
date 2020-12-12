@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy texture_view
 title: texture_view — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: 1fa21f2a5a5c1d004fc23d70b686d7e45bbcac81
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2c96f2fbddb5d2dc39a1e2e39fe5a0af656176a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321724"
 ---
 # <a name="texture_view-class"></a>texture_view — Klasa
 
-Zapewnia dostęp do odczytu i zapisu do tekstury. `texture_view`można go użyć tylko do odczytu tekstur, których typem wartości jest **`int`** , **`unsigned int`** , lub **`float`** , które mają domyślnie 32-bitowy BPSE. Aby odczytać inne formaty tekstury, użyj `texture_view<const value_type, _Rank>` .
+Zapewnia dostęp do odczytu i zapisu do tekstury. `texture_view` można go użyć tylko do odczytu tekstur, których typem wartości jest **`int`** , **`unsigned int`** , lub **`float`** , które mają domyślnie 32-bitowy BPSE. Aby odczytać inne formaty tekstury, użyj `texture_view<const value_type, _Rank>` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -73,7 +74,7 @@ Ranga `texture_view` .
 |[gather_blue](#gather_blue)|Przeciążone. Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki niebieskie (z) z czterech próbkowanych tekseli.|
 |[gather_green](#gather_green)|Przeciążone. Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki zielone (y) z czterech próbkowanych tekseli.|
 |[gather_red](#gather_red)|Przeciążone. Próbkuje teksturę na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki czerwone (x) z czterech próbkowanych tekseli.|
-|[Pobierz](#get)|Przeciążone. Pobiera wartość elementu według indeksu.|
+|[get](#get)|Przeciążone. Pobiera wartość elementu według indeksu.|
 |[Northwind](#sample)|Przeciążone. Próbki tekstury na określonych współrzędnych i poziomie szczegółowości przy użyciu określonej konfiguracji próbkowania.|
 |[zbiór](#set)|Ustawia wartość elementu według indeksu.|
 
@@ -82,7 +83,7 @@ Ranga `texture_view` .
 |Nazwa|Opis|
 |----------|-----------------|
 |[operator ()](#operator_call)|Przeciążone. Pobiera wartość elementu według indeksu.|
-|[operator\[\]](#operator_at)|Przeciążone. Pobiera wartość elementu według indeksu.|
+|[zakład\[\]](#operator_at)|Przeciążone. Pobiera wartość elementu według indeksu.|
 |[operator =](#operator_eq)|Przeciążone. Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
@@ -103,7 +104,7 @@ Ranga `texture_view` .
 
 **Przestrzeń nazw:** concurrency:: Graphics
 
-## <a name="texture_view"></a><a name="dtor"></a>~ texture_view
+## <a name="texture_view"></a><a name="dtor"></a> ~ texture_view
 
 Niszczy `texture_view` wystąpienie.
 
@@ -111,7 +112,7 @@ Niszczy `texture_view` wystąpienie.
 ~texture_view() restrict(amp, cpu);
 ```
 
-## <a name="texture_view"></a><a name="ctor"></a>texture_view
+## <a name="texture_view"></a><a name="ctor"></a> texture_view
 
 Konstruuje `texture_view` wystąpienie.
 
@@ -164,7 +165,7 @@ Najwyższy poziom (najbardziej szczegółowy) poziom MIP dla widoku względem ok
 *_Mip_levels*<br/>
 Liczba poziomów mipmappingu dostępnych za pomocą `texture_view` .
 
-## <a name="gather_red"></a><a name="gather_red"></a>gather_red
+## <a name="gather_red"></a><a name="gather_red"></a> gather_red
 
 Próbkuje teksturę na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki czerwone (x) z czterech próbkowanych tekseli.
 
@@ -195,7 +196,7 @@ Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych
 
 Krótka wektor rangi 4 zawierający składnik czerwony (x) z 4 próbkowanych wartości Texel.
 
-## <a name="gather_green"></a><a name="gather_green"></a>gather_green
+## <a name="gather_green"></a><a name="gather_green"></a> gather_green
 
 Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki zielone (y) z czterech próbkowanych tekseli.
 
@@ -226,7 +227,7 @@ Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych
 
 Krótka wektor rangi 4 zawierający zielony składnik (y) wartości Texel 4 próbki.
 
-## <a name="gather_blue"></a><a name="gather_blue"></a>gather_blue
+## <a name="gather_blue"></a><a name="gather_blue"></a> gather_blue
 
 Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki niebieskie (z) z czterech próbkowanych tekseli.
 
@@ -257,7 +258,7 @@ Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych
 
 Krótka wektor rangi 4 zawierający składnik czerwony (x) z 4 próbkowanych wartości Texel.
 
-## <a name="gather_alpha"></a><a name="gather_alpha"></a>gather_alpha
+## <a name="gather_alpha"></a><a name="gather_alpha"></a> gather_alpha
 
 Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki alfa (w) z czterech próbkowanych tekseli.
 
@@ -288,7 +289,7 @@ Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych
 
 Krótka wektor rangi 4 zawierający składnik alfa (w) z 4 próbkowanych wartości Texel.
 
-## <a name="get"></a><a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a> Pobierz
 
 Pobiera wartość elementu w określonym indeksie.
 
@@ -313,7 +314,7 @@ Poziom mipmappingu, z którego ma zostać pobrana wartość. Wartość domyślna
 
 Wartość elementu.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 Przypisuje widok takiej samej tekstury jak określony `texture_view` dla tego `texture_view` wystąpienia.
 
@@ -339,7 +340,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 Odwołanie do tego `texture_view` wystąpienia.
 
-## <a name="operator"></a><a name="operator_at"></a>operator []
+## <a name="operator"></a><a name="operator_at"></a> operator []
 
 Zwraca wartość elementu według indeksu.
 
@@ -365,7 +366,7 @@ Indeks jednowymiarowy.
 
 Wartość elementu indeksowanego przez `_Index` .
 
-## <a name="operator"></a><a name="operator_call"></a>operator ()
+## <a name="operator"></a><a name="operator_call"></a> operator ()
 
 Zwraca wartość elementu według indeksu.
 
@@ -418,7 +419,7 @@ Najmniej znaczący składnik indeksu.
 
 Wartość elementu indeksowanego przez `_Index` .
 
-## <a name="sample"></a><a name="sample"></a>Northwind
+## <a name="sample"></a><a name="sample"></a> Northwind
 
 Próbki tekstury na określonych współrzędnych i poziomie szczegółowości przy użyciu określonej konfiguracji próbkowania.
 
@@ -458,7 +459,7 @@ Wartość określa poziom mipmappingu do próbkowania. Wartości ułamkowe słu�
 
 Wartość próbki interpolowanej.
 
-## <a name="set"></a><a name="set"></a>zbiór
+## <a name="set"></a><a name="set"></a> zbiór
 
 Ustawia wartość elementu w określonym indeksie dla określonej wartości.
 
@@ -473,10 +474,10 @@ void set(
 *_Index*<br/>
 Indeks elementu, który ma zostać ustawiony, prawdopodobnie wielowymiarowy.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, dla której ma zostać ustawiony element.
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Typ wartości elementów texture_view.
 
@@ -484,6 +485,6 @@ Typ wartości elementów texture_view.
 typedef typename const value_type value_type;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

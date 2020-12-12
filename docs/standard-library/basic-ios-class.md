@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy basic_ios
 title: basic_ios — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -55,16 +56,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: ab8e9e0243a298f5ef39b38b3fd345572cafa587
-ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
+ms.openlocfilehash: 54b70092860002b85b2a603ad5d4dc5a611007ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91806566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321550"
 ---
 # <a name="basic_ios-class"></a>basic_ios — Klasa
 
-Szablon klasy zawiera opis funkcji magazynu i elementów członkowskich wspólnych dla strumieni danych wejściowych (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni wyjściowych ( [basic_ostream](../standard-library/basic-ostream-class.md)szablonu klasy), które są zależne od parametrów szablonu. (Klasa [ios_base](../standard-library/ios-base-class.md) opisuje, co jest typowe i nie zależy od parametrów szablonu). Obiekt klasy **basic_ios \<class Elem, class Traits> ** ułatwia sterowanie strumieniem za pomocą elementów typu `Elem` , których cechy znaku są określane przez klasę `Traits` .
+Szablon klasy zawiera opis funkcji magazynu i elementów członkowskich wspólnych dla strumieni danych wejściowych (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni wyjściowych ( [basic_ostream](../standard-library/basic-ostream-class.md)szablonu klasy), które są zależne od parametrów szablonu. (Klasa [ios_base](../standard-library/ios-base-class.md) opisuje, co jest typowe i nie zależy od parametrów szablonu). Obiekt klasy **basic_ios \<class Elem, class Traits>** ułatwia sterowanie strumieniem za pomocą elementów typu `Elem` , których cechy znaku są określane przez klasę `Traits` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,7 +85,7 @@ Typ, który dostarcza informacje o typie znaku, domyślnie `char_traits < Elem >
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt klasy **basic_ios \<class Elem, class Traits> ** magazynów:
+Obiekt klasy **basic_ios \<class Elem, class Traits>** magazynów:
 
 - Wskaźnik powiązania do obiektu typu [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, Traits>** .
 
@@ -96,7 +97,7 @@ Obiekt klasy **basic_ios \<class Elem, class Traits> ** magazynów:
 
 - Znak wypełnienia w obiekcie typu `char_type` .
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Opis|
 |-|-|
@@ -260,7 +261,7 @@ Strumień, którego flagi mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska raportuje ** \_ zdarzenie wymazania**zdarzenia wywołania zwrotnego. Następnie kopiuje z *prawej strony* do ** \* tego** znaku wypełnienia, wskaźnik powiązania i informacje o formatowaniu. Przed zmianą maski wyjątku raport jest raportowany dla zdarzenia wywołania zwrotnego `copyfmt_event` . Jeśli po zakończeniu kopiowania **stan &** [wyjątkami](#exceptions) jest różna od zera, funkcja skutecznie wywołuje metodę [Clear](#clear) z argumentem [rdstate](#rdstate). Zwraca ** \* to**.
+Funkcja członkowska raportuje **\_ zdarzenie wymazania** zdarzenia wywołania zwrotnego. Następnie kopiuje z *prawej strony* do **\* tego** znaku wypełnienia, wskaźnik powiązania i informacje o formatowaniu. Przed zmianą maski wyjątku raport jest raportowany dla zdarzenia wywołania zwrotnego `copyfmt_event` . Jeśli po zakończeniu kopiowania **stan &** [wyjątkami](#exceptions) jest różna od zera, funkcja skutecznie wywołuje metodę [Clear](#clear) z argumentem [rdstate](#rdstate). Zwraca **\* to**.
 
 ### <a name="example"></a>Przykład
 

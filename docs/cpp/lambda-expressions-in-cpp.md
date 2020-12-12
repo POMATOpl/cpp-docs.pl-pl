@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyrażenia lambda w języku C++'
 title: Wyrażenia lambda w języku C++
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 6fcc26c3ed86c86264773a70ac16501c102e1861
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e65279fa8740876ad8824803ec459ced154f952
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321044"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
 
@@ -59,11 +60,11 @@ Na tej ilustracji przedstawiono części wyrażenia lambda:
 
 ### <a name="capture-clause"></a>Klauzula przechwytywania
 
-Wyrażenie lambda może wprowadzać nowe zmienne w swojej treści (w **języku C++ 14**) i może również uzyskać dostęp do zmiennych lub *przechwycić*je z zakresu otaczającego. Lambda zaczyna się od klauzuli przechwytywania (*wyrażenie lambda* w standardowej składni), która określa zmienne, które są przechwytywane oraz czy przechwytywanie jest przez wartość, czy przez odwołanie. Zmienne, które mają prefiks handlowego "i" ( `&` ) są dostępne przez odwołanie i zmienne, które nie są dostępne przez wartość.
+Wyrażenie lambda może wprowadzać nowe zmienne w swojej treści (w **języku C++ 14**) i może również uzyskać dostęp do zmiennych lub *przechwycić* je z zakresu otaczającego. Lambda zaczyna się od klauzuli przechwytywania (*wyrażenie lambda* w standardowej składni), która określa zmienne, które są przechwytywane oraz czy przechwytywanie jest przez wartość, czy przez odwołanie. Zmienne, które mają prefiks handlowego "i" ( `&` ) są dostępne przez odwołanie i zmienne, które nie są dostępne przez wartość.
 
 Pusta Klauzula przechwytywania, `[ ]` , wskazuje, że treść wyrażenia lambda nie uzyskuje dostępu do żadnych zmiennych w zakresie otaczającym.
 
-Można użyć domyślnego trybu przechwytywania (wartość*Domyślna przechwytywania* w standardowej składni), aby wskazać, jak przechwycić wszystkie zmienne zewnętrzne, do których odwołuje się wyrażenie lambda: `[&]` oznacza, że wszystkie zmienne, do których odwołuje się, są przechwytywane przez odwołanie i oznacza, że `[=]` są przechwytywane przez wartość. Można użyć domyślnego trybu przechwytywania, a następnie jawnie określić tryb odwrotny dla określonych zmiennych. Na przykład jeśli treść wyrażenia lambda uzyskuje dostęp do zewnętrznej zmiennej `total` przez odwołanie i zewnętrzną zmienną `factor` według wartości, następujące klauzule przechwytywania są równoważne:
+Można użyć domyślnego trybu przechwytywania (wartość *Domyślna przechwytywania* w standardowej składni), aby wskazać, jak przechwycić wszystkie zmienne zewnętrzne, do których odwołuje się wyrażenie lambda: `[&]` oznacza, że wszystkie zmienne, do których odwołuje się, są przechwytywane przez odwołanie i oznacza, że `[=]` są przechwytywane przez wartość. Można użyć domyślnego trybu przechwytywania, a następnie jawnie określić tryb odwrotny dla określonych zmiennych. Na przykład jeśli treść wyrażenia lambda uzyskuje dostęp do zewnętrznej zmiennej `total` przez odwołanie i zewnętrzną zmienną `factor` według wartości, następujące klauzule przechwytywania są równoważne:
 
 ```cpp
 [&total, factor]
@@ -149,7 +150,7 @@ auto y = [] (auto first, auto second)
 
 Wyrażenie lambda może przyjmować inne wyrażenie lambda jako argument. Aby uzyskać więcej informacji, zobacz "wyrażenia lambda wyższego rzędu" w temacie [Przykłady wyrażeń lambda](../cpp/examples-of-lambda-expressions.md).
 
-Ponieważ lista parametrów jest opcjonalna, można pominąć puste nawiasy, jeśli nie przechodzą argumentów do wyrażenia lambda, a jego lambda-deklarator nie zawiera *specyfikacji wyjątku*, *końcowego-return-Type*lub **`mutable`** .
+Ponieważ lista parametrów jest opcjonalna, można pominąć puste nawiasy, jeśli nie przechodzą argumentów do wyrażenia lambda, a jego lambda-deklarator nie zawiera *specyfikacji wyjątku*, *końcowego-return-Type* lub **`mutable`** .
 
 ### <a name="mutable-specification"></a>Specyfikacja modyfikowalna
 
@@ -322,7 +323,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 Aby uzyskać więcej informacji, zobacz [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="constexpr-lambda-expressions"></a>`constexpr`wyrażenia lambda
+## <a name="constexpr-lambda-expressions"></a>`constexpr` wyrażenia lambda
 
 **Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępne z [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ): wyrażenie lambda może być zadeklarowane jako **`constexpr`** lub używane w wyrażeniu stałym, gdy Inicjalizacja każdego elementu członkowskiego danych, który przechwytuje lub wprowadza, jest dozwolony w wyrażeniu stałym.
 
@@ -376,7 +377,7 @@ Aby określić, czy modyfikator jest obsługiwany przez wyrażenia lambda, zobac
 
 Poza standardowymi funkcjami lambda języka C++ 11 program Visual Studio obsługuje bezstanowe wyrażenia lambda, które są zamiennie konwertowane do wskaźników funkcji, które korzystają z dowolnych konwencji wywoływania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Obiekty funkcji w standardowej bibliotece języka C++](../standard-library/function-objects-in-the-stl.md)<br/>

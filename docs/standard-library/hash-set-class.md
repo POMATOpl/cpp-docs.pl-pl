@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy hash_set
 title: hash_set — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 01076d29a18a2b051695955e9409d8b77d22c313
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 36bcb0e1f35fd8012ad1398a481bdae17b6d1424
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324099"
 ---
 # <a name="hash_set-class"></a>hash_set — Klasa
 
@@ -191,7 +192,7 @@ Iterator dostarczony przez klasę hash_set jest iteratorem dwukierunkowym, ale f
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w `hash_set` .|
 |[equal_range](#equal_range)|Zwraca parę iteratorów odpowiednio do pierwszego elementu w a `hash_set` z kluczem, który jest większy niż określony klucz i do pierwszego elementu w `hash_set` kluczu, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów `hash_set` z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.|
-|[find](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_set` , który ma klucz równoważny określonemu kluczowi.|
+|[wyświetlić](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_set` , który ma klucz równoważny określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu użytego do skonstruowania `hash_set` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `hash_set` .|
 |[key_comp](#key_comp)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w obiekcie `hash_set` .|
@@ -229,7 +230,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>Uwagi
 
-`allocator_type` jest synonimem dla *alokatora*parametrów szablonu.
+`allocator_type` jest synonimem dla *alokatora* parametrów szablonu.
 
 Aby uzyskać więcej informacji na temat *alokatora*, zobacz sekcję Uwagi w temacie [hash_set Class](../standard-library/hash-set-class.md) .
 
@@ -1026,7 +1027,7 @@ Klucz argumentu, który ma zostać porównany z kluczem sortowania elementu z pr
 
 Para iteratorów, w których pierwszy jest [lower_bound](../standard-library/set-class.md#lower_bound) klucza, a drugi to [upper_bound](../standard-library/set-class.md#upper_bound) klucza.
 
-Aby uzyskać dostęp do pierwszego iteratora pary żądania ściągnięcia zwróconego przez funkcję członkowską, użyj `pr` . **najpierw**i aby usunąć odwołanie do dolnego powiązanego iteratora, użyj \* ( `pr` . **pierwszy**). Aby uzyskać dostęp do drugiego iteratora pary `pr` zwracanej przez funkcję członkowską, użyj `pr` . **drugi**i aby usunąć odwołanie do górnego powiązanego iteratora, użyj \* ( `pr` . **sekundę**).
+Aby uzyskać dostęp do pierwszego iteratora pary żądania ściągnięcia zwróconego przez funkcję członkowską, użyj `pr` . **najpierw** i aby usunąć odwołanie do dolnego powiązanego iteratora, użyj \* ( `pr` . **pierwszy**). Aby uzyskać dostęp do drugiego iteratora pary `pr` zwracanej przez funkcję członkowską, użyj `pr` . **drugi** i aby usunąć odwołanie do górnego powiązanego iteratora, użyj \* ( `pr` . **sekundę**).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1300,7 +1301,7 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Alokator używany przez hash_set do zarządzania pamięcią, która jest programem *przydzielania*parametrów szablonu.
+Alokator używany przez hash_set do zarządzania pamięcią, która jest programem *przydzielania* parametrów szablonu.
 
 Aby uzyskać więcej informacji na temat *alokatora*, zobacz sekcję Uwagi w temacie [hash_set Class](../standard-library/hash-set-class.md) .
 
@@ -1540,7 +1541,7 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca obiekt funkcji, którego hash_set używa do porządkowania jego elementów, które są *cechami*parametru szablonu.
+Zwraca obiekt funkcji, którego hash_set używa do porządkowania jego elementów, które są *cechami* parametru szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_set](../standard-library/hash-set-class.md) .
 
@@ -1552,7 +1553,7 @@ Przechowywany obiekt definiuje funkcję członkowską:
 
 zwraca, **`true`** Jeśli `_xVal` poprzedza, i nie jest równa `_yVal` w kolejności sortowania.
 
-Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla *cech*parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
+Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla *cech* parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -1616,11 +1617,11 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_compare` jest synonimem *cech*parametrów szablonu.
+`key_compare` jest synonimem *cech* parametrów szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_set](../standard-library/hash-set-class.md) .
 
-Należy zauważyć, że oba `key_compare` i [value_compare](#value_compare) są synonimami dla *cech*parametrów szablonu. Oba typy są dostarczane dla klas zestawu i zestawów wielokrotnych, gdzie są identyczne, w celu zapewnienia zgodności z klasami map i multimap, gdzie są różne.
+Należy zauważyć, że oba `key_compare` i [value_compare](#value_compare) są synonimami dla *cech* parametrów szablonu. Oba typy są dostarczane dla klas zestawu i zestawów wielokrotnych, gdzie są identyczne, w celu zapewnienia zgodności z klasami map i multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -1639,11 +1640,11 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_type` jest synonimem dla *klucza*parametru szablonu.
+`key_type` jest synonimem dla *klucza* parametru szablonu.
 
 Aby uzyskać więcej informacji o *kluczu*, zobacz sekcję Uwagi w temacie [hash_set Class](../standard-library/hash-set-class.md) .
 
-Należy zauważyć, że oba `key_type` i [value_type](#value_type) są synonimami *klucza*parametru szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
+Należy zauważyć, że oba `key_type` i [value_type](#value_type) są synonimami *klucza* parametru szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -2301,7 +2302,7 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca obiekt funkcji, którego hash_set używa do porządkowania jego elementów, który jest *porównywany*parametrem szablonu.
+Zwraca obiekt funkcji, którego hash_set używa do porządkowania jego elementów, który jest *porównywany* parametrem szablonu.
 
 Aby uzyskać więcej informacji na temat *porównywania*, zobacz sekcję Uwagi w temacie [hash_set Class](../standard-library/hash-set-class.md) .
 
@@ -2313,7 +2314,7 @@ Przechowywany obiekt definiuje funkcję członkowską:
 
 zwraca, **`true`** Jeśli `_xVal` poprzedza, i nie jest równa `_yVal` w kolejności sortowania.
 
-Należy zauważyć, że oba [value_compare](../standard-library/set-class.md#value_compare) i [key_compare](../standard-library/set-class.md#key_compare) są synonimami dla *porównania*parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
+Należy zauważyć, że oba [value_compare](../standard-library/set-class.md#value_compare) i [key_compare](../standard-library/set-class.md#key_compare) są synonimami dla *porównania* parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -2377,11 +2378,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_compare` jest synonimem *cech*parametrów szablonu.
+`value_compare` jest synonimem *cech* parametrów szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_set](../standard-library/hash-set-class.md) .
 
-Należy zauważyć, że obie [key_compare](#key_compare) i `value_compare` są synonimami dla *cech*parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
+Należy zauważyć, że obie [key_compare](#key_compare) i `value_compare` są synonimami dla *cech* parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -2434,7 +2435,7 @@ int main( )
 The hash_set has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

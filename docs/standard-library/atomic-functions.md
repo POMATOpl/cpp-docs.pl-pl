@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat &lt; funkcji niepodzielnych &gt;
 title: '&lt;funkcje niepodzielne &gt;'
 ms.date: 07/11/2018
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 5252fbb12682af3e5d1480208c4cbe4d32af7d05
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 21badeaa900f35e05e411987a93fa74e20c99559
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321684"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;funkcje niepodzielne &gt;
 
@@ -295,7 +296,7 @@ Przechowywana wartość *Atom* przed wymianą.
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_exchange`Funkcja wykonuje `read-modify-write` operację, aby przeprowadzić wymianę wartości przechowywanej w *Atom* z *wartością*przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_exchange`Funkcja wykonuje `read-modify-write` operację, aby przeprowadzić wymianę wartości przechowywanej w *Atom* z *wartością* przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
 
@@ -332,7 +333,7 @@ Przechowywana wartość *Atom* przed wymianą.
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_exchange_explicit`Funkcja wykonuje `read-modify-write` operację, aby przeprowadzić wymianę wartości przechowywanej w *Atom* z *wartością*w ramach ograniczeń pamięci, które są określone przez *kolejność*.
+`atomic_exchange_explicit`Funkcja wykonuje `read-modify-write` operację, aby przeprowadzić wymianę wartości przechowywanej w *Atom* z *wartością* w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
 ## <a name="atomic_fetch_add"></a><a name="atomic_fetch_add"></a> atomic_fetch_add
 
@@ -359,7 +360,7 @@ Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wyk
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_add`Funkcja wykonuje operację, `read-modify-write` Aby dodać niepodzielną *wartość* do wartości przechowywanej w *atomze*przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+`atomic_fetch_add`Funkcja wykonuje operację, `read-modify-write` Aby dodać niepodzielną *wartość* do wartości przechowywanej w *atomze* przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 Gdy typ niepodzielny to `atomic_address` , *wartość* ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
@@ -403,7 +404,7 @@ Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wyk
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_add_explicit`Funkcja wykonuje operację, `read-modify-write` Aby dodać niepodzielną *wartość* do wartości przechowywanej w *atomze*w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , które są określone przez `Order` .
+`atomic_fetch_add_explicit`Funkcja wykonuje operację, `read-modify-write` Aby dodać niepodzielną *wartość* do wartości przechowywanej w *atomze* w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , które są określone przez `Order` .
 
 Gdy typ niepodzielny to `atomic_address` , `Value` ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
@@ -446,7 +447,7 @@ Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem oper
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_and`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `and` i bieżącą wartość *Value* przechowywaną w *Atom*przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+`atomic_fetch_and`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `and` i bieżącą wartość  przechowywaną w *Atom* przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ## <a name="atomic_fetch_and_explicit"></a><a name="atomic_fetch_and_explicit"></a> atomic_fetch_and_explicit
 
@@ -483,7 +484,7 @@ Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem oper
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_and_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `and` i bieżącą wartość *Value* przechowywaną w *Atom*, w ramach ograniczeń pamięci, które są określone przez *kolejność*.
+`atomic_fetch_and_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `and` i bieżącą wartość  przechowywaną w *Atom*, w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
 ## <a name="atomic_fetch_or"></a><a name="atomic_fetch_or"></a> atomic_fetch_or
 
@@ -510,7 +511,7 @@ Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem oper
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_or`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `or` i bieżącą wartość *Value* przechowywaną w *atomze*przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_fetch_or`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `or` i bieżącą wartość  przechowywaną w *atomze* przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_or_explicit"></a><a name="atomic_fetch_or_explicit"></a> atomic_fetch_or_explicit
 
@@ -547,7 +548,7 @@ Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem oper
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_or_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `or` i bieżącą wartość *Value* przechowywaną w *Atom*, w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) określonych przez *kolejność*.
+`atomic_fetch_or_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `or` i bieżącą wartość  przechowywaną w *Atom*, w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) określonych przez *kolejność*.
 
 ## <a name="atomic_fetch_sub"></a><a name="atomic_fetch_sub"></a> atomic_fetch_sub
 
@@ -579,7 +580,7 @@ Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wyk
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_sub`Funkcja wykonuje operację, `read-modify-write` Aby wyrównać niepodzielne *wartości* z wartości przechowywanej w *atomze*przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+`atomic_fetch_sub`Funkcja wykonuje operację, `read-modify-write` Aby wyrównać niepodzielne *wartości* z wartości przechowywanej w *atomze* przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 Gdy typ niepodzielny to `atomic_address` , *wartość* ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
@@ -621,7 +622,7 @@ Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wyk
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_sub_explicit`Funkcja wykonuje operację, `read-modify-write` Aby wyrównać niepodzielną *wartość* z wartości przechowywanej w *atomze*w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , które są określone przez `Order` .
+`atomic_fetch_sub_explicit`Funkcja wykonuje operację, `read-modify-write` Aby wyrównać niepodzielną *wartość* z wartości przechowywanej w *atomze* w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , które są określone przez `Order` .
 
 Gdy typ niepodzielny to `atomic_address` , *wartość* ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
@@ -665,7 +666,7 @@ Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem oper
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_xor`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `exclusive or` i bieżącą wartość *Value* przechowywaną w *atomze*przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_fetch_xor`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `exclusive or` i bieżącą wartość  przechowywaną w *atomze* przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_xor_explicit"></a><a name="atomic_fetch_xor_explicit"></a> atomic_fetch_xor_explicit
 
@@ -702,7 +703,7 @@ Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem oper
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_fetch_xor_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `exclusive or` i bieżącą wartość *Value* przechowywaną w *Atom*, w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) określonych przez *kolejność*.
+`atomic_fetch_xor_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `exclusive or` i bieżącą wartość  przechowywaną w *Atom*, w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) określonych przez *kolejność*.
 
 ## <a name="atomic_flag_clear"></a><a name="atomic_flag_clear"></a> atomic_flag_clear
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie kontrolek suwaka'
 title: Używanie formantów suwaka
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,26 +7,26 @@ helpviewer_keywords:
 - slider controls
 - slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
-ms.openlocfilehash: b358b4e92c7d9f214291b047a080f71b48183519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9134d76261bf5c15bfef90260394ee6a4c760e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322664"
 ---
 # <a name="using-slider-controls"></a>Używanie formantów suwaka
 
-Typowy kontrolki suwak jest zgodny ze wzorcem poniżej:
+Typowym użyciem kontrolki suwaka jest Poniższy wzorzec:
 
-- Formant zostanie utworzony. Kontrolka została określona w szablonu okna dialogowego, tworzenie przebiega automatycznie podczas tworzenia okna dialogowego. (Powinien mieć [z CSliderCtrl](../mfc/reference/csliderctrl-class.md) członka klasy okien dialogowych, umożliwiająca kontrolki slider.) Alternatywnie, można użyć [Utwórz](../mfc/reference/csliderctrl-class.md#create) funkcja elementu członkowskiego, aby utworzyć formant jako okna podrzędnego każdego okna.
+- Formant zostanie utworzony. Jeśli formant jest określony w szablonie okna dialogowego, tworzenie jest automatyczne po utworzeniu okna dialogowego. (W klasie okna dialogowego powinien znajdować się element [Korzystanie CSliderCtrl](../mfc/reference/csliderctrl-class.md) , który odpowiada kontrolce suwaka). Alternatywnie możesz użyć funkcji [Utwórz](../mfc/reference/csliderctrl-class.md#create) element członkowski, aby utworzyć formant jako okno podrzędne dowolnego okna.
 
-- Wywołaj różnych funkcji składowych zestawu, aby ustawić wartości dla formantu. Zmiany, które można wprowadzić obejmują ustawienia dla suwak w pozycji minimalną i maksymalną, rysowania znaczniki, ustawienie zaznaczony zakres i położenie suwaka. W przypadku kontrolek w oknie dialogowym jest odpowiedni moment, aby to zrobić, w oknie dialogowym [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji.
+- Wywołaj różne funkcje zestawu elementów członkowskich, aby ustawić wartości dla kontrolki. Zmiany, które można wprowadzić, obejmują ustawienie minimalnej i maksymalnej liczby pozycji suwaka, rysowania znaczników, ustawienia zakresu zaznaczenia i zmiany położenia suwaka. W przypadku kontrolek w oknie dialogowym dobry czas, który należy wykonać, jest w funkcji [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) okna dialogowego.
 
-- Jako użytkownik wchodzi w interakcję z kontrolką, wysyła komunikaty powiadomień dotyczących różnych. Wartość suwaka można wyodrębnić z kontrolki, wywołując [GetPos](../mfc/reference/csliderctrl-class.md#getpos) funkcja elementu członkowskiego.
+- Gdy użytkownik współdziała z kontrolką, wyśle różne komunikaty powiadomień. Można wyodrębnić wartość suwaka z kontrolki, wywołując funkcję elementu członkowskiego [GetPos](../mfc/reference/csliderctrl-class.md#getpos) .
 
-- Po wykonaniu tych czynności za pomocą kontrolki musisz upewnij się, że jest prawidłowo niszczone. Jeśli formant suwaka znajduje się w oknie dialogowym go i `CSliderCtrl` obiekt jest niszczony automatycznie. Jeśli nie, musisz upewnij się, że obie kontrolki i `CSliderCtrl` obiektu są poprawnie niszczone.
+- Po zakończeniu pracy z kontrolką musisz upewnić się, że jest prawidłowo zniszczona. Jeśli kontrolka suwaka znajduje się w oknie dialogowym, a `CSliderCtrl` obiekt zostanie zniszczony automatycznie. Jeśli nie, musisz upewnić się, że zarówno kontrolka, jak i `CSliderCtrl` obiekt są prawidłowo niszczone.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

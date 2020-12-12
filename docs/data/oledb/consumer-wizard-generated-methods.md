@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: metody Wizard-Generated konsumenta'
 title: Metody konsumenta generowane przez kreatora
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 15d41aabee174a409ad11e4422292bcea5f10bbf
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 29d586a46f91e9244a09fce5628d0f3b274c554c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323290"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
 
@@ -159,6 +160,6 @@ Kreator definiuje metody `OpenDataSource` i `CloseDataSource` ; `OpenDataSource`
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: feof'
 title: feof
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6bfa0382878cef2843f3a6a6e2ba6e6d8c5bed8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322540"
 ---
 # <a name="feof"></a>feof
 
@@ -69,7 +70,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**feof**|\<stdio. h>|
+|**feof**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -113,7 +114,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crt_feoftxt"></a>Dane wejściowe: crt_feof. txt
+## <a name="input-crt_feoftxt"></a>Dane wejściowe: crt_feof.txt
 
 ```Input
 Line one.

@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; Future&gt;'
 title: '&lt;kontrakt&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: b5f18de772ea2221ecbd4098b94e0b4f14c0484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67c204f636ee9249e9c714df87a02ff6c6ff3149
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220928"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324203"
 ---
 # <a name="ltfuturegt"></a>&lt;kontrakt&gt;
 
@@ -79,6 +80,6 @@ Szablony klas `future` i `shared_future` nigdy nie blokują w ich destruktorach,
 |[future_status](../standard-library/future-enums.md#future_status)|Dostarcza symboliczne nazwy z przyczyn, które może zwracać funkcja oczekiwania czasowego.|
 |[paska](../standard-library/future-enums.md#launch)|Reprezentuje typ maski bitowej, który opisuje możliwe tryby funkcji szablonu `async` .|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

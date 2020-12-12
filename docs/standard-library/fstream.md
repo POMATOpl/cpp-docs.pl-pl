@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; fstream —&gt;'
 title: '&lt;fstream —&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-ms.openlocfilehash: 46f65f746179740f2d67dd1ada2f96ab3fb6aaf6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98fe18306d50a9d6f1f8a360d4d29b6e865f6328
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324268"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream —&gt;
 
@@ -45,7 +46,7 @@ Definiuje kilka klas, które obsługują operacje iostreams na sekwencjach przec
 |[basic_ifstream](../standard-library/basic-ifstream-class.md)|Szablon klasy opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **Tr**> , z elementami typu `Elem` , których cechy znaku są określane przez klasę `Tr` .|
 |[basic_ofstream](../standard-library/basic-ofstream-class.md)|Szablon klasy opisuje obiekt, który kontroluje Wstawianie elementów i zakodowanych obiektów do bufora strumienia klasy [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **Tr**> , z elementami typu `Elem` , których cechy znaku są określane przez klasę `Tr` .|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

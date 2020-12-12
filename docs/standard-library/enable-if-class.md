@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy enable_if
 title: enable_if — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 1017fc315a4440350a0190cf4b40e644cda16876
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 89bd78113a9f6ea9d94a69decccd58c7953e4a8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324465"
 ---
 # <a name="enable_if-class"></a>enable_if — Klasa
 
@@ -107,7 +108,7 @@ Scenariusz 3 używa nazwy `Dummy` , ale jest opcjonalny. " `typename = typename`
 
 Scenariusz 4 działa w konstruktorach, które nie mają zwracanych typów i w związku z tym rozwiązuje ograniczenie otoki scenariusza 1.  Jednak scenariusz 4 jest ograniczony do argumentów funkcji nienależących do szablonu, które nie są zawsze dostępne.  (Użycie scenariusza 4 w argumencie funkcji z szablonami uniemożliwia odliczanie argumentu szablonu od pracy z nim).
 
-`enable_if`jest zaawansowany, ale również niebezpieczny, jeśli jest nieużywany.  Ponieważ celem jest przeprowadzenie kandydatów przed rozpoznaniem przeciążenia, gdy nie jest on używany, jego skutki mogą być bardzo mylące.  Poniżej przedstawiono niektóre zalecenia:
+`enable_if` jest zaawansowany, ale również niebezpieczny, jeśli jest nieużywany.  Ponieważ celem jest przeprowadzenie kandydatów przed rozpoznaniem przeciążenia, gdy nie jest on używany, jego skutki mogą być bardzo mylące.  Poniżej przedstawiono niektóre zalecenia:
 
 - Nie należy używać `enable_if` do wybierania między implementacjami w czasie kompilacji. Nie pisz jeszcze jeden `enable_if` dla `CONDITION` i drugi dla `!CONDITION` .  Zamiast tego należy użyć wzorca *wysyłania tagów* — na przykład algorytmu, który wybiera implementacje, w zależności od siły podanym iteratorów.
 
@@ -127,7 +128,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-W tym przykładzie `make_pair("foo", "bar")` zwraca wartość `pair<const char *, const char *>` . Rozpoznanie przeciążenia musi określić, która z nich `func()` ma zostać wybrana. `pair<A, B>`ma niejawnie przekonwertowanego konstruktora z `pair<X, Y>` .  To nie jest Nowość — w języku C++ 98. Jednak w języku C++ 98/03, niejawnie konwertowany podpis konstruktora zawsze istnieje, nawet jeśli jest to `pair<int, int>(const pair<const char *, const char *>&)` .  Funkcja rozpoznawania przeciążenia nie ma wpływu na to, że próba wystąpienia tego konstruktora rozkłada horribly, ponieważ `const char *` nie jest to niejawnie konwertowane **`int`**  W związku z tym przykładowy kod jest niejednoznaczny, ponieważ istnieją sygnatury do przekonwertowania `pair<const char *, const char *>` na jednocześnie `pair<int, int>` i `pair<string, string>` .
+W tym przykładzie `make_pair("foo", "bar")` zwraca wartość `pair<const char *, const char *>` . Rozpoznanie przeciążenia musi określić, która z nich `func()` ma zostać wybrana. `pair<A, B>` ma niejawnie przekonwertowanego konstruktora z `pair<X, Y>` .  To nie jest Nowość — w języku C++ 98. Jednak w języku C++ 98/03, niejawnie konwertowany podpis konstruktora zawsze istnieje, nawet jeśli jest to `pair<int, int>(const pair<const char *, const char *>&)` .  Funkcja rozpoznawania przeciążenia nie ma wpływu na to, że próba wystąpienia tego konstruktora rozkłada horribly, ponieważ `const char *` nie jest to niejawnie konwertowane **`int`**  W związku z tym przykładowy kod jest niejednoznaczny, ponieważ istnieją sygnatury do przekonwertowania `pair<const char *, const char *>` na jednocześnie `pair<int, int>` i `pair<string, string>` .
 
 Język c++ 11 rozwiązał tę niejednoznaczność za pomocą polecenia, `enable_if` Aby upewnić się, że `pair<A, B>(const pair<X, Y>&)` istnieje **tylko** wtedy `const X&` , gdy jest niejawnie konwertowany na `A` i `const Y&` jest niejawnie konwertowany na `B` .  Umożliwia to rozpoznanie przeciążenia, aby określić, że `pair<const char *, const char *>` nie jest to możliwe do konwersji na `pair<int, int>` i że Przeciążenie, które pobiera, `pair<string, string>` jest żywotne.
 
@@ -137,6 +138,6 @@ Język c++ 11 rozwiązał tę niejednoznaczność za pomocą polecenia, `enable_
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)
