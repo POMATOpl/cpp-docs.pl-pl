@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IAtlMemMgr'
 title: Klasa IAtlMemMgr
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 31f25c5fdb6a4e443bf011aac29620be8a4f13f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139753"
 ---
 # <a name="iatlmemmgr-class"></a>Klasa IAtlMemMgr
 

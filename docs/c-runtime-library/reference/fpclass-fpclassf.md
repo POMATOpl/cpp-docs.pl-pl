@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fpclass, _fpclassf'
 title: _fpclass, _fpclassf
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bd7a2aa02a3431ff41c4d9695efca1f959ece24f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164916"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -60,12 +61,12 @@ int _fpclassf(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **_fpclass** i **_fpclassf** zwracają liczbę całkowitą, która wskazuje na klasyfikację zmiennoprzecinkową argumentu *x*. Klasyfikacja może mieć jedną z następujących wartości zdefiniowanych w \<> float. h.
+Funkcje **_fpclass** i **_fpclassf** zwracają liczbę całkowitą, która wskazuje na klasyfikację zmiennoprzecinkową argumentu *x*. Klasyfikacja może mieć jedną z następujących wartości zdefiniowanych w \<float.h> .
 
 |Wartość|Opis|
 |-----------|-----------------|
@@ -90,7 +91,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fpclass**, **_fpclassf**|\<Floating. h>|
+|**_fpclass**, **_fpclassf**|\<float.h>|
 
 Aby uzyskać bardziej zgodność i informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

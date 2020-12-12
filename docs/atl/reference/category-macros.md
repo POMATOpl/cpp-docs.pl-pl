@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: makra kategorii'
 title: Makra kategorii
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cbef36ca02fb990ba8935915837074d7dd4116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165085"
 ---
 # <a name="category-macros"></a>Makra kategorii
 
@@ -102,7 +103,7 @@ Aby uzyskać więcej informacji o kategoriach składników, zobacz [co to są ka
 |Proste powiązanie danych|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Zaawansowane powiązanie danych|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Kontrolki bez okien|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Obiekty obsługujące Internet|Listę przykładowych [obiektów obsługujących Internet](/windows/win32/com/internet-aware-objects) można znaleźć w Windows SDK.||
+|Internet-Aware obiektów|Listę przykładowych [obiektów obsługujących Internet](/windows/win32/com/internet-aware-objects) można znaleźć w Windows SDK.||
 
 ### <a name="example"></a>Przykład
 
@@ -139,12 +140,12 @@ Aby uzyskać więcej informacji o kategoriach składników, łącznie z listą p
 |Proste powiązanie danych|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Zaawansowane powiązanie danych|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Kontrolki bez okien|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Obiekty obsługujące Internet|Listę przykładowych [obiektów obsługujących Internet](/windows/win32/com/internet-aware-objects) można znaleźć w Windows SDK.||
+|Internet-Aware obiektów|Listę przykładowych [obiektów obsługujących Internet](/windows/win32/com/internet-aware-objects) można znaleźć w Windows SDK.||
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

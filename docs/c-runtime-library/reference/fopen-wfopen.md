@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fopen, _wfopen'
 title: fopen, _wfopen
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: a11bf5ab387ac3436a488f77bea4c5c130836790
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164929"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -80,7 +81,7 @@ Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_n
 
 Funkcja **fopen** otwiera plik, który jest określony przez *filename*. Domyślnie ciąg wąskiej *nazwy pliku* jest interpretowany przy użyciu strony kodowej ANSI (CP_ACP). W aplikacjach klasycznych systemu Windows można zmienić na stronę kodową OEM (CP_OEMCP) za pomocą funkcji [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . Można użyć funkcji [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) , aby określić, czy *Nazwa pliku* jest interpretowana przy użyciu ANSI lub domyślnej strony kodowej OEM systemu. **_wfopen** to dwubajtowa wersja **fopen**; argumenty do **_wfopen** są ciągami znaków dwubajtowych. W przeciwnym razie **_wfopen** i **fopen** zachowują się identycznie. Użycie **_wfopen** nie ma wpływu na zakodowany zestaw znaków używany w strumieniu pliku.
 
-**fopen** akceptuje ścieżki, które są prawidłowe w systemie plików w punkcie wykonywania; **fopen** akceptuje ścieżki UNC i ścieżki, które obejmują zamapowane dyski sieciowe, tak długo, jak system, który wykonuje kod, ma dostęp do udziału lub dysku zamapowanego w czasie wykonywania. Podczas konstruowania ścieżek dla **fopen**upewnij się, że dyski, ścieżki lub udziały sieciowe będą dostępne w środowisku wykonawczym. Jako separatorów katalogów w ścieżce można użyć ukośników (/) lub ukośników odwrotnych ( \\ ).
+**fopen** akceptuje ścieżki, które są prawidłowe w systemie plików w punkcie wykonywania; **fopen** akceptuje ścieżki UNC i ścieżki, które obejmują zamapowane dyski sieciowe, tak długo, jak system, który wykonuje kod, ma dostęp do udziału lub dysku zamapowanego w czasie wykonywania. Podczas konstruowania ścieżek dla **fopen** upewnij się, że dyski, ścieżki lub udziały sieciowe będą dostępne w środowisku wykonawczym. Jako separatorów katalogów w ścieżce można użyć ukośników (/) lub ukośników odwrotnych ( \\ ).
 
 Zawsze sprawdzaj wartość zwracaną, aby sprawdzić, czy wskaźnik ma wartość NULL przed wykonaniem jakichkolwiek dodatkowych operacji na pliku. Jeśli wystąpi błąd, zmienna globalna **errno** jest ustawiona i może służyć do uzyskiwania określonych informacji o błędzie. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -88,11 +89,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 ## <a name="unicode-support"></a>Obsługa formatu Unicode
 
-**fopen** obsługuje strumienie plików w formacie Unicode. Aby otworzyć plik w formacie Unicode, należy przekazać flagę **CCS** , która określa wymagane kodowanie do **fopen**w następujący sposób.
+**fopen** obsługuje strumienie plików w formacie Unicode. Aby otworzyć plik w formacie Unicode, należy przekazać flagę **CCS** , która określa wymagane kodowanie do **fopen** w następujący sposób.
 
 > **Plik \* FP = fopen ("newfile.txt", "RT +, CCS =**_Encoding_**");**
 
-Dozwolone wartości *kodowania* to **Unicode**, **UTF-8**i **UTF-16LE**.
+Dozwolone wartości *kodowania* to **Unicode**, **UTF-8** i **UTF-16LE**.
 
 Gdy plik jest otwarty w trybie Unicode, funkcje wejściowe tłumaczą dane, które są odczytywane z pliku do danych UTF-16 przechowywanych jako typ **`wchar_t`** . Funkcje, które zapisują do pliku otwartego w trybie Unicode, oczekują buforów zawierających dane w formacie UTF-16 przechowywane jako typ **`wchar_t`** . Jeśli plik jest zakodowany jako UTF-8, dane UTF-16 są tłumaczone na UTF-8 podczas zapisywania, a zawartość zakodowana w formacie UTF-8 jest tłumaczona na UTF-16 podczas odczytywania. Próba odczytania lub zapisania nieparzystej liczby bajtów w trybie Unicode powoduje błąd [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Aby odczytać lub zapisać dane, które są przechowywane w programie jako UTF-8, użyj trybu plików tekstowych lub binarnych zamiast trybu Unicode. Użytkownik jest odpowiedzialny za wszelkie wymagane tłumaczenia kodowania.
 
@@ -159,29 +160,29 @@ Poniższe opcje można dołączyć do *trybu* , aby określić dodatkowe zachowa
 |-|-|
 | **x** | Wymusza Niepowodzenie funkcji, jeśli *Nazwa pliku* już istnieje. Można go używać tylko ze specyfikatorami "w" lub "w +". |
 | **s** | Włącz flagę zatwierdzania dla skojarzonej *nazwy pliku* , aby zawartość bufora plików była zapisywana bezpośrednio na dysk, jeśli zostanie wywołana **fflush** lub **_flushall** . |
-| **Azotan** | Zresetuj flagę zatwierdzania dla skojarzonej *nazwy pliku* na wartość "No-Commit". Jest to opcja domyślna. Zastępuje ona również globalną flagę zatwierdzania w przypadku łączenia programu z TOWARami. OBJ. Globalna flaga zatwierdzania ma wartość "No-Commit", chyba że jawnie łączysz program z TOWARami. OBJ (zobacz [Opcje linku](../../c-runtime-library/link-options.md)). |
+| **n** | Zresetuj flagę zatwierdzania dla skojarzonej *nazwy pliku* na wartość "No-Commit". Jest to opcja domyślna. Zastępuje ona również globalną flagę zatwierdzania w przypadku łączenia programu z TOWARami. OBJ. Globalna flaga zatwierdzania ma wartość "No-Commit", chyba że jawnie łączysz program z TOWARami. OBJ (zobacz [Opcje linku](../../c-runtime-library/link-options.md)). |
 | **N** | Określa, że plik nie jest dziedziczony przez procesy podrzędne. |
 | **S** | Określa, że buforowanie jest zoptymalizowane dla, ale nie ograniczone do, dostęp sekwencyjny z dysku. |
 | **R** | Określa, że buforowanie jest zoptymalizowane dla, ale nie ograniczone do, losowy dostęp z dysku. |
 | **T** | Określa plik jako tymczasowy. Jeśli to możliwe, nie jest opróżniony na dysk. |
 | **Wykres** | Określa plik jako tymczasowy. Jest usuwany, gdy ostatni wskaźnik pliku jest zamknięty. |
-| **CCS =**_kodowanie_ | Określa zestaw znaków kodowanych do użycia (jeden z **UTF-8**, **UTF-16LE**lub **Unicode**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz użyć kodowania ANSI. |
+| **CCS =**_kodowanie_ | Określa zestaw znaków kodowanych do użycia (jeden z **UTF-8**, **UTF-16LE** lub **Unicode**) dla tego pliku. Pozostaw nieokreślony, jeśli chcesz użyć kodowania ANSI. |
 
 Prawidłowe znaki w ciągu *trybu* , który jest używany w **fopen** i **_fdopen** odpowiadają argumentom *Oflag* , które są używane w [_open](open-wopen.md) i [_sopen](sopen-wsopen.md)w następujący sposób.
 
 |Znaki w ciągu *trybu*|Równoważna wartość *Oflag* dla elementu \_ Open/ \_ sopen|
 |-------------------------------|----------------------------------------------------|
-|**z**|** \_ O \_ WRONLY** &#124; ** \_ o \_ dołączenie** (zazwyczaj ** \_ O \_ WRONLY** &#124; ** \_ o \_ ** tworzenie &#124; ** \_ o \_ dołączeniu**)|
-|**a +**|** \_ O \_ RDWR** &#124; ** \_ o \_ dołączenie** (zazwyczaj ** \_ O \_ RDWR** &#124; ** \_ o \_ dołączenie** &#124; ** \_ o \_ ** tworzenie)|
+|**z**|**\_ O \_ WRONLY** &#124; **\_ o \_ dołączenie** (zazwyczaj **\_ O \_ WRONLY** &#124; **\_ o \_** tworzenie &#124; **\_ o \_ dołączeniu**)|
+|**a +**|**\_ O \_ RDWR** &#124; **\_ o \_ dołączenie** (zazwyczaj **\_ O \_ RDWR** &#124; **\_ o \_ dołączenie** &#124; **\_ o \_** tworzenie)|
 |**®**|**\_O \_ RDONLY**|
 |**Język r +**|**\_O \_ RDWR**|
-|**k**|** \_ O \_ WRONLY** (zazwyczaj ** \_ o \_ WRONLY** &#124; ** \_ o \_ ** &#124; ** \_ o \_ TRUNC —**)|
-|**w +**|** \_ O \_ RDWR** (zazwyczaj ** \_ o \_ RDWR** &#124; ** \_ o \_ ** &#124; ** \_ o \_ TRUNC —**)|
+|**w**|**\_ O \_ WRONLY** (zazwyczaj **\_ o \_ WRONLY** &#124; **\_ o \_** &#124; **\_ o \_ TRUNC —**)|
+|**w +**|**\_ O \_ RDWR** (zazwyczaj **\_ o \_ RDWR** &#124; **\_ o \_** &#124; **\_ o \_ TRUNC —**)|
 |**b**|**\_O \_ plik binarny**|
 |**&**|**\_O \_ tekst**|
 |**x**|**\_O \_ bez**|
 |**s**|Brak|
-|**Azotan**|Brak|
+|**n**|Brak|
 |**S**|**\_O \_ sekwencyjnie**|
 |**R**|**\_O \_ losowo**|
 |**T**|**\_O \_ SHORTLIVED**|
@@ -201,7 +202,7 @@ W przypadku korzystania z trybu **RB** nie trzeba portować kodu, a jeśli oczek
 
 **_wfopen** to rozszerzenie firmy Microsoft. Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-Opcje *trybu* **c**, **n**, **t**, **S**, **R**, **t**i **D** są rozszerzeniami firmy Microsoft dla **fopen** i **_fdopen** i nie powinny być używane w przypadku potrzeby przenoszenia w formacie ANSI.
+Opcje *trybu* **c**, **n**, **t**, **S**, **R**, **t** i **D** są rozszerzeniami firmy Microsoft dla **fopen** i **_fdopen** i nie powinny być używane w przypadku potrzeby przenoszenia w formacie ANSI.
 
 ## <a name="example-1"></a>Przykład 1
 
@@ -317,7 +318,7 @@ int main(int argc, char** argv)
 ## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>

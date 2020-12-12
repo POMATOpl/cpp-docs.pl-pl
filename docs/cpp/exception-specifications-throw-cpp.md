@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: specyfikacjach wyjątków (throw, noexcept) (C++)'
 title: Specyfikacje wyjątków (throw, noexcept) (C++)
 ms.date: 01/18/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 1fa56ebf0a0358845ef620a89bc416992b3c0e31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a6b3cb808caf464dc3dd19ea4d34e9d68f09d0d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164805"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specyfikacje wyjątków (throw, noexcept) (C++)
 
@@ -35,7 +36,7 @@ W poniższej tabeli zestawiono implementację specyfikacji wyjątków w języku 
 
 |Specyfikacja wyjątku|Znaczenie|
 |-----------------------------|-------------|
-|**`noexcept`**<br/>`noexcept(true)`<br/>`throw()`|Funkcja nie zgłasza wyjątku. W [/std: tryb c++ 14](../build/reference/std-specify-language-standard-version.md) (jest to ustawienie domyślne) **`noexcept`** i `noexcept(true)` są równoważne. Gdy wyjątek jest zgłaszany przez funkcję zadeklarowaną **`noexcept`** lub, wartość `noexcept(true)` [std:: terminate](../standard-library/exception-functions.md#terminate) jest wywoływana. Gdy wyjątek jest zgłaszany przez funkcję zadeklarowaną jako `throw()` w trybie **/std: c++ 14** , wynik jest niezdefiniowanym zachowaniem. Nie została wywołana żadna konkretna funkcja. Jest to rozbieżność ze standardu C++ 14, która wymagała kompilatora do wywołania [std:: unniespodziewane](../standard-library/exception-functions.md#unexpected).  <br/> **Program Visual Studio 2017 w wersji 15,5 i nowszej**: w trybie **/std: c++ 17** , **`noexcept`** , `noexcept(true)` , i `throw()` są równoważne. W **/std: tryb c++ 17** , `throw()` jest aliasem dla `noexcept(true)` . W trybie **/std: c++ 17** , gdy wyjątek jest zgłaszany z funkcji zadeklarowanej za pomocą którejkolwiek z tych specyfikacji, [std:: terminate](../standard-library/exception-functions.md#terminate) jest wywoływana zgodnie z wymaganiami standardu c++ 17.|
+|**`noexcept`**<br/>`noexcept(true)`<br/>`throw()`|Funkcja nie zgłasza wyjątku. W [/std: tryb c++ 14](../build/reference/std-specify-language-standard-version.md) (jest to ustawienie domyślne) **`noexcept`** i `noexcept(true)` są równoważne. Gdy wyjątek jest zgłaszany przez funkcję zadeklarowaną **`noexcept`** lub, wartość `noexcept(true)` [std:: terminate](../standard-library/exception-functions.md#terminate) jest wywoływana. Gdy wyjątek jest zgłaszany przez funkcję zadeklarowaną jako `throw()` w trybie **/std: c++ 14** , wynik jest niezdefiniowanym zachowaniem. Nie została wywołana żadna konkretna funkcja. Jest to rozbieżność ze standardu C++ 14, która wymagała kompilatora do wywołania [std:: unniespodziewane](../standard-library/exception-functions.md#unexpected).  <br/> **Program Visual Studio 2017 w wersji 15,5 i nowszej**: w trybie **/std: c++ 17** , **`noexcept`** , `noexcept(true)` , i `throw()` są równoważne. W **/std: tryb c++ 17** , `throw()` jest aliasem dla `noexcept(true)` . W trybie **/std: c++ 17** , gdy wyjątek jest zgłaszany z funkcji zadeklarowanej za pomocą którejkolwiek z tych specyfikacji, [std:: terminate](../standard-library/exception-functions.md#terminate)  jest wywoływana zgodnie z wymaganiami standardu c++ 17.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Brak specyfikacji|Funkcja może zgłosić wyjątek dowolnego typu.|
 |`throw(type)`| (**C++ 14 i starsze**) Funkcja może zgłosić wyjątek typu `type` . Kompilator akceptuje składnię, ale interpretuje ją jako `noexcept(false)` . W **/std: w trybie c++ 17** kompilator wystawia ostrzeżenie C5040.|
 
@@ -50,14 +51,14 @@ Zachowanie wyjątków funkcji zależy od następujących czynników:
 
 - Określa, czy określono jawnie specyfikację wyjątku.
 
-Jawne specyfikacje wyjątków nie są dozwolone w funkcjach języka C. Przyjęto, że funkcja C nie zgłasza wyjątków w ramach **/EHsc**i może zgłosić wyjątki strukturalne w obszarze **/EHS**, **/EHa**lub **/EHac**.
+Jawne specyfikacje wyjątków nie są dozwolone w funkcjach języka C. Przyjęto, że funkcja C nie zgłasza wyjątków w ramach **/EHsc** i może zgłosić wyjątki strukturalne w obszarze **/EHS**, **/EHa** lub **/EHac**.
 
 Poniższa tabela zawiera podsumowanie, czy funkcja języka C++ może potencjalnie zgłosić w ramach różnych opcji obsługi wyjątków kompilatora:
 
 |Funkcja|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
 |Funkcja języka C++ bez specyfikacji wyjątku|Tak|Tak|Tak|Tak|
-|Funkcja C++ z **`noexcept`** , `noexcept(true)` lub `throw()` Specyfikacja wyjątku|Nie|Nie|Yes|Tak|
+|Funkcja C++ z **`noexcept`** , `noexcept(true)` lub `throw()` Specyfikacja wyjątku|Nie|Nie|Tak|Tak|
 |Funkcja C++ z `noexcept(false)` , `throw(...)` lub `throw(type)` Specyfikacja wyjątku|Tak|Tak|Tak|Tak|
 
 ## <a name="example"></a>Przykład

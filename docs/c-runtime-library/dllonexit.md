@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __dllonexit'
 title: __dllonexit
 ms.date: 11/04/2016
 api_name:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: 61d63c751dd755bf8a7680c674681e114945814b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef9dc444ecb1b36062a4dc9ea98ec9a15804f930
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151830"
 ---
 # <a name="__dllonexit"></a>__dllonexit
 
@@ -58,11 +59,11 @@ Jeśli powiedzie się, wskaźnik do funkcji użytkownika. W przeciwnym razie wsk
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja jest analogiczna do funkcji _onexit, z tą różnicą, że zmienne globalne używane przez tę funkcję nie są widoczne dla tej procedury. [](../c-runtime-library/reference/onexit-onexit-m.md) `__dllonexit` Zamiast zmiennych globalnych, ta funkcja używa `pbegin` parametrów i. `pend`
+`__dllonexit`Funkcja jest analogiczna do funkcji [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) , z tą różnicą, że zmienne globalne używane przez tę funkcję nie są widoczne dla tej procedury. Zamiast zmiennych globalnych, ta funkcja używa `pbegin` `pend` parametrów i.
 
-Funkcje `_onexit` i`atexit` w bibliotece DLL połączonej z msvcrt. Biblioteka LIB musi obsługiwać własną listę atexit —/_onexit. Ta procedura jest procesem roboczym, który jest wywoływany przez takie biblioteki DLL.
+`_onexit`Funkcje i `atexit` w bibliotece DLL połączonej z msvcrt. LIB musi obsługiwać własną listę atexit —/_onexit. Ta procedura jest procesem roboczym, który jest wywoływany przez takie biblioteki DLL.
 
-Typ jest zdefiniowany jako `typedef void (__cdecl *_PVFV)(void)`. `_PVFV`
+`_PVFV`Typ jest zdefiniowany jako `typedef void (__cdecl *_PVFV)(void)` .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,6 +71,6 @@ Typ jest zdefiniowany jako `typedef void (__cdecl *_PVFV)(void)`. `_PVFV`
 |-------------|-------------------|
 |__dllonexit|OnExit. c|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

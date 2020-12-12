@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: jak zwiększyć bibliotekę organizowania'
 title: 'Porady: rozszerzanie biblioteki kierowania'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 071ea72a2aa03dcf16eb0f09e121eba4514e5828
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 829e05002c23f5a5b59efdb5e65dc5769ca7906a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134969"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Porady: rozszerzanie biblioteki kierowania
 
@@ -266,6 +267,6 @@ Native address: 123 Main Street
 Native zip code: 98111
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md)

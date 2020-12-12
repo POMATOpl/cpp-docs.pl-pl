@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; przydziale&gt;'
 title: '&lt;alokatorów&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38183f58d9b919464a6cdbc31c6f75c539a9461b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163486"
 ---
 # <a name="ltallocatorsgt"></a>&lt;alokatorów&gt;
 
@@ -24,7 +25,7 @@ Definiuje kilka szablonów, które ułatwiają przydzielanie i zwalnianie blokó
 ```
 
 > [!NOTE]
-> \<allocators>jest przestarzałe, począwszy od programu Visual Studio 2019 w wersji 16,3.
+> \<allocators> jest przestarzałe, począwszy od programu Visual Studio 2019 w wersji 16,3.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,7 +85,7 @@ Alokator bloku jest pamięcią podręczną lub filtrem. Pamięć podręczna to s
 
 Kompilator, który nie może ponownie powiązać wartości argumentu std:: size_t użytego podczas tworzenia wystąpienia szablonu, nie musi być wartością argumentu _Sz przekazaną do funkcji składowych pamięci podręcznej alokacji i alokacji.
 
-\<allocators>Program udostępnia następujące szablony pamięci podręcznej:
+\<allocators> Program udostępnia następujące szablony pamięci podręcznej:
 
 - [cache_freelist](cache-freelist-class.md)
 
@@ -92,7 +93,7 @@ Kompilator, który nie może ponownie powiązać wartości argumentu std:: size_
 
 - [cache_chunklist](cache-chunklist-class.md)
 
-Filtr jest alokatorem bloku, który implementuje jego funkcje członkowskie przy użyciu innego alokatora bloku, który jest przekazaniem do niego jako argument szablonu. Najbardziej typową formą filtru jest filtr synchronizacji, który stosuje zasady synchronizacji w celu kontrolowania dostępu do funkcji składowych wystąpienia innego alokatora blokowego. \<allocators>Program udostępnia następujące filtry synchronizacji:
+Filtr jest alokatorem bloku, który implementuje jego funkcje członkowskie przy użyciu innego alokatora bloku, który jest przekazaniem do niego jako argument szablonu. Najbardziej typową formą filtru jest filtr synchronizacji, który stosuje zasady synchronizacji w celu kontrolowania dostępu do funkcji składowych wystąpienia innego alokatora blokowego. \<allocators> Program udostępnia następujące filtry synchronizacji:
 
 - [sync_none](sync-none-class.md)
 
@@ -102,7 +103,7 @@ Filtr jest alokatorem bloku, który implementuje jego funkcje członkowskie przy
 
 - [sync_shared](sync-shared-class.md)
 
-\<allocators>zapewnia również [rts_alloc](rts-alloc-class.md)filtru, który zawiera wiele wystąpień alokatora blokowego i określa, które wystąpienie ma być używane do alokacji lub cofania alokacji w czasie wykonywania, a nie podczas kompilowania. Jest on używany z kompilatorami, które nie mogą skompilować ponownie powiązania.
+\<allocators> zapewnia również [rts_alloc](rts-alloc-class.md)filtru, który zawiera wiele wystąpień alokatora blokowego i określa, które wystąpienie ma być używane do alokacji lub cofania alokacji w czasie wykonywania, a nie podczas kompilowania. Jest on używany z kompilatorami, które nie mogą skompilować ponownie powiązania.
 
 Zasady synchronizacji określają, jak wystąpienie alokatora obsługuje równoczesne alokacje i cofa alokacji z wielu wątków. Najprostszą zasadą jest przekazanie wszystkich żądań bezpośrednio do bazowego obiektu pamięci podręcznej, pozostawiając użytkownikowi Zarządzanie synchronizacją. Bardziej skomplikowane zasady mogą być używane do serializacji dostępu do bazowego obiektu pamięci podręcznej przy użyciu elementu mutex.
 
@@ -110,7 +111,7 @@ Jeśli kompilator obsługuje Kompilowanie aplikacji wielowątkowych i wielowątk
 
 Szablon pamięci podręcznej `cache_freelist` przyjmuje argument Max Class, który określa maksymalną liczbę elementów, które mają być przechowywane na liście bezpłatnych.
 
-\<allocators>oferuje następujące maksymalne klasy:
+\<allocators> oferuje następujące maksymalne klasy:
 
 - [max_none](max-none-class.md)
 
@@ -168,6 +169,6 @@ Szablon pamięci podręcznej `cache_freelist` przyjmuje argument Max Class, któ
 
 **Przestrzeń nazw:** stdext
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)

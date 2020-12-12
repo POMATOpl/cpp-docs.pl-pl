@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze programu
 title: Struktura programu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - programs [C++], structure
 - C, program structure
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
-ms.openlocfilehash: 891207ac19da99f2f1b2b651e661560a0ab02d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55c75254d7ccc9fecb6089f3ae4a3dc6effc748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137426"
 ---
 # <a name="program-structure"></a>Struktura programu
 
@@ -25,7 +26,7 @@ Ta sekcja zawiera omówienie programów i wykonywania programu w języku C. Wpro
 
 - [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)
 
-- [Spacje nazw](../c-language/name-spaces.md)
+- [Przestrzenie nazw](../c-language/name-spaces.md)
 
 Ponieważ ta sekcja jest przeglądem, omówione tematy zawierają jedynie materiał wprowadzający. Zapoznaj się z informacjami dotyczącymi odsyłaczy, aby uzyskać bardziej szczegółowe wyjaśnienia.
 

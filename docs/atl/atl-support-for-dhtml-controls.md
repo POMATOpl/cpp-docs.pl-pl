@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Obsługa ATL dla formantów DHTML'
 title: Obsługa ALT dla kontrolek DHTML
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,50 +7,50 @@ helpviewer_keywords:
 - DHTML controls, ATL support
 - DHTML controls
 ms.assetid: 4ba98098-da5d-4362-96ad-8372f816c307
-ms.openlocfilehash: dd8ac616d127c3307c1c432c0b3c9bc2ef1d6181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7527527bc5574470fd361bae2375c25ce9345f3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148593"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>Obsługa ALT dla kontrolek DHTML
 
-Przy użyciu biblioteki ATL, można utworzyć kontrolki za pomocą funkcji dynamicznego języka HTML (DHTML). Kontrolki ATL DHTML:
+Za pomocą biblioteki ATL można utworzyć formant z dynamiczną funkcją HTML (DHTML). Formant ATL DHTML:
 
-- Obsługuje formant WebBrowser.
+- Hostuje formant WebBrowser.
 
-- Określa, że za pomocą kodu HTML, w interfejsie użytkownika (UI) kontrolki DHTML.
+- Określa, że za pomocą HTML, interfejs użytkownika (UI) kontrolki DHTML.
 
-- Uzyskuje dostęp do obiektu WebBrowser i jego metod za pośrednictwem jego interfejsu [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)).
+- Uzyskuje dostęp do obiektu WebBrowser i jego metod za pomocą interfejsu, [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)).
 
 - Zarządza komunikacją między kodem C++ i HTML.
 
-Kontrolki DHTML jest podobny do dowolnej innej kontrolki ATL, jednak kontrolki DHTML obejmuje interfejs ekspedycji dodatkowe. Zobacz ilustrację w [identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) ilustrację dostarczanych w projekcie DHTML domyślne.
+Kontrolka DHTML jest podobna do dowolnej innej kontrolki ATL, z wyjątkiem tego, że kontrolka DHTML zawiera dodatkowy interfejs wysyłania. Zobacz rysunek w temacie [Identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md) dla ilustracji interfejsów podanych w domyślnym projekcie DHTML.
 
-Kontrolki ATL DHTML można wyświetlić w przeglądarce sieci Web lub innych kontenerów, takich jak kontener testu kontrolki ActiveX.
+Formant ATL DHTML można wyświetlić w przeglądarce internetowej lub w innym kontenerze, takim jak kontener testu kontrolki ActiveX.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)<br/>
-Opisano elementy projektu kontrolki DHTML.
+Opisuje elementy projektu kontrolki DHTML.
 
-[Wywoływanie kodu C++ z elementu DHTML](../atl/calling-cpp-code-from-dhtml.md)<br/>
-Przykład wywołania kodu w języku C++ z kontrolki DHTML.
+[Wywoływanie kodu C++ z DHTML](../atl/calling-cpp-code-from-dhtml.md)<br/>
+Zawiera przykład wywoływania kodu C++ z kontrolki DHTML.
 
 [Tworzenie kontrolki DHTML ATL](../atl/creating-an-atl-dhtml-control.md)<br/>
-Lista czynności prowadzących do tworzenia kontrolki DHTML.
+Wyświetla listę kroków tworzenia kontrolki DHTML.
 
 [Testowanie kontrolki DHTML ATL](../atl/testing-the-atl-dhtml-control.md)<br/>
-Przedstawia sposób tworzenia i testowania początkowego projektu kontrolki DHTML.
+Pokazuje, jak utworzyć i przetestować początkowy projekt kontrolki DHTML.
 
 [Modyfikowanie kontrolki DHTML ATL](../atl/modifying-the-atl-dhtml-control.md)<br/>
-Pokazuje, jak dodawać funkcjonalność do formantu.
+Pokazuje, jak dodać niektóre funkcje do kontrolki.
 
-[Testowanie kontrolki DHTML ATL zmieniony](../atl/testing-the-modified-atl-dhtml-control.md)<br/>
-Pokazuje, jak tworzyć i testować dodatkowa funkcjonalność formantu.
+[Testowanie zmienionej kontrolki DHTML ATL](../atl/testing-the-modified-atl-dhtml-control.md)<br/>
+Pokazuje, jak utworzyć i przetestować dodaną funkcję kontrolki.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
+Zawiera łącza do tematów koncepcyjnych dotyczących sposobu programowania przy użyciu Active Template Library.

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: qsort_s'
 title: qsort_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: 934801531804345a8cede6ed1ac4abb06bae45b4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 01890db21bc1eb470b57aa796313da4c6f0c50a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137166"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -61,7 +62,7 @@ Początek tablicy docelowej.
 *Liczba*<br/>
 Rozmiar tablicy w elementach.
 
-*Szerokość*<br/>
+*width*<br/>
 Rozmiar elementu w bajtach.
 
 *porównaniu*<br/>
@@ -96,10 +97,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |key|base|compare|num|szerokość|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|ile|ile|ile|ile|**EINVAL**|
-|ile|**NULL**|ile|! = 0|ile|**EINVAL**|
-|ile|ile|ile|ile|<= 0|**EINVAL**|
-|ile|ile|**NULL**|ile|ile|**EINVAL**|
+|**NULL**|dowolny|dowolny|dowolny|dowolny|**EINVAL**|
+|dowolny|**NULL**|dowolny|! = 0|dowolny|**EINVAL**|
+|dowolny|dowolny|dowolny|dowolny|<= 0|**EINVAL**|
+|dowolny|dowolny|**NULL**|dowolny|dowolny|**EINVAL**|
 
 **qsort_s** ma takie samo zachowanie jak **qsort** , ale ma parametr *Context* i ustawia **errno**. Przekazując parametr *kontekstowy* , funkcje porównania mogą używać wskaźnika obiektu do uzyskiwania dostępu do funkcji obiektów lub innych informacji, które nie są dostępne za pomocą wskaźnika elementu. Dodanie parametru *kontekstowego* zapewnia **qsort_s** bezpieczniejsze, ponieważ można użyć *kontekstu* , aby uniknąć współużytkowania wątkowości błędów wprowadzonych przy użyciu zmiennych statycznych w celu udostępnienia udostępnionych informacji funkcji *Compare* .
 
@@ -107,7 +108,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**qsort_s**|\<STDLIB. h> i \<Search. h>|
+|**qsort_s**|\<stdlib.h> i \<search.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

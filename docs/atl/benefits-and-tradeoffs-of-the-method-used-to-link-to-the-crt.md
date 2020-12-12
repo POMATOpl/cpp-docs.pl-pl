@@ -1,29 +1,30 @@
 ---
-title: Zalety i wady metody używanej do tworzenia linków do CRT
+description: 'Dowiedz się więcej na temat: zalety i wady metody używanej do łączenia z CRT'
+title: Zalety i wady metody używanej do łączenia z CRT
 ms.date: 05/06/2019
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 49b485f7-9487-49e4-b12a-0f710b620e2b
-ms.openlocfilehash: b2e504de91cea9fef6e9acb0fc851bc2cc271e97
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 763332de9615e978d84902f67f2c97efd0767c89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148528"
 ---
-# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Zalety i wady metody używanej do tworzenia linków do CRT
+# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Zalety i wady metody używanej do łączenia z CRT
 
-Projekt można połączyć z CRT, dynamicznie lub statycznie. W poniższej tabeli przedstawiono zalety i wady związane z wybór metody do użycia.
+Projekt może być połączony z CRT dynamicznie lub statycznie. W poniższej tabeli przedstawiono korzyści i kompromisy związane z wybraniem metody, która ma zostać użyta.
 
-|Metoda|Korzyść|Kosztem|
+|Metoda|Korzyść|Uboczn|
 |------------|-------------|--------------|
-|Statycznie łączenie CRT<br /><br /> (**Biblioteki środowiska uruchomieniowego** równa **apartamentem**)|Biblioteka DLL CRT nie jest wymagane w systemie, w którym będzie uruchamiany obrazu.|Około 25 tys uruchamiania kodu jest dodawany do obrazu systemu znaczne zwiększenie jego rozmiaru.|
-|Dynamiczne łączenie CRT<br /><br /> (**Biblioteki środowiska uruchomieniowego** równa **wielowątkowych**)|Obraz nie wymaga kod uruchamiający CRT, więc jest znacznie mniejszy.|Biblioteka DLL CRT musi być w systemem obrazu.|
+|Statyczne łączenie z CRT<br /><br /> (**Biblioteka środowiska uruchomieniowego** jest ustawiona na **jedną wielowątkowość**)|Biblioteka DLL CRT nie jest wymagana w systemie, w którym zostanie uruchomiony obraz.|Informacje o 25K kodu startowego są dodawane do obrazu, znacznie zwiększając jego rozmiar.|
+|Dynamiczne łączenie z CRT<br /><br /> (**Biblioteka środowiska uruchomieniowego** ustawiona na **wiele wątków**)|Obraz nie wymaga kodu uruchamiania CRT, więc jest znacznie mniejszy.|Biblioteka DLL CRT musi znajdować się w systemie, na którym jest uruchomiony obraz.|
 
-Temat [łączenie CRT w ATL projektu](../atl/linking-to-the-crt-in-your-atl-project.md) w tym artykule omówiono sposób wybierania sposobu, w jaki połączyć CRT.
+Temat [łączący się z CRT w projekcie ATL](../atl/linking-to-the-crt-in-your-atl-project.md) zawiera opis sposobu wybierania sposobu łączenia z CRT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Programowanie za pomocą kodu ATL i C Run-Time](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programowanie za pomocą kodu ATL i języka C Run-Time](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Zachowanie biblioteki wykonawczej DLL i Visual C++](../build/run-time-library-behavior.md)<br/>
-[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)
+[Funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: serializacji (C++/CLI)'
 title: Serializacja (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: b2dfdcaf1a1f33e89d106d4529ffc9af2d08376b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 1524ed5d4a000d2006f6f830b1d82119d170c3b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164604"
 ---
 # <a name="serialization-ccli"></a>Serializacja (C++/CLI)
 
-Serializacja (proces przechowywania stanu obiektu lub elementu członkowskiego na stałe medium) zarządzanych klas (w tym poszczególnych pól lub właściwości) jest obsługiwana przez klasy <xref:System.SerializableAttribute> i <xref:System.NonSerializedAttribute>.
+Serializacja (proces przechowywania stanu obiektu lub elementu członkowskiego na stałe medium) zarządzanych klas (w tym poszczególnych pól lub właściwości) jest obsługiwana przez <xref:System.SerializableAttribute> <xref:System.NonSerializedAttribute> klasy i.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -28,7 +29,7 @@ Zastosuj atrybut niestandardowy **SerializableAttribute** do zarządzanej klasy,
 
 ### <a name="description"></a>Opis
 
-W poniższym przykładzie Klasa `MyClass` (i Właściwość `m_nCount`) jest oznaczona jako możliwy do serializacji. Jednak Właściwość `m_nData` nie jest serializowana zgodnie z oznaczeniem **Nieserializowanego** atrybutu niestandardowego:
+W poniższym przykładzie Klasa `MyClass` (i Właściwość `m_nCount` ) są oznaczone jako możliwe do serializacji. Jednak `m_nData` Właściwość nie jest serializowana zgodnie ze wskazanym **nieserializowanym** atrybutem niestandardowym:
 
 ### <a name="code"></a>Kod
 
@@ -51,6 +52,6 @@ private:
 
 Należy pamiętać, że obydwa atrybuty mogą być przywoływane przy użyciu "krótkiej nazwy" (**serializować** i **nieszeregowane**). Jest to dokładniej wyjaśnione w temacie [stosowanie atrybutów](/dotnet/standard/attributes/applying-attributes).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

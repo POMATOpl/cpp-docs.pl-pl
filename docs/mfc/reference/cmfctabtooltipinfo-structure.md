@@ -1,21 +1,22 @@
 ---
-title: Struktura CMFCTabToolTipInfo
+description: Dowiedz się więcej o strukturze CMFCTabToolTipInfo
+title: CMFCTabToolTipInfo, struktura
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabToolTipInfo
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: a507d1e69b3524074e50fde0e87fc5ebb6e5ca03
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce9e9f4fdbcf367921e7f0559a4d04e66f4303dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164071"
 ---
-# <a name="cmfctabtooltipinfo-structure"></a>Struktura CMFCTabToolTipInfo
+# <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo, struktura
 
-Ta struktura zawiera informacje o karcie MDI, na którą znajduje się najechanie kursorem myszy.
+Ta struktura zawiera informacje o karcie MDI, nad którą użytkownik jest aktywowany.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,17 +30,17 @@ struct CMFCTabToolTipInfo
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Określa indeks formantu karty.|
-|[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Wskaźnik do kontrolki karty.|
-|[CMFCTabToolTipInfo::m_strText](#m_strtext)|Tekst etykietki narzędzia.|
+|[CMFCTabToolTipInfo:: m_nTabIndex](#m_ntabindex)|Określa indeks kontrolki karta.|
+|[CMFCTabToolTipInfo:: m_pTabWnd](#m_ptabwnd)|Wskaźnik do kontrolki karta.|
+|[CMFCTabToolTipInfo:: m_strText](#m_strtext)|Tekst etykietki narzędzia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Wskaźnik do `CMFCTabToolTipInfo` struktury jest przekazywany jako parametr AFX_WM_ON_GET_TAB_TOOLTIP wiadomości. Ten komunikat jest generowany, gdy karty MDI są włączone, a użytkownik najedzie kursorem na kontrolkę karty.
+Wskaźnik do `CMFCTabToolTipInfo` struktury jest przenoszona jako parametr komunikatu AFX_WM_ON_GET_TAB_TOOLTIP. Ta wiadomość jest generowana, gdy karty MDI są włączone, a użytkownik umieści wskaźnik myszy na kontrolce karty.
 
 ## <a name="example"></a>Przykład
 
-W poniższym `CMFCTabToolTipInfo` przykładzie pokazano, jak jest używany w [przykładzie MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak `CMFCTabToolTipInfo` jest używany w [przykładzie MDITabsDemo: aplikacja MDI z kartami MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -49,11 +50,11 @@ W poniższym `CMFCTabToolTipInfo` przykładzie pokazano, jak jest używany w [pr
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxbasetabctrl.h
+**Nagłówek:** afxbasetabctrl. h
 
-## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a>CMFCTabToolTipInfo::m_nTabIndex
+## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a> CMFCTabToolTipInfo:: m_nTabIndex
 
-Określa indeks formantu karty.
+Określa indeks kontrolki karta.
 
 ```
 int m_nTabIndex;
@@ -61,17 +62,17 @@ int m_nTabIndex;
 
 ### <a name="remarks"></a>Uwagi
 
-Indeks karty, nad którą użytkownik jest najechaniem kursorem.
+Indeks karty, nad którą użytkownik jest aktywowany.
 
 ### <a name="example"></a>Przykład
 
-W poniższym `m_nTabIndex` przykładzie pokazano, jak jest używany w [przykładzie MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak `m_nTabIndex` jest używany w [przykładzie MDITabsDemo: aplikacja MDI z kartami MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a>CMFCTabToolTipInfo::m_pTabWnd
+## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a> CMFCTabToolTipInfo:: m_pTabWnd
 
-Wskaźnik do kontrolki karty.
+Wskaźnik do kontrolki karta.
 
 ```
 CMFCBaseTabCtrl* m_pTabWnd;
@@ -79,11 +80,11 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Przykład
 
-W poniższym `m_pTabWnd` przykładzie pokazano, jak jest używany w [przykładzie MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak `m_pTabWnd` jest używany w [przykładzie MDITabsDemo: aplikacja MDI z kartami MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a>CMFCTabToolTipInfo::m_strText
+## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a> CMFCTabToolTipInfo:: m_strText
 
 Tekst etykietki narzędzia.
 
@@ -93,11 +94,11 @@ CString m_strText;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ciąg jest pusty, etykietka narzędzia nie jest wyświetlana.
+Jeśli ciąg jest pusty, etykietka narzędzia nie zostanie wyświetlona.
 
 ### <a name="example"></a>Przykład
 
-W poniższym `m_strText` przykładzie pokazano, jak jest używany w [przykładzie MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak `m_strText` jest używany w [przykładzie MDITabsDemo: aplikacja MDI z kartami MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

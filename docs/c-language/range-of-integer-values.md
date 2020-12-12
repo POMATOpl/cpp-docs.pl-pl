@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: zakres wartości całkowitych'
 title: Zakres wartości całkowitych
 ms.date: 11/04/2016
 ms.assetid: 0e9c6161-8f3f-4bfb-9fcc-a6c8dc97d702
-ms.openlocfilehash: 3a7bff54e3048c7eb52d153aff5aa8ecf24a0516
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd4def2e255db6a266b009d99b8b5203cacdad07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137361"
 ---
 # <a name="range-of-integer-values"></a>Zakres wartości całkowitych
 
@@ -22,6 +23,6 @@ Liczby całkowite zawierają 32 bitów (cztery bajty). Oznaczone liczby całkowi
 |**`unsigned long`**|od 0 do 4294967295|
 |**`signed long`**|-2147483648 do 2147483647|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Liczb całkowitych](../c-language/integers.md)
+[Liczby całkowite](../c-language/integers.md)

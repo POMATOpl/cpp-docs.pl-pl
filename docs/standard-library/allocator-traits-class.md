@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy allocator_traits
 title: allocator_traits — klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d60658c5f8cf6217dff7a846f0e5cbae42e6a565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163564"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits — klasa
 

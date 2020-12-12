@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej: łączenie literałów ciągu'
 title: Łączenie literałów ciągu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3486857cb0d218ea80c00252de02d9f29d58f2c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137296"
 ---
 # <a name="string-literal-concatenation"></a>Łączenie literałów ciągu
 
@@ -35,7 +36,7 @@ Aby wymusić nowy wiersz w literale ciągu, wprowadź sekwencję ucieczki nowego
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-Ponieważ ciągi mogą rozpoczynać się w dowolnej kolumnie kodu źródłowego, a długie ciągi mogą być kontynuowane w dowolnej kolumnie następnego wiersza, możesz pozycjonować ciągi, aby zwiększyć czytelność kodu źródłowego. W obu przypadkach, reprezentacja danych wyjściowych na ekranie jest nienaruszona. Przykład:
+Ponieważ ciągi mogą rozpoczynać się w dowolnej kolumnie kodu źródłowego, a długie ciągi mogą być kontynuowane w dowolnej kolumnie następnego wiersza, możesz pozycjonować ciągi, aby zwiększyć czytelność kodu źródłowego. W obu przypadkach, reprezentacja danych wyjściowych na ekranie jest nienaruszona. Na przykład:
 
 ```
 printf_s ( "This is the first half of the string, "

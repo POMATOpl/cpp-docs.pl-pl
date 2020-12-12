@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/MANIFESTUAC (osadza informacje funkcji Kontrola konta użytkownika w manifeście)
 title: /MANIFESTUAC (Osadza informacje UAC w manifeście)
 ms.date: 06/12/2020
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 96719c6f6f5359afb03b967524b1f65db6dc664a
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: 165f543dab087ca32c91002811d99b9048fa392b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137894"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Osadza informacje UAC w manifeście)
 
@@ -59,7 +60,7 @@ Można określić zarówno *`level`* wartości, jak i *`uiAccess`* w jednym krok
 
 > **`/MANIFESTUAC:`** \[ **`"`** ] **`level=`** { **`'asInvoker'`** | **`'highestAvailable'`** | **`'requireAdministrator'`** } **`uiAccess=`** { **`'true'`** | **`'false'`** } \[ **`"`** ]
 
-Przykład:
+Na przykład:
 
 **`/MANIFESTUAC:"level='highestAvailable' uiAccess='true'"`**
 
@@ -67,9 +68,9 @@ Przykład:
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz pozycję **Właściwości konfiguracji**  >  **Linker**  >  Strona właściwości**pliku manifestu** konsolidatora.
+1. Wybierz pozycję **Właściwości konfiguracji**  >    >  Strona właściwości **pliku manifestu** konsolidatora.
 
-1. Zmodyfikuj właściwości **Włącz kontrolę konta użytkownika**, **poziom wykonywania UAC**i **Ignoruj funkcję ochrony użytkownika** .
+1. Zmodyfikuj właściwości **Włącz kontrolę konta użytkownika**, **poziom wykonywania UAC** i **Ignoruj funkcję ochrony użytkownika** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

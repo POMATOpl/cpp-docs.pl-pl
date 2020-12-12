@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy allocator_base
 title: allocator_base — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: f642c21f2b1060dd5adc5c3d98144592c3413777
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95da41fd480101c26a2ab71b445790da47144189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163642"
 ---
 # <a name="allocator_base-class"></a>allocator_base — Klasa
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcja Reference-Type zwraca'
 title: Zwracanie funkcji typu odwołania
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7624f8b3c481c86db367c2ff68e696c56370e586
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233629"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135412"
 ---
 # <a name="reference-type-function-returns"></a>Zwracanie funkcji typu odwołania
 
@@ -110,6 +111,6 @@ Foo& GetFoo()
 
 Kompilator wystawia ostrzeżenie w tym przypadku: `warning C4172: returning address of local variable or temporary` . W przypadku prostych programów możliwe jest, że czasami nie zostanie naruszone naruszenie dostępu, jeśli odwołanie jest dostępne przez wywołującego przed zastąpieniem lokalizacji pamięci. Jest to spowodowane zawiera szczęściem. Zwróć ostrzeżenie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja](../cpp/references-cpp.md)
+[Materiały źródłowe](../cpp/references-cpp.md)

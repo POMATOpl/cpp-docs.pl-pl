@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CSid'
 title: CSid, Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: b6787c0e3f075935f19d51aa73bbd66da9cc0fcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b0f5553f14d31a43c0cc581ef43b518fa612616d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835600"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140806"
 ---
 # <a name="csid-class"></a>CSid, Klasa
 
@@ -166,7 +167,7 @@ Wskaźnik do `SID` struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor inicjuje `CSid` obiekt, ustawia wewnętrzny element członkowski danych na *SidTypeInvalid*lub kopiując ustawienia z istniejącego `CSid` , `SID` lub istniejącego konta.
+Konstruktor inicjuje `CSid` obiekt, ustawia wewnętrzny element członkowski danych na *SidTypeInvalid* lub kopiując ustawienia z istniejącego `CSid` , `SID` lub istniejącego konta.
 
 Jeśli inicjalizacja nie powiedzie się, Konstruktor zgłosi [klasę CAtlException](../../atl/reference/catlexception-class.md).
 

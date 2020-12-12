@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Low-Level we/wy'
 title: We/Wy niskiego poziomu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 88e159e9f85cd4f893616d3aef935417f5abde52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164981"
 ---
 # <a name="low-level-io"></a>We/Wy niskiego poziomu
 
@@ -29,9 +30,9 @@ Procedury niskiego poziomu mogą uzyskiwać dostęp do standardowych strumieni o
 
 Procedury we/wy niskiego poziomu ustawiają zmienną globalną [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) w przypadku wystąpienia błędu. Musisz dołączyć STDIO. H użycie funkcji niskiego poziomu tylko wtedy, gdy program wymaga stałej, która jest zdefiniowana w STDIO. H, na przykład wskaźnik końca pliku (**eof**).
 
-## <a name="low-level-io-functions"></a>Funkcje we/wy niskiego poziomu
+## <a name="low-level-io-functions"></a>Low-Level funkcje we/wy
 
-|Funkcja|Użycie|
+|Funkcja|Zastosowanie|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|Zamknij plik|
 |[_commit](../c-runtime-library/reference/commit.md)|Opróżnianie pliku na dysk|
@@ -51,6 +52,6 @@ Procedury we/wy niskiego poziomu ustawiają zmienną globalną [errno](../c-runt
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Wejście i wyjście](../c-runtime-library/input-and-output.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Wywołania systemowe](../c-runtime-library/system-calls.md)<br/>

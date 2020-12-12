@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: algorytmy'
 title: Algorytmy
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d270b35720211c099876eb899e4ef5add9813cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163759"
 ---
 # <a name="algorithms"></a>Algorytmy
 
@@ -23,7 +24,7 @@ Algorytmy są podstawową częścią standardowej biblioteki języka C++. Algory
 
 Opisy funkcji szablonu algorytmu korzystają z kilku skróconych fraz:
 
-- Fraza "w zakresie \[ *A*, *B*)" oznacza sekwencję zero lub więcej dyskretnych wartości zaczynających się *A* do, ale nie z uwzględnieniem *B*. Zakres jest prawidłowy tylko wtedy, gdy *B* jest osiągalny z *;* *można przechowywać w* obiekcie *n* (*n*  =  *A*), zwiększać obiekt zero lub więcej razy (+ +*N*) i czy porównywany obiekt jest równy *B* po skończonej liczbie przyrostów (*N*  ==  *B*).
+- Fraza "w zakresie \[ *A*, *B*)" oznacza sekwencję zero lub więcej dyskretnych wartości zaczynających się  do, ale nie z uwzględnieniem *B*. Zakres jest prawidłowy tylko wtedy, gdy *B* jest osiągalny z *;* *można przechowywać w* obiekcie *n* (*n*  =  *A*), zwiększać obiekt zero lub więcej razy (+ +*N*) i czy porównywany obiekt jest równy *B* po skończonej liczbie przyrostów (*N*  ==  *B*).
 
 - Fraza "Każdy *N* w zakresie \[ *A*, *B*)" oznacza, że *N* zaczyna się od wartości *a* i jest zwiększana zero lub więcej razy, dopóki nie będzie równa wartości *B*. Przypadek *N*  ==  *B* nie należy do zakresu.
 
@@ -51,7 +52,7 @@ Sekwencja elementów oznaczona przez Iteratory w zakresie \[ `First` , `Last` ) 
 
 Algorytmy standardowej biblioteki języka C++ znajdują się [\<algorithm>](algorithm.md) w [\<numeric>](numeric.md) plikach nagłówkowych i.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja standardowej biblioteki języka C++](cpp-standard-library-reference.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](thread-safety-in-the-cpp-standard-library.md)

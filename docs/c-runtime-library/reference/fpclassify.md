@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fpclassify —'
 title: fpclassify
 ms.date: 04/05/2018
 api_name:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: 75cfdc33c21059e190fd04f4cd1b73716e74ac42
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 716684f15e82fb439c16239a61401b892a244f93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164838"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -83,7 +84,7 @@ W C, **fpclassify —** to makro; w języku C++ **fpclassify —** jest funkcją
 
 Makra **fpclassify —** i funkcje **fpclassify —** są zgodne ze specyfikacjami ISO C99 i c++ 11. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

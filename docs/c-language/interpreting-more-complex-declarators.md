@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: Interpretowanie bardziej złożonej Deklaratory'
 title: Interpretowanie deklaratorów bardziej złożonych
 ms.date: 11/04/2016
 helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: 385392ea8836998e71584d02bd0ee4478fb774a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 82fc9b3cbd1bbf36191b5bfae7d5c3695f84f964
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137517"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretowanie deklaratorów bardziej złożonych
 
@@ -126,6 +127,6 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
 
 Ten przykład pokazuje, jak umieszczanie nawiasów zmienia znaczenie deklaracji. W tym przykładzie `var` jest to pięć-elementowa tablica wskaźników do pięciu elementów wskaźników do Unii. Aby zapoznać się z przykładami użycia **`typedef`** programu w celu uniknięcia złożonych deklaracji, zobacz [deklaracje typedef](../c-language/typedef-declarations.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat szablonów (C++)
 title: Szablony (C++)
 ms.date: 12/27/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 996458417b20533db074ce2fa13c06860c54247c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14de4372502748c4d622e8739cad82b78a55daa9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164760"
 ---
 # <a name="templates-c"></a>Szablony (C++)
 
@@ -30,7 +31,7 @@ T minimum(const T& lhs, const T& rhs)
 }
 ```
 
-Powyższy kod opisuje szablon funkcji ogólnej z pojedynczym parametrem typu *T*, którego wartość zwracana i parametry wywołania (LHS i RHS) są tego typu. Można nazwać dowolny parametr typu, ale według Konwencji są najczęściej używane wielkie litery. *T* jest parametrem szablonu; **`typename`** słowo kluczowe wskazuje, że ten parametr jest symbolem zastępczym dla typu. Gdy funkcja jest wywoływana, kompilator zamieni każde wystąpienie `T` z argumentem typu konkretnego, który jest określony przez użytkownika lub wywnioskowany przez kompilator. Proces, w którym kompilator generuje klasę lub funkcję z szablonu, jest określany jako *Tworzenie wystąpienia szablonu*; `minimum<int>`jest wystąpieniem szablonu `minimum<T>` .
+Powyższy kod opisuje szablon funkcji ogólnej z pojedynczym parametrem typu *T*, którego wartość zwracana i parametry wywołania (LHS i RHS) są tego typu. Można nazwać dowolny parametr typu, ale według Konwencji są najczęściej używane wielkie litery. *T* jest parametrem szablonu; **`typename`** słowo kluczowe wskazuje, że ten parametr jest symbolem zastępczym dla typu. Gdy funkcja jest wywoływana, kompilator zamieni każde wystąpienie `T` z argumentem typu konkretnego, który jest określony przez użytkownika lub wywnioskowany przez kompilator. Proces, w którym kompilator generuje klasę lub funkcję z szablonu, jest określany jako  *Tworzenie wystąpienia szablonu*; `minimum<int>` jest wystąpieniem szablonu `minimum<T>` .
 
 W innym miejscu użytkownik może zadeklarować wystąpienie szablonu, który jest wyspecjalizowany dla int. Załóżmy, że get_a () i get_b () są funkcjami, które zwracają int:
 
@@ -57,7 +58,7 @@ int minimum(const int& lhs, const int& rhs)
 
 Reguły dotyczące sposobu, w jaki kompilator wykonuje potrącenie typów w szablonach funkcji, opiera się na regułach zwykłych funkcji. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie przeciążenia wywołań szablonów funkcji](../cpp/overload-resolution-of-function-template-calls.md).
 
-## <a name="type-parameters"></a><a id="type_parameters"></a>Parametry typu
+## <a name="type-parameters"></a><a id="type_parameters"></a> Parametry typu
 
 W `minimum` powyższym szablonie należy zauważyć, że parametr typu *T* nie jest kwalifikowany w jakikolwiek sposób, dopóki nie jest używany w parametrach wywołania funkcji, gdzie są dodawane kwalifikatory const i Reference.
 
@@ -151,7 +152,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>Szablony jako parametry szablonu
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a> Szablony jako parametry szablonu
 
 Szablon może być parametrem szablonu. W tym przykładzie MyClass2 ma dwa parametry szablonu: parametr TypeName *T* i parametr szablonu *ARR*:
 
@@ -165,7 +166,7 @@ class MyClass2
 };
 ```
 
-Ponieważ sam parametr *ARR* nie ma treści, jego nazwy parametrów nie są zbędne. W rzeczywistości jest to błąd *, aby odwołać się do nazwy*klasy TypeName lub parametrów klas z poziomu treści elementu `MyClass2` . Z tego powodu nazwy parametrów typu *ARR*można pominąć, jak pokazano w poniższym przykładzie:
+Ponieważ sam parametr *ARR* nie ma treści, jego nazwy parametrów nie są zbędne. W rzeczywistości jest to błąd *, aby odwołać się do nazwy* klasy TypeName lub parametrów klas z poziomu treści elementu `MyClass2` . Z tego powodu nazwy parametrów typu  *ARR* można pominąć, jak pokazano w poniższym przykładzie:
 
 ```cpp
 template<typename T, template<typename, int> class Arr>

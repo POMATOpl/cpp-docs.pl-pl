@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CSimpleMapEqualHelper'
 title: Klasa CSimpleMapEqualHelper
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: d137a35a517ea93139f036f6e9a7a8de06d518a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b8ff742bf24b6c6c4354cef652e3fc697ffb1d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140611"
 ---
 # <a name="csimplemapequalhelper-class"></a>Klasa CSimpleMapEqualHelper
 
-Ta klasa jest pomocnikiem dla [CSimpleMap](../../atl/reference/csimplemap-class.md) klasy.
+Ta klasa jest pomocnikiem dla klasy [CSimpleMap](../../atl/reference/csimplemap-class.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,11 +30,11 @@ class CSimpleMapEqualHelper
 
 #### <a name="parameters"></a>Parametry
 
-*Tkey*<br/>
-Kluczowym elementem.
+*TKey*<br/>
+Element klucza.
 
-*TVal (własn.*<br/>
-Element wartości.
+*TVal*<br/>
+Wartość elementu.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -41,20 +42,20 @@ Element wartości.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statyczne) Testy dwa klucze równości.|
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statyczne) Testy dwie wartości równości.|
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|Ruchom Testuje dwa klucze pod kątem równości.|
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|Ruchom Testuje dwie wartości pod kątem równości.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa cech jest uzupełnieniem `CSimpleMap` klasy. Zapewnia metody porównywania `CSimpleMap` dwóch elementów obiektu (w szczególności składników klucza i wartości) dla równości. Domyślnie klucze i wartości są porównywane przy użyciu **operator==(),** ale jeśli mapa zawiera złożone typy danych, które nie mają własnego operatora równości, ta klasa może zostać zastąpiona w celu zapewnienia dodatkowych wymaganych funkcji.
+Ta klasa cech jest uzupełnieniem `CSimpleMap` klasy. Zapewnia metody do porównywania dwóch `CSimpleMap` elementów obiektów (w odniesieniu do składników klucza i wartości) dla równości. Domyślnie klucze i wartości są porównywane przy użyciu **operatora = = ()**, ale jeśli mapa zawiera złożone typy danych, które nie mają własnego operatora równości, ta klasa może zostać przesłonięta w celu zapewnienia dodatkowych wymaganych funkcji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsimpcoll.h
+**Nagłówek:** atlsimpcoll. h
 
-## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey
+## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a> CSimpleMapEqualHelper::IsEqualKey
 
-Testy dwa klucze równości.
+Testuje dwa klucze pod kątem równości.
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -62,19 +63,19 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 
 ### <a name="parameters"></a>Parametry
 
-*k1*<br/>
+*K1*<br/>
 Pierwszy klucz.
 
-*k2*<br/>
-Drugi klawisz.
+*K2*<br/>
+Drugi klucz.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli klucze są równe, false w przeciwnym razie.
+Zwraca wartość true, jeśli klucze są równe, w przeciwnym razie false.
 
-## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue
+## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a> CSimpleMapEqualHelper::IsEqualValue
 
-Testy dwie wartości równości.
+Testuje dwie wartości pod kątem równości.
 
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -82,7 +83,7 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="parameters"></a>Parametry
 
-*w wersji 1*<br/>
+*wersjach*<br/>
 Pierwsza wartość.
 
 *v2*<br/>
@@ -90,7 +91,7 @@ Druga wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli wartości są równe, false w przeciwnym razie.
+Zwraca wartość true, jeśli wartości są równe, w przeciwnym razie false.
 
 ## <a name="see-also"></a>Zobacz też
 

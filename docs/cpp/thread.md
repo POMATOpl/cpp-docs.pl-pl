@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Thread'
 title: wątek
 ms.date: 05/07/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 13e6d45642c08a97c06d7099b83e632501267310
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b83686b6641585e7e7af334a6127c71a9171610
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164708"
 ---
 # <a name="thread"></a>wątek
 
@@ -85,7 +86,7 @@ Ponadto należy przestrzegać następujących wytycznych podczas deklarowania lo
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

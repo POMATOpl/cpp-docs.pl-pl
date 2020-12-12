@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2472'
 title: Błąd kompilatora C2472
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-ms.openlocfilehash: d2f104bb61915f8d19d5fff22eea17929c0e8d74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1d4d668c1e7151771a2df85e888384c6c3ea028
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164500"
 ---
 # <a name="compiler-error-c2472"></a>Błąd kompilatora C2472
 
-> "*funkcja*" nie można wygenerować w zarządzanym kodzie: "*komunikat*"; skompiluj z/CLR aby wygenerować mieszany obraz
+> nie można wygenerować *funkcji "Function*" w zarządzanym kodzie: "*Message*"; Kompiluj z/CLR, aby wygenerować mieszany obraz
 
 ## <a name="remarks"></a>Uwagi
 
-Ten błąd wystąpi, jeśli typy nie są obsługiwane przez kod zarządzany używanych w ramach czystego środowiska uruchomieniowego języka wspólnego (CLR). Kompiluj przy użyciu **/CLR** Aby naprawić błąd.
+Ten błąd występuje, gdy typy nieobsługiwane przez kod zarządzany są używane w środowisku środowiska uruchomieniowego języka wspólnego (CLR). Skompiluj z **/CLR** , aby rozwiązać ten problem.
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2472.
+Poniższy przykład generuje C2472.
 
 ```cpp
 // C2472.cpp
@@ -44,6 +45,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)

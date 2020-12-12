@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: struktura i składowe Unii'
 title: Elementy członkowskie struktury i złożenia
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: 70c89344e6afcdf52981f779c441c5ec47791a77
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f20074157b28763d1db05487043ba0e1576e2d4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137205"
 ---
 # <a name="structure-and-union-members"></a>Elementy członkowskie struktury i złożenia
 
@@ -80,6 +81,6 @@ list[8].b = 12;
 
 Ta instrukcja pokazuje, jak wybrać dany element członkowski struktury z tablicy struktur.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory dostępu do składowych: . i ->](../cpp/member-access-operators-dot-and.md)

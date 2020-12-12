@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa alokatora'
 title: allocator — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 4857de0b77d69a0d256da2200e5f4d0eb9d51c51
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1f54aae3191d261d549e69e942974fc46a670f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163629"
 ---
 # <a name="allocator-class"></a>allocator — Klasa
 
@@ -99,7 +100,7 @@ Te `Type` s określają formularz, którego wskaźniki i odwołania muszą przyj
 |[size_type](#size_type)|Typ całkowity bez znaku, który może reprezentować długość dowolnej sekwencji, którą obiekt typu `allocator` może przydzielić.|
 |[value_type](#value_type)|Typ, który jest zarządzany przez program przydzielający.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -537,7 +538,7 @@ Liczba obiektów do cofnięcia przydziału z magazynu.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwalnia magazyn dla tablicy obiektów Count typu `Type` rozpoczynającego się o *PTR*, wywołując metodę `operator delete(ptr)` . Wskaźnik *PTR* musi zostać zwrócony wcześniej przez wywołanie [przydzielenia](#allocate) obiektu alokatora, który porównuje równe z ** \* tym**, przydzielanie obiektu tablicy o tym samym rozmiarze i typie. `deallocate` nigdy nie zgłasza wyjątku.
+Funkcja członkowska zwalnia magazyn dla tablicy obiektów Count typu `Type` rozpoczynającego się o *PTR*, wywołując metodę `operator delete(ptr)` . Wskaźnik *PTR* musi zostać zwrócony wcześniej przez wywołanie [przydzielenia](#allocate) obiektu alokatora, który porównuje równe z **\* tym**, przydzielanie obiektu tablicy o tym samym rozmiarze i typie. `deallocate` nigdy nie zgłasza wyjątku.
 
 #### <a name="example"></a>Przykład
 
@@ -558,7 +559,7 @@ Wskaźnik wyznaczający adres obiektu, który ma zostać zniszczony.
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska niszczy obiekt wydzielony przez *PTR*przez wywołanie destruktora `ptr->Type::~Type` .
+Funkcja członkowska niszczy obiekt wydzielony przez *PTR* przez wywołanie destruktora `ptr->Type::~Type` .
 
 #### <a name="example"></a>Przykład
 
@@ -812,7 +813,7 @@ typedef value_type *pointer;
 
 #### <a name="remarks"></a>Uwagi
 
-Typ wskaźnika opisuje obiekt, `ptr` który może wyznaczyć, za pomocą wyrażenia ** \* PTR**, każdy obiekt, który obiekt typu `allocator` może przydzielić.
+Typ wskaźnika opisuje obiekt, `ptr` który może wyznaczyć, za pomocą wyrażenia **\* PTR**, każdy obiekt, który obiekt typu `allocator` może przydzielić.
 
 #### <a name="example"></a>Przykład
 
