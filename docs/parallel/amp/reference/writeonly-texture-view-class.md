@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy writeonly_texture_view
 title: writeonly_texture_view — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-ms.openlocfilehash: 8978a548ed246c59d7e7f007f1180685c7343a14
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 17e9ed49c5fb3c976343d8c3ad8690d7f41b166d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314524"
 ---
 # <a name="writeonly_texture_view-class"></a>writeonly_texture_view — Klasa
 
@@ -43,39 +44,39 @@ Typ elementów w tekstury.
 *_Rank*<br/>
 Ranga tekstury.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`scalar_type`||
 |`value_type`|Typ elementów w tekstury.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor writeonly_texture_view](#ctor)|Inicjuje nowe wystąpienie klasy `writeonly_texture_view`.|
-|[~ writeonly_texture_view destruktor](#ctor)|Niszczy obiekt `writeonly_texture_view`.|
+|[~ writeonly_texture_view destruktor](#ctor)|Niszczy `writeonly_texture_view` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[set](#set)|Ustawia wartość elementu w określonym indeksie.|
+|[zbiór](#set)|Ustawia wartość elementu w określonym indeksie.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[operator =](#operator_eq)|Kopiuje określony obiekt `writeonly_texture_view` do tego.|
+|[operator =](#operator_eq)|Kopiuje określony `writeonly_texture_view` obiekt do tego obiektu.|
 
 ### <a name="public-constants"></a>Stałe publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Stała rangi](#rank)|Pobiera rangę obiektu `writeonly_texture_view`.|
+|[Stała rangi](#rank)|Pobiera rangę `writeonly_texture_view` obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -89,17 +90,17 @@ Ranga tekstury.
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="dtor"></a>~ writeonly_texture_view
+## <a name="writeonly_texture_view"></a><a name="dtor"></a> ~ writeonly_texture_view
 
-Niszczy obiekt `writeonly_texture_view`.
+Niszczy `writeonly_texture_view` obiekt.
 
 ```cpp
 ~writeonly_texture_view() restrict(amp,cpu);
 ```
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
-Kopiuje określony obiekt `writeonly_texture_view` do tego.
+Kopiuje określony `writeonly_texture_view` obiekt do tego obiektu.
 
 ```cpp
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -111,19 +112,19 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 *_Other*<br/>
 `writeonly_texture_view` obiekt do skopiowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do tego obiektu `writeonly_texture_view`.
+Odwołanie do tego `writeonly_texture_view` obiektu.
 
-## <a name="rank"></a>stopni
+## <a name="rank"></a><a name="rank"></a> stopni
 
-Pobiera rangę obiektu `writeonly_texture_view`.
+Pobiera rangę `writeonly_texture_view` obiektu.
 
 ```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="set"></a>zbiór
+## <a name="set"></a><a name="set"></a> zbiór
 
 Ustawia wartość elementu w określonym indeksie.
 
@@ -138,10 +139,10 @@ void set(
 *_Index*<br/>
 Indeks elementu.
 
-*value*<br/>
+*wartość*<br/>
 Nowa wartość elementu.
 
-## <a name="ctor"></a>writeonly_texture_view
+## <a name="writeonly_texture_view"></a><a name="ctor"></a> writeonly_texture_view
 
 Inicjuje nowe wystąpienie klasy `writeonly_texture_view`.
 
@@ -164,8 +165,8 @@ Ranga tekstury.
 Typ elementów w tekstury.
 
 *_Src*<br/>
-Tekstura, która jest używana do tworzenia `writeonly_texture_view`.
+Tekstura, która jest używana do tworzenia `writeonly_texture_view` .
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

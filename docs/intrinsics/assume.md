@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __assume'
 title: __assume
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 80acb417ed85ced8f72906848474837efe6bc9d1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd7f275a8b570bc6176f4464ee59f2656328cf30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337241"
 ---
 # <a name="__assume"></a>__assume
 
@@ -43,7 +44,7 @@ Jeśli **`__assume`** instrukcja jest zapisywana jako sprzeczność (wyrażenie,
 > [!WARNING]
 > Program nie może zawierać nieprawidłowej **`__assume`** instrukcji w dostępnej ścieżce. Jeśli kompilator może dotrzeć do nieprawidłowej **`__assume`** instrukcji, program może spowodować nieprzewidywalne i potencjalnie niebezpieczne zachowanie.
 
-`__assume`nie jest oryginalnym elementem wewnętrznym. Nie musi być zadeklarowana jako funkcja i nie może być używana w `#pragma intrinsic` dyrektywie. Chociaż żaden kod nie jest generowany, ma to wpływ na kod wygenerowany przez optymalizator.
+`__assume` nie jest oryginalnym elementem wewnętrznym. Nie musi być zadeklarowana jako funkcja i nie może być używana w `#pragma intrinsic` dyrektywie. Chociaż żaden kod nie jest generowany, ma to wpływ na kod wygenerowany przez optymalizator.
 
 Użyj **`__assume`** w [potwierdzeniu](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) tylko wtedy, gdy potwierdzenie nie jest możliwe do odzyskania. Nie należy używać **`__assume`** w potwierdzeniu, dla którego kod odzyskiwania został zwrócony, ponieważ kompilator może zoptymalizować kod obsługi błędu.
 
@@ -116,7 +117,7 @@ Niestety, to użycie `assert` uniemożliwi kompilatorowi wykonywanie optymalizac
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/Link (Przekaż opcje do konsolidatora)
 title: /link (Przepuść opcje do konsolidatora)
 ms.date: 03/25/2019
 f1_keywords:
@@ -11,51 +12,51 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
-ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
+ms.openlocfilehash: 3617a005e6adbc41a589606aa145712fa2df442d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67155775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199496"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Przepuść opcje do konsolidatora)
 
-Przekazuje co najmniej jedną opcję konsolidatora do konsolidatora.
+Przekazuje jedną lub więcej opcji konsolidatora do konsolidatora.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ link** *opcje konsolidatora*
+> **/link** *— Opcje konsolidatora*
 
 ## <a name="arguments"></a>Argumenty
 
 *Opcje konsolidatora*<br/>
-— Opcja konsolidatora lub Opcje przekazywane do konsolidatora.
+Opcja konsolidatora lub opcje, które mają zostać przesłane do konsolidatora.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Link** opcji wraz z opcjami konsolidatora muszą występować po dowolnej nazwy plików i opcji CL. Obszar jest wymagany między **/link** i wszystkie opcje konsolidatora. Aby uzyskać więcej informacji, zobacz [odwołania konsolidatora MSVC](linking.md).
+Opcja **/link** i jej Opcje konsolidatora muszą występować po dowolnych nazwach plików i opcjach CL. Między **/link** i wszystkimi opcjami konsolidatora jest wymagana spacja. Aby uzyskać więcej informacji, zobacz [MSVC konsolidator Reference](linking.md).
 
 ## <a name="example"></a>Przykład
 
-Ten przykładowy wiersz polecenia kompiluje *hello.cpp* i dołącza go do istniejącego pliku obiektu *there.obj*. Następnie przekazuje dodatkowego **Version** polecenia konsolidatora:
+Ten przykładowy wiersz polecenia kompiluje *Witaj. cpp* i łączy go z istniejącym plikiem obiektu *. obj*. Następnie przekazuje dodatkowe polecenie **/Version** do konsolidatora:
 
 `cl /W4 /EHsc hello.cpp there.obj /link /VERSION:3.14`
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-IDE zwykle wysyła oddzielnych poleceń, aby skompilować i łączenie kodu. Na stronach właściwości projektu, można ustawić opcje konsolidatora.
+IDE zwykle wysyła osobne polecenia do kompilowania i łączenia kodu. Opcje konsolidatora można ustawić na stronach właściwości projektu.
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** folderu.
+1. Wybierz folder   >  **konsolidatora** właściwości konfiguracji.
 
-1. Zmodyfikuj jedną lub więcej właściwości. Wybierz **OK** Aby zapisać zmiany.
+1. Zmodyfikuj jedną lub więcej właściwości. Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Nie można programowo zmienić tę opcję kompilatora.
+- Nie można programowo zmienić tej opcji kompilatora.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

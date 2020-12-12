@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o programie: korzystanie z akceleratora i accelerator_view obiektów'
 title: Używanie akceleratora i obiektów accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270b517764b8060efbaea9d00c20e24aa1746818
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314493"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>Używanie akceleratora i obiektów accelerator_view
 
@@ -94,7 +95,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>Pamięć współdzielona
 
-Pamięć współdzielona jest pamięcią, do której można uzyskać dostęp zarówno przy użyciu procesora, jak i akceleratora. Użycie pamięci współużytkowanej eliminuje lub znacznie zmniejsza obciążenie związane z kopiowaniem danych między PROCESORem a akceleratorem. Mimo że pamięć jest udostępniona, dostęp do niej nie jest możliwy jednocześnie przez procesor i akcelerator, a tym samym powoduje niezdefiniowane zachowanie. Właściwość akceleratora [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) zwraca wartość **`true`** , Jeśli akcelerator obsługuje pamięć współużytkowaną, a właściwość [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) pobiera domyślną [access_type](reference/concurrency-namespace-enums-amp.md#access_type) dla pamięci przydzielonej na platformie `accelerator` — na przykład **Array**s skojarzone z `accelerator` lub `array_view` obiektów, do których dostęp uzyskuje się `accelerator` .
+Pamięć współdzielona jest pamięcią, do której można uzyskać dostęp zarówno przy użyciu procesora, jak i akceleratora. Użycie pamięci współużytkowanej eliminuje lub znacznie zmniejsza obciążenie związane z kopiowaniem danych między PROCESORem a akceleratorem. Mimo że pamięć jest udostępniona, dostęp do niej nie jest możliwy jednocześnie przez procesor i akcelerator, a tym samym powoduje niezdefiniowane zachowanie. Właściwość akceleratora [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) zwraca wartość **`true`** , Jeśli akcelerator obsługuje pamięć współużytkowaną, a właściwość [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) pobiera domyślną [access_type](reference/concurrency-namespace-enums-amp.md#access_type) dla pamięci przydzielonej na platformie `accelerator` — na przykład **Array** s skojarzone z `accelerator` lub `array_view` obiektów, do których dostęp uzyskuje się `accelerator` .
 
 Środowisko uruchomieniowe C++ AMP automatycznie wybiera najlepsze wartości domyślne `access_type` dla każdej `accelerator` z nich, ale Charakterystyka wydajności (przepustowość i czas oczekiwania) pamięci współdzielonej może być gorsza niż w przypadku dedykowanej (nieudostępnionej) akceleratora pamięci podczas odczytywania z procesora, pisania z procesora CPU lub obu. Jeśli pamięć współdzielona pełni rolę dedykowanej pamięci do odczytu i zapisu z procesora CPU, domyślne ustawienie środowiska uruchomieniowego to `access_type_read_write` ; w przeciwnym razie środowisko uruchomieniowe wybierze bardziej bardziej ostrożne `access_type` i zezwala aplikacji na przesłonięcie jej, jeśli wzorce dostępu do pamięci w jądrze obliczeniowym korzystają z innego `access_type` .
 
@@ -178,7 +179,7 @@ Istnieją dwa sposoby użycia wielu akceleratorów w aplikacji:
 
 Środowisko uruchomieniowe C++ AMP obsługuje współdziałanie między `accelerator_view` klasą i [interfejsem Direct3D ID3D11Device](/windows/win32/api/d3d11/nn-d3d11-id3d11device). Metoda [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) przyjmuje `IUnknown` interfejs i zwraca `accelerator_view` obiekt. Metoda [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) przyjmuje `accelerator_view` obiekt i zwraca `IUnknown` interfejs.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code)<br/>

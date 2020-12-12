@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_member_pointer
 title: is_member_pointer — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_member_pointer class
 - is_member_pointer
 ms.assetid: da07ff4e-9ee0-4baa-ad93-1741f10913d1
-ms.openlocfilehash: f07e32c8ab1ea82a0c3616e96baca920a95e3042
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e1e2e5be39859109dd707f55a368fabe19f477a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323649"
 ---
-# <a name="ismemberpointer-class"></a>is_member_pointer — Klasa
+# <a name="is_member_pointer-class"></a>is_member_pointer — Klasa
 
 Testuje, czy typ jest wskaźnikiem do elementu członkowskiego.
 
@@ -32,7 +33,7 @@ Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest wskaźnikiem do funkcji składowej lub wskaźnikiem do obiektu elementu członkowskiego lub `cv-qualified` z jednym z nich, w przeciwnym razie ma wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest wskaźnikiem do funkcji składowej lub wskaźnikiem do obiektu elementu członkowskiego lub z `cv-qualified` jednym z nich, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -79,13 +80,13 @@ is_member_pointer<int (functional::*)()> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)\
-[is_member_object_pointer Class](../standard-library/is-member-object-pointer-class.md)\
-[is_pointer, klasa](../standard-library/is-pointer-class.md)
+[Klasa is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)\
+[Klasa is_pointer](../standard-library/is-pointer-class.md)

@@ -1,23 +1,24 @@
 ---
-title: Korzystanie z C++ AMP w aplikacjach platformy UWP
+description: 'Dowiedz się więcej o programie: używanie C++ AMP w aplikacjach platformy UWP'
+title: Używanie C++ AMP w aplikacjach platformy UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91c7b147ff89a1fe19ebe1b18e465533053542d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314480"
 ---
-# <a name="using-c-amp-in-uwp-apps"></a>Korzystanie z C++ AMP w aplikacjach platformy UWP
+# <a name="using-c-amp-in-uwp-apps"></a>Używanie C++ AMP w aplikacjach platformy UWP
 
-C++ AMP (C++ Accelerated Massive Parallelism) w aplikacji platformy uniwersalnej Windows (UWP) umożliwia wykonywanie obliczeń na procesorze GPU (jednostka przetwarzania grafiki) lub innych akceleratorach obliczeniowych. Jednak C++ AMP nie zapewnia interfejsu API do pracy bezpośrednio z typami środowiska wykonawczego Windows i środowisko wykonawcze Windows nie zapewnia otoki dla C++ AMP. Kiedy używasz typów środowiska wykonawczego Windows w swoim kodzie — włączając te, utworzone przez Ciebie — musisz konwertować je na typy, które są kompatybilne z C++ AMP.
+C++ AMP (C++ Accelerated Massive Parallelism) można używać w aplikacji platforma uniwersalna systemu Windows (platformy UWP) do wykonywania obliczeń na procesorach GPU (jednostkach przetwarzania grafiki) lub innych akceleratorach obliczeniowych. Jednak C++ AMP nie udostępnia interfejsów API do pracy bezpośrednio z typami środowisko wykonawcze systemu Windows, a środowisko wykonawcze systemu Windows nie zapewnia otoki dla C++ AMP. W przypadku używania środowisko wykonawcze systemu Windows typów w kodzie — w tym tych, które zostały utworzone samodzielnie, należy je przekonwertować na typy zgodne z C++ AMP.
 
 ## <a name="performance-considerations"></a>Zagadnienia dotyczące wydajności
 
-Jeśli używasz Visual C++ rozszerzenia składnika C++/CX do tworzenia aplikacji uniwersalnych platformy Windows (UWP), zalecamy użycie typów zwykły stare dane (POD) wraz z ciągłym magazynowaniem — na przykład `std::vector` lub tablice stylu C — dla dane, które będą używane z C++ AMP. Może to pomóc Ci osiągnąć wyższą wydajność niż przy użyciu typów non-POD lub kontenerów Windows RT, ponieważ musi występować szeregowanie nie.
+Jeśli używasz Visual C++ rozszerzeń składników C++/CX do tworzenia aplikacji platforma uniwersalna systemu Windows (platformy UWP), zalecamy używanie typów ze zwykłymi danymi (POD) wraz z ciągłym magazynem (na przykład `std::vector` lub tablicami w stylu C) dla danych, które będą używane z C++ amp. Może to pomóc w osiągnięciu wyższej wydajności niż użycie typów innych niż POD lub kontenerów systemu Windows RT, ponieważ nie ma potrzeby organizowania.
 
-W jądrze C++ AMP, dostęp do danych przechowywanych w ten sposób, należy po prostu zawinąć `std::vector` lub magazyn tablic w `concurrency::array_view` , a następnie użyć widoku tablicy w `concurrency::parallel_for_each` Pętla:
+W jądrze C++ AMP, aby uzyskać dostęp do danych przechowywanych w ten sposób, po prostu zawiń `std::vector` Magazyn tablicy lub tablicę w a, `concurrency::array_view` a następnie użyj widoku tablicy w `concurrency::parallel_for_each` pętli:
 
 ```cpp
 // simple vector addition example
@@ -39,24 +40,24 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
 
 ## <a name="marshaling-windows-runtime-types"></a>Szeregowanie typów środowiska wykonawczego systemu Windows
 
-Podczas pracy z interfejsami API środowiska wykonawczego Windows, warto używać C++ AMP na dane, które są przechowywane w kontenerze środowiska wykonawczego Windows, takich jak `Platform::Array<T>^` lub złożonych typach danych takich jak klasy lub struktury, które są zadeklarowane za pomocą **ref** słowo kluczowe lub **wartość** — słowo kluczowe. W takich sytuacjach należy wykonać dodatkową pracę, aby udostępnić dane C++ AMP.
+Podczas pracy z środowisko wykonawcze systemu Windows interfejsów API można używać C++ AMP danych przechowywanych w kontenerze środowisko wykonawcze systemu Windows, takim jak `Platform::Array<T>^` lub w złożonych typach danych, takich jak klasy lub struktury, które są zadeklarowane za pomocą słowa kluczowego **ref** lub słowa kluczowego **Value** . W takich sytuacjach należy wykonać kilka dodatkowych czynności w celu udostępnienia danych C++ AMP.
 
-### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform::Array\<T > ^, gdzie T jest typem POD
+### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform:: Array \<T> ^, gdzie T jest typem pod
 
-Gdy wystąpi `Platform::Array<T>^` i T jest typem POD, dostęp do jego podstawowej magazynu przy użyciu `get` funkcja elementu członkowskiego:
+Gdy napotkasz `Platform::Array<T>^` i T jest typem pod, możesz uzyskać dostęp do jego magazynu bazowego tylko przy użyciu `get` funkcji składowej:
 
 ```cpp
 Platform::Array<float>^ arr; // Assume that this was returned by a Windows Runtime API
 concurrency::array_view<float, 1> av(arr->Length, &arr->get(0));
 ```
 
-Jeśli T nie jest typem POD, użyj metody opisanej w poniższej sekcji, za pomocą danych z C++ AMP.
+Jeśli T nie jest typu POD, użyj techniki opisanej w poniższej sekcji, aby użyć danych z C++ AMP.
 
 ### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Typy środowiska wykonawczego systemu Windows: klasy odniesienia i klasy wartości
 
-Wzmacniacz C++ nie obsługuje złożonych typów danych. Obejmuje to typy non-POD i wszystkie typy, które są zadeklarowane za pomocą **ref** — słowo kluczowe lub **wartość** — słowo kluczowe. Jeśli nieobsługiwany typ jest używany w `restrict(amp)` kontekstu, błąd kompilacji jest generowany.
+C++ AMP nie obsługuje złożonych typów danych. Obejmuje to typy niebędące POD i wszystkie typy, które są zadeklarowane za pomocą słowa kluczowego **ref** lub słowa kluczowego **Value** . Jeśli w kontekście jest używany nieobsługiwany typ `restrict(amp)` , zostanie wygenerowany błąd czasu kompilacji.
 
-Kiedy napotykasz nieobsługiwany typ, możesz skopiować interesujące części jego danych do `concurrency::array` obiektu. Oprócz udostępnienia danych dla języka C++ AMP do konsumpcji, to podejście ręcznego kopiowania może również zwiększyć wydajność maksymalizując miejscowość danych i zapewniając, że dane, które nie będą używane nie zostaną skopiowane do akceleratora. Możesz podnieść wydajność jeszcze bardziej używając *przemieszczania tablicy*, która jest specjalną postać `concurrency::array` , dostarcza wskazówkę obiektowi środowisko wykonawcze AMP, który optymalizacji tablicy dla częstych transferów między nim a innymi tablicami w określonym akceleratorze.
+Gdy napotkasz nieobsługiwany typ, możesz skopiować interesujące części danych do `concurrency::array` obiektu. Oprócz udostępniania danych do C++ AMP do użycia, takie podejście ręcznego kopiowania może również zwiększyć wydajność dzięki maksymalizacji lokalizacji danych i zapewnieniu, że dane, które nie będą używane, nie są kopiowane do akceleratora. Dodatkowo można poprawić wydajność przy użyciu *tablicy tymczasowej*, która jest specjalną formą, `concurrency::array` która dostarcza wskazówkę do środowiska uruchomieniowego amp, którą Tablica powinna być zoptymalizowana pod kątem częstego transferu między nim a innymi tablicami w określonym akceleratorze.
 
 ```cpp
 // pixel_color.h
@@ -113,7 +114,7 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
     });
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie pierwszej aplikacji platformy uniwersalnej systemu Windows przy użyciu języka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)<br/>
-[Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[Tworzenie pierwszej aplikacji platformy UWP przy użyciu języka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)<br/>
+[Tworzenie składników środowisko wykonawcze systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

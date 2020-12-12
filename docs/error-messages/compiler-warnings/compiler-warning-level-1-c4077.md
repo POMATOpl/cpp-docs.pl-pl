@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4077'
 title: Ostrzeżenie kompilatora (poziom 1) C4077
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4077
 ms.assetid: c2d28805-b33f-41ad-afba-33b3f788c649
-ms.openlocfilehash: 90797463595cda07c5b37e1530964b23c656b027
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 96e611db6d36dfa62d96561deb2f4c4d57638c72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208713"
 ---
 # <a name="compiler-warning-level-1-c4077"></a>Ostrzeżenie kompilatora (poziom 1) C4077
 
 nieznana opcja check_stack
 
-Stara forma **check_stack** pragma jest używana z nieznanym argumentem. Argument musi być `+`, `-`, `(on)`, `(off)`lub pusty.
+Stara forma **check_stack** pragma jest używana z nieznanym argumentem. Argument musi być `+` , `-` ,, `(on)` lub być `(off)` pusty.
 
 Kompilator ignoruje pragmę i pozostawia sprawdzanie stosu bez zmian.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _BitScanReverse, _BitScanReverse64'
 title: _BitScanReverse, _BitScanReverse64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a535dcc95f9fbf791de3ecd2c2d54eddcc0399c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337219"
 ---
 # <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przeszukaj dane maski z najbardziej znaczącego bitu (MSB) na najmniej znaczący bit (LSB) dla zestawu bitów (1).
 
@@ -47,11 +48,11 @@ podczas Wartość 32-bitowa lub 64-bitowa do wyszukania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość różna od `Index` zera, jeśli została ustawiona, lub wartość 0, jeśli nie znaleziono żadnego zestawu bitów.
+Wartość różna `Index` od zera, jeśli została ustawiona, lub wartość 0, jeśli nie znaleziono żadnego zestawu bitów.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
 |`_BitScanReverse`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
@@ -98,6 +99,6 @@ Mask: 12 Index: 3
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

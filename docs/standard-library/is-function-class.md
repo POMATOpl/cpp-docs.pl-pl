@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_function
 title: is_function — Klasa
 ms.date: 02/21/2019
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_function class
 - is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-ms.openlocfilehash: 6e436d205c7569aeac7b9dc65b122f3fe289f334
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f28f634648d23eb73a1400f662ce9e23c05aaf38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323717"
 ---
-# <a name="isfunction-class"></a>is_function — Klasa
+# <a name="is_function-class"></a>is_function — Klasa
 
 Testuje, czy typ jest typem funkcji.
 
@@ -73,11 +74,11 @@ is_function<float()> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[is_object, klasa](../standard-library/is-object-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa is_object](../standard-library/is-object-class.md)

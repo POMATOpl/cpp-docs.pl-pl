@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze SRWLockExclusiveTraits
 title: SRWLockExclusiveTraits — Struktura
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-ms.openlocfilehash: eb7b30915d6061e8470601df33fecec310d1bbca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 135d4f866d1ca32ee9170ef9844cb0bf8d38c29a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186210"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits — Struktura
 
-Opisuje typowe cechy `SRWLock` klasy w trybie blokady wyłączności.
+Opisuje typowe cechy `SRWLock` klasy w trybie blokady wyłącznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,18 +31,18 @@ struct SRWLockExclusiveTraits;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 Nazwa   | Opis
 ------ | --------------------------------------------------------------------------
-`Type` | Synonim wskaźnika do klasy [SRWLOCK.](srwlock-class.md)
+`Type` | Synonim dla wskaźnika do klasy [SRWLOCK](srwlock-class.md) .
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                        | Opis
 ----------------------------------------------------------- | --------------------------------------------------------------------
-[SRWLockExclusiveTraits::GetInvalidValue](#getinvalidvalue) | Pobiera obiekt, `SRWLockExclusiveTraits` który jest zawsze nieprawidłowy.
-[SRWLockExclusiveTraits::Odblokuj](#unlock)                   | Zwalnia wyłączną kontrolę `SRWLock` nad określonym obiektem.
+[SRWLockExclusiveTraits:: GetInvalidValue —](#getinvalidvalue) | Pobiera `SRWLockExclusiveTraits` obiekt, który jest zawsze nieprawidłowy.
+[SRWLockExclusiveTraits:: Unlock](#unlock)                   | Zwalnia kontrolę wykluczającą określonego `SRWLock` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,13 +50,13 @@ Nazwa                                                        | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>SRWLockExclusiveTraits::GetInvalidValue
+## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> SRWLockExclusiveTraits:: GetInvalidValue —
 
-Pobiera obiekt, `SRWLockExclusiveTraits` który jest zawsze nieprawidłowy.
+Pobiera `SRWLockExclusiveTraits` obiekt, który jest zawsze nieprawidłowy.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -65,9 +66,9 @@ inline static Type GetInvalidValue();
 
 Pusty `SRWLockExclusiveTraits` obiekt.
 
-## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a>SRWLockExclusiveTraits::Odblokuj
+## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a> SRWLockExclusiveTraits:: Unlock
 
-Zwalnia wyłączną kontrolę `SRWLock` nad określonym obiektem.
+Zwalnia kontrolę wykluczającą określonego `SRWLock` obiektu.
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +78,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*Srwlock*<br/>
-Dojście `SRWLock` do obiektu.
+*SRWLock*<br/>
+Dojście do `SRWLock` obiektu.

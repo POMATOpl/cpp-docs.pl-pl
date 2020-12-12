@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_integral
 title: is_integral — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: db586054614b9a5ef49ffe9fe8b643b35c65a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323704"
 ---
 # <a name="is_integral-class"></a>is_integral — Klasa
 
@@ -74,7 +75,7 @@ is_integral<float> == false
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Klasa is_enum](../standard-library/is-enum-class.md)\

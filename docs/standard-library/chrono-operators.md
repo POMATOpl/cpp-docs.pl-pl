@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej o: &lt; Chrono &gt; Operatory'
 title: '&lt;&gt;Operatory Chrono'
 ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 82f0b7b0f55cf4d71ef7c0ed92a55ca0fa1139e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e84f0c09188d8c69cd71094788fdbd0497dca4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234179"
 ---
 # <a name="ltchronogt-operators"></a>&lt;&gt;Operatory Chrono
 
-## <a name="operator-"></a><a name="operator-"></a>zakład
+## <a name="operator-"></a><a name="operator-"></a> zakład
 
 Operator odejmowania lub negacji [czasu trwania](../standard-library/duration-class.md) i [time_point](../standard-library/time-point-class.md) obiektów.
 
@@ -59,7 +60,7 @@ Druga funkcja zwraca `time_point` obiekt, który reprezentuje punkt w czasie, kt
 
 Trzecia funkcja zwraca `duration` obiekt, który reprezentuje przedział czasu od *lewej* do *prawej*.
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Operator nierówności dla obiektów [Duration](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) .
 
@@ -87,7 +88,7 @@ Prawo `duration` lub `time_point` obiekt.
 
 Każda funkcja zwraca wartość `!(Left == Right)` .
 
-## <a name="operator"></a><a name="op_star"></a>zakład
+## <a name="operator"></a><a name="op_star"></a> zakład
 
 Operator mnożenia dla obiektów [czasu trwania](../standard-library/chrono-operators.md#op_star) .
 
@@ -122,7 +123,7 @@ O ile nie `is_convertible<Rep2, common_type<Rep1, Rep2>>` *ma wartości true*, P
 
 O ile nie `is_convertible<Rep1, common_type<Rep1, Rep2>>` *ma wartości true*, druga funkcja nie uczestniczy w rozpoznawaniu przeciążenia. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="operator"></a><a name="op_div"></a>zakład
+## <a name="operator"></a><a name="op_div"></a> zakład
 
 Operator dzielenia dla obiektów [czasu trwania](../standard-library/chrono-operators.md#op_star) .
 
@@ -160,9 +161,9 @@ Pierwszy operator zwraca obiekt czasu trwania, którego długość interwału je
 
 Drugi operator zwraca stosunek długości interwału od *lewej* do *prawej*.
 
-Chyba że `is_convertible<Rep2, common_type<Rep1, Rep2>>` ma *wartość true*i `Rep2` nie jest wystąpieniem `duration` , Pierwszy operator nie bierze udziału w przeciążeniu. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
+Chyba że `is_convertible<Rep2, common_type<Rep1, Rep2>>` ma *wartość true* i `Rep2` nie jest wystąpieniem `duration` , Pierwszy operator nie bierze udziału w przeciążeniu. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="operator"></a><a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a> operator +
 
 Dodaje [czas trwania](../standard-library/duration-class.md) i [time_point](../standard-library/time-point-class.md) obiektów.
 
@@ -204,9 +205,9 @@ Obiekt `duration`.
 
 Pierwsza funkcja zwraca `duration` obiekt, który ma interwał czasu, który jest równy sumie interwałów od *lewej* do *prawej*.
 
-Druga i trzecia funkcja zwraca `time_point` obiekt, który reprezentuje punkt w czasie, który jest przemieszczenia przez interwał czasu *trwania*od momentu w *czasie*.
+Druga i trzecia funkcja zwraca `time_point` obiekt, który reprezentuje punkt w czasie, który jest przemieszczenia przez interwał czasu *trwania* od momentu w *czasie*.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest mniejszy niż inny `duration` `time_point` obiekt lub.
 
@@ -236,7 +237,7 @@ Pierwsza funkcja zwraca, **`true`** Jeśli długość interwału *po lewej stron
 
 Druga funkcja zwraca **`true`** Jeśli *Left* poprzedza *prawo*. W przeciwnym razie funkcja zwraca wartość **`false`** .
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest mniejszy lub równy innemu `duration` lub `time_point` obiektowi.
 
@@ -264,7 +265,7 @@ Prawo `duration` lub `time_point` obiekt.
 
 Każda funkcja zwraca wartość `!(Right < Left)` .
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Określa, czy dwa `duration` obiekty reprezentują przedziały czasu mające taką samą długość, czy dwa `time_point` obiekty reprezentują ten sam punkt w czasie.
 
@@ -294,7 +295,7 @@ Pierwsza funkcja zwraca **`true`** Jeśli *po lewej* i *prawej stronie* przedzia
 
 Druga funkcja zwraca **`true`** Jeśli *Left* i *Right* reprezentują ten sam punkt w czasie. W przeciwnym razie funkcja zwraca wartość **`false`** .
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest większy niż inny `duration` `time_point` obiekt lub.
 
@@ -322,7 +323,7 @@ Prawo `duration` lub `time_point` obiekt.
 
 Każda funkcja zwraca wartość `Right < Left` .
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest większy lub równy innemu `duration` lub `time_point` obiektowi.
 
@@ -350,7 +351,7 @@ Prawo `duration` lub `time_point` obiekt.
 
 Każda funkcja zwraca wartość `!(Left < Right)` .
 
-## <a name="operator-modulo"></a><a name="op_modulo"></a>modulo operatorów
+## <a name="operator-modulo"></a><a name="op_modulo"></a> modulo operatorów
 
 Operator dla operacji modulo na obiektach [czasu trwania](../standard-library/duration-class.md) .
 
@@ -384,6 +385,6 @@ Prawidłowy `duration` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja zwraca obiekt, `duration` którego długość interwału jest *Dur* równy czasowi *DIV*modulo.
+Pierwsza funkcja zwraca obiekt, `duration` którego długość interwału jest  równy czasowi *DIV* modulo.
 
-Druga funkcja zwraca wartość, która reprezentuje *lewe* *prawo*modulo.
+Druga funkcja zwraca wartość, która reprezentuje *lewe* *prawo* modulo.

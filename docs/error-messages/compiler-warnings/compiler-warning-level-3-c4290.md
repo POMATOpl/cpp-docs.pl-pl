@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 3) C4290'
 title: Ostrzeżenie kompilatora (poziom 3) C4290
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
-ms.openlocfilehash: 5970aa439a450bda4c1a2036da299d5c3cfbdb7a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 771eb01c23778a716aee22ca747ea6473909a8bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344071"
 ---
 # <a name="compiler-warning-level-3-c4290"></a>Ostrzeżenie kompilatora (poziom 3) C4290
 
-C++Zignorowano specyfikację wyjątku z wyjątkiem wskazania, że funkcja nie jest __declspec (nothrow)
+Zignorowano specyfikację wyjątku C++ z wyjątkiem wskazuje, że funkcja nie jest __declspec (nothrow)
 
-Funkcja jest zadeklarowana przy użyciu specyfikacji wyjątku, którą C++ element wizualny akceptuje, ale nie implementuje. Kod ze specyfikacjami wyjątków, które są ignorowane podczas kompilowania, może być konieczne ponowne skompilowanie i połączenie z użyciem ich ponownie w przyszłych wersjach obsługujących specyfikacje wyjątków.
+Funkcja jest zadeklarowana przy użyciu specyfikacji wyjątku, która Visual C++ akceptuje, ale nie implementuje. Kod ze specyfikacjami wyjątków, które są ignorowane podczas kompilowania, może być konieczne ponowne skompilowanie i połączenie z użyciem ich ponownie w przyszłych wersjach obsługujących specyfikacje wyjątków.
 
 Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../../cpp/exception-specifications-throw-cpp.md) .
 

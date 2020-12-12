@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze MutexTraits
 title: MutexTraits — Struktura
 ms.date: 09/27/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock method
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
-ms.openlocfilehash: 6d4ba08ab1884e8584b0e98e931d2d63cdac5aec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e3dfcee1251794734ed5cf787096361403d80c7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371252"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330819"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits — Struktura
 
-Definiuje wspólne cechy klasy [Mutex.](mutex-class.md)
+Definiuje typowe cechy klasy [mutex](mutex-class.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +33,7 @@ struct MutexTraits : HANDLENullTraits;
 
 Nazwa                           | Opis
 ------------------------------ | ------------------------------------------------
-[MutexTraits::Odblokuj](#unlock) | Zwalnia wyłączną kontrolę nad zasobem udostępnionym.
+[MutexTraits:: Unlock](#unlock) | Zwalnia kontrolę wykluczającą zasobu udostępnionego.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -42,13 +43,13 @@ Nazwa                           | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="mutextraitsunlock-method"></a><a name="unlock"></a>MutexTraits::Metoda odblokowywania
+## <a name="mutextraitsunlock-method"></a><a name="unlock"></a> MutexTraits:: Unlock — Metoda
 
-Zwalnia wyłączną kontrolę nad zasobem udostępnionym.
+Zwalnia kontrolę wykluczającą zasobu udostępnionego.
 
 ```cpp
 inline static void Unlock(
@@ -58,5 +59,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*H*<br/>
+*h*<br/>
 Dojście do obiektu mutex.

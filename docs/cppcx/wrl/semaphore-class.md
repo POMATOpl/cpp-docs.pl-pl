@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie semaforów
 title: Semaphore — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Semaphore::operator= operator
 - Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-ms.openlocfilehash: e017b1b6316c4b6d49563d9a543950ab28961d90
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0cf99ff0a0e5263b3ed924ec5ac69b7edb0bd1f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186236"
 ---
 # <a name="semaphore-class"></a>Semaphore — Klasa
 
-Reprezentuje obiekt synchronizacji, który steruje zasobem udostępnionym, który może obsługiwać ograniczoną liczbę użytkowników.
+Reprezentuje obiekt synchronizacji, który kontroluje zasób udostępniony, który może obsługiwać ograniczoną liczbę użytkowników.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,29 +33,29 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 Nazwa       | Opis
 ---------- | ------------------------------------------------------
-`SyncLock` | Synonim dla klasy, która obsługuje blokady synchroniczne.
+`SyncLock` | Synonim klasy, która obsługuje blokady synchroniczne.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 Nazwa                               | Opis
 ---------------------------------- | ----------------------------------------------------
-[Semafor::Semafor](#semaphore) | Inicjuje nowe wystąpienie klasy `Semaphore`.
+[Semafor:: semafor](#semaphore) | Inicjuje nowe wystąpienie klasy `Semaphore`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                     | Opis
 ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Semafor::Blokada](#lock) | Oczekuje, aż bieżący obiekt lub obiekt skojarzony z określonym uchwytem znajduje się w stanie sygnału lub upłynął określony interwał limit czasu.
+[Semafor:: Lock](#lock) | Czeka, aż bieżący obiekt lub obiekt skojarzony z określonym dojściem jest w stanie sygnalizacji lub upłynie określony interwał limitu czasu.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 Nazwa                                     | Opis
 ---------------------------------------- | ---------------------------------------------------------------------------------------
-[Semafor::operator=](#operator-assign) | Przenosi określony uchwyt `Semaphore` z obiektu `Semaphore` do bieżącego obiektu.
+[Semafor:: operator =](#operator-assign) | Przenosi określone dojście z `Semaphore` obiektu do bieżącego `Semaphore` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -62,13 +63,13 @@ Nazwa                                     | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Obszar nazw:** Microsoft::WRL::Otoki
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki
 
-## <a name="semaphorelock"></a><a name="lock"></a>Semafor::Blokada
+## <a name="semaphorelock"></a><a name="lock"></a> Semafor:: Lock
 
-Oczekuje, aż bieżący obiekt `Semaphore` lub obiekt skojarzony z określonym uchwytem znajduje się w stanie sygnału lub upłynął określony interwał limit czasu.
+Czeka, aż bieżący obiekt lub `Semaphore` obiekt skojarzony z określonym dojściem jest w stanie sygnalizacji lub upłynie określony interwał limitu czasu.
 
 ```cpp
 SyncLock Lock(
@@ -84,18 +85,18 @@ static SyncLock Lock(
 ### <a name="parameters"></a>Parametry
 
 *milisekundy*<br/>
-Przedział limitów czasu w milisekundach. Wartością domyślną jest INFINITE, która czeka przez czas nieokreślony.
+Interwał limitu czasu (w milisekundach). Wartość domyślna to NIESKOŃCZONość, która czeka na czas nieokreślony.
 
-*H*<br/>
-Dojście `Semaphore` do obiektu.
+*h*<br/>
+Dojście do `Semaphore` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Element `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`.
+Polecenie `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
 
-## <a name="semaphoreoperator"></a><a name="operator-assign"></a>Semafor::operator=
+## <a name="semaphoreoperator"></a><a name="operator-assign"></a> Semafor:: operator =
 
-Przenosi określony uchwyt `Semaphore` z obiektu `Semaphore` do bieżącego obiektu.
+Przenosi określone dojście z `Semaphore` obiektu do bieżącego `Semaphore` obiektu.
 
 ```cpp
 Semaphore& operator=(
@@ -105,14 +106,14 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*H*<br/>
-Rvalue-odwołanie do `Semaphore` obiektu.
+*h*<br/>
+Rvalue — odwołanie do `Semaphore` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do bieżącego `Semaphore` obiektu.
 
-## <a name="semaphoresemaphore"></a><a name="semaphore"></a>Semafor::Semafor
+## <a name="semaphoresemaphore"></a><a name="semaphore"></a> Semafor:: semafor
 
 Inicjuje nowe wystąpienie klasy `Semaphore`.
 
@@ -128,5 +129,5 @@ WRL_NOTHROW Semaphore(
 
 ### <a name="parameters"></a>Parametry
 
-*H*<br/>
-Dojście lub odwołanie rvalue `Semaphore` do obiektu.
+*h*<br/>
+Uchwyt lub rvalue odwołanie do `Semaphore` obiektu.

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa unorm'
 title: unorm — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 947660d046ea41025e70aa4e6521e3c8f34c0a94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126308"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314531"
 ---
 # <a name="unorm-class"></a>unorm — Klasa
 
@@ -23,17 +24,17 @@ Przedstawia numer unorm. Każdy element jest liczbą zmiennoprzecinkową z zakre
 class unorm;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Konstruktor unorm](#ctor)|Przeciążone. Konstruktor domyślny. Zainicjuj do 0.0 f.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |unorm:: operator--||
 |unorm:: operator float|Operator konwersji. Przekonwertuj liczbę unorm na wartość zmiennoprzecinkową.|
@@ -54,7 +55,7 @@ class unorm;
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="ctor"></a>unorm
+## <a name="unorm"></a><a name="ctor"></a> unorm
 
 Konstruktor domyślny. Zainicjuj do 0.0 f.
 
@@ -98,4 +99,4 @@ Obiekt normy używany do inicjowania.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

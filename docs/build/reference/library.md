@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o bibliotece: Biblioteka'
 title: BIBLIOTEKA
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - LIBRARY .def file statement
 ms.assetid: 1d7ccc92-e088-4ef7-9ef0-25c3862cc051
-ms.openlocfilehash: b43f269726e8925abeefd41aab0edfd57b071035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d8c63f323568949cf2fb30935d2557755346422
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199535"
 ---
 # <a name="library"></a>BIBLIOTEKA
 
-/ ORDER informuje KONSOLIDACJĘ, aby utworzyć biblioteki DLL. W tym samym czasie LINK tworzy bibliotekę importu, chyba że używany jest plik .exp w kompilacji.
+Informuje LINK, aby utworzyć bibliotekę DLL. W tym samym czasie, LINK tworzy bibliotekę importu, chyba że plik EXP jest używany w kompilacji.
 
 ```
 LIBRARY [library][BASE=address]
@@ -23,12 +24,12 @@ LIBRARY [library][BASE=address]
 
 ## <a name="remarks"></a>Uwagi
 
-*Biblioteki* argument określa nazwę biblioteki DLL. Można również użyć [/OUT](out-output-file-name.md) opcję konsolidatora, aby określić nazwę wyjściowego pliku DLL.
+Argument *biblioteki* określa nazwę biblioteki DLL. Można również użyć opcji konsolidatora [/out](out-output-file-name.md) , aby określić nazwę WYJŚCIOWĄ biblioteki DLL.
 
-Podstawa =*adres* argument ustawia adres podstawowy, który korzysta z systemu operacyjnego można załadować biblioteki DLL. Argument ten zastępuje domyślną lokalizację biblioteki DLL 0x10000000. Zobacz opis [/BASE](base-base-address.md) opcji szczegółowe informacje na temat adres podstawowy.
+Argument BASE =*Address* ustawia adres podstawowy, którego system operacyjny używa do ZAŁADOWANIA biblioteki DLL. Ten argument zastępuje domyślną lokalizację DLL 0x10000000. Zobacz opis opcji [/Base](base-base-address.md) , aby uzyskać szczegółowe informacje na temat adresów podstawowych.
 
-Pamiętaj, aby używać [/dll](dll-build-a-dll.md) podczas kompilowania biblioteki DLL — opcja konsolidatora.
+Pamiętaj, aby użyć opcji konsolidatora [/dll](dll-build-a-dll.md) podczas KOMPILOWANIA biblioteki DLL.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)
+[Reguły dla instrukcji Module-Definition](rules-for-module-definition-statements.md)
