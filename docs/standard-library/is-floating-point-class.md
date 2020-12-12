@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_floating_point
 title: is_floating_point — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: 8da613bca165f68ef2e15e2be6291485a89222de
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e1ace01a88c103646e9daa6ece82b9c3c3c2978a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230981"
 ---
 # <a name="is_floating_point-class"></a>is_floating_point — Klasa
 
@@ -74,7 +75,7 @@ is_floating_point<float> == true
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Klasa is_integral](../standard-library/is-integral-class.md)
