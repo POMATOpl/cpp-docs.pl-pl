@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat pojęć: Active Template Library (ATL)'
 title: Pojęcia biblioteki Active Template Library (ALT)
 ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5437f381ea145d5474dcdba25673d4e41c60c54b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166320"
 ---
 # <a name="active-template-library-atl-concepts"></a>Pojęcia biblioteki Active Template Library (ALT)
 
@@ -70,8 +71,8 @@ Opisuje sposób używania tablic i map w ATL.
 [Składnik rejestru ATL (Rejestrator)](atl-registry-component-registrar.md)<br/>
 Omawia składnię skryptów ATL i parametry wymienne. Wyjaśniono również, jak skonfigurować łącze statyczne do rejestratora.
 
-[Programowanie za pomocą kodu ATL i języka uruchomieniowego C](programming-with-atl-and-c-run-time-code.md)<br/>
-W tym artykule omówiono zalety łączenia statycznie lub dynamicznie z biblioteką wykonawczą C (CRT).
+[Programowanie za pomocą kodu ATL i języka C Run-Time](programming-with-atl-and-c-run-time-code.md)<br/>
+W tym artykule omówiono zalety łączenia statycznie lub dynamicznie z biblioteką C Run-Time (CRT).
 
 [Programowanie przy użyciu CComBSTR](programming-with-ccombstr-atl.md)<br/>
 Omawia kilka sytuacji, w których należy zachować ostrożność podczas programowania w programie `CComBSTR` .

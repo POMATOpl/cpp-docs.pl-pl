@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy kolekcji ATL'
 title: Omówienie klasy kolekcji ATL
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 039af388a3713540c6ba7d39e8b639cf83d291ff
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 32d9fe928024d82af7031fbbb8d88aba5e3eae31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166086"
 ---
 # <a name="atl-collection-classes"></a>Klasy kolekcji ATL
 
@@ -51,7 +52,7 @@ Poniższe klasy implementują tablice, listy i mapy i są udostępniane jako kla
 |[CAtlList](../atl/reference/catllist-class.md)|Implementuje listę.|
 |[CAtlMap](../atl/reference/catlmap-class.md)|Implementuje strukturę mapowania, zgodnie z którym dane mogą być przywoływane przez klucz lub wartość.|
 |[CRBMap](../atl/reference/crbmap-class.md)|Implementuje strukturę mapowania przy użyciu algorytmu Red-Black.|
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementuje strukturę wielomap z czerwonym kolorem.|
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementuje strukturę wielomapowanie Red-Black.|
 
 Te klasy będą zalewkować wiele błędów programistycznych podczas korzystania z kompilacji debugowania, ale w celu zapewnienia wydajności te testy nie będą wykonywane w kompilacjach detalicznych.
 
@@ -88,7 +89,7 @@ Każda z dostępnych klas kolekcji oferuje różne charakterystyki wydajności, 
 |Tablica|Tak|Według int (stały czas)|Wolno O (n), chyba że wstawiasz na końcu, w którym przypadku stały czas|Wolne O (n)|Tak|
 |Mapa|Nie|Według klucza (stały czas)|Fast (stały czas)|Fast (stały czas)|Nie (klucze) tak (wartości)|
 |Mapa Red-Black|Tak (za pomocą klucza)|Według klucza O (log n)|Fast O (log n)|Fast O (log n)|Nie|
-|Czerwony-czarny multimap|Tak (za pomocą klucza)|Według klucza O (log n) (wiele wartości na klucz)|Fast O (log n)|Fast O (log n)|Tak (wiele wartości na klucz)|
+|Red-Black multimap|Tak (za pomocą klucza)|Według klucza O (log n) (wiele wartości na klucz)|Fast O (log n)|Fast O (log n)|Tak (wiele wartości na klucz)|
 
 ## <a name="using-ctraits-objects"></a>Korzystanie z obiektów CTraits
 
@@ -124,7 +125,7 @@ Następujące przykłady przedstawiają klasy kolekcji:
 
 - [Przykład neonu](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)<br/>
 [Klasy kolekcji](../atl/collection-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy punktów połączenia ATL'
 title: Klasy punktów połączenia ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-ms.openlocfilehash: 8644fc087d7f0a651724c40d2868e96c9b6ec96a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: af3b52715d7aeca13a711557bdba2c9428d4bff5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165852"
 ---
 # <a name="atl-connection-point-classes"></a>Klasy punktów połączenia ATL
 
@@ -36,6 +37,6 @@ ATL używa następujących klas do obsługi punktów połączenia:
 
 - [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) działa w połączeniu z mapą ujścia zdarzeń w klasie w celu kierowania zdarzeń do odpowiedniej funkcji obsługi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Punkt połączenia](../atl/atl-connection-points.md)

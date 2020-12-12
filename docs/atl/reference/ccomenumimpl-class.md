@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CComEnumImpl'
 title: Klasa CComEnumImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 517a4e90ca21e22dcf161aefcff61a40437eabe0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 25cdaaeeb424d0770df1dab16ef5f72e7bc5cdb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152077"
 ---
 # <a name="ccomenumimpl-class"></a>Klasa CComEnumImpl
 
@@ -82,7 +83,7 @@ Jednorodna [Klasa zasad kopiowania](../../atl/atl-copy-policy-classes.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Zobacz [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) , aby zapoznać się z przykładem implementacji metod. `CComEnumImpl`zapewnia implementację interfejsu modułu wyliczającego COM, w którym wyliczane elementy są przechowywane w tablicy. Ta klasa jest analogiczna do `IEnumOnSTLImpl` klasy, która dostarcza implementację interfejsu modułu wyliczającego na podstawie kontenera standardowej biblioteki języka C++.
+Zobacz [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) , aby zapoznać się z przykładem implementacji metod. `CComEnumImpl` zapewnia implementację interfejsu modułu wyliczającego COM, w którym wyliczane elementy są przechowywane w tablicy. Ta klasa jest analogiczna do `IEnumOnSTLImpl` klasy, która dostarcza implementację interfejsu modułu wyliczającego na podstawie kontenera standardowej biblioteki języka C++.
 
 > [!NOTE]
 > Aby uzyskać szczegółowe informacje na temat dalszych różnic między programami `CComEnumImpl` i `IEnumOnSTLImpl` , zobacz [CComEnumImpl:: init](#init).
@@ -103,7 +104,7 @@ Aby uzyskać więcej informacji, zobacz [zestawy ATL i moduły wyliczające](../
 
 **Nagłówek:** atlcom. h
 
-## <a name="ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a> CComEnumImpl::CComEnumImpl
 
 Konstruktor.
 
@@ -111,7 +112,7 @@ Konstruktor.
 CComEnumImpl();
 ```
 
-## <a name="ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="dtor"></a> CComEnumImpl:: ~ CComEnumImpl
 
 Destruktor.
 
@@ -119,7 +120,7 @@ Destruktor.
 ~CComEnumImpl();
 ```
 
-## <a name="ccomenumimplinit"></a><a name="init"></a>CComEnumImpl:: init
+## <a name="ccomenumimplinit"></a><a name="init"></a> CComEnumImpl:: init
 
 Należy wywołać tę metodę przed przekazaniem wskaźnika do interfejsu modułu wyliczającego z powrotem do dowolnego klienta.
 
@@ -140,9 +141,9 @@ Wskaźnik do pierwszego elementu tablicy zawierającej elementy, które mają zo
 Wskaźnik do lokalizacji tuż poza ostatnim elementem tablicy zawierającej elementy, które mają zostać wyliczone.
 
 *Punkt*<br/>
-podczas `IUnknown`Wskaźnik obiektu, który musi być utrzymywany w okresie istnienia modułu wyliczającego. Przekaż wartość NULL, jeśli taki obiekt nie istnieje.
+podczas `IUnknown` Wskaźnik obiektu, który musi być utrzymywany w okresie istnienia modułu wyliczającego. Przekaż wartość NULL, jeśli taki obiekt nie istnieje.
 
-*flagi*<br/>
+*znaczników*<br/>
 Flagi określające, czy moduł wyliczający powinien przejąć własność tablicy, czy utworzyć jego kopię. Możliwe wartości są opisane poniżej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -166,16 +167,16 @@ enum CComEnumFlags
    };
 ```
 
-`AtlFlagNoCopy`oznacza, że okres istnienia tablicy nie jest kontrolowany przez moduł wyliczający. W takim przypadku tablica będzie statyczna lub obiekt identyfikowany za pomocą parametru *punktowy* będzie odpowiedzialny za zwolnienie tablicy, gdy nie jest już potrzebne.
+`AtlFlagNoCopy` oznacza, że okres istnienia tablicy nie jest kontrolowany przez moduł wyliczający. W takim przypadku tablica będzie statyczna lub obiekt identyfikowany za pomocą parametru *punktowy* będzie odpowiedzialny za zwolnienie tablicy, gdy nie jest już potrzebne.
 
-`AtlFlagTakeOwnership`oznacza, że niszczenie tablicy ma być kontrolowane przez moduł wyliczający. W takim przypadku Tablica musi być przydzielana dynamicznie przy użyciu **`new`** . Moduł wyliczający usunie tablicę z destruktora. Zazwyczaj można przekazać wartość NULL dla elementu *punkt*, chociaż można nadal przekazywać prawidłowy wskaźnik, jeśli trzeba będzie powiadamiać o zniszczeniu modułu wyliczającego z jakiegoś powodu.
+`AtlFlagTakeOwnership` oznacza, że niszczenie tablicy ma być kontrolowane przez moduł wyliczający. W takim przypadku Tablica musi być przydzielana dynamicznie przy użyciu **`new`** . Moduł wyliczający usunie tablicę z destruktora. Zazwyczaj można przekazać wartość NULL dla elementu *punkt*, chociaż można nadal przekazywać prawidłowy wskaźnik, jeśli trzeba będzie powiadamiać o zniszczeniu modułu wyliczającego z jakiegoś powodu.
 
-`AtlFlagCopy`oznacza, że nowa tablica ma zostać utworzona przez skopiowanie tablicy przekazaną do `Init` . Okres istnienia nowej tablicy jest kontrolowany przez moduł wyliczający. Moduł wyliczający usunie tablicę z destruktora. Zazwyczaj można przekazać wartość NULL dla elementu *punkt*, chociaż można nadal przekazywać prawidłowy wskaźnik, jeśli trzeba będzie powiadamiać o zniszczeniu modułu wyliczającego z jakiegoś powodu.
+`AtlFlagCopy` oznacza, że nowa tablica ma zostać utworzona przez skopiowanie tablicy przekazaną do `Init` . Okres istnienia nowej tablicy jest kontrolowany przez moduł wyliczający. Moduł wyliczający usunie tablicę z destruktora. Zazwyczaj można przekazać wartość NULL dla elementu *punkt*, chociaż można nadal przekazywać prawidłowy wskaźnik, jeśli trzeba będzie powiadamiać o zniszczeniu modułu wyliczającego z jakiegoś powodu.
 
 > [!NOTE]
 > Prototyp tej metody określa elementy tablicy jako typ `T` , gdzie `T` został zdefiniowany jako parametr szablonu dla klasy. Jest to ten sam typ, który jest udostępniany przez metodę interfejsu COM [CComEnumImpl:: Next](#next). Jest to takie, jak w przeciwieństwie do [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), ta klasa nie obsługuje różnych magazynów i uwidocznionych typów danych. Typ danych elementów w tablicy musi być taki sam jak typ danych uwidoczniony za pomocą interfejsu COM.
 
-## <a name="ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl:: Clone
+## <a name="ccomenumimplclone"></a><a name="clone"></a> CComEnumImpl:: Clone
 
 Ta metoda zapewnia implementację metody **klonowania** przez utworzenie obiektu typu `CComEnum` , zainicjowanie go z tą samą tablicą i iteratorem używanym przez bieżący obiekt i zwróceniem interfejsu na nowo utworzony obiekt.
 
@@ -196,7 +197,7 @@ Standardowa wartość HRESULT.
 
 Należy zauważyć, że sklonowane moduły wyliczające nigdy nie wykonują własnych kopii (ani nie przejmować na własność) danych używanych przez oryginalny moduł wyliczający. W razie potrzeby sklonowane Numeratory zachowują pierwotny moduł wyliczający (przy użyciu odwołania COM), aby upewnić się, że dane są dostępne tak długo, jak ich potrzebują.
 
-## <a name="ccomenumimplm_spunk"></a><a name="m_spunk"></a>CComEnumImpl:: m_spUnk
+## <a name="ccomenumimplm_spunk"></a><a name="m_spunk"></a> CComEnumImpl:: m_spUnk
 
 Ten inteligentny wskaźnik zachowuje odwołanie do obiektu przenoszonego do [CComEnumImpl:: init](#init), upewniając się, że pozostaje aktywny w okresie istnienia modułu wyliczającego.
 
@@ -204,7 +205,7 @@ Ten inteligentny wskaźnik zachowuje odwołanie do obiektu przenoszonego do [CCo
 CComPtr<IUnknown> m_spUnk;
 ```
 
-## <a name="ccomenumimplm_begin"></a><a name="m_begin"></a>CComEnumImpl:: m_begin
+## <a name="ccomenumimplm_begin"></a><a name="m_begin"></a> CComEnumImpl:: m_begin
 
 Wskaźnik do lokalizacji tuż poza ostatnim elementem tablicy zawierającej elementy, które mają zostać wyliczone.
 
@@ -212,7 +213,7 @@ Wskaźnik do lokalizacji tuż poza ostatnim elementem tablicy zawierającej elem
 T* m_begin;
 ```
 
-## <a name="ccomenumimplm_end"></a><a name="m_end"></a>CComEnumImpl:: m_end
+## <a name="ccomenumimplm_end"></a><a name="m_end"></a> CComEnumImpl:: m_end
 
 Wskaźnik do pierwszego elementu tablicy zawierającej elementy, które mają zostać wyliczone.
 
@@ -220,7 +221,7 @@ Wskaźnik do pierwszego elementu tablicy zawierającej elementy, które mają zo
 T* m_end;
 ```
 
-## <a name="ccomenumimplm_iter"></a><a name="m_iter"></a>CComEnumImpl:: m_iter
+## <a name="ccomenumimplm_iter"></a><a name="m_iter"></a> CComEnumImpl:: m_iter
 
 Wskaźnik do bieżącego elementu tablicy zawierającej elementy, które mają zostać wyliczone.
 
@@ -228,7 +229,7 @@ Wskaźnik do bieżącego elementu tablicy zawierającej elementy, które mają z
 T* m_iter;
 ```
 
-## <a name="ccomenumimplm_dwflags"></a><a name="m_dwflags"></a>CComEnumImpl:: m_dwFlags
+## <a name="ccomenumimplm_dwflags"></a><a name="m_dwflags"></a> CComEnumImpl:: m_dwFlags
 
 Flagi przesłane do [CComEnumImpl:: init](#init).
 
@@ -236,7 +237,7 @@ Flagi przesłane do [CComEnumImpl:: init](#init).
 DWORD m_dwFlags;
 ```
 
-## <a name="ccomenumimplnext"></a><a name="next"></a>CComEnumImpl:: Next
+## <a name="ccomenumimplnext"></a><a name="next"></a> CComEnumImpl:: Next
 
 Ta metoda zapewnia implementację **następnej** metody.
 
@@ -259,7 +260,7 @@ określoną Liczba elementów faktycznie zwróconych w *rgelt*. Może to być mn
 
 Standardowa wartość HRESULT.
 
-## <a name="ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl:: Reset
+## <a name="ccomenumimplreset"></a><a name="reset"></a> CComEnumImpl:: Reset
 
 Ta metoda zapewnia implementację metody **Reset** .
 
@@ -271,7 +272,7 @@ STDMETHOD(Reset)(void);
 
 Standardowa wartość HRESULT.
 
-## <a name="ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl:: Skip
+## <a name="ccomenumimplskip"></a><a name="skip"></a> CComEnumImpl:: Skip
 
 Ta metoda zapewnia implementację metody **Skip** .
 
@@ -292,7 +293,7 @@ Standardowa wartość HRESULT.
 
 Zwraca E_INVALIDARG, jeśli *celt* ma wartość zero, zwraca S_FALSE, jeśli zwracane są elementy mniejsze niż *celt* , zwraca S_OK w przeciwnym razie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
 [Klasa CComEnum](../../atl/reference/ccomenum-class.md)<br/>

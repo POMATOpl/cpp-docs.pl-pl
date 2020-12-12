@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z CString'
 title: Użycie CString
 ms.date: 06/18/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: 8ebf3441c7d8856fe412e2efed4c717b01ced362
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0afea345f2a01d66cbb541aa2a6c958c28365a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166398"
 ---
 # <a name="using-cstring"></a>Użycie CString
 
@@ -23,11 +24,11 @@ Aby użyć `CString` , Dołącz `atlstr.h` nagłówek.
 
 `CStringW`Obiekt zawiera **`wchar_t`** Typ i obsługuje ciągi Unicode. `CStringA`Obiekt zawiera **`char`** Typ i obsługuje ciągi jednobajtowe i wielobajtowe (MBCS). `CString`Obiekt obsługuje **`char`** Typ lub **`wchar_t`** Typ, w zależności od tego, czy symbol MBCS lub symbol Unicode jest zdefiniowany w czasie kompilacji.
 
-`CString`Obiekt zachowuje dane znakowe w `CStringData` obiekcie. `CString`akceptuje ciągi w stylu C o wartości NULL. `CString`śledzi długość ciągu w celu zwiększenia wydajności, ale zachowuje także znak NULL w danych przechowywanych znaków do obsługi konwersji do LPCWSTR. `CString`uwzględnia terminator wartości null podczas eksportowania ciągu w stylu C. Można wstawić wartość NULL w innych lokalizacjach w `CString` , ale może to spowodować nieoczekiwane wyniki.
+`CString`Obiekt zachowuje dane znakowe w `CStringData` obiekcie. `CString` akceptuje ciągi w stylu C o wartości NULL. `CString` śledzi długość ciągu w celu zwiększenia wydajności, ale zachowuje także znak NULL w danych przechowywanych znaków do obsługi konwersji do LPCWSTR. `CString` uwzględnia terminator wartości null podczas eksportowania ciągu w stylu C. Można wstawić wartość NULL w innych lokalizacjach w `CString` , ale może to spowodować nieoczekiwane wyniki.
 
 Następujący zestaw klas ciągów może być używany bez konsolidacji biblioteki MFC z obsługą CRT lub bez niej: `CAtlString` , `CAtlStringA` , i `CAtlStringW` .
 
-`CString`jest używany w projektach natywnych. W przypadku projektów kodu zarządzanego (C++/CLI) Użyj `System::String` .
+`CString` jest używany w projektach natywnych. W przypadku projektów kodu zarządzanego (C++/CLI) Użyj `System::String` .
 
 Aby dodać więcej możliwości niż `CString` , `CStringA` lub `CStringW` obecnie oferta, należy utworzyć podklasę zawierającą `CStringT` dodatkowe funkcje.
 

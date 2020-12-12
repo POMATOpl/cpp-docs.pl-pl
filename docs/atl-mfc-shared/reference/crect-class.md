@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CRect'
 title: Klasa CRect
 ms.date: 11/06/2018
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: f45090971e8dbb89ae281b408cc3a14e102ffe17
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 229ec3b54f1b128641034bc763d2a62c0a6fe0a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166684"
 ---
 # <a name="crect-class"></a>Klasa CRect
 
@@ -120,7 +121,7 @@ Podczas określania należy `CRect` zachować ostrożność, aby skonstruować j
 
 Należy zachować ostrożność podczas manipulowania `CRect` programem przy użyciu funkcji [przechwytywania::D Ptolp](../../mfc/reference/cdc-class.md#dptolp) i [przechwytywania:: LPtoDP](../../mfc/reference/cdc-class.md#lptodp) . Jeśli tryb mapowania kontekstu wyświetlania jest taki, że zakres y ma wartość ujemną, `MM_LOENGLISH` a następnie `CDC::DPtoLP` zostanie przekształcony w taki sposób, aby `CRect` jego góra była większa od dołu. Funkcje takie jak `Height` i `Size` zwracają wartości ujemne dla wysokości przekształconej `CRect` , a prostokąt nie będzie znormalizowany.
 
-W przypadku używania przeciążonych `CRect` operatorów pierwszy operand musi być, a `CRect` drugi może być strukturą lub [RECT](/windows/win32/api/windef/ns-windef-rect) `CRect` obiektem.
+W przypadku używania przeciążonych `CRect` operatorów pierwszy operand musi być, a `CRect` drugi może być strukturą lub [](/windows/win32/api/windef/ns-windef-rect) `CRect` obiektem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -378,7 +379,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
 *x*<br/>
 Określa liczbę jednostek do skorygowania lewej i prawej strony `CRect` .
 
-*t*<br/>
+*Y*<br/>
 Określa liczbę jednostek do skorygowania u góry i u dołu `CRect` .
 
 *zmienia*<br/>
@@ -504,7 +505,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *x*<br/>
 Określa liczbę jednostek, które mają zostać poddaną lewej i prawej strony `CRect` .
 
-*t*<br/>
+*Y*<br/>
 Określa liczbę jednostek, które mają zostać podwyższenie górnego i dolnej krawędzi `CRect` .
 
 *zmienia*<br/>
@@ -680,7 +681,7 @@ void MoveToXY(POINT point) throw();
 *x*<br/>
 Bezwzględna Współrzędna x dla lewego górnego rogu prostokąta.
 
-*t*<br/>
+*Y*<br/>
 Bezwzględna Współrzędna y dla lewego górnego rogu prostokąta.
 
 *moment*<br/>
@@ -705,7 +706,7 @@ void MoveToY(int y) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
+*Y*<br/>
 Bezwzględna Współrzędna y dla lewego górnego rogu prostokąta.
 
 ### <a name="example"></a>Przykład
@@ -757,7 +758,7 @@ void OffsetRect(SIZE size) throw();
 *x*<br/>
 Określa ilość do przeniesienia w lewo lub w prawo. Aby przenieść z lewej, musi być ujemna.
 
-*t*<br/>
+*Y*<br/>
 Określa ilość, która ma zostać przeniesiona w górę lub w dół. Wartość musi być ujemna, aby można było ją przenieść w górę.
 
 *moment*<br/>
@@ -1020,7 +1021,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>Parametry
 
 *cinania*<br/>
-Zawiera element `CRect` lub [RECT](/windows/win32/api/windef/ns-windef-rect).
+Zawiera element `CRect` lub [](/windows/win32/api/windef/ns-windef-rect).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1483,7 +1484,7 @@ int nWid = rect.Width();
 ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CPoint](cpoint-class.md)<br/>
 [Klasa CSize](csize-class.md)<br/>

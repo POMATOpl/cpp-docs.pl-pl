@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IAtlStringMgr'
 title: Klasa IAtlStringMgr
 ms.date: 10/18/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7b3aa9d8984639d42e673e96b5fcf25308a757bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166528"
 ---
 # <a name="iatlstringmgr-class"></a>Klasa IAtlStringMgr
 

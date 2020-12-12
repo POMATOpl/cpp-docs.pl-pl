@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: Obsługa kompilatora COM'
 title: Obsługa kompilatora COM
 ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: 9a5961049cbc54c94cec5b444e2d98f013dda932
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1dd64d34b39a2b5cd2f0648d38deddf51e8541a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120467"
 ---
 # <a name="compiler-com-support"></a>Obsługa kompilatora COM
 
@@ -36,7 +37,7 @@ Zestaw globalnych funkcji i klas obsługi modelu COM zapewnia obsługę `VARIANT
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy obsługi kompilatora COM](../cpp/compiler-com-support-classes.md)<br/>
 [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)

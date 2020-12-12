@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: punkty połączenia ATL'
 title: Punkty połączenia ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 60b9018185bea2af26407ee9d7a203148c8dc477
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165826"
 ---
 # <a name="atl-connection-points"></a>Punkty połączenia ATL
 
@@ -37,6 +38,6 @@ Zawiera przykład deklarowania punktu połączenia.
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów koncepcyjnych dotyczących sposobu programowania przy użyciu Active Template Library.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)

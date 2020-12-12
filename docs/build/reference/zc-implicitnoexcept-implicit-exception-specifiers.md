@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o:/Zc: implicitNoexcept (niejawne specyfikatory wyjątków)'
 title: /Zc:implicitNoexcept (niejawne specyfikatory wyjątków)
 ms.date: 03/06/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: bb1a632ffe684ac0777d0089a2edfd514bf66d0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c6aabe2878282b42ad0f2ce1e205ac387bd9a96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114640"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (niejawne specyfikatory wyjątków)
 
@@ -131,11 +132,11 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **/Zc: implicitNoexcept** lub **/Zc: implicitNoexcept-** , a następnie wybierz **przycisk OK**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Zc (Zgodność)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>

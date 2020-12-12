@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ATL i organizator trybu wolnych wątków'
 title: ATL i marshaler trybu wolnych wątków
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-ms.openlocfilehash: 94e4961c69e9441d160d72d9b72afcee3677e25f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 01fb54386b5f48c8e49cc805e047c0faf8b0c39b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166073"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL i marshaler trybu wolnych wątków
 
 Strona atrybutów Kreatora prostych obiektów ATL zawiera opcję umożliwiającą klasie agregowanie organizatora trybu wolnych wątków (FTM).
 
-Kreator generuje kod, aby utworzyć wystąpienie elementu Marshal of Free threader w `FinalConstruct` i wydać to wystąpienie w. `FinalRelease` Makro COM_INTERFACE_ENTRY_AGGREGATE jest automatycznie dodawane do mapy com, aby upewnić się `QueryInterface` , że żądania [IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal) są obsługiwane przez organizatora trybu wolnych wątków.
+Kreator generuje kod, aby utworzyć wystąpienie elementu Marshal of Free threader w `FinalConstruct` i wydać to wystąpienie w `FinalRelease` . COM_INTERFACE_ENTRY_AGGREGATE makro jest automatycznie dodawane do mapy COM, aby upewnić się, że `QueryInterface` żądania [IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal) są obsługiwane przez organizatora wolnych wątków.
 
 Organizator wolnych wątków umożliwia bezpośredni dostęp do interfejsów w obiekcie z dowolnego wątku w tym samym procesie, przyspieszając wywołania między różnymi komórkami. Ta opcja jest przeznaczona dla klas, które używają obu modeli wątkowości.
 
 W przypadku korzystania z tej opcji klasy muszą być odpowiedzialne za bezpieczeństwo wątków swoich danych. Ponadto obiekty, które agregują organizatora wolnych wątków i muszą używać wskaźników interfejsu uzyskanych z innych obiektów, muszą podejmować dodatkowe kroki, aby upewnić się, że interfejsy są prawidłowo organizowane. Zazwyczaj obejmuje to przechowywanie wskaźników interfejsu w globalnej tabeli interfejsu (GIT) i uzyskiwanie wskaźnika z narzędzia GIT za każdym razem, gdy jest używany. ATL zawiera klasy [CComGITPtr](../atl/reference/ccomgitptr-class.md) , które ułatwiają korzystanie ze wskaźników interfejsu przechowywanych w usłudze git.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../atl/active-template-library-atl-concepts.md)<br/>
 [CoCreateFreeThreadedMarshaler](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>

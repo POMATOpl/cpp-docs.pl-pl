@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CTimeSpan'
 title: Klasa CTimeSpan
 ms.date: 10/18/2018
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 0c13aa0d8f6c46db3b018283ab2a408a3f9531e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b15fa247baaa4de77c5caab12d584a80321b9420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166580"
 ---
 # <a name="ctimespan-class"></a>Klasa CTimeSpan
 

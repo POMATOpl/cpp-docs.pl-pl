@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie programu obsługi komunikatów ATL'
 title: Dodawanie programu obsługi komunikatów ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,25 +9,25 @@ helpviewer_keywords:
 - windows [C++], ATL
 - ATL, message handlers
 ms.assetid: cdea38a1-0d9b-4f8d-bbd5-b4f063fb3eeb
-ms.openlocfilehash: cc7631ac9e02891cee725b47133a273e756759d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 263cbcb863ee287c9b3f4650263a3fac33d7ab7b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166346"
 ---
 # <a name="adding-an-atl-message-handler"></a>Dodawanie programu obsługi komunikatów ATL
 
-Aby dodać program obsługi komunikatów (funkcja członkowska, która obsługuje komunikaty Windows) do formantu, należy najpierw wybrać formant w widoku klas. Następnie otwórz **właściwości** wybierz **wiadomości** ikonę, a następnie kliknij przycisk listy rozwijanej kontrolować w polu obok komunikatu wymagane. Spowoduje to dodanie deklarację dla obsługi wiadomości w pliku nagłówka kontrolki i szkielet implementację programu obsługi w plik CPP kontrolki. Zostanie również dodać mapy wiadomości i Dodaj wpis dla programu obsługi.
+Aby dodać program obsługi komunikatów (funkcja członkowska, która obsługuje komunikaty systemu Windows) do kontrolki, najpierw wybierz kontrolkę w Widok klasy. Następnie otwórz okno **Właściwości** , wybierz ikonę **komunikaty** , a następnie kliknij kontrolkę listy rozwijanej w polu obok wymaganego komunikatu. Spowoduje to dodanie deklaracji dla programu obsługi komunikatów w pliku nagłówkowym kontrolki i szkieletowej implementacji programu obsługi w pliku. cpp kontrolki. Spowoduje to również dodanie mapy komunikatów i dodanie wpisu do programu obsługi.
 
-Dodawanie obsługi wiadomości w ATL jest podobne do dodawania programu obsługi komunikatów do klasy MFC. Zobacz [Dodawanie Handlera komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md) Aby uzyskać więcej informacji.
+Dodawanie programu obsługi komunikatów w ATL jest podobne do dodawania obsługi komunikatów do klasy MFC. Aby uzyskać więcej informacji [, zobacz Dodawanie programu obsługi komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md) .
 
-Tylko do dodawania programu obsługi komunikatów ATL mają zastosowanie następujące warunki:
+Poniższe warunki dotyczą tylko dodawania obsługi komunikatów ATL:
 
-- Programy obsługi komunikatów postępuj zgodnie z tej samej konwencji nazewnictwa jak MFC.
+- Procedury obsługi komunikatów są zgodne z tą samą konwencją nazewnictwa jak MFC.
 
-- Nowe wpisy mapy komunikatów są dodawane do mapy wiadomości głównego. Kreator nie może rozpoznać mapy komunikatów alternatywnej i tworzenie łańcuchów.
+- Nowe wpisy mapy wiadomości są dodawane do głównej mapy komunikatów. Kreator nie rozpoznaje alternatywnych map i łańcuchów komunikatów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Implementowanie okna](../atl/implementing-a-window.md)

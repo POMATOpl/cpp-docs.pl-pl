@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CStringData'
 title: Klasa CStringData
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 140836f45ed2f4088bc0baed67676f93cb268d01
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 74bf3563cb5dca506498ceef05ddc84f13c44f41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166593"
 ---
 # <a name="cstringdata-class"></a>Klasa CStringData
 
@@ -46,7 +47,7 @@ struct CStringData
 |[data](#data)|Pobiera dane znakowe obiektu ciągu.|
 |[IsLocked](#islocked)|Określa, czy bufor skojarzonego obiektu ciągu jest zablokowany.|
 |[Nie udostępniono](#isshared)|Określa, czy bufor skojarzonego obiektu ciągu jest aktualnie udostępniony.|
-|[Skręt](#lock)|Blokuje bufor skojarzonego obiektu ciągu.|
+|[Blokuj](#lock)|Blokuje bufor skojarzonego obiektu ciągu.|
 |[Wersja](#release)|Zwalnia określony obiekt ciągu.|
 |[Odblokowania](#unlock)|Odblokowuje bufor skojarzonego obiektu ciągu.|
 

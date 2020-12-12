@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleDateTimeSpan'
 title: Klasa COleDateTimeSpan
 ms.date: 03/27/2019
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 5934a456b519d14def14018f966c7bff8206c3c4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 51632f8c179ea0e256c39052e924d296b89aefd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166775"
 ---
 # <a name="coledatetimespan-class"></a>Klasa COleDateTimeSpan
 
@@ -751,7 +752,7 @@ Aby uzyskać krótki opis tych wartości stanu, zobacz następującą listę:
 
 [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 [Klasa CTime](../../atl-mfc-shared/reference/ctime-class.md)<br/>

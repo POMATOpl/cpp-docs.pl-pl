@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Zapoznaj się ze'
 title: Zawieranie kontrolek ALT — Często zadawane pytania
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: 693617589f157d352972485396777cec587a5b8f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 5c5d3d452a119908cb6c8dcdb08da3276db78f51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165774"
 ---
 # <a name="atl-control-containment-faq"></a>Zawieranie kontrolek ALT — Często zadawane pytania
 
 ## <a name="which-atl-classes-facilitate-activex-control-containment"></a>Które klasy ATL umożliwiają zawieranie kontrolek ActiveX?
 
-Kod hostingu formantu ATL nie wymaga użycia żadnych klas ATL; można po prostu utworzyć okno **"AtlAxWin80"** i w razie potrzeby użyć interfejsu API hostingu kontroli (Aby uzyskać więcej informacji, zobacz **co to jest interfejs API hostingu kontrolki ATL**. Jednak następujące klasy ułatwiają korzystanie z funkcji zawierania.
+Kod hostingu formantu ATL nie wymaga użycia żadnych klas ATL; Możesz po prostu utworzyć okno **"AtlAxWin80"** i w razie potrzeby użyć interfejsu API hostingu kontroli (Aby uzyskać więcej informacji, zobacz **co to jest interfejs API Control-Hosting ATL**. Jednak następujące klasy ułatwiają korzystanie z funkcji zawierania.
 
 |Klasa|Opis|
 |-----------|-----------------|

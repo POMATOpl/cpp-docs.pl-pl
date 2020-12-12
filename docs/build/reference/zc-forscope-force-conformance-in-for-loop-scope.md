@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o:/Zc: forScope (Wymuszaj zgodność w zakresie pętli for)'
 title: /Zc:forScope (Wymuszaj zgodność w zakresie pętli For)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b1173ad609a1b2c95d6cf118f4e2d5defeec5b9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7124bba6608facfea546974cfa40ef9556ff713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114666"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Wymuszaj zgodność w zakresie pętli For)
 
@@ -63,7 +64,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja języka**C/C++**  >  **Language** .
+1. Wybierz   >  stronę właściwości konfiguracja języka **C/C++**  >   .
 
 1. Zmodyfikuj **zgodność siły we właściwości zakresu pętli for** .
 
@@ -71,7 +72,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Zc (Zgodność)](zc-conformance.md)<br/>
 [/Za,/ze (Wyłącz rozszerzenia językowe)](za-ze-disable-language-extensions.md)<br/>

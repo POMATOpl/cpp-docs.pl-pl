@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Obsługa zestawu znaków Unicode i wielobajtowego (MBCS)'
 title: Obsługa zestawu znaków Unicode i wielobajtowego (MBCS)
 ms.date: 01/09/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: efa90acd169aeb8739b0bf97a5ab27026cc80cc6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9e9a09777e835872a5c8bc6613460478acf9be9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166411"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Obsługa zestawu znaków Unicode i wielobajtowego (MBCS)
 
@@ -35,22 +36,22 @@ Te biblioteki, debugery i pliki DLL są używane do obsługi standardu Unicode w
 
 :::row:::
    :::column span="":::
-      MFC*wersja*U. lib \
-      *Wersja*MFC ud. LIB
-      MFCM*wersja*U. lib \
-      MFCM*wersja*ud. LIB
-      MFCS*wersja*U. lib \
-      MFCS*wersja*ud. LIB
+      MFC *wersja* U. lib \
+      *Wersja* MFC ud. LIB
+      MFCM *wersja* U. lib \
+      MFCM *wersja* ud. LIB
+      MFCS *wersja* U. lib \
+      MFCS *wersja* ud. LIB
       UAFXCW. LIB
       UAFXCWD. LIB
    :::column-end:::
    :::column span="":::
-      MFC*wersja*U. pdb \
-      *Wersja*MFC ud. PDB
-      MFCM*wersja*U. pdb \
-      MFCM*wersja*ud. PDB
-      MFCS*wersja*U. pdb \
-      MFCS*wersja*ud. PDB
+      MFC *wersja* U. pdb \
+      *Wersja* MFC ud. PDB
+      MFCM *wersja* U. pdb \
+      MFCM *wersja* ud. PDB
+      MFCS *wersja* U. pdb \
+      MFCS *wersja* ud. PDB
       UAFXCW. PDB
       UAFXCWD. PDB
    :::column-end:::
@@ -110,7 +111,7 @@ W obszarze DBCS dany ciąg może zawierać wszystkie jednobajtowe znaki ANSI, ws
 > [!NOTE]
 > Symbole _MBCS i _UNICODE wykluczają się wzajemnie.
 
-Mapowania funkcji tekstu ogólnego dla wszystkich procedur obsługi ciągów w czasie wykonywania zostały omówione w temacie [Informacje o bibliotece wykonawczej C](../c-runtime-library/c-run-time-library-reference.md). Aby uzyskać listę, zobacz temat [międzynarodowe](../c-runtime-library/internationalization.md).
+Mapowania funkcji tekstu ogólnego dla wszystkich procedur obsługi ciągów w czasie wykonywania zostały omówione w temacie [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Aby uzyskać listę, zobacz temat [międzynarodowe](../c-runtime-library/internationalization.md).
 
 Podobnie `CString` metody są implementowane za pomocą ogólnych mapowań typów danych. Aby włączyć zarówno MBCS, jak i Unicode, MFC używa używanie TCHAR dla **`char`** lub **`wchar_t`** , LPTStr dla **`char`** <strong>\*</strong> lub `wchar_t*` , i LPCTSTR dla **const char** <strong>\*</strong> lub `const wchar_t*` . Zapewniają one poprawne mapowania dla MBCS lub Unicode.
 

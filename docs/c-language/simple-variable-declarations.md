@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: proste deklaracje zmiennych'
 title: Proste deklaracje zmiennej
 ms.date: 11/04/2016
 helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: 42547828e78566982053d22e8288fe1ccbe6e26b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ccb63ad3726d8a5ed5692abd5ec678a1b517614d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114627"
 ---
 # <a name="simple-variable-declarations"></a>Proste deklaracje zmiennej
 
@@ -21,15 +22,15 @@ Klasy lub typy magazynów (lub oba) są wymagane w deklaracjach zmiennych. Zmien
 ## <a name="syntax"></a>Składnia
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
 *deklarator Direct*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*
 
 *Identyfikator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*dowolny*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *niecyfrowy* identyfikator<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *cyfra* identyfikatora
+&nbsp;&nbsp;&nbsp;&nbsp; *niecyfrowy* identyfikator<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *cyfra* identyfikatora
 
 W przypadku arytmetycznego, struktury, Unii, wyliczeń i typów void oraz dla typów reprezentowanych przez **`typedef`** nazwy, proste deklaratory może być używane w deklaracji, ponieważ specyfikator typu dostarcza wszystkie informacje o wpisywaniu. Typy wskaźników, tablic i funkcji wymagają bardziej skomplikowanej Deklaratory.
 
@@ -51,6 +52,6 @@ unsigned long reply, flag; /* Declares two variables
 
 W tym przykładzie zarówno zmienne, `reply` jak i `flag` mają **`unsigned long`** Typ i muszą zawierać niepodpisane wartości całkowite.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

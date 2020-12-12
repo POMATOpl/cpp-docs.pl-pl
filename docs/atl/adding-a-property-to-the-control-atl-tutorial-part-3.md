@@ -1,22 +1,23 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie właściwości do kontrolki (samouczek ATL, część 3)'
 title: Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: c5f71880f780e793cd77eb5a7571d31de4a8d01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22a44b6878afd6d51fb396d8f02a60e93436cf05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166333"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
 
-`IPolyCtl`jest interfejsem, który zawiera niestandardowe metody i właściwości kontrolki, i doda do niej właściwość.
+`IPolyCtl` jest interfejsem, który zawiera niestandardowe metody i właściwości kontrolki, i doda do niej właściwość.
 
 ### <a name="to-add-the-property-definitions-to-your-project"></a>Aby dodać definicje właściwości do projektu
 
-1. W **Widok klasy**rozwiń `Polygon` gałąź.
+1. W **Widok klasy** rozwiń `Polygon` gałąź.
 
 1. Kliknij prawym przyciskiem myszy `IPolyCtl` .
 
@@ -24,11 +25,11 @@ ms.locfileid: "87219004"
 
 1. Wpisz `Sides` **nazwę właściwości**.
 
-1. Z listy rozwijanej **Typ właściwości**wybierz opcję **`short`** .
+1. Z listy rozwijanej **Typ właściwości** wybierz opcję **`short`** .
 
 1. Kliknij przycisk **OK** , aby zakończyć dodawanie właściwości.
 
-1. Z **Eksplorator rozwiązań**Otwórz wielokąt. idl i zastąp następujące wiersze na końcu `IPolyCtl : IDispatch` interfejsu:
+1. Z **Eksplorator rozwiązań** Otwórz wielokąt. idl i zastąp następujące wiersze na końcu `IPolyCtl : IDispatch` interfejsu:
 
     ```cpp
     short get_Sides();
@@ -42,7 +43,7 @@ ms.locfileid: "87219004"
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. W **Eksplorator rozwiązań**Otwórz plik PolyCtl. h i Dodaj następujące wiersze po definicji `m_clrFillColor` :
+1. W **Eksplorator rozwiązań** Otwórz plik PolyCtl. h i Dodaj następujące wiersze po definicji `m_clrFillColor` :
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
@@ -64,6 +65,6 @@ Masz teraz właściwość o nazwie `Sides` . W następnym kroku zmienisz kod rys
 
 [Wróć do kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [w kroku 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)

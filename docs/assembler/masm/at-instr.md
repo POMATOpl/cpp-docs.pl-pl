@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: @InStr'
 title: '@InStr'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: 3e790204ee6344031018fe79510ff9e064bef3b4
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: d3dd647477260e88633b27c38a62d3c14b2ae377
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75315761"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121241"
 ---
 # <a name="instr"></a>\@InStr
 
@@ -19,9 +20,9 @@ Funkcja makro, która znajduje pierwsze wystąpienie *ciąg2* w *ciąg1*, zaczyn
 
 ## <a name="syntax"></a>Składnia
 
-> **\@InStr (** ⟦*Position*⟧ __,__ *ciąg1* __,__ *ciąg2* **)**
+> **\@ InStr (** ⟦*Position*⟧__,__ *ciąg1*__,__ *ciąg2* **)**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Odwołania do symboli](symbols-reference.md)\
+[Odwołanie do symboli](symbols-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

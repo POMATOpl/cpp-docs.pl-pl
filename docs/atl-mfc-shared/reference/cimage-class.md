@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa funkcji CImage'
 title: Klasa funkcji CImage
 ms.date: 08/19/2019
 f1_keywords:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6e7197648fd91b2280d406c19c1019ca23f6a470
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a094aecfae57a678f306d00e0998247000361822
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166829"
 ---
 # <a name="cimage-class"></a>Klasa funkcji CImage
 
@@ -134,7 +135,7 @@ class CImage
 
 ## <a name="remarks"></a>Uwagi
 
-`CImage` Pobiera mapy bitowe, które są albo niezależne od urządzenia mapy bitowe (DIB); można jednak użyć [Create](#create) lub [funkcji CImage:: Load](#load) tylko z sekcjami DIB. Do obiektu można dołączyć mapę bitową innych niż DIB `CImage` , ale nie [Attach](#attach)można użyć następujących `CImage` metod, które obsługują tylko mapy bitowe sekcji DIB:
+`CImage` Pobiera mapy bitowe, które są albo niezależne od urządzenia mapy bitowe (DIB); można jednak użyć [Create](#create) lub [funkcji CImage:: Load](#load) tylko z sekcjami DIB. Do obiektu można dołączyć mapę bitową innych niż DIB `CImage` , ale nie [](#attach)można użyć następujących `CImage` metod, które obsługują tylko mapy bitowe sekcji DIB:
 
 - [GetBits](#getbits)
 
@@ -910,7 +911,7 @@ COLORREF GetPixel(int x, int y) const throw();
 *x*<br/>
 Współrzędna x piksela.
 
-*t*<br/>
+*Y*<br/>
 Współrzędna y piksela.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -930,7 +931,7 @@ void* GetPixelAddress(int x, int y) throw();
 *x*<br/>
 Współrzędna x piksela.
 
-*t*<br/>
+*Y*<br/>
 Współrzędna y piksela.
 
 ### <a name="remarks"></a>Uwagi
@@ -1379,7 +1380,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 *x*<br/>
 Położenie w poziomie pikseli do ustawienia.
 
-*t*<br/>
+*Y*<br/>
 Położenie w pionie pikseli do ustawienia.
 
 *Kolor*<br/>
@@ -1402,7 +1403,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 *x*<br/>
 Położenie w poziomie pikseli do ustawienia.
 
-*t*<br/>
+*Y*<br/>
 Położenie w pionie pikseli do ustawienia.
 
 *iIndex*<br/>
@@ -1410,7 +1411,7 @@ Indeks koloru w palecie kolorów.
 
 ## <a name="cimagesetpixelrgb"></a><a name="setpixelrgb"></a> Funkcji CImage:: SetPixelRGB
 
-Ustawia piksel w miejscach określonych przez wartości *x* i *y* na kolory wskazane przez *r*, *g*i *b*, w czerwonym, zielonym, niebieskim (RGB) obrazie.
+Ustawia piksel w miejscach określonych przez wartości *x* i *y* na kolory wskazane przez *r*, *g* i *b*, w czerwonym, zielonym, niebieskim (RGB) obrazie.
 
 ```cpp
 void SetPixelRGB(
@@ -1426,7 +1427,7 @@ void SetPixelRGB(
 *x*<br/>
 Położenie w poziomie pikseli do ustawienia.
 
-*t*<br/>
+*Y*<br/>
 Położenie w pionie pikseli do ustawienia.
 
 *®*<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: `/Zc:auto` (wywnioskowanie typu zmiennej)'
 title: /Zc:auto (Dedukuj typ zmiennej)
 ms.date: 02/28/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 6bb1c8f2b14c483cbd46ecb6534a33db020e23e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d20f377fc653e9c3cceb5c3e81b5e5e8a815bcad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114718"
 ---
 # <a name="zcauto-deduce-variable-type"></a>`/Zc:auto` (Wywnioskowanie typu zmiennej)
 
@@ -34,7 +35,7 @@ Kompilator emituje odpowiedni komunikat diagnostyczny, jeśli użycie **`auto`**
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Dodaj **`/Zc:auto`** lub **`/Zc:auto-`** do **opcji dodatkowe:** okienko.
 

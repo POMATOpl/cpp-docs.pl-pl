@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CTime'
 title: Klasa CTime
 ms.date: 10/18/2018
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: d551698a81921227dd0d7b7d80436bba960ed176
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3768423a4d3bf873e9161b846e21fda4beffdc9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166606"
 ---
 # <a name="ctime-class"></a>Klasa CTime
 
@@ -94,7 +95,7 @@ Klasa pomocnika, [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md),
 > [!NOTE]
 > Górny limit dat to 12/31/3000. Dolny limit to 1/1/1970 12:00:00 GMT.
 
-Aby uzyskać więcej informacji o używaniu programu `CTime` , zobacz artykuł [Data i godzina](../../atl-mfc-shared/date-and-time.md)i [Zarządzanie czasem](../../c-runtime-library/time-management.md) w dokumentacji wykonawczej biblioteki.
+Aby uzyskać więcej informacji o używaniu programu `CTime` , zobacz artykuł [Data i godzina](../../atl-mfc-shared/date-and-time.md)i [Zarządzanie czasem](../../c-runtime-library/time-management.md) w dokumentacji biblioteki Run-Time.
 
 > [!NOTE]
 > `CTime`Struktura zmieniła się z mfc 7,1 na MFC 8,0. W przypadku serializacji `CTime` struktury przy użyciu **operatora <<** w bibliotece MFC 8,0 lub nowszej wersji, otrzymany plik nie będzie można odczytać we wcześniejszych wersjach MFC.
@@ -397,7 +398,7 @@ Wskazuje bufor, który będzie otrzymywał dane czasu. Jeśli ten wskaźnik ma w
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do wypełnionej **struktury TM** , zgodnie z definicją w polu Uwzględnij plik. C. Zobacz [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) do układu struktury.
+Wskaźnik do wypełnionej **struktury TM** , zgodnie z definicją w polu Dołącz plik Time. H. Zobacz [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) do układu struktury.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -444,7 +445,7 @@ Wskazuje bufor, który będzie otrzymywał dane czasu. Jeśli ten wskaźnik ma w
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do wypełnionej **struktury TM** , zgodnie z definicją w polu Uwzględnij plik. C. Zobacz [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) do układu struktury.
+Wskaźnik do wypełnionej **struktury TM** , zgodnie z definicją w polu Dołącz plik Time. H. Zobacz [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) do układu struktury.
 
 ### <a name="remarks"></a>Uwagi
 
