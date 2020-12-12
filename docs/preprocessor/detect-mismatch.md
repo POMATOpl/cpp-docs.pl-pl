@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: detect_mismatch pragma'
 title: detect_mismatch, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 6e247b3f251bce47710a3380fb295597314a3bd8
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e57ffac731409fb14b61d35f780ee19094108655
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300739"
 ---
 # <a name="detect_mismatch-pragma"></a>detect_mismatch, pragma
 
@@ -21,7 +22,7 @@ Umieszcza rekord w obiekcie. Konsolidator sprawdza te rekordy pod kątem potencj
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma detect_mismatch (** "*name*" **,** "*Value*" **)**
+> **#pragma detect_mismatch (** "*Nazwa*" **,** "*wartość*" **)**
 
 ## <a name="remarks"></a>Uwagi
 
@@ -45,8 +46,8 @@ int main ()
 #pragma detect_mismatch("myLib_version", "1")
 ```
 
-Jeśli kompilujesz oba te pliki przy użyciu wiersza `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp`polecenia, zostanie wyświetlony komunikat o błędzie. `LNK2038`
+Jeśli kompilujesz oba te pliki przy użyciu wiersza polecenia `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp` , zostanie wyświetlony komunikat o błędzie `LNK2038` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

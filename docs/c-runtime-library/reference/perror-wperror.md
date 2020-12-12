@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pError, _wperror'
 title: perror, _wperror
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e63108ac90170d460ee8a2c86e1db773343c1911
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304691"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
@@ -86,8 +87,8 @@ W systemie operacyjnym Windows niektóre wartości **errno** wymienione w errno.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**pError**|\<stdio. h> lub \<STDLIB. h>|
-|**_wperror**|\<stdio. h> lub \<WCHAR. h>|
+|**pError**|\<stdio.h> lub \<stdlib.h>|
+|**_wperror**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -143,9 +144,9 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror, _strerror, _wcserror, \_ _wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

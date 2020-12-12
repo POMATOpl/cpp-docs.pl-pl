@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: longjmp'
 title: longjmp
 ms.date: 08/14/2018
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: 4f737818afe7136262362e4fe996745064568758
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfcbac2ea54e167f65f0d303e08d6450e53ff0e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299985"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -50,12 +51,12 @@ void longjmp(
 *kopert*<br/>
 Zmienna, w której jest przechowywane środowisko.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która ma zostać zwrócona do `setjmp` wywołania.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **longjmp** przywraca środowisko stosu i ustawienia regionalne wykonywania wcześniej zapisane w *ENV* przez `setjmp` . `setjmp`i **longjmp** zapewniają sposób wykonywania nielokalnego **`goto`** . zazwyczaj są one używane do przekazywania kontroli wykonywania do kodu obsługi błędów lub odzyskiwania w wcześniej wywołanej procedurze bez używania normalnych konwencji wywołania i powrotu.
+Funkcja **longjmp** przywraca środowisko stosu i ustawienia regionalne wykonywania wcześniej zapisane w *ENV* przez `setjmp` . `setjmp` i **longjmp** zapewniają sposób wykonywania nielokalnego **`goto`** . zazwyczaj są one używane do przekazywania kontroli wykonywania do kodu obsługi błędów lub odzyskiwania w wcześniej wywołanej procedurze bez używania normalnych konwencji wywołania i powrotu.
 
 Wywołanie `setjmp` powoduje, że bieżące środowisko stosu zostanie zapisane w *ENV*. Kolejne wywołanie **longjmp** przywraca zapisane środowisko i zwraca kontrolę do punktu bezpośrednio po odpowiednim `setjmp` wywołaniu. Wykonywanie jest wznawiane, gdy *wartość* została właśnie zwrócona przez `setjmp` wywołanie. Wartości wszystkich zmiennych (z wyjątkiem zmiennych rejestru), które są dostępne dla rutynowej kontroli, zawierają wartości, które miały po wywołaniu **longjmp** . Wartości zmiennych rejestru są nieprzewidywalne. Wartość zwracana przez program `setjmp` musi być różna od zera. Jeśli *wartość* jest przenoszona jako 0, wartość 1 jest zastępowana w rzeczywistym zwracaniu.
 
@@ -65,7 +66,7 @@ W programie Microsoft C++ Code w systemie Windows **longjmp** używa tej samej s
 
 Wywołaj **longjmp** tylko przed funkcją, która wywołuje metodę `setjmp` Returns; w przeciwnym razie wyniki są nieprzewidywalne.
 
-W przypadku korzystania z programu **longjmp**należy przestrzegać następujących ograniczeń:
+W przypadku korzystania z programu **longjmp** należy przestrzegać następujących ograniczeń:
 
 - Nie należy zakładać, że wartości zmiennych rejestru pozostaną takie same. Wartości zmiennych rejestru w wywołaniu procedury `setjmp` mogą nie zostać przywrócone do odpowiednich wartości po wykonaniu **longjmp** .
 
@@ -94,7 +95,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zapoznaj się z przykładem [_fpreset](fpreset.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [setjmp](setjmp.md)

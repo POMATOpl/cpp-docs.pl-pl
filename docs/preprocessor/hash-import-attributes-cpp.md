@@ -1,27 +1,28 @@
 ---
+description: 'Dowiedz się więcej na temat atrybutów #import (C++)'
 title: '#import, atrybuty (C++)'
 ms.date: 08/29/2019
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: fc2af69025d47a9ea6cea0e2c9e1423151b01606
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 87719ba549efab4e0acf13d7e957c6841900d5fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300456"
 ---
 # <a name="import-attributes-c"></a>Atrybuty #import (C++)
 
-Zawiera linki do atrybutów używanych w dyrektywie `#import`.
+Zawiera linki do atrybutów używanych z `#import` dyrektywą.
 
 **Specyficzne dla firmy Microsoft**
 
-Następujące atrybuty są dostępne dla dyrektywy `#import`.
+Następujące atrybuty są dostępne dla `#import` dyrektywy.
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|[auto_rename](../preprocessor/auto-rename.md)|Zmienia nazwy wyrazów C++ zarezerwowanych, dołączając dwa znaki podkreślenia (__) do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw.|
+|[auto_rename](../preprocessor/auto-rename.md)|Zmienia nazwy wyrazów zarezerwowanych w języku C++, dołączając dwa znaki podkreślenia (__) do nazwy zmiennej, aby rozwiązać potencjalne konflikty nazw.|
 |[auto_search](../preprocessor/auto-search.md)|Określa, że gdy do biblioteki typów odwołuje się #import i sama odwołuje się do innej biblioteki typów, kompilator może wykonać niejawną #import dla innej biblioteki typów.|
 |[embedded_idl](../preprocessor/embedded-idl.md)|Określa, że biblioteka typów jest zapisywana w pliku TLH z zachowaniem kodu generowanego przez atrybut.|
 |[klucza](../preprocessor/exclude-hash-import.md)|Wyklucza elementy z generowanych plików nagłówkowych biblioteki typów.|
@@ -30,7 +31,7 @@ Następujące atrybuty są dostępne dla dyrektywy `#import`.
 |[implementation_only](../preprocessor/implementation-only.md)|Pomija generowanie pliku nagłówkowego. tlh (podstawowy plik nagłówkowy).|
 |[include()](../preprocessor/include-parens.md)|Wyłącza automatyczne wykluczenie.|
 |[inject_statement](../preprocessor/inject-statement.md)|Wstawia swój argument jako tekst źródłowy do nagłówka biblioteki typów.|
-|[named_guids](../preprocessor/named-guids.md)|Instruuje kompilator, aby definiować i inicjować zmienne GUID w starym stylu, w formularzu `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`i `DIID_MyDispInterface`.|
+|[named_guids](../preprocessor/named-guids.md)|Instruuje kompilator, aby definiować i inicjować zmienne GUID w starym stylu, w postaci,, `LIBID_MyLib` `CLSID_MyCoClass` `IID_MyInterface` i `DIID_MyDispInterface` .|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Wyłącza automatyczne wykluczenie.|
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Zmienia sposób, w jaki kompilator generuje funkcje otoki dla dwóch metod interfejsu.|
 |[no_implementation](../preprocessor/no-implementation.md)|Pomija generowanie nagłówka. tli, który zawiera implementacje funkcji elementu członkowskiego otoki.|

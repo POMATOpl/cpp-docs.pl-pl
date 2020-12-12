@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _aligned_malloc'
 title: _aligned_malloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: 3caf2e8a3160c5533dfdb5bb387b373daf16b6e7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 39160835ec73593a030fbccd68b00afc7ec4a56c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303781"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -50,7 +51,7 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar żądanego przydziału pamięci.
 
 *struktury*<br/>
@@ -64,11 +65,11 @@ Wskaźnik do bloku pamięci, który został przydzielony lub ma wartość NULL, 
 
 **_aligned_malloc** jest oparty na [malloc](malloc.md).
 
-**_aligned_malloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że zwrócony wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
+**_aligned_malloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)` , co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że zwrócony wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
-Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać więcej informacji `errno`na temat, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_malloc** sprawdza poprawność jego parametrów. Jeśli *wyrównanie* *nie jest potęgą 2 lub ma* wartość zero, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość NULL i `errno` ustawia `EINVAL`jako.
+Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać więcej informacji na temat `errno` , zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_malloc** sprawdza poprawność jego parametrów. Jeśli *wyrównanie* *nie jest potęgą 2 lub ma* wartość zero, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość NULL i ustawia `errno` jako `EINVAL` .
 
-Użyj [_aligned_free](aligned-free.md) , aby cofnąć alokację pamięci **_aligned_malloc** uzyskaną `_aligned_offset_malloc`przez oba _aligned_malloc i. Nie używaj `free`, która nie odzyska prawidłowo wyrównanej pamięci i może prowadzić do wypróbowania błędów.
+Użyj [_aligned_free](aligned-free.md) , aby cofnąć alokację pamięci uzyskaną przez oba **_aligned_malloc** i `_aligned_offset_malloc` . Nie używaj `free` , która nie odzyska prawidłowo wyrównanej pamięci i może prowadzić do wypróbowania błędów.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -76,7 +77,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_aligned_malloc**|\<malloc. h>|
+|**_aligned_malloc**|\<malloc.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -160,6 +161,6 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 This pointer, 3280891, is offset by 5 on alignment of 16
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wyrównywanie danych](../../c-runtime-library/data-alignment.md)
+[Wyrównanie danych](../../c-runtime-library/data-alignment.md)

@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat typów całkowitych o rozmiarze C
 title: Typy liczb całkowitych o rozmiarze C
 ms.date: 07/22/2020
 helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
-ms.openlocfilehash: 7f785efb2fc93d2ec57783dd20a43642c87e4a4c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ad50806f52638884da69e109da252379dea0d571
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300128"
 ---
 # <a name="c-sized-integer-types"></a>Typy liczb całkowitych o rozmiarze C
 
@@ -28,6 +29,6 @@ Pierwsze trzy typy liczb całkowitych są synonimami dla typów ANSI, które maj
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

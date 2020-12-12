@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat operatorów mnożenia języka C
 title: Operatory mnożenia języka C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61689435c5e76238feba26d5a49ffe3530798f88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300271"
 ---
 # <a name="c-multiplicative-operators"></a>Operatory mnożenia języka C
 
@@ -24,7 +25,7 @@ Operatory mnożenia wykonują operacje mnożenia ( <strong>\*</strong> ), dziele
 
 ## <a name="syntax"></a>Składnia
 
-*mnożenia-Expression*: &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *mnożenia-* Expression <strong>\*</strong> *Cast-* Expression &nbsp; &nbsp; &nbsp; &nbsp; *mnożenia-* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **%** *cast-expression* Expression cast-expression mnożenia-Expression cast expression
+*mnożenia-Expression*: &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *mnożenia-* Expression <strong>\*</strong> *Cast-* Expression &nbsp; &nbsp; &nbsp; &nbsp; *mnożenia-* **/**  &nbsp; &nbsp; &nbsp; &nbsp;  **%**  Expression cast-expression mnożenia-Expression cast expression
 
 Operandy operatora pozostałej części ( **%** ) muszą być typu całkowitego. Operatory mnożenia ( <strong>\*</strong> ) i dzielenia ( **/** ) mogą przyjmować operandy typu całkowitego lub zmiennoprzecinkowego; Typy operandów mogą być różne.
 
@@ -89,6 +90,6 @@ W każdym przypadku `50` i `2` mają ten sam znak.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory mnożenia i operator modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pragma składnika'
 title: component, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 73b308fdc426be9b403b808d4e638b4f5c1e9149
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2eeb70701c490e0f797dfbd6da7ac11030283073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300804"
 ---
 # <a name="component-pragma"></a>component, pragma
 
@@ -84,6 +85,6 @@ LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subs
 
 Aby uzyskać więcej informacji, zobacz opcję kompilatora [/GM (Włącz minimalną](../build/reference/gm-enable-minimal-rebuild.md)  ponowną kompilację).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

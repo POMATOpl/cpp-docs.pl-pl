@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: FOPEN_MAX, _SYS_OPEN'
 title: FOPEN_MAX, _SYS_OPEN
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - maximum number of files
 - open files, maximum
 ms.assetid: 39cf5196-250a-459d-ae90-ce3d99f79039
-ms.openlocfilehash: 8014cf19ebd1c61a077812e2938b3093ce040435
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3d71c221964450e172e7dcade731653d7f69e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303942"
 ---
-# <a name="fopenmax-sysopen"></a>FOPEN_MAX, _SYS_OPEN
+# <a name="fopen_max-_sys_open"></a>FOPEN_MAX, _SYS_OPEN
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,8 +30,8 @@ ms.locfileid: "62289588"
 
 ## <a name="remarks"></a>Uwagi
 
-Jest to maksymalna liczba plików, które można otwierać jednocześnie. `FOPEN_MAX` jest to nazwa zgodne z ANSI. `_SYS_OPEN` zapewnia zgodność z istniejącym kodem.
+Jest to maksymalna liczba plików, które mogą być otwierane jednocześnie. `FOPEN_MAX` jest nazwą zgodną ze standardem ANSI. `_SYS_OPEN` zapewnia zgodność z istniejącym kodem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe globalne](../c-runtime-library/global-constants.md)

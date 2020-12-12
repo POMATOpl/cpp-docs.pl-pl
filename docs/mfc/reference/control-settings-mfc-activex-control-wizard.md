@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ustawienia kontrolki, Kreator kontrolek ActiveX MFC'
 title: Ustawienia kontrolki, kreator kontrolek ActiveX MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 1578ca7f4134e51e0ba0d3c2b247dcafcb0fbd67
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31e8c5fd257128e17017d3d0fa801fc812f99397
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301597"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Ustawienia kontrolki, kreator kontrolek ActiveX MFC
 
@@ -23,7 +24,7 @@ Aby uzyskać więcej informacji na temat wybierania opcji na tej stronie w celu 
 
 - **Utwórz kontrolkę opartą na**
 
-   Na tej liście można wybrać rodzaj kontrolki, z której formant powinien dziedziczyć. Lista jest podzbiorem klas formantów, które są dostępne dla `CreateWindowEx` i dodatkowych wspólnych formantów, które są określone w CommCtrl. h. Wybór określa styl kontrolki w `PreCreateWindow` funkcji w pliku *projy*Ctrl. cpp. Aby uzyskać więcej informacji, zobacz kontrolki [ActiveX MFC: podklasy kontrolki systemu Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+   Na tej liście można wybrać rodzaj kontrolki, z której formant powinien dziedziczyć. Lista jest podzbiorem klas formantów, które są dostępne dla `CreateWindowEx` i dodatkowych wspólnych formantów, które są określone w CommCtrl. h. Wybór określa styl kontrolki w `PreCreateWindow` funkcji w pliku *projy* Ctrl. cpp. Aby uzyskać więcej informacji, zobacz kontrolki [ActiveX MFC: podklasy kontrolki systemu Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
    |Kontrola|Opis|
    |-------------|-----------------|
@@ -59,7 +60,7 @@ Aby uzyskać więcej informacji na temat wybierania opcji na tej stronie w celu 
    > [!NOTE]
    > Sposób, w jaki użytkownik uzyskuje dostęp do pomocy dla formantu, zależy od tego, w jaki sposób została zaimplementowana pomoc, oraz od tego, czy została zintegrowana pomoc dotycząca tego kontenera.
 
-   Po wybraniu tej opcji wstawia ona `AboutBox` metodę kontrolki w klasie formantów projektu (C*Projname*Ctrl. cpp) i dodaje AboutBox do mapy wysyłania projektu. Ta opcja jest wybrana domyślnie.
+   Po wybraniu tej opcji wstawia ona `AboutBox` metodę kontrolki w klasie formantów projektu (C *Projname* Ctrl. cpp) i dodaje AboutBox do mapy wysyłania projektu. Ta opcja jest wybrana domyślnie.
 
 - **Zoptymalizowany kod rysowania**
 
@@ -71,11 +72,11 @@ Aby uzyskać więcej informacji na temat wybierania opcji na tej stronie w celu 
 
 - **Kontekst urządzenia nieprzycinanego**
 
-   Przesłania [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) w nagłówku kontrolki (*Projname*Ctrl. h), aby wyłączyć wywołanie `IntersectClipRect` wykonane przez `COleControl` . Po wybraniu tej opcji zapewnia ona małą korzyść. W przypadku wybrania opcji **Aktywacja bez okien**ta funkcja jest niedostępna. Aby uzyskać więcej informacji, zobacz [Używanie nieprzycinanego kontekstu urządzenia](../../mfc/using-an-unclipped-device-context.md).
+   Przesłania [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) w nagłówku kontrolki (*Projname* Ctrl. h), aby wyłączyć wywołanie `IntersectClipRect` wykonane przez `COleControl` . Po wybraniu tej opcji zapewnia ona małą korzyść. W przypadku wybrania opcji **Aktywacja bez okien** ta funkcja jest niedostępna. Aby uzyskać więcej informacji, zobacz [Używanie nieprzycinanego kontekstu urządzenia](../../mfc/using-an-unclipped-device-context.md).
 
 - **Aktywacja bez migotania**
 
-   Eliminuje operacje rysowania i towarzyszące Migotanie wizualne występujące między aktywnym i nieaktywnym stanem formantu. W przypadku wybrania opcji **Aktywacja bez okien**ta funkcja jest niedostępna. Po ustawieniu tej opcji `noFlickerActivate` flaga jest jedną z flag, które są zwracane przez [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Aby uzyskać więcej informacji, zobacz [zapewnianie aktywacji bez migotania](../../mfc/providing-flicker-free-activation.md).
+   Eliminuje operacje rysowania i towarzyszące Migotanie wizualne występujące między aktywnym i nieaktywnym stanem formantu. W przypadku wybrania opcji **Aktywacja bez okien** ta funkcja jest niedostępna. Po ustawieniu tej opcji `noFlickerActivate` flaga jest jedną z flag, które są zwracane przez [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Aby uzyskać więcej informacji, zobacz [zapewnianie aktywacji Flicker-Free](../../mfc/providing-flicker-free-activation.md).
 
 - **Dostępne w oknie dialogowym Wstaw obiekt**
 
@@ -96,5 +97,5 @@ Aby uzyskać więcej informacji na temat wybierania opcji na tej stronie w celu 
 ## <a name="see-also"></a>Zobacz też
 
 [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Ustawienia aplikacji, kreator kontrolek ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
-[Nazwy kontrolek, kreator kontrolek ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+[Ustawienia aplikacji, Kreator kontrolek ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
+[Nazwy kontrolek, Kreator kontrolek ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)

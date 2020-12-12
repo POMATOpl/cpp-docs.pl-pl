@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: setvbuf —'
 title: setvbuf
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8010bdea7a2542e8797ea8c352d9221cdb4cc0b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303495"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -61,22 +62,22 @@ Bufor przydzielony przez użytkownika.
 *wyst*<br/>
 Tryb buforowania.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar buforu w bajtach. Dozwolony zakres: 2 <= *rozmiar* <= INT_MAX (2147483647). Wewnętrznie wartość podana dla *rozmiaru* jest zaokrąglana w dół do najbliższej wielokrotności 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość 0, jeśli powodzenie.
 
-Jeśli *strumień* ma **wartość null**lub jeśli *tryb* lub *rozmiar* nie znajduje się w prawidłowej zmianie, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
+Jeśli *strumień* ma **wartość null** lub jeśli *tryb* lub *rozmiar* nie znajduje się w prawidłowej zmianie, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
 Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **setvbuf —** pozwala programowi kontrolować zarówno buforowanie, jak i rozmiar buforu dla *strumienia*. *strumień* musi odwoływać się do otwartego pliku, który nie został poddany operacji we/wy, ponieważ został otwarty. Tablica wskazywana przez *bufor* jest używana jako bufor, chyba że ma **wartość null**, w takim przypadku **setvbuf —** używa automatycznie przydzielonego buforu *o długości lub*2 \* 2 bajtów.
+Funkcja **setvbuf —** pozwala programowi kontrolować zarówno buforowanie, jak i rozmiar buforu dla *strumienia*. *strumień* musi odwoływać się do otwartego pliku, który nie został poddany operacji we/wy, ponieważ został otwarty. Tablica wskazywana przez *bufor* jest używana jako bufor, chyba że ma **wartość null**, w takim przypadku **setvbuf —** używa automatycznie przydzielonego buforu *o długości lub* 2 \* 2 bajtów.
 
-Tryb musi być **_IOFBF**, **_IOLBF**lub **_IONBF**. Jeśli *tryb* jest **_IOFBF** lub **_IOLBF**, *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* jest **_IONBF**, strumień jest odbuforowany, a *rozmiar* i *bufor* zostaną zignorowane. Wartości *trybu* i ich znaczenia są następujące:
+Tryb musi być **_IOFBF**, **_IOLBF** lub **_IONBF**. Jeśli *tryb* jest **_IOFBF** lub **_IOLBF**, *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* jest **_IONBF**, strumień jest odbuforowany, a *rozmiar* i *bufor* zostaną zignorowane. Wartości *trybu* i ich znaczenia są następujące:
 
 |wartość *trybu*|Znaczenie|
 |-|-|
@@ -90,7 +91,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**setvbuf**|\<stdio. h>|
+|**setvbuf**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -135,7 +136,7 @@ int main( void )
 'stream2' now has no buffer
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

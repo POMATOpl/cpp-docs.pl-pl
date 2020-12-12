@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _lsearch_s'
 title: _lsearch_s
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: d8c421eb3c7a6a617ce073cbf5f36416294c1874
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdc3d8011dac00cd8d19fe414c2ae1aa78120eee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299959"
 ---
 # <a name="_lsearch_s"></a>_lsearch_s
 
@@ -68,7 +69,7 @@ Wskaźnik na podstawę tablicy do przeszukania.
 *Liczba*<br/>
 Liczba elementów.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar każdego elementu tablicy w bajtach.
 
 *porównaniu*<br/>
@@ -85,18 +86,18 @@ Jeśli do funkcji są przenoszone nieprawidłowe parametry, procedura obsługi n
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*głównych*|*base*|*porównaniu*|*Liczba*|*size*|**errno**|
+|*głównych*|*base*|*porównaniu*|*Liczba*|*zmienia*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**NULL**|ile|ile|ile|ile|**EINVAL**|
-|ile|**NULL**|ile|! = 0|ile|**EINVAL**|
-|ile|ile|ile|ile|zero|**EINVAL**|
-|ile|ile|**NULL**|an|ile|**EINVAL**|
+|**NULL**|dowolny|dowolny|dowolny|dowolny|**EINVAL**|
+|dowolny|**NULL**|dowolny|! = 0|dowolny|**EINVAL**|
+|dowolny|dowolny|dowolny|dowolny|zero|**EINVAL**|
+|dowolny|dowolny|**NULL**|an|dowolny|**EINVAL**|
 
 ## <a name="remarks"></a>Uwagi
 
 Funkcja **_lsearch_s** wykonuje wyszukiwanie liniowe dla *klucza* wartości w tablicy elementów *liczbowych* , każda z bajtów o *szerokości* . W przeciwieństwie do **bsearch_s**, **_lsearch_s** nie wymaga sortowania tablicy. Jeśli nie odnaleziono *klucza* , **_lsearch_s** dodaje go na końcu tablicy i zwiększa *liczbę*.
 
-Funkcja *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację. Funkcja *Compare* pobiera również wskaźnik do kontekstu jako pierwszy argument. **_lsearch_s** wywołania _lsearch_s *porównują* jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy dla każdego wywołania. *porównanie* musi porównać elementy, a następnie zwracać wartość różną od zera (co oznacza, że elementy są różne) lub 0 (oznacza to, że elementy są identyczne).
+Funkcja *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość określającą ich relację. Funkcja *Compare* pobiera również wskaźnik do kontekstu jako pierwszy argument.  wywołania _lsearch_s *porównują* jeden lub więcej razy podczas wyszukiwania, przekazując wskaźniki do dwóch elementów tablicy dla każdego wywołania. *porównanie* musi porównać elementy, a następnie zwracać wartość różną od zera (co oznacza, że elementy są różne) lub 0 (oznacza to, że elementy są identyczne).
 
 Wskaźnik *kontekstu* może być przydatny, jeśli przeszukiwana struktura danych jest częścią obiektu, a funkcja *porównywania* musi uzyskać dostęp do elementów członkowskich obiektu. Na przykład kod w funkcji *Compare* może rzutować wskaźnik void na odpowiedni typ obiektu i uzyskać dostęp do elementów członkowskich tego obiektu. Dodanie wskaźnika *kontekstu* ułatwia **_lsearch_s** bezpieczniejsze, ponieważ można użyć dodatkowego kontekstu, aby uniknąć współużytkowania wątkowości błędów skojarzonych z użyciem zmiennych statycznych w celu udostępnienia danych funkcji *Compare* .
 
@@ -106,7 +107,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lsearch_s**|\<Wyszukaj. h>|
+|**_lsearch_s**|\<search.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

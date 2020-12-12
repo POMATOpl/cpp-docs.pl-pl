@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o błędzie środowiska uruchomieniowego C R6028
 title: Błąd czasu wykonania języka C R6028
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6028
 ms.assetid: 81e99079-4388-4244-a4f7-4641c508871c
-ms.openlocfilehash: 1c165b7c9351e34ef6316962cd90663f2b6152ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f4b634814331a7301fccef77be31034afc77084a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301779"
 ---
 # <a name="c-runtime-error-r6028"></a>Błąd czasu wykonania języka C R6028
 
@@ -30,6 +31,6 @@ nie można zainicjować sterty
 
 **Informacje dla programistów**
 
-Ten błąd występuje, gdy system operacyjny nie może utworzyć puli pamięci dla aplikacji. W przypadku środowiska uruchomieniowego języka C (CRT) o nazwie `HeapCreate`funkcji Win32, która zwróciła błąd wskazujący wartość NULL.
+Ten błąd występuje, gdy system operacyjny nie może utworzyć puli pamięci dla aplikacji. W przypadku środowiska uruchomieniowego języka C (CRT) nazywanego funkcją Win32 `HeapCreate` , która zwróciła błąd wskazujący wartość null.
 
 Jeśli ten błąd występuje podczas uruchamiania aplikacji, system może nie być w stanie spełnić żądań sterty, ponieważ ładowane są uszkodzone sterowniki. Sprawdź witrynę Windows Update lub witrynę dostawcy sprzętu, aby uzyskać zaktualizowane sterowniki.

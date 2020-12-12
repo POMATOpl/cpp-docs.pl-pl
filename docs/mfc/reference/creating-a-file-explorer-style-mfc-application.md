@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Tworzenie pliku Explorer-Style aplikacji MFC'
 title: Tworzenie aplikacji MFC w stylu eksploratora plików
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,49 +9,49 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-ms.openlocfilehash: 16969b7ef9c0447dfce971af8d329c5b93367041
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9419aae58cf34ec70585b952360cb12702424381
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301324"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu eksploratora plików
 
-Wiele aplikacji systemu Windows przy użyciu interfejsu użytkownika (UI) dla Eksploratora plików. Po uruchomieniu Eksploratora plików, na przykład, zobaczysz aplikacji za pomocą rozdzielacz pionowy pasek podziału obszaru klienta. Po lewej stronie obszaru klienckiego zapewnia nawigacji i funkcji przeglądania, a po prawej stronie obszaru klienta zawiera szczegóły dotyczące wyboru w okienku po lewej stronie. Gdy użytkownik kliknie element w okienku po lewej stronie, aplikacja repopulates w okienku po prawej stronie. W aplikacji MDI, można użyć poleceń na **widoku** menu, aby zmienić liczbę szczegółów wyświetlane w okienku po prawej stronie. (W SDI lub wiele dokumentów najwyższego poziomu aplikacji, można zmienić szczegóły, korzystając z przycisków paska narzędzi.)
+Wiele aplikacji systemu Windows korzysta z interfejsu użytkownika (UI) dla Eksploratora plików. Po uruchomieniu Eksploratora plików, na przykład, zobaczysz aplikację z pionowym paskiem podziału dzielącym obszar klienta. Po lewej stronie obszaru klienta dostępne są funkcje nawigacji i przeglądania, a po prawej stronie obszaru klienta wyświetlane są szczegółowe informacje dotyczące wyboru w lewym okienku. Gdy użytkownik kliknie element w okienku po lewej stronie, aplikacja ponownie wypełni odpowiednie okienko. W aplikacji MDI można użyć poleceń z menu **Widok** , aby zmienić ilość szczegółów wyświetlanych w okienku po prawej stronie. (W pliku SDI lub wielu aplikacjach najwyższego poziomu można zmienić szczegóły, korzystając tylko z przycisków paska narzędzi).
 
-Zawartość okienka zależą od aplikacji. W przeglądarce systemu plików okienka po lewej stronie wyświetla hierarchiczny widok katalogów lub komputery lub grupy maszyn, podczas gdy w okienku po prawej stronie wyświetla foldery, pojedyncze pliki, lub maszyn i szczegółowe informacje o nich. Zawartość nie muszą być jako plików. Może być wiadomości e-mail, raportów o błędach lub innych elementów w bazie danych.
+Zawartość okienek jest zależna od aplikacji. W przeglądarce systemu plików w okienku po lewej stronie jest wyświetlany hierarchiczny widok katalogów lub maszyn lub grup maszyn, podczas gdy w okienku po prawej stronie są wyświetlane foldery, pojedyncze pliki lub maszyny i szczegółowe informacje o nich. Zawartość nie musi być plików. Mogą one być wiadomościami e-mail, raportami o błędach lub innymi elementami w bazie danych.
 
 Kreator tworzy następujące klasy:
 
-- `CLeftView` Klasa definiuje okienka po lewej stronie obszaru klienta. Zawsze jest pochodną [CTreeView](../../mfc/reference/ctreeview-class.md).
+- `CLeftView`Klasa definiuje lewe okienko w obszarze klienta. Jest on zawsze wyprowadzany z [CTreeView](../../mfc/reference/ctreeview-class.md).
 
-- C*ProjName*widoku klasy definiuje w okienku po prawej stronie obszaru klienta. Domyślnie jest on tworzony na podstawie [CListView](../../mfc/reference/clistview-class.md) , ale może być inny rodzaj widoku, w zależności od klasy, wystarczy podać z **klasy bazowej** listy w [wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) strony Kreator.
+- Kategoria widoku C *Projname* definiuje odpowiednie okienko w obszarze klienta. Domyślnie jest on tworzony z [CListView](../../mfc/reference/clistview-class.md) , ale może być innym typem widoku w zależności od klasy określonej przez użytkownika z listy **klas podstawowych** na stronie [wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) kreatora.
 
-Wygenerowanej aplikacji może mieć interfejsu pojedynczego dokumentu (SDI), mechanizm interfejsu wielu dokumentów (MDI) lub wielu architektura dokumentów najwyższego poziomu. Każde okno ramki, aplikacja tworzy w pionie dzieli się przy użyciu [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md). Kodowanie ten typ aplikacji jest podobny do kodowania normalne aplikacji MFC, która używa podziału, z tą różnicą, że ten typ aplikacji ma widoków oddzielnej kontrolce w każde okienko rozdzielacza.
+Wygenerowana aplikacja może mieć interfejs pojedynczego dokumentu (SDI), interfejs wielu dokumentów (MDI) lub wiele dokumentów najwyższego poziomu. Każde okno ramki tworzone przez aplikację jest podzielone pionowo przy użyciu [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md). Kodowanie tego typu aplikacji jest podobne do kodowania normalnej aplikacji MFC, która używa rozdzielacza, z tą różnicą, że ten typ aplikacji ma oddzielne widoki kontroli w poszczególnych okienkach rozdzielacza.
 
-Jeśli używasz domyślny widok listy w okienku po prawej stronie, Kreator tworzy dodatkowym menu niezwykle szerokie możliwości (tylko aplikacje MDI) i przycisków paska narzędzi, aby przełączyć stylu widoku duże ikony, małe ikony, listy i szczegółów tryby.
+Jeśli w okienku po prawej stronie jest używany domyślny widok listy, Kreator tworzy dodatkowe opcje menu (tylko w aplikacjach MDI) i przyciski paska narzędzi, aby przełączać styl widoku między dużymi ikonami, małymi ikonami, listą i trybami szczegółów.
 
 ### <a name="to-begin-creating-a-file-explorer-style-mfc-executable"></a>Aby rozpocząć tworzenie pliku wykonywalnego MFC w stylu Eksploratora plików
 
-1. Postępuj zgodnie z instrukcjami [tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md).
+1. Postępuj zgodnie z instrukcjami w temacie [Tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md).
 
-1. W Kreatorze aplikacji MFC [typ aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) wybierz opcję **Eksploratora plików** projektu stylu.
+1. Na stronie [Typ aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) Kreator aplikacji MFC wybierz styl projektu **Eksploratora plików** .
 
-1. Ustaw inne opcje, które chcesz na pozostałych stronach kreatora.
+1. Ustaw dowolne inne opcje na innych stronach kreatora.
 
-1. Kliknij przycisk **Zakończ** do zostanie wygenerowany szkielet aplikacji.
+1. Kliknij przycisk **Zakończ** , aby wygenerować aplikację szkieletową.
 
 Aby uzyskać więcej informacji, zobacz:
 
 - [Wiele typów dokumentów, widoków i okien ramowych](../../mfc/multiple-document-types-views-and-frame-windows.md)
 
-- [Pochodne klasy widoków](../../mfc/derived-view-classes-available-in-mfc.md)
+- [Klasy widoków pochodnych](../../mfc/derived-view-classes-available-in-mfc.md)
 
-- [Opcje do wyboru przy projektowaniu aplikacji](../../mfc/application-design-choices.md)
+- [Wybór projektu aplikacji](../../mfc/application-design-choices.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Tworzenie aplikacji MFC w stylu przeglądarki internetowej](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)<br/>
-[Tworzenie aplikacji MFC opartej na formularzach](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+[Tworzenie aplikacji sieci Web Browser-Style MFC](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)<br/>
+[Tworzenie Forms-Based aplikacji MFC](../../mfc/reference/creating-a-forms-based-mfc-application.md)

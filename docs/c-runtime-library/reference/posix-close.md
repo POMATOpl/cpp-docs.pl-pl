@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Zamknij'
 title: close
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - close function
 ms.assetid: c79689f4-9c86-4a4a-a256-d22e3498f55d
-ms.openlocfilehash: 1d3c02e3e2e015d0560b9ca70243f35c9f4a0888
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 3b9ad6716616dd50be50e106499b1e8d96ab4760
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304626"
 ---
 # <a name="close"></a>close
 

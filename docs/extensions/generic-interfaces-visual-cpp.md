@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o interfejsach ogólnych (C++/CLI)
 title: Interfejsy ogólne (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 7ba7cec76d23262977180a050326a0c5cf2966e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301701"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfejsy ogólne (C++/CLI)
 

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Visual C++ co&#39;s nowe 2003 do 2015'
 title: Visual C++ co&#39;s nowe 2003 do 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: eb76e5455f053717859d0ac571b9d1110d11c33b
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: ea126f3138ae437c3338e695fcebdf1cde037a50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301116"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowe 2003 do 2015
 
@@ -588,7 +589,7 @@ Chociaż różnice te mogą mieć wpływ na kod źródłowy lub inne artefakty k
 
    Ponadto mimo że kompilator nie daje określonej diagnostyki, wbudowany operator new jest traktowany jako źle sformułowany.
 
-- **Wywoływanie "operator *Type*()" (konwersja zdefiniowana przez użytkownika) dla typów nieklasowych**  , które mogą być wywoływane w poprzednich wersjach kompilatora " *Typ*operatora ()", aby można było wywołać dla typów niebędących klasami, podczas ich dyskretnego ignorowania. To stare zachowanie spowodowało ryzyko pominięcia nieprawidłowego generowania kodu, co skutkuje nieprzewidywalnym zachowaniem środowiska uruchomieniowego. Kompilator nie akceptuje już kodu pisanego w ten sposób i wystawia C2228 błąd kompilatora.
+- **Wywoływanie "operator *Type*()" (konwersja zdefiniowana przez użytkownika) dla typów nieklasowych**  , które mogą być wywoływane w poprzednich wersjach kompilatora " *Typ* operatora ()", aby można było wywołać dla typów niebędących klasami, podczas ich dyskretnego ignorowania. To stare zachowanie spowodowało ryzyko pominięcia nieprawidłowego generowania kodu, co skutkuje nieprzewidywalnym zachowaniem środowiska uruchomieniowego. Kompilator nie akceptuje już kodu pisanego w ten sposób i wystawia C2228 błąd kompilatora.
 
    ```Output
     error C2228: left of '.operator type' must have class/struct/union
@@ -1759,7 +1760,7 @@ Oto kilka innych ulepszeń analizy kodu:
 
 #### <a name="updated-unit-test-framework"></a>Zaktualizowana struktura testów jednostkowych
 
-Użyj nowej struktury testów jednostkowych języka C++ w programie Visual Studio, aby napisać testy jednostkowe języka C++. Dodaj nowy projekt testu jednostkowego do istniejącego rozwiązania C++, lokalizując szablon projektu test jednostkowy języka C++ w kategorii Visual C++ w oknie dialogowym Nowy projekt. Zacznij pisać testy jednostkowe w wygenerowanej TEST_METHOD kodzie zastępczym w pliku UnitTest1. cpp. Po napisaniu kodu testowego Skompiluj rozwiązanie. Gdy chcesz uruchomić testy, Otwórz okno **Eksplorator testów jednostkowych** , wybierając opcję **Wyświetl**  >  **inny**  >  **Eksplorator testów jednostkowych**systemu Windows, a następnie w menu skrótów dla przypadku testowego, wybierz **Uruchom wybrany test**. Po zakończeniu przebiegu testu można wyświetlić wyniki testów i dodatkowe informacje o śledzeniu stosu w tym samym oknie.
+Użyj nowej struktury testów jednostkowych języka C++ w programie Visual Studio, aby napisać testy jednostkowe języka C++. Dodaj nowy projekt testu jednostkowego do istniejącego rozwiązania C++, lokalizując szablon projektu test jednostkowy języka C++ w kategorii Visual C++ w oknie dialogowym Nowy projekt. Zacznij pisać testy jednostkowe w wygenerowanej TEST_METHOD kodzie zastępczym w pliku UnitTest1. cpp. Po napisaniu kodu testowego Skompiluj rozwiązanie. Gdy chcesz uruchomić testy, Otwórz okno **Eksplorator testów jednostkowych** , wybierając opcję **Wyświetl**  >  **inny**  >  **Eksplorator testów jednostkowych** systemu Windows, a następnie w menu skrótów dla przypadku testowego, wybierz **Uruchom wybrany test**. Po zakończeniu przebiegu testu można wyświetlić wyniki testów i dodatkowe informacje o śledzeniu stosu w tym samym oknie.
 
 #### <a name="architecture-dependency-graphs"></a>Wykresy zależności architektury
 
@@ -1767,11 +1768,11 @@ Aby lepiej zrozumieć kod, można teraz generować wykresy zależności dla plik
 
 #### <a name="architecture-explorer"></a>Eksplorator architektury
 
-Korzystając z **Eksploratora architektury**, można eksplorować zasoby w rozwiązaniu lub projektach języka C++. Na pasku menu wybierz **Architektura**  >  **Windows**  >  **Eksplorator architektury**systemu Windows. Możesz wybrać interesujący Cię węzeł, na przykład **Widok klasy**. W takim przypadku po prawej stronie okna narzędzia zostanie rozwinięta lista przestrzeni nazw. W przypadku wybrania przestrzeni nazw w nowej kolumnie zostanie wyświetlona lista klas, struktur i typów wyliczeniowych w tej przestrzeni nazw. Możesz kontynuować Eksplorowanie tych zasobów lub wrócić do kolumny po lewej stronie, aby rozpocząć kolejne zapytanie. Zobacz sekcję **Znajdowanie kodu przy użyciu Eksploratora architektury**.
+Korzystając z **Eksploratora architektury**, można eksplorować zasoby w rozwiązaniu lub projektach języka C++. Na pasku menu wybierz **Architektura**  >    >  **Eksplorator architektury** systemu Windows. Możesz wybrać interesujący Cię węzeł, na przykład **Widok klasy**. W takim przypadku po prawej stronie okna narzędzia zostanie rozwinięta lista przestrzeni nazw. W przypadku wybrania przestrzeni nazw w nowej kolumnie zostanie wyświetlona lista klas, struktur i typów wyliczeniowych w tej przestrzeni nazw. Możesz kontynuować Eksplorowanie tych zasobów lub wrócić do kolumny po lewej stronie, aby rozpocząć kolejne zapytanie. Zobacz sekcję **Znajdowanie kodu przy użyciu Eksploratora architektury**.
 
 #### <a name="code-coverage"></a>Pokrycie kodu
 
-Pokrycie kodu zostało zaktualizowane do dynamicznego oprzyrządowania plików binarnych w czasie wykonywania. Zmniejsza to obciążenie związane z konfiguracją i zapewnia lepszą wydajność. Możesz również zbierać dane pokrycia kodu z testów jednostkowych dla aplikacji C++. Po utworzeniu testów jednostkowych języka C++ można użyć **Eksploratora testów jednostkowych** , aby odnaleźć testy w rozwiązaniu. Aby uruchomić testy jednostkowe i zebrać dla nich dane pokrycia kodu, w **Eksploratorze testów jednostkowych**wybierz pozycję **Analizuj pokrycie kodu**. Wyniki pokrycia kodu można sprawdzić w oknie **wyników pokrycia kodu** — na pasku menu wybierz kolejno pozycje **Testuj**  >  **Windows**  >  **wyniki pokrycia kodu**systemu Windows.
+Pokrycie kodu zostało zaktualizowane do dynamicznego oprzyrządowania plików binarnych w czasie wykonywania. Zmniejsza to obciążenie związane z konfiguracją i zapewnia lepszą wydajność. Możesz również zbierać dane pokrycia kodu z testów jednostkowych dla aplikacji C++. Po utworzeniu testów jednostkowych języka C++ można użyć **Eksploratora testów jednostkowych** , aby odnaleźć testy w rozwiązaniu. Aby uruchomić testy jednostkowe i zebrać dla nich dane pokrycia kodu, w **Eksploratorze testów jednostkowych** wybierz pozycję **Analizuj pokrycie kodu**. Wyniki pokrycia kodu można sprawdzić w oknie **wyników pokrycia kodu** — na pasku menu wybierz kolejno pozycje **Testuj**  >    >  **wyniki pokrycia kodu** systemu Windows.
 
 ## <a name="whats-new-for-c-in-visual-studio-2010"></a>Co nowego w języku C++ w programie Visual Studio 2010
 
@@ -1793,7 +1794,7 @@ Słowo kluczowe **__nullptr** specyficzne dla firmy Microsoft ma takie samo znac
 **`/Zc:trigraphs` Opcja kompilatora.** Domyślnie obsługa trigraphs jest wyłączona. Użyj **`/Zc:trigraphs`** opcji kompilatora, aby włączyć obsługę trigraphs.
 Trójznaków składa się z dwóch następujących po sobie znaków zapytania (??), po których następuje unikatowy trzeci znak. Kompilator zastępuje trójznaków z odpowiadającym znakiem interpunkcji. Na przykład kompilator zastępuje? = trójznaków ze znakiem # (Number). Użyj trigraphs w plikach źródłowych języka C, które używają zestawu znaków, który nie zawiera niektórych znaków interpunkcyjnych.
 
-**Nowa opcja optymalizacji z przewodnikiem.** PogoSafeMode to nowa opcja optymalizacji z przewodnikiem, która pozwala określić, czy podczas optymalizowania aplikacji używać trybu awaryjnego czy szybkiego. Tryb bezpieczny jest bezpieczny dla wątków, ale jest wolniejszy niż tryb szybki. Tryb szybki jest zachowaniem domyślnym.
+**Nowa opcja optymalizacji Profile-Guided.** PogoSafeMode to nowa opcja optymalizacji z przewodnikiem, która pozwala określić, czy podczas optymalizowania aplikacji używać trybu awaryjnego czy szybkiego. Tryb bezpieczny jest bezpieczny dla wątków, ale jest wolniejszy niż tryb szybki. Tryb szybki jest zachowaniem domyślnym.
 
 **Nowa opcja środowiska uruchomieniowego języka wspólnego (CLR)/CLR: nostdlib.** Dodano nową opcję `/clr` (Kompilacja środowiska uruchomieniowego języka wspólnego). Jeśli są uwzględniane różne wersje tych samych bibliotek, zostanie wystawiony błąd kompilacji. Nowa opcja umożliwia wykluczenie domyślnych bibliotek CLR, aby program mógł użyć określonej wersji.
 
@@ -1850,7 +1851,7 @@ Do biblioteki ATL dodano nowe makra, które rozszerzają funkcjonalność PROP_E
 
 #### <a name="analyze-warnings"></a>/analyze ostrzeżenia
 
-Większość **`/analyze`** ostrzeżeń (analiza kodu przedsiębiorstwa) została usunięta z bibliotek środowiska uruchomieniowego C (CRT), MFC i ATL.
+Większość **`/analyze`** ostrzeżeń (analiza kodu przedsiębiorstwa) została usunięta z bibliotek C Run-Time (CRT), MFC i ATL.
 
 #### <a name="animation-and-d2d-support"></a>Obsługa animacji i D2D
 
@@ -1866,7 +1867,7 @@ Ponieważ technologia IntelliSense przetwarza tylko te informacje, które są w 
 
 **Funkcja autouzupełniania #include.** IDE obsługuje Autouzupełnianie dla `#include` słowa kluczowego. Podczas wpisywania `#include` , środowisko IDE tworzy pole listy rozwijanej prawidłowych plików nagłówkowych. Jeśli będziesz kontynuować, wpisując nazwę pliku, IDE filtruje listę na podstawie wpisu. W dowolnym momencie możesz wybrać z listy plik, który ma zostać uwzględniony. Dzięki temu można szybko dołączać pliki bez znajomości dokładnej nazwy pliku.
 
-**Przejdź do.** Okno dialogowe **Przejdź do** umożliwia wyszukanie wszystkich symboli i plików w projekcie, które pasują do określonego ciągu. Wyniki wyszukiwania są natychmiast korygowane po wpisaniu dodatkowych znaków w ciągu wyszukiwania. Pole opinii o **wynikach** informuje o liczbie znalezionych elementów i pomaga zdecydować, czy należy ograniczyć wyszukiwanie. Pola **rodzaj/zakres**, **Lokalizacja**i informacje zwrotne w **wersji zapoznawczej** ułatwiają odróżnienie elementów mających podobne nazwy. Ponadto można zwiększyć tę funkcję w celu obsługi innych języków programowania.
+**Przejdź do.** Okno dialogowe **Przejdź do** umożliwia wyszukanie wszystkich symboli i plików w projekcie, które pasują do określonego ciągu. Wyniki wyszukiwania są natychmiast korygowane po wpisaniu dodatkowych znaków w ciągu wyszukiwania. Pole opinii o **wynikach** informuje o liczbie znalezionych elementów i pomaga zdecydować, czy należy ograniczyć wyszukiwanie. Pola **rodzaj/zakres**, **Lokalizacja** i informacje zwrotne w **wersji zapoznawczej** ułatwiają odróżnienie elementów mających podobne nazwy. Ponadto można zwiększyć tę funkcję w celu obsługi innych języków programowania.
 
 **Równoległe debugowanie i profilowanie.** Debuger programu Visual Studio ma świadomość środowisko uruchomieniowe współbieżności i pomaga w rozwiązywaniu problemów z przetwarzaniem równoległym aplikacji. Możesz użyć nowego narzędzia do profilowania współbieżności, aby wizualizować ogólne zachowanie aplikacji. Ponadto można użyć nowych okien narzędzi do wizualizacji stanu zadań i ich stosów wywołań.
 
@@ -1874,7 +1875,7 @@ Ponieważ technologia IntelliSense przetwarza tylko te informacje, które są w 
 
 **Hierarchia wywołań.** Okno **Hierarchia wywołań** umożliwia przechodzenie do wszystkich funkcji, które są wywoływane przez określoną funkcję lub do wszystkich funkcji wywołujących konkretną funkcję.
 
-### <a name="tools"></a>narzędzia
+### <a name="tools"></a>Narzędzia
 
 **Kreator klas MFC.** Visual C++ 2010 przywraca dobrze uznawane narzędzie Kreatora klas MFC. Kreator klas MFC jest wygodnym sposobem dodawania klas, komunikatów i zmiennych do projektu bez konieczności ręcznego modyfikowania zestawów plików źródłowych.
 
@@ -1931,7 +1932,7 @@ Dodanie typu danych YMMWORD obsługuje 256-bitowe argumenty operacji, które są
 - Kompilator obsługuje zarządzane Kompilacje przyrostowe. Po określeniu tej opcji kompilator nie będzie ponownie kompilować kodu w przypadku zmiany zestawu, do którego się odwołuje. Zamiast tego wykona kompilację przyrostową. Pliki są ponownie kompilowane tylko wtedy, gdy zmiany wpłyną na kod zależny.
 - Atrybuty powiązane z serwerem ATL nie są już obsługiwane. Kompilator nie obsługuje już kilku atrybutów, które były bezpośrednio powiązane z serwerem ATL. Aby zapoznać się z pełną listą usuniętych atrybutów, zobacz artykuł dotyczący zmiany.
 - Kompilator obsługuje mikroarchitekturę Intel Core. Kompilator zawiera dostrajania dla mikroarchitektury Intel Core podczas generowania kodu. Domyślnie to dostrajanie jest włączone i nie można go wyłączyć, ponieważ ułatwia także Pentium 4 i inne procesory.
-- Funkcje wewnętrzne obsługują nowsze procesory AMD i Intel. Niektóre nowe instrukcje wewnętrzne obsługują większą funkcjonalność w przypadku nowszych procesorów AMD i Intel. Aby uzyskać więcej informacji o nowych funkcjach wewnętrznych, zobacz **uzupełniające Streaming SIMD Extensions 3 instrukcje**, **Streaming SIMD Extensions 4 instrukcje**, **SSE4A i zaawansowane operacje operowania bitowym**, **wewnętrzne elementy AES**, **_mm_clmulepi64_si128**i **__rdtscp**.
+- Funkcje wewnętrzne obsługują nowsze procesory AMD i Intel. Niektóre nowe instrukcje wewnętrzne obsługują większą funkcjonalność w przypadku nowszych procesorów AMD i Intel. Aby uzyskać więcej informacji o nowych funkcjach wewnętrznych, zobacz **uzupełniające Streaming SIMD Extensions 3 instrukcje**, **Streaming SIMD Extensions 4 instrukcje**, **SSE4A i zaawansowane operacje operowania bitowym**, **wewnętrzne elementy AES**, **_mm_clmulepi64_si128** i **__rdtscp**.
 - `__cpuid`Funkcja jest aktualizowana. `__cpuid`Funkcje programu `__cpuidex` obsługują teraz kilka nowych funkcji z najnowszych wersji procesorów AMD i Intel. `__cpuidex`Wewnętrzny jest nowy i gromadzi więcej informacji z ostatnich procesorów.
 - `/MP`Opcja kompilatora zmniejsza łączny czas kompilacji. `/MP`Opcja może znacznie skrócić łączny czas kompilowania kilku plików źródłowych przez utworzenie kilku procesów, które jednocześnie kompilują pliki. Ta opcja jest szczególnie przydatna na komputerach, które obsługują wielowątkowość, wiele procesorów lub wiele rdzeni.
 - `/Wp64`Opcja kompilatora i **`__w64`** słowo kluczowe są przestarzałe. `/Wp64`Opcja kompilatora i **`__w64`** słowo kluczowe, które wykrywają 64-bitowe problemy dotyczące przenośności, są przestarzałe i zostaną usunięte w przyszłej wersji kompilatora. Zamiast tej opcji kompilatora i słowa kluczowego, należy użyć MSVC, który jest przeznaczony dla platformy 64-bitowej.
@@ -1995,7 +1996,7 @@ Kompilator ma istotne zmiany w tej wersji.
 - `/favor` (Optymalizacja dla 64) została dodana opcja kompilatora.
 - `/FA`, `/Fa` (Lista plików) opcja kompilatora została dodana.
 - `/FC` (Pełna ścieżka pliku kodu źródłowego w diagnostyce) została dodana opcja kompilatora.
-- `/fp` (Określ zachowanie zmiennoprzecinkowe) dodano opcję kompilatora.
+- `/fp` (Określ zachowanie Floating-Point) dodano opcję kompilatora.
 - `/G` (Optymalizuj dla procesora) Opcja kompilatora opcji została dodana.
 - `/G` (Optymalizuj dla procesora) Opcja kompilatora opcji została dodana.
 - `/G3`Opcje,,,, `/G4` `/G5` `/G6` `/G7` i `/GB` kompilator zostały usunięte. Kompilator używa teraz "modelu mieszanego", który podejmuje próbę utworzenia najlepszego pliku wyjściowego dla wszystkich architektury.
@@ -2011,7 +2012,7 @@ Kompilator ma istotne zmiany w tej wersji.
 - `/ML``/MLd`Opcje kompilatora i zostały usunięte. Visual C++ nie obsługuje już jednowątkowego, statycznie połączonej biblioteki CRT.
 - Kompilator zaimplementował silną optymalizację wartości zwracanej, która jest włączana podczas kompilowania przy użyciu `/O1` , `/O2` (Minimalizuj rozmiar, maksymalizuj szybkość), `/Og` (Optymalizacja globalna) i `/Ox` (pełna optymalizacja).
 - `/Oa` Opcja kompilatora została usunięta, ale zostanie zignorowana w trybie dyskretnym; Użyj `noalias` `restrict__declspec` modyfikatora or, aby określić sposób, w jaki kompilator wykonuje alias.
-- `/Op` Usunięto opcję kompilatora. `/fp`Zamiast tego użyj (Określ zachowanie zmiennoprzecinkowe).
+- `/Op` Usunięto opcję kompilatora. `/fp`Zamiast tego użyj (Określ zachowanie Floating-Point).
 - Program OpenMP jest teraz obsługiwany przez Visual C++.
 - `/openmp` (Włącz obsługę OpenMP 2,0) dodano opcję kompilatora.
 - `/Ow` Opcja kompilatora została usunięta, ale zostanie zignorowana w trybie dyskretnym. Użyj `noalias` `restrict__declspec` modyfikatora or, aby określić sposób, w jaki kompilator wykonuje alias.
@@ -2047,7 +2048,7 @@ Kompilator ma istotne zmiany w tej wersji.
 - `jitintrinsicdeclspec` dodano modyfikator.
 - `noaliasdeclspec` dodano modyfikator.
 - `process__declspec` dodano modyfikator.
-- **abstrakcyjne**, **przesłonięcie**i **zapieczętowane** są prawidłowe dla kompilacji natywnych.
+- **abstrakcyjne**, **przesłonięcie** i **zapieczętowane** są prawidłowe dla kompilacji natywnych.
 - **`__restrict`** dodano słowo kluczowe.
 - `restrictdeclspec` dodano modyfikator.
 - **`__thiscall`** jest teraz słowem kluczowym.
@@ -2099,7 +2100,7 @@ Kompilator ma istotne zmiany w tej wersji.
 - `/MANIFESTFILE` (Nazwij plik manifestu) opcja konsolidatora została dodana.
 - `/MAPINFO:LINES` Opcja konsolidatora została usunięta.
 - `/NXCOMPAT` (Zgodne z funkcją zapobiegania wykonywaniu danych) została dodana opcja konsolidatora.
-- `/PGD` (Określ bazę danych dla optymalizacji z przewodnikiem) — opcja konsolidatora została dodana.
+- `/PGD` (Określ optymalizację bazy danych dla Profile-Guided) — opcja konsolidatora została dodana.
 - `/PROFILE` (Profiler narzędzi do oceny wydajności) — opcja konsolidatora została dodana.
 - `/SECTION` (Określ atrybuty sekcji) opcja konsolidatora obsługuje teraz negację atrybutu i nie obsługuje już atrybutów L ani D ("z VxD").
 - Obsługa formatu Unicode w kompilatorze i konsolidatorze

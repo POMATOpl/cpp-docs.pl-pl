@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: pola specyfikacji formatu: scanf i wscanf Functions'
 title: Pola specyfikacji formatu dla funkcji wscanf
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 4be7aa5e0790f0124890ee981ffd58e3027ea59b
-ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
+ms.openlocfilehash: 64d889af8200f5dcc745d628e02c388d74039bdd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88659334"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303918"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pola specyfikacji formatu dla funkcji wscanf
 
@@ -25,7 +26,7 @@ Informacje zawarte w tym artykule dotyczą całej `scanf` rodziny funkcji, w tym
 
 Specyfikacja formatu ma następującą postać:
 
-`%`[ `*` ] [[Width](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; szystkie &#124; I64 &#124; l](../c-runtime-library/scanf-width-specification.md)}][type](../c-runtime-library/scanf-type-field-characters.md)
+`%`[ `*` ] [[Width](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; szystkie &#124; I64 &#124; l](../c-runtime-library/scanf-width-specification.md)}][](../c-runtime-library/scanf-type-field-characters.md)
 
 `format`Argument określa interpretację danych wejściowych i może zawierać co najmniej jedną z następujących wartości:
 
@@ -49,7 +50,7 @@ Gwiazdka ( `*` ) po znaku procentu pomija przypisanie następnego pola wejściow
 
 Bezpieczne wersje (z `_s` sufiksem) `scanf` rodziny funkcji wymagają, aby parametr rozmiaru buforu został przeszedł bezpośrednio po każdym parametrze typu `c` , `C` , `s` , `S` lub `[` . Aby uzyskać więcej informacji na temat bezpiecznych wersji `scanf` rodziny funkcji, zobacz [scanf_s, _scanf_s_l, wscanf_s _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [scanf — Specyfikacja szerokości](../c-runtime-library/scanf-width-specification.md)<br/>
 [scanf — znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: #define dyrektywie (C/C++)'
 title: '#define, dyrektywa (C/C++)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: e9e5b7a02ee55c05aa44278fbceb9c42f372c443
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6821f775492671d860f4491354fff77e66150101
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300464"
 ---
 # <a name="define-directive-cc"></a>#define — dyrektywa (C/C++)
 
@@ -24,7 +25,7 @@ ms.locfileid: "91506671"
 ## <a name="syntax"></a>Składnia
 
 > token *identyfikatora* **#define** *—*<sub>wybór</sub> ciągu\
-> **#define** *Identyfikator* **#define (** <sub>opt</sub>**o** *identyfikatorze*,... **,** *identifier*<sub>wybór</sub> **identyfikatora)** *—*<sub>wybór</sub> ciągu
+>  *Identyfikator* **#define (** <sub>opt</sub>**o** *identyfikatorze*,... **,** <sub>wybór</sub> **identyfikatora)** *—*<sub>wybór</sub> ciągu
 
 ## <a name="remarks"></a>Uwagi
 
@@ -34,7 +35,7 @@ Argument *ciągu tokenu* składa się z serii tokenów, takich jak słowa kluczo
 
 A `#define` bez *ciągu tokenu* usuwa wystąpienia *identyfikatora* z pliku źródłowego. *Identyfikator* pozostaje zdefiniowany i może być testowany przy użyciu `#if defined` `#ifdef` dyrektyw i.
 
-Druga forma składni definiuje makro podobne do funkcji z parametrami. Ten formularz przyjmuje opcjonalną listę parametrów, które muszą występować w nawiasach. Po zdefiniowaniu makra każde kolejne wystąpienie *identyfikatora*(<sub>opt</sub>o *identyfikatorze*,..., wybór *identyfikatora*<sub>opt</sub> ) jest zastępowane wersją argumentu *token-String* , który ma rzeczywiste argumenty zastępujące parametry formalne.
+Druga forma składni definiuje makro podobne do funkcji z parametrami. Ten formularz przyjmuje opcjonalną listę parametrów, które muszą występować w nawiasach. Po zdefiniowaniu makra każde kolejne wystąpienie *identyfikatora*(<sub>opt</sub>o *identyfikatorze*,..., wybór *identyfikatora*<sub></sub> ) jest zastępowane wersją argumentu *token-String* , który ma rzeczywiste argumenty zastępujące parametry formalne.
 
 Nazwy parametrów formalnych są wyświetlane w *ciągu tokenu* , aby oznaczyć lokalizacje, w których są zastępowane wartości rzeczywiste. Nazwy poszczególnych parametrów mogą występować wiele razy w *ciągu tokenu*, a nazwy mogą pojawiać się w dowolnej kolejności. Liczba argumentów w wywołaniu musi być zgodna z liczbą parametrów w definicji makra. Liberalizacja użycia nawiasów gwarantuje, że złożone rzeczywiste argumenty są poprawnie interpretowane.
 

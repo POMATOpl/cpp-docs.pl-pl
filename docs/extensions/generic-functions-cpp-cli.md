@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o funkcjach ogólnych (C++/CLI)
 title: Funkcje ogólne (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd2c5390499e6858824fae7a3368afe6de8c6c56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301740"
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
 
@@ -34,7 +35,7 @@ Ta funkcja nie jest obsługiwana w środowisko wykonawcze systemu Windows.
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -87,7 +88,7 @@ Gdy jest wywoływana, parametr typu ogólnego jest zastępowany rzeczywistym typ
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -140,7 +141,7 @@ ref struct MyClass {
 };
 ```
 
-Poniższy przykład używa funkcji generycznej, aby znaleźć pierwszy element w tablicy. Deklaruje `MyClass` , że dziedziczy z klasy bazowej `MyBaseClass` . `MyClass`zawiera funkcję generyczną, `MyFunction` która wywołuje inną funkcję rodzajową, `MyBaseClassFunction` w ramach klasy bazowej. W programie `main` Funkcja generyczna `MyFunction` jest wywoływana przy użyciu różnych argumentów typu.
+Poniższy przykład używa funkcji generycznej, aby znaleźć pierwszy element w tablicy. Deklaruje `MyClass` , że dziedziczy z klasy bazowej `MyBaseClass` . `MyClass` zawiera funkcję generyczną, `MyFunction` która wywołuje inną funkcję rodzajową, `MyBaseClassFunction` w ramach klasy bazowej. W programie `main` Funkcja generyczna `MyFunction` jest wywoływana przy użyciu różnych argumentów typu.
 
 ```cpp
 // generics_generic_function_3.cpp
@@ -181,7 +182,7 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Typy ogólne](generics-cpp-component-extensions.md)

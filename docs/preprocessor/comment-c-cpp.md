@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: comment pragma'
 title: comment — Wartość dyrektywy pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: 3175ad5318bcc6fd9aa6233258ccec9033c89be8
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 71172632ee1589c3f6d66136e9567929bff5d08c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300817"
 ---
 # <a name="comment-pragma"></a>comment — Wartość dyrektywy pragma
 
@@ -27,9 +28,9 @@ Umieszcza rekord komentarza w pliku obiektu lub pliku wykonywalnego.
 
 ## <a name="remarks"></a>Uwagi
 
-*Typ komentarza* to jeden ze wstępnie zdefiniowanych identyfikatorów, opisany poniżej, który określa typ rekordu komentarza. Opcjonalny *ciąg komentarza* jest literałem ciągu, która zawiera dodatkowe informacje dla niektórych typów komentarzy. Ponieważ *komentarz-ciąg* jest literałem ciągu, przestrzega wszystkich reguł dla literałów ciągów odnoszących się do znaków ucieczki, osadzonych znaków cudzysłowu (`"`) i łączenia.
+*Typ komentarza* to jeden ze wstępnie zdefiniowanych identyfikatorów, opisany poniżej, który określa typ rekordu komentarza. Opcjonalny *ciąg komentarza* jest literałem ciągu, która zawiera dodatkowe informacje dla niektórych typów komentarzy. Ponieważ *komentarz-ciąg* jest literałem ciągu, przestrzega wszystkich reguł dla literałów ciągów odnoszących się do znaków ucieczki, osadzonych znaków cudzysłowu ( `"` ) i łączenia.
 
-### <a name="compiler"></a>— kompilator
+### <a name="compiler"></a>compiler
 
 Umieszcza nazwę i numer wersji kompilatora w pliku obiektu. Ten rekord komentarza jest ignorowany przez konsolidator. Jeśli podasz parametr *ciągu komentarza* dla tego typu rekordu, kompilator generuje ostrzeżenie.
 
@@ -85,6 +86,6 @@ W przypadku komentarzy, które pobierają parametr *komentarza-ciąg* , można u
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

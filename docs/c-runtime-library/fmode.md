@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fmode'
 title: _fmode
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-ms.openlocfilehash: a41d665eab50203fc3bb176f8bb1bbc30737e844
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4e7932369a2ad63b5498078e46cd5610b679ee0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303902"
 ---
-# <a name="fmode"></a>_fmode
+# <a name="_fmode"></a>_fmode
 
-`_fmode` Zmiennej ustawia domyślny tryb translacji plików tekstowych lub binarnych tłumaczenia. Ta zmienna globalna jest przestarzała dla bardziej bezpieczne wersje funkcjonalności [_get_fmode —](../c-runtime-library/reference/get-fmode.md) i [_set_fmode —](../c-runtime-library/reference/set-fmode.md), którego należy użyć zamiast zmiennej globalnej. Jest zadeklarowana w następujący sposób w Stdlib.h.
+`_fmode`Zmienna ustawia domyślny tryb translacji plików dla tłumaczenia tekstowego lub binarnego. Ta zmienna globalna została uznana za przestarzałą dla bezpieczniejszych wersji funkcjonalnych [_get_fmode](../c-runtime-library/reference/get-fmode.md) i [_set_fmode](../c-runtime-library/reference/set-fmode.md), które powinny być używane zamiast zmiennej globalnej. Jest on zadeklarowany w STDLIB. h w następujący sposób.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,17 +29,17 @@ extern int _fmode;
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślne ustawienie `_fmode` jest `_O_TEXT` tłumaczenia w trybie tekstowym. `_O_BINARY` jest to ustawienie w trybie binarnym.
+Ustawieniem domyślnym `_fmode` jest `_O_TEXT` dla tłumaczenia w trybie tekstowym. `_O_BINARY` jest ustawieniem tryb binarny.
 
 Można zmienić wartość `_fmode` na trzy sposoby:
 
-- Połącz z biblioteką Binmode.obj. Spowoduje to zmianę ustawienia początkowej `_fmode` do `_O_BINARY`, powodując wszystkich plików z wyjątkiem `stdin`, `stdout`, i `stderr` były otwierane w trybie binarnym.
+- Połącz z Binmode. obj. Spowoduje to zmianę początkowego ustawienia `_fmode` na `_O_BINARY` , co spowoduje, że wszystkie pliki z wyjątkiem `stdin` , `stdout` i `stderr` mają być otwierane w trybie binarnym.
 
-- Wywołanie `_get_fmode` lub `_set_fmode` do pobierania lub ustawiania `_fmode` zmiennej globalnej, odpowiednio.
+- Wykonaj wywołanie `_get_fmode` lub `_set_fmode` , aby odpowiednio uzyskać lub ustawić `_fmode` zmienną globalną.
 
-- Zmień wartość właściwości `_fmode` ustawiając go bezpośrednio w programie.
+- Zmień wartość `_fmode` bezpośrednio przez ustawienie jej w programie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zmienne globalne](../c-runtime-library/global-variables.md)<br/>
 [_get_fmode](../c-runtime-library/reference/get-fmode.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbccpy_s, _mbccpy_s_l'
 title: _mbccpy_s, _mbccpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6764c100fb52b025db2d8f79a72c7c6420a64bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303534"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -102,7 +103,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. Jeśli *src* lub *docelowy* ma **wartość null**lub jeśli więcej niż **buffSizeinBytes** bajtów zostałyby skopiowane do miejsca *docelowego*, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają **EINVAL** i **errno** są ustawione na **EINVAL**.
+Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. Jeśli *src* lub *docelowy* ma **wartość null** lub jeśli więcej niż **buffSizeinBytes** bajtów zostałyby skopiowane do miejsca *docelowego*, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają **EINVAL** i **errno** są ustawione na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -119,7 +120,7 @@ Wartość w *pCopied* jest wypełniana liczbą bajtów skopiowanych. Możliwe wa
 |bajt wiodący, po którym następuje wartość niezerowa|bajt wiodący, po którym następuje wartość niezerowa|2|0|
 |bajt wiodący, po którym następuje 0|0|1|**EILSEQ**|
 
-Należy zauważyć, że drugi wiersz jest tylko szczególnym przypadkiem pierwszego. Należy również pamiętać, że tabela przyjmuje *buffSizeInBytes* >= *pCopied*.
+Należy zauważyć, że drugi wiersz jest tylko szczególnym przypadkiem pierwszego. Należy również pamiętać, że tabela przyjmuje *buffSizeInBytes*  >=  *pCopied*.
 
 **_mbccpy_s** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych. **_mbccpy_s_l** jest taka sama jak **_mbccpy_s** , z tą różnicą, że **_mbccpy_s_l** korzysta z ustawień regionalnych przewidzianych dla wszelkich zachowań zależnych od ustawień regionalnych.
 
@@ -137,13 +138,13 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbccpy_s**|\<mbstring. h>|
-|**_mbccpy_s_l**|\<mbstring. h>|
+|**_mbccpy_s**|\<mbstring.h>|
+|**_mbccpy_s_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: #if, #elif, #else i dyrektywy #endif (C/C++)'
 title: '#if, #elif, #else i #endif, dyrektywy (C/C++)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -21,29 +22,29 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: acbc54a80573bbbf29ad5cf67e7e5fd9351eeaa3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 511f79da4957f7a26c9af9dbcad46fc29e70d785
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300487"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>dyrektywy #if, #elif, #else i #endif (C/C++)
 
-Dyrektywa **#if** , z dyrektywami **#elif**, **#else**i **#endif** , kontroluje kompilację fragmentów pliku źródłowego. Jeśli wyrażenie zapisane (po **#if**) ma wartość różną od zera, grupa wierszy zaraz po dyrektywie **#if** jest przechowywana w jednostce translacji.
+Dyrektywa **#if** , z dyrektywami **#elif**, **#else** i **#endif** , kontroluje kompilację fragmentów pliku źródłowego. Jeśli wyrażenie zapisane (po **#if**) ma wartość różną od zera, grupa wierszy zaraz po dyrektywie **#if** jest przechowywana w jednostce translacji.
 
 ## <a name="grammar"></a>Gramatyka
 
 *warunkowo* : \
-&nbsp;&nbsp;&nbsp;&nbsp;*if-Part elif-*<sub>opt</sub> *else-part*<sub>Parts</sub> opt- *line*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-Part elif-*<sub></sub> <sub>Parts</sub> opt- *line*
 
 *if-Part* : \
 &nbsp;&nbsp;&nbsp;&nbsp;*tekst w wierszu*
 
 *if-line* : \
 &nbsp;&nbsp;&nbsp;&nbsp;**#if** *— wyrażenie stałe*\
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *Identyfikator* #ifdef\
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *Identyfikator* #ifndef
+&nbsp;&nbsp;&nbsp;&nbsp; *Identyfikator* #ifdef\
+&nbsp;&nbsp;&nbsp;&nbsp; *Identyfikator* #ifndef
 
 *elif — części* : \
 &nbsp;&nbsp;&nbsp;&nbsp;*elif — tekst wiersza*\
@@ -65,7 +66,7 @@ Dyrektywa **#if** , z dyrektywami **#elif**, **#else**i **#endif** , kontroluje 
 
 Każda dyrektywa **#if** w pliku źródłowym musi być zgodna z zamykającą **#endif** dyrektywą. Dowolna liczba dyrektyw **#elif** może występować między dyrektywami **#if** i **#endif** , ale co najmniej jedna dyrektywa **#else** jest dozwolona. Dyrektywa **#else** , jeśli istnieje, musi być ostatnią dyrektywą przed **#endif**.
 
-Dyrektywy **#if**, **#elif**, **#else**i **#endif** mogą być zagnieżdżane w częściach *tekstowych* innych dyrektyw **#if** . Każdy zagnieżdżony **#else**, **#elif**lub **#endif** dyrektywy należy do najbliższej poprzedniej dyrektywy **#if** .
+Dyrektywy **#if**, **#elif**, **#else** i **#endif** mogą być zagnieżdżane w częściach *tekstowych* innych dyrektyw **#if** . Każdy zagnieżdżony **#else**, **#elif** lub **#endif** dyrektywy należy do najbliższej poprzedniej dyrektywy **#if** .
 
 Wszystkie dyrektywy kompilacji warunkowej, takie jak **#if** i **#ifdef**, muszą być zgodne z zamykającą dyrektywą **#endif** przed końcem pliku. W przeciwnym razie zostanie wygenerowany komunikat o błędzie. Gdy dyrektywy kompilacji warunkowej są zawarte w plikach dołączanych, muszą spełniać te same warunki: na końcu dołączania pliku nie mogą istnieć żadne niezgodne dyrektywy kompilacji warunkowej.
 
@@ -75,7 +76,7 @@ Preprocesor wybiera jedno z wystąpień *tekstu* do dalszej obróbki. Blok okre�
 
 Preprocesor przetwarza zaznaczony *tekst* i przekazuje go do kompilatora. Jeśli *tekst* zawiera dyrektywy preprocesora, preprocesor wykonuje te dyrektywy. Kompilowane są tylko bloki tekstu wybrane przez preprocesor.
 
-Preprocesor wybiera pojedynczy element *tekstowy* , oceniając wyrażenie stałe po każdej **#if** lub **#elif** dyrektywie, dopóki nie zostanie znalezione wyrażenie stałe o wartości true (niezerowej). Zaznacza cały tekst (łącznie z innymi dyrektywami preprocesora, zaczynającymi się od **#** ) do skojarzonych **#elif**, **#else**lub **#endif**.
+Preprocesor wybiera pojedynczy element *tekstowy* , oceniając wyrażenie stałe po każdej **#if** lub **#elif** dyrektywie, dopóki nie zostanie znalezione wyrażenie stałe o wartości true (niezerowej). Zaznacza cały tekst (łącznie z innymi dyrektywami preprocesora, zaczynającymi się od **#** ) do skojarzonych **#elif**, **#else** lub **#endif**.
 
 Jeśli wszystkie wystąpienia *wyrażenia stałego* mają wartość false lub jeśli nie pojawiają się **#elif** dyrektywy, preprocesor wybiera blok tekstu po klauzuli **#else** . Gdy nie ma klauzuli **#else** , a wszystkie wystąpienia *wyrażenia stałej* w bloku **#if** mają wartość false, nie jest zaznaczony żaden blok tekstu.
 
@@ -147,7 +148,7 @@ W instrukcjach kompilacji warunkowej w poniższym przykładzie przyjęto założ
 #endif
 ```
 
-Pierwszy blok **#if** przedstawia dwa zestawy zagnieżdżonych dyrektyw **#if**, **#else**i **#endif** . Pierwszy zestaw dyrektyw jest przetwarzany tylko wtedy, gdy `DLEVEL > 5` ma wartość true. W przeciwnym razie instrukcje po **#else** są przetwarzane.
+Pierwszy blok **#if** przedstawia dwa zestawy zagnieżdżonych dyrektyw **#if**, **#else** i **#endif** . Pierwszy zestaw dyrektyw jest przetwarzany tylko wtedy, gdy `DLEVEL > 5` ma wartość true. W przeciwnym razie instrukcje po **#else** są przetwarzane.
 
 Dyrektywy **#elif** i **#else** w drugim przykładzie służą do dokonania jednego z czterech opcji na podstawie wartości `DLEVEL` . Stała `STACK` jest ustawiona na 0, 100 lub 200, w zależności od definicji `DLEVEL` . Jeśli `DLEVEL` jest większa niż 5, instrukcja
 
@@ -194,6 +195,6 @@ Poprzedni kod sprawdza, czy jest zdefiniowana stała symboliczna `EXAMPLE_H` . J
 #endif
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)

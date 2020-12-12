@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: typów ogólnych i szablonów (C++/CLI)'
 title: Typy ogólne i szablony (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-ms.openlocfilehash: 567286ee24e9df968b2d352489fe12f2735854eb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a62e765255896ef75d4cda73b66e7be0298b3690
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301688"
 ---
 # <a name="generics-and-templates-ccli"></a>Typy ogólne i szablony (C++/CLI)
 
@@ -21,7 +22,7 @@ Aby uzyskać więcej informacji, zobacz [środowisko wykonawcze systemu Windows 
 
 ## <a name="comparing-templates-and-generics"></a>Porównywanie szablonów i typów ogólnych
 
-Kluczowe różnice między typami ogólnymi C++ i szablonami:
+Kluczowe różnice między typami ogólnymi i szablonami języka C++:
 
 - Typy ogólne są ogólne do momentu zastąpienia typów do nich w czasie wykonywania. Szablony są wyspecjalizowane w czasie kompilacji, więc nie są nadal sparametryzowane typy w czasie wykonywania
 
@@ -31,7 +32,7 @@ Kluczowe różnice między typami ogólnymi C++ i szablonami:
 
 - Typy ogólne są generowane jako pojedynczy fragment kodu wykonywalnego, który jest używany dla wszystkich argumentów typu odwołania (nie jest to prawdziwe dla typów wartości, które mają unikatową implementację na typ wartości). Kompilator JIT wie o typach ogólnych i jest w stanie zoptymalizować kod dla typów referencyjnych lub wartości, które są używane jako argumenty typu. Szablony generują odrębny kod środowiska uruchomieniowego dla każdej specjalizacji.
 
-- Typy ogólne nie zezwalają na parametry szablonu niebędącego typem, takie jak `template <int i> C {}`. Umożliwiają one korzystanie z szablonów.
+- Typy ogólne nie zezwalają na parametry szablonu bez typu, takie jak `template <int i> C {}` . Umożliwiają one korzystanie z szablonów.
 
 - Typy ogólne nie umożliwiają jawnej specjalizacji (to jest implementacja niestandardowa szablonu dla określonego typu). Szablony.
 
@@ -39,7 +40,7 @@ Kluczowe różnice między typami ogólnymi C++ i szablonami:
 
 - Typy ogólne nie zezwalają na użycie parametru typu jako klasy bazowej dla typu ogólnego. Szablony.
 
-- Szablony obsługują parametry szablonu szablonu (np. `template<template<class T> class X> class MyClass`), ale generyczne nie.
+- Szablony obsługują parametry szablonu szablonu (np. `template<template<class T> class X> class MyClass` ), ale generyczne nie.
 
 ## <a name="combining-templates-and-generics"></a>Łączenie szablonów i typów ogólnych
 

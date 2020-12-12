@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: sygnał'
 title: sygnał
 ms.date: 04/12/2018
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 1dacf23b6c4f698b61c5bfe2dd2fb1ff7ee389f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 601e8108f7078356cdd1c6642deb05762b970e00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303456"
 ---
 # <a name="signal"></a>sygnał
 
@@ -59,7 +60,7 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **sygnałów** umożliwia procesowi wybranie jednego z kilku sposobów obsługi sygnału przerwania z systemu operacyjnego. Argument *SIG* to przerwa, do którego reaguje **sygnał** ; musi to być jeden z następujących stałych manifestu, które są zdefiniowane w SYGNALe. C.
+Funkcja **sygnałów** umożliwia procesowi wybranie jednego z kilku sposobów obsługi sygnału przerwania z systemu operacyjnego. Argument *SIG* to przerwa, do którego reaguje **sygnał** ; musi to być jeden z następujących stałych manifestu, które są zdefiniowane w SYGNALe. H.
 
 |wartość *SIG*|Opis|
 |-----------------|-----------------|
@@ -77,9 +78,9 @@ Domyślnie **sygnał** kończy program wywołujący z kodem zakończenia 3, niez
 > [!NOTE]
 > **SIGINT** nie jest obsługiwana dla żadnej aplikacji Win32. Gdy wystąpi przerwa CTRL + C, systemy operacyjne Win32 generują nowy wątek do obsługi tego przerwania. Może to spowodować, że aplikacja jednowątkowa, taka jak jedna w systemie UNIX, będzie pełnić funkcję wielowątkowości i spowodować nieoczekiwane zachowanie.
 
-Argument *Func* jest adresem do programu obsługi sygnałów, który można napisać lub do jednej ze wstępnie zdefiniowanych stałych **SIG_DFL** lub **SIG_IGN**, które są również zdefiniowane w sygnale. C. Jeśli *Func* jest funkcją, jest ona instalowana jako program obsługi sygnałów dla danego sygnału. Prototyp programu obsługi sygnałów wymaga jednego formalnego argumentu, *SIG*, typu **`int`** . System operacyjny udostępnia rzeczywisty argument za pomocą *SIG* w przypadku wystąpienia przerwania; argument jest sygnałem, który wygenerował przerwanie. W związku z tym można użyć sześciu stałych manifestu (wymienionych w powyższej tabeli) w programie obsługi sygnałów, aby określić, które przerwanie wystąpiło i podjąć odpowiednie działania. Na przykład można wywołać **sygnał** dwa razy, aby przypisać tę samą procedurę obsługi do dwóch różnych sygnałów, a następnie przetestować argument *SIG* w programie obsługi, aby wykonać różne akcje na podstawie otrzymanego sygnału.
+Argument *Func* jest adresem do programu obsługi sygnałów, który można napisać lub do jednej ze wstępnie zdefiniowanych stałych **SIG_DFL** lub **SIG_IGN**, które są również zdefiniowane w sygnale. H. Jeśli *Func* jest funkcją, jest ona instalowana jako program obsługi sygnałów dla danego sygnału. Prototyp programu obsługi sygnałów wymaga jednego formalnego argumentu, *SIG*, typu **`int`** . System operacyjny udostępnia rzeczywisty argument za pomocą *SIG* w przypadku wystąpienia przerwania; argument jest sygnałem, który wygenerował przerwanie. W związku z tym można użyć sześciu stałych manifestu (wymienionych w powyższej tabeli) w programie obsługi sygnałów, aby określić, które przerwanie wystąpiło i podjąć odpowiednie działania. Na przykład można wywołać **sygnał** dwa razy, aby przypisać tę samą procedurę obsługi do dwóch różnych sygnałów, a następnie przetestować argument *SIG* w programie obsługi, aby wykonać różne akcje na podstawie otrzymanego sygnału.
 
-Jeśli testujesz wyjątki zmiennoprzecinkowe (**SIGFPE**), *Func* wskazuje funkcję, która przyjmuje opcjonalny drugi argument, który jest jednym z kilku stałych manifestu, zdefiniowanych w float. H **FPE_xxx**formularza. Gdy wystąpi sygnał **SIGFPE** , można przetestować wartość drugiego argumentu, aby określić rodzaj wyjątku zmiennoprzecinkowego, a następnie podjąć odpowiednie działania. Ten argument i jego możliwe wartości to rozszerzenia Microsoft.
+Jeśli testujesz wyjątki zmiennoprzecinkowe (**SIGFPE**), *Func* wskazuje funkcję, która przyjmuje opcjonalny drugi argument, który jest jednym z kilku stałych manifestu, zdefiniowanych w float. H **FPE_xxx** formularza. Gdy wystąpi sygnał **SIGFPE** , można przetestować wartość drugiego argumentu, aby określić rodzaj wyjątku zmiennoprzecinkowego, a następnie podjąć odpowiednie działania. Ten argument i jego możliwe wartości to rozszerzenia Microsoft.
 
 Dla wyjątków zmiennoprzecinkowych wartość *Func* nie jest resetowana po odebraniu sygnału. Aby wykonać odzyskiwanie z wyjątków zmiennoprzecinkowych, należy użyć klauzul try/except do obsłużenia operacji zmiennoprzecinkowych. Możliwe jest również odzyskanie za pomocą [setjmp](setjmp.md) z [longjmp](longjmp.md). W obu przypadkach proces wywołujący wznawia wykonywanie i pozostawia stan zmiennoprzecinkowy niezdefiniowanego procesu.
 
@@ -91,7 +92,7 @@ Ponieważ procedury obsługi sygnałów są zwykle wywoływane asynchronicznie w
 
 - Nie należy wydawać niskiego poziomu ani STDIO. H procedury we/wy (na przykład **printf** lub **fread**).
 
-- Nie wywołuj procedur sterty ani żadnej procedury korzystającej z procedur sterty (na przykład **malloc**, **_strdup**lub **_putenv**). Aby uzyskać więcej informacji, zobacz [malloc](malloc.md) .
+- Nie wywołuj procedur sterty ani żadnej procedury korzystającej z procedur sterty (na przykład **malloc**, **_strdup** lub **_putenv**). Aby uzyskać więcej informacji, zobacz [malloc](malloc.md) .
 
 - Nie należy używać żadnej funkcji generującej wywołanie systemowe (na przykład **_getcwd** lub **Time**).
 
@@ -105,7 +106,7 @@ Program musi zawierać kod zmiennoprzecinkowy, jeśli jest to pułapka wyjątku 
 volatile double d = 0.0f;
 ```
 
-Sygnały **SIGILL** i **SIGTERM** nie są generowane w systemie Windows. Są one dołączone do zgodności ANSI. W związku z tym, można ustawić programy obsługi sygnałów dla tych sygnałów przy użyciu **sygnału**i można również jawnie wygenerować te sygnały przez wywołanie metody [podnieść](raise.md).
+Sygnały **SIGILL** i **SIGTERM** nie są generowane w systemie Windows. Są one dołączone do zgodności ANSI. W związku z tym, można ustawić programy obsługi sygnałów dla tych sygnałów przy użyciu **sygnału** i można również jawnie wygenerować te sygnały przez wywołanie metody [podnieść](raise.md).
 
 Ustawienia sygnałów nie są zachowywane w procesach duplikowanych, które są tworzone przez wywołania do [_exec](../../c-runtime-library/exec-wexec-functions.md) lub funkcji [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Ustawienia sygnału są resetowane do wartości domyślnych w nowym procesie.
 

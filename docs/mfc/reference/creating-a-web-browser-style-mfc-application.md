@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat tworzenia aplikacji sieci Web Browser-Style MFC
 title: Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 ms.date: 06/25/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: e02e928f65ab4cd918e730135abc62ed3237decf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0ee8250be20b53979c2a3e059d83237389091e72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301285"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 
@@ -26,7 +27,7 @@ Aplikacja w stylu przeglądarki sieci Web może uzyskać dostęp do informacji z
 
 1. Na stronie [Typ aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) Kreator aplikacji MFC upewnij się, że pole **Architektura dokumentu/widoku** jest zaznaczone. (Można wybrać **pojedynczy dokument** lub **wiele dokumentów**, ale nie **na podstawie okna dialogowego**).
 
-1. Na stronie [Przejrzyj wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) Użyj menu rozwijanego **Klasa podstawowa** , aby wybrać `CHtmlView`.
+1. Na stronie [Przejrzyj wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) Użyj menu rozwijanego **Klasa podstawowa** do wybrania `CHtmlView` .
 
 1. Wybierz inne opcje, które mają być wbudowane w aplikację szkieletową.
 
@@ -35,11 +36,11 @@ Aplikacja w stylu przeglądarki sieci Web może uzyskać dostęp do informacji z
 Kontrolka WebBrowser obsługuje przeglądanie w sieci Web za pomocą hiperłączy i nawigacji Uniform Resource Locator (URL). Kontrolka utrzymuje listę historii, która umożliwia użytkownikowi przeglądanie do przodu i do tyłu przez wcześniej przeglądane witryny, foldery i dokumenty. Kontrolka bezpośrednio obsługuje nawigację, hiperłącza, listy historii, Ulubione i zabezpieczenia. Aplikacje mogą używać kontrolki WebBrowser jako kontenera dokumentów aktywnych również do hostowania dokumentów aktywnych. W związku z tym rozbudowane dokumenty, takie jak arkusze kalkulacyjne programu Microsoft Excel lub dokumenty programu Word, można otwierać i edytować w miejscu z poziomu kontrolki WebBrowser. Formant WebBrowser jest również kontenerem formantów ActiveX, który może obsługiwać dowolny formant ActiveX.
 
 > [!NOTE]
-> Formant ActiveX WebBrowser (i w związku z tym `CHtmlView`) jest dostępny tylko dla aplikacji uruchomionych w wersjach systemu Windows, w których jest zainstalowany program Internet Explorer 4,0 lub nowszy.
+> Formant ActiveX WebBrowser (i w związku z tym `CHtmlView` ) jest dostępny tylko dla aplikacji uruchomionych w wersjach systemu Windows, w których jest zainstalowany program Internet Explorer 4,0 lub nowszy.
 
-Ponieważ `CHtmlView` po prostu implementuje formant przeglądarki sieci Web firmy Microsoft, jego obsługa drukowania nie jest taka sama jak w przypadku innych klas pochodnych [CView](../../mfc/reference/cview-class.md). Zamiast tego formant WebBrowser implementuje interfejs użytkownika i drukowanie drukarki. W związku z tym `CHtmlView` nie obsługuje podglądu wydruku, a struktura nie zapewnia innych funkcji obsługi drukowania: na przykład [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView:: OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)i [CView:: OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), które są dostępne w innych aplikacjach MFC.
+Ponieważ `CHtmlView` po prostu implementuje formant przeglądarki sieci Web firmy Microsoft, jego obsługa drukowania nie jest taka sama jak w przypadku innych klas pochodnych [CView](../../mfc/reference/cview-class.md). Zamiast tego formant WebBrowser implementuje interfejs użytkownika i drukowanie drukarki. W związku z tym program nie `CHtmlView` obsługuje podglądu wydruku, a struktura nie zapewnia innych funkcji obsługi drukowania: na przykład [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView:: OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)i [CView:: OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), które są dostępne w innych aplikacjach MFC.
 
-`CHtmlView` działa jako otoka dla kontrolki przeglądarka sieci Web, która umożliwia aplikacji widok w sieci Web lub stronie HTML. Kreator tworzy przesłonięcie do funkcji [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) w klasie View, dostarczając link nawigacyjny do witryny internetowej Microsoft Visual C++ :
+`CHtmlView` działa jako otoka dla kontrolki przeglądarka sieci Web, która umożliwia aplikacji widok w sieci Web lub stronie HTML. Kreator tworzy przesłonięcie do funkcji [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) w klasie View, dostarczając link nawigacyjny do witryny sieci Web Microsoft Visual C++:
 
 ```cpp
 void CWebView::OnInitialUpdate()

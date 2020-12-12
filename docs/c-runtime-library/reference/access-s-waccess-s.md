@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _access_s, _waccess_s'
 title: _access_s, _waccess_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cf46f3996005584a8f17b25baac60b9c5683ed19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916898"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303846"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -70,7 +71,7 @@ Ustawienie uprawnień.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca kod błędu, jeśli nazwany plik nie istnieje lub jest niedostępny w danym trybie. W takim przypadku funkcja zwraca kod błędu z zestawu w następujący sposób, a także ustawia `errno` tę samą wartość.
+Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca kod błędu, jeśli nazwany plik nie istnieje lub jest niedostępny w danym trybie. W takim przypadku funkcja zwraca kod błędu z zestawu w następujący sposób, a także ustawia tę `errno` samą wartość.
 
 |errno wartość|Warunek|
 |-|-|
@@ -95,7 +96,7 @@ Uprawnienie do odczytu lub zapisu pliku jest za mało, aby można było otworzy�
 
 **_waccess_s** to wersja znaku dwubajtowego **_access_s**, gdzie argument *ścieżki* **_waccess_s** jest ciągiem znaków dwubajtowych. W przeciwnym razie **_waccess_s** i **_access_s** zachowują się identycznie.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ścieżka* ma wartość null lub w *trybie* nie określono prawidłowego trybu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają `errno` na `EINVAL` i zwracają `EINVAL`.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ścieżka* ma wartość null lub w *trybie* nie określono prawidłowego trybu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają `errno` na `EINVAL` i zwracają `EINVAL` .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -109,8 +110,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_access_s**|\<IO. h>|\<errno. h>|
-|**_waccess_s**|\<WCHAR. h> lub \<IO. h>|\<errno. h>|
+|**_access_s**|\<io.h>|\<errno.h>|
+|**_waccess_s**|\<wchar.h> lub \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>Przykład
 

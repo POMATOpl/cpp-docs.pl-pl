@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function'
 title: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 051961f049109b4fa6a2881e442e621036cb279c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5bd0449c4b353c6a417e145f864b07794ae40ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300076"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -57,7 +58,7 @@ int _execute_onexit_table(
 
 #### <a name="parameters"></a>Parametry
 
-*tabele*<br/>
+*table*<br/>
 [in. out] Wskaźnik do tabeli funkcji OnExit.
 
 *funkcyjn*<br/>
@@ -69,13 +70,13 @@ Jeśli powiedzie się, zwraca wartość 0. W przeciwnym razie zwraca wartość u
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są szczegółami implementacji infrastruktury używanymi do obsługi środowiska uruchomieniowego języka C i nie powinny być wywoływane bezpośrednio z kodu. Środowisko uruchomieniowe języka C używa *tabeli funkcji OnExit* do reprezentowania sekwencji funkcji zarejestrowanych przez wywołania do `atexit`, `at_quick_exit`, i. `_onexit` Struktura danych tabeli funkcji OnExit to nieprzezroczysta implementacja szczegółów środowiska uruchomieniowego języka C. kolejność i znaczenie jego składowych danych mogą ulec zmianie. Nie powinny być sprawdzane przez kod zewnętrzny.
+Te funkcje są szczegółami implementacji infrastruktury używanymi do obsługi środowiska uruchomieniowego języka C i nie powinny być wywoływane bezpośrednio z kodu. Środowisko uruchomieniowe języka C używa *tabeli funkcji OnExit* do reprezentowania sekwencji funkcji zarejestrowanych przez wywołania do `atexit` , `at_quick_exit` , i `_onexit` . Struktura danych tabeli funkcji OnExit to nieprzezroczysta implementacja szczegółów środowiska uruchomieniowego języka C. kolejność i znaczenie jego składowych danych mogą ulec zmianie. Nie powinny być sprawdzane przez kod zewnętrzny.
 
-`_initialize_onexit_table` Funkcja inicjuje tabelę funkcji OnExit do jej początkowej wartości.  Ta funkcja musi zostać wywołana przed przekazaniem tabeli funkcji OnExit do elementu `_register_onexit_function` lub `_execute_onexit_table`.
+`_initialize_onexit_table`Funkcja inicjuje tabelę funkcji OnExit do jej początkowej wartości.  Ta funkcja musi zostać wywołana przed przekazaniem tabeli funkcji OnExit do elementu `_register_onexit_function` lub `_execute_onexit_table` .
 
-`_register_onexit_function` Funkcja dołącza funkcję do końca tabeli funkcji OnExit.
+`_register_onexit_function`Funkcja dołącza funkcję do końca tabeli funkcji OnExit.
 
-`_execute_onexit_table` Funkcja wykonuje wszystkie funkcje w tabeli funkcji OnExit, czyści tabelę, a następnie zwraca. Po wywołaniu `_execute_onexit_table`, tabela jest w stanie nieprawidłowym; należy zainicjowana ponownie przez wywołanie `_initialize_onexit_table` przed jego użyciem.
+`_execute_onexit_table`Funkcja wykonuje wszystkie funkcje w tabeli funkcji OnExit, czyści tabelę, a następnie zwraca. Po wywołaniu `_execute_onexit_table` , tabela jest w stanie nieprawidłowym; musi być zainicjowana przez wywołanie `_initialize_onexit_table` przed ponownym użyciem.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
@@ -83,9 +84,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<Process. h>|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-Funkcje `_initialize_onexit_table`, `_register_onexit_function`i `_execute_onexit_table` są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
+`_initialize_onexit_table`Funkcje, `_register_onexit_function` i `_execute_onexit_table` są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

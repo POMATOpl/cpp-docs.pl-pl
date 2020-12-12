@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_FMA3_enable, _set_FMA3_enable'
 title: _get_FMA3_enable, _set_FMA3_enable
 ms.date: 04/05/2018
 api_name:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: dee75bf5b16b5fe5b619444f7f2736010bb42a84
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: d43b5e4e6db652c87bcddf9dd3c91371dc038f33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303677"
 ---
 # <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -42,10 +43,10 @@ int _get_FMA3_enable();
 
 ### <a name="parameters"></a>Parametry
 
-*flag*<br/>
+*znacznik*<br/>
 Ustaw wartość 1, aby włączyć implementacje FMA3 funkcji biblioteki zmiennoprzecinkowej przestępną Math na platformach x64 lub 0, aby użyć implementacji, które nie używają instrukcji FMA3.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
 Wartość różna od zera, jeśli są włączone implementacje FMA3 funkcji biblioteki zmiennoprzecinkowej przestępną Math. W przeciwnym razie zero.
 
@@ -61,11 +62,11 @@ Ponieważ implementacje FMA3 używają różnych algorytmów, nieznaczne różni
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_set_FMA3_enable**, **_get_FMA3_enable**| C: \<Math. h ><br />C++: \<cmath > lub \<Math. h >|
+|**_set_FMA3_enable**, **_get_FMA3_enable**| S \<math.h><br />C++: \<cmath> lub \<math.h>|
 
 **_Set_FMA3_enable** i **_get_FMA3_enable** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [Problemy przy migracji liczb zmiennoprzecinkowych](../../porting/floating-point-migration-issues.md)<br/>

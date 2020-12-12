@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _exec, _wexec Functions'
 title: _exec, _wexec — Funkcje
 ms.date: 11/04/2016
 api_location:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0a28c7bdc192e2e72c751e953987509c07611934
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300102"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec, _wexec — Funkcje
 

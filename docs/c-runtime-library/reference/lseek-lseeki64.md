@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _lseek, _lseeki64'
 title: _lseek, _lseeki64
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5ac536a0f1388f8d664aa6721900256da368d652
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299972"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -69,7 +70,7 @@ Deskryptor pliku odwołujący się do otwartego pliku.
 *Przesunięcie*<br/>
 Liczba bajtów od *początku*.
 
-*źródł*<br/>
+*połączenie pierwotne*<br/>
 Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -96,8 +97,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lseek**|\<IO. h>|
-|**_lseeki64**|\<IO. h>|
+|**_lseek**|\<io.h>|
+|**_lseeki64**|\<io.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

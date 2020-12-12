@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CParabolicTransitionFromAcceleration'
 title: Klasa CParabolicTransitionFromAcceleration
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-ms.openlocfilehash: 0aa5831e2262602ee46bd69031e5927a86b978e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 037c2ff8391b655c556339547966b14ee094fee0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301493"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Klasa CParabolicTransitionFromAcceleration
 
-Hermetyzuje przejście przyspieszania parabolicznego.
+Hermetyzuje przejście Parabolic-Acceleration.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,41 +40,41 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration CParabolicTransitionFrom](#cparabolictransitionfromacceleration)|Konstruuje przejście przyspieszania parabolicznego i inicjuje go z określonymi parametrami.|
+|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Tworzy przejście Parabolic-Acceleration i inicjuje je z określonymi parametrami.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::Tworzenie](#create)|Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia. (Zastępuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CParabolicTransitionFromAcceleration:: Create](#create)|Wywołuje bibliotekę przejściową w celu utworzenia hermetyzowanego obiektu COM przejścia. (Przesłania [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|Przyspieszenie zmiennej animacji podczas przejścia.|
-|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji na końcu przejścia.|
-|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|Prędkość zmiennej animacji na końcu przejścia.|
+|[CParabolicTransitionFromAcceleration:: m_dblAcceleration](#m_dblacceleration)|Przyspieszenie zmiennej animacji podczas przejścia.|
+|[CParabolicTransitionFromAcceleration:: m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji na końcu przejścia.|
+|[CParabolicTransitionFromAcceleration:: m_dblFinalVelocity](#m_dblfinalvelocity)|Szybkość zmiennej animacji na końcu przejścia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas przejścia przyspieszenie paraboliczne wartość zmiennej animacji zmienia się z wartości początkowej na wartość końcową kończącą się z określoną prędkością. Można kontrolować, jak szybko zmienna osiąga wartość końcową, określając szybkość przyspieszenia. Ponieważ wszystkie przejścia są czyszczone automatycznie, zaleca się przydzielenie ich przy użyciu nowego operatora. Zhermetyzowany obiekt COM IUIAnimationTransition jest tworzony przez CAnimationController::AnimateGroup, do tego czasu jest null. Zmiana zmiennych członkowskich po utworzeniu tego obiektu COM nie ma wpływu.
+Podczas przejścia Parabolic-Acceleration wartość zmiennej animacji zmienia się z wartości początkowej na końcową wartość kończącą się określoną szybkością. Można kontrolować, jak szybko zmienna osiągnie wartość końcową, określając częstotliwość przyspieszenia. Ponieważ wszystkie przejścia są automatycznie wyczyszczone, zaleca się ich przydzielenie przy użyciu operatora new. Obiekt hermetyzowanych IUIAnimationTransition COM jest tworzony przez CAnimationController:: Animuj, do momentu, aż będzie miał wartość NULL. Zmiana zmiennych Członkowskich po utworzeniu tego obiektu COM nie ma żadnego skutku.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition (Transport baz)](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
 [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxanimationcontroller.h
+**Nagłówek:** afxanimationcontroller. h
 
-## <a name="cparabolictransitionfromaccelerationcparabolictransitionfromacceleration"></a><a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration CParabolicTransitionFrom
+## <a name="cparabolictransitionfromaccelerationcparabolictransitionfromacceleration"></a><a name="cparabolictransitionfromacceleration"></a> CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration
 
-Konstruuje przejście przyspieszania parabolicznego i inicjuje go z określonymi parametrami.
+Tworzy przejście Parabolic-Acceleration i inicjuje je z określonymi parametrami.
 
 ```
 CParabolicTransitionFromAcceleration(
@@ -88,14 +89,14 @@ CParabolicTransitionFromAcceleration(
 Wartość zmiennej animacji na końcu przejścia.
 
 *dblFinalVelocity*<br/>
-Prędkość zmiennej animacji na końcu przejścia.
+Szybkość zmiennej animacji na końcu przejścia.
 
-*dblAkceleracja*<br/>
+*dblAcceleration*<br/>
 Przyspieszenie zmiennej animacji podczas przejścia.
 
-## <a name="cparabolictransitionfromaccelerationcreate"></a><a name="create"></a>CParabolicTransitionFromAcceleration::Tworzenie
+## <a name="cparabolictransitionfromaccelerationcreate"></a><a name="create"></a> CParabolicTransitionFromAcceleration:: Create
 
-Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia.
+Wywołuje bibliotekę przejściową w celu utworzenia hermetyzowanego obiektu COM przejścia.
 
 ```
 virtual BOOL Create(
@@ -105,14 +106,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pBrabrary*<br/>
-Wskaźnik do biblioteki przejścia, który jest odpowiedzialny za tworzenie standardowych przejść.
+*pLibrary*<br/>
+Wskaźnik do biblioteki przejściowej, który jest odpowiedzialny za tworzenie standardowych przejść.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli przejście zostanie utworzone pomyślnie; w przeciwnym razie FALSE.
+Wartość TRUE, jeśli przejście zostało utworzone pomyślnie; w przeciwnym razie FALSE.
 
-## <a name="cparabolictransitionfromaccelerationm_dblacceleration"></a><a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration
+## <a name="cparabolictransitionfromaccelerationm_dblacceleration"></a><a name="m_dblacceleration"></a> CParabolicTransitionFromAcceleration:: m_dblAcceleration
 
 Przyspieszenie zmiennej animacji podczas przejścia.
 
@@ -120,7 +121,7 @@ Przyspieszenie zmiennej animacji podczas przejścia.
 DOUBLE m_dblAcceleration;
 ```
 
-## <a name="cparabolictransitionfromaccelerationm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a> CParabolicTransitionFromAcceleration:: m_dblFinalValue
 
 Wartość zmiennej animacji na końcu przejścia.
 
@@ -128,9 +129,9 @@ Wartość zmiennej animacji na końcu przejścia.
 DOUBLE m_dblFinalValue;
 ```
 
-## <a name="cparabolictransitionfromaccelerationm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a> CParabolicTransitionFromAcceleration:: m_dblFinalVelocity
 
-Prędkość zmiennej animacji na końcu przejścia.
+Szybkość zmiennej animacji na końcu przejścia.
 
 ```
 DOUBLE m_dblFinalVelocity;
