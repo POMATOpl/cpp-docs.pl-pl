@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: Praca z szablonami konsumentów OLE DB'
 title: Praca z szablonami konsumentów OLE DB
 ms.date: 10/24/2018
 helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62d4920ab38cf960a3dec0bf8845016a42d798a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319082"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Praca z szablonami konsumentów OLE DB
 
@@ -18,11 +19,11 @@ W poniższych tematach przedstawiono kilka przykładów użycia szablonów konsu
 
 - [Upraszczanie dostępu do danych za pomocą atrybutów bazy danych](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
-- [Składowe danych dotyczące stanu pola w metodach dostępu generowanych przez kreatora](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
+- [Elementy członkowskie danych o stanie pola w metodzie dostępu Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
 
 - [Przechodzenie przez prosty zestaw wierszy](../../data/oledb/traversing-a-simple-rowset.md)
 
-- [Uruchamianie zapytania parametrycznego](../../data/oledb/issuing-a-parameterized-query.md)
+- [Wydawanie sparametryzowanych zapytań](../../data/oledb/issuing-a-parameterized-query.md)
 
 - [Pobieranie danych](../../data/oledb/fetching-data.md)
 
@@ -46,7 +47,7 @@ W poniższych tematach przedstawiono kilka przykładów użycia szablonów konsu
 
 - [Pobieranie obiektu BLOB](../../data/oledb/retrieving-a-blob.md)
 
-- [Odbieranie powiadomień](../../data/oledb/receiving-notifications.md)
+- [Otrzymywanie powiadomień](../../data/oledb/receiving-notifications.md)
 
 Aby zapoznać się z przykładem tworzenia i implementowania konsumenta OLE DB, zobacz [Tworzenie prostego konsumenta](../../data/oledb/creating-an-ole-db-consumer.md).
 

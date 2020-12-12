@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Jednoargumentowe operatory arytmetyczne'
 title: Jednoargumentowe operatory arytmetyczne
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
-ms.openlocfilehash: 0acbd98e25c05fee6fb5217bf00d80287460dbeb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e4abf78f0db41d85a5954137fac1dba913735a1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318406"
 ---
 # <a name="unary-arithmetic-operators"></a>Jednoargumentowe operatory arytmetyczne
 
@@ -57,6 +58,6 @@ if( !(x < y) )
 
 Jeśli `x` jest większy lub równy od `y`, wynikiem wyrażenia jest 1 (true). Jeśli `x` jest mniejszy od `y`, wynik jest równy 0 (false).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)

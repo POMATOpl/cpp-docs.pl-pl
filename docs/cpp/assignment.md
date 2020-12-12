@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej o: przypisywaniu'
 title: Przypisanie
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 696706202e70e8baf50dda34ac98ff9bca5dcda2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319495"
 ---
 # <a name="assignment"></a>Przypisanie
 
-Operator przypisania ( **=** ) jest, ściśle mówiący, operator binarny. Jego deklaracja jest taka sama jak każdy inny operator binarny z następującymi wyjątkami:
+Operator przypisania ( **=** ) to, dokładnie mówiąc, operator binarny. Jego deklaracja jest taka sama jak każdy inny operator binarny z następującymi wyjątkami:
 
 - Musi to być niestatyczna funkcja członkowska. Nie można zadeklarować **operatora =** jako funkcji nienależącej do elementu członkowskiego.
 - Nie są dziedziczone przez klasy pochodne.
@@ -70,5 +71,5 @@ Point pt4(pt1); // Copy constructor call.
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Przeładowanie operatora](../cpp/operator-overloading.md)
+- [Przeciążanie operatora](../cpp/operator-overloading.md)
 - [Konstruktory kopiujące i kopiujące operatory przypisania (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

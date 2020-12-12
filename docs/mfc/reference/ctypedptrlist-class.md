@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CTypedPtrList'
 title: Klasa CTypedPtrList
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 9f4899d4470903a4145cc171579e4b251b984f95
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 353e9af00b1366b260ce3cb3689018a8e4e370c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318536"
 ---
 # <a name="ctypedptrlist-class"></a>Klasa CTypedPtrList
 
-Zapewnia bezpieczne dla typu "otokę" `CPtrList`dla obiektów klasy.
+Zapewnia bezpieczną "otokę" dla obiektów klasy `CPtrList` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,7 +48,7 @@ class CTypedPtrList : public BASE_CLASS
 #### <a name="parameters"></a>Parametry
 
 *BASE_CLASS*<br/>
-Klasa podstawowa klasy listy wpisanych wskaźników; musi być klasą `CObList` listy `CPtrList`wskaźników ( lub ).
+Klasa bazowa klasy listy wskaźników o określonym typie; musi być klasą listy wskaźników ( `CObList` lub `CPtrList` ).
 
 *TYP*<br/>
 Typ elementów przechowywanych na liście klas podstawowych.
@@ -58,34 +59,34 @@ Typ elementów przechowywanych na liście klas podstawowych.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Lista CTypedPtrList::Głowica dodania](#addhead)|Dodaje element (lub wszystkie elementy na innej liście) do głowy listy (tworzy nową głowę).|
-|[Lista CTypedPtrList::AddTail](#addtail)|Dodaje element (lub wszystkie elementy na innej liście) do ogona listy (tworzy nowy ogon).|
-|[Lista CTypedPtrList::GetAt](#getat)|Pobiera element w danej pozycji.|
-|[Lista CTypedPtrList::GetHead](#gethead)|Zwraca element head listy (nie może być pusty).|
-|[Lista CTypedPtrList::GetNext](#getnext)|Pobiera następny element do iteracji.|
-|[Lista CTypedPtrList::GetPrev](#getprev)|Pobiera poprzedni element do iteracji.|
-|[Lista CTypedPtrList::GetTail](#gettail)|Zwraca element ogonowy listy (nie może być pusty).|
-|[Lista CTypedPtrList::Usuńgłówkę](#removehead)|Usuwa element z głowy listy.|
-|[Lista CTypedPtrList::Usuńtail](#removetail)|Usuwa element z ogona listy.|
-|[Lista CTypedPtrList::SetAt](#setat)|Ustawia element w danej pozycji.|
+|[CTypedPtrList:: addszef](#addhead)|Dodaje element (lub wszystkie elementy z innej listy) do nagłówka listy (tworzy nowy nagłówek).|
+|[CTypedPtrList:: AddTail](#addtail)|Dodaje element (lub wszystkie elementy z innej listy) do ogona listy (tworzy nowy ogon).|
+|[CTypedPtrList::GetAt](#getat)|Pobiera element w danym położeniu.|
+|[CTypedPtrList:: getszef](#gethead)|Zwraca element główny listy (nie może być pusty).|
+|[CTypedPtrList:: GetNext](#getnext)|Pobiera następny element do iteracji.|
+|[CTypedPtrList:: getpoprz](#getprev)|Pobiera poprzedni element do iteracji.|
+|[CTypedPtrList:: GetTail](#gettail)|Zwraca element końcowy listy (nie może być pusty).|
+|[CTypedPtrList::RemoveHead](#removehead)|Usuwa element z nagłówka listy.|
+|[CTypedPtrList::RemoveTail](#removetail)|Usuwa element z ogona listy.|
+|[CTypedPtrList::SetAt](#setat)|Ustawia element w danym położeniu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas korzystania, `CTypedPtrList` `CObList` a `CPtrList`nie lub , C++ funkcji sprawdzania typu pomaga wyeliminować błędy spowodowane przez niedopasowane typy wskaźników.
+Gdy używasz `CTypedPtrList` , a nie `CObList` lub `CPtrList` , funkcja sprawdzania typu C++ pomaga wyeliminować błędy spowodowane niezgodnymi typami wskaźnika.
 
-Ponadto `CTypedPtrList` otoka wykonuje większość odlewania, które byłyby wymagane, jeśli używany `CObList` lub `CPtrList`.
+Ponadto `CTypedPtrList` otoka wykonuje większość rzutowania, które byłyby wymagane, jeśli użyto `CObList` lub `CPtrList` .
 
-Ponieważ `CTypedPtrList` wszystkie funkcje są wbudowane, użycie tego szablonu nie ma znaczącego wpływu na rozmiar lub szybkość kodu.
+Ponieważ wszystkie `CTypedPtrList` funkcje są wbudowane, użycie tego szablonu nie ma znacząco wpływu na rozmiar lub szybkość kodu.
 
-Listy pochodzące `CObList` z mogą być serializowane, `CPtrList` ale te pochodzące z nie może.
+Listy pochodne `CObList` można serializować, ale te pochodne od `CPtrList` nie mogą.
 
-Po `CTypedPtrList` usunięciu obiektu lub usunięciu jego elementów usuwane są tylko wskaźniki, a nie elementy, do których się odwołują.
+Po `CTypedPtrList` usunięciu obiektu lub po usunięciu jego elementów zostaną usunięte tylko te wskaźniki, a nie jednostki, do których się odwołują.
 
-Aby uzyskać więcej `CTypedPtrList`informacji na temat używania , zobacz artykuły [Kolekcje](../../mfc/collections.md) i [klasy oparte na szablonach](../../mfc/template-based-classes.md).
+Aby uzyskać więcej informacji na temat korzystania z programu `CTypedPtrList` , zobacz [kolekcje](../../mfc/collections.md) artykułów i [klasy oparte na szablonach](../../mfc/template-based-classes.md).
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie `CTypedPtrList`tworzy wystąpienie , dodaje jeden obiekt, serializuje listę na dysku, a następnie usuwa obiekt:
+Ten przykład tworzy wystąpienie `CTypedPtrList` , dodaje jeden obiekt, serializować listę do dysku, a następnie usuwa obiekt:
 
 [!code-cpp[NVC_MFCCollections#110](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]
 
@@ -101,11 +102,11 @@ W tym przykładzie `CTypedPtrList`tworzy wystąpienie , dodaje jeden obiekt, ser
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtempl.h
+**Nagłówek:** afxtempl. h
 
-## <a name="ctypedptrlistaddhead"></a><a name="addhead"></a>Lista CTypedPtrList::Głowica dodania
+## <a name="ctypedptrlistaddhead"></a><a name="addhead"></a> CTypedPtrList:: addszef
 
-Ta funkcja `BASE_CLASS`elementu członkowskiego wywołuje **::AddHead**.
+Ta funkcja elementu członkowskiego wywołuje `BASE_CLASS` **:: addszef**.
 
 ```
 POSITION AddHead(TYPE newElement);
@@ -117,26 +118,26 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 *TYP*<br/>
 Typ elementów przechowywanych na liście klas podstawowych.
 
-*nowyElement*<br/>
-Wskaźnik obiektu, który ma zostać dodany do tej listy. Wartość NULL jest dozwolona.
+*newElement*<br/>
+Wskaźnik obiektu, który ma zostać dodany do tej listy. Dozwolona jest wartość NULL.
 
 *BASE_CLASS*<br/>
-Klasa podstawowa klasy listy wpisanych wskaźników; musi być klasą listy wskaźników [(CObList](../../mfc/reference/coblist-class.md) lub [CPtrList).](../../mfc/reference/cptrlist-class.md)
+Klasa bazowa klasy listy wskaźników o określonym typie; musi być klasą listy wskaźników ( [CObList](../../mfc/reference/coblist-class.md) lub [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
-*pNowa Lista*<br/>
-Wskaźnik do innego obiektu [CTypedPtrList.](../../mfc/reference/ctypedptrlist-class.md) Elementy w *pNewList* zostaną dodane do tej listy.
+*pNewList*<br/>
+Wskaźnik do innego obiektu [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) . Elementy w *pNewList* zostaną dodane do tej listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza wersja zwraca wartość POSITION nowo wstawionego elementu.
+Pierwsza wersja zwraca wartość pozycji nowo wstawionego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza wersja dodaje nowy element przed szefem listy. Druga wersja dodaje kolejną listę elementów przed głową.
+Pierwsza wersja dodaje nowy element przed nagłówkiem listy. Druga wersja dodaje kolejną listę elementów przed nagłówkiem.
 
-## <a name="ctypedptrlistaddtail"></a><a name="addtail"></a>Lista CTypedPtrList::AddTail
+## <a name="ctypedptrlistaddtail"></a><a name="addtail"></a> CTypedPtrList:: AddTail
 
-Ta funkcja `BASE_CLASS`elementu członkowskiego wywołuje **::AddTail**.
+Ta funkcja elementu członkowskiego wywołuje `BASE_CLASS` **:: AddTail**.
 
 ```
 POSITION AddTail(TYPE newElement);
@@ -148,26 +149,26 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 *TYP*<br/>
 Typ elementów przechowywanych na liście klas podstawowych.
 
-*nowyElement*<br/>
-Wskaźnik obiektu, który ma zostać dodany do tej listy. Wartość NULL jest dozwolona.
+*newElement*<br/>
+Wskaźnik obiektu, który ma zostać dodany do tej listy. Dozwolona jest wartość NULL.
 
 *BASE_CLASS*<br/>
-Klasa podstawowa klasy listy wpisanych wskaźników; musi być klasą listy wskaźników [(CObList](../../mfc/reference/coblist-class.md) lub [CPtrList).](../../mfc/reference/cptrlist-class.md)
+Klasa bazowa klasy listy wskaźników o określonym typie; musi być klasą listy wskaźników ( [CObList](../../mfc/reference/coblist-class.md) lub [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
-*pNowa Lista*<br/>
-Wskaźnik do innego obiektu [CTypedPtrList.](../../mfc/reference/ctypedptrlist-class.md) Elementy w *pNewList* zostaną dodane do tej listy.
+*pNewList*<br/>
+Wskaźnik do innego obiektu [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) . Elementy w *pNewList* zostaną dodane do tej listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza wersja zwraca wartość POSITION nowo wstawionego elementu.
+Pierwsza wersja zwraca wartość pozycji nowo wstawionego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza wersja dodaje nowy element po ogonie listy. Druga wersja dodaje inną listę elementów po ogonie listy.
+Pierwsza wersja dodaje nowy element po końcu listy. Druga wersja dodaje kolejną listę elementów po końcu listy.
 
-## <a name="ctypedptrlistgetat"></a><a name="getat"></a>Lista CTypedPtrList::GetAt
+## <a name="ctypedptrlistgetat"></a><a name="getat"></a> CTypedPtrList::GetAt
 
-Zmienna typu POSITION jest kluczem listy.
+Zmienna typu pozycja jest kluczem dla listy.
 
 ```
 TYPE& GetAt(POSITION position);
@@ -179,26 +180,26 @@ TYPE GetAt(POSITION position) const;
 *TYP*<br/>
 Parametr szablonu określający typ elementów przechowywanych na liście.
 
-*Pozycji*<br/>
-Wartość POSITION zwrócona `GetHeadPosition` przez `Find` poprzednie wywołanie funkcji lub element członkowski.
+*umieścić*<br/>
+Wartość pozycji zwrócona przez poprzednie `GetHeadPosition` lub `Find` wywołanie funkcji składowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest dostępna za pomocą `const CTypedPtrList`wskaźnika do , a następnie `GetAt` zwraca wskaźnik typu określonego przez parametr szablonu *TYP*. Dzięki temu funkcja ma być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
+Jeśli dostęp do listy jest uzyskiwany za pomocą wskaźnika do `const CTypedPtrList` , a następnie `GetAt` zwraca wskaźnik typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
 
-Jeśli lista jest dostępna bezpośrednio lub za `CTypedPtrList`pośrednictwem `GetAt` wskaźnika do , a następnie zwraca odwołanie do wskaźnika typu określonego przez parametr *szablonu TYPE*. Dzięki temu funkcja ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista jest dostępna bezpośrednio lub za pomocą wskaźnika do `CTypedPtrList` , a następnie `GetAt` zwraca odwołanie do wskaźnika typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana po obu stronach instrukcji przypisania i w ten sposób zezwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
-To nie jest to samo co indeks i nie można obsługiwać na position wartość samodzielnie. `GetAt`pobiera `CObject` wskaźnik skojarzony z danym pozycją.
+Nie jest taki sam jak indeks i nie można wykonać operacji na wartości pozycji samodzielnie. `GetAt` Pobiera `CObject` wskaźnik skojarzony z daną pozycją.
 
-Należy upewnić się, że wartość POSITION reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowania biblioteki klas programu Microsoft Foundation potwierdza.
+Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowana biblioteka MFC potwierdzenia.
 
-Ta wbudowana `BASE_CLASS`funkcja wywołuje **::GetAt**.
+Ta wbudowana funkcja wywołuje `BASE_CLASS` **:: GetAt**.
 
-## <a name="ctypedptrlistgethead"></a><a name="gethead"></a>Lista CTypedPtrList::GetHead
+## <a name="ctypedptrlistgethead"></a><a name="gethead"></a> CTypedPtrList:: getszef
 
-Pobiera wskaźnik, który reprezentuje element head tej listy.
+Pobiera wskaźnik reprezentujący element nagłówka tej listy.
 
 ```
 TYPE& GetHead();
@@ -212,17 +213,17 @@ Parametr szablonu określający typ elementów przechowywanych na liście.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest dostępna za pomocą `const CTypedPtrList`wskaźnika do , a następnie `GetHead` zwraca wskaźnik typu określonego przez parametr szablonu *TYP*. Dzięki temu funkcja ma być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
+Jeśli dostęp do listy jest uzyskiwany za pomocą wskaźnika do `const CTypedPtrList` , a następnie `GetHead` zwraca wskaźnik typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
 
-Jeśli lista jest dostępna bezpośrednio lub za `CTypedPtrList`pośrednictwem `GetHead` wskaźnika do , a następnie zwraca odwołanie do wskaźnika typu określonego przez parametr *szablonu TYPE*. Dzięki temu funkcja ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista jest dostępna bezpośrednio lub za pomocą wskaźnika do `CTypedPtrList` , a następnie `GetHead` zwraca odwołanie do wskaźnika typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana po obu stronach instrukcji przypisania i w ten sposób zezwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Przed wywołaniem należy upewnić się, że lista nie jest pusta. `GetHead` Jeśli lista jest pusta, potwierdza to wersja debugowania biblioteki klas programu Microsoft Foundation. Użyj [IsEmpty,](../../mfc/reference/coblist-class.md#isempty) aby sprawdzić, czy lista zawiera elementy.
+Przed wywołaniem należy upewnić się, że lista nie jest pusta `GetHead` . Jeśli lista jest pusta, wówczas wersja do debugowania biblioteka MFC potwierdzenia. Użyj [IsEmpty](../../mfc/reference/coblist-class.md#isempty) , aby sprawdzić, czy lista zawiera elementy.
 
-## <a name="ctypedptrlistgetnext"></a><a name="getnext"></a>Lista CTypedPtrList::GetNext
+## <a name="ctypedptrlistgetnext"></a><a name="getnext"></a> CTypedPtrList:: GetNext
 
-Pobiera element listy identyfikowany przez *rPosition*, a następnie ustawia *rPosition* do wartości POSITION następnego wpisu na liście.
+Pobiera element list identyfikowany przez *elemencie rPosition*, a następnie ustawia *elemencie RPOSITION* na wartość pozycji następnego wpisu na liście.
 
 ```
 TYPE& GetNext(POSITION& rPosition);
@@ -234,28 +235,28 @@ TYPE GetNext(POSITION& rPosition) const;
 *TYP*<br/>
 Parametr szablonu określający typ elementów zawartych na tej liście.
 
-*rPozycja*<br/>
-Odwołanie do wartości POSITION zwróconej `GetNext` `GetHeadPosition`przez poprzednie , lub inne wywołanie funkcji elementu członkowskiego.
+*Elemencie rPosition*<br/>
+Odwołanie do wartości pozycji zwróconej przez poprzednie `GetNext` , `GetHeadPosition` lub inne wywołanie funkcji składowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest dostępna za pomocą `const CTypedPtrList`wskaźnika do , a następnie `GetNext` zwraca wskaźnik typu określonego przez parametr szablonu *TYP*. Dzięki temu funkcja ma być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
+Jeśli dostęp do listy jest uzyskiwany za pomocą wskaźnika do `const CTypedPtrList` , a następnie `GetNext` zwraca wskaźnik typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
 
-Jeśli lista jest dostępna bezpośrednio lub za `CTypedPtrList`pośrednictwem `GetNext` wskaźnika do , a następnie zwraca odwołanie do wskaźnika typu określonego przez parametr *szablonu TYPE*. Dzięki temu funkcja ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista jest dostępna bezpośrednio lub za pomocą wskaźnika do `CTypedPtrList` , a następnie `GetNext` zwraca odwołanie do wskaźnika typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana po obu stronach instrukcji przypisania i w ten sposób zezwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Można użyć `GetNext` w pętli iteracji do przodu, jeśli ustanowisz pozycję początkową za pomocą wywołania `GetHeadPosition` lub listy [CPtrList::Find](../../mfc/reference/coblist-class.md#find).
+Można użyć `GetNext` w pętli iteracji do przodu w przypadku ustanowienia początkowej pozycji z wywołaniem `GetHeadPosition` lub [CPtrList:: find](../../mfc/reference/coblist-class.md#find).
 
-Należy upewnić się, że wartość POSITION reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowania biblioteki klas programu Microsoft Foundation potwierdza.
+Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowana biblioteka MFC potwierdzenia.
 
-Jeśli pobrany element jest ostatnim na liście, nowa wartość *rPosition* jest ustawiona na WARTOŚĆ NULL.
+Jeśli pobrany element jest ostatni na liście, Nowa wartość *elemencie rPosition* jest ustawiona na wartość null.
 
-Możliwe jest usunięcie elementu podczas iteracji. Zobacz przykład [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).
+Istnieje możliwość usunięcia elementu podczas iteracji. Zobacz przykład dla [CObList:: RemoveAt](../../mfc/reference/coblist-class.md#removeat).
 
-## <a name="ctypedptrlistgetprev"></a><a name="getprev"></a>Lista CTypedPtrList::GetPrev
+## <a name="ctypedptrlistgetprev"></a><a name="getprev"></a> CTypedPtrList:: getpoprz
 
-Pobiera element listy identyfikowany przez *rPosition*, a następnie ustawia *rPosition* do wartości POSITION poprzedniego wpisu na liście.
+Pobiera element list identyfikowany przez *elemencie rPosition*, a następnie ustawia *elemencie RPOSITION* na wartość pozycji poprzedniej pozycji na liście.
 
 ```
 TYPE& GetPrev(POSITION& rPosition);
@@ -267,26 +268,26 @@ TYPE GetPrev(POSITION& rPosition) const;
 *TYP*<br/>
 Parametr szablonu określający typ elementów zawartych na tej liście.
 
-*rPozycja*<br/>
-Odwołanie do wartości POSITION zwróconej `GetPrev` przez poprzednie lub inne wywołanie funkcji elementu członkowskiego.
+*Elemencie rPosition*<br/>
+Odwołanie do wartości pozycji zwróconej przez poprzednie `GetPrev` lub inne wywołanie funkcji składowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest dostępna za pomocą `const CTypedPtrList`wskaźnika do , a następnie `GetPrev` zwraca wskaźnik typu określonego przez parametr szablonu *TYP*. Dzięki temu funkcja ma być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
+Jeśli dostęp do listy jest uzyskiwany za pomocą wskaźnika do `const CTypedPtrList` , a następnie `GetPrev` zwraca wskaźnik typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
 
-Jeśli lista jest dostępna bezpośrednio lub za `CTypedPtrList`pośrednictwem `GetPrev` wskaźnika do , a następnie zwraca odwołanie do wskaźnika typu określonego przez parametr *szablonu TYPE*. Dzięki temu funkcja ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista jest dostępna bezpośrednio lub za pomocą wskaźnika do `CTypedPtrList` , a następnie `GetPrev` zwraca odwołanie do wskaźnika typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana po obu stronach instrukcji przypisania i w ten sposób zezwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Można użyć `GetPrev` w pętli reverse iteracji, jeśli ustalisz `GetTailPosition` `Find`pozycję początkową za pomocą wywołania lub .
+Można użyć `GetPrev` w pętli wstecznej iteracji, jeśli zostanie nadana początkowa pozycja z wywołaniem `GetTailPosition` lub `Find` .
 
-Należy upewnić się, że wartość POSITION reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowania biblioteki klas programu Microsoft Foundation potwierdza.
+Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowana biblioteka MFC potwierdzenia.
 
-Jeśli pobrany element jest pierwszym na liście, nowa wartość *rPosition* jest ustawiona na WARTOŚĆ NULL.
+Jeśli pobrany element jest pierwszy na liście, Nowa wartość *elemencie rPosition* jest ustawiona na wartość null.
 
-## <a name="ctypedptrlistgettail"></a><a name="gettail"></a>Lista CTypedPtrList::GetTail
+## <a name="ctypedptrlistgettail"></a><a name="gettail"></a> CTypedPtrList:: GetTail
 
-Pobiera wskaźnik, który reprezentuje element head tej listy.
+Pobiera wskaźnik reprezentujący element nagłówka tej listy.
 
 ```
 TYPE& GetTail();
@@ -300,17 +301,17 @@ Parametr szablonu określający typ elementów przechowywanych na liście.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest dostępna za pomocą `const CTypedPtrList`wskaźnika do , a następnie `GetTail` zwraca wskaźnik typu określonego przez parametr szablonu *TYP*. Dzięki temu funkcja ma być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
+Jeśli dostęp do listy jest uzyskiwany za pomocą wskaźnika do `const CTypedPtrList` , a następnie `GetTail` zwraca wskaźnik typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana tylko po prawej stronie instrukcji przypisania i w ten sposób chroni listę przed modyfikacją.
 
-Jeśli lista jest dostępna bezpośrednio lub za `CTypedPtrList`pośrednictwem `GetTail` wskaźnika do , a następnie zwraca odwołanie do wskaźnika typu określonego przez parametr *szablonu TYPE*. Dzięki temu funkcja ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista jest dostępna bezpośrednio lub za pomocą wskaźnika do `CTypedPtrList` , a następnie `GetTail` zwraca odwołanie do wskaźnika typu określonego przez *Typ* parametru szablonu. Dzięki temu funkcja może być używana po obu stronach instrukcji przypisania i w ten sposób zezwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Przed wywołaniem należy upewnić się, że lista nie jest pusta. `GetTail` Jeśli lista jest pusta, potwierdza to wersja debugowania biblioteki klas programu Microsoft Foundation. Użyj [IsEmpty,](../../mfc/reference/coblist-class.md#isempty) aby sprawdzić, czy lista zawiera elementy.
+Przed wywołaniem należy upewnić się, że lista nie jest pusta `GetTail` . Jeśli lista jest pusta, wówczas wersja do debugowania biblioteka MFC potwierdzenia. Użyj [IsEmpty](../../mfc/reference/coblist-class.md#isempty) , aby sprawdzić, czy lista zawiera elementy.
 
-## <a name="ctypedptrlistremovehead"></a><a name="removehead"></a>Lista CTypedPtrList::Usuńgłówkę
+## <a name="ctypedptrlistremovehead"></a><a name="removehead"></a> CTypedPtrList::RemoveHead
 
-Usuwa element z głowy listy i zwraca go.
+Usuwa element z nagłówka listy i zwraca go.
 
 ```
 TYPE RemoveHead();
@@ -323,13 +324,13 @@ Parametr szablonu określający typ elementów przechowywanych na liście.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik wcześniej na czele listy. Ten wskaźnik jest typem określonym przez parametr szablonu *TYP*.
+Wskaźnik wcześniej umieszczony na początku listy. Ten wskaźnik jest typu określonego przez *Typ* parametru szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Przed wywołaniem należy upewnić się, że lista nie jest pusta. `RemoveHead` Jeśli lista jest pusta, potwierdza to wersja debugowania biblioteki klas programu Microsoft Foundation. Użyj [IsEmpty,](../../mfc/reference/coblist-class.md#isempty) aby sprawdzić, czy lista zawiera elementy.
+Przed wywołaniem należy upewnić się, że lista nie jest pusta `RemoveHead` . Jeśli lista jest pusta, wówczas wersja do debugowania biblioteka MFC potwierdzenia. Użyj [IsEmpty](../../mfc/reference/coblist-class.md#isempty) , aby sprawdzić, czy lista zawiera elementy.
 
-## <a name="ctypedptrlistremovetail"></a><a name="removetail"></a>Lista CTypedPtrList::Usuńtail
+## <a name="ctypedptrlistremovetail"></a><a name="removetail"></a> CTypedPtrList::RemoveTail
 
 Usuwa element z ogona listy i zwraca go.
 
@@ -344,15 +345,15 @@ Parametr szablonu określający typ elementów przechowywanych na liście.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik wcześniej na ogonie listy. Ten wskaźnik jest typem określonym przez parametr szablonu *TYP*.
+Wskaźnik wcześniej na końcu listy. Ten wskaźnik jest typu określonego przez *Typ* parametru szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Przed wywołaniem należy upewnić się, że lista nie jest pusta. `RemoveTail` Jeśli lista jest pusta, potwierdza to wersja debugowania biblioteki klas programu Microsoft Foundation. Użyj [IsEmpty,](../../mfc/reference/coblist-class.md#isempty) aby sprawdzić, czy lista zawiera elementy.
+Przed wywołaniem należy upewnić się, że lista nie jest pusta `RemoveTail` . Jeśli lista jest pusta, wówczas wersja do debugowania biblioteka MFC potwierdzenia. Użyj [IsEmpty](../../mfc/reference/coblist-class.md#isempty) , aby sprawdzić, czy lista zawiera elementy.
 
-## <a name="ctypedptrlistsetat"></a><a name="setat"></a>Lista CTypedPtrList::SetAt
+## <a name="ctypedptrlistsetat"></a><a name="setat"></a> CTypedPtrList::SetAt
 
-Ta funkcja `BASE_CLASS`elementu członkowskiego wywołuje **::SetAt**.
+Ta funkcja elementu członkowskiego wywołuje `BASE_CLASS` **:: SetAt**.
 
 ```cpp
 void SetAt(POSITION pos, TYPE newElement);
@@ -360,26 +361,26 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Położenie elementu, który ma być ustawiony.
+*Terminal*<br/>
+Pozycja elementu, który ma zostać ustawiony.
 
 *TYP*<br/>
 Typ elementów przechowywanych na liście klas podstawowych.
 
-*nowyElement*<br/>
+*newElement*<br/>
 Wskaźnik obiektu, który ma zostać zapisany na liście.
 
 ### <a name="remarks"></a>Uwagi
 
-Zmienna typu POSITION jest kluczem listy. To nie jest to samo co indeks i nie można obsługiwać na position wartość samodzielnie. `SetAt`zapisuje wskaźnik obiektu do określonej pozycji na liście.
+Zmienna typu pozycja jest kluczem dla listy. Nie jest taki sam jak indeks i nie można wykonać operacji na wartości pozycji samodzielnie. `SetAt` zapisuje wskaźnik obiektu do określonej pozycji na liście.
 
-Należy upewnić się, że wartość POSITION reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowania biblioteki klas programu Microsoft Foundation potwierdza.
+Musisz się upewnić, że wartość pozycji reprezentuje prawidłową pozycję na liście. Jeśli jest nieprawidłowa, wersja debugowana biblioteka MFC potwierdzenia.
 
-Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).
+Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObList:: SetAt](../../mfc/reference/coblist-class.md#setat).
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC Próbki COLLECT](../../overview/visual-cpp-samples.md)<br/>
+[ZBIERANIE próbek MFC](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CPtrList](../../mfc/reference/cptrlist-class.md)<br/>
 [Klasa CObList](../../mfc/reference/coblist-class.md)

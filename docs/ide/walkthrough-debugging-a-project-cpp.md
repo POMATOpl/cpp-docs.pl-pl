@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: debugowanie projektu (C++)'
 title: 'Wskazówki: debugowanie projektu (C++)'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99e5af935c1d5985b8c472fc807b1afbe61d66b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318679"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Wskazówki: debugowanie projektu (C++)
 
@@ -45,7 +46,7 @@ W tym instruktażu zmodyfikujesz program, aby rozwiązać problem znaleziony pod
 
 1. Po zakończeniu kompilacji uruchom ją w trybie debugowania, wybierając **Debuguj**  >  **Rozpocznij debugowanie** na pasku menu lub wybierając klawisz **F5** . Program zatrzymuje się przy pierwszym punkcie przerwania.
 
-1. Aby przejść przez program, na pasku menu wybierz **Debuguj**  >  **krok nad**lub wybierz klawisz **F10** .
+1. Aby przejść przez program, na pasku menu wybierz **Debuguj**  >  **krok nad** lub wybierz klawisz **F10** .
 
    Należy zauważyć, że po wykonaniu każdego `Cardgame` konstruktora wartość `totalParticipants` rośnie. Gdy `PlayGames` Funkcja zwraca, ponieważ każde `Cardgame` wystąpienie wykracza poza zakres i jest usuwane (a destruktor jest wywoływany), `totalParticipants` zmniejsza. Tuż przed **`return`** wykonaniem instrukcji jest `totalParticipants` równa 0.
 
@@ -56,7 +57,7 @@ W tym instruktażu zmodyfikujesz program, aby rozwiązać problem znaleziony pod
 **Poprzednie:** [Przewodnik: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 **Dalej:** [Przewodnik: wdrażanie programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty i systemy kompilacji](../build/projects-and-build-systems-cpp.md)<br/>

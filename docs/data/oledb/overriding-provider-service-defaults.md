@@ -1,22 +1,23 @@
 ---
+description: 'Dowiedz się więcej o: zastępowanie ustawień domyślnych usługi dostawcy'
 title: Zastępowanie ustawień domyślnych usługi dostawcy
 ms.date: 10/29/2018
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: 4cf3ad1064627f64315822a5045642aa50330d10
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eca6045c347ee8dc9295540d17bfc8feb225a73b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316924"
 ---
 # <a name="overriding-provider-service-defaults"></a>Zastępowanie ustawień domyślnych usługi dostawcy
 
 Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna właściwości inicjowania [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85)) w obiekcie źródła danych.
 
-Tak długo, jak istnieje wpis rejestru, obiekty dostawcy są agregowane. Użytkownik może zastąpić domyślne ustawienie dostawcy dla włączonych usług, ustawiając właściwość DBPROP_INIT_OLEDBSERVICES przed inicjalizacją. Aby włączyć lub wyłączyć określoną usługę, użytkownik pobiera bieżącą wartość właściwości DBPROP_INIT_OLEDBSERVICES, ustawia lub czyści bit dla konkretnej właściwości, która ma być włączona lub wyłączona, i resetuje właściwość. DBPROP_INIT_OLEDBSERVICES można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przesłanych do obiektu ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości w celu włączenia/wyłączenia poszczególnych usług są wymienione w poniższej tabeli.
+Tak długo, jak istnieje wpis rejestru, obiekty dostawcy są agregowane. Użytkownik może zastąpić domyślne ustawienie dostawcy dla włączonych usług, ustawiając właściwość DBPROP_INIT_OLEDBSERVICES przed inicjalizacją. Aby włączyć lub wyłączyć określoną usługę, użytkownik pobiera bieżącą wartość właściwości DBPROP_INIT_OLEDBSERVICES, ustawia lub czyści bit dla konkretnej właściwości, która ma być włączona lub wyłączona, i resetuje właściwość. DBPROP_INIT_OLEDBSERVICES można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przesłanych do obiektu ADO lub `IDataInitialize::GetDatasource` . Odpowiednie wartości w celu włączenia/wyłączenia poszczególnych usług są wymienione w poniższej tabeli.
 
 |Domyślne usługi włączone|DBPROP_INIT_OLEDBSERVICES wartość właściwości|Wartość w parametrach połączenia|
 |------------------------------|------------------------------------------------|--------------------------------|

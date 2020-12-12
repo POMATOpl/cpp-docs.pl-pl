@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: makra dla szablonów dostawców OLE DB'
 title: Makra dla szablonów dostawców OLE DB
 ms.date: 02/11/2019
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5e1e1137f49060273c60c73fc89c24c75fd2604d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504007"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317171"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra dla szablonów dostawców OLE DB
 
@@ -135,7 +136,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 *guid*<br/>
 podczas Identyfikator GUID właściwości.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas UPROPSET_HIDDEN dla dowolnych zestawów właściwości, których nie chcesz ujawniać, lub UPROPSET_PASSTHROUGH, aby uzyskać właściwości, które są zdefiniowane poza zakresem dostawcy.
 
 #### <a name="example"></a>Przykład
@@ -268,7 +269,7 @@ podczas `VARTYPE` Ten wpis właściwości. (Zdefiniowane w wtypes. h)
 *flagiDW*<br/>
 podczas Wartość [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) opisująca ten wpis właściwości.
 
-*wartościami*<br/>
+*wartość*<br/>
 podczas Wartość właściwości typu `DWORD` .
 
 *Opcje*<br/>
@@ -297,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 podczas Wartość [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) , która może być używana w połączeniu z identyfikatorem GUID zestawu właściwości do identyfikowania właściwości.
 
-*wartościami*<br/>
+*wartość*<br/>
 podczas Wartość właściwości typu `DWORD` .
 
 #### <a name="remarks"></a>Uwagi
@@ -414,7 +415,7 @@ podczas Nazwa kolumny.
 *liczbą*<br/>
 podczas Numer kolumny. Jeśli kolumna nie jest kolumną zakładki, numer kolumny nie może być równy 0.
 
-*flagi*<br/>
+*znaczników*<br/>
 podczas Określa sposób, w jaki dane są zwracane. Zobacz `dwFlags` Opis w [strukturach DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *colSize*<br/>

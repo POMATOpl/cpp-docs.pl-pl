@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy add_lvalue_reference
 title: Klasa add_lvalue_reference
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 5f822e3393853c780bfe4ee86d5a5c799ec7646d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 07bbfb96241b12c409b8754bdb4854e994c65cc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319912"
 ---
 # <a name="add_lvalue_reference-class"></a>Klasa add_lvalue_reference
 

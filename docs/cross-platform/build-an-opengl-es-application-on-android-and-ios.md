@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: kompilowanie aplikacji OpenGL ES w systemach Android i iOS'
 title: Tworzenie aplikacji OpenGL ES w systemach Android i iOS
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 278fd66202332417f7663542f0d66a3ec545b715
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: c840e9bbfd450c412ff7c0646127c157a3af565a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319420"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Tworzenie aplikacji OpenGL ES w systemach Android i iOS
 
@@ -27,11 +28,11 @@ W tym samouczku najpierw utworzysz nowy projekt aplikacji OpenGL ES. a następni
 
 ::: moniker range="msvc-150"
 
-1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt** .
+1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Nowy projekt** w obszarze **Szablony** wybierz pozycję **Visual C++** > **wiele platform** , a następnie wybierz szablon **aplikacja opengls (Android, iOS)** .
+1. W oknie dialogowym **Nowy projekt** w obszarze **Szablony** wybierz pozycję **Visual C++** > **wiele platform**, a następnie wybierz szablon **aplikacja opengls (Android, iOS)** .
 
-1. Nadaj aplikacji nazwę, na przykład *MyOpenGLESApp* , a następnie wybierz przycisk **OK** .
+1. Nadaj aplikacji nazwę, na przykład *MyOpenGLESApp*, a następnie wybierz przycisk **OK**.
 
    ![Nowy projekt aplikacji OpenGL](../cross-platform/media/cppmdd-opengles-newproj.png "Nowy projekt aplikacji OpenGL")
 
@@ -43,11 +44,11 @@ W tym samouczku najpierw utworzysz nowy projekt aplikacji OpenGL ES. a następni
 
 ::: moniker range=">=msvc-160"
 
-1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt** .
+1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Utwórz nowy projekt** wybierz szablon **aplikacja opengls (Android, iOS)** , a następnie wybierz przycisk **dalej** .
+1. W oknie dialogowym **Utwórz nowy projekt** wybierz szablon **aplikacja opengls (Android, iOS)** , a następnie wybierz przycisk **dalej**.
 
-1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź nazwę, taką jak *MyOpenGLESApp* w polu **Nazwa projektu** , a następnie wybierz pozycję **Utwórz** .
+1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź nazwę, taką jak *MyOpenGLESApp* w polu **Nazwa projektu**, a następnie wybierz pozycję **Utwórz**.
 
    Program Visual Studio tworzy nowe rozwiązanie i otwiera Eksplorator rozwiązań.
 
@@ -57,9 +58,9 @@ W tym samouczku najpierw utworzysz nowy projekt aplikacji OpenGL ES. a następni
 
 Nowe rozwiązanie aplikacji OpenGL ES zawiera trzy projekty biblioteki i dwa projekty aplikacji. Folder biblioteki zawiera współużytkowany projekt kodu. I dwa projekty specyficzne dla platformy, które odwołują się do udostępnionego kodu:
 
-- `MyOpenGLESApp.Android.NativeActivity` zawiera kod odwołań i przyklejania, który implementuje aplikację jako natywną aktywność w systemie Android. Punkty wejścia z kodu łączenia są zaimplementowane w *Main. cpp* , który obejmuje wspólny kod współużytkowany w `MyOpenGLESApp.Shared` . Wstępnie skompilowane nagłówki znajdują się w pliku *PCH. h* . Ten projekt aplikacji natywnej aktywności jest kompilowany do pliku biblioteki udostępnionej ( *. so* ), który jest wybierany przez `MyOpenGLESApp.Android.Packaging` projekt.
+- `MyOpenGLESApp.Android.NativeActivity` zawiera kod odwołań i przyklejania, który implementuje aplikację jako natywną aktywność w systemie Android. Punkty wejścia z kodu łączenia są zaimplementowane w *Main. cpp*, który obejmuje wspólny kod współużytkowany w `MyOpenGLESApp.Shared` . Wstępnie skompilowane nagłówki znajdują się w pliku *PCH. h*. Ten projekt aplikacji natywnej aktywności jest kompilowany do pliku biblioteki udostępnionej (*. so*), który jest wybierany przez `MyOpenGLESApp.Android.Packaging` projekt.
 
-- `MyOpenGLESApp.iOS.StaticLibrary` tworzy plik statycznej biblioteki systemu iOS ( *. a* ), który zawiera kod współużytkowany w `MyOpenGLESApp.Shared` . Jest on połączony z aplikacją utworzoną przez `MyOpenGLESApp.iOS.Application` projekt.
+- `MyOpenGLESApp.iOS.StaticLibrary` tworzy plik statycznej biblioteki systemu iOS (*. a*), który zawiera kod współużytkowany w `MyOpenGLESApp.Shared` . Jest on połączony z aplikacją utworzoną przez `MyOpenGLESApp.iOS.Application` projekt.
 
 - `MyOpenGLESApp.Shared` zawiera kod współużytkowany, który działa na różnych platformach. Używa makr preprocesora do kompilacji warunkowej kodu specyficznego dla platformy. Kod współużytkowany jest wybierany przez odwołanie do projektu w obu `MyOpenGLESApp.Android.NativeActivity` i `MyOpenGLESApp.iOS.StaticLibrary` .
 
@@ -81,7 +82,7 @@ Rozwiązanie utworzone przez szablon ustawia aplikację dla systemu Android jako
 
    Użyj procesora x86, aby wskazać emulator. Aby wybrać urządzenie docelowe, Wybierz platformę rozwiązania opartą na procesorze urządzeń. Jeśli lista **platform rozwiązania** nie zostanie wyświetlona, wybierz pozycję **platformy rozwiązań** z listy **Dodaj/Usuń przyciski** , a następnie wybierz swoją platformę.
 
-1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla `MyOpenGLESApp.Android.Packaging` projektu, a następnie wybierz polecenie **Kompiluj** .
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla `MyOpenGLESApp.Android.Packaging` projektu, a następnie wybierz polecenie **Kompiluj**.
 
    ![Kompiluj projekt pakietu systemu Android](../cross-platform/media/cppmdd-opengles-andbuild.png "Kompiluj projekt pakietu systemu Android")
 
@@ -125,7 +126,7 @@ Aby wdrożyć aplikację na urządzeniu z systemem iOS, najpierw Skonfiguruj aut
 
 1. Utwórz nowy projekt **aplikacji pojedynczego widoku** Xcode. Wypełnij pola wymagane podczas tworzenia projektu. Wartości mogą być dowolne, ponieważ projekt jest używany tylko do tworzenia profilu aprowizacji, który jest używany później do podpisywania kompilacji aplikacji.
 
-1. Dodaj identyfikator firmy Apple zarejestrowany na koncie [programu Apple Developer](https://developer.apple.com/programs/) , aby Xcode. Identyfikator Apple ID jest używany jako tożsamość podpisująca do podpisywania aplikacji. Aby dodać swoją tożsamość podpisującą w programie Xcode, otwórz menu **Xcode** i wybierz polecenie **Preferences (Preferencje** ). Wybierz pozycję **konta** , a następnie kliknij przycisk Dodaj (+), aby dodać identyfikator Apple ID. Aby uzyskać szczegółowe instrukcje, zobacz [Dodawanie konta Apple ID](https://help.apple.com/xcode/mac/current/#/devaf282080a).
+1. Dodaj identyfikator firmy Apple zarejestrowany na koncie [programu Apple Developer](https://developer.apple.com/programs/) , aby Xcode. Identyfikator Apple ID jest używany jako tożsamość podpisująca do podpisywania aplikacji. Aby dodać swoją tożsamość podpisującą w programie Xcode, otwórz menu **Xcode** i wybierz polecenie **Preferences (Preferencje**). Wybierz pozycję **konta** , a następnie kliknij przycisk Dodaj (+), aby dodać identyfikator Apple ID. Aby uzyskać szczegółowe instrukcje, zobacz [Dodawanie konta Apple ID](https://help.apple.com/xcode/mac/current/#/devaf282080a).
 
 1. W ustawieniach "ogólne" projektu Xcode Zmień wartość **identyfikatora pakietu** na `com.<NameOfVSProject>` , gdzie `<NameOfVSProject>` jest taka sama jak nazwa projektu rozwiązania Visual Studio, który został utworzony. Na przykład, jeśli utworzono projekt o nazwie `MyOpenGLESApp` w programie Visual Studio, ustaw **Identyfikator pakietu** na `com.MyOpenGLESApp` .
 
@@ -159,7 +160,7 @@ Aby wdrożyć aplikację na urządzeniu z systemem iOS, najpierw Skonfiguruj aut
 
 1. Zamknij `project.pbxproj` plik, a następnie otwórz menu skrótów dla niezaładowanego projektu MyOpenGLESApp. iOS. Application i wybierz polecenie **Załaduj ponownie projekt** w celu ponownego załadowania projektu.
 
-1. Teraz Skompiluj projekt MyOpenGLESApp. iOS. Application, otwierając menu skrótów dla projektu i wybierając opcję **Kompiluj** .
+1. Teraz Skompiluj projekt MyOpenGLESApp. iOS. Application, otwierając menu skrótów dla projektu i wybierając opcję **Kompiluj**.
 
    ![Kompiluj projekt aplikacji systemu iOS](../cross-platform/media/cppmdd-opengles-iosbuild.png "Kompiluj projekt aplikacji systemu iOS")
 

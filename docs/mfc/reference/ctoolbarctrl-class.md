@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CToolBarCtrl'
 title: Klasa CToolBarCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -182,12 +183,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: e62d1a6773e1b65eaa1d2f0a8050873c673b5039
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 769403be6e4015df1de04d41fcb0a1b2721ee434
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318562"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Praca z szablonami dostawców OLE DB'
 title: Praca z szablonami dostawców OLE DB
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: acea10c085059290d543cb3ca9382cf26f944f33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209246"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319069"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Praca z szablonami dostawców OLE DB
 
@@ -24,7 +25,7 @@ Aby dowiedzieć się, jak korzystać z szablonów dostawców OLE DB, zobacz nast
 
 - [Ustawianie właściwości w dostawcy](../../data/oledb/setting-properties-in-your-provider.md)
 
-- [Dynamiczne powiązanie kolumn w dostawcy](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
+- [Dynamiczne wiązanie kolumn w dostawcy](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
 
 - [Obsługa wolnych wątków w dostawcy](../../data/oledb/supporting-free-threading-in-your-provider.md)
 
@@ -36,5 +37,5 @@ Aby dowiedzieć się, jak korzystać z szablonów dostawców OLE DB, zobacz nast
 
 ## <a name="see-also"></a>Zobacz też
 
-[Szablony dostawców OLE DB — dokumentacja](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Dokumentacja szablonów dostawców OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: uruchamianie jako członek grupy użytkowników'
 title: Uruchamianie jako członek grupy użytkowników
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7b3f73dc572a3a132300eb0f246f68030f0b27dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319996"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Uruchamianie jako członek grupy użytkowników
 
@@ -30,7 +31,7 @@ Konta użytkowników systemu Windows, których deweloperzy używają normalnie, 
 
 ## <a name="exposing-customers-to-security-risks"></a>Ujawnianie klientom zagrożeń bezpieczeństwa
 
-Administratorzy nie są częścią grupy administratorów, ponieważ oprócz ochrony maszyn programistycznych uniemożliwia deweloperom przypadkowe pisanie kodu, który wymaga od klientów dołączenia do grupy administratorów w programie Aby wykonać opracowywane aplikacje. Jeśli kod, który wymaga dostępu administratora jest wprowadzany podczas opracowywania, zakończy się niepowodzeniem w czasie wykonywania i zostanie wysłany alert informujący o tym, że aplikacja wymaga od klientów uruchamiania jako administratorów.
+Administratorzy nie są częścią grupy administratorów, ponieważ oprócz ochrony maszyn programistycznych uniemożliwiają deweloperom przypadkowe pisanie kodu, który wymaga od klientów dołączenia do grupy administratorów w celu wykonywania tworzonych aplikacji. Jeśli kod, który wymaga dostępu administratora jest wprowadzany podczas opracowywania, zakończy się niepowodzeniem w czasie wykonywania i zostanie wysłany alert informujący o tym, że aplikacja wymaga od klientów uruchamiania jako administratorów.
 
 ## <a name="code-that-requires-administrator-privileges"></a>Kod wymagający uprawnień administratora
 

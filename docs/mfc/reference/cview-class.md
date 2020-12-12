@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CView'
 title: Klasa CView
 ms.date: 11/04/2016
 f1_keywords:
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 4c9623d34320b4489e6c086147cfff1038e95162
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8bb45bff3f63c2c1f9fd01d9c50091f5a3117d74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318484"
 ---
 # <a name="cview-class"></a>Klasa CView
 
@@ -163,7 +164,7 @@ Oprócz `CScrollView` , biblioteka MFC dostarcza dziewięć innych klas pochodz�
 
 **Nagłówek:** afxwin. h
 
-## <a name="cviewcview"></a><a name="cview"></a>CView:: CView
+## <a name="cviewcview"></a><a name="cview"></a> CView:: CView
 
 Konstruuje `CView` obiekt.
 
@@ -175,7 +176,7 @@ CView();
 
 Struktura wywołuje konstruktora po utworzeniu nowego okna ramki lub poddzieleniu okna. Zastąp funkcję elementu członkowskiego [OnInitialUpdate](#oninitialupdate) , aby zainicjować widok po dołączeniu dokumentu.
 
-## <a name="cviewdoprepareprinting"></a><a name="doprepareprinting"></a>CView::D oPreparePrinting
+## <a name="cviewdoprepareprinting"></a><a name="doprepareprinting"></a> CView::D oPreparePrinting
 
 Wywołaj tę funkcję z przesłonięcia [OnPreparePrinting](#onprepareprinting) , aby wywołać okno dialogowe drukowania i utworzyć kontekst urządzenia drukarki.
 
@@ -198,7 +199,7 @@ Zachowanie funkcji jest zależne od tego, czy jest wywoływana do drukowania czy
 
 Jeśli plik jest w wersji zapoznawczej, ta funkcja tworzy kontekst urządzenia drukarki przy użyciu bieżących ustawień drukarki. Ten kontekst urządzenia służy do symulowania drukarki w trakcie okresu zapoznawczego.
 
-## <a name="cviewgetdocument"></a><a name="getdocument"></a>CView:: GetDocument
+## <a name="cviewgetdocument"></a><a name="getdocument"></a> CView:: GetDocument
 
 Wywołaj tę funkcję, aby uzyskać wskaźnik do dokumentu widoku.
 
@@ -214,7 +215,7 @@ Wskaźnik do obiektu [CDocument](../../mfc/reference/cdocument-class.md) skojarz
 
 Umożliwia to wywoływanie funkcji Członkowskich dokumentu.
 
-## <a name="cviewisselected"></a><a name="isselected"></a>CView:: IsSelected
+## <a name="cviewisselected"></a><a name="isselected"></a> CView:: IsSelected
 
 Wywoływane przez platformę, aby sprawdzić, czy określony element dokumentu jest zaznaczony.
 
@@ -235,7 +236,7 @@ Różne od zera, jeśli wybrano określony element dokumentu; w przeciwnym razie
 
 Domyślna implementacja tej funkcji zwraca wartość FALSE. Zastąp tę funkcję, jeśli implementujesz wybór za pomocą obiektów [CDocItem](../../mfc/reference/cdocitem-class.md) . Należy przesłonić tę funkcję, jeśli widok zawiera elementy OLE.
 
-## <a name="cviewonactivateframe"></a><a name="onactivateframe"></a>CView:: OnActivateFrame
+## <a name="cviewonactivateframe"></a><a name="onactivateframe"></a> CView:: OnActivateFrame
 
 Wywoływane przez platformę, gdy okno ramowe zawierające widok jest aktywowane lub dezaktywowane.
 
@@ -263,7 +264,7 @@ Wskaźnik do okna ramki, które ma zostać aktywowane.
 
 Zastąp tę funkcję elementu członkowskiego, jeśli chcesz przeprowadzić przetwarzanie specjalne, gdy okno ramki skojarzone z widokiem jest aktywowane lub dezaktywowane. Na przykład [CFormView](../../mfc/reference/cformview-class.md) wykonuje to zastąpienie, gdy zapisuje i przywraca formant, który ma fokus.
 
-## <a name="cviewonactivateview"></a><a name="onactivateview"></a>CView:: OnActivateView
+## <a name="cviewonactivateview"></a><a name="onactivateview"></a> CView:: OnActivateView
 
 Wywoływane przez platformę, gdy widok jest aktywowany lub dezaktywowany.
 
@@ -293,7 +294,7 @@ Parametry *pActivateView* i *pDeactiveView* wskazują ten sam widok, jeśli okno
 
 Parametry te różnią się, gdy [obiektu CFrameWnd:: SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) jest wywoływana z widokiem, który różni się od typu [obiektu CFrameWnd:: GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) . Zdarza się to najczęściej z oknami rozdzielacza.
 
-## <a name="cviewonbeginprinting"></a><a name="onbeginprinting"></a>CView:: OnBeginPrinting
+## <a name="cviewonbeginprinting"></a><a name="onbeginprinting"></a> CView:: OnBeginPrinting
 
 Wywoływane przez platformę na początku zadania drukowania lub podglądu wydruku po `OnPreparePrinting` wywołaniu.
 
@@ -317,7 +318,7 @@ Domyślna implementacja tej funkcji nic nie robi. Zastąp tę funkcję, aby przy
 
 Za pomocą tej funkcji można także wykonać inicjalizacje zależne od właściwości kontekstu urządzenia drukarki. Na przykład liczba stron wymaganych do drukowania dokumentu może zależeć od ustawień określonych przez użytkownika w oknie dialogowym Drukowanie (na przykład długość strony). W takiej sytuacji nie można określić długości dokumentu w funkcji składowej [OnPreparePrinting](#onprepareprinting) , gdzie zwykle to zrobisz; musisz poczekać, aż kontekst urządzenia drukarki zostanie utworzony na podstawie ustawień okna dialogowego. [OnBeginPrinting](#onbeginprinting) to pierwsza funkcja, która umożliwia dostęp do obiektu [przechwytywania](../../mfc/reference/cdc-class.md) , reprezentującego kontekst urządzenia drukarki, dzięki czemu można ustawić długość dokumentu z tej funkcji. Należy pamiętać, że jeśli długość dokumentu nie jest określona przez ten czas, pasek przewijania nie jest wyświetlany w podglądzie wydruku.
 
-## <a name="cviewondragenter"></a><a name="ondragenter"></a>CView:: OnDragEnter
+## <a name="cviewondragenter"></a><a name="ondragenter"></a> CView:: OnDragEnter
 
 Wywoływane przez platformę, gdy mysz po raz pierwszy przejdzie w region nieprzewijalny okna upuszczania Target.
 
@@ -359,7 +360,7 @@ Domyślna implementacja to nic robić i zwracają DROPEFFECT_NONE.
 
 Zastąp tę funkcję, aby przygotować się do przyszłych wywołań funkcji składowej [OnDragOver](#ondragover) . Wszystkie dane wymagane z obiektu danych powinny zostać pobrane w tym momencie do późniejszego użycia w `OnDragOver` funkcji członkowskiej. Widok powinien również zostać zaktualizowany w tym momencie, aby dać użytkownikowi opinię. Aby uzyskać więcej informacji, zobacz artykuł [OLE i przeciąganie i upuszczanie: Implementowanie elementu docelowego upuszczania](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
 
-## <a name="cviewondragleave"></a><a name="ondragleave"></a>CView:: OnDragLeave
+## <a name="cviewondragleave"></a><a name="ondragleave"></a> CView:: OnDragLeave
 
 Wywoływane przez platformę w trakcie operacji przeciągania, gdy wskaźnik myszy zostanie przeniesiony z prawidłowego obszaru upuszczania dla tego okna.
 
@@ -371,7 +372,7 @@ virtual void OnDragLeave();
 
 Przesłoń tę funkcję, jeśli bieżący widok wymaga oczyszczenia wszystkich akcji podjętych podczas wywołań [OnDragEnter](#ondragenter) lub [OnDragOver](#ondragover) , takich jak usuwanie dowolnych opinii użytkowników wizualnych, gdy obiekt został przeciągnięty i usunięty.
 
-## <a name="cviewondragover"></a><a name="ondragover"></a>CView:: OnDragOver
+## <a name="cviewondragover"></a><a name="ondragover"></a> CView:: OnDragOver
 
 Wywoływane przez platformę w trakcie operacji przeciągania, gdy wskaźnik myszy zostanie przesunięty nad oknem elementu docelowego upuszczania.
 
@@ -413,7 +414,7 @@ Domyślną implementacją jest wykonanie niczego i zwrócenie DROPEFFECT_NONE.
 
 Zastąp tę funkcję, aby dać użytkownikowi opinię wizualną podczas operacji przeciągania. Ponieważ ta funkcja jest wywoływana w sposób ciągły, każdy znajdujący się w niej kod powinien być zoptymalizowany jak najwięcej. Aby uzyskać więcej informacji, zobacz artykuł [OLE i przeciąganie i upuszczanie: Implementowanie elementu docelowego upuszczania](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
 
-## <a name="cviewondragscroll"></a><a name="ondragscroll"></a>CView:: OnDragScroll
+## <a name="cviewondragscroll"></a><a name="ondragscroll"></a> CView:: OnDragScroll
 
 Wywoływane przez platformę przed wywołaniem metody [OnDragEnter](#ondragenter) lub [OnDragOver](#ondragover) w celu ustalenia, czy punkt znajduje się w regionie przewijania.
 
@@ -451,7 +452,7 @@ Aby uzyskać więcej informacji, zobacz przykład zaawansowanych pojęć MFC [OC
 
 Zastąp tę funkcję, jeśli chcesz zapewnić specjalne zachowanie dla tego zdarzenia. Domyślna implementacja automatycznie przewija okna, gdy kursor jest przeciągany do domyślnego regionu przewijania wewnątrz obramowania każdego okna. Aby uzyskać więcej informacji, zobacz artykuł [OLE i przeciąganie i upuszczanie: Implementowanie elementu docelowego upuszczania](../../mfc/drag-and-drop-ole.md#implement-a-drop-target).
 
-## <a name="cviewondraw"></a><a name="ondraw"></a>CView:: OnDraw
+## <a name="cviewondraw"></a><a name="ondraw"></a> CView:: OnDraw
 
 Wywoływane przez platformę, by renderować obraz dokumentu.
 
@@ -472,7 +473,7 @@ Należy zastąpić tę funkcję, aby wyświetlić widok dokumentu. Wywołania in
 
 Aby zoptymalizować rysowanie, wywołaj funkcję członkowską [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) kontekstu urządzenia, aby dowiedzieć się, czy dany prostokąt zostanie narysowany. Jeśli chcesz rozróżnić normalny ekran wyświetlania i drukowania, wywołaj funkcję elementu członkowskiego [isprint](../../mfc/reference/cdc-class.md#isprinting) kontekstu urządzenia.
 
-## <a name="cviewondrop"></a><a name="ondrop"></a>CView:: OnDrop
+## <a name="cviewondrop"></a><a name="ondrop"></a> CView:: OnDrop
 
 Wywoływane przez platformę, gdy użytkownik zwalnia obiekt danych za pośrednictwem prawidłowego elementu docelowego upuszczania.
 
@@ -512,7 +513,7 @@ Zastąp tę funkcję, aby zaimplementować efekt upuszczania OLE w obszarze klie
 > [!NOTE]
 > Struktura nie wywołuje tej funkcji, jeśli w tej klasie widoku istnieje przesłonięcie do [OnDropEx](#ondropex) .
 
-## <a name="cviewondropex"></a><a name="ondropex"></a>CView:: OnDropEx
+## <a name="cviewondropex"></a><a name="ondropex"></a> CView:: OnDropEx
 
 Wywoływane przez platformę, gdy użytkownik zwalnia obiekt danych za pośrednictwem prawidłowego elementu docelowego upuszczania.
 
@@ -576,7 +577,7 @@ Efekty upuszczania opisują akcję skojarzoną z operacją drop. Zobacz poniższ
 
 Aby uzyskać więcej informacji na temat ustawiania domyślnego polecenia menu, zobacz Windows SDK [SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem) i [CMenu:: GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) w tym woluminie.
 
-## <a name="cviewonendprinting"></a><a name="onendprinting"></a>CView:: OnEndPrinting
+## <a name="cviewonendprinting"></a><a name="onendprinting"></a> CView:: OnEndPrinting
 
 Wywoływane przez platformę po wydrukowaniu lub podglądzie dokumentu.
 
@@ -598,7 +599,7 @@ Wskazuje strukturę [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) , 
 
 Domyślna implementacja tej funkcji nic nie robi. Przesłoń tę funkcję, aby zwolnić wszystkie zasoby GDI przydzieloną w funkcji składowej [OnBeginPrinting](#onbeginprinting) .
 
-## <a name="cviewonendprintpreview"></a><a name="onendprintpreview"></a>CView:: OnEndPrintPreview
+## <a name="cviewonendprintpreview"></a><a name="onendprintpreview"></a> CView:: OnEndPrintPreview
 
 Wywoływane przez platformę, gdy użytkownik opuszcza tryb podglądu wydruku.
 
@@ -630,7 +631,7 @@ Domyślna implementacja tej funkcji wywołuje funkcję członkowską [OnEndPrint
 
 Zawsze Wywołaj wersję klasy bazowej z `OnEndPrintPreview` przesłonięcia, zazwyczaj na końcu funkcji.
 
-## <a name="cviewoninitialupdate"></a><a name="oninitialupdate"></a>CView:: OnInitialUpdate
+## <a name="cviewoninitialupdate"></a><a name="oninitialupdate"></a> CView:: OnInitialUpdate
 
 Wywoływane przez platformę po pierwszym dołączeniu widoku do dokumentu, ale zanim widok jest początkowo wyświetlany.
 
@@ -642,7 +643,7 @@ virtual void OnInitialUpdate();
 
 Domyślna implementacja tej funkcji wywołuje funkcję elementu członkowskiego [OnUpdate](#onupdate) bez informacji o wskazówkach (to oznacza użycie wartości domyślnych 0 dla parametru *lHint* i wartości null dla parametru *pHint* ). Zastąp tę funkcję, aby wykonać jednorazowe inicjowanie, które wymaga informacji o dokumencie. Na przykład jeśli aplikacja ma dokumenty o stałym rozmiarze, można użyć tej funkcji do zainicjowania limitów przewijania widoku na podstawie rozmiaru dokumentu. Jeśli aplikacja obsługuje dokumenty o zmiennym rozmiarze, użyj [OnUpdate](#onupdate) , aby aktualizować limity przewijania za każdym razem, gdy dokument ulega zmianie.
 
-## <a name="cviewonpreparedc"></a><a name="onpreparedc"></a>CView:: OnPrepareDC
+## <a name="cviewonpreparedc"></a><a name="onpreparedc"></a> CView:: OnPrepareDC
 
 Wywoływane przez platformę przed wywołaniem funkcji składowej [OnDraw](#ondraw) na potrzeby wyświetlania ekranu oraz przed wywołaniem funkcji składowej [OnPrint](#onprint) dla każdej strony podczas drukowania lub podglądu wydruku.
 
@@ -680,7 +681,7 @@ Wywołaj wersję klasy bazowej `OnPrepareDC` na początku przesłonięcia.
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
-## <a name="cviewonprepareprinting"></a><a name="onprepareprinting"></a>CView:: OnPreparePrinting
+## <a name="cviewonprepareprinting"></a><a name="onprepareprinting"></a> CView:: OnPreparePrinting
 
 Wywoływane przez platformę przed wydrukowaniem lub podglądem dokumentu.
 
@@ -701,9 +702,9 @@ Od zera do rozpoczęcia drukowania; 0, jeśli zadanie drukowania zostało anulow
 
 Domyślna implementacja nie robi nic.
 
-Należy zastąpić tę funkcję, aby umożliwić drukowanie i Podgląd wydruku. Wywołaj funkcję elementu członkowskiego [DoPreparePrinting by otworzyć](#doprepareprinting) , przekazując ją do parametru *pInfo* , a następnie Zwróć wartość zwracaną. `DoPreparePrinting`wyświetla okno dialogowe Drukowanie i tworzy kontekst urządzenia drukarki. Jeśli chcesz zainicjować okno dialogowe Drukowanie z wartościami innymi niż domyślne, przypisz wartości do elementów członkowskich *pInfo*. Na przykład jeśli znasz długość dokumentu, przekaż wartość do funkcji składowej [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) elementu *pInfo* przed wywołaniem `DoPreparePrinting` . Ta wartość jest wyświetlana w polu do: w części zakres okna dialogowego drukowanie.
+Należy zastąpić tę funkcję, aby umożliwić drukowanie i Podgląd wydruku. Wywołaj funkcję elementu członkowskiego [DoPreparePrinting by otworzyć](#doprepareprinting) , przekazując ją do parametru *pInfo* , a następnie Zwróć wartość zwracaną. `DoPreparePrinting` wyświetla okno dialogowe Drukowanie i tworzy kontekst urządzenia drukarki. Jeśli chcesz zainicjować okno dialogowe Drukowanie z wartościami innymi niż domyślne, przypisz wartości do elementów członkowskich *pInfo*. Na przykład jeśli znasz długość dokumentu, przekaż wartość do funkcji składowej [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) elementu *pInfo* przed wywołaniem `DoPreparePrinting` . Ta wartość jest wyświetlana w polu do: w części zakres okna dialogowego drukowanie.
 
-`DoPreparePrinting`nie wyświetla okna dialogowego Drukuj dla zadania w wersji zapoznawczej. Jeśli chcesz ominąć okno dialogowe drukowania dla zadania drukowania, sprawdź, czy `m_bPreview` element członkowski *PINFO* ma wartość false, a następnie ustaw dla niego wartość true przed przekazaniem do niego, a następnie `DoPreparePrinting` zresetuj go do wartości false.
+`DoPreparePrinting` nie wyświetla okna dialogowego Drukuj dla zadania w wersji zapoznawczej. Jeśli chcesz ominąć okno dialogowe drukowania dla zadania drukowania, sprawdź, czy `m_bPreview` element członkowski *PINFO* ma wartość false, a następnie ustaw dla niego wartość true przed przekazaniem do niego, a następnie `DoPreparePrinting` zresetuj go do wartości false.
 
 Jeśli trzeba wykonać inicjalizacje, które wymagają dostępu do `CDC` obiektu reprezentującego kontekst urządzenia drukarki (na przykład jeśli trzeba znać rozmiar strony przed określeniem długości dokumentu), Zastąp `OnBeginPrinting` funkcję członkowską.
 
@@ -719,7 +720,7 @@ Jeśli wiesz, ile stron zawiera dokument, ustaw maksymalną stronę w polu `OnPr
 
 [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]
 
-## <a name="cviewonprint"></a><a name="onprint"></a>CView:: OnPrint
+## <a name="cviewonprint"></a><a name="onprint"></a> CView:: OnPrint
 
 Wywoływane przez platformę do drukowania lub wyświetlania podglądu strony dokumentu.
 
@@ -763,7 +764,7 @@ Poniżej przedstawiono szkielet dla zastąpionej `OnPrint` funkcji:
 
 Aby uzyskać inny przykład, zobacz [CRichEditView::P rintinsiderect](../../mfc/reference/cricheditview-class.md#printinsiderect).
 
-## <a name="cviewonscroll"></a><a name="onscroll"></a>CView:: OnScroll
+## <a name="cviewonscroll"></a><a name="onscroll"></a> CView:: OnScroll
 
 Wywoływane przez platformę, aby określić, czy przewijanie jest możliwe.
 
@@ -807,7 +808,7 @@ Jeśli *bDoScroll* ma wartość true, a widok został rzeczywiście przewinięty
 
 W jednym przypadku ta funkcja jest wywoływana przez platformę z *bDoScroll* ustawioną na wartość true, gdy widok odbierze komunikat ScrollBar. W takim przypadku należy w rzeczywistości przewinąć widok. W innym przypadku ta funkcja jest wywoływana z *bDoScroll* ustawiona na false, gdy element OLE jest początkowo przeciągany do regionu autoprzewijania elementu docelowego upuszczania przed faktycznym przewinięciem. W takim przypadku nie należy w rzeczywistości przewijać widoku.
 
-## <a name="cviewonscrollby"></a><a name="onscrollby"></a>CView:: OnScrollBy
+## <a name="cviewonscrollby"></a><a name="onscrollby"></a> CView:: OnScrollBy
 
 Wywoływane przez platformę, gdy użytkownik przegląda obszar poza widokiem bieżącym dokumentu, przeciągając element OLE względem bieżących obramowań widoku lub manipulując pionowo lub poziomą paski przewijania.
 
@@ -837,7 +838,7 @@ Domyślna implementacja tej metody nie zmienia widoku, ale jeśli nie jest wywo�
 
 Jeśli szerokość lub wysokość dokumentu przekracza 32767 pikseli, przewijanie ostatnich 32767 zakończy się niepowodzeniem, ponieważ `OnScrollBy` jest wywoływana z nieprawidłowym argumentem *sizeScroll* .
 
-## <a name="cviewonupdate"></a><a name="onupdate"></a>CView:: OnUpdate
+## <a name="cviewonupdate"></a><a name="onupdate"></a> CView:: OnUpdate
 
 Wywoływane przez platformę po zmodyfikowaniu dokumentu widoku; Ta funkcja jest wywoływana przez [CDocument:: funkcji UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) i pozwala widokowi na zaktualizowanie jego wyświetlania w celu odzwierciedlenia tych zmian.
 
@@ -869,7 +870,7 @@ Zazwyczaj nie należy wykonywać żadnego rysowania bezpośrednio z programu `On
 
 Jeśli *lHint* jest równa 0, a *pHint* ma wartość null, dokument przesłał ogólne powiadomienie o aktualizacji. Jeśli widok otrzyma powiadomienie o aktualizacji ogólnej lub nie można zdekodować wskazówek, powinna unieważnić cały obszar klienta.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład MDIDOCVW MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

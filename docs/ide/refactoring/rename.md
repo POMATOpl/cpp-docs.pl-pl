@@ -1,44 +1,45 @@
 ---
+description: 'Dowiedz się więcej na temat: zmiana nazwy'
 title: Zmień nazwę
 ms.date: 11/16/2016
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21bd5b817e51c29f4103b3ea105217ae743bdb4f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318731"
 ---
 # <a name="rename"></a>Zmień nazwę
 
-**Co:** Umożliwia zmianę nazwy identyfikatorów w celu symbole kodu, takie jak pola, zmienne lokalne, metody, przestrzenie nazw, właściwości i typów.
+**Co:** Umożliwia zmianę nazw identyfikatorów dla symboli kodu, takich jak pola, zmienne lokalne, metody, przestrzenie nazw, właściwości i typy.
 
-**Kiedy:** Chcesz coś bezpiecznie zmienić bez konieczności Znajdź wszystkie wystąpienia i kopiowanie/wklejanie nowej nazwy.
+**Kiedy:** Chcesz bezpiecznie zmienić nazwę elementu bez konieczności znajdowania wszystkich wystąpień, a następnie skopiuj/wklej nową nazwę.
 
-**Dlaczego:** Kopiowanie i wklejanie nową nazwę dla całego projektu, prawdopodobnie będą powodować błędy.  To narzędzie refaktoryzacji dokładnie wykona akcję zmiany nazwy.
+**Dlaczego:** Kopiowanie i wklejanie nowej nazwy w całym projekcie prawdopodobnie spowoduje błędy.  To narzędzie refaktoryzacji dokładnie przeprowadzi akcję zmiany nazwy.
 
-**Jak:**
+**Jaka**
 
-1. Zaznacz lub umieść kursor tekstu w można zmienić nazwy elementu:
+1. Podświetl lub umieść kursor tekstu wewnątrz elementu, którego nazwę chcesz zmienić:
 
    ![Wyróżniony kod](images/rename_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
-   * **Keyboard**
-     * Naciśnij klawisz **Ctrl + R**, następnie **Ctrl + R**.  (Należy pamiętać, że skrót klawiaturowy może różnić się w oparciu o profilu, który wybrano.)
-   * **Myszy**
-     * Wybierz **Edytuj > Refaktoryzuj > Zmień nazwę**.
-     * Kliknij prawym przyciskiem myszy ten kod, a następnie wybierz pozycję **Zmień nazwę**.
+   * **Klawiatura**
+     * Naciśnij klawisze **Ctrl + r**, a następnie **Ctrl + r**.  (Pamiętaj, że skrót klawiaturowy może się różnić w zależności od wybranego profilu).
+   * **Mysz**
+     * Wybierz pozycję **edytuj > refaktoryzacja > Zmień nazwę**.
+     * Kliknij prawym przyciskiem myszy kod i wybierz polecenie **Zmień nazwę**.
 
-1. W **Zmień nazwę** okna, które się pojawi, wprowadź nową nazwę wybranego elementu, a następnie kliknij przycisk **Podgląd** przycisku.  Zmiana **zakres wyszukiwania** Jeśli potrzebujesz rozszerzyć lub zawęzić zakres zmianą nazwy.
+1. W oknie **zmiany nazwy** , które się pojawi, wprowadź nową nazwę wybranego elementu, a następnie kliknij przycisk **Podgląd** .  Zmień **zakres wyszukiwania** , jeśli trzeba rozszerzyć lub zawęzić zakres zmiany nazwy.
 
-   ![Zmienianie nazwy okna dialogowego](images/rename_dialog.png)
+   ![Zmień nazwę okna dialogowego](images/rename_dialog.png)
 
    > [!TIP]
-   > Możesz pominąć korzystania z wersji zapoznawczej, sprawdzając **Pomiń podgląd zmian w przypadku wszystkich odwołań** opcji.
+   > Możesz pominąć Podgląd, sprawdzając opcję **Pomijaj zmiany w wersji zapoznawczej, jeśli wszystkie odwołania są wszystkie potwierdzone** .
 
-1. Gdy **podgląd zmian — zmiana nazwy** pojawi się okno, upewnij się, że zażądano zmian odpowiednio.  Użyj pól wyboru w górnej połowie okna, aby włączyć lub wyłączyć, zmiana nazwy dowolnego elementu.
+1. Gdy zostanie wyświetlone okno **Podgląd zmian — zmiana nazwy** , upewnij się, że żądane zmiany są wprowadzane odpowiednio.  Użyj pól wyboru w górnej połowie okna, aby włączyć lub wyłączyć zmianę nazwy dowolnego elementu.
 
-   ![Zmień nazwę (wersja zapoznawcza)](images/rename_preview.png)
+   ![Zmień nazwę podglądu](images/rename_preview.png)
 
-1. Gdy wszystko będzie wyglądać dobrze, kliknij przycisk **Zastosuj** przycisk, a element zostanie zmieniona w kodzie źródłowym.
+1. Gdy wszystko będzie wyglądało dobrze, kliknij przycisk **Zastosuj** , a element zostanie zmieniony na kod źródłowy.

@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej na temat elementów członkowskich danych o stanie pól w Wizard-Generated metod dostępu
 title: Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 476c91f55071f6d1c7f243257273a32798813cae
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0e0df633883b83d7d8fd0966082fbf00d2a72e13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317652"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Elementy członkowskie dotyczące stanu pola w metodach dostępu generowanych przez kreatora
 
@@ -24,7 +25,7 @@ Kreator użytkownika ATL OLE DB nie jest dostępny w programie Visual Studio 201
 
 W przypadku utworzenia konsumenta przy użyciu **kreatora ATL OLE DB** User, Kreator generuje element członkowski danych w klasie rekordu użytkownika dla każdego pola określonego w mapie kolumn. Każdy element członkowski danych jest typu `DWORD` i zawiera wartość stanu odpowiadającą jej odpowiedniemu polu.
 
-Na przykład dla elementu członkowskiego danych *m_OwnerID* Kreator generuje dodatkowy element członkowski danych dla stanu pola ( *dwOwnerIDStatus* ), a drugi dla długości pola ( *dwOwnerIDLength* ). Generuje również mapę kolumn zawierającą COLUMN_ENTRY_LENGTH_STATUS wpisów.
+Na przykład dla elementu członkowskiego danych *m_OwnerID* Kreator generuje dodatkowy element członkowski danych dla stanu pola (*dwOwnerIDStatus*), a drugi dla długości pola (*dwOwnerIDLength*). Generuje również mapę kolumn zawierającą COLUMN_ENTRY_LENGTH_STATUS wpisów.
 
 Jest to pokazane w poniższym kodzie:
 
@@ -114,6 +115,6 @@ Gdy używasz `CDynamicAccessor` , długość i stan są powiązane automatycznie
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

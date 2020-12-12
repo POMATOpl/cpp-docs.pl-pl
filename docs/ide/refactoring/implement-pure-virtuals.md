@@ -1,34 +1,35 @@
 ---
-title: Zaimplementuj czyste elementy wirtualne
+description: 'Dowiedz się więcej na temat: implementowanie czystych wirtualnych'
+title: Implementuj czyste wirtualne
 ms.date: 11/16/2016
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
-ms.openlocfilehash: 59e4519f57a1d9bd9ba1cee1ed6ae41bea785a9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b35ebba556ed9bae6ded649caca000b7d3554480
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318757"
 ---
-# <a name="implement-pure-virtuals"></a>Zaimplementuj czyste elementy wirtualne
+# <a name="implement-pure-virtuals"></a>Implementuj czyste wirtualne
 
-**Co:** Pozwala natychmiast wygenerować kod wymagany do implementowania czystych metod wirtualnych w klasie.
+**Co:** Umożliwia natychmiastowe wygenerowanie kodu wymaganego do zaimplementowania wszystkich czystych metod wirtualnych w klasie.
 
-**Kiedy:** Chcesz dziedziczyć klasy z czystych funkcji wirtualnych.
+**Kiedy:** Chcesz dziedziczyć z klasy przy użyciu czystych funkcji wirtualnych.
 
-**Dlaczego:** Wszystkie czyste funkcje wirtualne jeden po drugim, można zaimplementować ręcznie, jednak tej funkcji będzie generowana automatycznie wszystkich podpisów metody.
+**Dlaczego:** Można ręcznie zaimplementować wszystkie czyste funkcje wirtualne jeden do jednego, jednak ta funkcja będzie automatycznie generować wszystkie podpisy metod.
 
-**Jak:**
+**Jaka**
 
-1. Umieść kursor tekstu lub myszy nad klasy, w której chcesz zaimplementować czyste funkcje wirtualne klasy bazowej.
+1. Umieść kursor tekstowy lub mysz nad klasą, w której chcesz zaimplementować czyste funkcje wirtualne klasy bazowej.
 
    ![Wyróżniony kod](images/virtuals_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
-   * **Keyboard**
-     * Naciśnij klawisz **Ctrl +.** wyzwalacz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **zaimplementuj czyste elementy wirtualne dla klasy*ClassName*"** z menu kontekstowego, gdzie  *ClassName* to nazwa wybranej klasy.
-   * **Myszy**
-     * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **zaimplementuj czyste elementy wirtualne dla klasy*ClassName*"** z menu kontekstowego, gdzie  *ClassName* to nazwa wybranej klasy.
+   * **Klawiatura**
+     * Naciśnij **klawisze CTRL +.** Aby wyzwolić menu **szybkie akcje i refaktoryzacje** i wybrać opcję **Implementuj wszystkie czyste wirtualne dla klasy "*ClassName*"** z menu kontekstowego, gdzie *ClassName* jest nazwą wybranej klasy.
+   * **Mysz**
+     * Kliknij prawym przyciskiem myszy i wybierz menu **szybkie akcje i refaktoryzacje** i wybierz opcję **Implementuj wszystkie czyste wirtualne dla klasy "*ClassName*"** z menu kontekstowego, gdzie *ClassName* jest nazwą wybranej klasy.
 
-1. Podpisy czystej metody wirtualnej będzie automatycznie utworzone, gotowy do zaimplementowania.
+1. Czyste podpisy metod wirtualnych zostaną utworzone automatycznie, gotowe do wdrożenia.
 
-   ![Zaimplementuj czyste elementy wirtualne wyniku](images/virtuals_result.png)
+   ![Zaimplementuj czyste wyniki wirtualne](images/virtuals_result.png)

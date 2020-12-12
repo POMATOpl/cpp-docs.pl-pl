@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa obiektu CTaskDialog'
 title: Klasa obiektu CTaskDialog
 ms.date: 11/19/2018
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 3fd67eed7e80a2e594710df8ae8bc6fd13f0e96c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91cd3caec703f8e81116fccd75c0457abb69a3e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318588"
 ---
 # <a name="ctaskdialog-class"></a>Klasa obiektu CTaskDialog
 
@@ -409,7 +410,7 @@ podczas Identyfikator ciągu ostatniego polecenia.
 
 Istnieją dwa sposoby dodawania `CTaskDialog` do aplikacji. Pierwszym sposobem jest użycie jednego z konstruktorów w celu utworzenia `CTaskDialog` i wyświetlenia go przy użyciu [obiektu ctaskdialog::D omodal](#domodal). Drugi sposób polega na użyciu funkcji statycznej [obiektu CTaskDialog:: ShowDialog](#showdialog), która umożliwia wyświetlenie `CTaskDialog` bez jawnego tworzenia `CTaskDialog` obiektu.
 
-Drugi Konstruktor tworzy kontrolki przycisk polecenia przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Ta metoda dodaje kontrolkę przycisk polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast*włącznie. Dla tych kontrolek przycisków poleceń ciąg w tabeli ciągów jest podpisem kontrolki, a IDENTYFIKATORem ciągu jest identyfikator formantu.
+Drugi Konstruktor tworzy kontrolki przycisk polecenia przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Ta metoda dodaje kontrolkę przycisk polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast* włącznie. Dla tych kontrolek przycisków poleceń ciąg w tabeli ciągów jest podpisem kontrolki, a IDENTYFIKATORem ciągu jest identyfikator formantu.
 
 Aby uzyskać listę prawidłowych opcji, zobacz [obiektu CTaskDialog:: SetOptions](#setoptions) .
 
@@ -664,7 +665,7 @@ podczas Identyfikator ciągu ostatniego polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy formanty przycisków poleceń przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Nowe kontrolki przycisków poleceń dodawane za pomocą tej metody Użyj ciągu dla podpisu kontrolki i identyfikatora ciągu dla identyfikatora formantu. Wybrany zakres ciągów jest dostarczany przez *nIDCommandControlsFirst* i *nCommandControlsLast*włącznie. Jeśli w zakresie istnieje pusty wpis, metoda nie dodaje kontrolki przycisk polecenia dla tego wpisu.
+Ta metoda tworzy formanty przycisków poleceń przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Nowe kontrolki przycisków poleceń dodawane za pomocą tej metody Użyj ciągu dla podpisu kontrolki i identyfikatora ciągu dla identyfikatora formantu. Wybrany zakres ciągów jest dostarczany przez *nIDCommandControlsFirst* i *nCommandControlsLast* włącznie. Jeśli w zakresie istnieje pusty wpis, metoda nie dodaje kontrolki przycisk polecenia dla tego wpisu.
 
 Domyślnie nowe formanty przycisków poleceń są włączone i nie wymagają podniesienia uprawnień.
 
@@ -692,7 +693,7 @@ podczas Identyfikator ciągu ostatniego przycisku radiowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy przyciski radiowe przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Nowe przyciski radiowe dodane przy użyciu tej metody używają ciągu dla napisu przycisku radiowego i identyfikatora ciągu dla identyfikatora przycisku radiowego. Wybrany zakres ciągów jest dostarczany przez *nIDRadioButtonsFirst* i *nRadioButtonsLast*włącznie. Jeśli w zakresie istnieje pusty wpis, metoda nie dodaje przycisku radiowego dla tego wpisu.
+Ta metoda tworzy przyciski radiowe przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Nowe przyciski radiowe dodane przy użyciu tej metody używają ciągu dla napisu przycisku radiowego i identyfikatora ciągu dla identyfikatora przycisku radiowego. Wybrany zakres ciągów jest dostarczany przez *nIDRadioButtonsFirst* i *nRadioButtonsLast* włącznie. Jeśli w zakresie istnieje pusty wpis, metoda nie dodaje przycisku radiowego dla tego wpisu.
 
 Domyślnie nowe przyciski radiowe są włączone.
 
@@ -1002,7 +1003,7 @@ podczas Maska dla typowych przycisków, które wymagają podniesienia uprawnień
 
 Można ustawić typowe przyciski dostępne dla wystąpienia [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) , używając konstruktora [obiektu CTaskDialog:: obiektu CTaskDialog](#ctaskdialog) i metody [obiektu CTaskDialog:: SetCommonButtons](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions` nie obsługuje dodawania nowych wspólnych przycisków.
 
-W przypadku użycia tej metody w celu wyłączenia lub podniesienia poziomu wspólnego przycisku, który nie jest dostępny dla tego elementu `CTaskDialog` , ta metoda zgłasza wyjątek za [ENSURE](diagnostic-services.md#ensure) pomocą makra.
+W przypadku użycia tej metody w celu wyłączenia lub podniesienia poziomu wspólnego przycisku, który nie jest dostępny dla tego elementu `CTaskDialog` , ta metoda zgłasza wyjątek za [](diagnostic-services.md#ensure) pomocą makra.
 
 Ta metoda włącza dowolny przycisk, który jest dostępny dla programu, `CTaskDialog` ale nie znajduje się w *nDisabledButtonMask*, nawet jeśli został wcześniej wyłączony. Ta metoda traktuje podniesienie uprawnień w podobny sposób: rejestruje typowe przyciski jako niewymagające podniesienia uprawnień, jeśli wspólny przycisk jest dostępny, ale nie jest uwzględniony w *nElevationButtonMask*.
 
@@ -1553,7 +1554,7 @@ Liczba całkowita, która odnosi się do zaznaczenia dokonanego przez użytkowni
 
 Ta metoda statyczna umożliwia tworzenie wystąpienia `CTaskDialog` klasy bez jawnego tworzenia `CTaskDialog` obiektu w kodzie. Ponieważ nie ma żadnego `CTaskDialog` obiektu, nie można wywoływać innych metod, `CTaskDialog` Jeśli używasz tej metody do wyświetlania `CTaskDialog` użytkownikowi.
 
-Ta metoda tworzy formanty przycisków poleceń przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Ta metoda dodaje kontrolkę przycisk polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast*włącznie. Dla tych kontrolek przycisków poleceń ciąg w tabeli ciągów jest podpisem kontrolki, a IDENTYFIKATORem ciągu jest identyfikator formantu.
+Ta metoda tworzy formanty przycisków poleceń przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Ta metoda dodaje kontrolkę przycisk polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast* włącznie. Dla tych kontrolek przycisków poleceń ciąg w tabeli ciągów jest podpisem kontrolki, a IDENTYFIKATORem ciągu jest identyfikator formantu.
 
 Aby uzyskać listę prawidłowych opcji, zobacz [obiektu CTaskDialog:: SetOptions](#setoptions) .
 

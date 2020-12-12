@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IRowsetInfoImpl'
 title: IRowsetInfoImpl — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc51a32b6bee62ef7343bf134b3f1bc4099b8562
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317366"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl — Klasa
 

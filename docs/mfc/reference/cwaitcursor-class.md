@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CWaitCursor'
 title: Klasa CWaitCursor
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: dfeedad18b3ebcefedff446699f074c86037a4a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9552dcd6f5304c96d550e153870f69d78d932ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318471"
 ---
 # <a name="cwaitcursor-class"></a>Klasa CWaitCursor
 
@@ -43,7 +44,7 @@ class CWaitCursor
 
 ## <a name="remarks"></a>Uwagi
 
-`CWaitCursor`nie ma klasy bazowej.
+`CWaitCursor` nie ma klasy bazowej.
 
 Dobre praktyki programistyczne dla systemu Windows wymagają wyświetlania kursora oczekiwania przy każdym wykonywaniu operacji, która trwa zauważalny okres.
 
@@ -73,7 +74,7 @@ Innym sposobem wyświetlania kursora oczekiwania jest użycie kombinacji [CCmdTa
 
 [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]
 
-## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor
+## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a> CWaitCursor::CWaitCursor
 
 Aby wyświetlić kursor oczekiwania, należy po prostu zadeklarować `CWaitCursor` obiekt przed kodem, który wykonuje długotrwałą operację.
 
@@ -96,7 +97,7 @@ Można wykorzystać fakt, że destruktor jest wywoływany na końcu bloku (któr
 
 [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]
 
-## <a name="cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor:: Restore
+## <a name="cwaitcursorrestore"></a><a name="restore"></a> CWaitCursor:: Restore
 
 Aby przywrócić kursor oczekiwania, Wywołaj tę funkcję po wykonaniu operacji, takiej jak wyświetlanie okna komunikatu lub okna dialogowego, które może zmienić kursor oczekiwania na inny kursor.
 

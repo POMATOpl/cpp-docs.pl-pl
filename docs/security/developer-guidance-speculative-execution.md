@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat wskazówek dla deweloperów języka C++ dla spekulacyjnych kanałów po stronie wykonywania
 title: Wskazówki dla deweloperów języka C++ dotyczące spekulacyjnych kanałów po stronie wykonywania
 ms.date: 07/10/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 41376f02c04a9baf83fec19791d77c169c73fa31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320082"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów języka C++ dotyczące spekulacyjnych kanałów po stronie wykonywania
 
@@ -51,11 +52,11 @@ W perspektywie architektury ta sekwencja kodu jest doskonale bezpieczna, poniewa
 
 Podczas gdy procesor CPU będzie ostatecznie wykrywał nieodpowiednie Przewidywania, skutki uboczne mogą pozostać w pamięci podręcznej procesora, która ujawnia informacje o wartości bajtowej, która została odczytana z `buffer` . Te efekty uboczne mogą być wykrywane przez niższy uprzywilejowany kontekst uruchomiony w systemie przez sondowanie, jak szybko każda linia pamięci podręcznej `shared_buffer` jest dostępna. Czynności, które można wykonać w celu osiągnięcia tego celu:
 
-1. **Wywołaj `ReadByte` wiele razy przy `untrusted_index` `buffer_size` mniejszej **liczbie. Kontekst atakujący może spowodować wywołanie elementu ofiary `ReadByte` (np. za pośrednictwem wywołania RPC) w taki sposób, aby predykcyjny rozgałęzienia był szkolony do niewykonania, ponieważ `untrusted_index` jest mniejszy niż `buffer_size` .
+1. **Wywołaj `ReadByte` wiele razy przy `untrusted_index` `buffer_size` mniejszej** liczbie. Kontekst atakujący może spowodować wywołanie elementu ofiary `ReadByte` (np. za pośrednictwem wywołania RPC) w taki sposób, aby predykcyjny rozgałęzienia był szkolony do niewykonania, ponieważ `untrusted_index` jest mniejszy niż `buffer_size` .
 
-2. **Opróżnianie wszystkich wierszy pamięci `shared_buffer` podręcznej w programie **. Kontekst atakujący musi opróżnić wszystkie wiersze pamięci podręcznej w udostępnionym regionie pamięci, do którego odwołuje się `shared_buffer` . Ponieważ region pamięci jest udostępniony, jest to bezpośrednie i można go wykonać przy użyciu wewnętrznych, takich jak `_mm_clflush` .
+2. **Opróżnianie wszystkich wierszy pamięci `shared_buffer` podręcznej w programie**. Kontekst atakujący musi opróżnić wszystkie wiersze pamięci podręcznej w udostępnionym regionie pamięci, do którego odwołuje się `shared_buffer` . Ponieważ region pamięci jest udostępniony, jest to bezpośrednie i można go wykonać przy użyciu wewnętrznych, takich jak `_mm_clflush` .
 
-3. **Wywołaj `ReadByte` z `untrusted_index` `buffer_size` większą **liczbą. Kontekst atakujący powoduje, że kontekst ofiary wywołuje `ReadByte` takie, że nie zostanie on przewidywalna. Powoduje to, że procesor speculatively wykonywanie treści bloku if o `untrusted_index` wartości większej niż `buffer_size` , co prowadzi do przeczytania poza granice `buffer` . W związku z tym `shared_buffer` jest indeksowany przy użyciu potencjalnie tajnej wartości, która została odczytana z zakresu, co powoduje załadowanie odpowiedniej linii pamięci podręcznej przez procesor CPU.
+3. **Wywołaj `ReadByte` z `untrusted_index` `buffer_size` większą** liczbą. Kontekst atakujący powoduje, że kontekst ofiary wywołuje `ReadByte` takie, że nie zostanie on przewidywalna. Powoduje to, że procesor speculatively wykonywanie treści bloku if o `untrusted_index` wartości większej niż `buffer_size` , co prowadzi do przeczytania poza granice `buffer` . W związku z tym `shared_buffer` jest indeksowany przy użyciu potencjalnie tajnej wartości, która została odczytana z zakresu, co powoduje załadowanie odpowiedniej linii pamięci podręcznej przez procesor CPU.
 
 4. **Zapoznaj się z każdą linią pamięci podręcznej w programie `shared_buffer` , aby zobaczyć, która jest najbardziej szybko dostępna** Kontekst atakujący może odczytać każdą linię pamięci podręcznej w programie `shared_buffer` i wykryć wiersz pamięci podręcznej, który ładuje znacznie szybciej niż inne. Jest to linia pamięci podręcznej, która prawdopodobnie została wprowadzona w kroku 3. Ponieważ w tym przykładzie istnieje relacja 1:1 między wartością bajtu i wierszem pamięci podręcznej, pozwala to osobie atakującej na wywnioskowanie rzeczywistej wartości bajtu, który był odczytywany poza granicami.
 
@@ -71,7 +72,7 @@ Poniższa tabela zawiera podsumowanie modeli zabezpieczeń oprogramowania, w prz
 |----------------|----------------|
 |Granica maszyny wirtualnej|Aplikacje, które izolują obciążenia w oddzielnych maszynach wirtualnych, które odbierają niezaufane dane z innej maszyny wirtualnej mogą być zagrożone.|
 |Granica jądra|Może być narażony sterownik urządzenia trybu jądra, który odbiera niezaufane dane z procesu trybu użytkownika niebędącego administratorami.|
-|Granica procesu|Aplikacja, która odbiera niezaufane dane z innego procesu działającego w systemie lokalnym, na przykład za pośrednictwem zdalnego wywołania procedury (RPC), pamięci współdzielonej lub innych mechanizmów komunikacji między procesami (IPC) może być zagrożona.|
+|Granica procesu|Aplikacja, która odbiera niezaufane dane z innego procesu działającego w systemie lokalnym, na przykład za pośrednictwem zdalnego wywołania procedury (RPC), pamięci współdzielonej lub innych mechanizmów Inter-Process Communications (IPC) może być zagrożona.|
 |Granica enklawy|Aplikacja, która jest wykonywana w ramach bezpiecznego enklawy (na przykład Intel SGX), która odbiera niezaufane dane spoza enklawyu może być zagrożona.|
 |Granica języka|Aplikacja, która interpretuje lub just-in-Time (JIT) kompiluje i wykonuje niezaufany kod zapisany w języku wyższego poziomu może być zagrożona.|
 
@@ -302,7 +303,7 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 ## <a name="mitigation-options"></a>Opcje łagodzenia
 
-Luki w zabezpieczeniach kanału po stronie wykonywania spekulacyjnych można zmniejszyć, wprowadzając zmiany w kodzie źródłowym. Te zmiany mogą dotyczyć ograniczenia konkretnych wystąpień luki w zabezpieczeniach, takich jak dodanie *bariery spekulacji*lub wprowadzenie zmian w projekcie aplikacji, aby informacje poufne były niedostępne dla spekulacyjnego wykonywania.
+Luki w zabezpieczeniach kanału po stronie wykonywania spekulacyjnych można zmniejszyć, wprowadzając zmiany w kodzie źródłowym. Te zmiany mogą dotyczyć ograniczenia konkretnych wystąpień luki w zabezpieczeniach, takich jak dodanie *bariery spekulacji* lub wprowadzenie zmian w projekcie aplikacji, aby informacje poufne były niedostępne dla spekulacyjnego wykonywania.
 
 ### <a name="speculation-barrier-via-manual-instrumentation"></a>Bariera spekulacyjny przy użyciu instrumentacji ręcznej
 

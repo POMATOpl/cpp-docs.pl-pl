@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o programie: Instalowanie aplikacji mobilnych dla wielu platform za pomocą języka C++'
 title: Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: b9a6b78450969f5228ccf16cc7b0cff02a4d3b1e
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 45059cbadcd8e8c304c65262ffcb89bf767095e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319225"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++
 
@@ -70,7 +71,7 @@ Instalator programu Visual Studio obejmuje **opracowywanie aplikacji mobilnych p
 
 1. Po wybraniu karty **obciążenia** przewiń w dół i wybierz pozycję **Programowanie aplikacji mobilnych za pomocą języka C++** w Instalator programu Visual Studio. Po wybraniu tego obciążenia są również wybierane inne wymagane składniki dla programowania w języku C++. Możesz również wybrać inne obciążenia i poszczególne składniki do zainstalowania w tym samym czasie. Aby utworzyć Międzyplatformowy kod, który również jest ukierunkowany na platformy UWP, wybierz **platforma uniwersalna systemu Windows obciążenie programowaniem** .
 
-1. W okienku **szczegóły instalacji** rozwiń pozycję **Programowanie aplikacji mobilnych za pomocą języka C++** . W **opcjonalnej** sekcji można wybrać dodatkowe wersje NDK, Google emulator systemu Android, Intel Hardware Accelerated Execution Manager i narzędzie IncrediBuild Build Acceleration.
+1. W okienku **szczegóły instalacji** rozwiń pozycję **Programowanie aplikacji mobilnych za pomocą języka C++**. W **opcjonalnej** sekcji można wybrać dodatkowe wersje NDK, Google emulator systemu Android, Intel Hardware Accelerated Execution Manager i narzędzie IncrediBuild Build Acceleration.
 
 1. Domyślnie co najmniej jeden składnik instalatora Android SDK jest uwzględniony w obciążeniu. Dostępne są dodatkowe wersje Android SDK. Aby dodać jeden do instalacji, wybierz kartę **poszczególne składniki** , a następnie przewiń w dół do sekcji **zestawy SDK, biblioteki i struktury** , aby wybrać opcję.
 
@@ -99,17 +100,17 @@ W większości przypadków program Visual Studio może wykryć konfiguracje dla 
 
 ### <a name="to-set-the-paths-for-third-party-tools"></a>Aby ustawić ścieżki dla narzędzi innych firm
 
-1. Na pasku menu programu Visual Studio wybierz pozycję **Narzędzia**  >  **Opcje** .
+1. Na pasku menu programu Visual Studio wybierz pozycję **Narzędzia**  >  **Opcje**.
 
-1. W oknie dialogowym **Opcje** wybierz pozycję **cross platform**  >  **C++**  >  **Android** .
+1. W oknie dialogowym **Opcje** wybierz pozycję **cross platform**  >  **C++**  >  **Android**.
 
    ![Opcje ścieżek narzędzi systemu Android](../cross-platform/media/cppmdd-options-android.png "Opcje ścieżek narzędzi systemu Android")
 
-1. Aby zmienić ścieżkę używaną przez narzędzie, zaznacz pole wyboru obok ścieżki i Edytuj ścieżkę folderu w polu tekstowym. Możesz również użyć przycisku przeglądania ( **...** ), aby otworzyć okno dialogowe **Wybieranie lokalizacji** w celu wybrania folderu.
+1. Aby zmienić ścieżkę używaną przez narzędzie, zaznacz pole wyboru obok ścieżki i Edytuj ścieżkę folderu w polu tekstowym. Możesz również użyć przycisku przeglądania (**...**), aby otworzyć okno dialogowe **Wybieranie lokalizacji** w celu wybrania folderu.
 
 1. Wybierz **przycisk OK** , aby zapisać lokalizacje folderów narzędzi niestandardowych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instalowanie i Konfigurowanie narzędzi do kompilowania przy użyciu systemu iOS](install-and-configure-tools-to-build-using-ios.md)\
 [Visual C++ aplikacji mobilnych na wiele platform](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: Omówienie programowania OLE DB'
 title: Omówienie programowania OLE DB
 ms.date: 10/22/2018
 helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: 2b855e0917ba9cdbdaa38a92473d7bddb4279101
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1976d8717704fbacec4f9d249b8ca3664c2eeb56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317106"
 ---
 # <a name="ole-db-programming-overview"></a>Omówienie programowania OLE DB
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _CrtIsValidPointer'
 title: _CrtIsValidPointer
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-ms.openlocfilehash: 490d2dea097935dee2cd2a003aa28e32f1ced69d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0bc0c3f9cf3ab581a145c626abee5641cf6bd550
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319693"
 ---
 # <a name="_crtisvalidpointer"></a>_CrtIsValidPointer
 
@@ -48,7 +49,7 @@ int _CrtIsValidPointer(
 
 ### <a name="parameters"></a>Parametry
 
-*address*<br/>
+*Ulica*<br/>
 Wskazuje początek zakresu pamięci, aby sprawdzić poprawność.
 
 *zmienia*<br/>
@@ -63,15 +64,15 @@ Ułatwienia dostępu do odczytu i zapisu w celu określenia zakresu pamięci.
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od biblioteki CRT w programie Visual Studio 2010, parametry *rozmiaru* i *dostępu* są ignorowane, a **_CrtIsValidPointer** sprawdza tylko, czy określony *adres* nie ma wartości null. Ponieważ ten test jest łatwy do wykonania, nie zalecamy korzystania z tej funkcji. W wersjach przed Visual Studio 2010 funkcja sprawdza, czy zakres pamięci rozpoczynający się pod *adresem* i rozszerzanie *rozmiaru* bajtów jest prawidłowy dla określonej operacji lub operacji dostępności. Gdy *dostęp* jest ustawiony na wartość true, zakres pamięci jest weryfikowany zarówno do odczytu, jak i do zapisu. Gdy *dostęp* ma wartość false, zakres pamięci jest weryfikowany tylko do odczytu. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtIsValidPointer** są usuwane podczas przetwarzania wstępnego.
+Począwszy od biblioteki CRT w programie Visual Studio 2010, parametry *rozmiaru* i *dostępu* są ignorowane, a **_CrtIsValidPointer** sprawdza tylko, czy określony *adres* nie ma wartości null. Ponieważ ten test jest łatwy do wykonania, nie zalecamy korzystania z tej funkcji. W wersjach przed Visual Studio 2010 funkcja sprawdza, czy zakres pamięci rozpoczynający się pod *adresem* i rozszerzanie *rozmiaru* bajtów jest prawidłowy dla określonej operacji lub operacji dostępności. Gdy *dostęp* jest ustawiony na wartość true, zakres pamięci jest weryfikowany zarówno do odczytu, jak i do zapisu. Gdy *dostęp* ma wartość false, zakres pamięci jest weryfikowany tylko do odczytu. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania do **_CrtIsValidPointer** są usuwane podczas przetwarzania wstępnego.
 
-Ponieważ ta funkcja zwraca wartość TRUE lub FALSE, można ją przesłać do jednego z makr [_ASSERT](assert-asserte-assert-expr-macros.md) w celu utworzenia prostego mechanizmu obsługi błędów debugowania. Poniższy przykład powoduje niepowodzenie potwierdzenia, jeśli zakres pamięci nie jest prawidłowy dla operacji odczytu i zapisu:
+Ponieważ ta funkcja zwraca wartość TRUE lub FALSE, można ją przesłać do jednego z [_ASSERTych](assert-asserte-assert-expr-macros.md) makr, aby utworzyć prosty mechanizm obsługi błędów debugowania. Poniższy przykład powoduje niepowodzenie potwierdzenia, jeśli zakres pamięci nie jest prawidłowy dla operacji odczytu i zapisu:
 
 ```C
 _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 ```
 
-Aby uzyskać więcej informacji o tym, jak **_CrtIsValidPointer** może być używany z innymi funkcjami i makrami debugowania, zobacz [MACROS for Reporting](/visualstudio/debugger/macros-for-reporting). Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o tym, jak **_CrtIsValidPointer** mogą być używane z innymi funkcjami i makrami debugowania, zobacz [makra na potrzeby raportowania](/visualstudio/debugger/macros-for-reporting). Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -79,7 +80,7 @@ Aby uzyskać więcej informacji o tym, jak **_CrtIsValidPointer** może być uż
 |-------------|---------------------|
 |**_CrtIsValidPointer**|\<crtdbg.h>|
 
-**_CrtIsValidPointer** jest rozszerzeniem firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+**_CrtIsValidPointer** to rozszerzenie firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
@@ -89,6 +90,6 @@ Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-librar
 
 Zobacz przykład tematu [_CrtIsValidHeapPointer](crtisvalidheappointer.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>

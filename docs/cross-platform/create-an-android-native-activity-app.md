@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Tworzenie aplikacji natywnych działań systemu Android'
 title: Tworzenie aplikacji systemu Android działania natywnego
 ms.date: 10/17/2019
 ms.assetid: 884014b1-5208-45ec-b0da-ad0070d2c24d
-ms.openlocfilehash: 664729a920076839f5f9b4440768fe3adb846803
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d8ccccde40c89553d12fd98645cda2877e581273
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319329"
 ---
 # <a name="create-an-android-native-activity-app"></a>Tworzenie aplikacji systemu Android działania natywnego
 
@@ -23,11 +24,11 @@ W tym samouczku utworzysz nowy projekt aktywności systemu Android Native, a nas
 
 ::: moniker range="msvc-150"
 
-1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt** .
+1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Nowy projekt** w obszarze **Szablony** wybierz pozycję **Visual C++** > **wiele platform** , a następnie wybierz szablon **aplikacja native-activity (Android)** .
+1. W oknie dialogowym **Nowy projekt** w obszarze **Szablony** wybierz pozycję **Visual C++** > **wiele platform**, a następnie wybierz szablon **aplikacja native-activity (Android)** .
 
-1. Nadaj aplikacji nazwę, na przykład *MyAndroidApp* , a następnie wybierz przycisk **OK** .
+1. Nadaj aplikacji nazwę, na przykład *MyAndroidApp*, a następnie wybierz przycisk **OK**.
 
    ![Tworzenie projektu działania natywnego](../cross-platform/media/cppmdd-newproject.png "Tworzenie projektu działania natywnego")
 
@@ -39,11 +40,11 @@ W tym samouczku utworzysz nowy projekt aktywności systemu Android Native, a nas
 
 ::: moniker range=">=msvc-160"
 
-1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt** .
+1. W programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Utwórz nowy projekt** wybierz szablon **aplikacja natywna działania (Android)** , a następnie wybierz przycisk **dalej** .
+1. W oknie dialogowym **Utwórz nowy projekt** wybierz szablon **aplikacja natywna działania (Android)** , a następnie wybierz przycisk **dalej**.
 
-1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź nazwę, taką jak *MyAndroidApp* w polu **Nazwa projektu** , a następnie wybierz pozycję **Utwórz** .
+1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź nazwę, taką jak *MyAndroidApp* w polu **Nazwa projektu**, a następnie wybierz pozycję **Utwórz**.
 
    Program Visual Studio tworzy nowe rozwiązanie i otwiera Eksplorator rozwiązań.
 
@@ -51,7 +52,7 @@ W tym samouczku utworzysz nowy projekt aktywności systemu Android Native, a nas
 
 Nowe rozwiązanie aplikacji Android Native Activity obejmuje dwa projekty:
 
-- `MyAndroidApp.NativeActivity` zawiera kod odwołań i przyklejania dla aplikacji do uruchamiania jako działanie natywne w systemie Android. Implementacja punktów wejścia z kodu Glue znajduje się w *Main. cpp* . Wstępnie skompilowane nagłówki znajdują się w pliku *PCH. h* . Ten projekt aplikacji natywnej aktywności jest kompilowany do biblioteki udostępnionej *. plik,* który jest wybierany przez projekt pakietu.
+- `MyAndroidApp.NativeActivity` zawiera kod odwołań i przyklejania dla aplikacji do uruchamiania jako działanie natywne w systemie Android. Implementacja punktów wejścia z kodu Glue znajduje się w *Main. cpp*. Wstępnie skompilowane nagłówki znajdują się w pliku *PCH. h*. Ten projekt aplikacji natywnej aktywności jest kompilowany do biblioteki udostępnionej *. plik,* który jest wybierany przez projekt pakietu.
 
 - `MyAndroidApp.Packaging` tworzy plik *. apk* do wdrożenia na urządzeniu z systemem Android lub w emulatorze. Zawiera ona zasoby i *AndroidManifest.xml* plik, w którym są ustawiane właściwości manifestu. Zawiera również plik *build.xml* , który kontroluje proces kompilacji ANT. Domyślnie jest ustawiony jako projekt startowy, aby można go było wdrożyć i uruchomić bezpośrednio z programu Visual Studio.
 
@@ -67,7 +68,7 @@ Skompiluj i uruchom aplikację wygenerowaną przez szablon w celu zweryfikowania
 
      Jeśli lista **platform rozwiązań** nie jest wyświetlana, wybierz pozycję **platformy rozwiązań** z listy **Dodaj/Usuń przyciski** , a następnie wybierz swoją platformę.
 
-1. Na pasku menu wybierz polecenie **Kompiluj**  >  **kompilację rozwiązania** .
+1. Na pasku menu wybierz polecenie **Kompiluj**  >  **kompilację rozwiązania**.
 
      W oknie danych wyjściowych zostaną wyświetlone dane wyjściowe procesu kompilacji dla dwóch projektów w rozwiązaniu.
 

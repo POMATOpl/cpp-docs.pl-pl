@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: atrybuty w języku C++'
 title: Atrybuty w języku C++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: efdc62e2343135aee483520f633bac99519455b4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2c22cacdede278114ed0e2242165280facbb492a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229210"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319550"
 ---
 # <a name="attributes-in-c"></a>Atrybuty w języku C++
 
@@ -35,9 +36,9 @@ void Foo(int);
 
 Atrybuty reprezentują standardowe alternatywy dla rozszerzeń specyficznych dla dostawcy, takich jak dyrektywy #pragma, __declspec () (Visual C++) lub &#95;&#95;atrybutu&#95;&#95;  (GNU). Jednak w większości przypadków nadal trzeba będzie używać konstrukcji specyficznych dla dostawcy. Standard obecnie określa następujące atrybuty, które powinny być rozpoznawane przez kompilator zgodny:
 
-- `[[noreturn]]`Określa, że funkcja nigdy nie zwraca; Innymi słowy, zawsze zgłasza wyjątek. Kompilator może dostosować reguły kompilacji dla `[[noreturn]]` jednostek.
+- `[[noreturn]]` Określa, że funkcja nigdy nie zwraca; Innymi słowy, zawsze zgłasza wyjątek. Kompilator może dostosować reguły kompilacji dla `[[noreturn]]` jednostek.
 
-- `[[carries_dependency]]`Określa, że funkcja propaguje kolejność zależności danych w odniesieniu do synchronizacji wątków. Ten atrybut może być stosowany do jednego lub kilku parametrów, aby określić, że argument, który przekazuje zależność do treści funkcji. Ten atrybut może być stosowany do samej funkcji, aby określić, że wartość zwracana wykonuje zależność od funkcji. Kompilator może używać tych informacji do generowania bardziej wydajnego kodu.
+- `[[carries_dependency]]` Określa, że funkcja propaguje kolejność zależności danych w odniesieniu do synchronizacji wątków. Ten atrybut może być stosowany do jednego lub kilku parametrów, aby określić, że argument, który przekazuje zależność do treści funkcji. Ten atrybut może być stosowany do samej funkcji, aby określić, że wartość zwracana wykonuje zależność od funkcji. Kompilator może używać tych informacji do generowania bardziej wydajnego kodu.
 
 - `[[deprecated]]`**Program Visual Studio 2015 lub nowszy:** Określa, że funkcja nie jest przeznaczona do użycia i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator może użyć tego do wygenerowania komunikatu informacyjnego, gdy kod klienta próbuje wywołać funkcję. Można zastosować do deklaracji klasy, typedef-Name, Variable, niestatycznej składowej danych, funkcji, przestrzeni nazw, wyliczenia, modułu wyliczającego lub specjalizacji szablonu.
 
@@ -60,7 +61,7 @@ Atrybuty reprezentują standardowe alternatywy dla rozszerzeń specyficznych dla
 
 ## <a name="microsoft-specific-attributes"></a>Atrybuty specyficzne dla firmy Microsoft
 
-- `[[gsl::suppress(rules)]]`Ten atrybut specyficzny dla firmy Microsoft służy do pomijania ostrzeżeń od sprawdzających, które wymuszają reguły [biblioteki obsługi (GSL)](https://github.com/Microsoft/GSL) w kodzie. Na przykład rozważmy następujący fragment kodu:
+- `[[gsl::suppress(rules)]]` Ten atrybut specyficzny dla firmy Microsoft służy do pomijania ostrzeżeń od sprawdzających, które wymuszają reguły [biblioteki obsługi (GSL)](https://github.com/Microsoft/GSL) w kodzie. Na przykład rozważmy następujący fragment kodu:
 
     ```cpp
     int main()

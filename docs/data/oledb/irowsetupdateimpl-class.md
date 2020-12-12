@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IRowsetUpdateImpl'
 title: IRowsetUpdateImpl — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f040ed902b867059636a16bf635dc5c526b8ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317249"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl — Klasa
 

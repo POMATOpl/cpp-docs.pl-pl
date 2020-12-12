@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ulepszanie prostego dostawcy Read-Only'
 title: Udoskonalanie prostego dostawcy tylko do odczytu
 ms.date: 10/26/2018
 helpviewer_keywords:
@@ -7,25 +8,25 @@ helpviewer_keywords:
 - IRowsetLocate class, adding to OLE DB template providers
 - simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-ms.openlocfilehash: d61f24a9a9abffe836a7f11bd5d1517fddf97fe7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00a0ea4fb9b759447026353ba0d78c7c856b15ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317639"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Udoskonalanie prostego dostawcy tylko do odczytu
 
-W tej sekcji pokazano, jak poprawić [prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md) utworzony w poprzedniej sekcji. `IRowsetLocateImpl` Tworzy implementację `IRowsetLocate` interfejs i dodaje obsługę zakładki dla Ciebie.
+W tej sekcji przedstawiono sposób ulepszania [prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md) utworzonego w poprzedniej sekcji. `IRowsetLocateImpl` tworzy implementację `IRowsetLocate` interfejsu i dodaje obsługę zakładki.
 
-W przypadku dostawcy pracy można poprawić, aby aktualizacji dostawcy, Obsługa transakcji i zwiększyć wydajność algorytmu pobieranie z wiersza. Większość dostawcy ulepszenia obejmują dodawanie interfejsu do istniejącego obiektu COM.
+Gdy korzystasz z działającego dostawcy, możesz go ulepszyć, aby dokonać aktualizacji dostawcy, obsłużyć transakcje lub zwiększyć wydajność algorytmu pobierania wierszy. Większość ulepszeń dostawcy obejmuje dodanie interfejsu do istniejącego obiektu COM.
 
-Przykład w następujących tematach zwiększa mechanizm pobieranie z wiersza, dodając `IRowsetLocate` współpracować w celu `CAgentRowset`. Tematy dowiesz się, jak do:
+Przykład w poniższych tematach rozszerza mechanizm pobierania wierszy, dodając `IRowsetLocate` interfejs do programu `CAgentRowset` . Tematy pokazują, jak:
 
-- [Wprowadź RCustomRowset dziedziczyć irowsetlocate —](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).
+- [Ustaw RCustomRowset z IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).
 
-- [Dynamiczne określanie kolumn zwracanych do konsumenta](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+- [Dynamiczne Określanie kolumn zwracanych do konsumenta](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[Tworzenie prostego dostawcy Read-Only](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

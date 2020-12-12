@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wywoływanie wyjątków oprogramowania'
 title: Występowanie wyjątków programowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 737bec4af99ad7743a8f7740d57919f169c2b509
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319407"
 ---
 # <a name="raising-software-exceptions"></a>Występowanie wyjątków programowych
 
@@ -30,11 +31,11 @@ Aby użyć obsługi wyjątków strukturalnych z błędami:
 
 - Zdefiniuj własny kod wyjątku dla zdarzenia.
 
-- Wywołaj `RaiseException` po wykryciu problemu.
+- Wywoływanie `RaiseException` po wykryciu problemu.
 
 - Użyj filtrów obsługi wyjątków, aby przetestować zdefiniowany kod wyjątku.
 
-Plik \<Winerror. h > pokazuje format kodów wyjątków. Aby upewnić się, że nie zostanie zdefiniowany kod, który powoduje konflikt z istniejącym kodem wyjątku, należy ustawić trzeci najbardziej znaczący bit na 1. Cztery najbardziej znaczące bity powinny być ustawione, jak pokazano w poniższej tabeli.
+\<winerror.h>Plik pokazuje format kodów wyjątków. Aby upewnić się, że nie zostanie zdefiniowany kod, który powoduje konflikt z istniejącym kodem wyjątku, należy ustawić trzeci najbardziej znaczący bit na 1. Cztery najbardziej znaczące bity powinny być ustawione, jak pokazano w poniższej tabeli.
 
 |Bity|Zalecane ustawienie binarne|Opis|
 |----------|--------------------------------|-----------------|
@@ -51,7 +52,7 @@ W związku z tym kod błędu powinien mieć co najwyżej cztery bity ustawione n
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. Na przykład poniższy kod wywołuje wyjątek `STATUS_INSUFFICIENT_MEM` w odpowiedzi na problem z alokacją pamięci:
+Po zdefiniowaniu kodu wyjątku można go użyć, aby zgłosić wyjątek. Na przykład poniższy kod wywołuje `STATUS_INSUFFICIENT_MEM` wyjątek w odpowiedzi na problem z alokacją pamięci:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -73,5 +74,5 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pisanie procedury obsługi wyjątków](../cpp/writing-an-exception-handler.md)<br/>
+[Pisanie programu do obsługi wyjątku](../cpp/writing-an-exception-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

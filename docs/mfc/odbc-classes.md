@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy ODBC'
 title: Klasy ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 18b6e3a0ea20dbd352a61c4faab52c35b852dcb3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ac03543a6dfd9cf85320f9ff051730c102f2e0bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318692"
 ---
 # <a name="odbc-classes"></a>Klasy ODBC
 
@@ -36,10 +37,10 @@ Dostarcza informacje kontekstu do obsługi wymiany pól rekordów (RFX), które 
 ## <a name="related-classes"></a>Powiązane klasy
 
 [CLongBinary](reference/clongbinary-class.md)<br/>
-Hermetyzuje dojście do magazynu dla binarnego dużego obiektu (BLOB), takiego jak mapa bitowa. `CLongBinary`obiekty służą do zarządzania dużymi obiektami danych przechowywanymi w tabelach bazy danych.
+Hermetyzuje dojście do magazynu dla binarnego dużego obiektu (BLOB), takiego jak mapa bitowa. `CLongBinary` obiekty służą do zarządzania dużymi obiektami danych przechowywanymi w tabelach bazy danych.
 
 [CDBVariant](reference/cdbvariant-class.md)<br/>
-Umożliwia przechowywanie wartości bez obaw o typ danych wartości. `CDBVariant`śledzi typ danych bieżącej wartości, który jest przechowywany w Unii.
+Umożliwia przechowywanie wartości bez obaw o typ danych wartości. `CDBVariant` śledzi typ danych bieżącej wartości, który jest przechowywany w Unii.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o najlepszych rozwiązaniach dotyczących zabezpieczeń języka C++
 title: Najlepsze praktyki w zakresie zabezpieczeń dla C++
 ms.date: 05/08/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 63c5567cf1b06d52aa4b458a9ca127039e5c5daf
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 512029445dee7dd995e56b224e454e0f7f68d322
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499591"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319974"
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 
@@ -40,7 +41,7 @@ Ta opcja kompilatora aktywuje analizę kodu, która zgłasza potencjalne problem
 [`/DYNAMICBASE` (Użyj losowości układu przestrzeni adresowej)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Ta opcja konsolidatora umożliwia tworzenie obrazu wykonywalnego, który może zostać załadowany w różnych lokalizacjach w pamięci na początku wykonywania. Ta opcja powoduje również, że lokalizacja stosu w pamięci znacznie mniej przewidywalna.
 
-## <a name="security-enhanced-crt"></a>Ulepszone zabezpieczenia — CRT
+## <a name="security-enhanced-crt"></a>Security-Enhanced CRT
 
 Biblioteka środowiska uruchomieniowego języka C (CRT) została uzupełniona w celu uwzględnienia bezpiecznych wersji funkcji, które stanowią zagrożenie bezpieczeństwa, na przykład funkcji kopiowania niesprawdzonych `strcpy` ciągów. Ze względu na to, że starsze, niezabezpieczone wersje tych funkcji są przestarzałe, powodują to ostrzeżenia w czasie kompilacji. Zachęcamy do używania bezpiecznych wersji tych funkcji CRT zamiast pomijania ostrzeżeń kompilacji. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md).
 

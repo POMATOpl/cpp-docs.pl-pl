@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: na podstawie zakresu dla instrukcji (C++)'
 title: Range-based for — instrukcja (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 1197080e2e96e0e5c51bc06e93026567a33c7842
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d32086009190fe69333a2f36ff03bb551396d98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319394"
 ---
 # <a name="range-based-for-statement-c"></a>Range-based for — instrukcja (C++)
 
@@ -22,7 +23,7 @@ Wykonuje `statement` wielokrotnie i sekwencyjnie dla każdego elementu w `expres
 
 Użyj instrukcji opartej na zakresie **`for`** , aby utworzyć pętle, które muszą zostać wykonane przez *zakres*, który jest zdefiniowany jako wszystko, co można wykonać w iteracji, na przykład `std::vector` , lub dowolną inną sekwencję standardowej biblioteki języka C++, której zakres jest zdefiniowany przez `begin()` i `end()` . Nazwa zadeklarowana w `for-range-declaration` części jest lokalną **`for`** instrukcją i nie może być ponownie zadeklarowana w `expression` lub `statement` . Należy zauważyć, że [`auto`](../cpp/auto-cpp.md) słowo kluczowe jest preferowany w `for-range-declaration` części instrukcji.
 
-**Nowość w programie Visual Studio 2017:**  Pętle oparte na zakresie **`for`** nie wymagają już, aby `begin()` obiekty tego samego typu i nie były `end()` zwracane. Umożliwia to `end()` zwrócenie obiektu wskaźnikowego, takiego jak używany przez zakresy, zgodnie z definicją w propozycjach zakres-v3. Aby uzyskać więcej informacji, zobacz [uogólnianie `For` pętli opartej na zakresie](https://wg21.link/p0184r0) oraz [biblioteki zakresu-V3 w serwisie GitHub](https://github.com/ericniebler/range-v3).
+**Nowość w programie Visual Studio 2017:**  Pętle oparte na zakresie **`for`** nie wymagają już, aby `begin()` obiekty tego samego typu i nie były `end()` zwracane. Umożliwia to `end()` zwrócenie obiektu wskaźnikowego, takiego jak używany przez zakresy, zgodnie z definicją w propozycjach zakres-v3. Aby uzyskać więcej informacji, zobacz [uogólnianie `For` pętli Range-Based](https://wg21.link/p0184r0) i [biblioteki Range-V3 w witrynie GitHub](https://github.com/ericniebler/range-v3).
 
 Ten kod pokazuje, jak używać pętli opartych na zakresie **`for`** do iteracji przez tablicę i wektor:
 
@@ -104,11 +105,11 @@ Weź pod uwagę następujące fakty dotyczące zakresu **`for`** :
 
 - Używa wyszukiwania zależnego od argumentów `begin()` i `end()` innych elementów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [`auto`](../cpp/auto-cpp.md)<br/>
 [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[`while`Instrukcja (C++)](../cpp/while-statement-cpp.md)<br/>
-[`do-while`Instrukcja (C++)](../cpp/do-while-statement-cpp.md)<br/>
-[`for`Instrukcja (C++)](../cpp/for-statement-cpp.md)
+[`while` Instrukcja (C++)](../cpp/while-statement-cpp.md)<br/>
+[`do-while` Instrukcja (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[`for` Instrukcja (C++)](../cpp/for-statement-cpp.md)

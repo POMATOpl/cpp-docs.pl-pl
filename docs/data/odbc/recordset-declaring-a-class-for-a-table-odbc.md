@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)'
 title: 'Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: ec5731e7e5058206e210c5a9a5bb1a189c940c91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0785fbf684942748075729be630a6b309c183d06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212943"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319212"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Zestaw rekordów: deklarowanie klasy dla tabeli (ODBC)
 
@@ -30,6 +31,6 @@ Inne zastosowania dla zestawów rekordów obejmują:
 ## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
 [Zestaw rekordów: deklarowanie klasy dla wstępnie zdefiniowanego zapytania (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
 [Zestaw rekordów: wykonywanie sprzężenia (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

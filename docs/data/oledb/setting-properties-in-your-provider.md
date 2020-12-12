@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Ustawianie właściwości w dostawcy'
 title: Ustawianie właściwości w dostawcy
 ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 3717282d284990b1b8038f6954ee971938cf7921
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e85fddfb741fe89869d18531bb172201eaa14753
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316690"
 ---
 # <a name="setting-properties-in-your-provider"></a>Ustawianie właściwości w dostawcy
 

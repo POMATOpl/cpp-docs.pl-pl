@@ -1,19 +1,20 @@
 ---
+description: Dowiedz się więcej o tym, jak wystawiać zapytanie sparametryzowane
 title: Uruchamianie zapytania parametrycznego
 ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: bb8b879d08595150b2db61f4840131e3ccc500a2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2d3f03a359fe3ce079239fdcb9603b2d30299c33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317236"
 ---
 # <a name="issuing-a-parameterized-query"></a>Uruchamianie zapytania parametrycznego
 
-W poniższym przykładzie występują proste zapytania sparametryzowane, które pobiera rekordy z polem wiek (większym niż 30) z tabeli w bazie danych programu Microsoft Access. Aby można było obsługiwać parametr, rekord użytkownika musi mieć dodatkową mapę. Poniższy kod w projekcie ATL używa klasy `CCommand` zamiast klasy `CTable` używanej w poprzednim przykładzie, [przechodząc do prostego zestawu wierszy](../../data/oledb/traversing-a-simple-rowset.md).
+W poniższym przykładzie występują proste zapytania sparametryzowane, które pobiera rekordy z polem wiek (większym niż 30) z tabeli w bazie danych programu Microsoft Access. Aby można było obsługiwać parametr, rekord użytkownika musi mieć dodatkową mapę. Poniższy kod w projekcie ATL używa `CCommand` klasy zamiast `CTable` klasy użytej w poprzednim przykładzie, [przechodząc do prostego zestawu wierszy](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +52,7 @@ int main()
 }
 ```
 
-Rekord użytkownika, `CArtists`, wygląda podobnie do tego przykładu:
+Rekord użytkownika, `CArtists` wygląda podobnie do tego przykładu:
 
 ```cpp
 class CArtists

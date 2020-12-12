@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Porównywanie struktur danych synchronizacji z interfejsem API systemu Windows'
 title: Porównywanie struktur danych synchronizacji z Windows API
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: b889570935b3a94e0cb8717c8af1783e2ce31c42
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: b5c633c61d070e2cd687b6281597694a7533fe0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318419"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Porównywanie struktur danych synchronizacji z Windows API
 
@@ -26,7 +27,7 @@ Klasa [concurrency:: critical_section](../../parallel/concrt/reference/critical-
 
 Klasa [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) przypomina blokady systemu Windows (SRW). W poniższej tabeli opisano podobieństwa i różnice.
 
-| Cechy | Klasa `reader_writer_lock` | Blokada SRW |
+| Cecha | Klasa `reader_writer_lock` | Blokada SRW |
 |--|--|--|
 | Niewspółpracujący | Tak | Tak |
 | Możliwość promowania czytnika do składnika zapisywania (Pomoc techniczna dotycząca uaktualniania) | Nie | Nie |
@@ -85,6 +86,6 @@ Ponieważ `event` Klasa zachowuje się wspólnie, harmonogram może ponownie prz
 
 Aby uzyskać więcej informacji o zadaniach, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)

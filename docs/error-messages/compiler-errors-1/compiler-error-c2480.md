@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2480'
 title: Błąd kompilatora C2480
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
-ms.openlocfilehash: 3e495a8019405a558511637467133877dae1183e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0c7f73b7e1aa205d38577602b93907309935b216
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743526"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316547"
 ---
 # <a name="compiler-error-c2480"></a>Błąd kompilatora C2480
 
 "Identyfikator": "Thread" jest tylko prawidłowy dla elementów danych statycznego zakresu
 
-Nie można użyć atrybutu `thread` ze zmienną automatyczną, niestatyczną składową danych, parametrem funkcji ani deklaracjami lub definicjami funkcji.
+Nie można użyć `thread` atrybutu z automatyczną zmienną, niestatyczną składową danych, parametrem funkcji ani deklaracjami lub definicjami funkcji.
 
-Użyj atrybutu `thread` dla zmiennych globalnych, statycznych elementów członkowskich danych i lokalnych zmiennych statycznych.
+Użyj `thread` atrybutu dla zmiennych globalnych, statycznych elementów członkowskich danych i lokalnych zmiennych statycznych.
 
 Poniższy przykład generuje C2480:
 

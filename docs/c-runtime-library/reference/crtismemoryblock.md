@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _CrtIsMemoryBlock'
 title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-ms.openlocfilehash: f29745acd06f6f5b3fa96367444e800bdc3e8e3a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 81a4b515461a45f566f95728180013408ccda43a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319719"
 ---
 # <a name="_crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -71,18 +72,18 @@ Wskaźnik na numer wiersza w pliku źródłowym lub **wartość null**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_CrtIsMemoryBlock** sprawdza, czy określony blok pamięci znajduje się w stercie lokalnym aplikacji i ma prawidłowy identyfikator typu bloku. Ta funkcja może również służyć do uzyskiwania numeru zamówienia alokacji obiektów oraz nazwy pliku źródłowego/numeru wiersza, w którym pierwotnie zażądano alokacji bloku pamięci. Przekazywanie wartości innych niż**null** dla parametrów *requestNumber*, *filename*lub *LineNumber* powoduje, że **_CrtIsMemoryBlock** ustawiać te parametry do wartości w nagłówku debugowania bloku pamięci, jeśli odnajdzie blok w Sterta lokalna. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtIsMemoryBlock** są usuwane podczas przetwarzania wstępnego.
+Funkcja **_CrtIsMemoryBlock** sprawdza, czy określony blok pamięci znajduje się w stercie lokalnym aplikacji i ma prawidłowy identyfikator typu bloku. Ta funkcja może również służyć do uzyskiwania numeru zamówienia alokacji obiektów oraz nazwy pliku źródłowego/numeru wiersza, w którym pierwotnie zażądano alokacji bloku pamięci. Przekazywanie wartości innych niż **null** dla parametrów *requestNumber*, *filename* lub *LineNumber* powoduje, że **_CrtIsMemoryBlock** ustawiać te parametry do wartości w nagłówku debugowania bloku pamięci, jeśli odnajdzie blok w stercie lokalnym. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania do **_CrtIsMemoryBlock** są usuwane podczas przetwarzania wstępnego.
 
 Jeśli **_CrtIsMemoryBlock** nie powiedzie się, zwraca **wartość false** , a parametry wyjściowe są inicjowane do wartości domyślnych: *requestNumber* i **LineNumber** są ustawione na 0, a *Nazwa pliku* jest ustawiona na **wartość null**.
 
-Ponieważ ta funkcja zwraca **wartość true** lub **false**, można ją przesłać do jednego z makr [_ASSERT](assert-asserte-assert-expr-macros.md) w celu utworzenia prostego mechanizmu obsługi błędów debugowania. Poniższy przykład powoduje niepowodzenie potwierdzenia, jeśli określony adres nie znajduje się na stercie lokalnej:
+Ponieważ ta funkcja zwraca **wartość true** lub **false**, można ją przesłać do jednego z [_ASSERTych](assert-asserte-assert-expr-macros.md) makr, aby utworzyć prosty mechanizm obsługi błędów debugowania. Poniższy przykład powoduje niepowodzenie potwierdzenia, jeśli określony adres nie znajduje się na stercie lokalnej:
 
 ```C
 _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Aby uzyskać więcej informacji o tym, jak **_CrtIsMemoryBlock** może być używany z innymi funkcjami i makrami debugowania, zobacz [MACROS for Reporting](/visualstudio/debugger/macros-for-reporting). Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o tym, jak **_CrtIsMemoryBlock** mogą być używane z innymi funkcjami i makrami debugowania, zobacz [makra na potrzeby raportowania](/visualstudio/debugger/macros-for-reporting). Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -100,6 +101,6 @@ Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-librar
 
 Zobacz przykład tematu [_CrtIsValidHeapPointer](crtisvalidheappointer.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>

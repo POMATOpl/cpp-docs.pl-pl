@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: obsługa nawigacji w widoku rekordu (dostęp do danych MFC)'
 title: Obsługa nawigacji w widoku rekordu (dostęp do danych MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - record views, navigation
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-ms.openlocfilehash: dcac4c43cf553528d5c84a090f7e4265e3a1321c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 828c514235f9f319c441ba21302b21d56e7611ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319043"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Obsługa nawigacji w widoku rekordu (dostęp do danych MFC)
 

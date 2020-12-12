@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: OLE DB Architektura szablonu dostawcy'
 title: Architektura szablonu dostawcy OLE DB
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 89e07f95853c3611b7cceaef3f247c220c630add
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1cc1619ab7ed13c2d7962f75229df2ecd8cf0d78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317132"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura szablonu dostawcy OLE DB
 
@@ -21,7 +22,7 @@ Architektura dostawcy OLE DB obejmuje obiekt źródła danych i co najmniej jedn
 
 ![Architektura dostawcy](../../data/oledb/media/vc4twb1.gif "Architektura dostawcy")
 
-Wraz z plikami źródłowymi utworzonymi przez **Kreatora dostawcy OLE DB**szablony OLE DB implementują obiekt źródła danych. Sesja jest obiektem, który odnosi się do OLE DB `TSession` .
+Wraz z plikami źródłowymi utworzonymi przez **Kreatora dostawcy OLE DB** szablony OLE DB implementują obiekt źródła danych. Sesja jest obiektem, który odnosi się do OLE DB `TSession` .
 
 ## <a name="mandatory-and-optional-interfaces"></a>Interfejsy obowiązkowe i opcjonalne
 

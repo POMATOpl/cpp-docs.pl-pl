@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: potwierdzenia i komunikaty User-Supplied (C++)'
 title: Potwierdzanie i komunikaty dostarczone przez użytkownika (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-ms.openlocfilehash: a4861b3e1d17835f11f5e148d6b62051a6747f80
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb0dd5d94ffe49017ecb89f53063993bedd12382
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319575"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Potwierdzanie i komunikaty dostarczone przez użytkownika (C++)
 
@@ -30,7 +31,7 @@ Okres istnienia aplikacji składa się z fazy przetwarzania wstępnego, fazy kom
 
 - [Makro Assert, _ASSERT, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makro jest stosowane w czasie wykonywania. Ocenia wyrażenia określone przez użytkownika, a jeśli wynik wynosi zero, system wysyła komunikat diagnostyczny i zamyka aplikację. Wiele innych makr, takich jak[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) i _ASSERTE, przypomina to makro, ale wystawia inne komunikaty diagnostyczne zdefiniowane przez system lub zdefiniowane przez użytkownika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [#error — dyrektywa (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)<br/>
 [potwierdzj makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: współdziałanie z innymi językami .NET (C++/CLI)'
 title: Współdziałanie z innymi językami .NET (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-ms.openlocfilehash: ffdf9a8b11912bde38e15408228670c8cff9a503
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51cead7fcc7dedc05f0225facf10fe70a3d606fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316612"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Współdziałanie z innymi językami .NET (C++/CLI)
 
-Tematy w tej sekcji przedstawiają sposób tworzenia zestawów w programie Visual C++, które używają z lub zapewniać funkcje w zestawach napisanych w języku C# lub Visual Basic.
+W tematach w tej sekcji przedstawiono sposób tworzenia zestawów w Visual C++, które wykorzystują program lub udostępniają funkcje do zestawów pisanych w języku C# lub Visual Basic.
 
-## <a name="consume_indexer"></a> Konsumowanie indeksatora języka C#
+## <a name="consume-a-c-indexer"></a><a name="consume_indexer"></a> Korzystanie z indeksatora języka C#
 
-Visual C++ nie zawiera indeksatory; ma ona właściwości indeksowanych. Aby konsumowanie indeksatora języka C#, uzyskać dostęp do indeksatora, tak jakby indeksowana właściwość.
+Visual C++ nie zawiera indeksatorów; ma właściwości indeksowane. Aby użyć indeksatora języka C#, uzyskaj dostęp do indeksatora tak, jakby była indeksowaną właściwością.
 
-Aby uzyskać więcej informacji na temat indeksatorów zobacz:
+Aby uzyskać więcej informacji na temat indeksatorów, zobacz:
 
 - [Indeksatory](/dotnet/csharp/programming-guide/indexers/index)
 
 ### <a name="example"></a>Przykład
 
-Następujący program C# definiuje indeksatora.
+Poniższy program w języku C# definiuje indeksator.
 
 ```csharp
 // consume_cs_indexers.cs
@@ -70,7 +71,7 @@ public class MainClass {
 
 ### <a name="example"></a>Przykład
 
-Indeksator korzysta z tego programu Visual C++.
+Ten Visual C++ Program korzysta z indeksatora.
 
 ```cpp
 // consume_cs_indexers_2.cpp
@@ -100,9 +101,9 @@ Element #9 = 0
 Element #10 = 0
 ```
 
-## <a name="implement_isas"></a> Implementowanie jest i jak słowa kluczowe języka C#
+## <a name="implement-is-and-as-c-keywords"></a><a name="implement_isas"></a> Implementuj słowa kluczowe języka C# i języków
 
-W tym temacie pokazano, jak zaimplementować funkcje `is` i `as` słowa kluczowe języka C# w programie Visual C++.
+W tym temacie przedstawiono sposób implementowania funkcji `is` i `as` słów kluczowych języka C# w Visual C++.
 
 ### <a name="example"></a>Przykład
 
@@ -141,11 +142,11 @@ int main() {
 o is a string
 ```
 
-## <a name="implement_locak"></a> Implementowanie słowa kluczowego lock języka C#
+## <a name="implement-the-lock-c-keyword"></a><a name="implement_locak"></a> Implementacja słowa kluczowego lock języka C#
 
-W tym temacie przedstawiono sposób implementacji języka C# `lock` — słowo kluczowe w języku Visual C++.
+W tym temacie pokazano, jak zaimplementować `lock` słowo kluczowe języka C# w Visual C++.
 
-Można również użyć `lock` klasy w języku C++ Support Library. Zobacz [synchronizacja (klasa lock)](../dotnet/synchronization-lock-class.md) Aby uzyskać więcej informacji.
+Można również użyć `lock` klasy w bibliotece obsługi języka C++. Aby uzyskać więcej informacji, zobacz [Synchronizacja (Klasa blokady)](../dotnet/synchronization-lock-class.md) .
 
 ### <a name="example"></a>Przykład
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat OLE DB szablonów konsumentów (C++)
 title: Szablony konsumentów OLE DB (C++)
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -7,32 +8,32 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aaf935234b8ec3396c97345ca7e38a0f8d806bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317158"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Szablony konsumentów OLE DB (C++)
 
-Szablony OLE DB konsumenta obsługuje specyfikację wersji 2.6 OLE DB. (Szablony OLE DB odbiorcy są sprawdzane pod względem OLE DB 2.6, ale nie obsługują każdego interfejsu w specyfikacji.) Szablony konsumentów zminimalizować ilość kodu, który trzeba napisać, aby zaimplementować konsumenta OLE DB. Szablony umożliwiają:
+Szablony konsumentów OLE DB obsługują specyfikację OLE DB w wersji 2,6. (OLE DB Szablony konsumentów są testowane względem OLE DB 2,6, ale nie obsługują wszystkich interfejsów w specyfikacji). Szablony konsumentów umożliwiają zminimalizowanie ilości kodu, który należy napisać, aby zaimplementować OLE DB konsumenta. Szablony zapewniają następujące:
 
-- Łatwy dostęp do funkcji OLE DB i łatwą integrację z ATL i MFC.
+- Łatwy dostęp do funkcji OLE DB i łatwa integracja z bibliotekami ATL i MFC.
 
-- Model proste powiązanie dla kolumny i parametry bazy danych.
+- Model prostego powiązania dla parametrów i kolumn bazy danych.
 
-- Natywne typy danych języka C/C++ do programowania OLE DB.
+- Natywne typy danych C/C++ do programowania OLE DB.
 
-Aby użyć szablonów OLE DB, należy zapoznać się z szablonów języka C++, COM i interfejsy OLE DB. Jeśli nie znasz OLE DB, zobacz [Microsoft OLE DB sterownik programu SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
+Aby korzystać z szablonów OLE DB, należy zapoznać się z szablonami języka C++, COM i OLE DB. Jeśli nie znasz OLE DB, zobacz [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
 
-Szablony OLE DB obsługuje istniejący model obiektów OLE DB, a nie dodaje nowy model obiektu. Klasy górnej warstwy w OLE DB szablonami konsumentów równoległe składniki zdefiniowane w specyfikacji OLE DB. Projekt szablony OLE DB konsumenta obejmuje zaawansowane funkcje, takie jak wielu metod dostępu w zestawie wierszy. Korzystanie z szablonów i wielokrotne dziedziczenie sprawia, że biblioteka małe i elastyczne.
+Szablony OLE DB obsługują istniejący model obiektów OLE DB zamiast dodawania nowego modelu obiektów. Klasy najwyższego poziomu w szablonach konsumentów OLE DB równolegle ze składnikami zdefiniowanymi w specyfikacji OLE DB. Projekt OLE DB szablonów konsumentów zawiera zaawansowane funkcje, takie jak wiele metod dostępu w zestawie wierszy. Użycie szablonów i wielokrotne dziedziczenie sprawia, że biblioteka jest niewielka i elastyczna.
 
-## <a name="how-ole-db-consumers-access-data"></a>Jak dostęp do danych OLE DB konsumentów
+## <a name="how-ole-db-consumers-access-data"></a>Jak OLE DB konsumenci uzyskują dostęp do danych
 
-Użytkownicy korzystają z różnych typów obiektów, które są opisane w następujących tematach:
+Konsumenci używają kilku rodzajów obiektów, które są opisane w następujących tematach:
 
-- [Źródła i sesje danych](../../data/oledb/data-sources-and-sessions.md)
+- [Źródła danych i sesje](../../data/oledb/data-sources-and-sessions.md)
 
 - [Metody dostępu i zestawy wierszy](../../data/oledb/accessors-and-rowsets.md)
 
@@ -40,25 +41,25 @@ Użytkownicy korzystają z różnych typów obiektów, które są opisane w nast
 
 - [Rekordy użytkowników](../../data/oledb/user-records.md)
 
-Przed konsumenta niczego, najpierw należy wybrać dostawcy OLE DB, która jest odpowiednia dla typu bazy danych, potrzebne do dostępu (na przykład SQL, Oracle, ODBC i MSDS). Aby to zrobić, zazwyczaj używa się moduł wyliczający (zobacz [CEnumerator](../../data/oledb/cenumerator-class.md) zgodnie z opisem w [źródła i sesje danych](../../data/oledb/data-sources-and-sessions.md)).
+Przed zakończeniem działania konsumenta należy najpierw wybrać dostawcę OLE DB, który jest odpowiedni dla typu bazy danych, do której należy uzyskać dostęp (na przykład SQL, Oracle, ODBC i MSDS). W tym celu zwykle używany jest moduł wyliczający (zobacz [CEnumerator](../../data/oledb/cenumerator-class.md) , jak wspomniano w obszarze [źródła danych i sesje](../../data/oledb/data-sources-and-sessions.md)).
 
-[Obiektu źródła danych](../../data/oledb/data-sources-and-sessions.md) udostępnia informacje o połączeniu, wymagane do połączenia z określonego źródła danych. Obiekt źródła danych zawiera także informacje dotyczące uwierzytelniania (np. nazwy logowania i hasła), który jest używany, aby zezwolić użytkownikom na dostęp do źródła danych. Obiekt źródła danych nawiązuje połączenie z bazą danych, a następnie tworzy jeden lub więcej obiektów sesji. Każdy [obiektu session](../../data/oledb/data-sources-and-sessions.md) zarządza własną interakcji z bazą danych (czyli zapytań i pobierania danych) i wykonuje te transakcje niezależnie od innych istniejących sesji.
+[Obiekt źródła danych](../../data/oledb/data-sources-and-sessions.md) zawiera informacje o połączeniu niezbędne do nawiązania połączenia z wybranym źródłem danych. Obiekt źródła danych zawiera również informacje uwierzytelniania (takie jak nazwy logowania i hasła), które służą do nadawania użytkownikom uprawnienia dostępu do źródła danych. Obiekt źródła danych nawiązuje połączenie z bazą danych, a następnie tworzy co najmniej jeden obiekt sesji. Każdy [obiekt sesji](../../data/oledb/data-sources-and-sessions.md) zarządza swoimi własnymi interakcjami z bazą danych (czyli badaniem i pobieraniem danych) i wykonuje te transakcje niezależnie od innych istniejących sesji.
 
-Sesja tworzy obiekty wierszy i polecenia. [Obiektu polecenia](../../data/oledb/commands-and-tables.md) pozwala użytkownikom na korzystanie z bazy danych, na przykład za pomocą polecenia SQL. [Obiektu zestawu wierszy](../../data/oledb/accessors-and-rowsets.md) to zestaw danych za pomocą której można przejść, jak i w którym możesz [aktualizowanie, usuwanie i wstawianie wierszy](../../data/oledb/updating-rowsets.md).
+Sesja tworzy zestaw wierszy i obiekty poleceń. [Obiekt Command](../../data/oledb/commands-and-tables.md) umożliwia użytkownikom współpracującie z bazą danych, na przykład za pomocą poleceń SQL. [Obiekt zestawu wierszy](../../data/oledb/accessors-and-rowsets.md) to zestaw danych, za pomocą którego można nawigować i w których można je [aktualizować, usuwać i wstawiać wiersze](../../data/oledb/updating-rowsets.md).
 
-Konsumenta OLE DB wiąże kolumn w tabelach bazy danych ze zmiennymi lokalnymi; Aby to zrobić, używa [akcesor](../../data/oledb/accessors-and-rowsets.md), która zawiera mapę przechowywania danych w ramach konsumenta. Mapa zawiera zestaw powiązań między kolumnami tabeli i lokalne buforów (zmienne) w aplikacji klienta.
+Odbiorca OLE DB wiąże kolumny w tabelach bazy danych ze zmiennymi lokalnymi; w tym celu używa [metody dostępu](../../data/oledb/accessors-and-rowsets.md), która zawiera mapę sposobu przechowywania danych w ramach konsumenta. Mapa składa się z zestawu powiązań między kolumnami tabeli i buforami lokalnymi (zmiennymi) w aplikacji konsumenta.
 
-Jedną z bardzo ważnym pojęciem podczas pracy z odbiorców jest zadeklarowana dwóch klas w odbiorcy: [klasy polecenie (lub tabeli)](../../data/oledb/commands-and-tables.md) i [klasy rekordów użytkowników](../../data/oledb/user-records.md). Zestaw wierszy jest dostęp za pośrednictwem klasy polecenie (lub tabeli), która dziedziczy z klasy metody dostępu i klasy zestawu wierszy. Klasa rekordu użytkownika zawiera mapę powiązania zestawu wierszy opisany wcześniej.
+Jednym ważnym pojęciem podczas pracy z klientami jest zadeklarowanie dwóch klas w odbiorcy: [Klasa polecenia (lub tabeli)](../../data/oledb/commands-and-tables.md) i [Klasa rekordu użytkownika](../../data/oledb/user-records.md). Dostęp do zestawu wierszy można uzyskać za pomocą klasy Command (lub Table), która dziedziczy z klasy akcesora i klasy zestawu wierszy. Klasa rekordu użytkownika zawiera wcześniej opisaną mapę powiązania zestawu wierszy.
 
-Więcej informacji znajduje się w następujących tematach:
+Aby uzyskać więcej informacji, zobacz następujące tematy:
 
-- [Tworzenie konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+- [Tworzenie klienta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
 
-- [OLE DB konsumenta scenariuszach (przykłady)](../../data/oledb/working-with-ole-db-consumer-templates.md)
+- [Typowe scenariusze klientów OLE DB (przykłady)](../../data/oledb/working-with-ole-db-consumer-templates.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Dostęp do danych](../data-access-in-cpp.md)<br/>
-[Dokumentacja zestawu SDK usługi OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[Sterownik OLE DB firmy Microsoft dla programu SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)
+[Dokumentacja zestawu SDK OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Sterownik OLE DB firmy Microsoft dla SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)
