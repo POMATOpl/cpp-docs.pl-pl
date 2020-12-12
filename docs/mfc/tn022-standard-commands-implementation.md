@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: TN022: implementacja poleceń standardowych'
 title: 'TN022: implementacja poleceń standardowych'
 ms.date: 11/04/2016
 f1_keywords:
@@ -59,438 +60,438 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 5c7041f40c7e30592f642d29d9d02812a9596864
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7c8540dcf0e41e5f6d5f00a4f22568c4df0fcdbe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215810"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: implementacja poleceń standardowych
 
 > [!NOTE]
-> Następująca uwaga techniczna nie została zaktualizowana, ponieważ została po raz pierwszy uwzględniona w dokumentacji online. W rezultacie niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zaleca się wyszukicie tematu interesującego w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-W tej notatce opisano implementacje poleceń standardowych dostarczonych przez MFC 2.0. Przeczytaj [najpierw uwagę techniczną 21,](../mfc/tn021-command-and-message-routing.md) ponieważ opisano mechanizmy używane do implementacji wielu standardowych poleceń.
+Ta Uwaga zawiera opis standardowych implementacji poleceń zapewnianych przez MFC 2,0. Przeczytaj najpierw [uwagę techniczną 21](../mfc/tn021-command-and-message-routing.md) , ponieważ opisuje ona mechanizmy używane do implementowania wielu standardowych poleceń.
 
-W tym opisie przyjęto znajomość architektury MFC, interfejsów API i typowej praktyki programowania. Opisane są udokumentowane, a także nieudokumentowane interfejsy API "tylko implementacja". To nie jest miejsce, aby rozpocząć naukę o funkcjach lub jak programować w MFC. Więcej ogólnych informacji można znaleźć w języku Visual C++, aby uzyskać szczegółowe informacje na temat udokumentowanych interfejsów API.
+W tym opisie założono znajomość architektur MFC, interfejsów API i wspólnych rozwiązań programistycznych. Opisane są również interfejsy API "tylko implementacji". Nie jest to miejsce, w którym można zacząć uczenie się na temat funkcji lub sposobu programowania w MFC. Zapoznaj się z Visual C++, aby uzyskać więcej ogólnych informacji oraz szczegóły udokumentowanych interfejsów API.
 
-## <a name="the-problem"></a>The Problem
+## <a name="the-problem"></a>Problem
 
-MFC definiuje wiele standardowych identyfikatorów poleceń w pliku nagłówkowym AFXRES. H. Obsługa struktury dla tych poleceń jest różna. Zrozumienie, gdzie i jak klasy struktury obsługiwać te polecenia nie tylko pokaże, jak struktura działa wewnętrznie, ale zapewni przydatne informacje na temat dostosowywania implementacji standardowych i nauczyć się kilka technik implementacji własnych programów obsługi poleceń.
+MFC definiuje wiele standardowych identyfikatorów poleceń w pliku nagłówkowym plik AFXRES. H. Obsługa tych poleceń przez platformę jest różna. Informacje o tym, gdzie i jak klasy struktury obsługują te polecenia, nie tylko pokazują, jak działa platforma wewnętrznie, ale udostępnia przydatne informacje na temat sposobu dostosowywania standardowych implementacji i pouczenia się kilku technik wdrażania własnych programów obsługi poleceń.
 
-## <a name="contents-of-this-technical-note"></a>Zawartość niniejszej noty technicznej
+## <a name="contents-of-this-technical-note"></a>Zawartość tej uwagi technicznej
 
-Identyfikator każdego polecenia jest opisany w dwóch sekcjach:
+Każdy identyfikator polecenia jest opisany w dwóch sekcjach:
 
-- Tytuł: symboliczna nazwa identyfikatora polecenia (na przykład ID_FILE_SAVE), po której następuje cel polecenia (na przykład "zapisuje bieżący dokument") oddzielony dwukropkiem.
+- Title: Nazwa symboliczna identyfikatora polecenia (na przykład ID_FILE_SAVE), a następnie przeznaczenie polecenia (na przykład "zapisuje bieżący dokument") oddzielone dwukropkiem.
 
-- Jeden lub więcej akapitów opisujących, które klasy implementują polecenie i co robi domyślna implementacja
+- Jeden lub więcej akapitów opisujących, które klasy implementują polecenie i jakie są implementacje domyślne
 
-Większość domyślnych implementacji poleceń są wstępnie przewodzone w mapie komunikatu klasy podstawowej struktury. Istnieje kilka implementacji poleceń, które wymagają jawnego okablowania w klasie pochodnej. Są one opisane w "Uwaga". Jeśli wybierzesz odpowiednie opcje w AppWizard, te domyślne programy obsługi zostaną połączone dla Ciebie w wygenerowanej aplikacji szkieletu.
+Większość domyślnych implementacji poleceń jest przednich w mapie komunikatów klasy podstawowej platformy. Istnieją pewne implementacje poleceń, które wymagają jawnej okablowania w klasie pochodnej. Opisano je w sekcji "Uwaga". W przypadku wybrania odpowiednich opcji w programie AppWizard te domyślne programy obsługi zostaną połączone dla Ciebie w wygenerowanej aplikacji szkieletowej.
 
 ## <a name="naming-convention"></a>Konwencje nazewnictwa
 
-Standardowe polecenia są zgodne z prostą konwencją nazewnictwa, której zalecamy użycie, jeśli to możliwe. Większość standardowych poleceń znajduje się w standardowych miejscach na pasku menu aplikacji. Nazwa symboliczna polecenia zaczyna się od "ID_", po którym następuje standardowa nazwa menu podręcznego, po której następuje nazwa elementu menu. Nazwa symboliczna jest w wielkich liter z podkreślenia word-breaks. W przypadku poleceń, które nie mają standardowych nazw elementów menu, nazwa polecenia logicznego jest definiowana zaczynając od "ID_" (na przykład ID_NEXT_PANE).
+Standardowe polecenia są zgodne z prostą konwencją nazewnictwa, która zaleca się użyć, jeśli jest to możliwe. Większość standardowych poleceń znajduje się w standardowych miejscach na pasku menu aplikacji. Nazwa symboliczna polecenia rozpoczyna się od "ID_", po którym następuje nazwa standardowego menu podręcznego, a następnie nazwa elementu menu. Nazwa symboliczna znajduje się w Wielkiej literze z podkreśleniem słowo-podział. Dla poleceń, które nie mają standardowych nazw elementów menu, jest definiowana nazwa polecenia logicznego rozpoczynająca się od "ID_" (na przykład ID_NEXT_PANE).
 
-Używamy prefiksu "ID_", aby wskazać polecenia, które są przeznaczone do powiązanych z elementami menu, przyciskami paska narzędzi lub innymi obiektami interfejsu użytkownika polecenia. Programy obsługi poleceń obsługujące polecenia "ID_" powinny używać mechanizmów ON_COMMAND i ON_UPDATE_COMMAND_UI architektury poleceń MFC.
+Prefiks "ID_" jest używany do wskazywania poleceń, które są przeznaczone do powiązania z elementami menu, przyciskami paska narzędzi lub innymi obiektami interfejsu użytkownika poleceń. Procedury obsługi poleceń obsługujące polecenia "ID_" powinny używać mechanizmów ON_COMMAND i ON_UPDATE_COMMAND_UI architektury poleceń MFC.
 
-Zaleca się użycie standardowego prefiksu "IDM_" dla elementów menu, które nie są zgodne z architekturą poleceń i potrzebują kodu specyficznego dla menu, aby je włączyć i wyłączyć. Oczywiście liczba poleceń specyficznych dla menu powinna być mała, ponieważ podążanie za architekturą poleceń MFC nie tylko sprawia, że programy obsługi poleceń są bardziej wydajne (ponieważ będą pracować z paskami narzędzi), ale sprawia, że kod obsługi poleceń jest wielokrotnego pożycia.
+Zalecamy używanie standardowego prefiksu "IDM_" dla elementów menu, które nie są zgodne z architekturą poleceń i wymagają kodu specyficznego dla menu, aby je włączyć i wyłączyć. Oczywiście liczba poleceń specyficznych dla menu powinna być mała, ponieważ następująca architektura poleceń MFC nie tylko sprawia, że programy obsługi poleceń są bardziej wydajne (ponieważ będą działały z paskami narzędzi), ale umożliwią wielokrotne użycie kodu programu obsługi poleceń.
 
 ## <a name="id-ranges"></a>Zakresy identyfikatorów
 
-Więcej informacji na temat wykorzystania zakresów identyfikatorów w MFC można znaleźć w [notatce technicznej 20.](../mfc/tn020-id-naming-and-numbering-conventions.md)
+Zapoznaj się z [uwagą techniczną 20](../mfc/tn020-id-naming-and-numbering-conventions.md) , aby uzyskać szczegółowe informacje na temat używania zakresów identyfikatorów w MFC.
 
 Standardowe polecenia MFC mieszczą się w zakresie od 0xE000 do 0xEFFF. Nie należy polegać na określonych wartościach tych identyfikatorów, ponieważ mogą one ulec zmianie w przyszłych wersjach biblioteki.
 
-Aplikacja powinna zdefiniować jego polecenia w zakresie od 0x8000 do 0xDFFF.
+Aplikacja powinna definiować swoje polecenia z zakresu od 0x8000 do 0xDFFF.
 
-## <a name="standard-command-ids"></a>Standardowe identyfikatory poleceń
+## <a name="standard-command-ids"></a>Identyfikatory poleceń standardowych
 
-Dla każdego identyfikatora polecenia istnieje standardowy ciąg wiersza wiadomości, który można znaleźć w pliku PROMPTS. Rc. Identyfikator ciągu dla tego wiersza menu musi być taki sam, jak w przypadku identyfikatora polecenia.
+Dla każdego identyfikatora polecenia istnieje ciąg standardowego wiersza wiadomości, który można znaleźć w MONITach pliku. Zwrot. Identyfikator ciągu dla tego wiersza menu musi być taki sam jak w przypadku identyfikatora polecenia.
 
-- ID_FILE_NEW Tworzy nowy/pusty dokument.
-
-    > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
-
-   `CWinApp::OnFileNew`implementuje to polecenie w różny sposób w zależności od liczby szablonów dokumentów w aplikacji. Jeśli istnieje tylko `CDocTemplate` `CWinApp::OnFileNew` jeden , utworzy nowy dokument tego typu, a także właściwą klasę ramki i widoku.
-
-   Jeśli istnieje więcej `CDocTemplate`niż `CWinApp::OnFileNew` jeden , poprosi użytkownika o okno dialogowe (AFX_IDD_NEWTYPEDLG), pozwalając mu wybrać typ dokumentu do użycia. Wybrana `CDocTemplate` opcja służy do tworzenia dokumentu.
-
-   Jednym z typowych dostosowywania ID_FILE_NEW jest zapewnienie innego i bardziej graficznego wyboru typów dokumentów. W takim przypadku możesz `CMyApp::OnFileNew` zaimplementować swój własny `CWinApp::OnFileNew`i umieścić go na mapie wiadomości zamiast . Nie ma potrzeby wywoływania implementacji klasy podstawowej.
-
-   Innym typowym dostosowaniem ID_FILE_NEW jest podanie osobnego polecenia do tworzenia dokumentu każdego typu. W takim przypadku należy zdefiniować nowe identyfikatory poleceń, na przykład ID_FILE_NEW_CHART i ID_FILE_NEW_SHEET.
-
-- ID_FILE_OPEN Otwiera istniejący dokument.
+- ID_FILE_NEW powoduje utworzenie nowego/pustego dokumentu.
 
     > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   `CWinApp::OnFileOpen`ma bardzo prostą `CWinApp::DoPromptFileName` implementację `CWinApp::OpenDocumentFile` połączeń, po której następuje nazwa pliku lub ścieżki pliku do otwarcia. Procedura `CWinApp` `DoPromptFileName` implementacji wywołuje standardowe okno dialogowe FileOpen i wypełnia je rozszerzeniami plików uzyskanymi z bieżących szablonów dokumentów.
+   `CWinApp::OnFileNew` implementuje to polecenie w różny sposób w zależności od liczby szablonów dokumentów w aplikacji. Jeśli istnieje tylko jeden `CDocTemplate` , `CWinApp::OnFileNew` program utworzy nowy dokument tego typu, a także odpowiednią klasę Frame i View.
 
-   Jednym z typowych dostosowywania ID_FILE_OPEN jest dostosowanie okna dialogowego FileOpen lub dodanie dodatkowych filtrów plików. Zalecanym sposobem dostosowania tej wartości jest zastąpienie domyślnej implementacji własnym `CWinApp::OpenDocumentFile` okańwem FileOpen i wywołanie nazwy pliku lub ścieżki dokumentu. Nie ma potrzeby wywoływania klasy podstawowej.
+   Jeśli jest więcej niż jeden `CDocTemplate` , `CWinApp::OnFileNew` zostanie wyświetlony monit o podanie użytkownikowi okna dialogowego (AFX_IDD_NEWTYPEDLG), które umożliwia im wybranie typu dokumentu do użycia. Wybrany element służy `CDocTemplate` do tworzenia dokumentu.
 
-- ID_FILE_CLOSE Zamyka aktualnie otwarty dokument.
+   Jednym z typowych dostosowań ID_FILE_NEW jest zapewnienie innego i większej liczby typów dokumentów. W takim przypadku można zaimplementować własny `CMyApp::OnFileNew` i umieścić go na mapie wiadomości zamiast `CWinApp::OnFileNew` . Nie ma potrzeby wywoływania implementacji klasy podstawowej.
 
-   `CDocument::OnFileClose`wywołania `CDocument::SaveModified` monitu o zapisanie dokumentu, jeśli został `OnCloseDocument`zmodyfikowany, a następnie wywołania . Cała logika zamykania, w tym niszczenie `OnCloseDocument` dokumentu, odbywa się w procedurze.
+   Innym typowym przystosowaniem ID_FILE_NEW jest udostępnienie oddzielnego polecenia do tworzenia dokumentu każdego typu. W takim przypadku należy zdefiniować nowe identyfikatory poleceń, na przykład ID_FILE_NEW_CHART i ID_FILE_NEW_SHEET.
 
-    > [!NOTE]
-    >  ID_FILE_CLOSE działa inaczej niż wiadomość WM_CLOSE lub polecenie systemu SC_CLOSE wysłane do okna ramki dokumentów. Zamknięcie okna spowoduje zamknięcie dokumentu tylko wtedy, gdy jest to ostatnie okno ramki z dokumentem. Zamknięcie dokumentu ID_FILE_CLOSE nie tylko zamknie dokument, ale zamknie wszystkie okna ramek z dokumentem.
-
-- ID_FILE_SAVE Zapisuje bieżący dokument.
-
-   Implementacja używa procedury `CDocument::DoSave` pomocniczej, która `OnFileSave` `OnFileSaveAs`jest używana zarówno dla i . Jeśli zapiszesz dokument, który nie został wcześniej zapisany (to znaczy, że nie ma nazwy ścieżki, jak w przypadku FileNew) lub który został odczytany z dokumentu tylko do odczytu, `OnFileSave` logika będzie działać jak polecenie ID_FILE_SAVE_AS i poprosić użytkownika o podanie nowej nazwy pliku. Rzeczywisty proces otwierania pliku i zapisywania odbywa `OnSaveDocument`się za pośrednictwem funkcji wirtualnej .
-
-   Istnieją dwa typowe powody, aby dostosować ID_FILE_SAVE. W przypadku dokumentów, które nie są zapisywane, po prostu usuń elementy menu ID_FILE_SAVE i przyciski paska narzędzi z interfejsu użytkownika. Upewnij się również, że nigdy nie zabrudzono dokumentu (czyli nigdy nie wywołujesz), `CDocument::SetModifiedFlag`a struktura nigdy nie spowoduje zapisania dokumentu. W przypadku dokumentów, które zapisują w innym miejscu niż plik dysku, należy zdefiniować nowe polecenie dla tej operacji.
-
-   W przypadku `COleServerDoc`ID_FILE_SAVE jest używany zarówno do zapisywania plików (dla zwykłych dokumentów), jak i aktualizacji plików (w przypadku dokumentów osadzonych).
-
-   Jeśli dane dokumentu są przechowywane w poszczególnych plikach dyskowych, `CDocument` ale nie chcesz używać `CDocument::OnSaveDocument` domyślnej `OnFileSave`implementacji serializacji, należy zastąpić zamiast programu .
-
-- ID_FILE_SAVE_AS Zapisuje bieżący dokument pod inną nazwą pliku.
-
-   Implementacja `CDocument::OnFileSaveAs` używa tej `CDocument::DoSave` samej `OnFileSave`procedury pomocnika, co . Polecenie `OnFileSaveAs` jest obsługiwane tak samo ID_FILE_SAVE, jeśli dokumenty nie miały nazwy pliku przed zapisaniem. `COleServerDoc::OnFileSaveAs`implementuje logikę, aby zapisać normalny plik danych dokumentu lub zapisać dokument serwera reprezentujący obiekt OLE osadzony w innej aplikacji jako oddzielny plik.
-
-   Jeśli dostosujesz logikę ID_FILE_SAVE, prawdopodobnie będziesz chciał dostosować ID_FILE_SAVE_AS w podobny sposób lub działanie "Zapisz jako" może nie dotyczyć dokumentu. Możesz usunąć element menu z paska menu, jeśli nie jest potrzebny.
-
-- ID_FILE_SAVE_COPY_AS Zapisuje kopię bieżącego dokumentu pod nową nazwą.
-
-   Implementacja jest bardzo podobna `COleServerDoc::OnFileSaveCopyAs` do `CDocument::OnFileSaveAs`, z tą różnicą, że obiekt dokumentu nie jest "dołączony" do pliku źródłowego po zapisaniu. Oznacza to, że jeśli dokument w pamięci został "zmodyfikowany" przed zapisaniem, nadal jest "zmodyfikowany". Ponadto to polecenie nie ma wpływu na nazwę ścieżki lub tytuł przechowywane w dokumencie.
-
-- ID_FILE_UPDATE Powiadamia kontener o zapisaniu osadzonego dokumentu.
-
-   Implementacja `COleServerDoc::OnUpdateDocument` po prostu powiadamia kontenera, który należy zapisać osadzanie. Kontener następnie wywołuje odpowiednie interfejsy API OLE w celu zapisania obiektu osadzonego.
-
-- ID_FILE_PAGE_SETUP Wywołuje okno dialogowe konfiguracji/układu strony specyficzne dla aplikacji.
-
-   Obecnie nie ma standardu dla tego okna dialogowego, a struktura nie ma domyślnej implementacji tego polecenia.
-
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
-
-- ID_FILE_PRINT_SETUP Wywołać standardowe okno dialogowe Ustawienia drukowania.
+- ID_FILE_OPEN otwiera istniejący dokument.
 
     > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   To polecenie wywołuje standardowe okno dialogowe konfiguracji drukowania, które umożliwia użytkownikowi dostosowanie ustawień drukarki i drukowania dla co najmniej tego dokumentu lub co najwyżej wszystkich dokumentów w tej aplikacji. Aby zmienić domyślne ustawienia drukarki dla całego systemu, należy użyć Panelu sterowania.
+   `CWinApp::OnFileOpen` ma bardzo prostą implementację wywołania, `CWinApp::DoPromptFileName` a po nim `CWinApp::OpenDocumentFile` Nazwa pliku lub ścieżki pliku do otwarcia. `CWinApp`Procedura implementacji `DoPromptFileName` wywołuje standardowe okno dialogowe FileOpen i wypełnia je rozszerzeniami plików uzyskanymi z bieżących szablonów dokumentów.
 
-   `CWinApp::OnFilePrintSetup`ma bardzo prostą implementację `CPrintDialog` tworzącą `CWinApp::DoPrintDialog` obiekt i wywołującą funkcję implementacji. Spowoduje to ustawienie domyślnej konfiguracji drukarki aplikacji.
+   Jednym z typowych dostosowań ID_FILE_OPEN jest dostosowanie okna dialogowego FileOpen lub dodanie dodatkowych filtrów plików. Zalecanym sposobem dostosowania jest zastąpienie domyślnej implementacji przy użyciu własnego okna dialogowego FileOpen i wywołanie `CWinApp::OpenDocumentFile` z nazwą pliku lub ścieżką dokumentu. Nie ma potrzeby wywoływania klasy bazowej.
 
-   Powszechną potrzebą dostosowania tego polecenia jest umożliwienie ustawień drukarki dla dokumentu, które powinny być przechowywane wraz z dokumentem po zapisaniu. Aby to zrobić, należy dodać program `CDocument` obsługi mapy `CPrintDialog` wiadomości w klasie, która tworzy obiekt, inicjuje go z odpowiednimi atrybutami `CPrintDialog::DoModal`drukarki (zwykle *hDevMode* i *hDevNames*), wywołać , i zapisać zmienione ustawienia drukarki. Aby uzyskać niezawodną implementację, należy `CWinApp::DoPrintDialog` przyjrzeć się `CWinApp::UpdatePrinterSelection` implementacji wykrywania błędów i radzenia sobie z rozsądnymi ustawieniami domyślnymi i śledzeniem zmian w drukarce w całym systemie.
+- ID_FILE_CLOSE zamyka aktualnie otwarty dokument.
 
-- ID_FILE_PRINT Standardowe drukowanie bieżącego dokumentu
-
-    > [!NOTE]
-    >  Należy połączyć to `CView`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
-
-   To polecenie drukuje bieżący dokument lub bardziej poprawnie uruchamia proces drukowania, który polega na wywołaniu standardowego okna dialogowego drukowania i uruchomieniu aparatu drukowania.
-
-   `CView::OnFilePrint`implementuje to polecenie i główną pętlę drukowania. Wywołuje wirtualny `CView::OnPreparePrinting` monit użytkownika z okna dialogowego drukowania. Następnie przygotowuje wyjściowy kontroler domeny, aby przejść do drukarki, wywołuje okno dialogowe `StartDoc` postępu drukowania (AFX_IDD_PRINTDLG) i wysyła ucieczkę do drukarki. `CView::OnFilePrint`zawiera również główną pętlę drukowania zorientowaną na stronę główną. Dla każdej strony wywołuje `CView::OnPrepareDC` wirtualne, `StartPage` a następnie `CView::OnPrint` ucieczki i wywołanie wirtualne dla tej strony. Po zakończeniu wywoływana jest wirtualna, `CView::OnEndPrinting` a okno dialogowe postępu drukowania zostanie zamknięte.
-
-   Architektura drukowania MFC została zaprojektowana do podłączania na wiele różnych sposobów do drukowania i podglądu wydruku. Zwykle można znaleźć różne `CView` zastępowalne funkcje odpowiednie dla wszystkich zadań drukowania zorientowanych na stronę. Tylko w przypadku aplikacji, która używa drukarki do wyjścia nieoponsywnego strony, należy znaleźć potrzebę zastąpienia implementacji ID_FILE_PRINT.
-
-- ID_FILE_PRINT_PREVIEW Wprowadź tryb podglądu wydruku dla bieżącego dokumentu.
+   `CDocument::OnFileClose` wywołania, `CDocument::SaveModified` Aby monitować użytkownika o zapisanie dokumentu, jeśli został on zmodyfikowany, a następnie jest wywoływany `OnCloseDocument` . Cała logika zamykająca, w tym niszczenie dokumentu, jest wykonywana w `OnCloseDocument` procedurze.
 
     > [!NOTE]
-    >  Należy połączyć to `CView`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
+    >  ID_FILE_CLOSE działa inaczej niż komunikat WM_CLOSE lub polecenie systemu SC_CLOSE wysłane do okna ramki dokumentów. Zamknięcie okna spowoduje zamknięcie dokumentu tylko wtedy, gdy jest to ostatnie okno klatki pokazujące dokument. Zamknięcie dokumentu przy użyciu ID_FILE_CLOSE nie spowoduje zamknięcia dokumentu, ale spowoduje zamknięcie wszystkich okien ramowych pokazujących dokument.
 
-   `CView::OnFilePrintPreview`uruchamia tryb podglądu wydruku, wywołując funkcję `CView::DoPrintPreview`udokumentowanego pomocnika . `CView::DoPrintPreview`jest głównym silnikiem pętli podglądu `OnFilePrint` wydruku, podobnie jak główny silnik pętli drukowania.
+- ID_FILE_SAVE zapisuje bieżący dokument.
 
-   Operację podglądu wydruku można dostosować na wiele sposobów, `DoPrintPreview`przekazując różne parametry do . Zapoznaj się [z notą techniczną 30,](../mfc/tn030-customizing-printing-and-print-preview.md)która omawia niektóre szczegóły podglądu wydruku i jak ją dostosować.
+   Implementacja używa procedury pomocnika `CDocument::DoSave` , która jest używana dla obu `OnFileSave` i `OnFileSaveAs` . Jeśli zapiszesz dokument, który nie został wcześniej zapisany (to oznacza, że nie ma on nazwy ścieżki, tak jak w przypadku FileNew) lub który został odczytany z dokumentu tylko do odczytu, `OnFileSave` logika będzie działać jak polecenie ID_FILE_SAVE_AS i poproszony o podanie nowej nazwy pliku. Rzeczywisty proces otwierania pliku i wykonywania operacji zapisywania odbywa się za pomocą funkcji wirtualnej `OnSaveDocument` .
 
-- ID_FILE_MRU_FILE1... PLIK16 Zakres identyfikatorów poleceń dla **listy**Mru pliku .
+   Istnieją dwie typowe przyczyny dostosowywania ID_FILE_SAVE. W przypadku dokumentów, które nie są zapisywane, po prostu usuń ID_FILE_SAVE elementy menu i przyciski paska narzędzi z interfejsu użytkownika. Upewnij się również, że dokument nie został zanieczyszczony (to oznacza, że nigdy nie jest wywoływana `CDocument::SetModifiedFlag` ), a platforma nie spowoduje zapisania dokumentu. W przypadku dokumentów, które są zapisywane w zwrócono komunikatu innym niż plik dysku, zdefiniuj nowe polecenie dla tej operacji.
 
-   `CWinApp::OnUpdateRecentFileMenu`jest program obsługi interfejsu użytkownika polecenia aktualizacji, który jest jednym z bardziej zaawansowanych zastosowań mechanizmu ON_UPDATE_COMMAND_UI. W zasobie menu wystarczy zdefiniować tylko jeden element menu o identyfikatorze ID_FILE_MRU_FILE1. Ten element menu pozostaje początkowo wyłączony.
+   W przypadku `COleServerDoc` ID_FILE_SAVE jest używany zarówno do zapisywania plików (dla normalnych dokumentów), jak i do aktualizacji plików (dla dokumentów osadzonych).
 
-   Wraz z rozwojem listy MRU do listy dodawane są kolejne elementy menu. Standardowa `CWinApp` implementacja domyślnie wynosi standardowy limit czterech ostatnio używanych plików. Wartość domyślną można `CWinApp::LoadStdProfileSettings` zmienić, wywołując z większą lub mniejszą wartością. Lista MRU jest przechowywana w aplikacji . ini. Lista jest ładowana w `InitInstance` funkcji aplikacji, jeśli wywołasz `LoadStdProfileSettings`program , i jest zapisywana po zamknięciu aplikacji. Program obsługi interfejsu użytkownika polecenia aktualizacji MRU konwertuje również ścieżki bezwzględne na ścieżki względne do wyświetlenia w menu pliku.
+   Jeśli dane dokumentu są przechowywane w poszczególnych plikach na dysku, ale nie chcesz używać domyślnej `CDocument` implementacji serializacji, należy przesłonić `CDocument::OnSaveDocument` zamiast `OnFileSave` .
 
-   `CWinApp::OnOpenRecentFile`jest ON_COMMAND program obsługi, który wykonuje rzeczywiste polecenie. Po prostu pobiera nazwę pliku z listy `CWinApp::OpenDocumentFile`MRU i wywołuje , co wykonuje całą pracę nad otwarciem pliku i aktualizacją listy MRU.
+- ID_FILE_SAVE_AS zapisuje bieżący dokument pod inną nazwą pliku.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   `CDocument::OnFileSaveAs`Implementacja używa tej samej `CDocument::DoSave` procedury pomocnika co `OnFileSave` . `OnFileSaveAs`Polecenie jest obsługiwane tak jak ID_FILE_SAVE, jeśli dokumenty nie miały nazwy pliku przed zapisem. `COleServerDoc::OnFileSaveAs` implementuje logikę w celu zapisania standardowego pliku danych dokumentu lub zapisania dokumentu serwera reprezentującego obiekt OLE osadzony w innej aplikacji jako oddzielny plik.
 
-- ID_EDIT_CLEAR Czyści bieżący wybór
+   W przypadku dostosowania logiki ID_FILE_SAVE prawdopodobnie zechcesz dostosować ID_FILE_SAVE_AS w podobny sposób lub operacja "Zapisz jako" nie ma zastosowania do dokumentu. Możesz usunąć element menu z paska menu, jeśli nie jest to potrzebne.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+- ID_FILE_SAVE_COPY_AS zapisuje bieżący dokument z nową nazwą.
 
-   `CEditView`zapewnia implementację tego `CEdit::Clear`polecenia za pomocą programu . Polecenie jest wyłączone, jeśli nie ma bieżącego zaznaczenia.
+   `COleServerDoc::OnFileSaveCopyAs`Implementacja jest bardzo podobna do `CDocument::OnFileSaveAs` , z tą różnicą, że obiekt dokumentu nie jest "dołączony" do pliku bazowego po zapisaniu. Oznacza to, że jeśli dokument w pamięci był "zmodyfikowany" przed zapisem, nadal jest "zmodyfikowany". Ponadto to polecenie nie ma wpływu na nazwę ścieżki lub tytuł przechowywany w dokumencie.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+- ID_FILE_UPDATE powiadamia kontener, aby zapisać osadzony dokument.
 
-- ID_EDIT_CLEAR_ALL Czyści cały dokument.
+   `COleServerDoc::OnUpdateDocument`Implementacja po prostu powiadamia kontener o konieczności zapisania osadzania. Kontener następnie wywołuje odpowiednie interfejsy API OLE, aby zapisać osadzony obiekt.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+- ID_FILE_PAGE_SETUP wywołuje okno dialogowe ustawień/układu strony specyficznej dla aplikacji.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia. Zobacz przykładowy przykładowy przewodnik [MFC SCRIBBLE](../overview/visual-cpp-samples.md) dla przykładowej implementacji.
+   Obecnie nie ma żadnych standardowych dla tego okna dialogowego, a platforma nie ma domyślnej implementacji tego polecenia.
 
-- ID_EDIT_COPY Kopiuje bieżące zaznaczenie do Schowka.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+- ID_FILE_PRINT_SETUP wywołać standardowego okna dialogowego konfiguracji wydruku.
 
-   `CEditView`zapewnia implementację tego polecenia, które kopiuje aktualnie zaznaczony tekst do `CEdit::Copy`Schowka jako CF_TEXT za pomocą programu . Polecenie jest wyłączone, jeśli nie ma bieżącego zaznaczenia.
+    > [!NOTE]
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   To polecenie wywołuje standardowe okno dialogowe konfiguracji drukowania, które umożliwia użytkownikowi dostosowanie ustawień drukarki i drukowania dla co najmniej tego dokumentu lub dla wszystkich dokumentów w tej aplikacji. Aby zmienić domyślne ustawienia drukarki dla całego systemu, należy użyć panelu sterowania.
 
-- ID_EDIT_CUT Wycina bieżące zaznaczenie do Schowka.
+   `CWinApp::OnFilePrintSetup` ma bardzo prostą implementację tworzącą `CPrintDialog` obiekt i wywołując `CWinApp::DoPrintDialog` funkcję implementacji. Spowoduje to ustawienie domyślnej konfiguracji drukarki aplikacji.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+   Typowym potrzebą dostosowania tego polecenia jest zezwolenie na ustawienia drukarki dla poszczególnych dokumentów, które powinny być przechowywane z dokumentem po jego zapisaniu. Aby to zrobić, należy dodać procedurę obsługi mapy komunikatów w klasie, `CDocument` która tworzy `CPrintDialog` obiekt, inicjuje ją z odpowiednimi atrybutami drukarki (zwykle *hDevMode* i *hDevNames*), wywołaj `CPrintDialog::DoModal` i zapisać zmienione ustawienia drukarki. Aby zapoznać się z niezawodną implementacją, należy zapoznać się z implementacją programu `CWinApp::DoPrintDialog` w celu wykrycia błędów oraz `CWinApp::UpdatePrinterSelection` w celu poradzenia sobie z prawidłowymi wartościami domyślnymi i śledzeniem zmian drukarki na poziomie systemu
 
-   `CEditView`zapewnia implementację tego polecenia, które wycina aktualnie zaznaczony tekst `CEdit::Cut`do Schowka jako CF_TEXT za pomocą programu . Polecenie jest wyłączone, jeśli nie ma bieżącego zaznaczenia.
+- ID_FILE_PRINT drukowania standardowego bieżącego dokumentu
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+    > [!NOTE]
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CView` mapą komunikatów klasy pochodnej.
 
-- ID_EDIT_FIND Rozpoczyna operację znajdowania, powoduje wyświetlenia niemodless okna dialogowego znajdowania.
+   To polecenie Drukuje bieżący dokument lub poprawnie uruchamia proces drukowania, który polega na wywołaniu standardowego okna dialogowego drukowania i uruchomieniu aparatu wydruku.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+   `CView::OnFilePrint` implementuje to polecenie i główną pętlę drukowania. Wywołuje ona wirtualną, `CView::OnPreparePrinting` aby monitował użytkownika z oknem dialogowym drukowania. Następnie przygotuje wyjściowy kontroler domeny, aby przejść do drukarki, spowoduje wyświetlenie okna dialogowego postęp drukowania (AFX_IDD_PRINTDLG) i wysłanie `StartDoc` ucieczki do drukarki. `CView::OnFilePrint` zawiera również główną pętlę drukowania zorientowaną na strony. Dla każdej strony wywołuje wirtualną, a `CView::OnPrepareDC` następnie `StartPage` ucieczkę i wywołuje wirtualną `CView::OnPrint` dla tej strony. Po zakończeniu, wirtualna `CView::OnEndPrinting` jest wywoływana, a okno dialogowe postęp drukowania jest zamknięte.
 
-   `CEditView`zapewnia implementację tego polecenia, które wywołuje `OnEditFindReplace` funkcję pomocnika implementacji do używania i przechowywania poprzednich ustawień find/replace w prywatnych zmiennych implementacji. Klasa `CFindReplaceDialog` służy do zarządzania niemodytnym oknie dialogowym monitowania użytkownika.
+   Architektura drukowania MFC została zaprojektowana tak, aby podpiąć wiele różnych sposobów drukowania i podglądu wydruku. Zwykle można znaleźć różne funkcje programu, które są `CView` odpowiednie dla wszystkich zadań drukowania zorientowanych na strony. W przypadku aplikacji, która korzysta z drukarki dla danych wyjściowych niezorientowanych na strony, należy znaleźć konieczność zastąpienia implementacji ID_FILE_PRINT.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+- ID_FILE_PRINT_PREVIEW wejść w tryb podglądu wydruku dla bieżącego dokumentu.
 
-- ID_EDIT_PASTE Wstawia bieżącą zawartość Schowka.
+    > [!NOTE]
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CView` mapą komunikatów klasy pochodnej.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+   `CView::OnFilePrintPreview` uruchamia tryb podglądu wydruku, wywołując udokumentowaną funkcję pomocnika `CView::DoPrintPreview` . `CView::DoPrintPreview` jest głównym aparatem pętli podglądu wydruku, podobnie jak `OnFilePrint` główny aparat dla pętli drukowania.
 
-   `CEditView`zapewnia implementację tego polecenia, które kopiuje bieżące dane `CEdit::Paste`Schowka zastępując zaznaczony tekst za pomocą programu . Polecenie jest wyłączone, jeśli w Schowku nie ma **żadnych CF_TEXT.**
+   Operację podglądu wydruku można dostosować na wiele sposobów, przekazując różne parametry do `DoPrintPreview` . Zapoznaj się z [uwagami technicznymi 30](../mfc/tn030-customizing-printing-and-print-preview.md), które omawiają niektóre szczegóły dotyczące podglądu wydruku i sposobu ich dostosowywania.
 
-   `COleClientDoc`po prostu zapewnia program obsługi interfejsu użytkownika polecenia aktualizacji dla tego polecenia. Jeśli Schowek nie zawiera osadzania elementu/obiektu OLE, polecenie zostanie wyłączone. Jesteś odpowiedzialny za napisanie programu obsługi dla rzeczywistego polecenia do rzeczywistego wklejania. Jeśli aplikacja OLE można również wkleić inne formaty, należy podać własny program obsługi interfejsu `COleClientDoc` użytkownika polecenia aktualizacji w widoku lub dokumencie (oznacza to, gdzieś przed w routingu docelowego polecenia).
+- ID_FILE_MRU_FILE1... FILE16 zakres identyfikatorów poleceń dla **listy** MRU plików.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   `CWinApp::OnUpdateRecentFileMenu` jest programem obsługi interfejsu wiersza polecenia aktualizacji, który jest jednym z bardziej zaawansowanych sposobów korzystania z mechanizmu ON_UPDATE_COMMAND_UI. W zasobie menu należy zdefiniować tylko jeden element menu o IDENTYFIKATORze ID_FILE_MRU_FILE1. Ten element menu pozostaje początkowo wyłączony.
 
-   Aby zastąpić standardową implementację OLE, należy użyć `COleClientItem::CanPaste`.
+   W miarę zwiększania listy MRU elementy menu są dodawane do listy. Standardowa `CWinApp` implementacja domyślna to standardowy limit czterech ostatnio używanych plików. Można zmienić wartość domyślną, wywołując `CWinApp::LoadStdProfileSettings` z większą lub mniejszą wartością. Lista MRU jest przechowywana w aplikacji. Plik INI. Lista jest ładowana do funkcji aplikacji w `InitInstance` przypadku wywołania `LoadStdProfileSettings` i jest zapisywana po zakończeniu działania aplikacji. Procedura obsługi interfejsu wiersza polecenia aktualizacji MRU spowoduje również przekonwertowanie ścieżek bezwzględnych na ścieżki względne do wyświetlania w menu plik.
 
-- ID_EDIT_PASTE_LINK Wstawia łącze z bieżącej zawartości Schowka.
+   `CWinApp::OnOpenRecentFile` jest programem obsługi ON_COMMAND, który wykonuje rzeczywiste polecenie. Po prostu Pobiera nazwę pliku z listy MRU i wywołuje `CWinApp::OpenDocumentFile` , która wykonuje wszystkie czynności otwierające plik i aktualizując listę MRU.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-   `COleDocument`po prostu zapewnia program obsługi interfejsu użytkownika polecenia aktualizacji dla tego polecenia. Jeśli Schowek nie zawiera łącza element/obiekt OLE, polecenie zostanie wyłączone. Jesteś odpowiedzialny za napisanie programu obsługi dla rzeczywistego polecenia do rzeczywistego wklejania. Jeśli aplikacja OLE można również wkleić inne formaty, należy podać własny program obsługi interfejsu `COleDocument` użytkownika polecenia aktualizacji w widoku lub dokumencie (oznacza to, gdzieś przed w routingu docelowego polecenia).
+- ID_EDIT_CLEAR czyści bieżące zaznaczenie
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
 
-   Aby zastąpić standardową implementację OLE, należy użyć `COleClientItem::CanPasteLink`.
+   `CEditView` zawiera implementację tego polecenia przy użyciu programu `CEdit::Clear` . Polecenie jest wyłączone, jeśli nie ma bieżącego wyboru.
 
-- ID_EDIT_PASTE_SPECIAL Wstawia bieżącą zawartość Schowka z opcjami.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej. MFC nie udostępnia tego okna dialogowego.
+- ID_EDIT_CLEAR_ALL czyści cały dokument.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
 
-- ID_EDIT_REPEAT Powtarza ostatnią operację.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia. Zapoznaj się [z przykładowym samouczkiem dotyczącym](../overview/visual-cpp-samples.md) biblioteki MFC.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+- ID_EDIT_COPY kopiuje bieżące zaznaczenie do Schowka.
 
-   `CEditView`zapewnia implementację tego polecenia, aby powtórzyć operację ostatniego znalezienia. Używane są zmienne implementacji prywatnej dla ostatniego find. Polecenie jest wyłączone, jeśli nie można podjąć próby znalezienia.
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   `CEditView` zawiera implementację tego polecenia, która kopiuje aktualnie zaznaczony tekst do Schowka jako CF_TEXT przy użyciu `CEdit::Copy` . Polecenie jest wyłączone, jeśli nie ma bieżącego wyboru.
 
-- ID_EDIT_REPLACE Rozpoczyna operację wymiany, powoduje wyświetlenia niemodytowego okna dialogowego zamiany.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+- ID_EDIT_CUT wycina bieżące zaznaczenie do Schowka.
 
-   `CEditView`zapewnia implementację tego polecenia, które wywołuje `OnEditFindReplace` funkcję pomocnika implementacji do używania i przechowywania poprzednich ustawień find/replace w prywatnych zmiennych implementacji. Klasa `CFindReplaceDialog` służy do zarządzania niemodless okno dialogowe, które monituje użytkownika.
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   `CEditView` zawiera implementację tego polecenia, która wycina aktualnie zaznaczony tekst do Schowka jako CF_TEXT przy użyciu `CEdit::Cut` . Polecenie jest wyłączone, jeśli nie ma bieżącego wyboru.
 
-- ID_EDIT_SELECT_ALL Wybiera cały dokument.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+- ID_EDIT_FIND rozpoczyna operację znajdowania, powoduje wyświetlenie okna dialogowego Wyszukiwanie niemodalne.
 
-   `CEditView`zapewnia implementację tego polecenia, które wybiera cały tekst w dokumencie. Polecenie jest wyłączone, jeśli nie ma tekstu do zaznaczenia.
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   `CEditView` dostarcza implementację tego polecenia, która wywołuje funkcję pomocnika implementacji `OnEditFindReplace` i zapisuje poprzednie ustawienia znajdowania/zamieniania w prywatnych zmiennych implementacji. `CFindReplaceDialog`Klasa służy do zarządzania niemodalnym oknem dialogowym monitowania użytkownika.
+
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
+
+- ID_EDIT_PASTE Wstawia bieżącą zawartość schowka.
+
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
+
+   `CEditView` zawiera implementację tego polecenia, która kopiuje bieżące dane w schowku zastępujące wybrany tekst przy użyciu `CEdit::Paste` . Polecenie jest wyłączone, jeśli w Schowku nie ma **CF_TEXT** .
+
+   `COleClientDoc` po prostu udostępnia procedurę obsługi interfejsu wiersza polecenia aktualizacji dla tego polecenia. Jeśli Schowek nie zawiera osadzonego elementu/obiektu OLE, polecenie zostanie wyłączone. Użytkownik jest odpowiedzialny za pisanie procedury obsługi dla rzeczywistego polecenia, aby wykonać rzeczywiste wklejanie. Jeśli aplikacja OLE może również wkleić inne formaty, należy podać własny program obsługi interfejsu użytkownika poleceń aktualizacji w widoku lub dokumencie (to jest, w innym miejscu niż `COleClientDoc` w routingu docelowym polecenia).
+
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
+
+   Do zastępowania standardowej implementacji OLE, użyj `COleClientItem::CanPaste` .
+
+- ID_EDIT_PASTE_LINK wstawia łącze z bieżącej zawartości Schowka.
+
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
+
+   `COleDocument` po prostu udostępnia procedurę obsługi interfejsu wiersza polecenia aktualizacji dla tego polecenia. Jeśli Schowek nie zawiera elementu/obiektu OLE do powiązania, polecenie zostanie wyłączone. Użytkownik jest odpowiedzialny za pisanie procedury obsługi dla rzeczywistego polecenia, aby wykonać rzeczywiste wklejanie. Jeśli aplikacja OLE może również wkleić inne formaty, należy podać własny program obsługi interfejsu użytkownika poleceń aktualizacji w widoku lub dokumencie (to jest, w innym miejscu niż `COleDocument` w routingu docelowym polecenia).
+
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
+
+   Do zastępowania standardowej implementacji OLE, użyj `COleClientItem::CanPasteLink` .
+
+- ID_EDIT_PASTE_SPECIAL Wstawia bieżącą zawartość schowka z opcjami.
+
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej. MFC nie udostępnia tego okna dialogowego.
+
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
+
+- ID_EDIT_REPEAT powtarza ostatnią operację.
+
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
+
+   `CEditView` dostarcza implementację tego polecenia, aby powtórzyć ostatnią operację znajdowania. Używane są prywatne zmienne implementacji dla ostatniego wyszukiwania. Polecenie jest wyłączone, jeśli nie można podjąć próby znalezienia.
+
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
+
+- ID_EDIT_REPLACE rozpoczyna operację zamiany, powoduje wyświetlenie okna dialogowego niemodalne zastąpienie.
+
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
+
+   `CEditView` dostarcza implementację tego polecenia, która wywołuje funkcję pomocnika implementacji `OnEditFindReplace` i zapisuje poprzednie ustawienia znajdowania/zamieniania w prywatnych zmiennych implementacji. `CFindReplaceDialog`Klasa służy do zarządzania niemodalnym oknem dialogowym, które powoduje wyświetlenie odpowiedniego użytkownika.
+
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
+
+- ID_EDIT_SELECT_ALL wybiera cały dokument.
+
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
+
+   `CEditView` zawiera implementację tego polecenia, która zaznacza cały tekst w dokumencie. Polecenie jest wyłączone, jeśli nie ma tekstu do wybrania.
+
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
 - ID_EDIT_UNDO Cofa ostatnią operację.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
 
-   `CEditView`zapewnia implementację tego polecenia, używając `CEdit::Undo`. Polecenie jest wyłączone, jeśli `CEdit::CanUndo` zwraca wartość FAŁSZ.
+   `CEditView` zawiera implementację tego polecenia, używając polecenia `CEdit::Undo` . Polecenie jest wyłączone, jeśli `CEdit::CanUndo` zwraca wartość false.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
-- ID_EDIT_REDO ponawia ostatnią operację.
+- ID_EDIT_REDO ponownie wykonuje ostatnią operację.
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla każdej `CView`klasy pochodnej.
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować go dla każdej `CView` klasy pochodnej.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
-- ID_WINDOW_NEW Otwiera kolejne okno aktywnego dokumentu.
+- ID_WINDOW_NEW otwiera inne okno w aktywnym dokumencie.
 
-   `CMDIFrameWnd::OnWindowNew`implementuje tę zaawansowana funkcję przy użyciu szablonu dokumentu bieżącego dokumentu w celu utworzenia innej ramki zawierającej inny widok bieżącego dokumentu.
+   `CMDIFrameWnd::OnWindowNew` implementuje tę zaawansowaną funkcję przy użyciu szablonu dokumentu bieżącego dokumentu, aby utworzyć kolejną ramkę zawierającą inny widok bieżącego dokumentu.
 
-   Podobnie jak większość wielu poleceń menu okna interfejsu dokumentu (MDI), polecenie jest wyłączone, jeśli nie ma aktywnego okna podrzędnego MDI.
+   Podobnie jak w przypadku większości poleceń menu okien interfejsu (MDI), polecenie jest wyłączone, jeśli nie ma aktywnego okna podrzędnego MDI.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane. Jeśli chcesz podać polecenie, które tworzy dodatkowe widoki lub okna ramki, prawdopodobnie lepiej będzie wymyślić własne polecenie. Można sklonować kod `CMDIFrameWnd::OnWindowNew` z i zmodyfikować go do określonej ramki i wyświetlić klasy swoich upodobań.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń. Jeśli chcesz podać polecenie, które tworzy dodatkowe widoki lub okna z ramkami, prawdopodobnie lepiej jest wyrównać własne polecenie. Można sklonować kod z `CMDIFrameWnd::OnWindowNew` i modyfikować go do konkretnej ramki i wyświetlać klasy swoich potrzeb.
 
-- ID_WINDOW_ARRANGE Rozmieszcza ikony u dołu okna MDI.
+- ID_WINDOW_ARRANGE rozmieszcza ikony w dolnej części okna MDI.
 
-   `CMDIFrameWnd`implementuje to standardowe polecenie MDI w `OnMDIWindowCmd`funkcji pomocnika implementacji . Ten pomocnik mapuje identyfikatory poleceń do komunikatów mdi systemu Windows i dlatego może udostępniać dużo kodu.
+   `CMDIFrameWnd` implementuje to standardowe polecenie MDI w funkcji pomocnika implementacji `OnMDIWindowCmd` . Ten pomocnik mapuje identyfikatory poleceń na komunikaty MDI systemu Windows i w związku z tym może udostępniać wiele kodu.
 
-   Podobnie jak większość poleceń menu okna MDI, polecenie jest wyłączone, jeśli nie ma aktywnego okna podrzędnego MDI.
+   Podobnie jak w przypadku większości poleceń menu w oknie MDI polecenie jest wyłączone, jeśli nie ma aktywnego okna podrzędnego MDI.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_WINDOW_CASCADE kaskadowe okna, aby nakładały się na siebie.
+- ID_WINDOW_CASCADE kaskaduje okna w taki sposób, że nakładają się na siebie.
 
-   `CMDIFrameWnd`implementuje to standardowe polecenie MDI w `OnMDIWindowCmd`funkcji pomocnika implementacji . Ten pomocnik mapuje identyfikatory poleceń do komunikatów mdi systemu Windows i dlatego może udostępniać dużo kodu.
+   `CMDIFrameWnd` implementuje to standardowe polecenie MDI w funkcji pomocnika implementacji `OnMDIWindowCmd` . Ten pomocnik mapuje identyfikatory poleceń na komunikaty MDI systemu Windows i w związku z tym może udostępniać wiele kodu.
 
-   Podobnie jak większość poleceń menu okna MDI, polecenie jest wyłączone, jeśli nie ma aktywnego okna podrzędnego MDI.
+   Podobnie jak w przypadku większości poleceń menu w oknie MDI polecenie jest wyłączone, jeśli nie ma aktywnego okna podrzędnego MDI.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_WINDOW_TILE_HORZ Kafelki okna poziomo.
+- ID_WINDOW_TILE_HORZ kafelków w poziomie.
 
-   To polecenie jest `CMDIFrameWnd` implementowane w taki sam ID_WINDOW_CASCADE, z wyjątkiem innego komunikatu systemu Windows MDI jest używany do operacji.
+   To polecenie jest zaimplementowane w `CMDIFrameWnd` taki sam sposób jak ID_WINDOW_CASCADE, z wyjątkiem tego, że dla operacji jest używany inny komunikat systemu Windows MDI.
 
-   Należy wybrać domyślną orientację kafelka dla aplikacji. Można to zrobić, zmieniając identyfikator elementu menu Okno "Kafelek" na ID_WINDOW_TILE_HORZ lub ID_WINDOW_TILE_VERT.
+   Należy wybrać domyślną orientację kafelka dla aplikacji. Można to zrobić, zmieniając identyfikator elementu menu "kafelek" okna na ID_WINDOW_TILE_HORZ lub ID_WINDOW_TILE_VERT.
 
-- ID_WINDOW_TILE_VERT okna kafelków w pionie.
+- ID_WINDOW_TILE_VERT kafelków w pionie.
 
-   To polecenie jest `CMDIFrameWnd` implementowane w taki sam ID_WINDOW_CASCADE, z wyjątkiem innego komunikatu systemu Windows MDI jest używany do operacji.
+   To polecenie jest zaimplementowane w `CMDIFrameWnd` taki sam sposób jak ID_WINDOW_CASCADE, z wyjątkiem tego, że dla operacji jest używany inny komunikat systemu Windows MDI.
 
-   Należy wybrać domyślną orientację kafelka dla aplikacji. Można to zrobić, zmieniając identyfikator elementu menu Okno "Kafelek" na ID_WINDOW_TILE_HORZ lub ID_WINDOW_TILE_VERT.
+   Należy wybrać domyślną orientację kafelka dla aplikacji. Można to zrobić, zmieniając identyfikator elementu menu "kafelek" okna na ID_WINDOW_TILE_HORZ lub ID_WINDOW_TILE_VERT.
 
 - ID_WINDOW_SPLIT interfejs klawiatury do rozdzielacza.
 
-   `CView`obsługuje to polecenie `CSplitterWnd` dla implementacji. Jeśli widok jest częścią okna rozdzielacza, to polecenie `CSplitterWnd::DoKeyboardSplit`zostanie delegowane do funkcji implementacji . Spowoduje to umieszczenie rozdzielacza w trybie, który pozwoli użytkownikom klawiatury na dzielenie lub rozpisywać okno rozdzielacza.
+   `CView` obsługuje to polecenie dla `CSplitterWnd` implementacji. Jeśli widok jest częścią okna rozdzielacza, to polecenie zostanie delegowane do funkcji implementacji `CSplitterWnd::DoKeyboardSplit` . Spowoduje to umieszczenie rozdzielacza w trybie, który pozwoli użytkownikom klawiatury podzielić lub rozdzielić okno rozdzielacza.
 
    To polecenie jest wyłączone, jeśli widok nie znajduje się w rozdzielaczu.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_APP_ABOUT wywołuje okno dialogowe Informacje.
+- ID_APP_ABOUT wywołuje okno dialogowe informacje.
 
-   Nie ma standardowej implementacji dla pola Informacje o aplikacji. Domyślna aplikacja utworzona przez AppWizard utworzy niestandardową klasę okna dialogowego dla aplikacji i użyje jej jako pola Informacje. AppWizard będzie również napisać program obsługi polecenia trywialne, który obsługuje to polecenie i wywołuje okno dialogowe.
+   Nie ma standardowej implementacji dla pola informacje o aplikacji. Domyślnie utworzona aplikacja AppWizard utworzy niestandardową klasę okna dialogowego dla aplikacji i użyje jej jako pola informacje. AppWizard również zapisze uproszczoną obsługę poleceń, która obsługuje to polecenie i wywołuje okno dialogowe.
 
-   Prawie zawsze zaimplementujesz to polecenie.
+   Niemal zawsze zaimplementujmy to polecenie.
 
-- ID_APP_EXIT Zakończ aplikację.
+- ID_APP_EXIT zakończyć działanie aplikacji.
 
-   `CWinApp::OnAppExit`obsługuje to polecenie, wysyłając wiadomość WM_CLOSE do głównego okna aplikacji. Standardowe zamykanie aplikacji (monitowanie o brudne pliki i tak `CFrameWnd` dalej) jest obsługiwane przez implementację.
+   `CWinApp::OnAppExit` obsługuje to polecenie, wysyłając wiadomość WM_CLOSE do głównego okna aplikacji. Standardowe zamykanie aplikacji (monitowanie o zanieczyszczone pliki itd.) jest obsługiwane przez `CFrameWnd` implementację.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane. Zalecana `CWinApp::SaveAllModified` jest `CFrameWnd` logika zastępowania lub zamykania.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń. `CWinApp::SaveAllModified`Zalecane jest zastępowanie lub `CFrameWnd` logika zamknięcia.
 
-   Jeśli zdecydujesz się zaimplementować to polecenie, zaleca się użycie tego identyfikatora polecenia.
+   W przypadku wybrania opcji wdrożenia tego polecenia zalecamy użycie tego identyfikatora polecenia.
 
-- ID_HELP_INDEX Listy tematów Pomocy z programu . HLP.
-
-    > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
-
-   `CWinApp::OnHelpIndex`obsługuje to polecenie, trywialnie wywołując `CWinApp::WinHelp`.
-
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
-
-- ID_HELP_USING Wyświetla pomoc dotyczącą korzystania z Pomocy.
+- ID_HELP_INDEX wyświetla listę tematów pomocy z programu. Plik HLP.
 
     > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   `CWinApp::OnHelpUsing`obsługuje to polecenie, trywialnie wywołując `CWinApp::WinHelp`.
+   `CWinApp::OnHelpIndex` obsługuje to polecenie przez niezarządzaną wywoływanie `CWinApp::WinHelp` .
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_CONTEXT_HELP wchodzi w tryb pomocy SHIFT-F1.
-
-    > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
-
-   `CWinApp::OnContextHelp`obsługuje to polecenie, ustawiając kursor trybu pomocy, wprowadzając pętlę modalną i czekając, aż użytkownik wybierze okno, aby uzyskać pomoc. Więcej informacji na temat implementacji pomocy MFC można znaleźć w [notatce technicznej 28.](../mfc/tn028-context-sensitive-help-support.md)
-
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
-
-- ID_HELP Udziela pomocy w bieżącym kontekście
+- ID_HELP_USING wyświetla pomoc dotyczącą korzystania z pomocy.
 
     > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   `CWinApp::OnHelp`obsługuje to polecenie, uzyskując odpowiedni kontekst pomocy dla bieżącego kontekstu aplikacji. Obsługuje to prostą pomoc F1, pomoc w skrzynkach wiadomości i tak dalej. Więcej informacji na temat implementacji pomocy MFC można znaleźć w [notatce technicznej 28.](../mfc/tn028-context-sensitive-help-support.md)
+   `CWinApp::OnHelpUsing` obsługuje to polecenie przez niezarządzaną wywoływanie `CWinApp::WinHelp` .
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_DEFAULT_HELP Wyświetla domyślną pomoc kontekstu
+- ID_CONTEXT_HELP przejściu do trybu pomocy SHIFT-F1.
 
     > [!NOTE]
-    >  Należy połączyć to `CWinApp`z mapą komunikatów klasy pochodnej, aby włączyć tę funkcję.
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   To polecenie jest zwykle `CWinApp::OnHelpIndex`mapowane na .
+   `CWinApp::OnContextHelp` obsługuje to polecenie, ustawiając kursor w trybie pomocy, wprowadzając pętlę modalną i czekając, aż użytkownik wybierze okno, w którym ma zostać uzyskana pomoc. Zapoznaj się z [uwagą techniczną 28](../mfc/tn028-context-sensitive-help-support.md) , aby uzyskać szczegółowe informacje na temat implementacji pomocy MFC.
 
-   Jeśli żądane jest rozróżnienie między domyślną Pomocą a indeksem Pomocy, można podać inny program obsługi poleceń.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_NEXT_PANE Przechodzi do następnego okienka
+- ID_HELP zapewnia pomoc dotyczącą bieżącego kontekstu
 
-   `CView`obsługuje to polecenie `CSplitterWnd` dla implementacji. Jeśli widok jest częścią okna rozdzielacza, to polecenie `CSplitterWnd::OnNextPaneCmd`zostanie delegowane do funkcji implementacji . Spowoduje to przeniesienie aktywnego widoku do następnego okienka w rozdzielaczu.
+    > [!NOTE]
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   To polecenie jest wyłączone, jeśli widok nie znajduje się w rozdzielaczu lub nie ma następnego okienka, do które można przejść.
+   `CWinApp::OnHelp` obsługuje to polecenie, pobierając prawy kontekst pomocy dla kontekstu bieżącego aplikacji. Obsługuje to prostą pomoc dotyczącą klawisza F1, pomoc dotyczącą okien komunikatów i tak dalej. Zapoznaj się z [uwagą techniczną 28](../mfc/tn028-context-sensitive-help-support.md) , aby uzyskać szczegółowe informacje na temat implementacji pomocy MFC.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_PREV_PANE Przechodzi do poprzedniego okienka
+- ID_DEFAULT_HELP wyświetla domyślną pomoc dla kontekstu
 
-   `CView`obsługuje to polecenie `CSplitterWnd` dla implementacji. Jeśli widok jest częścią okna rozdzielacza, to polecenie `CSplitterWnd::OnNextPaneCmd`zostanie delegowane do funkcji implementacji . Spowoduje to przeniesienie aktywnego widoku do poprzedniego okienka w rozdzielaczu.
+    > [!NOTE]
+    >  Aby włączyć tę funkcję, należy połączyć ją z `CWinApp` mapą komunikatów klasy pochodnej.
 
-   To polecenie jest wyłączone, jeśli widok nie znajduje się w rozdzielaczu lub nie ma poprzedniego okienka, do które można przejść.
+   To polecenie jest zazwyczaj mapowane na `CWinApp::OnHelpIndex` .
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   Można podać inną procedurę obsługi poleceń, jeśli pożądane jest rozróżnienie pomocy domyślnej i indeksu pomocy.
 
-- ID_OLE_INSERT_NEW Wstawia nowy obiekt OLE
+- ID_NEXT_PANE przechodzi do następnego okienka
 
-   Obecnie nie ma standardowej implementacji dla tego polecenia. Należy zaimplementować to dla klasy `CView`pochodnej, aby wstawić nowy element/obiekt OLE przy bieżącym zaznaczeniu.
+   `CView` obsługuje to polecenie dla `CSplitterWnd` implementacji. Jeśli widok jest częścią okna rozdzielacza, to polecenie zostanie delegowane do funkcji implementacji `CSplitterWnd::OnNextPaneCmd` . Spowoduje to przeniesienie aktywnego widoku do następnego okienka rozdzielacza.
 
-   Wszystkie aplikacje klienckie OLE należy zaimplementować to polecenie. AppWizard, z opcją OLE, utworzy `OnInsertObject` szkielet implementacji w klasie widoku, które trzeba będzie zakończyć.
+   To polecenie jest wyłączone, jeśli widok nie znajduje się w rozdzielaczu lub nie ma następnego okienka, do którego chcesz przejść.
 
-   Zobacz przykład [OCLIENT](../overview/visual-cpp-samples.md) OLE MFC dla pełnej implementacji tego polecenia.
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-- ID_OLE_EDIT_LINKS Edytuje łącza OLE
+- ID_PREV_PANE przechodzi do poprzedniego okienka
 
-   `COleDocument`obsługuje to polecenie przy użyciu implementacji dostarczonych przez MFC standardowego okna dialogowego łączy OLE. Implementacja tego okna dialogowego `COleLinksDialog` jest dostępna za pośrednictwem klasy. Jeśli bieżący dokument nie zawiera żadnych łączy, polecenie jest wyłączone.
+   `CView` obsługuje to polecenie dla `CSplitterWnd` implementacji. Jeśli widok jest częścią okna rozdzielacza, to polecenie zostanie delegowane do funkcji implementacji `CSplitterWnd::OnNextPaneCmd` . Spowoduje to przeniesienie aktywnego widoku do poprzedniego okienka rozdzielacza.
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   To polecenie jest wyłączone, jeśli widok nie znajduje się w rozdzielaczu lub nie ma poprzedniego okienka, do którego chcesz przejść.
 
-- ID_OLE_VERB_FIRST... LAST Zakres identyfikatorów dla czasowników OLE
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-   `COleDocument`używa tego zakresu identyfikatorów polecenia dla zleceń obsługiwanych przez aktualnie wybrany element/obiekt OLE. Musi to być zakres, ponieważ dany element OLE/typ obiektu może obsługiwać zero lub więcej zleceń niestandardowych. W menu aplikacji powinien mieć jeden element menu o identyfikatorze ID_OLE_VERB_FIRST. Po uruchomieniu programu menu zostanie zaktualizowane o odpowiedni opis czasownika menu (lub menu podręczne z wieloma zleceniami). Zarządzanie menu OLE jest obsługiwane `AfxOleSetEditMenu`przez , zrobić w programie obsługi interfejsu użytkownika polecenia aktualizacji dla tego polecenia.
+- ID_OLE_INSERT_NEW wstawia nowy obiekt OLE
 
-   Nie ma żadnych jawnych programów obsługi poleceń do obsługi każdego identyfikatora polecenia w tym zakresie. `COleDocument::OnCmdMsg`jest zastępowany, aby podeszli do wszystkich identyfikatorów poleceń w tym zakresie, przekształcić je w `COleClientItem::DoVerb`liczby czasowników opartych na wartościach zerowych i uruchomić serwer dla tego zlecenia (używającego ).
+   Obecnie nie ma standardowej implementacji dla tego polecenia. Musisz zaimplementować tę opcję dla `CView` klasy pochodnej, aby wstawić nowy element OLE/obiekt w bieżącym zaznaczeniu.
 
-   Nie zaleca się dostosowywania lub innego użycia tego zakresu identyfikatorów poleceń.
+   Wszystkie aplikacje klienckie OLE powinny implementować to polecenie. AppWizard z opcją OLE spowoduje utworzenie szkieletowej implementacji `OnInsertObject` w klasie widoku, która będzie musiała zostać ukończona.
 
-- ID_VIEW_TOOLBAR Włącza i wyłącza pasek narzędzi
+   Aby uzyskać pełną implementację tego polecenia, zobacz przykład [OCLIENT](../overview/visual-cpp-samples.md) MFC OLE Sample.
 
-   `CFrameWnd`obsługuje to polecenie i program obsługi interfejsu użytkownika polecenia aktualizacji, aby przełączyć widoczny stan paska narzędzi. Pasek narzędzi musi być oknem podrzędnym ramki z identyfikatorem okna podrzędnego AFX_IDW_TOOLBAR. Program obsługi poleceń faktycznie przełącza widoczność okna paska narzędzi. `CFrameWnd::RecalcLayout`służy do ponownego rysowania okna ramki z paskiem narzędzi w nowym stanie. Program obsługi interfejsu użytkownika polecenia aktualizacji sprawdza element menu, gdy pasek narzędzi jest widoczny.
+- ID_OLE_EDIT_LINKS edytuje linki OLE
 
-   Dostosowanie tego programu obsługi poleceń nie jest zalecane. Jeśli chcesz dodać dodatkowe paski narzędzi, należy sklonować i zmodyfikować program obsługi poleceń i program obsługi interfejsu użytkownika polecenia aktualizacji dla tego polecenia.
+   `COleDocument` obsługuje to polecenie, korzystając z implementacji interfejsu MFC w standardowym oknie dialogowym. Do implementacji tego okna dialogowego można uzyskać dostęp za pomocą `COleLinksDialog` klasy. Jeśli bieżący dokument nie zawiera żadnych linków, polecenie jest wyłączone.
 
-- ID_VIEW_STATUS_BAR Włącza i wyłącza pasek stanu
+   Nie zaleca się dostosowywania tego programu obsługi poleceń.
 
-   To polecenie jest `CFrameWnd` implementowane w taki sam ID_VIEW_TOOLBAR, z wyjątkiem innego identyfikatora okna podrzędnego (AFX_IDW_STATUS_BAR).
+- ID_OLE_VERB_FIRST... Ostatni zakres identyfikatorów dla zleceń OLE
 
-## <a name="update-only-command-handlers"></a>Programy obsługi poleceń tylko do aktualizacji
+   `COleDocument` używa tego zakresu identyfikatorów poleceń dla zleceń obsługiwanych przez aktualnie zaznaczony element OLE/obiekt. Musi to być zakres, ponieważ dany element OLE/typ obiektu może obsługiwać zero lub więcej czasowników niestandardowych. W menu aplikacji powinien znajdować się jeden element menu o IDENTYFIKATORze ID_OLE_VERB_FIRST. Po uruchomieniu programu menu zostanie zaktualizowane przy użyciu odpowiedniego opisu zlecenia menu (lub menu podręcznego z wieloma zleceniami). Zarządzanie menu OLE jest obsługiwane przez `AfxOleSetEditMenu` , wykonywane w programie obsługi interfejsu wiersza polecenia aktualizacji dla tego polecenia.
 
-Kilka standardowych identyfikatorów poleceń jest używanych jako wskaźniki w paskach stanu. Używają one tego samego mechanizmu obsługi interfejsu użytkownika polecenia aktualizacji, aby wyświetlić ich bieżący stan wizualny podczas bezczynnego czasu aplikacji. Ponieważ nie mogą być wybrane przez użytkownika (oznacza to, że nie można wypchnąć okienko paska stanu), nie ma sensu mieć ON_COMMAND obsługi dla tych identyfikatorów poleceń.
+   Brak jawnych programów obsługi poleceń do obsługi każdego identyfikatora polecenia w tym zakresie. `COleDocument::OnCmdMsg` został zastąpiony, aby przesłonić wszystkie identyfikatory poleceń z tego zakresu, przekształcić je w liczbę czasowników liczonych od zera i uruchomić serwer dla tego zlecenia (za pomocą polecenia `COleClientItem::DoVerb` ).
 
-- ID_INDICATOR_CAPS : Wskaźnik blokady WPR.
+   Nie zaleca się dostosowywania ani innego użycia tego zakresu identyfikatora polecenia.
 
-- ID_INDICATOR_NUM : Wskaźnik blokady NUM.
+- ID_VIEW_TOOLBAR włącza i wyłącza pasek narzędzi
 
-- ID_INDICATOR_SCRL : Wskaźnik blokady SCRL.
+   `CFrameWnd` obsługuje to polecenie i procedurę obsługi interfejsu wiersza polecenia aktualizacji, aby przełączyć widoczny stan paska narzędzi. Pasek narzędzi musi być oknem podrzędnym ramki z IDENTYFIKATORem okna podrzędnego AFX_IDW_TOOLBAR. Procedura obsługi poleceń faktycznie Przełącza widoczność okna paska narzędzi. `CFrameWnd::RecalcLayout` służy do ponownego rysowania okna ramki z paskiem narzędzi w nowym stanie. Procedura obsługi interfejsu wiersza polecenia aktualizacji sprawdza element menu, gdy pasek narzędzi jest widoczny.
 
-- ID_INDICATOR_KANA : Wskaźnik blokady KANA (dotyczy tylko japońskich systemów).
+   Nie zaleca się dostosowywania tego programu obsługi poleceń. Jeśli chcesz dodać dodatkowe paski narzędzi, należy sklonować i zmodyfikować procedurę obsługi poleceń oraz procedurę obsługi interfejsu użytkownika aktualizacji poleceń dla tego polecenia.
 
-Wszystkie trzy z nich `CFrameWnd::OnUpdateKeyIndicator`są implementowane w , pomocnika implementacji, który używa identyfikatora polecenia do mapowania do odpowiedniego klucza wirtualnego. Wspólna implementacja włącza lub wyłącza (dla okienek `CCmdUI` stanu wyłączone = bez tekstu) obiekt w zależności od tego, czy odpowiedni klucz wirtualny jest aktualnie zablokowany.
+- ID_VIEW_STATUS_BAR włącza i wyłącza pasek stanu
 
-Dostosowanie tego programu obsługi poleceń nie jest zalecane.
+   To polecenie jest zaimplementowane w `CFrameWnd` taki sam sposób jak ID_VIEW_TOOLBAR, z wyjątkiem tego, że jest używany inny identyfikator okna podrzędnego (AFX_IDW_STATUS_BAR).
 
-- ID_INDICATOR_EXT : Wskaźnik wyboru EXTended.
+## <a name="update-only-command-handlers"></a>Programy obsługi poleceń Update-Only
 
-- ID_INDICATOR_OVR : Wskaźnik OVeRstrike.
+W paskach stanu są używane różne identyfikatory poleceń standardowych. Używają one tego samego mechanizmu obsługi interfejsu użytkownika polecenia aktualizacji, aby wyświetlić bieżący stan wizualizacji w czasie bezczynności aplikacji. Ponieważ nie mogą zostać wybrane przez użytkownika (oznacza to, że nie można wypchnąć okienka paska stanu), nie ma sensu ON_COMMAND obsługi tych identyfikatorów poleceń.
 
-- ID_INDICATOR_REC : Wskaźnik RECording.
+- ID_INDICATOR_CAPS: wskaźnik blokady zakończenia.
 
-Obecnie nie ma standardowego wdrożenia tych wskaźników.
+- ID_INDICATOR_NUM: wskaźnik NUM LOCK.
 
-Jeśli zdecydujesz się zaimplementować te wskaźniki, zalecamy użycie tych identyfikatorów wskaźników i utrzymanie kolejności wskaźników na pasku stanu (czyli w następującej kolejności: EXT, CAP, NUM, SCRL, OVR, REC).
+- ID_INDICATOR_SCRL: wskaźnik blokady SCRL.
+
+- ID_INDICATOR_KANA: wskaźnik blokady KANA (dotyczy tylko systemów japońskich).
+
+Wszystkie trzy z nich są zaimplementowane w `CFrameWnd::OnUpdateKeyIndicator` , pomocnika implementacji, który używa identyfikatora polecenia do mapowania odpowiedniego klucza wirtualnego. Typowa implementacja włącza lub wyłącza (w przypadku okienka stanu wyłączone = Brak tekstu) obiekt w zależności od tego, `CCmdUI` czy odpowiedni klucz wirtualny jest aktualnie zablokowany.
+
+Nie zaleca się dostosowywania tego programu obsługi poleceń.
+
+- ID_INDICATOR_EXT: rozszerzony wskaźnik SELECT.
+
+- ID_INDICATOR_OVR: wskaźnik przekreślania.
+
+- ID_INDICATOR_REC: wskaźnik rejestrowania.
+
+Obecnie nie ma standardowej implementacji dla tych wskaźników.
+
+Jeśli zdecydujesz się zaimplementować te wskaźniki, zalecamy używanie tych identyfikatorów wskaźnika i utrzymywanie uporządkowania wskaźników na pasku stanu (czyli w następującej kolejności: EXT, CAP, NUM, SCRL, OVR, REC).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

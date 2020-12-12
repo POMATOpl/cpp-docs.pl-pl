@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej na temat specyfikatorów typu C
 title: Specyfikatory typu C
 ms.date: 01/29/2018
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-ms.openlocfilehash: 652388fdf345cab7878bbd8c054b769377b322a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: afff33e385564f5ef8d04988255a239135be13b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214207"
 ---
 # <a name="c-type-specifiers"></a>Specyfikatory typu C
 
@@ -63,6 +64,6 @@ Aby zapewnić zgodność ze specyfikacją ANSI, wartość <strong>void \* \* </s
 
 Można utworzyć dodatkowe Specyfikatory typu z **`typedef`** deklaracjami, zgodnie z opisem w [deklaracji typedef](../c-language/typedef-declarations.md). Zobacz [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md) , aby uzyskać informacje o rozmiarze poszczególnych typów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

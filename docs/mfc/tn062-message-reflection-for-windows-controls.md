@@ -1,5 +1,6 @@
 ---
-title: 'TN062: Odbicie komunikatu dla formantów Windows'
+description: 'Dowiedz się więcej o: TN062: odbicie komunikatu dla formantów systemu Windows'
+title: 'TN062: odbicie komunikatu dla formantów systemu Windows'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -27,102 +28,102 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc106c1513032e654acfc2c4b86b8eb3b939578
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214731"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Odbicie komunikatu dla formantów Windows
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: odbicie komunikatu dla formantów systemu Windows
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-Ta uwaga techniczna opisano odbicie komunikatu, nowa funkcja w wersji 4.0 MFC. Zawiera ona także wskazówki dotyczące tworzenia prostego formantu wielokrotnego użytku, który korzysta odbicie komunikatu.
+Ta Uwaga techniczna opisuje odbicie komunikatów i nową funkcję w MFC 4,0. Zawiera również wskazówki dotyczące tworzenia prostej kontroli wielokrotnego użytku, która używa odbicia komunikatów.
 
-Ta uwaga techniczna nie omówiono w nim odbicie komunikatu ma zastosowanie do kontrolki ActiveX (dawniej nazywanych formantów OLE). Można znaleźć w artykule [kontrolek ActiveX: Tworzenie podklasy kontrolki Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Ta Uwaga techniczna nie omawia odbicia komunikatu, ponieważ ma zastosowanie do kontrolek ActiveX (wcześniej nazywanych kontrolkami OLE). Zapoznaj się z artykułem [formanty ActiveX: Tworzenie podklasy kontrolki systemu Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 **Co to jest odbicie komunikatu**
 
-Formanty Windows często wysyłać powiadomienia do ich nadrzędnej systemu windows. Na przykład wiele kontrolek wysłać komunikatu powiadomienia kolor kontrolki (wm_ctlcolor — lub jednego z jej wariantów), do ich nadrzędnej umożliwiające nadrzędnego do dostarczania pędzel dla tła formantu do malowania.
+Formanty systemu Windows często wysyłają komunikaty powiadomień do okien nadrzędnych. Na przykład wiele kontrolek wysyła komunikat z powiadomieniem o kolorze kontrolki (WM_CTLCOLOR lub jeden z jego wariantów) do ich elementów nadrzędnych, aby umożliwić nadrzędnemu podaniu pędzla do rysowania tła.
 
-W Windows i MFC przed wersją 4.0 okno nadrzędne, często okno dialogowe, jest odpowiedzialny za obsługę tych komunikatów. Oznacza to, że kod do obsługi komunikatu musi być w klasie okno nadrzędne i że ma zostać zduplikowane w każdej klasy, która wymaga, by obsłużyć ten komunikat. W przypadku powyższych co okno dialogowe, które chcieli kontrolek z niestandardowe tła musi obsłużyć komunikat powiadomienia kolor kontrolki. Byłoby znacznie ułatwia ponowne użycie kodu, jeśli klasa sterowania mogłyby być zapisywane, która będzie obsługiwać własne kolor tła.
+W systemie Windows i w MFC przed wersją 4,0 okno nadrzędne, często jest oknem dialogowym, jest odpowiedzialne za obsługę tych komunikatów. Oznacza to, że kod do obsługi wiadomości musi znajdować się w klasie okna nadrzędnego i musi być zduplikowany w każdej klasie, która musi obsługiwać ten komunikat. W przypadku powyżej każde okno dialogowe, które chciało kontrolować z tłem niestandardowym, będzie musiało obsługiwać komunikat z powiadomieniem o kolorze kontrolki. Wielokrotne ponowne użycie kodu będzie znacznie łatwiejsze, jeśli można napisać klasę kontrolki, która mogłaby obsłużyć własny kolor tła.
 
-W wersji 4.0 MFC, wciąż działa mechanizm stare — windows nadrzędny może obsługiwać komunikaty powiadomień. Ponadto, jednak MFC 4.0 ułatwia ponowne użycie, zapewniając funkcję o nazwie "komunikat odbicie" umożliwiająca te powiadomienia mają być obsługiwane w okno kontrolki podrzędne lub okno nadrzędne lub obu. W przykładzie kolor tła kontrolki, teraz możesz tworzyć klasy kontrolki, która ustawia kolor tła, obsługa komunikatów odbitych wm_ctlcolor — — wszystko to bez konieczności polegania na element nadrzędny. (Należy pamiętać, że ponieważ odbicie komunikatu jest implementowany przez MFC, nie przez Windows, klasy okna nadrzędny musi pochodzić od `CWnd` dla odbicie komunikatu do pracy.)
+W MFC 4,0, stary mechanizm nadal działa — okna nadrzędne mogą obsługiwać komunikaty powiadomień. Ponadto MFC 4,0 ułatwia ponowne użycie przez udostępnienie funkcji o nazwie "odbicie komunikatów", która umożliwia obsługę tych komunikatów powiadomień w oknie kontroli podrzędnej lub w oknie nadrzędnym albo w obu. W przykładzie koloru tła formantu można teraz napisać klasę kontrolki, która ustawia swój własny kolor tła, obsługując odbicie WM_CTLCOLOR wiadomości, bez polegania na elemencie nadrzędnym. (Należy zauważyć, że ponieważ odbicie komunikatów jest implementowane przez MFC, a nie przez Windows, Klasa okna nadrzędnego musi pochodzić z, aby `CWnd` odbicie komunikatu działało.)
 
-Starsze wersje biblioteki MFC zostało coś podobnego do odbicie komunikatu, udostępniając funkcje wirtualne kilka wiadomości, takich jak wiadomości dla okna listy rysowane przez właściciela (WM_DRAWITEM i tak dalej). Nowy mechanizm odbicia wiadomości jest uogólniony i spójne.
+Starsze wersje MFC miały coś podobnego do odbicia komunikatów przez udostępnienie funkcji wirtualnych dla kilku komunikatów, takich jak komunikaty dla pól listy rysowanych przez właściciela (WM_DRAWITEM itd.). Nowy mechanizm odbicia komunikatów jest uogólniony i spójny.
 
-Odbicie komunikatu jest zgodne z poprzednimi wersjami przy użyciu kodu napisanego dla wersji MFC przed 4.0.
+Odbicie komunikatu jest zgodne z kodem zapisanym dla wersji MFC przed 4,0.
 
-Program obsługi dla określonej wiadomości podano lub szeregu wiadomości w klasie okna nadrzędnego, spowoduje zastąpienie odzwierciedlona programy obsługi komunikatów dla tej samej wiadomości pod warunkiem nie wywołuj klasy bazowej funkcji obsługi własnego programu obsługi. Na przykład w wm_ctlcolor — można obsłużyć w klasie okno dialogowe, obsługi usługi spowoduje zastąpienie wszelkich programy obsługi komunikatów odbitych.
+Jeśli podano procedurę obsługi dla określonej wiadomości lub dla zakresu komunikatów w klasie okna nadrzędnego, przesłonisz obsługę komunikatów odbitych dla tego samego komunikatu, pod warunkiem, że funkcja obsługi klasy bazowej nie zostanie wywołana we własnym obsłudze. Na przykład jeśli obsłużysz WM_CTLCOLOR w klasie okna dialogowego, obsługa przesłoni wszystkie odbite procedury obsługi komunikatów.
 
-Jeśli w klasie nadrzędnej okna podasz Obsługa określony komunikat WM_NOTIFY lub komunikaty zakresu WM_NOTIFY, programu obsługi zostanie wywołana tylko wtedy, gdy kontrolka podrzędna wysyłania tych wiadomości nie ma program obsługi komunikatów odbitych za pośrednictwem `ON_NOTIFY_REFLECT()`. Jeśli używasz `ON_NOTIFY_REFLECT_EX()` na mapie komunikatów programu obsługi komunikatów może być lub może nie pozwalać na okno nadrzędne, by obsłużyć komunikat. Jeśli program obsługi zwraca **FALSE**, wiadomość będzie obsługiwany przez nadrzędny, jak również podczas wywołania, które zwraca **TRUE** nie zezwala na nadrzędnego do jego obsługi. Należy pamiętać, że komunikatów odbitych odbywa się przed komunikat powiadomienia.
+Jeśli w klasie okna nadrzędnego podasz procedurę obsługi dla określonego komunikatu WM_NOTIFY lub zakres komunikatów WM_NOTIFY, procedura obsługi zostanie wywołana tylko wtedy, gdy kontrolka podrzędna wysyłająca te komunikaty nie ma obsługiwanego przez program obsługi komunikatów `ON_NOTIFY_REFLECT()` . Jeśli używasz `ON_NOTIFY_REFLECT_EX()` na mapie wiadomości, program obsługi komunikatów może lub nie zezwalać na działanie okna nadrzędnego do obsługi wiadomości. Jeśli program obsługi zwróci **wartość false**, komunikat zostanie również obsłużony przez element nadrzędny, a wywołanie zwracające **wartość true** nie zezwala na działanie elementu nadrzędnego. Zwróć uwagę, że komunikat odbity jest obsługiwany przed komunikatem powiadomienia.
 
-Po wysłaniu komunikatu WM_NOTIFY formant jest dostępna w pierwszej szansy do jego obsługi. Jeśli inne komunikatów odbitych zostanie wysłany, okno nadrzędne jest pierwszym szansę, aby go obsłużyć, a kontrolki będą otrzymywać komunikatów odbitych. Aby to zrobić, należy w funkcji obsługi i odpowiedni wpis w mapie komunikatów klasy formantu.
+Po wysłaniu wiadomości WM_NOTIFY formant jest oferowany jako pierwsza szansa na jego obsługę. W przypadku wysłania innej wiadomości odbitej okno nadrzędne będzie miało pierwszą szansę na jego obsługę, a kontrolka odbierze komunikat o odbiciu. W tym celu będzie potrzebna funkcja obsługi i odpowiedni wpis na mapie komunikatów klasy kontrolki.
 
-Makra mapy komunikatów dla komunikatów odbitych jest nieco inne niż w przypadku regularnego powiadomienia: ma *_REFLECT* dołączany do nazwy zwykle. Na przykład aby obsłużyć komunikat WM_NOTIFY w obiekcie nadrzędnym, należy użyć ON_NOTIFY — makro w mapie komunikatów elementu nadrzędnego. Do obsługi komunikatów odbitych w kontrolki podrzędnej, należy użyć makra on_notify_reflect — w mapie komunikatów kontrolki podrzędnej. W niektórych przypadkach parametry różnią się, jak również. Pamiętaj, że ClassWizard można zwykle dodać wpisy mapy komunikatów dla Ciebie dostarczać implementacje szkielet funkcji z prawidłowymi parametrami.
+Makro mapy komunikatów dla komunikatów odbitych jest nieco inne niż w przypadku zwykłych powiadomień: *_REFLECT* dołączone do nazwy zwyczajowej. Na przykład aby obsłużyć WM_NOTIFY komunikatu w obiekcie nadrzędnym, należy użyć makra ON_NOTIFY na mapie wiadomości elementu nadrzędnego. Aby obsłużyć odbicie komunikatu w formancie podrzędnym, użyj makra ON_NOTIFY_REFLECT w mapie komunikatów formantu podrzędnego. W niektórych przypadkach parametry są również inne. Należy pamiętać, że ClassWizard może zwykle dodawać wpisy mapy komunikatów dla Ciebie i dostarczać implementacje funkcji szkieletowej z prawidłowymi parametrami.
 
-Zobacz [TN061: Komunikaty ON_NOTIFY i Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md) uzyskać informacji na temat nowy komunikat WM_NOTIFY.
+Zobacz [TN061: ON_NOTIFY i WM_NOTIFY messages](../mfc/tn061-on-notify-and-wm-notify-messages.md) , aby uzyskać informacje o nowym WM_NOTIFY komunikacie.
 
-**Wpisy mapy komunikatów i prototypy funkcji obsługi dla komunikatów odbitych**
+**Wpisy mapy komunikatów i prototypy funkcji obsługi dla wiadomości odbitej**
 
-Aby obsłużyć komunikat z powiadomieniem odbitych kontroli, użyj makra map wiadomości i prototypy funkcji wymienionych w poniższej tabeli.
+Aby obsłużyć komunikat z powiadomieniem o przekazaniu kontroli, użyj makr mapy komunikatów i prototypów funkcji wymienionych w poniższej tabeli.
 
-ClassWizard zazwyczaj można dodać te wpisy mapy komunikatów dla Ciebie i dostarczać implementacje funkcji szkielet. Zobacz [Definiowanie obsługi komunikatów dla komunikatów odzwierciedlone](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) informacji o tym, jak zdefiniować programy obsługi dla komunikatów odbitych.
+ClassWizard mogą zwykle dodawać te wpisy mapy komunikatów dla użytkownika i dostarczać implementacje funkcji szkieletowej. Aby uzyskać informacje na temat sposobu definiowania programów obsługi komunikatów, zobacz [Definiowanie obsługi komunikatów dla wiadomości odbitej](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) .
 
-Aby przekonwertować z nazwa komunikatu nazwy odbitych makra, należy poprzedzić *ON_* obiektów blob i uzupełnialnych *_REFLECT*. Na przykład wm_ctlcolor — staje się ON_WM_CTLCOLOR_REFLECT. (Aby zobaczyć, wiadomości, które można uwzględnione, należy przeprowadzić konwersję przeciwny we wpisach makra w poniższej tabeli.)
+Aby przeprowadzić konwersję z nazwy komunikatu do nazwy makra odzwierciedlonego, poprzedź *ON_* i Dołącz *_REFLECT*. Na przykład WM_CTLCOLOR jest ON_WM_CTLCOLOR_REFLECT. (Aby zobaczyć, które wiadomości można odzwierciedlić, wykonaj odwrotną konwersję wpisów makr w poniższej tabeli).
 
-Dostępne są następujące trzy wyjątki od reguły powyżej:
+Powyższe trzy wyjątki od reguły są następujące:
 
 - Makro WM_COMMAND powiadomień jest ON_CONTROL_REFLECT.
 
-- Makra dla odbić WM_NOTIFY jest on_notify_reflect —.
+- Makro dla WM_NOTIFY odbicia jest ON_NOTIFY_REFLECT.
 
-- Makra dla odbić ON_UPDATE_COMMAND_UI jest ON_UPDATE_COMMAND_UI_REFLECT.
+- Makro dla ON_UPDATE_COMMAND_UI odbicia jest ON_UPDATE_COMMAND_UI_REFLECT.
 
-We wszystkich powyższych przypadkach specjalne należy określić nazwę funkcji elementu członkowskiego programu obsługi. W innych przypadkach należy użyć standardowej nazwy funkcji procedury obsługi.
+W każdym z powyższych specjalnych przypadków należy określić nazwę funkcji elementu członkowskiego programu obsługi. W innych przypadkach należy użyć standardowej nazwy dla funkcji obsługi.
 
-Znaczenie parametry i zwracane wartości funkcji opisano w nazwy funkcji lub nazwy funkcji za pomocą *na* dołączony. Na przykład `CtlColor` jest udokumentowany w `OnCtlColor`. Programy obsługi komunikatów odbitych kilka muszą mniej parametrów niż podobne programy obsługi, w oknie nadrzędnym. Po prostu być zgodne z nazwami w poniższej tabeli za pomocą nazwy parametrów formalnych w dokumentacji.
+Znaczenie parametrów i wartości zwracanych funkcji są udokumentowane jako nazwa funkcji lub nazwa funkcji z *włączonym* prefiksem. Na przykład `CtlColor` jest udokumentowana w `OnCtlColor` . Kilka obsłudze komunikatów odbitych wymaga mniejszej liczby parametrów niż podobne procedury obsługi w oknie nadrzędnym. W poniższej tabeli są zgodne z nazwami parametrów formalnych w dokumentacji.
 
 |Wpis mapy|Prototyp funkcji|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **();**|
-|**ON_NOTIFY_REFLECT — (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *wynik* **);**|
+|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *wynik* **);**|
 |**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**afx_msg void** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
-|**ON_WM_DRAWITEM_REFLECT)**|**afx_msg void drawitem — (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
-|**ON_WM_MEASUREITEM_REFLECT)**|**afx_msg void measureitem — (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
-|**ON_WM_DELETEITEM_REFLECT)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**ON_WM_COMPAREITEM_REFLECT)**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
-|**ON_WM_CHARTOITEM_REFLECT)**|**afx_msg int CharToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_VKEYTOITEM_REFLECT)**|**afx_msg int VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
-|**ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
+|**ON_WM_CTLCOLOR_REFLECT ()**|**AFX_MSG HBRUSH CtlColor (** <strong>\*</strong> `pDC` przechwytywanie zmian **, Uint** `nCtlColor` **);**|
+|**ON_WM_DRAWITEM_REFLECT ()**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
+|**ON_WM_MEASUREITEM_REFLECT ()**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
+|**ON_WM_DELETEITEM_REFLECT ()**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT ()**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT ()**|**afx_msg int CharToItem (uint** `nKey` **, uint** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT ()**|**afx_msg int VKeyToItem (uint** `nKey` **, uint** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT ()**|**afx_msg void HScroll (uint** `nSBCode` **, uint** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT ()**|**afx_msg void VScroll (uint** `nSBCode` **, uint** `nPos` **);**|
+|**ON_WM_PARENTNOTIFY_REFLECT ()**|**afx_msg void ParentNotify (uint** `message` **, lParam** `lParam` **);**|
 
-On_notify_reflect — i ON_CONTROL_REFLECT makra mają odmiany, zezwalających na więcej niż jeden obiekt (na przykład formantem i jego element nadrzędny) do obsługi danego komunikatu.
+Makra ON_NOTIFY_REFLECT i ON_CONTROL_REFLECT mają różne odmiany, które zezwalają na obsługę danego komunikatu przez więcej niż jeden obiekt (taki jak formant i jego element nadrzędny).
 
 |Wpis mapy|Prototyp funkcji|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *wynik* **);**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**AFX_MSG bool** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *wynik* **);**|
+|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**AFX_MSG bool** `memberFxn` **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Obsługa komunikatów odbitych: Przykład formantu wielokrotnego użytku
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Obsługa komunikatów odbitych: przykład kontroli wielokrotnego użytku
 
-Ten prosty przykład tworzy formant wielokrotnego użytku, nazywany `CYellowEdit`. Kontrolka działa tak samo, jako kontrolka edycji regularnych, z tą różnicą, że wyświetla czarny tekst w żółte tło. Możesz ją łatwo dodawać funkcje Członkowskie, które pozwalałyby na `CYellowEdit` formantu, aby wyświetlić różne kolory.
+Ten prosty przykład tworzy kontrolkę wielokrotnego użytku o nazwie `CYellowEdit` . Kontrolka działa tak samo jak w przypadku zwykłej kontrolki edycji, z tą różnicą, że w żółtym tle jest wyświetlany czarny tekst. Można łatwo dodać funkcje członkowskie, które pozwolą `CYellowEdit` formantowi wyświetlać różne kolory.
 
-### <a name="to-try-the-example-that-creates-a-reusable-control"></a>Aby wypróbować przykładu, który tworzy formant wielokrotnego użytku
+### <a name="to-try-the-example-that-creates-a-reusable-control"></a>Aby wypróbować przykład, który tworzy formant wielokrotnego użytku
 
-1. Tworzenie nowego okna dialogowego w istniejącej aplikacji. Aby uzyskać więcej informacji, zobacz [Edytor okien dialogowych](../windows/dialog-editor.md) tematu.
+1. Utwórz nowe okno dialogowe w istniejącej aplikacji. Aby uzyskać więcej informacji, zobacz temat [Edytor okien dialogowych](../windows/dialog-editor.md) .
 
-   Musi korzystać z aplikacji, w której do tworzenia kontrolki do ponownego użycia. Jeśli nie masz istniejącej aplikacji do użycia, należy utworzyć aplikację oparta na oknach dialogowych za pomocą Kreatora AppWizard.
+   Musisz mieć aplikację, w której ma zostać opracowana kontrolka wielokrotnego użytku. Jeśli nie masz istniejącej aplikacji do użycia, Utwórz aplikację opartą na oknach dialogowych przy użyciu AppWizard.
 
-2. Za pomocą projektu załadowane do Visual C++, użyj ClassWizard, aby utworzyć nową klasę o nazwie `CYellowEdit` na podstawie `CEdit`.
+2. Gdy projekt został załadowany do Visual C++, użyj ClassWizard, aby utworzyć nową klasę o nazwie `CYellowEdit` opartej na `CEdit` .
 
-3. Dodaj trzy zmienne Członkowskie swojej `CYellowEdit` klasy. Pierwsze dwie będą *COLORREF* zmienne do przechowywania kolor tekstu i kolor tła. Trzeci będzie `CBrush` obiektu, który będzie przechowywać pędzel dla tła do malowania. `CBrush` Obiekt umożliwia tworzenie pędzla, jeden raz, jedynie do niego odwoływać później i zniszcz pędzel automatycznie po `CYellowEdit` zniszczenia kontrolki.
+3. Dodaj trzy zmienne członkowskie do `CYellowEdit` klasy. Pierwsze dwie będą *COLORREF* zmienne, aby pomieścić kolor tekstu i kolor tła. Trzecia będzie `CBrush` obiektem, który będzie przechowywać Pędzel do rysowania tła. `CBrush`Obiekt umożliwia jednokrotne utworzenie pędzla, po prostu odwołujący się do niego, a w celu zniszczenia pędzla automatycznie, gdy `CYellowEdit` formant zostanie zniszczony.
 
-4. Inicjowanie zmiennych składowych, pisząc Konstruktor w następujący sposób:
+4. Zainicjuj zmienne elementu członkowskiego, pisząc Konstruktor w następujący sposób:
 
     ```cpp
     CYellowEdit::CYellowEdit()
@@ -133,9 +134,9 @@ Ten prosty przykład tworzy formant wielokrotnego użytku, nazywany `CYellowEdit
     }
     ```
 
-5. Przy użyciu ClassWizard, Dodaj program obsługi dla komunikatów odbitych wm_ctlcolor —, aby Twoje `CYellowEdit` klasy. Należy pamiętać, znak równości przed nazwą wiadomości na liście komunikatów, które można obsługiwać wskazuje, czy komunikat jest widoczny. Jest to opisane w [Definiowanie obsługi komunikatów dla komunikatów odzwierciedlone](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+5. Za pomocą ClassWizard Dodaj procedurę obsługi dla odbicia komunikatu WM_CTLCOLOR do `CYellowEdit` klasy. Należy zauważyć, że znak równości na początku nazwy wiadomości na liście komunikatów, który można obsłużyć, wskazuje, że komunikat jest widoczny. Jest to opisane w temacie [Definiowanie obsługi komunikatów dla wiadomości odzwierciedlonej](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-   ClassWizard dodaje następującą funkcję makro i szkielet mapy komunikatów dla Ciebie:
+   ClassWizard dodaje następujące makro i funkcję szkieletu mapy komunikatów:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()
@@ -150,7 +151,7 @@ Ten prosty przykład tworzy formant wielokrotnego użytku, nazywany `CYellowEdit
     }
     ```
 
-6. Zastąp treści funkcji następującym kodem. Kod ten określa kolor tekstu, kolor tła tekstu i kolor tła w pozostałej części kontrolki.
+6. Zastąp treść funkcji poniższym kodem. Kod określa kolor tekstu, kolor tła tekstu i kolor tła reszty formantu.
 
     ```cpp
     pDC->SetTextColor(m_clrText);   // text
@@ -158,11 +159,11 @@ Ten prosty przykład tworzy formant wielokrotnego użytku, nazywany `CYellowEdit
     return m_brBkgnd;               // ctl bkgnd
     ```
 
-7. Utwórz formant edycji w oknie dialogowym, a następnie dołączyć go ze zmienną członkowską przez dwukrotne kliknięcie kontrolki edycji, przytrzymując klawisz control w dół. W oknie dialogowym Dodawanie zmiennej członkowskiej Zakończ nazwę zmiennej, a następnie wybierz "w elemencie Control" dla kategorii, a następnie "CYellowEdit" dla typu zmiennej. Należy pamiętać ustawić kolejność tabulacji w oknie dialogowym. Ponadto należy uwzględnić plik nagłówka dla `CYellowEdit` formantu w pliku nagłówkowym okno dialogowe.
+7. Utwórz kontrolkę Edycja w oknie dialogowym, a następnie Dołącz ją do zmiennej składowej przez dwukrotne kliknięcie kontrolki edycji, przytrzymując klawisz Control. W oknie dialogowym Dodaj zmienną członkowską Wypełnij pole Nazwa zmiennej i wybierz "formant" dla kategorii, a następnie "CYellowEdit" dla typu zmiennej. Nie zapomnij ustawić kolejności tabulacji w oknie dialogowym. Upewnij się również, że `CYellowEdit` w pliku nagłówkowym okna dialogowego znajduje się plik nagłówka kontrolki.
 
-8. Skompiluj i uruchom aplikację. Kontrolka edycji będzie miała żółte tło.
+8. Kompiluj i uruchamiaj aplikację. Kontrolka edycji będzie miała żółte tło.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

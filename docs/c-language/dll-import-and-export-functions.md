@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje importowania i eksportowania biblioteki DLL'
 title: Importowanie bibliotek DLL i eksportowanie funkcji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
-ms.openlocfilehash: 753a51fa8e2c87b77a54e5e93522e5f11585b610
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f734d4415b473717ad8cd7c94213f1beaff9dc8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87200078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213933"
 ---
 # <a name="dll-import-and-export-functions"></a>Importowanie bibliotek DLL i eksportowanie funkcji
 
@@ -36,10 +37,10 @@ DllExport int j;
 DllExport int n;
 ```
 
-Aby uzyskać szczegółowe informacje na temat składni dla rozszerzonych modyfikatorów klasy magazynu, zobacz [rozszerzone atrybuty klasy magazynu](../c-language/c-extended-storage-class-attributes.md).
+Aby uzyskać szczegółowe informacje na temat składni dla rozszerzonych modyfikatorów klasy magazynu, zobacz [atrybuty rozszerzone Storage-Class](../c-language/c-extended-storage-class-attributes.md).
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

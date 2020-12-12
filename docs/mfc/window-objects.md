@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: obiekty okna'
 title: Obiekty okien
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,49 +15,49 @@ helpviewer_keywords:
 - Visual C++, window objects [MFC]
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
-ms.openlocfilehash: b62f43aa0d37c5e614636b3d7543bc927d41039b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a7755dfecc8205279785a6452b04c3f8dc429d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214497"
 ---
 # <a name="window-objects"></a>Obiekty okien
 
-MFC udostępnia klasy [CWnd](../mfc/reference/cwnd-class.md) do hermetyzacji `HWND` uchwyt okna. `CWnd` Obiekt jest obiektem okna języka C++ od `HWND` reprezentujący Windows, ale okno zawierające je. Użyj `CWnd` do wyprowadzenia okna podrzędnego klasy lub użyj jednego z wielu klas MFC pochodną `CWnd`. Klasa `CWnd` jest klasą bazową dla wszystkich okien, w tym okna ramowe, okna dialogowe, okien podrzędnych, formantów i pasków sterowania, takie jak paski narzędzi. Współdziałających z [relację między obiektem okna języka C++ a właściwością HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) ma kluczowe znaczenie dla skutecznego programowania z MFC.
+MFC dostarcza klasy [CWnd](../mfc/reference/cwnd-class.md) do hermetyzacji `HWND` uchwytu okna. `CWnd`Obiekt jest obiektem okna języka C++, odrębnie od `HWND` reprezentowanego okna systemu Windows, ale go zawiera. Użyj `CWnd` , aby utworzyć własne klasy okien podrzędnych lub użyć jednej z wielu klas MFC pochodnych z `CWnd` . Klasa `CWnd` jest klasą bazową dla wszystkich okien, w tym okna z ramkami, okna dialogowe, okna podrzędne, kontrolki i paski formantów, takie jak paski narzędzi. Dobre zrozumienie [relacji między obiektem okna języka C++ a elementem HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) ma kluczowe znaczenie dla efektywnego programowania za pomocą MFC.
 
-Biblioteka MFC zawiera niektóre funkcje domyślne i zarządzanie systemem windows, ale może pochodzić klasy z `CWnd` i użyj jej funkcje Członkowskie, aby dostosować funkcjonalność podana. Można również tworzyć podrzędne okna tworząc `CWnd` obiektu i wywoływania jego [Utwórz](../mfc/reference/cwnd-class.md#create) element członkowski funkcji, a następnie dostosować okien podrzędnych za pomocą `CWnd` funkcji elementów członkowskich. Możesz osadzić obiekty opracowane na podstawie [CView](../mfc/reference/cview-class.md), takich jak widoki formularzy lub widok drzewa, w oknie ramki. Może obsługiwać wiele widoków dokumentów za pośrednictwem rozdzielacz okienka, dostarczonych przez klasę [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
+MFC zapewnia pewne domyślne funkcje i zarządzanie systemem Windows, ale można utworzyć własną klasę z `CWnd` i użyć jej funkcji składowych, aby dostosować dostępne funkcje. Można utworzyć okna podrzędne poprzez konstruowanie `CWnd` obiektu i wywołanie jego funkcji [tworzenia](../mfc/reference/cwnd-class.md#create) elementu członkowskiego, a następnie dostosowanie okien podrzędnych przy użyciu `CWnd` funkcji składowych. Można osadzić obiekty pochodne od [CView](../mfc/reference/cview-class.md), takie jak widoki formularzy lub widoki drzewa, w oknie ramek. I można obsługiwać wiele widoków dokumentów za pośrednictwem okienek rozdzielacza dostarczonych przez klasę [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
-Każdy obiekt pochodzi od klasy `CWnd` zawiera mapy komunikatów, za pomocą którego można mapy wiadomości Windows lub identyfikatory poleceń Twoje własne programy obsługi.
+Każdy obiekt pochodny klasy `CWnd` zawiera mapę komunikatów, za pomocą której można mapować komunikaty systemu Windows lub identyfikatory poleceń na własne programy obsługi.
 
-Ogólne materiały dotyczące programowania dla Windows jest dobry zasobem w nauce używania `CWnd` funkcje Członkowskie, które hermetyzują `HWND` interfejsów API.
+Ogólna literatura dotycząca programowania dla systemu Windows to dobry zasób do uczenia się, jak używać `CWnd` funkcji Członkowskich, które hermetyzują `HWND` interfejsy API.
 
-## <a name="functions-for-operating-on-a-cwnd"></a>Funkcje działające CWnd
+## <a name="functions-for-operating-on-a-cwnd"></a>Funkcje do działania na CWnd
 
-`CWnd` i jego [pochodne klasy okien](../mfc/derived-window-classes.md) konstruktory, destruktory i elementów członkowskich do inicjalizacji obiektu, utworzyć podstawowe struktury Windows i dostęp do zhermetyzowanego `HWND`. `CWnd` udostępnia również funkcje Członkowskie, które hermetyzują Windows API do wysyłania wiadomości, uzyskiwanie dostępu do stanu okna, Konwersja współrzędnych, aktualizowanie, przewijania, uzyskiwanie dostępu do Schowka i wiele innych zadań. Większość Windows API zarządzania systemem Windows, które umożliwiają wykorzystywanie `HWND` argument są hermetyzowane jako funkcje Członkowskie `CWnd`. Nazwy funkcji i ich parametry są zachowywane w `CWnd` funkcja elementu członkowskiego. Aby uzyskać szczegółowe informacje o interfejsach API Windows, zamknięte przez `CWnd`, można znaleźć klasy [CWnd](../mfc/reference/cwnd-class.md).
+`CWnd` natomiast [klasy pochodnego okna](../mfc/derived-window-classes.md) zapewniają konstruktory, destruktory i funkcje członkowskie do inicjowania obiektu, tworzenia podstawowych struktur systemu Windows i uzyskiwania dostępu do hermetyzacji `HWND` . `CWnd` Program udostępnia również funkcje członkowskie, które hermetyzują interfejsy API systemu Windows do wysyłania wiadomości, uzyskiwania dostępu do stanu okna, konwertowania współrzędnych, aktualizowania, przewijania, uzyskiwania dostępu do schowka i wielu innych zadań. Większość interfejsów API zarządzania oknami systemu Windows, które przyjmują `HWND` argument, są hermetyzowane jako funkcje elementów członkowskich programu `CWnd` . Nazwy funkcji i ich parametrów są zachowywane w `CWnd` funkcji składowej. Aby uzyskać szczegółowe informacje o interfejsach API systemu Windows, które są hermetyzowane przez `CWnd` program, zobacz Klasa [CWnd](../mfc/reference/cwnd-class.md).
 
-## <a name="cwnd-and-windows-messages"></a>Komunikaty Windows i CWnd
+## <a name="cwnd-and-windows-messages"></a>CWnd i komunikaty systemu Windows
 
-Jedną z głównych `CWnd` ma na celu dostarczenie interfejsu obsługi wiadomości Windows, takich jak WM_PAINT lub WM_MOUSEMOVE. Wiele funkcji elementu członkowskiego `CWnd` są programy obsługi dla standardowych komunikatów — zaczynających się od identyfikatora **afx_msg** i prefiksu "Włączone", takich jak `OnPaint` i `OnMouseMove`. [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md) obejmuje wiadomości i komunikatów w szczegóły. Informacje dotyczą równie framework w systemie windows, a te utworzyć samodzielnie do specjalnych celów.
+Jednym z podstawowych celów `CWnd` jest zapewnienie interfejsu do obsługi komunikatów systemu Windows, takich jak WM_PAINT lub WM_MOUSEMOVE. Wiele funkcji składowych programu `CWnd` jest obsługą dla standardowych komunikatów — zaczynają się od identyfikatora **afx_msg** i prefiksu "on", takich jak `OnPaint` i `OnMouseMove` . [Obsługa komunikatów i mapowanie](../mfc/message-handling-and-mapping.md) obejmują szczegóły komunikatów i komunikatów. Informacje dotyczą zarówno systemu Windows Framework, jak i tych, które zostały utworzone w celach specjalnych.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Relacja między obiektem okna języka C++ a właściwością HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+- [Relacja między obiektem okna języka C++ a elementem HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
 
 - [Pochodne klasy okien](../mfc/derived-window-classes.md)
 
 - [Tworzenie okien](../mfc/creating-windows.md)
 
-- [Niszczenie obiektów okien](../mfc/destroying-window-objects.md)
+- [niszczenie obiektów okien](../mfc/destroying-window-objects.md)
 
-- [Odłączanie obiektu CWnd od jego właściwości HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Odłączanie elementu CWnd od jego elementu HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
 
 - [Praca z obiektami okien](../mfc/working-with-window-objects.md)
 
-- [Konteksty urządzenia](../mfc/device-contexts.md): obiekty, które uniezależnić Windows rysowania urządzenia
+- [Konteksty urządzenia](../mfc/device-contexts.md): obiekty, które tworzą niezależne urządzenie do rysowania systemu Windows
 
-- [Obiekty graficzne](../mfc/graphic-objects.md): pióra, pędzle, czcionki, mapy bitowe, palet, regionów
+- [Obiekty graficzne](../mfc/graphic-objects.md): pióra, pędzle, czcionki, mapy bitowe, palety, regiony
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Windows](../mfc/windows.md)

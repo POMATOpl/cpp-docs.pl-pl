@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: elementy języka C'
 title: Elementy języka C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 447ae9d2065783db12ddceb94217c39122db4b98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213783"
 ---
 # <a name="elements-of-c"></a>Elementy języka C
 
@@ -34,7 +35,7 @@ Omówiono następujące tematy:
 
 - [Interpunkcja i znaki specjalne](../c-language/punctuation-and-special-characters.md)
 
-Sekcja zawiera również tabele referencyjne dla [trigraphs](../c-language/trigraphs.md), [limity dla stałych zmiennoprzecinkowych](../c-language/limits-on-floating-point-constants.md), [limity liczb całkowitych C i C++](../c-language/cpp-integer-limits.md)oraz [Sekwencje ucieczki](../c-language/escape-sequences.md).
+Sekcja zawiera również tabele referencyjne dla [trigraphs](../c-language/trigraphs.md), [limity Floating-Point stałych](../c-language/limits-on-floating-point-constants.md), [limitów liczb całkowitych C i C++](../c-language/cpp-integer-limits.md)oraz [sekwencje unikowe](../c-language/escape-sequences.md).
 
 Operatory to symbole (znaki pojedyncze i kombinacje znaków) określające sposób manipulowania wartościami. Każdy symbol jest interpretowany jako pojedyncza jednostka, nazywana tokenem. Aby uzyskać więcej informacji, zobacz [Operatory](../c-language/c-operators.md).
 

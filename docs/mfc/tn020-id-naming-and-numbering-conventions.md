@@ -1,5 +1,6 @@
 ---
-title: 'TN020: Konwencje identyfikator nazewnictwa i numerowania'
+description: 'Dowiedz się więcej na temat: TN020: Konwencje nazewnictwa i numerowania identyfikatorów'
+title: 'TN020: konwencje nazewnictwa i numerowania identyfikatorów'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,102 +9,102 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85f59e45ec9d4ce748515cf638f4fb4cf33c7d38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215875"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Konwencje identyfikator nazewnictwa i numerowania
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: konwencje nazewnictwa i numerowania identyfikatorów
 
-Ta uwaga opisuje identyfikator nazewnictwa i numerowania Konwencji MFC 2.0 używa zasobów, polecenia, ciągów, formantów i okien podrzędnych.
+Ta Uwaga opisuje konwencje nazewnictwa i numerowania identyfikatorów, które są używane przez MFC 2,0 dla zasobów, poleceń, ciągów, kontrolek i okien podrzędnych.
 
-Konwencje nazewnictwa MFC identyfikator i numerowania powinny spełniać następujące wymagania:
+Konwencje nazewnictwa i numeracji MFC mają spełniać następujące wymagania:
 
-- Zapewnia spójny standard nazewnictwa identyfikator używany w bibliotece MFC i aplikacji MFC, które są obsługiwane przez Edytor zasobów Visual C++. Umożliwia to łatwiejsze do programisty należy interpretować typ i pochodzenia zasobu z jego identyfikatora.
+- Podaj spójny Standard nazewnictwa identyfikatorów używany w bibliotece MFC i aplikacjach MFC, które są obsługiwane przez Edytor zasobów Visual C++. Ułatwia to programistom interpretowanie typu i pochodzenia zasobu na podstawie jego identyfikatora.
 
-- Wyróżnianie silne Relacja 1 do 1 niektórych typów identyfikatorów.
+- Wyróżnij silną relację od 1 do 1 między określonymi typami identyfikatorów.
 
-- Zgodne ze standardami już powszechnie używanych nazewnictwa identyfikatorów w Windows.
+- Zgodność z powszechnie używanymi standardami nazewnictwa identyfikatorów w systemie Windows.
 
-- Partycja numerowanie identyfikator miejsca. Programista, MFC, Windows i zasoby były edytowane środowisko Visual C++ można przypisać numery identyfikatorów. Właściwe partycjonowanie może pomóc uniknąć duplikowania numery identyfikatorów.
+- Podziel na partycje obszar numerowania identyfikatorów. Numery IDENTYFIKACYJNe mogą być przypisywane przez programistę, MFC, Windows i edytowane Visual C++ zasoby. Odpowiednie partycjonowanie pomoże uniknąć duplikowania numerów IDENTYFIKACYJNych.
 
-## <a name="the-id-prefix-naming-convention"></a>Konwencja nazewnictwa prefiks Identyfikatora
+## <a name="the-id-prefix-naming-convention"></a>Konwencja nazewnictwa prefiksów identyfikatorów
 
-Kilka typów identyfikatorów może wystąpić w aplikacji. Konwencja nazewnictwa MFC identyfikator definiuje różne prefiksy dla różnych typów zasobów.
+W aplikacji może wystąpić kilka typów identyfikatorów. Konwencja nazewnictwa identyfikatorów MFC definiuje różne prefiksy dla różnych typów zasobów.
 
-MFC używa prefiksu "IDR_", aby wskazać identyfikator zasobu, który ma zastosowanie do wielu typów zasobów. Na przykład dla danej ramki okna, MFC używa tego samego prefiksu "IDR_" Aby wskazać zasobu menu, akcelerator, parametry i ikona. W poniższej tabeli przedstawiono różne prefiksy i ich użycia:
+MFC używa prefiksu "IDR_", aby wskazać identyfikator zasobu dotyczący wielu typów zasobów. Na przykład dla danego okna ramki MFC używa tego samego prefiksu "IDR_", aby wskazać menu, akcelerator, ciąg i zasób ikony. W poniższej tabeli przedstawiono różne prefiksy i ich użycie:
 
 |Prefiks|Zastosowanie|
 |------------|---------|
-|IDR_|Dla wielu typów zasobów (głównie używane do menu, akceleratory i wstążki).|
-|IDD_|Okno dialogowe szablonu zasobów (na przykład IDD_DIALOG1).|
+|IDR_|Dla wielu typów zasobów (używanych głównie dla menu, akceleratorów i wstążek).|
+|IDD_|Dla zasobów szablonu okna dialogowego (na przykład IDD_DIALOG1).|
 |IDC_|Dla zasobów kursora.|
-|IDI_|Ikona zasobów.|
-|IDB_|Dla zasobów mapy bitowej.|
-|IDS_|Aby uzyskać zasoby w postaci ciągów.|
+|IDI_|Dla zasobów ikon.|
+|IDB_|Dla zasobów bitmapowych.|
+|IDS_|Dla zasobów ciągu.|
 
-W ramach zasobu okna DIALOGOWEGO MFC jest zgodna z konwencjami te:
+W ramach zasobu okna dialogowego MFC stosuje się do następujących konwencji:
 
 |Prefiks lub etykieta|Zastosowanie|
 |---------------------|---------|
-|IDOK, IDCANCEL|Standardowa przycisku wypychania identyfikatorów.|
-|IDC_|W przypadku innych formantów okna dialogowego.|
+|IDOK, IDCANCEL|Dla standardowych identyfikatorów przycisków wypychania.|
+|IDC_|Inne kontrolki okna dialogowego.|
 
-Prefiks "IDC_" służy do kursorów. Ten konflikt nazw nie jest zazwyczaj problemem ponieważ Typowa aplikacja będzie mieć kilka kursorów i wiele formantów okna dialogowego.
+Prefiks "IDC_" jest również używany w przypadku kursorów. Ten konflikt nazewnictwa nie jest zazwyczaj problemem, ponieważ typowa aplikacja będzie zawierać kilka kursorów i wiele kontrolek dialogowych.
 
-W ramach zasobu menu MFC jest zgodna z konwencjami te:
+W ramach zasobu menu MFC stosuje się do następujących konwencji:
 
 |Prefiks|Zastosowanie|
 |------------|---------|
-|IDM_|Dla elementów menu, które nie korzystają z architektury polecenia MFC.|
-|ID_|Dla polecenia menu, które używają architektury polecenia MFC.|
+|IDM_|Dla elementów menu, które nie używają architektury poleceń MFC.|
+|ID_|Dla poleceń menu, które używają architektury poleceń MFC.|
 
-Polecenia, postępuj zgodnie z architekturą polecenia MFC, które musi mieć procedurę obsługi poleceń ON_COMMAND i może mieć do obsługi ON_UPDATE_COMMAND_UI. Jeśli programy obsługi tych poleceń jest zgodna z architekturą polecenia MFC, one będzie działać prawidłowo tego, czy są one powiązane z polecenia menu, przycisk paska narzędzi lub przycisk paska dialogowego. Ten sam prefiks "ID_" służy do menu ciąg monitu, który jest wyświetlany na jego pasku komunikatów Centrum użytkowników. Większość elementów menu w aplikacji powinien być zgodny z konwencjami polecenia MFC. Wszystkie identyfikatory poleceń standardowych (na przykład id_file_new —) stosują taką Konwencję.
+Polecenia, które są zgodne z architekturą poleceń MFC, muszą mieć procedurę obsługi poleceń ON_COMMAND i mogą mieć procedurę obsługi ON_UPDATE_COMMAND_UI. Jeśli te programy obsługi poleceń stosują się do architektury poleceń MFC, będą działać prawidłowo, niezależnie od tego, czy są powiązane z poleceniem menu, przyciskiem paska narzędzi lub przyciskiem paska dialogowego. Ten sam prefiks "ID_" jest również używany dla ciągu wiersza polecenia menu, który jest wyświetlany na pasku komunikatów programu. Większość elementów menu w aplikacji powinna być zgodna z konwencjami poleceń MFC. Wszystkie standardowe identyfikatory poleceń (na przykład ID_FILE_NEW) są zgodne z tą konwencją.
 
-MFC używa również "IDP_" jako formą specjalistyczne ciągów (zamiast "IDS_"). Ciągi z prefiksem "IDP_" są monity, czyli ciągów używanych w polach wiadomości. Ciągi "IDP_" może zawierać "%1" i "%2" jako symbole zastępcze ciągów ustalone przez program. Ciągi "IDP_" mają zwykle tematów związanych z nimi, a nie obsługują ciągi "IDS_". Ciągi "IDP_" zawsze są lokalizowane i ciągów "IDS_" może nie być zlokalizowana.
+MFC używa również "IDP_" jako wyspecjalizowanej postaci ciągów (zamiast "IDS_"). Ciągi z prefiksem "IDP_" są monitami, czyli ciągami używanymi w oknach komunikatów. Ciągi "IDP_" mogą zawierać "%1" i "%2" jako symbole zastępcze ciągów określonych przez program. Ciągi "IDP_" zazwyczaj zawierają tematy pomocy z nimi skojarzone i ciągi "IDS_" nie. Ciągi "IDP_" są zawsze zlokalizowane, a ciągi "IDS_" mogą nie być lokalizowane.
 
-Biblioteki MFC używa także prefiks "IDW_" jako formą specjalistyczne kontroli identyfikatorów (zamiast "IDC_"). Te identyfikatory są przypisywane do okien nadrzędnych, takich jak widoki i rozdzielaczy przez klasy framework. Identyfikatory implementacji MFC mają prefiks "AFX_".
+Biblioteka MFC używa również prefiksu "IDW_" jako wyspecjalizowanej formy identyfikatorów sterowania (zamiast "IDC_"). Te identyfikatory są przypisywane do okien podrzędnych, takich jak widoki i rozdzielacze, według klas struktury. Identyfikatory implementacji MFC są poprzedzone prefiksem "AFX_".
 
-## <a name="the-id-numbering-convention"></a>Konwencja numerowanie identyfikator
+## <a name="the-id-numbering-convention"></a>Konwencja ID-Numbering
 
-W poniższej tabeli wymieniono prawidłowe zakresy dla identyfikatorów określonych typów. Niektóre ograniczenia są limity implementacji technicznej, a inne są konwencje, które są przeznaczone do uniemożliwić kolizji z wstępnie zdefiniowane identyfikatory Windows lub MFC domyślnej implementacji swoim identyfikatorem.
+Poniższa tabela zawiera listę prawidłowych zakresów dla identyfikatorów określonych typów. Niektóre limity są limitami implementacji technicznej, a inne są konwencjami, które są przeznaczone do zapobiegania kolizji identyfikatorów z wstępnie zdefiniowanymi identyfikatorami systemu Windows lub implementacją domyślną MFC.
 
-Zdecydowanie zaleca się, że zdefiniowane wszystkie identyfikatory wewnątrz zalecane zakresy. Dolna granica tych zakresów to 1, ponieważ 0 nie jest używany. Zaleca się używać typową Konwencją i używać 100 lub 101 jako identyfikator pierwszego.
+Zdecydowanie zalecamy zdefiniowanie wszystkich identyfikatorów wewnątrz zalecanych zakresów. Dolny limit tych zakresów wynosi 1, ponieważ 0 nie jest używany. Zalecamy użycie wspólnej Konwencji i użycie 100 lub 101 jako pierwszego identyfikatora.
 
 |Prefiks|Typ zasobu|Prawidłowy zakres|
 |------------|-------------------|-----------------|
-|IDR_|wiele|od 1 do 0x6FFF|
+|IDR_|wielokrotność|od 1 do 0x6FFF|
 |IDD_|szablony okna dialogowego|od 1 do 0x6FFF|
-|IDC_,IDI_,IDB_|kursory, ikony, mapy bitowe|od 1 do 0x6FFF|
-|IDS_, IDP_|Parametry ogólne|od 1 do 0x7FFF|
+|IDC_, IDI_, IDB_|kursory, ikony, mapy bitowe|od 1 do 0x6FFF|
+|IDS_, IDP_|ciągi ogólne|od 1 do 0x7FFF|
 |ID_|polecenia|0x8000 do 0xDFFF|
-|IDC_|kontrolki|8 do 0xDFFF|
+|IDC_|funkcje sterowania|od 8 do 0xDFFF|
 
-Przyczyny te limity zakres:
+Przyczyny dotyczące tych limitów zakresu:
 
-- Zgodnie z Konwencją nie jest używana wartość Identyfikatora równą 0.
+- Zgodnie z Konwencją wartość identyfikatora 0 nie jest używana.
 
-- Ograniczenia wdrożenia Windows ograniczenia zasobów true identyfikatorów jest mniejsza niż lub równa 0x7FFF.
+- Ograniczenia implementacji systemu Windows ograniczają rzeczywiste identyfikatory zasobów do 0x7FFF.
 
-- Biblioteki MFC wewnętrzną strukturę rezerwuje tych zakresów:
+- Wewnętrzna platforma MFC rezerwuje następujące zakresy:
 
-  - 0x7000 za pośrednictwem 0x7FFF (patrz afxres.h)
+  - 0x7000 do 0x7FFF (zobacz plik AFXRES. h)
 
-  - 0xE000 za pośrednictwem 0xEFFF (patrz afxres.h)
+  - 0xE000 do 0xEFFF (zobacz plik AFXRES. h)
 
-  - 16000 za pośrednictwem 18000 (zobacz afxribbonres.h)
+  - 16000 do 18000 (patrz afxribbonres. h)
 
-  Te zakresy mogą ulec zmianie w przyszłości implementacji MFC.
+  Te zakresy mogą ulec zmianie w przyszłych implementacjach MFC.
 
-- Kilka poleceń systemu Windows użyj zakresu 0xF000 0xffff.
+- Kilka poleceń systemu Windows używa zakresu od 0xF000 do 0xFFFF.
 
-- Identyfikatory kontroli od 1 do 7 są zarezerwowane dla standardowych kontrolek, takich jak IDOK i IDCANCEL.
+- Identyfikatory sterujące od 1 do 7 są zarezerwowane dla kontrolek standardowych, takich jak IDOK i IDCANCEL.
 
-- Zakres 0x8000 0xFFFF dla ciągów jest zarezerwowana do menu monity dotyczące poleceń.
+- Zakres 0x8000 za pomocą wartości 0xFFFF dla ciągów jest zastrzeżony dla poleceń menu polecenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

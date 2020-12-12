@@ -1,5 +1,6 @@
 ---
-title: 'TN068: Wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC'
+description: 'Dowiedz się więcej na temat: TN068: wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC'
+title: 'TN068: wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC Driver'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.data.odbc
@@ -8,41 +9,41 @@ helpviewer_keywords:
 - transactions [MFC], calling BeginTrans
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
-ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebc98a0fd2bea78c0159daa9a53a11a292482257
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214549"
 ---
-# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: Wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC
+# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: wykonywanie transakcji za pomocą sterownika Microsoft Access 7 ODBC Driver
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-Ta uwaga opisuje sposób wykonywania transakcji, podczas korzystania z klas baz danych MFC ODBC i sterowników ODBC 7.0 dostępu firmy Microsoft objęte pakiet sterownika Desktop ODBC firmy Microsoft w wersji 3.0.
+W tej części opisano sposób wykonywania transakcji przy użyciu klas baz danych MFC ODBC oraz sterownika Microsoft Access 7,0 ODBC dołączonego do pakietu sterowników Microsoft ODBC Desktop w wersji 3,0.
 
 ## <a name="overview"></a>Omówienie
 
-Jeśli transakcje są wykonywane w aplikacji bazy danych, należy zachować ostrożność wywołać `CDatabase::BeginTrans` i `CRecordset::Open` w odpowiedniej kolejności, w aplikacji. Sterownik programu Microsoft Access 7.0 używa aparatu bazy danych Microsoft Jet i Jet wymaga, że aplikacja rozpocznie się transakcji w dowolnej bazy danych, który ma otwartego kursora. Dla klas baz danych MFC ODBC, otwartego kursora jest równa otwartą `CRecordset` obiektu.
+Jeśli aplikacja bazy danych wykonuje transakcje, należy zachować ostrożność w wywołaniu `CDatabase::BeginTrans` i `CRecordset::Open` w odpowiedniej kolejności w aplikacji. Sterownik Microsoft Access 7,0 korzysta z aparatu bazy danych Microsoft Jet, a aparat Jet wymaga, aby aplikacja nie rozpoczęła transakcji w żadnej bazie danych, która ma otwarty kursor. W przypadku klas baz danych MFC ODBC, otwarty kursor jest równe otwartemu `CRecordset` obiektowi.
 
-Jeśli otworzysz zestaw rekordów przed wywołaniem `BeginTrans`, mogą nie być wyświetlane komunikaty o błędach. Jednak żadnych rekordów aktualizuje swoje sprawia, że aplikacja powoduje trwałe po wywołaniu `CRecordset::Update`, i aktualizacje zostaną nie można wycofać przez wywołanie metody `Rollback`. Aby uniknąć tego problemu, należy wywołać `BeginTrans` pierwszy, a następnie otwórz zestaw rekordów.
+Jeśli zestaw rekordów zostanie otwarty przed wywołaniem `BeginTrans` , mogą nie być wyświetlane żadne komunikaty o błędach. Jednak każdy zestaw rekordów aktualizuje aplikację, staje się trwała po wywołaniu `CRecordset::Update` , a aktualizacje nie zostaną wycofane przez wywołanie `Rollback` . Aby uniknąć tego problemu, należy najpierw wywołać metodę, `BeginTrans` a następnie otworzyć zestaw rekordów.
 
-MFC sprawdza, czy funkcje sterownika zachowanie zatwierdzenia i wycofanie kursora. Klasa `CDatabase` zapewnia dwie funkcje Członkowskie, `GetCursorCommitBehavior` i `GetCursorRollbackBehavior`, aby ustalić skutki każdej transakcji dla usługi open `CRecordset` obiektu. Dla sterownika Microsoft Access 7.0 ODBC, te funkcje Członkowskie zwracają `SQL_CB_CLOSE` ponieważ sterownik dostępu nie obsługuje zachowania kursora. W związku z tym, należy wywołać `CRecordset::Requery` następujące `CommitTrans` lub `Rollback` operacji.
+MFC sprawdza funkcjonalność sterownika dla zachowania zatwierdzania i wycofywania kursora. Klasa `CDatabase` udostępnia dwie funkcje członkowskie `GetCursorCommitBehavior` i `GetCursorRollbackBehavior` , aby określić efekt transakcji w otwartym `CRecordset` obiekcie. W przypadku sterownika ODBC programu Microsoft Access 7,0 te funkcje członkowskie zwracają, `SQL_CB_CLOSE` ponieważ sterownik dostępu nie obsługuje zachowywania kursora. W związku z tym, należy wywołać `CRecordset::Requery` `CommitTrans` działanie po `Rollback` operacji lub.
 
-Gdy trzeba wykonać wiele transakcji, jedna po drugiej, nie można wywołać `Requery` po pierwszej transakcji i ponownie uruchomić kolejny. Należy zamknąć rekordów przed następnym wywołaniu `BeginTrans` w celu spełnienia wymagań firmy Jet. Ta uwaga techniczna opisano dwie metody obsługi tej sytuacji:
+Gdy konieczne jest wykonanie wielu transakcji jeden po drugim, nie można wywołać `Requery` po pierwszej transakcji, a następnie rozpocząć kolejne. Musisz zamknąć zestaw rekordów przed następnym wywołaniem w celu `BeginTrans` spełnienia wymagań aparatu Jet. Ta Uwaga techniczna opisuje dwie metody obsługi tej sytuacji:
 
-- Zamykanie zestawu rekordów po każdym poleceniu `CommitTrans` lub `Rollback` operacji.
+- Zamykanie zestawu rekordów po każdej `CommitTrans` `Rollback` operacji lub.
 
-- Za pomocą funkcji interfejsu API ODBC `SQLFreeStmt`.
+- Za pomocą funkcji ODBC API `SQLFreeStmt` .
 
-## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Zamykanie zestawu rekordów po każdej z CommitTrans — lub operacji wycofywania
+## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Zamykanie zestawu rekordów po każdej operacji CommitTrans lub wycofywania
 
-Przed rozpoczęciem transakcji, upewnij się, że obiekt zestawu rekordów jest zamknięty. Po wywołaniu `BeginTrans`, wywoływanie w zestawie rekordów `Open` funkcja elementu członkowskiego. Zamknij zestaw rekordów, natychmiast po wywołaniu `CommitTrans` lub `Rollback`. Należy pamiętać, że wielokrotnym otwieraniem i zamykaniem zestawu rekordów może spowolnić działanie aplikacji.
+Przed rozpoczęciem transakcji upewnij się, że obiekt zestawu rekordów jest zamknięty. Po wywołaniu `BeginTrans` należy wywołać `Open` funkcję członkowską zestawu rekordów. Zamknij zestaw rekordów bezpośrednio po wywołaniu `CommitTrans` lub `Rollback` . Należy zauważyć, że wielokrotne otwieranie i zamykanie zestawu rekordów może spowolnić działanie aplikacji.
 
-## <a name="using-sqlfreestmt"></a>Za pomocą SQLFreeStmt
+## <a name="using-sqlfreestmt"></a>Korzystanie z SQLFreeStmt
 
-Można również użyć funkcji interfejsu API ODBC `SQLFreeStmt` jawnego zamknięcia kursor po transakcji. Aby rozpocząć innej transakcji, należy wywołać `BeginTrans` następuje `CRecordset::Requery`. Podczas wywoływania `SQLFreeStmt`, należy określić w zestawie rekordów HSTMT jako pierwszego parametru i *SQL_CLOSE* jako drugi parametr. Ta metoda jest szybsza niż zamknąć i otworzyć zestawu rekordów na początku każdej transakcji. Poniższy kod demonstruje sposób implementacji tej techniki:
+Możesz również użyć funkcji ODBC API, `SQLFreeStmt` Aby jawnie zamknąć kursor po zakończeniu transakcji. Aby rozpocząć kolejną transakcję, wywołaj polecenie `BeginTrans` `CRecordset::Requery` . Podczas wywoływania należy `SQLFreeStmt` określić HSTMT zestawu rekordów jako pierwszy parametr, a *SQL_CLOSE* jako drugi parametr. Ta metoda jest szybsza niż zamykanie i otwieranie zestawu rekordów na początku każdej transakcji. Poniższy kod ilustruje sposób implementacji tej techniki:
 
 ```cpp
 CMyDatabase db;
@@ -76,15 +77,15 @@ rs.Close();
 db.Close();
 ```
 
-Innym sposobem realizowania tej techniki jest napisanie nową funkcję `RequeryWithBeginTrans`, które można wywołać, aby uruchomić dalej transakcji po zatwierdzeniu lub wycofania pierwszy z nich. Aby zapisać takich funkcji, wykonaj następujące czynności:
+Innym sposobem implementacji tej techniki jest zapisanie nowej funkcji, `RequeryWithBeginTrans` którą można wywołać, aby rozpocząć następną transakcję po zatwierdzeniu lub wycofaniu pierwszej z nich. Aby napisać taką funkcję, wykonaj następujące czynności:
 
-1. Skopiuj kod `CRecordset::Requery( )` na nową funkcję.
+1. Skopiuj kod `CRecordset::Requery( )` do nowej funkcji.
 
-2. Dodaj następujący wiersz natychmiast po wywołaniu `SQLFreeStmt`:
+2. Dodaj następujący wiersz bezpośrednio po wywołaniu `SQLFreeStmt` :
 
    `m_pDatabase->BeginTrans( );`
 
-Teraz można wywołać tę funkcję, każda para transakcji:
+Teraz można wywołać tę funkcję między każdą parą transakcji:
 
 ```cpp
 // start transaction 1 and
@@ -109,9 +110,9 @@ db.CommitTrans();   // or Rollback()
 ```
 
 > [!NOTE]
-> Nie należy używać tej techniki, jeśli zajdzie potrzeba zmiany zmiennych składowych zestawu rekordów *m_strFilter* lub *m_strSort* między transakcji. W takim przypadku należy zamykać zestawu rekordów po każdym poleceniu `CommitTrans` lub `Rollback` operacji.
+> Nie należy używać tej techniki, jeśli trzeba zmienić zmienne elementu członkowskiego zestawu rekordów *m_strFilter* lub *m_strSort* między transakcjami. W takim przypadku należy zamknąć zestaw rekordów po każdej `CommitTrans` `Rollback` operacji lub.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

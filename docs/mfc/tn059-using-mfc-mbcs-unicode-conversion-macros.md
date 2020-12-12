@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: TN059: korzystanie z makr konwersji MFC MBCS/Unicode'
 title: 'TN059: korzystanie z makr konwersji MFC MBCS-Unicode'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: d689e87b8f2804fe99804c6ca37a48bac01df263
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1b767a8d90f2c788a15c9e880056206e7d1326a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214770"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: używanie makr konwersji MFC MBCS/Unicode
 
 > [!NOTE]
 > Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-W tej uwadze opisano, jak używać makr dla konwersji MBCS/Unicode, które są zdefiniowane w AFXPRIV. C. Te makra są najbardziej przydatne, jeśli aplikacja zajmuje się bezpośrednio z interfejsem API OLE lub z jakiegoś powodu, często wymaga konwersji między Unicode i MBCS.
+W tej notatce opisano, jak używać makr dla konwersji MBCS/Unicode, które są zdefiniowane w AFXPRIV. H. Te makra są najbardziej przydatne, jeśli aplikacja zajmuje się bezpośrednio z interfejsem API OLE lub z jakiegoś powodu, często wymaga konwersji między Unicode i MBCS.
 
 ## <a name="overview"></a>Omówienie
 
@@ -80,7 +81,7 @@ Implementacja każdego makra używa funkcji _alloca () w celu przydzielenia pami
 
 Aby makra miały miejsce do przechowywania tymczasowej długości, należy zadeklarować zmienną lokalną o nazwie _convert, która robi to w każdej funkcji, która używa makr konwersji. W tym celu należy wycofać makro USES_CONVERSION jak pokazano powyżej w przykładzie.
 
-Istnieją zarówno ogólne makra konwersji, jak i makra specyficzne dla OLE. Te dwa różne zestawy makr zostały omówione poniżej. Wszystkie makra znajdują się w AFXPRIV. C.
+Istnieją zarówno ogólne makra konwersji, jak i makra specyficzne dla OLE. Te dwa różne zestawy makr zostały omówione poniżej. Wszystkie makra znajdują się w AFXPRIV. H.
 
 ## <a name="generic-conversion-macros"></a>Makra konwersji ogólnej
 
@@ -192,7 +193,7 @@ return lpszT; // CString makes copy
 
 Makra są łatwe w użyciu i można je łatwo wstawiać do kodu, ale w celu poinformowania o powyższych zastrzeżeniach należy zachować ostrożność przy ich użyciu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

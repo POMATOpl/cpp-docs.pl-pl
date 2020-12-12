@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: serwery: implementowanie okien ramowych In-Place'
 title: 'Serwery: implementowanie okien ramowych w miejscu'
 ms.date: 09/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: a082afe141a21e4175886f13a26043694ac0d426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 859a31bf107162aea6adb4d40ccf7b7b87f485b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217357"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serwery: implementowanie okien ramowych w miejscu
 
@@ -49,7 +50,7 @@ Identyfikator mapy bitowej paska narzędzi powinien być taki sam jak w przypadk
 
 Aby uzyskać więcej informacji, zobacz [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md)i [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) w *dokumentacji biblioteki klas*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Serwery](../mfc/servers.md)<br/>
 [Serwery: implementowanie serwera](../mfc/servers-implementing-a-server.md)<br/>

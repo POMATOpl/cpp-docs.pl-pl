@@ -1,26 +1,27 @@
 ---
+description: 'Dowiedz się więcej o programie: Ustawianie obrazów dla pojedynczego elementu'
 title: Ustawianie obrazów dla pojedynczego elementu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-ms.openlocfilehash: 177c06acfe665a43921b19407d9d357d4545e748
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 12b27b4cdff20690b86fe194dfcc83f958744a86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217136"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Ustawianie obrazów dla pojedynczego elementu
 
-Różne typy obrazów używane przez rozszerzony element pola kombi są określane przez wartości w *IImage*, *iSelectedImage*i *IOverlay* elementów członkowskich struktury [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) . Każda wartość jest indeksem obrazu na liście skojarzonych obrazów kontrolki. Domyślnie te elementy członkowskie są ustawione na 0, co sprawia, że kontrolka nie wyświetla obrazu dla elementu. Jeśli chcesz użyć obrazów dla określonego elementu, możesz odpowiednio zmodyfikować strukturę, podczas wstawiania elementu pola kombi lub modyfikując istniejący element pola kombi.
+Różne typy obrazów używane przez rozszerzony element pola kombi są określane przez wartości w *IImage*, *iSelectedImage* i *IOverlay* elementów członkowskich struktury [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) . Każda wartość jest indeksem obrazu na liście skojarzonych obrazów kontrolki. Domyślnie te elementy członkowskie są ustawione na 0, co sprawia, że kontrolka nie wyświetla obrazu dla elementu. Jeśli chcesz użyć obrazów dla określonego elementu, możesz odpowiednio zmodyfikować strukturę, podczas wstawiania elementu pola kombi lub modyfikując istniejący element pola kombi.
 
 ## <a name="setting-the-image-for-a-new-item"></a>Ustawianie obrazu dla nowego elementu
 
-Jeśli wstawiasz nowy element, zainicjuj elementy członkowskie struktury *IImage*, *iSelectedImage*i *IOverlay* przy użyciu odpowiednich wartości, a następnie Wstaw element z wywołaniem do [Korzystanie CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).
+Jeśli wstawiasz nowy element, zainicjuj elementy członkowskie struktury *IImage*, *iSelectedImage* i *IOverlay* przy użyciu odpowiednich wartości, a następnie Wstaw element z wywołaniem do [Korzystanie CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).
 
-Poniższy przykład wstawia nowy rozszerzony element pola kombi (`cbi`) do kontrolki rozszerzonego pola kombi (`m_comboEx`), dostarczając indeksy dla wszystkich trzech stanów obrazu:
+Poniższy przykład wstawia nowy rozszerzony element pola kombi ( `cbi` ) do kontrolki rozszerzonego pola kombi ( `m_comboEx` ), dostarczając indeksy dla wszystkich trzech stanów obrazu:
 
 [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]
 
@@ -34,7 +35,7 @@ W przypadku modyfikowania istniejącego elementu należy współpracować z elem
 
 1. Przy użyciu tej struktury należy wywołać metodę [Korzystanie CComboBoxEx:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).
 
-1. Zmodyfikuj elementy członkowskie *Mask*, *IImage*i *iSelectedImage* w nowo zwracanej strukturze przy użyciu odpowiednich wartości.
+1. Zmodyfikuj elementy członkowskie *Mask*, *IImage* i *iSelectedImage* w nowo zwracanej strukturze przy użyciu odpowiednich wartości.
 
 1. Wykonaj wywołanie [Korzystanie CComboBoxEx:: SetItem](../mfc/reference/ccomboboxex-class.md#setitem), przekazując do zmodyfikowanej struktury.
 
@@ -42,7 +43,7 @@ Poniższy przykład ilustruje tę procedurę, zamieniając wybrane i niewybrane 
 
 [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

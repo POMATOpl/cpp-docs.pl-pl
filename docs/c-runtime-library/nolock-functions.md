@@ -1,24 +1,25 @@
 ---
+description: Dowiedz się więcej na temat funkcji _nolock
 title: _nolock — Funkcje
 ms.date: 11/04/2016
 helpviewer_keywords:
 - _nolock functions
 - nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
-ms.openlocfilehash: 7bd0592fb8dc43307a902714723d1b1e43207d1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4326f873ab16a368624b28dd70a8d39cb9a9ac9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213653"
 ---
-# <a name="nolock-functions"></a>_nolock — Funkcje
+# <a name="_nolock-functions"></a>_nolock — Funkcje
 
-Są to funkcje, które nie wykonuj żadnych blokowania. Są one udostępniane dla użytkowników wymagających maksymalnej wydajności. Aby uzyskać więcej informacji, zobacz [wydajność bibliotek wielowątkowych](../c-runtime-library/multithreaded-libraries-performance.md).
+Są to funkcje, które nie wykonują żadnego blokowania. Są one udostępniane użytkownikom wymagającym maksymalnej wydajności. Aby uzyskać więcej informacji, zobacz temat [wydajność bibliotek wielowątkowych](../c-runtime-library/multithreaded-libraries-performance.md).
 
-_Nolock — funkcje należy używać tylko wtedy, gdy program jest naprawdę jednowątkowe lub jeśli tak jest, własny blokowania.
+Użyj funkcji _nolock tylko wtedy, gdy program jest naprawdę jednowątkowy lub ma własne blokowanie.
 
-## <a name="no-lock-routines"></a>Nie procedury blokady
+## <a name="no-lock-routines"></a>Brak procedur blokowania
 
 [_fclose_nolock](../c-runtime-library/reference/fclose-nolock.md)
 
@@ -54,7 +55,7 @@ _Nolock — funkcje należy używać tylko wtedy, gdy program jest naprawdę jed
 
 [_ungetch_nolock, _ungetwch_nolock](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Wejście i wyjście](../c-runtime-library/input-and-output.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

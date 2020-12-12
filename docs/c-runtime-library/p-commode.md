@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __p__commode'
 title: __p__commode
 ms.date: 4/2/2020
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f3f779196b650d05bb16c0da652d47946fc2a10d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213627"
 ---
 # <a name="__p__commode"></a>__p__commode
 
-Wskazuje na zmienną `_commode` globalną, która określa domyślny *tryb zatwierdzania plików* dla operacji we/wy pliku.
+Wskazuje na `_commode` zmienną globalną, która określa domyślny *tryb zatwierdzania plików* dla operacji we/wy pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,11 +44,11 @@ int * __p__commode(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik na zmienną `_commode` globalną.
+Wskaźnik na `_commode` zmienną globalną.
 
 ## <a name="remarks"></a>Uwagi
 
-`__p__commode` Funkcja jest tylko do użytku wewnętrznego i nie powinna być wywoływana z kodu użytkownika.
+`__p__commode`Funkcja jest tylko do użytku wewnętrznego i nie powinna być wywoływana z kodu użytkownika.
 
 Tryb zatwierdzania plików określa, kiedy krytyczne dane są zapisywane na dysku. Aby uzyskać więcej informacji, zobacz [fflush](../c-runtime-library/reference/fflush.md).
 
@@ -57,4 +58,4 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|__p\__commode|wewnętrzny. h|
+|__p \_ _commode|wewnętrzny. h|

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: TN025: Tworzenie dokumentów, widoków i ramek'
 title: 'TN025: tworzenie dokumentów, widoków i ramek'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: 2fdabdcb1a87d4a5661348588d49303290c966ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 034c3670df57de03cf7db8f713937f3d433fbb56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215745"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: tworzenie dokumentów, widoków i ramek
 
 > [!NOTE]
-> Następująca uwaga techniczna nie została zaktualizowana, ponieważ została po raz pierwszy uwzględniona w dokumentacji online. W rezultacie niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zaleca się wyszukicie tematu interesującego w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-W tej notatce opisano problemy z tworzeniem i własnością dla aplikacji WinApps, DocTemplates, Documents, Frames i Views.This note describes the creation and ownership issues for WinApps, DocTemplates, Documents, Frames and Views.
+Ta Uwaga opisuje problemy z tworzeniem i własnością dla WinApps, DocTemplates, dokumentów, ramek i widoków.
 
-## <a name="winapp"></a>WinApp (właśc.
+## <a name="winapp"></a>WinApp
 
-W systemie `CWinApp` znajduje się jeden obiekt.
+`CWinApp`W systemie istnieje jeden obiekt.
 
-Jest statycznie skonstruowany i zainicjowany przez wewnętrzne `WinMain`wdrożenie ram . Musisz wyprowadzić `CWinApp` z zrobić coś przydatne (wyjątek: DLL rozszerzenia `CWinApp` MFC nie powinny `DllMain` mieć wystąpienie — inicjowanie odbywa się zamiast).
+Jest on statycznie skonstruowany i zainicjowany przez wewnętrzną implementację struktury `WinMain` . Należy `CWinApp` wykonać od do do nic przydatne (wyjątek: biblioteki DLL rozszerzenia MFC nie powinny mieć `CWinApp` wystąpienia — Inicjalizacja jest wykonywana w `DllMain` zamian).
 
-Jeden `CWinApp` obiekt jest właścicielem listy szablonów `CPtrList`dokumentów (a ). Istnieje jeden lub więcej szablonów dokumentów dla aplikacji. DocTemplates są zwykle ładowane z pliku zasobu `CWinApp::InitInstance`(czyli tablicy ciągów) w pliku .
+Ten `CWinApp` obiekt jest właścicielem listy szablonów dokumentów (a `CPtrList` ). Istnieje co najmniej jeden szablon dokumentu dla aplikacji. DocTemplates są zwykle ładowane z pliku zasobów (czyli tablicy ciągów) w `CWinApp::InitInstance` .
 
 ```
 pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
@@ -35,39 +36,39 @@ pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 AddDocTemplate(pTemplate);
 ```
 
-Jeden `CWinApp` obiekt jest właścicielem wszystkich okien ramki w aplikacji. Okno ramki głównej dla aplikacji `CWinApp::m_pMainWnd`powinno być przechowywane w ; zwykle ustawiasz *m_pMainWnd* w `InitInstance` implementacji, jeśli nie pozwoliłeś AppWizard zrobić to za Ciebie. W przypadku interfejsu pojedynczego dokumentu (SDI) jest to okno, `CFrameWnd` które służy jako główne okno ramki aplikacji, a także jedyne okno ramki dokumentu. Dla wielu interfejsów dokumentu (MDI) jest to `CMDIFrameWnd`RAMKA MDI (klasa), który służy `CFrameWnd`jako okno ramki aplikacji głównej, która zawiera wszystkie elementy podrzędne s. Każde okno podrzędne `CMDIChildWnd` jest klasy `CFrameWnd`(pochodzi od ) i służy jako jeden z potencjalnie wielu okien ramki dokumentu.
+Jeden `CWinApp` obiekt jest właścicielem wszystkich okien ramowych w aplikacji. Główne okno ramek dla aplikacji powinno być przechowywane w programie `CWinApp::m_pMainWnd` ; zwykle ustawiasz *m_pMainWnd* w implementacji, `InitInstance` Jeśli nie zezwolisz AppWizard na to za Ciebie. W przypadku interfejsu pojedynczego dokumentu (SDI) jest to ten `CFrameWnd` , który służy jako główne okno ramek aplikacji, a także okno ramki dokumentu. W przypadku interfejsu wielu dokumentów (MDI) jest to MDI-Frame (Klasa `CMDIFrameWnd` ), która służy jako okno głównej ramki aplikacji, które zawiera wszystkie elementy podrzędne `CFrameWnd` . Każde okno podrzędne jest klasy `CMDIChildWnd` (pochodzące od `CFrameWnd` ) i służy jako jeden z potencjalnie wielu okien ramowych dokumentu.
 
 ## <a name="doctemplates"></a>DocTemplates
 
-Jest `CDocTemplate` twórcą i menedżerem dokumentów. Jest właścicielem dokumentów, które tworzy. Jeśli aplikacja korzysta z podejścia opartego na zasobach opisanego poniżej, nie będzie musiała pochodzić z `CDocTemplate`programu .
+`CDocTemplate`Jest twórcą i menedżerem dokumentów. Jest właścicielem tworzonych przez niego dokumentów. Jeśli aplikacja używa metody opartej na zasobach opisanej poniżej, nie musi ona pochodzić od `CDocTemplate` .
 
-Dla aplikacji SDI klasa `CSingleDocTemplate` śledzi jeden otwarty dokument. Dla aplikacji MDI klasa `CMultiDocTemplate` przechowuje listę `CPtrList`(a) wszystkich aktualnie otwartych dokumentów utworzonych na podstawie tego szablonu. `CDocTemplate::AddDocument`i `CDocTemplate::RemoveDocument` udostępnij funkcje wirtualnego elementu członkowskiego do dodawania lub usuwania dokumentu z szablonu. `CDocTemplate`jest `CDocument` przyjacielem, dzięki czemu możemy `CDocument::m_pDocTemplate` ustawić chroniony wskaźnik wstecz, aby wskazać z powrotem do szablonu dokumentu, który utworzył dokument.
+W przypadku aplikacji SDI Klasa `CSingleDocTemplate` śledzi jeden otwarty dokument. W przypadku aplikacji MDI Klasa `CMultiDocTemplate` przechowuje listę `CPtrList` wszystkich aktualnie otwartych dokumentów utworzonych na podstawie tego szablonu. `CDocTemplate::AddDocument` i `CDocTemplate::RemoveDocument` udostępniaj wirtualne funkcje członkowskie do dodawania lub usuwania dokumentu z szablonu. `CDocTemplate` jest znajomym `CDocument` , aby można było ustawić chroniony `CDocument::m_pDocTemplate` wskaźnik wstecz, aby wskazywał szablon dokumentu, który utworzył dokument.
 
-`CWinApp`obsługuje domyślną `OnFileOpen` implementację, która z kolei będzie wysyłać zapytania do wszystkich szablonów doc. Implementacja obejmuje poszukiwanie już otwartych dokumentów i podejmowanie decyzji, w jakim formacie otworzyć nowe dokumenty.
+`CWinApp` obsługuje `OnFileOpen` implementację domyślną, co spowoduje wykonanie zapytania względem wszystkich szablonów doc. Implementacja obejmuje już otwarte dokumenty i decydowanie o formacie, w którym mają być otwierane nowe dokumenty.
 
-`CDocTemplate`zarządza powiązaniem interfejsu użytkownika dla dokumentów i ramek.
+`CDocTemplate` zarządza wiązaniem interfejsu użytkownika dla dokumentów i ramek.
 
-`CDocTemplate`przechowuje liczbę nienazwanych dokumentów.
+`CDocTemplate` zachowuje liczbę nienazwanych dokumentów.
 
-## <a name="cdocument"></a>Cdocument
+## <a name="cdocument"></a>CDocument
 
-A `CDocument` jest własnością `CDocTemplate`.
+A `CDocument` jest własnością `CDocTemplate` .
 
-Dokumenty mają listę aktualnie otwartych widoków `CView`(pochodzących z ), `CPtrList`które wyświetlają dokument (a ).
+Dokumenty mają listę obecnie otwartych widoków (pochodzących z `CView` ), które wyświetlają dokument (a `CPtrList` ).
 
-Dokumenty nie tworzą/nie niszczą widoków, ale są dołączone do siebie po ich utworzeniu. Gdy dokument zostanie zamknięty (czyli za pośrednictwem pliku/zamknięcia), wszystkie dołączone widoki zostaną zamknięte. Po zamknięciu ostatniego widoku dokumentu (czyli Okno/Zamknij) dokument zostanie zamknięty.
+Dokumenty nie tworzą/niszczyją widoków, ale są po nich połączone. Gdy dokument zostanie zamknięty (oznacza to, że za pomocą pliku/zamknięcia) wszystkie dołączone widoki zostaną zamknięte. Gdy ostatni widok w dokumencie zostanie zamknięty (oznacza to, że okno/zamknięcie), dokument zostanie zamknięty.
 
-Interfejs `CDocument::AddView` `RemoveView` , służy do obsługi listy widoków. `CDocument`jest przyjacielem, `CView` dzięki czemu `CView::m_pDocument` możemy ustawić wskaźnik z tyłu.
+`CDocument::AddView` `RemoveView` Interfejs jest używany do obsługi listy widoku. `CDocument` jest znajomym `CView` , aby można było ustawić `CView::m_pDocument` wskaźnik tyłu.
 
 ## <a name="cframewnd"></a>CFrameWnd
 
-A `CFrameWnd` (znany również jako ramka) odgrywa taką samą rolę jak w `CFrameWnd` MFC 1.0, ale teraz klasa jest przeznaczony do użycia w wielu przypadkach bez wyprowadzania nowej klasy. Klasy `CMDIFrameWnd` pochodne `CMDIChildWnd` i są również rozszerzone tak wiele standardowych poleceń są już zaimplementowane.
+A `CFrameWnd` (znany również jako ramka) odgrywa tę samą rolę jak w MFC 1,0, ale teraz `CFrameWnd` Klasa jest przeznaczona do użycia w wielu przypadkach bez wyznaczania nowej klasy. Klasy pochodne `CMDIFrameWnd` i `CMDIChildWnd` są również udoskonalone tak, aby wiele poleceń standardowych zostało już zaimplementowanych.
 
-Jest `CFrameWnd` odpowiedzialny za tworzenie okien w obszarze klienta ramki. Zwykle jest jedno główne okno wypełniające obszar klienta ramy.
+`CFrameWnd`Jest odpowiedzialny za tworzenie okien w obszarze klienta ramki. Zwykle jest jedno okno główne wypełniające obszar klienta ramki.
 
-W przypadku okna RAMKA MDI obszar klienta jest wypełniony kontrolką MDICLIENT, która z kolei jest elementem nadrzędnym wszystkich okien ramek MDI-Child. W przypadku okna SDI-Frame lub okna ramki MDI-Child obszar `CView`klienta jest zwykle wypełniony obiektem okna pochodnym. W przypadku `CSplitterWnd`obszaru klienta widoku jest wypełniona `CSplitterWnd` obiektem okna, `CView`a obiekty okna pochodnego (po jednym na podzielone `CSplitterWnd`okienko) są tworzone jako okna podrzędne .
+W przypadku okna MDI-Frame obszar klienta jest wypełniany kontrolką MDICLIENT, która jest z kolei elementem nadrzędnym wszystkich okien ramowych MDI-Child. W przypadku okna SDI-Frame lub okna ramki MDI-Child, obszar klienta jest zwykle wypełniany `CView` obiektem okna pochodnego. W przypadku `CSplitterWnd` , obszar klienta widoku jest wypełniany przy użyciu `CSplitterWnd` obiektu okna, a `CView` obiekty okien pochodnych (po jednym dla okienka podzielonego) są tworzone jako podrzędne okna `CSplitterWnd` .
 
 ## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
