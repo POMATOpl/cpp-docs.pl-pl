@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Local (C++)'
 title: Local (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: dea62653478e451af00fa47b72984f3b580aadc0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7fa1366b78576224f8fcc0d91392fe1fc6cb8af9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327508"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -36,7 +37,7 @@ Zobacz [call_as](call-as.md) , aby zapoznać się z przykładem użycia **lokaln
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejs**, metoda interfejsu|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`dispinterface`|
 

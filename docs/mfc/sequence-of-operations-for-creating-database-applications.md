@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Sekwencja operacji tworzenia aplikacji bazy danych'
 title: Sekwencja operacji przy tworzeniu aplikacji bazy danych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,35 +8,35 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: c393269d6af108ee82786e9d59f81aad11428157
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 86f06ae5200fc8646ccb80bfec4e2814b94f9225
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217591"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Sekwencja operacji przy tworzeniu aplikacji bazy danych
 
-W poniższej tabeli przedstawiono rolę i rolę struktury w pisaniu aplikacji bazy danych.
+W poniższej tabeli przedstawiono rolę i rolę platformy w pisaniu aplikacji baz danych.
 
 > [!NOTE]
-> Środowisko Visual C++ i kreatory nie obsługują DAO (chociaż klasy DAO są uwzględniane i nadal można ich używać). Firma Microsoft zaleca używanie odbc dla nowych projektów MFC. Dao należy używać tylko w utrzymaniu istniejących aplikacji.
+> Visual C++ środowisko i kreatorzy nie obsługują obiektów DAO (chociaż klasy DAO są dołączone i nadal można z nich korzystać). Firma Microsoft zaleca używanie ODBC w przypadku nowych projektów MFC. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
 
 ### <a name="creating-database-applications"></a>Tworzenie aplikacji bazy danych
 
-|Zadanie|Nie można|Ramy te nie|
+|Zadanie|Masz|Struktura wykonuje|
 |----------|------------|------------------------|
-|Zdecyduj, czy mają być używane klasy Odbc lub DAO.|Użyj ODBC dla nowych projektów MFC. Dao służy tylko do obsługi istniejących aplikacji. Aby uzyskać ogólne informacje, zobacz artykuł [Programowanie dostępu do danych](../data/data-access-programming-mfc-atl.md).|Struktura dostarcza klas, które obsługują dostęp do bazy danych.|
-|Utwórz aplikację szkielet z opcjami bazy danych.|Uruchom Kreatora aplikacji MFC. Wybierz opcje na stronie Pomoc techniczna bazy danych. Jeśli wybierzesz opcję, która tworzy widok rekordu, należy również określić:<br /><br />- Nazwa lub nazwy źródła danych i tabeli<br />- Nazwa kwerendy lub nazwy.|Kreator aplikacji MFC tworzy pliki i określa niezbędne pliki. W zależności od określonych opcji pliki mogą zawierać klasę pliku recordset.|
-|Zaprojektuj formularz bazy danych lub formularze.|Użyj edytora okien dialogowych języka Visual C++, aby umieścić formanty w zasobach szablonu okna dialogowego dla klas widoku rekordów.|Kreator aplikacji MFC tworzy pusty zasób szablonu okna dialogowego do wypełnienia.|
-|W razie potrzeby utwórz dodatkowe klasy widoku rekordów i grupy rekordów.|Użyj widoku klasy, aby utworzyć klasy i edytor dialogów do projektowania widoków.|Widok klasy tworzy dodatkowe pliki dla nowych klas.|
-|Utwórz obiekty pliku recordset zgodnie z potrzebami w kodzie. Każdy z nich służy do manipulowania rekordami...|Zestawy rekordów są oparte na klasach pochodzących z [CRecordset](../mfc/reference/crecordset-class.md) z kreatorami.|ODBC używa wymiany pól rekordów (RFX) do wymiany danych między bazą danych a członkami danych pól zbioru rekordów. Jeśli używasz widoku rekordów, wymiana danych dialogowych (DDX) wymienia dane między zestawem rekordów a formantami w widoku rekordów.|
-|... lub utworzyć jawne [CDatabase](../mfc/reference/cdatabase-class.md) w kodzie dla każdej bazy danych, którą chcesz otworzyć.|Oprzeć obiekty pliku recordset na obiektach bazy danych.|Obiekt bazy danych udostępnia interfejs do źródła danych.|
-|Dynamicznie powiąż kolumny danych z zestawem rekordów.|W ODBC dodaj kod do klasy pochodnej pliku recordset, aby zarządzać powiązaniem. Zobacz artykuł [Zestaw rekordów: Dynamicznie wiążące kolumny danych (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Zdecyduj, czy używać klas MFC ODBC czy DAO.|Użyj ODBC dla nowych projektów MFC. Używaj tylko DAO, aby obsługiwać istniejące aplikacje. Ogólne informacje znajdują się w artykule [Programowanie dostępu do danych](../data/data-access-programming-mfc-atl.md).|Struktura dostarcza klasy, które obsługują dostęp do bazy danych.|
+|Utwórz aplikację szkieletową z opcjami bazy danych.|Uruchom Kreatora aplikacji MFC. Na stronie obsługa bazy danych wybierz opcje. W przypadku wybrania opcji, która tworzy widok rekordu, należy również określić:<br /><br />-Źródło danych i nazwa tabeli lub nazwy<br />-Nazwa zapytania lub nazwy.|Kreator aplikacji MFC tworzy pliki i określa niezbędne dołączenia. W zależności od określonych opcji pliki mogą zawierać klasę zestawu rekordów.|
+|Zaprojektuj formularz lub formularze bazy danych.|Użyj edytora okien dialogowych Visual C++ do umieszczania kontrolek w zasobach szablonu okna dialogowego dla klas widoku rekordu.|Kreator aplikacji MFC tworzy pusty zasób szablonu okna dialogowego do wypełnienia.|
+|Utwórz dodatkowy widok rekordu i klasy zestawu rekordów w razie konieczności.|Użyj Widok klasy, aby utworzyć klasy i Edytor okien dialogowych, aby zaprojektować widoki.|Widok klasy tworzy dodatkowe pliki dla nowych klas.|
+|Utwórz obiekty zestawu rekordów zgodnie z potrzebami w kodzie. Użyj każdego zestawu rekordów do manipulowania rekordami...|Zestawy rekordów są oparte na klasach pochodzących od [CRecordset](../mfc/reference/crecordset-class.md) za pomocą kreatorów.|ODBC używa wymiany pól rekordów (RFX) do wymiany danych między bazą danych a elementami członkowskimi danych pola zestawu rekordów. W przypadku korzystania z widoku rekordu usługa wymiany danych (DDX) wymienia dane między zestawem rekordów i kontrolkami w widoku rekordu.|
+|... lub Utwórz jawną [CDatabase](../mfc/reference/cdatabase-class.md) w kodzie dla każdej bazy danych, którą chcesz otworzyć.|Oparcie obiektów zestawu rekordów w obiektach bazy danych.|Obiekt bazy danych udostępnia interfejs do źródła danych.|
+|Dynamiczne powiązanie kolumn danych z zestawem rekordów.|W programie ODBC Dodaj kod do klasy pochodnego zestawu rekordów, aby zarządzać powiązaniem. Zobacz [zestaw rekordów artykułów: dynamiczne wiązanie kolumn danych (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opieranie się na strukturze](../mfc/building-on-the-framework.md)<br/>
-[Sekwencja operacji przy tworzeniu aplikacji MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
-[Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
-[Sekwencja operacji przy tworzeniu kontrolek ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+[Kompilowanie na platformie](../mfc/building-on-the-framework.md)<br/>
+[Sekwencja operacji do kompilowania aplikacji MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[Sekwencja operacji na potrzeby tworzenia aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
+[Sekwencja operacji do tworzenia kontrolek ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)

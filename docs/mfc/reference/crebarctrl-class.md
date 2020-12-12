@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa korzystanie CReBarCtrl'
 title: Klasa korzystanie CReBarCtrl
 ms.date: 11/19/2018
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 872d577c2272939a6bf7ed1e3069cda426083e3f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 75caee2fb0b6bb883ecb421325d41b25c38252b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561898"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301233"
 ---
 # <a name="crebarctrl-class"></a>Klasa korzystanie CReBarCtrl
 
@@ -465,7 +466,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ### <a name="parameters"></a>Parametry
 
 *prbi*<br/>
-Wskaźnik do struktury [REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , która będzie odbierać informacje kontrolne paska pomocniczego. *cbSize* `sizeof(REBARINFO)` Przed wysłaniem tej wiadomości należy ustawić element członkowski cbSize tej struktury.
+Wskaźnik do struktury [REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , która będzie odbierać informacje kontrolne paska pomocniczego.  `sizeof(REBARINFO)` Przed wysłaniem tej wiadomości należy ustawić element członkowski cbSize tej struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -709,7 +710,7 @@ BOOL InsertBand(
 Indeks w lokalizacji, w której zostanie wstawiony pasmo (liczony od zera). Jeśli ustawisz ten parametr na wartość-1, formant doda nowy punkt w ostatniej lokalizacji.
 
 *prbbi*<br/>
-Wskaźnik do struktury [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , który definiuje pasmo do wstawienia. *cbSize* `sizeof(REBARBANDINFO)` Przed wywołaniem tej funkcji należy ustawić element członkowski cbSize tej struktury.
+Wskaźnik do struktury [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , który definiuje pasmo do wstawienia.  `sizeof(REBARBANDINFO)` Przed wywołaniem tej funkcji należy ustawić element członkowski cbSize tej struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: uzyskiwanie dostępu do danych XML'
 title: Uzyskiwanie dostępu do danych XML
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: 437f1d103420ec5727294894c02587c68cffbdda
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f229dc4567247ea95ebf00a5dbc9316be8aeac1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246087"
 ---
 # <a name="accessing-xml-data"></a>Uzyskiwanie dostępu do danych XML
 
 Istnieją dwie osobne metody pobierania danych XML ze źródła danych: jeden używa [CStreamRowset](../../data/oledb/cstreamrowset-class.md) , a drugi korzysta z [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).
 
-|Funkcjonalność|CStreamRowset|CXMLAccessor|
+|Funkcja|CStreamRowset|CXMLAccessor|
 |-------------------|-------------------|------------------|
 |Ilość przesłanych danych|Pobiera dane ze wszystkich kolumn i wierszy jednocześnie.|Pobiera dane ze wszystkich kolumn, ale tylko jeden wiersz jednocześnie. Należy nawigować po wierszach przy użyciu metod, takich jak `MoveNext` .|
 |Formatowanie ciągu|SQL Server formatuje ciąg XML i wysyła go do konsumenta.|Pobiera dane zestawu wierszy w formacie natywnym (żądania wysyłane przez dostawcę jako ciągi Unicode), a następnie kompiluje ciąg przechowujący dane w formacie XML.|

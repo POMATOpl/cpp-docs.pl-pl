@@ -1,32 +1,33 @@
 ---
-title: Popraw zależności od C++ elementów wewnętrznych biblioteki
+description: 'Dowiedz się więcej na temat: naprawianie zależności od wewnętrznych bibliotek C++'
+title: Popraw zależności od wewnętrznych bibliotek C++
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: b101234c582d8730b1a8fb62e8182df68554b18c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5d9cbcdd039786c3f1bb637e6a59bcfce43bc883
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341545"
 ---
-# <a name="fix-your-dependencies-on-c-library-internals"></a>Popraw zależności od C++ elementów wewnętrznych biblioteki
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Popraw zależności od wewnętrznych bibliotek C++
 
-Firma Microsoft opublikowała kod źródłowy biblioteki standardowej, większość biblioteki środowiska uruchomieniowego języka C i innych bibliotek firmy Microsoft w wielu wersjach programu Visual Studio. Celem jest ułatwienie zrozumienia zachowania biblioteki i debugowanie kodu. Jedną z efektów ubocznych publikowania kodu źródłowego biblioteki jest to, że niektóre wartości wewnętrzne, struktury danych i funkcje są ujawniane, nawet jeśli nie są częścią interfejsu biblioteki. Zazwyczaj mają nazwy zaczynające się od dwóch znaków podkreślenia lub podkreślenia, po którym następuje Wielka litera, nazwy, które są C++ rezerwy standardowe na implementacje. Te wartości, struktury i funkcje to szczegóły implementacji, które mogą ulec zmianie w miarę rozwoju bibliotek w czasie, dlatego zdecydowanie zalecamy, aby przed przejęciem jakichkolwiek zależności. Jeśli tak zrobisz, będziesz mieć ryzyko związane z nieprzenośnym kodem i problemami podczas próby migracji kodu do nowych wersji bibliotek.
+Firma Microsoft opublikowała kod źródłowy biblioteki standardowej, większość biblioteki środowiska uruchomieniowego języka C i innych bibliotek firmy Microsoft w wielu wersjach programu Visual Studio. Celem jest ułatwienie zrozumienia zachowania biblioteki i debugowanie kodu. Jedną z efektów ubocznych publikowania kodu źródłowego biblioteki jest to, że niektóre wartości wewnętrzne, struktury danych i funkcje są ujawniane, nawet jeśli nie są częścią interfejsu biblioteki. Zazwyczaj mają nazwy zaczynające się od dwóch znaków podkreślenia lub podkreślenia, po którym następuje Wielka litera, nazwy, które są rezerwowe w standardzie C++ na implementacje. Te wartości, struktury i funkcje to szczegóły implementacji, które mogą ulec zmianie w miarę rozwoju bibliotek w czasie, dlatego zdecydowanie zalecamy, aby przed przejęciem jakichkolwiek zależności. Jeśli tak zrobisz, będziesz mieć ryzyko związane z nieprzenośnym kodem i problemami podczas próby migracji kodu do nowych wersji bibliotek.
 
 W większości przypadków dokument o nowościach i zmianach w poszczególnych wersjach programu Visual Studio nie zawiera informacji o zmianach wewnętrznych biblioteki. Wszystkie te szczegóły implementacji nie będą miały żadnych zmian. Jednak czasami Temptation użyć kodu, który można zobaczyć w bibliotece, jest zbyt doskonały. W tym temacie omówiono zależności od elementów wewnętrznych w bibliotece CRT lub standardowej, które mogą być używane, oraz sposobu aktualizowania kodu w celu usunięcia tych zależności, aby można było je bardziej przenosić lub migrować do nowych wersji biblioteki.
 
 ## <a name="_hash_seq"></a>_Hash_seq
 
-Wewnętrzna funkcja skrótu `std::_Hash_seq(const unsigned char *, size_t)`używana do implementowania `std::hash` dla niektórych typów ciągów była widoczna w ostatnich wersjach biblioteki standardowej. Ta funkcja implementuje [skrót FNV-1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) na sekwencji znaków.
+Wewnętrzna funkcja skrótu `std::_Hash_seq(const unsigned char *, size_t)` użyta do zaimplementowania `std::hash` w niektórych typach ciągów była widoczna w ostatnich wersjach biblioteki standardowej. Ta funkcja implementuje [skrót FNV-1a]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) na sekwencji znaków.
 
 Aby usunąć tę zależność, masz kilka opcji.
 
-- Jeśli zamiarem jest umieszczenie sekwencji `const char *` w nieuporządkowanym kontenerze za pomocą tej samej maszyny kodu skrótu jako `basic_string`, można to zrobić przy użyciu przeciążenia szablonu `std::hash` zawierającego `std::string_view`, która zwraca ten kod skrótu w sposób przenośny. Kod biblioteki ciągów może lub nie może polegać na użyciu skrótu FNV-1a w przyszłości, więc jest to najlepszy sposób, aby uniknąć zależności od określonego algorytmu wyznaczania wartości skrótu.
+- Jeśli zamiarem jest umieszczenie `const char *` sekwencji w nieuporządkowanym kontenerze za pomocą tej samej maszyny z kodem mieszania jako `basic_string` , można to zrobić za pomocą `std::hash` przeciążenia szablonu, który pobiera obiekt `std::string_view` , który zwraca ten kod skrótu w sposób przenośny. Kod biblioteki ciągów może lub nie może polegać na użyciu skrótu FNV-1a w przyszłości, więc jest to najlepszy sposób, aby uniknąć zależności od określonego algorytmu wyznaczania wartości skrótu.
 
-- Jeśli zamiarem jest wygenerowanie skrótu FNV-1A dla dowolnej pamięci, wprowadziliśmy kod dostępny w witrynie GitHub w repozytorium [VCSamples]( https://github.com/Microsoft/vcsamples) w autonomicznym pliku nagłówkowym, [fnv1a. HPP](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), w ramach [licencji MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Dodaliśmy również tutaj kopię dla wygody użytkownika. Możesz skopiować ten kod do pliku nagłówkowego, dodać nagłówek do dowolnego kodu, którego dotyczy ten kod, a następnie znaleźć i zastąpić `_Hash_seq` przez `fnv1a_hash_bytes`. Nastąpi takie samo zachowanie wewnętrznej implementacji w `_Hash_seq`.
+- Jeśli zamiarem jest wygenerowanie skrótu FNV-1A dla dowolnej pamięci, wprowadziliśmy kod dostępny w witrynie GitHub w repozytorium [VCSamples]( https://github.com/Microsoft/vcsamples) w autonomicznym pliku nagłówkowym, [fnv1a. HPP](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), w ramach [licencji MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Dodaliśmy również tutaj kopię dla wygody użytkownika. Możesz skopiować ten kod do pliku nagłówkowego, dodać nagłówek do dowolnego kodu, którego dotyczy ten kod, a następnie znaleźć i zastąpić `_Hash_seq` przez `fnv1a_hash_bytes` . W programie wprowadzono identyczne zachowanie w wewnętrznej implementacji `_Hash_seq` .
 
 ```cpp
 /*
@@ -76,6 +77,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Uaktualnianie projektów ze starszych wersji wizualizacjiC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Uaktualnianie projektów z wcześniejszych wersji Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Uaktualnienie kodu do Universal CRT](upgrade-your-code-to-the-universal-crt.md)

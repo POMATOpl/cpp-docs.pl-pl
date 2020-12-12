@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat klasy filesystem_error
 title: filesystem_error — klasa
 ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: 1d142057859f1ca173f8953b34c07bbb3803ecba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8165bfbc0d59dbbdab17d910e2e2f7973988049d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232437"
 ---
 # <a name="filesystem_error-class"></a>filesystem_error — klasa
 
@@ -33,7 +34,7 @@ Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zg
 |-|-|
 |[filesystem_error](#filesystem_error)|Tworzy `filesystem_error` komunikat.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

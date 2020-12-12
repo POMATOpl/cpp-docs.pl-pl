@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: podstawowe informacje dotyczące języka HTML'
 title: Podstawy HTML
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f32926beb9152441169320bf3553b0066f78fa7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290248"
 ---
 # <a name="html-basics"></a>Podstawy HTML
 
@@ -33,9 +34,9 @@ W poniższych krokach użyto tagów HTML do utworzenia prostej strony internetow
     </HTML>
     ```
 
-1. Z menu **plik** wybierz polecenie **Zapisz**i Zapisz plik jako c:\webpages\First.htm. Pozostaw plik otwarty w edytorze.
+1. Z menu **plik** wybierz polecenie **Zapisz** i Zapisz plik jako c:\webpages\First.htm. Pozostaw plik otwarty w edytorze.
 
-1. Przejdź do przeglądarki, a następnie z menu **plik** wybierz polecenie **otwórz**lub wpisz *File://C:/webpages/first.htm* w polu edycji adresu URL w przeglądarce. Powinna zostać wyświetlona pusta strona z podpisem okna "Najważniejsze Tagi HTML".
+1. Przejdź do przeglądarki, a następnie z menu **plik** wybierz polecenie **otwórz** lub wpisz *File://C:/webpages/first.htm* w polu edycji adresu URL w przeglądarce. Powinna zostać wyświetlona pusta strona z podpisem okna "Najważniejsze Tagi HTML".
 
    Zauważ, że Tagi są sparowane i znajdują się w nawiasach kątowych. W tagach nie jest rozróżniana wielkość liter, ale wielkie litery są często używane do wyróżniania tagów.
 
@@ -111,4 +112,4 @@ Pełny opis tagów, atrybutów i rozszerzeń można znaleźć w specyfikacji HTM
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)
+[Podstawy programowania internetowego MFC](mfc-internet-programming-basics.md)

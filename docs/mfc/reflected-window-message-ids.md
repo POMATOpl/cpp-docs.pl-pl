@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: identyfikatory komunikatów okna odbitego'
 title: Identyfikatory odbitych komunikatów okien
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,24 +47,24 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 6d4ee3483bdfeb88951071bddb748671897a424b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: ff6151c6f4c79d7086eb16e7fadeac0b75ac531a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218241"
 ---
 # <a name="reflected-window-message-ids"></a>Identyfikatory odbitych komunikatów okien
 
-Szybkim sposobem utworzenia formantu ActiveX lub innego wyspecjalizowanego formantu jest podklasa okna. Aby uzyskać więcej informacji, zobacz [MFC ActiveX Controls: Podklasy kontroli systemu Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Szybkim sposobem tworzenia kontrolki ActiveX lub innej wyspecjalizowanej kontrolki jest podtworzenie podklasy okna. Aby uzyskać więcej informacji, zobacz kontrolki [ActiveX MFC: podklasy kontrolki systemu Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-Aby zapobiec kontenera formantu od odbierania komunikatów okna wysyłane przez formant systemu Windows podklasy, [COleControl](../mfc/reference/colecontrol-class.md) tworzy okno "reflektor" do przechwytywania niektórych komunikatów okna i wysłać je z powrotem do formantu. Formant, w swojej procedurze okna, można następnie przetworzyć te komunikaty odzwierciedlenie, podejmując akcje odpowiednie dla formantu ActiveX.
+Aby uniemożliwić kontenerowi formantu otrzymywanie komunikatów okna wysyłanych przez kontrolkę Windows podklasy, [COleControl](../mfc/reference/colecontrol-class.md) tworzy okno "reflektora" w celu przechwycenia niektórych komunikatów okna i wysłania ich z powrotem do kontrolki. Kontrolka, w procedurze okna, może następnie przetwarzać te odbite komunikaty przez podejmowanie akcji odpowiednich dla kontrolki ActiveX.
 
-W poniższej tabeli przedstawiono wiadomości, które są przechwytywane i odpowiednie komunikaty wysyłane przez okno reflektora.
+W poniższej tabeli przedstawiono przechwycone komunikaty i odpowiadające im komunikaty wysyłane przez okno reflektora.
 
-|Wiadomość wysłana przez formant|Wiadomość odzwierciedlona w formancie|
+|Komunikat wysyłany przez kontrolkę|Komunikat widoczny do kontrolki|
 |---------------------------------|--------------------------------------|
-|[Wm_command](/windows/win32/menurc/wm-command)|OCM_COMMAND|
+|[WM_COMMAND](/windows/win32/menurc/wm-command)|OCM_COMMAND|
 |[WM_CTLCOLORBTN](/windows/win32/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
 |[WM_CTLCOLOREDIT](/windows/win32/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
 |[WM_CTLCOLORDLG](/windows/win32/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
@@ -77,14 +78,14 @@ W poniższej tabeli przedstawiono wiadomości, które są przechwytywane i odpow
 |[WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem)|OCM_CHARTOITEM|
 |[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
 |[WM_HSCROLL](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
-|[Wm_vscroll](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
+|[WM_VSCROLL](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
 |[WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
-|[Wm_notify](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
+|[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
-> Jeśli formant działa w systemie Win32, istnieje kilka\* typów WM_CTLCOLOR wiadomości, które mogą odbierać. Aby uzyskać więcej informacji, zobacz WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+> Jeśli kontrolka działa w systemie Win32, istnieje kilka typów komunikatów WM_CTLCOLOR, które \* mogą zostać wyświetlone. Aby uzyskać więcej informacji, zobacz WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC: tworzenie podklasy kontrolki okna](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[Kontrolki ActiveX MFC: podklasy kontrolki systemu Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
 [TN062: odbicie komunikatu dla formantów systemu Windows](../mfc/tn062-message-reflection-for-windows-controls.md)

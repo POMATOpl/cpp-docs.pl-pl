@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: serializacji w MFC'
 title: Serializacja w MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,44 +9,44 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: eca4d0357977bc7ef21063718c738ae5bd8e7431
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 278de59c6e091fd59826622553f50503b12602bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217578"
 ---
 # <a name="serialization-in-mfc"></a>Serializacja w MFC
 
-W tym artykule opisano mechanizm serializacji przewidziany w bibliotece klas Programu Microsoft Foundation (MFC), aby umożliwić zachowywanie się obiektów między przebiegami programu.
+W tym artykule opisano mechanizm serializacji zapewniany w biblioteka MFC (MFC), aby umożliwić utrzymywanie obiektów między uruchomieniami programu.
 
-Serializacja to proces zapisywania lub odczytywania obiektu na trwałym nośniku pamięci, takim jak plik dysku. Serializacja jest idealna dla sytuacji, w których jest pożądane, aby zachować stan danych strukturalnych (takich jak klasy c++ lub struktur) podczas lub po wykonaniu programu. Za pomocą obiektów serializacji dostarczonych przez MFC umożliwia to występuje w sposób standardowy i spójny, zwalniając użytkownika z konieczności wykonywania operacji plików ręcznie.
+Serializacja jest procesem zapisywania lub odczytywania obiektu do lub z trwałego nośnika magazynu, takiego jak plik dysku. Serializacja jest idealnym rozwiązaniem w sytuacjach, gdy jest to potrzebne do utrzymania stanu danych strukturalnych (takich jak klasy lub struktury C++) podczas wykonywania programu lub po jego wykonaniu. Korzystając z obiektów serializacji dostarczonych przez MFC, można to zrobić w sposób standardowy i spójny, co uwalnia użytkownika z konieczności ręcznego wykonywania operacji na plikach.
 
-MFC dostarcza wbudowaną obsługę serializacji w `CObject`klasie . W związku z tym `CObject` wszystkie klasy `CObject`uzyskane z można skorzystać z protokołu serializacji .S
+Wbudowana obsługa serializacji MFC w klasie `CObject` . W ten sposób wszystkie klasy pochodne `CObject` mogą korzystać z `CObject` protokołu serializacji.
 
-Podstawową ideą serializacji jest to, że obiekt powinien być w stanie zapisać swój bieżący stan, zwykle wskazywany przez wartość jego zmiennych członkowskich, do magazynu trwałego. Później obiekt może być ponownie utworzony przez odczyt lub deserializacji, stan obiektu z magazynu. Serializacja obsługuje wszystkie szczegóły wskaźników obiektów i odwołań cyklicznych do obiektów, które są używane podczas serializacji obiektu. Kluczowym punktem jest to, że sam obiekt jest odpowiedzialny za odczyt i zapis własnego stanu. W związku z tym dla klasy, które mają być serializable, należy zaimplementować podstawowe operacje serializacji. Jak pokazano w grupie serializacji artykułów, łatwo jest dodać tę funkcję do klasy.
+Podstawowy pomysł serializacji polega na tym, że obiekt powinien być w stanie zapisać swój bieżący stan, zwykle wskazywany przez wartość jej zmiennych Członkowskich, do magazynu trwałego. Później obiekt można utworzyć ponownie, odczytując lub deserializacji, czyli stanu obiektu z magazynu. Serializacja obsługuje wszystkie szczegóły wskaźników obiektów i cykliczne odwołania do obiektów, które są używane podczas serializacji obiektu. Kluczowym punktem jest to, że obiekt jest odpowiedzialny za odczytywanie i pisanie własnego stanu. W tym celu dla klasy, która ma być możliwa do serializacji, musi implementować podstawowe operacje serializacji. Jak pokazano w grupie serializacji artykułów, można łatwo dodać tę funkcję do klasy.
 
-MFC używa obiektu `CArchive` klasy jako pośrednika między obiektem, który ma być serializowany, a nośnikiem magazynu. Ten obiekt jest zawsze `CFile` skojarzony z obiektem, z którego uzyskuje informacje niezbędne do serializacji, w tym nazwę pliku i czy żądana operacja jest odczytem lub zapisem. Obiekt, który wykonuje operację serializacji `CArchive` można użyć obiektu bez względu na charakter nośnika magazynu.
+MFC używa obiektu `CArchive` klasy jako pośrednika między obiektem do serializacji a nośnikiem magazynu. Ten obiekt jest zawsze skojarzony z `CFile` obiektem, z którego uzyskuje informacje niezbędne do serializacji, łącznie z nazwą pliku i czy żądana operacja jest operacją odczytu lub zapisu. Obiekt wykonujący operację serializacji może używać `CArchive` obiektu bez względu na charakter nośnika magazynu.
 
-Obiekt `CArchive` używa przeciążonych operatorów**<** wstawiania ( ) i ekstrakcji (**>>**) do wykonywania operacji zapisu i odczytu. Aby uzyskać więcej informacji, zobacz [Przechowywanie i ładowanie CObjects za pośrednictwem archiwum](../mfc/storing-and-loading-cobjects-via-an-archive.md) w artykule Serializacja: Serializacji obiektu.
+`CArchive`Obiekt używa przeciążonych operatorów wstawiania ( **<\<**) and extraction (**>>** ) do wykonywania operacji zapisu i odczytu. Aby uzyskać więcej informacji, zobacz [przechowywanie i ładowanie obiektów CObject za pośrednictwem archiwum](../mfc/storing-and-loading-cobjects-via-an-archive.md) w ramach serializacji artykułu: serializacji obiektu.
 
 > [!NOTE]
-> Nie należy mylić `CArchive` klasy z klasami iostream ogólnego przeznaczenia, które są tylko dla sformatowanego tekstu. Klasa `CArchive` jest dla obiektów serializowanych w formacie binarnym.
+> Nie należy mylić `CArchive` klasy z klasami iostream ogólnego przeznaczenia, które są tylko dla sformatowanego tekstu. `CArchive`Klasa jest dla obiektów serializowanych w formacie binarnym.
 
-Jeśli chcesz, można pominąć serializacji MFC, aby utworzyć własny mechanizm trwałego magazynu danych. Należy zastąpić funkcje członkowskie klasy, które inicjują serializacji za pomocą polecenia użytkownika. Zobacz dyskusję w [notatce technicznej 22](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN, ID_FILE_SAVE i ID_FILE_SAVE_AS standardowych poleceń.
+Jeśli chcesz, możesz pominąć serializację MFC, aby utworzyć własny mechanizm dla trwałego magazynu danych. Należy przesłonić funkcje składowe klasy, które inicjują serializację przy użyciu polecenia użytkownika. Zapoznaj się z dyskusjami w artykule [technicznym 22](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN, ID_FILE_SAVE i ID_FILE_SAVE_AS standardowych poleceń.
 
-Następujące artykuły obejmują dwa główne zadania wymagane do serializacji:
+Poniższe artykuły obejmują dwa podstawowe zadania wymagane do serializacji:
 
-- [Serializacja: ustawianie klasy jako możliwej do serializacji](../mfc/serialization-making-a-serializable-class.md)
+- [Serializacja: Tworzenie klasy możliwej do serializacji](../mfc/serialization-making-a-serializable-class.md)
 
 - [Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
 
-Artykuł [Serializacja: Serializacja vs wejście/wyjście bazy danych](../mfc/serialization-serialization-vs-database-input-output.md) opisuje, kiedy serializacja jest odpowiednią techniką wejścia/wyjścia w aplikacjach bazy danych.
+Serializacja artykułu [: serializacja a dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md) opisuje, kiedy Serializacja jest odpowiednią techniką wejścia/wyjścia w aplikacjach baz danych.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../mfc/mfc-concepts.md)<br/>
-[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
+[Ogólne tematy dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
 [Klasa CArchive](../mfc/reference/carchive-class.md)<br/>
 [Klasa CObject](../mfc/reference/cobject-class.md)<br/>
 [Klasa CDocument](../mfc/reference/cdocument-class.md)<br/>

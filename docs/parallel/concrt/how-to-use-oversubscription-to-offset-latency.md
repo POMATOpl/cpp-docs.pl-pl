@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: Instrukcje: używanie nadsubskrypcji do opóźnienia przesunięcia'
 title: 'Porady: używanie nadsubskrypcji do przesuwania opóźnienia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: f5d48b68d03adc25cd5f87122591b52e37da700a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec7b96703da2cbbe8a4d3caac3bfb1a1ff6f602a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341571"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Porady: używanie nadsubskrypcji do przesuwania opóźnienia
 
@@ -79,7 +80,7 @@ Poniższy przykład modyfikuje treść `download` metody, aby użyć RAII, aby u
 
 [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konteksty](../../parallel/concrt/contexts.md)<br/>
 [Context:: subsubskrybuj — Metoda](reference/context-class.md#oversubscribe)

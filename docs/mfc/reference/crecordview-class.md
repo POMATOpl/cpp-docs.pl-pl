@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa formularzy CRecordView'
 title: Klasa formularzy CRecordView
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: 21db03fde267a366d4dd1bf747880951e7546058
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ad9ef6ed53ed1f9ad843518701bd6e8d619e6e8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301155"
 ---
 # <a name="crecordview-class"></a>Klasa formularzy CRecordView
 
@@ -59,7 +60,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 ## <a name="remarks"></a>Uwagi
 
-Widok to widok formularza połączony bezpośrednio z `CRecordset` obiektem. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i wyświetla pola `CRecordset` obiektu w kontrolkach szablonu okna dialogowego. `CRecordView`Obiekt używa wymiany danych okna dialogowego (DDX) i wymiany pól rekordów (RFX) w celu zautomatyzowania przenoszenia danych między kontrolkami w formularzu i polami zestawu rekordów. `CRecordView`dostarcza również domyślną implementację do przechodzenia do pierwszego, następnego, poprzedniego lub ostatniego rekordu oraz interfejs do aktualizowania rekordu aktualnie w widoku.
+Widok to widok formularza połączony bezpośrednio z `CRecordset` obiektem. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i wyświetla pola `CRecordset` obiektu w kontrolkach szablonu okna dialogowego. `CRecordView`Obiekt używa wymiany danych okna dialogowego (DDX) i wymiany pól rekordów (RFX) w celu zautomatyzowania przenoszenia danych między kontrolkami w formularzu i polami zestawu rekordów. `CRecordView` dostarcza również domyślną implementację do przechodzenia do pierwszego, następnego, poprzedniego lub ostatniego rekordu oraz interfejs do aktualizowania rekordu aktualnie w widoku.
 
 > [!NOTE]
 > Jeśli pracujesz z klasami obiektów dostępu do danych (DAO), a nie klasami Open Database Connectivity (ODBC), zamiast tego użyj klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) . Aby uzyskać więcej informacji, zobacz [Omówienie artykułu: Programowanie baz danych](../../data/data-access-programming-mfc-atl.md).
@@ -70,7 +71,7 @@ Aby ułatwić użytkownikom końcowym przejście z rekordu do rekordu w widoku r
 
 Aby uzyskać informacje na temat domyślnej implementacji przechodzenia z rekordu do rekordu, zobacz `IsOnFirstRecord` i `IsOnLastRecord` i artykułu [przy użyciu widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).
 
-`CRecordView`śledzi położenie użytkownika w zestawie rekordów, aby widok rekordu mógł zaktualizować interfejs użytkownika. Gdy użytkownik przejdzie do dowolnego końca zestawu rekordów, widok rekordu wyłącza obiekty interfejsu użytkownika, takie jak elementy menu lub przyciski paska narzędzi — do przenoszenia dalej w tym samym kierunku.
+`CRecordView` śledzi położenie użytkownika w zestawie rekordów, aby widok rekordu mógł zaktualizować interfejs użytkownika. Gdy użytkownik przejdzie do dowolnego końca zestawu rekordów, widok rekordu wyłącza obiekty interfejsu użytkownika, takie jak elementy menu lub przyciski paska narzędzi — do przenoszenia dalej w tym samym kierunku.
 
 Aby uzyskać więcej informacji na temat deklarowania i używania widoku rekordu oraz klas zestawu rekordów, zobacz "Projektowanie i Tworzenie widoku rekordów" w [widokach rekordów](../../data/record-views-mfc-data-access.md)artykułu. Aby uzyskać więcej informacji o działaniu widoków rekordów i sposobach ich użycia, zobacz artykuł [Korzystanie z widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).
 
@@ -94,7 +95,7 @@ Aby uzyskać więcej informacji na temat deklarowania i używania widoku rekordu
 
 **Nagłówek:** AFXDB. h
 
-## <a name="crecordviewcrecordview"></a><a name="crecordview"></a>Formularzy CRecordView:: formularzy CRecordView
+## <a name="crecordviewcrecordview"></a><a name="crecordview"></a> Formularzy CRecordView:: formularzy CRecordView
 
 Podczas tworzenia obiektu typu pochodnego `CRecordView` Wywołaj każdą formę konstruktora w celu zainicjowania obiektu widoku i zidentyfikowania zasobu okna dialogowego, w którym jest oparty ten widok.
 
@@ -118,7 +119,7 @@ Możesz zidentyfikować zasób według nazwy (przekazać ciąg jako argument do 
 > [!NOTE]
 > Klasa pochodna *musi* dostarczyć własnego konstruktora. W konstruktorze klasy pochodnej Wywołaj konstruktora `CRecordView::CRecordView` przy użyciu nazwy zasobu lub identyfikatora jako argumentu, jak pokazano w poniższym przykładzie.
 
-`CRecordView::OnInitialUpdate`wywołania `UpdateData` , które wywołuje `DoDataExchange` . To początkowe wywołanie do `DoDataExchange` łączenia `CRecordView` formantów (pośrednio) z `CRecordset` elementami członkowskimi danych pola utworzonymi przez ClassWizard. Tych elementów członkowskich danych nie można używać przed wywołaniem `CFormView::OnInitialUpdate` funkcji składowej klasy bazowej.
+`CRecordView::OnInitialUpdate` wywołania `UpdateData` , które wywołuje `DoDataExchange` . To początkowe wywołanie do `DoDataExchange` łączenia `CRecordView` formantów (pośrednio) z `CRecordset` elementami członkowskimi danych pola utworzonymi przez ClassWizard. Tych elementów członkowskich danych nie można używać przed wywołaniem `CFormView::OnInitialUpdate` funkcji składowej klasy bazowej.
 
 > [!NOTE]
 > Jeśli używasz ClassWizard, Kreator definiuje **`enum`** wartość `CRecordView::IDD` , określa ją w deklaracji klasy i używa jej na liście inicjalizacji elementu członkowskiego konstruktora.
@@ -127,7 +128,7 @@ Możesz zidentyfikować zasób według nazwy (przekazać ciąg jako argument do 
 
 [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]
 
-## <a name="crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>Formularzy CRecordView:: IsOnFirstRecord
+## <a name="crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a> Formularzy CRecordView:: IsOnFirstRecord
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić, czy bieżący rekord jest pierwszym rekordem w obiekcie zestawu rekordów skojarzonym z tym widokiem rekordu.
 
@@ -145,7 +146,7 @@ Ta funkcja jest przydatna do pisania własnych implementacji domyślnych program
 
 Jeśli użytkownik przejdzie do pierwszego rekordu, struktura wyłącza wszystkie obiekty interfejsu użytkownika, które mają zostać przeniesione do pierwszego lub poprzedniego rekordu.
 
-## <a name="crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>Formularzy CRecordView:: IsOnLastRecord
+## <a name="crecordviewisonlastrecord"></a><a name="isonlastrecord"></a> Formularzy CRecordView:: IsOnLastRecord
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić, czy bieżący rekord jest ostatnim rekordem w obiekcie zestawu rekordów skojarzonym z tym widokiem rekordu.
 
@@ -162,9 +163,9 @@ Różne od zera, jeśli bieżący rekord jest ostatnim rekordem w zestawie rekor
 Ta funkcja jest przydatna do pisania własnych implementacji domyślnych programów obsługi aktualizacji poleceń, które ClassWizard zapisu do obsługi interfejsu użytkownika w celu przechodzenia z rekordu do rekordu.
 
 > [!CAUTION]
-> Wynik tej funkcji jest niezawodny, z tą różnicą, że widok nie może wykryć końca zestawu rekordów, dopóki użytkownik nie przeniósł go poza nią. Użytkownik musi przejść poza ostatni rekord, zanim widok rekordu będzie mógł stwierdzić, że musi wyłączyć wszystkie obiekty interfejsu użytkownika w celu przejścia do następnego lub ostatniego rekordu. Jeśli użytkownik przesunie poprzedni rekord, a następnie przeniesie zwrot do ostatniego rekordu (lub przed nim), widok rekordu może śledzić położenie użytkownika w zestawie rekordów i poprawnie wyłączyć obiekty interfejsu użytkownika. `IsOnLastRecord`jest również niezawodna po wywołaniu funkcji implementacji `OnRecordLast` , która obsługuje polecenie ID_RECORD_LAST lub `CRecordset::MoveLast` .
+> Wynik tej funkcji jest niezawodny, z tą różnicą, że widok nie może wykryć końca zestawu rekordów, dopóki użytkownik nie przeniósł go poza nią. Użytkownik musi przejść poza ostatni rekord, zanim widok rekordu będzie mógł stwierdzić, że musi wyłączyć wszystkie obiekty interfejsu użytkownika w celu przejścia do następnego lub ostatniego rekordu. Jeśli użytkownik przesunie poprzedni rekord, a następnie przeniesie zwrot do ostatniego rekordu (lub przed nim), widok rekordu może śledzić położenie użytkownika w zestawie rekordów i poprawnie wyłączyć obiekty interfejsu użytkownika. `IsOnLastRecord` jest również niezawodna po wywołaniu funkcji implementacji `OnRecordLast` , która obsługuje polecenie ID_RECORD_LAST lub `CRecordset::MoveLast` .
 
-## <a name="crecordviewongetrecordset"></a><a name="ongetrecordset"></a>Formularzy CRecordView:: OnGetRecordset
+## <a name="crecordviewongetrecordset"></a><a name="ongetrecordset"></a> Formularzy CRecordView:: OnGetRecordset
 
 Zwraca wskaźnik do `CRecordset` obiektu pochodnego skojarzonego z widokiem rekordu.
 
@@ -182,7 +183,7 @@ Należy zastąpić tę funkcję elementu członkowskiego, aby skonstruować lub 
 
 Aby uzyskać więcej informacji i przykładów, zobacz widok [rekordu artykułu: Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).
 
-## <a name="crecordviewonmove"></a><a name="onmove"></a>Formularzy CRecordView:: OnMove
+## <a name="crecordviewonmove"></a><a name="onmove"></a> Formularzy CRecordView:: OnMove
 
 Wywołaj tę funkcję elementu członkowskiego, aby przejść do innego rekordu w zestawie rekordów i wyświetlić jego pola w kontrolkach widoku rekordu.
 
@@ -220,7 +221,7 @@ W przypadku przeniesienia ostatniego rekordu w zestawie rekordów widok rekordu 
 > [!CAUTION]
 > Wywołanie `OnMove` zgłasza wyjątek, jeśli zestaw rekordów nie zawiera żadnych rekordów. Wywołaj odpowiednią funkcję procedury obsługi aktualizacji interfejsu użytkownika — `OnUpdateRecordFirst` ,, `OnUpdateRecordLast` `OnUpdateRecordNext` lub `OnUpdateRecordPrev` — przed odpowiednią operacją przenoszenia, aby określić, czy zestaw rekordów zawiera jakieś rekordy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

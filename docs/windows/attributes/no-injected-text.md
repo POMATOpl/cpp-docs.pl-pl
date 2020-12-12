@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: no_injected_text'
 title: no_injected_text (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: ab718376d5da7214813d5ab2e0caaa7bbccd077b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d6b4b77055b6706256b25b0b722034e0275ec19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327468"
 ---
 # <a name="no_injected_text"></a>no_injected_text
 
@@ -37,7 +38,7 @@ Typowym zastosowaniem atrybutu **No_injected_text** C++ jest opcja kompilatora [
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Dowolne miejsce|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

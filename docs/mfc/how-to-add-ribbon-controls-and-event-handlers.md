@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Instrukcje: Dodawanie kontrolek wstążki i programów obsługi zdarzeń'
 title: 'Porady: dodawanie formantów wstążki do programów obsługi zdarzeń'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: d6382c8ebf73fe7a26b3950cc1965b229c22dbb7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bffac6b27f809961e3ca7a4323f519c765526198
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290300"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Porady: dodawanie formantów wstążki do programów obsługi zdarzeń
 
@@ -22,15 +23,15 @@ W tym temacie należy otworzyć projektanta wstążki, dodać przycisk, a nastę
 
 1. W programie Visual Studio, w menu **Widok** kliknij **Widok zasobów**.
 
-1. W **Widok zasobów**kliknij dwukrotnie zasób wstążki, aby wyświetlić go na powierzchni projektowej.
+1. W **Widok zasobów** kliknij dwukrotnie zasób wstążki, aby wyświetlić go na powierzchni projektowej.
 
 ### <a name="to-add-a-button-and-an-event-handler"></a>Aby dodać przycisk i procedurę obsługi zdarzeń
 
-1. Na **pasku narzędzi**kliknij **przycisk** i przeciągnij go do panelu na powierzchni projektowej.
+1. Na **pasku narzędzi** kliknij **przycisk** i przeciągnij go do panelu na powierzchni projektowej.
 
 1. Kliknij prawym przyciskiem myszy przycisk, a następnie kliknij pozycję **Dodaj program obsługi zdarzeń**.
 
-1. W **Kreatorze obsługi zdarzeń**Potwierdź ustawienia domyślne, a następnie kliknij przycisk **Dodaj i edytuj**. Aby uzyskać więcej informacji, zobacz [Kreator obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md#event-handler-wizard).
+1. W **Kreatorze obsługi zdarzeń** Potwierdź ustawienia domyślne, a następnie kliknij przycisk **Dodaj i edytuj**. Aby uzyskać więcej informacji, zobacz [Kreator obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md#event-handler-wizard).
 
 1. W edytorze kodu Dodaj następujący kod do funkcji obsługi:
 

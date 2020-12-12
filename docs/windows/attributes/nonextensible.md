@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: nierozszerzalny'
 title: nierozszerzalny (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 01f89c4a06a8e90fd6a539fa5a5a85ebb8067d40
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfb0eda0fc8c6de367ee29ec3786750ba40395ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327449"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -53,7 +54,7 @@ __interface IFireTabCtrl
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**interfejsu**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|`dual` i `oleautomation` lub `dispinterface`|
 |**Nieprawidłowe atrybuty**|Brak|
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: Licencjonowanie kontrolki ActiveX'
 title: 'Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX'
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4fe2fcf63cce02ed6c1c9943e6d0fe6ffab00a92
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cf7b797ecfd7ae19af7c922443850d115b4cc2b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341597"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX
 
@@ -35,7 +36,7 @@ W tym artykule omówiono następujące tematy:
 
 Kontrolki ActiveX implementujące Licencjonowanie pozwalają na określenie, jak inne osoby będą korzystać z kontrolki ActiveX. Podajesz kupującemu kontrolę z kontrolką i. Plik LIC wraz z umową, którą kupujący może dystrybuować formant, ale nie. Plik LIC, z aplikacją korzystającą z formantu. Zapobiega to zapisywaniu przez użytkowników tej aplikacji nowych aplikacji korzystających z tego formantu, bez konieczności pierwszej licencji kontroli od użytkownika.
 
-## <a name="overview-of-activex-control-licensing"></a><a name="_core_overview_of_activex_control_licensing"></a>Omówienie licencjonowania kontrolki ActiveX
+## <a name="overview-of-activex-control-licensing"></a><a name="_core_overview_of_activex_control_licensing"></a> Omówienie licencjonowania kontrolki ActiveX
 
 Aby zapewnić obsługę licencjonowania dla formantów ActiveX, Klasa [COleObjectFactory](reference/coleobjectfactory-class.md) dostarcza implementację dla kilku funkcji w `IClassFactory2` interfejsie: `IClassFactory2::RequestLicKey` , `IClassFactory2::GetLicInfo` , i `IClassFactory2::CreateInstanceLic` . Gdy Deweloper aplikacji kontenera wykonuje żądanie utworzenia wystąpienia kontrolki, wywołanie `GetLicInfo` jest wykonywane w celu sprawdzenia, czy formant. Plik LIC jest obecny. Jeśli formant jest licencjonowany, wystąpienie kontrolki można utworzyć i umieścić w kontenerze. Po zakończeniu konstruowania przez dewelopera aplikacji kontenera inne wywołanie funkcji `RequestLicKey` jest wykonywane. Ta funkcja zwraca klucz licencji (prosty ciąg znaków) do aplikacji kontenera. Zwrócony klucz jest następnie osadzony w aplikacji.
 
@@ -53,7 +54,7 @@ Weryfikacja licencjonowanego formantu ActiveX podczas wykonywania
 
 Licencjonowanie kontroli obejmuje dwa podstawowe składniki: konkretny kod w bibliotece DLL implementacji kontroli i plik licencji. Kod składa się z dwóch (lub prawdopodobnie trzech) wywołań funkcji i ciągu znaków, zwanego dalej "ciągiem licencji" zawierającym informacje o prawach autorskich. Te wywołania i ciąg licencji są Znalezione w implementacji kontroli (. CPP). Plik licencji generowany przez kreatora kontrolek ActiveX jest plikiem tekstowym z instrukcją praw autorskich. Nazwa jest używana przy użyciu nazwy projektu. Rozszerzenie LIC, np. przykład. LIC. Jeśli jest wymagane użycie czasu projektowania, do licencjonowanej kontroli musi być dołączony plik licencji.
 
-## <a name="creating-a-licensed-control"></a><a name="_core_creating_a_licensed_control"></a>Tworzenie licencjonowanej kontroli
+## <a name="creating-a-licensed-control"></a><a name="_core_creating_a_licensed_control"></a> Tworzenie licencjonowanej kontroli
 
 W przypadku tworzenia struktury kontroli przy użyciu kreatora kontrolek ActiveX można łatwo włączyć obsługę licencjonowania. Po określeniu, że formant powinien mieć licencję w czasie wykonywania, Kreator kontrolki ActiveX dodaje kod do klasy kontrolki do obsługi licencjonowania. Kod składa się z funkcji, które używają klucza i pliku licencji do weryfikacji licencji. Te funkcje mogą być również modyfikowane w celu dostosowania licencjonowania kontroli. Aby uzyskać więcej informacji na temat dostosowywania licencji, zobacz [Dostosowywanie licencjonowania kontrolki ActiveX](#_core_customizing_the_licensing_of_an_activex_control) w dalszej części tego artykułu.
 
@@ -63,7 +64,7 @@ W przypadku tworzenia struktury kontroli przy użyciu kreatora kontrolek ActiveX
 
 Kreator kontrolek ActiveX generuje teraz strukturę kontrolek ActiveX, która obejmuje podstawową obsługę licencjonowania. Szczegółowe wyjaśnienie kodu licencji można znaleźć w następnym temacie.
 
-## <a name="licensing-support"></a><a name="_core_licensing_support"></a>Obsługa licencjonowania
+## <a name="licensing-support"></a><a name="_core_licensing_support"></a> Obsługa licencjonowania
 
 W przypadku dodawania obsługi licencjonowania do kontrolki ActiveX przy użyciu kreatora kontrolek ActiveX, Kreator kontrolek ActiveX dodaje kod, który deklaruje i implementuje możliwość licencjonowania, jest dodawany do nagłówka i plików implementacji formantu. Ten kod składa się z `VerifyUserLicense` funkcji składowej i `GetLicenseKey` funkcji członkowskiej, która zastępuje implementacje domyślne Znalezione w [COleObjectFactory](reference/coleobjectfactory-class.md) . Te funkcje pobierają i weryfikują licencję kontroli.
 
@@ -84,13 +85,13 @@ Te funkcje składowe są następujące:
 
    Sprawdza, czy klucz osadzony i unikatowy klucz kontrolki są takie same. Dzięki temu kontener może utworzyć wystąpienie kontrolki do użycia. Ta funkcja jest wywoływana przez platformę w ramach przetwarzania `IClassFactory2::CreateInstanceLic` i można ją zastąpić, aby zapewnić dostosowaną weryfikację klucza licencji. Implementacja domyślna wykonuje porównanie ciągów. Aby uzyskać więcej informacji, zobacz [Dostosowywanie licencjonowania kontrolki ActiveX](#_core_customizing_the_licensing_of_an_activex_control)w dalszej części tego artykułu.
 
-### <a name="header-file-modifications"></a><a name="_core_header_file_modifications"></a>Modyfikacje pliku nagłówka
+### <a name="header-file-modifications"></a><a name="_core_header_file_modifications"></a> Modyfikacje pliku nagłówka
 
 Kreator kontrolek ActiveX umieszcza w pliku nagłówkowym formantu następujący kod. W tym przykładzie są zadeklarowane dwie funkcje składowe `CSampleCtrl` obiektu `factory` , które sprawdza obecność formantu. Plik LIC i inny, który pobiera klucz licencji do użycia w aplikacji zawierającej formant:
 
 [!code-cpp[NVC_MFC_AxUI#39](codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_1.h)]
 
-### <a name="implementation-file-modifications"></a><a name="_core_implementation_file_modifications"></a>Modyfikacje pliku implementacji
+### <a name="implementation-file-modifications"></a><a name="_core_implementation_file_modifications"></a> Modyfikacje pliku implementacji
 
 Kreator kontrolek ActiveX umieszcza następujące dwie instrukcje w pliku implementacji kontroli, aby zadeklarować nazwę pliku licencji i ciąg licencji:
 
@@ -107,7 +108,7 @@ Na koniec **Kreator kontrolki ActiveX** modyfikuje projekt kontrolki. Plik IDL. 
 
 [!code-cpp[NVC_MFC_AxUI#42](codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_4.idl)]
 
-## <a name="customizing-the-licensing-of-an-activex-control"></a><a name="_core_customizing_the_licensing_of_an_activex_control"></a>Dostosowywanie licencjonowania kontrolki ActiveX
+## <a name="customizing-the-licensing-of-an-activex-control"></a><a name="_core_customizing_the_licensing_of_an_activex_control"></a> Dostosowywanie licencjonowania kontrolki ActiveX
 
 Ponieważ `VerifyUserLicense` , `GetLicenseKey` i `VerifyLicenseKey` są zadeklarowane jako wirtualne funkcje członkowskie klasy fabryki kontroli, można dostosować zachowanie licencjonowania kontroli.
 

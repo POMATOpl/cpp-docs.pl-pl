@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: jak skonwertować istniejącą Wstążkę MFC na zasób wstążki'
 title: 'Porady: konwertowanie istniejącej wstążki MFC na zasób wstążki'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 56f36c977453d338b9e9bbd2462c1a8830ffe258
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 825b8b4e3322afd8919ffad0f5e0f73c9d52be78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290287"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Porady: konwertowanie istniejącej wstążki MFC na zasób wstążki
 
@@ -28,13 +29,13 @@ Musisz mieć istniejący projekt MFC, który ma kod korzystający z klas wstąż
 
    Zapisz i zamknij plik.
 
-1. Skompiluj i uruchom aplikację MFC, a następnie w Notatniku otwórz RibbonOutput. txt i skopiuj jej zawartość.
+1. Skompiluj i uruchom aplikację MFC, a następnie w Notatniku otwórz RibbonOutput.txt i skopiuj jej zawartość.
 
 1. W programie Visual Studio w menu **projekt** kliknij polecenie **Dodaj zasób**. W oknie dialogowym **Dodawanie zasobu** wybierz **Wstążkę** , a następnie kliknij przycisk **Nowy**.
 
    Program Visual Studio tworzy zasób wstążki i otwiera go w widoku projektu. Identyfikator zasobu wstążki to IDR_RIBBON1, który jest wyświetlany w **Widok zasobów**. Wstążka jest zdefiniowana w pliku XML Ribbon1. mfcribbon-ms.
 
-1. W programie Visual Studio Otwórz Ribbon1. mfcribbon-ms, usuń jego zawartość, a następnie wklej zawartość RibbonOutput. txt, która została wcześniej skopiowana. Zapisz i Zamknij Ribbon1. mfcribbon-ms.
+1. W programie Visual Studio Otwórz Ribbon1. mfcribbon-ms, usuń jego zawartość, a następnie wklej zawartość RibbonOutput.txt, która została wcześniej skopiowana. Zapisz i Zamknij Ribbon1. mfcribbon-ms.
 
 1. Ponownie otwórz plik źródłowy, w którym zainicjowano obiekt CMFCRibbonBar (zazwyczaj MainFrm. cpp) i Dodaj komentarz do istniejącego kodu wstążki. Dodaj następujący kod po komentarzu do kodu.
 

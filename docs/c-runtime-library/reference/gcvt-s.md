@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _gcvt_s'
 title: _gcvt_s
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f96822920430122a56d8503b99cc0b881d9f06be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341529"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -70,7 +71,7 @@ Bufor do przechowywania wyniku konwersji.
 *sizeInBytes*<br/>
 Rozmiar buforu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość do przekonwertowania.
 
 *cyfry*<br/>
@@ -82,11 +83,11 @@ Zero, jeśli powodzenie. Jeśli wystąpi błąd spowodowany nieprawidłowym para
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buforu*|*sizeInBytes*|*wartościami*|*cyfry*|Przesłać|Wartość w *buforze*|
+|*buforu*|*sizeInBytes*|*wartość*|*cyfry*|Przesłać|Wartość w *buforze*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|ile|ile|ile|**EINVAL**|Nie zmodyfikowano.|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|zero|ile|ile|**EINVAL**|Nie zmodyfikowano.|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|ile|ile|>= *sizeInBytes*|**EINVAL**|Nie zmodyfikowano.|
+|**NULL**|dowolny|dowolny|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|zero|dowolny|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|dowolny|dowolny|>= *sizeInBytes*|**EINVAL**|Nie zmodyfikowano.|
 
 **Problemy z zabezpieczeniami**
 
@@ -106,7 +107,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_gcvt_s**|\<STDLIB. h>|\<błąd. h>|
+|**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -141,7 +142,7 @@ int main()
 Converted value: 1.2
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4460'
 title: Ostrzeżenie kompilatora (poziom 4) C4460
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4460
 ms.assetid: c97ac1c9-598d-479e-bfff-c993690c4f3d
-ms.openlocfilehash: 1b4ec02211dc346c1672b403bf8af16dc6fca461
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 68f38ad1ad65b27f35b79495bb2edd930c25d732
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334834"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>Ostrzeżenie kompilatora (poziom 4) C4460
 
-Operator WinRT lub CLR "operator" ma parametr zakończony przez odwołanie. Operator WinRT lub CLR ma inną semantykę z C++ operatora "operator", czy chodziło o wartość?
+Operator WinRT lub CLR "operator" ma parametr zakończony przez odwołanie. Operator WinRT lub CLR ma inną semantykę z operatora C++ "operator", czy chodziło o wartość?
 
-Wartość została przeniesiona przez odwołanie do zdefiniowanej przez użytkownika środowisko wykonawcze systemu Windows lub operatora CLR. Jeśli wartość zostanie zmieniona wewnątrz funkcji, należy pamiętać, że wartość zwracana po wywołaniu funkcji zostanie przypisana wartość zwracana funkcji. W warstwie C++standardowa zmieniona wartość jest odzwierciedlona po wywołaniu funkcji.
+Wartość została przeniesiona przez odwołanie do zdefiniowanej przez użytkownika środowisko wykonawcze systemu Windows lub operatora CLR. Jeśli wartość zostanie zmieniona wewnątrz funkcji, należy pamiętać, że wartość zwracana po wywołaniu funkcji zostanie przypisana wartość zwracana funkcji. W standardzie C++, zmieniona wartość jest odzwierciedlona po wywołaniu funkcji.
 
 ## <a name="example"></a>Przykład
 
