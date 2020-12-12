@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Unicode i MBCS'
 title: Unicode i MBCS
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,35 +12,35 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-ms.openlocfilehash: 063c8b39ee0d29403b382b57a236f2a3e8759e3f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4fc5afc447612a3f08067185072cd4f116ab80c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114978"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode i MBCS
 
-Biblioteka klas Microsoft Foundation (MFC), biblioteka w czasie wykonywania języka C dla języka Visual C++ i środowisko programistyczne Visual C++ są włączone do programowania międzynarodowego. Zapewniają one:
+Microsoft Foundation Classes (MFC), Biblioteka wykonawcza C dla Visual C++ i środowisko deweloperskie Visual C++ są włączone, aby pomóc w programowaniu międzynarodowym. Zapewniają one:
 
-- Obsługa standardu Unicode w systemie Windows. Unicode jest aktualnym standardem i powinien być używany w miarę możliwości.
+- Obsługa standardu Unicode w systemie Windows. Unicode jest bieżącym standardem i powinien być używany zawsze, gdy jest to możliwe.
 
-   Unicode to 16-bitowe kodowanie znaków, zapewniające wystarczającą ilość kodowania dla wszystkich języków. Wszystkie znaki ASCII są zawarte w Unicode jako znaki rozszerzone.
+   Unicode jest kodowaniem znaków 16-bitowym, co zapewnia wystarczającą liczbę kodowań dla wszystkich języków. Wszystkie znaki ASCII są zawarte w kodzie Unicode jako znaki rozszerzone.
 
-- Obsługa postaci zestawu znaków wielobajtowych (MBCS) o nazwie zestaw znaków dwubajtowych (DBCS) na wszystkich platformach.
+- Obsługa formy zestawu znaków wielobajtowych (MBCS) o nazwie podwójnego bajtu (DBCS) na wszystkich platformach.
 
-   Znaki DBCS składają się z 1 lub 2 bajtów. Niektóre zakresy bajtów są odstawienia do użycia jako bajty potencjalnych potencjalnych. Bajt wiodący określa, że i następujący bajt szlaku składają się z pojedynczego znaku o szerokości 2 bajtów. Należy śledzić, które bajty są bajtami potencjalnych potencjalnych potencjalnych przewodów. W określonym zestawie znaków wielobajtowych bajty potencjalnego klienta mieszczą się w określonym zakresie, podobnie jak bajty szlaku. Gdy te zakresy nakładają się na siebie, może być konieczne dokonanie oceny kontekstu w celu ustalenia, czy dany bajt działa jako bajt wiodący lub bajt szlaku.
+   Znaki DBCS składają się z 1 lub 2 bajtów. Niektóre zakresy bajtów są przeznaczone do użycia jako bajty potencjalnego klienta. Bajt wiodący określa, że i następujący bajt końcowy zawiera pojedynczy dwubajtowy znak. Należy śledzić, które bajty mają potencjalną liczbę bajtów. W konkretnym zestawie znaków wielobajtowych potencjalni klienci mieszczą się w określonym zakresie, tak jak w przypadku bajtów końcowych. Gdy te zakresy nakładają się na siebie, może być konieczne oszacowanie kontekstu, aby określić, czy dany bajt działa jako bajt wiodący czy bajt końcowy.
 
-- Wsparcie dla narzędzi, które upraszczają programowanie MBCS aplikacji napisanych na rynki międzynarodowe.
+- Obsługa narzędzi, które upraszczają MBCS Programowanie aplikacji pisanych na rynki międzynarodowe.
 
-   Po uruchomieniu w wersji systemu operacyjnego Windows z obsługą MBCS system programistyczny Visual C++ — w tym zintegrowany edytor kodu źródłowego, debuger i narzędzia wiersza polecenia — jest całkowicie włączony w tryb MBCS. Aby uzyskać więcej informacji, zobacz [obsługę MBCS w języku Visual C++](../text/mbcs-support-in-visual-cpp.md).
+   W przypadku uruchamiania w MBCSej wersji systemu operacyjnego Windows, system programistyczny, Visual C++ w tym zintegrowany edytor kodu źródłowego, debuger i narzędzia wiersza polecenia — są całkowicie MBCS. Aby uzyskać więcej informacji, zobacz [Obsługa MBCS w Visual C++](../text/mbcs-support-in-visual-cpp.md).
 
 > [!NOTE]
-> W tej dokumentacji MBCS jest używany do opisania wszystkich non-Unicode obsługi znaków wielobajtowych. W języku Visual C++MBCS zawsze oznacza DBCS. Zestawy znaków szersze niż 2 bajty nie są obsługiwane.
+> W tej dokumentacji MBCS jest używany do opisywania całej obsługi znaków wielobajtowych w formacie Unicode. W Visual C++ MBCS zawsze oznacza DBCS. Zestawy znaków większe niż 2 bajty nie są obsługiwane.
 
-Z definicji zestaw znaków ASCII jest podzbiorem wszystkich zestawów znaków wielobajtowych. W wielu zestawach znaków wielobajtowych każdy znak w zakresie 0x00 - 0x7F jest identyczny ze znakiem, który ma taką samą wartość w zestawie znaków ASCII. Na przykład w ciągach znaków ASCII i MBCS znak NULL 1-bajtowy ('\0') ma wartość 0x00 i wskazuje kończący się znak null.
+Zgodnie z definicją zestaw znaków ASCII jest podzbiorem wszystkich zestawów znaków wielobajtowych. W wielu zestawach znaków wielobajtowych każdy znak w zakresie 0x00-0x7F jest identyczny ze znakiem, który ma taką samą wartość w zestawie znaków ASCII. Na przykład w przypadku ciągów znaków ASCII i MBCS, 1-bajtowy znak NULL (' \ 0 ') ma wartość 0x00 i wskazuje kończący znak null.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Tekst i ciągi](../text/text-and-strings-in-visual-cpp.md)<br/>
-[Włączanie internacjonalizacji](../text/international-enabling.md)
+[Włączanie międzynarodowe](../text/international-enabling.md)

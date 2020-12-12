@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mnoży strukturę'
 title: multiplies — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-ms.openlocfilehash: 3bccaf2a5e6594652a1179b357cdbbee2d2436b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 552f36d2060ca9ad6141438a45a128e84b705630
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114991"
 ---
 # <a name="multiplies-struct"></a>multiplies — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, który wykonuje operację mnożenia (binarne `operator*`) na jego argumenty.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację mnożenia (Binary `operator*` ) w jej argumentach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +41,17 @@ struct multiplies<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Typ, który obsługuje dane binarne `operator*` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Typ, który obsługuje plik binarny `operator*` , który pobiera operandy dla określonych lub wywnioskowanych typów.
 
-*po lewej stronie*\
-Lewy operand operacja mnożenia. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand operacji mnożenia. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand operacja mnożenia. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand operacji mnożenia. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left * Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator*`.
+Wynik `Left * Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator*` .
 
 ## <a name="example"></a>Przykład
 

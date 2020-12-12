@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy message_not_found
 title: message_not_found — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c0b098a530768617b2fa2cf52dfe374dc44a2c12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169388"
 ---
 # <a name="message_not_found-class"></a>message_not_found — Klasa
 
@@ -25,13 +26,13 @@ Ta klasa opisuje wyjątek zgłoszony, gdy blok komunikatów nie może znaleźć 
 class message_not_found : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[message_not_found](#ctor)|Przeciążone. Konstruuje obiekt `message_not_found`.|
+|[message_not_found](#ctor)|Przeciążone. Konstruuje `message_not_found` obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,9 +46,9 @@ class message_not_found : public std::exception;
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>message_not_found
+## <a name="message_not_found"></a><a name="ctor"></a> message_not_found
 
-Konstruuje obiekt `message_not_found`.
+Konstruuje `message_not_found` obiekt.
 
 ```cpp
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();

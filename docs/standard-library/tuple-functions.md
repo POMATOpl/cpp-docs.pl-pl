@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat &lt; &gt; funkcji krotki
 title: '&lt;&gt;funkcje krotki'
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: cf58cab5f222594a935156cf7e7f2e886639da2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168959"
 ---
 # <a name="lttuplegt-functions"></a>&lt;&gt;funkcje krotki
 
@@ -95,7 +96,7 @@ A `std::tuple` , która zawiera dowolną liczbę elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje szablonu zwracają odwołanie do wartości w *indeksie*indeksu lub typu *T* w `tuple` obiekcie.
+Funkcje szablonu zwracają odwołanie do wartości w *indeksie* indeksu lub typu *T* w `tuple` obiekcie.
 
 Wywołanie `get<T>(Tuple)` spowoduje wygenerowanie błędu kompilatora, jeśli krotka zawiera więcej lub mniej niż jeden element typu T.
 

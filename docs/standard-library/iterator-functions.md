@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat &lt; funkcji iteratora &gt;
 title: '&lt;funkcje iteratora &gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 615ebeedc87563eeac46c462304072ff1979040c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0db7e036cd89cf92449e539ac6a656658730425d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169258"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;funkcje iteratora &gt;
 
-## <a name="advance"></a><a name="advance"></a>chodzenie
+## <a name="advance"></a><a name="advance"></a> chodzenie
 
 Inkrementuje iterator o określoną liczbę pozycji.
 
@@ -62,7 +63,7 @@ Typ całkowitoliczbowy, który jest konwertowany na typ różnicy iteratora i kt
 
 Zakres zwiększania musi być niepojedynczy, a iteratory muszą być wyłuskiwalne lub znajdować się po końcu.
 
-Jeśli `InputIterator` spełnia wymagania dla typu iteratora dwukierunkowego, wartość *Off* ta może być ujemna. Jeśli `InputIterator` jest typem iteratora wejściowego lub do przodu, *off* musi być nieujemny.
+Jeśli `InputIterator` spełnia wymagania dla typu iteratora dwukierunkowego, wartość  ta może być ujemna. Jeśli `InputIterator` jest typem iteratora wejściowego lub do przodu, *off* musi być nieujemny.
 
 Funkcja Advance ma stałą złożoność `InputIterator` , gdy spełnia wymagania iteratora dostępu swobodnego; w przeciwnym razie ma złożoność liniową i dlatego może być kosztowna.
 
@@ -113,7 +114,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```
 
-## <a name="back_inserter"></a><a name="back_inserter"></a>back_inserter
+## <a name="back_inserter"></a><a name="back_inserter"></a> back_inserter
 
 Tworzy iterator, który może wstawiać elementy z tyłu określonego kontenera.
 
@@ -184,7 +185,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a><a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a> zaczną
 
 Pobiera iterator do pierwszego elementu w określonym kontenerze.
 
@@ -286,7 +287,7 @@ Wówczas wysłanie do niego tablicy spowodowałoby następujący błąd kompilat
 error C2228: left of '.begin' must have class/struct/union
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Pobiera iterator const do pierwszego elementu w określonym kontenerze.
 
@@ -319,7 +320,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Pobiera iterator const do elementu, który następuje po ostatnim elemencie w określonym kontenerze.
 
@@ -352,19 +353,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin —
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin —
 
 ```cpp
 template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 ```cpp
 template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
 ```
 
-## <a name="data"></a><a name="data"></a>Data
+## <a name="data"></a><a name="data"></a> Data
 
 ```cpp
 template <class C> constexpr auto data(C& c) -> decltype(c.data());
@@ -373,7 +374,7 @@ template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
 template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
 ```
 
-## <a name="distance"></a><a name="distance"></a>miast
+## <a name="distance"></a><a name="distance"></a> miast
 
 Określa liczbę przyrostów między położeniami, do których odnoszą się dwa iteratory.
 
@@ -446,7 +447,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.
 ```
 
-## <a name="empty"></a><a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a> ciągiem
 
 ```cpp
 template <class C> constexpr auto empty(const C& c) -> decltype(c.empty());
@@ -454,7 +455,7 @@ template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
 template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
 ```
 
-## <a name="end"></a><a name="end"></a>punktów
+## <a name="end"></a><a name="end"></a> punktów
 
 Pobiera iterator do elementu, który następuje po ostatnim elemencie w określonym kontenerze.
 
@@ -489,7 +490,7 @@ Trzecia funkcja szablonu zwraca wartość `array + Size` .
 
 Aby uzyskać przykład kodu, zobacz [BEGIN](../standard-library/iterator-functions.md#begin).
 
-## <a name="front_inserter"></a><a name="front_inserter"></a>front_inserter
+## <a name="front_inserter"></a><a name="front_inserter"></a> front_inserter
 
 Tworzy iterator, która może wstawiać elementy z przodu określonego kontenera.
 
@@ -560,7 +561,7 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a><a name="inserter"></a>Inserter
+## <a name="inserter"></a><a name="inserter"></a> Inserter
 
 Funkcja szablonu pomocnika, która umożliwia korzystanie `inserter(_Cont, _Where)` z elementu zamiast `insert_iterator<Container>(_Cont, _Where)` .
 
@@ -631,7 +632,7 @@ After the insertions, the list L is:
 ( 1 20 30 40 500 ).
 ```
 
-## <a name="make_checked_array_iterator"></a><a name="make_checked_array_iterator"></a>make_checked_array_iterator
+## <a name="make_checked_array_iterator"></a><a name="make_checked_array_iterator"></a> make_checked_array_iterator
 
 Tworzy [checked_array_iterator](../standard-library/checked-array-iterator-class.md) , które mogą być używane przez inne algorytmy.
 
@@ -725,7 +726,7 @@ int main()
 }
 ```
 
-## <a name="make_move_iterator"></a><a name="make_move_iterator"></a>make_move_iterator
+## <a name="make_move_iterator"></a><a name="make_move_iterator"></a> make_move_iterator
 
 Tworzy `move iterator` , który zawiera dostarczony iterator jako `stored` iterator.
 
@@ -744,7 +745,7 @@ Iterator przechowywany w nowym iteratoru przenoszenia.
 
 Funkcja szablonu zwraca wartość `move_iterator` `<Iterator>(_It)` .
 
-## <a name="make_unchecked_array_iterator"></a><a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
+## <a name="make_unchecked_array_iterator"></a><a name="make_unchecked_array_iterator"></a> make_unchecked_array_iterator
 
 Tworzy [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) , które mogą być używane przez inne algorytmy.
 
@@ -823,7 +824,7 @@ int main()
 }
 ```
 
-## <a name="next"></a><a name="next"></a>ponown
+## <a name="next"></a><a name="next"></a> ponown
 
 Dokonuje iteracji określoną liczbę razy i zwraca nową pozycję iteratora.
 
@@ -850,7 +851,7 @@ Zwraca nową pozycję iteratora po iteracji *_Off* czas.
 
 Funkcja szablonu zwraca `next` przyrostowe czasy *_Off*
 
-## <a name="prev"></a><a name="prev"></a>przeglądan
+## <a name="prev"></a><a name="prev"></a> przeglądan
 
 Dokonuje iteracji odwrotnej określoną liczbę razy i zwraca nową pozycję iteratora.
 
@@ -873,21 +874,21 @@ Liczba powtórzeń iteracji.
 
 Funkcja szablonu zwraca `next` liczbę `off` razy.
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 ```cpp
 template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
 template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 ```cpp
 template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
 template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
 ```
 
-## <a name="size"></a><a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a> zmienia
 
 ```cpp
 template <class C> constexpr auto size(const C& c) -> decltype(c.size());

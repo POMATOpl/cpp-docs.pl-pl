@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej na temat klas DAO
 title: Klasy DAO
 ms.date: 09/17/2019
 helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: 51abd29ef4de5d70f4a5b2b6b14b53510e7876a1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: bf30a4d985947ca435c53391ce9529caf9ec2c81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169414"
 ---
 # <a name="dao-classes"></a>Klasy DAO
 
@@ -50,16 +51,16 @@ Obsługuje procedury wymiany pól rekordów DAO (DFX) używane przez klasy bazy 
 ## <a name="related-classes"></a>Powiązane klasy
 
 [CLongBinary](reference/clongbinary-class.md)<br/>
-Hermetyzuje dojście do magazynu dla binarnego dużego obiektu (BLOB), takiego jak mapa bitowa. `CLongBinary`obiekty służą do zarządzania dużymi obiektami danych przechowywanymi w tabelach bazy danych.
+Hermetyzuje dojście do magazynu dla binarnego dużego obiektu (BLOB), takiego jak mapa bitowa. `CLongBinary` obiekty służą do zarządzania dużymi obiektami danych przechowywanymi w tabelach bazy danych.
 
 [COleCurrency](reference/colecurrency-class.md)<br/>
-Otoka dla **waluty**typu automatyzacji OLE, typ arytmetyczny stałej z 15 cyfr przed separatorem dziesiętnym i 4 cyfr po.
+Otoka dla **waluty** typu automatyzacji OLE, typ arytmetyczny stałej z 15 cyfr przed separatorem dziesiętnym i 4 cyfr po.
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-Otoka **dla typu automatyzacji**OLE. Reprezentuje wartości daty i godziny.
+Otoka **dla typu automatyzacji** OLE. Reprezentuje wartości daty i godziny.
 
 [COleVariant](reference/colevariant-class.md)<br/>
-Otoka **dla typu automatyzacji**OLE. Dane w **odmianie**s mogą być przechowywane w wielu formatach.
+Otoka **dla typu automatyzacji** OLE. Dane w **odmianie** s mogą być przechowywane w wielu formatach.
 
 ## <a name="see-also"></a>Zobacz też
 

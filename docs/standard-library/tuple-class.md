@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa krotki'
 title: tuple — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9beb3f263fa516d7d4096c404c135deffde6fc31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169025"
 ---
 # <a name="tuple-class"></a>tuple — Klasa
 
@@ -116,7 +117,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Przypisuje `tuple` obiekt.
 
@@ -198,7 +199,7 @@ int main()
 x 4
 ```
 
-## <a name="swap"></a><a name="tuple_swap"></a>wymiany
+## <a name="swap"></a><a name="tuple_swap"></a> wymiany
 
 Wymienia elementy dwóch krotek.
 
@@ -213,13 +214,13 @@ template <class... Types>
 Krotka, której elementy są wymieniane z tymi, które są z *prawej strony*.
 
 *Kliknij*\
-Krotka, której elementy są wymieniane z *pozostałymi*kolekcjami z lewej strony.
+Krotka, której elementy są wymieniane z *pozostałymi* kolekcjami z lewej strony.
 
 ### <a name="remarks"></a>Uwagi
 
 Funkcja jest wykonywana `left.swap(right)` .
 
-## <a name="tuple"></a><a name="tuple"></a>spoin
+## <a name="tuple"></a><a name="tuple"></a> spoin
 
 Konstruuje `tuple` obiekt.
 

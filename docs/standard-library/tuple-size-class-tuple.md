@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tuple_size Class;'
 title: Klasa tuple_size;
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e825acc02e27a8d0c1ae29e5bfcf4ac1e0a708b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168881"
 ---
 # <a name="tuple_size-class"></a>Klasa tuple_size;
 
-Zgłasza liczbę elementów, które zawiera `tuple`.
+Zgłasza liczbę elementów, które `tuple` zawiera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,31 +61,31 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *krotek*
+*Spoin*\
 Typ krotki.
 
-*Elem* \
+*Elem*\
 Typ elementów tablicy.
 
-@No__t_1 *rozmiaru*
+*Zmienia*\
 Rozmiar tablicy.
 
-@No__t_1 *T1*
+*Połączeń*\
 Typ pierwszego elementu członkowskiego pary.
 
-@No__t_1 *T2*
+*T2*\
 Typ drugiego elementu członkowskiego pary.
 
-*Typy* \
+*Typ*\
 Typy elementów krotki.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy ma `value` składową, która jest wyrażeniem stałej całkowitej, którego wartością jest zakres *spójnej kolekcji*typu krotki.
+Szablon klasy ma element członkowski `value` , który jest wyrażeniem stałej całkowitej, którego wartość jest zakresem *spójnej kolekcji* typu krotki.
 
-Specjalizacja szablonu dla tablic ma `value` elementu członkowskiego, który jest wyrażeniem stałej całkowitej, którego wartość to *size, czyli rozmiar tablicy*.
+Specjalizacja szablonu dla tablic ma element członkowski `value` , który jest wyrażeniem stałej całkowitej, którego wartość to *size*, czyli rozmiar tablicy.
 
-Specjalizacja szablonu dla pary ma `value` składową, która jest wyrażeniem stałej całkowitej, którego wartością jest 2.
+Specjalizacja szablonu dla pary ma element członkowski `value` , który jest wyrażeniem stałej całkowitej, którego wartością jest 2.
 
 ## <a name="example"></a>Przykład
 
@@ -117,10 +118,10 @@ int main()
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<tuple >
+**Nagłówek:**\<tuple>
 
-**Nagłówek:** \<array > (dla specjalizacji macierzy)
+**Nagłówek:** \<array> (dla specjalizacji macierzy)
 
-**Nagłówek:** \<utility > (dla specjalizacji par)
+**Nagłówek:** \<utility> (dla specjalizacji par)
 
 **Przestrzeń nazw:** std

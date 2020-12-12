@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _InterlockedCompareExchange funkcje wewnętrzne'
 title: Funkcje wewnętrzne _InterlockedCompareExchange
 ms.date: 09/02/2019
 f1_keywords:
@@ -48,16 +49,16 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 26dff1c902fff495d5efe45d8da10b1c5da72878
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 10788b5b4e8c8f7ee139dd8810149a49e8978f3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168192"
 ---
 # <a name="_interlockedcompareexchange-intrinsic-functions"></a>Funkcje wewnętrzne _InterlockedCompareExchange
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Umożliwia zablokowanie porównania i programu Exchange.
 
@@ -181,7 +182,7 @@ __int64 _InterlockedCompareExchange64_rel(
 *Punktu*\
 [in. out] Wskaźnik na wartość docelową. Znak jest ignorowany.
 
-*Zamian*\
+*Exchange*\
 podczas Wartość programu Exchange. Znak jest ignorowany.
 
 *Argument porównania określony*\
@@ -193,28 +194,28 @@ Wartość zwracana jest początkową wartością `Destination` wskaźnika.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM, ARM64|\<intrin.h>|
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|x64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
-`_InterlockedCompareExchange`wykonuje niepodzielną porównanie `Destination` wartości `Comparand` z wartością. Jeśli wartość jest równa `Comparand` wartości, `Exchange` wartość jest przechowywana w adresie określonym przez `Destination`. `Destination` W przeciwnym razie nie wykonuje żadnej operacji.
+`_InterlockedCompareExchange` wykonuje niepodzielną porównanie `Destination` wartości z `Comparand` wartością. Jeśli `Destination` wartość jest równa `Comparand` wartości, `Exchange` wartość jest przechowywana w adresie określonym przez `Destination` . W przeciwnym razie nie wykonuje żadnej operacji.
 
-`_InterlockedCompareExchange`zapewnia wewnętrzną obsługę kompilatora dla funkcji [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) Win32 Windows SDK.
+`_InterlockedCompareExchange` zapewnia wewnętrzną obsługę kompilatora dla funkcji [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) Win32 Windows SDK.
 
 Istnieją różne różnice `_InterlockedCompareExchange` , które różnią się w zależności od typów danych, których dotyczą, oraz od tego, czy używane są semantyki pozyskiwania, czy wydawania.
 
-Chociaż funkcja działa na wartościach Long Integer, `_InterlockedCompareExchange8` działa na wartościach 8-bitowych liczb `_InterlockedCompareExchange16` całkowitych, działa na krótkich `_InterlockedCompareExchange64` wartościach całkowitych i działa na 64-bitowych liczb całkowitych. `_InterlockedCompareExchange`
+Chociaż `_InterlockedCompareExchange` Funkcja działa na wartościach Long Integer, `_InterlockedCompareExchange8` działa na wartościach 8-bitowych liczb całkowitych, `_InterlockedCompareExchange16` działa na krótkich wartościach całkowitych i `_InterlockedCompareExchange64` działa na 64-bitowych liczb całkowitych.
 
 Na platformach ARM Użyj wewnętrznych z `_acq` i `_rel` sufiksów dla semantyki pozyskiwania i wydawania, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne ARM z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
 Elementy wewnętrzne z `_np` sufiksem ("No Fetch") uniemożliwiają wstawienie przez kompilator możliwej operacji pobierania z wyprzedzeniem.
 
-Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), `_HLEAcquire` wewnętrzne `_HLERelease` z i sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
+Na platformach firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy zawierają wskazówkę do procesora, który może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na platformach, które nie obsługują HLE, Wskazówka jest ignorowana.
 
 Te procedury są dostępne tylko jako elementy wewnętrzne.
 
@@ -432,10 +433,10 @@ int main(
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)\
 [Funkcje wewnętrzne _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
-[Keywords](../cpp/keywords-cpp.md)\
+[Służąc](../cpp/keywords-cpp.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

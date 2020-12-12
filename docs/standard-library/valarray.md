@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; valarray&gt;'
 title: '&lt;valarray&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7cc902a60a68f9cb667530dac76812d4a8e082be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168777"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -32,7 +33,7 @@ Te szablony i funkcje klasy są dozwolone nietypowej szerokości geograficznej w
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

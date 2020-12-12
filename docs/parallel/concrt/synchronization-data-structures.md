@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej na temat: struktury danych synchronizacji'
 title: Struktury danych synchronizacji
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 244aaac9bd40c83d0bbec3c360bdf7351da54baf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5e2e9e6d79f1e71a8f18f98d69fb794597d0ccb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169349"
 ---
 # <a name="synchronization-data-structures"></a>Struktury danych synchronizacji
 
 Środowisko uruchomieniowe współbieżności zapewnia kilka struktur danych, które pozwalają synchronizować dostęp do danych udostępnionych z wielu wątków. Te struktury danych są przydatne, gdy dane udostępnione są modyfikowane rzadko. Obiekt synchronizacji, na przykład sekcję krytyczną, powoduje, że inne wątki oczekują na dostęp do zasobu udostępnionego. W związku z tym, jeśli używasz takiego obiektu do synchronizowania dostępu do danych, które są często używane, możesz utracić skalowalność aplikacji. [Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) udostępnia klasę [concurrency::Binding](../../parallel/concrt/reference/combinable-class.md) , która umożliwia udostępnianie zasobu między kilkoma wątkami lub zadaniami bez konieczności synchronizacji. Aby uzyskać więcej informacji na temat `combinable` klasy, zobacz [Parallel Containers and Objects](../../parallel/concrt/parallel-containers-and-objects.md).
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 W tym temacie opisano szczegółowo następujące typy bloków komunikatów asynchronicznych:
 
@@ -27,7 +28,7 @@ W tym temacie opisano szczegółowo następujące typy bloków komunikatów asyn
 
 - [wydarzen](#event)
 
-## <a name="critical_section"></a><a name="critical_section"></a>critical_section
+## <a name="critical_section"></a><a name="critical_section"></a> critical_section
 
 Klasa [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) reprezentuje wspólny obiekt wykluczenia, który uzyskuje inne zadania, zamiast przekazywać je. Sekcje krytyczne są przydatne, gdy wiele wątków wymaga wyłącznego dostępu do odczytu i zapisu do udostępnionych danych.
 
@@ -45,7 +46,7 @@ W poniższej tabeli przedstawiono ważne metody, które są zdefiniowane przez `
 
 [[Top](#top)]
 
-## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a> reader_writer_lock
 
 Klasa [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) zapewnia bezpieczne dla wątków operacje odczytu/zapisu do udostępnionych danych. Użyj blokady czytnika/składnika zapisywania, gdy wiele wątków wymaga jednoczesnego dostępu do odczytu do zasobu udostępnionego, ale rzadko zapisuj w tym udostępnionym zasobie. Ta klasa daje tylko jeden wątek zapisu do obiektu w dowolnym momencie.
 
@@ -74,7 +75,7 @@ W poniższej tabeli przedstawiono ważne metody, które są zdefiniowane przez `
 
 [[Top](#top)]
 
-## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a>scoped_lock i scoped_lock_read
+## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a> scoped_lock i scoped_lock_read
 
 `critical_section`Klasy i `reader_writer_lock` udostępniają zagnieżdżone klasy pomocnicze, które upraszczają sposób pracy z obiektami wzajemnego wykluczania. Te klasy pomocnika są nazywane *blokadami objętymi zakresem*.
 
@@ -85,7 +86,7 @@ Blokady z zakresami zapewniają kilka korzyści, gdy pracujesz `critical_section
 > [!NOTE]
 > W przypadku korzystania z `critical_section::scoped_lock` klas, i nie należy ręcznie wydawania `reader_writer_lock::scoped_lock` `reader_writer_lock::scoped_lock_read` dostępu do podstawowego obiektu wykluczenia. Może to spowodować wystąpienie środowiska uruchomieniowego w nieprawidłowym stanie.
 
-## <a name="event"></a><a name="event"></a>wydarzen
+## <a name="event"></a><a name="event"></a> wydarzen
 
 Klasa [concurrency:: Event](../../parallel/concrt/reference/event-class.md) reprezentuje obiekt synchronizacji, którego stan może być sygnalizowane lub nie jest sygnałem. W przeciwieństwie do obiektów synchronizacji, takich jak sekcje krytyczne, których celem jest ochrona dostępu do danych udostępnionych, synchronizacja zdarzeń przebiegu wykonywania.
 

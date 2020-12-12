@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: uzyskiwanie dostępu do stanu pliku'
 title: Uzyskiwanie dostępu do stanu pliku
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 23c626940e700d3e9827ef6a7cf849d970e40d5d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: defff16ddfb8cb5321def898cad451f1e12f1f8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169531"
 ---
 # <a name="accessing-file-status"></a>Uzyskiwanie dostępu do stanu pliku
 
-`CFile`Program obsługuje również pobieranie stanu pliku, w tym tego, czy plik istnieje, Data utworzenia i modyfikacji oraz godziny, rozmiar logiczny i ścieżkę.
+`CFile` Program obsługuje również pobieranie stanu pliku, w tym tego, czy plik istnieje, Data utworzenia i modyfikacji oraz godziny, rozmiar logiczny i ścieżkę.
 
 ### <a name="to-get-file-status"></a>Aby pobrać stan pliku
 

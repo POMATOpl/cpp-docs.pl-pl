@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: uzyskiwanie dostępu do informacji o klasie Run-Time'
 title: Uzyskiwanie dostępu do informacji o klasie czasu wykonywania
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: a9f90640007f84c854d59cc27e0c38459c76fe46
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: fb5877a3ac6ece58ed46bde2b5fbdcc49db10351
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619199"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169479"
 ---
 # <a name="accessing-run-time-class-information"></a>Uzyskiwanie dostępu do informacji o klasie czasu wykonywania
 
@@ -30,7 +31,7 @@ W tym artykule wyjaśniono, jak uzyskać dostęp do informacji o klasie obiektu 
 > [!NOTE]
 > MFC nie używa obsługi [informacji o typie czasu wykonywania](../cpp/run-time-type-information.md) (RTTI) wprowadzonej w Visual C++ 4,0.
 
-Jeśli klasa pochodzi od [CObject](reference/cobject-class.md) i użyta zostanie **Deklaracja**$ _**Dynamic** i `IMPLEMENT_DYNAMIC` , `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` lub, lub `DECLARE_SERIAL` i i i, lub i i i, lub i i i i, lub i i i `IMPLEMENT_SERIAL` [Deriving a Class from CObject](deriving-a-class-from-cobject.md) `CObject` .
+Jeśli klasa pochodzi od [CObject](reference/cobject-class.md) i użyta zostanie **Deklaracja**$ _ **Dynamic** i `IMPLEMENT_DYNAMIC` , `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` lub, lub `DECLARE_SERIAL` i i i, lub i i i, lub i i i i, lub i i i `IMPLEMENT_SERIAL` [](deriving-a-class-from-cobject.md) `CObject` .
 
 Ta możliwość jest najbardziej przydatna, gdy jest potrzebne dodatkowe sprawdzanie typu argumentów funkcji, a kiedy trzeba pisać kod specjalnego przeznaczenia na podstawie klasy obiektu. Jednakże takie rozwiązanie nie jest zazwyczaj zalecane, ponieważ duplikuje funkcjonalność funkcji wirtualnych.
 
@@ -46,7 +47,7 @@ Rzadko trzeba będzie uzyskać bezpośredni dostęp do obiektu klasy uruchomieni
 
 #### <a name="to-use-the-iskindof-function"></a>Aby użyć funkcji IsKindOf
 
-1. Upewnij się, że Klasa ma obsługę klasy w czasie wykonywania. Oznacza to, że klasa musi być pochodna bezpośrednio lub pośrednio z `CObject` i była używana **Deklaracja**$ _**Dynamic** oraz `IMPLEMENT_DYNAMIC` , `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` lub i i, lub, lub i i i, lub i, lub i i, lub, lub i i i, lub, lub `DECLARE_SERIAL` i i i `IMPLEMENT_SERIAL` [Deriving a Class from CObject](deriving-a-class-from-cobject.md)
+1. Upewnij się, że Klasa ma obsługę klasy w czasie wykonywania. Oznacza to, że klasa musi być pochodna bezpośrednio lub pośrednio z `CObject` i była używana **Deklaracja**$ _ **Dynamic** oraz `IMPLEMENT_DYNAMIC` , `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` lub i i, lub, lub i i i, lub i, lub i i, lub, lub i i i, lub, lub `DECLARE_SERIAL` i i i `IMPLEMENT_SERIAL` [](deriving-a-class-from-cobject.md)
 
 1. Wywołaj `IsKindOf` funkcję członkowską dla obiektów tej klasy, używając `RUNTIME_CLASS` makra do wygenerowania `CRuntimeClass` argumentu, jak pokazano poniżej:
 
@@ -55,7 +56,7 @@ Rzadko trzeba będzie uzyskać bezpośredni dostęp do obiektu klasy uruchomieni
    [!code-cpp[NVC_MFCCObjectSample#5](codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
-    >  IsKindOf zwraca **wartość true** , jeśli obiekt jest elementem członkowskim określonej klasy lub klasą pochodną określonej klasy. `IsKindOf`Program nie obsługuje wielu dziedziczeń ani wirtualnych klas bazowych, ale w razie potrzeby można użyć wielokrotnego dziedziczenia dla pochodnych klas programu Microsoft Foundation.
+    >  IsKindOf zwraca **wartość true** , jeśli obiekt jest elementem członkowskim określonej klasy lub klasą pochodną określonej klasy. `IsKindOf` Program nie obsługuje wielu dziedziczeń ani wirtualnych klas bazowych, ale w razie potrzeby można użyć wielokrotnego dziedziczenia dla pochodnych klas programu Microsoft Foundation.
 
 Jednym z nich jest użycie informacji o klasie czasu wykonywania w dynamicznym tworzeniu obiektów. Ten proces jest omówiony w artykule [Tworzenie dynamicznego obiektu](dynamic-object-creation.md).
 

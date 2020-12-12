@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _interlockedbittestandreset funkcje wewnętrzne'
 title: funkcje wewnętrzne _interlockedbittestandreset
 ms.date: 09/02/2019
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-ms.openlocfilehash: 419d7f800d603a8beca5c8ccb0f9c8f8b3bfcfdb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 10bd636fb25d0f4025530f0bd7a8c3f877cc1556
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168218"
 ---
 # <a name="_interlockedbittestandreset-intrinsic-functions"></a>funkcje wewnętrzne _interlockedbittestandreset
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Generuje instrukcję, aby ustawić bit `b` adresu `a` na zero i zwrócić oryginalną wartość.
 
@@ -97,18 +98,18 @@ podczas Pozycja bitu do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Oryginalna wartość bitu na pozycji określonej przez `b`.
+Oryginalna wartość bitu na pozycji określonej przez `b` .
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
 |`_interlockedbittestandreset`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM, ARM64|\<intrin.h>|
 |`_interlockedbittestandreset64_acq`, `_interlockedbittestandreset64_nf`, `_interlockedbittestandreset64_rel`|ARM64|\<intrin.h>|
 |`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|
 |`_interlockedbittestandreset64`|x64, ARM64|\<intrin.h>|
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -116,13 +117,13 @@ W przypadku procesorów x86 i x64 te funkcje wewnętrzne wykorzystują `lock btr
 
 W przypadku procesorów ARM Użyj wewnętrznych z `_acq` i `_rel` sufiksów dla semantyki pozyskiwania i wydawania, na przykład na początku i na końcu sekcji krytycznej. Elementy wewnętrzne ARM z `_nf` sufiksem ("No ogrodzeni") nie działają jako bariera pamięci.
 
-W przypadku procesorów firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE) `_HLEAcquire` , `_HLERelease` wewnętrzne z i sufiksy zawierają wskazówkę procesora, która może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na procesorach, które nie obsługują HLE, Wskazówka jest ignorowana.
+W przypadku procesorów firmy Intel, które obsługują instrukcje dotyczące blokowania sprzętowego dla koprocedury (HLE), wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy zawierają wskazówkę procesora, która może przyspieszyć działanie, eliminując krok blokady zapisu sprzętu. Jeśli te elementy wewnętrzne są wywoływane na procesorach, które nie obsługują HLE, Wskazówka jest ignorowana.
 
 Te procedury są dostępne tylko jako elementy wewnętrzne.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

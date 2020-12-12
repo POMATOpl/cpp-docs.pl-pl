@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _variant_t:: ChangeType'
 title: _variant_t::ChangeType
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 32ce43f1d9afb388c97e5271927113c71d31bb92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116629"
 ---
 # <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
 **Specyficzne dla firmy Microsoft**
 
-Zmienia typ obiektu `_variant_t` na wskazany `VARTYPE`.
+Zmienia typ `_variant_t` obiektu na wskazany `VARTYPE` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,17 +34,17 @@ void ChangeType(
 
 #### <a name="parameters"></a>Parametry
 
-*Vartype*<br/>
-Dla `VARTYPE` tego `_variant_t` obiektu.
+*VARTYPE*<br/>
+`VARTYPE`Dla tego `_variant_t` obiektu.
 
-*Psrc*<br/>
-Wskaźnik do `_variant_t` obiektu, który ma zostać przekonwertowany. Jeśli ta wartość ma wartość NULL, konwersja odbywa się na miejscu.
+*pSrc*<br/>
+Wskaźnik do `_variant_t` obiektu do przekonwertowania. Jeśli ta wartość jest RÓWNa NULL, konwersja jest wykonywana na miejscu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu `_variant_t` członkowskiego konwertuje `VARTYPE`obiekt na wskazany . Jeśli *pSrc* ma wartość NULL, konwersja `_variant_t` odbywa się na miejscu, w przeciwnym razie ten obiekt jest kopiowany z *pSrc,* a następnie konwertowany.
+Ta funkcja członkowska konwertuje `_variant_t` obiekt na wskazany `VARTYPE` . Jeśli *pSrc* ma wartość null, konwersja jest wykonywana, w przeciwnym razie ten `_variant_t` obiekt jest kopiowany z *pSrc* , a następnie konwertowany.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
