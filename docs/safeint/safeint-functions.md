@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje SafeInt'
 title: SafeInt — Funkcje
 ms.date: 06/23/2020
 ms.topic: reference
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0dc195742b4f848dd6f05bae1537dc0a4fa5ead5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149607"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
 
@@ -68,7 +69,7 @@ Sekcja                                                  | Opis
 [SafeInt](safeint-class.md)                   | `SafeInt`Klasa.
 [SafeIntException](safeintexception-class.md) | Klasa wyjątku określona dla biblioteki SafeInt.
 
-## <a name="safeadd"></a><a name="safeadd"></a>SafeAdd
+## <a name="safeadd"></a><a name="safeadd"></a> SafeAdd
 
 Dodaje dwie liczby w sposób chroniący przed przepełnieniem.
 
@@ -96,7 +97,7 @@ określoną Parametr, w którym `SafeAdd` jest przechowywany wynik.
 
 **`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
-## <a name="safecast"></a><a name="safecast"></a>SafeCast
+## <a name="safecast"></a><a name="safecast"></a> SafeCast
 
 Rzutuje jeden typ liczby na inny typ.
 
@@ -120,7 +121,7 @@ określoną Odwołanie do nowego typu numeru. Musi to być typ `U` .
 
 **`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
-## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
+## <a name="safedivide"></a><a name="safedivide"></a> SafeDivide
 
 Dzieli dwie liczby w sposób chroniący przed dzieleniem przez zero.
 
@@ -148,7 +149,7 @@ określoną Parametr, w którym `SafeDivide` jest przechowywany wynik.
 
 **`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
-## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
+## <a name="safeequals"></a><a name="safeequals"></a> SafeEquals
 
 Porównuje dwie liczby, aby określić, czy są równe.
 
@@ -176,7 +177,7 @@ podczas Druga liczba do porównania. Musi to być typ U.
 
 Metoda jest ulepszona, `==` ponieważ `SafeEquals` umożliwia porównanie dwóch różnych typów liczb.
 
-## <a name="safegreaterthan"></a><a name="safegreaterthan"></a>SafeGreaterThan
+## <a name="safegreaterthan"></a><a name="safegreaterthan"></a> SafeGreaterThan
 
 Porównuje dwie liczby.
 
@@ -202,9 +203,9 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="remarks"></a>Uwagi
 
-`SafeGreaterThan`rozszerza operator porównania regularnego, umożliwiając porównanie dwóch różnych typów liczb.
+`SafeGreaterThan` rozszerza operator porównania regularnego, umożliwiając porównanie dwóch różnych typów liczb.
 
-## <a name="safegreaterthanequals"></a><a name="safegreaterthanequals"></a>SafeGreaterThanEquals
+## <a name="safegreaterthanequals"></a><a name="safegreaterthanequals"></a> SafeGreaterThanEquals
 
 Porównuje dwie liczby.
 
@@ -230,9 +231,9 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="remarks"></a>Uwagi
 
-`SafeGreaterThanEquals`zwiększa standardowy operator porównania, ponieważ umożliwia porównanie dwóch różnych typów liczb.
+`SafeGreaterThanEquals` zwiększa standardowy operator porównania, ponieważ umożliwia porównanie dwóch różnych typów liczb.
 
-## <a name="safelessthan"></a><a name="safelessthan"></a>SafeLessThan
+## <a name="safelessthan"></a><a name="safelessthan"></a> SafeLessThan
 
 Określa, czy jedna liczba jest mniejsza od innej.
 
@@ -260,7 +261,7 @@ podczas Druga liczba. Musi to być typ `U` .
 
 Ta metoda podnosi standardowy operator porównania, ponieważ `SafeLessThan` umożliwia porównanie dwóch różnych typów liczby.
 
-## <a name="safelessthanequals"></a><a name="safelessthanequals"></a>SafeLessThanEquals
+## <a name="safelessthanequals"></a><a name="safelessthanequals"></a> SafeLessThanEquals
 
 Porównuje dwie liczby.
 
@@ -286,9 +287,9 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="remarks"></a>Uwagi
 
-`SafeLessThanEquals`rozszerza operator porównania regularnego, umożliwiając porównanie dwóch różnych typów liczb.
+`SafeLessThanEquals` rozszerza operator porównania regularnego, umożliwiając porównanie dwóch różnych typów liczb.
 
-## <a name="safemodulus"></a><a name="safemodulus"></a>SafeModulus
+## <a name="safemodulus"></a><a name="safemodulus"></a> SafeModulus
 
 Wykonuje operację modułu dla dwóch liczb.
 
@@ -316,7 +317,7 @@ określoną Parametr, w którym `SafeModulus` jest przechowywany wynik.
 
 **`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
-## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
+## <a name="safemultiply"></a><a name="safemultiply"></a> SafeMultiply
 
 Mnoży dwie liczby jednocześnie w sposób chroniący przed przepełnieniem.
 
@@ -344,7 +345,7 @@ określoną Parametr, w którym `SafeMultiply` jest przechowywany wynik.
 
 **`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
-## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
+## <a name="safenotequals"></a><a name="safenotequals"></a> SafeNotEquals
 
 Określa, czy dwie liczby nie są równe.
 
@@ -372,7 +373,7 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 Metoda jest ulepszona, `!=` ponieważ `SafeNotEquals` umożliwia porównanie dwóch różnych typów liczb.
 
-## <a name="safesubtract"></a><a name="safesubtract"></a>SafeSubtract
+## <a name="safesubtract"></a><a name="safesubtract"></a> SafeSubtract
 
 Odejmuje dwie liczby w sposób chroniący przed przepełnieniem.
 

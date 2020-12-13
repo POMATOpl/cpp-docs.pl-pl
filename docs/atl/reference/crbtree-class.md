@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CRBTree'
 title: Klasa CRBTree
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,16 +28,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 7b8e47b5cd0ac278711947abc867956333371be3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3c45c8b05429ba75905912d76f87605a07ff49e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140975"
 ---
 # <a name="crbtree-class"></a>Klasa CRBTree
 
-Ta klasa zawiera metody tworzenia i używania czarnego drzewa.
+Ta klasa zawiera metody tworzenia i używania drzewa Red-Black.
 
 ## <a name="syntax"></a>Składnia
 
@@ -108,7 +109,7 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ## <a name="remarks"></a>Uwagi
 
-Drzewo z czerwonym czarnym jest drzewem wyszukiwania binarnego, które używa dodatkowej ilości informacji na węzeł, aby upewnić się, że pozostaje "Zrównoważona", czyli wysokość drzewa nie rośnie proporcjonalnie do wydajności.
+Drzewo Red-Black to binarne drzewo wyszukiwania, które używa dodatkowych informacji na węzeł, aby upewnić się, że nie jest to "zrównoważone", czyli wysokość drzewa nie rośnie proporcjonalnie do wydajności.
 
 Ta klasa szablonu została zaprojektowana tak, aby była używana przez [CRBMap](../../atl/reference/crbmap-class.md) i [CRBMultiMap](../../atl/reference/crbmultimap-class.md). Większość metod, które składają się na te klasy pochodne, jest udostępnianych przez `CRBTree` .
 
@@ -188,7 +189,7 @@ Wartość pozycji.
 *głównych*<br/>
 Zmienna, która otrzymuje klucz.
 
-*wartościami*<br/>
+*wartość*<br/>
 Zmienna, która otrzymuje wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -291,7 +292,7 @@ Licznik pozycji zwrócony przez poprzednie wywołanie metod, takich jak [CRBTree
 *głównych*<br/>
 Parametr szablonu określający typ klucza drzewa.
 
-*wartościami*<br/>
+*wartość*<br/>
 Parametr szablonu określający typ wartości drzewa.
 
 ### <a name="remarks"></a>Uwagi
@@ -467,7 +468,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 *Terminal*<br/>
 Licznik pozycji zwrócony przez poprzednie wywołanie metod, takich jak [CRBTree:: GetHeadPosition](#getheadposition) lub [CRBTree:: FindFirstKeyAfter](#findfirstkeyafter).
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która ma zostać dodana do `CRBTree` obiektu.
 
 ### <a name="remarks"></a>Uwagi

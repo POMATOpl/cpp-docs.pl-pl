@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IViewObjectExImpl'
 title: Klasa IViewObjectExImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 59c5657dcd892544f7e790b52325cb9ecba0dd56
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16b6f4a94635410f777e5c34e794ca425d38c466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139103"
 ---
 # <a name="iviewobjecteximpl-class"></a>Klasa IViewObjectExImpl
 
-Ta klasa `IUnknown` implementuje i udostępnia domyślne implementacje interfejsów [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)i [IViewObjectEx.](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex)
+Ta klasa implementuje `IUnknown` i udostępnia domyślne implementacje interfejsów [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)i [IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) .
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,7 +48,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Twoja klasa, pochodząca od `IViewObjectExImpl`.
+Klasa, która pochodzi od `IViewObjectExImpl` .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -55,22 +56,22 @@ Twoja klasa, pochodząca od `IViewObjectExImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IViewObjectExImpl::Draw](#draw)|Rysuje reprezentację formantu w kontekście urządzenia.|
-|[IViewObjectExImpl::Freeze](#freeze)|Zawiesza narysowaną reprezentację formantu, aby nie `Unfreeze`zmieniał się do momentu. Implementacja ATL zwraca E_NOTIMPL.|
-|[IViewObjectExImpl::GetAdvise](#getadvise)|Pobiera istniejące połączenie ujścia doradczego na formancie, jeśli istnieje.|
+|[IViewObjectExImpl::D RAW](#draw)|Rysuje reprezentację formantu do kontekstu urządzenia.|
+|[IViewObjectExImpl:: Zablokuj](#freeze)|Blokuje narysowanej reprezentację kontrolki, aby nie zmieniła się do `Unfreeze` . Implementacja ATL zwraca E_NOTIMPL.|
+|[IViewObjectExImpl:: GetAdvise](#getadvise)|Pobiera istniejące, doradcze połączenie ujścia w kontrolce, jeśli istnieje.|
 |[IViewObjectExImpl::GetColorSet](#getcolorset)|Zwraca paletę logiczną używaną przez formant do rysowania. Implementacja ATL zwraca E_NOTIMPL.|
-|[IViewObjectExImpImpl::GetExtent](#getextent)|Pobiera rozmiar wyświetlania formantu w jednostkach HIMETRIC (0,01 milimetra na jednostkę) z elementu danych klasy kontrolnej [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).|
-|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Zawiera wskazówki dotyczące rozmiaru z kontenera dla obiektu do użycia, gdy użytkownik go zmienić rozmiar.|
-|[IViewObjectExImpl::GetRect](#getrect)|Zwraca prostokąt opisujący żądany aspekt rysunku. Implementacja ATL zwraca E_NOTIMPL.|
-|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Zwraca informacje o krycie obiektu i jakie aspekty rysunku są obsługiwane.|
-|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Sprawdza, czy określony punkt znajduje się w określonym prostokącie `pHitResult`i zwraca wartość [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) w pliku .|
-|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Sprawdza, czy prostokąt wyświetlania formantu nakłada się na dowolny punkt w określonym prostokącie lokalizacji i zwraca wartość HITRESULT w `pHitResult`pliku .|
-|[IViewObjectExImpl::SetAdvise](#setadvise)|Konfiguruje połączenie między formantem a doradzić sink więc ujście można powiadomić o zmianach w widoku formantu.|
-|[IViewObjectExImpl::Odblokuj](#unfreeze)|Odmrożenia narysowanej reprezentacji formantu. Implementacja ATL zwraca E_NOTIMPL.|
+|[IViewObjectExImpl:: getzakres](#getextent)|Pobiera rozmiar wyświetlania kontrolki w jednostkach HIMETRIC (0,01 milimetr na jednostkę) z elementu członkowskiego danych klasy sterowania [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).|
+|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Zapewnia wskazówki dotyczące ustalania rozmiaru z kontenera dla obiektu, który ma być używany, gdy użytkownik zmienia jego rozmiar.|
+|[IViewObjectExImpl:: getRect](#getrect)|Zwraca prostokąt opisujący żądany aspekt rysowania. Implementacja ATL zwraca E_NOTIMPL.|
+|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Zwraca informacje o nieprzezroczystości obiektu oraz o tym, jakie aspekty rysowania są obsługiwane.|
+|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Sprawdza, czy określony punkt znajduje się w określonym prostokącie i zwraca wartość [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) w elemencie `pHitResult` .|
+|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Sprawdza, czy prostokąt wyświetlania kontrolki nakłada się na wszystkie punkty w określonym prostokącie lokalizacji i zwraca wartość HITRESULT w `pHitResult` .|
+|[IViewObjectExImpl:: SetAdvise](#setadvise)|Konfiguruje połączenie między formantem a obiektem powiadamiającym, dzięki czemu można powiadomić ujścia o zmianach w widoku kontrolki.|
+|[IViewObjectExImpl:: unfree](#unfreeze)|Odblokowuje narysowanej reprezentację formantu. Implementacja ATL zwraca E_NOTIMPL.|
 
 ## <a name="remarks"></a>Uwagi
 
-Interfejsy [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)i [IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) umożliwiają formantowi wyświetlanie się bezpośrednio oraz tworzenie i zarządzanie doradzić zlewu, aby powiadomić kontener o zmianach na ekranie sterowania. Interfejs `IViewObjectEx` zapewnia obsługę rozszerzonych funkcji sterowania, takich jak rysowanie bez migotania, nie prostokątne i przezroczyste formanty oraz testowanie trafień (na przykład, jak blisko kliknięcia myszą należy wziąć pod uwagę w formancie). Klasa `IViewObjectExImpl` zapewnia domyślną implementację tych `IUnknown` interfejsów i implementuje przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
+Interfejsy [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)i [IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) umożliwiają kontrolce wyświetlanie samego siebie bezpośrednio oraz tworzenie i zarządzanie ujściam doradzania w celu powiadomienia kontenera zmian w formancie. `IViewObjectEx`Interfejs zapewnia obsługę funkcji rozszerzonej kontroli, takich jak rysowanie bez migotania, kontrolki nieprostokątne i przezroczyste oraz testy trafień (na przykład jak blisko kliknięcia myszą należy wziąć pod uwagę w formancie). Klasa `IViewObjectExImpl` udostępnia domyślną implementację tych interfejsów i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -80,11 +81,11 @@ Interfejsy [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IVie
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-## <a name="iviewobjecteximpldraw"></a><a name="draw"></a>IViewObjectExImpl::Draw
+## <a name="iviewobjecteximpldraw"></a><a name="draw"></a> IViewObjectExImpl::D RAW
 
-Rysuje reprezentację formantu w kontekście urządzenia.
+Rysuje reprezentację formantu do kontekstu urządzenia.
 
 ```
 STDMETHOD(Draw)(
@@ -101,13 +102,13 @@ STDMETHOD(Draw)(
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda `CComControl::OnDrawAdvanced` wywołuje, co z kolei `OnDraw` wywołuje metodę klasy kontroli. Metoda `OnDraw` jest automatycznie dodawana do klasy sterowania podczas tworzenia formantu za pomocą Kreatora sterowania ATL. Domyślnie `OnDraw` Kreator rysuje prostokąt z etykietą "ATL 3.0".
+Ta metoda wywołuje `CComControl::OnDrawAdvanced` , która z kolei wywołuje metodę klasy formantu `OnDraw` . `OnDraw`Metoda jest automatycznie dodawana do klasy formantów podczas tworzenia kontrolki za pomocą Kreatora kontrolki ATL. Domyślny Kreator `OnDraw` rysuje prostokąt z etykietą "ATL 3,0".
 
-Zobacz [IViewObject::Draw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) w windows SDK.
+Zobacz [Widok IViewObject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) w Windows SDK.
 
-## <a name="iviewobjecteximplfreeze"></a><a name="freeze"></a>IViewObjectExImpl::Freeze
+## <a name="iviewobjecteximplfreeze"></a><a name="freeze"></a> IViewObjectExImpl:: Zablokuj
 
-Zawiesza narysowaną reprezentację formantu, aby nie `Unfreeze`zmieniał się do momentu. Implementacja ATL zwraca E_NOTIMPL.
+Blokuje narysowanej reprezentację kontrolki, aby nie zmieniła się do `Unfreeze` . Implementacja ATL zwraca E_NOTIMPL.
 
 ```
 STDMETHOD(Freeze)(
@@ -119,11 +120,11 @@ STDMETHOD(Freeze)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IViewObject::Freeze](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze) w windows SDK.
+Zobacz [Widok IViewObject:: Zablokuj](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze) w Windows SDK.
 
-## <a name="iviewobjecteximplgetadvise"></a><a name="getadvise"></a>IViewObjectExImpl::GetAdvise
+## <a name="iviewobjecteximplgetadvise"></a><a name="getadvise"></a> IViewObjectExImpl:: GetAdvise
 
-Pobiera istniejące połączenie ujścia doradczego na formancie, jeśli istnieje.
+Pobiera istniejące, doradcze połączenie ujścia w kontrolce, jeśli istnieje.
 
 ```
 STDMETHOD(GetAdvise)(
@@ -134,11 +135,11 @@ STDMETHOD(GetAdvise)(
 
 ### <a name="remarks"></a>Uwagi
 
-Ujście doradcze jest przechowywane w elementów członkowskich danych klasy kontrolnej [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).
+Obiekt sink doradcy jest przechowywany w elemencie członkowskim danych klasy kontrolki [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).
 
-Zobacz [IViewObject::GetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise) w windows SDK.
+Zobacz [Widok IViewObject:: GetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise) w Windows SDK.
 
-## <a name="iviewobjecteximplgetcolorset"></a><a name="getcolorset"></a>IViewObjectExImpl::GetColorSet
+## <a name="iviewobjecteximplgetcolorset"></a><a name="getcolorset"></a> IViewObjectExImpl::GetColorSet
 
 Zwraca paletę logiczną używaną przez formant do rysowania. Implementacja ATL zwraca E_NOTIMPL.
 
@@ -154,11 +155,11 @@ STDMETHOD(GetColorSet)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IViewObject::GetColorSet](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset) w zestawie Windows SDK.
+Zobacz [Widok IViewObject:: GetColorSet](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset) w Windows SDK.
 
-## <a name="iviewobjecteximplgetextent"></a><a name="getextent"></a>IViewObjectExImpImpl::GetExtent
+## <a name="iviewobjecteximplgetextent"></a><a name="getextent"></a> IViewObjectExImpl:: getzakres
 
-Pobiera rozmiar wyświetlania formantu w jednostkach HIMETRIC (0,01 milimetra na jednostkę) z elementu danych klasy kontrolnej [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
+Pobiera rozmiar wyświetlania kontrolki w jednostkach HIMETRIC (0,01 milimetr na jednostkę) z elementu członkowskiego danych klasy sterowania [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
 
 ```
 STDMETHOD(GetExtent)(
@@ -170,11 +171,11 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IViewObject2::GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) w windows SDK.
+Zobacz [IViewObject2:: getzakres](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) w Windows SDK.
 
-## <a name="iviewobjecteximplgetnaturalextent"></a><a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent
+## <a name="iviewobjecteximplgetnaturalextent"></a><a name="getnaturalextent"></a> IViewObjectExImpl::GetNaturalExtent
 
-Zawiera wskazówki dotyczące rozmiaru z kontenera dla obiektu do użycia, gdy użytkownik go zmienić rozmiar.
+Zapewnia wskazówki dotyczące ustalania rozmiaru z kontenera dla obiektu, który ma być używany, gdy użytkownik zmienia jego rozmiar.
 
 ```
 STDMETHOD(GetNaturalExtent)(
@@ -188,13 +189,13 @@ STDMETHOD(GetNaturalExtent)(
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `dwAspect` jest DVASPECT_CONTENT i *pExtentInfo->dwExtentMode* jest DVEXTENT_CONTENT, ustawia `psizel` * do elementu członkowskiego danych klasy kontrolnej [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). W przeciwnym razie zwraca błąd HRESULT.
+Jeśli `dwAspect` jest DVASPECT_CONTENT i *pExtentInfo->dwExtentMode* jest DVEXTENT_CONTENT, ustawia * `psizel` do składowej danych klasy formantu [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). W przeciwnym razie zwraca błąd HRESULT.
 
-Zobacz [IViewObjectEx::GetNaturalExtent](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) w windows SDK.
+Zobacz [IViewObjectEx:: GetNaturalExtent](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) w Windows SDK.
 
-## <a name="iviewobjecteximplgetrect"></a><a name="getrect"></a>IViewObjectExImpl::GetRect
+## <a name="iviewobjecteximplgetrect"></a><a name="getrect"></a> IViewObjectExImpl:: getRect
 
-Zwraca prostokąt opisujący żądany aspekt rysunku. Implementacja ATL zwraca E_NOTIMPL.
+Zwraca prostokąt opisujący żądany aspekt rysowania. Implementacja ATL zwraca E_NOTIMPL.
 
 ```
 STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
@@ -202,11 +203,11 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IViewObjectEx::GetRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect) w windows SDK.
+Zobacz [IViewObjectEx:: getRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect) w Windows SDK.
 
-## <a name="iviewobjecteximplgetviewstatus"></a><a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus
+## <a name="iviewobjecteximplgetviewstatus"></a><a name="getviewstatus"></a> IViewObjectExImpl::GetViewStatus
 
-Zwraca informacje o krycie obiektu i jakie aspekty rysunku są obsługiwane.
+Zwraca informacje o nieprzezroczystości obiektu oraz o tym, jakie aspekty rysowania są obsługiwane.
 
 ```
 STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
@@ -214,13 +215,13 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ATL `pdwStatus` ustawia, aby wskazać, że formant obsługuje VIEWSTATUS_OPAQUE (możliwe wartości znajdują się w [wyliczeniu VIEWSTATUS).](/windows/win32/api/ocidl/ne-ocidl-viewstatus)
+Domyślnie zestawy ATL `pdwStatus` wskazują, że kontrolka obsługuje VIEWSTATUS_OPAQUE (możliwe wartości są w wyliczeniu [podwójne](/windows/win32/api/ocidl/ne-ocidl-viewstatus) ).
 
-Zobacz [IViewObjectEx::GetViewStatus](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) w zestawie Windows SDK.
+Zobacz [IViewObjectEx:: GetViewStatus](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) w Windows SDK.
 
-## <a name="iviewobjecteximplqueryhitpoint"></a><a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint
+## <a name="iviewobjecteximplqueryhitpoint"></a><a name="queryhitpoint"></a> IViewObjectExImpl::QueryHitPoint
 
-Sprawdza, czy określony punkt znajduje się w określonym prostokącie `pHitResult`i zwraca wartość [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) w pliku .
+Sprawdza, czy określony punkt znajduje się w określonym prostokącie i zwraca wartość [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) w elemencie `pHitResult` .
 
 ```
 STDMETHOD(QueryHitPoint)(
@@ -235,13 +236,13 @@ STDMETHOD(QueryHitPoint)(
 
 Wartość może być HITRESULT_HIT lub HITRESULT_OUTSIDE.
 
-Jeśli `dwAspect` [jest równa DVASPECT_CONTENT,](/windows/win32/api/wtypes/ne-wtypes-dvaspect)metoda zwraca S_OK. W przeciwnym razie metoda zwraca E_FAIL.
+Jeśli `dwAspect` jest równe [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), metoda zwraca S_OK. W przeciwnym razie metoda zwraca E_FAIL.
 
-Zobacz [IViewObjectEx::QueryHitPoint](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) w windows SDK.
+Zobacz [IViewObjectEx:: QueryHitPoint](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) w Windows SDK.
 
-## <a name="iviewobjecteximplqueryhitrect"></a><a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect
+## <a name="iviewobjecteximplqueryhitrect"></a><a name="queryhitrect"></a> IViewObjectExImpl::QueryHitRect
 
-Sprawdza, czy prostokąt wyświetlania formantu nakłada się na dowolny punkt w określonym prostokącie lokalizacji i zwraca wartość [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) w `pHitResult`pliku .
+Sprawdza, czy prostokąt wyświetlania kontrolki nakłada się na wszystkie punkty w określonym prostokącie lokalizacji i zwraca wartość [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) w `pHitResult` .
 
 ```
 STDMETHOD(QueryHitRect)(
@@ -256,13 +257,13 @@ STDMETHOD(QueryHitRect)(
 
 Wartość może być HITRESULT_HIT lub HITRESULT_OUTSIDE.
 
-Jeśli `dwAspect` [jest równa DVASPECT_CONTENT,](/windows/win32/api/wtypes/ne-wtypes-dvaspect)metoda zwraca S_OK. W przeciwnym razie metoda zwraca E_FAIL.
+Jeśli `dwAspect` jest równe [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), metoda zwraca S_OK. W przeciwnym razie metoda zwraca E_FAIL.
 
-Zobacz [IViewObjectEx::QueryHitRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) w windows SDK.
+Zobacz [IViewObjectEx:: QueryHitRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) w Windows SDK.
 
-## <a name="iviewobjecteximplsetadvise"></a><a name="setadvise"></a>IViewObjectExImpl::SetAdvise
+## <a name="iviewobjecteximplsetadvise"></a><a name="setadvise"></a> IViewObjectExImpl:: SetAdvise
 
-Konfiguruje połączenie między formantem a doradzić sink więc ujście można powiadomić o zmianach w widoku formantu.
+Konfiguruje połączenie między formantem a obiektem powiadamiającym, dzięki czemu można powiadomić ujścia o zmianach w widoku kontrolki.
 
 ```
 STDMETHOD(SetAdvise)(
@@ -273,13 +274,13 @@ STDMETHOD(SetAdvise)(
 
 ### <a name="remarks"></a>Uwagi
 
-Wskaźnik do interfejsu [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) na zlewie doradzania jest przechowywany w elementów członkowskich danych klasy kontrolnej [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
+Wskaźnik do interfejsu [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) w ujściach doradzania jest przechowywany w klasie danych klasy sterowania [CComControlBase:: m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
 
-Zobacz [IViewObject::SetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise) w zestawie Windows SDK.
+Zobacz [Widok IViewObject:: SetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise) w Windows SDK.
 
-## <a name="iviewobjecteximplunfreeze"></a><a name="unfreeze"></a>IViewObjectExImpl::Odblokuj
+## <a name="iviewobjecteximplunfreeze"></a><a name="unfreeze"></a> IViewObjectExImpl:: unfree
 
-Odmrożenia narysowanej reprezentacji formantu. Implementacja ATL zwraca E_NOTIMPL.
+Odblokowuje narysowanej reprezentację formantu. Implementacja ATL zwraca E_NOTIMPL.
 
 ```
 STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
@@ -287,9 +288,9 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IViewObject::Odblokowuj](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze) w windows SDK.
+Zobacz [Widok IViewObject:: unfree](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze) in Windows SDK.
 
-## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::Zamknijhandle
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a> IWorkerThreadClient:: CloseHandle
 
 Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.
 
@@ -299,26 +300,26 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>Parametry
 
-*hRejsz*<br/>
-Uchwyt do zamknięcia.
+*hHandle*<br/>
+Uchwyt, który ma zostać zamknięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Powrót S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwróć S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Dojście przekazane do tej metody zostało wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Dojście przesłane do tej metody zostało wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod przedstawia prostą implementację programu `IWorkerThreadClient::CloseHandle`.
+Poniższy kod pokazuje prostą implementację programu `IWorkerThreadClient::CloseHandle` .
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]
 
-## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient::Wykonaj
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a> IWorkerThreadClient:: Execute
 
-Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem staje się sygnalizowane.
+Zaimplementuj tę metodę, aby wykonać kod, gdy dojście skojarzone z tym obiektem zostanie zasygnalizowane.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -326,30 +327,30 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametry
 
-*dwParam (polski)*<br/>
+*dwParam*<br/>
 Parametr użytkownika.
 
-*hObiekt*<br/>
-Uchwyt, który stał się sygnalizowany.
+*hObject*<br/>
+Uchwyt, który został zasygnalizowani.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Powrót S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwróć S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Dojście i DWORD/pointer przekazane do tej metody były wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Dojście i wskaźnik DWORD przekazano do tej metody, które zostały wcześniej skojarzone z tym obiektem przez wywołanie [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Przykład
 
-Poniższy kod przedstawia prostą implementację programu `IWorkerThreadClient::Execute`.
+Poniższy kod pokazuje prostą implementację programu `IWorkerThreadClient::Execute` .
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iviewobjecteximpl-class_2.cpp)]
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Interfejsy sterowania ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
+[Interfejsy formantów ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
 [Samouczek](../../atl/active-template-library-atl-tutorial.md)<br/>
 [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

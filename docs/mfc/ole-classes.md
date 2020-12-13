@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy OLE'
 title: Klasy OLE
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96b3a45b60a1b229daa73e4f896a867ec4921715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150179"
 ---
 # <a name="ole-classes"></a>Klasy OLE
 
@@ -34,15 +35,15 @@ Następujące kategorie klas obsługują kontrolki ActiveX:
 
 - [Klasy kontenerów OLE](ole-container-classes.md)
 
-- [Klasy serwerów OLE](ole-server-classes.md)
+- [Klasy serwera OLE](ole-server-classes.md)
 
-- [Klasy przeciągania i upuszczania oraz transferów danych OLE](ole-drag-and-drop-and-data-transfer-classes.md)
+- [Klasy przeciągania i upuszczania OLE oraz Transfer danych](ole-drag-and-drop-and-data-transfer-classes.md)
 
 - [Klasy wspólnych okien dialogowych OLE](ole-common-dialog-classes.md)
 
 - [Klasy automatyzacji OLE](ole-automation-classes.md)
 
-- [Klasy formantów OLE](ole-control-classes.md)
+- [Klasy kontrolek OLE](ole-control-classes.md)
 
 - [Klasy dokumentów aktywnych](active-document-classes.md)
 

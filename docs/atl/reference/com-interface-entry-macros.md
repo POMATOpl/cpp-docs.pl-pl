@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: makra COM_INTERFACE_ENTRY'
 title: Makra wpisów interfejsu COM
 ms.date: 03/28/2017
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 1358a51f6bcb65f9c54c2006a6a467cf96593b5f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0564c1e4ba6b9778865442d281453ff3a4a56d7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141365"
 ---
 # <a name="com_interface_entry-macros"></a>Makra COM_INTERFACE_ENTRY
 

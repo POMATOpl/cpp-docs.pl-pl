@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje globalne rejestru i biblioteki typów'
 title: Rejestr i funkcje globalne biblioteki typów
 ms.date: 03/27/2019
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 0f29f8cac62a7452781e8fde697cdf992db00b8c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d7420dbbb472f1fc8b01329e9ded4c887e2bd71d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138891"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Rejestr i funkcje globalne biblioteki typów
 
@@ -77,7 +78,7 @@ S_OK, jeśli metoda zakończy się pomyślnie, w przeciwnym razie kod błędu HR
 
 ### <a name="remarks"></a>Uwagi
 
-Przekierowywanie rejestru nie jest domyślnie włączone. Po włączeniu tej opcji dostęp do rejestru zostanie przekierowany do **HKEY_CURRENT_USER \software\classes**.
+Przekierowywanie rejestru nie jest domyślnie włączone. Po włączeniu tej opcji dostęp do rejestru zostanie przekierowany do **HKEY_CURRENT_USER\Software\Classes**.
 
 Przekierowanie nie jest globalne. Przekierowanie rejestru ma wpływ tylko na platformy MFC i ATL.
 
@@ -309,7 +310,7 @@ S_OK, jeśli metoda zakończy się pomyślnie, w przeciwnym razie kod błędu HR
 
 ### <a name="remarks"></a>Uwagi
 
-Przekierowywanie rejestru nie jest domyślnie włączone. Po włączeniu tej opcji dostęp do rejestru zostanie przekierowany do **HKEY_CURRENT_USER \software\classes**.
+Przekierowywanie rejestru nie jest domyślnie włączone. Po włączeniu tej opcji dostęp do rejestru zostanie przekierowany do **HKEY_CURRENT_USER\Software\Classes**.
 
 Przekierowanie nie jest globalne. Przekierowanie rejestru ma wpływ tylko na platformy MFC i ATL.
 

@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej o programie: używanie kafelków'
 title: Użycie fragmentów
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: edef9154b0c4da6f53c8ac40ee84e55e9b38a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6277faf867cd64e5ea0e4503bb36f8e1d4a8bc74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150166"
 ---
 # <a name="using-tiles"></a>Użycie fragmentów
 
 Możesz użyć dzielenia, aby zmaksymalizować przyspieszenie aplikacji. Dzielenie dzieli wątki na równe prostokątne podzestawy lub *kafelki*. Jeśli używasz odpowiedniego rozmiaru kafelka i algorytmu wieloskładnikowego, możesz uzyskać jeszcze większą przyspieszenie w kodzie C++ AMP. Podstawowe składniki rozdzielenie to:
 
-- `tile_static`modyfikacj. Główną zaletą dzielenia jest wzrost wydajności `tile_static` dostępu. Dostęp do danych w `tile_static` pamięci może być znacznie szybszy niż dostęp do danych w obszarze globalnym ( `array` lub w `array_view` obiektach). Wystąpienie `tile_static` zmiennej jest tworzone dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. W typowym algorytmie rozdzielonym dane są kopiowane do `tile_static` pamięci raz z pamięci globalnej, a następnie dostępne wiele razy z `tile_static` pamięci.
+- `tile_static` modyfikacj. Główną zaletą dzielenia jest wzrost wydajności `tile_static` dostępu. Dostęp do danych w `tile_static` pamięci może być znacznie szybszy niż dostęp do danych w obszarze globalnym ( `array` lub w `array_view` obiektach). Wystąpienie `tile_static` zmiennej jest tworzone dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. W typowym algorytmie rozdzielonym dane są kopiowane do `tile_static` pamięci raz z pamięci globalnej, a następnie dostępne wiele razy z `tile_static` pamięci.
 
 - [tile_barrier:: wait — Metoda](reference/tile-barrier-class.md#wait). Wywołanie `tile_barrier::wait` wstrzymuje wykonywanie bieżącego wątku do momentu, aż wszystkie wątki w tym samym kafelku osiągną wywołanie `tile_barrier::wait` . Nie można zagwarantowania kolejności, w której wątki będą działać, tylko wtedy, gdy żadne wątki na kafelku nie zostaną wykonane w ciągu wywołania do `tile_barrier::wait` momentu, aż wszystkie wątki osiągną wywołanie. Oznacza to, że za pomocą `tile_barrier::wait` metody, można wykonywać zadania na kafelku na kafelku, a nie na podstawie wątku. Typowy algorytm rozmieszczania ma kod `tile_static` służący do inicjowania pamięci dla całego kafelka, po którym następuje wywołanie `tile_barrier::wait` . Poniższy kod `tile_barrier::wait` zawiera obliczenia, które wymagają dostępu do wszystkich `tile_static` wartości.
 
@@ -329,7 +330,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static — słowo kluczowe](../../cpp/tile-static-keyword.md)

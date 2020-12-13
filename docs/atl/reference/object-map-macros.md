@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: makra mapy obiektów'
 title: Makra mapy obiektów
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_AUTO
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
-ms.openlocfilehash: 2eb24914561a958a6d6d79dab6779e0ba0a70201
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: accd1fdaebaab3a5c71730dcfd5db83fc2b320de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139038"
 ---
 # <a name="object-map-macros"></a>Makra mapy obiektów
 

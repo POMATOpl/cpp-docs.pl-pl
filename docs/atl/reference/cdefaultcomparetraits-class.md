@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDefaultCompareTraits'
 title: Klasa CDefaultCompareTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: 8262800ef613424c37c53931d97dd4b1b1a71321
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dcb366cdcd99a6eed2b641be290ccc4913a81476
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141911"
 ---
 # <a name="cdefaultcomparetraits-class"></a>Klasa CDefaultCompareTraits
 
-Ta klasa zawiera domyślne funkcje porównywania elementów.
+Ta klasa zapewnia domyślne funkcje porównywania elementów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,22 +39,22 @@ Typ danych, które mają być przechowywane w kolekcji.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statyczne) Wywołanie tej funkcji, aby porównać dwa elementy równości.|
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statyczne) Wywołanie tej funkcji, aby określić większy i mniejszy element.|
+|[CDefaultCompareTraits::CompareElements](#compareelements)|Ruchom Wywołaj tę funkcję, aby porównać dwa elementy dla równości.|
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|Ruchom Wywołaj tę funkcję, aby określić większy i mniejszy element.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera dwie funkcje statyczne do porównywania elementów przechowywanych w obiekcie klasy kolekcji. Ta klasa jest wykorzystywana przez [CDefaultElementTraits Klasy](../../atl/reference/cdefaultelementtraits-class.md).
+Ta klasa zawiera dwie statyczne funkcje do porównywania elementów przechowywanych w obiekcie klasy kolekcji. Ta klasa jest wykorzystywana przez [klasę CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
 
-Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
-## <a name="cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::CompareElements
+## <a name="cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a> CDefaultCompareTraits::CompareElements
 
-Wywołanie tej funkcji, aby porównać dwa elementy równości.
+Wywołaj tę funkcję, aby porównać dwa elementy dla równości.
 
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -69,15 +70,15 @@ Drugi element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli elementy są równe, false inaczej.
+Zwraca wartość true, jeśli elementy są równe, w przeciwnym razie false.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślną implementacją tej funkcji**==** jest operator równości ( ). W przypadku obiektów innych niż proste typy danych ta funkcja może wymagać zastąpienia.
+Domyślną implementacją tej funkcji jest operator równości ( **==** ). W przypadku obiektów innych niż proste typy danych ta funkcja może wymagać przesłaniania.
 
-## <a name="cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered
+## <a name="cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a> CDefaultCompareTraits::CompareElementsOrdered
 
-Wywołanie tej funkcji, aby określić większy i mniejszy element.
+Wywołaj tę funkcję, aby określić większy i mniejszy element.
 
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -93,17 +94,17 @@ Drugi element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę całkowitą na podstawie poniższej tabeli:
+Zwraca liczbę całkowitą na podstawie następującej tabeli:
 
 |Warunek|Wartość zwracana|
 |---------------|------------------|
-|*element1* < *element2*|<0|
-|*element1* == *element2*|0|
-|*element1* > *element2*|>0|
+|*element1*  <  *element2*|<0|
+|*element1*  ==  *element2*|0|
+|*element1*  >  *element2*|>0|
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej funkcji **==** **\<** używa **>** funkcji , i operatorów. W przypadku obiektów innych niż proste typy danych ta funkcja może wymagać zastąpienia.
+Domyślna implementacja tej funkcji używa **==** **\<**, and **>** operatorów. W przypadku obiektów innych niż proste typy danych ta funkcja może wymagać przesłaniania.
 
 ## <a name="see-also"></a>Zobacz też
 

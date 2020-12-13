@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak korzystać z koloru'
 title: 'Instrukcje: korzystanie z koloru'
 ms.date: 02/15/2019
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: 3c9134fde9053f57f8848a37b1442728f6111c98
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6c7d6ceaf2510d2360b32138735e8f61398da85a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135840"
 ---
 # <a name="how-to-work-with-color"></a>Instrukcje: korzystanie z koloru
 
@@ -95,7 +96,7 @@ Okno **kolory** ma dwie części:
 
 Możesz użyć okna **kolory** z [paskiem narzędzi edytora obrazu](./image-editor-for-icons.md).
 
-- Aby wyświetlić okno **kolory** , kliknij prawym przyciskiem myszy w okienku **edytora obrazów** i wybierz polecenie **Pokaż kolory okno**lub przejdź do menu [obraz](./image-editor-for-icons.md)  >  **Pokaż kolory**.
+- Aby wyświetlić okno **kolory** , kliknij prawym przyciskiem myszy w okienku **edytora obrazów** i wybierz polecenie **Pokaż kolory okno** lub przejdź do menu [obraz](./image-editor-for-icons.md)  >  **Pokaż kolory**.
 
 - Aby ukryć okno **kolory** , Odepnij okno (Ta akcja zezwoli na Autoukrywanie okna, gdy nie jest używane) lub wybierz przycisk **Zamknij** .
 
@@ -125,7 +126,7 @@ Za pomocą okna dialogowego **Załaduj kolory palety** można załadować specja
 |Właściwość|Opis|
 |-----------------|-----------------|
 |**Szukaj w**|Określa lokalizację, w której ma zostać zlokalizowany plik lub folder.<br/><br/>Wybierz strzałkę, aby wybrać inną lokalizację, lub wybierz ikonę folderu na pasku narzędzi, aby przenieść poziomy.|
-|**Nazwa pliku**|Miejsce na wpisanie nazwy pliku, który chcesz otworzyć.<br/><br/>Aby szybko znaleźć plik, który został wcześniej otwarty, wybierz nazwę pliku na liście rozwijanej, jeśli jest dostępna.<br/><br/>Jeśli szukasz pliku, możesz użyć gwiazdek (*) jako symboli wieloznacznych. Na przykład można wpisać., \* \* Aby wyświetlić listę wszystkich plików. Możesz również wpisać pełną ścieżkę do pliku, na przykład *C:\Moje Documents\MyColorPalette.PAL* lub * \\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
+|**Nazwa pliku**|Miejsce na wpisanie nazwy pliku, który chcesz otworzyć.<br/><br/>Aby szybko znaleźć plik, który został wcześniej otwarty, wybierz nazwę pliku na liście rozwijanej, jeśli jest dostępna.<br/><br/>Jeśli szukasz pliku, możesz użyć gwiazdek (*) jako symboli wieloznacznych. Na przykład można wpisać., \* \* Aby wyświetlić listę wszystkich plików. Możesz również wpisać pełną ścieżkę do pliku, na przykład *C:\Moje Documents\MyColorPalette.PAL* lub *\\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
 |**Pliki typu**|Wyświetla listę typów plików do wyświetlenia.<br/><br/>Paleta (*. PAL) jest domyślnym typem pliku dla palet kolorów.|
 
 ## <a name="how-to"></a>Instrukcje
@@ -144,7 +145,7 @@ Z wyjątkiem **gumki**, narzędzia na pasku narzędzi **edytora obrazów** są r
 
 ### <a name="to-use-the-fill-tool"></a>Aby użyć narzędzia Fill
 
-1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu **Image**  >  **Narzędzia** obrazu i wybierz narzędzie **wypełnienia** .
+1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu   >  **Narzędzia** obrazu i wybierz narzędzie **wypełnienia** .
 
 1. W razie potrzeby wybierz pozycję Rysowanie kolorów. W [palecie kolorów](./image-editor-for-icons.md)wybierz lewy przycisk myszy, aby wybrać kolor pierwszego planu lub prawy przycisk myszy, aby wybrać kolor tła.
 
@@ -154,9 +155,9 @@ Z wyjątkiem **gumki**, narzędzia na pasku narzędzi **edytora obrazów** są r
 
 ### <a name="to-pick-up-a-color-from-an-image-to-use-elsewhere"></a>Aby pobrać kolor z obrazu do użycia w innym miejscu
 
-**Wybierz kolor**lub kolor, aby uzyskać dowolny kolor obrazu bieżący kolor pierwszego planu lub kolor tła, w zależności od tego, czy naciśniesz prawy przycisk myszy. Aby anulować narzędzie **Wybierz kolor** , wybierz inne narzędzie.
+**Wybierz kolor** lub kolor, aby uzyskać dowolny kolor obrazu bieżący kolor pierwszego planu lub kolor tła, w zależności od tego, czy naciśniesz prawy przycisk myszy. Aby anulować narzędzie **Wybierz kolor** , wybierz inne narzędzie.
 
-1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu **Image**  >  **Narzędzia** obrazu i wybierz narzędzie **Wybierz kolor** .
+1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu   >  **Narzędzia** obrazu i wybierz narzędzie **Wybierz kolor** .
 
 1. Wybierz kolor, który chcesz pobrać z obrazu.
 
@@ -195,7 +196,7 @@ Aby odwrócić kolory w bieżącym zaznaczeniu, przejdź do menu **obrazu**  >  
 
 ### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>Aby dostosować lub zmienić kolory na palecie kolorów
 
-1. Przejdź do **obrazu**menu  >  **Dopasuj kolory**.
+1. Przejdź do **obrazu** menu  >  **Dopasuj kolory**.
 
 1. W oknie dialogowym **selektora kolorów niestandardowych** Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednich polach tekstowych lub wybierając kolor w polu **wyświetlanym kolor gradientu** .
 
@@ -217,7 +218,7 @@ Aby odwrócić kolory w bieżącym zaznaczeniu, przejdź do menu **obrazu**  >  
 
 ### <a name="to-load-a-custom-colors-palette"></a>Aby załadować paletę kolorów niestandardowych
 
-1. Przejdź do menu **Image**wybierz  >  **paletę ładowania**obrazu.
+1. Przejdź do menu wybierz  >  **paletę ładowania** obrazu.
 
 1. W oknie dialogowym **Załaduj paletę kolorów** przejdź do poprawnego katalogu i wybierz paletę, którą chcesz załadować. Palety **kolorów** są zapisywane z rozszerzeniem. PAL.
 

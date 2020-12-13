@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CInterfaceArray'
 title: Klasa CInterfaceArray
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-ms.openlocfilehash: e6efe31989b06f0977ecff156a8f64053dc64ad1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dbe382682b8411d7562d1d0ff75f0ef587396f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141547"
 ---
 # <a name="cinterfacearray-class"></a>Klasa CInterfaceArray
 
-Ta klasa zawiera metody przydatne podczas konstruowania tablicy wskaźników interfejsu COM.
+Ta klasa zapewnia metody przydatne podczas konstruowania tablicy wskaźników interfejsu COM.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,11 +31,11 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>Parametry
 
-*I*<br/>
-Interfejs COM określający typ wskaźnika do przechowywania.
+*Mam*<br/>
+Interfejs COM określający typ wskaźnika, który ma być przechowywany.
 
 *piid*<br/>
-Wskaźnik do identyfikatora *I*.
+Wskaźnik do identyfikatora IID *I*.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,13 +43,13 @@ Wskaźnik do identyfikatora *I*.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Konstruktor tablicy interfejsu.|
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Konstruktor dla tablicy interfejsów.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera konstruktora i metody pochodne do tworzenia tablicy wskaźników interfejsu COM. Użyj [CInterfaceList,](../../atl/reference/cinterfacelist-class.md) gdy lista jest wymagana.
+Ta klasa udostępnia Konstruktor i metody pochodne do tworzenia tablicy wskaźników interfejsu COM. Użyj [CInterfaceList](../../atl/reference/cinterfacelist-class.md) , gdy lista jest wymagana.
 
-Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -58,9 +59,9 @@ Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-c
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
-## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray
+## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a> CInterfaceArray::CInterfaceArray
 
 Konstruktor.
 

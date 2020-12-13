@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: używanie sprzężenia w celu zapobiegania zakleszczeniom'
 title: 'Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b74a7cd3f5f2326bb73ece13e16be95d6677bdd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150153"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom
 
@@ -26,7 +27,7 @@ Przed rozpoczęciem tego instruktażu zapoznaj się z następującymi tematami:
 
 - [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)
 
-- [Przewodnik: Tworzenie aplikacji opartej na agencie](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Przewodnik: Tworzenie aplikacji Agent-Based](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -34,7 +35,7 @@ Przed rozpoczęciem tego instruktażu zapoznaj się z następującymi tematami:
 
 - [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 Ten Instruktaż zawiera następujące sekcje:
 
@@ -44,7 +45,7 @@ Ten Instruktaż zawiera następujące sekcje:
 
 - [Używanie sprzężenia w celu zapobiegania zakleszczeniom](#solution)
 
-## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>Problem z rekomendowanych lokali ucztujących
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a> Problem z rekomendowanych lokali ucztujących
 
 Problem z rekomendowanych lokali ucztujących ilustruje, jak zakleszczenie występuje w aplikacji. W tym problemie pięć ucztujących znajduje się w postaci okrągłej tabeli. Każdy Philosopher alternatywy między myśliją i jedzenia. Każdy Philosopher musi udostępnić Chopstick z sąsiadem po lewej stronie, a inne Chopstick z sąsiadem z prawej strony. Na poniższej ilustracji przedstawiono ten układ.
 
@@ -54,7 +55,7 @@ Do Eat, Philosopher musi przechowywać dwie Chopsticks. Jeśli każdy Philosophe
 
 [[Top](#top)]
 
-## <a name="a-nave-implementation"></a><a name="deadlock"></a>Implementacja algorytmie
+## <a name="a-nave-implementation"></a><a name="deadlock"></a> Implementacja algorytmie
 
 W poniższym przykładzie przedstawiono implementację algorytmie problemu ucztujących rekomendowanych lokali. `philosopher`Klasa, która pochodzi od [concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), umożliwia każdemu Philosopher działania niezależnie. W przykładzie jest używany współdzielona tablica obiektów [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) , aby zapewnić każdemu `philosopher` obiektowi wyłączny dostęp do pary Chopsticks.
 
@@ -76,7 +77,7 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 [[Top](#top)]
 
-## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>Używanie sprzężenia w celu zapobiegania zakleszczeniom
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a> Używanie sprzężenia w celu zapobiegania zakleszczeniom
 
 W tej sekcji pokazano, jak używać buforów komunikatów i funkcji przekazywania komunikatów, aby wyeliminować prawdopodobieństwo zakleszczenia.
 
@@ -144,7 +145,7 @@ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instruktaże środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>

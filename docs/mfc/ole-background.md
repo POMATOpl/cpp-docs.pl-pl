@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: tło OLE'
 title: Podstawy OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 89d8e3b6e1a84082fabdf954971e75ab86366622
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830790"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150231"
 ---
 # <a name="ole-background"></a>Podstawy OLE
 
@@ -28,7 +29,7 @@ Technologia OLE obejmuje wiele różnych koncepcji, które działają w kierunku
 
    Łączenie i osadzanie to dwie metody przechowywania elementów utworzonych wewnątrz dokumentu OLE, które zostały utworzone w innej aplikacji. Aby uzyskać ogólne informacje o różnicach między tymi dwoma, zobacz artykuł [OLE: łączenie i osadzanie](ole-background-linking-and-embedding.md). Aby uzyskać szczegółowe informacje, zobacz artykuły [kontenery](containers.md) i [serwery](servers.md).
 
-- Aktywacja w miejscu (edytowanie wizualizacji)
+- Aktywacja In-Place (Edycja wizualizacji)
 
    Aktywowanie osadzonego elementu w kontekście dokumentu kontenera jest nazywane aktywacją w miejscu lub edycją wizualizacji. Interfejs aplikacji kontenera zmienia się w celu uwzględnienia funkcji aplikacji składnika, która utworzyła element osadzony. Połączone elementy nigdy nie są aktywowane, ponieważ rzeczywiste dane dla tego elementu są zawarte w osobnym pliku, z kontekstu aplikacji zawierającej link. Aby uzyskać więcej informacji na temat aktywacji w miejscu, zobacz [Aktywacja](activation-cpp.md)artykułu.
 

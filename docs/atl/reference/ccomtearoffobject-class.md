@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CComTearOffObject'
 title: Klasa CComTearOffObject
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 3eee1d33d5eded75d8805584a24e6b6f396a8369
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b9fe9e7a790a004aec1de059415bd5f47572455b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142158"
 ---
 # <a name="ccomtearoffobject-class"></a>Klasa CComTearOffObject
 
@@ -175,7 +176,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 podczas Identyfikator IID żądanego interfejsu.
 
 *ppvObject*<br/>
-określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *Identyfikator IID*lub wartość null, jeśli nie można odnaleźć interfejsu.
+określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *Identyfikator IID* lub wartość null, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

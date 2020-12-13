@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje globalne kontroli złożonej'
 title: Funkcje globalne kontrolki złożonej
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: fa46cc46247d409b85772e6c1aab229d97fd1c36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141248"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolki złożonej
 
@@ -410,7 +411,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*h*<br/>
 podczas Uchwyt do okna, w którym znajduje się kontrolka.
 
 *miesięcznie*<br/>
@@ -430,7 +431,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*h*<br/>
 podczas Uchwyt do okna, w którym znajduje się kontrolka.
 
 *miesięcznie*<br/>

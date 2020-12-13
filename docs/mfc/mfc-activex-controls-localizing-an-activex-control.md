@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: kontrolki ActiveX MFC: Lokalizowanie kontrolki ActiveX'
 title: 'Formanty MFC ActiveX: lokalizowanie formantu ActiveX'
 ms.date: 09/12/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: a85ec5cbed797b756afd93cd8423c58d138a0625
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 830fecd316b48f61da4f90136dd29455801ec725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150218"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Formanty MFC ActiveX: lokalizowanie formantu ActiveX
 
@@ -42,7 +43,7 @@ Ogólnie rzecz biorąc, formanty ActiveX powinny zawsze bazować na właściwoś
 
 W pozostałej części tego artykułu opisano dwie metody lokalizowania. Pierwsza strategia [lokalizuje interfejs programowalności kontrolki](#_core_localizing_your_control.92.s_programmability_interface) (nazwy właściwości, metod i zdarzeń). Druga strategia [lokalizuje interfejs użytkownika formantu](#_core_localizing_the_control.92.s_user_interface)przy użyciu właściwości LocaleID otaczającej kontenera. Aby zapoznać się z pokazem lokalizacji kontroli, zobacz przykład [lokalizowanie](../overview/visual-cpp-samples.md)kontrolek ActiveX MFC.
 
-## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a>Lokalizowanie interfejsu programowalności kontrolki
+## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a> Lokalizowanie interfejsu programowalności kontrolki
 
 Przy lokalizowaniu interfejsu programowalności formantu (interfejs używany przez programistów piszący aplikacje, które używają formantu), należy utworzyć zmodyfikowaną wersję formantu. Plik IDL (skrypt służący do tworzenia biblioteki typów formantów) dla każdego języka, który ma być obsługiwany. Jest to jedyne miejsce, w którym należy zlokalizować nazwy właściwości formantu.
 
@@ -50,7 +51,7 @@ Podczas tworzenia zlokalizowanej kontrolki należy uwzględnić identyfikator us
 
 [!code-cpp[NVC_MFC_AxLoc#1](codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_1.idl)]
 
-Zmień nazwy właściwości w SAMPLEFR. Język IDL do ich odpowiedników w języku francuskim, a następnie użyj MKTYPLIB. EXE, aby utworzyć francuską bibliotekę typów, SAMPLEFR. Rejestr.
+Zmień nazwy właściwości w SAMPLEFR. Język IDL do ich odpowiedników w języku francuskim, a następnie użyj MKTYPLIB.EXE, aby utworzyć francuską bibliotekę typów SAMPLEFR. Rejestr.
 
 Aby utworzyć wiele zlokalizowanych bibliotek typów, można dodać dowolne zlokalizowane. Pliki IDL do projektu i zostaną skompilowane automatycznie.
 
@@ -80,7 +81,7 @@ Aby upewnić się, że klienci formantu mogą znaleźć zlokalizowaną bibliotek
 
 Gdy kontrolka jest zarejestrowana, `AfxOleRegisterTypeLib` funkcja automatycznie szuka określonego. Plik TLB w tym samym katalogu co formant i rejestruje go w bazie danych rejestracji systemu Windows. Jeśli. Nie znaleziono pliku TLB, funkcja nie ma żadnego wpływu.
 
-## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a>Lokalizowanie interfejsu użytkownika kontrolki
+## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a> Lokalizowanie interfejsu użytkownika kontrolki
 
 Aby zlokalizować interfejs użytkownika kontrolki, umieść wszystkie zasoby widoczne dla użytkownika (takie jak strony właściwości i komunikaty o błędach) w bibliotekach DLL zasobów specyficznych dla języka. Następnie można użyć właściwości LocaleID otaczającej kontenera, aby wybrać odpowiednią bibliotekę DLL dla ustawień regionalnych użytkownika.
 
@@ -88,7 +89,7 @@ Poniższy przykład kodu ilustruje jedno z podejście do lokalizowania i ładowa
 
 [!code-cpp[NVC_MFC_AxLoc#3](codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-Należy zauważyć, że w każdym przypadku instrukcji switch można sprawdzić identyfikator podjęzyka, aby zapewnić bardziej wyspecjalizowaną lokalizację. Aby zapoznać się z prezentacją tej funkcji, zobacz w `GetResourceHandle` przykładowej funkcji formantów ActiveX [LOCALIZE](../overview/visual-cpp-samples.md)MFC.
+Należy zauważyć, że w każdym przypadku instrukcji switch można sprawdzić identyfikator podjęzyka, aby zapewnić bardziej wyspecjalizowaną lokalizację. Aby zapoznać się z prezentacją tej funkcji, zobacz w `GetResourceHandle` przykładowej funkcji formantów ActiveX [](../overview/visual-cpp-samples.md)MFC.
 
 Gdy kontrolka najpierw załaduje się do kontenera, może wywołać [COleControl:: AmbientLocaleID](reference/colecontrol-class.md#ambientlocaleid) w celu pobrania identyfikatora ustawień regionalnych. Kontrolka może następnie przekazać zwróconą wartość identyfikatora ustawień regionalnych do `GetLocalizedResourceHandle` funkcji, która ładuje właściwą bibliotekę zasobów. Kontrolka powinna przekazać wyniki dojścia, jeśli istnieje, do [AfxSetResourceHandle](reference/application-information-and-management.md#afxsetresourcehandle):
 

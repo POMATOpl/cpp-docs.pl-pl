@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Technologia aktywna w Internecie'
 title: Technologia Active w Internecie
 ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-ms.openlocfilehash: 2cd087c99c1ebdcaa8b4a44524e7691984877f20
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4f8035e0af233eac55c00a84679f79d214978219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150244"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologia Active w Internecie
 
@@ -36,6 +37,6 @@ Rozszerzenia HTML, takie jak tag Object, zostały dodane do obsługi formantów 
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)<br/>
+[Podstawy programowania internetowego MFC](mfc-internet-programming-basics.md)<br/>
 [Kontrolki ActiveX w Internecie](activex-controls-on-the-internet.md)<br/>
 [Rozszerzenia internetowe Win32 (WinInet)](win32-internet-extensions-wininet.md)

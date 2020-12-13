@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CPrimitiveElementTraits'
 title: Klasa CPrimitiveElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-ms.openlocfilehash: 6b45d93420d1832091cc451a3e6eb309f61d07a3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9a47d9e6268ee6cc858d85e9236b00c270e8841
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141079"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Klasa CPrimitiveElementTraits
 
-Ta klasa zawiera domyślne metody i funkcje dla klasy kolekcji składającej się z typów danych pierwotnych.
+Ta klasa dostarcza domyślne metody i funkcje dla klasy kolekcji, która składa się z typów danych pierwotnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,46 +35,46 @@ Typ danych, które mają być przechowywane w obiekcie klasy kolekcji.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Typ danych do dodania elementów do obiektu klasy kolekcji.|
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.|
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Typ danych, który ma być używany do dodawania elementów do obiektu klasy kolekcji.|
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Typ danych, który ma być używany do pobierania elementów z obiektu klasy kolekcji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera domyślne funkcje statyczne i metody przenoszenia, kopiowania, porównywania i mieszania podstawowych elementów typu danych przechowywanych w obiekcie klasy kolekcji.
+Ta klasa zawiera domyślne funkcje statyczne i metody służące do przesuwania, kopiowania, porównywania i mieszania elementów pierwotnych typu danych przechowywanych w obiekcie klasy kolekcji.
 
-Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits (Niem.](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Baza CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits (3.](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CPrimitiveElementTraits`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
-## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE
+## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a> CPrimitiveElementTraits::INARGTYPE
 
-Typ danych do dodania elementów do obiektu klasy kolekcji.
+Typ danych, który ma być używany do dodawania elementów do obiektu klasy kolekcji.
 
 ```
 typedef T INARGTYPE;
 ```
 
-## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE
+## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a> CPrimitiveElementTraits::OUTARGTYPE
 
-Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.
+Typ danych, który ma być używany do pobierania elementów z obiektu klasy kolekcji.
 
 ```
 typedef T& OUTARGTYPE;

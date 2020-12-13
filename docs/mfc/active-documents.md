@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: dokumenty aktywne'
 title: Dokumenty aktywne
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-ms.openlocfilehash: bfe91dcb42b97ddfbb0bf0be36a54b45e6dc0809
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cae0eda775670867d5e36b4f2b9ec895a5dc3eb7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150309"
 ---
 # <a name="active-documents"></a>Dokumenty aktywne
 
@@ -45,7 +46,7 @@ Każdy aktywny dokument musi mieć dostawcy wyświetlania ramki z tym interfejse
 
 W aktywnym dokumencie można utworzyć jeden lub więcej typów [widoków](#requirements_for_view_objects) danych (na przykład normalne, konspekt, układ strony itd.). Widoki działają podobnie do filtrów, w których można zobaczyć dane. Nawet jeśli dokument zawiera tylko jeden typ widoku, można nadal obsługiwać wiele widoków jako sposób obsługi nowych funkcji okna (na przykład **nowy element okna** w menu **okno** w aplikacjach pakietu Office).
 
-## <a name="requirements-for-active-documents"></a><a name="requirements_for_active_documents"></a>Wymagania dotyczące dokumentów aktywnych
+## <a name="requirements-for-active-documents"></a><a name="requirements_for_active_documents"></a> Wymagania dotyczące dokumentów aktywnych
 
 Aktywny dokument, który może być wyświetlany w kontenerze aktywnego dokumentu, musi:
 
@@ -59,9 +60,9 @@ Aktywny dokument, który może być wyświetlany w kontenerze aktywnego dokument
 
 Informacje o tym, kiedy i jak używać interfejsów po stronie kontenera, są implikowane w tych wymaganiach.
 
-## <a name="requirements-for-view-objects"></a><a name="requirements_for_view_objects"></a>Wymagania dotyczące obiektów widoków
+## <a name="requirements-for-view-objects"></a><a name="requirements_for_view_objects"></a> Wymagania dotyczące obiektów widoków
 
-Aktywny dokument może utworzyć jeden lub więcej widoków swoich danych. Funkcjonalnie te widoki są podobne do portów na konkretną metodę wyświetlania danych. Jeśli aktywny dokument obsługuje tylko jeden widok, aktywny dokument i ten pojedynczy widok można zaimplementować przy użyciu pojedynczej klasy. `IOleDocument::CreateView`Zwraca wskaźnik interfejsu tego samego obiektu `IOleDocumentView` .
+Aktywny dokument może utworzyć jeden lub więcej widoków swoich danych. Funkcjonalnie te widoki są podobne do portów na konkretną metodę wyświetlania danych. Jeśli aktywny dokument obsługuje tylko jeden widok, aktywny dokument i ten pojedynczy widok można zaimplementować przy użyciu pojedynczej klasy. `IOleDocument::CreateView` Zwraca wskaźnik interfejsu tego samego obiektu `IOleDocumentView` .
 
 Aby można było przedstawić w kontenerze dokumentów aktywnych, składnik widoku musi obsługiwać `IOleInPlaceObject` i `IOleInPlaceActiveObject` oprócz `IOleDocumentView` :
 
@@ -94,7 +95,7 @@ Każdy widok ma skojarzoną witrynę widoku, która hermetyzuje ramkę widoku i 
 
 Zazwyczaj każdy typ widoku ma inną reprezentację wydrukowaną. W związku z tym widoki i odpowiednie witryny widoku powinny implementować interfejsy drukowania, jeśli są `IPrint` `IContinueCallback` odpowiednio i. Po rozpoczęciu drukowania ramka widoku musi być negocjowana z dostawcą widoku, `IPrint` Aby nagłówki, stopki, marginesy i powiązane elementy były prawidłowo drukowane. Dostawca widoku powiadamia ramkę o zdarzeniach związanych z drukowaniem za pomocą programu `IContinueCallback` . Aby uzyskać więcej informacji na temat korzystania z tych interfejsów, zobacz [Drukowanie programistyczne](programmatic-printing.md).
 
-Należy pamiętać, że jeśli aktywny dokument obsługuje tylko jeden widok, wówczas aktywny dokument i ten pojedynczy widok można zaimplementować przy użyciu jednej konkretnej klasy. `IOleDocument::CreateView`po prostu zwraca wskaźnik interfejsu tego samego obiektu `IOleDocumentView` . W krótkim czasie nie jest konieczne, aby istniały dwa oddzielne wystąpienia obiektów, gdy wymagany jest tylko jeden widok.
+Należy pamiętać, że jeśli aktywny dokument obsługuje tylko jeden widok, wówczas aktywny dokument i ten pojedynczy widok można zaimplementować przy użyciu jednej konkretnej klasy. `IOleDocument::CreateView` po prostu zwraca wskaźnik interfejsu tego samego obiektu `IOleDocumentView` . W krótkim czasie nie jest konieczne, aby istniały dwa oddzielne wystąpienia obiektów, gdy wymagany jest tylko jeden widok.
 
 Obiekt widoku może być również elementem docelowym polecenia. Zaimplementowanie `IOleCommandTarget` widoku może odbierać polecenia, które pochodzą z interfejsu użytkownika kontenera (na przykład **New**, Open, **Save as**, **Print** w menu **plik** , a **następnie** **Kopiuj**, **Wklej**, **Cofnij** w menu **Edycja** ). Aby uzyskać więcej informacji, zobacz [Obsługa komunikatów i obiekty docelowe poleceń](message-handling-and-command-targets.md).
 
