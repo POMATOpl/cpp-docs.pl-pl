@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CPrivateObjectSecurityDesc'
 title: Klasa CPrivateObjectSecurityDesc
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: f62d289418280a05f390bf9cdec23ea30632aed2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 339105d2a6356150c7a7ce8ccf04bc17d3df4911
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141066"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Klasa CPrivateObjectSecurityDesc
 

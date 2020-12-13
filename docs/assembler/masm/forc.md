@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: FORC'
 title: FORC
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: d81c56c3322763030427d68d5b8075c9164f4ae3
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 0db52528d86e324e997f3f339bcfb888ce5e27aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313317"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130302"
 ---
 # <a name="forc"></a>FORC
 
@@ -19,15 +20,15 @@ Oznacza blok, który będzie powtarzany jeden raz dla każdego znaku w *ciągu*,
 
 ## <a name="syntax"></a>Składnia
 
-> **FORC** __\<__ *ciąg* __>__ \
-> *instrukcje*\
+> **FORC** *parametr*, __\<__*string*__>__\
+> *zatwierdzeni*\
 > **ENDM**
 
 ## <a name="remarks"></a>Uwagi
 
 Analogicznie jak [IRPC](irpc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

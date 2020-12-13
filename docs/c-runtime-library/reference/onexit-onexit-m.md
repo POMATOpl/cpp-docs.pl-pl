@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _onexit, _onexit_m'
 title: _onexit, _onexit_m
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0b79c521b04a4cb1597dda7c7ed2a19ae2dcf905
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151700"
 ---
 # <a name="_onexit-_onexit_m"></a>_onexit, _onexit_m
 
@@ -66,11 +67,11 @@ Wskaźnik do funkcji, która ma zostać wywołana przy zamykaniu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_onexit** przekazuje adres funkcji (*funkcji*), która ma być wywoływana, gdy program kończy normalne działanie. Kolejne wywołania do **_onexit** umożliwiają utworzenie rejestru funkcji, które są wykonywane w kolejności LIFO (Last-in-on-First-Out-on-in-in-in-in-in Funkcje przesłane do **_onexit** nie mogą przyjmować parametrów.
+Funkcja **_onexit** przekazuje adres funkcji (*funkcji*), która ma być wywoływana, gdy program kończy normalne działanie. Kolejne wywołania do **_onexit** tworzą rejestr funkcji, które są wykonywane w następującej kolejności: LIFO (Ostatnia-w-wychodzącym). Funkcje przesłane do **_onexit** nie mogą przyjmować parametrów.
 
 W przypadku gdy **_onexit** jest wywoływana z poziomu biblioteki DLL, procedury zarejestrowane przy użyciu **_onexit** są uruchamiane na wyładowaniu biblioteki DLL po wywołaniu **DllMain** z DLL_PROCESS_DETACH.
 
-**_onexit** jest rozszerzeniem firmy Microsoft. W przypadku przenośności ANSI Użyj [atexit —](atexit.md). Wersja **_onexit_m** funkcji jest używana w trybie mieszanym.
+**_onexit** to rozszerzenie firmy Microsoft. W przypadku przenośności ANSI Użyj [atexit —](atexit.md). Wersja **_onexit_m** funkcji jest używana w trybie mieszanym.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -132,9 +133,9 @@ This is executed first.
 This is executed next.
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [__dllonexit](../../c-runtime-library/dllonexit.md)<br/>

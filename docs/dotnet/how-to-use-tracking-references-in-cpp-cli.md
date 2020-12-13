@@ -1,23 +1,24 @@
 ---
-title: 'Instrukcje: Korzystanie z odwołań w śledzenia C++sposób niezamierzony'
+description: 'Dowiedz się więcej na temat: jak używać odwołań śledzenia w języku C++/CLI'
+title: 'Porady: korzystanie z odwołań śledzenia w języku C++/interfejsie wiersza polecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c17101b5711feb503ad727d78b427e8766146960
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151388"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Instrukcje: Korzystanie z odwołań w śledzenia C++sposób niezamierzony
+# <a name="how-to-use-tracking-references-in-ccli"></a>Porady: korzystanie z odwołań śledzenia w języku C++/interfejsie wiersza polecenia
 
-W tym artykule przedstawiono sposób użycia śledzenia odwołania (%) w C++sposób niezamierzony do przekazania języka wspólnego środowiska uruchomieniowego (języka wspólnego CLR) typów przez odwołanie.
+W tym artykule pokazano, jak używać odwołania śledzenia (%) w języku C++/CLI, aby przekazywać typy środowiska uruchomieniowego języka wspólnego (CLR) przez odwołanie.
 
-## <a name="to-pass-clr-types-by-reference"></a>Przekazywanie typów CLR przez odwołanie
+## <a name="to-pass-clr-types-by-reference"></a>Aby przekazać typy CLR według odwołania
 
-Poniższy przykład pokazuje sposób użycia śledzenia odwołania do przekazania typy CLR przez odwołanie.
+Poniższy przykład pokazuje, jak używać odwołania śledzenia do przekazywania typów CLR przez odwołanie.
 
 ```cpp
 // tracking_reference_handles.cpp
@@ -70,7 +71,7 @@ int main() {
 zip == 20100
 ```
 
-Następny przykład pokazuje, że pobieranie adresu odwołaniem śledzącym zwraca [pomocą interior_ptr (C++sposób niezamierzony)](../extensions/interior-ptr-cpp-cli.md)i pokazuje, jak zmodyfikować i uzyskiwać dostęp do odwołania śledzenia danych.
+Następny przykład pokazuje, że pobieranie adresu odwołania śledzenia zwraca [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)i pokazuje, jak modyfikować i uzyskiwać dostęp do danych za pomocą odwołania śledzenia.
 
 ```cpp
 // tracking_reference_data.cpp
@@ -122,9 +123,9 @@ ctor: R(int)
 ctor: N(int i)
 ```
 
-## <a name="tracking-references-and-interior-pointers"></a>Odwołania śledzenia i wskaźników wewnętrznych
+## <a name="tracking-references-and-interior-pointers"></a>Śledzenie odwołań i wewnętrzne wskaźniki
 
-Poniższy przykładowy kod pokazuje, czy można przekonwertować między odwołań śledzenia i wskaźników wewnętrznych.
+Poniższy przykład kodu pokazuje, że można dokonać konwersji między odwołaniami śledzącymi i wewnętrznymi wskaźnikami.
 
 ```cpp
 // tracking_reference_interior_ptr.cpp
@@ -177,9 +178,9 @@ ctor: R(int)
 ctor: N(int i)
 ```
 
-## <a name="tracking-references-and-value-types"></a>Odwołania śledzenia i typów wartości
+## <a name="tracking-references-and-value-types"></a>Śledzenie odwołań i typów wartości
 
-Niniejszy przykład pokazuje prosty pakowania poprzez odwołanie śledzące do typu wartości:
+Ten przykład pokazuje prostą opakowanie przez odwołanie śledzące do typu wartości:
 
 ```cpp
 // tracking_reference_valuetypes_1.cpp
@@ -194,7 +195,7 @@ int main() {
 }
 ```
 
-Następny przykład pokazuje, że może mieć zarówno z odwołań śledzenia i odwołania natywne dla typów wartości.
+Następny przykład pokazuje, że można mieć zarówno odwołania śledzące, jak i natywne odwołania do typów wartości.
 
 ```cpp
 // tracking_reference_valuetypes_2.cpp
@@ -219,7 +220,7 @@ int main() {
 13
 ```
 
-Poniższy przykład pokazuje, że można użyć odwołania śledzenia wraz z typami wartości i typami natywnymi.
+Poniższy przykład pokazuje, że można użyć odwołań śledzenia razem z typami wartości i typami natywnymi.
 
 ```cpp
 // tracking_reference_valuetypes_3.cpp
@@ -254,7 +255,7 @@ int main() {
 5
 ```
 
-Niniejszy przykład pokazuje, czy można powiązać śledzenie odwołania do typu wartości na stosie zebranych elementów bezużytecznych:
+Ten przykład pokazuje, że można powiązać odwołanie śledzenia z typem wartości na stosie zebranych elementów bezużytecznych:
 
 ```cpp
 // tracking_reference_valuetypes_4.cpp
@@ -292,9 +293,9 @@ Boxed new copy V: 1
 Original V: 4, Reference to handle of originally boxed V: 1
 ```
 
-## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Funkcje szablonu, których macierzystym, wartość lub parametrów odwołania
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Funkcje szablonu, które pobierają parametry natywne, wartości lub odwołania
 
-Za pomocą odwołania śledzenia w sygnaturze funkcji szablonu, możesz upewnij się, że funkcja może być wywoływany przez parametr, którego typem jest natywny, wartości CLR lub odwołanie do środowiska CLR.
+Za pomocą odwołania śledzącego w sygnaturze funkcji szablonu, należy się upewnić, że funkcja może być wywoływana przez parametr, którego typem jest natywny, wartość CLR lub odwołanie CLR.
 
 ```cpp
 // tracking_reference_template.cpp
@@ -341,6 +342,6 @@ T %
 T &
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator odwołania śledzenia](../extensions/tracking-reference-operator-cpp-component-extensions.md)

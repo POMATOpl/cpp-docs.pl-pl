@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Instrukcje: Zawijanie klasy natywnej do użycia przez C #'
 title: 'Porady: opakowywanie klasy natywnej do użycia w języku C#'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1b90cfba08bd22ec6a49ef4de033afd5d2b187ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151375"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Instrukcje: Zawijanie klasy natywnej do użycia przez C\#
 
-Ten przykład pokazuje sposób zawijania klasy natywnej C++ , dzięki czemu może być używana przez kod utworzony w C#lub w innym języku .NET.
+Ten przykład pokazuje, jak otoczyć natywną klasę C++, aby można było jej używać przez kod utworzony w języku C# lub innym języku .NET.
 
 ## <a name="example"></a>Przykład
 
@@ -67,6 +68,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

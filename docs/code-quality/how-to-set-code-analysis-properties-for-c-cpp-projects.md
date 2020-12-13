@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak ustawiać właściwości analizy kodu dla projektów C/C++'
 title: 'Porady: ustawianie właściwości analizy kodu dla projektów C/C++'
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - code analysis properties
 - C/C++ code analysis properties
 ms.assetid: 7af52097-6d44-4785-9b9f-43b7a7d447d7
-ms.openlocfilehash: 0f1f5b18255c9d39c2922c5c4f049f1cbe40d37e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 590254406242c369da9aff91d006313ed797078f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151570"
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>Porady: ustawianie właściwości analizy kodu dla projektów C/C++
 
@@ -40,11 +41,11 @@ Analiza kodu została zaprojektowana w celu ułatwienia poprawy jakości kodu i 
 
 ## <a name="cmake-configuration"></a>Konfiguracja CMake
 
-W projektach CMake Zmień wartość `enableMicrosoftCodeAnalysis` i `enableClangTidyCodeAnalysis` kluczy w `CMakeSettings.json`, aby włączyć lub wyłączyć analizę kodu. Aby uzyskać więcej informacji, zobacz [Używanie Clang-uporządkowanego w programie Visual Studio](../code-quality/clang-tidy.md) .
+W projektach CMake Zmień wartość `enableMicrosoftCodeAnalysis` `enableClangTidyCodeAnalysis` kluczy i w programie, `CMakeSettings.json` Aby włączyć lub wyłączyć analizę kodu. Aby uzyskać więcej informacji, zobacz [używanie Clang-Tidy w programie Visual Studio](../code-quality/clang-tidy.md) .
 
 ## <a name="see-also"></a>Zobacz też
 
 - [Analiza jakości zarządzanego kodu](/visualstudio/code-quality/code-analysis-for-managed-code-overview)
-- [Analiza kodu C/C++ — ostrzeżenia](../code-quality/code-analysis-for-c-cpp-warnings.md)
-- [Użyj zestawów reguł, aby określić C++ reguły do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md)
+- [Analiza kodu dla ostrzeżeń C/C++](../code-quality/code-analysis-for-c-cpp-warnings.md)
+- [Użyj zestawów reguł, aby określić reguły języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md)
 - [Korzystanie z Clang-uporządkowanego](../code-quality/clang-tidy.md)

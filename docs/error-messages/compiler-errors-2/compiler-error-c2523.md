@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2523'
 title: Błąd kompilatora C2523
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2523
 ms.assetid: 7951b700-8f37-45a0-beb4-a79ae0ced72e
-ms.openlocfilehash: 56b0f88949d7a7fa5af945ab5d03ee9a480d6d3f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c9907742903cf4c13364d6ac63bb561b52e02232
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151167"
 ---
 # <a name="compiler-error-c2523"></a>Błąd kompilatora C2523
 
 "Class:: ~ identifier": niezgodność tagów destruktora/finalizatora
 
-Nazwa destruktora musi być nazwą klasy poprzedzoną tyldą (`~`). Konstruktor i destruktor są jedynymi elementami członkowskimi, które mają taką samą nazwę jak Klasa.
+Nazwa destruktora musi być nazwą klasy poprzedzoną tyldą ( `~` ). Konstruktor i destruktor są jedynymi elementami członkowskimi, które mają taką samą nazwę jak Klasa.
 
 Poniższy przykład generuje C2523:
 

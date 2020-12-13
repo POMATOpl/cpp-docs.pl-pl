@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: informacje dotyczące narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++'
 title: Informacje dotyczące narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++
 ms.date: 03/22/2018
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 40d0e713d8064a952c785ca44ac5a7ba60f41b61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151583"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Informacje dotyczące narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++
 
@@ -170,7 +171,7 @@ Obiekty Guard muszą mieć nazwę. Zobacz [podstawowe wytyczne dotyczące język
 Argument odwołania "*argument*" funkcji "*Function*" może być oznaczony jako `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref).
 
 [C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md): \
-Argument wskaźnika dla funkcji "*Function**" może*być oznaczony jako wskaźnik do `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref).
+Argument wskaźnika dla funkcji "*Function**" może* być oznaczony jako wskaźnik do `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref).
 
 [C26462 USE_CONST_POINTER_FOR_VARIABLE](c26462.md)\
 Wartość wskazywana przez element "*Variable*" jest przypisywana tylko raz, oznacz ją jako wskaźnik do `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction).
@@ -179,7 +180,7 @@ Wartość wskazywana przez element "*Variable*" jest przypisywana tylko raz, ozn
 Elementy tablicy "*Array*" są przypisywane tylko raz, Oznacz elementy `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction).
 
 [C26464 USE_CONST_POINTER_FOR_ELEMENTS](c26464.md)\
-Wartości wskazywane przez elementy*tablicy array są*przypisywane tylko raz, Oznacz elementy jako wskaźnik `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction).
+Wartości wskazywane przez elementy *tablicy array są* przypisywane tylko raz, Oznacz elementy jako wskaźnik `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction).
 
 [C26496 USE_CONST_FOR_VARIABLE](c26496.md)\
 Zmienna "*zmienna*" jest przypisywana tylko raz, oznacz ją jako `const` . Zobacz [podstawowe wytyczne dotyczące języka C++ con. 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction).
