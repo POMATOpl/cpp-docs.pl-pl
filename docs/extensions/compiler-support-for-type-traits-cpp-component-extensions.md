@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o obsłudze kompilatora dla cech typu (C++/CLI i C++/CX)
 title: Obsługa cech typu w kompilatorze (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: 16c79e05c6ba6f50a3e6c0d6dd5f48963be40fa8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec9efe1305a844779b4848cbae155d2946488d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176928"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Obsługa cech typu w kompilatorze (C++/CLI i C++/CX)
 
@@ -253,7 +254,7 @@ Poniższa lista zawiera cechy typów, które są obsługiwane przez kompilator. 
 
    Zwraca **`true`** czy typ ma destruktor wirtualny.
 
-   `__has_virtual_destructor`działa również w przypadku typów platform i dowolnego destruktora zdefiniowanego przez użytkownika w typie platformy jest destruktorem wirtualnym.
+   `__has_virtual_destructor` działa również w przypadku typów platform i dowolnego destruktora zdefiniowanego przez użytkownika w typie platformy jest destruktorem wirtualnym.
 
     ```cpp
     // has_virtual_destructor.cpp
@@ -272,7 +273,7 @@ Poniższa lista zawiera cechy typów, które są obsługiwane przez kompilator. 
 
    Zwraca **`true`** czy typ jest typem abstrakcyjnym. Aby uzyskać więcej informacji na temat natywnych typów abstrakcyjnych, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md).
 
-   `__is_abstract`działa również w przypadku typów platform. Interfejs z co najmniej jednym elementem członkowskim jest typem abstrakcyjnym, podobnie jak typ referencyjny z co najmniej jednym abstrakcyjną składową. Aby uzyskać więcej informacji na temat typów platform abstrakcyjnych, zobacz [abstract](abstract-cpp-component-extensions.md).
+   `__is_abstract` działa również w przypadku typów platform. Interfejs z co najmniej jednym elementem członkowskim jest typem abstrakcyjnym, podobnie jak typ referencyjny z co najmniej jednym abstrakcyjną składową. Aby uzyskać więcej informacji na temat typów platform abstrakcyjnych, zobacz [abstract](abstract-cpp-component-extensions.md).
 
     ```cpp
     // is_abstract.cpp
@@ -291,7 +292,7 @@ Poniższa lista zawiera cechy typów, które są obsługiwane przez kompilator. 
 
    Zwraca **`true`** czy pierwszy typ jest klasą bazową drugiego typu, jeśli oba typy są takie same.
 
-   `__is_base_of`działa również w przypadku typów platform. Na przykład zwróci **`true`** wartość, jeśli pierwszy typ jest [klasą interfejsu](interface-class-cpp-component-extensions.md) , a drugi implementuje interfejs.
+   `__is_base_of` działa również w przypadku typów platform. Na przykład zwróci **`true`** wartość, jeśli pierwszy typ jest [klasą interfejsu](interface-class-cpp-component-extensions.md) , a drugi implementuje interfejs.
 
     ```cpp
     // is_base_of.cpp
@@ -407,7 +408,7 @@ Poniższa lista zawiera cechy typów, które są obsługiwane przez kompilator. 
 
    Zwraca **`true`** Jeśli typ jest klasą lub Unią bez konstruktora lub prywatnych lub chronionych niestatycznych elementów członkowskich, brak klas bazowych i nie ma żadnych funkcji wirtualnych. Aby uzyskać więcej informacji na temat zasobników, zobacz Standard C++, sekcje 8.5.1/1, 9/4 i 3.9/10.
 
-   `__is_pod`zwróci wartość false dla typów podstawowych.
+   `__is_pod` zwróci wartość false dla typów podstawowych.
 
     ```cpp
     #include <stdio.h>
@@ -522,11 +523,11 @@ Poniższa lista zawiera cechy typów, które są obsługiwane przez kompilator. 
 
 ### <a name="remarks"></a>Uwagi
 
-`__has_finalizer(` *type* `)` Cecha typu Type nie jest obsługiwana, ponieważ ta platforma nie obsługuje finalizatorów.
+`__has_finalizer(`  `)` Cecha typu Type nie jest obsługiwana, ponieważ ta platforma nie obsługuje finalizatorów.
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -536,7 +537,7 @@ Opcja kompilatora:`/ZW`
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -568,6 +569,6 @@ int main () {
 R is a ref class
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Wektoryzator i paralelizacji messages'
 title: Komunikaty wektoryzatora i paralelizatora
 ms.date: 04/17/2019
 f1_keywords:
@@ -8,18 +9,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 54465331b3301c8f792763b9d7d1e29b8d62b1a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177136"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Komunikaty wektoryzatora i paralelizatora
 
 Możesz użyć opcji kompilatora języka Microsoft C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) , aby ustawić [autoprzetwarzanie równoległe i autowektoryzacji](../../parallel/auto-parallelization-and-auto-vectorization.md) do danych wyjściowych kodów przyczyn i komunikatów informacyjnych dotyczących działania. Ten artykuł wyjaśnia kody przyczyn i komunikaty.
 
-## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Komunikaty informacyjne
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a> Komunikaty informacyjne
 
 W zależności od poziomu raportowania, określonego przez użytkownika, pojawi się jeden z następujących komunikatów informacyjnych dla każdej pętli.
 
@@ -35,9 +36,9 @@ Informacje na temat kodów przyczyny można znaleźć w następnej części tego
 
 W poniższych sekcjach wymieniono możliwe kody przyczyn dla paralelizacji i wektoryzator.
 
-## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>kody przyczyn 5xx
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a> kody przyczyn 5xx
 
-Kody przyczyn 5*XX* dotyczą zarówno paralelizacji, jak i wektoryzator.
+Kody przyczyn 5 *XX* dotyczą zarówno paralelizacji, jak i wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -198,9 +199,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>kody przyczyn 10xx
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a> kody przyczyn 10xx
 
-Kody przyczyn 10*XX* mają zastosowanie do paralelizacji.
+Kody przyczyn 10 *XX* mają zastosowanie do paralelizacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -407,9 +408,9 @@ void code_1010()
 }
 ```
 
-## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>kody przyczyn 11xx
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a> kody przyczyn 11xx
 
-Kody przyczyn 11*XX* mają zastosowanie do wektoryzator.
+Kody przyczyn 11 *XX* mają zastosowanie do wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -555,9 +556,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>kody przyczyn 12xx
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a> kody przyczyn 12xx
 
-Kody przyczyn 12*XX* mają zastosowanie do wektoryzator.
+Kody przyczyn 12 *XX* mają zastosowanie do wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -630,9 +631,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>kody przyczyn 13xx
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a> kody przyczyn 13xx
 
-Kody przyczyn 13*XX* mają zastosowanie do wektoryzator.
+Kody przyczyn 13 *XX* mają zastosowanie do wektoryzator.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -762,9 +763,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>kody przyczyn 14xx
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a> kody przyczyn 14xx
 
-Kody przyczyn 14*XX* występują, gdy określona jest opcja niezgodna z wektoryzacji.
+Kody przyczyn 14 *XX* występują, gdy określona jest opcja niezgodna z wektoryzacji.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|
@@ -834,9 +835,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>kody przyczyn 15xx
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a> kody przyczyn 15xx
 
-Kody przyczyn 15*XX* dotyczą aliasów. Tworzenie aliasów występuje, gdy dwie różne nazwy mogą uzyskać dostęp do lokalizacji w pamięci.
+Kody przyczyn 15 *XX* dotyczą aliasów. Tworzenie aliasów występuje, gdy dwie różne nazwy mogą uzyskać dostęp do lokalizacji w pamięci.
 
 |Kod przyczyny|Wyjaśnienie|
 |-----------------|-----------------|

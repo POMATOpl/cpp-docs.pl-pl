@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: abstract (C++/CLI i C++/CX)'
 title: abstract  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e40d0d0c03bbf97b684d9e011f4bf614f6a44332
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177123"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract  (C++/CLI i C++/CX)
 
@@ -27,13 +28,13 @@ ms.locfileid: "87214298"
 
 ### <a name="syntax"></a>Składnia
 
-**abstrakcyjny {} ** *Identyfikator klasy* *deklaracji klasy*
+**abstrakcyjny {}** *Identyfikator klasy* *deklaracji klasy*
 
 **`virtual`***Typ zwracany* *elementu członkowskiego-identyfikatora funkcji* **()**
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza Przykładowa składnia deklaruje klasę jako abstrakcyjną. Składnik *deklaracji klasy* może być natywną deklaracją c++ (** `class` * * * * lub **`struct`** ) lub deklaracją rozszerzenia c++ (** Klasa ref * * lub **ref struct**), jeśli `/ZW` `/clr` określono opcję kompilatora lub.
+Pierwsza Przykładowa składnia deklaruje klasę jako abstrakcyjną. Składnik *deklaracji klasy* może być natywną deklaracją c++ (**`class` * * * * lub **`struct`** ) lub deklaracją rozszerzenia c++ (** Klasa ref * * lub **ref struct**), jeśli `/ZW` `/clr` określono opcję kompilatora lub.
 
 Druga Przykładowa składnia deklaruje wirtualną funkcję członkowską, która ma być abstrakcyjna. Deklarowanie abstrakcyjnej funkcji jest takie samo jak deklarowanie jej czystej funkcji wirtualnej. Deklarowanie funkcji członkowskiej jako abstrakcyjnej powoduje również zadeklarowanie klasy otaczającej.
 
@@ -49,13 +50,13 @@ Aby uzyskać więcej informacji, zobacz [klasy referencyjne i struktury](../cppc
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -100,6 +101,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

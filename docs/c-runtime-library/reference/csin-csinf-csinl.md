@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: csin, csinf, csinl'
 title: csin, csinf, csinl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d19f916f6fdd9e871eef6e1ad77369642b939495
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178865"
 ---
 # <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
@@ -66,12 +67,12 @@ _Lcomplex csinl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Sinus *z z, w*radianach.
+Sinus *z z, w* radianach.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -79,13 +80,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **csi
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
+|**csin**,               **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

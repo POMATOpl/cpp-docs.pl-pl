@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fpieee_flt'
 title: _fpieee_flt
 ms.date: 04/05/2018
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-ms.openlocfilehash: c6a77dcba06b58191781900d4e24202c6335cfb8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b01bfa07b959031b81fe3cf02a5d341e17f93a0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178709"
 ---
 # <a name="_fpieee_flt"></a>_fpieee_flt
 
@@ -75,7 +76,7 @@ Struktura **_FPIEEE_RECORD** , zdefiniowana w FPIEEE. h, zawiera informacje doty
 |**Trybu zaokrąglania roundingmode**<br/>**Precyzja**|Te **`unsigned int`** pola zawierają informacje o środowisku zmiennoprzecinkowym w momencie wystąpienia wyjątku.|
 |**Operacja**|To **`unsigned int`** pole wskazuje typ operacji, która spowodowała pułapkę. Jeśli typ jest porównaniem (**_FpCodeCompare**), można podać jedną z **_FPIEEE_COMPARE_RESULT** specjalnych wartości (zgodnie z definicją w FPIEEE. h) w polu **wynik. wartość** . Typ konwersji (**_FpCodeConvert**) wskazuje, że pułapka wystąpiła podczas operacji konwersji zmiennoprzecinkowej. Można przyjrzeć się **Operand1** i typów **wyników** , aby określić typ próby konwersji.|
 |**Operand1**<br/>**Operand2**<br/>**Wynik**|Te struktury **_FPIEEE_VALUE** wskazują typy i wartości proponowanego wyniku i operandów. Każda struktura zawiera następujące pola:<br /><br /> **OperandValid** — flaga oznaczająca, czy wartość odpowiadająca jest prawidłowa.<br />**Format** — typ danych odpowiadającej wartości. Typ formatu może być zwracany nawet wtedy, gdy odpowiadająca wartość jest nieprawidłowa.<br />Wartość danych wyniku lub operandu **wartości** .|
-|**Przyczyna**<br/>**Włączenie**<br/>**Stan**|**_FPIEEE_EXCEPTION_FLAGS** zawiera jedno pole bitowe dla typu wyjątku zmiennoprzecinkowego. Istnieje zgodność między tymi polami a argumentami używanymi do maskowania wyjątków dostarczonych do [_controlfp](control87-controlfp-control87-2.md). Dokładne znaczenie poszczególnych bitów zależy od kontekstu:<br /><br /> **Przyczyna** — każdy zestaw bitów wskazuje konkretny wyjątek, który został zgłoszony.<br />**Włącz** -każdy zestaw bitów wskazuje, że konkretny wyjątek jest aktualnie niemaskowany.<br />**Stan** — każdy bit zestawu wskazuje, że konkretny wyjątek jest aktualnie oczekujący. Obejmuje to wyjątki, które nie zostały zgłoszone, ponieważ zostały maskowane przez **_controlfp**.|
+|**Przyczyna**<br/>**Włączanie**<br/>**Stan**|**_FPIEEE_EXCEPTION_FLAGS** zawiera jedno pole bitowe dla typu wyjątku zmiennoprzecinkowego. Istnieje zgodność między tymi polami a argumentami używanymi do maskowania wyjątków dostarczonych do [_controlfp](control87-controlfp-control87-2.md). Dokładne znaczenie poszczególnych bitów zależy od kontekstu:<br /><br /> **Przyczyna** — każdy zestaw bitów wskazuje konkretny wyjątek, który został zgłoszony.<br />**Włącz** -każdy zestaw bitów wskazuje, że konkretny wyjątek jest aktualnie niemaskowany.<br />**Stan** — każdy bit zestawu wskazuje, że konkretny wyjątek jest aktualnie oczekujący. Obejmuje to wyjątki, które nie zostały zgłoszone, ponieważ zostały maskowane przez **_controlfp**.|
 
 Oczekujące wyjątki, które są wyłączone, są wywoływane po ich włączeniu. Może to spowodować niezdefiniowane zachowanie w przypadku używania **_fpieee_flt** jako filtru wyjątków. Zawsze wywołuj [_clearfp](clear87-clearfp.md) przed włączeniem wyjątków zmiennoprzecinkowych.
 

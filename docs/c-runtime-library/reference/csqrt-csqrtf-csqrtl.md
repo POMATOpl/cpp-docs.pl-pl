@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: csqrt, csqrtf, csqrtl'
 title: csqrt, csqrtf, csqrtl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-ms.openlocfilehash: 1afc79f0fba9663ec5fbb0a556da52c3a1c55ca6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c9c18002f353f0dedf5a02ffe80e061651f41fa3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178748"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
@@ -66,7 +67,7 @@ _Lcomplex csqrtl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -84,13 +85,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **csq
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**csqrt**,               **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

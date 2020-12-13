@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie ref i strukturze ref (C++/CLI i C++/CX)
 title: ref class and ref struct (C++/CLI i C++/CX)
 ms.date: 05/30/2019
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 633314e27118cfceddef449ab944c6dd0dbc4f9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176980"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class and ref struct (C++/CLI i C++/CX)
 
@@ -118,6 +119,6 @@ Słowa kluczowe **klasy wartości** i **struktury wartości** instruują kompila
 
 Opcja kompilatora: `/clr`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

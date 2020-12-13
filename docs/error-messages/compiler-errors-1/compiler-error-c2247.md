@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2247'
 title: Błąd kompilatora C2247
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 480d3862a1f96517ecce11be5c695e106eb58d7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177942"
 ---
 # <a name="compiler-error-c2247"></a>Błąd kompilatora C2247
 
 element "identifier" jest niedostępny, ponieważ Klasa "Class" używa specyfikatora "do dziedziczenia" klasy "
 
-`identifier` jest dziedziczona z klasy zadeklarowanej z dostępem prywatnym lub chronionym.
+`identifier` jest Dziedziczony z klasy zadeklarowanej z dostępem prywatnym lub chronionym.
 
 Poniższy przykład generuje C2247:
 
@@ -34,7 +35,7 @@ int j = c.i;               // C2247, i not accessible
 
 Ten błąd może również zostać wygenerowany w wyniku działania kompilatora, który został wykonany dla programu Visual Studio .NET 2003: Kontrola dostępu z chronionymi elementami członkowskimi. Dostęp do chronionej składowej (n) można uzyskać tylko za pośrednictwem funkcji składowej klasy (B), która dziedziczy z klasy (A), z której jest członkiem.
 
-W przypadku kodu, który jest prawidłowy zarówno w programie Visual Studio .NET 2003, jak i w wersji C++Visual Studio .NET, deklaruj element członkowski jako zaprzyjaźniony typ. Można również użyć publicznego dziedziczenia.
+W przypadku kodu, który jest prawidłowy zarówno w programie Visual Studio .NET 2003, jak i w Visual C++ wersji programu Visual Studio .NET, należy zadeklarować element członkowski jako znajomy typu. Można również użyć publicznego dziedziczenia.
 
 ```cpp
 // C2247b.cpp
@@ -59,7 +60,7 @@ void A::f() {
 
 C2247 można również wygenerować w wyniku zgodności kompilatora, który został wykonany dla programu Visual Studio .NET 2003: prywatne klasy bazowe są teraz niedostępne. Klasa (A), która jest prywatną klasą bazową do typu (B), nie powinna być dostępna dla typu (C), który używa B jako klasy bazowej.
 
-W przypadku kodu, który jest prawidłowy w wersji Visual Studio .NET 2003 i Visual Studio .NET C++, użyj operatora Scope.
+W przypadku kodu, który jest prawidłowy zarówno w Visual C++ wersjach programu Visual Studio .NET 2003, jak i Visual Studio .NET, użyj operatora Scope.
 
 ```cpp
 // C2247c.cpp

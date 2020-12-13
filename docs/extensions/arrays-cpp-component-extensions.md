@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: tablicach (C++/CLI i C++/CX)'
 title: Tablice (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e75818b7c4de3123fefb6bed9f24da46f8212ed8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177110"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Tablice (C++/CLI i C++/CX)
 
