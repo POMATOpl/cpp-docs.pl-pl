@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbbkprint, _ismbbkprint_l'
 title: _ismbbkprint, _ismbbkprint_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: 183a883d259fd322c5ecd6712bba676b7ffe080c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2d48f77143ffb14b142380cf0c3d2f3b4ceb3675
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337775"
 ---
 # <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -77,12 +78,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbkprint**|\<Mbctype. h>|
-|**_ismbbkprint_l**|\<Mbctype. h>|
+|**_ismbbkprint**|\<mbctype.h>|
+|**_ismbbkprint_l**|\<mbctype.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

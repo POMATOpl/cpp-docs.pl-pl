@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Jak sterować układem (C++)'
 title: 'Instrukcje: kontrolki układu (C++) | Microsoft Docs'
 ms.date: 02/15/2019
 f1_keywords:
@@ -80,12 +81,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: ac21096f18b1331759f9bf7dfe613100298b7296
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 75fef5d47df163e1b21b9dd2861ec652179d9eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337834"
 ---
 # <a name="how-to-layout-controls-c"></a>Instrukcje: kontrolki układu (C++)
 
@@ -165,10 +166,10 @@ Aby wyłączyć efekt przyciągania przewodników, można użyć klawiszy specja
 
 - Aby przenieść prowadnice bez przenoszenia przyciągniętych kontrolek, przeciągnij prowadnicę, trzymając wciśnięty klawisz **SHIFT** .
 
-- Aby wyłączyć przewodniki, przejdź do menu **Formatowanie**  >  **ustawienia przewodnika**. Następnie w obszarze **prowadnice układu**wybierz opcję **Brak**.
+- Aby wyłączyć przewodniki, przejdź do menu **Formatowanie**  >  **ustawienia przewodnika**. Następnie w obszarze **prowadnice układu** wybierz opcję **Brak**.
 
    > [!TIP]
-   > Możesz również użyć skrótu w **formacie**menu  >  **Przełącz prowadnice**.
+   > Możesz również użyć skrótu w **formacie** menu  >  **Przełącz prowadnice**.
 
 ## <a name="select-controls"></a>Wybierz kontrolki
 
@@ -192,7 +193,7 @@ Gdy zmieniasz rozmiar lub wyrównujesz wiele kontrolek, **Edytor okien dialogowy
 
 - Aby określić formant dominujący, przytrzymaj wciśnięty klawisz **Ctrl** i wybierz kontrolkę, której chcesz użyć do zmiany rozmiaru lub lokalizacji *innych kontrolek*. Przytrzymanie klawisza **Ctrl** i wybranie kontrolki w zaznaczeniu spowoduje również kontrolowanie kontrolki dominującej w tym wyborze.
 
-- Aby zmienić formant dominujący, wyczyść bieżące zaznaczenie, zaznaczając poza wszystkimi aktualnie zaznaczonymi kontrolkami i powtórz powyższą procedurę, zaznaczając *najpierw*inną kontrolkę.
+- Aby zmienić formant dominujący, wyczyść bieżące zaznaczenie, zaznaczając poza wszystkimi aktualnie zaznaczonymi kontrolkami i powtórz powyższą procedurę, zaznaczając *najpierw* inną kontrolkę.
 
 > [!NOTE]
 > Uchwyty zmiany rozmiarów kontrolki dominującej są trwałe, podczas gdy uchwyty formantów podrzędnych są puste. Wszystkie dalsze zmiany rozmiarów lub wyrównywania opierają się na formancie dominującym.
@@ -212,7 +213,7 @@ Użyj uchwytów rozmiaru, aby zmienić rozmiar kontrolki. Gdy wskaźnik jest ust
 
 - Aby automatycznie dopasować rozmiar formantu do tekstu w nim, przejdź do menu **Format** lub kliknij prawym przyciskiem myszy kontrolkę, a następnie wybierz pozycję **rozmiar do zawartości**.
 
-- Aby kontrolować ten sam rozmiar, wybierz kontrolki, które chcesz zmienić, a następnie przejdź do **formatu**menu  >  **Make Same Size**, a następnie wybierz jedną z **opcji**, **wysokość**lub **Szerokość**.
+- Aby kontrolować ten sam rozmiar, wybierz kontrolki, które chcesz zmienić, a następnie przejdź do **formatu** menu  >  , a następnie wybierz jedną z **opcji**, **wysokość** lub **Szerokość**.
 
    Zmiana rozmiaru grupy kontrolek zależy od rozmiaru kontrolki dominującej, która jest wybierana w pierwszej kolejności w serii. Końcowy rozmiar kontrolek w grupie zależy od rozmiaru kontrolki dominującej.
 
@@ -256,7 +257,7 @@ Pole kombi można zmienić po dodaniu go do okna dialogowego. Możesz również 
 
    Upewnij się, że wybierasz kontrolkę, która ma być pierwszą osobą dominującą, lub ustaw ją jako formant dominujący przed wykonaniem polecenia wyrównania lub zmiany rozmiarów, gdy końcowa pozycja grupy kontrolek zależy od pozycji kontrolki dominującej.
 
-- Aby równomiernie przemieścić kontrolki, wybierz kontrolki, które chcesz zmienić. Przejdź do pozycji **menu**  >  **Space Evenly** , a następnie wybierz jedno z następujących wyrównania odstępów:
+- Aby równomiernie przemieścić kontrolki, wybierz kontrolki, które chcesz zmienić. Przejdź do pozycji **menu**  >   , a następnie wybierz jedno z następujących wyrównania odstępów:
 
    |Odstępy|Opis|
    |---|---|
@@ -275,7 +276,7 @@ Pole kombi można zmienić po dodaniu go do okna dialogowego. Możesz również 
    |Szkic|Opis|
    |---|---|
    |**Kliknij**|Wyrównuje przyciski push wzdłuż prawej krawędzi okna dialogowego.|
-   |**Dolne**|Wyrównuje przyciski push wzdłuż dolnej krawędzi okna dialogowego.|
+   |**U dołu**|Wyrównuje przyciski push wzdłuż dolnej krawędzi okna dialogowego.|
 
    Jeśli wybierzesz kontrolkę inną niż przycisk push, jej pozycja nie ma żadnego oddziaływania.
 

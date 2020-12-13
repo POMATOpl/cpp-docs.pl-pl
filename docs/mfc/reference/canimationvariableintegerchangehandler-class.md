@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAnimationVariableIntegerChangeHandler'
 title: Klasa CAnimationVariableIntegerChangeHandler
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: dec940d2f5e68f0531fc917df447b5a1a5cb8189
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 53a0a1838e021294b4ccc870e6f01b873233a0c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81755057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336727"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>Klasa CAnimationVariableIntegerChangeHandler
 
-Implementuje wywołanie zwrotne, który jest wywoływany przez interfejs API animacji, gdy zmienia się wartość zmiennej animacji.
+Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy zmienia się wartość zmiennej animacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,13 +44,13 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationVariableIntegerChangeHandler::CreateInstance CAnimationVariableIntegerChangeHandler::CreateInstance CAnimationVariableIntegerChangeHandler::CreateInstance CAni](#createinstance)|Tworzy wystąpienie `CAnimationVariableIntegerChangeHandler` wywołania zwrotnego.|
-|[CAnimationVariableIntegerChangeHandler::OnIntegerValueZmienił](#onintegervaluechanged)|Wywoływana po zmianie wartości zmiennej animacji. (Przesłania `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`).|
-|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.|
+|[CAnimationVariableIntegerChangeHandler:: CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationVariableIntegerChangeHandler` wywołania zwrotnego.|
+|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Wywołuje się, gdy zmieniono wartość zmiennej animacji. (Przesłania `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`).|
+|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji, aby skierować zdarzenia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten program obsługi zdarzeń jest tworzony i przekazywany do metody IUIAnimationVariable::SetVariableIntegerChangeHandler, po wywołaniu CAnimationVariable::EnableIntegerValueChangedEvent lub CAnimationBaseObject::EnableIntegerValueChangedEvent (która włącza to zdarzenie dla wszystkich zmiennych animacji zamkniętych w obiekcie animacji).
+Ta procedura obsługi zdarzeń jest tworzona i przenoszona do metody IUIAnimationVariable:: SetVariableIntegerChangeHandler, gdy jest wywoływana CAnimationVariable:: EnableIntegerValueChangedEvent lub CAnimationBaseObject:: EnableIntegerValueChangedEvent (która umożliwia to zdarzenie dla wszystkich zmiennych animacji hermetyzowanych w obiekcie animacji).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -63,19 +64,19 @@ Ten program obsługi zdarzeń jest tworzony i przekazywany do metody IUIAnimatio
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxanimationcontroller.h
+**Nagłówek:** afxanimationcontroller. h
 
-## <a name="canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
+## <a name="canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a> CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
 
-Konstruuje CAnimationVariableIntegerChangeHandler obiektu.
+Konstruuje obiekt CAnimationVariableIntegerChangeHandler.
 
 ```
 CAnimationVariableIntegerChangeHandler ();
 ```
 
-## <a name="canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance CAnimationVariableIntegerChangeHandler::CreateInstance CAnimationVariableIntegerChangeHandler::CreateInstance CAni
+## <a name="canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a> CAnimationVariableIntegerChangeHandler:: CreateInstance
 
-Tworzy wystąpienie CAnimationVariableIntegerChangeHandler wywołania zwrotnego.
+Tworzy wystąpienie wywołania zwrotnego CAnimationVariableIntegerChangeHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -85,18 +86,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pKontroleranimacji*<br/>
-Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
+*pAnimationController*<br/>
+Wskaźnik do kontrolera animacji, który będzie otrzymywał zdarzenia.
 
-*ps.*
+*ppHandler*
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda się powiedzie, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-## <a name="canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueZmienił
+## <a name="canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a> CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
 
-Wywoływana po zmianie wartości zmiennej animacji.
+Wywołuje się, gdy zmieniono wartość zmiennej animacji.
 
 ```
 IFACEMETHOD(OnIntegerValueChanged) (
@@ -108,25 +109,25 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*Serii ujęć*<br/>
-Scenorysu, który jest animowanie zmiennej.
+*scenorysu*<br/>
+Scenorys, który jest animowany dla zmiennej.
 
-*Zmiennej*<br/>
-Zmienna animacji, która została zaktualizowana.
+*zmiennej*<br/>
+Zaktualizowana zmienna animacji.
 
-*Newvalue*<br/>
-Nowa zaokrąglona wartość.
+*newValue*<br/>
+Nowa wartość zaokrąglona.
 
-*poprzedniWartość*<br/>
-Poprzednia zaokrąglona wartość.
+*previousValue*<br/>
+Poprzednia wartość zaokrąglona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL.
+S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL.
 
-## <a name="canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController
+## <a name="canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a> CAnimationVariableIntegerChangeHandler::SetAnimationController
 
-Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.
+Przechowuje wskaźnik do kontrolera animacji, aby skierować zdarzenia.
 
 ```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -134,8 +135,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>Parametry
 
-*pKontroleranimacji*<br/>
-Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
+*pAnimationController*<br/>
+Wskaźnik do kontrolera animacji, który będzie otrzymywał zdarzenia.
 
 ## <a name="see-also"></a>Zobacz też
 

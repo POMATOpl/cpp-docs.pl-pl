@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _InterlockedAddLargeStatistic'
 title: _InterlockedAddLargeStatistic
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: de8c5b7dfd2462dddcb98324ebacc44c8148d85e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 52ca32d0f9b08d638a66923f8f0204eb515b447e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336871"
 ---
 # <a name="_interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Wykonuje blokadę, w której pierwszy operand jest wartością 64-bitową.
 
@@ -48,17 +49,17 @@ Wartość drugiego operandu.
 |---------------|------------------|
 |`_InterlockedAddLargeStatistic`|x86|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-`_InterlockedAddLargeStatistic` Wewnętrzna nie jest niepodzielna, ponieważ jest zaimplementowana jako dwie oddzielne, zablokowane instrukcje. Niepodzielna 64-bitowa odczyt, która występuje w innym wątku podczas wykonywania wewnętrznego, może spowodować odczytanie niespójnej wartości.
+`_InterlockedAddLargeStatistic`Wewnętrzna nie jest niepodzielna, ponieważ jest zaimplementowana jako dwie oddzielne, zablokowane instrukcje. Niepodzielna 64-bitowa odczyt, która występuje w innym wątku podczas wykonywania wewnętrznego, może spowodować odczytanie niespójnej wartości.
 
-`_InterlockedAddLargeStatistic`zachowuje się jako bariera odczytu i zapisu. Aby uzyskać więcej informacji, zobacz [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
+`_InterlockedAddLargeStatistic` zachowuje się jako bariera odczytu i zapisu. Aby uzyskać więcej informacji, zobacz [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Konflikty z kompilatorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

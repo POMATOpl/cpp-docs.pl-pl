@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _bittest, _bittest64'
 title: _bittest, _bittest64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 50c0f1637fefab9bd39fcbca2cd18571c7769bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337200"
 ---
 # <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję, która analizuje bit w pozycji `b` Address `a`i zwraca wartość tego bitu. `bt`
+Generuje `bt` instrukcję, która analizuje bit w pozycji `b` Address `a` i zwraca wartość tego bitu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,7 +52,7 @@ Bit w określonym położeniu.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
 |`_bittest`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_bittest64`|ARM64, x64|\<intrin.h>|
@@ -102,6 +103,6 @@ Binary representation:
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

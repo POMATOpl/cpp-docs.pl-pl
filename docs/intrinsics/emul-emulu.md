@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __emul, __emulu'
 title: __emul, __emulu
 ms.date: 09/02/2019
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cdcbd14e4e72bcaf7d2c7fd5f098a291e32227cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337063"
 ---
 # <a name="__emul-__emulu"></a>__emul, __emulu
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Wykonuje operacje mnożenia, które przepełnią wartość 32-bitową liczbę całkowitą.
 
@@ -55,13 +56,13 @@ Wynik mnożenia.
 |`__emul`|x86, x64|
 |`__emulu`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-`__emul`Pobiera 2 32-bitowe wartości podpisane i zwraca wynik mnożenia jako 64-bitową liczbę całkowitą ze znakiem.
+`__emul` Pobiera 2 32-bitowe wartości podpisane i zwraca wynik mnożenia jako 64-bitową liczbę całkowitą ze znakiem.
 
-`__emulu`Pobiera 2 32-bitową liczbę całkowitą bez znaku i zwraca wynik mnożenia jako 64-bitową liczbę całkowitą bez znaku.
+`__emulu` Pobiera 2 32-bitową liczbę całkowitą bez znaku i zwraca wynik mnożenia jako 64-bitową liczbę całkowitą bez znaku.
 
 ## <a name="example"></a>Przykład
 
@@ -104,6 +105,6 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

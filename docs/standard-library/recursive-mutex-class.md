@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy recursive_mutex
 title: recursive_mutex — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8a9c9322407871984c83135eecd2e26ac475d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217613"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337884"
 ---
 # <a name="recursive_mutex-class"></a>recursive_mutex — Klasa
 
@@ -54,7 +55,7 @@ class recursive_mutex;
 
 **Przestrzeń nazw:** std
 
-## <a name="lock"></a><a name="lock"></a>skręt
+## <a name="lock"></a><a name="lock"></a> skręt
 
 Blokuje wątek wywołujący do momentu, aż wątek uzyska własność `mutex` .
 
@@ -66,7 +67,7 @@ void lock();
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , metoda zwraca natychmiast, a poprzednia blokada pozostaje w mocy.
 
-## <a name="recursive_mutex"></a><a name="recursive_mutex"></a>recursive_mutex
+## <a name="recursive_mutex"></a><a name="recursive_mutex"></a> recursive_mutex
 
 Konstruuje `recursive_mutex` obiekt, który nie jest zablokowany.
 
@@ -74,7 +75,7 @@ Konstruuje `recursive_mutex` obiekt, który nie jest zablokowany.
 recursive_mutex();
 ```
 
-## <a name="recursive_mutex"></a><a name="dtorrecursive_mutex_destructor"></a>~ recursive_mutex
+## <a name="recursive_mutex"></a><a name="dtorrecursive_mutex_destructor"></a>  ~ recursive_mutex
 
 Zwalnia wszystkie zasoby, które są używane przez obiekt.
 
@@ -86,7 +87,7 @@ Zwalnia wszystkie zasoby, które są używane przez obiekt.
 
 Jeśli obiekt jest zablokowany podczas działania destruktora, zachowanie jest niezdefiniowane.
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Próbuje uzyskać własność `mutex` bez blokowania.
 
@@ -102,7 +103,7 @@ bool try_lock() noexcept;
 
 Jeśli wątek wywołujący jest już właścicielem `mutex` , funkcja natychmiast zwraca wartość **`true`** , a poprzednia blokada pozostaje w mocy.
 
-## <a name="unlock"></a><a name="unlock"></a>odblokowania
+## <a name="unlock"></a><a name="unlock"></a> odblokowania
 
 Zwalnia własność obiektu mutex.
 
@@ -116,7 +117,7 @@ Ta metoda zwalnia własność `mutex` tylko wtedy, gdy jest wywoływana tyle raz
 
 Jeśli wątek wywołujący nie `mutex` jest własnym, zachowanie jest niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

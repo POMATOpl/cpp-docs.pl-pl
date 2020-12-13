@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strtime, _wstrtime'
 title: _strtime, _wstrtime
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0cb5d5deaa89d832ed1cecd231ed1c8f456ccace
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337750"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
@@ -98,8 +99,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtime**|\<> godziny. h|
-|**_wstrtime**|\<Time. h> lub \<WCHAR. h>|
+|**_strtime**|\<time.h>|
+|**_wstrtime**|\<time.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -125,7 +126,7 @@ int main( void )
 The current time is 14:21:44
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

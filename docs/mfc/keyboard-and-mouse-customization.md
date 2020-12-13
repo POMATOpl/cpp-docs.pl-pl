@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Dostosowywanie klawiatury i myszy'
 title: Dostosowywanie klawiatury i myszy
 ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 262555b060f226a86438a2189eda44d83c55d5a2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2ff54b2092bb6db52d5b780f4e64e51e05d8b402
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336822"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Dostosowywanie klawiatury i myszy
 
@@ -71,4 +72,4 @@ Aby zabezpieczyć przed tym rodzajem ataku, Dodaj kod do programu obsługi polec
 [Dostosowywanie na potrzeby MFC](customization-for-mfc.md)<br/>
 [Klasa CKeyboardManager](reference/ckeyboardmanager-class.md)<br/>
 [Klasa CMouseManager](reference/cmousemanager-class.md)<br/>
-[Konsekwencje dostosowania związane z zabezpieczeniami](security-implications-of-customization.md)
+[Implikacje zabezpieczeń dotyczące dostosowywania](security-implications-of-customization.md)

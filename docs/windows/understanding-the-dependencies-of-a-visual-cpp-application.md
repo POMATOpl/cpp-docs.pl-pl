@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o tym, jak zrozumieć zależności aplikacji Visual C++
 title: Poznanie zależności aplikacji Visual C++
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,25 +12,25 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 92db11778de7d31bbab67e649cd58e264da331e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff18d594edf6d35541655075de6f6e951ea42b88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336560"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Poznanie zależności aplikacji Visual C++
 
-Aby określić, które bibliotek języka Visual C++, zależy od aplikacji, możesz wyświetlić właściwości projektu. (W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy nad projektem i wybierz polecenie **właściwości** otworzyć **stron właściwości** okno dialogowe.) W systemie Windows 8 i starszych można również użyć modułu przeszukiwania zależności (depends.exe), który daje bardziej wszechstronny obraz zależności. Aby uzyskać nowsze wersje systemu Windows [lucasg/zależności](https://github.com/lucasg/Dependencies) narzędzie zapewnia podobne funkcje (jest to narzędzia innych firm nie jest gwarantowana przez firmę Microsoft).
+Aby określić, które biblioteki Visual C++ od których zależy aplikacja, możesz wyświetlić właściwości projektu. (W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Właściwości** , aby otworzyć okno dialogowe **strony właściwości** .) W systemie Windows 8 i starszych wersjach można również użyć analizatora zależności (depends.exe), który zapewnia bardziej szczegółowy obraz zależności. W przypadku nowszych wersji systemu Windows narzędzie [lucasg/zależności](https://github.com/lucasg/Dependencies) zapewnia podobną funkcjonalność (to narzędzie innej firmy nie jest gwarantowane przez firmę Microsoft).
 
-W **stron właściwości** okno dialogowe, możesz sprawdzić różne strony **właściwości konfiguracji** Aby zrozumieć zależności. Na przykład, jeśli projekt używa bibliotek MFC, a następnie wybierz **użycie MFC**, **Użyj MFC w współdzielonej bibliotece DLL** na **właściwości konfiguracji**, **ogólne**  strony aplikacji w czasie wykonywania jest zależna od biblioteki MFC DLL takie jak mfc\<wersji > .dll. Jeśli aplikacja nie używa MFC, może być zależna od biblioteki CRT wybranie **biblioteki środowiska uruchomieniowego** wartość **Multi-threaded DLL debugowania (/ MDd)** lub **Multi-threaded biblioteki DLL (/ MD)** na **właściwości konfiguracji**, **C/C++**, **generowania kodu** strony.
+W oknie dialogowym **strony właściwości** można sprawdzić różne strony w obszarze **Właściwości konfiguracji** , aby zrozumieć zależności. Na przykład jeśli projekt używa bibliotek MFC i wybierasz **użycie MFC**, **Użyj MFC w współdzielonej bibliotece DLL** na stronie **Właściwości konfiguracji**, **Ogólne** , aplikacja w czasie wykonywania zależy od bibliotek DLL MFC, takich jak MFC \<version> . dll. Jeśli aplikacja nie korzysta z MFC, może ona zależeć od biblioteki CRT w przypadku wybrania wartości **biblioteki środowiska uruchomieniowego** dla **wielowątkowej biblioteki DLL (/MDD)** lub **wielowątkowej biblioteki DLL (/MD)** na stronie **Właściwości konfiguracji**, **C/C++**, **generowanie kodu** .
 
-Korzystając z depends.exe, można sprawdzić listę bibliotek DLL, które są połączone z aplikacji w czasie ładowania oraz listę jego bibliotek DLL załadowanych z opóźnieniem. Jeśli chcesz uzyskać pełną listę bibliotek DLL, które są ładowane dynamicznie w czasie wykonywania, służy funkcja profilowania w depends.exe do testowania aplikacji, dopóki nie jesteś pewien, że wszystkie ścieżki kodu zostały wykonane. Po zakończeniu sesji profilowania depends.exe pokazuje, które biblioteki DLL zostały dynamicznie załadowane w czasie wykonywania.
+Za pomocą depends.exe można przeanalizować listę bibliotek DLL, które są połączone z aplikacją w czasie ładowania, oraz listę bibliotek DLL załadowanych z opóźnieniem. Jeśli chcesz uzyskać kompletną listę bibliotek DLL, które są ładowane dynamicznie w czasie wykonywania, możesz użyć funkcji profilowania w depends.exe do testowania aplikacji, dopóki nie masz pewności, że wszystkie ścieżki kodu zostały wykonane. Po zakończeniu sesji profilowania depends.exe pokazuje, które biblioteki DLL zostały dynamicznie załadowane w czasie wykonywania.
 
 Korzystając z depends.exe, należy pamiętać, że biblioteka DLL może zależeć od innej biblioteki DLL lub od określonej wersji biblioteki DLL. Można użyć depends.exe na komputerze deweloperskim lub na komputerze docelowym. Na komputerze deweloperskim depends.exe raportuje biblioteki DLL, które są wymagane do obsługi aplikacji. Jeśli masz problemy z uruchomieniem aplikacji na komputerze docelowym, możesz skopiować do niego depends.exe i następnie otworzyć aplikację za pomocą narzędzia, aby określić, czy któryś wymagany plik DLL jest niedostępny lub nieprawidłowy.
 
-Jeśli wiadomo, od których plików DLL zależy aplikacja, możesz określić te, które trzeba rozpowszechniać wraz z aplikacją, kiedy wdraża się ją na innym komputerze. W większości przypadków nie trzeba redystrybuować systemowych bibliotek DLL, ale może być konieczna Redystrybucja dll dla bibliotek języka Visual C++. Aby uzyskać więcej informacji, zobacz [Determining Which DLLs to Redistribute](determining-which-dlls-to-redistribute.md).
+Jeśli wiadomo, od których plików DLL zależy aplikacja, możesz określić te, które trzeba rozpowszechniać wraz z aplikacją, kiedy wdraża się ją na innym komputerze. W większości przypadków nie trzeba redystrybuować systemowych bibliotek DLL, ale może być konieczne ponowne dystrybuowanie bibliotek DLL dla bibliotek Visual C++. Aby uzyskać więcej informacji, zobacz [Określanie bibliotek DLL do redystrybucji](determining-which-dlls-to-redistribute.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wdrażanie aplikacji komputerowych](deploying-native-desktop-applications-visual-cpp.md)
+[Wdrażanie aplikacji klasycznych](deploying-native-desktop-applications-visual-cpp.md)

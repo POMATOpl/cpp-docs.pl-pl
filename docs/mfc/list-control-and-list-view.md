@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: formant listy i widok listy'
 title: Kontrolka listy i widok listy
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-ms.openlocfilehash: d308cfe83f02dcfe3687790c6638d268cc69fc24
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 582957cb59bc28797849d45f56fc2be95b8cc2b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336811"
 ---
 # <a name="list-control-and-list-view"></a>Kontrolka listy i widok listy
 
@@ -23,7 +24,7 @@ Dla wygody MFC hermetyzuje formant listy na dwa sposoby. Można użyć kontrolek
 
 - Pośrednio, za pomocą klasy [CListView](reference/clistview-class.md).
 
-`CListView`ułatwia integrację kontrolki listy z architekturą dokumentu MFC/widoku, hermetyzując kontrolkę tak, jakby [elementu CEditView](reference/ceditview-class.md) hermetyzuje kontrolkę edycji: formant wypełnia cały obszar powierzchni widoku MFC. (Widok *to* formant, Rzutowanie na `CListView` ).
+`CListView` ułatwia integrację kontrolki listy z architekturą dokumentu MFC/widoku, hermetyzując kontrolkę tak, jakby [elementu CEditView](reference/ceditview-class.md) hermetyzuje kontrolkę edycji: formant wypełnia cały obszar powierzchni widoku MFC. (Widok *to* formant, Rzutowanie na `CListView` ).
 
 `CListView`Obiekt dziedziczy z [CCtrlView](reference/cctrlview-class.md) i jego klas podstawowych i dodaje funkcję członkowską do pobrania podstawowej kontrolki listy. Użyj widoku elementów członkowskich do pracy z widokiem jako widoku. Użyj funkcji składowej [funkcji GetListCtrl](reference/clistview-class.md#getlistctrl) , aby uzyskać dostęp do funkcji składowych kontrolki listy. Użyj tych elementów członkowskich, aby:
 

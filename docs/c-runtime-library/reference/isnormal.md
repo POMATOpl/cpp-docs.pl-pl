@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: isnormal'
 title: isnormal
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3afae5196a7a6b2b149028ad347f95baa27b1544
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337759"
 ---
 # <a name="isnormal"></a>isnormal
 
@@ -51,10 +52,10 @@ Funkcja **isnormal** zwraca wartość różną od zera ( **`true`** w kodzie C++
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf —](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach wewnętrznych kompilatora'
 title: Funkcje wewnętrzne kompilatora
 ms.date: 09/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 7438c90eec8b1f88a4c1608953ce21772254f02c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c81608af1021919691b6241e14b1fefbe03643f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337165"
 ---
 # <a name="compiler-intrinsics"></a>Funkcje wewnętrzne kompilatora
 
@@ -26,7 +27,7 @@ Użycie funkcji wewnętrznych ma wpływ na przenośność kodu, ponieważ elemen
 
 Niektóre funkcje wewnętrzne, takie jak **`__assume`** i `__ReadWriteBarrier` , zawierają informacje dla kompilatora, które mają wpływ na zachowanie optymalizatora.
 
-Niektóre funkcje wewnętrzne są dostępne tylko jako elementy wewnętrzne, a niektóre z nich są dostępne zarówno w funkcjach, jak i wewnętrznie. Możesz nakazać kompilatorowi użycie wewnętrznej implementacji na jeden z dwóch sposobów, w zależności od tego, czy chcesz włączyć tylko określone funkcje, czy chcesz włączyć wszystkie elementy wewnętrzne. Pierwszy sposób to użycie wewnętrznego- `#pragma intrinsic(` *name-list* `)` . Dyrektywy pragma można użyć do określenia jednego wewnętrznego lub wielu elementów wewnętrznych rozdzielonych przecinkami. Drugim jest użycie opcji kompilatora [/Oi (Generuj funkcje wewnętrzne)](../build/reference/oi-generate-intrinsic-functions.md) , która sprawia, że wszystkie elementy wewnętrzne na danej platformie są dostępne. **/Oi** `#pragma function(` Aby wymusić użycie wywołania funkcji zamiast wewnętrznego, w obszarze/Oi należy użyć *funkcji wewnętrznego-Name-list* `)` . Jeśli Dokumentacja dla określonych wewnętrznych notatek jest dostępna tylko jako wewnętrzna, implementacja wewnętrzna jest używana bez względu na to, czy **/Oi** czy `#pragma intrinsic` jest określony. We wszystkich przypadkach **/Oi** lub `#pragma intrinsic` zezwala, ale nie wymusza, aby Optymalizator używał wewnętrznej. Optymalizator nadal może wywołać funkcję.
+Niektóre funkcje wewnętrzne są dostępne tylko jako elementy wewnętrzne, a niektóre z nich są dostępne zarówno w funkcjach, jak i wewnętrznie. Możesz nakazać kompilatorowi użycie wewnętrznej implementacji na jeden z dwóch sposobów, w zależności od tego, czy chcesz włączyć tylko określone funkcje, czy chcesz włączyć wszystkie elementy wewnętrzne. Pierwszy sposób to użycie wewnętrznego- `#pragma intrinsic(` *name-list* `)` . Dyrektywy pragma można użyć do określenia jednego wewnętrznego lub wielu elementów wewnętrznych rozdzielonych przecinkami. Drugim jest użycie opcji kompilatora [/Oi (Generuj funkcje wewnętrzne)](../build/reference/oi-generate-intrinsic-functions.md) , która sprawia, że wszystkie elementy wewnętrzne na danej platformie są dostępne.  `#pragma function(` Aby wymusić użycie wywołania funkcji zamiast wewnętrznego, w obszarze/Oi należy użyć *funkcji wewnętrznego-Name-list* `)` . Jeśli Dokumentacja dla określonych wewnętrznych notatek jest dostępna tylko jako wewnętrzna, implementacja wewnętrzna jest używana bez względu na to, czy **/Oi** czy `#pragma intrinsic` jest określony. We wszystkich przypadkach **/Oi** lub `#pragma intrinsic` zezwala, ale nie wymusza, aby Optymalizator używał wewnętrznej. Optymalizator nadal może wywołać funkcję.
 
 Niektóre standardowe funkcje biblioteki C/C++ są dostępne w implementacjach wewnętrznych w niektórych architekturach. Podczas wywoływania funkcji CRT, implementacja wewnętrzna jest używana, jeśli **/Oi** jest określony w wierszu polecenia.
 
@@ -46,7 +47,7 @@ W poniższych sekcjach wymieniono wszystkie funkcje wewnętrzne, które są dost
 
 - [Alfabetyczna lista funkcji wewnętrznych](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja asemblera ARM](../assembler/arm/arm-assembler-reference.md)<br/>
 [Dokumentacja asemblera programu Microsoft Macro](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>

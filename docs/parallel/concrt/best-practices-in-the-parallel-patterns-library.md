@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: najlepsze rozwiązania w bibliotece równoległych wzorców'
 title: Biblioteka wzorów równoległych — Najlepsze praktyki
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 0bd49dda881df402a8c511714c22be37da3a50c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72b0ff36532decbc55ae792ee407b3b711bd54a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334694"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Biblioteka wzorów równoległych — Najlepsze praktyki
 
@@ -20,7 +21,7 @@ W tym dokumencie opisano, jak najlepiej korzystać z biblioteki równoległych w
 
 Aby uzyskać więcej informacji na temat PPL, zobacz [Biblioteka wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 Ten dokument zawiera następujące sekcje:
 
@@ -44,7 +45,7 @@ Ten dokument zawiera następujące sekcje:
 
 - [Upewnij się, że zmienne są prawidłowe przez cały okres istnienia zadania](#lifetime)
 
-## <a name="do-not-parallelize-small-loop-bodies"></a><a name="small-loops"></a>Nie Zrównoleglaniej małych ciał pętli
+## <a name="do-not-parallelize-small-loop-bodies"></a><a name="small-loops"></a> Nie Zrównoleglaniej małych ciał pętli
 
 Przetwarzanie równoległe stosunkowo małych zbiorników może spowodować obciążenie związane z planowaniem, aby przekroczyć zalety przetwarzania równoległego. Rozważmy poniższy przykład, który dodaje każdą parę elementów w dwóch tablicach.
 
@@ -54,7 +55,7 @@ Obciążenie dla każdej iteracji pętli równoległej jest zbyt małe, aby moż
 
 [[Top](#top)]
 
-## <a name="express-parallelism-at-the-highest-possible-level"></a><a name="highest"></a>Express Parallels na najwyższym możliwym poziomie
+## <a name="express-parallelism-at-the-highest-possible-level"></a><a name="highest"></a> Express Parallels na najwyższym możliwym poziomie
 
 W przypadku zrównoleglanie kodu tylko na niskim poziomie można wprowadzić konstrukcję do przyłączania rozwidlenia, która nie jest skalowana w miarę wzrostu liczby procesorów. Konstrukcja *rozwidlenia Join* to konstrukcja, w której jedno zadanie dzieli swoją pracę na mniejsze podzadania równoległe i czeka na zakończenie tych podzadań. Każde podzadanie może rekursywnie podzielić się na dodatkowe podzadania.
 
@@ -76,11 +77,11 @@ Aby zmniejszyć liczbę obciążeń związanych z planowaniem w tym przykładzie
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-W podobnym przykładzie, który używa potoku do równoległego przetwarzania obrazu, zobacz [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+W podobnym przykładzie, który używa potoku do równoległego przetwarzania obrazu, zobacz [Przewodnik: tworzenie sieci Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Top](#top)]
 
-## <a name="use-parallel_invoke-to-solve-divide-and-conquer-problems"></a><a name="divide-and-conquer"></a>Użyj parallel_invoke, aby rozwiązać problemy z dzieleniem i rządź
+## <a name="use-parallel_invoke-to-solve-divide-and-conquer-problems"></a><a name="divide-and-conquer"></a> Użyj parallel_invoke, aby rozwiązać problemy z dzieleniem i rządź
 
 Problem z *dzieleniem i rządź* jest postacią konstrukcji rozwidlenia, która używa rekursji do dzielenia zadania na podzadania. Oprócz klas [concurrency:: task_group](reference/task-group-class.md) i [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) , można również użyć algorytmu [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) , aby rozwiązać problemy z dzieleniem i rządź. `parallel_invoke`Algorytm ma bardziej zwięzłą składnię niż obiekty grupy zadań i jest przydatny, gdy istnieje stała liczba zadań równoległych.
 
@@ -94,7 +95,7 @@ Aby zapoznać się z pełną wersją tego przykładu, zobacz [How to: Use parall
 
 [[Top](#top)]
 
-## <a name="use-cancellation-or-exception-handling-to-break-from-a-parallel-loop"></a><a name="breaking-loops"></a>Użyj anulowania lub obsługi wyjątków, aby przerwać pętlę równoległą
+## <a name="use-cancellation-or-exception-handling-to-break-from-a-parallel-loop"></a><a name="breaking-loops"></a> Użyj anulowania lub obsługi wyjątków, aby przerwać pętlę równoległą
 
 PPL zapewnia dwa sposoby anulowania równoległej pracy wykonywanej przez grupę zadań lub algorytm równoległy. Jednym ze sposobów jest użycie mechanizmu anulowania, który jest dostarczany przez klasy [concurrency:: task_group](reference/task-group-class.md) i [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) . Innym sposobem jest zgłoszenie wyjątku w treści funkcji pracy zadania. Mechanizm anulowania jest bardziej wydajny niż obsługa wyjątków podczas anulowania drzewa równoległej pracy. *Równoległe drzewo robocze* jest grupą powiązanych grup zadań, w których niektóre grupy zadań zawierają inne grupy zadań. Mechanizm anulowania anuluje grupę zadań i jej podrzędne grupy zadań w sposób górny. Odwrotnie, obsługa wyjątków działa w sposób dolny i musi anulować każdą podrzędną grupę zadań niezależnie, ponieważ wyjątek jest propagowany w górę.
 
@@ -118,7 +119,7 @@ Aby uzyskać więcej ogólnych informacji na temat mechanizmów anulowania i obs
 
 [[Top](#top)]
 
-## <a name="understand-how-cancellation-and-exception-handling-affect-object-destruction"></a><a name="object-destruction"></a>Zrozumienie, jak anulowanie i obsługa wyjątków wpływają na zniszczenie obiektu
+## <a name="understand-how-cancellation-and-exception-handling-affect-object-destruction"></a><a name="object-destruction"></a> Zrozumienie, jak anulowanie i obsługa wyjątków wpływają na zniszczenie obiektu
 
 W drzewie równoległych zadań zadanie, które zostało anulowane, uniemożliwia uruchomienie zadań podrzędnych. Może to spowodować problemy, jeśli jedno z zadań podrzędnych wykonuje operację, która jest ważna dla aplikacji, na przykład zwalniając zasób. Ponadto anulowanie zadania może spowodować, że wyjątek jest propagowany przez destruktor obiektu i spowodować niezdefiniowane zachowanie w aplikacji.
 
@@ -148,7 +149,7 @@ Firma Microsoft zaleca, aby nie wykonywać operacji krytycznych, takich jak zwal
 
 [[Top](#top)]
 
-## <a name="do-not-block-repeatedly-in-a-parallel-loop"></a><a name="repeated-blocking"></a>Nie blokuj wielokrotnie w pętli równoległej
+## <a name="do-not-block-repeatedly-in-a-parallel-loop"></a><a name="repeated-blocking"></a> Nie blokuj wielokrotnie w pętli równoległej
 
 Pętla równoległa, taka jak [współbieżność::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) lub [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) , która jest zdominowana przez operacje blokowania może spowodować, że środowisko uruchomieniowe będzie tworzyć wiele wątków w krótkim czasie.
 
@@ -164,7 +165,7 @@ Zalecamy refaktoryzację kodu, aby uniknąć tego wzorca. W tym przykładzie mo�
 
 [[Top](#top)]
 
-## <a name="do-not-perform-blocking-operations-when-you-cancel-parallel-work"></a><a name="blocking"></a>Nie wykonuj operacji blokowania po anulowaniu pracy równoległej
+## <a name="do-not-perform-blocking-operations-when-you-cancel-parallel-work"></a><a name="blocking"></a> Nie wykonuj operacji blokowania po anulowaniu pracy równoległej
 
 Jeśli to możliwe, nie wykonuj operacji blokowania przed wywołaniem metody [concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) lub [concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) , aby anulować pracę równoległą.
 
@@ -182,7 +183,7 @@ Poniższy przykład pokazuje, jak zapobiec niepotrzebnej pracy, a tym samym zwi�
 
 [[Top](#top)]
 
-## <a name="do-not-write-to-shared-data-in-a-parallel-loop"></a><a name="shared-writes"></a>Nie zapisuj danych udostępnionych w pętli równoległej
+## <a name="do-not-write-to-shared-data-in-a-parallel-loop"></a><a name="shared-writes"></a> Nie zapisuj danych udostępnionych w pętli równoległej
 
 Środowisko uruchomieniowe współbieżności zawiera kilka struktur danych, na przykład [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), które synchronizują współbieżny dostęp do udostępnionych danych. Te struktury danych są przydatne w wielu przypadkach, na przykład wtedy, gdy wiele zadań rzadko wymaga dostępu współdzielonego do zasobu.
 
@@ -202,7 +203,7 @@ Aby zapoznać się z pełną wersją tego przykładu, zobacz [jak: używanie kom
 
 [[Top](#top)]
 
-## <a name="when-possible-avoid-false-sharing"></a><a name="false-sharing"></a>Jeśli to możliwe, unikaj udostępniania fałszywych
+## <a name="when-possible-avoid-false-sharing"></a><a name="false-sharing"></a> Jeśli to możliwe, unikaj udostępniania fałszywych
 
 *Wartość FAŁSZ udostępniania* występuje, gdy wiele współbieżnych zadań, które są uruchomione na oddzielnych procesorach zapisu do zmiennych, które znajdują się w tej samej linii pamięci podręcznej. Gdy jedno zadanie zapisuje w jednej ze zmiennych, wiersz pamięci podręcznej dla obu zmiennych jest unieważniony. Każdy procesor musi ponownie załadować wiersz pamięci podręcznej za każdym razem, gdy wiersz pamięci podręcznej jest unieważniony. W związku z tym fałszywe udostępnianie może spowodować spadek wydajności aplikacji.
 
@@ -224,7 +225,7 @@ Zaleca się użycie klasy [concurrency:: prekombinowanej](../../parallel/concrt/
 
 [[Top](#top)]
 
-## <a name="make-sure-that-variables-are-valid-throughout-the-lifetime-of-a-task"></a><a name="lifetime"></a>Upewnij się, że zmienne są prawidłowe przez cały okres istnienia zadania
+## <a name="make-sure-that-variables-are-valid-throughout-the-lifetime-of-a-task"></a><a name="lifetime"></a> Upewnij się, że zmienne są prawidłowe przez cały okres istnienia zadania
 
 Gdy podajesz wyrażenie lambda do grupy zadań lub algorytmu równoległego, klauzula przechwytywania określa, czy treść wyrażenia lambda uzyskuje dostęp do zmiennych w otaczającym zakresie przez wartość lub przez odwołanie. Gdy zmienne są przekazywane do wyrażenia lambda przez odwołanie, należy zagwarantować, że okres istnienia tej zmiennej będzie trwały do momentu zakończenia zadania.
 
@@ -256,7 +257,7 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expres
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [środowisko uruchomieniowe współbieżności najlepszych praktyk](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
@@ -264,7 +265,7 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expres
 [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Anulowanie w PPL](cancellation-in-the-ppl.md)<br/>
 [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Przewodnik: tworzenie sieci Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Instrukcje: używanie parallel_invoke do pisania równoległej procedury sortowania](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
 [Jak użyć anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
 [Instrukcje: używanie kombinacji w celu poprawy wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>

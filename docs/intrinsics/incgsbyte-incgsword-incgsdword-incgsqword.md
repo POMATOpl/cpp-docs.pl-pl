@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __incgsbyte, __incgsword, __incgsdword __incgsqword'
 title: __incgsbyte, __incgsword, __incgsdword, __incgsqword
 ms.date: 09/02/2019
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: 8b4e88b4ccd2cf1d2a3130e3a535de1c9a434320
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a19c266c936875765c5681a47845be1a53f18c83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336940"
 ---
 # <a name="__incgsbyte-__incgsword-__incgsdword-__incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Dodaj jeden do wartości w lokalizacji pamięci określonej przez przesunięcie względem początku `GS` segmentu.
 
@@ -49,18 +50,18 @@ void __incgsqword(
 ### <a name="parameters"></a>Parametry
 
 *Przesunięcie*\
-podczas Przesunięcie od początku `GS`.
+podczas Przesunięcie od początku `GS` .
 
 ## <a name="requirements"></a>Wymagania
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__incgsbyte`|X64|
-|`__incgsword`|X64|
-|`__incgsdword`|X64|
-|`__incgsqword`|X64|
+|`__incgsbyte`|x64|
+|`__incgsword`|x64|
+|`__incgsdword`|x64|
+|`__incgsqword`|x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -68,9 +69,9 @@ Te procedury są dostępne tylko jako wewnętrznie.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)\
-[\__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
-[\__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[\__addgsbyte, \_ _addgsword, \_ _addgsdword \_ _addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)\
+[\__readgsbyte, \_ _readgsdword, \_ _readgsqword \_ _readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[\__writegsbyte, \_ _writegsdword, \_ _writegsqword \_ _writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

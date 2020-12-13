@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat struktury once_flag
 title: once_flag — Struktura
 ms.date: 09/17/2018
 f1_keywords:
 - mutex/std::once_flag
 ms.assetid: 71bfb88d-ca8c-4082-a6e1-ff52151e8629
-ms.openlocfilehash: 55c3f90f72857a4e4cd3f9075ce5bae10e14d218
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4419353e68da5929d8abed9b2c718438855057e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338007"
 ---
 # <a name="once_flag-structure"></a>once_flag — Struktura
 
@@ -31,7 +32,7 @@ Obiekty typu `once_flag` można tworzyć, ale nie mogą być kopiowane.
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

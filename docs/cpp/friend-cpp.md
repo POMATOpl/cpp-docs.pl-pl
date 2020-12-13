@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Friend (C++)'
 title: friend (C++)
 ms.date: 07/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 772eada8257917a6127b15ea2e50946aebb3bc74
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6e25beb10a727d0dcefce15e96059b49c5661601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337730"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -237,6 +238,6 @@ Implikacje relacji zaprzyjaźnionej
 
 Funkcje zaprzyjaźnione mogą być zdefiniowane (w treści funkcji) wewnątrz deklaracji klasy. Te funkcje są funkcjami wbudowanymi, podobnie jak funkcje wbudowanego elementu członkowskiego, tak jakby były zdefiniowane bezpośrednio po dodaniu wszystkich elementów członkowskich klasy, ale przed zamknięciem zakresu klasy (koniec deklaracji klasy). Zaprzyjaźnione funkcje, które są zdefiniowane wewnątrz deklaracji klasy, znajdują się w zakresie otaczającej klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

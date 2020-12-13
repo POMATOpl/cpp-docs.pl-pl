@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __indwordstring'
 title: __indwordstring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 18d18a8981a2dd58c0f7bcd366faaf46629647c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336911"
 ---
 # <a name="__indwordstring"></a>__indwordstring
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczytuje dane z określonego portu przy użyciu `rep insd` instrukcji.
 
@@ -48,7 +49,7 @@ podczas Liczba bajtów danych do odczytania.
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -56,6 +57,6 @@ Ta procedura jest dostępna tylko jako wewnętrzna.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

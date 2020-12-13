@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l'
 title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: 7694edda5ef2b214a1ca391ab1b922b8bfbf35e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7fbbf44747bdcd0b95ccb603d735fc2ac0ecf6b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336472"
 ---
 # <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -135,7 +136,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość wskazującą związek podciągów *ciąg1* i *ciąg2*w następujący sposób.
+Każda z tych funkcji zwraca wartość wskazującą związek podciągów *ciąg1* i *ciąg2* w następujący sposób.
 
 |Wartość zwracana|Relacja ciąg1 do ciąg2|
 |------------------|----------------------------------------|
@@ -143,7 +144,7 @@ Każda z tych funkcji zwraca wartość wskazującą związek podciągów *ciąg1
 |0|*ciąg1* identyczny z *ciąg2*|
 |> 0|*ciąg1* większy niż *ciąg2*|
 
-Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, Dołącz oba ciągi. H lub MBSTRING. C. **_wcsnicoll** może zakończyć się niepowodzeniem, jeśli *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **_wcsnicoll** może ustawić **errno** na **EINVAL**. Aby sprawdzić, czy wystąpił błąd w wywołaniu **_wcsnicoll**, ustaw wartość **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll**.
+Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, Dołącz oba ciągi. H lub MBSTRING. H. **_wcsnicoll** może zakończyć się niepowodzeniem, jeśli *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **_wcsnicoll** może ustawić **errno** na **EINVAL**. Aby sprawdzić, czy wystąpił błąd w wywołaniu **_wcsnicoll**, ustaw wartość **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -165,9 +166,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnicoll**, **_strnicoll_l**|\<> String. h|
-|**_wcsnicoll**, **_wcsnicoll_l**|\<WCHAR. h> lub \<> String. h|
-|**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring. h>|
+|**_strnicoll**, **_strnicoll_l**|\<string.h>|
+|**_wcsnicoll**, **_wcsnicoll_l**|\<wchar.h> lub \<string.h>|
+|**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -175,7 +176,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

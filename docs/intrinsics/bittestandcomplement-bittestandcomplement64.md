@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _bittestandcomplement, _bittestandcomplement64'
 title: _bittestandcomplement, _bittestandcomplement64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - _bittestandcomplement intrinsic
 - _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
-ms.openlocfilehash: b1dcfe86aad18c8261029c9111681e1882bc96f5
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8a701b2a38dcfa2e6efe3044b63a78533a7a6efa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337191"
 ---
 # <a name="_bittestandcomplement-_bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generowanie instrukcji, która bada bit `b` adresu `a`, zwraca jego bieżącą wartość i ustawia bit do uzupełnienia.
+Generowanie instrukcji, która bada bit `b` adresu `a` , zwraca jego bieżącą wartość i ustawia bit do uzupełnienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,7 +57,7 @@ Bit w określonym położeniu.
 |`_bittestandcomplement`|x86, ARM, x64, ARM64|
 |`_bittestandcomplement64`|x64, ARM64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -102,6 +103,6 @@ Value changed to 0, Result: 1
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

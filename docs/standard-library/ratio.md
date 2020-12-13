@@ -1,5 +1,6 @@
 ---
-title: '&lt;ratio &gt;'
+description: 'Dowiedz się więcej o: &lt; współczynnik&gt;'
+title: '&lt;współczynnik&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - ratio/std::mega
@@ -31,16 +32,16 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8fab74cde47e4078781b665044bc2becd0a9dac3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337941"
 ---
-# <a name="ltratiogt"></a>&lt;ratio &gt;
+# <a name="ltratiogt"></a>&lt;współczynnik&gt;
 
-Uwzględnij \<ratio nagłówka standardowego > do definiowania stałych i szablonów, które są używane do przechowywania i manipulowania wartościami racjonalnymi w czasie kompilacji.
+Dołącz standardowy nagłówek, \<ratio> Aby zdefiniować stałe i szablony, które są używane do przechowywania i manipulowania wartościami racjonalnymi w czasie kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,17 +61,17 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Szablon `ratio` definiuje stałe statyczne `num` i `den` takich, które `num`  /  `den` = = licznik/mianownik i `num` i `den` nie mają wspólnych czynników. `num`  /  `den` jest wartością, która jest reprezentowana przez szablon klasy. W związku z tym `type` wyznacza `ratio<num, den>` tworzenia wystąpienia.
+Szablon `ratio` definiuje stałe statyczne `num` i `den` takie, które `num`  /  `den` = = licznik/mianownik i `num` `den` nie ma wspólnych czynników. `num` / `den` jest wartością, która jest reprezentowana przez szablon klasy. W związku `type` z tym wyznacza Tworzenie wystąpienia `ratio<num, den>` .
 
 ### <a name="specializations"></a>Specjalizacje
 
-\<ratio > również definiuje specjalizacje `ratio`, które mają następującą formę.
+\<ratio> definiuje również specjalizacje `ratio` , które mają następującą formę.
 
 `template <class R1, class R2> struct ratio_specialization`
 
-Każda specjalizacja przyjmuje dwa parametry szablonu, które również muszą być specjalizacjami `ratio`. Wartość `type` jest określana przez skojarzoną operację logiczną.
+Każda specjalizacja przyjmuje dwa parametry szablonu, które również muszą być specjalizacjami `ratio` . Wartość `type` jest określana przez skojarzoną operację logiczną.
 
-|Nazwa|Wartość `type`|
+|Nazwa|`type` Wartościami|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -106,6 +107,6 @@ typedef ratio<1000000000000000, 1> peta;
 typedef ratio<1000000000000000000, 1> exa;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

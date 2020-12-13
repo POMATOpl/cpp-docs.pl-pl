@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fscanf, _fscanf_l, fwscanf, _fwscanf_l'
 title: fscanf, _fscanf_l, fwscanf, _fwscanf_l
 ms.date: 11/04/2016
 api_name:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-ms.openlocfilehash: 1c143cbc1bf642e7efc6f10b9615fdaca8a236d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fbdcffa7492d8a4f5d465ac0a62eefecca2e5c84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336522"
 ---
 # <a name="fscanf-_fscanf_l-fwscanf-_fwscanf_l"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
-Odczytaj sformatowane dane ze strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).
+Odczytaj sformatowane dane ze strumienia. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [fscanf_s, _fscanf_s_l, fwscanf_s _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,16 +84,16 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
+*produkcyjne*<br/>
 Wskaźnik do struktury **pliku** .
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu.
 
 *argument*<br/>
 Argumenty opcjonalne.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -103,7 +104,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumień* lub *
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fscanf** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji określonych przez *argument* (jeśli istnieje). Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf**; Opis *formatu*można znaleźć w temacie [scanf](scanf-scanf-l-wscanf-wscanf-l.md) .
+Funkcja **fscanf** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji określonych przez *argument* (jeśli istnieje). Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf**; Opis *formatu* można znaleźć w temacie [scanf](scanf-scanf-l-wscanf-wscanf-l.md) .
 
 **fwscanf** to dwubajtowa wersja **fscanf**; argument formatu **fwscanf** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **fscanf** obecnie nie obsługuje danych wejściowych ze strumienia Unicode.
 
@@ -111,7 +112,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
@@ -123,7 +124,7 @@ Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji — funk
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**fscanf**, **_fscanf_l**|\<stdio.h>|
-|**fwscanf**, **_fwscanf_l**|\<stdio. h > lub \<WCHAR. h >|
+|**fwscanf**, **_fwscanf_l**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -188,7 +189,7 @@ x
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

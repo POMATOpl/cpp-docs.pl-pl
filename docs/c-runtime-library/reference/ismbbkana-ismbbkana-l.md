@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbbkana, _ismbbkana_l'
 title: _ismbbkana, _ismbbkana_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: dd788d18692e11886caf4ee12703bb5878de1163
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3b4c005068a6a646c256d0f091e4b86e15df2acb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335649"
 ---
 # <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
@@ -77,12 +78,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbkana**|\<Mbctype. h>|
-|**_ismbbkana_l**|\<Mbctype. h>|
+|**_ismbbkana**|\<mbctype.h>|
+|**_ismbbkana_l**|\<mbctype.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

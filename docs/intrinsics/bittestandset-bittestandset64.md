@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _bittestandset, _bittestandset64'
 title: _bittestandset, _bittestandset64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 69d1c8569a228ed4994343e12ef769710bd06ad5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337151"
 ---
 # <a name="_bittestandset-_bittestandset64"></a>_bittestandset, _bittestandset64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wygeneruj instrukcję, aby przeanalizować `b` bit `a`adresu, zwrócić jego bieżącą wartość i ustawić bit na 1.
+Wygeneruj instrukcję, aby przeanalizować bit `b` adresu `a` , zwrócić jego bieżącą wartość i ustawić bit na 1.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,7 +57,7 @@ Bit w określonym położeniu.
 |`_bittestandset`|x86, ARM, x64, ARM64|
 |`_bittestandset64`|x64, ARM64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -149,6 +150,6 @@ Flags: 0x0
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

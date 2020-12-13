@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2857'
 title: Błąd kompilatora C2857
 ms.date: 09/13/2018
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2857
 ms.assetid: b57302bd-58ec-45ae-992a-1e282d5eeccc
-ms.openlocfilehash: 11b620f9748ac85e731d79b0652c0392375b2ea4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85f2a9cffc8a96998a102d9e8219d9656cb3386f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337525"
 ---
 # <a name="compiler-error-c2857"></a>Błąd kompilatora C2857
 
-> w pliku źródłowym nie znaleziono instrukcji "#include" określonej przy użyciu opcji wiersza polecenia/YC*filename*
+> w pliku źródłowym nie znaleziono instrukcji "#include" określonej przy użyciu opcji wiersza polecenia/YC *filename*
 
 Opcja [/YC](../../build/reference/yc-create-precompiled-header-file.md) określa nazwę pliku dołączanego, który nie jest uwzględniony w kompilowanym pliku źródłowym.
 
@@ -23,7 +24,7 @@ Opcja [/YC](../../build/reference/yc-create-precompiled-header-file.md) określa
 
 W przypadku użycia opcji **/YC**<em>filename</em> w pliku źródłowym do utworzenia prekompilowanego pliku nagłówkowego (pch) ten plik źródłowy musi zawierać plik nagłówkowy *filename* . Każdy plik zawarty w pliku źródłowym, włącznie z określoną *nazwą pliku*, znajduje się w pliku PCH. W innych plikach źródłowych skompilowanych przy użyciu opcji **/Yu**<em>filename</em> do użycia pliku PCH, dołączenie *nazwy* pliku musi być pierwszym wierszem niebędącym komentarzem w pliku. Kompilator ignoruje wszystkie elementy w pliku źródłowym przed dołączeniem.
 
-Ten błąd może być spowodowany przez instrukcję `#include "filename"` w bloku kompilacji warunkowej, który nie jest kompilowany w pliku źródłowym PCH.
+Ten błąd może być spowodowany przez `#include "filename"` instrukcję w bloku kompilacji warunkowej, który nie jest kompilowany w pliku źródłowym PCH.
 
 ## <a name="example"></a>Przykład
 

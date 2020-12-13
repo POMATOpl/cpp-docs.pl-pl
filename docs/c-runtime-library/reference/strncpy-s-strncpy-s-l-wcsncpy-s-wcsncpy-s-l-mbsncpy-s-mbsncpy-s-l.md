@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l'
 title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: eb4ea7c5f7b288640fe0797d9f6c5428fe28e0af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336488"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -207,7 +208,7 @@ Należy pamiętać, że w przeciwieństwie do **strncpy**, jeśli *Liczba* jest 
 
 Zachowanie **strncpy_s** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
 
-Jeśli *strDest* lub *StrSource* ma **wartość null**lub *NumberOfElements* ma wartość 0, wywoływana jest procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
+Jeśli *strDest* lub *StrSource* ma **wartość null** lub *NumberOfElements* ma wartość 0, wywoływana jest procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 **wcsncpy_s** i **_mbsncpy_s** są wersjami znaków dwubajtowych i **strncpy_s**. Argumenty i wartość zwracana **wcsncpy_s** i **mbsncpy_s** są odpowiednio różne. Te sześć funkcji zachowuje się identycznie w inny sposób.
 

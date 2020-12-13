@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3299'
 title: Błąd kompilatora C3299
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 148433f0d959985eb5a874f588f8cbf9d377e8b7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ab86a675eb13b975943130802ae98679dbc1cbb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337403"
 ---
 # <a name="compiler-error-c3299"></a>Błąd kompilatora C3299
 
@@ -21,7 +22,7 @@ Podczas zastępowania ogólnej funkcji składowej nie można określać klauzul 
 
 Klauzule ograniczenia dotyczące funkcji ogólnej, która jest zastępowana, zostaną Odziedziczone.
 
-Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnegoC++(/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

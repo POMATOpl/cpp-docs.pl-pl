@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _bittestandreset, _bittestandreset64'
 title: _bittestandreset, _bittestandreset64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: 9e0c869b926b2f9f3c04fd648f84ef33b8d16fcd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5d0b6133b981a7008bbe4979ee123cebd5ef99fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337170"
 ---
 # <a name="_bittestandreset-_bittestandreset64"></a>_bittestandreset, _bittestandreset64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Wygeneruj instrukcję, aby przeanalizować `b` bit `a`adresu, zwrócić jego bieżącą wartość i zresetować bit do wartości 0.
+Wygeneruj instrukcję, aby przeanalizować bit `b` adresu `a` , zwrócić jego bieżącą wartość i zresetować bit do wartości 0.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,7 +57,7 @@ Bit w określonym położeniu.
 |`_bittestandreset`|x86, ARM, x64, ARM64|
 |`_bittestandreset64`|x64, ARM64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -101,6 +102,6 @@ The number was negative.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

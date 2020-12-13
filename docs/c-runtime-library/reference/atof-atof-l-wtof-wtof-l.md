@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: atof, _atof_l, _wtof, _wtof_l'
 title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b583b4d443264d82fa83124f4dacd597fe8829b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337790"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -89,7 +90,7 @@ double _wtof_l(
 *str*<br/>
 Ciąg do przekonwertowania.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -108,7 +109,7 @@ Ciąg *str* do **atof** i **_wtof** ma następującą postać:
 
 [*odstęp*] [*Sign*] [*cyfry*] [__.__ *cyfry*] [{**e** &#124; **e** } [*Sign*]*cyfry*]
 
-*Odstęp* składa się ze znaków spacji lub tabulatora, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); i *cyfry* są jedną lub większą liczbą cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed punktem dziesiętnym, co najmniej jeden musi pojawić się po przecinku dziesiętnym. Po cyfrach dziesiętnych mogą występować wykładnika, która składa się z litery wprowadzającej (**e**lub **e**) i opcjonalnie cyfry dziesiętnej ze znakiem.
+*Odstęp* składa się ze znaków spacji lub tabulatora, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); i *cyfry* są jedną lub większą liczbą cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed punktem dziesiętnym, co najmniej jeden musi pojawić się po przecinku dziesiętnym. Po cyfrach dziesiętnych mogą występować wykładnika, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie cyfry dziesiętnej ze znakiem.
 
 Wersje UCRT tych funkcji nie obsługują konwersji liter wykładnika Pascal (**d** lub **d**). To niestandardowe rozszerzenie było obsługiwane przez wcześniejsze wersje CRT i może być istotną zmianą dla kodu.
 
@@ -127,8 +128,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedury (s)|Wymagany nagłówek|
 |------------------|---------------------|
-|**atof**, **_atof_l**|C: \<math.h> lub \<stdlib.h> C++: \<cstdlib> , \<stdlib.h> \<cmath> lub\<math.h>|
-|**_wtof**, **_wtof_l**|C: \<stdlib.h> lub \<wchar.h> C++: \<cstdlib> , \<stdlib.h> lub\<wchar.h>|
+|**atof**, **_atof_l**|C: \<math.h> lub \<stdlib.h> C++: \<cstdlib> , \<stdlib.h> \<cmath> lub \<math.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h> lub \<wchar.h> C++: \<cstdlib> , \<stdlib.h> lub \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -181,11 +182,11 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

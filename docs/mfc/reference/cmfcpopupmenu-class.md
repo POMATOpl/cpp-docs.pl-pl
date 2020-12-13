@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCPopupMenu'
 title: Klasa CMFCPopupMenu
 ms.date: 10/18/2018
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 89089559916419bc27b0528430fe7ad12ca804b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 97429da34643945ff75b2a16e7bbaf6df439e425
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334754"
 ---
 # <a name="cmfcpopupmenu-class"></a>Klasa CMFCPopupMenu
 
@@ -429,7 +430,7 @@ podczas Okno nadrzędne dla `CMFCPopupMenu` .
 *x*<br/>
 podczas Pozioma Współrzędna ekranu dla lokalizacji menu podręcznego
 
-*t*<br/>
+*Y*<br/>
 podczas Współrzędne ekranu pionowego dla lokalizacji menu podręcznego.
 
 *hMenu*<br/>

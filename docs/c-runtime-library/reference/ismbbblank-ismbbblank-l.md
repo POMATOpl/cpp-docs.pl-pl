@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbbblank, _ismbbblank_l'
 title: _ismbbblank, _ismbbblank_l
 ms.date: 4/2/2020
 api_name:
@@ -24,12 +25,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3d604b377ff874418dab11405ad2c891792a5bda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335640"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
@@ -70,12 +71,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbblank**|\<Mbctype. h>|
-|**_ismbbblank_l**|\<Mbctype. h>|
+|**_ismbbblank**|\<mbctype.h>|
+|**_ismbbblank_l**|\<mbctype.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

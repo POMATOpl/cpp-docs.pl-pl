@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy range_error
 title: range_error — Klasa
 ms.date: 08/14/2018
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - range_error class
 ms.assetid: 8afb3e88-fc49-4213-b096-ed63d7aea37c
-ms.openlocfilehash: 3e741604a3bb23fa8166023d115f79e7a288e2f7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c9d1ef328ba077b4b675d782df9c85d2db3a2072
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337955"
 ---
-# <a name="rangeerror-class"></a>range_error — Klasa
+# <a name="range_error-class"></a>range_error — Klasa
 
 Klasa służy jako klasa bazowa dla wszystkich wyjątków zgłoszonych w celu zgłaszania błędu zakresu.
 
@@ -29,7 +30,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez [co](../standard-library/exception-class.md) to jest kopia `message.data`. Aby uzyskać więcej informacji, zobacz [basic_string::d ATA](../standard-library/basic-string-class.md#data).
+Wartość zwrócona przez [co](../standard-library/exception-class.md) to jest kopia `message.data` . Aby uzyskać więcej informacji, zobacz [basic_string::d ATA](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Przykład
 
@@ -58,11 +59,11 @@ Type: class std::range_error
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept >
+**Nagłówek:**\<stdexcept>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa runtime_error](../standard-library/runtime-error-class.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

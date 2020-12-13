@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __indword'
 title: __indword
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: 790b65c8a565124df92b82b7ea17174788086a96
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bd637027ee930b551f08508874554e2b19f22461
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336923"
 ---
 # <a name="__indword"></a>__indword
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczytuje jedno podwójne słowo danych z określonego portu przy użyciu `in` instrukcji.
 
@@ -44,7 +45,7 @@ Wyraz odczytany z portu.
 |---------------|------------------|
 |`__indword`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -52,6 +53,6 @@ Ta procedura jest dostępna tylko jako wewnętrzna.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

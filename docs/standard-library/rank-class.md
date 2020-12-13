@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: ranga klasy'
 title: rank — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0ec9e66b31e4dd118de3e21761bb9b2175b0c5e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458180"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337931"
 ---
 # <a name="rank-class"></a>rank — Klasa
 
@@ -32,7 +33,7 @@ Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Zapytanie typu przechowuje wartość liczby wymiarów typu tablicy *br*lub 0, jeśli *ty* nie jest typem tablicy.
+Zapytanie typu przechowuje wartość liczby wymiarów typu tablicy *br* lub 0, jeśli *ty* nie jest typem tablicy.
 
 ## <a name="example"></a>Przykład
 
@@ -63,11 +64,11 @@ rank<int[5][10]> == 2
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[extent, klasa](../standard-library/extent-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa zakresu](../standard-library/extent-class.md)

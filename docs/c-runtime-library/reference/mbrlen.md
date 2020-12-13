@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mbrlen'
 title: mbrlen
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1a485090c056cb1e5f075bfd226ac7d4717ec0ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336497"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -52,7 +53,7 @@ size_t mbrlen(
 *str*<br/>
 Wskaźnik do następnego bajtu do sprawdzenia w ciągu znaków wielobajtowych.
 
-*count*<br/>
+*liczbą*<br/>
 Maksymalna liczba bajtów do sprawdzenia.
 
 *mbstate*<br/>
@@ -65,7 +66,7 @@ Jedna z następujących wartości:
 | Wartość | Opis |
 |--|--|
 | 0 | Kolejna *Liczba* lub mniejsza liczba bajtów Ukończ znak wielobajtowy, który reprezentuje szeroki znak null. |
-| 1 do *zliczenia*włącznie | Kolejna *Liczba* lub mniejsza liczba bajtów ukończą prawidłowy znak wielobajtowy. Zwracana wartość to liczba bajtów zakończonych znakiem wielobajtowym. |
+| 1 do *zliczenia* włącznie | Kolejna *Liczba* lub mniejsza liczba bajtów ukończą prawidłowy znak wielobajtowy. Zwracana wartość to liczba bajtów zakończonych znakiem wielobajtowym. |
 | (size_t) (-2) | Kolejna *Liczba* bajtów przyczynia się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego i wszystkie bajty *licznika* zostały przetworzone. |
 | (size_t) (-1) | Wystąpił błąd kodowania. Kolejna lub mniejsza *Liczba* bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W tym przypadku **errno** jest ustawiony na EILSEQ i stan konwersji w *mbstate* jest nieokreślony. |
 
@@ -158,4 +159,4 @@ Character count: 25
 ## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>

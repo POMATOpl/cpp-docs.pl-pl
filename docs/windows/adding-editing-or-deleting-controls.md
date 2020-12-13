@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak: Dodawanie, edytowanie lub usuwanie kontrolek (C++)'
 title: 'Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)'
 ms.date: 02/15/2019
 f1_keywords:
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4ff0f3bdf7e4da935cba3437900e2319218de771
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337830"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Instrukcje: Dodawanie, edytowanie lub usuwanie kontrolek (C++)
 
-Za pomocą **edytora okien**dialogowych można dodawać kontrolki, zmieniać ich rozmiar, edytować i usuwać w oknach dialogowych. Możesz również edytować właściwości kontrolki, takie jak jej identyfikator, lub czy początkowo jest ona widoczna w czasie wykonywania.
+Za pomocą **edytora okien** dialogowych można dodawać kontrolki, zmieniać ich rozmiar, edytować i usuwać w oknach dialogowych. Możesz również edytować właściwości kontrolki, takie jak jej identyfikator, lub czy początkowo jest ona widoczna w czasie wykonywania.
 
 Gdy Pracujesz w **edytorze okien dialogowych**, w [oknie przybornika](/visualstudio/ide/reference/toolbox) zostanie wyświetlona karta **Edytor okien dialogowych** . Możesz również dostosować okno **przybornika** , aby ułatwić korzystanie z niego. Aby uzyskać więcej informacji, zobacz [Korzystanie z przybornika](/visualstudio/ide/using-the-toolbox) i [Pokaż lub Ukryj okno przybornika](./dialog-editor.md).
 
@@ -123,7 +124,7 @@ Możesz dodać niestandardowe kontrolki do okna dialogowego. Wybierz ikonę **ko
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Aby zdefiniować zmienną członkowską dla kontrolki okna dialogowego (niebędącej przyciskiem)
 
 > [!NOTE]
-> Ten proces dotyczy tylko formantów okna dialogowego w projekcie MFC. Projekty ATL powinny używać okna dialogowego **nowe komunikaty systemu Windows i obsługi zdarzeń** . Aby uzyskać więcej informacji, zobacz [typy komunikatów skojarzonych z obiektami interfejsu użytkownika](../mfc/reference/message-types-associated-with-user-interface-objects.md), [Edytowanie programu obsługi komunikatów](../mfc/reference/editing-a-message-handler.md)i [Definiowanie obsługi komunikatów dla wiadomości odbitej](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+> Ten proces dotyczy tylko formantów okna dialogowego w projekcie MFC. Projekty ATL powinny używać okna dialogowego **nowe komunikaty systemu Windows i obsługi zdarzeń** . Aby uzyskać więcej informacji, zobacz [typy komunikatów skojarzonych z obiektami User-Interface](../mfc/reference/message-types-associated-with-user-interface-objects.md), [Edytowanie programu obsługi komunikatów](../mfc/reference/editing-a-message-handler.md)i [Definiowanie obsługi komunikatów dla wiadomości odbitej](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
 1. W [edytorze okien dialogowych](dialog-editor.md)Wybierz kontrolkę.
 
@@ -234,7 +235,7 @@ Okno dialogowe **Wstawianie kontrolki ActiveX** umożliwia Wstawianie kontrolek 
 
 Kontrolki ActiveX dostarczone przez niezależnych dostawców mogą mieć własne właściwości i cechy. Te właściwości są wyświetlane w oknie **Właściwości** . Wszystkie strony właściwości utworzone przez autorów kontrolki ActiveX są wyświetlane w oknie dialogowym **właściwości strony** . (Aby wyświetlić **stronę właściwości** dla konkretnej kontrolki ActiveX, wybierz przycisk **strony właściwości** w [okno właściwości](/visualstudio/ide/reference/properties-window)).
 
-- Wybierz kontrolkę **ActiveX** i przejdź do **View**  >  **strony właściwości** widoku menu, aby wyświetlić właściwości. Wprowadź odpowiednie zmiany na stronie właściwości.
+- Wybierz kontrolkę **ActiveX** i przejdź do   >  **strony właściwości** widoku menu, aby wyświetlić właściwości. Wprowadź odpowiednie zmiany na stronie właściwości.
 
    Na stronie właściwości kontrolki ActiveX są wyświetlane różne karty, w zależności od arkuszy właściwości, które są częścią kontrolki ActiveX.
 

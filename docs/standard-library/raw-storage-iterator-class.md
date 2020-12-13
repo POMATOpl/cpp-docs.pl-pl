@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy raw_storage_iterator
 title: raw_storage_iterator — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fd397de39118a5aa47ea45a8da0052937958bd17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337917"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator — Klasa
 
@@ -38,7 +39,7 @@ Typ obiektu, dla którego jest przypisywany magazyn.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje iterator danych wyjściowych, który konstruuje obiekty typu `Type` w sekwencji, która generuje. Obiekt klasy `raw_storage_iterator` \< **ForwardIterator**, **Type**> uzyskuje dostęp do magazynu przez obiekt iteratora do przodu, klasy `ForwardIterator` , która jest określana podczas konstruowania obiektu. W przypadku obiektu najpierw klasy `ForwardIterator` wyrażenie ** & \* najpierw** musi wyznaczyć nieskonstruowany magazyn dla następnego obiektu (typu `Type` ) w wygenerowanej sekwencji.
+Klasa opisuje iterator danych wyjściowych, który konstruuje obiekty typu `Type` w sekwencji, która generuje. Obiekt klasy `raw_storage_iterator` \< **ForwardIterator**, **Type**> uzyskuje dostęp do magazynu przez obiekt iteratora do przodu, klasy `ForwardIterator` , która jest określana podczas konstruowania obiektu. W przypadku obiektu najpierw klasy `ForwardIterator` wyrażenie **& \* najpierw** musi wyznaczyć nieskonstruowany magazyn dla następnego obiektu (typu `Type` ) w wygenerowanej sekwencji.
 
 Ta klasa adaptacji jest używana, gdy konieczne jest oddzielenie alokacji pamięci i konstruowania obiektów. `raw_storage_iterator`Może służyć do kopiowania obiektów do niezainicjowanego magazynu, na przykład pamięci przydzielonej za pomocą `malloc` funkcji.
 
@@ -103,7 +104,7 @@ Odwołanie do iteratora nieprzetworzonego magazynu
 
 #### <a name="remarks"></a>Uwagi
 
-Wymagania dla a są wymagane przez `ForwardIterator` iterator nieprzetworzonego magazynu, które wymagają, aby tylko wyrażenie \* *II*  =  *t* było prawidłowe i nie zachodził o **`operator`** ani `operator=` na siebie. Operatory elementów członkowskich w tej implementacji zwracają ** \* to**, więc [operator =](#op_eq)(**consttype**&) może przepełnić rzeczywisty magazyn w wyrażeniu, takim jak \* *PTR*  =  `val` .
+Wymagania dla a są wymagane przez `ForwardIterator` iterator nieprzetworzonego magazynu, które wymagają, aby tylko wyrażenie \* *II*  =  *t* było prawidłowe i nie zachodził o **`operator`** ani `operator=` na siebie. Operatory elementów członkowskich w tej implementacji zwracają **\* to**, więc [operator =](#op_eq)(**consttype**&) może przepełnić rzeczywisty magazyn w wyrażeniu, takim jak \* *PTR*  =  `val` .
 
 #### <a name="example"></a>Przykład
 
@@ -249,9 +250,9 @@ Iterator magazynu Raw lub odwołanie do iteratora nieprzetworzonego magazynu.
 
 Pierwszy operator ostatecznie próbuje wyodrębnić i przechowywać obiekt typu `CharType` ze skojarzonego strumienia wejściowego. Drugi operator wykonuje kopię obiektu, zwiększa obiekt, a następnie zwraca kopię.
 
-Pierwszy operator przyrostu przyrostowego zwiększa przechowywany obiekt iteratora wyjściowego, a następnie zwraca ** \* tę**wartość.
+Pierwszy operator przyrostu przyrostowego zwiększa przechowywany obiekt iteratora wyjściowego, a następnie zwraca **\* tę** wartość.
 
-Drugi operator postinkrementacji wykonuje kopię ** \* tego**elementu, zwiększa wartość przechowywanego obiektu iteratora wyjściowego, a następnie zwraca kopię.
+Drugi operator postinkrementacji wykonuje kopię **\* tego** elementu, zwiększa wartość przechowywanego obiektu iteratora wyjściowego, a następnie zwraca kopię.
 
 Konstruktor przechowuje `first` jako obiekt iteratora danych wyjściowych.
 

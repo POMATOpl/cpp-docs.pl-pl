@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Microsoft:: WRL, przestrzeń nazw'
 title: Microsoft::WRL — Przestrzeń nazw
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fdf7f0fbdca5cd5d95772052dd5dfb5018cabb18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335542"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL — Przestrzeń nazw
 
-Definiuje podstawowe typy, które tworzą środowisko wykonawcze systemu Windows C++ biblioteki szablonów.
+Definiuje podstawowe typy, które tworzą środowisko wykonawcze systemu Windows biblioteki szablonów C++.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,58 +32,58 @@ Definiuje podstawowe typy, które tworzą środowisko wykonawcze systemu Windows
 namespace Microsoft::WRL;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt | InhibitWeakReference>`|
 
 ### <a name="classes"></a>Klasy
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[ActivationFactory, klasa](activationfactory-class.md)|Umożliwia aktywowanie co najmniej jednej klasy przez środowisko wykonawcze systemu Windows.|
-|[AsyncBase, klasa](asyncbase-class.md)|Implementuje asynchroniczną maszynę stanu środowisko wykonawcze systemu Windows.|
-|[ClassFactory, klasa](classfactory-class.md)|Implementuje podstawowe funkcje interfejsu `IClassFactory`.|
-|[ComPtr, klasa](comptr-class.md)|Tworzy *inteligentny wskaźnik* typu, który reprezentuje interfejs określony przez parametr szablonu. ComPtr automatycznie utrzymuje liczbę odwołań dla podstawowego wskaźnika interfejsu i zwalnia interfejs, gdy liczba odwołań spadnie do zera.|
-|[DeferrableEventArgs, klasa](deferrableeventargs-class.md)|Klasa szablonu używana dla typów argumentów zdarzeń dla odroczeń.|
-|[EventSource, klasa](eventsource-class.md)|Reprezentuje zdarzenie. `EventSource` funkcje elementów członkowskich Dodaj, Usuń i Wywołaj procedury obsługi zdarzeń.|
-|[FtmBase, klasa](ftmbase-class.md)|Reprezentuje obiekt organizatora wolnego wątku.|
+|[Klasa ActivationFactory](activationfactory-class.md)|Umożliwia aktywowanie co najmniej jednej klasy przez środowisko wykonawcze systemu Windows.|
+|[Klasa AsyncBase](asyncbase-class.md)|Implementuje asynchroniczną maszynę stanu środowisko wykonawcze systemu Windows.|
+|[Klasa ClassFactory](classfactory-class.md)|Implementuje podstawowe funkcje `IClassFactory` interfejsu.|
+|[Klasa ComPtr](comptr-class.md)|Tworzy *inteligentny wskaźnik* typu, który reprezentuje interfejs określony przez parametr szablonu. ComPtr automatycznie utrzymuje liczbę odwołań dla podstawowego wskaźnika interfejsu i zwalnia interfejs, gdy liczba odwołań spadnie do zera.|
+|[Klasa DeferrableEventArgs](deferrableeventargs-class.md)|Klasa szablonu używana dla typów argumentów zdarzeń dla odroczeń.|
+|[EventSource — Klasa](eventsource-class.md)|Reprezentuje zdarzenie. `EventSource` funkcje elementów członkowskich Dodaj, Usuń i Wywołaj procedury obsługi zdarzeń.|
+|[Klasa FtmBase](ftmbase-class.md)|Reprezentuje obiekt organizatora wolnego wątku.|
 |[Klasa modułu](module-class.md)|Reprezentuje kolekcję obiektów pokrewnych.|
-|[RuntimeClass, klasa](runtimeclass-class.md)|Reprezentuje klasę wystąpienia, która dziedziczy określoną liczbę interfejsów i udostępnia określony środowisko wykonawcze systemu Windows, klasyczny COM i słabe wsparcie referencyjne.|
-|[SimpleActivationFactory, klasa](simpleactivationfactory-class.md)|Zapewnia podstawowy mechanizm tworzenia środowisko wykonawcze systemu Windows lub klasycznej klasy bazowej modelu COM.|
-|[SimpleClassFactory, klasa](simpleclassfactory-class.md)|Zapewnia podstawowy mechanizm tworzenia klasy bazowej.|
-|[WeakRef, klasa](weakref-class.md)|Reprezentuje *słabe odwołanie* , które może być używane tylko przez środowisko wykonawcze systemu Windows, a nie klasyczny com. Słabe odwołanie reprezentuje obiekt, który może lub nie jest dostępny.|
+|[Klasa RuntimeClass](runtimeclass-class.md)|Reprezentuje klasę wystąpienia, która dziedziczy określoną liczbę interfejsów i udostępnia określony środowisko wykonawcze systemu Windows, klasyczny COM i słabe wsparcie referencyjne.|
+|[Klasa SimpleActivationFactory](simpleactivationfactory-class.md)|Zapewnia podstawowy mechanizm tworzenia środowisko wykonawcze systemu Windows lub klasycznej klasy bazowej modelu COM.|
+|[Klasa SimpleClassFactory](simpleclassfactory-class.md)|Zapewnia podstawowy mechanizm tworzenia klasy bazowej.|
+|[Klasa WeakRef](weakref-class.md)|Reprezentuje *słabe odwołanie* , które może być używane tylko przez środowisko wykonawcze systemu Windows, a nie klasyczny com. Słabe odwołanie reprezentuje obiekt, który może lub nie jest dostępny.|
 
 ### <a name="structures"></a>Struktury
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[ChainInterfaces, struktura](chaininterfaces-structure.md)|Określa funkcje weryfikacji i inicjowania, które mogą być stosowane do zestawu identyfikatorów interfejsów.|
-|[CloakedIid, struktura](cloakediid-structure.md)|Wskazuje `RuntimeClass`, `Implements` i `ChainInterfaces` szablonów, których określony interfejs nie jest dostępny na liście IID.|
+|[ChainInterfaces — Struktura](chaininterfaces-structure.md)|Określa funkcje weryfikacji i inicjowania, które mogą być stosowane do zestawu identyfikatorów interfejsów.|
+|[CloakedIid — Struktura](cloakediid-structure.md)|Wskazuje `RuntimeClass` , `Implements` i szablony, `ChainInterfaces` których określony interfejs nie jest dostępny na liście IID.|
 |[Implements, struktura](implements-structure.md)|Implementuje `QueryInterface` i `GetIid` dla określonych interfejsów.|
-|[MixIn, struktura](mixin-structure.md)|Zapewnia, że Klasa środowiska uruchomieniowego pochodzi z interfejsów środowisko wykonawcze systemu Windows, jeśli istnieje, a następnie do klasycznych interfejsów COM.|
+|[MixIn — Struktura](mixin-structure.md)|Zapewnia, że Klasa środowiska uruchomieniowego pochodzi z interfejsów środowisko wykonawcze systemu Windows, jeśli istnieje, a następnie do klasycznych interfejsów COM.|
 |[RuntimeClassFlags, struktura](runtimeclassflags-structure.md)|Zawiera typ wystąpienia elementu [RuntimeClass](runtimeclass-class.md).|
 
 ### <a name="enumerations"></a>Wyliczenia
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[AsyncResultType, wyliczenie](asyncresulttype-enumeration.md)|Określa typ wyniku zwróconego przez metodę `GetResults()`.|
+|[AsyncResultType, wyliczenie](asyncresulttype-enumeration.md)|Określa typ wyniku zwróconego przez `GetResults()` metodę.|
 |[ModuleType, wyliczenie](moduletype-enumeration.md)|Określa, czy moduł powinien obsługiwać serwer w toku, czy też poza procesem.|
 |[RuntimeClassType, wyliczenie](runtimeclasstype-enumeration.md)|Określa typ wystąpienia [RuntimeClass](runtimeclass-class.md) , które jest obsługiwane.|
 
 ### <a name="functions"></a>Funkcje
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[AsWeak, funkcja](asweak-function.md)|Pobiera słabe odwołanie do określonego wystąpienia.|
-|[Callback — Funkcja (WRL)](callback-function-wrl.md)|Tworzy obiekt, którego funkcja członkowska jest metodą wywołania zwrotnego.|
-|[CreateActivationFactory, funkcja](createactivationfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy, które mogą być aktywowane przez środowisko wykonawcze systemu Windows.|
-|[CreateClassFactory, funkcja](createclassfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy.|
-|[Make, funkcja](make-function.md)|Inicjuje określoną klasę środowisko wykonawcze systemu Windows.|
+|[AsWeak —, funkcja](asweak-function.md)|Pobiera słabe odwołanie do określonego wystąpienia.|
+|[Funkcja wywołania zwrotnego (WRL)](callback-function-wrl.md)|Tworzy obiekt, którego funkcja członkowska jest metodą wywołania zwrotnego.|
+|[CreateActivationFactory —, funkcja](createactivationfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy, które mogą być aktywowane przez środowisko wykonawcze systemu Windows.|
+|[CreateClassFactory —, funkcja](createclassfactory-function.md)|Tworzy fabrykę, która tworzy wystąpienia określonej klasy.|
+|[Utwórz funkcję](make-function.md)|Inicjuje określoną klasę środowisko wykonawcze systemu Windows.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -92,4 +93,4 @@ namespace Microsoft::WRL;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Wrappers, przestrzeń nazw](microsoft-wrl-wrappers-namespace.md)
+[Microsoft:: WRL:: Otoke — przestrzeń nazw](microsoft-wrl-wrappers-namespace.md)

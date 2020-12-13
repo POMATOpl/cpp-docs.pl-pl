@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _enable'
 title: _enable
 ms.date: 09/02/2019
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-ms.openlocfilehash: 7adcd4eac807b8d0937efbbe6d89f8ad6dcb157c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: b9c84a31869dd356d5ee6ebd4eae5bd579cf319e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337039"
 ---
 # <a name="_enable"></a>_enable
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Włącza przerwy.
 
@@ -34,16 +35,16 @@ void _enable(void);
 |---------------|------------------|
 |`_enable`|x86, ARM, x64, ARM64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-`_enable`powoduje, że procesor ustawi flagę przerwania. W systemach x86 ta funkcja generuje instrukcję SET Interrupt flag (`sti`).
+`_enable` powoduje, że procesor ustawi flagę przerwania. W systemach x86 ta funkcja generuje instrukcję SET Interrupt flag ( `sti` ).
 
 Ta funkcja jest dostępna tylko w trybie jądra. W przypadku użycia w trybie użytkownika zostanie zgłoszony wyjątek uprzywilejowanej instrukcji.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
