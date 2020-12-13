@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze IExecutionResource
 title: IExecutionResource — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: af6b10d1552770c776762ed195f5efceab30a3d5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 913155ac4ca19f116742134e9d39678ee92b44a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334651"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource — Struktura
 
@@ -53,7 +54,7 @@ Zasoby wykonywania mogą być autonomiczne lub skojarzone z głównymi procesora
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel —, Metoda
+## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a> IExecutionResource:: CurrentSubscriptionLevel —, Metoda
 
 Zwraca liczbę aktywowanych katalogów głównych procesora wirtualnego i subskrybowanych wątków zewnętrznych aktualnie skojarzonych z wątkiem sprzętowym, który reprezentuje ten zasób.
 
@@ -75,7 +76,7 @@ Czynność aktywowania głównego wirtualnego procesora przy użyciu metody [IVi
 
 Menedżer zasobów używa informacji o poziomie subskrypcji jako jednego ze sposobów określania czasu przenoszenia zasobów między harmonogramami.
 
-## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId —, Metoda
+## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a> IExecutionResource:: GetExecutionResourceId —, Metoda
 
 Zwraca unikatowy identyfikator wątku sprzętowego reprezentowanego przez ten zasób wykonania.
 
@@ -91,7 +92,7 @@ Unikatowy identyfikator wątku sprzętowego odpowiadającego temu zasobowi wykon
 
 Każdy wątek sprzętowy ma przypisany unikatowy identyfikator przez środowisko uruchomieniowe współbieżności. Jeśli do wątku sprzętowego są skojarzone wiele zasobów wykonawczych, wszystkie będą miały ten sam identyfikator zasobu wykonania.
 
-## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource:: GetNodeId —, Metoda
+## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a> IExecutionResource:: GetNodeId —, Metoda
 
 Zwraca unikatowy identyfikator węzła procesora, do którego należy ten zasób wykonania.
 
@@ -109,7 +110,7 @@ Unikatowy identyfikator węzła procesora.
 
 Liczbę węzłów można uzyskać z funkcji [GetProcessorNodeCount —](concurrency-namespace-functions.md).
 
-## <a name="iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource:: Remove — Metoda
+## <a name="iexecutionresourceremove-method"></a><a name="remove"></a> IExecutionResource:: Remove — Metoda
 
 Zwraca ten zasób wykonania do Menedżer zasobów.
 
@@ -130,11 +131,11 @@ Jeśli jest to autonomiczny zasób wykonywania otrzymany z jednej z metod [ISche
 
 Również elementy główne procesora wirtualnego można zwrócić do Menedżer zasobów przez wywołanie `Remove` metody, ponieważ interfejs `IVirtualProcessorRoot` dziedziczy po `IExecutionResource` interfejsie. Może być konieczne zwrócenie katalogu głównego wirtualnego procesora w odpowiedzi na wywołanie metody [IScheduler:: RemoveVirtualProcessors —](ischeduler-structure.md#removevirtualprocessors) lub po zakończeniu z zasubskrybowanym korzeniem wirtualnego procesora, który uzyskano z metody [ISchedulerProxy:: CreateOversubscriber —](ischedulerproxy-structure.md#createoversubscriber) . W przypadku katalogów głównych procesorów wirtualnych nie ma żadnych ograniczeń dotyczących tego, które wątki mogą wywołać `Remove` metodę.
 
-`invalid_argument`jest zgłaszany, jeśli parametr `pScheduler` jest ustawiony na `NULL` .
+`invalid_argument` jest zgłaszany, jeśli parametr `pScheduler` jest ustawiony na `NULL` .
 
-`invalid_operation`jest zgłaszany, jeśli parametr `pScheduler` różni się od harmonogramu, dla którego został utworzony ten zasób wykonywania, lub z autonomicznym zasobem wykonywania, jeśli bieżący wątek jest inny niż wątek, który utworzył subskrypcję wątku.
+`invalid_operation` jest zgłaszany, jeśli parametr `pScheduler` różni się od harmonogramu, dla którego został utworzony ten zasób wykonywania, lub z autonomicznym zasobem wykonywania, jeśli bieżący wątek jest inny niż wątek, który utworzył subskrypcję wątku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [IVirtualProcessorRoot — Struktura](ivirtualprocessorroot-structure.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze ISchedulerProxy
 title: ISchedulerProxy — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: dcb6d175fa84e33f6a5af974eb76f1e1246bdc35
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4c3c488136c2b41a76b3080b2162fbf95dcb5ea8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334449"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy — Struktura
 
@@ -57,7 +58,7 @@ Menedżer zasobów to `ISchedulerProxy` interfejs do każdego harmonogramu, któ
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ischedulerproxybindcontext-method"></a><a name="bindcontext"></a>ISchedulerProxy:: BindContext —, Metoda
+## <a name="ischedulerproxybindcontext-method"></a><a name="bindcontext"></a> ISchedulerProxy:: BindContext —, Metoda
 
 Kojarzy kontekst wykonywania z serwerem proxy wątku, jeśli nie został jeszcze skojarzony z jednym.
 
@@ -74,9 +75,9 @@ Interfejs do kontekstu wykonywania, który ma zostać skojarzony z serwerem prox
 
 Zwykle Metoda [IThreadProxy:: SwitchTo —](ithreadproxy-structure.md#switchto) będzie powiązać serwer proxy wątku z kontekstem wykonywania na żądanie. Istnieją jednak sytuacje, w których konieczne jest powiązanie kontekstu z wyprzedzeniem, aby upewnić się, że `SwitchTo` Metoda przełącza się do już powiązanego kontekstu. Dzieje się tak w przypadku kontekstu planowania UMS, ponieważ nie może on wywołać metod przynoszących pamięć, a powiązanie serwera proxy wątków może wiązać się z alokacją pamięci, jeśli serwer proxy wątku nie jest łatwo dostępny w bezpłatnej puli fabryki proxy wątków.
 
-`invalid_argument`jest zgłaszany, jeśli parametr `pContext` ma wartość `NULL` .
+`invalid_argument` jest zgłaszany, jeśli parametr `pContext` ma wartość `NULL` .
 
-## <a name="ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a>ISchedulerProxy:: CreateOversubscriber —, Metoda
+## <a name="ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a> ISchedulerProxy:: CreateOversubscriber —, Metoda
 
 Tworzy nowy rdzeń wirtualnego procesora w wątku sprzętowym skojarzonym z istniejącym zasobem wykonania.
 
@@ -99,7 +100,7 @@ Użyj tej metody, jeśli harmonogram chce zasubskrybować określony wątek sprz
 
 Można nawet zasubskrybować istniejący rdzeń wirtualnego procesora, ponieważ `IVirtualProcessorRoot` interfejs dziedziczy po `IExecutionResource` interfejsie.
 
-## <a name="ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a>ISchedulerProxy:: RequestInitialVirtualProcessors —, Metoda
+## <a name="ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a> ISchedulerProxy:: RequestInitialVirtualProcessors —, Metoda
 
 Żąda początkowej alokacji katalogów głównych procesora wirtualnego. Każdy główny wirtualny procesor reprezentuje możliwość wykonywania jednego wątku, który może wykonywać pracę w harmonogramie.
 
@@ -128,7 +129,7 @@ Podczas określania, które wątki sprzętowe są wybrane, Menedżer zasobów b�
 
 Czynność subskrybowania wątku zwiększa poziom subskrypcji bazowego wątku sprzętowego o jeden. Poziom subskrypcji jest zmniejszany o jeden, gdy subskrypcja zostanie przerwana. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="ischedulerproxyshutdown-method"></a><a name="shutdown"></a>ISchedulerProxy:: Shutdown — Metoda
+## <a name="ischedulerproxyshutdown-method"></a><a name="shutdown"></a> ISchedulerProxy:: Shutdown — Metoda
 
 Powiadamia Menedżer zasobów o zamknięciu harmonogramu. Spowoduje to, że Menedżer zasobów natychmiast Odbierz wszystkie zasoby przydzielone do harmonogramu.
 
@@ -144,7 +145,7 @@ Jeśli w harmonogramie zostały zdezaktywowane katalogi główne procesora wirtu
 
 Nie jest konieczne, aby harmonogram zwracał pojedynczo wszystkie elementy główne wirtualnego procesora Menedżer zasobów przyznane do niego przez wywołania `Remove` metody, ponieważ wszystkie katalogi wirtualne procesorów wirtualnych zostaną zwrócone do Menedżer zasobów przy zamykaniu.
 
-## <a name="ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a>ISchedulerProxy:: SubscribeCurrentThread —, Metoda
+## <a name="ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a> ISchedulerProxy:: SubscribeCurrentThread —, Metoda
 
 Rejestruje bieżący wątek w Menedżer zasobów, kojarząc go z tym harmonogramem.
 
@@ -164,7 +165,7 @@ Zasób wykonywania otrzymany za pośrednictwem tej metody powinien zostać zwró
 
 Czynność subskrybowania wątku zwiększa poziom subskrypcji bazowego wątku sprzętowego o jeden. Poziom subskrypcji jest zmniejszany o jeden, gdy subskrypcja zostanie przerwana. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a>ISchedulerProxy:: UnbindContext —, Metoda
+## <a name="ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a> ISchedulerProxy:: UnbindContext —, Metoda
 
 Odkojarzy serwer proxy wątku z kontekstu wykonywania określonego przez `pContext` parametr i zwraca go do puli wolnych dla fabryki proxy wątku. Tę metodę można wywołać tylko w kontekście wykonywania, który został powiązany przez metodę [ISchedulerProxy:: BindContext —](#bindcontext) i nie został jeszcze uruchomiony za pośrednictwem `pContext` parametru metody [IThreadProxy:: SwitchTo —](ithreadproxy-structure.md#switchto) .
 
@@ -177,7 +178,7 @@ virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 *pContext*<br/>
 Kontekst wykonywania do skojarzenia z jego serwerem proxy wątków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Struktura IScheduler](ischeduler-structure.md)<br/>

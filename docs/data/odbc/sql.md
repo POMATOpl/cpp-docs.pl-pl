@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: SQL'
 title: SQL
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: cdceec9f4a6a39e9e1a50fc002d4220801e8d15a
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 01a559b959d0f9a8c37f13a79855d55c5890f20e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404271"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333905"
 ---
 # <a name="sql"></a>SQL
 
@@ -33,11 +34,11 @@ W tym temacie objaśniono:
 
 - [Jak klasy baz danych używają języka SQL](#_core_how_the_database_classes_use_sql).
 
-## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)
+## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)
 
 Klasy baz danych są implementowane za pomocą ODBC, która używa języka SQL w interfejsie na poziomie wywołań zamiast osadzania poleceń SQL w kodzie. ODBC używa programu SQL do komunikowania się ze [źródłem danych](../../data/odbc/data-source-odbc.md) za pośrednictwem sterowników ODBC. Te sterowniki interpretują dane SQL i tłumaczą je, w razie potrzeby, do użycia z określonym formatem bazy danych, takim jak Microsoft Access. Aby uzyskać więcej informacji na temat sposobu korzystania z programu SQL, zobacz [ODBC](../../data/odbc/odbc-basics.md) i Dokumentacja programu [ODBC programmer's Reference](/sql/odbc/reference/odbc-programmer-s-reference) .
 
-## <a name="database-classes"></a><a name="_core_the_database_classes"></a>Klasy baz danych
+## <a name="database-classes"></a><a name="_core_the_database_classes"></a> Klasy baz danych
 
 > [!NOTE]
 > Kreator użytkownika ODBC MFC nie jest dostępny w programie Visual Studio 2019 i nowszych. Nadal można utworzyć konsumenta ręcznie.
@@ -50,10 +51,10 @@ Klasy baz danych używają części programu SQL znanej jako język manipulowani
 
 |Słowo kluczowe SQL|Kreatorzy i klasy baz danych używają go|
 |-----------------|---------------------------------------------|
-|**ZAZNACZENIA**|Aby określić, które tabele i kolumny w źródle danych mają być używane.|
+|**SELECT**|Aby określić, które tabele i kolumny w źródle danych mają być używane.|
 |**MIEJSCU**|Aby zastosować filtr, który zawęża zaznaczenie.|
 |**ORDER BY**|Aby zastosować porządek sortowania do zestawu rekordów.|
-|**WSTAWIENIA**|Aby dodać nowe rekordy do zestawu rekordów.|
+|**INSERT**|Aby dodać nowe rekordy do zestawu rekordów.|
 |**USUNIĘTY**|Aby usunąć rekordy z zestawu rekordów.|
 |**AKTUALIZACJI**|Aby zmodyfikować pola rekordu.|
 
@@ -70,7 +71,7 @@ Bazy danych SQL używają typów danych podobnych do tych używanych w językach
 
 Więcej informacji na temat programu SQL, w tym listę obsługiwanych instrukcji SQL, typów danych, gramatyki SQL Core i odczytywania listy zalecanych publikacji dotyczących języka SQL, można znaleźć w dokumentacji programu [Microsoft SQL](/sql/) .
 
-## <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a>Jak klasy baz danych używają języka SQL
+## <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a> Jak klasy baz danych używają języka SQL
 
 Zestawy rekordów pochodne od klas baz danych używają ODBC do komunikowania się ze źródłem danych, a ODBC pobiera rekordy ze źródła danych przez wysłanie instrukcji SQL. W tym temacie opisano relację między klasami baz danych i SQL.
 

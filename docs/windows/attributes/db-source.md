@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: db_source'
 title: db_source (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 273d6626a8cd6fa2cadc42bac7ddb2e5e28a69c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333065"
 ---
 # <a name="db_source"></a>db_source
 
@@ -71,7 +72,7 @@ class CMyCommand {};
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

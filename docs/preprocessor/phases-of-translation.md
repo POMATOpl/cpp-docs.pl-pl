@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: fazach tłumaczenia'
 title: Fazy tłumaczenia
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-ms.openlocfilehash: d072c9aec48d815ba85f8a12576baa6447703f8c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6a561fe9aa61df293a038a9edfd094dbdef4fe89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218308"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333187"
 ---
 # <a name="phases-of-translation"></a>Fazy tłumaczenia
 
-Programy C i C++ składają się z jednego lub więcej plików źródłowych, z których każdy zawiera część tekstu programu. Plik źródłowy wraz z *plikami plików*dołączanych, które są uwzględniane przy użyciu `#include` dyrektywy preprocesora, ale bez uwzględniania sekcji kodu usunięte przez dyrektywy kompilacji warunkowej, takie jak `#if`, nosi nazwę  *Jednostka tłumaczenia*.
+Programy C i C++ składają się z jednego lub więcej plików źródłowych, z których każdy zawiera część tekstu programu. Plik źródłowy wraz z *plikami plików dołączanych*, które są zawarte w `#include` dyrektywie preprocesora, ale nie obejmujący sekcji kodu usuniętej przez dyrektywy kompilacji warunkowej, takich jak `#if` , jest nazywany *jednostką tłumaczenia*.
 
 Pliki źródłowe mogą być tłumaczone w różnym czasie. W rzeczywistości często jest możliwe przetłumaczenie tylko nieaktualnych plików. Przetłumaczone jednostki translacji mogą być przetwarzane do oddzielnych plików obiektu lub bibliotek kodu obiektu. Te oddzielne, przetłumaczone jednostki translacji są następnie łączone, aby sformułować program wykonywalny lub bibliotekę dynamicznych połączeń (DLL). Aby uzyskać więcej informacji na temat plików, które mogą być używane jako dane wejściowe dla konsolidatora, zobacz [łączenie plików wejściowych](../build/reference/link-input-files.md).
 
@@ -64,6 +65,6 @@ Kompilator generuje ostrzeżenia lub błędy podczas faz tłumaczenia, w któryc
 
 Konsolidator usuwa wszystkie odwołania zewnętrzne i tworzy plik wykonywalny lub bibliotekę DLL przez połączenie jednej lub więcej jednostek translacji z bibliotekami standardowymi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Preprocesor](../preprocessor/preprocessor.md)

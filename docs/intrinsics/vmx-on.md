@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __vmx_on'
 title: __vmx_on
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: b6041711d9b6806362b856475151f2c4f63750cb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a1e9171fe64a239b592f0d27ec49d4159b46523d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333571"
 ---
 # <a name="__vmx_on"></a>__vmx_on
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Aktywuje operacje rozszerzenia maszyny wirtualnej (VMX) w procesorze.
 
@@ -43,18 +44,18 @@ podczas Wskaźnik do 64-bitowego adresu fizycznego, który wskazuje na struktur�
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja odnosi się do instrukcji `VMXON` Machine. `__vmx_on` Ta funkcja obsługuje interakcję z monitorem maszyny wirtualnej hosta z systemem operacyjnym gościa i jego aplikacjami. Aby uzyskać więcej informacji, Wyszukaj dokument "Specyfikacja techniczna wirtualizacji Intel dla architektury Intel o architekturze IA-32", a następnie w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) "numer dokumentu C97063-002".
+`__vmx_on`Funkcja odnosi się do `VMXON` instrukcji Machine. Ta funkcja obsługuje interakcję z monitorem maszyny wirtualnej hosta z systemem operacyjnym gościa i jego aplikacjami. Aby uzyskać więcej informacji, Wyszukaj dokument "Specyfikacja techniczna wirtualizacji Intel dla architektury Intel o architekturze IA-32", a następnie w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) "numer dokumentu C97063-002".
 
 ## <a name="requirements"></a>Wymagania
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__vmx_on`|X64|
+|`__vmx_on`|x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

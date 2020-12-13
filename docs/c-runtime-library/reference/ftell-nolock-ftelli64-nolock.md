@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ftell_nolock, _ftelli64_nolock'
 title: _ftell_nolock, _ftelli64_nolock
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: 9f1f0018773f8fb5b00f1304011ba8128ce7d9df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77ddd09d6c72413f4ca0ef2fa1e4ea66e044dedc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334217"
 ---
 # <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -76,8 +77,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**ftell_nolock**|\<stdio. h>|\<errno. h>|
-|**_ftelli64_nolock**|\<stdio. h>|\<errno. h>|
+|**ftell_nolock**|\<stdio.h>|\<errno.h>|
+|**_ftelli64_nolock**|\<stdio.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

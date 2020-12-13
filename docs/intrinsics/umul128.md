@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _umul128'
 title: _umul128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7fd126b169bd01fc4d51d186879e019f8d86f008
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333601"
 ---
 # <a name="_umul128"></a>_umul128
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Mnoży 2 64-bitowe liczby całkowite bez znaku przekazane jako pierwsze dwa argumenty i umieszczają o wysokim stopniu 64 bitów produktu w 64-bitową liczbę całkowitą bez znaku wskazywanym `HighProduct` przez i zwraca 64 niską liczbę bitów produktu.
+Mnoży 2 64-bitowe liczby całkowite bez znaku przekazane jako pierwsze dwa argumenty i umieszczają o wysokim stopniu 64 bitów produktu w 64-bitową liczbę całkowitą bez znaku wskazywanym przez `HighProduct` i zwraca 64 niską liczbę bitów produktu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,9 +47,9 @@ Niska 64 bitów produktu.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrznej|Architektura|nagłówek|
+|Wewnętrznej|Architektura|Nagłówek|
 |---------------|------------------|------------|
-|`_umul128`|X64|\<intrin.h>|
+|`_umul128`|x64|\<intrin.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -79,6 +80,6 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: delegat (C++/CLI i C++/CX)'
 title: delegat  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92cd46980775a340e6bf0d6857ace91645d65a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333733"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegat  (C++/CLI i C++/CX)
 
@@ -65,7 +66,7 @@ Użyj *identyfikatora delegata-Type* , aby zadeklarować zdarzenie z tym samym p
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/ZW`
+Opcja kompilatora: `/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -125,7 +126,7 @@ Aby uzyskać więcej informacji na temat delegatów, zobacz
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora:`/clr`
+Opcja kompilatora: `/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -200,6 +201,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

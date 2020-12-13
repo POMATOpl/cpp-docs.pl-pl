@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: FILENAME_MAX'
 title: FILENAME_MAX
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - FILENAME_MAX constant
 ms.assetid: fe368d24-3f31-42d6-859c-cbd84f446ee5
-ms.openlocfilehash: 28ebee819bc8a9b6370f67210881a561c9629ab4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 435128e3b780cedb7ca94b2f0aa8c2cccef58013
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332973"
 ---
-# <a name="filenamemax"></a>FILENAME_MAX
+# <a name="filename_max"></a>FILENAME_MAX
 
-Maksymalna dopuszczalna długość `filename` rozmiar buforu ciągu.
+Maksymalna dopuszczalna długość `filename` rozmiaru buforu ciągu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,7 +24,7 @@ Maksymalna dopuszczalna długość `filename` rozmiar buforu ciągu.
 #include <stdio.h>
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Stałe pola ścieżki](../c-runtime-library/path-field-limits.md)<br/>
+[Limity pól ścieżki](../c-runtime-library/path-field-limits.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

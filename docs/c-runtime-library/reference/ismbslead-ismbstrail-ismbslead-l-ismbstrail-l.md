@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbslead, _ismbstrail, _ismbslead_l _ismbstrail_l'
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 54745c2db33a68b35236c5b6169280e5e7dacfef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919160"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334126"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -112,12 +113,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_ismbslead**|\<Mbctype. h> lub \<mbstring. h>|\<CType. h>, * \<Limits. h> \<, STDLIB. h>|
-|**_ismbstrail**|\<Mbctype. h> lub \<mbstring. h>|\<CType. h>, * \<Limits. h> \<, STDLIB. h>|
-|**_ismbslead_l**|\<Mbctype. h> lub \<mbstring. h>|\<CType. h>, * \<Limits. h> \<, STDLIB. h>|
-|**_ismbstrail_l**|\<Mbctype. h> lub \<mbstring. h>|\<CType. h>, * \<Limits. h> \<, STDLIB. h>|
+|**_ismbslead**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead_l**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail_l**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
-\*Dla stałych manifestu dla warunków testowych.
+\* Dla stałych manifestu dla warunków testowych.
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -125,5 +126,5 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Procedury _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

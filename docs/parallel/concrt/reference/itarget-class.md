@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa ITarget'
 title: ITarget — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: 39aebd9d82f098225c1275ac6f43d64fc1ce3ba8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a1e900fa67ac5ee72305f18679e7a0fc38a2386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334410"
 ---
 # <a name="itarget-class"></a>ITarget — Klasa
 
@@ -81,7 +82,7 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="itarget"></a><a name="dtor"></a>~ ITarget
+## <a name="itarget"></a><a name="dtor"></a> ~ ITarget
 
 Niszczy `ITarget` obiekt.
 
@@ -89,7 +90,7 @@ Niszczy `ITarget` obiekt.
 virtual ~ITarget();
 ```
 
-## <a name="link_source"></a><a name="link_source"></a>link_source
+## <a name="link_source"></a><a name="link_source"></a> link_source
 
 Gdy jest zastępowany w klasie pochodnej, łączy określony blok źródłowy z tym `ITarget` blokiem.
 
@@ -106,7 +107,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 
 Ta funkcja nie powinna być wywoływana bezpośrednio w `ITarget` bloku. Bloki powinny być połączone przy użyciu `link_target` metody w `ISource` blokach, co spowoduje wywołanie `link_source` metody w odpowiadającym jej miejscu docelowym.
 
-## <a name="propagate"></a><a name="propagate"></a>rozpowszechni
+## <a name="propagate"></a><a name="propagate"></a> rozpowszechni
 
 Gdy jest zastępowany w klasie pochodnej, asynchronicznie przekazuje komunikat z bloku źródłowego do tego bloku docelowego.
 
@@ -132,7 +133,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli `_PMessage` `_PSource` parametr lub jest `NULL` .
 
-## <a name="send"></a><a name="send"></a>Wyślij
+## <a name="send"></a><a name="send"></a> Wyślij
 
 Gdy jest zastępowany w klasie pochodnej, synchronicznie przekazuje komunikat do bloku docelowego.
 
@@ -162,7 +163,7 @@ Użycie `send` metody poza inicjacją komunikatów i propagowanie komunikatów w
 
 Gdy `send` zwraca, wiadomość została już zaakceptowana i przekazana do bloku docelowego lub została odrzucona przez element docelowy.
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Gdy jest zastępowany w klasie pochodnej, zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, które nie jest z nim połączone. Jeśli zastąpiona metoda zwraca **`true`** , obiekt docelowy nie może odłożyć proponowanego komunikatu, ponieważ użycie przełożonego komunikatu w późniejszym czasie wymaga, aby źródło było identyfikowane w rejestrze linku do zasobów.
 
@@ -174,7 +175,7 @@ virtual bool supports_anonymous_source();
 
 **`true`** Jeśli blok może akceptować komunikat z źródła, które nie jest z nim połączone **`false`** .
 
-## <a name="unlink_source"></a><a name="unlink_source"></a>unlink_source
+## <a name="unlink_source"></a><a name="unlink_source"></a> unlink_source
 
 Gdy jest zastępowany w klasie pochodnej, odłącza określony blok źródłowy od tego `ITarget` bloku.
 
@@ -191,7 +192,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 
 Ta funkcja nie powinna być wywoływana bezpośrednio w `ITarget` bloku. Bloki powinny być rozłączone przy `unlink_target` użyciu `unlink_targets` metod lub w `ISource` blokach, które będą wywoływały `unlink_source` metodę w odpowiadającym jej miejscu docelowym.
 
-## <a name="unlink_sources"></a><a name="unlink_sources"></a>unlink_sources
+## <a name="unlink_sources"></a><a name="unlink_sources"></a> unlink_sources
 
 Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki źródłowe od tego `ITarget` bloku.
 
@@ -199,7 +200,7 @@ Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki źródłowe 
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa ISource](isource-class.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze IUMSUnblockNotification
 title: IUMSUnblockNotification — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: 0b88ddd4184e982a5e07c536efc301eaa16f4a41
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bec40ee1e7326ad37e205c3035f965cb3f0ec8d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334309"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification — Struktura
 
-Reprezentuje powiadomienie z Menedżera zasobów, że serwer proxy wątku, który zablokował i wyzwolił powrót do wyznaczonego kontekstu planowania harmonogramu, odblokował się i jest gotowy do zaplanowania. Ten interfejs jest nieprawidłowy, gdy kontekst wykonywania skojarzonego `GetContext` serwera proxy wątku, zwrócony z metody, jest przełożony.
+Reprezentuje powiadomienie z Menedżer zasobów, że serwer proxy wątku, który został zablokowany i wyzwolony powrót do wyznaczonego kontekstu planowania harmonogramu został odblokowany i jest gotowy do zaplanowania. Ten interfejs jest nieprawidłowy, gdy kontekst wykonywania skojarzony z serwerem proxy wątku został zwrócony z `GetContext` metody, został ponownie zaplanowany.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,8 +33,8 @@ struct IUMSUnblockNotification;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IUMSUnblockNotification::GetContext](#getcontext)|Zwraca `IExecutionContext` interfejs dla kontekstu wykonywania skojarzonego z serwerem proxy wątku, który został odblokowany. Gdy ta metoda zwraca i kontekst wykonywania podstawowej został przełożony `IThreadProxy::SwitchTo` za pośrednictwem wywołania metody, ten interfejs nie jest już prawidłowy.|
-|[IUMSUnblockNotification::GetNextUnblockNotification IUMSUnblockNotification ::GetNextUnblockNotification IUMSUnblockNotification::GetNextUnblockNotification IUM](#getnextunblocknotification)|Zwraca następny `IUMSUnblockNotification` interfejs w łańcuchu `IUMSCompletionList::GetUnblockNotifications`zwrócony z metody .|
+|[IUMSUnblockNotification:: GetContext](#getcontext)|Zwraca `IExecutionContext` interfejs kontekstu wykonywania skojarzony z serwerem proxy wątku, który został odblokowany. Gdy ta metoda zostanie zwrócona, a podstawowy kontekst wykonywania został ponownie zaplanowany za pośrednictwem wywołania `IThreadProxy::SwitchTo` metody, ten interfejs nie jest już prawidłowy.|
+|[IUMSUnblockNotification:: GetNextUnblockNotification —](#getnextunblocknotification)|Zwraca następny `IUMSUnblockNotification` interfejs w łańcuchu zwróconym przez metodę `IUMSCompletionList::GetUnblockNotifications` .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,13 +42,13 @@ struct IUMSUnblockNotification;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm.h
+**Nagłówek:** concrtrm. h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>IUMSUnblockNotification::Metoda GetContext
+## <a name="iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a> IUMSUnblockNotification:: GetContext — Metoda
 
-Zwraca `IExecutionContext` interfejs dla kontekstu wykonywania skojarzonego z serwerem proxy wątku, który został odblokowany. Gdy ta metoda zwraca i kontekst wykonywania podstawowej został przełożony `IThreadProxy::SwitchTo` za pośrednictwem wywołania metody, ten interfejs nie jest już prawidłowy.
+Zwraca `IExecutionContext` interfejs kontekstu wykonywania skojarzony z serwerem proxy wątku, który został odblokowany. Gdy ta metoda zostanie zwrócona, a podstawowy kontekst wykonywania został ponownie zaplanowany za pośrednictwem wywołania `IThreadProxy::SwitchTo` metody, ten interfejs nie jest już prawidłowy.
 
 ```cpp
 virtual IExecutionContext* GetContext() = 0;
@@ -55,11 +56,11 @@ virtual IExecutionContext* GetContext() = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Interfejs `IExecutionContext` kontekstu wykonywania do serwera proxy wątku, który został odblokowany.
+`IExecutionContext`Interfejs dla kontekstu wykonywania do serwera proxy wątku, który został odblokowany.
 
-## <a name="iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>IUMSUnblockNotification::GetNextUnblockNotification Metoda
+## <a name="iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a> IUMSUnblockNotification:: GetNextUnblockNotification —, Metoda
 
-Zwraca następny `IUMSUnblockNotification` interfejs w łańcuchu `IUMSCompletionList::GetUnblockNotifications`zwrócony z metody .
+Zwraca następny `IUMSUnblockNotification` interfejs w łańcuchu zwróconym przez metodę `IUMSCompletionList::GetUnblockNotifications` .
 
 ```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
@@ -67,10 +68,10 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Następny `IUMSUnblockNotification` interfejs w łańcuchu zwrócił `IUMSCompletionList::GetUnblockNotifications`z metody .
+Następny `IUMSUnblockNotification` interfejs w łańcuchu zwróconym przez metodę `IUMSCompletionList::GetUnblockNotifications` .
 
 ## <a name="see-also"></a>Zobacz też
 
-[współbieżność Obszar nazw](concurrency-namespace.md)<br/>
-[IUMSScheduler, struktura](iumsscheduler-structure.md)<br/>
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[Struktura IUMSScheduler](iumsscheduler-structure.md)<br/>
 [IUMSCompletionList — Struktura](iumscompletionlist-structure.md)

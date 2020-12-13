@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze IVirtualProcessorRoot
 title: IVirtualProcessorRoot — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 869d51144b686dd684f62b337bb90eff8a9a5589
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b55aa72e9383447ea8d19e13e1e2aa9bd57d267d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193955"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334301"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot — Struktura
 
@@ -57,7 +58,7 @@ Menedżer zasobów przyznaje katalogi wirtualne procesora wirtualnego do harmono
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ivirtualprocessorrootactivate-method"></a><a name="activate"></a>IVirtualProcessorRoot:: Activate — metoda
+## <a name="ivirtualprocessorrootactivate-method"></a><a name="activate"></a> IVirtualProcessorRoot:: Activate — metoda
 
 Powoduje, że serwer proxy wątku skojarzony z interfejsem kontekstu wykonywania `pContext` rozpoczyna wykonywanie w tym wirtualnym katalogu głównym procesora.
 
@@ -72,7 +73,7 @@ Interfejs do kontekstu wykonywania, który zostanie wysłany do tego głównego 
 
 ### <a name="remarks"></a>Uwagi
 
-Menedżer zasobów będzie dostarczać serwer proxy wątku, jeśli taki nie jest skojarzony z interfejsem kontekstu wykonywania`pContext`
+Menedżer zasobów będzie dostarczać serwer proxy wątku, jeśli taki nie jest skojarzony z interfejsem kontekstu wykonywania `pContext`
 
 `Activate`Metoda ta może służyć do uruchamiania wykonywania pracy na nowym katalogu głównym wirtualnego procesora zwróconego przez Menedżer zasobów lub wznowieniu serwera proxy wątku w wirtualnym katalogu głównym procesora, który został zdezaktywowany lub zostanie zdezaktywowany. Aby uzyskać więcej informacji na temat dezaktywacji, zobacz [IVirtualProcessorRoot::D eactivate](#deactivate) . W przypadku wznawiania dezaktywowanego katalogu głównego wirtualnego procesora, parametr `pContext` musi być taki sam jak parametr używany do dezaktywowania katalogu głównego wirtualnego procesora.
 
@@ -80,13 +81,13 @@ Po aktywowaniu wirtualnego katalogu głównego procesora po raz pierwszy, kolejn
 
 W przypadku aktywowania katalogu głównego wirtualnego procesora należy zasygnalizować Menedżer zasobów, że ten katalog wirtualny tego procesora jest obecnie zajęty przy użyciu pracy. Jeśli w harmonogramie nie można znaleźć żadnych zadań do wykonania w tym katalogu głównym, oczekiwane jest wywołanie `Deactivate` metody informującej Menedżer zasobów, że główny wirtualny procesor jest bezczynny. Menedżer zasobów używa tych danych do równoważenia obciążenia systemu.
 
-`invalid_argument`jest zgłaszany, jeśli argument `pContext` ma wartość `NULL` .
+`invalid_argument` jest zgłaszany, jeśli argument `pContext` ma wartość `NULL` .
 
-`invalid_operation`jest zgłaszany, jeśli argument nie `pContext` reprezentuje kontekstu wykonywania, który był ostatnio Wysłany przez ten rdzeń procesora wirtualnego.
+`invalid_operation` jest zgłaszany, jeśli argument nie `pContext` reprezentuje kontekstu wykonywania, który był ostatnio Wysłany przez ten rdzeń procesora wirtualnego.
 
 Czynność aktywowania głównego wirtualnego procesora zwiększa poziom subskrypcji bazowego wątku sprzętowego o jeden. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>IVirtualProcessorRoot::D eactivate Metoda
+## <a name="ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a> IVirtualProcessorRoot::D eactivate Metoda
 
 Powoduje, że serwer proxy wątku, który jest aktualnie wykonywany na tym wirtualnym komputerze głównym, w celu zatrzymania wysyłania kontekstu wykonania. Serwer proxy wątku wznowi wykonywanie w wywołaniu `Activate` metody.
 
@@ -111,13 +112,13 @@ Zdezaktywowany rdzeń wirtualnego procesora można wybudzany z wywołaniem `Acti
 
 W przypadku wypróbowania głównego wirtualnego procesora i wartości zwracanej z `Deactivate` metody **`false`** harmonogram powinien wykonywać zapytania do listy uzupełniania UMS za pośrednictwem `IUMSCompletionList::GetUnblockNotifications` metody, działać na tych informacjach, a następnie `Deactivate` ponownie wywołać metodę. Należy to powtórzyć do momentu, gdy `Deactivate` Metoda zwraca wartość **`true`** .
 
-`invalid_argument`jest zgłaszany, jeśli argument `pContext` ma wartość null.
+`invalid_argument` jest zgłaszany, jeśli argument `pContext` ma wartość null.
 
-`invalid_operation`jest zgłaszany, jeśli główny wirtualny procesor nie został nigdy aktywowany lub argument nie `pContext` reprezentuje kontekstu wykonywania, który był ostatnio Wysłany przez ten rdzeń procesora wirtualnego.
+`invalid_operation` jest zgłaszany, jeśli główny wirtualny procesor nie został nigdy aktywowany lub argument nie `pContext` reprezentuje kontekstu wykonywania, który był ostatnio Wysłany przez ten rdzeń procesora wirtualnego.
 
 Czynność dezaktywacji głównego procesora wirtualnego zmniejsza poziom subskrypcji bazowego wątku sprzętowego o jeden. Aby uzyskać więcej informacji na temat poziomów subskrypcji, zobacz [IExecutionResource:: CurrentSubscriptionLevel —](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>IVirtualProcessorRoot:: EnsureAllTasksVisible —, Metoda
+## <a name="ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a> IVirtualProcessorRoot:: EnsureAllTasksVisible —, Metoda
 
 Powoduje, że dane przechowywane w hierarchii pamięci poszczególnych procesorów stają się widoczne dla wszystkich procesorów w systemie. Gwarantuje to, że pełny ogranicznik pamięci został wykonany na wszystkich procesorach przed zwróceniem metody.
 
@@ -136,11 +137,11 @@ Ta metoda może być przydatna, jeśli chcesz synchronizować dezaktywację wirt
 
 Wywołanie `EnsureAllTasksVisibleThe` metody musi pochodzić z `Dispatch` metody z kontekstem wykonywania, który został ostatnio aktywowany przez rdzeń wirtualnego procesora. Innymi słowy, serwer proxy wątku wywołujący `EnsureAllTasksVisible` metodę musi być tym, który jest aktualnie wykonywany w katalogu głównym procesora wirtualnego. Wywołanie metody w głównym katalogu wirtualnym procesora, którego nie wykonujesz, może spowodować niezdefiniowane zachowanie.
 
-`invalid_argument`jest zgłaszany, jeśli argument `pContext` ma wartość `NULL` .
+`invalid_argument` jest zgłaszany, jeśli argument `pContext` ma wartość `NULL` .
 
-`invalid_operation`jest zgłaszany, jeśli główny wirtualny procesor nie został nigdy aktywowany lub argument nie `pContext` reprezentuje kontekstu wykonywania, który był ostatnio Wysłany przez ten rdzeń procesora wirtualnego.
+`invalid_operation` jest zgłaszany, jeśli główny wirtualny procesor nie został nigdy aktywowany lub argument nie `pContext` reprezentuje kontekstu wykonywania, który był ostatnio Wysłany przez ten rdzeń procesora wirtualnego.
 
-## <a name="ivirtualprocessorrootgetid-method"></a><a name="getid"></a>IVirtualProcessorRoot:: GetId —, Metoda
+## <a name="ivirtualprocessorrootgetid-method"></a><a name="getid"></a> IVirtualProcessorRoot:: GetId —, Metoda
 
 Zwraca unikatowy identyfikator katalogu głównego wirtualnego procesora.
 
@@ -152,6 +153,6 @@ virtual unsigned int GetId() const = 0;
 
 Identyfikator liczby całkowitej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

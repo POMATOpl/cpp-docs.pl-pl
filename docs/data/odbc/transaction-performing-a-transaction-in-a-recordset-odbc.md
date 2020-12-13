@@ -1,32 +1,33 @@
 ---
+description: 'Dowiedz się więcej o: Transaction: wykonywanie transakcji w zestawie rekordów (ODBC)'
 title: 'Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 45ae414c318376b2c4d787498e9a288a0037af83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb041d35e7ab0bfc7e19f2658a8cdadae4bd8c7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333882"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)
 
-W tym temacie wyjaśniono, jak wykonać transakcję w zamówiórie.
+W tym temacie wyjaśniono, jak wykonać transakcję w zestawie rekordów.
 
 > [!NOTE]
 > Obsługiwany jest tylko jeden poziom transakcji; nie można zagnieżdżać transakcji.
 
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>Aby wykonać transakcję w ach recordset
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Aby wykonać transakcję w zestawie rekordów
 
-1. Wywołanie `CDatabase` funkcji `BeginTrans` elementu członkowskiego obiektu.
+1. Wywołaj `CDatabase` `BeginTrans` funkcję członkowską obiektu.
 
-1. Jeśli pobieranie wiersza zbiorczego nie zostało `AddNew/Update`zaimplementowane, należy wywołać funkcje , `Edit/Update`i `Delete` element członkowski jednego lub więcej obiektów ciekawego z tej samej bazy danych tyle razy, ile potrzeba. Aby uzyskać więcej informacji, zobacz [Tablica rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Jeśli zaimplementowano pobieranie wiersza zbiorczego, należy napisać własne funkcje, aby zaktualizować źródło danych.
+1. Jeśli nie zaimplementowano pobierania wierszy zbiorczych, wywołaj `AddNew/Update` `Edit/Update` funkcje, i `Delete` składowe co najmniej jednego obiektu zestawu rekordów w tej samej bazie danych tyle razy, ile jest to konieczne. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Jeśli zaimplementowano pobieranie wierszy zbiorczych, należy napisać własne funkcje, aby zaktualizować źródło danych.
 
-1. Na koniec wywołać `CDatabase` funkcję `CommitTrans` elementu członkowskiego obiektu. Jeśli wystąpi błąd w jednej z aktualizacji lub zdecydujesz się `Rollback` anulować zmiany, wywołaj jego funkcję członkową.
+1. Na koniec Wywołaj `CDatabase` `CommitTrans` funkcję członkowską obiektu. Jeśli w jednej z aktualizacji wystąpi błąd lub zdecydujesz się anulować zmiany, wywołaj jego `Rollback` funkcję członkowską.
 
-W poniższym przykładzie użyto dwóch rekordów, aby usunąć rejestrację ucznia z szkolnej bazy danych rejestracji, usuwając ucznia ze wszystkich klas, w których uczeń jest zapisany. Ponieważ `Delete` wywołania w obu zestawy rekordów musi zakończyć się pomyślnie, transakcja jest wymagana. W przykładzie przyjęto `m_dbStudentReg`założenie istnienia , `CDatabase` zmiennej członkowskiej typu już połączone `CEnrollmentSet` `CStudentSet`ze źródłem danych i recordset klasy i . Zmienna `strStudentID` zawiera wartość uzyskaną od użytkownika.
+W poniższym przykładzie zastosowano dwa zestawy rekordów, aby usunąć rejestrację ucznia z bazy danych rejestracji szkoły, usuwając uczniów ze wszystkich klas, w których student jest zarejestrowany. Ponieważ `Delete` wywołania w obu zestawach rekordów muszą się zakończyć pomyślnie, wymagana jest transakcja. W przykładzie przyjęto, że `m_dbStudentReg` zmienna elementu członkowskiego typu jest `CDatabase` już połączona ze źródłem danych, a klasy zestawu rekordów `CEnrollmentSet` i `CStudentSet` . `strStudentID`Zmienna zawiera wartość uzyskaną od użytkownika.
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,7 +80,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
-> Wywołanie `BeginTrans` ponownie `CommitTrans` `Rollback` bez wywoływania lub jest błędem.
+> Wywoływanie `BeginTrans` ponownie bez wywoływania `CommitTrans` lub `Rollback` jest błędem.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: zarządzane, niezarządzane dyrektywy pragma'
 title: managed, unmanaged, pragmy
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 10f632b009c9922f67f4321acc862142d895e7ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333392"
 ---
 # <a name="managed-unmanaged-pragmas"></a>managed, unmanaged, pragmy
 
@@ -27,7 +28,7 @@ Włącz kontrolę poziomu funkcji, aby kompilować funkcje jako zarządzane lub 
 
 > **#pragma zarządzany**\
 > **niezarządzana #pragma**\
-> **zarządzane #pragma (** [ **push,** ] { **on** | **off** } **)** \
+> **zarządzane #pragma (** [ **push,** ] { **on**  |  **off** } **)**\
 > **zarządzane #pragma (pop)**
 
 ## <a name="remarks"></a>Uwagi
@@ -44,7 +45,7 @@ Podczas stosowania tych pragm:
 
 - Dodaj pragma After `#include` instrukcji. Nie używaj tych pragm przed `#include` instrukcją.
 
-Kompilator ignoruje **zarządzane** i **niezarządzane** dyrektywy pragma, `/clr` Jeśli nie jest używany w kompilacji.
+Kompilator ignoruje **zarządzane** i **niezarządzane** dyrektywy pragma, jeśli `/clr` nie jest używany w kompilacji.
 
 Gdy jest tworzone wystąpienie funkcji szablonu, pragma stan, gdy szablon jest zdefiniowany, określa, czy jest zarządzany lub niezarządzany.
 

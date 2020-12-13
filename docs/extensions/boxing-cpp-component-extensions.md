@@ -1,18 +1,19 @@
 ---
-title: Opakowanie (C++/CLI i C++/CX)
+description: 'Dowiedz się więcej o języku: opakowanie (C++/CLI i C++/CX)'
+title: Konwersja boxing  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b3bdc87d9dea2a5a70344ee032655712af221d59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333752"
 ---
-# <a name="boxing--ccli-and-ccx"></a>Opakowanie (C++/CLI i C++/CX)
+# <a name="boxing--ccli-and-ccx"></a>Konwersja boxing  (C++/CLI i C++/CX)
 
 Konwersja typów wartości do obiektów jest nazywana *opakowaniem*, a Konwersja obiektów na typy wartości jest nazywana *rozpakowywaniem*.
 
@@ -22,7 +23,7 @@ Konwersja typów wartości do obiektów jest nazywana *opakowaniem*, a Konwersja
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-C++/CX obsługuje skróconą składnię typów wartości opakowania i rozpakowywanie typów odwołań. Typ wartości jest opakowany, gdy jest przypisany do zmiennej typu `Object`. Zmienna `Object` jest oddzielona, gdy jest przypisana do zmiennej typu wartości, a nieopakowany typ jest określony w nawiasach; oznacza to, że gdy zmienna obiektu jest rzutowana na typ wartości.
+C++/CX obsługuje składnię skróconą dla typów wartości opakowania i rozpakowywanie typów odwołań. Typ wartości jest opakowany, gdy jest przypisany do zmiennej typu `Object` . `Object`Zmienna jest oddzielona, gdy jest przypisana do zmiennej typu wartości, a nieopakowany typ jest określony w nawiasach, czyli gdy zmienna obiektu jest rzutowana na typ wartości.
 
 ```cpp
   Platform::Object^
@@ -36,9 +37,9 @@ Opcja kompilatora: `/ZW`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykładowy kod dodaje pola i rozdzieli wartość `DateTime`. Najpierw przykład uzyskuje wartość `DateTime`, która reprezentuje bieżącą datę i godzinę, i przypisuje go do zmiennej `DateTime`. Następnie `DateTime` jest opakowany przez przypisanie do zmiennej `Object`. Na koniec, opakowana wartość jest niezaopakowana, przypisując ją do innej zmiennej `DateTime`.
+Poniższe przykładowe kody i oddzielą pola `DateTime` wartości. Najpierw przykład uzyskuje `DateTime` wartość reprezentującą bieżącą datę i godzinę, a następnie przypisuje ją do `DateTime` zmiennej. Następnie `DateTime` jest opakowany przez przypisanie go do `Object` zmiennej. Na koniec, opakowana wartość jest niezaopakowana, przypisując ją do innej `DateTime` zmiennej.
 
-Aby przetestować przykład, Utwórz projekt `BlankApplication`, Zastąp metodę `BlankPage::OnNavigatedTo()`, a następnie określ punkty przerwania w nawiasie zamykającym i przypisanie do zmiennej `str1`. Gdy przykład osiągnie nawias zamykający, należy zapoznać się `str1`.
+Aby przetestować przykład, należy utworzyć `BlankApplication` projekt, zastąpić `BlankPage::OnNavigatedTo()` metodę, a następnie określić punkty przerwania w nawiasie zamykającym i przypisanie do zmiennej `str1` . Gdy przykład osiągnie nawias zamykający, należy zapoznać się z tematem `str1` .
 
 ```cpp
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
@@ -72,23 +73,23 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Aby uzyskać więcej informacji, zobacz [opakowanieC++(/CX)](../cppcx/boxing-c-cx.md).
+Aby uzyskać więcej informacji, zobacz [opakowanie (C++/CX)](../cppcx/boxing-c-cx.md).
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-Pola kompilatora mają typy wartości do <xref:System.Object>. Jest to możliwe z powodu konwersji zdefiniowanej przez kompilator w celu przekonwertowania typów wartości na <xref:System.Object>.
+Pola kompilatora mają typ wartości <xref:System.Object> . Jest to możliwe z powodu konwersji zdefiniowanej przez kompilator na konwersję typów wartości na <xref:System.Object> .
 
-Pakowanie i rozpakowywanie Włącz typy wartości, które mają być traktowane jako obiekty. Typy wartości, w tym typy struktury i typy wbudowane, takie jak int, można przekonwertować na i z typu <xref:System.Object>.
+Pakowanie i rozpakowywanie Włącz typy wartości, które mają być traktowane jako obiekty. Typy wartości, w tym typy struktury i typy wbudowane, takie jak int, można przekonwertować na typ i z tego typu <xref:System.Object> .
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Instrukcje: jawne żądanie konwersji boxing](../dotnet/how-to-explicitly-request-boxing.md)
+- [Jak jawnie zażądać opakowania](../dotnet/how-to-explicitly-request-boxing.md)
 
-- [Instrukcje: używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
+- [Instrukcje: użycie gcnew do tworzenia typów wartości i użycie niejawnego opakowania](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Instrukcje: rozpakowywanie](../dotnet/how-to-unbox.md)
+- [Instrukcje: Rozpakowywanie](../dotnet/how-to-unbox.md)
 
-- [Konwersje standardowe i niejawne konwersje boxing](../dotnet/standard-conversions-and-implicit-boxing.md)
+- [Konwersje standardowe i niejawny opakowanie](../dotnet/standard-conversions-and-implicit-boxing.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -190,4 +191,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

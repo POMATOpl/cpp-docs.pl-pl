@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _searchenv, _wsearchenv'
 title: _searchenv, _wsearchenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 411cb2b909d3ed948adcce97c41ace1a806f2f02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334113"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -94,13 +95,13 @@ Bufor do przechowywania pełnej ścieżki.
 
 ## <a name="remarks"></a>Uwagi
 
-Procedura **_searchenv** wyszukuje plik docelowy w określonej domenie. Zmienna *nazwa_zmiennej* może być dowolnego środowiska lub zmiennej zdefiniowanej przez użytkownika, na przykład **Path**, **lib**lub **include**, która określa listę ścieżek katalogów. Ponieważ w **_searchenv** jest rozróżniana wielkość liter, wartość *nazwa_zmiennej* powinna być zgodna z wielkością liter zmiennej środowiskowej.
+Procedura **_searchenv** wyszukuje plik docelowy w określonej domenie. Zmienna *nazwa_zmiennej* może być dowolnego środowiska lub zmiennej zdefiniowanej przez użytkownika, na przykład **Path**, **lib** lub **include**, która określa listę ścieżek katalogów. Ponieważ w **_searchenv** jest rozróżniana wielkość liter, wartość *nazwa_zmiennej* powinna być zgodna z wielkością liter zmiennej środowiskowej.
 
 Procedura najpierw przeszukuje plik w bieżącym katalogu roboczym. Jeśli plik nie zostanie znaleziony, przeszukiwane są katalogi, które są określone przez zmienną środowiskową. Jeśli plik docelowy znajduje się w jednym z tych katalogów, nowo utworzona ścieżka jest kopiowana do *nazwy ścieżki*. Jeśli plik *filename* nie zostanie znaleziony, *Nazwa ścieżki* zawiera pusty ciąg zakończony znakiem null.
 
 Bufor nazwy powinien mieć co najmniej **_MAX_PATH** *znaków, aby* pomieścić pełną długość ścieżki skonstruowanej. W przeciwnym razie **_searchenv** może przekroczyć bufor *nazwy ścieżki* i spowodować nieoczekiwane zachowanie.
 
-**_wsearchenv** to wersja **_searchenv**o szerokim znaku, a argumenty **_wsearchenv** są ciągami znaków dwubajtowych. **_wsearchenv** i **_searchenv** zachowują się identycznie w inny sposób.
+**_wsearchenv** to wersja **_searchenv** o szerokim znaku, a argumenty **_wsearchenv** są ciągami znaków dwubajtowych. **_wsearchenv** i **_searchenv** zachowują się identycznie w inny sposób.
 
 Jeśli *Nazwa pliku* jest pustym ciągiem, funkcje te zwracają **ENOENT**.
 
@@ -122,8 +123,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_searchenv**|\<STDLIB. h>|
-|**_wsearchenv**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_searchenv**|\<stdlib.h>|
+|**_wsearchenv**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -159,9 +160,9 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>
 [_searchenv_s, _wsearchenv_s](searchenv-s-wsearchenv-s.md)<br/>

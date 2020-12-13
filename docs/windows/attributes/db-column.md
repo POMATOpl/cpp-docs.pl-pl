@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: db_column'
 title: db_column (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 931a285d28752273ecb1941702ff1cb32b42740c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333085"
 ---
 # <a name="db_column"></a>db_column
 
@@ -101,7 +102,7 @@ class CProducts {
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`** , członek, Metoda|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

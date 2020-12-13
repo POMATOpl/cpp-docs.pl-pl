@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __vmx_vmptrld'
 title: __vmx_vmptrld
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __vmx_vmptrld intrinsic
 - VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-ms.openlocfilehash: 79b5a8b34b652ae1f011e89c793a7157c9e435ee
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 850311e4423940ebd34a203e6d43ec961b3258f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333538"
 ---
 # <a name="__vmx_vmptrld"></a>__vmx_vmptrld
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Ładuje wskaźnik do bieżącej struktury kontroli maszyny wirtualnej (VMCS) z podanego adresu.
 
@@ -35,32 +36,32 @@ podczas Adres, w którym jest przechowywany wskaźnik VMCS.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-0\
+2,0
 Operacja zakończyła się pomyślnie.
 
-1\
+jedno
 Operacja nie powiodła się z rozszerzonym stanem dostępnym w `VM-instruction error field` bieżącym VMCs.
 
-2\
+dwóch
 Operacja nie powiodła się bez dostępnego stanu.
 
 ## <a name="remarks"></a>Uwagi
 
 Wskaźnik VMCS jest 64-bitowym adresem fizycznym.
 
-Funkcja jest równoważna `VMPTRLD` z instrukcją maszyny. `__vmx_vmptrld` Ta funkcja obsługuje interakcję z monitorem maszyny wirtualnej hosta z systemem operacyjnym gościa i jego aplikacjami. Aby uzyskać więcej informacji, Wyszukaj dokument "Specyfikacja techniczna wirtualizacji Intel dla architektury Intel o architekturze IA-32", a następnie w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) "numer dokumentu C97063-002".
+`__vmx_vmptrld`Funkcja jest równoważna z `VMPTRLD` instrukcją maszyny. Ta funkcja obsługuje interakcję z monitorem maszyny wirtualnej hosta z systemem operacyjnym gościa i jego aplikacjami. Aby uzyskać więcej informacji, Wyszukaj dokument "Specyfikacja techniczna wirtualizacji Intel dla architektury Intel o architekturze IA-32", a następnie w witrynie [firmy Intel Corporation](https://software.intel.com/articles/intel-sdm) "numer dokumentu C97063-002".
 
 ## <a name="requirements"></a>Wymagania
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__vmx_vmptrld`|X64|
+|`__vmx_vmptrld`|x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

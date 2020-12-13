@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fullpath, _wfullpath'
 title: _fullpath, _wfullpath
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9c02d100abc175f24194ce71627502544085f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334149"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -151,7 +152,7 @@ Full path is: C:\test
 Full path is: C:\Documents and Settings\user\test
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32'
 title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 4/2/2020
 api_name:
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7c9bd6994506cabd27bfad949bbe7ec3784ffcc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334248"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -124,7 +125,7 @@ Funkcja **_fstat** uzyskuje informacje o otwartym pliku skojarzonym z *FD* i zap
 | **st_rdev** | Jeśli urządzenie, *FD*; w przeciwnym razie 0. |
 | **st_size** | Rozmiar pliku w bajtach. |
 
-Jeśli *FD* odwołuje się do urządzenia, pola **st_atime**, **st_ctime**, **st_mtime**i **st_size** nie mają znaczenia.
+Jeśli *FD* odwołuje się do urządzenia, pola **st_atime**, **st_ctime**, **st_mtime** i **st_size** nie mają znaczenia.
 
 Ponieważ stat. h używa typu [_dev_t](../../c-runtime-library/standard-types.md) , który jest zdefiniowany w typach. h, należy dołączyć typy. h przed stat. h w kodzie.
 
@@ -227,7 +228,7 @@ File size     : 16
 Time modified : Wed May 07 15:25:11 2003
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

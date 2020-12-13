@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __ull_rshift'
 title: __ull_rshift
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: bf9fe7775cee1c774c097a1b6bd371721c9fa34f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5b819e4a1df8db7b7562023c6acc9dbbd94f7f76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80074986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333630"
 ---
 # <a name="__ull_rshift"></a>__ull_rshift
 
@@ -31,7 +32,7 @@ unsigned __int64 __ull_rshift(
 
 ### <a name="parameters"></a>Parametry
 
-\ *masek*
+*bitowa*\
 podczas Wartość 64-bitowa liczba całkowita, która ma zostać przesunięta w prawo.
 
 *nBit*\
@@ -47,11 +48,11 @@ Maska przesunięta przez `nBit` bity.
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**Plik nagłówkowy** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli drugi parametr jest większy niż 31 na x86 (63 na x64), ta liczba jest pobierana modulo 32 (64 on x64), aby określić liczbę bitów do przesunięcia. `ull` w nazwie wskazuje `unsigned long long (unsigned __int64)`.
+Jeśli drugi parametr jest większy niż 31 na x86 (63 na x64), ta liczba jest pobierana modulo 32 (64 on x64), aby określić liczbę bitów do przesunięcia. Wartość `ull` w polu Nazwa wskazuje `unsigned long long (unsigned __int64)` .
 
 ## <a name="example"></a>Przykład
 

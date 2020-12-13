@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze ITopologyNode
 title: ITopologyNode — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 7cb815c4f7dc5ad09e8d352abc3f3375b8d9e205
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1d603e35728791ff94e43b03d890061dec834660
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334361"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode — Struktura
 
-Interfejs do węzła topologii zdefiniowany przez Menedżera zasobów. Węzeł zawiera co najmniej jeden materiał wykonawczy.
+Interfejs do węzła topologii zdefiniowany przez Menedżer zasobów. Węzeł zawiera jeden lub więcej zasobów wykonawczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,15 +36,15 @@ struct ITopologyNode;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[ITopologiaNode::GetExecutionResourceCount](#getexecutionresourcecount)|Zwraca liczbę zasobów wykonywania zgrupowanych w tym węźle.|
-|[ITopologiaNode::GetFirstExecutionResource](#getfirstexecutionresource)|Zwraca pierwszy zasób wykonania zgrupowany w tym węźle w kolejności wyliczenia.|
-|[ITopologiaNode::GetId](#getid)|Zwraca unikatowy identyfikator Menedżera zasobów dla tego węzła.|
-|[ITopologiaNode::GetNext](#getnext)|Zwraca interfejs do następnego węzła topologii w kolejności wyliczenia.|
-|[ITopologiaNode::GetNumaNode](#getnumanode)|Zwraca przypisany przez system Windows numer węzła NUMA, do którego należy ten węzeł Maanger zasobów.|
+|[ITopologyNode:: GetExecutionResourceCount —](#getexecutionresourcecount)|Zwraca liczbę zasobów wykonywania zgrupowanych razem w tym węźle.|
+|[ITopologyNode:: GetFirstExecutionResource —](#getfirstexecutionresource)|Zwraca pierwszy zasób wykonania zgrupowany w tym węźle w kolejności wyliczania.|
+|[ITopologyNode:: GetId —](#getid)|Zwraca unikatowy identyfikator Menedżer zasobów dla tego węzła.|
+|[ITopologyNode:: GetNext](#getnext)|Zwraca interfejs do następnego węzła topologii w kolejności wyliczania.|
+|[ITopologyNode:: GetNumaNode](#getnumanode)|Zwraca numer węzła NUMA przypisanego do systemu Windows, do którego należy ten węzeł Menedżera zasobów.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs jest zazwyczaj używany do chodzenia topologii systemu, zgodnie z obserwowanym przez Menedżera zasobów.
+Ten interfejs jest zazwyczaj używany do przeszukiwania topologii systemu widzianych przez Menedżer zasobów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -51,13 +52,13 @@ Ten interfejs jest zazwyczaj używany do chodzenia topologii systemu, zgodnie z 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm.h
+**Nagłówek:** concrtrm. h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="itopologynodegetexecutionresourcecount-method"></a><a name="getexecutionresourcecount"></a>ITopologiaNode::Metoda GetExecutionResourceCount
+## <a name="itopologynodegetexecutionresourcecount-method"></a><a name="getexecutionresourcecount"></a> ITopologyNode:: GetExecutionResourceCount —, Metoda
 
-Zwraca liczbę zasobów wykonywania zgrupowanych w tym węźle.
+Zwraca liczbę zasobów wykonywania zgrupowanych razem w tym węźle.
 
 ```cpp
 virtual unsigned int GetExecutionResourceCount() const = 0;
@@ -65,11 +66,11 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba zasobów wykonywania zgrupowanych w tym węźle.
+Liczba zasobów wykonywania zgrupowanych ze sobą w tym węźle.
 
-## <a name="itopologynodegetfirstexecutionresource-method"></a><a name="getfirstexecutionresource"></a>ITopologiaNode::Metoda GetFirstExecutionResource
+## <a name="itopologynodegetfirstexecutionresource-method"></a><a name="getfirstexecutionresource"></a> ITopologyNode:: GetFirstExecutionResource —, Metoda
 
-Zwraca pierwszy zasób wykonania zgrupowany w tym węźle w kolejności wyliczenia.
+Zwraca pierwszy zasób wykonania zgrupowany w tym węźle w kolejności wyliczania.
 
 ```cpp
 virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
@@ -77,11 +78,11 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy zasób wykonywania zgrupowane w tym węźle w kolejności wyliczenia.
+Pierwszy zasób wykonywania zgrupowany w tym węźle w kolejności wyliczania.
 
-## <a name="itopologynodegetid-method"></a><a name="getid"></a>ITopologiaNode::Metoda GetId
+## <a name="itopologynodegetid-method"></a><a name="getid"></a> ITopologyNode:: GetId —, Metoda
 
-Zwraca unikatowy identyfikator Menedżera zasobów dla tego węzła.
+Zwraca unikatowy identyfikator Menedżer zasobów dla tego węzła.
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -89,17 +90,17 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Unikatowy identyfikator Menedżera zasobów dla tego węzła.
+Unikatowy identyfikator Menedżer zasobów dla tego węzła.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko wykonawcze współbieżności reprezentuje wątki sprzętowe w systemie w grupach węzłów procesora. Węzły są zwykle pochodną topologii sprzętowej systemu. Na przykład wszystkie procesory w określonym gnieździe lub określonym węźle NUMA mogą należeć do tego samego węzła procesora. Menedżer zasobów przypisuje unikatowe identyfikatory do `0` tych węzłów, zaczynając od maksymalnie do momentu włącznie `nodeCount - 1`, gdzie `nodeCount` reprezentuje całkowitą liczbę węzłów procesora w systemie.
+Środowisko uruchomieniowe współbieżności reprezentuje wątki sprzętowe w systemie w grupach węzłów procesora. Węzły są zwykle wyprowadzane z topologii sprzętowej systemu. Na przykład wszystkie procesory w określonym gnieździe lub określony węzeł NUMA mogą należeć do tego samego węzła procesora. Menedżer zasobów przypisuje unikatowe identyfikatory do tych węzłów, rozpoczynając od `0` do i włącznie `nodeCount - 1` , gdzie `nodeCount` reprezentuje łączną liczbę węzłów procesora w systemie.
 
-Liczbę węzłów można uzyskać z funkcji [GetProcessorNodeCount](concurrency-namespace-functions.md).
+Liczbę węzłów można uzyskać z funkcji [GetProcessorNodeCount —](concurrency-namespace-functions.md).
 
-## <a name="itopologynodegetnext-method"></a><a name="getnext"></a>ITopologiaNode::Metoda GetNext
+## <a name="itopologynodegetnext-method"></a><a name="getnext"></a> ITopologyNode:: GetNext — Metoda
 
-Zwraca interfejs do następnego węzła topologii w kolejności wyliczenia.
+Zwraca interfejs do następnego węzła topologii w kolejności wyliczania.
 
 ```cpp
 virtual ITopologyNode *GetNext() const = 0;
@@ -107,11 +108,11 @@ virtual ITopologyNode *GetNext() const = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Interfejs do następnego węzła w kolejności wyliczenia. Jeśli nie ma więcej węzłów w kolejności wyliczenia topologii systemu, `NULL`ta metoda zwróci wartość .
+Interfejs do następnego węzła w kolejności wyliczania. Jeśli w kolejności wyliczania topologii systemu nie ma więcej węzłów, ta metoda zwróci wartość `NULL` .
 
-## <a name="itopologynodegetnumanode-method"></a><a name="getnumanode"></a>ITopologiaNode::Metoda GetNumaNode
+## <a name="itopologynodegetnumanode-method"></a><a name="getnumanode"></a> ITopologyNode:: GetNumaNode, Metoda
 
-Zwraca przypisany przez system Windows numer węzła NUMA, do którego należy ten węzeł Maanger zasobów.
+Zwraca numer węzła NUMA przypisanego do systemu Windows, do którego należy ten węzeł Menedżera zasobów.
 
 ```cpp
 virtual unsigned long GetNumaNode() const = 0;
@@ -119,12 +120,12 @@ virtual unsigned long GetNumaNode() const = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Numer węzła NUMA, do którego należy ten węzeł Menedżera zasobów.
+Numer węzła NUMA przypisany do systemu Windows, do którego należy ten węzeł Menedżer zasobów.
 
 ### <a name="remarks"></a>Uwagi
 
-Serwer proxy wątku uruchomiony w katalogu głównym procesora wirtualnego należącym do tego węzła będzie miał koligacji co najmniej do poziomu węzła NUMA dla węzła NUMA zwróconego przez tę metodę.
+Serwer proxy wątku uruchomiony w wirtualnym katalogu głównym procesora należącym do tego węzła będzie miał koligację do co najmniej poziomu węzła NUMA dla węzła NUMA zwróconego przez tę metodę.
 
 ## <a name="see-also"></a>Zobacz też
 
-[współbieżność Obszar nazw](concurrency-namespace.md)
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -1,14 +1,15 @@
 ---
+description: 'Dowiedz się więcej na temat: środowisko wykonawcze systemu Windows biblioteki szablonów C++ (WRL)'
 title: Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc94f907964efdf4bf93e8d92922f69373740d85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333916"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 

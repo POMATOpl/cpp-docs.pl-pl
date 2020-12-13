@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: db_param'
 title: db_param (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 008a7f1ea07e6c23ad6d812ac4fbf3b30ef1da89
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27666b4cdf027e24b54326a3acc5fe701b9f6f44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333101"
 ---
 # <a name="db_param"></a>db_param
 
@@ -49,7 +50,7 @@ Obowiązkowe Skala, która ma być używana dla wpisu kolumny. Aby uzyskać szcz
 *Stany*<br/>
 Obowiązkowe Zmienna członkowska używana do przechowywania stanu tej kolumny. Stan wskazuje, czy wartość kolumny jest wartością danych, czy inną wartością, taką jak NULL. Aby uzyskać możliwe wartości, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
-*Długość*<br/>
+*length*<br/>
 Obowiązkowe Zmienna członkowska używana do przechowywania rozmiaru kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
@@ -107,7 +108,7 @@ struct CSalesbyYear {
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

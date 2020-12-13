@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ftime, _ftime32, _ftime64'
 title: _ftime, _ftime32, _ftime64
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: a0d012c89058209832d1e78867e89b4bd87bf226
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f0e4a6061bcdc36b866f39fd2ad9e18efc49fa0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334197"
 ---
 # <a name="_ftime-_ftime32-_ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -63,18 +64,18 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Wskaźnik do struktury **_timeb**, **__timeb32**lub **__timeb64** .
+Wskaźnik do struktury **_timeb**, **__timeb32** lub **__timeb64** .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_ftime** Pobiera bieżący czas lokalny i zapisuje ją w strukturze wskazywanej przez *timeptr*. Struktury **_timeb**, **__timeb32**i **__timeb64** są zdefiniowane w \<pliku sys\\timeb. h>. Zawierają cztery pola, które są wymienione w poniższej tabeli.
+Funkcja **_ftime** Pobiera bieżący czas lokalny i zapisuje ją w strukturze wskazywanej przez *timeptr*. Struktury **_timeb**, **__timeb32** i **__timeb64** są zdefiniowane w \<sys\\timeb.h> . Zawierają cztery pola, które są wymienione w poniższej tabeli.
 
 |Pole|Opis|
 |-|-|
 |**dstflag**|Wartość różna od zera, jeśli obowiązuje czas letni dla lokalnej strefy czasowej. (Zobacz [_tzset](tzset.md) , aby dowiedzieć się, jak jest określany czas letni).|
 |**millitm**|Część sekundy w milisekundach.|
 |**pierwszym**|Czas (w sekundach) od północy (00:00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC).|
-|**TimeZone**|Różnica w minutach, przesuwanie Westward, między czasem UTC i czasem lokalnym. Wartość **strefy czasowej** jest ustawiana na podstawie wartości zmiennej globalnej **_timezone** (zobacz **_tzset**).|
+|**timezone**|Różnica w minutach, przesuwanie Westward, między czasem UTC i czasem lokalnym. Wartość **strefy czasowej** jest ustawiana na podstawie wartości zmiennej globalnej **_timezone** (zobacz **_tzset**).|
 
 Funkcja **_ftime64** , która używa struktury **__timeb64** , umożliwia wyrażanie dat tworzenia plików do 23:59:59 grudnia, 3000, UTC; natomiast **_ftime32** reprezentuje tylko daty do 23:59:59 stycznia 18, 2038, UTC. Północ, 1 stycznia 1970, to Dolna granica zakresu dat dla wszystkich tych funkcji.
 
@@ -88,9 +89,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_ftime**|\<sys/typy. h> i \<sys/timeb. h>|
-|**_ftime32**|\<sys/typy. h> i \<sys/timeb. h>|
-|**_ftime64**|\<sys/typy. h> i \<sys/timeb. h>|
+|**_ftime**|\<sys/types.h> i \<sys/timeb.h>|
+|**_ftime32**|\<sys/types.h> i \<sys/timeb.h>|
+|**_ftime64**|\<sys/types.h> i \<sys/timeb.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -149,7 +150,7 @@ Daylight savings time flag (1 means Daylight time is in effect): 1
 The time is Mon Apr 28 11:08:54.230 2003
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy invalid_operation
 title: invalid_operation — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f3050d487f2c374f66f264b6e568fce5244d25ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334544"
 ---
 # <a name="invalid_operation-class"></a>invalid_operation — Klasa
 
@@ -25,13 +26,13 @@ Ta klasa opisuje wyjątek zgłoszony w przypadku wykonania nieprawidłowej opera
 class invalid_operation : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[invalid_operation](#ctor)|Przeciążone. Konstruuje obiekt `invalid_operation`.|
+|[invalid_operation](#ctor)|Przeciążone. Konstruuje `invalid_operation` obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -49,9 +50,9 @@ Różne metody, które zgłaszają ten wyjątek, będą na ogół udokumentowane
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>invalid_operation
+## <a name="invalid_operation"></a><a name="ctor"></a> invalid_operation
 
-Konstruuje obiekt `invalid_operation`.
+Konstruuje `invalid_operation` obiekt.
 
 ```cpp
 explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: db_accessor'
 title: db_accessor (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b32fb16fe938a84280b0fb047923bbc2aa687c75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333119"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -70,7 +71,7 @@ public:
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Bloki atrybutów|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

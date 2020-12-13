@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: cpp_quote'
 title: cpp_quote (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 27be83d123b5433f79c4c8a702197fc6f9f1a753
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe8424fd16cb75e320f8c1a1f8e3e444cf2185ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333175"
 ---
 # <a name="cpp_quote"></a>cpp_quote
 
@@ -45,7 +46,7 @@ Zobacz przykład dla [podwójnego](dual.md) przykładu użycia **cpp_quote**.
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Dowolne miejsce|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

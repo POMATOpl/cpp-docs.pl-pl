@@ -1,37 +1,38 @@
 ---
-title: no_implementation — atrybut importowania
+description: 'Dowiedz się więcej na temat: no_implementation Importowanie atrybutu'
+title: no_implementation atrybut importowania
 ms.date: 08/29/2019
 f1_keywords:
 - no_implementation
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: 8f0a7454fdbedc1959b665ccb2a23748d21c342d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0cfd51b344847d2e5658fd4e4ec1a9f30db51fe6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333333"
 ---
-# <a name="no_implementation-import-attribute"></a>no_implementation — atrybut importowania
+# <a name="no_implementation-import-attribute"></a>no_implementation atrybut importowania
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Pomija generowanie `.tli` nagłówka, który zawiera implementacje funkcji elementu członkowskiego otoki.
 
 ## <a name="syntax"></a>Składnia
 
-> **#import** *Biblioteka typów* **no_implementation**
+> **#import** **no_implementation** *biblioteki typów*
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli ten atrybut jest określony, `.tlh` nagłówek wraz z deklaracjami do udostępnienia elementów biblioteki typów, zostanie wygenerowany `#include` bez instrukcji, aby dołączyć `.tli` plik nagłówka.
+Jeśli ten atrybut jest określony, `.tlh` nagłówek wraz z deklaracjami do udostępnienia elementów biblioteki typów, zostanie wygenerowany bez `#include` instrukcji, aby dołączyć `.tli` plik nagłówka.
 
 Ten atrybut jest używany w połączeniu z [implementation_only](../preprocessor/implementation-only.md).
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

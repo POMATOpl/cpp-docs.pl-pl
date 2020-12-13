@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy invalid_link_target
 title: invalid_link_target — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: bd3d82c06c174c69c60dec33592110f4de72ac99
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d080886c3aab0ecc120d4ce13f5f75f2eecfea8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334589"
 ---
 # <a name="invalid_link_target-class"></a>invalid_link_target — Klasa
 
-Ta klasa opisuje wyjątek zgłoszony, gdy wywoływana jest metoda `link_target` bloku komunikatów, a blok komunikatów nie może połączyć się z obiektem docelowym. Może to wynikać z przekroczenia liczby linków, do których blok komunikatów jest dozwolony, lub próba łączenia określonego elementu docelowego dwa razy do tego samego źródła.
+Ta klasa opisuje wyjątek zgłoszony, gdy `link_target` wywoływana jest metoda bloku komunikatów i blok komunikatów nie może połączyć się z obiektem docelowym. Może to wynikać z przekroczenia liczby linków, do których blok komunikatów jest dozwolony, lub próba łączenia określonego elementu docelowego dwa razy do tego samego źródła.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +26,13 @@ Ta klasa opisuje wyjątek zgłoszony, gdy wywoływana jest metoda `link_target` 
 class invalid_link_target : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[invalid_link_target](#ctor)|Przeciążone. Konstruuje obiekt `invalid_link_target`.|
+|[invalid_link_target](#ctor)|Przeciążone. Konstruuje `invalid_link_target` obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,9 +46,9 @@ class invalid_link_target : public std::exception;
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>invalid_link_target
+## <a name="invalid_link_target"></a><a name="ctor"></a> invalid_link_target
 
-Konstruuje obiekt `invalid_link_target`.
+Konstruuje `invalid_link_target` obiekt.
 
 ```cpp
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();

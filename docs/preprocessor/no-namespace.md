@@ -1,27 +1,28 @@
 ---
-title: no_namespace — atrybut importowania
+description: 'Dowiedz się więcej na temat: no_namespace Importowanie atrybutu'
+title: no_namespace atrybut importowania
 ms.date: 08/29/2019
 f1_keywords:
 - no_namespace
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: ba52aed69cdbb46c135e6de5078d718e93f99c87
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e1503015f455af65a138e4e3e6843fd0516d2773
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333314"
 ---
-# <a name="no_namespace-import-attribute"></a>no_namespace — atrybut importowania
+# <a name="no_namespace-import-attribute"></a>no_namespace atrybut importowania
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Określa, że kompilator nie generuje nazwy przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
-> **#import** *Biblioteka typów* **no_namespace**
+> **#import** **no_namespace** *biblioteki typów*
 
 ## <a name="remarks"></a>Uwagi
 
@@ -29,9 +30,9 @@ Zawartość biblioteki typów w `#import` pliku nagłówkowym są zwykle zdefini
 
 Jeśli chcesz użyć innej nazwy przestrzeni nazw, zamiast tego użyj atrybutu [rename_namespace](../preprocessor/rename-namespace.md) .
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

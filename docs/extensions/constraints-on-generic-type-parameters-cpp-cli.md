@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ograniczenia dotyczące parametrów typu ogólnego (C++/CLI)'
 title: Ograniczenia parametrów typu ogólnego (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c9e340c229736cbe1c679b931e52f68b0971f8f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686759"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333741"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Ograniczenia parametrów typu ogólnego (C++/CLI)
 
@@ -196,6 +197,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy ogólne](generics-cpp-component-extensions.md)

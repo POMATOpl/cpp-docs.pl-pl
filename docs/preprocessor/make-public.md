@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: make_public pragma'
 title: make_public, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: d12fab685e0088993cb43073c3603bda12edd2f3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 327a9882e13f9c51182e0673443566b56177d320
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333406"
 ---
 # <a name="make_public-pragma"></a>make_public, pragma
 
@@ -21,7 +22,7 @@ Wskazuje, że typ natywny powinien mieć dostępność zestawu publicznego.
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma make_public (** *Typ* **)**
+> **make_public #pragma (** *Typ* **)**
 
 ### <a name="parameters"></a>Parametry
 
@@ -30,9 +31,9 @@ Nazwa typu, który ma mieć dostęp do zestawu publicznego.
 
 ## <a name="remarks"></a>Uwagi
 
-**make_public** jest przydatne w przypadku, gdy natywny typ, do którego chcesz się odwołać, pochodzi z pliku nagłówkowego, którego nie można zmienić. Jeśli chcesz użyć typu natywnego w podpisie funkcji publicznej w typie z widocznością zestawu publicznego, typ natywny musi mieć również dostęp do zestawu publicznego lub kompilator wyda ostrzeżenie.
+**make_public** jest przydatne w przypadku, gdy natywny typ, do którego chcesz się odwołać pochodzi z pliku nagłówkowego, którego nie można zmienić. Jeśli chcesz użyć typu natywnego w podpisie funkcji publicznej w typie z widocznością zestawu publicznego, typ natywny musi mieć również dostęp do zestawu publicznego lub kompilator wyda ostrzeżenie.
 
-**make_public** musi być określona w zakresie globalnym. Działa tylko od punktu, w którym jest zadeklarowany na końcu pliku kodu źródłowego.
+należy określić **make_public** w zakresie globalnym. Działa tylko od punktu, w którym jest zadeklarowany na końcu pliku kodu źródłowego.
 
 Typ natywny może być niejawnie lub jawnie prywatny. Aby uzyskać więcej informacji, zobacz [typu widoczność](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
 
@@ -61,6 +62,6 @@ public ref struct A {
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
