@@ -1,29 +1,30 @@
 ---
-title: Klasy (ATL) obsługi plików
+description: 'Dowiedz się więcej na temat: klasy obsługi plików'
+title: Klasy obsługi plików (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - file classes [C++]
 ms.assetid: 94355eb1-daa3-4825-b183-7392b3899561
-ms.openlocfilehash: 68b51bfc230930bd8f1e5466fd9826283bc912e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 868d61fd75fb778d8417e1fae8d2af7ae8a69897
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147943"
 ---
 # <a name="file-handling-classes"></a>Klasy obsługi plików
 
-Te klasy zawierają metody obsługi plików, pliki tymczasowe i pliki mapowane w pamięci.
+Klasy te zapewniają metody obsługi plików, plików tymczasowych i plików mapowanych na pamięć.
 
-- [CAtlFile](../atl/reference/catlfile-class.md) ta klasa udostępnia alokowania elastycznego otokę Windows plików obsługi interfejsu API.
+- [CAtlFile](../atl/reference/catlfile-class.md) Ta klasa udostępnia cienkią otokę wokół interfejsu API obsługi plików systemu Windows.
 
-- [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) ta klasa reprezentuje plik mapowany w pamięci, dodanie operatora rzutowania do metod [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).
+- [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) Ta klasa reprezentuje plik mapowany w pamięci, dodając operator rzutowania do metod [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).
 
-- [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) ta klasa reprezentuje plik mapowanych na pamięć.
+- [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) Ta klasa reprezentuje plik mapowany w pamięci.
 
-- [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) ta klasa zawiera metody służące do tworzenia i używania pliku tymczasowego.
+- [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) Ta klasa zawiera metody tworzenia i używania pliku tymczasowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)
+[Przegląd klas](../atl/atl-class-overview.md)

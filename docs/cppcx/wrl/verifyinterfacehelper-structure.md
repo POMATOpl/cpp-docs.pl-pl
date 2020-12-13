@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze VerifyInterfaceHelper
 title: VerifyInterfaceHelper — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9b51eac55666d15b8362fc070d0feb731e9674d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135034"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper — Struktura
 
-Obsługuje infrastrukturę biblioteki szablonów środowiska wykonawczego systemu Windows W++ i nie jest przeznaczona do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę biblioteki szablonów w języku C++ środowisko wykonawcze systemu Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,8 +33,8 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="parameters"></a>Parametry
 
-*I*<br/>
-Interfejs do weryfikacji.
+*Mam*<br/>
+Interfejs do zweryfikowania.
 
 *isWinRTInterface*
 
@@ -55,13 +56,13 @@ Nazwa                                            | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Obszar nazw:** Microsoft::WRL::Dszczegóły
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>VerifyInterfaceHelper::VerifyInterfaceHelper::Verify VerifyInterfaceHelper::Verify VerifyInterface
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a> VerifyInterfaceHelper:: Verify
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 static void Verify();

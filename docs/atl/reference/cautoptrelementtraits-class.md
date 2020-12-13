@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAutoPtrElementTraits'
 title: Klasa CAutoPtrElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-ms.openlocfilehash: ac29116dc9beedf587c42cc0e52f8c9dbaf3d782
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2478f8251f0094aaa5cabf1c0dcc873c9c526cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147137"
 ---
 # <a name="cautoptrelementtraits-class"></a>Klasa CAutoPtrElementTraits
 
-Ta klasa zawiera metody, funkcje statyczne i typedefs przydatne podczas tworzenia kolekcji inteligentnych wskaźników.
+Ta klasa udostępnia metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji inteligentnych wskaźników.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,44 +39,44 @@ Typ wskaźnika.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Typ danych do dodania elementów do obiektu klasy kolekcji.|
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.|
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Typ danych, który ma być używany do dodawania elementów do obiektu klasy kolekcji.|
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych, który ma być używany do pobierania elementów z obiektu klasy kolekcji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera metody, funkcje statyczne i typedefs do wspomagania tworzenia obiektów klasy kolekcji zawierających inteligentne wskaźniki. Klasy [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) i [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) `CAutoPtrElementTraits`pochodzą od . Jeśli tworzenie kolekcji inteligentnych wskaźników, które wymaga operatorów wektora new i delete, należy użyć [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) zamiast.
+Ta klasa udostępnia metody, funkcje statyczne i definicje typów w celu polepszenia tworzenia obiektów klasy kolekcji zawierających inteligentne wskaźniki. Klasy [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) i [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) pochodne od `CAutoPtrElementTraits` . W przypadku kompilowania kolekcji inteligentnych wskaźników, które wymagają operatora Vector New i DELETE, zamiast tego należy użyć [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits (Niem.](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Baza CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits (3.](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoPtrElementTraits`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
-## <a name="cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE
+## <a name="cautoptrelementtraitsinargtype"></a><a name="inargtype"></a> CAutoPtrElementTraits::INARGTYPE
 
-Typ danych do dodania elementów do obiektu klasy kolekcji.
+Typ danych, który ma być używany do dodawania elementów do obiektu klasy kolekcji.
 
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```
 
-## <a name="cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE
+## <a name="cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a> CAutoPtrElementTraits::OUTARGTYPE
 
-Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.
+Typ danych, który ma być używany do pobierania elementów z obiektu klasy kolekcji.
 
 ```
 typedef T *& OUTARGTYPE;

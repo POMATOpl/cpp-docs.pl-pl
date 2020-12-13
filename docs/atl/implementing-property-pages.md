@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: implementowanie stron właściwości'
 title: Implementowanie stron właściwości
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 5f05831fa23eff586e85db56eca8013e0d1d2ea2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923890"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147761"
 ---
 # <a name="implementing-property-pages"></a>Implementowanie stron właściwości
 
@@ -29,7 +30,7 @@ Aby utworzyć stronę właściwości przy użyciu biblioteki ATL:
 
 - Utwórz lub Otwórz projekt serwera biblioteki dołączanej dynamicznie (DLL) ATL.
 
-- Otwórz okno [dialogowe Dodawanie klasy](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) i wybierz opcję **Strona właściwości ATL** .
+- Otwórz okno [dialogowe Dodawanie klasy](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) i wybierz opcję **Strona właściwości ATL**.
 
 - Upewnij się, że strona właściwości jest komórką Apartment (ponieważ ma interfejs użytkownika).
 
@@ -55,7 +56,7 @@ Aby zapoznać się z przykładową implementacją strony właściwości, zobacz 
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strony właściwości](../atl/atl-com-property-pages.md)<br/>
 [Przykład ATLPages](../overview/visual-cpp-samples.md)

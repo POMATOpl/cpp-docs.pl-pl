@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa ClassFactory'
 title: ClassFactory — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6503cba1060c432b2cb85020799b83f0ee16c6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135307"
 ---
 # <a name="classfactory-class"></a>ClassFactory — Klasa
 
@@ -114,7 +115,7 @@ Nazwa                                            | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory:: AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a> ClassFactory:: AddRef
 
 Zwiększa liczbę odwołań dla bieżącego `ClassFactory` obiektu.
 
@@ -129,13 +130,13 @@ STDMETHOD_(
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT, która opisuje awarię.
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory:: ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a> ClassFactory:: ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory:: LockServer —
+## <a name="classfactorylockserver"></a><a name="lockserver"></a> ClassFactory:: LockServer —
 
 Zwiększa lub zmniejsza liczbę obiektów bazowych, które są śledzone przez bieżący `ClassFactory` obiekt.
 
@@ -156,9 +157,9 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie E_FAIL.
 
 ### <a name="remarks"></a>Uwagi
 
-`ClassFactory`śledzi obiekty w podstawowym wystąpieniu klasy [modułu](module-class.md) .
+`ClassFactory` śledzi obiekty w podstawowym wystąpieniu klasy [modułu](module-class.md) .
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory:: QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a> ClassFactory:: QueryInterface
 
 Pobiera wskaźnik do interfejsu określonego przez parametr.
 
@@ -180,7 +181,7 @@ Po zakończeniu tej operacji wskaźnik do interfejsu określony przez parametr *
 
 S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT, która opisuje awarię.
 
-## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory:: Release
+## <a name="classfactoryrelease"></a><a name="release"></a> ClassFactory:: Release
 
 Zmniejsza liczbę odwołań dla bieżącego `ClassFactory` obiektu.
 

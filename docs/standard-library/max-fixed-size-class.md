@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy max_fixed_size
 title: max_fixed_size — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: e62884c83d71b4e9f1902fa4bc7f52f5e0a4e0ee
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 3238013547078640af42914fa21dddec622a9973
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149282"
 ---
 # <a name="max_fixed_size-class"></a>max_fixed_size — Klasa
 

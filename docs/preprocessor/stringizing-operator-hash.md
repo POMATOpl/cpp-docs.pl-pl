@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operator tworzenia ciągu (#)'
 title: Operator tworzenia ciągów (#)
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 5a1b43198e59bc1e69cdf1b56db56be75719fe46
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6b6f938e71e213e57fc6c4ec02b33da02e41ea2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136035"
 ---
 # <a name="stringizing-operator-"></a>Operator tworzenia ciągów (#)
 
@@ -28,9 +29,9 @@ Operator Number-Sign lub "tworzenia ciągu" ( **#** ) konwertuje parametry makr 
 
 Biały znak poprzedzający pierwszy token i następujący po ostatnim tokenie rzeczywistego argumentu jest ignorowany. Wszelkie odstępy między tokenami w rzeczywistym argumencie są skracane do pojedynczego odstępu w wynikowym literale ciągu. Tak więc, jeśli komentarz występuje między dwoma tokenami w rzeczywistym argumencie, zostaje zredukowany do pojedynczego odstępu. Ciąg literału ciągu jest automatycznie łączony z dowolnymi sąsiednimi literałami ciągów, które są rozdzielone tylko odstępem.
 
-Ponadto, jeśli znak zawarty w argumencie zazwyczaj wymaga sekwencji ucieczki, gdy jest używany w literale ciągu, na przykład znak cudzysłowu (`"`) lub ukośnik odwrotny (`\`), niezbędny ukośnik odwrotny jest automatycznie wstawiono przed znakiem.
+Ponadto, jeśli znak zawarty w argumencie zazwyczaj wymaga sekwencji ucieczki, gdy jest używany w literale ciągu, na przykład cudzysłów ( `"` ) lub ukośnik odwrotny ( `\` ), niezbędny ukośnik odwrotny jest automatycznie wstawiany przed znakiem.
 
-Operator Microsoft C++ tworzenia ciągu nie działa prawidłowo, gdy jest używany z ciągami, które zawierają sekwencje ucieczki. W tej sytuacji kompilator generuje [błąd kompilatora C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+Operator tworzenia ciągu języka Microsoft C++ nie działa prawidłowo, gdy jest używany z ciągami, które zawierają sekwencje ucieczki. W tej sytuacji kompilator generuje [błąd kompilatora C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Przykłady
 
@@ -47,7 +48,7 @@ int main() {
 }
 ```
 
-`stringer` Makra są rozszerzane podczas przetwarzania wstępnego, generując następujący kod:
+`stringer`Makra są rozszerzane podczas przetwarzania wstępnego, generując następujący kod:
 
 ```cpp
 int main() {
@@ -76,6 +77,6 @@ FB(F B)
 FB1(F B)
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory preprocesora](../preprocessor/preprocessor-operators.md)

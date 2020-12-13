@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy rts_alloc
 title: rts_alloc — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b2fe4bf3fe3f54e8fe1de3d89605280b2ba2b857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148944"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc — Klasa
 
@@ -45,7 +46,7 @@ Ten szablon klasy zawiera wiele wystąpień alokatora blokowego i określa, któ
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
 |[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
-|[equals](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
+|[ubiegł](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,7 +73,7 @@ Wskaźnik do przydzielony obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `caches[_IDX].allocate(count)` , gdzie indeks `_IDX` jest określony przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca wartość `operator new(count)` . `cache`, która reprezentuje obiekt pamięci podręcznej.
+Funkcja członkowska zwraca `caches[_IDX].allocate(count)` , gdzie indeks `_IDX` jest określony przez żądaną *liczbę* rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca wartość `operator new(count)` . `cache`, która reprezentuje obiekt pamięci podręcznej.
 
 ## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d eallocate
 
@@ -92,7 +93,7 @@ Liczba obiektów do cofnięcia przydziału z magazynu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego wywołuje `caches[_IDX].deallocate(ptr, count)` , gdzie indeks `_IDX` jest określony przez żądaną *liczbę*rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca `operator delete(ptr)` .
+Funkcja elementu członkowskiego wywołuje `caches[_IDX].deallocate(ptr, count)` , gdzie indeks `_IDX` jest określony przez żądaną *liczbę* rozmiarów bloku lub, jeśli *Liczba* jest zbyt duża, zwraca `operator delete(ptr)` .
 
 ## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: Equals
 

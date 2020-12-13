@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAtlFileMappingBase'
 title: Klasa CAtlFileMappingBase
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 75177c195e83a4ab3ad2a6bd4d608d07f8c2234f
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 14bf275024dc95a3fdaf76c4e4d699127feaa8f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147462"
 ---
 # <a name="catlfilemappingbase-class"></a>Klasa CAtlFileMappingBase
 
@@ -74,7 +75,7 @@ Aby uzyskać więcej informacji, zobacz [mapowanie plików](/windows/win32/Memor
 
 **Nagłówek:** atlfile. h
 
-## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a> CAtlFileMappingBase::CAtlFileMappingBase
 
 Konstruktor.
 
@@ -96,7 +97,7 @@ Tworzy nowy obiekt mapowania plików, opcjonalnie używając istniejącego obiek
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a> CAtlFileMappingBase:: ~ CAtlFileMappingBase
 
 Destruktor.
 
@@ -108,7 +109,7 @@ Destruktor.
 
 Zwalnia wszystkie zasoby przydzielone przez klasę i wywołuje metodę [CAtlFileMappingBase:: demapowanie](#unmap) .
 
-## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a> CAtlFileMappingBase::CopyFrom
 
 Wywołaj tę metodę, aby skopiować z obiektu mapowania plików.
 
@@ -125,7 +126,7 @@ Oryginalny obiekt mapowania plików do skopiowania.
 
 Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase:: GetData
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a> CAtlFileMappingBase:: GetData
 
 Wywołaj tę metodę, aby pobrać dane z obiektu mapowania plików.
 
@@ -137,7 +138,7 @@ void* GetData() const throw();
 
 Zwraca wskaźnik do danych.
 
-## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase:: GetHandle
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a> CAtlFileMappingBase:: GetHandle
 
 Wywołaj tę metodę, aby zwrócić uchwyt do obiektu mapowania plików.
 
@@ -149,7 +150,7 @@ HANDLE GetHandle() throw ();
 
 Zwraca uchwyt do obiektu mapowania plików.
 
-## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a> CAtlFileMappingBase::GetMappingSize
 
 Wywołaj tę metodę, aby uzyskać rozmiar mapowania z obiektu mapowania plików.
 
@@ -165,7 +166,7 @@ Zwraca rozmiar mapowania.
 
 Zobacz przykład dla [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
-## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase:: MapFile
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a> CAtlFileMappingBase:: MapFile
 
 Wywołaj tę metodę, aby otworzyć lub utworzyć obiekt mapowania plików dla określonego pliku.
 
@@ -207,7 +208,7 @@ Po utworzeniu obiektu mapowania plików, rozmiar pliku nie może przekraczać ro
 
 Zobacz przykład dla [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
-## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a> CAtlFileMappingBase::MapSharedMem
 
 Wywołaj tę metodę, aby utworzyć obiekt mapowania plików, który umożliwia pełny dostęp do wszystkich procesów.
 
@@ -247,9 +248,9 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-`MapShareMem`zezwala na współużytkowanie istniejącego obiektu mapowania plików utworzonego przez [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)w celu współdzielenia między procesami.
+`MapShareMem` zezwala na współużytkowanie istniejącego obiektu mapowania plików utworzonego przez [funkcja CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga)w celu współdzielenia między procesami.
 
-## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a> CAtlFileMappingBase::OpenMapping
 
 Wywołaj tę metodę, aby otworzyć nazwany obiekt mapowania plików dla określonego pliku.
 
@@ -283,7 +284,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli parametry wejściowe są nieprawidłowe.
 
-## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase:: operator =
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a> CAtlFileMappingBase:: operator =
 
 Ustawia bieżący obiekt mapowania plików na inny obiekt mapowania plików.
 
@@ -300,7 +301,7 @@ Bieżący obiekt mapowania plików.
 
 Zwraca odwołanie do bieżącego obiektu.
 
-## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase:: demapowanie
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a> CAtlFileMappingBase:: demapowanie
 
 Wywołaj tę metodę, aby usunąć mapowanie obiektu mapowania plików.
 
@@ -316,7 +317,7 @@ Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 Aby uzyskać więcej informacji, zobacz [Funkcja UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

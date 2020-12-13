@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy runtime_error
 title: runtime_error — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-ms.openlocfilehash: a860e10994934ae0e97950fddb14e573f8752833
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6fd4bb843502d72e61afc5617d6a9c160f5cc434
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148905"
 ---
 # <a name="runtime_error-class"></a>runtime_error — Klasa
 
@@ -67,7 +68,7 @@ Type class std::runtime_error
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa wyjątku](../standard-library/exception-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

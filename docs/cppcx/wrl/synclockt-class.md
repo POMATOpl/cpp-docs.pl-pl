@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa SyncLock'
 title: SyncLockT — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-ms.openlocfilehash: 6a6e176020624f02e778ba5684a374abfbafa9e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 289a31d87ce395be2d2a72a8fe062c9c0bfa8f56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135112"
 ---
 # <a name="synclockt-class"></a>SyncLockT — Klasa
 
@@ -84,7 +85,7 @@ Nazwa                      | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL:: otoki::D etails
 
-## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>SyncLock:: ~ SyncLock
+## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a> SyncLock:: ~ SyncLock
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -98,7 +99,7 @@ Umożliwia odinicjowanie wystąpienia `SyncLockT` klasy.
 
 Ten destruktor odblokowuje również bieżące `SyncLockT` wystąpienie.
 
-## <a name="synclocktislocked"></a><a name="islocked"></a>SyncLock:: IsLocked
+## <a name="synclocktislocked"></a><a name="islocked"></a> SyncLock:: IsLocked
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -114,7 +115,7 @@ bool IsLocked() const;
 
 Wskazuje, czy bieżący `SyncLockT` obiekt jest właścicielem zasobu, czyli `SyncLockT` obiekt jest *zablokowany*.
 
-## <a name="synclocktsync_"></a><a name="sync"></a>SyncLock:: sync_
+## <a name="synclocktsync_"></a><a name="sync"></a> SyncLock:: sync_
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -126,7 +127,7 @@ typename SyncTraits::Type sync_;
 
 Przechowuje bazowego zasobu reprezentowanego przez `SyncLockT` klasę.
 
-## <a name="synclocktsynclockt"></a><a name="synclockt"></a>SyncLock:: SyncLock
+## <a name="synclocktsynclockt"></a><a name="synclockt"></a> SyncLock:: SyncLock
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -154,7 +155,7 @@ Inicjuje nowe wystąpienie klasy `SyncLockT`.
 
 Pierwszy Konstruktor inicjuje bieżący `SyncLockT` obiekt z innego `SyncLockT` obiektu określonego przez parametr *inny*, a następnie unieważnia inny `SyncLockT` obiekt. Drugi Konstruktor jest **`protected`** i inicjuje bieżący `SyncLockT` obiekt w nieprawidłowym stanie.
 
-## <a name="synclocktunlock"></a><a name="unlock"></a>SyncLock:: Unlock
+## <a name="synclocktunlock"></a><a name="unlock"></a> SyncLock:: Unlock
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 

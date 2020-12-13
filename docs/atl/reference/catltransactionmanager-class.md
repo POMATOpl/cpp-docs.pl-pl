@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAtlTransactionManager'
 title: Klasa CAtlTransactionManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 25d5ea7e9b4838f483dd7f9ee408cdd5bd4c88cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147189"
 ---
 # <a name="catltransactionmanager-class"></a>Klasa CAtlTransactionManager
 
@@ -59,7 +60,7 @@ class CAtlTransactionManager;
 |Nazwa|Opis|
 |----------|-----------------|
 |[Zamknij](#close)|Zamyka jeden uchwyt transakcji.|
-|[Zleca](#commit)|Żąda zatwierdzenia transakcji.|
+|[Zatwierdzenie](#commit)|Żąda zatwierdzenia transakcji.|
 |[Utwórz](#create)|Tworzy uchwyt transakcji.|
 |[CreateFile](#createfile)|Tworzy lub otwiera plik, strumień plików lub katalog w ramach operacji transakcyjnej.|
 |[DeleteFile](#deletefile)|Usuwa istniejący plik jako operację transakcji transakcyjnych.|
@@ -72,7 +73,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|Tworzy określony klucz rejestru i kojarzy go z transakcją. Jeśli klucz już istnieje, funkcja otwiera go.|
 |[RegDeleteKey](#regdeletekey)|Usuwa podklucz i jego wartości z określonego, specyficznego dla platformy widoku rejestru jako operacji transakcyjnej.|
 |[Działanie funkcji RegOpenKeyEx](#regopenkeyex)|Otwiera określony klucz rejestru i kojarzy go z transakcją.|
-|[Wycofywania](#rollback)|Żąda wycofania transakcji.|
+|[Wycofywanie](#rollback)|Żąda wycofania transakcji.|
 |[Setgetfileattributes](#setfileattributes)|Ustawia atrybuty dla pliku lub katalogu jako operacji transakcyjnej.|
 
 ### <a name="protected-data-members"></a>Chronione elementy członkowskie danych

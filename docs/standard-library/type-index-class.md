@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy type_index
 title: type_index — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,38 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
-ms.openlocfilehash: b30c9719957b9ffc5f3ce17692eb90c1b266ae0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4e9156420811d2712a5b9331d0ece0e7847103e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142691"
 ---
-# <a name="typeindex-class"></a>type_index — Klasa
+# <a name="type_index-class"></a>type_index — Klasa
 
-Klasa otacza wskaźnik do [klasy type_info](../cpp/type-info-class.md) w celu ułatwienia indeksowania przez takie obiekty. `type_index`
+`type_index`Klasa zawija wskaźnik do [klasy type_info](../cpp/type-info-class.md) , aby ułatwić indeksowanie według takich obiektów.
 
-Klasa type_index {Public: type_index (const type_info & tInfo); const char * Name () const; size_t hash_code () const; operator bool = = (const type_info & Right) const; operator bool! = (const type_info & Right) const; operator bool < (const type_ Informacje & prawej) const; operator\<logiczny = (const type_info & Right) const; operator bool > (const type_info & Right) const; operator bool > = (const type_info & Right) const;};
+Klasa type_index {Public: type_index (const type_info& tInfo); const char * Name () const; size_t hash_code () const; operator bool = = (const type_info& Right) const; operator bool! = (const type_info& Right) const; operator bool< (const type_info& Right) const; operator bool \<=(const type_info& right) const;
+   bool operator> (const type_info& Right) const; operator logiczny>= (const type_info& Right) const;};
 
-Konstruktor inicjuje `ptr` się do `&tinfo`.
+Konstruktor inicjuje `ptr` się do `&tinfo` .
 
-`name`zwraca `ptr->name()`wartość.
+`name` Zwraca wartość `ptr->name()` .
 
-`hash_code`typu`ptr->hash_code().`
+`hash_code` typu `ptr->hash_code().`
 
-`operator==`zwraca `*ptr == right.ptr`wartość.
+`operator==` Zwraca wartość `*ptr == right.ptr` .
 
-`operator!=`zwraca `!(*this == right)`wartość.
+`operator!=` Zwraca wartość `!(*this == right)` .
 
-`operator<`zwraca `*ptr->before(*right.ptr)`wartość.
+`operator<` Zwraca wartość `*ptr->before(*right.ptr)` .
 
-`operator<=`typu`!(right < *this).`
+`operator<=` typu `!(right < *this).`
 
-`operator>`zwraca `right < *this`wartość.
+`operator>` Zwraca wartość `right < *this` .
 
-`operator>=`zwraca `!(*this < right)`wartość.
+`operator>=` Zwraca wartość `!(*this < right)` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Informacje o typie w czasie wykonywania](../cpp/run-time-type-information.md)\
 [\<typeindex>](../standard-library/typeindex.md)

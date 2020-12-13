@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy max_variable_size
 title: max_variable_size — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: 53d2603c82e94710ed687dce4caeec24aeb2f60a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 0640e11e4ab68b60dc8114c88463a370e43dc749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149230"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size — Klasa
 

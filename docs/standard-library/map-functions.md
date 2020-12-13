@@ -1,20 +1,21 @@
 ---
+description: Dowiedz się więcej na temat &lt; &gt; funkcji map
 title: '&lt;&gt;funkcje map'
 ms.date: 11/04/2016
 f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 8cc4a82e08963902f9ba5c21ace759c47bdd0014
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dded58c4af44bca08a5cb9e2cd0436974f48f6c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149516"
 ---
 # <a name="ltmapgt-functions"></a>&lt;&gt;funkcje map
 
-## <a name="swap-map"></a><a name="swap_multimap"></a>Zamień (mapa)
+## <a name="swap-map"></a><a name="swap_multimap"></a> Zamień (mapa)
 
 Zamienia elementy z dwóch map.
 
@@ -28,10 +29,10 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *Kliknij*\
-Mapa dostarczająca elementy, które mają zostać zamienione, lub mapę, której elementy mają być wymieniane z *pozostałymi*elementami mapy.
+Mapa dostarczająca elementy, które mają zostać zamienione, lub mapę, której elementy mają być wymieniane z *pozostałymi* elementami mapy.
 
 *lewym*\
-Mapa, której elementy są wymieniane z *prawami*mapy.
+Mapa, której elementy są wymieniane z *prawami* mapy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -41,7 +42,7 @@ Funkcja szablonu jest algorytm wyspecjalizowany dla mapy klasy kontenera, aby wy
 
 Zobacz przykład kodu dla mapy funkcji składowej [:: swap](../standard-library/map-class.md#swap) dla przykładu korzystającego z wersji szablonu `swap` .
 
-## <a name="swap-multimap"></a><a name="swap"></a>swap (multimap)
+## <a name="swap-multimap"></a><a name="swap"></a> swap (multimap)
 
 Wymienia elementy dwóch map.
 
@@ -55,10 +56,10 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *Kliknij*\
-Multimap udostępniający elementy, które mają zostać zamienione, lub multimap, których elementy mają być wymieniane z *pozostałymi*multimap.
+Multimap udostępniający elementy, które mają zostać zamienione, lub multimap, których elementy mają być wymieniane z *pozostałymi* multimap.
 
 *lewym*\
-Multimap, których elementy mają być wymieniane z tymi z *prawej*strony multimap.
+Multimap, których elementy mają być wymieniane z tymi z *prawej* strony multimap.
 
 ### <a name="remarks"></a>Uwagi
 

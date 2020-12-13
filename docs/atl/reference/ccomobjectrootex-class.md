@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CComObjectRootEx'
 title: Klasa CComObjectRootEx
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: b4dbc42cb0c6fe2c9c6692e0db37267ce3fff361
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9fe0140944e3da5ddf70e0da38d054a35bb648ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142483"
 ---
 # <a name="ccomobjectrootex-class"></a>Klasa CComObjectRootEx
 
@@ -52,7 +53,7 @@ Klasa, której metody implementują żądany model wątkowości. Można jawnie w
 |[CComObjectRootEx](#ccomobjectrootex)|Konstruktor.|
 |[InternalAddRef —](#internaladdref)|Zwiększa liczbę odwołań dla niezagregowanego obiektu.|
 |[InternalRelease —](#internalrelease)|Zmniejsza liczbę odwołań dla niezagregowanego obiektu.|
-|[Skręt](#lock)|Jeśli model wątku jest wielowątkowy, uzyskuje własność obiektu sekcji krytycznej.|
+|[Blokuj](#lock)|Jeśli model wątku jest wielowątkowy, uzyskuje własność obiektu sekcji krytycznej.|
 |[Odblokowania](#unlock)|Jeśli model wątku jest wielowątkowy, zwalnia własność obiektu sekcji krytycznej.|
 
 ### <a name="ccomobjectrootbase-methods"></a>Metody CComObjectRootBase
@@ -205,7 +206,7 @@ podczas Wskaźnik do `_ATL_INTMAP_ENTRY` struktury, która uzyskuje dostęp do m
 podczas Identyfikator GUID żądanego interfejsu.
 
 *ppvObject*<br/>
-określoną Wskaźnik do wskaźnika interfejsu określonego w *identyfikatorze IID*lub wartość null, jeśli nie można odnaleźć interfejsu.
+określoną Wskaźnik do wskaźnika interfejsu określonego w *identyfikatorze IID* lub wartość null, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -337,7 +338,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 podczas Identyfikator GUID żądanego interfejsu.
 
 *ppvObject*<br/>
-określoną Wskaźnik do wskaźnika interfejsu określonego w *identyfikatorze IID*lub wartość null, jeśli agregacja nie obsługuje interfejsu.
+określoną Wskaźnik do wskaźnika interfejsu określonego w *identyfikatorze IID* lub wartość null, jeśli agregacja nie obsługuje interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

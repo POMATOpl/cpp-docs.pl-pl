@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: Tworzenie aplikacji wstążki za pomocą MFC'
 title: 'Wskazówki: tworzenie aplikacji wstążki za pomocą MFC'
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: fa266900c52d7d8ca3460ca38b266571974d1563
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143068"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 
@@ -24,9 +25,9 @@ W tym przewodniku przyjęto założenie, że ustawiono program Visual Studio do 
 
 1. Użyj **Kreatora aplikacji MFC** , aby utworzyć aplikację MFC, która ma Wstążkę. Zobacz [Przewodnik: używanie nowych formantów powłoki MFC](walkthrough-using-the-new-mfc-shell-controls.md) w celu uzyskania instrukcji dotyczących sposobu otwierania Kreatora dla używanej wersji programu Visual Studio.
 
-1. W **Kreatorze aplikacji MFC**ustaw następujące opcje:
+1. W **Kreatorze aplikacji MFC** ustaw następujące opcje:
 
-    1. W sekcji **Typ aplikacji** w obszarze **styl wizualny i kolory**wybierz pozycję **Office 2007 (motyw niebieski)** .
+    1. W sekcji **Typ aplikacji** w obszarze **styl wizualny i kolory** wybierz pozycję **Office 2007 (motyw niebieski)**.
 
     1. Upewnij się, że w sekcji **Obsługa dokumentu złożonego** jest zaznaczona opcja **Brak** .
 
@@ -42,11 +43,11 @@ W tym przewodniku przyjęto założenie, że ustawiono program Visual Studio do 
 
 1. Aby sprawdzić, czy aplikacja została pomyślnie utworzona, należy ją skompilować i uruchomić. Aby skompilować aplikację, w menu **kompilacja** kliknij polecenie **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom ją, klikając polecenie **Rozpocznij debugowanie** w menu **debugowanie** .
 
-    Kreator automatycznie utworzy Wstążkę z jedną kategorią wstążki o nazwie **Home**. Ta Wstążka zawiera trzy panele wstążki o nazwie **Clipboard**, **View**i **window**.
+    Kreator automatycznie utworzy Wstążkę z jedną kategorią wstążki o nazwie **Home**. Ta Wstążka zawiera trzy panele wstążki o nazwie **Clipboard**, **View** i **window**.
 
 ### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>Dodawanie kategorii i panelu do wstążki
 
-1. Aby otworzyć zasób wstążki utworzony przez kreatora, w menu **Widok** wskaż polecenie **inne okna** , a następnie kliknij przycisk **Widok zasobów**. W **Widok zasobów**kliknij pozycję **wstążka** , a następnie kliknij dwukrotnie pozycję **IDR_RIBBON**.
+1. Aby otworzyć zasób wstążki utworzony przez kreatora, w menu **Widok** wskaż polecenie **inne okna** , a następnie kliknij przycisk **Widok zasobów**. W **Widok zasobów** kliknij pozycję **wstążka** , a następnie kliknij dwukrotnie pozycję **IDR_RIBBON**.
 
 1. Najpierw Dodaj kategorię niestandardową do wstążki przez dwukrotne kliknięcie **kategorii** w **przyborniku**.
 
@@ -54,16 +55,16 @@ W tym przewodniku przyjęto założenie, że ustawiono program Visual Studio do 
 
     Kliknij prawym przyciskiem myszy pozycję **Category1** , a następnie kliknij pozycję **Właściwości**. W oknie **Właściwości** Zmień **napis** na *niestandardowy*.
 
-    Właściwości **duże obrazy** i **małe obrazy** określają mapy bitowe, które są używane jako ikony dla elementów wstążki w tej kategorii. Ponieważ tworzenie niestandardowych map bitowych wykracza poza zakres tego instruktażu, należy po prostu użyć map bitowych utworzonych przez kreatora. Małe mapy bitowe mają rozmiar 16 x 16 pikseli. W przypadku małych obrazów Użyj map bitowych, do których uzyskuje się dostęp `IDB_FILESMALL` IDENTYFIKATORem zasobu. Duże mapy bitowe mają rozmiar 32 x 32 piksele. W przypadku dużych obrazów Użyj map bitowych, do których uzyskuje się dostęp `IDB_FILELARGE` IDENTYFIKATORem zasobu.
+    Właściwości **duże obrazy** i **małe obrazy** określają mapy bitowe, które są używane jako ikony dla elementów wstążki w tej kategorii. Ponieważ tworzenie niestandardowych map bitowych wykracza poza zakres tego instruktażu, należy po prostu użyć map bitowych utworzonych przez kreatora. Małe mapy bitowe mają rozmiar 16 x 16 pikseli. W przypadku małych obrazów Użyj map bitowych, do których uzyskuje się dostęp za pomocą `IDB_FILESMALL` identyfikatora zasobu. Duże mapy bitowe mają rozmiar 32 x 32 piksele. W przypadku dużych obrazów Użyj map bitowych, do których uzyskuje się dostęp za pomocą `IDB_FILELARGE` identyfikatora zasobu.
 
     > [!NOTE]
     > Na ekranach o dużej liczbie punktów na cal (HDPI) automatycznie są używane wersje HDPI obrazów.
 
-1. Następnie dostosuj panel. Panele służą do grupowania elementów, które są ze sobą logicznie powiązane. Na przykład na karcie **Narzędzia główne** w tej aplikacji polecenia **wycinania**, **kopiowania**i **wklejania** są dostępne na panelu **schowka** . Aby dostosować panel, kliknij prawym przyciskiem myszy pozycję **element Panel1** , a następnie kliknij pozycję **Właściwości**. W oknie **Właściwości** Zmień **napis** na *Ulubione*.
+1. Następnie dostosuj panel. Panele służą do grupowania elementów, które są ze sobą logicznie powiązane. Na przykład na karcie **Narzędzia główne** w tej aplikacji polecenia **wycinania**, **kopiowania** i **wklejania** są dostępne na panelu **schowka** . Aby dostosować panel, kliknij prawym przyciskiem myszy pozycję **element Panel1** , a następnie kliknij pozycję **Właściwości**. W oknie **Właściwości** Zmień **napis** na *Ulubione*.
 
     Możesz określić **indeks obrazu** dla panelu. Ta liczba określa ikonę wyświetlaną, gdy panel wstążki zostanie dodany do **paska narzędzi Szybki dostęp**. Ikona nie jest wyświetlana na panelu wstążki.
 
-1. Aby sprawdzić, czy kategoria i panel wstążki zostały utworzone pomyślnie, wyświetl podgląd formantu wstążki. Na **pasku narzędzi edytora wstążki**kliknij przycisk **Testuj wstążkę** . Na Wstążce powinna zostać wyświetlona karta **niestandardowa** i panel **Ulubione** .
+1. Aby sprawdzić, czy kategoria i panel wstążki zostały utworzone pomyślnie, wyświetl podgląd formantu wstążki. Na **pasku narzędzi edytora wstążki** kliknij przycisk **Testuj wstążkę** . Na Wstążce powinna zostać wyświetlona karta **niestandardowa** i panel **Ulubione** .
 
 ### <a name="to-add-elements-to-the-ribbon-panels"></a>Dodawanie elementów do paneli wstążki
 
@@ -75,19 +76,19 @@ W tym przewodniku przyjęto założenie, że ustawiono program Visual Studio do 
 
     W oknie **Właściwości** Zmień wartość właściwości **ID** na **ID_FILE_PRINT**, która powinna być już zdefiniowana. Zmień **podpis** , aby *drukować*. Zmień **indeks obrazu** na *4*.
 
-    Aby utworzyć przycisk **szybkiego drukowania** , kliknij kolumnę wartość właściwości obok **pozycji menu elementy**, a następnie kliknij przycisk wielokropka ( **...** ). W **Edytorze elementów**kliknij przycisk **Dodaj** bez etykiety, aby utworzyć element menu. W oknie **Właściwości** Zmień **napis** na *szybkie drukowanie*, **Identyfikator** do *ID_FILE_PRINT_DIRECT*i **obraz** na *5*. Właściwość obrazu określa ikonę **szybkiego drukowania** w zasobie mapy bitowej `IDB_FILESMALL`.
+    Aby utworzyć przycisk **szybkiego drukowania** , kliknij kolumnę wartość właściwości obok **pozycji menu elementy**, a następnie kliknij przycisk wielokropka (**...**). W **Edytorze elementów** kliknij przycisk **Dodaj** bez etykiety, aby utworzyć element menu. W oknie **Właściwości** Zmień **napis** na *szybkie drukowanie*, **Identyfikator** do *ID_FILE_PRINT_DIRECT* i **obraz** na *5*. Właściwość obrazu określa ikonę **szybkiego drukowania** w `IDB_FILESMALL` zasobie mapy bitowej.
 
-1. Aby sprawdzić, czy przyciski zostały dodane do panelu wstążki, skompiluj aplikację i ją uruchom. Aby skompilować aplikację, w menu **kompilacja** kliknij polecenie **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, klikając polecenie **Rozpocznij debugowanie** w menu **debugowanie** . Na Wstążce powinna zostać wyświetlona przycisk **Drukuj** oraz pole kombi w panelu **Ulubione** .
+1. Aby sprawdzić, czy przyciski zostały dodane do panelu wstążki, skompiluj aplikację i ją uruchom. Aby skompilować aplikację, w menu **kompilacja** kliknij polecenie **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, klikając polecenie **Rozpocznij debugowanie** w menu **debugowanie** . Na Wstążce powinna zostać wyświetlona przycisk **Drukuj** oraz pole kombi w  panelu **Ulubione** .
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Instrukcje: dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Instrukcje: dostosowywanie przycisku Aplikacja](../mfc/how-to-customize-the-application-button.md)
+[Instrukcje: Dostosowywanie przycisku aplikacji](../mfc/how-to-customize-the-application-button.md)
 
 Aby zapoznać się z kompletnymi przykładami, zobacz [przykłady (pakiet MFC Feature Pack)](../overview/visual-cpp-samples.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przewodniki](../mfc/walkthroughs-mfc.md)<br/>
+[Wskazówki](../mfc/walkthroughs-mfc.md)<br/>
 [Przykłady (pakiet MFC Feature Pack)](../overview/visual-cpp-samples.md)

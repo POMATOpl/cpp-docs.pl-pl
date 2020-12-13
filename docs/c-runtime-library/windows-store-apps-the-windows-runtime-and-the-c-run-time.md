@@ -1,47 +1,48 @@
 ---
-title: Aplikacje platformy uniwersalnej systemu Windows, środowisko uruchomieniowe Windows i środowiska wykonawczego języka C
+description: 'Dowiedz się więcej na temat: platformy UWP Apps, środowisko wykonawcze systemu Windows i C Run-Time'
+title: PLATFORMY UWP aplikacje, środowisko wykonawcze systemu Windows i C Run-Time
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfbbdbde19b882fb51b8fd8782b20e4205bdb00b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136750"
 ---
-# <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplikacje platformy uniwersalnej systemu Windows, środowisko uruchomieniowe Windows i środowiska wykonawczego języka C
+# <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>PLATFORMY UWP aplikacje, środowisko wykonawcze systemu Windows i C Run-Time
 
-Uniwersalnych aplikacji dla platformy Windows (UWP) są programy, które działają ze środowiska wykonawczego Windows, który jest wykonywany w systemie Windows 8. Środowisko wykonawcze Windows jest środowiskiem godne zaufania, które określa funkcje, zmienne i zasoby, które są dostępne dla aplikacji platformy uniwersalnej systemu Windows. Zgodnie z projektem ograniczenia środowiska uruchomieniowego Windows uniemożliwiają korzystania z większości funkcji biblioteki wykonawczej C (CRT) w aplikacjach platformy uniwersalnej systemu Windows.
+Aplikacje platforma uniwersalna systemu Windows (platformy UWP) są programami uruchomionymi w środowisko wykonawcze systemu Windows, które są wykonywane w systemie Windows 8. Środowisko wykonawcze systemu Windows to godna zaufania środowisko kontrolujące funkcje, zmienne i zasoby, które są dostępne dla aplikacji platformy UWP. Jednak przez zaprojektowanie ograniczeń środowisko wykonawcze systemu Windows uniemożliwia korzystanie z większości funkcji języka C Run-Time Library (CRT) w aplikacjach platformy UWP.
 
-Środowisko wykonawcze Windows nie obsługuje następujące funkcje CRT:
+Środowisko wykonawcze systemu Windows nie obsługuje następujących funkcji CRT:
 
-- Większość funkcji CRT, that are related to nieobsługiwanych funkcji.
+- Większość funkcji CRT, które są związane z nieobsługiwanymi funkcjami.
 
-   Na przykład aplikacji platformy uniwersalnej systemu Windows nie można utworzyć proces przy użyciu **exec** i **duplikowanie** rodzin procedury.
+   Na przykład aplikacja platformy UWP nie może utworzyć procesu przy użyciu rodzin **exec** i **tarł** procedur.
 
-   Gdy funkcja CRT jest nieobsługiwana w aplikacji platformy uniwersalnej systemu Windows, że fakt została przedstawiona w artykule o jego.
+   Gdy funkcja CRT nie jest obsługiwana w aplikacji platformy UWP, ten fakt jest zanotowany w jego artykule referencyjnym.
 
-- Najbardziej wielobajtowych znakowe i funkcje.
+- Większość funkcji znaków wielobajtowych i ciągów.
 
-   Jednakże obsługiwane są teksty ANSI i Unicode.
+   Jednak tekst Unicode i ANSI są obsługiwane.
 
 - Zmienne środowiskowe.
 
-- Pojęcie bieżącego katalogu roboczego.
+- Koncepcja bieżącego katalogu roboczego.
 
-- Platformy uniwersalnej systemu Windows aplikacji i bibliotek DLL, które są statycznie łączone do CRT i skompilowanych przy użyciu [/MT](../build/reference/md-mt-ld-use-run-time-library.md) lub `/MTd` opcje kompilatora.
+- PLATFORMY UWP aplikacje i biblioteki DLL, które są statycznie połączone z CRT i zbudowane przy użyciu opcji [/MT](../build/reference/md-mt-ld-use-run-time-library.md) lub `/MTd` kompilatora.
 
-   Oznacza to, aplikację, która korzysta z wielowątkowej, statycznej wersji CRT.
+   Oznacza to, że aplikacja, która używa wielowątkowej, statycznej wersji CRT.
 
-- Aplikacja, która powstała przy użyciu [/mdd](../build/reference/md-mt-ld-use-run-time-library.md) — opcja kompilatora.
+- Aplikacja, która jest skompilowana przy użyciu opcji kompilatora [/MDD](../build/reference/md-mt-ld-use-run-time-library.md) .
 
-   Oznacza to, debugowania, wielowątkowej i biblioteki DLL w wersji CRT. Takiej aplikacji nie jest obsługiwana w środowisku uruchomieniowym Windows.
+   Oznacza to, że jest to wersja typu Debug, wielowątkowej i DLL dla programu CRT. Taka aplikacja nie jest obsługiwana na środowisko wykonawcze systemu Windows.
 
-Aby uzyskać pełną listę funkcji CRT, które nie są dostępne w aplikacji platformy uniwersalnej systemu Windows i sugestie dotyczące funkcji alternatywne, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+Aby zapoznać się z pełną listą funkcji CRT, które nie są dostępne w aplikacji platformy UWP i sugestie dotyczące funkcji alternatywnych, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zgodność](../c-runtime-library/compatibility.md)<br/>
-[Nieobsługiwane funkcje CRT środowiska uruchomieniowego systemu Windows](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Tworzenie aplikacji konsolowej Universal Windows Platform](/windows/uwp/launch-resume/console-uwp)
+[środowisko wykonawcze systemu Windows Nieobsługiwane funkcje CRT](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Tworzenie aplikacji konsolowej platforma uniwersalna systemu Windows](/windows/uwp/launch-resume/console-uwp)

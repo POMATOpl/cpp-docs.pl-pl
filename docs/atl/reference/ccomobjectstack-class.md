@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CComObjectStack'
 title: Klasa CComObjectStack
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: 8c3fd56635da8b80c84f6151009586b7bd2b4341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5713601a765ad9ff1c32992d1f9c517dd86affca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142418"
 ---
 # <a name="ccomobjectstack-class"></a>Klasa CComObjectStack
 
-Ta klasa tworzy tymczasowy obiekt COM i zapewnia jego `IUnknown`szkieletową implementację .
+Ta klasa tworzy tymczasowy obiekt COM i udostępnia go z implementacją szkieletową `IUnknown` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,8 +33,8 @@ class CComObjectStack : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*Podstawowej*<br/>
-Klasa, pochodzące z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również z dowolnego innego interfejsu, który chcesz obsługiwać na obiekcie.
+*Opiera*<br/>
+Klasa, pochodząca z [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), a także z dowolnego innego interfejsu, który ma być obsługiwany w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,31 +43,31 @@ Klasa, pochodzące z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.m
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|Konstruktor.|
-|[CComObjectStack::~CComObjectStack](#dtor)|Destruktor.|
+|[CComObjectStack:: ~ CComObjectStack](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComObjectStack::AddRef](#addref)|Zwraca zero. W trybie debugowania wywołania `_ASSERTE`.|
-|[CComObjectStack::QueryInterface](#queryinterface)|Zwraca E_NOINTERFACE. W trybie debugowania wywołania `_ASSERTE`.|
-|[CComObjectStack::Release CComObjectStack::Release CComObjectStack::Release CCom](#release)|Zwraca zero. W trybie debugowania wywołania `_ASSERTE`. ~|
+|[CComObjectStack:: AddRef](#addref)|Zwraca wartość zero. W trybie debugowania wywołania `_ASSERTE` .|
+|[CComObjectStack:: QueryInterface](#queryinterface)|Zwraca E_NOINTERFACE. W trybie debugowania wywołania `_ASSERTE` .|
+|[CComObjectStack:: Release](#release)|Zwraca wartość zero. W trybie debugowania wywołania `_ASSERTE` . ~|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Zawiera HRESULT zwrócony podczas `CComObjectStack` budowy obiektu.|
+|[CComObjectStack:: m_hResFinalConstruct](#m_hresfinalconstruct)|Zawiera wartość HRESULT zwracaną podczas konstruowania `CComObjectStack` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComObjectStack`służy do tworzenia tymczasowego obiektu COM i dostarczania obiektowi `IUnknown`szkieletowej implementacji . Zazwyczaj obiekt jest używany jako zmienna lokalna w ramach jednej funkcji (czyli wypchnięte na stosie). Ponieważ obiekt jest niszczony po zakończeniu funkcji, zliczanie odwołań nie jest wykonywane w celu zwiększenia wydajności.
+`CComObjectStack` służy do tworzenia tymczasowego obiektu COM i zapewniania obiektowi implementacji szkieletowej `IUnknown` . Zazwyczaj obiekt jest używany jako zmienna lokalna w ramach jednej funkcji (jest to wypchnięcie na stos). Ponieważ obiekt jest niszczony po zakończeniu działania funkcji, zliczanie odwołań nie jest wykonywane w celu zwiększenia wydajności.
 
-W poniższym przykładzie pokazano, jak utworzyć obiekt COM używany wewnątrz funkcji:
+Poniższy przykład pokazuje, jak utworzyć obiekt COM używany wewnątrz funkcji:
 
 [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]
 
-Obiekt `Tempobj` tymczasowy jest wypychany na stos i automatycznie znika po zakończeniu funkcji.
+Obiekt tymczasowy `Tempobj` jest wypychany do stosu i automatycznie znika po zakończeniu działania funkcji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -76,11 +77,11 @@ Obiekt `Tempobj` tymczasowy jest wypychany na stos i automatycznie znika po zako
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-## <a name="ccomobjectstackaddref"></a><a name="addref"></a>CComObjectStack::AddRef
+## <a name="ccomobjectstackaddref"></a><a name="addref"></a> CComObjectStack:: AddRef
 
-Zwraca zero.
+Zwraca wartość zero.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -88,13 +89,13 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero.
+Zwraca wartość zero.
 
 ### <a name="remarks"></a>Uwagi
 
-W trybie debugowania wywołania `_ASSERTE`.
+W trybie debugowania wywołania `_ASSERTE` .
 
-## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a> CComObjectStack::CComObjectStack
 
 Konstruktor.
 
@@ -104,9 +105,9 @@ CComObjectStack(void* = NULL);
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania, `FinalConstruct` a następnie ustawia [m_hResFinalConstruct](#m_hresfinalconstruct) do HRESULT zwracany przez `FinalConstruct`. Jeśli klasa podstawowa nie została wyprowadzona z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własną `FinalConstruct` metodę. Destruktor wywołuje `FinalRelease`.
+Wywołuje `FinalConstruct` , a następnie ustawia [m_hResFinalConstruct](#m_hresfinalconstruct) na wartość HRESULT zwracaną przez `FinalConstruct` . Jeśli klasa bazowa nie pochodzi od [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własną `FinalConstruct` metodę. Destruktor wywołuje `FinalRelease` .
 
-## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a>CComObjectStack::~CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a> CComObjectStack:: ~ CComObjectStack
 
 Destruktor.
 
@@ -116,17 +117,17 @@ CComObjectStack();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby i wywołuje [FinalRelease](ccomobjectrootex-class.md#finalrelease).
+Zwalnia wszystkie przydzieloną zasoby i wywołuje [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct
+## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a> CComObjectStack:: m_hResFinalConstruct
 
-Zawiera HRESULT zwrócony `FinalConstruct` z wywołania podczas budowy `CComObjectStack` obiektu.
+Zawiera wartość HRESULT zwracaną z wywołania `FinalConstruct` podczas konstruowania `CComObjectStack` obiektu.
 
 ```
 HRESULT    m_hResFinalConstruct;
 ```
 
-## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>CComObjectStack::QueryInterface
+## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a> CComObjectStack:: QueryInterface
 
 Zwraca E_NOINTERFACE.
 
@@ -140,11 +141,11 @@ Zwraca E_NOINTERFACE.
 
 ### <a name="remarks"></a>Uwagi
 
-W trybie debugowania wywołania `_ASSERTE`.
+W trybie debugowania wywołania `_ASSERTE` .
 
-## <a name="ccomobjectstackrelease"></a><a name="release"></a>CComObjectStack::Release CComObjectStack::Release CComObjectStack::Release CCom
+## <a name="ccomobjectstackrelease"></a><a name="release"></a> CComObjectStack:: Release
 
-Zwraca zero.
+Zwraca wartość zero.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -152,11 +153,11 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero.
+Zwraca wartość zero.
 
 ### <a name="remarks"></a>Uwagi
 
-W trybie debugowania wywołania `_ASSERTE`.
+W trybie debugowania wywołania `_ASSERTE` .
 
 ## <a name="see-also"></a>Zobacz też
 

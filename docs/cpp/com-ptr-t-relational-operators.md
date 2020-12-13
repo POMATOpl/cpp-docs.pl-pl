@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: _com_ptr_t operatory relacyjne'
 title: _com_ptr_t — Operatory relacyjne
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: 95d1e7a1e4322eb497a2d7ed410065bb92f17e09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c2b4bb3b3f7ca604874a4f2dad1caff58e70735
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135437"
 ---
 # <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t — Operatory relacyjne
 
@@ -114,10 +115,10 @@ bool operator>=( _InterfaceType* p );
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje obiekt inteligentnego wskaźnika do innego wskaźnika inteligentnego, wskaźnika interfejsu Raw lub wartości NULL. Oprócz testów wskaźnika o wartości NULL te operatory najpierw wykonują zapytania dotyczące obu wskaźników dla `IUnknown`i porównują wyniki.
+Porównuje obiekt inteligentnego wskaźnika do innego wskaźnika inteligentnego, wskaźnika interfejsu Raw lub wartości NULL. Oprócz testów wskaźnika o wartości NULL te operatory najpierw wykonują zapytania względem obu wskaźników dla `IUnknown` i porównują wyniki.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+[Klasa _com_ptr_t](../cpp/com-ptr-t-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CComAutoThreadModule'
 title: Klasa CComAutoThreadModule
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 405b05548cda2b2d379b849d9278293b8d747d2e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe6ded878a054bdcdc2569c8ca347e2ac20410b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146942"
 ---
 # <a name="ccomautothreadmodule-class"></a>Klasa CComAutoThreadModule
 
@@ -52,7 +53,7 @@ podczas Klasa, która zarządza wyborem wątku. Wartość domyślna to [CComSimp
 |[CreateInstance](#createinstance)|Wybiera wątek, a następnie tworzy obiekt w skojarzonej tablicy.|
 |[GetDefaultThreads](#getdefaultthreads)|Ruchom Dynamicznie oblicza liczbę wątków dla modułu na podstawie liczby procesorów.|
 |[Init](#init)|Tworzy wątki modułu.|
-|[Skręt](#lock)|Zwiększa liczbę blokad modułu i bieżącego wątku.|
+|[Blokuj](#lock)|Zwiększa liczbę blokad modułu i bieżącego wątku.|
 |[Odblokowania](#unlock)|Zmniejsza liczbę blokad modułu i bieżącego wątku.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
@@ -172,7 +173,7 @@ HRESULT Init(
 *St*<br/>
 podczas Wskaźnik do tablicy wpisów mapy obiektu.
 
-*c*<br/>
+*h*<br/>
 podczas HINSTANCE przeszedł do `DLLMain` lub `WinMain` .
 
 *plibid*<br/>
