@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbctolower, _mbctolower_l, _mbctoupper _mbctoupper_l'
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abf09a7a96fc1df9f34f3263638c68da4f9991d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146448"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -123,8 +124,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**_mbctolower**, **_mbctolower_l**|\<mbstring. h>|
-|**_mbctoupper**, **_mbctoupper_l**|\<mbstring. h>|
+|**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

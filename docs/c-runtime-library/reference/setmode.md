@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _setmode'
 title: _setmode
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 305e9a247410d762821ed0e3e004505adc1a4034
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146383"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -71,7 +72,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 Funkcja **_setmode** ustawia tryb translacji pliku *, który jest* określony przez *FD*. Przekazywanie **_O_TEXT** jako *tryb* ustawia tekst (jest tłumaczony) tryb. Kombinacje powrotu karetki liniowej (CR-LF) są tłumaczone na pojedynczy znak wysuwu wiersza na wejściu. Znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Przekazywanie **_O_BINARY** ustawia tryb binarny (nieprzetłumaczony), w którym te tłumaczenia są pomijane.
 
-Możesz również przekazać **_O_U16TEXT**, **_O_U8TEXT**lub **_O_WTEXT** , aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
+Możesz również przekazać **_O_U16TEXT**, **_O_U8TEXT** lub **_O_WTEXT** , aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
 
 > [!CAUTION]
 > Tryb Unicode jest przeznaczony dla szerokiej funkcji drukowania (na przykład `wprintf` ) i nie jest obsługiwany w przypadku wąskich funkcji drukowania. Użycie wąskiej funkcji drukowania w strumieniu trybu Unicode wyzwala potwierdzenie.

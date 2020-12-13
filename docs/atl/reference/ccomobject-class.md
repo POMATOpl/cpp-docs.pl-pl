@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CComObject'
 title: Klasa CComObject
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 81246ad8bd6281d0b7578932cd431609a1ec4ac5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 086383172d5bb239bbac8ed90e9118838aea1254
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146526"
 ---
 # <a name="ccomobject-class"></a>Klasa CComObject
 
@@ -55,7 +56,7 @@ Klasa, pochodząca z [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-c
 
 ## <a name="remarks"></a>Uwagi
 
-`CComObject`implementuje [interfejs IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla niezagregowanego obiektu. Jednak wywołania do `QueryInterface` , `AddRef` i `Release` są delegowane do `CComObjectRootEx` .
+`CComObject` implementuje [interfejs IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla niezagregowanego obiektu. Jednak wywołania do `QueryInterface` , `AddRef` i `Release` są delegowane do `CComObjectRootEx` .
 
 Aby uzyskać więcej informacji o używaniu programu `CComObject` , zobacz artykuł [podstawowe elementy ATL com](../../atl/fundamentals-of-atl-com-objects.md).
 
@@ -69,7 +70,7 @@ Aby uzyskać więcej informacji o używaniu programu `CComObject` , zobacz artyk
 
 **Nagłówek:** atlcom. h
 
-## <a name="ccomobjectaddref"></a><a name="addref"></a>CComObject:: AddRef
+## <a name="ccomobjectaddref"></a><a name="addref"></a> CComObject:: AddRef
 
 Zwiększa liczbę odwołań do obiektu.
 
@@ -81,7 +82,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Ta funkcja zwraca nowy przyrostowy licznik odwołań dla obiektu. Ta wartość może być przydatna w przypadku diagnostyki lub testowania.
 
-## <a name="ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject::CComObject
+## <a name="ccomobjectccomobject"></a><a name="ccomobject"></a> CComObject::CComObject
 
 Konstruktor zwiększa liczbę blokad modułu.
 
@@ -100,7 +101,7 @@ Destruktor zmniejsza go.
 
 Jeśli `CComObject` obiekt pochodny został pomyślnie skonstruowany przy użyciu **`new`** operatora, początkowa liczba odwołań wynosi 0. Aby ustawić liczbę odwołań na poprawną wartość (1), należy wywołać funkcję [AddRef](#addref) .
 
-## <a name="ccomobjectccomobject"></a><a name="dtor"></a>CComObject:: ~ CComObject
+## <a name="ccomobjectccomobject"></a><a name="dtor"></a> CComObject:: ~ CComObject
 
 Destruktor.
 
@@ -112,7 +113,7 @@ CComObject();
 
 Zwalnia wszystkie przydzieloną zasoby, wywołuje [FinalRelease](ccomobjectrootex-class.md#finalrelease)i zmniejsza liczbę blokad modułu.
 
-## <a name="ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject:: CreateInstance
+## <a name="ccomobjectcreateinstance"></a><a name="createinstance"></a> CComObject:: CreateInstance
 
 Ta funkcja statyczna pozwala utworzyć nowy obiekt **<CComObject** `Base` **>** bez narzutu na polecenie [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
@@ -141,7 +142,7 @@ Jeśli nie potrzebujesz bezpośredniego dostępu do obiektu, ale nadal chcesz ut
 
 [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]
 
-## <a name="ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject:: QueryInterface
+## <a name="ccomobjectqueryinterface"></a><a name="queryinterface"></a> CComObject:: QueryInterface
 
 Pobiera wskaźnik do żądanego interfejsu.
 
@@ -166,7 +167,7 @@ określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez typ `Q` . 
 
 Standardowa wartość HRESULT.
 
-## <a name="ccomobjectrelease"></a><a name="release"></a>CComObject:: Release
+## <a name="ccomobjectrelease"></a><a name="release"></a> CComObject:: Release
 
 Zmniejsza liczbę odwołań do obiektu.
 
@@ -178,7 +179,7 @@ STDMETHOD_(ULONG, Release)();
 
 Ta funkcja zwraca nową, zmniejszoną liczbę odwołań do obiektu. W kompilacjach debugowania wartość zwracana może być przydatna w przypadku diagnostyki lub testowania. W kompilacjach niedebugowanych `Release` zawsze zwraca wartość 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
 [Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>

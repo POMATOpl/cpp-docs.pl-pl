@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Windows Sockets: przykład gniazd korzystających z archiwów'
 title: 'Windows Sockets: przykład gniazd korzystających z archiwów'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 275a6c274648225fedcec9d42c280f77af68158e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 726df9093f71a7c72fc72794044a417c5425d2a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132929"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: przykład gniazd korzystających z archiwów
 
@@ -53,7 +54,7 @@ Aby uzyskać więcej informacji, zobacz Specyfikacja Windows Sockets: **htonl**,
 
 - [Windows Sockets: Tło](../mfc/windows-sockets-background.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CArchive:: isprzechowywanie](../mfc/reference/carchive-class.md#isstoring)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _spawnv, _wspawnv'
 title: _spawnv, _wspawnv
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-ms.openlocfilehash: ffed211fffc7b994fa04fde7210339b9355197fe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b934929f857694b4e26223a0579d52be3f0ccb68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146370"
 ---
 # <a name="_spawnv-_wspawnv"></a>_spawnv, _wspawnv
 
@@ -94,7 +95,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 Każda z tych funkcji tworzy i uruchamia nowy proces, przekazując tablicę wskaźników do argumentów wiersza polecenia.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *argv* jest wskaźnikiem typu null lub jeśli *argv* wskazuje na wskaźnik o wartości null lub *argv*[0] jest pustym ciągiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL**i zwracają-1. Nie jest duplikowany żaden nowy proces.
+Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *argv* jest wskaźnikiem typu null lub jeśli *argv* wskazuje na wskaźnik o wartości null lub *argv*[0] jest pustym ciągiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają-1. Nie jest duplikowany żaden nowy proces.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

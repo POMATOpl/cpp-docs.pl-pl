@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CHeapPtrElementTraits'
 title: Klasa CHeapPtrElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-ms.openlocfilehash: f09da968b264463eba759372e4e0756397e9978e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7ca3d194a284f06e6b5baa0530cb49bc93d8510a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141612"
 ---
 # <a name="cheapptrelementtraits-class"></a>Klasa CHeapPtrElementTraits
 
-Ta klasa zawiera metody, funkcje statyczne i typedefs przydatne podczas tworzenia kolekcji wskaźników sterty.
+Ta klasa udostępnia metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji wskaźników sterty.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,51 +37,51 @@ class CHeapPtrElementTraits :
 *T*<br/>
 Typ obiektu, który ma być przechowywany w klasie kolekcji.
 
-*Programu przydzielania*<br/>
+*Alokator*<br/>
 Klasa alokacji pamięci do użycia. Wartość domyślna to [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Typ danych do dodania elementów do obiektu klasy kolekcji.|
-|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.|
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Typ danych, który ma być używany do dodawania elementów do obiektu klasy kolekcji.|
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych, który ma być używany do pobierania elementów z obiektu klasy kolekcji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera metody, funkcje statyczne i typedefs do wspomagania tworzenia obiektów klasy kolekcji zawierających wskaźniki sterty. Klasa `CHeapPtrList` wywodzi się od `CHeapPtrElementTraits`.
+Ta klasa udostępnia metody, funkcje statyczne i definicje typów w celu zapewnienia pomocy przy tworzeniu obiektów klasy kolekcji zawierających wskaźniki sterty. Klasa `CHeapPtrList` pochodzi od `CHeapPtrElementTraits` .
 
-Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[CDefaultHashTraits (Niem.](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Baza CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits (3.](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CHeapPtrElementTraits`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
-## <a name="cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE
+## <a name="cheapptrelementtraitsinargtype"></a><a name="inargtype"></a> CHeapPtrElementTraits::INARGTYPE
 
-Typ danych do dodania elementów do obiektu klasy kolekcji.
+Typ danych, który ma być używany do dodawania elementów do obiektu klasy kolekcji.
 
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```
 
-## <a name="cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE
+## <a name="cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a> CHeapPtrElementTraits::OUTARGTYPE
 
-Typ danych do użycia do pobierania elementów z obiektu klasy kolekcji.
+Typ danych, który ma być używany do pobierania elementów z obiektu klasy kolekcji.
 
 ```
 typedef T *& OUTARGTYPE;

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CComEnumOnSTL'
 title: Klasa CComEnumOnSTL
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: b0674d64b471318d972d209373e0d74af0fa77f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ff73796d7e3eefa76cbecdeb6d997bede2d2be5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146669"
 ---
 # <a name="ccomenumonstl-class"></a>Klasa CComEnumOnSTL
 
@@ -49,7 +50,7 @@ Klasa kontenera standardowej biblioteki języka C++.
 
 ## <a name="remarks"></a>Uwagi
 
-`CComEnumOnSTL`definiuje obiekt modułu wyliczającego COM na podstawie standardowej kolekcji biblioteki języka C++. Ta klasa może być używana samodzielnie lub w połączeniu z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typowe kroki dotyczące korzystania z tej klasy przedstawiono poniżej. Aby uzyskać więcej informacji, zobacz [zestawy ATL i moduły wyliczające](../../atl/atl-collections-and-enumerators.md).
+`CComEnumOnSTL` definiuje obiekt modułu wyliczającego COM na podstawie standardowej kolekcji biblioteki języka C++. Ta klasa może być używana samodzielnie lub w połączeniu z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typowe kroki dotyczące korzystania z tej klasy przedstawiono poniżej. Aby uzyskać więcej informacji, zobacz [zestawy ATL i moduły wyliczające](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Aby użyć tej klasy z ICollectionOnSTLImpl:
 
@@ -99,7 +100,7 @@ Ta funkcja szablonu może służyć do implementowania `_NewEnum` Właściwości
 
 Ten kod tworzy **`typedef`** dla `CComEnumOnSTL` , który uwidacznia wektor `CComVariant` s przy użyciu `IEnumVariant` interfejsu. `CVariantCollection`Klasa jest po prostu wyspecjalizowana `CreateSTLEnumerator` do pracy z obiektami modułu wyliczającego tego typu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
 [Przykład ATLCollections: demonstruje ICollectionOnSTLImpl, CComEnumOnSTL i niestandardowe klasy zasad kopiowania](../../overview/visual-cpp-samples.md)<br/>

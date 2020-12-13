@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __stosw'
 title: __stosw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2995276fb255858d6c3dd9f438487726e75fdf1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143692"
 ---
 # <a name="__stosw"></a>__stosw
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję ciągu magazynu (`rep stosw`).
+Generuje instrukcję ciągu magazynu ( `rep stosw` ).
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,7 +49,7 @@ podczas Długość bloku wyrazów do zapisania.
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -82,6 +83,6 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

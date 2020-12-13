@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2261'
 title: Błąd kompilatora C2261
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-ms.openlocfilehash: f23c2a38f8e4d6781af73fb70a25cf4737e2c4e8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c5156a240696f9021613b54cf7013e9372a13b45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134618"
 ---
 # <a name="compiler-error-c2261"></a>Błąd kompilatora C2261
 
@@ -19,9 +20,9 @@ ms.locfileid: "74758778"
 
 Wartość jest nieprawidłowa.
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> jest używany do określania zaprzyjaźnionego zestawu. Na przykład jeśli. dll chce określić plik b. dll jako zestaw zaprzyjaźniony, należy określić (w bibliotece DLL): InternalsVisibleTo ("b"). Środowisko uruchomieniowe umożliwia następnie b. dll dostęp do wszystkich elementów w pliku. dll (z wyjątkiem typów prywatnych).
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> służy do określania zaprzyjaźnionego zestawu. Na przykład jeśli a.dll chce określić b.dll jako zestaw zaprzyjaźniony, należy określić (w a.dll): InternalsVisibleTo ("b"). Środowisko uruchomieniowe umożliwi b.dll dostęp do wszystkich elementów a.dll (z wyjątkiem typów prywatnych).
 
-Aby uzyskać więcej informacji na temat poprawnej składni podczas określania zaprzyjaźnionych zestawów, zobacz [zaprzyjaźnione zestawyC++()](../../dotnet/friend-assemblies-cpp.md).
+Aby uzyskać więcej informacji na temat poprawnej składni podczas określania zaprzyjaźnionych zestawów, zobacz [zaprzyjaźnione zestawy (C++)](../../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="example"></a>Przykład
 

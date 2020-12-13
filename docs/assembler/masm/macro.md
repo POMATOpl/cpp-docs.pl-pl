@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: MACRO'
 title: MACRO
 ms.date: 12/16/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 8eb0afdf73270c3e741f43b2e1fba02fe965846c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5410357e76d28cddd54f3c90a34d3e85b8629143
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129743"
 ---
 # <a name="macro"></a>MACRO
 
@@ -19,8 +20,8 @@ Oznacza blok makra o nazwie *name* i ustanawia symbole zastępcze *parametru* dl
 
 ## <a name="syntax"></a>Składnia
 
-> *Nazwij***makro** ⟦*parametr* ⟦ **: REQ** | : =*default* | *args* **: vararg**⟧... ⟧\
-> *instrukcje*\
+> *Nazwij***makro** ⟦*parametr* ⟦**: REQ** | : =*default*  |  *args* **: vararg**⟧... ⟧\  
+> *zatwierdzeni*\
 ⟦**Goto** :*macrolabelId*⟧ \
 > ⟦**EXITM**⟧ \
 > **ENDM** ⟦*wartość*⟧
@@ -32,6 +33,6 @@ Funkcja makro zwraca *wartość* do instrukcji wywołującej.
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja dyrektyw](directives-reference.md)\
-[Goto (MASM)](goto-masm.md)\
+[GOTO (MASM)](goto-masm.md)\
 [ENDM](endm.md)\
 [MASM BNF, gramatyka](masm-bnf-grammar.md)

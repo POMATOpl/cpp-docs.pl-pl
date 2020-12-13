@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: makra mapy komunikatów (ATL)'
 title: Makra mapy komunikatów (ATL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -37,12 +38,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: 9917f31dbb115552cf9dc9bde24f7b6921611750
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5efe2a6b5aaeb2fbbf3cb5b54ce376ebf00c3b75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139077"
 ---
 # <a name="message-map-macros-atl"></a>Makra mapy komunikatów (ATL)
 

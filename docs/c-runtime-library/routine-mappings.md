@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: mapowaniach procedur'
 title: Mapowanie procedur
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 22febc86d47ca435e9667015f1130b472e515946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444857"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136802"
 ---
 # <a name="routine-mappings"></a>Mapowanie procedur
 
-Mapowania procedury tekstu ogólnego są zdefiniowane w używanie TCHAR. C. `_tccpy` i `_tclen` mapy do funkcji w modelu MBCS; są one mapowane na makra lub funkcje wbudowane w modelach SBCS i Unicode w celu zapewnienia kompletności. Aby uzyskać informacje na temat ogólnej procedury tekstu, zobacz temat pomocy dotyczący odpowiedniej procedury `SBCS`, `_MBCS`lub `_UNICODE`.
+Mapowania procedury tekstu ogólnego są zdefiniowane w używanie TCHAR. H. `_tccpy` i `_tclen` mapuje do funkcji w modelu MBCS; są one mapowane na makra lub funkcje wbudowane w modelach SBCS i Unicode w celu zapewnienia kompletności. Aby uzyskać informacje na temat ogólnej procedury tekstu, zapoznaj się z tematem pomocy dotyczącym odpowiedniej `SBCS` procedury,, `_MBCS` -lub `_UNICODE` .
 
-Bardziej szczegółowe informacje dotyczące poszczególnych procedur wymienionych w lewej kolumnie w poniższej tabeli nie są dostępne w tej dokumentacji. Można jednak łatwo wyszukiwać informacje w odpowiedniej procedurze `SBCS`, `_MBCS`lub `_UNICODE`. Użyj polecenia **Search** w menu **Pomoc** , aby wyszukać każdą procedurę tekstu ogólnego poniżej.
+Bardziej szczegółowe informacje dotyczące poszczególnych procedur wymienionych w lewej kolumnie w poniższej tabeli nie są dostępne w tej dokumentacji. Można jednak łatwo wyszukiwać informacje w odpowiedniej `SBCS` `_MBCS` lub `_UNICODE` powiązanej procedurze. Użyj polecenia **Search** w menu **Pomoc** , aby wyszukać każdą procedurę tekstu ogólnego poniżej.
 
 Aby uzyskać powiązane informacje, zobacz [Mapowanie tekstu ogólnego w używanie TCHAR. H](../text/generic-text-mappings-in-tchar-h.md).
 
@@ -262,8 +263,8 @@ Aby uzyskać powiązane informacje, zobacz [Mapowanie tekstu ogólnego w używan
 
 ## <a name="see-also"></a>Zobacz też
 
-[Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
-[Mapowania typu danych](../c-runtime-library/data-type-mappings.md)<br/>
-[Mapowania zmiennych globalnych i stałych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
-[Przykładowy ogólny program tekstowy](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[Mapowania zwykłego tekstu](../c-runtime-library/using-generic-text-mappings.md)
+[Mapowania tekstu ogólnego](../c-runtime-library/generic-text-mappings.md)<br/>
+[Mapowania typów danych](../c-runtime-library/data-type-mappings.md)<br/>
+[Stałe i globalne mapowania zmiennych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
+[Przykładowy program Generic-Text](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Używanie mapowań Generic-Text](../c-runtime-library/using-generic-text-mappings.md)

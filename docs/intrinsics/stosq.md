@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __stosq'
 title: __stosq
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5fce587c163da18679750c20ec697c489ecf5d90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219952"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143705"
 ---
 # <a name="__stosq"></a>__stosq
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję ciągu magazynu (`rep stosq`).
+Generuje instrukcję ciągu magazynu ( `rep stosq` ).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,9 +47,9 @@ podczas Długość bloku quadwords do zapisania.
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__stosq`|AMD64|
+|`__stosq`|Procesor|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -82,6 +83,6 @@ int main()
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

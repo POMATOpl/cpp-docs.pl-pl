@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wctomb_s, _wctomb_s_l'
 title: wctomb_s, _wctomb_s_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 845bdd5fff74e24226700b1f233ccf1e29afc27e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136828"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -90,8 +91,8 @@ Warunki błędów
 |*mbchar*|*sizeInBytes*|Wartość zwracana|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
 |**NULL**|>0|**EINVAL**|nie zmodyfikowano|
-|ile|>**INT_MAX**|**EINVAL**|nie zmodyfikowano|
-|ile|za mały|**EINVAL**|nie zmodyfikowano|
+|dowolny|>**INT_MAX**|**EINVAL**|nie zmodyfikowano|
+|dowolny|za mały|**EINVAL**|nie zmodyfikowano|
 
 Jeśli wystąpi którykolwiek z powyższych warunków błędu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja **wctomb** zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
@@ -109,8 +110,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wctomb_s**|\<STDLIB. h>|
-|**_wctomb_s_l**|\<STDLIB. h>|
+|**wctomb_s**|\<stdlib.h>|
+|**_wctomb_s_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

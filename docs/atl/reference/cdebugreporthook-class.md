@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDebugReportHook'
 title: Klasa CDebugReportHook
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0b26965114caefb8727a34b99a7cacb30c415aac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141976"
 ---
 # <a name="cdebugreporthook-class"></a>Klasa CDebugReportHook
 
-Ta klasa służy do wysyłania raportów debugowania do nazwanego potoku.
+Użyj tej klasy, aby wysyłać raporty debugowania do nazwanego potoku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,34 +37,34 @@ class CDebugReportHook
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Wywołuje [SetPipeName](#setpipename), [SetTimeout](#settimeout)i [SetHook](#sethook).|
-|[CDebugReportHook::~CDebugReportHook](#dtor)|Wywołuje [CDebugReportHook::RemoveHook](#removehook).|
+|[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Wywołuje metody [Setpipename](#setpipename), [setTimeout](#settimeout)i [sethook](#sethook).|
+|[CDebugReportHook:: ~ CDebugReportHook](#dtor)|Wywołuje [CDebugReportHook:: RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Statyczne) Funkcja raportowania niestandardowego, która jest podłączona do procesu raportowania debugowania w czasie wykonywania języka C.|
-|[CDebugReportHook::Usuń Element](#removehook)|Wywołanie tej metody, aby zatrzymać wysyłanie raportów debugowania do nazwanego potoku i przywrócić poprzedni hak raportu.|
-|[CDebugReportHook::SetHook](#sethook)|Wywołanie tej metody, aby rozpocząć wysyłanie raportów debugowania do nazwanego potoku.|
-|[CDebugReportHook::SetPipeName](#setpipename)|Wywołanie tej metody, aby ustawić maszynę i nazwę potoku, do którego będą wysyłane raporty debugowania.|
-|[CDebugReportHook::SetTimeout](#settimeout)|Wywołanie tej metody, aby ustawić czas w milisekundach, że ta klasa będzie czekać na nazwany potok staną się dostępne.|
+|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|Ruchom Funkcja raportowania niestandardowego, która jest dołączana do procesu raportowania debugowania w czasie wykonywania C.|
+|[CDebugReportHook::RemoveHook](#removehook)|Wywołaj tę metodę, aby zatrzymać wysyłanie raportów debugowania do nazwanego potoku i przywrócić poprzedni punkt zaczepienia raportu.|
+|[CDebugReportHook:: sethook](#sethook)|Wywołaj tę metodę, aby rozpocząć wysyłanie raportów debugowania do nazwanego potoku.|
+|[CDebugReportHook:: setpipename](#setpipename)|Wywołaj tę metodę, aby ustawić maszynę i nazwę potoku, do którego będą wysyłane raporty debugowania.|
+|[CDebugReportHook:: setTimeout](#settimeout)|Wywołaj tę metodę, aby ustawić czas w milisekundach, przez jaki ta klasa będzie oczekiwać na udostępnienie nazwanego potoku.|
 
 ## <a name="remarks"></a>Uwagi
 
-Utwórz wystąpienie tej klasy w kompilacjach debugowania usług lub aplikacji do wysyłania raportów debugowania do nazwanego potoku. Raporty debugowania są generowane przez wywołanie [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) lub przy użyciu otoki dla tej funkcji, takiej jak makra [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) i [ATLASSERT.](debugging-and-error-reporting-macros.md#atlassert)
+Utwórz wystąpienie tej klasy w debugowanych kompilacjach usług lub aplikacji do wysyłania raportów debugowania do nazwanego potoku. Raporty debugowania są generowane przez wywołanie [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) lub użycie otoki dla tej funkcji, takiej jak makra [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) i [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) .
 
-Użycie tej klasy umożliwia interaktywne debugowanie składników działających w nieinterakcyjnych [stacjach okiennych](/windows/win32/winstation/window-stations).
+Użycie tej klasy pozwala interaktywnie debugować składniki działające w nieinteraktywnych [stacjach okna](/windows/win32/winstation/window-stations).
 
-Należy zauważyć, że raporty debugowania są wysyłane przy użyciu kontekstu zabezpieczeń podstawowych wątku. Personifikacja jest tymczasowo wyłączona, dzięki czemu raporty debugowania mogą być wyświetlane w sytuacjach, w których ma miejsce personifikacja użytkowników o niskich uprawnieniach, na przykład w aplikacjach sieci web.
+Należy pamiętać, że raporty debugowania są wysyłane przy użyciu podstawowego kontekstu zabezpieczeń wątku. Personifikacja jest tymczasowo wyłączona, aby raporty debugowania mogły być wyświetlane w sytuacjach, w których odbywa się personifikacja użytkowników z niskimi uprawnieniami, takich jak aplikacje sieci Web.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil.h
+**Nagłówek:** atlutil. h
 
-## <a name="cdebugreporthookcdebugreporthook"></a><a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook
+## <a name="cdebugreporthookcdebugreporthook"></a><a name="cdebugreporthook"></a> CDebugReportHook::CDebugReportHook
 
-Wywołuje [SetPipeName](#setpipename), [SetTimeout](#settimeout)i [SetHook](#sethook).
+Wywołuje metody [Setpipename](#setpipename), [setTimeout](#settimeout)i [sethook](#sethook).
 
 ```
 CDebugReportHook(
@@ -74,26 +75,26 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Parametry
 
-*szMachineName (Nazwa)*<br/>
-Nazwa komputera, do którego należy wysłać dane wyjściowe debugowania. Domyślnie komputer lokalny.
+*szMachineName*<br/>
+Nazwa komputera, do którego powinny zostać wysłane dane wyjściowe debugowania. Domyślnie jest to komputer lokalny.
 
-*szPipeName (Nazwa)*<br/>
-Nazwa nazwanego potoku, do którego należy wysłać dane wyjściowe debugowania.
+*szPipeName*<br/>
+Nazwa potoku, do którego powinny zostać wysłane dane wyjściowe debugowania.
 
 *dwTimeout*<br/>
-Czas w milisekundach, że ta klasa będzie czekać na nazwany potok, aby stać się dostępne.
+Czas (w milisekundach), jaki ta klasa będzie oczekiwać na udostępnienie nazwanego potoku.
 
-## <a name="cdebugreporthookcdebugreporthook"></a><a name="dtor"></a>CDebugReportHook::~CDebugReportHook
+## <a name="cdebugreporthookcdebugreporthook"></a><a name="dtor"></a> CDebugReportHook:: ~ CDebugReportHook
 
-Wywołuje [CDebugReportHook::RemoveHook](#removehook).
+Wywołuje [CDebugReportHook:: RemoveHook](#removehook).
 
 ```
 ~CDebugReportHook() throw();
 ```
 
-## <a name="cdebugreporthookcdebugreporthookproc"></a><a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc
+## <a name="cdebugreporthookcdebugreporthookproc"></a><a name="cdebugreporthookproc"></a> CDebugReportHook::CDebugReportHookProc
 
-Funkcja raportowania niestandardowego, która jest podłączona do procesu raportowania debugowania w czasie wykonywania języka C.
+Funkcja raportowania niestandardowego, która jest dołączana do procesu raportowania debugowania w czasie wykonywania C.
 
 ```
 static int __cdecl CDebugReportHookProc(
@@ -104,28 +105,28 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Parametry
 
-*Typ raportu*<br/>
+*reportType*<br/>
 Typ raportu (_CRT_WARN, _CRT_ERROR lub _CRT_ASSERT).
 
 *Komunikat*<br/>
-Ciąg wiadomości.
+Ciąg komunikatu.
 
-*Returnvalue*<br/>
+*returnValue*<br/>
 Wartość, która powinna zostać zwrócona przez [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość FAŁSZ, jeśli hak obsługuje daną wiadomość całkowicie, dzięki czemu nie jest wymagane dalsze raportowanie. Zwraca wartość `_CrtDbgReport` PRAWDA, jeśli wiadomość powinna być zgłaszana w normalny sposób.
+Zwraca wartość FALSE, jeśli punkt zaczepienia obsługuje komunikat w całości, dzięki czemu nie jest wymagane dalsze raportowanie. Zwraca wartość TRUE, jeśli `_CrtDbgReport` komunikat powinien być raportowany w normalny sposób.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja raportowania próbuje otworzyć nazwany potok i komunikować się z procesem na drugim końcu. Jeśli potok jest zajęty, funkcja raportowania będzie czekać, aż potok jest wolny lub upłynie limit czasu. Limit czasu można ustawić przez konstruktora lub wywołanie [CDebugReportHook::SetTimeout](#settimeout).
+Funkcja raportowania próbuje otworzyć nazwany potok i komunikować się z procesem na drugim końcu. Jeśli potok jest zajęty, funkcja raportowania będzie czekać, aż potok zostanie zwolniony, lub limit czasu wygaśnie. Limit czasu może być ustawiony przez konstruktora lub wywołanie [CDebugReportHook:: setTimeout](#settimeout).
 
-Kod w tej funkcji jest wykonywany w podstawowym kontekście zabezpieczeń wątku wywołującego, czyli personifikacja jest wyłączona na czas trwania tej funkcji.
+Kod w tej funkcji jest wykonywany w podstawowym kontekście zabezpieczeń wątku wywołującego, czyli Personifikacja jest wyłączona przez czas trwania tej funkcji.
 
-## <a name="cdebugreporthookremovehook"></a><a name="removehook"></a>CDebugReportHook::Usuń Element
+## <a name="cdebugreporthookremovehook"></a><a name="removehook"></a> CDebugReportHook::RemoveHook
 
-Wywołanie tej metody, aby zatrzymać wysyłanie raportów debugowania do nazwanego potoku i przywrócić poprzedni hak raportu.
+Wywołaj tę metodę, aby zatrzymać wysyłanie raportów debugowania do nazwanego potoku i przywrócić poprzedni punkt zaczepienia raportu.
 
 ```cpp
 void RemoveHook() throw();
@@ -133,11 +134,11 @@ void RemoveHook() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje [_CrtSetReportHook2,](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) aby przywrócić poprzedni hak raportu.
+Wywołuje [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) , aby przywrócić poprzedni hak raportu.
 
-## <a name="cdebugreporthooksethook"></a><a name="sethook"></a>CDebugReportHook::SetHook
+## <a name="cdebugreporthooksethook"></a><a name="sethook"></a> CDebugReportHook:: sethook
 
-Wywołanie tej metody, aby rozpocząć wysyłanie raportów debugowania do nazwanego potoku.
+Wywołaj tę metodę, aby rozpocząć wysyłanie raportów debugowania do nazwanego potoku.
 
 ```cpp
 void SetHook() throw();
@@ -145,11 +146,11 @@ void SetHook() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje [_CrtSetReportHook2,](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) aby raporty debugowania kierowane za pośrednictwem [CDebugReportHookProc](#cdebugreporthookproc) do nazwanego potoku. Ta klasa śledzi poprzedni hak raportu, dzięki czemu można go przywrócić, gdy [removehook](#removehook) jest wywoływana.
+Wywołania [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) , aby raporty debugowania były kierowane przez [CDebugReportHookProc](#cdebugreporthookproc) do nazwanego potoku. Ta klasa śledzi poprzedni punkt zaczepienia raportu, aby można go było przywrócić po wywołaniu [RemoveHook](#removehook) .
 
-## <a name="cdebugreporthooksetpipename"></a><a name="setpipename"></a>CDebugReportHook::SetPipeName
+## <a name="cdebugreporthooksetpipename"></a><a name="setpipename"></a> CDebugReportHook:: setpipename
 
-Wywołanie tej metody, aby ustawić maszynę i nazwę potoku, do którego będą wysyłane raporty debugowania.
+Wywołaj tę metodę, aby ustawić maszynę i nazwę potoku, do którego będą wysyłane raporty debugowania.
 
 ```
 BOOL SetPipeName(
@@ -159,19 +160,19 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Parametry
 
-*szMachineName (Nazwa)*<br/>
-Nazwa komputera, do którego należy wysłać dane wyjściowe debugowania.
+*szMachineName*<br/>
+Nazwa komputera, do którego powinny zostać wysłane dane wyjściowe debugowania.
 
-*szPipeName (Nazwa)*<br/>
-Nazwa nazwanego potoku, do którego należy wysłać dane wyjściowe debugowania.
+*szPipeName*<br/>
+Nazwa potoku, do którego powinny zostać wysłane dane wyjściowe debugowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
-## <a name="cdebugreporthooksettimeout"></a><a name="settimeout"></a>CDebugReportHook::SetTimeout
+## <a name="cdebugreporthooksettimeout"></a><a name="settimeout"></a> CDebugReportHook:: setTimeout
 
-Wywołanie tej metody, aby ustawić czas w milisekundach, że ta klasa będzie czekać na nazwany potok staną się dostępne.
+Wywołaj tę metodę, aby ustawić czas w milisekundach, przez jaki ta klasa będzie oczekiwać na udostępnienie nazwanego potoku.
 
 ```cpp
 void SetTimeout(DWORD dwTimeout);
@@ -180,7 +181,7 @@ void SetTimeout(DWORD dwTimeout);
 ### <a name="parameters"></a>Parametry
 
 *dwTimeout*<br/>
-Czas w milisekundach, że ta klasa będzie czekać na nazwany potok, aby stać się dostępne.
+Czas (w milisekundach), jaki ta klasa będzie oczekiwać na udostępnienie nazwanego potoku.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,5 +1,6 @@
 ---
-title: IOleInPlaCeObjectWindowlessImpl Klasa
+description: 'Dowiedz się więcej na temat: Klasa IOleInPlaceObjectWindowlessImpl'
+title: Klasa IOleInPlaceObjectWindowlessImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: b0438692161f38445eb7cbed54edcc8a0ba8c0d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 927a973565949bbfc6331e4b4e62d7cb270c2107
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139389"
 ---
-# <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaCeObjectWindowlessImpl Klasa
+# <a name="ioleinplaceobjectwindowlessimpl-class"></a>Klasa IOleInPlaceObjectWindowlessImpl
 
-Ta klasa `IUnknown` implementuje i udostępnia metody, które umożliwiają formant bez okien do odbierania komunikatów okna i do udziału w operacjach przeciągania i upuszczania.
+Ta klasa implementuje `IUnknown` i udostępnia metody, które umożliwiają kontrolowanie bezokienkowe odbierania komunikatów okna i uczestnictwo w operacjach przeciągania i upuszczania.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,7 +45,7 @@ class IOleInPlaceObjectWindowlessImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Twoja klasa, pochodząca od `IOleInPlaceObjectWindowlessImpl`.
+Klasa, która pochodzi od `IOleInPlaceObjectWindowlessImpl` .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -52,20 +53,20 @@ Twoja klasa, pochodząca od `IOleInPlaceObjectWindowlessImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IOleInPlaCeObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Umożliwia pomoc kontekstową. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleInPlaCeObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Dostarcza `IDropTarget` interfejs dla obiektu aktywnego w miejscu, bez okien, który obsługuje przeciąganie i upuszczanie. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleInPlaCeObjectWindowlessImpl::GetWindow](#getwindow)|Pobiera dojście do okna.|
-|[IOleInPlaCeObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Dezaktywuje aktywną kontrolę w miejscu.|
-|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Wysyła wiadomość z kontenera do formantu bez okien, który jest aktywny w miejscu.|
-|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Ponownie aktywuje wcześniej dezaktywowany formant. Implementacja ATL zwraca E_NOTIMPL.|
-|[IOleInPlaCeObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Wskazuje, jaka część formantu w miejscu jest widoczna.|
-|[IOleInPlaCeObjectWindowlessImpl::UIDeactivate](#uideactivate)|Dezaktywuje i usuwa interfejs użytkownika obsługujący aktywację w miejscu.|
+|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Włącza pomoc kontekstową. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Dostarcza `IDropTarget` interfejs dla aktywnego, bezokienkowego obiektu, który obsługuje przeciąganie i upuszczanie. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl:: GetWindow](#getwindow)|Pobiera uchwyt okna.|
+|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Dezaktywuje aktywny formant w miejscu.|
+|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Wysyła komunikat z kontenera do kontrolki bez okna, która jest aktywna.|
+|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Uaktywnia wcześniej zdezaktywowaną kontrolkę. Implementacja ATL zwraca E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Wskazuje, która część kontrolki miejscowej jest widoczna.|
+|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Dezaktywuje i usuwa interfejs użytkownika obsługujący aktywację w miejscu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Interfejs [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) zarządza reaktywacją i dezaktywacją formantów w miejscu i określa, jaka część formantu powinna być widoczna. Interfejs [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) umożliwia formant bez okien do odbierania komunikatów okna i do udziału w operacjach przeciągania i upuszczania. Klasa `IOleInPlaceObjectWindowlessImpl` zapewnia domyślną `IOleInPlaceObject` `IOleInPlaceObjectWindowless` implementację `IUnknown` i implementuje przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
+Interfejs [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) zarządza ponowną aktywacją i dezaktywacją kontrolek miejscowych i określa, jaka część kontrolki powinna być widoczna. Interfejs [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) umożliwia kontrolowanie bezokienkowe odbierania komunikatów okna i uczestnictwo w operacjach przeciągania i upuszczania. Klasa `IOleInPlaceObjectWindowlessImpl` udostępnia domyślną implementację `IOleInPlaceObject` i `IOleInPlaceObjectWindowless` i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Podobne artykuły** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), Tworzenie projektu [ATL](../../atl/reference/creating-an-atl-project.md)
+ [Samouczki dotyczące biblioteki](../../atl/active-template-library-atl-tutorial.md)ATL, [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -75,9 +76,9 @@ Interfejs [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobj
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-## <a name="ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaCeObjectWindowlessImpl::ContextSensitiveHelp
+## <a name="ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a> IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
 
 Zwraca E_NOTIMPL.
 
@@ -87,9 +88,9 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleWindow::ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) w windows SDK.
+Zobacz [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) w Windows SDK.
 
-## <a name="ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a>IOleInPlaCeObjectWindowlessImpl::GetDropTarget
+## <a name="ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a> IOleInPlaceObjectWindowlessImpl::GetDropTarget
 
 Zwraca E_NOTIMPL.
 
@@ -99,11 +100,11 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleInPlaceObjectWindowless::GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) w windows SDK.
+Zobacz [IOleInPlaceObjectWindowless:: GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) w Windows SDK.
 
-## <a name="ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a>IOleInPlaCeObjectWindowlessImpl::GetWindow
+## <a name="ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a> IOleInPlaceObjectWindowlessImpl:: GetWindow
 
-Kontener wywołuje tę funkcję, aby uzyskać dojście okna formantu.
+Kontener wywołuje tę funkcję, aby uzyskać uchwyt okna kontrolki.
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -111,13 +112,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Uwagi
 
-Niektóre kontenery nie będzie działać z formantem, który został bez okien, nawet jeśli jest obecnie windowed. W implementacji ATL, jeśli element członkowski `m_bWasOnceWindowless` danych klasy kontrolnej ma wartość TRUE, funkcja zwraca E_FAIL. W przeciwnym razie jeśli *phwnd* nie `GetWindow` jest null, ustawia \* *phwnd* do elementu członkowskiego `m_hWnd` danych klasy kontrolnej i zwraca S_OK.
+Niektóre kontenery nie będą współdziałać z kontrolką, która jest bez okna, nawet jeśli jest w tym oknie. W implementacji ATL, jeśli element członkowski danych klasy kontroli `m_bWasOnceWindowless` ma wartość true, funkcja zwraca E_FAIL. W przeciwnym razie, jeśli *phwnd* nie ma wartości null, `GetWindow` ustawia \* *phwnd* dla elementu członkowskiego danych klasy kontrolki `m_hWnd` i zwraca S_OK.
 
-Zobacz [IOleWindow::GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) w windows SDK.
+Zobacz [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) w Windows SDK.
 
-## <a name="ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a>IOleInPlaCeObjectWindowlessImpl::InPlaceDeactivate
+## <a name="ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a> IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
 
-Wywoływane przez kontener, aby dezaktywować formant aktywny w miejscu.
+Wywoływane przez kontener, aby dezaktywować aktywny formant w miejscu.
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
@@ -125,13 +126,13 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wykonuje pełną lub częściową dezaktywację w zależności od stanu formantu. W razie potrzeby interfejs użytkownika formantu jest dezaktywowany, a okno formantu, jeśli istnieje, zostanie zniszczone. Kontener jest powiadamiany, że formant nie jest już aktywny w miejscu. Interfejs `IOleInPlaceUIWindow` używany przez kontener do negocjowania menu i miejsca na granicy jest zwolniony.
+Ta metoda przeprowadza pełną lub częściową dezaktywację w zależności od stanu formantu. W razie potrzeby interfejs użytkownika kontrolki jest dezaktywowany, a okno kontrolki, jeśli istnieje, jest niszczone. Kontener zostaje powiadomiony o tym, że formant nie jest już aktywny. `IOleInPlaceUIWindow`Interfejs używany przez kontener do negocjowania menu i miejsca obramowania jest publikowany.
 
-Zobacz [IOleInPlaceObject::InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) w usłudze Windows SDK.
+Zobacz [IOleInPlaceObject:: InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) w Windows SDK.
 
-## <a name="ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+## <a name="ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a> IOleInPlaceObjectWindowlessImpl::OnWindowMessage
 
-Wysyła wiadomość z kontenera do formantu bez okien, który jest aktywny w miejscu.
+Wysyła komunikat z kontenera do bezokienkowego formantu, który jest aktywny.
 
 ```
 HRESULT OnWindowMessage(
@@ -143,9 +144,9 @@ HRESULT OnWindowMessage(
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleInPlaceObjectWindowless::OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) w windows SDK.
+Zobacz [IOleInPlaceObjectWindowless:: OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) w Windows SDK.
 
-## <a name="ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+## <a name="ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a> IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
 
 Zwraca E_NOTIMPL.
 
@@ -155,11 +156,11 @@ HRESULT ReactivateAndUndo();
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IOleInPlaceObject::ReactivateAndUndo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) w windows SDK.
+Zobacz [IOleInPlaceObject:: ReactivateAndUndo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) w Windows SDK.
 
-## <a name="ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a>IOleInPlaCeObjectWindowlessImpl::SetObjectRects
+## <a name="ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a> IOleInPlaceObjectWindowlessImpl::SetObjectRects
 
-Wywoływany przez kontener, aby poinformować formant, że jego rozmiar i/lub położenie uległy zmianie.
+Wywoływane przez kontener, aby poinformować formant o zmianie jego rozmiaru i/lub położenia.
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
@@ -167,13 +168,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 
 ### <a name="remarks"></a>Uwagi
 
-Aktualizuje element `m_rcPos` członkowski danych formantu i wyświetlacz sterowania. Wyświetlana jest tylko część formantu przecina, która przecina obszar klipu. Jeśli ekran formantu został wcześniej przycięty, ale przycinanie zostało usunięte, tę funkcję można wywołać, aby ponownie wyrywać pełny widok formantu.
+Aktualizuje `m_rcPos` element członkowski danych kontrolki i kontrolkę wyświetlania. Wyświetlana jest tylko część kontrolki, która przecina się z regionem klipu. Jeśli ekran kontrolki został poprzednio przycięty, ale wycink został usunięty, ta funkcja może zostać wywołana w celu ponownego narysowania pełnego widoku formantu.
 
-Zobacz [IOleInPlaceObject::SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) w zestawie Windows SDK.
+Zobacz [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) w Windows SDK.
 
-## <a name="ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a>IOleInPlaCeObjectWindowlessImpl::UIDeactivate
+## <a name="ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a> IOleInPlaceObjectWindowlessImpl::UIDeactivate
 
-Dezaktywuje i usuwa interfejs użytkownika formantu, który obsługuje aktywację w miejscu.
+Dezaktywuje i usuwa interfejs użytkownika kontrolki, który obsługuje aktywację w miejscu.
 
 ```
 HRESULT UIDeactivate();
@@ -181,9 +182,9 @@ HRESULT UIDeactivate();
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia element członkowski `m_bUIActive` danych klasy kontrolnej na FAŁSZ. Implementacja atl tej funkcji zawsze zwraca S_OK.
+Ustawia element członkowski danych klasy kontrolki `m_bUIActive` na wartość false. Implementacja ATL tej funkcji zawsze zwraca S_OK.
 
-Zobacz [IOleInPlaceObject::UIDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) w usłudze Windows SDK.
+Zobacz [IOleInPlaceObject:: UIDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) w Windows SDK.
 
 ## <a name="see-also"></a>Zobacz też
 

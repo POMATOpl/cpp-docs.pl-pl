@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 1)'
 title: 'Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 1)'
 ms.date: 09/09/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 2abcb509a3d7a0045ad33bedccdd61fd1e0e58f8
-ms.sourcegitcommit: d8f65b1ddc9ea32e877c67e2c8f0ea7501183fc7
+ms.openlocfilehash: bb60e535031670eddc84e7170431ad6622d434b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93291078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142977"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 1)
 
@@ -50,7 +51,7 @@ Aby skonwertować aplikację, która obsługuje menu w aplikacji, która obsług
 
 1. W oknie Bazgroły. cpp Sprawdź, czy `CScribbleApp::InitInstance` zawiera wywołanie [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Dodaj następujący kod do pliku *PCH. h* ( *stdafx. h* w programie Visual Studio 2017 i jego starszych):
+1. Dodaj następujący kod do pliku *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i jego starszych):
 
     ```cpp
     #include <afxcontrolbars.h>
@@ -171,7 +172,7 @@ Wstążka składa się z przycisku **aplikacji** , który jest dużym przyciskie
 
 1. W widoku Projekt kliknij przycisk **aplikacja** , aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **obraz** z `IDB_RIBBON_MAIN` , **Monituj** do `File` , **klawisze** do `f` , **duże obrazy** do `IDB_RIBBON_FILELARGE` i **małe obrazy** `IDB_RIBBON_FILESMALL` .
 
-1. Poniższe modyfikacje tworzą menu, które pojawiają się, gdy użytkownik kliknie przycisk **aplikacji** . Kliknij przycisk wielokropka ( **...** ) obok **pozycji główne elementy** , aby otworzyć **Edytor elementów**.
+1. Poniższe modyfikacje tworzą menu, które pojawiają się, gdy użytkownik kliknie przycisk **aplikacji** . Kliknij przycisk wielokropka (**...**) obok **pozycji główne elementy** , aby otworzyć **Edytor elementów**.
 
    1. Po wybraniu **przycisku** typ **elementu** kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `&New` , **Identyfikator** na `ID_FILE_NEW` , **obraz** do `0` , **duży obraz** `0` .
 
@@ -187,9 +188,9 @@ Wstążka składa się z przycisku **aplikacji** , który jest dużym przyciskie
 
 1. Poniższe modyfikacje tworzą podmenu w ramach przycisku **Drukuj** utworzonego w poprzednim kroku.
 
-   1. Kliknij przycisk **Drukuj** , Zmień typ **elementu** na **etykieta** , a następnie kliknij przycisk **Wstaw**. Zmień **napis** na `Preview and print the document` .
+   1. Kliknij przycisk **Drukuj** , Zmień typ **elementu** na **etykieta**, a następnie kliknij przycisk **Wstaw**. Zmień **napis** na `Preview and print the document` .
 
-   1. Kliknij przycisk **Drukuj** , Zmień typ **elementu** na **przycisk** , a następnie kliknij przycisk **Wstaw**. Zmień **napis** na `&Print` , **Identyfikator** na `ID_FILE_PRINT` , **obraz** do `4` i **obraz duże** do `4` .
+   1. Kliknij przycisk **Drukuj** , Zmień typ **elementu** na **przycisk**, a następnie kliknij przycisk **Wstaw**. Zmień **napis** na `&Print` , **Identyfikator** na `ID_FILE_PRINT` , **obraz** do `4` i **obraz duże** do `4` .
 
    1. Kliknij przycisk **Drukuj** , a następnie kliknij przycisk **Wstaw** , aby dodać przycisk. Zmień **napis** na `&Quick Print` , **Identyfikator** na `ID_FILE_PRINT_DIRECT` , **obraz** do `7` i **obraz duże** do `7` .
 
@@ -200,7 +201,7 @@ Wstążka składa się z przycisku **aplikacji** , który jest dużym przyciskie
 1. Poniższe modyfikacje tworzą przycisk zakończenia, który pojawia się w dolnej części menu przycisku **aplikacji** .
 
    1. Wybierz kartę **Widok zasobów** w **Eksplorator rozwiązań**.
-   1. W oknie **Właściwości** kliknij przycisk wielokropka ( **...** ) obok **przycisku** , aby otworzyć **Edytor elementów**.
+   1. W oknie **Właściwości** kliknij przycisk wielokropka (**...**) obok **przycisku** , aby otworzyć **Edytor elementów**.
 
    1. Po wybraniu **przycisku** typ **elementu** kliknij przycisk **Dodaj** , aby dodać przycisk. Zmień **napis** na `E&xit` , **Identyfikator** na `ID_APP_EXIT` , **obraz** do `8` .
 
@@ -241,11 +242,11 @@ Po utworzeniu przycisku **aplikacji** możesz dodać elementy do wstążki.
 
 1. Program Bazgroły wymaga tylko jednej kategorii. W widoku Projekt w **przyborniku** kliknij dwukrotnie **kategorię Kategoria** , aby dodać ją i wyświetlić jej właściwości. Zmień wartości właściwości w następujący sposób: **Caption** do `&Home` , **duże obrazy** do `IDB_RIBBON_HOMELARGE` , do **małych obrazów** `IDB_RIBBON_HOMESMALL` .
 
-1. Każda kategoria wstążki jest zorganizowana w nazwane panele. Każdy panel zawiera zestaw kontrolek, które ukończą powiązane operacje. Ta kategoria ma jeden panel. Kliknij **panel** , a następnie zmień **napis** na `Edit` .
+1. Każda kategoria wstążki jest zorganizowana w nazwane panele. Każdy panel zawiera zestaw kontrolek, które ukończą powiązane operacje. Ta kategoria ma jeden panel. Kliknij **panel**, a następnie zmień **napis** na `Edit` .
 
-1. Do panelu **Edycja** Dodaj przycisk odpowiedzialny za wyczyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w `IDR_SCRIBBTYPE` menu zasób. Określ `Clear All` jako tekst przycisku i indeks mapy bitowej, która zdobi przycisk. Otwórz **Przybornik** , a następnie przeciągnij **przycisk** do panelu **Edycja** . Kliknij przycisk, a następnie zmień **podpis** na `Clear All` , **Identyfikator** do, `ID_EDIT_CLEAR_ALL` **indeks obrazu** , na który ma `0` być **indeks dużego obrazu** `0` .
+1. Do panelu **Edycja** Dodaj przycisk odpowiedzialny za wyczyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w `IDR_SCRIBBTYPE` menu zasób. Określ `Clear All` jako tekst przycisku i indeks mapy bitowej, która zdobi przycisk. Otwórz **Przybornik**, a następnie przeciągnij **przycisk** do panelu **Edycja** . Kliknij przycisk, a następnie zmień **podpis** na `Clear All` , **Identyfikator** do, `ID_EDIT_CLEAR_ALL` **indeks obrazu** , na który ma `0` być **indeks dużego obrazu** `0` .
 
-1. Zapisz zmiany, a następnie Skompiluj i uruchom aplikację. Aplikacja bazgrołów powinna być wyświetlana, a w górnej części okna powinna znajdować się pasek wstążki, a nie pasek menu. Pasek wstążki powinien mieć jedną kategorię, **Home** i **Home** powinien mieć jeden panel, **Edytuj**. Dodane przyciski wstążki powinny być skojarzone z istniejącymi programami obsługi zdarzeń, a przyciski **Otwórz** , **Zamknij** , **Zapisz** , **Drukuj** i **Wyczyść wszystkie** powinny działać zgodnie z oczekiwaniami.
+1. Zapisz zmiany, a następnie Skompiluj i uruchom aplikację. Aplikacja bazgrołów powinna być wyświetlana, a w górnej części okna powinna znajdować się pasek wstążki, a nie pasek menu. Pasek wstążki powinien mieć jedną kategorię, **Home** i **Home** powinien mieć jeden panel, **Edytuj**. Dodane przyciski wstążki powinny być skojarzone z istniejącymi programami obsługi zdarzeń, a przyciski **Otwórz**, **Zamknij**, **Zapisz**, **Drukuj** i **Wyczyść wszystkie** powinny działać zgodnie z oczekiwaniami.
 
 ## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a> Ustawianie wyglądu aplikacji
 
@@ -267,7 +268,7 @@ Po utworzeniu przycisku **aplikacji** możesz dodać elementy do wstążki.
 
 Zmodyfikowano przykład klasycznego bazgrołów 1,0 MFC, aby użyć **projektanta wstążki**. Teraz przejdź do [części 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wskazówki](../mfc/walkthroughs-mfc.md)<br/>
 [Przewodnik: aktualizowanie aplikacji bazgrołów MFC (część 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
