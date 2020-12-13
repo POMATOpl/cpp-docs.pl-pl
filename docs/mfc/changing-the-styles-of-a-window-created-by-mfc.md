@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: zmiana stylów okna utworzonego przez MFC'
 title: Zmienianie stylów okna utworzonego przez MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: f3fd9f83112737e944d83cf00da685d81fe8b2a7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1025bf1e207a885c30105c56ebb16419e7f82fe1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339751"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Zmienianie stylów okna utworzonego przez MFC
 
 W swojej wersji `WinMain` funkcji MFC rejestruje kilka klas standardowego okna. Ponieważ zwykle nie edytujesz biblioteki MFC `WinMain` , ta funkcja nie daje możliwości zmiany domyślnych stylów okna MFC. W tym artykule wyjaśniono, jak można zmienić style takich zarejestrowanej klasy okna w istniejącej aplikacji.
 
-## <a name="changing-styles-in-a-new-mfc-application"></a><a name="_core_changing_styles_in_a_new_mfc_application"></a>Zmienianie stylów w nowej aplikacji MFC
+## <a name="changing-styles-in-a-new-mfc-application"></a><a name="_core_changing_styles_in_a_new_mfc_application"></a> Zmienianie stylów w nowej aplikacji MFC
 
 Jeśli używasz Visual C++ 2,0 lub nowszej, możesz zmienić domyślne style okna w Kreatorze aplikacji podczas tworzenia aplikacji. Na stronie funkcje interfejsu użytkownika Kreatora aplikacji można zmienić style dla głównego okna ramki i okien podrzędnych MDI. Dla dowolnego typu okna można określić grubość ramki (grubą lub cienką) oraz dowolne z następujących elementów:
 
@@ -42,11 +43,11 @@ Jeśli używasz Visual C++ 2,0 lub nowszej, możesz zmienić domyślne style okn
 
 W przypadku okien głównych ramek można także określić, czy okno ma menu systemowe. W przypadku okien podrzędnych MDI można określić, czy okno obsługuje okienka rozdzielacza.
 
-## <a name="changing-styles-in-an-existing-application"></a><a name="_core_changing_styles_in_an_existing_application"></a>Zmienianie stylów w istniejącej aplikacji
+## <a name="changing-styles-in-an-existing-application"></a><a name="_core_changing_styles_in_an_existing_application"></a> Zmienianie stylów w istniejącej aplikacji
 
 Jeśli zmieniasz atrybuty okna w istniejącej aplikacji, w zamian postępuj zgodnie z instrukcjami w dalszej części tego artykułu.
 
-Aby zmienić domyślne atrybuty okna używane przez aplikację platformy utworzoną za pomocą Kreatora aplikacji, Przesłoń wirtualną funkcję elementu członkowskiego okna [PreCreateWindow](reference/cwnd-class.md#precreatewindow) . `PreCreateWindow`zezwala aplikacji na dostęp do procesu tworzenia zwykle zarządzanego wewnętrznie przez klasę [CDocTemplate](reference/cdoctemplate-class.md) . Struktura wywołuje `PreCreateWindow` przed utworzeniem okna. Modyfikując [strukturę](/windows/win32/api/winuser/ns-winuser-createstructw) isstructure przekazaną do `PreCreateWindow` , aplikacja może zmienić atrybuty używane do tworzenia okna. Na przykład, aby upewnić się, że okno nie używa podpisu, należy użyć następującej operacji bitowej:
+Aby zmienić domyślne atrybuty okna używane przez aplikację platformy utworzoną za pomocą Kreatora aplikacji, Przesłoń wirtualną funkcję elementu członkowskiego okna [PreCreateWindow](reference/cwnd-class.md#precreatewindow) . `PreCreateWindow` zezwala aplikacji na dostęp do procesu tworzenia zwykle zarządzanego wewnętrznie przez klasę [CDocTemplate](reference/cdoctemplate-class.md) . Struktura wywołuje `PreCreateWindow` przed utworzeniem okna. Modyfikując [strukturę](/windows/win32/api/winuser/ns-winuser-createstructw) isstructure przekazaną do `PreCreateWindow` , aplikacja może zmienić atrybuty używane do tworzenia okna. Na przykład, aby upewnić się, że okno nie używa podpisu, należy użyć następującej operacji bitowej:
 
 [!code-cpp[NVC_MFCDocView#15](codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
@@ -54,19 +55,19 @@ Przykładowa aplikacja [CTRLBARS](../overview/visual-cpp-samples.md) ilustruje t
 
 W poniższej dyskusji omówiono przypadek SDI i [przypadek MDI](#_core_the_mdi_case).
 
-## <a name="the-sdi-case"></a><a name="_core_the_sdi_case"></a>Przypadek SDI
+## <a name="the-sdi-case"></a><a name="_core_the_sdi_case"></a> Przypadek SDI
 
-W aplikacji interfejsu pojedynczego dokumentu (SDI) domyślny styl okna w strukturze jest kombinacją **WS_OVERLAPPEDWINDOW** i **FWS_ADDTOTITLE** style. **FWS_ADDTOTITLE** jest stylem specyficznym dla MFC, który nakazuje platformie dodanie tytułu dokumentu do podpisu okna. Aby zmienić atrybuty okna w aplikacji SDI, Przesłoń `PreCreateWindow` funkcję w klasie pochodnej od `CFrameWnd` (która nazwa Kreatora aplikacji `CMainFrame` ). Przykład:
+W aplikacji interfejsu pojedynczego dokumentu (SDI) domyślny styl okna w strukturze jest kombinacją **WS_OVERLAPPEDWINDOW** i **FWS_ADDTOTITLE** style. **FWS_ADDTOTITLE** jest stylem specyficznym dla MFC, który nakazuje platformie dodanie tytułu dokumentu do podpisu okna. Aby zmienić atrybuty okna w aplikacji SDI, Przesłoń `PreCreateWindow` funkcję w klasie pochodnej od `CFrameWnd` (która nazwa Kreatora aplikacji `CMainFrame` ). Na przykład:
 
 [!code-cpp[NVC_MFCDocViewSDI#11](codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]
 
 Ten kod tworzy okno głównej ramki bez minimalizowania i maksymalizowania przycisków i bez obramowania o zmiennym rozmiarze. Okno jest początkowo wyśrodkowane na ekranie.
 
-## <a name="the-mdi-case"></a><a name="_core_the_mdi_case"></a>Przypadek MDI
+## <a name="the-mdi-case"></a><a name="_core_the_mdi_case"></a> Przypadek MDI
 
 Aby zmienić styl okna podrzędnego w aplikacji interfejsu wielu dokumentów (MDI), wymagana jest nieco więcej pracy. Domyślnie aplikacja MDI utworzona za pomocą Kreatora aplikacji używa domyślnej klasy [CMDIChildWnd](reference/cmdichildwnd-class.md) zdefiniowanej w MFC. Aby zmienić styl okna podrzędnego MDI, należy utworzyć nową klasę z `CMDIChildWnd` i zastąpić wszystkie odwołania do `CMDIChildWnd` w projekcie z odwołaniami do nowej klasy. Najprawdopodobniej tylko odwołanie do aplikacji znajduje się `CMDIChildWnd` w `InitInstance` funkcji składowej aplikacji.
 
-Domyślny styl okna używany w aplikacji MDI jest kombinacją stylów **WS_CHILD**, **WS_OVERLAPPEDWINDOW**i **FWS_ADDTOTITLE** . Aby zmienić atrybuty okna dla okien podrzędnych aplikacji MDI, Zastąp funkcję [PreCreateWindow](reference/cwnd-class.md#precreatewindow) w klasie pochodnej `CMDIChildWnd` . Przykład:
+Domyślny styl okna używany w aplikacji MDI jest kombinacją stylów **WS_CHILD**, **WS_OVERLAPPEDWINDOW** i **FWS_ADDTOTITLE** . Aby zmienić atrybuty okna dla okien podrzędnych aplikacji MDI, Zastąp funkcję [PreCreateWindow](reference/cwnd-class.md#precreatewindow) w klasie pochodnej `CMDIChildWnd` . Na przykład:
 
 [!code-cpp[NVC_MFCDocView#16](codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]
 

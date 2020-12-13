@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy piecewise_linear_distribution
 title: piecewise_linear_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 57c6e19bc56068c98f6c85978c7af68e56cb4f2a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8ba2a0707599c8510488290c5d0c227d464588ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340739"
 ---
 # <a name="piecewise_linear_distribution-class"></a>piecewise_linear_distribution — Klasa
 

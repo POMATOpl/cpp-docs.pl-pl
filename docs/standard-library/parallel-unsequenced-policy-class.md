@@ -1,18 +1,19 @@
 ---
-title: parallel_unsequenced_policy klasy
+description: Dowiedz się więcej na temat klasy parallel_unsequenced_policy
+title: Klasa parallel_unsequenced_policy
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::parallel_unsequenced_policy
-ms.openlocfilehash: 92b4e3ce3743fdd3d5ba112a333b2306829b95d4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e39edc0979bf1374bc6092dbadb032811180f668
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340791"
 ---
-# <a name="parallelunsequencedpolicy-class"></a>parallel_unsequenced_policy klasy
+# <a name="parallel_unsequenced_policy-class"></a>Klasa parallel_unsequenced_policy
 
-Używany jako unikatowy typ, do odróżniania przeciążenie algorytmu równoległego i wskazywać, że algorytmu równoległego wykonywania może być zrównoleglona i zwektoryzowana.
+Używany jako unikatowy typ niejednoznacznego przeciążenia algorytmu równoległego i wskazujący, że wykonywanie algorytmu równoległego może być równoległe i wektorowe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,4 +23,4 @@ class execution::parallel_unsequenced_policy;
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas wykonywania algorytmu równoległego za pomocą `execution::parallel_unsequenced_policy` zasad, jeśli wywołanie funkcji dostępu do elementu kończy się za pośrednictwem nieprzechwycony wyjątek `terminate()` nosi nazwę.
+W trakcie wykonywania algorytmu równoległego przy użyciu `execution::parallel_unsequenced_policy` zasad, jeśli wywołanie funkcji dostępu do elementu kończy się za pośrednictwem nieprzechwyconego wyjątku, należy `terminate()` wywołać.

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Instalowanie i Konfigurowanie narzędzi do kompilowania przy użyciu systemu iOS'
 title: Instalowanie i konfigurowanie narzędzi do kompilacji przy użyciu systemu iOS
 ms.date: 10/17/2019
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
-ms.openlocfilehash: 26dea080f3d3f05885f348dcaf1c66a0db2a36b5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e6d91dc679d86085c1886cab0d330a4fafb3c617
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339465"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Instalowanie i konfigurowanie narzędzi do kompilacji przy użyciu systemu iOS
 
@@ -274,6 +275,6 @@ Jeśli `ideviceinstaller` błędy nie mają dostępu do folderu `/var/db/lockdow
 
 Następnie sprawdź ponownie, jeśli `ideviceinstaller` program może komunikować się z urządzeniem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Instalowanie środowiska opracowywania aplikacji mobilnych na wiele platform w języku C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)

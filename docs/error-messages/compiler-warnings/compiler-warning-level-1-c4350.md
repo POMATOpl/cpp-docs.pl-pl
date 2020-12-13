@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4350'
 title: Ostrzeżenie kompilatora (poziom 1) C4350
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4350
 ms.assetid: 4cc8ed67-64c4-4da5-a7a5-a639232baa23
-ms.openlocfilehash: 890ecd4fcec1212fa04a58b0eaab8c2eb4206763
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0626c9c8d0196396c0d13a0697df2dfc64061db0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339998"
 ---
 # <a name="compiler-warning-level-1-c4350"></a>Ostrzeżenie kompilatora (poziom 1) C4350
 
 zmiana zachowania: wywołano element członkowski 'członek1' zamiast 'członek2'
 
-Element rvalue nie może być powiązany z odwołaniem niestałym. W wersjach programu Visual C++ przed visual Studio 2003 można było powiązać rvalue z odwołaniem niestałym w ramach inicjalizacji bezpośredniej. Ten kod zawiera teraz ostrzeżenie.
+Element rvalue nie może być powiązany z odwołaniem niestałym. W wersjach Visual C++ przed Visual Studio 2003 można było powiązać rvalue z odwołaniem niestałym w ramach inicjalizacji bezpośredniej. Ten kod zawiera teraz ostrzeżenie.
 
 W celu zapewnienia zgodności z poprzednimi wersjami nadal można powiązać rvalues z odwołaniami niebędącymi const, ale standardowe konwersje są preferowane wszędzie tam, gdzie to możliwe.
 

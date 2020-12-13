@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: zakresy typów danych'
 title: Zakresy typu danych
 ms.date: 05/28/2020
 helpviewer_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: f7658d0c0a61180193de268414e214595198e8fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8d4ae1b6aae3a4dbf12180248df6000085103efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339530"
 ---
 # <a name="data-type-ranges"></a>Zakresy typu danych
 
@@ -78,8 +79,8 @@ Zakresy, które są określone w poniższej tabeli, obejmują włącznie.
 |**`unsigned __int32`**|4|**`unsigned`**, **`unsigned int`**|od 0 do 4 294 967 295|
 |**`__int64`**|8|**`long long`**, **`signed long long`**|-zakresu od do 9 223 372 036 854 775 807|
 |**`unsigned __int64`**|8|**`unsigned long long`**|od 0 do 18446744073709551615 są|
-|**`bool`**|1|brak|**`false`** oraz**`true`**|
-|**`char`**|1|brak|-128 do 127 domyślnie<br /><br /> od 0 do 255 w przypadku skompilowania przy użyciu[`/J`](../build/reference/j-default-char-type-is-unsigned.md)|
+|**`bool`**|1|brak|**`false`** oraz **`true`**|
+|**`char`**|1|brak|-128 do 127 domyślnie<br /><br /> od 0 do 255 w przypadku skompilowania przy użyciu [`/J`](../build/reference/j-default-char-type-is-unsigned.md)|
 |**`signed char`**|1|brak|-128 do 127|
 |**`unsigned char`**|1|brak|od 0 do 255|
 |**`short`**|2|**`short int`**, **`signed short int`**|-32 768 do 32 767|
@@ -91,7 +92,7 @@ Zakresy, które są określone w poniższej tabeli, obejmują włącznie.
 |**`enum`**|różni się|brak| |
 |**`float`**|4|brak|3.4 e +/-38 (7 cyfr)|
 |**`double`**|8|brak|1.7 e +/-308 (15 cyfr)|
-|**`long double`**|tak samo jak**`double`**|brak|Tak samo jak**`double`**|
+|**`long double`**|tak samo jak **`double`**|brak|Tak samo jak **`double`**|
 |**`wchar_t`**|2|**`__wchar_t`**|od 0 do 65 535|
 
 W zależności od tego, jak jest używany, zmienna wyznacza typ dwubajtowy **`__wchar_t`** lub typ znaku wieloznacznego. Użyj `L` prefiksu przed znakiem lub stałą ciągu, aby oznaczyć stałą typu znaku dwubajtowego.
@@ -106,7 +107,7 @@ Aby uzyskać więcej informacji na temat ograniczeń rozmiarów poszczególnych 
 
 Zakres wyliczeniowych typów różni się w zależności od kontekstu języka i określonych flag kompilatora. Aby uzyskać więcej informacji, zobacz [deklaracje](../c-language/c-enumeration-declarations.md) i [wyliczenia](../cpp/enumerations-cpp.md)języka C.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [Typy wbudowane](../cpp/fundamental-types-cpp.md)

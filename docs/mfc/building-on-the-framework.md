@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kompilowanie na platformie'
 title: Opieranie się na strukturze
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 2c171b223892c8bca1b32e18c57c09027558c192
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dd9423bb8cf80463631d6a39212db42ab94a67ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339790"
 ---
 # <a name="building-on-the-framework"></a>Opieranie się na strukturze
 
@@ -22,14 +23,14 @@ W pokrewnych tematach Poniższa tabela zawiera opis ogólnej sekwencji operacji 
 
 - [Sekwencja tworzenia aplikacji przy użyciu struktury](sequence-of-operations-for-building-mfc-applications.md)
 
-- [Sekwencja operacji przy tworzeniu aplikacji OLE](sequence-of-operations-for-creating-ole-applications.md)
+- [Sekwencja operacji na potrzeby tworzenia aplikacji OLE](sequence-of-operations-for-creating-ole-applications.md)
 
-- [Sekwencja operacji przy tworzeniu kontrolek ActiveX](sequence-of-operations-for-creating-activex-controls.md)
+- [Sekwencja operacji do tworzenia kontrolek ActiveX](sequence-of-operations-for-creating-activex-controls.md)
 
-- [Sekwencja operacji przy tworzeniu aplikacji bazy danych](sequence-of-operations-for-creating-database-applications.md)
+- [Sekwencja operacji związanych z tworzeniem aplikacji bazy danych](sequence-of-operations-for-creating-database-applications.md)
 
 W większości przypadków można wykonać te tabele jako sekwencję kroków tworzenia aplikacji MFC, chociaż niektóre kroki są alternatywnymi opcjami. Na przykład większość aplikacji używa jednego typu klasy widoku spośród kilku dostępnych typów.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)

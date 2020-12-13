@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: decltype (C++)'
 title: decltype (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e581436a43fc9632961fcb888dfb0b23974fc2df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339504"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -78,7 +79,7 @@ Wprowadzenie **`decltype`** specyfikatora typu umożliwia deweloperowi uzyskanie
 
 Następujący prototyp ilustruje składnię alternatywnej deklaracji funkcji. Należy zauważyć, **`const`** że **`volatile`** kwalifikatory i i **`throw`** [Specyfikacja wyjątku](../cpp/exception-specifications-throw-cpp.md) są opcjonalne. Symbol zastępczy *function_body* reprezentuje instrukcję złożoną, która określa działanie funkcji. Jako najlepsze rozwiązanie do pisania, symbol zastępczy *wyrażenia* w **`decltype`** instrukcji powinien pasować do wyrażenia określonego przez **`return`** instrukcję, jeśli istnieje, w *function_body*.
 
-**`auto`***function_name* **`(`** wybór wyrażenia<sub>opt opt</sub> wyboru dla *parametrów* **`)`** **`const`** <sub>opt</sub> **`volatile`** <sub>opt</sub> **`->`** **`decltype(`** *expression* **`)`** **`noexcept`** <sub>opt</sub> **`{`** *function_body***`};`**
+**`auto`***function_name* **`(`** wybór wyrażenia <sub>opt opt</sub> wyboru dla *parametrów* **`)`** **`const`** <sub></sub> **`volatile`** <sub></sub> **`->`** **`decltype(`**  **`)`** **`noexcept`** <sub></sub> **`{`** *function_body***`};`**
 
 W poniższym przykładzie kodu, opóźniony typ zwracany `myFunc` funkcji szablonu jest określany przez typy `t` `u` argumentów i. Najlepszym rozwiązaniem w zakresie kodowania jest użycie przez przykład odwołań rvalue i `forward` szablonu funkcji, który obsługuje *doskonałe przekazywanie dalej*. Aby uzyskać więcej informacji, zobacz [rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 

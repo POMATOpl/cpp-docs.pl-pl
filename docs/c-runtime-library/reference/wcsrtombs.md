@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wcsrtombs'
 title: wcsrtombs
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: cad31f28c5542a96eae9f144344882b71806052a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 34fabe44c0e239eba4201b180df026655a4277f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340515"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -77,11 +78,11 @@ Zwraca liczbę pomyślnie przekonwertowanych bajtów, bez uwzględnienia końcow
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **wcsrtombs** konwertuje ciąg znaków dwubajtowych, zaczynając od określonego stanu konwersji zawartego w *mbstate*, z wartości pośrednich wskazanych w *wcstr*w adresie *mbstr*. Konwersja będzie kontynuowana dla każdego znaku do: po napotkaniu znaku dwubajtowego zakończenia o wartości null, gdy zostanie napotkany nieodpowiadający znak lub gdy następny znak spowodowałoby przekroczenie limitu zawartego w *Count*. Jeśli **wcsrtombs** napotka znak dwubajtowy o wartości null (L ' \ 0 ') przed lub w przypadku *występowania* , konwertuje go na 8-bitowy 0 i zatrzyma.
+Funkcja **wcsrtombs** konwertuje ciąg znaków dwubajtowych, zaczynając od określonego stanu konwersji zawartego w *mbstate*, z wartości pośrednich wskazanych w *wcstr* w adresie *mbstr*. Konwersja będzie kontynuowana dla każdego znaku do: po napotkaniu znaku dwubajtowego zakończenia o wartości null, gdy zostanie napotkany nieodpowiadający znak lub gdy następny znak spowodowałoby przekroczenie limitu zawartego w *Count*. Jeśli **wcsrtombs** napotka znak dwubajtowy o wartości null (L ' \ 0 ') przed lub w przypadku *występowania* , konwertuje go na 8-bitowy 0 i zatrzyma.
 
 W ten sposób ciąg znaków wielobajtowych w *mbstr* jest zakończony wartością null tylko wtedy, gdy **wcsrtombs** napotka znak dwuznakowy o wartości null podczas konwersji. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie **wcsrtombs** jest niezdefiniowane. **wcsrtombs** ma wpływ na kategorię LC_TYPE bieżących ustawień regionalnych.
 
-Funkcja **wcsrtombs** różni się od [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) według jej ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie.  Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcsnlen**, jeśli zamiast **wcstombs**użyto kolejnego wywołania **wcsrtombs** .
+Funkcja **wcsrtombs** różni się od [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) według jej ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie.  Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcsnlen**, jeśli zamiast **wcstombs** użyto kolejnego wywołania **wcsrtombs** .
 
 Jeśli argument *mbstr* ma **wartość null**, funkcja **wcsrtombs** zwraca wymagany rozmiar w bajtach ciągu docelowego. Jeśli *mbstate* ma wartość null, używany jest wewnętrzny stan konwersji **mbstate_t** . Jeśli *WCHAR* sekwencji znaków nie ma odpowiadającej reprezentacji znaków wielobajtowych, zwracana jest wartość-1, a **errno** jest ustawiona na **EILSEQ**.
 
@@ -143,13 +144,13 @@ The string was successfuly converted.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wcsrtombs**|\<WCHAR. h>|
+|**wcsrtombs**|\<wchar.h>|
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa kolejki'
 title: queue — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2b30e7a564fa1889d9adc2bb99e48ec1a623c25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340622"
 ---
 # <a name="queue-class"></a>queue — Klasa
 
@@ -80,7 +81,7 @@ Istnieją trzy typy adapterów kontenerów zdefiniowane przez standardową bibli
 |[size_type](#size_type)|Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w `queue` .|
 |[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `queue` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -524,7 +525,7 @@ The value_type is AnInt = 69
 The element at the front of the queue is 69.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

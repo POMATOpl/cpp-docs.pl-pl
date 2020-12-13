@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strdec, _wcsdec, _mbsdec _mbsdec_l'
 title: _strdec, _wcsdec, _mbsdec, _mbsdec_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: c3988beac1a3c1b3d7fa831405208ddc564456a3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 85001258baea9e7c6509bfdd33a74f9a0eccd80f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914496"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340557"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -95,7 +96,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**i **_wcsdec** każdy zwraca wskaźnik do znaku, który bezpośrednio poprzedza *bieżące*; **_mbsdec** zwraca **wartość null** , jeśli wartość parametru *Start* jest większa lub równa wartości *Current*. **_tcsdec** mapuje do jednej z tych funkcji, a jej wartość zwracana zależy od mapowania.
+**_mbsdec**, **_mbsdec_l**, **_strdec** i **_wcsdec** każdy zwraca wskaźnik do znaku, który bezpośrednio poprzedza *bieżące*; **_mbsdec** zwraca **wartość null** , jeśli wartość parametru *Start* jest większa lub równa wartości *Current*. **_tcsdec** mapuje do jednej z tych funkcji, a jej wartość zwracana zależy od mapowania.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -118,16 +119,16 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 **_strdec** i **_wcsdec** są wersjami jednobajtowymi znaków i **_mbsdec** i **_mbsdec_l**. **_strdec** i **_wcsdec** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób.
 
-Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
+Aby uzyskać więcej informacji, zobacz [Używanie mapowań Generic-Text](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_mbsdec**|\<mbstring. h>|\<Mbctype. h>|
-|**_mbsdec_l**|\<mbstring. h>|\<Mbctype. h>|
-|**_strdec**|\<Używanie TCHAR. h>||
-|**_wcsdec**|\<Używanie TCHAR. h>||
+|**_mbsdec**|\<mbstring.h>|\<mbctype.h>|
+|**_mbsdec_l**|\<mbstring.h>|\<mbctype.h>|
+|**_strdec**|\<tchar.h>||
+|**_wcsdec**|\<tchar.h>||
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

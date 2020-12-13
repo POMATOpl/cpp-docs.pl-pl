@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki edycji wzbogaconej bezprawnie'
 title: Formanty edycji wzbogaconej nieograniczone od dołu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], bottomless
 - CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
-ms.openlocfilehash: 567bb5b7f2eb2c203b40b9f1f6add82f5451d672
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ad3f78fb4a5e172c16faf3421b6a9da91d422888
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339816"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Formanty edycji wzbogaconej nieograniczone od dołu
 
@@ -19,7 +20,7 @@ W razie potrzeby aplikacja może zmienić rozmiar kontrolki edycji wzbogaconej (
 
 Podczas przetwarzania komunikatu powiadomienia **EN_REQUESTRESIZE** aplikacja powinna zmienić rozmiar kontrolki na wymiary w określonej strukturze [REQRESIZE](/windows/win32/api/richedit/ns-richedit-reqresize) . Aplikacja może również przenieść wszystkie informacje blisko kontrolki, aby dopasować wysokość kontrolki. Aby zmienić rozmiar kontrolki, można użyć `CWnd` funkcji [SetWindowPos](reference/cwnd-class.md#setwindowpos).
 
-Można wymusić, aby za pomocą funkcji składowej REQUESTRESIZE **EN_REQUESTRESIZE** wysyłać komunikat z powiadomieniem [RequestResize](reference/cricheditctrl-class.md#requestresize) o nieprawidłowej edycji. Ten komunikat może być przydatny w programie obsługi [OnSize](reference/cwnd-class.md#onsize) .
+Można wymusić, aby za pomocą funkcji składowej REQUESTRESIZE **EN_REQUESTRESIZE** wysyłać komunikat z powiadomieniem [](reference/cricheditctrl-class.md#requestresize) o nieprawidłowej edycji. Ten komunikat może być przydatny w programie obsługi [OnSize](reference/cwnd-class.md#onsize) .
 
 Aby otrzymywać **EN_REQUESTRESIZE** komunikatów powiadomień, należy włączyć powiadomienie przy użyciu `SetEventMask` funkcji składowej.
 

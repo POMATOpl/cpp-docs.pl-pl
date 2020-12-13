@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCSpinButtonCtrl'
 title: Klasa CMFCSpinButtonCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e9abc94247416704ab801beeaa1953c4cceb46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339640"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Klasa CMFCSpinButtonCtrl
 
-Klasa `CMFCSpinButtonCtrl` obsługuje menedżera wizualnego, który rysuje formant przycisku pokrętła.
+`CMFCSpinButtonCtrl`Klasa obsługuje Menedżera wizualizacji, który rysuje kontrolkę przycisku pokrętła.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,44 +32,44 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Domyślny konstruktor.|
-|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destruktora.|
+|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Konstruktor domyślny.|
+|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Odświeża bieżącą kontrolę przycisku pokrętła.|
+|[CMFCSpinButtonCtrl:: OnDraw](#ondraw)|Odmaluje bieżącą kontrolkę przycisk pokrętła.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć menedżera wizualnego, aby narysować formant przycisku `CSpinButtonCtrl` pokrętła `CMFCSpinButtonCtrl` w aplikacji, zastąp wszystkie wystąpienia klasy klasą.
+Aby użyć Menedżera wizualizacji do rysowania kontrolki przycisku pokrętła w aplikacji, Zastąp wszystkie wystąpienia klasy klasą `CSpinButtonCtrl` `CMFCSpinButtonCtrl` .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCSpinButtonCtrl` utworzyć obiekt `Create` klasy i użyć jej metody.
+Poniższy przykład ilustruje sposób tworzenia obiektu `CMFCSpinButtonCtrl` klasy i używania jej `Create` metody.
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[CSpinButtonCtrl (Polski)](../../mfc/reference/cspinbuttonctrl-class.md)
+[Korzystanie CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)
 
 [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxspinbuttonctrl.h
+**Nagłówek:** afxspinbuttonctrl. h
 
-## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a> CMFCSpinButtonCtrl:: OnDraw
 
-Odświeża bieżącą kontrolę przycisku pokrętła.
+Odmaluje bieżącą kontrolkę przycisk pokrętła.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -76,12 +77,12 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje `CMFCSpinButtonCtrl::OnPaint` metodę do obsługi [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) wiadomości i tej `CMFCSpinButtonCtrl::OnDraw` metody z kolei wywołuje tę metodę. Zastąp tę metodę, aby dostosować sposób, w jaki struktura rysuje formant przycisku pokrętła.
+Struktura wywołuje metodę w `CMFCSpinButtonCtrl::OnPaint` celu obsługi komunikatu [CWnd:: OnPaint](../../mfc/reference/cwnd-class.md#onpaint) i ta metoda z kolei wywołuje tę `CMFCSpinButtonCtrl::OnDraw` metodę. Zastąp tę metodę, aby dostosować sposób rysowania kontrolki przycisku pokrętła przez strukturę.
 
 ## <a name="see-also"></a>Zobacz też
 

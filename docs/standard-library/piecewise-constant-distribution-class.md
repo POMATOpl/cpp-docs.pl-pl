@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy piecewise_constant_distribution
 title: piecewise_constant_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 59911d8a61a05de9ec92f4152b2835da3cf82f7f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 92558f407073dab2d9cc5e8dd788ab3fba8998fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340765"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution — Klasa
 

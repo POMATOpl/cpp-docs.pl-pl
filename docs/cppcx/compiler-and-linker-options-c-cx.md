@@ -1,46 +1,47 @@
 ---
+description: 'Dowiedz się więcej o: opcje kompilatora i konsolidatora (C++/CX)'
 title: Opcje kompilatora i konsolidatora (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66f3cf5a08d7ca0a07b5708495f76902c2286436
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340427"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opcje kompilatora i konsolidatora (C++/CX)
 
-Zmienna środowiskowa C++/CX — opcje kompilatora i opcje konsolidatora, które obsługują tworzenie aplikacji dla środowiska wykonawczego Windows.
+Zmienna środowiskowa, opcje kompilatora C++/CX i Opcje konsolidatora obsługują Kompilowanie aplikacji dla środowisko wykonawcze systemu Windows.
 
 ## <a name="library-path"></a>Ścieżka biblioteki
 
-Zmienna środowiskowa % LIBPATH % ścieżka domyślna do wyszukiwania plików winmd.
+Zmienna środowiskowa% LIBPATH% określa domyślną ścieżkę do wyszukiwania plików WinMD.
 
 ## <a name="compiler-options"></a>Opcje kompilatora
 
 |Opcja|Opis|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Włącza rozszerzenia językowe środowiska wykonawczego Windows.<br /><br /> `nostdlib` Parametr zapobiega przy użyciu ścieżki wyszukiwania standardowych, wstępnie zdefiniowanych można znaleźć zestawu i winmd przez kompilator.<br /><br /> **/ZW** — opcja kompilatora niejawnie określa następujące opcje kompilatora:<br /><br />- **/Fi** vccorlib.h, co zmusza włączenia vccorlib.h pliku nagłówkowego, który definiuje wiele typów, które są wymagane przez kompilator.<br />- [/Fu](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, co zmusza włączenia Windows.winmd plik metadanych, które są dostarczane przez system operacyjny, a następnie definiuje wiele typów środowiska wykonawczego Windows.<br />- **/Fu** Platform.winmd, co zmusza włączenia Platform.winmd pliku metadanych, które są dostarczane przez kompilator, a następnie definiuje większość typów w przestrzeni nazw z rodziny platformy.|
-|[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Dodaje katalog, który jest określony przez *dir* parametru do ścieżki wyszukiwania, której kompilator używa do wyszukiwania plików zestawu i winmd.|
-|**/Fu** *pliku*|Wymusza umieszczenie określonym module lub plik winmd. Oznacza to, nie trzeba określać `#using` *pliku* w kodzie źródłowym. Kompilator automatycznie wymusza umieszczenie swój własny plik metadanych Windows Platform.winmd.|
-|/D "WINAPI_FAMILY=2"|Tworzy definicję, która umożliwia korzystanie z podzestawu Win32 SDK, który jest zgodny ze środowiskiem uruchomieniowym Windows.|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW: nostdlib|Włącza rozszerzenia języka środowisko wykonawcze systemu Windows.<br /><br /> `nostdlib`Parametr uniemożliwia kompilatorowi użycie standardowej, wstępnie zdefiniowanej ścieżki wyszukiwania do znajdowania zestawów i plików WinMD.<br /><br /> Opcja kompilatora **/zw** niejawnie określa następujące opcje kompilatora:<br /><br />- **/Fi** vccorlib. h, który wymusza dołączenie pliku nagłówkowego vccorlib. h, który definiuje wiele typów, które są wymagane przez kompilator.<br />- [/Fu](../build/reference/fu-name-forced-hash-using-file.md) Windows. winmd, który wymusza dołączenie pliku metadanych Windows. winmd dostarczonego przez system operacyjny i definiuje wiele typów w środowisko wykonawcze systemu Windows.<br />- **/Fu** Obiekt platform. winmd, który wymusza dołączenie pliku metadanych platformy. winmd, który jest dostarczany przez kompilator, i definiuje większość typów w rodzinie przestrzeni nazw.|
+|[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Dodaje katalog, który jest określany przez parametr *dir* , do ścieżki wyszukiwania używanej przez kompilator do znajdowania plików Assembly i WinMD.|
+|*Plik* /Fu  |Wymusza dołączenie określonego modułu lub pliku winmd. Oznacza to, że nie musisz określać `#using` *pliku* w kodzie źródłowym. Kompilator automatycznie wymusza włączenie własnego pliku metadanych systemu Windows, platform. winmd.|
+|/D "WINAPI_FAMILY = 2"|Tworzy definicję, która umożliwia korzystanie z podzestawu Win32 SDK, który jest zgodny z środowisko wykonawcze systemu Windows.|
 
 ## <a name="linker-options"></a>Opcje konsolidatora
 
 |Opcja|Opis|
 |------------|-----------------|
-|/APPCONTAINER[:NO]|Oznacza plik wykonywalny jako możliwy do uruchomienia w kontenerze appcontainer (tylko).|
-|/WINMD[:{NO&#124;ONLY}]|Generuje plik winmd i skojarzony plik binarny. Ta opcja muszą być przekazywane do konsolidatora do winmd maszynowych.<br /><br /> **NIE**— nie emituj pliku winmd, ale emitują pliku binarnego.<br /><br /> **TYLKO**— emituje pliku winmd, ale nie emituj pliku binarnego.|
-|/ WINMDFILE:*nazwy pliku*|Nazwa pliku winmd do emitowania zamiast domyślnej nazwy pliku winmd. Jeśli nie określono wiele nazw plików w wierszu polecenia, ostatnia nazwa jest używana.|
-|/WINMDDELAYSIGN[:NO]|Częściowo podpisuje plik winmd i umieszcza klucz publiczny w pliku binarnym.<br /><br /> **NIE**—(Default) nie podpisania pliku winmd.<br /><br /> / WINMDDELAYSIGN nie ma wpływu, chyba że /WINMDKEYFILE lub /WINMDKEYCONTAINER jest także określona.|
-|/ WINMDKEYCONTAINER:*nazwy*|Określa kontener klucza do podpisywania zestawu. *Nazwa* parametr odnosi się do kontenera kluczy, który służy do podpisania pliku metadanych.|
-|/ WINMDKEYFILE:*nazwy pliku*|Określa klucz lub parę kluczy do podpisywania zestawu. *Filename* parametr odnosi się do klucza, który służy do podpisania pliku metadanych.|
+|/APPCONTAINER [: NO]|Oznacza plik wykonywalny jako możliwy do uruchomienia w kontenerze aplikacji (tylko).|
+|/WINMD [: {NO&#124;}]|Emituje plik. winmd i skojarzony plik binarny. Ta opcja musi być przeniesiona do konsolidatora, aby można było wyemitować. winmd.<br /><br /> **Nie**— nie emituje pliku winmd, ale emituje plik binarny.<br /><br /> **Tylko**— emituje plik. winmd, ale nie emituje pliku binarnego.|
+|/WINMDFILE:*filename*|Nazwa pliku winmd do emisji, a nie domyślna nazwa pliku winmd. Jeśli w wierszu polecenia określono wiele nazw plików, używana jest ostatnia nazwa.|
+|/WINMDDELAYSIGN [: NO]|Częściowo podpisuje plik WinMD i umieszcza klucz publiczny w pliku binarnym.<br /><br /> **Nie**— (domyślnie) nie podpisuje pliku winmd.<br /><br /> /WINMDDELAYSIGN nie działa, chyba że określono również/WINMDKEYFILE lub/WINMDKEYCONTAINER.|
+|/WINMDKEYCONTAINER:*Nazwa*|Określa kontener klucza do podpisania zestawu. Parametr *name* odnosi się do kontenera kluczy, który służy do podpisywania pliku metadanych.|
+|/WINMDKEYFILE:*filename*|Określa klucz lub parę kluczy, aby podpisać zestaw. Parametr *filename* odpowiada kluczowi użytemu do podpisania pliku metadanych.|
 
 ### <a name="remarks"></a>Uwagi
 
-Kiedy używasz **/ZW**, kompilator automatycznie łączy się z wersją biblioteki DLL środowiska uruchomieniowego C (CRT). Łączenie wersji biblioteki statycznej nie jest dozwolone, a każde użycie funkcji CRT, które nie są dozwolone w aplikacji platformy uniwersalnej Windows spowoduje błąd w czasie kompilacji.
+Gdy korzystasz z **/zw**, kompilator automatycznie łączy się z wersją dll środowiska uruchomieniowego języka C (CRT). Łączenie z wersją biblioteki statycznej jest niedozwolone, a wszelkie użycie funkcji CRT, które nie są dozwolone w aplikacji platforma uniwersalna systemu Windows, spowoduje błąd czasu kompilacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie aplikacji i bibliotek](../cppcx/building-apps-and-libraries-c-cx.md)
+[Kompilowanie aplikacji i bibliotek](../cppcx/building-apps-and-libraries-c-cx.md)

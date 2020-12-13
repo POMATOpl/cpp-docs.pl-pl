@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: deklaracje i definicje (C++)'
 title: Deklaracje i definicje (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: 688c1960e37fe74edecabebc4cb8090af9d0dd58
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00d86e4df70e150a2e9f2417050b47b943a054ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339517"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklaracje i definicje (C++)
 
@@ -44,13 +45,13 @@ W wierszu 5 `main` Funkcja jest zadeklarowana. W wierszu 7 **`const`** zmienna o
 
 W wierszu 9 `obj` jest zadeklarowana zmienna o nazwie typu `C` . Jednakże ta deklaracja zgłasza błąd, ponieważ `C` nie jest zadeklarowana do późniejszego w programie i nie jest zadeklarowana dalej. Aby naprawić ten błąd, można przenieść całą *definicję* wcześniej lub w dalszej części `C` deklaracji do `main` przodu. To zachowanie różni się od innych języków, takich jak C#, w których funkcje i klasy mogą być używane przed ich punktem deklaracji w pliku źródłowym.
 
-W wierszu 10 `str` zadeklarowana jest zmienna o nazwie typu `std::string` . Nazwa `std::string` jest widoczna, ponieważ została wprowadzona w `string` [pliku nagłówkowym](header-files-cpp.md) , który jest scalany z plikiem źródłowym w wierszu 1. `std`jest przestrzenią nazw, w której `string` zadeklarowana jest Klasa.
+W wierszu 10 `str` zadeklarowana jest zmienna o nazwie typu `std::string` . Nazwa `std::string` jest widoczna, ponieważ została wprowadzona w `string` [pliku nagłówkowym](header-files-cpp.md) , który jest scalany z plikiem źródłowym w wierszu 1. `std` jest przestrzenią nazw, w której `string` zadeklarowana jest Klasa.
 
 W wierszu 11 zostanie zgłoszony błąd, ponieważ nazwa nie została `j` zadeklarowana. Deklaracja musi dostarczyć typ, w przeciwieństwie do innych języków, takich jak javaScript. W wierszu 12 **`auto`** słowo kluczowe jest używane, co informuje kompilator do wywnioskowania typu w `k` oparciu o wartość, z którą jest inicjowany. Kompilator w tym przypadku wybiera **`int`** Typ.  
 
 ## <a name="declaration-scope"></a>Zakres deklaracji
 
-Nazwa wprowadzona przez deklarację jest prawidłowa w *zakresie* , w którym występuje deklaracja. W poprzednim przykładzie zmienne, które są zadeklarowane wewnątrz funkcji, `main` są *zmiennymi lokalnymi*. Można zadeklarować inną zmienną o nazwie `i` poza główną, w *zakresie globalnym*i być całkowicie oddzielną jednostką. Takie Duplikowanie nazw może jednak prowadzić do pomyłki i błędów programisty i należy je unikać. W wierszu 21 Klasa `C` jest zadeklarowana w zakresie przestrzeni nazw `N` . Użycie przestrzeni nazw pozwala uniknąć *kolizji nazw*. Większość nazw standardowej biblioteki języka C++ jest zadeklarowana w `std` przestrzeni nazw. Aby uzyskać więcej informacji o tym, jak reguły zakresu współdziałają z deklaracjami, zobacz [SCOPE](../cpp/scope-visual-cpp.md).
+Nazwa wprowadzona przez deklarację jest prawidłowa w *zakresie* , w którym występuje deklaracja. W poprzednim przykładzie zmienne, które są zadeklarowane wewnątrz funkcji, `main` są *zmiennymi lokalnymi*. Można zadeklarować inną zmienną o nazwie `i` poza główną, w *zakresie globalnym* i być całkowicie oddzielną jednostką. Takie Duplikowanie nazw może jednak prowadzić do pomyłki i błędów programisty i należy je unikać. W wierszu 21 Klasa `C` jest zadeklarowana w zakresie przestrzeni nazw `N` . Użycie przestrzeni nazw pozwala uniknąć *kolizji nazw*. Większość nazw standardowej biblioteki języka C++ jest zadeklarowana w `std` przestrzeni nazw. Aby uzyskać więcej informacji o tym, jak reguły zakresu współdziałają z deklaracjami, zobacz [SCOPE](../cpp/scope-visual-cpp.md).
 
 ## <a name="definitions"></a>Definicje
 
@@ -102,11 +103,11 @@ Program w języku C++ może zawierać więcej niż jedną [jednostkę kompilacji
 [`extern`](extern-cpp.md)<br/>
 [Inicjatory](initializers.md)<br/>
 [Aliasy i definicje typów](aliases-and-typedefs-cpp.md)<br/>
-[`using`oświadczeń](using-declaration.md)<br/>
+[`using` oświadczeń](using-declaration.md)<br/>
 [`volatile`](volatile-cpp.md)<br/>
 [`decltype`](decltype-cpp.md)<br/>
 [Atrybuty w języku C++](attributes.md)<br/>
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)<br/>

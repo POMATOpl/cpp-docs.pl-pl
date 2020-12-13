@@ -1,18 +1,19 @@
 ---
-title: parallel_policy klasy
+description: Dowiedz się więcej na temat klasy parallel_policy
+title: Klasa parallel_policy
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::parallel_policy
-ms.openlocfilehash: 7bb2b095a50e664dfc585e0bd4aaa608a6ad8e95
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1cead0bcc44256bf7d41d061d592849a7411b057
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268043"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340804"
 ---
-# <a name="parallelpolicy-class"></a>parallel_policy klasy
+# <a name="parallel_policy-class"></a>Klasa parallel_policy
 
-Używany jako unikatowy typ, do odróżniania przeciążenie algorytmu równoległego i wskazują, że wykonywanie algorytmu równoległego może odbywać się równolegle.
+Używany jako unikatowy typ niejednoznacznego przeciążenia algorytmu równoległego i wskazujący, że wykonywanie algorytmu równoległego może być równoległe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -22,4 +23,4 @@ class execution::parallel_policy;
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas wykonywania algorytmu równoległego za pomocą `execution::parallel_policy` zasad, jeśli wywołanie funkcji dostępu do elementu kończy się za pośrednictwem nieprzechwycony wyjątek `terminate()` nosi nazwę.
+W trakcie wykonywania algorytmu równoległego przy użyciu `execution::parallel_policy` zasad, jeśli wywołanie funkcji dostępu do elementu kończy się za pośrednictwem nieprzechwyconego wyjątku, należy `terminate()` wywołać.

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy overflow_error
 title: overflow_error — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - overflow_error class
 ms.assetid: bae7128d-e36b-4a45-84f1-2f89da441d20
-ms.openlocfilehash: b0bc3fc01dced3daf68c0b25ef1b68ea3f624761
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 48d30974152089d941e9ba7c36deb2d8db3a2501
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340882"
 ---
 # <a name="overflow_error-class"></a>overflow_error — Klasa
 
@@ -70,7 +71,7 @@ Type class std::overflow_error
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa runtime_error](../standard-library/runtime-error-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

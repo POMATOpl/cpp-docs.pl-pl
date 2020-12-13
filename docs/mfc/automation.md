@@ -1,5 +1,6 @@
 ---
-title: Automation
+description: Dowiedz się więcej o usłudze Automation
+title: Automatyzacja
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers, about Automation servers
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8a038a3590c3db9c90c8f99eaaa6f98d2c4e20cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339842"
 ---
-# <a name="automation"></a>Automation
+# <a name="automation"></a>Automatyzacja
 
 Automatyzacja (dawniej znana jako Automatyzacja OLE) umożliwia jednej aplikacji manipulowanie obiektami zaimplementowanymi w innej aplikacji lub Uwidacznianie obiektów, aby można było manipulować nimi.
 
@@ -47,7 +48,7 @@ Ważniejsze jest Automatyzacja pomocy technicznej dla użytkowników i dostawcó
 
 Wiele aplikacji komercyjnych, takich jak program Microsoft Excel i Microsoft Visual C++, umożliwia automatyzację wielu funkcji. Na przykład w Visual C++ można napisać makra VBScript do automatyzowania kompilacji, aspektów edytowania kodu lub debugowania zadań.
 
-## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a>Przekazywanie parametrów w usłudze Automation
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> Przekazywanie parametrów w usłudze Automation
 
 Jedną z trudności w tworzeniu metod automatyzacji jest pomoc w zapewnianiu jednolitego "bezpiecznego" mechanizmu przekazywania danych między serwerami automatyzacji i klientami. Automatyzacja używa typu **wariantu** do przekazywania danych. Typ **Variant** jest oznaczonym Unią. Ma element członkowski danych dla wartości (jest to anonimowa Unia C++) i element członkowski danych wskazujący typ informacji przechowywanych w związku. Typ **Variant** obsługuje wiele standardowych typów danych: 2-i 4-bajtowe liczby całkowite, liczby zmiennoprzecinkowe 4-i 8-bajtowe, ciągi i wartości logiczne. Ponadto obsługuje wartość **HRESULT** (kod błędu OLE), **walutę** (typ liczbowy stałego punktu) i **datę** (bezwzględną datę i godzinę), a także wskaźniki do `IUnknown` i `IDispatch` interfejsy.
 
@@ -61,7 +62,7 @@ Typ **Variant** jest hermetyzowany w klasie [COleVariant](reference/colevariant-
 
 - [CALCDRIV](../overview/visual-cpp-samples.md) Aplikacja kliencka usługi Automation MFCCALC.
 
-- [Procedura INproc](../overview/visual-cpp-samples.md) Demonstruje aplikację serwera automatyzacji w procesie.
+- [Procedura INproc](../overview/visual-cpp-samples.md) Demonstruje In-Process aplikacji serwera automatyzacji.
 
 - [IPDRIVE](../overview/visual-cpp-samples.md) Obsługa klienta usługi Automation.
 

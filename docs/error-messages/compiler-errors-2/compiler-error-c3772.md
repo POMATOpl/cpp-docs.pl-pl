@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3772'
 title: Błąd kompilatora C3772
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3772
 ms.assetid: 63e938d4-088d-41cc-a562-5881a05b5710
-ms.openlocfilehash: 420e1eb12cbb178459a96f55efab444a538e6c2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 679c5bc47e9b31ebf085dec63a46549a10484cac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340128"
 ---
 # <a name="compiler-error-c3772"></a>Błąd kompilatora C3772
 
-"name": Nieprawidłowa deklaracja szablonu zaprzyjaźnionego
+"name": nieprawidłowa deklaracja szablonu zaprzyjaźnionego
 
-Nie może deklarować elementu przyjaznego specjalizacja szablonu klasy. Nie można zadeklarować jawna lub częściowa specjalizacja szablonu klasy i w tej samej instrukcji deklarować elementu przyjaznego, że specjalizacji. *Nazwa* symbolu zastępczego identyfikuje Nieprawidłowa deklaracja.
+Nie można zadeklarować elementu zaprzyjaźnionego specjalizacji szablonu klasy. Nie można zadeklarować jawnej lub częściowej specjalizacji szablonu klasy, a w tej samej instrukcji deklaruje przyjaciela tej specjalizacji. Symbol zastępczy *name* identyfikuje nieprawidłową deklarację.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Nie deklaruj znajomego specjalizacja szablonu klasy.
+- Nie deklaruj znajomości specjalizacji szablonu klasy.
 
-- Jeśli jest to odpowiedni dla aplikacji, deklarować elementu przyjaznego szablonu klasy lub deklarować elementu przyjaznego określonego specjalizacji jawne lub częściowe.
+- Jeśli jest to odpowiednie dla aplikacji, zadeklaruj znajomego szablonu klasy lub Zadeklaruj znajomego określonej częściowej lub jawnej specjalizacji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu nie powiedzie się, ponieważ deklaruje znajomego częściowej specjalizacji szablonu klasy.
+Poniższy przykład kodu nie powiedzie się, ponieważ deklaruje przyjaciela częściowej specjalizacji szablonu klasy.
 
 ```cpp
 // c3772.cpp
@@ -57,7 +58,7 @@ class X {
 };
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Szablony](../../cpp/templates-cpp.md)<br/>
 [Specjalizacja szablonu](../../cpp/template-specialization-cpp.md)

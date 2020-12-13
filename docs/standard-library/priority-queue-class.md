@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy priority_queue
 title: priority_queue — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 8a1b33e45d066082a0f225067db84a6240e8fc53
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38b8411d20df5275997406b72e050fde803df0fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340648"
 ---
 # <a name="priority_queue-class"></a>priority_queue — Klasa
 
@@ -97,7 +98,7 @@ Istnieją trzy typy adapterów kontenerów zdefiniowane przez standardową bibli
 
 **Przestrzeń nazw:** std
 
-## <a name="priority_queuecontainer_type"></a><a name="container_type"></a>priority_queue:: container_type
+## <a name="priority_queuecontainer_type"></a><a name="container_type"></a> priority_queue:: container_type
 
 Typ, który dostarcza kontener bazowy, który ma zostać dostosowany.
 
@@ -115,7 +116,7 @@ Aby uzyskać więcej informacji na temat `Container` , zobacz sekcję Uwagi w te
 
 Zapoznaj się z przykładem [priority_queue](#priority_queue) , aby zapoznać się z przykładem sposobu deklarowania i używania `container_type` .
 
-## <a name="priority_queueempty"></a><a name="empty"></a>priority_queue:: Empty
+## <a name="priority_queueempty"></a><a name="empty"></a> priority_queue:: Empty
 
 Testuje, czy priority_queue jest pusty.
 
@@ -161,7 +162,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.
 ```
 
-## <a name="priority_queuepop"></a><a name="pop"></a>priority_queue::p op
+## <a name="priority_queuepop"></a><a name="pop"></a> priority_queue::p op
 
 Usuwa największy element priority_queue z pozycji najwyższego poziomu.
 
@@ -217,7 +218,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.
 ```
 
-## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a>priority_queue::p riority_queue
+## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a> priority_queue::p riority_queue
 
 Konstruuje priority_queue, który jest pusty lub jest kopią zakresu podstawowego obiektu kontenera lub innego priority_queue.
 
@@ -376,7 +377,7 @@ int main( )
 }
 ```
 
-## <a name="priority_queuepush"></a><a name="push"></a>priority_queue::p USH
+## <a name="priority_queuepush"></a><a name="push"></a> priority_queue::p USH
 
 Dodaje element do kolejki priorytetu na podstawie priorytetu elementu z< operatora.
 
@@ -425,7 +426,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="priority_queuesize"></a><a name="size"></a>priority_queue:: size
+## <a name="priority_queuesize"></a><a name="size"></a> priority_queue:: size
 
 Zwraca liczbę elementów w priority_queue.
 
@@ -466,7 +467,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.
 ```
 
-## <a name="priority_queuesize_type"></a><a name="size_type"></a>priority_queue:: size_type
+## <a name="priority_queuesize_type"></a><a name="size_type"></a> priority_queue:: size_type
 
 Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w priority_queue.
 
@@ -482,7 +483,7 @@ Typ jest synonimem dla `size_type` kontenera podstawowego dostosowany przez prio
 
 Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) , aby zapoznać się z przykładem sposobu deklarowania i używania `size_type` .
 
-## <a name="priority_queuetop"></a><a name="top"></a>priority_queue:: Top
+## <a name="priority_queuetop"></a><a name="top"></a> priority_queue:: Top
 
 Zwraca odwołanie const do największego elementu w górnej części priority_queue.
 
@@ -530,7 +531,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="priority_queuevalue_type"></a><a name="value_type"></a>priority_queue:: value_type
+## <a name="priority_queuevalue_type"></a><a name="value_type"></a> priority_queue:: value_type
 
 Typ, który reprezentuje typ obiektu przechowywanego jako element w priority_queue.
 

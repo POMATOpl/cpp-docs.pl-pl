@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie Promise
 title: promise — Klasa
 ms.date: 10/18/2018
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: a6541fefb2423853f8e59a662e1c8a37777dc14c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf65a3d1f42cb331c2e87ab418f2917947b0bed7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340635"
 ---
 # <a name="promise-class"></a>promise — Klasa
 
-Opisuje *asynchroniiowego dostawcę*.
+Opisuje *dostawcę asynchronicznego*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,38 +45,38 @@ class promise;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Obietnica](#promise)|Konstruuje `promise` obiekt.|
+|[firmy](#promise)|Konstruuje `promise` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[get_future](#get_future)|Zwraca [przyszłość](../standard-library/future-class.md) skojarzoną z tą obietnicą.|
+|[get_future](#get_future)|Zwraca [przyszłość](../standard-library/future-class.md) skojarzoną z tym obietnicą.|
 |[set_exception](#set_exception)|Niepodzielnie ustawia wynik tej obietnicy, aby wskazać wyjątek.|
-|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Niepodzielnie ustawia wynik tej obietnicy, aby wskazać wyjątek i dostarcza powiadomienie tylko po wszystkie obiekty lokalne wątku w bieżącym wątku zostały zniszczone (zwykle przy wyjściu wątku).|
-|[set_value](#set_value)|Atomicznie ustawia wynik tej obietnicy, aby wskazać wartość.|
-|[set_value_at_thread_exit](#set_value_at_thread_exit)|Niepodzielnie ustawia wynik tej obietnicy, aby wskazać wartość i dostarcza powiadomienie tylko po wszystkie obiekty lokalne wątku w bieżącym wątku zostały zniszczone (zwykle przy wyjściu wątku).|
-|[Wymiany](#swap)|Wymienia *skojarzony stan asynchroniczne* tej obietnicy z określonym obiektem obietnicy.|
+|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Niepodzielnie ustawia wynik tego obietnicy, aby wskazać wyjątek, i dostarcza powiadomienia dopiero po zniszczeniu wszystkich obiektów lokalnych wątków w bieżącym wątku (zazwyczaj przy wyjściu wątku).|
+|[set_value](#set_value)|Niepodzielnie ustawia wynik tej obietnicy, aby wskazać wartość.|
+|[set_value_at_thread_exit](#set_value_at_thread_exit)|Niepodzielnie ustawia wynik tej obietnicy, aby wskazać wartość, i dostarcza powiadomienia dopiero po zniszczeniu wszystkich obiektów lokalnych wątków w bieżącym wątku (zazwyczaj przy wyjściu wątku).|
+|[wymiany](#swap)|Wymienia związany z tym *stan asynchroniczny* tego obietnicy z określonym obiektem Promise.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[obietnica::operator=](#op_eq)|Przypisanie wspólnego stanu tego obiektu obietnicy.|
+|[Promise:: operator =](#op_eq)|Przypisanie udostępnionego stanu tego obiektu obietnicy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-*Obietnica*
+*firmy*
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przyszłe>
+**Nagłówek:**\<future>
 
 **Przestrzeń nazw:** std
 
-## <a name="promiseget_future"></a><a name="get_future"></a>obietnica::get_future
+## <a name="promiseget_future"></a><a name="get_future"></a> Promise:: get_future
 
-Zwraca [przyszły](../standard-library/future-class.md) obiekt, który ma ten sam *skojarzony stan asynchroniczne,* jak ta obietnica.
+Zwraca [przyszły](../standard-library/future-class.md) obiekt, który ma ten sam *skojarzony stan asynchroniczny* , co to obietnice.
 
 ```cpp
 future<Ty> get_future();
@@ -83,13 +84,13 @@ future<Ty> get_future();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt promise jest pusty, ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) który ma `no_state` [error_code](../standard-library/error-code-class.md) .
+Jeśli obiekt obietnicy jest pusty, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) , który ma [error_code](../standard-library/error-code-class.md) `no_state` .
 
-Jeśli ta metoda została już wywołana dla obiektu promise, który ma ten sam skojarzony stan asynchroniczne, metoda zgłasza, `future_error` że ma `error_code` . `future_already_retrieved`
+Jeśli ta metoda została już wywołana dla obiektu obietnicy, który ma ten sam, skojarzony stan asynchroniczny, metoda zgłasza, `future_error` że ma `error_code` `future_already_retrieved` .
 
-## <a name="promiseoperator"></a><a name="op_eq"></a>obietnica::operator=
+## <a name="promiseoperator"></a><a name="op_eq"></a> Promise:: operator =
 
-Przenosi *skojarzony stan asynchroniczne* `promise` z określonego obiektu.
+Przenosi *skojarzony stan asynchroniczny* z określonego `promise` obiektu.
 
 ```cpp
 promise& operator=(promise&& Other) noexcept;
@@ -97,7 +98,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Innych*\
+*Różnych*\
 Obiekt `promise`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -106,9 +107,9 @@ Obiekt `promise`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator przenosi skojarzony stan asynchroniczne z *Inne*. Po *przeniesieniu, Inne* jest *puste*.
+Ten operator przenosi skojarzony stan asynchroniczny z *innego*. Po przeniesieniu *inne* jest *puste*.
 
-## <a name="promisepromise-constructor"></a><a name="promise"></a>obietnica::pprocesowy konstruktor
+## <a name="promisepromise-constructor"></a><a name="promise"></a> Promise::p Konstruktor romise
 
 Konstruuje `promise` obiekt.
 
@@ -121,23 +122,23 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Al*\
-Alokator pamięci. Aby uzyskać [ \<więcej informacji, zobacz>alokatorów.](../standard-library/allocators-header.md)
+*Wsp*\
+Alokator pamięci. [\<allocators>](../standard-library/allocators-header.md)Aby uzyskać więcej informacji, zobacz.
 
-*Innych*\
+*Różnych*\
 Obiekt `promise`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstruktor tworzy *pusty* `promise` obiekt.
+Pierwszy Konstruktor konstruuje *pusty* `promise` obiekt.
 
-Drugi konstruktor tworzy `promise` pusty obiekt i używa *Al* do alokacji pamięci.
+Drugi Konstruktor konstruuje pusty `promise` obiekt i używa *Al* do przydzielania pamięci.
 
-Trzeci konstruktor `promise` konstruuje obiekt i przenosi skojarzony stan asynchroniczne z *Other*i pozostawia *Inne* puste.
+Trzeci Konstruktor konstruuje `promise` obiekt i transferuje skojarzony stan asynchroniczny z *innych* i pozostawia *inne* puste.
 
-## <a name="promiseset_exception"></a><a name="set_exception"></a>obietnica::set_exception
+## <a name="promiseset_exception"></a><a name="set_exception"></a> Promise:: set_exception
 
-Atomically przechowuje wyjątek w `promise` wyniku tego obiektu i ustawia *skojarzony stan asynchroniczne,* aby *był gotowy.*
+Niepodzielne przechowuje wyjątek jako wynik tego `promise` obiektu i ustawia *skojarzony stan asynchroniczny* na *gotowy*.
 
 ```cpp
 void set_exception(exception_ptr Exc);
@@ -145,20 +146,20 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Exc*\
-[exception_ptr,](../standard-library/exception-typedefs.md#exception_ptr) który jest przechowywany przez tę metodę jako wynik wyjątku.
+*Wyłączne*\
+[Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , który jest przechowywany przez tę metodę jako wynik wyjątku.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `promise` obiekt nie ma skojarzonego stanu asynchronitycznego, ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) `no_state`który ma kod błędu .
+Jeśli `promise` obiekt nie ma skojarzonego stanu asynchronicznego, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) , który ma kod błędu `no_state` .
 
-Jeśli `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value)lub [set_value_at_thread_exit](#set_value_at_thread_exit) został już wywołany `promise` dla obiektu, który ma ten sam skojarzony stan asynchroniczne, ta metoda zgłasza, `future_error` że ma kod błędu `promise_already_satisfied`.
+Jeśli `set_exception` [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value)lub [set_value_at_thread_exit](#set_value_at_thread_exit) zostało już wywołane dla `promise` obiektu, który ma ten sam stan asynchroniczny, ta metoda zgłasza, `future_error` że ma kod błędu `promise_already_satisfied` .
 
-W wyniku tej metody wszystkie wątki, które są zablokowane w skojarzonym stanie asynchroniczne stają się odblokowane.
+W wyniku tej metody wszystkie wątki, które są blokowane w skojarzonym stanie asynchronicznym, zostaną odblokowane.
 
-## <a name="promiseset_exception_at_thread_exit"></a><a name="set_exception_at_thread_exit"></a>obietnica::set_exception_at_thread_exit
+## <a name="promiseset_exception_at_thread_exit"></a><a name="set_exception_at_thread_exit"></a> Promise:: set_exception_at_thread_exit
 
-Niepodzielnie ustawia wynik `promise` tego, aby wskazać wyjątek, dostarczanie powiadomienia tylko po wszystkie wątku lokalnych obiektów w bieżącym wątku zostały zniszczone (zwykle przy wyjściu wątku).
+Niepodzielnie ustawia wynik tej wartości `promise` , aby wskazać wyjątek, dostarczając powiadomienie tylko po usunięciu wszystkich obiektów lokalnych wątków w bieżącym wątku (zazwyczaj przy wyjściu wątku).
 
 ```cpp
 void set_exception_at_thread_exit(exception_ptr Exc);
@@ -166,20 +167,20 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Exc*\
-[exception_ptr,](../standard-library/exception-typedefs.md#exception_ptr) który jest przechowywany przez tę metodę jako wynik wyjątku.
+*Wyłączne*\
+[Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , który jest przechowywany przez tę metodę jako wynik wyjątku.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt promise nie ma *skojarzonego stanu asynchronicznego,* ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) który ma kod błędu `no_state`.
+Jeśli obiekt obietnicy nie ma *skojarzonego stanu asynchronicznego*, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) , który ma kod błędu `no_state` .
 
-Jeśli [set_exception](#set_exception), `set_exception_at_thread_exit` [, set_value](#set_value)lub [set_value_at_thread_exit](#set_value_at_thread_exit) został już wywołany `promise` dla obiektu, który ma ten sam skojarzony stan asynchroniczne, ta metoda zgłasza, `future_error` że ma kod błędu . `promise_already_satisfied`
+Jeśli [set_exception](#set_exception), `set_exception_at_thread_exit` , [set_value](#set_value)lub [set_value_at_thread_exit](#set_value_at_thread_exit) zostało już wywołane dla `promise` obiektu, który ma ten sam stan asynchroniczny, ta metoda zgłasza, `future_error` że ma kod błędu `promise_already_satisfied` .
 
-W przeciwieństwie do [set_exception,](#set_exception)ta metoda nie ustawia skojarzonego stanu asynchroniczne, aby był gotowy, dopóki nie zostały zniszczone wszystkie obiekty lokalne wątku w bieżącym wątku. Zazwyczaj wątki, które są blokowane w skojarzonym stanie asynchroniiowym nie są odblokowane, dopóki bieżący wątek nie zakończy.
+W przeciwieństwie do [set_exception](#set_exception)ta metoda nie ustawia skojarzonego stanu asynchronicznego na gotowe do momentu zniszczenia wszystkich obiektów lokalnych wątków w bieżącym wątku. Zazwyczaj wątki, które są blokowane w skojarzonym stanie asynchronicznym, nie są odblokowywane do momentu zakończenia bieżącego wątku.
 
-## <a name="promiseset_value"></a><a name="set_value"></a>obietnica::set_value
+## <a name="promiseset_value"></a><a name="set_value"></a> Promise:: set_value
 
-Niepodzielnie przechowuje wartość w `promise` wyniku tego obiektu i ustawia *skojarzony stan asynchroniczne* *na gotowy.*
+Niepodzielnie zapisuje wartość jako wynik tego `promise` obiektu i ustawia *skojarzony stan asynchroniczny* na *gotowy*.
 
 ```cpp
 void promise::set_value(const Ty& Val);
@@ -190,28 +191,28 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
+*Użyte*\
 Wartość, która ma być przechowywana w wyniku.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `promise` obiekt nie ma skojarzonego stanu asynchronitycznego, ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) `no_state`który ma kod błędu .
+Jeśli `promise` obiekt nie ma skojarzonego stanu asynchronicznego, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) , który ma kod błędu `no_state` .
 
-Jeśli [set_exception](#set_exception) [, set_exception_at_thread_exit](#set_exception_at_thread_exit), `set_value`lub [set_value_at_thread_exit](#set_value_at_thread_exit) został już wywołany `promise` dla obiektu, który ma ten sam skojarzony stan asynchroniczne, ta metoda zgłasza, `future_error` że ma kod błędu . `promise_already_satisfied`
+Jeśli [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), `set_value` lub [set_value_at_thread_exit](#set_value_at_thread_exit) zostało już wywołane dla `promise` obiektu, który ma ten sam stan asynchroniczny, ta metoda zgłasza, `future_error` że ma kod błędu `promise_already_satisfied` .
 
-W wyniku tej metody wszystkie wątki, które są zablokowane w skojarzonym stanie asynchroniczne stają się odblokowane.
+W wyniku tej metody wszystkie wątki, które są blokowane w skojarzonym stanie asynchronicznym, zostaną odblokowane.
 
-Pierwsza metoda zgłasza również wyjątek, który jest zgłaszany, gdy *Val* jest kopiowany do skojarzonego stanu asynchronitycznego. W tej sytuacji skojarzony stan asynchroniczne nie jest ustawiona na gotowe.
+Pierwsza metoda zgłasza również każdy wyjątek, który jest generowany, gdy *Val* jest kopiowany do skojarzonego stanu asynchronicznego. W tej sytuacji skojarzony stan asynchroniczny nie jest ustawiony na wartość gotowe.
 
-Druga metoda zgłasza również wyjątek, który jest zgłaszany, gdy *Val* jest przenoszony do skojarzonego stanu asynchroniczne. W tej sytuacji skojarzony stan asynchroniczne nie jest ustawiona na gotowe.
+Druga metoda zgłasza również każdy wyjątek, który jest generowany, gdy *Val* zostanie przeniesiony do skojarzonego stanu asynchronicznego. W tej sytuacji skojarzony stan asynchroniczny nie jest ustawiony na wartość gotowe.
 
-W przypadku specjalizacji `promise<Ty&>`częściowej wartość przechowywana jest w rzeczywistości odwołaniem do *Val*.
+W przypadku częściowej specjalizacji `promise<Ty&>` przechowywana wartość jest w efekcie odwołaniem do *Val*.
 
-Dla specjalizacji `promise<void>`nie istnieje wartość przechowywana.
+Dla specjalizacji `promise<void>` nie istnieje żadna przechowywana wartość.
 
-## <a name="promiseset_value_at_thread_exit"></a><a name="set_value_at_thread_exit"></a>obietnica::set_value_at_thread_exit
+## <a name="promiseset_value_at_thread_exit"></a><a name="set_value_at_thread_exit"></a> Promise:: set_value_at_thread_exit
 
-Atomically przechowuje wartość w `promise` wyniku tego obiektu.
+Niepodzielnie zapisuje wartość jako wynik tego `promise` obiektu.
 
 ```cpp
 void promise::set_value_at_thread_exit(const Ty& Val);
@@ -222,28 +223,28 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
+*Użyte*\
 Wartość, która ma być przechowywana w wyniku.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt promise nie ma *skojarzonego stanu asynchronicznego,* ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) który ma kod błędu `no_state`.
+Jeśli obiekt obietnicy nie ma *skojarzonego stanu asynchronicznego*, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) , który ma kod błędu `no_state` .
 
-Jeśli [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit) [, set_value](#set_value)lub `set_value_at_thread_exit` został już wywołany `promise` dla obiektu, który ma ten sam skojarzony stan asynchroniczne, ta metoda zgłasza, `future_error` że ma kod błędu . `promise_already_satisfied`
+Jeśli [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value)lub `set_value_at_thread_exit` zostało już wywołane dla `promise` obiektu, który ma ten sam stan asynchroniczny, ta metoda zgłasza, `future_error` że ma kod błędu `promise_already_satisfied` .
 
-W przeciwieństwie `set_value`do , skojarzony stan asynchroniczne nie jest ustawiona na gotowe, dopóki nie wszystkie wątku lokalnych obiektów w bieżącym wątku zostały zniszczone. Zazwyczaj wątki, które są blokowane w skojarzonym stanie asynchroniiowym nie są odblokowane, dopóki bieżący wątek nie zakończy.
+W przeciwieństwie do `set_value` , skojarzony stan asynchroniczny nie jest ustawiony na gotowe do momentu zniszczenia wszystkich obiektów lokalnych wątków w bieżącym wątku. Zazwyczaj wątki, które są blokowane w skojarzonym stanie asynchronicznym, nie są odblokowywane do momentu zakończenia bieżącego wątku.
 
-Pierwsza metoda zgłasza również wyjątek, który jest zgłaszany, gdy *Val* jest kopiowany do skojarzonego stanu asynchronitycznego.
+Pierwsza metoda zgłasza również każdy wyjątek, który jest generowany, gdy *Val* jest kopiowany do skojarzonego stanu asynchronicznego.
 
-Druga metoda zgłasza również wyjątek, który jest zgłaszany, gdy *Val* jest przenoszony do skojarzonego stanu asynchroniczne.
+Druga metoda zgłasza również każdy wyjątek, który jest generowany, gdy *Val* zostanie przeniesiony do skojarzonego stanu asynchronicznego.
 
-W przypadku specjalizacji `promise<Ty&>`częściowej przechowywana wartość jest skutecznie odwołaniem do *val*.
+W przypadku częściowej specjalizacji `promise<Ty&>` przechowywana wartość jest efektywnie odwołaniem do wartości *Val*.
 
-Dla specjalizacji `promise<void>`nie istnieje wartość przechowywana.
+Dla specjalizacji `promise<void>` nie istnieje żadna przechowywana wartość.
 
-## <a name="promiseswap"></a><a name="swap"></a>obietnica::swap
+## <a name="promiseswap"></a><a name="swap"></a> Promise:: swap
 
-Wymienia *skojarzony stan asynchroniczne* tego obiektu obietnicy z obiektem określonego obiektu.
+Wymienia *skojarzony stan asynchroniczny* tego obiektu obietnicy z określonym obiektem.
 
 ```cpp
 void swap(promise& Other) noexcept;
@@ -251,9 +252,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Innych*\
+*Różnych*\
 Obiekt `promise`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

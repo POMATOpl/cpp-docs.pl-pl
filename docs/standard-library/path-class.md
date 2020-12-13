@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej o klasie Path
 title: path — klasa
 ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: fb56afbc1d29f1d321b394342382f89b06768720
-ms.sourcegitcommit: b5854134553db1d99a5761bec131841c374a3098
+ms.openlocfilehash: 469d594800036b165f8693162ca11ca161736cf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340778"
 ---
 # <a name="path-class"></a>path — klasa
 
@@ -68,7 +69,7 @@ class path;
 |[is_absolute](#is_absolute)|Dla systemu Windows funkcja zwraca wartość `has_root_name() && has_root_directory()` . W przypadku POSIX funkcja zwraca wartość `has_root_directory()` .|
 |[is_relative](#is_relative)|Zwraca wartość `!is_absolute()`.|
 |[make_preferred](#make_preferred)|Konwertuje każdy separator na preferred_separator w razie potrzeby.|
-|[trybu](#native)|Zwraca wartość `myname`.|
+|[natywne](#native)|Zwraca wartość `myname`.|
 |[parent_path](#parent_path)|Zwraca składnik ścieżki nadrzędnej `myname` .|
 |[preferred_separator](#preferred_separator)|Obiekt stała daje preferowany znak do oddzielania składników ścieżki, w zależności od systemu operacyjnego hosta. |
 |[relative_path](#relative_path)|Zwraca składnik ścieżki względnej elementu `myname` . |
@@ -79,7 +80,7 @@ class path;
 |[root_name](#root_name)|Zwraca składnik nazwy głównej `myname` . |
 |[root_path](#root_path)|Zwraca składnik ścieżki głównej elementu `myname` .|
 |[Spływ](#stem)|Zwraca `stem` składnik `myname` .|
-|[ciąg](#string)|Konwertuje sekwencję przechowywaną w `mypath` .|
+|[parametry](#string)|Konwertuje sekwencję przechowywaną w `mypath` .|
 |[wymiany](#swap)|Wykonuje `swap(mypath, right.mypath)` .|
 |[u16string](#u16string)|Konwertuje sekwencję przechowywaną w `mypath` do UTF-16 i zwraca ją przechowywaną w obiekcie typu `u16string` .|
 |[u32string](#u32string)|Konwertuje sekwencję przechowywaną w `mypath` do UTF-32 i zwraca ją przechowywaną w obiekcie typu `u32string` .|

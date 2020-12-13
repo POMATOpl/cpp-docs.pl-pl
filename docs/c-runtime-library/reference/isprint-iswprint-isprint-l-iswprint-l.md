@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isprint, iswprint, _isprint_l, _iswprint_l'
 title: isprint, iswprint, _isprint_l, _iswprint_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: 9921164220bc5289a7ae4a211c88107b4dac8e9c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e5d0ee00fbdbc6e5dd0778da5008b026a7c0e23f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339608"
 ---
 # <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
@@ -100,10 +101,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isprint**|\<CType. h>|
-|**iswprint**|\<CType. h> lub \<WCHAR. h>|
-|**_isprint_l**|\<CType. h>|
-|**_iswprint_l**|\<CType. h> lub \<WCHAR. h>|
+|**isprint**|\<ctype.h>|
+|**iswprint**|\<ctype.h> lub \<wchar.h>|
+|**_isprint_l**|\<ctype.h>|
+|**_iswprint_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -111,4 +112,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

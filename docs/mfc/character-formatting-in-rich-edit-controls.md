@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat formatowania znaków w formantach edycji wzbogaconej
 title: Formatowanie znaków w formantach edycji wzbogaconej
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-ms.openlocfilehash: 0b9d925b6ba3157177b7012d1e303ef7b7ddab46
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 47d44a7d586d52ba6a83314711af1350d1c2def6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339699"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formatowanie znaków w formantach edycji wzbogaconej
 
 Można używać funkcji składowych formantu edycji wzbogaconej ([CRichEditCtrl](reference/cricheditctrl-class.md)) do formatowania znaków i pobierania informacji o formatowaniu. W przypadku znaków można określić krój, rozmiar, kolor i efekty, takie jak pogrubienie, kursywa i ochrona.
 
-Formatowanie znaków można zastosować przy użyciu funkcji Członkowskich [SetSelectionCharFormat](reference/cricheditctrl-class.md#setselectioncharformat) i [SetWordCharFormat](reference/cricheditctrl-class.md#setwordcharformat) . Aby określić bieżące formatowanie znaków dla zaznaczonego tekstu, użyj funkcji składowej [GetSelectionCharFormat](reference/cricheditctrl-class.md#getselectioncharformat) . Struktura [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) jest używana z tymi funkcjami składowymi w celu określenia atrybutów znaków. Jednym z ważnych elementów członkowskich **Charformat** jest **dwMask**. W `SetSelectionCharFormat` i `SetWordCharFormat` , **dwMask** określa, które atrybuty znaków będą ustawiane przez to wywołanie funkcji. `GetSelectionCharFormat`raportuje atrybuty pierwszego znaku w zaznaczeniu; **dwMask** określa atrybuty, które są spójne w zaznaczeniu.
+Formatowanie znaków można zastosować przy użyciu funkcji Członkowskich [SetSelectionCharFormat](reference/cricheditctrl-class.md#setselectioncharformat) i [SetWordCharFormat](reference/cricheditctrl-class.md#setwordcharformat) . Aby określić bieżące formatowanie znaków dla zaznaczonego tekstu, użyj funkcji składowej [GetSelectionCharFormat](reference/cricheditctrl-class.md#getselectioncharformat) . Struktura [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) jest używana z tymi funkcjami składowymi w celu określenia atrybutów znaków. Jednym z ważnych elementów członkowskich **Charformat** jest **dwMask**. W `SetSelectionCharFormat` i `SetWordCharFormat` , **dwMask** określa, które atrybuty znaków będą ustawiane przez to wywołanie funkcji. `GetSelectionCharFormat` raportuje atrybuty pierwszego znaku w zaznaczeniu; **dwMask** określa atrybuty, które są spójne w zaznaczeniu.
 
 Możesz również uzyskać i ustawić "domyślne formatowanie znaków", które jest formatowaniem stosowanym do dowolnych później wstawionych znaków. Na przykład jeśli aplikacja ustawi domyślne formatowanie znaków na pogrubiony, a użytkownik wpisze znak, ten znak jest pogrubiony. Aby uzyskać i ustawić domyślne formatowanie znaków, użyj funkcji składowych [GetDefaultCharFormat](reference/cricheditctrl-class.md#getdefaultcharformat) i [SetDefaultCharFormat](reference/cricheditctrl-class.md#setdefaultcharformat) .
 

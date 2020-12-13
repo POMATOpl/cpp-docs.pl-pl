@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4383'
 title: Ostrzeżenie kompilatora (poziom 1) C4383
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 1c4a7ca806430c73c8e8396e596782253cc06f09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6ece51ed497919cf444952f42130cc3a4bfb4a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339933"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Ostrzeżenie kompilatora (poziom 1) C4383
 
@@ -21,7 +22,7 @@ Po dodaniu przesłonięcia wystąpienia zdefiniowanego przez użytkownika do ope
 
 Aby uzyskać więcej informacji, zobacz [uchwyt do operatora obiektu (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) i [operator odwołania śledzącego](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
-Ponadto operator wystąpienia nie jest dostępny dla innych kompilatorów języka za pośrednictwem metadanych, których dotyczy odwołanie. Aby uzyskać więcej informacji, zobacz [Operatory zdefiniowane przez użytkownikaC++(/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+Ponadto operator wystąpienia nie jest dostępny dla innych kompilatorów języka za pośrednictwem metadanych, których dotyczy odwołanie. Aby uzyskać więcej informacji, zobacz [Operatory zdefiniowane przez użytkownika (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy poisson_distribution
 title: poisson_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b640517a63665ebec4573da8aff9e537412de589
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340674"
 ---
 # <a name="poisson_distribution-class"></a>poisson_distribution — Klasa
 
@@ -77,7 +78,7 @@ Szablon klasy zawiera opis dystrybucji, która tworzy wartości typu całkowiteg
 [poisson_distribution](#poisson_distribution)\
 [param_type](#param_type)
 
-Funkcja Property `mean()` zwraca wartość dla wartości przechowywanych parametrów rozkładu *mean*.
+Funkcja Property `mean()` zwraca wartość dla wartości przechowywanych parametrów rozkładu .
 
 Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 

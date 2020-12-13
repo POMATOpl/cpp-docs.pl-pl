@@ -1,5 +1,6 @@
 ---
-title: Architektura dokumentu-widoku
+description: Dowiedz się więcej o architekturze dokumentów/widoków
+title: Architektura Document-View
 ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: a74aeba651d385cf3a5386e94ec20e4e56b7cd57
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ef6746a77a3f8a482c347d61685fccad3e6b4dfb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339725"
 ---
 # <a name="documentview-architecture"></a>Architektura dokument/widok
 
@@ -68,7 +69,7 @@ Dokumenty, skojarzone z nimi widoki i okna ramowe, które są tworzone przez tę
 
 - [Używanie dokumentów](using-documents.md)
 
-- [Używanie widoków](using-views.md)
+- [Korzystanie z widoków](using-views.md)
 
 - [Wiele typów dokumentów, widoków i okien ramowych](multiple-document-types-views-and-frame-windows.md)
 

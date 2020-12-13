@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s'
 title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 ms.date: 4/2/2020
 api_name:
@@ -59,12 +60,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8a0f7b281bab32de5c6b5d7f2cf83fb5e1ed811f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339621"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -155,9 +156,9 @@ Zero, jeśli powodzenie. W przypadku niepowodzenia z powodu nieprawidłowego par
 
 |*buforu*|*numberOfElements*|*sourceTime*|Przesłać|Wartość w *buforze*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|ile|ile|**EINVAL**|Nie zmodyfikowano|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|ile|**EINVAL**|Nie zmodyfikowano|
-|Nie **ma wartości null**|0< rozmiar < 26|ile|**EINVAL**|Pusty ciąg|
+|**NULL**|dowolny|dowolny|**EINVAL**|Nie zmodyfikowano|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|0|dowolny|**EINVAL**|Nie zmodyfikowano|
+|Nie **ma wartości null**|0< rozmiar < 26|dowolny|**EINVAL**|Pusty ciąg|
 |Nie **ma wartości null**|>= 26|NULL|**EINVAL**|Pusty ciąg|
 |Nie **ma wartości null**|>= 26|< 0|**EINVAL**|Pusty ciąg|
 
@@ -171,9 +172,9 @@ Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Znak 
 
 Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Zapoznaj się z funkcjami [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)i [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) , aby uzyskać informacje o konfigurowaniu czasu lokalnego i funkcji [_tzset](tzset.md) w celu uzyskania informacji na temat definiowania środowiska strefy czasowej i zmiennych globalnych.
 
-**_wctime32_s** i **_wctime64_s** to dwubajtowa wersja **_ctime32_s** i **_ctime64_s**; Zwracanie wskaźnika do ciągu o szerokim znaku. W przeciwnym razie **_ctime64_s**, **_wctime32_s**i **_wctime64_s** zachowują się identycznie w **_ctime32_s**.
+**_wctime32_s** i **_wctime64_s** to dwubajtowa wersja **_ctime32_s** i **_ctime64_s**; Zwracanie wskaźnika do ciągu o szerokim znaku. W przeciwnym razie **_ctime64_s**, **_wctime32_s** i **_wctime64_s** zachowują się identycznie w **_ctime32_s**.
 
-**ctime_s** to wbudowana funkcja, która oblicza **_ctime64_s** i **time_t** jest równoważna z **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t**32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **ctime_s** ocenę **_ctime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
+**ctime_s** to wbudowana funkcja, która oblicza **_ctime64_s** i **time_t** jest równoważna z **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t** 32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **ctime_s** ocenę **_ctime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
 W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu, eliminując konieczność określenia argumentu rozmiaru. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
@@ -193,8 +194,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<> godziny. h|
-|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<Time. h> lub \<WCHAR. h>|
+|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
+|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -236,7 +237,7 @@ int main( void )
 The time is Fri Apr 25 13:03:39 2003
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

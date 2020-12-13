@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: dziedziczenie słów kluczowych'
 title: Słowa kluczowe dziedziczenia
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05d13303064c2857780af62b1b4beba00483b72e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340466"
 ---
 # <a name="inheritance-keywords"></a>Słowa kluczowe dziedziczenia
 
@@ -74,10 +75,10 @@ niezależnie od opcji wiersza polecenia lub pragm, wskaźniki do elementów czł
 > [!NOTE]
 > Taka sama wczesna reprezentacja wskaźnika składowej klasy powinna występować w każdej jednostce translacji, która deklaruje wskaźniki do składowych tej klasy, a deklaracja powinna występować przed deklaracją wskaźników do składowych.
 
-Aby zapewnić zgodność z poprzednimi wersjami, **_single_inheritance**, **_multiple_inheritance**i **_virtual_inheritance** są synonimami dla **`__single_inheritance`** , **`__multiple_inheritance`** i, **`__virtual_inheritance`** chyba że opcja kompilatora [/za \( wyłączanie rozszerzeń języka)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
+Aby zapewnić zgodność z poprzednimi wersjami, **_single_inheritance**, **_multiple_inheritance** i **_virtual_inheritance** są synonimami dla **`__single_inheritance`** , **`__multiple_inheritance`** i, **`__virtual_inheritance`** chyba że opcja kompilatora [/za \( wyłączanie rozszerzeń języka)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

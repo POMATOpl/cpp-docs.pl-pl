@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4342'
 title: Ostrzeżenie kompilatora (poziom 1) C4342
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-ms.openlocfilehash: 8ac00d3d57f8cf7d6c85f3106dbe9b8c3cb9adf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f08cf24b0fe429e8b788a20fbcb05d2a8cd8b1d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340023"
 ---
 # <a name="compiler-warning-level-1-c4342"></a>Ostrzeżenie kompilatora (poziom 1) C4342
 
-zmiana zachowania: wywołano*funkcję "Function*", ale operator składowej został wywołany w poprzednich wersjach
+zmiana zachowania: wywołano *funkcję "Function*", ale operator składowej został wywołany w poprzednich wersjach
 
-W wersjach wizualizacji C++ przed visual Studio 2002, element członkowski został wywołany, ale to zachowanie zostało zmienione i kompilator znalazł teraz najlepsze dopasowanie w zakresie przestrzeni nazw.
+W wersjach Visual C++ przed Visual Studio 2002, element członkowski został wywołany, ale to zachowanie zostało zmienione i kompilator znalazł teraz najlepsze dopasowanie w zakresie przestrzeni nazw.
 
 Jeśli zostanie znaleziony operator elementu członkowskiego, kompilator nie uwzględni wcześniej operatorów zakresu przestrzeni nazw. W przypadku lepszego dopasowania w zakresie przestrzeni nazw, bieżący kompilator prawidłowo wywołuje go, podczas gdy poprzedni kompilator nie uważa go.
 

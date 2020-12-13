@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: wymagania dotyczące kompilacji wspólnych kontrolek systemu Windows'
 title: Wymagania dotyczące kompilacji dla formantów standardowych systemu Windows
 ms.date: 08/19/2019
 helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4d11b4da2fb1ff616ab077390c2d603e76382313
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339803"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Wymagania dotyczące kompilacji dla formantów standardowych systemu Windows
 
@@ -52,6 +53,6 @@ Jeśli używasz środowiska IDE programu Visual Studio do utworzenia nowej aplik
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)<br/>
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)<br/>
 [Wykres hierarchii](hierarchy-chart.md)<br/>
 [Przestarzałe interfejsy API ANSI](deprecated-ansi-apis.md)

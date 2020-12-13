@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy pointer_to_binary_function
 title: pointer_to_binary_function — Klasa
 ms.date: 02/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: 890ebb7d4c2b8fbd51a4460e21efba3e763ead7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5cdecc297ff5c55c9b6c57b5b6ab029636f3958c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340713"
 ---
 # <a name="pointer_to_binary_function-class"></a>pointer_to_binary_function — Klasa
 
@@ -33,23 +34,23 @@ class pointer_to_binary_function
 
 ### <a name="parameters"></a>Parametry
 
-*pfunc* \
+*pfunc*\
 Funkcja binarna do przekonwertowania.
 
-\ *lewo*
-Lewy obiekt, na którym jest wywoływana *\*pfunc* .
+*lewym*\
+Lewy obiekt, na którym jest wywoływana *\* pFunc* .
 
-*prawa* \
-Prawidłowy obiekt, w którym jest wywoływana *\*pfunc* .
+*Kliknij*\
+Prawidłowy obiekt, w którym jest wywoływana *\* pFunc* .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Szablon klasy przechowuje kopię `pfunc`. Definiuje jej funkcję członkowską `operator()` jako zwracającą `(* pfunc)(Left, right)`.
+Szablon klasy przechowuje kopię `pfunc` . Definiuje swoją funkcję członkowską `operator()` jako zwracaną `(* pfunc)(Left, right)` .
 
 ## <a name="remarks"></a>Uwagi
 
-Wskaźnik funkcji binarnej jest obiektem funkcji i może być przesłany do C++ dowolnego algorytmu biblioteki standardowej, który oczekuje funkcji binarnej jako parametru, ale nie można go dostosować. Aby można było użyć go z adapterem, takim jak powiązanie wartości lub użycie jej z negacją, musi być dostarczana z zagnieżdżonymi typami `first_argument_type`, `second_argument_type` i `result_type`, które umożliwiają takie dostosowanie. Konwersja przez `pointer_to_binary_function` umożliwia adapterom funkcji współdziałanie ze wskaźnikami funkcji binarnych.
+Wskaźnik funkcji binarnej jest obiektem funkcji i może być przesłany do dowolnego algorytmu standardowej biblioteki języka C++, który oczekuje funkcji binarnej jako parametru, ale nie można go dostosować. Aby można było użyć go z adapterem, takim jak powiązanie z nim wartości lub użycie jej z negacją, musi być dostarczone z zagnieżdżonymi typami, `first_argument_type` `second_argument_type` i, `result_type` Aby umożliwić takie dostosowanie. Konwersja przez `pointer_to_binary_function` umożliwia adapterom funkcji współdziałanie ze wskaźnikami funkcji binarnych.
 
 ## <a name="example"></a>Przykład
 
-Konstruktor `pointer_to_binary_function` jest rzadko używany bezpośrednio. Zapoznaj się z funkcją pomocnika [ptr_fun](../standard-library/functional-functions.md#ptr_fun) , aby zapoznać się z przykładem sposobu deklarowania i używania predykatu adaptera `pointer_to_binary_function`.
+Konstruktor `pointer_to_binary_function` jest rzadko używany bezpośrednio. Zobacz [ptr_fun](../standard-library/functional-functions.md#ptr_fun) funkcji pomocnika, aby zapoznać się z przykładem sposobu deklarowania i używania `pointer_to_binary_function` predykatu adaptera.

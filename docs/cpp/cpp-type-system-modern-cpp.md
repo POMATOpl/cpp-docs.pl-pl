@@ -1,14 +1,15 @@
 ---
+description: Dowiedz się więcej o systemie typów C++
 title: System typów języka C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 1be39124e51fc2e812ce5a2779ce701d727c81e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339582"
 ---
 # <a name="c-type-system"></a>System typów języka C++
 
@@ -106,7 +107,7 @@ Podczas definiowania **`class`** , **`struct`** , **`union`** , lub **`enum`** ,
 
 ## <a name="pointer-types"></a>Typy wskaźnika
 
-Datowanie z powrotem do najstarszych wersji języka C, C++ w dalszym ciągu można zadeklarować zmienną typu wskaźnika przy użyciu specjalnych deklarator **`*`** (gwiazdka). Typ wskaźnika przechowuje adres lokalizacji w pamięci, gdzie jest przechowywana rzeczywista wartość danych. W nowoczesnych językach C++ są one określane jako *surowe wskaźniki*i są dostępne w kodzie za pomocą specjalnych operatorów **`*`** (gwiazdka) lub **`->`** (kreska z większą liczbą). Jest to nazywane *wyłuskaniem*, który jest używany przez użytkownika, zależy od tego, czy odwołujesz wskaźnik do wartości skalarnej, czy wskaźnika do elementu członkowskiego w obiekcie. Praca z typami wskaźników od dawna jest jednym z najtrudniejszych i najbardziej dezorientujących aspektów tworzenia programów w C i C++. Ta sekcja zawiera opis niektórych faktów i praktyk, które ułatwiają korzystanie z nieprzetworzonych wskaźników, ale w nowoczesnych C++ nie jest już wymagane (lub zalecane) do używania surowych wskaźników dla własności obiektu, ze względu na ewolucję [inteligentnego wskaźnika](../cpp/smart-pointers-modern-cpp.md) (omówiona więcej na końcu tej sekcji). Nadal jest użyteczne i bezpieczne używanie surowych wskaźników do obserwacji obiektów, ale jeśli musisz użyć ich do własności obiektu, należy to zrobić z ostrożnością i po bardzo starannym rozważeniu sposobu, w jaki obiekty przez nie posiadane są tworzone i niszczone.
+Datowanie z powrotem do najstarszych wersji języka C, C++ w dalszym ciągu można zadeklarować zmienną typu wskaźnika przy użyciu specjalnych deklarator **`*`** (gwiazdka). Typ wskaźnika przechowuje adres lokalizacji w pamięci, gdzie jest przechowywana rzeczywista wartość danych. W nowoczesnych językach C++ są one określane jako *surowe wskaźniki* i są dostępne w kodzie za pomocą specjalnych operatorów **`*`** (gwiazdka) lub **`->`** (kreska z większą liczbą). Jest to nazywane *wyłuskaniem*, który jest używany przez użytkownika, zależy od tego, czy odwołujesz wskaźnik do wartości skalarnej, czy wskaźnika do elementu członkowskiego w obiekcie. Praca z typami wskaźników od dawna jest jednym z najtrudniejszych i najbardziej dezorientujących aspektów tworzenia programów w C i C++. Ta sekcja zawiera opis niektórych faktów i praktyk, które ułatwiają korzystanie z nieprzetworzonych wskaźników, ale w nowoczesnych C++ nie jest już wymagane (lub zalecane) do używania surowych wskaźników dla własności obiektu, ze względu na ewolucję [inteligentnego wskaźnika](../cpp/smart-pointers-modern-cpp.md) (omówiona więcej na końcu tej sekcji). Nadal jest użyteczne i bezpieczne używanie surowych wskaźników do obserwacji obiektów, ale jeśli musisz użyć ich do własności obiektu, należy to zrobić z ostrożnością i po bardzo starannym rozważeniu sposobu, w jaki obiekty przez nie posiadane są tworzone i niszczone.
 
 Pierwszą rzeczą, którą należy wiedzieć przy deklarowaniu zmiennej surowego wskaźnika, jest to, że zmienna przydzieli tylko pamięć, która jest niezbędna do przechowania adresu lokalizacji pamięci, do którego odwoła się wskaźnik po wyłuskaniu. Alokacja pamięci dla samej wartości danych (nazywanej również *magazynem zapasowym*) nie jest jeszcze przypisana. Innymi słowy, przez zadeklarowanie zmiennej surowego wskaźnika tworzysz zmienną adresu pamięci, a nie zmienną rzeczywistych danych. \Wyłuskanie zmiennej wskaźnika przed upewnieniem się, że zawiera ona prawidłowy adres magazynu zapasowego, spowoduje niezdefiniowane zachowanie (zwykle błąd krytyczny) w programie. Poniższy przykład przedstawia ten rodzaj błędu:
 
@@ -136,7 +137,7 @@ Przykład wyłuskuje typ wskaźnika, bez przydzielania pamięci na przechowywani
 
 Poprawiony przykład kodu używa lokalnej pamięci stosu do utworzenia magazynu zapasowego, który `pNumber` wskazuje na. Dla uproszczenia używamy podstawowego typu. W rzeczywistości magazyn zapasowy dla wskaźników jest najczęściej zdefiniowanym przez użytkownika typami, które są przydzielane dynamicznie w obszarze pamięci o nazwie *sterta* (lub *bezpłatna wersja magazynu*) za pomocą **`new`** wyrażenia słowa kluczowego (w programowaniu w stylu języka c, użyto starszej `malloc()` funkcji biblioteki środowiska uruchomieniowego języka c). Po przydzieleniu te zmienne są zwykle określane jako obiekty, zwłaszcza jeśli są one oparte na definicji klasy. Pamięć przydzielona za pomocą **`new`** musi zostać usunięta przez odpowiednią **`delete`** instrukcję (lub, jeśli użyto `malloc()` funkcji do jej przydzielenia, funkcja środowiska uruchomieniowego języka C `free()` ).
 
-Można jednak łatwo zapomnieć o usunięciu dynamicznie przydzielanego obiektu, szczególnie w złożonym kodzie, co powoduje błąd zasobu o nazwie *wyciek pamięci*. Z tego powodu zdecydowanie odradza się stosowanie surowych wskaźników w nowoczesnym języku C++. Niemal zawsze lepiej jest otoczyć surowy wskaźnik w [inteligentnym wskaźniku](../cpp/smart-pointers-modern-cpp.md), który automatycznie zwolni pamięć, gdy jego destruktor jest wywoływany (gdy kod wykracza poza zakres dla inteligentnego wskaźnika); Korzystając z inteligentnych wskaźników, możesz praktycznie wyeliminować całą klasę usterek w programach języka C++. W poniższym przykładzie Załóżmy, `MyClass` że jest typem zdefiniowanym przez użytkownika, który ma metodę publiczną`DoSomeWork();`
+Można jednak łatwo zapomnieć o usunięciu dynamicznie przydzielanego obiektu, szczególnie w złożonym kodzie, co powoduje błąd zasobu o nazwie *wyciek pamięci*. Z tego powodu zdecydowanie odradza się stosowanie surowych wskaźników w nowoczesnym języku C++. Niemal zawsze lepiej jest otoczyć surowy wskaźnik w [inteligentnym wskaźniku](../cpp/smart-pointers-modern-cpp.md), który automatycznie zwolni pamięć, gdy jego destruktor jest wywoływany (gdy kod wykracza poza zakres dla inteligentnego wskaźnika); Korzystając z inteligentnych wskaźników, możesz praktycznie wyeliminować całą klasę usterek w programach języka C++. W poniższym przykładzie Załóżmy, `MyClass` że jest typem zdefiniowanym przez użytkownika, który ma metodę publiczną `DoSomeWork();`
 
 ```cpp
 void someFunction() {
@@ -167,7 +168,7 @@ Opisuje *typy wartości* wraz z problemami związanymi z ich użyciem.
 [Konwersje typów i bezpieczeństwo typów](../cpp/type-conversions-and-type-safety-modern-cpp.md)\
 Opisuje typowe problemy przy konwersji typu i pokazuje, jak ich unikać.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Witamy ponownie w języku C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>

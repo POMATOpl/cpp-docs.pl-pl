@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: serwery automatyzacji'
 title: Serwery automatyzacji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 4c2ef77e20b7dccfa8cd6830c090111601331642
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e97bcf524b96e459cd1a3caddec7cdaf0c030962
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339829"
 ---
 # <a name="automation-servers"></a>Serwery automatyzacji
 
@@ -27,7 +28,7 @@ Te obiekty automatyzacji mają właściwości i metody jako ich interfejs zewnę
 
 Dzięki udostępnieniu funkcjonalności aplikacji za pomocą wspólnego, dobrze zdefiniowanego interfejsu, Automatyzacja umożliwia tworzenie aplikacji w jednym ogólnym języku programowania, takim jak Microsoft Visual Basic, zamiast różnorodnych języków makr specyficznych dla aplikacji.
 
-## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a>Obsługa serwerów automatyzacji
+## <a name="support-for-automation-servers"></a><a name="_core_support_for_automation_servers"></a> Obsługa serwerów automatyzacji
 
 Visual C++ i platforma MFC zapewnia szeroką obsługę serwerów automatyzacji. Obsługują one większość nakładów związanych z tworzeniem serwera automatyzacji, dzięki czemu możesz skupić się na działaniach aplikacji.
 

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: usuwanie pracy z wątku User-Interface'
 title: 'Wskazówki: usuwanie pracy z wątku interfejs użytkownika'
 ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 003678f3c79f2abfa7ceb0c67fecd69cf178f442
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 816e8446771cda907397f43386c33476cf3665b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340921"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Wskazówki: usuwanie pracy z wątku interfejs użytkownika
 
@@ -34,7 +35,7 @@ Przed rozpoczęciem tego instruktażu zapoznaj się z następującymi tematami:
 
 Zalecamy także zapoznanie się z podstawowymi informacjami na temat programowania aplikacji MFC i GDI+ przed rozpoczęciem tego instruktażu. Aby uzyskać więcej informacji na temat MFC, zobacz [aplikacje klasyczne MFC](../../mfc/mfc-desktop-applications.md). Aby uzyskać więcej informacji na temat interfejsu GDI+, zobacz [GDI+](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 Ten Instruktaż zawiera następujące sekcje:
 
@@ -42,13 +43,13 @@ Ten Instruktaż zawiera następujące sekcje:
 
 - [Implementowanie wersji szeregowej aplikacji Mandelbrot](#serial)
 
-- [Usuwanie pracy z wątku interfejsu użytkownika](#removing-work)
+- [Usuwanie pracy z wątku User-Interface](#removing-work)
 
 - [Poprawianie wydajności rysowania](#performance)
 
 - [Dodawanie obsługi anulowania](#cancellation)
 
-## <a name="creating-the-mfc-application"></a><a name="application"></a>Tworzenie aplikacji MFC
+## <a name="creating-the-mfc-application"></a><a name="application"></a> Tworzenie aplikacji MFC
 
 W tej sekcji opisano, jak utworzyć podstawową aplikację MFC.
 
@@ -64,7 +65,7 @@ W tej sekcji opisano, jak utworzyć podstawową aplikację MFC.
 
    Sprawdź, czy aplikacja została utworzona pomyślnie, kompilując ją i uruchamiając. Aby skompilować aplikację, w menu **kompilacja** kliknij polecenie **Kompiluj rozwiązanie**. Jeśli aplikacja zostanie pomyślnie skompilowana, uruchom aplikację, klikając polecenie **Rozpocznij debugowanie** w menu **debugowanie** .
 
-## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a>Implementowanie wersji szeregowej aplikacji Mandelbrot
+## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a> Implementowanie wersji szeregowej aplikacji Mandelbrot
 
 W tej sekcji opisano sposób rysowania Mandelbrot Fractal. Ta wersja pobiera Mandelbrot Fractal do obiektu [mapy BITOWEJ](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) GDI+, a następnie kopiuje zawartość tej mapy bitowej do okna klienta.
 
@@ -114,7 +115,7 @@ Ponieważ obliczenia dla każdego piksela są w sposób obliczeniowy kosztowne, 
 
 [[Top](#top)]
 
-## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a>Usuwanie pracy z wątku interfejsu użytkownika
+## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a> Usuwanie pracy z wątku interfejsu użytkownika
 
 W tej sekcji przedstawiono sposób usuwania pracy rysowania z wątku interfejsu użytkownika w aplikacji Mandelbrot. Przenosząc zadania rysowania z wątku interfejsu użytkownika do wątku roboczego, wątek interfejsu użytkownika może przetwarzać komunikaty w miarę jak wątek roboczy generuje obraz w tle.
 
@@ -152,7 +153,7 @@ Interfejs użytkownika jest teraz bardziej wydajny, ponieważ zadania rysowania 
 
 [[Top](#top)]
 
-## <a name="improving-drawing-performance"></a><a name="performance"></a>Poprawianie wydajności rysowania
+## <a name="improving-drawing-performance"></a><a name="performance"></a> Poprawianie wydajności rysowania
 
 Generowanie Mandelbrot Fractal jest dobrym kandydatem do przetwarzanie równoległe, ponieważ obliczenia każdego piksela są niezależne od wszystkich innych obliczeń. Aby zrównoleglanie procedurę rysowania, przekonwertuj **`for`** pętlę zewnętrzną w `CChildView::DrawMandelbrot` metodzie na wywołanie algorytmu [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) w następujący sposób.
 
@@ -162,7 +163,7 @@ Ponieważ obliczenia każdego elementu mapy bitowej są niezależne, nie trzeba 
 
 [[Top](#top)]
 
-## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a>Dodawanie obsługi anulowania
+## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a> Dodawanie obsługi anulowania
 
 W tej sekcji opisano, jak obsłużyć zmianę rozmiarów okien i anulować aktywne zadania rysowania, gdy okno zostanie zniszczone.
 
@@ -222,7 +223,7 @@ W przypadku zmiany rozmiaru okna zadania rysowania są wykonywane tylko dla koń
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instruktaże środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

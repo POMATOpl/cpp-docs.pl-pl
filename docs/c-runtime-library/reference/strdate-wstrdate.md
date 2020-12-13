@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strdate, _wstrdate'
 title: _strdate, _wstrdate
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1e0daab087653edf57b3f268aa14192ab145cac6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340570"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
@@ -82,7 +83,7 @@ Każda z tych funkcji zwraca wskaźnik do wynikowego ciągu znaków *datestr*.
 
 Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Zaleca się, aby bardziej bezpieczne funkcje były używane wszędzie tam, gdzie jest to możliwe.
 
-Funkcja **_strdate** kopiuje bieżącą datę systemową do buforu wskazywanym przez *datestr*, sformatowaną **mm**/**DD**/**yy**, gdzie **mm** to dwie cyfry reprezentujące miesiąc, **DD** to dwie cyfry reprezentujące dzień, a **yy** to ostatnie dwie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Długość buforu musi wynosić co najmniej 9 bajtów.
+Funkcja **_strdate** kopiuje bieżącą datę systemową do buforu wskazywanym przez *datestr*, sformatowaną **mm** / **DD** / **yy**, gdzie **mm** to dwie cyfry reprezentujące miesiąc, **DD** to dwie cyfry reprezentujące dzień, a **yy** to ostatnie dwie cyfry roku. Na przykład ciąg **12/05/99** reprezentuje 5 grudnia 1999. Długość buforu musi wynosić co najmniej 9 bajtów.
 
 Jeśli *datestr* jest **pustym** wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
@@ -102,8 +103,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strdate**|\<> godziny. h|
-|**_wstrdate**|\<Time. h> lub \<WCHAR. h>|
+|**_strdate**|\<time.h>|
+|**_wstrdate**|\<time.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -133,7 +134,7 @@ int main()
 OS date: 04/25/03
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

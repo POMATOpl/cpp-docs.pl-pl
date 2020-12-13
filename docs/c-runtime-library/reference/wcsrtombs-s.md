@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wcsrtombs_s'
 title: wcsrtombs_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: c804d232dbcce67b8d467eaa37ccf2b15282881a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4a25be8bf1c61fec10c54a4ecdb870a383b31e9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340531"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -108,7 +109,7 @@ Jeśli *Liczba* jest wartością specjalną [_TRUNCATE](../../c-runtime-library/
 
 Jeśli **wcsrtombs_s** pomyślnie przekonwertuje ciąg źródłowy, umieści rozmiar w bajtach przekonwertowanego ciągu, łącznie z terminatorem wartości null, na *&#42;PReturnValue* (podany *pReturnValue* nie ma **wartości null**). Dzieje się tak nawet wtedy, gdy argument *mbstr* ma **wartość null** i umożliwia określenie wymaganego rozmiaru buforu. Należy pamiętać, że jeśli *mbstr* ma **wartość null**, *Count* jest ignorowany.
 
-Jeśli **wcsrtombs_s** napotka znak dwubajtowy, nie może on zostać skonwertowany na znak wieloznaczny, umieszcza-1 w * \*pReturnValue*, ustawia bufor docelowy na pusty ciąg, **ustawia errno** na **EILSEQ**i zwraca **EILSEQ**.
+Jeśli **wcsrtombs_s** napotka znak dwubajtowy, nie może on zostać skonwertowany na znak wieloznaczny, umieszcza-1 w *\* pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** na **EILSEQ** i zwraca **EILSEQ**.
 
 Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie **wcsrtombs_s** jest niezdefiniowane. na **wcsrtombs_s** ma wpływ Kategoria LC_TYPE bieżących ustawień regionalnych.
 
@@ -176,13 +177,13 @@ The string was successfully converted.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wcsrtombs_s**|\<WCHAR. h>|
+|**wcsrtombs_s**|\<wchar.h>|
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy packaged_task
 title: packaged_task — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: d03fb128240c4e3e6bd48c3237d240afba946ad8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7ea494c9a01fddc2345d47ca4938b1f66aaa529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233031"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340830"
 ---
 # <a name="packaged_task-class"></a>packaged_task — Klasa
 
@@ -71,7 +72,7 @@ class packaged_task;
 
 **Przestrzeń nazw:** std
 
-## <a name="packaged_taskget_future"></a><a name="get_future"></a>packaged_task:: get_future
+## <a name="packaged_taskget_future"></a><a name="get_future"></a> packaged_task:: get_future
 
 Zwraca obiekt typu `future<Ty>` , który ma ten sam *skojarzony stan asynchroniczny*.
 
@@ -85,7 +86,7 @@ Jeśli `packaged_task` obiekt nie ma skojarzonego stanu asynchronicznego, ta met
 
 Jeśli ta metoda została już wywołana dla `packaged_task` obiektu, który ma ten sam, skojarzony stan asynchroniczny, metoda zgłasza, `future_error` że ma kod błędu `future_already_retrieved` .
 
-## <a name="packaged_taskmake_ready_at_thread_exit"></a><a name="make_ready_at_thread_exit"></a>packaged_task:: make_ready_at_thread_exit
+## <a name="packaged_taskmake_ready_at_thread_exit"></a><a name="make_ready_at_thread_exit"></a> packaged_task:: make_ready_at_thread_exit
 
 Wywołuje możliwy do wywołania obiekt, który jest przechowywany w *skojarzonym stanie asynchronicznym* , i niepodzielnie zapisuje zwracaną wartość.
 
@@ -103,7 +104,7 @@ W przeciwnym razie ten operator wywołuje `INVOKE(fn, args..., Ty)` , gdzie *Fn*
 
 W przeciwieństwie do [packaged_task:: operator ()](#op_call), skojarzony stan asynchroniczny nie jest ustawiony na wartość `ready` until po zniszczeniu wszystkich obiektów lokalnych wątków w wątku wywołującym. Zazwyczaj wątki, które są blokowane w skojarzonym stanie asynchronicznym, nie są odblokowywane do momentu zakończenia wątku wywołującego.
 
-## <a name="packaged_taskoperator"></a><a name="op_eq"></a>packaged_task:: operator =
+## <a name="packaged_taskoperator"></a><a name="op_eq"></a> packaged_task:: operator =
 
 Przenosi *skojarzony stan asynchroniczny* z określonego obiektu.
 
@@ -124,7 +125,7 @@ Obiekt `packaged_task`.
 
 *Po operacji nie ma* już skojarzonego stanu asynchronicznego.
 
-## <a name="packaged_taskoperator"></a><a name="op_call"></a>packaged_task:: operator ()
+## <a name="packaged_taskoperator"></a><a name="op_call"></a> packaged_task:: operator ()
 
 Wywołuje możliwy do wywołania obiekt, który jest przechowywany w *skojarzonym stanie asynchronicznym*, niepodzielnie zapisuje zwracaną wartość i ustawia stan na *gotowe*.
 
@@ -140,7 +141,7 @@ Jeśli ta metoda lub [make_ready_at_thread_exit](#make_ready_at_thread_exit) zos
 
 W przeciwnym razie ten operator wywołuje `INVOKE(fn, args..., Ty)` , gdzie *Fn* jest obiektem możliwym do przechowania w skojarzonym stanie asynchronicznym. Każda zwrócona wartość jest przechowywana niepodzielnie jako wynikowy skojarzony stan asynchroniczny, a stan jest ustawiony na gotowe. W efekcie wszystkie wątki, które są blokowane w skojarzonym stanie asynchronicznym, zostaną odblokowane.
 
-## <a name="packaged_taskoperator-bool"></a><a name="op_bool"></a>packaged_task:: operator — bool
+## <a name="packaged_taskoperator-bool"></a><a name="op_bool"></a> packaged_task:: operator — bool
 
 Określa, czy obiekt ma `associated asynchronous state` .
 
@@ -152,7 +153,7 @@ operator bool() const noexcept;
 
 **`true`** Jeśli obiekt ma skojarzony stan asynchroniczny; w przeciwnym razie **`false`** .
 
-## <a name="packaged_taskpackaged_task-constructor"></a><a name="packaged_task"></a>packaged_task::p Konstruktor ackaged_task
+## <a name="packaged_taskpackaged_task-constructor"></a><a name="packaged_task"></a> packaged_task::p Konstruktor ackaged_task
 
 Konstruuje `packaged_task` obiekt.
 
@@ -188,7 +189,7 @@ Trzeci Konstruktor konstruuje `packaged_task` obiekt, który ma kopię *Fn* prze
 
 Czwarty Konstruktor konstruuje `packaged_task` obiekt, który ma kopię *Fn* przechowywaną w skojarzonym stanie asynchronicznym, i używa `alloc` dla alokacji pamięci.
 
-## <a name="packaged_taskpackaged_task-destructor"></a><a name="dtorpackaged_task_destructor"></a>packaged_task:: ~ packaged_task, destruktor
+## <a name="packaged_taskpackaged_task-destructor"></a><a name="dtorpackaged_task_destructor"></a> packaged_task:: ~ packaged_task, destruktor
 
 Niszczy `packaged_task` obiekt.
 
@@ -200,7 +201,7 @@ Niszczy `packaged_task` obiekt.
 
 Jeśli *skojarzony stan asynchroniczny* nie jest *gotowy*, destruktor przechowuje [future_error](../standard-library/future-error-class.md) wyjątek, który ma kod błędu `broken_promise` jako wynik w skojarzonym stanie asynchronicznym, a wszystkie wątki, które są blokowane w skojarzonym stanie asynchronicznym, zostaną odblokowane.
 
-## <a name="packaged_taskreset"></a><a name="reset"></a>packaged_task:: Reset
+## <a name="packaged_taskreset"></a><a name="reset"></a> packaged_task:: Reset
 
 Używa nowego *skojarzonego stanu asynchronicznego* w celu zastąpienia istniejącego skojarzonego stanu asynchronicznego.
 
@@ -212,7 +213,7 @@ void reset();
 
 W efekcie ta metoda jest wykonywana `*this = packaged_task(move(fn))` , gdzie *Fn* jest obiektem funkcji, który jest przechowywany w skojarzonym stanie asynchronicznym dla tego obiektu. W związku z tym, stan obiektu jest wyczyszczony, a [get_future](#get_future), [operator ()](#op_call)i [make_ready_at_thread_exit](#make_ready_at_thread_exit) można wywołać tak jak w przypadku nowo skonstruowanego obiektu.
 
-## <a name="packaged_taskswap"></a><a name="swap"></a>packaged_task:: swap
+## <a name="packaged_taskswap"></a><a name="swap"></a> packaged_task:: swap
 
 Wymienia skojarzony stan asynchroniczny z określonym obiektem.
 
@@ -225,7 +226,7 @@ void swap(packaged_task& Right) noexcept;
 *Kliknij*\
 Obiekt `packaged_task`.
 
-## <a name="packaged_taskvalid"></a><a name="valid"></a>packaged_task:: prawidłowe
+## <a name="packaged_taskvalid"></a><a name="valid"></a> packaged_task:: prawidłowe
 
 Określa, czy obiekt ma `associated asynchronous state` .
 
@@ -237,7 +238,7 @@ bool valid() const;
 
 **`true`** Jeśli obiekt ma skojarzony stan asynchroniczny; w przeciwnym razie **`false`** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<future>](../standard-library/future.md)
