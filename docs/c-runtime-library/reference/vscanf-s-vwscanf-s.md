@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: vscanf_s, vwscanf_s'
 title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4bd44b3e89ec1358482ed6161907fd30f13e062d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342208"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
@@ -68,7 +69,7 @@ Funkcja **vscanf_s** odczytuje dane ze standardowego strumienia wejściowego **s
 
 **vwscanf_s** to dwubajtowa wersja **vscanf_s**; argument *formatu* **vwscanf_s** jest ciągiem znaków dwubajtowych. **vwscanf_s** i **vscanf_s** zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vscanf_s** nie obsługuje danych wejściowych ze strumienia Unicode.
 
-W przeciwieństwie do **vscanf** i **vwscanf**, **vscanf_s** i **vwscanf_s** wymagają określenia rozmiaru buforu dla wszystkich parametrów wejściowych typu **c**, **c**, **s**, **s**lub zestawów kontroli ciągów, które są ujęte w **[]**. Rozmiar buforu w znakach jest przesyłany jako dodatkowy parametr natychmiast po wskaźniku do buforu lub zmiennej. Rozmiar buforu w znakach dla **`wchar_t`** ciągu nie jest taki sam jak rozmiar w bajtach.
+W przeciwieństwie do **vscanf** i **vwscanf**, **vscanf_s** i **vwscanf_s** wymagają określenia rozmiaru buforu dla wszystkich parametrów wejściowych typu **c**, **c**, **s**, **s** lub zestawów kontroli ciągów, które są ujęte w **[]**. Rozmiar buforu w znakach jest przesyłany jako dodatkowy parametr natychmiast po wskaźniku do buforu lub zmiennej. Rozmiar buforu w znakach dla **`wchar_t`** ciągu nie jest taki sam jak rozmiar w bajtach.
 
 Rozmiar buforu zawiera kończący wartość null. Pola Specyfikacja szerokości można użyć, aby upewnić się, że token, który jest odczytywany, mieści się w buforze. Jeśli pole specyfikacji szerokości nie jest używane i odczyt tokenu jest zbyt duży, aby zmieścił się w buforze, nic nie jest zapisywane w tym buforze.
 
@@ -92,7 +93,7 @@ Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -157,11 +158,11 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

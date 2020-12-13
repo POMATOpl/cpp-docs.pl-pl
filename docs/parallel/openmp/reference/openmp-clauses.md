@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klauzul OpenMP
 title: Klauzule OpenMP
 ms.date: 03/20/2019
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 495f77003fa43922d49f2fc5203076cbf927f86f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3bdcb496238b2f8acef85819c43348c095293287
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505932"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342416"
 ---
 # <a name="openmp-clauses"></a>Klauzule OpenMP
 
@@ -49,7 +50,7 @@ Ogólne atrybuty:
 
 |Klauzula|Opis|
 |------|-----------|
-|[przypadku](#if-openmp)|Określa, czy pętla powinna być wykonywana równolegle, czy w szeregu.|
+|[if](#if-openmp)|Określa, czy pętla powinna być wykonywana równolegle, czy w szeregu.|
 |[num_threads](#num-threads)|Ustawia liczbę wątków w zespole wątku.|
 |[każe](#ordered-openmp-clauses)|Wymagane w przypadku instrukcji Parallel [for](openmp-directives.md#for-openmp) , jeśli [uporządkowana](openmp-directives.md#ordered-openmp-directives) dyrektywa ma być używana w pętli.|
 |[rozkład](#schedule)|Dotyczy dyrektywy [for](openmp-directives.md#for-openmp) .|
@@ -59,7 +60,7 @@ W przypadku atrybutów udostępniania danych:
 
 |Klauzula|Opis|
 |------|-----------|
-|[private](#private-openmp)|Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej.|
+|[użytek](#private-openmp)|Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej.|
 |[firstprivate](#firstprivate)|Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej i że zmienna powinna zostać zainicjowana przy użyciu wartości zmiennej, ponieważ istnieje przed równoległą konstrukcją.|
 |[lastprivate](#lastprivate)|Określa, że wersja zmiennej otaczającego kontekstu jest równa prywatnej wersji danego wątku wykonuje ostateczną iterację (konstrukcja pętla) lub ostatnią sekcję (#pragma sekcje).|
 |[udostępniać](#shared-openmp)|Określa, że co najmniej jedna zmienna powinna być współdzielona między wszystkie wątki.|
@@ -242,7 +243,7 @@ if(expression)
 
 ### <a name="parameters"></a>Parametry
 
-*wyrażenia*<br/>
+*expression*<br/>
 Całkowite wyrażenie, które zwraca wartość true (niezerowa), powoduje równoległe wykonywanie kodu w regionie równoległym. Jeśli wyrażenie zwróci wartość false (zero), region równoległy jest wykonywany w szeregu (za pomocą pojedynczego wątku).
 
 ### <a name="remarks"></a>Uwagi

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _CrtSetReportHook'
 title: _CrtSetReportHook
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-ms.openlocfilehash: 77c1e499c66a76027e872783e256754ef72e465d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1e99e17b3a245dfe78e5a0f7367e422f4dc97600
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342247"
 ---
 # <a name="_crtsetreporthook"></a>_CrtSetReportHook
 
@@ -55,9 +56,9 @@ Zwraca poprzednią funkcję raportowania zdefiniowaną przez klienta.
 
 ## <a name="remarks"></a>Uwagi
 
-**_CrtSetReportHook** umożliwia aplikacji użycie własnej funkcji raportowania w procesie raportowania biblioteki debugowania w czasie wykonywania C. W związku z tym zawsze, gdy [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) jest wywoływana w celu wygenerowania raportu debugowania, funkcja raportowania aplikacji jest wywoływana jako pierwsza. Ta funkcja umożliwia aplikacji wykonywanie operacji, takich jak filtrowanie raportów debugowania, aby można było skupić się na określonych typach alokacji lub wysłać raport do miejsc docelowych, które nie są dostępne za pomocą **_CrtDbgReport**. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtSetReportHook** są usuwane podczas przetwarzania wstępnego.
+**_CrtSetReportHook** umożliwia aplikacjom używanie własnej funkcji raportowania w procesie raportowania biblioteki debugowania w czasie wykonywania C. W związku z tym, za każdym razem, gdy [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) jest wywoływana w celu wygenerowania raportu debugowania, funkcja raportowania aplikacji jest wywoływana jako pierwsza. Ta funkcja umożliwia aplikacji wykonywanie operacji, takich jak filtrowanie raportów debugowania, aby można było skupić się na określonych typach alokacji lub wysłać raport do miejsc docelowych, które nie są dostępne przy użyciu **_CrtDbgReport**. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania do **_CrtSetReportHook** są usuwane podczas przetwarzania wstępnego.
 
-Aby uzyskać bardziej niezawodną wersję programu **_CrtSetReportHook**, zobacz [_CrtSetReportHook2](crtsetreporthook2-crtsetreporthookw2.md).
+Aby uzyskać bardziej niezawodną wersję **_CrtSetReportHook**, zobacz [_CrtSetReportHook2](crtsetreporthook2-crtsetreporthookw2.md).
 
 Funkcja **_CrtSetReportHook** instaluje nową funkcję raportowania zdefiniowaną przez klienta określoną w *reportHook* i zwraca poprzedni zdefiniowany przez klienta punkt zaczepienia. W poniższym przykładzie pokazano, jak ma być prototypem punkt zaczepienia raportu zdefiniowanego przez klienta:
 
@@ -65,9 +66,9 @@ Funkcja **_CrtSetReportHook** instaluje nową funkcję raportowania zdefiniowan�
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Jeśli *reportType* jest typem raportu debugowania ( **_CRT_WARN**, **_CRT_ERROR**lub **_CRT_ASSERT**), *komunikat* jest w pełni zmontowany komunikat użytkownika debugowania, który zostanie zawarty w raporcie, a **ReturnValue** jest wartością określony przez zdefiniowaną przez klienta funkcję raportowania, która powinna zostać zwrócona przez **_CrtDbgReport**. Pełny opis dostępnych typów raportów można znaleźć w funkcji [_CrtSetReportMode](crtsetreportmode.md) .
+Jeśli *reportType* jest typem raportu debugowania (**_CRT_WARN**, **_CRT_ERROR** lub **_CRT_ASSERT**), *komunikat* jest w pełni zmontowany komunikat użytkownika debugowania, który ma zostać zawarty w raporcie, a **ReturnValue** jest wartością określoną przez zdefiniowaną przez klienta funkcję raportowania, która powinna zostać zwrócona przez **_CrtDbgReport**. Pełny opis dostępnych typów raportów można znaleźć w funkcji [_CrtSetReportMode](crtsetreportmode.md) .
 
-Jeśli funkcja raportowania zdefiniowane przez klienta całkowicie obsługuje komunikat debugowania, taki jak nie jest wymagane dalsze raportowanie, funkcja powinna zwrócić **wartość true**. Gdy funkcja zwraca **wartość false**, **_CrtDbgReport** jest wywoływana w celu wygenerowania raportu debugowania przy użyciu bieżących ustawień typu raportu, trybu i pliku. Ponadto przez określenie wartości zwracanej **_CrtDbgReport** w **ReturnValue**, aplikacja może również kontrolować, czy występuje przerwanie debugowania. Pełny opis sposobu konfiguracji i generowania raportu debugowania można znaleźć w tematach **_CrtSetReportMode**, [_CrtSetReportFile](crtsetreportfile.md)i **_CrtDbgReport**.
+Jeśli funkcja raportowania zdefiniowane przez klienta całkowicie obsługuje komunikat debugowania, taki jak nie jest wymagane dalsze raportowanie, funkcja powinna zwrócić **wartość true**. Gdy funkcja zwraca **wartość false**, **_CrtDbgReport** jest wywoływana w celu wygenerowania raportu debugowania przy użyciu bieżących ustawień typu raportu, trybu i pliku. Ponadto, określając **_CrtDbgReport** wartość zwracaną w **ReturnValue**, aplikacja może również kontrolować, czy występuje przerwanie debugowania. Pełny opis sposobu konfiguracji i generowania raportu debugowania można znaleźć w temacie **_CrtSetReportMode**, [_CrtSetReportFile](crtsetreportfile.md)i **_CrtDbgReport**.
 
 Aby uzyskać więcej informacji na temat korzystania z innych funkcji w czasie wykonywania z możliwością podłączania i pisania własnych zdefiniowanych przez klienta funkcji Hook, zobacz [Zapisywanie funkcji punktu zaczepienia debugowania](/visualstudio/debugger/debug-hook-function-writing).
 
@@ -86,7 +87,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtGetReportHook](crtgetreporthook.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _setmbcp'
 title: _setmbcp
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: fe69360de2e6e0ebdea8c700ab398d56e669f022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342221"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -59,7 +60,7 @@ Zwraca wartość 0, jeśli strona kodowa została ustawiona pomyślnie. Jeśli p
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_setmbcp** określa nową stronę kodową wielobajtowego. Domyślnie system czasu wykonywania automatycznie ustawia stronę kodową wielobajtową na stronę kodową ANSI systemu. Ustawienie strony kodowej wielobajtowej ma wpływ na wszystkie procedury wielobajtowe, które nie są zależne od ustawień regionalnych. Można jednak wydać **_setmbcp** , aby użyć strony kodowej zdefiniowanej dla bieżących ustawień regionalnych (zobacz poniższą listę stałych manifestu i wyniki związanych z zachowaniem). Aby uzyskać listę wielobajtowych procedur, które są zależne od strony kodowej ustawień regionalnych, a nie strony kodowej wielobajtowej, zobacz [interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+Funkcja **_setmbcp** określa nową stronę kodową wielobajtowego. Domyślnie system czasu wykonywania automatycznie ustawia stronę kodową wielobajtową na stronę kodową ANSI systemu. Ustawienie strony kodowej wielobajtowej ma wpływ na wszystkie procedury wielobajtowe, które nie są zależne od ustawień regionalnych. Można jednak wydać **_setmbcp** , aby użyć strony kodowej zdefiniowanej dla bieżących ustawień regionalnych (zobacz poniższą listę stałych manifestu i wyniki związanych z zachowaniem). Aby uzyskać listę wielobajtowych procedur, które są zależne od strony kodowej ustawień regionalnych, a nie strony kodowej wielobajtowej, zobacz [interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
 Argument *CodePage* można ustawić na dowolną z następujących wartości:
 
@@ -85,7 +86,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
