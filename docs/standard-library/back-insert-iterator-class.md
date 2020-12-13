@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy back_insert_iterator
 title: back_insert_iterator — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 0a518253c28d89de6eeed51e152e11bfcb8bb969
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e8c188da7201ccb78866981ffb64e168d1a8fc32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132773"
 ---
 # <a name="back_insert_iterator-class"></a>back_insert_iterator — Klasa
 
@@ -60,11 +61,11 @@ Kontener musi spełniać wymagania dla sekwencji wstawiania na tył, gdzie jest 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**:\<iterator>
+**Nagłówek**: \<iterator>
 
 **Przestrzeń nazw:** std
 
-## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator:: back_insert_iterator
+## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a> back_insert_iterator:: back_insert_iterator
 
 Tworzy `back_insert_iterator` element, który wstawia elementy po ostatnim elemencie w kontenerze.
 
@@ -129,7 +130,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator:: container_type
+## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a> back_insert_iterator:: container_type
 
 Typ, który dostarcza kontener dla `back_insert_iterator` .
 
@@ -140,7 +141,7 @@ container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla **kontenera**parametrów szablonu.
+Typ jest synonimem dla **kontenera** parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -183,7 +184,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator:: operator\*
+## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a> back_insert_iterator:: operator\*
 
 Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* *i*  =  *x*.
 
@@ -197,7 +198,7 @@ Odwołanie do elementu wstawionego w tylnej części kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Służy do implementowania wyrażenia iteratora danych wyjściowych ** \* ITER**  =  **value**. Jeśli **ITER** jest iteratorem, który odnosi się do elementu w sekwencji, a następnie ** \* ITER**  =  **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
+Służy do implementowania wyrażenia iteratora danych wyjściowych **\* ITER**  =  . Jeśli **ITER** jest iteratorem, który odnosi się do elementu w sekwencji, a następnie **\* ITER**  =  **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -243,7 +244,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator:: operator + +
+## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a> back_insert_iterator:: operator + +
 
 Zwiększa `back_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.
 
@@ -304,7 +305,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator:: operator =
+## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a> back_insert_iterator:: operator =
 
 Dołącza lub wypycha wartość na zapleczu kontenera.
 
@@ -371,7 +372,7 @@ int main( )
 }
 ```
 
-## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator:: Reference
+## <a name="back_insert_iteratorreference"></a><a name="reference"></a> back_insert_iterator:: Reference
 
 Typ, który zawiera odwołanie do `back_insert_iterator` .
 
@@ -421,7 +422,7 @@ The vector vec is: ( 1 2 3 ).
 The last element in the vector vec is: 3.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<iterator>](../standard-library/iterator.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

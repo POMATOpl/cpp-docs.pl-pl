@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: przestrzeń nazw Concurrency:: Graphics'
 title: Concurrency::graphics — Przestrzeń nazw
 ms.date: 11/04/2016
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-ms.openlocfilehash: 942b3bbace85fa297bba6cd4b509f67006a4aed3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f4ab25a6bc6e7bfd318ea58bb6a7efe403c51a89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132837"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics — Przestrzeń nazw
 
@@ -23,7 +24,7 @@ namespace graphics;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="namespaces"></a>Namespaces
+### <a name="namespaces"></a>Przestrzenie nazw
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -84,6 +85,6 @@ namespace graphics;
 
 **Przestrzeń nazw:** Współbieżności
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
