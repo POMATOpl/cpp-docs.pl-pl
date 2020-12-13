@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: makra kontroli złożonej'
 title: Makra kontroli złożonej
 ms.date: 05/06/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 7ac13a11646faca53b38ec610dc0388bdd14d251
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0107f91350516bd0f7e35cf82a49f79ff3c5797e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141196"
 ---
 # <a name="composite-control-macros"></a>Makra kontroli złożonej
 

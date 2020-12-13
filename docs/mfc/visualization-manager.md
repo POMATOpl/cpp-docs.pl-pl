@@ -1,48 +1,49 @@
 ---
+description: 'Dowiedz się więcej o programie: Menedżer wizualizacji'
 title: Menedżer wizualizacji
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b99331503e4e7e69cc5d8a19fde7641c1b1daeeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143211"
 ---
 # <a name="visualization-manager"></a>Menedżer wizualizacji
 
-Menedżer visual jest obiektem, który steruje wyglądem całej aplikacji. Działa ona jako pojedyncza klasa gdzie umieścić kod rysowania dla swojej aplikacji. Biblioteka MFC zawiera kilka menedżerów wizualnych. Można również utworzyć visual menedżera, aby utworzyć widok niestandardowy dla swojej aplikacji. Na poniższych ilustracjach przedstawiono tej samej aplikacji, gdy włączone są różnych menedżerów wizualnych:
+Visual Manager jest obiektem, który steruje wyglądem całej aplikacji. Pełni rolę pojedynczej klasy, w której można umieścić cały kod rysowania aplikacji. Biblioteka MFC zawiera kilku menedżerów wizualizacji. Możesz również utworzyć własny Menedżer wizualizacji, jeśli chcesz utworzyć niestandardowy widok dla swojej aplikacji. Następujące obrazy przedstawiają tę samą aplikację, gdy są włączone różne menedżerów wizualnych:
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerWindows](../mfc/media/vmwindows.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerWindows") <br/>
-MyApp, który używa Menedżera visual CMFCVisualManagerWindows
+![MojaApl jako renderowany przez CMFCVisualManagerWindows](../mfc/media/vmwindows.png "MojaApl jako renderowany przez CMFCVisualManagerWindows") <br/>
+MojaApl korzystający z programu CMFCVisualManagerWindows Manager
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerVS2005") <br/>
-MyApp, który używa Menedżera visual CMFCVisualManagerVS2005
+![MojaApl jako renderowany przez CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "MojaApl jako renderowany przez CMFCVisualManagerVS2005") <br/>
+MojaApl korzystający z programu CMFCVisualManagerVS2005 Manager
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerOfficeXP") <br/>
-MyApp, który używa Menedżera visual CMFCVisualManagerOfficeXP
+![MojaApl jako renderowany przez CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "MojaApl jako renderowany przez CMFCVisualManagerOfficeXP") <br/>
+MojaApl korzystający z programu CMFCVisualManagerOfficeXP Manager
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2003") <br/>
-MyApp, który używa Menedżera visual CMFCVisualManagerOffice2003
+![MojaApl jako renderowany przez CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "MojaApl jako renderowany przez CMFCVisualManagerOffice2003") <br/>
+MojaApl korzystający z programu CMFCVisualManagerOffice2003 Manager
 
-![MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MyApp w postaci wyświetlanej przez CMFCVisualManagerOffice2007") <br/>
-MyApp, który używa Menedżera visual CMFCVisualManagerOffice2007
+![MojaApl jako renderowany przez CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MojaApl jako renderowany przez CMFCVisualManagerOffice2007") <br/>
+MojaApl korzystający z programu CMFCVisualManagerOffice2007 Manager
 
-Domyślnie visual manager przechowuje kod rysowania dla kilku elementów graficznego interfejsu użytkownika. Aby przekazać niestandardowe elementy interfejsu użytkownika, należy zastąpić powiązane metody rysowania visual menedżera. Aby uzyskać listę tych metod, zobacz [klasa CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md). Metody, które można przesłonić, aby zapewnić niestandardowy wygląd są wszystkie metody, które zaczyna się `OnDraw`.
+Domyślnie program Visual Manager utrzymuje kod rysowania dla kilku elementów graficznego interfejsu użytkownika. Aby zapewnić niestandardowe elementy interfejsu użytkownika, należy zastąpić powiązane metody rysowania programu Visual Manager. Aby zapoznać się z listą tych metod, zobacz [Klasa CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md). Metody, które można przesłonić w celu zapewnienia niestandardowego wyglądu, to wszystkie metody, które zaczynają się od `OnDraw` .
 
-Aplikacja może mieć tylko jeden `CMFCVisualManager` obiektu. Aby uzyskać wskaźnik do Menedżera visual w aplikacji, wywołaj funkcję statyczną [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Ponieważ dziedziczy wszystkich menedżerów wizualnych `CMFCVisualManager`, `CMFCVisualManager::GetInstance` metody rozpocznie się wskaźnik odpowiednie Menedżera visual, nawet wtedy, gdy tworzysz niestandardowy Menedżer wizualnego.
+Aplikacja może mieć tylko jeden `CMFCVisualManager` obiekt. Aby uzyskać wskaźnik do Menedżera wizualizacji dla aplikacji, wywołaj funkcję statyczną [CMFCVisualManager:: GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Ponieważ wszyscy menedżerowie wizualizacji dziedziczą z `CMFCVisualManager` , `CMFCVisualManager::GetInstance` Metoda otrzyma wskaźnik do odpowiedniego Menedżera wizualizacji, nawet jeśli utworzysz niestandardowy program Visual Manager.
 
-Jeśli chcesz utworzyć niestandardowe Menedżer wizualnego musi pochodzić z jej z Menedżer wizualnego, który już istnieje. Domyślna klasa wyprowadzenia z jest `CMFCVisualManager`. Jednak można użyć innego menedżera visual, jeśli lepiej przypomina, ma dla aplikacji. Na przykład, jeśli chcieli korzystać z `CMFCVisualManagerOffice2007` Menedżer wizualnego, ale chciała tylko zmienić wygląd separatory, uzyskujesz klasę niestandardową z `CMFCVisualManagerOffice2007`. W tym scenariuszu należy zastąpić tylko metody rysowania separatorów.
+Jeśli chcesz utworzyć niestandardowy Menedżer wizualizacji, musisz poprowadzić go z Menedżera Visual, który już istnieje. Domyślną klasą pochodną jest `CMFCVisualManager` . Można jednak użyć innego programu Visual Manager, jeśli jest lepiej podobny do tego, czego potrzebujesz w aplikacji. Na przykład jeśli chciałeś użyć `CMFCVisualManagerOffice2007` Menedżera wizualizacji, ale chciałeś tylko zmienić sposób wyglądu separatorów, możesz utworzyć klasę niestandardową z `CMFCVisualManagerOffice2007` . W tym scenariuszu należy zastąpić tylko metody dla separatorów rysowania.
 
-Istnieją dwa sposoby, aby użyć konkretnego Menedżera visual w aplikacji. Jednym ze sposobów jest wywołanie [CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) metody i przekazać odpowiednie Menedżera visual jako parametr. Poniższy przykład kodu pokazuje, jak skorzystać z `CMFCVisualManagerVS2005` visual manager przy użyciu tej metody:
+Istnieją dwa sposoby używania określonego programu Visual Manager dla aplikacji. Jednym ze sposobów jest wywołanie metody [CMFCVisualManager:: SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) i przekazanie odpowiedniego Menedżera wizualizacji jako parametru. Poniższy przykład kodu pokazuje, jak używać programu `CMFCVisualManagerVS2005` Visual Manager z tą metodą:
 
 ```cpp
 CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```
 
-Inny sposób, aby użyć Menedżera visual w aplikacji jest utworzenie go ręcznie. Aplikacja będzie używać tego nowego Menedżera visual dla wszystkich renderowania. Jednakże ponieważ może istnieć tylko jeden `CMFCVisualManager` obiektu na aplikację, trzeba będzie usunąć bieżący Menedżera visual, przed utworzeniem nowej. W poniższym przykładzie `CMyVisualManager` jest niestandardowy Menedżer wizualnego, który jest tworzony na podstawie `CMFCVisualManager`. Poniższa metoda zmiany, jakie visual manager służy do wyświetlania aplikacji, w zależności od indeksu:
+Innym sposobem korzystania z Menedżera wizualizacji w aplikacji jest ręczne utworzenie go. Aplikacja będzie używać tego nowego programu Visual Manager do wszystkich renderingów. Jednak ponieważ może istnieć tylko jeden `CMFCVisualManager` obiekt dla każdej aplikacji, przed utworzeniem nowego programu Visual Manager trzeba będzie usunąć bieżącego. W poniższym przykładzie `CMyVisualManager` jest to niestandardowy program Visual Manager pochodzący z `CMFCVisualManager` . Poniższa metoda zmieni, jakiego programu Visual Manager używa do wyświetlania aplikacji, w zależności od indeksu:
 
 ```cpp
 void CMyApp::SetSkin (int index)
@@ -72,7 +73,7 @@ void CMyApp::SetSkin (int index)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
 [Klasa CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md)

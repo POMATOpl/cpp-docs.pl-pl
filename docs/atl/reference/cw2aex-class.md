@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CW2AEX'
 title: Klasa CW2AEX
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-ms.openlocfilehash: 849cbe5c26d7c7af7a8925a26057b5777554471d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dfb654c43f2549cc1cfe58be064b2e6b9621fc69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330456"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140286"
 ---
 # <a name="cw2aex-class"></a>Klasa CW2AEX
 
 Ta klasa jest używana przez makra konwersji ciągów CT2AEX, CW2TEX, CW2CTEX i CT2CAEX oraz typedef CW2A.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +35,7 @@ class CW2AEX
 #### <a name="parameters"></a>Parametry
 
 *t_nBufferLength*<br/>
-Rozmiar buforu używanego w procesie tłumaczenia. Domyślna długość to 128 bajtów.
+Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -43,56 +44,56 @@ Rozmiar buforu używanego w procesie tłumaczenia. Domyślna długość to 128 b
 |Nazwa|Opis|
 |----------|-----------------|
 |[CW2AEX::CW2AEX](#cw2aex)|Konstruktor.|
-|[CW2AEX::~CW2AEX](#dtor)|Destruktor.|
+|[CW2AEX:: ~ CW2AEX](#dtor)|Destruktor.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CW2AEX::operator LPSTR](#operator_lpstr)|Operator konwersji.|
+|[CW2AEX:: operator LPSTR](#operator_lpstr)|Operator konwersji.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CW2AEX::m_psz](#m_psz)|Element członkowski danych, który przechowuje ciąg źródłowy.|
-|[CW2AEX::m_szBuffer](#m_szbuffer)|Bufor statyczny, używany do przechowywania przekonwertowanego ciągu.|
+|[CW2AEX:: m_psz](#m_psz)|Element członkowski danych przechowujący ciąg źródłowy.|
+|[CW2AEX:: m_szBuffer](#m_szbuffer)|Bufor statyczny używany do przechowywania przekonwertowanego ciągu.|
 
 ## <a name="remarks"></a>Uwagi
 
 O ile nie jest wymagana dodatkowa funkcjonalność, użyj CT2AEX, CW2TEX, CW2CTEX, CT2CAEX lub CW2A w kodzie.
 
-Ta klasa zawiera bufor statyczny o stałym rozmiarze, który jest używany do przechowywania wyniku konwersji. Jeśli wynik jest zbyt duży, aby zmieścić się w buforze statycznym, klasa przydziela pamięć za pomocą **malloc**, zwalniając pamięć, gdy obiekt wykracza poza zakres. Gwarantuje to, że w przeciwieństwie do makr konwersji tekstu dostępnych w poprzednich wersjach ATL, ta klasa jest bezpieczna w użyciu w pętlach i nie przepełnia stosu.
+Ta klasa zawiera bufor statyczny o stałym rozmiarze, który jest używany do przechowywania wyniku konwersji. Jeśli wynik jest zbyt duży, aby zmieścił się w buforze statycznym, Klasa przydziela pamięć przy użyciu **malloc**, zwalniając pamięć, gdy obiekt wykracza poza zakres. Dzięki temu, w przeciwieństwie do makr konwersji tekstu dostępnych we wcześniejszych wersjach ATL, ta klasa jest bezpieczna do użycia w pętlach i nie przechodzą stosu.
 
-Jeśli klasa próbuje przydzielić pamięć na stercie i `AtlThrow` kończy się niepowodzeniem, wywoła argument E_OUTOFMEMORY.
+Jeśli klasa próbuje przydzielić pamięć na stercie i kończy się niepowodzeniem, wywoła `AtlThrow` z argumentem E_OUTOFMEMORY.
 
-Domyślnie klasy konwersji ATL i makra używają strony kodowej ANSI bieżącego wątku do konwersji. Jeśli chcesz zastąpić to zachowanie dla określonej konwersji, należy określić stronę kodową jako drugi parametr do konstruktora dla klasy.
+Domyślnie klasy konwersji ATL i makra używają strony kodowej ANSI bieżącego wątku dla konwersji. Jeśli chcesz przesłonić to zachowanie dla określonej konwersji, określ stronę kodową jako drugi parametr konstruktora dla klasy.
 
 Następujące makra są oparte na tej klasie:
 
-- 2as
+- CT2AEX
 
-- CW2TEX ( CW2TEX )
+- CW2TEX
 
-- CW2CTEX ( CW2CTEX )
+- CW2CTEX
 
-- CT2CAEX (ct2caex)
+- CT2CAEX
 
-Następująca typedef jest oparta na tej klasie:
+Następujący element typedef jest oparty na tej klasie:
 
-- CW2A ( CW2A )
+- CW2A
 
-Aby zapoznać się z tymi makrami konwersji tekstu, zobacz [Makra konwersji ciągów ATL i MFC](string-conversion-macros.md).
+Aby zapoznać się z tymi makrami konwersji tekstu, zobacz [makra konwersji ATL i MFC String](string-conversion-macros.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz [ATL i MFC String Konwersja Makra](string-conversion-macros.md) na przykład przy użyciu tych makr konwersji ciągów.
+Zobacz [makra konwersji ciągów ATL i MFC,](string-conversion-macros.md) aby zapoznać się z przykładem użycia tych makr konwersji ciągów.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlconv.h
+**Nagłówek:** atlconv. h
 
-## <a name="cw2aexcw2aex"></a><a name="cw2aex"></a>CW2AEX::CW2AEX
+## <a name="cw2aexcw2aex"></a><a name="cw2aex"></a> CW2AEX::CW2AEX
 
 Konstruktor.
 
@@ -103,17 +104,17 @@ CW2AEX(LPCWSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Psz*<br/>
-Ciąg tekstowy do konwersji.
+*psz*<br/>
+Ciąg tekstowy do przekonwertowania.
 
-*strona nCodePage*<br/>
-Strona kodowa używana do przeprowadzania konwersji. Zobacz omówienie parametrów strony kodowej dla funkcji SDK systemu Windows [MultiByteToWideChar,](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) aby uzyskać więcej szczegółów.
+*nCodePage*<br/>
+Strona kodowa użyta do przeprowadzenia konwersji. Aby uzyskać więcej informacji, zobacz Omówienie parametrów strony kodowej dla funkcji Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) .
 
 ### <a name="remarks"></a>Uwagi
 
-Przydziela bufor używany w procesie tłumaczenia.
+Przypisuje bufor używany w procesie tłumaczenia.
 
-## <a name="cw2aexcw2aex"></a><a name="dtor"></a>CW2AEX::~CW2AEX
+## <a name="cw2aexcw2aex"></a><a name="dtor"></a> CW2AEX:: ~ CW2AEX
 
 Destruktor.
 
@@ -123,25 +124,25 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia przydzielony bufor.
+Zwalnia przydzieloną bufor.
 
-## <a name="cw2aexm_psz"></a><a name="m_psz"></a>CW2AEX::m_psz
+## <a name="cw2aexm_psz"></a><a name="m_psz"></a> CW2AEX:: m_psz
 
-Element członkowski danych, który przechowuje ciąg źródłowy.
+Element członkowski danych przechowujący ciąg źródłowy.
 
 ```
 LPSTR m_psz;
 ```
 
-## <a name="cw2aexm_szbuffer"></a><a name="m_szbuffer"></a>CW2AEX::m_szBuffer
+## <a name="cw2aexm_szbuffer"></a><a name="m_szbuffer"></a> CW2AEX:: m_szBuffer
 
-Bufor statyczny, używany do przechowywania przekonwertowanego ciągu.
+Bufor statyczny używany do przechowywania przekonwertowanego ciągu.
 
 ```
 char m_szBuffer[t_nBufferLength];
 ```
 
-## <a name="cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CW2AEX::operator LPSTR
+## <a name="cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a> CW2AEX:: operator LPSTR
 
 Operator konwersji.
 

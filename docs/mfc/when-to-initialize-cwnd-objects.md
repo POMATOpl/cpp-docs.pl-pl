@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Kiedy inicjować obiekty CWnd'
 title: Kiedy inicjować obiekty CWnd
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 - HWND, when attached to CWnd object
 - CWnd objects [MFC], when to initialize
 ms.assetid: 4d31bcb1-73db-4f2f-b71c-89b087569a10
-ms.openlocfilehash: aa396ade2e8ab4e1245e161423de7bd5bfafaaf8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89d40b826507574fddd41364ac6cecc526663519
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142769"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Kiedy inicjować obiekty CWnd
 
-Nie można utworzyć własne podrzędne systemu windows lub wywołaniem dowolnej funkcji interfejsu Windows API w Konstruktorze typu `CWnd`-pochodnych obiektu. Jest to spowodowane `HWND` dla `CWnd` obiekt nie został jeszcze utworzony. Inicjowanie najbardziej specyficzne dla Windows, takie jak dodanie okien podrzędnych, należy wykonać w [OnCreate](../mfc/reference/cwnd-class.md#oncreate) obsługi wiadomości.
+Nie można utworzyć własnych okien podrzędnych lub wywołać dowolnych funkcji interfejsu API systemu Windows w konstruktorze `CWnd` obiektu pochodnego. Dzieje się tak, ponieważ `HWND` dla `CWnd` obiektu nie został jeszcze utworzony. Większość inicjowania specyficznych dla systemu Windows, takich jak dodawanie okien podrzędnych, musi zostać wykonana w programie obsługi komunikatów [OnCreate](../mfc/reference/cwnd-class.md#oncreate) .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
 
 - [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie okien ramowych](../mfc/using-frame-windows.md)
+[Korzystanie z okien ramowych](../mfc/using-frame-windows.md)

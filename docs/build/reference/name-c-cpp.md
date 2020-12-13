@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Nazwa (C/C++)'
 title: NAZWA (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-ms.openlocfilehash: d0813befc622db72e095c449794405fc5d58465b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7444aa20539b47b1f04d17a266a0b65a552af3f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137777"
 ---
 # <a name="name-cc"></a>NAZWA (C/C++)
 
-Określa nazwę pliku głównego produktu.
+Określa nazwę głównego pliku wyjściowego.
 
 ```
 NAME [application][BASE=address]
@@ -23,10 +24,10 @@ NAME [application][BASE=address]
 
 ## <a name="remarks"></a>Uwagi
 
-Sposób równoważny, aby określić nazwę pliku wyjściowego jest za pomocą [/OUT](out-output-file-name.md) — opcja konsolidatora i sposób równoważny, aby ustawić adres podstawowy jest [/BASE](base-base-address.md) — opcja konsolidatora. Jeśli są określone oba/OUT przesłania **nazwa**.
+Odpowiednikiem metody określania nazwy pliku wyjściowego jest z opcją konsolidatora [/out](out-output-file-name.md) , a odpowiednikiem sposobu ustawiania adresu podstawowego jest [/Base](base-base-address.md) opcji konsolidatora. Jeśli oba są określone,/OUT zastępuje **nazwę**.
 
-Jeśli tworzysz bibliotekę DLL, nazwa mają wpływ tylko na nazwy biblioteki DLL.
+W przypadku kompilowania biblioteki DLL nazwa będzie miała wpływ tylko na nazwę biblioteki DLL.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)
+[Reguły dla instrukcji Module-Definition](rules-for-module-definition-statements.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa IEnumOnSTLImpl'
 title: Klasa IEnumOnSTLImpl
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-ms.openlocfilehash: 2fbe6ccfbea2836c42a054da7ea9ebeac4e1555d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33bc34288ebd03f987532ebb078fed62ce2204c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139493"
 ---
 # <a name="ienumonstlimpl-class"></a>Klasa IEnumOnSTLImpl
 
-Ta klasa definiuje interfejs modułu wyliczacza na podstawie kolekcji biblioteki standardowej języka C++.
+Ta klasa definiuje interfejs modułu wyliczającego na podstawie standardowej kolekcji biblioteki języka C++.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,20 +37,20 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*Podstawowej*<br/>
-Wyliczyć COM. Zobacz [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) na przykład.
+*Opiera*<br/>
+Moduł wyliczający COM. Zapoznaj się z przykładem [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
 *piid*<br/>
-Wskaźnik do identyfikatora interfejsu modułu wyliczanego.
+Wskaźnik do identyfikatora interfejsu w interfejsie modułu wyliczającego.
 
 *T*<br/>
-Typ elementu udostępniane przez interfejs modułu wyliczacza.
+Typ elementu uwidocznionego przez interfejs modułu wyliczającego.
 
-*Kopii*<br/>
+*Kopiuj*<br/>
 [Klasa zasad kopiowania](../../atl/atl-copy-policy-classes.md).
 
-*Typ sortowania*<br/>
-Klasa kontenera biblioteki standardowej języka C++.
+*CollType*<br/>
+Klasa kontenera standardowej biblioteki języka C++.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -57,30 +58,30 @@ Klasa kontenera biblioteki standardowej języka C++.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IEnumOnSTLImpl::Klonuj](#clone)|Wdrożenie **Clone**.|
-|[IEnumOnSTLImpl::Init](#init)|Inicjuje wyliczacz.|
-|[IEnumOnSTLImpl::Dalej](#next)|Wdrożenie **Next**.|
-|[IEnumOnSTLImpl::Reset](#reset)|Implementacja **Reset**.|
-|[IEnumOnSTLImpl::Pomiń](#skip)|Wdrożenie **Skip**.|
+|[IEnumOnSTLImpl:: Clone](#clone)|Implementacja **klonowania**.|
+|[IEnumOnSTLImpl:: init](#init)|Inicjuje moduł wyliczający.|
+|[IEnumOnSTLImpl:: Next](#next)|Implementacja **następnej**.|
+|[IEnumOnSTLImpl:: Reset](#reset)|Implementacja **Reset**.|
+|[IEnumOnSTLImpl:: Skip](#skip)|Implementacja **pomijania**.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IEnumOnSTLImpl::m_iter](#m_iter)|Iterator, który reprezentuje bieżącą pozycję wylicznika w kolekcji.|
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Wskaźnik do kontenera Biblioteki standardowej języka C++, zawierający elementy, które mają być wyliczone.|
-|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|Wskaźnik `IUnknown` obiektu dostarczającego kolekcję.|
+|[IEnumOnSTLImpl:: m_iter](#m_iter)|Iterator reprezentujący bieżącą pozycję modułu wyliczającego w kolekcji.|
+|[IEnumOnSTLImpl:: m_pcollection](#m_pcollection)|Wskaźnik do kontenera standardowej biblioteki C++ przechowującego elementy do wyliczenia.|
+|[IEnumOnSTLImpl:: m_spUnk](#m_spunk)|`IUnknown`Wskaźnik obiektu dostarczającego kolekcję.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IEnumOnSTLImpl`zapewnia implementację interfejsu modułu wyliczającego COM, w którym wyliczone elementy są przechowywane w kontenerze zgodnym z biblioteką standardową języka C++. Ta klasa jest analogiczna do [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) klasy, która zapewnia implementację dla interfejsu modułu wyliczacza na podstawie tablicy.
+`IEnumOnSTLImpl` zapewnia implementację interfejsu modułu wyliczającego COM, w którym wyliczane elementy są przechowywane w kontenerze zgodnym z biblioteką języka C++ standard. Ta klasa jest analogiczna do klasy [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) , która dostarcza implementację interfejsu modułu wyliczającego na podstawie tablicy.
 
 > [!NOTE]
-> Zobacz [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) szczegółowe informacje na `CComEnumImpl` `IEnumOnSTLImpl`temat dalszych różnic między i .
+> Zobacz [CComEnumImpl:: init](../../atl/reference/ccomenumimpl-class.md#init) , aby uzyskać szczegółowe informacje na temat dalszych różnic między `CComEnumImpl` i `IEnumOnSTLImpl` .
 
-Zazwyczaj *nie* trzeba tworzyć własne klasy modułu wyliczającego przez wynikające z tej implementacji interfejsu. Jeśli chcesz użyć wylicznika dostarczonego przez ATL na podstawie kontenera Biblioteki standardowej języka C++, częściej można utworzyć wystąpienie [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)lub utworzyć klasę kolekcji, która zwraca wyliczenia, wywodząc się z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).
+Zazwyczaj *nie* trzeba tworzyć własnej klasy modułu wyliczającego, pobierając ją z tej implementacji interfejsu. Jeśli chcesz użyć modułu wyliczającego opartego na procesorze ATL w oparciu o kontener standardowej biblioteki C++, jest to bardziej powszechne, aby utworzyć wystąpienie [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)lub utworzyć klasę kolekcji, która zwraca moduł wyliczający w wyniku z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).
 
-Jeśli jednak trzeba podać niestandardowy moduł wyliczania (na przykład taki, który udostępnia interfejsy oprócz interfejsu modułu wyliczacza), można wyprowadzić z tej klasy. W tej sytuacji jest prawdopodobne, że trzeba zastąpić [Clone](#clone) metody, aby zapewnić własną implementację.
+Jednakże w przypadku konieczności zapewnienia niestandardowego modułu wyliczającego (na przykład, który uwidacznia interfejsy oprócz interfejsu wyliczającego) można utworzyć z tej klasy. W takiej sytuacji prawdopodobnie trzeba przesłonić metodę [klonowania](#clone) , aby zapewnić własną implementację.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -90,11 +91,11 @@ Jeśli jednak trzeba podać niestandardowy moduł wyliczania (na przykład taki,
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom.h
+**Nagłówek:** atlcom. h
 
-## <a name="ienumonstlimplinit"></a><a name="init"></a>IEnumOnSTLImpl::Init
+## <a name="ienumonstlimplinit"></a><a name="init"></a> IEnumOnSTLImpl:: init
 
-Inicjuje wyliczacz.
+Inicjuje moduł wyliczający.
 
 ```
 HRESULT Init(
@@ -104,11 +105,11 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkForRelease (Nie ma wersji 1000)*<br/>
-[w] Wskaźnik `IUnknown` obiektu, który musi być utrzymywany przy życiu w okresie istnienia wyliczacza. Przekaż wartość NULL, jeśli taki obiekt nie istnieje.
+*pUnkForRelease*<br/>
+podczas `IUnknown` Wskaźnik obiektu, który musi być utrzymywany w okresie istnienia modułu wyliczającego. Przekaż wartość NULL, jeśli taki obiekt nie istnieje.
 
-*Kolekcji*<br/>
-Odwołanie do kontenera biblioteki standardowej języka C++, który przechowuje elementy, które mają być wyliczone.
+*zbiera*<br/>
+Odwołanie do kontenera standardowej biblioteki języka C++, który zawiera elementy do wyliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -116,13 +117,13 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli przekażesz `Init` odwołanie do kolekcji przechowywane w innym obiekcie, można użyć *pUnkForRelease* parametru, aby upewnić się, że obiekt i kolekcja posiada, jest dostępna tak długo, jak wyliczacz potrzebuje go.
+Jeśli przekazujesz `Init` odwołanie do kolekcji przechowywanej w innym obiekcie, możesz użyć parametru *pUnkForRelease* , aby upewnić się, że obiekt i kolekcja, które przechowuje, są dostępne tak długo, jak moduł wyliczający wymaga tego.
 
-Należy wywołać tę metodę przed przekazaniem wskaźnika do interfejsu modułu wyliczającego z powrotem do wszystkich klientów.
+Należy wywołać tę metodę przed przekazaniem wskaźnika do interfejsu modułu wyliczającego z powrotem do dowolnego klienta.
 
-## <a name="ienumonstlimplclone"></a><a name="clone"></a>IEnumOnSTLImpl::Klonuj
+## <a name="ienumonstlimplclone"></a><a name="clone"></a> IEnumOnSTLImpl:: Clone
 
-Ta metoda zapewnia implementację **Clone** metody, tworząc `CComEnumOnSTL`obiekt typu, inicjując go z tej samej kolekcji i iteratora używane przez bieżący obiekt i zwracając interfejs na nowo utworzony obiekt.
+Ta metoda zapewnia implementację metody **klonowania** przez utworzenie obiektu typu `CComEnumOnSTL` , zainicjowanie go z tą samą kolekcją i iteratorem używanym przez bieżący obiekt i zwróceniem interfejsu na nowo utworzony obiekt.
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -130,16 +131,16 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parametry
 
-*ppEnum (polski)*<br/>
-[na zewnątrz] Interfejs modułu wyliczanego na nowo utworzony obiekt sklonowany z bieżącego modułu wyliczanego.
+*ppEnum*<br/>
+określoną Interfejs modułu wyliczającego na nowo utworzonym obiekcie sklonowanym z bieżącego modułu wyliczającego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-## <a name="ienumonstlimplm_spunk"></a><a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk
+## <a name="ienumonstlimplm_spunk"></a><a name="m_spunk"></a> IEnumOnSTLImpl:: m_spUnk
 
-Wskaźnik `IUnknown` obiektu dostarczającego kolekcję.
+`IUnknown`Wskaźnik obiektu dostarczającego kolekcję.
 
 ```
 CComPtr<IUnknown> m_spUnk;
@@ -147,11 +148,11 @@ CComPtr<IUnknown> m_spUnk;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten inteligentny wskaźnik utrzymuje odwołanie do obiektu przekazane do [IEnumOnSTLImpl::Init](#init), zapewniając, że pozostaje żywy w okresie istnienia wylicznika.
+Ten inteligentny wskaźnik zachowuje odwołanie do obiektu przenoszonego do [IEnumOnSTLImpl:: init](#init), upewniając się, że pozostaje aktywny w okresie istnienia modułu wyliczającego.
 
-## <a name="ienumonstlimplm_pcollection"></a><a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection
+## <a name="ienumonstlimplm_pcollection"></a><a name="m_pcollection"></a> IEnumOnSTLImpl:: m_pcollection
 
-Ten element członkowski wskazuje na kolekcję, która udostępnia dane napędzające implementację interfejsu modułu wyliczanego.
+Ten element członkowski wskazuje kolekcję, która dostarcza dane prowadzące do implementacji interfejsu modułu wyliczającego.
 
 ```
 CollType* m_pcollection;
@@ -159,19 +160,19 @@ CollType* m_pcollection;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten element członkowski jest inicjowany przez wywołanie [IEnumOnSTLImpl::Init](#init).
+Ten element członkowski jest inicjowany przez wywołanie [IEnumOnSTLImpl:: init](#init).
 
-## <a name="ienumonstlimplm_iter"></a><a name="m_iter"></a>IEnumOnSTLImpl::m_iter
+## <a name="ienumonstlimplm_iter"></a><a name="m_iter"></a> IEnumOnSTLImpl:: m_iter
 
-Ten element członkowski przechowuje iterator używany do oznaczania bieżącej pozycji w kolekcji i przechodzenia do kolejnych elementów.
+Ten element członkowski zawiera iterator używany do oznaczania bieżącej pozycji w kolekcji i przechodzenia do kolejnych elementów.
 
 ```
 CollType::iterator m_iter;
 ```
 
-## <a name="ienumonstlimplnext"></a><a name="next"></a>IEnumOnSTLImpl::Dalej
+## <a name="ienumonstlimplnext"></a><a name="next"></a> IEnumOnSTLImpl:: Next
 
-Ta metoda zapewnia implementację **Next** metody.
+Ta metoda zapewnia implementację **następnej** metody.
 
 ```
 STDMETHOD(Next)(
@@ -182,22 +183,22 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>Parametry
 
-*Celt*<br/>
-[w] Liczba żądanych elementów.
+*celt*<br/>
+podczas Liczba żądanych elementów.
 
-*rgelt ( rgelt )*<br/>
-[na zewnątrz] Tablica, która ma być wypełniona elementami.
+*rgelt*<br/>
+określoną Tablica, która ma zostać wypełniona elementami.
 
 *pceltFetched*<br/>
-[na zewnątrz] Liczba elementów faktycznie zwróconych w *rgelt*. Może to być mniejsza niż *celt,* jeśli mniej niż *celt* elementy pozostają na liście.
+określoną Liczba elementów faktycznie zwróconych w *rgelt*. Może to być mniejsze niż *celt* , jeśli na liście pozostanie mniej niż *celt* elementów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-## <a name="ienumonstlimplreset"></a><a name="reset"></a>IEnumOnSTLImpl::Reset
+## <a name="ienumonstlimplreset"></a><a name="reset"></a> IEnumOnSTLImpl:: Reset
 
-Ta metoda zapewnia implementację **Reset** metody.
+Ta metoda zapewnia implementację metody **Reset** .
 
 ```
 STDMETHOD(Reset)(void);
@@ -207,9 +208,9 @@ STDMETHOD(Reset)(void);
 
 Standardowa wartość HRESULT.
 
-## <a name="ienumonstlimplskip"></a><a name="skip"></a>IEnumOnSTLImpl::Pomiń
+## <a name="ienumonstlimplskip"></a><a name="skip"></a> IEnumOnSTLImpl:: Skip
 
-Ta metoda zapewnia implementację **Skip** metody.
+Ta metoda zapewnia implementację metody **Skip** .
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -217,8 +218,8 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parametry
 
-*Celt*<br/>
-[w] Liczba elementów do pominięcia.
+*celt*<br/>
+podczas Liczba elementów do pominięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 

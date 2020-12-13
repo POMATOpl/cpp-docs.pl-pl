@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny C1104'
 title: Błąd krytyczny C1104
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1104
 ms.assetid: 45bd85c4-77d3-4d3c-b167-49c563aefb4d
-ms.openlocfilehash: a26e65e98b44a69eb14daf6d835fafb23362dfa2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4cc9c46850e864d0de867c99aabb635a5fcd3f9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747335"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144909"
 ---
 # <a name="fatal-error-c1104"></a>Błąd krytyczny C1104
 
 Błąd krytyczny podczas importowania identyfikatora LIBID: "Message"
 
-Kompilator wykrył problem podczas importowania biblioteki typów.  Na przykład nie można określić biblioteki typów z identyfikatora LIBID, a także określić `no_registry`.
+Kompilator wykrył problem podczas importowania biblioteki typów.  Na przykład nie można określić biblioteki typów z identyfikatora LIBID, a także określić `no_registry` .
 
 Aby uzyskać więcej informacji, zobacz [#import dyrektywie](../../preprocessor/hash-import-directive-cpp.md).
 

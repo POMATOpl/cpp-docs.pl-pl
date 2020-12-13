@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie tekstury
 title: texture — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: b8a37293166ec21aeb9410f05fb70c9753ec4f22
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d8712f0d8ef3a66c921b63ae938f575e982d3d97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142756"
 ---
 # <a name="texture-class"></a>texture — Klasa
 
@@ -65,7 +66,7 @@ Ranga tekstury.
 |----------|-----------------|
 |[copy_to](#copy_to)|Kopiuje `texture` obiekt do miejsca docelowego, wykonując kopię głęboką.|
 |[data](#data)|Zwraca wskaźnik procesora CPU do danych pierwotnych tej tekstury.|
-|[Pobierz](#get)|Zwraca wartość elementu w określonym indeksie.|
+|[get](#get)|Zwraca wartość elementu w określonym indeksie.|
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|Zwraca [accelerator_view](accelerator-view-class.md) , który jest preferowanym obiektem docelowym dla tej tekstury, do której ma zostać skopiowane.|
 |[get_depth_pitch](#get_depth_pitch)|Zwraca liczbę bajtów między każdym wycinkiem głębokości w tekstury przemieszczania 3D na PROCESORze.|
 |[get_row_pitch](#get_row_pitch)|Zwraca liczbę bajtów między każdym wierszem w tekstury przemieszczania 2D lub 3W na PROCESORze.|
@@ -76,7 +77,7 @@ Ranga tekstury.
 |Nazwa|Opis|
 |----------|-----------------|
 |[operator ()](#operator_call)|Zwraca wartość elementu, która jest określona przez parametry.|
-|[operator\[\]](#operator_at)|Zwraca element, który znajduje się w określonym indeksie.|
+|[zakład\[\]](#operator_at)|Zwraca element, który znajduje się w określonym indeksie.|
 |[operator =](#operator_eq)|Kopiuje określony obiekt [tekstury](texture-class.md) do tego.|
 
 ### <a name="public-constants"></a>Stałe publiczne
@@ -105,7 +106,7 @@ Ranga tekstury.
 
 **Przestrzeń nazw:** Concurrency:: Graphics
 
-## <a name="texture"></a><a name="dtor"></a>~ Texture
+## <a name="texture"></a><a name="dtor"></a> ~ Texture
 
 Niszczy `texture` obiekt.
 
@@ -113,7 +114,7 @@ Niszczy `texture` obiekt.
 ~texture() restrict(cpu);
 ```
 
-## <a name="associated_accelerator_view"></a><a name="associated_accelerator_view"></a>associated_accelerator_view
+## <a name="associated_accelerator_view"></a><a name="associated_accelerator_view"></a> associated_accelerator_view
 
 Pobiera [accelerator_view](accelerator-view-class.md) , który jest preferowanym obiektem docelowym dla tej tekstury, do której będzie kopiowany.
 
@@ -121,7 +122,7 @@ Pobiera [accelerator_view](accelerator-view-class.md) , który jest preferowanym
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
 ```
 
-## <a name="copy_to"></a><a name="copy_to"></a>copy_to
+## <a name="copy_to"></a><a name="copy_to"></a> copy_to
 
 Kopiuje `texture` obiekt do miejsca docelowego, wykonując kopię głęboką.
 
@@ -141,7 +142,7 @@ Ranga tekstury.
 *value_type*<br/>
 Typ elementów w tekstury.
 
-## <a name="data"></a><a name="data"></a>Data
+## <a name="data"></a><a name="data"></a> Data
 
 Zwraca wskaźnik procesora CPU do danych pierwotnych tej tekstury.
 
@@ -155,7 +156,7 @@ const void* data() const restrict(cpu);
 
 Wskaźnik do danych pierwotnych tekstury.
 
-## <a name="depth_pitch"></a><a name="depth_pitch"></a>depth_pitch
+## <a name="depth_pitch"></a><a name="depth_pitch"></a> depth_pitch
 
 Pobiera liczbę bajtów między każdym wycinkem głębokości w tekstury przemieszczania 3D na PROCESORze.
 
@@ -163,7 +164,7 @@ Pobiera liczbę bajtów między każdym wycinkem głębokości w tekstury przemi
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;
 ```
 
-## <a name="get"></a><a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a> Pobierz
 
 Zwraca wartość elementu w określonym indeksie.
 
@@ -180,7 +181,7 @@ Indeks elementu.
 
 Wartość elementu w określonym indeksie.
 
-## <a name="get_associated_accelerator_view"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view
+## <a name="get_associated_accelerator_view"></a><a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
 
 Zwraca accelerator_view, który jest preferowanym obiektem docelowym dla tej tekstury, do której ma zostać skopiowane.
 
@@ -192,7 +193,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 
 [Accelerator_view](accelerator-view-class.md) to preferowany element docelowy dla tej tekstury, do której ma zostać skopiowany.
 
-## <a name="get_depth_pitch"></a><a name="get_depth_pitch"></a>get_depth_pitch
+## <a name="get_depth_pitch"></a><a name="get_depth_pitch"></a> get_depth_pitch
 
 Zwraca liczbę bajtów między każdym wycinkiem głębokości w tekstury przemieszczania 3D na PROCESORze.
 
@@ -204,7 +205,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 
 Liczba bajtów między każdym wycinkem głębokości w tekstury przemieszczania 3D na PROCESORze.
 
-## <a name="get_row_pitch"></a><a name="get_row_pitch"></a>get_row_pitch
+## <a name="get_row_pitch"></a><a name="get_row_pitch"></a> get_row_pitch
 
 Zwraca liczbę bajtów między każdym wierszem w 2-wymiarowej teksturze tymczasowej lub między każdym wierszem wycinka głębi w 3-wymiarowej teksturze tymczasowej.
 
@@ -216,7 +217,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 Liczba bajtów między każdym wierszem w 2-wymiarowej teksturze tymczasowej lub między każdym wierszem wycinka głębi w 3-wymiarowej teksturze tymczasowej.
 
-## <a name="operator"></a><a name="operator_call"></a>operator ()
+## <a name="operator"></a><a name="operator_call"></a> operator ()
 
 Zwraca wartość elementu, która jest określona przez parametry.
 
@@ -258,7 +259,7 @@ Ranga indeksu.
 
 Wartość elementu, która jest określona przez parametry.
 
-## <a name="operator"></a><a name="operator_at"></a>operator []
+## <a name="operator"></a><a name="operator_at"></a> operator []
 
 Zwraca element, który znajduje się w określonym indeksie.
 
@@ -280,7 +281,7 @@ Indeks.
 
 Element o określonym indeksie.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 Kopiuje określony obiekt [tekstury](texture-class.md) do tego.
 
@@ -301,7 +302,7 @@ texture& operator= (
 
 Odwołanie do tego `texture` obiektu.
 
-## <a name="rank"></a><a name="rank"></a>stopni
+## <a name="rank"></a><a name="rank"></a> stopni
 
 Pobiera rangę `texture` obiektu.
 
@@ -309,7 +310,7 @@ Pobiera rangę `texture` obiektu.
 static const int rank = _Rank;
 ```
 
-## <a name="row_pitch"></a><a name="row_pitch"></a>row_pitch
+## <a name="row_pitch"></a><a name="row_pitch"></a> row_pitch
 
 Pobiera liczbę bajtów między każdym wierszem w tekstury przemieszczania 2D lub 3D na PROCESORze.
 
@@ -317,7 +318,7 @@ Pobiera liczbę bajtów między każdym wierszem w tekstury przemieszczania 2D l
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-## <a name="set"></a><a name="set"></a>zbiór
+## <a name="set"></a><a name="set"></a> zbiór
 
 Ustawia wartość elementu w określonym indeksie.
 
@@ -335,10 +336,10 @@ Indeks elementu.
 *_Rank*<br/>
 Ranga indeksu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Nowa wartość elementu.
 
-## <a name="texture"></a><a name="ctor"></a>głębokości
+## <a name="texture"></a><a name="ctor"></a> głębokości
 
 Inicjuje nowe wystąpienie klasy `texture`.
 
@@ -594,6 +595,6 @@ Inne źródło danych.
 *_Rank*<br/>
 Ranga sekcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

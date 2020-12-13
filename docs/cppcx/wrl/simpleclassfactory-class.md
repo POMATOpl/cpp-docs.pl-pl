@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa SimpleClassFactory'
 title: SimpleClassFactory — Klasa
 ms.date: 09/7/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 66794789e51a2635fae646cca49e4fae8385dfe0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd771909790f80048d8fee678b842f820e2f7be2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135203"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory — Klasa
 
@@ -78,7 +79,7 @@ Poniższy przykład kodu demonstruje sposób użycia `SimpleClassFactory` z makr
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory:: CreateInstance — Metoda
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a> SimpleClassFactory:: CreateInstance — Metoda
 
 Tworzy wystąpienie określonego interfejsu.
 

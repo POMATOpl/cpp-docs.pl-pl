@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze SemaphoreTraits
 title: SemaphoreTraits — Struktura
 ms.date: 09/27/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5779a30d22fd2d32e57f96f752bb52e2bf469cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135229"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits — Struktura
 
-Definiuje wspólne cechy `Semaphore` obiektu.
+Definiuje typowe cechy `Semaphore` obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +33,7 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 Nazwa                               | Opis
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Odblokuj](#unlock) | Zwalnia kontrolę nad zasobem udostępnionym.
+[SemaphoreTraits:: Unlock](#unlock) | Zwalnia kontrolę nad zasobem udostępnionym.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -42,11 +43,11 @@ Nazwa                               | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>SemaphoreTraits::Odblokuj
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a> SemaphoreTraits:: Unlock
 
 Zwalnia kontrolę nad zasobem udostępnionym.
 
@@ -58,9 +59,9 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*H*<br/>
-Dojście `Semaphore` do obiektu.
+*h*<br/>
+Dojście do `Semaphore` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli operacja odblokowania `Unlock()` nie powiedzie się, emituje błąd, który wskazuje przyczynę błędu.
+Jeśli operacja odblokowywania nie powiedzie się, `Unlock()` emituje błąd, który wskazuje przyczynę niepowodzenia.

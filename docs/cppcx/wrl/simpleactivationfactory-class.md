@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa SimpleActivationFactory'
 title: SimpleActivationFactory — Klasa
 ms.date: 09/07/2018
 ms.topic: reference
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-ms.openlocfilehash: 39e539c63e91b508f51656114ee8fbd68150991f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83643c69977b887e58e430bbd500fcf7c2e81ca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135216"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory — Klasa
 
-Zapewnia podstawowy mechanizm tworzenia środowiska wykonawczego systemu Windows lub klasycznej klasy podstawowej COM.
+Zapewnia podstawowy mechanizm tworzenia środowisko wykonawcze systemu Windows lub klasycznej klasy bazowej modelu COM.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,14 +34,14 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>Parametry
 
-*Podstawowej*<br/>
-Klasa podstawowa.
+*Opiera*<br/>
+Klasa bazowa.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa podstawowa musi zawierać konstruktora domyślnego.
+Klasa bazowa musi udostępniać Konstruktor domyślny.
 
-Poniższy przykład kodu pokazuje, jak używać SimpleActivationFactory z macro [ActivatableClassWithFactoryEx.](activatableclass-macros.md)
+Poniższy przykład kodu demonstruje, jak używać SimpleActivationFactory z makrem [ActivatableClassWithFactoryEx](activatableclass-macros.md) .
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`
 
@@ -51,8 +52,8 @@ Poniższy przykład kodu pokazuje, jak używać SimpleActivationFactory z macro 
 |Nazwa|Opis|
 |----------|-----------------|
 |[SimpleActivationFactory::ActivateInstance, metoda](#activateinstance)|Tworzy wystąpienie określonego interfejsu.|
-|[SimpleActivationFactory::GetRuntimeClassName, metoda](#getruntimeclassname)|Pobiera nazwę klasy runtime wystąpienia klasy określonej przez parametr szablonu klasy *podstawowej.*|
-|[SimpleActivationFactory::GetTrustLevel, metoda](#gettrustlevel)|Pobiera poziom zaufania wystąpienia klasy określonej przez parametr szablonu klasy *podstawowej.*|
+|[SimpleActivationFactory::GetRuntimeClassName, metoda](#getruntimeclassname)|Pobiera nazwę klasy środowiska uruchomieniowego wystąpienia klasy określonej przez parametr szablonu klasy *bazowej* .|
+|[SimpleActivationFactory::GetTrustLevel, metoda](#gettrustlevel)|Pobiera poziom zaufania wystąpienia klasy określonej przez parametr szablonu klasy *bazowej* .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -80,11 +81,11 @@ Poniższy przykład kodu pokazuje, jak używać SimpleActivationFactory z macro 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** module.h
+**Nagłówek:** module. h
 
-**Obszar nazw:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a>SimpleActivationFactory::Metoda aktywacji instance
+## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a> SimpleActivationFactory:: ActivateInstance —, Metoda
 
 Tworzy wystąpienie określonego interfejsu.
 
@@ -96,20 +97,20 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>Parametry
 
-*ppvObiekt*<br/>
-Po zakończeniu tej operacji wskaźnik do wystąpienia obiektu `Base` określonego przez parametr szablonu klasy.
+*ppvObject*<br/>
+Po zakończeniu tej operacji wskaźnik do wystąpienia obiektu określonego przez `Base` parametr szablonu klasy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który wskazuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowany, jeśli klasa podstawowa określona w parametrze szablonu klasy nie pochodzi z [runtimeclass](runtimeclass-class.md)lub nie jest skonfigurowana z wartością wyliczania WinRt lub WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)
+Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowany, jeśli klasa bazowa określona w parametrze szablonu klasy nie pochodzi od [RuntimeClass](runtimeclass-class.md)lub nie została skonfigurowana przy użyciu wartości wyliczenia WinRT lub WinRtClassicComMix [RuntimeClassType —](runtimeclasstype-enumeration.md) .
 
-## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a>SimpleActivationFactory::Metoda GetRuntimeClassName
+## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a> SimpleActivationFactory:: GetRuntimeClassName —, Metoda
 
-Pobiera nazwę klasy runtime wystąpienia klasy określone `Base` przez parametr szablonu klasy.
+Pobiera nazwę klasy środowiska uruchomieniowego wystąpienia klasy określonej przez `Base` parametr szablonu klasy.
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -119,20 +120,20 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>Parametry
 
-*nazwa środowiska wykonawczego*<br/>
-Po zakończeniu tej operacji nazwa klasy środowiska wykonawczego.
+*Nr środowiska uruchomieniowego*<br/>
+Po zakończeniu tej operacji nazwa klasy środowiska uruchomieniowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który wskazuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowany, `Base` jeśli klasa określona przez parametr szablonu klasy nie pochodzi z [runtimeclass](runtimeclass-class.md)lub nie jest skonfigurowany z winrt lub WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md) wartość wyliczenia.
+Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowany, jeśli Klasa określona przez `Base` parametr szablonu klasy nie pochodzi od [RuntimeClass](runtimeclass-class.md)lub nie została skonfigurowana przy użyciu wartości wyliczenia WinRT lub WinRtClassicComMix [RuntimeClassType —](runtimeclasstype-enumeration.md) .
 
-## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a>SimpleActivationFactory::Metoda GetTrustLevel
+## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a> SimpleActivationFactory:: GetTrustLevel, Metoda
 
-Pobiera poziom zaufania wystąpienia klasy określone przez `Base` parametr szablonu klasy.
+Pobiera poziom zaufania wystąpienia klasy określonej przez `Base` parametr szablonu klasy.
 
 ```cpp
 STDMETHOD(
@@ -142,8 +143,8 @@ STDMETHOD(
 
 #### <a name="parameters"></a>Parametry
 
-*trustLvl (włask zaufanie)*<br/>
-Po zakończeniu tej operacji poziom zaufania bieżącego obiektu klasy.
+*trustLvl*<br/>
+Gdy ta operacja zostanie ukończona, poziom zaufania bieżącego obiektu klasy.
 
 ### <a name="return-value"></a>Wartość zwracana
 

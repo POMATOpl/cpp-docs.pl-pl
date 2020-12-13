@@ -1,5 +1,6 @@
 ---
-title: Klasa CPatht
+description: 'Dowiedz się więcej na temat: Klasa CPathT'
+title: Klasa CPathT
 ms.date: 03/27/2019
 f1_keywords:
 - CPathT
@@ -49,19 +50,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 01657eca0e84a9a3271f7912f565dd1dd2417506
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141092"
 ---
-# <a name="cpatht-class"></a>Klasa CPatht
+# <a name="cpatht-class"></a>Klasa CPathT
 
 Ta klasa reprezentuje ścieżkę.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,85 +73,85 @@ class CPathT
 
 #### <a name="parameters"></a>Parametry
 
-*Typ ciągu*<br/>
-Klasa ciągu ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
+*StringType*<br/>
+Klasa ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPathT::PCXSTR](#pcxstr)|Stały typ ciągu.|
-|[CPathT::PXSTR](#pxstr)|Typ ciągu.|
+|[CPathT::P CXSTR](#pcxstr)|Typ stałej ciągu.|
+|[CPathT::P XSTR](#pxstr)|Typ ciągu.|
 |[CPathT::XCHAR](#xchar)|Typ znaku.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPathT::CPathT](#cpatht)|Konstruktor ścieżki.|
+|[CPathT::CPathT](#cpatht)|Konstruktor dla ścieżki.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPathT::AddBackslash](#addbackslash)|Wywołanie tej metody, aby dodać ukośnik odwrotny na końcu ciągu, aby utworzyć poprawną składnię ścieżki.|
-|[CPathT::AddExtension](#addextension)|Wywołanie tej metody, aby dodać rozszerzenie pliku do ścieżki.|
-|[CPathT::Dołącz](#append)|Wywołanie tej metody, aby dołączyć ciąg do bieżącej ścieżki.|
-|[CPathT::BuildRoot](#buildroot)|Wywołanie tej metody, aby utworzyć ścieżkę główną z danego numeru dysku.|
-|[CPathT::Canonicalize](#canonicalize)|Wywołanie tej metody, aby przekonwertować ścieżkę do postaci kanonicznej.|
-|[CPathT::Kombajn](#combine)|Wywołanie tej metody, aby połączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku w jednej ścieżce.|
-|[CPathT::CommonPrefix](#commonprefix)|Wywołanie tej metody, aby ustalić, czy określona ścieżka dzieli wspólny prefiks z bieżącą ścieżką.|
-|[CPathT::CompactPath](#compactpath)|Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w danej szerokości piksela, zastępując składniki ścieżki wielokropkiem.|
-|[CPathT::CompactPathEx](#compactpathex)|Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w określonej liczbie znaków, zastępując składniki ścieżki wielokropkiem.|
-|[CPathT::FileExists](#fileexists)|Wywołanie tej metody, aby sprawdzić, czy plik w tej nazwie ścieżki istnieje.|
-|[CPathT::FindExtension](#findextension)|Wywołanie tej metody, aby znaleźć położenie rozszerzenia pliku w ścieżce.|
-|[CPathT::FindFileName](#findfilename)|Wywołanie tej metody, aby znaleźć położenie nazwy pliku w ścieżce.|
-|[CPathT::GetDriveNumber](#getdrivenumber)|Wywołanie tej metody, aby wyszukać ścieżkę dla litery dysku w zakresie od "A" do "Z" i zwrócić odpowiedni numer dysku.|
-|[CPathT::GetExtension](#getextension)|Wywołanie tej metody, aby uzyskać rozszerzenie pliku ze ścieżki.|
-|[CPathT::IsDirectory](#isdirectory)|Wywołanie tej metody, aby sprawdzić, czy ścieżka jest prawidłowy katalog.|
-|[CPathT::IsFileSpec](#isfilespec)|Wywołanie tej metody, aby wyszukać ścieżkę dla dowolnych znaków\\wyznaczających ścieżkę (na przykład ':' lub ' ' ). Jeśli nie ma żadnych znaków rozdzielania ścieżki, ścieżka jest uważana za ścieżkę specyfikacji pliku.|
-|[CPathT::IsPrefix](#isprefix)|Wywołanie tej metody, aby ustalić, czy ścieżka zawiera prawidłowy prefiks typu przekazywane przez *pszPrefix*.|
-|[CPathT::IsRelative](#isrelative)|Wywołanie tej metody, aby ustalić, czy ścieżka jest względna.|
-|[CPathT::IsRoot](#isroot)|Wywołanie tej metody, aby ustalić, czy ścieżka jest katalog główny.|
-|[CPathT::IsSameRoot](#issameroot)|Wywołanie tej metody, aby ustalić, czy inna ścieżka ma wspólny składnik główny z bieżącą ścieżką.|
-|[CPathT::IsuNC](#isunc)|Wywołanie tej metody, aby ustalić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalna konwencja nazewnictwa) dla serwera i udziału.|
-|[CPathT::IsUNCServer](#isuncserver)|Wywołanie tej metody, aby ustalić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalna konwencja nazewnictwa) tylko dla serwera.|
-|[CPathT::IsUNCServerShare](#isuncservershare)|Wywołanie tej metody, aby ustalić, czy ścieżka jest prawidłową \\ \ unc (uniwersalna konwencja nazewnictwa) współużytkować ścieżkę udziału,*udział* *serwera*\ .|
-|[CPathT::MakePretty](#makepretty)|Wywołanie tej metody, aby przekonwertować ścieżkę do wszystkich małych znaków, aby nadać ścieżce spójny wygląd.|
-|[CPathT::MatchSpec](#matchspec)|Wywołanie tej metody, aby wyszukać ścieżkę dla ciągu zawierającego typ dopasowania symboli wieloznacznych.|
-|[CPathT::QuoteSpaces](#quotespaces)|Wywołanie tej metody, aby ująć ścieżkę w cudzysłów, jeśli zawiera ona spacje.|
-|[CPathT::RelativePathTo](#relativepathto)|Wywołanie tej metody, aby utworzyć ścieżkę względną z jednego pliku lub folderu do innego.|
-|[CPathT::RemoveArgs](#removeargs)|Wywołanie tej metody, aby usunąć wszystkie argumenty wiersza polecenia ze ścieżki.|
-|[CPathT::RemoveBackslash](#removebackslash)|Wywołanie tej metody, aby usunąć końcowe ukośnik odwrotny ze ścieżki.|
-|[CPathT::Usuńblaki](#removeblanks)|Wywołanie tej metody, aby usunąć wszystkie spacje wiodące i końcowe ze ścieżki.|
-|[CPathT::UsuńWyświetlenie](#removeextension)|Wywołanie tej metody, aby usunąć rozszerzenie pliku ze ścieżki, jeśli istnieje.|
-|[CPathT::RemoveFileSpec](#removefilespec)|Wywołanie tej metody, aby usunąć nazwę końcowego pliku i ukośnik odwrotny ze ścieżki, jeśli je ma.|
-|[CPathT::Zmień nazwęWyświetlanie](#renameextension)|Wywołanie tej metody, aby zastąpić rozszerzenie nazwy pliku w ścieżce z nowym rozszerzeniem. Jeśli nazwa pliku nie zawiera rozszerzenia, rozszerzenie zostanie dołączone do końca ciągu.|
-|[CPathT::SkipRoot](#skiproot)|Wywołanie tej metody, aby przeanalizować ścieżkę, ignorując literę dysku lub unc server/share path części.|
-|[CPathT::StripPath](#strippath)|Wywołanie tej metody, aby usunąć część ścieżki w pełni kwalifikowany ścieżki i nazwy pliku.|
-|[CPathT::StripToRoot](#striptoroot)|Wywołanie tej metody, aby usunąć wszystkie części ścieżki z wyjątkiem informacji głównych.|
-|[CPathT::UnquoteSpaces](#unquotespaces)|Wywołanie tej metody, aby usunąć znaki cudzysłowu z początku i końca ścieżki.|
+|[CPathT::AddBackslash](#addbackslash)|Wywołaj tę metodę, aby dodać ukośnik odwrotny do końca ciągu, aby utworzyć poprawną składnię dla ścieżki.|
+|[CPathT:: AddExtension](#addextension)|Wywołaj tę metodę, aby dodać rozszerzenie pliku do ścieżki.|
+|[CPathT:: Append](#append)|Wywołaj tę metodę, aby dołączyć ciąg do bieżącej ścieżki.|
+|[CPathT:: element buildroot](#buildroot)|Wywołaj tę metodę, aby utworzyć ścieżkę główną z danego numeru dysku.|
+|[CPathT:: sprowadź](#canonicalize)|Wywołaj tę metodę, aby skonwertować ścieżkę do formy kanonicznej.|
+|[CPathT:: Połącz](#combine)|Wywołaj tę metodę, aby połączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku do jednej ścieżki.|
+|[CPathT::CommonPrefix](#commonprefix)|Wywołaj tę metodę, aby określić, czy określona ścieżka udostępnia wspólny prefiks z bieżącą ścieżką.|
+|[CPathT::CompactPath](#compactpath)|Wywołaj tę metodę, aby obciąć ścieżkę pliku tak, aby mieściła się w danej szerokości pikseli przez zastępowanie składników ścieżki wielokropkiem.|
+|[CPathT::CompactPathEx](#compactpathex)|Wywołaj tę metodę, aby obciąć ścieżkę pliku do rozmiaru w danej liczbie znaków, zastępując składniki ścieżki wielokropkiem.|
+|[CPathT::FileExists](#fileexists)|Wywołaj tę metodę, aby sprawdzić, czy plik o tej nazwie ścieżki istnieje.|
+|[CPathT::FindExtension](#findextension)|Wywołaj tę metodę, aby znaleźć pozycję rozszerzenia pliku w ścieżce.|
+|[CPathT::FindFileName](#findfilename)|Wywołaj tę metodę, aby znaleźć pozycję nazwy pliku w ścieżce.|
+|[CPathT::GetDriveNumber](#getdrivenumber)|Wywołaj tę metodę, aby wyszukać ścieżkę litery dysku w zakresie od "A" do "Z" i zwrócić odpowiedni numer dysku.|
+|[CPathT:: GetExtension](#getextension)|Wywołaj tę metodę, aby uzyskać rozszerzenie pliku ze ścieżki.|
+|[CPathT:: IsDirectory](#isdirectory)|Wywołaj tę metodę, aby sprawdzić, czy ścieżka jest prawidłowym katalogiem.|
+|[CPathT::IsFileSpec](#isfilespec)|Wywołaj tę metodę, aby przeszukać ścieżkę do dowolnej ścieżki, ograniczając znaki (na przykład ': ' lub ' \\ '). Jeśli nie ma żadnych znaków ograniczających ścieżki, ścieżka jest traktowana jako ścieżka do pliku specyfikacji.|
+|[CPathT:: IsPrefix](#isprefix)|Wywołaj tę metodę, aby określić, czy ścieżka zawiera prawidłowy prefiks typu przekazaną przez *pszPrefix*.|
+|[CPathT:: isrelatywn](#isrelative)|Wywołaj tę metodę, aby określić, czy ścieżka jest względna.|
+|[CPathT:: IsRoot](#isroot)|Wywołaj tę metodę, aby określić, czy ścieżka jest katalogiem głównym katalogu.|
+|[CPathT::IsSameRoot](#issameroot)|Wywołaj tę metodę, aby określić, czy inna ścieżka ma wspólny składnik główny z bieżącą ścieżką.|
+|[CPathT::IsUNC](#isunc)|Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa) dla serwera i udziału.|
+|[CPathT::IsUNCServer](#isuncserver)|Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa) tylko dla serwera.|
+|[CPathT::IsUNCServerShare](#isuncservershare)|Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa), \\ \   \  *udziałem* serwera.|
+|[CPathT::MakePretty](#makepretty)|Wywołaj tę metodę, aby skonwertować ścieżkę do wszystkich małych liter, aby nadać ścieżce spójny wygląd.|
+|[CPathT::MatchSpec](#matchspec)|Wywołaj tę metodę, aby wyszukać ciąg zawierający typ dopasowania z symbolami wieloznacznymi.|
+|[CPathT::QuoteSpaces](#quotespaces)|Wywołaj tę metodę, aby umieścić ścieżkę w cudzysłowie, jeśli zawiera spacje.|
+|[CPathT::RelativePathTo](#relativepathto)|Wywołaj tę metodę, aby utworzyć ścieżkę względną z jednego pliku lub folderu do innego.|
+|[CPathT::RemoveArgs](#removeargs)|Wywołaj tę metodę, aby usunąć z ścieżki wszystkie argumenty wiersza polecenia.|
+|[CPathT::RemoveBackslash](#removebackslash)|Wywołaj tę metodę, aby usunąć ukośnik odwrotny ze ścieżki.|
+|[CPathT::RemoveBlanks](#removeblanks)|Wywołaj tę metodę, aby usunąć wszystkie spacje wiodące i końcowe ze ścieżki.|
+|[CPathT::RemoveExtension](#removeextension)|Wywołaj tę metodę, aby usunąć rozszerzenie pliku ze ścieżki, jeśli istnieje.|
+|[CPathT::RemoveFileSpec](#removefilespec)|Wywołaj tę metodę, aby usunąć końcową nazwę pliku i ukośnik odwrotny ze ścieżki, jeśli je zawiera.|
+|[CPathT::RenameExtension](#renameextension)|Wywołaj tę metodę, aby zastąpić rozszerzenie nazwy pliku w ścieżce nowym rozszerzeniem. Jeśli nazwa pliku nie zawiera rozszerzenia, rozszerzenie zostanie dołączone do końca ciągu.|
+|[CPathT::SkipRoot](#skiproot)|Wywołaj tę metodę, aby przeanalizować ścieżkę, ignorując litery dysku lub serwer UNC/udział części ścieżki.|
+|[CPathT::StripPath](#strippath)|Wywołaj tę metodę, aby usunąć część w pełni kwalifikowanej ścieżki i nazwy pliku.|
+|[CPathT::StripToRoot](#striptoroot)|Wywołaj tę metodę, aby usunąć wszystkie części ścieżki z wyjątkiem informacji głównych.|
+|[CPathT::UnquoteSpaces](#unquotespaces)|Wywołaj tę metodę, aby usunąć znaki cudzysłowu z początku i końca ścieżki.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Ten operator umożliwia obiekt, który ma być traktowany jak ciąg.|
-|[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Ten operator umożliwia obiekt, który ma być traktowany jak ciąg.|
-|[CPathT::operator StringType &](#operator_stringtype_amp)|Ten operator umożliwia obiekt, który ma być traktowany jak ciąg.|
-|[CPathT::operator +=](#operator_add_eq)|Ten operator dołącza ciąg do ścieżki.|
+|[CPathT:: operator const StringType &](#operator_const_stringtype_amp)|Ten operator pozwala, aby obiekt był traktowany jak ciąg.|
+|[CPathT:: operator CPathT::P CXSTR](#operator_cpatht__pcxstr)|Ten operator pozwala, aby obiekt był traktowany jak ciąg.|
+|[CPathT:: operator StringType &](#operator_stringtype_amp)|Ten operator pozwala, aby obiekt był traktowany jak ciąg.|
+|[CPathT:: operator + =](#operator_add_eq)|Ten operator dołącza ciąg do ścieżki.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPathT::m_strPath](#m_strpath)|Ścieżka.|
+|[CPathT:: m_strPath](#m_strpath)|Ścieżka.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CPath`, `CPathA`i `CPathW` są wystąpienia `CPathT` zdefiniowane w następujący sposób:
+`CPath`, `CPathA` i `CPathW` są wystąpieniami `CPathT` zdefiniowanymi w następujący sposób:
 
 `typedef CPathT< CString > CPath;`
 
@@ -160,11 +161,11 @@ Klasa ciągu ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-s
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlpath.h
+**Nagłówek:** atlpath. h
 
-## <a name="cpathtaddbackslash"></a><a name="addbackslash"></a>CPathT::AddBackslash
+## <a name="cpathtaddbackslash"></a><a name="addbackslash"></a> CPathT::AddBackslash
 
-Wywołanie tej metody, aby dodać ukośnik odwrotny na końcu ciągu, aby utworzyć poprawną składnię ścieżki. Jeśli ścieżka ma już końcowe ukośnik odwrotny, nie zostanie dodane żadne ukośnik odwrotny.
+Wywołaj tę metodę, aby dodać ukośnik odwrotny do końca ciągu, aby utworzyć poprawną składnię dla ścieżki. Jeśli ścieżka ma już końcowy ukośnik, nie zostanie dodany ukośnik odwrotny.
 
 ```cpp
 void AddBackslash();
@@ -174,9 +175,9 @@ void AddBackslash();
 
 Aby uzyskać więcej informacji, zobacz [PathAddBackSlash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
 
-## <a name="cpathtaddextension"></a><a name="addextension"></a>CPathT::AddExtension
+## <a name="cpathtaddextension"></a><a name="addextension"></a> CPathT:: AddExtension
 
-Wywołanie tej metody, aby dodać rozszerzenie pliku do ścieżki.
+Wywołaj tę metodę, aby dodać rozszerzenie pliku do ścieżki.
 
 ```
 BOOL AddExtension(PCXSTR pszExtension);
@@ -184,20 +185,20 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametry
 
-*pszRozwusz*<br/>
+*pszExtension*<br/>
 Rozszerzenie pliku do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
 
-## <a name="cpathtappend"></a><a name="append"></a>CPathT::Dołącz
+## <a name="cpathtappend"></a><a name="append"></a> CPathT:: Append
 
-Wywołanie tej metody, aby dołączyć ciąg do bieżącej ścieżki.
+Wywołaj tę metodę, aby dołączyć ciąg do bieżącej ścieżki.
 
 ```
 BOOL Append(PCXSTR pszMore);
@@ -205,20 +206,20 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametry
 
-*pszWiększ*<br/>
-Ciąg do dokład.
+*pszMore*<br/>
+Ciąg do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
 
-## <a name="cpathtbuildroot"></a><a name="buildroot"></a>CPathT::BuildRoot
+## <a name="cpathtbuildroot"></a><a name="buildroot"></a> CPathT:: element buildroot
 
-Wywołanie tej metody, aby utworzyć ścieżkę główną z danego numeru dysku.
+Wywołaj tę metodę, aby utworzyć ścieżkę główną z danego numeru dysku.
 
 ```cpp
 void BuildRoot(int iDrive);
@@ -226,16 +227,16 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>Parametry
 
-*Idrive*<br/>
-Numer dysku (0 to A:, 1 to B:i tak dalej).
+*iDrive*<br/>
+Numer stacji (0 to:, 1 to B: itd.).
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
-## <a name="cpathtcanonicalize"></a><a name="canonicalize"></a>CPathT::Canonicalize
+## <a name="cpathtcanonicalize"></a><a name="canonicalize"></a> CPathT:: sprowadź
 
-Wywołanie tej metody, aby przekonwertować ścieżkę do postaci kanonicznej.
+Wywołaj tę metodę, aby skonwertować ścieżkę do formy kanonicznej.
 
 ```cpp
 void Canonicalize();
@@ -245,9 +246,9 @@ void Canonicalize();
 
 Aby uzyskać więcej informacji, zobacz [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
 
-## <a name="cpathtcombine"></a><a name="combine"></a>CPathT::Kombajn
+## <a name="cpathtcombine"></a><a name="combine"></a> CPathT:: Połącz
 
-Wywołanie tej metody, aby połączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku w jednej ścieżce.
+Wywołaj tę metodę, aby połączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku do jednej ścieżki.
 
 ```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
@@ -265,9 +266,9 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 Aby uzyskać więcej informacji, zobacz [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
 
-## <a name="cpathtcommonprefix"></a><a name="commonprefix"></a>CPathT::CommonPrefix
+## <a name="cpathtcommonprefix"></a><a name="commonprefix"></a> CPathT::CommonPrefix
 
-Wywołanie tej metody, aby ustalić, czy określona ścieżka dzieli wspólny prefiks z bieżącą ścieżką.
+Wywołaj tę metodę, aby określić, czy określona ścieżka udostępnia wspólny prefiks z bieżącą ścieżką.
 
 ```
 CPathT<StringType> CommonPrefix(PCXSTR pszOther);
@@ -275,7 +276,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>Parametry
 
-*psz.*<br/>
+*pszOther*<br/>
 Ścieżka do porównania z bieżącą.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -284,11 +285,11 @@ Zwraca wspólny prefiks.
 
 ### <a name="remarks"></a>Uwagi
 
-Prefiks jest jednym z tych\\\\typów: "C: ", ".", "..", ".. \\\\". Aby uzyskać więcej informacji, zobacz [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
+Prefiks jest jednym z następujących typów: "C: \\ \\ ", ".", "..", ".. \\ \\ ". Aby uzyskać więcej informacji, zobacz [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
-## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
+## <a name="cpathtcompactpath"></a><a name="compactpath"></a> CPathT::CompactPath
 
-Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w danej szerokości piksela, zastępując składniki ścieżki wielokropkiem.
+Wywołaj tę metodę, aby obciąć ścieżkę pliku tak, aby mieściła się w danej szerokości pikseli przez zastępowanie składników ścieżki wielokropkiem.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -296,23 +297,23 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*Hdc*<br/>
-Kontekst urządzenia używany dla metryk czcionek.
+*Używający HDC*<br/>
+Kontekst urządzenia używany do metryk czcionki.
 
-*nWidth (ww.*<br/>
-Szerokość w pikselach, do których ciąg zostanie zmuszony do dopasowania.
+*nWidth*<br/>
+Szerokość (w pikselach), do której zostanie wymuszone dopasowanie ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
 
-## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
+## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a> CPathT::CompactPathEx
 
-Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w określonej liczbie znaków, zastępując składniki ścieżki wielokropkiem.
+Wywołaj tę metodę, aby obciąć ścieżkę pliku do rozmiaru w danej liczbie znaków, zastępując składniki ścieżki wielokropkiem.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -321,20 +322,20 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="parameters"></a>Parametry
 
 *nMaxChars*<br/>
-Maksymalna liczba znaków, które mają być zawarte w nowym ciągu, w tym kończący znak NULL.
+Maksymalna liczba znaków, które mają być zawarte w nowym ciągu, łącznie z kończącym znakiem NULL.
 
-*Dwflags*<br/>
+*flagiDW*<br/>
 Zarezerwowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
 
-## <a name="cpathtcpatht"></a><a name="cpatht"></a>CPathT::CPathT
+## <a name="cpathtcpatht"></a><a name="cpatht"></a> CPathT::CPathT
 
 Konstruktor.
 
@@ -346,15 +347,15 @@ CPathT() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*PSZPath*<br/>
+*pszPath*<br/>
 Wskaźnik do ciągu ścieżki.
 
-*Ścieżka*<br/>
+*ścieżka*<br/>
 Ciąg ścieżki.
 
-## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT::FileExists
+## <a name="cpathtfileexists"></a><a name="fileexists"></a> CPathT::FileExists
 
-Wywołanie tej metody, aby sprawdzić, czy plik w tej nazwie ścieżki istnieje.
+Wywołaj tę metodę, aby sprawdzić, czy plik o tej nazwie ścieżki istnieje.
 
 ```
 BOOL FileExists() const;
@@ -362,15 +363,15 @@ BOOL FileExists() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli plik istnieje, WARTOŚĆ FAŁSZU w przeciwnym razie.
+Zwraca wartość TRUE, jeśli plik istnieje, w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).
 
-## <a name="cpathtfindextension"></a><a name="findextension"></a>CPathT::FindExtension
+## <a name="cpathtfindextension"></a><a name="findextension"></a> CPathT::FindExtension
 
-Wywołanie tej metody, aby znaleźć położenie rozszerzenia pliku w ścieżce.
+Wywołaj tę metodę, aby znaleźć pozycję rozszerzenia pliku w ścieżce.
 
 ```
 int FindExtension() const;
@@ -378,15 +379,15 @@ int FindExtension() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca położenie "." poprzedzające rozszerzenie. Jeśli nie zostanie znalezione żadne rozszerzenie, zwraca wartość -1.
+Zwraca pozycję "." poprzedzającą rozszerzenie. Jeśli rozszerzenie nie zostanie znalezione, zwraca wartość-1.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
 
-## <a name="cpathtfindfilename"></a><a name="findfilename"></a>CPathT::FindFileName
+## <a name="cpathtfindfilename"></a><a name="findfilename"></a> CPathT::FindFileName
 
-Wywołanie tej metody, aby znaleźć położenie nazwy pliku w ścieżce.
+Wywołaj tę metodę, aby znaleźć pozycję nazwy pliku w ścieżce.
 
 ```
 int FindFileName() const;
@@ -394,15 +395,15 @@ int FindFileName() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca położenie nazwy pliku. Jeśli nie zostanie znaleziona żadna nazwa pliku, zwraca wartość -1.
+Zwraca pozycję nazwy pliku. Jeśli nazwa pliku nie zostanie znaleziona, zwraca wartość-1.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).
 
-## <a name="cpathtgetdrivenumber"></a><a name="getdrivenumber"></a>CPathT::GetDriveNumber
+## <a name="cpathtgetdrivenumber"></a><a name="getdrivenumber"></a> CPathT::GetDriveNumber
 
-Wywołanie tej metody, aby wyszukać ścieżkę dla litery dysku w zakresie od "A" do "Z" i zwrócić odpowiedni numer dysku.
+Wywołaj tę metodę, aby wyszukać ścieżkę litery dysku w zakresie od "A" do "Z" i zwrócić odpowiedni numer dysku.
 
 ```
 int GetDriveNumber() const;
@@ -410,15 +411,15 @@ int GetDriveNumber() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca numer dysku jako liczbę całkowitą od 0 do 25 (odpowiadającą "Od" do "Z"), jeśli ścieżka ma literę dysku lub -1 w przeciwnym razie.
+Zwraca numer stacji jako liczbę całkowitą z przedziału od 0 do 25 (odpowiadającą od "A" do "Z"), jeśli ścieżka ma literę dysku lub-1 w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).
 
-## <a name="cpathtgetextension"></a><a name="getextension"></a>CPathT::GetExtension
+## <a name="cpathtgetextension"></a><a name="getextension"></a> CPathT:: GetExtension
 
-Wywołanie tej metody, aby uzyskać rozszerzenie pliku ze ścieżki.
+Wywołaj tę metodę, aby uzyskać rozszerzenie pliku ze ścieżki.
 
 ```
 StringType GetExtension() const;
@@ -428,9 +429,9 @@ StringType GetExtension() const;
 
 Zwraca rozszerzenie pliku.
 
-## <a name="cpathtisdirectory"></a><a name="isdirectory"></a>CPathT::IsDirectory
+## <a name="cpathtisdirectory"></a><a name="isdirectory"></a> CPathT:: IsDirectory
 
-Wywołanie tej metody, aby sprawdzić, czy ścieżka jest prawidłowy katalog.
+Wywołaj tę metodę, aby sprawdzić, czy ścieżka jest prawidłowym katalogiem.
 
 ```
 BOOL IsDirectory() const;
@@ -438,15 +439,15 @@ BOOL IsDirectory() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość niezerową (16), jeśli ścieżka jest katalogiem, w przeciwnym razie WARTOŚĆ FAŁSZ.
+Zwraca wartość różną od zera (16), jeśli ścieżka jest katalogiem, w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
-## <a name="cpathtisfilespec"></a><a name="isfilespec"></a>CPathT::IsFileSpec
+## <a name="cpathtisfilespec"></a><a name="isfilespec"></a> CPathT::IsFileSpec
 
-Wywołanie tej metody, aby wyszukać ścieżkę dla dowolnych znaków\\wyznaczających ścieżkę (na przykład ':' lub ' ' ). Jeśli nie ma żadnych znaków rozdzielania ścieżki, ścieżka jest uważana za ścieżkę specyfikacji pliku.
+Wywołaj tę metodę, aby przeszukać ścieżkę do dowolnej ścieżki, ograniczając znaki (na przykład ': ' lub ' \\ '). Jeśli nie ma żadnych znaków ograniczających ścieżki, ścieżka jest traktowana jako ścieżka do pliku specyfikacji.
 
 ```
 BOOL IsFileSpec() const;
@@ -454,15 +455,15 @@ BOOL IsFileSpec() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli w ścieżce nie ma znaków rozdzielających ścieżkę, lub wartość FAŁSZ, jeśli w ścieżce znajdują się znaki rozdzielające ścieżkę.
+Zwraca wartość TRUE, jeśli w ścieżce nie ma znaków ograniczających ścieżkę lub wartość FAŁSZ, jeśli istnieją znaki ograniczające ścieżkę.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).
 
-## <a name="cpathtisprefix"></a><a name="isprefix"></a>CPathT::IsPrefix
+## <a name="cpathtisprefix"></a><a name="isprefix"></a> CPathT:: IsPrefix
 
-Wywołanie tej metody, aby ustalić, czy ścieżka zawiera prawidłowy prefiks typu przekazywane przez *pszPrefix*.
+Wywołaj tę metodę, aby określić, czy ścieżka zawiera prawidłowy prefiks typu przekazaną przez *pszPrefix*.
 
 ```
 BOOL IsPrefix(PCXSTR pszPrefix) const;
@@ -471,19 +472,19 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>Parametry
 
 *pszPrefix*<br/>
-Prefiks, dla którego ma zostać wyszukany. Prefiks jest jednym z tych\\\\typów: "C: ", ".", "..", ".. \\\\".
+Prefiks do wyszukania. Prefiks jest jednym z następujących typów: "C: \\ \\ ", ".", "..", ".. \\ \\ ".
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ścieżka zawiera prefiks lub FAŁSZ w inny sposób.
+Zwraca wartość TRUE, jeśli ścieżka zawiera prefiks lub wartość FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
 
-## <a name="cpathtisrelative"></a><a name="isrelative"></a>CPathT::IsRelative
+## <a name="cpathtisrelative"></a><a name="isrelative"></a> CPathT:: isrelatywn
 
-Wywołanie tej metody, aby ustalić, czy ścieżka jest względna.
+Wywołaj tę metodę, aby określić, czy ścieżka jest względna.
 
 ```
 BOOL IsRelative() const;
@@ -491,15 +492,15 @@ BOOL IsRelative() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ścieżka jest względna, lub WARTOŚĆ FAŁSZ, jeśli jest bezwzględna.
+Zwraca wartość TRUE, jeśli ścieżka jest względna, lub FALSE, jeśli jest bezwzględna.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
-## <a name="cpathtisroot"></a><a name="isroot"></a>CPathT::IsRoot
+## <a name="cpathtisroot"></a><a name="isroot"></a> CPathT:: IsRoot
 
-Wywołanie tej metody, aby ustalić, czy ścieżka jest katalog główny.
+Wywołaj tę metodę, aby określić, czy ścieżka jest katalogiem głównym katalogu.
 
 ```
 BOOL IsRoot() const;
@@ -507,15 +508,15 @@ BOOL IsRoot() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ścieżka jest katalogiem głównym lub FAŁSZ w inny sposób.
+Zwraca wartość TRUE, jeśli ścieżka jest katalogiem głównym lub w przeciwnym razie ma wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
-## <a name="cpathtissameroot"></a><a name="issameroot"></a>CPathT::IsSameRoot
+## <a name="cpathtissameroot"></a><a name="issameroot"></a> CPathT::IsSameRoot
 
-Wywołanie tej metody, aby ustalić, czy inna ścieżka ma wspólny składnik główny z bieżącą ścieżką.
+Wywołaj tę metodę, aby określić, czy inna ścieżka ma wspólny składnik główny z bieżącą ścieżką.
 
 ```
 BOOL IsSameRoot(PCXSTR pszOther) const;
@@ -523,20 +524,20 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>Parametry
 
-*psz.*<br/>
+*pszOther*<br/>
 Druga ścieżka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli oba ciągi mają ten sam składnik główny lub FAŁSZ w inny sposób.
+Zwraca wartość TRUE, jeśli oba ciągi mają ten sam główny składnik lub w przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).
 
-## <a name="cpathtisunc"></a><a name="isunc"></a>CPathT::IsuNC
+## <a name="cpathtisunc"></a><a name="isunc"></a> CPathT::IsUNC
 
-Wywołanie tej metody, aby ustalić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalna konwencja nazewnictwa) dla serwera i udziału.
+Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa) dla serwera i udziału.
 
 ```
 BOOL IsUNC() const;
@@ -544,15 +545,15 @@ BOOL IsUNC() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ścieżka jest prawidłową ścieżką UNC lub FAŁSZ w inny sposób.
+Zwraca wartość TRUE, jeśli ścieżka jest prawidłową ścieżką UNC, lub FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
-## <a name="cpathtisuncserver"></a><a name="isuncserver"></a>CPathT::IsUNCServer
+## <a name="cpathtisuncserver"></a><a name="isuncserver"></a> CPathT::IsUNCServer
 
-Wywołanie tej metody, aby ustalić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalna konwencja nazewnictwa) tylko dla serwera.
+Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa) tylko dla serwera.
 
 ```
 BOOL IsUNCServer() const;
@@ -560,15 +561,15 @@ BOOL IsUNCServer() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ciąg jest prawidłową ścieżką UNC tylko dla serwera (bez nazwy udziału) lub FAŁSZ w inny sposób.
+Zwraca wartość TRUE, jeśli ciąg jest prawidłową ścieżką UNC tylko dla serwera (bez nazwy udziału) lub w przeciwnym razie zwraca wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
-## <a name="cpathtisuncservershare"></a><a name="isuncservershare"></a>CPathT::IsUNCServerShare
+## <a name="cpathtisuncservershare"></a><a name="isuncservershare"></a> CPathT::IsUNCServerShare
 
-Wywołanie tej metody, aby ustalić, czy ścieżka jest prawidłową \\ \ unc (uniwersalna konwencja nazewnictwa) współużytkować ścieżkę udziału,*udział* *serwera*\ .
+Wywołaj tę metodę, aby określić, czy ścieżka jest prawidłową ścieżką UNC (uniwersalną konwencją nazewnictwa), \\ \   \  *udziałem* serwera.
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,13 +577,13 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli \\ \ ścieżka znajduje się w*udziale* *serwera*\ formularza lub FAŁD w inny sposób.
+Zwraca wartość PRAWDA, jeśli ścieżka znajduje się w postaci \\ \  *serwer* \  *udział*, lub false w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
-## <a name="cpathtm_strpath"></a><a name="m_strpath"></a>CPathT::m_strPath
+## <a name="cpathtm_strpath"></a><a name="m_strpath"></a> CPathT:: m_strPath
 
 Ścieżka.
 
@@ -592,11 +593,11 @@ StringType m_strPath;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem `CPathT`szablonu do .
+`StringType` jest parametrem szablonu do `CPathT` .
 
-## <a name="cpathtmakepretty"></a><a name="makepretty"></a>CPathT::MakePretty
+## <a name="cpathtmakepretty"></a><a name="makepretty"></a> CPathT::MakePretty
 
-Wywołanie tej metody, aby przekonwertować ścieżkę do wszystkich małych znaków, aby nadać ścieżce spójny wygląd.
+Wywołaj tę metodę, aby skonwertować ścieżkę do wszystkich małych liter, aby nadać ścieżce spójny wygląd.
 
 ```
 BOOL MakePretty();
@@ -604,15 +605,15 @@ BOOL MakePretty();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ścieżka została przekonwertowana lub FAŁSZ w inny sposób.
+Zwraca wartość TRUE, jeśli ścieżka została przekonwertowana lub w przeciwnym razie ma wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
-## <a name="cpathtmatchspec"></a><a name="matchspec"></a>CPathT::MatchSpec
+## <a name="cpathtmatchspec"></a><a name="matchspec"></a> CPathT::MatchSpec
 
-Wywołanie tej metody, aby wyszukać ścieżkę dla ciągu zawierającego typ dopasowania symboli wieloznacznych.
+Wywołaj tę metodę, aby wyszukać ciąg zawierający typ dopasowania z symbolami wieloznacznymi.
 
 ```
 BOOL MatchSpec(PCXSTR pszSpec) const;
@@ -621,17 +622,17 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="parameters"></a>Parametry
 
 *pszSpec*<br/>
-Wskaźnik do ciągu zakończonego wartością null z typem pliku, dla którego ma zostać wyszukany. Na przykład, aby sprawdzić, czy plik przy bieżącej ścieżce jest plikiem DOC, *pszSpec* powinien być ustawiony na "*.doc".
+Wskaźnik na ciąg zakończony znakiem null z typem pliku do wyszukania. Na przykład, aby sprawdzić, czy plik w bieżącej ścieżce jest plikiem DOC, *pszSpec* powinien mieć wartość "*. doc".
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli ciąg jest zgodny lub FAŁSZ w inny sposób.
+Zwraca wartość TRUE, jeśli ciąg pasuje lub ma wartość FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
 
-## <a name="cpathtoperator-"></a><a name="operator_add_eq"></a>CPathT::operator +=
+## <a name="cpathtoperator-"></a><a name="operator_add_eq"></a> CPathT:: operator + =
 
 Ten operator dołącza ciąg do ścieżki.
 
@@ -641,16 +642,16 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametry
 
-*pszWiększ*<br/>
-Ciąg do dokład.
+*pszMore*<br/>
+Ciąg do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca zaktualizowaną ścieżkę.
 
-## <a name="cpathtoperator-const-stringtype-amp"></a><a name="operator_const_stringtype_amp"></a>CPathT::typ ciągu const operatora&amp;
+## <a name="cpathtoperator-const-stringtype-amp"></a><a name="operator_const_stringtype_amp"></a> CPathT:: operator const StringType &amp;
 
-Ten operator umożliwia obiekt, który ma być traktowany jak ciąg.
+Ten operator pozwala, aby obiekt był traktowany jak ciąg.
 
 ```
 operator const StringType&() const throw();
@@ -660,9 +661,9 @@ operator const StringType&() const throw();
 
 Zwraca ciąg reprezentujący bieżącą ścieżkę zarządzaną przez ten obiekt.
 
-## <a name="cpathtoperator-cpathtpcxstr"></a><a name="operator_cpatht__pcxstr"></a>CPathT::operator CPathT::PCXSTR
+## <a name="cpathtoperator-cpathtpcxstr"></a><a name="operator_cpatht__pcxstr"></a> CPathT:: operator CPathT::P CXSTR
 
-Ten operator umożliwia obiekt, który ma być traktowany jak ciąg.
+Ten operator pozwala, aby obiekt był traktowany jak ciąg.
 
 ```
 operator PCXSTR() const throw();
@@ -672,9 +673,9 @@ operator PCXSTR() const throw();
 
 Zwraca ciąg reprezentujący bieżącą ścieżkę zarządzaną przez ten obiekt.
 
-## <a name="cpathtoperator-stringtype-amp"></a><a name="operator_stringtype_amp"></a>CPathT::operator StringType&amp;
+## <a name="cpathtoperator-stringtype-amp"></a><a name="operator_stringtype_amp"></a> CPathT:: operator — ciąg &amp;
 
-Ten operator umożliwia obiekt, który ma być traktowany jak ciąg.
+Ten operator pozwala, aby obiekt był traktowany jak ciąg.
 
 ```
 operator StringType&() throw();
@@ -684,9 +685,9 @@ operator StringType&() throw();
 
 Zwraca ciąg reprezentujący bieżącą ścieżkę zarządzaną przez ten obiekt.
 
-## <a name="cpathtpcxstr"></a><a name="pcxstr"></a>CPathT::PCXSTR
+## <a name="cpathtpcxstr"></a><a name="pcxstr"></a> CPathT::P CXSTR
 
-Stały typ ciągu.
+Typ stałej ciągu.
 
 ```
 typedef StringType::PCXSTR PCXSTR;
@@ -694,9 +695,9 @@ typedef StringType::PCXSTR PCXSTR;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem `CPathT`szablonu do .
+`StringType` jest parametrem szablonu do `CPathT` .
 
-## <a name="cpathtpxstr"></a><a name="pxstr"></a>CPathT::PXSTR
+## <a name="cpathtpxstr"></a><a name="pxstr"></a> CPathT::P XSTR
 
 Typ ciągu.
 
@@ -706,11 +707,11 @@ typedef StringType::PXSTR PXSTR;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem `CPathT`szablonu do .
+`StringType` jest parametrem szablonu do `CPathT` .
 
-## <a name="cpathtquotespaces"></a><a name="quotespaces"></a>CPathT::QuoteSpaces
+## <a name="cpathtquotespaces"></a><a name="quotespaces"></a> CPathT::QuoteSpaces
 
-Wywołanie tej metody, aby ująć ścieżkę w cudzysłów, jeśli zawiera ona spacje.
+Wywołaj tę metodę, aby umieścić ścieżkę w cudzysłowie, jeśli zawiera spacje.
 
 ```cpp
 void QuoteSpaces();
@@ -720,9 +721,9 @@ void QuoteSpaces();
 
 Aby uzyskać więcej informacji, zobacz [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
-## <a name="cpathtrelativepathto"></a><a name="relativepathto"></a>CPathT::RelativePathTo
+## <a name="cpathtrelativepathto"></a><a name="relativepathto"></a> CPathT::RelativePathTo
 
-Wywołanie tej metody, aby utworzyć ścieżkę względną z jednego pliku lub folderu do innego.
+Wywołaj tę metodę, aby utworzyć ścieżkę względną z jednego pliku lub folderu do innego.
 
 ```
 BOOL RelativePathTo(
@@ -738,25 +739,25 @@ BOOL RelativePathTo(
 Początek ścieżki względnej.
 
 *dwAttrFrom*<br/>
-Atrybuty pliku *pszFrom*. Jeśli ta wartość zawiera FILE_ATTRIBUTE_DIRECTORY, *pszFrom* zakłada się, że katalog; w przeciwnym razie *pszFrom* zakłada się, że jest to plik.
+Atrybuty pliku *pszFrom*. Jeśli ta wartość zawiera FILE_ATTRIBUTE_DIRECTORY, przyjmuje się, że *pszFrom* jest katalogiem. w przeciwnym razie przyjmuje się, że *pszFrom* jest plikiem.
 
 *pszTo*<br/>
 Punkt końcowy ścieżki względnej.
 
 *dwAttrTo*<br/>
-Atrybuty pliku *pszTo*. Jeśli ta wartość zawiera FILE_ATTRIBUTE_DIRECTORY, *pszTo* zakłada się, że jest katalogiem; w przeciwnym razie *pszTo* zakłada się, że jest to plik.
+Atrybuty pliku *pszTo*. Jeśli ta wartość zawiera FILE_ATTRIBUTE_DIRECTORY, przyjmuje się, że *pszTo* jest katalogiem. w przeciwnym razie przyjmuje się, że *pszTo* jest plikiem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).
 
-## <a name="cpathtremoveargs"></a><a name="removeargs"></a>CPathT::RemoveArgs
+## <a name="cpathtremoveargs"></a><a name="removeargs"></a> CPathT::RemoveArgs
 
-Wywołanie tej metody, aby usunąć wszystkie argumenty wiersza polecenia ze ścieżki.
+Wywołaj tę metodę, aby usunąć z ścieżki wszystkie argumenty wiersza polecenia.
 
 ```cpp
 void RemoveArgs();
@@ -766,9 +767,9 @@ void RemoveArgs();
 
 Aby uzyskać więcej informacji, zobacz [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).
 
-## <a name="cpathtremovebackslash"></a><a name="removebackslash"></a>CPathT::RemoveBackslash
+## <a name="cpathtremovebackslash"></a><a name="removebackslash"></a> CPathT::RemoveBackslash
 
-Wywołanie tej metody, aby usunąć końcowe ukośnik odwrotny ze ścieżki.
+Wywołaj tę metodę, aby usunąć ukośnik odwrotny ze ścieżki.
 
 ```cpp
 void RemoveBackslash();
@@ -778,9 +779,9 @@ void RemoveBackslash();
 
 Aby uzyskać więcej informacji, zobacz [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).
 
-## <a name="cpathtremoveblanks"></a><a name="removeblanks"></a>CPathT::Usuńblaki
+## <a name="cpathtremoveblanks"></a><a name="removeblanks"></a> CPathT::RemoveBlanks
 
-Wywołanie tej metody, aby usunąć wszystkie spacje wiodące i końcowe ze ścieżki.
+Wywołaj tę metodę, aby usunąć wszystkie spacje wiodące i końcowe ze ścieżki.
 
 ```cpp
 void RemoveBlanks();
@@ -790,9 +791,9 @@ void RemoveBlanks();
 
 Aby uzyskać więcej informacji, zobacz [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
 
-## <a name="cpathtremoveextension"></a><a name="removeextension"></a>CPathT::UsuńWyświetlenie
+## <a name="cpathtremoveextension"></a><a name="removeextension"></a> CPathT::RemoveExtension
 
-Wywołanie tej metody, aby usunąć rozszerzenie pliku ze ścieżki, jeśli istnieje.
+Wywołaj tę metodę, aby usunąć rozszerzenie pliku ze ścieżki, jeśli istnieje.
 
 ```cpp
 void RemoveExtension();
@@ -802,9 +803,9 @@ void RemoveExtension();
 
 Aby uzyskać więcej informacji, zobacz [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
 
-## <a name="cpathtremovefilespec"></a><a name="removefilespec"></a>CPathT::RemoveFileSpec
+## <a name="cpathtremovefilespec"></a><a name="removefilespec"></a> CPathT::RemoveFileSpec
 
-Wywołanie tej metody, aby usunąć nazwę końcowego pliku i ukośnik odwrotny ze ścieżki, jeśli je ma.
+Wywołaj tę metodę, aby usunąć końcową nazwę pliku i ukośnik odwrotny ze ścieżki, jeśli je zawiera.
 
 ```
 BOOL RemoveFileSpec();
@@ -812,15 +813,15 @@ BOOL RemoveFileSpec();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 
-## <a name="cpathtrenameextension"></a><a name="renameextension"></a>CPathT::Zmień nazwęWyświetlanie
+## <a name="cpathtrenameextension"></a><a name="renameextension"></a> CPathT::RenameExtension
 
-Wywołanie tej metody, aby zastąpić rozszerzenie nazwy pliku w ścieżce z nowym rozszerzeniem. Jeśli nazwa pliku nie zawiera rozszerzenia, rozszerzenie zostanie dołączone do końca ścieżki.
+Wywołaj tę metodę, aby zastąpić rozszerzenie nazwy pliku w ścieżce nowym rozszerzeniem. Jeśli nazwa pliku nie zawiera rozszerzenia, rozszerzenie zostanie dołączone do końca ścieżki.
 
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -828,20 +829,20 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametry
 
-*pszRozwusz*<br/>
-Nowe rozszerzenie nazwy pliku, poprzedzone znakiem ".".
+*pszExtension*<br/>
+Nowe rozszerzenie nazwy pliku poprzedzone znakiem ".".
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
+Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).
 
-## <a name="cpathtskiproot"></a><a name="skiproot"></a>CPathT::SkipRoot
+## <a name="cpathtskiproot"></a><a name="skiproot"></a> CPathT::SkipRoot
 
-Wywołanie tej metody, aby przeanalizować ścieżkę, ignorując literę dysku lub UNC (uniwersalna konwencja nazewnictwa) serwer/udział części ścieżki.
+Wywołaj tę metodę, aby przeanalizować ścieżkę, ignorując części dysku lub ścieżki UNC (Universal Naming Convention).
 
 ```
 int SkipRoot() const;
@@ -849,15 +850,15 @@ int SkipRoot() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca położenie początku ścieżki podrzędnej, która następuje po katalogu głównym (litera dysku lub serwer/udział UNC).
+Zwraca pozycję początku ścieżki podrzędnej, która następuje po elemencie głównym (litera dysku lub serwer/udział UNC).
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
-## <a name="cpathtstrippath"></a><a name="strippath"></a>CPathT::StripPath
+## <a name="cpathtstrippath"></a><a name="strippath"></a> CPathT::StripPath
 
-Wywołanie tej metody, aby usunąć część ścieżki w pełni kwalifikowany ścieżki i nazwy pliku.
+Wywołaj tę metodę, aby usunąć część w pełni kwalifikowanej ścieżki i nazwy pliku.
 
 ```cpp
 void StripPath();
@@ -867,9 +868,9 @@ void StripPath();
 
 Aby uzyskać więcej informacji, zobacz [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
-## <a name="cpathtstriptoroot"></a><a name="striptoroot"></a>CPathT::StripToRoot
+## <a name="cpathtstriptoroot"></a><a name="striptoroot"></a> CPathT::StripToRoot
 
-Wywołanie tej metody, aby usunąć wszystkie części ścieżki z wyjątkiem informacji głównych.
+Wywołaj tę metodę, aby usunąć wszystkie części ścieżki z wyjątkiem informacji głównych.
 
 ```
 BOOL StripToRoot();
@@ -877,15 +878,15 @@ BOOL StripToRoot();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli w ścieżce znaleziono prawidłową literę dysku lub w inny sposób fałsz.
+Zwraca wartość TRUE, jeśli w ścieżce znaleziono prawidłową literę dysku lub w przeciwnym razie ma wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 Aby uzyskać więcej informacji, zobacz [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).
 
-## <a name="cpathtunquotespaces"></a><a name="unquotespaces"></a>CPathT::UnquoteSpaces
+## <a name="cpathtunquotespaces"></a><a name="unquotespaces"></a> CPathT::UnquoteSpaces
 
-Wywołanie tej metody, aby usunąć znaki cudzysłowu z początku i końca ścieżki.
+Wywołaj tę metodę, aby usunąć znaki cudzysłowu z początku i końca ścieżki.
 
 ```cpp
 void UnquoteSpaces();
@@ -895,7 +896,7 @@ void UnquoteSpaces();
 
 Aby uzyskać więcej informacji, zobacz [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
 
-## <a name="cpathtxchar"></a><a name="xchar"></a>CPathT::XCHAR
+## <a name="cpathtxchar"></a><a name="xchar"></a> CPathT::XCHAR
 
 Typ znaku.
 
@@ -905,9 +906,9 @@ typedef StringType::XCHAR XCHAR;
 
 ### <a name="remarks"></a>Uwagi
 
-`StringType`jest parametrem `CPathT`szablonu do .
+`StringType` jest parametrem szablonu do `CPathT` .
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../atl/reference/atl-classes.md)<br/>
-[CStringT, klasa](../../atl-mfc-shared/reference/cstringt-class.md)
+[Klasa CStringT](../../atl-mfc-shared/reference/cstringt-class.md)
