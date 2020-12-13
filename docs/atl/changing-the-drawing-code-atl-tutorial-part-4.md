@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: zmiana kodu rysowania (samouczek ATL, część 4)'
 title: Zmiana kodu rysującego (ATL — Samouczek, część 4)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: 319a27b55c394349de751546457b0741c0799cfc
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 4d134930bf2c9bc886a3c59a68db5a52f7c6ca7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153385"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Zmiana kodu rysującego (ATL — Samouczek, część 4)
 
@@ -26,7 +27,7 @@ Domyślnie kod rysowania kontrolki Wyświetla kwadrat i tekst **PolyCtl**. W tym
 
 ## <a name="modifying-the-header-file"></a>Modyfikowanie pliku nagłówkowego
 
-Zacznij od dodania obsługi funkcji `sin` matematycznych i `cos`, które będą używane do obliczania punktów wielokątów i tworząc tablicę do przechowywania pozycji.
+Zacznij od dodania obsługi funkcji matematycznych `sin` i `cos` , które będą używane do obliczania punktów wielokątów i tworząc tablicę do przechowywania pozycji.
 
 ### <a name="to-modify-the-header-file"></a>Aby zmodyfikować plik nagłówka
 
@@ -47,20 +48,20 @@ Zacznij od dodania obsługi funkcji `sin` matematycznych i `cos`, które będą 
     public IProvideClassInfo2Impl<&CLSID_PolyCtl, &DIID__IPolyCtlEvents, &LIBID_PolygonLib>
     ```
 
-    i w `BEGIN_COM_MAP(CPolyCtl)`programie Dodaj wiersze:
+    i w programie `BEGIN_COM_MAP(CPolyCtl)` Dodaj wiersze:
 
     ```cpp
     COM_INTERFACE_ENTRY(IProvideClassInfo)
     COM_INTERFACE_ENTRY(IProvideClassInfo2)
     ```
 
-1. Po obliczeniu punktów wielokąta zostaną one zapisane w tablicy typu `POINT`, dlatego Dodaj tablicę po instrukcji `short m_nSides;` definicji w PolyCtl. h:
+1. Po obliczeniu punktów wielokąta zostaną one zapisane w tablicy typu `POINT` , dlatego Dodaj tablicę po instrukcji definicji `short m_nSides;` w PolyCtl. h:
 
     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_2.h)]
 
 ## <a name="modifying-the-ondraw-method"></a>Modyfikowanie metody OnDraw
 
-Teraz należy zmodyfikować `OnDraw` metodę w PolyCtl. h. Kod, który dodasz, tworzy nowe pióro i Pędzel, za pomocą których można narysować Wielokąt, a `Ellipse` następnie `Polygon` wywołuje funkcje i Win32 API, aby wykonać rzeczywiste Rysowanie.
+Teraz należy zmodyfikować `OnDraw` metodę w PolyCtl. h. Kod, który dodasz, tworzy nowe pióro i Pędzel, za pomocą których można narysować Wielokąt, a następnie wywołuje `Ellipse` `Polygon` funkcje i Win32 API, aby wykonać rzeczywiste Rysowanie.
 
 ### <a name="to-modify-the-ondraw-function"></a>Aby zmodyfikować funkcję OnDraw
 
@@ -70,7 +71,7 @@ Teraz należy zmodyfikować `OnDraw` metodę w PolyCtl. h. Kod, który dodasz, t
 
 ## <a name="adding-a-method-to-calculate-the-polygon-points"></a>Dodawanie metody w celu obliczenia punktów wielokąta
 
-Dodaj metodę o nazwie `CalcPoints`, która będzie obliczać współrzędne punktów, które tworzą obwód wielokąta. Te obliczenia będą oparte na zmiennej RECT, która jest przenoszona do funkcji.
+Dodaj metodę o nazwie `CalcPoints` , która będzie obliczać współrzędne punktów, które tworzą obwód wielokąta. Te obliczenia będą oparte na zmiennej RECT, która jest przenoszona do funkcji.
 
 ### <a name="to-add-the-calcpoints-method"></a>Aby dodać metodę CalcPoints
 
@@ -102,15 +103,15 @@ Konstruktor wygląda teraz następująco:
 
 ## <a name="building-and-testing-the-control"></a>Kompilowanie i testowanie kontrolki
 
-Ponownie skompiluj formant. Upewnij się, że plik PolyCtl. htm jest zamknięty, jeśli jest nadal otwarty, a następnie kliknij pozycję **Kompiluj Wielokąt** w menu **kompilacja** . Możesz ponownie wyświetlić formant na stronie PolyCtl. htm, ale ten czas użyje kontenera testów kontrolki ActiveX.
+Ponownie skompiluj formant. Upewnij się, że plik PolyCtl.htm jest zamknięty, jeśli jest nadal otwarty, a następnie kliknij pozycję **Kompiluj Wielokąt** w menu **kompilacja** . Możesz ponownie wyświetlić formant na stronie PolyCtl.htm, ale ten czas użyje kontenera testów kontrolki ActiveX.
 
 ### <a name="to-use-the-activex-control-test-container"></a>Aby użyć kontenera testów kontrolki ActiveX
 
 1. Kompiluj i uruchamiaj kontener testów kontrolki ActiveX. [Przykład TSTCON: kontener testowy kontrolki ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) można znaleźć w witrynie GitHub.
 
     > [!NOTE]
-    > W przypadku błędów `ATL::CW2AEX`związanych `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` z programem `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`Script. cpp Zastąp wiersz linią i `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` wierszem `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
-    > W przypadku błędów `HMONITOR`dotyczących programu Otwórz stdafx. h w `TCProps` projekcie i Zastąp:
+    > W przypadku błędów związanych z `ATL::CW2AEX` programem Script. cpp Zastąp wiersz linią `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );` i wierszem `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` `TRACE( "Source Text: %s\n", bstrSourceLineText );` .<br/>
+    > W przypadku błędów dotyczących programu `HMONITOR` Otwórz stdafx. h w `TCProps` projekcie i Zastąp:
     >
     > ```cpp
     > #ifndef WINVER
@@ -127,15 +128,15 @@ Ponownie skompiluj formant. Upewnij się, że plik PolyCtl. htm jest zamknięty,
     > #endif
     > ```
 
-1. W **kontenerze Test**w menu **Edycja** kliknij polecenie **Wstaw nową kontrolkę**.
+1. W **kontenerze Test** w menu **Edycja** kliknij polecenie **Wstaw nową kontrolkę**.
 
-1. Znajdź formant, który zostanie wywołany `PolyCtl class`, a następnie kliknij przycisk **OK**. Zobaczysz zielony trójkąt w okręgu.
+1. Znajdź formant, który zostanie wywołany `PolyCtl class` , a następnie kliknij przycisk **OK**. Zobaczysz zielony trójkąt w okręgu.
 
 Spróbuj zmienić liczbę stron, wykonując następną procedurę. Aby zmodyfikować właściwości na podwójnym interfejsie z poziomu **kontenera testowego**, użyj **metody Invoke**.
 
 ### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>Aby zmodyfikować właściwość kontrolki z kontenera testów
 
-1. W **kontenerze Test**kliknij polecenie **wywołaj metody** w menu **sterowania** .
+1. W **kontenerze Test** kliknij polecenie **wywołaj metody** w menu **sterowania** .
 
     Zostanie wyświetlone okno dialogowe **wywoływanie metody** .
 
@@ -145,21 +146,21 @@ Spróbuj zmienić liczbę stron, wykonując następną procedurę. Aby zmodyfiko
 
 Należy zauważyć, że formant nie zmienia się. Mimo że liczba stron wewnętrznie została zmieniona przez ustawienie `m_nSides` zmiennej, nie spowoduje to odświeżenia formantu. Jeśli przełączysz się do innej aplikacji, a następnie wrócisz do **kontenera testowego**, zobaczysz, że formant został odmalowany i ma poprawną liczbę boków.
 
-Aby rozwiązać ten problem, należy dodać wywołanie do `FireViewChange` funkcji zdefiniowanej w `IViewObjectExImpl`, po ustawieniu liczby boków. Jeśli kontrolka działa w osobnym oknie, `FireViewChange` wywoła `InvalidateRect` metodę bezpośrednio. Jeśli kontrolka działa bez okna, `InvalidateRect` Metoda zostanie wywołana w interfejsie lokacji kontenera. Powoduje to wymuszenie odświeżenia formantu.
+Aby rozwiązać ten problem, należy dodać wywołanie do `FireViewChange` funkcji zdefiniowanej w `IViewObjectExImpl` , po ustawieniu liczby boków. Jeśli kontrolka działa w osobnym oknie, `FireViewChange` wywoła `InvalidateRect` metodę bezpośrednio. Jeśli kontrolka działa bez okna, `InvalidateRect` Metoda zostanie wywołana w interfejsie lokacji kontenera. Powoduje to wymuszenie odświeżenia formantu.
 
 ### <a name="to-add-a-call-to-fireviewchange"></a>Aby dodać wywołanie do FireViewChange
 
-1. Zaktualizuj PolyCtl. cpp przez dodanie wywołania `FireViewChange` do `put_Sides` metody. Po zakończeniu `put_Sides` Metoda powinna wyglądać następująco:
+1. Zaktualizuj PolyCtl. cpp przez dodanie wywołania do `FireViewChange` `put_Sides` metody. Po zakończeniu `put_Sides` Metoda powinna wyglądać następująco:
 
     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]
 
-Po dodaniu `FireViewChange`, Odbuduj i spróbuj ponownie wykonać kontrolę w kontenerze testów kontrolki ActiveX. Tym razem, gdy zmienisz liczbę boków i klikniesz `Invoke`, należy natychmiast zobaczyć kontrolkę.
+Po dodaniu `FireViewChange` , Odbuduj i spróbuj ponownie wykonać kontrolę w kontenerze testów kontrolki ActiveX. Tym razem, gdy zmienisz liczbę boków i klikniesz `Invoke` , należy natychmiast zobaczyć kontrolkę.
 
 W następnym kroku dodasz zdarzenie.
 
 Z [powrotem do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [w kroku 5](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Samouczek](../atl/active-template-library-atl-tutorial.md)<br/>
-[Testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md)
+[Testowanie właściwości i zdarzeń za pomocą kontenera testów](../mfc/testing-properties-and-events-with-test-container.md)

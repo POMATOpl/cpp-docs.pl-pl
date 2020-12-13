@@ -1,47 +1,48 @@
 ---
+description: 'Dowiedz się więcej o: DCOMCNFG'
 title: DCOMCNFG
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: a389a46cd02b40cef46d687743fd3416cc4f3154
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d99b0018d63cedbccaf57ec4cadeb649f390dcf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153164"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG to narzędzie Windows NT 4.0, które można skonfigurować różne ustawienia specyficzne dla modelu DCOM w rejestrze. W oknie DCOMCNFG ma trzy strony: Zabezpieczenia domyślne, właściwości domyślne i aplikacji. W obszarze Windows 2000 na czwartej stronie domyślne protokołów, jest obecny.
+DCOMCNFG to narzędzie systemu Windows NT 4,0, które pozwala skonfigurować różne ustawienia specyficzne dla modelu DCOM w rejestrze. Okno DCOMCNFG ma trzy strony: domyślne ustawienia zabezpieczeń, domyślne właściwości i aplikacje. W obszarze systemu Windows 2000 znajduje się na czwartej stronie są obecne domyślne protokoły.
 
 ## <a name="default-security-page"></a>Domyślna strona zabezpieczeń
 
-Aby określić domyślne uprawnienia dla obiektów w systemie, można użyć strony Zabezpieczenia domyślne. Strona domyślna zabezpieczeń będzie mieć trzy sekcje: Dostępu, uruchamiania i konfiguracji. Aby zmienić ustawienia domyślne sekcji, kliknij odpowiedni **Edytuj domyślne** przycisku. Te ustawienia domyślne zabezpieczeń są przechowywane w kluczu rejestru `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
+Możesz użyć domyślnej strony zabezpieczenia, aby określić domyślne uprawnienia dla obiektów w systemie. Domyślna strona zabezpieczeń ma trzy sekcje: dostęp, uruchamianie i konfiguracja. Aby zmienić wartości domyślne sekcji, kliknij odpowiedni przycisk **Edytuj domyślne** . Te domyślne ustawienia zabezpieczeń są przechowywane w rejestrze w sekcji `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE` .
 
-## <a name="default-protocols-page"></a>Domyślna strona protokołów
+## <a name="default-protocols-page"></a>Strona protokoły domyślne
 
-Ta strona wyświetla zestaw protokołów sieciowych, które są dostępne dla modelu DCOM na tej maszynie. Kolejność odzwierciedla priorytet, w którym będą używane; pierwszy na liście ma najwyższy priorytet. Protokoły, można dodać lub usunąć z tej strony.
+Na tej stronie znajduje się zestaw protokołów sieciowych dostępnych dla modelu DCOM na tym komputerze. Zamówienie odzwierciedla priorytet, w którym będą używane; pierwszy na liście ma najwyższy priorytet. Protokoły mogą być dodawane lub usuwane z tej strony.
 
-## <a name="default-properties-page"></a>Strona właściwości domyślne
+## <a name="default-properties-page"></a>Domyślna strona właściwości
 
-Na stronie właściwości domyślne należy wybrać **Włącz model obiektów rozproszonych COM na tym komputerze** pole wyboru, jeśli chcesz, aby klienci na innych komputerach, do obiektów COM dostępu uruchomionych na tej maszynie. Wybranie tej opcji ustawia `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` wartość `Y`.
+Na stronie właściwości domyślne należy zaznaczyć pole wyboru **Włącz rozproszony model com na tym komputerze** , jeśli chcesz, aby klienci na innych komputerach mogli uzyskiwać dostęp do obiektów com uruchomionych na tej maszynie. Wybranie tej opcji powoduje ustawienie `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` wartości `Y` .
 
 ## <a name="applications-page"></a>Strona aplikacji
 
-Możesz zmienić ustawienia dla określonego obiektu ze strony aplikacji. Po prostu wybierz ją z listy i kliknij **właściwości** przycisku. W oknie właściwości zawiera pięć strony:
+Ustawienia dla określonego obiektu można zmienić na stronie aplikacje. Po prostu wybierz aplikację z listy, a następnie kliknij przycisk **Właściwości** . Okno Właściwości ma pięć stron:
 
-- Strona Ogólne potwierdza aplikację, którą pracujesz.
+- Strona ogólne potwierdza aplikację, z którą pracujesz.
 
-- Na stronie Lokalizacja pozwala określić, gdzie aplikacja powinna działać gdy klient wywołuje `CoCreateInstance` na odpowiedni identyfikator CLSID. Jeśli wybierzesz **Uruchom aplikację na następującym komputerze** pole wyboru, a następnie wprowadź nazwę komputera, a następnie `RemoteServerName` wartość jest dodawana w obszarze AppID dla tej aplikacji. Czyszczenie **Uruchom aplikację na tym komputerze** zmienia nazwę pola wyboru `LocalService` wartość `_LocalService` i dzięki temu wyłącza je.
+- Strona lokalizacja pozwala określić, gdzie aplikacja ma być uruchamiana, gdy klient wywołuje `CoCreateInstance` odpowiednie identyfikatory CLSID. W przypadku wybrania pola wyboru **Uruchom aplikację na następującym komputerze** , a następnie wprowadź nazwę komputera, `RemoteServerName` wartość zostanie dodana w ramach identyfikatora AppID dla tej aplikacji. Wyczyść pole wyboru **Uruchom aplikację na tym komputerze** `LocalService` , aby ponownie nazwać wartość do `_LocalService` i, w ten sposób wyłączyć.
 
-- Strona zabezpieczeń jest podobna do strony Zabezpieczenia domyślne, w oknie DCOMCNFG, z tą różnicą, że te ustawienia dotyczą tylko w bieżącej aplikacji. Ponownie te ustawienia są przechowywane w obszarze identyfikator aplikacji dla tego obiektu.
+- Strona zabezpieczenia jest podobna do domyślnej strony zabezpieczeń znalezionej w oknie DCOMCNFG, z tą różnicą, że te ustawienia mają zastosowanie tylko do bieżącej aplikacji. Ponownie ustawienia są przechowywane w identyfikatorze AppID dla tego obiektu.
 
-- Na stronie Identyfikowanie identyfikuje użytkownika, który jest używany do uruchamiania aplikacji.
+- Strona identyfikowanie identyfikuje użytkownika używanego do uruchamiania aplikacji.
 
-- Na stronie punkty końcowe, wyświetla zestaw protokołów i punktów końcowych dostępne do użycia przez klientów dla wybranego serwera modelu DCOM.
+- Na stronie punkty końcowe znajduje się zestaw protokołów i punktów końcowych dostępnych do użycia przez klientów wybranego serwera DCOM.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Usługi](../atl/atl-services.md)

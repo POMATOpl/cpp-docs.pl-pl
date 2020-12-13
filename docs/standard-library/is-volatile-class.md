@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_volatile
 title: is_volatile — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_volatile class
 - is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
-ms.openlocfilehash: daba5dff55e0f3afa1e9996631125bf7ba64d52e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b94a83360d62970b9a198976eeb6faaefdc89cbb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154165"
 ---
-# <a name="isvolatile-class"></a>is_volatile — Klasa
+# <a name="is_volatile-class"></a>is_volatile — Klasa
 
 Testuje, czy typ jest nietrwały.
 
@@ -32,7 +33,7 @@ Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli *ty* jest `volatile-qualified`.
+Wystąpienie predykatu typu ma wartość true, jeśli *ty* jest `volatile-qualified` .
 
 ## <a name="example"></a>Przykład
 
@@ -71,11 +72,11 @@ is_volatile<volatile int> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[is_const, klasa](../standard-library/is-const-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa is_const](../standard-library/is-const-class.md)

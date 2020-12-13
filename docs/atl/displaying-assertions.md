@@ -1,5 +1,6 @@
 ---
-title: Wyświetlanie asercji
+description: 'Dowiedz się więcej na temat: wyświetlanie potwierdzeń'
+title: Wyświetlanie potwierdzeń
 ms.date: 05/05/2019
 helpviewer_keywords:
 - debugging [ATL], displaying assertions
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: fa353fe8-4656-4384-a5d2-8866bc977f06
-ms.openlocfilehash: 962a33a7d5d922f7f1655e22b2c9d0acdcf8925c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 3f925d5f3a7d1ad0ac1171ea8983b57ead147bf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153017"
 ---
-# <a name="displaying-assertions"></a>Wyświetlanie asercji
+# <a name="displaying-assertions"></a>Wyświetlanie potwierdzeń
 
-Jeśli klient połączony z usługą pojawi się przestanie odpowiadać, usługa ma potwierdzone i wyświetlone okno komunikatu, które nie są widoczne. Można to potwierdzić, przy użyciu debugera programu Visual Studio podczas debugowania kodu (zobacz [za pomocą Menedżera zadań](../atl/using-task-manager.md) wcześniej w tej sekcji).
+Jeśli klient połączony z usługą wydaje się przestać odpowiadać, usługa mogła zostać potwierdzona i wyświetlone okno komunikatu, którego nie można zobaczyć. Można to potwierdzić przy użyciu debugera programu Visual Studio do debugowania kodu (zobacz sekcję [using Task Manager](../atl/using-task-manager.md) wcześniej w tej sekcji).
 
-Jeśli okaże się, że usługa jest wyświetlane okno komunikatu, które nie są widoczne, warto ustawić **Zezwalaj na usługę, aby interakcja z pulpitem** opcji przed ponownie przy użyciu usługi. Ta opcja jest parametr uruchamiania, który pozwala na okien komunikatów wyświetlanych przez usługę, aby wyświetlane na pulpicie. Aby ustawić tę opcję, Otwórz aplikację w Panelu sterowania, wybierz usługę, kliknij przycisk **uruchamiania**, a następnie wybierz pozycję **Zezwalaj na usługę, aby interakcja z pulpitem** opcji.
+Jeśli okaże się, że usługa wyświetla okno komunikatu, którego nie można zobaczyć, przed ponownym użyciem usługi należy ustawić opcję **Zezwalaj usłudze na współdziałanie z pulpitem** . Ta opcja jest parametrem uruchamiania, który umożliwia wyświetlenie wszystkich okien komunikatów wyświetlanych przez usługę na pulpicie. Aby ustawić tę opcję, Otwórz Panel sterowania usług, wybierz usługę, kliknij przycisk **Start**, a następnie wybierz opcję **Zezwalaj usłudze na współpracujące z pulpitem** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wskazówki dotyczące debugowania](../atl/debugging-tips.md)
+[Porady dotyczące debugowania](../atl/debugging-tips.md)

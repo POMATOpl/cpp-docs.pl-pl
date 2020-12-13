@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy shared_ptr
 title: shared_ptr, klasa
 ms.date: 07/29/2019
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 973bda9cb769eff339a02cbc43838e8c94516408
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154048"
 ---
 # <a name="shared_ptr-class"></a>shared_ptr, klasa
 
@@ -140,7 +141,7 @@ Wiele wątków może odczytywać i zapisywać różne `shared_ptr` obiekty w tym
 |[owner_before](#owner_before)|Zwraca wartość PRAWDA `shared_ptr` , jeśli jest ona uporządkowana przed (lub mniej niż) dostarczonym wskaźnikiem.|
 |[zresetować](#reset)|Zamień własność zasobu.|
 |[wymiany](#swap)|Zamienia dwa `shared_ptr` obiekty.|
-|[unique](#unique)|Testuje, czy posiadany zasób jest unikatowy.|
+|[unikatowy](#unique)|Testuje, czy posiadany zasób jest unikatowy.|
 |[use_count](#use_count)|Zlicza liczby właścicieli zasobów.|
 | **Operatory** | |
 |[wartość logiczna operatora](#op_bool)|Testuje, czy właścicielem istnieje zasób.|
@@ -329,7 +330,7 @@ Wskaźnik Autotekstu do przeniesienia. `auto_ptr`Przeciążenie jest przestarza�
 Unikatowy wskaźnik do obiektu, do którego ma zostać przyjęty własność. nie *jest to* obiekt po wywołaniu.
 
 *Różnych*\
-Typ obiektu wskazywanego przez *SP*, *AP*lub w *górę*.
+Typ obiektu wskazywanego przez *SP*, *AP* lub w *górę*.
 
 *Deleter*\
 Typ operacji usuwania obiektu będącego właścicielem, który jest przechowywany do późniejszego usunięcia obiektu.

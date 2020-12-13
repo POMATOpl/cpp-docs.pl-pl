@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy wskaźników interfejsu'
 title: Klasy wskaźników interfejsu (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - interfaces, pointers classes
 - interface pointers classes
 ms.assetid: 712617a1-17ae-4b5c-a32c-a48b758df7a6
-ms.openlocfilehash: 992d4c7d882cd8837c3dbacbfde4855c9c94817f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 308814c0d2ba180e2cdc2a916e7f4f9e4bc520f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152753"
 ---
 # <a name="interface-pointers-classes"></a>Klasy wskaźników interfejsu
 
-Następujące klasy Zarządzanie wskaźnik danego interfejsu:
+Następujące klasy zarządzają podanym wskaźnikiem interfejsu:
 
-- [CComPtr](../atl/reference/ccomptr-class.md) wykonuje automatyczne liczenie odwołań.
+- [CComPtr](../atl/reference/ccomptr-class.md) Wykonuje automatyczne zliczanie odwołań.
 
-- [CComQIPtr](../atl/reference/ccomqiptr-class.md) podobnie jak `CComPtr`, ale również wykonuje automatyczne przesyłanie zapytań dotyczących interfejsów.
+- [CComQIPtr](../atl/reference/ccomqiptr-class.md) Podobnie jak w `CComPtr` przypadku programu, ale również wykonuje automatyczne zapytania dotyczące interfejsów.
 
-- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) metody udostępnia przydatne przy konstruowaniu tablicy com interfejsu wskaźników.
+- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) Zapewnia metody przydatne podczas konstruowania tablicy wskaźników interfejsu COM.
 
-- [CInterfaceList](../atl/reference/cinterfacelist-class.md) metody udostępnia przydatne podczas tworzenia listy COM interfejsu wskaźników.
+- [CInterfaceList](../atl/reference/cinterfacelist-class.md) Zapewnia metody przydatne podczas konstruowania listy wskaźników interfejsu COM.
 
-- [CComGITPtr](../atl/reference/ccomgitptr-class.md) udostępnia metody radzenia sobie z wskaźniki interfejsu i tabeli interfejsu globalnego (GIT).
+- [CComGITPtr](../atl/reference/ccomgitptr-class.md) Zapewnia metody do postępowania z wskaźnikami interfejsu i globalną tabelą interfejsów (GIT).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)
+[Przegląd klas](../atl/atl-class-overview.md)

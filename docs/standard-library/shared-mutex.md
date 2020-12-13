@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; shared_mutex>'
 title: '&lt;shared_mutex&gt;'
 ms.date: 03/27/2019
 f1_keywords:
@@ -45,12 +46,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: f33a9c5fe4c5058d039feff896f7e53fe40cbf31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97446b3709dd71b49389fa63ac067f7cc9ccf820
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154067"
 ---
 # <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
@@ -108,7 +109,7 @@ Udostępniony typ muteksu czasu obsługuje dodatkowe metody `try_lock_shared_for
 
 ## <a name="classes"></a>Klasy
 
-### <a name="shared_mutex-class"></a><a name="class_shared_mutex"></a>Klasa shared_mutex
+### <a name="shared_mutex-class"></a><a name="class_shared_mutex"></a> Klasa shared_mutex
 
 Klasa `shared_mutex` implementuje niecykliczny element mutex z semantyką własności udostępnionej.
 
@@ -135,7 +136,7 @@ public:
    };
 ```
 
-### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a>Klasa shared_timed_mutex
+### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a> Klasa shared_timed_mutex
 
 Klasa `shared_timed_mutex` implementuje niecykliczny element mutex z semantyką własności współużytkowanej, która spełnia wymagania typu obiektu mutex o określonej godzinie.
 
@@ -167,7 +168,7 @@ public:
    };
 ```
 
-### <a name="shared_lock-class"></a><a name="class_shared_lock"></a>Klasa shared_lock
+### <a name="shared_lock-class"></a><a name="class_shared_lock"></a> Klasa shared_lock
 
 Szablon klasy `shared_lock` kontroluje wspólną własność udostępnionego obiektu mutex w zakresie. Parametr szablonu musi być typem udostępnionego obiektu mutex.
 
@@ -215,7 +216,7 @@ private:
 
 ## <a name="functions"></a>Funkcje
 
-### <a name="swap"></a><a name="function_swap"></a>wymiany
+### <a name="swap"></a><a name="function_swap"></a> wymiany
 
 Zamienia `shared_lock` obiekty.
 
@@ -232,7 +233,7 @@ Wymienia zawartość dwóch `shared_lock` obiektów. Efektywnie tak samo jak w p
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[&lt;>mutex](../standard-library/mutex.md)
+[&lt;>mutex ](../standard-library/mutex.md)

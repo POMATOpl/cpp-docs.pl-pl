@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; &gt; operatorzy narzędzi'
 title: '&lt;&gt;Operatory narzędzi'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 7146c31e33b514b20703b280a7194f639c387c26
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0db6f5b18708052964353687190295084886c928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153463"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;&gt;Operatory narzędzi
 
 > [!NOTE]
 > Operatory using `Type&` są zawarte w `namespace rel_ops` .
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje, czy obiekt pary po lewej stronie operatora nie jest równy obiektowi pary po prawej stronie.
 
@@ -103,7 +104,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje, czy obiekt pary po lewej stronie operatora jest równy obiektowi pary po prawej stronie.
 
@@ -166,7 +167,7 @@ int main( )
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy obiekt pary po lewej stronie operatora jest mniejszy od obiektu pary po prawej stronie.
 
@@ -240,7 +241,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Testuje, czy obiekt pary po lewej stronie operatora jest mniejszy niż lub równy obiektowi pary po prawej stronie.
 
@@ -325,7 +326,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Testuje, czy obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.
 
@@ -412,7 +413,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Testuje, czy obiekt pary po lewej stronie operatora jest większy niż lub równy obiektowi pary po prawej stronie.
 

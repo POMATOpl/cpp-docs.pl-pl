@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: &lt; Narzędzie&gt;'
 title: '&lt;Spuninst&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 1beade28ceec0f1552def4bc70c2e95e6b2aa24d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67472492acdb0ddbc1de957a69c01b1aafaf9367
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153437"
 ---
 # <a name="ltutilitygt"></a>&lt;Spuninst&gt;
 
@@ -42,9 +43,9 @@ Pary są szeroko używane w standardowej bibliotece języka C++. Są one wymagan
 
 ### <a name="objects"></a>Obiekty
 
-|Szablon|Opis|
+|Template|Opis|
 |-|-|
-|[index_sequence](../standard-library/utility-functions.md#index_sequence)|Szablon aliasu zdefiniowany dla typowego przypadku, w którym `T` jest`std::size_t`  |
+|[index_sequence](../standard-library/utility-functions.md#index_sequence)|Szablon aliasu zdefiniowany dla typowego przypadku, w którym `T` jest `std::size_t`  |
 |[index_sequence_for](../standard-library/utility-functions.md#index_sequence_for)|Szablon aliasu pomocnika do konwersji dowolnego pakietu parametrów typu na sekwencję indeksu o tej samej długości|
 |[make_index_sequence](../standard-library/utility-functions.md#make_index_sequence)| Szablon aliasu pomocnika, który upraszcza tworzenie `std::index_sequence` typu. |
 |[make_integer_sequence](../standard-library/utility-functions.md#make_integer_sequence)|Szablon aliasu pomocnika, który upraszcza tworzenie `std::integer_sequence` typu.|
@@ -58,7 +59,7 @@ Pary są szeroko używane w standardowej bibliotece języka C++. Są one wymagan
 |[zamian](../standard-library/utility-functions.md#exchange)|Przypisuje nową wartość do obiektu i zwraca jego starą wartość.|
 |[prześlą](../standard-library/utility-functions.md#forward)|Zachowuje typ odwołania ( `lvalue` lub `rvalue` ) argumentu w celu przesłaniania przez doskonałe przekazywanie.|
 |[from_chars](../standard-library/utility-functions.md#from_chars)||
-|[Pobierz](../standard-library/utility-functions.md#get)|Funkcja, która pobiera element z `pair` obiektu.|
+|[get](../standard-library/utility-functions.md#get)|Funkcja, która pobiera element z `pair` obiektu.|
 |[make_pair](../standard-library/utility-functions.md#make_pair)|Funkcja pomocnika szablonu służąca do konstruowania obiektów typu `pair` , w których typy składników są oparte na typach danych przesłanych jako parametry.|
 |[Przenieś](../standard-library/utility-functions.md#move)|Zwraca wartość argumentu przekazaną jako `rvalue` odwołanie.|
 |[move_if_noexcept](../standard-library/utility-functions.md#moveif)||
@@ -73,7 +74,7 @@ Pary są szeroko używane w standardowej bibliotece języka C++. Są one wymagan
 |[operator = =](../standard-library/utility-operators.md#op_eq_eq)|Testuje, czy obiekt pary po lewej stronie operatora jest równy obiektowi pary po prawej stronie.|
 |[zakład\<](../standard-library/utility-operators.md#op_lt)|Testuje, czy obiekt pary po lewej stronie operatora jest mniejszy od obiektu pary po prawej stronie.|
 |[zakład\<=](../standard-library/utility-operators.md#op_gt_eq)|Testuje, czy obiekt pary po lewej stronie operatora jest mniejszy niż lub równy obiektowi pary po prawej stronie.|
-|[>operatora](../standard-library/utility-operators.md#op_gt)|Testuje, czy obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.|
+|[>operatora ](../standard-library/utility-operators.md#op_gt)|Testuje, czy obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.|
 |[>operatora =](../standard-library/utility-operators.md#op_gt_eq)|Testuje, czy obiekt pary po lewej stronie operatora jest większy niż lub równy obiektowi pary po prawej stronie.|
 
 ### <a name="structs"></a>Struktury

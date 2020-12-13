@@ -1,28 +1,29 @@
 ---
-title: Implementing CComObjectRootEx
+description: 'Dowiedz się więcej o: implementowanie CComObjectRootEx'
+title: Implementowanie klasy CComObjectRootEx
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CComObjectRoot class, implementing
 - CComObjectRootEx class
 ms.assetid: 79630c44-f2df-4e9e-b730-400a0ebfbd2b
-ms.openlocfilehash: 80ce9936546b936770d8dedd0ba55f8c05617d37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 235d10a8c390311230057da5dda11e5a8f093445
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197474"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152844"
 ---
-# <a name="implementing-ccomobjectrootex"></a>Implementing CComObjectRootEx
+# <a name="implementing-ccomobjectrootex"></a>Implementowanie klasy CComObjectRootEx
 
-[Klasy CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) ma zasadnicze znaczenie; wszystkie obiekty ATL muszą mieć jedno wystąpienie `CComObjectRootEx` lub [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) w ich dziedziczenia. `CComObjectRootEx` udostępnia domyślną `QueryInterface` mechanizm oparte na wpisy mapy COM.
+[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) jest istotna; wszystkie obiekty ATL muszą mieć jedno wystąpienie `CComObjectRootEx` lub [klasy CComObjectRoot](../atl/reference/ccomobjectroot-class.md) w dziedziczeniu. `CComObjectRootEx` zapewnia domyślny `QueryInterface` mechanizm oparty na wpisach mapy com.
 
-Za pomocą jego mapy interfejsu COM interfejsy obiektu są widoczne dla klienta, gdy klient wysyła zapytanie do interfejsu. Zapytanie jest wykonywane za pośrednictwem `CComObjectRootEx::InternalQueryInterface`. `InternalQueryInterface` obsługuje tylko interfejsów COM tabeli mapy.
+Za pomocą swojej mapy COM interfejsy obiektu są udostępniane klientowi, gdy klient wysyła zapytanie dotyczące interfejsu. Zapytanie jest wykonywane przez `CComObjectRootEx::InternalQueryInterface` . `InternalQueryInterface` obsługuje tylko interfejsy w tabeli mapy COM.
 
-Możesz wprowadzić interfejsy do tabeli mapy modelu COM z [com_interface_entry —](reference/com-interface-entry-macros.md#com_interface_entry) — makro lub jedna z jej wariantów. Na przykład, poniższy kod wprowadza interfejsy `IDispatch`, `IBeeper`, i `ISupportErrorInfo` do tabeli mapy COM:
+Możesz wprowadzić interfejsy w tabeli mapy modelu COM za pomocą makra [COM_INTERFACE_ENTRY](reference/com-interface-entry-macros.md#com_interface_entry) lub jednego z jego wariantów. Na przykład poniższy kod wprowadza interfejsy `IDispatch` , `IBeeper` , i `ISupportErrorInfo` do tabeli mapy com:
 
 [!code-cpp[NVC_ATL_COM#1](../atl/codesnippet/cpp/implementing-ccomobjectrootex_1.h)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Podstawowe informacje o obiektach COM ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Makra mapy modelu COM](../atl/reference/com-map-macros.md)

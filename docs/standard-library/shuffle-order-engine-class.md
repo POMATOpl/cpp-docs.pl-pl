@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy shuffle_order_engine
 title: shuffle_order_engine — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: 49841d0527d82bf5877322a7c4dab17e95a3360e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3be8438ac0809d697d081d998450bde09d1d583e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154022"
 ---
 # <a name="shuffle_order_engine-class"></a>shuffle_order_engine — Klasa
 

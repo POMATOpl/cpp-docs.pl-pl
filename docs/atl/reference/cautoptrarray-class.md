@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAutoPtrArray'
 title: Klasa CAutoPtrArray
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 55f9382c82a1e242342d0d740c369a571c43f9ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152583"
 ---
 # <a name="cautoptrarray-class"></a>Klasa CAutoPtrArray
 
@@ -60,7 +61,7 @@ Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-colle
 
 **Nagłówek:** atlcoll. h
 
-## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a> CAutoPtrArray::CAutoPtrArray
 
 Konstruktor.
 
@@ -72,7 +73,7 @@ CAutoPtrArray() throw();
 
 Inicjuje tablicę inteligentnych wskaźników.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAtlArray](../../atl/reference/catlarray-class.md)<br/>
 [Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>

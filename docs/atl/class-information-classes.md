@@ -1,23 +1,24 @@
 ---
-title: Klasy — klasy informacji (ATL)
+description: 'Dowiedz się więcej na temat: klasy informacji o klasie'
+title: Klasy informacji o klasach (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - class information, retrieving
 ms.assetid: 39365025-f24a-41ae-87ab-4ae8ed085b98
-ms.openlocfilehash: 1d95a3444b6f592833367750a26e3a0e4cc0938e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0d35bc3362249d2117b47338cb46eace9dd78f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153346"
 ---
-# <a name="class-information-classes"></a>Klasy — klasy informacji
+# <a name="class-information-classes"></a>Klasy informacji o klasie
 
-Następujące klasy zapewnia obsługę pobierania informacji o klasie:
+Następująca Klasa zapewnia obsługę pobierania informacji o klasie:
 
-- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) zapewnia dostęp do informacji o typie. Pobiera wychodzących IID dla zestawu zdarzeń domyślnego obiektu.
+- [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) Zapewnia dostęp do informacji o typie. Pobiera wychodzący identyfikator IID dla domyślnego zestawu zdarzeń obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)
+[Przegląd klas](../atl/atl-class-overview.md)

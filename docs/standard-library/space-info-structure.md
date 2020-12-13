@@ -1,17 +1,18 @@
 ---
+description: Dowiedz się więcej na temat struktury space_info
 title: space_info — Struktura
 ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::tr2::sys::space_info
 ms.assetid: f2b35b42-06ff-45bd-8617-39a0f5358a54
-ms.openlocfilehash: 2a9856746a8bbc796871663a81bd8911d34dcd4a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 254866a0eb225b4ed7bcfe4e06a734c5c9d0e3ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153879"
 ---
-# <a name="spaceinfo-structure"></a>space_info — Struktura
+# <a name="space_info-structure"></a>space_info — Struktura
 
 Zawiera informacje o woluminie.
 
@@ -38,12 +39,12 @@ struct space_info
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> systemu plików
+**Nagłówek:**\<filesystem>
 
 **Przestrzeń nazw:** std:: eksperymentalne:: filesystem
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)\
-[Nawigacja w systemie plikówC++()](../standard-library/file-system-navigation.md)
+[Nawigacja w systemie plików (C++)](../standard-library/file-system-navigation.md)

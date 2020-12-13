@@ -1,35 +1,36 @@
 ---
-title: Moduły wyliczające i klasy kolekcji (ATL)
+description: 'Dowiedz się więcej na temat: modułów wyliczających i klas kolekcji'
+title: Klasy modułów wyliczających i kolekcji (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - enumerators, ATL classes
 ms.assetid: fcd093b2-98bf-444d-94ab-9a55520a5051
-ms.openlocfilehash: 6de81a7b0ddd77471669b19c4be1145c776d2902
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a29c5c4a3923c7ba027845cecf0bb95d0a76ddb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152991"
 ---
-# <a name="enumerators-and-collections-classes"></a>Klasy kolekcji i wyliczeń
+# <a name="enumerators-and-collections-classes"></a>Klasy modułów wyliczających i kolekcji
 
-Następujących klas obsługi COM, kolekcje i wyliczenia:
+Następujące klasy zapewniają obsługę kolekcji i wyliczeń COM:
 
-- [CComEnum](../atl/reference/ccomenum-class.md) definiuje COM enumerator — obiekt na podstawie tablicy.
+- [CComEnum](../atl/reference/ccomenum-class.md) Definiuje obiekt modułu wyliczającego COM na podstawie tablicy.
 
-- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) dostarcza implementację interfejsu modułu wyliczającego COM, gdzie elementy wyliczany są przechowywane w tablicy.
+- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) Zapewnia implementację interfejsu modułu wyliczającego COM, w którym wyliczane elementy są przechowywane w tablicy.
 
-- [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) obiekt modułu wyliczającego definiuje COM oparte na kolekcji standardowej biblioteki języka C++.
+- [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) Definiuje obiekt modułu wyliczającego COM na podstawie standardowej kolekcji biblioteki języka C++.
 
-- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) dostarcza implementację interfejsu modułu wyliczającego COM, przechowywania elementów wyliczany w kontenerze C++ Standard zgodnym z biblioteki.
+- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) Zapewnia implementację interfejsu modułu wyliczającego COM, w którym wyliczane elementy są przechowywane w kontenerze zgodnym z biblioteką języka C++ standard.
 
-- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) udostępnia implementację dla `Count`, `Item`, i `_NewEnum` właściwości interfejsu kolekcji.
+- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) Zapewnia implementację `Count` `Item` `_NewEnum` Właściwości interfejsu kolekcji, i.
 
 ## <a name="related-articles"></a>Powiązane artykuły
 
-[Kolekcje i wyliczenia ATL](../atl/atl-collections-and-enumerators.md)
+[Kolekcje i moduły wyliczające ATL](../atl/atl-collections-and-enumerators.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)
+[Przegląd klas](../atl/atl-class-overview.md)

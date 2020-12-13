@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Używanie operatorów wstawiania i formatu kontrolki'
 title: Korzystanie z operatorów wstawiania i formatu kontrolującego
 ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 0d6a2afb320f91e51e2a89156a6e6732c6be90e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ed0e850cb578b66ea9131d135891cbbd26da4b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153567"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Korzystanie z operatorów wstawiania i formatu kontrolującego
 
@@ -25,7 +26,7 @@ Można kontrolować format przy użyciu następujących opcji:
 
 - [Podstawy](#vclrfradixanchor6)
 
-## <a name="output-width"></a><a name="vclrfoutputwidthanchor3"></a>Szerokość wyjściowa
+## <a name="output-width"></a><a name="vclrfoutputwidthanchor3"></a> Szerokość wyjściowa
 
 Aby wyrównać dane wyjściowe, należy określić szerokość wyjściową dla każdego elementu, umieszczając `setw` Manipulator w strumieniu lub wywołując `width` funkcję elementu członkowskiego. Ten przykład umożliwia wyrównanie wartości w kolumnie o szerokości co najmniej 10 znaków:
 
@@ -72,7 +73,7 @@ for (int i = 0; i <4; i++)
 ******1.23
 *****35.36
 *****653.7
-***4358.24
+**_4358.24
 ```
 
 Aby określić szerokości dla elementów danych w tym samym wierszu, użyj `setw` Manipulator:
@@ -87,7 +88,7 @@ using namespace std;
 int main( )
 {
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
-   char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
+   char _names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
       cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
@@ -105,7 +106,7 @@ int main( )
 
 Ani `setw` nie `width` obcina wartości. Jeśli sformatowane dane wyjściowe przekraczają szerokość, cała wartość zostanie wydrukowany, pod warunkiem ustawienia dokładności strumienia. Oba `setw` i `width` mają wpływ tylko na następujące pola. Szerokość pola przywraca zachowanie domyślne (wymagana szerokość) po wydrukowaniu jednego pola. Jednak inne opcje formatu strumienia będą obowiązywać do momentu zmiany.
 
-## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a>Struktury
+## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a> Struktury
 
 Strumienie wyjściowe domyślnie do tekstu wyrównanego do prawej. Aby wyrównać lewe nazwy w poprzednim przykładzie i wyrównane do prawej, należy zastąpić **`for`** pętlę w następujący sposób:
 
@@ -128,7 +129,7 @@ Stan     4358.24
 
 Flaga wyrównany do lewej jest ustawiana za pomocą [setiosflags](../standard-library/iomanip-functions.md#setiosflags) Manipulator z `left` modułem wyliczającym. Ten moduł wyliczający jest zdefiniowany w klasie [systemu iOS](../standard-library/basic-ios-class.md) , więc jego odwołanie musi zawierać prefiks **iOS::** . [Resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) Manipulator wyłącza flagę wyrównany do lewej. W przeciwieństwie do `width` i `setw` , efekt `setiosflags` i `resetiosflags` jest trwały.
 
-## <a name="precision"></a><a name="vclrfprecisionanchor5"></a>Dokładne
+## <a name="precision"></a><a name="vclrfprecisionanchor5"></a> Dokładne
 
 Wartość domyślna dla precyzji zmiennoprzecinkowej to sześć. Na przykład numer 3466,9768 drukuje jako 3466,98. Aby zmienić sposób drukowania tej wartości, użyj metody [setprecision](../standard-library/iomanip-functions.md#setprecision) Manipulator. Manipulator ma dwie flagi: [naprawione](../standard-library/ios-functions.md#fixed) i [naukowe](../standard-library/ios-functions.md#scientific). W przypadku ustawienia opcji [stała](../standard-library/ios-functions.md#fixed) liczba jest drukowana jako 3466,976800. Jeśli `scientific` jest ustawiona, zostanie wydrukowana jako 3.4669773 + 003.
 
@@ -181,7 +182,7 @@ Stan    4.4e+03
 
 Ponownie program drukuje jedną cyfrę po przecinku dziesiętnym. Jeśli albo `ios::fixed` `ios::scientific` jest ustawiona, wartość precyzji określa liczbę cyfr po przecinku dziesiętnym. Jeśli flaga nie jest ustawiona, wartość precyzji określa łączną liczbę cyfr znaczących. `resetiosflags`Manipulator czyści te flagi.
 
-## <a name="radix"></a><a name="vclrfradixanchor6"></a>Podstawy
+## <a name="radix"></a><a name="vclrfradixanchor6"></a> Podstawy
 
 `dec`, `oct` , I `hex` manipulowanie ustawia domyślny podstawy dla danych wejściowych i wyjściowych. Na przykład, Jeśli wstawisz `hex` Manipulator do strumienia danych wyjściowych, obiekt poprawnie tłumaczy wewnętrzną reprezentację danych liczb całkowitych na szesnastkowy format wyjściowy. Liczby są wyświetlane z cyframi od a do f w przypadku małych liter, jeśli flaga [wielkich](../standard-library/ios-functions.md#uppercase) liter jest wyczyszczona (wartość domyślna); w przeciwnym razie są wyświetlane w Wielkiej litery. Wartość domyślna podstawy to `dec` (Decimal).
 

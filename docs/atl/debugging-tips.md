@@ -1,27 +1,28 @@
 ---
-title: Wskazówki dotyczące (ATL) debugowania
+description: 'Dowiedz się więcej na temat: porady dotyczące debugowania'
+title: Porady dotyczące debugowania (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, debugging
 - services, debugging
 ms.assetid: 48c60244-d0ce-4466-85fa-6fa65fcfe86c
-ms.openlocfilehash: 47c7a941d7d619b63bc0788bad7294efd743969f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13054007cfdfe39b8818d8150241abb888f3fa25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153108"
 ---
-# <a name="debugging-tips"></a>Wskazówki dotyczące debugowania
+# <a name="debugging-tips"></a>Porady dotyczące debugowania
 
-W poniższych tematach przedstawiono niektóre przydatne etapy dotyczące debugowania usługi:
+W poniższych tematach przedstawiono kilka przydatnych kroków debugowania usługi:
 
 - [Korzystanie z Menedżera zadań](../atl/using-task-manager.md)
 
-- [Wyświetlanie asercji](../atl/displaying-assertions.md)
+- [Wyświetlanie potwierdzeń](../atl/displaying-assertions.md)
 
 - [Uruchamianie programu jako serwera lokalnego](../atl/running-the-program-as-a-local-server.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Usługi](../atl/atl-services.md)

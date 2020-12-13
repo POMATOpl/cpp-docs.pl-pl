@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy kolekcji'
 title: Klasy kolekcji w ATL
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: a93810b91cefd897b55cae4760ade32374900eb3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: bf0b8cf1e45673dd64b1b1d60a56ed9889bb6cff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153320"
 ---
 # <a name="collection-classes"></a>Klasy kolekcji
 
@@ -60,11 +61,11 @@ Poniższe klasy zapewniają obsługę tablic, list, map oraz metod, które ułat
 
 - [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) Ta klasa dostarcza domyślne metody i funkcje dla klasy kolekcji, która składa się z typów danych pierwotnych.
 
-- [CRBMap](../atl/reference/crbmap-class.md) Ta klasa reprezentuje strukturę mapowania przy użyciu czarno-czarnego drzewa binarnego.
+- [CRBMap](../atl/reference/crbmap-class.md) Ta klasa reprezentuje strukturę mapowania przy użyciu Red-Black drzewie binarnym.
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Ta klasa reprezentuje strukturę mapowania, która umożliwia skojarzenie poszczególnych kluczy z więcej niż jedną wartością, przy użyciu czarnego drzewa binarnego czerwonego.
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Ta klasa reprezentuje strukturę mapowania, która umożliwia skojarzenie poszczególnych kluczy z więcej niż jedną wartością przy użyciu Red-Black drzewie binarnym.
 
-- [CRBTree](../atl/reference/crbtree-class.md) Ta klasa zawiera metody tworzenia i używania czarnego drzewa.
+- [CRBTree](../atl/reference/crbtree-class.md) Ta klasa zawiera metody tworzenia i używania drzewa Red-Black.
 
 - [CSimpleArray](../atl/reference/csimplearray-class.md) Ta klasa udostępnia metody zarządzania prostą tablicą.
 
@@ -88,7 +89,7 @@ Poniższe klasy zapewniają obsługę tablic, list, map oraz metod, które ułat
 
 [Omówienie klasy kolekcji ATL](../atl/atl-collection-classes.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../atl/atl-class-overview.md)<br/>
 [Klasy kolekcji](../atl/atl-collection-classes.md)
