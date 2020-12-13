@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny NMAKE U1078'
 title: Błąd krytyczny NMAKE U1078
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ad2430a3b671f414f5a34b93140f7da2e746254c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80193657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345410"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Błąd krytyczny NMAKE U1078
 
@@ -21,4 +22,4 @@ Podane wyrażenie zawiera stałą, która przekroczyła zakres od-2 147 483 648 
 
 - Wyrażenie określone z dyrektywą preprocesora
 
-- Poziom błędu określony za pomocą modyfikatora poleceń łącznika ( **-** )
+- Poziom błędu określony za pomocą **-** modyfikatora poleceń łącznika ()
