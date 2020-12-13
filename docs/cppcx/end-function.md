@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: End Function'
 title: End — funkcja
 ms.date: 01/22/2017
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-ms.openlocfilehash: c46c601be2b2ed78cf79641a7fcf5324e615a771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29595e7eb403af85abdbfa18782adf1c33c308e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341974"
 ---
 # <a name="end-function"></a>End — funkcja
 
-Zwraca iterator, który wskazuje poza końcem kolekcji, która jest dostępna za pomocą parametru określonego interfejsu.
+Zwraca iterator, który wskazuje poza końcem kolekcji, do której uzyskuje dostęp określony parametr interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,13 +42,13 @@ template <typename T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Parametrowi typu szablonu.
+Parametr typu szablonu.
 
 *v*<br/>
-Kolekcja wektora\<T > lub VectorView\<T > obiekty, które są używane przez IVector\<T >, lub IVectorView\<T > interfejsu.
+Kolekcja \<T> obiektów Vector lub VectorView, \<T> do których uzyskuje dostęp za pomocą \<T> interfejsu IVector lub IVectorView \<T> .
 
 *i*<br/>
-Zbiór arbitraty Windows Runtime obiekty, które są dostępne dla IIterable\<T > interfejsu.
+Kolekcja środowisko wykonawcze systemu Windows obiektów, do których uzyskuje dostęp \<T> interfejs IIterable.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -55,16 +56,16 @@ Iterator, który wskazuje poza końcem kolekcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwie funkcje szablonów zwracają Iteratory, a trzecia funkcja szablonu zwraca iterator danych wejściowych.
+Pierwsze dwie funkcje szablonu zwracają Iteratory, a trzecia funkcja szablonu zwraca iterator danych wejściowych.
 
-[Platform::Collections:: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) obiektu, który jest zwracany przez `end` jest iteratorem serwera proxy, który przechowuje elementy typu `VectorProxy<T>`. Jednak obiekt serwera proxy prawie nigdy nie jest widoczne dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcji (C++/CX)](../cppcx/collections-c-cx.md).
+Obiekt [platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) zwracany przez `end` jest iteratorem serwera proxy, który przechowuje elementy typu `VectorProxy<T>` . Jednak obiekt proxy jest prawie nigdy niewidoczny dla kodu użytkownika. Aby uzyskać więcej informacji, zobacz [kolekcje (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** collection.h
+**Nagłówek:** Collection. h
 
-**Namespace:** Windows::Foundation::Collections
+**Przestrzeń nazw:** Windows:: Foundation:: Collections
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Windows::Foundation::Collections, przestrzeń nazw](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows:: Foundation:: Collections, przestrzeń nazw](../cppcx/windows-foundation-collections-namespace-c-cx.md)

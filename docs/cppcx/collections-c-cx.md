@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej na temat kolekcji (C++/CX)
 title: Kolekcje (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 4843441b5d5091bea36ff8c74bd84bddd5f7fa4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342052"
 ---
 # <a name="collections-ccx"></a>Kolekcje (C++/CX)
 
@@ -57,7 +58,7 @@ Każdy element, który ma być przechowywany w [platformie:: Collections:: Vecto
 
 ## <a name="vectorproxy-elements"></a>Elementy VectorProxy
 
-[Platform:: Collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) i [platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) umożliwia użycie `range for` pętli i algorytmów, takich jak [std:: sort](../standard-library/algorithm-functions.md#sort) z kontenerem [IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1) . Ale do `IVector` elementów nie można uzyskać dostępu za poorednictwem dereferencji wskaźnika języka C++; dostęp do nich można uzyskać tylko za poorednictwem metod [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) i [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . W związku z tym Iteratory używają klas proxy `Platform::Details::VectorProxy<T>` i `Platform::Details::ArrowProxy<T>` zapewniają dostęp do poszczególnych elementów za pomocą __\*__ operatorów, __->__ i __ \[ ]__ , zgodnie z wymaganiami biblioteki standardowej. Mówiąc `IVector<Person^> vec` , typ `*begin(vec)` to `VectorProxy<Person^>` . Jednak obiekt proxy jest prawie zawsze przezroczysty dla kodu. Te obiekty proxy nie są udokumentowane, ponieważ są przeznaczone tylko do użytku wewnętrznego przez Iteratory, ale warto wiedzieć, jak działa mechanizm.
+[Platform:: Collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) i [platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) umożliwia użycie `range for` pętli i algorytmów, takich jak [std:: sort](../standard-library/algorithm-functions.md#sort) z kontenerem [IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1) . Ale do `IVector` elementów nie można uzyskać dostępu za poorednictwem dereferencji wskaźnika języka C++; dostęp do nich można uzyskać tylko za poorednictwem metod [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) i [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) . W związku z tym Iteratory używają klas proxy `Platform::Details::VectorProxy<T>` i `Platform::Details::ArrowProxy<T>` zapewniają dostęp do poszczególnych elementów za pomocą __\*__ operatorów, __->__ i __\[ ]__ , zgodnie z wymaganiami biblioteki standardowej. Mówiąc `IVector<Person^> vec` , typ `*begin(vec)` to `VectorProxy<Person^>` . Jednak obiekt proxy jest prawie zawsze przezroczysty dla kodu. Te obiekty proxy nie są udokumentowane, ponieważ są przeznaczone tylko do użytku wewnętrznego przez Iteratory, ale warto wiedzieć, jak działa mechanizm.
 
 Jeśli używasz `range for` pętli przez `IVector` kontenery, użyj, `auto&&` Aby włączyć zmienną iteratora w celu poprawnego powiązania do `VectorProxy` elementów. Jeśli używasz **`auto`** lub `auto&` , C4239 jest wywoływane Ostrzeżenie kompilatora i `VectoryProxy` jest ono wymienione w tekście ostrzegawczym.
 

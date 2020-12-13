@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej o bibliotekach statycznych (C++/CX)
 title: Biblioteki statyczne (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 756f8d2c1af2c6be414ad39b4a96fa6cc7ccfb02
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0e8a0100e2822719e4105ed4e9b1029a4ff488da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341935"
 ---
 # <a name="static-libraries-ccx"></a>Biblioteki statyczne (C++/CX)
 
@@ -23,9 +24,9 @@ Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od
 
 1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego Ustaw  **Język** na **C++** , ustaw **platformę** na **Windows** , a następnie ustaw **Typ projektu** na **platformy UWP** .
+1. W górnej części okna dialogowego Ustaw  **Język** na **C++**, ustaw **platformę** na **Windows**, a następnie ustaw **Typ projektu** na **platformy UWP**.
 
-1. Z listy filtrowane typy projektów wybierz pozycję **Biblioteka statyczna (uniwersalna platforma Windows-C++/CX)** , a następnie wybierz przycisk **dalej** . Na następnej stronie Nadaj projektowi nazwę i określ lokalizację projektu w razie potrzeby.
+1. Z listy filtrowane typy projektów wybierz pozycję **Biblioteka statyczna (uniwersalna platforma Windows-C++/CX)** , a następnie wybierz przycisk **dalej**. Na następnej stronie Nadaj projektowi nazwę i określ lokalizację projektu w razie potrzeby.
 
 1. Wybierz przycisk **Utwórz** , aby utworzyć projekt.
 
@@ -35,15 +36,15 @@ Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Aby utworzyć bibliotekę statyczną platformy UWP w programie Visual Studio 2017 lub Visual Studio 2015
 
-1. Na pasku menu wybierz pozycję **plik**  >  **Nowy**  >  **projekt** . W obszarze **Visual C++**  >  **uniwersalna** **Biblioteka statyczna systemu Windows (uniwersalna platforma Windows)** .
+1. Na pasku menu wybierz pozycję **plik**  >  **Nowy**  >  **projekt**. W obszarze **Visual C++**  >  **uniwersalna** **Biblioteka statyczna systemu Windows (uniwersalna platforma Windows)**.
 
-1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości** . W oknie dialogowym **Właściwości** na stronie **Właściwości konfiguracji**  >  **C/C++** ustaw wartość Użyj **środowisko wykonawcze systemu Windows rozszerzenia** na **tak (/zw)** .
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**. W oknie dialogowym **Właściwości** na stronie **Właściwości konfiguracji**  >  **C/C++** ustaw wartość Użyj **środowisko wykonawcze systemu Windows rozszerzenia** na **tak (/zw)**.
 
 ::: moniker-end
 
 Podczas kompilowania nowej biblioteki statycznej, jeśli wywołasz Win32 API, który jest wykluczony dla aplikacji platformy UWP, kompilator zgłosi błąd C3861, "nie znaleziono identyfikatora". Aby wyszukać alternatywną metodę obsługiwaną dla środowisko wykonawcze systemu Windows, zobacz [alternatywy dla interfejsów API systemu Windows w aplikacjach platformy UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
-W przypadku dodania projektu biblioteki statycznej języka C++ do rozwiązania aplikacji platformy UWP może być konieczne zaktualizowanie ustawień właściwości projektu biblioteki, aby Właściwość obsługa platformy UWP została ustawiona na **wartość tak** . Bez tego ustawienia kod kompiluje i łączy, ale wystąpi błąd podczas próby zweryfikowania aplikacji dla Microsoft Store. Statyczna biblioteka lib powinna być skompilowana przy użyciu tych samych ustawień kompilatora co projekt, który go używa.
+W przypadku dodania projektu biblioteki statycznej języka C++ do rozwiązania aplikacji platformy UWP może być konieczne zaktualizowanie ustawień właściwości projektu biblioteki, aby Właściwość obsługa platformy UWP została ustawiona na **wartość tak**. Bez tego ustawienia kod kompiluje i łączy, ale wystąpi błąd podczas próby zweryfikowania aplikacji dla Microsoft Store. Statyczna biblioteka lib powinna być skompilowana przy użyciu tych samych ustawień kompilatora co projekt, który go używa.
 
 W przypadku korzystania z biblioteki statycznej, która tworzy `ref` klasy publiczne, klasy interfejsu publicznego lub publiczne klasy wartości, Konsolidator wywołuje to ostrzeżenie:
 
@@ -51,6 +52,6 @@ W przypadku korzystania z biblioteki statycznej, która tworzy `ref` klasy publi
 
 Można bezpiecznie zignorować to ostrzeżenie tylko wtedy, gdy biblioteka statyczna nie produkuje składników środowisko wykonawcze systemu Windows, które są używane poza samą biblioteką. Jeśli biblioteka nie korzysta ze zdefiniowanego przez siebie składnika, konsolidator może zoptymalizować implementację, mimo że metadane publiczne zawierają informacje o typie. Oznacza to, że składniki publiczne w bibliotece statycznej zostaną skompilowane, ale nie zostaną aktywowane w czasie wykonywania. Z tego powodu każdy składnik środowisko wykonawcze systemu Windows, który jest przeznaczony do użycia przez inne składniki lub aplikacje, musi być zaimplementowany w bibliotece dołączanej dynamicznie (DLL).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wątkowość i kierowanie](../cppcx/threading-and-marshaling-c-cx.md)

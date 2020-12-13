@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: vscanf, vwscanf'
 title: vscanf, vwscanf
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0205a32418ea35a6f5d5b4c1f4bc7977ae7191ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342195"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -50,7 +51,7 @@ int vwscanf(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Format ciąg kontrolny.
 
 *arglist*<br/>
@@ -69,13 +70,13 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 Funkcja **vscanf** odczytuje dane ze standardowego strumienia wejściowego **stdin** i zapisuje dane w lokalizacjach, które są określone przez listę argumentów *arglist* . Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Jeśli używasz **vscanf** do odczytywania ciągu, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"** ); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą spowodować przepełnienie buforu. Alternatywnie możesz użyć [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) lub [fgets](fgets-fgetws.md).
+> Jeśli używasz **vscanf** do odczytywania ciągu, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"**); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą spowodować przepełnienie buforu. Alternatywnie można użyć [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) lub [fgets](fgets-fgetws.md).
 
 **vwscanf** to dwubajtowa wersja **vscanf**; argument *formatu* **vwscanf** jest ciągiem znaków dwubajtowych. **vwscanf** i **vscanf** zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vscanf** nie obsługuje danych wejściowych ze strumienia Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtscanf**|**vscanf**|**vscanf**|**vwscanf**|
 
@@ -86,9 +87,9 @@ Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**vscanf**|\<stdio.h>|
-|**vwscanf**|\<stdio. h > lub \<WCHAR. h >|
+|**vwscanf**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -147,11 +148,11 @@ The contents are: 36 92.300003 y n Wide characters
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md)<br/>

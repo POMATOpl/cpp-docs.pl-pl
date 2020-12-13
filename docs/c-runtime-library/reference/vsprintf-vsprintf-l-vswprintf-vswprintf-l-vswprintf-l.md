@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l'
 title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 ms.date: 09/03/2019
 api_name:
@@ -49,16 +50,16 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 9efb30428a146ec72c48d68ec411b21ca5bfef79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd7e06817049f26e80c4be9f1d3f3df40444feaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342117"
 ---
 # <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
-Napisz sformatowane dane wyjściowe przy użyciu wskaźnika do listy argumentów. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
+Napisz sformatowane dane wyjściowe przy użyciu wskaźnika do listy argumentów. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [vsprintf_s, _vsprintf_s_l, vswprintf_s _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -153,13 +154,13 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 > [!IMPORTANT]
 > Korzystając z **vsprintf**, nie ma możliwości ograniczenia liczby pisanych znaków, co oznacza, że kod korzystający z tej funkcji jest podatny na przepełnienia buforu. Zamiast tego użyj [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) lub wywołaj [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) , aby określić, jak duży bufor jest wymagany. Upewnij się również, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**vswprintf** jest zgodna ze standardem ISO C, który wymaga drugiego parametru, *Count*, typu **size_t**. Aby wymusić stare niestandardowe zachowanie, zdefiniuj **_CRT_NON_CONFORMING_SWPRINTFS**. Stare zachowanie może nie znajdować się w przyszłej wersji, dlatego należy zmienić kod, aby użyć nowego zachowania zgodnego.
+**vswprintf** jest zgodna ze standardem ISO C, który wymaga drugiego parametru, *count*, typu **size_t**. Aby wymusić stare niestandardowe zachowanie, zdefiniuj **_CRT_NON_CONFORMING_SWPRINTFS**. Stare zachowanie może nie znajdować się w przyszłej wersji, dlatego należy zmienić kod, aby użyć nowego zachowania zgodnego.
 
-W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstprintf**|**vsprintf**|**vsprintf**|**vswprintf**|
 |**_vstprintf_l**|**_vsprintf_l**|**_vsprintf_l**|**_vswprintf_l**|
@@ -168,10 +169,10 @@ W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsz
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**vsprintf**, **_vsprintf_l**|\<stdio. h > i \<STDARG. h >|\<varargs.h>*|
-|**vswprintf**, **_vswprintf_l**|\<stdio. h > lub \<WCHAR. h > i \<STDARG. h >|\<varargs.h>*|
+|**vsprintf**, **_vsprintf_l**|\<stdio.h> i \<stdarg.h>|\<varargs.h>*|
+|**vswprintf**, **_vswprintf_l**|\<stdio.h> lub \<wchar.h> , i \<stdarg.h>|\<varargs.h>*|
 
-\*Wymagane w przypadku zgodności z systemem UNIX V.
+\* Wymagane w przypadku zgodności z systemem UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -231,5 +232,5 @@ This is a string
 [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
 [fprintf —, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)

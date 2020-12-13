@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __readdr'
 title: __readdr
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-ms.openlocfilehash: fbaf9e761f9f1450ccd12dc378ab6e498aa0df08
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b3b5952d940db91b278344ab45edb3e8b914c094
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341012"
 ---
 # <a name="__readdr"></a>__readdr
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczytuje wartość określonego rejestru debugowania.
 
@@ -41,15 +42,15 @@ Te elementy wewnętrzne są dostępne tylko w trybie jądra, a procedury są dos
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
 |`__readdr`|x86, x64|
 
-**Plik nagłówkowy** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-\ [Wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

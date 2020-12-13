@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: delegatów (C++/CX)'
 title: Delegaty (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 4944efc10b4590f8dc682230968d9c97ef91cb5c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d62b48d76319d79707330e874e6ceddcc22284e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342013"
 ---
 # <a name="delegates-ccx"></a>Delegaty (C++/CX)
 
@@ -32,7 +33,7 @@ Podczas tworzenia aplikacji platforma uniwersalna systemu Windows często pracuj
 > [!TIP]
 > Program Visual Studio wykonuje dużą nakład pracy podczas tworzenia programu obsługi zdarzeń. Na przykład jeśli określisz procedurę obsługi zdarzeń w znaczniku XAML, zostanie wyświetlona etykietka narzędzia. W przypadku wybrania etykietki narzędzia program Visual Studio automatycznie tworzy metodę obsługi zdarzeń i kojarzy ją ze zdarzeniem klasy Publishing.
 
-Poniższy przykład pokazuje wzorzec podstawowy. `Windows::Foundation::TypedEventHandler`jest typem delegata. Funkcja obsługi jest tworzona za pomocą nazwanej funkcji.
+Poniższy przykład pokazuje wzorzec podstawowy. `Windows::Foundation::TypedEventHandler` jest typem delegata. Funkcja obsługi jest tworzona za pomocą nazwanej funkcji.
 
 W aplikacji App. h:
 
@@ -130,7 +131,7 @@ Jeśli chcesz, aby utworzony delegat został wywołany w tym samym wątku, w kt�
 
 Jeśli znasz programy obsługi zdarzeń w programie .NET, wiesz, że zalecaną metodą jest wykonanie lokalnej kopii zdarzenia przed jego wyzwoleniem. Pozwala to uniknąć sytuacji wyścigu, w których program obsługi zdarzeń może zostać usunięty tuż przed wywołaniem zdarzenia. Nie jest to konieczne w języku C++/CX, ponieważ w przypadku dodania lub usunięcia obsługi zdarzeń zostanie utworzona nowa lista obsługi. Ponieważ obiekt C++ zwiększa liczbę odwołań na liście programu obsługi przed wywołaniem zdarzenia, gwarantuje to, że wszystkie programy obsługi będą prawidłowe. Oznacza to jednak, że w przypadku usunięcia programu obsługi zdarzeń w wątku zużywania, ten program obsługi może być nadal wywoływany, jeśli obiekt publikacji nadal działa na jego kopii listy, która jest teraz nieaktualna. Obiekt publikacji nie uzyska zaktualizowanej listy do momentu następnego uruchomienia zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

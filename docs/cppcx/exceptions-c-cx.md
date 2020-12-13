@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: wyjątkach (C++/CX)'
 title: Wyjątki (C++/CX)
 ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7b4475cfa92aa952dd5a2996508d9343255b7ed2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bc04febf0d4b13a635ded6807e0cc77654dfdb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341948"
 ---
 # <a name="exceptions-ccx"></a>Wyjątki (C++/CX)
 
@@ -101,7 +102,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 W języku C++/CX nie jest używana **`finally`** klauzula.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++/CX](visual-c-language-reference-c-cx.md)<br/>
 [Dokumentacja przestrzeni nazw](namespaces-reference-c-cx.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: vsscanf, vswscanf'
 title: vsscanf, vswscanf
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-ms.openlocfilehash: 5dabe603c1cd0c95411fec87b9c0344f28c5c698
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8659fc132c3b3c4f8fc36ef2f36122a53f1be6ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342091"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
@@ -55,10 +56,10 @@ int vswscanf(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Przechowywane dane
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *arglist*<br/>
@@ -77,13 +78,13 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 Funkcja **vsscanf** odczytuje dane z *buforu* do lokalizacji, które są określone przez każdy argument na liście argumentów *arglist* . Każdy argument na liście musi być wskaźnikiem do zmiennej, która ma typ, który odpowiada specyfikatorowi typu w *formacie*. Argument *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla funkcji **scanf** . Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Jeśli używasz **vsscanf** do odczytywania ciągu, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"** ); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą spowodować przepełnienie buforu.
+> Jeśli używasz **vsscanf** do odczytywania ciągu, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"**); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą spowodować przepełnienie buforu.
 
 **vswscanf** to dwubajtowa wersja **vsscanf**; argumenty **vswscanf** są ciągami znaków dwubajtowych. **vsscanf** nie obsługuje wielobajtowych znaków szesnastkowych. **vswscanf** nie obsługuje znaków szesnastkowych o pełnej szerokości Unicode lub "strefy zgodności". W przeciwnym razie **vswscanf** i **vsscanf** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf**|**vsscanf**|**vsscanf**|**vswscanf**|
 
@@ -92,7 +93,7 @@ Funkcja **vsscanf** odczytuje dane z *buforu* do lokalizacji, które są określ
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**vsscanf**|\<stdio.h>|
-|**vswscanf**|\<stdio. h > lub \<WCHAR. h >|
+|**vswscanf**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -149,8 +150,8 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf_s, vswscanf_s](vsscanf-s-vswscanf-s.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: vsscanf_s, vswscanf_s'
 title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3be22d5ea1399c426159bcd006e89585128cee55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342104"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
@@ -71,7 +72,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **vsscanf_s** odczytuje dane z *buforu* do lokalizacji, które są określone przez każdy argument na liście argumentów *arglist* . Argumenty na liście argumentów określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji **vsscanf**, parametr rozmiaru buforu jest wymagany w przypadku użycia znaków pola typu **c**, **c**, **s**, **s**lub zestawu kontroli ciągów, które są ujęte w **[]**. Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga.
+Funkcja **vsscanf_s** odczytuje dane z *buforu* do lokalizacji, które są określone przez każdy argument na liście argumentów *arglist* . Argumenty na liście argumentów określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji **vsscanf**, parametr rozmiaru buforu jest wymagany w przypadku użycia znaków pola typu **c**, **c**, **s**, **s** lub zestawu kontroli ciągów, które są ujęte w **[]**. Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga.
 
 Rozmiar buforu zawiera kończący wartość null. Pole specyfikacji szerokości może służyć do zapewnienia, że token, który jest odczytywany, będzie pasować do buforu. Jeśli pole specyfikacji szerokości nie jest używane i odczyt tokenu jest zbyt duży, aby zmieścił się w buforze, nic nie jest zapisywane w tym buforze.
 

@@ -1,19 +1,20 @@
 ---
-title: 'domyślne:: (type_name):: metody ToString'
+description: 'Dowiedz się więcej na temat: default::(type_name):: ToString — Metoda'
+title: 'default::(type_name):: ToString — Metoda'
 ms.date: 12/30/2016
 f1_keywords:
 - VCCORLIB/Platform::Object::ToString
 ms.assetid: 2541955f-d844-4bd8-944d-185198c86579
-ms.openlocfilehash: 22ced2fc13f550a4a1f1c809c4854670450ad288
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b46476cbfc0dfcbfa38954cc8d9e68c1ebdd315c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342026"
 ---
-# <a name="defaulttypenametostring-method"></a>domyślne:: (type_name):: metody ToString
+# <a name="defaulttype_nametostring-method"></a>default::(type_name):: ToString — Metoda
 
-Zwraca ciąg reprezentujący bieżącego typu.
+Zwraca ciąg, który reprezentuje bieżący typ.
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,18 +24,18 @@ String^ ToString();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg, który reprezentuje bieżący obiekt.
+Ciąg reprezentujący bieżący obiekt.
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** domyślne
+**Przestrzeń nazw:** domyślna
 
-**Nagłówek:** vccorlib.h
+**Nagłówek:** vccorlib. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [domyślna przestrzeń nazw](../cppcx/default-namespace.md)

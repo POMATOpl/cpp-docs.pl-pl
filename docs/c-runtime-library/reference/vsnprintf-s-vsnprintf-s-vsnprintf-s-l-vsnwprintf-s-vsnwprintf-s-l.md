@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l'
 title: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: edb534eb533d63c9298b7b7e9aced1be3e8652d9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 27c91d6064b4a92da8a6f09e7d7e5b6bfb8bf95f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342156"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -144,7 +145,7 @@ Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../
 
 * Jeśli *Liczba* jest równa lub przekracza *sizeOfBuffer* , ale liczba znaków danych jest mniejsza niż *sizeOfBuffer*, wszystkie dane są zapisywane (z końcowym zerem) i zwracana jest liczba znaków.
 
-* Jeśli *Liczba* i liczba znaków danych jest równa lub większa niż *sizeOfBuffer*, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonywanie jest kontynuowane po procedurze obsługi nieprawidłowego parametru, te funkcje ustawiają *bufor* na pusty ciąg, ustawia **errno** na **ERANGE**i zwracają-1.
+* Jeśli *Liczba* i liczba znaków danych jest równa lub większa niż *sizeOfBuffer*, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonywanie jest kontynuowane po procedurze obsługi nieprawidłowego parametru, te funkcje ustawiają *bufor* na pusty ciąg, ustawia **errno** na **ERANGE** i zwracają-1.
 
 * Jeśli *bufor* lub *Format* jest wskaźnikiem typu **null** lub jeśli *licznik* jest mniejszy lub równy zero, zostanie wywołana procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i Return-1.
 
@@ -226,7 +227,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>

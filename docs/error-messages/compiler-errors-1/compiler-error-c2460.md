@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2460'
 title: Błąd kompilatora C2460
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2460
 ms.assetid: d969fca9-3ac5-4e4e-88fc-df05510e2093
-ms.openlocfilehash: a7d20a7658a75a492e19b9e81acaa3b6fce5cae7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6a6b521b356d4005906e97b085271369f2624c46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341857"
 ---
 # <a name="compiler-error-c2460"></a>Błąd kompilatora C2460
 
 "Identifier1": używa "identifier2", który jest definiowany
 
-Klasa lub struktura (`identifier2`) jest zadeklarowana jako element członkowski samego siebie (`identifier1`). Definicje cykliczne klas i struktur są niedozwolone.
+Klasa lub struktura ( `identifier2` ) jest zadeklarowana jako element członkowski samego siebie ( `identifier1` ). Definicje cykliczne klas i struktur są niedozwolone.
 
 Poniższy przykład generuje C2460:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK1181'
 title: Błąd narzędzi konsolidatora LNK1181
 ms.date: 08/22/2018
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-ms.openlocfilehash: d2b28af52a2ca2263a7bad77c8c69242396ff2b4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bda05d15597d6ed82b12145d380bbe40483d7623
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341688"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Błąd narzędzi konsolidatora LNK1181
 
 nie można otworzyć pliku wejściowego "filename"
 
-Konsolidator nie może odnaleźć `filename`, ponieważ nie istnieje lub nie znaleziono ścieżki.
+Nie można odnaleźć konsolidatora, `filename` ponieważ nie istnieje lub nie znaleziono ścieżki.
 
 Niektóre typowe przyczyny wystąpienia błędu LNK1181 obejmują:
 
 - `filename` jest przywoływany jako dodatkowa zależność w linii konsolidatora, ale plik nie istnieje.
 
-- Brak instrukcji **/LIBPATH** , która określa katalog zawierający `filename`.
+- Brak instrukcji **/LIBPATH** , która określa katalog zawierający `filename` .
 
 Aby rozwiązać powyższe problemy, upewnij się, że wszystkie pliki, do których odwołuje się linia konsolidatora, znajdują się w systemie.  Upewnij się również, że istnieje instrukcja **/LIBPATH** dla każdego katalogu zawierającego plik zależny od konsolidatora.
 
@@ -35,4 +36,4 @@ Kompilowanie z opcją [/p (preprocess to File)](../../build/reference/p-preproce
 
 ## <a name="see-also"></a>Zobacz też
 
-[/LIBPATH (Dodatkowa Libpath)](../../build/reference/libpath-additional-libpath.md)
+[/LIBPATH (dodatkowa LIBPATH)](../../build/reference/libpath-additional-libpath.md)
