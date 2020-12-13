@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMultiPageDHtmlDialog'
 title: Klasa CMultiPageDHtmlDialog
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 89e4830c3b5c6cb663ca2d2935adaaae3f356958
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f7f8c2081687c71a98e427bb5396cfa47a73deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331531"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Klasa CMultiPageDHtmlDialog
 
-Wielostronicowe okno dialogowe wyświetla kolejno wiele stron HTML i obsługuje zdarzenia z każdej strony.
+Wielostronicowe okno dialogowe wyświetla wiele stron HTML sekwencyjnie i obsługuje zdarzenia z poszczególnych stron.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,54 +32,54 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Konstruuje wielostronicowy obiekt okna dialogowego DHTML w stylu wielostronicowym.|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Niszczy wielostronicowy obiekt okna dialogowego DHTML.|
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Konstruuje obiekt okna dialogowego języka DHTML wielostronicowego (kreatora).|
+|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|Niszczy obiekt okna dialogowego DHTML wielostronicowego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Mechanizmem w tym celu jest [mapa zdarzeń DHTML i URL](dhtml-event-maps.md), która zawiera osadzone mapy zdarzeń dla każdej strony.
+Mechanizmem wykonywania tej operacji jest [Mapa zdarzeń DHTML i URL](dhtml-event-maps.md), która zawiera osadzone mapy zdarzeń dla każdej strony.
 
 ## <a name="example"></a>Przykład
 
-To wielostronicowe okno dialogowe zakłada trzy zasoby HTML, które definiują proste funkcje podobne do kreatora. Pierwsza strona ma przycisk **Dalej,** drugi przycisk **Prev** i **Next,** a trzeci przycisk **Prev.** Po naciśnięciu jednego z przycisków funkcja obsługi wywołuje [CDHtmlDialog::LoadFromResource,](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) aby załadować odpowiednią nową stronę.
+W tym oknie dialogowym wielostronicowym założono trzy zasoby HTML, które definiują proste funkcje podobne do kreatora. Pierwsza strona ma przycisk **dalej** , drugi przycisk **poprzedni** i **Następny** oraz trzeci przycisk **poprzedni** . Po naciśnięciu jednego z przycisków funkcja obsługi wywołuje [CDHtmlDialog:: LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) w celu załadowania odpowiedniej nowej strony.
 
-Odpowiednie części deklaracji klasy (w CMyMultiPageDlg.h):
+Odpowiednie części deklaracji klasy (w CMyMultiPageDlg. h):
 
 [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]
 
-Odpowiednie części implementacji klasy (w CMyMultipageDlg.cpp):
+Odpowiednie części implementacji klasy (w CMyMultipageDlg. cpp):
 
 [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CDHtmlSinkHandlerBase2`
 
 `CDHtmlSinkHandlerBase1`
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 `CDHtmlSinkHandler`
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 `CDHtmlEventSink`
 
-[Cdialog](../../mfc/reference/cdialog-class.md)
+[CDialog](../../mfc/reference/cdialog-class.md)
 
-[CdHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)
+[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)
 
 `CMultiPageDHtmlDialog`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdhtml.h
+**Nagłówek:** afxdhtml. h
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a> CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 
-Konstruuje wielostronicowy obiekt okna dialogowego DHTML w stylu wielostronicowym.
+Konstruuje obiekt okna dialogowego języka DHTML wielostronicowego (kreatora).
 
 ```
 CMultiPageDHtmlDialog(
@@ -97,23 +98,23 @@ CMultiPageDHtmlDialog();
 ### <a name="parameters"></a>Parametry
 
 *lpszTemplateName*<br/>
-Ciąg zakończony z wartością null, który jest nazwą zasobu szablonu okna dialogowego.
+Ciąg zakończony znakiem null, który jest nazwą zasobu szablonu okna dialogowego.
 
-*SzHtmlResID ( szhtmlResID )*<br/>
-Ciąg zakończony z wartością null, który jest nazwą zasobu HTML.
+*szHtmlResID*<br/>
+Ciąg zakończony znakiem null, który jest nazwą zasobu HTML.
 
 *pParentWnd*<br/>
-Wskaźnik do obiektu okna nadrzędnego lub właściciela (typu [CWnd),](../../mfc/reference/cwnd-class.md)do którego należy obiekt okna dialogowego. Jeśli jest null, okno nadrzędne obiektu okna dialogowego jest ustawiona na okno aplikacji głównej.
+Wskaźnik do obiektu nadrzędnego lub elementu będącego właścicielem (typu [CWnd](../../mfc/reference/cwnd-class.md)), do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno nadrzędne obiektu okna dialogowego jest ustawione na główne okno aplikacji.
 
 *nIDTemplate*<br/>
-Zawiera numer identyfikatora zasobu szablonu okna dialogowego.
+Zawiera numer IDENTYFIKACYJNy zasobu szablonu okna dialogowego.
 
-*nHtmlResID (nHtmlResID)*<br/>
-Zawiera numer identyfikatora zasobu HTML.
+*nHtmlResID*<br/>
+Zawiera numer IDENTYFIKACYJNy zasobu HTML.
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a> CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog
 
-Niszczy wielostronicowy obiekt okna dialogowego DHTML.
+Niszczy obiekt okna dialogowego DHTML wielostronicowego.
 
 ```
 virtual ~CMultiPageDHtmlDialog();

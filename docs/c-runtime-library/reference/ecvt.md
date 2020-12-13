@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ecvt'
 title: _ecvt
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9226ac29827db8d412a1266eeba1ccd2b889e2ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332864"
 ---
 # <a name="_ecvt"></a>_ecvt
 
@@ -53,7 +54,7 @@ char *_ecvt(
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Liczba do przekonwertowania.
 
 *liczbą*<br/>
@@ -81,7 +82,7 @@ Różnica między **_ecvt** i **_fcvt** jest interpretowana parametru *Count* . 
 
 **_ecvt** i **_fcvt** do konwersji Użyj jednego buforu przydzielenia statycznie. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *Sign* ma **wartość null**lub *licznik* ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i zwracana jest **wartość null** .
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *Sign* ma **wartość null** lub *licznik* ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i zwracana jest **wartość null** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

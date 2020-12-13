@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: schemat (dostęp do danych MFC)'
 title: Schemat (dostęp do danych MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - schemas [C++], database
 - structures [C++]
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
-ms.openlocfilehash: 0eac4f47c3d00c34c1aadaef18202a95f831ad82
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 87080cb05d22a5328e0e6ad5a36b25771d319209
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332421"
 ---
 # <a name="schema--mfc-data-access"></a>Schemat (dostęp do danych MFC)
 

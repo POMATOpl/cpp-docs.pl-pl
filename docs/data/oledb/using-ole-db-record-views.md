@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z widoków rekordów OLE DB'
 title: Korzystanie z widoków rekordów OLE DB
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-ms.openlocfilehash: 83f4d64252ab5c2b80d62419ea448c1ffd0cdd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8230ba118038852f81159d21a51165b7448a26aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332466"
 ---
 # <a name="using-ole-db-record-views"></a>Korzystanie z widoków rekordów OLE DB
 
-Jeśli chcesz wyświetlać dane zestawu wierszy OLE DB w aplikacji MFC, należy użyć klasy MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Obiekt widoku rekordu utworzone na podstawie `COleDBRecordView` umożliwia wyświetlanie rekordów bazy danych w kontrolkach MFC. W widoku rekordu jest widoku formularza okna dialogowego podłączone bezpośrednio do obiektu wierszy OLE DB utworzone na podstawie `CRowset` klasy szablonu. Wprowadzenie dojścia do obiektu zestawu wierszy jest prosty:
+Jeśli chcesz wyświetlić OLE DB dane zestawu wierszy w aplikacji MFC, użyj klasy MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Obiekt widoku rekordu utworzony z `COleDBRecordView` umożliwia wyświetlanie rekordów bazy danych w kontrolkach MFC. Widok rekordu to widok formularza okna dialogowego połączony bezpośrednio z obiektem zestawu wierszy OLE DB utworzonym na podstawie `CRowset` klasy szablonu. Pobieranie uchwytu do obiektu zestawu wierszy jest proste:
 
 ```cpp
 COleDBRecordView myRecordView;
@@ -27,11 +28,11 @@ COleDBRecordView myRecordView;
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();
 ```
 
-W widoku są wyświetlane pola `CRowset` obiektu w oknie dialogowym formanty. `COleDBRecordView` Obiekt używa wymiany danych okna dialogowego (DDX) i wyposażone w funkcję nawigacji `CRowset` (`MoveFirst`, `MoveNext`, `MovePrev`, i `MoveLast`) do automatyzowania przenoszenia danych między formantami na formularzu i pola zestawu wierszy. `COleDBRecordView` śledzi informacje o jego pozycja w zestawie wierszy tak, aby zaktualizować widoku rekordu interfejsu użytkownika i dostarcza [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) metodą aktualizacji bieżący rekord przed przeniesieniem do innej.
+Widok wyświetla pola `CRowset` obiektu w kontrolkach okna dialogowego. `COleDBRecordView`Obiekt używa wymiany danych okna dialogowego (DDX) i funkcji nawigacyjnych wbudowanych w `CRowset` ( `MoveFirst` , `MoveNext` , `MovePrev` i `MoveLast` ) do automatyzacji przenoszenia danych między kontrolkami w formularzu i polami zestawu wierszy. `COleDBRecordView` śledzi położenie użytkownika w zestawie wierszy, aby widok rekordu mógł zaktualizować interfejs użytkownika i dostarcza metodę [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) do aktualizowania bieżącego rekordu przed przejściem do innego.
 
-Można użyć funkcji DDX z `COleDbRecordView` pobieranie danych bezpośrednio z rekordów bazy danych i wyświetlania ich w formantu w oknie dialogowym. Użyj **funkcje DDX_** <strong>\*</strong> metody (takie jak `DDX_Text`), a nie **funkcje DDX_Field** <strong>\*</strong> funkcji () takie jak `DDX_FieldText`) przy użyciu `COleDbRecordView`.
+Możesz użyć funkcji DDX with, `COleDbRecordView` Aby pobrać dane bezpośrednio z zestawu rekordów bazy danych i wyświetlić je w kontrolce okna dialogowego. Użyj metod **DDX_** <strong>\*</strong> (takich jak `DDX_Text` ), a nie funkcji **DDX_Field** <strong>\*</strong> (takich jak `DDX_FieldText` ) `COleDbRecordView` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)<br/>
 [Klasa COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)<br/>

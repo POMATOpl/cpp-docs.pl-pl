@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _cscanf_s, _cscanf_s_l, _cwscanf_s _cwscanf_s_l'
 title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e379d454b9acd9cda75eb41721f55f0818004858
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332939"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -96,7 +97,7 @@ Ciąg kontroli formatu.
 *argument*<br/>
 Parametry opcjonalne.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -109,7 +110,7 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *Format* jest wsk
 
 Funkcja **_cscanf_s** odczytuje dane bezpośrednio z konsoli programu do lokalizacji określonych przez *argument*. Funkcja [_getche](getch-getwch.md) służy do odczytywania znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmiennej z typem, który odpowiada specyfikatorowi typu w *formacie*. Format kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak parametr *formatu* dla funkcji [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Mimo że **_cscanf_s** zwykle echo znaku wejściowego, nie robi to, jeśli ostatnie wywołanie było **_ungetch**.
 
-Podobnie jak inne bezpieczne wersje funkcji w rodzinie **scanf** , **_cscanf_s** i **_cswscanf_s** wymagają argumentów rozmiaru dla znaków pola typu **c**, **c**, **s**, **s**i **[**. Aby uzyskać więcej informacji, zobacz [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
+Podobnie jak inne bezpieczne wersje funkcji w rodzinie **scanf** , **_cscanf_s** i **_cswscanf_s** wymagają argumentów rozmiaru dla znaków pola typu **c**, **c**, **s**, **s** i **[**. Aby uzyskać więcej informacji, zobacz [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Parametr size ma typ, a **`unsigned`** nie **size_t**.

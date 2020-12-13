@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l'
 title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
 api_name:
@@ -65,12 +66,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: bc38e72818446a94a51a37b8df5c8c8582971b3f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e6b979800caf404ee79f8913b0431b941acd20cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332699"
 ---
 # <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -113,13 +114,13 @@ int _iswcsymf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
-Liczba całkowita to testowania. język *c* powinien mieścić się w zakresie od 0-255 do wersji wąskich znaków funkcji.
+*s*<br/>
+Liczba całkowita do przetestowania. język *c* powinien mieścić się w zakresie od 0-255 do wersji wąskich znaków funkcji.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
 Zarówno **__iscsym** , jak i **__iswcsym** zwracają wartość różną od zera, jeśli *c* jest literą, podkreśleniem lub cyfrą. Zarówno **__iscsymf** , jak i **__iswcsymf** zwracają wartość różną od zera, jeśli *c* jest literą lub podkreśleniem. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu. Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają *ustawień regionalnych* przewidzianych zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -127,18 +128,18 @@ Zarówno **__iscsym** , jak i **__iswcsym** zwracają wartość różną od zera
 
 Te procedury są definiowane jako makra, chyba że zostanie zdefiniowane _CTYPE_DISABLE_MACROS makro preprocesora. W przypadku korzystania z wersji makr tych procedur, argumenty mogą być oceniane więcej niż raz. Należy zachować ostrożność w przypadku używania wyrażeń, które mają efekty uboczne na liście argumentów.
 
-W celu zapewnienia zgodności z poprzednimi wersjami **iscsym** i **iscsymf** są zdefiniowane jako makra tylko wtedy, gdy [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) nie jest zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie są one niezdefiniowane.
+W celu zapewnienia zgodności z poprzednimi wersjami **iscsym** i **iscsymf** są zdefiniowane jako makra tylko wtedy, gdy [&#95;&#95;STDC&#95;&#95;](../../preprocessor/predefined-macros.md) nie jest zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie są one niezdefiniowane.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<CType. h ><br /><br /> C++: \<cctype > lub \<CType. h >|
+|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|S \<ctype.h><br /><br /> C++: \<cctype> lub \<ctype.h>|
 
-Procedury **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**i **_iswcsymf_l** są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Procedury **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l** i **_iswcsymf_l** są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

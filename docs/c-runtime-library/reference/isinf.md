@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isinf —'
 title: isinf
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f174855ddbb8cc43fd7338d4254c0f03bf53967d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332647"
 ---
 # <a name="isinf"></a>isinf
 
@@ -47,11 +48,11 @@ Wartość zmiennoprzecinkowa do przetestowania.
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|**isinf**|\<math.h>|\<math.h> lub \<cmath>|
+|**isinf —**|\<math.h>|\<math.h> lub \<cmath>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

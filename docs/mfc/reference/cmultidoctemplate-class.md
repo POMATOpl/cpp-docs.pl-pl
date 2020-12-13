@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMultiDocTemplate'
 title: Klasa CMultiDocTemplate
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: af950d188c4e02a38a39ed3c672f0f8c4161bee8
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 70b77c04fed41da3b5f025f6a600b9ecfd4bc89b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331564"
 ---
 # <a name="cmultidoctemplate-class"></a>Klasa CMultiDocTemplate
 
@@ -69,7 +70,7 @@ Aby uzyskać więcej informacji na temat `CMultiDocTemplate` , zobacz [Szablony 
 
 **Nagłówek:** afxwin. h
 
-## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a> CMultiDocTemplate::CMultiDocTemplate
 
 Konstruuje `CMultiDocTemplate` obiekt.
 
@@ -86,7 +87,7 @@ CMultiDocTemplate(
 *nIDResource*<br/>
 Określa identyfikator zasobów używanych z typem dokumentu. Może to obejmować menu, ikonę, tabelę akceleratorów i zasoby ciągu.
 
-Zasób ciągu składa się z maksymalnie siedmiu podciągów oddzielonych znakiem "\n" (znak "\n" jest potrzebny jako symbol zastępczy, jeśli nie jest uwzględniony podciąg, ale kończy się znakiem "\n"); te podciągi opisują typ dokumentu. Aby uzyskać informacje na temat podciągów, zobacz [CDocTemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Przykład:
+Zasób ciągu składa się z maksymalnie siedmiu podciągów oddzielonych znakiem "\n" (znak "\n" jest potrzebny jako symbol zastępczy, jeśli nie jest uwzględniony podciąg, ale kończy się znakiem "\n"); te podciągi opisują typ dokumentu. Aby uzyskać informacje na temat podciągów, zobacz [CDocTemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:
 
 ```RC
 // MYCALC.RC
@@ -121,7 +122,7 @@ Oto drugi przykład.
 
 [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

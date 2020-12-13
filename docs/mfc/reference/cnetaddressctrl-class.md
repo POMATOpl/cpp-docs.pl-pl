@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CNetAddressCtrl'
 title: Klasa CNetAddressCtrl
 ms.date: 11/19/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 66f2bb647d02b262f9264d5a99f84a3fb23fc119
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331499"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 
@@ -254,7 +255,7 @@ Użyj metody [CNetAddressCtrl:: SetAllowType](#setallowtype) , aby określić ty
 
 Ten komunikat wywołuje [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) makro, które jest opisane w Windows SDK. To makro wysyła komunikat NCM_SETALLOWTYPE.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CNetAddressCtrl](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -1,14 +1,15 @@
 ---
+description: Dowiedz się więcej o plikach nagłówkowych (C++)
 title: Pliki nagłówkowe (C++)
 ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 0b76773b8b7d55645c807588fe41b242df9eea2f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22ef05c723368f0456ee880729031610b34876d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332527"
 ---
 # <a name="header-files-c"></a>Pliki nagłówkowe (C++)
 
@@ -28,7 +29,7 @@ Aby zminimalizować prawdopodobieństwo wystąpienia błędów, język C++ przyj
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia typowy sposób deklarowania klasy, a następnie używania jej w innym pliku źródłowym. Zaczniemy od pliku nagłówkowego `my_class.h` . Zawiera definicję klasy, ale należy pamiętać, że definicja jest niekompletna; `do_something`nie zdefiniowano funkcji składowej:
+Poniższy przykład przedstawia typowy sposób deklarowania klasy, a następnie używania jej w innym pliku źródłowym. Zaczniemy od pliku nagłówkowego `my_class.h` . Zawiera definicję klasy, ale należy pamiętać, że definicja jest niekompletna; `do_something` nie zdefiniowano funkcji składowej:
 
 ```cpp
 // my_class.h

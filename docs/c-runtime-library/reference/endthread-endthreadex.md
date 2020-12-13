@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _endthread, _endthreadex'
 title: _endthread, _endthreadex
 ms.date: 4/2/2020
 api_name:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: a3889adcc90bd62e766102b72aae68577915e55b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ef74cac4cbe23a021ed8d796f92f2767695eb08e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332835"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Kończy wątek; **_endthread** przerywa wątek tworzony przez **_beginthread** i **_endthreadex** kończy wątek tworzony przez **_beginthreadex**.
+Kończy wątek; **_endthread** przerywa wątek tworzony przez **_beginthread** i  **_endthreadex** kończy wątek tworzony przez **_beginthreadex**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,8 +82,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_endthread**|\<proces. h>|
-|**_endthreadex**|\<proces. h>|
+|**_endthread**|\<process.h>|
+|**_endthreadex**|\<process.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

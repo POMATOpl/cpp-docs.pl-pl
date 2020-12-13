@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _dupenv_s, _wdupenv_s'
 title: _dupenv_s, _wdupenv_s
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3163645b83ec701478cca76d98fe5e17acdc86d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332890"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
@@ -116,8 +117,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_dupenv_s**|\<STDLIB. h>|
-|**_wdupenv_s**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_dupenv_s**|\<stdlib.h>|
+|**_wdupenv_s**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -147,7 +148,7 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Stałe środowiska](../../c-runtime-library/environmental-constants.md)<br/>

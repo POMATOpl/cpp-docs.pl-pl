@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2457'
 title: Błąd kompilatora C2457
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1fea5192b97e280a38f674a67b0bf739041ffe97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332364"
 ---
 # <a name="compiler-error-c2457"></a>Błąd kompilatora C2457
 
 > "*makro*": wstępnie zdefiniowane makro nie może występować poza treścią funkcji
 
-Podjęto próbę użycia wstępnie zdefiniowanego makra, takiego [ &#95; &#95;jak&#95;funkcja](../../preprocessor/predefined-macros.md), w obszarze globalnym.
+Podjęto próbę użycia wstępnie zdefiniowanego makra, takiego jak [&#95;&#95;funkcji&#95;&#95;](../../preprocessor/predefined-macros.md), w obszarze globalnym.
 
 ## <a name="example"></a>Przykład
 

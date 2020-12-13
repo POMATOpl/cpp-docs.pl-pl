@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _dupenv_s_dbg, _wdupenv_s_dbg'
 title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
 api_name:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a12e5adc55cd69b8336b3f9f50d982f80ec1b070
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332893"
 ---
 # <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
-Pobierz wartość z bieżącego środowiska.  Wersje [_dupenv_s, _wdupenv_s](dupenv-s-wdupenv-s.md) , które przydzielą pamięć z [_malloc_dbg](malloc-dbg.md) , aby zapewnić dodatkowe informacje o debugowaniu.
+Pobierz wartość z bieżącego środowiska.  Wersje [_dupenv_s, _wdupenv_s](dupenv-s-wdupenv-s.md) przydzielania pamięci za pomocą [_malloc_dbg](malloc-dbg.md) w celu zapewnienia dodatkowych informacji o debugowaniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,7 +67,7 @@ errno_t _wdupenv_s_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Bufor do przechowywania wartości zmiennej.
 
 *numberOfElements*<br/>
@@ -94,13 +95,13 @@ Jeśli te funkcje nie mogą przydzielić wystarczającej ilości pamięci, ustaw
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_dupenv_s_dbg** i **_wdupenv_s_dbg** są identyczne z **_dupenv_s** i **_wdupenv_s** , z tą różnicą, że w przypadku zdefiniowania elementu **_DEBUG** te funkcje korzystają z wersji, która jest debugowana [,](malloc.md) [_malloc_dbg](malloc-dbg.md), Aby przydzielić pamięć dla wartości zmiennej środowiskowej. Aby uzyskać informacje na temat funkcji debugowania **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
+**_Dupenv_s_dbg** i **_wdupenv_s_dbg** funkcje są takie same jak **_dupenv_s** i **_wdupenv_s** , z wyjątkiem tego, że w przypadku zdefiniowania **_DEBUG** te funkcje używają wersji do debugowania, która [_malloc_dbg](malloc-dbg.md) [, do](malloc.md)przydzielenia pamięci dla wartości zmiennej środowiskowej. Aby uzyskać informacje na temat funkcji debugowania **_malloc_dbg**, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_dupenv_s** i **_wdupenv_s** są ponownie mapowane odpowiednio do **_dupenv_s_dbg** i **_wdupenv_s_dbg**, z atrybutem *BlockType* ustawionym na wartość **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC**. Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_dupenv_s** i **_wdupenv_s** są ponownie mapowane do **_dupenv_s_dbg** i **_wdupenv_s_dbg**, z ustawieniem *BlockType* na **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji na temat typów bloków, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s_dbg**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 
@@ -144,7 +145,7 @@ nonexistentvariable = (null)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Stałe środowiska](../../c-runtime-library/environmental-constants.md)<br/>
 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>
 [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md)<br/>

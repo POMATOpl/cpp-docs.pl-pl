@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isgraph, iswgraph, _isgraph_l, _iswgraph_l'
 title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 29fd8a4d9fcaded1f7750eaf9ba9dfbf28760cf7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 165972af4c921abb9026c6a3297426910cbf49e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332677"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -100,10 +101,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isgraf**|\<CType. h>|
-|**iswgraph**|\<CType. h> lub \<WCHAR. h>|
-|**_isgraph_l**|\<CType. h>|
-|**_iswgraph_l**|\<CType. h> lub \<WCHAR. h>|
+|**isgraf**|\<ctype.h>|
+|**iswgraph**|\<ctype.h> lub \<wchar.h>|
+|**_isgraph_l**|\<ctype.h>|
+|**_iswgraph_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -111,4 +112,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

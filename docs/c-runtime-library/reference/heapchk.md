@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _heapchk'
 title: _heapchk
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57cde789c8d6e6b8c8da91adf4a6f274ce557ed7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916212"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332795"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -72,7 +73,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_heapchk**|\<malloc. h>|\<errno. h>|
+|**_heapchk**|\<malloc.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +120,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>

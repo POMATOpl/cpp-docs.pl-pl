@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isascii, __isascii, iswascii'
 title: isascii, __isascii, iswascii
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0d0a7964ba5b9a3133f100ea94fd4bac95407627
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332730"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -90,8 +91,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isascii**, **__isascii**|C: \<CType. h><br /><br /> C++: \<cctype> lub \<CType. h>|
-|**iswascii**|C: \<wctype. h>, \<CType. h> lub \<WCHAR. h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype. h>, \<ctype. h> lub \<WCHAR. h>|
+|**isascii**, **__isascii**|S \<ctype.h><br /><br /> C++: \<cctype> lub \<ctype.h>|
+|**iswascii**|C: \<wctype.h> , \<ctype.h> lub \<wchar.h><br /><br /> C++: \<cwctype> , \<cctype> , \<wctype.h> , \<ctype.h> lub \<wchar.h>|
 
 Funkcje **isascii**, **__isascii** i **Iswascii** są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -99,4 +100,4 @@ Funkcje **isascii**, **__isascii** i **Iswascii** są specyficzne dla firmy Micr
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

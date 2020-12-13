@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _isctype, iswctype, _isctype_l, _iswctype_l'
 title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 4/2/2020
 api_name:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2b8bd10cd4240e4382d17cb8028589ddf4dd8b2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918950"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332665"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Tests *c* dla właściwości CType określonej przez argument *DESC* . Dla każdej prawidłowej wartości *DESC*istnieje równoważna procedura klasyfikacji znaków dwubajtowych.
+Tests *c* dla właściwości CType określonej przez argument *DESC* . Dla każdej prawidłowej wartości *DESC* istnieje równoważna procedura klasyfikacji znaków dwubajtowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,7 +86,7 @@ int _iswctype_l(
 *s*<br/>
 Liczba całkowita do przetestowania.
 
-*desc*<br/>
+*DESC*<br/>
 Właściwość do przetestowania. Jest to zwykle pobierane za pomocą CType lub [wctype](wctype.md).
 
 *locale*<br/>
@@ -112,10 +113,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_isctype**|\<CType. h>|
-|**iswctype**|\<CType. h> lub \<WCHAR. h>|
-|**_isctype_l**|\<CType. h>|
-|**_iswctype_l**|\<CType. h> lub \<WCHAR. h>|
+|**_isctype**|\<ctype.h>|
+|**iswctype**|\<ctype.h> lub \<wchar.h>|
+|**_isctype_l**|\<ctype.h>|
+|**_iswctype_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -127,4 +128,4 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _heapwalk'
 title: _heapwalk
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 08d877757a443a52a94952032291e69f3466f007
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332779"
 ---
 # <a name="_heapwalk"></a>_heapwalk
 
@@ -54,7 +55,7 @@ Bufor zawierający informacje o stercie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_heapwalk** zwraca jedną z następujących stałych literałów liczb całkowitych zdefiniowanych w malloc. h.
+**_heapwalk** zwraca jedną z następujących stałych manifestu liczb całkowitych zdefiniowanych w pliku malloc. h.
 
 |Wartość zwracana|Znaczenie|
 |-|-|
@@ -77,7 +78,7 @@ Funkcja **_heapwalk** pomaga debugować problemy związane z stertą w programac
 |`size_t _size`|Rozmiar wpisu sterty.|
 |`int _useflag`|Flaga wskazująca, czy wpis sterty jest używany.|
 
-Wywołanie **_heapwalk** , które zwraca **_HEAPOK** przechowuje rozmiar wpisu w polu **_SIZE** i ustawia pole **_useflag** na **_FREEENTRY** lub **_USEDENTRY** (obie są stałymi zdefiniowanymi w malloc. h). Aby uzyskać te informacje o pierwszym wpisie w stercie, Przekaż **_heapwalk** wskaźnik do struktury **_HEAPINFO** , której członek **_pentry** ma **wartość null**. Jeśli system operacyjny nie obsługuje **_heapwalk**(na przykład Windows 98), funkcja zwraca **_HEAPEND** i ustawia **errno** na **ENOSYS**.
+Wywołanie **_heapwalk** , które zwraca **_HEAPOK** przechowuje rozmiar wpisu w **_size** polu i ustawia pole **_useflag** na **_FREEENTRY** lub **_USEDENTRY** (obie są stałymi zdefiniowanymi w malloc. h). Aby uzyskać te informacje o pierwszym wpisie w stercie, Przekaż **_heapwalk** wskaźnik do struktury **_HEAPINFO** , której składowa **_pentry** ma **wartość null**. Jeśli system operacyjny nie obsługuje **_heapwalk**(na przykład Windows 98), funkcja zwraca **_HEAPEND** i ustawia **errno** na **ENOSYS**.
 
 Ta funkcja sprawdza poprawność parametru. Jeśli *entryinfo* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **_HEAPBADPTR**.
 

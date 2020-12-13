@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCToolBarFontSizeComboBox'
 title: Klasa CMFCToolBarFontSizeComboBox
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a355e62f2ef538372d70b9b2b393bc16bff2ef4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331749"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Klasa CMFCToolBarFontSizeComboBox
 
@@ -43,39 +44,39 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Zwraca wybrany rozmiar czcionki w twips.|
-|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Wypełnia listę pól kombi wszystkimi obsługiwanymi rozmiarami czcionek dla określonej czcionki.|
-|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Ustawia rozmiar czcionki w twips.|
+|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Zwraca wybrany rozmiar czcionki w twipach.|
+|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Wypełnia listę pól kombi ze wszystkimi obsługiwanymi rozmiarami czcionek dla określonej czcionki.|
+|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Ustawia rozmiar czcionki w twipach.|
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć `CMFCToolBarFontSizeComboBox` obiektu wraz z [CMFCToolBarFontComboBox class](../../mfc/reference/cmfctoolbarfontcombobox-class.md) obiektu, aby umożliwić użytkownikowi zaznaczenie czcionki i rozmiaru czcionki.
+Można użyć `CMFCToolBarFontSizeComboBox` obiektu wraz z obiektem [klasy CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) , aby umożliwić użytkownikowi wybranie czcionki i rozmiaru czcionki.
 
-Przycisk pola kombi o rozmiarze czcionki można dodać do paska narzędzi, podobnie jak przycisk pola kombi czcionki. Aby uzyskać więcej informacji, zobacz [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md).
+Możesz dodać przycisk pola kombi rozmiaru czcionki do paska narzędzi, tak jak Dodaj przycisk pola kombi czcionki. Aby uzyskać więcej informacji, zobacz [Klasa CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md).
 
-Gdy użytkownik wybierze nową czcionkę `CMFCToolBarFontComboBox` w obiekcie, można wypełnić pole kombi rozmiaru czcionki za pomocą obsługiwanych rozmiarów dla tej czcionki przy użyciu metody [CMFCToolBarFontSizeComboBox::RebuildFontSizes.](#rebuildfontsizes)
+Gdy użytkownik wybierze nową czcionkę w `CMFCToolBarFontComboBox` obiekcie, można wypełnić pole kombi rozmiar czcionki o obsługiwanych rozmiarach dla tej czcionki przy użyciu metody [CMFCToolBarFontSizeComboBox:: RebuildFontSizes](#rebuildfontsizes) .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMFCToolBarFontSizeComboBox` używać różnych `CMFCToolBarFontSizeComboBox` metod w klasie, aby skonfigurować obiekt. Przykład ilustruje, jak pobrać rozmiar czcionki w twips, z pola tekstowego, wypełnić pole kombi rozmiar czcionki ze wszystkimi prawidłowymi rozmiarami danej czcionki i określić rozmiar czcionki w twips. Ten fragment kodu jest częścią [przykładu word pad](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób użycia różnych metod w `CMFCToolBarFontSizeComboBox` klasie w celu skonfigurowania `CMFCToolBarFontSizeComboBox` obiektu. W przykładzie pokazano, jak pobrać rozmiar czcionki (w twipach) z pola tekstowego, wypełnić pole kombi rozmiar czcionki ze wszystkimi prawidłowymi rozmiarach danej czcionki i określić rozmiar czcionki w twipach. Ten fragment kodu jest częścią [przykładu Notatnika programu Word](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfctoolbarbutton](../../mfc/reference/cmfctoolbarbutton-class.md)
+[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[Cmfctoolbarcomboboxbutton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
 [CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtoolbarfontcombobox.h
+**Nagłówek:** afxtoolbarfontcombobox. h
 
-## <a name="cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
+## <a name="cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a> CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
 
 Konstruuje `CMFCToolBarFontSizeComboBox` obiekt.
 
@@ -83,9 +84,9 @@ Konstruuje `CMFCToolBarFontSizeComboBox` obiekt.
 CMFCToolBarFontSizeComboBox();
 ```
 
-## <a name="cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize
+## <a name="cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a> CMFCToolBarFontSizeComboBox::GetTwipSize
 
-Pobiera rozmiar czcionki w twips z pola tekstowego pola kombi o rozmiarze czcionki.
+Pobiera rozmiar czcionki w twipach, w polu tekstowym pola kombi rozmiar czcionki.
 
 ```
 int GetTwipSize() const;
@@ -93,11 +94,11 @@ int GetTwipSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli zwracana wartość jest dodatnia, jest to rozmiar czcionki w twips. Jest to -1, jeśli pole tekstowe pola kombi jest puste. Jest -2, jeśli wystąpi błąd.
+Jeśli wartość zwracana jest dodatnia, jest to rozmiar czcionki w twipach. Jest to-1, jeśli pole tekstowe pola kombi jest puste. Jeśli wystąpi błąd, jest to-2.
 
-## <a name="cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes
+## <a name="cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a> CMFCToolBarFontSizeComboBox::RebuildFontSizes
 
-Wypełnia pole kombi o rozmiarze czcionki wszystkimi prawidłowymi rozmiarami danej czcionki.
+Wypełnia pole kombi rozmiaru czcionki ze wszystkimi prawidłowymi rozmiarach danej czcionki.
 
 ```cpp
 void RebuildFontSizes(const CString& strFontName);
@@ -105,16 +106,16 @@ void RebuildFontSizes(const CString& strFontName);
 
 ### <a name="parameters"></a>Parametry
 
-*strFontName (Nazwa strFontname)*<br/>
-[w] Określa nazwę czcionki.
+*strFontName*<br/>
+podczas Określa nazwę czcionki.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji, jeśli chcesz zsynchronizować wybór między zaznaczeniem w polu kombi czcionki a polem kombi o rozmiarze czcionki, takim jak [klasa CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md).
+Wywołaj tę funkcję, jeśli chcesz synchronizować między wyborem w polu kombi czcionki a polem kombi o rozmiarze czcionki, takim jak [Klasa CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md).
 
-## <a name="cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize
+## <a name="cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a> CMFCToolBarFontSizeComboBox::SetTwipSize
 
-Zaokrągla określony rozmiar (w twips) do najbliższego rozmiaru w punktach, a następnie ustawia wybrany rozmiar w polu kombi na tę wartość.
+Zaokrągla określony rozmiar (w twipach) do najbliższego rozmiaru w punktach, a następnie ustawia wybrany rozmiar w polu kombi na tę wartość.
 
 ```cpp
 void SetTwipSize(int nSize);
@@ -122,12 +123,12 @@ void SetTwipSize(int nSize);
 
 ### <a name="parameters"></a>Parametry
 
-*nSize (rozmiar)*<br/>
-[w] Określa rozmiar czcionki (w twips), który ma być ustawiony.
+*nSize*<br/>
+podczas Określa rozmiar czcionki (w twipach) do ustawienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Poprzedni prawidłowy rozmiar czcionki można pobrać później, wywołując metodę [CMFCToolBarFontSizeComboBox::GetTwipSize.](#gettwipsize)
+Poprzedni prawidłowy rozmiar czcionki można pobrać później, wywołując metodę [CMFCToolBarFontSizeComboBox:: GetTwipSize](#gettwipsize) .
 
 ## <a name="see-also"></a>Zobacz też
 

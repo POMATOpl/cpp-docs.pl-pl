@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CObList'
 title: Klasa CObList
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: a13363ef9b200051c26781ab6e9870a10de06d88
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: edfa476780e07b41f4f1e0abede24244ad837578
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331455"
 ---
 # <a name="coblist-class"></a>Klasa CObList
 
@@ -359,7 +360,7 @@ W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne
 
 |Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void \*& GetAt (pozycja położenia** *position* **) stała;**<br /><br /> **void \*& GetAt (pozycja położenia** *position* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void \*& GetAt (pozycja położenia**  **) stała;**<br /><br /> **void \*& GetAt (pozycja położenia**  **);**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetAt (** *pozycja* położenia **) stała;**<br /><br /> **CString& GetAt (** *pozycja* położenia **);**|
 
 ### <a name="example"></a>Przykład
@@ -656,8 +657,8 @@ W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne
 
 |Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja InsertAfter (pozycja położenia** *position* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertAfter (pozycja pozycji** *position* **, const CString&** `newElement` **);**<br /><br /> **Position InsertAfter (położenie pozycji** *position* **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja InsertAfter (pozycja położenia**  **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertAfter (pozycja pozycji**  **, const CString&** `newElement` **);**<br /><br /> **Position InsertAfter (położenie pozycji**  **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -704,8 +705,8 @@ W poniższej tabeli przedstawiono inne funkcje członkowskie, które są podobne
 
 |Klasa|Funkcja elementów członkowskich|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja InsertBefore (pozycja położenia** *position* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertBefore (pozycja pozycji** *position* **, const CString&** `newElement` **);**<br /><br /> **Position InsertBefore (położenie pozycji** *position* **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozycja InsertBefore (pozycja położenia**  **, void** <strong>\*</strong> `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertBefore (pozycja pozycji**  **, const CString&** `newElement` **);**<br /><br /> **Position InsertBefore (położenie pozycji**  **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Przykład
 

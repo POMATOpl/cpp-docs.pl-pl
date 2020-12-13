@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _cscanf, _cscanf_l, _cwscanf _cwscanf_l'
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 10/21/2019
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65c025c7a02c0bd9493bcaf8d6ff0e29c6c7a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332928"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -96,7 +97,7 @@ Ciąg kontroli formatu.
 *argument*<br/>
 Parametry opcjonalne.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana

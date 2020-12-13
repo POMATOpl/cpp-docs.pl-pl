@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMFCVisualManager'
 title: Klasa CMFCVisualManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -344,12 +345,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: bf6c663b6c841f4bc06255845d924cab58d87f1f
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: ae915c74ec97c2e9ec65da2c24674dd38637ba60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331689"
 ---
 # <a name="cmfcvisualmanager-class"></a>Klasa CMFCVisualManager
 
@@ -392,7 +393,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::GetMDITabsBordersSize](#getmditabsborderssize)|Wywoływane przez platformę, by pobrać rozmiar obramowania okna MDITabs.|
 |[CMFCVisualManager::GetMenuItemTextColor](#getmenuitemtextcolor)||
 |[CMFCVisualManager::GetMenuShadowDepth](#getmenushadowdepth)|Zwraca wartość określającą szerokość i wysokość cienia menu.|
-|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|Wywoływane przez platformę w celu określenia rozmiaru przycisków systemowych opartych na bieżącym programie Visual Manager. Przyciski systemowe są przyciskami w podpisie ramki głównej, które są mapowane na polecenia **zamknięcia**, **minimalizowania**, **maksymalizowania**i **przywracania**.|
+|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|Wywoływane przez platformę w celu określenia rozmiaru przycisków systemowych opartych na bieżącym programie Visual Manager. Przyciski systemowe są przyciskami w podpisie ramki głównej, które są mapowane na polecenia **zamknięcia**, **minimalizowania**, **maksymalizowania** i **przywracania**.|
 |[CMFCVisualManager::GetPopupMenuBorderSize](#getpopupmenubordersize)|Wywoływane przez platformę, by pobrać rozmiar obramowania menu podręcznego.|
 |[CMFCVisualManager::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Wywoływane przez platformę, by pobrać kolor tła listy właściwości.|
 |[CMFCVisualManager::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Wywoływane przez platformę, by pobrać kolor tekstu listy właściwości.|
@@ -447,7 +448,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnDrawMenuResizeBar](#ondrawmenuresizebar)||
 |[CMFCVisualManager::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|Wywoływane przez platformę, gdy rysuje przycisk przewijania menu.|
 |[CMFCVisualManager::OnDrawMenuShadow](#ondrawmenushadow)||
-|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|Wywoływane przez platformę, gdy rysuje przyciski systemu menu **Zamknij**, **Minimalizuj**, **Maksymalizuj**i **Przywróć**.|
+|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|Wywoływane przez platformę, gdy rysuje przyciski systemu menu **Zamknij**, **Minimalizuj**, **Maksymalizuj** i **Przywróć**.|
 |[CMFCVisualManager::OnDrawMiniFrameBorder](#ondrawminiframeborder)||
 |[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Wywoływane przez platformę, gdy rysuje rozdzielacz dla paska programu Outlook. Rozdzielacz jest poziomy pasek służący do grupowania kontrolek.|
 |[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wywoływane przez platformę, gdy rysuje obramowanie przycisku strony programu Outlook. Przyciski strony programu Outlook są wyświetlane, jeśli okienko pasek programu Outlook zawiera więcej przycisków niż można wyświetlić.|
@@ -481,7 +482,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnDrawRibbonPanel](#ondrawribbonpanel)|Wywoływane przez platformę, gdy rysuje panel wstążki.|
 |[CMFCVisualManager::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|Wywoływane przez platformę, gdy rysuje podpis panelu wstążki.|
 |[CMFCVisualManager::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Wywoływane przez platformę, gdy rysuje obiekt [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) .|
-|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Wywoływane przez platformę, gdy rysuje separator na **pasku narzędzi Szybki dostęp**do wstążki.|
+|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Wywoływane przez platformę, gdy rysuje separator na **pasku narzędzi Szybki dostęp** do wstążki.|
 |[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|Wywoływane przez platformę, gdy Rysuje ramkę wokół listy ostatnio używanych plików.|
 |[CMFCVisualManager::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Wywoływane przez platformę, gdy rysuje kanał obiektu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .|
 |[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Wywoływane przez platformę, gdy rysuje kciuk `CMFCRibbonSlider` obiektu.|
@@ -938,7 +939,7 @@ virtual COLORREF GetMenuItemTextColor(
 
 podczas *pButton*<br/>
 podczas *bHighlighted*<br/>
-podczas *bDisabled* poddany<br/>
+podczas  poddany<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -979,7 +980,7 @@ Parametr [CSize](../../atl-mfc-shared/reference/csize-class.md) wskazujący rozm
 
 ### <a name="remarks"></a>Uwagi
 
-Przyciski systemowe są przyciskami w podpisie okna ramki, które są mapowane na polecenia **zamknięcia**, **minimalizowania**, **maksymalizowania**i **przywracania**. Rozmiar tych przycisków zależy od bieżącego programu Visual Manager. Zastąp tę metodę, jeśli chcesz dostosować rozmiar przycisków systemu w aplikacji.
+Przyciski systemowe są przyciskami w podpisie okna ramki, które są mapowane na polecenia **zamknięcia**, **minimalizowania**, **maksymalizowania** i **przywracania**. Rozmiar tych przycisków zależy od bieżącego programu Visual Manager. Zastąp tę metodę, jeśli chcesz dostosować rozmiar przycisków systemu w aplikacji.
 
 ## <a name="cmfcvisualmanagergetpopupmenubordersize"></a><a name="getpopupmenubordersize"></a> CMFCVisualManager::GetPopupMenuBorderSize
 
@@ -1105,7 +1106,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *bDisabled* poddany<br/>
+podczas  poddany<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1409,7 +1410,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 *pButton*<br/>
 podczas Wskaźnik do przycisku paska narzędzi.
 
-*stan*<br/>
+*Państwu*<br/>
 podczas Stan przycisku paska narzędzi.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1820,7 +1821,7 @@ podczas Prostokąt, który określa granicę przycisku przeglądania.
 *pEdit*<br/>
 podczas Wskaźnik do kontrolki edycji. Program Visual Manager rysuje przycisk Przeglądaj dla tej kontrolki edycji.
 
-*stan*<br/>
+*Państwu*<br/>
 podczas Wartość wyliczana, która określa stan przycisku.
 
 *clrText*<br/>
@@ -1857,7 +1858,7 @@ podczas Wskaźnik do przycisku paska narzędzi. Struktura rysuje obramowanie teg
 *cinania*<br/>
 podczas Prostokąt, który określa granice przycisku paska narzędzi.
 
-*stan*<br/>
+*Państwu*<br/>
 podczas Typ danych wyliczanych, który określa bieżący stan przycisku paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
@@ -2407,7 +2408,7 @@ podczas *kontroler PDC*<br/>
 podczas *pButton*<br/>
 podczas *rectButton*<br/>
 podczas *bHighlight*<br/>
-podczas *bDisabled* poddany<br/>
+podczas  poddany<br/>
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2544,7 +2545,7 @@ podczas Parametr logiczny, który określa, czy przycisk jest wyróżniony.
 
 ### <a name="remarks"></a>Uwagi
 
-Przyciski systemu menu to przyciski **zamykania**, **minimalizowania**, **maksymalizowania**i **przywracania** znajdujące się na pasku tytułu.
+Przyciski systemu menu to przyciski **zamykania**, **minimalizowania**, **maksymalizowania** i **przywracania** znajdujące się na pasku tytułu.
 
 Domyślna implementacja tej metody wywołuje metodę [przechwytywania::D rawframecontrol](../../mfc/reference/cdc-class.md#drawframecontrol) z typem DFC_CAPTION. Zastąp tę metodę w pochodnej klasie Visual Manager, aby dostosować wygląd przycisków systemu.
 
@@ -4356,7 +4357,7 @@ podczas Wskaźnik do elementu [CMFCToolBarButton](../../mfc/reference/cmfctoolba
 *cinania*<br/>
 podczas Prostokąt, który określa granice przycisku paska narzędzi.
 
-*stan*<br/>
+*Państwu*<br/>
 podczas Stan przycisku paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
@@ -5090,7 +5091,7 @@ podczas Parametr logiczny, który wskazuje, czy program Visual Manager wyświetl
 
 Domyślnie ta funkcja jest wyłączona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

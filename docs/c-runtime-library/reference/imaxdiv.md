@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: imaxdiv'
 title: imaxdiv
 ms.date: 04/05/2018
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e1f417c1fb45b452b3cd07560bfec68d21fd1a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332773"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -58,7 +59,7 @@ Mianownik.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **imaxdiv** dzieli *numer* przez *denom* , a tym samym Oblicza iloraz i resztę. Struktura **imaxdiv_t** zawiera iloraz, **intmax_t** **Quote**i resztę, **intmax_t** **REM**. Znak ilorazu jest taki sam jak w przypadku ilorazu matematycznego. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeśli mianownik ma wartość 0, program kończy pracę z komunikatem o błędzie.
+Funkcja **imaxdiv** dzieli *numer* przez *denom* , a tym samym Oblicza iloraz i resztę. Struktura **imaxdiv_t** zawiera iloraz, **intmax_t** **Quote** i resztę, **intmax_t** **REM**. Znak ilorazu jest taki sam jak w przypadku ilorazu matematycznego. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeśli mianownik ma wartość 0, program kończy pracę z komunikatem o błędzie.
 
 ## <a name="requirements"></a>Wymagania
 

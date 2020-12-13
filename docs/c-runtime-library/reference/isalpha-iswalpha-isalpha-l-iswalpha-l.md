@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isalpha, iswalpha, _isalpha_l, _iswalpha_l'
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 4/2/2020
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 044564d64c9f7d358633a866c53a25e6ab16d26a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332757"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -84,7 +85,7 @@ Ustawienia regionalne, które mają być używane zamiast bieżących ustawień 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfabetycznego. Funkcja **isalpha** zwraca wartość różną od zera, jeśli *c* znajduje się w zakresie a-z lub a-z. **iswalpha** zwraca wartość różną od zera tylko dla znaków dwubajtowych, dla których [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) lub **iswlower** jest różna od zera. oznacza to, że dla każdego znaku dwubajtowego, który jest jednym z zestawu zdefiniowanego przez implementację, dla którego żadna z **iswcntrl**, **iswdigit**, **iswpunct**lub **iswspace** nie jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku alfabetycznego. Funkcja **isalpha** zwraca wartość różną od zera, jeśli *c* znajduje się w zakresie a-z lub a-z. **iswalpha** zwraca wartość różną od zera tylko dla znaków dwubajtowych, dla których [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) lub **iswlower** jest różna od zera. oznacza to, że dla każdego znaku dwubajtowego, który jest jednym z zestawu zdefiniowanego przez implementację, dla którego żadna z **iswcntrl**, **iswdigit**, **iswpunct** lub **iswspace** nie jest różna od zera. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
 Wersje tych funkcji, które mają sufiks **_l** używają parametru ustawień regionalnych, który został przekazaną, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -105,10 +106,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isalpha**|\<CType. h>|
-|**iswalpha**|\<CType. h> lub \<WCHAR. h>|
-|**_isalpha_l**|\<CType. h>|
-|**_iswalpha_l**|\<CType. h> lub \<WCHAR. h>|
+|**isalpha**|\<ctype.h>|
+|**iswalpha**|\<ctype.h> lub \<wchar.h>|
+|**_isalpha_l**|\<ctype.h>|
+|**_iswalpha_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -116,4 +117,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

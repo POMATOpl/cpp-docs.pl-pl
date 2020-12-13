@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze RemoveReference —
 title: RemoveReference — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 7753c1ad41f12fa8c14d2f10c9e2f91e043a5846
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bcf3685e44b756ce324adc8301d7afb5b4b3f40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332497"
 ---
 # <a name="removereference-structure"></a>RemoveReference — Struktura
 
@@ -33,18 +34,18 @@ struct RemoveReference<T&&>;
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Klasa.
 
 ## <a name="remarks"></a>Uwagi
 
 Przypasaj cechy Reference lub rvalue z określonego parametru szablonu klasy.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`Type`|Synonim dla parametru szablonu klasy.|
 
@@ -60,4 +61,4 @@ Przypasaj cechy Reference lub rvalue z określonego parametru szablonu klasy.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMultiPaneFrameWnd'
 title: Klasa CMultiPaneFrameWnd
 ms.date: 11/04/2016
 f1_keywords:
@@ -80,18 +81,18 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: 047dd5ca2ca6705549e8f92de1550248e348ff52
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: c12dccc684aa0bdcad62a09b527d482d78ac3823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331523"
 ---
 # <a name="cmultipaneframewnd-class"></a>Klasa CMultiPaneFrameWnd
 
-Klasa `CMultiPaneFrameWnd` rozszerza [klasę CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Może obsługiwać wiele okienek. Zamiast pojedynczego osadzonego uchwytu na `CMultiPaneFrameWnd` pasku sterowania zawiera obiekt [klasy CPaneContainerManager,](../../mfc/reference/cpanecontainermanager-class.md) który umożliwia użytkownikowi dokowanie od siebie `CMultiPaneFrameWnd` i dynamiczne tworzenie wielu ruchomych okien z kartami.
+`CMultiPaneFrameWnd`Klasa rozszerza [klasę CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Może obsługiwać wiele okienek. Zamiast jednego osadzonego dojścia do paska sterowania, `CMultiPaneFrameWnd` zawiera obiekt [klasy CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) , który umożliwia użytkownikowi dokowanie jednego `CMultiPaneFrameWnd` do drugiego i dynamiczne tworzenie wielu przestawnych okien z kartami.
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
+Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC \\ atlmfc \\ src \\ MFC** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -105,77 +106,77 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMultiPaneFrameWnd::Dodaj panel](#addpane)|Dodaje okienko. (Zastępuje [CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane).)|
+|[CMultiPaneFrameWnd:: Add— okienko](#addpane)|Dodaje okienko. (Przesłania [CPaneFrameWnd:: addokienk](../../mfc/reference/cpaneframewnd-class.md#addpane).)|
 |[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||
-|[CMultiPaneFrameWnd::Dopasujlayout](#adjustlayout)|Dostosowuje układ okna mini-ramki. (Zastępuje [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|
-|[CMultiPaneFrameWnd::Dopasuj ramki ramek](#adjustpaneframes)|(Zastępuje [CPaneFrameWnd::AdjustPaneFrames.)](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes)|
-|[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Oblicza oczekiwany prostokąt zadokowanego okna. (Zastępuje [CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|
-|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Określa, czy bieżące okienko może zadokować do innego okienka lub okna ramki. (Zastępuje [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|
-|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Określa, czy okno miniklatki może zadokować do okienka. (Zastępuje [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|
-|[CMultiPaneFrameWnd::CheckGripperWiowalność](#checkgrippervisibility)|(Zastępuje [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|
-|[CMultiPaneFrameWnd::ZamknijMiniFrame](#closeminiframe)|(Przesłania `CPaneFrameWnd::CloseMiniFrame`).|
-|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Konwertuje okienko na dokument z kartami. (Zastępuje [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|
-|[CMultiPaneFrameWnd::DockFrame](#dockframe)||
-|[CMultiPaneFrameWnd::DockPane](#dockpane)|Dokuje okienko. (Zastępuje [CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|
-|[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||
-|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Zwraca tekst podpisu. (Zastępuje [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|
-|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Zwraca odwołanie do obiektu ewnętrznego menedżera kontenerów.|
-|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Zwraca pierwsze widoczne okienko znajdujące się w oknie miniklatki. (Zastępuje [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|
-|[CMultiPaneFrameWnd::GetPane](#getpane)|Zwraca okienko znajdujące się w oknie miniklatki. (Zastępuje [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|
-|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Zwraca liczbę okienek znajdujących się w oknie miniklatka. (Zastępuje [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|
-|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Zwraca liczbę widocznych okienek znajdujących się w oknie miniklatka. (Zastępuje [CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|
-|[CMultiPaneFrameWnd::WstawianiePane](#insertpane)||
-|[CMultiPaneFrameWnd::LoadState](#loadstate)|Ładuje stan okienka z rejestru. (Zastępuje [CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|
-|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Dokuje okno mini-ramki w ostatniej pozycji. (Zastępuje [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|
-|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Zatrzymuje czasomierz zestawienia. (Zastępuje [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Dostosowuje układ okienka wewnątrz okna mini-ramki. (Zastępuje [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|
-|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Ustawia czasomierz zestawienia. (Zastępuje [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|
-|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Wywoływane przez strukturę, gdy okienko w oknie mini-ramki jest ukryte lub wyświetlane. (Zastępuje [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|
-|[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|Zwraca okienko, jeśli zawiera ono punkt dostarczony przez użytkownika wewnątrz okna miniklatki. (Zastępuje [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|
-|[CMultiPaneFrameWnd::Usuń NienavalidPanes](#removenonvalidpanes)|Wywoływane przez platformę, aby usunąć nieważne okienka. (Zastępuje [CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes).)|
-|[CMultiPaneFrameWnd::Usuńpan](#removepane)|Usuwa okienko z okna mini-ramki. (Zastępuje [CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|
-|[CMultiPaneFrameWnd::ReplacePane](#replacepane)|Zastępuje jedno okienko innym. (Zastępuje [CPaneFrameWnd::ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane).)|
-|[CMultiPaneFrameWnd::Zapisz](#savestate)|Zapisuje stan okienka w rejestrze. (Zastępuje [CPaneFrameWnd::SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate).)|
-|[CMultiPaneFrameWnd::Serialize](#serialize)|(Przesłania `CPaneFrameWnd::Serialize`).|
-|[CMultiPaneFrameWnd::SetDockState](#setdockstate)|Ustawia stan dokowania. (Zastępuje [CPaneFrameWnd::SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate).)|
+|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|Dostosowuje układ okna mini-frame. (Przesłania [CPaneFrameWnd:: AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|
+|[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(Przesłania [CPaneFrameWnd:: AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|
+|[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Oblicza oczekiwany prostokąt okna zadokowanego. (Przesłania [CPaneFrameWnd:: CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|
+|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Określa, czy bieżące okienko może być zadokowane do innego okienka lub okna ramki. (Przesłania [CPaneFrameWnd:: CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|
+|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Określa, czy okno mini-frame można zadokować w okienku. (Przesłania [CPaneFrameWnd:: CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|
+|[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Przesłania [CPaneFrameWnd:: CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|
+|[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(Przesłania `CPaneFrameWnd::CloseMiniFrame`).|
+|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Konwertuje okienko na dokument z kartami. (Przesłania [CPaneFrameWnd:: ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|
+|[CMultiPaneFrameWnd::D ockFrame](#dockframe)||
+|[CMultiPaneFrameWnd::D ockPane](#dockpane)|Dokowanie okienka. (Przesłania [CPaneFrameWnd::D ockpane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|
+|[CMultiPaneFrameWnd::D ockRecentPaneToMainFrame](#dockrecentpanetomainframe)||
+|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Zwraca tekst podpisu. (Przesłania [CPaneFrameWnd:: GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|
+|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Zwraca odwołanie do wewnętrznego obiektu menedżera kontenerów.|
+|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Zwraca pierwsze widoczne okienko, które jest zawarte w oknie mini-frame. (Przesłania [CPaneFrameWnd:: GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|
+|[CMultiPaneFrameWnd:: getokienk](#getpane)|Zwraca okienko zawarte w oknie mini-frame. (Przesłania [CPaneFrameWnd:: getokienk](../../mfc/reference/cpaneframewnd-class.md#getpane).)|
+|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Zwraca liczbę okienek, które są zawarte w oknie mini frame. (Przesłania [CPaneFrameWnd:: GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|
+|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Zwraca liczbę widocznych okienek, które są zawarte w oknie mini frame. (Przesłania [CPaneFrameWnd:: GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|
+|[CMultiPaneFrameWnd::InsertPane](#insertpane)||
+|[CMultiPaneFrameWnd:: LoadState](#loadstate)|Ładuje stan okienka z rejestru. (Przesłania [CPaneFrameWnd:: LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|
+|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Dockuje okno mini-frame na jego ostatniej pozycji. (Przesłania [CPaneFrameWnd:: OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|
+|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Kończy czasomierz zestawienia. (Przesłania [CPaneFrameWnd:: OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Dostosowuje układ okienka wewnątrz okna mini-frame. (Przesłania [CPaneFrameWnd:: OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|
+|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Ustawia czasomierz zestawienia. (Przesłania [CPaneFrameWnd:: OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|
+|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Wywoływane przez platformę, gdy okienko w oknie mini-frame jest ukryte lub wyświetlone. (Przesłania [CPaneFrameWnd:: OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|
+|[CMultiPaneFrameWnd::P aneFromPoint](#panefrompoint)|Zwraca okienko, jeśli zawiera punkt dostarczony przez użytkownika wewnątrz okna mini-frame. (Przesłania [CPaneFrameWnd::P anefrompoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|
+|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Wywoływane przez platformę w celu usunięcia nieprawidłowych okienek. (Przesłania [CPaneFrameWnd:: RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes).)|
+|[CMultiPaneFrameWnd::RemovePane](#removepane)|Usuwa okienko z okna mini-frame. (Przesłania [CPaneFrameWnd:: RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|
+|[CMultiPaneFrameWnd::ReplacePane](#replacepane)|Zamienia jedno okienko na inne. (Przesłania [CPaneFrameWnd:: ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane).)|
+|[CMultiPaneFrameWnd:: SaveState](#savestate)|Zapisuje stan okienka w rejestrze. (Przesłania [CPaneFrameWnd:: SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate).)|
+|[CMultiPaneFrameWnd:: serializować](#serialize)|(Przesłania `CPaneFrameWnd::Serialize`).|
+|[CMultiPaneFrameWnd::SetDockState](#setdockstate)|Ustawia stan dokowania. (Przesłania [CPaneFrameWnd:: SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate).)|
 |[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||
-|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Ustawia stan predokingu. (Zastępuje [CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|
-|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(Zastępuje [CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).)|
-|[CMultiPaneFrameWnd::StoreRecentTarelatedInfo](#storerecenttabrelatedinfo)|(Zastępuje [CPaneFrameWnd::StoreRecentTarelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|
+|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Ustawia stan zadokowania. (Przesłania [CPaneFrameWnd:: SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|
+|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(Przesłania [CPaneFrameWnd:: StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).)|
+|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Przesłania [CPaneFrameWnd:: StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|
 
 ## <a name="remarks"></a>Uwagi
 
-Większość metod w tej klasie zastąpić metody w [CPaneFrameWnd klasy.](../../mfc/reference/cpaneframewnd-class.md)
+Większość metod w tej klasie przesłania metody w klasie [klasy CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) .
 
-Jeśli okienko używa stylu AFX_CBRS_AUTO_ROLLUP, a użytkownik dokuje to okienko do okna ramki z wieloma okienkami, użytkownik może rzutować okno niezależnie od ustawień stylu innych zadokowanych okienek.
+Jeśli w okienku zostanie użyty styl AFX_CBRS_AUTO_ROLLUP, a użytkownik zadokuje to okienko w wielookienkowym oknie ramek, użytkownik może wycofać okno niezależnie od ustawień stylu innych zadokowanych okienek.
 
-Struktura automatycznie tworzy `CMultiPaneFrameWnd` obiekt, gdy użytkownik unosi okienko, które używa stylu CBRS_FLOAT_MULTI.
+Struktura automatycznie tworzy `CMultiPaneFrameWnd` obiekt, gdy użytkownik przepływa z okienka, które używa stylu CBRS_FLOAT_MULTI.
 
-Aby uzyskać informacje na temat `CPaneFrameWnd` wyprowadzania klasy z klasy i dynamicznego tworzenia jej, zobacz [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Aby uzyskać informacje na temat wyprowadzania klasy z `CPaneFrameWnd` klasy i jej dynamicznego tworzenia, zobacz [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CMultiPaneFrameWnd` pobrać wskaźnik do obiektu. Ten fragment kodu jest częścią [próbki Set Pane Size](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak pobrać wskaźnik do `CMultiPaneFrameWnd` obiektu. Ten fragment kodu jest częścią [przykładu rozmiaru okienka zestawu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Cpaneframewnd](../../mfc/reference/cpaneframewnd-class.md)
+[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)
 
-[Cmultipaneframewnd](../../mfc/reference/cmultipaneframewnd-class.md)
+[CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxMultiPaneFrameWnd.h
+**Nagłówek:** afxMultiPaneFrameWnd. h
 
-## <a name="cmultipaneframewndaddpane"></a><a name="addpane"></a>CMultiPaneFrameWnd::Dodaj panel
+## <a name="cmultipaneframewndaddpane"></a><a name="addpane"></a> CMultiPaneFrameWnd:: Add— okienko
 
 ```
 virtual void AddPane(CBasePane* pWnd);
@@ -183,11 +184,11 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pWnd (właśc.*<br/>
+podczas *pWnd*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndaddrecentpane"></a><a name="addrecentpane"></a>CMultiPaneFrameWnd::AddRecentPane
+## <a name="cmultipaneframewndaddrecentpane"></a><a name="addrecentpane"></a> CMultiPaneFrameWnd::AddRecentPane
 
 ```
 virtual BOOL AddRecentPane(CDockablePane* pBar);
@@ -195,13 +196,13 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pBar*<br/>
+podczas *pBar*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndadjustlayout"></a><a name="adjustlayout"></a>CMultiPaneFrameWnd::Dopasujlayout
+## <a name="cmultipaneframewndadjustlayout"></a><a name="adjustlayout"></a> CMultiPaneFrameWnd::AdjustLayout
 
 ```
 virtual void AdjustLayout();
@@ -209,7 +210,7 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>CMultiPaneFrameWnd::Dopasuj ramki ramek
+## <a name="cmultipaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a> CMultiPaneFrameWnd::AdjustPaneFrames
 
 ```
 virtual void AdjustPaneFrames();
@@ -217,7 +218,7 @@ virtual void AdjustPaneFrames();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CMultiPaneFrameWnd::CalcExpectedDockedRect
+## <a name="cmultipaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a> CMultiPaneFrameWnd::CalcExpectedDockedRect
 
 ```
 virtual void CalcExpectedDockedRect(
@@ -230,15 +231,15 @@ virtual void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pWndToDock (Doł.*<br/>
-[w] *ptMouse (polski)*<br/>
-[w] *reectResult*<br/>
-[w] *bNaładka*<br/>
-[w] *ppTargetBar (Pasek celetu)*<br/>
+podczas *pWndToDock*<br/>
+podczas *ptMouse*<br/>
+podczas *rectResult*<br/>
+podczas *bDrawTab*<br/>
+podczas *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndcanbeattached"></a><a name="canbeattached"></a>CMultiPaneFrameWnd::CanBeAttached
+## <a name="cmultipaneframewndcanbeattached"></a><a name="canbeattached"></a> CMultiPaneFrameWnd::CanBeAttached
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -248,7 +249,7 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>CMultiPaneFrameWnd::CanBeDockedToPane
+## <a name="cmultipaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a> CMultiPaneFrameWnd::CanBeDockedToPane
 
 ```
 virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
@@ -256,13 +257,13 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pDockingBar (kierownica)*<br/>
+podczas *pDockingBar*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>CMultiPaneFrameWnd::CheckGripperWiowalność
+## <a name="cmultipaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a> CMultiPaneFrameWnd::CheckGripperVisibility
 
 ```
 virtual void CheckGripperVisibility();
@@ -270,7 +271,7 @@ virtual void CheckGripperVisibility();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndcloseminiframe"></a><a name="closeminiframe"></a>CMultiPaneFrameWnd::ZamknijMiniFrame
+## <a name="cmultipaneframewndcloseminiframe"></a><a name="closeminiframe"></a> CMultiPaneFrameWnd::CloseMiniFrame
 
 ```
 virtual void CloseMiniFrame();
@@ -278,7 +279,7 @@ virtual void CloseMiniFrame();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CMultiPaneFrameWnd::ConvertToTabbedDocument
+## <a name="cmultipaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a> CMultiPaneFrameWnd::ConvertToTabbedDocument
 
 ```
 virtual void ConvertToTabbedDocument();
@@ -286,7 +287,7 @@ virtual void ConvertToTabbedDocument();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewnddockframe"></a><a name="dockframe"></a>CMultiPaneFrameWnd::DockFrame
+## <a name="cmultipaneframewnddockframe"></a><a name="dockframe"></a> CMultiPaneFrameWnd::D ockFrame
 
 ```
 virtual BOOL DockFrame(
@@ -296,14 +297,14 @@ virtual BOOL DockFrame(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pDockedFrame (Klatka zdokujona)*<br/>
-[w] *dokMetoda*<br/>
+podczas *pDockedFrame*<br/>
+podczas *dockMethod*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewnddockpane"></a><a name="dockpane"></a>CMultiPaneFrameWnd::DockPane
+## <a name="cmultipaneframewnddockpane"></a><a name="dockpane"></a> CMultiPaneFrameWnd::D ockPane
 
 ```
 virtual BOOL DockPane(CDockablePane* pDockedBar);
@@ -311,13 +312,13 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pDockedBar (Bar)*<br/>
+podczas *pDockedBar*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewnddockrecentpanetomainframe"></a><a name="dockrecentpanetomainframe"></a>CMultiPaneFrameWnd::DockRecentPaneToMainFrame
+## <a name="cmultipaneframewnddockrecentpanetomainframe"></a><a name="dockrecentpanetomainframe"></a> CMultiPaneFrameWnd::D ockRecentPaneToMainFrame
 
 ```
 virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
@@ -325,11 +326,11 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pBar*<br/>
+podczas *pBar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>CMultiPaneFrameWnd::GetCaptionText
+## <a name="cmultipaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a> CMultiPaneFrameWnd::GetCaptionText
 
 ```
 virtual CString GetCaptionText();
@@ -339,7 +340,7 @@ virtual CString GetCaptionText();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CMultiPaneFrameWnd::GetFirstVisiblePane
+## <a name="cmultipaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a> CMultiPaneFrameWnd::GetFirstVisiblePane
 
 ```
 virtual CWnd* GetFirstVisiblePane() const;
@@ -349,7 +350,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndgetpane"></a><a name="getpane"></a>CMultiPaneFrameWnd::GetPane
+## <a name="cmultipaneframewndgetpane"></a><a name="getpane"></a> CMultiPaneFrameWnd:: getokienk
 
 ```
 virtual CWnd* GetPane() const;
@@ -359,9 +360,9 @@ virtual CWnd* GetPane() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndgetpanecontainermanager"></a><a name="getpanecontainermanager"></a>CMultiPaneFrameWnd::GetPaneContainerManager
+## <a name="cmultipaneframewndgetpanecontainermanager"></a><a name="getpanecontainermanager"></a> CMultiPaneFrameWnd::GetPaneContainerManager
 
-Zwraca odwołanie do obiektu ewnętrznego menedżera kontenerów.
+Zwraca odwołanie do wewnętrznego obiektu menedżera kontenerów.
 
 ```
 CPaneContainerManager& GetPaneContainerManager();
@@ -369,13 +370,13 @@ CPaneContainerManager& GetPaneContainerManager();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu ewnętrznego menedżera kontenerów.
+Odwołanie do wewnętrznego obiektu menedżera kontenerów.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może służyć do uzyskania dostępu do wewnętrznego [CPaneContainerManager Class](../../mfc/reference/cpanecontainermanager-class.md) obiektu.
+Ta metoda może służyć do uzyskiwania dostępu do wewnętrznego obiektu [klasy CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) .
 
-## <a name="cmultipaneframewndgetpanecount"></a><a name="getpanecount"></a>CMultiPaneFrameWnd::GetPaneCount
+## <a name="cmultipaneframewndgetpanecount"></a><a name="getpanecount"></a> CMultiPaneFrameWnd::GetPaneCount
 
 ```
 virtual int GetPaneCount() const;
@@ -385,7 +386,7 @@ virtual int GetPaneCount() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CMultiPaneFrameWnd::GetVisiblePaneCount
+## <a name="cmultipaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a> CMultiPaneFrameWnd::GetVisiblePaneCount
 
 ```
 virtual int GetVisiblePaneCount() const;
@@ -395,7 +396,7 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndinsertpane"></a><a name="insertpane"></a>CMultiPaneFrameWnd::WstawianiePane
+## <a name="cmultipaneframewndinsertpane"></a><a name="insertpane"></a> CMultiPaneFrameWnd::InsertPane
 
 ```
 virtual BOOL InsertPane(
@@ -406,15 +407,15 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pKontroluj*<br/>
-[w] *pTarget*<br/>
-[w] *bPo*<br/>
+podczas *pControlBar*<br/>
+podczas *pTarget*<br/>
+podczas *bAfter*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndloadstate"></a><a name="loadstate"></a>CMultiPaneFrameWnd::LoadState
+## <a name="cmultipaneframewndloadstate"></a><a name="loadstate"></a> CMultiPaneFrameWnd:: LoadState
 
 ```
 virtual BOOL LoadState(
@@ -424,14 +425,14 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *lpszProfileName*<br/>
-[w] *uiID*<br/>
+podczas *lpszProfileName*<br/>
+podczas *uiID*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>CMultiPaneFrameWnd::OnDockToRecentPos
+## <a name="cmultipaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a> CMultiPaneFrameWnd::OnDockToRecentPos
 
 ```
 virtual void OnDockToRecentPos();
@@ -439,7 +440,7 @@ virtual void OnDockToRecentPos();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>CMultiPaneFrameWnd::OnKillRollUpTimer
+## <a name="cmultipaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a> CMultiPaneFrameWnd::OnKillRollUpTimer
 
 ```
 virtual void OnKillRollUpTimer();
@@ -447,7 +448,7 @@ virtual void OnKillRollUpTimer();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CMultiPaneFrameWnd::OnPaneRecalcLayout
+## <a name="cmultipaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a> CMultiPaneFrameWnd::OnPaneRecalcLayout
 
 ```
 virtual void OnPaneRecalcLayout();
@@ -455,7 +456,7 @@ virtual void OnPaneRecalcLayout();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>CMultiPaneFrameWnd::OnSetRollUpTimer
+## <a name="cmultipaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a> CMultiPaneFrameWnd::OnSetRollUpTimer
 
 ```
 virtual void OnSetRollUpTimer();
@@ -463,7 +464,7 @@ virtual void OnSetRollUpTimer();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndonshowpane"></a><a name="onshowpane"></a>CMultiPaneFrameWnd::OnShowPane
+## <a name="cmultipaneframewndonshowpane"></a><a name="onshowpane"></a> CMultiPaneFrameWnd::OnShowPane
 
 ```
 virtual void OnShowPane(
@@ -473,12 +474,12 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pBar*<br/>
-[w] *bPokaż*<br/>
+podczas *pBar*<br/>
+podczas *bShow*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndpanefrompoint"></a><a name="panefrompoint"></a>CMultiPaneFrameWnd::PaneFromPoint
+## <a name="cmultipaneframewndpanefrompoint"></a><a name="panefrompoint"></a> CMultiPaneFrameWnd::P aneFromPoint
 
 ```
 virtual CBasePane* PaneFromPoint(
@@ -489,15 +490,15 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *punkt*<br/>
-[w] *nWrażliwość*<br/>
-[w] *bCzycielność*<br/>
+podczas *punkt*<br/>
+podczas *nSensitivity*<br/>
+podczas *bCheckVisibility*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CMultiPaneFrameWnd::Usuń NienavalidPanes
+## <a name="cmultipaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a> CMultiPaneFrameWnd::RemoveNonValidPanes
 
 ```
 virtual void RemoveNonValidPanes();
@@ -505,7 +506,7 @@ virtual void RemoveNonValidPanes();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndremovepane"></a><a name="removepane"></a>CMultiPaneFrameWnd::Usuńpan
+## <a name="cmultipaneframewndremovepane"></a><a name="removepane"></a> CMultiPaneFrameWnd::RemovePane
 
 ```
 virtual void RemovePane(
@@ -516,13 +517,13 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pBar*<br/>
-[w] *bDestroj*<br/>
-[w] *bNoDelayedDestroy*<br/>
+podczas *pBar*<br/>
+podczas *bDestroy*<br/>
+podczas *bNoDelayedDestroy*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndreplacepane"></a><a name="replacepane"></a>CMultiPaneFrameWnd::ReplacePane
+## <a name="cmultipaneframewndreplacepane"></a><a name="replacepane"></a> CMultiPaneFrameWnd::ReplacePane
 
 ```
 virtual void ReplacePane(
@@ -532,12 +533,12 @@ virtual void ReplacePane(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pBarOrg (pBarOrg)*<br/>
-[w] *pBarReplaceWith*<br/>
+podczas *pBarOrg*<br/>
+podczas *pBarReplaceWith*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndsavestate"></a><a name="savestate"></a>CMultiPaneFrameWnd::Zapisz
+## <a name="cmultipaneframewndsavestate"></a><a name="savestate"></a> CMultiPaneFrameWnd:: SaveState
 
 ```
 virtual BOOL SaveState(
@@ -547,14 +548,14 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *lpszProfileName*<br/>
-[w] *uiID*<br/>
+podczas *lpszProfileName*<br/>
+podczas *uiID*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndserialize"></a><a name="serialize"></a>CMultiPaneFrameWnd::Serialize
+## <a name="cmultipaneframewndserialize"></a><a name="serialize"></a> CMultiPaneFrameWnd:: serializować
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -562,11 +563,11 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *ar*<br/>
+podczas *AR*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndsetdockstate"></a><a name="setdockstate"></a>CMultiPaneFrameWnd::SetDockState
+## <a name="cmultipaneframewndsetdockstate"></a><a name="setdockstate"></a> CMultiPaneFrameWnd::SetDockState
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
@@ -574,11 +575,11 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pDockManager*<br/>
+podczas *pDockManager*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndsetlastfocusedpane"></a><a name="setlastfocusedpane"></a>CMultiPaneFrameWnd::SetLastFocusedPane
+## <a name="cmultipaneframewndsetlastfocusedpane"></a><a name="setlastfocusedpane"></a> CMultiPaneFrameWnd::SetLastFocusedPane
 
 ```cpp
 void SetLastFocusedPane(HWND hwnd);
@@ -586,11 +587,11 @@ void SetLastFocusedPane(HWND hwnd);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *hwnd (hwnd)*<br/>
+podczas *Właściwość HWND*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndsetpredockstate"></a><a name="setpredockstate"></a>CMultiPaneFrameWnd::SetPreDockState
+## <a name="cmultipaneframewndsetpredockstate"></a><a name="setpredockstate"></a> CMultiPaneFrameWnd::SetPreDockState
 
 ```
 virtual BOOL SetPreDockState(
@@ -601,15 +602,15 @@ virtual BOOL SetPreDockState(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *stan preDock*<br/>
-[w] *pBarToDock (właskw.*<br/>
-[w] *dokMetoda*<br/>
+podczas *preDockState*<br/>
+podczas *pBarToDock*<br/>
+podczas *dockMethod*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CMultiPaneFrameWnd::StoreRecentDockSiteInfo
+## <a name="cmultipaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a> CMultiPaneFrameWnd::StoreRecentDockSiteInfo
 
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
@@ -617,11 +618,11 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pBar*<br/>
+podczas *pBar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cmultipaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CMultiPaneFrameWnd::StoreRecentTarelatedInfo
+## <a name="cmultipaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a> CMultiPaneFrameWnd::StoreRecentTabRelatedInfo
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -631,8 +632,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Parametry
 
-[w] *pDockingBar (kierownica)*<br/>
-[w] *pTabbedBar (Bar)*<br/>
+podczas *pDockingBar*<br/>
+podczas *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
