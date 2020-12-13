@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: model COM+ 1,0, Kreator składnika ATL COM+ 1,0'
 title: Kreator składnika COM+ 1.0, ATL COM+ 1.0
 ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 986e579de4d04aea4db8ab74e1e4d4c9e3263014
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 581a258fc2702465fea40590430080bb6b9fcd66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923687"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141300"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>Kreator składnika COM+ 1.0, ATL COM+ 1.0
 
@@ -61,7 +62,7 @@ Aby uzyskać więcej informacji na temat projektów ATL i klas COM ATL, zobacz [
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator składników ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [Składnik ATL COM+ 1,0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: makra konwersji ciągów'
 title: Makra konwersji ciągów
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 60cccebf4e1db8369ea5a88f04a37b96838ff49f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a7717f7876d9dbe23c0b95fd68b4bcd971e81267
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138778"
 ---
 # <a name="string-conversion-macros"></a>Makra konwersji ciągów
 
@@ -59,7 +60,7 @@ Zachowanie `DEVMODE` `TEXTMETRIC` makr konwersji ciągów jest zależne od dyrek
 |brak|**A**|**K**|
 |**\_UNICODE**|**K**|**K**|
 |**OLE2ANSI**|**A**|**A**|
-|** \_ Unicode** i **OLE2ANSI**|**K**|**A**|
+|**\_ Unicode** i **OLE2ANSI**|**K**|**A**|
 
 W poniższej tabeli wymieniono `DEVMODE` `TEXTMETRIC` makra konwersji ciągów i.
 

@@ -1,26 +1,27 @@
 ---
-title: ATL-MFC Concepts
+description: 'Dowiedz się więcej o: koncepcje ATL/MFC'
+title: Koncepcje ATL-MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC
 - ATL
 ms.assetid: 4d973f56-8730-4e0b-9522-b5f43bc4548d
-ms.openlocfilehash: c1107a82cc4bb66e35620cb8c4d6c4cd711241f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67c78c9f2e42012bdf81b1e91bfddcc5ca216c9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142704"
 ---
-# <a name="atlmfc-concepts"></a>Pojęcia związane z ATL/MFC
+# <a name="atlmfc-concepts"></a>Koncepcje ATL/MFC
 
-Ta sekcja zawiera tematy dotyczące pojęć i opartego na zadaniach ułatwiające programowanie z wykorzystaniem klas współużytkowane przez Active Template Library (ATL) i biblioteki Microsoft Foundation Class (MFC).
+Ta sekcja zawiera tematy dotyczące pojęć i opartych na zadaniach, które ułatwiają korzystanie z klas współdzielonych między Active Template Library (ATL) i biblioteką Microsoft Foundation Class (MFC).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
-W tym artykule opisano sposób zarządzania danymi ciągów w aplikacjach.
+Opisuje sposób zarządzania danymi ciągu w aplikacjach.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasy współdzielone ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Klasy udostępnione ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)

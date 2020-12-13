@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: _countof makro'
 title: _countof — Makro
 ms.date: 03/22/2018
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 190f47aa7bb6bcf6bbd9478cce9df90aca81b437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146461"
 ---
 # <a name="_countof-macro"></a>_countof — Makro
 
@@ -51,13 +52,13 @@ Liczba elementów w tablicy wyrażona jako **size_t**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_countof** jest implementowana jako makro preprocesora podobne do funkcji. C++ Wersja ma dodatkowe maszyny szablonu do wykrycia w czasie kompilacji, jeśli wskaźnik jest przenoszona zamiast tablicy zadeklarowanej statycznie.
+**_countof** jest zaimplementowana jako makro preprocesora podobne do funkcji. Wersja języka C++ ma dodatkowe maszyny szablonu do wykrycia w czasie kompilacji, jeśli wskaźnik jest przenoszona zamiast tablicy zadeklarowanej statycznie.
 
-Upewnij się, że *Tablica* jest w rzeczywistości tablicą, a nie wskaźnikiem. W języku C **_countof** generuje błędne wyniki, jeśli *Tablica* jest wskaźnikiem. W C++programie **_countof** kompilacja nie powiedzie się, jeśli *Tablica* jest wskaźnikiem.  Tablica przenoszona jako parametr do funkcji powoduje *zanik wskaźnika*, co oznacza, że w funkcji nie można użyć **_countof** do określenia zakresu tablicy.
+Upewnij się, że *Tablica* jest w rzeczywistości tablicą, a nie wskaźnikiem. W języku C, **_countof** generuje błędne wyniki, jeśli *Tablica* jest wskaźnikiem. W języku C++ **_countof** kompilacja nie powiedzie się, jeśli *Tablica* jest wskaźnikiem.  Tablica przenoszona jako parametr do funkcji powoduje *zanik wskaźnika*, co oznacza, że w funkcji nie można użyć **_countof** , aby określić zakres tablicy.
 
 ## <a name="requirements"></a>Wymagania
 
-|Macro|Wymagany nagłówek|
+|Makro|Wymagany nagłówek|
 |-----------|---------------------|
 |**_countof**|\<stdlib.h>|
 
@@ -90,4 +91,4 @@ _countof(arr) = 20 elements
 
 ## <a name="see-also"></a>Zobacz także
 
-[sizeof, operator](../../cpp/sizeof-operator.md)<br/>
+[sizeof — Operator](../../cpp/sizeof-operator.md)<br/>

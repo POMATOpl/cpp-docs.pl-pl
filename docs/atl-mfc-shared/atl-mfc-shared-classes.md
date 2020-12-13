@@ -1,5 +1,6 @@
 ---
-title: Klasy współdzielone ATL-MFC
+description: 'Dowiedz się więcej na temat: klasy udostępnione ATL/MFC'
+title: Klasy udostępnione ATL-MFC
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,29 +24,29 @@ helpviewer_keywords:
 - CString objects, shared class
 - shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
-ms.openlocfilehash: 5632de3d248ded83c1db2c0b469de165e676bf9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5927436b5f5c7bd31b21ec6dd7f187e2eb4e83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142588"
 ---
 # <a name="atlmfc-shared-classes"></a>Klasy współdzielone ATL/MFC
 
-W ramach tych zajęć narzędzie może służyć w dowolnym natywnego projektu C++ bez żadnych biblioteki MFC DLL.
+Te klasy narzędzi mogą być używane w dowolnym macierzystym projekcie C++, bez konieczności używania biblioteki MFC DLL.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Klasy współdzielone MFC i ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
-Zawiera łącza do klasy współdzielone MFC i ATL.
+[Klasy współużytkowane przez MFC i ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
+Oferuje linki do klas współużytkowanych przez MFC i ATL.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Odwołanie do Active Template Library (ATL)](../atl/atl-com-desktop-components.md)<br/>
-Oferuje materiały źródłowe dotyczące biblioteki ATL, zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów COM.
+[Informacje dotyczące Active Template Library (ATL)](../atl/atl-com-desktop-components.md)<br/>
+Zapewnia materiały referencyjne dla biblioteki ATL, zestaw klas C++ opartych na szablonach, które upraszczają programowanie obiektów COM.
 
-[Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)<br/>
-Oferuje materiały źródłowe dotyczące biblioteki MFC, zestaw klas, w tym stanowią strukturę aplikacji, która jest strukturą aplikacji napisaną dla interfejsu API Windows.
+[Informacje dotyczące biblioteka MFC (MFC)](../mfc/mfc-desktop-applications.md)<br/>
+Zapewnia materiał referencyjny dla biblioteki MFC, zestaw klas w tym środowisku aplikacji, który jest strukturą aplikacji zapisaną dla interfejsu API systemu Windows.
 
 [Debugowanie](/visualstudio/debugger/debugging-in-visual-studio)<br/>
-Zawiera łącza do przy użyciu debugera programu Visual Studio, aby poprawić błędy logiczne w aplikacji lub procedur składowanych.
+Oferuje linki do korzystania z debugera programu Visual Studio w celu poprawienia błędów logiki w aplikacji lub procedurach składowanych.

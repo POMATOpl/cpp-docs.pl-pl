@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: jak używać safe_cast w języku C++/CLI'
 title: 'Instrukcje: Korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 56ac19871bcdc5162b959f6d60103387551ac2a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f921371f97f967f9517121aaa163f79769781211
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145577"
 ---
 # <a name="how-to-use-safe_cast-in-ccli"></a>Instrukcje: Korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia
 
@@ -329,6 +330,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)

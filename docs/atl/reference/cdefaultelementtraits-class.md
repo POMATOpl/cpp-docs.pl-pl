@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDefaultElementTraits'
 title: Klasa CDefaultElementTraits
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultElementTraits class
 ms.assetid: ac5ee610-7957-4b7c-92b6-38ff72e4118e
-ms.openlocfilehash: 0ee076af5fc4a1c2145162ac510b3a4460e251e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd1bae67ef626ef793ecee946d88879a07f194
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141898"
 ---
 # <a name="cdefaultelementtraits-class"></a>Klasa CDefaultElementTraits
 
-Ta klasa dostarcza domyślne metody i funkcje dla klas kolekcji.
+Ta klasa dostarcza domyślne metody i funkcje dla klasy kolekcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,14 +35,14 @@ Typ danych, które mają być przechowywane w kolekcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa udostępnia domyślną statyczne funkcje i metody, przenoszenie, kopiowanie, porównywanie i wyznaczania wartości skrótu elementów przechowywanych w obiekcie klasy kolekcji. Ta klasa dziedziczy jej funkcje i metody z [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), i [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)i jest wykorzystywany przez [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), i [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).
+Ta klasa udostępnia domyślne funkcje statyczne i metody służące do przesuwania, kopiowania, porównywania i mieszania elementów przechowywanych w obiekcie klasy kolekcji. Ta klasa dziedziczy funkcje i metody z [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)i [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)i jest wykorzystywane przez [CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)i [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).
 
 Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

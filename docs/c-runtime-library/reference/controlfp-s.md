@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _controlfp_s'
 title: _controlfp_s
 ms.date: 4/2/2020
 api_name:
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-ms.openlocfilehash: 0e734a0286ac21ed0883cc10b0cd4ee5857ba448
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2fed3263374df4bdac012c6d41d89adf9232c338
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146474"
 ---
 # <a name="_controlfp_s"></a>_controlfp_s
 
-Pobiera i ustawia słowo sterujące zmiennoprzecinkowe. Ta wersja [_control87, _controlfp \__control87_2](control87-controlfp-control87-2.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobiera i ustawia słowo sterujące zmiennoprzecinkowe. Ta wersja [_control87, _controlfp \_ _control87_2](control87-controlfp-control87-2.md) zawiera ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -73,7 +74,7 @@ Funkcja **_controlfp_s** to niezależna od platformy i bezpieczniejsza wersja **
 
 Jeśli wartość *maska* jest równa 0, **_controlfp_s** pobiera słowo sterujące zmiennoprzecinkowe i przechowuje pobraną wartość w *currentControl*.
 
-Jeśli *maska* jest różna od zera, zostanie ustawiona nowa wartość dla słowa sterującego: dla każdego bitu, który jest ustawiony (równe 1) w *masce*, odpowiadający mu bit w *nowym* jest używany do aktualizacji słowa sterującego. Innymi słowy, *fpcntrl* = ((*fpcntrl* & ~*Mask*) &#124; (Maska*newControl* & *mask*)), gdzie *fpcntrl* jest słowem kontrolnym zmiennoprzecinkowym. W tym scenariuszu *currentControl* jest ustawiona na wartość po zakończeniu zmiany; nie jest to stara wartość bitu kontrolki.
+Jeśli *maska* jest różna od zera, zostanie ustawiona nowa wartość dla słowa sterującego: dla każdego bitu, który jest ustawiony (równe 1) w *masce*, odpowiadający mu bit w *nowym* jest używany do aktualizacji słowa sterującego. Innymi słowy, *fpcntrl* = ((*fpcntrl* & ~*Mask*) &#124; (Maska *newControl*  &  )), gdzie *fpcntrl* jest słowem kontrolnym zmiennoprzecinkowym. W tym scenariuszu *currentControl* jest ustawiona na wartość po zakończeniu zmiany; nie jest to stara wartość bitu kontrolki.
 
 > [!NOTE]
 > Domyślnie biblioteki czasu wykonywania maskuje wszystkie wyjątki zmiennoprzecinkowe.
@@ -90,9 +91,9 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.
 ```
 
-Możliwe wartości dla stałej maski (*maski*) i nowe wartości kontrolki (*newControl*) są pokazane w poniższej tabeli wartości szesnastkowych. Używaj przenośnych stałych wymienionych poniżej (**_MCW_EM**, **_EM_INVALID**itd.) jako argumenty tych funkcji, zamiast podawać wartości szesnastkowe jawnie.
+Możliwe wartości dla stałej maski (*maski*) i nowe wartości kontrolki (*newControl*) są pokazane w poniższej tabeli wartości szesnastkowych. Używaj przenośnych stałych wymienionych poniżej (**_MCW_EM**, **_EM_INVALID** itd.) jako argumenty tych funkcji, zamiast podawać wartości szesnastkowe jawnie.
 
-Intel (x86) — platformy pochodne obsługują nienormalne wartości wejściowe i wyjściowe na sprzęcie. Zachowanie architektury x86 polega na zachowywaniu wartości nienormalnych. Platforma ARM i platformy x64, które mają obsługę SSE2, umożliwiają przełączenie nieznormalizowanych operandów i wyników do opróżnienia lub wymuszone zero. Funkcje **_controlfp_s**, **_controlfp**i **_control87** zapewniają maskę, aby zmienić to zachowanie. Poniższy przykład demonstruje użycie tej maski:
+Intel (x86) — platformy pochodne obsługują nienormalne wartości wejściowe i wyjściowe na sprzęcie. Zachowanie architektury x86 polega na zachowywaniu wartości nienormalnych. Platforma ARM i platformy x64, które mają obsługę SSE2, umożliwiają przełączenie nieznormalizowanych operandów i wyników do opróżnienia lub wymuszone zero. Funkcje **_controlfp_s**, **_controlfp** i **_control87** zapewniają maskę, aby zmienić to zachowanie. Poniższy przykład demonstruje użycie tej maski:
 
 ```C
 unsigned int current_word = 0;
@@ -118,7 +119,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 W przypadku maski **_MCW_EM** czyszczenie ustawia wyjątek, który umożliwia wyjątek sprzętowy; ustawienie ukrywa wyjątek. Jeśli wystąpi **_EM_UNDERFLOW** lub **_EM_OVERFLOW** , żaden wyjątek sprzętowy nie zostanie zgłoszony do momentu wykonania następnej instrukcji zmiennoprzecinkowej. Aby wygenerować wyjątek sprzętowy bezpośrednio po **_EM_UNDERFLOW** lub **_EM_OVERFLOW**, wywołaj instrukcję FWAIT MASM.
 
-|Maska|Wartość szesnastkowa|Stały|Wartość szesnastkowa|
+|Maska|Wartość szesnastkowa|Stała|Wartość szesnastkowa|
 |----------|---------------|--------------|---------------|
 |**_MCW_DN** (kontrolka niezwykła)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
 |**_MCW_EM** (Maska wyjątku przerwania)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
@@ -130,7 +131,7 @@ W przypadku maski **_MCW_EM** czyszczenie ustawia wyjątek, który umożliwia wy
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_controlfp_s**|\<Floating. h>|
+|**_controlfp_s**|\<float.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -185,9 +186,9 @@ Default:  0x9001f
 0.1 * 0.1 = 1.000000000000000e-002
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [_clear87, _clearfp](clear87-clearfp.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp, \_ _control87_2](control87-controlfp-control87-2.md)<br/>

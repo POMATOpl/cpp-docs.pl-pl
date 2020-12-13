@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _snscanf_s, _snscanf_s_l, _snwscanf_s _snwscanf_s_l'
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13ffbc1de17cfe3c154bf1cef512dd7cc58974f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137075"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
@@ -95,13 +96,13 @@ int __cdecl _snwscanf_s_l(
 *klawiatur*<br/>
 Ciąg wejściowy do sprawdzenia.
 
-*Długość*<br/>
+*length*<br/>
 Liczba znaków do sprawdzenia w *danych wejściowych*.
 
 *Formatowanie*<br/>
 Jeden lub więcej specyfikatorów formatu.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 *argument_list*<br/>
@@ -119,7 +120,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 
 Ta funkcja jest taka sama jak **sscanf_s** , z tą różnicą, że umożliwia określenie stałej liczby znaków do sprawdzenia z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf_s, _sscanf_s_l, swscanf_s _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Wymagany jest parametr rozmiaru buforu z znakami pola typu **c**, **c**, **s**, **s**i **[**. Aby uzyskać więcej informacji, zobacz [znaki pola typu scanf](../../c-runtime-library/scanf-type-field-characters.md).
+Wymagany jest parametr rozmiaru buforu z znakami pola typu **c**, **c**, **s**, **s** i **[**. Aby uzyskać więcej informacji, zobacz [znaki pola typu scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
 > Parametr size ma typ, a **`unsigned`** nie **size_t**.

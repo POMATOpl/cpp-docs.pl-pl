@@ -1,17 +1,18 @@
 ---
+description: Dowiedz się więcej o:/MANIFESTINPUT (Określ dane wejściowe manifestu)
 title: /MANIFESTINPUT (Określ dane wejściowe manifestu)
 ms.date: 07/24/2019
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-ms.openlocfilehash: d7c8351c915f5666ada9939df686c81c86ab89ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4c5561779f41074a1c52593a62dd7d32ca32801
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137933"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (Określ dane wejściowe manifestu)
 
-Określa plik wejściowy manifestu do uwzględnienia w manifeście, który jest osadzony w obrazie.
+Określa plik wejściowy manifestu, który ma zostać uwzględniony w manifeście osadzonym w obrazie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,16 +22,16 @@ Określa plik wejściowy manifestu do uwzględnienia w manifeście, który jest 
 
 ### <a name="parameters"></a>Parametry
 
-*Pod nazwą*<br/>
-Plik manifestu do uwzględnienia w osadzonym manifeście.
+*Nazwa pliku*<br/>
+Plik manifestu do uwzględnienia w manifeście osadzonym.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja **/MANIFESTINPUT** określa ścieżkę pliku wejściowego, który ma być używany do tworzenia osadzonego manifestu w obrazie wykonywalnym. Jeśli masz wiele plików wejściowych manifestu, użyj przełącznika wiele razy — raz dla każdego pliku wejściowego. Pliki wejściowe manifestu są scalane w celu utworzenia osadzonego manifestu. Ta opcja wymaga opcji **/MANIFEST:EMBED.**
+Opcja **/MANIFESTINPUT** określa ścieżkę pliku wejściowego, który ma zostać użyty do utworzenia osadzonego manifestu w obrazie wykonywalnym. Jeśli masz wiele plików wejściowych manifestu, użyj przełącznika wiele razy — jeden raz dla każdego pliku wejściowego. Pliki wejściowe manifestu są scalane w celu utworzenia manifestu osadzonego. Ta opcja wymaga opcji **/manifest: embed** .
 
-Tej opcji nie można ustawić bezpośrednio w programie Visual Studio. Zamiast tego należy użyć **właściwości Dodatkowe pliki manifestu** projektu, aby określić dodatkowe pliki manifestu do uwzględnienia. Aby uzyskać więcej informacji, zobacz [Manifest Tool Property Pages](manifest-tool-property-pages.md).
+Tej opcji nie można ustawić bezpośrednio w programie Visual Studio. Zamiast tego należy użyć właściwości **dodatkowe pliki manifestu** projektu, aby określić dodatkowe pliki manifestu do uwzględnienia. Aby uzyskać więcej informacji, zobacz [stronę właściwości narzędzia manifestu](manifest-tool-property-pages.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

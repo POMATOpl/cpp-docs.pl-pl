@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _sopen_s, _wsopen_s'
 title: _sopen_s, _wsopen_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14a15f78ad452873813f9a6eb4f65de93cd055b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136997"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -92,7 +93,7 @@ Wartość zwracana różna od zera wskazuje błąd; w takim przypadku **errno** 
 |-|-|
 | **EACCES** |  Dana ścieżka jest katalogiem lub plik jest tylko do odczytu, ale podjęto próbę wykonania operacji otwierania do zapisu. |
 | **EEXIST** |  Określono **_O_CREAT** i **_O_EXCL** flag, ale *filename* już istnieje. |
-| **EINVAL** |  Nieprawidłowy argument *Oflag*, *Shflag*lub *PMODE* lub *PFH* lub *filename* był wskaźnikiem o wartości null. |
+| **EINVAL** |  Nieprawidłowy argument *Oflag*, *Shflag* lub *PMODE* lub *PFH* lub *filename* był wskaźnikiem o wartości null. |
 | **EMFILE** | Nie ma więcej dostępnych deskryptorów plików. |
 | **ENOENT** | Nie znaleziono pliku lub ścieżki. |
 
@@ -123,7 +124,7 @@ Wyrażenie typu Integer *Oflag* jest tworzone przez połączenie co najmniej jed
 | **_O_CREAT** | Tworzy plik i otwiera go do zapisu. Nie działa, jeśli istnieje plik określony przez *filename* . Argument *PMODE* jest wymagany, jeśli określono **_O_CREAT** . |
 | **_O_CREAT** &#124; **_O_SHORT_LIVED** | Tworzy plik jako tymczasowy, a jeśli to możliwe, nie jest opróżniany na dysk. Argument *PMODE* jest wymagany, jeśli określono **_O_CREAT** . |
 | **_O_CREAT** &#124; **_O_TEMPORARY** | Tworzy plik jako tymczasowy; plik zostanie usunięty po zamknięciu ostatniego deskryptora pliku. Argument *PMODE* jest wymagany, jeśli określono **_O_CREAT** . |
-| **_O_CREAT** &#124;`_O_EXCL` | Zwraca wartość błędu, jeśli istnieje plik określony przez *nazwę* pliku. Ma zastosowanie tylko w przypadku, gdy jest używany z **_O_CREAT**. |
+| **_O_CREAT** &#124; `_O_EXCL` | Zwraca wartość błędu, jeśli istnieje plik określony przez *nazwę* pliku. Ma zastosowanie tylko w przypadku, gdy jest używany z **_O_CREAT**. |
 | **_O_NOINHERIT** | Uniemożliwia utworzenie deskryptora pliku udostępnionego. |
 | **_O_RANDOM** | Określa, że buforowanie jest zoptymalizowane dla, ale nie ograniczone do, losowy dostęp z dysku. |
 | **_O_RDONLY** | Otwiera plik tylko do odczytu. Nie można określić za pomocą **_O_RDWR** lub **_O_WRONLY**. |
@@ -136,11 +137,11 @@ Wyrażenie typu Integer *Oflag* jest tworzone przez połączenie co najmniej jed
 | **_O_U8TEXT** | Otwiera plik w trybie Unicode UTF-8. |
 | **_O_WTEXT** | Otwiera plik w trybie Unicode. |
 
-Aby określić tryb dostępu do pliku, należy określić **_O_RDONLY**, **_O_RDWR**lub **_O_WRONLY**. Brak wartości domyślnej dla trybu dostępu.
+Aby określić tryb dostępu do pliku, należy określić **_O_RDONLY**, **_O_RDWR** lub **_O_WRONLY**. Brak wartości domyślnej dla trybu dostępu.
 
-Gdy plik zostanie otwarty w trybie Unicode przy użyciu **_O_WTEXT**, **_O_U8TEXT**lub **_O_U16TEXT**, funkcje wejściowe przekładają dane odczytane z pliku do danych UTF-16 przechowywanych jako typ **`wchar_t`** . Funkcje, które zapisują do pliku otwartego w trybie Unicode, oczekują buforów zawierających dane w formacie UTF-16 przechowywane jako typ **`wchar_t`** . Jeśli plik jest zakodowany jako UTF-8, dane UTF-16 są tłumaczone na UTF-8 podczas zapisywania, a zawartość zakodowana w formacie UTF-8 jest tłumaczona na UTF-16 podczas odczytywania. Próba odczytania lub zapisania nieparzystej liczby bajtów w trybie Unicode powoduje błąd walidacji parametru. Aby odczytać lub zapisać dane, które są przechowywane w programie jako UTF-8, użyj trybu plików tekstowych lub binarnych zamiast trybu Unicode. Użytkownik jest odpowiedzialny za wszelkie wymagane tłumaczenia kodowania.
+Gdy plik zostanie otwarty w trybie Unicode przy użyciu **_O_WTEXT**, **_O_U8TEXT** lub **_O_U16TEXT**, funkcje wejściowe przekładają dane odczytane z pliku do danych UTF-16 przechowywanych jako typ **`wchar_t`** . Funkcje, które zapisują do pliku otwartego w trybie Unicode, oczekują buforów zawierających dane w formacie UTF-16 przechowywane jako typ **`wchar_t`** . Jeśli plik jest zakodowany jako UTF-8, dane UTF-16 są tłumaczone na UTF-8 podczas zapisywania, a zawartość zakodowana w formacie UTF-8 jest tłumaczona na UTF-16 podczas odczytywania. Próba odczytania lub zapisania nieparzystej liczby bajtów w trybie Unicode powoduje błąd walidacji parametru. Aby odczytać lub zapisać dane, które są przechowywane w programie jako UTF-8, użyj trybu plików tekstowych lub binarnych zamiast trybu Unicode. Użytkownik jest odpowiedzialny za wszelkie wymagane tłumaczenia kodowania.
 
-Jeśli **_sopen_s** jest wywoływana z **_O_WRONLY**  |  **_O_APPEND** (tryb Append) i **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, najpierw próbuje otworzyć plik do odczytu i zapisu, odczytać BOM, a następnie otworzyć go tylko do zapisu. Jeśli otwarcie pliku do odczytu i zapisu nie powiedzie się, otwiera plik wyłącznie do zapisu i używa wartości domyślnej dla ustawienia trybu Unicode.
+Jeśli **_sopen_s** jest wywoływana z **_O_WRONLY**  |  **_O_APPEND** (tryb Append) i **_O_WTEXT**, **_O_U16TEXT** lub **_O_U8TEXT**, najpierw próbuje otworzyć plik do odczytu i zapisu, odczytać BOM, a następnie otworzyć go tylko do zapisu. Jeśli otwarcie pliku do odczytu i zapisu nie powiedzie się, otwiera plik wyłącznie do zapisu i używa wartości domyślnej dla ustawienia trybu Unicode.
 
 Argument *Shflag* jest wyrażeniem stałym, które składa się z jednej z następujących stałych manifestu, które są zdefiniowane w \<share.h> .
 
@@ -176,7 +177,7 @@ Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. W systemie 
 
 Zapoznaj się z przykładem [_locking](locking.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>

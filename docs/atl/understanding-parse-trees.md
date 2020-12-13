@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Opis drzew analizy'
 title: Rejestratory i analizy ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: ff74ff879e757a569232ff19244d3f7598063465
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cae5256bf932478135db747f80816378e61429a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138245"
 ---
 # <a name="understanding-parse-trees"></a>Omówienie drzew analizy
 
@@ -61,6 +62,6 @@ HKEY_CLASSES_ROOT
 
 Tutaj zostanie otwarty Rejestrator (tworzony) `HKEY_CLASSES_ROOT\MyVeryOwnKey` . Następnie widzi, że `MyVeryOwnKey` ma podklucz. Zamiast zamknąć klucz do `MyVeryOwnKey` , rejestrator zachowuje uchwyt i otwiera (tworzy) `HasASubKey` przy użyciu tego dojścia nadrzędnego. (Rejestr systemu może być wolniejszy, gdy nie ma otwartego uchwytu nadrzędnego). W rezultacie otwieranie `HKEY_CLASSES_ROOT\MyVeryOwnKey` i otwieranie `HasASubKey` przy użyciu `MyVeryOwnKey` programu jako elementu nadrzędnego jest szybsze niż otwieranie `MyVeryOwnKey` , zamykanie `MyVeryOwnKey` i otwieranie `MyVeryOwnKey\HasASubKey` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny C1084'
 title: Błąd krytyczny C1084
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: 649686857000b2bee469f0e3ec551d49717c1d7b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a3221bb894c0b320642a923d9552a207a2ff9ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145317"
 ---
 # <a name="fatal-error-c1084"></a>Błąd krytyczny C1084
 
@@ -25,7 +26,7 @@ Wykonanie poniższych kroków może pomóc w rozwiązaniu C1084:
 
 - Upewnij się, że odpowiednie uprawnienia są ustawione w celu uzyskania dostępu do określonego pliku.
 
-- Upewnij się, że składnia wiersza polecenia jest zgodna z regułami opisanymi w sekcji [składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md).
+- Upewnij się, że składnia wiersza polecenia jest zgodna z regułami opisanymi w sekcji [składnia kompilatora Command-Line](../../build/reference/compiler-command-line-syntax.md).
 
 - Upewnij się, że zmienne środowiskowe **tmp** i **temp** są prawidłowo ustawione, a także odpowiednie uprawnienia, aby uzyskać dostęp do katalogów, do których odwołują się te zmienne środowiskowe. Należy również upewnić się, że dyski, do których odwołuje się obiekt **tmp** i **tymczasowe** zmienne środowiskowe, zawierają odpowiednią ilość wolnego miejsca.
 

@@ -1,25 +1,26 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy informacji o lokacji'
 title: Klasy informacji o lokacji (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - site information classes
 ms.assetid: 102eae20-7953-4efb-b27b-409885c9c064
-ms.openlocfilehash: f6a6e53aa3214a2a2a766d90573481365fe382dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5161533dd9b698f5170f81223ad8ec557791c9a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138492"
 ---
-# <a name="site-information-classes"></a>Klasy informacji o witrynie
+# <a name="site-information-classes"></a>Klasy informacji o lokacji
 
-Następujące klasy Zezwalaj na obiekt, do komunikacji z jej lokacją:
+Następujące klasy umożliwiają obiektowi komunikowanie się z jego lokacją:
 
-- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) pobiera i ustawia wskaźnik do obiektu witryny. Używane dla obiektów, które nie są kontrolki.
+- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) Pobiera i ustawia wskaźnik do lokacji obiektu. Używane dla obiektów, które nie są kontrolkami.
 
-- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) pobiera i ustawia wskaźnik do obiektu witryny. Używane dla formantów.
+- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) Pobiera i ustawia wskaźnik do lokacji obiektu. Używany do kontrolek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)
+[Przegląd klas](../atl/atl-class-overview.md)

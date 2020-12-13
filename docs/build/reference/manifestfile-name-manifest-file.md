@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/MANIFESTFILE (Nazwij plik manifestu)
 title: /MANIFESTFILE (Podaj nazwę pliku manifestu)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -MANIFESTFILE linker option
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-ms.openlocfilehash: e75c6d8171aae22312ba6aaa2d4304d831ec6d0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0d3a4ba1d17c4aa8c97cb09cc768e614e46c864
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138024"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (Podaj nazwę pliku manifestu)
 
@@ -23,27 +24,27 @@ ms.locfileid: "62321621"
 
 ## <a name="remarks"></a>Uwagi
 
-/ Opcja MANIFESTFILE pozwala zmienić domyślną nazwę pliku manifestu.  Domyślna nazwa pliku manifestu to nazwa pliku, przy użyciu manifest dołączane.
+/MANIFESTFILE pozwala zmienić domyślną nazwę pliku manifestu.  Domyślną nazwą pliku manifestu jest nazwa pliku z dołączonym manifestem.
 
-/ MANIFESTFILE będzie mieć efektu, jeśli nie możesz również połączyć za pomocą [/MANIFEST](manifest-create-side-by-side-assembly-manifest.md).
+/MANIFESTFILE nie będzie działać, jeśli nie zostanie również połączony z [/manifest](manifest-create-side-by-side-assembly-manifest.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **właściwości konfiguracji** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** .
 
-1. Rozwiń **konsolidatora** węzła.
+1. Rozwiń węzeł **konsolidatora** .
 
-1. Wybierz **pliku manifestu** stronę właściwości.
+1. Wybierz stronę właściwości **plik manifestu** .
 
-1. Modyfikowanie **pliku manifestu** właściwości.
+1. Zmodyfikuj właściwość **pliku manifestu** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

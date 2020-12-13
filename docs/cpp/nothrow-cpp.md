@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: nothrow (C++)'
 title: nothrow (C++)
 ms.date: 01/03/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], nothrow
 - nothrow __declspec keyword
 ms.assetid: 0a475139-459c-4ec6-99e8-7ecd0d7f44a3
-ms.openlocfilehash: 8ce0e9ea6a39ef7760c7a6d0802913326433cf68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e438541221fe097aefb2e52d190e223fa1cf2fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146253"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -46,7 +47,7 @@ W **/std: tryb c++ 17** `throw()` nie jest odpowiednikiem innych, które są uż
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [__declspec](../cpp/declspec.md)<br/>
 [noexcept](noexcept-cpp.md)<br/>

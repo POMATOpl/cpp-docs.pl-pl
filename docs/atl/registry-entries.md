@@ -1,29 +1,30 @@
 ---
+description: 'Dowiedz się więcej na temat: wpisy rejestru'
 title: Wpisy rejestru (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-ms.openlocfilehash: 7a89bc5d510d493f557b7ea74b8eabe5dfd87ac1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c89c8f64a91c09f16333c3381a33d792332543d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138583"
 ---
 # <a name="registry-entries"></a>Wpisy rejestru
 
-DCOM wprowadzono pojęcie identyfikatorów aplikacji (identyfikatory AppID), które grupy opcji konfiguracji dla co najmniej jeden obiekt modelu DCOM w centralnej lokalizacji w rejestrze. Należy określić identyfikator AppID, wskazując jego wartości w AppID nazwanej wartości w obszarze CLSID obiektu.
+Model DCOM wprowadził koncepcję identyfikatorów aplikacji (AppID), które grupują opcje konfiguracji dla co najmniej jednego obiektu DCOM w scentralizowaną lokalizację w rejestrze. Identyfikator AppID można określić, wskazując jego wartość w identyfikatorze CLSID o nazwie.
 
-Domyślnie usługi generowane ATL używa własny identyfikator CLSID jako identyfikatora GUID dla jego identyfikator aplikacji. W obszarze `HKEY_CLASSES_ROOT\AppID`, można określić wpisy dotyczące modelu DCOM. Początkowo istnieją dwa wpisy:
+Domyślnie usługa wygenerowana przez ATL używa swojego identyfikatora CLSID jako identyfikatora GUID dla jego AppID. W obszarze `HKEY_CLASSES_ROOT\AppID` można określić wpisy specyficzne dla modelu DCOM. Początkowo istnieją dwa wpisy:
 
-- `LocalService`, z wartością jest taka sama jak nazwa usługi. Jeśli ta wartość istnieje, jest ona używana zamiast `LocalServer32` klucza w obszarze identyfikator CLSID.
+- `LocalService`, o wartości równej nazwie usługi. Jeśli ta wartość istnieje, jest używana zamiast `LocalServer32` klucza pod identyfikatorem CLSID.
 
-- `ServiceParameters`, o wartości równej `-Service`. Ta wartość określa parametry, które zostaną przekazane do usługi po jej ponownym uruchomieniu. Należy zauważyć, że te parametry są przekazywane do usługi `ServiceMain` funkcja nie `WinMain`.
+- `ServiceParameters`, o wartości równej `-Service` . Ta wartość określa parametry, które zostaną przesłane do usługi po jej uruchomieniu. Należy zauważyć, że te parametry są przesyłane do `ServiceMain` funkcji usługi, a nie `WinMain` .
 
-Dowolną usługę DCOM również potrzebuje do utworzenia innego klucza w ramach `HKEY_CLASSES_ROOT\AppID`. Ten klucz jest taka sama jak nazwa pliku exe i działa jako odsyłaczy, ponieważ zawiera ona wartością AppID wskazuje wpisy Identyfikator aplikacji.
+Wszystkie usługi DCOM muszą również utworzyć inny klucz w obszarze `HKEY_CLASSES_ROOT\AppID` . Ten klucz jest równy nazwie pliku EXE i działa jako odwołanie krzyżowe, ponieważ zawiera wartość identyfikatora AppID wskazującą z powrotem do wpisów AppID.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Usługi](../atl/atl-services.md)

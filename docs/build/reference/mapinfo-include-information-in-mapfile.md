@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/MAPINFO (Dołącz informacje do Mapfile)
 title: /MAPINFO (Dołącz informacje do Mapfile)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - MAPINFO linker option
 - -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-ms.openlocfilehash: 491df211856a9d7ceb02b6a401270f15b9da3b96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cf785182bd91923c3398d542d7e60d9afdb4a4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137907"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Dołącz informacje do Mapfile)
 
@@ -26,23 +27,23 @@ ms.locfileid: "62321439"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/MapInfo informuje konsolidator, aby zawierał określone informacje w pliku mapowania, który jest tworzony, jeśli określisz [/MAP](map-generate-mapfile.md) opcji.  EXPORTS informuje konsolidator, aby dołączał eksportowane funkcje.
+Opcja/MAPINFO nakazuje konsolidatorowi dołączenie określonych informacji do Mapfile, który jest tworzony w przypadku określenia opcji [/map](map-generate-mapfile.md) .  EKSPORTy nakazuje konsolidatorowi uwzględnienie wyeksportowanych funkcji.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **debugowania** stronę właściwości.
+1. Kliknij stronę właściwości **debugowania** .
 
-1. Modyfikowanie **eksporty mapy** właściwości:
+1. Modyfikowanie właściwości **eksportu mapy** :
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

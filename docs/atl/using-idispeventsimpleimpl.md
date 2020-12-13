@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z IDispEventSimpleImpl'
 title: Korzystanie z IDispEventSimpleImpl (ATL)
 ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-ms.openlocfilehash: 8a5e64093d2687efc6c6c5e9b0ce89402d2b99a4
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: c0b3f6a0ecdcaae084d3f5d62c19745ee15ac6e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138167"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Korzystanie z interfejsu IDispEventSimpleImpl
 
-W przypadku `IDispEventSimpleImpl` korzystania z programu do obsługi zdarzeń należy:
+W przypadku korzystania `IDispEventSimpleImpl` z programu do obsługi zdarzeń należy:
 
 - Utwórz klasę z [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).
 
@@ -49,7 +50,7 @@ methods:
 };
 ```
 
-Ten przykład używa `#import` do generowania wymaganych plików nagłówkowych z biblioteki typów programu Word. Jeśli chcesz użyć tego przykładu z innymi wersjami programu Word, musisz określić właściwy plik DLL Mso. Na przykład pakiet Office 2000 zapewnia Mso9. dll, a OfficeXP. dll. Ten kod jest uproszczony z *PCH. h* (*stdafx. h* w Visual Studio 2017 i starszych):
+Ten przykład używa `#import` do generowania wymaganych plików nagłówkowych z biblioteki typów programu Word. Jeśli chcesz użyć tego przykładu z innymi wersjami programu Word, musisz określić właściwy plik DLL Mso. Na przykład pakiet Office 2000 zawiera mso9.dll a OfficeXP zapewnia mso.dll. Ten kod jest uproszczony z *PCH. h* (*stdafx. h* w Visual Studio 2017 i starszych):
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]
 
@@ -63,7 +64,7 @@ Poniższy kod pochodzi z prostej. cpp:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zdarzeń](../atl/event-handling-and-atl.md)<br/>
 [Przykład ATLEventHandling](../overview/visual-cpp-samples.md)

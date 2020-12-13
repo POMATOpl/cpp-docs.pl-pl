@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wyjątek bad_typeid'
 title: bad_typeid, wyjątek
 ms.date: 10/04/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 3e01f97c67803408c9ce5bf056e3e9ed4746d259
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cdc582e2becba35b851bc3b6c2d68c877110068c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146266"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid, wyjątek
 
@@ -78,7 +79,7 @@ catch (bad_typeid){
 Object is NULL
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Informacje o typie w czasie wykonywania](../cpp/run-time-type-information.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)
