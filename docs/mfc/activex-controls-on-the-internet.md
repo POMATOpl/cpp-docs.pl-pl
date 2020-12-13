@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: kontrolki ActiveX w Internecie'
 title: Formanty ActiveX w Internecie
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: f06a6f6f71e922163fd95c59836c50b88b05ed3a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5f186d74ff0b448d1cef6a956a6495f6a8890798
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339134"
 ---
 # <a name="activex-controls-on-the-internet"></a>Formanty ActiveX w Internecie
 
@@ -43,7 +44,7 @@ Kontrolki ActiveX nie są ograniczone do Internetu. Kontrolka ActiveX może być
 
 - Obsługa dodatkowych interfejsów w miarę potrzeby w zakresie funkcjonalności.
 
-## <a name="making-your-existing-controls-internet-friendly"></a>Udostępnianie istniejących kontrolek przyjaznych dla Internetu
+## <a name="making-your-existing-controls-internet-friendly"></a>Tworzenie istniejących kontrolek Internet-Friendly
 
 Projektowanie kontrolki, która będzie działała prawidłowo w środowisku internetowym, wymaga uwzględnienia stosunkowo niskich szybkości transmisji w Internecie. Możesz użyć istniejących kontrolek. Istnieją jednak kroki, które należy wykonać, aby zmniejszyć rozmiar kodu i zapewnić, że właściwości kontrolki będą pobierane asynchronicznie.
 
@@ -107,7 +108,7 @@ Podczas tworzenia nowej kontrolki za pomocą Kreatora aplikacji można włączy�
 
    Należy pamiętać, że należy uwzględnić AFXCMN. H, aby użyć `CListCtrl` klasy.
 
-1. Po zmianie ogólnego stanu kontrolki (na przykład w przypadku ładowania do zainicjowany lub interaktywnego użytkownika) Wywołaj polecenie `COleControl::InternalSetReadyState` . Jeśli kontrolka ma tylko jedną właściwość Path, można dodać kod na **BSCF_LASTDATANOTIFICATION** , aby powiadomić kontener o zakończeniu pobierania. Przykład:
+1. Po zmianie ogólnego stanu kontrolki (na przykład w przypadku ładowania do zainicjowany lub interaktywnego użytkownika) Wywołaj polecenie `COleControl::InternalSetReadyState` . Jeśli kontrolka ma tylko jedną właściwość Path, można dodać kod na **BSCF_LASTDATANOTIFICATION** , aby powiadomić kontener o zakończeniu pobierania. Na przykład:
 
    [!code-cpp[NVC_MFCActiveXControl#2](codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
@@ -117,11 +118,11 @@ Następna procedura dodaje do kontrolki właściwość, aby użyć klasy pochodn
 
 #### <a name="to-add-a-property"></a>Aby dodać właściwość
 
-1. W **Widok klasy**kliknij prawym przyciskiem myszy interfejs pod węzłem biblioteki i wybierz polecenie **Dodaj**, a następnie **Dodaj właściwość**. Spowoduje to uruchomienie **Kreatora dodawania właściwości**.
+1. W **Widok klasy** kliknij prawym przyciskiem myszy interfejs pod węzłem biblioteki i wybierz polecenie **Dodaj**, a następnie **Dodaj właściwość**. Spowoduje to uruchomienie **Kreatora dodawania właściwości**.
 
-1. W **Kreatorze dodawania właściwości**wybierz przycisk radiowy **Ustaw/Pobierz metody** , wpisz **nazwę właściwości**, na przykład EditControlText, a następnie wybierz BSTR jako **Typ właściwości**.
+1. W **Kreatorze dodawania właściwości** wybierz przycisk radiowy **Ustaw/Pobierz metody** , wpisz **nazwę właściwości**, na przykład EditControlText, a następnie wybierz BSTR jako **Typ właściwości**.
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 1. Zadeklaruj zmienną składową `CDataPathProperty` klasy pochodnej dla klasy kontrolki ActiveX.
 
@@ -193,5 +194,5 @@ Stan gotowości zostanie zaktualizowany w miarę pobierania kodu przez wywołani
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC — zadania związane z programowaniem Internetu](mfc-internet-programming-tasks.md)<br/>
-[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)
+[Zadania programistyczne internetowe MFC](mfc-internet-programming-tasks.md)<br/>
+[Podstawy programowania internetowego MFC](mfc-internet-programming-basics.md)

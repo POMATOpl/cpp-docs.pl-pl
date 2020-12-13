@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy num_get
 title: num_get — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: d5a88e904c437e79eabfa854a196aa48dbad955e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0236aac2e7c7859f966430bd276b4dffc42820b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338086"
 ---
 # <a name="num_get-class"></a>num_get — Klasa
 
@@ -62,7 +63,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 |Funkcja członkowska|Opis|
 |-|-|
 |[do_get](#do_get)|Funkcja wirtualna wywoływana w celu wyodrębniania wartości liczbowej lub logicznej z sekwencji znaków.|
-|[Pobierz](#get)|Wyodrębnia wartość liczbową lub logiczną z sekwencji znaków.|
+|[get](#get)|Wyodrębnia wartość liczbową lub logiczną z sekwencji znaków.|
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,7 +71,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="num_getchar_type"></a><a name="char_type"></a>num_get:: char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a> num_get:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -82,7 +83,7 @@ typedef CharType char_type;
 
 Typ jest synonimem dla parametru szablonu **CharType**.
 
-## <a name="num_getdo_get"></a><a name="do_get"></a>num_get::d o_get
+## <a name="num_getdo_get"></a><a name="do_get"></a> num_get::d o_get
 
 Funkcja wirtualna wywoływana w celu wyodrębniania wartości liczbowej lub logicznej z sekwencji znaków.
 
@@ -329,7 +330,7 @@ Pole danych wejściowych Boolean przyjmuje jeden z dwóch form. Jeśli `iosbase.
 
 Zobacz przykład dla [Get](#get), gdzie wirtualna funkcja członkowska jest wywoływana przez `do_get` .
 
-## <a name="num_getget"></a><a name="get"></a>num_get:: Get
+## <a name="num_getget"></a><a name="get"></a> num_get:: Get
 
 Wyodrębnia wartość liczbową lub logiczną z sekwencji znaków.
 
@@ -551,7 +552,7 @@ int main( )
 }
 ```
 
-## <a name="num_getiter_type"></a><a name="iter_type"></a>num_get:: iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a> num_get:: iter_type
 
 Typ, który opisuje iterator danych wejściowych.
 
@@ -563,7 +564,7 @@ typedef InputIterator iter_type;
 
 Typ jest synonimem dla parametru szablonu `InputIterator` .
 
-## <a name="num_getnum_get"></a><a name="num_get"></a>num_get:: num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a> num_get:: num_get
 
 Konstruktor dla obiektów typu `num_get` , które są używane do wyodrębniania wartości liczbowych z sekwencji.
 
@@ -584,13 +585,13 @@ Możliwe wartości parametru *ReFS* i ich znaczenie są następujące:
 
 - 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \>1: te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
 Konstruktor inicjuje swój obiekt podstawowy z zestawem `locale::` [reguł](../standard-library/locale-class.md#facet_class) `(refs)` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<locale>](../standard-library/locale.md)\
 [facet — Klasa](../standard-library/locale-class.md#facet_class)\

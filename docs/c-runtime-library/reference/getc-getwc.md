@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: getc —, getwc'
 title: getc, getwc
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: 6248dd2287b2f11db72f64df1241affe8deec22d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0d48b0d1549009d6eb36f37f2f08cb393fde6ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338917"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -96,8 +97,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**getc —**|\<stdio. h>|
-|**getwc**|\<stdio. h> lub \<WCHAR. h>|
+|**getc —**|\<stdio.h>|
+|**getwc**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -138,7 +139,7 @@ int main()
 }
 ```
 
-### <a name="input-crt_getctxt"></a>Dane wejściowe: crt_getc. txt
+### <a name="input-crt_getctxt"></a>Dane wejściowe: crt_getc.txt
 
 ```Input
 Line one.

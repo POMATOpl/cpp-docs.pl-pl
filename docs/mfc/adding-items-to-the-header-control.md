@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie elementów do formantu nagłówka'
 title: Dodawanie elementów do formantu nagłówka
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], adding items
 - header controls [MFC], adding items to
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
-ms.openlocfilehash: 5749a0cae2dfe7e6c9f4c166eca487e36c2d21d2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 91c33a7528f6637a91181559d71ed82b13420b38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339060"
 ---
 # <a name="adding-items-to-the-header-control"></a>Dodawanie elementów do formantu nagłówka
 

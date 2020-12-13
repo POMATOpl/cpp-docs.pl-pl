@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: kontenery kontrolek ActiveX'
 title: Kontenery formantów ActiveX
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 42fa18c41ebd960aa8de080df00556ad5c909d40
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6de379cc152ff35e16366c1b5e920bf3548f4cd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339114"
 ---
 # <a name="activex-control-containers"></a>Kontenery formantów ActiveX
 
@@ -35,15 +36,15 @@ Dodatkowe artykuły omawiają kilka tematów, od tworzenia projektu kontenera ko
 
 - [Kontenery kontrolek ActiveX: ręczne włączanie zawierania kontrolek ActiveX](activex-control-containers-manually-enabling-activex-control-containment.md)
 
-- [Kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek](inserting-a-control-into-a-control-container-application.md)
+- [Kontenery kontrolek ActiveX: Wstawianie kontrolki do aplikacji kontenera kontrolek](inserting-a-control-into-a-control-container-application.md)
 
-- [Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną składową](activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
+- [Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną członkowską](activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
 - [Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX](activex-control-containers-handling-events-from-an-activex-control.md)
 
 - [Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki](activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX](programming-activex-controls-in-a-activex-control-container.md)
+- [Kontenery kontrolek ActiveX: Programowanie formantów ActiveX w kontenerze kontrolek ActiveX](programming-activex-controls-in-a-activex-control-container.md)
 
 - [Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe](activex-control-containers-using-controls-in-a-non-dialog-container.md)
 

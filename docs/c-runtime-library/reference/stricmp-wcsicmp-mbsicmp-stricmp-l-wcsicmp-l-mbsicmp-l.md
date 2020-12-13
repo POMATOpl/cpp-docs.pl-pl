@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l'
 title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: 786c2bd2738bb82b3edac5c811ccfd3f9f8bc854
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 07ec1b2f53ae299c1c9622422cdf22e7f07ad330
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338882"
 ---
 # <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -130,7 +131,7 @@ Wartość zwracana wskazuje relację od *ciąg1* do *ciąg2* w następujący spo
 |0|*ciąg1* identyczny z *ciąg2*|
 |> 0|*ciąg1* większy niż *ciąg2*|
 
-W przypadku błędu, **_mbsicmp** zwraca **_NLSCMPERROR**, który jest zdefiniowany w \<mbstring. h> i \<>. h.
+W przypadku błędu, **_mbsicmp** zwraca **_NLSCMPERROR**, który jest zdefiniowany w \<string.h> i \<mbstring.h> .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -151,7 +152,7 @@ Jeśli funkcja [strcmp](strcmp-wcscmp-mbscmp.md) jest używana zamiast **_stricm
 
 **_wcsicmp** i **wcscmp** zachowują się identycznie, z tą różnicą, że **wcscmp** nie konwertują jej argumentów na małe przed ich porównaniem. **_mbsicmp** i **_mbscmp** zachowują się identycznie, z tą różnicą, że **_mbscmp** nie konwertują swoich argumentów na małe przed ich porównaniem.
 
-Musisz wywołać metodę [setlocaling](setlocale-wsetlocale.md) , aby **_wcsicmp** do pracy z znakami łacińskimi 1. Ustawienia regionalne języka C są stosowane domyślnie, więc na przykład ä nie będzie porównywane z Ä. Przed wywołaniem **_wcsicmp**należy wywołać metodę **setlocals** z uwzględnieniem ustawień regionalnych innych niż ustawienia regionalne języka C. W poniższym przykładzie pokazano, jak **_wcsicmp** jest wrażliwa na ustawienia regionalne:
+Musisz wywołać metodę [setlocaling](setlocale-wsetlocale.md) , aby **_wcsicmp** do pracy z znakami łacińskimi 1. Ustawienia regionalne języka C są stosowane domyślnie, więc na przykład ä nie będzie porównywane z Ä. Przed wywołaniem **_wcsicmp** należy wywołać metodę **setlocals** z uwzględnieniem ustawień regionalnych innych niż ustawienia regionalne języka C. W poniższym przykładzie pokazano, jak **_wcsicmp** jest wrażliwa na ustawienia regionalne:
 
 ```C
 // crt_stricmp_locale.c
@@ -183,9 +184,9 @@ Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_stricmp**, **_stricmp_l**|\<> String. h|
-|**_wcsicmp**, **_wcsicmp_l**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsicmp**, **_mbsicmp_l**|\<mbstring. h>|
+|**_stricmp**, **_stricmp_l**|\<string.h>|
+|**_wcsicmp**, **_wcsicmp_l**|\<string.h> lub \<wchar.h>|
+|**_mbsicmp**, **_mbsicmp_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -238,13 +239,13 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>

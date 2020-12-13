@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_tzname'
 title: _get_tzname
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b98a068d6f2d2643df43078c5a274fd761ac8e95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338949"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -77,17 +78,17 @@ O ile wartości nie są jawnie zmieniane w czasie wykonywania, wartości domyśl
 
 Zero, jeśli to się powiedzie, w przeciwnym razie wartość typu **errno** .
 
-Jeśli wartość *timeZoneName* ma **wartość null**lub *sizeInBytes* jest równa zero lub mniejsza od zera (ale nie obu), wywoływana jest procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
+Jeśli wartość *timeZoneName* ma **wartość null** lub *sizeInBytes* jest równa zero lub mniejsza od zera (ale nie obu), wywoływana jest procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
 |*pReturnValue*|*Strefa czasowa*|*sizeInBytes*|*indeks*|Wartość zwracana|Zawartość elementu *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
 |rozmiar nazwy programu $|**NULL**|0|0 lub 1|0|nie zmodyfikowano|
-|rozmiar nazwy programu $|ile|> 0|0 lub 1|0|Nazwa $|
-|nie zmodyfikowano|**NULL**|> 0|ile|**EINVAL**|nie zmodyfikowano|
-|nie zmodyfikowano|ile|zero|ile|**EINVAL**|nie zmodyfikowano|
-|nie zmodyfikowano|ile|> 0|> 1|**EINVAL**|nie zmodyfikowano|
+|rozmiar nazwy programu $|dowolny|> 0|0 lub 1|0|Nazwa $|
+|nie zmodyfikowano|**NULL**|> 0|dowolny|**EINVAL**|nie zmodyfikowano|
+|nie zmodyfikowano|dowolny|zero|dowolny|**EINVAL**|nie zmodyfikowano|
+|nie zmodyfikowano|dowolny|> 0|> 1|**EINVAL**|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -143,7 +144,7 @@ The current Daylight standard time zone name is PDT.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_tzname**|\<> godziny. h|
+|**_get_tzname**|\<time.h>|
 
 Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

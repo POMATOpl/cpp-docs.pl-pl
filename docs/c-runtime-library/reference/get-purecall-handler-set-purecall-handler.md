@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_purecall_handler, _set_purecall_handler'
 title: _get_purecall_handler, _set_purecall_handler
 ms.date: 11/04/2016
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7971847c4ce0861db272ea3c722666b0ba0318d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216950"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339016"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 

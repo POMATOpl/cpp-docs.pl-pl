@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _getc_nolock, _getwc_nolock'
 title: _getc_nolock, _getwc_nolock
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 26e72783e3188c663ab1e0b8f824a1da43fe3d16
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bd09abf0797a1a2c3590a89fcfcd313a443577d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338905"
 ---
 # <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
@@ -88,8 +89,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**getc_nolock**|\<stdio. h>|
-|**getwc_nolock**|\<stdio. h> lub \<WCHAR. h>|
+|**getc_nolock**|\<stdio.h>|
+|**getwc_nolock**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -129,7 +130,7 @@ int main()
 }
 ```
 
-### <a name="input-crt_getc_nolocktxt"></a>Dane wejściowe: crt_getc_nolock. txt
+### <a name="input-crt_getc_nolocktxt"></a>Dane wejściowe: crt_getc_nolock.txt
 
 ```Input
 Line the first.

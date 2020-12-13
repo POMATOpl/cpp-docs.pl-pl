@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy normal_distribution
 title: normal_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eb27debf104df3e33a324a0297624769af4860b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338142"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution — Klasa
 
@@ -81,7 +82,7 @@ Szablon klasy opisuje dystrybucję, która produkuje wartości typu całkowitego
 [normal_distribution](#normal_distribution)\
 [param_type](#param_type)
 
-Funkcje właściwości `mean()` i `stddev()` zwracają wartości odpowiednio dla przechowywanych parametrów dystrybucji i *StdDev* . *mean*
+Funkcje właściwości `mean()` i `stddev()` zwracają wartości odpowiednio dla przechowywanych parametrów dystrybucji i *StdDev* . 
 
 Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 

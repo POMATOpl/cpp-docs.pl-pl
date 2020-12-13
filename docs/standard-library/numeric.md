@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; liczbie&gt;'
 title: '&lt;przypada&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee1e26d3f174d21ab1ad2c847d292ad075cc0f71
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ff2a0ff2b765afbb60d117745976ad3919dd18f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338039"
 ---
 # <a name="ltnumericgt"></a>&lt;przypada&gt;
 
@@ -31,7 +32,7 @@ Algorytmy zwiększają działania, które są obsługiwane przez operacje i funk
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -43,7 +44,7 @@ Algorytmy zwiększają działania, które są obsługiwane przez operacje i funk
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Oblicza sumę wyników mnożenia elementów z dwóch zakresów i dodaje ją do określonej wartości początkowej lub oblicza wynik opis ogólnej procedury, gdzie operacje sumowania i mnożenia są zastępowane przez inne określone operacje binarne.|
 |[IOTA](../standard-library/numeric-functions.md#iota)|Przechowuje wartość początkową, zaczynając od pierwszego elementu i wypełniając kolejne przyrosty wartości ( `value++` ) w każdym z elementów w interwale `[first, last)` .|
 |[LCM](../standard-library/numeric-functions.md#lcm)||
-|[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Oblicza serię sum w zakresie wejściowym od pierwszego elementu za pośrednictwem *i i*zapisuje wynik każdej sumy w *i*-tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie operacja sum jest zastępowana przez inną określoną operację binarną.|
+|[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Oblicza serię sum w zakresie wejściowym od pierwszego elementu za pośrednictwem *i i* zapisuje wynik każdej sumy w *i*-tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie operacja sum jest zastępowana przez inną określoną operację binarną.|
 |[zmniejszenie](../standard-library/numeric-functions.md#reduce)||
 |[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
 |[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||

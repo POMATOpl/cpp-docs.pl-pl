@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury not_equal_to
 title: not_equal_to — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - not_equal_to function
 - not_equal_to struct
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
-ms.openlocfilehash: 5ee1ce120490b91a5f904109f49bf36d88e6261f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fabcfe2df6f0e4676d558eb9f7c47e1e9c356d62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338117"
 ---
-# <a name="notequalto-struct"></a>not_equal_to — Struktura
+# <a name="not_equal_to-struct"></a>not_equal_to — Struktura
 
-Predykat binarny, który wykonuje operacje nierówności (`operator!=`) na jego argumenty.
+Predykat binarny, który wykonuje operację nierówności ( `operator!=` ) dla jej argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,21 +41,21 @@ struct not_equal_to<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator!=` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Dowolny typ, który obsługuje element `operator!=` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-*po lewej stronie*\
-Lewy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand operacji nierówności. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand operacji nierówności. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left != Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator!=`.
+Wynik `Left != Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator!=` .
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty typu *typu* musi umożliwiać porównywanie równości. Takie rozwiązanie wymaga `operator!=` zdefiniowane na zestaw obiektów spełnia matematyczne właściwości relacji równoważności. Wszystkie wbudowane typy liczbowe i wskaźnik spełnienia tego wymagania.
+Obiekty *typu Type muszą być* porównywalne ze równośćmi. Wymaga to, aby `operator!=` zdefiniowane na zestawie obiektów spełniały właściwości matematyczne relacji równoważności. Wszystkie wbudowane typy liczbowe i wskaźniki spełniają to wymaganie.
 
 ## <a name="example"></a>Przykład
 

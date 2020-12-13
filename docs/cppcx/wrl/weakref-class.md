@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa WeakRef'
 title: WeakRef — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-ms.openlocfilehash: 715a823784aaa75f9abe349ef0a7ddc9e5d607d1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c1c3edf7589dfd08e0ebab5389d2ca108d8e73c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339413"
 ---
 # <a name="weakref-class"></a>WeakRef — Klasa
 
@@ -105,7 +106,7 @@ if (strongRef == nullptr)
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>WeakRef:: ~ WeakRef, destruktor
+## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a> WeakRef:: ~ WeakRef, destruktor
 
 Deinicjalizuje bieżące wystąpienie `WeakRef` klasy.
 
@@ -113,7 +114,7 @@ Deinicjalizuje bieżące wystąpienie `WeakRef` klasy.
 ~WeakRef();
 ```
 
-## <a name="weakrefas-method"></a><a name="as"></a>WeakRef:: as — Metoda
+## <a name="weakrefas-method"></a><a name="as"></a> WeakRef:: as — Metoda
 
 Ustawia określony `ComPtr` parametr wskaźnika reprezentujący określony interfejs.
 
@@ -151,9 +152,9 @@ Błąd jest emitowany, jeśli parametr *U* jest `IWeakReference` lub nie pochodz
 
 Pierwszy szablon jest formularzem, którego należy użyć w kodzie. Drugi szablon jest wewnętrzną specjalizacją pomocnika, która obsługuje funkcje języka [C++, takie](../../cpp/auto-cpp.md) jak słowo kluczowe potrącenie typu autoodejmowanie.
 
-Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawia `WeakRef` wystąpienia na Jeśli nie można **`nullptr`** uzyskać słabej referencji, dlatego należy unikać sprawdzania błędów kodu, który sprawdza, czy `WeakRef` **`nullptr`** . Zamiast tego zaznacz *ptr* pole PTR **`nullptr`** .
+Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawia `WeakRef` wystąpienia na Jeśli nie można **`nullptr`** uzyskać słabej referencji, dlatego należy unikać sprawdzania błędów kodu, który sprawdza, czy `WeakRef` **`nullptr`** . Zamiast tego zaznacz  pole PTR **`nullptr`** .
 
-## <a name="weakrefasiid-method"></a><a name="asiid"></a>WeakRef:: AsIID —, Metoda
+## <a name="weakrefasiid-method"></a><a name="asiid"></a> WeakRef:: AsIID —, Metoda
 
 Ustawia określony `ComPtr` parametr wskaźnika reprezentujący określony identyfikator interfejsu.
 
@@ -186,9 +187,9 @@ Błąd jest emitowany, jeśli parametr *riid* nie pochodzi od klasy `IInspectabl
 
 Pierwszy szablon jest formularzem, którego należy użyć w kodzie. Drugi szablon (niepokazywany w tym miejscu, ale zadeklarowany w pliku nagłówkowym) jest wewnętrzną specjalizacją pomocnika, która obsługuje funkcje języka C++, takie jak słowo kluczowe odejmowania [autotype.](../../cpp/auto-cpp.md)
 
-Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawia `WeakRef` wystąpienia na Jeśli nie można **`nullptr`** uzyskać słabej referencji, dlatego należy unikać sprawdzania błędów kodu, który sprawdza, czy `WeakRef` **`nullptr`** . Zamiast tego zaznacz *ptr* pole PTR **`nullptr`** .
+Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawia `WeakRef` wystąpienia na Jeśli nie można **`nullptr`** uzyskać słabej referencji, dlatego należy unikać sprawdzania błędów kodu, który sprawdza, czy `WeakRef` **`nullptr`** . Zamiast tego zaznacz  pole PTR **`nullptr`** .
 
-## <a name="weakrefcopyto-method"></a><a name="copyto"></a>WeakRef:: CopyTo, Metoda
+## <a name="weakrefcopyto-method"></a><a name="copyto"></a> WeakRef:: CopyTo, Metoda
 
 Przypisuje wskaźnik do interfejsu, jeśli jest dostępny, do określonej zmiennej wskaźnika.
 
@@ -227,7 +228,7 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT, która opi
 
 Wartość zwracana S_OK oznacza, że ta operacja zakończyła się powodzeniem, ale nie wskazuje, czy słabe odwołanie zostało rozpoznane jako silne odwołanie. Jeśli S_OK jest zwracana, należy sprawdzić, czy parametr *p* jest silną referencją; oznacza to, że parametr *p* nie jest równy **`nullptr`** .
 
-Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawia `WeakRef` wystąpienia na Jeśli nie można **`nullptr`** uzyskać słabej referencji, dlatego należy unikać błędów podczas sprawdzania kodu, który sprawdza, `WeakRef` czy **`nullptr`** . Zamiast tego zaznacz *ptr* pole PTR **`nullptr`** .
+Począwszy od zestawu SDK systemu Windows 10, ta metoda nie ustawia `WeakRef` wystąpienia na Jeśli nie można **`nullptr`** uzyskać słabej referencji, dlatego należy unikać błędów podczas sprawdzania kodu, który sprawdza, `WeakRef` czy **`nullptr`** . Zamiast tego zaznacz  pole PTR **`nullptr`** .
 
 ## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>Operator WeakRef:: operator &amp;
 
@@ -245,7 +246,7 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 
 Jest to wewnętrzny operator pomocnika, który nie jest przeznaczony do użycia w kodzie.
 
-## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>WeakRef:: WeakRef — Konstruktor
+## <a name="weakrefweakref-constructor"></a><a name="weakref"></a> WeakRef:: WeakRef — Konstruktor
 
 Inicjuje nowe wystąpienie klasy `WeakRef`.
 

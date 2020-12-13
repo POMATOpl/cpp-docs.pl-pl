@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_timezone'
 title: _get_timezone
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9fb42603d0b7d63cbbb18c4904c221cd2edeb0e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918496"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338969"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -69,7 +70,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_timezone**|\<> godziny. h|
+|**_get_timezone**|\<time.h>|
 
 Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

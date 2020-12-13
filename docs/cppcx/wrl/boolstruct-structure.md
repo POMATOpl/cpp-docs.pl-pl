@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze BoolStruct
 title: BoolStruct — Struktura
 ms.date: 09/21/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct structure
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
-ms.openlocfilehash: 4f2a5acf6edb824cff2121c1b6444181b5cfcf98
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0c30f554cf2f7ebc3bfaf825b43dc28329f697e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338799"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct — Struktura
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +29,7 @@ struct BoolStruct;
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura `BoolStruct` określa, czy `ComPtr` zarządza okresem istnienia obiektu interfejsu. `BoolStruct`jest używany wewnętrznie przez [boolType().](comptr-class.md#operator-microsoft-wrl-details-booltype)
+`BoolStruct`Struktura określa, czy `ComPtr` zarządza okresem istnienia obiektu w interfejsie. `BoolStruct` jest używany wewnętrznie przez operator [BoolType ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -36,7 +37,7 @@ Struktura `BoolStruct` określa, czy `ComPtr` zarządza okresem istnienia obiekt
 
 Nazwa                          | Opis
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------
-[BoolStruct::Element członkowski](#member) | Określa, że [program ComPtr](comptr-class.md) zarządza okresem istnienia obiektu interfejsu.
+[BoolStruct:: member](#member) | Określa, że [ComPtr](comptr-class.md) ma wartość, lub nie, zarządzanie okresem istnienia obiektu w interfejsie.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -44,13 +45,13 @@ Nazwa                          | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** internal.h
+**Nagłówek:** Internal. h
 
-**Obszar nazw:** Microsoft::WRL::Dszczegóły
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="boolstructmember"></a><a name="member"></a>BoolStruct::Element członkowski
+## <a name="boolstructmember"></a><a name="member"></a> BoolStruct:: member
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 int Member;
@@ -58,4 +59,4 @@ int Member;
 
 ### <a name="remarks"></a>Uwagi
 
-Określa, że [program ComPtr](comptr-class.md) zarządza okresem istnienia obiektu interfejsu.
+Określa, że [ComPtr](comptr-class.md) ma wartość, lub nie, zarządzanie okresem istnienia obiektu w interfejsie.

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: TLBID — atrybut importowania'
 title: TLBID — atrybut importowania
 ms.date: 08/29/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9bbf15f64c1813013fcd839a2d4f0a34c9872aff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339043"
 ---
 # <a name="tlbid-import-attribute"></a>TLBID — atrybut importowania
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Umożliwia ładowanie bibliotek poza podstawową biblioteką typów.
 
 ## <a name="syntax"></a>Składnia
 
-> **#import** *typ biblioteki DLL* **TLBID (** *Liczba* **)**
+> **#import** *Type-Library-dll* **TLBID (** *Liczba* **)**
 
 ### <a name="parameters"></a>Parametry
 
@@ -44,9 +45,9 @@ jest równoważne:
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import — dyrektywa](../preprocessor/hash-import-directive-cpp.md)

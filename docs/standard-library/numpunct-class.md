@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa numpunct'
 title: numpunct — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 602d8edef80f0e4d4abe4cb6773b774d174e1cbe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20ec48624734a533f81a1c3c7239eb0c05183de0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338019"
 ---
 # <a name="numpunct-class"></a>numpunct — Klasa
 
@@ -91,7 +92,7 @@ Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identy
 
 **Przestrzeń nazw:** std
 
-## <a name="numpunctchar_type"></a><a name="char_type"></a>numpunct:: char_type
+## <a name="numpunctchar_type"></a><a name="char_type"></a> numpunct:: char_type
 
 Typ opisujący znak używany przez ustawienie regionalne.
 
@@ -103,7 +104,7 @@ typedef CharType char_type;
 
 Typ jest synonimem dla parametru szablonu **CharType.**
 
-## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a>numpunct::d ecimal_point
+## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a> numpunct::d ecimal_point
 
 Zwraca element ustawień regionalnych używany jako separator dziesiętny.
 
@@ -146,7 +147,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a>numpunct::d o_decimal_point
+## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a> numpunct::d o_decimal_point
 
 Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia elementu specyficznego dla ustawień regionalnych używanego jako separator dziesiętny.
 
@@ -162,7 +163,7 @@ Element specyficzny dla ustawień regionalnych, który ma być używany jako pun
 
 Zobacz przykład dla [decimal_point](#decimal_point), gdzie wirtualna funkcja członkowska jest wywoływana przez `decimal_point` .
 
-## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a>numpunct::d o_falsename
+## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a> numpunct::d o_falsename
 
 Chroniona funkcja wirtualna elementu członkowskiego zwraca sekwencję, która ma być używana jako tekstowa reprezentacja wartości **`false`** .
 
@@ -182,7 +183,7 @@ Funkcja członkowska zwraca ciąg "false" reprezentujący wartość **`false`** 
 
 Zobacz przykład dla [falsename](#falsename), gdzie wirtualna funkcja członkowska jest wywoływana przez `falsename` .
 
-## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a>numpunct::d o_grouping
+## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a> numpunct::d o_grouping
 
 Chroniona funkcja wirtualna elementu członkowskiego, wywoływana w celu zwrócenia reguły specyficznej dla ustawień regionalnych, aby określić sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
 
@@ -202,7 +203,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwraca regułę specyficzn�
 
 Zobacz przykład [grupowania](#grouping), gdzie wirtualna funkcja członkowska jest wywoływana przez `grouping` .
 
-## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>numpunct::d o_thousands_sep
+## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a> numpunct::d o_thousands_sep
 
 Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia elementu specyficznego dla ustawień regionalnych używanego jako separator tysięczny.
 
@@ -222,7 +223,7 @@ Chroniona funkcja wirtualna elementu członkowskiego zwraca element specyficzny 
 
 Zobacz przykład dla [thousands_sep](#thousands_sep), gdzie wirtualna funkcja członkowska jest wywoływana przez `thousands_sep` .
 
-## <a name="numpunctdo_truename"></a><a name="do_truename"></a>numpunct::d o_truename
+## <a name="numpunctdo_truename"></a><a name="do_truename"></a> numpunct::d o_truename
 
 Chroniona funkcja wirtualna elementu członkowskiego, która jest wywoływana w celu zwrócenia ciągu do użycia jako tekstowa reprezentacja wartości **`true`** .
 
@@ -240,7 +241,7 @@ Wszystkie ustawienia regionalne zwracają ciąg "true", aby reprezentować warto
 
 Zobacz przykład dla [prawdyname](#truename), gdzie wirtualna funkcja członkowska jest wywoływana przez `truename` .
 
-## <a name="numpunctfalsename"></a><a name="falsename"></a>numpunct:: falsename
+## <a name="numpunctfalsename"></a><a name="falsename"></a> numpunct:: falsename
 
 Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **`false`** .
 
@@ -289,7 +290,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="numpunctgrouping"></a><a name="grouping"></a>numpunct:: Grouping
+## <a name="numpunctgrouping"></a><a name="grouping"></a> numpunct:: Grouping
 
 Zwraca regułę specyficzną dla ustawień regionalnych określającą sposób grupowania cyfr na lewo od każdego znaku dziesiętnego.
 
@@ -335,7 +336,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunctnumpunct"></a><a name="numpunct"></a>numpunct:: numpunct
+## <a name="numpunctnumpunct"></a><a name="numpunct"></a> numpunct:: numpunct
 
 Konstruktor dla obiektów typu `numpunct` .
 
@@ -356,13 +357,13 @@ Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
 
 - 1: okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \>1: te wartości nie są zdefiniowane.
+- \> 1: te wartości nie są zdefiniowane.
 
 Nie są możliwe żadne bezpośrednie przykłady, ponieważ destruktor jest chroniony.
 
 Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="numpunctstring_type"></a><a name="string_type"></a>numpunct:: string_type
+## <a name="numpunctstring_type"></a><a name="string_type"></a> numpunct:: string_type
 
 Typ, który opisuje ciąg zawierający znaki typu **CharType**.
 
@@ -374,7 +375,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/basic-string-class.md) którego obiekty mogą przechowywać kopie sekwencji interpunkcji.
 
-## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a>numpunct:: thousands_sep
+## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a> numpunct:: thousands_sep
 
 Zwraca element specyficzny dla ustawień regionalnych używany jako separator tysięczny.
 
@@ -417,7 +418,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="numpuncttruename"></a><a name="truename"></a>numpunct:: TrueName
+## <a name="numpuncttruename"></a><a name="truename"></a> numpunct:: TrueName
 
 Zwraca ciąg, który ma być używany jako tekstowa reprezentacja wartości **`true`** .
 

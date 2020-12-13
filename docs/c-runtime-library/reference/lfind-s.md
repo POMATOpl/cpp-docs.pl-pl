@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _lfind_s'
 title: _lfind_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 589a413c9f1fb49fbfe8cd1b5eacb9d452716523
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b495f8f6f6f39a07b6fa193ede45b5cb875528ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338865"
 ---
 # <a name="_lfind_s"></a>_lfind_s
 
@@ -67,7 +68,7 @@ Wskaźnik do podstawy wyszukiwania danych.
 *Liczba*<br/>
 Liczba elementów tablicy.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar elementów tablicy w bajtach.
 
 *porównaniu*<br/>
@@ -86,10 +87,10 @@ Jeśli do funkcji są przenoszone nieprawidłowe parametry, procedura obsługi n
 
 |key|base|compare|num|size|errno|
 |---------|----------|-------------|---------|----------|-----------|
-|**NULL**|ile|ile|ile|ile|**EINVAL**|
-|ile|**NULL**|ile|! = 0|ile|**EINVAL**|
-|ile|ile|ile|ile|zero|**EINVAL**|
-|ile|ile|**NULL**|an|ile|**EINVAL**|
+|**NULL**|dowolny|dowolny|dowolny|dowolny|**EINVAL**|
+|dowolny|**NULL**|dowolny|! = 0|dowolny|**EINVAL**|
+|dowolny|dowolny|dowolny|dowolny|zero|**EINVAL**|
+|dowolny|dowolny|**NULL**|an|dowolny|**EINVAL**|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -103,7 +104,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lfind_s**|\<Wyszukaj. h>|
+|**_lfind_s**|\<search.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -187,7 +188,7 @@ int main( )
 weit found
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

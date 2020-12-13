@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze CloakedIid —
 title: CloakedIid — Struktura
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06bddded27882ae1216064aafc311364a8d2fd9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338786"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid — Struktura
 
-Wskazuje `RuntimeClass`, `Implements` i `ChainInterfaces` szablonów, których określony interfejs nie jest dostępny na liście IID.
+Wskazuje `RuntimeClass` , `Implements` i szablony, `ChainInterfaces` których określony interfejs nie jest dostępny na liście IID.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,12 +28,12 @@ struct CloakedIid : T;
 
 #### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Interfejs, który jest ukryty (zamaskowany).
 
 ## <a name="remarks"></a>Uwagi
 
-Poniżej przedstawiono przykład sposobu użycia **CloakedIid —** : `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+Poniżej przedstawiono przykład użycia **CloakedIid —** : `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}` .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -48,4 +49,4 @@ Poniżej przedstawiono przykład sposobu użycia **CloakedIid —** : `struct My
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft:: WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
