@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: pola bitowe C++'
 title: Pola bitowe języka C++
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3cf1eb3e3beb0da69a4c148a48e7c68e23804d1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344591"
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C++
 
@@ -71,7 +72,7 @@ struct Date {
 następnie układ pamięci jest przedstawiony na poniższej ilustracji:
 
 ![Układ obiektu Date o zerowej długości&#45;polu bitowym](../cpp/media/vc38uq2.png "Układ obiektu Date o zerowej długości&#45;polu bitowym") <br/>
-Układ obiektu Date z polem bitowym o zerowej długości
+Układ obiektu Date z polem bitowym Zero-Length
 
 Typ podstawowy pola bitowego musi być typem całkowitym, zgodnie z opisem w [typach wbudowanych](../cpp/fundamental-types-cpp.md).
 
@@ -85,6 +86,6 @@ Poniższa lista zawiera błędne operacje dotyczące pól bitowych:
 
 - Inicjowanie odwołania niezwiązanego **`const`** z polem bitowym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

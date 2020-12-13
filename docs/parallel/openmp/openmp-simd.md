@@ -1,31 +1,32 @@
 ---
+description: Dowiedz się więcej o rozszerzeniu SIMD
 title: Rozszerzenie SIMD
 ms.date: 03/20/2019
 helpviewer_keywords:
 - SIMD
 - OpenMP in Visual C++, new features
 - explicit parallelization, new features
-ms.openlocfilehash: 0a7f1142a3a432628795341f4885b76a5c144990
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58a3f29002c4e517a2019454dfe741dfb5352a3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342429"
 ---
 # <a name="simd-extension"></a>Rozszerzenie SIMD
 
-Visual C++ obsługuje obecnie standard OpenMP 2.0, jednak visual studio 2019 oferuje teraz również funkcje SIMD.
+Visual C++ obsługuje obecnie standard OpenMP 2,0, jednak program Visual Studio 2019 oferuje również funkcje SIMD.
 
 > [!NOTE]
-> Aby użyć karty SIMD, `-openmp:experimental` skompiluj za pomocą przełącznika, który włącza dodatkowe funkcje OpenMP niedostępne podczas korzystania z przełącznika. `-openmp`
+> Aby użyć SIMD, skompiluj z `-openmp:experimental` przełącznikiem, który umożliwia dodatkowe funkcje OpenMP niedostępne podczas korzystania z `-openmp` przełącznika.
 >
-> `-openmp:experimental` Podporządkowanie `-openmp`przełącznika, co oznacza, że wszystkie funkcje OpenMP 2.0 są uwzględnione w jego użyciu.
+> `-openmp:experimental`Przełącznik subsumes `-openmp` , co oznacza, że wszystkie funkcje OpenMP 2,0 są uwzględniane w jego użyciu.
 
-Aby uzyskać więcej informacji, zobacz [Rozszerzenie SIMD do programu OpenMP języka C++ w programie Visual Studio](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
+Aby uzyskać więcej informacji, zobacz [SIMD Extension to C++ OpenMP w programie Visual Studio](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
 
-## <a name="openmp-simd-in-visual-c"></a>OpenMP SIMD w programie Visual C++
+## <a name="openmp-simd-in-visual-c"></a>SIMD OpenMP w Visual C++
 
-OpenMP SIMD, wprowadzony w standardzie OpenMP 4.0, jest przeznaczony do tworzenia pętli przyjaznych dla wektorów. Za pomocą `simd` dyrektywy przed pętli kompilator można zignorować zależności wektora, aby pętla jako przyjazne dla wektora, jak to możliwe i szanować intencji użytkowników, aby mieć wiele iteracji pętli wykonywane jednocześnie.
+OpenMP SIMD, wprowadzony w standardzie OpenMP 4,0, obiekty docelowe w celu wykonywania pętli przyjaznych dla wektorów. Za pomocą `simd` dyrektywy przed pętlą, kompilator może ignorować zależności wektorów, uczynić pętlę możliwą jako możliwą do wektora, a w związku z tym zamiarem, aby użytkownicy musieli mieć wiele iteracji pętli jednocześnie.
 
 ```c
     #pragma omp simd
@@ -37,15 +38,15 @@ OpenMP SIMD, wprowadzony w standardzie OpenMP 4.0, jest przeznaczony do tworzeni
     }
 ```
 
-Visual C++ zapewnia podobne pragmy pętli `#pragma vector` `#pragma ivdep`non-OpenMP, takie jak i , jednak z OpenMP SIMD, kompilator może zrobić więcej, jak:
+Visual C++ oferuje podobne dyrektywy pragma pętli non-OpenMP, podobnie jak `#pragma vector` i `#pragma ivdep` , ale z SIMD OpenMP, kompilator może wykonywać więcej czynności, takich jak:
 
-- Zawsze wolno ignorować obecne zależności wektora.
-- `/fp:fast`jest włączona w pętli.
-- Zewnętrzne pętle i pętle z wywołaniami funkcji są przyjazne dla wektora.
-- Zagnieżdżone pętle mogą być zleczone w jedną pętlę i przyjazne dla wektora.
-- Przyspieszenie hybrydowe w `#pragma omp for simd` celu umożliwienia gruboziarnistych wektorów wielowątkowych i drobnoziarnistych.  
+- Zawsze można zignorować obecne zależności wektora.
+- `/fp:fast` jest włączona w pętli.
+- Pętle zewnętrzne i pętle z wywołaniami funkcji są przyjazne dla wektora.
+- Zagnieżdżone pętle mogą być połączone w jedną pętlę i są przyjazne dla wektorów.
+- Przyspieszenie hybrydowe z `#pragma omp for simd` programem, aby umożliwić duże i wielowartościowe wektory wielowątkowe i szczegółowe.  
 
-W przypadku pętli przyjaznych dla wektora kompilator pozostaje cichy, chyba że używasz przełącznika dziennika obsługi wektorowej:
+W przypadku pętli przyjaznych dla wektorów kompilator pozostanie dyskretny, chyba że jest używany przełącznik dziennika obsługi wektora:
 
 ```cmd
     cl -O2 -openmp:experimental -Qvec-report:2 mycode.cpp
@@ -57,7 +58,7 @@ W przypadku pętli przyjaznych dla wektora kompilator pozostaje cichy, chyba że
     mycode.cpp(96) : info C5001: Omp simd loop vectorized
 ```
 
-W przypadku pętli nieprzychylonych kompilator wydaje każdy komunikat:
+W przypadku pętli nieprzyjaznych dla wektorów kompilator emituje każdy komunikat:
 
 ```cmd
     cl -O2 -openmp:experimental mycode.cpp
@@ -70,23 +71,23 @@ W przypadku pętli nieprzychylonych kompilator wydaje każdy komunikat:
 
 ### <a name="clauses"></a>Klauzule
 
-Dyrektywa OpenMP SIMD może również przyjąć następujące klauzule w celu zwiększenia obsługi wektorowej:
+Dyrektywa SIMD OpenMP może również przyjąć następujące klauzule w celu zwiększenia obsługi wektorów:
 
-|Dyrektywy|Opis|
+|Dyrektywę|Opis|
 |---|---|
-|`simdlen(length)`|Określ liczbę pasów wektorowych.|
-|`safelen(length)`|Określ odległość zależności wektorowej.|
-|`linear(list[ : linear-step]`)|Mapowanie liniowe od zmiennej indukcyjnej pętli do subskrypcji tablicy.|
+|`simdlen(length)`|Określ liczbę torów wektorowych.|
+|`safelen(length)`|Określ odległość zależności wektora.|
+|`linear(list[ : linear-step]`)|Liniowe mapowanie od zmiennej indukcji pętli na subskrypcję tablicy.|
 |`aligned(list[ : alignment])`|Wyrównanie danych.|
-|`private(list)`|Określ prywatyzację danych.|
-|`lastprivate(list)`|Określ prywatyzację danych z wartością końcową z ostatniej iteracji.|
-|`reduction(reduction-identifier:list)`|Określ dostosowane operacje redukcji.|
-|`collapse(n)`|Scalanie gniazda pętli.|
+|`private(list)`|Określ prywatyzacji danych.|
+|`lastprivate(list)`|Określ prywatyzacji danych z ostateczną wartością z ostatniej iteracji.|
+|`reduction(reduction-identifier:list)`|Określ dostosowane operacje zmniejszania.|
+|`collapse(n)`|Pętla pętli łączenia.|
 
 > [!NOTE]
 > Nieefektywne klauzule SIMD są analizowane i ignorowane przez kompilator z ostrzeżeniem.
 >
-> Na przykład użycie następującego kodu wydaje ostrzeżenie:
+> Na przykład w poniższym kodzie przedstawiono Ostrzeżenie:
 >
 > ```c
 >    #pragma omp simd simdlen(8)
@@ -104,9 +105,9 @@ Dyrektywa OpenMP SIMD może również przyjąć następujące klauzule w celu zw
 
 ### <a name="example"></a>Przykład
   
-Dyrektywa OpenMP SIMD zapewnia użytkownikom sposób dyktowania kompilatora pętli wektora przyjazne. Dzięki adnotacji pętli z dyrektywą OpenMP SIMD użytkownicy zamierzają mieć wiele iteracji pętli wykonywanych jednocześnie.
+Dyrektywa OpenMP SIMD zapewnia użytkownikom sposób na dyktowanie kompilatora, który jest przyjazny dla wektorów. Dodając adnotację do pętli z dyrektywą SIMD OpenMP, użytkownicy mogą wykonywać wiele iteracji pętli jednocześnie.
 
-Na przykład następująca pętla jest adnotacjami z dyrektywą OpenMP SIMD. Nie ma idealnego równoległości między iteracjami pętli, ponieważ istnieje zależność wsteczna od [i] do[i-1], ale ze względu na dyrektywę SIMD kompilator nadal może pakować kolejne iteracje pierwszej instrukcji do jednej instrukcji wektorowej i uruchamiać je równolegle.
+Na przykład następująca pętla jest oznaczona adnotacją z dyrektywą OpenMP SIMD. Nie istnieje idealny równoległość między iteracjami pętli, ponieważ istnieje zależność wstecz od [i] do [i-1], ale ze względu na dyrektywę SIMD, kompilator nadal może spakować kolejne iteracje pierwszej instrukcji w jednej instrukcji wektorowej i uruchamiać je równolegle.
 
 ```c
     #pragma omp simd
@@ -118,7 +119,7 @@ Na przykład następująca pętla jest adnotacjami z dyrektywą OpenMP SIMD. Nie
     }
 ```
 
-W związku z tym następujące przekształcone wektorformy pętli jest **legalne,** ponieważ kompilator zachowuje sekwencyjne zachowanie każdej oryginalnej iteracji pętli. Innymi słowy, `a[i]` jest `a[-1]`wykonywany `b[i]` po `a[i]` , jest `bar` po i wywołanie dzieje się ostatnio.
+W związku z tym następująca przekształcona Forma wektorowa pętli jest **dozwolona** , ponieważ kompilator utrzymuje sekwencyjne zachowanie każdej iteracji pętli oryginalnej. Innymi słowy, jest `a[i]` wykonywane po `a[-1]` , `b[i]` jest po `a[i]` i wywołanie `bar` .
 
 ```c
     for (i = 0; i < count; i+=4)
@@ -132,7 +133,7 @@ W związku z tym następujące przekształcone wektorformy pętli jest **legalne
     }
 ```
 
-Nie jest **legalne,** aby `*c` przenieść odwołanie do pamięci z `a[i]` `b[i]`pętli, jeśli może alias z lub . Nie jest również legalne, aby zamieścić kolejność instrukcji wewnątrz jednej oryginalnej iteracji, jeśli przerywa zależność sekwencyjną. Na przykład następująca przekształcona pętla nie jest legalna:
+**Nie** można przenieść odwołania do pamięci z `*c` pętli, jeśli może ona być aliasem `a[i]` lub `b[i]` . Zmiana kolejności instrukcji wewnątrz jednej oryginalnej iteracji jest również niedozwolona, jeśli spowoduje ona przerwanie współzależności sekwencyjnej. Na przykład następująca przekształcona pętla nie jest dozwolona:
 
 ```c
     c = b;
@@ -150,4 +151,4 @@ Nie jest **legalne,** aby `*c` przenieść odwołanie do pamięci z `a[i]` `b[i]
 
 ## <a name="see-also"></a>Zobacz też
 
-[/openmp (Włącz obsługę OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
+[/OpenMP (Włącz obsługę OpenMP 2,0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>

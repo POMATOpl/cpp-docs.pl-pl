@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd kompilacji projektu PRJ0006'
 title: Błąd PRJ0006 kompilacji projektu
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-ms.openlocfilehash: 816355276a203adba1401841ce02eb94a18085b6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a78646c843a6c6df3b4e2847076670492a9efb6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80192786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343928"
 ---
 # <a name="project-build-error-prj0006"></a>Błąd PRJ0006 kompilacji projektu
 
 Nie można otworzyć pliku tymczasowego "File". Upewnij się, że plik istnieje i że katalog nie jest chroniony przed zapisem.
 
-Wizualizacja C++ nie może utworzyć pliku tymczasowego podczas procesu kompilacji. Przyczyny są między innymi następujące:
+Visual C++ nie mógł utworzyć pliku tymczasowego podczas procesu kompilacji. Przyczyny tego zastosowania:
 
 - Brak katalogu tymczasowego.
 

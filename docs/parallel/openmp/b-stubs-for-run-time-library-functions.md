@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej o: B. wycinki dla funkcji biblioteki wykonawczej'
 title: B. Klasy zastępcze dla funkcji bibliotek środowiska uruchomieniowego
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6ccb4e03d9fc74eede80f035090a814d7669918
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342520"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Klasy zastępcze dla funkcji bibliotek środowiska uruchomieniowego
 
-Ta sekcja zawiera procedury pośredniczące dla funkcji biblioteki wykonawczej zdefiniowanych w interfejsie API OpenMP C++ i. Są udostępniane oddziały, które umożliwiają przenośność na platformach, które nie obsługują interfejsu C++ API OpenMP i. Na tych platformach programy OpenMP muszą być połączone z biblioteką zawierającą te funkcje zastępcze. W funkcjach zastępczych przyjęto założenie, że dyrektywy w programie OpenMP są ignorowane. W związku z tym emulują semantykę seryjną.
+Ta sekcja zawiera procedury pośredniczące dla funkcji biblioteki wykonawczej zdefiniowanych w interfejsie API OpenMP C i C++. Są udostępniane oddziały, które umożliwiają przenośność na platformach, które nie obsługują interfejsu API OpenMP C i C++. Na tych platformach programy OpenMP muszą być połączone z biblioteką zawierającą te funkcje zastępcze. W funkcjach zastępczych przyjęto założenie, że dyrektywy w programie OpenMP są ignorowane. W związku z tym emulują semantykę seryjną.
 
 > [!NOTE]
-> Zmienna Lock, która pojawia się w funkcjach blokowania, musi być dostępna wyłącznie za pomocą tych funkcji. Nie należy go inicjować ani modyfikować w inny sposób w programie użytkownika. Użytkownicy nie powinni wprowadzać założeń dotyczących mechanizmów używanych przez OpenMP C i C++ implementacje do implementowania blokad w oparciu o schemat używany przez funkcje zastępcze.
+> Zmienna Lock, która pojawia się w funkcjach blokowania, musi być dostępna wyłącznie za pomocą tych funkcji. Nie należy go inicjować ani modyfikować w inny sposób w programie użytkownika. Użytkownicy nie powinni wprowadzać założeń dotyczących mechanizmów używanych przez implementacje OpenMP C i C++ do implementowania blokad w oparciu o schemat używany przez funkcje szczątkowe.
 
 ## <a name="code"></a>Kod
 

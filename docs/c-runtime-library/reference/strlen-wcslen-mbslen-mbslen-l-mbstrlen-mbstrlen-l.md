@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen _mbstrlen_l'
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 ms.date: 4/2/2020
 api_name:
@@ -57,19 +58,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4dc50decb3c7c72aaa89b729b30d4581d32164c9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 54001a90003ff3a6931f43687fc08366607caf2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344838"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Pobiera długość ciągu przy użyciu bieżących ustawień regionalnych lub określonych ustawień regionalnych. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**i **_mbstrlen_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen** i **_mbstrlen_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -106,7 +107,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca liczbę znaków w *str*, z wyłączeniem terminalu o wartości null. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu, z wyjątkiem **_mbstrlen** i **_mbstrlen_l**, które `((size_t)(-1))` zwracają, jeśli ciąg zawiera nieprawidłowy znak wielobajtowy.
+Każda z tych funkcji zwraca liczbę znaków w *str*, z wyłączeniem terminalu o wartości null. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu, z wyjątkiem **_mbstrlen** i **_mbstrlen_l**, które zwracają, `((size_t)(-1))` Jeśli ciąg zawiera nieprawidłowy znak wielobajtowy.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -132,10 +133,10 @@ Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strlen**|\<> String. h|
-|**wcslen**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbslen**, **_mbslen_l**|\<mbstring. h>|
-|**_mbstrlen**, **_mbstrlen_l**|\<STDLIB. h>|
+|**strlen**|\<string.h>|
+|**wcslen**|\<string.h> lub \<wchar.h>|
+|**_mbslen**, **_mbslen_l**|\<mbstring.h>|
+|**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -202,15 +203,15 @@ Length of 'ABCァD' : 5
 Bytes in 'ABCァD' : 6
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

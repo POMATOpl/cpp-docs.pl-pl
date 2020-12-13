@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l'
 title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 4/2/2020
 api_name:
@@ -67,12 +68,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: 9ba2570ff02cf11cb5822666b5569fa88caf76b9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7d0d103185494d26890fc62061ebd16c168fc477
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344812"
 ---
 # <a name="_strlwr-_wcslwr-_mbslwr-_strlwr_l-_wcslwr_l-_mbslwr_l"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
@@ -169,9 +170,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strlwr**, **_strlwr_l**|\<> String. h|
-|**_wcslwr**, **_wcslwr_l**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbslwr**, **_mbslwr_l**|\<mbstring. h>|
+|**_strlwr**, **_strlwr_l**|\<string.h>|
+|**_wcslwr**, **_wcslwr_l**|\<string.h> lub \<wchar.h>|
+|**_mbslwr**, **_mbslwr_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -211,7 +212,7 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>

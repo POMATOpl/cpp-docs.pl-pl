@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wykres hierarchii'
 title: Diagram hierarchii
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: f49580610b247605f1c3ca030c0927acab29db89
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc30996b6813b07c503e79a59c803b5878aa2952
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343644"
 ---
 # <a name="hierarchy-chart"></a>Diagram hierarchii
 
@@ -31,5 +32,5 @@ Kompletny wykres można pobrać z następującej lokalizacji: [pobieranie wykres
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kategorie diagramów hierarchii](hierarchy-chart-categories.md)<br/>
+[Kategorie wykresów hierarchii](hierarchy-chart-categories.md)<br/>
 [Przegląd klas](class-library-overview.md)

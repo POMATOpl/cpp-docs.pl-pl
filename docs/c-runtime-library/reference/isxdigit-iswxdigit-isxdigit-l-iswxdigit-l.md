@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l'
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 3aefa39d9fabb2b8a3124955f3ab0787e9e174f3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 87e9e8d07f9a0da38bc6590f27fcb770fc2b789b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344851"
 ---
 # <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -103,10 +104,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isxdigit**|\<CType. h>|
-|**iswxdigit**|\<CType. h> lub \<WCHAR. h>|
-|**_isxdigit_l**|\<CType. h>|
-|**_iswxdigit_l**|\<CType. h> lub \<WCHAR. h>|
+|**isxdigit**|\<ctype.h>|
+|**iswxdigit**|\<ctype.h> lub \<wchar.h>|
+|**_isxdigit_l**|\<ctype.h>|
+|**_iswxdigit_l**|\<ctype.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -114,4 +115,4 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

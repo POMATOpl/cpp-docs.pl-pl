@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CSharedFile'
 title: Klasa CSharedFile
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: c715ca1b8a2b647f89ada008f3c6606ca5e58783
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0eb2f76bdfa9e10c660f405e225698289b506014
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342834"
 ---
 # <a name="csharedfile-class"></a>Klasa CSharedFile
 
-[CMemFile](../../mfc/reference/cmemfile-class.md)-pochodna klasy, która obsługuje pliki pamięci współużytkowanej.
+Klasa pochodna [CMemFile](../../mfc/reference/cmemfile-class.md), która obsługuje pliki pamięci współdzielonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,40 +42,40 @@ class CSharedFile : public CMemFile
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSharedFile::Detach](#detach)|Zamyka plik pamięci współużytkowanej i zwraca dojście jego bloku pamięci.|
-|[CSharedFile::SetHandle](#sethandle)|Dołącza plik pamięci współużytkowanej do bloku pamięci.|
+|[CSharedFile::D etach](#detach)|Zamyka plik pamięci współużytkowanej i zwraca uchwyt jego bloku pamięci.|
+|[CSharedFile:: SetHandle](#sethandle)|Dołącza plik pamięci współdzielonej do bloku pamięci.|
 
 ## <a name="remarks"></a>Uwagi
 
-Pliki pamięci zachowują się jak pliki dysków. Różnica polega na tym, że plik pamięci jest przechowywany w pamięci RAM, a nie na dysku. Plik pamięci jest przydatny do szybkiego przechowywania tymczasowego lub do przesyłania nieprzetworzonych bajtów lub szeregowanych obiektów między niezależnymi procesami.
+Pliki pamięci zachowują się jak pliki dysków. Różnica polega na tym, że plik pamięci jest przechowywany w pamięci RAM, a nie na dysku. Plik pamięci jest przydatny do szybkiego magazynu tymczasowego lub do przesyłania nieprzetworzonych bajtów lub serializowanych obiektów między procesami niezależnymi.
 
-Udostępnione pliki pamięci różnią się od innych plików pamięci w tej pamięci dla nich jest przydzielany z funkcji [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows. Klasa `CSharedFile` przechowuje dane w globalnie przydzielonym bloku pamięci (utworzonym przy użyciu), `GlobalAlloc`a ten blok pamięci może być współużytkowany przy użyciu DDE, Schowka lub innych jednolitych operacji transferu danych OLE/COM, na przykład za pomocą `IDataObject`.
+Pliki pamięci współdzielonej różnią się od innych plików pamięci w tej pamięci do przydzielenia przy użyciu funkcji [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) systemu Windows. `CSharedFile`Klasa przechowuje dane w globalnie przydzielonym bloku pamięci (utworzonym za pomocą `GlobalAlloc` ), a ten blok pamięci może być współużytkowany przy użyciu DDE, Schowka lub innych operacji jednolitego transferu danych OLE/com, na przykład przy użyciu `IDataObject` .
 
-`GlobalAlloc`zwraca uchwyt HGLOBAL, a nie wskaźnik do pamięci, takich jak wskaźnik zwrócony przez [malloc](../../c-runtime-library/reference/malloc.md). Uchwyt HGLOBAL jest potrzebny w niektórych zastosowaniach. Na przykład, aby umieścić dane w Schowku, potrzebujesz uchwytu HGLOBAL.
+`GlobalAlloc` Zwraca uchwyt HGLOBAL, a nie wskaźnik do pamięci, taki jak wskaźnik zwrócony przez [malloc](../../c-runtime-library/reference/malloc.md). W niektórych aplikacjach jest wymagany uchwyt HGLOBAL. Na przykład, aby umieścić dane w schowku, potrzebujesz uchwytu HGLOBAL.
 
-`CSharedFile`nie używa plików mapowanych w pamięci, a dane nie mogą być bezpośrednio współużytkowane między procesami.
+`CSharedFile` nie używa plików mapowanych w pamięci, a dane nie mogą być bezpośrednio udostępniane między procesami.
 
-`CSharedFile`obiekty mogą automatycznie przydzielać własną pamięć. Można też dołączyć własny blok pamięci `CSharedFile` do obiektu, wywołując [CSharedFile::SetHandle](#sethandle). W obu przypadkach pamięć do powiększania pliku pamięci `nGrowBytes`jest przydzielana `nGrowBytes` w przyrostach o rozmiarze, jeśli nie jest zero.
+`CSharedFile` obiekty mogą automatycznie przydzielać własne pamięci. Lub można dołączyć własny blok pamięci do `CSharedFile` obiektu przez wywołanie [CSharedFile:: SetHandle](#sethandle). W obu przypadkach pamięć służąca do zwiększania rozmiaru pliku pamięci jest automatycznie alokowana, `nGrowBytes` Jeśli `nGrowBytes` nie jest równa zero.
 
-Aby uzyskać więcej informacji, zobacz artykuł [Pliki w MFC](../../mfc/files-in-mfc.md) i [Obsługa plików](../../c-runtime-library/file-handling.md) w *odwołaniu do biblioteki w czasie wykonywania*.
+Aby uzyskać więcej informacji, zobacz [pliki artykułów w MFC](../../mfc/files-in-mfc.md) i [Obsługa plików](../../c-runtime-library/file-handling.md) w *dokumentacji dotyczącej biblioteki wykonawczej*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Cmemfile](../../mfc/reference/cmemfile-class.md)
+[CMemFile](../../mfc/reference/cmemfile-class.md)
 
 `CSharedFile`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxadv.h
+**Nagłówek:** afxadv. h
 
-## <a name="csharedfilecsharedfile"></a><a name="csharedfile"></a>CSharedFile::CSharedFile
+## <a name="csharedfilecsharedfile"></a><a name="csharedfile"></a> CSharedFile::CSharedFile
 
-Konstruuje `CSharedFile` obiekt i przydziela dla niego pamięć.
+Konstruuje `CSharedFile` obiekt i przydziela do niego pamięć.
 
 ```
 CSharedFile(
@@ -85,14 +86,14 @@ CSharedFile(
 ### <a name="parameters"></a>Parametry
 
 *nAllocFlags*<br/>
-Flagi wskazujące sposób przydzielania pamięci. Zobacz [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) listę prawidłowych wartości flag.
+Flagi wskazujące sposób przydzielenia pamięci. Zobacz [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) , aby uzyskać listę prawidłowych wartości flag.
 
-*nGrowBytes ( nGrowBytes )*<br/>
+*nGrowBytes*<br/>
 Przyrost alokacji pamięci w bajtach.
 
-## <a name="csharedfiledetach"></a><a name="detach"></a>CSharedFile::Detach
+## <a name="csharedfiledetach"></a><a name="detach"></a> CSharedFile::D etach
 
-Wywołanie tej funkcji, aby zamknąć plik pamięci i odłączyć go od bloku pamięci.
+Wywołaj tę funkcję, aby zamknąć plik pamięci i odłączyć go od bloku pamięci.
 
 ```
 HGLOBAL Detach();
@@ -100,15 +101,15 @@ HGLOBAL Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście bloku pamięci zawierającego zawartość pliku pamięci.
+Uchwyt bloku pamięci, który zawiera zawartość pliku pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Można go ponownie otworzyć, wywołując [SetHandle](#sethandle), używając uchwytu zwróconego przez **Detach**.
+Możesz otworzyć go ponownie, wywołując metodę [SetHandle](#sethandle)przy użyciu dojścia zwróconego przez **Odłącz**.
 
-## <a name="csharedfilesethandle"></a><a name="sethandle"></a>CSharedFile::SetHandle
+## <a name="csharedfilesethandle"></a><a name="sethandle"></a> CSharedFile:: SetHandle
 
-Wywołanie tej funkcji, aby dołączyć `CSharedFile` blok pamięci globalnej do obiektu.
+Wywołaj tę funkcję, aby dołączyć blok pamięci globalnej do `CSharedFile` obiektu.
 
 ```cpp
 void SetHandle(
@@ -119,14 +120,14 @@ void SetHandle(
 ### <a name="parameters"></a>Parametry
 
 *hGlobalMemory*<br/>
-Uchwyt do pamięci globalnej, który `CSharedFile`ma być dołączony do pliku .
+Dojście do pamięci globalnej, która ma zostać dołączona do programu `CSharedFile` .
 
-*bAllowGrow (Niewola)*<br/>
-Określa, czy blok pamięci może rosnąć.
+*bAllowGrow*<br/>
+Określa, czy blok pamięci może zostać powiększony.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bAllowGrow* jest niezerowy, rozmiar bloku pamięci jest zwiększany w razie potrzeby, na przykład, jeśli spróbujesz zapisać więcej bajtów do pliku niż rozmiar bloku pamięci.
+Jeśli *bAllowGrow* ma wartość różną od zera, rozmiar bloku pamięci jest zwiększany w miarę potrzeb, na przykład w przypadku próby zapisania większej liczby bajtów do pliku niż rozmiar bloku pamięci.
 
 ## <a name="see-also"></a>Zobacz też
 

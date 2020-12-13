@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Ostrzeżenie kompilatora C4430'
 title: Ostrzeżenie kompilatora C4430
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
-ms.openlocfilehash: 091d988a5af277e78a2954eb5b0b95bc64c56069
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: af214bb0e9d373ee319008f509ba78f5d7ade38b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344305"
 ---
 # <a name="compiler-warning-c4430"></a>Ostrzeżenie kompilatora C4430
 
@@ -19,7 +20,7 @@ brak specyfikatora typu — zakładany int. Uwaga: C++ nie obsługuje funkcji de
 
 Ten błąd może być wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: wszystkie deklaracje muszą jawnie określać typ; wartość int nie jest już założono.
 
-C4430 jest zawsze wystawiony jako błąd.  To ostrzeżenie można wyłączyć za pomocą `#pragma warning` lub **/WD**; Aby uzyskać więcej informacji, zobacz [Ostrzeżenie](../../preprocessor/warning.md) lub [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżenia)](../../build/reference/compiler-option-warning-level.md) .
+C4430 jest zawsze wystawiony jako błąd.  Możesz wyłączyć to ostrzeżenie przy użyciu `#pragma warning` lub **/WD**; zobacz [Ostrzeżenie](../../preprocessor/warning.md) , [/W,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżenia)](../../build/reference/compiler-option-warning-level.md) , aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

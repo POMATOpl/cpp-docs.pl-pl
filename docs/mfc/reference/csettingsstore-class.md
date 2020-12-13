@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CSettingsStore'
 title: Klasa CSettingsStore
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: b1acf959c371aa23ac55ace7fea9466f0e20813f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a1e2e52c59c4c7cf6139e1215c901a49095616b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342894"
 ---
 # <a name="csettingsstore-class"></a>Klasa CSettingsStore
 
-Zawija funkcje interfejsu API systemu Windows, zapewniając interfejs obiektowy używany do uzyskiwania dostępu do rejestru.
+Zawija funkcje interfejsu API systemu Windows, zapewniając interfejs zorientowany na obiekt, który służy do uzyskiwania dostępu do rejestru.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,35 +52,35 @@ class CSettingsStore : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSettingsStore::Zamknij](#close)|Zamyka otwarty klucz rejestru.|
-|[CSettingsStore::CreateKey](#createkey)|Otwiera określony klucz lub tworzy go, jeśli nie istnieje.|
-|[CSettingsStore::DeleteKey](#deletekey)|Usuwa określony klucz i wszystkie jego wiązki obrażeń.|
-|[CSettingsStore::DeleteValue](#deletevalue)|Usuwa określoną wartość otwartego klucza.|
-|[CSettingsStore::Otwórz](#open)|Otwiera określony klucz.|
-|[CSettingsStore::Czytaj](#read)|Pobiera dane dla określonej wartości klucza.|
-|[CSettingsStore::Napisz](#write)|Zapisuje wartość do rejestru pod kluczem otwartym.|
+|[CSettingsStore:: Close](#close)|Zamyka otwarty klucz rejestru.|
+|[CSettingsStore:: CreateKey](#createkey)|Otwiera określony klucz lub tworzy go, jeśli nie istnieje.|
+|[CSettingsStore::D eleteKey](#deletekey)|Usuwa określony klucz i wszystkie jego elementy podrzędne.|
+|[CSettingsStore::D eleteValue](#deletevalue)|Usuwa określoną wartość otwartego klucza.|
+|[CSettingsStore:: Open](#open)|Otwiera określony klucz.|
+|[CSettingsStore:: Read](#read)|Pobiera dane dla określonej wartości klucza.|
+|[CSettingsStore:: Write](#write)|Zapisuje wartość w rejestrze w kluczu otwartym.|
 
 ## <a name="remarks"></a>Uwagi
 
-Element członkowski działa `CreateKey` i `Open` są bardzo podobne. Jeśli klucz rejestru już `CreateKey` istnieje `Open` i działa w ten sam sposób. Jednak jeśli klucz rejestru nie `CreateKey` istnieje, utworzy `Open` go, podczas gdy zwróci wartość błędu.
+Funkcje członkowskie `CreateKey` i `Open` są bardzo podobne. Jeśli klucz rejestru już istnieje `CreateKey` i `Open` działa w ten sam sposób. Jeśli jednak klucz rejestru nie istnieje, `CreateKey` program utworzy go, a następnie `Open` zwróci wartość błędu.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak używać `CSettingsStore` Open i Read metody klasy. Ten fragment kodu jest częścią [przykładu Demo etykietki narzędzia](../../overview/visual-cpp-samples.md).
+Poniższy przykład ilustruje sposób używania metod otwierania i odczytywania `CSettingsStore` klasy. Ten fragment kodu jest częścią [przykładu pokazu etykietki narzędzia](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CSettingsStore`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxsettingsstore.h
+**Nagłówek:** afxsettingsstore. h
 
-## <a name="csettingsstoreclose"></a><a name="close"></a>CSettingsStore::Zamknij
+## <a name="csettingsstoreclose"></a><a name="close"></a> CSettingsStore:: Close
 
 Zamyka otwarty klucz rejestru.
 
@@ -89,9 +90,9 @@ virtual void Close();
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda jest wywoływana z destruktora [CSettingsStore Klasy](../../mfc/reference/csettingsstore-class.md).
+Domyślnie ta metoda jest wywoływana z destruktora [klasy CSettingsStore](../../mfc/reference/csettingsstore-class.md).
 
-## <a name="csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore::CreateKey
+## <a name="csettingsstorecreatekey"></a><a name="createkey"></a> CSettingsStore:: CreateKey
 
 Otwiera klucz rejestru lub tworzy go, jeśli nie istnieje.
 
@@ -101,18 +102,18 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 
 ### <a name="parameters"></a>Parametry
 
-*PSZPath*<br/>
-[w] Określa nazwę klucza, który ma zostać utworzony lub otwarty.
+*pszPath*<br/>
+podczas Określa nazwę klucza, który ma zostać utworzony lub otwarty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-0 w przypadku powodzenia; w przeciwnym razie wartość niezerowa.
+0, jeśli pomyślne; w przeciwnym razie wartość różna od zera.
 
 ### <a name="remarks"></a>Uwagi
 
-`CreateKey`jako `m_hKey` źródło zapytań rejestru. Wyszukuje *pszPath* jako `m_hKey`podklucz . Jeśli klucz nie istnieje, `CreateKey` tworzy go. W przeciwnym razie otwiera klucz. `CreateKey`następnie `m_hKey` ustawia klucz utworzony lub otwarty.
+`CreateKey` używa `m_hKey` jako głównego zapytania dotyczącego rejestru. Szuka *pszPath* jako podklucza `m_hKey` . Jeśli klucz nie istnieje, `CreateKey` tworzy go. W przeciwnym razie zostanie otwarty klucz. `CreateKey` następnie ustawia `m_hKey` na utworzony lub otwarty klucz.
 
-## <a name="csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore::CSettingsStore
+## <a name="csettingsstorecsettingsstore"></a><a name="csettingsstore"></a> CSettingsStore::CSettingsStore
 
 Tworzy obiekt `CSettngsStore`.
 
@@ -124,23 +125,23 @@ CSettingsStore(
 
 ### <a name="parameters"></a>Parametry
 
-*bDmin*<br/>
-[w] Parametr logiczny określający, `CSettingsStore` czy obiekt działa w trybie administratora.
+*bAdmin*<br/>
+podczas Wartość logiczna określająca, czy `CSettingsStore` obiekt działa w trybie administratora.
 
-*bCzytyNie*<br/>
-[w] Parametr logiczny określający, `CSettingsStore` czy obiekt jest tworzony w trybie tylko do odczytu.
+*bReadOnly*<br/>
+podczas Wartość logiczna określająca, czy `CSettingsStore` obiekt jest tworzony w trybie tylko do odczytu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bAdmin* jest ustawiona `m_hKey` na WARTOŚĆ PRAWDA, zmienna elementu członkowskiego jest ustawiona na **HKEY_LOCAL_MACHINE**. Jeśli ustawisz *bAdmin* na FAŁSZ, `m_hKey` jest ustawiona na **HKEY_CURRENT_USER**.
+Jeśli *bAdmin* ma wartość true, `m_hKey` zmienna członkowska jest ustawiona na **HKEY_LOCAL_MACHINE**. Jeśli ustawisz wartość *bAdmin* na false, `m_hKey` jest ustawiona na **HKEY_CURRENT_USER**.
 
-Dostęp do zabezpieczeń zależy od parametru *bReadOnly.* Jeśli *bTylko* jest FALSE, dostęp do zabezpieczeń zostanie ustawiony na **KEY_ALL_ACCESS**. Jeśli *bTylko* jest TRUE, dostęp do zabezpieczeń zostanie ustawiony na kombinację **KEY_QUERY_VALUE, KEY_NOTIFY** i **KEY_ENUMERATE_SUB_KEYS**. Aby uzyskać więcej informacji na temat dostępu do zabezpieczeń wraz z rejestrem, zobacz [Zabezpieczenia klucza rejestru i prawa dostępu](/windows/win32/SysInfo/registry-key-security-and-access-rights).
+Dostęp zabezpieczeń zależy od parametru *bReadOnly* . Jeśli *bReadOnly* ma wartość false, dostęp zabezpieczeń zostanie ustawiony na **KEY_ALL_ACCESS**. Jeśli *bReadyOnly* ma wartość true, dostęp zabezpieczeń zostanie ustawiony na kombinację **KEY_QUERY_VALUE, KEY_NOTIFY** i **KEY_ENUMERATE_SUB_KEYS**. Aby uzyskać więcej informacji o dostępie do rejestru, zobacz [zabezpieczenia klucza rejestru i prawa dostępu](/windows/win32/SysInfo/registry-key-security-and-access-rights).
 
-Destruktor do `CSettingsStore` `m_hKey` wydań automatycznie.
+Destruktor dla wydań jest `CSettingsStore` `m_hKey` automatycznie.
 
-## <a name="csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::DeleteKey
+## <a name="csettingsstoredeletekey"></a><a name="deletekey"></a> CSettingsStore::D eleteKey
 
-Usuwa klucz i wszystkie jego wiązki łzowe z rejestru.
+Usuwa klucz i wszystkie jego elementy podrzędne z rejestru.
 
 ```
 virtual BOOL DeleteKey(
@@ -150,25 +151,25 @@ virtual BOOL DeleteKey(
 
 ### <a name="parameters"></a>Parametry
 
-*PSZPath*<br/>
-[w] Nazwa klucza do usunięcia.
+*pszPath*<br/>
+podczas Nazwa klucza do usunięcia.
 
-*bDmin*<br/>
-[w] Przełącznik, który określa lokalizację klucza do usunięcia.
+*bAdmin*<br/>
+podczas Przełącznik określający lokalizację klucza do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zakończy `CSettingsStore` się niepowodzeniem, jeśli obiekt jest w trybie tylko do odczytu.
+Ta metoda zakończy się niepowodzeniem, jeśli `CSettingsStore` obiekt jest w trybie tylko do odczytu.
 
-Jeśli parametr *bAdmin* wynosi `DeleteKey` zero, wyszuka klucz do usunięcia w obszarze **HKEY_CURRENT_USER**. Jeśli *bAdmin* nie ma `DeleteKey` wartościzerowej, wyszukaj klucz do usunięcia w obszarze **HKEY_LOCAL_MACHINE**.
+Jeśli parametr *bAdmin* ma wartość zero, `DeleteKey` wyszukuje klucz do usunięcia w obszarze **HKEY_CURRENT_USER**. Jeśli *bAdmin* ma wartość różną od zera, `DeleteKey` wyszukuje klucz do usunięcia w obszarze **HKEY_LOCAL_MACHINE**.
 
-## <a name="csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::DeleteValue
+## <a name="csettingsstoredeletevalue"></a><a name="deletevalue"></a> CSettingsStore::D eleteValue
 
-Usuwa wartość z `m_hKey`pliku .
+Usuwa wartość z `m_hKey` .
 
 ```
 virtual BOOL DeleteValue(LPCTSTR pszValue);
@@ -176,14 +177,14 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 
 ### <a name="parameters"></a>Parametry
 
-*pszValue (właskw.*<br/>
-[w] Określa pole wartości do usunięcia.
+*pszValue*<br/>
+podczas Określa pole wartości do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
-## <a name="csettingsstoreopen"></a><a name="open"></a>CSettingsStore::Otwórz
+## <a name="csettingsstoreopen"></a><a name="open"></a> CSettingsStore:: Open
 
 Otwiera klucz rejestru.
 
@@ -193,18 +194,18 @@ virtual BOOL Open(LPCTSTR pszPath);
 
 ### <a name="parameters"></a>Parametry
 
-*PSZPath*<br/>
-[w] Nazwa klucza rejestru.
+*pszPath*<br/>
+podczas Nazwa klucza rejestru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Po pomyślnym otwarciu tej metody `m_hKey` określony klucz, ustawia dojścia tego klucza.
+Po pomyślnym otwarciu określonego klucza przez tę metodę jest on ustawiany `m_hKey` na dojście tego klucza.
 
-## <a name="csettingsstoreread"></a><a name="read"></a>CSettingsStore::Czytaj
+## <a name="csettingsstoreread"></a><a name="read"></a> CSettingsStore:: Read
 
 Odczytuje wartość z klucza w rejestrze.
 
@@ -269,65 +270,65 @@ virtual BOOL Read(
 
 ### <a name="parameters"></a>Parametry
 
-*pszKey (własówce)*<br/>
-[w] Wskaźnik do ciągu zakończonego zerem, który zawiera nazwę wartości do odczytu z rejestru.
+*pszKey*<br/>
+podczas Wskaźnik na ciąg zakończony znakiem null, który zawiera nazwę wartości, która ma zostać odczytana z rejestru.
 
-*iVal ( iVal )*<br/>
-[na zewnątrz] Odwołanie do zmiennej całkowitej, która odbiera wartość odczytu z klucza rejestru.
+*iVal*<br/>
+określoną Odwołanie do zmiennej całkowitej, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*Dwval*<br/>
-[na zewnątrz] Odwołanie do 32-bitowej zmiennej dwusłowa, która odbiera wartość odczytywana z klucza rejestru.
+*dwVal*<br/>
+określoną Odwołanie do 32-bitowej podwójnej zmiennej słowa, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*sVal (sVal)*<br/>
-[na zewnątrz] Odwołanie do zmiennej ciągu, która odbiera wartość odczytu z klucza rejestru.
+*sVal*<br/>
+określoną Odwołanie do zmiennej ciągu, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*lista scString*<br/>
-[na zewnątrz] Odwołanie do zmiennej listy ciągów, która odbiera wartość odczytu z klucza rejestru.
+*scStringList*<br/>
+określoną Odwołanie do zmiennej listy ciągów, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*scArray (scArray)*<br/>
-[na zewnątrz] Odwołanie do zmiennej tablicy ciągów, która odbiera wartość odczytu z klucza rejestru.
+*scArray*<br/>
+określoną Odwołanie do zmiennej tablicy ciągów, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*dwcArray (Polski)*<br/>
-[na zewnątrz] Odwołanie do 32-bitowej zmiennej tablicy podwójnego wyrazu, która odbiera wartość odczytywana z klucza rejestru.
+*dwcArray*<br/>
+określoną Odwołanie do 32-bitowej podwójnej zmiennej tablicowej programu Word, która otrzymuje wartość odczytaną z klucza rejestru.
 
 *wcArray*<br/>
-[na zewnątrz] Odwołanie do 16-bitowej zmiennej tablicowej wyrazów, która odbiera wartość odczytywana z klucza rejestru.
+określoną Odwołanie do 16-bitowej zmiennej tablicowej programu Word, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*bcArray ( bcArray )*<br/>
-[na zewnątrz] Odwołanie do zmiennej tablicy bajtów, która odbiera wartość odczytu z klucza rejestru.
+*bcArray*<br/>
+określoną Odwołanie do zmiennej tablicowej Byte, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*lpPoint (punkt z punktu widzenia*<br/>
-[na zewnątrz] Odwołanie do wskaźnika `POINT` do struktury, która odbiera wartość odczytu z klucza rejestru.
+*lpPoint*<br/>
+określoną Odwołanie do wskaźnika do `POINT` struktury, która otrzymuje wartość odczytaną z klucza rejestru.
 
-*Rect*<br/>
-[na zewnątrz] Odwołanie do zmiennej [CRect,](../../atl-mfc-shared/reference/crect-class.md) która odbiera wartość odczytu z klucza rejestru.
+*cinania*<br/>
+określoną Odwołanie do zmiennej [CRect](../../atl-mfc-shared/reference/crect-class.md) , która otrzymuje wartość odczytaną z klucza rejestru.
 
-*ppData (dane)*<br/>
-[na zewnątrz] Wskaźnik do wskaźnika do danych, które odbiera wartość odczytu z klucza rejestru.
+*ppData*<br/>
+określoną Wskaźnik na wskaźnik do danych, który odbiera wartość odczytywaną z klucza rejestru.
 
-*p Bajty*<br/>
-[na zewnątrz] Wskaźnik do niepodpisanej zmiennej całkowitej. Ta zmienna odbiera rozmiar buforu, który *ppData* wskazuje.
+*pBytes*<br/>
+określoną Wskaźnik do zmiennej niepodpisanej liczby całkowitej. Ta zmienna otrzymuje rozmiar buforu, do którego wskazuje *ppData* .
 
 *list*<br/>
-[na zewnątrz] Odwołanie do zmiennej [CObList,](../../mfc/reference/coblist-class.md) która odbiera wartość odczytu z klucza rejestru.
+określoną Odwołanie do zmiennej [CObList](../../mfc/reference/coblist-class.md) , która otrzymuje wartość odczytaną z klucza rejestru.
 
-*Obj*<br/>
-[na zewnątrz] Odwołanie do zmiennej [CObject,](../../mfc/reference/cobject-class.md) która odbiera wartość odczytu z klucza rejestru.
+*obiektów*<br/>
+określoną Odwołanie do zmiennej [CObject](../../mfc/reference/cobject-class.md) , która otrzymuje wartość odczytaną z klucza rejestru.
 
 *pObj*<br/>
-[na zewnątrz] Odwołanie do wskaźnika `CObject` do zmiennej, która odbiera wartość odczytu z klucza rejestru.
+określoną Odwołanie do wskaźnika do `CObject` zmiennej, która otrzymuje wartość odczytaną z klucza rejestru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-`Read`sprawdza *pszKey* jako podklucz . `m_hKey`
+`Read` sprawdza *pszKey* jako podklucz `m_hKey` .
 
-## <a name="csettingsstorewrite"></a><a name="write"></a>CSettingsStore::Napisz
+## <a name="csettingsstorewrite"></a><a name="write"></a> CSettingsStore:: Write
 
-Zapisuje wartość do rejestru pod kluczem otwartym.
+Zapisuje wartość w rejestrze w kluczu otwartym.
 
 ```
 virtual BOOL Write(
@@ -390,61 +391,61 @@ virtual BOOL Write(
 
 ### <a name="parameters"></a>Parametry
 
-*pszKey (własówce)*<br/>
-[w] Wskaźnik do ciągu, który zawiera nazwę wartości do ustawionego.
+*pszKey*<br/>
+podczas Wskaźnik na ciąg, który zawiera nazwę wartości do ustawienia.
 
-*iVal ( iVal )*<br/>
-[w] Odwołanie do zmiennej całkowitej zawierającej dane do przechowywania.
+*iVal*<br/>
+podczas Odwołanie do zmiennej całkowitej, która zawiera dane do przechowywania.
 
-*Dwval*<br/>
-[w] Odwołanie do 32-bitowej zmiennej dwusłowa, która zawiera dane do przechowywania.
+*dwVal*<br/>
+podczas Odwołanie do 32-bitowej podwójnej zmiennej słowa, która zawiera dane do przechowywania.
 
 *pszVal*<br/>
-[w] Wskaźnik do zmiennej ciągu zakończonej wartością null, która zawiera dane do przechowywania.
+podczas Wskaźnik do zmiennej ciągu z zakończono wartością null, która zawiera dane do zapisania.
 
-*lista scString*<br/>
-[w] Odwołanie do zmiennej [CStringList,](../../mfc/reference/cstringlist-class.md) która zawiera dane do przechowywania.
+*scStringList*<br/>
+podczas Odwołanie do zmiennej [CStringList](../../mfc/reference/cstringlist-class.md) zawierającej dane do przechowania.
 
-*bcArray ( bcArray )*<br/>
-[w] Odwołanie do zmiennej tablicy bajtów, która zawiera dane do przechowywania.
+*bcArray*<br/>
+podczas Odwołanie do zmiennej tablicowej Byte zawierającej dane do zapisania.
 
-*scArray (scArray)*<br/>
-[w] Odwołanie do zmiennej tablicy ciągów, która zawiera dane do przechowywania.
+*scArray*<br/>
+podczas Odwołanie do zmiennej tablicy ciągów zawierającej dane do zapisania.
 
-*dwcArray (Polski)*<br/>
-[w] Odwołanie do 32-bitowej zmiennej tablicy dwusłowa, która zawiera dane do przechowywania.
+*dwcArray*<br/>
+podczas Odwołanie do 32-bitowej podwójnej zmiennej tablicowej programu Word, która zawiera dane do przechowywania.
 
 *wcArray*<br/>
-[w] Odwołanie do 16-bitowej zmiennej tablicowej wyrazów, która zawiera dane do przechowywania.
+podczas Odwołanie do 16-bitowej zmiennej tablicowej programu Word, która zawiera dane do przechowywania.
 
-*Rect*<br/>
-[w] Odwołanie do zmiennej [CRect,](../../atl-mfc-shared/reference/crect-class.md) która zawiera dane do przechowywania.
+*cinania*<br/>
+podczas Odwołanie do zmiennej [CRect](../../atl-mfc-shared/reference/crect-class.md) zawierającej dane do przechowania.
 
-*lpPoint (punkt z punktu widzenia*<br/>
-[w] Odwołanie do wskaźnika `POINT` do zmiennej, która zawiera dane do przechowywania.
+*lpPoint*<br/>
+podczas Odwołanie do wskaźnika do zmiennej zawierającej `POINT` dane do przechowania.
 
-*Pdata*<br/>
-[w] Wskaźnik do buforu, który zawiera dane do przechowywania.
+*pData*<br/>
+podczas Wskaźnik do buforu zawierającego dane do przechowania.
 
-*n Bajty*<br/>
-[w] Określa rozmiar w bajtach danych, na które wskazuje parametr *pData.*
+*nBytes*<br/>
+podczas Określa rozmiar (w bajtach) danych, do których *pData* punkty parametrów.
 
 *list*<br/>
-[w] Odwołanie do zmiennej [CObList,](../../mfc/reference/coblist-class.md) która zawiera dane do przechowywania.
+podczas Odwołanie do zmiennej [CObList](../../mfc/reference/coblist-class.md) zawierającej dane do przechowania.
 
-*Obj*<br/>
-[w] Odwołanie do zmiennej [CObject,](../../mfc/reference/cobject-class.md) która zawiera dane do przechowywania.
+*obiektów*<br/>
+podczas Odwołanie do zmiennej [CObject](../../mfc/reference/cobject-class.md) zawierającej dane do przechowania.
 
 *pObj*<br/>
-[w] Wskaźnik do wskaźnika `CObject` do zmiennej, która zawiera dane do przechowywania.
+podczas Wskaźnik na wskaźnik do zmiennej zawierającej `CObject` dane do przechowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli się powiedzie; w przeciwnym razie FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapisać do rejestru, należy ustawić *bReadOnly* do wartości niezerowej podczas tworzenia [obiektu CSettingsStore.](../../mfc/reference/csettingsstore-class.md) Aby uzyskać więcej informacji, zobacz [CSettingsStore::CSettingsStore](#csettingsstore).
+Aby można było zapisywać w rejestrze, należy ustawić *bReadOnly* na wartość różną od zera podczas tworzenia obiektu [CSettingsStore](../../mfc/reference/csettingsstore-class.md) . Aby uzyskać więcej informacji, zobacz [CSettingsStore:: CSettingsStore](#csettingsstore).
 
 ## <a name="see-also"></a>Zobacz też
 

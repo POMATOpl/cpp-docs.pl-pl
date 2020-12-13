@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strinc, _wcsinc, _mbsinc _mbsinc_l'
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a53102f991ec7467fd74e1997f8d5b7419b15aa1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: df42c06b0fd8ec71c56cc25b12f769906b8ee0a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344864"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
@@ -96,7 +97,7 @@ Każda z tych procedur zwraca wskaźnik do znaku, który od razu następuje po *
 
 Funkcja **_mbsinc** zwraca wskaźnik do pierwszego bajtu znaku wielobajtowego, który od razu następuje po *bieżącym*. **_mbsinc** rozpoznaje sekwencje znaków wielobajtowych zgodnie ze [stroną kodową wielobajtowego](../../c-runtime-library/code-pages.md) , która jest obecnie używana; **_mbsinc_l** jest identyczny, z tą różnicą, że zamiast tego używa parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Funkcja tekstu ogólnego **_tcsinc**, zdefiniowana w używanie TCHAR. h, mapuje do **_mbsinc** , jeśli **_MBCS** został zdefiniowany lub **_wcsinc** Jeśli **_UNICODE** została zdefiniowana. W przeciwnym razie **_tcsinc** Maps **_strinc**. **_strinc** i **_wcsinc** są wersjami jednobajtowych i szerokich znaków **_mbsinc**. **_strinc** i **_wcsinc** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
+Funkcja tekstu ogólnego **_tcsinc**, zdefiniowana w używanie TCHAR. h, mapuje do **_mbsinc** , jeśli **_MBCS** został zdefiniowany lub **_wcsinc** Jeśli **_UNICODE** została zdefiniowana. W przeciwnym razie **_tcsinc** Maps **_strinc**. **_strinc** i **_wcsinc** są wersjami jednobajtowych i szerokich znaków **_mbsinc**. **_strinc** i **_wcsinc** są dostępne tylko dla tego mapowania i nie powinny być używane w inny sposób. Aby uzyskać więcej informacji, zobacz [Używanie mapowań Generic-Text](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
 Jeśli *Current* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
@@ -109,10 +110,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsinc**|\<mbstring. h>|
-|**_mbsinc_l**|\<mbstring. h>|
-|**_strinc**|\<Używanie TCHAR. h>|
-|**_wcsinc**|\<Używanie TCHAR. h>|
+|**_mbsinc**|\<mbstring.h>|
+|**_mbsinc_l**|\<mbstring.h>|
+|**_strinc**|\<tchar.h>|
+|**_wcsinc**|\<tchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

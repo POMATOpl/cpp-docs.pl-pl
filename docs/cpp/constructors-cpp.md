@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: konstruktorów (C++)'
 title: Konstruktory (C++)
 ms.date: 12/27/2019
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: b8373eda52967db881d7d58477fcd2a9181ac3ee
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bd93053d63e76aef9f2284e18f7748334a3fc6ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924724"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344630"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
-Aby dostosować sposób inicjowania składowych klasy lub wywołania funkcji po utworzeniu obiektu klasy, zdefiniuj *konstruktora* . Konstruktor ma taką samą nazwę jak Klasa i nie zwraca wartości. Można zdefiniować dowolną liczbę przeciążonych konstruktorów, aby dostosować inicjalizację na różne sposoby. Zazwyczaj konstruktory mają publicznego ułatwienia dostępu, tak aby kod poza hierarchią klasy lub hierarchii dziedziczenia mógł tworzyć obiekty klasy. Ale można również zadeklarować konstruktora jako **`protected`** lub **`private`** .
+Aby dostosować sposób inicjowania składowych klasy lub wywołania funkcji po utworzeniu obiektu klasy, zdefiniuj *konstruktora*. Konstruktor ma taką samą nazwę jak Klasa i nie zwraca wartości. Można zdefiniować dowolną liczbę przeciążonych konstruktorów, aby dostosować inicjalizację na różne sposoby. Zazwyczaj konstruktory mają publicznego ułatwienia dostępu, tak aby kod poza hierarchią klasy lub hierarchii dziedziczenia mógł tworzyć obiekty klasy. Ale można również zadeklarować konstruktora jako **`protected`** lub **`private`** .
 
 Konstruktory mogą opcjonalnie przyjmować listę init elementu członkowskiego. Jest to bardziej wydajny sposób na zainicjowanie elementów członkowskich klasy niż przypisanie wartości w treści konstruktora. Poniższy przykład przedstawia klasę `Box` z trzema przeciążonymi konstruktorami. Ostatnie dwie listy init elementu członkowskiego use:
 
@@ -202,7 +203,7 @@ Można zapobiec kopiowaniu obiektu przez zdefiniowanie konstruktora kopiującego
     Box (const Box& other) = delete;
 ```
 
-Próba skopiowania obiektu powoduje błąd *C2280: próbuje odwołać się do usuniętej funkcji* .
+Próba skopiowania obiektu powoduje błąd *C2280: próbuje odwołać się do usuniętej funkcji*.
 
 ## <a name="move-constructors"></a><a name="move_constructors"></a> Przenoszenie konstruktorów
 
@@ -643,7 +644,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=msvc-150"
 
-**Visual Studio 2017 i nowsze** : **`using`** instrukcja w **/std: tryb c++ 17** umożliwia przezakres wszystkich konstruktorów z klasy bazowej, z wyjątkiem tych, które mają identyczny podpis do konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc, najlepszym rozwiązaniem jest użycie konstruktorów dziedziczenia, gdy Klasa pochodna nie deklaruje nowych elementów członkowskich lub konstruktorów danych.
+**Visual Studio 2017 i nowsze**: **`using`** instrukcja w **/std: tryb c++ 17** umożliwia przezakres wszystkich konstruktorów z klasy bazowej, z wyjątkiem tych, które mają identyczny podpis do konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc, najlepszym rozwiązaniem jest użycie konstruktorów dziedziczenia, gdy Klasa pochodna nie deklaruje nowych elementów członkowskich lub konstruktorów danych.
 
 ::: moniker-end
 
@@ -661,7 +662,7 @@ Klasa pochodna nie może dziedziczyć z wielu klas bazowych, jeśli te klasy baz
 
 ## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a> Konstruktory i klasy złożone
 
-Klasy, które zawierają składowe typu klasy, są znane jako *klasy złożone* . Gdy jest tworzona składowa typu klasa klasy złożonej, konstruktor jest wywoływany przed konstruktorem tej klasy. Gdy klasa zamknięta nie ma domyślnego konstruktora, należy użyć listy inicjalizacji w konstruktorze klasy złożonej. W poprzednim `StorageBox` przykładzie, jeśli zmienisz typ `m_label` zmiennej składowej na nową `Label` klasę, musisz wywołać zarówno konstruktora klasy bazowej, jak i zainicjować `m_label` zmienną w `StorageBox` konstruktorze:
+Klasy, które zawierają składowe typu klasy, są znane jako *klasy złożone*. Gdy jest tworzona składowa typu klasa klasy złożonej, konstruktor jest wywoływany przed konstruktorem tej klasy. Gdy klasa zamknięta nie ma domyślnego konstruktora, należy użyć listy inicjalizacji w konstruktorze klasy złożonej. W poprzednim `StorageBox` przykładzie, jeśli zmienisz typ `m_label` zmiennej składowej na nową `Label` klasę, musisz wywołać zarówno konstruktora klasy bazowej, jak i zainicjować `m_label` zmienną w `StorageBox` konstruktorze:
 
 ```cpp
 class Label {
@@ -698,6 +699,6 @@ int main(){
 - [Konstruktory przenoszące i przenoszące operatory przypisania](move-constructors-and-move-assignment-operators-cpp.md)
 - [Delegowanie konstruktorów](delegating-constructors.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](classes-and-structs-cpp.md)

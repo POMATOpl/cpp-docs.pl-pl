@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l'
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 4/2/2020
 api_name:
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: deae95f8cf7d538dfe22ebbe0e86524765d9d234
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91f7351f844425369ccae4bba6d13d177e75910f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344760"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -120,11 +121,11 @@ Wartość zwracana określa relację podciągów wartości *ciąg1* i *ciąg2* w
 |0|*ciąg1* podciąg identyczny z podciągiem *ciąg2*|
 |> 0|*ciąg1* podciągu powyżej *ciąg2*|
 
-W przypadku błędu walidacji parametru **_mbsncmp** i **_mbsncmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<> String. h i \<mbstring. h>.
+W przypadku błędu walidacji parametru **_mbsncmp** i **_mbsncmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<string.h> i \<mbstring.h> .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strncmp** wykonuje porównanie porządkowe dla pierwszych znaków *Count* w wartości *ciąg1* i *ciąg2* i zwraca wartość wskazującą zależność między podciągami. **strncmp** to **_strnicmp**wersja z uwzględnieniem wielkości liter. **wcsncmp** i **_mbsncmp** są wersjami **_wcsnicmp** i **_mbsnicmp**z uwzględnieniem wielkości liter.
+Funkcja **strncmp** wykonuje porównanie porządkowe dla pierwszych znaków *Count* w wartości *ciąg1* i *ciąg2* i zwraca wartość wskazującą zależność między podciągami. **strncmp** to **_strnicmp** wersja z uwzględnieniem wielkości liter. **wcsncmp** i **_mbsncmp** są wersjami **_wcsnicmp** i **_mbsnicmp** z uwzględnieniem wielkości liter.
 
 **wcsncmp** i **_mbsncmp** są wersjami znaków dwubajtowych i znakowymi **strncmp**. Argumenty **wcsncmp** są ciągami znaków dwubajtowych; te **_mbsncmp** są ciągami znaków wielobajtowych. **_mbsncmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie ze stroną kodową wielobajtowego i zwraca **_NLSCMPERROR** w przypadku błędu.
 
@@ -147,9 +148,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncmp**|\<> String. h|
-|**wcsncmp**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsncmp**, **_mbsncmp_l**|\<mbstring. h>|
+|**strncmp**|\<string.h>|
+|**wcsncmp**|\<string.h> lub \<wchar.h>|
+|**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -202,15 +203,15 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

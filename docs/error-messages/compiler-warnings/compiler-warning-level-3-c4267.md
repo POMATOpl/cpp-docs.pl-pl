@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 3) C4267'
 title: Ostrzeżenie kompilatora (poziom 3) C4267
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4267
 ms.assetid: 2fa2f13f-fa4f-47bb-ad8f-6cb19cfc91e6
-ms.openlocfilehash: 2ae4b53dfa5050e178bf5ddd366e97c4ff773dd0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 25d0eb776482bb50bdc4dbfec1d1ae46978afb0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344162"
 ---
 # <a name="compiler-warning-level-3-c4267"></a>Ostrzeżenie kompilatora (poziom 3) C4267
 
 "var": konwersja z "size_t" na "Type", możliwa utrata danych
 
-Kompilator wykrył konwersję z `size_t` na mniejszy typ.
+Kompilator wykrył konwersję z `size_t` do mniejszego typu.
 
-Aby usunąć to ostrzeżenie, użyj `size_t` zamiast `type`. Alternatywnie należy użyć typu całkowitego, który jest co najmniej tak duży jak `size_t`.
+Aby usunąć to ostrzeżenie, użyj `size_t` zamiast `type` . Alternatywnie użyj typu całkowitego, który jest co najmniej tak duży `size_t` .
 
 ## <a name="example"></a>Przykład
 

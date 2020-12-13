@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: jak MFC ułatwia tworzenie internetowych aplikacji klienckich'
 title: Jak MFC ułatwia tworzenie klienckich aplikacji internetowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-ms.openlocfilehash: 71b72a3079cd0d0c87289c1813c09a24d9f75c89
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7cc201c67cf4964e5bd561cd173186bc57feb89b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343605"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Jak MFC ułatwia tworzenie klienckich aplikacji internetowych
 
@@ -34,4 +35,4 @@ Ponadto klasy MFC WinInet zapewniają następujące korzyści:
 ## <a name="see-also"></a>Zobacz też
 
 [Rozszerzenia internetowe Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
-[Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych](how-wininet-makes-it-easier-to-create-internet-client-applications.md)
+[Jak usługa WinInet ułatwia tworzenie aplikacji internetowych klienta](how-wininet-makes-it-easier-to-create-internet-client-applications.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: 2. Dyrektyw'
 title: 2. Dyrektyw
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 66b4ee4cdf3fec1740ed9b471c1c57cffebad6d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342572"
 ---
 # <a name="2-directives"></a>2. Dyrektywy
 
@@ -182,10 +183,10 @@ Jeden z poniższych programów:
 - `>`
 - `>=`
 
-*lb*, *b*i *incr*<br>
+*lb*, *b* i *incr*<br>
 Wyrażenia niezmiennej liczby całkowitej w pętli. Nie ma synchronizacji podczas obliczania tych wyrażeń, dlatego wszelkie ocenione efekty uboczne powodują wygenerowanie nieokreślonych wyników.
 
-Forma kanoniczna umożliwia obliczenia liczby iteracji pętli we wpisie do pętli. To obliczenie jest wykonywane z wartościami w typie *var*po promocjach całkowitych. W szczególności jeśli wartość *b* `-` *lb* `+` *incr* nie może być reprezentowana w tym typie, wynik jest nieokreślony. Dodatkowo, jeśli wartość *logiczna-op* to `<` lub `<=` , funkcja *incr-Expr* musi spowodować, że funkcja *wariancji* ma zwiększyć wartość dla każdej iteracji pętli.   Jeśli *logiczna-op* jest `>` lub `>=` , *incr-Expr* musi spowodować, że *WARIANCJA* będzie mniejsza dla każdej iteracji pętli.
+Forma kanoniczna umożliwia obliczenia liczby iteracji pętli we wpisie do pętli. To obliczenie jest wykonywane z wartościami w typie *var* po promocjach całkowitych. W szczególności jeśli wartość *b* `-` *lb* `+` *incr* nie może być reprezentowana w tym typie, wynik jest nieokreślony. Dodatkowo, jeśli wartość *logiczna-op* to `<` lub `<=` , funkcja *incr-Expr* musi spowodować, że funkcja *wariancji* ma zwiększyć wartość dla każdej iteracji pętli.   Jeśli *logiczna-op* jest `>` lub `>=` , *incr-Expr* musi spowodować, że *WARIANCJA* będzie mniejsza dla każdej iteracji pętli.
 
 `schedule`Klauzula określa sposób, w jaki iteracja `for` pętli jest dzielona między wątki zespołu. Poprawność programu nie może zależeć od tego, który wątek wykonuje określoną iterację. Wartość *chunk_size*, jeśli określona, musi być wyrażeniem liczby całkowitej w pętli o wartości dodatniej. Nie ma synchronizacji podczas obliczania tego wyrażenia, dlatego wszystkie ocenione efekty uboczne powodują powstanie nieokreślonych wyników. *Typ* harmonogramu może być jedną z następujących wartości:
 
@@ -220,7 +221,7 @@ Ograniczenia dotyczące `for` dyrektywy są następujące:
 
 - `nowait`W dyrektywie może występować tylko pojedyncza klauzula `for` .
 
-- Nie określono, jeśli lub jak często występują efekty uboczne w wyrażeniach *chunk_size*, *lb*, *b*lub *incr* .
+- Nie określono, jeśli lub jak często występują efekty uboczne w wyrażeniach *chunk_size*, *lb*, *b* lub *incr* .
 
 - Wartość wyrażenia *chunk_size* musi być taka sama dla wszystkich wątków w zespole.
 
@@ -407,9 +408,9 @@ if (x!=0) {
 Instrukcja expression musi mieć jedną z następujących form:
 
 - *x binop* `=` *wyrażenie*
-- *x*`++`
+- *x* `++`
 - `++` *x*
-- *x*`--`
+- *x* `--`
 - `--` *x*
 
 W poprzednich wyrażeniach:
@@ -597,11 +598,11 @@ Wszystkie zmienne, które pojawiają się w klauzulach dyrektywy, muszą być wi
 
 W poniższych sekcjach opisano klauzule atrybutu udostępniania danych:
 
-- [private](#2721-private)
+- [użytek](#2721-private)
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
 - [udostępniać](#2724-shared)
-- [wartooć](#2725-default)
+- [default](#2725-default)
 - [reduction](#2726-reduction)
 - [copyin](#2727-copyin)
 - [copyprivate](#2728-copyprivate)
@@ -709,18 +710,18 @@ Domyślny atrybut udostępniania danych zmiennej można zastąpić za pomocą `p
 
 #### <a name="2726-reduction"></a>2.7.2.6 — redukcja
 
-Ta klauzula wykonuje redukcję zmiennych skalarnych, które pojawiają się na *liście zmiennych*przy użyciu operatora *op*. Składnia `reduction` klauzuli jest następująca:
+Ta klauzula wykonuje redukcję zmiennych skalarnych, które pojawiają się na *liście zmiennych* przy użyciu operatora *op*. Składnia `reduction` klauzuli jest następująca:
 
 `reduction(`*operacja* `:` *lista zmiennych*`)`
 
 Obniżka jest zwykle określona dla instrukcji z jedną z następujących form:
 
-- wyrażenie *x* `=` *x* *op* *expr*
-- *x* *binop* `=` *wyrażenie* binop x
+- wyrażenie *x* `=` *x* *op* 
+-   `=` *wyrażenie* binop x
 - *x* `=` *wyrażenie* *op* *x*  (z wyjątkiem odejmowania)
-- *x*`++`
+- *x* `++`
 - `++` *x*
-- *x*`--`
+- *x* `--`
 - `--` *x*
 
 gdzie:

@@ -1,236 +1,237 @@
 ---
-title: C. Gramatyka OpenMP C i C++
+description: 'Dowiedz się więcej na temat: C. OpenMP C i gramatyki C++'
+title: C. OpenMP C i gramatyka C++
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
-ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9543d721afbff1069b5497ba8dc7092089a1b706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342507"
 ---
-# <a name="c-openmp-c-and-c-grammar"></a>C. Gramatyka OpenMP C i C++
+# <a name="c-openmp-c-and-c-grammar"></a>C. OpenMP C i gramatyka C++
 
 [C.1 Notacja](#c1-notation)<br/>
 [C.2 Reguły](#c2-rules)
 
 ## <a name="c1-notation"></a>C.1 Notacja
 
-Reguły gramatyki składają się z nazwy dla inny niż końcowy, następuje dwukropek, następuje zastąpienie alternatywy w osobnych wierszach.
+Reguły gramatyki składają się z nazwy, która nie jest terminalem, po którym następuje dwukropek, a następnie zamian zamiennych w osobnych wierszach.
 
-Termin składni wyrażenia<sub>zoptymalizowany pod kątem</sub> wskazuje, że termin jest opcjonalna w ramach wymiany.
+Wyrażenie wyrażenia "<sub>opt</sub> " oznacza, że termin jest opcjonalny w zamian.
 
-Składni wyrażenia *termin*<sub>optseq</sub> jest odpowiednikiem *termin seq*<sub>zoptymalizowany pod kątem</sub> z następujące reguły dodatkowe:
+Termin wyrażenie składni <sub>optseq</sub> jest odpowiednikiem *warunku-SEQ*<sub>opt</sub> z następującymi dodatkowymi regułami:
 
-*termin seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*Termin*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*termin seq* *termin*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*termin seq* `,` *termin*
+*termin — SEQ*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*mandat*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*termin —* *termin* SEQ<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*termin — SEQ* `,` *termin*   
 
 ## <a name="c2-rules"></a>C.2 Reguły
 
-Notacja zostało opisane w sekcji 6.1 c standard. Ten dodatek gramatyki przedstawia rozszerzenia gramatyki języka podstawowego dla dyrektyw OpenMP C i C++.
+Notacja jest opisana w sekcji 6,1 standardu C. Ten dodatek do gramatyki pokazuje rozszerzenia gramatyki języka podstawowego dla dyrektyw OpenMP C i C++.
 
 **/\* w języku C++ (ISO/IEC 14882:1998) \*/**
 
-*statement-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja seq — instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seq — instrukcja openmp — dyrektywa*
+*instrukcja-SEQ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Merge*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP — dyrektywa*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja-SEQ — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja-SEQ OpenMP — dyrektywa*
 
 **/\* w C90 (ISO/IEC 9899:1990) \*/**
 
 *Lista instrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*listę instrukcji, instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista instrukcji openmp — dyrektywa*
+&nbsp;&nbsp;&nbsp;&nbsp;*Merge*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP — dyrektywa*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja-list — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja OpenMP-dyrektywa*
 
 **/\* w C99 (ISO/IEC 9899:1999) \*/**
 
-*block-item*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*
+*element bloku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Merge*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP — dyrektywa*
 
-**/\* Standardowa instrukcji \*/**
+**/\* standardowe instrukcje \*/**
 
-*Instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*konstrukcja OpenMP*
+*instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*OpenMP — konstrukcja*
 
 *konstrukcja OpenMP*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallel-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*for-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sections-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*konstrukcja pojedynczego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallel-for-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallel-sections-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*master-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*critical-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*atomic-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ordered-construct*
+&nbsp;&nbsp;&nbsp;&nbsp;*równoległa konstrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dla-konstrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekcje-konstrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Pojedyncza konstrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Parallel-for-konstrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*równoległe sekcje-konstrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wzorzec — konstrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Konstrukcja krytyczna*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*konstrukcja niepodzielna*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*uporządkowane — konstrukcja*
 
 *OpenMP — dyrektywa*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*barrier-directive*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*dyrektywa Flush*
+&nbsp;&nbsp;&nbsp;&nbsp;*bariera — dyrektywa*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Flush — dyrektywa*
 
-*blok ze strukturą*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja*
+*blok strukturalny*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Merge*
 
-*parallel-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*blok ze strukturą równoległych — dyrektywa*
+*równoległa konstrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*równoległa — dyrektywa strukturalna — blok*
 
-*parallel-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel` *Klauzula równoległych*<sub>optseq</sub> *nowy wiersz*
+*równoległa dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel`*równoległa klauzula*<sub>optseq</sub> *New-line*
 
-*parallel-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*klauzula równoległa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unikatowa — równoległa klauzula*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*klauzula danych*
 
-*unique-parallel-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `if (` *Wyrażenie*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `num_threads (` *Wyrażenie*   `)`
+*unikatowa klauzula-Parallel-*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `if (`*wyrażenie*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `num_threads (`*wyrażenie*   `)`
 
-*dla konstrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukcji iteracji dla dyrektywy*
+*dla-konstrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja iteracji for dyrektywy*
 
 *dla dyrektywy*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp for` *klauzuli for*<sub>optseq</sub> *nowy wiersz*
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp for`*klauzula for-*<sub>optseq</sub> *New-line*
 
-*for-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-for-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+*klauzula for*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unikatowa klauzula for*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*klauzula danych*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*unique-for-clause*:<br/>
+*unikatowa klauzula-for-*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `ordered`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *Typ harmonogramu*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *rodzaj harmonogramu* `,` *wyrażenia*   `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (`*rodzaj harmonogramu*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (`*rodzaj harmonogramu* `,` *wyrażenie*      `)`
 
-*rodzaj harmonogramu*:<br/>
+*Typ harmonogramu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `static`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `dynamic`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `guided`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `runtime`
 
-*sections-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekcja zakresu sekcje — dyrektywa*
+*sekcje-konstrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekcje — sekcja dyrektywy-Scope*
 
-*dyrektywa sekcje*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp sections` *Klauzula sekcje*<sub>optseq</sub> *nowy wiersz*
+*sekcje — dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp sections`sections *— klauzula*<sub>optseq</sub> *New-line*
 
-*sections-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+*sekcje — klauzula*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*klauzula danych*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
 *zakres sekcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*{sekcji sekwencja}*
+&nbsp;&nbsp;&nbsp;&nbsp;*{Sekcja-Sequence}*
 
-*sekcja sekwencji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*section-directive*<sub>opt</sub> *structured-block*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*section-sequence section-directive structured-block*
+*sekwencja sekcji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekcja —*<sub>wybór</sub> dyrektywy *— blok strukturalny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Sekcja-sekwencja sekcji-dyrektywa — blok strukturalny*
 
-*dyrektywy Section*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp section` *nowy wiersz*
+*sekcja — dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp section`*nowy wiersz*
 
-*konstrukcja pojedynczego*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*blok ze strukturą pojedynczej dyrektywy*
+*Pojedyncza konstrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*blok strukturalny o pojedynczej dyrektywie*
 
-*dyrektywa pojedynczego*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp single` *pojedynczej klauzuli*<sub>optseq</sub> *nowy wiersz*
+*Pojedyncza dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp single`*Pojedyncza klauzula*<sub>optseq</sub> *New-line*
 
-*pojedynczej klauzuli*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+*Pojedyncza klauzula*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*klauzula danych*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*parallel-for-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukcji iteracji równoległe dla dyrektywy*
+*równoległe dla konstrukcji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*iteracja równoległa dla dyrektywy — instrukcja*
 
-*parallel-for-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel for` *klauzuli for równoległych*<sub>optseq</sub> *nowy wiersz*
+*równoległe dla dyrektywy*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel for`*równoległa klauzula*<sub>optseq</sub> *New-line*
 
-*parallel-for-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-for-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*równoległa klauzula*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unikatowa — równoległa klauzula*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unikatowa klauzula for*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*klauzula danych*
 
-*parallel-sections-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*powiązane sekcji równoległych sekcje — dyrektywa*
+*równoległe sekcje-konstrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Sekcja równoległa-sekcja dyrektywy — zakres*
 
-*parallel-sections-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel sections` *parallel-sections-clause*<sub>optseq</sub> *new-line*
+*równoległe sekcje-dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel sections`*równoległe sekcje-klauzule*<sub>optseq</sub> *New-line*
 
-*parallel-sections-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*klauzula Parallel-* sections:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unikatowa — równoległa klauzula*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*klauzula danych*
 
-*master-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*blok ze strukturą Master dyrektywa*
+*konstrukcja główna*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Master — struktura strukturalna — blok*
 
-*master-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp master` *nowy wiersz*
+*wzorzec — dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp master`*nowy wiersz*
 
-*konstrukcji krytycznej*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*blok ze strukturą dyrektywy Critical*
+*konstrukcja krytyczna*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*krytyczna — dyrektywa strukturalna — blok*
 
-*critical-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp critical` *region frazy*<sub>zoptymalizowany pod kątem</sub> *nowy wiersz*
+*krytyczna — dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp critical`*wybór regionu —*<sub></sub> *Nowa linia*
 
-*region frazy*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*(identyfikator)*
+*region — fraza*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*
 
-*barrier-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp barrier` *nowy wiersz*
+*bariera — dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp barrier`*nowy wiersz*
 
-*atomic-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja wyrażeń dyrektywy niepodzielnej*
+*konstrukcje niepodzielne*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie atomowe dyrektywy-Statement*
 
-*dyrektywy niepodzielnej*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp atomic` *nowy wiersz*
+*niepodzielna dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp atomic`*nowy wiersz*
 
-*dyrektywa Flush*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp flush` *var opróżniania*<sub>zoptymalizowany pod kątem</sub> *nowy wiersz*
+*opróżnianie dyrektywy*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp flush`*Flush-zmiennych*<sub>opt</sub> *New-line*
 
-*var opróżniania*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*(zmienna lista)*
+*zmiennych opróżniania*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(lista zmiennych)*
 
-*ordered-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*blok ze strukturą uporządkowane — dyrektywa*
+*uporządkowane — konstrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*uporządkowana — dyrektywa — blok strukturalny*
 
-*dyrektywa uporządkowane*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp ordered` *nowy wiersz*
+*uporządkowane — dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp ordered`*nowy wiersz*
 
-**/\* Standardowa deklaracji \*/**
+**/\* deklaracje standardowe \*/**
 
 *Deklaracja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate-directive*
+&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate — dyrektywa*
 
-*threadprivate-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (` *Lista zmiennej* `)` *nowy wiersz*
+*threadprivate — dyrektywa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (`*lista zmiennych* `)` *nowy wiersz*    
 
-*data-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `private (` *Lista zmiennych*   `)`<br/>
+*klauzula danych*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `private (`*lista zmiennych*   `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `copyprivate (`  *Lista zmiennych*    `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `firstprivate (`  *Lista zmiennych*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `lastprivate (` *Lista zmiennych*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `shared (` *Lista zmiennych*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `lastprivate (`*lista zmiennych*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `shared (`*lista zmiennych*   `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( shared )`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( none )`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *operatorem redukcji*`:`*liście zmiennych*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *redukcja — operator* `:` *lista zmiennych*          `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `copyin (`  *Lista zmiennych*    `)`
 
-*operatorem redukcji*:<br/>
+*redukcja — operator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Jeden z:   `+ \* - & ^ | && ||`
 
 **/\* w języku C \*/**
 
-*Lista zmiennej*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista zmiennej* `,` *identyfikator*
+*lista zmiennych*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista zmiennych* `,` *Identyfikator*   
 
 **/\* w języku C++ \*/**
 
-*Lista zmiennej*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*id-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista zmiennej* `,` *identyfikator wyrażenia*
+*lista zmiennych*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista zmiennych* `,` *wyrażenie identyfikatora*   

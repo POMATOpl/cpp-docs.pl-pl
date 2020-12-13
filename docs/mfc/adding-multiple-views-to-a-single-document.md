@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie wielu widoków do pojedynczego dokumentu'
 title: Dodawanie wielu widoków do pojedynczego dokumentu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84f50ad96e4c5939c7ee2e97f8babfaa5221b6f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343734"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Dodawanie wielu widoków do pojedynczego dokumentu
 
@@ -39,9 +40,9 @@ W pozostałej części tego tematu założono następujące kwestie:
 
 - Nazwa `CWinApp` obiektu pochodnego to `CMyWinApp` , i `CMyWinApp` jest zadeklarowana i zdefiniowana w *MyWinApp. H* i *MyWinApp. CPP*.
 
-- `CNewView`jest nazwą nowego `CView` obiektu pochodnego i `CNewView` jest zadeklarowany i zdefiniowany w *NEWVIEW. H* i *NEWVIEW. CPP*.
+- `CNewView` jest nazwą nowego `CView` obiektu pochodnego i `CNewView` jest zadeklarowany i zdefiniowany w *NEWVIEW. H* i *NEWVIEW. CPP*.
 
-## <a name="modify-the-existing-application-class"></a><a name="vcconmodifyexistingapplicationa1"></a>Modyfikowanie istniejącej klasy aplikacji
+## <a name="modify-the-existing-application-class"></a><a name="vcconmodifyexistingapplicationa1"></a> Modyfikowanie istniejącej klasy aplikacji
 
 Aby aplikacja mogła przełączać się między widokami, należy zmodyfikować klasę aplikacji, dodając Zmienne Członkowskie do przechowywania widoków i metody w celu ich przełączenia.
 
@@ -59,7 +60,7 @@ Wstaw następujący wiersz w sekcji Include elementu *MyWinApp. CPP*:
 
 Zapisz zmiany i przejdź do następnego kroku.
 
-## <a name="create-and-modify-the-new-view-class"></a><a name="vcconnewviewclassa2"></a>Tworzenie i modyfikowanie nowej klasy widoku
+## <a name="create-and-modify-the-new-view-class"></a><a name="vcconnewviewclassa2"></a> Tworzenie i modyfikowanie nowej klasy widoku
 
 Tworzenie nowej klasy widoku jest łatwe przy użyciu **nowej klasy** polecenie dostępne w widok klasy. Jedynym wymaganiem dla tej klasy jest, że pochodzi on od `CView` . Dodaj tę nową klasę do aplikacji. Aby uzyskać szczegółowe informacje na temat dodawania nowej klasy do projektu, zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md).
 
@@ -69,7 +70,7 @@ Modyfikuj *NEWVIEW. H* przez zmianę specyfikatora dostępu z **`protected`** na
 
 Zapisz zmiany i przejdź do następnego kroku.
 
-## <a name="create-and-attach-the-new-view"></a><a name="vcconattachnewviewa3"></a>Utwórz i Dołącz nowy widok
+## <a name="create-and-attach-the-new-view"></a><a name="vcconattachnewviewa3"></a> Utwórz i Dołącz nowy widok
 
 Aby utworzyć i dołączyć nowy widok, należy zmodyfikować `InitInstance` funkcję klasy aplikacji. Modyfikacja dodaje nowy kod, który tworzy nowy obiekt widoku, a następnie inicjuje oba `m_pOldView` i `m_pNewView` z dwoma istniejącymi obiektami widoku.
 
@@ -81,7 +82,7 @@ Wstaw ten kod po wywołaniu `ProcessShellCommand` :
 
 Zapisz zmiany i przejdź do następnego kroku.
 
-## <a name="implement-the-switching-function"></a><a name="vcconswitchingfunctiona4"></a>Implementowanie funkcji przełączania
+## <a name="implement-the-switching-function"></a><a name="vcconswitchingfunctiona4"></a> Implementowanie funkcji przełączania
 
 W poprzednim kroku został dodany kod, który utworzył i zainicjował nowy obiekt widoku. Ostatnim elementem głównym jest implementacja metody przełączania `SwitchView` .
 
@@ -91,12 +92,12 @@ Na końcu pliku implementacji dla klasy aplikacji (*MyWinApp. CPP*), Dodaj nast�
 
 Zapisz zmiany i przejdź do następnego kroku.
 
-## <a name="add-support-for-switching-the-view"></a><a name="vcconswitchingtheviewa5"></a>Dodawanie obsługi przełączania widoku
+## <a name="add-support-for-switching-the-view"></a><a name="vcconswitchingtheviewa5"></a> Dodawanie obsługi przełączania widoku
 
 Ostatni krok polega na dodaniu kodu, który wywołuje `SwitchView` metodę, gdy aplikacja musi przełączać się między widokami. Można to zrobić na kilka sposobów: dodając nowy element menu dla użytkownika, aby wybrać lub przełączyć widoki wewnętrznie w przypadku spełnienia określonych warunków.
 
 Aby uzyskać więcej informacji na temat dodawania nowych elementów menu i funkcji programu obsługi poleceń, zobacz [programy obsługi dla poleceń i powiadomień o kontrolkach](handlers-for-commands-and-control-notifications.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Architektura dokumentu/widoku](document-view-architecture.md)

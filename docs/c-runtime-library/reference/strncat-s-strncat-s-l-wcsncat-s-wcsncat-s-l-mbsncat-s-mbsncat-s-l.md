@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l'
 title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 4aba4a2bd843fe0946c2e444b305f776065a57be
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c260c1a77908962441dba094686578e61db0e386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344786"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -178,17 +179,17 @@ Zwraca wartość 0, jeśli to się powiedzie, kod błędu w przypadku niepowodze
 
 |*strDestination*|*numberOfElements*|*strSource*|Wartość zwracana|Zawartość *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Wartość zerowa** lub niezakończona|ile|ile|**EINVAL**|nie zmodyfikowano|
-|ile|ile|**NULL**|**EINVAL**|nie zmodyfikowano|
-|ile|0 lub za mały|ile|**ERANGE**|nie zmodyfikowano|
+|**Wartość zerowa** lub niezakończona|dowolny|dowolny|**EINVAL**|nie zmodyfikowano|
+|dowolny|dowolny|**NULL**|**EINVAL**|nie zmodyfikowano|
+|dowolny|0 lub za mały|dowolny|**ERANGE**|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje próbują dołączyć pierwsze *D* znaków z *StrSource* do końca *strDest*, gdzie *D* jest mniejszą *liczbą* i długością *strSource*. Jeśli dołączanie tych znaków *D* będzie się zmieścić w *strDest* (którego rozmiar jest określony jako *NumberOfElements*) i nadal pozostawia miejsce dla terminatora o wartości null, wówczas te znaki są dołączane, zaczynając od oryginalnego kończącego się wartości null of *strDest*i zostanie dołączona Nowa kończąca wartość null; w przeciwnym razie *strDest*[0] jest ustawiona na znak null i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
+Te funkcje próbują dołączyć pierwsze *D* znaków z *StrSource* do końca *strDest*, gdzie *D* jest mniejszą *liczbą* i długością *strSource*. Jeśli dołączanie tych znaków *D* będzie się zmieścić w *strDest* (którego rozmiar jest określony jako *NumberOfElements*) i nadal pozostawia miejsce dla terminatora o wartości null, wówczas te znaki są dołączane, zaczynając od oryginalnego kończącego się wartości null of *strDest* i zostanie dołączona Nowa kończąca wartość null; w przeciwnym razie *strDest*[0] jest ustawiona na znak null i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
 Występuje wyjątek w powyższym akapicie. Jeśli *Liczba* jest [_TRUNCATE](../../c-runtime-library/truncate.md) , dołączenie *strSource* w miarę dopasowania jest dołączane do *strDest* , pozostawiając miejsce na dołączenie kończącej wartości null.
 
-Na przykład:
+Przykład:
 
 ```C
 char dst[5];
@@ -237,9 +238,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncat_s**|\<> String. h|
-|**wcsncat_s**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsncat_s**, **_mbsncat_s_l**|\<mbstring. h>|
+|**strncat_s**|\<string.h>|
+|**wcsncat_s**|\<string.h> lub \<wchar.h>|
+|**_mbsncat_s**, **_mbsncat_s_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -380,11 +381,11 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

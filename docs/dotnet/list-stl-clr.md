@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: list (STL/CLR)'
 title: list (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 9ef9f68c6bef72bf251d270b3bc8142448016a11
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b23bc3f53cc13338e09ee8a6171d3da3b0b75d67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344513"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -838,7 +839,7 @@ Początek zakresu do wymazania.
 *ostatniego*<br/>
 Koniec zakresu do wymazania.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1269,7 +1270,7 @@ Wyliczenie do wstawienia.
 *użyte*<br/>
 Wartość elementu do wstawienia.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Gdzie w kontenerze należy wstawić przed.
 
 ### <a name="remarks"></a>Uwagi
@@ -2509,7 +2510,7 @@ Koniec zakresu do odłączenia.
 *Kliknij*<br/>
 Kontener, z którego ma zostać nadana Metoda łączenia.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Gdzie w kontenerze mają być nałączenia przed.
 
 ### <a name="remarks"></a>Uwagi
@@ -2768,7 +2769,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *wartości*parametru szablonu.
+Typ jest synonimem dla *wartości* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

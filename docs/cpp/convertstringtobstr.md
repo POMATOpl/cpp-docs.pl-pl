@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ConvertStringToBSTR'
 title: ConvertStringToBSTR
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-ms.openlocfilehash: 2065011ee6bbf98ce2c83be494f1e6631af9f7cf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7348fdec3448d17b51fd77385297422a8f10fd05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344604"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 
 **Specyficzne dla firmy Microsoft**
 
-Konwertuje wartość `char *` na `BSTR`.
+Konwertuje `char *` wartość na `BSTR` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +29,7 @@ BSTR __stdcall ConvertStringToBSTR(const char* pSrc)
 #### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-Zmienna `char *`.
+`char *`Zmienna.
 
 ## <a name="example"></a>Przykład
 
@@ -60,7 +61,7 @@ BSTR text: Test
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<comutil. h >
+**Nagłówek:**\<comutil.h>
 
 **Lib:** comsuppw. lib lub comsuppwd. lib (patrz [/Zc: Wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , aby uzyskać więcej informacji.
 

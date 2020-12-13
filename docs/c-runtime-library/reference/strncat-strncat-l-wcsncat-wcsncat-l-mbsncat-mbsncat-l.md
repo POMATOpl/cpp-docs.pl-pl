@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat _mbsncat_l'
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 4/2/2020
 api_name:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 509afe42e4fbf4cec9f0a7a077f0bf4ce0a1423e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344773"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -176,10 +177,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncat**|\<> String. h|
-|**wcsncat**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsncat**|\<mbstring. h>|
-|**_mbsncat_l**|\<mbstring. h>|
+|**strncat**|\<string.h>|
+|**wcsncat**|\<string.h> lub \<wchar.h>|
+|**_mbsncat**|\<mbstring.h>|
+|**_mbsncat_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -246,4 +247,4 @@ Należy zauważyć, że **BadAppend** spowodował przepełnienie buforu.
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

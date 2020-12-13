@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operator wywołania funkcji: ()'
 title: 'Operator wywołania funkcji: ()'
 ms.date: 06/11/2020
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 351674f345c7213a3c164ff88e9a165775088c68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344565"
 ---
 # <a name="function-call-operator-"></a>Operator wywołania funkcji: ()
 
@@ -183,7 +184,7 @@ int main() {
 
 Funkcje mogą być wywoływane cyklicznie. Aby uzyskać więcej informacji na temat deklaracji funkcji, zobacz [Functions](functions-cpp.md). Powiązane materiały są w [jednostkach translacji i powiązaniach](../cpp/program-and-linkage-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia przyrostków](../cpp/postfix-expressions.md)<br/>
 [Wbudowane operatory, pierwszeństwo i łączność języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej na temat: A. Przykłady'
 title: A. Przykłady
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
-ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52b59f9f83cf791c03fb49ca726273a2c977e58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342546"
 ---
 # <a name="a-examples"></a>A. Przykłady
 
-Poniżej przedstawiono przykłady konstrukcje zdefiniowane w tym dokumencie. Instrukcja następujące dyrektywy jest złożone, tylko wtedy, gdy jest to konieczne, a tworzone jest wcięcie instrukcję bez złożony z dyrektywą przed nim.
+Poniżej przedstawiono przykłady konstrukcji zdefiniowanych w tym dokumencie. Instrukcja po dyrektywie jest złożona tylko wtedy, gdy jest to konieczne, a instrukcja niezłożona jest wcięty z dyrektywy poprzedzającej ją.
 
-## <a name="a1-a-simple-loop-in-parallel"></a>A.1 A prostej pętli równoległych
+## <a name="a1-a-simple-loop-in-parallel"></a>A. 1 prosta pętla równoległa
 
-Poniższy przykład pokazuje, jak zrównoleglić pętlę przy użyciu [równoległe w](2-directives.md#251-parallel-for-construct) dyrektywy. Zmienna iteracji pętli jest domyślnie prywatny, dzięki czemu nie trzeba jawnie określić je w klauzuli prywatnej.
+W poniższym przykładzie pokazano, jak zrównoleglanie pętlę przy użyciu metody [Parallel for](2-directives.md#251-parallel-for-construct) . Zmienna iteracji pętli jest domyślnie prywatna, więc nie jest konieczna do określenia jej jawnie w klauzuli prywatnej.
 
 ```cpp
 #pragma omp parallel for
@@ -23,9 +24,9 @@ Poniższy przykład pokazuje, jak zrównoleglić pętlę przy użyciu [równoleg
         b[i] = (a[i] + a[i-1]) / 2.0;
 ```
 
-## <a name="a2-conditional-compilation"></a>A.2 kompilacja warunkowa
+## <a name="a2-conditional-compilation"></a>Kompilacja warunkowa A. 2
 
-Poniższe przykłady pokazują korzystanie z kompilacji warunkowej, użycie makra OpenMP [_OPENMP](2-directives.md#22-conditional-compilation). Za pomocą kompilacji OpenMP `_OPENMP` makro staje się zdefiniowane.
+Poniższe przykłady ilustrują użycie kompilacji warunkowej przy użyciu makra OpenMP [_OPENMP](2-directives.md#22-conditional-compilation). W przypadku kompilacji OpenMP `_OPENMP` makro zostanie zdefiniowane.
 
 ```cpp
 # ifdef _OPENMP
@@ -33,7 +34,7 @@ Poniższe przykłady pokazują korzystanie z kompilacji warunkowej, użycie makr
 # endif
 ```
 
-Zdefiniowane — operator preprocesora umożliwia więcej niż jednego makro testować w pojedynczej dyrektywy.
+Zdefiniowany operator preprocesora umożliwia przetestowanie więcej niż jednego makra w jednej dyrektywie.
 
 ```cpp
 # if defined(_OPENMP) && defined(VERBOSE)
@@ -41,9 +42,9 @@ Zdefiniowane — operator preprocesora umożliwia więcej niż jednego makro tes
 # endif
 ```
 
-## <a name="a3-parallel-regions"></a>A.3 regionów równoległych
+## <a name="a3-parallel-regions"></a>A. 3 równoległe regiony
 
-[Równoległe](2-directives.md#23-parallel-construct) dyrektywa może być używana w zgrubnym ziarna programów do równoległego przetwarzania. W poniższym przykładzie każdy wątek w równoległego regionu decyduje, jaka część globalnej tablicy `x` do pracy, na podstawie liczby wątków:
+Dyrektywy [Parallel](2-directives.md#23-parallel-construct) można używać w programach równoległych ze grubym ziarnem. W poniższym przykładzie każdy wątek w regionie równoległym decyduje o tym, z której częścią tablicy globalnej `x` pracuje, na podstawie numeru wątku:
 
 ```cpp
 #pragma omp parallel shared(x, npoints) private(iam, np, ipoints)
@@ -55,9 +56,9 @@ Zdefiniowane — operator preprocesora umożliwia więcej niż jednego makro tes
 }
 ```
 
-## <a name="a4-the-nowait-clause"></a>A.4 klauzuli nowait
+## <a name="a4-the-nowait-clause"></a>A. 4 klauzula nowait
 
-Jeśli istnieje wiele niezależnych pętli w ramach równoległego regionu, możesz użyć [nowait](2-directives.md#241-for-construct) klauzulę, aby uniknąć dorozumianych barierę na końcu `for` dyrektywy w następujący sposób:
+Jeśli istnieje wiele niezależnych pętli w ramach równoległego regionu, można użyć klauzuli [nowait](2-directives.md#241-for-construct) , aby uniknąć implikowanej bariery na końcu `for` dyrektywy w następujący sposób:
 
 ```cpp
 #pragma omp parallel
@@ -71,9 +72,9 @@ Jeśli istnieje wiele niezależnych pętli w ramach równoległego regionu, moż
 }
 ```
 
-## <a name="a5-the-critical-directive"></a>A.5 dyrektywy critical
+## <a name="a5-the-critical-directive"></a>A. 5 Dyrektywa krytyczna
 
-Poniższy przykład zawiera kilka [krytyczne](2-directives.md#262-critical-construct) dyrektywy. W przykładzie pokazano kolejkowania modelu, w którym zadanie jest usuwane z kolejki i pracuje. Aby zabezpieczyć się przed wiele wątków tego samego zadania usuwania z kolejki, operacji usuwania z kolejki musi należeć do `critical` sekcji. Ponieważ dwie kolejki w tym przykładzie są niezależne, jest chroniony przez `critical` dyrektywy pod różnymi nazwami *liczbowa* i *yaxis*.
+Poniższy przykład zawiera kilka dyrektyw o [znaczeniu krytycznym](2-directives.md#262-critical-construct) . Przykład ilustruje model kolejkowania, w którym zadanie jest podstawione i pracowało na nim. Aby zapewnić ochronę przed wieloma wątkami, należy w sekcji wykonać operację usuwania z kolejki `critical` . Ponieważ dwie kolejki w tym przykładzie są niezależne, są chronione przez `critical` dyrektywy o różnych nazwach, *liczbowa* i *YAxis*.
 
 ```cpp
 #pragma omp parallel shared(x, y) private(x_next, y_next)
@@ -87,9 +88,9 @@ Poniższy przykład zawiera kilka [krytyczne](2-directives.md#262-critical-const
 }
 ```
 
-## <a name="a6-the-lastprivate-clause"></a>A.6 klauzuli lastprivate
+## <a name="a6-the-lastprivate-clause"></a>A. 6 klauzula lastprivate
 
-Czasami prawidłowe wykonanie zależy od wartości ostatniej iteracji pętli jest przypisywany do zmiennej. Programów, które musi zawierać takich zmiennych jako argumenty [lastprivate](2-directives.md#2723-lastprivate) klauzuli tak, aby wartości zmiennych są takie same jak kiedy pętla jest wykonywana sekwencyjnie.
+Poprawne wykonanie jest czasami uzależnione od wartości, która Ostatnia iteracja pętli przypisuje do zmiennej. Takie programy muszą wyświetlać wszystkie takie zmienne jako argumenty dla klauzuli [lastprivate](2-directives.md#2723-lastprivate) , tak aby wartości zmiennych były takie same, jak gdy pętla jest wykonywana sekwencyjnie.
 
 ```cpp
 #pragma omp parallel
@@ -101,11 +102,11 @@ Czasami prawidłowe wykonanie zależy od wartości ostatniej iteracji pętli jes
 a[i]=b[i];
 ```
 
-W poprzednim przykładzie wartość `i` na końcu równoległego regionu będzie równa `n-1`, jak w przypadku sekwencyjnych.
+W poprzednim przykładzie wartość `i` na końcu regionu równoległego będzie równa `n-1` , jak w przypadku sekwencyjnym.
 
-## <a name="a7-the-reduction-clause"></a>A.7 klauzuli reduction
+## <a name="a7-the-reduction-clause"></a>A. 7 klauzula redukcji
 
-W poniższym przykładzie pokazano [redukcji](2-directives.md#2726-reduction) klauzuli:
+Poniższy przykład ilustruje klauzulę [redukcji](2-directives.md#2726-reduction) :
 
 ```cpp
 #pragma omp parallel for private(i) shared(x, y, n) \
@@ -116,9 +117,9 @@ W poniższym przykładzie pokazano [redukcji](2-directives.md#2726-reduction) kl
     }
 ```
 
-## <a name="a8-parallel-sections"></a>A.8 sekcji równoległych
+## <a name="a8-parallel-sections"></a>A. 8 sekcje równoległe
 
-W poniższym przykładzie (dla [sekcji 2.4.2](2-directives.md#242-sections-construct)), funkcje *liczbowa*, *yaxis*, i *zaxis* mogą być wykonywane jednocześnie. Pierwszy `section` dyrektywa jest opcjonalne.  Wszystkie `section` dyrektyw, musi ono być widoczne w zakresie leksykalnym `parallel sections` konstruowania.
+W poniższym przykładzie (dla [sekcji 2.4.2](2-directives.md#242-sections-construct)) funkcje *liczbowa*, *YAxis* i *Zaxis* mogą być wykonywane współbieżnie. Pierwsza `section` dyrektywa jest opcjonalna.  Wszystkie `section` dyrektywy muszą pojawić się w zakresie leksykalnym `parallel sections` konstrukcji.
 
 ```cpp
 #pragma omp parallel sections
@@ -132,9 +133,9 @@ W poniższym przykładzie (dla [sekcji 2.4.2](2-directives.md#242-sections-const
 }
 ```
 
-## <a name="a9-single-directives"></a>A.9 pojedynczej dyrektywy
+## <a name="a9-single-directives"></a>A. 9 pojedyncze dyrektywy
 
-W poniższym przykładzie pokazano [pojedynczego](2-directives.md#243-single-construct) dyrektywy. W przykładzie, tylko jednego wątku (zazwyczaj pierwszy wątek napotka `single` dyrektywy) wyświetla komunikat o postępie. Użytkownik musi nie należy czynić żadnych założeń jako do wątku, który będzie wykonywał `single` sekcji. Wszystkie inne wątki pozwoli na pominięcie `single` sekcji, a następnie zatrzyma barierę na końcu `single` konstruowania. Jeśli inne wątki mogą kontynuować bez oczekiwania na wykonanie wątku `single` sekcji `nowait` można określić klauzuli w `single` dyrektywy.
+W poniższym przykładzie pokazano [pojedynczą](2-directives.md#243-single-construct) dyrektywę. W tym przykładzie tylko jeden wątek (zazwyczaj pierwszy wątek, który napotka `single` dyrektywę) drukuje komunikat o postępie. Użytkownik nie może wprowadzać żadnych założeń dotyczących tego, który wątek wykona `single` sekcję. Wszystkie pozostałe wątki pozostaną pominięte w `single` sekcji i przestaną się z bariery na końcu `single` konstrukcji. Jeśli inne wątki mogą działać bez oczekiwania na wątek wykonujący `single` sekcję, `nowait` można określić klauzulę w `single` dyrektywie.
 
 ```cpp
 #pragma omp parallel
@@ -150,9 +151,9 @@ W poniższym przykładzie pokazano [pojedynczego](2-directives.md#243-single-con
 }
 ```
 
-## <a name="a10-sequential-ordering"></a>A.10 porządku porządkowanie sekwencyjne
+## <a name="a10-sequential-ordering"></a>A. 10 porządkowanie sekwencyjne
 
-[Uporządkowane sekcje](2-directives.md#266-ordered-construct) są przydatne w przypadku sekwencyjne porządkowanie danych wyjściowych z pracy, która została wykonana równolegle. Indeksy w kolejności sekwencyjnej wyświetla następujący program:
+[Uporządkowane sekcje](2-directives.md#266-ordered-construct) są przydatne do sekwencyjnego porządkowania danych wyjściowych z pracy, które są wykonywane równolegle. Następujący program drukuje indeksy w kolejności sekwencyjnej:
 
 ```cpp
 #pragma omp for ordered schedule(dynamic)
@@ -165,9 +166,9 @@ void work(int k)
 }
 ```
 
-## <a name="a11-a-fixed-number-of-threads"></a>A.11 A stałej liczby wątków
+## <a name="a11-a-fixed-number-of-threads"></a>A. 11 stała liczba wątków
 
-Niektóre programy, zależy od stałej, prespecified liczbę wątków jest wykonywany poprawnie.  Ustawieniem domyślnym dla dynamicznego dostosowania liczby wątków jest zdefiniowane w implementacji, programów, które można wyłączyć możliwość dynamicznego wątków i ustaw liczbę wątków, które jawnie, aby zachować przenoszenia. Poniższy przykład pokazuje, jak to zrobić za pomocą [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function), i [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function):
+Niektóre programy są zależne od ustalonej, określonej przez określoną liczbę wątków do poprawnego wykonania.  Ponieważ domyślnym ustawieniem dynamicznego dostosowywania liczby wątków jest zdefiniowana implementacja, takie programy mogą wyłączyć funkcję wątków dynamicznych i ustawić liczbę wątków jawnie, aby zachować przenośność. Poniższy przykład pokazuje, jak to zrobić przy użyciu [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)i [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function):
 
 ```cpp
 omp_set_dynamic(0);
@@ -182,13 +183,13 @@ omp_set_num_threads(16);
 }
 ```
 
-W tym przykładzie program będzie działać prawidłowo tylko wtedy, gdy jest wykonywana przez 16 wątki. Jeśli wdrożenia nie może obsłużyć 16 wątków, zachowanie w tym przykładzie jest zdefiniowane w implementacji.
+W tym przykładzie program jest wykonywany prawidłowo tylko wtedy, gdy jest wykonywany przez 16 wątków. Jeśli implementacja nie może obsługiwać 16 wątków, zachowanie tego przykładu jest zdefiniowane przez implementację.
 
-Liczba wątków wykonywania równoległego regionu pozostają stałe podczas równoległego regionu, niezależnie od tego, wątki dynamicznej, ustawienie. Mechanizm dynamiczne wątków określa liczbę wątków używanych podczas uruchamiania równoległego regionu i utrzymuje stały czas trwania regionu.
+Liczba wątków wykonujących region równoległy pozostaje stała w ramach równoległego regionu, niezależnie od ustawienia wątków dynamicznych. Mechanizm dynamiczne wątki określa liczbę wątków do użycia na początku równoległego regionu i utrzymuje stałą na czas trwania regionu.
 
-## <a name="a12-the-atomic-directive"></a>A.12 dyrektywy niepodzielnej
+## <a name="a12-the-atomic-directive"></a>A. 12 dyrektywa niepodzielna
 
-Poniższy przykład pozwala uniknąć wyścigu (równoczesnych aktualizacji elementu *x* przez wiele wątków) przy użyciu [atomic](2-directives.md#264-atomic-construct) dyrektywy:
+Poniższy przykład pozwala uniknąć warunków wyścigu (równoczesnych aktualizacji elementu *x* przez wiele wątków) za pomocą dyrektywy [atomowej](2-directives.md#264-atomic-construct) :
 
 ```cpp
 #pragma omp parallel for shared(x, y, index, n)
@@ -200,13 +201,13 @@ Poniższy przykład pozwala uniknąć wyścigu (równoczesnych aktualizacji elem
     }
 ```
 
-Zaletą korzystania z `atomic` dyrektywy w tym przykładzie jest możliwość aktualizacji dwóch różnych elementów x są wykonywane równolegle. Jeśli [krytyczne](2-directives.md#262-critical-construct) — dyrektywa zamian jest używana, a następnie aktualizuje wszystkie elementy *x* są wykonywane szeregowo (choć nie w żadnym gwarantowana kolejność).
+Zaletą korzystania z `atomic` dyrektywy w tym przykładzie jest to, że umożliwia równoległe przeprowadzanie aktualizacji dwóch różnych elementów x. Jeśli zamiast tego użyto dyrektywy [krytycznej](2-directives.md#262-critical-construct) , wszystkie aktualizacje elementów *x* są wykonywane szeregowo (choć nie w żadnej gwarantowanej kolejności).
 
-`atomic` Dyrektywy dotyczy tylko instrukcja C lub C++ następujący bezpośrednio po nim.  W rezultacie elementy *y* nie zostaną zaktualizowane niepodzielne w tym przykładzie.
+`atomic`Dyrektywa ma zastosowanie tylko do instrukcji C lub C++ bezpośrednio po niej.  W związku z tym elementy *y* nie są aktualizowane w sposób niepodzielny w tym przykładzie.
 
-## <a name="a13-a-flush-directive-with-a-list"></a>A.13 A dyrektywy flush z listą
+## <a name="a13-a-flush-directive-with-a-list"></a>A. 13 dyrektywa Flush z listą
 
-W poniższym przykładzie użyto `flush` dyrektywę dla typu punkt-punkt synchronizacji określonych obiektów między parami wątków:
+W poniższym przykładzie zastosowano `flush` dyrektywę dla synchronizacji typu punkt-punkt dla określonych obiektów między parami wątków:
 
 ```cpp
 int   sync[NUMBER_OF_THREADS];
@@ -240,9 +241,9 @@ float work[NUMBER_OF_THREADS];
 }
 ```
 
-## <a name="a14-a-flush-directive-without-a-list"></a>A.14 A dyrektywy flush bez listy
+## <a name="a14-a-flush-directive-without-a-list"></a>A. 14 dyrektywa Flush bez listy
 
-Poniższy przykład (dla [sekcji 2.6.5](2-directives.md#265-flush-directive)) rozróżnia obiekty udostępnione wpływ `flush` dyrektywy z nie listy obiektów udostępnionych, które nie ma wpływu na:
+Poniższy przykład (dla [sekcji 2.6.5](2-directives.md#265-flush-directive)) odróżnia obiekty udostępnione, których dotyczy `flush` dyrektywa, bez listy obiektów udostępnionych, których nie dotyczy:
 
 ```cpp
 // omp_flush_without_list.c
@@ -297,9 +298,9 @@ int main()
 }
 ```
 
-## <a name="a15-the-number-of-threads-used"></a>A.15 liczby wykorzystywanych wątków
+## <a name="a15-the-number-of-threads-used"></a>A. 15 Liczba używanych wątków
 
-Rozważmy następujący przykład niepoprawny (dla [sekcji 3.1.2](3-run-time-library-functions.md#312-omp_get_num_threads-function)):
+Rozważmy następujący nieprawidłowy przykład (dla [sekcji 3.1.2](3-run-time-library-functions.md#312-omp_get_num_threads-function)):
 
 ```cpp
 np = omp_get_num_threads(); // misplaced
@@ -308,9 +309,9 @@ np = omp_get_num_threads(); // misplaced
         work(i);
 ```
 
-`omp_get_num_threads()` Wywołania zwraca 1 serial sekcji kodu, więc *potoki* zawsze będzie równy 1 w powyższym przykładzie. Aby określić liczbę wątków, które zostaną wdrożone do równoległego regionu, wywołanie powinno być w ramach równoległego regionu.
+`omp_get_num_threads()`Wywołanie zwraca 1 w sekcji szeregowej kodu, więc na przykład zawsze  będzie równa 1 w poprzednim przykładzie. Aby określić liczbę wątków, które zostaną wdrożone dla regionu równoległego, wywołanie powinno znajdować się wewnątrz regionu równoległego.
 
-Poniższy przykład pokazuje, jak ponownie zapisać ten program bez uwzględniania zapytanie dotyczące liczby wątków:
+Poniższy przykład pokazuje, jak ponownie napisać ten program bez uwzględniania zapytania o liczbę wątków:
 
 ```cpp
 #pragma omp parallel private(i)
@@ -320,9 +321,9 @@ Poniższy przykład pokazuje, jak ponownie zapisać ten program bez uwzględnian
 }
 ```
 
-## <a name="a16-locks"></a>A.16 blokad
+## <a name="a16-locks"></a>A. 16 blokad
 
-W poniższym przykładzie (dla [sekcji 3.2](3-run-time-library-functions.md#32-lock-functions)), typ argumentu dla funkcji blokady powinien być `omp_lock_t`, i że nie ma potrzeby opróżnić go.  Funkcje blokady spowodować, że wątki ze stanu bezczynności podczas oczekiwania na wpis do pierwszej sekcję krytyczną, ale także wykonywanie innych zadań podczas oczekiwania na zapis do drugiego.  `omp_set_lock` Bloków funkcji, ale `omp_test_lock` funkcja nie jest zaznaczone, dzięki czemu praca w `skip()` do zrobienia.
+W poniższym przykładzie (dla [sekcji 3,2](3-run-time-library-functions.md#32-lock-functions)) argument funkcji Lock powinien mieć typ `omp_lock_t` i nie ma potrzeby opróżniania.  Funkcje blokowania powodują, że wątki są bezczynne podczas oczekiwania na wpis w pierwszej sekcji krytycznej, ale w celu wykonania innych czynności podczas oczekiwania na wpis w drugim.  `omp_set_lock`Funkcja blokuje, ale `omp_test_lock` Funkcja nie zezwala na `skip()` wykonywane prace.
 
 ```cpp
 // omp_using_locks.c
@@ -360,9 +361,9 @@ int main() {
 }
 ```
 
-## <a name="a17-nestable-locks"></a>A.17 Zagnieżdżalnych blokad
+## <a name="a17-nestable-locks"></a>A. 17 blokad zagnieżdżenia
 
-Poniższy przykład (dla [sekcji 3.2](3-run-time-library-functions.md#32-lock-functions)) pokazuje, jak zagnieżdżalnych blokady może służyć do synchronizowania aktualizacji zarówno do całej struktury, jak i do jednej z jej członków.
+Poniższy przykład (dla [sekcji 3,2](3-run-time-library-functions.md#32-lock-functions)) pokazuje, jak można użyć blokady możliwej do synchronizowania aktualizacji zarówno do całej struktury, jak i do jednego z jej elementów członkowskich.
 
 ```cpp
 #include <omp.h>
@@ -405,9 +406,9 @@ void f(pair *p)
 }
 ```
 
-## <a name="a18-nested-for-directives"></a>Zagnieżdżone A.18 dla dyrektyw
+## <a name="a18-nested-for-directives"></a>A. 18 zagnieżdżenia dla dyrektyw
 
-Poniższy przykład `for` [zagnieżdżanie dyrektywy](2-directives.md#29-directive-nesting) jest zgodne, ponieważ wewnętrznych i zewnętrznych `for` dyrektywy powiązać z różnych regionów równoległych:
+Poniższy przykład `for` [zagnieżdżania dyrektywy](2-directives.md#29-directive-nesting) jest zgodny ze względu na to, że dyrektywy wewnętrzne i zewnętrzne są `for` powiązane z różnymi regionami równoległymi:
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -425,7 +426,7 @@ Poniższy przykład `for` [zagnieżdżanie dyrektywy](2-directives.md#29-directi
 }
 ```
 
-Następujące zmiany powyższego przykładu jest również zgodne:
+Następująca odmiana powyższego przykładu jest również zgodna:
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -448,11 +449,11 @@ void work1(int i, int n)
 }
 ```
 
-## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 przykłady pokazujące nieprawidłowe zagnieżdżanie podziału pracy dyrektywy
+## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A. 19 przykłady pokazujące nieprawidłowe zagnieżdżanie dyrektyw udostępniania pracy
 
-W przykładach w tej sekcji pokazano [zagnieżdżanie dyrektywy](2-directives.md#29-directive-nesting) reguły.
+Przykłady w tej sekcji ilustrują reguły [zagnieżdżania dyrektywy](2-directives.md#29-directive-nesting) .
 
-Poniższy przykład jest niezgodne ponieważ wewnętrznych i zewnętrznych `for` dyrektywy są gnieżdżone i powiązania do tej samej `parallel` dyrektywy:
+Poniższy przykład jest niezgodny, ponieważ dyrektywy wewnętrzne i zewnętrzne `for` są zagnieżdżone i powiązane z tą samą `parallel` dyrektywą:
 
 ```cpp
 void wrong1(int n)
@@ -470,7 +471,7 @@ void wrong1(int n)
 }
 ```
 
-Następująca wersja dynamicznie zagnieżdżonych powyższego przykładu jest również niezgodne:
+Następująca dynamicznie zagnieżdżona wersja powyższego przykładu jest również niezgodna:
 
 ```cpp
 void wrong2(int n)
@@ -493,7 +494,7 @@ void work1(int i, int n)
 }
 ```
 
-Poniższy przykład jest niezgodne ponieważ `for` i `single` dyrektywy są zagnieżdżone, a następnie powiązać ten sam równoległego regionu:
+Poniższy przykład jest niezgodny `for` , ponieważ dyrektywy i `single` są zagnieżdżone i są powiązane z tym samym regionem równoległym:
 
 ```cpp
 void wrong3(int n)
@@ -510,7 +511,7 @@ void wrong3(int n)
 }
 ```
 
-Poniższy przykład jest niezgodne ponieważ `barrier` dyrektywy wewnątrz `for` może doprowadzić do zakleszczenia:
+Poniższy przykład jest niezgodny, ponieważ `barrier` dyrektywa wewnątrz `for` może spowodować zakleszczenie:
 
 ```cpp
 void wrong4(int n)
@@ -528,7 +529,7 @@ void wrong4(int n)
 }
 ```
 
-Poniższy przykład jest niezgodne ponieważ `barrier` skutkuje zakleszczenie z faktu, że tylko jeden wątek jednocześnie można wprowadzić sekcję krytyczną:
+Poniższy przykład jest niezgodny, ponieważ `barrier` powoduje zakleszczenie ze względu na fakt, że tylko jeden wątek w danym momencie może wprowadzić sekcję krytyczną:
 
 ```cpp
 void wrong5()
@@ -545,7 +546,7 @@ void wrong5()
 }
 ```
 
-Poniższy przykład jest niezgodne ponieważ `barrier` skutkuje zakleszczenie z faktu, że tylko jeden wątek wykonuje `single` sekcji:
+Poniższy przykład jest niezgodny, ponieważ `barrier` powoduje zakleszczenie ze względu na fakt, że tylko jeden wątek wykonuje `single` sekcję:
 
 ```cpp
 void wrong6()
@@ -564,11 +565,11 @@ void wrong6()
 }
 ```
 
-## <a name="a20-bind-barrier-directives"></a>A.20 powiązanie barierę dyrektywy
+## <a name="a20-bind-barrier-directives"></a>A. 20 dyrektywy bariery powiązań
 
-Powiązania dyrektywy reguł wywołanie `barrier` dyrektywy, aby powiązać najbliższej otaczającej `parallel` dyrektywy. Aby uzyskać więcej informacji na temat powiązania dyrektywy, zobacz [sekcji 2.8](2-directives.md#28-directive-binding).
+Reguły powiązań dyrektywy odwołują się do `barrier` dyrektywy, aby powiązać ją z najbliższą otaczającą `parallel` dyrektywą. Aby uzyskać więcej informacji na temat powiązania dyrektywy, zobacz [sekcję 2,8](2-directives.md#28-directive-binding).
 
-W poniższym przykładzie, wywołanie funkcji z *głównego* do *sub2* jest zgodne, ponieważ `barrier` (w *sub3*) wiąże równoległego regionu w *sub2* . Wywołanie funkcji z *głównego* do *sub1* jest zgodne, ponieważ `barrier` wiąże równoległego regionu w podprocedury *sub2*.  Wywołanie funkcji z *głównego* do *sub3* jest zgodne, ponieważ `barrier` nie jest powiązana do dowolnego regionu równoległe i jest ignorowana. Ponadto `barrier` synchronizuje tylko zespół wątków w otaczającej równoległego regionu i nie wszystkie wątki, które są tworzone w *sub1*.
+W poniższym przykładzie wywołanie od *Main* do *sub2* jest zgodne, ponieważ `barrier` (in *sub3*) tworzy powiązanie z regionem równoległym w *sub2*. Wywołanie od *Main* do *sub1* jest zgodne, ponieważ `barrier` tworzy powiązanie z regionem równoległym w podprocedurie *sub2*.  Wywołanie od *Main* do *sub3* jest zgodne, ponieważ `barrier` nie jest powiązane z żadnym regionem równoległym i jest ignorowane. Ponadto `barrier` synchronizuje zespół wątków w otaczającym regionie równoległym, a nie wszystkie wątki utworzone w *sub1*.
 
 ```cpp
 int main()
@@ -603,9 +604,9 @@ void sub3(int n)
 }
 ```
 
-## <a name="a21-scope-variables-with-the-private-clause"></a>A.21 zmienne zakresu z klauzulą prywatną
+## <a name="a21-scope-variables-with-the-private-clause"></a>A. 21 zmienne Scope z klauzulą prywatną
 
-Wartości `i` i `j` w poniższym przykładzie zdefiniowano przy zamykaniu z równoległego regionu:
+Wartości `i` i `j` w poniższym przykładzie są niezdefiniowane przy opuszczaniu z regionu równoległego:
 
 ```cpp
 int i, j;
@@ -619,11 +620,11 @@ j = 2;
 printf_s("%d %d\n", i, j);
 ```
 
-Aby uzyskać więcej informacji na temat `private` klauzuli, zobacz [sekcji 2.7.2.1](2-directives.md#2721-private).
+Aby uzyskać więcej informacji na temat `private` klauzuli, zobacz [sekcję 2.7.2.1](2-directives.md#2721-private).
 
-## <a name="a22-the-defaultnone-clause"></a>A.22 klauzulą default(none)
+## <a name="a22-the-defaultnone-clause"></a>A. 22 klauzula default (None)
 
-Poniższy przykład wyróżnia zmienne, których dotyczy `default(none)` klauzuli ze zmiennych, które nie są:
+Poniższy przykład odróżnia zmienne, których dotyczy `default(none)` klauzula, ze zmiennych, które nie są:
 
 ```cpp
 // openmp_using_clausedefault.c
@@ -658,15 +659,15 @@ void fun(int a) {
 }
 ```
 
-Aby uzyskać więcej informacji na temat `default` klauzuli, zobacz [sekcji 2.7.2.5](2-directives.md#2725-default).
+Aby uzyskać więcej informacji na temat `default` klauzuli, zobacz [sekcję 2.7.2.5](2-directives.md#2725-default).
 
-## <a name="a23-examples-of-the-ordered-directive"></a>A.23 przykłady dyrektyw uporządkowanych
+## <a name="a23-examples-of-the-ordered-directive"></a>A. 23 przykłady uporządkowanej dyrektywy
 
-Można mieć wiele uporządkowanych sekcje z `for` określenia `ordered` klauzuli. Pierwszy przykład jest niezgodne, ponieważ interfejs API określa następujące reguły:
+Możliwe jest posiadanie wielu uporządkowanych sekcji z `for` określoną `ordered` klauzulą. Pierwszy przykład jest niezgodny, ponieważ interfejs API określa następującą regułę:
 
-"Iteracji pętli za pomocą `for` konstrukcja nie należy wykonać takie same `ordered` dyrektywy więcej niż jeden raz, a nie musisz wykonać więcej niż jedną `ordered` dyrektywy." (Zobacz [sekcji 2.6.6](2-directives.md#266-ordered-construct).)
+"Iteracja pętli z `for` konstrukcyjną nie może wykonać tej samej `ordered` dyrektywy więcej niż raz i nie może wykonać więcej niż jednej `ordered` dyrektywy". (Zobacz [sekcję 2.6.6](2-directives.md#266-ordered-construct)).
 
-W tym przykładzie niezgodnych wszystkich iteracji wykonać dwie sekcje uporządkowane:
+W tym niezgodnym przykładzie wszystkie iteracje wykonują dwie uporządkowane sekcje:
 
 ```cpp
 #pragma omp for ordered
@@ -682,7 +683,7 @@ for (i=0; i<n; i++)
 }
 ```
 
-W poniższym przykładzie zgodne przedstawiono `for` z więcej niż jednym uporządkowane sekcji:
+Poniższy zgodny przykład przedstawia `for` z więcej niż jedną sekcją uporządkowaną:
 
 ```cpp
 #pragma omp for ordered
@@ -706,9 +707,9 @@ for (i=0; i<n; i++)
 }
 ```
 
-## <a name="a24-example-of-the-private-clause"></a>A.24 przykład klauzuli prywatnej
+## <a name="a24-example-of-the-private-clause"></a>A. 24 przykład klauzuli prywatnej
 
-[Prywatnej](2-directives.md#2721-private) klauzuli równoległego regionu działa tylko w dla zakresu leksykalne regionu, a nie dla zakresu dynamicznego regionu.  W związku z tym w następującym przykładzie, wszelkie używa zmiennej *a* w `for` pętli w procedurze *f* odwołuje się do prywatnej kopii *a*, podczas użycia w Procedura *g* odwołuje się do globalnej *a*.
+Klauzula [Private](2-directives.md#2721-private) regionu równoległego działa tylko dla leksykalnego zakresu regionu, a nie do dynamicznego zakresu regionu.  W związku z tym w powyższym przykładzie wszystkie zastosowania zmiennej *a* w `for` pętli w procedurze *f* odwołuje się do prywatnej kopii, a użycie w ramach procedury *g* odwołuje się do globalnej *a*.
 
 ```cpp
 int a;
@@ -733,9 +734,9 @@ void g(int k, int n)
 }
 ```
 
-## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 przykłady klauzuli atrybutu danych prywatnej kopii
+## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A. 25 przykłady klauzuli copyprivate Data Attribute
 
-**Przykład 1.** [Copyprivate](2-directives.md#2728-copyprivate) klauzuli może służyć do emisji wartości uzyskanych przez pojedynczy wątek bezpośrednio do wszystkich wystąpień w zmiennych prywatnych w innych wątków.
+**Przykład 1:** Klauzula [copyprivate](2-directives.md#2728-copyprivate) może służyć do emisji wartości uzyskanych przez pojedynczy wątek bezpośrednio do wszystkich wystąpień zmiennych prywatnych w innych wątkach.
 
 ```cpp
 float x, y;
@@ -755,9 +756,9 @@ void init( )
 }
 ```
 
-W przypadku rutynowych *init* jest wywoływana z regionu szeregowe, jego zachowanie nie ma wpływu na obecność dyrektywy. Po wywołaniu *get_values* procedury zostało wykonane przez jeden wątek, żadnego wątku pozostawia konstrukcja do prywatnego obiekty wskazywany przez *a*, *b*, *x*, i *y* w wszystkie wątki zdefiniowano stają się przy użyciu wartości do odczytu.
+W przypadku wywołania procedury *init* z regionu szeregowego jego zachowanie nie ma wpływ na obecność dyrektyw. Gdy wywołanie procedury *get_values* zostało wykonane przez jeden wątek, żaden wątek nie opuszcza konstrukcji do momentu, gdy obiekty prywatne wyznaczony przez *,* *b*, *x* i *y* we wszystkich wątkach nie zostaną zdefiniowane z wartościami odczytanymi.
 
-**Przykład 2.** W przeciwieństwie do poprzedniego przykładu załóżmy, że odczytu muszą być wykonywane przez określonego wątku, załóżmy, że głównego wątku. W tym przypadku `copyprivate` nie można używać klauzuli w celu emisji bezpośrednio, ale może służyć do zapewnienia dostępu do udostępnionych obiektów tymczasowych.
+**Przykład 2:** W przeciwieństwie do poprzedniego przykładu Załóżmy, że odczyt musi być wykonywany przez określony wątek, Wymów wątek główny. W tym przypadku `copyprivate` klauzula nie może być używana do bezpośredniej emisji, ale może służyć do zapewnienia dostępu do tymczasowego obiektu udostępnionego.
 
 ```cpp
 float read_next( )
@@ -788,7 +789,7 @@ float read_next( )
 }
 ```
 
-**Przykład 3:** Załóżmy, że liczba obiektów blokady wymaganymi w ramach równoległego regionu łatwo nie można ustalić przed jej wprowadzeniem. `copyprivate` Klauzuli może służyć do zapewnienia dostępu do blokady współużytkowanej obiektów, które są przydzielane w ramach równoległego regionu.
+**Przykład 3:** Załóżmy, że nie można łatwo określić liczby obiektów blokowania wymaganych w ramach równoległego regionu przed wprowadzeniem go. `copyprivate`Klauzula może służyć do zapewnienia dostępu do współużytkowanych obiektów blokady, które są przydzielone w tym regionie równoległym.
 
 ```cpp
 #include <omp.h>
@@ -807,9 +808,9 @@ omp_lock_t *new_lock()
 }
 ```
 
-## <a name="a26-the-threadprivate-directive"></a>A.26 dyrektywy threadprivate
+## <a name="a26-the-threadprivate-directive"></a>A. 26 dyrektywa threadprivate
 
-W poniższych przykładach pokazano sposób użycia [threadprivate](2-directives.md#271-threadprivate-directive) dyrektywy, aby nadać każdy wątek oddzielne licznika.
+W poniższych przykładach pokazano, jak za pomocą dyrektywy [threadprivate](2-directives.md#271-threadprivate-directive) przydzielić każdy wątek osobnym licznikiem.
 
 ### <a name="example-1"></a>Przykład 1
 
@@ -836,12 +837,12 @@ int sub()
 }
 ```
 
-## <a name="a27-c99-variable-length-arrays"></a>A.27 C99 o zmiennej długości tablic
+## <a name="a27-c99-variable-length-arrays"></a>A. 27 tablic o zmiennej długości C99
 
-Poniższy przykład pokazuje sposób użycia tablice o długości zmiennej C99 (VLAs) w [firstprivate](2-directives.md#2722-firstprivate) dyrektywy.
+Poniższy przykład ilustruje sposób używania tablic C99 o zmiennej długości (VLAs) w dyrektywie [firstprivate](2-directives.md#2722-firstprivate) .
 
 > [!NOTE]
-> Tablice o zmiennej długości, nie są obecnie obsługiwane w programie Visual C++.
+> Tablice o zmiennej długości nie są obecnie obsługiwane w Visual C++.
 
 ```cpp
 void f(int m, int C[m][m])
@@ -853,9 +854,9 @@ void f(int m, int C[m][m])
 }
 ```
 
-## <a name="a28-the-numthreads-clause"></a>A.28 klauzuli num_threads
+## <a name="a28-the-num_threads-clause"></a>A. 28 klauzula num_threads
 
-W poniższym przykładzie pokazano [num_threads](2-directives.md#23-parallel-construct) klauzuli. Równoległego regionu jest wykonywane przy użyciu maksymalnie 10 wątków.
+Poniższy przykład demonstruje klauzulę [num_threads](2-directives.md#23-parallel-construct) . Region równoległy jest wykonywany z maksymalnie 10 wątkami.
 
 ```cpp
 #include <omp.h>
@@ -870,9 +871,9 @@ main()
 }
 ```
 
-## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>A.29 konstrukcje podziału pracy w konstrukcji krytycznej
+## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>A. 29 konstrukcje udostępniania pracy wewnątrz konstrukcji krytycznej
 
-Poniższy przykład demonstruje użycie konstrukcji podziału pracy w ramach `critical` konstruowania. W tym przykładzie jest zgodne, ponieważ konstruowania podziału pracy i `critical` konstrukcja nie powiązać z tym samym regionie równoległych.
+Poniższy przykład ilustruje użycie konstrukcji podziału pracy w `critical` konstrukcji. Ten przykład jest zgodny, ponieważ konstrukcja i konstrukcja udostępniania pracy `critical` nie są powiązane z tym samym regionem równoległym.
 
 ```cpp
 void f()
@@ -897,9 +898,9 @@ void f()
 }
 ```
 
-## <a name="a30-reprivatization"></a>A.30 Reprivatization
+## <a name="a30-reprivatization"></a>A. 30 reprywatyzacji
 
-W poniższym przykładzie pokazano reprivatization zmiennych. Mogą zostać oznaczone jako zmienne prywatne `private` ponownie w dyrektywie zagnieżdżonych. Nie należy udostępniać tych zmiennych w otaczającej równoległego regionu.
+Poniższy przykład demonstruje reprywatyzacji zmiennych. Zmienne prywatne można oznaczyć `private` ponownie w dyrektywie zagnieżdżonej. Nie musisz udostępniać tych zmiennych w otaczającym regionie równoległym.
 
 ```cpp
 int i, a;
@@ -915,9 +916,9 @@ int i, a;
 }
 ```
 
-## <a name="a31-thread-safe-lock-functions"></a>A.31 funkcje blokady wielowątkowości metodą o bezpiecznych wątkach
+## <a name="a31-thread-safe-lock-functions"></a>A. 31 funkcje bezpiecznego blokowania wątków
 
-Następujące C++ przykład pokazuje, jak można zainicjować tablicy blokady w równoległego regionu za pomocą [funkcje omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
+Poniższy przykład języka C++ pokazuje, jak zainicjować tablicę blokad w regionie równoległym przy użyciu [omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
 
 ```cpp
 // A_13_omp_init_lock.cpp
