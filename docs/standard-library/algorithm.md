@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; algorytm&gt;'
 title: '&lt;algorytm&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42f03372d01ac2d3218ce5844b86e92526055bbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163772"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorytm&gt;
 
@@ -57,13 +58,13 @@ Algorytmy liczbowe standardowej biblioteki języka C++, które są udostępniane
 |[copy_backward](algorithm-functions.md#copy_backward)|Przypisuje wartości elementów z zakresu źródłowego do zakresu docelowego, iterując przez sekwencję źródłową elementów oraz przypisując im nowe pozycje w kierunku do tyłu.|
 |[copy_if](algorithm-functions.md#copy_if)|Kopiuj wszystkie elementy w danym zakresie, które testują **`true`** pod kątem określonego warunku|
 |[copy_n](algorithm-functions.md#copy_n)|Kopiuje określoną liczbę elementów.|
-|[count](algorithm-functions.md#count)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonej wartości.|
+|[liczbą](algorithm-functions.md#count)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonej wartości.|
 |[count_if](algorithm-functions.md#count_if)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonego warunku.|
 |[większy](algorithm-functions.md#equal)|Porównuje dwa zakresy element po elemencie, pod względem równości lub równoważności w sensie określonym przez predykat binarny.|
 |[equal_range](algorithm-functions.md#equal_range)|Wyszukuje parę pozycji w uporządkowanym zakresie, pierwszą mniejszą lub równoważną położeniu określonego elementu, a drugą większą niż pozycja elementu, gdzie sens równoważności lub szeregowania używany do ustanawiania pozycji w sekwencji może zostać określony przez predykat binarny.|
 |[pełni](algorithm-functions.md#fill)|Przypisuje tę samą nową wartość każdemu elementowi w określonym zakresie.|
 |[fill_n](algorithm-functions.md#fill_n)|Przypisuje nową wartość określonej liczbie elementów z zakresu, począwszy od konkretnego elementu.|
-|[find](algorithm-functions.md#find)|Lokalizuje pozycję pierwszego wystąpienia elementu w zakresie, który ma określoną wartość.|
+|[wyświetlić](algorithm-functions.md#find)|Lokalizuje pozycję pierwszego wystąpienia elementu w zakresie, który ma określoną wartość.|
 |[find_end](algorithm-functions.md#find_end)|Wyszukuje w zakresie ostatnią podsekwencję, która jest identyczna z określoną sekwencją lub jest równoważna w sensie określonym przez predykat binarny.|
 |[find_first_of](algorithm-functions.md#find_first_of)|Wyszukuje pierwsze wystąpienie którejś z kilku wartości w zakresie docelowym lub pierwsze wystąpienie któregoś z kilku elementów, które są równoważne w sensie określonym przez predykat binarny dla określonego zestawu elementów.|
 |[find_if](algorithm-functions.md#find_if)|Lokalizuje pozycję pierwszego wystąpienia elementu w zakresie, który spełnia określony warunek.|
@@ -84,7 +85,7 @@ Algorytmy liczbowe standardowej biblioteki języka C++, które są udostępniane
 |[lexicographical_compare](algorithm-functions.md#lexicographical_compare)|Porównuje dwie sekwencje element po elemencie, aby określić, która z nich jest mniejsza.|
 |[lower_bound](algorithm-functions.md#lower_bound)|Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż lub równoważną określonej wartości, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[make_heap](algorithm-functions.md#make_heap)|Konwertuje elementy z określonego zakresu na stertę, w której pierwszy element jest największy i dla której kryterium sortowania może być określone przez predykat binarny.|
-|[max](algorithm-functions.md#max)|Porównuje dwa obiekty i zwraca większy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.|
+|[Maksymalny](algorithm-functions.md#max)|Porównuje dwa obiekty i zwraca większy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.|
 |[max_element](algorithm-functions.md#max_element)|Znajduje pierwsze wystąpienie największego elementu w określonym zakresie, gdzie kryterium sortowania może być określone przez predykat binarny.|
 |[połączenie](algorithm-functions.md#merge)|Łączy wszystkie elementy z dwóch następujących po sobie posortowanych zakresów źródłowych w pojedynczy posortowany zakres docelowy, gdzie kryterium szeregowania może być określone przez predykat binarny.|
 |[min](algorithm-functions.md#min)|Porównuje dwa obiekty i zwraca mniejszy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.|
@@ -133,7 +134,7 @@ Algorytmy liczbowe standardowej biblioteki języka C++, które są udostępniane
 |[wymiany](algorithm-functions.md#swap)|Wymienia wartości elementów między dwoma typami obiektów, przypisując zawartość pierwszego obiektu do drugiego obiektu, a zawartość drugiego do pierwszego.|
 |[swap_ranges](algorithm-functions.md#swap_ranges)|Zamienia elementy jednego zakresu przez elementy innego zakresu, zakresy mają równe wielkości.|
 |[przekształcania](algorithm-functions.md#transform)|Stosuje określony obiekt funkcji dla każdego elementu w zakresie sortowania lub dla pary elementów z dwóch zakresów sortowania i kopiuje zwracane wartości obiektu funkcji do zakresu docelowego.|
-|[unique](algorithm-functions.md#unique)|Usuwa zduplikowane elementy, które sąsiadują ze sobą w określonym zakresie.|
+|[unikatowy](algorithm-functions.md#unique)|Usuwa zduplikowane elementy, które sąsiadują ze sobą w określonym zakresie.|
 |[unique_copy](algorithm-functions.md#unique_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego z wyjątkiem zduplikowanych elementów, które ze sobą sąsiadują.|
 |[upper_bound](algorithm-functions.md#upper_bound)|Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż określona wartość, gdzie kryterium sortowania może być określone przez predykat binarny.|
 
