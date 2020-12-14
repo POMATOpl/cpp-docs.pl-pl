@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operacjach graficznych (C++/CLI)'
 title: Operacje graficzne (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,26 +19,26 @@ helpviewer_keywords:
 - GDI+ [C++], converting image file formats
 - graphics [C++], converting image file formats
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
-ms.openlocfilehash: c7c6d62eb4059069e6e266544ce6323c63dd15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84dbc75aa306219b8733848ece5c594ca40a0489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223545"
 ---
 # <a name="graphics-operations-ccli"></a>Operacje graficzne (C++/CLI)
 
-Pokazuje manipulowania obrazu za pomocą zestawu Windows SDK.
+Ilustruje manipulowanie obrazami przy użyciu Windows SDK.
 
-W poniższych tematach pokazano użycie <xref:System.Drawing.Image?displayProperty=fullName> klasy, aby wykonywać operacje na obrazie.
+W poniższych tematach przedstawiono <xref:System.Drawing.Image?displayProperty=fullName> sposób użycia klasy do przeprowadzenia manipulowania obrazem.
 
-## <a name="display"></a> Wyświetlanie obrazów za pomocą programu .NET Framework
+## <a name="display-images-with-the-net-framework"></a><a name="display"></a> Wyświetlanie obrazów z .NET Framework
 
-Poniższy przykład kodu zmienia program obsługi zdarzeń OnPaint wskaźnik, aby pobrać <xref:System.Drawing.Graphics> obiektu dla tego formularza. <xref:System.Windows.Forms.Form.OnPaint%2A> Funkcji jest przeznaczona dla aplikacji Windows Forms, najprawdopodobniej utworzone za pomocą Kreatora aplikacji Visual Studio.
+Poniższy przykład kodu modyfikuje obsługę zdarzeń OnPaint, aby pobrać wskaźnik do <xref:System.Drawing.Graphics> obiektu w formularzu głównym. <xref:System.Windows.Forms.Form.OnPaint%2A>Funkcja jest przeznaczona dla aplikacji Windows Forms, która prawdopodobnie została utworzona za pomocą Kreatora aplikacji Visual Studio.
 
-Obraz, który jest reprezentowany przez <xref:System.Drawing.Image> klasy. Dane obrazu są ładowane z pliku jpg przy użyciu <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName> metody. Przed narysowaniem obrazu do formularza, rozmiarów formularza do pomieszczenia obrazu. Rysowanie obrazu odbywa się za pomocą <xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName> metody.
+Obraz jest reprezentowany przez <xref:System.Drawing.Image> klasę. Dane obrazu są ładowane z pliku jpg przy użyciu <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName> metody. Przed narysowaniem obrazu w formularzu zmieniany jest rozmiar formularza w celu dopasowania go do obrazu. Rysowanie obrazu odbywa się przy użyciu <xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName> metody.
 
-<xref:System.Drawing.Graphics> i <xref:System.Drawing.Image> klasy znajdują się w <xref:System.Drawing?displayProperty=fullName> przestrzeni nazw.
+<xref:System.Drawing.Graphics>Klasy i <xref:System.Drawing.Image> są zarówno w <xref:System.Drawing?displayProperty=fullName> przestrzeni nazw.
 
 ### <a name="example"></a>Przykład
 
@@ -57,9 +58,9 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe) override
 }
 ```
 
-## <a name="draw"></a> Rysowanie kształtów za pomocą programu .NET Framework
+## <a name="draw-shapes-with-the-net-framework"></a><a name="draw"></a> Rysowanie kształtów za pomocą .NET Framework
 
-Poniższy przykład kodu wykorzystuje <xref:System.Drawing.Graphics> klasy, aby zmodyfikować <xref:System.Windows.Forms.Form.OnPaint%2A> programu obsługi zdarzeń do pobrania wskaźnika do <xref:System.Drawing.Graphics> obiektu dla tego formularza. This, wskaźnik jest następnie używany do Ustaw kolor tła formularza i rysowanie linii i usługi za pomocą łuk <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> i <xref:System.Drawing.Graphics.DrawArc%2A> metody.
+Poniższy przykład kodu używa klasy, <xref:System.Drawing.Graphics> Aby zmodyfikować <xref:System.Windows.Forms.Form.OnPaint%2A> procedurę obsługi zdarzeń w celu pobrania wskaźnika do <xref:System.Drawing.Graphics> obiektu w formularzu głównym. Ten wskaźnik służy następnie do ustawiania koloru tła formularza i rysowania linii i łuku przy użyciu <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> <xref:System.Drawing.Graphics.DrawArc%2A> metod i.
 
 ### <a name="example"></a>Przykład
 
@@ -91,9 +92,9 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override
 }
 ```
 
-## <a name="rotate"></a> Obracanie obrazów za pomocą programu .NET Framework
+## <a name="rotate-images-with-the-net-framework"></a><a name="rotate"></a> Obróć obrazy za pomocą .NET Framework
 
-Poniższy przykład kodu demonstruje użycie <xref:System.Drawing.Image?displayProperty=fullName> klasy, aby załadować obraz z dysku, Obróć go o 90 stopni i zapisz go jako nowy plik jpg.
+Poniższy przykład kodu demonstruje użycie <xref:System.Drawing.Image?displayProperty=fullName> klasy do załadowania obrazu z dysku, obrócenie go o 90 stopni i zapisanie go jako nowego pliku jpg.
 
 ### <a name="example"></a>Przykład
 
@@ -112,9 +113,9 @@ int main()
 }
 ```
 
-## <a name="convert"></a> Konwertowanie formatów plików obrazów za pomocą programu .NET Framework
+## <a name="convert-image-file-formats-with-the-net-framework"></a><a name="convert"></a> Konwertowanie formatów plików obrazów za pomocą .NET Framework
 
-Poniższy przykład kodu demonstruje <xref:System.Drawing.Image?displayProperty=fullName> klasy i <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> wyliczenie służące do konwertowania i Zapisz pliki obrazów. Poniższy kod ładuje obraz z pliku jpg i zapisuje go w formatach plików GIF i BMP.
+Poniższy przykład kodu demonstruje <xref:System.Drawing.Image?displayProperty=fullName> klasę i <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> Wyliczenie używane do konwertowania i zapisywania plików obrazów. Poniższy kod ładuje obraz z pliku JPG, a następnie zapisuje go w formatach plików GIF i BMP.
 
 ### <a name="example"></a>Przykład
 
@@ -141,7 +142,7 @@ int main()
 
 [Informacje o kodzie zarządzanym GDI+](/dotnet/framework/winforms/advanced/about-gdi-managed-code)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

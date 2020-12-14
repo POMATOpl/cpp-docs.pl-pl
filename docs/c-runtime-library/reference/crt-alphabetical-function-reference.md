@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: UCRT — alfabetyczne odwołanie do funkcji'
 title: UCRT alfabetyczne odwołanie do funkcji
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: af75a52dcc6659e80ae1155ffe4de2c8c1dee4bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221608"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>UCRT alfabetyczne odwołanie do funkcji
 
@@ -319,7 +320,7 @@ Dokumentacja biblioteki uniwersalnego środowiska uruchomieniowego języka C (UC
 
 [_clearfp](clear87-clearfp.md)
 
-[zegar](clock.md)
+[Zegarek](clock.md)
 
 [clog](clog-clogf-clogl.md)
 
@@ -3385,7 +3386,7 @@ Dokumentacja biblioteki uniwersalnego środowiska uruchomieniowego języka C (UC
 
 [_write](write.md)
 
-[prawem](posix-write.md)
+[write (zapis)](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 
@@ -3487,7 +3488,7 @@ Dokumentacja biblioteki uniwersalnego środowiska uruchomieniowego języka C (UC
 
 ## <a name="x"></a>X
 
-[xor](xor.md)
+[XOR](xor.md)
 
 [xor_eq](xor-eq.md)
 

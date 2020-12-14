@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _cgets, _cgetws'
 title: _cgets, _cgetws
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ac712c7ee51c3f06dfe1dd4e881630768a7e6b20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221686"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -76,13 +77,13 @@ Lokalizacja magazynu dla danych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`_cgets`i `_cgetws` zwraca wskaźnik do początku ciągu, w `buffer[2]`. Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają **wartości null** i ustawiają `errno` na `EINVAL`.
+`_cgets` i `_cgetws` zwraca wskaźnik do początku ciągu, w `buffer[2]` . Jeśli `buffer` ma **wartość null**, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracają **wartości null** i ustawiają `errno` na `EINVAL` .
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje odczytują ciąg znaków z konsoli programu i przechowują ciąg i jego długość w lokalizacji wskazywanej przez `buffer`. `buffer` Parametr musi być wskaźnikiem do tablicy znaków. Pierwszy element tablicy, `buffer[0]`, musi zawierać maksymalną długość (w znakach) ciągu, który ma zostać odczytany. Tablica musi zawierać wystarczającą liczbę elementów do przechowania ciągu, kończący znak null (' \ 0 ') i 2 dodatkowe bajty. Funkcja odczytuje znaki do momentu, aż zostanie odczytana kombinacja powrotu karetki liniowej (CR-LF) lub podanej liczby znaków. Ciąg jest przechowywany od `buffer[2]`. Jeśli funkcja odczytuje CR-LF, przechowuje znak null (' \ 0 '). Funkcja przechowuje następnie rzeczywistą długość ciągu w drugim elemencie Array, `buffer[1]`.
+Te funkcje odczytują ciąg znaków z konsoli programu i przechowują ciąg i jego długość w lokalizacji wskazywanej przez `buffer` . `buffer`Parametr musi być wskaźnikiem do tablicy znaków. Pierwszy element tablicy, `buffer[0]` , musi zawierać maksymalną długość (w znakach) ciągu, który ma zostać odczytany. Tablica musi zawierać wystarczającą liczbę elementów do przechowania ciągu, kończący znak null (' \ 0 ') i 2 dodatkowe bajty. Funkcja odczytuje znaki do momentu, aż zostanie odczytana kombinacja powrotu karetki liniowej (CR-LF) lub podanej liczby znaków. Ciąg jest przechowywany od `buffer[2]` . Jeśli funkcja odczytuje CR-LF, przechowuje znak null (' \ 0 '). Funkcja przechowuje następnie rzeczywistą długość ciągu w drugim elemencie Array, `buffer[1]` .
 
-Ponieważ wszystkie klawisze edycji są aktywne, `_cgets` gdy `_cgetws` lub jest wywoływana w oknie konsoli, naciśnięcie klawisza F3 powtarza ostatnio wprowadzony wpis.
+Ponieważ wszystkie klawisze edycji są aktywne `_cgets` , gdy lub `_cgetws` jest wywoływana w oknie konsoli, naciśnięcie klawisza F3 powtarza ostatnio wprowadzony wpis.
 
 W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../c-runtime-library/secure-template-overloads.md).
 
@@ -98,8 +99,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_cgets`|\<CONIO. h>|
-|`_cgetws`|\<CONIO. h> lub \<WCHAR. h>|
+|`_cgets`|\<conio.h>|
+|`_cgetws`|\<conio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
@@ -147,7 +148,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Operacje We/Wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)

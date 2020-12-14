@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDataRecoveryHandler'
 title: Klasa CDataRecoveryHandler
 ms.date: 03/27/2019
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 72189916f4555152ccc8997600d8426e188bb65c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222141"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Klasa CDataRecoveryHandler
 
@@ -345,7 +346,7 @@ Nazwa dokumentu z *pDocument*.
 
 ### <a name="remarks"></a>Uwagi
 
-`CDataRecoveryHandler`Używa nazwy dokumentu jako klucza w *m_mapDocNameToAutosaveName*, *m_mapDocNameToDocumentPtr*i *m_mapDocNameToRestoreBool*. Ten parametr umożliwia `CDataRecoveryHandler` monitorowanie `CDocument` obiektów, nazwy pliku Autozapisu oraz ustawień Autozapisu.
+`CDataRecoveryHandler`Używa nazwy dokumentu jako klucza w *m_mapDocNameToAutosaveName*, *m_mapDocNameToDocumentPtr* i *m_mapDocNameToRestoreBool*. Ten parametr umożliwia `CDataRecoveryHandler` monitorowanie `CDocument` obiektów, nazwy pliku Autozapisu oraz ustawień Autozapisu.
 
 ## <a name="cdatarecoveryhandlergetnormaldocumenttitle"></a><a name="getnormaldocumenttitle"></a> CDataRecoveryHandler::GetNormalDocumentTitle
 

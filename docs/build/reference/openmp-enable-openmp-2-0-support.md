@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/OpenMP (Włącz obsługę OpenMP)
 title: /OpenMP (Włącz obsługę OpenMP)
 ms.date: 04/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: 6bd1ffcd9b21bfe22ed9424ee77edf43100abf6c
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 818cd6167bf56b9948a3d9f455b0153b4302e8df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221985"
 ---
 # <a name="openmp-enable-openmp-support"></a>/OpenMP (Włącz obsługę OpenMP)
 
@@ -23,7 +24,7 @@ Powoduje, że kompilator przetwarza [`#pragma omp`](../../preprocessor/omp.md) d
 
 ::: moniker range=">= msvc-160"
 
-> **/OpenMP** \[ **:**__eksperymentalne__ ]
+> **/OpenMP** \[ **:**__eksperymentalne__]
 
 ::: moniker-end
 
@@ -43,13 +44,13 @@ Kompilator języka C++ obsługuje obecnie standard OpenMP 2,0. Jednak program Vi
 
 ::: moniker-end
 
-Aplikacje skompilowane przy użyciu programu **/OpenMP** i **/CLR** można uruchamiać tylko w procesie domeny pojedynczego aplikacji. Wiele domen aplikacji nie jest obsługiwanych. Oznacza to, że po uruchomieniu konstruktora modułów ( `.cctor` ) wykrywa, czy proces jest kompilowany przy użyciu **/OpenMP** , a jeśli aplikacja jest załadowana do środowiska uruchomieniowego innego niż domyślne. Aby uzyskać więcej informacji, zobacz element [AppDomain](../../cpp/appdomain.md), [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md)i [inicjalizację zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md).
+Aplikacje skompilowane przy użyciu programu **/OpenMP** i **/CLR** można uruchamiać tylko w procesie domeny pojedynczego aplikacji. Wiele domen aplikacji nie jest obsługiwanych. Oznacza to, że po uruchomieniu konstruktora modułów ( `.cctor` ) wykrywa, czy proces jest kompilowany przy użyciu **/OpenMP**, a jeśli aplikacja jest załadowana do środowiska uruchomieniowego innego niż domyślne. Aby uzyskać więcej informacji, zobacz element [AppDomain](../../cpp/appdomain.md), [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md)i [inicjalizację zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md).
 
 Jeśli podjęto próbę załadowania aplikacji skompilowanej przy użyciu programu **/OpenMP** i **/CLR** do domeny aplikacji innej niż domyślna, <xref:System.TypeInitializationException> wyjątek jest zgłaszany poza debugerem, a `OpenMPWithMultipleAppdomainsException` w debugerze zostanie zgłoszony wyjątek.
 
 Te wyjątki mogą być również zgłaszane w następujących sytuacjach:
 
-- Jeśli aplikacja jest kompilowana przy użyciu **/CLR** , ale nie **/OpenMP** , i jest załadowana do domeny aplikacji innej niż domyślna, gdzie proces obejmuje aplikację skompilowaną przy użyciu **/OpenMP** .
+- Jeśli aplikacja jest kompilowana przy użyciu **/CLR** , ale nie **/OpenMP**, i jest załadowana do domeny aplikacji innej niż domyślna, gdzie proces obejmuje aplikację skompilowaną przy użyciu **/OpenMP**.
 
 - Jeśli aplikacja **/CLR** zostanie przekazana do narzędzia, takiego jak [regasm.exe](/dotnet/framework/tools/regasm-exe-assembly-registration-tool), które ładuje jego zestawy docelowe do domeny aplikacji innej niż domyślna.
 
@@ -61,7 +62,7 @@ Firma Microsoft nie zaleca pisania aplikacji **/OpenMP** , które zezwalają na 
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń **Configuration Properties**  >  stronę właściwości konfiguracja języka **C/C++**  >  **Language** .
+1. Rozwiń   >  stronę właściwości konfiguracja języka **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Obsługa OpenMP** .
 
@@ -73,9 +74,9 @@ Firma Microsoft nie zaleca pisania aplikacji **/OpenMP** , które zezwalają na 
 
 Poniższy przykład pokazuje niektóre efekty uruchomienia puli wątków zamiast używania puli wątków po jej uruchomieniu. Przy założeniu, że procesor x64, pojedynczy rdzeń, dwuprocesorowy, Pula wątków trwa od 16 MS. Po tej dacie istnieje niewielki koszt dla puli wątków.
 
-Gdy kompilujesz przy użyciu **/OpenMP** , drugie wywołanie TEST2 nigdy nie działa dłużej niż w przypadku kompilowania przy użyciu **/OpenMP-** , ponieważ nie ma uruchamiania puli wątków. W milionu iteracji wersja **/OpenMP** jest szybsza niż wersja **/OpenMP-** drugiego wywołania usługi TEST2. W przypadku 25 iteracji Rejestracja wersji **/OpenMP-** i **/OpenMP** jest mniejsza niż poziom szczegółowości zegara.
+Gdy kompilujesz przy użyciu **/OpenMP**, drugie wywołanie TEST2 nigdy nie działa dłużej niż w przypadku kompilowania przy użyciu **/OpenMP-**, ponieważ nie ma uruchamiania puli wątków. W milionu iteracji wersja **/OpenMP** jest szybsza niż wersja **/OpenMP-** drugiego wywołania usługi TEST2. W przypadku 25 iteracji Rejestracja wersji **/OpenMP-** i **/OpenMP** jest mniejsza niż poziom szczegółowości zegara.
 
-Jeśli w aplikacji jest tylko jedna pętla i działa ona w mniej niż 15 MS (dostosowane do przybliżonego obciążenia na maszynie), **/OpenMP** może być nieodpowiednia. Jeśli jest wyższa, warto rozważyć użycie **/OpenMP** .
+Jeśli w aplikacji jest tylko jedna pętla i działa ona w mniej niż 15 MS (dostosowane do przybliżonego obciążenia na maszynie), **/OpenMP** może być nieodpowiednia. Jeśli jest wyższa, warto rozważyć użycie **/OpenMP**.
 
 ```cpp
 // cpp_compiler_options_openmp.cpp
@@ -121,7 +122,7 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md) \
 [Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md) \

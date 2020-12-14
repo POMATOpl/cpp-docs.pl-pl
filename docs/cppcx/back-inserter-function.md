@@ -1,21 +1,22 @@
 ---
-title: back_inserter, funkcja
+description: 'Dowiedz się więcej o: funkcja back_inserter'
+title: Funkcja back_inserter
 ms.date: 12/30/2016
 f1_keywords:
 - collection/Windows::Foundation::Collections::back_inserter
 helpviewer_keywords:
 - back_inserter Function
 ms.assetid: 91476338-5548-44b7-bc7e-2150f4fbe31a
-ms.openlocfilehash: 82df6b06389fa9f1c3ab83fa7b1da3bab092c68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2483c9947fbf3a7bc04024221ec6e582e416f84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223584"
 ---
-# <a name="backinserter-function"></a>back_inserter, funkcja
+# <a name="back_inserter-function"></a>Funkcja back_inserter
 
-Zwraca iterator, który służy do wstawiania elementów na końcu określonej kolekcji.
+Zwraca iterator, który jest używany do wstawiania elementów na końcu określonej kolekcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,10 +34,10 @@ Platform::BackInsertIterator<T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Parametrowi typu szablonu.
+Parametr typu szablonu.
 
 *v*<br/>
-Wskaźnik interfejsu, który zapewnia dostęp do podstawowej kolekcji.
+Wskaźnik interfejsu, który zapewnia dostęp do źródłowej kolekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -44,10 +45,10 @@ Iterator.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** collection.h
+**Nagłówek:** Collection. h
 
-**Namespace:** Windows::Foundation::Collections
+**Przestrzeń nazw:** Windows:: Foundation:: Collections
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Windows::Foundation::Collections, przestrzeń nazw](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows:: Foundation:: Collections, przestrzeń nazw](../cppcx/windows-foundation-collections-namespace-c-cx.md)

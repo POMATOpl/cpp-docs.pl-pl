@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDBException'
 title: Klasa CDBException
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 1ab7daeb3af55c92985c951c632b1d4050681474
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e337cc0f66a4a281de07ba3839895096e8021d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222128"
 ---
 # <a name="cdbexception-class"></a>Klasa CDBException
 
-Reprezentuje warunek wyjątku wynikające z klas bazy danych.
+Reprezentuje warunek wyjątku wynikający z klas baz danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,120 +36,120 @@ class CDBException : public CException
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDBException::m_nRetCode](#m_nretcode)|Zawiera kod zwrotny open database connectivity (ODBC) typu RETCODE.|
-|[CDBException::m_strError](#m_strerror)|Zawiera ciąg opisujący błąd w terminach alfanumerycznym.|
-|[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Zawiera ciąg opisujący błąd pod względem kodów błędów zwracanych przez ODBC.|
+|[CDBException:: m_nRetCode](#m_nretcode)|Zawiera kod powrotu Open Database Connectivity (ODBC) typu RETCODE.|
+|[CDBException:: m_strError](#m_strerror)|Zawiera ciąg, który opisuje błąd w wyrażeniach alfanumerycznych.|
+|[CDBException:: m_strStateNativeOrigin](#m_strstatenativeorigin)|Zawiera ciąg opisujący błąd w warunkach kodów błędów zwracanych przez ODBC.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa zawiera dwa elementy członkowskie danych publicznych, których można użyć do określenia przyczyny wyjątku lub wyświetlenia wiadomości tekstowej opisującej wyjątek. `CDBException`obiekty są konstruowane i generowane przez funkcje członkowskie klas bazy danych.
+Klasa zawiera dwa publiczne elementy członkowskie danych, których można użyć do określenia przyczyny wyjątku lub wyświetlenia wiadomości tekstowej opisującej wyjątek. `CDBException` obiekty są konstruowane i zgłaszane przez funkcje składowe klas baz danych.
 
 > [!NOTE]
-> Ta klasa jest jedną z klas łączności otwartej bazy danych (ODBC) mfc. Jeśli zamiast tego używasz nowszych obiektów dostępu do danych (DAO), należy użyć [CDaoException](../../mfc/reference/cdaoexception-class.md) zamiast tego. Wszystkie nazwy klas DAO mają "CDao" jako prefiks. Aby uzyskać więcej informacji, zobacz artykuł [Omówienie: Programowanie baz danych](../../data/data-access-programming-mfc-atl.md).
+> Ta klasa jest jedną z klas Open Database Connectivity MFC (ODBC). Jeśli zamiast tego używasz nowszych klas obiektów dostępu do danych (DAO), zamiast tego użyj [CDaoException](../../mfc/reference/cdaoexception-class.md) . Wszystkie nazwy klas DAO mają jako prefiks "CDao". Aby uzyskać więcej informacji, zobacz [Omówienie artykułu: Programowanie baz danych](../../data/data-access-programming-mfc-atl.md).
 
-Wyjątki to przypadki nieprawidłowego wykonania obejmujące warunki poza kontrolą programu, takie jak błędy we/wy źródła danych lub sieci. Błędy, których można się spodziewać w normalnym trakcie wykonywania programu, zwykle nie są uważane za wyjątki.
+Wyjątkami są przypadki nietypowego wykonywania, w tym warunki poza kontrolką programu, takie jak źródło danych lub błędy we/wy sieci. Błędy, które mogą być widoczne w normalnym czasie wykonywania programu, zazwyczaj nie są uważane za wyjątki.
 
-Można uzyskać dostęp do tych obiektów w zakresie wyrażenia **CATCH.** Można również `CDBException` rzutować obiekty z `AfxThrowDBException` własnego kodu za pomocą funkcji globalnej.
+Możesz uzyskać dostęp do tych obiektów w zakresie wyrażenia **catch** . Możesz również generować `CDBException` obiekty z własnego kodu za pomocą `AfxThrowDBException` funkcji globalnej.
 
-Aby uzyskać więcej informacji na temat `CDBException` obsługi wyjątków w ogóle lub o obiektach, zobacz artykuły [Obsługa wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md) i [Wyjątki: Wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
+Aby uzyskać więcej informacji na temat obsługi wyjątków ogólnych lub o `CDBException` obiektach, zobacz [Obsługa wyjątków artykułów (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cexception](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `CDBException`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdb.h
+**Nagłówek:** AFXDB. h
 
-## <a name="cdbexceptionm_nretcode"></a><a name="m_nretcode"></a>CDBException::m_nRetCode
+## <a name="cdbexceptionm_nretcode"></a><a name="m_nretcode"></a> CDBException:: m_nRetCode
 
-Zawiera kod błędu ODBC typu RETCODE zwracany przez funkcję interfejsu programowania aplikacji ODBC (API).
+Zawiera kod błędu ODBC typu RETCODE zwracany przez funkcję interfejsu API ODBC.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten typ zawiera kody z prefiksami SQL zdefiniowane przez ODBC i kody z prefiksami AFX_SQL zdefiniowane przez klasy bazy danych. W `CDBException`przypadku elementu członkowskiego ten będzie zawierał jedną z następujących wartości:
+Ten typ zawiera wstępnie ustalone kody zdefiniowane przez ODBC i AFX_SQL-z prefiksami zdefiniowanymi przez klasy baz danych. Dla programu `CDBException` , ten element członkowski będzie zawierać jedną z następujących wartości:
 
-- AFX_SQL_ERROR_API_CONFORMANCE Sterownik lub `CDatabase::OpenEx` `CDatabase::Open` wywołanie nie jest zgodny z wymaganym poziomem zgodności interfejsu API ODBC 1 (SQL_OAC_LEVEL1).
+- AFX_SQL_ERROR_API_CONFORMANCE sterownik `CDatabase::OpenEx` lub `CDatabase::Open` wywołanie jest niezgodne z wymaganym poziomem zgodności interfejsu API ODBC 1 (SQL_OAC_LEVEL1).
 
-- AFX_SQL_ERROR_CONNECT_FAIL Połączenie ze źródłem danych nie powiodło się. Przekazano wskaźnik`CDatabase` NULL do konstruktora pliku recordset i `GetDefaultConnect` późniejszą próbę utworzenia połączenia na podstawie nie powiodło się.
+- Nie można nawiązać połączenia AFX_SQL_ERROR_CONNECT_FAIL ze źródłem danych. Przeszedł wskaźnik o wartości NULL `CDatabase` do konstruktora zestawu rekordów i kolejną próbą utworzenia połączenia w oparciu o `GetDefaultConnect` Niepowodzenie.
 
-- AFX_SQL_ERROR_DATA_TRUNCATED Użytkownik zażądał więcej danych niż w przypadku przechowywania. Aby uzyskać informacje na temat `CString` `CByteArray` zwiększania dostępnego `nMaxLength` przechowywania danych lub typów danych, zobacz argument [RFX_Text](record-field-exchange-functions.md#rfx_text) i [RFX_Binary](record-field-exchange-functions.md#rfx_binary) w obszarze "Makra i globalne".
+- AFX_SQL_ERROR_DATA_TRUNCATED zażądano większej ilości danych niż podano w nim magazyn. Aby uzyskać informacje na temat zwiększania dostępnego magazynu danych `CString` lub `CByteArray` typów danych, zobacz `nMaxLength` argument dla [RFX_Text](record-field-exchange-functions.md#rfx_text) i [RFX_Binary](record-field-exchange-functions.md#rfx_binary) w obszarze "makra i Globals".
 
-- AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED Wywołanie żądania `CRecordset::Open` dynaset nie powiodło się. Dynasets nie są obsługiwane przez sterownik.
+- AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED wywołanie `CRecordset::Open` żądania dynamicznego nie powiodło się. Zestawy dynamiczne nie są obsługiwane przez sterownik.
 
-- AFX_SQL_ERROR_EMPTY_COLUMN_LIST Próbowano otworzyć tabelę (lub nie można zidentyfikować tej tabeli jako wywołania procedury lub instrukcji **SELECT),** ale w `DoFieldExchange` zastąpieniu nie ma kolumn zidentyfikowanych w wywołaniach funkcji wymiany pól rekordów (RFX).
+- AFX_SQL_ERROR_EMPTY_COLUMN_LIST podjęto próbę otwarcia tabeli (lub nie można zidentyfikować jej jako wywołania procedury lub instrukcji **SELECT** ), ale nie ma żadnych kolumn zidentyfikowanych w wywołaniach funkcji wymiany pól rekordów (RFX) w `DoFieldExchange` zastąpieniu.
 
-- AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH Typ funkcji RFX w `DoFieldExchange` zastąpiona jest niezgodny z typem danych kolumny w fachu.
+- AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH typ funkcji RFX w `DoFieldExchange` przesłonięciu nie jest zgodny z typem danych kolumny w zestawie rekordów.
 
-- AFX_SQL_ERROR_ILLEGAL_MODE Zadzwoniłeś `CRecordset::Update` bez wcześniejszego `CRecordset::AddNew` dzwonienia lub `CRecordset::Edit`.
+- AFX_SQL_ERROR_ILLEGAL_MODE wywołana `CRecordset::Update` bez uprzedniego wywołania metody `CRecordset::AddNew` lub `CRecordset::Edit` .
 
-- AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED Żądanie zablokowania rekordów do aktualizacji nie może zostać spełnione, ponieważ sterownik ODBC nie obsługuje blokowania.
+- AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED nie można spełnić żądania zablokowania rekordów dla aktualizacji, ponieważ sterownik ODBC nie obsługuje blokowania.
 
-- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED Zadzwoniłeś `CRecordset::Update` lub `Delete` dla tabeli bez unikatowego klucza i zmieniłeś wiele rekordów.
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED wywołana `CRecordset::Update` lub `Delete` dla tabeli bez klucza unikatowego i nie zmieniono wielu rekordów.
 
-- AFX_SQL_ERROR_NO_CURRENT_RECORD Próbowano edytować lub usunąć poprzednio usunięty rekord. Po usunięciu należy przewinąć do nowego bieżącego rekordu.
+- AFX_SQL_ERROR_NO_CURRENT_RECORD podjęto próbę edycji lub usunięcia wcześniej usuniętego rekordu. Po usunięciu należy przewinąć do nowego bieżącego rekordu.
 
-- AFX_SQL_ERROR_NO_POSITIONED_UPDATES Żądanie dynaset nie może zostać spełnione, ponieważ sterownik ODBC nie obsługuje pozycjonowanych aktualizacji.
+- AFX_SQL_ERROR_NO_POSITIONED_UPDATES nie można spełnić żądania dla elementu dynamicznego, ponieważ sterownik ODBC nie obsługuje aktualizacji pozycjonowanych.
 
-- AFX_SQL_ERROR_NO_ROWS_AFFECTED Zadzwoniłeś `CRecordset::Update` lub `Delete`, ale po rozpoczęciu operacji rekord nie można już znaleźć.
+- AFX_SQL_ERROR_NO_ROWS_AFFECTED wywołana `CRecordset::Update` lub `Delete` , ale po rozpoczęciu operacji nie można już znaleźć rekordu.
 
-- AFX_SQL_ERROR_ODBC_LOAD_FAILED Próba załadowania odbc. Biblioteka DLL nie powiodła się; System Windows nie może odnaleźć lub nie można załadować tej biblioteki DLL. Ten błąd jest krytyczny.
+- AFX_SQL_ERROR_ODBC_LOAD_FAILED próba załadowania ODBC.DLL nie powiodła się; System Windows nie może odnaleźć lub nie może załadować tej biblioteki DLL. Ten błąd jest krytyczny.
 
-- AFX_SQL_ERROR_ODBC_V2_REQUIRED Żądanie dynaset nie może być spełnione, ponieważ poziom 2 zgodny sterownik ODBC jest wymagane.
+- AFX_SQL_ERROR_ODBC_V2_REQUIRED nie można spełnić żądania dla elementu dynamicznego, ponieważ wymagany jest sterownik ODBC zgodny ze standardem Level 2.
 
-- AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY Próba przewijania nie powiodła się, ponieważ źródło danych nie obsługuje przewijania wstecznego.
+- AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY Próba przewinięcia nie powiodła się, ponieważ źródło danych nie obsługuje przewijania wstecznego.
 
-- AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED Wywołanie żądania `CRecordset::Open` migawki nie powiodło się. Migawki nie są obsługiwane przez sterownik. (Powinno to nastąpić tylko wtedy, gdy biblioteka kursora ODBC ODBCCURS. Biblioteka DLL nie jest obecna.)
+- AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED wywołanie `CRecordset::Open` żądania migawki nie powiodło się. Migawki nie są obsługiwane przez sterownik. (Powinno się to odbywać tylko wtedy, gdy biblioteka kursorów ODBC ODBCCURS.DLL nie istnieje).
 
-- AFX_SQL_ERROR_SQL_CONFORMANCE Sterownik lub `CDatabase::OpenEx` `CDatabase::Open` wywołanie nie jest zgodny z wymaganym poziomem zgodności SQL ODBC "Minimum" (SQL_OSC_MINIMUM).
+- AFX_SQL_ERROR_SQL_CONFORMANCE sterownik `CDatabase::OpenEx` lub `CDatabase::Open` wywołanie jest niezgodne z wymaganym poziomem zgodności ODBC SQL "minimum" (SQL_OSC_MINIMUM).
 
-- AFX_SQL_ERROR_SQL_NO_TOTAL Sterownik ODBC nie może określić całkowitego `CLongBinary` rozmiaru wartości danych. Operacja prawdopodobnie nie powiodła się, ponieważ nie można wstępnie przydzielić globalnego bloku pamięci.
+- AFX_SQL_ERROR_SQL_NO_TOTAL sterownik ODBC nie mógł określić łącznego rozmiaru `CLongBinary` wartości danych. Operacja prawdopodobnie nie powiodła się, ponieważ nie można wstępnie przydzielyć globalnego bloku pamięci.
 
-- AFX_SQL_ERROR_RECORDSET_READONLY Próbowano zaktualizować zestaw rekordów tylko do odczytu lub źródło danych jest tylko do odczytu. Nie można wykonać żadnych operacji aktualizacji `CDatabase` z akcesem rekordów ani obiektem, z który jest skojarzony.
+- AFX_SQL_ERROR_RECORDSET_READONLY próbowano zaktualizować zestaw rekordów tylko do odczytu lub źródło danych jest tylko do odczytu. Nie można wykonywać operacji aktualizacji z zestawem rekordów lub `CDatabase` obiektem, z którym jest skojarzony.
 
-- funkcja SQL_ERROR nie powiodła się. Komunikat o błędzie zwrócony `SQLError` przez funkcję `m_strError` ODBC jest przechowywany w elementów członkowskich danych.
+- Funkcja SQL_ERROR nie powiodła się. Komunikat o błędzie zwracany przez funkcję ODBC `SQLError` jest przechowywany w `m_strError` elemencie członkowskim danych.
 
-- funkcja SQL_INVALID_HANDLE nie powiodła się z powodu nieprawidłowego dojścia do środowiska, dojścia połączenia lub dojścia instrukcji. Oznacza to błąd programowania. Funkcja ODBC nie jest dostępna `SQLError`w żaden sposób.
+- Funkcja SQL_INVALID_HANDLE nie powiodła się z powodu nieprawidłowego dojścia do środowiska, dojścia do połączenia lub dojście do instrukcji. Wskazuje to na błąd programowania. Funkcja ODBC nie udostępnia żadnych dodatkowych informacji `SQLError` .
 
-Kody z prefiksem SQL są definiowane przez ODBC. Kody z poprzedzonym AFX są zdefiniowane w AFXDB. H, znaleziono w MFC\INCLUDE.
+Kody z prefiksem SQL są definiowane przez ODBC. Kody z prefiksem AFX są zdefiniowane w AFXDB. H, znaleziono w MFC\INCLUDE.
 
-## <a name="cdbexceptionm_strerror"></a><a name="m_strerror"></a>CDBException::m_strError
+## <a name="cdbexceptionm_strerror"></a><a name="m_strerror"></a> CDBException:: m_strError
 
 Zawiera ciąg opisujący błąd, który spowodował wyjątek.
 
 ### <a name="remarks"></a>Uwagi
 
-Ciąg opisuje błąd w kategoriach alfanumeryczne. Aby uzyskać bardziej szczegółowe informacje `m_strStateNativeOrigin`i przykład, zobacz .
+Ciąg opisuje błąd w wyrażeniach alfanumerycznych. Aby uzyskać bardziej szczegółowe informacje i przykład, zobacz `m_strStateNativeOrigin` .
 
-## <a name="cdbexceptionm_strstatenativeorigin"></a><a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin
+## <a name="cdbexceptionm_strstatenativeorigin"></a><a name="m_strstatenativeorigin"></a> CDBException:: m_strStateNativeOrigin
 
 Zawiera ciąg opisujący błąd, który spowodował wyjątek.
 
 ### <a name="remarks"></a>Uwagi
 
-Ciąg ma formę "State:%s,Native:%ld,Origin:%s", gdzie kody formatów w kolejności są zastępowane wartościami opisującymi:
+Ciąg ma postać "State:% s, Native:% LD, Origin:% s", gdzie Kody formatu w kolejności są zastępowane przez wartości opisujące:
 
-- SQLSTATE, ciąg zakończony zerem zawierający pięcioznakowy kod błędu zwrócony w parametrze *szSqlState* funkcji `SQLError`ODBC . Wartości SQLSTATE są wymienione w dodatku A, [kody błędów ODBC](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes), w *odwołaniu programisty ODBC*. Przykład: "S0022".
+- SQLSTATE, ciąg zakończony znakiem null zawierający kod błędu pięciu znaków zwracany w parametrze *szSqlState* funkcji ODBC `SQLError` . Wartości SQLSTATE są wymienione w dodatku A, [kody błędów ODBC](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes), w *Kompendium ODBC programisty*. Przykład: "S0022".
 
-- Natywny kod błędu, specyficzne dla źródła danych, zwrócony w *pfNativeError* parametr `SQLError` funkcji. Przykład: 207.
+- Kod błędu natywnego, charakterystyczny dla źródła danych, zwracany w parametrze *pfNativeError* `SQLError` funkcji. Przykład: 207.
 
-- Tekst komunikatu o błędzie zwrócony w parametrze *szErrorMsg* `SQLError` funkcji. Ten komunikat składa się z kilku nazw w nawiasach. Ponieważ błąd jest przekazywany ze źródła do użytkownika, każdy składnik ODBC (źródło danych, sterownik, menedżer sterowników) dołącza własną nazwę. Te informacje pomagają określić pochodzenie błędu. Przykład: [Microsoft][STEROWNIK PROGRAMU SQL SERVER][SQL Server]
+- Tekst komunikatu o błędzie zwracany w parametrze *szErrorMsg* `SQLError` funkcji. Ten komunikat składa się z kilku nazw ujętych w nawiasy klamrowe. Ponieważ do użytkownika jest przesyłany błąd, każdy składnik ODBC (Źródło danych, Sterownik, Menedżer sterowników) dołącza własną nazwę. Te informacje ułatwiają określenie źródła błędu. Przykład: [Microsoft] [ODBC SQL Server Driver] [SQL Server]
 
-Struktura interpretuje ciąg błędu i umieszcza `m_strStateNativeOrigin`jego składniki w ; jeśli `m_strStateNativeOrigin` zawiera informacje o więcej niż jeden błąd, błędy są oddzielone newlines. Struktura umieszcza tekst błędu alfanumerycznego w `m_strError`.
+Struktura interpretuje ciąg błędu i umieszcza jego składniki w `m_strStateNativeOrigin` ; Jeśli `m_strStateNativeOrigin` zawiera informacje dla więcej niż jednego błędu, błędy są rozdzielone znakami nowego wiersza. Struktura umieszcza alfanumeryczny tekst błędu w `m_strError` .
 
-Aby uzyskać dodatkowe informacje na temat kodów użytych do utworzenia tego ciągu, zobacz funkcję [SQLError](/sql/odbc/reference/syntax/sqlerror-function) w *odwołaniu programisty ODBC*.
+Aby uzyskać dodatkowe informacje na temat kodów używanych do przepełnienia tego ciągu, zobacz funkcję [SqlError](/sql/odbc/reference/syntax/sqlerror-function) w *dokumentacji programu ODBC programmer's Reference*.
 
 ### <a name="example"></a>Przykład
 
-Od ODBC:\["Stan:S0022,Native:207,Origin:\[Microsoft] ODBC\[SQL Server Driver] SQL Server] Nieprawidłowa nazwa kolumny 'ColName'"
+Z ODBC: "State: S0022, Native: 207, Origin: \[ Microsoft] \[ ODBC SQL Server Driver] \[ SQL Server] Nieprawidłowa nazwa kolumny" ColName ""
 
-W `m_strStateNativeOrigin`:\["State:S0022,Native:207,Origin:\[Microsoft] ODBC\[SQL Server Driver] SQL Server]"
+W `m_strStateNativeOrigin` : "State: S0022, Native: 207, Origin: \[ Microsoft] \[ ODBC SQL Server Driver] \[ SQL Server]"
 
-W `m_strError`: "Nieprawidłowa nazwa kolumny 'ColName'"
+W `m_strError` : "Nieprawidłowa nazwa kolumny" ColName ""
 
 ## <a name="see-also"></a>Zobacz też
 
@@ -157,6 +158,6 @@ W `m_strError`: "Nieprawidłowa nazwa kolumny 'ColName'"
 [Klasa CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
 [Klasa CRecordset](../../mfc/reference/crecordset-class.md)<br/>
 [Klasa CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>
-[CRecordset::Aktualizacja](../../mfc/reference/crecordset-class.md#update)<br/>
-[CRecordset::Delete](../../mfc/reference/crecordset-class.md#delete)<br/>
+[CRecordset:: Update](../../mfc/reference/crecordset-class.md#update)<br/>
+[CRecordset::D Usuń](../../mfc/reference/crecordset-class.md#delete)<br/>
 [Klasa CException](../../mfc/reference/cexception-class.md)

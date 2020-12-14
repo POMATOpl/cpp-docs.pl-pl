@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3861'
 title: Błąd kompilatora C3861
 ms.date: 03/23/2018
 f1_keywords:
@@ -6,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
-ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba259496de09e86b59f9cad1ac1bf89a697a1da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222908"
 ---
 # <a name="compiler-error-c3861"></a>Błąd kompilatora C3861
 
-> "*identyfikator*": nie odnaleziono identyfikatora
+> "*Identyfikator*": nie znaleziono identyfikatora
 
-Kompilator nie był w stanie rozpoznać odwołania do identyfikatora, nawet za pomocą wyszukiwania zależnego od argumentów.
+Kompilator nie mógł rozpoznać odwołania do identyfikatora, nawet przy użyciu wyszukiwania zależnego od argumentu.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby naprawić ten błąd, porównaj użycie *identyfikator* do zgłoszenia identyfikator przypadku i sprawdzania pisowni. Upewnij się, że [zakres operatorów rozpoznawania](../../cpp/scope-resolution-operator.md) i przestrzeni nazw [dyrektywy using](../../cpp/namespaces-cpp.md#using_directives) są prawidłowo stosowane. Identyfikator jest zadeklarowana w pliku nagłówkowym, sprawdź, czy znajduje się nagłówek, aby odwoływać się do identyfikatora. Jeśli identyfikator ma być widoczne na zewnątrz, upewnij się, że zostanie ona zadeklarowana w dowolnym plikiem źródłowym, która go używa. Sprawdź również, że identyfikator deklaracji lub definicji nie jest wykluczone przez [dyrektywy kompilacji warunkowej](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+Aby naprawić ten błąd, należy porównać użycie *identyfikatora* do deklaracji identyfikatora dla wielkości liter i pisowni. Upewnij się, że [Operatory rozpoznawania zakresów](../../cpp/scope-resolution-operator.md) i przestrzeń nazw [używające dyrektyw](../../cpp/namespaces-cpp.md#using_directives) są poprawnie używane. Jeśli identyfikator jest zadeklarowany w pliku nagłówkowym, sprawdź, czy nagłówek jest uwzględniony przed odwołaniem do identyfikatora. Jeśli identyfikator ma być widoczny na zewnątrz, upewnij się, że jest zadeklarowany w pliku źródłowym, który go używa. Sprawdź również, czy deklaracja identyfikatora lub definicja nie jest wykluczona przez [dyrektywy kompilacji warunkowej](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-Zmiany do usuwania przestarzałych funkcji biblioteki środowiska uruchomieniowego języka C w programie Visual Studio 2015 może powodować C3861. Aby rozwiązać ten problem, usuń odwołania do tych funkcji, lub zastąp je ich bezpieczne rozwiązania alternatywne, jeśli istnieje. Aby uzyskać więcej informacji, zobacz [przestarzałe funkcje](../../c-runtime-library/obsolete-functions.md).
+Zmiany w celu usunięcia przestarzałych funkcji z biblioteki środowiska uruchomieniowego języka C w programie Visual Studio 2015 mogą spowodować C3861. Aby rozwiązać ten problem, Usuń odwołania do tych funkcji lub zastąp je bezpiecznymi alternatywami (jeśli istnieją). Aby uzyskać więcej informacji, zobacz [funkcje przestarzałe](../../c-runtime-library/obsolete-functions.md).
 
-Jeśli błąd C3861 pojawia się po zakończeniu migracji projektów ze starszych wersji kompilatora, możesz mieć problemy związane z obsługiwanymi wersjami Windows. Visual C++ nie obsługuje już określania wartości docelowej Windows 95, Windows 98, Windows ME, Windows NT lub Windows 2000. Jeśli Twoje **WINVER** lub **_WIN32_WINNT** makra są przypisane do jednej z tych wersji systemu Windows, należy zmodyfikować makra. Aby uzyskać więcej informacji, zobacz [modyfikowanie WINVER i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+Jeśli błąd C3861 pojawia się po migracji projektu ze starszych wersji kompilatora, mogą występować problemy związane z obsługiwanymi wersjami systemu Windows. Visual C++ nie obsługuje już elementów docelowych Windows 95, Windows 98, Windows ME, Windows NT lub Windows 2000. Jeśli makra **winver** lub **_WIN32_WINNT** są przypisane do jednej z tych wersji systemu Windows, należy zmodyfikować makra. Aby uzyskać więcej informacji, zobacz [modyfikowanie programu winver i _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
 ## <a name="examples"></a>Przykłady
 
@@ -42,9 +43,9 @@ int main() {
 }
 ```
 
-### <a name="identifier-not-in-scope"></a>Identyfikator nie znajduje się w zakresie
+### <a name="identifier-not-in-scope"></a>Identyfikator nie należy do zakresu
 
-Poniższy przykład generuje C3861, ponieważ identyfikator tylko widoczne w zakresie pliku jego definicji, chyba że zostanie ona zadeklarowana w innych plikach źródłowych, które go używają.
+Poniższy przykład generuje C3861, ponieważ identyfikator jest widoczny tylko w zakresie pliku jego definicji, chyba że jest zadeklarowany w innych plikach źródłowych, które go używają.
 
 ```cpp
 // C3861_a1.cpp
@@ -64,7 +65,7 @@ int f() {  // declared and defined here
 }
 ```
 
-### <a name="namespace-qualification-required"></a>Namespace kwalifikacyjnymi
+### <a name="namespace-qualification-required"></a>Wymagana kwalifikacja przestrzeni nazw
 
 Klasy wyjątków w standardowej bibliotece języka C++ wymagają `std` przestrzeni nazw.
 
@@ -84,7 +85,7 @@ int main() {
 }
 ```
 
-### <a name="obsolete-function-called"></a>Wywołana funkcja przestarzała
+### <a name="obsolete-function-called"></a>Wywołano przestarzałą funkcję
 
 Przestarzałe funkcje zostały usunięte z biblioteki CRT.
 
@@ -99,9 +100,9 @@ int main() {
 }
 ```
 
-### <a name="adl-and-friend-functions"></a>Funkcje usługi ADL i friend
+### <a name="adl-and-friend-functions"></a>Funkcje ADL i zaprzyjaźnione
 
-Poniższy przykład generuje C3767, ponieważ kompilator nie może używać argumentów wyszukiwanie zależne `FriendFunc`:
+Poniższy przykład generuje C3767, ponieważ kompilator nie może użyć wyszukiwania zależnego od argumentu dla `FriendFunc` :
 
 ```cpp
 namespace N {
@@ -119,7 +120,7 @@ int main() {
 }
 ```
 
-Aby naprawić błąd, Zadeklaruj friend w zakresie klasy i zdefiniuj go w zakresie przestrzeni nazw:
+Aby naprawić ten błąd, zadeklaruj przyjaciela w zakresie klasy i zdefiniuj go w zakresie przestrzeni nazw:
 
 ```cpp
 class MyClass {

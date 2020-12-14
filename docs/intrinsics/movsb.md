@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __movsb'
 title: __movsb
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6e4a9ba7482f7f614b80bd0596111874f0087c86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222453"
 ---
 # <a name="__movsb"></a>__movsb
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję Move String (`rep movsb`).
+Generuje instrukcję Move String ( `rep movsb` ).
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,7 +49,7 @@ podczas Liczba bajtów do skopiowania.
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -82,6 +83,6 @@ A big black dog. A big black dog.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

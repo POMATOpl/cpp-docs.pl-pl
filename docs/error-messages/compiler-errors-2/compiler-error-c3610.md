@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3610'
 title: Błąd kompilatora C3610
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3610
 ms.assetid: 9349a348-9d37-4a00-9eab-481039268d31
-ms.openlocfilehash: 9965e6420171b2ea48c8fb7bacc0a5a37ea2f227
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0fca8f57fcdf2e935620118092708ba1c94f5ec0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223142"
 ---
 # <a name="compiler-error-c3610"></a>Błąd kompilatora C3610
 
-"valuetype": typ wartościowy musi być "boxed" przed można wywołać metody "method"
+"ValueType": typ wartości musi być "opakowany" przed wywołaniem metody "Method"
 
-Domyślnie typ wartości nie jest na stosie zarządzanym. Przed wywołaniem metody z klasy środowiska wykonawczego .NET, takich jak `Object`, musisz przenieść typu wartości do zarządzanej sterty.
+Domyślnie typ wartości nie znajduje się na zarządzanym stosie. Przed wywołaniem metod z klas środowiska uruchomieniowego platformy .NET, takich jak `Object` , należy przenieść typ wartości do sterty zarządzanej.
 
-C3610 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.
+C3610 jest osiągalna tylko przy użyciu przestarzałej opcji kompilatora **/CLR: oldSyntax**.

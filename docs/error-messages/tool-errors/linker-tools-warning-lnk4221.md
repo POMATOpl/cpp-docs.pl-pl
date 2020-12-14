@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: LNK4221 narzędzi KONSOLIDATORA ostrzeżenia narzędzi konsolidatora'
 title: Ostrzeżenie LNK4221 narzędzi konsolidatora
 ms.date: 08/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: f18224150232384adbf8ee7cc31af7bb7678eae5
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d7aee041536afc1da0c4fd8a6e520ceb5e99e57a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222635"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Ostrzeżenie LNK4221 narzędzi konsolidatora
 
@@ -49,4 +50,4 @@ Typową przyczyną tego błędu jest to, że dwa pliki źródłowe określają o
 
 ::: moniker-end
 
-Jednym ze sposobów rozwiązania tego problemu jest upewnienie się, że dla każdego prekompilowanego nagłówka istnieje tylko jeden plik źródłowy, który zawiera go z **/YC** . Wszystkie inne pliki źródłowe muszą używać prekompilowanych nagłówków. Aby uzyskać więcej informacji na temat zmiany tego ustawienia, zobacz [/Yu (Użyj prekompilowanego pliku nagłówkowego)](../../build/reference/yu-use-precompiled-header-file.md).
+Jednym ze sposobów rozwiązania tego problemu jest upewnienie się, że dla każdego prekompilowanego nagłówka istnieje tylko jeden plik źródłowy, który zawiera go z **/YC**. Wszystkie inne pliki źródłowe muszą używać prekompilowanych nagłówków. Aby uzyskać więcej informacji na temat zmiany tego ustawienia, zobacz [/Yu (Użyj prekompilowanego pliku nagłówkowego)](../../build/reference/yu-use-precompiled-header-file.md).

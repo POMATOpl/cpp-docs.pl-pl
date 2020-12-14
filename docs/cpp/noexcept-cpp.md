@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: noexcept (C++)'
 title: noexcept (C++)
 ms.date: 11/19/2019
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: 2618c7e9b35e4ba50ad1bda20a8694dd829ec2d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ca4abfc48e3850f014c29cea2fd9108f7b556072
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223727"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
@@ -46,7 +47,7 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](errors-and-exception-handling-modern-cpp.md)<br/>
 [Specyfikacje wyjątków (throw, noexcept)](exception-specifications-throw-cpp.md)
