@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: konwersje z typów zmiennoprzecinkowych'
 title: Konwersje z typów zmiennoprzecinkowych
 ms.date: 10/02/2019
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-ms.openlocfilehash: 72d0f95a6e48dcf0a5e8fea3757e85f9a03bf7e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e2a78a68b39d9109a2304d78070bddef36e9b52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293238"
 ---
 # <a name="conversions-from-floating-point-types"></a>Konwersje z typów zmiennoprzecinkowych
 
@@ -42,24 +43,24 @@ W poniższej tabeli zestawiono konwersje z typów zmiennoprzecinkowych.
 
 |Źródło|Działanie|Metoda|
 |----------|--------|------------|
-|**`float`**|**`char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`char`**|
-|**`float`**|**`short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`short`**|
+|**`float`**|**`char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`char`**|
+|**`float`**|**`short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`short`**|
 |**`float`**|**`int`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`int`** , wynik jest niezdefiniowany.|
 |**`float`**|**`long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`long`** , wynik jest niezdefiniowany.|
 |**`float`**|**`long long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`long long`** , wynik jest niezdefiniowany.|
-|**`float`**|**`unsigned char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned char`**|
-|**`float`**|**`unsigned short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned short`**|
+|**`float`**|**`unsigned char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`unsigned char`**|
+|**`float`**|**`unsigned short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`unsigned short`**|
 |**`float`**|**`unsigned`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned`** , wynik jest niezdefiniowany.|
 |**`float`**|**`unsigned long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long`** , wynik jest niezdefiniowany.|
 |**`float`**|**`unsigned long long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long long`** , wynik jest niezdefiniowany.|
 |**`float`**|**`double`**|Reprezentuje jako **`double`** .|
 |**`float`**|**`long double`**|Reprezentuje jako **`long double`** .|
-|**`double`**|**`char`**|Konwertuj na **`float`** ; Konwertuj **`float`** na**`char`**|
-|**`double`**|**`short`**|Konwertuj na **`float`** ; Konwertuj **`float`** na**`short`**|
+|**`double`**|**`char`**|Konwertuj na **`float`** ; Konwertuj **`float`** na **`char`**|
+|**`double`**|**`short`**|Konwertuj na **`float`** ; Konwertuj **`float`** na **`short`**|
 |**`double`**|**`int`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`int`** , wynik jest niezdefiniowany.|
 |**`double`**|**`long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`long`** , wynik jest niezdefiniowany.|
-|**`double`**|**`unsigned char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned char`**|
-|**`double`**|**`unsigned short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned short`**|
+|**`double`**|**`unsigned char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`unsigned char`**|
+|**`double`**|**`unsigned short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`unsigned short`**|
 |**`double`**|**`unsigned`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned`** , wynik jest niezdefiniowany.|
 |**`double`**|**`unsigned long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long`** , wynik jest niezdefiniowany.|
 |**`double`**|**`unsigned long long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long long`** , wynik jest niezdefiniowany.|
@@ -68,6 +69,6 @@ W poniższej tabeli zestawiono konwersje z typów zmiennoprzecinkowych.
 
 Konwersje z **`long double`** metody są takie same jak konwersje z **`double`** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

@@ -1,60 +1,61 @@
 ---
-title: / USEPROFILE (dane PGO korzystanie z funkcji LTCG)
+description: Dowiedz się więcej o:/USEPROFILE (Run PGO w trybie awaryjnym wątku)
+title: /USEPROFILE (Użyj danych PGO z LTCG)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c293b8467ea308dc2f7b4a4cd916cc5d9ac4c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247049"
 ---
-# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/ USEPROFILE (uruchamianie PGO w trybie awaryjnym wątku)
+# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (Uruchom PGO w trybie awaryjnym wątku)
 
-Tę opcję konsolidatora wraz z [opcję/LTCG (Generowanie kodu w czasie konsolidacji](ltcg-link-time-code-generation.md) informuje konsolidator, aby tworzyć przy użyciu danych szkoleniowych profilowana Optymalizacja (PGO).
+Ta opcja konsolidatora wraz z [/LTCG (generowanie kodu w czasie konsolidacji](ltcg-link-time-code-generation.md) informuje konsolidator do skompilowania przy użyciu danych szkoleniowych dotyczących optymalizacji opartej na profilach (PGO).
 
 ## <a name="syntax"></a>Składnia
 
-> **/ USEPROFILE**[**:**{**AGRESYWNE**|**PGD =**_filename_}]
+> **/USEPROFILE**[**:**{**agresywne** | **PGD =**_Nazwa pliku_}]
 
 ### <a name="arguments"></a>Argumenty
 
-**AGRESYWNE**<br/>
-Ten opcjonalny argument określa, że optymalizacji szybkości agresywne powinny być używane podczas generowania zoptymalizowanego kodu.
+**ZACZNIE**<br/>
+Ten opcjonalny argument określa, że optymalizację optymalizacji szybkości należy stosować podczas optymalizacji generowania kodu.
 
-**Plik PGD**=*nazwy pliku*<br/>
-Określa nazwę pliku podstawowego pliku .pgd. Domyślnie konsolidator używa nazwa podstawowa pliku wykonywalnego z rozszerzeniem .pgd.
+Plik **PGD** = *Nazwa pliku*<br/>
+Określa podstawową nazwę pliku. pgd. Domyślnie konsolidator używa podstawowej nazwy pliku wykonywalnego z rozszerzeniem. pgd.
 
 ## <a name="remarks"></a>Uwagi
 
-**/USEPROFILE** — opcja konsolidatora jest używany razem z **opcję/LTCG** można wygenerować lub zaktualizować optymalizowania kompilacji, na podstawie danych szkoleniowych PGO. Jest to równoważne z przestarzałego **/LTCG:PGUPDATE** i **/LTCG:PGOPTIMIZE** opcje.
+Opcja konsolidatora **/USEPROFILE** jest używana razem z **/LTCG** do generowania lub aktualizowania zoptymalizowanej kompilacji opartej na danych szkolenia PGO. Jest odpowiednikiem przestarzałych opcji **/LTCG: PGUPDATE** i **/LTCG: PGOPTIMIZE** .
 
-Opcjonalny **AGRESYWNE** argument wyłącza dotyczących rozmiaru Algorytm heurystyczny, aby podjąć próbę Optymalizuj pod kątem szybkości. Może to spowodować optymalizacje, które znacznie zwiększyć rozmiar plik wykonywalny i nie może zwiększyć szybkość wynikowe. Należy profilowania i porównać wyniki przy użyciu i nie używa **AGRESYWNE**. Ten argument muszą być jawnie; określone. nie włączono domyślnie.
+Opcjonalny, **agresywny** argument wyłącza algorytmy heurystyczne powiązane z rozmiarami, aby próbować zoptymalizować szybkość. Może to spowodować, że optymalizacje znacząco zwiększą rozmiar pliku wykonywalnego i mogą nie zwiększyć wydajności wynikowej. Należy profilować i porównać wyniki użycia i nie używać **agresywnie**. Ten argument musi być jawnie określony; nie jest on domyślnie włączony.
 
-**PGD** argument określa nazwę opcjonalną dla pliku .pgd danych szkolenia użyto tych samych, jak w [przełączników/genprofile i/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). Jest to równoważne z przestarzałego **/PGD** przełącznika. Domyślnie lub jeśli nie *filename* jest określony, plik .pgd, który ma taką samą nazwę pliku wykonywalnego, który jest używany.
+Argument **PGD** określa opcjonalną nazwę pliku danych szkoleniowych, który ma być używany, tak samo jak w programie [/GENPROFILE lub/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). Jest odpowiednikiem przestarzałego przełącznika **/PGD** . Domyślnie, lub jeśli *Nazwa pliku* nie jest określona, używany jest plik PGD o tej samej nazwie podstawowej co plik wykonywalny.
 
-**/USEPROFILE** — opcja konsolidatora jest nowa w programie Visual Studio 2015.
+Opcja konsolidatora **/USEPROFILE** jest nowa w programie Visual Studio 2015.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
+1. Wybierz   >    >  stronę właściwości **optymalizacji** konsolidatora właściwości konfiguracji.
 
-1. W **łączonych kodów czasowych** właściwości, wybierz **Użyj łączonych kodów czasowych (/ LTCG)**.
+1. W właściwości **generowanie kodu w czasie konsolidacji** wybierz opcję **Użyj generowania kodu w czasie konsolidacji (/LTCG)**.
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
-1. Wprowadź **/USEPROFILE** opcja i opcjonalne argumenty do **dodatkowe opcje** pole. Wybierz **OK** Aby zapisać zmiany.
+1. Wprowadź opcję **/USEPROFILE** i argumenty opcjonalne w polu **dodatkowe opcje** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/ GENPROFILE i/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE i/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optymalizacje sterowane profilem](../profile-guided-optimizations.md)<br/>
-[Zmienne środowiskowe dla optymalizacji sterowanych profilem](../environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optymalizacje profilowane](../profile-guided-optimizations.md)<br/>
+[Zmienne środowiskowe dla optymalizacji Profile-Guided](../environment-variables-for-profile-guided-optimizations.md)<br/>

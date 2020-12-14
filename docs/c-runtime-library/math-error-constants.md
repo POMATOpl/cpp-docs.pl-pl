@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: stałe błędów matematycznych'
 title: Stałe błędów matematycznych
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: 3267a5053cb2cd18cfcb07473bbcc4d6f8295f5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f94f94a28543f0405cce57941a872c416d0c20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258749"
 ---
 # <a name="math-error-constants"></a>Stałe błędów matematycznych
 
@@ -40,20 +41,20 @@ ms.locfileid: "62342695"
 
 ## <a name="remarks"></a>Uwagi
 
-Procedury matematyczne biblioteki wykonawczej może generować stałe błędów matematycznych.
+Procedury matematyczne biblioteki wykonawczej mogą generować stałe błędów matematycznych.
 
-Te błędy, poniżej opisano odpowiadają typów wyjątków zdefiniowanych w MATEMATYCE. Godz. i są zwracane przez `_matherr` działać, jeśli wystąpi błąd matematyczny.
+Te błędy, opisane w poniższej kolejności, odpowiadają typom wyjątków zdefiniowanym w MATH. H i są zwracane przez `_matherr` funkcję w przypadku wystąpienia błędu matematycznego.
 
 |Stała|Znaczenie|
 |--------------|-------------|
-|`_DOMAIN`|Argument funkcji jest spoza domeny funkcji.|
-|`_OVERFLOW`|Wynik jest za duży, aby mogły być reprezentowane w zwracanego typu funkcji.|
-|`_PLOSS`|Częściowe utrata znaczenia wystąpił.|
-|`_SING`|Argument singularity: argument funkcji ma nieprawidłową wartość. (Na przykład, wartość 0 jest przekazywany do funkcji, która wymaga wartość różną od zera.)|
-|`_TLOSS`|Całkowita utrata znaczenia wystąpił.|
-|`_UNDERFLOW`|Wynik jest za mały, aby mogły być reprezentowane.|
+|`_DOMAIN`|Argument funkcji jest poza domeną funkcji.|
+|`_OVERFLOW`|Wynik jest za duży, aby można go było przedstawić w zwracanym typie funkcji.|
+|`_PLOSS`|Wystąpiła częściowa utrata istotności.|
+|`_SING`|Argument Singularity: argument funkcji ma niedozwoloną wartość. (Na przykład wartość 0 jest przenoszona do funkcji, która wymaga wartości niezerowej).|
+|`_TLOSS`|Przekroczono łączną utratę istotności.|
+|`_UNDERFLOW`|Wynik jest zbyt mały, aby można go było przedstawić.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_matherr](../c-runtime-library/reference/matherr.md)<br/>
 [Stałe globalne](../c-runtime-library/global-constants.md)

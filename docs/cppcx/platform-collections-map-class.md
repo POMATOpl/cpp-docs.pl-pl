@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: Collections:: map, Klasa'
 title: 'Platform:: Collections:: map, Klasa'
 ms.date: 10/01/2019
 ms.topic: reference
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8414328a178e4f9e2cfd7c4d97cca07ce7efcd9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258502"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform:: Collections:: map, Klasa
 
@@ -181,7 +182,7 @@ virtual bool Insert(K key, V value);
 *głównych*<br/>
 Część klucza pary klucz-wartość. Typ *klucza* to TypeName *K*.
 
-*wartościami*<br/>
+*wartość*<br/>
 Część wartości pary klucz-wartość. Typ *wartości* to TypeName *V*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -236,7 +237,7 @@ Wartość atrybutu TypeName bieżącej mapy.
 *przepisów*<br/>
 Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie.
 
-*mol*<br/>
+*m*<br/>
 Odwołanie lub [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) do elementu `map Class` , który jest używany do inicjowania bieżącej mapy.
 
 *pierwszego*<br/>

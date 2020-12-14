@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: Collections:: MapView, Klasa'
 title: 'Platform:: Collections:: MapView, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 6011948bb3708329f7dcce0841f2bc34879760a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258489"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform:: Collections:: MapView, Klasa
 
@@ -41,7 +42,7 @@ Typ klucza w parze klucz-wartość.
 *V*<br/>
 Typ wartości w parze klucz-wartość.
 
-*C*<br/>
+*S*<br/>
 Typ, który dostarcza obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w MapView. Domyślnie [std:: less \<K> ](../standard-library/less-struct.md).
 
 ### <a name="remarks"></a>Uwagi
@@ -165,7 +166,7 @@ Wartość atrybutu TypeName bieżącego MapView.
 *przepisów*<br/>
 Obiekt funkcji, który może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w MapView.
 
-*mol*<br/>
+*m*<br/>
 Odwołanie lub [lvalues i rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do elementu `map Class` , który jest używany do inicjowania bieżącego MapView.
 
 *pierwszego*<br/>

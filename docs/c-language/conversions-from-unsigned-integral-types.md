@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: konwersje z niepodpisanych typów całkowitych'
 title: Konwersje z niepodpisanych typów całkowitych
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb8f208a323083afeb4b5b88bc8d6514e1f8c99f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293147"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Konwersje z niepodpisanych typów całkowitych
 
@@ -52,9 +53,9 @@ Poniższa tabela zawiera podsumowanie konwersji z niepodpisanych typów całkowi
 |**`unsigned char`**|**`unsigned short`**|Zero — zwiększenie|
 |**`unsigned char`**|**`unsigned long`**|Zero — zwiększenie|
 |**`unsigned char`**|**`unsigned long long`**|Zero — zwiększenie|
-|**`unsigned char`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
-|**`unsigned char`**|**`double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
-|**`unsigned char`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned char`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`float`**|
+|**`unsigned char`**|**`double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`double`**|
+|**`unsigned char`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`double`**|
 |**`unsigned short`**|**`char`**|Zachowaj bajt o niskiej kolejności|
 |**`unsigned short`**|**`short`**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
 |**`unsigned short`**|**`long`**|Zero — zwiększenie|
@@ -62,9 +63,9 @@ Poniższa tabela zawiera podsumowanie konwersji z niepodpisanych typów całkowi
 |**`unsigned short`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
 |**`unsigned short`**|**`unsigned long`**|Zero — zwiększenie|
 |**`unsigned short`**|**`unsigned long long`**|Zero — zwiększenie|
-|**`unsigned short`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
-|**`unsigned short`**|**`double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
-|**`unsigned short`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned short`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`float`**|
+|**`unsigned short`**|**`double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`double`**|
+|**`unsigned short`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`double`**|
 |**`unsigned long`**|**`char`**|Zachowaj bajt o niskiej kolejności|
 |**`unsigned long`**|**`short`**|Zachowaj wyraz o niskiej kolejności|
 |**`unsigned long`**|**`long`**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
@@ -72,9 +73,9 @@ Poniższa tabela zawiera podsumowanie konwersji z niepodpisanych typów całkowi
 |**`unsigned long`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
 |**`unsigned long`**|**`unsigned short`**|Zachowaj wyraz o niskiej kolejności|
 |**`unsigned long`**|**`unsigned long long`**|Zero — zwiększenie|
-|**`unsigned long`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
-|**`unsigned long`**|**`double`**|Konwertuj bezpośrednio na**`double`**|
-|**`unsigned long`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned long`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`float`**|
+|**`unsigned long`**|**`double`**|Konwertuj bezpośrednio na **`double`**|
+|**`unsigned long`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`double`**|
 |**`unsigned long long`**|**`char`**|Zachowaj bajt o niskiej kolejności|
 |**`unsigned long long`**|**`short`**|Zachowaj wyraz o niskiej kolejności|
 |**`unsigned long long`**|**`long`**|Zachowywanie wartości DWORD z niską kolejnością|
@@ -82,10 +83,10 @@ Poniższa tabela zawiera podsumowanie konwersji z niepodpisanych typów całkowi
 |**`unsigned long long`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
 |**`unsigned long long`**|**`unsigned short`**|Zachowaj wyraz o niskiej kolejności|
 |**`unsigned long long`**|**`unsigned long`**|Zachowywanie wartości DWORD z niską kolejnością|
-|**`unsigned long long`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
-|**`unsigned long long`**|**`double`**|Konwertuj bezpośrednio na**`double`**|
-|**`unsigned long long`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned long long`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`float`**|
+|**`unsigned long long`**|**`double`**|Konwertuj bezpośrednio na **`double`**|
+|**`unsigned long long`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na **`double`**|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

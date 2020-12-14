@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: jak definiować wyliczenia i korzystać z nich w języku C++/CLI'
 title: 'Instrukcje: Definiowanie wyliczeń w języku C++/interfejsie wiersza polecenia i korzystanie z nich'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: f09bb6e9fac30b72c3c4e0682c3d90f2ea9f8760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26b3c886ca34235f0567fc0f8e9d7df6bfe46814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258345"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Instrukcje: Definiowanie wyliczeń w języku C++/interfejsie wiersza polecenia i korzystanie z nich
 
@@ -135,6 +136,6 @@ int main() {
 True
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [enum, klasa](../extensions/enum-class-cpp-component-extensions.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa ComposableBase'
 title: ComposableBase — Klasa
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::ComposableBase
 ms.assetid: 5e967ef9-15c8-483b-b0d0-2e28cc91c715
-ms.openlocfilehash: 2fe497257f467f7d5cc26fb407757f217c070755
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f7b2e0fbd9beeb19fede22d6da0a0019b1e30a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258424"
 ---
 # <a name="composablebase-class"></a>ComposableBase — Klasa
 
@@ -33,4 +34,4 @@ class ComposableBase;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft:: WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

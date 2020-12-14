@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _putch_nolock, _putwch_nolock'
 title: _putch_nolock, _putwch_nolock
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: df32b156d8c57d51ee81c4b4893bf11887915672
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a300b70cc128ef1cbefcf745a0ed113f452f6ef3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246360"
 ---
 # <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock, _putwch_nolock
 
@@ -89,8 +90,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_putch_nolock**|\<CONIO. h>|
-|**_putwch_nolock**|\<CONIO. h>|
+|**_putch_nolock**|\<conio.h>|
+|**_putwch_nolock**|\<conio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -100,6 +101,6 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 
 ## <a name="see-also"></a>Zobacz też
 
-[Operacje We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

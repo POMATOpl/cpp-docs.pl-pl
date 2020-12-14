@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie debug (C++/CLI)
 title: Klasa Debug (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 255fe306684928faf836cd550005eea820d64ce5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414155"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258437"
 ---
 # <a name="debug-class-ccli"></a>Klasa Debug (C++/CLI)
 
@@ -91,6 +92,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: Tworzenie kontrolki listy'
 title: Tworzenie formantu listy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-ms.openlocfilehash: c9ba379611c44b5eae8d02b908ba71e3dbd66481
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5be1a9ce7a2cd8279d576dfc41e44c810c433515
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309579"
 ---
 # <a name="creating-the-list-control"></a>Tworzenie formantu listy
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _putch, _putwch'
 title: _putch, _putwch
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 242e7c69330cf86c9c369903812f277fe0018d50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246347"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -88,8 +89,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_putch**|\<CONIO. h>|
-|**_putwch**|\<CONIO. h>|
+|**_putch**|\<conio.h>|
+|**_putwch**|\<conio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -103,6 +104,6 @@ Zapoznaj się z przykładem [_getch](getch-getwch.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Operacje We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

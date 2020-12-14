@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _chmod, _wchmod'
 title: _chmod, _wchmod
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 601510c1f326282d48d2824b055ee3e80d9db0ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275038"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -71,11 +72,11 @@ Funkcja **_chmod** zmienia ustawienie uprawnień pliku określonego przez *filen
 
 | *pmode* | Znaczenie |
 |-|-|
-| **\_IREAD\_S** | Dozwolony jest tylko odczyt. |
-| **\_IWRITE\_S** | Dozwolone jest zapisanie. (W efekcie zezwala na odczyt i zapis). |
-| **\_S\_IREAD** &#124; ** \_s\_IWRITE** | Dozwolone odczytywanie i zapisywanie. |
+| **\_\_IREAD S** | Dozwolony jest tylko odczyt. |
+| **\_\_IWRITE S** | Dozwolone jest zapisanie. (W efekcie zezwala na odczyt i zapis). |
+| **\_ S \_ IREAD** &#124; **\_ s \_ IWRITE** | Dozwolone odczytywanie i zapisywanie. |
 
-Po otrzymaniu obu stałych są one przyłączone do operatora bitowego or (**\|**). Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze do odczytu; nie można udzielić uprawnienia tylko do zapisu. W tym celu tryby **_S_IWRITE** i **_S_IREAD** \| **_S_IWRITE** są równoważne.
+Po otrzymaniu obu stałych są one przyłączone do operatora bitowego or ( **\|** ). Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze do odczytu; nie można udzielić uprawnienia tylko do zapisu. W tym celu tryby **_S_IWRITE** i **_S_IREAD** \| **_S_IWRITE** są równoważne.
 
 **_wchmod** to dwubajtowa wersja **_chmod**; argument *filename* **_wchmod** jest ciągiem znaków dwubajtowych. **_wchmod** i **_chmod** zachowują się identycznie w inny sposób.
 
@@ -93,8 +94,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_chmod**|\<IO. h>|\<sys/Types. h>, \<sys/stat. h>, \<errno. h>|
-|**_wchmod**|\<IO. h> lub \<WCHAR. h>|\<sys/Types. h>, \<sys/stat. h>, \<errno. h>|
+|**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wchmod**|\<io.h> lub \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -174,7 +175,7 @@ Access is denied.
 Mode set to read/write
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyrażenia regularne (C++/CLI)'
 title: Wyrażenia regularne (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -28,22 +29,22 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 838bab49-0dbc-4089-a604-ef146269ef5a
-ms.openlocfilehash: 24a278e4d5b208c5d8e3b95b9f5a0bd0306dbab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 429a121ec7acad46437a344b089f5c6a1ce4243b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245814"
 ---
 # <a name="regular-expressions-ccli"></a>Wyrażenia regularne (C++/CLI)
 
-Demonstruje różne operacje na ciągach przy użyciu klas wyrażeniach regularnych programu .NET Framework.
+Pokazuje różne operacje na ciągach używające klas wyrażeń regularnych w .NET Framework.
 
-W poniższych tematach pokazano użycie programu .NET Framework <xref:System.Text.RegularExpressions> przestrzeni nazw (w jeden przypadek <xref:System.String.Split%2A?displayProperty=fullName> metody) do wyszukiwania, analizuje i zmodyfikować ciągi.
+W poniższych tematach przedstawiono sposób korzystania z <xref:System.Text.RegularExpressions> przestrzeni nazw .NET Framework (i w jednym przypadku <xref:System.String.Split%2A?displayProperty=fullName> metody) do wyszukiwania, analizowania i modyfikowania ciągów.
 
-## <a name="parse_regex"></a> Analizowanie ciągów za pomocą wyrażeń regularnych
+## <a name="parse-strings-using-regular-expressions"></a><a name="parse_regex"></a> Analizowanie ciągów za pomocą wyrażeń regularnych
 
-Poniższy przykład kodu demonstruje, prostego ciągu analizy przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w <xref:System.Text.RegularExpressions?displayProperty=fullName> przestrzeni nazw. Ciąg zawierający wiele typów ukośników word jest konstruowany. Ten ciąg jest analizowany przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w połączeniu z <xref:System.Text.RegularExpressions.Match> klasy. Następnie każdego wyrazu w zdaniu jest wyświetlany osobno.
+Poniższy przykład kodu demonstruje prostą analizę ciągu przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w <xref:System.Text.RegularExpressions?displayProperty=fullName> przestrzeni nazw. Tworzony jest ciąg zawierający wiele typów wyrazów delineators. Ten ciąg jest następnie analizowany przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w połączeniu z <xref:System.Text.RegularExpressions.Match> klasą. Następnie każdy wyraz w zdaniu jest wyświetlany osobno.
 
 ### <a name="example"></a>Przykład
 
@@ -79,9 +80,9 @@ int main( )
 }
 ```
 
-## <a name="parse_split"></a> Analizowanie ciągów za pomocą metody Split
+## <a name="parse-strings-using-the-split-method"></a><a name="parse_split"></a> Analizowanie ciągów za pomocą metody Split
 
-Poniższy przykład kodu demonstruje sposób użycia <xref:System.String.Split%2A?displayProperty=fullName> metodę, aby wyodrębnić każdy wyraz z ciągu. Ciąg zawierający wiele typów ukośników word jest tworzony i następnie analizowane przez wywołanie metody <xref:System.String.Split%2A> z listą ukośników. Następnie każdego wyrazu w zdaniu jest wyświetlany osobno.
+Poniższy przykład kodu demonstruje użycie <xref:System.String.Split%2A?displayProperty=fullName> metody do wyodrębnienia każdego wyrazu z ciągu. Ciąg zawierający wiele typów wyrazów delineators jest skonstruowany, a następnie przeanalizowany przez wywołanie <xref:System.String.Split%2A> z listą delineators. Następnie każdy wyraz w zdaniu jest wyświetlany osobno.
 
 ### <a name="example"></a>Przykład
 
@@ -108,9 +109,9 @@ int main()
 }
 ```
 
-## <a name="regex_simple"></a> Używanie wyrażeń regularnych w przypadku prostego dopasowywania
+## <a name="use-regular-expressions-for-simple-matching"></a><a name="regex_simple"></a> Używanie wyrażeń regularnych w przypadku prostego dopasowywania
 
-Poniższy przykład kodu używa wyrażeń regularnych do wyszukiwania podciągu dokładnego dopasowania. Wyszukiwanie jest wykonywane przez statyczną <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metody, która przyjmuje dwa ciągi jako dane wejściowe. Pierwsza to ciąg do wyszukania, a drugi jest wzorzec, które mają być wyszukiwane.
+Poniższy przykład kodu używa wyrażeń regularnych, aby wyszukać dokładne dopasowania podciągów. Wyszukiwanie jest wykonywane przez metodę statyczną <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> , która pobiera dwa ciągi jako dane wejściowe. Pierwszy jest ciągiem, który ma być przeszukiwany, a drugi to wzorzec, który ma być wyszukiwany.
 
 ### <a name="example"></a>Przykład
 
@@ -146,9 +147,9 @@ int main()
 }
 ```
 
-## <a name="regex_extract"></a> Używanie wyrażeń regularnych do wyodrębniania pól danych
+## <a name="use-regular-expressions-to-extract-data-fields"></a><a name="regex_extract"></a> Używanie wyrażeń regularnych do wyodrębniania pól danych
 
-Poniższy przykład kodu demonstruje użycie wyrażeń regularnych do wyodrębniania danych z ciąg formatowania. Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex> klasy do określania wzorca, który odnosi się do adresu e-mail. Ten wzorzec zawiera identyfikatory pola, które może służyć do pobierania użytkownika i nazwę hosta części każdego z adresów e-mail. <xref:System.Text.RegularExpressions.Match> Klasa jest używana do wykonania dopasowania wzorca rzeczywistych. Jeśli adres e-mail danego jest prawidłowy, nazwę użytkownika i nazwy hostów są wyodrębniane i wyświetlane.
+Poniższy przykład kodu demonstruje użycie wyrażeń regularnych w celu wyodrębnienia danych z sformatowanego ciągu. Poniższy przykład kodu używa klasy, <xref:System.Text.RegularExpressions.Regex> Aby określić wzorzec, który odpowiada adresowi e-mail. Ten Patter zawiera identyfikatory pól, których można użyć do pobrania części nazwy użytkownika i hosta z poszczególnych adresów e-mail. <xref:System.Text.RegularExpressions.Match>Klasa jest używana do wykonywania rzeczywistego dopasowania do wzorca. Jeśli dany adres e-mail jest prawidłowy, nazwy użytkownika i hosta są wyodrębniane i wyświetlane.
 
 ### <a name="example"></a>Przykład
 
@@ -193,11 +194,11 @@ int main()
 }
 ```
 
-## <a name="regex_rearrange"></a> Używanie wyrażeń regularnych do zmiany rozmieszczenia danych
+## <a name="use-regular-expressions-to-rearrange-data"></a><a name="regex_rearrange"></a> Używanie wyrażeń regularnych do zmiany rozmieszczenia danych
 
-Poniższy przykład kodu pokazuje, jak obsługa wyrażeń regularnych programu .NET Framework można ponownie rozmieścić, lub ponownie sformatuj dane. Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex> i <xref:System.Text.RegularExpressions.Match> klasy, aby wyodrębnić imiona i nazwiska z ciągu, a następnie wyświetlić te elementy nazwy w odwrotnej kolejności.
+Poniższy przykład kodu demonstruje, jak .NET Framework Obsługa wyrażeń regularnych może służyć do ponownego rozmieszczania lub formatowania danych. Poniższy przykład kodu używa <xref:System.Text.RegularExpressions.Regex> klas i, <xref:System.Text.RegularExpressions.Match> Aby wyodrębnić imiona i nazwiska z ciągu, a następnie wyświetlać te elementy w kolejności odwrotnej.
 
-<xref:System.Text.RegularExpressions.Regex> Klasa jest używana do konstruowania wyrażenia regularnego, który opisuje bieżący format danych. Obie nazwy przyjmuje, że są oddzielone przecinkami i przy użyciu dowolnej ilości odstęp wokół przecinek. <xref:System.Text.RegularExpressions.Match> Metody jest następnie używany do analizowania każdego ciągu. Jeśli to się powiedzie, imienia i nazwiska są pobierane z <xref:System.Text.RegularExpressions.Match> obiektu i wyświetlane.
+<xref:System.Text.RegularExpressions.Regex>Klasa jest używana do konstruowania wyrażenia regularnego opisującego bieżący format danych. Przyjmuje się, że dwie nazwy są rozdzielone przecinkami i mogą korzystać z dowolnej ilości wolnego miejsca wokół przecinka. <xref:System.Text.RegularExpressions.Match>Metoda jest następnie używana do analizowania każdego ciągu. Jeśli to się powiedzie, imiona i nazwiska są pobierane z <xref:System.Text.RegularExpressions.Match> obiektu i wyświetlane.
 
 ### <a name="example"></a>Przykład
 
@@ -237,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="regex_search"></a> Używanie wyrażeń regularnych do wyszukiwania i zamieniania
+## <a name="use-regular-expressions-to-search-and-replace"></a><a name="regex_search"></a> Używanie wyrażeń regularnych do wyszukiwania i zamieniania
 
-Poniższy przykład kodu demonstruje sposób klasy wyrażeń regularnych <xref:System.Text.RegularExpressions.Regex> może służyć do wykonywania wyszukiwania i zamieniania. Jest to zrobić za pomocą <xref:System.Text.RegularExpressions.Regex.Replace%2A> metody. Wersja użyta przyjmuje dwa ciągi jako dane wejściowe: ciąg, który ma zostać zmodyfikowana, a ciąg, który ma zostać wstawiony zamiast sekcje (jeśli istnieje) który pasuje do wzorca, umożliwiającej <xref:System.Text.RegularExpressions.Regex> obiektu.
+Poniższy przykład kodu demonstruje, jak Klasa wyrażenia regularnego <xref:System.Text.RegularExpressions.Regex> może służyć do wykonywania wyszukiwania i zamieniania. Jest to realizowane za pomocą <xref:System.Text.RegularExpressions.Regex.Replace%2A> metody. Używana wersja pobiera dwa ciągi jako dane wejściowe: ciąg do zmodyfikowania i ciąg, który ma zostać wstawiony zamiast sekcji (jeśli istnieją), które pasują do wzorca danego <xref:System.Text.RegularExpressions.Regex> obiektu.
 
-Ten kod zastępuje wszystkie cyfry w ciągu znaków podkreślenia (_), a następnie zastępuje z pustym ciągiem, powodując rzeczywiste usunięcie ich. Ten sam efekt można osiągnąć w jednym kroku, ale w tym miejscu służą dwa kroki dla celów demonstracyjnych.
+Ten kod zastępuje wszystkie cyfry w ciągu znakami podkreślenia (_), a następnie zastępuje je ciągiem pustym i skutecznie je usuwając. Ten sam efekt można wykonać w jednym kroku, ale w celach demonstracyjnych użyto dwóch kroków.
 
 ### <a name="example"></a>Przykład
 
@@ -269,9 +270,9 @@ int main()
 }
 ```
 
-## <a name="regex_validate"></a> Używanie wyrażeń regularnych do walidacji formatowania danych
+## <a name="use-regular-expressions-to-validate-data-formatting"></a><a name="regex_validate"></a> Używanie wyrażeń regularnych do sprawdzania poprawności formatowania danych
 
-Poniższy przykład kodu demonstruje użycie wyrażenia regularne, aby sprawdzić formatowanie ciągu. W poniższym przykładzie kodu powinien on zawierać prawidłowy numer telefonu. Poniższy przykład kodu używa ciągu "\d{3}-\d{3}-\d{4}" Aby wskazać, że każde pole reprezentuje prawidłowy numer telefonu. W ciągu "d" oznacza cyfrę, a argument po każdym "d" wskazuje liczbę cyfr, które muszą być obecne. W tym przypadku numer będzie musiał być oddzielone kreskami.
+Poniższy przykład kodu demonstruje użycie wyrażeń regularnych w celu sprawdzenia formatowania ciągu. W poniższym przykładzie kodu ciąg powinien zawierać prawidłowy numer telefonu. Poniższy przykład kodu używa ciągu "\d {3} -\d {3} -\d {4} ", aby wskazać, że każde pole reprezentuje prawidłowy numer telefonu. "D" w ciągu wskazuje cyfrę, a argument po każdej "d" wskazuje liczbę cyfr, które muszą być obecne. W takim przypadku liczba jest wymagana do rozdzielenia przez łączniki.
 
 ### <a name="example"></a>Przykład
 
@@ -314,8 +315,8 @@ int main()
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Wyrażeń regularnych programu .NET framework](/dotnet/standard/base-types/regular-expressions)
+[.NET Framework — Wyrażenia regularne](/dotnet/standard/base-types/regular-expressions)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

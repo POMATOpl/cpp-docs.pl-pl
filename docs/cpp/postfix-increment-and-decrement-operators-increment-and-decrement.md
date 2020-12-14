@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: przyrostowe operatory zwiększania i zmniejszania: + + i--'
 title: 'Operatory przyrostka inkrementacji i dekrementacji: ++ i --'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: 8c3eeb47ec81f4073452c17f40eb2fec4911989f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56f955fc4c8b5508c4b2c4e03c37e89f9d2d8bc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258515"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatory przyrostka inkrementacji i dekrementacji: ++ i --
 
@@ -73,7 +74,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia przyrostkowe](../cpp/postfix-expressions.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

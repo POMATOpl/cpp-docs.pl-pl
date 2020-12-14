@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: ciągi języka'
 title: Ciągi języka
 ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: dd0c55091d3dff641993fa593e656e2825da7c73
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 077a440981c9e39e87356310c40ae9b249d4662e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839255"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246581"
 ---
 # <a name="language-strings"></a>Ciągi języka
 
@@ -21,9 +22,9 @@ Implementacja biblioteki wykonawczej Microsoft C obsługuje również następuj�
 
 |Ciąg języka|Równoważna Nazwa ustawień regionalnych|
 |---------------------|----------------------------|
-|Samoa|pl-PL|
-|angielski (amerykański)|pl-PL|
-|amerykański (angielski)|pl-PL|
+|Samoa|en-US|
+|angielski (amerykański)|en-US|
+|amerykański (angielski)|en-US|
 |służb|en-AU|
 |Belgii|NL-to|
 |Ustawa|EN-CA|
@@ -35,7 +36,7 @@ Implementacja biblioteki wykonawczej Microsoft C obsługuje również następuj�
 |Chiński (Singapur)|zh-SG|
 |Chiński (tradycyjny)|zh-TW|
 |holenderski — belgijski|NL-to|
-|angielski (amerykański)|pl-PL|
+|angielski (amerykański)|en-US|
 |angielski (Australia)|en-AU|
 |angielski — Belize|pl-BZ|
 |angielski — może|EN-CA|
@@ -46,8 +47,8 @@ Implementacja biblioteki wykonawczej Microsoft C obsługuje również następuj�
 |angielski (Republika Południowej Afryki)|pl-za|
 |angielski — Trynidad y Tobago|pl-TT|
 |angielski — Zjednoczone Królestwo|en-GB|
-|angielski — Stany Zjednoczone|pl-PL|
-|angielski (USA)|pl-PL|
+|angielski — Stany Zjednoczone|en-US|
+|angielski (USA)|en-US|
 |francuski — belgijski|fr — należy|
 |francuski — Kanada|fr — CA|
 |Francuski — Luksemburg|fr — LU|
@@ -84,8 +85,8 @@ Implementacja biblioteki wykonawczej Microsoft C obsługuje również następuj�
 |szwedzki — Finlandia|OHR-FI|
 |przewoźnik|Usuń CH|
 |Południowe Zjednoczone Królestwo|en-GB|
-|Prześlij|pl-PL|
-|poniżej|pl-PL|
+|Prześlij|en-US|
+|poniżej|en-US|
 
 ## <a name="see-also"></a>Zobacz też
 

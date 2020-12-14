@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _pclose'
 title: _pclose
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529af8ccdd1c6cc27f9039adef5d75c8b977aa54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258710"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -64,7 +65,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_pclose** wyszukuje identyfikator procesu procesora poleceń (cmd. exe) uruchamiany przez skojarzone wywołanie **_popen** , wykonuje wywołanie [_cwait](cwait.md) na nowym procesorze poleceń i zamyka strumień w skojarzonym potoku.
+Funkcja **_pclose** wyszukuje identyfikator procesu procesora poleceń (Cmd.exe) uruchomionego przez skojarzone wywołanie **_popen** , wykonuje wywołanie [_cwait](cwait.md) w nowym procesorze poleceń i zamyka strumień w skojarzonym potoku.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -72,7 +73,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_pclose**|\<stdio. h>|
+|**_pclose**|\<stdio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

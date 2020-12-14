@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _putenv, _wputenv'
 title: _putenv, _wputenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: a86b58b868c96b6f77af8bfa32036d1a56b2a7cf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 117250553eba7b2c8c1249140b610dc064e6b1fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918865"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258606"
 ---
 # <a name="_putenv-_wputenv"></a>_putenv, _wputenv
 
@@ -86,9 +87,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-Argument *envstring* musi być wskaźnikiem do ciągu w postaci *nazwa_zmiennej*=*value_string*, gdzie *nazwa_zmiennej* to nazwa zmiennej środowiskowej, która ma zostać dodana lub zmodyfikowana, a *value_string* jest wartością zmiennej. Jeśli *nazwa_zmiennej* jest już częścią środowiska, jej wartość jest zastępowana przez *value_string*; w przeciwnym razie Nowa zmienna *nazwa_zmiennej* i jej wartość *value_string* są dodawane do środowiska. Można usunąć zmienną ze środowiska, określając puste *value_string*lub innymi słowy, określając tylko wartość *nazwa_zmiennej*=.
+Argument *envstring* musi być wskaźnikiem do ciągu w postaci *nazwa_zmiennej* = *value_string*, gdzie *nazwa_zmiennej* to nazwa zmiennej środowiskowej, która ma zostać dodana lub zmodyfikowana, a *value_string* jest wartością zmiennej. Jeśli *nazwa_zmiennej* jest już częścią środowiska, jej wartość jest zastępowana przez *value_string*; w przeciwnym razie Nowa zmienna *nazwa_zmiennej* i jej wartość *value_string* są dodawane do środowiska. Można usunąć zmienną ze środowiska, określając puste *value_string* lub innymi słowy, określając tylko wartość *nazwa_zmiennej*=.
 
-**_putenv** i **_wputenv** mają wpływ tylko na środowisko, które jest lokalne dla bieżącego procesu; nie można ich używać do modyfikowania środowiska poziomu polecenia. Oznacza to, że funkcje te działają tylko na strukturach danych dostępnych dla biblioteki wykonawczej, a nie w segmencie środowiska utworzonym dla procesu przez system operacyjny. Gdy bieżący proces zakończy działanie, środowisko powraca do poziomu procesu wywołującego (w większości przypadków jest to poziom systemu operacyjnego). Zmodyfikowane środowisko może być jednak przesyłane do wszelkich nowych procesów utworzonych przez **_spawn**, **_exec**lub **system**, a nowe procesy uzyskują nowe elementy dodane przez **_putenv** i **_wputenv**.
+**_putenv** i **_wputenv** mają wpływ tylko na środowisko, które jest lokalne dla bieżącego procesu; nie można ich używać do modyfikowania środowiska poziomu polecenia. Oznacza to, że funkcje te działają tylko na strukturach danych dostępnych dla biblioteki wykonawczej, a nie w segmencie środowiska utworzonym dla procesu przez system operacyjny. Gdy bieżący proces zakończy działanie, środowisko powraca do poziomu procesu wywołującego (w większości przypadków jest to poziom systemu operacyjnego). Zmodyfikowane środowisko może być jednak przesyłane do wszelkich nowych procesów utworzonych przez **_spawn**, **_exec** lub **system**, a nowe procesy uzyskują nowe elementy dodane przez **_putenv** i **_wputenv**.
 
 Nie zmieniaj bezpośrednio wpisu środowiska: zamiast tego należy użyć **_putenv** lub **_wputenv** , aby go zmienić. W szczególności bezpośrednie zwalnianie elementów tablicy globalnej **_environ []** może prowadzić do nieprawidłowej ilości pamięci.
 
@@ -101,8 +102,8 @@ Nie zmieniaj bezpośrednio wpisu środowiska: zamiast tego należy użyć **_put
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_putenv**|\<STDLIB. h>|
-|**_wputenv**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_putenv**|\<stdlib.h>|
+|**_wputenv**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
