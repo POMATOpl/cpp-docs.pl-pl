@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK1112'
 title: Błąd narzędzi konsolidatora LNK1112
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1112
 ms.assetid: 425793d8-37e6-4072-9b6e-c3d4e9c12562
-ms.openlocfilehash: bc01d56fb8144d23b91c82a7f791a70a5dadb7ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba0a34e07b0806f251c0b1237dc28ab5f8becbf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255488"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281382"
 ---
 # <a name="linker-tools-error-lnk1112"></a>Błąd narzędzi konsolidatora LNK1112
 
-> Typ maszyny modułu "*type1*"powoduje konflikt z typem maszyny docelowej"*type2*"
+> Typ maszyny modułu "*Type1*" powoduje konflikt z typem maszyny docelowej "*Type2*"
 
 ## <a name="remarks"></a>Uwagi
 
-Pliki obiektów, określony jako dane wejściowe zostały skompilowane dla typów na innym komputerze.
+Pliki obiektów określone jako dane wejściowe zostały skompilowane dla różnych typów komputerów.
 
-Na przykład, Jeśli spróbujesz połączyć skompilowany plik obiektu przy użyciu **/CLR** i plik obiektu kompilowany przy użyciu **/CLR: pure** (typ CEE maszyny), konsolidator wygeneruje błąd LNK1112. **/CLR: pure** — opcja kompilatora jest przestarzała w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
+Na przykład, jeśli spróbujesz połączyć plik obiektu skompilowany z **/CLR** i plik obiektu skompilowany za pomocą **/CLR: Pure** (typ maszyny CEE), konsolidator generuje błąd LNK1112. **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Podobnie w przypadku utworzenia jeden moduł x64 kompilatora i inny moduł przy użyciu x86 kompilatora i spróbuj połączyć je, konsolidator wygeneruje LNK1112.
+Podobnie w przypadku utworzenia jednego modułu z kompilatorem x64 i innego modułu z kompilatorem x86, a następnie nastąpi próba połączenia, konsolidator generuje LNK1112.
 
-Możliwa przyczyna tego błędu jest Jeśli tworzysz aplikację 64-bitową, ale nie jest zainstalowany jeden z programów kompilujących w języku Visual C++ 64-bitowych. W tym przypadku nie będzie dostępne konfiguracje 64-bitowych. Aby rozwiązać ten problem, uruchom Instalatora programu Visual Studio, a następnie zainstalowanie brakujących składników języka C++.
+Możliwą przyczyną tego błędu jest to, że tworzysz aplikację 64-bitową, ale nie zainstalowano jednego z Visual C++ 64-bitowych kompilatorów. W takim przypadku konfiguracje 64-bitowe nie będą dostępne. Aby rozwiązać ten problem, uruchom Instalatora programu Visual Studio i zainstaluj brakujące składniki języka C++.
 
-Ten błąd może również wystąpić, jeśli zmienisz **Konfiguracja rozwiązania aktywnego** w **programu Configuration Manager** , a następnie spróbuj skompilować projekt, przed usunięciem plików pośrednich projektu. Aby rozwiązać ten problem, wybierz pozycję **Kompiluj rozwiązanie** z **kompilacji** menu. Możesz również wybrać **czyste rozwiązanie** z **kompilacji** menu i przeprowadź kompilację rozwiązania.
+Ten błąd może również wystąpić, jeśli zmienisz **konfigurację aktywnego rozwiązania** w **Configuration Manager** a następnie spróbujesz skompilować projekt przed usunięciem pośrednich plików projektu. Aby rozwiązać ten problem, wybierz pozycję **Skompiluj ponownie rozwiązanie** z menu **kompilacja** . Możesz również wybrać opcję **Oczyść rozwiązanie** z menu **kompilacja** , a następnie skompilować rozwiązanie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Błędy i ostrzeżenia narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

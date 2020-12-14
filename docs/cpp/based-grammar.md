@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej na temat __based gramatyki
 title: __based — Gramatyka
 ms.date: 11/04/2016
 helpviewer_keywords:
 - based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
-ms.openlocfilehash: 539ccef65477bafe2c46ce328bdaf65f52aff1b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c449c45700c57d0c6f6018ca47e40d42c4b2ad0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304522"
 ---
 # <a name="__based-grammar"></a>__based — Gramatyka
 
@@ -33,6 +34,6 @@ Jedyną formą dopuszczalną w oparciu o 32-bitowe i 64-bitowe kompilacje jest "
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wskaźniki bazujące](../cpp/based-pointers-cpp.md)

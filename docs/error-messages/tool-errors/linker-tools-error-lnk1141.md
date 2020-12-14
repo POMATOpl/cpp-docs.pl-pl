@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK1141'
 title: Błąd narzędzi konsolidatora LNK1141
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: 2564cbb557f818aa3ef06e0032335b534daf7188
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cfebb579def0ebec51eb60c1f4c5b978c7959be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80184206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281187"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Błąd narzędzi konsolidatora LNK1141
 
@@ -25,4 +26,4 @@ Ten błąd jest poprzedzony innym błędem, który zapewnia dodatkowe informacje
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki .Exp — wejście konsolidatora](../../build/reference/dot-exp-files-as-linker-input.md)
+[. Pliki EXP jako dane wejściowe konsolidatora](../../build/reference/dot-exp-files-as-linker-input.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2672'
 title: Błąd kompilatora C2672
 ms.date: 10/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2672
 ms.assetid: 7e86338a-2d4b-40fe-9dd2-ac6886f3f31a
-ms.openlocfilehash: 9f844b54285a7df69bfb4387a7afcc82dfef9252
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de901eaa416f3ee675c7b09c342de74dc7207fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282084"
 ---
 # <a name="compiler-error-c2672"></a>Błąd kompilatora C2672
 
@@ -19,7 +20,7 @@ ms.locfileid: "80177134"
 
 Kompilator nie może odnaleźć przeciążonej funkcji zgodnej z określoną funkcją. Nie znaleziono funkcji, która pobiera zgodne parametry lub żadna zgodna funkcja nie ma wymaganego dostępu w kontekście.
 
-W przypadku użycia przez niektóre standardowe kontenery biblioteki lub algorytmy typy muszą zapewnić dostępnym członkom lub znajomym funkcjom, które spełniają wymagania kontenera lub algorytmu. Na przykład typy iteratorów powinny pochodzić od `std::iterator<>`. Operacje porównania lub użycie innych operatorów w typach elementów kontenera mogą wymagać, aby typ był traktowany jako po lewej stronie i po prawej stronie. Użycie typu jako argumentu operacji po prawej stronie może wymagać implementacji operatora jako funkcji nienależącej do elementu członkowskiego typu.
+W przypadku użycia przez niektóre standardowe kontenery biblioteki lub algorytmy typy muszą zapewnić dostępnym członkom lub znajomym funkcjom, które spełniają wymagania kontenera lub algorytmu. Na przykład typy iteratorów powinny pochodzić od `std::iterator<>` . Operacje porównania lub użycie innych operatorów w typach elementów kontenera mogą wymagać, aby typ był traktowany jako po lewej stronie i po prawej stronie. Użycie typu jako argumentu operacji po prawej stronie może wymagać implementacji operatora jako funkcji nienależącej do elementu członkowskiego typu.
 
 ## <a name="example"></a>Przykład
 

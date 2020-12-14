@@ -1,27 +1,28 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4627
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4627'
+title: Ostrzeżenie kompilatora (poziom 1) C4627
 ms.date: 09/09/2018
 f1_keywords:
 - C4627
 helpviewer_keywords:
 - C4627
 ms.assetid: 8840f3e6-b496-423a-8635-eb55d5f854a2
-ms.openlocfilehash: 06db3d7e585dfe49b2e0854973f63834648613b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc4c6c3931775b090dfd4c7c2fd5fd97441d40d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281447"
 ---
-# <a name="compiler-warning-level-1-c4627"></a>Kompilator ostrzeżenie (poziom 1) C4627
+# <a name="compiler-warning-level-1-c4627"></a>Ostrzeżenie kompilatora (poziom 1) C4627
 
-> "*header_file*": pominięto podczas wyszukiwania użycia prekompilowanego nagłówka
+> "*HEADER_FILE*": pominięto podczas wyszukiwania użycia prekompilowanego nagłówka
 
-Jeśli bieżącego pliku źródłowego ma [/Yu \(Użyj prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) zestaw, opcji, a następnie Kompilator ignoruje całą zawartość pliku, zanim prekompilowany plik nagłówkowy jest dołączony. Ostrzeżenie **C4627** jest generowany w programie Visual Studio 2015 i starsze wersje, jeśli *header_file* znajduje się przed prekompilowanego pliku nagłówkowego, i jeśli prekompilowanego pliku nagłówkowego nie obejmuje również *header_file*.
+Jeśli bieżący plik źródłowy ma ustawioną opcję [/Yu \( Użyj prekompilowanego pliku nagłówkowego)](../../build/reference/yu-use-precompiled-header-file.md) , kompilator zignoruje wszystko w pliku przed włączeniem prekompilowanego nagłówka. Ostrzeżenie **C4627** jest generowana w programie Visual Studio 2015 i starszych wersjach, jeśli *HEADER_FILE* jest zawarty przed prekompilowanym plikiem nagłówkowym, a prekompilowany nagłówek nie zawiera również *HEADER_FILE*.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie pokazano, jak może wystąpić błąd i pokazuje, jak go naprawić:
+Ten przykład pokazuje, jak może wystąpić błąd, i pokazuje, jak go naprawić:
 
 ```cpp
 // c4627.cpp
@@ -34,6 +35,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie prekompilowanych plików nagłówka](../../build/creating-precompiled-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Jak konwertować między system:: GUID i _GUID'
 title: 'Porady: konwertowanie między identyfikatorami System::Guid i _GUID'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-ms.openlocfilehash: a0150053157d2694788cd50bf64097805a8eda88
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 1f2eb87f23e7f47221b4506c2c9e328803b800e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304392"
 ---
 # <a name="how-to-convert-between-systemguid-and-_guid"></a>Porady: konwertowanie między identyfikatorami System::Guid i _GUID
 
-Poniższy przykład kodu pokazuje, jak konwertować między <xref:System.Guid> i `_GUID`.
+Poniższy przykład kodu pokazuje, jak konwertować między a <xref:System.Guid> i `_GUID` .
 
 ## <a name="example"></a>Przykład
 
@@ -67,4 +68,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

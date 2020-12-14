@@ -1,5 +1,6 @@
 ---
-title: Platform::Details::HeapEntryHandler Delegate
+description: 'Dowiedz się więcej o: platform::D etails:: HeapEntryHandler Delegate'
+title: 'Platforma::D etails:: HeapEntryHandler delegat'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::HeapEntryHandler Delegate
 ms.assetid: 97ba4e47-ac0f-47c6-a93c-67a21c0a16d3
-ms.openlocfilehash: e7acdef091511982a2117f15cff1042037d7b2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 722af46db815972275ca8b44ff0ffe7aa0b22c1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305770"
 ---
-# <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler Delegate
+# <a name="platformdetailsheapentryhandler-delegate"></a>Platforma::D etails:: HeapEntryHandler delegat
 
-Ten delegat jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
+Delegat ten jest przeznaczony wyłącznie do użytku wewnętrznego i nie jest przeznaczony do użytku na potrzeby programowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +27,7 @@ delegate HeapEntryHandler;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta klasa jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być kontrolowane za pomocą przeglądarki.
+Ta klasa jest świadczona wyłącznie na potrzeby kompletności, ponieważ może być sprawdzana w przeglądarkach.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -34,10 +35,10 @@ Ta klasa jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być k
 
 ### <a name="requirements"></a>Wymagania
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-**Namespace:** Platform::Details
+**Przestrzeń nazw:** Platforma::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)
