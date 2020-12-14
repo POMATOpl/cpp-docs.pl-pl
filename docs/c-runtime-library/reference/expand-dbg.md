@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _expand_dbg'
 title: _expand_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-ms.openlocfilehash: 836b9cffcf0367f248a14469b30c1a355e2bdec2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6ebdce3a22c4e5b4b63b8301570effed888fe66f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235970"
 ---
 # <a name="_expand_dbg"></a>_expand_dbg
 
@@ -74,9 +75,9 @@ Po pomyślnym zakończeniu **_expand_dbg** zwraca wskaźnik do bloku pamięci o 
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_expand_dbg** jest wersją debugowania funkcji _[expand](expand.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_expand_dbg** jest ograniczone do wywołania **_expand**. Zarówno **_expand** , jak i **_expand_dbg** , Zmień rozmiar bloku pamięci w stercie podstawowej, ale **_expand_dbg** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku, aby przetestować pod kątem wycieków, parametr typu bloku do śledzenia określone typy alokacji i *Nazwa pliku*/*LineNumber* informacje w celu określenia pochodzenia żądań alokacji.
+Funkcja **_expand_dbg** jest wersją debugowania funkcji _ [expand](expand.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_expand_dbg** zostanie zredukowane do wywołania **_expand**. Zarówno **_expand** , jak i **_expand_dbg** zmienić rozmiar bloku pamięci w stercie bazowym, ale **_expand_dbg** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku, aby przetestować pod kątem przecieków, parametr typu bloku służący do śledzenia określonych typów *alokacji i* / *LineNumber* informacji w celu określenia pochodzenia żądań alokacji.
 
-**_expand_dbg** zmienia rozmiar określonego bloku pamięci na nieco więcej miejsca niż żądany *NewSize*. wartość *NewSize* może być większa lub mniejsza od rozmiaru pierwotnie przydzielonych bloków pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Zmiana rozmiaru jest realizowana przez rozwijanie lub zapełnienie oryginalnego bloku pamięci. **_expand_dbg** nie przenosi bloku pamięci, podobnie jak funkcja [_realloc_dbg](realloc-dbg.md) .
+**_expand_dbg** zmienia rozmiar określonego bloku pamięci o nieco więcej miejsca niż żądany *NewSize*. wartość *NewSize* może być większa lub mniejsza od rozmiaru pierwotnie przydzielonych bloków pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Zmiana rozmiaru jest realizowana przez rozwijanie lub zapełnienie oryginalnego bloku pamięci. **_expand_dbg** nie przenosi bloku pamięci, tak jak funkcja [_realloc_dbg](realloc-dbg.md) .
 
 Gdy wartość *NewSize* jest większa niż oryginalny rozmiar bloku, blok pamięci jest rozwinięty. Podczas rozszerzania, jeśli blok pamięci nie może zostać rozszerzony w celu dopasowania żądanego rozmiaru, zwracana jest **wartość null** . Gdy wartość *NewSize* jest mniejsza niż oryginalny rozmiar bloku, blok pamięci jest zakontraktowany do momentu uzyskania nowego rozmiaru.
 
@@ -153,7 +154,7 @@ Size of block after _expand_dbg of 1 more long: 164
 
 Dane wyjściowe tego programu zależą od możliwości rozwinięcia wszystkich sekcji przez komputer. Jeśli wszystkie sekcje są rozwinięte, dane wyjściowe zostaną odzwierciedlone w sekcji Output (dane wyjściowe).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy ctype_byname
 title: ctype_byname — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: cc5f44e1c544d2088030621b684c9e070175d695
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233139"
 ---
 # <a name="ctype_byname-class"></a>ctype_byname — Klasa
 
@@ -40,14 +41,14 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje swój obiekt podstawowy z [ctype](../standard-library/ctype-class.md) \<CharType > (`_Refs`) lub odpowiednikiem klasy bazowej `ctype<char>`.
+Jego zachowanie zależy od nazwanych ustawień regionalnych `_Locname` . Każdy Konstruktor inicjuje swój obiekt podstawowy z [CType](../standard-library/ctype-class.md) \<CharType> ( `_Refs` ) lub odpowiednikiem klasy bazowej `ctype<char>` .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:**\<locale>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: fclose, _fcloseall'
 title: fclose, _fcloseall
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 3f8567f7bb01c519938f5a4e28bbb33bce09dffe
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1831eb2a2272cdddb8d9797f5329d5432bf30472
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235934"
 ---
 # <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
@@ -70,7 +71,7 @@ Funkcja **_fcloseall** zamyka wszystkie otwarte strumienie z wyjątkiem **stdin*
 
 **Uwaga:** Gdy te funkcje są używane do zamykania strumienia, podstawowy deskryptor pliku i dojście do pliku systemu operacyjnego (lub gniazdo) są zamknięte, a także strumień. W takim przypadku, jeśli plik był pierwotnie otwarty jako dojście do pliku lub deskryptor pliku i jest zamykany przy użyciu **fclose**, nie należy również wywoływać **_close** , aby zamknąć deskryptor pliku; Nie wywołuj funkcji **CloseHandle** programu Win32, aby zamknąć dojście do pliku.
 
-**fclose** i **_fcloseall** zawierają kod chroniący przed zakłóceniami z innych wątków. W przypadku nieblokującej wersji **fclose**należy zapoznać się z tematem **_fclose_nolock**.
+**fclose** i **_fcloseall** zawierają kod chroniący przed zakłóceniami z innych wątków. W przypadku nieblokującej wersji **fclose** należy zapoznać się z tematem **_fclose_nolock**.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -78,8 +79,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fclose**|\<stdio. h>|
-|**_fcloseall**|\<stdio. h>|
+|**fclose**|\<stdio.h>|
+|**_fcloseall**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

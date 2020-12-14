@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy directory_iterator
 title: directory_iterator — klasa
 ms.date: 09/10/2018
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator*
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
-ms.openlocfilehash: a7ccc2a941da079e14092af5b81dc537db4a48c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1bc0ac1d2d7816986bca1f48a41316270e547834
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232788"
 ---
 # <a name="directory_iterator-class"></a>directory_iterator — klasa
 
@@ -81,7 +82,7 @@ class directory_iterator;
 
 **Przestrzeń nazw:** std:: eksperymentalne:: filesystem
 
-## <a name="directory_iteratordirectory_iterator"></a><a name="directory_iterator"></a>directory_iterator::d irectory_iterator
+## <a name="directory_iteratordirectory_iterator"></a><a name="directory_iterator"></a> directory_iterator::d irectory_iterator
 
 Pierwszy Konstruktor tworzy iterator końca sekwencji. Drugi i trzeci konstruktory przechowują *Pval* w `mydir` , a następnie próbują otworzyć i odczytać `mydir` jako katalog. W przypadku pomyślnego przechowywania pierwszej nazwy pliku w katalogu w programie `myentry` ; w przeciwnym razie tworzą iterator sekwencji końcowej.
 
@@ -107,7 +108,7 @@ Kod błędu stanu.
 *directory_iterator*\
 Przechowywany obiekt.
 
-## <a name="directory_iteratorincrement"></a><a name="increment"></a>directory_iterator:: Increment
+## <a name="directory_iteratorincrement"></a><a name="increment"></a> directory_iterator:: Increment
 
 Funkcja próbuje przejść do kolejnej nazwy pliku w katalogu. Jeśli to się powiedzie, przechowuje tę nazwę pliku w `myentry` ; w przeciwnym razie generuje iterator sekwencji końcowej.
 
@@ -115,7 +116,7 @@ Funkcja próbuje przejść do kolejnej nazwy pliku w katalogu. Jeśli to się po
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-## <a name="directory_iteratoroperator"></a><a name="op_neq"></a>directory_iterator:: operator! =
+## <a name="directory_iteratoroperator"></a><a name="op_neq"></a> directory_iterator:: operator! =
 
 Operator elementu członkowskiego zwraca `!(*this == right)` .
 
@@ -128,7 +129,7 @@ bool operator!=(const directory_iterator& right) const;
 *Kliknij*\
 [Directory_iterator](../standard-library/directory-iterator-class.md) jest porównywana z `directory_iterator` .
 
-## <a name="directory_iteratoroperator"></a><a name="op_as"></a>directory_iterator:: operator =
+## <a name="directory_iteratoroperator"></a><a name="op_as"></a> directory_iterator:: operator =
 
 Operatory przypisywania domyślnego elementu członkowskiego zachowują się zgodnie z oczekiwaniami.
 
@@ -142,7 +143,7 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 *Kliknij*\
 [Directory_iterator](../standard-library/directory-iterator-class.md) kopiowana do programu `directory_iterator` .
 
-## <a name="directory_iteratoroperator"></a><a name="op_eq"></a>directory_iterator:: operator = =
+## <a name="directory_iteratoroperator"></a><a name="op_eq"></a> directory_iterator:: operator = =
 
 Operator elementu członkowskiego zwraca **`true`** tylko wtedy **`*this`** , gdy oba i *prawo* są iteratorami End-of-Sequence lub oba nie są kompletnymi iteratorami sekwencji.
 
@@ -155,7 +156,7 @@ bool operator==(const directory_iterator& right) const;
 *Kliknij*\
 [Directory_iterator](../standard-library/directory-iterator-class.md) jest porównywana z `directory_iterator` .
 
-## <a name="directory_iteratoroperator"></a><a name="op_star"></a>directory_iterator:: operator *
+## <a name="directory_iteratoroperator"></a><a name="op_star"></a> directory_iterator:: operator *
 
 Operator elementu członkowskiego zwraca `myentry` .
 
@@ -163,7 +164,7 @@ Operator elementu członkowskiego zwraca `myentry` .
 const directory_entry& operator*() const;
 ```
 
-## <a name="directory_iteratoroperator-"></a><a name="op_cast"></a>directory_iterator:: operator->
+## <a name="directory_iteratoroperator-"></a><a name="op_cast"></a> directory_iterator:: operator->
 
 Funkcja członkowska zwraca wartość `&**this` .
 
@@ -171,7 +172,7 @@ Funkcja członkowska zwraca wartość `&**this` .
 const directory_entry * operator->() const;
 ```
 
-## <a name="directory_iteratoroperator"></a><a name="op_increment"></a>directory_iterator:: operator + +
+## <a name="directory_iteratoroperator"></a><a name="op_increment"></a> directory_iterator:: operator + +
 
 Pierwsza funkcja elementu członkowskiego wywołuje metodę `increment()` , a następnie zwraca **`*this`** . Druga funkcja członkowska wykonuje kopię obiektu, wywołuje `increment()` , a następnie zwraca kopię.
 
@@ -185,7 +186,7 @@ directory_iterator& operator++(int);
 *ZAOKR*\
 Liczba przyrostów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)\

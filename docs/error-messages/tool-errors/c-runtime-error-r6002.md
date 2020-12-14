@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o błędzie środowiska uruchomieniowego C R6002
 title: Błąd czasu wykonania języka C R6002
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-ms.openlocfilehash: b2e617b6f7841f1aa7e6fd2f6962c0e117fab6c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9f72b249b491ada4f143848a95ed6161695aa023
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237783"
 ---
 # <a name="c-runtime-error-r6002"></a>Błąd czasu wykonania języka C R6002
 
@@ -32,7 +33,7 @@ Wymagana biblioteka zmiennoprzecinkowa nie została połączona.
 
 Ten błąd może wystąpić w aplikacji, gdy biblioteka zmiennoprzecinkowa nie została połączona. Sprawdź jedną z następujących przyczyn:
 
-- Ciąg formatu dla funkcji `printf_s` lub `scanf_s` zawiera specyfikację formatu zmiennoprzecinkowego, a program nie zawierał żadnych wartości zmiennoprzecinkowych ani zmiennych. Aby rozwiązać ten problem, użyj argumentu zmiennoprzecinkowego, aby odpowiadał specyfikacji formatu zmiennoprzecinkowego, lub w innym miejscu w programie wykonać przypisanie zmiennoprzecinkowe. Powoduje to załadowanie obsługi zmiennoprzecinkowej.
+- Ciąg formatu dla `printf_s` `scanf_s` funkcji or zawiera specyfikację formatu zmiennoprzecinkowego, a program nie zawiera żadnych wartości zmiennoprzecinkowych ani zmiennych. Aby rozwiązać ten problem, użyj argumentu zmiennoprzecinkowego, aby odpowiadał specyfikacji formatu zmiennoprzecinkowego, lub w innym miejscu w programie wykonać przypisanie zmiennoprzecinkowe. Powoduje to załadowanie obsługi zmiennoprzecinkowej.
 
 - Kompilator minimalizuje rozmiar programu przez załadowanie obsługi zmiennoprzecinkowej tylko wtedy, gdy jest to konieczne. Kompilator nie może wykryć operacji zmiennoprzecinkowych lub specyfikacji formatu zmiennoprzecinkowego w ciągach formatu, dlatego nie ładuje niezbędnych procedur zmiennoprzecinkowych. Aby rozwiązać ten problem, należy użyć specyfikacji formatu zmiennoprzecinkowego i podać argument zmiennoprzecinkowy lub w innym miejscu w programie wykonać przypisanie zmiennoprzecinkowe. Powoduje to załadowanie obsługi zmiennoprzecinkowej.
 

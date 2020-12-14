@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2327'
 title: Błąd kompilatora C2327
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bcbf3bff2a98fe5ec18a00a71c6f8b359ad6f6f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234933"
 ---
 # <a name="compiler-error-c2327"></a>Błąd kompilatora C2327
 
@@ -19,7 +20,7 @@ ms.locfileid: "74747777"
 
 Kod w obrębie klasy zagnieżdżonej próbuje uzyskać dostęp do elementu członkowskiego otaczającej klasy, która nie jest nazwą typu, statycznym elementem członkowskim lub modułem wyliczającym.
 
-Podczas kompilowania z **/CLR**częstą przyczyną dla C2327 jest właściwość o tej samej nazwie co typ właściwości.
+Podczas kompilowania z **/CLR** częstą przyczyną dla C2327 jest właściwość o tej samej nazwie co typ właściwości.
 
 Poniższy przykład generuje C2327:
 

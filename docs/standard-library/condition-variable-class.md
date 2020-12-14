@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy condition_variable
 title: condition_variable — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f5987c050dece8536aef0f91731a0848b56d3a4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233815"
 ---
 # <a name="condition_variable-class"></a>condition_variable — Klasa
 
@@ -45,7 +46,7 @@ class condition_variable;
 |-|-|
 |[condition_variable](#condition_variable)|Konstruuje `condition_variable` obiekt.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

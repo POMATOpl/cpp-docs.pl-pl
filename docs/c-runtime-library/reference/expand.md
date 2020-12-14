@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _expand'
 title: _expand
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31558bb67266430cc028e37a1e23dff2fa411356
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235969"
 ---
 # <a name="_expand"></a>_expand
 

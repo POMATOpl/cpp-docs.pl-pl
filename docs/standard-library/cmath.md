@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; cmath&gt;'
 title: '&lt;cmath&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 193961dab5e8825e15919fd325f1f199a3ad4fb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234101"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
-Zawiera standardowy nagłówek \<biblioteki C Math. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw.
+Zawiera nagłówek standardowej biblioteki C \<math.h> i dodaje skojarzone nazwy do `std` przestrzeni nazw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -571,10 +572,10 @@ long double sph_neumannl(unsigned n, long double x);
 
 ## <a name="remarks"></a>Uwagi
 
-Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
+Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

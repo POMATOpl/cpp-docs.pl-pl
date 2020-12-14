@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: obsługa wyjątków w środowisko uruchomieniowe współbieżności'
 title: Obsługa wyjątków we współbieżności środowiska wykonawczego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: f85bf5c96ef31944e84473f1fedb077123801153
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4613c2b11102c3468bfb3fa5976f8aeeeeb73be3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234309"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Obsługa wyjątków we współbieżności środowiska wykonawczego
 
@@ -33,7 +34,7 @@ ms.locfileid: "87230405"
 
 - Środowisko uruchomieniowe nie zarządza wyjątkami dla uproszczonych zadań i agentów.
 
-## <a name="in-this-document"></a><a name="top"></a>W tym dokumencie
+## <a name="in-this-document"></a><a name="top"></a> W tym dokumencie
 
 - [Zadania i kontynuacje](#tasks)
 
@@ -49,7 +50,7 @@ ms.locfileid: "87230405"
 
 - [Agenci asynchroniczni](#agents)
 
-## <a name="tasks-and-continuations"></a><a name="tasks"></a>Zadania i kontynuacje
+## <a name="tasks-and-continuations"></a><a name="tasks"></a> Zadania i kontynuacje
 
 W tej sekcji opisano, jak środowisko uruchomieniowe obsługuje wyjątki, które są zgłaszane przez [współbieżne:: Task](../../parallel/concrt/reference/task-class.md) Objects i ich kontynuacje. Aby uzyskać więcej informacji na temat zadania i modelu kontynuacji, zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
@@ -81,7 +82,7 @@ W sekcji [wyjątki zgłoszone przez środowisko uruchomieniowe](#runtime) w tym 
 
 [[Top](#top)]
 
-## <a name="task-groups-and-parallel-algorithms"></a><a name="task_groups"></a>Grupy zadań i algorytmy równoległe
+## <a name="task-groups-and-parallel-algorithms"></a><a name="task_groups"></a> Grupy zadań i algorytmy równoległe
 
 W tej sekcji opisano, jak środowisko uruchomieniowe obsługuje wyjątki, które są zgłaszane przez grupy zadań. Ta sekcja ma zastosowanie również do algorytmów równoległych, takich jak [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for), ponieważ te algorytmy są kompilowane w grupach zadań.
 
@@ -106,7 +107,7 @@ Aby zapoznać się z kompletnym przykładem korzystającym z obsługi wyjątków
 
 [[Top](#top)]
 
-## <a name="exceptions-thrown-by-the-runtime"></a><a name="runtime"></a>Wyjątki zgłoszone przez środowisko uruchomieniowe
+## <a name="exceptions-thrown-by-the-runtime"></a><a name="runtime"></a> Wyjątki zgłoszone przez środowisko uruchomieniowe
 
 Wyjątek może wynikać z wywołania środowiska uruchomieniowego. Większość typów wyjątków, z wyjątkiem [concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) i [concurrency:: operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), wskazuje na błąd programowania. Te błędy są zwykle nieodwracalne i dlatego nie powinny być przechwytywane ani obsługiwane przez kod aplikacji. Zaleca się, aby przechwytywać i obsługiwać nieodwracalne błędy w kodzie aplikacji, gdy konieczne jest zdiagnozowanie błędów programistycznych. Jednak zrozumienie typów wyjątków, które są zdefiniowane przez środowisko uruchomieniowe, może ułatwić zdiagnozowanie błędów programistycznych.
 
@@ -126,7 +127,7 @@ Aby zapobiec nienormalnemu zakończeniu aplikacji, upewnij się, że kod obsług
 
 [[Top](#top)]
 
-## <a name="multiple-exceptions"></a><a name="multiple"></a>Wiele wyjątków
+## <a name="multiple-exceptions"></a><a name="multiple"></a> Wiele wyjątków
 
 Jeśli zadanie lub algorytm równoległy odbierze wiele wyjątków, środowisko uruchomieniowe będzie kierować tylko jeden z tych wyjątków do kontekstu wywołującego. Środowisko uruchomieniowe nie gwarantuje, który wyjątek jest organizowany.
 
@@ -142,19 +143,19 @@ Poniżej przedstawiono przykładowe dane wyjściowe dla tego przykładu.
 
 [[Top](#top)]
 
-## <a name="cancellation"></a><a name="cancellation"></a>Anulowania
+## <a name="cancellation"></a><a name="cancellation"></a> Anulowania
 
 Nie wszystkie wyjątki wskazują na błąd. Na przykład algorytm wyszukiwania może korzystać z obsługi wyjątków w celu zatrzymywania skojarzonego z nim zadania po znalezieniu wyniku. Aby uzyskać więcej informacji na temat sposobu używania mechanizmów anulowania w kodzie, zobacz [Anulowanie w PPL](../../parallel/concrt/cancellation-in-the-ppl.md).
 
 [[Top](#top)]
 
-## <a name="lightweight-tasks"></a><a name="lwts"></a>Zadania lekkie
+## <a name="lightweight-tasks"></a><a name="lwts"></a> Zadania lekkie
 
 Lekkie zadanie to zadanie, które można zaplanować bezpośrednio z obiektu [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) . Lekkie zadania zajmują mniej nakładów niż zwykłe zadania. Jednak środowisko uruchomieniowe nie przechwytuje wyjątków zgłaszanych przez uproszczone zadania. Zamiast tego wyjątek jest przechwytywany przez nieobsłużoną procedurę obsługi wyjątków, która domyślnie kończy proces. W związku z tym należy użyć odpowiedniego mechanizmu obsługi błędów w aplikacji. Aby uzyskać więcej informacji na temat uproszczonych zadań, zobacz [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 [[Top](#top)]
 
-## <a name="asynchronous-agents"></a><a name="agents"></a>Agenci asynchroniczni
+## <a name="asynchronous-agents"></a><a name="agents"></a> Agenci asynchroniczni
 
 Podobnie jak w przypadku uproszczonych zadań, środowisko uruchomieniowe nie zarządza wyjątkami zgłoszonymi przez agentów asynchronicznych.
 
@@ -181,11 +182,11 @@ Aby uzyskać więcej informacji na temat agentów asynchronicznych, zobacz [agen
 
 [[Top](#top)]
 
-## <a name="summary"></a><a name="summary"></a>Podsumowanie
+## <a name="summary"></a><a name="summary"></a> Podsumowanie
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Współbieżność środowiska wykonawczego](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

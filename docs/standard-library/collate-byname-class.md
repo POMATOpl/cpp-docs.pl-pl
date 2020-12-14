@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy collate_byname
 title: collate_byname — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8e5ee60a2415fe6fede6db387c774151b97396dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688271"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233958"
 ---
 # <a name="collate_byname-class"></a>collate_byname — Klasa
 
@@ -39,23 +40,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname* \
+*_Locname*\
 Nazwane ustawienia regionalne.
 
-*_Refs* \
+*_Refs*\
 Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje obiekt, który może obsłużyć jako zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) typu [COLLATE](../standard-library/collate-class.md#collate) \<CharType >. Jego zachowanie zależy od nazwanych [o nazwie
-](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [sortowaniem](../standard-library/collate-class.md#collate) \<CharType > (`_Refs`).
+Szablon klasy opisuje obiekt, który może być używany jako zestaw [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) typu [COLLATE](../standard-library/collate-class.md#collate) \<CharType> . Jego zachowanie zależy od nazwanych [o nazwie](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy przy użyciu [instrukcji COLLATE](../standard-library/collate-class.md#collate) \<CharType> ( `_Refs` ).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:**\<locale>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

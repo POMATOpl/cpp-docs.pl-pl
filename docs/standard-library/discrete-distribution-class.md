@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy discrete_distribution
 title: discrete_distribution — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b84d174a653efdeba47fb0356c903b8c7dd2a8d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232762"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution — Klasa
 
@@ -230,7 +231,7 @@ Konstruktor zakresu iteratora, który ma parametry *firstW* i *lastW* konstruuje
 
 Konstruktor listy inicjatorów, który ma parametr *weightlist* konstruuje obiekt dystrybucji z odważnikami z listy inicjatorów *weightlist*.
 
-Konstruktor, który ma parametry *Count*, *Low*, *High*i *weightfunc* , konstruuje obiekt dystrybucji zainicjowany na podstawie następujących reguł:
+Konstruktor, który ma parametry *Count*, *Low*, *High* i *weightfunc* , konstruuje obiekt dystrybucji zainicjowany na podstawie następujących reguł:
 
 - Jeśli *licznik* < 1, **n** = 1, i jako taki jest równoważny z konstruktorem domyślnym, zawsze generuje zero.
 - Jeśli *Liczba* > 0, **n**  =  *Count*. Podana wartość **d** =*(wysoka*  -  *niska*)/ **n** jest większa od zera, przy użyciu jednolitych podzakresów **d** , każda waga jest przypisywana w następujący sposób: `weight[k] = weightfunc(x)` , gdzie **x**  =  *niska*  +  **k**  *  **d**  +  **d** /2, dla **k** = 0,..., **n** -1.

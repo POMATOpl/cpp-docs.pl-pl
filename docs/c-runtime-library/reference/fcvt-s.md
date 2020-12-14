@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fcvt_s'
 title: _fcvt_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: 557a1d359c389f0eb7477aab4bf9cbb51558703a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dd4d58b39d4c18f2fff7da54c5fbd0f2346dfdd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235882"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -70,7 +71,7 @@ Podany bufor, który będzie przechowywać wynik konwersji.
 *sizeInBytes*<br/>
 Rozmiar buforu w bajtach.
 
-*wartościami*<br/>
+*wartość*<br/>
 Liczba do przekonwertowania.
 
 *liczbą*<br/>
@@ -79,7 +80,7 @@ Liczba cyfr po punkcie dziesiętnym.
 *dec*<br/>
 Wskaźnik do przechowywanej pozycji punktu dziesiętnego.
 
-*zapis*<br/>
+*sign*<br/>
 Wskaźnik do przechowywanego wskaźnika podpisywania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -90,12 +91,12 @@ W przypadku nieprawidłowego parametru, jak wymieniono w poniższej tabeli, ta f
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|*buforu*|*sizeInBytes*|value|count|dec|znak|Przesłać|Wartość w *buforze*|
+|*buforu*|*sizeInBytes*|wartość|count|dec|znak|Przesłać|Wartość w *buforze*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|ile|ile|ile|ile|ile|**EINVAL**|Nie zmodyfikowano.|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|<= 0|ile|ile|ile|ile|**EINVAL**|Nie zmodyfikowano.|
-|ile|ile|ile|ile|**NULL**|ile|**EINVAL**|Nie zmodyfikowano.|
-|ile|ile|ile|ile|ile|**NULL**|**EINVAL**|Nie zmodyfikowano.|
+|**NULL**|dowolny|dowolny|dowolny|dowolny|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|<= 0|dowolny|dowolny|dowolny|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|dowolny|dowolny|dowolny|dowolny|**NULL**|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|dowolny|dowolny|dowolny|dowolny|dowolny|**NULL**|**EINVAL**|Nie zmodyfikowano.|
 
 ## <a name="security-issues"></a>Problemy z zabezpieczeniami
 
@@ -121,7 +122,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_fcvt_s**|\<STDLIB. h>|\<errno. h>|
+|**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -159,7 +160,7 @@ int main()
 Converted value: 120000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

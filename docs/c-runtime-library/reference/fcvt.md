@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _fcvt'
 title: _fcvt
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-ms.openlocfilehash: 2ca8a7fcd58e91ffa8982f30117b09af587d96cf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4d2439c586ec28526849e956b1302c444cafa3a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235765"
 ---
 # <a name="_fcvt"></a>_fcvt
 
@@ -54,7 +55,7 @@ char *_fcvt(
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Liczba do przekonwertowania.
 
 *liczbą*<br/>
@@ -63,7 +64,7 @@ Liczba cyfr po punkcie dziesiętnym.
 *dec*<br/>
 Wskaźnik do przechowywanej pozycji punktu dziesiętnego.
 
-*zapis*<br/>
+*sign*<br/>
 Wskaźnik do przechowywanego wskaźnika podpisywania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -82,7 +83,7 @@ Różnica między **_ecvt** i **_fcvt** jest interpretowana parametru *Count* . 
 
 **_ecvt** i **_fcvt** do konwersji Użyj jednego buforu przydzielenia statycznie. Każde wywołanie jednej z tych procedur niszczy wyniki poprzedniego wywołania.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *Sign* ma **wartość null**lub *licznik* ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i zwracana jest **wartość null** .
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *Sign* ma **wartość null** lub *licznik* ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i zwracana jest **wartość null** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -90,7 +91,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fcvt**|\<STDLIB. h>|
+|**_fcvt**|\<stdlib.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -123,7 +124,7 @@ int main( void )
 source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o błędzie środowiska uruchomieniowego C R6016
 title: Błąd czasu wykonania języka C R6016
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6016
 ms.assetid: 7bd3f274-d9c4-4bc4-8252-80bf168c4c3a
-ms.openlocfilehash: 22bf4b7e8951215d1a013edb29af1ebff7517ffc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 79339400436f21aefc0edea101b4642d443f5ce0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237689"
 ---
 # <a name="c-runtime-error-r6016"></a>Błąd czasu wykonania języka C R6016
 
@@ -30,8 +31,8 @@ za mało miejsca dla danych wątku
 
 **Informacje dla programistów**
 
-Ten błąd występuje, ponieważ program nie otrzymał wystarczającej ilości pamięci od systemu operacyjnego w celu ukończenia [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) lub wywołania `_beginthreadex` lub lokalnego magazynu wątków nie został zainicjowany przez `_beginthread` lub `_beginthreadex`.
+Ten błąd występuje, ponieważ program nie otrzymał wystarczającej ilości pamięci od systemu operacyjnego w celu ukończenia [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) lub `_beginthreadex` wywołania lub lokalnego magazynu wątków nie został zainicjowany przez `_beginthread` lub `_beginthreadex` .
 
 W momencie rozpoczynania nowego wątku biblioteka musi utworzyć wewnętrzną bazę danych dla tego wątku. Jeśli baza danych nie może zostać rozszerzona przy użyciu pamięci dostarczonej przez system operacyjny, wątek się nie rozpoczyna, a proces wywołujący się zatrzymuje. Może się to zdarzyć, gdy proces utworzył zbyt wiele wątków lub gdy pamięć lokalna wątku została wyczerpana.
 
-Zalecamy, aby plik wykonywalny, który wywołuje bibliotekę środowiska uruchomieniowego języka C (CRT), powinien używać `_beginthreadex` do tworzenia wątków, a nie `CreateThread`interfejsu API systemu Windows. `_beginthreadex` inicjuje wewnętrzny magazyn statyczny używany przez wiele funkcji CRT w lokalnym magazynie wątków. Jeśli używasz `CreateThread` do utworzenia wątku, CRT może zakończyć proces z R6016, gdy wywołanie jest wykonywane do funkcji CRT, która wymaga zainicjowania wewnętrznego magazynu statycznego.
+Zalecamy, aby plik wykonywalny, który wywołuje bibliotekę środowiska uruchomieniowego języka C (CRT), był używany `_beginthreadex` do tworzenia wątków zamiast interfejsu API systemu Windows `CreateThread` . `_beginthreadex` Inicjuje wewnętrzny magazyn statyczny używany przez wiele funkcji CRT w lokalnym magazynie wątków. Jeśli używasz `CreateThread` do tworzenia wątku, CRT może zakończyć proces z R6016, gdy wywołanie jest wykonywane do funkcji CRT, która wymaga zainicjowania wewnętrznego magazynu statycznego.

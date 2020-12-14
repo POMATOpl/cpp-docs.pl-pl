@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: &lt; Complex&gt;'
 title: '&lt;złożonych&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233841"
 ---
 # <a name="ltcomplexgt"></a>&lt;złożonych&gt;
 
@@ -42,15 +43,15 @@ Zestaw liczb zespolonych z operacjami złożonego dodawania i złożonego mnoże
 
    (*a*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>))
 
-Reprezentując liczbę złożoną *z* = (*a*, *b*) w formie *z*  =  *a*  +  *analizy biznesowej*, gdzie *i*<sup>2</sup> =-1, reguły dla algebry zestawu liczb rzeczywistych mogą być stosowane do zestawu liczb zespolonych i ich składników. Na przykład:
+Reprezentując liczbę złożoną *z* = (*a*, *b*) w formie *z*  =    +  *analizy biznesowej*, gdzie *i*<sup>2</sup> =-1, reguły dla algebry zestawu liczb rzeczywistych mogą być stosowane do zestawu liczb zespolonych i ich składników. Na przykład:
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
+   (1 + 2 *i*) \* (2 + 3 *i*) = 1 \* (2 + 3 *i*) + 2 *i* \* (2 + 3 *i*) = (2 + 3 *i*) + (4 *i* + 6 *i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7 *i*
 
 System liczb zespolonych to pole, ale nie jest to pole uporządkowane. Nie ma kolejności liczb zespolonych, ponieważ istnieją pola liczb rzeczywistych i ich podzestawy, dlatego nie można zastosować nierówności do liczb zespolonych, ponieważ są one liczbami rzeczywistymi.
 
 Istnieją trzy popularne formy przedstawiające liczbę zespoloną *z*:
 
-- Kartezjańskiego: *z*  =  *a*  +  *analizy biznesowej*
+- Kartezjańskiego: *z*  =    +  *analizy biznesowej*
 
 - Biegunowy: *z*  =  *r* (cos *p*  +  *i* Sin *p*)
 
@@ -70,7 +71,7 @@ O ile nie określono inaczej, funkcje, które mogą zwracać wiele wartości, s�
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

@@ -1,23 +1,24 @@
 ---
-title: '&lt;wyliczenia kodekvt&gt;'
+description: 'Dowiedz się więcej na temat: &lt; &gt; wyliczenia codecvt'
+title: '&lt;&gt;wyliczenia codecvt'
 ms.date: 11/04/2016
 f1_keywords:
 - codecvt/std::codecvt_mode
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bcd40f72f563b3ecf91125f7167f206d4b1b6517
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234062"
 ---
-# <a name="ltcodecvtgt-enums"></a>&lt;wyliczenia kodekvt&gt;
+# <a name="ltcodecvtgt-enums"></a>&lt;&gt;wyliczenia codecvt
 
-## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>Codecvt_mode Wyliczenie
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a> codecvt_mode, Wyliczenie
 
-Określa informacje o konfiguracji dla aspektów [regionalnych.](../standard-library/locale-class.md)
+Określa informacje o konfiguracji dla zestawów reguł [ustawień regionalnych](../standard-library/locale-class.md) .
 
 ```cpp
 enum codecvt_mode {
@@ -29,16 +30,16 @@ enum codecvt_mode {
 
 ### <a name="remarks"></a>Uwagi
 
-Wyliczenie definiuje trzy stałe, które dostarczają informacje o konfiguracji do ustawień regionalnych aspektów zadeklarowanych w [ \<>. ](../standard-library/codecvt.md) Odrębne wartości to:
+Wyliczenie definiuje trzy stałe, które dostarczają informacje o konfiguracji do zestawów reguł ustawień regionalnych zadeklarowanych w [\<codecvt>](../standard-library/codecvt.md) . Unikatowe wartości to:
 
-- `consume_header`, aby zużywać początkową sekwencję nagłówków podczas odczytywania sekwencji wielobajtowej i określić endianness kolejnej sekwencji wielobajtowej do odczytu
+- `consume_header`, aby użyć początkowej sekwencji nagłówka podczas odczytywania sekwencji wielobajtowej i ustalania przyciągania dla kolejnej sekwencji wielobajtowej do odczytu
 
-- `generate_header`, aby wygenerować początkową sekwencję nagłówka podczas pisania sekwencji wielobajtowej w celu reklamowania endianness kolejnej sekwencji wielobajtowej, która ma zostać napisana
+- `generate_header`, aby wygenerować początkową sekwencję nagłówka podczas pisania sekwencji wielobajtowej w celu anonsowania liczby bajtów kolejnej sekwencji wielobajtowej do zapisania
 
-- `little_endian`, aby wygenerować sekwencję wielobajtową w porządku mało endijskim, w przeciwieństwie do domyślnej kolejności big-endian
+- `little_endian`, aby wygenerować sekwencję wielobajtową w kolejności little-endian, w przeciwieństwie do domyślnej kolejności big-endian
 
-Te stałe mogą być ORed razem w dowolnych kombinacji.
+Te stałe mogą być logicznie razem w dowolnej kombinacji.
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<>kodekvt](../standard-library/codecvt.md)
+[\<codecvt>](../standard-library/codecvt.md)

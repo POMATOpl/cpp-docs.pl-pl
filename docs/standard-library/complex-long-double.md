@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Complex &lt; Long Double&gt;'
 title: złożone &lt; Long Double&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 73027ba76d608424b1a6da346e861b10c66989fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5dd3b50c28b889a2e1fafba37cc24fda832f5975
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233828"
 ---
 # <a name="complexltlong-doublegt"></a>złożone &lt; Long Double&gt;
 
@@ -117,11 +118,11 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**:\<complex>
+**Nagłówek**: \<complex>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa złożona](../standard-library/complex-class.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

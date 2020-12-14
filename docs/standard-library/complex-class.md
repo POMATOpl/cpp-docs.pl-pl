@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie złożonej
 title: complex — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 224b59e79119496ea7484378a010c4861f32e404
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233906"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
@@ -56,7 +57,7 @@ Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennop
 |-|-|
 |[value_type](#value_type)|Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistych i urojonych części liczby zespolonej.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -100,7 +101,7 @@ Liczba zespolona, której części rzeczywiste i urojone są używane do inicjow
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do * \_ RealVal* i magazynowaną część urojoną do * \_ Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i przechowywaną część urojoną do `complexNum.imag()` .
+Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do *\_ RealVal* i magazynowaną część urojoną do *\_ Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i przechowywaną część urojoną do `complexNum.imag()` .
 
 W tej implementacji, jeśli Translator nie obsługuje funkcji szablonu elementu członkowskiego, szablon:
 
@@ -178,7 +179,7 @@ Część urojona liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku liczby zespolonej *a + bi*części urojonej lub składnika to *komunikator (a + bi) = b*.
+W przypadku liczby zespolonej *a + bi* części urojonej lub składnika to *komunikator (a + bi) = b*.
 
 ### <a name="example"></a>Przykład
 
@@ -710,7 +711,7 @@ Rzeczywista część liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku liczby zespolonej *a + bi*część rzeczywista lub składnik jest *re (a + bi) = a*.
+W przypadku liczby zespolonej *a + bi* część rzeczywista lub składnik jest *re (a + bi) = a*.
 
 ### <a name="example"></a>Przykład
 
@@ -780,6 +781,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

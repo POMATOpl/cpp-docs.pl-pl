@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: podział struktury'
 title: divides — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: eae6054ea485a05747f8e282849b1fe282a89439
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232749"
 ---
 # <a name="divides-struct"></a>divides — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, który wykonuje operacji dzielenia (`operator/`) na jego argumenty.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację dzielenia ( `operator/` ) dla jej argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +41,17 @@ struct divides<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Typ, który obsługuje `operator/` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Typ, który obsługuje element `operator/` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-*po lewej stronie*\
-Lewy operand operacji dzielenia. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand operacji dzielenia. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand operacji dzielenia. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand operacji dzielenia. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left / Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator/`.
+Wynik `Left / Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator/` .
 
 ## <a name="example"></a>Przykład
 
