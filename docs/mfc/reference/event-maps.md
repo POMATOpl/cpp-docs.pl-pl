@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o programie: mapy zdarzeń'
 title: Mapy zdarzeń
 ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3a6e949a4dc40927fc8946610707fbb404a400b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837349"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219853"
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 
@@ -143,7 +144,7 @@ Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wa
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|WALUTA|
 |VTS_DATE|DATE|
-|VTS_BSTR|**`const`**__znak \* __|
+|VTS_BSTR|**`const`**__znak \*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|UCHWYTY|
@@ -240,7 +241,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Wartości parametrów *lpMsg*, *hWndParent*i *lpRect* są pobierane z odpowiednich parametrów `IOleObject::DoVerb` funkcji składowej.
+Wartości parametrów *lpMsg*, *hWndParent* i *lpRect* są pobierane z odpowiednich parametrów `IOleObject::DoVerb` funkcji składowej.
 
 ### <a name="requirements"></a>Wymagania
 

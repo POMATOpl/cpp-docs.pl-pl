@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak są oceniane bloki catch (C++)'
 title: Sposób oceniania bloków Catch (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-ms.openlocfilehash: 21d68b25fa3695a9b5637dcace081424f99911d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec4544bb88eea0ee03b7b5b0ab139e267da0552d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87188105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221296"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Sposób oceniania bloków Catch (C++)
 
@@ -64,6 +65,6 @@ catch( CExcptClass E )
 
 W tym przykładzie procedura obsługi wielokropka **`catch`** jest jedyną zbadaną obsługą.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md)

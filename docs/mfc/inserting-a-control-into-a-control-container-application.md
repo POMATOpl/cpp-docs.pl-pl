@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej: kontenery kontrolek ActiveX: Wstawianie kontrolki do aplikacji kontenera kontrolek'
 title: 'Kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ActiveX control containers [MFC], inserting controls
 - ActiveX controls [MFC], adding to projects
 ms.assetid: bbb617ff-872f-43d8-b4d6-c49adb16b148
-ms.openlocfilehash: e8426fd7a420ef06650930e547d06c78cc094975
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 14e1895c39aeea788ab83b8a18be6d8b0ef6c20c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220607"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>Kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Operator indeksu dolnego []'
 title: Operator indeksu dolnego []
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: a4eb878a18aa38b7047104903d10d96d66cc6720
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e11e94bdf516d830020c4844be2a4c3bfc4a8774
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221205"
 ---
 # <a name="subscript-operator-"></a>Operator indeksu dolnego []
 
@@ -106,10 +107,10 @@ Ujemny indeks dolny w ostatnim wierszu może generować błąd czasu wykonywania
 
 Operator indeksu dolnego to komutatywna. W związku z tym operatory *Array*[*index*] i *index*[*Array*] są gwarantowane jako równoważne, tak długo, jak operator indeksu dolnego nie jest przeciążony (zobacz [operator przeciążony](../cpp/operator-overloading.md)). Pierwszy formularz jest najbardziej typowym sposobem kodowania, ale działa.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia przyrostkowe](../cpp/postfix-expressions.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Macierze](../cpp/arrays-cpp.md)<br/>
+[Tablice](../cpp/arrays-cpp.md)<br/>
 [Tablice jednowymiarowe](../c-language/one-dimensional-arrays.md)<br/>
 [Tablice wielowymiarowe](../c-language/multidimensional-arrays-c.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Przetwarzanie wyjątku'
 title: Przetwarzanie wyjątków
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 9d6a1c30ca0811085124a5fb5994c5f35d412ae7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: add942991a4792cb88e82dee0bfd033612b68eb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219827"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 
@@ -48,7 +49,7 @@ Aby zapoznać się z przykładami i więcej szczegółów, zobacz [wyjątki](../
 |[GENEROWAĆ](#throw)|Zgłasza określony wyjątek.|
 |[THROW_LAST](#throw_last)|Zgłasza aktualnie obsługiwany wyjątek do następnej zewnętrznej procedury obsługi.|
 
-### <a name="exception-throwing-functions"></a>Funkcje zgłaszania wyjątków
+### <a name="exception-throwing-functions"></a>Funkcje Exception-Throwing
 
 |Nazwa|Opis|
 |-|-|
@@ -291,7 +292,7 @@ THROW_LAST()
 
 ### <a name="remarks"></a>Uwagi
 
-To makro pozwala zgłosić wyjątek utworzony lokalnie. Jeśli spróbujesz zgłosić wyjątek, który został właśnie przechwycony, zwykle wyjdzie poza zakres i zostanie usunięty. W przypadku **THROW_LAST**wyjątek jest prawidłowo przenoszona do następnego programu obsługi **catch** .
+To makro pozwala zgłosić wyjątek utworzony lokalnie. Jeśli spróbujesz zgłosić wyjątek, który został właśnie przechwycony, zwykle wyjdzie poza zakres i zostanie usunięty. W przypadku **THROW_LAST** wyjątek jest prawidłowo przenoszona do następnego programu obsługi **catch** .
 
 Aby uzyskać więcej informacji, zobacz [wyjątki](../../mfc/exception-handling-in-mfc.md)w artykule.
 

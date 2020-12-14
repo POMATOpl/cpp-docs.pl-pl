@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CControlBar'
 title: Klasa CControlBar
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: 7a08efb7cbe848ec6d8ccba57671f3ef0dc8e74c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c18e62c20575e5fe8921c9767099e8069fbcb112
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212569"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220477"
 ---
 # <a name="ccontrolbar-class"></a>Klasa CControlBar
 
@@ -123,7 +124,7 @@ Aby uzyskać więcej informacji na temat funkcji `CControlBar`, zobacz:
 
 **Nagłówek:** afxext. h
 
-## <a name="ccontrolbarcalcdynamiclayout"></a><a name="calcdynamiclayout"></a>CControlBar:: CalcDynamicLayout
+## <a name="ccontrolbarcalcdynamiclayout"></a><a name="calcdynamiclayout"></a> CControlBar:: CalcDynamicLayout
 
 Struktura wywołuje tę funkcję elementu członkowskiego, aby obliczyć wymiary dynamicznego paska narzędzi.
 
@@ -159,7 +160,7 @@ Rozmiar paska sterowania (w pikselach) obiektu [CSize](../../atl-mfc-shared/refe
 
 Przesłoń tę funkcję elementu członkowskiego, aby zapewnić własny układ dynamiczny w klasach, z których pochodzą `CControlBar` . Klasy MFC pochodne z `CControlBar` , takie jak [CToolBar](../../mfc/reference/ctoolbar-class.md), przesłaniają tę funkcję członkowską i zapewniają własne implementacje.
 
-## <a name="ccontrolbarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CControlBar:: CalcFixedLayout
+## <a name="ccontrolbarcalcfixedlayout"></a><a name="calcfixedlayout"></a> CControlBar:: CalcFixedLayout
 
 Wywołaj tę funkcję elementu członkowskiego, aby obliczyć poziomy rozmiar paska sterowania.
 
@@ -194,7 +195,7 @@ Jeśli *bStretch* ma wartość true, Rozciągaj wymiary na orientację zapewnion
 |Fałsz|Prawda|Brak dostępnych rozciągnięcia|Orientacja pozioma|Dokowania|
 |Fałsz|Fałsz|Brak dostępnych rozciągnięcia|Zorientowane w pionie|Dokowania|
 
-## <a name="ccontrolbarcalcinsiderect"></a><a name="calcinsiderect"></a>CControlBar:: CalcInsideRect
+## <a name="ccontrolbarcalcinsiderect"></a><a name="calcinsiderect"></a> CControlBar:: CalcInsideRect
 
 Struktura wywołuje tę funkcję, aby obliczyć obszar klienta na pasku sterowania.
 
@@ -218,7 +219,7 @@ Ta funkcja jest wywoływana przed narysowaniem paska sterowania.
 
 Przesłoń tę funkcję w celu dostosowania renderowania obramowania i paska uchwytu na pasku sterowania.
 
-## <a name="ccontrolbarccontrolbar"></a><a name="ccontrolbar"></a>CControlBar:: CControlBar
+## <a name="ccontrolbarccontrolbar"></a><a name="ccontrolbar"></a> CControlBar:: CControlBar
 
 Konstruuje `CControlBar` obiekt.
 
@@ -226,7 +227,7 @@ Konstruuje `CControlBar` obiekt.
 CControlBar();
 ```
 
-## <a name="ccontrolbardopaint"></a><a name="dopaint"></a>CControlBar::D oPaint
+## <a name="ccontrolbardopaint"></a><a name="dopaint"></a> CControlBar::D oPaint
 
 Wywoływane przez platformę, by renderować obramowanie i pasek uchwytu na pasku sterowania.
 
@@ -245,7 +246,7 @@ Zastąp tę funkcję, aby dostosować zachowanie rysowania na pasku sterowania.
 
 Inną metodą dostosowania jest przesłonięcie `DrawBorders` `DrawGripper` funkcji i i dodanie niestandardowego kodu rysowania dla obramowania i uchwytu. Ponieważ te metody są wywoływane przez metodę domyślną `DoPaint` , przesłonięcie `DoPaint` nie jest wymagane.
 
-## <a name="ccontrolbardrawborders"></a><a name="drawborders"></a>CControlBar::D rawBorders
+## <a name="ccontrolbardrawborders"></a><a name="drawborders"></a> CControlBar::D rawBorders
 
 Wywoływane przez platformę, aby renderować obramowania paska sterowania.
 
@@ -267,7 +268,7 @@ Wskazuje kontekst urządzenia, który ma być używany do renderowania obramowan
 
 Zastąp tę funkcję, aby dostosować wygląd obramowania paska sterowania.
 
-## <a name="ccontrolbardrawgripper"></a><a name="drawgripper"></a>CControlBar::D rawGripper
+## <a name="ccontrolbardrawgripper"></a><a name="drawgripper"></a> CControlBar::D rawGripper
 
 Wywoływane przez platformę, aby renderować uchwyt paska sterowania.
 
@@ -289,7 +290,7 @@ Wskazuje kontekst urządzenia, który ma być używany do renderowania uchwytu p
 
 Zastąp tę funkcję, aby dostosować wygląd uchwytu paska sterowania.
 
-## <a name="ccontrolbarenabledocking"></a><a name="enabledocking"></a>CControlBar:: EnableDocking
+## <a name="ccontrolbarenabledocking"></a><a name="enabledocking"></a> CControlBar:: EnableDocking
 
 Wywołaj tę funkcję, aby włączyć dokowanie paska sterowania.
 
@@ -320,7 +321,7 @@ Jeśli 0 (oznacza to, że nie ma flag), pasek sterowania nie zostanie zadokowany
 
 Określone boki muszą być zgodne z jedną ze stron z włączoną obsługą dokowania w oknie ramki docelowej lub nie można zadokować paska sterowania do tego okna ramki.
 
-## <a name="ccontrolbargetbarstyle"></a><a name="getbarstyle"></a>CControlBar:: GetBarStyle
+## <a name="ccontrolbargetbarstyle"></a><a name="getbarstyle"></a> CControlBar:: GetBarStyle
 
 Wywołaj tę funkcję, aby określić, które ustawienia **CBRS_** (style paska sterowania) są obecnie ustawione na pasku sterowania.
 
@@ -336,7 +337,7 @@ Bieżące ustawienia **CBRS_** (style paska kontroli) dla paska sterowania. Aby 
 
 Nie obsługuje stylów **WS_** (styl okna).
 
-## <a name="ccontrolbargetborders"></a><a name="getborders"></a>CControlBar:: GetBorders
+## <a name="ccontrolbargetborders"></a><a name="getborders"></a> CControlBar:: GetBorders
 
 Zwraca bieżące wartości obramowania paska sterowania.
 
@@ -348,7 +349,7 @@ CRect GetBorders() const;
 
 `CRect`Obiekt, który zawiera bieżącą Szerokość (w pikselach) każdej strony obiektu paska sterowania. Na przykład wartość *lewego* elementu członkowskiego obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) jest szerokość lewej krawędzi obramowania.
 
-## <a name="ccontrolbargetcount"></a><a name="getcount"></a>CControlBar:: GetCount
+## <a name="ccontrolbargetcount"></a><a name="getcount"></a> CControlBar:: GetCount
 
 Zwraca liczbę elementów niebędących HWNDmi w `CControlBar` obiekcie.
 
@@ -364,7 +365,7 @@ Liczba elementów niebędących HWNDmi w `CControlBar` obiekcie. Ta funkcja zwra
 
 Typ elementu zależy od obiektu pochodnego: okienka dla obiektów [CStatusBar](../../mfc/reference/cstatusbar-class.md) oraz przyciski i separatory dla obiektów [CToolBar](../../mfc/reference/ctoolbar-class.md) .
 
-## <a name="ccontrolbargetdockingframe"></a><a name="getdockingframe"></a>CControlBar:: GetDockingFrame
+## <a name="ccontrolbargetdockingframe"></a><a name="getdockingframe"></a> CControlBar:: GetDockingFrame
 
 Wywołaj tę funkcję elementu członkowskiego, aby uzyskać wskaźnik do bieżącego okna ramki, do którego pasek sterowania jest zadokowany.
 
@@ -382,7 +383,7 @@ Jeśli pasek sterowania nie jest zadokowany do okna ramki (oznacza to, że jeśl
 
 Aby uzyskać więcej informacji na temat było dokowaćych pasków sterowania, zobacz [CControlBar:: EnableDocking](#enabledocking) i [obiektu CFrameWnd::D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
 
-## <a name="ccontrolbarisfloating"></a><a name="isfloating"></a>CControlBar:: isfloating
+## <a name="ccontrolbarisfloating"></a><a name="isfloating"></a> CControlBar:: isfloating
 
 Wywołaj tę funkcję elementu członkowskiego, aby określić, czy pasek sterowania jest przestawny, czy zadokowany.
 
@@ -398,7 +399,7 @@ Różne od zera, jeśli pasek sterowania jest przestawny; w przeciwnym razie 0.
 
 Aby zmienić stan paska sterowania z zadokowanego na zmiennoprzecinkowe, wywołaj [obiektu CFrameWnd:: FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).
 
-## <a name="ccontrolbarm_bautodelete"></a><a name="m_bautodelete"></a>CControlBar:: m_bAutoDelete
+## <a name="ccontrolbarm_bautodelete"></a><a name="m_bautodelete"></a> CControlBar:: m_bAutoDelete
 
 Jeśli wartość jest niezerowa, obiekt `CControlBar` zostanie usunięty, gdy pasek sterowania systemu Windows zostanie zniszczony.
 
@@ -414,7 +415,7 @@ Obiekt paska sterowania jest zwykle osadzony w obiekcie okna ramki. W tym przypa
 
 Ta zmienna jest ustawiana na wartość różną od zera w przypadku przydzielenia `CControlBar` obiektu na stercie i nie jest planowane wywoływanie **`delete`** .
 
-## <a name="ccontrolbarm_pinplaceowner"></a><a name="m_pinplaceowner"></a>CControlBar:: m_pInPlaceOwner
+## <a name="ccontrolbarm_pinplaceowner"></a><a name="m_pinplaceowner"></a> CControlBar:: m_pInPlaceOwner
 
 Lokalny właściciel paska sterowania.
 
@@ -422,7 +423,7 @@ Lokalny właściciel paska sterowania.
 CWnd* m_pInPlaceOwner;
 ```
 
-## <a name="ccontrolbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CControlBar:: OnUpdateCmdUI
+## <a name="ccontrolbaronupdatecmdui"></a><a name="onupdatecmdui"></a> CControlBar:: OnUpdateCmdUI
 
 Ta funkcja członkowska jest wywoływana przez platformę w celu zaktualizowania stanu paska narzędzi lub paska stanu.
 
@@ -444,9 +445,9 @@ Flaga wskazująca, czy kontrolka, która nie ma procedury obsługi aktualizacji,
 
 Aby zaktualizować pojedynczy przycisk lub okienko, użyj makra ON_UPDATE_COMMAND_UI w mapie wiadomości, aby odpowiednio ustawić procedurę obsługi aktualizacji. Aby uzyskać więcej informacji na temat korzystania z tego makra, zobacz [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) .
 
-`OnUpdateCmdUI`jest wywoływana przez platformę, gdy aplikacja jest bezczynna. Okno ramki do zaktualizowania musi być oknem podrzędnym, co najmniej pośrednio, widocznego okna ramki. `OnUpdateCmdUI`jest zaawansowanym zaawansowaniem.
+`OnUpdateCmdUI` jest wywoływana przez platformę, gdy aplikacja jest bezczynna. Okno ramki do zaktualizowania musi być oknem podrzędnym, co najmniej pośrednio, widocznego okna ramki. `OnUpdateCmdUI` jest zaawansowanym zaawansowaniem.
 
-## <a name="ccontrolbarsetbarstyle"></a><a name="setbarstyle"></a>CControlBar:: SetBarStyle
+## <a name="ccontrolbarsetbarstyle"></a><a name="setbarstyle"></a> CControlBar:: SetBarStyle
 
 Wywołaj tę funkcję, aby ustawić odpowiednie style **CBRS_** na pasku sterowania.
 
@@ -489,7 +490,7 @@ Wymagane style na pasku sterowania. Może to być jeden lub więcej z następuj�
 
 Nie ma wpływu na ustawienia **WS_** (styl okna).
 
-## <a name="ccontrolbarsetborders"></a><a name="setborders"></a>CControlBar:: setborderers
+## <a name="ccontrolbarsetborders"></a><a name="setborders"></a> CControlBar:: setborderers
 
 Wywołaj tę funkcję, aby ustawić rozmiar obramowania paska sterowania.
 
@@ -526,7 +527,7 @@ Poniższy przykład kodu ustawia górne i dolne obramowanie paska sterowania do 
 
 [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]
 
-## <a name="ccontrolbarsetinplaceowner"></a><a name="setinplaceowner"></a>CControlBar:: SetInPlaceOwner
+## <a name="ccontrolbarsetinplaceowner"></a><a name="setinplaceowner"></a> CControlBar:: SetInPlaceOwner
 
 Zmienia lokalnego właściciela paska sterowania.
 
@@ -541,7 +542,7 @@ Wskaźnik do `CWnd` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykład CTRLBARS MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

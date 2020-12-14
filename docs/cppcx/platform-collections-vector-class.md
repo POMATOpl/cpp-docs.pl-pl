@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: platform:: Collections:: Vector, Klasa'
 title: 'Platform:: Collections:: Vector, Klasa'
 ms.date: 12/04/2019
 ms.topic: reference
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: dc467b8db3cd6ec88395554eef7f109877f10d41
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b13221c6280e0e94572cb4b6710bb59fbd7db4c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839091"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221192"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform:: Collections:: Vector, Klasa
 
@@ -44,7 +45,7 @@ template <typename T, typename E>
 *T*<br/>
 Typ elementów zawartych w obiekcie Vector.
 
-*E*<br/>
+*Adres*<br/>
 Określa Predykat binarny do testowania równości z wartościami typu *T*. Wartość domyślna to `std::equal_to<T>` .
 
 ### <a name="remarks"></a>Uwagi
@@ -119,7 +120,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indeks*<br/>
 Element, który ma zostać wstawiony do wektora. Typ *elementu* jest definiowany przez *T* TypeName.
 
 ## <a name="vectorclear-method"></a><a name="clear"></a> Vector:: Clear — Metoda
@@ -164,7 +165,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indeks*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -225,10 +226,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Element do znalezienia.
 
-*index*<br/>
+*indeks*<br/>
 Indeks (liczony od zera) elementu, jeśli zostanie znaleziona *wartość* parametru; w przeciwnym razie 0.
 
 Parametr *index* ma wartość 0, jeśli element jest pierwszym elementem wektora lub nie znaleziono elementu. Jeśli zwracana wartość to **`true`** , element został znaleziony i jest pierwszym elementem; w przeciwnym razie element nie został znaleziony.
@@ -253,7 +254,7 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indeks*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
 *elementów*<br/>
@@ -271,7 +272,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indeks*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
 ## <a name="vectorremoveatend-method"></a><a name="removeatend"></a> Vector:: RemoveAtEnd — Metoda
@@ -311,7 +312,7 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
+*indeks*<br/>
 Liczba całkowita bez znaku równa zero, która określa konkretny element w obiekcie Vector.
 
 *elementów*<br/>
@@ -374,7 +375,7 @@ Liczba elementów w kolekcji obiektów, które są używane do inicjowania bież
 *zmienia*<br/>
 Liczba elementów w wektorze.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która jest używana do inicjowania każdego elementu w bieżącym wektorze.
 
 *v*<br/>

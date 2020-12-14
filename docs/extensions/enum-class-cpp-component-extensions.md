@@ -1,14 +1,15 @@
 ---
+description: Dowiedz się więcej o klasie enum (C++/CLI i C++/CX)
 title: klasa wyliczeniowa  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 309a1defa7288ec13ca058cc366d9cb8deac01ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220672"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>klasa wyliczeniowa  (C++/CLI i C++/CX)
 
@@ -18,7 +19,7 @@ Deklaruje Wyliczenie w zakresie przestrzeni nazw, który jest typem zdefiniowany
 
 ### <a name="remarks"></a>Uwagi
 
-C++/CX i C++/CLI obsługują **publiczną klasę** wyliczeniową i **prywatną klasę enum** , która jest podobna do standardowej **klasy wyliczeniowej** C++, ale z dodaniem specyfikatora dostępności. W obszarze **/CLR**typ **klasy enum** języka C++ 11 jest dozwolony, ale generuje C4472 ostrzegawczy, który jest przeznaczony do zapewnienia, że naprawdę chcesz, aby typ wyliczenia ISO, a nie typ c++/CX i c++/CLI. Aby uzyskać więcej informacji na temat standardowego **`enum`** słowa kluczowego ISO języka C++, zobacz [wyliczenia](../cpp/enumerations-cpp.md).
+C++/CX i C++/CLI obsługują **publiczną klasę** wyliczeniową i **prywatną klasę enum** , która jest podobna do standardowej **klasy wyliczeniowej** C++, ale z dodaniem specyfikatora dostępności. W obszarze **/CLR** typ **klasy enum** języka C++ 11 jest dozwolony, ale generuje C4472 ostrzegawczy, który jest przeznaczony do zapewnienia, że naprawdę chcesz, aby typ wyliczenia ISO, a nie typ c++/CX i c++/CLI. Aby uzyskać więcej informacji na temat standardowego **`enum`** słowa kluczowego ISO języka C++, zobacz [wyliczenia](../cpp/enumerations-cpp.md).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
@@ -48,7 +49,7 @@ Obowiązkowe. Tylko środowisko wykonawcze systemu Windows) podstawowy typ wylic
 *moduł wyliczający — lista*<br/>
 Rozdzielana przecinkami lista nazw modułów wyliczających.
 
-Wartość każdego modułu wyliczającego jest wyrażeniem stałym zdefiniowanym niejawnie przez kompilator lub jawnie przez notację, wyrażenie *stałe modułu wyliczającego* `=` *constant-expression*. Domyślnie wartość pierwszego modułu wyliczającego jest równa zero, jeśli jest niejawnie zdefiniowana. Wartość każdego kolejnego zdefiniowanego niejawnie modułu wyliczającego jest wartością poprzedniego modułu wyliczającego + 1.
+Wartość każdego modułu wyliczającego jest wyrażeniem stałym zdefiniowanym niejawnie przez kompilator lub jawnie przez notację, wyrażenie *stałe modułu wyliczającego* `=` . Domyślnie wartość pierwszego modułu wyliczającego jest równa zero, jeśli jest niejawnie zdefiniowana. Wartość każdego kolejnego zdefiniowanego niejawnie modułu wyliczającego jest wartością poprzedniego modułu wyliczającego + 1.
 
 *funkcję*<br/>
 Obowiązkowe Nazwa zmiennej typu wyliczenia.
@@ -132,7 +133,7 @@ static const int sun = 0;
 static const int mon = 1;
 ```
 
-Zarządzane nazwy modułów wyliczających (*identyfikatory*) nie są wstrzykiwane do zakresu, w którym zdefiniowano Wyliczenie; wszystkie odwołania do modułów wyliczających muszą być w pełni kwalifikowane*name*( `::` *Identyfikator*nazwy).  Z tego powodu nie można zdefiniować anonimowego wyliczenia zarządzanego.
+Zarządzane nazwy modułów wyliczających (*identyfikatory*) nie są wstrzykiwane do zakresu, w którym zdefiniowano Wyliczenie; wszystkie odwołania do modułów wyliczających muszą być w pełni kwalifikowane( `::` *Identyfikator* nazwy).  Z tego powodu nie można zdefiniować anonimowego wyliczenia zarządzanego.
 
 Moduły wyliczające standardowe wyliczenie są silnie wstrzykiwane do otaczającego zakresu.  Oznacza to, że jeśli istnieje inny symbol o takiej samej nazwie jak moduł wyliczający w otaczającym zakresie, kompilator wygeneruje błąd.
 
