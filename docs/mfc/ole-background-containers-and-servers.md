@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: podstawowe informacje o technologii OLE: kontenery i serwery'
 title: 'Podstawy OLE: kontenery i serwery'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 7c3130ab9d8dff6551ef0ecbec43e5422dbdc4c4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3ea578ce14165b16e84520b22bc545fc5d2a8882
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254780"
 ---
 # <a name="ole-background-containers-and-servers"></a>Podstawy OLE: kontenery i serwery
 
-Aplikacja kontenera to aplikacja, która może zawierać osadzone lub połączone elementy w swoich własnych dokumentach. Dokumenty zarządzane przez aplikację kontenera muszą mieć możliwość przechowywania i wyświetlania składników dokumentu OLE oraz danych utworzonych przez samą aplikację. Aplikacja kontenera musi również zezwalać użytkownikom na wstawianie nowych elementów lub edytowanie istniejących elementów przez Aktywowanie aplikacji serwera w razie potrzeby. Wymagania dotyczące interfejsu użytkownika aplikacji kontenera są wymienione w [kontenerach artykułów: problemy z interfejsem użytkownika](containers-user-interface-issues.md).
+Aplikacja kontenera to aplikacja, która może zawierać osadzone lub połączone elementy w swoich własnych dokumentach. Dokumenty zarządzane przez aplikację kontenera muszą mieć możliwość przechowywania i wyświetlania składników dokumentu OLE oraz danych utworzonych przez samą aplikację. Aplikacja kontenera musi również zezwalać użytkownikom na wstawianie nowych elementów lub edytowanie istniejących elementów przez Aktywowanie aplikacji serwera w razie potrzeby. Wymagania dotyczące interfejsu użytkownika aplikacji kontenera znajdują się w [kontenerze artykułu: User-Interface problemy](containers-user-interface-issues.md).
 
 Aplikacja serwera lub aplikacja składników to aplikacja, która może tworzyć składniki dokumentu OLE do użycia przez aplikacje kontenerów. Aplikacje serwera zwykle obsługują przeciąganie i upuszczanie lub kopiowanie danych do schowka, dzięki czemu aplikacja kontenera może wstawić dane jako osadzony lub połączony element. Aplikacja może być zarówno kontenerem, jak i serwerem.
 
@@ -35,9 +36,9 @@ Za pomocą tych środków komunikacji kontener nie musi znać szczegółów impl
 
 ## <a name="see-also"></a>Zobacz też
 
-[Podstawy OLE](ole-background.md)<br/>
-[Podstawy OLE: implementacja MFC](ole-background-mfc-implementation.md)<br/>
+[Tło OLE](ole-background.md)<br/>
+[Tło OLE: implementacja MFC](ole-background-mfc-implementation.md)<br/>
 [Containers](containers.md)<br/>
 [Serwery](servers.md)<br/>
-[Kontenery: elementy klienckie](containers-client-items.md)<br/>
+[Kontenery: elementy klienta](containers-client-items.md)<br/>
 [Serwery: elementy serwera](servers-server-items.md)

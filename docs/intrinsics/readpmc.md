@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __readpmc'
 title: __readpmc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: af0f1874d991771423ddebfedd4624cd0b71760f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ceff8522d4895f69a47cf429e59d267c671e3a66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294135"
 ---
 # <a name="__readpmc"></a>__readpmc
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje instrukcję, która odczytuje licznik monitorowania wydajności określony przez licznik. `rdpmc`
+Generuje `rdpmc` instrukcję, która odczytuje licznik monitorowania wydajności określony przez *licznik*.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,7 +45,7 @@ Wartość określonego licznika wydajności.
 |---------------|------------------|
 |`__readpmc`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
@@ -52,6 +53,6 @@ Element wewnętrzny jest dostępny tylko w trybie jądra, a procedura jest dost�
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4564'
 title: Ostrzeżenie kompilatora (poziom 4) C4564
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 042eab1c125f2b98fd36257dfd8971262015ab92
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 112d1d20d34619d7a39d20c7fcd5f21584730cef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255174"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Ostrzeżenie kompilatora (poziom 4) C4564
 
 Metoda "Method" klasy "Class" definiuje nieobsługiwany parametr domyślny "parameter"
 
-Kompilator wykrył metodę z co najmniej jednym parametrem z wartościami domyślnymi. Wartości domyślne parametrów zostaną zignorowane, gdy wywoływana jest metoda; jawnie określ wartości tych parametrów. Jeśli nie określisz jawnie wartości dla tych parametrów, C++ kompilator wygeneruje błąd.
+Kompilator wykrył metodę z co najmniej jednym parametrem z wartościami domyślnymi. Wartości domyślne parametrów zostaną zignorowane, gdy wywoływana jest metoda; jawnie określ wartości tych parametrów. Jeśli nie określisz jawnie wartości tych parametrów, kompilator języka C++ wygeneruje błąd.
 
 Nadana została następująca Biblioteka. dll utworzona przy użyciu Visual Basic, która umożliwia używanie parametrów domyślnych dla argumentów metody:
 
@@ -31,7 +32,7 @@ Public class TestClass
 End class
 ```
 
-I Poniższy C++ przykład, który używa biblioteki. dll utworzonej przy użyciu Visual Basic,
+I Poniższy przykład języka C++, który używa biblioteki. dll utworzonej przy użyciu Visual Basic,
 
 ```cpp
 // C4564.cpp

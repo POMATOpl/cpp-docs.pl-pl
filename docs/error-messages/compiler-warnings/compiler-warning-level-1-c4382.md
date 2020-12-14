@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4382'
 title: Ostrzeżenie kompilatora (poziom 1) C4382
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-ms.openlocfilehash: 7b8dbf77defab2a711ad931057c740193908474b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 038225aea9592070b44af138be9deb5076e2f5f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311308"
 ---
 # <a name="compiler-warning-level-1-c4382"></a>Ostrzeżenie kompilatora (poziom 1) C4382
 
@@ -21,7 +22,7 @@ ms.locfileid: "80186975"
 
 **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
-Podczas kompilowania z **/CLR** (nie **/CLR: Pure**), obsługa wyjątków oczekuje, że funkcje składowe w typie natywnym mają być [__cdecl](../../cpp/cdecl.md) , a nie [__clrcall](../../cpp/clrcall.md). Typy natywne z funkcjami składowymi używającymi konwencji wywoływania `__clrcall` nie mogą być przechwytywane w module skompilowanym za pomocą **/CLR**.
+Podczas kompilowania z **/CLR** (nie **/CLR: Pure**), obsługa wyjątków oczekuje, że funkcje składowe w typie natywnym mają być [__cdecl](../../cpp/cdecl.md) , a nie [__clrcall](../../cpp/clrcall.md). Typy natywne z funkcjami składowymi używającymi `__clrcall` konwencji wywoływania nie mogą być przechwytywane w module skompilowanym za pomocą **/CLR**.
 
 Jeśli wyjątek zostanie przechwycony w module skompilowanym za pomocą **/CLR: Pure**, można zignorować to ostrzeżenie.
 

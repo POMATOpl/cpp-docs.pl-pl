@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4378'
 title: Ostrzeżenie kompilatora (poziom 1) C4378
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 20897ba27350835b4b896c5afd89790331c59220
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 0b85224cb2262025617f2d5c46c9a38c27e42d40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311373"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Ostrzeżenie kompilatora (poziom 1) C4378
 
 Musi uzyskać wskaźniki funkcji, aby uruchomić inicjatory; Rozważmy system:: ModuleHandle:: ResolveMethodHandle
 
-W obszarze **/CLR**symbole inicjatora zawierają tokeny funkcji, a nie wskaźniki funkcji.  Należy przekonwertować tokeny na wskaźniki przy użyciu <xref:System.ModuleHandle.ResolveMethodHandle%2A> .
+W obszarze **/CLR** symbole inicjatora zawierają tokeny funkcji, a nie wskaźniki funkcji.  Należy przekonwertować tokeny na wskaźniki przy użyciu <xref:System.ModuleHandle.ResolveMethodHandle%2A> .
 
 ## <a name="examples"></a>Przykłady
 
