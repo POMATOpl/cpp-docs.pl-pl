@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __RTDynamicCast'
 title: __RTDynamicCast
 ms.date: 11/04/2016
 api_name:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: 238310791baebc941ad23b798adc1ea2e7fffcbb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8e9cb906468c02ac065601e8f093b0e97c1b70bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284489"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -66,11 +67,11 @@ Wskaźnik do odpowiedniego obiektu podrzędnego, jeśli powodzenie; w przeciwnym
 
 ## <a name="exceptions"></a>Wyjątki
 
-`bad_cast()`Jeśli dane wejściowe `dynamic_cast<>` to odwołanie, a rzutowanie nie powiedzie się.
+`bad_cast()` Jeśli dane wejściowe `dynamic_cast<>` to odwołanie, a rzutowanie nie powiedzie się.
 
 ## <a name="remarks"></a>Uwagi
 
-Konwertuje `inptr` do obiektu typu `TargetType` . Typ elementu `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l-wartością, jeśli `TargetType` jest odwołaniem. `TargetType`musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub wskaźnikiem do wartości void.
+Konwertuje `inptr` do obiektu typu `TargetType` . Typ elementu `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l-wartością, jeśli `TargetType` jest odwołaniem. `TargetType` musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub wskaźnikiem do wartości void.
 
 ## <a name="requirements"></a>Wymagania
 

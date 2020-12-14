@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wspólne klasy okien dialogowych'
 title: Klasy wspólnych okien dialogowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-ms.openlocfilehash: 2efe095a6d5b71321cbbe56fdee662509baa4573
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab72407c9d709ef660976105d65901398ae5b5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310692"
 ---
 # <a name="common-dialog-classes"></a>Klasy wspólnych okien dialogowych
 
-Oprócz klasy [CDialog](reference/cdialog-class.md), MFC dostarcza kilka klas pochodzących od `CDialog` tego, które hermetyzują najczęściej używane okna dialogowe, jak pokazano w poniższej tabeli. Okna dialogowe hermetyzowane są nazywane "typowymi oknami okna dialogowego" i są częścią biblioteki wspólnych okien dialogowych systemu Windows (COMMDLG. DLL). Zasoby szablonu okna dialogowego i kod dla tych klas są dostępne w oknach wspólnych okien dialogowych systemu Windows, które są częścią systemu Windows w wersji 3,1 lub nowszej.
+Oprócz klasy [CDialog](reference/cdialog-class.md), MFC dostarcza kilka klas pochodzących od `CDialog` tego, które hermetyzują najczęściej używane okna dialogowe, jak pokazano w poniższej tabeli. Okna dialogowe hermetyzowane są nazywane "typowymi oknami okna dialogowego" i są częścią biblioteki wspólnych okien dialogowych systemu Windows (COMMDLG.DLL). Zasoby szablonu okna dialogowego i kod dla tych klas są dostępne w oknach wspólnych okien dialogowych systemu Windows, które są częścią systemu Windows w wersji 3,1 lub nowszej.
 
 ### <a name="common-dialog-classes"></a>Klasy wspólnych okien dialogowych
 

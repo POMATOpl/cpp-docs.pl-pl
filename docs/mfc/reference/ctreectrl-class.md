@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CTreeCtrl'
 title: Klasa CTreeCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -162,12 +163,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e126863bebcc3cb8f878a8ece41ee8d9385c0afe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345020"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
 
@@ -2338,7 +2339,7 @@ Parametry *lParam1* i *lParam2* odpowiadają `lParam` członkowi struktury [TVIT
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykład CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

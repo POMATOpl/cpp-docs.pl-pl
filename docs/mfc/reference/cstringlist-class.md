@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CStringList'
 title: Klasa CStringList
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,16 +51,16 @@ helpviewer_keywords:
 - CStringList [MFC], RemoveTail
 - CStringList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: 9eb7a713fc02cd3e51135d1985a41688d4c885d9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c9043ef648f50e880f3b5946c1912deca3de6714
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345072"
 ---
 # <a name="cstringlist-class"></a>Klasa CStringList
 
-Obsługuje listy obiektów `CString`.
+Obsługuje listy `CString` obiektów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,7 +70,7 @@ class CStringList : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje składowe `CStringList` są podobne do funkcji składowych klasy [CObList](../../mfc/reference/coblist-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CObList` dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz wskaźnik `CObject` jako wartość zwracana, Zastąp `CString` (nie wskaźnikiem `CString`). W każdym przypadku, gdy widzisz `CObject` wskaźnik jako parametr funkcji, podstaw `LPCTSTR`.
+Funkcje składowe `CStringList` są podobne do funkcji składowych klasy [CObList](../../mfc/reference/coblist-class.md). W związku z tym podobieństwem można użyć `CObList` dokumentacji referencyjnej dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz `CObject` wskaźnik jako wartość zwrotną, podstaw `CString` (nie `CString` wskaźnik). Wszędzie tam, gdzie widzisz `CObject` wskaźnik jako parametr funkcji, podstaw `LPCTSTR` .
 
 `CObject*& CObList::GetHead() const;`
 
@@ -77,7 +78,7 @@ na przykład tłumaczy na
 
 `CString& CStringList::GetHead() const;`
 
-i
+oraz
 
 `POSITION AddHead( CObject* <newElement> );`
 
@@ -87,13 +88,13 @@ tłumaczy na
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CStringList::CStringList](../../mfc/reference/coblist-class.md#coblist)|Tworzy pustą listę.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CStringList:: addszef](../../mfc/reference/coblist-class.md#addhead)|Dodaje element (lub wszystkie elementy z innej listy) do nagłówka listy (tworzy nowy nagłówek).|
 |[CStringList:: AddTail](../../mfc/reference/coblist-class.md#addtail)|Dodaje element (lub wszystkie elementy z innej listy) do ogona listy (tworzy nowy ogon).|
@@ -121,11 +122,11 @@ tłumaczy na
 
 Wszystkie porównania są wykonywane przez wartość, co oznacza, że znaki w ciągu są porównywane zamiast adresów ciągów.
 
-`CStringList` zawiera IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Jeśli lista obiektów `CString` jest przechowywana w archiwum, z przeciążonym operatorem wstawiania lub z funkcją składową `Serialize`, każdy element `CString` jest serializowany z kolei.
+`CStringList` obejmuje IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Jeśli lista `CString` obiektów jest przechowywana w archiwum, z przeładowanym operatorem wstawiania lub `Serialize` funkcją składową, każdy `CString` element jest serializowany z kolei.
 
-Jeśli potrzebujesz zrzutu poszczególnych elementów `CString`, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
+Jeśli potrzebujesz zrzutu poszczególnych `CString` elementów, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
-Aby uzyskać więcej informacji na temat korzystania z `CStringList`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
+Aby uzyskać więcej informacji na temat korzystania z programu `CStringList` , zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

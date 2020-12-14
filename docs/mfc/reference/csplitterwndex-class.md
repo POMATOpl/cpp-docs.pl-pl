@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CSplitterWndEx'
 title: Klasa CSplitterWndEx
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: d7952e3082bf68cff7ad9ba218073081ee522320
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 357f650551871cc9768c8e4e693bd62bb5e69bc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345098"
 ---
 # <a name="csplitterwndex-class"></a>Klasa CSplitterWndEx
 
-Reprezentuje dostosowane okno rozdzielacza.
+Reprezentuje niestandardowe okno rozdzielacza.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,38 +32,38 @@ class CSplitterWndEx : public CSplitterWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CSplitterWndEx::CSplitterWndEx`|Domyślny konstruktor.|
-|`CSplitterWndEx::~CSplitterWndEx`|Destruktora.|
+|`CSplitterWndEx::CSplitterWndEx`|Konstruktor domyślny.|
+|`CSplitterWndEx::~CSplitterWndEx`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Wywoływana przez strukturę do rysowania okna rozdzielacza. (Zastępuje [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Wywoływane przez platformę, by narysować okno rozdzielacza. (Przesłania [CSplitterWnd:: OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
 
 ## <a name="remarks"></a>Uwagi
 
-Zastąpić metodę, `OnDrawSplitter` aby dostosować wygląd komponentów graficznych okna rozdzielacza.
+Zastąp `OnDrawSplitter` metodę, aby dostosować wygląd składników graficznych okna rozdzielacza.
 
-Klasa `CSplitterWndEx` jest używana razem z [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)i [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metody, które są implementowane przez menedżera wizualnego. Aby spowodować visual manager narysować okno rozdzielacza w `CSplitterWnd` aplikacji, `CSplitterWndEx` zastąpić deklaracje klasy z klasy. W przypadku aplikacji okna ramki klasa okna rozdzielacza jest zadeklarowana w klasie CMainFrame, która znajduje się w mainfrm.h. Na przykład zobacz `OutlookDemo` przykład w katalogu Przykłady.
+`CSplitterWndEx`Klasa jest używana razem z metodami [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)i [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) , które są implementowane przez program Visual Manager. Aby spowodować, że program Visual Manager rysuje okno rozdzielacza w aplikacji, Zastąp deklaracje klasy klasą `CSplitterWnd` `CSplitterWndEx` . W przypadku aplikacji okien ramowych Klasa okna rozdzielacza jest zadeklarowana w klasie CMainFrame, która znajduje się w MainFrm. h. Aby zapoznać się z przykładem, zobacz przykład `OutlookDemo` w katalogu Samples.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](cobject-class.md)
+[CObject](cobject-class.md)
 
-[Ccmdtarget](ccmdtarget-class.md)
+[CCmdTarget](ccmdtarget-class.md)
 
-[Cwnd](cwnd-class.md)
+[CWnd](cwnd-class.md)
 
-[Csplitterwnd](csplitterwnd-class.md)
+[CSplitterWnd](csplitterwnd-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxsplitterwndex.h
+**Nagłówek:** afxsplitterwndex. h
 
-## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter
+## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a> CSplitterWndEx::OnDrawSplitter
 
-Wywoływana przez strukturę do rysowania okna rozdzielacza.
+Wywoływane przez platformę, by narysować okno rozdzielacza.
 
 ```
 virtual void OnDrawSplitter(
@@ -74,14 +75,14 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
-[w] Wskaźnik do kontekstu urządzenia. Jeśli ten parametr ma wartość NULL, struktura ponownie rysuje aktywne okno.
+*Domeny*<br/>
+podczas Wskaźnik do kontekstu urządzenia. Jeśli ten parametr ma wartość NULL, struktura ponownie narysuje aktywne okno.
 
-*nTyp*<br/>
-[w] Jedna z `CSplitterWnd::ESplitType` wartości wyliczenia, która określa element okna rozdzielacza do narysowania. Prawidłowe `splitBox`wartości `splitBar` `splitIntersection`to `splitBorder`, , i .
+*Npowiadomienia*<br/>
+podczas Jedna z `CSplitterWnd::ESplitType` wartości wyliczenia, która określa element okna rozdzielacza do rysowania. Prawidłowe wartości to `splitBox`, `splitBar`, `splitIntersection` i `splitBorder`.
 
-*Rect*<br/>
-[w] Prostokąt ograniczający, który określa wymiary i lokalizację do narysowania określonego elementu okna rozdzielacza.
+*cinania*<br/>
+podczas Prostokąt ograniczający, który określa wymiary i lokalizację do rysowania określonego elementu okna rozdzielacza.
 
 ### <a name="remarks"></a>Uwagi
 

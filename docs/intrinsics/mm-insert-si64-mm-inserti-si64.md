@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mm_insert_si64, _mm_inserti_si64'
 title: _mm_insert_si64, _mm_inserti_si64
 ms.date: 09/02/2019
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: 08469ad8049df2a07f0e66d650c1ca3118f8b980
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 96ddf9a8836dcb927a09a51e0b2818b2a040c9d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345267"
 ---
 # <a name="_mm_insert_si64-_mm_inserti_si64"></a>_mm_insert_si64, _mm_inserti_si64
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-`insertq` Generuje instrukcję wstawiania bitów z drugiego operandu do pierwszego operandu.
+Generuje `insertq` instrukcję wstawiania bitów z drugiego operandu do pierwszego operandu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,7 +44,7 @@ __m128i _mm_inserti_si64(
 podczas Pole 128-bitowe, które zawiera dane wejściowe z niższym 64 bitowym, do którego zostanie wstawione pole.
 
 *Source2*\
-podczas Pole 128-bitowe, które ma dane do wstawienia w jego małych bitach.  Dla `_mm_insert_si64`programu, zawiera również deskryptor pola w jego dużych bitach.
+podczas Pole 128-bitowe, które ma dane do wstawienia w jego małych bitach.  Dla programu `_mm_insert_si64` , zawiera również deskryptor pola w jego dużych bitach.
 
 *Długość*\
 podczas Stała całkowita, która określa długość pola do wstawienia.
@@ -62,17 +63,17 @@ Pole 128-bitowe, którego Dolna liczba bitów 64 zawierają oryginalne, niskie 6
 |`_mm_insert_si64`|SSE4a|
 |`_mm_inserti_si64`|SSE4a|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Te elementy wewnętrzne generują `insertq` instrukcję wstawiania bitów z *SOURCE2* do *source1*. Istnieją dwie wersje: `_mm_inserti_si64`, to Natychmiastowa wersja, a `_mm_insert_si64` nie natychmiastowa. Każda wersja wyodrębnia pole bitowe o danej długości z SOURCE2 i wstawia je do Source1.  Wyodrębnione bity są najmniej znaczącymi bitami SOURCE2.  Pole source1, do którego zostaną wstawione te bity, definiuje długość i indeks jego najmniej znaczącego bitu.  Wartości długości i indeksu są brane pod kątem mod 64, dlatego oba-1 i 127 są interpretowane jako 63. Jeśli sum (zredukowany) indeks bitowy i (zmniejszony) długość pola jest większa niż 64, wyniki są niezdefiniowane. Wartość zero dla długości pola jest interpretowana jako 64. Jeśli długość pola i indeks bitu są równe zero, bity 63:0 of *SOURCE2* są wstawiane do *source1*. Jeśli długość pola wynosi zero, ale indeks bitowy jest różny od zera, wyniki są niezdefiniowane.
+Te elementy wewnętrzne generują `insertq` instrukcję wstawiania bitów z *SOURCE2* do *source1*. Istnieją dwie wersje: `_mm_inserti_si64` , to Natychmiastowa wersja, a `_mm_insert_si64` nie natychmiastowa. Każda wersja wyodrębnia pole bitowe o danej długości z SOURCE2 i wstawia je do Source1.  Wyodrębnione bity są najmniej znaczącymi bitami SOURCE2.  Pole source1, do którego zostaną wstawione te bity, definiuje długość i indeks jego najmniej znaczącego bitu.  Wartości długości i indeksu są brane pod kątem mod 64, dlatego oba-1 i 127 są interpretowane jako 63. Jeśli sum (zredukowany) indeks bitowy i (zmniejszony) długość pola jest większa niż 64, wyniki są niezdefiniowane. Wartość zero dla długości pola jest interpretowana jako 64. Jeśli długość pola i indeks bitu są równe zero, bity 63:0 of *SOURCE2* są wstawiane do *source1*. Jeśli długość pola wynosi zero, ale indeks bitowy jest różny od zera, wyniki są niezdefiniowane.
 
-W wywołaniu _mm_insert_si64 długość pola jest zawarta w bitach 77:72 of SOURCE2 i indeksie w bitach 69:64.
+W wywołaniu _mm_insert_si64 długość pola jest zawarta w bitach 77:72 z SOURCE2 i indeksie w bitach 69:64.
 
-W przypadku wywołania `_mm_inserti_si64` z argumentami, które kompilator nie może ustalić jako stałych całkowitych, kompilator generuje kod, aby spakować te wartości do rejestru XMM i wywołać `_mm_insert_si64`.
+W przypadku wywołania `_mm_inserti_si64` z argumentami, które kompilator nie może ustalić jako stałych całkowitych, kompilator generuje kod, aby spakować te wartości do rejestru XMM i wywołać `_mm_insert_si64` .
 
-Aby określić obsługę `insertq` sprzętową instrukcji, `__cpuid` Wywołaj wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 z `CPUInfo[2] (ECX)`. Ten bit ma wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod, który używa wewnętrznego na sprzęcie, który nie obsługuje `insertq` instrukcji, wyniki są nieprzewidywalne.
+Aby określić obsługę sprzętową `insertq` instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 z `CPUInfo[2] (ECX)` . Ten bit ma wartość 1, jeśli instrukcja jest obsługiwana i 0 w przeciwnym razie. Jeśli uruchamiasz kod, który używa wewnętrznego na sprzęcie, który nie obsługuje `insertq` instrukcji, wyniki są nieprzewidywalne.
 
 ## <a name="example"></a>Przykład
 
@@ -122,7 +123,7 @@ result3 = 0xfffffffff3210fff
 
 Fragmenty Copyright 2007 przez Advanced Micro Devices, Inc. Wszelkie prawa zastrzeżone. Wygenerowane z uprawnieniami z zaawansowanych urządzeń Micro Devices, Inc.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)\
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

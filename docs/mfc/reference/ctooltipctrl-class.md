@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CToolTipCtrl'
 title: Klasa CToolTipCtrl
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: a4c2644ff7a9b2ae60cc166247d27d7a25305b97
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: bd263d0ada7ad85169eb551dd136f81b480534e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561846"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345033"
 ---
 # <a name="ctooltipctrl-class"></a>Klasa CToolTipCtrl
 

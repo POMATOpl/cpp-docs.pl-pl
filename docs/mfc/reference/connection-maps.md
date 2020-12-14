@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o programie: mapy połączeń'
 title: Mapy połączeń
 ms.date: 11/04/2016
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 517017e9e60b86e96daa24f7822538e91c609fb4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 61d2e7023ab97aa00952aee4786b34e60ba57af7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345254"
 ---
 # <a name="connection-maps"></a>Mapy połączeń
 
@@ -191,7 +192,7 @@ implementuje mapę połączenia z punktem połączenia, który wywołuje `IID_IS
 
 ## <a name="afxconnectionadvise"></a><a name="afxconnectionadvise"></a> AfxConnectionAdvise
 
-Wywołaj tę funkcję, aby nawiązać połączenie między źródłem, określonym przez *pUnkSrc*i ujściam, określonym przez *pUnkSink*.
+Wywołaj tę funkcję, aby nawiązać połączenie między źródłem, określonym przez *pUnkSrc* i ujściam, określonym przez *pUnkSink*.
 
 ```
 BOOL AFXAPI AfxConnectionAdvise(
