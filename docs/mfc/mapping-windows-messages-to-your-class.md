@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Mapowanie komunikatów systemu Windows do klasy'
 title: Mapowanie komunikatów systemu Windows na klasę
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - messages to dialog class [MFC], mapping
 - Class Wizard [MFC]
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
-ms.openlocfilehash: 6b1155945c4248c5ac2755d60d8887f890e6d324
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cca13c4b262c6373fa3d968438331d5e0ce5f7d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280784"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapowanie komunikatów systemu Windows na klasę
 
@@ -28,9 +29,9 @@ Można również przesłonić funkcje składowe [CDialog](reference/cdialog-clas
 
 - [Obsługa i mapowanie komunikatów](message-handling-and-mapping.md)
 
-- [Powszechnie zastępowane funkcje członkowskie](commonly-overridden-member-functions.md)
+- [Powszechnie zastępowane funkcje składowe](commonly-overridden-member-functions.md)
 
-- [Powszechnie dodawane funkcje członkowskie](commonly-added-member-functions.md)
+- [Powszechnie dodawane funkcje składowe](commonly-added-member-functions.md)
 
 ## <a name="see-also"></a>Zobacz też
 

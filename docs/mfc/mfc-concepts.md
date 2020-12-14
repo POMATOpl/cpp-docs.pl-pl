@@ -1,14 +1,15 @@
 ---
+description: 'Dowiedz się więcej o: pojęcia MFC'
 title: Pojęcia związane z MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: b6f5e6bf84900a17b10104dbe9baf4b580ae5396
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 13d5b0b1943eb68e7b73fc5e935b98b0d104ab07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280602"
 ---
 # <a name="mfc-concepts"></a>Pojęcia związane z MFC
 
@@ -16,7 +17,7 @@ Ta sekcja zawiera tematy dotyczące pojęć i zadań, które ułatwiają program
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)<br/>
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)<br/>
 Omawia szczegóły techniczne biblioteki MFC.
 
 [Używanie obiektu CObject](using-cobject.md)<br/>
@@ -45,10 +46,10 @@ Wyjaśnia mechanizm serializacji zapewniający, że obiekty mają być utrwalane
 [Obsługa wyjątków (MFC)](exception-handling-in-mfc.md)<br/>
 Wyjaśnia mechanizmy obsługi wyjątków dostępne w MFC.
 
-[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)<br/>
+[Podstawy programowania internetowego MFC](mfc-internet-programming-basics.md)<br/>
 Omawia klasy MFC, które obsługują programowanie internetowe.
 
-[MFC — zadania związane z programowaniem Internetu](mfc-internet-programming-tasks.md)<br/>
+[Zadania programistyczne internetowe MFC](mfc-internet-programming-tasks.md)<br/>
 W tym artykule omówiono sposób dodawania obsługi Internetu do aplikacji.
 
 [Obsługa zestawu znaków Unicode i wielobajtowego (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
@@ -60,7 +61,7 @@ Omawia podzestaw MFC, który jest przeznaczony do obsługi modelu COM, podczas g
 [Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
 Opisuje procesy i wątki oraz omawia podejście MFC do wielowątkowości.
 
-[Gniazda systemu Windows w MFC](windows-sockets.md)<br/>
+[Windows Sockets w MFC](windows-sockets.md)<br/>
 Obejmuje implementację MFC usługi Windows Sockets.
 
 [Dokumentacja MFC](mfc-desktop-applications.md)<br/>

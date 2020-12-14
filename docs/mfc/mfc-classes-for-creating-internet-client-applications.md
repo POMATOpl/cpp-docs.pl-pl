@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy MFC do tworzenia aplikacji internetowych klienta'
 title: Klasy MFC do tworzenia klienckich aplikacji internetowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: d65a2e8b373f26fe928e4c3e7c0193aec4edf2d6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c68110182b01d9c425090a926ee1e352ca3d3bdf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280680"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Klasy MFC do tworzenia klienckich aplikacji internetowych
 
-MFC udostępnia następujące klasy i funkcje globalne do pisania aplikacji internetowych klientów. Wcięcie wskazuje, że Klasa pochodzi od klasy bez wcięcia. `CGopherFile`i `CHttpFile` pochodzić z `CInternetFile` , na przykład. Te klasy i funkcje globalne są deklarowane w AFXINET. H, z wyjątkiem `CFileFind` , który jest zadeklarowany w AFX. C.
+MFC udostępnia następujące klasy i funkcje globalne do pisania aplikacji internetowych klientów. Wcięcie wskazuje, że Klasa pochodzi od klasy bez wcięcia. `CGopherFile` i `CHttpFile` pochodzić z `CInternetFile` , na przykład. Te klasy i funkcje globalne są deklarowane w AFXINET. H, z wyjątkiem `CFileFind` , który jest zadeklarowany w AFX. H.
 
 ## <a name="classes"></a>Klasy
 
@@ -59,4 +60,4 @@ MFC udostępnia następujące klasy i funkcje globalne do pisania aplikacji inte
 
 [Rozszerzenia internetowe Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
 [Wymagania wstępne dotyczące klas klientów internetowych](prerequisites-for-internet-client-classes.md)<br/>
-[Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[Pisanie aplikacji klienckiej internetowej przy użyciu klas MFC WinInet](writing-an-internet-client-application-using-mfc-wininet-classes.md)

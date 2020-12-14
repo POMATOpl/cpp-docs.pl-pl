@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: Tworzenie serwera automatyzacji'
 title: 'Formanty MFC ActiveX: tworzenie serwera automatyzacji'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-ms.openlocfilehash: f2c941e43e810845560b4c35c558ec70248c21ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ffac05d48a17e0f8b40f268709393fff392a3b95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622380"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280732"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Formanty MFC ActiveX: tworzenie serwera automatyzacji
 

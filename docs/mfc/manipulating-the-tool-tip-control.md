@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: manipulowanie formantem etykietki narzędzia'
 title: Operowanie formantem etykietki narzędzia
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], manipulating tool tip attributes
 - tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
-ms.openlocfilehash: 61bc35e8b19ba7645736b939acac6cdaa6cb7316
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f04a2a9fe7d9b32d4b0fab1c6fea0d82f48cbf1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281070"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Operowanie formantem etykietki narzędzia
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX'
 title: 'Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX'
 ms.date: 09/12/2018
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 11d647922a4f8097e03e112c0c93c833524c2c4e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: faf85bffd9911c38764aea19d1ddb682fd719be1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280719"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX
 
@@ -45,13 +46,13 @@ W tym artykule omówiono kilka problemów związanych z redystrybucją formantó
 >[!IMPORTANT]
 > Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](activex-controls.md).
 
-## <a name="ansi-or-unicode-control-versions"></a><a name="_core_ansi_or_unicode_control_versions"></a>Wersje kontrolne ANSI lub Unicode
+## <a name="ansi-or-unicode-control-versions"></a><a name="_core_ansi_or_unicode_control_versions"></a> Wersje kontrolne ANSI lub Unicode
 
 Należy zdecydować, czy ma być wysyłana wersja ANSI lub Unicode, czy obu. Ta decyzja jest oparta na czynnikach przenośności, które są związane z zestawami znaków ANSI i Unicode.
 
 Formanty ANSI, które działają we wszystkich systemach operacyjnych Win32, umożliwiają maksymalne przenoszenie portów między różnymi systemami operacyjnymi Win32. Formanty Unicode działają tylko w systemie Windows NT (w wersji 3,51 lub nowszej), ale nie w systemie Windows 95 lub Windows 98. Jeśli przenośność stanowi podstawowe zagadnienie, Wyślij formanty ANSI. Jeśli kontrolki będą uruchamiane tylko w systemie Windows NT, można wydać formanty Unicode. Możesz również wybrać opcję dostarczania aplikacji i zainstalowania jej jako wersji odpowiedniej dla systemu operacyjnego użytkownika.
 
-## <a name="installing-activex-controls-and-redistributable-dlls"></a><a name="_core_installing_activex_controls_and_redistributable_dlls"></a>Instalowanie formantów ActiveX i redystrybucyjnych bibliotek DLL
+## <a name="installing-activex-controls-and-redistributable-dlls"></a><a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Instalowanie formantów ActiveX i redystrybucyjnych bibliotek DLL
 
 Program instalacyjny udostępniany z kontrolkami ActiveX powinien utworzyć specjalny podkatalog katalogu systemu Windows i zainstalować formanty. Pliki OCX.
 
@@ -62,7 +63,7 @@ Program instalacyjny musi zainstalować wymagane pliki DLL redystrybucyjnych w k
 
 Ponieważ kontrolki ActiveX mogą być używane tylko w aplikacjach kontenera OLE, nie ma potrzeby dystrybucji pełnego zestawu bibliotek DLL OLE z kontrolkami. Można założyć, że aplikacja zawierająca (lub system operacyjny) ma zainstalowane standardowe biblioteki DLL OLE.
 
-## <a name="registering-controls"></a><a name="_core_registering_controls"></a>Rejestrowanie kontrolek
+## <a name="registering-controls"></a><a name="_core_registering_controls"></a> Rejestrowanie kontrolek
 
 Aby można było użyć kontrolki, należy dla niej utworzyć odpowiednie wpisy w bazie danych rejestracji systemu Windows. Niektóre kontenery kontrolek ActiveX udostępniają element menu użytkownikom do rejestrowania nowych kontrolek, ale ta funkcja może nie być dostępna we wszystkich kontenerach. W związku z tym możesz chcieć, aby program instalacyjny zarejestrował formanty po ich zainstalowaniu.
 
@@ -77,7 +78,7 @@ Zalety rejestrowania kontroli bezpośrednio polegają na tym, że nie trzeba wyw
 > [!NOTE]
 > Przed zainstalowaniem formantu ActiveX przez program instalacyjny powinien zostać wywołany `OleInitialize` . Po zakończeniu działania programu instalacyjnego Wywołaj polecenie `OleUnitialize` . Zapewnia to, że biblioteki DLL systemu OLE są w odpowiednim stanie do rejestrowania kontrolki ActiveX.
 
-Należy zarejestrować MFCx0. DLL.
+Należy zarejestrować MFCx0.DLL.
 
 ## <a name="see-also"></a>Zobacz też
 

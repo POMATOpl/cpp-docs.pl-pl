@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontrolki ActiveX MFC: Tematy zaawansowane'
 title: 'Kontrolki ActiveX MFC: tematy zaawansowane'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b37c3621c515153f068633b8272420a68a06c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280745"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: tematy zaawansowane
 
-W tym artykule omówiono zaawansowane tematy związane z tworzeniem formantów ActiveX. Należą do nich następujące elementy:
+W tym artykule omówiono zaawansowane tematy związane z tworzeniem formantów ActiveX. Są one następujące:
 
 - [Korzystanie z klas baz danych w kontrolkach ActiveX](#_core_using_database_classes_in_activex_controls)
 
@@ -36,7 +37,7 @@ W tym artykule omówiono zaawansowane tematy związane z tworzeniem formantów A
 >[!IMPORTANT]
 > Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](activex-controls.md).
 
-## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a>Korzystanie z klas baz danych w kontrolkach ActiveX
+## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a> Korzystanie z klas baz danych w kontrolkach ActiveX
 
 Ponieważ klasy kontrolek ActiveX są częścią biblioteki klas, można zastosować te same procedury i reguły służące do używania klas baz danych w standardowej aplikacji MFC do tworzenia formantów ActiveX korzystających z klas baz danych MFC.
 
@@ -45,7 +46,7 @@ Ogólne omówienie klas baz danych MFC zawiera temat [klasy baz danych MFC (DAO 
 > [!NOTE]
 > Obiekty DAO są obsługiwane przez pakiet Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały. Visual C++ środowisko i kreatorzy nie obsługują obiektów DAO (chociaż klasy DAO są dołączone i nadal można z nich korzystać). Firma Microsoft zaleca korzystanie z [szablonów OLE DB](../data/oledb/ole-db-programming.md) lub [ODBC oraz MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiektów DAO należy używać tylko w przypadku zarządzania istniejącymi aplikacjami.
 
-## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a>Implementowanie właściwości sparametryzowanej
+## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a> Implementowanie właściwości sparametryzowanej
 
 Właściwość sparametryzowane (czasami nazywana tablicą właściwości) to metoda ujawniania jednorodnej kolekcji wartości jako pojedynczej właściwości formantu. Na przykład można użyć właściwości sparametryzowanej do udostępnienia tablicy lub słownika jako właściwości. W Visual Basic, taka właściwość jest dostępna przy użyciu notacji tablicy:
 
@@ -79,7 +80,7 @@ Poniższa procedura dodaje właściwość sparametryzowanej o nazwie Array, do k
 
 1. Dodaj drugi parametr o nazwie *Column* (typ *Short*).
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 ### <a name="changes-made-by-the-add-property-wizard"></a>Zmiany wprowadzone przez Kreatora dodawania właściwości
 
@@ -99,7 +100,7 @@ Na koniec implementacje `GetArray` `SetArray` funkcji i są dodawane na końcu. 
 
 Aby ta właściwość była przydatna, można zadeklarować zmienną składową tablicy dwuwymiarowej w klasie kontrolki typu **`short`** , aby przechowywać wartości dla właściwości sparametryzowanej. Następnie można zmodyfikować funkcję Get, aby zwracała wartość przechowywaną w prawidłowym wierszu i kolumnie, zgodnie z parametrami, i zmodyfikować funkcję Set, aby zaktualizować wartość przywoływaną przez parametry wiersza i kolumny.
 
-## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>Obsługa błędów w kontrolce ActiveX
+## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a> Obsługa błędów w kontrolce ActiveX
 
 Jeśli w kontrolce wystąpią błędy, może być konieczne zgłoszenie błędu do kontenera kontroli. Istnieją dwie metody raportowania błędów w zależności od sytuacji, w której występuje błąd. Jeśli błąd występuje w funkcji get lub set lub w implementacji metody automatyzacji OLE, formant powinien wywołać [COleControl:: ThrowError](reference/colecontrol-class.md#throwerror), który sygnalizuje użytkownikowi kontroli, że wystąpił błąd. Jeśli błąd występuje w dowolnym innym czasie, formant powinien wywołać metodę [COleControl:: FireError —](reference/colecontrol-class.md#fireerror), która wyzwala zdarzenie błędu giełdowego.
 
@@ -156,7 +157,7 @@ W razie potrzeby użyj makra CUSTOM_CTL_SCODE, aby zdefiniować niestandardowy k
 
 Jeśli tworzysz formant ActiveX, aby zastąpić istniejący formant VBX, zdefiniuj kody błędów kontrolki ActiveX z tymi samymi wartościami liczbowymi, które są używane przez kontrolkę VBX, aby upewnić się, że kody błędów są zgodne.
 
-## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a>Obsługa kluczy specjalnych w formancie
+## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a> Obsługa kluczy specjalnych w formancie
 
 W niektórych przypadkach możesz chcieć obsłużyć Niektóre kombinacje klawiszy w specjalny sposób; na przykład Wstaw nowy wiersz po naciśnięciu klawisza ENTER w wielowierszowym formancie pola tekstowego lub przechodzenie między grupą kontrolek edycji po naciśnięciu klawisza kierunkowego.
 
@@ -168,7 +169,7 @@ Poniższy przykład kodu ilustruje możliwy sposób obsługi wszelkich komunikat
 
 Więcej informacji o obsłudze interfejsów klawiatury dla kontrolki ActiveX znajduje się w dokumentacji zestawu SDK ActiveX.
 
-## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Dostęp do kontrolek okna dialogowego, które są niewidoczne w czasie wykonywania
+## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Dostęp do kontrolek okna dialogowego, które są niewidoczne w czasie wykonywania
 
 Można utworzyć kontrolki okna dialogowego, które nie mają interfejsu użytkownika i są niewidoczne w czasie wykonywania. W przypadku dodania niewidocznej kontrolki ActiveX w czasie wykonywania do okna dialogowego i używania [CWnd:: GetDlgItem](reference/cwnd-class.md#getdlgitem) w celu uzyskania dostępu do kontrolki formant nie będzie działać prawidłowo. Zamiast tego należy użyć jednej z następujących metod, aby uzyskać obiekt, który reprezentuje kontrolkę:
 
@@ -180,6 +181,6 @@ Można utworzyć kontrolki okna dialogowego, które nie mają interfejsu użytko
 
    [!code-cpp[NVC_MFC_AxCont#19](codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)

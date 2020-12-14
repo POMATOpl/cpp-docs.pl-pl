@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat wersji biblioteki MFC
 title: Wersje biblioteki MFC
 ms.date: 05/08/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: bf10d8b56f82714fa708b5409923e765206eb16d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 26d17604ec201deffd5fd2d5e843269e67e3dd07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280589"
 ---
 # <a name="mfc-library-versions"></a>Wersje biblioteki MFC
 
@@ -77,7 +78,7 @@ Pliki nagłówkowe MFC obejmują również dyrektywy do łączenia we wszystkich
 
 Wersje biblioteki MFC ANSI/MBCS obsługują zarówno jednobajtowe zestawy znaków, jak ASCII, jak i zestawy znaków wielowymiarowych, takie jak Shift-JIS. Wersje biblioteki Unicode MFC obsługują standard Unicode w postaci kodowanej jednobajtowej postaci UTF-16LE. Użyj bibliotek MFC/MBCS w wersji Library w przypadku obsługi kodowania Unicode w formacie UTF-8.
 
-Aby skonfigurować konfigurację projektu w taki sposób, aby w środowisku IDE był używany ciąg Unicode jednobajtowy, wielobajtowy lub szeroki znak oraz obsługa znaków, użyj okna dialogowego **właściwości projektu** . Na stronie **Ogólne właściwości konfiguracji**  >  **General** ustaw właściwość **zestaw znaków** , aby nie była **ustawiona** na używanie jednobajtowego zestawu znaków. Ustaw właściwość w taki sposób, aby korzystała z zestawu znaków **wielobajtowych** do użycia zestawu znaków wielobajtowych, lub **Użyj zestawu znaków Unicode** , aby używać kodowania Unicode jako UTF-16.
+Aby skonfigurować konfigurację projektu w taki sposób, aby w środowisku IDE był używany ciąg Unicode jednobajtowy, wielobajtowy lub szeroki znak oraz obsługa znaków, użyj okna dialogowego **właściwości projektu** . Na stronie **Ogólne właściwości konfiguracji**  >   ustaw właściwość **zestaw znaków** , aby nie była **ustawiona** na używanie jednobajtowego zestawu znaków. Ustaw właściwość w taki sposób, aby korzystała z zestawu znaków **wielobajtowych** do użycia zestawu znaków wielobajtowych, lub **Użyj zestawu znaków Unicode** , aby używać kodowania Unicode jako UTF-16.
 
 Projekty MFC używają symboli preprocesora \_ Unicode w celu wskazania obsługi standardu Unicode w formacie UTF-16 i \_ MBCS w celu wskazania obsługi MBCS. Te opcje wzajemnie się wykluczają w projekcie.
 
@@ -93,18 +94,18 @@ gdzie litery wyświetlane w kursywie są symbolami zastępczymi dla specyfikator
 |---------------|-------------------------|
 |*'t*|ANSI/MBCS (N) lub Unicode (U); Pomiń w przypadku wersji bez formantów MFC w oknach dialogowych|
 |*s*|Wersja z kontrolkami MFC w oknach dialogowych (CW) lub bez (NMCD)|
-|*Wykres*|Debugowanie lub wydanie: D = debugowanie; Pomiń specyfikator dla wydania|
+|*d*|Debugowanie lub wydanie: D = debugowanie; Pomiń specyfikator dla wydania|
 
 Wszystkie biblioteki wymienione w poniższej tabeli są dołączone do katalogu \atlmfc\lib dla obsługiwanych architektur kompilacji.
 
 |Biblioteka|Opis|
 |-------------|-----------------|
-|NAFXCW.LIB|Biblioteka DLL biblioteki MFC, wersja wydania|
-|NAFXCWD.LIB|Biblioteka DLL biblioteki MFC, wersja do debugowania|
-|UAFXCW. LIB|Biblioteka DLL biblioteki MFC z obsługą standardu Unicode, wersja wydania|
-|UAFXCWD. LIB|Biblioteka DLL biblioteki MFC z obsługą standardu Unicode, wersja do debugowania|
-|AFXNMCD. LIB|Biblioteka DLL biblioteki MFC bez kontrolek okna dialogowego MFC, wersja wydania|
-|AFXNMCDD. LIB|Biblioteka DLL biblioteki MFC bez kontrolek okna dialogowego MFC, wersja do debugowania|
+|NAFXCW.LIB|Biblioteka MFC Static-Link, wersja wydania|
+|NAFXCWD.LIB|Biblioteka Static-Link MFC, wersja Debug|
+|UAFXCW. LIB|Biblioteka MFC Static-Link z obsługą standardu Unicode, wersja wydania|
+|UAFXCWD. LIB|Biblioteka MFC Static-Link z obsługą standardu Unicode, wersja Debug|
+|AFXNMCD. LIB|Biblioteka MFC Static-Link bez formantów okna dialogowego MFC, wersja wydania|
+|AFXNMCDD. LIB|Biblioteka MFC Static-Link bez kontrolek okna dialogowego MFC, wersja do debugowania|
 
 Pliki debugera mające taką samą nazwę podstawową i rozszerzenie. pdb są również dostępne dla każdej biblioteki statycznej.
 
@@ -116,18 +117,18 @@ Biblioteki MFC DLL mają numery *wersji* wskazujące zgodność binarną. Użyj 
 
 |DLL|Opis|
 |---------|-----------------|
-|*Wersja*MFC. BIBLIOTECE|Biblioteka MFC DLL, wersja ANSI lub MBCS|
-|Biblioteka MFC w*wersji*U. dll|MFC DLL, wersja w wersji Unicode|
-|MFC*wersja*D. dll|Wersja debugowania biblioteki MFC DLL, ANSI lub MBCS|
-|*Wersja*MFC ud. BIBLIOTECE|MFC DLL, wersja debugowania Unicode|
-|*Wersja*MFCM. BIBLIOTECE|Biblioteka MFC DLL z kontrolkami Windows Forms, wersjami ANSI lub MBCS|
-|MFCM*wersja*U. dll|Biblioteka MFC DLL z kontrolkami Windows Forms, wersja Unicode|
-|MFCM*wersja*D. dll|Biblioteka MFC DLL z kontrolkami Windows Forms, wersja debugowania ANSI lub MBCS|
-|MFCM*wersja*ud. BIBLIOTECE|Biblioteka MFC DLL z kontrolkami Windows Forms, wersja Debug Unicode|
+|*Wersja* MFC. BIBLIOTECE|Biblioteka MFC DLL, wersja ANSI lub MBCS|
+|*Wersja* MFCU.DLL|MFC DLL, wersja w wersji Unicode|
+|*Wersja* MFCD.DLL|Wersja debugowania biblioteki MFC DLL, ANSI lub MBCS|
+|*Wersja* MFCUD.DLL|MFC DLL, wersja debugowania Unicode|
+|*Wersja* MFCM. BIBLIOTECE|Biblioteka MFC DLL z kontrolkami Windows Forms, wersjami ANSI lub MBCS|
+|*Wersja* MFCMU.DLL|Biblioteka MFC DLL z kontrolkami Windows Forms, wersja Unicode|
+|*Wersja* MFCMD.DLL|Biblioteka MFC DLL z kontrolkami Windows Forms, wersja debugowania ANSI lub MBCS|
+|*Wersja* MFCMUD.DLL|Biblioteka MFC DLL z kontrolkami Windows Forms, wersja Debug Unicode|
 
-Biblioteki importowe, które są konieczne do kompilowania aplikacji lub bibliotek DLL rozszerzeń MFC korzystających z tych udostępnionych bibliotek DLL, mają taką samą nazwę bazową jak biblioteka DLL, ale mają rozszerzenie nazwy pliku. lib. W przypadku korzystania z udostępnionych bibliotek DLL niewielka biblioteka statyczna musi być nadal połączona z kodem; Ta biblioteka ma nazwę MFCS w*wersji*{U} {D}. lib.
+Biblioteki importowe, które są konieczne do kompilowania aplikacji lub bibliotek DLL rozszerzeń MFC korzystających z tych udostępnionych bibliotek DLL, mają taką samą nazwę bazową jak biblioteka DLL, ale mają rozszerzenie nazwy pliku. lib. W przypadku korzystania z udostępnionych bibliotek DLL niewielka biblioteka statyczna musi być nadal połączona z kodem; Ta biblioteka ma nazwę MFCS w *wersji*{U} {D}. lib.
 
-W przypadku dynamicznego łączenia z udostępnioną biblioteką DLL MFC, niezależnie od tego, czy pochodzi ona z aplikacji, czy z biblioteki DLL rozszerzenia MFC, należy dołączyć zgodną*wersję*MFC. DLL lub MFC w*wersji*U. dll podczas wdrażania produktu.
+W przypadku dynamicznego łączenia z udostępnioną biblioteką DLL MFC, niezależnie od tego, czy pochodzi ona z aplikacji, czy z biblioteki DLL rozszerzenia MFC, należy dołączyć zgodną *wersję* MFC. Biblioteka DLL lub *wersja* MFCU.DLL podczas wdrażania produktu.
 
 Aby uzyskać listę Visual C++ bibliotek DLL, które mogą być dystrybuowane z aplikacjami, zobacz [Kod dystrybucyjny dla Microsoft Visual Studio 2017 i Microsoft Visual Studio 2017 SDK (obejmuje programy narzędziowe i pliki BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) lub [Kod dystrybucyjny dla programu Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
@@ -135,10 +136,10 @@ Aby uzyskać więcej informacji na temat obsługi MBCS i Unicode w MFC, zobacz [
 
 ## <a name="dynamic-link-library-support"></a>Obsługa bibliotek dołączanych dynamicznie
 
-Możesz użyć statycznej lub udostępnionej dynamicznie biblioteki MFC do tworzenia bibliotek DLL, które mogą być używane przez pliki wykonywalne MFC i inne niż MFC. Są one nazywane "regularnymi bibliotekami DLL" lub "regularnymi bibliotekami MFC dll", aby odróżnić je od bibliotek DLL rozszerzeń MFC, które mogą być używane tylko przez aplikacje MFC i biblioteki DLL MFC. Biblioteka DLL skompilowana przy użyciu bibliotek statycznych MFC jest czasami nazywana USRDLL w starszych odwołaniach, ponieważ projekty DLL MFC definiują symbol preprocesora ** \_ USRDLL**. Biblioteka DLL, która używa udostępnionych bibliotek DLL MFC, jest czasami nazywana AFXDLL w starszych odwołaniach, ponieważ definiuje symbol preprocesora ** \_ AFXDLL**.
+Możesz użyć statycznej lub udostępnionej dynamicznie biblioteki MFC do tworzenia bibliotek DLL, które mogą być używane przez pliki wykonywalne MFC i inne niż MFC. Są one nazywane "regularnymi bibliotekami DLL" lub "regularnymi bibliotekami MFC dll", aby odróżnić je od bibliotek DLL rozszerzeń MFC, które mogą być używane tylko przez aplikacje MFC i biblioteki DLL MFC. Biblioteka DLL skompilowana przy użyciu bibliotek statycznych MFC jest czasami nazywana USRDLL w starszych odwołaniach, ponieważ projekty DLL MFC definiują symbol preprocesora **\_ USRDLL**. Biblioteka DLL, która używa udostępnionych bibliotek DLL MFC, jest czasami nazywana AFXDLL w starszych odwołaniach, ponieważ definiuje symbol preprocesora **\_ AFXDLL**.
 
-Podczas tworzenia projektu DLL przez połączenie z bibliotekami statycznymi MFC Biblioteka DLL może zostać wdrożona bez udostępnionych bibliotek DLL MFC. Gdy projekt DLL łączy się z*wersją*MFC bibliotek importu. LIB lub MFC*wersja*U. lib, należy wdrożyć zgodną*wersję*MFC udostępnionej biblioteki MFC. DLL lub MFC*wersja*U. dll wraz z biblioteką DLL. Aby uzyskać więcej informacji, zobacz [biblioteki DLL](../build/dlls-in-visual-cpp.md).
+Podczas tworzenia projektu DLL przez połączenie z bibliotekami statycznymi MFC Biblioteka DLL może zostać wdrożona bez udostępnionych bibliotek DLL MFC. Gdy projekt DLL łączy się z *wersją* MFC bibliotek importu. LIB lub MFC *wersja* U. lib, należy wdrożyć zgodną *wersję* MFC udostępnionej biblioteki MFC. *Wersja* dll lub MFCU.DLL razem z biblioteką DLL. Aby uzyskać więcej informacji, zobacz [biblioteki DLL](../build/dlls-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)
