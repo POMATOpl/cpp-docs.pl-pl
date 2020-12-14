@@ -1,19 +1,18 @@
 ---
 title: 'Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej'
 description: Użyj języka C++ do tworzenia biblioteki dołączanej dynamicznie (DLL) systemu Windows w programie Visual Studio.
-ms.custom:
-- walkthrough
-- contperfq2
+ms.custom: contperf-fy21q2
+ms.topic: tutorial
 ms.date: 08/22/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
-ms.openlocfilehash: ca9aebd7103d36918940e52638b3c2cb52612c25
-ms.sourcegitcommit: 43a6ff739516dff62fee521d401eb4b1201cea8c
+ms.openlocfilehash: 985d187b88780c8b877f264fe76c1cdcac2a15db
+ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870691"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412157"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Przewodnik: Tworzenie własnej biblioteki dołączanej dynamicznie (C++) i korzystanie z niej
 
@@ -516,7 +515,7 @@ Aby rozwiązać ten problem, można skopiować plik biblioteki bezpośrednio do 
 
 1. W polu listy rozwijanej **Konfiguracja** wybierz opcję **wszystkie konfiguracje** , jeśli nie została jeszcze wybrana. Gwarantuje to, że wszelkie zmiany właściwości mają zastosowanie zarówno do kompilacji debugowania, jak i wydania.
 
-1. W lewym okienku wybierz kolejno pozycje **Właściwości konfiguracji**  >  **Linker**  >  **dane wejściowe** konsolidatora. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola Edytuj **dodatkowe zależności** , a następnie wybierz polecenie **Edytuj**.
+1. W lewym okienku wybierz kolejno pozycje **Właściwości konfiguracji**  >    >  **dane wejściowe** konsolidatora. W okienku właściwości wybierz kontrolkę listy rozwijanej obok pola Edytuj **dodatkowe zależności** , a następnie wybierz polecenie **Edytuj**.
 
    ![Edytuj Właściwość dodatkowe zależności](media/mathclient-additional-dependencies-property.png "Edytuj Właściwość dodatkowe zależności")
 

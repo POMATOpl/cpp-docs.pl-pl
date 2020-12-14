@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
-ms.openlocfilehash: 1bcef118881a0596406d6ff455dd453220ff81c2
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 23a701333220ca58b6e28323fb6aced156337b3f
+ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97300385"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412443"
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C
 
@@ -63,8 +63,8 @@ Język C używa następujących słów kluczowych:
     :::column-end:::
     :::column:::
         **`while`**\
-        **`_Alignas`**<sup>2, a</sup>\
-        **`_Alignof`**<sup>2, a</sup>\
+        **[`_Alignas`](alignment-c.md#alignas-and-_alignas-c11)**<sup>2, a</sup>\
+        **[`_Alignof`](alignment-c.md#alignof-and-_alignof-c11)**<sup>2, a</sup>\
         **`_Atomic`**<sup>2, b</sup>\
         **`_Bool`**<sup>1, a</sup>\
         **`_Complex`**<sup>1, b</sup>\
@@ -134,6 +134,6 @@ Rozszerzenia Microsoft są domyślnie włączone. Aby pomóc w tworzeniu kodu pr
 
 Po włączeniu rozszerzeń Microsoft, możesz używać słów kluczowych wymienionych powyżej w swoich programach. W przypadku zgodności ze standardami większość tych słów kluczowych jest poprzedzona podwójnym podkreśleniem. Cztery wyjątki, **`dllexport`** ,, **`dllimport`** **`naked`** i **`thread`** , są używane tylko z **`__declspec`** i nie wymagają wiodącego podwójnego podkreślenia. W celu zapewnienia zgodności z poprzednimi wersjami, wersje z pojedynczym podkreśleniem reszty słów kluczowych są obsługiwane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy języka C](../c-language/elements-of-c.md)
