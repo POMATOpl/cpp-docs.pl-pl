@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok _mbstok_l'
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 ms.date: 6/24/2020
 api_name:
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 8172a049c95f2ef7b436c23b94099c61cde96cde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288688"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -112,7 +113,7 @@ Ciąg zawierający token lub tokeny.
 *strDelimit*<br/>
 Zbiór znaków ogranicznika.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 *Context*<br/>
@@ -131,7 +132,7 @@ Wersja **wcstok** obu argumentów nie jest standardowa. Jeśli potrzebujesz korz
 > [!IMPORTANT]
 > Te funkcje powodują potencjalne zagrożenie spowodowane przez problem z przepełnieniem buforu. Problemy związane z przepełnieniem buforu są częstą metodą ataku systemu, powodując nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Przy pierwszym wywołaniu funkcji **strtok**funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *strToken*, kończąc token ze znakiem null. Więcej tokenów można rozbić z pozostałej części *strToken* przez serię wywołań do **strtok**. Każde wywołanie **strtok** modyfikuje *strToken* , wstawiając znak null po **tokenie** zwróconym przez to wywołanie. Aby odczytać następny token z *strToken*, wywołaj **strtok** z wartością **null** dla argumentu *strToken* . Argument **null** *strToken* powoduje, że **strtok** szuka następnego tokenu w zmodyfikowanym *strToken*. Argument *strDelimit* może przyjmować dowolną wartość z jednego wywołania do następnego, aby zestaw ograniczników mógł się różnić.
+Przy pierwszym wywołaniu funkcji **strtok** funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *strToken*, kończąc token ze znakiem null. Więcej tokenów można rozbić z pozostałej części *strToken* przez serię wywołań do **strtok**. Każde wywołanie **strtok** modyfikuje *strToken* , wstawiając znak null po **tokenie** zwróconym przez to wywołanie. Aby odczytać następny token z *strToken*, wywołaj **strtok** z wartością **null** dla argumentu *strToken* . Argument **null** *strToken* powoduje, że **strtok** szuka następnego tokenu w zmodyfikowanym *strToken*. Argument *strDelimit* może przyjmować dowolną wartość z jednego wywołania do następnego, aby zestaw ograniczników mógł się różnić.
 
 Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md).
 
@@ -209,7 +210,7 @@ tokens
 ## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
-[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

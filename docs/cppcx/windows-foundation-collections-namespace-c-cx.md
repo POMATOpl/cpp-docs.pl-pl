@@ -1,21 +1,22 @@
 ---
-title: 'Windows::Foundation:: Collections Namespace (C++/CX)'
+description: 'Dowiedz się więcej na temat: system Windows:: Foundation:: Collections, przestrzeń nazw (C++/CX)'
+title: Windows::Foundation::Collections, przestrzeń nazw (C++/CX)
 ms.date: 12/30/2016
 f1_keywords:
 - collection/Windows::Foundation::Collections
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74086268215c83f1cf4bd9bca8b60923bfcc6725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288012"
 ---
-# <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation:: Collections Namespace (C++/CX)
+# <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections, przestrzeń nazw (C++/CX)
 
-C++/CX uzupełnia Windows::Foundation:: Collections przestrzeni nazw z funkcjami, które upraszczają korzystanie z klas kolekcji wektora, VectorView, mapy i MapView.
+C++/CX uzupełnia przestrzeń nazw Windows:: Foundation:: Collections z funkcjami, które upraszczają korzystanie z klas kolekcji Vector, VectorView, map i MapView.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,13 +33,13 @@ namespace Windows {
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[back_inserter, funkcja](../cppcx/back-inserter-function.md)|Zwraca iterator, który może służyć do wstawienia wartości na końcu kolekcji.|
-|[begin, funkcja](../cppcx/begin-function.md)|Zwraca iterator odwołujący się do początku kolekcji.|
-|[end, funkcja](../cppcx/end-function.md)|Zwraca iterator odwołujący się poza końcem kolekcji.|
-|[to_vector, funkcja](../cppcx/to-vector-function.md)|Zwraca kolekcję jako std::vector.|
+|[Funkcja back_inserter](../cppcx/back-inserter-function.md)|Zwraca iterator, którego można użyć do wstawienia wartości na końcu kolekcji.|
+|[BEGIN — funkcja](../cppcx/begin-function.md)|Zwraca iterator, który wskazuje na początek kolekcji.|
+|[End — funkcja](../cppcx/end-function.md)|Zwraca iterator, który wskazuje poza końcem kolekcji.|
+|[Funkcja to_vector](../cppcx/to-vector-function.md)|Zwraca kolekcję jako wartość typu std:: Vector.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** collection.h
+**Nagłówek:** Collection. h
 
-**Namespace:** Windows::Foundation::Collections
+**Przestrzeń nazw:** Windows:: Foundation:: Collections

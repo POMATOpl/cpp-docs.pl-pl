@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strtold, _strtold_l, wcstold, _wcstold_l'
 title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c20550e93d45838c39e799a2ebf2f2cd368d059c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288662"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -77,7 +78,7 @@ Ciąg zakończony znakiem null do przekonwertowania.
 *endptr*<br/>
 Wskaźnik do znaku, który zatrzyma skanowanie.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -109,7 +110,7 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 [*odstęp*] [*Sign*] [*cyfry*] [. *cyfry*] [{**d** &#124; **d** &#124; **e** &#124; **e**} [*Sign*]*cyfr*]
 
-*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *znak* jest znakiem plus ( **+** ) lub minus ( **-** ); i *cyframi* jest jedna lub więcej cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**d**, **d**, **e**lub **e**) i opcjonalnie podpisanej liczby całkowitej. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
+*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *znak* jest znakiem plus ( **+** ) lub minus ( **-** ); i *cyframi* jest jedna lub więcej cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**d**, **d**, **e** lub **e**) i opcjonalnie podpisanej liczby całkowitej. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -155,8 +156,8 @@ string = 3.1415926535898This stopped it
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

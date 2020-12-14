@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l'
 title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 ms.date: 11/04/2016
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-ms.openlocfilehash: ea1ab72a361987d0ccdfe1f4b4a4efb6a0fb427e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9de1e03ef54b65d321e38f86a6f39bc014df7bf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288753"
 ---
 # <a name="strtoimax-_strtoimax_l-wcstoimax-_wcstoimax_l"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 
@@ -85,12 +86,12 @@ Wskaźnik do znaku, który zatrzyma skanowanie.
 *base*<br/>
 Numer bazowy do użycia.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**strtoimax** zwraca wartość, która jest reprezentowana w ciągu *strSource*, z wyjątkiem sytuacji, gdy reprezentacja spowodowałoby przepełnienie — w takim przypadku zwraca **INTMAX_MAX** lub **INTMAX_MIN**, a **errno** jest ustawiona na **ERANGE** . Funkcja zwraca wartość 0, jeśli nie można wykonać konwersji. **wcstoimax** zwraca wartości analogicznie do **strtoimax**.
+**strtoimax** zwraca wartość, która jest reprezentowana w ciągu *strSource*, z wyjątkiem sytuacji, gdy reprezentacja spowodowałoby przepełnienie — w takim przypadku zwraca **INTMAX_MAX** lub **INTMAX_MIN**, a **errno** jest ustawiona na **ERANGE**. Funkcja zwraca wartość 0, jeśli nie można wykonać konwersji. **wcstoimax** zwraca wartości analogicznie do **strtoimax**.
 
 **INTMAX_MAX** i **INTMAX_MIN** są zdefiniowane w stdin. h.
 
@@ -102,20 +103,20 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 Funkcja **strtoimax** konwertuje *strSource* na **intmax_t**. Dwubajtowa wersja **strtoimax** jest **wcstoimax**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie funkcje te zachowują się identycznie. Obie funkcje przerywają odczytywanie ciągu *strSource* na pierwszym znaku, którego nie mogą rozpoznać jako części liczby. Może to być kończący znak null lub może być pierwszym znakiem numerycznym, który jest większy lub równy *Base*.
 
-Ustawienie kategorii **LC_NUMERIC** ustawień regionalnych określa rozpoznawanie znaku podstawy w *strSource*; Aby uzyskać więcej informacji, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md). Funkcje, które nie mają sufiksu **_l** , używają bieżących ustawień regionalnych; **_strtoimax_l** i **_wcstoimax_l** są identyczne z odpowiednimi funkcjami, które nie mają sufiksu **_l** , z tą różnicą, że zamiast tego używają ustawień regionalnych, które są przesyłane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Ustawienie kategorii **LC_NUMERIC** ustawień regionalnych określa rozpoznawanie znaku podstawy w *strSource*; Aby uzyskać więcej informacji, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md). Funkcje, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych; **_strtoimax_l** i **_wcstoimax_l** są identyczne z odpowiednimi funkcjami, które nie mają sufiksu **_l** , z wyjątkiem tego, że zamiast nich używają przekazaną przez użytkownika ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywana w lokalizacji wskazywanej przez *endptr*.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax**|
 |**_tcstoimax_l**|**strtoimax_l**|**_strtoimax_l**|**_wcstoimax_l**|
 
 **strtoimax** oczekuje, że *strSource* wskazuje ciąg o następującej postaci:
 
-> [*odstęp*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [cyfry cyfr] **-**
+> [*odstęp*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cyfry*  &#124; *litery*]
 
 *Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *cyfry* są jedną lub większą liczbą cyfr dziesiętnych; *litery* są jedną lub większą literą od "a" do "z" (lub od "a" do "z"). Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie. Jeśli *baza* jest z przedziału od 2 do 36, zostanie użyta jako podstawa liczby. Jeśli *Base* ma wartość 0, początkowe znaki ciągu wskazywane przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest "0", a drugi znak nie jest "x" lub "X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszy znak to "0", a drugi znak to "x" lub "X", ciąg jest interpretowany jako Szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "a" do "z" (lub "A" do "z") mają przypisane wartości od 10 do 35; dozwolone są tylko litery, których przypisane wartości są mniejsze niż *podstawowe* . Pierwszy znak poza zakresem podstawy powoduje zatrzymanie skanowania. Na przykład jeśli *Base* ma wartość 0, a pierwszy znak skanowany to "0", zakłada się liczbę całkowitą, a znak "8" lub "9" spowoduje zatrzymanie skanowania.
 
@@ -127,13 +128,13 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Konwertowanie ciągów na wartości](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

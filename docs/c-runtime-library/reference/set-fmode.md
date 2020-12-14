@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _set_fmode'
 title: _set_fmode
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8f33a0024ad2746974440166f564f8dd41756de5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288792"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -70,7 +71,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_set_fmode**|\<STDLIB. h>|\<fcntl. h>, \<errno. h>|
+|**_set_fmode**|\<stdlib.h>|\<fcntl.h>, \<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -137,7 +138,7 @@ Default Mode is binary
 A   B   C   D   E   F   G   H   I   J   K   L
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>

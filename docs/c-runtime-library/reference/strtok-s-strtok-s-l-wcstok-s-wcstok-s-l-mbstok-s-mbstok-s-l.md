@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l'
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 52c998f14fee080efc1d288abbba012752757632
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fb02682abac8655964051d780e9e84e644256aa2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288714"
 ---
 # <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -135,9 +136,9 @@ Zwraca wskaźnik do następnego tokenu znalezionego w *str*. Zwraca **wartość 
 
 |*str*|*Ograniczniki*|*Context*|Wartość zwracana|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**NULL**|ile|wskaźnik do wskaźnika o wartości null|**NULL**|**EINVAL**|
-|ile|**NULL**|ile|**NULL**|**EINVAL**|
-|ile|ile|**NULL**|**NULL**|**EINVAL**|
+|**NULL**|dowolny|wskaźnik do wskaźnika o wartości null|**NULL**|**EINVAL**|
+|dowolny|**NULL**|dowolny|**NULL**|**EINVAL**|
+|dowolny|dowolny|**NULL**|**NULL**|**EINVAL**|
 
 Jeśli *str* ma **wartość null** , ale *kontekst* jest wskaźnikiem do prawidłowego wskaźnika kontekstu, nie ma błędu.
 
@@ -147,7 +148,7 @@ Jeśli *str* ma **wartość null** , ale *kontekst* jest wskaźnikiem do prawid�
 
 Ta funkcja sprawdza poprawność swoich parametrów. Gdy wystąpi błąd, jak w tabeli warunków błędu, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **wartość null**.
 
-Przy pierwszym wywołaniu **strtok_s**funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *str*, kończąc token ze znakiem null. Więcej tokenów można rozbić z pozostałej części *str* przez serię wywołań do **strtok_s**. Każde wywołanie **strtok_s** modyfikuje *str* , wstawiając znak null po tokenie zwróconym przez to wywołanie. Wskaźnik *kontekstu* śledzi, który ciąg jest odczytywany i gdzie w ciągu należy odczytać następny token. Aby odczytać następny token z *str*, wywołaj **Strtok_s** z wartością **null** dla argumentu *str* i przekaż ten sam parametr *kontekstowy* . **Pusty** *str* ciąg jest przyczyną **strtok_s** wyszukiwania następnego tokenu w zmodyfikowanym *str*. Argument *ograniczników* może przyjmować dowolną wartość z jednego wywołania do następnego, aby zestaw ograniczników mógł się różnić.
+Przy pierwszym wywołaniu **strtok_s** funkcja pomija wiodące ograniczniki i zwraca wskaźnik do pierwszego tokenu w *str*, kończąc token ze znakiem null. Więcej tokenów można rozbić z pozostałej części *str* przez serię wywołań do **strtok_s**. Każde wywołanie **strtok_s** modyfikuje *str* , wstawiając znak null po tokenie zwróconym przez to wywołanie. Wskaźnik *kontekstu* śledzi, który ciąg jest odczytywany i gdzie w ciągu należy odczytać następny token. Aby odczytać następny token z *str*, wywołaj **Strtok_s** z wartością **null** dla argumentu *str* i przekaż ten sam parametr *kontekstowy* . **Pusty**  ciąg jest przyczyną **strtok_s** wyszukiwania następnego tokenu w zmodyfikowanym *str*. Argument *ograniczników* może przyjmować dowolną wartość z jednego wywołania do następnego, aby zestaw ograniczników mógł się różnić.
 
 Ponieważ parametr *kontekstowy* zastępuje bufory statyczne używane w **strtok** i **_strtok_l**, możliwe jest przeanalizowanie dwóch ciągów jednocześnie w tym samym wątku.
 
@@ -161,16 +162,16 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strtok_s**|\<> String. h|
-|**_strtok_s_l**|\<> String. h|
-|**wcstok_s**,<br />**_wcstok_s_l**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbstok_s**,<br />**_mbstok_s_l**|\<mbstring. h>|
+|**strtok_s**|\<string.h>|
+|**_strtok_s_l**|\<string.h>|
+|**wcstok_s**,<br />**_wcstok_s_l**|\<string.h> lub \<wchar.h>|
+|**_mbstok_s**,<br />**_mbstok_s_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|\_Nie zdefiniowano MBCS UNICODE & \_|\_MBCS zdefiniowany|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|\_\_Nie zdefiniowano MBCS UNICODE &|\_MBCS zdefiniowany|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
@@ -241,10 +242,10 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
