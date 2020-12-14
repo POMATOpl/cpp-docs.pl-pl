@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: jak edytować obraz'
 title: 'Instrukcje: Edytowanie obrazu'
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: ecfd69594c05c210743e0c22c804a4713a8229ef
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d03e53ccdcb7978b1708765483cabac281ae08b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247153"
 ---
 # <a name="how-to-edit-an-image"></a>Instrukcje: Edytowanie obrazu
 
@@ -61,7 +62,7 @@ Aby edytować obraz, zobacz How to:
 
 ### <a name="to-select-an-image"></a>Aby wybrać obraz
 
-1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu **Image**  >  **Narzędzia** obrazu, a następnie wybierz odpowiednie narzędzie do zaznaczania.
+1. Użyj paska narzędzi **edytora obrazu** lub przejdź do menu   >  **Narzędzia** obrazu, a następnie wybierz odpowiednie narzędzie do zaznaczania.
 
 1. Przesuń punkt wstawiania do jednego rogu obszaru obrazu, który chcesz wybrać. Krzyżyki są wyświetlane, gdy punkt wstawiania znajduje się na obrazie.
 
@@ -108,7 +109,7 @@ Przejdź do menu **Edycja**  >  **Usuń**.
    Oryginalny obszar zaznaczenia jest wypełniony bieżącym kolorem tła.
 
 > [!NOTE]
-> Aby uzyskać dostęp do poleceń **wycinania**, **kopiowania**, **wklejania**i **usuwania** , kliknij prawym przyciskiem myszy w oknie **Widok zasobów** .
+> Aby uzyskać dostęp do poleceń **wycinania**, **kopiowania**, **wklejania** i **usuwania** , kliknij prawym przyciskiem myszy w oknie **Widok zasobów** .
 
 #### <a name="to-move-the-selection"></a>Aby przenieść zaznaczenie
 
@@ -124,11 +125,11 @@ Aby uzyskać więcej informacji na temat rysowania przy użyciu zaznaczenia, zob
 
 Możesz przerzucić lub obrócić obraz, aby utworzyć lustrzane odbicie obrazu oryginalnego, obrócić obraz o 180 stopni lub obrócić obraz do prawej strony o 90 ° w danym momencie.
 
-- Aby przerzucić obraz w poziomie (Obraz lustrzany), przejdź do **obrazu**menu  >  **Przerzuć w poziomie**.
+- Aby przerzucić obraz w poziomie (Obraz lustrzany), przejdź do **obrazu** menu  >  **Przerzuć w poziomie**.
 
-- Aby przerzucić obraz w pionie (obrócić o 180 stopni), przejdź do **obrazu**menu  >  **Przerzuć w pionie**.
+- Aby przerzucić obraz w pionie (obrócić o 180 stopni), przejdź do **obrazu** menu  >  **Przerzuć w pionie**.
 
-- Aby obrócić obraz 90 stopni, przejdź do obrazu menu **Image**  >  **Obróć o 90 stopni**.
+- Aby obrócić obraz 90 stopni, przejdź do obrazu menu   >  **Obróć o 90 stopni**.
 
    > [!NOTE]
    > Możesz również użyć [klawiszy skrótów](../windows/accelerator-keys-image-editor-for-icons.md) dla tych poleceń lub uzyskać dostęp do poleceń z menu skrótów (wybierz poza obrazem w **Edytorze obrazów**).
@@ -190,7 +191,7 @@ Zwykle **Edytor obrazów** przycina lub powiększa obraz, gdy zmieniasz jego roz
 
 Możesz otwierać i edytować obrazy w środowisku deweloperskim tak samo jak w przypadku dowolnej aplikacji graficznej, na przykład otwierając mapę bitową do edycji autonomicznej. Obrazy, z którymi pracujesz, nie muszą być częścią projektu programu Visual Studio.
 
-1. Przejdź do **pliku**menu  >  **Otwórz**.
+1. Przejdź do **pliku** menu  >  **Otwórz**.
 
 1. W polu **Pliki typu** wybierz pozycję **wszystkie pliki**.
 
@@ -206,13 +207,13 @@ Można ustawić lub zmodyfikować właściwości obrazu przy użyciu [okno wła�
 
    |Właściwość|Opis|
    |--------------|-----------------|
-   |**Kolory**|Określa schemat kolorów obrazu. Wybierz opcję **monochromatyczna**, **16**lub **256**lub **True Color**.<br/><br/>Jeśli obraz został już narysowany z 16-kolorową paletą, wybranie opcji **monochromatyczny** powoduje, że dla kolorów na obrazie są nastawiane elementy czarno-białe. Kontrast nie jest zawsze utrzymywany: na przykład przyległe obszary czerwone i zielone są konwertowane na czerń.|
+   |**Kolory**|Określa schemat kolorów obrazu. Wybierz opcję **monochromatyczna**, **16** lub **256** lub **True Color**.<br/><br/>Jeśli obraz został już narysowany z 16-kolorową paletą, wybranie opcji **monochromatyczny** powoduje, że dla kolorów na obrazie są nastawiane elementy czarno-białe. Kontrast nie jest zawsze utrzymywany: na przykład przyległe obszary czerwone i zielone są konwertowane na czerń.|
    |**Nazwa pliku**|Określa nazwę pliku obrazu.<br/><br/>Domyślnie program Visual Studio przypisuje podstawową nazwę pliku utworzoną przez usunięcie pierwszych czterech znaków ("IDB_") z domyślnego identyfikatora zasobu (IDB_BITMAP1) i dodanie odpowiedniego rozszerzenia. Nazwa pliku dla obrazu w tym przykładzie byłaby *BITMAP1.bmp*. Można zmienić jego nazwę *MYBITMAP1.bmp*.|
-   |**Proporcj**|Ustawia wysokość obrazu (w pikselach). Wartość domyślna to 48.<br/><br/>Obraz zostanie przycięty lub zostanie dodane miejsce poniżej istniejącego obrazu.|
-   |**ID**|Ustawia identyfikator zasobu.<br/><br/>W przypadku obrazu Microsoft Visual Studio domyślnie przypisuje następny dostępny identyfikator w serii: IDB_BITMAP1, IDB_BITMAP2 i tak dalej. Podobne nazwy są używane dla ikon i kursorów.|
+   |**Height**|Ustawia wysokość obrazu (w pikselach). Wartość domyślna to 48.<br/><br/>Obraz zostanie przycięty lub zostanie dodane miejsce poniżej istniejącego obrazu.|
+   |**ID (Identyfikator)**|Ustawia identyfikator zasobu.<br/><br/>W przypadku obrazu Microsoft Visual Studio domyślnie przypisuje następny dostępny identyfikator w serii: IDB_BITMAP1, IDB_BITMAP2 i tak dalej. Podobne nazwy są używane dla ikon i kursorów.|
    |**Palety**|Zmienia właściwości koloru.<br/><br/>Kliknij dwukrotnie, aby wybrać kolor i wyświetlić [okno dialogowe selektora kolorów niestandardowych](./image-editor-for-icons.md). Zdefiniuj kolor, wpisując wartości RGB lub HSL w odpowiednich polach tekstowych.|
    |**SaveCompressed**|Wskazuje, czy obraz jest w formacie skompresowanym. Ta właściwość jest tylko do odczytu.<br/><br/>Program Visual Studio nie pozwala na zapisywanie obrazów w skompresowanym formacie, dlatego w przypadku obrazów utworzonych w programie Visual Studio ta właściwość będzie **fałszywa**. W przypadku otwarcia skompresowanego obrazu (utworzonego w innym programie) w programie Visual Studio ta właściwość będzie **prawdziwa**. Jeśli zapiszesz skompresowany obraz przy użyciu programu Visual Studio, zostanie on zdekompresowany i zostanie przywrócona **wartość false**.|
-   |**Szerokość**|Ustawia szerokość obrazu (w pikselach). Wartość domyślna dla map bitowych to 48.<br/><br/>Obraz zostanie przycięty lub puste miejsce jest dodawane z prawej strony istniejącego obrazu.|
+   |**Width**|Ustawia szerokość obrazu (w pikselach). Wartość domyślna dla map bitowych to 48.<br/><br/>Obraz zostanie przycięty lub puste miejsce jest dodawane z prawej strony istniejącego obrazu.|
 
 ## <a name="requirements"></a>Wymagania
 

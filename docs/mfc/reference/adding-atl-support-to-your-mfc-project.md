@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie obsługi ATL do projektu MFC'
 title: Dodawanie obsługi ATL do projektu MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 94303d1dfc7c06171def1224982f5e0aa5716ce4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1d02bd6e63a01334fcb9a907dc9ea4fe78ff4a48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248245"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Dodawanie obsługi ATL do projektu MFC
 
@@ -25,7 +26,7 @@ Jeśli utworzono już aplikację opartą na MFC, możesz łatwo dodać obsługę
 
 1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy węzeł projektu.
 
-1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij pozycję **nowy element** .
+1. W menu skrótów kliknij polecenie **Dodaj**, a następnie kliknij pozycję **nowy element**.
 
 1. Wybierz **ATL** w lewym okienku, a następnie wybierz opcję **Obsługa ATL** w środkowym okienku.
 
@@ -37,7 +38,7 @@ Jeśli utworzono już aplikację opartą na MFC, możesz łatwo dodać obsługę
 
 1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy węzeł projektu.
 
-1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij przycisk **Dodaj klasę** .
+1. W menu skrótów kliknij polecenie **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.
 
 1. W lewym okienku wybierz pozycję **ATL** , a następnie wybierz pozycję **Dodaj obsługę ATL do projektu MFC** w środkowym okienku.
 
@@ -45,7 +46,7 @@ Jeśli utworzono już aplikację opartą na MFC, możesz łatwo dodać obsługę
 
 Aby uzyskać więcej informacji o tym, jak dodawanie obsługi ATL zmienia kod projektu MFC, zobacz [szczegóły obsługi ATL dodanej przez kreatora ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Case (C++)'
 title: Case (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: e1d3c113c42be99a8475c5a667b7ea6ed9583d92
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d851e662387425ca94cc6a03877babf011c7028b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247439"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -25,7 +26,7 @@ Używany z atrybutem [switch_type](switch-type.md) w **`union`** .
 
 #### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Możliwa wartość wejściowa, dla której ma zostać przetworzone przetwarzanie. Typ **wartości** może być jednym z następujących typów:
 
 - **`int`**
@@ -68,7 +69,7 @@ struct SizedValue2 {
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Składowa a **`class`** lub **`struct`**|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat edytorów zasobów (C++)
 title: Edytory zasobów (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: f854f3cc6e61e3022e784befc738bf28c1adeb6c
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: b867f34c5195864a22212ec079bf0de8ace20407
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247244"
 ---
 # <a name="resource-editors-c"></a>Edytory zasobów (C++)
 
@@ -73,11 +74,11 @@ Dostęp do zasobów Win32 można uzyskać w okienku [Widok zasobów](how-to-crea
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Aby wyświetlić zasób Win32 w edytorze zasobów
 
-1. Przejdź do menu **Wyświetl**  >  **inne widok zasobów systemu Windows**  >  **Resource View**.
+1. Przejdź do menu **Wyświetl**  >  **inne widok zasobów systemu Windows**  >  .
 
 1. Jeśli okno **Widok zasobów** nie jest oknem najwyższego poziomu, wybierz kartę **Widok zasobów** , aby ją wyświetlić.
 
-1. W **Widok zasobów**rozwiń folder dla projektu zawierającego zasoby, które chcesz wyświetlić. Jeśli na przykład chcesz wyświetlić zasób okna dialogowego, rozwiń folder **okna dialogowego** .
+1. W **Widok zasobów** rozwiń folder dla projektu zawierającego zasoby, które chcesz wyświetlić. Jeśli na przykład chcesz wyświetlić zasób okna dialogowego, rozwiń folder **okna dialogowego** .
 
 1. Kliknij dwukrotnie zasób, na przykład **IDD_ABOUTBOX**.
 
@@ -85,7 +86,7 @@ Dostęp do zasobów Win32 można uzyskać w okienku [Widok zasobów](how-to-crea
 
 #### <a name="to-delete-an-existing-win32-resource"></a>Aby usunąć istniejący zasób Win32
 
-1. W **Widok zasobów**rozwiń węzeł dla typu zasobu.
+1. W **Widok zasobów** rozwiń węzeł dla typu zasobu.
 
 1. Kliknij prawym przyciskiem myszy zasób, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
 
@@ -96,9 +97,9 @@ Dostęp do zasobów Win32 można uzyskać w okienku [Widok zasobów](how-to-crea
 
 Ponieważ projekty zarządzane nie używają plików skryptów zasobów, należy otworzyć zasoby z **Eksplorator rozwiązań**. Użyj [edytora obrazów](../windows/image-editor-for-icons.md) i [edytora binarnego](binary-editor.md) do pracy z plikami zasobów w projektach zarządzanych. Wszystkie zarządzane zasoby, które chcesz edytować, muszą być zasobami połączonymi i edytorami zasobów programu Visual Studio nie obsługują edycji zasobów osadzonych.
 
-- Aby wyświetlić zasób zarządzany w edytorze zasobów, w **Eksplorator rozwiązań**kliknij dwukrotnie zasób, na przykład *Bitmap1.bmp*, a zasób zostanie otwarty w odpowiednim edytorze.
+- Aby wyświetlić zasób zarządzany w edytorze zasobów, w **Eksplorator rozwiązań** kliknij dwukrotnie zasób, na przykład *Bitmap1.bmp*, a zasób zostanie otwarty w odpowiednim edytorze.
 
-- Aby usunąć istniejący zasób zarządzany, w **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy zasób, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
+- Aby usunąć istniejący zasób zarządzany, w **Eksplorator rozwiązań** kliknij prawym przyciskiem myszy zasób, który chcesz usunąć, a następnie wybierz polecenie **Usuń**.
 
 ## <a name="preview-resources"></a>Podgląd zasobów
 
@@ -118,7 +119,7 @@ Następujące zasoby nie udostępniają wizualizacji Visual Preview: akcelerator
 1. W [okno właściwości](/visualstudio/ide/reference/properties-window)wybierz przycisk **strony właściwości** .
 
    > [!TIP]
-   > Użyj skrótu, przejdź do widoku menu **View**  >  **strony właściwości**.
+   > Użyj skrótu, przejdź do widoku menu   >  **strony właściwości**.
 
    Zostanie otwarta strona **Właściwości** zasobu wyświetlająca podgląd tego zasobu. Możesz użyć klawiszy strzałek w **górę** i **w dół** , aby nawigować po formancie drzewa w **Widok zasobów** lub oknie dokumentu. Na stronie **Właściwości** pozostanie otwarta i zostanie wyświetlony dowolny zasób, który ma fokus i będzie można go wyświetlić.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; wyrażenia regularnego&gt;'
 title: '&lt;wyrażeń&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 33eefd09c74731b36d3a8f104e2380944da2f43f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243773"
 ---
 # <a name="ltregexgt"></a>&lt;wyrażeń&gt;
 
@@ -31,7 +32,7 @@ Aby wyszukać dopasowania do obiektu wyrażenia regularnego, użyj funkcji szabl
 
 Aby zamienić tekst, który pasuje do obiektu wyrażenia regularnego, użyj funkcji szablonu [regex_replace](../standard-library/regex-functions.md#regex_replace), wraz z flagami dopasowania typu [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
-Aby wykonać iterację wielu dopasowań obiektu wyrażenia regularnego, należy użyć szablonów [klas Regex_iterator klasy](../standard-library/regex-iterator-class.md) i klasy [regex_token_iterator](../standard-library/regex-token-iterator-class.md) lub jednej z ich specjalizacji [, cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), wsregex_iterator [, cregex_token_iterator,](../standard-library/regex-typedefs.md#cregex_token_iterator) [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)lub [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), a także flag dopasowania typu [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type). [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)
+Aby wykonać iterację wielu dopasowań obiektu wyrażenia regularnego, należy użyć szablonów [klas Regex_iterator klasy](../standard-library/regex-iterator-class.md) i klasy [regex_token_iterator](../standard-library/regex-token-iterator-class.md) lub jednej z ich specjalizacji [, cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), wsregex_iterator [, cregex_token_iterator,](../standard-library/regex-typedefs.md#cregex_token_iterator) [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)lub [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), a także flag dopasowania typu [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type). [](../standard-library/regex-typedefs.md#wsregex_iterator)
 
 Aby zmodyfikować szczegóły dotyczące gramatyki wyrażeń regularnych, należy napisać klasę, która implementuje cechy wyrażenia regularnego.
 
@@ -73,7 +74,7 @@ Aby zmodyfikować szczegóły dotyczące gramatyki wyrażeń regularnych, należ
 |[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Definicja typu dla `wstring` `regex_token_iterator` .|
 |[wssub_match](../standard-library/regex-typedefs.md#wssub_match)|Definicja typu dla `wstring` `sub_match` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|

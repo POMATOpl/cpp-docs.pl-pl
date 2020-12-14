@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat OLE-Related klas
 title: Klasy związane z mechanizmem OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
-ms.openlocfilehash: 6f6db6ce133b440a5ed86e7c1642396888744540
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c54ebbedabc2e44095d06b0e842f7c73d5dbb43e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244033"
 ---
 # <a name="ole-related-classes"></a>Klasy związane z mechanizmem OLE
 

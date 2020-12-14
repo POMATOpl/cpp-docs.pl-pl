@@ -1,43 +1,44 @@
 ---
+description: 'Dowiedz się więcej o programie: redystrybuuj Visual C++ kontrolki ActiveX'
 title: Redystrybuowanie formantów ActiveX programu Visual C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-ms.openlocfilehash: 4c7806502024789ed41f3043d7db6c87c7c71ee3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4960af93b140e883ff50f6ff81824cd9e67d44f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247348"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redystrybuowanie formantów ActiveX programu Visual C++
 
-Visual C++ 6.0 dostarcza formantów ActiveX, których można używać w aplikacjach, które następnie redystrybuujesz. Te formanty nie są już uwzględniane w języku Visual C++. Zgodnie z umowami licencyjnymi dla programu Visual C++ 6.0 można redystrybuować te formanty z aplikacjami opracowanymi w języku Visual C++.
+Visual C++ 6,0 dostarcza kontrolki ActiveX, których można używać w aplikacjach, które są następnie ponownie dystrybuowane. Te kontrolki nie są już zawarte w Visual C++. Zgodnie z umowami licencyjnymi dotyczącymi Visual C++ 6,0 można ponownie rozesłać te kontrolki za pomocą aplikacji utworzonych w Visual C++.
 
 > [!NOTE]
-> Visual C++ 6.0 nie jest już obsługiwany przez firmę Microsoft.
+> Visual C++ 6,0 nie jest już obsługiwany przez firmę Microsoft.
 
-Aby uzyskać listę redystrybucyjnych formantów Visual C++ 6.0 ActiveX, zobacz Common\Redist\Redist.txt na dysku 1 dysku CD produktu Visual C++ 6.0.
+Aby zapoznać się z listą formantów ActiveX pakietu redystrybucyjnego Visual C++ 6,0, zobacz Common\Redist\Redist.txt na dysku 1 z dysku CD produktu Visual C++ 6,0.
 
-Podczas dystrybucji aplikacji należy zainstalować i zarejestrować .ocx dla formantu ActiveX (przy użyciu regsvr32.exe). Ponadto należy upewnić się, że komputer docelowy ma bieżące wersje następujących plików systemowych (gwiazdka wskazuje, że plik musi zostać zarejestrowany):
+Podczas dystrybucji aplikacji należy zainstalować i zarejestrować. ocx dla kontrolki ActiveX (przy użyciu Regsvr32.exe). Ponadto należy upewnić się, że komputer docelowy ma aktualne wersje następujących plików systemowych (gwiazdka wskazuje, że plik musi być zarejestrowany):
 
 - Asycfilt.dll
 
-- Comcat.dll\*
+- Comcat.dll \*
 
-- Oleaut32.dll\*
+- Oleaut32.dll \*
 
-- Olepro32.dll\*
+- Olepro32.dll \*
 
-- Stdole2.tlb
+- Stdole2. tlb
 
-Jeśli te biblioteki DLL nie są dostępne w systemie docelowym, należy je zaktualizować przy użyciu zalecanego mechanizmu aktualizacji odpowiedniego systemu operacyjnego. Najnowsze dodatki Service Pack dla systemów operacyjnych Windows można pobrać z programu [http://windowsupdate.microsoft.com](https://windowsupdate.microsoft.com).
+Jeśli te biblioteki DLL nie są dostępne w systemie docelowym, należy je zaktualizować przy użyciu zalecanego mechanizmu do aktualizowania odpowiedniego systemu operacyjnego. Najnowsze dodatki Service Pack dla systemów operacyjnych Windows można pobrać z programu [http://windowsupdate.microsoft.com](https://windowsupdate.microsoft.com) .
 
-Podczas korzystania z formantu ActiveX, który łączy się z bazą danych, należy również replikować nazwę źródła danych na komputerze docelowym. Można to zrobić programowo za `ConfigDSN`pomocą funkcji, takich jak .
+W przypadku korzystania z formantu ActiveX, który łączy się z bazą danych, należy również replikować nazwę źródła danych na komputerze docelowym. Można to zrobić programowo przy użyciu funkcji, takich jak `ConfigDSN` .
 
-Niektóre redystrybucyjne formanty ActiveX mają dodatkowe zależności. Dla każdego pliku ocx w folderze Os\System na dysku CD produktu Visual C++ 6.0 dostępny jest również plik dep. Dla każdego pliku ocx, który chcesz redystrybuować, poszukaj jednego lub więcej wpisów USES w odpowiednim pliku dep. Jeśli plik znajduje się na liście, należy upewnić się, że plik znajduje się na komputerze docelowym. Wszystkie biblioteki DLL obsługujące plik .ocx muszą zostać zarejestrowane. (Aby program Regsvr32.exe zakończył się pomyślnie, komputer docelowy musi najpierw zawierać wszystkie biblioteki DLL, które ładuje statycznie). Ponadto jeśli biblioteka DLL, która jest wymieniona jako zależność, ma również plik dep w folderze Os\System na dysku CD visual C++ 6.0, należy również zbadać ten plik dep dla wpisów USES.
+Niektóre redystrybucyjne kontrolki ActiveX mają dodatkowe zależności. Dla każdego pliku ocx znajdującego się w folderze Os\System na dysku CD produktu Visual C++ 6,0 istnieje również plik. DEP. Dla każdego pliku ocx, który ma zostać ponownie rozdystrybuowany, poszukaj jednego lub większej liczby wpisów w odpowiednim pliku DEP. Jeśli plik znajduje się na liście, należy się upewnić, że plik znajduje się na komputerze docelowym. Wszystkie biblioteki dll bezpośrednio obsługujące plik ocx muszą być zarejestrowane. (Aby Regsvr32.exe się powieść, komputer docelowy musi najpierw zawierać wszystkie biblioteki DLL, które formant statycznie ładuje.) Ponadto jeśli biblioteka DLL, która jest wymieniona jako zależność, również zawiera plik. DEP w folderze Os\System na dysku CD Visual C++ 6,0, należy również sprawdzić, czy plik DEP służy do korzystania z wpisów.
 
 ## <a name="see-also"></a>Zobacz też
 

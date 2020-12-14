@@ -1,20 +1,21 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: Collections:: UnorderedMap, Klasa'
 title: Platform::Collections::UnorderedMap — Klasa
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 51acfa7e411f96addd8a33024224779c32ebcda0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839130"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242538"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap — Klasa
 
-Reprezentuje *mapę*nieuporządkowaną, która jest kolekcją par klucz-wartość.
+Reprezentuje *mapę* nieuporządkowaną, która jest kolekcją par klucz-wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -176,7 +177,7 @@ virtual bool Insert(
 *głównych*<br/>
 Część klucza pary klucz-wartość. Typ *klucza* to TypeName *K*.
 
-*wartościami*<br/>
+*wartość*<br/>
 Część wartości pary klucz-wartość. Typ *wartości* to TypeName *V*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -345,10 +346,10 @@ Wartość atrybutu TypeName bieżącego UnorderedMap.
 *P*<br/>
 Obiekt funkcji, który może porównać dwa klucze, aby określić, czy są równe. Wartość domyślna tego parametru to [std:: \<K> equal_to](../standard-library/equal-to-struct.md).
 
-*H*<br/>
+*C*<br/>
 Obiekt funkcji, który generuje wartość skrótu dla kluczy. Ten parametr domyślnie określa [klasę wartości 1](../standard-library/hash-class.md) dla typów kluczy obsługiwanych przez klasę.
 
-*mol*<br/>
+*m*<br/>
 Odwołanie lub [lvalues i rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do [std:: unordered_map](../standard-library/unordered-map-class.md) , który jest używany do inicjowania bieżącego UnorderedMap.
 
 *II*<br/>

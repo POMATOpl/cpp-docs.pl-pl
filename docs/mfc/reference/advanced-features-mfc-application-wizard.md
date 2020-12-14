@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: funkcje zaawansowane, Kreator aplikacji MFC'
 title: Funkcje zaawansowane, kreator aplikacji MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: dc2b745bf97dff65a3612c29745c9d0e455a347d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f709f933549c9cc1aa4a53a361682f1c444bbcbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248258"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funkcje zaawansowane, kreator aplikacji MFC
 
@@ -21,9 +22,9 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
    Generuje zestaw plików pomocy dla pomocy kontekstowej, dostępne przy użyciu F1 i menu Pomoc lub klikając przycisk **Pomoc** w oknie dialogowym. Obsługa pomocy wymaga kompilatora plików pomocy. Jeśli nie masz kompilatora plików pomocy, o zainstaluj go, uruchamiając ponownie Instalatora.
 
-   Zobacz [Pomoc HTML: Pomoc kontekstowa dla programów](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [plików pomocy (Pomoc HTML)](../../build/reference/help-files-html-help.md) , aby uzyskać więcej informacji.
+   Zobacz [Pomoc HTML: Context-Sensitive pomocy dotyczącej programów](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [plików pomocy (Pomoc HTML)](../../build/reference/help-files-html-help.md) , aby uzyskać więcej informacji.
 
-- **Drukowanie i Podgląd wydruku**
+- **Drukowanie i podgląd wydruku**
 
    Generuje kod obsługujący polecenia drukowania, drukowania wydruku i podglądu wydruku poprzez wywoływanie funkcji Członkowskich w [klasie CView](../../mfc/reference/cview-class.md) z biblioteki MFC. Kreator dodaje także polecenia dla tych funkcji do menu aplikacji. Obsługa drukowania jest dostępna tylko dla aplikacji, które określają **obsługę architektury dokumentu/widoku** na stronie [Kreatora aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) w kreatorze. Domyślnie aplikacje dokumentu/widoku mają obsługę drukowania.
 
@@ -31,7 +32,7 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
    Określa, że aplikacja może obsłużyć obiekty, które są implementowane w innej aplikacji, lub udostępnia aplikację klientom automatyzacji.
 
-- **Kontrolki ActiveX**
+- **ActiveX — formanty**
 
    Obsługuje formanty ActiveX (ustawienie domyślne). Jeśli nie zaznaczysz tej opcji i chcesz później wstawić kontrolki ActiveX do projektu, musisz dodać wywołanie do [AfxEnableControlContainer —](ole-initialization.md#afxenablecontrolcontainer) w funkcji składowej [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) .
 
@@ -43,7 +44,7 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
    Obsługuje usługi Windows sockets, które można wykorzystać do pisania aplikacji komunikujących się za pośrednictwem sieci TCP/IP.
 
-- **Aktywne ułatwienia dostępu**
+- **Active Accessibility**
 
    Dodaje obsługę [IAccessible](/windows/win32/api/oleacc/nn-oleacc-iaccessible) do klas pochodnych [CWnd](../../mfc/reference/cwnd-class.md), za pomocą których można dostosować interfejs użytkownika w celu lepszego oddziaływania z klientami ułatwień dostępu.
 
@@ -57,7 +58,7 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
 - **Obsługa Menedżera ponownego uruchamiania**
 
-   Dodaje obsługę [Menedżera ponownego uruchamiania systemu Windows](/windows/win32/RstMgr/using-restart-manager). W tym filmie wideo pokazano, jak używać Menedżera ponownego uruchamiania z MFC: [Jak: Użyj nowego menedżera](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))ponownego uruchamiania.
+   Dodaje obsługę [Menedżera ponownego uruchamiania systemu Windows](/windows/win32/RstMgr/using-restart-manager). W tym filmie wideo pokazano, jak używać Menedżera ponownego uruchamiania z MFC: [jak używać nowego Menedżera ponownego uruchamiania](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Zaawansowane okienka ramki**
 
@@ -73,6 +74,6 @@ Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, 
 
    Określa liczbę plików wymienionych na liście niedawno używanych. Liczbą domyślną jest 4.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)

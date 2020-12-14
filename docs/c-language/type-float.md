@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: typ float'
 title: Typ float
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2245db663885d084ee231d10b7dc944016ea4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242837"
 ---
 # <a name="type-float"></a>Typ float
 
@@ -27,7 +28,7 @@ Liczby zmiennoprzecinkowe używają formatu IEEE (Institute of Electrical and El
 
 Można zadeklarować zmienne jako zmiennoprzecinkowe lub podwójne, w zależności od potrzeb aplikacji. Główne różnice między tymi dwoma typami są istotnym znaczeniem, które mogą reprezentować, wymaganym przez nich magazynem oraz ich zakresem. W poniższej tabeli przedstawiono relacje między wymaganiami dotyczącymi istotności i magazynu.
 
-### <a name="floating-point-types"></a>Typy zmiennoprzecinkowe
+### <a name="floating-point-types"></a>Typy Floating-Point
 
 |Typ|Znaczące cyfry|Liczba bajtów|
 |----------|------------------------|---------------------|
@@ -51,9 +52,9 @@ Mantysy jest przechowywany jako ułamek binarny o wartości większej lub równe
 
 Zamiast właśnie opisanej metody Storage pakiet zmiennoprzecinkowy może przechowywać binarne liczby zmiennoprzecinkowe jako liczby nieznormalizowane. "Liczby nieznormalizowane" to wartości niezerowe liczb zmiennoprzecinkowych z zastrzeżonymi wartościami wykładnika, w których najbardziej znaczący bit mantysy wynosi 0. Przy użyciu nieznormalizowanego formatu zakres liczby zmiennoprzecinkowej można rozszerzyć o koszt dokładności. Nie można kontrolować, czy liczba zmiennoprzecinkowa jest reprezentowana w znormalizowanym lub nieznormalizowanym formacie; Pakiet zmiennoprzecinkowy określa reprezentację. Pakiet zmiennoprzecinkowy nigdy nie używa nieznormalizowanej formy, chyba że wykładnik stanie się mniejszy niż minimalny, który może być reprezentowany w znormalizowanym formularzu.
 
-W poniższej tabeli przedstawiono minimalne i maksymalne wartości, które można przechowywać w zmiennych każdego typu zmiennoprzecinkowego. Wartości wymienione w tej tabeli dotyczą tylko znormalizowanych liczb zmiennoprzecinkowych; nieznormalizowane liczby zmiennoprzecinkowe mają mniejszą wartość minimalną. Należy zauważyć, że liczby przechowywane w rejestrach 80*x*87 są zawsze reprezentowane w postaci znormalizowanej 80 w sposób znormalizowany. liczby można reprezentować tylko w nieznormalizowanym formacie, gdy są przechowywane w 32-bitowych lub 64-bitowych zmiennych zmiennoprzecinkowych (zmienne typu float i Type Long).
+W poniższej tabeli przedstawiono minimalne i maksymalne wartości, które można przechowywać w zmiennych każdego typu zmiennoprzecinkowego. Wartości wymienione w tej tabeli dotyczą tylko znormalizowanych liczb zmiennoprzecinkowych; nieznormalizowane liczby zmiennoprzecinkowe mają mniejszą wartość minimalną. Należy zauważyć, że liczby przechowywane w rejestrach 80 *x* 87 są zawsze reprezentowane w postaci znormalizowanej 80 w sposób znormalizowany. liczby można reprezentować tylko w nieznormalizowanym formacie, gdy są przechowywane w 32-bitowych lub 64-bitowych zmiennych zmiennoprzecinkowych (zmienne typu float i Type Long).
 
-### <a name="range-of-floating-point-types"></a>Zakres typów zmiennoprzecinkowych
+### <a name="range-of-floating-point-types"></a>Zakres typów Floating-Point
 
 |Typ|Wartość minimalna|Wartość maksymalna|
 |----------|-------------------|-------------------|
@@ -72,7 +73,7 @@ long double f_longer;
 f_short = f_short * f_long;
 ```
 
-W poprzednim przykładzie zmienna `f_short` jest podwyższana do typu Double i pomnożona przez; `f_long` następnie wynik jest zaokrąglany do typu float przed przypisaniem `f_short`do.
+W poprzednim przykładzie zmienna `f_short` jest podwyższana do typu Double i pomnożona przez `f_long` ; następnie wynik jest zaokrąglany do typu zmiennoprzecinkowego przed przypisaniem do `f_short` .
 
 W poniższym przykładzie (który używa deklaracji z poprzedniego przykładu) arytmetyczne jest wykonywane w postaci zmiennoprzecinkowej (32-bitowej) precyzji dla zmiennych; następnie wynik zostanie podwyższony do typu Double:
 

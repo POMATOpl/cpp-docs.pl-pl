@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej o obcięciu plików tekstowych
 title: Obcięcie plików tekstowych
 ms.date: 11/04/2016
 helpviewer_keywords:
 - text files
 - text files, truncation
 ms.assetid: 238307b3-c580-4280-ac6f-51345a2365bc
-ms.openlocfilehash: ab7cecc2f784c9a8968d6a4103ec9323aa913046
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b78347df2c16882f0363cb619301b6fcc1f054a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243019"
 ---
 # <a name="truncation-of-text-files"></a>Obcięcie plików tekstowych
 
@@ -20,4 +21,4 @@ Zapis w strumieniu tekstowym nie obcina pliku poza tym punktem.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcje bibliotek](../c-language/library-functions.md)
+[Funkcje biblioteki](../c-language/library-functions.md)

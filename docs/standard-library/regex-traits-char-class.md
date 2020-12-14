@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: regex_traits &lt; char &gt; Class'
 title: '&lt;Klasa znaków &gt; regex_traits'
 ms.date: 09/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
-ms.openlocfilehash: 2395c3120006f32aa2cae35465f2dbfcd1b0401c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c05511eda53df9861da3d9800dba74ca6a9bc140
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243825"
 ---
 # <a name="regex_traitsltchargt-class"></a>&lt;Klasa znaków &gt; regex_traits
 
@@ -34,14 +35,14 @@ Klasa jest jawną specjalizacją szablonu klasy [regex_traits](../standard-libra
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<regex>](../standard-library/regex.md)\
 [Klasa regex_constants](../standard-library/regex-constants-class.md)\
 [Klasa regex_error](../standard-library/regex-error-class.md)\
-[\<regex>obowiązki](../standard-library/regex-functions.md)\
+[\<regex> obowiązki](../standard-library/regex-functions.md)\
 [Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<regex>zainteresowanych](../standard-library/regex-operators.md)\
+[\<regex> zainteresowanych](../standard-library/regex-operators.md)\
 [Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Klasa regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex>definicje typów](../standard-library/regex-typedefs.md)
+[\<regex> definicje typów](../standard-library/regex-typedefs.md)

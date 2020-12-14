@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie elementów do kontrolki'
 title: Dodawanie elementów do formantu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-ms.openlocfilehash: 5cc1c7a921cf6d6ba2c0f968012b48bfcaef0658
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44a553564aa9a98806cd8e4d9551c9474421105f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249025"
 ---
 # <a name="adding-items-to-the-control"></a>Dodawanie elementów do formantu
 
@@ -21,7 +22,7 @@ Dodatkowe elementy członkowskie określają tekst, ikonę, stan i dane elementu
 
 Inne wersje `InsertItem` mają jedną lub więcej oddzielnych wartości, które odpowiadają członkom `LVITEM` struktury, co pozwala na zainicjowanie tylko tych członków, które mają być obsługiwane. Ogólnie rzecz biorąc, kontrolka list zarządza magazynem dla elementów listy, ale zamiast tego można przechowywać niektóre informacje w aplikacji, używając "elementów wywołania zwrotnego". Aby uzyskać więcej informacji, zobacz [elementy wywołania zwrotnego i Maska wywołania zwrotnego](callback-items-and-the-callback-mask.md) w tym temacie oraz [elementy wywołania zwrotnego i Maska wywołania zwrotnego](/windows/win32/Controls/using-list-view-controls) w Windows SDK.
 
-Aby uzyskać więcej informacji, zobacz [Dodawanie listy elementów i elementów SubItems](/windows/win32/Controls/using-list-view-controls).
+Aby uzyskać więcej informacji, zobacz [dodawanie List-View elementów i podelementów](/windows/win32/Controls/using-list-view-controls).
 
 ## <a name="see-also"></a>Zobacz też
 

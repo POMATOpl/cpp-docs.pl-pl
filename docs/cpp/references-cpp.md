@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: odwołania (C++)'
 title: Odwołania (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: 8a771b8bfc067966c3c054700538ebf180a5eb23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f49e089d8992a32f30e1a384d5f0c36fa327c0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250052"
 ---
 # <a name="references-c"></a>Odwołania (C++)
 
@@ -22,11 +23,11 @@ Odwołanie, takie jak wskaźnik, przechowuje adres obiektu, który znajduje się
 
 Odwołania mogą być deklarowane przy użyciu następującej składni:
 
-> \[*specyfikatory klasy magazynu*] \[ *kwalifikatory CV*] *Specyfikatory typu* \[ *MS-modyfikator*] *deklarator* \[ **=** *expression*]**;**
+> \[*specyfikatory klasy magazynu*] \[ *kwalifikatory CV*] *Specyfikatory typu* \[ *MS-modyfikator*] *deklarator* \[ **=** ]**;**
 
 Może zostać użyty dowolny prawidłowy deklarator określający odwołanie. O ile odwołanie nie jest odwołaniem do typu funkcji lub tablicy, stosowana jest następująca uproszczona Składnia:
 
-> \[*specyfikatory klasy magazynu*] \[ *kwalifikatory CV*] *Specyfikatory typu* \[ **&** lub] $ **&&** \[ *-kwalifikatory* *identyfikatora* \[ **=** *expression*]**;**
+> \[*specyfikatory klasy magazynu*] \[ *kwalifikatory CV*] *Specyfikatory typu* \[ **&** lub] $ **&&** \[ *-kwalifikatory* *identyfikatora* \[ **=** ]**;**
 
 Odwołania są deklarowane przy użyciu następującej sekwencji:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: alfabetyczne odwołanie do atrybutów'
 title: Alfabetyczny spis atrybutów
 ms.custom: index-page
 ms.date: 10/02/2018
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ad9ecd1e3b3d4620b1f862fd1d5d70ef050da48d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4739439ea49ab97f0727ea5f3ec22b41735467a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215338"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247595"
 ---
 # <a name="attributes-alphabetical-reference"></a>Alfabetyczny spis atrybutów
 
@@ -47,7 +48,7 @@ Następujące atrybuty są dostępne w kompilatorze języka Microsoft C++:
 |[defaultvtable](defaultvtable.md)|Definiuje interfejs jako domyślny interfejs tablicy metod dla kontrolki.|
 |[dispinterface](dispinterface.md)|Umieszcza interfejs w pliku. idl jako interfejs wysyłania.|
 |[displaybind](displaybind.md)|Wskazuje właściwość, która powinna być wyświetlana użytkownikowi jako możliwy do powiązania.|
-|[dual](dual.md)|Umieszcza interfejs w pliku. idl jako podwójny interfejs.|
+|[obsługi](dual.md)|Umieszcza interfejs w pliku. idl jako podwójny interfejs.|
 |[emitidl](emitidl.md)|Określa, czy wszystkie kolejne atrybuty IDL będą przetwarzane i umieszczane w wygenerowanym pliku IDL.|
 |[Autotekstu](entry.md)|Określa wyeksportowaną funkcję lub stałą w module, identyfikując punkt wejścia w bibliotece DLL.|
 |[event_receiver](event-receiver.md)|Tworzy odbiorcę zdarzeń.|
@@ -58,7 +59,7 @@ Następujące atrybuty są dostępne w kompilatorze języka Microsoft C++:
 |[helpfile](helpfile.md)|Ustawia nazwę pliku pomocy dla biblioteki typów.|
 |[helpstring](helpstring.md)|Określa identyfikator tematu pomocy w pliku HLP lub chm.|
 |[helpstringdll](helpstringdll.md)|Określa nazwę biblioteki DLL, która ma być używana do przeszukiwania ciągu dokumentu (lokalizacja).|
-|[hidden](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
+|[ukryte](hidden.md)|Wskazuje, że element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|
 |[id](id.md)|Określa identyfikator DISPID dla funkcji składowej (właściwości lub metody w interfejsie lub dispinterface).|
 |[idl_module](idl-module.md)|Określa punkt wejścia w bibliotece DLL.|
 |[idl_quote](idl-quote.md)|Umożliwia korzystanie z atrybutów lub konstrukcji IDL, które nie są obsługiwane w bieżącej wersji Visual C++.|
@@ -69,7 +70,7 @@ Następujące atrybuty są dostępne w kompilatorze języka Microsoft C++:
 |[zaimportować](import.md)|Określa inny plik IDL, ODL lub nagłówkowy zawierający definicje, które chcesz odwołać z głównego pliku. idl.|
 |[importidl](importidl.md)|Wstawia określony plik IDL do wygenerowanego pliku IDL.|
 |[importlib](importlib.md)|Sprawia, że typy, które zostały już skompilowane w innej bibliotece typów dostępne dla tworzonej biblioteki typów.|
-|[in](in-cpp.md)|Wskazuje, że parametr ma być przekazywać z procedury wywołującej do procedury wywoływanej.|
+|[podczas](in-cpp.md)|Wskazuje, że parametr ma być przekazywać z procedury wywołującej do procedury wywoływanej.|
 |[być](include-cpp.md)|Określa co najmniej jeden plik nagłówka do uwzględnienia w wygenerowanym pliku IDL.|
 |[includelib —](includelib-cpp.md)|Powoduje, że plik IDL lub h zostanie uwzględniony w wygenerowanym pliku IDL.|
 |[last_is](last-is.md)|Określa indeks ostatniego elementu tablicy, który ma zostać przesłany.|
@@ -85,7 +86,7 @@ Następujące atrybuty są dostępne w kompilatorze języka Microsoft C++:
 |[nonbrowsable](nonbrowsable.md)|Wskazuje, że element członkowski interfejsu nie powinien być wyświetlany w przeglądarce właściwości.|
 |[noncreatable](noncreatable.md)|Definiuje obiekt, którego nie można utworzyć na podstawie samego siebie.|
 |[nonextensible](nonextensible.md)|Określa, że `IDispatch` implementacja zawiera tylko właściwości i metody wymienione w opisie interfejsu i nie można go rozszerzyć z dodatkowymi elementami członkowskimi w czasie wykonywania.|
-|[object](object-cpp.md)|Identyfikuje niestandardowy interfejs; synonim z atrybutem niestandardowym.|
+|[Stream](object-cpp.md)|Identyfikuje niestandardowy interfejs; synonim z atrybutem niestandardowym.|
 |[odl](odl.md)|Identyfikuje interfejs jako interfejs ODL (Object Description Language).|
 |[oleautomation](oleautomation.md)|Wskazuje, że interfejs jest zgodny z automatyzacją.|
 |[obowiązkowe](optional-cpp.md)|Określa opcjonalny parametr funkcji składowej.|
@@ -118,7 +119,7 @@ Następujące atrybuty są dostępne w kompilatorze języka Microsoft C++:
 |[Threading](threading-cpp.md)|Określa model wątkowości dla obiektu COM.|
 |[transmit_as](transmit-as.md)|Instruuje kompilator, aby skojarzyć przedstawiony typ, który obsługuje aplikacje klienta i serwera, z przesyłanym typem.|
 |[uidefault](uidefault.md)|Wskazuje, że element członkowski informacji o typie jest domyślnym elementem członkowskim do wyświetlania w interfejsie użytkownika.|
-|[unique](unique-cpp.md)|Określa unikatowy wskaźnik.|
+|[unikatowy](unique-cpp.md)|Określa unikatowy wskaźnik.|
 |[usesgetlasterror](usesgetlasterror.md)|Instruuje obiekt wywołujący, że jeśli wystąpi błąd podczas wywoływania tej funkcji, wywołujący może następnie wywołać, `GetLastError` Aby pobrać kod błędu.|
 |[uuid](uuid-cpp-attributes.md)|Określa unikatowy identyfikator klasy lub interfejsu.|
 |[v1_enum](v1-enum.md)|Określa, że określony typ wyliczeniowy ma być przekazywany jako jednostka 32-bitowa, a nie wartość domyślna 16-bitowa.|
@@ -127,7 +128,7 @@ Następujące atrybuty są dostępne w kompilatorze języka Microsoft C++:
 |[vi_progid](vi-progid.md)|Określa niezależną od wersji identyfikator ProgID.|
 |[wire_marshal](wire-marshal.md)|Określa typ danych, który będzie używany do przesyłania zamiast typu danych specyficznego dla aplikacji.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty języka C++ dla modelu COM i platformy .NET](cpp-attributes-com-net.md)<br/>
 [Atrybuty według grupy](attributes-by-group.md)<br/>

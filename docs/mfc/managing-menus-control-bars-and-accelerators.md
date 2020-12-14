@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Zarządzanie menu, paskami sterowania i akceleratorami'
 title: Zarządzanie menu, paskami sterowania i akceleratorami
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-ms.openlocfilehash: 9945dc68ffd46bbf5e114a79467299e4b67e3659
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 21c3791bff00c33db50efbe391863169606fde80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244176"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Zarządzanie menu, paskami sterowania i akceleratorami
 
@@ -25,7 +26,7 @@ Okno ramy zarządza aktualizacjami obiektów interfejsu użytkownika, w tym menu
 
 ## <a name="managing-menus"></a>Zarządzanie menu
 
-Okno ramek uczestniczy w aktualizowaniu elementów interfejsu użytkownika przy użyciu mechanizmu ON_UPDATE_COMMAND_UI opisanego w artykule [jak zaktualizować obiekty interfejsu użytkownika](how-to-update-user-interface-objects.md). Przyciski na paskach narzędzi i innych paskach sterowania są aktualizowane w pętli bezczynności. Elementy menu w menu rozwijanych na pasku menu są aktualizowane tuż przed zmniejszeniem menu.
+Okno ramek uczestniczy w aktualizowaniu elementów interfejsu użytkownika przy użyciu mechanizmu ON_UPDATE_COMMAND_UI opisanego w artykule [jak zaktualizować obiekty User-Interface](how-to-update-user-interface-objects.md). Przyciski na paskach narzędzi i innych paskach sterowania są aktualizowane w pętli bezczynności. Elementy menu w menu rozwijanych na pasku menu są aktualizowane tuż przed zmniejszeniem menu.
 
 W przypadku aplikacji MDI okno ramka MDI zarządza paskiem menu i podpisem. Okno ramek MDI jest właścicielem jednego menu domyślnego, które jest używane jako pasek menu, gdy nie ma aktywnych okien podrzędnych MDI. Gdy istnieją aktywne elementy podrzędne, pasek menu okna ramki MDI jest przejęty przez menu aktywnego okna elementu podrzędnego MDI. Jeśli aplikacja MDI obsługuje wiele typów dokumentów, takich jak dokumenty wykresu i arkusza, każdy typ umieszcza własne menu na pasku menu i zmienia podpis głównego okna ramki.
 
@@ -43,4 +44,4 @@ Każde okno ramki utrzymuje opcjonalną tabelę akceleratorów, która automatyc
 
 ## <a name="see-also"></a>Zobacz też
 
-[Używanie okien ramowych](using-frame-windows.md)
+[Korzystanie z okien ramowych](using-frame-windows.md)

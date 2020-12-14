@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie klasy MFC'
 title: Dodawanie klasy MFC
 ms.date: 09/06/2019
 f1_keywords:
@@ -7,23 +8,23 @@ helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: 3b0ebf3aafb11dfbacd1c57618c21aff8d776c47
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 646af3d5d292804ec4e255ccbde6cc7b0c0a830d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248349"
 ---
 # <a name="adding-an-mfc-class"></a>Dodawanie klasy MFC
 
-Aby dodać klasy pochodzące z klas biblioteki Microsoft Foundation Class (MFC) do projektu, użyj przycisku **Dodaj klasę** w [Kreatorze klas](mfc-class-wizard.md). Określ nazwę nowej klasy, wybierz klasę podstawową i wybierz identyfikator okna dialogowego, z którym jest skojarzona (jeśli istnieje). Kreator tworzy plik nagłówka i plik implementacji i dodaje je do projektu.
+Aby dodać klasy pochodne klas Microsoft Foundation Class (MFC) do projektu, użyj przycisku **Dodaj klasę** w [Kreatorze klas](mfc-class-wizard.md). Określ nazwę nowej klasy, wybierz klasę bazową, a następnie wybierz identyfikator okna dialogowego, z którym jest skojarzone (jeśli istnieje). Kreator tworzy plik nagłówka i plik implementacji i dodaje je do projektu.
 
 > [!NOTE]
-> Klasy MFC można dodać do aplikacji ATL COM, jeśli aplikacja została pierwotnie [utworzona z obsługą MFC](../../atl/reference/mfc-support-in-atl-projects.md). Można również dodać klasy MFC do projektów Win32, które mają obsługę MFC.
+> Klasy MFC można dodać do aplikacji ATL COM, jeśli początkowo aplikacja została [utworzona przy użyciu obsługi MFC](../../atl/reference/mfc-support-in-atl-projects.md). Można również dodawać klasy MFC do projektów Win32 z obsługą MFC.
 
 ### <a name="to-add-an-mfc-class-to-your-project"></a>Aby dodać klasę MFC do projektu
 
-W widoku klasy kliknij prawym przyciskiem myszy nazwę projektu. Kliknij **pozycję Kreator klas,** a następnie kliknij pozycję **Dodaj klasę,** aby otworzyć okno dialogowe [Dodawanie klasy MFC.](mfc-add-class-wizard.md) **Użyj Kreatora klas,** aby dodać programy obsługi wiadomości lub nowe metody.
+W Widok klasy kliknij prawym przyciskiem myszy nazwę projektu. Kliknij przycisk **Kreator klas** , a następnie kliknij przycisk **Dodaj klasę** , aby otworzyć okno dialogowe [Dodawanie klasy MFC](mfc-add-class-wizard.md) . Użyj **kreatora klas** , aby dodać procedury obsługi komunikatów lub nowe metody.
 
 ## <a name="see-also"></a>Zobacz też
 

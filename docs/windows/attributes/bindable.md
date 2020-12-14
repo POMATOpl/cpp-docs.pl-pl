@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: możliwe do powiązania'
 title: możliwe do powiązania (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2427becd3353488cc1b62347c04d7ed62e523352
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247491"
 ---
 # <a name="bindable"></a>bindable
 
@@ -29,7 +30,7 @@ Atrybut C++ możliwy do **powiązania** ma taką samą funkcjonalność, jak atr
 
 Następujące przykłady MFC przedstawiają użycie elementu możliwego do **powiązania**:
 
-- [Przykłady kontrolek: kontrolki ActiveX oparte na MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Przykłady formantów: MFC-Based kontrolki ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [CYKL z przykładem: Kontrolka ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
@@ -63,7 +64,7 @@ __interface IPropDemo : IDispatch {
 | Kontekst atrybutu | Wartość |
 |-|-|
 |**Dotyczy**|Interface — Metoda|
-|**Powtarzalne**|Nie|
+|**Powtarzalność**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 

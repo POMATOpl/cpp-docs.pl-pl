@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o programach obsługi dla standardowych komunikatów systemu Windows
 title: Programy obsługi dla standardowych komunikatów systemu Windows
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 161e4d85e702972ee178e2fe82aa2371f0560068
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248934"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Programy obsługi dla standardowych komunikatów systemu Windows
 
@@ -38,6 +39,6 @@ Jak określić właściwy sposób przesłonięcia danego komunikatu, gdy [Kreato
 
 Według Konwencji nazwy tych programów obsługi zaczynają się prefiksem "on". Niektóre z tych programów obsługi nie przyjmują argumentów, a inne zajmują kilka. Niektóre z nich również mają typ zwracany inny niż **`void`** . Domyślne programy obsługi dla wszystkich komunikatów **WM_** są udokumentowane w *odwołaniu MFC* jako funkcje elementów członkowskich klasy, `CWnd` których nazwy zaczynają się od "on". Deklaracje funkcji Członkowskich w programie `CWnd` są poprzedzone prefiksem **afx_msg**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklarowanie funkcji obsługi komunikatów](declaring-message-handler-functions.md)

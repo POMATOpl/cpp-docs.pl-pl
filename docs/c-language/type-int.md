@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: typ int'
 title: Typ int
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 2bfd9e108b36f073635c6d9e55e2299764dcb309
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6ec94877dad3dd49bb5e9b11f77ceb2a734ab1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242768"
 ---
 # <a name="type-int"></a>Typ int
 
@@ -29,6 +30,6 @@ Oznaczone liczby całkowite są zapisywane w kodzie dopełnień do dwóch. Najba
 > [!NOTE]
 > **`int`** **`unsigned int`** Specyfikatory typu i są szeroko stosowane w programach języka C, ponieważ umożliwiają konkretnemu komputerowi obsługę wartości całkowitych w najbardziej efektywny sposób dla tej maszyny. Jednak ponieważ rozmiary **`int`** i **`unsigned int`** są różne, programy, które są zależne od określonego **`int`** rozmiaru mogą nie być przenośne na innych maszynach. Aby programy były bardziej przenośne, można użyć wyrażeń z **`sizeof`** operatorem (jak to opisano w [ `sizeof` operatorze](../c-language/sizeof-operator-c.md)) zamiast zakodowanych rozmiarów danych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

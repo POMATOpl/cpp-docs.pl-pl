@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: rmdir'
 title: rmdir
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - rmdir function
 ms.assetid: 03a0aff4-f66c-42a9-bee9-84c46f994952
-ms.openlocfilehash: eb48e9eb4f84d0bea69b3719eea67e51a52b7931
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a87e66c840099795891747d19cd045f56ea2165
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250260"
 ---
 # <a name="rmdir"></a>rmdir
 

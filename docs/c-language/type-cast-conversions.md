@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: konwersje Type-Cast'
 title: Konwersje rzutowania typów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-ms.openlocfilehash: cc2b6d87d6fedf8d36373c901cdb6a6ba8b5f0e7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dfa3e54320c416e4bd69cca06d2677def6244247
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242915"
 ---
 # <a name="type-cast-conversions"></a>Konwersje rzutowania typów
 
@@ -54,6 +55,6 @@ Rzutowanie typu może być wyrażeniem l-wartości, o ile rozmiar identyfikatora
 
 Można przekonwertować wyrażenie na typ **`void`** za pomocą rzutowania, ale wyrażenie wyniku może być używane tylko wtedy, gdy wartość nie jest wymagana. Wskaźnik obiektu konwertowany do **`void`** <strong>\*</strong> i z powrotem do oryginalnego typu zwróci pierwotną wartość.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Konwersje typów](../c-language/type-conversions-c.md)
+[Konwersje typu](../c-language/type-conversions-c.md)

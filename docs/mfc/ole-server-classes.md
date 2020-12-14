@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasach serwera OLE
 title: Klasy serwerów OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 06f5cf0985756506e42c7ad9fde24641b5a0ce93
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2f60f148d6a24323ca6546e633c30103b315ee2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243994"
 ---
 # <a name="ole-server-classes"></a>Klasy serwerów OLE
 
@@ -20,10 +21,10 @@ Te klasy są używane przez aplikacje serwera. Dokumenty serwera pochodzą z, `C
 
 `COleServerItem`Klasa reprezentuje dokument lub część dokumentu, który może być osadzony w innym dokumencie lub połączony z.
 
-`COleIPFrameWnd`i `COleResizeBar` obsługuje edytowanie w miejscu, gdy obiekt znajduje się w kontenerze i `COleTemplateServer` obsługuje tworzenie par dokumentów/widoków, aby można było edytować obiekty OLE z innych aplikacji.
+`COleIPFrameWnd` i `COleResizeBar` obsługuje edytowanie w miejscu, gdy obiekt znajduje się w kontenerze i `COleTemplateServer` obsługuje tworzenie par dokumentów/widoków, aby można było edytować obiekty OLE z innych aplikacji.
 
 [COleServerDoc](reference/coleserverdoc-class.md)<br/>
-Używane jako klasa bazowa dla klas dokumentu aplikacji serwera. `COleServerDoc`obiekty zapewniają zbiorczą obsługę serwera za pomocą interakcji z `COleServerItem` obiektami. Możliwość edycji wizualnej jest dostępna przy użyciu architektury dokumentu/widoku biblioteki klas.
+Używane jako klasa bazowa dla klas dokumentu aplikacji serwera. `COleServerDoc` obiekty zapewniają zbiorczą obsługę serwera za pomocą interakcji z `COleServerItem` obiektami. Możliwość edycji wizualnej jest dostępna przy użyciu architektury dokumentu/widoku biblioteki klas.
 
 [CDocItem](reference/cdocitem-class.md)<br/>
 Abstrakcyjna klasa bazowa `COleClientItem` i `COleServerItem` . Obiekty klas pochodzących od `CDocItem` reprezentowania części dokumentów.

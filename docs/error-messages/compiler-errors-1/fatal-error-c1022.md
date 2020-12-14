@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny C1022'
 title: Błąd krytyczny C1022
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1022
 ms.assetid: edada720-dc73-49bc-bd93-a7945a316312
-ms.openlocfilehash: b709d4bd855e38cb3721dec6d09b95ed02454def
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd608aded29b4f3ebf329586ebc03ce2e325c970
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249766"
 ---
 # <a name="fatal-error-c1022"></a>Błąd krytyczny C1022
 
 oczekiwane #endif
 
-Dyrektywa `#if`, `#ifdef`lub `#ifndef` nie ma zgodnej dyrektywy `#endif`. Upewnij się, że każda `#if`, `#ifdef`lub `#ifndef` ma pasujące `#endif`.
+`#if`Dyrektywa, `#ifdef` , lub `#ifndef` nie ma pasującej `#endif` dyrektywy. Upewnij się, że każdy `#if` `#ifdef` lub `#ifndef` ma pasujący element `#endif` .
 
 Poniższy przykład generuje C1022:
 

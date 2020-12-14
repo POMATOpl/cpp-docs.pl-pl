@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o obsłudze zakresów Message-Map
 title: Programy obsługi dla zakresów map komunikatów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b0f829a4c75aa8ee6148bdf3e96f6886ab07aba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248921"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Programy obsługi dla zakresów map komunikatów
 
@@ -53,7 +54,7 @@ Tematy omówione w tym artykule obejmują:
 
 - [Przykład dla zakresu identyfikatorów sterowania](#_core_example_for_a_range_of_control_ids)
 
-## <a name="writing-the-message-map-entry"></a><a name="_core_writing_the_message.2d.map_entry"></a>Zapisywanie wpisu mapy komunikatów
+## <a name="writing-the-message-map-entry"></a><a name="_core_writing_the_message.2d.map_entry"></a> Pisanie wpisu Message-Map
 
 W. Plik CPP, Dodaj wpis mapy wiadomości, jak pokazano w następującym przykładzie:
 
@@ -83,7 +84,7 @@ Wpis mapy komunikatów składa się z następujących elementów:
 
   Trzecie makro, `ON_CONTROL_RANGE` Pobiera dodatkowy pierwszy parametr: komunikat kontrolny kontroli, taki jak **EN_CHANGE**.
 
-## <a name="declaring-the-handler-function"></a><a name="_core_declaring_the_handler_function"></a>Deklarowanie funkcji obsługi
+## <a name="declaring-the-handler-function"></a><a name="_core_declaring_the_handler_function"></a> Deklarowanie funkcji obsługi
 
 Dodaj deklarację funkcji procedury obsługi w. Plik H. Poniższy kod pokazuje, jak to może wyglądać, jak pokazano poniżej:
 
@@ -93,7 +94,7 @@ Funkcje obsługi dla pojedynczych poleceń zazwyczaj nie przyjmują żadnych par
 
 Aby uzyskać więcej informacji na temat wymagań parametrów dotyczących aktualizacji funkcji programu obsługi, zobacz [przykład dla zakresu identyfikatorów poleceń](#_core_example_for_a_range_of_command_ids).
 
-## <a name="example-for-a-range-of-command-ids"></a><a name="_core_example_for_a_range_of_command_ids"></a>Przykład dla zakresu identyfikatorów poleceń
+## <a name="example-for-a-range-of-command-ids"></a><a name="_core_example_for_a_range_of_command_ids"></a> Przykład dla zakresu identyfikatorów poleceń
 
 Kiedy można używać zakresów jeden przykład jest w trakcie obsługi poleceń, takich jak powiększenie, w przykładowej [HIERSVR](../overview/visual-cpp-samples.md)MFC. To polecenie powoduje powiększanie widoku, skalowanie go w zakresie od 25% do 300% normalnego rozmiaru. Klasa widoku HIERSVR używa zakresu do obsługi poleceń powiększenia z wpisem mapy komunikatów podobnym do poniższego:
 
@@ -115,9 +116,9 @@ Deklaracja funkcji będzie wyglądać następująco:
 
 Sprawa funkcji procedury obsługi aktualizacji jest podobna i prawdopodobnie jest bardziej użyteczna. Jest dość często używane do pisania `ON_UPDATE_COMMAND_UI` programów obsługi dla wielu poleceń i znajdowania pisania lub kopiowania tego samego kodu w porównaniu z tym samym kodem. Rozwiązaniem jest zamapowanie zakresu identyfikatorów poleceń na jedną funkcję procedury obsługi aktualizacji za pomocą `ON_UPDATE_COMMAND_UI_RANGE` makra. Identyfikatory poleceń muszą stanowić ciągły zakres. Aby zapoznać się z przykładem, zapoznaj się z tematem `OnUpdateZoom` obsługi i jego `ON_UPDATE_COMMAND_UI_RANGE` wpisem w mapie wiadomości w klasie widoku próbki HIERSVR.
 
-Funkcja obsługi aktualizacji dla pojedynczych poleceń zazwyczaj przyjmuje jeden parametr, *pCmdUI*, typu `CCmdUI*` . W przeciwieństwie do funkcji obsługi, funkcja programu obsługi aktualizacji dla zakresów map komunikatów nie wymaga dodatkowego parametru, *NID*typu **uint**. Identyfikator polecenia, który jest wymagany do określenia, które polecenie użytkownik rzeczywiście wybiera, znajduje się w `CCmdUI` obiekcie.
+Funkcja obsługi aktualizacji dla pojedynczych poleceń zazwyczaj przyjmuje jeden parametr, *pCmdUI*, typu `CCmdUI*` . W przeciwieństwie do funkcji obsługi, funkcja programu obsługi aktualizacji dla zakresów map komunikatów nie wymaga dodatkowego parametru, *NID* typu **uint**. Identyfikator polecenia, który jest wymagany do określenia, które polecenie użytkownik rzeczywiście wybiera, znajduje się w `CCmdUI` obiekcie.
 
-## <a name="example-for-a-range-of-control-ids"></a><a name="_core_example_for_a_range_of_control_ids"></a>Przykład dla zakresu identyfikatorów sterowania
+## <a name="example-for-a-range-of-control-ids"></a><a name="_core_example_for_a_range_of_control_ids"></a> Przykład dla zakresu identyfikatorów sterowania
 
 Innym interesującym przypadkiem jest mapowanie komunikatów z powiadomieniem kontroli dla zakresu identyfikatorów sterowania do pojedynczej procedury obsługi. Załóżmy, że użytkownik może kliknąć dowolny z 10 przycisków. Aby zmapować wszystkie 10 przycisków na jedną procedurę obsługi, wpis mapy wiadomości będzie wyglądać następująco:
 
@@ -145,6 +146,6 @@ Podczas pisania funkcji obsługi należy określić dodatkowy parametr **uint** 
 
 Kod pokazywany w przykładzie jest typowy: konwertowanie wartości przesłanej do **`int`** zakresu wiadomości i potwierdzenia, że jest to przypadek. Następnie można wykonać inną akcję w zależności od tego, który przycisk został kliknięty.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklarowanie funkcji obsługi komunikatów](declaring-message-handler-functions.md)

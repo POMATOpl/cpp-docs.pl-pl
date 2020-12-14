@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze ImplementsHelper
 title: ImplementsHelper — Struktura
 ms.date: 10/03/2018
 ms.topic: reference
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: d7908670b67df7dbf7b2b74e98f8b59cf30f8e96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142cc532a89758c35c3387c398311acd077b8385
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249818"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper — Struktura
 
@@ -71,7 +72,7 @@ Nazwa                                                    | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper:: CanCastTo —
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a> ImplementsHelper:: CanCastTo —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -106,7 +107,7 @@ S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na bł
 
 Pobiera wskaźnik do określonego identyfikatora interfejsu.
 
-## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper:: CastToUnknown —
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a> ImplementsHelper:: CastToUnknown —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -122,7 +123,7 @@ Wskaźnik do podstawowego `IUnknown` interfejsu.
 
 Pobiera wskaźnik do podstawowego `IUnknown` interfejsu dla bieżącej `Implements` struktury.
 
-## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper:: FillArrayWithIid —
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a> ImplementsHelper:: FillArrayWithIid —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
@@ -144,7 +145,7 @@ Tablica typu IID.
 
 Wstawia identyfikator interfejsu określony przez bieżący parametr szablonu zerowego do określonego elementu tablicy.
 
-## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper:: IidCount —
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a> ImplementsHelper:: IidCount —
 
 Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 

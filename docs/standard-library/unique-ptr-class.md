@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy unique_ptr
 title: unique_ptr — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: 4e6c7d8dd9835545c4aaa677a39f5e3149743d14
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 888229c4e07a0b2189e46bcecd562e0177cfd67e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243695"
 ---
 # <a name="unique_ptr-class"></a>unique_ptr — Klasa
 
@@ -137,7 +138,7 @@ Przechowywany wskaźnik do należącego do niego zasobu `stored_ptr` ma typ `poi
 |[element_type](#element_type)|Synonim dla parametru szablonu `T` .|
 |[pointer](#pointer)|Synonim dla `Del::pointer` if zdefiniowane, w przeciwnym razie `T *` .|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -313,7 +314,7 @@ Wskaźnik do zasobu do przejęcia na własność.
 
 #### <a name="remarks"></a>Uwagi
 
-Służy `reset` do zmiany przechowywanego [wskaźnika](#pointer) należącego `unique_ptr` do, *ptr* a następnie usuwania oryginalnego, przechowywanego wskaźnika. Jeśli wartość `unique_ptr` nie jest pusta, `reset` wywołuje funkcję delete zwracaną przez [get_deleter](#get_deleter) na oryginalnym przechowywanym wskaźniku.
+Służy `reset` do zmiany przechowywanego [wskaźnika](#pointer) należącego `unique_ptr` do,  a następnie usuwania oryginalnego, przechowywanego wskaźnika. Jeśli wartość `unique_ptr` nie jest pusta, `reset` wywołuje funkcję delete zwracaną przez [get_deleter](#get_deleter) na oryginalnym przechowywanym wskaźniku.
 
 Ponieważ `reset` program najpierw zapisuje nowy wskaźnik *PTR*, a następnie usuwa oryginalny, przechowywany wskaźnik, można `reset` natychmiast usunąć *PTR* , jeśli jest taki sam, jak oryginalny, przechowywany wskaźnik.
 

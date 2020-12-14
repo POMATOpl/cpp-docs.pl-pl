@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: platform:: Collections:: VectorView, Klasa'
 title: 'Platform:: Collections:: VectorView, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 207f5d517eaae475af1c65a284a3d1ebe50621af
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0d1244ed5331fa9732bdfef1f1b7e2133f99442
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250039"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform:: Collections:: VectorView, Klasa
 
@@ -70,7 +71,7 @@ Określa Predykat binarny na potrzeby testowania równości z wartościami typu 
 
 **Przestrzeń nazw:** Platform:: Collections
 
-## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView:: First — Metoda
+## <a name="vectorviewfirst-method"></a><a name="first"></a> VectorView:: First — Metoda
 
 Zwraca iterator, który określa pierwszy element w VectorView.
 
@@ -90,7 +91,7 @@ Iterator, który określa pierwszy element w VectorView.
 
 Wygodnym sposobem przechowywania iteratora zwracanego przez First () jest przypisanie wartości zwracanej do zmiennej, która jest zadeklarowana za pomocą **`auto`** słowa kluczowego odejmowania. Na przykład `auto x = myVectorView->First();`.
 
-## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView:: GetAt, Metoda
+## <a name="vectorviewgetat-method"></a><a name="getat"></a> VectorView:: GetAt, Metoda
 
 Pobiera element bieżącego VectorView, który jest wskazywany przez określony indeks.
 
@@ -112,7 +113,7 @@ Liczba całkowita bez znaku równa zero, która określa konkretny element w obi
 
 Element określony przez `index` parametr. Typ elementu jest określony przez parametr szablonu VectorView, *T*.
 
-## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView:: getwiele — Metoda
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a> VectorView:: getwiele — Metoda
 
 Pobiera sekwencję elementów z bieżącego VectorView, rozpoczynając od określonego indeksu.
 
@@ -138,7 +139,7 @@ Po zakończeniu tej operacji Tablica elementów, która rozpoczyna się od eleme
 
 Liczba pobranych elementów.
 
-## <a name="vectorviewindexof-method"></a><a name="indexof"></a>VectorView:: IndexOf, Metoda
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a> VectorView:: IndexOf, Metoda
 
 Wyszukuje określony element w bieżącym VectorView i jeśli zostanie znaleziony, zwraca indeks elementu.
 
@@ -154,7 +155,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Element do znalezienia.
 
 *indeks*<br/>
@@ -166,7 +167,7 @@ Parametr *index* ma wartość 0, jeśli element jest pierwszym elementem `Vector
 
 **`true`** Jeśli określony element zostanie znaleziony; w przeciwnym razie **`false`** .
 
-## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView:: size — Metoda
+## <a name="vectorviewsize-method"></a><a name="size"></a> VectorView:: size — Metoda
 
 Zwraca liczbę elementów w bieżącym obiekcie VectorView.
 
@@ -181,7 +182,7 @@ virtual property unsigned int Size;
 
 Liczba elementów w bieżącym VectorView.
 
-## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>VectorView:: VectorView — Konstruktor
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a> VectorView:: VectorView — Konstruktor
 
 Inicjuje nowe wystąpienie klasy VectorView.
 
@@ -253,7 +254,7 @@ Liczba elementów w kolekcji obiektów, które są używane do inicjowania bież
 *zmienia*<br/>
 Liczba elementów w VectorView.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która jest używana do inicjowania każdego elementu w bieżącym VectorView.
 
 *v*<br/>
@@ -274,7 +275,7 @@ Pierwszy element w sekwencji obiektów, który jest używany do inicjowania bie�
 *ostatniego*<br/>
 Ostatni element w sekwencji obiektów, który jest używany do inicjowania bieżącego VectorView. Typ `last` jest przekazywana za pomocą *doskonałego przekazywania*. Aby uzyskać więcej informacji, zobacz [rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](platform-namespace-c-cx.md)<br/>
 [Tworzenie składników środowisko wykonawcze systemu Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDaoRecordset'
 title: Klasa CDaoRecordset
 ms.date: 08/27/2018
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 4a1026c6b652bc5141855670db3b1ee34e7974b9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cc24894c0efc61ae37d57ff3c01ca43e71beddf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248214"
 ---
 # <a name="cdaorecordset-class"></a>Klasa CDaoRecordset
 
@@ -2084,7 +2085,7 @@ BOOL Seek(
 Jedno z następujących wyrażeń ciągów: "<", " \<=", "=", "> =" lub ">".
 
 *pKey1*<br/>
-Wskaźnik do elementu [COleVariant](../../mfc/reference/colevariant-class.md) , którego wartość odnosi się do pierwszego pola w indeksie. Wymagany.
+Wskaźnik do elementu [COleVariant](../../mfc/reference/colevariant-class.md) , którego wartość odnosi się do pierwszego pola w indeksie. Wymagane.
 
 *pKey2*<br/>
 Wskaźnik do `COleVariant` którego wartość odnosi się do drugiego pola w indeksie, jeśli istnieje. Wartością domyślną jest NULL.
@@ -2442,7 +2443,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 Pozycja liczbowa parametru w kolekcji parametrów querydef.
 
-*var*<br/>
+*funkcję*<br/>
 Wartość do ustawienia; Zobacz uwagi.
 
 *lpszName*<br/>
@@ -2525,7 +2526,7 @@ Gdy obiekt zestawu rekordów jest pessimistically zablokowany w środowisku wiel
 
 Aby uzyskać powiązane informacje, zobacz tematy "Metoda AddNew", "Metoda CancelUpdate", "Delete Method", "Właściwość LastModified", "Metoda aktualizacji" i "EditMode Property" w pomocy DAO.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

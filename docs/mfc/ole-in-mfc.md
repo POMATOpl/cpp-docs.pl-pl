@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: OLE w MFC'
 title: OLE w MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 529b6d0eaedaee200da547ef9ed980aab51ea233
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 125a2ad8e900747d859c03b57df33f2e7e5f1c28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244098"
 ---
 # <a name="ole-in-mfc"></a>OLE w MFC
 
@@ -38,7 +39,7 @@ Można również użyć [automatyzacji](automation.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Podstawy OLE](ole-background.md)<br/>
+[Tło OLE](ole-background.md)<br/>
 Omówienie technologii OLE i zawiera informacje o pojęciach związanych z tym, jak to działa.
 
 [Uaktywnienie](activation-cpp.md)<br/>
