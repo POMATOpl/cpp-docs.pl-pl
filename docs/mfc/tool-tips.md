@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: porady dotyczące narzędzi'
 title: Etykietki narzędzi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,25 +9,25 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - buttons [MFC], tool tips
 ms.assetid: 7f0bba86-7c55-4bf6-8455-687a4dcb2be8
-ms.openlocfilehash: ec7795a524420d62b2307f26954bbf205d19dea9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9446974df623ff03d1417ee393242d9995a6cf6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264456"
 ---
 # <a name="tool-tips"></a>Etykietki narzędzi
 
-Procedury różnią się dla Dodawanie etykietek narzędzi do kontrolek znajdujących się w systemie windows pochodzi od klasy MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) i systemu windows nie pochodzi od `CFrameWnd`.
+Procedury są różne w przypadku dodawania etykietek narzędzi do kontrolek zawartych w systemie Windows pochodnych z klas MFC [obiektu CFrameWnd](../mfc/reference/cframewnd-class.md) i niepochodzących od systemu Windows `CFrameWnd` .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-Etykietki narzędzi dla formantów w oknie, który jest:
+Etykietki narzędzi dla formantów w oknie, które jest:
 
-- [Etykietki narzędzi paska narzędzi (uzyskanych od obiektu CFrameWnd)](../mfc/toolbar-tool-tips.md)
+- [Etykietki narzędzi Toolbar (pochodzące z obiektu CFrameWnd)](../mfc/toolbar-tool-tips.md)
 
-- [Etykietki narzędzi w Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+- [Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

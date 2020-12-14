@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny kompilatora zasobów kompilatora zasobów RC1015'
 title: Błąd krytyczny kompilatora zasobów RC1015
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC1015
 ms.assetid: 23f187e1-5538-40b5-9042-edd2888f55c2
-ms.openlocfilehash: f20101c2edc4da132c89dcda451c71af2304a13d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41afe385189d35e80e5f624d379b45c0dca17441
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265665"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>Błąd krytyczny kompilatora zasobów RC1015
 
-Otwórz, nie może zawierać pliku 'NazwaPliku'
+nie można otworzyć pliku dołączanego "filename"
 
-Dany dołączanego pliku nie istnieje, nie można otworzyć lub nie został znaleziony.
+Podany plik dyrektywy include nie istnieje, nie można go otworzyć lub nie został odnaleziony.
 
-Upewnij się, że ustawienia środowiska są prawidłowe i czy określono poprawną ścieżkę do pliku. Upewnij się, że wystarczające dojścia do plików są dostępne dla kompilatora zasobów. Jeśli plik znajduje się na dysku sieciowym, upewnij się, że masz uprawnienia do otwierania pliku.
+Upewnij się, że ustawienia środowiska są prawidłowe i że określono poprawną ścieżkę do pliku. Upewnij się, że w kompilatorze zasobów są dostępne wystarczające dojścia do plików. Jeśli plik znajduje się na dysku sieciowym, upewnij się, że masz uprawnienia do otwierania tego pliku.
 
-RC1015 może wystąpić, nawet jeśli dołączanego pliku znajduje się w katalogu określony jako dodatkowym katalogiem obejmują we właściwości konfiguracji -> zasobów -> Strona właściwości ogólnych; Określ pełną ścieżkę do pliku dołączania.
+KOMPILATORA zasobów RC1015 może wystąpić nawet wtedy, gdy plik dołączany istnieje w katalogu określonym jako dodatkowy katalog dołączania we właściwościach konfiguracji — > zasoby — > stronie właściwości ogólne. Określ pełną ścieżkę do pliku dołączanego.

@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: CString formatowanie i wyświetlanie Message-Box'
 title: Formatowanie obiektu CString i wyświetlanie okna komunikatu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: e346fe6ed5235f98f9e1206e92cb53c2fd5c929f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a3c91a2a8a6f80235a834811433467797d5a37a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264521"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatowanie obiektu CString i wyświetlanie okna komunikatu
 
@@ -212,7 +213,7 @@ Druga forma funkcji używa zasobu ciągu o IDENTYFIKATORze *nIDPrompt* , aby wy�
 
 [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Klasa CStringT](../../atl-mfc-shared/reference/cstringt-class.md)

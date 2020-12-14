@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: śledzenie'
 title: Trackery
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,22 +12,22 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
-ms.openlocfilehash: b71eb0e5d46a790b01ec12f12043af783bdfcf27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82766ecfabf2b5ebb0147b9f2c462f3b4460869
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264250"
 ---
 # <a name="trackers"></a>Trackery
 
-[CRectTracker](../mfc/reference/crecttracker-class.md) klasa udostępnia interfejs użytkownika między elementami prostokątny w aplikacji i użytkowników poprzez zapewnienie różnych stylów wyświetlania. Te style zawierają granice stały, kreskowanym lub kreskowane; kreskowane wzorzec, który obejmuje element; i uchwytami zmiany rozmiaru, które mogą być umieszczone na zewnątrz lub wewnątrz obramowania. Trackery są często używane w połączeniu z elementów OLE, oznacza to, że obiekty pochodzące z `COleClientItem`. Prostokąty tracker zapewniają podpowiedzi wizualne z bieżącym stanem elementu.
+Klasa [CRectTracker](../mfc/reference/crecttracker-class.md) udostępnia interfejs użytkownika między prostokątnymi elementami aplikacji a użytkownikiem, dostarczając różne style wyświetlania. Te style obejmują obramowania stałe, kreskowane lub kreskowane; wzorzec rozkreskowany, który obejmuje element; i Zmień rozmiar uchwytów, które mogą znajdować się na zewnątrz lub wewnątrz obramowania. Śledzenie są często używane w połączeniu z elementami OLE, czyli obiektami pochodnymi z `COleClientItem` . Prostokąty śledzenia dają wizualne podpowiedzi dotyczące bieżącego stanu elementu.
 
-Przykładowe MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) pokazuje wspólny interfejs, za pomocą trackery i elementy klienckie OLE z punktu widzenia aplikacji kontenera. Pokaz różne style i możliwości śledzenia obiektu, zobacz przykład ogólne MFC [TRACKER](../overview/visual-cpp-samples.md).
+Przykład [OCLIENT](../overview/visual-cpp-samples.md) MFC OLE ilustruje typowy interfejs przy użyciu elementów śledzących i klienta OLE z punktu widzenia aplikacji kontenera. Aby zapoznać się z różnymi stylami i możliwościami obiektu śledzenia, zobacz Ogólne przykładowe [śledzenie](../overview/visual-cpp-samples.md)MFC.
 
-Aby uzyskać więcej informacji na temat Implementowanie trackerów w aplikacji OLE, zobacz [Trackery: Implementowanie Trackerów w aplikacji OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+Aby uzyskać więcej informacji na temat implementowania programu śledzącego w aplikacji OLE, zobacz [śledzące: implementowanie śledzenia w aplikacji OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Klasa COleClientItem](../mfc/reference/coleclientitem-class.md)

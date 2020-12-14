@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze TOOLTIPTEXT
 title: Struktura TOOLTIPTEXT
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 80b95225a277a7985c30e5ea453597b06e501753
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 077d4c27392b626a0e9665851eadf227245029b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264300"
 ---
 # <a name="tooltiptext-structure"></a>Struktura TOOLTIPTEXT
 
@@ -30,8 +31,8 @@ typedef struct {
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
 
-*hdr*<br/>
-Identyfikuje narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury może być wymagany identyfikator polecenia kontrolki. Identyfikator polecenia kontrolki będzie znajdować się w *idFrom* składowej struktury **NMHDR** , do którego zostanie uzyskany `hdr.idFrom`dostęp ze składnią. Zobacz [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) , aby zapoznać się z omówieniem elementów członkowskich struktury **NMHDR** .
+*nagłówka*<br/>
+Identyfikuje narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury może być wymagany identyfikator polecenia kontrolki. Identyfikator polecenia kontrolki będzie znajdować się w *idFrom* składowej struktury **NMHDR** , do którego zostanie uzyskany dostęp ze składnią `hdr.idFrom` . Zobacz [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) , aby zapoznać się z omówieniem elementów członkowskich struktury **NMHDR** .
 
 *lpszText*<br/>
 Adres ciągu, w którym jest wyświetlany tekst dla narzędzia.
@@ -50,6 +51,6 @@ Podczas obsługi `TTN_NEEDTEXT` komunikatu powiadomienia należy określić cią
 
 - Skopiuj identyfikator zasobu ciągu do elementu członkowskiego *lpszText* i skopiuj dojście wystąpienia zawierające zasób do elementu członkowskiego *hinst* .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)

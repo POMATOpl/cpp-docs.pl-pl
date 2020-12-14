@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CTabbedPane'
 title: Klasa CTabbedPane
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: cfc0a3099b1d5ff9bd1093cc911745bd61cde64c
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a337a68cdeadfec229b24e10a615ba49145ec1ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264482"
 ---
 # <a name="ctabbedpane-class"></a>Klasa CTabbedPane
 
@@ -338,7 +339,7 @@ Użyj tej metody, aby dostosować listę kolorów, które są używane, gdy funk
 
 Użyj [CTabbedPane:: EnableTabAutoColor](#enabletabautocolor) , aby włączyć lub wyłączyć funkcję Autocolor.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
