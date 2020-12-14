@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: rand_s'
 title: rand_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8894248bf924ef513dc916e10e47ce8ea7e95137
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274830"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -77,7 +78,7 @@ By default, this function's global state is scoped to the application. To change
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**rand_s**|\<STDLIB. h>|
+|**rand_s**|\<stdlib.h>|
 
 Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

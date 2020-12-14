@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Instrukcje: ładowanie zasobów niezarządzanych do tablicy bajtów'
 title: 'Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: b2b98ff3c4bbd857e3f5d861c1e0e8e2bd2f357b
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e5a7a88a505d3f02b8e9287d6407ddbe77b99dee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258281"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Porady: ładowanie zasobów niezarządzanych do tablicy typu Byte
 
@@ -73,6 +74,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Platform::details:: iequatable, interfejs'
+description: 'Dowiedz się więcej o: platform::D etails:: IEquatable Interface'
+title: 'Platform::D etails:: IEquatable, interfejs'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-ms.openlocfilehash: a0da4d82bc0d2a06fa73519aedf2e22ae89f3900
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec808aae930ec0b1d382477cee5351cd97478271
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274765"
 ---
-# <a name="platformdetailsiequatable-interface"></a>Platform::details:: iequatable, interfejs
+# <a name="platformdetailsiequatable-interface"></a>Platform::D etails:: IEquatable, interfejs
 
-Ten interfejs jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
+Ten interfejs jest przeznaczony tylko do użytku wewnętrznego i nie jest przeznaczony do użytku na potrzeby programowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +27,7 @@ interface class IEquatable;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten interfejs jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być kontrolowane za pomocą przeglądarki.
+Ten interfejs jest dostarczany wyłącznie na potrzeby kompletności, ponieważ może być sprawdzany z przeglądarkami.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -34,10 +35,10 @@ Ten interfejs jest przeznaczona wyłącznie dla kompletności, ponieważ mogą b
 
 ### <a name="requirements"></a>Wymagania
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-**Namespace:** Platform::Details
+**Przestrzeń nazw:** Platforma::D etails
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)

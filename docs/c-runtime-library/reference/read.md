@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _read'
 title: _read
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 2f43fc54a0092afc6ab5855c160a7879747faef7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f814c912c9f5d5e2dc7897cb3a2dcc8099503314
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274843"
 ---
 # <a name="_read"></a>_read
 
@@ -65,11 +66,11 @@ Maksymalna liczba bajtów do odczytania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_read** zwraca liczbę odczytanych bajtów, która może być mniejsza niż *buffer_size* , jeśli w pliku znajduje się mniej niż *buffer_size* bajtów lub plik został otwarty w trybie tekstowym. W trybie tekstowym każda para `\r\n` wysuwu wiersza jest zastępowana pojedynczym znakiem `\n`wysuwu wiersza. W zwracanej wartości jest uwzględniany tylko pojedynczy znak wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku.
+**_read** zwraca liczbę odczytanych bajtów, która może być mniejsza niż *buffer_size* , jeśli w pliku znajduje się mniej niż *buffer_size* bajtów lub plik został otwarty w trybie tekstowym. W trybie tekstowym każda para wysuwu wiersza `\r\n` jest zastępowana pojedynczym znakiem wysuwu wiersza `\n` . W zwracanej wartości jest uwzględniany tylko pojedynczy znak wysuwu wiersza. Zastąpienie nie ma wpływu na wskaźnik pliku.
 
 Jeśli funkcja próbuje odczytać na końcu pliku, zwraca 0. Jeśli *FD* jest nieprawidłowy, plik nie jest otwarty do odczytu lub plik jest zablokowany, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EBADF**.
 
-Jeśli *bufor* ma **wartość null**lub jeśli *buffer_size* > **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EINVAL**.
+Jeśli *bufor* ma **wartość null** lub jeśli *buffer_size*  >  **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru. Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EINVAL**.
 
 Aby uzyskać więcej informacji na temat tego i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -85,7 +86,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_read**|\<IO. h>|
+|**_read**|\<io.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -133,7 +134,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_readtxt"></a>Dane wejściowe: crt_read. txt
+### <a name="input-crt_readtxt"></a>Dane wejściowe: crt_read.txt
 
 ```Input
 Line one.

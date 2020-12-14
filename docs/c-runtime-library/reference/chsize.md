@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _chsize'
 title: _chsize
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16a65c145e33a0fbafcc9d0f2b0fed3b9f2b516f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917203"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274895"
 ---
 # <a name="_chsize"></a>_chsize
 
@@ -55,7 +56,7 @@ int _chsize(
 *proces*<br/>
 Deskryptor pliku odwołujący się do otwartego pliku.
 
-*size*<br/>
+*zmienia*<br/>
 Nowa długość pliku w bajtach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -76,7 +77,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_chsize**|\<IO. h>|\<errno. h>|
+|**_chsize**|\<io.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -120,7 +121,7 @@ Size successfully changed
 File length after:  329678
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

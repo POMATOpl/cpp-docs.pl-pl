@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operator przecinkowy:,'
 title: 'Operator przecinkowy: ,'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1429e2ce444e0f253bffca795f36f4e6194e0395
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274778"
 ---
 # <a name="comma-operator-"></a>Operator przecinkowy: ,
 
@@ -38,7 +39,7 @@ func_one( x, y + 2, z );
 func_two( (x--, y + 2), z );
 ```
 
-W wywołaniu funkcji do `func_one` powyżej, trzy argumenty, oddzielone przecinkami, są przenoszone: `x`, `y + 2`i `z`. W wywołaniu funkcji do `func_two`, nawiasy wymuszają, aby kompilator interpretował pierwszy przecinek jako operator oceny sekwencyjnej. To wywołanie funkcji przekazuje dwa argumenty do `func_two`. Pierwszy argument jest wynikiem operacji sekwencyjnej oceny `(x--, y + 2)`, która ma wartość i typ wyrażenia `y + 2`; drugi argument jest `z`.
+W wywołaniu funkcji `func_one` powyżej, trzy argumenty, oddzielone przecinkami, są przenoszone: `x` , `y + 2` , i `z` . W wywołaniu funkcji do `func_two` , nawiasy wymuszają, aby kompilator interpretował pierwszy przecinek jako operator oceny sekwencyjnej. To wywołanie funkcji przekazuje dwa argumenty do `func_two` . Pierwszy argument jest wynikiem operacji sekwencyjnej oceny `(x--, y + 2)` , która ma wartość i typ wyrażenia `y + 2` ; drugim argumentem jest `z` .
 
 ## <a name="example"></a>Przykład
 
@@ -60,8 +61,8 @@ int main () {
 30
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operator obliczania sekwencyjnego](../c-language/sequential-evaluation-operator.md)
+[Operator oceny sekwencyjnej](../c-language/sequential-evaluation-operator.md)

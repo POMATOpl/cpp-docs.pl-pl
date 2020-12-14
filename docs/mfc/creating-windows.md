@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: tworzenie okien'
 title: Tworzenie okien
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 33821a84de2b18ee4489be040f78e53e8e16377e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309488"
 ---
 # <a name="creating-windows"></a>Tworzenie okien
 
@@ -22,12 +23,12 @@ Struktura automatycznie tworzy większość potrzebnych okien w programie ramowy
 
 - [Rejestrowanie okna "Classes](registering-window-classes.md) " (w przeciwieństwie do obiektów okien C++)
 
-- [Ogólna Sekwencja tworzenia okna](general-window-creation-sequence.md)
+- [Ogólna sekwencja tworzenia okna](general-window-creation-sequence.md)
 
-- [Niszczenie obiektów okien](destroying-window-objects.md)
+- [niszczenie obiektów okien](destroying-window-objects.md)
 
 - [Praca z obiektami okien](working-with-window-objects.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obiekty okien](window-objects.md)
+[Obiekty okna](window-objects.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: chmod'
 title: chmod
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - chmod function
 ms.assetid: c3294722-2194-4ff4-ac87-d69f155e279b
-ms.openlocfilehash: 7852a2e8cfb6719e7120291e6a74500e660a7fba
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7e4d53a2a9103e2b8e2863d52da208a8c4533a72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274921"
 ---
 # <a name="chmod"></a>chmod
 
