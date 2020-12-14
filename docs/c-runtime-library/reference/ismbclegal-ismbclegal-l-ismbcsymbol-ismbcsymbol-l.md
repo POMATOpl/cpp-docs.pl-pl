@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbclegal, _ismbclegal_l, _ismbcsymbol _ismbcsymbol_l'
 title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 295eabdef37a7b8d6bfb8408ba0d3d683a59c42d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3d051a356fc440219003fb402d99bf09d960537e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279705"
 ---
 # <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -119,8 +120,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbclegal**, **_ismbclegal_l**|\<mbstring. h>|
-|**_ismbcsymbol**, **_ismbcsymbol_l**|\<mbstring. h>|
+|**_ismbclegal**, **_ismbclegal_l**|\<mbstring.h>|
+|**_ismbcsymbol**, **_ismbcsymbol_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -128,5 +129,5 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Procedury _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

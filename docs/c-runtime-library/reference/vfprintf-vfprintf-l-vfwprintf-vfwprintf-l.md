@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l'
 title: vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: e72142f33c042e60ac6c06f6b84aa63b3de67457
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3c22b5bff6250c6869d1cc86573064b3e4c81348
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279640"
 ---
 # <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 
-Napisz sformatowane dane wyjściowe przy użyciu wskaźnika do listy argumentów. Istnieją bardziej bezpieczne wersje tych funkcji; Zobacz [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).
+Napisz sformatowane dane wyjściowe przy użyciu wskaźnika do listy argumentów. Istnieją bardziej bezpieczne wersje tych funkcji; Zobacz [vfprintf_s, _vfprintf_s_l, vfwprintf_s _vfwprintf_s_l](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -78,16 +79,16 @@ int _vfwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
+*produkcyjne*<br/>
 Wskaźnik do struktury **pliku** .
 
-*format*<br/>
+*Formatowanie*<br/>
 Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik na listę argumentów.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
@@ -111,7 +112,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftprintf**|**vfprintf**|**vfprintf**|**vfwprintf**|
 |**_vftprintf_l**|**_vfprintf_l**|**_vfprintf_l**|**_vfwprintf_l**|
@@ -120,18 +121,18 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**vfprintf**, **_vfprintf_l**|\<stdio. h > i \<STDARG. h >|\<varargs.h>*|
-|**vfwprintf**, **_vfwprintf_l**|\<stdio. h > lub \<WCHAR. h > i \<STDARG. h >|\<varargs.h>*|
+|**vfprintf**, **_vfprintf_l**|\<stdio.h> i \<stdarg.h>|\<varargs.h>*|
+|**vfwprintf**, **_vfwprintf_l**|\<stdio.h> lub \<wchar.h> , i \<stdarg.h>|\<varargs.h>*|
 
-\*Wymagane w przypadku zgodności z systemem UNIX V.
+\* Wymagane w przypadku zgodności z systemem UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

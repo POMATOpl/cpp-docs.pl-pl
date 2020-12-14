@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: vfprintf_s, _vfprintf_s_l, vfwprintf_s _vfwprintf_s_l'
 title: vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -37,16 +38,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vftprintf_s function
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
-ms.openlocfilehash: d7c3d268689fe8d60b4b3804223d7bba206bbed1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 743bf613cc6e09f396072d6bd00060d6d30e662c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279653"
 ---
 # <a name="vfprintf_s-_vfprintf_s_l-vfwprintf_s-_vfwprintf_s_l"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 
-Napisz sformatowane dane wyjściowe przy użyciu wskaźnika do listy argumentów. Są to wersje [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Napisz sformatowane dane wyjściowe przy użyciu wskaźnika do listy argumentów. Są to wersje [vfprintf, _vfprintf_l, vfwprintf _vfwprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) z ulepszonymi zabezpieczeniami, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,23 +78,23 @@ int _vfwprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
+*produkcyjne*<br/>
 Wskaźnik do struktury **pliku** .
 
-*format*<br/>
+*Formatowanie*<br/>
 Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik na listę argumentów.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**vfprintf_s** i **vfwprintf_s** zwracają liczbę znaków, bez uwzględnienia kończącego znaku null, lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. Jeśli *strumień* lub *Format* jest wskaźnikiem typu null lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
+**vfprintf_s** i **vfwprintf_s** zwracają liczbę pisanych znaków, bez uwzględnienia kończącego znaku null, lub wartość ujemną, jeśli wystąpi błąd danych wyjściowych. Jeśli *strumień* lub *Format* jest wskaźnikiem typu null lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
 Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -103,7 +104,7 @@ Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie forma
 
 Funkcje te różnią się od wersji niezabezpieczonej tylko w przypadku, gdy bezpieczne wersje sprawdzają, czy ciąg *formatu* zawiera prawidłowe znaki formatowania.
 
-**vfwprintf_s** to dwubajtowa wersja **vfprintf_s**; dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vfprintf_s** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
+**vfwprintf_s** to wersja znaku dwubajtowego **vfprintf_s**; dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vfprintf_s** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
@@ -112,7 +113,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftprintf_s**|**vfprintf_s**|**vfprintf_s**|**vfwprintf_s**|
 |**_vftprintf_s_l**|**_vfprintf_s_l**|**_vfprintf_s_l**|**_vfwprintf_s_l**|
@@ -121,18 +122,18 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**vfprintf_s**, **_vfprintf_s_l**|\<stdio. h > i \<STDARG. h >|\<varargs.h>*|
-|**vfwprintf_s**, **_vfwprintf_s_l**|\<stdio. h > lub \<WCHAR. h > i \<STDARG. h >|\<varargs.h>*|
+|**vfprintf_s**, **_vfprintf_s_l**|\<stdio.h> i \<stdarg.h>|\<varargs.h>*|
+|**vfwprintf_s**, **_vfwprintf_s_l**|\<stdio.h> lub \<wchar.h> , i \<stdarg.h>|\<varargs.h>*|
 
-\*Wymagane w przypadku zgodności z systemem UNIX V.
+\* Wymagane w przypadku zgodności z systemem UNIX V.
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

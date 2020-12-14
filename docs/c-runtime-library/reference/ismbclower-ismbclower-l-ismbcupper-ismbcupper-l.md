@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ismbclower, _ismbclower_l, _ismbcupper _ismbcupper_l'
 title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: f33bb4d882031221a80dc3b86670916a2e77af66
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4afed88aff750be44602270b0bc7c2e3fa77073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279666"
 ---
 # <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -104,10 +105,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbclower**|\<mbstring. h>|
-|**_ismbclower_l**|\<mbstring. h>|
-|**_ismbcupper**|\<mbstring. h>|
-|**_ismbcupper_l**|\<mbstring. h>|
+|**_ismbclower**|\<mbstring.h>|
+|**_ismbclower_l**|\<mbstring.h>|
+|**_ismbcupper**|\<mbstring.h>|
+|**_ismbcupper_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -116,6 +117,6 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
 [Procedury _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[to, ISW, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

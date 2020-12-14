@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej: Dodawanie adnotacji do struktur i klas'
 title: Dodawanie adnotacji struktur i klas
 ms.date: 06/28/2019
 ms.topic: conceptual
@@ -19,12 +20,12 @@ f1_keywords:
 - _Field_size_full_opt_
 - _Field_z_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
-ms.openlocfilehash: fe177e6afea088b59b16bfbd0bff6fa00b526222
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: b8e9a0cf3826de2beeb0a93f420216751d05d53e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279614"
 ---
 # <a name="annotating-structs-and-classes"></a>Dodawanie adnotacji struktur i klas
 
@@ -54,7 +55,7 @@ Możesz dodawać adnotacje do struktury i składowych klas przy użyciu adnotacj
 
 - `_Struct_size_bytes_(size)`
 
-     Dotyczy deklaracji struktury lub klasy.  Wskazuje, że prawidłowy obiekt tego typu może być większy niż zadeklarowany typ, z liczbą bajtów określoną przez `size` .  Przykład:
+     Dotyczy deklaracji struktury lub klasy.  Wskazuje, że prawidłowy obiekt tego typu może być większy niż zadeklarowany typ, z liczbą bajtów określoną przez `size` .  Na przykład:
 
     ```cpp
 

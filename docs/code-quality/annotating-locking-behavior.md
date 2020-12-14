@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Dodawanie adnotacji do zachowania blokowania'
 title: Dodawanie adnotacji do zachowania blokującego
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -27,12 +28,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c26f33b9e2464f91786a6607cea9c3520b971824
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279627"
 ---
 # <a name="annotating-locking-behavior"></a>Dodawanie adnotacji do zachowania blokującego
 
@@ -118,7 +119,7 @@ Inteligentne blokady zwykle zawijają natywne blokady i zarządzają ich okresem
 |`_Swaps_locks_(left, right)`|Opisuje standardowe `swap` zachowanie, które zakłada, że obiekty `left` i `right` wymieniają ich stan. Wymieniany stan obejmuje liczbę blokad i obiekt docelowy aliasu, jeśli jest obecny. Aliasy wskazujące `left` obiekty i `right` pozostają niezmienione.|
 |`_Detaches_lock_(detached, lock)`|Opisuje scenariusz, w którym typ otoki blokady zezwala na skojarzenie z zawartym w nim zasobem. Jest to podobne do sposobu `std::unique_ptr` działania ze swoim wskaźnikiem wewnętrznym: umożliwia programistom wyodrębnienie wskaźnika i pozostawienie jego kontenera inteligentnego wskaźnika w stanie czystym. Podobna logika jest obsługiwana przez program `std::unique_lock` i może być implementowana w niestandardowych otokach blokady. Odłączona blokada zachowuje swój stan (liczba zablokowanych i obiekt docelowy aliasu, jeśli istnieje), podczas gdy otoka jest resetowana, aby zawierała liczbę blokad równą zero i bez obiektu docelowego aliasu, zachowując własne aliasy. Nie ma operacji dotyczących liczby blokad (zwalniania i pozyskiwania). Ta adnotacja zachowuje się dokładnie tak, jak `_Moves_lock_` z tą różnicą, że odłączony argument powinien być **`return`** zamiast **`this`** .|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Korzystanie z adnotacji SAL w celu zmniejszenia liczby defektów kodu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Poznanie SAL](../code-quality/understanding-sal.md)
