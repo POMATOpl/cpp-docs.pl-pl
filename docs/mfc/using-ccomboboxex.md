@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z korzystanie CComboBoxEx'
 title: Korzystanie z CComboBoxEx
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: a9f3ca623ca729837da56c5b8a8be92b29a5c913
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bd8a31a44b74671465ec817d32aa69f9d17369ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202603"
 ---
 # <a name="using-ccomboboxex"></a>Korzystanie z CComboBoxEx
 
@@ -24,12 +25,12 @@ Użyj tego formantu, aby zapewnić funkcjonalność pola kombi bez konieczności
 
 - [Tworzenie kontrolki rozszerzonego pola kombi](../mfc/creating-an-extended-combo-box-control.md)
 
-- [Używanie list obrazów w kontrolce rozszerzonego pola kombi](../mfc/using-image-lists-in-an-extended-combo-box-control.md)
+- [Używanie list obrazów w formancie rozszerzonego pola kombi](../mfc/using-image-lists-in-an-extended-combo-box-control.md)
 
 - [Ustawianie obrazów dla pojedynczego elementu](../mfc/setting-the-images-for-an-individual-item.md)
 
-- [Przetwarzanie komunikatów powiadomień w kontrolkach rozszerzonego pola kombi](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
+- [Przetwarzanie komunikatów powiadomień w formantach rozszerzonego pola kombi](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

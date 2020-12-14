@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z korzystanie CSliderCtrl'
 title: Korzystanie z CSliderCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
-ms.openlocfilehash: 5fb26bc981630b59a918acf5bb81b9f3fdb4620a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 79d2736d6b0dc09ae8aaa68f01387125fbec1e4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202395"
 ---
 # <a name="using-csliderctrl"></a>Korzystanie z CSliderCtrl
 
@@ -26,10 +27,10 @@ Suwak w kontrolce suwaka przenosi przyrosty określone podczas jego tworzenia. N
 
 - [Style kontrolek suwaka](../mfc/slider-control-styles.md)
 
-- [Funkcje składowe kontrolki suwaka](../mfc/slider-control-member-functions.md)
+- [Funkcje członkowskie kontrolki suwaka](../mfc/slider-control-member-functions.md)
 
 - [Komunikaty powiadomień suwaka](../mfc/slider-notification-messages.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

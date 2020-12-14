@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: korzystanie z listy obrazów'
 title: Używanie list obrazów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: 710831ea8ef6b52292ba3e8eb84a69575c6c7508
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92587bd80a4f613a04cae22322ab258e9869d247
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202694"
 ---
 # <a name="using-an-image-list"></a>Używanie list obrazów
 
@@ -28,7 +29,7 @@ Typowym użyciem listy obrazów jest Poniższy wzorzec:
 > [!NOTE]
 > Jeśli lista obrazów została utworzona przy użyciu **`new`** operatora, należy zniszczyć `CImageList` obiekt po wykonaniu tej czynności.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
 [Formanty](../mfc/controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy multi_link_registry
 title: multi_link_registry — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5d5e6c7e837f76a422c3f2879f74d1af36d64d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202135"
 ---
 # <a name="multi_link_registry-class"></a>multi_link_registry — Klasa
 
@@ -69,7 +70,7 @@ Typ danych bloku przechowywanych w `multi_link_registry` obiekcie.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="add"></a><a name="add"></a>dodana
+## <a name="add"></a><a name="add"></a> dodana
 
 Dodaje łącze do `multi_link_registry` obiektu.
 
@@ -86,7 +87,7 @@ Wskaźnik do bloku, który ma zostać dodany.
 
 Metoda zgłasza wyjątek [invalid_link_target](invalid-link-target-class.md) , jeśli link jest już obecny w rejestrze lub jeśli powiązano został już ustawiony przy użyciu `set_bound` funkcji i Link został usunięty.
 
-## <a name="begin"></a><a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a> zaczną
 
 Zwraca iterator do pierwszego elementu w `multi_link_registry` obiekcie.
 
@@ -102,7 +103,7 @@ Iterator odnoszący się do pierwszego elementu w `multi_link_registry` obiekcie
 
 Stan końcowy jest wskazywany przez `NULL` łącze.
 
-## <a name="contains"></a><a name="contains"></a>wyświetlana
+## <a name="contains"></a><a name="contains"></a> wyświetlana
 
 Przeszukuje `multi_link_registry` obiekt pod kątem określonego bloku.
 
@@ -119,7 +120,7 @@ Wskaźnik do bloku, który ma być wyszukiwany w `multi_link_registry` obiekcie.
 
 **`true`** Jeśli określony blok został znaleziony, **`false`** w przeciwnym razie.
 
-## <a name="count"></a><a name="count"></a>liczbą
+## <a name="count"></a><a name="count"></a> liczbą
 
 Zlicza elementy w `multi_link_registry` obiekcie.
 
@@ -131,7 +132,7 @@ virtual size_t count();
 
 Liczba elementów w `multi_link_registry` obiekcie.
 
-## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a> multi_link_registry
 
 Konstruuje `multi_link_registry` obiekt.
 
@@ -139,7 +140,7 @@ Konstruuje `multi_link_registry` obiekt.
 multi_link_registry();
 ```
 
-## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a> ~ multi_link_registry
 
 Niszczy `multi_link_registry` obiekt.
 
@@ -151,7 +152,7 @@ virtual ~multi_link_registry();
 
 Metoda zgłasza wyjątek [invalid_operation](invalid-operation-class.md) , jeśli wywoływana przed usunięciem wszystkich linków.
 
-## <a name="remove"></a><a name="remove"></a>usuwa
+## <a name="remove"></a><a name="remove"></a> usuwa
 
 Usuwa łącze z `multi_link_registry` obiektu.
 
@@ -168,7 +169,7 @@ Wskaźnik do usunięcia bloku, jeśli został znaleziony.
 
 **`true`** Jeśli łącze zostało odnalezione i usunięte, **`false`** w przeciwnym razie.
 
-## <a name="set_bound"></a><a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a> set_bound
 
 Ustawia górną granicę dla liczby linków, które `multi_link_registry` obiekt może przechowywać.
 
@@ -185,7 +186,7 @@ Maksymalna liczba linków, które mogą być `multi_link_registry` przechowywane
 
 Po ustawieniu powiązania, odłączenie wpisu spowoduje, że `multi_link_registry` obiekt przejdzie do niezmiennego stanu, gdy dalsze wywołania `add` wywoła `invalid_link_target` wyjątek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa single_link_registry](single-link-registry-class.md)

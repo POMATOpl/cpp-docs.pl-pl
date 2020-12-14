@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie opcjonalnej
 title: Klasa opcjonalna
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: b1e77325cc485da1caec91316ce5d46cfa6357dc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fc0f14eb8bffc55c10db73b9b2f1ea5bcfdf6995
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201940"
 ---
 # <a name="optional-class"></a>Klasa opcjonalna
 
@@ -58,7 +59,7 @@ template<class T> optional(T) -> optional<T>;
 | [wymiany](#swap) | Zamienia zawarty w niej wartość lub pusty stan na inny `optional` . |
 | **Obserwatorzy** | |
 | [has_value](#has_value) | Zwraca czy `optional` obiekt zawiera wartość. |
-| [wartościami](#value) | Zwraca zawartej wartości. |
+| [wartość](#value) | Zwraca zawartej wartości. |
 | [value_or](#value_or) | Zwraca wartość zawartej lub alternatywę, jeśli żadna wartość nie jest obecna. |
 | [operator — >](#op_as) | Odwołuje się do zawartej wartości `optional` obiektu. |
 | [zakład](#op_mem) | Odwołuje się do zawartej wartości `optional` obiektu. |

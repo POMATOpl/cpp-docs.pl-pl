@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z korzystanie CImageList'
 title: Korzystanie z CImageList
 ms.date: 11/04/2016
 helpviewer_keywords:
 - image list control
 - CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
-ms.openlocfilehash: 09fd0e95ce2981afbebbfe10d87b26f88a7b5e13
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9e0126e3d5b083dc4a88bfb1ca2130be0e9fbaaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202538"
 ---
 # <a name="using-cimagelist"></a>Korzystanie z CImageList
 
@@ -22,11 +23,11 @@ Wszystkie obrazy na liście obrazów są zawarte w jednej, szerokiej mapie bitow
 
 - [Typy list obrazów](../mfc/types-of-image-lists.md)
 
-- [Używanie list obrazów](../mfc/using-an-image-list.md)
+- [Korzystanie z listy obrazów](../mfc/using-an-image-list.md)
 
-- [Operowanie listami obrazów](../mfc/manipulating-image-lists.md)
+- [Manipulowanie listami obrazów](../mfc/manipulating-image-lists.md)
 
-- [Rysowanie obrazów z poziomu listy obrazów](../mfc/drawing-images-from-an-image-list.md)
+- [Rysowanie obrazów z listy obrazów](../mfc/drawing-images-from-an-image-list.md)
 
 - [Nakładki obrazów na listach obrazów](../mfc/image-overlays-in-image-lists.md)
 
@@ -36,4 +37,4 @@ Wszystkie obrazy na liście obrazów są zawarte w jednej, szerokiej mapie bitow
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

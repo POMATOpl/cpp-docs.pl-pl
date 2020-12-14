@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie kontrolki animacji'
 title: Używanie formantu animacji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,30 +7,30 @@ helpviewer_keywords:
 - CAnimateCtrl class [MFC], animation controls
 - animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
-ms.openlocfilehash: 10bd8c0c26f92ce5de2261d6aca6fc7cc3a37365
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ef4a7b5eb005569ac2a3e3cb66cc0ed785e9299
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202720"
 ---
 # <a name="using-an-animation-control"></a>Używanie formantu animacji
 
-Typowy kontrolki animacji jest zgodny ze wzorcem poniżej:
+Typowym użyciem kontrolki animacji jest Poniższy wzorzec:
 
-- Formant zostanie utworzony. Kontrolka została określona w szablonu okna dialogowego, tworzenie przebiega automatycznie podczas tworzenia okna dialogowego. (Powinien mieć [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) elementu członkowskiego w swojej klasie okna dialogowego, która odnosi się do kontrolki animacji.) Alternatywnie, można użyć [Utwórz](../mfc/reference/canimatectrl-class.md#create) funkcja elementu członkowskiego, aby utworzyć formant jako okna podrzędnego każdego okna.
+- Formant zostanie utworzony. Jeśli formant jest określony w szablonie okna dialogowego, tworzenie jest automatyczne po utworzeniu okna dialogowego. (W klasie okna dialogowego powinien znajdować się element [Korzystanie CAnimateCtrl](../mfc/reference/canimatectrl-class.md) , który odpowiada kontrolce animacji). Alternatywnie możesz użyć funkcji [Utwórz](../mfc/reference/canimatectrl-class.md#create) element członkowski, aby utworzyć formant jako okno podrzędne dowolnego okna.
 
-- Ładowanie klip AVI do formantu animacji, wywołując [Otwórz](../mfc/reference/canimatectrl-class.md#open) funkcja elementu członkowskiego. W przypadku formantu animacji w oknie dialogowym, dobrym miejscem, w tym celu trwa klasy okien dialogowych [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji.
+- Załaduj klip AVI do kontrolki animacji, wywołując funkcję [Open](../mfc/reference/canimatectrl-class.md#open) member. Jeśli kontrolka animacji znajduje się w oknie dialogowym, dobrym miejscem do wykonania jest w funkcji [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) klasy okna dialogowego.
 
-- Odtwórz klip, wywołując [Odtwórz](../mfc/reference/canimatectrl-class.md#play) funkcja elementu członkowskiego. W przypadku formantu animacji w oknie dialogowym, dobrym miejscem, w tym celu trwa klasy okien dialogowych `OnInitDialog` funkcji. Wywoływanie `Play` nie jest konieczne, jeśli zestaw stylów ACS_AUTOPLAY kontrolki animacji.
+- Odtwórz klip, wywołując funkcję [odtwarzania](../mfc/reference/canimatectrl-class.md#play) elementu członkowskiego. Jeśli kontrolka animacji znajduje się w oknie dialogowym, dobrym miejscem do wykonania jest funkcja klasy okna dialogowego `OnInitDialog` . Wywołanie `Play` nie jest konieczne, Jeśli kontrolka animacji ma ustawiony styl ACS_AUTOPLAY.
 
-- Jeśli chcesz wyświetlić części klipu lub odtworzyć go klatka po klatce, użyj `Seek` funkcja elementu członkowskiego. Aby zatrzymać klip odtwarzany, użyj `Stop` funkcja elementu członkowskiego.
+- Jeśli chcesz wyświetlić fragmenty klipu lub odtworzyć ramkę z ramkami, użyj `Seek` funkcji składowej. Aby zatrzymać odtwarzanie klipu, użyj `Stop` funkcji składowej.
 
-- Jeśli nie ma do zniszczenia kontrolki, następnie od razu, Usuń klip z pamięci przez wywołanie metody `Close` funkcja elementu członkowskiego.
+- Jeśli nie chcesz od razu zniszczyć formantu, Usuń klip z pamięci, wywołując `Close` funkcję członkowską.
 
-- Jeśli kontrolki animacji znajduje się w oknie dialogowym go i `CAnimateCtrl` obiekt jest niszczony automatycznie. Jeśli nie, musisz upewnij się, że obie kontrolki i `CAnimateCtrl` obiektu są poprawnie niszczone. Likwidowanie kontrolki automatycznie zamyka klip AVI.
+- Jeśli kontrolka animacji znajduje się w oknie dialogowym, a `CAnimateCtrl` obiekt zostanie zniszczony automatycznie. Jeśli nie, musisz upewnić się, że zarówno kontrolka, jak i `CAnimateCtrl` obiekt są prawidłowo niszczone. Niszczenie formantu powoduje automatyczne zamknięcie klipu AVI.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CAnimateCtrl](../mfc/using-canimatectrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

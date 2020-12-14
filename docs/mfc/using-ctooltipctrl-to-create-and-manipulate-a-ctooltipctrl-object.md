@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie CToolTipCtrl do tworzenia obiektu CToolTipCtrl i manipulowania nim'
 title: Używanie formantu CToolTipCtrl do tworzenia obiektu CToolTipCtrl i operowania nim
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-ms.openlocfilehash: 37dc7bc5a411ebab3737b87fd6977b26cff68178
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 363d46ce078b71cf88d742ae390ab674a73ab935
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202343"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Używanie formantu CToolTipCtrl do tworzenia obiektu CToolTipCtrl i operowania nim
 
@@ -18,9 +19,9 @@ Oto przykład użycia [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) :
 
 ### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>Tworzenie i manipulowanie CToolTipCtrl
 
-1. Konstruowanie obiektu `CToolTipCtrl`.
+1. Konstruowanie `CToolTipCtrl` obiektu.
 
-1. Wywołanie [Create](../mfc/reference/ctooltipctrl-class.md#create) w celu utworzenia typowej kontrolki narzędzia systemu Windows i dołączenie jej do obiektu `CToolTipCtrl`.
+1. Wywołanie [Create](../mfc/reference/ctooltipctrl-class.md#create) w celu utworzenia typowej kontrolki narzędzia systemu Windows i dołączenie jej do `CToolTipCtrl` obiektu.
 
 1. Wywołaj [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) , aby zarejestrować narzędzie za pomocą kontrolki etykietki narzędzia, tak aby informacje przechowywane w etykietce narzędzia były wyświetlane po umieszczeniu kursora w narzędziu.
 
@@ -35,4 +36,4 @@ Oto przykład użycia [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) :
 ## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

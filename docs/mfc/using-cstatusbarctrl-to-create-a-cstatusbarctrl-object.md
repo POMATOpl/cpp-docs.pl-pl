@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: używanie CStatusBarCtrl do tworzenia obiektu CStatusBarCtrl'
 title: Używanie formantu CStatusBarCtrl do tworzenia obiektu CStatusBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bar controls [MFC], creating
 - CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
-ms.openlocfilehash: 12d5664b9fc59c4569ec2ee7db4ae883911f7bcd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 0b76065ce4e90600bdec7e4f4a89ee2c5bb14085
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202382"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Używanie formantu CStatusBarCtrl do tworzenia obiektu CStatusBarCtrl
 
@@ -18,7 +19,7 @@ Oto przykład typowego użycia [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-
 
 ### <a name="to-use-a-status-bar-control-with-parts"></a>Aby użyć kontrolki paska stanu z częściami
 
-1. Konstruowanie obiektu `CStatusBarCtrl`.
+1. Konstruowanie `CStatusBarCtrl` obiektu.
 
 1. Wywołaj [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight) , jeśli chcesz ustawić minimalną wysokość obszaru rysowania kontrolki pasek stanu.
 
@@ -32,5 +33,5 @@ W niektórych przypadkach pasek stanu musi wyświetlać tylko wiersz tekstu. W t
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Formanty](../mfc/controls-mfc.md)

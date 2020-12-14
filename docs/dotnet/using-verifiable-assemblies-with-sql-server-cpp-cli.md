@@ -1,32 +1,33 @@
 ---
+description: 'Dowiedz się więcej na temat: korzystanie z zestawów do zweryfikowania za pomocą SQL Server (C++/CLI)'
 title: Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
 ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b155fb0360fb373f5931f51de3af557d06858a71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204202"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
 
-Rozszerzone procedury składowane spakowany jako bibliotek dołączanych dynamicznie (dll), umożliwiają do rozszerzania funkcji programu SQL Server za pomocą funkcji przygotowane w programie Visual C++. Rozszerzone procedury składowane są implementowane jako funkcjami wewnątrz biblioteki dll. Oprócz funkcji, rozszerzone procedury składowane można również zdefiniować [typy zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i agregowanie funkcji (np. Suma lub średnia).
+Rozszerzone procedury składowane, spakowane jako biblioteki dołączane dynamicznie (dll), zapewniają sposób rozszerzania funkcji SQL Server za pomocą funkcji opracowanych z Visual C++. Rozszerzone procedury składowane są implementowane jako funkcje w bibliotekach DLL. Oprócz funkcji rozszerzone procedury składowane mogą także definiować [typy zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i funkcje agregujące (takie jak sum lub AVG).
 
-Gdy klient wykonuje procedurę przechowywaną, wyszukiwanie programu SQL Server dla biblioteki DLL skojarzone z rozszerzoną procedurę składowaną i ładuje bibliotekę DLL. Program SQL Server wywołuje żądanego rozszerzoną procedurę składowaną i wykonuje go w kontekście zabezpieczeń określonym. Rozszerzonej procedury składowanej, a następnie wyników przebiegów ustawia i zwraca parametry do serwera.
+Gdy klient wykonuje rozszerzoną procedurę składowaną, SQL Server wyszukuje bibliotekę DLL skojarzoną z rozszerzoną procedurą składowaną i ładuje bibliotekę DLL. SQL Server wywołuje żądaną rozszerzoną procedurę składowaną i wykonuje ją w określonym kontekście zabezpieczeń. Rozszerzona procedura składowana przekazuje zestawy wyników i zwraca parametry z powrotem do serwera.
 
-Program SQL Server udostępnia rozszerzenia do języka Transact-SQL (T-SQL), aby umożliwić zainstalowanie zestawy podlegające weryfikacji do programu SQL Server. Zestaw uprawnień programu SQL Server Określa kontekst zabezpieczeń, z następującymi poziomami zabezpieczeń:
+SQL Server udostępnia rozszerzenia Transact-SQL (T-SQL), aby umożliwić instalowanie zestawów do zweryfikowania w SQL Server. Zestaw uprawnień SQL Server określa kontekst zabezpieczeń z następującymi poziomami zabezpieczeń:
 
-- Tryb bez ograniczeń: Uruchamianie kodu na własne ryzyko; kod nie musi być sprawdzalnie bezpieczny.
+- Tryb nieograniczony: uruchamianie kodu na własne ryzyko; kod nie musi być zweryfikowany jako bezpieczny dla typu.
 
-- Tryb awaryjny: Uruchom weryfikowalny pod kątem zapewnienia kodu. skompilowane z/CLR: Safe.
+- Tryb awaryjny: uruchamianie sprawdzanego kodu zapewnienia obsługi; skompilowane z/CLR: Safe.
 
 > [!IMPORTANT]
-> Przestarzałe w programie Visual Studio 2015 i Visual Studio 2017 nie obsługuje **/CLR: pure** i **/CLR: Safe** tworzenie weryfikowalnych projektów. Jeśli potrzebujesz weryfikowalny kod, zalecamy Przetłumacz swój kod C#.
+> Program Visual Studio 2015 jest przestarzały, a program Visual Studio 2017 nie obsługuje opcji **/CLR: Pure** i **/CLR: Safe do bezpiecznego** tworzenia projektów, które są możliwe do zweryfikowania. Jeśli wymagany jest kod do zweryfikowania, zalecamy przetłumaczenie kodu do języka C#.
 
-Aby utworzyć i załadować zestawów weryfikowalnych do programu SQL Server, użyj polecenia języka Transact-SQL, instrukcja CREATE ASSEMBLY i wykonanie polecenia DROP ASSEMBLY w następujący sposób:
+Aby utworzyć i załadować zestaw możliwy do zweryfikowania do SQL Server, Użyj poleceń Transact-SQL CREATE ASSEMBLY i DROP ASSEMBLY w następujący sposób:
 
 ```sql
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
@@ -34,9 +35,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>
 ```
 
-Polecenie PERMISSION_SET Określa kontekst zabezpieczeń i może mieć wartości bez ograniczeń, bezpieczne lub ROZSZERZONE.
+PERMISSION_SET polecenie określa kontekst zabezpieczeń i może mieć wartości nieograniczone, bezpieczne lub rozszerzone.
 
-Ponadto można użyć polecenia CREATE FUNCTION powiązać nazwy metod w klasie:
+Ponadto można użyć polecenia CREATE FUNCTION, aby powiązać z nazwami metod w klasie:
 
 ```sql
 CREATE FUNCTION <FunctionName>(<FunctionParams>)
@@ -46,7 +47,7 @@ RETURNS returnType
 
 ## <a name="example"></a>Przykład
 
-Poniższy skrypt SQL (na przykład o nazwie "MyScript.sql"), ładuje zestaw do programu SQL Server i udostępnia metodę klasy:
+Poniższy skrypt SQL (na przykład o nazwie "webscript. SQL") ładuje zestaw do SQL Server i udostępnia metodę klasy:
 
 ```sql
 -- Create assembly without external access
@@ -70,12 +71,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go
 ```
 
-Skrypty SQL mogą być wykonywane interaktywnie w analizatorze kwerend SQL lub w wierszu polecenia przy użyciu narzędzia sqlcmd.exe. Następujące polecenie w wierszu nawiązanie połączenia z MójSerwer, używa domyślnej bazy danych, używa zaufane połączenie, danych wejściowych MyScript.sql i generuje MyResult.txt.
+Skrypty SQL mogą być wykonywane interaktywnie w analizatorze zapytań SQL lub w wierszu polecenia za pomocą narzędzia sqlcmd.exe. Poniższy wiersz polecenia nawiązuje połączenie z serwerem programu SQL Server przy użyciu domyślnej bazy danych, używa zaufanego połączenia, wyświetla obiekt webscript. SQL i wyprowadza MyResult.txt.
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)
