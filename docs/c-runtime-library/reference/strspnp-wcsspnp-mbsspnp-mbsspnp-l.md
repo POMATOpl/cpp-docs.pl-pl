@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _strspnp, _wcsspnp, _mbsspnp _mbsspnp_l'
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: 16c56f95fc89c1bb7b34c82cdf19c406b61c5a7e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7b043e96d99644e4534dd2de3202575e2e7cf833
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911045"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198729"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
@@ -97,7 +98,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_strspnp**, **_wcsspnp**i **_mbsspnp** zwracają wskaźnik do pierwszego znaku w *str* , który nie należy do zestawu znaków w *charset*. Każda z tych funkcji zwraca **wartość null** , jeśli *str* zawiera wyłącznie znaki z zestawu *znaków.* Dla każdej z tych procedur żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
+**_strspnp**, **_wcsspnp** i **_mbsspnp** zwracają wskaźnik do pierwszego znaku w *str* , który nie należy do zestawu znaków w *charset*. Każda z tych funkcji zwraca **wartość null** , jeśli *str* zawiera wyłącznie znaki z zestawu *znaków.* Dla każdej z tych procedur żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -113,7 +114,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** i **_wcsspnp** są wersjami znaków jednobajtowych i o szerokim znaku **_mbsspnp**. **_strspnp** i **_wcsspnp** zachowują się identycznie, aby **_mbsspnp** w przeciwnym razie; są one dostępne tylko dla tego mapowania i nie powinny być używane z innych przyczyn. Aby uzyskać więcej informacji, zobacz [Korzystanie z mapowań tekstu ogólnego](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** i **_wcsspnp** są wersjami znaków jednobajtowych i o szerokim znaku **_mbsspnp**. **_strspnp** i **_wcsspnp** zachowują się identycznie, aby **_mbsspnp** w przeciwnym razie; są one dostępne tylko dla tego mapowania i nie powinny być używane z innych przyczyn. Aby uzyskać więcej informacji, zobacz [Używanie mapowań Generic-Text](../../c-runtime-library/using-generic-text-mappings.md) i [mapowań tekstu ogólnego](../../c-runtime-library/generic-text-mappings.md).
 
 **_mbsspnp_l** jest identyczny, z tą różnicą, że używa zamiast tego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -121,9 +122,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsspnp**|\<mbstring. h>|
-|**_strspnp**|\<Używanie TCHAR. h>|
-|**_wcsspnp**|\<Używanie TCHAR. h>|
+|**_mbsspnp**|\<mbstring.h>|
+|**_strspnp**|\<tchar.h>|
+|**_wcsspnp**|\<tchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -153,7 +154,7 @@ abbage
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _calloc_dbg'
 title: _calloc_dbg
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-ms.openlocfilehash: eab17348e473a4f642e784defe4569e0e799299e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af7b9a5004a35f91710421774fc580bf91d9ab97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198860"
 ---
 # <a name="_calloc_dbg"></a>_calloc_dbg
 
@@ -75,17 +76,17 @@ Po pomyślnym zakończeniu funkcja ta zwraca wskaźnik do części użytkownika 
 
 ## <a name="remarks"></a>Uwagi
 
-**_calloc_dbg** to wersja debugowania funkcji [calloc](calloc.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_calloc_dbg** jest ograniczone do wywołania **calloc**. **Calloc** i **_calloc_dbg** Przydziel *liczbę* bloków pamięci w stercie podstawowym, ale **_calloc_dbg** oferuje kilka funkcji debugowania:
+**_calloc_dbg** jest wersją debugowania funkcji [calloc](calloc.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_calloc_dbg** zostanie zredukowane do wywołania **calloc**. Zarówno **calloc** , jak i **_calloc_dbg** przydzielają *liczbę* bloków pamięci w stercie podstawowym, ale **_calloc_dbg** oferuje kilka funkcji debugowania:
 
 - Bufory po obu stronach części użytkownika bloku do testowania pod kątem wycieków.
 
 - Parametr typu bloku służący do śledzenia określonych typów alokacji.
 
-- *Nazwa pliku*/*LineNumber* informacje w celu ustalenia pochodzenia żądań alokacji.
+- *Nazwa pliku* / *LineNumber* informacje w celu ustalenia pochodzenia żądań alokacji.
 
 **_calloc_dbg** przydziela każdy blok pamięci z nieco większym miejscem niż żądany *rozmiar*. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Gdy blok zostanie przydzielony, część użytkownika bloku jest wypełniania wartościami 0xCD a każdy bufor zastąpienia jest wypełniany wartościami 0xFD.
 
-**_calloc_dbg** ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiedzie się; **EINVAL** jest zwracany, jeśli ilość wymaganej pamięci (łącznie z wyżej wymienionym obciążeniem) przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_calloc_dbg** ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiedzie się; **EINVAL** jest zwracany, jeśli ilość wymaganej pamięci (łącznie z podaną wcześniej obciążeniem) przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywołaniem standardowej funkcji sterty a jej wersją debugowania w kompilacji debugowania aplikacji, zobacz [wersje debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

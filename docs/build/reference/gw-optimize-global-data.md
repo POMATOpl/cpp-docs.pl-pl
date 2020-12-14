@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/GW (Optymalizuj dane globalne)
 title: /Gw (Optymalizuj dane globalne)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-ms.openlocfilehash: 8afdb21defbbc8309b27749ab18a40f9555139e5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 2f9a6b9452f09473e650a5453ad2600cc73f0c00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200146"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (Optymalizuj dane globalne)
 
-Pakiet danych globalnych w sekcjach COMDAT optymalizacji.
+Dane globalne pakietu w sekcjach COMDAT na potrzeby optymalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,29 +27,29 @@ Pakiet danych globalnych w sekcjach COMDAT optymalizacji.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Gw** opcji powoduje, że kompilator pakiet danych globalnych w poszczególnych sekcjach COMDAT. Domyślnie **/Gw** jest wyłączona i musi być jawnie włączone. Aby wyłączyć go jawnie, użyj **/Gw-** . Gdy oba **/Gw** i [/GL](gl-whole-program-optimization.md) są włączone, konsolidator używa optymalizacji całego programu do porównywania sekcje COMDAT na wiele plików obiektu, aby wykluczyć nieużywanych danych globalnych lub scalania identyczne tylko do odczytu danych globalnych. To znacznie zmniejszyć rozmiar wynikowego pliku binarnego pliku wykonywalnego.
+Opcja **/GW** powoduje, że kompilator pakuje dane globalne w poszczególnych sekcjach COMDAT. Domyślnie **/GW** jest wyłączony i musi być jawnie włączony. Aby jawnie ją wyłączyć, użyj **/GW-**. Gdy włączone są zarówno **/GW** , jak i [/GL](gl-whole-program-optimization.md) , konsolidator korzysta z optymalizacji całego programu, aby porównać sekcje COMDAT w wielu plikach obiektów w celu wykluczenia danych globalnych niezwiązanych z odwołaniami lub scalenia identycznych danych globalnych tylko do odczytu. Może to znacznie zmniejszyć rozmiar wynikowego binarnego pliku wykonywalnego.
 
-Gdy kompilujesz i łączysz oddzielnie, można użyć [/OPT: REF](opt-optimizations.md) — opcja konsolidatora do wykluczenia z pliku wykonywalnego, nieużywane dane globalne w plikach obiektowych skompilowany przy użyciu **/Gw** opcji.
+Gdy kompilujesz i łączsz oddzielnie, możesz użyć opcji konsolidatora [/OPT: ref](opt-optimizations.md) , aby wykluczyć z pliku wykonywalnego dane globalne, które nie są używane w plikach obiektów skompilowanych za pomocą opcji **/GW** .
 
-Można również użyć [/OPT: ICF](opt-optimizations.md) i [opcję/LTCG](ltcg-link-time-code-generation.md) opcje konsolidatora ze sobą w celu scalenia w pliku wykonywalnym, wszystkie identyczne tylko do odczytu danych globalnych na wiele plików obiektu skompilowanego z **/Gw** opcji.
+Można również użyć opcji konsolidatora [/OPT: ICF](opt-optimizations.md) i [/LTCG](ltcg-link-time-code-generation.md) , aby scalić w pliku wykonywalnym wszystkie identyczne dane globalne tylko do odczytu dla wielu plików obiektów skompilowanych przy użyciu opcji **/GW** .
 
-Aby uzyskać więcej informacji, zobacz [Przedstawiamy /Gw przełącznika kompilatora](https://devblogs.microsoft.com/cppblog/introducing-gw-compiler-switch/) na C++ Blog zespołu ds.
+Aby uzyskać więcej informacji, zobacz [wprowadzenie do przełącznika kompilatora/GW](https://devblogs.microsoft.com/cppblog/introducing-gw-compiler-switch/) na blogu zespołu języka C++.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **C/C++** folderu.
+1. Wybierz folder **C/C++** .
 
-1. Wybierz **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **wiersza polecenia** .
 
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Gw** , a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby obejmowała **/GW** , a następnie wybierz **przycisk OK**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

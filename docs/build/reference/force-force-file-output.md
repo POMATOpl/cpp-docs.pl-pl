@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/FORCE (Wymuś dane wyjściowe pliku)
 title: /FORCE (Wymuszaj produkt wyjściowy pliku)
 ms.date: 07/19/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d84810828eef85c4db3558b70953630c70f8f82e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200458"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Wymuszaj produkt wyjściowy pliku)
 
@@ -49,7 +50,7 @@ Jeśli moduł jest kompilowany z **/CLR**, **/Force** nie utworzy obrazu.
 
 1. Wpisz opcję w polu **dodatkowe opcje** .
 
-Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
@@ -58,4 +59,4 @@ Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilato
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4838'
 title: Ostrzeżenie kompilatora (poziom 1) C4838
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4838
 ms.assetid: fea07924-5feb-4ed4-99b5-1a8c41d28db6
-ms.openlocfilehash: c3ddc861e5da271903372eac1ef1e8f6916e06df
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2676ef05934ee3c5e6afbf6df8d6d7a306db68ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197963"
 ---
 # <a name="compiler-warning-level-1-c4838"></a>Ostrzeżenie kompilatora (poziom 1) C4838
 
@@ -19,7 +20,7 @@ Konwersja z "type_1" na "type_2" wymaga konwersji z zawężaniem
 
 Znaleziono niejawną konwersję zawężaną podczas korzystania z inicjalizacji agregacji lub listy.
 
-Język C umożliwia niejawne zawężanie konwersji w przypisaniach C++ i inicjalizacji, a nawet w przypadku nieoczekiwanej zawężania jest przyczyną wystąpienia wielu błędów kodu. Aby kod był bezpieczniejszy, C++ Standard wymaga komunikatu diagnostycznego, gdy na liście inicjalizacji wystąpi konwersja wąski. W wizualizacji C++, Diagnostyka jest [błędem kompilatora C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) , gdy jest używana składnia Jednolite inicjowanie obsługiwana na początku w programie Visual Studio 2015. Kompilator generuje ostrzeżenie C4838, gdy używana jest składnia inicjalizacji listy lub agregacji obsługiwanej przez Visual Studio 2013.
+Język C umożliwia niejawne zawężanie konwersji w przypisaniach i inicjalizacji, a w języku C++ występuje kolor, nawet jeśli nieoczekiwane Zawężanie jest przyczyną wystąpienia wielu błędów kodu. Aby zapewnić bezpieczniejsze użycie kodu, w standardzie C++ wymagany jest komunikat diagnostyczny, gdy na liście inicjalizacji występuje konwersja z zawężaniem. W Visual C++ Diagnostyka jest [błędem kompilatora C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) w przypadku korzystania ze składni jednolitej inicjalizacji obsługiwanej w programie Visual Studio 2015. Kompilator generuje ostrzeżenie C4838, gdy używana jest składnia inicjalizacji listy lub agregacji obsługiwanej przez Visual Studio 2013.
 
 Zawężanie konwersji może być odpowiednie, gdy wiadomo, że możliwy zakres przekonwertowanych wartości może pasować do obiektu docelowego. W takim przypadku wiadomo, że masz więcej niż kompilator. W przypadku zamierzonego zawężania konwersji należy zapewnić jawne użycie rzutowania statycznego. W przeciwnym razie ten komunikat ostrzegawczy prawie zawsze wskazuje, że w kodzie znajduje się błąd. Możesz rozwiązać ten problem, upewniając się, że inicjowane obiekty mają wystarczająco duże typy, aby obsłużyć dane wejściowe.
 

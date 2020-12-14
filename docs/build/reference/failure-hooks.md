@@ -1,21 +1,22 @@
 ---
+description: 'Dowiedz się więcej o: punkty zaczepienia awarii'
 title: Punkty zaczepienia błędów
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0e74e3413fc81505941dd6f4545988a0d39436f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200731"
 ---
 # <a name="failure-hooks"></a>Punkty zaczepienia błędów
 
-Punkt zaczepienia błędów jest włączone w taki sam sposób jak [punktu zaczepienia powiadomień](notification-hooks.md). Nadal musi rutynowych hook wróć odpowiednią wartość przetwarzania (HINSTANCE lub FARPROC) lub 0, aby wskazać, że należy zgłosić wyjątek.
+Punkt zaczepienia awarii jest włączony w taki sam sposób, jak punkt [zaczepienia powiadomienia](notification-hooks.md). Procedura Hook musi zwrócić odpowiednią wartość, aby można było kontynuować przetwarzanie (HINSTANCE lub FARPROC) lub 0 w celu wskazania, że wyjątek powinien zostać wygenerowany.
 
-Zmiennej wskaźnika, który odwołuje się do funkcji zdefiniowanej przez użytkownika jest:
+Zmienna wskaźnika odwołująca się do funkcji zdefiniowanej przez użytkownika to:
 
 ```
 // This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}
@@ -23,20 +24,20 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-**DelayLoadInfo** struktura zawiera odpowiednie dane konieczne do dokładnego raportowania błędów, z uwzględnieniem wartości z `GetLastError`.
+Struktura **DelayLoadInfo** zawiera wszystkie odpowiednie dane niezbędne do dokładnego raportowania błędu, w tym wartość z `GetLastError` .
 
-Jeśli powiadomienie jest **dliFailLoadLib**, funkcja podłączania może zwrócić:
+Jeśli powiadomienie jest **dliFailLoadLib**, funkcja Hook może zwrócić:
 
-- 0, jeśli aplikacja nie może obsłużyć błąd.
+- 0, jeśli nie może obsłużyć błędu.
 
-- HMODULE, jeśli hook awarii problem został rozwiązany i załadowany sama biblioteka.
+- HMODULE, jeśli hak awarii rozwiązał problem i załadował samą bibliotekę.
 
-Jeśli powiadomienie jest **dliFailGetProc**, funkcja podłączania może zwrócić:
+Jeśli powiadomienie jest **dliFailGetProc**, funkcja Hook może zwrócić:
 
-- 0, jeśli aplikacja nie może obsłużyć błąd.
+- 0, jeśli nie może obsłużyć błędu.
 
-- Proc prawidłowy adres (importu funkcji), jeśli dołączyć awarii powiodło się pobieranie sam adres.
+- Prawidłowy adres procesu (adres funkcji importowania), jeśli punkt zaczepienia awarii powiódł się przy pobieraniu samego adresu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa błędów oraz powiadomienia](error-handling-and-notification.md)
+[Obsługa błędów i powiadomienia](error-handling-and-notification.md)

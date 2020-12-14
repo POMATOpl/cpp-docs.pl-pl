@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/LINKERMEMBER
 title: /LINKERMEMBER
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - LINKERMEMBER dumpbin option
 - -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-ms.openlocfilehash: a0456fd9ed1729b4a6cfa200a54ba211a64e94ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76c842bcc2299b4245847e7d4e9a64656e88d2d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199392"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
 
@@ -23,10 +24,10 @@ ms.locfileid: "62216588"
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja wyświetla symbole publiczne zdefiniowane w bibliotece. Należy określić argument 1, aby wyświetlić symbole w kolejności obiektu, wraz z ich przesunięcia. Należy określić argument 2 przesunięcia i numery indeksu obiektów, a następnie wyświetlona lista symboli w kolejności alfabetycznej, wraz z indeks obiektów dla każdego. Aby uzyskać zarówno dane wyjściowe, należy określić /LINKERMEMBER bez argumentów o liczbie.
+Ta opcja powoduje wyświetlenie symboli publicznych zdefiniowanych w bibliotece. Określ 1 argument, aby wyświetlić symbole w kolejności obiektów, wraz z ich przesunięciami. Określ 2 argument, aby wyświetlić przesunięcia i numery indeksów obiektów, a następnie wyświetlić listę symboli w kolejności alfabetycznej, wraz z indeksem obiektów dla każdego z nich. Aby uzyskać dane wyjściowe, należy określić/LINKERMEMBER bez argumentu Number.
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w przypadku plików utworzonych przy użyciu opcji kompilatora [/GL](gl-whole-program-optimization.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje DUMPBIN](dumpbin-options.md)
+[Opcje polecenia DUMPBIN](dumpbin-options.md)

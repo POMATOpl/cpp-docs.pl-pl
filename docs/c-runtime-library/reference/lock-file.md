@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _lock_file'
 title: _lock_file
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1eba161b5083235c1ef0724284e74e6f0f7df0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198833"
 ---
 # <a name="_lock_file"></a>_lock_file
 
@@ -61,7 +62,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lock_file**|\<stdio. h>|
+|**_lock_file**|\<stdio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -140,7 +141,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

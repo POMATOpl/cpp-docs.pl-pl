@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/Gy (Włącz łączenie Function-Level)
 title: /Gy (Włączenie łączenia na poziomie funkcji)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 8724ae4d018948c0f6aa9456f229db96878d7bf2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c4136b25001f7f6d6729b9c6089995d1bcd71bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200133"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Włączenie łączenia na poziomie funkcji)
 
-Umożliwia kompilatorowi pakowanie poszczególnych funkcji w postaci spakowanych funkcji (COMDATs).
+Umożliwia kompilatorowi pakowanie poszczególnych funkcji w postaci spakowanych funkcji (COMDAT).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,26 +33,26 @@ Umożliwia kompilatorowi pakowanie poszczególnych funkcji w postaci spakowanych
 
 ## <a name="remarks"></a>Uwagi
 
-Konsolidator wymaga, aby funkcje były pakowane oddzielnie jako COMDATs do wykluczania lub zamawiania poszczególnych funkcji w pliku DLL lub exe.
+Konsolidator wymaga, aby funkcje zostały opakowane oddzielnie jako COMDAT, aby wykluczyć lub zamówić poszczególne funkcje w pliku DLL lub exe.
 
-Za pomocą opcji konsolidatora [/OPT (Optymalizacje)](opt-optimizations.md) można wykluczyć z pliku .exe nieodwołane funkcje pakietowe.
+Można użyć opcji konsolidatora [/opt (optymalizacje)](opt-optimizations.md) do wykluczenia spakowanych funkcji, które nie są używane, z pliku. exe.
 
-Za pomocą opcji konsolidatora [/ORDER (Umieść funkcje w kolejności)](order-put-functions-in-order.md) można uwzględnić spakowane funkcje w określonej kolejności w pliku exe.
+Można użyć opcji konsolidatora [/Order (Put funkcje w kolejności)](order-put-functions-in-order.md) , aby dołączyć spakowane funkcje w określonej kolejności w pliku. exe.
 
-Wbudowane funkcje są zawsze pakowane, jeśli są tworzone jako wywołania (co występuje, na przykład, jeśli inlining jest wyłączony lub wziąć adres funkcji). Ponadto funkcje elementów członkowskich języka C++ zdefiniowane w deklaracji klasy są automatycznie pakowane; inne funkcje nie są i wybranie tej opcji jest wymagane do skompilowania ich jako spakowane funkcje.
+Wbudowane funkcje są zawsze opakowane, jeśli są tworzone jako wywołania (które występują na przykład wtedy, gdy funkcja deokładziny jest wyłączona lub przyjmujesz adres funkcji). Ponadto funkcje składowe języka C++ zdefiniowane w deklaracji klasy są automatycznie spakowane; inne funkcje nie są, a wybranie tej opcji jest wymagane do skompilowania ich jako spakowane funkcje.
 
 > [!NOTE]
-> Opcja [/ZI,](z7-zi-zi-debug-information-format.md) używana do edycji i kontynuowania, automatycznie ustawia opcję **/Gy.**
+> Opcja [/Zi](z7-zi-zi-debug-information-format.md) używana do edycji i kontynuowania powoduje automatyczne ustawienie opcji **/Gy** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij folder **C/C++.**
+1. Kliknij folder **C/C++** .
 
-1. Kliknij stronę właściwości **Generowanie kodu.**
+1. Kliknij stronę właściwości **generowanie kodu** .
 
-1. Zmodyfikuj **właściwość Włącz łączenie na poziomie funkcji.**
+1. Zmodyfikuj właściwość **Włącz łączenie Function-Level** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -60,4 +61,4 @@ Wbudowane funkcje są zawsze pakowane, jeśli są tworzone jako wywołania (co w
 ## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: localtime_s, _localtime32_s, _localtime64_s'
 title: localtime_s, _localtime32_s, _localtime64_s
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 856ab5610d176e3a5b2b928bda36154dd071fea5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218614"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198820"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -92,14 +93,14 @@ W przypadku pierwszych dwóch warunków błędu procedura obsługi nieprawidłow
 
 Funkcja **localtime_s** konwertuje czas przechowywania jako wartość [time_t](../../c-runtime-library/standard-types.md) i zapisuje wynik w strukturze typu [TM](../../c-runtime-library/standard-types.md). Wartość **Time_t** *sourceTime* reprezentuje sekundy, które upłynęły od północy (00:00:00), 1 stycznia 1970, UTC. Ta wartość jest zazwyczaj uzyskiwana z funkcji [Time](time-time32-time64.md) .
 
-**localtime_s** poprawność lokalnej strefy czasowej, jeśli użytkownik najpierw ustawi globalną **zmienną**środowiskową. Gdy **jest ustawiona wartość opcji** $, trzy inne zmienne środowiskowe (**_timezone**, **_daylight**i **_tzname**) również są ustawiane automatycznie. Jeśli zmienna **$** nie jest ustawiona, **localtime_s** próbuje użyć informacji o strefie czasowej określonych w aplikacji Data/godzina w panelu sterowania. Jeśli te informacje nie zostaną uzyskane, PST8PDT, który oznacza strefę czasową pacyficznego, jest używany domyślnie. Aby uzyskać opis tych zmiennych, zobacz [_tzset](tzset.md) . $ **To rozszerzenie** firmy Microsoft, a nie część standardowej definicji ANSI **localtime**.
+**localtime_s** poprawność lokalnej strefy czasowej, jeśli użytkownik najpierw ustawi globalną **zmienną** środowiskową. Gdy **jest ustawiona wartość opcji** $, trzy inne zmienne środowiskowe (**_timezone**, **_daylight** i **_tzname**) również są ustawiane automatycznie. Jeśli zmienna **$** nie jest ustawiona, **localtime_s** próbuje użyć informacji o strefie czasowej określonych w aplikacji Data/godzina w panelu sterowania. Jeśli te informacje nie zostaną uzyskane, PST8PDT, który oznacza strefę czasową pacyficznego, jest używany domyślnie. Aby uzyskać opis tych zmiennych, zobacz [_tzset](tzset.md) . $ **To rozszerzenie** firmy Microsoft, a nie część standardowej definicji ANSI **localtime**.
 
 > [!NOTE]
 > Środowisko docelowe powinno próbować określić, czy obowiązuje czas letni.
 
 **_localtime64_s**, która korzysta ze struktury **__time64_t** , umożliwia określenie dat, które mają być wyrażone do 23:59:59, 18 stycznia 3001, uniwersalny czas koordynowany (UTC), a **_localtime32_s** reprezentuje daty do 23:59:59 18 stycznia, 2038, UTC.
 
-**localtime_s** jest funkcją wbudowaną, która oblicza **_localtime64_s**, a **time_t** jest równoznaczna z **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t**32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **localtime_s** ocenę **_localtime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
+**localtime_s** jest funkcją wbudowaną, która oblicza **_localtime64_s**, a **time_t** jest równoznaczna z **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t** 32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **localtime_s** ocenę **_localtime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
 Pola typu struktury [TM](../../c-runtime-library/standard-types.md) przechowują następujące wartości, z których każdy jest **`int`** .
 
@@ -180,7 +181,7 @@ int main( void )
 Fri Apr 25 01:19:27 PM
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

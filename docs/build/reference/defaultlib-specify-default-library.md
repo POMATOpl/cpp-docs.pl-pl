@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/DEFAULTLIB (Określ bibliotekę domyślną)
 title: /DEFAULTLIB (Określ bibliotekę domyślną)
 ms.date: 05/29/2018
 f1_keywords:
@@ -10,45 +11,45 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9abaf158ed01b3e0a04d29c55d213c8749462c43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293865"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201693"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Określ bibliotekę domyślną)
 
-Określ bibliotekę domyślną do przeszukania w celu rozpoznawania odwołań zewnętrznych.
+Określ domyślną bibliotekę do wyszukania, aby rozpoznać odwołania zewnętrzne.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ DEFAULTLIB**:_biblioteki_
+> **/DEFAULTLIB**:_Biblioteka_
 
 ### <a name="arguments"></a>Argumenty
 
-*Biblioteka*<br/>
-Nazwa biblioteki wyszukiwania podczas rozpoznawania odwołań zewnętrznych.
+*biblioteki*<br/>
+Nazwa biblioteki do przeszukania podczas rozpoznawania odwołań zewnętrznych.
 
 ## <a name="remarks"></a>Uwagi
 
-**/DEFAULTLIB** opcja dodaje jeden *biblioteki* listę bibliotek, które łączy wyszukiwania podczas rozpoznawania odwołań. Określony za pomocą biblioteki **/DEFAULTLIB** przeszukiwany jest po biblioteki określone jawnie w wierszu polecenia i przed domyślne biblioteki o nazwie w plikach .obj.
+Opcja **/DEFAULTLIB** dodaje jedną *bibliotekę* do listy bibliotek, które łączą wyszukiwanie podczas rozpoznawania odwołań. Biblioteka określona za pomocą **/DEFAULTLIB** jest przeszukiwana po określeniu bibliotek jawnie w wierszu polecenia i przed domyślnymi bibliotekami nazwanymi w plikach. obj.
 
-Gdy jest używana bez argumentów, [/nodefaultlib (Ignoruj wszystkie domyślne biblioteki)](nodefaultlib-ignore-libraries.md) opcja przesłania wszystkie **/DEFAULTLIB**:*biblioteki* opcje. **/Nodefaultlib**:*biblioteki* opcję zastąpienia **/DEFAULTLIB**:*biblioteki* gdy takie same *biblioteki*nazwa jest określona w obu.
+W przypadku użycia bez argumentów opcja [/NODEFAULTLIB (Ignoruj wszystkie biblioteki domyślne)](nodefaultlib-ignore-libraries.md) zastępuje wszystkie opcje **/DEFAULTLIB**:*Library* . Opcja **/NODEFAULTLIB**:*Library* przesłania **/DEFAULTLIB**:*Library* , gdy ta sama nazwa *biblioteki* jest określona w obu.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
-1. W **dodatkowe opcje**, wprowadź **/DEFAULTLIB**:*biblioteki* opcję dla każdej biblioteki do wyszukania. Wybierz **OK** Aby zapisać zmiany.
+1. W obszarze **Opcje dodatkowe** wprowadź opcję **/DEFAULTLIB**:*Library* dla każdej biblioteki do przeszukania. Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
-- [Opcje konsolidatora MSVC](linker-options.md)
+- [MSVC Opcje konsolidatora](linker-options.md)

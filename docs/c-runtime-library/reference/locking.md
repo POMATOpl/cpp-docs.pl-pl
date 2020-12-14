@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _locking'
 title: _locking
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: c1c211ffaa63a0e4711374b01b0530ed8db20dfb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 087fc65edbb30bdb6e36b7410f29cf165b119d38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198807"
 ---
 # <a name="_locking"></a>_locking
 
@@ -97,7 +98,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_locking**|\<IO. h> i \<sys/blokowanie. h>|\<errno. h>|
+|**_locking**|\<io.h> i \<sys/locking.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -156,7 +157,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_lockingtxt"></a>Dane wejściowe: crt_locking. txt
+### <a name="input-crt_lockingtxt"></a>Dane wejściowe: crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.

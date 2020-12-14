@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny NMAKE U1035'
 title: Błąd krytyczny NMAKE U1035
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - U1035
 ms.assetid: 68f0cc59-007e-4109-ac30-7ac4ac447e6d
-ms.openlocfilehash: 3eda424574dfa48901cf4dc6aea3b28beb739dc0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e41b65cbec43a0b19e06767c555df9cfede9b69c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80193722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197754"
 ---
 # <a name="nmake-fatal-error-u1035"></a>Błąd krytyczny NMAKE U1035
 
 Błąd składniowy: oczekiwano separatora ":" lub "="
 
-Oczekiwano dwukropek ( **:** ) lub znaku równości ( **=** ).
+Oczekiwano dwukropek (**:**) lub znaku równości ( **=** ).
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać ten problem, sprawdzając następujące możliwe przyczyny
 

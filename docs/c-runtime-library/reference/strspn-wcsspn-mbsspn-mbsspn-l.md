@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: strspn, wcsspn, _mbsspn, _mbsspn_l'
 title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 366e6f306c119ae7bc712fb3a97db6fbe210b5a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198846"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -119,9 +120,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strspn**|\<> String. h|
-|**wcsspn**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbsspn**, **_mbsspn_l**|\<mbstring. h>|
+|**strspn**|\<string.h>|
+|**wcsspn**|\<string.h> lub \<wchar.h>|
+|**_mbsspn**, **_mbsspn_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -152,11 +153,11 @@ int main( void )
 The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

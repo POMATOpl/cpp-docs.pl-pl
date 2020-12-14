@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/DEF (Określ plik Module-Definition)
 title: /DEF (Określ plik definicji modułu)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9178004621a55f999f7c2636eaa5b697d2de98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201706"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Określ plik definicji modułu)
 
@@ -27,29 +28,29 @@ ms.locfileid: "62272311"
 ## <a name="arguments"></a>Argumenty
 
 *Nazwa pliku*<br/>
-Nazwa pliku definicji modułu (.def), które zostaną przekazane do konsolidatora.
+Nazwa pliku definicji modułu (. def), która ma zostać przeniesiona do konsolidatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/DEF przekazuje plik definicji modułu (.def) do konsolidatora. Można określić tylko jeden plik .def do łącza. Aby uzyskać szczegółowe informacje dotyczące plików o rozszerzeniu def, zobacz [pliki definicji modułu](module-definition-dot-def-files.md).
+Opcja/DEF przekazuje plik definicji modułu (. def) do konsolidatora. Tylko jeden plik. def może być określony do łączenia. Aby uzyskać szczegółowe informacje na temat plików. def, zobacz [pliki definicji modułów](module-definition-dot-def-files.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **dane wejściowe** stronę właściwości.
+1. Kliknij stronę właściwości **dane wejściowe** .
 
-1. Modyfikowanie **plik definicji modułu** właściwości.
+1. Zmodyfikuj właściwość **pliku definicji modułu** .
 
-Aby określić plik .def z w środowisku deweloperskim, należy dodać go do projektu, wraz z innymi plikami i następnie określ plik aby opcja/DEF.
+Aby określić plik. def w środowisku deweloperskim, należy dodać go do projektu wraz z innymi plikami, a następnie określić plik jako opcję/DEF.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ModuleDefinitionFile%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ModuleDefinitionFile%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

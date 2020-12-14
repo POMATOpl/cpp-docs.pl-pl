@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Podnosiexception funkcja'
 title: RaiseException — Funkcja
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5353757ff04ab12c0fc61da6b2e98b2df835ef0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198443"
 ---
 # <a name="raiseexception-function"></a>RaiseException — Funkcja
 
@@ -28,7 +29,7 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parametry
 
-*wysoki*<br/>
+*godz.*<br/>
 Kod wyjątku dla zgłoszonego wyjątku; oznacza to, że HRESULT operacji zakończonej niepowodzeniem.
 
 *dwExceptionFlags*<br/>
@@ -38,7 +39,7 @@ Flaga wskazująca ciągły wyjątek (wartość flagi to zero) lub wyjątek nieci
 
 Wywołuje wyjątek w wątku wywołującym.
 
-Aby uzyskać więcej informacji, zobacz Funkcja `RaiseException` systemu Windows.
+Aby uzyskać więcej informacji, zobacz funkcja systemu Windows `RaiseException` .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -48,4 +49,4 @@ Aby uzyskać więcej informacji, zobacz Funkcja `RaiseException` systemu Windows
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)

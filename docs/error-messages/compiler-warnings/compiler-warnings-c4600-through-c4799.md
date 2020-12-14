@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: ostrzeżenia kompilatora C4600 do C4799'
 title: Ostrzeżenia kompilatora — od C4600 do C4799
 ms.date: 04/21/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - C4767
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 638af32b27f8d66086f3a39b74ecd46fdbb4649d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9290f01d24e628ead4649c28ecbfacfec0803591
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198001"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Ostrzeżenia kompilatora — od C4600 do C4799
 
@@ -55,18 +56,18 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 
 ## <a name="warning-messages"></a>Komunikaty ostrzegawcze
 
-|Ostrzeżenie|Komunikat|
+|Ostrzeżenie|Wiadomość|
 |-------------|-------------|
 |[Ostrzeżenie kompilatora (poziom 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma "Nazwa makra": oczekiwano prawidłowego ciągu niepustego|
 |[Ostrzeżenie kompilatora (poziom 1) C4602](compiler-warning-level-1-c4602.md)|#pragma pop_macro: "Nazwa makra" nie Poprzednia #pragma push_macro dla tego identyfikatora|
 |[Ostrzeżenie kompilatora (poziom 1) C4603](compiler-warning-level-1-c4603.md)|"*Identyfikator*": makro nie jest zdefiniowane lub definicja różni się po użyciu prekompilowanego nagłówka|
 |Ostrzeżenie kompilatora (poziom 1) C4604|"*Type*": przekazywanie argumentu przez wartość w obrębie natywnej i zarządzanej granicy wymaga prawidłowego konstruktora kopiującego. W przeciwnym razie zachowanie środowiska uruchomieniowego jest niezdefiniowane|
-|Ostrzeżenie kompilatora (poziom 1) C4605|"/D*makro*" określone w bieżącym wierszu polecenia, ale nie zostało określone podczas kompilowania prekompilowanego nagłówka|
+|Ostrzeżenie kompilatora (poziom 1) C4605|"/D *makro*" określone w bieżącym wierszu polecenia, ale nie zostało określone podczas kompilowania prekompilowanego nagłówka|
 |[Ostrzeżenie kompilatora (poziom 1) C4606](../../error-messages/compiler-warnings/compiler-warning-level-1-c4606.md)|#pragma Ostrzeżenie: zignorowano komunikat "Warning number"; Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń|
 |[Ostrzeżenie kompilatora (poziom 3) C4608](../../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|element "union_member" został już zainicjowany przez inny element członkowski Unii na liście inicjatora "union_member"|
 |Ostrzeżenie kompilatora (poziom 3, błąd) C4609|element "*Type1*" pochodzi od domyślnego interfejsu "*Interface*" w typie "*Type2*". Użyj innego domyślnego interfejsu dla elementu "*Type1*" lub Przerwij relację bazową/pochodną.|
 |[Ostrzeżenie kompilatora (poziom 4) C4610](../../error-messages/compiler-warnings/compiler-warning-level-4-c4610.md)|nie można utworzyć wystąpienia obiektu "Class" — wymagany Konstruktor zdefiniowany przez użytkownika|
-|[Ostrzeżenie kompilatora (poziom 4) C4611](../../error-messages/compiler-warnings/compiler-warning-level-4-c4611.md)|Interakcja między "funkcją" C++ i zniszczeniem obiektu nie jest przenośna|
+|[Ostrzeżenie kompilatora (poziom 4) C4611](../../error-messages/compiler-warnings/compiler-warning-level-4-c4611.md)|Interakcja między "funkcją" i zniszczeniem obiektu języka C++ nie jest przenośna|
 |[Ostrzeżenie kompilatora (poziom 1) C4612](compiler-warning-level-1-c4612.md)|błąd w nazwie pliku dołączanego|
 |[Ostrzeżenie kompilatora (poziom 1) C4613](compiler-warning-level-1-c4613.md)|"*symbol*": Klasa segmentu nie może być zmieniona|
 |[Ostrzeżenie kompilatora (poziom 1) C4615](../../error-messages/compiler-warnings/compiler-warning-level-1-c4615.md)|Ostrzeżenie #pragma: nieznany typ ostrzeżenia użytkownika|
@@ -80,7 +81,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |[Ostrzeżenie kompilatora (poziom 1) C4624](../../error-messages/compiler-warnings/compiler-warning-level-1-c4624.md)|"Klasa pochodna": destruktor został niejawnie zdefiniowany jako usunięty, ponieważ destruktor klasy bazowej jest niedostępny lub usunięty|
 |[Ostrzeżenie kompilatora (poziom 4) C4625](../../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md)|"Klasa pochodna": Konstruktor kopiujący został niejawnie zdefiniowany jako usunięty, ponieważ Konstruktor kopiujący klasy bazowej jest niedostępny lub usunięty|
 |[Ostrzeżenie kompilatora (poziom 4) C4626](../../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md)|"Klasa pochodna": operator przypisania został niejawnie zdefiniowany jako usunięty, ponieważ operator przypisania klasy bazowej jest niedostępny lub usunięty|
-|[Ostrzeżenie kompilatora (poziom 1) C4627](../../error-messages/compiler-warnings/compiler-warning-level-1-c4627.md)|"\<identyfikator >": pominięto podczas wyszukiwania użycia prekompilowanego nagłówka|
+|[Ostrzeżenie kompilatora (poziom 1) C4627](../../error-messages/compiler-warnings/compiler-warning-level-1-c4627.md)|" \<identifier> ": pominięto podczas wyszukiwania użycia prekompilowanego nagłówka|
 |[Ostrzeżenie kompilatora (poziom 1) C4628](../../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md)|dwuznaki nieobsługiwane z -Ze. Sekwencja znaków "ungraph" nie jest interpretowana jako alternatywny token dla "% s"|
 |[Ostrzeżenie kompilatora (poziom 4) C4629](compiler-warning-level-4-c4629.md)|użyto podgrafu, sekwencja znaków "regraf" interpretowana jako token "char" (Wstaw spację między dwoma znakami, jeśli nie jest to zamierzone)|
 |[Ostrzeżenie kompilatora (poziom 1) C4630](../../error-messages/compiler-warnings/compiler-warning-level-1-c4630.md)|"symbol": specyfikator klasy magazynu "extern" jest niedozwolony w definicji składowej|
@@ -90,7 +91,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |[Ostrzeżenie kompilatora (poziom 4) C4634](compiler-warning-level-4-c4634.md)|Obiekt docelowy komentarza dokumentu XML: nie można zastosować: Przyczyna|
 |[Ostrzeżenie kompilatora (poziom 3) C4635](compiler-warning-level-3-c4635.md)|Obiekt docelowy komentarza dokumentu XML: nieprawidłowo sformułowany kod XML: Przyczyna|
 |[Ostrzeżenie kompilatora (poziom 3) C4636](compiler-warning-level-3-c4636.md)|Komentarz dokumentu XML zastosowany do konstrukcji: tag wymaga niepustego atrybutu "Attribute".|
-|[Ostrzeżenie kompilatora (poziom 3 i poziom 4) C4637](compiler-warning-level-3-c4637.md)|Obiekt docelowy komentarza dokumentu XML: \<zawiera znacznik > odrzucony. Przyczyna|
+|[Ostrzeżenie kompilatora (poziom 3 i poziom 4) C4637](compiler-warning-level-3-c4637.md)|Obiekt docelowy komentarza dokumentu XML: \<include> tag odrzucony. Przyczyna|
 |[Ostrzeżenie kompilatora (poziom 3) C4638](compiler-warning-level-3-c4638.md)|Obiekt docelowy komentarza dokumentu XML: odwołanie do nieznanego symbolu "symbol".|
 |[Ostrzeżenie kompilatora (poziom 4) C4639](../../error-messages/compiler-warnings/compiler-warning-level-4-c4639.md)|Błąd MSXML, komentarze dokumentu XML nie zostaną przetworzone. Przyczyna|
 |[Ostrzeżenie kompilatora (poziom 3) C4640](../../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md)|'instancja': konstrukcja lokalnego obiektu statycznego nie jest bezpieczna pod względem wątków|
@@ -129,7 +130,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |[Ostrzeżenie kompilatora (poziom 4) C4682](compiler-warning-level-4-c4682.md)|"parameter": brak określonego atrybutu parametru kierunkowego, wartość domyślna to [in]|
 |[Ostrzeżenie kompilatora (poziom 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|"Function": Źródło zdarzenia ma parametr "parametr"; należy zachować ostrożność podczas podłączania obsługi wielu zdarzeń|
 |[Ostrzeżenie kompilatora (poziom 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|"Attribute": Ostrzeżenie!! atrybut może spowodować nieprawidłowe generowanie kodu: należy używać z zachowaniem ostrożności|
-|[Ostrzeżenie kompilatora (poziom 1) C4685](compiler-warning-level-1-c4685.md)|Oczekiwano "> >" znaleziono "> >" podczas analizowania parametrów szablonu|
+|[Ostrzeżenie kompilatora (poziom 1) C4685](compiler-warning-level-1-c4685.md)|Oczekiwano "> >" znaleziono ">>" podczas analizowania parametrów szablonu|
 |[Ostrzeżenie kompilatora (poziom 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'typ zdefiniowany przez użytkownika': możliwe zmiany w zachowaniu, zmiana w konwencji wywoływania zwrotu UDT|
 |[Ostrzeżenie kompilatora (error) C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|"Class": zapieczętowana Klasa abstrakcyjna nie może implementować interfejsu "Interface"|
 |[Ostrzeżenie kompilatora (poziom 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|"Constraint": Lista ograniczeń zawiera prywatny Typ zestawu "Type"|
@@ -141,7 +142,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |[Ostrzeżenie kompilatora (poziom 1, błąd) C4694](../../error-messages/compiler-warnings/compiler-warning-c4694.md)|"Class": zapieczętowana Klasa abstrakcyjna nie może mieć klasy bazowej "base_class"|
 |Ostrzeżenie kompilatora (poziom 1) C4695|#pragma execution_character_set: "zestaw znaków" nie jest obsługiwanym argumentem: obecnie obsługiwane jest tylko kodowanie "UTF-8"|
 |Ostrzeżenie kompilatora (poziom 1) C4696|Opcja/ZBvalue1 poza zakresem; przyjęto "wartość2"|
-|[Ostrzeżenie kompilatora (poziom 1 i poziom 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|użyto niezainicjowanej zmiennej lokalnej "name"|
+|[Ostrzeżenie kompilatora (poziom 1 i 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|użyto niezainicjowanej zmiennej lokalnej "name"|
 |[Ostrzeżenie kompilatora (poziom 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)|użyto potencjalnie niezainicjowanej zmiennej lokalnej "name"|
 |[Ostrzeżenie kompilatora (poziom 4) C4702](../../error-messages/compiler-warnings/compiler-warning-level-4-c4702.md)|nieosiągalny kod|
 |[Ostrzeżenie kompilatora (poziom 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|użyto potencjalnie niezainicjowanej zmiennej wskaźnika lokalnego "% s"|
@@ -174,7 +175,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |[Ostrzeżenie kompilatora (poziom 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|element "var" ma inne wyrównanie w "plik1" i "plik2": Number i Number|
 |[Ostrzeżenie kompilatora (poziom 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|Typ "Type" ma inny rozmiar w "plik1" i "plik2": liczba i liczba bajtów|
 |[Ostrzeżenie kompilatora (poziom 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|element "var" ma inny typ w "plik1" i "plik2": "type1" i "type2"|
-|[Ostrzeżenie kompilatora C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp elementu "*Expression*" podlega/volatile:\<iso&#124;MS > Setting; Rozważ użycie funkcji wewnętrznych w programie __iso_volatile_load/Store|
+|[Ostrzeżenie kompilatora C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp elementu "*Expression*" podlega/volatile: \<iso&#124;ms> Setting; Rozważ użycie funkcji wewnętrznych usługi __iso_volatile_load/Store|
 |[Ostrzeżenie kompilatora (poziom 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Wywoływanie funkcji "EntryPoint": kod zarządzany nie może być uruchamiany w ramach blokady modułu ładującego, w tym punktu wejścia biblioteki DLL i wywołań uzyskanych z punktu wejścia biblioteki DLL|
 |Ostrzeżenie kompilatora (poziom 4) C4749|warunkowo obsługiwane: makro OffsetOf zastosowany do typu układu niestandardowym "*Type*"|
 |[Ostrzeżenie kompilatora (poziom 1) C4750](compiler-warning-level-1-c4750.md)|"Identyfikator": funkcja zawierająca _alloca () została wbudowana w pętlę|
@@ -204,5 +205,5 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 
 ## <a name="see-also"></a>Zobacz też
 
-[Błędy iC++ ostrzeżenia narzędzi języka C/kompilatora i kompilacji](../compiler-errors-1/c-cpp-build-errors.md) \
-[Ostrzeżenia kompilatora C4000-C5999](compiler-warnings-c4000-c5999.md)
+[Błędy i ostrzeżenia dotyczące kompilatora i narzędzi kompilacji C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora C4000–C5999](compiler-warnings-c4000-c5999.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Aktywacja (C++)'
 title: Aktywacja (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: 47640a59180348bd3513013b65029a775545e211
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 726c64344f684c8ca9e79d9296daea80882af08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197727"
 ---
 # <a name="activation-c"></a>Aktywacja (C++)
 
@@ -31,7 +32,7 @@ W tym artykule wyjaśniono rolę aktywacji podczas edycji wizualizacji elementó
 
 Istnieje również możliwość edytowania osadzonych elementów OLE w osobnym oknie. Dzieje się tak, jeśli aplikacja kontenera lub serwera nie obsługuje aktywacji w miejscu. W takim przypadku, gdy użytkownik kliknie dwukrotnie element osadzony, aplikacja serwera zostanie uruchomiona w osobnym oknie, a element osadzony zostanie wyświetlony jako własny dokument. Użytkownik edytuje element w tym oknie. Po zakończeniu edycji użytkownik zamyka aplikację serwera i wraca do aplikacji kontenera.
 
-Alternatywnie użytkownik może wybrać opcję "Otwórz edycję" przy użyciu polecenia ** \<object> Otwórz** w menu **Edycja** . Spowoduje to otwarcie obiektu w osobnym oknie.
+Alternatywnie użytkownik może wybrać opcję "Otwórz edycję" przy użyciu polecenia **\<object> Otwórz** w menu **Edycja** . Spowoduje to otwarcie obiektu w osobnym oknie.
 
 > [!NOTE]
 > Edytowanie osadzonych elementów w osobnym oknie było zachowaniem standardowym w wersji 1 OLE, a niektóre aplikacje OLE mogą obsługiwać tylko ten styl edycji.

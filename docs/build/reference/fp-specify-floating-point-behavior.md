@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/FP (Określ zachowanie zmiennoprzecinkowe)
 title: /fp (Określenie zachowania zmiennoprzecinkowego)
 ms.date: 11/09/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5d57bae24af9cd415a2dcfde073e276f51ce3ea3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200445"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Określenie zachowania zmiennoprzecinkowego)
 
@@ -24,7 +25,7 @@ Określa sposób, w jaki kompilator traktuje wyrażenia zmiennoprzecinkowe, opty
 
 ## <a name="syntax"></a>Składnia
 
-> **/FP:**[**precyzyjne**  |  **ścisłe**,  |  **fast**  |  **z wyjątkiem**[ **-** ]]
+> **/FP:**[**precyzyjne**  |  **ścisłe**,  |    |  **z wyjątkiem**[ **-** ]]
 
 ### <a name="arguments"></a>Argumenty
 
@@ -69,7 +70,7 @@ Należy pamiętać, że program nie `/fp:except` włącza żadnych wyjątków zm
 
 Opcja [/za](za-ze-disable-language-extensions.md) (zgodność ze standardem ANSI) nie jest zgodna z programem `/fp` .
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Używanie dyrektyw kompilatora do kontrolowania zachowań zmiennoprzecinkowych
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Używanie dyrektyw kompilatora do sterowania zachowaniem Floating-Point
 
 Kompilator oferuje trzy dyrektywy pragma, aby zastąpić zachowanie zmiennoprzecinkowe określone w wierszu polecenia: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)i [fp_contract](../../preprocessor/fp-contract.md). Za pomocą tych dyrektyw można kontrolować zachowanie zmiennoprzecinkowe na poziomie funkcji, a nie w ramach funkcji. Należy zauważyć, że dyrektywy te nie odpowiadają bezpośrednio na `/fp` Opcje. W tej tabeli pokazano, jak `/fp` Opcje i dyrektywy pragma są mapowane na siebie nawzajem. Aby uzyskać więcej informacji, zobacz dokumentację poszczególnych opcji i dyrektywy pragma.
 
@@ -258,7 +259,7 @@ W obszarze `/O2` `/fp:fast` wygenerowany kod jest uproszczony, ponieważ wszystk
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja generowania kodu**C/C++**  >  **Code Generation** .
+1. Wybierz   >  stronę właściwości konfiguracja generowania kodu **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **modelu zmiennoprzecinkowego** .
 
@@ -266,7 +267,7 @@ W obszarze `/O2` `/fp:fast` wygenerowany kod jest uproszczony, ponieważ wszystk
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>

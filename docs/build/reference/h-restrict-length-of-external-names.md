@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/H (ograniczaj długość nazw zewnętrznych)
 title: /H (Ograniczaj długość nazw zewnętrznych)
 ms.date: 09/05/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 9a8976700cfb0f333c2715c573aa2d239e2a8e3a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5df4c4765cc4917e6914eab0b4818c34fceea853
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218991"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200081"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Ograniczaj długość nazw zewnętrznych)
 
@@ -23,11 +24,11 @@ Przestarzałe. Ogranicza długość nazw zewnętrznych.
 
 ## <a name="syntax"></a>Składnia
 
-> **/H**<em>Numer</em> /h
+> <em>Numer</em> /h
 
 ## <a name="arguments"></a>Argumenty
 
-*liczba*<br/>
+*Liczba*<br/>
 Określa maksymalną długość nazw zewnętrznych dozwolonych w programie.
 
 ## <a name="remarks"></a>Uwagi
@@ -76,7 +77,7 @@ Opcja **/h** jest przestarzała od programu Visual Studio 2005; Zwiększono limi
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Wprowadź opcję kompilatora w polu **dodatkowe opcje** .
 
@@ -84,7 +85,7 @@ Opcja **/h** jest przestarzała od programu Visual Studio 2005; Zwiększono limi
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

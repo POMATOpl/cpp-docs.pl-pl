@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/EXPORT (eksportuje funkcję)
 title: /EXPORT (Eksportuje funkcję)
 ms.date: 09/05/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a52ea79d0569d31c26eabd06d51ef58a10567119
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232693"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200809"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Eksportuje funkcję)
 
@@ -22,7 +23,7 @@ Eksportuje funkcję według nazwy lub liczby porządkowej lub danych z programu.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Export:**<em>EntryName</em>[**, \@ **<em>porządkowa</em>[**, NoName**]] [**, dane**]
+> **/Export:**<em>EntryName</em>[**, \@**<em>porządkowa</em>[**, NoName**]] [**, dane**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -60,7 +61,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja właściwości**  >  **Linker**  >  **wiersza polecenia** konsolidatora.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
 1. Wprowadź opcję w polu **dodatkowe opcje** .
 
@@ -68,7 +69,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [MSVC Opcje konsolidatora](linker-options.md)

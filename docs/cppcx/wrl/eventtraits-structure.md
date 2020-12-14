@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze EventTraits —
 title: EventTraits — Struktura
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - EventTraits structure
 ms.assetid: 2cf308a4-50e3-4321-bafc-4c7c0364e148
-ms.openlocfilehash: abd4bc2e6debae2e7681fc53c9fc4f86a8219cdb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 062438c945c3df2da88d6026febfaf2f91247a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198556"
 ---
 # <a name="eventtraits-structure"></a>EventTraits — Struktura
 
-Definiuje charakterystykę dojścia klasy `Event`.
+Definiuje charakterystykę `Event` dojścia do klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,7 +25,7 @@ Definiuje charakterystykę dojścia klasy `Event`.
 struct EventTraits : HANDLENullTraits;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -40,4 +41,4 @@ struct EventTraits : HANDLENullTraits;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Wrappers::HandleTraits, przestrzeń nazw](microsoft-wrl-wrappers-handletraits-namespace.md)
+[Microsoft:: WRL:: otoki:: HandleTraits, przestrzeń nazw](microsoft-wrl-wrappers-handletraits-namespace.md)
