@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: standardowe procedury walidacji danych w oknie dialogowym'
 title: Standardowe procedury walidacji danych okna dialogowego
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d2b39381610c51f661e98256c39b580df256ebaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218852"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Standardowe procedury walidacji danych okna dialogowego
 
@@ -54,7 +55,7 @@ void AFXAPI DDV_MaxChars(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *nChar*<br/>
@@ -85,7 +86,7 @@ void AFXAPI DDV_MinMaxByte(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -159,7 +160,7 @@ void AFXAPI DDV_MinMaxDouble(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -193,7 +194,7 @@ void AFXAPI DDV_MinMaxDWord(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -227,7 +228,7 @@ void AFXAPI DDV_MinMaxFloat(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -261,7 +262,7 @@ void AFXAPI DDV_MinMaxInt(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -295,7 +296,7 @@ void AFXAPI DDV_MinMaxLong(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -329,7 +330,7 @@ void AFXAPI DDV_MinMaxLongLong(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -403,7 +404,7 @@ void AFXAPI DDV_MinMaxShort(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -437,7 +438,7 @@ void AFXAPI DDV_MinMaxSlider(
 *pDX*<br/>
 Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do wartości do zweryfikowania. Ten parametr zawiera lub ustawia bieżącą pozycję kciuka kontrolki suwaka.
 
 *minVal*<br/>
@@ -471,7 +472,7 @@ void AFXAPI DDV_MinMaxUInt(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -505,7 +506,7 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>
@@ -541,7 +542,7 @@ Wywołaj `DDV_MinMaxUnsigned` , aby sprawdzić, czy wartość w kontrolce skojar
 *pDX*<br/>
 Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym dane są sprawdzane.
 
 *minVal*<br/>

@@ -1,40 +1,41 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach członkowskich kontrolki suwaka'
 title: Funkcje członkowskie formantu suwaka
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CSliderCtrl class [MFC], methods
 - slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
-ms.openlocfilehash: a88dd1a49eb928261393a4473ee7eb53628c607a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57108872a779bc4876be89afd5b81008f69a0837
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216902"
 ---
 # <a name="slider-control-member-functions"></a>Funkcje członkowskie formantu suwaka
 
-Aplikacja może wywołać suwaka, funkcje składowe kontrolki, aby pobrać informacje o kontrolce suwaka ([z CSliderCtrl](../mfc/reference/csliderctrl-class.md)) i zmienić jego właściwości.
+Aplikacja może wywoływać funkcje składowe kontrolki suwaka, aby pobrać informacje o kontrolce suwaka ([Korzystanie CSliderCtrl](../mfc/reference/csliderctrl-class.md)) i zmienić jej cechy.
 
-Aby pobrać położenie suwaka (czyli wartość użytkownik wybierze), użyj [GetPos](../mfc/reference/csliderctrl-class.md#getpos) funkcja elementu członkowskiego. Aby ustawić położenie suwaka, użyj [SetPos](../mfc/reference/csliderctrl-class.md#setpos) funkcja elementu członkowskiego. W dowolnym momencie można użyć `VerifyPos` funkcja elementu członkowskiego, aby upewnić się, że suwak jest między minimalne i maksymalne wartości.
+Aby pobrać pozycję suwaka (czyli wartość wybraną przez użytkownika), użyj funkcji składowej [GetPos](../mfc/reference/csliderctrl-class.md#getpos) . Aby ustawić położenie suwaka, użyj funkcji składowej [SetPos](../mfc/reference/csliderctrl-class.md#setpos) . W dowolnym momencie można użyć `VerifyPos` funkcji elementu członkowskiego, aby upewnić się, że suwak znajduje się pomiędzy wartością minimalną i maksymalną.
 
-Zakres kontrolki suwaka ustawiono ciągłe wartości, które mogą reprezentować kontrolki suwaka. Większość aplikacji używa [SetRange](../mfc/reference/csliderctrl-class.md#setrange) funkcję elementu członkowskiego, aby ustawić zakres kontrolki suwaka, podczas jej pierwszego tworzenia. Aplikacje można dynamicznie zmieniać zakresu, po utworzeniu kontrolki suwaka, za pomocą [SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) i [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) funkcji elementów członkowskich. Aplikacja, która umożliwia zakresu, które mają być zmienione dynamicznie zazwyczaj pobiera ustawienia końcowej zakresu po użytkownik zakończył pracę z kontrolką suwaka. Aby pobrać te ustawienia, należy użyć [getrange —](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax), i [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) funkcji elementów członkowskich.
+Zakres kontrolki suwaka to zbiór wartości ciągłych, które może reprezentować formant Slider. Większość aplikacji używa funkcji składowej [SetRange](../mfc/reference/csliderctrl-class.md#setrange) w celu ustawienia zakresu kontrolki suwaka podczas jej pierwszego utworzenia. Aplikacje mogą dynamicznie zmieniać zakres po utworzeniu kontrolki suwaka przy użyciu funkcji składowych [SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) i [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) . Aplikacja, która pozwala na zmianę zakresu dynamicznie, zazwyczaj pobiera ustawienia zakresu końcowego, gdy użytkownik zakończy pracę z kontrolką suwaka. Aby pobrać te ustawienia, należy użyć funkcji elementów członkowskich [GetRange](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax)i [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) .
 
-Aplikacja może użyć stylu TBS_AUTOTICKS mieć znaczniki kontrolki suwaka wyświetlane automatycznie. Jeśli aplikacja musi kontrolować położenia lub częstotliwość znaczników, jednak wiele elementów członkowskich może służyć.
+Aplikacja może używać stylu TBS_AUTOTICKS, aby wyświetlić znaczniki kontrolki znacznika suwaka automatycznie. Jeśli aplikacja wymaga kontroli pozycji lub częstotliwości znaczników, można użyć wielu funkcji składowych.
 
-Aby ustawić położenie znaczników głównyc, aplikacja może użyć [SetTic](../mfc/reference/csliderctrl-class.md#settic) funkcja elementu członkowskiego. [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) funkcja elementu członkowskiego umożliwia aplikacji ustaw znaczników znaków, które pojawiają się w regularnych odstępach czasu w zakresie formant suwaka. Na przykład aplikacja można używać tej funkcji elementu członkowskiego do wyświetlenia tylko 10 znaczniki w zakresie od 1 do 100.
+Aby ustawić położenie znacznika, aplikacja może używać funkcji składowej [SetTic](../mfc/reference/csliderctrl-class.md#settic) . Funkcja członkowska [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) umożliwia aplikacji Ustawianie znaczników, które pojawiają się w regularnych odstępach czasu formantu suwaka. Na przykład aplikacja może używać tej funkcji elementu członkowskiego do wyświetlania tylko 10 znaczników w zakresie od 1 do 100.
 
-Aby uzyskać indeks zakresu odpowiadający znacznika, należy użyć [GetTic](../mfc/reference/csliderctrl-class.md#gettic) funkcja elementu członkowskiego. [GetTicArray](../mfc/reference/csliderctrl-class.md#getticarray) funkcja elementu członkowskiego pobiera tablicę tych indeksów. Aby pobrać położenie znaczników głównyc w współrzędne klienta użyj [GetTicPos](../mfc/reference/csliderctrl-class.md#getticpos) funkcja elementu członkowskiego. Aplikacja może pobrać liczbę znaczników przy użyciu [GetNumTics](../mfc/reference/csliderctrl-class.md#getnumtics) funkcja elementu członkowskiego.
+Aby pobrać indeks z zakresu odpowiadającego znacznikowi znacznika, użyj funkcji składowej [GetTic](../mfc/reference/csliderctrl-class.md#gettic) . Funkcja członkowska [GetTicArray](../mfc/reference/csliderctrl-class.md#getticarray) pobiera tablicę tych indeksów. Aby pobrać pozycję znacznika, we współrzędnych klienta Użyj funkcji składowej [GetTicPos](../mfc/reference/csliderctrl-class.md#getticpos) . Aplikacja może pobrać liczbę znaczników przy użyciu funkcji składowej [GetNumTics](../mfc/reference/csliderctrl-class.md#getnumtics) .
 
-[ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) funkcja członkowska usuwa wszystkie znaczniki kontrolki suwaka.
+Funkcja członkowska [ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) usuwa wszystkie znaczniki kontrolki suwaka.
 
-Rozmiar wiersza w kontrolce suwaka Określa, jak daleko przenosi suwaka, gdy aplikacja otrzymuje komunikat z powiadomieniem TB_LINEDOWN lub TB_LINEUP. Podobnie rozmiar strony określa odpowiedzi na komunikaty powiadomień TB_PAGEDOWN i TB_PAGEUP. Aplikacje można pobierać i ustawiać wartości rozmiaru wiersza i strony za pomocą [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), i [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) funkcji elementów członkowskich.
+Rozmiar linii kontrolki suwaka określa, jak daleko suwak jest przenoszony, gdy aplikacja otrzymuje TB_LINEDOWN lub TB_LINEUP komunikat powiadomienia. Podobnie rozmiar strony określa odpowiedź do TB_PAGEDOWN i TB_PAGEUP komunikatów powiadomień. Aplikacje mogą pobierać i ustawiać wartości rozmiaru wiersza i strony przy użyciu funkcji składowych [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize)i [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) .
 
-Aplikacja może użyć funkcji elementów członkowskich do pobrania wymiarów kontrolki suwaka. [GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) funkcja elementu członkowskiego pobiera prostokąt otaczający potrzeby suwaka. [GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) funkcja elementu członkowskiego pobiera prostokąt otaczający dla kanału kontroli suwaka. (Kanał jest obszar przenosi suwaka i zawierającą podświetlenie po wybraniu zakresu).
+Aplikacja może używać funkcji elementów członkowskich do pobierania wymiarów kontrolki suwaka. Funkcja członkowska [GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) pobiera prostokąt ograniczenia dla suwaka. Funkcja członkowska [GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) pobiera prostokąt obwiedni dla kanału kontrolki suwak. (Kanał to obszar, nad którym suwak jest przenoszony i który zawiera wyróżnianie, gdy wybrany jest zakres.)
 
-Jeśli formant suwaka ma styl TBS_ENABLESELRANGE, użytkownik może wybrać zakres sąsiadujących wartości z niego. Liczba elementów członkowskich umożliwiają wybranego zakresu dynamicznego dostosowania. [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) funkcja elementu członkowskiego ustawia początkową i końcową pozycję zaznaczenia. Gdy użytkownik zakończy, ustawienie zaznaczony zakres, aplikacja może pobrać ustawienia za pomocą [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) funkcja elementu członkowskiego. Aby wyczyścić wybranych przez użytkownika, należy użyć [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) funkcja elementu członkowskiego.
+Jeśli kontrolka suwaka ma styl TBS_ENABLESELRANGE, użytkownik może wybrać zakres ciągłego wartości. Wiele funkcji składowych pozwala na dynamiczne dopasowanie zakresu wyboru. Funkcja elementu członkowskiego [setselect](../mfc/reference/csliderctrl-class.md#setselection) ustawia początkową i końcową pozycję zaznaczenia. Gdy użytkownik zakończył Ustawianie zakresu wyboru, aplikacja może pobrać ustawienia za pomocą funkcji składowej [getselect](../mfc/reference/csliderctrl-class.md#getselection) . Aby wyczyścić wybór użytkownika, użyj funkcji składowej [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

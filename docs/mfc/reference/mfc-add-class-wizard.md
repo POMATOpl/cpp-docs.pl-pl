@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Kreator dodawania klas MFC'
 title: Kreator dodawania klasy MFC
 ms.date: 09/06/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 2c82e084de2123c579299ca6490bdfcfdac5d255
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 3f405b0f5523a183fd546790e0823e7a5e6bbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219255"
 ---
 # <a name="mfc-add-class-wizard"></a>Kreator dodawania klasy MFC
 
@@ -26,7 +27,7 @@ Na tej stronie Określ nazwę klasy, klasę bazową i nazwy plików dla nowej kl
 
 - **Nazwa klasy**
 
-  Określa nazwę nowej klasy i zapewnia domyślną podstawę nazw identyfikatorów i plików na tej stronie. C++klasy zwykle zaczynają się od "C", więc na przykład "CMyClass" przyjmuje wartość "MyClass. h" i tak dalej.
+  Określa nazwę nowej klasy i zapewnia domyślną podstawę nazw identyfikatorów i plików na tej stronie. Klasy języka C++ zwykle zaczynają się od "C", więc na przykład "CMyClass" przyjmuje wartość "MyClass. h" i tak dalej.
 
 - **Klasa bazowa**
 
@@ -43,25 +44,25 @@ Na tej stronie Określ nazwę klasy, klasę bazową i nazwy plików dla nowej kl
   W przypadku klas wymagających identyfikatora okna dialogowego może okazać się bardziej wydajne użycie [edytora zasobów](../../windows/resource-editors.md) do utworzenia zasobu okna dialogowego, przypisanie jego identyfikatora w [Kreatorze klasy](mfc-class-wizard.md), a następnie utworzenie klasy SKOJARZONEj z tym identyfikatorem zasobu. Aby uzyskać więcej informacji na temat tworzenia standardowego okna dialogowego systemu Windows, zobacz [Tworzenie nowego okna dialogowego](../../windows/creating-a-new-dialog-box.md) .
 
   > [!NOTE]
-  > Jeśli najpierw utworzysz zasób okna dialogowego i poprowadzisz jego nową klasę `CDHtmlDialog`z, Usuń standardowe przyciski systemu Windows **OK** i **Anuluj** , które są wyświetlane w domyślnym oknie dialogowym. Standardowe okno dialogowe systemu Windows obsługuje formularz DHTML, który zawiera własne przyciski **OK** i **Anuluj** .
+  > Jeśli najpierw utworzysz zasób okna dialogowego i poprowadzisz jego nową klasę z `CDHtmlDialog` , Usuń standardowe przyciski systemu Windows **OK** i **Anuluj** , które są wyświetlane w domyślnym oknie dialogowym. Standardowe okno dialogowe systemu Windows obsługuje formularz DHTML, który zawiera własne przyciski **OK** i **Anuluj** .
 
   Chociaż okno dialogowe może zawierać formanty systemu Windows i kontrolki DHTML, nie jest to zalecane.
 
 - **Identyfikator okna dialogowego**
 
-  Określa identyfikator okna dialogowego, w `CDialog`przypadku wybrania, `CFormView`, `CPropertyPage`lub `CDHtmlDialog` jako **klasy bazowej**.
+  Określa identyfikator okna dialogowego, w przypadku wybrania `CDialog` , `CFormView` , `CPropertyPage` lub `CDHtmlDialog` jako **klasy bazowej**.
 
 - **plik h**
 
   Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **Nazwa klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz przycisku **Zakończ** w kreatorze.
 
-  Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu przycisku **Zakończ**Kreator monituje o wskazanie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
+  Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu przycisku **Zakończ** Kreator monituje o wskazanie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
 - **plik. cpp**
 
   Ustawia nazwę pliku implementacji dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **Nazwa klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie zostanie kliknięty przycisk **Zakończ** w kreatorze.
 
-  Kreator nie zastępuje pliku. W przypadku wybrania nazwy istniejącego pliku po kliknięciu przycisku **Zakończ**Kreator monituje o wskazanie, czy implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
+  Kreator nie zastępuje pliku. W przypadku wybrania nazwy istniejącego pliku po kliknięciu przycisku **Zakończ** Kreator monituje o wskazanie, czy implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
 - **Aktywne ułatwienia dostępu**
 
@@ -95,7 +96,7 @@ Na tej stronie Określ nazwę klasy, klasę bazową i nazwy plików dla nowej kl
 
   - `CSocket`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)

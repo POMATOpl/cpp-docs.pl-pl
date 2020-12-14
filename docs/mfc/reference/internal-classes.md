@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy wewnętrzne'
 title: Klasy wewnętrzne
 ms.date: 11/04/2016
 f1_keywords:
@@ -307,108 +308,108 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f32eed3d97df5b1e260d834836bf701968466a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219515"
 ---
 # <a name="internal-classes"></a>Klasy wewnętrzne
 
-Następujące klasy są używane wewnętrznie w MFC. Aby informacje były kompletne w tej sekcji opisano te klasy wewnętrznej, ale nie są przeznaczone do użycia bezpośrednio w kodzie.
+Poniższe klasy są używane wewnętrznie w MFC. W tej sekcji opisano te klasy wewnętrzne, ale nie są one przeznaczone do użycia bezpośrednio w kodzie.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-|Class|Opis|
+|Klasa|Opis|
 |-----------|-----------------|
-|`CCommandManager Class`|`CCommandManager` Klasa zarządza poleceń i ich powiązania z obrazami.|
-|`CDialogImpl Class (MFC)`|Zawiera szczegóły dotyczące implementacji na podstawie pola klasy okien dialogowych, takich jak `CDialogEx`.|
-|`CDocumentAdapter Class`|Interfejs IDocument implementuje wymagane w celu wyszukiwania i Organizuj obsługi.|
-|`CFrameImpl Class`|`CFrameImpl` Klasa obsługuje następujące klasy okien ramowych Dostosowywanie paska narzędzi: [Klasa CFrameWndEx](../../mfc/reference/cframewndex-class.md), [klasa CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), i [klasa COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
-|`CFullScreenImpl Class`|Implementuje funkcje pełnego ekranu wspólne aplikacje SDI i MDI.|
-|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd` Klasa jest klasą pomocnika, która upraszcza implementacji kart MDI i grup z kartami MDI.|
-|`CMemDC Class`|Klasa pomocnicza do kontekstu urządzenia pamięci. Kontekst urządzenia pamięci obsługuje rysowania poza ekranem.|
-|`CMenuHash Class`|Odczytuje stan `CMFCToolBar` obiekty z archiwum lub zapisuje stan archiwum.|
-|`CMenuImages Class`|Oferuje funkcje, aby wyświetlić obrazy wstępnie zdefiniowanych, takie jak przyciski zamykania, maksymalizacji przycisków, przyciski radiowe i strzałki.|
-|`CMFCCaptionButtonEx Class`|Przechowuje obszaru nieklienckiego przyciski podpisu systemu.|
-|`CMFCCaptionMenuButton Class`|Reprezentuje przycisk menu, który znajduje się w obszarze podpis okienka zadań lub paska narzędzi.|
-|`CMFCColorPropertySheet Class`|Używane przez [klasa CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) zapewnienie okno dialogowe.|
-|`CMFCControlBarImpl Class`|Zawiera szczegóły dotyczące implementacji do kontrolowania klasy oparte na pasku, takich jak `CMFCReBar` i `CMFCToolBar`.|
+|`CCommandManager Class`|`CCommandManager`Klasa zarządza poleceniami i ich skojarzeniem z obrazami.|
+|`CDialogImpl Class (MFC)`|Zawiera szczegóły implementacji klas opartych na oknach dialogowych, takich jak `CDialogEx` .|
+|`CDocumentAdapter Class`|Implementuje interfejs IDocument wymagany do wyszukiwania i organizowania programów obsługi.|
+|`CFrameImpl Class`|`CFrameImpl`Klasa obsługuje dostosowanie paska narzędzi dla następujących klas okien ramowych: [Klasa CFrameWndEx](../../mfc/reference/cframewndex-class.md), [Klasa CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)i [Klasa COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
+|`CFullScreenImpl Class`|Implementuje funkcje pełnego ekranu wspólne dla aplikacji SDI i MDI.|
+|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`Klasa jest klasą pomocnika, która upraszcza implementację kart MDI i grup z kartami MDI.|
+|`CMemDC Class`|Klasa pomocnika dla kontekstu urządzenia pamięci. Kontekst urządzenia pamięci obsługuje rysowanie poza ekranem.|
+|`CMenuHash Class`|Odczytuje stan `CMFCToolBar` obiektów z archiwum lub zapisuje stan w archiwum.|
+|`CMenuImages Class`|Oferuje funkcje do wyświetlania wstępnie zdefiniowanych obrazów, takich jak przyciski zamykania, Maksymalizuj przyciski, przyciski radiowe i strzałki.|
+|`CMFCCaptionButtonEx Class`|Zawiera obszar niebędący klientem przycisków napisów systemu.|
+|`CMFCCaptionMenuButton Class`|Reprezentuje przycisk menu, który znajduje się w obszarze podpisu okienka zadań lub paska narzędzi.|
+|`CMFCColorPropertySheet Class`|Używane przez [klasę CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) , aby zapewnić okno dialogowe z kartami.|
+|`CMFCControlBarImpl Class`|Zawiera szczegóły implementacji dla klas opartych na pasku sterowania, takich jak `CMFCReBar` i `CMFCToolBar` .|
 |`CMFCControlRenderer Class`|Klasa pomocnika, która obsługuje renderowanie obrazu.|
-|`CMFCControlRendererInfo Class`|Klasa pomocnicza do przekazywania parametrów do `CMFCControlRenderer` klasy.|
-|`CMFCCustomizeButton Class`|Obsługuje polecenie menu lub przycisku paska narzędzi, który uruchamia okno dialogowe dostosowywania.|
-|`CMFCCustomizeMenuButton Class`|Reprezentuje pojedynczy przycisk menu dostosowywania.|
-|`CMFCDropDownListBox Class`|Oferuje funkcje pola listy rozwijanej pola kombi wstążki.|
-|`CMFCMousePropertyPage Class`|Strona właściwości, która umożliwia użytkownikowi dostosować zachowanie myszy.|
+|`CMFCControlRendererInfo Class`|Klasa pomocnika do przekazywania parametrów do `CMFCControlRenderer` klasy.|
+|`CMFCCustomizeButton Class`|Obsługuje polecenie menu lub przycisk paska narzędzi, który uruchamia okno dialogowe dostosowywania.|
+|`CMFCCustomizeMenuButton Class`|Reprezentuje pojedynczy przycisk w menu dostosowywania.|
+|`CMFCDropDownListBox Class`|Udostępnia funkcje pola listy rozwijanej na Wstążce.|
+|`CMFCMousePropertyPage Class`|Strona właściwości, która umożliwia użytkownikowi dostosowanie zachowania myszy.|
 |`CMFCOutlookBarPaneAdapter Class`||
-|`CMFCOutlookBarPaneButton Class`|Implementuje przycisk, który dodaje ramach `CMFCOutlookBarPane` obiektu.|
-|`CMFCOutlookBarPaneList Class`|Rozszerza `CMFCOutlookBarPane` Aby klasa zapewniała stylu wizualnego w programie Outlook.|
-|`CMFCOutlookBarScrollButton Class`|Zapewnia funkcje przewijania `CMFCOutlookBarTabCtrl` klasy.|
-|`CMFCOutlookBarToolBar Class`|Implementuje pasek narzędzi, który ma styl wizualny Outlook 2003.|
-|`CMFCPropertySheetCategoryInfo Class`|Reprezentuje węzeł w postaci drzewa.|
-|`CMFCPropertySheetTabCtrl Class`|Rozszerza `CMFCTabCtrl` klasy, aby zapewnić funkcjonalność arkusza właściwości.|
-|`CMFCProperySheetListBox Class`|Rozszerza `CListBox` klasy, aby zapewnić funkcjonalność arkusza właściwości.|
+|`CMFCOutlookBarPaneButton Class`|Implementuje przycisk, który struktura dodaje do `CMFCOutlookBarPane` obiektu.|
+|`CMFCOutlookBarPaneList Class`|Rozszerza `CMFCOutlookBarPane` klasę, aby zapewnić styl wizualny programu Outlook.|
+|`CMFCOutlookBarScrollButton Class`|Oferuje funkcje przewijania `CMFCOutlookBarTabCtrl` klasy.|
+|`CMFCOutlookBarToolBar Class`|Implementuje pasek narzędzi, który ma styl wizualny programu Outlook 2003.|
+|`CMFCPropertySheetCategoryInfo Class`|Reprezentuje węzeł w kontrolce drzewa.|
+|`CMFCPropertySheetTabCtrl Class`|Rozszerza `CMFCTabCtrl` klasę, aby zapewnić funkcję arkusza właściwości.|
+|`CMFCProperySheetListBox Class`|Rozszerza `CListBox` klasę, aby zapewnić funkcję arkusza właściwości.|
 |`CMFCReBarState Class`||
-|`CMFCRibbonCaptionButton Class`|Implementuje przycisk paska tytułowego systemu.|
-|`CMFCRibbonCmdUI Class`|Aktualizacje wstążce paska obiektów w chwili, gdy aplikacja jest w stanie bezczynności.|
+|`CMFCRibbonCaptionButton Class`|Implementuje przycisk podpisu systemowego.|
+|`CMFCRibbonCmdUI Class`|Aktualizuje obiekty paska wstążki zgodnie z wymaganiami, gdy aplikacja jest w stanie bezczynności.|
 |`CMFCRibbonCommandsListBox Class`||
 |`CMFCRibbonDefaultPanelButton Class`||
-|`CMFCRibbonGalleryIcon Class`|Reprezentuje element w `CMFCRibbonGallery` obiektu.|
-|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementuje okno dialogowe dostosowywania klawiatury dla aplikacji, które zawierają paski wstążki.|
-|`CMFCRibbonKeyTip Class`|Implementuje okno podręczne, który wyświetla klawiszy skrótu do paska wstążki.|
+|`CMFCRibbonGalleryIcon Class`|Reprezentuje element w `CMFCRibbonGallery` obiekcie.|
+|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementuje okno dialogowe Dostosowywanie klawiatury dla aplikacji, które zawierają paski wstążki.|
+|`CMFCRibbonKeyTip Class`|Implementuje okno podręczne, w którym jest wyświetlana etykietka klucza dla paska wstążki.|
 |`CMFCRibbonPanelMenu Class`||
-|`CMFCRibbonPanelMenuBar Class`|Reprezentuje pasek menu podręcznym pasku wstążki.|
-|`CMFCRibbonQuickAccessToolBar Class`|Implementacja paska narzędzi szybkiego dostępu dla elementu wstążki.|
-|`CMFCRibbonRichEditCtrl Class`|Implementuje formant edycji, który znajduje się na pasku wstążki.|
+|`CMFCRibbonPanelMenuBar Class`|Przedstawia podręczny pasek menu na pasku wstążki.|
+|`CMFCRibbonQuickAccessToolBar Class`|Implementuje pasek narzędzi Szybki dostęp dla elementu wstążki.|
+|`CMFCRibbonRichEditCtrl Class`|Implementuje kontrolkę edycji, która znajduje się na pasku wstążki.|
 |`CMFCRibbonTab Class`|Reprezentuje kartę na pasku wstążki.|
 |`CMFCShadowRenderer Class`||
-|`CMFCShowAllButton Class`|Reprezentuje przycisk, który znajduje się w dolnej części menu podręcznego, który jest rozszerzany, aby wyświetlić ukryte polecenia.|
-|`CMFCStatusBarPaneInfo Class`|W tym artykule opisano zawartość i wygląd `CMFCStatusBar` okienka.|
-|`CMFCTabButton Class`|Zapewnia funkcje przycisk kartę kontrolki karty.|
-|`CMFCTabInfo Class`|Zawiera informacje o formantach kartę na karcie.|
-|`CMFCTasksPaneFrameWnd Class`|Zarządza przyciski podpisu niestandardowego okienka zadań.|
-|`CMFCTasksPanePropertyPage Class`|Zarządza relacji między `CMFCTasksPane` obiekt i jego nazwę.|
-|`CMFCTasksPaneToolBar Class`|Implementuje narzędzi nawigacji, który znajduje się w górnej części `CMFCTasksPane` obiektu.|
-|`CMFCToolBarButtonsListButton Class`|Wyświetla listę obrazów, które użytkownik może wybrać podczas dostosowywania w **wyglądu przycisku** okno dialogowe.|
-|`CMFCToolBarDateTimeCtrlImpl Class`|Implementuje miejsca źródłowego dla `CMFCToolBar` obiektów.|
-|`CMFCToolBarDropSource Class`|Implementuje miejsca źródłowego dla `CMFCToolBar` obiektów.|
-|`CMFCToolBarDropTarget Class`|Implementuje miejsca docelowego dla `CMFCToolBar` obiektów.|
-|`CMFCToolBarEditCtrl Class`|Oferuje funkcje formantu edycji `CMFCToolBarEditBoxButton` obiektów.|
-|`CMFCToolBarMenuButtonsButton Class`|Reprezentuje przyciski podpisu systemu, które znajdują się po prawej stronie paska menu.|
-|`CMFCToolBarNameDialog Class`|Przedstawia okno dialogowe, który umożliwia użytkownikowi określenie nowy tytuł paska narzędzi.|
-|`CMFCToolBarsCommandsListBox Class`|Reprezentuje pole listy, który zawiera listę poleceń paska narzędzi.|
-|`CMFCToolBarsCommandsPropertyPage Class`|Dostosowywanie poleceń implementuje na stronie właściwości.|
+|`CMFCShowAllButton Class`|Reprezentuje przycisk, który znajduje się u dołu menu podręcznego, które rozwija się w celu wyświetlenia ukrytych poleceń.|
+|`CMFCStatusBarPaneInfo Class`|Opisuje zawartość i wygląd `CMFCStatusBar` okienka.|
+|`CMFCTabButton Class`|Udostępnia funkcje przycisków kart w kontrolkach kart.|
+|`CMFCTabInfo Class`|Zawiera informacje na temat karty z kartami.|
+|`CMFCTasksPaneFrameWnd Class`|Zarządza przyciskami podpisów niestandardowych okienka zadania.|
+|`CMFCTasksPanePropertyPage Class`|Zarządza relacją między `CMFCTasksPane` obiektem a jego nazwą.|
+|`CMFCTasksPaneToolBar Class`|Implementuje pasek narzędzi nawigacji, który znajduje się u góry `CMFCTasksPane` obiektu.|
+|`CMFCToolBarButtonsListButton Class`|Wyświetla listę obrazów, które użytkownik może wybrać podczas dostosowywania w oknie dialogowym **wygląd przycisku** .|
+|`CMFCToolBarDateTimeCtrlImpl Class`|Implementuje Źródło upuszczania dla `CMFCToolBar` obiektów.|
+|`CMFCToolBarDropSource Class`|Implementuje Źródło upuszczania dla `CMFCToolBar` obiektów.|
+|`CMFCToolBarDropTarget Class`|Implementuje element docelowy upuszczania dla `CMFCToolBar` obiektów.|
+|`CMFCToolBarEditCtrl Class`|Udostępnia funkcje kontroli edycji dla `CMFCToolBarEditBoxButton` obiektów.|
+|`CMFCToolBarMenuButtonsButton Class`|Przedstawia przyciski napisów systemowych znajdujące się po prawej stronie paska menu.|
+|`CMFCToolBarNameDialog Class`|Reprezentuje okno dialogowe, które umożliwia użytkownikowi określenie nowego podpisu paska narzędzi.|
+|`CMFCToolBarsCommandsListBox Class`|Przedstawia pole listy zawierające listę poleceń paska narzędzi.|
+|`CMFCToolBarsCommandsPropertyPage Class`|Implementuje Dostosowywanie poleceń na stronie właściwości.|
 |`CMFCToolBarsKeyboardPropertyPage Class`||
-|`CMFCToolBarsListCheckBox Class`|Wyświetla listę pasków narzędzi na **pasków narzędzi** strony **Dostosuj** okno dialogowe.|
-|`CMFCToolBarsListPropertyPage Class`|Reprezentuje stronę właściwości, który wyświetla listę pasków narzędzi w **Dostosuj** okno dialogowe.|
-|`CMFCToolBarsMenuPropertyPage Class`|Reprezentuje stronę właściwości, który zawiera menu Opcje dostosowywania w **Dostosuj** okno dialogowe.|
-|`CMFCToolBarsOptionsPropertyPage Class`|Reprezentuje **opcje** strony w **Dostosuj** okno dialogowe.|
+|`CMFCToolBarsListCheckBox Class`|Wyświetla listę pasków narzędzi na stronie **paski narzędzi** okna dialogowego **Dostosowywanie** .|
+|`CMFCToolBarsListPropertyPage Class`|Reprezentuje stronę właściwości, która wyświetla listę pasków narzędzi w oknie dialogowym **Dostosowywanie** .|
+|`CMFCToolBarsMenuPropertyPage Class`|Reprezentuje stronę właściwości, która zawiera opcje dostosowywania menu w oknie dialogowym **Dostosowywanie** .|
+|`CMFCToolBarsOptionsPropertyPage Class`|Przedstawia stronę **opcji** w oknie dialogowym **Dostosowywanie** .|
 |`CMFCToolBarSpinEditBoxButton Class`|Reprezentuje przycisk pokrętła, który znajduje się w polu edycji.|
-|`CMFCToolBarsToolsPropertyPage Class`|Reprezentuje stronę właściwości, która umożliwia użytkownikowi dostosowywanie narzędzi użytkownika.|
-|`CMFCToolBarSystemMenuButton Class`|Implementuje przycisk paska tytułowego systemu, dodającego platformę na pasku menu głównego po użytkownik Maksymalizuje okno podrzędne MDI.|
-|`CMFCVisualManagerBitmapCache Class`|Zarządza `CMFCControlRenderer` obiektów, aby zwiększyć wydajność operacji na map bitowych.|
-|`CMultiDocTemplateEx Class`|Rozszerza `CMultiDocTemplate` klasy w celu zapewnienia dostępu do identyfikatora zasobu menu|
+|`CMFCToolBarsToolsPropertyPage Class`|Przedstawia stronę właściwości, która umożliwia użytkownikowi Dostosowywanie narzędzi użytkownika.|
+|`CMFCToolBarSystemMenuButton Class`|Implementuje przycisk podpisu systemowego, który jest dodawany przez platformę do głównego paska menu, gdy użytkownik Maksymalizuje okno podrzędne MDI.|
+|`CMFCVisualManagerBitmapCache Class`|Zarządza `CMFCControlRenderer` obiektami, aby zwiększyć wydajność operacji na mapach bitowych.|
+|`CMultiDocTemplateEx Class`|Rozszerza `CMultiDocTemplate` klasę w celu zapewnienia dostępu do identyfikatora zasobu menu.|
 |`COleCntrFrameWndEx Class`||
 |`COleDocIPFrameWndEx Class`|Zapewnia obsługę OLE.|
-|`COleServerDocEx Class`|Udostępnia operacje na dokumentów serwera OLE.|
+|`COleServerDocEx Class`|Zawiera operacje na dokumentach serwera OLE.|
 |`CPaneContainerGC Class`||
 |`CPngImage Class`|Zapewnia dostęp do zasobów obrazu, które używają formatu pliku PNG.|
 |`CPreviewViewEx Class`||
-|`CRecentPaneContainerInfo Class`|Przechowuje poprzedni stan okienka dokowania.|
-|`CRibbonCategoryScroll Class`|Implementuje przycisk przewijania, który jest wyświetlany, gdy nie że wszystkie elementy mieści się w obszarze paska wstążki.|
-|`CSmartDockingGroupGuide Class`|Reprezentuje element centralny grupy dokowanie inteligentnych.|
-|`CSmartDockingGroupGuidesManager Class`|Zarządza przewodniki grupy dokowanie inteligentnych.|
-|`CSmartDockingGroupGuidesWnd Class`|Implementuje okno warstwowej, innych niż prostokątne, w którym użyto platformę, aby wyświetlić grupy centralnej dokowanie inteligentnych przewodniki.|
-|`CSmartDockingHighlighterWnd Class`|Implementuje okno półprzezroczyste, obejmująca obszar podejmowanych przez obiekt dokowalne okienko, który jest jest zadokowany.|
-|`CSmartDockingManager Class`|Zapewnia funkcje dokowania inteligentnych `CDockingManager` obiektów.|
-|`CSmartDockingStandaloneGuide Class`|Implementuje dokowania inteligentnych przewodnik.|
-|`CSmartDockingStandaloneGuideWnd Class`|Implementuje okno warstwowej, innych niż prostokątne, w którym użyto platformę, aby wyświetlić przewodniki dokowanie inteligentnych.|
-|`CTagManager Class`|`CTagManager` Klasa ma odczytać wartości, które są przechowywane w formacie oznakowane przypominającej XML.|
+|`CRecentPaneContainerInfo Class`|Utrzymuje poprzedni stan okienka dokowania.|
+|`CRibbonCategoryScroll Class`|Implementuje przycisk przewijania, który pojawia się, gdy nie wszystkie elementy mieszczą się w obszarze paska wstążki.|
+|`CSmartDockingGroupGuide Class`|Reprezentuje centralny element grupy dokującej.|
+|`CSmartDockingGroupGuidesManager Class`|Zarządza przewodnikami grupowego dokowania.|
+|`CSmartDockingGroupGuidesWnd Class`|Implementuje warstwowe, nieprostokątne okno używane przez platformę do wyświetlania centralnej grupy przewodników inteligentnych dokowania.|
+|`CSmartDockingHighlighterWnd Class`|Implementuje okno częściowo przezroczyste, które obejmuje obszar, który ma zostać wykonany przez obiekt okienka było dokować, który jest zadokowany.|
+|`CSmartDockingManager Class`|Zapewnia funkcję inteligentnego dokowania dla `CDockingManager` obiektów.|
+|`CSmartDockingStandaloneGuide Class`|Implementuje Przewodnik dotyczący dokowania inteligentnej.|
+|`CSmartDockingStandaloneGuideWnd Class`|Implementuje warstwowe, nieprostokątne okno używane przez platformę do wyświetlania przewodników inteligentnych dokowania.|
+|`CTagManager Class`|`CTagManager`Klasa jest przeznaczona do odczytywania wartości, które są przechowywane w formacie oznakowanym podobnym do kodu XML.|
 |`CVSListBoxBase Class`|Zapewnia podstawowe funkcje `CVSListBox` klasy.|
-|`CVSListBoxEditCtrl Class`|Rozszerza formant edycji pola listy standardowych, wyświetlając małego przycisku, który powoduje otwarcie okna dialogowego.|
-|`CVSToolsListBox Class`|Rozszerza standardowe pole listy, zapewniając dodatkowe przyciski umożliwia dodawanie, usuwanie i przenoszenie elementów w polu listy.|
+|`CVSListBoxEditCtrl Class`|Rozszerza standardową kontrolkę edycji pola listy, wyświetlając mały przycisk, który otwiera okno dialogowe.|
+|`CVSToolsListBox Class`|Rozszerza standardowy formant pola listy, dostarczając dodatkowe przyciski umożliwiające dodawanie, usuwanie i przenoszenie elementów w polu listy.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Aplikacje klasyczne MFC](../../mfc/mfc-desktop-applications.md)

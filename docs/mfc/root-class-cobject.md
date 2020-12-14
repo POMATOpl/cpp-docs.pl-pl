@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Klasa główna: CObject'
 title: 'Klasa główna: CObject'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - root class [MFC]
 - MFC, base class
 ms.assetid: 593706f3-e9e5-435f-815d-e7b5176b2a61
-ms.openlocfilehash: ca1912175c00d12a201a53631216eef69ab50a82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 31a42fe6385eab5c2559e510216a3148cac78601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217877"
 ---
 # <a name="root-class-cobject"></a>Klasa główna: CObject
 
-Większość klas w bibliotece Microsoft Foundation Class (MFC) pochodzi od pojedynczej klasy podstawowej w katalogu głównym hierarchii klas. `CObject` zapewnia wiele przydatnych funkcji dla wszystkich klas, z których pochodzą, z bardzo niskimi kosztami. Aby uzyskać więcej informacji o `CObject` i jej możliwościach, zobacz [using CObject](../mfc/using-cobject.md).
+Większość klas w bibliotece Microsoft Foundation Class (MFC) pochodzi od pojedynczej klasy podstawowej w katalogu głównym hierarchii klas. `CObject` zapewnia wiele przydatnych funkcji dla wszystkich klas pochodnych, z bardzo niskim obciążeniem. Aby uzyskać więcej informacji na temat `CObject` i jego możliwości, zobacz [using CObject](../mfc/using-cobject.md).
 
 [CObject](../mfc/reference/cobject-class.md)<br/>
 Klasa podstawowa klasy bazowej większości klas MFC. Obsługuje Serializowanie danych i uzyskiwanie informacji o czasie wykonywania dotyczących klasy.

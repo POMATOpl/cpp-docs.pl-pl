@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat struktury HSE_VERSION_INFO
 title: HSE_VERSION_INFO — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - HSE_VERSION_INFO structure [MFC]
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
-ms.openlocfilehash: 97f34bebae8a486a825d04b23c5a92fbd4aefa42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe03f3c4e00f9af62398993838927ce75410f17b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219632"
 ---
-# <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO — Struktura
+# <a name="hse_version_info-structure"></a>HSE_VERSION_INFO — Struktura
 
-Ta struktura jest wskazywany przez *pVer* parametru w `CHttpServer::GetExtensionVersion` funkcja elementu członkowskiego. Zawiera numer wersji oprogramowania ISA i opis tekstowy ISA.
+Ta struktura jest wskazywana przez parametr *pVer* w `CHttpServer::GetExtensionVersion` funkcji członkowskiej. Zawiera numer wersji programu ISA oraz opis tekstowy ISA.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,15 +30,15 @@ typedef struct _HSE_VERSION_INFO {
 #### <a name="parameters"></a>Parametry
 
 *dwExtensionVersion*<br/>
-Numer wersji ISA.
+Numer wersji programu ISA.
 
 *lpszExtensionDesc*<br/>
-Opis tekstowy ISA. Domyślna implementacja zawiera tekst symbolu zastępczego; Zastąp `CHttpServer::GetExtensionVersion` zapewnienie własny opis.
+Opis tekstowy ISA. Domyślna implementacja zawiera tekst zastępczy; Przesłoń `CHttpServer::GetExtensionVersion` , aby podać własny opis.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** httpext.h
+**Nagłówek:** httpext. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

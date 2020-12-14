@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: implementacja paska stanu w MFC'
 title: Implementacja paska stanu w MFC
 ms.date: 11/19/2018
 f1_keywords:
@@ -16,29 +17,29 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: abd16ecb5e6a492bc42c747f60ec0859e1bc05cb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d42f8b4bf6ae72cf8eb4a12d1f5eafb8603c5e1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216759"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementacja paska stanu w MFC
 
-A [CStatusBar](../mfc/reference/cstatusbar-class.md) obiekt jest pasek sterowania z wiersza tekstu wyjściowego okienka. Okienka danych wyjściowych są często używane jako wiersz wiadomości, a wskaźniki stanu. Przykłady obejmują linie komunikat pomocy menu krótko opisano wybrane polecenie i wskaźniki, pokazujące stan SCROLL LOCK, NUM LOCK i innych kluczy.
+Obiekt [CStatusBar](../mfc/reference/cstatusbar-class.md) jest paskiem sterowania z wierszem okienka tekstu wyjściowego. Okienka danych wyjściowych są często używane jako wiersze komunikatów i jako wskaźniki stanu. Przykłady obejmują menu Pomoc — wiersze komunikatów, które krótko objaśniają wybrane polecenie menu i wskaźniki pokazujące stan blokady przewijania, NUM LOCK i innych kluczy.
 
-Począwszy od wersji 4.0 MFC, paski stanu są implementowane za pomocą klasy [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), która hermetyzuje stan paska wspólnej kontroli. W celu zapewnienia zgodności z poprzednimi wersjami MFC zachowuje starsze implementacja paska stanu w klasie `COldStatusBar`. W tym artykule opisano dokumentacji dla wcześniejszych wersji MFC `COldStatusBar` w obszarze `CStatusBar`.
+Począwszy od wersji 4,0, paski stanu są implementowane przy użyciu klasy [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), która hermetyzuje wspólny formant paska stanu. W celu zapewnienia zgodności z poprzednimi wersjami MFC zachowuje starszą implementację paska stanu w klasie `COldStatusBar` . Dokumentacja dotycząca wcześniejszych wersji MFC została zamieszczona `COldStatusBar` w temacie `CStatusBar` .
 
-[CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), funkcją składową nowe 4.0 MFC, pozwala na korzystanie z zalet obsługi Windows formantu typowego paska dostosowań i dodatkowe funkcje stanu. `CStatusBar` Funkcje Członkowskie zapewniają większość funkcji wspólnych formantów Windows; Jednak jeśli wywołasz `GetStatusBarCtrl`, Twoje paski stanu można nadać jeszcze więcej właściwości paska stanu. Gdy wywołujesz `GetStatusBarCtrl`, to zostanie zwrócona odwołanie do `CStatusBarCtrl` obiektu. Za pomocą tego odwołania do manipulowania formantu paska stanu.
+[CStatusBar:: GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), funkcja członkowska New to MFC 4,0, umożliwia korzystanie z pomocy technicznej programu Windows Common Control do dostosowywania paska stanu i dodatkowych funkcji. `CStatusBar` funkcje składowe zapewniają większość funkcji formantów standardowych systemu Windows; Jednak po wywołaniu programu `GetStatusBarCtrl` można dać paski stanu jeszcze większą charakterystykę paska stanu. Po wywołaniu `GetStatusBarCtrl` , zwróci odwołanie do `CStatusBarCtrl` obiektu. Za pomocą tego odwołania można manipulować formantem paska stanu.
 
-Na poniższej ilustracji przedstawiono pasek stanu, który wyświetla kilka wskaźniki.
+Na poniższej ilustracji przedstawiono pasek stanu, w którym wyświetlane są różne wskaźniki.
 
-![Pasek stanu](../mfc/media/vc37dy1.gif "paska stanu") <br/>
+![Pasek stanu](../mfc/media/vc37dy1.gif "Pasek stanu") <br/>
 Pasek stanu
 
-Pasek narzędzi, np. obiekt pasek stanu jest osadzony w jej nadrzędnej ramki okna i jest tworzony automatycznie, gdy okno ramowe jest konstruowany. Na pasku stanu, podobnie jak wszystkie paski sterowania, jest niszczony, automatycznie także kiedy niszczony jest nadrzędnej ramki.
+Podobnie jak w przypadku paska narzędzi, obiekt pasek stanu jest osadzony w oknie ramki nadrzędnej i jest tworzony automatycznie podczas konstruowania okna ramki. Pasek stanu, podobnie jak wszystkie paski kontroli, jest niszczony automatycznie, gdy ramka nadrzędna zostanie zniszczona.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
 - [Aktualizowanie tekstu w okienku paska stanu](../mfc/updating-the-text-of-a-status-bar-pane.md)
 
@@ -48,8 +49,8 @@ Pasek narzędzi, np. obiekt pasek stanu jest osadzony w jej nadrzędnej ramki ok
 
 - [Paski dialogowe](../mfc/dialog-bars.md)
 
-- [Paski narzędzi (MFC — implementacja paska narzędzi)](../mfc/mfc-toolbar-implementation.md)
+- [Paski narzędzi (implementacja paska narzędzi MFC)](../mfc/mfc-toolbar-implementation.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Paski stanu](../mfc/status-bars.md)

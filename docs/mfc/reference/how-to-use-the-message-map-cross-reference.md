@@ -1,30 +1,31 @@
 ---
-title: 'Instrukcje: Używanie odsyłacza mapy komunikatów'
+description: 'Dowiedz się więcej na temat: jak korzystać z Message-Map odsyłaczy'
+title: 'Porady: używanie odsyłacza mapy komunikatów'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-ms.openlocfilehash: 58659dbf4e4bc817381faaef930334a80f664b03
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 4bbc140db59a7df4abd42fdcf68b47273ec3e846
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219658"
 ---
-# <a name="how-to-use-the-message-map-cross-reference"></a>Instrukcje: Używanie odsyłacza mapy komunikatów
+# <a name="how-to-use-the-message-map-cross-reference"></a>Porady: używanie odsyłacza mapy komunikatów
 
-We wpisach etykietą \<memberFxn >, napisać własną funkcję członkowską pochodnej [CWnd](../../mfc/reference/cwnd-class.md) klasy. Nadaj funkcji dowolną nazwę, jaką chcesz. Inne funkcje, takie jak `OnActivate`, funkcji składowej klasy `CWnd`. Jeśli wywołany, przekazują komunikat, który ma `DefWindowProc` funkcji Windows. Przetwarzanie komunikatów powiadomień w Windows, Zastąp odpowiednie `CWnd` funkcja w klasie pochodnej. Funkcja powinna wywołać zastąpiona funkcja w klasie bazowej umożliwiające klasy bazowej, a Windows odpowiedzieć na wiadomość.
+W pozycjach z etykietą \<memberFxn> napisz własną funkcję członkowską dla pochodnej klasy [CWnd](../../mfc/reference/cwnd-class.md) . Nadaj swojej funkcji dowolną nazwę. Inne funkcje, takie jak `OnActivate` , są funkcjami składowymi klasy `CWnd` . Jeśli zostanie wywołana, przekaże komunikat do `DefWindowProc` funkcji systemu Windows. Aby przetwarzać komunikaty powiadomień systemu Windows, Zastąp odpowiednią `CWnd` funkcję w klasie pochodnej. Funkcja powinna wywołać przesłoniętą funkcję w klasie bazowej, aby umożliwić klasie podstawowej i systemowi Windows odpowiadanie na wiadomość.
 
-We wszystkich przypadkach należy umieścić prototypu funkcji w `CWnd`-klasy pochodnej, nagłówek i kod wpisu mapy wiadomości, jak pokazano.
+We wszystkich przypadkach należy umieścić prototyp funkcji w `CWnd` nagłówku klasy pochodnej i kod wpisu mapy wiadomości, jak pokazano.
 
-Są używane następujące terminy:
+Używane są następujące terminy:
 
-|Termin|Definicja|
+|Okres|Definicja|
 |----------|----------------|
-|identyfikator|Identyfikator elementu menu zdefiniowanych przez użytkownika (wm_command — komunikaty) lub identyfikator formantu (komunikaty powiadomień okna podrzędnego).|
-|"message" i "wNotifyCode"|Windows komunikatu identyfikatorów, zgodnie z definicją w systemie WINDOWS. H.|
-|nMessageVariable|Nazwa zmiennej, która zawiera wartość zwrotną z elementu `RegisterWindowMessage` funkcji Windows.|
+|identyfikator|Każdy zdefiniowany przez użytkownika identyfikator elementu menu (komunikaty WM_COMMAND) lub identyfikator formantu (komunikaty powiadomień okna podrzędnego).|
+|"Message" i "Włącz wNotifyCode"|Identyfikatory komunikatów systemu Windows zgodnie z definicją w systemie WINDOWS. H.|
+|nMessageVariable|Nazwa zmiennej, która zawiera wartość zwracaną z `RegisterWindowMessage` funkcji systemu Windows.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)

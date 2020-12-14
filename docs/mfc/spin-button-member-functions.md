@@ -1,32 +1,33 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach członkowskich przycisku pokrętła'
 title: Funkcje członkowskie przycisku pokrętła
 ms.date: 11/04/2016
 helpviewer_keywords:
 - spin button control, methods
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
-ms.openlocfilehash: 5ad6f529762e77e1cf1c00f41eea0add5d196fbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a03ab33d29634ed85d807eb5b51edfdef310d65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307266"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216837"
 ---
 # <a name="spin-button-member-functions"></a>Funkcje członkowskie przycisku pokrętła
 
-Brak dostępnych kilka elementów członkowskich dla kontrolki pokrętła ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Użyj tych funkcji, aby zmienić następujące atrybuty przycisku pokrętła.
+Istnieje kilka funkcji Członkowskich dostępnych dla formantu pokrętła ([Korzystanie CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Te funkcje umożliwiają zmianę następujących atrybutów przycisku pokrętła.
 
-- **Przyspieszanie** można dostosować szybkość jaką położenia zmienia się po użytkownik posiada przycisk strzałki w dół. Aby pracować z przyspieszenia, należy użyć [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel) i [GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel) funkcji elementów członkowskich.
+- **Przyspieszenie** Możesz dostosować szybkość zmiany położenia, gdy użytkownik będzie miał przycisk strzałki w dół. Aby współpracować z przyspieszeniem, użyj funkcji składowych [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel) i [GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel) .
 
-- **Podstawowy** można zmienić podstawowej (10 lub 16) używany do wyświetlania pozycji w podpisie okna zaprzyjaźnionego. Aby pracować z podstawowej, użyj [getbase —](../mfc/reference/cspinbuttonctrl-class.md#getbase) i [SetBase](../mfc/reference/cspinbuttonctrl-class.md#setbase) funkcji elementów członkowskich.
+- **Baza** Można zmienić bazę (10 lub 16) używaną do wyświetlania pozycji w podpisie okna partnera. Aby współdziałać z podstawą, użyj funkcji [GetBase](../mfc/reference/cspinbuttonctrl-class.md#getbase) i [setbase](../mfc/reference/cspinbuttonctrl-class.md#setbase) .
 
-- **Kolega okna** można dynamicznie ustawiać okno cyklu. Aby zapytania lub zmiany, które określają to okno buddy, użyj [GetBuddy](../mfc/reference/cspinbuttonctrl-class.md#getbuddy) i [SetBuddy](../mfc/reference/cspinbuttonctrl-class.md#setbuddy) funkcji elementów członkowskich.
+- **Okno partnera** Można dynamicznie ustawić okno partnera. Aby zbadać lub zmienić, który formant jest oknem partnera, użyj funkcji elementów członkowskich [getkolega](../mfc/reference/cspinbuttonctrl-class.md#getbuddy) i [setkolega](../mfc/reference/cspinbuttonctrl-class.md#setbuddy) .
 
-- **Pozycja** można wykonywać zapytania i zmiana położenia. Aby pracować bezpośrednio z pozycji, użyj [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos) i [SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos) funkcji elementów członkowskich. Ponieważ podpis formantu partnera mogły ulec zmianie (na przykład w przypadku kolega to formant edycji) `GetPos` pobiera bieżącego podpisu i w związku z tym Dopasowuje pozycję.
+- **Pozycja** Można wysyłać zapytania i zmieniać położenie. Aby bezpośrednio współpracować z pozycją, użyj funkcji składowych [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos) i [SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos) . Ponieważ podpis formantu partnera może ulec zmianie (na przykład w przypadku, gdy kolega jest formantem edycji), `GetPos` Pobiera bieżący podpis i odpowiednio dostosowuje położenie.
 
-- **Zakres** można zmienić położenie maksymalne i minimalne dla przycisku pokrętła. Domyślnie maksymalna jest ustawiona na 0, a minimalna jest równa 100. Ponieważ domyślna wartość maksymalna jest mniejsza niż minimalna domyślne, akcje przycisków strzałek jest counter-intuitive. Zazwyczaj spowoduje ustawienie przy użyciu zakresu [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) funkcja elementu członkowskiego. Do wykonywania zapytań Użyj zakresu [getrange —](../mfc/reference/cspinbuttonctrl-class.md#getrange).
+- **Zakres** Można zmienić maksymalne i minimalne położenia przycisku pokrętła. Domyślnie wartość maksymalna to 0, a wartość minimalna to 100. Ponieważ domyślna wartość maksymalna jest mniejsza niż wartość domyślna minimum, akcje przycisków strzałek są intuicyjne. Zazwyczaj należy ustawić zakres przy użyciu funkcji elementu członkowskiego [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) . Aby zbadać zakres, użyj [GetRange](../mfc/reference/cspinbuttonctrl-class.md#getrange).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie ze CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
+[Formanty](../mfc/controls-mfc.md)

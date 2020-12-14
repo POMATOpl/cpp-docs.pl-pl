@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: style kontrolki postępu'
 title: Style formantu postępu
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,41 +8,41 @@ helpviewer_keywords:
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 3adbd32456b1375bd2dc8574220e083ca3d83ee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd6ce1093f8bd2e3271a386e894d1e8dcd1a4fd7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216499"
 ---
 # <a name="styles-for-the-progress-control"></a>Style formantu postępu
 
-Podczas początkowego tworzenia formantu postępu ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), użyj *dwStyle* parametru, aby określić żądaną okna Style kontrolki postępu. Poniżej przedstawiono szczegółową listę style odpowiednie okna. Kontrolka ignoruje dowolny styl okna innych niż wymienione w tym miejscu. Formant należy zawsze tworzyć jako okna podrzędnego, zazwyczaj z elementem nadrzędnym okno dialogowe.
+Gdy początkowo tworzysz kontrolkę postępu ([Korzystanie CProgressCtrl:: Create](../mfc/reference/cprogressctrl-class.md#create)), użyj parametru *dwStyle* , aby określić żądane style okna dla kontrolki postępu. Poniższa lista zawiera szczegółowe informacje dotyczące odpowiednich stylów okna. Formant ignoruje wszystkie style okna inne niż wymienione w tym miejscu. Kontrolkę należy zawsze tworzyć jako okno podrzędne, zazwyczaj z poziomu nadrzędnego okna dialogowego.
 
 |Styl okna|Efekt|
 |------------------|------------|
-|WS_BORDER|Tworzy obramowania okna.|
-|WS_CHILD|Tworzy okno podrzędne (zawsze należy używać w przypadku `CProgressCtrl`).|
-|WS_CLIPCHILDREN|Wyklucza obszar zajmowany przez okna podrzędne Kiedy rysujesz w oknie nadrzędnym. Używany podczas tworzenia okna nadrzędnego.|
-|WS_CLIPSIBLINGS|Przycina okien podrzędnych względem siebie.|
+|WS_BORDER|Tworzy obramowanie wokół okna.|
+|WS_CHILD|Tworzy okno podrzędne (powinno być zawsze używane do `CProgressCtrl` ).|
+|WS_CLIPCHILDREN|Wyklucza obszar zajęty przez okna podrzędne podczas rysowania w oknie nadrzędnym. Używane podczas tworzenia okna nadrzędnego.|
+|WS_CLIPSIBLINGS|Powoduje, że podrzędne okna są zależne od siebie.|
 |WS_DISABLED|Tworzy okno, które jest początkowo wyłączone.|
 |WS_VISIBLE|Tworzy okno, które jest początkowo widoczne.|
-|WS_TABSTOP|Określa, że formant może odebrać fokus, gdy użytkownik naciśnie klawisz TAB aby przenieść do niego.|
+|WS_TABSTOP|Określa, że kontrolka może odbierać fokus, gdy użytkownik naciśnie klawisz TAB, aby przejść do niego.|
 
-Ponadto można określić dwa style, które mają zastosowanie tylko do formantu postępu pbs_vertical — i pbs_smooth —.
+Ponadto można określić dwa style, które mają zastosowanie tylko do kontrolki postępu, PBS_VERTICAL i PBS_SMOOTH.
 
-Pbs_vertical — umożliwia orientacja kontrolki w pionie, a nie w poziomie. Do wypełnienia kontrolki całkowicie, zamiast wyświetlić małe kwadraty nakreślonego, które wypełniają formant stopniowo, należy użyć pbs_smooth —.
+Użyj PBS_VERTICAL, aby określić orientację w pionie, a nie w poziomie. Użyj PBS_SMOOTH, aby całkowicie wypełnić formant, zamiast wyświetlać małe rozdzielone kwadraty wypełniające formant przyrostowo.
 
-Bez pbs_smooth — styl:
+Bez PBS_SMOOTH stylu:
 
-![Styl paska postępu standardowa](../mfc/media/vc4ruw1.gif "styl paska postępu standardowe")
+![Standardowy styl paska postępu](../mfc/media/vc4ruw1.gif "Standardowy styl paska postępu")
 
-Za pomocą pbs_smooth — i pbs_vertical — styl:
+Ze stylami PBS_SMOOTH i PBS_VERTICAL:
 
-![Pasek stylu płynne i pionowy postępu](../mfc/media/vc4ruw2.gif "pasek stylu płynne i pionowy postępu")
+![Styl paska postępu, gładki i pionowy](../mfc/media/vc4ruw2.gif "Styl paska postępu, gładki i pionowy")
 
-Aby uzyskać więcej informacji, zobacz [Style okna ramowego](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) w *odwołanie MFC*.
+Aby uzyskać więcej informacji, zobacz [Style okna](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) w *dokumentacji MFC*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CProgressCtrl](../mfc/using-cprogressctrl.md)

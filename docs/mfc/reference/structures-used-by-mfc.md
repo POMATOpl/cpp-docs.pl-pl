@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: strukturach używanych przez MFC'
 title: Struktury używane przez MFC
 ms.date: 12/03/2018
 helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: cce51a5bb9a2d63b09e3db1270a1b93bdc712bbe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fecf5312c155f8b113126a53b242663a4ec86301
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218748"
 ---
 # <a name="structures-used-by-mfc"></a>Struktury używane przez MFC
 

@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: internetowa analiza adresów URL Globals i pomocnicy'
 title: Globals i pomocnicy analizowania internetowych adresów URL
 ms.date: 04/03/2017
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: c7ce6eeee6deb4537d09e102b925a742ada04650
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4dca0946686759a3880c73aa425edcc724d8772d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219502"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Globals i pomocnicy analizowania internetowych adresów URL
 
@@ -109,7 +110,7 @@ Na przykład `AfxParseURL` analizuje adresy URL formularza *Service://Server/dir
 *dwServiceType* = = #service
 
 > [!NOTE]
-> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. C.
+> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. H.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -206,7 +207,7 @@ Niezerowe, jeśli adres URL został pomyślnie przeanalizowany; w przeciwnym raz
 Analizuje on ciąg adresu URL i zwraca typ usługi i jej składników, a także podanie nazwy użytkownika i hasła. Flagi wskazują, w jaki sposób są obsługiwane niebezpieczne znaki.
 
 > [!NOTE]
-> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. C.
+> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. H.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -229,7 +230,7 @@ Dojście do zapytania internetowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wszystkie typy usług internetowych zdefiniowane przez usługę WININET. C. Zapoznaj się z sekcją uwagi, aby zapoznać się z listą tych usług internetowych. Jeśli dojście ma wartość NULL lub nie jest rozpoznawane, funkcja zwraca AFX_INET_SERVICE_UNK.
+Wszystkie typy usług internetowych zdefiniowane przez WININET. H. Zapoznaj się z sekcją uwagi, aby zapoznać się z listą tych usług internetowych. Jeśli dojście ma wartość NULL lub nie jest rozpoznawane, funkcja zwraca AFX_INET_SERVICE_UNK.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -262,7 +263,7 @@ Poniższa lista zawiera możliwe typy internetowe zwrócone przez program `AfxGe
 - INTERNET_HANDLE_TYPE_HTTP_REQUEST
 
 > [!NOTE]
-> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. C.
+> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. H.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -291,7 +292,7 @@ Błąd, który spowodował wyjątek.
 Użytkownik jest odpowiedzialny za określenie przyczyny na podstawie kodu błędu systemu operacyjnego.
 
 > [!NOTE]
-> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. C.
+> Aby wywołać tę funkcję, projekt musi zawierać AFXINET. H.
 
 ### <a name="requirements"></a>Wymagania
 

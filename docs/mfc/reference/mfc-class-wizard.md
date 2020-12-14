@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Kreator klas MFC'
 title: Kreator klas MFC
 ms.date: 09/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-ms.openlocfilehash: be829156d8fea8188a217b2c0a189ac5d6057a7e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: ba82cabd13fb242f5201243cd9f06c44df8141ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908007"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219190"
 ---
 # <a name="mfc-class-wizard"></a>Kreator klas MFC
 
@@ -20,8 +21,8 @@ Użyj **kreatora klas** , aby utworzyć nowe klasy MFC lub dodać komunikaty i p
 Istnieją trzy sposoby otwierania **kreatora klas**:
 
 - W menu **projekt** wybierz **kreatora klas**.
-- Wpisz **Ctrl** > ShiftX > .
-- W **Widok klasy**kliknij prawym przyciskiem myszy klasę lub węzeł projektu, a następnie wybierz polecenie **Kreator klas**.
+- Wpisz **Ctrl**  >  **SHIFT**  >  **X**.
+- W **Widok klasy** kliknij prawym przyciskiem myszy klasę lub węzeł projektu, a następnie wybierz polecenie **Kreator klas**.
 
 ![Kreator klas](media/class-wizard.png "Kreator klas MFC")
 
@@ -73,7 +74,7 @@ Istnieją trzy sposoby otwierania **kreatora klas**:
 
    Umożliwia dodawanie, usuwanie, edytowanie lub wyszukiwanie poleceń i obsługi komunikatów.
 
-   Aby dodać procedurę obsługi, kliknij pozycję **Dodaj program obsługi**lub kliknij dwukrotnie element na liście **identyfikatorów obiektów** lub **komunikatów** . Nazwa funkcji, identyfikator i komunikat są wyświetlane na liście **funkcji Członkowskich** .
+   Aby dodać procedurę obsługi, kliknij pozycję **Dodaj program obsługi** lub kliknij dwukrotnie element na liście **identyfikatorów obiektów** lub **komunikatów** . Nazwa funkcji, identyfikator i komunikat są wyświetlane na liście **funkcji Członkowskich** .
 
    Aby usunąć procedurę obsługi, zaznacz element na liście **funkcje członkowskie** , a następnie kliknij polecenie **Usuń procedurę obsługi**.
 
@@ -83,7 +84,7 @@ Istnieją trzy sposoby otwierania **kreatora klas**:
 
    Umożliwia dodawanie, usuwanie, edytowanie lub wyszukiwanie wiadomości oraz obsługę komunikatów.
 
-   Aby dodać procedurę obsługi, kliknij pozycję **Dodaj obsługę**lub kliknij dwukrotnie element na liście **komunikaty** .
+   Aby dodać procedurę obsługi, kliknij pozycję **Dodaj obsługę** lub kliknij dwukrotnie element na liście **komunikaty** .
 
    Aby dodać wiadomość niestandardową, kliknij przycisk **Dodaj wiadomość niestandardową** lub naciśnij klawisz ENTER, a następnie określ wartości w oknie dialogowym **Dodaj komunikat niestandardowy** . W tym oknie dialogowym możesz również wybrać **zarejestrowany komunikat** , aby obsłużyć komunikat okna, który ma być unikatowy w całym systemie operacyjnym.
 
@@ -107,6 +108,6 @@ Istnieją trzy sposoby otwierania **kreatora klas**:
 
    Aby wyświetlić definicję, kliknij dwukrotnie element na liście **metody** . Lub wybierz element na liście **metody** , a następnie kliknij przycisk **Przejdź do definicji** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)

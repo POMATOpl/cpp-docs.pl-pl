@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: Run-Time usług modelu obiektów'
 title: Usługi modelu obiektów czasu wykonywania
 ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5457b34b13d53a6fbf76a74b893958b03b1d63de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218891"
 ---
 # <a name="run-time-object-model-services"></a>Usługi modelu obiektów czasu wykonywania
 
@@ -23,9 +24,9 @@ Dynamiczne tworzenie obiektów umożliwia utworzenie obiektu określonej klasy w
 
 Poniższa tabela zawiera listę makr MFC, które obsługują informacje o klasie czasu wykonywania, serializacji i tworzenia dynamicznego.
 
-Aby uzyskać więcej informacji na temat tych usług obiektów i serializacji w czasie wykonywania, zobacz artykuł [CObject Class: uzyskiwanie dostępu do informacji o klasie czasu wykonywania](../../mfc/accessing-run-time-class-information.md).
+Aby uzyskać więcej informacji na temat tych usług i serializacji obiektów uruchomieniowych, zobacz artykuł [CObject Class: uzyskiwanie dostępu Run-Time informacje o klasie](../../mfc/accessing-run-time-class-information.md).
 
-### <a name="run-time-object-model-services-macros"></a>Makra usług modelu obiektów czasu wykonywania
+### <a name="run-time-object-model-services-macros"></a>Makra usług Run-Time model obiektów
 
 |Nazwa|Opis|
 |-|-|
@@ -355,7 +356,7 @@ Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading`
 
 Nazwa zewnętrzna to identyfikator uwidoczniony dla innych aplikacji. Aplikacje klienckie używają nazwy zewnętrznej do żądania obiektu tej klasy z serwera automatyzacji.
 
-Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowym dla obiektu. Składa się z jednego **`long`** , dwóch **wyrazów**i ośmiu **bajtów**s, jak reprezentowane przez *l*, *W1*, *W2*i *B1* do *B8* w opisie składni. Kreator aplikacji i kreatory kodu tworzą unikatowe identyfikatory klas OLE, zgodnie z potrzebami.
+Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowym dla obiektu. Składa się z jednego **`long`** , dwóch **wyrazów** i ośmiu **bajtów** s, jak reprezentowane przez *l*, *W1*, *W2* i *B1* do *B8* w opisie składni. Kreator aplikacji i kreatory kodu tworzą unikatowe identyfikatory klas OLE, zgodnie z potrzebami.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -509,7 +510,7 @@ Nazwa obiektu uwidaczniana innym aplikacjom (ujętym w cudzysłów).
 
 Nazwa zewnętrzna to identyfikator uwidoczniony dla innych aplikacji. Aplikacje klienckie używają nazwy zewnętrznej do żądania obiektu tej klasy z serwera automatyzacji.
 
-Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowym dla obiektu. Składa się z jednego **`long`** , dwóch **wyrazów**i ośmiu **bajtów**s, jak reprezentowane przez *l*, *W1*, *W2*i *B1* do *B8* w opisie składni. Kreator aplikacji i kreatory kodu tworzą unikatowe identyfikatory klas OLE, zgodnie z potrzebami.
+Identyfikator klasy OLE jest unikatowym identyfikatorem 128-bitowym dla obiektu. Składa się z jednego **`long`** , dwóch **wyrazów** i ośmiu **bajtów** s, jak reprezentowane przez *l*, *W1*, *W2* i *B1* do *B8* w opisie składni. Kreator aplikacji i kreatory kodu tworzą unikatowe identyfikatory klas OLE, zgodnie z potrzebami.
 
 ### <a name="requirements"></a>Wymagania
 

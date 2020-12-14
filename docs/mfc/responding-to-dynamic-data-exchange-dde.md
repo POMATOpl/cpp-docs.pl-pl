@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: reagowanie na dynamiczną wymianę danych (DDE)'
 title: Odpowiadanie na dynamiczną wymianę danych (DDE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - responding to dynamic data exchange (DDE)
 - frame windows [MFC], shell registration
 ms.assetid: 4db838d5-62cf-4123-915a-66e514155c0c
-ms.openlocfilehash: f6ca50b95e35ea4d7a6c29c6dd6919e02c9bdc7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3dc9a3881b78f95a8571143aceace50836ab8fa0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308917"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218033"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Odpowiadanie na dynamiczną wymianę danych (DDE)
 
-Okno ramowe mogą odpowiadać na żądania programu exchange (DDE) dane dynamiczne umożliwia otwieranie plików z Menedżera plików (Jeśli rozszerzenie jest zarejestrowane lub skojarzone z aplikacją). Zobacz [powłoki rejestracji](../mfc/special-cwinapp-services.md).
+Okno ramki może odpowiadać na żądania dynamicznej wymiany danych (DDE) do otwierania plików z Menedżera plików (Jeśli rozszerzenie pliku jest zarejestrowane lub skojarzone z aplikacją). Zobacz [Rejestrowanie powłoki](../mfc/special-cwinapp-services.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie okien ramowych](../mfc/using-frame-windows.md)
+[Korzystanie z okien ramowych](../mfc/using-frame-windows.md)

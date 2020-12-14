@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: makra mapy komunikatów (MFC)'
 title: Makra mapy komunikatów (MFC)
 ms.date: 03/27/2019
 f1_keywords:
@@ -28,18 +29,18 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 33b5d2eaefa11f9ccf6459aa05b4e24138731e80
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ece09b915da9e6f88191e90056158be82651e9ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219398"
 ---
 # <a name="message-map-macros-mfc"></a>Makra mapy komunikatów (MFC)
 
 Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 
-### <a name="message-map-declaration-and-demarcation-macros"></a>Makra deklaracji i rozgraniczania mapy komunikatów
+### <a name="message-map-declaration-and-demarcation-macros"></a>Makra Message-Map i rozgraniczania
 
 |Nazwa|Opis|
 |-|-|
@@ -48,7 +49,7 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 |[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Rozpoczyna definicję mapy komunikatów dla typu klasy zawierającej jeden argument szablonu. |
 |[END_MESSAGE_MAP](#end_message_map)|Zamyka definicję mapy komunikatów (musi być używana w implementacji klasy).|
 
-### <a name="message-mapping-macros"></a>Makra mapowania komunikatów
+### <a name="message-mapping-macros"></a>Makra Message-Mapping
 
 |Nazwa|Opis|
 |-|-|
@@ -62,7 +63,7 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 |[ON_THREAD_MESSAGE](#on_thread_message)|Wskazuje, która funkcja będzie obsługiwać komunikat zdefiniowany przez użytkownika, gdy posiadasz `CWinThread` klasę.|
 |[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Wskazuje, która funkcja będzie obsługiwać określony komunikat polecenia aktualizacji interfejsu użytkownika.|
 
-### <a name="message-map-range-macros"></a>Makra zakresu mapy komunikatów
+### <a name="message-map-range-macros"></a>Makra zakresu Message-Map
 
 |Nazwa|Opis|
 |-|-|
@@ -70,7 +71,7 @@ Aby obsługiwać mapy komunikatów, MFC udostępnia następujące makra:
 |[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Wskazuje, która procedura obsługi aktualizacji będzie obsługiwać zakres identyfikatorów poleceń określonych w pierwszych dwóch parametrach makra.|
 |[ON_CONTROL_RANGE](#on_control_range)|Wskazuje, która funkcja będzie obsługiwać powiadomienia z zakresu identyfikatorów kontroli określonych w drugim i trzecim parametrze makra. Pierwszy parametr to komunikat z powiadomieniem o kontrolce, taki jak BN_CLICKED.|
 
-Aby uzyskać więcej informacji na temat map komunikatów, deklaracji i makr rozgraniczania mapy komunikatów oraz makr mapowania komunikatów, zobacz [mapy komunikatów](../../mfc/reference/message-maps-mfc.md) i [Obsługa komunikatów oraz mapowanie](../../mfc/message-handling-and-mapping.md). Aby uzyskać więcej informacji na temat zakresów map wiadomości, zobacz [programy obsługi dla zakresów map komunikatów](../../mfc/handlers-for-message-map-ranges.md).
+Aby uzyskać więcej informacji na temat map komunikatów, deklaracji i makr rozgraniczania mapy komunikatów oraz makr mapowania komunikatów, zobacz [mapy komunikatów](../../mfc/reference/message-maps-mfc.md) i [Obsługa komunikatów oraz mapowanie](../../mfc/message-handling-and-mapping.md). Aby uzyskać więcej informacji na temat zakresów map wiadomości, zobacz [programy obsługi dla zakresów Message-Map](../../mfc/handlers-for-message-map-ranges.md).
 
 ## <a name="begin_message_map"></a><a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -621,7 +622,7 @@ Nazwa funkcji obsługi komunikatów, do której są mapowane polecenia.
 
 Zakres identyfikatorów rozpoczyna się od *ID1* i kończą się *ID2*.
 
-Użyj ON_COMMAND_RANGE, aby zmapować zakres identyfikatorów poleceń na jedną funkcję członkowską. Użyj [ON_COMMAND](#on_command) , aby zmapować pojedyncze polecenie do funkcji członkowskiej. Tylko jeden wpis mapy komunikatów może pasować do danego identyfikatora polecenia. Oznacza to, że nie można zamapować polecenia na więcej niż jedną procedurę obsługi. Aby uzyskać więcej informacji na temat mapowania zakresów komunikatów, zobacz [programy obsługi dla zakresów map komunikatów](../../mfc/handlers-for-message-map-ranges.md).
+Użyj ON_COMMAND_RANGE, aby zmapować zakres identyfikatorów poleceń na jedną funkcję członkowską. Użyj [ON_COMMAND](#on_command) , aby zmapować pojedyncze polecenie do funkcji członkowskiej. Tylko jeden wpis mapy komunikatów może pasować do danego identyfikatora polecenia. Oznacza to, że nie można zamapować polecenia na więcej niż jedną procedurę obsługi. Aby uzyskać więcej informacji na temat mapowania zakresów komunikatów, zobacz [programy obsługi dla zakresów Message-Map](../../mfc/handlers-for-message-map-ranges.md).
 
 Nie ma automatycznej obsługi dla zakresów map wiadomości, dlatego należy samodzielnie umieścić makro.
 
@@ -712,7 +713,7 @@ Zakres identyfikatorów rozpoczyna się od *ID1* i kończą się *ID2*. Procedur
 
 Nie ma automatycznej obsługi dla zakresów map wiadomości, dlatego należy samodzielnie umieścić makro.
 
-Aby uzyskać więcej informacji na temat implementowania funkcji obsługi dla zakresu identyfikatorów sterowania, zapoznaj się z procedurami [obsługi dla zakresów map komunikatów](../../mfc/handlers-for-message-map-ranges.md).
+Aby uzyskać więcej informacji na temat implementowania funkcji obsługi dla zakresu identyfikatorów sterowania, zapoznaj się z [obsługą zakresów Message-Map](../../mfc/handlers-for-message-map-ranges.md).
 
 ### <a name="requirements"></a>Wymagania
 

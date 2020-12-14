@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: standardowe procedury wymiany danych w oknie dialogowym'
 title: Standardowe procedury wymiany danych w oknie dialogowym
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: bed60094b25bcc3b1994aa904a8c20324be2abae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1d5cb0726168b90e0ba2a7891ce0ffa55b73f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218865"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 
@@ -58,7 +59,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola kombi skojarzonej z właściwością kontrolki.
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -90,7 +91,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola kombi skojarzonej z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -125,7 +126,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola kombi skojarzonej z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -160,7 +161,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pola wyboru skojarzonej z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -234,7 +235,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator zasobu kontrolki selektora daty i godziny skojarzonej ze zmienną członkowską.
 
-*wartościami*<br/>
+*wartość*<br/>
 W pierwszych dwóch wersjach, odwołanie do `CTime` `COleDateTime` zmiennej składowej lub, okno dialogowe, widok formularza lub obiekt widoku kontrolki, z którym są wymieniane dane. W trzeciej wersji, odwołanie do `CString` obiektu widoku kontrolki elementu członkowskiego danych.
 
 ### <a name="remarks"></a>Uwagi
@@ -303,7 +304,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontroli adresów IP skojarzony z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do wartości DWORD zawierającej wartość pola czwarty kontroli adresów IP. Pola są wypełniane lub odczytywane w następujący sposób.
 
 |Pole|Bity zawierające wartość pola|
@@ -344,7 +345,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pole listy skojarzonej z właściwością kontrolki.
 
-*index*<br/>
+*indeks*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -376,7 +377,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pole listy skojarzonej z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -413,7 +414,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki pole listy skojarzonej z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -455,7 +456,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator zasobu kontrolki kalendarza miesięcznego skojarzonej ze zmienną elementu członkowskiego.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do `CTime` `COleDateTime` zmiennej składowej lub okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -490,7 +491,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu pierwszej kontrolki radia w grupie.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -524,7 +525,7 @@ Wskaźnik do `CDataExchange` obiektu. Platforma dostarcza ten obiekt, aby ustali
 *nIDC*<br/>
 Identyfikator zasobu kontrolki paska przewijania skojarzonej z właściwością kontrolki.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku kontrolki, z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
@@ -556,7 +557,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator zasobu kontrolki suwaka.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do wartości, która ma zostać nadana wymianie. Ten parametr zawiera lub ustawia bieżącą pozycję kontrolki suwaka.
 
 ### <a name="remarks"></a>Uwagi
@@ -638,7 +639,7 @@ Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md)
 *nIDC*<br/>
 Identyfikator kontrolki edycji w oknie dialogowym, widoku Formularz lub w obiekcie widoku formantu.
 
-*wartościami*<br/>
+*wartość*<br/>
 Odwołanie do elementu członkowskiego danych w oknie dialogowym, widoku Formularz lub w obiekcie widoku formantu. Typ danych *wartości* zależy od tego, które z przeciążonych wersji są `DDX_Text` używane.
 
 ### <a name="remarks"></a>Uwagi

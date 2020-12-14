@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: struktury, style, wywołania zwrotne i mapy komunikatów'
 title: Struktury, style, wywołania zwrotne i mapy komunikatów
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: 9f3d5c6d23084f91196c091d9d0d41304d37ce2c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b39f3341106c8f064477adb2b579cf07eb9e3e0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218774"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Struktury, style, wywołania zwrotne i mapy komunikatów
 
@@ -30,11 +31,11 @@ Zawiera łącza do stylów używanych podczas tworzenia obiektów MFC.
 Oferuje linki do funkcji wywołania zwrotnego, które pojawiają się w bibliotece MFC.
 
 [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
-Opisuje makra mapowania komunikatów i `CWnd` wpisów mapy komunikatów.
+Opisuje makra mapowania komunikatów i `CWnd` wpisy mapy komunikatów.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Omówienie biblioteki klas](../../mfc/class-library-overview.md)<br/>
+[Przegląd biblioteki klas](../../mfc/class-library-overview.md)<br/>
 Wyświetla listę klas w bibliotece MFC zgodnie z kategorią.
 
 [Przykłady MFC](../../overview/visual-cpp-samples.md#mfc-samples)<br/>
