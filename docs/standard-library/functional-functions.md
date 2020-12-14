@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; &gt; funkcjach funkcjonalnych'
 title: '&lt;&gt;funkcje funkcjonalne'
 ms.date: 02/21/2019
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3ae9fca75801555c0341923d0fc42db94546cd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232164"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;&gt;funkcje funkcjonalne
 
@@ -407,7 +408,7 @@ struct bit_not<void>
 Typ, który obsługuje jednoargumentowy `operator~` .
 
 *Kliknij*\
-Operand operacji uzupełniania bitowego. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentu odwołania lvalue lub rvalue *typu*wywnioskowanego.
+Operand operacji uzupełniania bitowego. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentu odwołania lvalue lub rvalue *typu* wywnioskowanego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -584,7 +585,7 @@ Argumenty wywołania.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje możliwy do wywołujący obiekt *Fn* przy użyciu *argumentów*parametrów. Efektywnie, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` , gdzie pseudo funkcja `INVOKE(f, t1, t2, ..., tN)` oznacza jedną z następujących czynności:
+Wywołuje możliwy do wywołujący obiekt *Fn* przy użyciu *argumentów* parametrów. Efektywnie, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` , gdzie pseudo funkcja `INVOKE(f, t1, t2, ..., tN)` oznacza jedną z następujących czynności:
 
 - `(t1.*f)(t2, ..., tN)` gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `t1` jest obiektem typu `T` lub odwołaniem do obiektu typu `T` lub odwołaniem do obiektu typu pochodnego od `T` . To jest, gdy `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` ma wartość true.
 

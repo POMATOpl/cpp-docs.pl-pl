@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/SUBSYSTEM
 title: /SUBSYSTEM
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 708bfcce3e6d6616116bcc08441f374b46914c82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 24c334099eca93fc0f6e5790e78ed99049c572a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438861"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230240"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -57,11 +58,11 @@ Aplikacja działająca w środowisku graficznym systemu Windows. Dotyczy to zar�
 **WINDOWSCE**<br/>
 Podsystem WINDOWSCE wskazuje, że aplikacja jest przeznaczona do uruchamiania na urządzeniu z wersją jądra Windows CE. Wersje jądra obejmują PocketPC, Windows Mobile, Windows Phone 7, Windows CE V 1.0 — 6.0 R3 i Windows Embedded Compact 7.
 
-Opcjonalne `major` i `minor` określają minimalną wymaganą wersję określonego podsystemu:
+Opcjonalne `major` i `minor` wartości określają minimalną wymaganą wersję określonego podsystemu:
 
-- Liczba całkowita części numeru wersji — część po lewej stronie przecinka dziesiętnego — jest reprezentowana przez `major`.
+- Liczba całkowita części numeru wersji — część po lewej stronie przecinka dziesiętnego — jest reprezentowana przez `major` .
 
-- Część ułamkowa numeru wersji — część z prawej strony punktu dziesiętnego — jest reprezentowana przez `minor`.
+- Część ułamkowa numeru wersji — część z prawej strony punktu dziesiętnego — jest reprezentowana przez `minor` .
 
 - Wartości `major` i `minor` muszą zawierać się w zakresie od 0 do 65 535.
 
@@ -71,4 +72,4 @@ Aby uzyskać więcej informacji, w tym wartości minimalne i domyślne dla głó
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje EDITBIN](editbin-options.md)
+[Opcje polecenia EDITBIN](editbin-options.md)

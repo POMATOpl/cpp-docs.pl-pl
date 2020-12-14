@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie funkcji
 title: function — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30e81e297791691ba5736b4e116fc08ab4229f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232177"
 ---
 # <a name="function-class"></a>function — Klasa
 
@@ -117,11 +118,11 @@ Pusty obiekt nie posiada możliwego `function` do przeprowadzenia obiektu ani od
 |-|-|
 |[result_type](#result_type)|Zwracany typ przechowywanego obiektu, który jest wywoływany.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
-|[przypisać](#assign)|Przypisuje obiekt możliwy do oddzielenia do tego obiektu funkcji.|
+|[ponownie](#assign)|Przypisuje obiekt możliwy do oddzielenia do tego obiektu funkcji.|
 |[wymiany](#swap)|Zamień dwa obiekty, które są wywoływane.|
 |[obiektów](#target)|Testuje, czy przechowywany wywoływany obiekt jest wywoływany jako określony.|
 |[target_type](#target_type)|Pobiera informacje o typie dla możliwego do odzyskania obiektu.|

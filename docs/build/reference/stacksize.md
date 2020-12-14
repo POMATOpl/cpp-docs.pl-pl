@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: STACKSIZE'
 title: STACKSIZE
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - STACKSIZE .def file statement
 ms.assetid: 4d8c79bd-1cb4-4e4d-90f2-b5a7a4d20e7a
-ms.openlocfilehash: 2d27b4fd596098f4abc5bb0d804d87bd08f70a60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5d52bccc09979084b9023d380e86fe90e4def32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230344"
 ---
 # <a name="stacksize"></a>STACKSIZE
 
@@ -23,10 +24,10 @@ STACKSIZE reserve[,commit]
 
 ## <a name="remarks"></a>Uwagi
 
-Jest równoważne sposobem ustawienia stosu [twórz stos z alokacji](stack-stack-allocations.md) (/ STACK) opcji. Zobacz dokumentację dotyczącą tej opcji, aby uzyskać szczegółowe informacje na temat *zarezerwować* i `commit` argumentów.
+Odpowiednikiem sposobu ustawiania stosu jest opcja [przydziały stosu](stack-stack-allocations.md) (/stack). Zapoznaj się z dokumentacją dotyczącą tej opcji, aby uzyskać szczegółowe informacje o *rezerwie* i `commit` argumentach.
 
-Ta opcja nie ma wpływu na biblioteki dll.
+Ta opcja nie ma wpływu na biblioteki DLL.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zasady dla instrukcji definicji modułu](rules-for-module-definition-statements.md)
+[Reguły dla instrukcji Module-Definition](rules-for-module-definition-statements.md)

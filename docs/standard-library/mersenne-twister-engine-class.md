@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy mersenne_twister_engine
 title: mersenne_twister_engine — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 24663b12efaef66f29c7f755ab45df5ef973755c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7f5a2d74493194cb07bb4dd628cf3e483b1fd99b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230630"
 ---
 # <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine — Klasa
 
@@ -73,7 +74,7 @@ Aby uzyskać więcej informacji na temat elementów członkowskich silnika, zoba
 
 Ten szablon klasy opisuje losowy aparat liczb, zwracając wartości w zamkniętym interwale [ `0` , `2` <sup>W</sup>  -  `1` ]. Posiada dużą wartość całkowitą z `W * (N - 1) + R` bitym. Wyodrębnia w czasie z tej dużej wartości, a kiedy użył *wszystkich bitów,* przysunie dużą wartość, przenosząc i mieszając bity, tak aby miał nowy zestaw bitów do wyodrębnienia. Stan aparatu to ostatnie `N` `W` wartości używane, jeśli `operator()` zostały wywołane co najmniej *N* razy, w przeciwnym razie `M` `W` wartości-bitowe, które zostały użyte, oraz ostatnich `N - M` wartości inicjatora.
 
-Generator przytrzymuje dużą wartość, która jest używana przez przykręcone wysunięte uogólnione rejestry przesunięcia, zdefiniowane przez przesunięcia wartości *N* i *M*, wartość parametru przekręć *R*i warunkowe XOR-mask *a*. Ponadto bity nieprzetworzonego rejestru przesunięcia są szyfrowane (odporne) zgodnie z macierzą szyfrowana, zdefiniowaną przez wartości *U*, *D*, *S*, *B*, *T*, *C*i *L*.
+Generator przytrzymuje dużą wartość, która jest używana przez przykręcone wysunięte uogólnione rejestry przesunięcia, zdefiniowane przez przesunięcia wartości *N* i *M*, wartość parametru przekręć *R* i warunkowe XOR-mask *a*. Ponadto bity nieprzetworzonego rejestru przesunięcia są szyfrowane (odporne) zgodnie z macierzą szyfrowana, zdefiniowaną przez wartości *U*, *D*, *S*, *B*, *T*, *C* i *L*.
 
 Argument szablonu `UIntType` musi być wystarczająco duży, aby można było przechowywać wartości do `2` <sup>w</sup>  -  `1` . Wartości innych argumentów szablonu muszą spełniać następujące wymagania: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u` .
 

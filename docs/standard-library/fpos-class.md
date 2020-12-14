@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa FPOS'
 title: fpos — Klasa
 ms.date: 03/27/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 37536443455ca4ddc40568e15951b814982d4ad9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22b9a5e69b179ef4206a0664b51b92cc55d4320d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232333"
 ---
 # <a name="fpos-class"></a>fpos — Klasa
 
@@ -71,7 +72,7 @@ Informacje o stanie.
 
 **Przestrzeń nazw:** std
 
-## <a name="fposfpos"></a><a name="fpos"></a>FPOS:: FPOS
+## <a name="fposfpos"></a><a name="fpos"></a> FPOS:: FPOS
 
 Utwórz obiekt, który zawiera informacje o pozycji (przesunięcie) w strumieniu.
 
@@ -94,11 +95,11 @@ Przesunięcie do strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor przechowuje *_Off*przesunięcia względem początku pliku i w stanie konwersji początkowej (jeśli ma to znaczenie). Jeśli *_Off* ma wartość-1, obiekt wyniku reprezentuje nieprawidłową pozycję strumienia.
+Pierwszy Konstruktor przechowuje *_Off* przesunięcia względem początku pliku i w stanie konwersji początkowej (jeśli ma to znaczenie). Jeśli *_Off* ma wartość-1, obiekt wyniku reprezentuje nieprawidłową pozycję strumienia.
 
-Drugi Konstruktor przechowuje Przesunięcie zerowe i *_State*obiektu.
+Drugi Konstruktor przechowuje Przesunięcie zerowe i *_State* obiektu.
 
-## <a name="fposoperator"></a><a name="op_neq"></a>FPOS:: operator! =
+## <a name="fposoperator"></a><a name="op_neq"></a> FPOS:: operator! =
 
 Testuje wskaźniki położenia plików pod kątem nierówności.
 
@@ -171,7 +172,7 @@ int main( )
 }
 ```
 
-## <a name="fposoperator"></a><a name="op_add"></a>FPOS:: operator +
+## <a name="fposoperator"></a><a name="op_add"></a> FPOS:: operator +
 
 Zwiększa wskaźnik położenia pliku.
 
@@ -196,7 +197,7 @@ Funkcja członkowska zwraca **FPOS ( \* this) + =** `_Off` .
 
 Zobacz [operator! =](#op_neq) , aby uzyskać przykład użycia `operator+` .
 
-## <a name="fposoperator"></a><a name="op_add_eq"></a>FPOS:: operator + =
+## <a name="fposoperator"></a><a name="op_add_eq"></a> FPOS:: operator + =
 
 Zwiększa wskaźnik położenia pliku.
 
@@ -215,13 +216,13 @@ Pozycja w pliku.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska dodaje *_Off* do przechowywanego obiektu elementu członkowskiego przesunięcia, a następnie zwraca ** \* ten**element. W przypadku pozycjonowania w pliku wynik jest zwykle prawidłowy tylko w przypadku strumieni binarnych, które nie mają kodowania zależnego od stanu.
+Funkcja członkowska dodaje *_Off* do przechowywanego obiektu elementu członkowskiego przesunięcia, a następnie zwraca **\* ten** element. W przypadku pozycjonowania w pliku wynik jest zwykle prawidłowy tylko w przypadku strumieni binarnych, które nie mają kodowania zależnego od stanu.
 
 ### <a name="example"></a>Przykład
 
 Zobacz [operator! =](#op_neq) , aby uzyskać przykład użycia `operator+=` .
 
-## <a name="fposoperator-"></a><a name="operator-"></a>FPOS:: operator-
+## <a name="fposoperator-"></a><a name="operator-"></a> FPOS:: operator-
 
 Zmniejsza wskaźnik położenia pliku.
 
@@ -247,7 +248,7 @@ Pierwsza funkcja elementu członkowskiego zwraca `(streamoff)*this - (streamoff)
 
 Zobacz [operator! =](#op_neq) , aby uzyskać przykład użycia `operator-` .
 
-## <a name="fposoperator-"></a><a name="operator-_eq"></a>FPOS:: operator-=
+## <a name="fposoperator-"></a><a name="operator-_eq"></a> FPOS:: operator-=
 
 Zmniejsza wskaźnik położenia pliku.
 
@@ -272,7 +273,7 @@ W przypadku pozycjonowania w pliku wynik jest zwykle prawidłowy tylko w przypad
 
 Zobacz [operator! =](#op_neq) , aby uzyskać przykład użycia `operator-=` .
 
-## <a name="fposoperator"></a><a name="op_eq_eq"></a>FPOS:: operator = =
+## <a name="fposoperator"></a><a name="op_eq_eq"></a> FPOS:: operator = =
 
 Testuje wskaźniki położenia plików pod kątem równości.
 
@@ -297,7 +298,7 @@ Funkcja członkowska zwraca wartość `(streamoff)*this == (streamoff)right` .
 
 Zobacz [operator! =](#op_neq) , aby uzyskać przykład użycia `operator+=` .
 
-## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>FPOS:: operator streamoff —
+## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a> FPOS:: operator streamoff —
 
 Rzutowanie obiektu typu `fpos` na obiekt typu `streamoff` .
 
@@ -336,7 +337,7 @@ int main( )
 0
 ```
 
-## <a name="fposseekpos"></a><a name="seekpos"></a>FPOS:: seekpos
+## <a name="fposseekpos"></a><a name="seekpos"></a> FPOS:: seekpos
 
 Ta metoda jest używana wewnętrznie tylko w standardowej bibliotece języka C++. Nie wywołuj tej metody z kodu.
 
@@ -344,7 +345,7 @@ Ta metoda jest używana wewnętrznie tylko w standardowej bibliotece języka C++
 fpos_t seekpos() const;
 ```
 
-## <a name="fposstate"></a><a name="state"></a>FPOS:: State
+## <a name="fposstate"></a><a name="state"></a> FPOS:: State
 
 Ustawia lub zwraca stan konwersji.
 

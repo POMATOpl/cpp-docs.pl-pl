@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_array
 title: is_array — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_array class
 - is_array
 ms.assetid: 61fb2201-8de3-4746-9721-617f02df170f
-ms.openlocfilehash: c54664ed5f56411929c60a0f15ae3c4f0e4581ce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 861208d9980afd8940be2917a77bfb5dc662ae33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231293"
 ---
-# <a name="isarray-class"></a>is_array — Klasa
+# <a name="is_array-class"></a>is_array — Klasa
 
 Testuje, czy typ jest tablicą.
 
@@ -68,12 +69,12 @@ is_array<int[5]> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa zakresu](../standard-library/extent-class.md)\
-[rank, klasa](../standard-library/rank-class.md)
+[Ranga — Klasa](../standard-library/rank-class.md)

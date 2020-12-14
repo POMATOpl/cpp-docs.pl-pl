@@ -1,22 +1,23 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach składowych strumienia wejściowego'
 title: Input Stream Member — Funkcje
 ms.date: 07/19/2019
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-ms.openlocfilehash: 8aa211a03bb6e9b1d910db360066b4a2ca76571a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b75470d39e5c376da497f721c725eaad8424b3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231605"
 ---
 # <a name="input-stream-member-functions"></a>Input Stream Member — Funkcje
 
 Funkcje elementów członkowskich strumienia wejściowego są używane na potrzeby danych wejściowych na dysku.
 
-## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a>Otwórz
+## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Otwórz
 
 Jeśli używasz strumienia pliku wejściowego ( `ifstream` ), musisz powiązać ten strumień z określonym plikiem dysku. Można to zrobić w konstruktorze lub użyć `open` funkcji. W obu przypadkach argumenty są takie same.
 
@@ -31,7 +32,7 @@ if (ifile.fail())
 // The file does not exist ...
 ```
 
-## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a>Pobierz
+## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a> Pobierz
 
 Niesformatowana `get` funkcja członkowska działa jak `>>` operator z dwoma wyjątkami. Najpierw `get` Funkcja zawiera znaki odstępu, podczas gdy podczas `skipws` ustawiania flagi (wartość domyślna) wyodrębnianie wyklucza biały znak. Po drugie `get` Funkcja jest mniej przyczyną, że powiązany strumień wyjściowy ( `cout` na przykład) ma zostać opróżniony.
 
@@ -66,7 +67,7 @@ int main()
 1234
 ```
 
-## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a>getline
+## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a> getline
 
 `getline`Funkcja członkowska jest podobna do `get` funkcji. Obie funkcje zezwalają na trzeci argument, który określa znak kończący dla danych wejściowych. Wartość domyślna to znak nowego wiersza. Obie funkcje rezerwują jeden znak dla wymaganego znaku kończącego. Jednakże `get` pozostawia znak kończący w strumieniu i `getline` usuwa znak kończący.
 
@@ -93,7 +94,7 @@ int main( )
 test
 ```
 
-## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a>Przeczytaj
+## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a> Przeczytaj
 
 `read`Funkcja członkowska odczytuje bajty z pliku do określonego obszaru pamięci. Argument długości określa liczbę odczytanych bajtów. Jeśli ten argument nie zostanie uwzględniony, Odczyt jest zatrzymywany po osiągnięciu fizycznego końca pliku lub w przypadku pliku trybu tekstowego, gdy `EOF` odczytywany jest znak osadzony.
 
@@ -125,7 +126,7 @@ int main()
 
 Program zakłada, że rekordy danych są sformatowane dokładnie tak, jak określono przez strukturę bez przerywania powrotu karetki lub wysuwu wiersza.
 
-## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a>seekg i tellg
+## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg i tellg
 
 Strumienie plików wejściowych zachowują wewnętrzny wskaźnik do położenia w pliku, w którym dane mają zostać odczytane dalej. Ten wskaźnik ustawia się za pomocą `seekg` funkcji, jak pokazano poniżej:
 
@@ -180,10 +181,10 @@ int main( )
 }
 ```
 
-## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a>ściśle
+## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> ściśle
 
 `close`Funkcja członkowska zamyka plik dysku skojarzony ze strumieniowym plikiem wejściowym i zwalnia dojście do pliku systemu operacyjnego. [`ifstream`](../standard-library/basic-ifstream-class.md)Destruktor zamyka plik, ale można użyć `close` funkcji, jeśli trzeba otworzyć inny plik dla tego samego obiektu strumienia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Strumienie wejściowe](../standard-library/input-streams.md)

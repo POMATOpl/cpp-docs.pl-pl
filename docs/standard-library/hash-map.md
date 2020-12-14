@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; hash_map&gt;'
 title: '&lt;hash_map&gt;'
 ms.date: 01/18/2018
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: 6bb2ca0cc14bcc4a9b9df9877902de9181e0a768
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: b3e46a3f8ef1638525414c1a1414c4eb6e418c31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231878"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Ten nagłówek jest przestarzały. Alternatywą jest [\<unordered_map >](unordered-map.md).
+> Ten nagłówek jest przestarzały. Alternatywą jest [\<unordered_map>](unordered-map.md) .
 
 Definiuje szablony klas kontenerów hash_map i hash_multimap i ich szablony pomocnicze.
 
@@ -43,19 +44,19 @@ Definiuje szablony klas kontenerów hash_map i hash_multimap i ich szablony pomo
 
 |Klasa|Opis|
 |-|-|
-|[hash_compare, klasa](hash-compare-class.md)|Opisuje obiekt, który może być używany przez dowolny kontener asocjacyjnych skrótów — hash_map, hash_multimap, hash_set lub hash_multiset — jako domyślny obiekt parametru `Traits` do porządkowania i mieszania elementów, które zawierają.|
-|[value_compare, klasa](value-compare-class.md)|Udostępnia obiekt funkcji, który może porównać elementy hash_map, porównując wartości ich kluczy, aby określić ich względną kolejność w hash_map.|
-|[hash_map, klasa](hash-map-class.md)|Służy do przechowywania i szybkiego pobierania danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, którego wartość jest unikatowa i skojarzona wartość danych.|
-|[hash_multimap, klasa](hash-multimap-class.md)|Używany do przechowywania i szybkiego pobierania danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, którego wartość nie musi być unikatowa i skojarzona z nią wartość danych.|
+|[Klasa hash_compare](hash-compare-class.md)|Opisuje obiekt, który może być używany przez dowolny kontener asocjacyjnych skrótów — hash_map, hash_multimap, hash_set lub hash_multiset — jako domyślny `Traits` obiekt parametru do porządkowania i mieszania elementów, które zawierają.|
+|[Klasa value_compare](value-compare-class.md)|Udostępnia obiekt funkcji, który może porównać elementy hash_map, porównując wartości ich kluczy, aby określić ich względną kolejność w hash_map.|
+|[Klasa hash_map](hash-map-class.md)|Służy do przechowywania i szybkiego pobierania danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, którego wartość jest unikatowa i skojarzona wartość danych.|
+|[Klasa hash_multimap](hash-multimap-class.md)|Używany do przechowywania i szybkiego pobierania danych z kolekcji, w której każdy element jest parą, która ma klucz sortowania, którego wartość nie musi być unikatowa i skojarzona z nią wartość danych.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<hash_map >
+**Nagłówek:**\<hash_map>
 
 **Przestrzeń nazw:** stdext
 
 ## <a name="see-also"></a>Zobacz też
 
-[Odwołania do plików nagłówkowych](cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](thread-safety-in-the-cpp-standard-library.md)\
-[Dokumentacja standardowej biblioteki C++](cpp-standard-library-reference.md)
+[Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](cpp-standard-library-reference.md)

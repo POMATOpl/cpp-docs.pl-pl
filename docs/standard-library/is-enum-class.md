@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_enum
 title: is_enum — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6eaffc4258dd7741e177718ed39a3d8c3f75f96f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231150"
 ---
-# <a name="isenum-class"></a>is_enum — Klasa
+# <a name="is_enum-class"></a>is_enum — Klasa
 
 Testuje, czy typ jest wyliczeniem.
 
@@ -71,11 +72,11 @@ is_enum<int> == false
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[is_integral, klasa](../standard-library/is-integral-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa is_integral](../standard-library/is-integral-class.md)

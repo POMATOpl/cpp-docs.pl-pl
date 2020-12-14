@@ -1,17 +1,18 @@
 ---
+description: 'Dowiedz się więcej o: struktura i definicje stałe'
 title: Struktura i stała — Definicje
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a9e372815e25883cf69497c77388002a7015572
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317864"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230331"
 ---
 # <a name="structure-and-constant-definitions"></a>Struktura i stała — Definicje
 
-Domyślna procedura pomocnika używa kilku struktur mogą komunikować się za pomocą funkcji punktów zaczepienia i podczas żadnych wyjątków. Poniżej przedstawiono wartości powiadomień i niepowodzeń, struktury informacyjne i przekazany do punkty zaczepienia typ wskaźnika do podłączania funkcji:
+Domyślna procedura pomocnika używa kilku struktur do komunikowania się z funkcjami punktu zaczepienia i podczas jakichkolwiek wyjątków. Poniżej przedstawiono wartości powiadomień i niepowodzeń, struktury informacji oraz typ funkcji wskaźnik do punktu zaczepienia przekazaną do punktów zaczepienia:
 
 ```
 //
@@ -69,6 +70,6 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)
+[Zrozumienie funkcji pomocnika](understanding-the-helper-function.md)

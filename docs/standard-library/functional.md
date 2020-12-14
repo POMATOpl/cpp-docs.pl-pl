@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; funkcjonalne&gt;'
 title: '&lt;działanie&gt;'
 ms.date: 02/21/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 9f1eaf69f49a449877b9013dca62ab49cb8a5b48
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a13ddeb7bdb45b02bb8b35052e34a3b9601c6fec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232151"
 ---
 # <a name="ltfunctionalgt"></a>&lt;działanie&gt;
 
@@ -102,7 +103,7 @@ Każda otoka wywołania ma Konstruktor przenoszenia i Konstruktor kopiujący. *P
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Klasa, która otacza odwołanie.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Szablon klasy dostarczający funkcję członkowską, która wyklucza wartość zwracaną przez określoną funkcję jednoargumentową.<br/> (Przestarzałe w języku C++ 17).  |
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
@@ -151,7 +152,7 @@ Każda otoka wywołania ma Konstruktor przenoszenia i Konstruktor kopiujący. *P
 
 |Nazwa|Opis|
 |-|-|
-|[_1.. _M](../standard-library/1-object.md)|Symbole zastępcze dla argumentów do przemieszczenia.|
+|[_1.._M](../standard-library/1-object.md)|Symbole zastępcze dla argumentów do przemieszczenia.|
 
 ### <a name="operators"></a>Operatory
 

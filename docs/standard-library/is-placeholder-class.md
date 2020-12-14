@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_placeholder
 title: is_placeholder — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - is_placeholder class
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
-ms.openlocfilehash: 9fa7d4aaade6244fe26f89f3a667598d39471a47
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 84d73da6ffe2446a8448b0ff5f30604d259493b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245158"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230656"
 ---
-# <a name="isplaceholder-class"></a>is_placeholder — Klasa
+# <a name="is_placeholder-class"></a>is_placeholder — Klasa
 
-Sprawdza, czy typ jest symbolem zastępczym.
+Testuje, czy typ jest symbolem zastępczym.
 
 ## <a name="syntax"></a>Składnia
 
-is_placeholder — struktura {statyczny const int wartość;};
+Struktura is_placeholder {statyczna stała wartość int;};
 
 ## <a name="remarks"></a>Uwagi
 
-Stała wartość `value` wynosi 0, jeśli typ `Ty` nie jest symbolem zastępczym; w przeciwnym razie jego wartość to pozycja argumentu wywołania funkcji, który powiąże. Możesz użyć do określenia wartości `N` n-ty symbolu zastępczego `_N`.
+Stała wartość `value` jest równa 0, jeśli typ `Ty` nie jest symbolem zastępczym; w przeciwnym razie jego wartość to pozycja argumentu wywołania funkcji, z którym jest powiązany. Służy do określania wartości `N` n-ty symbolu zastępczego `_N` .
 
 ## <a name="example"></a>Przykład
 

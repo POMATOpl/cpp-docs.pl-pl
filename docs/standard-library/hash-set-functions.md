@@ -1,16 +1,17 @@
 ---
+description: Dowiedz się więcej na temat &lt; &gt; funkcji hash_set
 title: '&lt;&gt;funkcje hash_set'
 ms.date: 11/04/2016
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 1774b0b29c7750e716f1f56def5d29ac329abec0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7040325f3af26052306b1ebd90f1919d96dcbf19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231799"
 ---
 # <a name="lthash_setgt-functions"></a>&lt;&gt;funkcje hash_set
 
@@ -33,14 +34,14 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *Kliknij*\
-Hash_set dostarcza elementów do wymiany lub hash_set których elementy mają być wymieniane z *pozostałymi*hash_setami.
+Hash_set dostarcza elementów do wymiany lub hash_set których elementy mają być wymieniane z *pozostałymi* hash_setami.
 
 *lewym*\
 Hash_set, których elementy mają być wymieniane z tymi hash_set *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-`swap`Funkcja szablonu jest algorytm wyspecjalizowany dla klasy kontenera hash_set do wykonywania operacji swap funkcji składowej `left.` [swap](../standard-library/hash-set-class.md#swap)( `right` ). Jest to wystąpienie częściowego porządkowania szablonów funkcji przez kompilator. Gdy funkcje szablonu są przeciążone w taki sposób, że dopasowanie szablonu z wywołaniem funkcji nie jest unikatowe, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólna wersja funkcji szablonu
+`swap`Funkcja szablonu jest algorytm wyspecjalizowany dla klasy kontenera hash_set do wykonywania operacji swap funkcji składowej `left.` [](../standard-library/hash-set-class.md#swap)( `right` ). Jest to wystąpienie częściowego porządkowania szablonów funkcji przez kompilator. Gdy funkcje szablonu są przeciążone w taki sposób, że dopasowanie szablonu z wywołaniem funkcji nie jest unikatowe, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólna wersja funkcji szablonu
 
 **\<class T>Unieważnij zamianę szablonu (t&, t&),**
 
@@ -64,14 +65,14 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 ### <a name="parameters"></a>Parametry
 
 *Kliknij*\
-Hash_multiset dostarcza elementów do wymiany lub hash_multiset których elementy mają być wymieniane z *pozostałymi*hash_multisetami.
+Hash_multiset dostarcza elementów do wymiany lub hash_multiset których elementy mają być wymieniane z *pozostałymi* hash_multisetami.
 
 *lewym*\
 Hash_multiset, których elementy mają być wymieniane z tymi hash_multiset *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-`swap`Funkcja szablonu jest algorytm wyspecjalizowany dla klasy kontenera hash_multiset do wykonywania operacji swap funkcji składowej `left.` [swap](../standard-library/hash-multiset-class.md#swap)( `right` ). Jest to wystąpienie częściowego porządkowania szablonów funkcji przez kompilator. Gdy funkcje szablonu są przeciążone w taki sposób, że dopasowanie szablonu z wywołaniem funkcji nie jest unikatowe, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólna wersja funkcji szablonu
+`swap`Funkcja szablonu jest algorytm wyspecjalizowany dla klasy kontenera hash_multiset do wykonywania operacji swap funkcji składowej `left.` [](../standard-library/hash-multiset-class.md#swap)( `right` ). Jest to wystąpienie częściowego porządkowania szablonów funkcji przez kompilator. Gdy funkcje szablonu są przeciążone w taki sposób, że dopasowanie szablonu z wywołaniem funkcji nie jest unikatowe, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólna wersja funkcji szablonu
 
 **\<class T>Unieważnij zamianę szablonu (t&, t&),**
 

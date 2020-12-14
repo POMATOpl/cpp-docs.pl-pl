@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_copy_constructible
 title: Klasa is_copy_constructible
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0cef349dcfd25652bab133822a047352a7c9371d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231176"
 ---
-# <a name="iscopyconstructible-class"></a>Klasa is_copy_constructible
+# <a name="is_copy_constructible-class"></a>Klasa is_copy_constructible
 
 Testuje, czy typ ma Konstruktor kopiujący.
 
@@ -69,10 +70,10 @@ is_copy_constructible<NotCopyable > == false
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [<type_traits>](../standard-library/type-traits.md)

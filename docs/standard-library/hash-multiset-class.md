@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy hash_multiset
 title: hash_multiset — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: d4722a9c535207b21098db4e33810340d99e6b6a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 567eef22098b99cf3a3109bfd911ecbcd518876b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231813"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset — Klasa
 
@@ -189,7 +190,7 @@ Iterator dostarczony przez klasę hash_multiset jest iteratorem dwukierunkowym, 
 |[punktów](#end)|Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w `hash_multiset` .|
 |[equal_range](#equal_range)|Zwraca parę iteratorów odpowiednio do pierwszego elementu w a `hash_multiset` z kluczem, który jest większy niż określony klucz i do pierwszego elementu w `hash_multiset` kluczu, który jest równy lub większy niż klucz.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów `hash_multiset` z określonych pozycji lub usuwa elementy, które pasują do określonego klucza.|
-|[find](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_multiset` , który ma klucz równoważny określonemu kluczowi.|
+|[wyświetlić](#find)|Zwraca iterator odnoszący się do lokalizacji elementu w elemencie `hash_multiset` , który ma klucz równoważny określonemu kluczowi.|
 |[get_allocator](#get_allocator)|Zwraca kopię `allocator` obiektu użytego do skonstruowania `hash_multiset` .|
 |[wstawienia](#insert)|Wstawia element lub zakres elementów do `hash_multiset` .|
 |[key_comp](#key_compare)|Pobiera kopię obiektu porównania użytego do uporządkowania kluczy w obiekcie `hash_multiset` .|
@@ -848,7 +849,7 @@ iterator insert(
 Wartość elementu, który ma zostać wstawiony do [hash_multiset](../standard-library/hash-multiset-class.md) , chyba że `hash_multiset` zawiera już ten element lub, bardziej ogólnie, elementu, którego klucz jest równoważny uporządkowany.
 
 *miejscu*\
-Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania *następuje zaraz*po elemencie).
+Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania *następuje zaraz* po elemencie).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1493,7 +1494,7 @@ iterator insert(
 Wartość elementu, który ma zostać wstawiony do hash_multiset, chyba że hash_multiset już zawiera ten element lub, bardziej ogólnie, elementu, którego klucz jest uporządkowany równorzędnie.
 
 *miejscu*\
-Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania *następuje zaraz*po elemencie).
+Miejsce, w którym rozpocznie się wyszukiwanie poprawnego punktu wstawiania. (Wstawianie może odbywać się w amortyzowanym stałym czasie, a nie w czasie logarytmu, jeśli punkt wstawiania *następuje zaraz* po elemencie).
 
 *pierwszego*\
 Pozycja pierwszego elementu, który ma zostać skopiowany z hash_multiset.
@@ -1548,7 +1549,7 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca *cechy*parametrów szablonu hash_multiset, które zawierają obiekty funkcji, które są używane do mieszania i porządkowania elementów kontenera.
+Zwraca *cechy* parametrów szablonu hash_multiset, które zawierają obiekty funkcji, które są używane do mieszania i porządkowania elementów kontenera.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_multiset](../standard-library/hash-multiset-class.md) .
 
@@ -1560,7 +1561,7 @@ Przechowywany obiekt definiuje funkcję członkowską:
 
 zwraca, **`true`** Jeśli `_xVal` poprzedza, i nie jest równa `_yVal` w kolejności sortowania.
 
-Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla *cech*parametrów szablonu. Oba typy są dostępne dla klas hash_multiset i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
+Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla *cech* parametrów szablonu. Oba typy są dostępne dla klas hash_multiset i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -1624,11 +1625,11 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_compare` jest synonimem *cech*parametrów szablonu.
+`key_compare` jest synonimem *cech* parametrów szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_multiset](../standard-library/hash-multiset-class.md) .
 
-Należy zauważyć, że oba `key_compare` i value_compare są synonimami dla *cech*parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
+Należy zauważyć, że oba `key_compare` i value_compare są synonimami dla *cech* parametrów szablonu. Oba typy są dostępne dla klas hash_set i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -1647,9 +1648,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`key_type` jest synonimem dla *klucza*parametru szablonu.
+`key_type` jest synonimem dla *klucza* parametru szablonu.
 
-Należy zauważyć, że oba `key_type` i [value_type](../standard-library/hash-set-class.md#value_type) są synonimami *klucza*parametru szablonu. Oba typy są dostarczane dla klas zestawu i zestawów wielokrotnych, gdzie są identyczne, w celu zapewnienia zgodności z klasami map i multimap, gdzie są różne.
+Należy zauważyć, że oba `key_type` i [value_type](../standard-library/hash-set-class.md#value_type) są synonimami *klucza* parametru szablonu. Oba typy są dostarczane dla klas zestawu i zestawów wielokrotnych, gdzie są identyczne, w celu zapewnienia zgodności z klasami map i multimap, gdzie są różne.
 
 Aby uzyskać więcej informacji o *kluczu*, zobacz sekcję Uwagi w temacie [hash_multiset Class](../standard-library/hash-multiset-class.md) .
 
@@ -2306,7 +2307,7 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca *cechy*parametrów szablonu hash_multiset, które zawierają obiekty funkcji, które są używane do mieszania i do porządkowania elementów kontenera.
+Zwraca *cechy* parametrów szablonu hash_multiset, które zawierają obiekty funkcji, które są używane do mieszania i do porządkowania elementów kontenera.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_multiset](../standard-library/hash-multiset-class.md) .
 
@@ -2318,7 +2319,7 @@ Przechowywany obiekt definiuje funkcję członkowską:
 
 zwraca, **`true`** Jeśli `_xVal` poprzedza, i nie jest równa `_yVal` w kolejności sortowania.
 
-Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla *cech*parametrów szablonu. Oba typy są dostępne dla klas hash_multiset i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
+Należy zauważyć, że zarówno [key_compare](#key_compare) , jak i [value_compare](#value_compare) są synonimami dla *cech* parametrów szablonu. Oba typy są dostępne dla klas hash_multiset i hash_multiset, w których są identyczne, w celu zapewnienia zgodności z klasami hash_map i hash_multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -2387,11 +2388,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_compare` jest synonimem *cech*parametrów szablonu.
+`value_compare` jest synonimem *cech* parametrów szablonu.
 
 Aby uzyskać więcej informacji o *cechach* , zobacz temat [Klasa hash_multiset](../standard-library/hash-multiset-class.md) .
 
-Należy zauważyć, że obie [key_compare](#key_compare) i `value_compare` są synonimami dla *cech*parametrów szablonu. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
+Należy zauważyć, że obie [key_compare](#key_compare) i `value_compare` są synonimami dla *cech* parametrów szablonu. Oba typy są dostarczane dla klas zestawów i zestawów wielokrotnych, gdzie są identyczne, aby zapewnić zgodność z mapami klas i multimap, gdzie są różne.
 
 ### <a name="example"></a>Przykład
 
@@ -2448,7 +2449,7 @@ int main( )
 The hash_multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

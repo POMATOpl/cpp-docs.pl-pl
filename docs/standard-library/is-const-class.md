@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy is_const
 title: is_const — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_const class
 - is_const
 ms.assetid: 55b8e887-9c3f-4a1d-823a-4a257337b205
-ms.openlocfilehash: 92059f43e73c4b76f45ea9aeae61daf573367b43
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 81bcb02e06f55521ca5a04ebf01b5e6e1e8827a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231215"
 ---
-# <a name="isconst-class"></a>is_const — Klasa
+# <a name="is_const-class"></a>is_const — Klasa
 
 Testuje, czy typ jest wartością stałą.
 
@@ -32,7 +33,7 @@ Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli *ty* jest `const-qualified`.
+Wystąpienie predykatu typu ma wartość true, jeśli *ty* jest `const-qualified` .
 
 ## <a name="example"></a>Przykład
 
@@ -71,11 +72,11 @@ is_const<const int> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[is_volatile, klasa](../standard-library/is-volatile-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa is_volatile](../standard-library/is-volatile-class.md)

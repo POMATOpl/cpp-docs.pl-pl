@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy messages_byname
 title: messages_byname — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 960db9dd411e4ac42f81a0027e91ae1001b7877d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230526"
 ---
 # <a name="messages_byname-class"></a>messages_byname — Klasa
 
@@ -39,22 +40,23 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname* \
+*_Locname*\
 Nazwane ustawienia regionalne.
 
-*_Refs* \
+*_Refs*\
 Początkowa liczba odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie zależy od nazwanych ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [komunikatami](../standard-library/messages-class.md#messages) \<CharType > (`_Refs`).
+Jego zachowanie zależy od nazwanych o nazwie
+ ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje swój obiekt podstawowy z [komunikatami](../standard-library/messages-class.md#messages) \<CharType> ( `_Refs` ).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:**\<locale>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

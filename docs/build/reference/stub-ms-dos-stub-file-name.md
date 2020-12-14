@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/STUB (nazwa pliku szczątkowego systemu MS-DOS)
 title: /STUB (Nazwa pliku klasy zastępczej MS-DOS)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows API [C++], attaching MS-DOS stub program
 - -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
-ms.openlocfilehash: 7150d4ff8f35b00d96caa21fd5ea3754fec76030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34f3cd71ce66cb6695a58707fd84de79f7a14b1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230305"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (Nazwa pliku klasy zastępczej MS-DOS)
 
@@ -32,35 +33,35 @@ Aplikacja systemu MS-DOS.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/stub dołącza program szczątkowy systemu MS-DOS do programu systemu Win32.
+Opcja/STUB dołącza do programu Win32 program zastępczy systemu MS-DOS.
 
-Program szczątkowy jest wywoływana, jeśli plik jest wykonywane w systemie MS-DOS. Zazwyczaj wyświetli odpowiedni komunikat i; Jednak wszystkie prawidłowe aplikacji systemu MS-DOS może być programu klasy zastępczej.
+Wywoływany jest program zastępczy, jeśli plik jest wykonywany w systemie MS-DOS. Zwykle wyświetla odpowiedni komunikat; jednak każda prawidłowa aplikacja MS-DOS może być programem zastępczym.
 
-Określ *filename* programu klasy zastępczej po dwukropek (:) w wierszu polecenia. Sprawdzanie konsolidatora *filename* i wysyła komunikat o błędzie, jeśli plik nie jest plikiem wykonywalnym. Program musi być plik .exe; plik .com jest nieprawidłowa dla programu klasy zastępczej.
+Określ *nazwę pliku* dla programu zastępczego po dwukropku (:) w wierszu polecenia. Konsolidator sprawdza *nazwę pliku* i wysyła komunikat o błędzie, jeśli plik nie jest plikiem wykonywalnym. Program musi być plikiem. exe; plik. com jest nieprawidłowy dla programu zastępczego.
 
-Jeśli ta opcja nie jest używany, konsolidator dołącza domyślnego programu klasy zastępczej wysyłający następujący komunikat:
+Jeśli ta opcja nie jest używana, konsolidator dołącza domyślny program zastępczy, który wystawia następujący komunikat:
 
 ```
 This program cannot be run in MS-DOS mode.
 ```
 
-Podczas kompilowania sterownik urządzenia wirtualnego, *filename* umożliwia użytkownikowi określić nazwę pliku, który zawiera strukturę IMAGE_DOS_HEADER (zdefiniowany w Windows NT. H) można używać w VXD, a nie nagłówek domyślny.
+Podczas kompilowania sterownika urządzenia wirtualnego *Nazwa pliku* umożliwia użytkownikowi określenie nazwy pliku zawierającej strukturę IMAGE_DOS_HEADER (zdefiniowaną w programie Winnt. H) do użycia w VXD zamiast domyślnego nagłówka.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+1. Kliknij stronę właściwości **wiersza polecenia** .
 
-1. Wpisz opcje w **dodatkowe opcje** pole.
+1. Wpisz opcję w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

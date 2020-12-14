@@ -1,19 +1,20 @@
 ---
-title: Struktura from_chars_result
+description: Dowiedz się więcej na temat struktury from_chars_result
+title: from_chars_result, struktura
 ms.date: 7/23/2020
 f1_keywords:
 - std::from_chars_result
 helpviewer_keywords:
 - from_chars_result class
 - from_chars_result structure
-ms.openlocfilehash: 5a5dcfe6e5b59644e6ebf55d68ce43975e7d3c9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 894a687a4395e22538b384675af5b4ce57731f78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232281"
 ---
-# <a name="from_chars_result-struct"></a>Struktura from_chars_result
+# <a name="from_chars_result-struct"></a>from_chars_result, struktura
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,6 +48,6 @@ Jeśli przeanalizowana wartość nie będzie pasować do zakresu dla typu wykony
 
 **Opcja kompilatora:** /std: c++ 17 lub nowsza, jest wymagana
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [from_chars](charconv-functions.md#from_chars)

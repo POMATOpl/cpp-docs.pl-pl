@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: minus struct'
 title: minus — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: e57023c78f944a038e94d851abdbf7909545295c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fe9fb343a49fb8097322b687326d3c986ba25ee5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230500"
 ---
 # <a name="minus-struct"></a>minus — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację odejmowania (binarne `operator-`) na jego argumenty.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację odejmowania (Binary `operator-` ) dla jej argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,17 +41,17 @@ struct minus<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Typ, który obsługuje dane binarne `operator-` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Typ, który obsługuje plik binarny `operator-` , który pobiera operandy dla określonych lub wywnioskowanych typów.
 
-*po lewej stronie*\
-Lewy operand operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand operacji. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand operacji. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left - Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ zwracany przez `operator-`.
+Wynik `Left - Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator-` .
 
 ## <a name="example"></a>Przykład
 

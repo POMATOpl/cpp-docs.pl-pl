@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy forward_list
 title: forward_list — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -79,12 +80,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: 16471f0986d58e38fed436b2921ce3f8a3e89325
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d9cb038123b093f81f5eb4fca49db77885ff1d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232411"
 ---
 # <a name="forward_list-class"></a>forward_list — Klasa
 
@@ -140,11 +141,11 @@ Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania do [forward
 |[size_type](#size_type)|Typ, który reprezentuje odległość bez znaku między dwoma elementami.|
 |[value_type](#value_type)|Typ, który reprezentuje typ elementu przechowywanego na liście do przodu.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|
-|[przypisać](#assign)|Wymazuje elementy z listy do przodu i kopiuje nowy zestaw elementów na listę docelową do przodu.|
+|[ponownie](#assign)|Wymazuje elementy z listy do przodu i kopiuje nowy zestaw elementów na listę docelową do przodu.|
 |[before_begin](#before_begin)|Zwraca iterator odnoszący się do pozycji przed pierwszym elementem na liście do przodu.|
 |[zaczną](#begin)|Zwraca iterator odnoszący się do pierwszego elementu na liście do przodu.|
 |[cbefore_begin](#cbefore_begin)|Zwraca iterator const odnoszący się do pozycji przed pierwszym elementem na liście do przodu.|
@@ -170,7 +171,7 @@ Dodatki do kontrolowanej sekwencji mogą wystąpić przez wywołania do [forward
 |[porządku](#sort)|Rozmieszcza elementy w kolejności rosnącej lub z kolejnością określoną przez predykat.|
 |[splice_after](#splice_after)|Łączy linki między węzłami.|
 |[wymiany](#swap)|Wymienia elementy dwóch list do przodu.|
-|[unique](#unique)|Usuwa przylegające elementy, które przechodzą do określonego testu.|
+|[unikatowy](#unique)|Usuwa przylegające elementy, które przechodzą do określonego testu.|
 
 ### <a name="operators"></a>Operatory
 

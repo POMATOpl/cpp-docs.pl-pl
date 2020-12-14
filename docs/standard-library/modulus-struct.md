@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze modulo
 title: modulus — Struktura
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - modulus class
 - modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
-ms.openlocfilehash: 20f2070c5b835d67e06d64a0a1b05141f08cf373
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f14edbcdb73a09fb9d44ff8d3dbd29bc0cdd2cdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230487"
 ---
 # <a name="modulus-struct"></a>modulus — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację dzielenie modulo (`operator%`) na jego argumenty.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację dzielenia modulo ( `operator%` ) na jej argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,21 +41,21 @@ struct modulus<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator%` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Dowolny typ, który obsługuje element `operator%` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-*po lewej stronie*\
-Lewy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewym*\
+Lewy operand operacji modułu. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*po prawej stronie*\
-Prawy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Kliknij*\
+Prawy operand operacji modułu. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left % Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator%`.
+Wynik `Left % Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator%` .
 
 ## <a name="remarks"></a>Uwagi
 
-`modulus` Teoria jest ograniczony do typów całkowitych dla podstawowych typów danych lub do zdefiniowanych przez użytkownika typami, które implementują `operator%`.
+`modulus`Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator%` .
 
 ## <a name="example"></a>Przykład
 

@@ -1,22 +1,23 @@
 ---
+description: Dowiedz się więcej na temat struktury biblioteki
 title: Struktura biblioteki
 ms.date: 11/04/2016
 helpviewer_keywords:
 - libraries, structure
 ms.assetid: a5fda8e8-4a1b-4499-9095-0df935262ce4
-ms.openlocfilehash: 78540849de842baf6e914fe222987f91907b9dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f6b0d5d6618aa6bce0d487d5018d58464051c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230318"
 ---
 # <a name="structure-of-a-library"></a>Struktura biblioteki
 
-Biblioteka zawiera obiekty COFF. Obiekty w bibliotece zawierają funkcje i dane, który może być zewnętrznie przywoływany przez inne obiekty w programie. Obiekt w bibliotece jest czasami określane jako członka biblioteki.
+Biblioteka zawiera obiekty COFF. Obiekty w bibliotece zawierają funkcje i dane, do których można odwoływać się zewnętrznie za pomocą innych obiektów w programie. Obiekt w bibliotece jest czasami określany jako element członkowski biblioteki.
 
-Dodatkowe informacje na temat zawartości biblioteki można uzyskać, uruchamiając narzędzie DUMPBIN z opcją /LINKERMEMBER. Aby uzyskać więcej informacji na temat tej opcji, zobacz [odwołanie DUMPBIN](dumpbin-reference.md).
+Dodatkowe informacje o zawartości biblioteki można uzyskać, uruchamiając narzędzie polecenia DUMPBIN z opcją/LINKERMEMBER. Aby uzyskać więcej informacji na temat tej opcji, zobacz [polecenia DUMPBIN Reference](dumpbin-reference.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Informacje o LIB](overview-of-lib.md)
