@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDockState'
 title: Klasa CDockState
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 4bdc17ec5a09b812609b8aa71e3f361603c1106f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184962"
 ---
 # <a name="cdockstate-class"></a>Klasa CDockState
 
-Klasa serializowana, `CObject` która ładuje, zwalnia lub czyści stan jednego lub więcej pasków sterujących dokowania w pamięci trwałej (pliku).
+Serializowana `CObject` Klasa, która ładuje, zwalnia lub czyści stan co najmniej jednego zadokowanego paska sterowania w trwałej pamięci (pliku).
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,40 +40,40 @@ class CDockState : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDockState::Wyczyść](#clear)|Czyści informacje o stanie stacji dokującej.|
-|[CDockState::GetVersion](#getversion)|Pobiera numer wersji przechowywanego stanu paska.|
-|[CDockState::LoadState](#loadstate)|Pobiera informacje o stanie z rejestru lub . ini.|
-|[CDockState::Zapisz stan](#savestate)|Zapisuje informacje o stanie w rejestrze lub pliku INI.|
+|[CDockState:: Clear](#clear)|Czyści informacje o stanie dokowania.|
+|[CDockState:: GetVersion](#getversion)|Pobiera numer wersji stanu przechowywanego paska.|
+|[CDockState:: LoadState](#loadstate)|Pobiera informacje o stanie z rejestru lub. Plik INI.|
+|[CDockState:: SaveState](#savestate)|Zapisuje informacje o stanie w rejestrze lub pliku INI.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDockState::m_arrBarInfo](#m_arrbarinfo)|Tablica wskaźników do przechowywanych informacji o stanie stacji dokującej z jednym wpisem dla każdego paska sterowania.|
+|[CDockState:: m_arrBarInfo](#m_arrbarinfo)|Tablica wskaźników do przechowywanych informacji o stanie dokowania z jednym wpisem na każdym pasku sterowania.|
 
 ## <a name="remarks"></a>Uwagi
 
-Stan stacji dokującej obejmuje rozmiar i położenie pręta oraz to, czy jest zadokowany. Podczas pobierania stanu przechowywanej `CDockState` stacji dokującej sprawdza położenie pręta i, jeśli pasek `CDockState` nie jest widoczny z bieżącymi ustawieniami ekranu, skaluje położenie pręta tak, aby był widoczny. Głównym celem `CDockState` jest utrzymanie całego stanu liczby prętów kontrolnych i umożliwienie zapisywania i ładowania tego stanu do rejestru, aplikacji . pliku INI lub w postaci binarnej `CArchive` jako część zawartości obiektu.
+Stan dokowania obejmuje rozmiar i położenie paska oraz wskazuje, czy jest zadokowany. Podczas pobierania zapisanego stanu dokowania `CDockState` sprawdza położenie paska i, jeśli pasek nie jest widoczny z bieżącymi ustawieniami ekranu, `CDockState` skaluje położenie paska tak, aby był widoczny. Głównym celem `CDockState` jest przechowywanie całego stanu wielu pasków kontroli oraz umożliwienie zapisania tego stanu i załadowania go do rejestru, aplikacji. Plik INI lub w postaci binarnej jako część `CArchive` zawartości obiektu.
 
-Pasek może być dowolnym paskiem sterowania dokowania, w tym paskiem narzędzi, paskiem stanu lub paskiem dialogowym. `CDockState`obiekty są zapisywane i odczytywane `CArchive` do lub z pliku za pośrednictwem obiektu.
+Pasek może być dowolnym było dokowaćm paskiem sterowania, w tym paskiem narzędzi, paskiem stanu lub paskiem okna dialogowego. `CDockState` obiekty są zapisywane i odczytywane z pliku lub z niego za pośrednictwem `CArchive` obiektu.
 
-[CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) pobiera informacje o stanie wszystkich `CControlBar` obiektów okna ramki `CDockState` i umieszcza go w obiekcie. Następnie można zapisać zawartość `CDockState` obiektu do magazynu za pomocą [Serialize](../../mfc/reference/cobject-class.md#serialize) lub [CDockState::SaveState](#savestate). Jeśli później chcesz przywrócić stan prętów sterujących w oknie ramki, `Serialize` można załadować stan z [cDockState:::LoadState](#loadstate), a następnie użyć [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) zastosować zapisany stan do pasków sterujących okna ramki.
+[Obiektu CFrameWnd:: GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) pobiera informacje o stanie wszystkich obiektów okna ramki `CControlBar` i umieszcza je w `CDockState` obiekcie. Następnie można napisać zawartość `CDockState` obiektu do magazynu przy użyciu [serializacji](../../mfc/reference/cobject-class.md#serialize) lub [CDockState:: SaveState](#savestate). Jeśli później chcesz przywrócić stan pasków sterowania w oknie ramka, możesz załadować stan z `Serialize` lub [CDockState:: LoadState](#loadstate), a następnie użyć [obiektu CFrameWnd:: SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) , aby zastosować zapisany stan do pasków sterowania okna ramki.
 
-Aby uzyskać więcej informacji na temat pasków sterowania dokowania, zobacz artykuły [Paski sterowania](../../mfc/control-bars.md), [Paski narzędzi: Dokowanie i pływające](../../mfc/docking-and-floating-toolbars.md), i [Ramka Windows](../../mfc/frame-windows.md).
+Aby uzyskać więcej informacji na temat dokowania pasków sterowania, zobacz artykuły [paski sterowania](../../mfc/control-bars.md), [paski narzędzi: dokowanie i przestawne](../../mfc/docking-and-floating-toolbars.md)oraz [okna ramowe](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CDockState`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxadv.h
+**Nagłówek:** afxadv. h
 
-## <a name="cdockstateclear"></a><a name="clear"></a>CDockState::Wyczyść
+## <a name="cdockstateclear"></a><a name="clear"></a> CDockState:: Clear
 
-Wywołanie tej funkcji, aby wyczyścić `CDockState` wszystkie informacje dokowania przechowywane w obiekcie.
+Wywołaj tę funkcję, aby wyczyścić wszystkie informacje dotyczące dokowania przechowywane w `CDockState` obiekcie.
 
 ```cpp
 void Clear();
@@ -80,11 +81,11 @@ void Clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Obejmuje to nie tylko to, czy pasek jest zadokowany, czy nie, ale także rozmiar i położenie baru oraz to, czy jest widoczny.
+Dotyczy to nie tylko tego, czy pasek jest zadokowany, ale rozmiar i położenie paska oraz czy jest on widoczny.
 
-## <a name="cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion
+## <a name="cdockstategetversion"></a><a name="getversion"></a> CDockState:: GetVersion
 
-Wywołanie tej funkcji, aby pobrać numer wersji przechowywanego stanu paska.
+Wywołaj tę funkcję, aby pobrać numer wersji stanu przechowywanego paska.
 
 ```
 DWORD GetVersion();
@@ -92,15 +93,15 @@ DWORD GetVersion();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-1, jeśli zapisane informacje o pasku są starsze niż bieżący stan słupka; 2, jeśli zapisane informacje o pasku są takie same jak bieżący stan paska.
+1, jeśli przechowywane informacje o pasku są starsze niż bieżący stan paska; 2 Jeśli przechowywane informacje o pasku są takie same jak bieżący stan paska.
 
 ### <a name="remarks"></a>Uwagi
 
-Obsługa wersji umożliwia poprawiony pasek, aby dodać nowe trwałe właściwości i nadal być w stanie wykryć i załadować stan trwały utworzony przez wcześniejszą wersję paska.
+Obsługa wersji umożliwia skorygowany pasek w celu dodania nowych trwałych właściwości i nadal może wykrywać i ładować stan trwały utworzony przez wcześniejszą wersję paska.
 
-## <a name="cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState
+## <a name="cdockstateloadstate"></a><a name="loadstate"></a> CDockState:: LoadState
 
-Wywołanie tej funkcji, aby pobrać informacje o stanie z rejestru lub . ini.
+Wywołaj tę funkcję, aby pobrać informacje o stanie z rejestru lub. Plik INI.
 
 ```cpp
 void LoadState(LPCTSTR lpszProfileName);
@@ -109,23 +110,23 @@ void LoadState(LPCTSTR lpszProfileName);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-Wskazuje ciąg o zerowej teminacji, który określa nazwę sekcji w pliku inicjowania lub klucz w rejestrze systemu Windows, w którym są przechowywane informacje o stanie.
+Wskazuje na ciąg o wartości null-teminated, który określa nazwę sekcji w pliku inicjującym lub klucz w rejestrze systemu Windows, w którym są przechowywane informacje o stanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Nazwa profilu jest sekcją aplikacji . plik INI lub rejestr zawierający informacje o stanie słupków. Informacje o stanie paska sterowania można zapisać w rejestrze lub . PLIK INI `SaveState`z plikiem .
+Nazwa profilu jest częścią aplikacji. Plik INI lub rejestr zawierający informacje o stanie pasków. Informacje o stanie paska sterowania można zapisać w rejestrze lub. Plik INI z `SaveState` .
 
-## <a name="cdockstatem_arrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo
+## <a name="cdockstatem_arrbarinfo"></a><a name="m_arrbarinfo"></a> CDockState:: m_arrBarInfo
 
-Obiekt, `CPtrArray` który jest tablicą wskaźników do przechowywanych informacji paska sterowania dla `CDockState` każdego paska sterowania, który ma zapisane informacje o stanie w obiekcie.
+`CPtrArray`Obiekt, który jest tablicą wskaźników do przechowywanych informacji paska sterowania dla każdego paska sterowania, który ma zapisane informacje o stanie w `CDockState` obiekcie.
 
 ```
 CPtrArray m_arrBarInfo;
 ```
 
-## <a name="cdockstatesavestate"></a><a name="savestate"></a>CDockState::Zapisz stan
+## <a name="cdockstatesavestate"></a><a name="savestate"></a> CDockState:: SaveState
 
-Wywołanie tej funkcji, aby zapisać informacje o stanie w rejestrze lub . ini.
+Wywołaj tę funkcję, aby zapisać informacje o stanie w rejestrze lub. Plik INI.
 
 ```cpp
 void SaveState(LPCTSTR lpszProfileName);
@@ -134,11 +135,11 @@ void SaveState(LPCTSTR lpszProfileName);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-Wskazuje ciąg o zerowej teminacji, który określa nazwę sekcji w pliku inicjowania lub klucz w rejestrze systemu Windows, w którym są przechowywane informacje o stanie.
+Wskazuje na ciąg o wartości null-teminated, który określa nazwę sekcji w pliku inicjującym lub klucz w rejestrze systemu Windows, w którym są przechowywane informacje o stanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Nazwa profilu jest sekcją aplikacji . plik INI lub rejestr zawierający informacje o stanie paska sterowania. `SaveState`zapisuje również bieżący rozmiar ekranu. Można pobrać informacje o pasku sterowania z rejestru lub . PLIK INI `LoadState`z plikiem .
+Nazwa profilu jest częścią aplikacji. Plik INI lub rejestr zawierający informacje o stanie paska sterowania. `SaveState` powoduje także zapisanie bieżącego rozmiaru ekranu. Możesz pobrać informacje o pasku sterowania z rejestru lub. Plik INI z `LoadState` .
 
 ## <a name="see-also"></a>Zobacz też
 

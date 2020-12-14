@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDumpContext'
 title: Klasa CDumpContext
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: 3a81e06586e6de14d57ce4c4de36dc30c73383f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 955be92c4a3b08fe6e1d5a947166133143667ac7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184779"
 ---
 # <a name="cdumpcontext-class"></a>Klasa CDumpContext
 
@@ -57,11 +58,11 @@ class CDumpContext
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDumpContext:: operator&lt;&lt;](#operator_lt_lt)|Wstawia zmienne i obiekty do kontekstu zrzutu.|
+|[CDumpContext:: operator &lt;&lt;](#operator_lt_lt)|Wstawia zmienne i obiekty do kontekstu zrzutu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CDumpContext`nie ma klasy bazowej.
+`CDumpContext` nie ma klasy bazowej.
 
 W przypadku większości dumpingu można użyć [afxDump](diagnostic-services.md#afxdump), wstępnie zadeklarowanego `CDumpContext` obiektu. `afxDump`Obiekt jest dostępny tylko w wersji Debug Biblioteka MFC.
 
@@ -91,7 +92,7 @@ Aby uzyskać więcej informacji na temat `CDumpContext` , zobacz [debugowanie ap
 
 **Nagłówek:** AFX. h
 
-## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext:: CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a> CDumpContext:: CDumpContext
 
 Konstruuje obiekt klasy `CDumpContext` .
 
@@ -114,7 +115,7 @@ Nie zapisuj w źródłowym czasie, `CFile` gdy kontekst zrzutu jest aktywny; w p
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::D umpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a> CDumpContext::D umpAsHex
 
 Zrzuca określony typ sformatowany jako liczby szesnastkowe.
 
@@ -141,7 +142,7 @@ Wywołaj tę funkcję elementu członkowskiego, aby zrzucić element określoneg
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext:: Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a> CDumpContext:: Flush
 
 Wymusza, aby wszystkie pozostałe dane w buforach były zapisywane do pliku dołączonego do kontekstu zrzutu.
 
@@ -153,7 +154,7 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext:: getgłębokości
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a> CDumpContext:: getgłębokości
 
 Określa, czy zrzut głębokiego lub płytki jest w toku.
 
@@ -169,7 +170,7 @@ Głębokość zrzutu ustawiona przez `SetDepth` .
 
   Zobacz przykład dla elementu [setgłębokości](#setdepth).
 
-## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext:: HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a> CDumpContext:: HexDump
 
 Zrzuca tablicę bajtów sformatowaną jako liczby szesnastkowe.
 
@@ -203,7 +204,7 @@ Aby zrzucić pojedynczy, konkretny typ elementu jako liczbę szesnastkową, wywo
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext:: operator&lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a> CDumpContext:: operator &lt;&lt;
 
 Wyprowadza określone dane do kontekstu zrzutu.
 
@@ -245,7 +246,7 @@ W przypadku użycia makra IMPLEMENT_DYNAMIC lub IMPLEMENT_SERIAL w implementacji
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext:: setgłębokości
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a> CDumpContext:: setgłębokości
 
 Ustawia głębokość zrzutu.
 

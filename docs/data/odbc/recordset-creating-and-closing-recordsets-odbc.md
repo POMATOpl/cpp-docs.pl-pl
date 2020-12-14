@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zestaw rekordów: Tworzenie i zamykanie zestawów rekordów (ODBC)'
 title: 'Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8c79afe483ab9fcd03b2102ec93d6574092acf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186106"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Zestaw rekordów: tworzenie i zamykanie zestawów rekordów (ODBC)
 
@@ -33,7 +34,7 @@ W tym temacie objaśniono:
 
 - [Kiedy i jak zamknąć obiekt zestawu rekordów](#_core_closing_a_recordset).
 
-## <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a>Tworzenie zestawów rekordów w czasie wykonywania
+## <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Tworzenie zestawów rekordów w czasie wykonywania
 
 Przed utworzeniem obiektów zestawu rekordów w programie zazwyczaj należy napisać klasy zestawu rekordów specyficzne dla aplikacji. Aby uzyskać więcej informacji o tym kroku wstępnym, zobacz [Dodawanie użytkownika MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
@@ -79,7 +80,7 @@ Po wywołaniu `Open` Użyj funkcji Członkowskich i elementów członkowskich da
 > [!TIP]
 > Ciąg połączenia używany podczas opracowywania może nie być tym samym ciągiem połączenia, który jest wymagany przez użytkowników. Aby poznać pomysły dotyczące uogólniania aplikacji w tym zakresie, zobacz [Źródło danych: Zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a>Ustawianie opcji zestawu rekordów
+## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Ustawianie opcji zestawu rekordów
 
 Po utworzeniu obiektu zestawu rekordów, ale przed wywołaniem `Open` do wybranych rekordów, można ustawić pewne opcje sterujące zachowaniem zestawu rekordów. Dla wszystkich zestawów rekordów można:
 
@@ -96,7 +97,7 @@ Możesz również ustawić następującą opcję, jeśli warunki są prawidłowe
 > [!NOTE]
 > Aby mieć wpływ na wybór rekordów, należy ustawić te opcje przed wywołaniem `Open` funkcji członkowskiej.
 
-## <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a>Zamykanie zestawu rekordów
+## <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Zamykanie zestawu rekordów
 
 Po zakończeniu pracy z zestawem rekordów należy usunąć go i cofnąć jego ilość.
 
@@ -108,9 +109,9 @@ Po zakończeniu pracy z zestawem rekordów należy usunąć go i cofnąć jego i
 
    Jeśli zadeklarowano ją w ramce stosu funkcji, obiekt zostanie zniszczony automatycznie, gdy obiekt wykracza poza zakres. W przeciwnym razie użyj **`delete`** operatora.
 
-`Close`Zwalnia dojście zestawu rekordów `HSTMT` . Nie niszczy obiektu C++.
+`Close` Zwalnia dojście zestawu rekordów `HSTMT` . Nie niszczy obiektu C++.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zestaw rekordów (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Zestaw rekordów: Przewijanie (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>

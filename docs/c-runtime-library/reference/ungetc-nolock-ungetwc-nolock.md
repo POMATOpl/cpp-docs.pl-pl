@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _ungetc_nolock, _ungetwc_nolock'
 title: _ungetc_nolock, _ungetwc_nolock
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 397abcda60dc80f790fcdaba1e6eb0a390f68dc5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4b8e788cd64ca00de47109bb12780e2ccc7f4e0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186626"
 ---
 # <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -92,8 +93,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ungetc_nolock**|\<stdio. h>|
-|**_ungetwc_nolock**|\<stdio. h> lub \<WCHAR. h>|
+|**_ungetc_nolock**|\<stdio.h>|
+|**_ungetwc_nolock**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

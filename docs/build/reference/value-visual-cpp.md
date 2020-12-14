@@ -1,5 +1,6 @@
 ---
-title: '> wartości &lt;(C++ Komentarze do dokumentacji)'
+description: 'Dowiedz się więcej na temat: &lt; wartość&gt;'
+title: '&lt;> wartości (Komentarze w dokumentacji C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: de84d1faca59a6c8e4f82fba3605cbd54a05bd2e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 110091607af7c973591384d44816f372f0d15b14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187030"
 ---
 # <a name="ltvaluegt"></a>&lt;value&gt;
 
-Tag \<wartość > umożliwia Opisanie metod metody dostępu właściwości i właściwości. Należy pamiętać, że po dodaniu właściwości z kreatorem kodu w zintegrowanym środowisku programistycznym programu Visual Studio zostanie dodany tag [\<summary >](summary-visual-cpp.md) dla nowej właściwości. Następnie należy ręcznie dodać tag \<wartość >, aby opisać wartość, którą reprezentuje właściwość.
+\<value>Tag pozwala opisać metody akcesora właściwości i właściwości. Należy pamiętać, że po dodaniu właściwości z kreatorem kodu w zintegrowanym środowisku programistycznym programu Visual Studio zostanie dodany [\<summary>](summary-visual-cpp.md) tag nowej właściwości. Następnie należy ręcznie dodać tag, \<value> aby opisać wartość, którą reprezentuje właściwość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,7 +28,7 @@ Tag \<wartość > umożliwia Opisanie metod metody dostępu właściwości i wł
 
 #### <a name="parameters"></a>Parametry
 
-*property-description*<br/>
+*Opis właściwości*<br/>
 Opis właściwości.
 
 ## <a name="remarks"></a>Uwagi

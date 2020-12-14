@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CDrawingManager'
 title: Klasa CDrawingManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 1cc469b63e448e964dacc4d853905b22155dfe0e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30218dd41e3591c4a39df078bb19e3ac653ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184793"
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
 
@@ -555,7 +556,7 @@ Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razi
 
 ### <a name="remarks"></a>Uwagi
 
-Dla parametru *nPercentage*niższa wartość oznacza ciemniejszy kolor.
+Dla parametru *nPercentage* niższa wartość oznacza ciemniejszy kolor.
 
 Maksymalna wartość parametru *nPercentage* to 200. Wartość większa niż 200 nie zmienia wyglądu prostokąta. Jeśli wartość to-1, ta metoda używa *clrDisabled* , aby ograniczyć nasycenie prostokąta.
 
@@ -717,7 +718,7 @@ podczas Zobacz uwagi.
 *m*<br/>
 podczas Zobacz uwagi.
 
-*c*<br/>
+*h*<br/>
 podczas Zobacz uwagi.
 
 *rm1*<br/>
@@ -943,7 +944,7 @@ podczas Prostokątny obszar w aplikacji. Menedżer rysunku rysuje cień poniżej
 *x*<br/>
 podczas Pozioma Współrzędna pikseli do koloru.
 
-*t*<br/>
+*Y*<br/>
 podczas Współrzędna pionowa pikseli do koloru.
 
 *wartością*<br/>

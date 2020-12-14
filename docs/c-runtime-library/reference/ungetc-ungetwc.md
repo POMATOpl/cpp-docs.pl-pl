@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: ungetc —, ungetwc'
 title: ungetc, ungetwc
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 406ce7d8befd1d9e9e6a065f2549bacf46d2fd6e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c212f67bb72253bf37428d494e33bef0eedc2550
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186587"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -76,9 +77,9 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 
 Funkcja **ungetc —** wypchnięcie znaku *c* z powrotem do *strumienia* i czyści wskaźnik końca pliku. Strumień musi być otwarty do odczytu. Kolejna operacja odczytu *strumienia* zaczyna się od *c*. Próba wypychania **eof** do strumienia przy użyciu **ungetc —** jest ignorowana.
 
-Znaki umieszczone w strumieniu przez **ungetc —** mogą zostać wymazane, jeśli **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijania do tyłu](rewind.md) jest wywoływana przed odczytaniem znaku ze strumienia. Wskaźnik położenia pliku będzie miał wartość, która miała przed wypchnięciem znaków. Zewnętrzne magazyny odpowiadające strumieniu nie są zmieniane. W przypadku pomyślnego wywołania **ungetc —** na strumień tekstowy wskaźnik położenia pliku jest nieokreślony do momentu odczytania wszystkich znaków push lub odrzuconych. Dla każdego pomyślnego wywołania **ungetc —** względem strumienia binarnego wskaźnik położenia pliku jest zmniejszany; Jeśli wartość była równa 0 przed wywołaniem, wartość jest niezdefiniowana po wywołaniu.
+Znaki umieszczone w strumieniu przez **ungetc —** mogą zostać wymazane, jeśli **fflush**, [fseek](fseek-fseeki64.md), **fsetpos** lub [przewijania do tyłu](rewind.md) jest wywoływana przed odczytaniem znaku ze strumienia. Wskaźnik położenia pliku będzie miał wartość, która miała przed wypchnięciem znaków. Zewnętrzne magazyny odpowiadające strumieniu nie są zmieniane. W przypadku pomyślnego wywołania **ungetc —** na strumień tekstowy wskaźnik położenia pliku jest nieokreślony do momentu odczytania wszystkich znaków push lub odrzuconych. Dla każdego pomyślnego wywołania **ungetc —** względem strumienia binarnego wskaźnik położenia pliku jest zmniejszany; Jeśli wartość była równa 0 przed wywołaniem, wartość jest niezdefiniowana po wywołaniu.
 
-Wyniki są nieprzewidywalne, jeśli **ungetc —** jest wywoływana dwukrotnie bez operacji odczytu lub położenia pliku między dwoma wywołaniami. Po wywołaniu **fscanf**wywołanie **ungetc —** może zakończyć się niepowodzeniem, chyba że została wykonana inna operacja odczytu (na przykład **getc —**). Wynika to z faktu, że **fscanf** same wywołuje **ungetc —**.
+Wyniki są nieprzewidywalne, jeśli **ungetc —** jest wywoływana dwukrotnie bez operacji odczytu lub położenia pliku między dwoma wywołaniami. Po wywołaniu **fscanf** wywołanie **ungetc —** może zakończyć się niepowodzeniem, chyba że została wykonana inna operacja odczytu (na przykład **getc —**). Wynika to z faktu, że **fscanf** same wywołuje **ungetc —**.
 
 **ungetwc** to dwubajtowa wersja **ungetc —**. Jednak dla każdego pomyślnego wywołania **ungetwc** na strumień tekstowy lub binarny wartość wskaźnika położenia pliku jest nieokreślona do momentu odczytania lub odrzucenia wszystkich znaków wypchnięcia.
 
@@ -96,10 +97,10 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ungetc —**|\<stdio. h>|
-|**ungetwc**|\<stdio. h> lub \<WCHAR. h>|
+|**ungetc —**|\<stdio.h>|
+|**ungetwc**|\<stdio.h> lub \<wchar.h>|
 
-Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout** i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -135,7 +136,7 @@ int main( void )
 Next character in stream = 'a'
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

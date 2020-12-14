@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: `/cgthreads` (wątki generowania kodu)'
 title: /cgthreads (Wątki generowania kodu)
 ms.date: 07/31/2020
 f1_keywords:
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: 319a42ab68f02df6019ff283f1039ef3d561c4a0
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 41f1e2ab6aa9263a2faf81e83d47db953819827a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182479"
 ---
-# <a name="cgthreads-code-generation-threads"></a>`/cgthreads`(Wątki generowania kodu)
+# <a name="cgthreads-code-generation-threads"></a>`/cgthreads` (Wątki generowania kodu)
 
 Ustawia liczbę cl.exe wątków do użycia na potrzeby optymalizacji i generowania kodu.
 
@@ -46,7 +47,7 @@ Dla kompilacji można określić wiele poziomów równoległości. Przełącznik
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **`cgthreadsN`** , gdzie *`N`* ma wartość od 1 do 8, a następnie wybierz **przycisk OK**.
 
@@ -54,7 +55,7 @@ Dla kompilacji można określić wiele poziomów równoległości. Przełącznik
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

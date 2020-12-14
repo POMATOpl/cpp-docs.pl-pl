@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: DIAGNOSTYKA wydrukowana przez funkcję Assert'
 title: Diagnostyka wydrukowana przez funkcję assert
 ms.date: 11/04/2016
 ms.assetid: 78b64200-520d-40da-9a61-71553f411d4f
-ms.openlocfilehash: 666ba22d642b772fe8ad336f57ab1bdd82bd2e18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cab4f6dfd2cab7d4b46486a103b39abb6ca17005
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186795"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnostyka wydrukowana przez funkcję assert
 
@@ -21,4 +22,4 @@ gdzie *filename* jest nazwą pliku źródłowego, a *LineNumber* jest numerem wi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcje bibliotek](../c-language/library-functions.md)
+[Funkcje biblioteki](../c-language/library-functions.md)

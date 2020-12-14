@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; &gt; Operatory pamięci'
 title: '&lt;&gt;Operatory pamięci'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbf52aa2af13a0eae241444d88e0eeabe7efe47b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183948"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;&gt;Operatory pamięci
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje pod kątem nierówności między obiektami.
 
@@ -120,7 +121,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje równość między obiektami.
 
@@ -232,7 +233,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Testy dla jednego obiektu, który jest większy niż lub równy drugiemu obiektowi.
 
@@ -266,7 +267,7 @@ Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 Operatory szablonu zwracają `left.get() >= right.get()` .
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testy dla jednego obiektu, który jest mniejszy niż drugi obiekt.
 
@@ -296,7 +297,7 @@ Typ kontrolowany przez lewy wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy wskaźnik.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Testy dla jednego obiektu, który jest mniejszy niż lub równy drugiemu obiektowi.
 
@@ -328,9 +329,9 @@ Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory szablonu zwracają`left.get() <= right.get()`
+Operatory szablonu zwracają `left.get() <= right.get()`
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Testy dla jednego obiektu, który jest większy niż drugi obiekt.
 
@@ -360,7 +361,7 @@ Typ kontrolowany przez lewy udostępniony wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy udostępniony wskaźnik.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>zakład&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> zakład&lt;&lt;
 
 Zapisuje wspólny wskaźnik do strumienia.
 

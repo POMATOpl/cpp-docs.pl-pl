@@ -1,15 +1,16 @@
 ---
+description: Dowiedz się więcej o obniżyć liczby całkowite
 title: Zwężanie liczb całkowitych
 ms.date: 11/04/2016
 helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
-ms.openlocfilehash: aee0a5041cd37b1fbad785b760b8cefde74eb195
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d80adff34223d8aa785fa6ffa079a54af198a309
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186821"
 ---
 # <a name="demotion-of-integers"></a>Zwężanie liczb całkowitych
 
@@ -33,6 +34,6 @@ przypisuje wartość 0x34 do `y` .
 
 Gdy **`signed`** zmienne są konwertowane na **`unsigned`** i na odwrót, wzorce bitowe pozostają takie same. Na przykład rzutowanie-2 (0xFE) na **`unsigned`** wartość daje 254 (również 0xFE).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Liczb całkowitych](../c-language/integers.md)
+[Liczby całkowite](../c-language/integers.md)

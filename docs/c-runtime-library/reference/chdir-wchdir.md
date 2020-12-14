@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _chdir, _wchdir'
 title: _chdir, _wchdir
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 190e9d6445417aed8c35843cb4c386d49535ebbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186717"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -71,7 +72,7 @@ Te funkcje zwracają wartość 0 w przypadku powodzenia. Zwracana wartość-1 oz
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_chdir** zmienia bieżący katalog roboczy na katalog określony przez *dirname*. Parametr *dirname* musi odwoływać się do istniejącego katalogu. Ta funkcja może zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli w *dirname*określono nową literę dysku, domyślnie zostanie zmieniona litera dysku. Na przykład jeśli jest domyślną literę dysku i \BIN jest bieżącym katalogiem roboczym, następujące wywołanie zmienia bieżący katalog roboczy dla dysku C i ustanawia C jako nowy dysk domyślny:
+Funkcja **_chdir** zmienia bieżący katalog roboczy na katalog określony przez *dirname*. Parametr *dirname* musi odwoływać się do istniejącego katalogu. Ta funkcja może zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli w *dirname* określono nową literę dysku, domyślnie zostanie zmieniona litera dysku. Na przykład jeśli jest domyślną literę dysku i \BIN jest bieżącym katalogiem roboczym, następujące wywołanie zmienia bieżący katalog roboczy dla dysku C i ustanawia C jako nowy dysk domyślny:
 
 ```C
 _chdir("c:\temp");
@@ -83,7 +84,7 @@ W przypadku używania opcjonalnego znaku ukośnika odwrotnego (**&#92;**) w ści
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
-### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
+### <a name="generic-text-routine-mapping"></a>Generic-Text mapowanie procedury:
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -93,8 +94,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_chdir**|\<> Direct. h|\<errno. h>|
-|**_wchdir**|\<Direct. h> lub \<WCHAR. h>|\<errno. h>|
+|**_chdir**|\<direct.h>|\<errno.h>|
+|**_wchdir**|\<direct.h> lub \<wchar.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -157,9 +158,9 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
 [_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

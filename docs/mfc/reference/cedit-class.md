@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CEdit'
 title: Klasa CEdit
 ms.date: 09/12/2018
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 0e15472ddaad214d575a7479680454ae6b4d3178
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8dbf5ffd05473720682703a9f309f8483591f143
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184689"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 
@@ -181,7 +182,7 @@ Jeśli chcesz obsługiwać komunikaty powiadomień systemu Windows wysyłane prz
 
 Każdy wpis mapy komunikatów przyjmuje następującą formę:
 
-  **Powiadomienie ON_**_NOTIFICATION_**(** _ID_**,** _memberFxn_ **)**
+  **Powiadomienie ON_****(** _ID_**,** _memberFxn_ **)**
 
 gdzie `id` określa identyfikator okna podrzędnego kontrolki edycji wysyłającej powiadomienie i `memberFxn` jest nazwą nadrzędnej funkcji członkowskiej, która została zapisywana w celu obsługi powiadomienia.
 
@@ -1454,7 +1455,7 @@ Aby uzyskać więcej informacji, zobacz [EM_UNDO](/windows/win32/Controls/em-und
 
 [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykład CALCDRIV MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>

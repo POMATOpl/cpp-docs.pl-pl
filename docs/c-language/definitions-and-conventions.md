@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: definicje i konwencje'
 title: Definicje i konwencje
 ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 9da9a566ef0b8d34a1a3d64dd2b8ce659194e6ce
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 892f14bfc3059406bbc192640e04c0181d06eee2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226382"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186873"
 ---
 # <a name="definitions-and-conventions"></a>Definicje i konwencje
 
@@ -19,7 +20,7 @@ Nieterminale są symbolami zastępczymi w składni i są zdefiniowane w innym mi
 
 Opcjonalny składnik jest wskazywany przez <sub>wybór</sub>z indeksu. Przykład:
 
-> **{** *wyrażenie*{<sub>opt</sub> **}**
+>  *wyrażenie*{<sub>opt</sub> **}**
 
 wskazuje opcjonalne wyrażenie ujęte w nawiasy klamrowe.
 
@@ -34,6 +35,6 @@ Konwencje składni używają różnych atrybutów czcionki dla różnych składn
 
 Jest to dwukropek (**:**) po wprowadzeniu definicji przez nieterminala. Definicje alternatywne są wyświetlane w oddzielnych wierszach, z wyjątkiem przypadków, gdy są poprzedzone wyrazami "one of".
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Podsumowanie składni języka C](../c-language/c-language-syntax-summary.md)

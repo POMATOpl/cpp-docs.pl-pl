@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/CLRHEADER
 title: /CLRHEADER
 ms.date: 05/16/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-ms.openlocfilehash: 5974606448dad103c8f12a126b8d17c688927c88
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 8866707ae629672c3ae9ebb468d145eafb0475c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182427"
 ---
 # <a name="clrheader"></a>/CLRHEADER
 
@@ -21,27 +22,27 @@ Wyświetl informacje specyficzne dla środowiska CLR.
 
 ## <a name="syntax"></a>Składnia
 
-> / CLRHEADER *pliku*
+> *Plik* /CLRHEADER
 
 ### <a name="arguments"></a>Argumenty
 
-*Plik*<br/>
-Plik obrazu utworzonych za pomocą [/CLR](clr-common-language-runtime-compilation.md).
+*rozszerzeniem*<br/>
+Plik obrazu utworzony z [/CLR](clr-common-language-runtime-compilation.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**/ CLRHEADER** wyświetla informacji o nagłówkach .NET, używany w żadnym programie zarządzanych. Dane wyjściowe pokazują lokalizację i rozmiar w bajtach nagłówka .NET i sekcjach w nagłówku.
+**/CLRHEADER** wyświetla informacje o nagłówkach .NET używanych w dowolnym programie zarządzanym. Dane wyjściowe przedstawiają lokalizację i rozmiar w bajtach nagłówka i sekcji programu .NET w nagłówku.
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w przypadku plików utworzonych przy użyciu opcji kompilatora [/GL](gl-whole-program-optimization.md) .
 
-Gdy **/CLRHEADER** jest używany w pliku, który został skompilowany z/CLR, nastąpi **nagłówka clr:** sekcji w danych wyjściowych polecenia dumpbin. Wartość **flagi** wskazuje użyto opcji/CLR:
+Gdy **/CLRHEADER** jest używany w pliku, który został skompilowany z/CLR, w danych wyjściowych polecenia DUMPBIN będzie znajdował się **nagłówek CLR:** . Wartość **flag** wskazuje, która opcja/CLR została użyta:
 
-- 0 — / CLR (obraz może zawierać kod natywny).
+- 0--/CLR (obraz może zawierać kod natywny).
 
-Można także programowo sprawdzać, jeśli obraz został zbudowany dla środowiska uruchomieniowego języka wspólnego.  Aby uzyskać więcej informacji, zobacz [jak: Określić, czy obraz jest obrazem natywnym, czy CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
+Możesz również programowo sprawdzić, czy obraz został skompilowany dla środowiska uruchomieniowego języka wspólnego.  Aby uzyskać więcej informacji, zobacz [How to: Określanie, czy obraz jest natywny czy CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
 
-**/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017 i nowszych wersjach. Kod, który musi być "czysta" lub "bezpieczne" powinny być przenoszone do C#.
+**/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nie są obsługiwane w programie Visual Studio 2017 lub nowszym. Kod, który musi mieć wartość "Pure" lub "Safe", należy przenieść do języka C#.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Opcje DUMPBIN](dumpbin-options.md)
+- [Opcje polecenia DUMPBIN](dumpbin-options.md)

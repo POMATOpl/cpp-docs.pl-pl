@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/V (numer wersji)
 title: /V (Numer wersji)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - V compiler option [C++]
 - -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-ms.openlocfilehash: 7bebd3ab9677bb340203bbf857e4ee9f287e36e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5025642d4ae30315d24754a7ee46268050cfb22a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317318"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187055"
 ---
 # <a name="v-version-number"></a>/V (Numer wersji)
 
-Przestarzałe. Osadza ciąg tekstowy w pliku .obj.
+Przestarzałe. Osadza ciąg tekstowy w pliku. obj.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,32 +30,32 @@ Przestarzałe. Osadza ciąg tekstowy w pliku .obj.
 
 ## <a name="arguments"></a>Argumenty
 
-*string*<br/>
-Ciąg określający osadzone w pliku .obj numer wersji lub informacje o prawach autorskich.
+*parametry*<br/>
+Ciąg określający numer wersji lub informacje o prawach autorskich, które mają być osadzone w pliku. obj.
 
 ## <a name="remarks"></a>Uwagi
 
-Etykieta stringcan pliku .obj, za pomocą numeru wersji lub informacje o prawach autorskich. Wszystkie znaki spacji lub tabulatorów muszą być ujęte w podwójny cudzysłów ("), jeśli są one częścią ciągu. Ukośnik odwrotny (\\) musi poprzedzać wszystkie znaki cudzysłowu, jeśli są one częścią ciągu. Odstęp między **/V** i `string` jest opcjonalne.
+Stringcan etykieta pliku. obj z numerem wersji lub informacją o prawach autorskich. Spacje lub znaki tabulacji muszą być ujęte w znaki podwójnego cudzysłowu ("), jeśli są częścią ciągu. Ukośnik odwrotny ( \\ ) musi poprzedzać wszelkie podwójne cudzysłowy, jeśli są częścią ciągu. Spacja między **/v** i `string` jest opcjonalna.
 
-Można również użyć [komentarz (C/C++)](../../preprocessor/comment-c-cpp.md) z argumentem typu komentarza kompilator umieszcza nazwę oraz numer wersji kompilatora w pliku .obj.
+Możesz również użyć [komentarza (C/C++)](../../preprocessor/comment-c-cpp.md) z argumentem typu komentarza kompilatora, aby umieścić nazwę i numer wersji kompilatora w pliku. obj.
 
-**/V** opcja jest przestarzały, począwszy od programu Visual Studio 2005; **/V** był głównie używane do obsługi tworzenia sterowniki urządzeń wirtualnych (urządzenia vxd) i tworzenia urządzenia vxd nie jest już obsługiwany przez zestaw narzędzi Visual C++. Aby uzyskać listę opcji kompilatora przestarzałe zobacz **usunięte opcje kompilatora i uznane za przestarzałe** w [opcje kompilatora wymienione według kategorii](compiler-options-listed-by-category.md).
+Opcja **/v** jest przestarzała począwszy od programu Visual Studio 2005; **/V** użyto głównie do obsługi kompilowania sterowników urządzeń wirtualnych (VxDs), a Kompilowanie VxDs nie jest już obsługiwane przez zestaw narzędzi Visual C++. Aby zapoznać się z listą przestarzałych opcji kompilatora, zobacz Opcje kompilatora **przestarzałe i usunięte** w [opcjach kompilatora wymienionych według kategorii](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++** .
 
-1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+1. Kliknij stronę właściwości **wiersza polecenia** .
 
-1. Wpisz opcje kompilatora w **dodatkowe opcje** pole.
+1. Wpisz opcję kompilatora w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Konwencje wywoływania, parametry i zwracany typ'
 title: Wywoływanie konwencji, parametrów oraz typu powrotu
 ms.date: 02/13/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f840ecbe3364f293e9445239984ad375eed48aac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182531"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Wywoływanie konwencji, parametrów oraz typu powrotu
 
@@ -42,7 +43,7 @@ Jeśli funkcja się nie powiedzie, zgłasza wyjątek i zwraca 0. Można podwyżs
 
 - Nieprawidłowy parametr, co się stanie, jeśli atrybuty w `pidd` nie zostały określone poprawnie.
 
-- `LoadLibrary`Niepowodzenie dla określonej biblioteki DLL.
+- `LoadLibrary` Niepowodzenie dla określonej biblioteki DLL.
 
 - Niepowodzenie `GetProcAddress` .
 
@@ -135,6 +136,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zrozumienie funkcji pomocnika](understanding-the-helper-function.md)
