@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: TN017: niszczenie obiektów okien'
 title: 'TN017: likwidowanie obiektów okien'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 2448a2661851f14fc6fe8747ca19495925442436
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86ce1255055db98a247ac8997aa7d146eb135583
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226818"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215914"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: likwidowanie obiektów okien
 
@@ -39,7 +40,7 @@ W drugim przypadku użycie **`delete`** operatora w obiektach systemu Windows po
 
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Autooczyszczanie przy użyciu CWnd::P ostNcDestroy
 
-Gdy system niszczy okno systemu Windows, ostatni komunikat systemu Windows wysłany do okna jest WM_NCDESTROY. Domyślną procedurą `CWnd` obsługi dla tego komunikatu jest [CWnd:: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy`spowoduje odłączenie `HWND` od obiektu C++ i wywołanie funkcji wirtualnej `PostNcDestroy` . Niektóre klasy przesłaniają tę funkcję w celu usunięcia obiektu C++.
+Gdy system niszczy okno systemu Windows, ostatni komunikat systemu Windows wysłany do okna jest WM_NCDESTROY. Domyślną procedurą `CWnd` obsługi dla tego komunikatu jest [CWnd:: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` spowoduje odłączenie `HWND` od obiektu C++ i wywołanie funkcji wirtualnej `PostNcDestroy` . Niektóre klasy przesłaniają tę funkcję w celu usunięcia obiektu C++.
 
 Domyślna implementacja `CWnd::PostNcDestroy` nie robi nic, która jest odpowiednia dla obiektów okien, które są przydzielono do ramki stosu lub osadzone w innych obiektach. Nie jest to odpowiednie dla obiektów okien, które są przeznaczone do przydzielania na stercie bez żadnych innych obiektów. Innymi słowy, nie jest to odpowiednie dla obiektów okien, które nie są osadzone w innych obiektach C++.
 
@@ -93,7 +94,7 @@ W przypadku obiektów C++ systemu Windows, które wykonują autooczyszczanie, na
 
 Po wywołaniu `DestroyWindow` obiektu bez autooczyszczania obiekt C++ nadal będzie wokół niego, ale *m_hWnd* będzie miał wartość null. Po wywołaniu `DestroyWindow` obiektu autoczyszczącego obiekt języka c++ zostanie usunięty, zwolniony przez operator usuwania języka c++ w implementacji autooczyszczania `PostNcDestroy` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

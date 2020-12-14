@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcjach przestrzeni nazw współbieżności (AMP)'
 title: Funkcje przestrzeni nazw współbieżności (AMP)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: b03a6189d2205dff62d94f07bc597ca2e1013a28
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 65255f14acdc402003be46de5f978da6d9a8f8ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840209"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211820"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkcje przestrzeni nazw współbieżności (AMP)
 
@@ -101,7 +102,7 @@ Lokalizacja, z której jest odczytywana jedna z wartości, które mają być por
 *_Expected_value*<br/>
 Lokalizacja, z której zostanie odczytana druga wartość do porównania.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która ma być przechowywana w lokalizacji pamięci określonej w parametrze `_Dest` if `_Dest` jest równa `_Expected_value` .
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -134,7 +135,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 Wskaźnik do lokalizacji docelowej.
 
-*wartościami*<br/>
+*wartość*<br/>
 Nowa wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -162,7 +163,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która ma zostać dodana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -190,7 +191,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która ma być używana w obliczeniach bitowych i.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -257,7 +258,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 Lokalizacja, z której jest odczytywana jedna z wartości, które mają być porównane, i do której mają być przechowywane wartości maksymalne z dwóch.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość do porównania z wartością w określonej lokalizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -285,7 +286,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 Lokalizacja, z której jest odczytywana jedna z wartości, które mają być porównane, i do której mają być przechowywane minimum dwóch wartości.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość do porównania z wartością w określonej lokalizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -313,7 +314,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która ma być używana w obliczeniach bitowych lub.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -341,7 +342,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 Wskaźnik do lokalizacji docelowej.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość do odjęcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -369,7 +370,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która ma zostać użyta w obliczeniach XOR.
 
 ### <a name="return-value"></a>Wartość zwracana

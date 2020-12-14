@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: operatory bitowe języka C'
 title: Operatory bitowe języka C
 ms.date: 01/29/2018
 helpviewer_keywords:
@@ -12,24 +13,24 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8cbdb5309d5351f77306007e8acd1675be5e2a35
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211586"
 ---
 # <a name="c-bitwise-operators"></a>Operatory bitowe języka C
 
-Operatory bitowe wykonują operacje bitowe-i**&**(), bitowe-wykluczające**^** lub () i bitowe (**&#124;**).
+Operatory bitowe wykonują operacje bitowe-i ( **&** ), bitowe-wykluczające lub ( **^** ) i bitowe (**&#124;**).
 
 ## <a name="syntax"></a>Składnia
 
-*And-Expression*: &nbsp; &nbsp; *wyrażenie równości* &nbsp; &nbsp; *oraz* **&** wyrażenie *równości* wyrażenia
+*And-Expression*: wyrażenie &nbsp; &nbsp; *równości* &nbsp; &nbsp; *oraz* wyrażenie **&** *równości* wyrażenia
 
-*wyłączne lub*wyrażenie: &nbsp; &nbsp; *i* &nbsp; &nbsp; **^** -Expression *bez wyrażenia* *i* -Expression
+*wyłączne lub* wyrażenie: i-Expression bez wyrażenia &nbsp; &nbsp;  &nbsp; &nbsp;  **^** *i* -Expression
 
-*włącznie — lub-* expression: &nbsp; &nbsp; *wyłączne* &nbsp; &nbsp;lub wyrażenie *włączające lub* -Expression &#124; *wykluczające lub* -Expression
+*włącznie — lub-* expression: &nbsp; &nbsp; *wyłączne* lub wyrażenie &nbsp; &nbsp; *włączające lub* -Expression &#124; *wykluczające lub* -Expression
 
 Operandy operatorów bitowych muszą mieć typy całkowite, ale ich typy mogą być różne. Operatory te wykonują zwykle konwersje arytmetyczne; Typ wyniku jest typem operandów po konwersji.
 

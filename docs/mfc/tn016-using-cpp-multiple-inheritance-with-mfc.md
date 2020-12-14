@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: TN016: używanie dziedziczenia wielokrotnego języka C++ z MFC'
 title: 'TN016: używanie dziedziczenia wielokrotnego języka C++ z MFC'
 ms.date: 06/28/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-ms.openlocfilehash: c44639e713f6d0b26d5b74e9f645f60c8627e0c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac4b082a5dc33e93098453714acd25fbd0c18438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215953"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: używanie dziedziczenia wielokrotnego języka C++ z MFC
 
@@ -35,7 +36,7 @@ Alternatywą jest użycie **`dynamic_cast`** operatora. Rzutowanie obiektu na je
 
 ## <a name="cobject---the-root-of-all-classes"></a>CObject — katalog główny wszystkich klas
 
-Wszystkie znaczące klasy są wyprowadzane bezpośrednio lub pośrednio z klasy `CObject` . `CObject`nie ma żadnych danych elementu członkowskiego, ale ma pewne funkcje domyślne. Gdy używasz MI, zazwyczaj będzie dziedziczyć z dwóch lub więcej `CObject` klas pochodnych. Poniższy przykład ilustruje, jak Klasa może dziedziczyć z [obiektu CFrameWnd](../mfc/reference/cframewnd-class.md) i [CObList](../mfc/reference/coblist-class.md):
+Wszystkie znaczące klasy są wyprowadzane bezpośrednio lub pośrednio z klasy `CObject` . `CObject` nie ma żadnych danych elementu członkowskiego, ale ma pewne funkcje domyślne. Gdy używasz MI, zazwyczaj będzie dziedziczyć z dwóch lub więcej `CObject` klas pochodnych. Poniższy przykład ilustruje, jak Klasa może dziedziczyć z [obiektu CFrameWnd](../mfc/reference/cframewnd-class.md) i [CObList](../mfc/reference/coblist-class.md):
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -80,7 +81,7 @@ public:
 
 Może wydawać się, że wirtualna dziedziczenie `CObject` rozwiązało problem niejednoznaczności funkcji, ale nie jest to przypadek. Ponieważ nie ma żadnych danych elementu członkowskiego `CObject` , nie jest wymagane wirtualne dziedziczenie, aby uniemożliwić wiele kopii danych elementu członkowskiego klasy bazowej. W pierwszym przykładzie, który został pokazany wcześniej, `Dump` Metoda wirtualna jest nadal niejednoznaczna, ponieważ jest zaimplementowana inaczej w `CFrameWnd` i `CObList` . Najlepszym sposobem usunięcia niejednoznaczności jest przestrzeganie zaleceń przedstawionych w poprzedniej sekcji.
 
-## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf i pisania w czasie wykonywania
+## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf i Run-Time wpisywanie
 
 Mechanizm wpisywania w czasie wykonywania obsługiwany przez MFC w programie `CObject` używa makr DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL i IMPLEMENT_SERIAL. Te makra mogą wykonywać sprawdzanie typu w czasie wykonywania, aby zagwarantować bezpieczną rzutowań.
 
@@ -182,7 +183,7 @@ BOOL CHelloAppAndFrame::InitInstance()
 CHelloAppAndFrame theHelloAppAndFrame;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

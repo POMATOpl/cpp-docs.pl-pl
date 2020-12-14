@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat operatorów dodatków C
 title: Operatory dodawania języka C
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - additive operators
 - arithmetic operators [C++], additive operators
 ms.assetid: bb8ac205-b061-41fc-8dd4-dab87c8b900c
-ms.openlocfilehash: 29bea87e56aa90a8deab7ad7280b3fbdfb45c82b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b77c3e9716cba716f625fa142129f5c1ce095907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326914"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211599"
 ---
 # <a name="c-additive-operators"></a>Operatory dodawania języka C
 
-Operatory addytywne wykonują dodawanie (**+**) i odejmowanie (**-**).
+Operatory addytywne wykonują dodawanie ( **+** ) i odejmowanie ( **-** ).
 
 ## <a name="syntax"></a>Składnia
 
 *wyrażenie addytywne*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*mnożenia — wyrażenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*dodatek-* **+** Expression *mnożenia-Expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*dodatek-* **-** Expression *mnożenia-Expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie addytywne* **+** *mnożenia — wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie addytywne* **-** *mnożenia — wyrażenie*
 
 > [!NOTE]
 > Mimo że składnia *wyrażenia addytywne* zawiera *mnożenia-Expression*, nie oznacza to, że wyrażenia używające mnożenia są wymagane. Zobacz składnię w artykule [składnia składni języka C](../c-language/c-language-syntax-summary.md), dla *mnożenia-Expression*, *Cast-* Expression i *wyrażenie jednoargumentowe*.

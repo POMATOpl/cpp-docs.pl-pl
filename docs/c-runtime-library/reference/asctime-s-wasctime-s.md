@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: asctime_s, _wasctime_s'
 title: asctime_s, _wasctime_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d743aea81abdba2e1aa2b470f71081cb92e6fc64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211326"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -85,7 +86,7 @@ Struktura czasu/daty. Ta funkcja przyjmuje wskaźnik do prawidłowego **`struct`
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli powodzenie. Jeśli wystąpi awaria, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracaną wartością jest kod błędu. Kody błędów są zdefiniowane w ERRNO. C. Aby uzyskać więcej informacji, zobacz [errno stałe](../../c-runtime-library/errno-constants.md). W poniższej tabeli przedstawiono rzeczywiste kody błędów zwracane dla każdego warunku błędu.
+Zero, jeśli powodzenie. Jeśli wystąpi awaria, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracaną wartością jest kod błędu. Kody błędów są zdefiniowane w ERRNO. H. Aby uzyskać więcej informacji, zobacz [errno stałe](../../c-runtime-library/errno-constants.md). W poniższej tabeli przedstawiono rzeczywiste kody błędów zwracane dla każdego warunku błędu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
@@ -102,7 +103,7 @@ Zero, jeśli powodzenie. Jeśli wystąpi awaria, zostanie wywołana procedura ob
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu znaków. Wartość *tmSource* jest zazwyczaj uzyskiwana z wywołania **gmtime** lub **localtime**. Obie funkcje mogą służyć do wypełnienia struktury **TM** zgodnie z definicją w czasie. C.
+Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu znaków. Wartość *tmSource* jest zazwyczaj uzyskiwana z wywołania **gmtime** lub **localtime**. Obie funkcje mogą służyć do wypełnienia struktury **TM** , zgodnie z definicją w Time. H.
 
 |timeptr element członkowski|Wartość|
 |--------------------|-----------|
@@ -126,7 +127,7 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
-### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego
+### <a name="generic-text-routine-mapping"></a>Generic-Text mapowanie procedury
 
 |Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -149,7 +150,7 @@ Jeśli wskaźnik buforu ma wartość inną niż **null** , a wskaźnik nie wskaz
 
 ## <a name="example"></a>Przykład
 
-Ten program umieszcza czas systemowy w **aclockej**liczbie całkowitej, tłumaczy je na strukturę **newtime** , a następnie konwertuje ją na postać ciągu dla danych wyjściowych przy użyciu funkcji **asctime_s** .
+Ten program umieszcza czas systemowy w **aclockej** liczbie całkowitej, tłumaczy je na strukturę **newtime** , a następnie konwertuje ją na postać ciągu dla danych wyjściowych przy użyciu funkcji **asctime_s** .
 
 ```C
 // crt_asctime_s.c
@@ -183,7 +184,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>

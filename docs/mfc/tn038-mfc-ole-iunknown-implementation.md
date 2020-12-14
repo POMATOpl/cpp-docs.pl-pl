@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: TN038: implementacja interfejsu MFC/OLE IUnknown'
 title: 'TN038: implementacja MFC-OLE IUnknown'
 ms.date: 06/28/2018
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 83166b32a20b8d24f748f85946caa01dbc76d4d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a921fec560c375440f0430d4804aa78e533c6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215407"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementacja interfejsu MFC/OLE IUnknown
 
@@ -102,7 +103,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-Implementacje [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) i [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) będą dokładnie takie same, jak te zaimplementowane powyżej. `CPrintObj::QueryInterface`będzie wyglądać następująco:
+Implementacje [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) i [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) będą dokładnie takie same, jak te zaimplementowane powyżej. `CPrintObj::QueryInterface` będzie wyglądać następująco:
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -256,7 +257,7 @@ Ponadto mapy interfejsów obsługują następujące funkcje zaawansowane:
 
 Aby uzyskać więcej informacji na temat agregacji, zobacz temat [agregacja](/windows/win32/com/aggregation) .
 
-Obsługa mapy interfejsu MFC jest umieszczana w `CCmdTarget` klasie. `CCmdTarget`liczba odwołań "*ma-a*", a także wszystkie funkcje składowe skojarzone z implementacją [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (licznik odwołań na przykład jest w `CCmdTarget` ). Aby utworzyć klasę, która obsługuje OLE COM, Klasa jest pochodną `CCmdTarget` i używa różnych makr, a także funkcji składowych programu `CCmdTarget` w celu zaimplementowania odpowiednich interfejsów. Implementacja MFC używa zagnieżdżonych klas do definiowania każdej implementacji interfejsu podobnie jak powyżej. Jest to łatwiejsze dzięki standardowej implementacji IUnknown, a także kilku makr, które eliminują niektóre powtarzające się kod.
+Obsługa mapy interfejsu MFC jest umieszczana w `CCmdTarget` klasie. `CCmdTarget` liczba odwołań "*ma-a*", a także wszystkie funkcje składowe skojarzone z implementacją [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (licznik odwołań na przykład jest w `CCmdTarget` ). Aby utworzyć klasę, która obsługuje OLE COM, Klasa jest pochodną `CCmdTarget` i używa różnych makr, a także funkcji składowych programu `CCmdTarget` w celu zaimplementowania odpowiednich interfejsów. Implementacja MFC używa zagnieżdżonych klas do definiowania każdej implementacji interfejsu podobnie jak powyżej. Jest to łatwiejsze dzięki standardowej implementacji IUnknown, a także kilku makr, które eliminują niektóre powtarzające się kod.
 
 ## <a name="interface-map-basics"></a>Mapa interfejsu — podstawy
 
@@ -419,7 +420,7 @@ BEGIN_INTERFACE_MAP(CAggrExample, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-Zmienna m_lpAggrInner została zainicjowana w konstruktorze do wartości NULL. Struktura ignoruje zmienną członkowską NULL w domyślnej implementacji [polecenia QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)). `OnCreateAggregates`jest dobrym miejscem do rzeczywistego tworzenia obiektów agregujących. Musisz jawnie wywołać ten element, jeśli tworzysz obiekt poza implementacją MFC `COleObjectFactory` . Powód tworzenia agregatów w `CCmdTarget::OnCreateAggregates` , jak również użycie, `CCmdTarget::GetControllingUnknown` będzie widoczny podczas tworzenia agregowanych obiektów.
+Zmienna m_lpAggrInner została zainicjowana w konstruktorze do wartości NULL. Struktura ignoruje zmienną członkowską NULL w domyślnej implementacji [polecenia QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)). `OnCreateAggregates` jest dobrym miejscem do rzeczywistego tworzenia obiektów agregujących. Musisz jawnie wywołać ten element, jeśli tworzysz obiekt poza implementacją MFC `COleObjectFactory` . Powód tworzenia agregatów w `CCmdTarget::OnCreateAggregates` , jak również użycie, `CCmdTarget::GetControllingUnknown` będzie widoczny podczas tworzenia agregowanych obiektów.
 
 Ta technika daje obiektowi wszystkie interfejsy, które obsługuje obiekt zagregowany oraz interfejsy natywne. Jeśli potrzebujesz tylko podzestawu interfejsów, które obsługuje agregacja, można przesłonić `CCmdTarget::GetInterfaceHook` . Pozwala to na bardzo niskie poziomu zaczepienia, podobnie jak w przypadku [polecenia QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)). Zwykle wszystkie interfejsy obsługiwane przez funkcję zagregowaną.
 
@@ -623,7 +624,7 @@ Nazwa zmiennej członkowskiej, która ma zostać zagregowana.
 
 To makro służy do informowania struktury, że Klasa używa obiektu agregacji. Musi występować między makrami BEGIN_INTERFACE_PART i END_INTERFACE_PART. Obiekt zagregowany jest oddzielnym obiektem pochodnym elementu [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown). Za pomocą wartości zagregowanej i makra INTERFACE_AGGREGATE, można sprawić, że wszystkie interfejsy, które obsługuje agregacji, są wyświetlane, aby były bezpośrednio obsługiwane przez obiekt. Argument *theAggr* jest po prostu nazwą zmiennej składowej klasy, która pochodzi od [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (bezpośrednio lub pośrednio). Wszystkie makra INTERFACE_AGGREGATE muszą być zgodne z makrami INTERFACE_PART po umieszczeniu ich w mapie interfejsu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

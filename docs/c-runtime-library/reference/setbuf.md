@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: setbuf'
 title: setbuf
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 756cb09fb35ed6e8cf6369f20693e2f0f0b7acaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211066"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -57,7 +58,7 @@ Bufor przydzielony przez użytkownika.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **setbuf** kontroluje buforowanie dla *strumienia*. Argument *Stream* musi odwoływać się do otwartego pliku, który nie został odczytany lub zapisany. Jeśli argument *buforu* ma **wartość null**, strumień zostanie zbuforowany. W przeciwnym razie bufor musi wskazywać tablicę znaków o długości **bufsiz**, gdzie **bufsiz** jest rozmiar buforu, zgodnie z definicją w stdio. C. Bufor określony przez użytkownika, a nie domyślny bufor przypisywany przez system dla danego strumienia, jest używany dla buforowania we/wy. Strumień **stderr** jest domyślnie buforowany, ale do przypisywania buforów do obiektu **stderr**można użyć **setbuf** .
+Funkcja **setbuf** kontroluje buforowanie dla *strumienia*. Argument *Stream* musi odwoływać się do otwartego pliku, który nie został odczytany lub zapisany. Jeśli argument *buforu* ma **wartość null**, strumień zostanie zbuforowany. W przeciwnym razie bufor musi wskazywać tablicę znaków o długości **bufsiz**, gdzie **bufsiz** jest rozmiar buforu, zgodnie z definicją w stdio. H. Bufor określony przez użytkownika, a nie domyślny bufor przypisywany przez system dla danego strumienia, jest używany dla buforowania we/wy. Strumień **stderr** jest domyślnie buforowany, ale do przypisywania buforów do obiektu **stderr** można użyć **setbuf** .
 
 **setbuf** został zastąpiony przez [setvbuf —](setvbuf.md), który jest preferowaną procedurą dla nowego kodu. W przeciwieństwie do **setvbuf —**, **setbuf** nie ma żadnego sposobu raportowania błędów. **setvbuf —** umożliwia również sterowanie zarówno trybem buforowania, jak i rozmiarem buforu. **setbuf** istnieje na potrzeby zgodności z istniejącym kodem.
 
@@ -67,7 +68,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**setbuf**|\<stdio. h>|
+|**setbuf**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -110,7 +111,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

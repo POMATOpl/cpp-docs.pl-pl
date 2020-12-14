@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _set_se_translator'
 title: _set_se_translator
 ms.date: 02/21/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5ba0f0816b7876f24dfc010c83711e9ca652edad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211235"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -58,7 +59,7 @@ Zwraca wskaźnik do poprzedniej funkcji translatora zarejestrowanej przez **_set
 
 Funkcja **_set_se_translator** zapewnia sposób obsługi wyjątków Win32 (wyjątki strukturalne C) jako wyjątków wpisanych w języku C++. Aby zezwolić na obsługę każdego wyjątku C przez **`catch`** procedurę obsługi języka C++, należy najpierw zdefiniować klasę otoki wyjątku C, która może być używana, lub pochodną od, aby poatrybucie określony typ klasy jako wyjątek C. Aby użyć tej klasy, należy zainstalować niestandardową funkcję translatora wyjątków języka C, która jest wywoływana przez wewnętrzny mechanizm obsługi wyjątków za każdym razem, gdy zostanie zgłoszony wyjątek C. W ramach funkcji translator można zgłosić każdy wpisany wyjątek, który może zostać przechwycony przez pasującą **`catch`** procedurę obsługi języka C++.
 
-W przypadku korzystania z **_set_se_translator**należy użyć [/EHa](../../build/reference/eh-exception-handling-model.md) .
+W przypadku korzystania z **_set_se_translator** należy użyć [/EHa](../../build/reference/eh-exception-handling-model.md) .
 
 Aby określić niestandardową funkcję tłumaczenia, wywołaj **_set_se_translator** przy użyciu nazwy funkcji tłumaczenia jako argumentu. Funkcja translatora, którą można napisać, jest wywoływana jednokrotnie dla każdego wywołania funkcji na stosie, który ma **`try`** bloki. Brak domyślnej funkcji translatora.
 
@@ -72,7 +73,7 @@ Funkcja *seTransFunction* , którą pisze, musi być funkcją skompilowaną naty
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-W przypadku **_set_se_translator**mają wpływ na dynamiczne łączenie z CRT; inna Biblioteka DLL w procesie może wywoływać **_set_se_translator** i zamienić swój program obsługi na własny.
+W przypadku **_set_se_translator** mają wpływ na dynamiczne łączenie z CRT; inna Biblioteka DLL w procesie może wywoływać **_set_se_translator** i zamienić swój program obsługi na własny.
 
 W przypadku korzystania z **_set_se_translator** z kodu zarządzanego (kod skompilowany za pomocą/CLR) lub kodu natywnego i zarządzanego, należy pamiętać, że translator wpływa na wyjątki generowane tylko w kodzie natywnym. Wszelkie zarządzane wyjątki generowane w kodzie zarządzanym (takie jak w przypadku podnoszenia `System::Exception` ) nie są kierowane przez funkcję translatora. Wyjątki wywoływane w kodzie zarządzanym przy **użyciu funkcji** Win32Exception lub spowodowane przez wyjątek systemu, takie jak wyjątek dzielenia przez zero, są kierowane przez translatora.
 

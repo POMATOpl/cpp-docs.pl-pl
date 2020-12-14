@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: ostrzeżenia kompilatora C4000 do C4199'
 title: Ostrzeżenia kompilatora — od C4000 do C4199
 ms.date: 04/21/2019
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 45b3e1bfcfb5913d455fb2726a30aca827760cfd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: afcf2458db12cbd5ae33418b24de7eb36b06b0ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212080"
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>Ostrzeżenia kompilatora — od C4000 do C4199
 
@@ -34,9 +35,9 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 
 ## <a name="warning-messages"></a>Komunikaty ostrzegawcze
 
-|Ostrzeżenie|Komunikat|
+|Ostrzeżenie|Wiadomość|
 |-------------|-------------|
-|Ostrzeżenie kompilatora C4000|NIEZNANE OSTRZEŻENIE<br /><br /> Wybierz polecenie Pomoc techniczna na wizualizacjiC++<br /><br /> Menu Pomoc lub Otwórz plik pomocy technicznej Aby uzyskać więcej informacji|
+|Ostrzeżenie kompilatora C4000|NIEZNANE OSTRZEŻENIE<br /><br /> Wybierz polecenie Pomoc techniczna w Visual C++<br /><br /> Menu Pomoc lub Otwórz plik pomocy technicznej Aby uzyskać więcej informacji|
 |[Ostrzeżenie kompilatora (poziom 4) C4001](../../error-messages/compiler-warnings/compiler-warning-level-4-c4001.md)|użyto niestandardowego rozszerzenia "Single line Comment"|
 |[Ostrzeżenie kompilatora (poziom 1) C4002](compiler-warning-level-1-c4002.md)|zbyt wiele parametrów rzeczywistych dla makra "identifier"|
 |[Ostrzeżenie kompilatora (poziom 1) C4003](../../error-messages/compiler-warnings/compiler-warning-level-1-c4003.md)|za mało rzeczywistych parametrów dla makra "Identyfikator"|
@@ -166,7 +167,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 |[Ostrzeżenie kompilatora (poziom 1) C4176](compiler-warning-level-1-c4176.md)|"SubComponent": nieznany podskładnik dla przeglądarki składników #pragma|
 |[Ostrzeżenie kompilatora (poziom 1) C4177](compiler-warning-level-1-c4177.md)|#pragma "pragma" powinna być używana tylko w zakresie globalnym lub zakresie przestrzeni nazw|
 |[Ostrzeżenie kompilatora (poziom 1) C4178](compiler-warning-level-1-c4178.md)|stała przypadku "stała" jest zbyt duża dla typu wyrażenia Switch|
-|[Ostrzeżenie kompilatora (poziom 4) C4179](compiler-warning-level-1-c4179.md)|"//*": przeanalizowane jako "/" i "/\*": pomyłka ze standardowym komentarzem "//"|
+|[Ostrzeżenie kompilatora (poziom 4) C4179](compiler-warning-level-1-c4179.md)|"//*": przeanalizowane jako "/" i "/ \* ": pomyłka ze standardowym komentarzem "//"|
 |[Ostrzeżenie kompilatora (poziom 1) C4180](compiler-warning-level-1-c4180.md)|kwalifikator stosowany do typu funkcji nie ma znaczenia; Ignoruj|
 |Ostrzeżenie kompilatora C4181|kwalifikator zastosowany do typu referencyjnego; Ignoruj|
 |[Ostrzeżenie kompilatora (poziom 1) C4182](compiler-warning-level-1-c4182.md)|poziom zagnieżdżenia #include jest głęboki "nest_count". możliwa Nieskończona rekursja|
@@ -188,5 +189,5 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzestaw komunikatów ostrzega
 
 ## <a name="see-also"></a>Zobacz też
 
-[Błędy iC++ ostrzeżenia narzędzi języka C/kompilatora i kompilacji](../compiler-errors-1/c-cpp-build-errors.md) \
-[Ostrzeżenia kompilatora C4000-C5999](compiler-warnings-c4000-c5999.md)
+[Błędy i ostrzeżenia dotyczące kompilatora i narzędzi kompilacji C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Ostrzeżenia kompilatora C4000–C5999](compiler-warnings-c4000-c5999.md)

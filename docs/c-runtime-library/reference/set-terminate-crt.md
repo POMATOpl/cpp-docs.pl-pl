@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: set_terminate (CRT)'
 title: set_terminate (CRT)
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b25e141bc9299389c80e629ff6eb03d7deba23c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211105"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -56,7 +57,7 @@ Zwraca wskaźnik do poprzedniej funkcji zarejestrowanej przez **set_terminate** 
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **set_terminate** instaluje *termFunction* jako funkcję wywołana przez **zakończenie**. **set_terminate** jest używany z obsługą wyjątków C++ i może być wywoływana w dowolnym momencie w programie przed zgłoszeniem wyjątku. **przerywaj wywołania domyślnie** . [abort](abort.md) Można zmienić to ustawienie domyślne, pisząc własną funkcję zakończenia i wywołując **set_terminate** z nazwą funkcji jako argumentem. **Przerwij** wywołuje ostatnią funkcję podaną jako argument do **set_terminate**. Po wykonaniu wszystkich żądanych zadań oczyszczania *termFunction* powinien wyjść z programu. Jeśli nie zakończy się (jeśli powróci do jego obiektu wywołującego), wywoływana jest metoda [Abort](abort.md) .
+Funkcja **set_terminate** instaluje *termFunction* jako funkcję wywołana przez **zakończenie**. **set_terminate** jest używany z obsługą wyjątków C++ i może być wywoływana w dowolnym momencie w programie przed zgłoszeniem wyjątku. **przerywaj wywołania domyślnie** . [](abort.md) Można zmienić to ustawienie domyślne, pisząc własną funkcję zakończenia i wywołując **set_terminate** z nazwą funkcji jako argumentem. **Przerwij** wywołuje ostatnią funkcję podaną jako argument do **set_terminate**. Po wykonaniu wszystkich żądanych zadań oczyszczania *termFunction* powinien wyjść z programu. Jeśli nie zakończy się (jeśli powróci do jego obiektu wywołującego), wywoływana jest metoda [Abort](abort.md) .
 
 W środowisku wielowątkowym funkcje Przerwij są obsługiwane oddzielnie dla każdego wątku. Każdy nowy wątek musi zainstalować własną funkcję terminate. W ten sposób każdy wątek jest odpowiedzialny za jego własną zakończenie obsługi.
 
@@ -85,7 +86,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zapoznaj się z przykładem [przerwania](terminate-crt.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury obsługi wyjątków](../../c-runtime-library/exception-handling-routines.md)<br/>
 [przerwij](abort.md)<br/>

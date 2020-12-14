@@ -1,5 +1,6 @@
 ---
-title: 'TN030: Dostosowywanie drukowania i podglądu wydruku'
+description: 'Dowiedz się więcej na temat: TN030: dostosowywanie drukowania i podglądu wydruku'
+title: 'TN030: dostosowywanie drukowania i podglądu wydruku'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -10,55 +11,55 @@ helpviewer_keywords:
 - printing views [MFC]
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
-ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fc0571b908f85b24b8a0752a00842077d537dce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305687"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215615"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Dostosowywanie drukowania i podglądu wydruku
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: dostosowywanie drukowania i podglądu wydruku
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca Uwaga techniczna nie została zaktualizowana, ponieważ została najpierw uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zalecamy wyszukiwanie tematu zainteresowania w indeksie dokumentacji online.
 
-Ta uwaga opisuje proces dostosowywanie drukowania i podglądu wydruku oraz celów procedury wywołanie zwrotne używane w `CView` i procedury wywołania zwrotnego, jak i funkcje elementów członkowskich `CPreviewView`.
+Ta Uwaga zawiera opis procesu dostosowywania drukowania i podglądu wydruku oraz opis celów procedur wywołania zwrotnego używanych w programie `CView` oraz procedurach wywołania zwrotnego i funkcji składowych `CPreviewView` .
 
-## <a name="the-problem"></a>Ten Problem
+## <a name="the-problem"></a>Problem
 
-MFC udostępnia kompletne rozwiązanie dla większości drukowania i podglądu wydruku potrzebuje. W większości przypadków niewielkiej ilości kodu dodatkowe jest musi mieć możliwość drukowania i podglądu widoku. Jednak istnieją sposobów na optymalizację drukowania, która wymaga znaczących nakładów pracy przez dewelopera, a niektóre aplikacje, które należy dodać elementy interfejsu użytkownika do trybu podglądu wydruku.
+MFC oferuje kompletne rozwiązanie dla większości potrzeb drukowania i podglądu wydruku. W większości przypadków niezbędny jest niewielki dodatkowy kod, który może być w stanie wydrukować i wyświetlić podgląd. Istnieją jednak sposoby na optymalizację drukowania, które wymagają znaczącego wysiłku związanego z częścią dewelopera, a niektóre aplikacje muszą dodać elementy interfejsu użytkownika do trybu podglądu wydruku.
 
-## <a name="efficient-printing"></a>Wydajne drukowania
+## <a name="efficient-printing"></a>Wydajne drukowanie
 
-Po wydrukowaniu aplikację MFC przy użyciu standardowych metod Windows określa, że wszystkie wywołania metaplik w pamięci danych wyjściowych interfejsu urządzenia graficznego (GDI). Gdy `EndPage` jest wywoływana, Windows odgrywa metaplik jeden raz dla każdej fizycznej poza pasmem drukarki wymaga, aby drukować po jednej stronie. Podczas tego renderowania GDI często wykonuje zapytania przerwać procedury, aby określić, jeśli powinno być kontynuowane. Zazwyczaj procedury przerwania umożliwia wiadomości, które mają być przetwarzane, dzięki czemu użytkownik może przerwać zadanie drukowania, za pomocą okna dialogowego drukowania.
+Gdy aplikacja MFC drukuje przy użyciu standardowych metod, system Windows kieruje wszystkie wywołania wyjściowe interfejsu urządzenia graficznego (GDI) do metapliku w pamięci. Gdy `EndPage` jest wywoływana, system Windows odtwarza metaplik jednokrotnie dla każdego fizycznego pasma wymaganego przez drukarkę do drukowania jednej strony. Podczas tego renderowania interfejs GDI często bada procedurę Abort, aby określić, czy ma ona być kontynuowana. Zazwyczaj procedura Abort umożliwia przetwarzanie komunikatów, aby użytkownik mógł przerwać zadanie drukowania przy użyciu okna dialogowego drukowania.
 
-Niestety to może spowolnić proces drukowania. Jeśli drukowanie w aplikacji musi znajdować się szybciej, niż można osiągnąć przy użyciu standardowych technik, należy zaimplementować ręcznego podziału na przedziały.
+Niestety, może to spowolnić proces drukowania. Jeśli drukowanie w aplikacji musi być szybsze niż można osiągnąć przy użyciu standardowej techniki, należy zaimplementować ręczne przedziały.
 
-## <a name="print-banding"></a>Drukuj pasma
+## <a name="print-banding"></a>Paski drukowania
 
-Aby ręcznie pasmo, należy ponownie zaimplementować drukowania pętli taki sposób, że `OnPrint` jest wywoływana wiele razy na strony (raz na poza pasmem). Pętla wydruku jest zaimplementowana w `OnFilePrint` funkcji w viewprnt.cpp. W swojej `CView`-klasy, przeciążenie tej funkcji, aby wpisu mapy wiadomości do obsługi polecenia drukowania, wywołuje funkcję drukowania. Kopiuj `OnFilePrint` procedury i zmiana drukowania pętli do zaimplementowania pasma. Prawdopodobnie będziesz również mają być przekazane przedziały prostokąta do funkcji drukowania, dzięki czemu można zoptymalizować rysowania oparte na części strony, drukowanego.
+Aby ręcznie przedziałować, należy ponownie zaimplementować pętlę drukowania taką, która `OnPrint` jest wywoływana wiele razy na stronę (raz na pasmo). Pętla drukowania jest zaimplementowana w `OnFilePrint` funkcji w viewprnt. cpp. W `CView` klasie pochodnej należy przeciążyć tę funkcję, aby wpis mapy komunikatów do obsługi polecenia Print wywołuje funkcję Print. Skopiuj `OnFilePrint` procedurę i Zmień pętlę drukowania, aby zaimplementować przedziały. Prawdopodobnie chcesz również przekazać prostokąt przedziału do funkcji drukowania, aby można było zoptymalizować rysowanie na podstawie sekcji drukowanej strony.
 
-Po drugie, często musisz wywołać `QueryAbort` podczas rysowania pasmo. W przeciwnym razie nie ma zostać wywołana procedura przerwać, a użytkownik będzie mógł anulować zadanie drukowania.
+Po drugie, należy często wywołać `QueryAbort` podczas rysowania pasma. W przeciwnym razie procedura Abort nie zostanie wywołana i użytkownik nie będzie mógł anulować zadania drukowania.
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Podgląd wydruku: Dokument elektroniczny przy użyciu interfejsu użytkownika
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Podgląd wydruku: papier elektroniczny z interfejsem użytkownika
 
-W zasadzie drukowania (wersja zapoznawcza), spróbuje włączyć wyświetlanie w emulację drukarki. Domyślnie obszaru klienckiego głównego okna służy do wyświetlania jednego lub dwóch stron w pełni w ramach okna. Użytkownik będzie mógł powiększać obszar strony, aby zobaczyć, jak to bardziej szczegółowo. Z dodatkową pomoc użytkownik może nawet mieć możliwość edytowania dokumentu w trybie podglądu.
+Podgląd wydruku, w zasadzie, próbuje włączyć ekran do emulacji drukarki. Domyślnie obszar klienta okna głównego jest używany do wyświetlania jednej lub dwóch stron w pełni w oknie. Użytkownik może powiększyć w obszarze strony, aby zobaczyć go bardziej szczegółowo. W celu uzyskania dodatkowej pomocy użytkownik może nawet być uprawniony do edytowania dokumentu w trybie podglądu.
 
 ## <a name="customizing-print-preview"></a>Dostosowywanie podglądu wydruku
 
-Ta uwaga dotyczy tylko jeden z aspektów modyfikowanie podglądu wydruku: Dodawanie interfejsu użytkownika w trybie podglądu. Możliwe są inne modyfikacje, ale zmiany te są poza zakresem tej dyskusji.
+Ta uwaga dotyczy tylko jednego aspektu modyfikowania podglądu wydruku: Dodawanie interfejsu użytkownika do trybu podglądu. Możliwe są inne modyfikacje, ale te zmiany znajdują się poza zakresem tej dyskusji.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Aby dodać interfejs użytkownika do trybu podglądu
 
-1. Wyprowadzić klasę z widoku `CPreviewView`.
+1. Utwórz klasę widoku od `CPreviewView` .
 
-2. Dodaj programy obsługi poleceń dla elementów interfejsu użytkownika, której wymagasz.
+2. Dodaj programy obsługi poleceń dla żądanych aspektów interfejsu użytkownika.
 
-3. Jeśli dodajesz aspekty visual do wyświetlenia, zastępują `OnDraw` i wykonywać na rysunku po wywołaniu `CPreviewView::OnDraw`.
+3. Jeśli dodajesz aspekty wizualne do ekranu, Przesłoń `OnDraw` i przeprowadź rysowanie po wywołaniu `CPreviewView::OnDraw` .
 
 ## <a name="onfileprintpreview"></a>OnFilePrintPreview
 
-To jest program obsługi poleceń podglądu wydruku. Jego domyślna implementacja jest:
+Jest to procedura obsługi poleceń dla podglądu wydruku. Jego domyślna implementacja to:
 
 ```cpp
 void CView::OnFilePrintPreview()
@@ -82,49 +83,49 @@ void CView::OnFilePrintPreview()
 }
 ```
 
-`DoPrintPreview` Spowoduje to ukrycie okienka głównego aplikacji. Paski sterowania, takie jak pasek stanu mogą być zachowywane przez, określając je w stanu wydajności ->*dwStates* elementu członkowskiego (jest to maski bitowej i bitów dla poszczególnych kontrolek paski zdefiniowano AFX_CONTROLBAR_MASK (AFX_IDW_MYBAR)). Stanu wydajności okna ->*nIDMainPane* jest oknem, które będą automatycznie ukryte i reshown. `DoPrintPreview` Spowoduje to utworzenie paska przycisków dla standardowego interfejsu użytkownika (wersja zapoznawcza). W razie specjalnych okna obsługi jest taki, aby ukryć lub pokazać inne okna, które powinny być wykonane przed `DoPrintPreview` jest wywoływana.
+`DoPrintPreview` spowoduje ukrycie głównego okienka aplikacji. Paski sterowania, takie jak pasek stanu, można zachować, określając je w składowej pState->*dwStates* (jest to maska bitów, a bity poszczególnych pasków sterowania są zdefiniowane przez AFX_CONTROLBAR_MASK (AFX_IDW_MYBAR)). Okno pState->*nIDMainPane* to okno, które będzie automatycznie ukrywane i wyświetlane. `DoPrintPreview` następnie utworzy pasek przycisków dla standardowego interfejsu użytkownika w wersji zapoznawczej. Jeśli jest wymagana obsługa okien specjalnych, na przykład aby ukryć lub pokazać inne okna, które należy wykonać przed `DoPrintPreview` wywołaniem.
 
-Domyślnie po zakończeniu podglądu wydruku, zwraca paski sterowania do ich oryginalnej stanów i okienka głównego, aby widoczne. Jeśli potrzebne jest specjalnej obsługi, należy to zrobić w zastąpieniu obiektu `EndPrintPreview`. Jeśli `DoPrintPreview` zakończy się niepowodzeniem, a także podać specjalnej obsługi.
+Domyślnie po zakończeniu podglądu wydruku funkcja zwraca paski kontroli do ich oryginalnych stanów i okienka głównego. Jeśli wymagana jest obsługa specjalna, należy wykonać przesłonięcie `EndPrintPreview` . Jeśli to `DoPrintPreview` się nie powiedzie, Zapewnij również obsługę specjalną.
 
 DoPrintPreview jest wywoływana z:
 
-- Identyfikator zasobu szablonu okna dialogowego dla paska narzędzi w wersji zapoznawczej.
+- Identyfikator zasobu szablonu okna dialogowego dla paska narzędzi podglądu.
 
-- Wskaźnik do widoku na potrzeby przeprowadzenia drukowanie podglądu wydruku.
+- Wskaźnik do widoku w celu przeprowadzenia drukowania w podglądzie wydruku.
 
-- Klasa czasu wykonywania klasa widoku (wersja zapoznawcza). Będzie można dynamicznie utworzyć w DoPrintPreview.
+- Klasa czasu wykonywania klasy widoku podglądu. Ta zostanie utworzona dynamicznie w DoPrintPreview.
 
-- Wskaźnik CPrintPreviewState. Uwaga musi struktury CPrintPreviewState (lub pochodny struktury, jeśli aplikacja potrzebuje więcej stanu zachowanego) *nie* można utworzyć w ramce. DoPrintPreview jest niemodalne, a ta struktura musi być odporny, dopóki EndPrintPreview jest wywoływana.
+- Wskaźnik CPrintPreviewState. Należy pamiętać, że struktura CPrintPreviewState (lub struktura pochodna, jeśli aplikacja wymaga więcej informacji o stanie zachowane) *nie* może być utworzona w ramce. DoPrintPreview jest niemodalny, a struktura musi przetrwać do momentu wywołania EndPrintPreview.
 
   > [!NOTE]
-  > Jeśli potrzebne jest oddzielne widoku lub widok klasy obsługę drukowania, wskaźnik do tego obiektu powinien zostać przekazany jako drugi parametr.
+  > Jeśli do obsługi drukowania jest wymagana oddzielna Klasa widoku lub widoku, wskaźnik do tego obiektu powinien zostać przesłany jako drugi parametr.
 
 ## <a name="endprintpreview"></a>EndPrintPreview
 
-Jest to, aby zakończyć tryb podglądu wydruku. Często jest to pożądane, aby przejść do strony w dokumencie, który został ostatnio wyświetlane w podglądzie wydruku. `EndPrintPreview` Umożliwia to aplikacji masz szansę, aby to zrobić. -> PInfo*m_nCurPage* elementu członkowskiego jest strona, która została ostatnio wyświetlane (po lewej stronie, jeśli były wyświetlane dwie strony) i wskaźnik jest wskazówkę, gdzie na stronie użytkownika został chcesz się dowiedzieć. Ponieważ struktura widoku aplikacji jest nieznany w ramach, należy podać kod, aby przejść do wybranego miejsca.
+Jest to wywoływane, aby zakończyć tryb podglądu wydruku. Często pożądane jest przechodzenie do strony w dokumencie, który był ostatnio wyświetlany w podglądzie wydruku. `EndPrintPreview` to szansa aplikacji. Element członkowski pInfo >*m_nCurPage* jest stroną, która była ostatnio wyświetlana (po lewej stronie, gdy Wyświetlono dwie strony), a wskaźnik jest wskazówką dotyczącą miejsca, w którym użytkownik zainteresuje. Ze względu na to, że struktura widoku aplikacji jest nieznana dla struktury, należy podać kod do przejścia do wybranego punktu.
 
-Należy wykonać większość akcji przed wywołaniem `CView::EndPrintPreview`. To wywołanie odwraca skutki `DoPrintPreview` i usuwa pView podstawowego kontrolera domeny i pInfo.
+Przed wywołaniem należy wykonać większość akcji `CView::EndPrintPreview` . To wywołanie odwraca skutki działania `DoPrintPreview` i usuwa pView, PDC oraz pInfo.
 
 ```cpp
 // Any further cleanup should be done here.
 CView::EndPrintPreview(pDC, pInfo, point, pView);
 ```
 
-## <a name="cwinapponfileprintsetup"></a>CWinApp::OnFilePrintSetup
+## <a name="cwinapponfileprintsetup"></a>CWinApp:: OnFilePrintSetup
 
-Musi to być mapowane dla elementu menu Ustawienia wydruku. W większości przypadków nie jest konieczne do przesłonięcia implementację.
+Ta wartość musi być zamapowana dla elementu menu konfiguracji drukowania. W większości przypadków nie jest konieczne przesłonięcie implementacji.
 
 ## <a name="page-nomenclature"></a>Nomenklatura strony
 
-Innym problemem jest numerowania i zamówienia. W przypadku aplikacji typu prostego edytora tekstów jest prosty problem. Większość systemów podglądu wydruku przyjęto założenie, że każdej strony wydruku odpowiada jedną stronę w dokumencie.
+Innym problemem jest numerowanie stron i ich kolejność. W przypadku prostych aplikacji typu edytor tekstów jest to problem bardzo prosty. Większość systemów podglądu wydruku zakłada, że każda wydrukowana strona odpowiada jednej stronie dokumentu.
 
-Podczas próby stanowią rozwiązanie uogólniony, istnieje kilka kwestii, które należy wziąć pod uwagę. Wyobraź sobie CAD system. Użytkownik ma rysunku, który obejmuje kilka arkuszy rozmiar E. Rozmiar E (lub mniejsze) ploterów, numerowania mogłoby wyglądać tak jak w przypadku prostych. Jednak na drukarka laserowa, drukowanie 16 stron A rozmiar na arkusz, co to Podgląd wydruku należy wziąć pod uwagę "page"
+W przypadku próby udostępnienia uogólnionego rozwiązania należy rozważyć kilka rzeczy. Wyobraź sobie system CAD. Użytkownik ma rysunek, który obejmuje kilka arkuszy elektronicznych. W przypadku plotera o rozmiarze elektronicznym (lub mniejszym, skalowanym) numeracja stron będzie jak w prostym przypadku. Jednak na drukarce laserowej drukuje 16 stron o rozmiarze na jednym arkuszu, co w podglądzie wydruku uwzględnia "stronę"
 
-Jak Stany akapit wprowadzający, Podgląd wydruku działa jak do drukarki. W związku z tym użytkownik będzie widział co przybyły spoza określonej drukarki, która jest zaznaczone. Jest widok, aby ustalić, jakie wydruku na każdej stronie.
+Zgodnie z postanowieniami akapitu wprowadzającego Podgląd wydruku działa jak drukarka. W związku z tym użytkownik zobaczy, co się stało z konkretną wybraną drukarką. Jest to widok, aby określić, który obraz jest drukowany na każdej stronie.
 
-Ciąg opisu strony w `CPrintInfo` struktura zapewnia sposób wyświetlania numer strony do użytkownika, jeśli może być reprezentowany jako cyfra na stronie (tak jak "Strona 1" lub "strony 1-2"). Ten ciąg jest używany przez domyślną implementację elementu `CPreviewView::OnDisplayPageNumber`. W razie potrzeby innego ekranu jeden mogą zastąpić tę wirtualnego funkcję, aby zapewnić, na przykład "Arkusz1, sekcje A, B".
+Ciąg opisu strony w `CPrintInfo` strukturze zawiera sposób wyświetlania numeru strony użytkownikowi, jeśli może być reprezentowany jako jedna liczba na stronę (jak w "Strona 1" lub "strony 1-2"). Ten ciąg jest używany przez domyślną implementację programu `CPreviewView::OnDisplayPageNumber` . Jeśli jest wymagana inna wartość ekranu, może ona zastąpić tę funkcję wirtualną, na przykład "Arkusz1, sekcje A, B".
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

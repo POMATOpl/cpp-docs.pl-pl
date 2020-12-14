@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy value_compare
 title: value_compare — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: d64d51869ca8db1ed42e9d33691f59da4473d8d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d77412b2d979ef4db84621df1b0c94191f3d2a5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211716"
 ---
 # <a name="value_compare-class"></a>value_compare — Klasa
 
@@ -39,9 +40,9 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Kryteria porównania podane przez value_compare między `value_types` całkowitymi elementami zawartymi w hash_map jest wywołane z porównania między kluczami odpowiednich elementów przez konstrukcję klasy pomocniczej. Operator funkcji składowej używa obiektu `comp` typu `key_compare` przechowywanego w obiekcie funkcji dostarczonym przez value_compare, aby porównać składniki klucza sortowania dwóch elementów.
+Kryteria porównania podane przez value_compare między `value_types` całymi elementami zawartymi w hash_map jest wywołane z porównania między kluczami odpowiednich elementów przez konstrukcję klasy pomocniczej. Operator funkcji składowej używa obiektu `comp` typu `key_compare` przechowywanego w obiekcie funkcji dostarczonym przez value_compare, aby porównać składniki klucza sortowania dwóch elementów.
 
-W przypadku hash_sets i hash_multisets, które są prostymi kontenerami, w których wartości klucza są identyczne z wartościami elementu, value_compare jest równoważne `key_compare`; dla hash_maps i hash_multimaps nie są, ponieważ wartość typu `pair` elementów nie jest taka sama jak wartość klucza elementu.
+Dla hash_sets i hash_multisets, które są prostymi kontenerami, w których wartości klucza są identyczne z wartościami elementu, value_compare jest równoważne `key_compare` ; dla hash_maps i hash_multimaps nie są, ponieważ wartość `pair` elementów Type nie jest taka sama jak wartość klucza elementu.
 
 ## <a name="example"></a>Przykład
 
@@ -49,12 +50,12 @@ Zapoznaj się z przykładem [hash_map:: value_comp](../standard-library/hash-map
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<hash_map >
+**Nagłówek:**\<hash_map>
 
 **Przestrzeń nazw:** stdext
 
 ## <a name="see-also"></a>Zobacz też
 
-[Binary_function struktura](../standard-library/binary-function-struct.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Struktura binary_function](../standard-library/binary-function-struct.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

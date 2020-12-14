@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: TN006: mapy komunikatów'
 title: 'TN006: mapy komunikatów'
 ms.date: 06/25/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 6b387b851f5a76cd0d11957a87e57307d624759e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9331e5523015a670a2a874c9e9b3021d41eed09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228534"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216057"
 ---
 # <a name="tn006-message-maps"></a>TN006: mapy komunikatów
 
@@ -70,7 +71,7 @@ Jest to format generowany przez AppWizard i ClassWizard podczas tworzenia nowych
 
 Tabela mapy komunikatów jest definiowana przy użyciu zestawu makr, które rozwijają się do wpisów mapy komunikatów. Tabela rozpoczyna się od wywołania makra [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) , które definiuje klasę, która jest obsługiwana przez tę mapę komunikatów i klasę nadrzędną, do której są przesyłane nieobsługiwane komunikaty. Tabela zostanie zakończona z wywołaniem makra [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) .
 
-Między tymi dwoma wywołaniami makr jest wpis dla każdego komunikatu, który ma być obsługiwany przez tę mapę komunikatów. Każdy standardowy komunikat systemu Windows zawiera makro ON_WM_*MESSAGE_NAME* , które generuje wpis dla tego komunikatu.
+Między tymi dwoma wywołaniami makr jest wpis dla każdego komunikatu, który ma być obsługiwany przez tę mapę komunikatów. Każdy standardowy komunikat systemu Windows zawiera makro ON_WM_ *MESSAGE_NAME* , które generuje wpis dla tego komunikatu.
 
 Zdefiniowano sygnaturę funkcji standardowej do rozpakowywania parametrów poszczególnych komunikatów systemu Windows i zapewnienia bezpieczeństwa typów. Podpisy te można znaleźć w pliku afxwin. h w deklaracji [CWnd](../mfc/reference/cwnd-class.md). Każda z nich jest oznaczona za pomocą słowa kluczowego **afx_msg** w celu ułatwienia identyfikacji.
 
@@ -239,7 +240,7 @@ ON_CONTROL(wNotificationCode, id, memberFxn)
 
 Typowe formanty systemu Windows wykorzystują bardziej zaawansowane [WM_NOTIFY](/windows/win32/controls/wm-notify) w przypadku złożonych powiadomień o kontrolkach. Ta wersja MFC ma bezpośrednią pomoc techniczną dotyczącą tego nowego komunikatu przy użyciu makr ON_NOTIFY i ON_NOTIFY_RANGE. Zapoznaj się z dokumentacją produktu, aby uzyskać więcej informacji na temat tych makr.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
