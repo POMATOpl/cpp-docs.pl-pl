@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: nullptr (C++/CLI i C++/CX)'
 title: nullptr  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: cf531e81e31af2e3f3790b9f57b54278ad574733
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257644"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr  (C++/CLI i C++/CX)
 
