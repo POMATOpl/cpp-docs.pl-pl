@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Tworzenie aplikacji kontenera dokumentów aktywnych'
 title: Tworzenie aplikacji kontenera dokumentów aktywnych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9bf00a73e7520cde45d4e43ae79813896d4c1129
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309995"
 ---
 # <a name="creating-an-active-document-container-application"></a>Tworzenie aplikacji kontenera dokumentów aktywnych
 
@@ -21,7 +22,7 @@ Najprostszym i najbardziej zalecanym sposobem tworzenia aplikacji kontenera doku
 
 #### <a name="to-create-an-active-document-container-application"></a>Aby utworzyć aplikację kontenera dokumentów aktywnych
 
-1. W menu **plik** kliknij polecenie **projekt**w menu **Nowy** .
+1. W menu **plik** kliknij polecenie **projekt** w menu **Nowy** .
 
 1. W lewym okienku kliknij pozycję **Visual C++** typ projektu.
 
@@ -35,19 +36,19 @@ Najprostszym i najbardziej zalecanym sposobem tworzenia aplikacji kontenera doku
 
 1. Zaznacz pole wyboru **kontener aktywnego dokumentu** .
 
-1. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Finish** (Zakończ).
 
 1. Gdy Kreator aplikacji MFC zakończy generowanie aplikacji, Otwórz następujące pliki przy użyciu Eksplorator rozwiązań:
 
    - *MyProjview. cpp*
 
-1. W *MyProjview. cpp*wprowadź następujące zmiany:
+1. W *MyProjview. cpp* wprowadź następujące zmiany:
 
    - W programie `CMyProjView::OnPreparePrinting` Zamień zawartość funkcji na następujący kod:
 
      [!code-cpp[NVC_MFCDocView#56](codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-   `OnPreparePrinting`zapewnia obsługę drukowania. Ten kod zastępuje `DoPreparePrinting` , który jest domyślnym przygotowaniem wydruku.
+   `OnPreparePrinting` zapewnia obsługę drukowania. Ten kod zastępuje `DoPreparePrinting` , który jest domyślnym przygotowaniem wydruku.
 
    Zawiera ona udoskonalony schemat drukowania w dokumencie aktywnym:
 

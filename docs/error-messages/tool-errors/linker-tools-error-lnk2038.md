@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Błąd narzędzi konsolidatora LNK2038'
 title: Błąd narzędzi konsolidatora LNK2038
 ms.date: 12/15/2017
 f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: ea1509d846c0bc5a85f0f0252b611dfd38496bcb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 17fa86010b4248b68234292dd909fe50f6379c7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275662"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Błąd narzędzi konsolidatora LNK2038
 
@@ -30,7 +31,7 @@ Program Visual Studio definiuje następujące symbole, aby zapobiec łączeniu n
 
 - `_ITERATOR_DEBUG_LEVEL` Wskazuje poziom zabezpieczeń i funkcji debugowania włączonych w standardowej bibliotece języka C++. Te funkcje mogą zmieniać reprezentację niektórych standardowych obiektów biblioteki C++, a tym samym je niezgodne z tymi, które używają różnych funkcji zabezpieczeń i debugowania. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
-- `RuntimeLibrary` Wskazuje wersję standardowej biblioteki języka C++ i środowiska uruchomieniowego C, która jest używana przez aplikację lub bibliotekę. Kod korzystający z jednej wersji standardowej biblioteki C++ lub środowiska uruchomieniowego C jest niezgodny z kodem, który używa innej wersji. Aby uzyskać więcej informacji, zobacz [/MD,/MT,/LD (Korzystanie z biblioteki wykonawczej)](../../build/reference/md-mt-ld-use-run-time-library.md).
+- `RuntimeLibrary` Wskazuje wersję standardowej biblioteki języka C++ i środowiska uruchomieniowego C, która jest używana przez aplikację lub bibliotekę. Kod korzystający z jednej wersji standardowej biblioteki C++ lub środowiska uruchomieniowego C jest niezgodny z kodem, który używa innej wersji. Aby uzyskać więcej informacji, zobacz [/MD,/MT,/LD (Użyj biblioteki Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
 - `_PPLTASKS_WITH_WINRT` Wskazuje, że kod, który używa [biblioteki równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) jest połączony z obiektami skompilowanymi przy użyciu innego ustawienia dla opcji kompilatora [/zw](../../build/reference/zw-windows-runtime-compilation.md) . (**/Zw** obsługuje C++/CX.) Kod, który używa lub zależy od PPL, musi być skompilowany przy użyciu tego samego ustawienia **/zw** , które jest używane w pozostałej części aplikacji.
 

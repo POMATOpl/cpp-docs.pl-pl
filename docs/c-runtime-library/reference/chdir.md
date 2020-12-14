@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: chdir'
 title: chdir
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - chdir function
 ms.assetid: a65275a1-41e4-46be-83a5-167dfacb62a0
-ms.openlocfilehash: 7260ab24440cd315fcf277c8918a1947e8ec6e2f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7cca4c58289b5b5c80ae20c51e2120a132cc7161
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275064"
 ---
 # <a name="chdir"></a>chdir
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat typów danych — stałe
 title: Typ danych — Stałe
 ms.date: 06/25/2018
 f1_keywords:
@@ -139,12 +140,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb1c16cb730ea40a60a5929867fa8a36b17190ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258840"
 ---
 # <a name="data-type-constants"></a>Typ danych — Stałe
 
@@ -161,15 +162,15 @@ Te stałe dają zakresy dla całkowitych typów danych. Aby użyć tych stałych
 > [!NOTE]
 > [`/J`](../build/reference/j-default-char-type-is-unsigned.md)Opcja kompilatora zmienia domyślny **`char`** Typ z **`signed char`** na **`unsigned char`** .
 
-|Stały|Wartość|Opis|
+|Stała|Wartość|Opis|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|Liczba bitów w**`char`**|
+|**CHAR_BIT**|8|Liczba bitów w **`char`**|
 |**SCHAR_MIN**|(-128)|**`signed char`** Wartość minimalna|
 |**SCHAR_MAX**|127|**`signed char`** Wartość maksymalna|
 |**UCHAR_MAX**|255 (0xFF)|**`unsigned char`** Wartość maksymalna|
 |**CHAR_MIN**|(-128) (0 Jeśli **`/J`** użyto opcji)|**`char`** Wartość minimalna|
 |**CHAR_MAX**|127 (255 Jeśli **`/J`** użyto opcji)|**`char`** Wartość maksymalna|
-|**MB_LEN_MAX**|5|Maksymalna liczba bajtów w wielobajtowym**`char`**|
+|**MB_LEN_MAX**|5|Maksymalna liczba bajtów w wielobajtowym **`char`**|
 |**SHRT_MIN**|-32768|**`signed short`** Wartość minimalna|
 |**SHRT_MAX**|32767|**`signed short`** Wartość maksymalna|
 |**USHRT_MAX**|65535 (0xFFFF)|**`unsigned short`** Wartość maksymalna|
@@ -208,7 +209,7 @@ Poniższe stałe dają zakres i inne cechy **`long double`** **`double`** typów
 #include <float.h>
 ```
 
-|Stały|Wartość|Opis|
+|Stała|Wartość|Opis|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|Liczba cyfr dziesiętnych dokładności zaokrąglania|
 |**DBL_DIG**|15|Liczba cyfr dziesiętnych dokładności|
@@ -250,6 +251,6 @@ Poniższe stałe dają zakres i inne cechy **`long double`** **`double`** typów
 |**LDBL_TRUE_MIN**|4.9406564584124654 e-324|Minimalna dodatnia wartość nienormalna|
 |**DECIMAL_DIG**|taki sam jak **DBL_DECIMAL_DIG**|Domyślne (podwójne) cyfry dziesiętne dokładności zaokrąglania|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe globalne](../c-runtime-library/global-constants.md)

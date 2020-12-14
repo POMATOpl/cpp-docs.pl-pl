@@ -1,13 +1,14 @@
 ---
+description: Dowiedz się więcej o:/WHOLEARCHIVE (Dołącz wszystkie pliki obiektów biblioteki)
 title: /WHOLEARCHIVE (Dołącz wszystkie pliki obiektów biblioteki)
 ms.date: 02/12/2020
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: 95685c9c0dfde45c42449bbcad67228a0e21b36a
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 1cbc2ad29bab124af90551d2f4a96ee9f08c578c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259178"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (Dołącz wszystkie pliki obiektów biblioteki)
 
@@ -16,11 +17,11 @@ Wymuś dołączenie wszystkich plików obiektów do biblioteki statycznej w poł
 ## <a name="syntax"></a>Składnia
 
 > **/WHOLEARCHIVE**\
-> **/WHOLEARCHIVE:** _Biblioteka_
+> **/WHOLEARCHIVE:**_Biblioteka_
 
 ### <a name="arguments"></a>Argumenty
 
-\ *biblioteki*
+*biblioteki*\
 Opcjonalna nazwa ścieżki do biblioteki statycznej. Konsolidator obejmuje każdy plik obiektu z tej biblioteki.
 
 ## <a name="remarks"></a>Uwagi
@@ -33,7 +34,7 @@ Opcja/WHOLEARCHIVE została wprowadzona w programie Visual Studio 2015 Update 2.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
 1. Wybierz stronę właściwości **wiersza polecenia** w obszarze **Właściwości konfiguracji**, **konsolidator**.
 
@@ -42,4 +43,4 @@ Opcja/WHOLEARCHIVE została wprowadzona w programie Visual Studio 2015 Update 2.
 ## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

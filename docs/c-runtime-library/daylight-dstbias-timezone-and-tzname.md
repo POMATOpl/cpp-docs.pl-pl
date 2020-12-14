@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _daylight, _dstbias, _timezone i _tzname'
 title: _daylight, _dstbias, _timezone, i _tzname
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,25 +22,25 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-ms.openlocfilehash: 3f9f78d0798140399960cade7ead408f958450ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaa1d76276e4b4117d5f07695875481215c4122e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258787"
 ---
-# <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone, i _tzname
+# <a name="_daylight-_dstbias-_timezone-and-_tzname"></a>_daylight, _dstbias, _timezone, i _tzname
 
-`_daylight`, `_dstbias`, `_timezone`, i `_tzname` są używane w niektórych procedur Data i godzina zmiany czasu lokalnego. Tych zmiennych globalnych są używane w bardziej bezpieczne wersje funkcjonalności, które powinny być używane zamiast zmiennych globalnych.
+`_daylight`, `_dstbias` , `_timezone` i `_tzname` są używane w niektórych procedurach czasu i dat, aby wprowadzić korekty w czasie lokalnym. Te zmienne globalne są przestarzałe dla bezpieczniejszych wersji funkcjonalnych, które powinny być używane zamiast zmiennych globalnych.
 
-|Zmienna globalna|Odpowiednik funkcjonalności|
+|Zmienna globalna|Odpowiednik funkcjonalny|
 |---------------------|---------------------------|
 |`_daylight`|[_get_daylight](../c-runtime-library/reference/get-daylight.md)|
 |`_dstbias`|[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)|
 |`_timezone`|[_get_timezone](../c-runtime-library/reference/get-timezone.md)|
 |`_tzname`|[_get_tzname](../c-runtime-library/reference/get-tzname.md)|
 
-Są deklarowane w czasie.h w następujący sposób.
+Są one deklarowane w czasie. h w następujący sposób.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,17 +53,17 @@ extern char *_tzname[2];
 
 ## <a name="remarks"></a>Uwagi
 
-W wywołaniu `_ftime`, `localtime`, lub `_tzset`, wartości `_daylight`, `_dstbias`, `_timezone`, i `_tzname` są ustalane na podstawie wartości `TZ` zmiennej środowiskowej. Jeśli nie jawnie ustawiona wartość `TZ`, `_tzname[0]` i `_tzname[1]` zawierają odpowiednio domyślne ustawienie opcji "PST" i "(PDT)".  Funkcje manipulowania czasu ([_tzset —](../c-runtime-library/reference/tzset.md), [_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md), i [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)) próba ustawienia wartości `_daylight`, `_dstbias` i `_timezone` przez wykonywanie zapytania systemu operacyjnego dla wartości domyślnej dla każdej zmiennej. Wartości zmiennych globalnych strefy czasowej są wyświetlane w poniższej tabeli.
+W wywołaniu metody, `_ftime` `localtime` , lub `_tzset` , wartości `_daylight` ,, `_dstbias` `_timezone` i `_tzname` są określane na podstawie wartości `TZ` zmiennej środowiskowej. Jeśli nie ustawisz jawnie wartości `TZ` `_tzname[0]` i `_tzname[1]` Ustawienia domyślne ustawień "PST" i "PDT".  Funkcje manipulowania czasami ([_tzset](../c-runtime-library/reference/tzset.md), [_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md)i [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)) podejmują próbę ustawienia wartości `_daylight` `_dstbias` i `_timezone` przez zapytanie do systemu operacyjnego o wartość domyślną każdej zmiennej. W poniższej tabeli przedstawiono wartości zmiennej globalnej strefy czasowej.
 
 |Zmienna|Wartość|
 |--------------|-----------|
-|`_daylight`|Wartość różną od zera, jeśli określono strefę czasu letniego (DST) w `TZ` lub określone z systemu operacyjnego, w przeciwnym razie 0. Wartość domyślna to 1.|
-|`_dstbias`|Przesunięcie czasu.|
-|`_timezone`|Różnica w sekundach między uniwersalny czas koordynowany i czasem lokalnym. Wartością domyślną jest 28 800.|
-|`_tzname[0]`|Nazwa strefy czasowej pochodną `TZ` zmiennej środowiskowej. Wartość domyślna to "PST".|
-|`_tzname[1]`|Nazwa strefy czasu letniego pochodną `TZ` zmiennej środowiskowej. Wartość domyślna to "PDT" (Pacyfik czas letni).|
+|`_daylight`|Wartość różna od zera, jeśli strefa czasu letniego jest określona w `TZ` systemie lub określona przez system operacyjny; w przeciwnym razie 0. Wartość domyślna to 1.|
+|`_dstbias`|Przesunięcie czasu letniego.|
+|`_timezone`|Różnica w sekundach między uniwersalnym czasem koordynowanym i czasem lokalnym. Wartość domyślna to 28 800.|
+|`_tzname[0]`|Nazwa strefy czasowej pochodnej od `TZ` zmiennej środowiskowej. Wartość domyślna to "PST".|
+|`_tzname[1]`|Nazwa strefy DST pochodzącej ze `TZ` zmiennej środowiskowej. Wartość domyślna to "PDT" (czas pacyficzny).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zmienne globalne](../c-runtime-library/global-variables.md)<br/>
 [_get_daylight](../c-runtime-library/reference/get-daylight.md)<br/>

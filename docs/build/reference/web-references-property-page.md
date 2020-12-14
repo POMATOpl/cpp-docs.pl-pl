@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Strona właściwości odwołania sieci Web'
 title: Strona właściwości Odwołania sieci Web
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,37 +10,37 @@ f1_keywords:
 helpviewer_keywords:
 - Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-ms.openlocfilehash: 9e33fc1d53253c3da09e812110015cfdfdbe2d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371642cd7ffcac9cccaea980f7790f729c8e74b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259165"
 ---
 # <a name="web-references-property-page"></a>Strona właściwości Odwołania sieci Web
 
-**Odwołania sieci Web** strona właściwości określa sposób generowania klasy serwera proxy usługi sieci Web XML. Jeśli dodasz odwołanie sieci web do projektu, zostaną wygenerowane klasy serwera proxy usługi sieci Web XML.
+Strona właściwości **odwołania sieci Web** określa sposób generowania klasy serwera proxy usługi sieci Web XML. Jeśli dodasz odwołanie sieci Web do projektu, zostanie wygenerowana Klasa proxy usługi sieci Web XML.
 
-**Odwołania sieci Web** strona właściwości zawiera następujące właściwości:
+Strona właściwości **odwołania sieci Web** zawiera następujące właściwości:
 
 - **Plik wyjściowy**
 
-   Nazwa pliku zawiera klasy serwera proxy usługi sieci Web XML.
+   Nazwa pliku, który zawiera klasę serwera proxy usługi sieci Web XML.
 
-- **Pomijaj transparent startowy**
+- **Pomiń transparent startowy**
 
-   Nie wyświetla transparentu narzędzia języka opisu usługi sieci Web (Wsdl.exe).
+   Nie wyświetlaj transparentu dla narzędzia Web Services Description Language (Wsdl.exe).
 
-- **Namespace**
+- **Przestrzeń nazw**
 
-   Określa nazwę serwera proxy wygenerowanego sieci web.
+   Określa nazwę wygenerowanego serwera proxy sieci Web.
 
-- **Dodatkowe informacje**
+- **Dodatkowa dokumentacja**
 
-   Określa dodatkowe biblioteki DLL przywoływany przez serwer proxy biblioteki DLL.
+   Określa dodatkowe dll, do których odwołuje się biblioteka DLL serwera proxy.
 
-Aby uzyskać informacje dotyczące uzyskiwania dostępu do **odwołania sieci Web** strony właściwości, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+Aby uzyskać informacje na temat uzyskiwania dostępu do strony właściwości **odwołania sieci Web** , zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja strony właściwości projektu C++](property-pages-visual-cpp.md)
+[Odwołanie do strony właściwości projektu C++](property-pages-visual-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _cexit, _c_exit'
 title: _cexit, _c_exit
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e901e7d7e37c8702efaae8b3b70e98a400f48ef1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275103"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
@@ -54,7 +55,7 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_cexit** wywołuje, w kolejności ostatniej-w, pierwszy-out (LIFO), funkcje zarejestrowane przez **atexit —** i **_onexit**. Następnie **_cexit** opróżnia wszystkie bufory we/wy i zamyka wszystkie otwarte strumienie przed zwróceniem. **_c_exit** jest taka sama jak **_exit** , ale powraca do procesu wywołującego bez przetwarzania buforów strumieni **atexit —** lub **_onexit** ani opróżniania. W poniższej tabeli przedstawiono zachowanie funkcji **Exit**, **_exit**, **_cexit**i **_c_exit** .
+Funkcja **_cexit** wywołuje, w kolejności ostatniej-w, pierwszy-out (LIFO), funkcje zarejestrowane przez **atexit —** i **_onexit**. Następnie **_cexit** opróżnia wszystkie bufory we/wy i zamyka wszystkie otwarte strumienie przed zwróceniem. **_c_exit** jest taka sama jak **_exit** , ale powraca do procesu wywołującego bez przetwarzania buforów strumieni **atexit —** lub **_onexit** ani opróżniania. W poniższej tabeli przedstawiono zachowanie funkcji **Exit**, **_exit**, **_cexit** i **_c_exit** .
 
 |Funkcja|Zachowanie|
 |--------------|--------------|
@@ -75,18 +76,18 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cexit**|\<proces. h>|
-|**_c_exit**|\<proces. h>|
+|**_cexit**|\<process.h>|
+|**_c_exit**|\<process.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Anuluj](abort.md)<br/>
+[przerwij](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funkcje _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

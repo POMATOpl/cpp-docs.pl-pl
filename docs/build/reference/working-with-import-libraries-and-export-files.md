@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Praca z bibliotekami importu i eksportowanie plików'
 title: Praca z bibliotekami importowanymi oraz plikami eksportowanymi
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: 6f6f2d5c48c63ba6d8a8a7f67a98b949b32a8afa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6e1664aedf5fa87d269e0ff250e6c52d9d18259
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258801"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Praca z bibliotekami importowanymi oraz plikami eksportowanymi
 
-LIB z opcją/DEF służy do tworzenia biblioteki importowanej oraz pliku eksportu. Używa łącze Stwórz program, który zawiera plik eksportu eksportuje (zwykle dołączana dynamicznie biblioteka (DLL)) i wykorzystuje bibliotekę importowaną do rozpoznawania odwołań do tych eksportu w innych programach.
+Do utworzenia biblioteki Import i pliku eksportu można użyć LIB z opcją/DEF. LINK używa pliku eksportu do kompilowania programu zawierającego eksporty (zazwyczaj biblioteki dołączanej dynamicznie (DLL)) i używa biblioteki importu do rozwiązywania odwołań do tych eksportów w innych programach.
 
-Należy pamiętać, że jeśli tworzysz biblioteki importu w krok wstępny, przed utworzeniem usługi .dll, należy przekazać ten sam zestaw plików obiektów podczas tworzenia pliku .dll, jako zakończony powodzeniem w podczas kompilowania biblioteki importowanej.
+Należy pamiętać, że jeśli utworzysz bibliotekę importu w ramach wstępnego kroku przed utworzeniem biblioteki. dll, musisz przekazać ten sam zestaw plików obiektów podczas kompilowania biblioteki.
 
-W większości przypadków nie trzeba używać biblioteki do tworzenia biblioteki importu. Podczas łączenia program (plik wykonywalny lub biblioteka DLL), który zawiera eksporty LINK automatycznie tworzy bibliotekę importu, który opisuje polecenie eksportuje. Później połączysz program, który odwołuje się do tych eksporty określ bibliotekę importowaną.
+W większości sytuacji nie trzeba używać LIB, aby utworzyć bibliotekę importu. Po połączeniu programu (pliku wykonywalnego lub biblioteki DLL) zawierającego eksporty, LINK automatycznie tworzy bibliotekę importu opisującą eksporty. Później podczas łączenia programu, który odwołuje się do tych eksportów, należy określić bibliotekę importu.
 
-Jednak gdy eksporty biblioteki DLL do programu, który także importowanie elementów z, czy bezpośrednio lub pośrednio, należy użyć LIB utworzenie jednego z bibliotekami importowanymi. Gdy LIB tworzy bibliotekę importu, również tworzy plik eksportu. Podczas łączenia jednej z bibliotek DLL, należy użyć pliku eksportu.
+Jednak w przypadku eksportowania biblioteki DLL do programu, który również się importuje, bezpośrednio lub pośrednio, należy użyć LIB, aby utworzyć jedną z bibliotek importu. Gdy LIB tworzy bibliotekę importu, tworzy również plik eksportu. Należy użyć pliku eksportu podczas łączenia jednej z bibliotek DLL.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[LIB — dokumentacja](lib-reference.md)
+[Dokumentacja biblioteki LIB](lib-reference.md)

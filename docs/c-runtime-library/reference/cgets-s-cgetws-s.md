@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _cgets_s, _cgetws_s'
 title: _cgets_s, _cgetws_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 827f3c8b155f58fe13396f5dc0c66e8999b5f942
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275090"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -94,9 +95,9 @@ Wartość zwracana wynosi zero, jeśli to się powiedzie; w przeciwnym razie kod
 
 |*buforu*|*numberOfElements*|*pSizeRead*|Przesłać|Zawartość *buforu*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|ile|ile|**EINVAL**|n/d|
-|nie **ma wartości null**|zero|ile|**EINVAL**|nie zmodyfikowano|
-|nie **ma wartości null**|ile|**NULL**|**EINVAL**|ciąg o zerowej długości|
+|**NULL**|dowolny|dowolny|**EINVAL**|n/d|
+|nie **ma wartości null**|zero|dowolny|**EINVAL**|nie zmodyfikowano|
+|nie **ma wartości null**|dowolny|**NULL**|**EINVAL**|ciąg o zerowej długości|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -120,12 +121,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cgets_s**|\<CONIO. h>|
-|**_cgetws_s**|\<CONIO. h> lub \<WCHAR. h>|
+|**_cgets_s**|\<conio.h>|
+|**_cgetws_s**|\<conio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Operacje We/Wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

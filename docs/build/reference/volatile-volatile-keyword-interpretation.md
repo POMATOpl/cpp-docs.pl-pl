@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/volatile (interpretacja słowa kluczowego volatile)
 title: /volatile (interpretacja słowa kluczowego volatile)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: 7c2c1cd477b424f56e66bd9246e7bde76ad06120
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e75a9932cff59748cf75b89a3a85e89130de84f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259217"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (interpretacja słowa kluczowego volatile)
 
@@ -48,12 +49,12 @@ Nie ma żadnego `#pragma` równoważnej kontroli tej opcji.
 
 1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
+1. Wybierz   >  stronę właściwości konfiguracja wiersza polecenia **C/C++**  >   .
 
 1. W polu **dodatkowe opcje** Dodaj **/volatile: ISO** lub **/volatile: MS** , a następnie wybierz **przycisk OK** lub **Zastosuj** , aby zapisać zmiany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

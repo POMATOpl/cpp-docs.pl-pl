@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: gdzie definiować makra'
 title: Miejsce definiowania makr
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,21 +7,21 @@ helpviewer_keywords:
 - macros, NMAKE
 - NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-ms.openlocfilehash: dc03644adea4619b3eabe33c481d71f704a9f410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fc7d6e1fd8247816993929791bf734596d00e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259204"
 ---
 # <a name="where-to-define-macros"></a>Miejsce definiowania makr
 
-Wiersz polecenia "," pliku poleceń "," pliku reguł programu make "lub" plik Tools.ini do definiowania makra.
+Zdefiniuj makra w wierszu polecenia, pliku poleceń, programie Make lub pliku Tools.ini.
 
-W pliku reguł programu make lub pliku Tools.ini Każda definicja makra musi znajdować się w osobnym wierszu, a nie może rozpoczynać się od spacji lub tabulatorów. Spacje lub tabulatory wokół znaku równości są ignorowane. Wszystkie [ciąg znaków](defining-an-nmake-macro.md) są literału, łącznie z otaczającego znaki cudzysłowu i spacji osadzonych.
+W pliku reguł programu make lub Tools.ini każda definicja makra musi znajdować się w osobnym wierszu i nie może zaczynać się od spacji lub tabulatora. Spacje lub tabulatory wokół znaku równości są ignorowane. Wszystkie [znaki ciągu](defining-an-nmake-macro.md) są literałem, włącznie z otaczającymi je cudzysłowami i spacjami osadzonymi.
 
-W wierszu polecenia lub w pliku poleceń spacji od znaków tabulacji argumenty one, a nie całe znaku równości. Jeśli `string` zawierający osadzone spacje lub tabulatory, należy ująć sam ciąg lub całe makro w podwójnym cudzysłowie ("").
+W wierszu polecenia lub pliku poleceń, spacje i tabulatory oddzielają argumenty i nie mogą otaczać znaku równości. Jeśli `string` zawiera osadzone spacje lub tabulatory, należy ująć ciąg albo całe makro w podwójny cudzysłów ("").
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Definiowanie makro NMAKE](defining-an-nmake-macro.md)
+[Definiowanie makra NMAKE](defining-an-nmake-macro.md)
