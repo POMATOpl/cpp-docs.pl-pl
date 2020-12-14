@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy regex_iterator
 title: regex_iterator — Klasa
 ms.date: 09/10/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: d9d2baf99b1e2334132f54aeace3d8197b1e73da
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 50595a863a6c56ddacffef2de68d04fd91fdd837
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240471"
 ---
 # <a name="regex_iterator-class"></a>regex_iterator — Klasa
 
@@ -137,7 +138,7 @@ match == a
 match == a
 ```
 
-## <a name="regex_iteratordifference_type"></a><a name="difference_type"></a>regex_iterator::d ifference_type
+## <a name="regex_iteratordifference_type"></a><a name="difference_type"></a> regex_iterator::d ifference_type
 
 Typ różnicy iteratora.
 
@@ -149,7 +150,7 @@ typedef std::ptrdiff_t difference_type;
 
 Typ jest synonimem dla `std::ptrdiff_t` .
 
-## <a name="regex_iteratoriterator_category"></a><a name="iterator_category"></a>regex_iterator:: iterator_category
+## <a name="regex_iteratoriterator_category"></a><a name="iterator_category"></a> regex_iterator:: iterator_category
 
 Typ kategorii iteratora.
 
@@ -161,7 +162,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 Typ jest synonimem dla `std::forward_iterator_tag` .
 
-## <a name="regex_iteratoroperator"></a><a name="op_neq"></a>regex_iterator:: operator! =
+## <a name="regex_iteratoroperator"></a><a name="op_neq"></a> regex_iterator:: operator! =
 
 Porównuje Iteratory pod kątem nierówności.
 
@@ -178,7 +179,7 @@ Iterator, do którego ma zostać wykonane porównanie.
 
 Funkcja członkowska zwraca wartość `!(*this == right)` .
 
-## <a name="regex_iteratoroperator"></a><a name="op_star"></a>regex_iterator:: operator *
+## <a name="regex_iteratoroperator"></a><a name="op_star"></a> regex_iterator:: operator *
 
 Uzyskuje dostęp do wyszukanego dopasowania.
 
@@ -190,7 +191,7 @@ const match_results<BidIt>& operator*();
 
 Funkcja członkowska zwraca przechowywaną wartość `match` .
 
-## <a name="regex_iteratoroperator"></a><a name="op_add_add"></a>regex_iterator:: operator + +
+## <a name="regex_iteratoroperator"></a><a name="op_add_add"></a> regex_iterator:: operator + +
 
 Zwiększa iterator.
 
@@ -205,7 +206,7 @@ Jeśli bieżące dopasowanie nie ma znaków od pierwszego wywołania operatora `
 
 Drugi operator wykonuje kopię obiektu, zwiększa obiekt, a następnie zwraca kopię.
 
-## <a name="regex_iteratoroperator"></a><a name="op_eq"></a>regex_iterator:: operator =
+## <a name="regex_iteratoroperator"></a><a name="op_eq"></a> regex_iterator:: operator =
 
 Porównuje Iteratory dla równości.
 
@@ -222,7 +223,7 @@ Iterator, do którego ma zostać wykonane porównanie.
 
 Funkcja członkowska zwraca wartość PRAWDA, jeśli **`*this`** i *prawe* są iteratorami końca sekwencji lub jeśli żaden z nich nie jest iteratorem końcowym sekwencji i `begin == right.begin` , `end == right.end` , `pregex == right.pregex` , i `flags == right.flags` . W przeciwnym razie zwraca wartość false.
 
-## <a name="regex_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_iterator:: operator-&gt;
+## <a name="regex_iteratoroperator-gt"></a><a name="op_arrow"></a> regex_iterator:: operator-&gt;
 
 Uzyskuje dostęp do wyszukanego dopasowania.
 
@@ -234,7 +235,7 @@ const match_results<BidIt> * operator->();
 
 Funkcja członkowska zwraca adres przechowywanej wartości `match` .
 
-## <a name="regex_iteratorpointer"></a><a name="pointer"></a>regex_iterator::p ointer
+## <a name="regex_iteratorpointer"></a><a name="pointer"></a> regex_iterator::p ointer
 
 Typ wskaźnika do dopasowania.
 
@@ -246,7 +247,7 @@ typedef match_results<BidIt> *pointer;
 
 Typ jest synonimem dla `match_results<BidIt>*` , gdzie `BidIt` jest parametrem szablonu.
 
-## <a name="regex_iteratorreference"></a><a name="reference"></a>regex_iterator:: Reference
+## <a name="regex_iteratorreference"></a><a name="reference"></a> regex_iterator:: Reference
 
 Typ odwołania do dopasowania.
 
@@ -258,7 +259,7 @@ typedef match_results<BidIt>& reference;
 
 Typ jest synonimem dla `match_results<BidIt>&` , gdzie `BidIt` jest parametrem szablonu.
 
-## <a name="regex_iteratorregex_iterator"></a><a name="regex_iterator"></a>regex_iterator:: regex_iterator
+## <a name="regex_iteratorregex_iterator"></a><a name="regex_iterator"></a> regex_iterator:: regex_iterator
 
 Konstruuje iterator.
 
@@ -289,7 +290,7 @@ Flagi dla dopasowania.
 
 Pierwszy Konstruktor konstruuje iterator końca sekwencji. Drugi Konstruktor inicjuje przechowywaną wartość `begin` przy *pierwszej*, przechowywaną wartość `end` z *ostatnią*, przechowywaną wartością `pregex` z `&re` i przechowywaną wartością `flags` w *f*. Następnie wywołuje `regex_search(begin, end, match, *pregex, flags)` . Jeśli wyszukiwanie nie powiedzie się, Konstruktor ustawi obiekt na iterator sekwencji końcowej.
 
-## <a name="regex_iteratorregex_type"></a><a name="regex_type"></a>regex_iterator:: regex_type
+## <a name="regex_iteratorregex_type"></a><a name="regex_type"></a> regex_iterator:: regex_type
 
 Typ wyrażenia regularnego do dopasowania.
 
@@ -301,7 +302,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 Element typedef jest synonimem dla `basic_regex<Elem, RXtraits>` .
 
-## <a name="regex_iteratorvalue_type"></a><a name="value_type"></a>regex_iterator:: value_type
+## <a name="regex_iteratorvalue_type"></a><a name="value_type"></a> regex_iterator:: value_type
 
 Typ dopasowania.
 
@@ -313,14 +314,14 @@ typedef match_results<BidIt> value_type;
 
 Typ jest synonimem dla `match_results<BidIt>` , gdzie `BidIt` jest parametrem szablonu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<regex>](../standard-library/regex.md)\
 [Klasa regex_constants](../standard-library/regex-constants-class.md)\
 [Klasa regex_error](../standard-library/regex-error-class.md)\
-[\<regex>obowiązki](../standard-library/regex-functions.md)\
+[\<regex> obowiązki](../standard-library/regex-functions.md)\
 [Klasa regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<regex>zainteresowanych](../standard-library/regex-operators.md)\
+[\<regex> zainteresowanych](../standard-library/regex-operators.md)\
 [Klasa regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Klasa regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex>definicje typów](../standard-library/regex-typedefs.md)
+[\<regex> definicje typów](../standard-library/regex-typedefs.md)

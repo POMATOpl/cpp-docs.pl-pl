@@ -1,27 +1,28 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4458
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4458'
+title: Ostrzeżenie kompilatora (poziom 4) C4458
 ms.date: 11/04/2016
 f1_keywords:
 - C4458
 helpviewer_keywords:
 - C4458
 ms.assetid: 7bdaa1b1-0caf-4d68-98c4-6bdd441c23fb
-ms.openlocfilehash: 9e5eb8dc44968332abc097bfbd16b48e3240695c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f631fe4086c69732c972161ae7bb6096232b2740
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241264"
 ---
-# <a name="compiler-warning-level-4-c4458"></a>Kompilator ostrzeżenie (poziom 4) C4458
+# <a name="compiler-warning-level-4-c4458"></a>Ostrzeżenie kompilatora (poziom 4) C4458
 
-> Deklaracja "*identyfikator*" powoduje ukrycie składowej klasy
+> Deklaracja elementu "*Identifier*" powoduje ukrycie składowej klasy
 
-Deklaracja *identyfikator* w zakresie lokalnym ukrywa deklarację o takiej samej nazwie *identyfikator* w zakresie klasy. To ostrzeżenie informuje o tym, który odwołuje się do *identyfikator* w tym zakresie rozpoznać lokalnie zadeklarowanych wersji, a nie wersji elementu członkowskiego klasy, która może być lub może nie być zgodne z zamiarami użytkownika. Aby rozwiązać ten problem, zalecane jest nadać nazwy zmiennych lokalnych, które nie wchodzą w konflikt z nazwą składowej klasy.
+Deklaracja *identyfikatora* w zakresie lokalnym powoduje ukrycie deklaracji o identycznym *identyfikatorze* w zakresie klasy. To ostrzeżenie informuje o tym, że odwołania do *identyfikatora* w tym zakresie są rozpoznawane jako wersja zadeklarowana lokalnie, a nie do wersji elementu członkowskiego klasy, która może być lub nie być zamiarem. Aby rozwiązać ten problem, zalecamy nadawanie nazw zmiennych lokalnych, które nie powodują konfliktu z nazwami elementów członkowskich klasy.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4458, ponieważ parametr `x` i zmienną lokalną `y` w `member_fn` mają takie same nazwy elementów członkowskich danych klasy. Aby rozwiązać ten problem, należy używać różnych nazw parametrów i zmiennych lokalnych.
+Poniższy przykład generuje C4458, ponieważ parametr `x` i zmienna lokalna `y` w `member_fn` mają takie same nazwy jak składowe danych w klasie. Aby rozwiązać ten problem, Użyj różnych nazw dla parametrów i zmiennych lokalnych.
 
 ```cpp
 // C4458_hide.cpp

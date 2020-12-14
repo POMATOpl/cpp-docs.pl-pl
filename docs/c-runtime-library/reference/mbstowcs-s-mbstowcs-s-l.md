@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mbstowcs_s, _mbstowcs_s_l'
 title: mbstowcs_s, _mbstowcs_s_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 4a6e86e1122a7392862fa34a59042c32560fd69d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 800cb64c62498cfea93c6fc600207ad1e2309b98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240120"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -127,7 +128,7 @@ Jeśli *Liczba* jest wartością specjalną [_TRUNCATE](../../c-runtime-library/
 
 Jeśli **mbstowcs_s** pomyślnie przekonwertuje ciąg źródłowy, umieści rozmiar w postaci dwubajtowej przekonwertowanego ciągu, łącznie z terminatorem null, na *&#42;PReturnValue* (podany *pReturnValue* nie ma **wartości null**). Dzieje się tak nawet wtedy, gdy argument *wcstr* ma **wartość null** i umożliwia określenie wymaganego rozmiaru buforu. Należy pamiętać, że jeśli *wcstr* ma **wartość null**, *Count* jest ignorowany, a *sizeInWords* musi mieć wartość 0.
 
-Jeśli **mbstowcs_s** napotka nieprawidłowy znak wielobajtowy, umieszcza 0 w *&#42;pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** na **EILSEQ**i zwraca **EILSEQ**.
+Jeśli **mbstowcs_s** napotka nieprawidłowy znak wielobajtowy, umieszcza 0 w *&#42;pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** na **EILSEQ** i zwraca **EILSEQ**.
 
 Jeśli sekwencje wskazywane przez *mbstr* i *wcstr* nakładają się na siebie, zachowanie **mbstowcs_s** jest niezdefiniowane.
 
@@ -144,8 +145,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbstowcs_s**|\<STDLIB. h>|
-|**_mbstowcs_s_l**|\<STDLIB. h>|
+|**mbstowcs_s**|\<stdlib.h>|
+|**_mbstowcs_s_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -154,7 +155,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4691'
 title: Ostrzeżenie kompilatora (poziom 1) C4691
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: 6a4d1de621983794acfae4de7707ba127df9a1b7
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 3235b32a071e6b6a2a0afab122978f9fcb7e112a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238274"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>Ostrzeżenie kompilatora (poziom 1) C4691
 
@@ -19,7 +20,7 @@ ms.locfileid: "90685570"
 
 Nie można odwołać się do pliku metadanych zawierającego pierwotną definicję typu, a kompilator używa definicji typu lokalnego.
 
-W przypadku ponownego kompilowania *pliku*C4691 można zignorować lub wyłączyć za pomocą [ostrzeżenia](../../preprocessor/warning.md)pragma.  Oznacza to, że jeśli tworzony plik jest taki sam jak plik, którego kompilator oczekuje na znalezienie definicji typu, można zignorować C4691.
+W przypadku ponownego kompilowania *pliku* C4691 można zignorować lub wyłączyć za pomocą [ostrzeżenia](../../preprocessor/warning.md)pragma.  Oznacza to, że jeśli tworzony plik jest taki sam jak plik, którego kompilator oczekuje na znalezienie definicji typu, można zignorować C4691.
 
 Jednak nieoczekiwane zachowanie może wystąpić, jeśli kompilator używa definicji, która nie jest z tego samego zestawu, do którego odwołuje się metadane; Typy CLR są wpisywane nie tylko nazwami typu, ale również przez zestaw.  Oznacza to, że typ Z z zestawu z.dll różni się od typu z y.dll zestawu.
 

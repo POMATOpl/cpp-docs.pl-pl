@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: memchr, wmemchr'
 title: memchr, wmemchr
 ms.date: 03/31/2019
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232472"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240003"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -90,7 +91,7 @@ Jeśli to się powiedzie, zwraca wskaźnik do pierwszej lokalizacji *c* w *bufor
 
 ## <a name="remarks"></a>Uwagi
 
-`memchr`i `wmemchr` poszukaj pierwszego wystąpienia *c* w pierwszej *liczbie* znaków w *buforze*. Kończy się po znalezieniu *c* lub po sprawdzeniu pierwszej *liczby* znaków.
+`memchr` i `wmemchr` poszukaj pierwszego wystąpienia *c* w pierwszej *liczbie* znaków w *buforze*. Kończy się po znalezieniu *c* lub po sprawdzeniu pierwszej *liczby* znaków.
 
 W języku C te funkcje przyjmują **`const`** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do **`const`** zwraca wskaźnik do **`const`** ; wersja, która przyjmuje wskaźnik do **`const`** niezwracanego wskaźnika do niebędącego elementem **`const`** . W \_ przypadku, \_ \_ \_ gdy obie **`const`** **`const`** te funkcje są dostępne, są zdefiniowane poprawne przeciążenia w ramach monitora. Jeśli wymagane jest **`const`** niezachowanie w przypadku przeciążeń c++ w języku c++, zdefiniuj \_ zwracaną wartość symbolu const \_ .
 
@@ -150,7 +151,7 @@ Search char: r
 Result:      r found at position 12
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

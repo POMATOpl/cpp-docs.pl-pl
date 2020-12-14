@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbsnbicmp, _mbsnbicmp_l'
 title: _mbsnbicmp, _mbsnbicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: e84e6b367c428dc26a1864db80f6828f7ec9c176
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9cc833061ceca899af78da4c50610ed101dcd2d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240276"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -86,11 +87,11 @@ W przypadku błędu, **_mbsnbicmp** zwraca **_NLSCMPERROR**, który jest zdefini
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbsnbicmp** wykonuje porównanie porządkowe *dla pierwszych bajtów* z wartości *ciąg1* i *ciąg2*. Porównanie jest wykonywane przez konwersję każdego znaku na małe litery; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) to wersja **_mbsnbicmp**z uwzględnieniem wielkości liter. Porównanie kończy się, jeśli kończący znak null zostanie osiągnięty w dowolnym ciągu przed porównaniem znaków *Count* . Jeśli ciągi są równe, gdy zostanie osiągnięty kończący znak null w dowolnym ciągu przed porównaniem znaków *Count* , krótszy ciąg jest mniejszy.
+Funkcja **_mbsnbicmp** wykonuje porównanie porządkowe *dla pierwszych bajtów* z wartości *ciąg1* i *ciąg2*. Porównanie jest wykonywane przez konwersję każdego znaku na małe litery; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) to wersja **_mbsnbicmp** z uwzględnieniem wielkości liter. Porównanie kończy się, jeśli kończący znak null zostanie osiągnięty w dowolnym ciągu przed porównaniem znaków *Count* . Jeśli ciągi są równe, gdy zostanie osiągnięty kończący znak null w dowolnym ciągu przed porównaniem znaków *Count* , krótszy ciąg jest mniejszy.
 
-**_mbsnbicmp** jest podobna do [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), z tą różnicą, że porównuje ciągi do *liczby* bajtów zamiast znaków.
+**_mbsnbicmp**  jest podobna do [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), z tą różnicą, że porównuje ciągi do *liczby* bajtów zamiast znaków.
 
-Dwa ciągi zawierające znaki znajdujące się między "z" i "a" w tabeli ASCII ("[",\\"", "]", "^", "_" i "\`") są porównywane inaczej, w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli jest to wielkie litery.
+Dwa ciągi zawierające znaki znajdujące się między "z" i "a" w tabeli ASCII ("[", " \\ ", "]", "^", "_" i " \` ") są porównywane inaczej, w zależności od ich wielkości liter. Na przykład dwa ciągi "ABCDe" i "ABCD ^" porównują jeden sposób, jeśli porównanie jest małe ("abcde" > "abcd ^") i drugi sposób ("ABCDe" < "ABCD ^"), jeśli jest to wielkie litery.
 
 **_mbsnbicmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z aktualnie używaną [stroną kodową](../../c-runtime-library/code-pages.md) . Bieżące ustawienie regionalne nie ma na nie wpływ.
 
@@ -109,7 +110,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbicmp**|\<mbstring. h>|
+|**_mbsnbicmp**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

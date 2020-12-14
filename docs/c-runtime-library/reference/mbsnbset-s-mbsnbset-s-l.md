@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbsnbset_s, _mbsnbset_s_l'
 title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e8500de308d564b9e16ba5de29af67ee65b260e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240198"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
@@ -88,7 +89,7 @@ errno_t _mbsnbset_s_l(
 *str*<br/>
 Ciąg, który ma zostać zmieniony.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar buforu ciągu.
 
 *s*<br/>
@@ -131,8 +132,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbset_s**|\<mbstring. h>|
-|**_mbsnbset_s_l**|\<mbstring. h>|
+|**_mbsnbset_s**|\<mbstring.h>|
+|**_mbsnbset_s_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

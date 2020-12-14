@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcji memcmp, wmemcmp'
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65489d99e0c17e4971a4fa7cf849990b860ad361
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239990"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -77,7 +78,7 @@ Wartość zwracana wskazuje związek między buforami.
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje pierwsze znaki *Count* z *buffer1* i *buffer2* i zwraca wartość, która wskazuje ich relację. Znak wartości zwracanej niezerowej jest znakiem różnicy między pierwszą różnicą pary wartości w buforach. Wartości są interpretowane jako **`unsigned char`** dla **funkcji memcmp**i jako **`wchar_t`** **wmemcmp**.
+Porównuje pierwsze znaki *Count* z *buffer1* i *buffer2* i zwraca wartość, która wskazuje ich relację. Znak wartości zwracanej niezerowej jest znakiem różnicy między pierwszą różnicą pary wartości w buforach. Wartości są interpretowane jako **`unsigned char`** dla **funkcji memcmp** i jako **`wchar_t`** **wmemcmp**.
 
 ## <a name="requirements"></a>Wymagania
 

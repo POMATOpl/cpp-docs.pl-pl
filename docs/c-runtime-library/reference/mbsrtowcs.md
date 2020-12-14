@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mbsrtowcs'
 title: mbsrtowcs
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: fc9310a95165944b7f516c1f8c48d8d4d1e56117
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 83979058e33ffc3874f26cb8ef70f888195e6644
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240185"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -99,13 +100,13 @@ Funkcja **mbsrtowcs** jest wielowątkowej bezpieczna, dopóki żadna funkcja w b
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbsrtowcs**|\<WCHAR. h>|
+|**mbsrtowcs**|\<wchar.h>|
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>

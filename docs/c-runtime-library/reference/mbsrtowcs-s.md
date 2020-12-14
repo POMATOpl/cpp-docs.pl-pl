@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mbsrtowcs_s'
 title: mbsrtowcs_s
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-ms.openlocfilehash: 72a20396b2f0f75d79baa64619deef8a0c1e00ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c7c53d3213bbe552dd63eb527a635660e803e9a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240172"
 ---
 # <a name="mbsrtowcs_s"></a>mbsrtowcs_s
 
@@ -111,7 +112,7 @@ Jeśli *wcstr* nie jest pustym wskaźnikiem, obiekt wskaźnika wskazywany przez 
 
 Jeśli *mbstate* jest wskaźnikiem o wartości null, używany jest obiekt statyczny wewnętrznego stanu konwersji biblioteki **mbstate_t** . Ponieważ ten wewnętrzny obiekt statyczny nie jest bezpieczny wątkowo, zalecamy przekazanie własnej wartości *mbstate* .
 
-Jeśli **mbsrtowcs_s** napotka znaki wielobajtowe, które nie są prawidłowe w bieżących ustawieniach regionalnych, umieszcza-1 w *&#42;pReturnValue*, ustawia bufor docelowy *wcstr* na pusty ciąg, ustawia **errno** do **EILSEQ**i zwraca **EILSEQ**.
+Jeśli **mbsrtowcs_s** napotka znaki wielobajtowe, które nie są prawidłowe w bieżących ustawieniach regionalnych, umieszcza-1 w *&#42;pReturnValue*, ustawia bufor docelowy *wcstr* na pusty ciąg, ustawia **errno** do **EILSEQ** i zwraca **EILSEQ**.
 
 Jeśli sekwencje wskazywane przez *mbstr* i *wcstr* nakładają się na siebie, zachowanie **mbsrtowcs_s** jest niezdefiniowane. na **mbsrtowcs_s** ma wpływ Kategoria LC_TYPE bieżących ustawień regionalnych.
 
@@ -132,13 +133,13 @@ Funkcja **mbsrtowcs_s** jest bezpieczna, jeśli żadna funkcja w bieżącym wąt
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbsrtowcs_s**|\<WCHAR. h>|
+|**mbsrtowcs_s**|\<wchar.h>|
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)<br/>

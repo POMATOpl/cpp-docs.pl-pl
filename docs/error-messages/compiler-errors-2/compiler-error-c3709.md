@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3709'
 title: Błąd kompilatora C3709
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
-ms.openlocfilehash: 47320c79dbbfc2152c126c80d1eb8c061f3ceb3a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0c884801cc3c720df1018bf7c6d13b13465982a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241797"
 ---
 # <a name="compiler-error-c3709"></a>Błąd kompilatora C3709
 
-"Function": Niewłaściwa składnia określająca zdarzenie w __hook/\__unhook
+"Function": Niewłaściwa składnia określająca zdarzenie w __hook/ \_ _unhook
 
 Po określeniu źródła zdarzenia z [__hook](../../cpp/hook.md) lub [__unhook](../../cpp/unhook.md), pierwszy parametr musi być prawidłową metodą zdarzenia, a drugi parametr musi być prawidłowym obiektem źródłowym zdarzenia (nie metodą).
 

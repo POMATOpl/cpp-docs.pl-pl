@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Błędy kompilatora C3500 przez C3999'
 title: Błędy kompilatora — od C3500 do C3999
 ms.date: 04/21/2019
 f1_keywords:
@@ -246,12 +247,12 @@ f1_keywords:
 - C3998
 - C3999
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
-ms.openlocfilehash: eddadeeeb014c6b64376554f7ff025a06e8935c9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bf0075e9064b7e03c0b733119300ee90d77884fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238573"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Błędy kompilatora — od C3500 do C3999
 
@@ -261,12 +262,12 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Wiadomość|
 |-----------|-------------|
 |[Błąd kompilatora C3500](compiler-error-c3500.md)|nieprawidłowy atrybut ProgID "*ProgID*"|
 |[Błąd kompilatora C3501](compiler-error-c3501.md)|Brak zarejestrowanych TypeLib dla identyfikatora ProgID "*ProgID*"|
 |Błąd kompilatora C3502|nie można uzyskać identyfikatora LIBID dla identyfikatora ProgID "*ProgID*"|
-|Błąd kompilatora C3503|znak "0x*Value*" jest niedozwolony w literale nieprzetworzonego ciągu|
+|Błąd kompilatora C3503|znak "0x *Value*" jest niedozwolony w literale nieprzetworzonego ciągu|
 |Błąd kompilatora C3504|nie można utworzyć identyfikatora GUID z ciągu "*String*"|
 |[Błąd kompilatora C3505](compiler-error-c3505.md)|nie można załadować biblioteki typów "*Library*"|
 |[Błąd kompilatora C3506](compiler-error-c3506.md)|Brak zarejestrowanej biblioteki typów dla identyfikatora LIBID *'*|
@@ -322,7 +323,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3556](compiler-error-c3556.md)|"*Expression*": nieprawidłowy argument dla "decltype"|
 |Błąd kompilatora C3557|Nieaktualne.|
 |Błąd kompilatora C3558|Nieaktualne.|
-|Błąd kompilatora C3559|cykliczne wywołanie*funkcji*: rekursja została wykryta podczas kompilowania grafu wywołań dla concurrency::p arallel_for_each w: "*Function*"|
+|Błąd kompilatora C3559|cykliczne wywołanie *funkcji*: rekursja została wykryta podczas kompilowania grafu wywołań dla concurrency::p arallel_for_each w: "*Function*"|
 |Błąd kompilatora C3560|"*Function*": Il nie jest dostępna podczas kompilowania grafu wywołań dla concurrency::p arallel_for_each w: "*Function*"|
 |Błąd kompilatora C3561|znaleziono operację bariery kafelka w przepływie sterowania, która nie jest jednolite, podczas kompilowania grafu wywołań dla concurrency::p arallel_for_each w: "*Function*"|
 |Błąd kompilatora C3562|Funkcja wewnętrzna "*Function*" nie może mieć więcej niż parametrów *liczbowych*|
@@ -337,8 +338,8 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3571|"*Type*": niedozwolony argument domeny obliczeń; to nie jest typ klasy|
 |Błąd kompilatora C3572|"*Type*": niedozwolony argument domeny obliczeń; Brak publicznej składowej: "static const int rangi" lub wartość rangi jest Niedodatnia|
 |Błąd kompilatora C3573|Liczba wystąpień elementu concurrency:: Graphics:: Próbnik przeniesiona do concurrency::p arallel_for_each nie może przekraczać *liczby*|
-|Błąd kompilatora C3574|"*Type*": niedozwolone zakresy kafelków: musi być dodatnia i (1) Z < = *Number*; (2) Z*Y*X < = *Liczba*|
-|Błąd kompilatora C3575|"*Type*": niedozwolony argument domeny obliczeń; Brak publicznej składowej: "concurrency:: index <*number*> _map_index (const concurrency:: index <*Number*> &) Ogranicz (amp)"|
+|Błąd kompilatora C3574|"*Type*": niedozwolone zakresy kafelków: musi być dodatnia i (1) Z <= *Number*; (2) Z *Y* X <= *Liczba*|
+|Błąd kompilatora C3575|"*Type*": niedozwolony argument domeny obliczeń; Brak publicznej składowej: "concurrency:: index<*number*> _map_index (const concurrency:: index<*Number*>&) Ogranicz (amp)"|
 |Błąd kompilatora C3576|"*Type*": concurrency::d etails:: _Parallel_for_each argument #*Number* ma nieobsługiwany typ|
 |Błąd kompilatora C3577|Typ concurrency::p arallel_for_each jądra jest niedozwolony: nie można rozwiązać wywołania do składowej "void operator () (*Typ*) ograniczenia (amp)"|
 |Błąd kompilatora C3578|Rozmiar obiektu funkcji, który przeszedł do concurrency::p arallel_for_each nie może przekroczyć *liczby* bajtów|
@@ -346,7 +347,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3580|Liczba zapisywalnych wystąpień concurrency:: Array i concurrency:: Graphics:: Texture przeniesiona do concurrency::p arallel_for_each nie może przekraczać *liczby*|
 |Błąd kompilatora C3581|"*Type*": nieobsługiwany typ w ograniczonym kodzie amp|
 |Błąd kompilatora C3582|Nieaktualne.|
-|Błąd kompilatora C3583|"*Identyfikator*": rozmiar zmiennej (*Liczba* bajtów) jest większy niż maksymalny*rozmiar (w* bajtach) obsługiwany w ograniczonym kodzie amp|
+|Błąd kompilatora C3583|"*Identyfikator*": rozmiar zmiennej (*Liczba* bajtów) jest większy niż maksymalny *rozmiar (w* bajtach) obsługiwany w ograniczonym kodzie amp|
 |Błąd kompilatora C3584|nieobsługiwane użycie tile_static w "*identyfikatorze*"|
 |Błąd kompilatora C3585|element "*Identifier*" ma nieobsługiwaną klasę magazynu w ograniczonym kodzie amp|
 |Błąd kompilatora C3586|"*Identyfikator*": użycie globalnych lub statycznych zmiennych jest nieobsługiwane w ograniczonym kodzie amp|
@@ -363,7 +364,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3597|"*Parameter*": element "*Identifier*" nie może być przechwytywany przez wartość, jeśli wyrażenie lambda jest ograniczone przez amp|
 |Błąd kompilatora C3598|Etykieta instrukcji jest nieobsługiwana w ograniczonym kodzie amp|
 |Błąd kompilatora C3599|"*operator*": nie można wykonać arytmetyki wskaźnika na wskaźniku do wartości logicznej w ograniczonym kodzie amp|
-|Błąd kompilatora C3600|"*Function*": wykryto użycie pamięci statycznej kafelka\_podczas kompilowania grafu wywołań dla współbieżności bez fragmentacji::p arallel\_for_each w: "*Function*"|
+|Błąd kompilatora C3600|"*Function*": \_ wykryto użycie pamięci statycznej kafelka podczas kompilowania grafu wywołań dla współbieżności bez fragmentacji::p arallel \_ for_each w: "*Function*"|
 |Błąd kompilatora C3601|"*Type*": jest nieprawidłowym typem argumentu dla funkcji diagnostyki amp "*Function*"|
 |Błąd kompilatora C3602|Wykryto nieobsługiwany przepływ sterowania podczas kompilowania grafu wywołań dla concurrency::p arallel_for_each w: "*Function*"|
 |[Błąd kompilatora C3603](compiler-error-c3603.md)|"*symbol*": typ "*Type*" nie jest jeszcze obsługiwany|
@@ -438,21 +439,21 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3672](compiler-error-c3672.md)|wyrażenie pseudo-destruktora może być używane tylko jako część wywołania funkcji|
 |[Błąd kompilatora C3673](compiler-error-c3673.md)|"*Class*": Klasa nie posiada konstruktora kopiującego|
 |Błąd kompilatora C3674|nie można znaleźć modułu standardowej biblioteki "*module*"|
-|[Błąd kompilatora C3675](compiler-error-c3675.md)|"*Function*": jest zarezerwowana, ponieważ zdefiniowano*Właściwość "Property*"|
+|[Błąd kompilatora C3675](compiler-error-c3675.md)|"*Function*": jest zarezerwowana, ponieważ zdefiniowano *Właściwość "Property*"|
 |Błąd kompilatora C3676|"*Class*": Klasa ref i Klasa bazowa mają niezgodne atrybuty "[*Attribute*]"|
 |Błąd kompilatora C3677|literał ciągu po słowie "operator" nie może mieć prefiksu kodowania|
 |Błąd kompilatora C3678|literał ciągu po elemencie "operator" musi być pustym ciągiem "" "" "|
 |Błąd kompilatora C3679|Oczekiwano identyfikatora sufiksu literału po "operator" "" ""|
 |Błąd kompilatora C3680|nie można połączyć zdefiniowanych przez użytkownika literałów ciągu z niezgodnymi identyfikatorami sufiksów literałów|
 |Błąd kompilatora C3681|"fallthrough": atrybut może występować tylko w otaczającej instrukcji switch|
-|Błąd kompilatora C3682|" *Identyfikator*operatora": szablon operatora literału/literału nie może być zadeklarowany jako mający powiązanie "C"|
+|Błąd kompilatora C3682|" *Identyfikator* operatora": szablon operatora literału/literału nie może być zadeklarowany jako mający powiązanie "C"|
 |Błąd kompilatora C3683|nie można zdefiniować zarówno operatora nieprzetworzonego literału, jak i szablonu operatora literału z tym samym identyfikatorem sufiksu literału|
-|Błąd kompilatora C3684|" *Identyfikator*operatora": Deklaracja operatora literału ma nieprawidłową listę parametrów|
-|Błąd kompilatora C3685|" *Identyfikator*operatora": szablon operatora literału nie może mieć parametrów funkcji|
-|Błąd kompilatora C3686|" *Identyfikator*operatora": szablon operatora literału musi mieć dokładnie jeden parametr szablonu, który jest pakietem parametrów|
-|Błąd kompilatora C3687|" *Identyfikator*operatora": szablon operatora literału nie może mieć parametru szablonu typu "char"|
-|Błąd kompilatora C3688|nieprawidłowy sufiks literału "*sufiks*"; nie znaleziono operatora literału lub szablonu operatora literału " *Identyfikator*operatora"|
-|Błąd kompilatora C3689|" *Identyfikator*operatora": szablon operatora literału/literału musi znajdować się w zakresie globalnym lub przestrzeni nazw|
+|Błąd kompilatora C3684|" *Identyfikator* operatora": Deklaracja operatora literału ma nieprawidłową listę parametrów|
+|Błąd kompilatora C3685|" *Identyfikator* operatora": szablon operatora literału nie może mieć parametrów funkcji|
+|Błąd kompilatora C3686|" *Identyfikator* operatora": szablon operatora literału musi mieć dokładnie jeden parametr szablonu, który jest pakietem parametrów|
+|Błąd kompilatora C3687|" *Identyfikator* operatora": szablon operatora literału nie może mieć parametru szablonu typu "char"|
+|Błąd kompilatora C3688|nieprawidłowy sufiks literału "*sufiks*"; nie znaleziono operatora literału lub szablonu operatora literału " *Identyfikator* operatora"|
+|Błąd kompilatora C3689|" *Identyfikator* operatora": szablon operatora literału/literału musi znajdować się w zakresie globalnym lub przestrzeni nazw|
 |Błąd kompilatora C3690|Oczekiwano literału ciągu, ale zamiast niego znaleziono literał ciągu zdefiniowany przez użytkownika|
 |Błąd kompilatora C3691|Nieprawidłowy prefiks literału "*prefix*"|
 |Błąd kompilatora C3692|Nieaktualne.|
@@ -471,7 +472,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3705](compiler-error-c3705.md)|"*Function*": nie można odnaleźć interfejsu zdarzeń|
 |[Błąd kompilatora C3706](compiler-error-c3706.md)|"*Function*": musi być INTERFEJSem com, aby uruchamiać zdarzenia com|
 |[Błąd kompilatora C3707](compiler-error-c3707.md)|"*member*": Metoda dispinterface musi mieć identyfikator DISPID|
-|[Błąd kompilatora C3708](compiler-error-c3708.md)|"*Function*": niewłaściwe użycie*słowa kluczowego "Keyword*"; musi być składową zgodnego źródła zdarzeń|
+|[Błąd kompilatora C3708](compiler-error-c3708.md)|"*Function*": niewłaściwe użycie *słowa kluczowego "Keyword*"; musi być składową zgodnego źródła zdarzeń|
 |[Błąd kompilatora C3709](compiler-error-c3709.md)|"*Function*": Niewłaściwa składnia określająca zdarzenie w __hook/__unhook|
 |[Błąd kompilatora C3710](compiler-error-c3710.md)|"*Function*": Niewłaściwa składnia określająca obsługę zdarzeń w __hook/__unhook|
 |[Błąd kompilatora C3711](compiler-error-c3711.md)|"*Event*": Metoda niezarządzanego źródła zdarzeń musi zwracać typ void lub całkowity|
@@ -481,13 +482,13 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3715](compiler-error-c3715.md)|"*wskaźnik*": musi być wskaźnikiem do "*Type*"|
 |Błąd kompilatora C3716|Nieaktualne.|
 |[Błąd kompilatora C3717](compiler-error-c3717.md)|"*member*": metoda, która wyzwala zdarzenia nie może być zdefiniowana|
-|[Błąd kompilatora C3718](compiler-error-c3718.md)|można wywołać tylko "__*słowo kluczowe*" w kontekście funkcji składowej klasy odbiorczej|
+|[Błąd kompilatora C3718](compiler-error-c3718.md)|można wywołać tylko "__ *słowo kluczowe*" w kontekście funkcji składowej klasy odbiorczej|
 |[Błąd kompilatora C3719](compiler-error-c3719.md)|"*member*": Źródło zdarzeń bazujące na interfejsie może być używane tylko dla zdarzeń com|
 |Błąd kompilatora C3720|"*Type*": można zaimplementować tylko element IDispatch na podwójnym lub dispinterface|
 |[Błąd kompilatora C3721](compiler-error-c3721.md)|"*Signature*": niezgodny podpis dla zdarzenia|
 |[Błąd kompilatora C3722](compiler-error-c3722.md)|zdarzenie generyczne nie jest dozwolone|
 |[Błąd kompilatora C3723](compiler-error-c3723.md)|"*Function*": nie można rozpoznać zdarzenia|
-|[Błąd kompilatora C3724](compiler-error-c3724.md)|Aby używać wielowątkowości ze zdarzeniami, należy #include \<Windows. h >|
+|[Błąd kompilatora C3724](compiler-error-c3724.md)|musi #include \<windows.h> używać wielowątkowości ze zdarzeniami|
 |Błąd kompilatora C3725|Nieaktualne.|
 |Błąd kompilatora C3726|Nieaktualne.|
 |[Błąd kompilatora C3727](compiler-error-c3727.md)|"*Event*": zdarzenie zarządzane musi być funkcją członkowską lub składową danych będącą wskaźnikiem do delegata|
@@ -502,10 +503,10 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3736](compiler-error-c3736.md)|"*member*": musi być metodą lub, w przypadku zarządzanych zdarzeń, opcjonalnie składową danych|
 |[Błąd kompilatora C3737](compiler-error-c3737.md)|"*Identyfikator*": delegat może nie mieć jawnej konwencji wywoływania|
 |[Błąd kompilatora C3738](compiler-error-c3738.md)|"*Konwencja*": Konwencja wywołania jawnego tworzenia wystąpienia musi być zgodna z szablonem, którego wystąpienie jest tworzone|
-|[Błąd kompilatora C3739](compiler-error-c3739.md)|"*Class*": składnia jest obsługiwana tylko wtedy, gdy parametr "Layout\_Dependent" elementu event_receiver ma wartość true|
+|[Błąd kompilatora C3739](compiler-error-c3739.md)|"*Class*": składnia jest obsługiwana tylko wtedy, gdy \_ parametr "zależny od układu" event_receiver ma wartość true|
 |[Błąd kompilatora C3740](compiler-error-c3740.md)|"*Template*": szablony nie mogą być źródłem ani odbierać zdarzeń|
-|[Błąd kompilatora C3741](compiler-error-c3741.md)|"*Class*": musi być klasą coclass, gdy parametr "Layout\_Dependent" elementu event_receiver ma wartość true|
-|Błąd kompilatora C3742|"*token1*": niezrównoważona sekwencja tokenów w argumencie atrybutu*atrybutu "Attribute*", oczekiwano "*token2*"|
+|[Błąd kompilatora C3741](compiler-error-c3741.md)|"*Class*": musi być klasą coclass, gdy parametr " \_ zależny od układu" event_receiver ma wartość true|
+|Błąd kompilatora C3742|"*token1*": niezrównoważona sekwencja tokenów w argumencie atrybutu *atrybutu "Attribute*", oczekiwano "*token2*"|
 |[Błąd kompilatora C3743](compiler-error-c3743.md)|można tylko podpiąć/odpiąć cały interfejs, gdy parametr "layout_dependent" event_receiver ma wartość true|
 |[Błąd kompilatora C3744](compiler-error-c3744.md)|__unhook musi mieć co najmniej 3 argumenty dla zdarzeń zarządzanych|
 |[Błąd kompilatora C3745](compiler-error-c3745.md)|"*Function*": tylko zdarzenie może być "wywoływane"|
@@ -523,12 +524,12 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3757|"*Type*": typ nie jest dozwolony dla funkcji "constexpr"|
 |Błąd kompilatora C3758|"*member*": funkcja wirtualna nie może być zadeklarowana jako "constexpr"|
 |Błąd kompilatora C3759|"*member*": funkcja członkowska typu innego niż Literal nie może być zadeklarowana jako "constexpr"|
-|Błąd kompilatora C3760|Użyj słowa kluczowego __property, aby zadeklarować właściwość w*klasie*Managed/WinRT|
+|Błąd kompilatora C3760|Użyj słowa kluczowego __property, aby zadeklarować właściwość w *klasie* Managed/WinRT|
 |[Błąd kompilatora C3761](compiler-error-c3761.md)|"*Function*": "retval" może występować tylko na ostatnim argumencie funkcji|
 |[Błąd kompilatora C3762](compiler-error-c3762.md)|nie można przetworzyć atrybutu "*Attribute*"|
 |[Błąd kompilatora C3763](compiler-error-c3763.md)|"*Type*": "retval" i "out" może występować tylko w typie wskaźnika danych|
 |[Błąd kompilatora C3764](compiler-error-c3764.md)|"*member*": nie można przesłonić metody "*member*" klasy bazowej|
-|[Błąd kompilatora C3765](compiler-error-c3765.md)|"*Event*": nie można zdefiniować zdarzenia w*typie*klasy/struktury "oznaczonej jako event_receiver|
+|[Błąd kompilatora C3765](compiler-error-c3765.md)|"*Event*": nie można zdefiniować zdarzenia w *typie* klasy/struktury "oznaczonej jako event_receiver|
 |[Błąd kompilatora C3766](compiler-error-c3766.md)|element "*Type*" musi dostarczyć implementację metody interfejsu "*Function*"|
 |[Błąd kompilatora C3767](compiler-error-c3767.md)|"*Function*": funkcje kandydujące nie są dostępne|
 |[Błąd kompilatora C3768](compiler-error-c3768.md)|nie można przyjąć adresu wirtualnej funkcji vararg w czystym kodzie zarządzanym|
@@ -538,7 +539,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3772](compiler-error-c3772.md)|"*Identyfikator*": nieprawidłowa deklaracja szablonu zaprzyjaźnionego|
 |Błąd kompilatora C3773|Użyj przełącznika kompilatora/await w celu włączenia procedur wspólnych|
 |Błąd kompilatora C3774|nie można znaleźć "*SCOPE*::*Identifier*": Dołącz nagłówek *nagłówka*|
-|Błąd kompilatora C3775|zwracany typ funkcji "*Function*" nie może być*typem "Type*"|
+|Błąd kompilatora C3775|zwracany typ funkcji "*Function*" nie może być *typem "Type*"|
 |Błąd kompilatora C3776|nie można zwrócić wyrażenie typu "void" w procedurze wspólnej z zwracanym typem innym niż void|
 |Błąd kompilatora C3777|"*Function*": procedura wspólna nie może pobrać listy argumentów zmiennych|
 |Błąd kompilatora C3778|alloca: nie można używać w procedurze wspólnej|
@@ -566,7 +567,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3800](compiler-error-c3800.md)|"*Deklaracja*": nie można mieszać właściwości i zdarzeń|
 |Błąd kompilatora C3801|"*Attribute*": atrybut nie może mieć klauzuli argumentu|
 |Błąd kompilatora C3802|Nieaktualne.|
-|[Błąd kompilatora C3803](compiler-error-c3803.md)|Właściwość "*Property*": właściwość ma typ, który jest niezgodny z jednym z*metod*dostępu "|
+|[Błąd kompilatora C3803](compiler-error-c3803.md)|Właściwość "*Property*": właściwość ma typ, który jest niezgodny z jednym z *metod* dostępu "|
 |[Błąd kompilatora C3804](compiler-error-c3804.md)|"*member*": metody dostępu dla właściwości muszą być wszystkie statyczne lub wszystkie niestatyczne|
 |[Błąd kompilatora C3805](compiler-error-c3805.md)|"*token*": Nieoczekiwany token, oczekiwano znaku "}" lub ","|
 |Błąd kompilatora C3806|"*token*": Nieoczekiwany token, oczekiwano "{" lub inicjatora składowej|
@@ -607,9 +608,9 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3841|Nieaktualne.|
 |[Błąd kompilatora C3842](compiler-error-c3842.md)|"*Identyfikator*": kwalifikatory "const" i "volatile" dla funkcji składowych typów zarządzanych/WinRT nie są obsługiwane|
 |Błąd kompilatora C3843|"*Identyfikator*": kwalifikatory ref w funkcjach składowych typów zarządzanych/WinRT nie są obsługiwane|
-|Błąd kompilatora C3844|"*Identyfikator*": nie można zaimportować symbolu ze*źródła*: ponieważ element "*Identifier*" istnieje już w bieżącym zakresie|
+|Błąd kompilatora C3844|"*Identyfikator*": nie można zaimportować symbolu ze *źródła*: ponieważ element "*Identifier*" istnieje już w bieżącym zakresie|
 |Błąd kompilatora C3845|Nieaktualne.|
-|[Błąd kompilatora C3846](compiler-error-c3846.md)|"*Identyfikator*": nie można zaimportować symbolu ze*źródła*: ponieważ element "*Identifier*" został już zaimportowany z innego zestawu "*Assembly*"|
+|[Błąd kompilatora C3846](compiler-error-c3846.md)|"*Identyfikator*": nie można zaimportować symbolu ze *źródła*: ponieważ element "*Identifier*" został już zaimportowany z innego zestawu "*Assembly*"|
 |Błąd kompilatora C3847|Nieaktualne.|
 |[Błąd kompilatora C3848](compiler-error-c3848.md)|wyrażenie typu "*Type*" spowoduje utratę niektórych kwalifikatorów const-volatile w celu wywołania "*Identifier*"|
 |[Błąd kompilatora C3849](compiler-error-c3849.md)|Wywołanie w stylu funkcji na wyrażeniu typu "*Type*" spowoduje utratę kwalifikatorów const i/lub volatile dla wszystkich dostępnych przeciążeń operatora *liczbowego*|
@@ -622,7 +623,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3856](compiler-error-c3856.md)|"*Class*": Klasa nie jest szablonem/rodzajem klasy|
 |[Błąd kompilatora C3857](compiler-error-c3857.md)|"*Template*": wiele list parametrów szablonu/generycznych jest niedozwolonych|
 |[Błąd kompilatora C3858](compiler-error-c3858.md)|"*Identyfikator*": nie można ponownie zadeklarować w bieżącym zakresie|
-|[Błąd kompilatora C3859](compiler-error-c3859.md)|Przekroczono zakres pamięci wirtualnej dla PCH; Skompiluj ponownie z opcją wiersza polecenia "-zm*Number*" lub nowszym|
+|[Błąd kompilatora C3859](compiler-error-c3859.md)|Przekroczono zakres pamięci wirtualnej dla PCH; Skompiluj ponownie z opcją wiersza polecenia "-zm *Number*" lub nowszym|
 |[Błąd kompilatora C3860](compiler-error-c3860.md)|szablon/lista argumentów ogólnych następujący szablon klasy/nazwa ogólna musi być listą parametrów w kolejności używanej na liście parametrów szablonu/generycznego|
 |[Błąd kompilatora C3861](compiler-error-c3861.md)|"*Identyfikator*": nie znaleziono identyfikatora|
 |[Błąd kompilatora C3862](compiler-error-c3862.md)|"*Function*": nie można skompilować niezarządzanej funkcji z/CLR: Pure lub/CLR: Safe|
@@ -635,8 +636,8 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3869](compiler-error-c3869.md)|w ograniczeniu gcnew brakuje pustej listy parametrów "()"|
 |Błąd kompilatora C3870|"*Parameter*": "__declspec (*specyfikator*)" można stosować tylko do parametrów typu całkowitego|
 |Błąd kompilatora C3871|"*Parameter*": "__declspec (Guard (overflow))" jest obsługiwane tylko dla pierwszych 64 parametrów funkcji|
-|[Błąd kompilatora C3872](compiler-error-c3872.md)|"0x*Value*": ten znak nie jest dozwolony w identyfikatorze|
-|[Błąd kompilatora C3873](compiler-error-c3873.md)|"0x*Value*": ten znak nie jest dozwolony jako pierwszy znak identyfikatora|
+|[Błąd kompilatora C3872](compiler-error-c3872.md)|"0x *Value*": ten znak nie jest dozwolony w identyfikatorze|
+|[Błąd kompilatora C3873](compiler-error-c3873.md)|"0x *Value*": ten znak nie jest dozwolony jako pierwszy znak identyfikatora|
 |[Błąd kompilatora C3874](compiler-error-c3874.md)|zwracanym typem elementu "*Identifier*" powinien być "*Type1*", a nie "*Type2*"|
 |Błąd kompilatora C3875|Brak listy argumentów w wywołaniu niestatycznej funkcji członkowskiej|
 |Błąd kompilatora C3876|Nieaktualne.|
@@ -651,7 +652,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3885|"*Type*": tablica o nieznanym rozmiarze nie może zostać zainicjowana przy użyciu pustej listy inicjatora|
 |[Błąd kompilatora C3886](compiler-error-c3886.md)|"*member*": literał składowej danych musi być zainicjowany|
 |[Błąd kompilatora C3887](compiler-error-c3887.md)|"*member*": inicjator literału składowej danych musi być wyrażeniem stałym|
-|[Błąd kompilatora C3888](compiler-error-c3888.md)|"*member*": wyrażenie const skojarzone z tym literałem składowej danych nie jest obsługiwane C++przez/CLI|
+|[Błąd kompilatora C3888](compiler-error-c3888.md)|"*member*": wyrażenie const skojarzone z tym literałem składowej danych nie jest obsługiwane przez C++/CLI|
 |Błąd kompilatora C3889|Nieaktualne.|
 |[Błąd kompilatora C3890](compiler-error-c3890.md)|"*member*": nie można przyjąć adresu literału składowej danych|
 |[Błąd kompilatora C3891](compiler-error-c3891.md)|"*member*": literał składowej danych nie może być używany jako wartość l|
@@ -703,7 +704,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3937|pusty specyfikator ograniczenia nie jest dozwolony|
 |Błąd kompilatora C3938|"*Identyfikator*": wiele specyfikatorów ograniczenia nie są obsługiwane w zewnętrznych funkcjach \042C\042|
 |Błąd kompilatora C3939|"*Identyfikator*": wskaźnik do funkcji składowych, wskaźniki funkcji, odwołania do funkcji ze specyfikatorem ograniczenia "amp" są niedozwolone|
-|Błąd kompilatora C3940|"*Identyfikator*": nie znaleziono identyfikatora — możliwa niezgodność między wersjami kompilatora i biblioteki. Upewnij się, że vccorlib. h/. lib, vccorlib120. dll i c1xx. dll Match|
+|Błąd kompilatora C3940|"*Identyfikator*": nie znaleziono identyfikatora — możliwa niezgodność między wersjami kompilatora i biblioteki. Upewnij się, że vccorlib. h/. lib, vccorlib120.dll i c1xx.dll|
 |Błąd kompilatora C3941|*warunek "Condition*": wymaga opcji wiersza polecenia "/CLR"|
 |Błąd kompilatora C3942|Nieaktualne.|
 |Błąd kompilatora C3943|Nieaktualne.|
@@ -715,10 +716,10 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3949|rozwinięcie pakietu "..." nie może pojawić się w nawiasach abstrakcyjnych deklarator|
 |Błąd kompilatora C3950|Nieaktualne.|
 |Błąd kompilatora C3951|Nie można użyć wskaźnika do składowej w rzutowanym typie WinRT "*Type*". Zamiast tego użyj delegata.|
-|Błąd kompilatora C3952|"*Type*": WinRT nie obsługuje tablic "in/out". Użyj "const Array\<T > ^" dla "in" i "WriteOnlyArray\<T >" lub "Array\<T > ^ *" dla "out" w publicznych interfejsach API|
+|Błąd kompilatora C3952|"*Type*": WinRT nie obsługuje tablic "in/out". Użyj "const Array \<T> ^" dla "in" i "WriteOnlyArray \<T> " lub "Array \<T> ^ *" dla "out" w publicznych interfejsach API|
 |Błąd kompilatora C3953|Nie można użyć zarządzanej klasy "*Type*" w module WinRT.|
-|Błąd kompilatora C3954|"*Type*": tablica zwrócona z opublikowanej metody dla typu WinRT musi używać formy "Array\<t > ^"|
-|Błąd kompilatora C3955|"*Type*": Konstruktor publiczny nie może zawierać parametru "out" ani "WriteOnlyArray\<t >"|
+|Błąd kompilatora C3954|"*Type*": tablica zwrócona z opublikowanej metody typu WinRT musi używać formy "Array \<T> ^"|
+|Błąd kompilatora C3955|"*Type*": Konstruktor publiczny nie może zawierać parametru "out" ani "WriteOnlyArray \<T> "|
 |Błąd kompilatora C3956|"*Type*": typ jest oznaczony jako wyłączny dla elementu "*Type*" i nie może być używany jako podstawa "*derived_type*"|
 |Błąd kompilatora C3957|"*Type*": nie można użyć "New" dla typu WinRT; Użyj zamiast tego "ref New"|
 |Błąd kompilatora C3958|"*Type*": nie można użyć "gcnew" dla typu WinRT; Użyj zamiast tego "ref New"|
@@ -730,7 +731,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3964|Tablica nieregularna nie jest obsługiwana|
 |Błąd kompilatora C3965|Tablica parametrów nie jest obsługiwana|
 |Błąd kompilatora C3966|"*Function*": funkcja generyczna nie jest obsługiwana|
-|Błąd kompilatora C3967|Wystąpił błąd podczas importowania elementu "*Identifier*" z*modułu "module"*|
+|Błąd kompilatora C3967|Wystąpił błąd podczas importowania elementu "*Identifier*" z *modułu "module"*|
 |Błąd kompilatora C3968|token "*token*" jest nieprawidłowy jako separator nazwy modułu; Zamiast tego użyj kropki (".")|
 |Błąd kompilatora C3969|niespójne nazwy modułów: "*Module1*" i "*Module1*"|
 |Błąd kompilatora C3970|"*Identifier*":*słowo kluczowe*"Only" może być stosowane tylko do "ref class" lub "ref struct" w zakresie globalnym lub zakresie przestrzeni nazw|
@@ -738,15 +739,15 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3972|"*Type*": "częściowe" może być stosowane tylko do deklaracji lub definicji klasy|
 |Błąd kompilatora C3973|Nieaktualne.|
 |Błąd kompilatora C3974|Nieaktualne.|
-|Błąd kompilatora C3975|*Identyfikator*klasy/struktury został poprzednio zadeklarowany lub zdefiniowany za pomocą innego modyfikatora|
+|Błąd kompilatora C3975|*Identyfikator* klasy/struktury został poprzednio zadeklarowany lub zdefiniowany za pomocą innego modyfikatora|
 |Błąd kompilatora C3976|element "*Identifier1*" musi być zadeklarowany jako "Public", aby można było użyć "*identifier2*"|
 |Błąd kompilatora C3977|Użycie wymaga odwołania do zestawu, który definiuje element "*Identifier*"|
 |Błąd kompilatora C3978|"*Identyfikator*": właściwość statyczna jest niedozwolona jako składowa interfejsu WinRT lub typu wartościowego|
 |Błąd kompilatora C3979|"*Type*": Użyj atrybutu "*Attribute*" zamiast "*Value*"|
-|Błąd kompilatora C3980|nie można wyemitować*typu "Type*" do metadanych|
+|Błąd kompilatora C3980|nie można wyemitować *typu "Type*" do metadanych|
 |Błąd kompilatora C3981|"*Type*": typ wartości nie może mieć żadnych statycznych składowych danych "*Identifier*"|
 |Błąd kompilatora C3982|"*Type*": typ wartości nie może mieć żadnych niepublicznych składowych danych "*Identifier*"|
-|Błąd kompilatora C3983|"*Type*": typ wartości nie może mieć żadnych publicznych elementów członkowskich, które nie*identifier*należą do danych|
+|Błąd kompilatora C3983|"*Type*": typ wartości nie może mieć żadnych publicznych elementów członkowskich, które nienależą do danych|
 |Błąd kompilatora C3984|"*Type*": typ inny niż wartość nie może mieć żadnych publicznych składowych danych "*Identifier*"|
 |Błąd kompilatora C3985|"*Identyfikator*": Sygnatura publicznej składowej zawiera typ prywatny "*member*"|
 |Błąd kompilatora C3986|"*Identyfikator*": Sygnatura publicznej składowej zawiera typ natywny "*member*"|
@@ -760,10 +761,10 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3994|"*Type*": typ wartości nie może implementować interfejsów lub mieć funkcji wirtualnych|
 |Błąd kompilatora C3995|"*Type*": typ wartości nie może mieć żadnych składowych zdarzenia "*Identifier*"|
 |Błąd kompilatora C3996|Nieaktualne.|
-|Błąd kompilatora C3998|"*wersja*c++": nieobsługiwana C++ wersja; Domyślna*wersja*języka c++|
-|Błąd kompilatora C3999|NIEZNANY błąd. Wybierz polecenie Pomoc techniczna w menu Pomoc wizualna C++ lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|
+|Błąd kompilatora C3998|"*wersja* c++": nieobsługiwana wersja języka c++; Domyślna *wersja* języka c++|
+|Błąd kompilatora C3999|NIEZNANY błąd. Wybierz polecenie Pomoc techniczna w menu Pomoc Visual C++ lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji|
 
 ## <a name="see-also"></a>Zobacz też
 
-[Błędy iC++ ostrzeżenia narzędzi języka C/kompilatora i kompilacji](../compiler-errors-1/c-cpp-build-errors.md) \
-[Błędy kompilatora C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Błędy i ostrzeżenia dotyczące kompilatora i narzędzi kompilacji C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Błędy kompilatora C2000–C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

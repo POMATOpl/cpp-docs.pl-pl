@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbsnbset, _mbsnbset_l'
 title: _mbsnbset, _mbsnbset_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 6af5dd101de74c9f25451c7b72ee561db35505d4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a99e92cec8b15c9534cec981652ce7c78fa31923
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240263"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
@@ -111,8 +112,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbset**|\<mbstring. h>|
-|**_mbsnbset_l**|\<mbstring. h>|
+|**_mbsnbset**|\<mbstring.h>|
+|**_mbsnbset_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

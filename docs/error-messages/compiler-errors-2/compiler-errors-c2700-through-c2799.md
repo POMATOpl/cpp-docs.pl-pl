@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Błędy kompilatora C2700 przez C2799'
 title: Błędy kompilatora — od C2700 do C2799
 ms.date: 04/21/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: 174f6a9c8ec9e44deadfca090ba492cb32d53e9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9093c7cbdc884b23bef77fb8206a80e081dc4f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87197517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238859"
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>Błędy kompilatora — od C2700 do C2799
 
@@ -71,7 +72,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C2711](compiler-error-c2711.md)|"*Function*": Ta funkcja nie może być skompilowana jako zarządzana, rozważ użycie #pragma niezarządzane|
 |[Błąd kompilatora C2712](compiler-error-c2712.md)|Nie można użyć __try w funkcjach, które wymagają odwinięcia obiektu|
 |[Błąd kompilatora C2713](compiler-error-c2713.md)|Tylko jeden formularz obsługi wyjątków dozwolony dla funkcji|
-|[Błąd kompilatora C2714](compiler-error-c2714.md)| `alignof(void)`nie jest dozwolone|
+|[Błąd kompilatora C2714](compiler-error-c2714.md)| `alignof(void)` nie jest dozwolone|
 |[Błąd kompilatora C2715](compiler-error-c2715.md)|"*Type*": nie można zgłosić lub przechwycić tego typu|
 |Błąd kompilatora C2716|Nieaktualne.|
 |Błąd kompilatora C2717|Nieaktualne.|
@@ -79,7 +80,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C2719](compiler-error-c2719.md)|"*Parameter*": formalny parametr z żądanym wyrównaniem *liczby* nie będzie wyrównany|
 |[Błąd kompilatora C2720](compiler-error-c2720.md)|"*Identyfikator*": specyfikator klasy magazynu "*specyfikator*" jest niedozwolony w składowych|
 |[Błąd kompilatora C2721](compiler-error-c2721.md)|"*specyfikator*": specyfikator klasy magazynu jest niedozwolony między słowem kluczowym operatora i typem|
-|[Błąd kompilatora C2722](compiler-error-c2722.md)|"::*operator*": niedozwolone polecenie po operatorze; Użyj " *operator*operatora"|
+|[Błąd kompilatora C2722](compiler-error-c2722.md)|"::*operator*": niedozwolone polecenie po operatorze; Użyj " *operator* operatora"|
 |[Błąd kompilatora C2723](compiler-error-c2723.md)|"*Function*": specyfikator "*specyfikator*" jest niedozwolony w definicji funkcji|
 |[Błąd kompilatora C2724](compiler-error-c2724.md)|"*Function*": element "static" nie powinien być używany w funkcjach członkowskich zdefiniowanych w zakresie pliku|
 |[Błąd kompilatora C2725](compiler-error-c2725.md)|"*Type*": nie można zgłosić lub przechwycić obiektu zarządzanego/WinRT przez wartość lub odwołanie|
@@ -95,7 +96,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C2735](compiler-error-c2735.md)|słowo kluczowe "*Keyword*" jest niedozwolone w specyfikatorze typu formalnego parametru|
 |[Błąd kompilatora C2736](compiler-error-c2736.md)|słowo kluczowe "*Keyword*" jest niedozwolone w rzutowaniu|
 |Błąd kompilatora C2737|"*Identyfikator*": obiekt "constexpr" musi zostać zainicjowany|
-|[Błąd kompilatora C2738](compiler-error-c2738.md)|" *Typ*operatora": jest niejednoznaczny lub nie jest składową elementu "*Class*"|
+|[Błąd kompilatora C2738](compiler-error-c2738.md)|" *Typ* operatora": jest niejednoznaczny lub nie jest składową elementu "*Class*"|
 |[Błąd kompilatora C2739](compiler-error-c2739.md)|"*Number*": jawne Wymiary tablicy Managed/WinRT muszą zawierać się w przedziale od 1 do 32|
 |Błąd kompilatora C2740|wartość operandu "*Number*" jest poza zakresem "*lower_bound*  -  *upper_bound*"|
 |Błąd kompilatora C2741|rozmiar ramki jest zbyt duży|
@@ -120,8 +121,8 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C2760](compiler-error-c2760.md)|Błąd składniowy: oczekiwano "*token1*", a nie "*token2*"|
 |[Błąd kompilatora C2761](compiler-error-c2761.md)|"*Function*": Ponowna deklaracja funkcji składowej nie jest dozwolona|
 |[Błąd kompilatora C2762](compiler-error-c2762.md)|"*Template*": nieprawidłowe wyrażenie jako argument szablonu dla "*Parameter*"|
-|Błąd kompilatora C2763|"*Template*": nieprawidłowe użycie literału ciągu jako argumentu szablonu dla*parametru "Parameter*"|
-|[Błąd kompilatora C2764](compiler-error-c2764.md)|"*Parameter*": parametr szablonu nie został użyty lub dający się wywieźć w częściowej*specjalizacji "*|
+|Błąd kompilatora C2763|"*Template*": nieprawidłowe użycie literału ciągu jako argumentu szablonu dla *parametru "Parameter*"|
+|[Błąd kompilatora C2764](compiler-error-c2764.md)|"*Parameter*": parametr szablonu nie został użyty lub dający się wywieźć w częściowej *specjalizacji "*|
 |[Błąd kompilatora C2765](compiler-error-c2765.md)|"*Function*": Jawna specjalizacja szablonu funkcji nie może mieć żadnych argumentów domyślnych|
 |[Błąd kompilatora C2766](compiler-error-c2766.md)|Jawna specjalizacja; "*specjalizacja*" została już zdefiniowana|
 |[Błąd kompilatora C2767](compiler-error-c2767.md)|niezgodność wymiaru tablicy Managed/WinRT: oczekiwane argumenty *liczbowe* — podano *liczbę*|
@@ -138,7 +139,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C2778](compiler-error-c2778.md)|nieprawidłowo sformułowany identyfikator GUID w __declspec (UUID ())|
 |[Błąd kompilatora C2779](compiler-error-c2779.md)|"*Deklaracja*": metody właściwości mogą być skojarzone tylko z niestatycznymi składowymi danych|
 |[Błąd kompilatora C2780](compiler-error-c2780.md)|"*Deklaracja*": oczekuje argumentów *liczbowych* -podanej *liczby*|
-|[Błąd kompilatora C2781](compiler-error-c2781.md)|"*Deklaracja*": oczekuje co najmniej argumentu *liczbowego* *number*|
+|[Błąd kompilatora C2781](compiler-error-c2781.md)|"*Deklaracja*": oczekuje co najmniej argumentu *liczbowego* |
 |[Błąd kompilatora C2782](compiler-error-c2782.md)|"*Deklaracja*": szablon/parametr ogólny "*Parameter*" jest niejednoznaczny|
 |[Błąd kompilatora C2783](compiler-error-c2783.md)|"*Deklaracja*": nie można wywnioskować argumentu szablonu/ogólnego dla elementu "*Identifier*"|
 |[Błąd kompilatora C2784](compiler-error-c2784.md)|"*Deklaracja*": nie można wywnioskować argumentu szablonu/ogólnego dla elementu "*Type1*" z "*Type2*"|
@@ -158,7 +159,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C2798](compiler-error-c2798.md)|element "Super::*Identifier*" jest niejednoznaczny|
 |Błąd kompilatora C2799|"*Identyfikator*": obiekt typu klasy kwalifikowanej przy użyciu stałej bez domyślnego konstruktora dostarczonego przez użytkownika musi być zainicjowany|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Błędy i ostrzeżenia dotyczące kompilatora i narzędzi kompilacji C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
 [Błędy kompilatora C2000–C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

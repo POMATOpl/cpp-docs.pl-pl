@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3710'
 title: Błąd kompilatora C3710
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
-ms.openlocfilehash: 3c060d5b01c0d918071681996e76258eba0ce943
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6e9e146f5ec7370043756998cd162c3e57839671
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241706"
 ---
 # <a name="compiler-error-c3710"></a>Błąd kompilatora C3710
 
-"Function": Niewłaściwa składnia określająca obsługę zdarzeń w __hook/\__unhook
+"Function": Niewłaściwa składnia określająca obsługę zdarzeń w __hook/ \_ _unhook
 
 Po określeniu procedury obsługi zdarzeń przy użyciu [__hook](../../cpp/hook.md) lub [__unhook](../../cpp/unhook.md), program obsługi musi być prawidłową metodą.
 

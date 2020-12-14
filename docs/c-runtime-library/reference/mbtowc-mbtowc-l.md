@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mbtowc, _mbtowc_l'
 title: mbtowc, _mbtowc_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 9502de7b12394277b01a18caca48a7e783efaf4e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f6ffbd6596e987cd0ec6ba560e4e44da13cf7b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240107"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -70,7 +71,7 @@ Adres sekwencji bajtów (znak wielobajtowy).
 *liczbą*<br/>
 Liczba bajtów do sprawdzenia.
 
-*ustawienie*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -156,8 +157,8 @@ Attempt to convert a NULL pointer to a wide character:
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Regionalne](../../c-runtime-library/locale.md)<br/>
-[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

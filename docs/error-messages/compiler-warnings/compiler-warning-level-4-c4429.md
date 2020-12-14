@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 4) C4429'
 title: Ostrzeżenie kompilatora (poziom 4) C4429
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4429
 ms.assetid: a3e4cf1f-a869-4e47-834a-850c21eb5297
-ms.openlocfilehash: 6702db4af5c31d21610e02b1a4ec75af27ad10f2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: dbd552eb2f8e021f8bf7b7747e2a8aee49bb05a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241368"
 ---
 # <a name="compiler-warning-level-4-c4429"></a>Ostrzeżenie kompilatora (poziom 4) C4429
 
 możliwa niekompletna lub nieprawidłowo sformułowana nazwa znaku uniwersalnego
 
-Kompilator wykrył sekwencję znaków, która może być błędnie sformatowaną nazwą znaku uniwersalnego. Nazwa uniwersalnego znaku jest `\u` po którym następują cztery cyfry szesnastkowe lub `\U` po nich osiem cyfr szesnastkowych.
+Kompilator wykrył sekwencję znaków, która może być błędnie sformatowaną nazwą znaku uniwersalnego. Po nazwie uniwersalnego znaku `\u` następuje cztery cyfry szesnastkowe, `\U` po których następuje osiem cyfr szesnastkowych.
 
 Poniższy przykład generuje C4429:
 

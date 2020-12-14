@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: właściwości (C++/CX)'
 title: Właściwości (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5c56dabb080404b074408f60b6c06535558c1d82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239717"
 ---
 # <a name="properties-ccx"></a>Właściwości (C++/CX)
 
@@ -19,23 +20,23 @@ Wartość właściwości jest zawarta w zmiennej prywatnej — nazywanej *magazy
 
 *Prosta* właściwość jest właściwością do odczytu/zapisu, dla której kompilator automatycznie implementuje metody dostępu i magazyn zapasowy. Nie masz dostępu do implementacji kompilatora. Można jednak zadeklarować właściwość niestandardową i jawnie zadeklarować jej metody dostępu i magazyn zapasowy. W ramach metody dostępu można wykonać dowolną wymaganą logikę, taką jak walidacja danych wejściowych do zestawu akcesora, obliczanie wartości z wartości właściwości, uzyskiwanie dostępu do bazy danych lub Wyzwalanie zdarzenia po zmianie właściwości.
 
-Po utworzeniu C++wystąpienia klasy ref/CX jej pamięć jest inicjowana zero przed wywołaniem konstruktora; w związku z tym wszystkie właściwości są przypisywane wartości domyślnej zero lub nullptr w punkcie deklaracji.
+Po utworzeniu wystąpienia klasy ref języka C++/CX, jej pamięć jest inicjowana zero przed wywołaniem konstruktora; w związku z tym wszystkie właściwości są przypisywane wartości domyślnej zero lub nullptr w punkcie deklaracji.
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu pokazuje, jak zadeklarować Właściwość i uzyskać do niej dostęp. Pierwsza Właściwość `Name`,,, jest znana jako właściwość *prosta* , ponieważ `set` kompilator automatycznie generuje metodę dostępu, `get` akcesor i magazyn zapasowy.
+Poniższy przykład kodu pokazuje, jak zadeklarować Właściwość i uzyskać do niej dostęp. Pierwsza właściwość, `Name` ,, jest znana jako właściwość *prosta* , ponieważ kompilator automatycznie generuje `set` metodę dostępu, `get` akcesor i magazyn zapasowy.
 
-Druga właściwość,, `Doctor`jest właściwością tylko do odczytu, ponieważ określa *blok właściwości* , który `get` jawnie deklaruje tylko metodę dostępu. Ponieważ blok właściwości jest zadeklarowany, należy jawnie zadeklarować magazyn zapasowy; oznacza to, że jest to zmienna `doctor_`ciągu prywatnego ^. Zazwyczaj właściwość tylko do odczytu zwraca wartość magazynu zapasowego. Tylko sama klasa może ustawić wartość magazynu zapasowego, zazwyczaj w konstruktorze.
+Druga właściwość, `Doctor` , jest właściwością tylko do odczytu, ponieważ określa *blok właściwości* , który jawnie deklaruje tylko `get` metodę dostępu. Ponieważ blok właściwości jest zadeklarowany, należy jawnie zadeklarować magazyn zapasowy; oznacza to, że jest to zmienna ciągu prywatnego ^ `doctor_` . Zazwyczaj właściwość tylko do odczytu zwraca wartość magazynu zapasowego. Tylko sama klasa może ustawić wartość magazynu zapasowego, zazwyczaj w konstruktorze.
 
-Trzecia Właściwość `Quantity`,, jest właściwością do odczytu i zapisu, ponieważ deklaruje blok właściwości, który deklaruje `set` metodę dostępu i `get` akcesor.
+Trzecia właściwość, `Quantity` , jest właściwością do odczytu i zapisu, ponieważ deklaruje blok właściwości, który deklaruje `set` metodę dostępu i `get` akcesor.
 
-`set` Metoda dostępu wykonuje test ważności zdefiniowany przez użytkownika dla przypisanej wartości. I w przeciwieństwie C#do tego, *wartość* nazwy jest tylko identyfikatorem `set` parametru w metodzie dostępu; nie jest to słowo kluczowe. Jeśli *wartość* nie jest większa od zera, zgłaszany jest obiekt platform:: InvalidArgumentException. W przeciwnym razie magazyn `quantity_`zapasowy, jest aktualizowany przy użyciu przypisanej wartości.
+`set`Metoda dostępu wykonuje test ważności zdefiniowany przez użytkownika dla przypisanej wartości. I w przeciwieństwie do języka C#, w tym miejscu *wartość* nazwy jest tylko identyfikatorem parametru w `set` metodzie dostępu; nie jest to słowo kluczowe. Jeśli *wartość* nie jest większa od zera, zgłaszany jest obiekt platform:: InvalidArgumentException. W przeciwnym razie magazyn zapasowy, `quantity_` jest aktualizowany przy użyciu przypisanej wartości.
 
 Należy zauważyć, że właściwość nie może zostać zainicjowana na liście elementów członkowskich. Możesz inicjować na liście elementów członkowskich zmienne magazynu zapasowego.
 
 [!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

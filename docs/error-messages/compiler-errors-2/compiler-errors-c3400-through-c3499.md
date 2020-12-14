@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Błędy kompilatora C3400 przez C3499'
 title: Błędy kompilatora — od C3400 do C3499
 ms.date: 04/21/2019
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - C3494
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-ms.openlocfilehash: f4aff80178033d34cf051a14d89736b2b8347dd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a6aaf04c397232195749512c6943cc096350d444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238586"
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Błędy kompilatora — od C3400 do C3499
 
@@ -109,7 +110,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
-|Błąd|Komunikat|
+|Błąd|Wiadomość|
 |-----------|-------------|
 |[Błąd kompilatora C3400](compiler-error-c3400.md)|cykliczna zależność ograniczenia obejmująca elementy "*Constraint1*" i "*constraint2*"|
 |Błąd kompilatora C3401|"*specyfikator*": Nieprawidłowy specyfikator dostępu do zestawu — w szablonach klas dozwolony jest tylko element "Private"|
@@ -126,7 +127,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3412](compiler-error-c3412.md)|"*specjalizacja*": nie można specjalizacji szablonu w bieżącym zakresie|
 |[Błąd kompilatora C3413](compiler-error-c3413.md)|"*Template*": nieprawidłowe jawne utworzenie wystąpienia|
 |[Błąd kompilatora C3414](compiler-error-c3414.md)|"*Function*": zaimportowana funkcja członkowska nie może być zdefiniowana|
-|[Błąd kompilatora C3415](compiler-error-c3415.md)|znaleziono wiele sekcji "*Section*" z różnymi atrybutami ("0x*Value*")|
+|[Błąd kompilatora C3415](compiler-error-c3415.md)|znaleziono wiele sekcji "*Section*" z różnymi atrybutami ("0x *Value*")|
 |Błąd kompilatora C3416|Nieaktualne.|
 |[Błąd kompilatora C3417](compiler-error-c3417.md)|"*deklarator*": Typy wartościowe nie mogą zawierać specjalnych funkcji składowych zdefiniowanych przez użytkownika|
 |[Błąd kompilatora C3418](compiler-error-c3418.md)|specyfikator dostępu "*specyfikator*" nie jest obsługiwany|
@@ -152,11 +153,11 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |Błąd kompilatora C3438|nie można zastosować elementu "*Context*": "*Value*" do klasy Managed/WinRT|
 |Błąd kompilatora C3439|layout_version (*Number*): nieprawidłowy numer wersji|
 |Błąd kompilatora C3440|"*Deklaracja*": layout_version (*Number*) niezgodna z poprzednią deklaracją|
-|Błąd kompilatora C3441|nie można zastosować*deklaracji*"Class": "*słowo kluczowe*" po zdefiniowaniu klasy|
+|Błąd kompilatora C3441|nie można zastosować *deklaracji*"Class": "*słowo kluczowe*" po zdefiniowaniu klasy|
 |Błąd kompilatora C3442|Inicjowanie wielu składowych Unii: "*member1*" i "*member2*"|
 |Błąd kompilatora C3443|Domyślny inicjator składowej "*Class*" jest cykliczny|
-|Błąd kompilatora C3444|Pusta Klasa agregująca "*Class*" musi być zainicjowana przy użyciu "{}"|
-|[Błąd kompilatora C3445](compiler-error-c3445.md)|podczas inicjowania listy*typu "Type*" nie można używać konstruktora jawnego|
+|Błąd kompilatora C3444|Pusta Klasa agregująca "*Class*" musi być zainicjowana przy użyciu " {} "|
+|[Błąd kompilatora C3445](compiler-error-c3445.md)|podczas inicjowania listy *typu "Type*" nie można używać konstruktora jawnego|
 |[Błąd kompilatora C3446](compiler-error-c3446.md)|"*Class*": domyślny inicjator składowej jest niedozwolony dla składowej klasy wartości|
 |Błąd kompilatora C3447|Nieaktualne.|
 |Błąd kompilatora C3448|Nieaktualne.|
@@ -167,7 +168,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3453](compiler-error-c3453.md)|"*Attribute*": atrybut nie został zastosowany, ponieważ kwalifikator "*kwalifikator*" jest niezgodny|
 |[Błąd kompilatora C3454](compiler-error-c3454.md)|[Attribute] nie jest dozwolony w deklaracji klasy|
 |[Błąd kompilatora C3455](compiler-error-c3455.md)|"*Attribute*": żaden z konstruktorów atrybutu nie pasuje do argumentów|
-|[Błąd kompilatora C3456](compiler-error-c3456.md)|[Źródło\_annotation_attribute] nie jest dozwolone dla deklaracji klasy zarządzanej/WinRT|
+|[Błąd kompilatora C3456](compiler-error-c3456.md)|[Źródło \_ annotation_attribute] nie jest dozwolone dla deklaracji klasy zarządzanej/WinRT|
 |[Błąd kompilatora C3457](compiler-error-c3457.md)|"*Attribute*": atrybut nie obsługuje nienazwanych argumentów|
 |[Błąd kompilatora C3458](compiler-error-c3458.md)|"[*Attribute*]": atrybut "[*Attribute*]" jest już określony dla elementu "*Identifier*"|
 |[Błąd kompilatora C3459](compiler-error-c3459.md)|"[*Attribute*]": atrybut dozwolony tylko w indeksatorze klasy (Właściwość indeksowana domyślnie)|
@@ -175,7 +176,7 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3461](compiler-error-c3461.md)|"*Type*": tylko typ zarządzany/WinRT może być przekazywany|
 |[Błąd kompilatora C3462](compiler-error-c3462.md)|"*Type*": tylko typ importowany może być przekazywany|
 |[Błąd kompilatora C3463](compiler-error-c3463.md)|"*Type*": typ nie jest dozwolony w atrybucie "Implements"|
-|[Błąd kompilatora C3464](compiler-error-c3464.md)|Typ*type*zagnieżdżony nie może być przekazywany dalej|
+|[Błąd kompilatora C3464](compiler-error-c3464.md)|Typzagnieżdżony nie może być przekazywany dalej|
 |[Błąd kompilatora C3465](compiler-error-c3465.md)|Aby użyć typu "*Type*", należy odwołać się do zestawu "*Assembly*"|
 |[Błąd kompilatora C3466](compiler-error-c3466.md)|"*Type*": specjalizacji klasy generycznej nie można przesłać dalej|
 |[Błąd kompilatora C3467](compiler-error-c3467.md)|"*Type*": ten typ został już przekazany|
@@ -199,12 +200,12 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 |[Błąd kompilatora C3485](compiler-error-c3485.md)|Definicja lambda nie może mieć żadnych kwalifikatorów CV|
 |Błąd kompilatora C3486|Nieaktualne.|
 |[Błąd kompilatora C3487](compiler-error-c3487.md)|"*Type*": wszystkie wyrażenia Return muszą zostać wywnioskowane dla tego samego typu: poprzednio było "*Type*"|
-|[Błąd kompilatora C3488](compiler-error-c3488.md)|element "&*Identifier*" jest niedozwolony, gdy domyślny tryb przechwytywania to-Reference|
-|[Błąd kompilatora C3489](compiler-error-c3489.md)|element "&*Identifier*" jest wymagany, gdy domyślny tryb przechwytywania jest kopiowany|
+|[Błąd kompilatora C3488](compiler-error-c3488.md)|Element "&*Identifier*" jest niedozwolony, gdy domyślny tryb przechwytywania to-Reference|
+|[Błąd kompilatora C3489](compiler-error-c3489.md)|Element "&*Identifier*" jest wymagany, gdy domyślny tryb przechwytywania jest kopiowany|
 |[Błąd kompilatora C3490](compiler-error-c3490.md)|nie można zmodyfikować elementu "*Identifier*", ponieważ jest on dostępny za pomocą obiektu const|
 |[Błąd kompilatora C3491](compiler-error-c3491.md)|"*Identyfikator*": nie można zmodyfikować przechwycenia przez kopię w niemodyfikowalnym wyrażeniu lambda|
 |[Błąd kompilatora C3492](compiler-error-c3492.md)|"*Identyfikator*": nie można przechwycić elementu członkowskiego Unii anonimowej|
-|[Błąd kompilatora C3493](compiler-error-c3493.md)|nie można jawnie przechwycić*identyfikatora "identifier*", ponieważ nie określono żadnego domyślnego trybu przechwytywania|
+|[Błąd kompilatora C3493](compiler-error-c3493.md)|nie można jawnie przechwycić *identyfikatora "identifier*", ponieważ nie określono żadnego domyślnego trybu przechwytywania|
 |Błąd kompilatora C3494|nie można jawnie przechwycić elementu "This", ponieważ otaczający tryb przechwytywania nie zezwala na to|
 |[Błąd kompilatora C3495](compiler-error-c3495.md)|"*Identyfikator*": identyfikator w przechwytywaniu musi być zmienną z automatycznym okresem magazynu zadeklarowaną w zasięgu do osiągnięcia wyrażenia lambda|
 |[Błąd kompilatora C3496](compiler-error-c3496.md)|element "This" jest zawsze przechwytywany przez wartość: zignorowano element "&"|
@@ -214,5 +215,5 @@ W artykułach w tej sekcji dokumentacji wyjaśniono podzestaw komunikatów o bł
 
 ## <a name="see-also"></a>Zobacz też
 
-[Błędy iC++ ostrzeżenia narzędzi języka C/kompilatora i kompilacji](../compiler-errors-1/c-cpp-build-errors.md) \
-[Błędy kompilatora C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[Błędy i ostrzeżenia dotyczące kompilatora i narzędzi kompilacji C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
+[Błędy kompilatora C2000–C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

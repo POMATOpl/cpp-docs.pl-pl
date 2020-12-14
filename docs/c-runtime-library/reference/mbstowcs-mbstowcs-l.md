@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mbstowcs, _mbstowcs_l'
 title: mbstowcs, _mbstowcs_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3b830da1b69ed72e6cbea4f818a90900122c2219
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240159"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -99,7 +100,7 @@ Funkcja **mbstowcs** konwertuje do *maksymalnej liczby znaków wielobajtowych* w
 
 Jeśli argument *wcstr* ma **wartość null**, funkcja **mbstowcs** zwraca liczbę znaków dwubajtowych, które byłyby wynikiem konwersji, nie uwzględniając terminatora o wartości null. Ciąg źródłowy musi być zakończony znakiem null, aby można było zwrócić poprawną wartość. Jeśli chcesz, aby wynikowy ciąg znaków był zakończony wartością null, Dodaj go do zwracanej wartości.
 
-Jeśli argument *mbstr* ma **wartość null**lub jeśli *licznik* jest > **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, errno jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
+Jeśli argument *mbstr* ma **wartość null** lub jeśli *licznik* jest > **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, errno jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
 
 **mbstowcs** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_mbstowcs_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -111,8 +112,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbstowcs**|\<STDLIB. h>|
-|**_mbstowcs_l**|\<STDLIB. h>|
+|**mbstowcs**|\<stdlib.h>|
+|**_mbstowcs_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -211,11 +212,11 @@ Convert back to wide-character string:
    Hex value of first 2 wide characters: 0x3042 0x3043
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interpretacja sekwencji Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

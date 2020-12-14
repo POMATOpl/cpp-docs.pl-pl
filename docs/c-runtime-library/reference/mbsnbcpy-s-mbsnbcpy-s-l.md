@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _mbsnbcpy_s, _mbsnbcpy_s_l'
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12233d0f83094934250a04b18582feff0cb7310e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240289"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -130,8 +131,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcpy_s**|\<mbstring. h>|
-|**_mbsnbcpy_s_l**|\<mbstring. h>|
+|**_mbsnbcpy_s**|\<mbstring.h>|
+|**_mbsnbcpy_s_l**|\<mbstring.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
