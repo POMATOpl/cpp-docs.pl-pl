@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3798'
 title: Błąd kompilatora C3798
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
-ms.openlocfilehash: cc21f0bdcc8e2171dd0c87fc31396e6caab9e6fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 394fe0f420c25fbabab44204e1793dc7dd5e9058
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244839"
 ---
 # <a name="compiler-error-c3798"></a>Błąd kompilatora C3798
 
 "specyfikator": Deklaracja właściwości nie może posiadać specyfikatora przesłonięcia (powinna być umieszczona we właściwościach metoda get/set zamiast tego)
 
-Właściwość została zadeklarowana nieprawidłowo. Aby uzyskać więcej informacji, zobacz .
+Właściwość została zadeklarowana nieprawidłowo. Aby uzyskać więcej informacji, zobacz
 
-- [właściwość](../../extensions/property-cpp-component-extensions.md)
+- [wartość](../../extensions/property-cpp-component-extensions.md)
 
-- [abstract](../../extensions/abstract-cpp-component-extensions.md)
+- [streszczeń](../../extensions/abstract-cpp-component-extensions.md)
 
 - [sealed](../../extensions/sealed-cpp-component-extensions.md)
 
