@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2797'
 title: Błąd kompilatora C2797
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c10b0acf550a3bbce81210df60dca75a7b2db704
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297567"
 ---
 # <a name="compiler-error-c2797"></a>Błąd kompilatora C2797
 
 Zbędn Inicjalizacja listy wewnątrz listy inicjatorów składowych lub inicjatora niestatycznej składowej danych nie jest zaimplementowana.
 
-To ostrzeżenie jest przestarzałe w programie Visual Studio 2015. W Visual Studio 2013 i wcześniejszych wersjach kompilator firmy Microsoft C++ nie implementuje inicjalizacji listy wewnątrz listy inicjatorów składowych lub inicjatora niestatycznej składowej danych. Przed Visual Studio 2013 Update 3, zostało to dyskretnie skonwertowane do wywołania funkcji, co może prowadzić do nieprawidłowego generowania kodu. Visual Studio 2013 Update 3 raportuje jako błąd.
+To ostrzeżenie jest przestarzałe w programie Visual Studio 2015. W Visual Studio 2013 i wcześniejszych wersjach kompilator języka Microsoft C++ nie implementuje inicjalizacji listy wewnątrz listy inicjatorów składowych lub inicjatora niestatycznej składowej danych. Przed Visual Studio 2013 Update 3, zostało to dyskretnie skonwertowane do wywołania funkcji, co może prowadzić do nieprawidłowego generowania kodu. Visual Studio 2013 Update 3 raportuje jako błąd.
 
 Ten przykład generuje C2797:
 

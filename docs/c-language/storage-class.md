@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie Storage
 title: Klasa magazynu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: 872a014dfc7c21b46f9af810f1cb3463016c7e09
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 87f53c38b2f71acc15499a496e98b1f9c7173210
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211687"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296735"
 ---
 # <a name="storage-class"></a>Klasa magazynu
 
@@ -30,10 +31,10 @@ Specyfikator klasy magazynowania w definicji funkcji zawiera funkcję **`extern`
 
 *specyfikatory deklaracji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja* *specyfikatora klasy magazynu* —<sub>wybór</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub></sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub></sub>
 
-*specyfikator klasy magazynu*:/ \* dla definicji funkcji\*/<br/>
+*specyfikator klasy magazynu*:/ \* dla definicji funkcji \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`extern`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`static`**
 
@@ -53,6 +54,6 @@ Podczas kompilowania z opcją kompilatora/ze, funkcje zadeklarowane w bloku przy
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

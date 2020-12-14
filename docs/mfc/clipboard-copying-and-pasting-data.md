@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Clipboard: kopiowanie i wklejanie danych'
 title: 'Schowek: kopiowanie i wklejanie danych'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: ed3056ec4fb3d3098870a03522d3bf17f41fbe34
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: fdc102cf7a92bc78df83419269bb5de828dc9d19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251235"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schowek: kopiowanie i wklejanie danych
 
@@ -18,7 +19,7 @@ W tym temacie opisano minimalną ilość pracy wymaganą do zaimplementowania ko
 
 Przed zaimplementowaniem kopiowania lub wklejania należy najpierw udostępnić funkcje do obsługi opcji kopiowania, wycinania i wklejania w menu Edycja.
 
-## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>Kopiowanie lub wycinanie danych
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a> Kopiowanie lub wycinanie danych
 
 #### <a name="to-copy-data-to-the-clipboard"></a>Aby skopiować dane do schowka
 
@@ -34,7 +35,7 @@ Przed zaimplementowaniem kopiowania lub wklejania należy najpierw udostępnić 
 
 Aby zobaczyć przykład tej sekwencji, zobacz `OnEditCut` i `OnEditCopy` funkcje w przykładowych programach MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md). Należy zauważyć, że te przykłady utrzymują wskaźnik do aktualnie wybranych danych, więc krok 1 jest już ukończony.
 
-## <a name="pasting-data"></a><a name="_core_pasting_data"></a>Wklejanie danych
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a> Wklejanie danych
 
 Wklejanie danych jest bardziej skomplikowane niż kopiowanie, ponieważ należy wybrać format do użycia podczas wklejania danych do aplikacji.
 
@@ -69,4 +70,4 @@ Aby obsłużyć opcję Wklej specjalnie w menu Edycja, zobacz [okna dialogowe te
 
 ## <a name="see-also"></a>Zobacz też
 
-[Schowek: korzystanie z mechanizmu schowka OLE](clipboard-using-the-ole-clipboard-mechanism.md)
+[Schowek: korzystanie z mechanizmu Schowka OLE](clipboard-using-the-ole-clipboard-mechanism.md)

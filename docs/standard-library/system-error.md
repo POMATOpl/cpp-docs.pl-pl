@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; system_error&gt;'
 title: '&lt;system_error&gt;'
 ms.date: 03/15/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: 18df18379fbee8271ba5cf851b04210f1dfddf57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 77ff4cae7d40ae4edb393e5d4f6743be1563556c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259412"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
@@ -35,7 +36,7 @@ Dołącz nagłówek, \<system_error> Aby zdefiniować klasę wyjątku `system_er
 |[is_error_condition_enum_v](../standard-library/system-error-functions.md#is_error_condition_enum_v)||
 |[system_category](../standard-library/system-error-functions.md#system_category)|Reprezentuje kategorię błędów spowodowanych przepełnieniem systemu niskiego poziomu.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |-|-|

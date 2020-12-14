@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: obsługa plików i we/wy (C++/CLI)'
 title: Obsługa plików i we-wy (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: a1cfdc4239506f22368753d8c37765e550d9b835
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 30bcec27cf3bc625554ad55bd7657c156e5409d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252171"
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
 
@@ -332,7 +333,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [We/wy plików i strumieni](/dotnet/standard/io/index)<br/>

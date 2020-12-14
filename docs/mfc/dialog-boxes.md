@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: oknach dialogowych'
 title: Okna dialogowe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: da6a2eca7c2366e519b9bf2e809b042dc3ee2e50
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4ae034c1eaf6d0cf1842218ecb09a96cd35e3ffc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261453"
 ---
 # <a name="dialog-boxes"></a>Okna dialogowe
 
@@ -37,7 +38,7 @@ Większość okien dialogowych jest modalnych, co wymaga od użytkownika zamkni�
 
 - [Składniki okna dialogowego w strukturze](dialog-box-components-in-the-framework.md)
 
-- [Modalne i Niemodalne okna dialogowe](modal-and-modeless-dialog-boxes.md)
+- [Modalne i niemodalne okna dialogowe](modal-and-modeless-dialog-boxes.md)
 
 - [Arkusze właściwości i strony właściwości](property-sheets-and-property-pages-mfc.md) w oknie dialogowym
 
@@ -51,13 +52,13 @@ Większość okien dialogowych jest modalnych, co wymaga od użytkownika zamkni�
 
 - [Bezpieczny dostęp do kontrolek w oknie dialogowym](type-safe-access-to-controls-in-a-dialog-box.md)
 
-- [Mapowanie komunikatów systemu Windows do klasy](mapping-windows-messages-to-your-class.md)
+- [Mapowanie komunikatów systemu Windows na klasę](mapping-windows-messages-to-your-class.md)
 
 - [Powszechnie zastępowane funkcje członkowskie](commonly-overridden-member-functions.md)
 
-- [Powszechnie dodawane funkcje składowe](commonly-added-member-functions.md)
+- [Powszechnie dodawane funkcje członkowskie](commonly-added-member-functions.md)
 
-- [Wspólne klasy okien dialogowych](common-dialog-classes.md)
+- [Typowe klasy okien dialogowych](common-dialog-classes.md)
 
 - [Okna dialogowe w OLE](dialog-boxes-in-ole.md)
 

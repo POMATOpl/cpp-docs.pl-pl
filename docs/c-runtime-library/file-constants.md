@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o usłudze: stałe plików'
 title: Plik — Stałe
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a174a9bd8924f4d209f937187614863ce7111b3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344008"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296605"
 ---
 # <a name="file-constants"></a>Plik — Stałe
 
@@ -42,21 +43,21 @@ ms.locfileid: "62344008"
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenia typu całkowitego tworzony na podstawie jednej lub więcej te stałe Określa typ Odczyt lub zapis operacji dozwolone. Jest on tworzony przez połączenie jednej lub więcej stałych z stałą tryb translacji.
+Wyrażenie liczby całkowitej utworzone z co najmniej jednej z tych stałych określa typ dozwolonych operacji odczytu lub zapisu. Jest on tworzony przez połączenie jednej lub więcej stałych z stałą trybu tłumaczenia.
 
-Plik — stałe są następujące:
+Stałe plików są następujące:
 
 |Stała|Opis|
 |-|-|
-| `_O_APPEND`  | Powoduje przeniesienie wskaźnika pliku na koniec pliku przed wykonaniem każdej operacji zapisu.  |
-| `_O_CREAT`  | Tworzy i otwiera nowy plik do zapisu; to nie obowiązuje, jeżeli plik określony przez *filename* istnieje.  |
-| `_O_EXCL`  | Zwraca wartość błędu, jeśli plik określony przez *filename* istnieje. Ma zastosowanie tylko, gdy jest używane z `_O_CREAT`.  |
-| `_O_RDONLY`  | Otwiera plik do odczytu. Jeśli ta flaga nie zostanie podany, ani `_O_RDWR` ani `_O_WRONLY` można podać.  |
-| `_O_RDWR`  | Otwiera plik na odczyt i zapis; Jeśli ta flaga nie zostanie podany, ani `_O_RDONLY` ani `_O_WRONLY` można podać.  |
-| `_O_TRUNC`  | Otwiera się i obcina istniejącego pliku do zera length; Plik musi mieć uprawnienia do zapisu. Zawartość pliku są niszczone. Jeśli ta flaga zostanie podany, nie można określić `_O_RDONLY`.  |
-| `_O_WRONLY`  | Otwiera plik do zapisu. Jeśli ta flaga nie zostanie podany, ani `_O_RDONLY` ani `_O_RDWR` można podać.  |
+| `_O_APPEND`  | Zmienia położenie wskaźnika pliku na koniec pliku przed każdą operacją zapisu.  |
+| `_O_CREAT`  | Tworzy i otwiera nowy plik do zapisu; nie ma to żadnego efektu, jeśli istnieje plik określony przez *filename* .  |
+| `_O_EXCL`  | Zwraca wartość błędu, jeśli istnieje plik określony przez *nazwę* pliku. Stosuje się tylko w przypadku użycia z `_O_CREAT` .  |
+| `_O_RDONLY`  | Otwiera plik tylko do odczytu; Jeśli ta flaga jest określona, nie `_O_RDWR` można ani nie `_O_WRONLY` może zostać określona.  |
+| `_O_RDWR`  | Otwiera plik do odczytu i zapisu; Jeśli ta flaga jest określona, nie `_O_RDONLY` można ani nie `_O_WRONLY` może zostać określona.  |
+| `_O_TRUNC`  | Otwiera i obcina istniejący plik o zerowej długości; plik musi mieć uprawnienia do zapisu. Zawartość pliku została zniszczona. Jeśli ta flaga jest podana, nie można określić `_O_RDONLY` .  |
+| `_O_WRONLY`  | Otwiera plik tylko do zapisu; Jeśli ta flaga jest określona, nie `_O_RDONLY` można ani nie `_O_RDWR` może zostać określona.  |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

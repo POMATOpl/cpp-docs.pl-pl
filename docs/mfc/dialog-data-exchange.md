@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wymiana danych okna dialogowego'
 title: Wymiana danych w oknie dialogowym
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: c12953ab0b9922788747246a97115188b2f686ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7ed592e8e6a452d4c6958c3c5f7b573c1be7fe07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261479"
 ---
 # <a name="dialog-data-exchange"></a>Wymiana danych w oknie dialogowym
 
@@ -37,7 +38,7 @@ Na poniższej ilustracji przedstawiono wymianę danych okna dialogowego.
 ![Wymiana danych okna dialogowego](../mfc/media/vc379d1.gif "Wymiana danych okna dialogowego") <br/>
 Wymiana danych w oknie dialogowym
 
-`UpdateData`działa w obu kierunkach, jak określono w parametrze **bool** przekazanym do niego. Aby przeprowadzić wymianę, skonfiguruje `UpdateData` `CDataExchange` obiekt i wywołuje przesłonięcie `CDialog` `DoDataExchange` funkcji składowej klasy okna dialogowego. `DoDataExchange`przyjmuje argument typu `CDataExchange` . `CDataExchange`Obiekt przeszedł do `UpdateData` reprezentuje kontekst wymiany, definiując takie informacje jako kierunek wymiany.
+`UpdateData` działa w obu kierunkach, jak określono w parametrze **bool** przekazanym do niego. Aby przeprowadzić wymianę, skonfiguruje `UpdateData` `CDataExchange` obiekt i wywołuje przesłonięcie `CDialog` `DoDataExchange` funkcji składowej klasy okna dialogowego. `DoDataExchange` przyjmuje argument typu `CDataExchange` . `CDataExchange`Obiekt przeszedł do `UpdateData` reprezentuje kontekst wymiany, definiując takie informacje jako kierunek wymiany.
 
 Podczas przesłonięcia (lub Kreatora kodu) `DoDataExchange` można określić wywołanie jednej funkcji DDX na element członkowski danych (kontrolka). Każda funkcja DDX wie, jak wymieniać dane w obu kierunkach na podstawie kontekstu dostarczonego przez `CDataExchange` argument przekazany do `DoDataExchange` użytkownika `UpdateData` .
 

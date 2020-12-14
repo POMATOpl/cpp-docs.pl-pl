@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _getw'
 title: _getw
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2f951305351b4693b9787b6eac926c719afd3f3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296540"
 ---
 # <a name="_getw"></a>_getw
 
@@ -118,7 +119,7 @@ Line two.
 First data word in file: 0x656e694c
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_putw](putw.md)<br/>

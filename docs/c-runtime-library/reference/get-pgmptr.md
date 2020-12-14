@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _get_pgmptr'
 title: _get_pgmptr
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: a4a9bddfa861727e174325dc639868e3529162cd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 440bc7221f00d5ce04f4583666a76a0fadfee288
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296592"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
@@ -68,7 +69,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_pgmptr**|\<STDLIB. h>|
+|**_get_pgmptr**|\<stdlib.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
