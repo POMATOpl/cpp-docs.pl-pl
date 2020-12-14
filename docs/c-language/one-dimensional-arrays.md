@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: One-Dimensional tablicach'
 title: Tablice jednowymiarowe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: c310d610b4e4cfc5ae5620d38337a5b8fd5243ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c75d4b8d9a64f95f3698e6953949a71df60cad6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256903"
 ---
 # <a name="one-dimensional-arrays"></a>Tablice jednowymiarowe
 
@@ -25,7 +26,7 @@ Wyrażenie przyrostkowe, a po nim wyrażenie w nawiasach kwadratowych (**[]**) j
 postfix-expression [ expression ]
 ```
 
-Zazwyczaj wartość reprezentowana przez *wyrażenie przyrostkowe* jest wartością wskaźnika, taką jak identyfikator tablicy, a *wyrażenie* jest wartością całkowitą. Jednakże wszystkie wymagane syntaktycznie to, że jedno z wyrażeń jest typu wskaźnika, a drugi jako typ całkowity. W ten sposób wartość całkowita może znajdować się w pozycji *wyrażenia przyrostkowego* , a wartość wskaźnika może być w nawiasach w *wyrażeniu*lub "indeks dolny". Na przykład ten kod jest dozwolony:
+Zazwyczaj wartość reprezentowana przez *wyrażenie przyrostkowe* jest wartością wskaźnika, taką jak identyfikator tablicy, a *wyrażenie* jest wartością całkowitą. Jednakże wszystkie wymagane syntaktycznie to, że jedno z wyrażeń jest typu wskaźnika, a drugi jako typ całkowity. W ten sposób wartość całkowita może znajdować się w pozycji *wyrażenia przyrostkowego* , a wartość wskaźnika może być w nawiasach w *wyrażeniu* lub "indeks dolny". Na przykład ten kod jest dozwolony:
 
 ```c
 // one_dimensional_arrays.c
@@ -59,6 +60,6 @@ Załóżmy na przykład, że identyfikator `line` odwołuje się do tablicy **`i
 
 Wyrażenie indeksu dolnego `line[0]` reprezentuje wartość pierwszego elementu wiersza, ponieważ przesunięcie od adresu reprezentowanego przez `line` wynosi 0. Analogicznie, wyrażenie takie jak `line[5]` odwołuje się do elementu przesunięte pięć pozycji z wiersza lub szóstego elementu tablicy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator indeksu dolnego:](../cpp/subscript-operator.md)

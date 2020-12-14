@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Omówienie deklaracji'
 title: Przegląd deklaracji
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 066c0fd307c7562d70c57c31dff23960a6305f2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 53b8c808771aa3bb455655e6e0c5b06ff1fa9acd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217080"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256851"
 ---
 # <a name="overview-of-declarations"></a>Przegląd deklaracji
 
@@ -19,7 +20,7 @@ ms.locfileid: "87217080"
 ## <a name="syntax"></a>Składnia
 
 *`declaration`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`attribute-seq`* <sub>opt</sub> *`init-declarator-list`* <sub>opt</sub> opt**`;`**
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`attribute-seq`* <sub>opt</sub> *`init-declarator-list`* <sub></sub> opt **`;`**
 
 /\**`attribute-seq`* <sub>wybór</sub> jest niezależny od firmy Microsoft */
 
@@ -57,7 +58,7 @@ Wszystkie definicje są deklaracjami niejawnymi, ale nie wszystkie deklaracje s�
 
 W deklaracjach zmiennych jest wymagana Klasa magazynu lub typ (lub oba). Z wyjątkiem dla **`__declspec`** , w deklaracji dozwolony jest tylko jeden specyfikator klasy magazynu, a nie wszystkie specyfikatory klasy magazynu są dozwolone w każdym kontekście. **`__declspec`** Klasa magazynu jest dozwolona z innymi specyfikatorami klasy magazynu i jest dozwolona więcej niż raz. Specyfikator klasy magazynowania deklaracji ma wpływ na sposób przechowywania i inicjowania zadeklarowanego elementu oraz tego, które części programu mogą odwoływać się do tego elementu.
 
-*`storage-class-specifier`* Terminale zdefiniowane w C obejmują **`auto`** ,,, **`extern`** **`register`** **`static`** i **`typedef`** . Program Microsoft C zawiera również *`storage-class-specifier`* Terminal **`__declspec`** . Wszystkie *`storage-class-specifier`* terminale z wyjątkiem **`typedef`** i **`__declspec`** są omówione w [klasach magazynu](../c-language/c-storage-classes.md). Aby uzyskać informacje na temat **`typedef`** , zobacz [ `typedef` deklaracje](../c-language/typedef-declarations.md). Aby uzyskać więcej informacji na temat **`__declspec`** , zobacz [atrybuty klasy magazynu rozszerzonego](../c-language/c-extended-storage-class-attributes.md).
+*`storage-class-specifier`* Terminale zdefiniowane w C obejmują **`auto`** ,,, **`extern`** **`register`** **`static`** i **`typedef`** . Program Microsoft C zawiera również *`storage-class-specifier`* Terminal **`__declspec`** . Wszystkie *`storage-class-specifier`* terminale z wyjątkiem **`typedef`** i **`__declspec`** są omówione w [klasach magazynu](../c-language/c-storage-classes.md). Aby uzyskać informacje na temat **`typedef`** , zobacz [ `typedef` deklaracje](../c-language/typedef-declarations.md). Aby uzyskać informacje na temat **`__declspec`** , zobacz [atrybuty rozszerzone Storage-Class](../c-language/c-extended-storage-class-attributes.md).
 
 Lokalizacja deklaracji w programie źródłowym oraz obecność lub brak innych deklaracji zmiennej są istotnymi czynnikami w celu określenia okresu istnienia zmiennych. Może istnieć wiele ponownych deklaracji, ale tylko jedna definicja. Jednak definicja może być wyświetlana w więcej niż jednej jednostce translacji. W przypadku obiektów z połączeniem wewnętrznym ta reguła ma zastosowanie oddzielnie do każdej jednostki translacji, ponieważ obiekty połączone wewnętrznie są unikatowe dla jednostki tłumaczenia. W przypadku obiektów z powiązaniem zewnętrznym ta reguła ma zastosowanie do całego programu. Aby uzyskać więcej informacji na temat widoczności, zobacz [okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: limity Floating-Point stałych'
 title: Limity dla stałych zmiennoprzecinkowych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - limits, floating-point constants
 - floating-point numbers, floating limits
 ms.assetid: 2d975868-2af6-45d7-a8af-db79f2c6b67b
-ms.openlocfilehash: df39ee719a4474f6dfd55d31a2848169a1168390
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 345e57348843a62b99b1565b8966df682d5fed8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257163"
 ---
 # <a name="limits-on-floating-point-constants"></a>Limity dla stałych zmiennoprzecinkowych
 
@@ -24,7 +25,7 @@ W poniższej tabeli podano limity wartości stałych zmiennoprzecinkowych. Plik 
 
 ### <a name="limits-on-floating-point-constants"></a>Limity dla stałych zmiennoprzecinkowych
 
-|Stały|Znaczenie|Wartość|
+|Stała|Znaczenie|Wartość|
 |--------------|-------------|-----------|
 |**FLT_DIG**<br />**DBL_DIG**<br />**LDBL_DIG**|Liczba cyfr, *q*, takich jak liczba zmiennoprzecinkowa z cyframi dziesiętnymi *q* , może być zaokrąglana do reprezentacji zmiennoprzecinkowej i z powrotem bez utraty dokładności.|6<br />15<br />15|
 |**FLT_EPSILON**<br />**DBL_EPSILON**<br />**LDBL_EPSILON**|Najmniejsza liczba dodatnia *x*, tak że *x* + 1,0 nie jest równa 1,0|1.192092896 e-07F<br />2.2204460492503131 e-016<br />2.2204460492503131 e-016|
@@ -46,4 +47,4 @@ Należy zauważyć, że informacje w powyższej tabeli mogą się różnić w pr
 
 ## <a name="see-also"></a>Zobacz też
 
-[Stałe zmiennoprzecinkowe języka C](../c-language/c-floating-point-constants.md)
+[Stałe Floating-Point C](../c-language/c-floating-point-constants.md)

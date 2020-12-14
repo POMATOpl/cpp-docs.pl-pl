@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: parametry'
 title: Parametry
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 57648747bbb50ffe46b199a03563757c331f088a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68cd5934e597e486b00f2772e913f627e584ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256825"
 ---
 # <a name="parameters"></a>Parametry
 
@@ -33,11 +34,11 @@ Argumenty są nazwami wartości przekazaną do funkcji przez wywołanie funkcji.
 *`declarator`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>wybór</sub>*`direct-declarator`*
 
-*`direct-declarator`*:/ \* Funkcja deklarator\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`parameter-type-list`*  **`)`** /\*Deklarator nowego stylu\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`identifier-list`*<sub>opt</sub> **`)`**  / wybór \* Przestarzałe style deklarator\*/
+*`direct-declarator`*:/ \* Funkcja deklarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`parameter-type-list`*  **`)`** /\* Deklarator nowego stylu \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`identifier-list`*<sub></sub> **`)`**  / wybór \* Przestarzałe style deklarator\*/
 
-*`parameter-type-list`*:/ \* Lista parametrów\*/<br/>
+*`parameter-type-list`*:/ \* Lista parametrów \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
 
@@ -72,6 +73,6 @@ Kolejność i typ parametrów, łącznie z dowolnym użyciem notacji wielokropka
 
 Kompilator wykonuje Zwykłe konwersje arytmetyczne niezależnie od każdego parametru i każdego argumentu, w razie potrzeby. Po konwersji żaden parametr nie jest krótszy niż **`int`** , a żaden parametr nie ma **`float`** typu, chyba że typ parametru jest jawnie określony jako **`float`** w prototypie. Oznacza to, na przykład, który deklaruje parametr jako **`char`** ma taki sam skutek jak zadeklarowanie go jako **`int`** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

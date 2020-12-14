@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: funkcja główna i wykonywanie programu'
 title: Funkcja main i wykonywanie programu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00fb10526b558631c024366c09a773363bd81683
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257085"
 ---
 # <a name="main-function-and-program-execution"></a>Funkcja main i wykonywanie programu
 
-Każdy program C ma podstawową (główną) funkcję, która musi mieć nazwę **Main**. Jeśli kod jest zgodny z modelem programowania **Unicode, można**użyć szerokiej wersji **wmain**. Funkcja **Main** służy jako punkt wyjścia do wykonywania programu. Zwykle kontroluje wykonywanie programu przez kierowanie wywołań do innych funkcji programu. Program zwykle zatrzymuje wykonywanie na końcu **głównej**, chociaż może zakończyć się w innych punktach w programie z różnych powodów. Niekiedy po wykryciu określonego błędu, możesz chcieć wymusić przerwanie programu. Aby to zrobić, użyj funkcji **Exit** . Zobacz *odwołanie do biblioteki wykonawczej* , aby uzyskać informacje na temat i przykład przy użyciu funkcji [Exit](../c-runtime-library/reference/exit-exit-exit.md) .
+Każdy program C ma podstawową (główną) funkcję, która musi mieć nazwę **Main**. Jeśli kod jest zgodny z modelem programowania **Unicode, można** użyć szerokiej wersji **wmain**. Funkcja **Main** służy jako punkt wyjścia do wykonywania programu. Zwykle kontroluje wykonywanie programu przez kierowanie wywołań do innych funkcji programu. Program zwykle zatrzymuje wykonywanie na końcu **głównej**, chociaż może zakończyć się w innych punktach w programie z różnych powodów. Niekiedy po wykryciu określonego błędu, możesz chcieć wymusić przerwanie programu. Aby to zrobić, użyj funkcji **Exit** . Zobacz *odwołanie do biblioteki wykonawczej* , aby uzyskać informacje na temat i przykład przy użyciu funkcji [Exit](../c-runtime-library/reference/exit-exit-exit.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +37,7 @@ Gdy chcesz przekazać informacje do funkcji **Main** , parametry są tradycyjnie
 
 Aby uzyskać opis szerokiej **wersji programu,** zobacz [using wmain](../c-language/using-wmain.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcja Main i argumenty wiersza polecenia (C++)](../cpp/main-function-command-line-args.md)\
-[Analizowanie argumentów wiersza polecenia języka C](../c-language/parsing-c-command-line-arguments.md)
+[Analizowanie Command-Linech argumentów języka C](../c-language/parsing-c-command-line-arguments.md)

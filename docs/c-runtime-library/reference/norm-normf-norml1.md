@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: normie, normf, normie'
 title: norm, normf, norml
 ms.date: 04/05/2018
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 175cff5f9c0e31a56a86a96c3262e2c3c546fe4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234058"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256305"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -76,9 +77,9 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **nor
 |-------------|--------------|------------------|
 |**norma**, **normf**, **norma**|\<complex.h>|\<complex.h>|
 
-Typy **_Fcomplex**, **_Dcomplex**i **_Lcomplex** są odpowiednikami charakterystycznymi dla niewdrożonych natywnych typów C99 **zmiennoprzecinkowych _Complex**, **Double _Complex**i **Long Double _Complex**.  Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Typy **_Fcomplex**, **_Dcomplex** i **_Lcomplex** są odpowiednikami charakterystycznymi dla niewdrożonych natywnych typów C99 **zmiennoprzecinkowych _Complex**, **Double _Complex** i **Long Double _Complex**.  Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

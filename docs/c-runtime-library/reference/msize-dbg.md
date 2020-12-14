@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _msize_dbg'
 title: _msize_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8ead0257e990322e88e20ce6111ff590dbc71686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256396"
 ---
 # <a name="_msize_dbg"></a>_msize_dbg
 
@@ -60,11 +61,11 @@ Po pomyślnym zakończeniu **_msize_dbg** zwraca rozmiar (w bajtach) określoneg
 
 ## <a name="remarks"></a>Uwagi
 
-**_msize_dbg** to wersja do debugowania funkcji _[msize](msize.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_msize_dbg** jest ograniczone do wywołania **_msize**. Zarówno **_msize** , jak i **_msize_dbg** obliczają rozmiar bloku pamięci w stercie bazowym, ale **_msize_dbg** dodaje dwie funkcje debugowania: Zawiera bufory po obu stronach części użytkownika bloku pamięci w zwróconym rozmiarze i umożliwia obliczanie rozmiaru dla określonych typów bloków.
+**_msize_dbg** jest wersją debugowania funkcji _ [msize](msize.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_msize_dbg** zostanie zredukowane do wywołania **_msize**. Zarówno **_msize** , jak i **_msize_dbg** obliczają rozmiar bloku pamięci w stercie bazowym, ale **_msize_dbg** dodaje dwie funkcje debugowania: zawiera bufory po obu stronach części bloku pamięci w zwróconym rozmiarze i umożliwia obliczanie rozmiaru dla określonych typów bloków.
 
 Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o typach bloków alokacji i sposobach ich użycia, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywołaniem standardowej funkcji sterty i jej wersji debugowania w kompilacji debugowania aplikacji, zobacz [debugowanie wersji funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Ta funkcja sprawdza poprawność parametru. Jeśli *memblock* jest wskaźnikiem typu null, **_msize** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja ustawia **errno** na **EINVAL** i zwraca wartość-1.
+Ta funkcja sprawdza poprawność parametru. Jeśli *memblock* jest wskaźnikiem o wartości null, **_msize** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -137,7 +138,7 @@ Size of block after _malloc_dbg of 40 longs: 160
 Size of block after _realloc_dbg of 40 more longs: 320
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

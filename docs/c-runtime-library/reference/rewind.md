@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: przewiń do tyłu'
 title: przewijanie
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b66ee84e562ebbb743413c6f76f67071c754a67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250300"
 ---
 # <a name="rewind"></a>przewijanie
 
@@ -73,7 +74,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**rewind**|\<stdio. h>|
+|**przewijanie**|\<stdio.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

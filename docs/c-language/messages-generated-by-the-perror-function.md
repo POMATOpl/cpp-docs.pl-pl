@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej o: komunikaty wygenerowane przez funkcję pError'
 title: Komunikaty generowane przez funkcję perror
 ms.date: 11/04/2016
 ms.assetid: ec560a55-adf2-4959-9ebf-9ac4e58ab3b5
-ms.openlocfilehash: b398494d3fb4a4b15161c3e93b13651a08bb875a
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6176ede3e264eb86ebfd9731e72547a159165764
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257098"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>Komunikaty generowane przez funkcję perror
 
 **4.9.10.4 ANSI** Komunikaty generowane przez `perror` funkcję
 
-`perror` Funkcja generuje następujące komunikaty:
+`perror`Funkcja generuje następujące komunikaty:
 
 ```
 0  Error 0
@@ -57,4 +58,4 @@ ms.locfileid: "64343444"
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcje bibliotek](../c-language/library-functions.md)
+[Funkcje biblioteki](../c-language/library-functions.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej o: znaki wielobajtowe'
 title: Znaki wielobajtowe
 ms.date: 11/04/2016
 ms.assetid: 09fe1431-1006-41f9-bf47-ca82724c23ae
-ms.openlocfilehash: 87d9b500f2da6b7c6b967c8da483bd2813a5996e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2b7241718af216e568472b415754de2a96bd227
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257072"
 ---
 # <a name="multibyte-characters"></a>Znaki wielobajtowe
 
@@ -17,4 +18,4 @@ Znaki wielobajtowe są używane przez niektóre implementacje, w tym Microsoft C
 
 ## <a name="see-also"></a>Zobacz też
 
-[Znaków](../c-language/characters.md)
+[Znaki](../c-language/characters.md)

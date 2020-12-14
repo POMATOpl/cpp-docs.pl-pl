@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _rmdir, _wrmdir'
 title: _rmdir, _wrmdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17324d5d2125f4f664140684c4f082181742700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250311"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -96,8 +97,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_rmdir**|\<> Direct. h|
-|**_wrmdir**|\<Direct. h> lub \<WCHAR. h>|
+|**_rmdir**|\<direct.h>|
+|**_wrmdir**|\<direct.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -111,6 +112,6 @@ Zapoznaj się z przykładem [_mkdir](mkdir-wmkdir.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

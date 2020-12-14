@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: mktime, _mktime32, _mktime64'
 title: mktime, _mktime32, _mktime64
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: 48d1104d9680fe8ab88f0f73bfc179f3e4cf45a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aebb12324de5a18dfac6ab84b3b7b2c3da15a2ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256422"
 ---
 # <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -91,7 +92,7 @@ Te funkcje mogą służyć do sprawdzania poprawności i wypełnienia struktury 
 
 Biblioteka środowiska uruchomieniowego C określi zachowanie czasu letniego [ze zmiennej](tzset.md) środowiskowej $. Jeśli **nie ustawiono opcji** /$, Win32 API wywołanie [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) służy do uzyskiwania informacji o czasie letnim z systemu operacyjnego. Jeśli to się nie powiedzie, biblioteka zakłada, że używane są reguły Stany Zjednoczone w celu wykonania obliczeń czasu letniego. **tm_isdst** jest polem wymaganym. Jeśli nie zostanie ustawiona, jego wartość jest niezdefiniowana i wartość zwracana z tych funkcji jest nieprzewidywalne. Jeśli *timeptr* wskazuje strukturę **TM** zwróconą przez poprzednie wywołanie do [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)lub [localtime](localtime-localtime32-localtime64.md) (lub warianty tych funkcji), pole **tm_isdst** zawiera poprawną wartość.
 
-Należy zauważyć, że **gmtime** i **localtime** (oraz **_gmtime32**, **_gmtime64**, **_localtime32**i **_localtime64**) używają jednego buforu dla każdej wątku dla konwersji. W przypadku podania tego buforu do **mktime**, **_mktime32** lub **_mktime64**, poprzednia zawartość zostaje zniszczona.
+Należy zauważyć, że **gmtime** i **localtime** (oraz **_gmtime32**, **_gmtime64**, **_localtime32** i **_localtime64**) używają jednego buforu dla każdej wątku dla konwersji. W przypadku podania tego buforu do **mktime**, **_mktime32** lub **_mktime64**, poprzednia zawartość zostaje zniszczona.
 
 Te funkcje sprawdzają poprawność parametru. Jeśli *timeptr* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
@@ -101,9 +102,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mktime**|\<> godziny. h|
-|**_mktime32**|\<> godziny. h|
-|**_mktime64**|\<> godziny. h|
+|**mktime**|\<time.h>|
+|**_mktime32**|\<time.h>|
+|**_mktime64**|\<time.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

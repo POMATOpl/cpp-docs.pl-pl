@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: NaN, nanf —, nanl'
 title: nan, nanf, nanl
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3fd5fcb004058baf8d216385cde023033f29f08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256331"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -72,7 +73,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**NaN**, **nanf —**, **nanl**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**NaN**, **nanf —**, **nanl**|\<math.h>|\<cmath> lub \<math.h>|
 
 ## <a name="see-also"></a>Zobacz też
 

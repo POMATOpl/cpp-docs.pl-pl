@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: przestarzałe formy deklaracji i definicji funkcji'
 title: Przestarzałe formy deklaracji i definicji funkcji
 ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cd66ba1600d4a5fd381819f4b1d3f0beeb30f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256916"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Przestarzałe formy deklaracji i definicji funkcji
 
@@ -49,6 +50,6 @@ Deklaracje funkcji starego stylu również generują ostrzeżenia, jeśli nastę
 
 Następna sekcja, [definicje funkcji języka C](../c-language/c-function-definitions.md), pokazuje składnię definicji funkcji, w tym składnię starego stylu. Nieterminali dla listy parametrów w składni starego stylu to *Lista identyfikatorów*.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd funkcji](../c-language/overview-of-functions.md)
