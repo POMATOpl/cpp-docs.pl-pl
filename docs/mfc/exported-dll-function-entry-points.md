@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wyeksportowane punkty wejścia funkcji DLL'
 title: Punkty wejścia wyeksportowanej funkcji DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-ms.openlocfilehash: c521cad666864c728fd871b460cf0c92b815e414
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ea30a36507e22beed1f36727b8e7b582d51929b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314597"
 ---
 # <a name="exported-dll-function-entry-points"></a>Punkty wejścia wyeksportowanej funkcji DLL
 
@@ -29,7 +30,7 @@ Spowoduje to zamianę bieżącego stanu modułu na stan zwrócony z [AfxGetStati
 
 Problemy z zasobami w bibliotekach DLL będą wykonywane, jeśli `AFX_MANAGE_STATE` makro nie jest używane. Domyślnie MFC używa dojścia do zasobów głównej aplikacji do ładowania szablonu zasobu. Ten szablon jest w rzeczywistości przechowywany w bibliotece DLL. Główną przyczyną jest to, że informacje o stanie modułu MFC nie zostały przełączone przez `AFX_MANAGE_STATE` makro. Dojście do zasobu jest odzyskiwane z stanu modułu MFC. Nie przełączenie stanu modułu powoduje niewłaściwe użycie uchwytu zasobów.
 
-`AFX_MANAGE_STATE`nie musi być umieszczony w każdej funkcji w bibliotece DLL. Na przykład, `InitInstance` może być wywoływana przez kod MFC w aplikacji bez względu na to, `AFX_MANAGE_STATE` że MFC automatycznie przesuwa stan modułu przed `InitInstance` , a następnie przełącza je ponownie po powrocie `InitInstance` . Ta sama wartość dotyczy wszystkich programów obsługi mapy komunikatów. Regularne biblioteki MFC DLL faktycznie mają specjalną procedurę okna głównego, która automatycznie przełącza stan modułu przed kierowaniem jakichkolwiek komunikatów.
+`AFX_MANAGE_STATE` nie musi być umieszczony w każdej funkcji w bibliotece DLL. Na przykład, `InitInstance` może być wywoływana przez kod MFC w aplikacji bez względu na to, `AFX_MANAGE_STATE` że MFC automatycznie przesuwa stan modułu przed `InitInstance` , a następnie przełącza je ponownie po powrocie `InitInstance` . Ta sama wartość dotyczy wszystkich programów obsługi mapy komunikatów. Regularne biblioteki MFC DLL faktycznie mają specjalną procedurę okna głównego, która automatycznie przełącza stan modułu przed kierowaniem jakichkolwiek komunikatów.
 
 ## <a name="see-also"></a>Zobacz też
 

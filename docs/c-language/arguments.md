@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: argumenty'
 title: Argumenty
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - function arguments
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
-ms.openlocfilehash: e1c88034044c74a542384873454f993b6bce3244
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 02c8d7e9f6f4ef09bcfdce11c3bd0d88c21ab141
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280082"
 ---
 # <a name="arguments"></a>Argumenty
 
 Argumenty w wywołaniu funkcji mają postać:
 
-> *wyrażenie* **(** *wybór wyrażenia-list*<SUB>opt</SUB> **)** /* wywołanie funkcji */
+> *wyrażenie* **(** *wybór wyrażenia-list*<SUB></SUB> **)** /* wywołanie funkcji */
 
 W wywołaniu funkcji *Lista wyrażeń* jest listą wyrażeń (rozdzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie przyjmuje żadnych argumentów, *Lista wyrażeń* powinna zawierać słowo kluczowe **`void`** .
 
@@ -77,6 +78,6 @@ Adres `x` jest przechowywany w `num1`, a adres `y` jest przechowywany w `num2`. 
 
 Kompilator przeprowadza kontrolę typów dla argumentów `swap`, ponieważ prototyp `swap` zawiera typy argumentów dla każdego parametru. Identyfikatory między nawiasami prototypu i definicji mogą być takie same lub różne. Ważne jest, aby typy tych argumentów odpowiadały tym z list parametrów prototypu i definicji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wywołania funkcji](../c-language/function-calls.md)

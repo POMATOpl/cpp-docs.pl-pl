@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej o: argumenty do głównej'
 title: Argumenty dla metody main
 ms.date: 11/04/2016
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
-ms.openlocfilehash: 918be9d281f1cb12c27c6c2f5dd834e4af137179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c837477e03c2e58e8b8dbe616cd31c63d5f5977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280095"
 ---
 # <a name="arguments-to-main"></a>Argumenty dla metody main
 
 **2.1.2.2.1 ANSI** Semantyka argumentów dla głównej
 
-W programie Microsoft C funkcja wywoływana przy uruchamianiu programu jest nazywana **Main**. Nie istnieje prototyp zadeklarowany dla elementu **Main**i można go zdefiniować za pomocą wartości zero, dwa lub trzy parametry:
+W programie Microsoft C funkcja wywoływana przy uruchamianiu programu jest nazywana **Main**. Nie istnieje prototyp zadeklarowany dla elementu **Main** i można go zdefiniować za pomocą wartości zero, dwa lub trzy parametry:
 
 ```
 int main( void )
