@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMDITabInfo'
 title: Klasa CMDITabInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: 8e4053bf16672d693adc104c9e88bb46a67ba7dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4769bedc48e143e2dae6f35c50d2d1fef488e655
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336668"
 ---
 # <a name="cmditabinfo-class"></a>Klasa CMDITabInfo
 
@@ -159,7 +160,7 @@ BOOL m_bTabCloseButton;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość jest równa TRUE, każde okno karty wyświetla przycisk **Zamknij** po prawej krawędzi karty. w przeciwnym razie przycisk **Zamknij** nie jest wyświetlany. Wartość domyślna to TRUE.
+Jeśli wartość jest równa TRUE, każde okno karty wyświetla przycisk **Zamknij** po prawej krawędzi karty. W przeciwnym razie przycisk **Zamknij** nie jest wyświetlany. Wartość domyślna to TRUE.
 
 ## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a> CMDITabInfo:: m_bTabCustomTooltips
 
@@ -183,7 +184,7 @@ BOOL m_bTabIcons;
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku wartości TRUE ikony są wyświetlane na poszczególnych kartach MDI. w przeciwnym razie ikony nie są wyświetlane na kartach. Wartość domyślna to FALSE.
+W przypadku wartości TRUE ikony są wyświetlane na każdej karcie MDI. W przeciwnym razie ikony nie są wyświetlane na kartach. Wartość domyślna to FALSE.
 
 ## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a> CMDITabInfo:: m_nTabBorderSize
 

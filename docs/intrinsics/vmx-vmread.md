@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: __vmx_vmread'
 title: __vmx_vmread
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 409835ac29d6f2e839de62291cc5b142166a465c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 39ea9c0566d3f9c9d3fc6d980861fb3580293895
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333505"
 ---
 # <a name="__vmx_vmread"></a>__vmx_vmread
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Odczytuje określone pole z bieżącej struktury kontrolnej maszyny wirtualnej (VMCS) i umieszcza je w określonej lokalizacji.
 
@@ -35,7 +36,7 @@ unsigned char __vmx_vmread(
 podczas Pole VMCS, które ma zostać odczytane.
 
 *FieldValue*\
-podczas Wskaźnik do lokalizacji, do której ma być przechowywana wartość odczytana z pola VMCs określonego `Field` przez parametr.
+podczas Wskaźnik do lokalizacji, do której ma być przechowywana wartość odczytana z pola VMCS określonego przez `Field` parametr.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -47,19 +48,19 @@ podczas Wskaźnik do lokalizacji, do której ma być przechowywana wartość odc
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja jest równoważna `VMREAD` z instrukcją maszyny. `__vmx_vmread` Wartość `Field` parametru jest zakodowanym indeksem pola, który jest opisany w dokumentacji firmy Intel. Aby uzyskać więcej informacji, Wyszukaj dodatek C "Specyfikacja techniczna wirtualizacji firmy Intel dla architektury Intel o architekturze IA-32" w witrynie [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
+`__vmx_vmread`Funkcja jest równoważna z `VMREAD` instrukcją maszyny. Wartość `Field` parametru jest zakodowanym indeksem pola, który jest opisany w dokumentacji firmy Intel. Aby uzyskać więcej informacji, Wyszukaj dodatek C "Specyfikacja techniczna wirtualizacji firmy Intel dla architektury Intel o architekturze IA-32" w witrynie [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Wymagania
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__vmx_vmread`|X64|
+|`__vmx_vmread`|x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

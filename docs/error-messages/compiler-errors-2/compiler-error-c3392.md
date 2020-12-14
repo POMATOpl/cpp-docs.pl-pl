@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3392'
 title: Błąd kompilatora C3392
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 31975d39d67697573af7f9142326660acc4f7226
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c64b49bee05079fd2d1b468d807af5b1fd89ba26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316339"
 ---
 # <a name="compiler-error-c3392"></a>Błąd kompilatora C3392
 
 "type_arg": nieprawidłowy typ argumentu dla parametru generycznego "param" generycznej "generic_type", musi mieć publiczny Konstruktor bez parametrów
 
-Wystąpienie typu ogólnego zostało nieprawidłowo utworzone. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz [Ogólne](../../extensions/generics-cpp-component-extensions.md).
+Wystąpienie typu ogólnego zostało nieprawidłowo utworzone. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz  [Ogólne](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład używa C# do tworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane podczas tworzenia typów ogólnych w C++/CLI. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Poniższy przykład używa języka C# do tworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane podczas tworzenia typów ogólnych w C++/CLI. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```csharp
 // C3392.cs
@@ -33,7 +34,7 @@ where V : struct
 where N : new() {}
 ```
 
-Gdy składnik C3392. dll jest dostępny, Poniższy przykład generuje C3392.
+Gdy dostępny jest składnik C3392.dll, Poniższy przykład generuje C3392.
 
 ```cpp
 // C3392_b.cpp

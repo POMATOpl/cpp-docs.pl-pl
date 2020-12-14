@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: hash_multimap (STL/CLR)'
 title: hash_multimap (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-ms.openlocfilehash: b4fa42b53f496f1689523d8881c6f0411e6072aa
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 92bcdd5c241dc73a9cc49c07668c9627f7183c66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335499"
 ---
 # <a name="hash_multimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -861,7 +862,7 @@ Wartość klucza do wymazania.
 *ostatniego*<br/>
 Koniec zakresu do wymazania.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
@@ -870,7 +871,7 @@ Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany p
 
 Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [ `first` , `last` ) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()` Jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
-Trzecia funkcja członkowska usuwa każdy element kontrolowanej sekwencji, którego klucz ma równoważne porządkowanie do *klucza*i zwraca liczbę usuniętych elementów. Służy do usuwania i zliczania wszystkich elementów, które pasują do określonego klucza.
+Trzecia funkcja członkowska usuwa każdy element kontrolowanej sekwencji, którego klucz ma równoważne porządkowanie do *klucza* i zwraca liczbę usuniętych elementów. Służy do usuwania i zliczania wszystkich elementów, które pasują do określonego klucza.
 
 Każdy element wymazuje czas proporcjonalny do logarytmu liczby elementów w kontrolowanej sekwencji.
 
@@ -1315,13 +1316,13 @@ Konstruktor:
 
 `explicit hash_multimap(key_compare^ pred);`
 
-Inicjuje kontrolowaną sekwencję bez elementów, z predykatem porządkowania *pred*i z domyślną funkcją skrótu. Służy do określania pustej początkowej kontrolowanej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
+Inicjuje kontrolowaną sekwencję bez elementów, z predykatem porządkowania *pred* i z domyślną funkcją skrótu. Służy do określania pustej początkowej kontrolowanej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
 
 Konstruktor:
 
 `hash_multimap(key_compare^ pred, hasher^ hashfn);`
 
-Inicjuje kontrolowaną sekwencję bez elementów, z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do określania pustej początkowej kontrolowanej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
+Inicjuje kontrolowaną sekwencję bez elementów, z predykatem porządkowania *pred* i funkcją hash *hashfn*. Służy do określania pustej początkowej kontrolowanej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
@@ -1345,13 +1346,13 @@ Konstruktor:
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ), z predykatem porządkowania *pred*oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ), z predykatem porządkowania *pred* oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
 
 Konstruktor:
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ), z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ), z predykatem porządkowania *pred* i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
@@ -1363,13 +1364,13 @@ Konstruktor:
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*z predykatem porządkowania *pred*oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem porządkowania i domyślną funkcją skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie* z predykatem porządkowania *pred* oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem porządkowania i domyślną funkcją skrótu.
 
 Konstruktor:
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*, z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem porządkowania i funkcją skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją wyznaczonej przez moduł wyliczający *po prawej stronie*, z predykatem porządkowania *pred* i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji opisanej przez moduł wyliczający z określonym predykatem porządkowania i funkcją skrótu.
 
 ### <a name="example"></a>Przykład
 
@@ -1569,16 +1570,16 @@ Wyliczenie do wstawienia.
 *użyte*<br/>
 Wartość klucza do wstawienia.
 
-*gdzie*<br/>
+*miejscu*<br/>
 Gdzie w kontenerze do wstawienia (tylko Wskazówka).
 
 ### <a name="remarks"></a>Uwagi
 
 Każda funkcja członkowska wstawia sekwencję określoną przez pozostałe operandy.
 
-Pierwsza funkcja członkowska wstawia element z wartością *Val*i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu.
+Pierwsza funkcja członkowska wstawia element z wartością *Val* i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu.
 
-Druga funkcja członkowska wstawia element z wartością *Val*przy użyciu instrukcji *WHERE* jako wskazówkę (w celu zwiększenia wydajności) i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu, który może być przyległy do elementu, który znasz.
+Druga funkcja członkowska wstawia element z wartością *Val* przy użyciu instrukcji *WHERE* jako wskazówkę (w celu zwiększenia wydajności) i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu, który może być przyległy do elementu, który znasz.
 
 Trzecia funkcja członkowska wstawia sekwencję [ `first` , `last` ). Służy do wstawiania elementów, które zostały skopiowane z innej sekwencji.
 
@@ -1832,7 +1833,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *klucza*parametru szablonu.
+Typ jest synonimem dla *klucza* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -2059,7 +2060,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *zamapowanego*parametru szablonu.
+Typ jest synonimem dla *zamapowanego* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

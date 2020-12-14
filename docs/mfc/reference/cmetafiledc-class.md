@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMetaFileDC'
 title: Klasa CMetaFileDC
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 0919dacfd758df39064c5381690e9e23a029fcd1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4b506818b1864c40225055faa2582820f15f423
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336622"
 ---
 # <a name="cmetafiledc-class"></a>Klasa CMetaFileDC
 
@@ -45,32 +46,32 @@ class CMetaFileDC : public CDC
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMetaFileDC::Zamknij](#close)|Zamyka kontekst urządzenia i tworzy uchwyt metapliku.|
-|[CMetaFileDC::ZamknijEnhanced](#closeenhanced)|Zamyka rozszerzony kontekst urządzenia metaplikowego i tworzy uchwyt rozszerzonego metapliku.|
-|[CMetaFileDC::Utwórz](#create)|Tworzy kontekst urządzenia metaplik systemu Windows `CMetaFileDC` i dołącza go do obiektu.|
-|[CMetaFileDC::CreateEnhanced](#createenhanced)|Tworzy kontekst urządzenia metapliku dla rozszerzonego formatu metapliku.|
+|[CMetaFileDC:: Close](#close)|Zamyka kontekst urządzenia i tworzy uchwyt metapliku.|
+|[CMetaFileDC::CloseEnhanced](#closeenhanced)|Zamyka kontekst urządzenia z ulepszonymi metaplikami i tworzy dojście ulepszonego metapliku.|
+|[CMetaFileDC:: Create](#create)|Tworzy kontekst urządzenia metaplików systemu Windows i dołącza go do `CMetaFileDC` obiektu.|
+|[CMetaFileDC:: isenhanced](#createenhanced)|Tworzy kontekst urządzenia metaplik dla metapliku ulepszonego formatu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby zaimplementować metaplik `CMetaFileDC` systemu Windows, należy najpierw utworzyć obiekt. Wywołaj `CMetaFileDC` konstruktora, a następnie [wywołaj](#create) funkcję Create member, która tworzy kontekst `CMetaFileDC` urządzenia metapliku systemu Windows i dołącza go do obiektu.
+Aby zaimplementować metaplik systemu Windows, najpierw Utwórz `CMetaFileDC` obiekt. Wywołaj `CMetaFileDC` konstruktora, a następnie wywołaj funkcję [Create](#create) member, która tworzy kontekst urządzenia metaplików systemu Windows i dołącza go do `CMetaFileDC` obiektu.
 
-Następnie wyślij `CMetaFileDC` obiekt sekwencji CDC GDI poleceń, które zamierzasz go odtworzyć. Można używać tylko tych poleceń GDI, które tworzą dane wyjściowe, takie jak `MoveTo` i `LineTo`, mogą być używane.
+Następnie Wyślij do `CMetaFileDC` obiektu sekwencję poleceń GDI przechwytywania, które mają być odtwarzane. Można używać tylko tych poleceń GDI, które tworzą dane wyjściowe, takie jak `MoveTo` i `LineTo` .
 
-Po wysłaniu żądanych poleceń do metapliku należy wywołać funkcję `Close` elementu członkowskiego, która zamyka konteksty urządzeń metaplikowych i zwraca uchwyt metapliku. Następnie zutylizuj `CMetaFileDC` obiekt.
+Po wysłaniu wymaganych poleceń do metapliku Wywołaj `Close` funkcję członkowską, która zamknie konteksty urządzenia metapliku i zwróci uchwyt metapliku. Następnie usuń `CMetaFileDC` obiekt.
 
-[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) może następnie używać uchwytu metapliku do wielokrotnego odtwarzania metapliku. Metaplik może być również manipulowany przez funkcje systemu Windows, takie jak [CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew), który kopiuje metaplik na dysk.
+Przegranie [::P laymetafile](../../mfc/reference/cdc-class.md#playmetafile) może następnie użyć uchwytu metapliku do wielokrotnego odtwarzania metapliku. Metaplik może być również manipulowany przez funkcje systemu Windows, takie jak [CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew), które kopiuje metaplik na dysk.
 
-Gdy metaplik nie jest już potrzebny, usuń go z pamięci za pomocą funkcji [DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile) Windows.
+Gdy metaplik nie jest już potrzebne, usuń go z pamięci za pomocą funkcji [DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile) systemu Windows.
 
-Można również zaimplementować `CMetaFileDC` obiekt, dzięki czemu może obsługiwać zarówno `GetTextExtent`wywołania wyjściowe, jak i wywołania GDI, takie jak . Taki metaplik jest bardziej elastyczny i można łatwiej ponownie użyć ogólnego kodu GDI, który często składa się z kombinacji wywołań wyjściowych i atrybutów. Klasa `CMetaFileDC` dziedziczy dwa konteksty `m_hDC` `m_hAttribDC`urządzenia i , z CDC. Kontekst `m_hDC` urządzenia obsługuje wszystkie wywołania wyjściowe `m_hAttribDC` GDI [CDC,](../../mfc/reference/cdc-class.md) a kontekst urządzenia obsługuje wszystkie wywołania atrybutów CDC GDI. Zwykle te dwa konteksty urządzenia odnoszą się do tego samego urządzenia. W przypadku `CMetaFileDC`, atrybut DC jest domyślnie ustawiona na wartość NULL.
+Można również zaimplementować obiekt, `CMetaFileDC` aby mógł obsługiwać zarówno wywołania wyjściowe, jak i wywołania GDI atrybutów, takich jak `GetTextExtent` . Taki metaplik jest bardziej elastyczny i można łatwiej ponownie wykorzystać ogólny kod GDI, który często składa się z mieszania wywołań wyjściowych i atrybutów. `CMetaFileDC`Klasa dziedziczy dwa konteksty urządzeń `m_hDC` i `m_hAttribDC` , z danych przechwytywania. `m_hDC`Kontekst urządzenia obsługuje wszystkie wywołania wyjściowe GDI [przechwytywania](../../mfc/reference/cdc-class.md) , a `m_hAttribDC` kontekst urządzenia obsługuje wszystkie wywołania atrybutów GDI przechwytywania. Zwykle te dwa konteksty urządzenia odwołują się do tego samego urządzenia. W przypadku `CMetaFileDC` , ATRYBUT DC ma domyślnie wartość null.
 
-Utwórz drugi kontekst urządzenia, który wskazuje na ekranie, drukarce lub urządzeniu `SetAttribDC` inne niż metaplik, `m_hAttribDC`a następnie zadzwoń do funkcji członkowskiej, aby skojarzyć nowy kontekst urządzenia z programem . Wezwania GDI do uzyskania informacji będą `m_hAttribDC`teraz kierowane do nowego . Wyjściowe wywołania GDI zostaną `m_hDC`donikowe , który reprezentuje metaplik.
+Utwórz drugi kontekst urządzenia, który wskazuje na ekran, drukarkę lub urządzenie inne niż metaplik, a następnie Wywołaj `SetAttribDC` funkcję członkowską, aby skojarzyć nowy kontekst urządzenia z `m_hAttribDC` . Wywołania GDI dla informacji będą teraz kierowane do nowego `m_hAttribDC` . Wyjściowe wywołania GDI przechodzą do `m_hDC` , który reprezentuje metaplik.
 
-Aby uzyskać `CMetaFileDC`więcej informacji na temat , zobacz [Konteksty urządzeń](../../mfc/device-contexts.md).
+Aby uzyskać więcej informacji na temat `CMetaFileDC` , zobacz [konteksty urządzeń](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CDC](../../mfc/reference/cdc-class.md)
 
@@ -78,11 +79,11 @@ Aby uzyskać `CMetaFileDC`więcej informacji na temat , zobacz [Konteksty urząd
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxext.h
+**Nagłówek:** afxext. h
 
-## <a name="cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Zamknij
+## <a name="cmetafiledcclose"></a><a name="close"></a> CMetaFileDC:: Close
 
-Zamyka kontekst urządzenia metaplik i tworzy uchwyt metapliku systemu Windows, który może być używany do odtwarzania metapliku przy użyciu funkcji członkowskiej [CDC::PlayMetaFile.](../../mfc/reference/cdc-class.md#playmetafile)
+Zamyka kontekst urządzenia metapliku i tworzy uchwyt metapliku systemu Windows, który może być używany do odtwarzania metapliku przy użyciu funkcji " [:P laymetafile](../../mfc/reference/cdc-class.md#playmetafile) ".
 
 ```
 HMETAFILE Close();
@@ -90,17 +91,17 @@ HMETAFILE Close();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Prawidłowa hmetafile, jeśli funkcja zakończy się pomyślnie; w przeciwnym razie NULL.
+Prawidłowy HMETAFILE, jeśli funkcja się powiedzie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Uchwyt metapliku systemu Windows może być również używany do manipulowania metaplikem za pomocą funkcji systemu Windows, takich jak [CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew).
+Uchwyt metapliku systemu Windows może być również używany do manipulowania metaplikiem z funkcjami systemu Windows, takimi jak [CopyMetaFile](/windows/win32/api/wingdi/nf-wingdi-copymetafilew).
 
 Usuń metaplik po użyciu, wywołując funkcję [DeleteMetaFile](/windows/win32/api/wingdi/nf-wingdi-deletemetafile) systemu Windows.
 
-## <a name="cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::ZamknijEnhanced
+## <a name="cmetafiledccloseenhanced"></a><a name="closeenhanced"></a> CMetaFileDC::CloseEnhanced
 
-Zamyka kontekst urządzenia z rozszerzonym metaplikem i zwraca dojście identyfikujące metaplik w formacie rozszerzonym.
+Zamyka kontekst urządzenia z ulepszonym metaplikiem i zwraca dojście, które identyfikuje metaplik w formacie rozszerzonym.
 
 ```
 HENHMETAFILE CloseEnhanced();
@@ -108,33 +109,33 @@ HENHMETAFILE CloseEnhanced();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt ulepszonego metapliku, jeśli się powiedzie; w przeciwnym razie NULL.
+Dojście do ulepszonego metapliku, jeśli to się powiedzie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Aplikacja może użyć uchwytu rozszerzonego metapliku zwróconego przez tę funkcję do wykonywania następujących zadań:
+Aplikacja może używać dojścia ulepszonego metapliku zwróconego przez tę funkcję do wykonywania następujących zadań:
 
-- Wyświetlanie obrazu zapisanego w rozszerzonym metapliku
+- Wyświetlanie obrazu przechowywanego w rozszerzonym formacie metapliku
 
-- Tworzenie kopii rozszerzonego metapliku
+- Utwórz kopie rozszerzonego metapliku
 
-- Wyliczaj, edytuj lub kopiuj poszczególne rekordy w rozszerzonym metapliku
+- Wyliczanie, edytowanie lub kopiowanie pojedynczych rekordów w rozszerzonym formacie metapliku
 
-- Pobieranie opcjonalnego opisu zawartości metapliku z nagłówka rozszerzonego metapliku
+- Pobierz opcjonalny opis zawartości metapliku z nagłówka rozszerzonego metapliku
 
-- Pobieranie kopii nagłówka rozszerzonego metapliku
+- Pobierz kopię nagłówka rozszerzonego metapliku
 
-- Pobieranie binarnej kopii rozszerzonego metapliku
+- Pobierz binarną kopię rozszerzonego metapliku
 
-- Wyliczaj kolory w opcjonalnej palecie
+- Wylicz kolory w opcjonalnej palecie
 
-- Konwertowanie metapliku w formacie rozszerzonym na metaplik w formacie Windows
+- Konwertowanie metapliku rozszerzonego formatu na metaplik formatu Windows
 
-Gdy aplikacja nie potrzebuje już uchwytu metapliku rozszerzonego, należy zwolnić `DeleteEnhMetaFile` dojście, wywołując funkcję Win32.
+Gdy aplikacja nie potrzebuje już ulepszonego uchwytu metapliku, powinna zwolnić dojście, wywołując funkcję Win32 `DeleteEnhMetaFile` .
 
-## <a name="cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC
+## <a name="cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a> CMetaFileDC::CMetaFileDC
 
-Konstruuj `CMetaFileDC` obiekt w dwóch krokach.
+Utwórz `CMetaFileDC` obiekt w dwóch krokach.
 
 ```
 CMetaFileDC();
@@ -142,11 +143,11 @@ CMetaFileDC();
 
 ### <a name="remarks"></a>Uwagi
 
-Najpierw wywołaj `CMetaFileDC`, `Create`a następnie wywołaj , który tworzy kontekst `CMetaFileDC` urządzenia metaplik systemu Windows i dołącza go do obiektu.
+Najpierw należy wywołać metodę, `CMetaFileDC` a następnie wywołać `Create` , która tworzy kontekst urządzenia metaplików systemu Windows i dołącza go do `CMetaFileDC` obiektu.
 
-## <a name="cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Utwórz
+## <a name="cmetafiledccreate"></a><a name="create"></a> CMetaFileDC:: Create
 
-Konstruuj `CMetaFileDC` obiekt w dwóch krokach.
+Utwórz `CMetaFileDC` obiekt w dwóch krokach.
 
 ```
 BOOL Create(LPCTSTR lpszFilename = NULL);
@@ -155,7 +156,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpszFilename*<br/>
-Wskazuje ciąg znaków zakończony z wartością null. Określa nazwę pliku metapliku do utworzenia. Jeśli *lpszFilename* ma wartość NULL, tworzony jest nowy metaplik w pamięci.
+Wskazuje ciąg znaków zakończony znakiem null. Określa nazwę pliku metapliku do utworzenia. Jeśli *lpszFileName* ma wartość null, tworzony jest nowy metaplik w pamięci.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -163,11 +164,11 @@ Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Najpierw wywołaj konstruktora, `CMetaFileDC`a następnie wywołaj `Create`, który tworzy kontekst `CMetaFileDC` urządzenia metapliku systemu Windows i dołącza go do obiektu.
+Najpierw Wywołaj konstruktora `CMetaFileDC` , a następnie Wywołaj `Create` , który tworzy kontekst urządzenia metaplików systemu Windows i dołącza go do `CMetaFileDC` obiektu.
 
-## <a name="cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced
+## <a name="cmetafiledccreateenhanced"></a><a name="createenhanced"></a> CMetaFileDC:: isenhanced
 
-Tworzy kontekst urządzenia dla metapliku w formacie rozszerzonym.
+Tworzy kontekst urządzenia dla metapliku ulepszonego formatu.
 
 ```
 BOOL CreateEnhanced(
@@ -180,40 +181,40 @@ BOOL CreateEnhanced(
 ### <a name="parameters"></a>Parametry
 
 *pDCRef*<br/>
-Identyfikuje urządzenie referencyjne dla ulepszonego metapliku.
+Identyfikuje urządzenie odniesienia dla rozszerzonego metapliku.
 
 *lpszFileName*<br/>
-Wskazuje ciąg znaków zakończony z wartością null. Określa nazwę pliku rozszerzonego metapliku, który ma zostać utworzony. Jeśli ten parametr ma wartość NULL, rozszerzony metaplik jest oparty na pamięci, a `DeleteEnhMetaFile` jego zawartość zostanie utracona, gdy obiekt zostanie zniszczony lub gdy wywoływana jest funkcja Win32.
+Wskazuje ciąg znaków zakończony znakiem null. Określa nazwę pliku dla rozszerzonego metapliku, który ma zostać utworzony. Jeśli ten parametr ma wartość NULL, rozszerzony metaplik jest oparty na pamięci i jego zawartość utracona, gdy obiekt jest niszczony lub gdy `DeleteEnhMetaFile` wywoływana jest funkcja Win32.
 
-*lpBounds (Obfity)*<br/>
-Wskazuje strukturę danych [RECT](/windows/win32/api/windef/ns-windef-rect) lub obiekt [CRect,](../../atl-mfc-shared/reference/crect-class.md) który określa wymiary w jednostkach HIMETRIC (w przyrostach 0,01 milimetra) obrazu, który ma być przechowywany w rozszerzonym metapliku.
+*lpBounds*<br/>
+Wskazuje na strukturę danych [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , który określa wymiary w jednostkach HIMETRIC (w przyrostach .01-milimetrowych) obrazu, który ma być przechowywany w rozszerzonym metapliku.
 
 *lpszDescription*<br/>
 Wskazuje ciąg zakończony zerem, który określa nazwę aplikacji, która utworzyła obraz, a także tytuł obrazu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt kontekstu urządzenia dla rozszerzonego metapliku, jeśli zakończy się pomyślnie; w przeciwnym razie NULL.
+Dojście kontekstu urządzenia dla rozszerzonego metapliku, jeśli to się powiedzie; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
 Ten kontroler domeny może służyć do przechowywania obrazu niezależnego od urządzenia.
 
-System Windows używa urządzenia referencyjnego identyfikowanego przez parametr *pDCRef* do rejestrowania rozdzielczości i jednostek urządzenia, na którym pierwotnie pojawił się obraz. Jeśli *parametrem pDCRef* jest NULL, używa bieżącego urządzenia wyświetlającego w celach informacyjnych.
+System Windows używa urządzenia referencyjnego identyfikowanego przez parametr *pDCRef* do rejestrowania rozdzielczości i jednostek urządzenia, na których zdjęcie pojawiło się pierwotnie. Jeśli parametr *pDCRef* ma wartość null, używa bieżącego urządzenia wyświetlającego jako odwołanie.
 
-Lewe i górne `RECT` elementy członkowskie struktury danych wskazywali przez *parametr lpBounds* muszą być odpowiednio mniejsze niż prawe i dolne elementy członkowskie. Punkty wzdłuż krawędzi prostokąta są uwzględniane na rysunku. Jeśli *lpBounds* ma wartość NULL, interfejs urządzenia graficznego (GDI) oblicza wymiary najmniejszego prostokąta, który może ująć obraz rysowany przez aplikację. W miarę możliwości należy podać parametr *lpBounds.*
+Lewe i górne składowe `RECT` struktury danych wskazywane przez parametr *lpBounds* muszą być mniejsze niż prawa i dolny element członkowski. Na obrazie znajdują się punkty wzdłuż brzegów prostokąta. Jeśli *lpBounds* ma wartość null, interfejs urządzenia graficznego (GDI) oblicza wymiary najmniejszego prostokąta, który może obejmować obraz rysowany przez aplikację. Należy podać parametr *lpBounds* , jeśli jest to możliwe.
 
-Ciąg wskazyny przez parametr *lpszDescription* musi zawierać znak null między nazwą aplikacji a nazwą obrazu i musi zakończyć się dwoma znakami null — na przykład "XYZ Graphics Editor\0Bald Eagle\0\0", gdzie \0 reprezentuje znak null. Jeśli *lpszDescription* ma wartość NULL, nie ma odpowiedniego wpisu w nagłówku enhanced-metafile.
+Ciąg wskazany przez parametr *lpszDescription* musi zawierać znak null między nazwą aplikacji a nazwą obrazu i musi kończyć się dwoma znakami null, na przykład "XYZ Graphics Editor\0Bald Eagle\0\0," gdzie \ 0 reprezentuje znak null. Jeśli *lpszDescription* ma wartość null, nie ma odpowiadającego mu wpisu w nagłówku rozszerzonego metapliku.
 
-Aplikacje używają kontrolera domeny utworzonego przez tę funkcję do przechowywania obrazu graficznego w rozszerzonym metapliku. Dojście identyfikujące ten kontroler domeny można przekazać do dowolnej funkcji GDI.
+Aplikacje używają kontrolera domeny utworzonego przez tę funkcję do przechowywania obrazu grafiki w rozszerzonym formacie metapliku. Dojście identyfikujące ten kontroler domeny może zostać przesłane do dowolnej funkcji GDI.
 
-Po aplikacji przechowuje obraz w rozszerzonym metaplik, może wyświetlić obraz `CDC::PlayMetaFile` na dowolnym urządzeniu wyjściowym, wywołując funkcję. Podczas wyświetlania obrazu system Windows używa prostokąta wskazanego przez parametr *lpBounds* i danych rozdzielczości z urządzenia referencyjnego do położenia i skalowania obrazu. Kontekst urządzenia zwrócony przez tę funkcję zawiera te same atrybuty domyślne skojarzone z dowolnym nowym kontrolerem domeny.
+Gdy aplikacja przechowuje obraz w rozszerzonym metapliku, może wyświetlić obraz na dowolnym urządzeniu wyjściowym, wywołując `CDC::PlayMetaFile` funkcję. Podczas wyświetlania obrazu system Windows używa prostokąta wskazywanego przez parametr *lpBounds* oraz dane rozdzielczości z urządzenia odniesienia, aby pomieścić i skalować obraz. Kontekst urządzenia zwrócony przez tę funkcję zawiera te same atrybuty domyślne skojarzone z dowolnym nowym kontrolerem domeny.
 
-Aplikacje muszą używać `GetWinMetaFileBits` funkcji Win32 do konwersji rozszerzonego metapliku na starszy format metapliku systemu Windows.
+Aplikacje muszą używać funkcji Win32 `GetWinMetaFileBits` do konwersji rozszerzonego metapliku na starszy format metapliku systemu Windows.
 
-Nazwa pliku rozszerzonego metapliku powinna być używana przez plik . rozszerzenie EMF.
+Nazwa pliku dla rozszerzonego metapliku powinna używać. Rozszerzenie EMF.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CDC](../../mfc/reference/cdc-class.md)<br/>
+[Klasa przechwytywania](../../mfc/reference/cdc-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

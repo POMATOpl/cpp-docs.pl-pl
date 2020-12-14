@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3399'
 title: Błąd kompilatora C3399
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: d20b5e816930969278536fe3771df4ad38c3c86b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a950857e88c5cfcad50ac2efb064af4d7a5c0cf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316430"
 ---
 # <a name="compiler-error-c3399"></a>Błąd kompilatora C3399
 
 "Type": nie można podać argumentów podczas tworzenia wystąpienia parametru generycznego
 
-Podczas określania ograniczenia `gcnew()` należy określić, że typ ograniczenia będzie miał Konstruktor bez parametrów. W związku z tym, wystąpił błąd podczas próby utworzenia wystąpienia tego typu i przekazania parametru.
+Podczas określania `gcnew()` ograniczenia należy określić, że typ ograniczenia będzie miał Konstruktor bez parametrów. W związku z tym, wystąpił błąd podczas próby utworzenia wystąpienia tego typu i przekazania parametru.
 
-Aby uzyskać więcej informacji, zobacz [ograniczeniaC++dotyczące parametrów typu ogólnego (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
+Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Przykład
 

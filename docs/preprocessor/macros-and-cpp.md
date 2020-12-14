@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: makra i C++'
 title: Makra i język C++
 ms.date: 08/29/2019
 helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-ms.openlocfilehash: 3b8721644e49a8bd289939d216c233da3286fd0a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ec4db1e36bf18c23567c8c513bdc5e15ec613a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333437"
 ---
 # <a name="macros-and-c"></a>Makra i język C++
 
@@ -28,7 +29,7 @@ Aby uzyskać więcej informacji na temat funkcji wbudowanych, zobacz [inline, __
 
 W celu zapewnienia zgodności z poprzednimi wersjami wszystkie obiekty preprocesora, które istniały w ANSI C i we wcześniejszych specyfikacjach języka C++, są zachowywane w programie Microsoft C++.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)\
 [Makra (C/C++)](../preprocessor/macros-c-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CListCtrl'
 title: Klasa CListCtrl
 ms.date: 06/13/2019
 f1_keywords:
@@ -264,12 +265,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: a1fa9f4bb7ba844dd2f0300cf007a786e8fde902
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a72cc336a6f962eb5129bec15ccb3ed2fe748e10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333484"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -618,7 +619,7 @@ virtual BOOL Create(
 Określa styl kontrolki listy. Zastosuj dowolną kombinację stylów kontrolki listy do kontrolki. Zobacz [Style okna widoku listy](/windows/win32/Controls/list-view-window-styles) w Windows SDK, aby uzyskać pełną listę tych stylów. Ustawianie stylów rozszerzonych specyficznych dla kontrolki przy użyciu [setextended](#setextendedstyle).
 
 *cinania*<br/>
-Określa rozmiar i położenie kontrolki listy. Może to być `CRect` obiekt lub struktura. [RECT](/windows/win32/api/windef/ns-windef-rect)
+Określa rozmiar i położenie kontrolki listy. Może to być `CRect` obiekt lub struktura. [](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne kontrolki listy, zazwyczaj a `CDialog` . Nie może mieć wartości NULL.

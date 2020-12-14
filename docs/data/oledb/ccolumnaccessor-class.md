@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa Ccolumnaccessor —'
 title: CColumnAccessor — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7551f39d34bb4f13b4ffae358db05aede2adb9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335517"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor — Klasa
 
@@ -31,21 +32,21 @@ W kodzie wstrzykiwanym każda kolumna jest powiązana jako oddzielna metoda dost
 
 `CColumnAccessor` implementuje następujące metody zastępcze, z których każdy odpowiada w działaniu z innymi metodami klasy metody dostępu:
 
-- `CColumnAccessor` konstruktora; tworzy wystąpienia i inicjuje obiekt `CColumnAccessor`.
+- `CColumnAccessor` Konstruktor; tworzy wystąpienia i inicjuje `CColumnAccessor` obiekt.
 
-- `CreateAccessor` przydziela pamięci dla struktur powiązań kolumn i inicjuje składowe danych kolumny.
+- `CreateAccessor` Przydziela pamięć dla struktur powiązań kolumn i inicjuje elementy członkowskie danych kolumny.
 
-- `BindColumns` wiąże kolumny z dostępem do metod dostępu.
+- `BindColumns` Tworzy powiązania kolumn z dostępem.
 
-- `SetParameterBuffer` przydziela bufory dla parametrów.
+- `SetParameterBuffer` Przydziela bufory dla parametrów.
 
-- `AddParameter` dodaje wpis parametru do struktur wpisów parametrów.
+- `AddParameter` Dodaje wpis parametru do struktur wpisów parametrów.
 
-- `HasOutputColumns` określa, czy akcesor ma kolumny wyjściowe
+- `HasOutputColumns` Określa, czy akcesor ma kolumny wyjściowe
 
-- `HasParameters` określa, czy metoda dostępu ma parametry.
+- `HasParameters` Określa, czy metoda dostępu ma parametry.
 
-- `BindParameters` powiązania utworzonych parametrów z kolumnami.
+- `BindParameters` Tworzy powiązanie utworzonych parametrów z kolumnami.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -54,4 +55,4 @@ W kodzie wstrzykiwanym każda kolumna jest powiązana jako oddzielna metoda dost
 ## <a name="see-also"></a>Zobacz też
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

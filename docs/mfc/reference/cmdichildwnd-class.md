@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMDIChildWnd'
 title: Klasa CMDIChildWnd
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0acd42db19151001d9e292561ef20e469f9e14ea
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e9bf936cbb4f07401e8d54c56516f8846f2fc0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336696"
 ---
 # <a name="cmdichildwnd-class"></a>Klasa CMDIChildWnd
 
@@ -77,7 +78,7 @@ Przed wywołaniem `Create` lub należy `LoadFrame` skonstruować obiekt okna ram
 
 Użyj `Create` funkcji członkowskiej, aby przekazać parametry tworzenia ramki jako natychmiastowe argumenty.
 
-`LoadFrame`wymaga mniej argumentów niż `Create` , a zamiast tego pobiera większość wartości domyślnych z zasobów, w tym podpis ramki, ikonę, tabelę akceleratorów i menu. Aby można było uzyskać dostęp do programu `LoadFrame` , wszystkie te zasoby muszą mieć ten sam identyfikator zasobu (na przykład IDR_MAINFRAME).
+`LoadFrame` wymaga mniej argumentów niż `Create` , a zamiast tego pobiera większość wartości domyślnych z zasobów, w tym podpis ramki, ikonę, tabelę akceleratorów i menu. Aby można było uzyskać dostęp do programu `LoadFrame` , wszystkie te zasoby muszą mieć ten sam identyfikator zasobu (na przykład IDR_MAINFRAME).
 
 Gdy `CMDIChildWnd` obiekt zawiera widoki i dokumenty, są one tworzone pośrednio przez platformę, a nie bezpośrednio przez programistę. Obiekt organizuje `CDocTemplate` Tworzenie ramki, Tworzenie widoków zawierających i łączenie widoków z odpowiednim dokumentem. Parametry `CDocTemplate` konstruktora określają `CRuntimeClass` spośród trzech należących do siebie klas (dokumentu, ramki i widoku). `CRuntimeClass`Obiekt jest używany przez platformę do dynamicznego tworzenia nowych ramek, gdy jest określony przez użytkownika (na przykład przy użyciu polecenia nowy plik lub w oknie MDI nowe polecenie).
 
@@ -109,7 +110,7 @@ Aby uzyskać więcej informacji na temat `CMDIChildWnd` , zobacz [okna ramek](..
 
 **Nagłówek:** afxwin. h
 
-## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd:: CMDIChildWnd
+## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a> CMDIChildWnd:: CMDIChildWnd
 
 Wywołanie metody konstruowania `CMDIChildWnd` obiektu.
 
@@ -125,7 +126,7 @@ Wywołaj `Create` , aby utworzyć widoczne okno.
 
   Zobacz przykład dla [CMDIChildWnd:: Create](#create).
 
-## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd:: Create
+## <a name="cmdichildwndcreate"></a><a name="create"></a> CMDIChildWnd:: Create
 
 Wywołaj tę funkcję elementu członkowskiego, aby utworzyć okno podrzędne MDI systemu Windows i dołączyć je do `CMDIChildWnd` obiektu.
 
@@ -183,7 +184,7 @@ Przykład 2:
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd:: GetMDIFrame
+## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a> CMDIChildWnd:: GetMDIFrame
 
 Wywołaj tę funkcję, aby zwrócić ramkę nadrzędną MDI.
 
@@ -203,7 +204,7 @@ Zwrócona ramka to dwie elementy nadrzędne usunięte z `CMDIChildWnd` i jest el
 
   Zobacz przykład dla [CMDIFrameWnd:: MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
 
-## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd:: MDIActivate
+## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a> CMDIChildWnd:: MDIActivate
 
 Wywołaj tę funkcję elementu członkowskiego, aby aktywować okno potomne MDI niezależnie od okna ramki MDI.
 
@@ -219,7 +220,7 @@ Gdy ramka zostanie uaktywniona, uaktywnia się okno podrzędne, które zostało 
 
   Zobacz przykład dla [CMDIFrameWnd:: GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
 
-## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd:: MDIDestroy
+## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a> CMDIChildWnd:: MDIDestroy
 
 Wywołaj tę funkcję elementu członkowskiego, aby zniszczyć okno potomne MDI.
 
@@ -235,7 +236,7 @@ Funkcja członkowska usuwa tytuł okna podrzędnego z okna ramki i dezaktywuje o
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd:: MDIMaximize
+## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a> CMDIChildWnd:: MDIMaximize
 
 Wywołaj tę funkcję elementu członkowskiego, aby zmaksymalizować okno podrzędne MDI.
 
@@ -251,7 +252,7 @@ Gdy okno podrzędne jest zmaksymalizowane, system Windows zmienia jego rozmiar, 
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd:: MDIRestore
+## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a> CMDIChildWnd:: MDIRestore
 
 Wywołaj tę funkcję elementu członkowskiego, aby przywrócić okno podrzędne MDI z rozmiaru zmaksymalizowanego lub zminimalizowanego.
 
@@ -263,7 +264,7 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd:: sethandles
+## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a> CMDIChildWnd:: sethandles
 
 Ustawia uchwyty dla zasobów menu i akceleratora.
 
@@ -285,7 +286,7 @@ Uchwyt zasobu akceleratora.
 
 Wywołaj tę funkcję, aby ustawić zasoby menu i akceleratora używane przez obiekt podrzędnego okna MDI.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przykładowy interfejs MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Przykład MDIDOCVW MFC](../../overview/visual-cpp-samples.md)<br/>

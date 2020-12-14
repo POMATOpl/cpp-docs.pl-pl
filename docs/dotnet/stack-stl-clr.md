@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: stosie (STL/CLR)'
 title: stack (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 316899aae024fbc8d9e568d6b5684ec4cfb11558
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2903af3bce3f4eba09324202dbb071b11e440573
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335378"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -254,7 +255,7 @@ typedef Container value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *kontenera*parametrów szablonu.
+Typ jest synonimem dla *kontenera* parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1113,7 +1114,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla *wartości*parametru szablonu.
+Typ jest synonimem dla *wartości* parametru szablonu.
 
 ### <a name="example"></a>Przykład
 

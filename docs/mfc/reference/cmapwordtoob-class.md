@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CMapWordToOb'
 title: Klasa CMapWordToOb
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da21902c3789f1547055baffae5650fcb6b8c789
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222995"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336709"
 ---
 # <a name="cmapwordtoob-class"></a>Klasa CMapWordToOb
 
@@ -93,7 +94,7 @@ na przykład tłumaczy na
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapWordToOb`obejmuje IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Każdy element jest serializowany, jeśli mapa jest przechowywana w archiwum, przy użyciu przeciążonego operatora wstawiania ( **<<** ) lub `Serialize` funkcji członkowskiej.
+`CMapWordToOb` obejmuje IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Każdy element jest serializowany, jeśli mapa jest przechowywana w archiwum, przy użyciu przeciążonego operatora wstawiania ( **<<** ) lub `Serialize` funkcji członkowskiej.
 
 Jeśli potrzebujesz zrzutu poszczególnych elementów WYRAZów `CObject` , musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
@@ -111,7 +112,7 @@ Aby uzyskać więcej informacji na temat `CMapWordToOb` , zobacz [kolekcje](../.
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

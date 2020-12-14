@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: hosting kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC'
 title: Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,37 +7,37 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 2704e04df3792edfee6c39f597fcbe71b6ce51b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3ccfbb32132f5732c244473c652bb6b2df175efa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335447"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
 
-MFC hostuje formant Windows Forms jako specjalny rodzaj formantu ActiveX i komunikuje się z <xref:System.Windows.Forms.Control> formantem przy użyciu interfejsów ActiveX oraz właściwości i metod klasy. Zaleca się, aby używać .NET Framework właściwości i metody do działania na formancie.
+MFC obsługuje kontrolkę Windows Forms jako specjalny rodzaj kontrolki ActiveX i komunikuje się z formantem przy użyciu interfejsów ActiveX oraz właściwości i metod <xref:System.Windows.Forms.Control> klasy. Zalecamy używanie .NET Framework właściwości i metod do działania na formancie.
 
-Dla przykładowej aplikacji, która pokazuje formularze systemu Windows używane z MFC, zobacz [MFC i Integracji formularzy systemu Windows](https://www.microsoft.com/download/details.aspx?id=2113).
+Aby uzyskać przykładową aplikację, która zawiera Windows Forms używane z MFC, zobacz [integrację MFC i Windows Forms](https://www.microsoft.com/download/details.aspx?id=2113).
 
 > [!NOTE]
-> W bieżącym wydaniu `CDialogBar` obiekt nie może obsługiwać formantów windows forms.
+> W bieżącej wersji `CDialogBar` obiekt nie może hostować Windows Forms formantów.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Instrukcje: tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
+[Instrukcje: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[Jak: Do powiązania danych DDX/DDV z formularzami systemu Windows](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[Instrukcje: wykonywanie powiązania danych DDX/DDV za pomocą Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
-[Instrukcje: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+[Instrukcje: ujścia zdarzeń Windows Forms z natywnych klas języka C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ## <a name="reference"></a>Dokumentacja
 
-[CWinFormsControl Klasa](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog Klasa](../mfc/reference/cdialog-class.md) &#124; [CWnd klasa](../mfc/reference/cwnd-class.md) &#124;<xref:System.Windows.Forms.Control>
+Klasa [CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog](../mfc/reference/cdialog-class.md) Class &#124; [CWnd](../mfc/reference/cwnd-class.md) &#124;<xref:System.Windows.Forms.Control>
 
 ## <a name="see-also"></a>Zobacz też
 
-[Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-[Różnice w programowaniu formularzy/MFC systemu Windows](../dotnet/windows-forms-mfc-programming-differences.md)<br/>
-[Hostowanie kontrolki użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)<br/>
+[Korzystanie z kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+[Różnice w programowaniu Windows Forms/MFC](../dotnet/windows-forms-mfc-programming-differences.md)<br/>
+[Hostowanie formantu użytkownika interfejsu Windows Forms jako widoku MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)<br/>
 [Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)

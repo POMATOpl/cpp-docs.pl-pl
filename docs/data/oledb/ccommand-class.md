@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CCommand'
 title: Klasa CCommand
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 150d543b666896964794503d185637680e6da8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335507"
 ---
 # <a name="ccommand-class"></a>Klasa CCommand
 
@@ -222,13 +223,13 @@ podczas Analogicznie jak *wszCommand* , z tą różnicą, że ten parametr pobie
 podczas Wskaźnik do tablicy struktur [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) zawierających właściwości i wartości, które mają zostać ustawione. Zobacz [zestawy właściwości i grupy właściwości](/previous-versions/windows/desktop/ms713696(v=vs.85)) w *odniesieniu do OLE DB programisty* w Windows SDK.
 
 *pRowsAffected*<br/>
-[we/out] Wskaźnik do pamięci, w której zwracana jest liczba wierszy, na które ma wpływ polecenie. Jeśli * \* pRowsAffected* ma wartość null, nie jest zwracana liczba wierszy. W przeciwnym razie `Open` ustawia * \* pRowsAffected* zgodnie z następującymi warunkami:
+[we/out] Wskaźnik do pamięci, w której zwracana jest liczba wierszy, na które ma wpływ polecenie. Jeśli *\* pRowsAffected* ma wartość null, nie jest zwracana liczba wierszy. W przeciwnym razie `Open` ustawia *\* pRowsAffected* zgodnie z następującymi warunkami:
 
 |Jeśli użytkownik|Następnie|
 |--------|----------|
-|`cParamSets`Element `pParams` jest większy niż 1|* \* pRowsAffected* reprezentuje łączną liczbę wierszy, na które mają wpływ wszystkie zestawy parametrów określone w wykonaniu.|
-|Liczba objętych wierszy jest niedostępna|* \* pRowsAffected* jest ustawiona na-1.|
-|Polecenie nie aktualizuje, nie usuwa ani nie wstawia wierszy|* \* pRowsAffected* jest niezdefiniowany.|
+|`cParamSets`Element `pParams` jest większy niż 1|*\* pRowsAffected* reprezentuje łączną liczbę wierszy, na które mają wpływ wszystkie zestawy parametrów określone w wykonaniu.|
+|Liczba objętych wierszy jest niedostępna|*\* pRowsAffected* jest ustawiona na-1.|
+|Polecenie nie aktualizuje, nie usuwa ani nie wstawia wierszy|*\* pRowsAffected* jest niezdefiniowany.|
 
 *guidCommand*<br/>
 podczas Identyfikator GUID, który określa składnię i ogólne reguły dla dostawcy do użycia podczas analizowania tekstu polecenia. Aby uzyskać szczegółowe informacje, zobacz [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) i [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) w *dokumentacji programisty OLE DB* .
