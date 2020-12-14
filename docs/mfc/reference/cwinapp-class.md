@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CWinApp'
 title: Klasa CWinApp
 ms.date: 07/15/2019
 f1_keywords:
@@ -192,12 +193,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60ea2ea2ef1545a814406da047d1aef42b49a7a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344942"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -252,10 +253,10 @@ class CWinApp : public CWinThread
 |[CWinApp:: IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|Informuje, czy włączono interakcję paska zadań systemu Windows 7.|
 |[CWinApp:: LoadCursor](#loadcursor)|Ładuje zasób kursora.|
 |[CWinApp:: LoadIcon](#loadicon)|Ładuje zasób ikony.|
-|[CWinApp:: LoadOEMCursor](#loadoemcursor)|Ładuje wstępnie zdefiniowany kursor OEM systemu Windows, który **OCR_** stałych określonych w systemie Windows. C.|
-|[CWinApp:: LoadOEMIcon](#loadoemicon)|Ładuje wstępnie zdefiniowaną ikonę OEM systemu Windows, która **OIC_** stałych określonych w systemie Windows. C.|
-|[CWinApp:: LoadStandardCursor](#loadstandardcursor)|Ładuje wstępnie zdefiniowany kursor systemu Windows, którego stałe **IDC_** określone w systemie Windows. C.|
-|[CWinApp:: LoadStandardIcon](#loadstandardicon)|Ładuje wstępnie zdefiniowaną ikonę systemu Windows, która **IDI_** stałych określonych w systemie Windows. C.|
+|[CWinApp:: LoadOEMCursor](#loadoemcursor)|Ładuje wstępnie zdefiniowany kursor OEM systemu Windows, który **OCR_** stałych określonych w systemie Windows. H.|
+|[CWinApp:: LoadOEMIcon](#loadoemicon)|Ładuje wstępnie zdefiniowaną ikonę OEM systemu Windows, która **OIC_** stałych określonych w systemie Windows. H.|
+|[CWinApp:: LoadStandardCursor](#loadstandardcursor)|Ładuje wstępnie zdefiniowany kursor systemu Windows, którego stałe **IDC_** określone w systemie Windows. H.|
+|[CWinApp:: LoadStandardIcon](#loadstandardicon)|Ładuje wstępnie zdefiniowaną ikonę systemu Windows, która **IDI_** stałych określonych w systemie Windows. H.|
 |[CWinApp:: OnDDECommand](#onddecommand)|Wywoływane przez platformę w odpowiedzi na polecenie wykonywania dynamicznej wymiany danych (DDE).|
 |[CWinApp:: OnIdle](#onidle)|Przesłoń, aby przetwarzać czas bezczynności specyficzny dla aplikacji.|
 |[CWinApp:: OpenDocumentFile](#opendocumentfile)|Wywoływane przez platformę, by otworzyć dokument z pliku.|
@@ -1155,7 +1156,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ### <a name="parameters"></a>Parametry
 
 *nIDCursor*<br/>
-**OCR_** stały identyfikator manifestu, który określa wstępnie zdefiniowany kursor systemu Windows. Musisz wcześniej uzyskać `#define OEMRESOURCE` `#include \<afxwin.h>` dostęp do stałych **OCR_** w systemie Windows. C.
+**OCR_** stały identyfikator manifestu, który określa wstępnie zdefiniowany kursor systemu Windows. Musisz wcześniej uzyskać `#define OEMRESOURCE` `#include \<afxwin.h>` dostęp do stałych **OCR_** w systemie Windows. H.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1182,7 +1183,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 ### <a name="parameters"></a>Parametry
 
 *nIDIcon*<br/>
-**OIC_** stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Musisz mieć `#define OEMRESOURCE` wcześniej `#include \<afxwin.h>` dostęp do stałych **OIC_** w systemie Windows. C.
+**OIC_** stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Musisz mieć `#define OEMRESOURCE` wcześniej `#include \<afxwin.h>` dostęp do stałych **OIC_** w systemie Windows. H.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1203,7 +1204,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszCursorName*<br/>
-**IDC_** stały identyfikator manifestu, który określa wstępnie zdefiniowany kursor systemu Windows. Te identyfikatory są zdefiniowane w systemie WINDOWS. C. Na poniższej liście przedstawiono możliwe wstępnie zdefiniowane wartości i znaczenia dla *lpszCursorName*:
+**IDC_** stały identyfikator manifestu, który określa wstępnie zdefiniowany kursor systemu Windows. Identyfikatory te są zdefiniowane w systemie WINDOWS. H. Na poniższej liście przedstawiono możliwe wstępnie zdefiniowane wartości i znaczenia dla *lpszCursorName*:
 
 - Kursor standardowej strzałki IDC_ARROW
 
@@ -1252,7 +1253,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszIconName*<br/>
-Stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Te identyfikatory są zdefiniowane w systemie WINDOWS. C. Aby zapoznać się z listą możliwych wstępnie zdefiniowanych wartości i ich opisów, zobacz parametr *lpIconName* w [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) w Windows SDK.
+Stały identyfikator manifestu, który określa wstępnie zdefiniowaną ikonę systemu Windows. Identyfikatory te są zdefiniowane w systemie WINDOWS. H. Aby zapoznać się z listą możliwych wstępnie zdefiniowanych wartości i ich opisów, zobacz parametr *lpIconName* w [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) w Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1828,7 +1829,7 @@ Jeśli zastąpisz tę funkcję zaawansowaną, pamiętaj, aby wywołać wersję k
 
 ## <a name="cwinappprocessshellcommand"></a><a name="processshellcommand"></a> CWinApp::P rocessShellCommand
 
-Ta funkcja członkowska jest wywoływana przez [InitInstance](#initinstance) , aby akceptować parametry przesyłane z `CCommandLineInfo` obiektu identyfikowanego przez *rCmdInfo*i wykonywać wskazane działanie.
+Ta funkcja członkowska jest wywoływana przez [InitInstance](#initinstance) , aby akceptować parametry przesyłane z `CCommandLineInfo` obiektu identyfikowanego przez *rCmdInfo* i wykonywać wskazane działanie.
 
 ```
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
@@ -2179,7 +2180,7 @@ Identyfikator zasobu ciągu zawierającego nazwę klucza rejestru.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja ustawia *m_pszRegistryKey*, który jest następnie używany przez `GetProfileInt` `GetProfileString` `WriteProfileInt` funkcje członkowskie,, i `WriteProfileString` `CWinApp` . Jeśli ta funkcja została wywołana, lista ostatnio używanych plików (MRU) jest również przechowywana w rejestrze. Klucz rejestru jest zwykle nazwą firmy. Jest ona przechowywana w kluczu w następującej postaci: HKEY_CURRENT_USER \Software \\<nazwa firmy \> \\<nazwa aplikacji \> \\<Nazwa sekcji \> \\<Nazwa wartości \> .
+Ta funkcja ustawia *m_pszRegistryKey*, który jest następnie używany przez `GetProfileInt` `GetProfileString` `WriteProfileInt` funkcje członkowskie,, i `WriteProfileString` `CWinApp` . Jeśli ta funkcja została wywołana, lista ostatnio używanych plików (MRU) jest również przechowywana w rejestrze. Klucz rejestru jest zwykle nazwą firmy. Jest ona przechowywana w kluczu w następującej postaci: HKEY_CURRENT_USER\Software\\<nazwa firmy \> \\<nazwa aplikacji \> \\<Nazwa sekcji \> \\<Nazwa wartości \> .
 
 ## <a name="cwinappsupportsapplicationrecovery"></a><a name="supportsapplicationrecovery"></a> CWinApp:: SupportsApplicationRecovery
 

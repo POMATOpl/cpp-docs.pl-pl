@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CStatic'
 title: Klasa CStatic
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: 1f6aac50b2143a4d5296baac906b1ebd0ef542f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fa151382cc1342151e937662781a625739e82bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342663"
 ---
 # <a name="cstatic-class"></a>Klasa CStatic
 
@@ -92,7 +93,7 @@ Jeśli utworzysz `CStatic` obiekt w oknie, może być również konieczne jego z
 
 **Nagłówek:** afxwin. h
 
-## <a name="cstaticcreate"></a><a name="create"></a>CStatic:: Create
+## <a name="cstaticcreate"></a><a name="create"></a> CStatic:: Create
 
 Tworzy formant statyczny systemu Windows i dołącza go do `CStatic` obiektu.
 
@@ -154,7 +155,7 @@ W przypadku kursorów, map bitowych lub ikon warto również użyć następując
 
 [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]
 
-## <a name="cstaticcstatic"></a><a name="cstatic"></a>CStatic::CStatic
+## <a name="cstaticcstatic"></a><a name="cstatic"></a> CStatic::CStatic
 
 Konstruuje `CStatic` obiekt.
 
@@ -166,7 +167,7 @@ CStatic();
 
 [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]
 
-## <a name="cstaticdrawitem"></a><a name="drawitem"></a>CStatic::D rawItem
+## <a name="cstaticdrawitem"></a><a name="drawitem"></a> CStatic::D rawItem
 
 Wywoływane przez platformę, by narysować formant statyczny rysowany przez właściciela.
 
@@ -183,7 +184,7 @@ Wskaźnik do struktury [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-dr
 
 Zastąp tę funkcję, aby zaimplementować rysowanie dla obiektu rysowanego przez właściciela `CStatic` (formant ma styl SS_OWNERDRAW).
 
-## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a>CStatic:: getmap
+## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a> CStatic:: getmap
 
 Pobiera uchwyt mapy bitowej, wcześniej ustawiony za pomocą [Setmap bitowych](#setbitmap), która jest skojarzona z `CStatic` .
 
@@ -199,7 +200,7 @@ Dojście do bieżącej mapy bitowej lub wartość NULL, jeśli nie została usta
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-## <a name="cstaticgetcursor"></a><a name="getcursor"></a>CStatic:: GetCursor
+## <a name="cstaticgetcursor"></a><a name="getcursor"></a> CStatic:: GetCursor
 
 Pobiera uchwyt kursora wcześniej ustawiony za pomocą elementu [SetCursor](#setcursor), który jest skojarzony z `CStatic` .
 
@@ -215,7 +216,7 @@ Dojście do bieżącego kursora lub wartość NULL, jeśli nie ustawiono kursora
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a>CStatic::GetEnhMetaFile
+## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a> CStatic::GetEnhMetaFile
 
 Pobiera uchwyt rozszerzonego metapliku, wcześniej ustawiony za pomocą [SetEnhMetafile](#setenhmetafile), który jest skojarzony z `CStatic` .
 
@@ -231,7 +232,7 @@ Dojście do bieżącego rozszerzonego metapliku lub wartość NULL, jeśli nie u
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-## <a name="cstaticgeticon"></a><a name="geticon"></a>CStatic:: GetIcon
+## <a name="cstaticgeticon"></a><a name="geticon"></a> CStatic:: GetIcon
 
 Pobiera uchwyt ikony wcześniej ustawionej za pomocą [SetIcon](#seticon), która jest skojarzona z `CStatic` .
 
@@ -247,7 +248,7 @@ Dojście do bieżącej ikony lub wartość NULL, jeśli nie ustawiono żadnej ik
 
 [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]
 
-## <a name="cstaticsetbitmap"></a><a name="setbitmap"></a>CStatic:: setmap
+## <a name="cstaticsetbitmap"></a><a name="setbitmap"></a> CStatic:: setmap
 
 Kojarzy nową mapę bitową z kontrolką statyczną.
 
@@ -276,7 +277,7 @@ Można użyć różnych stylów okna i statycznych kontrolek, w tym:
 
 - MFC udostępnia klasę `CBitmap` , której można użyć, gdy konieczne jest wykonanie większej części obrazu mapy bitowej niż tylko wywoływanie funkcji Win32 `LoadBitmap` . `CBitmap`, który zawiera jeden rodzaj obiektu GDI, jest często używany w współpracy z `CStatic` , która jest `CWnd` klasą, która jest używana do wyświetlania obiektu graficznego jako kontrolki statycznej.
 
-`CImage`jest klasą ATL/MFC, która umożliwia łatwiejsze współdziałanie z niezależnymi mapami bitowymi urządzeń (DIB). Aby uzyskać więcej informacji, zobacz [Klasa funkcji CImage](../../atl-mfc-shared/reference/cimage-class.md).
+`CImage` jest klasą ATL/MFC, która umożliwia łatwiejsze współdziałanie z niezależnymi mapami bitowymi urządzeń (DIB). Aby uzyskać więcej informacji, zobacz [Klasa funkcji CImage](../../atl-mfc-shared/reference/cimage-class.md).
 
 - Typowym zastosowaniem jest przyznanie `CStatic::SetBitmap` obiektu GDI, który jest zwracany przez operator HBITMAP `CBitmap` obiektu lub `CImage` . Kod, aby to zrobić, jest podobny do następującego wiersza.
 
@@ -290,7 +291,7 @@ Poniższy przykład tworzy dwa `CStatic` obiekty na stercie. Następnie ładuje 
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-## <a name="cstaticsetcursor"></a><a name="setcursor"></a>CStatic:: SetCursor
+## <a name="cstaticsetcursor"></a><a name="setcursor"></a> CStatic:: SetCursor
 
 Kojarzy nowy obraz kursora z kontrolką statyczną.
 
@@ -321,7 +322,7 @@ Można użyć różnych stylów okna i statycznych kontrolek, w tym następując
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a>CStatic::SetEnhMetaFile
+## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a> CStatic::SetEnhMetaFile
 
 Kojarzy nowy obraz rozszerzonego metapliku z kontrolką statyczną.
 
@@ -350,7 +351,7 @@ Można użyć różnych stylów okna i statycznych kontrolek, w tym następując
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-## <a name="cstaticseticon"></a><a name="seticon"></a>CStatic:: SetIcon
+## <a name="cstaticseticon"></a><a name="seticon"></a> CStatic:: SetIcon
 
 Kojarzy nowy obraz ikony z kontrolką statyczną.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Przewodnik: debugowanie aplikacji C++ AMP'
 title: 'Wskazówki: debugowanie aplikacji C++ AMP'
 ms.date: 04/23/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 21ce276af9317c06f3b717b41685f419d2362d70
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 77ae45b07967d92ba162e77dd8a9dccd696a1008
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344916"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Wskazówki: debugowanie aplikacji C++ AMP
 
@@ -52,9 +53,9 @@ Instrukcje dotyczące tworzenia projektu różnią się w zależności od używa
 
 1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego Ustaw  **Język** na **C++** , ustaw **platformę** na **Windows** i ustaw **Typ projektu** na **Console** .
+1. W górnej części okna dialogowego Ustaw  **Język** na **C++**, ustaw **platformę** na **Windows** i ustaw **Typ projektu** na **Console**.
 
-1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej** . Na następnej stronie Wprowadź wartość `AMPMapReduce` w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
+1. Z listy filtrowane typy projektów wybierz pozycję **Aplikacja konsolowa** , a następnie wybierz przycisk **dalej**. Na następnej stronie Wprowadź wartość `AMPMapReduce` w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
 
    ![Nadaj nazwę projektowi](../../build/media/mathclient-project-name-2019.png "Nadaj nazwę projektowi")
 
@@ -68,17 +69,17 @@ Instrukcje dotyczące tworzenia projektu różnią się w zależności od używa
 
 1. Uruchom program Visual Studio.
 
-1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** .
+1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W obszarze **zainstalowane** w okienku szablony wybierz **Visual C++** .
+1. W obszarze **zainstalowane** w okienku szablony wybierz **Visual C++**.
 
-1. Wybierz pozycję **aplikacja konsoli Win32** , wpisz `AMPMapReduce` w polu **Nazwa** , a następnie wybierz przycisk **OK** .
+1. Wybierz pozycję **aplikacja konsoli Win32**, wpisz `AMPMapReduce` w polu **Nazwa** , a następnie wybierz przycisk **OK** .
 
 1. Wybierz przycisk **dalej** .
 
 1. Wyczyść pole wyboru **prekompilowany nagłówek** , a następnie wybierz przycisk **Zakończ** .
 
-1. W **Eksplorator rozwiązań** Usuń *stdafx. h* , *targetver. h* i *stdafx. cpp* z projektu.
+1. W **Eksplorator rozwiązań** Usuń *stdafx. h*, *targetver. h* i *stdafx. cpp* z projektu.
 
 ::: moniker-end
 
@@ -203,15 +204,15 @@ Ponown
     }
 ```
 
-1. Na pasku menu wybierz kolejno opcje **plik**  >  **Zapisz wszystko** .
+1. Na pasku menu wybierz kolejno opcje **plik**  >  **Zapisz wszystko**.
 
-1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **AMPMapReduce** , a następnie wybierz polecenie **Właściwości** .
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **AMPMapReduce**, a następnie wybierz polecenie **Właściwości**.
 
-1. W oknie dialogowym **strony właściwości** w obszarze **Właściwości konfiguracji** Wybierz wstępnie skompilowane nagłówki **C/C++**  >  **Precompiled Headers** .
+1. W oknie dialogowym **strony właściwości** w obszarze **Właściwości konfiguracji** Wybierz wstępnie skompilowane nagłówki **C/C++**  >  .
 
-1. Dla właściwości **prekompilowanego nagłówka** wybierz opcję **nie używa prekompilowanych nagłówków** , a następnie wybierz przycisk **OK** .
+1. Dla właściwości **prekompilowanego nagłówka** wybierz opcję **nie używa prekompilowanych nagłówków**, a następnie wybierz przycisk **OK** .
 
-1. Na pasku menu wybierz polecenie **Kompiluj**  >  **kompilację rozwiązania** .
+1. Na pasku menu wybierz polecenie **Kompiluj**  >  **kompilację rozwiązania**.
 
 ## <a name="debugging-the-cpu-code"></a>Debugowanie kodu procesora
 
@@ -219,22 +220,22 @@ W tej procedurze zostanie użyty lokalny debuger systemu Windows, aby upewnić s
 
 ### <a name="to-debug-the-cpu-code"></a>Aby debugować kod procesora CPU
 
-1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **AMPMapReduce** , a następnie wybierz polecenie **Właściwości** .
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **AMPMapReduce**, a następnie wybierz polecenie **Właściwości**.
 
-2. W oknie dialogowym **strony właściwości** , w obszarze **Właściwości konfiguracji** , wybierz **debugowanie** . Sprawdź, czy na liście **debuger do uruchomienia** wybrano **lokalny debuger systemu Windows** .
+2. W oknie dialogowym **strony właściwości** , w obszarze **Właściwości konfiguracji**, wybierz **debugowanie**. Sprawdź, czy na liście **debuger do uruchomienia** wybrano **lokalny debuger systemu Windows** .
 
-3. Wróć do **edytora kodu** .
+3. Wróć do **edytora kodu**.
 
 4. Ustaw punkty przerwania w wierszach kodu pokazanych na poniższej ilustracji (około wierszy 67 wiersz 70).
 
    ![Punkty przerwania procesora CPU](../../parallel/amp/media/campcpubreakpoints.png "Punkty przerwania procesora CPU") <br/>
    Punkty przerwania procesora CPU
 
-5. Na pasku menu wybierz **Debuguj**  >  **Rozpocznij debugowanie** .
+5. Na pasku menu wybierz **Debuguj**  >  **Rozpocznij debugowanie**.
 
 6. W oknie **zmiennych lokalnych** Obserwuj wartość ustawienia do `stride_size` momentu, aż zostanie osiągnięty punkt przerwania w wierszu 70.
 
-7. Na pasku menu wybierz **Debuguj**  >  **Zatrzymaj debugowanie** .
+7. Na pasku menu wybierz **Debuguj**  >  **Zatrzymaj debugowanie**.
 
 ## <a name="debugging-the-gpu-code"></a>Debugowanie kodu GPU
 
@@ -242,11 +243,11 @@ W tej sekcji pokazano, jak debugować kod procesora GPU, który jest kodem zawar
 
 ### <a name="to-debug-the-gpu-code"></a>Aby debugować kod procesora GPU
 
-1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **AMPMapReduce** , a następnie wybierz polecenie **Właściwości** .
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla **AMPMapReduce**, a następnie wybierz polecenie **Właściwości**.
 
-2. W oknie dialogowym **strony właściwości** , w obszarze **Właściwości konfiguracji** , wybierz **debugowanie** .
+2. W oknie dialogowym **strony właściwości** , w obszarze **Właściwości konfiguracji**, wybierz **debugowanie**.
 
-3. Na liście **debuger do uruchomienia** wybierz pozycję **lokalny debuger systemu Windows** .
+3. Na liście **debuger do uruchomienia** wybierz pozycję **lokalny debuger systemu Windows**.
 
 4. Na liście **Typ debugera** Sprawdź, czy jest wybrana wartość **Autowybór** .
 
@@ -259,11 +260,11 @@ W tej sekcji pokazano, jak debugować kod procesora GPU, który jest kodem zawar
    ![Punkty przerwania procesora GPU](../../parallel/amp/media/campgpubreakpoints.png "Punkty przerwania procesora GPU") <br/>
    Punkt przerwania procesora GPU
 
-7. Na pasku menu wybierz **Debuguj**  >  **Rozpocznij debugowanie** . Punkty przerwania w kodzie procesora CPU w wierszach 67 i 70 nie są wykonywane podczas debugowania GPU, ponieważ te wiersze kodu są wykonywane na PROCESORAch.
+7. Na pasku menu wybierz **Debuguj**  >  **Rozpocznij debugowanie**. Punkty przerwania w kodzie procesora CPU w wierszach 67 i 70 nie są wykonywane podczas debugowania GPU, ponieważ te wiersze kodu są wykonywane na PROCESORAch.
 
 ### <a name="to-use-the-gpu-threads-window"></a>Aby użyć okna wątków procesora GPU
 
-1. Aby otworzyć okno **wątki GPU** , na pasku menu wybierz **Debuguj**  >  **Windows**  >  **wątki procesora GPU** systemu Windows.
+1. Aby otworzyć okno **wątki GPU** , na pasku menu wybierz **Debuguj**  >    >  **wątki procesora GPU** systemu Windows.
 
    W wyświetlonym oknie **wątki GPU** można sprawdzić stan wątków procesora GPU.
 
@@ -276,7 +277,7 @@ W tej sekcji pokazano, jak debugować kod procesora GPU, który jest kodem zawar
 
    W oknie **wątki GPU** są aktywne cztery wątki GPU i 28 wątków GPU zablokowanych w instrukcji [tile_barrier:: wait](reference/tile-barrier-class.md#wait) zdefiniowanej w wierszu o godzinie 21 ( `t_idx.barrier.wait();` ). Wszystkie wątki procesora GPU 32 należą do pierwszego kafelka, `tile[0]` . Strzałka wskazuje wiersz, który zawiera bieżący wątek. Aby przełączyć się do innego wątku, użyj jednej z następujących metod:
 
-    - W wierszu dla wątku do przełączenia w oknie **wątki GPU** Otwórz menu skrótów, a następnie wybierz polecenie **Przełącz do wątku** . Jeśli wiersz reprezentuje więcej niż jeden wątek, przejdziesz do pierwszego wątku według współrzędnych wątku.
+    - W wierszu dla wątku do przełączenia w oknie **wątki GPU** Otwórz menu skrótów, a następnie wybierz polecenie **Przełącz do wątku**. Jeśli wiersz reprezentuje więcej niż jeden wątek, przejdziesz do pierwszego wątku według współrzędnych wątku.
 
     - Wprowadź wartości kafelka i wątku wątku w odpowiednich polach tekstowych, a następnie wybierz przycisk **Przełącz wątek** .
 
@@ -284,7 +285,7 @@ W tej sekcji pokazano, jak debugować kod procesora GPU, który jest kodem zawar
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Aby użyć okna stosów równoległych
 
-1. Aby otworzyć okno **stosów równoległych** , na pasku menu wybierz kolejno opcje **Debuguj**  >  **Windows**  >  **równoległe stosy** systemu Windows.
+1. Aby otworzyć okno **stosów równoległych** , na pasku menu wybierz kolejno opcje **Debuguj**  >    >  **równoległe stosy** systemu Windows.
 
    Można użyć okna **stosów równoległych** , aby jednocześnie zbadać ramki stosu wielu wątków procesora GPU.
 
@@ -297,7 +298,7 @@ W tej sekcji pokazano, jak debugować kod procesora GPU, który jest kodem zawar
 
    32 wątków przeszedł z `_kernel_stub` do instrukcji lambda w `parallel_for_each` wywołaniu funkcji, a następnie do `sum_kernel_tiled` funkcji, w której występuje ograniczenie równoległe. 28 z 32 wątków postępuje zgodnie z instrukcją [tile_barrier:: wait](reference/tile-barrier-class.md#wait) i pozostaje zablokowana w wierszu 22, podczas gdy pozostałe 4 wątki pozostają aktywne w `sum_kernel_tiled` funkcji w wierszu 30.
 
-   Można sprawdzić właściwości wątku procesora GPU, które są dostępne w oknie **wątki GPU** w rozbudowanej etykietki danych okna **stosów równoległych** . Aby to zrobić, umieść wskaźnik myszy na ramce stosu **sum_kernel_tiled** . Na poniższej ilustracji przedstawiono etykietki danych.
+   Można sprawdzić właściwości wątku procesora GPU, które są dostępne w oknie **wątki GPU** w rozbudowanej etykietki danych okna **stosów równoległych** . Aby to zrobić, umieść wskaźnik myszy na ramce stosu **sum_kernel_tiled**. Na poniższej ilustracji przedstawiono etykietki danych.
 
    ![Okno etykietki danych dla stosów równoległych](../../parallel/amp/media/campe.png "Okno etykietki danych dla stosów równoległych") <br/>
    Etykietki danych wątku procesora GPU
@@ -306,7 +307,7 @@ W tej sekcji pokazano, jak debugować kod procesora GPU, który jest kodem zawar
 
 ### <a name="to-use-the-parallel-watch-window"></a>Aby użyć okno wyrażeń kontrolnych równoległego
 
-1. Aby otworzyć okno **czujki równoległej** , na pasku menu wybierz kolejno opcje **Debuguj**  >  **Windows**  >  **równoległe** równoległe Obejrzyj  >  **czujka 1** .
+1. Aby otworzyć okno **czujki równoległej** , na pasku menu wybierz kolejno opcje **Debuguj**  >    >  **równoległe** równoległe Obejrzyj  >  **czujka 1**.
 
    Można użyć okna **czujki równoległej** do sprawdzenia wartości wyrażenia w wielu wątkach.
 
@@ -320,12 +321,12 @@ W tej sekcji pokazano, jak debugować kod procesora GPU, który jest kodem zawar
 
    Można sortować według określonego wyrażenia, wybierając odpowiedni nagłówek kolumny.
 
-   Wybierz nagłówek kolumny **locale [localIdx [0]]** , aby posortować kolumnę. Na poniższej ilustracji przedstawiono wyniki sortowania według wartości **locale [localIdx [0]]** .
+   Wybierz nagłówek kolumny **locale [localIdx [0]]** , aby posortować kolumnę. Na poniższej ilustracji przedstawiono wyniki sortowania według wartości **locale [localIdx [0]]**.
 
    ![okno wyrażeń kontrolnych równoległe z posortowanymi wynikami](../../parallel/amp/media/campf.png "okno wyrażeń kontrolnych równoległe z posortowanymi wynikami") <br/>
    Wyniki sortowania
 
-   Możesz wyeksportować zawartość okna **czujki równoległej** do programu Excel, wybierając przycisk **programu Excel** , a następnie wybierając pozycję **Otwórz w programie Excel** . Jeśli na komputerze deweloperskim jest zainstalowany program Excel, spowoduje to otwarcie arkusza programu Excel zawierającego zawartość.
+   Możesz wyeksportować zawartość okna **czujki równoległej** do programu Excel, wybierając przycisk **programu Excel** , a następnie wybierając pozycję **Otwórz w programie Excel**. Jeśli na komputerze deweloperskim jest zainstalowany program Excel, spowoduje to otwarcie arkusza programu Excel zawierającego zawartość.
 
 6. W prawym górnym rogu okna **czujki równoległej** istnieje kontrolka filtru, której można użyć do filtrowania zawartości przy użyciu wyrażeń logicznych. Wprowadź `localA[localIdx[0]] > 20000` wartość w polu tekstowym kontrolka filtru, a następnie wybierz klawisz **Enter** .
 
@@ -339,7 +340,7 @@ Można oznaczyć określone wątki procesora GPU przez Oflagowanie ich w oknie *
 
 1. Wybierz nagłówek kolumny **[Thread]** w oknie **równoległe czujka 1** , aby posortować według indeksu kafelków i indeksu wątku.
 
-2. Na pasku menu wybierz **Debuguj**  >  **Kontynuuj** , co spowoduje, że cztery wątki, które były aktywne do postępu do następnej bariery (zdefiniowane w wierszu 32 AMPMapReduce. cpp).
+2. Na pasku menu wybierz **Debuguj**  >  **Kontynuuj**, co spowoduje, że cztery wątki, które były aktywne do postępu do następnej bariery (zdefiniowane w wierszu 32 AMPMapReduce. cpp).
 
 3. Wybierz symbol flagi po lewej stronie wiersza zawierającego cztery wątki, które są teraz aktywne.
 
@@ -350,14 +351,14 @@ Można oznaczyć określone wątki procesora GPU przez Oflagowanie ich w oknie *
 
    Okno **czujki równoległej** i etykietki danych okna **stosów równoległych** wskazują wątki oflagowane.
 
-4. Jeśli chcesz skupić się na czterech wątkach, które zostały oflagowane, możesz pokazać, w **wątkach procesora GPU** , **równoległe** i **równoległe stosy** okna, tylko Oflagowane wątki.
+4. Jeśli chcesz skupić się na czterech wątkach, które zostały oflagowane, możesz pokazać, w **wątkach procesora GPU**, **równoległe** i **równoległe stosy** okna, tylko Oflagowane wątki.
 
    Wybierz przycisk **Pokaż tylko Oflagowane** na dowolnym z okien lub na pasku narzędzi **Lokalizacja debugowania** . Na poniższej ilustracji przedstawiono przycisk **Pokaż tylko Oflagowane** na pasku narzędzi **Lokalizacja debugowania** .
 
    ![Pasek narzędzi lokalizacji debugowania z ikoną Pokaż tylko Oflagowane](../../parallel/amp/media/camph.png "Pasek narzędzi lokalizacji debugowania z ikoną Pokaż tylko Oflagowane") <br/>
    **Pokaż przycisk tylko Oflagowane**
 
-   Teraz **wątki procesora GPU** , **zegarki równoległe** i **stosy równoległe** wyświetlają tylko Oflagowane wątki.
+   Teraz **wątki procesora GPU**, **zegarki równoległe** i **stosy równoległe** wyświetlają tylko Oflagowane wątki.
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Zamrażanie i odblokowywanie wątków procesora GPU
 
@@ -367,9 +368,9 @@ Wątki procesora GPU (zawieszające) i odblokowywanie (wznawianie) można zablok
 
 1. Wybierz przycisk **Pokaż tylko Oflagowane** , aby wyświetlić wszystkie wątki.
 
-2. Na pasku menu wybierz **Debuguj**  >  **Kontynuuj** .
+2. Na pasku menu wybierz **Debuguj**  >  **Kontynuuj**.
 
-3. Otwórz menu skrótów dla aktywnego wiersza, a następnie wybierz polecenie **Zablokuj** .
+3. Otwórz menu skrótów dla aktywnego wiersza, a następnie wybierz polecenie **Zablokuj**.
 
    Na poniższej ilustracji okna **wątki GPU** przedstawiono zamrożone wszystkie cztery wątki.
 
@@ -380,36 +381,36 @@ Wątki procesora GPU (zawieszające) i odblokowywanie (wznawianie) można zablok
 
 4. Na pasku menu wybierz **Debuguj**  >  **Kontynuuj** , aby zezwolić na następnych cztery wątki GPU na postęp poza barierą w wierszu 22 i aby osiągnąć punkt przerwania w wierszu 30. Okno **wątki GPU** pokazuje, że cztery poprzednio zamrożone wątki pozostają zamrożone i w stanie aktywnym.
 
-5. Na pasku menu wybierz **Debuguj** , **Kontynuuj** .
+5. Na pasku menu wybierz **Debuguj**, **Kontynuuj**.
 
 6. W oknie **czujki równoległej** można również odmrożenie pojedynczych lub wielu wątków procesora GPU.
 
 ### <a name="to-group-gpu-threads"></a>Aby zgrupować wątki procesora GPU
 
-1. W menu skrótów dla jednego z wątków w oknie **wątki GPU** wybierz pozycję **Grupuj według** , **adres** .
+1. W menu skrótów dla jednego z wątków w oknie **wątki GPU** wybierz pozycję **Grupuj według**, **adres**.
 
    Wątki w oknie **wątki GPU** są pogrupowane według adresu. Adres odpowiada instrukcji zawartej w demontażu, gdzie znajduje się każda grupa wątków. 24 wątki są w wierszu 22, gdzie jest wykonywana [metoda tile_barrier:: wait](reference/tile-barrier-class.md#wait) . 12 wątków znajduje się w instrukcji dla bariery w wierszu 32. Cztery z tych wątków są oflagowane. Osiem wątków znajduje się w punkcie przerwania w wierszu 30. Cztery z tych wątków są zamrożone. Na poniższej ilustracji przedstawiono pogrupowane wątki w oknie **wątki GPU** .
 
    ![Okno wątków GPU z wątkami pogrupowanymi według adresu](../../parallel/amp/media/campl.png "Okno wątków GPU z wątkami pogrupowanymi według adresu") <br/>
    Zgrupowane wątki w oknie **wątków GPU**
 
-2. Możesz również wykonać operację **Grupuj według** , otwierając menu skrótów dla siatki danych w oknie **czujki równoległej** , wybierając pozycję **Grupuj według** , a następnie wybierając element menu, który odnosi się do tego, jak chcesz grupować wątki.
+2. Możesz również wykonać operację **Grupuj według** , otwierając menu skrótów dla siatki danych w oknie **czujki równoległej** , wybierając pozycję **Grupuj według**, a następnie wybierając element menu, który odnosi się do tego, jak chcesz grupować wątki.
 
 ## <a name="running-all-threads-to-a-specific-location-in-code"></a>Uruchamianie wszystkich wątków w określonej lokalizacji w kodzie
 
-Wszystkie wątki w danym kafelku są uruchamiane z wierszem zawierającym kursor przy użyciu opcji **Uruchom bieżący kafelek do kursora** .
+Wszystkie wątki w danym kafelku są uruchamiane z wierszem zawierającym kursor przy użyciu opcji **Uruchom bieżący kafelek do kursora**.
 
 ### <a name="to-run-all-threads-to-the-location-marked-by-the-cursor"></a>Aby uruchomić wszystkie wątki do lokalizacji oznaczonej przez kursor
 
 1. W menu skrótów dla zamrożonych **wątków wybierz polecenie** Odblokuj.
 
-2. W **edytorze kodu** , umieść kursor w wierszu 30.
+2. W **edytorze kodu**, umieść kursor w wierszu 30.
 
-3. W menu skrótów dla **edytora kodu** wybierz polecenie **Uruchom bieżący kafelek do kursora** .
+3. W menu skrótów dla **edytora kodu** wybierz polecenie **Uruchom bieżący kafelek do kursora**.
 
    24 wątki, które zostały wcześniej zablokowane w przeszkodzie w wierszu 21, zostały zapostępować zgodnie z wierszem 32. Jest to wyświetlane w oknie **wątki GPU** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CReBar'
 title: Klasa CReBar
 ms.date: 11/19/2018
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: c1379d1ef8effea0df564da1b43769bb9a11435d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 138add510b76f21f5776f809b1551eb35d554d68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363928"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343130"
 ---
 # <a name="crebar-class"></a>Klasa CReBar
 
-Pasek sterowania, który zawiera informacje o układzie, trwałości i stanie dla formantów prętów zbrojeniowych.
+Pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów paska pomocniczego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,44 +36,44 @@ class CReBar : public CControlBar
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CReBar::Dodaj pasek](#addbar)|Dodaje opaskę do pręta zbrojeniowego.|
-|[CReBar::Tworzenie](#create)|Tworzy formant prętów zbrojeniowych i dołącza go do `CReBar` obiektu.|
-|[CReBar::GetReBarCtrl](#getrebarctrl)|Umożliwia bezpośredni dostęp do podstawowej wspólnej kontroli.|
+|[CReBar:: AddBar](#addbar)|Dodaje bandę do paska pomocniczego.|
+|[CReBar:: Create](#create)|Tworzy formant paska pomocniczego i dołącza go do `CReBar` obiektu.|
+|[CReBar:: GetReBarCtrl](#getrebarctrl)|Zezwala na bezpośredni dostęp do podstawowej kontroli wspólnej.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt prętów zbrojeniowych może zawierać różne okna podrzędne, zazwyczaj inne formanty, w tym pola edycji, paski narzędzi i pola listy. Obiekt prętów zbrojeniowych może wyświetlać swoje okna podrzędne na określonej mapie bitowej. Aplikacja może automatycznie zmienić rozmiar pręta zbrojeniowego lub użytkownik może ręcznie zmienić rozmiar pręta zbrojeniowego, klikając lub przeciągając pasek chwytaka.
+Obiekt paska pomocniczego może zawierać różne okna podrzędne, zwykle inne kontrolki, takie jak pola edycji, paski narzędzi i pola listy. Obiekt paska pomocniczego może wyświetlać jego okna podrzędne przez określoną mapę bitową. Aplikacja może automatycznie zmienić rozmiar paska pomocniczego lub można ręcznie zmienić rozmiar paska pomocniczego, klikając lub przeciągając pasek uchwytu.
 
 ![Przykład RebarMenu](../../mfc/reference/media/vc4sc61.gif "Przykład RebarMenu")
 
-## <a name="rebar-control"></a>Sterowanie prętami zbrojeniowym
+## <a name="rebar-control"></a>Paska pomocniczego — formant
 
-Obiekt prętów zbrojeniowych zachowuje się podobnie do obiektu paska narzędzi. Pręt zbrojeniowy używa mechanizmu klikania i przeciągania do ponownego rozmiaru jego pasm. Formant prętów zbrojeniowych może zawierać jeden lub więcej pasm, przy czym każdy zespół ma dowolną kombinację paska chwytaka, mapy bitowej, etykiety tekstowej i okna podrzędnego. Jednak pasma nie może zawierać więcej niż jedno okno podrzędne.
+Obiekt paska pomocniczego zachowuje się podobnie do obiektu Toolbar. Paska pomocniczego używa mechanizmu klikania i przeciągania, aby zmienić rozmiar jego pasm. Kontrolka paska pomocniczego może zawierać co najmniej jedną grupę, a każdy z nich ma dowolną kombinację paska uchwytu, mapy bitowej, etykiety tekstowej i okna podrzędnego. Jednak pasma nie mogą zawierać więcej niż jednego okna podrzędnego.
 
-`CReBar`używa [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) klasy, aby zapewnić jego implementacji. Można uzyskać dostęp do kontroli prętów zbrojeniowych za pośrednictwem [GetReBarCtrl,](#getrebarctrl) aby skorzystać z opcji dostosowywania formantu. Aby uzyskać więcej informacji na `CReBarCtrl`temat elementów sterujących prętów zbrojeniowych, zobacz . Aby uzyskać więcej informacji na temat używania formantów prętów zbrojeniowych, zobacz [Korzystanie z CReBarCtrl](../../mfc/using-crebarctrl.md).
+`CReBar` używa klasy [Korzystanie CReBarCtrl](../../mfc/reference/crebarctrl-class.md) w celu zapewnienia jej implementacji. Aby skorzystać z opcji dostosowania kontrolki, można uzyskać dostęp do formantu paska pomocniczego za pomocą [GetReBarCtrl](#getrebarctrl) . Aby uzyskać więcej informacji na temat kontrolek paska pomocniczego, zobacz `CReBarCtrl` . Aby uzyskać więcej informacji na temat używania formantów paska pomocniczego, zobacz [using korzystanie CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 > [!CAUTION]
-> Obiekty sterujące prętami zbrojeniowymi i prętami zbrojeniowymi nie obsługują dokowania pręta sterującego MFC. Jeśli `CRebar::EnableDocking` jest wywoływana, aplikacja będzie potwierdzać.
+> Obiekty sterowania paska pomocniczego i paska pomocniczego nie obsługują dokowania paska sterowania MFC. Jeśli `CRebar::EnableDocking` jest wywoływana, aplikacja zostanie zatwierdzona.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
-[Ccontrolbar](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
 `CReBar`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxext.h
+**Nagłówek:** afxext. h
 
-## <a name="crebaraddbar"></a><a name="addbar"></a>CReBar::Dodaj pasek
+## <a name="crebaraddbar"></a><a name="addbar"></a> CReBar:: AddBar
 
-Wywołanie tej funkcji elementu członkowskiego, aby dodać zespół do pręta zbrojeniowego.
+Wywołaj tę funkcję elementu członkowskiego, aby dodać pasmo do paska pomocniczego.
 
 ```
 BOOL AddBar(
@@ -92,34 +93,34 @@ BOOL AddBar(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-Wskaźnik do `CWnd` obiektu, który jest okno podrzędne, które mają być wstawione do pręta zbrojeniowego. Obiekt, do którego istnieje odwołanie, musi mieć WS_CHILD.
+Wskaźnik do `CWnd` obiektu, który jest oknem podrzędnym, który ma zostać wstawiony do paska pomocniczego. Obiekt, do którego istnieje odwołanie, musi mieć WS_CHILD.
 
-*lpszText (tekst)*<br/>
-Wskaźnik do ciągu zawierającego tekst, który ma być wyświetlany na pasku zbrojeniowym. NULL domyślnie. Tekst zawarty w *lpszText* nie jest częścią okna podrzędnego; znajduje się na samym zbrojeniowym.
+*lpszText*<br/>
+Wskaźnik do ciągu zawierającego tekst, który ma być wyświetlany w paska pomocniczego. Domyślnie wartość NULL. Tekst zawarty w *lpszText* nie jest częścią okna podrzędnego; jest on paska pomocniczego.
 
-*pbmp (polski)*<br/>
-Wskaźnik do `CBitmap` obiektu, który ma być wyświetlany na tle pręta zbrojeniowego. NULL domyślnie.
+*PBMP*<br/>
+Wskaźnik do `CBitmap` obiektu, który ma być wyświetlany w tle paska pomocniczego. Domyślnie wartość NULL.
 
-*Dwstyle*<br/>
-A DWORD zawierające styl do zastosowania do pręta zbrojeniowego. Pełna `fStyle` lista stylów pasm można znaleźć w opisie funkcji w strukturze Win32 [REBARBANDINFO.](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)
+*dwStyle*<br/>
+Element DWORD zawierający styl, który ma zostać zastosowany do paska pomocniczego. Zobacz `fStyle` Opis funkcji w strukturze Win32 [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , aby uzyskać pełną listę stylów pasma.
 
-*clrFore (nie ma pozycji)*<br/>
-Wartość COLORREF reprezentująca kolor pierwszego planu prętów zbrojeniowych.
+*clrFore*<br/>
+Wartość COLORREF, która reprezentuje kolor pierwszego planu paska pomocniczego.
 
-*clrBack (włask*<br/>
-Wartość COLORREF reprezentująca kolor tła pręta zbrojeniowego.
+*clrBack*<br/>
+Wartość COLORREF, która reprezentuje kolor tła paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]
 
-## <a name="crebarcreate"></a><a name="create"></a>CReBar::Tworzenie
+## <a name="crebarcreate"></a><a name="create"></a> CReBar:: Create
 
-Wywołanie tej funkcji elementu członkowskiego, aby utworzyć pręt zbrojeniowy.
+Wywołaj tę funkcję elementu członkowskiego, aby utworzyć paska pomocniczego.
 
 ```
 virtual BOOL Create(
@@ -135,25 +136,25 @@ virtual BOOL Create(
 Wskaźnik do `CWnd` obiektu, którego okno systemu Windows jest elementem nadrzędnym paska stanu. Zwykle okno ramki.
 
 *dwCtrlStyle*<br/>
-Styl sterowania prętami zbrojeniowych. Domyślnie RBS_BANDBORDERS, który wyświetla wąskie linie do oddzielenia sąsiednich pasm w formancie prętów zbrojeniowych. Aby uzyskać listę stylów, zobacz [Style sterowania prętami zbrojenia](/windows/win32/Controls/rebar-control-styles) w zestawie Windows SDK.
+Styl formantu paska pomocniczego. Domyślnie RBS_BANDBORDERS, który wyświetla wąskie linie do oddzielania sąsiadujących pasm w obrębie formantu paska pomocniczego. Zobacz [Style formantów paska pomocniczego](/windows/win32/Controls/rebar-control-styles) w Windows SDK, aby wyświetlić listę stylów.
 
-*Dwstyle*<br/>
-Style okien prętów zbrojeniowych.
+*dwStyle*<br/>
+Style okna paska pomocniczego.
 
-*Nid*<br/>
-Identyfikator okna podrzędnego pręta zbrojeniowego.
+*nID*<br/>
+Identyfikator okna podrzędnego paska pomocniczego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CReBar::AddBar](#addbar).
+  Zobacz przykład dla [CReBar:: AddBar](#addbar).
 
-## <a name="crebargetrebarctrl"></a><a name="getrebarctrl"></a>CReBar::GetReBarCtrl
+## <a name="crebargetrebarctrl"></a><a name="getrebarctrl"></a> CReBar:: GetReBarCtrl
 
-Ta funkcja elementu członkowskiego umożliwia bezpośredni dostęp do podstawowej wspólnej kontroli.
+Ta funkcja członkowska umożliwia bezpośredni dostęp do zasadniczej kontroli wspólnej.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -161,20 +162,20 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do [obiektu CReBarCtrl.](../../mfc/reference/crebarctrl-class.md)
+Odwołanie do obiektu [Korzystanie CReBarCtrl](../../mfc/reference/crebarctrl-class.md) .
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji elementu członkowskiego, aby skorzystać z funkcji wspólnego formantu prętów zbrojeniowych systemu Windows w dostosowywaniu prętów zbrojeniowych. Podczas wywoływania `GetReBarCtrl`zwraca obiekt odniesienia `CReBarCtrl` do obiektu, dzięki czemu można użyć jednego zestawu funkcji członkowskich.
+Wywołaj tę funkcję elementu członkowskiego, aby skorzystać z funkcji wspólnego formantu paska pomocniczego systemu Windows w dostosowaniu paska pomocniczego. Po wywołaniu `GetReBarCtrl` Funkcja zwraca obiekt Reference do `CReBarCtrl` obiektu, aby można było użyć dowolnego zestawu funkcji Członkowskich.
 
-Aby uzyskać więcej `CReBarCtrl` informacji na temat używania do dostosowywania prętów zbrojeniowych, zobacz [Korzystanie z CReBarCtrl](../../mfc/using-crebarctrl.md).
+Aby uzyskać więcej informacji na temat `CReBarCtrl` dostosowywania paska pomocniczego, zobacz [using korzystanie CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przykładowe MFCIE MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykład MFCIE MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

@@ -1,5 +1,6 @@
 ---
-title: Klasa CSpinButtonCtrl
+description: 'Dowiedz się więcej na temat: Klasa korzystanie CSpinButtonCtrl'
+title: Klasa korzystanie CSpinButtonCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CSpinButtonCtrl
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: cfca3d11e4e22cf0fc09025b27400bcefeb0066b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342693"
 ---
-# <a name="cspinbuttonctrl-class"></a>Klasa CSpinButtonCtrl
+# <a name="cspinbuttonctrl-class"></a>Klasa korzystanie CSpinButtonCtrl
 
-Udostępnia funkcje systemu Windows wspólne przycisku pokrętła.
+Oferuje funkcje formantu typowego przycisku pokrętła systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,56 +56,56 @@ class CSpinButtonCtrl : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Konstruuje `CSpinButtonCtrl` obiekt.|
+|[Korzystanie CSpinButtonCtrl:: Korzystanie CSpinButtonCtrl](#cspinbuttonctrl)|Konstruuje `CSpinButtonCtrl` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSpinButtonCtrl::Tworzenie](#create)|Tworzy formant przycisku pokrętła `CSpinButtonCtrl` i dołącza go do obiektu.|
-|[CSpinButtonCtrl::CreateEx](#createex)|Tworzy kontrolkę przycisku pokrętła z określonymi `CSpinButtonCtrl` stylami rozszerzonymi systemu Windows i dołącza go do obiektu.|
-|[CSpinButtonCtrl::GetAccel](#getaccel)|Pobiera informacje o przyspieszeniu dla sterowania przyciskiem pokrętła.|
-|[CSpinButtonCtrl::GetBase](#getbase)|Pobiera bieżącą podstawę dla sterowania przyciskiem pokrętła.|
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Pobiera wskaźnik do bieżącego okna buddy.|
-|[CSpinButtonCtrl::GetPos](#getpos)|Pobiera bieżącą pozycję formantu przycisku pokrętła.|
-|[CSpinButtonCtrl::GetRange](#getrange)|Pobiera górne i dolne granice (zakres) dla sterowania przyciskiem pokrętła.|
-|[CSpinButtonCtrl::SetAccel](#setaccel)|Ustawia przyspieszenie dla sterowania przyciskiem pokrętła.|
-|[CSpinButtonCtrl::SetBase](#setbase)|Ustawia podstawę dla sterowania przyciskiem pokrętła.|
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Ustawia okno buddy dla formantu przycisku pokrętła.|
-|[CSpinButtonCtrl::SetPos](#setpos)|Ustawia bieżącą pozycję formantu.|
-|[CSpinButtonCtrl::SetRange](#setrange)|Ustawia górną i dolną granicę (zakres) dla sterowania przyciskiem pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: Create](#create)|Tworzy kontrolkę przycisk pokrętła i dołącza ją do `CSpinButtonCtrl` obiektu.|
+|[Korzystanie CSpinButtonCtrl:: CreateEx](#createex)|Tworzy kontrolkę przycisku pokrętła z określonymi stylami rozszerzonymi systemu Windows i dołącza je do `CSpinButtonCtrl` obiektu.|
+|[Korzystanie CSpinButtonCtrl:: GetAccel](#getaccel)|Pobiera informacje o przyspieszeniu dla kontrolki przycisku pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: GetBase](#getbase)|Pobiera bieżącą podstawę dla kontrolki przycisku pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: getkolega](#getbuddy)|Pobiera wskaźnik do bieżącego okna partnera.|
+|[Korzystanie CSpinButtonCtrl:: GetPos](#getpos)|Pobiera bieżącą pozycję kontrolki przycisku pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: GetRange](#getrange)|Pobiera górną i dolną granicę (zakres) dla kontrolki przycisku pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: SetAccel](#setaccel)|Ustawia przyspieszenie dla kontrolki przycisku pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: setbase](#setbase)|Ustawia podstawę dla kontrolki przycisku pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: setkolega](#setbuddy)|Ustawia okno partnera dla kontrolki przycisku pokrętła.|
+|[Korzystanie CSpinButtonCtrl:: SetPos](#setpos)|Ustawia bieżącą pozycję dla kontrolki.|
+|[Korzystanie CSpinButtonCtrl:: SetRange](#setrange)|Ustawia górną i dolną granicę (zakres) dla kontrolki przycisku pokrętła.|
 
 ## <a name="remarks"></a>Uwagi
 
-"Sterowanie przyciskiem pokrętła" (znane również jako kontrolka w górę i w dół) to para przycisków strzałek, które użytkownik może kliknąć, aby przyrost lub zniego wartość, na przykład położenie przewijania lub numer wyświetlany w formancie towarzyszącym. Wartość skojarzona z formantem przycisku pokrętła jest nazywana jego bieżącą pozycją. Formant przycisku pokrętła jest najczęściej używany z formantem towarzyszącym, nazywanym "oknem buddy".
+"Kontrolka przycisku pokrętła" (nazywana również kontrolką w górę) to para przycisków strzałek, które użytkownik może kliknąć, aby zwiększyć lub zmniejszyć wartość, na przykład pozycję przewijania lub liczbę wyświetlaną w formancie pomocnika. Wartość skojarzona z kontrolką przycisku pokrętła jest nazywana jej bieżącym położeniem. Kontrolka przycisku pokrętła jest najczęściej używana z kontrolką towarzyszącą o nazwie "okno kolega".
 
-Ten formant (i `CSpinButtonCtrl` dlatego klasa) jest dostępny tylko dla programów działających w systemach Windows 95/98 i Windows NT w wersji 3.51 lub nowszych.
+Ten formant (i w związku z tym `CSpinButtonCtrl` Klasa) jest dostępny tylko dla programów uruchomionych w systemach windows 95/98 i Windows NT w wersji 3,51 lub nowszej.
 
-Dla użytkownika formant przycisku pokrętła i jego okno buddy często wyglądają jak pojedynczy formant. Można określić, że kontrolka przycisku pokrętła automatycznie pozycjonuje się obok okna znajomego i automatycznie ustawia podpis okna buddy na jego bieżącą pozycję. Można użyć kontrolki przycisku pokrętła z kontrolką edycji, aby monitować użytkownika o podanie danych liczbowych.
+Do użytkownika, kontrolka przycisku pokrętła i jego okna partnera często wyglądają jak pojedyncza kontrolka. Możesz określić, że Kontrolka przycisku pokrętła ma automatycznie pomieścić się obok okna partnera i automatycznie ustawił podpis okna partnera w bieżącym położeniu. Aby monitować użytkownika o dane liczbowe, można użyć kontrolki przycisku pokrętła z kontrolką edycji.
 
-Kliknięcie strzałki w górę powoduje przeniesienie bieżącej pozycji w kierunku maksimum, a kliknięcie strzałki w dół powoduje przeniesienie bieżącej pozycji w kierunku minimum. Domyślnie minimalna wynosi 100, a maksymalna 0. Za każdym razem, gdy ustawienie minimalne jest większe niż ustawienie maksymalne (na przykład, gdy używane są ustawienia domyślne), kliknięcie strzałki w górę zmniejsza wartość pozycji i kliknięcie strzałki w dół zwiększa ją.
+Kliknięcie strzałki w górę przenosi bieżącą pozycję w dół do wartości maksymalnej, a kliknięcie strzałki w dół przenosi bieżącą pozycję w kierunku minimum. Wartość domyślna to 100, a wartość maksymalna to 0. Za każdym razem, gdy minimalne ustawienie jest większe niż ustawienie maksymalne (na przykład gdy ustawienia domyślne są używane), kliknięcie strzałki w górę zmniejsza wartość pozycji i klika strzałkę w dół.
 
-Formant przycisku pokrętła bez okna buddy działa jako rodzaj uproszczonego paska przewijania. Na przykład formant karty czasami wyświetla kontrolkę przycisku pokrętła, aby umożliwić użytkownikowi przewijanie dodatkowych kart do widoku.
+Kontrolka przycisku pokrętła bez okna partnera działa jako Sortuj uproszczony pasek przewijania. Na przykład kontrolka karta czasami wyświetla kontrolkę przycisk pokrętła, aby umożliwić użytkownikowi przewinięcie dodatkowych kart do widoku.
 
-Aby uzyskać więcej `CSpinButtonCtrl`informacji na temat używania , zobacz [Formanty](../../mfc/controls-mfc.md) i [Korzystanie z CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).
+Aby uzyskać więcej informacji na temat korzystania z programu `CSpinButtonCtrl` , zobacz [kontrolki](../../mfc/controls-mfc.md) i [Używanie korzystanie CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 `CSpinButtonCtrl`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcmn.h
+**Nagłówek:** afxcmn. h
 
-## <a name="cspinbuttonctrlcreate"></a><a name="create"></a>CSpinButtonCtrl::Tworzenie
+## <a name="cspinbuttonctrlcreate"></a><a name="create"></a> Korzystanie CSpinButtonCtrl:: Create
 
-Tworzy formant przycisku pokrętła `CSpinButtonCtrl` i dołącza go do obiektu..
+Tworzy kontrolkę przycisk pokrętła i dołącza ją do `CSpinButtonCtrl` obiektu.
 
 ```
 virtual BOOL Create(
@@ -116,31 +117,31 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*Dwstyle*<br/>
-Określa styl formantu przycisku pokrętła. Zastosuj dowolną kombinację stylów sterowania przyciskiem pokrętła do formantu. Style te są opisane w [stylach sterowania w górę iw dół](/windows/win32/Controls/up-down-control-styles) w panelu Windows SDK.
+*dwStyle*<br/>
+Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację stylów kontrolki przycisku pokrętła do kontrolki. Te style są opisane w [stylach kontrolek w górę](/windows/win32/Controls/up-down-control-styles) w Windows SDK.
 
-*Rect*<br/>
-Określa rozmiar i położenie formantu przycisku pokrętła. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura [RECT](/windows/win32/api/windef/ns-windef-rect)
+*cinania*<br/>
+Określa rozmiar i położenie kontrolki przycisku pokrętła. Może być obiektem [CRect](../../atl-mfc-shared/reference/crect-class.md) lub strukturą [Rect](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
-Wskaźnik do okna nadrzędnego formantu przycisku pokrętła, zwykle . `CDialog` Nie może być null.
+Wskaźnik do okna nadrzędnego kontrolki przycisku pokrętła, zwykle a `CDialog` . Nie może mieć wartości NULL.
 
-*Nid*<br/>
-Określa identyfikator formantu przycisku pokrętła.
+*nID*<br/>
+Określa identyfikator kontrolki przycisku pokrętła.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruuj `CSpinButtonCtrl` obiekt w dwóch etapach Najpierw, `Create`wywołaj konstruktora, a następnie `CSpinButtonCtrl` wywołaj , który tworzy formant przycisku pokrętła i dołącza go do obiektu.
+Należy utworzyć `CSpinButtonCtrl` obiekt w dwóch krokach, wywołać konstruktora, a następnie wywołać `Create` , który tworzy formant przycisku pokrętła i dołącza go do `CSpinButtonCtrl` obiektu.
 
-Aby utworzyć kontrolkę przycisku pokrętła z rozszerzonymi stylami okien, [zamiast](#createex) `Create`.
+Aby utworzyć kontrolkę przycisk pokrętła z rozszerzonymi stylami okien, należy wywołać [Korzystanie CSpinButtonCtrl:: CreateEx](#createex) zamiast `Create` .
 
-## <a name="cspinbuttonctrlcreateex"></a><a name="createex"></a>CSpinButtonCtrl::CreateEx
+## <a name="cspinbuttonctrlcreateex"></a><a name="createex"></a> Korzystanie CSpinButtonCtrl:: CreateEx
 
-Tworzy formant (okno podrzędne) i `CSpinButtonCtrl` kojarzy go z obiektem.
+Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CSpinButtonCtrl` obiektem.
 
 ```
 virtual BOOL CreateEx(
@@ -153,30 +154,30 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametry
 
-*Dwexstyle*<br/>
-Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych stylów systemu Windows, zobacz parametr *dwExStyle* dla [createwindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) w zestawie Windows SDK.
+*dwExStyle*<br/>
+Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) w Windows SDK.
 
-*Dwstyle*<br/>
-Określa styl formantu przycisku pokrętła. Zastosuj dowolną kombinację stylów sterowania przyciskiem pokrętła do formantu. Style te są opisane w [stylach sterowania w górę iw dół](/windows/win32/Controls/up-down-control-styles) w panelu Windows SDK.
+*dwStyle*<br/>
+Określa styl kontrolki przycisku pokrętła. Zastosuj dowolną kombinację stylów kontrolki przycisku pokrętła do kontrolki. Te style są opisane w [stylach kontrolek w górę](/windows/win32/Controls/up-down-control-styles) w Windows SDK.
 
-*Rect*<br/>
-Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+*cinania*<br/>
+Odwołanie do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-Wskaźnik do okna, które jest nadrzędnym formantu.
+Wskaźnik do okna, które jest elementem nadrzędnym formantu.
 
-*Nid*<br/>
-Identyfikator okna podrzędnego formantu.
+*nID*<br/>
+Identyfikator okna podrzędnego kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [utwórz,](#create) aby zastosować rozszerzone style systemu Windows, określone przez przedmową style rozszerzonego systemu Windows WS_EX_.
+Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez WS_EX_ przedniej stylu rozszerzonego systemu Windows.
 
-## <a name="cspinbuttonctrlcspinbuttonctrl"></a><a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl
+## <a name="cspinbuttonctrlcspinbuttonctrl"></a><a name="cspinbuttonctrl"></a> Korzystanie CSpinButtonCtrl:: Korzystanie CSpinButtonCtrl
 
 Konstruuje `CSpinButtonCtrl` obiekt.
 
@@ -184,9 +185,9 @@ Konstruuje `CSpinButtonCtrl` obiekt.
 CSpinButtonCtrl();
 ```
 
-## <a name="cspinbuttonctrlgetaccel"></a><a name="getaccel"></a>CSpinButtonCtrl::GetAccel
+## <a name="cspinbuttonctrlgetaccel"></a><a name="getaccel"></a> Korzystanie CSpinButtonCtrl:: GetAccel
 
-Pobiera informacje o przyspieszeniu dla sterowania przyciskiem pokrętła.
+Pobiera informacje o przyspieszeniu dla kontrolki przycisku pokrętła.
 
 ```
 UINT GetAccel(
@@ -196,19 +197,19 @@ UINT GetAccel(
 
 ### <a name="parameters"></a>Parametry
 
-*nKcel*<br/>
+*nAccel*<br/>
 Liczba elementów w tablicy określonej przez *pAccel*.
 
-*pAccel (własówce)*<br/>
-Wskaźnik do tablicy [struktur UDACCEL,](/windows/win32/api/commctrl/ns-commctrl-udaccel) która odbiera informacje o przyspieszeniu.
+*pAccel*<br/>
+Wskaźnik do tablicy struktur [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) , które odbierają informacje o przyspieszeniu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Liczba pobranych struktur akceleratora.
 
-## <a name="cspinbuttonctrlgetbase"></a><a name="getbase"></a>CSpinButtonCtrl::GetBase
+## <a name="cspinbuttonctrlgetbase"></a><a name="getbase"></a> Korzystanie CSpinButtonCtrl:: GetBase
 
-Pobiera bieżącą podstawę dla sterowania przyciskiem pokrętła.
+Pobiera bieżącą podstawę dla kontrolki przycisku pokrętła.
 
 ```
 UINT GetBase() const;
@@ -216,11 +217,11 @@ UINT GetBase() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość bazowa.
+Bieżąca wartość podstawowa.
 
-## <a name="cspinbuttonctrlgetbuddy"></a><a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy
+## <a name="cspinbuttonctrlgetbuddy"></a><a name="getbuddy"></a> Korzystanie CSpinButtonCtrl:: getkolega
 
-Pobiera wskaźnik do bieżącego okna buddy.
+Pobiera wskaźnik do bieżącego okna partnera.
 
 ```
 CWnd* GetBuddy() const;
@@ -228,11 +229,11 @@ CWnd* GetBuddy() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do bieżącego okna buddy.
+Wskaźnik do bieżącego okna partnera.
 
-## <a name="cspinbuttonctrlgetpos"></a><a name="getpos"></a>CSpinButtonCtrl::GetPos
+## <a name="cspinbuttonctrlgetpos"></a><a name="getpos"></a> Korzystanie CSpinButtonCtrl:: GetPos
 
-Pobiera bieżącą pozycję formantu przycisku pokrętła.
+Pobiera bieżącą pozycję kontrolki przycisku pokrętła.
 
 ```
 int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
@@ -241,21 +242,21 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="parameters"></a>Parametry
 
 *lpbError*<br/>
-Wskaźnik do wartości logicznej, która jest ustawiona na zero, jeśli wartość jest pomyślnie pobrana lub niezerowa, jeśli wystąpi błąd. Jeśli ten parametr jest ustawiony na wartość NULL, błędy nie są zgłaszane.
+Wskaźnik do wartości logicznej, która jest ustawiona na zero w przypadku pomyślnego pobrania lub wartości innej niż zero w przypadku wystąpienia błędu. Jeśli ten parametr ma wartość NULL, błędy nie są zgłaszane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza wersja zwraca 16-bitową bieżącą pozycję w słowie niskiego rzędu. Wyraz wysokiego rzędu jest niezerowy, jeśli wystąpił błąd.
+Pierwsza wersja zwraca 16-bitową bieżącą pozycję w wyrazie z małą kolejnością. Słowo o wysokim porządku jest niezerowe, jeśli wystąpił błąd.
 
 Druga wersja zwraca pozycję 32-bitową.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przetwarzania zwracanej wartości formant aktualizuje swoją bieżącą pozycję na podstawie podpisu okna buddy. Formant zwraca błąd, jeśli nie ma okna buddy lub jeśli podpis określa nieprawidłową lub wartość poza zakresem.
+Gdy przetwarza zwracaną wartość, formant aktualizuje bieżącą pozycję na podstawie podpisu okna partnera. Kontrolka zwraca błąd, jeśli nie ma okna partnera lub jeśli podpis określa nieprawidłową lub poza zakresem.
 
-## <a name="cspinbuttonctrlgetrange"></a><a name="getrange"></a>CSpinButtonCtrl::GetRange
+## <a name="cspinbuttonctrlgetrange"></a><a name="getrange"></a> Korzystanie CSpinButtonCtrl:: GetRange
 
-Pobiera górne i dolne granice (zakres) dla sterowania przyciskiem pokrętła.
+Pobiera górną i dolną granicę (zakres) dla kontrolki przycisku pokrętła.
 
 ```
 DWORD GetRange() const;
@@ -271,23 +272,23 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parametry
 
-*Niższe*<br/>
-Odwołanie do liczby całkowitej, która odbiera dolny limit dla formantu.
+*dołu*<br/>
+Odwołanie do liczby całkowitej, która otrzymuje dolny limit dla kontrolki.
 
-*Górnej*<br/>
-Odwołanie do liczby całkowitej, która odbiera górny limit dla formantu.
+*prawym górnym*<br/>
+Odwołanie do liczby całkowitej, która odbiera górny limit dla kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza wersja zwraca wartość 32-bitową zawierającą górne i dolne limity. Słowo niskiego rzędu jest górną granicą formantu, a słowo wysokiego rzędu jest dolną granicą.
+Pierwsza wersja zwraca 32-bitową wartość zawierającą górną i dolną granicę. Wyraz o niskiej kolejności jest górnym limitem dla kontrolki, a wysoki jest dolny limit.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `GetRange32` elementu członkowskiego pobiera zakres formantu przycisku pokrętła jako 32-bitową ćwięk.
+Funkcja członkowska `GetRange32` Pobiera zakres kontrolki przycisku pokrętła jako 32-bitową liczbę całkowitą.
 
-## <a name="cspinbuttonctrlsetaccel"></a><a name="setaccel"></a>CSpinButtonCtrl::SetAccel
+## <a name="cspinbuttonctrlsetaccel"></a><a name="setaccel"></a> Korzystanie CSpinButtonCtrl:: SetAccel
 
-Ustawia przyspieszenie dla sterowania przyciskiem pokrętła.
+Ustawia przyspieszenie dla kontrolki przycisku pokrętła.
 
 ```
 BOOL SetAccel(
@@ -297,19 +298,19 @@ BOOL SetAccel(
 
 ### <a name="parameters"></a>Parametry
 
-*nKcel*<br/>
+*nAccel*<br/>
 Liczba struktur [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) określonych przez *pAccel*.
 
-*pAccel (własówce)*<br/>
-Wskaźnik do tablicy struktur UDACCEL, które zawierają informacje o przyspieszeniu. Elementy powinny być sortowane w porządku `nSec` rosnącym na podstawie elementu członkowskiego.
+*pAccel*<br/>
+Wskaźnik do tablicy struktur UDACCEL, które zawierają informacje o przyspieszeniu. Elementy powinny być sortowane w kolejności rosnącej na podstawie `nSec` elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
-## <a name="cspinbuttonctrlsetbase"></a><a name="setbase"></a>CSpinButtonCtrl::SetBase
+## <a name="cspinbuttonctrlsetbase"></a><a name="setbase"></a> Korzystanie CSpinButtonCtrl:: setbase
 
-Ustawia podstawę dla sterowania przyciskiem pokrętła.
+Ustawia podstawę dla kontrolki przycisku pokrętła.
 
 ```
 int SetBase(int nBase);
@@ -317,20 +318,20 @@ int SetBase(int nBase);
 
 ### <a name="parameters"></a>Parametry
 
-*nBaza*<br/>
-Nowa wartość bazowa formantu. Może to być 10 dla dziesiętnych lub 16 dla szesnastkowych.
+*nBase*<br/>
+Nowa wartość podstawowa dla kontrolki. Może to być 10 dla dziesiętnych lub 16 dla szesnastkowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Poprzednia wartość bazowa, jeśli zakończy się pomyślnie, lub zero, jeśli podano nieprawidłową podstawę.
+Poprzednia wartość podstawowa, jeśli powiodła się, lub zero, jeśli podano nieprawidłową podstawę.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość bazowa określa, czy w oknie buddy są wyświetlane liczby w cyfrach dziesiętnych czy szesnastkowych. Liczby szesnastkowe są zawsze niepodpisane; liczby dziesiętne są podpisane.
+Wartość podstawowa określa, czy w oknie kolega są wyświetlane liczby w postaci cyfr dziesiętnych lub szesnastkowych. Liczby szesnastkowe są zawsze niepodpisane; cyfry dziesiętne są podpisane.
 
-## <a name="cspinbuttonctrlsetbuddy"></a><a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy
+## <a name="cspinbuttonctrlsetbuddy"></a><a name="setbuddy"></a> Korzystanie CSpinButtonCtrl:: setkolega
 
-Ustawia okno buddy dla formantu przycisku pokrętła.
+Ustawia okno partnera dla kontrolki przycisku pokrętła.
 
 ```
 CWnd* SetBuddy(CWnd* pWndBuddy);
@@ -339,19 +340,19 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="parameters"></a>Parametry
 
 *pWndBuddy*<br/>
-Wskaźnik do nowego okna buddy.
+Wskaźnik do nowego okna partnera.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do poprzedniego okna buddy.
+Wskaźnik do poprzedniego okna partnera.
 
 ### <a name="remarks"></a>Uwagi
 
-Formant spin jest prawie zawsze skojarzony z innym oknem, takim jak kontrolka edycji, która wyświetla część zawartości. To inne okno jest nazywane "kumplem" kontroli spin.
+Kontrolka pokrętła jest prawie zawsze skojarzona z innym oknem, takim jak kontrolka edycji, która wyświetla zawartość. To inne okno nosi nazwę "kolega" kontrolki pokrętła.
 
-## <a name="cspinbuttonctrlsetpos"></a><a name="setpos"></a>CSpinButtonCtrl::SetPos
+## <a name="cspinbuttonctrlsetpos"></a><a name="setpos"></a> Korzystanie CSpinButtonCtrl:: SetPos
 
-Ustawia bieżącą pozycję dla sterowania przyciskiem pokrętła.
+Ustawia bieżącą pozycję kontrolki przycisku pokrętła.
 
 ```
 int SetPos(int nPos);
@@ -360,20 +361,20 @@ int SetPos32(int nPos);
 
 ### <a name="parameters"></a>Parametry
 
-*nPos (właso)*<br/>
-Nowa pozycja dla sterowania. Ta wartość musi znajdować się w zakresie określonym przez górne i dolne granice formantu.
+*nPos*<br/>
+Nowa pozycja dla kontrolki. Ta wartość musi należeć do zakresu określonego przez górne i dolne limity dla kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Poprzednia pozycja (16-bitowa precyzja dla `SetPos`, `SetPos32`32-bitowa precyzja dla ).
+Poprzednia pozycja (16-bitowa precyzja dla `SetPos` , 32-bitowej precyzji `SetPos32` ).
 
 ### <a name="remarks"></a>Uwagi
 
-`SetPos32`ustawia pozycję 32-bitową.
+`SetPos32` ustawia pozycję 32-bitową.
 
-## <a name="cspinbuttonctrlsetrange"></a><a name="setrange"></a>CSpinButtonCtrl::SetRange
+## <a name="cspinbuttonctrlsetrange"></a><a name="setrange"></a> Korzystanie CSpinButtonCtrl:: SetRange
 
-Ustawia górną i dolną granicę (zakres) dla sterowania przyciskiem pokrętła.
+Ustawia górną i dolną granicę (zakres) dla kontrolki przycisku pokrętła.
 
 ```cpp
 void SetRange(
@@ -388,18 +389,18 @@ void SetRange32(
 ### <a name="parameters"></a>Parametry
 
 *nLower* i *nUpper*<br/>
-Górne i dolne granice sterowania. Dla `SetRange`, żaden z tych limitów nie może być większa niż UD_MAXVAL lub mniejsza niż UD_MINVAL; ponadto różnica między tymi dwoma limitami nie może przekraczać UD_MAXVAL. `SetRange32`nie nakłada żadnych ograniczeń na limity; używać żadnych całkowitych.
+Górny i dolny limit dla kontrolki. Wartość `SetRange` nie może być większa niż UD_MAXVAL ani mniejsza niż UD_MINVAL; Ponadto różnica między tymi dwoma limitami nie może przekroczyć UD_MAXVAL. `SetRange32` nie nakłada żadnych ograniczeń na limity; Użyj dowolnych liczb całkowitych.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `SetRange32` elementu członkowskiego ustawia zakres 32-bitowy dla sterowania przyciskiem pokrętła.
+Funkcja członkowska `SetRange32` ustawia zakres 32-bitowy dla kontrolki przycisk pokrętła.
 
 > [!NOTE]
-> Domyślny zakres przycisku spin ma maksymalną ustawioną wartość zero (0), a minimalną ustawioną na 100. Ponieważ wartość maksymalna jest mniejsza niż wartość minimalna, kliknięcie strzałki w górę spowoduje zmniejszenie pozycji i kliknięcie strzałki w dół spowoduje jej zwiększenie. Służy `CSpinButtonCtrl::SetRange` do dostosowywania tych wartości.
+> Domyślny zakres dla przycisku pokrętła ma ustawioną wartość równą zero (0) i minimalną wartość 100. Ponieważ wartość maksymalna jest mniejsza niż wartość minimalna, kliknięcie strzałki w górę spowoduje zmniejszenie pozycji, a kliknięcie strzałki w dół spowoduje jej zwiększenie. Użyj `CSpinButtonCtrl::SetRange` , aby dostosować te wartości.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Próbka MFC CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Przykład CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa CSliderCtrl](../../mfc/reference/csliderctrl-class.md)
+[Klasa korzystanie CSliderCtrl](../../mfc/reference/csliderctrl-class.md)

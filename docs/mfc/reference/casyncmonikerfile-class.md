@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CAsyncMonikerFile'
 title: Klasa CAsyncMonikerFile
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 259d31b9c1e198b326ba616481dbbf5315225546
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 559ffd5ed3a8b7100d9901dc70fe4f5349c05f7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343532"
 ---
 # <a name="casyncmonikerfile-class"></a>Klasa CAsyncMonikerFile
 

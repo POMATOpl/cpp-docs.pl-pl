@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: przykładowego programu wielowątkowej C'
 title: Przykładowy program więlowątkowy w języku C
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: a46bd370a309a29c6877eacaea428ff9fc42902e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924772"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342338"
 ---
 # <a name="sample-multithread-c-program"></a>Przykładowy program więlowątkowy w języku C
 
@@ -21,9 +22,9 @@ Programy są domyślnie kompilowane jako wielowątkowe.
 
 ::: moniker range=">=msvc-160"
 
-1. W menu **plik** wybierz pozycję **Nowy** > **projekt** .
+1. W menu **plik** wybierz pozycję **Nowy** > **projekt**.
 
-1. W oknie dialogowym **Tworzenie nowego projektu** wybierz szablon **aplikacji konsoli** , który zawiera Tagi **C++** , **Windows** i **konsole** . Wybierz pozycję **Dalej** , aby kontynuować.
+1. W oknie dialogowym **Tworzenie nowego projektu** wybierz szablon **aplikacji konsoli** , który zawiera Tagi **C++**, **Windows** i **konsole** . Wybierz pozycję **Dalej**, aby kontynuować.
 
 1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź nazwę projektu, na przykład "odbijanie". Wybierz pozycję **Utwórz** , aby kontynuować.
 
@@ -31,7 +32,7 @@ Programy są domyślnie kompilowane jako wielowątkowe.
 
 1. W oknie Edycja usuń istniejący kod źródłowy i zastąp go kodem przykładowym.
 
-1. W menu **kompilacja** wybierz polecenie **Kompiluj rozwiązanie** .
+1. W menu **kompilacja** wybierz polecenie **Kompiluj rozwiązanie**.
 
 1. Naciśnij klawisz **F5** , aby uruchomić program w debugerze.
 
@@ -39,7 +40,7 @@ Programy są domyślnie kompilowane jako wielowątkowe.
 
 ::: moniker range="<=msvc-150"
 
-1. W menu **plik** wybierz pozycję **Nowy** > **projekt** .
+1. W menu **plik** wybierz pozycję **Nowy** > **projekt**.
 
 1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Visual C++** w lewym okienku, a następnie w środkowym okienku wybierz pozycję **pusty projekt** .
 
@@ -264,6 +265,6 @@ void ClearScreen(void)
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wielowątkowość z językiem C i podsystemem Win32](multithreading-with-c-and-win32.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CPtrList'
 title: Klasa CPtrList
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: d7da4fe52d25d9ffdf6371aa40f41d7082f1165c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27849db4687860ab68feb548de1ed8ad209b73a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343254"
 ---
 # <a name="cptrlist-class"></a>Klasa CPtrList
 
@@ -37,7 +38,7 @@ na przykład tłumaczy na
 
 ## <a name="remarks"></a>Uwagi
 
-`CPtrList`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów listy wskaźników, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
+`CPtrList` obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów listy wskaźników, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
 Listy wskaźników nie mogą być serializowane.
 
@@ -55,7 +56,7 @@ Aby uzyskać więcej informacji na temat korzystania z programu `CPtrList` , zob
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CWinFormsDialog'
 title: Klasa CWinFormsDialog
 ms.date: 03/27/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: a25823982b9276309e99a2a26cef8d6fe2e764bd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 501f9c354bd6f0b7a628aabb93f4680155f74a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342624"
 ---
 # <a name="cwinformsdialog-class"></a>Klasa CWinFormsDialog
 
@@ -152,7 +153,7 @@ inline operator TManagedControl^() const throw();
 
 Ten operator rzutuje typ jako odwołanie do kontrolki Windows Forms. Służy do przekazywania okna `CWinFormsDialog<TManagedControl>` dialogowego do funkcji, które akceptują wskaźnik do Windows Forms obiektu kontroli użytkownika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Klasa CWinFormsView](../../mfc/reference/cwinformsview-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CPropExchange'
 title: Klasa CPropExchange
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 09fb1bd34f3b5eadb78d8f9081450c042fe22f9e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3e95940a6ba649b134df3cfc79abcf85e03f7e8d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343314"
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 
@@ -56,7 +57,7 @@ class AFX_NOVTABLE CPropExchange
 
 ## <a name="remarks"></a>Uwagi
 
-`CPropExchange`nie ma klasy bazowej.
+`CPropExchange` nie ma klasy bazowej.
 
 Ustanawia kontekst i kierunek wymiany właściwości.
 
@@ -66,7 +67,7 @@ Struktura konstruuje obiekt pochodny `CPropExchange` , gdy zostanie powiadomiony
 
 Struktura przekazuje wskaźnik do tego `CPropExchange` obiektu do funkcji kontrolki `DoPropExchange` . Jeśli użyto Kreatora do utworzenia plików początkowych dla formantu, funkcja kontrolki `DoPropExchange` wywołuje `COleControl::DoPropExchange` . Podstawowa wersja klasy wymienia właściwości giełdowe kontrolki; użytkownik modyfikuje wersję klasy pochodnej do właściwości Exchange, które zostały dodane do kontrolki.
 
-`CPropExchange`może służyć do serializacji właściwości kontrolki lub inicjowania właściwości kontrolki podczas ładowania lub tworzenia kontrolki. `ExchangeProp`Funkcje i `ExchangeFontProp` składowe programu `CPropExchange` są w stanie przechowywać właściwości i ładować je z różnych nośników.
+`CPropExchange` może służyć do serializacji właściwości kontrolki lub inicjowania właściwości kontrolki podczas ładowania lub tworzenia kontrolki. `ExchangeProp`Funkcje i `ExchangeFontProp` składowe programu `CPropExchange` są w stanie przechowywać właściwości i ładować je z różnych nośników.
 
 Aby uzyskać więcej informacji na temat korzystania z programu `CPropExchange` , zobacz [kontrolki ActiveX MFC: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
 
@@ -78,7 +79,7 @@ Aby uzyskać więcej informacji na temat korzystania z programu `CPropExchange` 
 
 **Nagłówek:** 'afxctl. h
 
-## <a name="cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp
+## <a name="cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a> CPropExchange::ExchangeBlobProp
 
 Serializować właściwość, która przechowuje dane binarne obiektów binarnych (BLOB).
 
@@ -110,7 +111,7 @@ Wartość właściwości jest odczytywana lub zapisywana do, w zależności od p
 
 Funkcje `CArchivePropExchange::ExchangeBlobProp` `CResetPropExchange::ExchangeBlobProp` i `CPropsetPropExchange::ExchangeBlobProp` przesłonięcia tej czystej funkcji wirtualnej.
 
-## <a name="cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp
+## <a name="cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a> CPropExchange::ExchangeFontProp
 
 Wymienia Właściwość Font między nośnikiem magazynu i kontrolką.
 
@@ -146,7 +147,7 @@ Jeśli właściwość Font jest ładowana z średniej do kontrolki, cechy czcion
 
 Funkcje `CArchivePropExchange::ExchangeFontProp` `CResetPropExchange::ExchangeFontProp` i `CPropsetPropExchange::ExchangeFontProp` przesłonięcia tej czystej funkcji wirtualnej.
 
-## <a name="cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp
+## <a name="cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a> CPropExchange::ExchangePersistentProp
 
 Wymienia Właściwość między formantem a plikiem.
 
@@ -182,7 +183,7 @@ Jeśli właściwość jest ładowana z pliku do kontrolki, właściwość zostan
 
 Funkcje `CArchivePropExchange::ExchangePersistentProp` `CResetPropExchange::ExchangePersistentProp` i `CPropsetPropExchange::ExchangePersistentProp` przesłonięcia tej czystej funkcji wirtualnej.
 
-## <a name="cpropexchangeexchangeprop"></a><a name="exchangeprop"></a>CPropExchange::ExchangeProp
+## <a name="cpropexchangeexchangeprop"></a><a name="exchangeprop"></a> CPropExchange::ExchangeProp
 
 Wymienia Właściwość między nośnikiem magazynu a kontrolką.
 
@@ -228,7 +229,7 @@ Jeśli właściwość jest ładowana z średniej do kontrolki, wartość właśc
 
 Funkcje `CArchivePropExchange::ExchangeProp` `CResetPropExchange::ExchangeProp` i `CPropsetPropExchange::ExchangeProp` przesłonięcia tej czystej funkcji wirtualnej.
 
-## <a name="cpropexchangeexchangeversion"></a><a name="exchangeversion"></a>CPropExchange::ExchangeVersion
+## <a name="cpropexchangeexchangeversion"></a><a name="exchangeversion"></a> CPropExchange::ExchangeVersion
 
 Wywoływane przez platformę, aby obsłużyć trwałość numeru wersji.
 
@@ -254,7 +255,7 @@ Wskazuje, czy dane trwałe mają być konwertowane do bieżącej wersji, czy nie
 
 Niezerowe, jeśli funkcja się powiedzie; 0 w przeciwnym razie.
 
-## <a name="cpropexchangegetversion"></a><a name="getversion"></a>CPropExchange:: GetVersion
+## <a name="cpropexchangegetversion"></a><a name="getversion"></a> CPropExchange:: GetVersion
 
 Wywołaj tę funkcję, aby pobrać numer wersji formantu.
 
@@ -266,7 +267,7 @@ DWORD GetVersion();
 
 Numer wersji formantu.
 
-## <a name="cpropexchangeisasynchronous"></a><a name="isasynchronous"></a>CPropExchange:: IsAsynchronous
+## <a name="cpropexchangeisasynchronous"></a><a name="isasynchronous"></a> CPropExchange:: IsAsynchronous
 
 Określa, czy wymiana właściwości odbywa się asynchronicznie.
 
@@ -278,7 +279,7 @@ BOOL IsAsynchronous();
 
 Zwraca wartość TRUE, jeśli właściwości są wymieniane asynchronicznie, w przeciwnym razie FALSE.
 
-## <a name="cpropexchangeisloading"></a><a name="isloading"></a>CPropExchange:: IsLoading
+## <a name="cpropexchangeisloading"></a><a name="isloading"></a> CPropExchange:: IsLoading
 
 Wywołaj tę funkcję, aby określić, czy właściwości są ładowane do kontrolki, czy z niej zapisane.
 
@@ -290,7 +291,7 @@ BOOL IsLoading();
 
 Niezerowe, jeśli są ładowane właściwości; w przeciwnym razie 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::D oPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)

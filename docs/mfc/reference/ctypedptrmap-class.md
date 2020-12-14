@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CTypedPtrMap'
 title: Klasa CTypedPtrMap
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 25476a9195fe4a522ed31937dc1e2c5156ef6792
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344994"
 ---
 # <a name="ctypedptrmap-class"></a>Klasa CTypedPtrMap
 
-Zapewnia bezpieczne dla typu "otokę" dla obiektów `CMapPtrToPtr`klas `CMapPtrToWord` `CMapWordToPtr`mapy `CMapStringToPtr`wskaźnika , i .
+Zapewnia bezpieczną "otokę" dla obiektów klasy wskaźników `CMapPtrToPtr` , `CMapPtrToWord` ,, `CMapWordToPtr` i `CMapStringToPtr` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,12 +36,12 @@ class CTypedPtrMap : public BASE_CLASS
 #### <a name="parameters"></a>Parametry
 
 *BASE_CLASS*<br/>
-Klasa podstawowa klasy mapy wpisanego wskaźnika; musi być klasą `CMapPtrToPtr`mapy `CMapPtrToWord` `CMapWordToPtr`wskaźnika `CMapStringToPtr`( , , , lub ).
+Klasa bazowa klasy mapy wskaźnika o określonym typie; musi być klasą mapy wskaźnika ( `CMapPtrToPtr` , `CMapPtrToWord` , `CMapWordToPtr` lub `CMapStringToPtr` ).
 
-*Klucz*<br/>
-Klasa obiektu używanego jako klucz do mapy.
+*GŁÓWNYCH*<br/>
+Klasa obiektu użyta jako klucz do mapy.
 
-*Wartość*<br/>
+*VALUE*<br/>
 Klasa obiektu przechowywanego na mapie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -50,23 +51,23 @@ Klasa obiektu przechowywanego na mapie.
 |Nazwa|Opis|
 |----------|-----------------|
 |[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Pobiera następny element do iteracji.|
-|[CTypedPtrMap::Odnośnik](#lookup)|Zwraca `KEY` na podstawie `VALUE`.|
+|[CTypedPtrMap:: Lookup](#lookup)|Zwraca wartość na `KEY` podstawie `VALUE` .|
 |[CTypedPtrMap::RemoveKey](#removekey)|Usuwa element określony przez klucz.|
-|[CTypedPtrMap::SetAt](#setat)|Wstawia element do mapy; zastępuje istniejący element, jeśli zostanie znaleziony pasujący klucz.|
+|[CTypedPtrMap::SetAt](#setat)|Wstawia element do mapy; Zastępuje istniejący element, jeśli zostanie znaleziony pasujący klucz.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CTypedPtrMap::operator \[\]](#operator_at)|Wstawia element do mapy.|
+|[CTypedPtrMap:: operator \[\]](#operator_at)|Wstawia element do mapy.|
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas korzystania `CTypedPtrMap`z funkcji sprawdzania typu języka C++ pomaga wyeliminować błędy spowodowane niedopasowanymi typami wskaźników.
+W przypadku korzystania `CTypedPtrMap` z funkcji sprawdzania typu C++ pomaga wyeliminować błędy spowodowane niezgodnymi typami wskaźnika.
 
-Ponieważ `CTypedPtrMap` wszystkie funkcje są wbudowane, użycie tego szablonu nie ma znaczącego wpływu na rozmiar lub szybkość kodu.
+Ponieważ wszystkie `CTypedPtrMap` funkcje są wbudowane, użycie tego szablonu nie ma znacząco wpływu na rozmiar lub szybkość kodu.
 
-Aby uzyskać więcej `CTypedPtrMap`informacji na temat używania , zobacz artykuły [Kolekcje](../../mfc/collections.md) i [klasy oparte na szablonach](../../mfc/template-based-classes.md).
+Aby uzyskać więcej informacji na temat korzystania z programu `CTypedPtrMap` , zobacz [kolekcje](../../mfc/collections.md) artykułów i [klasy oparte na szablonach](../../mfc/template-based-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -76,11 +77,11 @@ Aby uzyskać więcej `CTypedPtrMap`informacji na temat używania , zobacz artyku
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtempl.h
+**Nagłówek:** afxtempl. h
 
-## <a name="ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc
+## <a name="ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a> CTypedPtrMap::GetNextAssoc
 
-Pobiera element mapy `rNextPosition`w , `rNextPosition` a następnie aktualizacje, aby odwołać się do następnego elementu na mapie.
+Pobiera element mapy w `rNextPosition` , a następnie aktualizuje, `rNextPosition` Aby odwołać się do następnego elementu na mapie.
 
 ```cpp
 void GetNextAssoc(
@@ -91,32 +92,32 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*rPozycja*<br/>
-Określa odwołanie do wartości POSITION zwróconej `GetNextAssoc` `BASE_CLASS`przez poprzednie wywołanie **getstartposition.**
+*Elemencie rPosition*<br/>
+Określa odwołanie do wartości pozycji zwróconej przez poprzednie `GetNextAssoc` wywołanie lub `BASE_CLASS` **:: GetStartPosition** .
 
-*Klucz*<br/>
+*GŁÓWNYCH*<br/>
 Parametr szablonu określający typ kluczy mapy.
 
-*rKey (Klawisz)*<br/>
+*rKey*<br/>
 Określa zwracany klucz pobranego elementu.
 
-*Wartość*<br/>
+*VALUE*<br/>
 Parametr szablonu określający typ wartości mapy.
 
-*rWartość*<br/>
-Określa zwracaną wartość pobranego elementu.
+*rValue*<br/>
+Określa zwróconą wartość pobranego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest najbardziej przydatna do iteracji przez wszystkie elementy na mapie. Należy zauważyć, że sekwencja pozycji nie musi być taka sama jak sekwencja wartości klucza.
+Ta funkcja jest najbardziej przydatna do iterowania przez wszystkie elementy na mapie. Należy zauważyć, że sekwencja położenia nie musi być taka sama jak sekwencja wartości klucza.
 
-Jeśli pobrany element jest ostatnim na mapie, nowa `rNextPosition` wartość jest ustawiona na WARTOŚĆ NULL.
+Jeśli pobrany element jest ostatnim na mapie, Nowa wartość jest równa `rNextPosition` null.
 
-Ta wbudowana `BASE_CLASS`funkcja wywołuje **::GetNextAssoc**.
+Ta wbudowana funkcja wywołuje `BASE_CLASS` **:: GetNextAssoc**.
 
-## <a name="ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Odnośnik
+## <a name="ctypedptrmaplookup"></a><a name="lookup"></a> CTypedPtrMap:: Lookup
 
-`Lookup`używa algorytmu mieszania, aby szybko znaleźć element mapy z kluczem, który dokładnie odpowiada.
+`Lookup` używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć element mapy z kluczem, który dokładnie pasuje.
 
 ```
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
@@ -125,28 +126,28 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="parameters"></a>Parametry
 
 *BASE_CLASS*<br/>
-Parametr szablonu określający klasę podstawową tej klasy mapy.
+Parametr szablonu określający klasę bazową klasy tej mapy.
 
-*key*<br/>
-Klucz elementu, który ma być spojrzał w górę.
+*głównych*<br/>
+Klucz elementu, który ma zostać wyszukany.
 
-*Wartość*<br/>
-Parametr szablonu określający typ wartości przechowywanych na tej mapie.
+*VALUE*<br/>
+Parametr szablonu określający typ wartości przechowywanych w tej mapie.
 
-*rWartość*<br/>
-Określa zwracaną wartość pobranego elementu.
+*rValue*<br/>
+Określa zwróconą wartość pobranego elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli element został znaleziony; w przeciwnym razie 0.
+Niezerowe, jeśli element został znaleziony; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta wbudowana `BASE_CLASS`funkcja wywołuje **::Lookup**.
+Ta wbudowana funkcja wywołuje `BASE_CLASS` **:: Lookup**.
 
-## <a name="ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrMap::operator [ ]
+## <a name="ctypedptrmapoperator--"></a><a name="operator_at"></a> CTypedPtrMap:: operator []
 
-Ten operator może być używany tylko po lewej stronie instrukcji przypisania (wartość l).
+Tego operatora można używać tylko po lewej stronie instrukcji przypisania (wartość l).
 
 ```
 VALUE& operator[ ](base_class ::base_arg_key key);
@@ -154,22 +155,22 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Parametry
 
-*Wartość*<br/>
-Parametr szablonu określający typ wartości przechowywanych na tej mapie.
+*VALUE*<br/>
+Parametr szablonu określający typ wartości przechowywanych w tej mapie.
 
 *BASE_CLASS*<br/>
-Parametr szablonu określający klasę podstawową tej klasy mapy.
+Parametr szablonu określający klasę bazową klasy tej mapy.
 
-*key*<br/>
-Klucz elementu, który ma być spojrzał w górę lub utworzony na mapie.
+*głównych*<br/>
+Klucz elementu do wyszukania lub utworzenia na mapie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nie ma żadnego elementu mapy z określonym kluczem, tworzony jest nowy element. Nie ma "prawej strony" (r-value) równoważne tego operatora, ponieważ istnieje możliwość, że klucz nie można znaleźć na mapie. Użyj `Lookup` funkcji elementu członkowskiego do pobierania elementu.
+Jeśli nie ma elementu mapy o określonym kluczu, zostanie utworzony nowy element. Nie ma "prawa strona" (r-Value) równoważnej temu operatorowi, ponieważ istnieje możliwość, że klucz może nie zostać znaleziony na mapie. Użyj `Lookup` funkcji członkowskiej do pobierania elementów.
 
-## <a name="ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey
+## <a name="ctypedptrmapremovekey"></a><a name="removekey"></a> CTypedPtrMap::RemoveKey
 
-Ta funkcja `BASE_CLASS`elementu członkowskiego wywołuje **::RemoveKey**.
+Ta funkcja elementu członkowskiego wywołuje `BASE_CLASS` **:: RemoveKey**.
 
 ```
 BOOL RemoveKey(KEY key);
@@ -177,23 +178,23 @@ BOOL RemoveKey(KEY key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*GŁÓWNYCH*<br/>
 Parametr szablonu określający typ kluczy mapy.
 
-*key*<br/>
-Klucz do usunięcia elementu.
+*głównych*<br/>
+Klucz dla elementu, który ma zostać usunięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli wpis został znaleziony i pomyślnie usunięte; w przeciwnym razie 0.
+Niezerowe, Jeśli wpis został znaleziony i pomyślnie usunięty; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać bardziej szczegółowe uwagi, zobacz [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).
+Aby uzyskać bardziej szczegółowe uwagi, zobacz [CMapStringToOb:: RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).
 
-## <a name="ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt
+## <a name="ctypedptrmapsetat"></a><a name="setat"></a> CTypedPtrMap::SetAt
 
-Ta funkcja `BASE_CLASS`elementu członkowskiego wywołuje **::SetAt**.
+Ta funkcja elementu członkowskiego wywołuje `BASE_CLASS` **:: SetAt**.
 
 ```cpp
 void SetAt(KEY key, VALUE newValue);
@@ -201,22 +202,22 @@ void SetAt(KEY key, VALUE newValue);
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*GŁÓWNYCH*<br/>
 Parametr szablonu określający typ kluczy mapy.
 
-*key*<br/>
+*głównych*<br/>
 Określa wartość klucza newValue.
 
-*Newvalue*<br/>
+*newValue*<br/>
 Określa wskaźnik obiektu, który jest wartością nowego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać bardziej szczegółowe uwagi, zobacz [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
+Aby uzyskać bardziej szczegółowe uwagi, zobacz [CMapStringToOb:: SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC Próbki COLLECT](../../overview/visual-cpp-samples.md)<br/>
+[ZBIERANIE próbek MFC](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [Klasa CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)<br/>

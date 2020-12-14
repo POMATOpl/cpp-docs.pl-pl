@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o dyrektywach OpenMP
 title: OpenMP — Dyrektywy
 ms.date: 03/20/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: 21270e8cdeb17b6d06d903d328962435c627759f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 03730b1f5cda0972dbf86b345c6e44bdad4e949b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342403"
 ---
 # <a name="openmp-directives"></a>OpenMP — Dyrektywy
 
@@ -77,7 +78,7 @@ Określa, że lokalizacja pamięci, która ma zostać zaktualizowana niepodzieln
 
 ### <a name="parameters"></a>Parametry
 
-*wyrażenia*<br/>
+*expression*<br/>
 Instrukcja, która ma *lvalue*, której lokalizacja pamięci ma być chroniona przed więcej niż jednym zapisem.
 
 ### <a name="remarks"></a>Uwagi
@@ -306,7 +307,7 @@ Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 `for`Dyrektywa obsługuje następujące klauzule:
 
-- [private](openmp-clauses.md#private-openmp)
+- [użytek](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [reduction](openmp-clauses.md#reduction)
@@ -535,8 +536,8 @@ Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 `parallel`Dyrektywa obsługuje następujące klauzule:
 
-- [przypadku](openmp-clauses.md#if-openmp)
-- [private](openmp-clauses.md#private-openmp)
+- [if](openmp-clauses.md#if-openmp)
+- [użytek](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [default](openmp-clauses.md#default-openmp)
 - [udostępniać](openmp-clauses.md#shared-openmp)
@@ -599,7 +600,7 @@ Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 `sections`Dyrektywa obsługuje następujące klauzule:
 
-- [private](openmp-clauses.md#private-openmp)
+- [użytek](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [reduction](openmp-clauses.md#reduction)
@@ -652,7 +653,7 @@ Obowiązkowe Zero lub więcej klauzul, zobacz sekcję **uwagi** .
 
 `single`Dyrektywa obsługuje następujące klauzule:
 
-- [private](openmp-clauses.md#private-openmp)
+- [użytek](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [copyprivate](openmp-clauses.md#copyprivate)
 - [nowait](openmp-clauses.md#nowait)

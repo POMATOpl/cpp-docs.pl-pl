@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy remove_volatile
 title: remove_volatile — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 45f0ba9ba4685a471f13d0d36ae5080eb667a9f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344877"
 ---
-# <a name="removevolatile-class"></a>remove_volatile — Klasa
+# <a name="remove_volatile-class"></a>remove_volatile — Klasa
 
 Tworzy typ inny niż volatile z typu.
 
@@ -30,12 +31,12 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_volatile<T>` ma zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `volatile T1`, w przeciwnym razie *t*.
+Wystąpienie ma `remove_volatile<T>` zmodyfikowany typ, który jest `T1` , gdy *t* ma postać `volatile T1` , w przeciwnym razie *t*.
 
 ## <a name="example"></a>Przykład
 
@@ -61,11 +62,11 @@ remove_volatile_t<volatile int> == int
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[add_volatile, klasa](../standard-library/add-volatile-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa add_volatile](../standard-library/add-volatile-class.md)

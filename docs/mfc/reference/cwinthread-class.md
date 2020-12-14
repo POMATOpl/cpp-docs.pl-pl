@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CWinThread'
 title: Klasa CWinThread
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 6dbe4c4d3ed5edaf0563abf589cd844cca6803f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9f89aa6397f44c95e8958d077fe18258e3c17f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342611"
 ---
 # <a name="cwinthread-class"></a>Klasa CWinThread
 
@@ -122,11 +123,11 @@ Obiekty klasy `CWinThread` zazwyczaj istnieją w czasie trwania wątku. Jeśli c
 
 `CWinThread`Klasa jest niezbędna do zapewnienia, że kod i w pełni wielowątkowy wątek MFC. Dane lokalne wątku używane przez platformę do obsługi informacji dotyczących wątku są zarządzane przez `CWinThread` obiekty. Ze względu na to `CWinThread` , że ten zależność obsługuje dane lokalne wątku, każdy wątek, który używa MFC, musi być utworzony przez MFC. Na przykład wątek utworzony przez funkcję wykonawczą [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) nie może używać żadnych interfejsów API MFC.
 
-Aby utworzyć wątek, wywołaj [AfxBeginThread](application-information-and-management.md#afxbeginthread). Istnieją dwie formy, w zależności od tego, czy użytkownik ma mieć wątek procesu roboczego, czy interfejsu użytkownika. Jeśli chcesz, aby wątek interfejsu użytkownika został przekazany do `AfxBeginThread` wskaźnika do `CRuntimeClass` `CWinThread` klasy pochodnej. Jeśli chcesz utworzyć wątek roboczy, Przekaż `AfxBeginThread` wskaźnik do funkcji kontrolującej i parametru do funkcji kontrolującej. Dla wątków roboczych i wątków interfejsu użytkownika można określić parametry opcjonalne, które modyfikują priorytet, rozmiar stosu, flagi tworzenia i atrybuty zabezpieczeń. `AfxBeginThread`zwróci wskaźnik do nowego `CWinThread` obiektu.
+Aby utworzyć wątek, wywołaj [AfxBeginThread](application-information-and-management.md#afxbeginthread). Istnieją dwie formy, w zależności od tego, czy użytkownik ma mieć wątek procesu roboczego, czy interfejsu użytkownika. Jeśli chcesz, aby wątek interfejsu użytkownika został przekazany do `AfxBeginThread` wskaźnika do `CRuntimeClass` `CWinThread` klasy pochodnej. Jeśli chcesz utworzyć wątek roboczy, Przekaż `AfxBeginThread` wskaźnik do funkcji kontrolującej i parametru do funkcji kontrolującej. Dla wątków roboczych i wątków interfejsu użytkownika można określić parametry opcjonalne, które modyfikują priorytet, rozmiar stosu, flagi tworzenia i atrybuty zabezpieczeń. `AfxBeginThread` zwróci wskaźnik do nowego `CWinThread` obiektu.
 
 Zamiast wywoływania `AfxBeginThread` , można skonstruować `CWinThread` obiekt pochodny, a następnie wywołać metodę `CreateThread` . Ta metoda konstrukcji dwuetapowej jest przydatna, jeśli chcesz ponownie użyć `CWinThread` obiektu między kolejnymi operacjami tworzenia i zakończenia wykonywania wątków.
 
-Aby uzyskać więcej informacji na temat `CWinThread` , zobacz artykuł [wielowątkowość w języku C++ i MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [wielowątkowość: Tworzenie wątków interfejsu użytkownika](../../parallel/multithreading-creating-user-interface-threads.md), [wielowątkowość: Tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md)i [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Aby uzyskać więcej informacji na temat `CWinThread` , zobacz artykuł [wielowątkowość z językami C++ i MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [wielowątkowość: Tworzenie User-Interface wątki](../../parallel/multithreading-creating-user-interface-threads.md), [wielowątkowość: Tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md)i [wielowątkowość: jak używać klas synchronizacji](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -140,7 +141,7 @@ Aby uzyskać więcej informacji na temat `CWinThread` , zobacz artykuł [wielow�
 
 **Nagłówek:** afxwin. h
 
-## <a name="cwinthreadcreatethread"></a><a name="createthread"></a>CWinThread:: onthread
+## <a name="cwinthreadcreatethread"></a><a name="createthread"></a> CWinThread:: onthread
 
 Tworzy wątek do wykonania w przestrzeni adresowej procesu wywołującego.
 
@@ -174,7 +175,7 @@ Niezerowe, jeśli wątek został utworzony pomyślnie; w przeciwnym razie 0.
 
 Służy `AfxBeginThread` do tworzenia obiektu wątku i wykonywania go w jednym kroku. Użyj `CreateThread` , jeśli chcesz ponownie użyć obiektu wątku między kolejnymi tworzeniem i zakończeniem wykonywania wątków.
 
-## <a name="cwinthreadcwinthread"></a><a name="cwinthread"></a>CWinThread:: CWinThread
+## <a name="cwinthreadcwinthread"></a><a name="cwinthread"></a> CWinThread:: CWinThread
 
 Konstruuje `CWinThread` obiekt.
 
@@ -186,7 +187,7 @@ CWinThread();
 
 Aby rozpocząć wykonywanie wątku, wywołaj [funkcję elementu](#createthread) Członkowskiego. Zwykle tworzone są wątki przez wywołanie [AfxBeginThread](application-information-and-management.md#afxbeginthread), który wywoła tego konstruktora i `CreateThread` .
 
-## <a name="cwinthreadexitinstance"></a><a name="exitinstance"></a>CWinThread:: ExitInstance
+## <a name="cwinthreadexitinstance"></a><a name="exitinstance"></a> CWinThread:: ExitInstance
 
 Wywoływane przez platformę z w rzadko [przesłoniętej](#run) funkcji składowej, aby zakończyć to wystąpienie wątku, lub jeśli wywołanie do [InitInstance](#initinstance) zakończy się niepowodzeniem.
 
@@ -204,7 +205,7 @@ Nie wywołuj tej funkcji elementu członkowskiego z dowolnego miejsca, ale wewn�
 
 Domyślna implementacja tej funkcji usuwa `CWinThread` obiekt, jeśli [m_bAutoDelete](#m_bautodelete) ma wartość true. Zastąp tę funkcję, jeśli chcesz przeprowadzić dodatkowe czyszczenie po zakończeniu wątku. Twoja implementacja `ExitInstance` powinna wywołać wersję klasy bazowej po wykonaniu kodu.
 
-## <a name="cwinthreadgetmainwnd"></a><a name="getmainwnd"></a>CWinThread:: GetMainWnd
+## <a name="cwinthreadgetmainwnd"></a><a name="getmainwnd"></a> CWinThread:: GetMainWnd
 
 Jeśli aplikacja jest serwerem OLE, Wywołaj tę funkcję, aby pobrać wskaźnik do aktywnego okna głównego aplikacji, zamiast bezpośrednio odwoływać się do `m_pMainWnd` elementu członkowskiego obiektu aplikacji.
 
@@ -226,7 +227,7 @@ Jeśli aplikacja nie jest serwerem OLE, wywołanie tej funkcji jest równoważne
 
 Zastąp tę funkcję, aby zmodyfikować zachowanie domyślne.
 
-## <a name="cwinthreadgetthreadpriority"></a><a name="getthreadpriority"></a>CWinThread:: GetThreadPriority
+## <a name="cwinthreadgetthreadpriority"></a><a name="getthreadpriority"></a> CWinThread:: GetThreadPriority
 
 Pobiera bieżący poziom priorytetu wątku tego wątku.
 
@@ -254,9 +255,9 @@ Bieżący poziom priorytetu wątku w ramach jego klasy priorytetu. Zwracana wart
 
 Aby uzyskać więcej informacji na temat tych priorytetów, zobacz [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) w Windows SDK.
 
-## <a name="cwinthreadinitinstance"></a><a name="initinstance"></a>CWinThread:: InitInstance
+## <a name="cwinthreadinitinstance"></a><a name="initinstance"></a> CWinThread:: InitInstance
 
-`InitInstance`musi zostać zastąpiony, aby zainicjować każde nowe wystąpienie wątku interfejsu użytkownika.
+`InitInstance` musi zostać zastąpiony, aby zainicjować każde nowe wystąpienie wątku interfejsu użytkownika.
 
 ```
 virtual BOOL InitInstance();
@@ -272,7 +273,7 @@ Zwykle przesłonięto `InitInstance` wykonywanie zadań, które należy wykonać
 
 Ta funkcja członkowska jest używana tylko w wątkach interfejsu użytkownika. Wykonaj inicjalizację wątków roboczych w funkcji kontrolującej przesłanej do [AfxBeginThread](application-information-and-management.md#afxbeginthread).
 
-## <a name="cwinthreadisidlemessage"></a><a name="isidlemessage"></a>CWinThread:: IsIdleMessage
+## <a name="cwinthreadisidlemessage"></a><a name="isidlemessage"></a> CWinThread:: IsIdleMessage
 
 Przesłoń tę funkcję, aby kontynuować `OnIdle` wywoływanie po wygenerowaniu określonych komunikatów.
 
@@ -299,7 +300,7 @@ Jeśli aplikacja utworzyła krótki czasomierz, `OnIdle` będzie często wywoły
 
 Obsługa WM_TIMER w ten sposób poprawi wydajność aplikacji, które używają krótkich czasomierzy.
 
-## <a name="cwinthreadm_bautodelete"></a><a name="m_bautodelete"></a>CWinThread:: m_bAutoDelete
+## <a name="cwinthreadm_bautodelete"></a><a name="m_bautodelete"></a> CWinThread:: m_bAutoDelete
 
 Określa, czy `CWinThread` obiekt ma być automatycznie usuwany podczas kończenia wątku.
 
@@ -313,7 +314,7 @@ BOOL m_bAutoDelete;
 
 Wartość `m_bAutoDelete` nie ma wpływu na sposób zamykania uchwytu wątku bazowego, ale wpływa na chronometraż zamykania dojścia. Uchwyt wątku jest zawsze zamknięty, gdy `CWinThread` obiekt zostanie zniszczony.
 
-## <a name="cwinthreadm_hthread"></a><a name="m_hthread"></a>CWinThread:: m_hThread
+## <a name="cwinthreadm_hthread"></a><a name="m_hthread"></a> CWinThread:: m_hThread
 
 Dojście do wątku dołączonego do tego `CWinThread` .
 
@@ -327,7 +328,7 @@ HANDLE m_hThread;
 
 Destruktor CWinThread wywołuje metodę CloseHandle na `m_hThread` . Jeśli [m_bAutoDelete](#m_bautodelete) ma wartość true, gdy wątek kończy działanie, obiekt CWinThread zostaje zniszczony, co unieważnia wszystkie wskaźniki do obiektu CWinThread i jego zmienne składowe. Może być konieczne, `m_hThread` aby element członkowski mógł sprawdzić wartość zakończenia wątku lub oczekiwać na sygnał. Aby zachować obiekt CWinThread i jego `m_hThread` element członkowski podczas wykonywania wątku i po jego zakończeniu, ustaw `m_bAutoDelete` wartość false, aby umożliwić kontynuowanie wykonywania wątku. W przeciwnym razie wątek może zakończyć działanie, zniszczyć obiekt CWinThread i zamknąć uchwyt przed podjęciem próby jego użycia. W przypadku korzystania z tej techniki użytkownik jest odpowiedzialny za usunięcie obiektu CWinThread.
 
-## <a name="cwinthreadm_nthreadid"></a><a name="m_nthreadid"></a>CWinThread:: m_nThreadID
+## <a name="cwinthreadm_nthreadid"></a><a name="m_nthreadid"></a> CWinThread:: m_nThreadID
 
 Identyfikator wątku dołączonego do tego elementu `CWinThread` .
 
@@ -344,7 +345,7 @@ Zobacz także uwagi dotyczące okresu istnienia [m_hThread](#m_hthread) .
 
   Zobacz przykład dla [AfxGetThread](application-information-and-management.md#afxgetthread).
 
-## <a name="cwinthreadm_pactivewnd"></a><a name="m_pactivewnd"></a>CWinThread:: m_pActiveWnd
+## <a name="cwinthreadm_pactivewnd"></a><a name="m_pactivewnd"></a> CWinThread:: m_pActiveWnd
 
 Ten element członkowski danych służy do przechowywania wskaźnika do obiektu aktywnego okna wątku.
 
@@ -354,11 +355,11 @@ CWnd* m_pActiveWnd;
 
 ### <a name="remarks"></a>Uwagi
 
-Biblioteka MFC automatycznie przerywa wątek, gdy okno, do którego się odnosi, `m_pActiveWnd` zostanie zamknięte. Jeśli ten wątek jest wątkiem podstawowym dla aplikacji, aplikacja zostanie również zakończona. Jeśli ten element członkowski danych ma wartość NULL, aktywne okno dla obiektu aplikacji `CWinApp` zostanie Odziedziczone. `m_pActiveWnd`jest publiczną zmienną typu `CWnd*` .
+Biblioteka MFC automatycznie przerywa wątek, gdy okno, do którego się odnosi, `m_pActiveWnd` zostanie zamknięte. Jeśli ten wątek jest wątkiem podstawowym dla aplikacji, aplikacja zostanie również zakończona. Jeśli ten element członkowski danych ma wartość NULL, aktywne okno dla obiektu aplikacji `CWinApp` zostanie Odziedziczone. `m_pActiveWnd` jest publiczną zmienną typu `CWnd*` .
 
 Zazwyczaj ta zmienna elementu członkowskiego jest ustawiana podczas przesłonięcia `InitInstance` . W wątku roboczym wartość tego elementu członkowskiego danych jest dziedziczona z jego wątku nadrzędnego.
 
-## <a name="cwinthreadm_pmainwnd"></a><a name="m_pmainwnd"></a>CWinThread:: m_pMainWnd
+## <a name="cwinthreadm_pmainwnd"></a><a name="m_pmainwnd"></a> CWinThread:: m_pMainWnd
 
 Ten element członkowski danych służy do przechowywania wskaźnika do obiektu głównego okna wątku.
 
@@ -368,11 +369,11 @@ CWnd* m_pMainWnd;
 
 ### <a name="remarks"></a>Uwagi
 
-Biblioteka MFC automatycznie przerywa wątek, gdy okno, do którego się odnosi, `m_pMainWnd` zostanie zamknięte. Jeśli ten wątek jest wątkiem podstawowym dla aplikacji, aplikacja zostanie również zakończona. Jeśli ten element członkowski danych ma wartość NULL, okno główne dla obiektu aplikacji `CWinApp` zostanie użyte do określenia, kiedy przerwać wątek. `m_pMainWnd`jest publiczną zmienną typu `CWnd*` .
+Biblioteka MFC automatycznie przerywa wątek, gdy okno, do którego się odnosi, `m_pMainWnd` zostanie zamknięte. Jeśli ten wątek jest wątkiem podstawowym dla aplikacji, aplikacja zostanie również zakończona. Jeśli ten element członkowski danych ma wartość NULL, okno główne dla obiektu aplikacji `CWinApp` zostanie użyte do określenia, kiedy przerwać wątek. `m_pMainWnd` jest publiczną zmienną typu `CWnd*` .
 
 Zazwyczaj ta zmienna elementu członkowskiego jest ustawiana podczas przesłonięcia `InitInstance` . W wątku roboczym wartość tego elementu członkowskiego danych jest dziedziczona z jego wątku nadrzędnego.
 
-## <a name="cwinthreadonidle"></a><a name="onidle"></a>CWinThread:: OnIdle
+## <a name="cwinthreadonidle"></a><a name="onidle"></a> CWinThread:: OnIdle
 
 Przesłoń tę funkcję elementu członkowskiego, aby przeprowadzić przetwarzanie w czasie bezczynności.
 
@@ -391,9 +392,9 @@ Różna od zera, aby uzyskać więcej czasu bezczynności przetwarzania; 0, jeś
 
 ### <a name="remarks"></a>Uwagi
 
-`OnIdle`jest wywoływana w domyślnej pętli komunikatów, gdy kolejka komunikatów wątku jest pusta. Użyj zastąpień do wywołania własnych zadań programu obsługi bezczynności w tle.
+`OnIdle` jest wywoływana w domyślnej pętli komunikatów, gdy kolejka komunikatów wątku jest pusta. Użyj zastąpień do wywołania własnych zadań programu obsługi bezczynności w tle.
 
-`OnIdle`należy zwrócić wartość 0, aby wskazać, że nie jest wymagany dodatkowy czas przetwarzania bezczynności. Wartość parametru *lCount* jest zwiększana każdorazowo, `OnIdle` gdy kolejka komunikatów jest pusta i jest resetowana do wartości 0 za każdym razem, gdy nowy komunikat jest przetwarzany. Możesz wywoływać różne procedury bezczynności w oparciu o tę liczbę.
+`OnIdle` należy zwrócić wartość 0, aby wskazać, że nie jest wymagany dodatkowy czas przetwarzania bezczynności. Wartość parametru *lCount* jest zwiększana każdorazowo, `OnIdle` gdy kolejka komunikatów jest pusta i jest resetowana do wartości 0 za każdym razem, gdy nowy komunikat jest przetwarzany. Możesz wywoływać różne procedury bezczynności w oparciu o tę liczbę.
 
 Domyślna implementacja tej funkcji składowej zwalnia obiekty tymczasowe i nieużywane biblioteki dołączane dynamicznie z pamięci.
 
@@ -401,7 +402,7 @@ Ta funkcja członkowska jest używana tylko w wątkach interfejsu użytkownika.
 
 Ponieważ aplikacja nie może przetwarzać komunikatów do momentu `OnIdle` powracania, nie wykonuj zadań w tej funkcji.
 
-## <a name="cwinthreadoperator-handle"></a><a name="operator_handle"></a>CWinThread:: uchwyt operatora
+## <a name="cwinthreadoperator-handle"></a><a name="operator_handle"></a> CWinThread:: uchwyt operatora
 
 Pobiera uchwyt `CWinThread` obiektu.
 
@@ -417,7 +418,7 @@ Jeśli to się powiedzie, uchwyt obiektu wątku; w przeciwnym razie wartość NU
 
 Użyj uchwytu, aby bezpośrednio wywołać interfejsy API systemu Windows.
 
-## <a name="cwinthreadpostthreadmessage"></a><a name="postthreadmessage"></a>CWinThread::P ostThreadMessage
+## <a name="cwinthreadpostthreadmessage"></a><a name="postthreadmessage"></a> CWinThread::P ostThreadMessage
 
 Wywołuje się, by opublikować komunikat zdefiniowany przez użytkownika do innego `CWinThread` obiektu.
 
@@ -450,7 +451,7 @@ Ogłoszony komunikat jest mapowany do odpowiedniego programu obsługi komunikat�
 > [!NOTE]
 > Po wywołaniu [PostThreadMessage](/windows/win32/api/winuser/nf-winuser-postthreadmessagew)komunikat zostanie umieszczony w kolejce komunikatów wątku. Jednak ze względu na to, że komunikaty ogłoszone w ten sposób nie są skojarzone z oknem, MFC nie wyśle ich do obsługi komunikatów lub poleceń. Aby obsłużyć te komunikaty, przesłonić `PreTranslateMessage()` funkcję klasy pochodnej CWinApp i obsłużyć komunikaty ręcznie.
 
-## <a name="cwinthreadpretranslatemessage"></a><a name="pretranslatemessage"></a>CWinThread::P reTranslateMessage
+## <a name="cwinthreadpretranslatemessage"></a><a name="pretranslatemessage"></a> CWinThread::P reTranslateMessage
 
 Przesłoń tę funkcję w celu filtrowania komunikatów okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).
 
@@ -471,7 +472,7 @@ Niezerowe, jeśli komunikat został w pełni przetworzony `PreTranslateMessage` 
 
 Ta funkcja członkowska jest używana tylko w wątkach interfejsu użytkownika.
 
-## <a name="cwinthreadprocessmessagefilter"></a><a name="processmessagefilter"></a>CWinThread::P rocessMessageFilter
+## <a name="cwinthreadprocessmessagefilter"></a><a name="processmessagefilter"></a> CWinThread::P rocessMessageFilter
 
 Funkcja Hook platformy wywołuje tę funkcję elementu członkowskiego, aby filtrować i odpowiadać na określone komunikaty systemu Windows.
 
@@ -499,7 +500,7 @@ Funkcja Hook przetwarza zdarzenia przed wysłaniem ich do normalnego przetwarzan
 
 Jeśli zastąpisz tę funkcję zaawansowaną, pamiętaj, aby wywołać wersję klasy bazowej, aby zachować przetwarzanie punktu zaczepienia struktury.
 
-## <a name="cwinthreadprocesswndprocexception"></a><a name="processwndprocexception"></a>CWinThread::P rocessWndProcException
+## <a name="cwinthreadprocesswndprocexception"></a><a name="processwndprocexception"></a> CWinThread::P rocessWndProcException
 
 Struktura wywołuje tę funkcję elementu członkowskiego, gdy program obsługi nie przechwytuje wyjątku zgłoszonego w jednym z komunikatów lub obsługi poleceń wątku.
 
@@ -536,7 +537,7 @@ Przesłoń tę funkcję elementu członkowskiego, aby zapewnić globalną obsłu
 
 Ta funkcja członkowska jest używana tylko w wątkach, które mają pompę komunikatów.
 
-## <a name="cwinthreadpumpmessage"></a><a name="pumpmessage"></a>CWinThread::P umpMessage
+## <a name="cwinthreadpumpmessage"></a><a name="pumpmessage"></a> CWinThread::P umpMessage
 
 Zawiera pętlę komunikatów wątku.
 
@@ -546,11 +547,11 @@ virtual BOOL PumpMessage();
 
 ### <a name="remarks"></a>Uwagi
 
-`PumpMessage`zawiera pętlę komunikatów wątku. `PumpMessage`jest wywoływana przez, `CWinThread` Aby wypompować komunikaty wątku. Można wywołać `PumpMessage` bezpośrednio, aby wymusić przetwarzanie komunikatów, lub można zastąpić, `PumpMessage` Aby zmienić jego zachowanie domyślne.
+`PumpMessage` zawiera pętlę komunikatów wątku. `PumpMessage` jest wywoływana przez, `CWinThread` Aby wypompować komunikaty wątku. Można wywołać `PumpMessage` bezpośrednio, aby wymusić przetwarzanie komunikatów, lub można zastąpić, `PumpMessage` Aby zmienić jego zachowanie domyślne.
 
 Bezpośrednie wywoływanie `PumpMessage` i zastępowanie jego domyślnego zachowania jest zalecane tylko dla zaawansowanych użytkowników.
 
-## <a name="cwinthreadresumethread"></a><a name="resumethread"></a>CWinThread:: ResumeThread
+## <a name="cwinthreadresumethread"></a><a name="resumethread"></a> CWinThread:: ResumeThread
 
 Wywołuje się, by wznowić wykonywanie wątku, który został wstrzymany przez funkcję elementu członkowskiego [SuspendThread](#suspendthread) , lub wątku utworzonego za pomocą flagi CREATE_SUSPENDED.
 
@@ -560,13 +561,13 @@ DWORD ResumeThread();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba poprzednich zawieszeń wątku w przypadku powodzenia; `0xFFFFFFFF`w przeciwnym razie. Jeśli wartość zwracana wynosi zero, bieżący wątek nie został wstrzymany. Jeśli wartość zwracana jest taka, wątek został wstrzymany, ale jest teraz ponownie uruchamiany. Każda wartość zwracana większa od jednej oznacza, że wątek pozostaje zawieszony.
+Liczba poprzednich zawieszeń wątku w przypadku powodzenia; `0xFFFFFFFF` w przeciwnym razie. Jeśli wartość zwracana wynosi zero, bieżący wątek nie został wstrzymany. Jeśli wartość zwracana jest taka, wątek został wstrzymany, ale jest teraz ponownie uruchamiany. Każda wartość zwracana większa od jednej oznacza, że wątek pozostaje zawieszony.
 
 ### <a name="remarks"></a>Uwagi
 
 Liczba wstrzymań bieżącego wątku jest zmniejszona o jeden. Jeśli liczba wstrzymań zostanie zredukowana do zera, wątek wznawia wykonywanie; w przeciwnym razie wątek pozostaje zawieszony.
 
-## <a name="cwinthreadrun"></a><a name="run"></a>CWinThread:: Run
+## <a name="cwinthreadrun"></a><a name="run"></a> CWinThread:: Run
 
 Udostępnia domyślną pętlę komunikatów dla wątków interfejsu użytkownika.
 
@@ -580,13 +581,13 @@ virtual int Run();
 
 ### <a name="remarks"></a>Uwagi
 
-`Run`uzyskuje i wysyła komunikaty systemu Windows do momentu odebrania komunikatu [WM_QUIT](/windows/win32/winmsg/wm-quit) przez aplikację. Jeśli kolejka komunikatów wątku aktualnie nie zawiera żadnych komunikatów, `Run` wywołuje `OnIdle` wykonywanie przetwarzania w czasie bezczynności. Komunikaty przychodzące przechodzą do funkcji składowej [PreTranslateMessage](#pretranslatemessage) na potrzeby przetwarzania specjalnego, a następnie do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) na potrzeby translacji standardowej klawiatury. Na koniec funkcja [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows jest wywoływana.
+`Run` uzyskuje i wysyła komunikaty systemu Windows do momentu odebrania komunikatu [WM_QUIT](/windows/win32/winmsg/wm-quit) przez aplikację. Jeśli kolejka komunikatów wątku aktualnie nie zawiera żadnych komunikatów, `Run` wywołuje `OnIdle` wykonywanie przetwarzania w czasie bezczynności. Komunikaty przychodzące przechodzą do funkcji składowej [PreTranslateMessage](#pretranslatemessage) na potrzeby przetwarzania specjalnego, a następnie do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) na potrzeby translacji standardowej klawiatury. Na koniec funkcja [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows jest wywoływana.
 
-`Run`jest rzadko zastępowany, ale można go zastąpić, aby zaimplementować specjalne zachowanie.
+`Run` jest rzadko zastępowany, ale można go zastąpić, aby zaimplementować specjalne zachowanie.
 
 Ta funkcja członkowska jest używana tylko w wątkach interfejsu użytkownika.
 
-## <a name="cwinthreadsetthreadpriority"></a><a name="setthreadpriority"></a>CWinThread:: SetThreadPriority
+## <a name="cwinthreadsetthreadpriority"></a><a name="setthreadpriority"></a> CWinThread:: SetThreadPriority
 
 Ta funkcja ustawia poziom priorytetu bieżącego wątku w ramach jego klasy priorytetu.
 
@@ -623,7 +624,7 @@ Niezerowe, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.
 
 Może być wywoływana tylko po pomyślnym powrocie przez [wątek](#createthread) .
 
-## <a name="cwinthreadsuspendthread"></a><a name="suspendthread"></a>CWinThread:: SuspendThread
+## <a name="cwinthreadsuspendthread"></a><a name="suspendthread"></a> CWinThread:: SuspendThread
 
 Zwiększa liczbę wstrzymań bieżącego wątku.
 
@@ -633,13 +634,13 @@ DWORD SuspendThread();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba poprzednich zawieszeń wątku w przypadku powodzenia; `0xFFFFFFFF`w przeciwnym razie.
+Liczba poprzednich zawieszeń wątku w przypadku powodzenia; `0xFFFFFFFF` w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
 Jeśli którykolwiek wątek ma liczbę wstrzymań powyżej zero, ten wątek nie jest wykonywany. Wątek można wznowić, wywołując funkcję elementu członkowskiego [ResumeThread](#resumethread) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
