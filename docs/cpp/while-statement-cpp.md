@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: While — Instrukcja (C++)'
 title: while — instrukcja (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 168b1fc20d165c44c3230a8d1094c99b689ddbb9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3001760372410222651366416ac74d0cba59f23b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302832"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C++)
 
@@ -62,7 +63,7 @@ int main()
 
 Warunek zakończenia jest oceniany w górnej części pętli. Jeśli nie ma żadnych końcowych podkreśleń, pętla nigdy nie jest wykonywana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

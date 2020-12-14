@@ -1,44 +1,45 @@
 ---
-title: Implementacja punktu połączenia
+description: 'Dowiedz się więcej o: implementowanie punktu połączenia'
+title: Implementowanie punktu połączenia
 ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: bee04d28036ca5a2dfb0f4913adf39f1fdcca565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281161"
 ---
-# <a name="implement-a-connection-point"></a>Implementacja punktu połączenia
+# <a name="implement-a-connection-point"></a>Implementowanie punktu połączenia
 
-Aby zaimplementować za pomocą Kreatora punktu połączenia implementacji punktu połączenia, musi utworzono projekt jako aplikacji ATL COM lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../atl/reference/atl-project-wizard.md) do tworzenia aplikacji biblioteki ATL, lub [Dodaj obiekt ATL do Twojej aplikacji MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.
-
-> [!NOTE]
-> Aby uzyskać informacji dotyczących implementowania punkty połączenia do projektu MFC, zobacz [punkty połączenia](../mfc/connection-points.md).
-
-Po utworzeniu projektu, aby zaimplementować punkt połączenia należy najpierw dodać obiektu ATL. Zobacz [Dodawanie obiektów i kontrolek do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) listę kreatorzy dodawania obiektów do projektu ATL.
+Aby zaimplementować punkt połączenia za pomocą Kreatora implementacji punktu połączenia, należy utworzyć projekt jako aplikację ATL COM lub jako aplikację MFC, która zawiera obsługę ATL. Możesz użyć [Kreatora projektu ATL](../atl/reference/atl-project-wizard.md) do utworzenia aplikacji ATL lub [dodać obiekt ATL do aplikacji MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) w celu zaimplementowania obsługi ATL dla aplikacji MFC.
 
 > [!NOTE]
-> Kreator nie obsługuje okna dialogowe ATL, usług sieci Web XML utworzone za pomocą aplikacji serwera ATL. obiekty wydajności i liczników wydajności.
+> Aby uzyskać informacje na temat implementowania punktów połączenia dla projektu MFC, zobacz [punkty połączenia](../mfc/connection-points.md).
 
-Obiekt łączności (źródła) można wyświetlić punkt połączenia dla każdego z jego interfejsów wychodzących. Każdego interfejsu wychodzącego może być implementowana przez klienta do obiektu (ujścia). Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).
+Po utworzeniu projektu w celu zaimplementowania punktu połączenia należy najpierw dodać obiekt ATL. Zobacz [Dodawanie obiektów i kontrolek do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) , aby wyświetlić listę kreatorów, które dodają obiekty do projektu ATL.
 
-**Aby zaimplementować punktu połączenia:**
+> [!NOTE]
+> Kreator nie obsługuje okien dialogowych ATL, usług sieci Web XML utworzonych przy użyciu serwera ATL, obiektów wydajności ani liczników wydajności.
 
-1. W widoku klas kliknij prawym przyciskiem myszy nazwę klasy dla obiektu ATL.
+Obiekt połączony (czyli Źródło) może pokazać punkt połączenia dla każdego z jego interfejsów wychodzących. Każdy interfejs wychodzący może być zaimplementowany przez klienta na obiekcie (czyli ujścia). Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).
 
-1. Wybierz **Dodaj** z menu skrótów, a następnie wybierz **Dodaj punkt połączenia** do wyświetlenia [Kreator implementacji punktu połączenia](#implement-connection-point-wizard).
+**Aby zaimplementować punkt połączenia:**
 
-1. Wybierz interfejsy punktu połączenia w celu wdrożenia z bibliotek odpowiedniego typu, a następnie wybierz pozycję **Zakończ**.
+1. W Widok klasy kliknij prawym przyciskiem myszy nazwę klasy dla obiektu ATL.
 
-1. W widoku klas należy zbadać klasy serwera proxy, utworzone dla każdego punktu połączenia. Klasy są traktowane jako CProxy*InterfaceName*\<T > i są uzyskiwane z [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
+1. Wybierz polecenie **Dodaj** z menu skrótów, a następnie wybierz polecenie **Dodaj punkt połączenia** , aby wyświetlić [Kreatora implementowania punktu połączenia](#implement-connection-point-wizard).
 
-1. Kliknij dwukrotnie klasy punktów połączenia do wyświetlenia definicję klasy punktu połączenia.
+1. Wybierz interfejsy punktu połączenia do wdrożenia z odpowiednich bibliotek typów i wybierz pozycję **Zakończ**.
 
-   - W przypadku zaimplementowania punktu połączenia dla interfejsu własny projekt, pojawi się następujące definicje:
+1. W Widok klasy zapoznaj się z klasami proxy utworzonymi dla każdego punktu połączenia. Klasy są wyświetlane jako CProxy *InterfaceName* \<T> i pochodzą z [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
+
+1. Kliknij dwukrotnie klasę punktu połączenia, aby wyświetlić definicję klasy punktu połączenia.
+
+   - W przypadku zaimplementowania punktu połączenia dla interfejsu własnego projektu zostanie wyświetlona następująca definicja:
 
      ```cpp
      template< class T >
@@ -51,7 +52,7 @@ Obiekt łączności (źródła) można wyświetlić punkt połączenia dla każd
 
    - W przypadku zaimplementowania interfejsu lokalnego metody i właściwości są wyświetlane w treści klasy.
 
-   - W przypadku zaimplementowania punktu połączenia dla innego interfejsu definicja zawiera metod tego interfejsu, każdy poprzedzone `Fire_`.
+   - W przypadku zaimplementowania punktu połączenia dla innego interfejsu definicja obejmuje metody interfejsu, z których każda poprzedza `Fire_` .
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -59,29 +60,29 @@ Obiekt łączności (źródła) można wyświetlić punkt połączenia dla każd
 
 ## <a name="implement-connection-point-wizard"></a>Kreator implementacji punktu połączenia
 
-Ten kreator implementuje punkt połączenia dla obiektów COM. Obiekt łączności (źródła) można wyświetlić punkt połączenia dla swoich własnych interfejsów lub dowolnego interfejsu wychodzącego. MSVC i Windows zapewniają bibliotek typów, które mają wychodzących interfejsów. Każdego interfejsu wychodzącego może być implementowana przez klienta do obiektu (ujścia).
+Ten Kreator implementuje punkt połączenia dla obiektu COM. Obiekt połączony (czyli Źródło) może pokazać punkt połączenia dla własnych interfejsów lub dla dowolnego interfejsu wychodzącego. MSVC i Windows udostępniają biblioteki typów, które mają interfejsy wychodzące. Każdy interfejs wychodzący może być zaimplementowany przez klienta na obiekcie (czyli ujścia).
 
 Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).
 
-- **Biblioteki typów dostępne**
+- **Dostępne biblioteki typów**
 
-  Wyświetla bibliotek dostępnych typów zawierający definicje interfejsu, dla których można wdrożyć punktów połączenia. Wybierz przycisk wielokropka, aby zlokalizować plik z biblioteki typów do użycia.
+  Wyświetla dostępne biblioteki typów, w których znajdują się definicje interfejsów, dla których można zaimplementować punkty połączenia. Wybierz przycisk wielokropka, aby zlokalizować plik, który ma bibliotekę typów do użycia.
 
 - **Lokalizacja**
 
-  Wyświetla lokalizację biblioteki typów, aktualnie wybrane w **bibliotek typów dostępnych** listy.
+  Wyświetla lokalizację biblioteki typów aktualnie zaznaczonej na liście **dostępne biblioteki typów** .
 
 - **Interfejsy**
 
-  Wyświetla interfejsy, których definicje są przechowywane w bibliotece typów aktualnie wybrany w **bibliotek typów dostępnych** pole.
+  Wyświetla interfejsy, których definicje są przechowywane w bibliotece typów aktualnie zaznaczonej w polu **dostępne biblioteki typów** .
 
   |Przycisk transferu|Opis|
   |---------------------|-----------------|
-  |**>**|Dodaje do **zaimplementować punkty połączenia** Nazwa interfejsu, aktualnie wybrane w listy **interfejsów** listy.|
-  |**>>**|Dodaje do **zaimplementować punkty połączenia** listy dostępny w wszystkich nazw interfejsu **interfejsów** listy.|
-  |**\<**|Usuwa nazwę interfejsu aktualnie wybrany w **zaimplementować punkty połączenia** listy.|
-  |**\<\<**|Usuwa wszystkie interfejsu nazwy obecnie wymienione w **zaimplementować punkty połączenia** listy.|
+  |**>**|Dodaje do listy **Implementuj punkty połączenia** nazwę interfejsu aktualnie wybraną na liście **interfejsy** .|
+  |**>>**|Dodaje do listy **Implementuj punkty połączenia** listę wszystkich nazw interfejsów dostępnych na liście **interfejsy** .|
+  |**\<**|Usuwa nazwę interfejsu aktualnie wybraną z listy **Implementuj punkty połączenia** .|
+  |**\<\<**|Usuwa wszystkie nazwy interfejsów aktualnie wymienione na liście **Implementuj punkty połączenia** .|
 
-- **Implementowanie punkty połączenia**
+- **Implementowanie punktów połączenia**
 
-  Wyświetla nazwy interfejsów, które można zaimplementować punkty połączenia po wybraniu **Zakończ**.
+  Wyświetla nazwy interfejsów, dla których są implementowane punkty połączenia po wybraniu **przycisku Zakończ**.

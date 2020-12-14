@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: Array i WriteOnlyArray (C++/CX)'
 title: Tablica i WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: 1980fbcd1e2fa8cdaa48e00d2e7de9e45ac96a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4c4f9415f401f1180786608288e33691c82fbdfa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231029"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302793"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C++/CX)
 
@@ -21,7 +22,7 @@ Następujące typy tablic można przekazywać przez ABI:
 
 1. `Platform::WriteOnlyArray`
 
-1. wartość zwracana przez`Platform::Array^`
+1. wartość zwracana przez `Platform::Array^`
 
 Te typy tablic są używane do implementowania trzech rodzajów wzorców tablicowych, które są zdefiniowane przez środowisko wykonawcze systemu Windows.
 
@@ -90,7 +91,7 @@ Poniższy fragment kodu przedstawia sposób kopiowania wyników [`DataReader`](/
 
 Ogólnie rzecz biorąc, należy unikać ujawniania `Platform::Array` typu jako właściwości w klasie referencyjnej, ponieważ cała tablica jest zwracana nawet wtedy, gdy kod klienta próbuje uzyskać dostęp do pojedynczego elementu. Jeśli trzeba uwidocznić kontener sekwencji jako właściwość w publicznej klasie referencyjnej, [`Windows::Foundation::IVector`](/uwp/api/windows.foundation.collections.ivector-1) jest to lepszy wybór. W prywatnych lub wewnętrznych interfejsach API (które nie są publikowane w metadanych) Rozważ użycie standardowego kontenera C++, takiego jak [`std::vector`](../standard-library/vector-class.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [System typów](../cppcx/type-system-c-cx.md)<br/>
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

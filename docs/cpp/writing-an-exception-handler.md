@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: pisaniu programu obsługi wyjątków'
 title: Pisanie programu do obsługi wyjątku
 ms.date: 11/04/2016
 helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-ms.openlocfilehash: 201dcaa6a90584d1f9535df11d5722a37bdceb89
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 174ab77240fc405e7c1175806167b6ec68f08c82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302806"
 ---
 # <a name="writing-an-exception-handler"></a>Pisanie programu do obsługi wyjątku
 
@@ -22,9 +23,9 @@ Procedury obsługi wyjątków używają instrukcji try-except.
 
 - [Instrukcja try-except](../cpp/try-except-statement.md)
 
-- [Pisanie filtru wyjątków](../cpp/writing-an-exception-filter.md)
+- [Pisanie filtru wyjątku](../cpp/writing-an-exception-filter.md)
 
-- [Wywoływanie wyjątków oprogramowania](../cpp/raising-software-exceptions.md)
+- [Występowanie wyjątków programowych](../cpp/raising-software-exceptions.md)
 
 - [Wyjątki sprzętowe](../cpp/hardware-exceptions.md)
 

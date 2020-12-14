@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3510'
 title: Błąd kompilatora C3510
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
-ms.openlocfilehash: 3f9dea77b739aa59474e60cf852fff2577ab6ba9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 97727f22e94993cff051c57b5692e9a14c9ab930
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315429"
 ---
 # <a name="compiler-error-c3510"></a>Błąd kompilatora C3510
 
 nie można zlokalizować biblioteki typów zależnych "type_lib"
 
-[no_registry](../../preprocessor/no-registry.md) i [auto_search](../../preprocessor/auto-search.md) zostały przesłane do `#import` ale kompilator nie mógł odnaleźć przywoływanej biblioteki typów.
+[no_registry](../../preprocessor/no-registry.md) i [auto_search](../../preprocessor/auto-search.md) zostały przesłane do, `#import` ale kompilator nie mógł odnaleźć przywoływanej biblioteki typów.
 
 Aby rozwiązać ten problem, upewnij się, że wszystkie biblioteki typów i biblioteki typów, do których istnieją odwołania, są dostępne dla kompilatora.
 

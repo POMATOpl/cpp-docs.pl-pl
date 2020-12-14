@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Przeprowadzanie marshalingu wskaźników funkcji przy użyciu PInvoke'
+description: 'Dowiedz się więcej na temat: jak: kierowanie wskaźników funkcji przy użyciu PInvoke'
+title: 'Porady: kierowanie wskaźników funkcji za pomocą funkcji PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,30 +9,30 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe3f669cf023ed914bdccb3ae15ccafefbb49c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302585"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Instrukcje: Przeprowadzanie marshalingu wskaźników funkcji przy użyciu PInvoke
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Porady: kierowanie wskaźników funkcji za pomocą funkcji PInvoke
 
-W tym temacie wyjaśniono, jak zarządzane delegatów mogą być używane zamiast wskaźników funkcji, podczas współpracy z niezarządzanych funkcji przy użyciu funkcji .NET Framework P/Invoke. Jednak w programowaniu w języku Visual C++ zachęcamy do zamiast tego użyj funkcji międzyoperacyjności języka C++ (jeśli jest to możliwe) ponieważ P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe do zaimplementowania. Jeśli niezarządzanego interfejsu API jest spakowany jako biblioteki DLL i kod źródłowy jest niedostępny, P/Invoke jest jedyną opcją. W przeciwnym razie zobacz następujące tematy:
+W tym temacie wyjaśniono, jak zarządzane Delegaty mogą być używane zamiast wskaźników funkcji podczas współdziałania z funkcjami niezarządzanymi przy użyciu .NET Framework funkcji P/Invoke. Jednak Visual C++ programiści są zachęcani do używania funkcji międzyoperacyjnych C++ (jeśli to możliwe), ponieważ funkcja P/Invoke zapewnia niewielkie raportowanie błędów w czasie kompilacji, nie jest bezpieczna pod względem typu i może być żmudnym do wdrożenia. Jeśli niezarządzany interfejs API jest spakowany jako biblioteka DLL, a kod źródłowy nie jest dostępny, jedyną opcją jest opcja P/Invoke. W przeciwnym razie zapoznaj się z następującymi tematami:
 
-- [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+- [Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Instrukcje: przeprowadzanie marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Instrukcje: kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
-Niezarządzane interfejsy API, które umożliwiają wykorzystywanie wskaźników funkcji, ponieważ argumenty mogą być wywoływane z kodu zarządzanego z zarządzanego delegatem zamiast wskaźnik natywnej funkcji. Kompilator automatycznie kieruje delegata z funkcjami niezarządzanymi jako wskaźnik funkcji i wstawia kod konieczne przejście zarządzanych/niezarządzanych.
+Niezarządzane interfejsy API, które przyjmują wskaźniki funkcji, jako argumenty mogą być wywoływane z kodu zarządzanego z zarządzanym delegatem zamiast wskaźnika funkcji natywnej. Kompilator automatycznie przekazuje delegatowi funkcje niezarządzane jako wskaźnik funkcji i wstawia niezbędny kod przejścia zarządzany/niezarządzany.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod składa się z modułu zarządzanego i niezarządzanego. Moduł niezarządzane to biblioteki DLL, która definiuje funkcję o nazwie TakesCallback, który akceptuje wskaźnik funkcji. Ten adres jest używany do wykonywania funkcji.
+Poniższy kod składa się z niezarządzanego i zarządzanego modułu. Moduł niezarządzany jest biblioteką DLL, która definiuje funkcję o nazwie TakesCallback, która akceptuje wskaźnik funkcji. Ten adres jest używany do wykonywania funkcji.
 
-Moduł zarządzany definiowany delegat jest przekazywane do kodu macierzystego jako wskaźnik funkcji, która używa <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu do udostępnienia funkcji TakesCallback natywnej związane z kodem zarządzanym. Wystąpienie delegata funkcji main jest utworzony i przekazany do funkcji TakesCallback. Dane wyjściowe programu pokazuje, że ta funkcja pobiera wykonywane przez funkcji macierzystej TakesCallback.
+Moduł zarządzany definiuje delegata, który jest zorganizowany do kodu natywnego jako wskaźnik funkcji i używa <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu, aby udostępnić natywną funkcję TakesCallback w kodzie zarządzanym. W funkcji Main wystąpienie delegata jest tworzone i przesyłane do funkcji TakesCallback. Dane wyjściowe programu pokazują, że ta funkcja jest wykonywana przez natywną funkcję TakesCallback.
 
-Funkcji zarządzanej pomija wyrzucania elementów bezużytecznych dla zarządzanych delegata zapobiec .NET Framework wyrzucania elementów bezużytecznych z przemieszczanie delegata, gdy wykonuje funkcji macierzystej.
+Funkcja zarządzana pomija wyrzucanie elementów bezużytecznych dla zarządzanego delegata, uniemożliwiając .NET Framework wyrzucanie elementów bezużytecznych z obiektu delegowanego podczas wykonywania funkcji natywnej.
 
 ```cpp
 // TraditionalDll5.cpp
@@ -85,8 +86,8 @@ int main() {
 }
 ```
 
-Należy pamiętać, że części biblioteki DLL jest uwidaczniany związane z kodem zarządzanym przy użyciu tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL jest dostępny tylko w czasie wykonywania, więc problemy z funkcjami zaimportowane wraz z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostanie wykryty w czasie kompilacji.
+Należy zauważyć, że żadna część biblioteki DLL nie jest ujawniona w zarządzanym kodzie przy użyciu tradycyjnej dyrektywy #include. W rzeczywistości biblioteka DLL jest dostępna tylko w czasie wykonywania, dlatego problemy z funkcjami zaimportowanymi z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostaną wykryte w czasie kompilacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

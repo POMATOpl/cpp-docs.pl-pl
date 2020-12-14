@@ -1,5 +1,6 @@
 ---
-title: 'Instrukcje: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą funkcji PInvoke'
+description: 'Dowiedz się więcej na temat: Instrukcje: kierowanie wskaźników osadzonych za pomocą funkcji PInvoke'
+title: 'Porady: przeprowadzanie marshalingu wskaźników osadzonych za pomocą funkcji PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d31660a9a8ba345b380d442bb4484e332fe9d7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302559"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Instrukcje: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą funkcji PInvoke
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Porady: przeprowadzanie marshalingu wskaźników osadzonych za pomocą funkcji PInvoke
 
-Funkcje, które są implementowane w niezarządzanych bibliotek DLL może być wywołana z kodu zarządzanego za pomocą funkcji wywołania platformy (P/Invoke). Jeśli kod źródłowy dla biblioteki DLL nie jest dostępna, P/Invoke jest jedyną opcją dla współpracy. Jednak w przeciwieństwie do innych języków .NET, Visual C++ stanowi alternatywę dla metody P/Invoke. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) i [jak: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Funkcje zaimplementowane w niezarządzanych bibliotekach DLL mogą być wywoływane z kodu zarządzanego za pomocą funkcji wywołania platformy (P/Invoke). Jeśli kod źródłowy biblioteki DLL nie jest dostępny, Metoda P/Invoke jest jedyną opcją dla współdziałania. Jednak, w przeciwieństwie do innych języków .NET, Visual C++ stanowi alternatywę dla P/Invoke. Aby uzyskać więcej informacji, zobacz [using C++ Interop (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) i [instrukcje: kierowanie wskaźników osadzonych za pomocą międzyoperacyjności języka c++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ## <a name="example"></a>Przykład
 
-Przekazywanie struktury do kodu macierzystego wymaga utworzenia zarządzanej strukturę, która jest równoważna pod względem układ danych natywnych struktury. Jednakże struktur, które zawierają wskaźniki wymagają specjalnej obsługi. Dla każdego wskaźnika osadzone w strukturze natywnego, zarządzanego wersję struktury powinien zawierać wystąpienia <xref:System.IntPtr> typu. Ponadto pamięci dla tych wystąpień musi jawnie przydzielone, zainicjować i wydania przy użyciu <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, i <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> metody.
+Przekazywanie struktur do kodu natywnego wymaga utworzenia struktury zarządzanej równoważnej pod względem układu danych do struktury natywnej. Jednak struktury zawierające wskaźniki wymagają specjalnej obsługi. Dla każdego osadzonego wskaźnika w strukturze natywnej zarządzana wersja struktury powinna zawierać wystąpienie <xref:System.IntPtr> typu. Ponadto pamięć dla tych wystąpień musi być jawnie przydzielona, zainicjowana i wydana przy <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A> użyciu <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> metod, i <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> .
 
-Poniższy kod składa się z modułu zarządzanego i niezarządzanego. Moduł niezarządzane to biblioteki DLL, która definiuje funkcję, która akceptuje strukturę o nazwie ListString, który zawiera wskaźnik i funkcję o nazwie TakesListStruct. Moduł zarządzany jest aplikacją wiersza polecenia, który importuje funkcja TakesListStruct i definiuje strukturę o nazwie MListStruct, który jest odpowiednikiem ListStruct macierzysty, z tą różnicą, że podwójne * jest reprezentowane przez <xref:System.IntPtr> wystąpienia. Przed wywołaniem TakesListStruct, główna funkcja przydziela i inicjuje pamięć, która odwołuje się do tego pola.
+Poniższy kod składa się z niezarządzanego i zarządzanego modułu. Moduł niezarządzany jest biblioteką DLL, która określa funkcję akceptującą strukturę o nazwie ListString, która zawiera wskaźnik, i funkcję o nazwie TakesListStruct. Moduł zarządzany jest aplikacją wiersza polecenia, która importuje funkcję TakesListStruct i definiuje strukturę o nazwie MListStruct, która jest równoważna z natywnym ListStructem, z wyjątkiem tego, że Double * jest reprezentowane <xref:System.IntPtr> wystąpieniem. Przed wywołaniem TakesListStruct funkcja Main alokuje i inicjuje pamięć, do której odwołuje się to pole.
 
 ```cpp
 // TraditionalDll6.cpp
@@ -98,8 +99,8 @@ int main() {
 }
 ```
 
-Należy pamiętać, że części biblioteki DLL jest uwidaczniany związane z kodem zarządzanym przy użyciu tradycyjnych # dyrektywy include. W rzeczywistości biblioteki DLL jest dostępny tylko w czasie wykonywania, więc problemy z funkcjami zaimportowane wraz z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostanie wykryty w czasie kompilacji.
+Należy zauważyć, że żadna część biblioteki DLL nie jest ujawniona w zarządzanym kodzie przy użyciu tradycyjnej dyrektywy #include. W rzeczywistości biblioteka DLL jest dostępna tylko w czasie wykonywania, dlatego problemy z funkcjami zaimportowanymi z <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostaną wykryte w czasie kompilacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
