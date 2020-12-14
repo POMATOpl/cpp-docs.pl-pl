@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: casinh, casinhf, casinhl'
 title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 96d3b2bc6b299f7ba6ef38fbd83f55507af26bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253159"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
@@ -66,12 +67,12 @@ _Lcomplex casinhl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba zespolona, która reprezentuje kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Arcus sinus hiperboliczny *z z, w*radianach. Wynik jest niepowiązany wzdłuż osi rzeczywistej, a w interwale [-iπ/2, + iπ/2] wzdłuż osi urojonej.
+Arcus sinus hiperboliczny *z z, w* radianach. Wynik jest niepowiązany wzdłuż osi rzeczywistej, a w interwale [-iπ/2, + iπ/2] wzdłuż osi urojonej.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -79,13 +80,13 @@ Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cas
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**casinh**, **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
+|**casinh**,               **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

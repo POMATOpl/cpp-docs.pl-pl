@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny C1004'
 title: Błąd krytyczny C1004
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f21978f5ff314a8273dde60428dc89ca0c5767b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262688"
 ---
 # <a name="fatal-error-c1004"></a>Błąd krytyczny C1004
 
@@ -31,7 +32,7 @@ Aby rozwiązać ten problem, sprawdź następujące kwestie:
 
 - Na domyślnym dysku nie ma wystarczającej ilości miejsca na pliki tymczasowe, które wymagają około dwukrotnie większej ilości miejsca jako pliku źródłowego.
 
-- Dyrektywa `#if`, która ma wartość false, nie ma dyrektywy zamykającej `#endif`.
+- `#if`Dyrektywa, której wynikiem jest false, nie ma dyrektywy zamykającej `#endif` .
 
 - Plik źródłowy nie kończy się znakiem powrotu karetki i wysuwu wiersza.
 

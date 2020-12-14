@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: pliki zasobów (C++)'
 title: Pliki zasobów (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 463c27959b049436e29f872c966bc276c6ef5f2d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d76a8778cc3c94dd06b6b5b0ea3d6ee6b951e28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263326"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 
@@ -85,7 +86,7 @@ Podczas edytowania zasobów środowisko programu Visual Studio współpracuje z 
 | Nazwa pliku | Opis |
 |---|---|
 | Resource.h | Plik nagłówkowy wygenerowany przez środowisko programistyczne, które zawiera definicje symboli.<br/><br/>Uwzględnij ten plik w kontroli źródła. |
-| Filename. APS | Wersja binarna bieżącego pliku skryptu zasobów używanego do szybkiego ładowania.<br /><br /> Edytory zasobów nie odczytują bezpośrednio plików. RC lub Resource. h. Kompilator zasobów kompiluje je do plików APS, które są używane przez edytory zasobów. Ten plik jest krokiem kompilacji i przechowuje tylko dane symboliczne.<br/><br/>Podobnie jak w przypadku normalnego procesu kompilowania, informacje, które nie są symboliczne, takie jak komentowanie, są odrzucane podczas procesu kompilacji.<br/><br/>Za każdym razem, gdy plik APS nie jest zsynchronizowany z plikiem. RC, plik. RC zostanie wygenerowany ponownie. Na przykład podczas **zapisywania**Edytor zasobów zastępuje plik. RC i plik Resource. h. Wszelkie zmiany zasobów pozostają zawarte w pliku. RC, ale komentarze są zawsze tracone po nadpisaniu pliku. rc. Aby uzyskać informacje na temat sposobu zachowywania komentarzy, zobacz temat [uwzględnianie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Zazwyczaj nie należy umieszczać pliku APS w kontroli źródła. |
+| Filename. APS | Wersja binarna bieżącego pliku skryptu zasobów używanego do szybkiego ładowania.<br /><br /> Edytory zasobów nie odczytują bezpośrednio plików. RC lub Resource. h. Kompilator zasobów kompiluje je do plików APS, które są używane przez edytory zasobów. Ten plik jest krokiem kompilacji i przechowuje tylko dane symboliczne.<br/><br/>Podobnie jak w przypadku normalnego procesu kompilowania, informacje, które nie są symboliczne, takie jak komentowanie, są odrzucane podczas procesu kompilacji.<br/><br/>Za każdym razem, gdy plik APS nie jest zsynchronizowany z plikiem. RC, plik. RC zostanie wygenerowany ponownie. Na przykład podczas **zapisywania** Edytor zasobów zastępuje plik. RC i plik Resource. h. Wszelkie zmiany zasobów pozostają zawarte w pliku. RC, ale komentarze są zawsze tracone po nadpisaniu pliku. rc. Aby uzyskać informacje na temat sposobu zachowywania komentarzy, zobacz temat [uwzględnianie zasobów w czasie kompilacji](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Zazwyczaj nie należy umieszczać pliku APS w kontroli źródła. |
 | . RC | Plik skryptu zasobu, który zawiera skrypt dla zasobów w bieżącym projekcie. Ten plik jest zastępowany przez plik APS przy każdym zapisywaniu.<br/><br/>Uwzględnij ten plik w kontroli źródła. |
 
 ## <a name="manifest-resources"></a>Zasoby manifestu

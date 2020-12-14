@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat &lt; funkcji wyrażenia regularnego &gt;
 title: '&lt;funkcje wyrażenia regularnego &gt;'
 ms.date: 09/10/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: fd7087025939a0aacf17153f201e37fc377653f9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa2186d7b394d1b603d5600d1977efa8d268a32f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842874"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253341"
 ---
 # <a name="ltregexgt-functions"></a>&lt;funkcje wyrażenia regularnego &gt;
 
@@ -128,7 +129,7 @@ Ciąg do dopasowania. Odnosi się do typu *elem*.
 
 ### <a name="remarks"></a>Uwagi
 
-Każda funkcja szablonu zwraca wartość true tylko wtedy, gdy cały *operand sekwencji jest* dokładnie zgodny *z argumentem*wyrażenia regularnego. Użyj [regex_search](../standard-library/regex-functions.md#regex_search) , aby dopasować podciąg w sekwencji docelowej i `regex_iterator` znaleźć wiele dopasowań. Funkcje, które przyjmują `match_results` obiekt ustawia jego elementy członkowskie, aby odzwierciedlały, czy dopasowanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
+Każda funkcja szablonu zwraca wartość true tylko wtedy, gdy cały *operand sekwencji jest* dokładnie zgodny *z argumentem* wyrażenia regularnego. Użyj [regex_search](../standard-library/regex-functions.md#regex_search) , aby dopasować podciąg w sekwencji docelowej i `regex_iterator` znaleźć wiele dopasowań. Funkcje, które przyjmują `match_results` obiekt ustawia jego elementy członkowskie, aby odzwierciedlały, czy dopasowanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
 
 Funkcje, które przyjmują `match_results` obiekt ustawia jego elementy członkowskie, aby odzwierciedlały, czy dopasowanie zakończyło się pomyślnie, a jeśli tak, to jakie są różne grupy przechwytywania w przechwyconym wyrażeniu regularnym.
 
@@ -258,7 +259,7 @@ Ciąg do dopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja konstruuje obiekt [klasy regex_iterator](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` i używa jej do podzielenia zakresu wejściowego na `[first, last)` serię podsekwencji `T0 M0 T1 M1...TN-1 MN-1 TN` , gdzie `Mn` to n-ty dopasowanie wykryte przez iterator. Jeśli nie znaleziono żadnych dopasowań, `T0` to cały zakres wejściowy i `N` wynosi zero. Jeśli `(flags & format_first_only) != 0` używane jest tylko pierwsze dopasowanie, `T1` to cały tekst wejściowy, który następuje po dopasowaniu i `N` ma wartość 1. Dla każdego `i` z zakresu `[0, N)` , jeśli `(flags & format_no_copy) == 0` kopiuje tekst z zakresu `Ti` do iteratora. *out* Następnie wywołuje `m.format(out, fmt, flags)` , gdzie `m` jest `match_results` obiektem zwracanym przez obiekt iteratora `iter` dla sekwencji `Mi` . Na koniec, jeśli `(flags & format_no_copy) == 0` kopiuje tekst z zakresu `TN` do iteratora. *out* Funkcja zwraca wartość *out*.
+Pierwsza funkcja konstruuje obiekt [klasy regex_iterator](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` i używa jej do podzielenia zakresu wejściowego na `[first, last)` serię podsekwencji `T0 M0 T1 M1...TN-1 MN-1 TN` , gdzie `Mn` to n-ty dopasowanie wykryte przez iterator. Jeśli nie znaleziono żadnych dopasowań, `T0` to cały zakres wejściowy i `N` wynosi zero. Jeśli `(flags & format_first_only) != 0` używane jest tylko pierwsze dopasowanie, `T1` to cały tekst wejściowy, który następuje po dopasowaniu i `N` ma wartość 1. Dla każdego `i` z zakresu `[0, N)` , jeśli `(flags & format_no_copy) == 0` kopiuje tekst z zakresu `Ti` do iteratora.  Następnie wywołuje `m.format(out, fmt, flags)` , gdzie `m` jest `match_results` obiektem zwracanym przez obiekt iteratora `iter` dla sekwencji `Mi` . Na koniec, jeśli `(flags & format_no_copy) == 0` kopiuje tekst z zakresu `TN` do iteratora.  Funkcja zwraca wartość *out*.
 
 Druga funkcja konstruuje lokalną zmienną `result` typu `basic_string<charT>` i wywołań `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)` . Zwraca wartość `result` .
 
@@ -518,7 +519,7 @@ length == 3
 string == aaa
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<regex>](../standard-library/regex.md)\
 [Klasa regex_constants](../standard-library/regex-constants-class.md)\

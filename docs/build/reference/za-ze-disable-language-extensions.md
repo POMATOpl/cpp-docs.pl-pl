@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/za,/ze (Wyłącz rozszerzenia językowe)
 title: /Za, /Ze (Wyłącz rozszerzenia językowe)
 ms.date: 02/19/2019
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: 9a2584591f6ca22d6767a5c447ffb72bea0a78ea
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 98b3d3a36a0aaf0731e6fe6ded06844f7f1e4213
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263182"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Wyłącz rozszerzenia językowe)
 
@@ -41,7 +42,7 @@ Opcja kompilatora **/za** wyłącza i emituje błędy dla rozszerzeń Microsoft 
 
 Kompilator języka Microsoft C/C++ obsługuje kompilację kodu języka C na dwa sposoby:
 
-- Kompilator domyślnie używa trybu kompilacji C, gdy plik źródłowy ma rozszerzenie *c* lub jeśli określono opcję [/TC](tc-tp-tc-tp-specify-source-file-type.md) lub [/TC](tc-tp-tc-tp-specify-source-file-type.md) . Kompilator języka C to kompilator C89/C90, który domyślnie włącza rozszerzenia Microsoft do języka C. Aby uzyskać więcej informacji na temat określonych rozszerzeń, zobacz [Microsoft Extensions to C i C++](microsoft-extensions-to-c-and-cpp.md). Gdy określono zarówno kompilację języka C, jak i opcję **/za** , kompilator języka c jest zgodny ze standardem C89/C90. Kompilator traktuje rozszerzone słowa kluczowe Microsoft jako proste identyfikatory, wyłącza inne rozszerzenia Microsoft i automatycznie definiuje [ \_ \_\_ ](../../preprocessor/predefined-macros.md) wstępnie zdefiniowane makro STDC dla programów C.
+- Kompilator domyślnie używa trybu kompilacji C, gdy plik źródłowy ma rozszerzenie *c* lub jeśli określono opcję [/TC](tc-tp-tc-tp-specify-source-file-type.md) lub [/TC](tc-tp-tc-tp-specify-source-file-type.md) . Kompilator języka C to kompilator C89/C90, który domyślnie włącza rozszerzenia Microsoft do języka C. Aby uzyskać więcej informacji na temat określonych rozszerzeń, zobacz [Microsoft Extensions to C i C++](microsoft-extensions-to-c-and-cpp.md). Gdy określono zarówno kompilację języka C, jak i opcję **/za** , kompilator języka c jest zgodny ze standardem C89/C90. Kompilator traktuje rozszerzone słowa kluczowe Microsoft jako proste identyfikatory, wyłącza inne rozszerzenia Microsoft i automatycznie definiuje wstępnie zdefiniowane makro [ \_ \_ STDC \_ \_ ](../../preprocessor/predefined-macros.md) dla programów C.
 
 - Kompilator może kompilować kod C w trybie kompilacji języka C++. To zachowanie jest domyślne dla plików źródłowych, które nie mają rozszerzenia *. c* , i gdy jest określona opcja [/TP](tc-tp-tc-tp-specify-source-file-type.md) lub [/TP](tc-tp-tc-tp-specify-source-file-type.md) . W trybie kompilacji C++ kompilator obsługuje te części standardów ISO C99 i C11, które zostały włączone do standardu C++. Prawie cały kod C jest również prawidłowym kodem języka C++. Niewielka liczba słów kluczowych C i konstrukcji kodu nie jest prawidłowym kodem C++ lub są interpretowane inaczej w języku C++. Kompilator zachowuje się zgodnie ze standardem C++ w takich przypadkach. W trybie kompilacji C++ opcja **/za** może spowodować nieoczekiwane zachowanie i nie jest zalecana.
 
@@ -53,7 +54,7 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością Visual C++, 
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. W okienku nawigacji wybierz pozycję **Właściwości** > konfiguracji**Język****C/C++** > .
+1. W okienku nawigacji wybierz pozycję **Właściwości konfiguracji**  >  język **C/C++**  >  .
 
 1. Zmodyfikuj właściwość **Wyłącz rozszerzenia językowe** .
 
@@ -61,9 +62,9 @@ Aby uzyskać więcej informacji na temat problemów ze zgodnością Visual C++, 
 
 Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora](compiler-options.md)<br/>
 [/Zc (Zgodność)](zc-conformance.md)<br/>
 [/permissive- (Zgodność ze standardami)](permissive-standards-conformance.md)<br/>
-[/std (Określ wersję standardu języka)](std-specify-language-standard-version.md)<br/>
+[/STD (Określ wersję standardową języka)](std-specify-language-standard-version.md)<br/>

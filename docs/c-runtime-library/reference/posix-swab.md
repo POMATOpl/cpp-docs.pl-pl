@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wymazania'
 title: swab
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - swab function
 ms.assetid: fb8b7137-420d-4485-bb65-e1ec68602905
-ms.openlocfilehash: ba3bcf7595050336a3976b673726b4baecbd6830
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a49b46c07f8b6c88a5b232ab7c4adefc4ebbc1e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252912"
 ---
 # <a name="swab"></a>swab
 

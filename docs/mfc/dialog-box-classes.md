@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: klasy okien dialogowych'
 title: Klasy okien dialogowych
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5c178bc6895e338bf4b2876be5233c1b80007abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261557"
 ---
 # <a name="dialog-box-classes"></a>Klasy okien dialogowych
 
@@ -60,7 +61,7 @@ Hermetyzuje usługi zapewniane przez okno dialogowe Ustawienia typowej strony sy
 OLE dodaje kilka wspólnych okien dialogowych do systemu Windows. Te klasy hermetyzują wspólne okna dialogowe OLE.
 
 [COleDialog](reference/coledialog-class.md)<br/>
-Używane przez platformę do przechowywania wspólnych implementacji dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejs użytkownika są wyprowadzane z tej klasy bazowej. `COleDialog`nie można używać bezpośrednio.
+Używane przez platformę do przechowywania wspólnych implementacji dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejs użytkownika są wyprowadzane z tej klasy bazowej. `COleDialog` nie można używać bezpośrednio.
 
 [COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
 Wyświetla okno dialogowe Wstawianie obiektu, standardowy interfejs użytkownika służący do wstawiania nowych połączonych lub osadzonych elementów OLE.

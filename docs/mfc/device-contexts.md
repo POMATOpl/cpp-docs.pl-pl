@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: kontekstach urządzeń'
 title: Konteksty urządzenia
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: a5be2e57302e597e9c65b7bc966a5ff0ecaf855a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 725387ad3aa3f099c72c82aecd14d89bad7168bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261596"
 ---
 # <a name="device-contexts"></a>Konteksty urządzenia
 
@@ -61,7 +62,7 @@ W takim przypadku można użyć obiektu kontekstu urządzenia [CClientDC —](re
 
 - [Rysowanie w widoku](drawing-in-a-view.md)
 
-- [Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku](interpreting-user-input-through-a-view.md)
+- [Interpretowanie danych wejściowych użytkownika przez widok](interpreting-user-input-through-a-view.md)
 
 - [Linie i krzywe](/windows/win32/gdi/lines-and-curves)
 
@@ -75,4 +76,4 @@ W takim przypadku można użyć obiektu kontekstu urządzenia [CClientDC —](re
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obiekty okien](window-objects.md)
+[Obiekty okna](window-objects.md)

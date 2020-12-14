@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isskończoną, _finite, _finitef'
 title: isfinite, _finite, _finitef
 ms.date: 01/31/2019
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef0747c88d62445c1cbd31f5c7afe6a651f50880
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263117"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
@@ -78,22 +79,22 @@ Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="remarks"></a>Uwagi
 
-`isfinite`jest makrem kompilowanym jako C i wbudowaną funkcją szablonu kompilowaną jako C++. `_finite`Funkcje i `_finitef` są specyficzne dla firmy Microsoft. `_finitef`Funkcja jest dostępna tylko po skompilowaniu dla platform x86, ARM lub arm64.
+`isfinite` jest makrem kompilowanym jako C i wbudowaną funkcją szablonu kompilowaną jako C++. `_finite`Funkcje i `_finitef` są specyficzne dla firmy Microsoft. `_finitef`Funkcja jest dostępna tylko po skompilowaniu dla platform x86, ARM lub arm64.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|`_finite`|\<float.h> lub \<math.h>|\<float.h>, \<math.h> , \<cfloat> lub\<cmath>|
+|`_finite`|\<float.h> lub \<math.h>|\<float.h>, \<math.h> , \<cfloat> lub \<cmath>|
 |`isfinite`, `_finitef`|\<math.h>|\<math.h> lub \<cmath>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf —](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

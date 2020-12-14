@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _recalloc_dbg'
 title: _recalloc_dbg
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _recalloc_dbg function
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
-ms.openlocfilehash: 6274e749b2c4e6f64c7c7f82f8764dcf5ba642fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abad8ff877a78bc589a48da689766322ad8438de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254264"
 ---
 # <a name="_recalloc_dbg"></a>_recalloc_dbg
 
@@ -75,15 +76,15 @@ Parametry *filename* i *LineNumber* są dostępne tylko wtedy, gdy **_recalloc_d
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po pomyślnym zakończeniu ta funkcja zwraca wskaźnik do części użytkownika ponownie przydzieloną pamięć, wywołuje nową funkcję obsługi lub zwraca **wartość null**. Pełny opis zachowania zwrotnego znajduje się w sekcji poniższe uwagi. Aby uzyskać więcej informacji o sposobie używania nowej funkcji obsługi, zobacz Funkcja [_recalloc](recalloc.md) .
+Po pomyślnym zakończeniu ta funkcja zwraca wskaźnik do części użytkownika ponownie przydzieloną pamięć, wywołuje nową funkcję obsługi lub zwraca **wartość null**. Pełny opis zachowania zwrotnego znajduje się w sekcji poniższe uwagi. Aby uzyskać więcej informacji o sposobie używania nowej funkcji obsługi, zobacz funkcję [_recalloc](recalloc.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-**_recalloc_dbg** to wersja debugowania funkcji [_recalloc](recalloc.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_recalloc_dbg** jest ograniczone do wywołania **_recalloc**. Zarówno **_recalloc** , jak i **_recalloc_dbg** ponownie przydzielają blok pamięci w stercie podstawowym, ale **_recalloc_dbg** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku, aby przetestować pod kątem wycieków, parametr typu bloku Aby śledzić określone typy alokacji i *Nazwa pliku*/*LineNumber* informacje w celu określenia pochodzenia żądań alokacji.
+**_recalloc_dbg** jest wersją debugowania funkcji [_recalloc](recalloc.md) . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, każde wywołanie **_recalloc_dbg** zostanie zredukowane do wywołania **_recalloc**. Zarówno **_recalloc** , jak i **_recalloc_dbg** ponownie przydzielić blok pamięci w stercie podstawowym, ale **_recalloc_dbg** obsługuje kilka funkcji debugowania: bufory po obu stronach części bloku, aby przetestować pod kątem przecieków, parametr typu bloku służący do śledzenia określonych typów alokacji i *Nazwa pliku* / *LineNumber* informacje w celu określenia pochodzenia żądań alokacji.
 
-**_recalloc_dbg** ponownie przydziela określony blok pamięci o nieco większym rozmiarze niż żądany rozmiar (*rozmiar* *numeru* * ), który może być większy lub mniejszy od rozmiaru pierwotnie przydzielonego bloku pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowna Alokacja może spowodować przeniesienie oryginalnego bloku pamięci do innej lokalizacji w stercie, a także zmianę rozmiaru bloku pamięci. Część użytkownika bloku jest wypełniana wartością 0xCD, a każdy z buforów zastąpień jest wypełniony 0xFD.
+**_recalloc_dbg** ponownie przydzieli określony blok pamięci o nieco większym rozmiarze niż żądany rozmiar (  *  *rozmiar* numeru), który może być większy lub mniejszy niż rozmiar pierwotnie przydzielonego bloku pamięci. Dodatkowe miejsce jest używane przez menedżera stosu debugowania, do łączenia bloków pamięci debugowania i do dostarczenia aplikacji informacji nagłówka debugowania i zastąpienia buforów. Ponowna Alokacja może spowodować przeniesienie oryginalnego bloku pamięci do innej lokalizacji w stercie, a także zmianę rozmiaru bloku pamięci. Część użytkownika bloku jest wypełniana wartością 0xCD, a każdy z buforów zastąpień jest wypełniony 0xFD.
 
-**_recalloc_dbg** ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiedzie się; **EINVAL** jest zwracany, jeśli ilość wymaganej pamięci (łącznie z wyżej wymienionym obciążeniem) przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_recalloc_dbg** ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiedzie się; **EINVAL** jest zwracany, jeśli ilość wymaganej pamięci (łącznie z podaną wcześniej obciążeniem) przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje o tym i innych kodach błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Aby uzyskać informacje o tym, jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania sterty podstawowej, zobacz [szczegóły sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać informacje o różnicach między wywołaniem standardowej funkcji sterty i jej wersji debugowania w kompilacji debugowania aplikacji, zobacz [debugowanie wersji funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -99,6 +100,6 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Debuguj wersje wyłącznie [bibliotek uruchomieniowych C](../../c-runtime-library/crt-library-features.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>

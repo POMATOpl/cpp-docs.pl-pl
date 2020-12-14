@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: wbudowanych operatory, pierwszeństwo i łączność języka C++'
 title: Wbudowane operatory, pierwszeństwo i łączność języka C++
 ms.date: 07/23/2020
 helpviewer_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-ms.openlocfilehash: 10c9e5db569ba211ed8d42386816b4f6bb71ee29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ff8ae84a62ef47449364d0815922326d7b8566d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253965"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Wbudowane operatory, pierwszeństwo i łączność języka C++
 
 Język C++ obejmuje wszystkie operatory C i dodaje kilka nowych operatorów. Operatory określają oszacowania wykonywane na jednym lub większej liczbie operandów.
 
-## <a name="precedence-and-associativity"></a>Pierwszeństwo i łączność
+## <a name="precedence-and-associativity"></a>Pierwszeństwo i kojarzenie
 
 *Pierwszeństwo* operatorów określa kolejność operacji w wyrażeniach, które zawierają więcej niż jeden operator. Operator *łączność* określa, czy w wyrażeniu zawierającym wiele operatorów z tym samym pierwszeństwem operand jest zgrupowany z jedną po lewej lub po prawej stronie.
 
@@ -40,7 +41,7 @@ W poniższej tabeli przedstawiono pierwszeństwo i łączność operatorów C++ 
 | **Pierwszeństwo grupy 1, brak łączność** |
 | [Rozpoznawanie zakresu](../cpp/scope-resolution-operator.md) | [`::`](../cpp/scope-resolution-operator.md) |
 | **Pierwszeństwo grupy 2, od lewej do prawej łączność** |
-| [Wybór elementu członkowskiego (obiekt lub wskaźnik)](../cpp/member-access-operators-dot-and.md) | [`.`oraz`->`](../cpp/member-access-operators-dot-and.md) |
+| [Wybór elementu członkowskiego (obiekt lub wskaźnik)](../cpp/member-access-operators-dot-and.md) | [`.` oraz `->`](../cpp/member-access-operators-dot-and.md) |
 | [Indeks dolny tablicy](../cpp/subscript-operator.md) | [`[]`](../cpp/subscript-operator.md) |
 | [Wywołanie funkcji](../cpp/function-call-operator-parens.md) | [`()`](../cpp/function-call-operator-parens.md) |
 | [Przyrost Przyrostkowy](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) | [`++`](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) |
@@ -64,7 +65,7 @@ W poniższej tabeli przedstawiono pierwszeństwo i łączność operatorów C++ 
 | [Zniszcz obiekt](../cpp/delete-operator-cpp.md) | [`delete`](../cpp/delete-operator-cpp.md) |
 | [Gruntow](../cpp/cast-operator-parens.md) | [`()`](../cpp/cast-operator-parens.md) |
 | **Pierwszeństwo grupy 4, od lewej do prawej łączność** |
-| [Wskaźnik do składowej (obiekty lub wskaźniki)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*`oraz`->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
+| [Wskaźnik do składowej (obiekty lub wskaźniki)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*` oraz `->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
 | **Pierwszeństwo grupy 5, od lewej do prawej łączność** |
 | [Mnożenie](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | [Dział](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
@@ -112,6 +113,6 @@ W poniższej tabeli przedstawiono pierwszeństwo i łączność operatorów C++ 
 | **Pierwszeństwo grupy 18, od lewej do prawej łączność** |
 | [Przecinek](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przeładowanie operatora](operator-overloading.md)

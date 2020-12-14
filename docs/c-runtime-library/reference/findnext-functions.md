@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64'
 title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 ms.date: 4/2/2020
 api_name:
@@ -114,12 +115,12 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: acb680db3b07b0f600b758401f1270deccf03da7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5513f3932b78d450ecce81947e0095efb8df1d9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263130"
 ---
 # <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -238,18 +239,18 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_findnext**|\<IO. h>|
-|**_findnext32**|\<IO. h>|
-|**_findnext64**|\<IO. h>|
-|**_findnexti64**|\<IO. h>|
-|**_findnext32i64**|\<IO. h>|
-|**_findnext64i32**|\<IO. h>|
-|**_wfindnext**|\<IO. h> lub \<WCHAR. h>|
-|**_wfindnext32**|\<IO. h> lub \<WCHAR. h>|
-|**_wfindnext64**|\<IO. h> lub \<WCHAR. h>|
-|**_wfindnexti64**|\<IO. h> lub \<WCHAR. h>|
-|**_wfindnext32i64**|\<IO. h> lub \<WCHAR. h>|
-|**_wfindnext64i32**|\<IO. h> lub \<WCHAR. h>|
+|**_findnext**|\<io.h>|
+|**_findnext32**|\<io.h>|
+|**_findnext64**|\<io.h>|
+|**_findnexti64**|\<io.h>|
+|**_findnext32i64**|\<io.h>|
+|**_findnext64i32**|\<io.h>|
+|**_wfindnext**|\<io.h> lub \<wchar.h>|
+|**_wfindnext32**|\<io.h> lub \<wchar.h>|
+|**_wfindnext64**|\<io.h> lub \<wchar.h>|
+|**_wfindnexti64**|\<io.h> lub \<wchar.h>|
+|**_wfindnext32i64**|\<io.h> lub \<wchar.h>|
+|**_wfindnext64i32**|\<io.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

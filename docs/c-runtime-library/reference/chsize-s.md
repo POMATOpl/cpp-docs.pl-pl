@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _chsize_s'
 title: _chsize_s
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-ms.openlocfilehash: faed95bfeb6fad88f502101e166ec6124b6e591d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b3fa28923b558dc9b396cffc3418ff679349000d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253094"
 ---
 # <a name="_chsize_s"></a>_chsize_s
 
@@ -54,7 +55,7 @@ errno_t _chsize_s(
 *proces*<br/>
 Deskryptor pliku odwołujący się do otwartego pliku.
 
-*size*<br/>
+*zmienia*<br/>
 Nowa długość pliku w bajtach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -77,7 +78,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_chsize_s**|\<IO. h>|\<errno. h>|
+|**_chsize_s**|\<io.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

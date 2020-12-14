@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie Choice
 title: Klasa wyboru
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: a5b9bc26b6d9ec66dc74e7adaad31eea1eece118
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7597a3bd530185e316cdc42ebbc4696162d498f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254472"
 ---
 # <a name="choice-class"></a>Klasa wyboru
 
@@ -75,7 +76,7 @@ class choice: public ISource<size_t>;
 |[zarezerwować](#reserve)|Rezerwuje komunikat wcześniej oferowany przez ten `choice` blok komunikatów.|
 |[unlink_target](#unlink_target)|Odłącza blok docelowy z tego `choice` bloku komunikatów.|
 |[unlink_targets](#unlink_targets)|Odłącza wszystkie elementy docelowe z tego `choice` bloku komunikatów. (Przesłania [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
-|[wartościami](#value)|Pobiera komunikat, którego indeks został wybrany przez `choice` blok komunikatów.|
+|[wartość](#value)|Pobiera komunikat, którego indeks został wybrany przez `choice` blok komunikatów.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -95,7 +96,7 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept"></a><a name="accept"></a>odebrać
+## <a name="accept"></a><a name="accept"></a> odebrać
 
 Akceptuje komunikat, który był oferowany przez ten `choice` blok, przekazując własność do obiektu wywołującego.
 
@@ -117,7 +118,7 @@ Wskaźnik do bloku docelowego, który wywołuje `accept` metodę.
 
 Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
-## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a> acquire_ref
 
 Uzyskuje liczbę odwołań w tym `choice` bloku komunikatów, aby zapobiec usunięciu.
 
@@ -134,7 +135,7 @@ Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 Ta metoda jest wywoływana przez `ITarget` obiekt, który jest połączony z tym źródłem podczas tej `link_target` metody.
 
-## <a name="choice"></a><a name="ctor"></a>Rozwiązanie
+## <a name="choice"></a><a name="ctor"></a> Rozwiązanie
 
 Tworzy `choice` blok komunikatów.
 
@@ -174,7 +175,7 @@ Z `tuple` wybranych źródeł.
 
 Konstrukcja przenoszenia nie jest przeprowadzana w ramach blokady, co oznacza, że jest ona dostępna dla użytkownika, aby upewnić się, że w czasie przenoszenia nie ma żadnych lekkich zadań. W przeciwnym razie może wystąpić wiele Races, co prowadzi do wyjątków lub niespójnego stanu.
 
-## <a name="choice"></a><a name="dtor"></a>~ wybór
+## <a name="choice"></a><a name="dtor"></a> ~ wybór
 
 Niszczy `choice` blok komunikatów.
 
@@ -182,7 +183,7 @@ Niszczy `choice` blok komunikatów.
 ~choice();
 ```
 
-## <a name="consume"></a><a name="consume"></a>wykorzystania
+## <a name="consume"></a><a name="consume"></a> wykorzystania
 
 Wykorzystuje komunikat wcześniej oferowany przez ten `choice` blok komunikatów i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.
 
@@ -208,7 +209,7 @@ Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własno
 
 `consume`Metoda jest podobna do `accept` , ale musi być zawsze poprzedzona wywołaniem `reserve` zwracanym **`true`** .
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 Sprawdza, czy ten `choice` blok komunikatów został jeszcze zainicjowany z wartością.
 
@@ -220,7 +221,7 @@ bool has_value() const;
 
 **`true`** Jeśli blok odebrał wartość, **`false`** w przeciwnym razie.
 
-## <a name="index"></a><a name="index"></a>indeks
+## <a name="index"></a><a name="index"></a> indeks
 
 Zwraca indeks `tuple` reprezentujący element wybrany przez `choice` blok komunikatów.
 
@@ -236,7 +237,7 @@ Indeks komunikatów.
 
 Ładunek wiadomości można wyodrębnić przy użyciu `get` metody.
 
-## <a name="link_target"></a><a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a> link_target
 
 Łączy blok docelowy z tym `choice` blokiem obsługi komunikatów.
 
@@ -249,7 +250,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 *_PTarget*<br/>
 Wskaźnik do `ITarget` bloku do łączenia z tym `choice` blokiem obsługi komunikatów.
 
-## <a name="release"></a><a name="release"></a>Usuwanie
+## <a name="release"></a><a name="release"></a> Usuwanie
 
 Zwalnia poprzednie pomyślne zastrzeżenie dotyczące komunikatów.
 
@@ -267,7 +268,7 @@ virtual void release(
 *_PTarget*<br/>
 Wskaźnik do bloku docelowego, który wywołuje `release` metodę.
 
-## <a name="release_ref"></a><a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a> release_ref
 
 Zwalnia liczbę odwołań w tym `choice` bloku komunikatów.
 
@@ -284,7 +285,7 @@ Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 Ta metoda jest wywoływana przez `ITarget` obiekt, który jest odłączany od tego źródła. Blok źródłowy może zwolnić wszystkie zasoby zarezerwowane dla bloku docelowego.
 
-## <a name="reserve"></a><a name="reserve"></a>zarezerwować
+## <a name="reserve"></a><a name="reserve"></a> zarezerwować
 
 Rezerwuje komunikat wcześniej oferowany przez ten `choice` blok komunikatów.
 
@@ -310,7 +311,7 @@ Wskaźnik do bloku docelowego, który wywołuje `reserve` metodę.
 
 Po wywołaniu `reserve` , jeśli zakończy się powodzeniem, należy wywołać `consume` lub `release` w celu przeprowadzenia lub zadawać swój komunikat odpowiednio.
 
-## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a> unlink_target
 
 Odłącza blok docelowy z tego `choice` bloku komunikatów.
 
@@ -323,7 +324,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 *_PTarget*<br/>
 Wskaźnik do `ITarget` bloku do odłączenia od tego `choice` bloku komunikatów.
 
-## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a> unlink_targets
 
 Odłącza wszystkie elementy docelowe z tego `choice` bloku komunikatów.
 
@@ -335,7 +336,7 @@ virtual void unlink_targets();
 
 Ta metoda nie musi być wywoływana z destruktora, ponieważ destruktor `single_assignment` bloku wewnętrznego odłączy się prawidłowo.
 
-## <a name="value"></a><a name="value"></a>wartościami
+## <a name="value"></a><a name="value"></a> wartościami
 
 Pobiera komunikat, którego indeks został wybrany przez `choice` blok komunikatów.
 
@@ -359,7 +360,7 @@ Typ ładunku komunikatu.
 
 Ponieważ `choice` blok komunikatów może przyjmować dane wejściowe z różnymi typami ładunku, należy określić typ ładunku w punkcie pobierania. Możesz określić typ na podstawie wyniku `index` metody.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [join — Klasa](join-class.md)<br/>

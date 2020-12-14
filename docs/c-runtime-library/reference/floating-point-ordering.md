@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: isisgreaterequal, islessequal, islessgreater, isunordered'
 title: isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 ms.date: 01/31/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90e01de2caeb5a73b1b48a0c78678d975cdca6e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262974"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 
@@ -113,7 +114,7 @@ Wartości zmiennoprzecinkowe do porównania.
 
 We wszystkich porównaniach nieskończoności tego samego znaku należy porównać jako równe. Ujemna nieskończoność jest mniejsza od dowolnej wartości lub nieskończoności dodatniej. Nieskończoność dodatnia jest większa niż jakakolwiek wartość skończone lub nieskończoność ujemna. Zera są równe niezależnie od znaku. NaNs nie są mniejsze niż lub równe żadnej wartości, łącznie z innym NaN.
 
-Gdy żaden z argumentów nie jest NaN, porządkowanie makr **isisgreaterequal**, **isless**i **islessequal** zwracają wartość różną od **zera, jeśli**określona relacja kolejności między *x* a *y* ma wartość true. Te makra zwracają wartość 0, jeśli jeden lub oba argumenty są NaNs lub jeśli relacja kolejności ma wartość false. Formularze funkcji działają w ten sam sposób, ale zwracają **`true`** lub **`false`** .
+Gdy żaden z argumentów nie jest NaN, porządkowanie makr **isisgreaterequal**, **isless** i **islessequal** zwracają wartość różną od **zera, jeśli** określona relacja kolejności między *x* a *y* ma wartość true. Te makra zwracają wartość 0, jeśli jeden lub oba argumenty są NaNs lub jeśli relacja kolejności ma wartość false. Formularze funkcji działają w ten sam sposób, ale zwracają **`true`** lub **`false`** .
 
 Makro **islessgreater** zwraca wartość różną od zera, jeśli zarówno *x* , jak i *y* nie są Nans, a *x* jest albo mniejsze niż lub większe niż *y*. Zwraca wartość 0, jeśli jeden lub oba argumenty są NaNs lub wartości są równe. Formularz funkcji działa tak samo, ale zwraca **`true`** lub **`false`** .
 
@@ -127,14 +128,14 @@ Te operacje porównania są implementowane jako makra w przypadku skompilowania 
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**isisgreaterequal, **isless**, **isgreaterequal**<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> lub \<cmath> |
+| isisgreaterequal, **isless**, <br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> lub \<cmath> |
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf —](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

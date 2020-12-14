@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: problemy z derysowaniem funkcji'
 title: Problemy ze śródwierszowaniem funkcji
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c9c82c8b948acf7a64600c46fe87e17294fa844
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80184245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261739"
 ---
 # <a name="function-inlining-problems"></a>Problemy ze śródwierszowaniem funkcji
 
@@ -37,7 +38,7 @@ struct _load_config_used {
 void _load_config_used::Test() { printf("in Test\n"); }
 ```
 
-a następnie
+A następnie
 
 ```cpp
 // LNK2019_function_inline_2.cpp
@@ -54,9 +55,9 @@ int main() {
 }
 ```
 
-Jeśli używasz dyrektywy kompilatora `#pragma inline_depth`, upewnij się, że jest ustawiona wartość 2 lub większa. Wartość zerowa spowoduje wyłączenie funkcji tworzenia konspektu. Upewnij się również, że używasz opcji kompilatora **/OB1** lub **/Ob2** .
+Jeśli używasz `#pragma inline_depth` dyrektywy kompilatora, upewnij się, że jest ustawiona wartość 2 lub większa. Wartość zerowa spowoduje wyłączenie funkcji tworzenia konspektu. Upewnij się również, że używasz opcji kompilatora **/OB1** lub **/Ob2** .
 
-Mieszanie wbudowanych i niewbudowanych opcji kompilacji w różnych modułach może czasami spowodować problemy. Jeśli C++ biblioteka jest tworzona z włączonym wykreśleniem funkcji ([/OB1](../../build/reference/ob-inline-function-expansion.md) lub [/Ob2](../../build/reference/ob-inline-function-expansion.md)), ale odpowiedni plik nagłówkowy opisujący funkcje ma wyłączone wyłączenie (Brak opcji), zostanie wyświetlony komunikat o błędzie LNK2001. Funkcje nie są uwzględniane w kodzie z pliku nagłówkowego, ale ponieważ nie znajdują się w pliku biblioteki, nie ma adresu do rozpoznania odwołania.
+Mieszanie wbudowanych i niewbudowanych opcji kompilacji w różnych modułach może czasami spowodować problemy. Jeśli biblioteka C++ jest tworzona z włączonym wykreśleniem funkcji ([/OB1](../../build/reference/ob-inline-function-expansion.md) lub [/Ob2](../../build/reference/ob-inline-function-expansion.md)), ale odpowiedni plik nagłówkowy opisujący funkcje ma wyłączone wyłączenie (Brak opcji), zostanie wyświetlony komunikat o błędzie LNK2001. Funkcje nie są uwzględniane w kodzie z pliku nagłówkowego, ale ponieważ nie znajdują się w pliku biblioteki, nie ma adresu do rozpoznania odwołania.
 
 Podobnie, projekt, który używa funkcji, definiuje jeszcze funkcje w pliku. cpp, a nie w pliku nagłówkowym, również otrzymuje LNK2019. Plik nagłówkowy jest uwzględniany wszędzie tam, gdzie jest to odpowiednie, ale funkcje są podkreślane tylko wtedy, gdy plik. cpp przechodzi przez kompilator; w związku z tym konsolidator widzi funkcje jako nierozwiązane zewnętrzne, gdy są używane w innych modułach.
 
@@ -93,4 +94,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+[LNK2019 błędu narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

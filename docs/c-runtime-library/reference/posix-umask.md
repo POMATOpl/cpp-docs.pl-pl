@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Maska umask'
 title: umask
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - umask function
 ms.assetid: d2f697fc-08d5-4b70-9dd5-df3f5bb8b754
-ms.openlocfilehash: e22832b7c4b9e9f7af0a6e98955a15b783c6931f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 619152cd6d07d5bda5bcaf3fa353289fbd04cfc8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252860"
 ---
 # <a name="umask"></a>umask
 

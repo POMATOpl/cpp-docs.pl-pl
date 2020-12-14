@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Windows Sockets: porty i adresy gniazd'
 title: 'Windows Sockets: porty i adresy gniazd'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,46 +11,46 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: 791bf07c927e80e65e0fda79fae8a50235bc2def
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 354505796ff60cc8968b2e10a2aac98be2eb4666
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263403"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: porty i adresy gniazd
 
-W tym artykule wyjaśniono terminy "port" i "adres" używane w systemach Windows Sockets.
+W tym artykule opisano terminy "Port" i "Address" używane w przypadku Windows Sockets.
 
-## <a name="port"></a><a name="_core_port"></a>Portu
+## <a name="port"></a><a name="_core_port"></a> Przewożąc
 
-Port identyfikuje unikatowy proces, dla którego można ować usługę. W obecnym kontekście port jest skojarzony z aplikacją, która obsługuje gniazda systemu Windows. Chodzi o to, aby zidentyfikować każdą aplikację Windows Sockets jednoznacznie, dzięki czemu można mieć więcej niż jedną aplikację Windows Sockets działa na komputerze w tym samym czasie.
+Port identyfikuje unikatowy proces, dla którego można dostarczyć usługę. W obecnym kontekście port jest skojarzony z aplikacją, która obsługuje Windows Sockets. Pomysłem jest zidentyfikowanie każdej aplikacji Windows Sockets w sposób unikatowy, aby można było korzystać z więcej niż jednej aplikacji Windows Sockets uruchomionej na komputerze w tym samym czasie.
 
-Niektóre porty są zarezerwowane dla typowych usług, takich jak FTP. Należy unikać korzystania z tych portów, chyba że są świadczenia tego rodzaju usługi. Specyfikacja windows sockets zawiera szczegółowe informacje o tych zarezerwowanych portach. Plik WINSOCK. H również je wymienia.
+Niektóre porty są zarezerwowane dla typowych usług, takich jak FTP. Należy unikać używania tych portów, chyba że użytkownik świadczy ten rodzaj usługi. Specyfikacja systemu Windows Sockets zawiera szczegółowe informacje o tych portach zarezerwowanych. Plik WINSOCK. H również wyświetla je.
 
-Aby umożliwić biblioteki DLL sockets systemu Windows wybranie portu użytkowego, przekaż 0 jako wartość portu. MFC wybiera wartość portu większą niż 1024 dziesiętne. Można pobrać wartość portu, który MFC wybrany przez wywołanie [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) funkcji elementu członkowskiego.
+Aby umożliwić usłudze Windows Sockets DLL wybranie portu do użycia, należy przekazać 0 jako wartość portu. MFC wybiera wartość portu większą niż 1 024 dziesiętną. Możesz pobrać wartość portu wybraną przez MFC, wywołując funkcję członkowską [CAsyncSocket:: GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) .
 
-## <a name="socket-address"></a><a name="_core_socket_address"></a>Adres gniazda
+## <a name="socket-address"></a><a name="_core_socket_address"></a> Adres gniazda
 
-Każdy obiekt gniazda jest skojarzony z adresem IP w sieci. Zazwyczaj adres jest nazwą komputera, taką jak "ftp.microsoft.com" lub numerem kropkowanym, na przykład "128.56.22.8".
+Każdy obiekt gniazda jest skojarzony z adresem protokołu internetowego (IP) w sieci. Zazwyczaj jest to nazwa komputera, taka jak "ftp.microsoft.com", lub liczba kropkowana, taka jak "128.56.22.8".
 
-Podczas próby utworzenia gniazda, zazwyczaj nie trzeba określać swój własny adres.
+Podczas wyszukiwania w celu utworzenia gniazda zwykle nie trzeba określać własnego adresu.
 
 > [!NOTE]
-> Jest możliwe, że komputer ma wiele kart sieciowych (lub aplikacja może kiedyś działać na takim komputerze), z których każda reprezentuje inną sieć. Jeśli tak, może być konieczne podanie adresu, aby określić, która karta sieciowa będzie używana przez gniazdo. Z pewnością jest to zaawansowany problem z użyciem i możliwością przenoszenia.
+> Istnieje możliwość, że maszyna ma wiele kart sieciowych (lub aplikacja może Someday działać na takich maszynach), z których każdy reprezentuje inną sieć. Jeśli tak, może być konieczne podanie adresu, aby określić kartę sieciową, która będzie używana przez gniazdo. Jest to pewne zaawansowana użycie i możliwy problem z przenośnością.
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 - [Windows Sockets: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: gniazda strumienia](../mfc/windows-sockets-stream-sockets.md)
 
-- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: gniazda datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
+[Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)

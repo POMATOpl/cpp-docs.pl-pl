@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: oknach dialogowych w OLE'
 title: Okna dialogowe w OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: b59ba16e6e68df2a539232636e8fe710750e3214
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 39353e75fafd65af1f3e5665afce28e3495a978b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261505"
 ---
 # <a name="dialog-boxes-in-ole"></a>Okna dialogowe w OLE
 
@@ -30,7 +31,7 @@ To okno dialogowe umożliwia użytkownikowi sterowanie formatem używanym podcza
 *Zmień ikonę*<br/>
 To okno dialogowe umożliwia użytkownikowi wybranie ikony, która będzie reprezentować połączony lub osadzony element. Wyświetl to okno dialogowe, gdy użytkownik wybierze pozycję Zmień ikonę z menu Edycja lub wybierz przycisk Zmień ikonę w oknach dialogowych Wklej specjalnie lub Konwertuj. Wyświetlaj również, gdy użytkownik otwiera okno dialogowe Wstawianie obiektu i wybiera pozycję Wyświetl jako ikonę. Użyj klasy [COleChangeIconDialog](reference/colechangeicondialog-class.md) , aby wyświetlić to okno dialogowe.
 
-*Convert*<br/>
+*Zamian*<br/>
 To okno dialogowe umożliwia użytkownikowi zmianę typu osadzonego lub połączonego elementu. Na przykład jeśli osadzono metaplik w dokumencie złożonym, a później chcesz użyć innej aplikacji do zmodyfikowania osadzonego metapliku, możesz użyć okna dialogowego Konwertuj. To okno dialogowe jest zwykle wyświetlane po kliknięciu pozycji obiekt *Typ elementu* w menu Edycja, a następnie w menu kaskadowym, klikając polecenie Konwertuj. Użyj klasy [COleConvertDialog](reference/coleconvertdialog-class.md) , aby wyświetlić to okno dialogowe. Aby zapoznać się z przykładem, uruchom przykład MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Edytuj linki lub Aktualizuj linki*<br/>

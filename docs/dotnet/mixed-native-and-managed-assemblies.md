@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o zestawach: mieszany (natywny i zarządzany)'
 title: Zestawy mieszane (natywne i zarządzane)
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: eee54a6101a83a64c221ae016f69931e7fd7829b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b96ccb5a521cf009f7feabef01a292ac805b0b4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253641"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Zestawy mieszane (natywne i zarządzane)
 

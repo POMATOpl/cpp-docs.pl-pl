@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s'
 title: _itoa_s, funkcje _itow_s
 ms.date: 4/2/2020
 api_name:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 5cc3706abd07e11c819d4b2d37ff89e9b9137a22
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c02ca2e6090c9396a3a6c91cd6353604d5df8096
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254238"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
@@ -146,13 +147,13 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Parametry
 
-*wartościami*<br/>
+*wartość*<br/>
 Liczba do przekonwertowania.
 
 *buforu*<br/>
 Bufor wyjściowy, który przechowuje wynik konwersji.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar *buforu* w znakach lub znaki dwubajtowe.
 
 *podstawy*<br/>
@@ -164,16 +165,16 @@ Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. W przypadku zasto
 
 ### <a name="error-conditions"></a>Warunki błędów
 
-|value|buforu|size|podstawy|Przesłać|
+|wartość|buforu|size|podstawy|Przesłać|
 |-----------|------------|----------------------|-----------|------------|
-|ile|**NULL**|ile|ile|**EINVAL**|
-|ile|ile|<= 0|ile|**EINVAL**|
-|ile|ile|<= długość wymaganego ciągu wynikowego|ile|**EINVAL**|
-|ile|ile|ile|*podstawy* < 2 lub *podstawy* > 36|**EINVAL**|
+|dowolny|**NULL**|dowolny|dowolny|**EINVAL**|
+|dowolny|dowolny|<= 0|dowolny|**EINVAL**|
+|dowolny|dowolny|<= długość wymaganego ciągu wynikowego|dowolny|**EINVAL**|
+|dowolny|dowolny|dowolny|*podstawy* < 2 lub *podstawy* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemy z zabezpieczeniami
 
-Te funkcje mogą generować naruszenie zasad dostępu, jeśli *bufor* nie wskazuje prawidłowej pamięci i nie ma **wartości null**lub jeśli długość buforu nie jest wystarczająco długa, aby pomieścić ciąg wynikowy.
+Te funkcje mogą generować naruszenie zasad dostępu, jeśli *bufor* nie wskazuje prawidłowej pamięci i nie ma **wartości null** lub jeśli długość buforu nie jest wystarczająco długa, aby pomieścić ciąg wynikowy.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -201,8 +202,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<STDLIB. h>|
-|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> lub \<wchar.h>|
 
 Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

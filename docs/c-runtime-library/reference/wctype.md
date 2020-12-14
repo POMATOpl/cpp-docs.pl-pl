@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: wctype'
 title: wctype
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: f77082bbcc5f3cd9d82fb40993c3ac678e7e7ba2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0791d4f048dfa5d6804db14d577b1370ffbf8754
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254199"
 ---
 # <a name="wctype"></a>wctype
 
@@ -45,12 +46,12 @@ wctype_t wctype(
 
 ### <a name="parameters"></a>Parametry
 
-*właściwość*<br/>
+*wartość*<br/>
 Ciąg właściwości.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli kategoria **LC_CTYPE** bieżących ustawień regionalnych nie definiuje reguły klasyfikacji, której nazwa jest zgodna z *właściwością*String, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość różną od zera odpowiednią do użycia jako drugi argument dla kolejnego wywołania do [towctrans](towctrans.md).
+Jeśli kategoria **LC_CTYPE** bieżących ustawień regionalnych nie definiuje reguły klasyfikacji, której nazwa jest zgodna z *właściwością* String, funkcja zwraca wartość zero. W przeciwnym razie zwraca wartość różną od zera odpowiednią do użycia jako drugi argument dla kolejnego wywołania do [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -78,7 +79,7 @@ Funkcja Określa regułę klasyfikacji dla kodów szerokich znaków. Poniższe p
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

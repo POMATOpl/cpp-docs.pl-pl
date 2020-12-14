@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/Z7,/Zi,/ZI (format informacji o debugowaniu)
 title: /Z7, /Zi, /ZI (Format informacji o debugowaniu)
 ms.date: 07/06/2020
 f1_keywords:
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: bc3fd9c065219a128e29290084b1e1fb51fc773e
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 604c34cac5c3cd049f23e21f5db033c0ecc8c480
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263234"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format informacji o debugowaniu)
 
@@ -71,7 +73,7 @@ Jeśli utworzysz bibliotekę z obiektów, które zostały skompilowane przy uży
 
 **`/ZI`** Opcja jest podobna do **`/Zi`** , ale tworzy plik PDB w formacie, który obsługuje funkcję [Edytuj i Kontynuuj](/visualstudio/debugger/edit-and-continue-visual-cpp) . Aby korzystać z funkcji Edytuj i Kontynuuj debugowanie, należy użyć tej opcji. Funkcja Edytuj i Kontynuuj jest przydatna w przypadku produktywności dla deweloperów, ale może powodować problemy w rozmiarze kodu, wydajności i zgodności kompilatora. Ponieważ większość optymalizacji jest niezgodna z funkcją Edytuj i Kontynuuj, użycie **`/ZI`** powoduje wyłączenie wszelkich `#pragma optimize` instrukcji w kodzie. **`/ZI`** Opcja jest również niezgodna z użyciem [ `__LINE__` wstępnie zdefiniowanego makra](../../preprocessor/predefined-macros.md); kod skompilowany za pomocą **`/ZI`** nie może używać `__LINE__` jako argumentu szablonu bez typu, chociaż `__LINE__` może być używany do rozwinięcia makra.
 
-**`/ZI`** Opcja wymusza użycie opcji [ `/Gy` (Włącz łączenie na poziomie funkcji)](gy-enable-function-level-linking.md) i [ `/FC` (Pełna ścieżka pliku kodu źródłowego w diagnostyce)](fc-full-path-of-source-code-file-in-diagnostics.md) , który ma być używany w kompilacji.
+**`/ZI`** Opcja wymusza użycie opcji [ `/Gy` (Włącz łączenie Function-Level)](gy-enable-function-level-linking.md) i [ `/FC` (Pełna ścieżka pliku kodu źródłowego w diagnostyce)](fc-full-path-of-source-code-file-in-diagnostics.md) , który będzie używany w kompilacji.
 
 **`/ZI`** jest niezgodny z [ `/clr` (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md).
 
@@ -82,7 +84,7 @@ Jeśli utworzysz bibliotekę z obiektów, które zostały skompilowane przy uży
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Otwórz **Configuration Properties**  >  stronę właściwości ogólne**C/C++** właściwości konfiguracji  >  **General** .
+1. Otwórz   >  stronę właściwości ogólne **C/C++** właściwości konfiguracji  >   .
 
 1. Zmodyfikuj właściwość **Format informacji o debugowaniu** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
@@ -90,7 +92,7 @@ Jeśli utworzysz bibliotekę z obiektów, które zostały skompilowane przy uży
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DebugInformationFormat%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

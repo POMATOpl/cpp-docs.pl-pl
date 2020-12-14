@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Type-Safe dostępu do kontrolek z użyciem kreatorów kodu'
 title: Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b68331df61c1586f4cc63413f162ac1af107ce88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263806"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu
 
@@ -25,7 +26,7 @@ Zmienne składowe mogą mieć właściwość kontrolki zamiast właściwości Va
 > [!NOTE]
 > W przypadku danej kontrolki można, jeśli chcesz, mieć wiele zmiennych składowych z właściwością Value i co najwyżej jedną zmienną członkowską z właściwością Control. Do kontrolki można zamapować tylko jeden obiekt MFC, ponieważ wiele obiektów dołączonych do kontrolki lub dowolnego innego okna prowadziłoby do niejednoznaczności mapy komunikatów.
 
-Można użyć tego obiektu do wywołania wszelkich funkcji Członkowskich dla obiektu Control. Takie wywołania mają wpływ na kontrolkę w oknie dialogowym. Na przykład dla kontrolki pole wyboru reprezentowanej przez zmienną *m_Checkbox*typu `CButton` , można wywołać:
+Można użyć tego obiektu do wywołania wszelkich funkcji Członkowskich dla obiektu Control. Takie wywołania mają wpływ na kontrolkę w oknie dialogowym. Na przykład dla kontrolki pole wyboru reprezentowanej przez zmienną *m_Checkbox* typu `CButton` , można wywołać:
 
 [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]
 

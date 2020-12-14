@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: Dokumentacja języka C++'
 title: Materiał referencyjny na temat języka C++
 ms.custom: index-page
 ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 7b0d1227419aef3174d4f18b11cdc334879383b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67d1adf6105d0f90a7ef29402624148dbcf8ea53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253926"
 ---
 # <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
 
@@ -69,8 +70,8 @@ Przeciążone operatory, reguły dotyczące przeciążania operatora.
 [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Obsługa wyjątków C++, obsługa wyjątków strukturalnych (SEH), słowa kluczowe używane w pisaniu instrukcji obsługi wyjątków.
 
-[Potwierdzenia i komunikaty dostarczone przez użytkownika](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error`dyrektywa, **`static_assert`** słowo kluczowe, `assert` makro.
+[Komunikaty potwierdzenia i User-Supplied](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
+`#error` dyrektywa, **`static_assert`** słowo kluczowe, `assert` makro.
 
 [Szablony](../cpp/templates-cpp.md)<br/>
 Specyfikacje szablonów, szablony funkcji, szablony klas, **`typename`** słowa kluczowe, szablony a makra, szablony i inteligentne wskaźniki.
@@ -110,6 +111,6 @@ Materiał referencyjny na temat pragm, dyrektyw preprocesora, wstępnie zdefinio
 [Biblioteki Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Lista linków do stron początkowych odwołań dla różnych bibliotek języka Microsoft C++.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

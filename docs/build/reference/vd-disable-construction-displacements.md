@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/VD (Wyłącz przemieszczanie konstrukcji)
 title: /vd (Wyłącz przemieszczanie konstrukcji)
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: df8891cc71dd5a4cfd417969578c0c1b46ae3be3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c90e2fa4f93ea0ba3892a07e13f2a15e848d608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253198"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Wyłącz przemieszczanie konstrukcji)
 
@@ -70,7 +71,7 @@ Te opcje mają wpływ na całe pliki źródłowe. Użyj [vtordisp](../../preproc
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

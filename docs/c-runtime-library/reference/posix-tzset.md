@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: tzset'
 title: tzset
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - tzset function
 ms.assetid: c3afa5d0-cb15-4163-9181-fafb962c95aa
-ms.openlocfilehash: 981f9bc92879bf12e8c49b12190cbe8091d0141b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 8a2528c4accaeb385f1979a87f0000347df40c5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300810"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252899"
 ---
 # <a name="tzset"></a>tzset
 

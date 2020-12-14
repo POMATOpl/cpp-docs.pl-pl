@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat list obrazów kontrolki drzewa
 title: Listy obrazów kontrolki drzewa
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: 8f9e323244657ea6a7cc132deab6deedfcd1a167
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ce76cca5642208d4158b36c45c150202270258e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264157"
 ---
 # <a name="tree-control-image-lists"></a>Listy obrazów kontrolki drzewa
 
@@ -23,11 +24,11 @@ Listy obrazów kontrolki drzewa mogą również zawierać obrazy nakładane, kt�
 
 Jeśli określono listę obrazu stanu, formant drzewa rezerwuje miejsce na lewo od ikony każdego elementu obrazu stanu. Aplikacja może używać obrazów stanu, takich jak zaznaczone i wyczyszczone pola wyboru, aby wskazać Stany elementów zdefiniowane przez aplikację. Wartość różna od zera w bitach od 12 do 15 określa jeden indeks obrazu stanu (0 oznacza brak obrazu stanu).
 
-Określając wartość **I_IMAGECALLBACK** zamiast indeksu obrazu, można opóźnić Określanie zaznaczonego lub niewybranego obrazu do momentu odrysowania elementu. **I_IMAGECALLBACK** kieruje formant drzewa do wysyłania zapytań do aplikacji dla indeksu przez wysłanie wiadomości powiadomienia [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo) .
+Określając **I_IMAGECALLBACK** wartość zamiast indeksu obrazu, można opóźnić Określanie zaznaczonego lub niewybranego obrazu do momentu odrysowania elementu. **I_IMAGECALLBACK** kieruje formant drzewa do wysyłania zapytań do aplikacji dla indeksu, wysyłając [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo) komunikat powiadomienia.
 
-Funkcja [](../mfc/reference/ctreectrl-class.md#getimagelist) elementu członkowskiego GetImageList pobiera uchwyt listy obrazów kontrolki drzewa. Ta funkcja jest przydatna, jeśli trzeba dodać więcej obrazów do listy. Aby uzyskać więcej informacji na temat list obrazów, zobacz [Używanie korzystanie CImageList](../mfc/using-cimagelist.md), [Korzystanie CImageList](../mfc/reference/cimagelist-class.md) w *Kompendium MFC*oraz [list obrazów](/windows/win32/controls/image-lists) w Windows SDK.
+Funkcja elementu członkowskiego [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) pobiera uchwyt listy obrazów kontrolki drzewa. Ta funkcja jest przydatna, jeśli trzeba dodać więcej obrazów do listy. Aby uzyskać więcej informacji na temat list obrazów, zobacz [Używanie korzystanie CImageList](../mfc/using-cimagelist.md), [Korzystanie CImageList](../mfc/reference/cimagelist-class.md) w *Kompendium MFC* oraz [list obrazów](/windows/win32/controls/image-lists) w Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

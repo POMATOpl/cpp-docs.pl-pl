@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o zarządzaniu pamięcią
 title: Zarządzanie pamięcią
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4e274820ce82cf8b338c6a62349440e944f21f7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253380"
 ---
 # <a name="memory-management"></a>Zarządzanie pamięcią
 
@@ -42,4 +43,4 @@ Informacje inne niż MFC dotyczące zarządzania pamięcią w programach dla sys
 ## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](mfc-concepts.md)<br/>
-[Tematy ogólne dotyczące MFC](general-mfc-topics.md)
+[Ogólne tematy dotyczące MFC](general-mfc-topics.md)
