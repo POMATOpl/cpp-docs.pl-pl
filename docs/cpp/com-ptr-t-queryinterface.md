@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _com_ptr_t:: QueryInterface'
 title: _com_ptr_t::QueryInterface
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c6ff19227c920aade762af295942d8058a17ad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295344"
 ---
 # <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
 **Specyficzne dla firmy Microsoft**
 
-Wywołuje funkcję elementu członkowskiego **QueryInterface** elementu `IUnknown` na wyhermetyzowanym wskaźniku interfejsu.
+Wywołuje funkcję  elementu członkowskiego QueryInterface `IUnknown` w wskaźniku hermetyzowanego interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,10 +44,10 @@ Pierwotny wskaźnik interfejsu.
 
 ## <a name="remarks"></a>Uwagi
 
-Wywołuje `IUnknown::QueryInterface` na hermetyzowanym wskaźniku interfejsu z określonym `IID` i zwraca wynikowy wskaźnik interfejsu w *p*. Ta procedura zwraca wynik HRESULT wskazujący powodzenie lub niepowodzenie.
+Wywołuje `IUnknown::QueryInterface` wskaźnik interfejsu hermetyzowanego z określonym `IID` i zwraca wynikowy wskaźnik interfejsu w *p*. Ta procedura zwraca wynik HRESULT wskazujący powodzenie lub niepowodzenie.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+[Klasa _com_ptr_t](../cpp/com-ptr-t-class.md)

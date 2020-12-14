@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _aligned_offset_realloc'
 title: _aligned_offset_realloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_offset_realloc function
 - _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
-ms.openlocfilehash: c719f62a089b1c233bac193f3431d0375af826eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0e61a1425d495b2ab7019eee9f42dbe26989312e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312473"
 ---
 # <a name="_aligned_offset_realloc"></a>_aligned_offset_realloc
 
@@ -55,7 +56,7 @@ void * _aligned_offset_realloc(
 *memblock*<br/>
 Bieżący wskaźnik bloku pamięci.
 
-*size*<br/>
+*zmienia*<br/>
 Rozmiar alokacji pamięci.
 
 *struktury*<br/>
@@ -66,9 +67,9 @@ Przesunięcie alokacji pamięci, aby wymusić wyrównanie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_aligned_offset_realloc** zwraca wskaźnik void do ponownie przydzielony blok pamięci (i prawdopodobnie przeniesiony). Wartość zwracana ma wartość **null** , jeśli rozmiar ma wartość zero, a argument buforu nie ma **wartości null**lub jeśli nie ma wystarczającej ilości dostępnej pamięci, aby rozszerzyć blok na dany rozmiar. W pierwszym przypadku, oryginalny blok jest zwolniony. W drugim przypadku oryginalny blok nie zmienia się. Wartość zwracana wskazuje miejsce do magazynowania, które jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż void, należy użyć rzutowania typu dla zwracanej wartości.
+**_aligned_offset_realloc** zwraca wskaźnik void do ponownie przydzielony blok pamięci (i prawdopodobnie przeniesiony). Wartość zwracana ma wartość **null** , jeśli rozmiar ma wartość zero, a argument buforu nie ma **wartości null** lub jeśli nie ma wystarczającej ilości dostępnej pamięci, aby rozszerzyć blok na dany rozmiar. W pierwszym przypadku, oryginalny blok jest zwolniony. W drugim przypadku oryginalny blok nie zmienia się. Wartość zwracana wskazuje miejsce do magazynowania, które jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż void, należy użyć rzutowania typu dla zwracanej wartości.
 
-**_aligned_offset_realloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że zwrócony wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
+**_aligned_offset_realloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)` , co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że zwrócony wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -84,7 +85,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_aligned_offset_realloc**|\<malloc. h>|
+|**_aligned_offset_realloc**|\<malloc.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -92,4 +93,4 @@ Aby uzyskać więcej informacji, zobacz [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wyrównywanie danych](../../c-runtime-library/data-alignment.md)<br/>
+[Wyrównanie danych](../../c-runtime-library/data-alignment.md)<br/>

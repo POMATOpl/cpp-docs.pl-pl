@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2357'
 title: Błąd kompilatora C2357
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a58317fc4706d6385d3753a434c8e4fd80dc79b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276741"
 ---
 # <a name="compiler-error-c2357"></a>Błąd kompilatora C2357
 
 "Identyfikator": musi być funkcją typu "Type"
 
-Kod deklaruje wersję funkcji `atexit`, która nie jest zgodna z wersją zadeklarowaną wewnętrznie przez kompilator. Zadeklaruj `atexit` w następujący sposób:
+Kod deklaruje wersję `atexit` funkcji, która nie jest zgodna z wersją zadeklarowaną wewnętrznie przez kompilator. Zadeklaruj `atexit` w następujący sposób:
 
 ```
 int __cdecl atexit(void (__cdecl *)());

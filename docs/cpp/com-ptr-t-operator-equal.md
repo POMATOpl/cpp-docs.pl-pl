@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _com_ptr_t:: operator ='
 title: _com_ptr_t::operator =
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t [C++]
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
-ms.openlocfilehash: 489d2a3f098d5d1bf1df56cca7eaf6ac8ae776b1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fae995ea20aa579c380ec5c10766e830708dcc0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295396"
 ---
 # <a name="_com_ptr_toperator-"></a>_com_ptr_t::operator =
 
 **Specyficzne dla firmy Microsoft**
 
-Przypisuje nową wartość do istniejącego obiektu `_com_ptr_t`.
+Przypisuje nową wartość do istniejącego `_com_ptr_t` obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,10 +62,10 @@ _com_ptr_t& operator=( const _variant_t& varSrc );
 
 ## <a name="remarks"></a>Uwagi
 
-Przypisuje wskaźnik interfejsu do tego obiektu `_com_ptr_t`.
+Przypisuje wskaźnik interfejsu do tego `_com_ptr_t` obiektu.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+[Klasa _com_ptr_t](../cpp/com-ptr-t-class.md)

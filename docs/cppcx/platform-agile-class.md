@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa platform:: Agile'
 title: 'Platform:: Agile — Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6407bbfecdc84cdb47024e09f632a6e574439814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312179"
 ---
 # <a name="platformagile-class"></a>Platform:: Agile — Klasa
 
@@ -39,7 +40,7 @@ Nazwa typu dla klasy nieagile.
 
 Większość klas w środowisko wykonawcze systemu Windows są Agile. Obiekt Agile może wywołać, lub wywołać przez, obiekt w procesie lub out-of-proc w tym samym lub innym wątku. Jeśli obiekt nie jest Agile, zawiń obiekt nieagile w `Agile<T>` obiekcie, który jest Agile. Następnie `Agile<T>` obiekt może być zorganizowany i można użyć bazowego obiektu niebędącego Agile.
 
-`Agile<T>`Klasa jest natywną, standardową klasą C++ i wymaga `agile.h` . Reprezentuje obiekt nieagile i *kontekst*obiektu Agile. Kontekst Określa model wątkowości obiektu Agile i zachowanie organizowania. System operacyjny używa kontekstu, aby określić sposób organizowania obiektu.
+`Agile<T>`Klasa jest natywną, standardową klasą C++ i wymaga `agile.h` . Reprezentuje obiekt nieagile i *kontekst* obiektu Agile. Kontekst Określa model wątkowości obiektu Agile i zachowanie organizowania. System operacyjny używa kontekstu, aby określić sposób organizowania obiektu.
 
 ### <a name="members"></a>Elementy członkowskie
 
@@ -100,7 +101,7 @@ Agile(Agile<T>&& object);
 *T*<br/>
 Typ określony przez parametr TypeName szablonu.
 
-*object*<br/>
+*Stream*<br/>
 W drugiej wersji tego konstruktora obiekt używany do zainicjowania nowego wystąpienia Agile. W trzeciej wersji obiekt, który jest kopiowany do nowego wystąpienia Agile. W czwartej wersji obiekt, który jest przenoszony do nowego wystąpienia Agile.
 
 ### <a name="remarks"></a>Uwagi
@@ -231,7 +232,7 @@ T^ operator=( IUnknown* lp ) throw();
 *T*<br/>
 Typ określony przez właściwość TypeName szablonu.
 
-*object*<br/>
+*Stream*<br/>
 Obiekt lub dojście do obiektu, który jest kopiowany lub przenoszony do bieżącego obiektu Agile.
 
 *LP*<br/>

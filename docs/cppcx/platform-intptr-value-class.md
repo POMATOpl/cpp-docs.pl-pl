@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o klasie wartości platform:: IntPtr'
 title: Klasa wartości Platform::IntPtr
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18c5316eaae84b1e6af4e54d86ef876d81a866ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295266"
 ---
 # <a name="platformintptr-value-class"></a>Klasa wartości Platform::IntPtr
 
-Reprezentuje podpisem wskaźnik lub uchwyt i których rozmiar jest specyficzne dla platformy (32-bitowy lub 64-bitowych).
+Reprezentuje podpisany wskaźnik lub dojście, którego rozmiar jest specyficzny dla platformy (32-bitowy lub 64-bitowy).
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,27 +29,27 @@ public value struct IntPtr
 
 ### <a name="members"></a>Elementy członkowskie
 
-Pola IntPtr ma następujące składowe:
+Element IntPtr ma następujących członków:
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|[IntPtr::IntPtr](#ctor)|Inicjuje nowe wystąpienie elementu IntPtr.|
-|[IntPtr::op_explicit — Operator](#op-explicit)|Konwertuje określony parametr pola IntPtr lub wskaźnik do wartości pola IntPtr.|
-|[IntPtr::ToInt32](#toint32)|Konwertuje bieżącego pola IntPtr 32-bitową liczbę całkowitą.|
+|[IntPtr:: IntPtr](#ctor)|Inicjuje nowe wystąpienie elementu IntPtr.|
+|[IntPtr:: op_explicit — operator](#op-explicit)|Konwertuje określony parametr na element IntPtr lub wskaźnik na wartość IntPtr.|
+|[IntPtr:: Toint32 —](#toint32)|Konwertuje bieżący IntPtr na 32-bitową liczbę całkowitą.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="ctor"> </a> Konstruktor IntPtr::IntPtr
+## <a name="intptrintptr-constructor"></a><a name="ctor"></a> IntPtr:: IntPtr, Konstruktor
 
-Inicjuje nowe wystąpienie elementu IntPtr z określoną wartością.
+Inicjuje nowe wystąpienie elementu IntPtr o określonej wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -58,12 +59,12 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 
 ### <a name="parameters"></a>Parametry
 
-*value*<br/>
-Dojście do 64-bitowych lub wskaźnik lub wskaźnika do wartości 64-bitowy lub 32-bitową wartość, które można przekonwertować na wartość 64-bitowych.
+*wartość*<br/>
+64-bitowy uchwyt lub wskaźnik lub wskaźnik do wartości 64-bitowej lub wartość 32-bitową, która może zostać przekonwertowana na wartość 64-bitową.
 
-## <a name="op-explicit"> </a> IntPtr::op_explicit — Operator
+## <a name="intptrop_explicit-operator"></a><a name="op-explicit"></a> IntPtr:: Op_explicit — operator
 
-Konwertuje określony parametr pola IntPtr lub wskaźnik do wartości pola IntPtr.
+Konwertuje określony parametr na element IntPtr lub wskaźnik na wartość IntPtr.
 
 ### <a name="syntax"></a>Składnia
 
@@ -73,22 +74,22 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*value1*<br/>
-Wskaźnik do dojścia lub pola IntPtr.
+*sekwencj*<br/>
+Wskaźnik do uchwytu lub IntPtr.
 
-*value2*<br/>
-32-bitowa liczba całkowita, która może zostać przekonwertowany na element IntPtr.
+*wartość2*<br/>
+32-bitowa liczba całkowita, która może zostać przekonwertowana na IntPtr.
 
-*value3*<br/>
-An IntPtr.
+*Wartość3*<br/>
+Element IntPtr.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Operatory pierwsza i druga zwraca pola IntPtr. Trzeci operator zwraca wskaźnik do wartością reprezentowaną przez bieżące IntPtr.
+Pierwszy i drugi Operator zwracają element IntPtr. Trzeci operator zwraca wskaźnik do wartości reprezentowanej przez bieżący element IntPtr.
 
-## <a name="toint32"> </a> Metoda IntPtr::ToInt32
+## <a name="intptrtoint32-method"></a><a name="toint32"></a> IntPtr:: Toint32 —, Metoda
 
-Konwertuje bieżącej wartości pola IntPtr 32-bitową liczbę całkowitą.
+Konwertuje bieżącą wartość IntPtr na 32-bitową liczbę całkowitą.
 
 ### <a name="syntax"></a>Składnia
 
@@ -98,8 +99,8 @@ int32 IntPtr::ToInt32();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-32-bitową liczbę całkowitą.
+32-bitowa liczba całkowita.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

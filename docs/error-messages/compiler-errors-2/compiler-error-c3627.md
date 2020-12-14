@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C3627'
 title: Błąd kompilatora C3627
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3627
 ms.assetid: 905ad0a0-8c49-4187-b66e-b375f5a1fae5
-ms.openlocfilehash: abed75e679aaf2b244667916a9725a09c46c80e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd2dc0ca969b9954979c63613996ff83ef63a4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294967"
 ---
 # <a name="compiler-error-c3627"></a>Błąd kompilatora C3627
 
-Można go opakować typ wartości
+Tylko typ wartości może być opakowany
 
-Może być zapakowany tylko klasy wartości.
+Tylko klasy wartości mogą być opakowane.

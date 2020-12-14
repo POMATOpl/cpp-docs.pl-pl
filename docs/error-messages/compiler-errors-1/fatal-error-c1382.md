@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: błąd krytyczny C1382'
 title: Błąd krytyczny C1382
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1382
 ms.assetid: 7a100f8c-3179-4927-a2f1-98de4c753850
-ms.openlocfilehash: 6ed70a81c4ae2028d09b694f325f83454e99a587
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fd2b9f48030d558a880a787114848dd0551b68ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276520"
 ---
 # <a name="fatal-error-c1382"></a>Błąd krytyczny C1382
 
