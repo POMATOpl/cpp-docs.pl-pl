@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/D (Definicje preprocesora)
 title: /D (Definicje preprocesora)
 ms.date: 09/18/2019
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 7c8a500820c8cc4655c409f4628d72a69acafa5a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6ae7dcd81e1821d4c3a8a2f6d5c1b711c0faa9f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196831"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Definicje preprocesora)
 
@@ -107,7 +108,7 @@ TEST defined 1
 ## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora MSVC](compiler-options.md)\
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)\
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)\
 [/FI (nazwa pliku wymuszonego dołączenia)](fi-name-forced-include-file.md)\
 [/U,/u (Usuń definicje symboli)](u-u-undefine-symbols.md)\
 [#undef — dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)\

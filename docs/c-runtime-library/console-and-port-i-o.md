@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: we/wy konsoli i portu'
 title: Operacje We/Wy konsoli i portu
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 5b4dc2a081ea11bd84d932f55b5b247de81f296a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 99419db614d4b4493f0fc5de3febb522c8bbb3dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195791"
 ---
 # <a name="console-and-port-io"></a>Operacje We/Wy konsoli i portu
 
@@ -22,7 +23,7 @@ Te procedury służą do odczytu i zapisu w konsoli lub na określonym porcie. P
 
 ## <a name="console-and-port-io-routines"></a>Procedury we/wy konsoli i portu
 
-|Procedura|Użycie|
+|Procedura|Zastosowanie|
 |-------------|---------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Odczytaj ciąg z konsoli|
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md) _cwprintf_s_l|Zapisz sformatowane dane w konsoli|
@@ -42,5 +43,5 @@ Te procedury służą do odczytu i zapisu w konsoli lub na określonym porcie. P
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Wejście i wyjście](../c-runtime-library/input-and-output.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

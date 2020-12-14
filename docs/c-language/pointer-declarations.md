@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: deklaracje wskaźników'
 title: Deklaracje wskaźników
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c1670d1dd86e7df7f164e357ff99f3ed31e7339
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195921"
 ---
 # <a name="pointer-declarations"></a>Deklaracje wskaźników
 
@@ -21,18 +22,18 @@ ms.locfileid: "87211765"
 ## <a name="syntax"></a>Składnia
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
 *deklarator Direct*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(** *deklarator* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **[** *wybór wyrażenia stałego*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **[** *wybór wyrażenia stałego*<sub></sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *Typ parametru-list* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *opt z listą identyfikatorów*<sub>opt</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *opt z listą identyfikatorów*<sub></sub> **)**
 
 *wskaźnik*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>wybór</sub> listy<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>opt</sub> *wskaźnik* wyboru listy
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub></sub> *wskaźnik* wyboru listy
 
 *kwalifikator typu-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*kwalifikator typu*<br/>
@@ -91,7 +92,7 @@ Zmienna *y* w tych deklaracjach jest zadeklarowana jako stały wskaźnik do **`i
 struct list *next, *previous; /* Uses the tag for list */
 ```
 
-Ten przykład deklaruje dwie zmienne wskaźnikowe, *Next* i *Previous*, które wskazują na *listę*typów struktury. Ta deklaracja może wystąpić przed definicją typu struktury *listy* (patrz następny przykład), o ile definicja typu *listy* ma taki sam wgląd jak Deklaracja.
+Ten przykład deklaruje dwie zmienne wskaźnikowe, *Next* i *Previous*, które wskazują na *listę* typów struktury. Ta deklaracja może wystąpić przed definicją typu struktury *listy* (patrz następny przykład), o ile definicja typu *listy* ma taki sam wgląd jak Deklaracja.
 
 ```
 struct list
@@ -112,8 +113,8 @@ struct id
 } record;
 ```
 
-*Rekord* zmiennej ma *Identyfikator*typu struktury. Należy zauważyć, że *pname* jest zadeklarowany jako wskaźnik do innego typu struktury o nazwie *name*. Ta deklaracja może wystąpić przed zdefiniowaniem typu *nazwy* .
+*Rekord* zmiennej ma *Identyfikator* typu struktury. Należy zauważyć, że *pname* jest zadeklarowany jako wskaźnik do innego typu struktury o nazwie *name*. Ta deklaracja może wystąpić przed zdefiniowaniem typu *nazwy* .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

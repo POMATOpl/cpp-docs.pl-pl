@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Tworzenie tekstu pliku wbudowanego'
 title: Tworzenie tekstu pliku wbudowanego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - NMAKE program, inline files
 - text, inline file
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
-ms.openlocfilehash: a45aa526ca99af93cda86a2a8e0580d4d036ca6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 849273fff4ca0853e4589a38096cbb067c380aae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196857"
 ---
 # <a name="creating-inline-file-text"></a>Tworzenie tekstu pliku wbudowanego
 
-Pliki wbudowane są tymczasowy lub stały.
+Pliki śródwierszowe są tymczasowe lub trwałe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,10 +30,10 @@ inlinetext
 
 ## <a name="remarks"></a>Uwagi
 
-Określ *inlinetext* w pierwszym wierszu po poleceniu. Oznacz kończyć podwójne nawiasy (<<) na początku w osobnym wierszu. Ten plik zawiera wszystkie *inlinetext* przed ograniczająca nawiasy kwadratowe. *Inlinetext* może mieć rozszerzenia — makro i podstawienia, ale nie dyrektywy lub komentarze pliku reguł programu make. Miejsca do magazynowania, karty i znaki nowego wiersza są traktowane dosłownie.
+Określ *inlinetext* w pierwszym wierszu po poleceniu. Oznacz koniec z podwójnymi nawiasami ostrymi (<<) na początku oddzielnego wiersza. Plik zawiera wszystkie *inlinetext* przed nawiasem ograniczającym. *Inlinetext* może mieć rozwinięcia makra i podstawienia, ale nie dyrektywy ani Komentarze pliku reguł programu make. Spacje, tabulatory i znaki nowego wiersza są traktowane jako dosłownie.
 
-Plik tymczasowy istnieje w czasie trwania sesji i mogą być ponownie używane przez inne polecenia. Określ **zachować** po kątem zamykających nawiasów kwadratowych do przechowywania pliku po sesji NMAKE; bez nazwy pliku jest zachowywany na dysku wraz ze wygenerowanej nazwy pliku. Określ **NOKEEP** lub Brak pliku tymczasowego. **Zachowaj** i **NOKEEP** nie jest uwzględniana wielkość liter.
+Plik tymczasowy istnieje na czas trwania sesji i może być ponownie używany przez inne polecenia. Po nawiasie zamykającym należy określić wartość **Zachowaj** , aby zachować plik po sesji NMAKE; plik bez nazwy jest zachowywany na dysku z wygenerowaną nazwą pliku. Określ wartość **nokeep** lub Nothing dla pliku tymczasowego. **Zachowaj** i nie **zachowuj** wielkości liter.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Pliki wbudowane w pliku reguł programu Make](inline-files-in-a-makefile.md)
+[Pliki wbudowane w pliku reguł programu make](inline-files-in-a-makefile.md)

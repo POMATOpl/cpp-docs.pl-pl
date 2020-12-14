@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: _CRT_DISABLE_PERFCRIT_LOCKS'
 title: _CRT_DISABLE_PERFCRIT_LOCKS
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - CRT_DISABLE_PERFCRIT_LOCKS constant
 - _CRT_DISABLE_PERFCRIT_LOCKS constant
 ms.assetid: 36cc2d86-cdb1-4b2b-a03c-c0d3818e7c6f
-ms.openlocfilehash: b6f4d8dee5577e88aa59af9bff017aab0c7eef89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b96e29fad635ac9e7f3d622ace3c43bb26c8805a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195687"
 ---
-# <a name="crtdisableperfcritlocks"></a>_CRT_DISABLE_PERFCRIT_LOCKS
+# <a name="_crt_disable_perfcrit_locks"></a>_CRT_DISABLE_PERFCRIT_LOCKS
 
-Wyłącza blokowanie newralgicznym dla wydajności w przypadku operacji We/Wy.
+Wyłącza blokowanie krytyczne dla wydajności w operacjach we/wy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,8 +28,8 @@ Wyłącza blokowanie newralgicznym dla wydajności w przypadku operacji We/Wy.
 
 ## <a name="remarks"></a>Uwagi
 
-Definiowanie tego symbolu może poprawić wydajność w jednowątkowym I/O-programy, wymuszając wszystkie operacje We/Wy założenie modelu jednowątkowe operacji We/Wy. Aby uzyskać więcej informacji, zobacz [wydajność bibliotek wielowątkowych](../c-runtime-library/multithreaded-libraries-performance.md).
+Zdefiniowanie tego symbolu może zwiększyć wydajność w przypadku programów z ograniczeniami we/wy, wymuszając wszystkie operacje we/wy, aby założyć jeden wielowątkowy model we/wy. Aby uzyskać więcej informacji, zobacz temat [wydajność bibliotek wielowątkowych](../c-runtime-library/multithreaded-libraries-performance.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe globalne](../c-runtime-library/global-constants.md)

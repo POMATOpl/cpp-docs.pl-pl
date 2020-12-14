@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/NOENTRY (brak punktu wejścia)
 title: /NOENTRY (Brak punktu wejścia)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /NOENTRY linker option [C++]
 - DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
-ms.openlocfilehash: c750fd94e21eec39a25acf216a452faaa277bf7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3d1f725a4e185a052d443010894ff2dc2261675
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196688"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (Brak punktu wejścia)
 
@@ -27,26 +28,26 @@ ms.locfileid: "62320412"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/noentry jest wymagana do tworzenia biblioteki DLL tylko do zasobów, która nie zawiera kodu wykonywalnego. Aby uzyskać więcej informacji, zobacz [Tworzenie biblioteki DLL Resource-Only](../creating-a-resource-only-dll.md).
+Opcja/NOENTRY jest wymagana do utworzenia biblioteki DLL zawierającej tylko zasoby, która nie zawiera kodu wykonywalnego. Aby uzyskać więcej informacji, zobacz [tworzenie Resource-Only dll](../creating-a-resource-only-dll.md).
 
-Użyj tej opcji, aby zapobiegać łączeniu odwołania do `_main` do biblioteki DLL.
+Użyj tej opcji, aby zapobiec łączeniu łącza z odwołaniem do `_main` biblioteki DLL.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **konsolidatora** folderu.
+1. Wybierz folder **konsolidatora** .
 
-1. Wybierz **zaawansowane** stronę właściwości.
+1. Wybierz stronę właściwości **Zaawansowane** .
 
-1. Modyfikowanie **punkt wejścia nie** właściwości.
+1. Zmodyfikuj właściwość **Brak punktu wejścia** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ResourceOnlyDLL%2A>.
+1. Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ResourceOnlyDLL%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie biblioteki DLL z samymi zasobami](../creating-a-resource-only-dll.md)<br/>
+[Tworzenie Resource-Only DLL](../creating-a-resource-only-dll.md)<br/>
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

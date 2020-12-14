@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: &lt; ostream &gt; Operatory'
 title: '&lt;&gt;Operatory ostream'
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 51422031de786d560b70a8ccaf8a072151630bbe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193061"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;&gt;Operatory ostream
 
@@ -113,7 +114,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-Określa długość N = `traits_type::` [Długość](../standard-library/char-traits-struct.md#length)( `str` ) sekwencji rozpoczynającej się o *str*i wstawia sekwencję. Jeśli N < `_Ostr.` [Szerokość](../standard-library/ios-base-class.md#width), funkcja wstawia również powtarzające się `_Ostr.width` znaki wypełnienia (-N). Powtórzenie poprzedza sekwencję if ( `_Ostr` . [flags](../standard-library/ios-base-class.md#flags)  &  flagi `adjustfield` ! = [Left](../standard-library/ios-functions.md#left). W przeciwnym razie powtórzenia następuje po sekwencji. Funkcja zwraca *_Ostr*.
+Określa długość N = `traits_type::` [Długość](../standard-library/char-traits-struct.md#length)( `str` ) sekwencji rozpoczynającej się o *str* i wstawia sekwencję. Jeśli N < `_Ostr.` [Szerokość](../standard-library/ios-base-class.md#width), funkcja wstawia również powtarzające się `_Ostr.width` znaki wypełnienia (-N). Powtórzenie poprzedza sekwencję if ( `_Ostr` . [](../standard-library/ios-base-class.md#flags)  &  flagi `adjustfield` ! = [Left](../standard-library/ios-functions.md#left). W przeciwnym razie powtórzenia następuje po sekwencji. Funkcja zwraca *_Ostr*.
 
 Funkcja szablonu
 
@@ -265,6 +266,6 @@ zwraca `_Ostr << val` (i konwertuje [odwołanie rvalue](../cpp/rvalue-reference-
 
 Zobacz [opróżnianie](../standard-library/ostream-functions.md#flush) , aby zapoznać się z przykładem `operator<<` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [\<ostream>](../standard-library/ostream.md)

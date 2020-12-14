@@ -1,14 +1,15 @@
 ---
+description: 'Dowiedz się więcej o: Microsoft:: WRL::D etails Namespace'
 title: Microsoft::WRL::Details — Przestrzeń nazw
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-ms.openlocfilehash: 50208242d77d7b54951bcb44608f1a20b5147efc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c82d7389c80d35aa041dccc7c6bc8d202fba9c29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223476"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195115"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details — Przestrzeń nazw
 
@@ -41,7 +42,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|
 |[ArgTraits, struktura](argtraits-structure.md)|Deklaruje określony interfejs delegata i anonimową funkcję członkowską, która ma określoną liczbę parametrów.|
 |[ArgTraitsHelper — Struktura](argtraitshelper-structure.md)|Ułatwia definiowanie typowych cech argumentów delegatów.|
-|[BoolStruct, struktura](boolstruct-structure.md)|Określa, czy `ComPtr` zarządza okres istnienia obiektu w interfejsie. `BoolStruct`jest używany wewnętrznie przez operator [BoolType ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
+|[BoolStruct, struktura](boolstruct-structure.md)|Określa, czy `ComPtr` zarządza okres istnienia obiektu w interfejsie. `BoolStruct` jest używany wewnętrznie przez operator [BoolType ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
 |[CreatorMap — Struktura](creatormap-structure.md)|Zawiera informacje o sposobach inicjowania, rejestrowania i wyrejestrowywania obiektów.|
 |[DerefHelper, struktura](derefhelper-structure.md)|Reprezentuje wskaźnik odwołujący się do `T*` parametru szablonu.|
 |[EnableIf, struktura](enableif-structure.md)|Definiuje element członkowski danych typu określonego przez drugi parametr szablonu, jeśli pierwszy parametr szablonu daje w wyniku **`true`** .|

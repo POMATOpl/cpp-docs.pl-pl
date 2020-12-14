@@ -1,5 +1,6 @@
 ---
-title: Strona właściwości NMake (Windows C++) | Dokumentacja firmy Microsoft
+description: 'Dowiedz się więcej o: Strona właściwości NMake'
+title: Strona właściwości NMake (Windows C++) | Microsoft Docs
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCNMakeTool.ReBuildCommandLine
@@ -9,67 +10,67 @@ f1_keywords:
 helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-ms.openlocfilehash: c0dbe537635fe6698f814f3d8456f0caa9c8c796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58256ad8542e7d411769efb661970f9c41797ec3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196805"
 ---
 # <a name="nmake-property-page"></a>Strona właściwości NMake
 
-**NMake** właściwość umożliwia określenie ustawień kompilacji dla projektów NMake. (NMAKE jest implementacja firmy Microsoft [wprowadzić](https://wikipedia.org/wiki/Make_(software)).)
+Strona właściwości **NMAKE** umożliwia określenie ustawień kompilacji dla projektów NMAKE. (NMAKE to implementacja firmy [Microsoft.)](https://wikipedia.org/wiki/Make_(software))
 
-Aby uzyskać więcej informacji na temat projektów NMake zobacz [Tworzenie projektu pliku reguł programu make](creating-a-makefile-project.md). W przypadku projektów plików reguł programu make innych niż - Windows zobacz [właściwości projektu pliku reguł programu make (Linux C++)](../../linux/prop-pages/makefile-linux.md), [ogólne właściwości projektu (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) lub [właściwości narzędzia NMake (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
+Aby uzyskać więcej informacji na temat projektów NMake, zobacz [Tworzenie projektu pliku reguł programu make](creating-a-makefile-project.md). W przypadku projektów z regułami Make systemu Windows, zobacz [właściwości projektu pliku reguł programu make (Linux c++)](../../linux/prop-pages/makefile-linux.md), [Ogólne właściwości projektu (Windows c++ make)](/visualstudio/cross-platform/general-makefile-android-prop-page) lub [Właściwości NMAKE (Android c++)](/visualstudio/cross-platform/nmake-android-prop-page).
 
-**NMake** strona właściwości zawiera następujące właściwości.
+Strona właściwości **NMAKE** zawiera następujące właściwości.
 
 ## <a name="uielement-list"></a>Lista elementów UI
 
 - **Wiersz polecenia kompilacji**
 
-   Określa polecenie do uruchomienia po **kompilacji** jest kliknięty **kompilacji** menu.
+   Określa polecenie, które ma być uruchamiane po kliknięciu **kompilacji** w menu **kompilacja** .
 
-- **Wiersz poleceń rekompilacji wszystkiego**
+- **Kompiluj ponownie wszystkie wiersze polecenia**
 
-   Określa polecenie do uruchomienia po **Kompiluj wszystko ponownie** jest kliknięty **kompilacji** menu.
+   Określa polecenie, które ma być uruchamiane po kliknięciu przycisku Kompiluj **ponownie wszystko** w menu **kompilacja** .
 
-- **Wiersz polecenia Wyczyść**
+- **Wyczyść wiersz polecenia**
 
-   Określa polecenie do uruchomienia po **czysty** jest kliknięty **kompilacji** menu.
+   Określa polecenie, które ma być uruchamiane po kliknięciu przycisku **Wyczyść** w menu **kompilacja** .
 
-- **Output**
+- **Dane wyjściowe**
 
-   Określa nazwę pliku, który będzie zawierał dane wyjściowe wiersza polecenia. Domyślnie ta nazwa pliku opiera się na nazwę projektu.
+   Określa nazwę pliku, który będzie zawierać dane wyjściowe dla wiersza polecenia. Domyślnie ta nazwa pliku jest oparta na nazwie projektu.
 
 - **Definicje preprocesora**
 
-   Określa wszystkie definicje preprocesora, użycia plików źródłowych. Wartość domyślna zależy od bieżącej platformy i konfiguracji.
+   Określa Definicje preprocesora używane przez pliki źródłowe. Wartość domyślna jest określana przez bieżącą platformę i konfigurację.
 
-- **Ścieżka wyszukiwania plików dołączanych**
+- **Ścieżka wyszukiwania dołączania**
 
-   Określa katalog, w którym kompilator wyszukuje pliki dołączane.
+   Określa katalogi, w których Kompilator wyszukuje pliki dołączane.
 
-- **Wymuszone obejmuje**
+- **Wymuszone dołączenia**
 
-   Określa pliki, które preprocesor przetwarza automatycznie, nawet wtedy, gdy nie są uwzględniane w plikach projektu.
+   Określa pliki, które preprocesor automatycznie przetwarza, nawet jeśli nie znajdują się one w plikach projektu.
 
 - **Ścieżka wyszukiwania zestawu**
 
-   Określa katalog, gdzie programu .NET Framework wyszukiwania, kiedy go próbuje rozpoznać zestawów platformy .NET.
+   Określa katalogi, w których .NET Framework jest wyszukiwany, gdy Trys do rozpoznania zestawów .NET.
 
-- **Wymuszone za pomocą zestawów**
+- **Wymuszone używanie zestawów**
 
-   Określa zestawy, które automatycznie przetwarza programu .NET Framework.
+   Określa zestawy, które są automatycznie przetwarzane przez .NET Framework.
 
-- **Dodatkowe opcje**
+- **Opcje dodatkowe**
 
-   Określa wszelkie dodatkowe przełączniki kompilatora dla funkcji IntelliSense do użycia podczas jej analizuje pliki języka C++.
+   Określa dodatkowe przełączniki kompilatora, które mają być używane przez funkcję IntelliSense podczas analizowania plików C++.
 
-Aby uzyskać informacje o tym, jak uzyskać dostęp do **NMake** strony właściwości, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+Aby uzyskać informacje o sposobach uzyskiwania dostępu do strony właściwości **NMAKE** , zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-Aby uzyskać informacje na temat programowego dostępu do elementów członkowskich tego obiektu, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.
+Aby uzyskać informacje o sposobach programistycznego dostępu do elementów członkowskich tego obiektu, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool> .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja strony właściwości projektu C++](property-pages-visual-cpp.md)<br>
+[Odwołanie do strony właściwości projektu C++](property-pages-visual-cpp.md)<br>

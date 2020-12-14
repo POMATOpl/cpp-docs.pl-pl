@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej: sekwencje unikowe'
 title: Sekwencje unikowe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 5de0b5f1a73fcfb6ea0325bea3247ebe4c85d411
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 860c9b490a0d67f27da612f113cf6233f32b7188
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196545"
 ---
 # <a name="escape-sequences"></a>Sekwencje unikowe
 
@@ -43,7 +44,7 @@ Kombinacje znaków składające się z ukośnika odwrotnego ( **\\** ), po któr
 
 Sekwencje unikowe są zwykle używane do określania akcji, takich jak powrót karetki i ruchy tabulacji na terminalach i drukarkach. Są one również używane do dostarczania literałów niedrukowalnych znaków i znaków, które zwykle mają specjalne znaczenie, takie jak podwójny cudzysłów (**"**). W poniższej tabeli wymieniono sekwencje unikowe ANSI i ich znaczenie.
 
-Należy zauważyć, że znak zapytania poprzedzony ukośnikiem odwrotnym (** \\ ?**) określa znak zapytania literału w przypadkach, gdy sekwencja znaków byłaby błędnie interpretowana jako trójznaków. Aby uzyskać więcej informacji, zobacz [trigraphs](../c-language/trigraphs.md) .
+Należy zauważyć, że znak zapytania poprzedzony ukośnikiem odwrotnym (**\\ ?**) określa znak zapytania literału w przypadkach, gdy sekwencja znaków byłaby błędnie interpretowana jako trójznaków. Aby uzyskać więcej informacji, zobacz [trigraphs](../c-language/trigraphs.md) .
 
 ### <a name="escape-sequences"></a>Sekwencje unikowe
 
@@ -79,6 +80,6 @@ Można również użyć ukośnika odwrotnego ( **\\** ) jako znaku kontynuacji. 
 ( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe znakowe języka C](../c-language/c-character-constants.md)

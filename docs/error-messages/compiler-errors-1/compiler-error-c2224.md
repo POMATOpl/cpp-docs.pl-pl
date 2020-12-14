@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2224'
 title: Błąd kompilatora C2224
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2224
 ms.assetid: 27b93bbf-4ce7-47a3-a9c4-f4fbed689bdf
-ms.openlocfilehash: 2d7e045d12e6a21c4a63aee6089a8caa5f9984b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b2931a3ccb5952693b446fc9557772fc93d678dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87208944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195089"
 ---
 # <a name="compiler-error-c2224"></a>Błąd kompilatora C2224
 

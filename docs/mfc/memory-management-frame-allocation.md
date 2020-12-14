@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: zarządzanie pamięcią: Alokacja ramek'
 title: 'Zarządzanie pamięcią: alokacja ramek'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1763d332275f17ee082b891830641ebc61cad054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193438"
 ---
 # <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
 
@@ -39,6 +40,6 @@ Gdy obiekt jest zdefiniowany jako zmienna ramki, jego Konstruktor jest automatyc
 
 Główną zaletą alokowania obiektów w ramce jest to, że są one automatycznie usuwane. Po przydzieleniu obiektów do ramki nie trzeba martwić się o zapomniane obiekty powodujące przecieki pamięci. (Szczegółowe informacje o przeciekach pamięci znajdują się [w artykule Wykrywanie przecieków pamięci w MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100))). Wadą alokacji ramki jest to, że zmienne ramek nie mogą być używane poza ich zakresem. Innym czynnikiem podczas wybierania alokacji ramek i alokacji sterty jest to, że w przypadku dużych struktur i obiektów często lepiej jest używać sterty zamiast stosu dla magazynu, ponieważ przestrzeń stosu jest często ograniczona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zarządzanie pamięcią](memory-management.md)

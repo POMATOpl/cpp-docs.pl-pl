@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Framework (MFC)'
 title: Struktura (MFC)
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 12e5a28e231dfadec867213ebf1cea6fd6ae7300
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193490"
 ---
 # <a name="framework-mfc"></a>Struktura (MFC)
 
@@ -37,17 +38,17 @@ Hermetyzacja oznacza, że Klasa C++ `CWnd` , na przykład, zawiera zmienną elem
 
 ## <a name="in-related-sections"></a>W sekcjach pokrewnych
 
-[Opieranie się na strukturze](building-on-the-framework.md)
+[Kompilowanie na platformie](building-on-the-framework.md)
 
 [Jak struktura wywołuje kod](how-the-framework-calls-your-code.md)
 
-[CWinApp: klasa aplikacji](cwinapp-the-application-class.md)
+[CWinApp: Klasa aplikacji](cwinapp-the-application-class.md)
 
 [Szablony dokumentów i proces tworzenia dokumentu/widoku](document-templates-and-the-document-view-creation-process.md)
 
 [Obsługa i mapowanie komunikatów](message-handling-and-mapping.md)
 
-[Obiekty okien](window-objects.md)
+[Obiekty okna](window-objects.md)
 
 ## <a name="see-also"></a>Zobacz też
 

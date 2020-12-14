@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o programie: Migrowanie z OpenMP do środowisko uruchomieniowe współbieżności'
 title: Migrowanie z OpenMP do współbieżności środowiska wykonawczego
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 081d0ae8b312d827a0af98dd45c62f7563e81677
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ab9b50f0cdebcc8fc601565dd19c5c2704c17d95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193087"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrowanie z OpenMP do współbieżności środowiska wykonawczego
 
@@ -40,7 +41,7 @@ Może być korzystne przeprowadzenie migracji istniejącego kodu OpenMP, aby uż
 
 Poniższe przypadki opisują, kiedy może nie być konieczne Migrowanie istniejącego kodu OpenMP w celu użycia środowisko uruchomieniowe współbieżności.
 
-|Padkach|Objaśnienie|
+|Padkach|Wyjaśnienie|
 |-----------|-----------------|
 |Twoja aplikacja spełnia już Twoje wymagania.|Jeśli spełniasz wymagania dotyczące wydajności aplikacji i bieżącej obsługi debugowania, migracja może nie być odpowiednia.|
 |Ciała pętli równoległej wykonują niewiele pracy.|Narzuty harmonogramu zadań środowisko uruchomieniowe współbieżności mogą nie przezwyciężyć korzyści płynących z wykonywania pętli cyklicznej, szczególnie gdy treść pętli jest stosunkowo mała.|
