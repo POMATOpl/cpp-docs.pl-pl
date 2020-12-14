@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy source_block
 title: source_block — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 304bc65d969fa677d67bf578021a63f628e0a1f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dface4f898bad1abf1ba51732f8059e87975fae7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188615"
 ---
 # <a name="source_block-class"></a>source_block — Klasa
 
@@ -125,7 +126,7 @@ Bloki komunikatów powinny pochodzić od tego bloku, aby skorzystać z funkcji z
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept"></a><a name="accept"></a>odebrać
+## <a name="accept"></a><a name="accept"></a> odebrać
 
 Akceptuje komunikat oferowany przez ten `source_block` obiekt, przekazując własność do obiektu wywołującego.
 
@@ -153,7 +154,7 @@ Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-ar
 
 `accept`Metoda jest wywoływana przez obiekt docelowy, podczas gdy komunikat jest oferowany przez ten `ISource` blok. Zwrócony wskaźnik komunikatu może być inny niż przekazana do `propagate` metody `ITarget` bloku, jeśli to źródło zdecyduje się wykonać kopię wiadomości.
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Gdy jest zastępowany w klasie pochodnej, akceptuje oferowany komunikat przez źródło. Bloki komunikatów powinny zastąpić tę metodę, aby zweryfikować `_MsgId` i zwrócić komunikat.
 
@@ -174,7 +175,7 @@ Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
 Aby przenieść własność, należy zwrócić oryginalny wskaźnik wiadomości. Aby zachować własność, należy wprowadzić i zwrócić kopię ładunku komunikatów.
 
-## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a> acquire_ref
 
 Uzyskuje liczbę odwołań dla tego `source_block` obiektu, aby zapobiec usunięciu.
 
@@ -186,7 +187,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 
 Ta metoda jest wywoływana przez `ITarget` obiekt, który jest połączony z tym źródłem podczas tej `link_target` metody.
 
-## <a name="async_send"></a><a name="async_send"></a>async_send
+## <a name="async_send"></a><a name="async_send"></a> async_send
 
 Asynchronicznie kolejkuje komunikaty i uruchamia zadanie propagacji, jeśli nie zostało to jeszcze zrobione
 
@@ -199,7 +200,7 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
 *_Msg*<br/>
 Wskaźnik do `message` obiektu, który asynchronicznie wysyła.
 
-## <a name="consume"></a><a name="consume"></a>wykorzystania
+## <a name="consume"></a><a name="consume"></a> wykorzystania
 
 Wykorzystuje komunikat wcześniej oferowany przez ten `source_block` obiekt i został pomyślnie zarezerwowany przez element docelowy, przez przeniesienie własności do obiektu wywołującego.
 
@@ -229,7 +230,7 @@ Metoda zgłasza wyjątek [bad_target](bad-target-class.md) , jeśli parametr nie
 
 `consume`Metoda jest podobna do `accept` , ale musi być zawsze poprzedzona wywołaniem `reserve` zwracanym **`true`** .
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Gdy jest zastępowany w klasie pochodnej, wykorzystuje wcześniej zarezerwowany komunikat.
 
@@ -250,7 +251,7 @@ Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
 Przypomina `accept` , ale jest zawsze poprzedzone wywołaniem do `reserve` .
 
-## <a name="enable_batched_processing"></a><a name="enable_batched_processing"></a>enable_batched_processing
+## <a name="enable_batched_processing"></a><a name="enable_batched_processing"></a> enable_batched_processing
 
 Włącza przetwarzanie wsadowe dla tego bloku.
 
@@ -258,7 +259,7 @@ Włącza przetwarzanie wsadowe dla tego bloku.
 void enable_batched_processing();
 ```
 
-## <a name="initialize_source"></a><a name="initialize_source"></a>initialize_source
+## <a name="initialize_source"></a><a name="initialize_source"></a> initialize_source
 
 Inicjuje w `message_propagator` tym elemencie `source_block` .
 
@@ -276,7 +277,7 @@ Harmonogram, który ma być używany na potrzeby planowania zadań.
 *_PScheduleGroup*<br/>
 Grupa harmonogramu, która ma być używana na potrzeby planowania zadań.
 
-## <a name="link_target"></a><a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a> link_target
 
 Łączy blok docelowy z tym `source_block` obiektem.
 
@@ -293,7 +294,7 @@ Wskaźnik do bloku, `ITarget` który ma zostać połączony z tym `source_block`
 
 Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli parametr `_PTarget` ma wartość `NULL` .
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym `source_block` obiektem.
 
@@ -301,7 +302,7 @@ Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połąc
 virtual void link_target_notification(_Inout_ ITarget<_Target_type> *);
 ```
 
-## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a> process_input_messages
 
 Przetwarzanie komunikatów wejściowych. Jest to przydatne tylko w przypadku bloków propagator, które pochodzą z source_block
 
@@ -314,7 +315,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 *_PMessage*<br/>
 Wskaźnik do wiadomości, która ma zostać przetworzona.
 
-## <a name="propagate_output_messages"></a><a name="propagate_output_messages"></a>propagate_output_messages
+## <a name="propagate_output_messages"></a><a name="propagate_output_messages"></a> propagate_output_messages
 
 Propagowanie komunikatów do obiektów docelowych.
 
@@ -322,7 +323,7 @@ Propagowanie komunikatów do obiektów docelowych.
 virtual void propagate_output_messages();
 ```
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 Gdy jest zastępowany w klasie pochodnej, propaguje dany komunikat do dowolnych lub wszystkich połączonych obiektów docelowych. Jest to główna procedura propagacji dla bloków komunikatów.
 
@@ -335,7 +336,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessa
 *_PMessage*<br/>
 Wskaźnik do komunikatu, który ma być propagowany.
 
-## <a name="release"></a><a name="release"></a>Usuwanie
+## <a name="release"></a><a name="release"></a> Usuwanie
 
 Zwalnia poprzednie pomyślne zastrzeżenie dotyczące komunikatów.
 
@@ -359,7 +360,7 @@ Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-ar
 
 Metoda zgłasza wyjątek [bad_target](bad-target-class.md) , jeśli parametr nie `_PTarget` reprezentuje obiektu docelowego, który został wywołany `reserve` .
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Gdy jest zastępowany w klasie pochodnej, zwalnia poprzednią rezerwację wiadomości.
 
@@ -372,7 +373,7 @@ virtual void release_message(runtime_object_identity _MsgId) = 0;
 *_MsgId*<br/>
 `runtime_object_identity` `message` Wydawany obiekt.
 
-## <a name="release_ref"></a><a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a> release_ref
 
 Zwalnia liczbę odwołań dla tego `source_block` obiektu.
 
@@ -389,7 +390,7 @@ Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 Ta metoda jest wywoływana przez `ITarget` obiekt, który jest odłączany od tego źródła. Blok źródłowy może zwolnić wszystkie zasoby zarezerwowane dla bloku docelowego.
 
-## <a name="remove_targets"></a><a name="remove_targets"></a>remove_targets
+## <a name="remove_targets"></a><a name="remove_targets"></a> remove_targets
 
 Usuwa wszystkie linki docelowe dla tego bloku źródłowego. Ta wartość powinna być wywoływana z destruktora.
 
@@ -397,7 +398,7 @@ Usuwa wszystkie linki docelowe dla tego bloku źródłowego. Ta wartość powinn
 void remove_targets();
 ```
 
-## <a name="reserve"></a><a name="reserve"></a>zarezerwować
+## <a name="reserve"></a><a name="reserve"></a> zarezerwować
 
 Rezerwuje komunikat wcześniej oferowany przez ten `source_block` obiekt.
 
@@ -425,7 +426,7 @@ Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-ar
 
 Po wywołaniu `reserve` , jeśli zakończy się powodzeniem, należy wywołać `consume` lub `release` w celu przeprowadzenia lub zadawać swój komunikat odpowiednio.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Gdy jest zastępowany w klasie pochodnej, rezerwuje komunikat wcześniej oferowany przez ten `source_block` obiekt.
 
@@ -446,7 +447,7 @@ Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
 Po `reserve` wywołaniu, jeśli zwróci **`true`** , `consume` lub `release` musi zostać wywołana w celu podjęcia lub zwolnienia własności wiadomości.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Gdy jest zastępowany w klasie pochodnej, wznawia propagowanie po wydaniu rezerwacji.
 
@@ -454,7 +455,7 @@ Gdy jest zastępowany w klasie pochodnej, wznawia propagowanie po wydaniu rezerw
 virtual void resume_propagation() = 0;
 ```
 
-## <a name="source_block"></a><a name="ctor"></a>source_block
+## <a name="source_block"></a><a name="ctor"></a> source_block
 
 Konstruuje `source_block` obiekt.
 
@@ -462,7 +463,7 @@ Konstruuje `source_block` obiekt.
 source_block();
 ```
 
-## <a name="source_block"></a><a name="dtor"></a>~ source_block
+## <a name="source_block"></a><a name="dtor"></a> ~ source_block
 
 Niszczy `source_block` obiekt.
 
@@ -470,7 +471,7 @@ Niszczy `source_block` obiekt.
 virtual ~source_block();
 ```
 
-## <a name="sync_send"></a><a name="sync_send"></a>sync_send
+## <a name="sync_send"></a><a name="sync_send"></a> sync_send
 
 Synchronicznie kolejkuje komunikaty i uruchamia zadanie propagacji, jeśli nie zostało to jeszcze zrobione.
 
@@ -483,7 +484,7 @@ virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 *_Msg*<br/>
 Wskaźnik do `message` obiektu do synchronicznego wysłania.
 
-## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a> unlink_target
 
 Odłącza blok docelowy od tego `source_block` obiektu.
 
@@ -500,7 +501,7 @@ Wskaźnik do bloku, `ITarget` Aby odłączyć od tego `source_block` obiektu.
 
 Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli parametr `_PTarget` ma wartość `NULL` .
 
-## <a name="unlink_target_notification"></a><a name="unlink_target_notification"></a>unlink_target_notification
+## <a name="unlink_target_notification"></a><a name="unlink_target_notification"></a> unlink_target_notification
 
 Wywołanie zwrotne, które powiadamia, że element docelowy został odłączone od tego `source_block` obiektu.
 
@@ -513,7 +514,7 @@ virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget)
 *_PTarget*<br/>
 `ITarget`Blok, który został odłączone.
 
-## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a> unlink_targets
 
 Odłącza wszystkie bloki docelowe z tego `source_block` obiektu.
 
@@ -521,7 +522,7 @@ Odłącza wszystkie bloki docelowe z tego `source_block` obiektu.
 virtual void unlink_targets();
 ```
 
-## <a name="wait_for_outstanding_async_sends"></a><a name="wait_for_outstanding_async_sends"></a>wait_for_outstanding_async_sends
+## <a name="wait_for_outstanding_async_sends"></a><a name="wait_for_outstanding_async_sends"></a> wait_for_outstanding_async_sends
 
 Czeka na zakończenie wszystkich propagacji asynchronicznych. Ten odczekanie dla tego obiektu jest używany w destruktorach bloków komunikatów, aby upewnić się, że wszystkie propagacje asynchroniczne mają czas do zakończenia przed zniszczeniem bloku.
 
@@ -529,7 +530,7 @@ Czeka na zakończenie wszystkich propagacji asynchronicznych. Ten odczekanie dla
 void wait_for_outstanding_async_sends();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa ISource](isource-class.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: pliki wyjściowe LIB'
 title: Pliki wyjściowe LIB
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: 8aeb46b0249ddf4155277866f7d8537bbfa98244
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5a9145f4c75db0c402bc4416cedfd6d63bb23cd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191072"
 ---
 # <a name="lib-output-files"></a>Pliki wyjściowe LIB
 

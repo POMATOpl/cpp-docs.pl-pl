@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy critical_section
 title: critical_section — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: f7df639a879bad7af1b4de401460ff298e466c78
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d781ce467123197521bf92dd4d932a665e55c6a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215819"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188940"
 ---
 # <a name="critical_section-class"></a>critical_section — Klasa
 
@@ -76,7 +77,7 @@ Aby uzyskać więcej informacji, zobacz [struktury danych synchronizacji](../../
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="critical_section"></a><a name="ctor"></a>critical_section
+## <a name="critical_section"></a><a name="ctor"></a> critical_section
 
 Tworzy nową sekcję krytyczną.
 
@@ -84,7 +85,7 @@ Tworzy nową sekcję krytyczną.
 critical_section();
 ```
 
-## <a name="critical_section"></a><a name="dtor"></a>~ critical_section
+## <a name="critical_section"></a><a name="dtor"></a> ~ critical_section
 
 Niszczy sekcję krytyczną.
 
@@ -96,7 +97,7 @@ Niszczy sekcję krytyczną.
 
 Oczekuje się, że blokada nie jest już utrzymywana podczas działania destruktora. Umożliwienie sekcji krytycznej do destruktora z blokadą nadal ma wynik niezdefiniowanego zachowania.
 
-## <a name="lock"></a><a name="lock"></a>skręt
+## <a name="lock"></a><a name="lock"></a> skręt
 
 Uzyskuje tę sekcję krytyczną.
 
@@ -110,7 +111,7 @@ Często bezpieczniejsze jest wykorzystanie konstrukcji [scoped_lock](#critical_s
 
 Jeśli blokada jest już zatrzymywana przez kontekst wywołujący, zostanie zgłoszony wyjątek [improper_lock](improper-lock-class.md) .
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 Zwraca uchwyt macierzysty specyficzny dla platformy (jeśli taki istnieje).
 
@@ -126,7 +127,7 @@ Odwołanie do sekcji krytycznej.
 
 `critical_section`Obiekt nie jest skojarzony z uchwytem natywnym specyficznym dla platformy dla systemu operacyjnego Windows. Metoda po prostu zwraca odwołanie do samego obiektu.
 
-## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock, Klasa
+## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a> critical_section:: scoped_lock, Klasa
 
 Wyjątek z bezpiecznym otoką RAII dla `critical_section` obiektu.
 
@@ -134,7 +135,7 @@ Wyjątek z bezpiecznym otoką RAII dla `critical_section` obiektu.
 class scoped_lock;
 ```
 
-## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock:: scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a> scoped_lock:: scoped_lock
 
 Konstruuje `scoped_lock` obiekt i uzyskuje obiekt, który `critical_section` przeszedł do `_Critical_section` parametru. Jeśli Sekcja krytyczna jest przechowywana przez inny wątek, to wywołanie zostanie zablokowane.
 
@@ -147,7 +148,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 Sekcja krytyczna do zablokowania.
 
-## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
 
 Niszczy `scoped_lock` obiekt i zwalnia sekcję krytyczną podaną w konstruktorze.
 
@@ -155,7 +156,7 @@ Niszczy `scoped_lock` obiekt i zwalnia sekcję krytyczną podaną w konstruktorz
 ~scoped_lock();
 ```
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Próbuje uzyskać blokadę bez blokowania.
 
@@ -167,7 +168,7 @@ bool try_lock();
 
 Jeśli blokada została uzyskana, wartość **`true`** ; w przeciwnym razie wartość **`false`** .
 
-## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a> try_lock_for
 
 Próbuje uzyskać blokadę bez blokowania przez określoną liczbę milisekund.
 
@@ -184,7 +185,7 @@ Liczba milisekund oczekiwania przed upływem limitu czasu.
 
 Jeśli blokada została uzyskana, wartość **`true`** ; w przeciwnym razie wartość **`false`** .
 
-## <a name="unlock"></a><a name="unlock"></a>odblokowania
+## <a name="unlock"></a><a name="unlock"></a> odblokowania
 
 Odblokowuje sekcję krytyczną.
 
@@ -192,7 +193,7 @@ Odblokowuje sekcję krytyczną.
 void unlock();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa reader_writer_lock](reader-writer-lock-class.md)

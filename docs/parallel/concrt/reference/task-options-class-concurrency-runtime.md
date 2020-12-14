@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej na temat: task_options Class (środowisko uruchomieniowe współbieżności)'
 title: Klasa task_options (współbieżność środowiska wykonawczego)
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: e79dd7979b587ae807c8984a04b79be362b03758
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3752d23e68096df22d076afc5c07dc3d66cc881a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188212"
 ---
 # <a name="task_options-class-concurrency-runtime"></a>Klasa task_options (współbieżność środowiska wykonawczego)
 
@@ -27,19 +28,19 @@ class task_options;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[task_options::task_options Konstruktor (środowisko uruchomieniowe współbieżności)](#ctor)|Przeciążone. Domyślna lista opcji tworzenia zadań|
+|[task_options:: task_options, Konstruktor (środowisko uruchomieniowe współbieżności)](#ctor)|Przeciążone. Domyślna lista opcji tworzenia zadań|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[task_options::metoda get_cancellation_token (środowisko uruchomieniowe współbieżności)](#get_cancellation_token)|Zwraca token anulowania|
-|[task_options::metoda get_continuation_context (środowisko uruchomieniowe współbieżności)](#get_continuation_context)|Zwraca kontekst kontynuacji|
-|[task_options::metoda get_scheduler (środowisko uruchomieniowe współbieżności)](#get_scheduler)|Zwraca harmonogram|
-|[task_options::metoda has_cancellation_token (środowisko uruchomieniowe współbieżności)](#has_cancellation_token)|Wskazuje, czy token anulowania został określony przez użytkownika|
-|[task_options::metoda has_scheduler (środowisko uruchomieniowe współbieżności)](#has_scheduler)|Wskazuje, czy harmonogram n został określony przez użytkownika|
-|[task_options::metoda set_cancellation_token (środowisko uruchomieniowe współbieżności)](#set_cancellation_token)|Ustawia dany token w opcjach|
-|[task_options::metoda set_continuation_context (środowisko uruchomieniowe współbieżności)](#set_continuation_context)|Ustawia dany kontekst kontynuacji w opcjach|
+|[task_options:: get_cancellation_token, Metoda (środowisko uruchomieniowe współbieżności)](#get_cancellation_token)|Zwraca token anulowania|
+|[task_options:: get_continuation_context, Metoda (środowisko uruchomieniowe współbieżności)](#get_continuation_context)|Zwraca kontekst kontynuacji|
+|[task_options:: get_scheduler, Metoda (środowisko uruchomieniowe współbieżności)](#get_scheduler)|Zwraca harmonogram|
+|[task_options:: has_cancellation_token, Metoda (środowisko uruchomieniowe współbieżności)](#has_cancellation_token)|Wskazuje, czy token anulowania został określony przez użytkownika|
+|[task_options:: has_scheduler, Metoda (środowisko uruchomieniowe współbieżności)](#has_scheduler)|Wskazuje, czy harmonogram n został określony przez użytkownika|
+|[task_options:: set_cancellation_token, Metoda (środowisko uruchomieniowe współbieżności)](#set_cancellation_token)|Ustawia dany token w opcjach|
+|[task_options:: set_continuation_context, Metoda (środowisko uruchomieniowe współbieżności)](#set_continuation_context)|Ustawia dany kontekst kontynuacji w opcjach|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -47,11 +48,11 @@ class task_options;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** ppltasks.h
+**Nagłówek:** ppltasks. h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>task_options::metoda get_cancellation_token (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a> task_options:: get_cancellation_token, Metoda (środowisko uruchomieniowe współbieżności)
 
 Zwraca token anulowania
 
@@ -61,7 +62,7 @@ cancellation_token get_cancellation_token() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a>task_options::metoda get_continuation_context (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a> task_options:: get_continuation_context, Metoda (środowisko uruchomieniowe współbieżności)
 
 Zwraca kontekst kontynuacji
 
@@ -71,7 +72,7 @@ task_continuation_context get_continuation_context() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>task_options::metoda get_scheduler (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a> task_options:: get_scheduler, Metoda (środowisko uruchomieniowe współbieżności)
 
 Zwraca harmonogram
 
@@ -81,7 +82,7 @@ scheduler_ptr get_scheduler() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>task_options::metoda has_cancellation_token (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a> task_options:: has_cancellation_token, Metoda (środowisko uruchomieniowe współbieżności)
 
 Wskazuje, czy token anulowania został określony przez użytkownika
 
@@ -91,7 +92,7 @@ bool has_cancellation_token() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>task_options::metoda has_scheduler (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a> task_options:: has_scheduler, Metoda (środowisko uruchomieniowe współbieżności)
 
 Wskazuje, czy harmonogram n został określony przez użytkownika
 
@@ -101,7 +102,7 @@ bool has_scheduler() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>task_options::metoda set_cancellation_token (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a> task_options:: set_cancellation_token, Metoda (środowisko uruchomieniowe współbieżności)
 
 Ustawia dany token w opcjach
 
@@ -113,7 +114,7 @@ void set_cancellation_token(cancellation_token _Token);
 
 `_Token`
 
-## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a>task_options::metoda set_continuation_context (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a> task_options:: set_continuation_context, Metoda (środowisko uruchomieniowe współbieżności)
 
 Ustawia dany kontekst kontynuacji w opcjach
 
@@ -125,7 +126,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 
 `_ContinuationContext`
 
-## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a>task_options::task_options Konstruktor (środowisko uruchomieniowe współbieżności)
+## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a> task_options:: task_options, Konstruktor (środowisko uruchomieniowe współbieżności)
 
 Domyślna lista opcji tworzenia zadań
 
@@ -170,4 +171,4 @@ task_options(
 
 ## <a name="see-also"></a>Zobacz też
 
-[współbieżność Obszar nazw](concurrency-namespace.md)
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy single_link_registry
 title: single_link_registry — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 24f89a6b2fb998ba5e5a82dbb470accb45d0fd9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 415dcaf8062eaf47a3e92cf4a949790eb364d0c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188641"
 ---
 # <a name="single_link_registry-class"></a>single_link_registry — Klasa
 
@@ -67,7 +68,7 @@ Typ danych bloku przechowywanych w `single_link_registry` obiekcie.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="add"></a><a name="add"></a>dodana
+## <a name="add"></a><a name="add"></a> dodana
 
 Dodaje łącze do `single_link_registry` obiektu.
 
@@ -84,7 +85,7 @@ Wskaźnik do bloku, który ma zostać dodany.
 
 Metoda zgłasza wyjątek [invalid_link_target](invalid-link-target-class.md) , jeśli w tym rejestrze znajduje się już link.
 
-## <a name="begin"></a><a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a> zaczną
 
 Zwraca iterator do pierwszego elementu w `single_link_registry` obiekcie.
 
@@ -100,7 +101,7 @@ Iterator odnoszący się do pierwszego elementu w `single_link_registry` obiekci
 
 Stan końcowy jest wskazywany przez `NULL` łącze.
 
-## <a name="contains"></a><a name="contains"></a>wyświetlana
+## <a name="contains"></a><a name="contains"></a> wyświetlana
 
 Przeszukuje `single_link_registry` obiekt pod kątem określonego bloku.
 
@@ -117,7 +118,7 @@ Wskaźnik do bloku, który ma być wyszukiwany w `single_link_registry` obiekcie
 
 **`true`** Jeśli łącze zostało znalezione, **`false`** w przeciwnym razie.
 
-## <a name="count"></a><a name="count"></a>liczbą
+## <a name="count"></a><a name="count"></a> liczbą
 
 Zlicza elementy w `single_link_registry` obiekcie.
 
@@ -129,7 +130,7 @@ virtual size_t count();
 
 Liczba elementów w `single_link_registry` obiekcie.
 
-## <a name="remove"></a><a name="remove"></a>usuwa
+## <a name="remove"></a><a name="remove"></a> usuwa
 
 Usuwa łącze z `single_link_registry` obiektu.
 
@@ -146,7 +147,7 @@ Wskaźnik do usunięcia bloku, jeśli został znaleziony.
 
 **`true`** Jeśli łącze zostało odnalezione i usunięte, **`false`** w przeciwnym razie.
 
-## <a name="single_link_registry"></a><a name="ctor"></a>single_link_registry
+## <a name="single_link_registry"></a><a name="ctor"></a> single_link_registry
 
 Konstruuje `single_link_registry` obiekt.
 
@@ -154,7 +155,7 @@ Konstruuje `single_link_registry` obiekt.
 single_link_registry();
 ```
 
-## <a name="single_link_registry"></a><a name="dtor"></a>~ single_link_registry
+## <a name="single_link_registry"></a><a name="dtor"></a> ~ single_link_registry
 
 Niszczy `single_link_registry` obiekt.
 
@@ -166,7 +167,7 @@ virtual ~single_link_registry();
 
 Metoda zgłasza wyjątek [invalid_operation](invalid-operation-class.md) , jeśli jest wywoływana przed usunięciem łącza.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa multi_link_registry](multi-link-registry-class.md)

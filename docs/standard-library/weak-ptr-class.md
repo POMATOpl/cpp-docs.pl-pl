@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy weak_ptr
 title: weak_ptr — Klasa
 ms.date: 07/29/2019
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: 5a4989b9ac29e6a35e50479343d6bcf5a39ae1b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a0434c57a70c40fc1fa1ae6b39837fd6112ba696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187809"
 ---
 # <a name="weak_ptr-class"></a>weak_ptr — Klasa
 
@@ -469,7 +470,7 @@ weak_ptr(const shared_ptr<Other>& sp) noexcept;
 ### <a name="parameters"></a>Parametry
 
 *Różnych*\
-Typ kontrolowany przez argument Shared/słaby wskaźnik. Konstruktory te nie uczestniczą w rozpoznawaniu przeciążenia, chyba że _inne \* _ są zgodne z programem `element_type*` .
+Typ kontrolowany przez argument Shared/słaby wskaźnik. Konstruktory te nie uczestniczą w rozpoznawaniu przeciążenia, chyba że _inne \*_ są zgodne z programem `element_type*` .
 
 *dokumenty*\
 Słaby wskaźnik do skopiowania.

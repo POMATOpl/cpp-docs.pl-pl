@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy source_link_manager
 title: source_link_manager — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 98f99bb5aec85a640eaf83a07fae3a1b667f7d91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 132dc2db07a1c9abeeb04672f97e262761764feb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188511"
 ---
 # <a name="source_link_manager-class"></a>source_link_manager — Klasa
 
@@ -86,7 +87,7 @@ Obecnie w blokach źródłowych są zliczane odwołania. Jest to otoka dla `netw
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="add"></a><a name="add"></a>dodana
+## <a name="add"></a><a name="add"></a> dodana
 
 Dodaje łącze źródła do `source_link_manager` obiektu.
 
@@ -99,7 +100,7 @@ void add(_EType _Link);
 *_Link*<br/>
 Wskaźnik do bloku, który ma zostać dodany.
 
-## <a name="begin"></a><a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a> zaczną
 
 Zwraca iterator do pierwszego elementu w `source_link_manager` obiekcie.
 
@@ -115,7 +116,7 @@ Iterator odnoszący się do pierwszego elementu w `source_link_manager` obiekcie
 
 Końcowy stan iteratora jest wskazywany przez `NULL` łącze.
 
-## <a name="contains"></a><a name="contains"></a>wyświetlana
+## <a name="contains"></a><a name="contains"></a> wyświetlana
 
 Wyszukuje `network_link_registry` w obrębie tego `source_link_manager` obiektu dla określonego bloku.
 
@@ -132,7 +133,7 @@ Wskaźnik do bloku, który ma być wyszukiwany w `source_link_manager` obiekcie.
 
 **`true`** Jeśli określony blok został znaleziony, **`false`** w przeciwnym razie.
 
-## <a name="count"></a><a name="count"></a>liczbą
+## <a name="count"></a><a name="count"></a> liczbą
 
 Zlicza połączone bloki w `source_link_manager` obiekcie.
 
@@ -144,7 +145,7 @@ size_t count();
 
 Liczba połączonych bloków w `source_link_manager` obiekcie.
 
-## <a name="reference"></a><a name="reference"></a>odwoła
+## <a name="reference"></a><a name="reference"></a> odwoła
 
 Uzyskuje odwołanie do `source_link_manager` obiektu.
 
@@ -152,7 +153,7 @@ Uzyskuje odwołanie do `source_link_manager` obiektu.
 void reference();
 ```
 
-## <a name="register_target_block"></a><a name="register_target_block"></a>register_target_block
+## <a name="register_target_block"></a><a name="register_target_block"></a> register_target_block
 
 Rejestruje blok docelowy, który zawiera ten `source_link_manager` obiekt.
 
@@ -165,7 +166,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 *_PTarget*<br/>
 Blok docelowy przechowujący ten `source_link_manager` obiekt.
 
-## <a name="release"></a><a name="release"></a>Usuwanie
+## <a name="release"></a><a name="release"></a> Usuwanie
 
 Zwalnia odwołanie do `source_link_manager` obiektu.
 
@@ -173,7 +174,7 @@ Zwalnia odwołanie do `source_link_manager` obiektu.
 void release();
 ```
 
-## <a name="remove"></a><a name="remove"></a>usuwa
+## <a name="remove"></a><a name="remove"></a> usuwa
 
 Usuwa łącze z `source_link_manager` obiektu.
 
@@ -190,7 +191,7 @@ Wskaźnik do usunięcia bloku, jeśli został znaleziony.
 
 **`true`** Jeśli łącze zostało odnalezione i usunięte, **`false`** w przeciwnym razie.
 
-## <a name="set_bound"></a><a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a> set_bound
 
 Ustawia maksymalną liczbę linków źródłowych, które można dodać do tego `source_link_manager` obiektu.
 
@@ -203,7 +204,7 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 Maksymalna liczba linków.
 
-## <a name="source_link_manager"></a><a name="ctor"></a>source_link_manager
+## <a name="source_link_manager"></a><a name="ctor"></a> source_link_manager
 
 Konstruuje `source_link_manager` obiekt.
 
@@ -211,7 +212,7 @@ Konstruuje `source_link_manager` obiekt.
 source_link_manager();
 ```
 
-## <a name="source_link_manager"></a><a name="dtor"></a>~ source_link_manager
+## <a name="source_link_manager"></a><a name="dtor"></a> ~ source_link_manager
 
 Niszczy `source_link_manager` obiekt.
 
@@ -219,7 +220,7 @@ Niszczy `source_link_manager` obiekt.
 ~source_link_manager();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa single_link_registry](single-link-registry-class.md)<br/>

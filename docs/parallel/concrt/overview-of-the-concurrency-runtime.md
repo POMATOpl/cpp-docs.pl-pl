@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Omówienie środowisko uruchomieniowe współbieżności'
 title: Omówienie współbieżności środowiska wykonawczego
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: 11035f9e202d964ae91378560b9244cde6d1828b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b6ff531b1961b32056a7232b62eca05d7a8793b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189161"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Omówienie współbieżności środowiska wykonawczego
 
 Ten dokument zawiera omówienie środowisko uruchomieniowe współbieżności. W tym artykule opisano zalety środowisko uruchomieniowe współbieżności, kiedy należy z niego korzystać i jak jego składniki współdziałają ze sobą oraz z systemem operacyjnym i aplikacjami.
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 Ten dokument zawiera następujące sekcje:
 
@@ -32,7 +33,7 @@ Ten dokument zawiera następujące sekcje:
 
 - [Wymagania](#requirements)
 
-## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a>Historia implementacji środowisko uruchomieniowe współbieżności
+## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a> Historia implementacji środowisko uruchomieniowe współbieżności
 
 W programie Visual Studio 2010 do 2013 środowisko uruchomieniowe współbieżności został zawarty w msvcr100.dll za pomocą msvcr120.dll.  Gdy w programie Visual Studio 2015 wystąpi Refaktoryzacja UCRT, Ta biblioteka DLL została Refaktoryzacja do trzech części:
 
@@ -44,7 +45,7 @@ W programie Visual Studio 2010 do 2013 środowisko uruchomieniowe współbieżno
 
 W programie Visual Studio 2015 i nowszych Harmonogram zadań środowisko uruchomieniowe współbieżności nie jest już harmonogramem dla klasy zadania i powiązanych typów w ppltasks. h. Te typy używają teraz puli wątków systemu Windows w celu zapewnienia lepszej wydajności i współdziałania z podstawowymi synchronizacjami systemu Windows.
 
-## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a>Dlaczego środowisko uruchomieniowe współbieżności jest ważne
+## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a> Dlaczego środowisko uruchomieniowe współbieżności jest ważne
 
 Środowisko uruchomieniowe dla współbieżności zapewnia jednorodność i przewidywalność aplikacji i składników aplikacji, które działają jednocześnie. Dwa przykłady korzyści płynących z środowisko uruchomieniowe współbieżności to *wspólne planowanie zadań* i wzajemne *blokowanie*.
 
@@ -54,7 +55,7 @@ W programie Visual Studio 2015 i nowszych Harmonogram zadań środowisko uruchom
 
 [[Top](#top)]
 
-## <a name="architecture"></a><a name="architecture"></a>Będąc
+## <a name="architecture"></a><a name="architecture"></a> Będąc
 
 Środowisko uruchomieniowe współbieżności jest podzielony na cztery składniki: Biblioteka równoległych wzorców (PPL), Biblioteka agentów asynchronicznych, Harmonogram zadań i Menedżer zasobów. Te składniki znajdują się między systemem operacyjnym a aplikacjami. Na poniższej ilustracji przedstawiono, jak składniki środowisko uruchomieniowe współbieżności współdziałają między systemem operacyjnym a aplikacjami:
 
@@ -103,7 +104,7 @@ Menedżer zasobów służy jako Abstrakcja zasobów obliczeniowych i przede wszy
 
 [[Top](#top)]
 
-## <a name="c-lambda-expressions"></a><a name="lambda"></a>Wyrażenia lambda języka C++
+## <a name="c-lambda-expressions"></a><a name="lambda"></a> Wyrażenia lambda języka C++
 
 Wiele typów i algorytmów, które są zdefiniowane przez środowisko uruchomieniowe współbieżności są implementowane jako szablony języka C++. Niektóre z tych typów i algorytmów przyjmują jako parametry procedurę wykonującą prace. Ten parametr może być funkcją lambda, obiektem funkcji lub wskaźnikiem funkcji. Te jednostki są również nazywane *funkcjami roboczymi* lub *procedurami roboczymi*.
 
@@ -127,7 +128,7 @@ Aby uzyskać więcej informacji na temat funkcji lambda w języku C++, zobacz [l
 
 [[Top](#top)]
 
-## <a name="requirements"></a><a name="requirements"></a>Wymagania
+## <a name="requirements"></a><a name="requirements"></a> Wymagania
 
 W poniższej tabeli przedstawiono pliki nagłówka, które są skojarzone z poszczególnymi składnikami środowisko uruchomieniowe współbieżności:
 
@@ -138,7 +139,7 @@ W poniższej tabeli przedstawiono pliki nagłówka, które są skojarzone z posz
 |Harmonogram zadań|ConcRT. h|
 |Resource Manager|concrtrm. h|
 
-Środowisko uruchomieniowe współbieżności jest zadeklarowana w przestrzeni nazw [współbieżności](../../parallel/concrt/reference/concurrency-namespace.md) . (Można również użyć [współbieżności](../../parallel/concrt/reference/concurrency-namespace.md), który jest aliasem dla tej przestrzeni nazw). `concurrency::details`Przestrzeń nazw obsługuje strukturę środowisko uruchomieniowe współbieżności i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Środowisko uruchomieniowe współbieżności jest zadeklarowana w przestrzeni nazw [współbieżności](../../parallel/concrt/reference/concurrency-namespace.md) . (Można również użyć [współbieżności](../../parallel/concrt/reference/concurrency-namespace.md), który jest aliasem dla tej przestrzeni nazw). `concurrency::details` Przestrzeń nazw obsługuje strukturę środowisko uruchomieniowe współbieżności i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 Środowisko uruchomieniowe współbieżności jest udostępniana jako część biblioteki środowiska uruchomieniowego języka C (CRT). Aby uzyskać więcej informacji na temat sposobu tworzenia aplikacji korzystającej z CRT, zobacz [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md).
 

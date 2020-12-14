@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej: wywnioskowane zależności i reguły'
 title: Zależności wywnioskowane oraz zasady
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - inferred rules in NMAKE
 - dependents, inferred
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
-ms.openlocfilehash: b9c3055db0cc173999e1737986166eb334dcf96c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f4c1d14d18c9c693a7bd71f9207ff36aede8e22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191280"
 ---
 # <a name="inferred-dependents-and-rules"></a>Zależności wywnioskowane oraz zasady
 
-NMAKE zakłada wywnioskowane zależnych od ustawień lokalnych dla miejsca docelowego, jeśli istnieje reguła dotyczy wnioskowania. Reguła ma zastosowanie, jeśli:
+NMAKE zakłada wywnioskowane zależne dla elementu docelowego, jeśli istnieje odpowiednia reguła wnioskowania. Reguła ma zastosowanie, jeśli:
 
-- *toext* pasuje do rozszerzenia elementu docelowego.
+- *toext* dopasowuje rozszerzenie elementu docelowego.
 
-- *fromext* dopasowania rozszerzenie pliku, który ma nazwę podstawową obiektu docelowego i czy istnieje w bieżącej lub określonej katalogu.
+- *fromext* dopasowuje rozszerzenie pliku, który ma nazwę bazową obiektu docelowego i istnieje w bieżącym lub określonym katalogu.
 
-- *fromext* znajduje się w [. SUFIKSY](dot-directives.md); żadne inne *fromext* zgodną regułę ma wyższe **. SUFIKSY** priorytetu.
+- *fromext* jest w [. SUFIKSy](dot-directives.md); żadne inne *fromext* w regule dopasowania nie mają wyższego poziomu **. Priorytet SUFIKSów** .
 
-- Nie jawnego zależnych od ustawień lokalnych ma wyższe **. SUFIKSY** priorytetu.
+- Brak jawnych elementów zależnych ma wyższy poziom **. Priorytet SUFIKSów** .
 
-Zależności wywnioskowane może spowodować nieoczekiwane działania niepożądane. Jeśli blok opis docelowy zawiera polecenia, NMAKE wykonuje tych poleceń, zamiast polecenia w regule.
+Wywnioskowane zależności mogą spowodować nieoczekiwane skutki uboczne. Jeśli blok opisu elementu docelowego zawiera polecenia, NMAKE wykonuje te polecenia zamiast poleceń w regule.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zasady wnioskowania](inference-rules.md)

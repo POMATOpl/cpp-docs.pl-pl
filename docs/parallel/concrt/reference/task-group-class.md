@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy task_group
 title: task_group — Klasa
 ms.date: 07/20/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 4d11a7fc25d95884418a3062721df75cc11be520
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ac3fac0e1feadc2e6c609ee6a0c2946f5061bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188244"
 ---
 # <a name="task_group-class"></a>task_group — Klasa
 
@@ -45,7 +46,7 @@ class task_group;
 
 ## <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do mocno ograniczonej `structured_task_group` klasy Klasa `task_group` jest znacznie bardziej ogólna konstrukcja. Nie ma żadnych ograniczeń opisanych przez [structured_task_group](structured-task-group-class.md). `task_group`obiekty mogą być bezpiecznie używane między wątkami i wykorzystane w sposób niezależny. Wadą `task_group` konstrukcji jest to, że może nie działać, a także `structured_task_group` konstrukcja dla zadań, które wykonują niewielkie ilości pracy.
+W przeciwieństwie do mocno ograniczonej `structured_task_group` klasy Klasa `task_group` jest znacznie bardziej ogólna konstrukcja. Nie ma żadnych ograniczeń opisanych przez [structured_task_group](structured-task-group-class.md). `task_group` obiekty mogą być bezpiecznie używane między wątkami i wykorzystane w sposób niezależny. Wadą `task_group` konstrukcji jest to, że może nie działać, a także `structured_task_group` konstrukcja dla zadań, które wykonują niewielkie ilości pracy.
 
 Aby uzyskać więcej informacji, zobacz [równoległość zadań](../task-parallelism-concurrency-runtime.md).
 
@@ -59,7 +60,7 @@ Aby uzyskać więcej informacji, zobacz [równoległość zadań](../task-parall
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="cancel"></a><a name="cancel"></a>Anuluj
+## <a name="cancel"></a><a name="cancel"></a> Anuluj
 
 W ramach tej grupy zadań najlepszym etapem jest próba anulowania poddrzewa pracy z odblokowanym dostępem. Każde zadanie zaplanowane w grupie zadań zostanie anulowane przechodniie, jeśli jest to możliwe.
 
@@ -71,7 +72,7 @@ void cancel();
 
 Aby uzyskać więcej informacji, zobacz [anulowania](../cancellation-in-the-ppl.md).
 
-## <a name="is_canceling"></a><a name="is_canceling"></a>is_canceling
+## <a name="is_canceling"></a><a name="is_canceling"></a> is_canceling
 
 Informuje obiekt wywołujący niezależnie od tego, czy grupa zadań jest obecnie w pośrodku anulowania. Nie musi to oznaczać, że `cancel` Metoda została wywołana na `task_group` obiekcie (mimo że na pewno kwalifikuje się ta metoda do zwrócenia **`true`** ). Może tak być, że `task_group` obiekt wykonuje wbudowaną, a grupa zadań została anulowana w drzewie roboczym. W takich przypadkach, w których środowisko uruchomieniowe może ustalić przed czasem, gdy anulowanie będzie przepływać przez ten `task_group` obiekt, **`true`** również zostanie zwrócone.
 
@@ -87,7 +88,7 @@ Wskazanie, czy `task_group` obiekt znajduje się w pośrodku anulowania (lub ma 
 
 Aby uzyskać więcej informacji, zobacz [anulowania](../cancellation-in-the-ppl.md).
 
-## <a name="run"></a><a name="run"></a>wykonane
+## <a name="run"></a><a name="run"></a> wykonane
 
 Planuje zadanie na `task_group` obiekcie. Jeśli `task_handle` obiekt jest przekazaniem jako parametr do `run` , obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu. Wersja metody, która pobiera odwołanie do obiektu funkcji jako parametr, obejmuje alokację sterty wewnątrz środowiska uruchomieniowego, co może być wykonane mniej dobrze niż przy użyciu wersji, która pobiera odwołanie do `task_handle` obiektu. Wersja, która pobiera parametr `_Placement` powoduje, że zadanie jest rozdzielone na wykonanie w lokalizacji określonej przez ten parametr.
 
@@ -145,7 +146,7 @@ Jeśli `task_group` destruktory jako wynik odwinięcia stosu z wyjątku, nie ma 
 
 Metoda zgłasza wyjątek [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) , jeśli dojście zadania przekazanego przez `_Task_handle` parametr został już zaplanowany do obiektu grupy zadań za pośrednictwem `run` metody i nie istnieje wywołanie wywołujące do `wait` `run_and_wait` metody lub dla tej grupy zadań.
 
-## <a name="run_and_wait"></a><a name="run_and_wait"></a>run_and_wait
+## <a name="run_and_wait"></a><a name="run_and_wait"></a> run_and_wait
 
 Planuje uruchamianie zadania w sposób wbudowany w kontekście wywoływania przy użyciu `task_group` obiektu do obsługi pełnego anulowania. Funkcja czeka, aż wszystkie prace na obiekcie zostaną `task_group` zakończone lub anulowane. Jeśli `task_handle` obiekt jest przekazaniem jako parametr do `run_and_wait` , obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu.
 
@@ -190,7 +191,7 @@ Po powrocie z `run_and_wait` metody na `task_group` obiekcie środowisko uruchom
 
 W niewyjątkowej ścieżce wykonywania użytkownik ma mandat do wywołania tej metody lub `wait` metody przed destruktorem `task_group` wykonywanym.
 
-## <a name="task_group"></a><a name="ctor"></a>task_group
+## <a name="task_group"></a><a name="ctor"></a> task_group
 
 Tworzy nowy `task_group` obiekt.
 
@@ -211,7 +212,7 @@ Token anulowania, który ma zostać skojarzony z tą grupą zadań. Po anulowani
 
 Konstruktor, który pobiera token anulowania `task_group` , tworzy, który zostanie anulowany, gdy źródło skojarzone z tokenem zostanie anulowane. Dostarczenie jawnego tokenu anulowania spowoduje również wyodrębnienie tej grupy zadań z uczestnictwa w niejawnym anulowaniu z grupy nadrzędnej z innym tokenem lub bez tokenu.
 
-## <a name="task_group"></a><a name="dtor"></a>~ task_group
+## <a name="task_group"></a><a name="dtor"></a> ~ task_group
 
 Niszczy `task_group` obiekt. Oczekiwane jest wywołanie `wait` `run_and_wait` metody lub obiektu przed wykonaniem destruktora, chyba że destruktor jest wykonywany jako wynik odwinięcia stosu z powodu wyjątku.
 
@@ -223,7 +224,7 @@ Niszczy `task_group` obiekt. Oczekiwane jest wywołanie `wait` `run_and_wait` me
 
 Jeśli destruktor działa jako wynik normalnego wykonywania (na przykład nie powoduje odwinięcia stosu ze względu na wyjątek), a metody i nie `wait` `run_and_wait` zostały wywołane, destruktor może zgłosić wyjątek [missing_wait](missing-wait-class.md) .
 
-## <a name="wait"></a><a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a> trwa
 
 Czeka, aż wszystkie prace na `task_group` obiekcie zostaną zakończone lub anulowane.
 
@@ -245,7 +246,7 @@ Wywołanie `wait` na `task_group` obiekcie powoduje zresetowanie go do stanu czy
 
 W niewyjątkowej ścieżce wykonywania użytkownik ma mandat do wywołania tej metody lub `run_and_wait` metody przed destruktorem `task_group` wykonywanym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa structured_task_group](structured-task-group-class.md)<br/>

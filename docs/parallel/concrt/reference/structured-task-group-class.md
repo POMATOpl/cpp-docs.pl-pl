@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy structured_task_group
 title: structured_task_group — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 44fd2a42f4c98a569e985449f0c55102a9cbc3a6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c553f0d0b9b5abeb6e6cbdb12d1d9da5d048a6d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188459"
 ---
 # <a name="structured_task_group-class"></a>structured_task_group — Klasa
 
@@ -73,7 +74,7 @@ Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../paral
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="cancel"></a><a name="cancel"></a>Anuluj
+## <a name="cancel"></a><a name="cancel"></a> Anuluj
 
 W ramach tej grupy zadań najlepszym etapem jest próba anulowania poddrzewa pracy z odblokowanym dostępem. Każde zadanie zaplanowane w grupie zadań zostanie anulowane przechodniie, jeśli jest to możliwe.
 
@@ -85,7 +86,7 @@ void cancel();
 
 Aby uzyskać więcej informacji, zobacz [anulowania](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-## <a name="is_canceling"></a><a name="is_canceling"></a>is_canceling
+## <a name="is_canceling"></a><a name="is_canceling"></a> is_canceling
 
 Informuje obiekt wywołujący niezależnie od tego, czy grupa zadań jest obecnie w pośrodku anulowania. Nie musi to oznaczać, że `cancel` Metoda została wywołana na `structured_task_group` obiekcie (mimo że na pewno kwalifikuje się ta metoda do zwrócenia **`true`** ). Może tak być, że `structured_task_group` obiekt wykonuje wbudowaną, a grupa zadań została anulowana w drzewie roboczym. W takich przypadkach, w których środowisko uruchomieniowe może ustalić przed czasem, gdy anulowanie będzie przepływać przez ten `structured_task_group` obiekt, **`true`** również zostanie zwrócone.
 
@@ -101,7 +102,7 @@ Wskazanie, czy `structured_task_group` obiekt znajduje się w pośrodku anulowan
 
 Aby uzyskać więcej informacji, zobacz [anulowania](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-## <a name="run"></a><a name="run"></a>wykonane
+## <a name="run"></a><a name="run"></a> wykonane
 
 Planuje zadanie na `structured_task_group` obiekcie. Obiekt wywołujący zarządza okresem istnienia `task_handle` obiektu przesłanego w `_Task_handle` parametrze. Wersja, która przyjmuje parametr powoduje, że zadanie jest rozdzielone na `_Placement` wykonanie w lokalizacji określonej przez ten parametr.
 
@@ -135,7 +136,7 @@ Jeśli `structured_task_group` destruktory jako wynik odwinięcia stosu z wyjąt
 
 Zgłasza wyjątek [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) , jeśli dojście zadania przekazanego przez `_Task_handle` parametr został już zaplanowany do obiektu grupy zadań za pośrednictwem `run` metody i nie istnieje wywołanie wywołujące do `wait` `run_and_wait` metody lub dla tej grupy zadań.
 
-## <a name="run_and_wait"></a><a name="run_and_wait"></a>run_and_wait
+## <a name="run_and_wait"></a><a name="run_and_wait"></a> run_and_wait
 
 Planuje uruchamianie zadania w sposób wbudowany w kontekście wywoływania przy użyciu `structured_task_group` obiektu do obsługi pełnego anulowania. Jeśli `task_handle` obiekt jest przekazaniem jako parametr do `run_and_wait` , obiekt wywołujący jest odpowiedzialny za zarządzanie okresem istnienia `task_handle` obiektu. Funkcja czeka, aż wszystkie prace na obiekcie zostaną `structured_task_group` zakończone lub anulowane.
 
@@ -172,7 +173,7 @@ Po powrocie tej funkcji `structured_task_group` obiekt jest brany pod uwagę w s
 
 W niewyjątkowej ścieżce wykonywania użytkownik ma mandat do wywołania tej metody lub `wait` metody przed destruktorem `structured_task_group` wykonywanym.
 
-## <a name="structured_task_group"></a><a name="ctor"></a>structured_task_group
+## <a name="structured_task_group"></a><a name="ctor"></a> structured_task_group
 
 Tworzy nowy `structured_task_group` obiekt.
 
@@ -191,7 +192,7 @@ Token anulowania do skojarzenia z tą strukturalną grupą zadań. Grupa zadań 
 
 Konstruktor, który pobiera token anulowania `structured_task_group` , tworzy, który zostanie anulowany, gdy źródło skojarzone z tokenem zostanie anulowane. Dostarczenie jawnego tokenu anulowania spowoduje również odizolowanie tej strukturalnej grupy zadań od uczestnictwa w niejawnym anulowaniu z grupy nadrzędnej z innym tokenem lub bez tokenu.
 
-## <a name="structured_task_group"></a><a name="dtor"></a>~ structured_task_group
+## <a name="structured_task_group"></a><a name="dtor"></a> ~ structured_task_group
 
 Niszczy `structured_task_group` obiekt. Oczekiwane jest wywołanie `wait` `run_and_wait` metody lub dla obiektu przed wykonaniem destruktora, chyba że destruktor jest wykonywany jako wynik odwinięcia stosu z powodu wyjątku.
 
@@ -203,7 +204,7 @@ Niszczy `structured_task_group` obiekt. Oczekiwane jest wywołanie `wait` `run_a
 
 Jeśli destruktor działa jako wynik normalnego wykonywania (na przykład nie powoduje odwinięcia stosu ze względu na wyjątek), a metody i nie `wait` `run_and_wait` zostały wywołane, destruktor może zgłosić wyjątek [missing_wait](missing-wait-class.md) .
 
-## <a name="wait"></a><a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a> trwa
 
 Czeka, aż wszystkie prace na stronie `structured_task_group` zostały ukończone lub anulowane.
 
@@ -225,7 +226,7 @@ Po powrocie tej funkcji `structured_task_group` obiekt jest brany pod uwagę w s
 
 W niewyjątkowej ścieżce wykonywania użytkownik ma mandat do wywołania tej metody lub `run_and_wait` metody przed destruktorem `structured_task_group` wykonywanym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa task_group](task-group-class.md)<br/>

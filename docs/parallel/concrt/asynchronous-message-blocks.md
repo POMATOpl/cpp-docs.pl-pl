@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: asynchronicznych bloków komunikatów'
 title: Bloki komunikatów asynchronicznych
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: 6697bdd296a3c71f03bc22986efa47dd586d5d9e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7447d30932693eebe22d0a6f7f0aad0fba2abf16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189148"
 ---
 # <a name="asynchronous-message-blocks"></a>Bloki komunikatów asynchronicznych
 
 Biblioteka agenci zawiera kilka typów bloków komunikatów, które umożliwiają propagowanie komunikatów między składnikami aplikacji w sposób bezpieczny dla wątków. Te typy bloków komunikatów są często używane z różnymi procedurami przekazywania komunikatów, takimi jak [concurrency:: Send](reference/concurrency-namespace-functions.md#send), [concurrency:: asend](reference/concurrency-namespace-functions.md#asend), [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)i [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive). Aby uzyskać więcej informacji na temat procedur przekazywania komunikatów, które są zdefiniowane przez bibliotekę agentów, zobacz [funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md).
 
-## <a name="sections"></a><a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a> Poszczególne
 
 Ten temat zawiera następujące sekcje:
 
@@ -47,7 +48,7 @@ Ten temat zawiera następujące sekcje:
 
 - [Rezerwacja komunikatów](#reservation)
 
-## <a name="sources-and-targets"></a><a name="sources_and_targets"></a>Źródła i elementy docelowe
+## <a name="sources-and-targets"></a><a name="sources_and_targets"></a> Źródła i elementy docelowe
 
 Źródła i cele są dwoma ważnymi uczestnikami przesyłania komunikatów. *Źródło* odwołuje się do punktu końcowego komunikacji, która wysyła komunikaty. *Obiekt docelowy* odwołuje się do punktu końcowego komunikacji, który odbiera komunikaty. Źródło można traktować jako punkt końcowy odczytywany z i obiekt docelowy jako punkt końcowy, w którym piszesz. Aplikacje nawiązują połączenie ze źródłami i obiektami docelowymi w celu tworzenia *sieci komunikatów*.
 
@@ -55,7 +56,7 @@ Biblioteka agentów używa dwóch klas abstrakcyjnych do reprezentowania źróde
 
 [[Top](#top)]
 
-## <a name="message-propagation"></a><a name="propagation"></a>Propagowanie komunikatów
+## <a name="message-propagation"></a><a name="propagation"></a> Propagowanie komunikatów
 
 *Propagowanie komunikatów* jest aktem wysyłania komunikatu z jednego składnika do drugiego. Gdy w bloku komunikatów jest oferowany komunikat, może on zaakceptować, odrzucić lub odłożyć ten komunikat. Każdy typ bloku komunikatów przechowuje i przesyła komunikaty na różne sposoby. Na przykład `unbounded_buffer` Klasa przechowuje nieograniczoną liczbę komunikatów, `overwrite_buffer` Klasa przechowuje pojedynczą wiadomość w danym momencie, a Klasa transformatora przechowuje zmodyfikowaną wersję poszczególnych komunikatów. Te typy bloków komunikatów są opisane bardziej szczegółowo w dalszej części tego dokumentu.
 
@@ -67,7 +68,7 @@ Aplikacje nawiązują połączenie ze źródłami i obiektami docelowymi w celu 
 
 [[Top](#top)]
 
-## <a name="overview-of-message-block-types"></a><a name="overview"></a>Przegląd typów bloku komunikatów
+## <a name="overview-of-message-block-types"></a><a name="overview"></a> Przegląd typów bloku komunikatów
 
 W poniższej tabeli krótko opisano rolę ważnych typów bloków komunikatów.
 
@@ -117,13 +118,13 @@ W poniższej tabeli przedstawiono, jak te charakterystyki odnoszą się do róż
 |`choice`|Oba|Zamówione|10|1|
 |`join`|Oba|Zamówione|Unbounded|1|
 |`multitype_join`|Oba|Zamówione|10|1|
-|`timer`|Element źródłowy|Nie dotyczy|Nie dotyczy|1|
+|`timer`|Źródło|Nie dotyczy|Nie dotyczy|1|
 
 W poniższych sekcjach opisano typy bloków komunikatów bardziej szczegółowo.
 
 [[Top](#top)]
 
-## <a name="unbounded_buffer-class"></a><a name="unbounded_buffer"></a>Klasa unbounded_buffer
+## <a name="unbounded_buffer-class"></a><a name="unbounded_buffer"></a> Klasa unbounded_buffer
 
 Klasa [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) reprezentuje strukturę asynchronicznej obsługi komunikatów ogólnego przeznaczenia. Ta klasa przechowuje kolejki w pierwszej kolejności (FIFO) komunikatów, które mogą być zapisywane przez wiele źródeł lub odczytywane przez wiele obiektów docelowych. Gdy obiekt docelowy otrzymuje komunikat z `unbounded_buffer` obiektu, ten komunikat zostanie usunięty z kolejki komunikatów. W związku z tym mimo że `unbounded_buffer` obiekt może mieć wiele obiektów docelowych, tylko jeden element docelowy otrzyma każdy komunikat. `unbounded_buffer`Klasa jest przydatna, gdy chcesz przekazać wiele komunikatów do innego składnika, a ten składnik musi odebrać każdy komunikat.
 
@@ -139,11 +140,11 @@ Ten przykład generuje następujące wyniki:
 334455
 ```
 
-Aby zapoznać się z kompletnym przykładem, który pokazuje, jak korzystać z `unbounded_buffer` klasy, zobacz [How to: Implementuj różne wzorce producenta i konsumenta](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Aby zapoznać się z kompletnym przykładem, który pokazuje, jak używać `unbounded_buffer` klasy, zobacz [How to: Implementuj różne wzorce Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Top](#top)]
 
-## <a name="overwrite_buffer-class"></a><a name="overwrite_buffer"></a>Klasa overwrite_buffer
+## <a name="overwrite_buffer-class"></a><a name="overwrite_buffer"></a> Klasa overwrite_buffer
 
 Klasa [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) jest podobna do `unbounded_buffer` klasy, z tą różnicą, że `overwrite_buffer` obiekt przechowuje tylko jeden komunikat. Ponadto, gdy obiekt docelowy otrzymuje komunikat z `overwrite_buffer` obiektu, ten komunikat nie jest usuwany z bufora. W związku z tym wiele obiektów docelowych otrzymuje kopię wiadomości.
 
@@ -161,11 +162,11 @@ Ten przykład generuje następujące wyniki:
 555555
 ```
 
-Aby zapoznać się z kompletnym przykładem, który pokazuje, jak korzystać z `overwrite_buffer` klasy, zobacz [How to: Implementuj różne wzorce producenta i konsumenta](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Aby zapoznać się z kompletnym przykładem, który pokazuje, jak używać `overwrite_buffer` klasy, zobacz [How to: Implementuj różne wzorce Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Top](#top)]
 
-## <a name="single_assignment-class"></a><a name="single_assignment"></a>Klasa single_assignment
+## <a name="single_assignment-class"></a><a name="single_assignment"></a> Klasa single_assignment
 
 Klasa [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) jest podobna do `overwrite_buffer` klasy, z tą różnicą, że `single_assignment` obiekt może być zapisywana tylko raz. Podobnie jak `overwrite_buffer` Klasa, gdy obiekt docelowy otrzymuje komunikat z `single_assignment` obiektu, ten komunikat nie jest usuwany z tego obiektu. W związku z tym wiele obiektów docelowych otrzymuje kopię wiadomości. `single_assignment`Klasa jest przydatna, gdy chcesz emitować jeden komunikat do wielu składników.
 
@@ -185,7 +186,7 @@ Aby zapoznać się z kompletnym przykładem, który pokazuje, jak używać `sing
 
 [[Top](#top)]
 
-## <a name="call-class"></a><a name="call"></a>Call, Klasa
+## <a name="call-class"></a><a name="call"></a> Call, Klasa
 
 Klasa [concurrency:: Call](../../parallel/concrt/reference/call-class.md) działa jako odbiorca komunikatu, który wykonuje funkcję służbową po odebraniu danych. Ta funkcja robocza może być wyrażeniem lambda, obiektem funkcji lub wskaźnikiem funkcji. `call`Obiekt zachowuje się inaczej niż zwykłe wywołanie funkcji, ponieważ działa równolegle z innymi składnikami, które wysyłają do niego komunikaty. Jeśli `call` obiekt wykonuje działanie, gdy odbierze komunikat, dodaje ten komunikat do kolejki. Każdy `call` obiekt przetwarza wiadomości w kolejce w kolejności, w której zostały odebrane.
 
@@ -205,7 +206,7 @@ Aby zapoznać się z kompletnym przykładem, który pokazuje, jak używać `call
 
 [[Top](#top)]
 
-## <a name="transformer-class"></a><a name="transformer"></a>transformator — Klasa
+## <a name="transformer-class"></a><a name="transformer"></a> transformator — Klasa
 
 Klasa [concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) pełni rolę odbiorcy wiadomości i nadawcy wiadomości. `transformer`Klasa jest podobna do `call` klasy, ponieważ wykonuje funkcję roboczą zdefiniowaną przez użytkownika po odebraniu danych. Jednak `transformer` Klasa wysyła również wynik funkcji służbowej do obiektów odbiornika. Podobnie jak w przypadku obiektu `call` , `transformer` obiekt działa równolegle z innymi składnikami, które wysyłają do niego komunikaty. Jeśli `transformer` obiekt wykonuje działanie, gdy odbierze komunikat, dodaje ten komunikat do kolejki. Każdy `transformer` obiekt przetwarza komunikaty w kolejce w kolejności, w której zostały odebrane.
 
@@ -229,7 +230,7 @@ Aby zapoznać się z kompletnym przykładem, który pokazuje, jak używać `tran
 
 [[Top](#top)]
 
-## <a name="choice-class"></a><a name="choice"></a>Choice — Klasa
+## <a name="choice-class"></a><a name="choice"></a> Choice — Klasa
 
 Klasa [concurrency:: Choice](../../parallel/concrt/reference/choice-class.md) wybiera pierwszy dostępny komunikat z zestawu źródeł. `choice`Klasa reprezentuje mechanizm przepływu sterowania zamiast mechanizmu przepływu danych (temat [Biblioteka agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) tematu opisuje różnice między przepływu danych i przepływem sterowania).
 
@@ -259,7 +260,7 @@ Aby zapoznać się z kompletnym przykładem, który pokazuje, jak używać `choi
 
 [[Top](#top)]
 
-## <a name="join-and-multitype_join-classes"></a><a name="join"></a>Klasy Join i multitype_join
+## <a name="join-and-multitype_join-classes"></a><a name="join"></a> Klasy Join i multitype_join
 
 Klasy [concurrency:: join](../../parallel/concrt/reference/join-class.md) i [concurrency:: multitype_join](../../parallel/concrt/reference/multitype-join-class.md) umożliwiają oczekiwanie na otrzymanie komunikatu dla każdego elementu członkowskiego zestawu źródeł. `join`Klasa działa w obiektach źródłowych, które mają wspólny typ komunikatu. `multitype_join`Klasa działa na obiektach źródłowych, które mogą mieć różne typy komunikatów.
 
@@ -291,7 +292,7 @@ Aby zapoznać się z kompletnymi przykładami, które pokazują, jak korzystać 
 
 [[Top](#top)]
 
-## <a name="timer-class"></a><a name="timer"></a>Timer — Klasa
+## <a name="timer-class"></a><a name="timer"></a> Timer — Klasa
 
 Klasa concurrency::[Timer](../../parallel/concrt/reference/timer-class.md) działa jako źródło komunikatu. `timer`Obiekt wysyła komunikat do obiektu docelowego po upływie określonego czasu. `timer`Klasa jest przydatna, gdy trzeba opóźnić wysyłanie wiadomości lub wysłać komunikat w regularnych odstępach czasu.
 
@@ -317,7 +318,7 @@ Aby zapoznać się z kompletnym przykładem, który pokazuje, jak używać `time
 
 [[Top](#top)]
 
-## <a name="message-filtering"></a><a name="filtering"></a>Filtrowanie komunikatów
+## <a name="message-filtering"></a><a name="filtering"></a> Filtrowanie komunikatów
 
 Podczas tworzenia obiektu bloku komunikatu można dostarczyć *funkcję filtru* , która określa, czy blok komunikatów akceptuje lub odrzuca komunikat. Funkcja filtru jest użytecznym sposobem zagwarantowania, że blok komunikatów odbiera tylko niektóre wartości.
 
@@ -340,11 +341,11 @@ bool (T const &)
 
 Aby wyeliminować niepotrzebne kopiowanie danych, użyj drugiego formularza, gdy masz zagregowany typ, który jest propagowany przez wartość.
 
-Filtrowanie komunikatów obsługuje model programowania *przepływu danych* , w którym składniki wykonują obliczenia po odebraniu danych. Aby zapoznać się z przykładami korzystającymi z funkcji filtrowania do sterowania przepływem danych w sieci przekazującej komunikaty, zobacz [How to: use a Message Filter Block](../../parallel/concrt/how-to-use-a-message-block-filter.md), [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)i [Przewodnik: tworzenie sieci przetwarzania obrazów](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Filtrowanie komunikatów obsługuje model programowania *przepływu danych* , w którym składniki wykonują obliczenia po odebraniu danych. Aby zapoznać się z przykładami korzystającymi z funkcji filtrowania do sterowania przepływem danych w sieci przekazującej komunikaty, zobacz [How to: use a Message Filter Block](../../parallel/concrt/how-to-use-a-message-block-filter.md), [Przewodnik: tworzenie agenta przepływu danych](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)i [Przewodnik: tworzenie sieci Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Top](#top)]
 
-## <a name="message-reservation"></a><a name="reservation"></a>Rezerwacja komunikatów
+## <a name="message-reservation"></a><a name="reservation"></a> Rezerwacja komunikatów
 
 *Rezerwacja komunikatów* umożliwia bloku komunikatów zastrzeganie wiadomości do późniejszego użycia. Zazwyczaj rezerwacja komunikatów nie jest używana bezpośrednio. Jednak zrozumienie rezerwacji komunikatów może pomóc lepiej zrozumieć zachowanie niektórych wstępnie zdefiniowanych typów bloków komunikatów.
 
@@ -356,6 +357,6 @@ Można użyć rezerwacji komunikatów podczas implementowania własnych niestand
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)

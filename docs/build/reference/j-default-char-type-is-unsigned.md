@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/J (domyślny typ char nie jest podpisany)
 title: /J (Domyślny typ char nie jest podpisany)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: d95fed3d9af81d89ac03a52a1e6433786118430e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e6f09a05925fd0248f1e777d578570cd7b44946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191228"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Domyślny typ char nie jest podpisany)
 
@@ -43,9 +44,9 @@ ANSI C i C++ nie wymagają określonej implementacji **`char`** typu. Ta opcja j
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+1. W **Eksplorator rozwiązań** Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
 
-1. W oknie dialogowym **strony właściwości** projektu w lewym okienku w obszarze **Właściwości konfiguracji**rozwiń węzeł **C/C++** , a następnie wybierz pozycję **wiersz polecenia**.
+1. W oknie dialogowym **strony właściwości** projektu w lewym okienku w obszarze **Właściwości konfiguracji** rozwiń węzeł **C/C++** , a następnie wybierz pozycję **wiersz polecenia**.
 
 1. W okienku **Opcje dodatkowe** wybierz opcję Opcje kompilatora **/j** .
 
@@ -53,8 +54,8 @@ ANSI C i C++ nie wymagają określonej implementacji **`char`** typu. Ta opcja j
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)<br/>
 [Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](../working-with-project-properties.md)

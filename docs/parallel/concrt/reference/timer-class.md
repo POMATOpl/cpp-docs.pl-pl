@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie Timer
 title: Klasa czasomierza
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: 026aef03bb813585decb206c1691835330a4dd05
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 460185f61be0dd33fe11dfa0f94e2147893089d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188173"
 ---
 # <a name="timer-class"></a>Klasa czasomierza
 
@@ -55,7 +56,7 @@ Typ ładunku komunikatów wyjściowych tego bloku.
 |Nazwa|Opis|
 |----------|-----------------|
 |[została](#pause)|Kończy `timer` blok komunikatów. Jeśli jest to powtarzalny `timer` blok komunikatów, można go uruchomić ponownie przy użyciu kolejnego `start()` wywołania. W przypadku niepowtarzalnych czasomierzy ma to taki sam skutek jak `stop` wywołanie.|
-|[start](#start)|Uruchamia `timer` blok komunikatów. Określona liczba milisekund po wywołaniu tej wartości zostanie przepropagowana w dół jako `message` .|
+|[Start](#start)|Uruchamia `timer` blok komunikatów. Określona liczba milisekund po wywołaniu tej wartości zostanie przepropagowana w dół jako `message` .|
 |[komunikat](#stop)|Kończy `timer` blok komunikatów.|
 
 ### <a name="protected-methods"></a>Metody chronione
@@ -88,7 +89,7 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Akceptuje komunikat, który był oferowany przez ten `timer` blok komunikatów, przez przeniesienie własności do obiektu wywołującego.
 
@@ -105,7 +106,7 @@ Dla `runtime_object_identity` oferowanego `message` obiektu.
 
 Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własność.
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Wykorzystuje komunikat wcześniej oferowany przez `timer` i zarezerwowany przez obiekt docelowy, przekazując własność do obiektu wywołującego.
 
@@ -126,7 +127,7 @@ Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własno
 
 Przypomina `accept` , ale jest zawsze poprzedzone wywołaniem do `reserve` .
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym `timer` blokiem obsługi komunikatów.
 
@@ -139,7 +140,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Wskaźnik do nowo połączonego obiektu docelowego.
 
-## <a name="pause"></a><a name="pause"></a>została
+## <a name="pause"></a><a name="pause"></a> została
 
 Kończy `timer` blok komunikatów. Jeśli jest to powtarzalny `timer` blok komunikatów, można go uruchomić ponownie przy użyciu kolejnego `start()` wywołania. W przypadku niepowtarzalnych czasomierzy ma to taki sam skutek jak `stop` wywołanie.
 
@@ -147,7 +148,7 @@ Kończy `timer` blok komunikatów. Jeśli jest to powtarzalny `timer` blok komun
 void pause();
 ```
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 Próbuje zaoferować komunikat utworzony przez `timer` blok ze wszystkimi połączonymi obiektami docelowymi.
 
@@ -155,7 +156,7 @@ Próbuje zaoferować komunikat utworzony przez `timer` blok ze wszystkimi połą
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Zwalnia poprzednią rezerwację wiadomości.
 
@@ -168,7 +169,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity` `message` Wydawany obiekt.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Rezerwuje komunikat wcześniej oferowany przez ten `timer` blok komunikatów.
 
@@ -189,7 +190,7 @@ Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
 Po `reserve` wywołaniu, jeśli zwróci **`true`** , `consume` lub `release` musi zostać wywołana w celu podjęcia lub zwolnienia własności wiadomości.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Wznawia propagację po wydaniu rezerwacji.
 
@@ -197,7 +198,7 @@ Wznawia propagację po wydaniu rezerwacji.
 virtual void resume_propagation();
 ```
 
-## <a name="start"></a><a name="start"></a>Start
+## <a name="start"></a><a name="start"></a> Start
 
 Uruchamia `timer` blok komunikatów. Określona liczba milisekund po wywołaniu tej wartości zostanie przepropagowana w dół jako `message` .
 
@@ -205,7 +206,7 @@ Uruchamia `timer` blok komunikatów. Określona liczba milisekund po wywołaniu 
 void start();
 ```
 
-## <a name="stop"></a><a name="stop"></a>komunikat
+## <a name="stop"></a><a name="stop"></a> komunikat
 
 Kończy `timer` blok komunikatów.
 
@@ -213,7 +214,7 @@ Kończy `timer` blok komunikatów.
 void stop();
 ```
 
-## <a name="timer"></a><a name="ctor"></a>licz
+## <a name="timer"></a><a name="ctor"></a> licz
 
 Tworzy `timer` blok komunikatów, który będzie uruchamiał dany komunikat po upływie określonego interwału.
 
@@ -244,7 +245,7 @@ timer(
 *_Ms*<br/>
 Liczba milisekund, które muszą upłynąć po wywołaniu dla określonego komunikatu, który ma zostać propagowany.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, która zostanie propagowana po upływie czasu czasomierza.
 
 *_PTarget*<br/>
@@ -263,7 +264,7 @@ W przypadku wartości true wskazuje, że czasomierz będzie okresowo uruchamiać
 
 Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określono `_Scheduler` `_ScheduleGroup` parametrów lub.
 
-## <a name="timer"></a><a name="dtor"></a>~ Czasomierz
+## <a name="timer"></a><a name="dtor"></a> ~ Czasomierz
 
 Niszczy `timer` blok komunikatów.
 
@@ -271,6 +272,6 @@ Niszczy `timer` blok komunikatów.
 ~timer();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Dowiedz się więcej o: zasady usługi Scheduler'
 title: Zasady harmonogramu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 42b5fa951c320fcc3bab8fe5abe3bb4988e6c368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188017"
 ---
 # <a name="scheduler-policies"></a>Zasady harmonogramu
 
@@ -51,7 +52,7 @@ Użyj metody [concurrency:: CurrentScheduler:: GetPolicy](reference/currentsched
 
 Aby zapoznać się z przykładami korzystającymi z określonych zasad usługi Scheduler w celu kontrolowania zachowania harmonogramu, zobacz [How to: Określanie określonych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) i [instrukcje: Tworzenie agentów](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)korzystających z określonych zasad usługi Scheduler.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Instrukcje: Określanie określonych zasad harmonogramu](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>

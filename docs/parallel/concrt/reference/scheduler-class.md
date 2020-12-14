@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa planisty'
 title: Klasa harmonogramu
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 2a509017c84f7f6c845c153c8c187f5885839035
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188901"
 ---
 # <a name="scheduler-class"></a>Klasa harmonogramu
 

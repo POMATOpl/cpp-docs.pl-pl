@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa SchedulerPolicy'
 title: SchedulerPolicy — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: b7b99dae2ffb58123c05a65872e4c71e149ac12c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bb4c8961f46f077c203d1a49fb352171ad3f318
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188706"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy — Klasa
 
@@ -65,7 +66,7 @@ Aby uzyskać więcej informacji na temat zasad, które mogą być kontrolowane z
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue —
+## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a> GetPolicyValue —
 
 Pobiera wartość klucza zasad podanego jako `key` parametr.
 
@@ -86,7 +87,7 @@ Jeśli klucz określony przez `key` parametr jest obsługiwany, wartość zasad 
 
 Metoda zgłosi [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) dla nieprawidłowego klucza zasad.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 Przypisuje zasady harmonogramu z innych zasad usługi Scheduler.
 
@@ -107,7 +108,7 @@ Odwołanie do zasad usługi Scheduler.
 
 Często Najwygodniejszym sposobem zdefiniowania nowych zasad harmonogramu jest skopiowanie istniejących zasad i zmodyfikowanie ich przy użyciu `SetPolicyValue` `SetConcurrencyLimits` metod lub.
 
-## <a name="schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="ctor"></a> SchedulerPolicy
 
 Konstruuje nowe zasady harmonogramu i wypełnia je wartościami [kluczy zasad](concurrency-namespace-enums.md) obsługiwanymi przez środowisko uruchomieniowe współbieżności harmonogramy i Menedżer zasobów.
 
@@ -138,7 +139,7 @@ Drugi Konstruktor tworzy nowe zasady harmonogramu, które używają stylu parame
 
 Trzeci konstruktor jest konstruktorem kopiującym. Często Najwygodniejszym sposobem zdefiniowania nowych zasad harmonogramu jest skopiowanie istniejących zasad i zmodyfikowanie ich przy użyciu `SetPolicyValue` `SetConcurrencyLimits` metod lub.
 
-## <a name="schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="dtor"></a> ~ SchedulerPolicy
 
 Niszczy zasady usługi Scheduler.
 
@@ -146,7 +147,7 @@ Niszczy zasady usługi Scheduler.
 ~SchedulerPolicy();
 ```
 
-## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits —
+## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a> SetConcurrencyLimits —
 
 Jednocześnie ustawia `MinConcurrency` zasady i `MaxConcurrency` dla `SchedulerPolicy` obiektu.
 
@@ -170,7 +171,7 @@ Metoda spowoduje zgłoszenie [invalid_scheduler_policy_thread_specification](inv
 
 Metoda może również generować [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) dla innych nieprawidłowych wartości.
 
-## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue —
+## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a> SetPolicyValue —
 
 Ustawia wartość klucza zasad dostarczonego jako `key` parametr i zwraca starą wartość.
 
@@ -185,7 +186,7 @@ unsigned int SetPolicyValue(
 *głównych*<br/>
 Klucz zasad, dla którego ma zostać ustawiona wartość.
 
-*wartościami*<br/>
+*wartość*<br/>
 Wartość, dla której ma zostać ustawiony klucz zasad.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -200,7 +201,7 @@ Metoda zgłosi [invalid_scheduler_policy_value](invalid-scheduler-policy-value-c
 
 Należy zauważyć, że ta metoda nie może ustawiać `MinConcurrency` zasad ani `MaxConcurrency` . Aby ustawić te wartości, użyj metody [SetConcurrencyLimits —](#setconcurrencylimits) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [PolicyElementKey —](concurrency-namespace-enums.md)<br/>

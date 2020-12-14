@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy task_canceled
 title: task_canceled — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-ms.openlocfilehash: b1436f921343843ee2b50888f00b6d470e513329
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 223a1168464e312c272f770247b3574311ff97ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188407"
 ---
 # <a name="task_canceled-class"></a>task_canceled — Klasa
 
-Ta klasa opisuje wyjątek zgłoszony przez warstwę zadań PPL w celu wymuszenia anulowania bieżącego zadania. Jest on również generowany przez metodę `get()` w [zadaniu](/visualstudio/extensibility/debugger/task-class-internal-members)dla anulowanego zadania.
+Ta klasa opisuje wyjątek zgłoszony przez warstwę zadań PPL w celu wymuszenia anulowania bieżącego zadania. Jest on również generowany przez `get()` metodę w [zadaniu](/visualstudio/extensibility/debugger/task-class-internal-members)dla anulowanego zadania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,13 +26,13 @@ Ta klasa opisuje wyjątek zgłoszony przez warstwę zadań PPL w celu wymuszenia
 class task_canceled : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[task_canceled](#ctor)|Przeciążone. Konstruuje obiekt `task_canceled`.|
+|[task_canceled](#ctor)|Przeciążone. Konstruuje `task_canceled` obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -45,9 +46,9 @@ class task_canceled : public std::exception;
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>task_canceled
+## <a name="task_canceled"></a><a name="ctor"></a> task_canceled
 
-Konstruuje obiekt `task_canceled`.
+Konstruuje `task_canceled` obiekt.
 
 ```cpp
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();

@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: &lt; Operatory wektorowe &gt;'
 title: '&lt;Operatory wektorów &gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7a03d3ef843c995970552201e63d2df3cb3161d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187900"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;Operatory wektorów &gt;
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
@@ -76,7 +77,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> zakład&lt;
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy od obiektu po prawej stronie.
 
@@ -127,7 +128,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> zakład&lt;=
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy od lub równy obiektowi po prawej stronie.
 
@@ -178,7 +179,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
@@ -229,7 +230,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> zakład&gt;
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
 
@@ -281,7 +282,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> zakład&gt;=
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż lub równy obiektowi po prawej stronie.
 

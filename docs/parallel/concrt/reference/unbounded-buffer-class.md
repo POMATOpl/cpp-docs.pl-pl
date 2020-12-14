@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy unbounded_buffer
 title: Klasa unbounded_buffer
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: e02fa1ffbf4c3e2c7d17dfe2d6ae66758945d9de
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9cd31209831dc915ae7a4aacaad5cddc0203176
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188108"
 ---
 # <a name="unbounded_buffer-class"></a>Klasa unbounded_buffer
 
@@ -96,7 +97,7 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../a
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Akceptuje komunikat, który był oferowany przez ten `unbounded_buffer` blok komunikatów, przez przeniesienie własności do obiektu wywołującego.
 
@@ -115,7 +116,7 @@ Dla `runtime_object_identity` oferowanego `message` obiektu.
 
 Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własność.
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Wykorzystuje komunikat wcześniej oferowany przez `unbounded_buffer` blok komunikatów i zarezerwowany przez obiekt docelowy, przekazując własność do obiektu wywołującego.
 
@@ -138,7 +139,7 @@ Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własno
 
 Przypomina `accept` , ale jest zawsze poprzedzone wywołaniem do `reserve` .
 
-## <a name="dequeue"></a><a name="dequeue"></a>z kolejki
+## <a name="dequeue"></a><a name="dequeue"></a> z kolejki
 
 Usuwa element z `unbounded_buffer` bloku obsługi komunikatów.
 
@@ -150,7 +151,7 @@ _Type dequeue();
 
 Ładunek wiadomości został usunięty z `unbounded_buffer` .
 
-## <a name="enqueue"></a><a name="enqueue"></a>dodawania
+## <a name="enqueue"></a><a name="enqueue"></a> dodawania
 
 Dodaje element do `unbounded_buffer` bloku obsługi komunikatów.
 
@@ -169,7 +170,7 @@ Element do dodania.
 
 **`true`** Jeśli element został zaakceptowany, **`false`** w przeciwnym razie.
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym `unbounded_buffer` blokiem obsługi komunikatów.
 
@@ -184,7 +185,7 @@ virtual void link_target_notification(
 *_PTarget*<br/>
 Wskaźnik do nowo połączonego obiektu docelowego.
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `unbounded_buffer` bloku obsługi komunikatów. Jest wywoływana przez `propagate` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -207,7 +208,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md#message_status) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="propagate_output_messages"></a><a name="propagate_output_messages"></a>propagate_output_messages
+## <a name="propagate_output_messages"></a><a name="propagate_output_messages"></a> propagate_output_messages
 
 Umieszcza `message` `_PMessage` w tym `unbounded_buffer` bloku komunikatów i próbuje zaoferować go wszystkim połączonym obiektom docelowym.
 
@@ -219,7 +220,7 @@ virtual void propagate_output_messages();
 
 Jeśli inny komunikat jest już wcześniejszy niż ten, w `unbounded_buffer` , Propagacja do połączonych obiektów docelowych nie nastąpi do momentu zaakceptowania lub użycia jakichkolwiek wcześniejszych komunikatów. Pierwszy połączony element docelowy został pomyślnie `accept` lub `consume` komunikat ma własność, a żaden inny element docelowy nie może uzyskać komunikatu.
 
-## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a> process_input_messages
 
 Umieszcza `message` `_PMessage` w tym `unbounded_buffer` bloku komunikatów i próbuje zaoferować go wszystkim połączonym obiektom docelowym.
 
@@ -234,7 +235,7 @@ virtual void process_input_messages(
 *_PMessage*<br/>
 Wskaźnik do wiadomości, która ma zostać przetworzona.
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Zwalnia poprzednią rezerwację wiadomości.
 
@@ -249,7 +250,7 @@ virtual void release_message(
 *_MsgId*<br/>
 `runtime_object_identity` `message` Wydawany obiekt.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Rezerwuje komunikat wcześniej oferowany przez ten `unbounded_buffer` blok komunikatów.
 
@@ -272,7 +273,7 @@ Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
 Po `reserve` wywołaniu, jeśli zwróci **`true`** , `consume` lub `release` musi zostać wywołana w celu podjęcia lub zwolnienia własności wiadomości.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Wznawia propagację po wydaniu rezerwacji.
 
@@ -280,7 +281,7 @@ Wznawia propagację po wydaniu rezerwacji.
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 Synchronicznie przekazuje komunikat z `ISource` bloku do tego `unbounded_buffer` bloku obsługi komunikatów. Jest wywoływana przez `send` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -303,7 +304,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md#message_status) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Przesłania `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty, które są przez nie połączone, za pomocą źródła, które nie jest połączony.
 
@@ -315,7 +316,7 @@ virtual bool supports_anonymous_source();
 
 **`true`** ponieważ blok nie odkłada proponowanych komunikatów.
 
-## <a name="unbounded_buffer"></a><a name="ctor"></a>unbounded_buffer
+## <a name="unbounded_buffer"></a><a name="ctor"></a> unbounded_buffer
 
 Tworzy `unbounded_buffer` blok komunikatów.
 
@@ -362,7 +363,7 @@ Funkcja filtru, która określa, czy proponowane komunikaty powinny być akcepto
 
 Typ `filter_method` to Funktor z podpisem `bool (_Type const &)` , który jest wywoływany przez ten `unbounded_buffer` blok komunikatów, aby określić, czy powinien on akceptować oferowany komunikat.
 
-## <a name="unbounded_buffer"></a><a name="dtor"></a>~ unbounded_buffer
+## <a name="unbounded_buffer"></a><a name="dtor"></a> ~ unbounded_buffer
 
 Niszczy `unbounded_buffer` blok komunikatów.
 
@@ -370,7 +371,7 @@ Niszczy `unbounded_buffer` blok komunikatów.
 ~unbounded_buffer();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa overwrite_buffer](overwrite-buffer-class.md)<br/>

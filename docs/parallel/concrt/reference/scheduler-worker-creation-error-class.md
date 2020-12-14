@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy scheduler_worker_creation_error
 title: scheduler_worker_creation_error — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f0fbb0aed19738bb88e4cbfe3a72580627c4fca9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188719"
 ---
 # <a name="scheduler_worker_creation_error-class"></a>scheduler_worker_creation_error — Klasa
 
@@ -25,17 +26,17 @@ Ta klasa opisuje wyjątek zgłoszony z powodu błędu tworzenia kontekstu wykony
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[scheduler_worker_creation_error](#ctor)|Przeciążone. Konstruuje obiekt `scheduler_worker_creation_error`.|
+|[scheduler_worker_creation_error](#ctor)|Przeciążone. Konstruuje `scheduler_worker_creation_error` obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten wyjątek jest zazwyczaj generowany, gdy wywołanie systemu operacyjnego w celu utworzenia kontekstów wykonywania z poziomu środowisko uruchomieniowe współbieżności zakończy się niepowodzeniem. Konteksty wykonywania to wątki wykonujące zadania w środowisko uruchomieniowe współbieżności. Kod błędu, który zwykle jest zwracany z wywołania metody Win32 `GetLastError` jest konwertowany na wartość typu `HRESULT` i można go pobrać przy użyciu metody klasy bazowej `get_error_code`.
+Ten wyjątek jest zazwyczaj generowany, gdy wywołanie systemu operacyjnego w celu utworzenia kontekstów wykonywania z poziomu środowisko uruchomieniowe współbieżności zakończy się niepowodzeniem. Konteksty wykonywania to wątki wykonujące zadania w środowisko uruchomieniowe współbieżności. Kod błędu, który zwykle jest zwracany z wywołania metody Win32, `GetLastError` jest konwertowany na wartość typu `HRESULT` i można go pobrać za pomocą metody klasy bazowej `get_error_code` .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -51,9 +52,9 @@ Ten wyjątek jest zazwyczaj generowany, gdy wywołanie systemu operacyjnego w ce
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>scheduler_worker_creation_error
+## <a name="scheduler_worker_creation_error"></a><a name="ctor"></a> scheduler_worker_creation_error
 
-Konstruuje obiekt `scheduler_worker_creation_error`.
+Konstruuje `scheduler_worker_creation_error` obiekt.
 
 ```cpp
 scheduler_worker_creation_error(
@@ -70,7 +71,7 @@ explicit _CRTIMP scheduler_worker_creation_error(
 Opisowy komunikat o błędzie.
 
 *_Hresult*<br/>
-Wartość `HRESULT` błędu, który spowodował wyjątek.
+`HRESULT`Wartość błędu, który spowodował wyjątek.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -1,27 +1,28 @@
 ---
+description: 'Dowiedz się więcej na temat: ładowanie wszystkich importów dla Delay-Loaded DLL'
 title: Importy Załaduj wszystko dla bibliotek DLL załadowanych z opóźnieniem
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-ms.openlocfilehash: e855b648dc7a9ee0670c3704a11aa1897a238403
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f1334f30568e4722bd97579145ddcae9851b901
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301672"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190926"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Importy Załaduj wszystko dla bibliotek DLL załadowanych z opóźnieniem
 
-**__HrLoadAllImportsForDll** funkcji, która jest zdefiniowana w delayhlp.cpp, informuje konsolidator, aby załadować wszystkie Importy z biblioteki DLL, który został określony za pomocą [/delayload](delayload-delay-load-import.md) — opcja konsolidatora.
+Funkcja **__HrLoadAllImportsForDll** , która jest zdefiniowana w Delayhlp. cpp, nakazuje konsolidatorowi załadowanie wszystkich importów z biblioteki DLL, która została określona za pomocą opcji konsolidatora [/DELAYLOAD](delayload-delay-load-import.md) .
 
-Importy Załaduj wszystko pozwala umieścić obsługi błędów w jednym miejscu w kodzie, a nie trzeba używać wyjątków, obsługa wokół rzeczywistego wywołania operacji importu. Unika również sytuacja, w którym aplikacji nie powiedzie się częściowo przez proces wyniku kod pomocniczy, nie można załadować importu.
+Załadowanie wszystkich importów pozwala na umieszczenie obsługi błędów w jednym miejscu w kodzie i nie musi używać obsługi wyjątków wokół rzeczywistych wywołań importu. Pozwala również uniknąć sytuacji, w której aplikacja nie przestanie działać częściowo przez proces w wyniku kodu pomocnika, który nie może załadować importu.
 
-Wywoływanie **__HrLoadAllImportsForDll** nie zmienia zachowanie punkty zaczepienia błąd przetwarzania; zobacz [obsługę błędów oraz powiadomienia](error-handling-and-notification.md) Aby uzyskać więcej informacji.
+Wywołanie **__HrLoadAllImportsForDll** nie zmienia zachowania punktów zaczepienia i obsługi błędów; Aby uzyskać więcej informacji, zobacz temat [Obsługa błędów i powiadomienia](error-handling-and-notification.md) .
 
-Nazwa biblioteki DLL są przekazywane do **__HrLoadAllImportsForDll** są porównywane nazwa przechowywana wewnątrz pliku DLL, sama i jest uwzględniana wielkość liter.
+Nazwa biblioteki DLL przeniesiona do **__HrLoadAllImportsForDll** jest porównywana z nazwą przechowywaną wewnątrz biblioteki DLL i jest uwzględniana wielkość liter.
 
-Poniższy przykład pokazuje sposób wywoływania **__HrLoadAllImportsForDll**:
+Poniższy przykład pokazuje, jak wywołać **__HrLoadAllImportsForDll**:
 
 ```
 if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
@@ -30,6 +31,6 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](linker-support-for-delay-loaded-dlls.md)
+[Obsługa konsolidatora dla Delay-Loaded bibliotek DLL](linker-support-for-delay-loaded-dlls.md)

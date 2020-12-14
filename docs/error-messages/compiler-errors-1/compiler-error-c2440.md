@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: błąd kompilatora C2440'
 title: Błąd kompilatora C2440
 ms.date: 03/28/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 918f071f7d7ecc294ddab92764c03da98ad86555
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189746"
 ---
 # <a name="compiler-error-c2440"></a>Błąd kompilatora C2440
 

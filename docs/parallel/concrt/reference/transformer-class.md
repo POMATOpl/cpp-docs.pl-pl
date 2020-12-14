@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie transformatora
 title: Klasa transformatora
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: adc83ab2d8268460b3a35be44f5733c8b6fa1c43
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 34d937d1be1c3907ea75d0345bb52bcf359d4f34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217899"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188134"
 ---
 # <a name="transformer-class"></a>Klasa transformatora
 
@@ -91,7 +92,7 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Akceptuje komunikat, który był oferowany przez ten `transformer` blok komunikatów, przez przeniesienie własności do obiektu wywołującego.
 
@@ -108,7 +109,7 @@ Dla `runtime_object_identity` oferowanego `message` obiektu.
 
 Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własność.
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Wykorzystuje komunikat wcześniej oferowany przez `transformer` i zarezerwowany przez obiekt docelowy, przekazując własność do obiektu wywołującego.
 
@@ -129,7 +130,7 @@ Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własno
 
 Przypomina `accept` , ale jest zawsze poprzedzone wywołaniem do `reserve` .
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym `transformer` blokiem obsługi komunikatów.
 
@@ -137,7 +138,7 @@ Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połąc
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi komunikatów. Jest wywoływana przez `propagate` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -159,7 +160,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 Wykonuje funkcję przekształcania w komunikatach wejściowych.
 
@@ -167,7 +168,7 @@ Wykonuje funkcję przekształcania w komunikatach wejściowych.
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Zwalnia poprzednią rezerwację wiadomości.
 
@@ -180,7 +181,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity` `message` Wydawany obiekt.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Rezerwuje komunikat wcześniej oferowany przez ten `transformer` blok komunikatów.
 
@@ -201,7 +202,7 @@ Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
 Po `reserve` wywołaniu, jeśli zwróci **`true`** , `consume` lub `release` musi zostać wywołana w celu podjęcia lub zwolnienia własności wiadomości.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Wznawia propagację po wydaniu rezerwacji.
 
@@ -209,7 +210,7 @@ Wznawia propagację po wydaniu rezerwacji.
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 Synchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi komunikatów. Jest wywoływana przez `send` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -231,7 +232,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 Przesłania `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty, które są przez nie połączone, za pomocą źródła, które nie jest połączony.
 
@@ -243,7 +244,7 @@ virtual bool supports_anonymous_source();
 
 **`true`** ponieważ blok nie odkłada proponowanych komunikatów.
 
-## <a name="transformer"></a><a name="ctor"></a>Funkcja
+## <a name="transformer"></a><a name="ctor"></a> Funkcja
 
 Tworzy `transformer` blok komunikatów.
 
@@ -305,7 +306,7 @@ Typ `_Transform_method` to Funktor z podpisem `_Output (_Input const &)` , któr
 
 Typ `filter_method` to Funktor z podpisem `bool (_Input const &)` , który jest wywoływany przez ten `transformer` blok komunikatów, aby określić, czy powinien on akceptować oferowany komunikat.
 
-## <a name="transformer"></a><a name="dtor"></a>~ Transformer
+## <a name="transformer"></a><a name="dtor"></a> ~ Transformer
 
 Niszczy `transformer` blok komunikatów.
 
@@ -313,7 +314,7 @@ Niszczy `transformer` blok komunikatów.
 ~transformer();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Call, Klasa](call-class.md)

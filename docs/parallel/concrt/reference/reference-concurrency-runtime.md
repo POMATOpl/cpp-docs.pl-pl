@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Reference (środowisko uruchomieniowe współbieżności)'
 title: Odwołanie (Współbieżność środowiska wykonawczego)
 ms.date: 11/04/2016
 f1_keywords:
@@ -452,25 +453,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f5d07f856c37417da1ceddbbefa772b2e7f11fff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188927"
 ---
 # <a name="reference-concurrency-runtime"></a>Odwołanie (Współbieżność środowiska wykonawczego)
 
 Ta sekcja zawiera informacje referencyjne dotyczące środowisko uruchomieniowe współbieżności.
 
 > [!Note]
-> Standard C++ języka rezerwuje użycie identyfikatorów, które zaczynają się od znaku podkreślenia (_) dla implementacji takich jak biblioteki. Nie używaj tych nazw w kodzie. Zachowanie elementów kodu, których nazwy są zgodne z tą konwencją, nie jest gwarantowane i może ulec zmianie w przyszłych wydaniach. Z tego powodu takie elementy kodu zostały pominięte w dokumentacji środowisko uruchomieniowe współbieżności.
+> Standard języka C++ rezerwuje użycie identyfikatorów, które zaczynają się od znaku podkreślenia (_) dla implementacji takich jak biblioteki. Nie używaj tych nazw w kodzie. Zachowanie elementów kodu, których nazwy są zgodne z tą konwencją, nie jest gwarantowane i może ulec zmianie w przyszłych wydaniach. Z tego powodu takie elementy kodu zostały pominięte w dokumentacji środowisko uruchomieniowe współbieżności.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-Przestrzeń nazw współbieżności zawiera klasy i funkcje, które zapewniają dostęp do środowisko uruchomieniowe współbieżności, współbieżnej platformy programistycznej C++dla programu. Aby uzyskać więcej informacji, zobacz [środowisko uruchomieniowe współbieżności](../concurrency-runtime.md).
+Przestrzeń nazw współbieżności zawiera klasy i funkcje, które zapewniają dostęp do środowisko uruchomieniowe współbieżności, współbieżnej platformy programistycznej dla języka C++. Aby uzyskać więcej informacji, zobacz [środowisko uruchomieniowe współbieżności](../concurrency-runtime.md).
 
-[STD — przestrzeń nazw](std-namespace.md)
+[std, przestrzeń nazw](std-namespace.md)
 
-[stdx — przestrzeń nazw](stdx-namespace.md)
+[stdx, przestrzeń nazw](stdx-namespace.md)

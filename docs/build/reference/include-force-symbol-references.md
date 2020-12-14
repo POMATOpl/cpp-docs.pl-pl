@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/INCLUDE (Wymuszaj odwołania do symboli)
 title: /INCLUDE (Wymuszaj odwołania do symboli)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4938f5e92f91718f522df103303e6382005d463c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191306"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Wymuszaj odwołania do symboli)
 
@@ -27,34 +28,34 @@ ms.locfileid: "62269873"
 
 ## <a name="parameters"></a>Parametry
 
-*Symbol*<br/>
-Określa symbol do dodania do tabeli symboli.
+*symboliczn*<br/>
+Określa symbol, który ma zostać dodany do tabeli symboli.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/include informuje konsolidator, aby dodał określony symbol do tabeli symboli.
+Opcja/INCLUDE informuje konsolidator, aby dodał określony symbol do tabeli symboli.
 
-Aby określić wiele symboli, wpisz przecinek (,), średnika (;) lub odstęp między nazwy symboli. W wierszu polecenia, należy określić/include:`symbol` jeden raz dla każdego symbolu.
+Aby określić wiele symboli, wpisz przecinek (,), średnik (;) lub spację między nazwami symboli. W wierszu polecenia określ/INCLUDE: `symbol` raz dla każdego symbolu.
 
-Konsolidator usuwa `symbol` , dodając obiekt, który zawiera definicję symbolu do programu. Ta funkcja jest przydatna, w tym obiektu biblioteki, które w przeciwnym razie nie będzie można połączone z tym programem.
+Konsolidator rozpoznaje `symbol` przez dodanie obiektu, który zawiera definicję symbolu do programu. Ta funkcja jest przydatna do dołączania obiektu biblioteki, który w przeciwnym razie nie zostałby połączony z programem.
 
-Określanie symbolu z tą opcją zastąpienia usunięcie tego symbolu przez [/OPT: REF](opt-optimizations.md).
+Określenie symbolu z tą opcją spowoduje zastąpienie usuwania tego symbolu przez [/OPT: ref](opt-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **dane wejściowe** stronę właściwości.
+1. Kliknij stronę właściwości **dane wejściowe** .
 
-1. Modyfikowanie **Wymuszaj odwołania do symboli** właściwości.
+1. Modyfikuj Właściwość **Force symbol References** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

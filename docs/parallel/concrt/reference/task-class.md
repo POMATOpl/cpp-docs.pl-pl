@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o klasie zadań (środowisko uruchomieniowe współbieżności)
 title: task — Klasa (współbieżność środowiska wykonawczego)
 ms.date: 07/30/2019
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: 6a063f0bba9482824817e4efe21ae5b7bf3c0995
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b16c7e8f7ae97b35731916d6834367c228ce867c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188381"
 ---
 # <a name="task-class-concurrency-runtime"></a>task — Klasa (współbieżność środowiska wykonawczego)
 
@@ -87,7 +88,7 @@ Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../paral
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="get"></a><a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a> Pobierz
 
 Zwraca wynik tworzony przez to zadanie. Jeśli zadanie nie jest w stanie terminalu, wywołanie w celu `get` poczeka na zakończenie zadania. Ta metoda nie zwraca wartości, gdy jest wywoływana dla zadania z `result_type` **`void`** .
 
@@ -108,7 +109,7 @@ Jeśli zadanie zostało anulowane, wywołanie `get` zostanie zgłosić wyjątek 
 > [!IMPORTANT]
 > W aplikacji platforma uniwersalna systemu Windows (platformy UWP) Nie wywołuj [concurrency:: Task:: wait](#wait) lub `get` ( `wait` Calls `get` ) w kodzie, który jest uruchamiany w wątku interfejsu użytkownika. W przeciwnym razie środowisko uruchomieniowe zgłasza [współbieżność:: invalid_operation](invalid-operation-class.md) , ponieważ te metody blokują bieżący wątek i mogą spowodować, że aplikacja przestanie odpowiadać. Można jednak wywołać `get` metodę, aby otrzymać wynik zadania poprzedzającego w kontynuacji opartej na zadaniach, ponieważ wynik jest natychmiast dostępny.
 
-## <a name="is_apartment_aware"></a><a name="is_apartment_aware"></a>is_apartment_aware
+## <a name="is_apartment_aware"></a><a name="is_apartment_aware"></a> is_apartment_aware
 
 Określa, czy zadanie odpakuje interfejs środowisko wykonawcze systemu Windows `IAsyncInfo` , czy też jest wynikiem tego zadania.
 
@@ -120,7 +121,7 @@ bool is_apartment_aware() const;
 
 **`true`** Jeśli zadanie odpakuje `IAsyncInfo` interfejs lub jest ono wynikiem tego zadania, **`false`** w przeciwnym razie.
 
-## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a>Task:: is_done, Metoda (środowisko uruchomieniowe współbieżności)
+## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a> Task:: is_done, Metoda (środowisko uruchomieniowe współbieżności)
 
 Określa, czy zadanie zostało ukończone.
 
@@ -136,7 +137,7 @@ Ma wartość true, jeśli zadanie zostało ukończone, w przeciwnym razie zwraca
 
 Funkcja zwraca wartość true, jeśli zadanie zostało ukończone lub anulowane (z wyjątkiem użytkownika lub bez niego).
 
-## <a name="operator"></a><a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a> operator! =
 
 Określa, czy dwa `task` obiekty reprezentują różne zadania wewnętrzne.
 
@@ -155,7 +156,7 @@ Zadanie, które ma zostać porównane.
 
 **`true`** Jeśli obiekty odnoszą się do różnych zadań podstawowych i **`false`** w inny sposób.
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 Zamienia zawartość jednego `task` obiektu na inny.
 
@@ -176,7 +177,7 @@ Obiekt źródłowy `task` .
 
 Podobnie jak w przypadku `task` inteligentnego wskaźnika, po przypisaniu kopii te `task` obiekty reprezentują to samo rzeczywiste zadanie, co `_Other` .
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operator = =
 
 Określa, czy dwa `task` obiekty reprezentują to samo zadanie wewnętrzne.
 
@@ -195,7 +196,7 @@ Zadanie, które ma zostać porównane.
 
 **`true`** Jeśli obiekty odnoszą się do tego samego zadania bazowego i **`false`** w inny sposób.
 
-## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>Task:: Scheduler — Metoda (środowisko uruchomieniowe współbieżności)
+## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a> Task:: Scheduler — Metoda (środowisko uruchomieniowe współbieżności)
 
 Zwraca harmonogram dla tego zadania
 
@@ -207,7 +208,7 @@ scheduler_ptr scheduler() const;
 
 Wskaźnik do harmonogramu
 
-## <a name="task"></a><a name="ctor"></a>zadaniem
+## <a name="task"></a><a name="ctor"></a> zadaniem
 
 Konstruuje `task` obiekt.
 
@@ -253,13 +254,13 @@ Wersja konstruktora, który pobiera token anulowania, tworzy zadanie, które mo�
 
 Zadania utworzone na podstawie `Windows::Foundation::IAsyncInfo` interfejsu lub wyrażenia lambda, które zwracają `IAsyncInfo` interfejs docierają do stanu terminalu, gdy zawarta środowisko wykonawcze systemu Windows operacja asynchroniczna lub akcja zostanie ukończona. Podobnie zadania utworzone na podstawie wyrażenia lambda, które zwraca `task<result_type>` osiągnięcie stanu terminalu, gdy zadanie wewnętrzne osiągnie swój stan końcowy, a nie gdy zwraca lambda.
 
-`task`zachowuje się jak inteligentny wskaźnik i jest bezpiecznie przekazywania między wartościami. Dostęp do niego można uzyskać przez wiele wątków bez potrzeby blokad.
+`task` zachowuje się jak inteligentny wskaźnik i jest bezpiecznie przekazywania między wartościami. Dostęp do niego można uzyskać przez wiele wątków bez potrzeby blokad.
 
 Przeciążenia konstruktora, które mają interfejs Windows:: Foundation:: IAsyncInfo lub lambda zwracające taki interfejs, są dostępne tylko dla aplikacji środowisko wykonawcze systemu Windows.
 
 Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="then"></a><a name="then"></a>następnie
+## <a name="then"></a><a name="then"></a> następnie
 
 Dodaje zadanie kontynuacji do tego zadania.
 
@@ -323,7 +324,7 @@ Przeciążenia mające `then` wartość lambda lub Funktor, które zwracają int
 
 Aby uzyskać więcej informacji na temat sposobu używania kontynuacji zadań do redagowania pracy asynchronicznej, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="wait"></a><a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a> trwa
 
 Czeka, aż to zadanie osiągnie stan końcowy. Można `wait` wykonać zadanie wbudowane, jeśli wszystkie zależności zadań są spełnione i nie zostały jeszcze pobrane do wykonania przez proces roboczy w tle.
 
@@ -340,6 +341,6 @@ task_status wait() const;
 > [!IMPORTANT]
 > W aplikacji platforma uniwersalna systemu Windows (platformy UWP) Nie wywołuj `wait` kodu, który jest uruchamiany w wątku interfejsu użytkownika. W przeciwnym razie środowisko uruchomieniowe zgłasza [współbieżność:: invalid_operation](invalid-operation-class.md) , ponieważ ta metoda blokuje bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Można jednak wywołać metodę [concurrency:: Task:: Get](#get) , aby otrzymać wynik zadania poprzedzającego w kontynuacji opartej na zadaniach.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

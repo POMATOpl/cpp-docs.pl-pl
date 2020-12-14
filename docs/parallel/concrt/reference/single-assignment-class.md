@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy single_assignment
 title: Klasa single_assignment
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 6b92508c81311774816e804eb36ac8fbfb2aa82b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d01426843f2e9fe1106f7cb68c103c392cdf1ebd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188660"
 ---
 # <a name="single_assignment-class"></a>Klasa single_assignment
 
@@ -56,7 +57,7 @@ Typ ładunku wiadomości przechowywanej i propagowany przez bufor.
 |Nazwa|Opis|
 |----------|-----------------|
 |[has_value](#has_value)|Sprawdza, czy ten `single_assignment` blok komunikatów został jeszcze zainicjowany z wartością.|
-|[wartościami](#value)|Pobiera odwołanie do bieżącego ładunku wiadomości przechowywanej w `single_assignment` bloku obsługi komunikatów.|
+|[wartość](#value)|Pobiera odwołanie do bieżącego ładunku wiadomości przechowywanej w `single_assignment` bloku obsługi komunikatów.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -96,7 +97,7 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 Akceptuje komunikat, który był oferowany przez ten `single_assignment` blok komunikatów, zwracając kopię komunikatu do obiektu wywołującego.
 
@@ -117,7 +118,7 @@ Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własno
 
 `single_assignment`Blok komunikatów zwraca kopie wiadomości do jej obiektów docelowych, a nie transferuje własność aktualnie przechowywanego komunikatu.
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 Wykorzystuje komunikat wcześniej oferowany przez `single_assignment` i zarezerwowany przez obiekt docelowy, zwracając kopię komunikatu do obiektu wywołującego.
 
@@ -138,7 +139,7 @@ Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własno
 
 Przypomina `accept` , ale jest zawsze poprzedzone wywołaniem do `reserve` .
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 Sprawdza, czy ten `single_assignment` blok komunikatów został jeszcze zainicjowany z wartością.
 
@@ -150,7 +151,7 @@ bool has_value() const;
 
 **`true`** Jeśli blok odebrał wartość, **`false`** w przeciwnym razie.
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym `single_assignment` blokiem obsługi komunikatów.
 
@@ -163,7 +164,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Wskaźnik do nowo połączonego obiektu docelowego.
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `single_assignment` bloku obsługi komunikatów. Jest wywoływana przez `propagate` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -185,7 +186,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 Umieszcza `message` `_PMessage` w tym `single_assignment` bloku komunikatów i oferuje go wszystkim połączonym obiektom docelowym.
 
@@ -198,7 +199,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 *_PMessage*<br/>
 Wskaźnik do tego `message` `single_assignment` bloku obsługi komunikatów przejmuje własność.
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 Zwalnia poprzednią rezerwację wiadomości.
 
@@ -211,7 +212,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity` `message` Wydawany obiekt.
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 Rezerwuje komunikat wcześniej oferowany przez ten `single_assignment` blok komunikatów.
 
@@ -232,7 +233,7 @@ Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
 Po `reserve` wywołaniu, jeśli zwróci **`true`** , `consume` lub `release` musi zostać wywołana w celu podjęcia lub zwolnienia własności wiadomości.
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 Wznawia propagację po wydaniu rezerwacji.
 
@@ -240,7 +241,7 @@ Wznawia propagację po wydaniu rezerwacji.
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 Synchronicznie przekazuje komunikat z `ISource` bloku do tego `single_assignment` bloku obsługi komunikatów. Jest wywoływana przez `send` metodę, gdy jest wywoływana przez blok źródłowy.
 
@@ -262,7 +263,7 @@ Wskaźnik do bloku źródłowego oferującego komunikat.
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="single_assignment"></a><a name="ctor"></a>single_assignment
+## <a name="single_assignment"></a><a name="ctor"></a> single_assignment
 
 Tworzy `single_assignment` blok komunikatów.
 
@@ -304,7 +305,7 @@ Funkcja filtru, która określa, czy proponowane komunikaty powinny być akcepto
 
 Typ `filter_method` to Funktor z podpisem `bool (T const &)` , który jest wywoływany przez ten `single_assignment` blok komunikatów, aby określić, czy powinien on akceptować oferowany komunikat.
 
-## <a name="single_assignment"></a><a name="dtor"></a>~ single_assignment
+## <a name="single_assignment"></a><a name="dtor"></a> ~ single_assignment
 
 Niszczy `single_assignment` blok komunikatów.
 
@@ -312,7 +313,7 @@ Niszczy `single_assignment` blok komunikatów.
 ~single_assignment();
 ```
 
-## <a name="value"></a><a name="value"></a>wartościami
+## <a name="value"></a><a name="value"></a> wartościami
 
 Pobiera odwołanie do bieżącego ładunku wiadomości przechowywanej w `single_assignment` bloku obsługi komunikatów.
 
@@ -328,7 +329,7 @@ T const& value();
 
 Ta metoda będzie oczekiwać do momentu odebrania komunikatu, jeśli w bloku obsługi komunikatów nie jest aktualnie przechowywany żaden komunikat `single_assignment` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa overwrite_buffer](overwrite-buffer-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/LINENUMBERS
 title: /LINENUMBERS
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -LINENUMBERS dumpbin option
 - /LINENUMBERS dumpbin option
 ms.assetid: 1681d582-2c2f-484e-9920-109959549055
-ms.openlocfilehash: ea4c3ac2ad582e0fe364f2da26511a66e9dc376c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9df3d88476a82466f86ec23147c9f8f35f9b3f1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191020"
 ---
 # <a name="linenumbers"></a>/LINENUMBERS
 
@@ -24,10 +25,10 @@ ms.locfileid: "62269244"
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja wyświetla numery wierszy COFF. Numery wierszy istnieje w pliku obiektu, jeśli został skompilowany przy użyciu bazy danych programu (/Zi) zgodne z C7 (/ Z7), lub liczby tylko wiersz (/ ZD). Plik wykonywalny lub biblioteka DLL zawiera numery wierszy COFF, jeśli został połączony z Generuj informacje o debugowaniu (/ DEBUG).
+Ta opcja wyświetla numery linii COFF. Numery wierszy istnieją w pliku obiektu, jeśli zostały skompilowane przy użyciu bazy danych programu (/ZI), C7 zgodne (/Z7) lub tylko numery wierszy (/ZD). Plik wykonywalny lub DLL zawiera numery linii COFF, jeśli zostały połączone z generowaniem informacji debugowania (/DEBUG).
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w przypadku plików utworzonych przy użyciu opcji kompilatora [/GL](gl-whole-program-optimization.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje DUMPBIN](dumpbin-options.md)
+[Opcje polecenia DUMPBIN](dumpbin-options.md)

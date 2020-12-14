@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat klasy task_completion_event
 title: task_completion_event — Klasa
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 791b68d6a67ea2f8a9697b69266e8744455f845c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188368"
 ---
 # <a name="task_completion_event-class"></a>task_completion_event — Klasa
 
@@ -57,7 +58,7 @@ Użyj zadania utworzonego na podstawie zdarzenia ukończenia zadania, gdy scenar
 
 Jeśli zdarzenie ukończenia zadania nigdy nie zostanie sygnalizowane, wszystkie zadania utworzone na podstawie tego zdarzenia zostaną anulowane po jego zarejestrowaniu.
 
-`task_completion_event`zachowuje się jak inteligentny wskaźnik i powinny być przesyłane przez wartość.
+`task_completion_event` zachowuje się jak inteligentny wskaźnik i powinny być przesyłane przez wartość.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -69,7 +70,7 @@ Jeśli zdarzenie ukończenia zadania nigdy nie zostanie sygnalizowane, wszystkie
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="set"></a><a name="set"></a>zbiór
+## <a name="set"></a><a name="set"></a> zbiór
 
 Ustawia zdarzenie ukończenia zadania.
 
@@ -92,7 +93,7 @@ Metoda zwraca, **`true`** Jeśli zakończyło się pomyślnie podczas ustawiania
 
 W obecności wielu lub współbieżnych wywołań do `set` , tylko pierwsze wywołanie powiedzie się, a jego wynik (jeśli istnieje) będzie przechowywany w zdarzeniu ukończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Po ustawieniu zdarzenia ukończenia zadania wszystkie zadania utworzone na podstawie tego zdarzenia zostaną wykonane natychmiast, a jego kontynuacje (jeśli istnieją) zostaną zaplanowane. Obiekty uzupełniania zadań, które mają `_ResultType` inne niż **`void`** przekazują wartość do ich kontynuacji.
 
-## <a name="set_exception"></a><a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a> set_exception
 
 Propaguje wyjątek do wszystkich zadań skojarzonych z tym zdarzeniem.
 
@@ -116,7 +117,7 @@ Wskaźnik wyjątku do ustawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a> task_completion_event
 
 Konstruuje `task_completion_event` obiekt.
 
@@ -124,6 +125,6 @@ Konstruuje `task_completion_event` obiekt.
 task_completion_event();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)
