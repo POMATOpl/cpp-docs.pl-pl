@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleControl'
 title: Klasa COleControl
 ms.date: 08/27/2018
 f1_keywords:
@@ -334,12 +335,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 074b0e1df5a8d70c8b32ee03dcb073c26c13be9b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6cc5e1896d186f1fa87eee34565819d518f9d4d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227549"
 ---
 # <a name="colecontrol-class"></a>Klasa COleControl
 
@@ -1322,7 +1323,7 @@ Zawiera kombinację następujących flag:
 *x*<br/>
 Współrzędna x kursora po naciśnięciu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
 
-*t*<br/>
+*Y*<br/>
 Współrzędna y kursora po naciśnięciu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1366,7 +1367,7 @@ Zawiera kombinację następujących flag:
 *x*<br/>
 Współrzędna x kursora. Współrzędna jest względem lewego górnego rogu okna sterowania.
 
-*t*<br/>
+*Y*<br/>
 Współrzędna y kursora. Współrzędna jest względem lewego górnego rogu okna sterowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1410,7 +1411,7 @@ Zawiera kombinację następujących flag:
 *x*<br/>
 Współrzędna x kursora po wydaniu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
 
-*t*<br/>
+*Y*<br/>
 Współrzędna y kursora po wydaniu przycisku myszy. Współrzędna jest względem lewego górnego rogu okna sterowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -2729,7 +2730,7 @@ Niezerowe, jeśli dodano elementy do *pStringArray* i *pCookieArray*.
 
 ### <a name="remarks"></a>Uwagi
 
-Przesłoń tę funkcję, Jeśli kontrolka ma właściwość z zestawem możliwych wartości, które mogą być reprezentowane przez ciągi. Dla każdego elementu dodanego do *pStringArray*należy dodać odpowiadający element "cookie" do *pCookieArray.* Te wartości "cookie" mogą być później przesyłane przez platformę do `COleControl::OnGetPredefinedValue` funkcji.
+Przesłoń tę funkcję, Jeśli kontrolka ma właściwość z zestawem możliwych wartości, które mogą być reprezentowane przez ciągi. Dla każdego elementu dodanego do *pStringArray* należy dodać odpowiadający element "cookie" do *pCookieArray.* Te wartości "cookie" mogą być później przesyłane przez platformę do `COleControl::OnGetPredefinedValue` funkcji.
 
 ## <a name="colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a> COleControl::OnGetPredefinedValue
 
@@ -2876,7 +2877,7 @@ Prostokąt ograniczający obiekt w współrzędnej klienta okna zawierającego. 
 *x*<br/>
 Współrzędna x lokalizacji myszy w współrzędnej klienta okna zawierającego.
 
-*t*<br/>
+*Y*<br/>
 Współrzędna y lokalizacji myszy w współrzędnej klienta okna zawierającego.
 
 *dwKeyState*<br/>
@@ -2907,7 +2908,7 @@ Prostokąt ograniczający obiekt w współrzędnej klienta okna zawierającego. 
 *x*<br/>
 Współrzędna x lokalizacji myszy w współrzędnej klienta okna zawierającego.
 
-*t*<br/>
+*Y*<br/>
 Współrzędna y lokalizacji myszy w współrzędnej klienta okna zawierającego.
 
 *dwMouseMsg*<br/>
@@ -4120,7 +4121,7 @@ Wskaźnik do `POINTL` struktury zawierającej współrzędne w jednostkach HIMET
 *lpptfContainer*<br/>
 Wskaźnik do `POINTF` struktury zawierającej współrzędne w rozmiarze jednostki kontenera.
 
-*flagi*<br/>
+*znaczników*<br/>
 Kombinacja następujących wartości:
 
 - XFORMCOORDS_POSITION pozycji w kontenerze.

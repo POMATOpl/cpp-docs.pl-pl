@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/TC,/TP,/TC,/TP (Określ typ pliku źródłowego)
 title: /Tc, /Tp, /TC, /TP (Określ typ pliku źródłowego)
 ms.date: 01/11/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: fa35249983284261252c8ada65e79ed1cb6ec79a
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 23aed145c8dd9ac36f26bcebe2ea2aab1c39e586
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230032"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Określ typ pliku źródłowego)
 
@@ -29,7 +30,7 @@ Opcja **/TC** określa, że jej argument filename jest plikiem źródłowym C, n
 
 ## <a name="syntax"></a>Składnia
 
-> **/Tc** _Nazwa pliku_ /TC\
+>  _Nazwa pliku_ /TC\
 > **/TP** _filename_\
 > **/TC**\
 > **/TP**
@@ -49,7 +50,7 @@ Gdy jest określona opcja **TC** lub **TC** , każda Specyfikacja [/Zc: Wchar_t 
 
 1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja** > **zaawansowana** **C/C++** > .
+1. Wybierz stronę właściwości **Konfiguracja**  >    >  **zaawansowana** C/C++.
 
 1. Zmodyfikuj właściwość **Kompiluj jako** . Wybierz **przycisk OK** lub **Zastosuj** , aby zastosować zmiany.
 
@@ -67,7 +68,7 @@ Ten wiersz polecenia CL Określa, że TEST1. c, TEST2. cxx, TEST3. tak i TEST4. 
 
 > CL TEST1. C TEST2. CXX TEST3. TAK TEST4. O/TC TEST5. Z/TP
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
-[Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)
+[Składnia Command-Line kompilatora MSVC](compiler-command-line-syntax.md)

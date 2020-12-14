@@ -1,13 +1,14 @@
 ---
+description: 'Dowiedz się więcej na temat: znaków znaczących bez powiązania zewnętrznego'
 title: Znaki znaczące bez zewnętrznego połączenia
 ms.date: 11/04/2016
 ms.assetid: 396cfb36-391a-4aa9-885d-20198d4dc2ec
-ms.openlocfilehash: 243a9b052a31c87a73ebd03c6f5d3c2009116722
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0e38f90107e045b034508abb228e82683c4157b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229928"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Znaki znaczące bez zewnętrznego połączenia
 

@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/SYMBOLS
 title: /SYMBOLS
 ms.date: 09/05/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /SYMBOLS dumpbin option
 - -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-ms.openlocfilehash: a47b7da9f0b01353ef15e8b5c070c19e7c521c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0cc213a8b37f99e0cb80f6df88967e4eb5204b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317708"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230149"
 ---
 # <a name="symbols"></a>/SYMBOLS
 
@@ -25,11 +26,11 @@ ms.locfileid: "62317708"
 /SYMBOLS
 ```
 
-Ta opcja wyświetla tabelą symboli COFF. Tabele symboli istnieje we wszystkich plikach obiektu. Tabela symboli COFF pojawia się w pliku obrazu, tylko wtedy, gdy jest on połączony przy użyciu opcji/Debug.
+Ta opcja powoduje wyświetlenie tabeli symboli COFF. Tabele symboli istnieją we wszystkich plikach obiektów. Tabela symboli COFF zostanie wyświetlona w pliku obrazu tylko wtedy, gdy jest ona połączona z opcji/Debug.
 
-Poniżej znajduje się opis danych wyjściowych dla /SYMBOLS. Dodatkowe informacje na temat znaczenia /SYMBOLS danych wyjściowych można znaleźć przez wyszukiwanie w pliku winnt.h (IMAGE_SYMBOL i IMAGE_AUX_SYMBOL) lub w dokumentacji COFF.
+Poniżej znajduje się opis danych wyjściowych dla/SYMBOLS. Dodatkowe informacje na temat znaczenia/SYMBOLS danych wyjściowych można znaleźć, przeglądając plik Winnt. h (IMAGE_SYMBOL i IMAGE_AUX_SYMBOL) lub dokumentację COFF.
 
-Biorąc pod uwagę następujące zrzutu próbki:
+Pobrano następujący przykładowy zrzut:
 
 ```
 Dump of file main.obj
@@ -56,18 +57,18 @@ String Table Size = 0x10 bytes
 
 ## <a name="remarks"></a>Uwagi
 
-Poniższy opis, wiersze rozpoczynające się od numeru symboli w tym artykule opisano kolumny, które zawierają informacje dotyczące użytkowników:
+Następujący opis dla linii zaczynających się od numeru symbolu zawiera opis kolumn, które mają informacje istotne dla użytkowników:
 
-- Pierwsze trzy cyfrowy numer jest symbol/numer indeksu.
+- Numer pierwszej z trzech cyfr jest indeksem/liczbą symboli.
 
-- Jeśli trzecia kolumna zawiera s*x*, symbol jest zdefiniowany w tej sekcji pliku obiektu. Ale jeśli pojawi się UNDEF, nie jest zdefiniowany w tym obiekcie i muszą zostać rozwiązane w innym miejscu.
+- Jeśli trzecia kolumna zawiera wystawki *x*, symbol jest zdefiniowany w tej sekcji pliku obiektu. Ale jeśli UNDEF pojawia się, nie jest zdefiniowana w tym obiekcie i musi być rozwiązany w innym miejscu.
 
-- Piąta kolumna (statyczny, zewnętrzny) informuje, czy symbol jest widoczny tylko w obrębie obiektu lub czy nie jest publiczny (widoczny zewnętrznie). Symbol statyczny _sym, nie można połączyć _sym symboli publicznych; będą to dwa różne wystąpienia funkcji o nazwie _sym.
+- Piąta kolumna (statyczna, zewnętrzna) informuje, czy symbol jest widoczny tylko w obrębie tego obiektu, czy jest publiczny (widoczny zewnętrznie). Statyczny symbol _sym nie może być połączony z publicznym symbolem _sym; mogą to być dwa różne wystąpienia funkcji o nazwie _sym.
 
-Ostatnia kolumna numerowana wiersza nazwy symbolu, zarówno dekorowane i niedekorowanego.
+Ostatnią kolumną w numerowanym wierszu jest nazwa symbolu, zarówno dekoracyjne, jak i niedekoracyjne.
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w przypadku plików utworzonych przy użyciu opcji kompilatora [/GL](gl-whole-program-optimization.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje DUMPBIN](dumpbin-options.md)
+[Opcje polecenia DUMPBIN](dumpbin-options.md)

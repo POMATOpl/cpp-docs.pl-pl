@@ -1,21 +1,22 @@
 ---
-title: '&lt;TypeInfo —&gt;'
+description: Dowiedz się więcej &lt; o:&gt;
+title: '&lt;parametr&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - typeinfo
 helpviewer_keywords:
 - typeinfo header
 ms.assetid: 97ebc4d0-0e0e-41c3-9787-fdef2e38e56f
-ms.openlocfilehash: ee075240725e23c43939dc646c2201cedf379056
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bf257ee0b4f80a4cfbd5cb43507d784aefe9ec6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226431"
 ---
-# <a name="lttypeinfogt"></a>&lt;TypeInfo —&gt;
+# <a name="lttypeinfogt"></a>&lt;parametr&gt;
 
-Dołączyć standardowy nagłówek \<typeinfo > do definiowania typów kilka skojarzonych z operatorem Identyfikacja typu [typeid, Operator](../cpp/typeid-operator.md), która daje informacji na temat typów statyczne i dynamiczne.
+Dołącz standardowy nagłówek \<typeinfo> , aby zdefiniować kilka typów skojarzonych z [operatorem](../cpp/typeid-operator.md)identyfikacji typu operatora typeid, który zwraca informacje o typach statycznych i dynamicznych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,10 +26,10 @@ Dołączyć standardowy nagłówek \<typeinfo > do definiowania typów kilka sko
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje na temat klas zdefiniowanych w \<typeinfo >, zobacz następujące tematy:
+Aby uzyskać informacje dotyczące klas zdefiniowanych w programie \<typeinfo> , zobacz następujące tematy:
 
-- [bad_cast, wyjątek](../cpp/bad-cast-exception.md)
+- [Wyjątek bad_cast](../cpp/bad-cast-exception.md)
 
-- [bad_typeid, wyjątek](../cpp/bad-typeid-exception.md)
+- [Wyjątek bad_typeid](../cpp/bad-typeid-exception.md)
 
-- [type_info, klasa](../cpp/type-info-class.md)
+- [Klasa type_info](../cpp/type-info-class.md)

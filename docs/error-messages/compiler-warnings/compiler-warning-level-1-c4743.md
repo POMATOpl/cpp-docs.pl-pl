@@ -1,33 +1,34 @@
 ---
-title: Kompilator ostrzeżenie (poziom 1) C4743
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4743'
+title: Ostrzeżenie kompilatora (poziom 1) C4743
 ms.date: 05/13/2019
 f1_keywords:
 - C4743
 helpviewer_keywords:
 - C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-ms.openlocfilehash: 53ead0e34b55eca44399cee09f1947a12e1eadd3
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: a8c8bcd4ef0e4d7084da34e033be4194da11727f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228485"
 ---
-# <a name="compiler-warning-level-1-c4743"></a>Kompilator ostrzeżenie (poziom 1) C4743
+# <a name="compiler-warning-level-1-c4743"></a>Ostrzeżenie kompilatora (poziom 1) C4743
 
-"*typu*"ma inny rozmiar "*plik1*"i"*plik2*": *numer* i *numer* bajtów
+*Typ "Type*" ma inny rozmiar w "*plik1*" i "*plik2*": *Liczba* i *Liczba* bajtów
 
-Zewnętrznej zmiennej lub odwołuje się do zdefiniowanych w dwóch plikach ma różne typy w tych plikach, a kompilator ustali, że rozmiar zmiennej w *plik1* różni się od rozmiar zmiennej w *plik2*.
+Zmienna zewnętrzna przywoływana lub zdefiniowana w dwóch plikach ma różne typy w tych plikach, a kompilator ustalił, że rozmiar zmiennej w *plik1* różni się od rozmiaru zmiennej w *plik2*.
 
 ## <a name="remarks"></a>Uwagi
 
-Istnieje ważny przypadek, gdy to ostrzeżenie może być emitowana dla C++. W przypadku takich samych typach o tej samej nazwie w dwóch różnych plikach, jeśli te deklaracje zawierać funkcji wirtualnych, a deklaracji nie są takie same, kompilator może emitować ostrzeżenie C4744 dla tabel funkcję wirtualną. To ostrzeżenie występuje, ponieważ istnieją dwie tabele o różnych funkcji wirtualnej dla tego samego typu i konsolidatora należy wybrać jeden z nich, aby dołączyć do pliku wykonywalnego.  Istnieje możliwość, że może spowodować w swoim programie, wywołanie funkcji wirtualnej problem.
+Istnieje ważna sytuacja, w której to ostrzeżenie może być emitowane dla języka C++. Jeśli deklarujesz te same typy o tej samej nazwie w dwóch różnych plikach, jeśli te deklaracje zawierają funkcje wirtualne, a deklaracje nie są takie same, kompilator może emitować C4744 ostrzeżeń dla tabel funkcji wirtualnych. Ostrzeżenie występuje, ponieważ istnieją dwie tabele funkcji wirtualnych o różnych rozmiarach dla tego samego typu, a konsolidator musi wybrać jedną z nich do uwzględnienia w pliku wykonywalnym.  Istnieje możliwość, że program może wywołać niewłaściwą funkcję wirtualną.
 
-Aby rozwiązać to ostrzeżenie, użyj jednej definicji typu albo używać różnych nazw typów lub zmienne.
+Aby rozwiązać to ostrzeżenie, należy użyć tej samej definicji typu lub użyć różnych nazw dla typów lub zmiennych.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C4743. Aby skompilować go, umieść oba pliki w tym samym folderze, a następnie uruchom  
+Poniższy przykład generuje C4743. Aby go skompilować, Umieść oba pliki w tym samym folderze, a następnie uruchom polecenie  
 
 ```cmd
 cl /EHsc /W1 /GL /O2 C4743a.cpp C4743b.cpp

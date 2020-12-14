@@ -1,19 +1,20 @@
 ---
+description: 'Dowiedz się więcej na temat: &lt; typeindex&gt;'
 title: '&lt;typeindex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <typeindex>
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
-ms.openlocfilehash: 237356a0862ec3fc591264b482b23e62ef2c51cb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f5aee958aee01bcccc87145087001f093ab6749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226444"
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 
-Uwzględnij standardowy nagłówek \<typeindex >, aby zdefiniować klasę i funkcję, która obsługuje indeksowanie obiektów klasy [type_info](../cpp/type-info-class.md).
+Dołącz standardowy nagłówek, \<typeindex> Aby zdefiniować klasę i funkcję, która obsługuje indeksowanie obiektów klasy [type_info](../cpp/type-info-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,10 +26,10 @@ Uwzględnij standardowy nagłówek \<typeindex >, aby zdefiniować klasę i funk
 
 [Struktura skrótu](../standard-library/hash-structure.md) definiuje `hash function` odpowiednie do mapowania wartości typu [type_index](../standard-library/type-index-class.md) na rozkład wartości indeksu.
 
-Klasa otacza wskaźnik `type_info` do obiektu, aby pomóc w indeksowaniu. `type_index`
+`type_index`Klasa otacza wskaźnik do `type_info` obiektu, aby pomóc w indeksowaniu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

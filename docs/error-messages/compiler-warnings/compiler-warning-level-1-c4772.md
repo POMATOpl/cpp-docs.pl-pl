@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: Ostrzeżenie kompilatora (poziom 1) C4772'
 title: Ostrzeżenie kompilatora (poziom 1) C4772
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41fcbf3074cb1e51e06ba21a01a27eaf8ded1b31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228446"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>Ostrzeżenie kompilatora (poziom 1) C4772
 
-> \#zaimportować przywoływany typ z brakującej biblioteki typów; "*Brak typu*" używany jako symbol zastępczy
+> \#import odwołuje się do typu z brakującej biblioteki typów; "*Brak typu*" używany jako symbol zastępczy
 
-Do biblioteki typów odwołuje się dyrektywa [#import](../../preprocessor/hash-import-directive-cpp.md) . Jednak biblioteka typów zawiera odwołanie do innej biblioteki typów, do której nie odwołuje się `#import`. Kompilator nie znalazł tego innego pliku. tlb.
+Do biblioteki typów odwołuje się dyrektywa [#import](../../preprocessor/hash-import-directive-cpp.md) . Jednak biblioteka typów zawiera odwołanie do innej biblioteki typów, do której nie odwołuje się `#import` . Kompilator nie znalazł tego innego pliku. tlb.
 
 Należy zauważyć, że kompilator nie będzie znajdował bibliotek typów w różnych katalogach, jeśli do określenia tych katalogów jest używany program [/i (Dodatkowe katalogi dołączane)](../../build/reference/i-additional-include-directories.md) . Jeśli chcesz, aby kompilator znalazł biblioteki typów w różnych katalogach, Dodaj te katalogi do zmiennej środowiskowej PATH.
 

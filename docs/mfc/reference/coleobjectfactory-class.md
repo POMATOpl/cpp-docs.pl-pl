@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa COleObjectFactory'
 title: Klasa COleObjectFactory
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 165ba7c1918c3ccc5d5d7e0bc067fba86678a3e7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a47165dc367b132c864364a154dce2450207c434
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226873"
 ---
 # <a name="coleobjectfactory-class"></a>Klasa COleObjectFactory
 
@@ -59,61 +60,61 @@ class COleObjectFactory : public CCmdTarget
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleObjectFactory::COleObjectFactory](#coleobjectfactory)|Konstruuje `COleObjectFactory` obiekt.|
+|[COleObjectFactory:: COleObjectFactory](#coleobjectfactory)|Konstruuje `COleObjectFactory` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleObjectFactory::GetClassID](#getclassid)|Zwraca identyfikator klasy OLE obiektów, które tworzy fabryka.|
-|[COleObjectFactory::IsLicenseValid](#islicensevalid)|Określa, czy licencja formantu jest ważna.|
-|[COleObjectFactory::JestReregistered](#isregistered)|Wskazuje, czy fabryka obiektów jest zarejestrowana w bibliotekach DLL systemu OLE.|
-|[COleObjectFactory::Zarejestruj się](#register)|Rejestruje tę fabrykę obiektów za pomocą bibliotek DLL systemu OLE.|
-|[COleObjectFactory::RegisterAll](#registerall)|Rejestruje wszystkie fabryki obiektów aplikacji za pomocą bibliotek DLL systemu OLE.|
-|[COleObjectFactory::Odwołaj](#revoke)|Odwołuje rejestrację tej fabryki obiektów w bibliotekach DLL systemu OLE.|
-|[COleObjectFactory::RevokeAll](#revokeall)|Odwołuje rejestracje obiektów aplikacji za pomocą bibliotek DLL systemu OLE.|
-|[COleObjectFactory::WyrejestrowaćWszywszy](#unregisterall)|Wyrejestrowaj wszystkie fabryki obiektów aplikacji.|
-|[COleObjectFactory::UpdateRegistry](#updateregistry)|Rejestruje tę fabrykę obiektów w rejestrze systemu OLE.|
-|[COleObjectFactory::UpdateRegistryAll](#updateregistryall)|Rejestruje wszystkie fabryki obiektów aplikacji w rejestrze systemu OLE.|
+|[COleObjectFactory:: GetClassID](#getclassid)|Zwraca identyfikator klasy OLE obiektów tworzonych przez tę fabrykę.|
+|[COleObjectFactory:: IsLicenseValid](#islicensevalid)|Określa, czy licencja kontrolki jest prawidłowa.|
+|[COleObjectFactory:: IsRegistered](#isregistered)|Wskazuje, czy fabryka obiektów jest zarejestrowana w bibliotekach DLL systemu OLE.|
+|[COleObjectFactory:: register](#register)|Rejestruje fabrykę obiektów przy użyciu bibliotek DLL systemu OLE.|
+|[COleObjectFactory:: RegisterAll](#registerall)|Rejestruje wszystkie fabryki obiektów aplikacji za pomocą bibliotek DLL systemu OLE.|
+|[COleObjectFactory:: odwołaj](#revoke)|Odwołuje rejestrację fabryki obiektów przy użyciu bibliotek DLL systemu OLE.|
+|[COleObjectFactory:: RevokeAll](#revokeall)|Odwoływanie rejestracji fabryk obiektów aplikacji za pomocą bibliotek DLL systemu OLE.|
+|[COleObjectFactory:: UnregisterAll](#unregisterall)|Wyrejestrowuje wszystkie fabryki obiektów aplikacji.|
+|[COleObjectFactory:: operacja UpdateRegistry](#updateregistry)|Rejestruje fabrykę obiektów przy użyciu rejestru systemu OLE.|
+|[COleObjectFactory:: UpdateRegistryAll](#updateregistryall)|Rejestruje wszystkie fabryki obiektów aplikacji z rejestrem systemu OLE.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleObjectFactory::GetLicenseKey](#getlicensekey)|Żąda unikatowy klucz z biblioteki DLL formantu.|
-|[COleObjectFactory::OnCreateObject](#oncreateobject)|Wywoływana przez strukturę, aby utworzyć nowy obiekt tego typu fabryki.|
-|[COleObjectFactory::VerifyLicenseKey](#verifylicensekey)|Sprawdza, czy klucz osadzony w formancie pasuje do klucza osadzonego w kontenerze.|
-|[COleObjectFactory::VerifyUserLicense](#verifyuserlicense)|Sprawdza, czy formant jest licencjonowany do użycia w czasie projektowania.|
+|[COleObjectFactory:: GetLicenseKey](#getlicensekey)|Żąda unikatowego klucza z biblioteki DLL kontrolki.|
+|[COleObjectFactory:: oncreateobject](#oncreateobject)|Wywoływane przez platformę, aby utworzyć nowy obiekt typu fabryki.|
+|[COleObjectFactory:: VerifyLicenseKey](#verifylicensekey)|Sprawdza, czy klucz osadzony w formancie jest zgodny z kluczem osadzonym w kontenerze.|
+|[COleObjectFactory:: VerifyUserLicense](#verifyuserlicense)|Sprawdza, czy formant jest licencjonowany do użycia w czasie projektowania.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `COleObjectFactory` ma funkcje członkowskie do wykonywania następujących funkcji:
+`COleObjectFactory`Klasa ma funkcje członkowskie do wykonywania następujących funkcji:
 
 - Zarządzanie rejestracją obiektów.
 
-- Aktualizowanie rejestru systemu OLE, a także rejestracji w czasie wykonywania, która informuje OLE, że obiekty są uruchomione i gotowe do odbierania wiadomości.
+- Aktualizacja rejestru systemu OLE, a także Rejestracja w czasie wykonywania, która informuje OLE, że obiekty są uruchomione i gotowe do odbierania komunikatów.
 
-- Wymuszanie licencjonowania przez ograniczenie użycia formantu do licencjonowanych deweloperów w czasie projektowania i licencjonowanych aplikacji w czasie wykonywania.
+- Wymuszanie licencjonowania przez ograniczenie użycia kontroli do licencjonowanych deweloperów w czasie projektowania i Licencjonowanie aplikacji w czasie wykonywania.
 
-- Rejestrowanie fabryk obiektów kontrolnych w rejestrze systemu OLE.
+- Rejestrowanie fabryk obiektów kontroli przy użyciu rejestru systemu OLE.
 
-Aby uzyskać więcej informacji na temat tworzenia obiektów, zobacz artykuły [Obiekty danych i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md) oraz Obiekty danych i źródła [danych: Tworzenie i niszczenie](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Aby uzyskać więcej informacji na temat rejestracji, zobacz artykuł [Rejestracja](../../mfc/registration.md).
+Aby uzyskać więcej informacji na temat tworzenia obiektów, zobacz artykuł [obiekty danych i źródła danych (OLE)](../../mfc/data-objects-and-data-sources-ole.md) oraz [obiekty danych i źródła danych: Tworzenie i niszczenie](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Aby uzyskać więcej informacji na temat rejestracji, zobacz [rejestracja](../../mfc/registration.md)artykułu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 `COleObjectFactory`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
-## <a name="coleobjectfactorycoleobjectfactory"></a><a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory
+## <a name="coleobjectfactorycoleobjectfactory"></a><a name="coleobjectfactory"></a> COleObjectFactory:: COleObjectFactory
 
-Konstruuje `COleObjectFactory` obiekt, inicjuje go jako fabrykę obiektów niezarejestrowanych i dodaje go do listy fabryk.
+Konstruuje `COleObjectFactory` obiekt, inicjuje go jako niezarejestrowaną fabrykę obiektów i dodaje go do listy fabryk.
 
 ```
 COleObjectFactory(
@@ -132,40 +133,40 @@ COleObjectFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*Clsid*<br/>
-Odwołanie do identyfikatora klasy OLE, który reprezentuje ta fabryka obiektów.
+*Identyfikator*<br/>
+Odwołanie do identyfikatora klasy OLE reprezentowanego przez fabrykę obiektów.
 
-*pRuntimeClass (Klasa pRuntime)*<br/>
-Wskaźnik do klasy czasu wykonywania obiektów C++ tej fabryki można utworzyć.
+*pRuntimeClass*<br/>
+Wskaźnik do klasy czasu wykonywania obiektów C++, które ta fabryka może utworzyć.
 
 *bMultiInstance*<br/>
-Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąpień. Jeśli TRUE, wiele wystąpień aplikacji są uruchamiane dla każdego żądania, aby utworzyć obiekt.
+Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąpień. W przypadku wartości TRUE dla każdego żądania utworzenia obiektu uruchamiane jest wiele wystąpień aplikacji.
 
-*nPłgi*<br/>
+*nFlags*<br/>
 Zawiera co najmniej jedną z następujących flag:
 
-- `afxRegDefault`Ustawia model gwintowania na ThreadingModel=Apartment.
+- `afxRegDefault` Ustawia model wątkowości na ThreadingModel = Apartment.
 
-- `afxRegInsertable`Umożliwia wyświetlenie formantu w oknie dialogowym **Wstawianie obiektu** dla obiektów OLE.
+- `afxRegInsertable` Umożliwia wyświetlenie formantu w oknie dialogowym **Wstaw obiekt** dla obiektów OLE.
 
-- `afxRegApartmentThreading`Ustawia model wątków w rejestrze na ThreadingModel=Apartment.
+- `afxRegApartmentThreading` Ustawia model wątkowości w rejestrze na ThreadingModel = Apartment.
 
-- `afxRegFreeThreading`Ustawia model wątków w rejestrze na ThreadingModel=Free.
+- `afxRegFreeThreading` Ustawia model wątkowości w rejestrze w taki sposób, aby ThreadingModel = Free.
 
-   Można połączyć dwie `afxRegApartmentThreading` `afxRegFreeThreading` flagi i ustawić ThreadingModel=Both. Zobacz [InprocServer32](/windows/win32/com/inprocserver32) w windows SDK, aby uzyskać więcej informacji na temat rejestracji modelu wątkowości.
+   Można połączyć dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` ustawić ThreadingModel = oba. Aby uzyskać więcej informacji na temat rejestracji modelu wątków, zobacz [InprocServer32](/windows/win32/com/inprocserver32) w Windows SDK.
 
 *lpszProgID*<br/>
-Wskaźnik do ciągu zawierającego identyfikator programu słownego, taki jak "Microsoft Excel".
+Wskaźnik do ciągu zawierającego werbalny identyfikator programu, taki jak "Microsoft Excel".
 
 ### <a name="remarks"></a>Uwagi
 
-Aby użyć obiektu, należy go jednak zarejestrować.
+Aby użyć obiektu, należy jednak go zarejestrować.
 
-Aby uzyskać więcej informacji, zobacz [ClsID klucz](/windows/win32/com/clsid-key-hklm) w windows SDK.
+Aby uzyskać więcej informacji, zobacz [klucz CLSID](/windows/win32/com/clsid-key-hklm) w Windows SDK.
 
-## <a name="coleobjectfactorygetclassid"></a><a name="getclassid"></a>COleObjectFactory::GetClassID
+## <a name="coleobjectfactorygetclassid"></a><a name="getclassid"></a> COleObjectFactory:: GetClassID
 
-Zwraca odwołanie do identyfikatora klasy OLE, który reprezentuje ta fabryka.
+Zwraca odwołanie do identyfikatora klasy OLE reprezentowanego przez fabrykę.
 
 ```
 REFCLSID GetClassID() const;
@@ -173,15 +174,15 @@ REFCLSID GetClassID() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do identyfikatora klasy OLE, który reprezentuje ta fabryka.
+Odwołanie do identyfikatora klasy OLE reprezentowanego przez tę fabrykę.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [ClsID klucz](/windows/win32/com/clsid-key-hklm) w windows SDK.
+Aby uzyskać więcej informacji, zobacz [klucz CLSID](/windows/win32/com/clsid-key-hklm) w Windows SDK.
 
-## <a name="coleobjectfactorygetlicensekey"></a><a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey
+## <a name="coleobjectfactorygetlicensekey"></a><a name="getlicensekey"></a> COleObjectFactory:: GetLicenseKey
 
-Żąda unikatowego klucza licencyjnego z biblioteki DLL formantu i przechowuje go w BSTR wskazanym przez *pbstrKey*.
+Żąda unikatowego klucza licencji z biblioteki DLL kontrolki i zapisuje ją w postaci BSTR wskazanej przez *pbstrKey*.
 
 ```
 virtual BOOL GetLicenseKey(
@@ -191,23 +192,23 @@ virtual BOOL GetLicenseKey(
 
 ### <a name="parameters"></a>Parametry
 
-*dwReserved (niesłuszne)*<br/>
+*dwReserved*<br/>
 Zarezerwowane do użytku w przyszłości.
 
-*klawisz pbstrKey*<br/>
-Wskaźnik do BSTR, który będzie przechowywać klucz licencyjny.
+*pbstrKey*<br/>
+Wskaźnik na BSTR, który będzie przechowywać klucz licencji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość niezerowa, jeśli ciąg klucza licencyjnego nie ma wartości NULL; w przeciwnym razie 0.
+Różne od zera, jeśli ciąg klucza licencji nie ma wartości NULL; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej funkcji zwraca wartość 0 i nie przechowuje niczego w BSTR. Jeśli używasz MFC ActiveX ControlWizard do utworzenia projektu, ControlWizard dostarcza zastąpienie, które pobiera klucz licencyjny formantu.
+Domyślna implementacja tej funkcji zwraca 0 i nie przechowuje niczego w elemencie BSTR. Jeśli do utworzenia projektu używasz programu MFC ActiveX ControlWizard, ControlWizard dostarcza przesłonięcie, które Pobiera klucz licencji formantu.
 
-## <a name="coleobjectfactoryislicensevalid"></a><a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid
+## <a name="coleobjectfactoryislicensevalid"></a><a name="islicensevalid"></a> COleObjectFactory:: IsLicenseValid
 
-Określa, czy licencja formantu jest ważna.
+Określa, czy licencja kontrolki jest prawidłowa.
 
 ```
 BOOL IsLicenseValid();
@@ -215,11 +216,11 @@ BOOL IsLicenseValid();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli successul; w przeciwnym razie fałszywe.
+PRAWDA, jeśli successul; w przeciwnym razie false.
 
-## <a name="coleobjectfactoryisregistered"></a><a name="isregistered"></a>COleObjectFactory::JestReregistered
+## <a name="coleobjectfactoryisregistered"></a><a name="isregistered"></a> COleObjectFactory:: IsRegistered
 
-Zwraca wartość niezerową, jeśli fabryka jest zarejestrowana w bibliotekach DLL systemu OLE.
+Zwraca wartość różną od zera, jeśli fabryka jest zarejestrowana w bibliotekach DLL systemu OLE.
 
 ```
 virtual BOOL IsRegistered() const;
@@ -227,11 +228,11 @@ virtual BOOL IsRegistered() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli fabryka jest zarejestrowana; w przeciwnym razie 0.
+Różne od zera, jeśli fabryka jest zarejestrowana; w przeciwnym razie 0.
 
-## <a name="coleobjectfactoryoncreateobject"></a><a name="oncreateobject"></a>COleObjectFactory::OnCreateObject
+## <a name="coleobjectfactoryoncreateobject"></a><a name="oncreateobject"></a> COleObjectFactory:: oncreateobject
 
-Wywoływana przez strukturę, aby utworzyć nowy obiekt.
+Wywoływane przez platformę, by utworzyć nowy obiekt.
 
 ```
 virtual CCmdTarget* OnCreateObject();
@@ -239,15 +240,15 @@ virtual CCmdTarget* OnCreateObject();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do utworzonego obiektu. Może zgłosić wyjątek pamięci, jeśli zakończy się niepowodzeniem.
+Wskaźnik do utworzonego obiektu. Może zgłosić wyjątek pamięci, jeśli nie powiedzie się.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąpokaj tę funkcję, aby utworzyć obiekt z czegoś innego niż [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) przekazany do konstruktora.
+Przesłoń tę funkcję, aby utworzyć obiekt z elementu innego niż [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) do konstruktora.
 
-## <a name="coleobjectfactoryregister"></a><a name="register"></a>COleObjectFactory::Zarejestruj się
+## <a name="coleobjectfactoryregister"></a><a name="register"></a> COleObjectFactory:: register
 
-Rejestruje tę fabrykę obiektów za pomocą bibliotek DLL systemu OLE.
+Rejestruje fabrykę obiektów przy użyciu bibliotek DLL systemu OLE.
 
 ```
 virtual BOOL Register();
@@ -255,13 +256,13 @@ virtual BOOL Register();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli fabryka jest pomyślnie zarejestrowana; w przeciwnym razie 0.
+Różne od zera, jeśli fabryka została pomyślnie zarejestrowana; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana przez [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) po uruchomieniu aplikacji.
+Ta funkcja jest zwykle wywoływana przez [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) , gdy aplikacja jest uruchamiana.
 
-## <a name="coleobjectfactoryregisterall"></a><a name="registerall"></a>COleObjectFactory::RegisterAll
+## <a name="coleobjectfactoryregisterall"></a><a name="registerall"></a> COleObjectFactory:: RegisterAll
 
 Rejestruje wszystkie fabryki obiektów aplikacji za pomocą bibliotek DLL systemu OLE.
 
@@ -271,15 +272,15 @@ static BOOL PASCAL RegisterAll();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli fabryki są pomyślnie zarejestrowane; w przeciwnym razie 0.
+Różne od zera, jeśli fabryki zostały pomyślnie zarejestrowane; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana przez [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) po uruchomieniu aplikacji.
+Ta funkcja jest zwykle wywoływana przez [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) , gdy aplikacja jest uruchamiana.
 
-## <a name="coleobjectfactoryrevoke"></a><a name="revoke"></a>COleObjectFactory::Odwołaj
+## <a name="coleobjectfactoryrevoke"></a><a name="revoke"></a> COleObjectFactory:: odwołaj
 
-Odwołuje rejestrację tej fabryki obiektów w bibliotekach DLL systemu OLE.
+Odwołuje rejestrację fabryki obiektów przy użyciu bibliotek DLL systemu OLE.
 
 ```cpp
 void Revoke();
@@ -287,11 +288,11 @@ void Revoke();
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę funkcję automatycznie przed zakończeniem aplikacji. W razie potrzeby wywołać go z zastąpienia [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
+Struktura automatycznie wywołuje tę funkcję przed zakończeniem działania aplikacji. W razie potrzeby Wywołaj ją z zastąpienia elementu [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
 
-## <a name="coleobjectfactoryrevokeall"></a><a name="revokeall"></a>COleObjectFactory::RevokeAll
+## <a name="coleobjectfactoryrevokeall"></a><a name="revokeall"></a> COleObjectFactory:: RevokeAll
 
-Odwołuje rejestracje wszystkich fabryk obiektów aplikacji za pomocą bibliotek DLL systemu OLE.
+Odwołuje wszystkie rejestracje fabryk obiektów aplikacji za pomocą bibliotek DLL systemu OLE.
 
 ```
 static void PASCAL RevokeAll();
@@ -299,11 +300,11 @@ static void PASCAL RevokeAll();
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura wywołuje tę funkcję automatycznie przed zakończeniem aplikacji. W razie potrzeby wywołać go z zastąpienia [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
+Struktura automatycznie wywołuje tę funkcję przed zakończeniem działania aplikacji. W razie potrzeby Wywołaj ją z zastąpienia elementu [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
 
-## <a name="coleobjectfactoryunregisterall"></a><a name="unregisterall"></a>COleObjectFactory::WyrejestrowaćWszywszy
+## <a name="coleobjectfactoryunregisterall"></a><a name="unregisterall"></a> COleObjectFactory:: UnregisterAll
 
-Wyrejestrowaj wszystkie fabryki obiektów aplikacji.
+Wyrejestrowuje wszystkie fabryki obiektów aplikacji.
 
 ```
 static BOOL PASCAL UnregisterAll();
@@ -311,11 +312,11 @@ static BOOL PASCAL UnregisterAll();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli się powiedzie; w przeciwnym razie FALSE.
+Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
 
-## <a name="coleobjectfactoryupdateregistry"></a><a name="updateregistry"></a>COleObjectFactory::UpdateRegistry
+## <a name="coleobjectfactoryupdateregistry"></a><a name="updateregistry"></a> COleObjectFactory:: operacja UpdateRegistry
 
-Rejestruje wszystkie fabryki obiektów aplikacji w rejestrze systemu OLE.
+Rejestruje wszystkie fabryki obiektów aplikacji z rejestrem systemu OLE.
 
 ```cpp
 void UpdateRegistry(LPCTSTR lpszProgID = NULL);
@@ -325,24 +326,24 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ### <a name="parameters"></a>Parametry
 
 *lpszProgID*<br/>
-Wskaźnik do ciągu zawierającego identyfikator programu czytelny dla człowieka, taki jak "Excel.Document.5".
+Wskaźnik na ciąg zawierający identyfikator programu czytelny dla człowieka, taki jak "Excel.Document. 5".
 
-*Bregister*<br/>
-Określa, czy fabryka obiektów klasy kontrolnej ma zostać zarejestrowana.
+*bRegister*<br/>
+Określa, czy fabryka obiektów klasy kontrolki ma zostać zarejestrowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Krótkie dyskusje na temat dwóch form tej funkcji następują:
+Krótkie dyskusje na temat dwóch formularzy dla tej funkcji są następujące:
 
-- **UpdateRegistry(** `lpszProgID` **)** Rejestruje tę fabrykę obiektów w rejestrze systemu OLE. Ta funkcja jest zwykle wywoływana przez [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) po uruchomieniu aplikacji.
+- **Operacja UpdateRegistry (** `lpszProgID` **)** rejestruje fabrykę obiektów z rejestrem systemu OLE. Ta funkcja jest zwykle wywoływana przez [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) , gdy aplikacja jest uruchamiana.
 
-- **UpdateRegistry(** `bRegister` **)** Ta forma funkcji jest nadpisywalna. Jeśli *bRegister* jest TRUE, ta funkcja rejestruje klasy kontroli z rejestru systemu. W przeciwnym razie wyrejestruje klasę.
+- **Operacja UpdateRegistry (** `bRegister` **)** ten formularz funkcji jest możliwy do zastąpienia. Jeśli *bRegister* ma wartość true, ta funkcja rejestruje klasę formantów z rejestrem systemowym. W przeciwnym razie wyrejestruje klasę.
 
-   Jeśli używasz MFC ActiveX ControlWizard do utworzenia projektu, ControlWizard dostarcza zastąpienie tej czystej funkcji wirtualnej.
+   Jeśli do utworzenia projektu używasz programu MFC ActiveX ControlWizard, ControlWizard dostarcza przesłonięcie tej czystej funkcji wirtualnej.
 
-## <a name="coleobjectfactoryupdateregistryall"></a><a name="updateregistryall"></a>COleObjectFactory::UpdateRegistryAll
+## <a name="coleobjectfactoryupdateregistryall"></a><a name="updateregistryall"></a> COleObjectFactory:: UpdateRegistryAll
 
-Rejestruje wszystkie fabryki obiektów aplikacji w rejestrze systemu OLE.
+Rejestruje wszystkie fabryki obiektów aplikacji z rejestrem systemu OLE.
 
 ```
 static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
@@ -350,20 +351,20 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*Bregister*<br/>
-Określa, czy fabryka obiektów klasy kontrolnej ma zostać zarejestrowana.
+*bRegister*<br/>
+Określa, czy fabryka obiektów klasy kontrolki ma zostać zarejestrowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli fabryki są pomyślnie zaktualizowane; w przeciwnym razie 0.
+Różne od zera, jeśli fabryki zostały pomyślnie zaktualizowane; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest zwykle wywoływana przez [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) po uruchomieniu aplikacji.
+Ta funkcja jest zwykle wywoływana przez [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) , gdy aplikacja jest uruchamiana.
 
-## <a name="coleobjectfactoryverifylicensekey"></a><a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey
+## <a name="coleobjectfactoryverifylicensekey"></a><a name="verifylicensekey"></a> COleObjectFactory:: VerifyLicenseKey
 
-Sprawdza, czy kontener jest licencjonowany do używania formantu OLE.
+Sprawdza, czy kontener ma licencję na korzystanie z kontrolki OLE.
 
 ```
 virtual BOOL VerifyLicenseKey(BSTR bstrKey);
@@ -371,24 +372,24 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 
 ### <a name="parameters"></a>Parametry
 
-*klawisz bstrKey*<br/>
-BSTR przechowywania wersji kontenera ciągu licencji.
+*bstrKey*<br/>
+BSTR — przechowywanie wersji ciągu licencji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli licencja w czasie wykonywania jest ważna; w przeciwnym razie 0.
+Różne od zera, jeśli licencja czasu wykonywania jest prawidłowa; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Wersja domyślna wywołuje [GetLicenseKey,](#getlicensekey) aby uzyskać kopię ciągu licencji formantu i porównuje go z ciągiem w *bstrKey*. Jeśli dwa ciągi są zgodne, funkcja zwraca wartość niezerową; w przeciwnym razie zwraca 0.
+Domyślna wersja wywołuje [GetLicenseKey](#getlicensekey) , aby uzyskać kopię ciągu licencji kontrolki i porównuje ją z ciągiem w *bstrKey*. Jeśli dwa ciągi są zgodne, funkcja zwraca wartość różną od zera. w przeciwnym razie zwraca wartość 0.
 
-Tę funkcję można zastąpić, aby zapewnić dostosowaną weryfikację licencji.
+Można zastąpić tę funkcję, aby zapewnić dostosowaną weryfikację licencji.
 
-Funkcja [VerifyUserLicense](#verifyuserlicense) weryfikuje licencję w czasie projektowania.
+Funkcja [VerifyUserLicense](#verifyuserlicense) weryfikuje licencję czasu projektowania.
 
-## <a name="coleobjectfactoryverifyuserlicense"></a><a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense
+## <a name="coleobjectfactoryverifyuserlicense"></a><a name="verifyuserlicense"></a> COleObjectFactory:: VerifyUserLicense
 
-Weryfikuje licencję czasu projektowania dla formantu OLE.
+Weryfikuje licencję czasu projektowania dla kontrolki OLE.
 
 ```
 virtual BOOL VerifyUserLicense();
@@ -396,10 +397,10 @@ virtual BOOL VerifyUserLicense();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli licencja na czas projektowania jest ważna; w przeciwnym razie 0.
+Niezerowe, jeśli licencja czasu projektowania jest prawidłowa; w przeciwnym razie 0.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasa COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)
+[Klasa element COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)

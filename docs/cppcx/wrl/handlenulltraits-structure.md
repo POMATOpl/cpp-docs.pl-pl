@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o strukturze HANDLENullTraits
 title: HANDLENullTraits — Struktura
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: a7ce730b8d723a839c5b509c825cff84111ca613
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14d5eaab36be24b5450b66c35c9cf5cbba39ea4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229252"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits — Struktura
 
@@ -53,7 +54,7 @@ Nazwa                                                  | Opis
 
 **Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits:: Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a> HANDLENullTraits:: Close
 
 Zamyka określone dojście.
 
@@ -65,14 +66,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
+*h*<br/>
 Uchwyt do zamknięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 **`true`** Jeśli dojście *h* zostało zamknięte pomyślnie; w przeciwnym razie **`false`** .
 
-## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits:: GetInvalidValue —
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> HANDLENullTraits:: GetInvalidValue —
 
 Reprezentuje nieprawidłowe dojście.
 

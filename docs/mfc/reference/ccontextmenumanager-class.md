@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: Klasa CContextMenuManager'
 title: Klasa CContextMenuManager
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: f026b493ae5f7ae90eccc416d8920d8b699e975d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754807"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227822"
 ---
 # <a name="ccontextmenumanager-class"></a>Klasa CContextMenuManager
 
-Obiekt `CContextMenuManager` zarządza menu skrótów, znany również jako menu kontekstowe.
+`CContextMenuManager`Obiekt zarządza menu skrótów, znanym również jako menu kontekstowe.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,52 +53,52 @@ class CContextMenuManager : public CObject
 |Nazwa|Opis|
 |----------|-----------------|
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Konstruuje `CContextMenuManager` obiekt.|
-|`CContextMenuManager::~CContextMenuManager`|Destruktora.|
+|`CContextMenuManager::~CContextMenuManager`|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CContextMenuManager::Dodajmenu](#addmenu)|Dodaje nowe menu skrótów.|
-|[CContextMenuManager::GetMenuById](#getmenubyid)|Zwraca dojście do menu skojarzonego z podanym identyfikatorem zasobu.|
-|[CContextMenuManager::GetMenuByName](#getmenubyname)|Zwraca dojście do menu, które pasuje do podanej nazwy menu.|
+|[CContextMenuManager:: Add— menu](#addmenu)|Dodaje nowe menu skrótów.|
+|[CContextMenuManager::GetMenuById](#getmenubyid)|Zwraca uchwyt do menu skojarzonego z podanym IDENTYFIKATORem zasobu.|
+|[CContextMenuManager::GetMenuByName](#getmenubyname)|Zwraca dojście do menu, które jest zgodne z podaną nazwą menu.|
 |[CContextMenuManager::GetMenuNames](#getmenunames)|Zwraca listę nazw menu.|
-|[CContextMenuManager::LoadState](#loadstate)|Ładuje menu skrótów przechowywane w rejestrze systemu Windows.|
-|[CContextMenuManager::ResetState](#resetstate)|Czyści menu skrótów z menedżera menu kontekstowego.|
-|[CContextMenuManager::Zapisz stan](#savestate)|Zapisuje menu skrótów w rejestrze systemu Windows.|
-|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Określa, `CContextMenuManager` czy menu aktywnych skrótów zamyka się po wyświetleniu nowego menu skrótów.|
+|[CContextMenuManager:: LoadState](#loadstate)|Ładuje menu skrótów przechowywane w rejestrze systemu Windows.|
+|[CContextMenuManager:: elementu ResetState](#resetstate)|Czyści menu skrótów z poziomu Menedżera menu kontekstowego.|
+|[CContextMenuManager:: SaveState](#savestate)|Zapisuje menu skrótów do rejestru systemu Windows.|
+|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Określa, czy `CContextMenuManager` Zamyka aktywne menu skrótów, gdy pokazuje nowe menu skrótów.|
 |[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Wyświetla określone menu skrótów.|
 |[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Wyświetla określone menu skrótów. Zwraca indeks wybranego polecenia menu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CContextMenuManager`zarządza menu skrótów i upewnia się, że mają one spójny wygląd.
+`CContextMenuManager` zarządza menu skrótów i zapewnia spójny wygląd.
 
-Obiektu nie należy `CContextMenuManager` tworzyć ręcznie. Struktura aplikacji tworzy `CContextMenuManager` obiekt. Jednak należy wywołać [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) po zainicjowaniu aplikacji. Po zainicjowaniu menedżera kontekstu, użyj metody [CWinAppEx::GetContextMenuManager,](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) aby uzyskać wskaźnik do menedżera kontekstu dla aplikacji.
+Nie należy tworzyć `CContextMenuManager` obiektu ręcznie. Struktura aplikacji tworzy `CContextMenuManager` obiekt. Należy jednak wywołać [CWinAppEx:: InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) , gdy aplikacja zostanie zainicjowana. Po zainicjowaniu Menedżera kontekstu użyj metody [CWinAppEx::](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) pretainmanager, aby uzyskać wskaźnik do Menedżera kontekstu dla aplikacji.
 
-Menu skrótów można tworzyć w `AddMenu`czasie wykonywania, wywołując program . Jeśli chcesz wyświetlić menu bez uprzedniego odbierania danych wejściowych użytkownika, zadzwoń `ShowPopupMenu`. `TrackPopupMenu`jest używany, gdy chcesz utworzyć menu i czekać na dane wejściowe użytkownika. `TrackPopupMenu`zwraca indeks wybranego polecenia lub 0, jeśli użytkownik zakończył pracę bez wybierania czegokolwiek.
+Możesz utworzyć menu skrótów w środowisku uruchomieniowym, wywołując metodę `AddMenu` . Jeśli chcesz wyświetlić menu bez pierwszego odebrania danych wejściowych przez użytkownika, wywołaj `ShowPopupMenu` . `TrackPopupMenu` służy do tworzenia menu i oczekiwania na dane wejściowe użytkownika. `TrackPopupMenu` zwraca indeks wybranego polecenia lub 0, jeśli użytkownik zakończył pracę bez zaznaczania żadnych elementów.
 
-Można `CContextMenuManager` również zapisać i załadować swój stan do rejestru systemu Windows.
+`CContextMenuManager`Może również zapisać i załadować swój stan do rejestru systemu Windows.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak `CContextMenuManager` dodać menu do obiektu i jak nie `CContextMenuManager` zamykać aktywnego menu podręcznego, gdy obiekt wyświetla nowe menu podręczne. Ten fragment kodu jest częścią [przykładu Strony niestandardowe](../../overview/visual-cpp-samples.md).
+Poniższy przykład pokazuje, jak dodać menu do `CContextMenuManager` obiektu i jak zamknąć aktywne menu podręczne, gdy `CContextMenuManager` obiekt wyświetla nowy menu podręczne. Ten fragment kodu jest częścią [przykładu stron niestandardowych](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CContextMenuManager`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcontextmenumanager.h
+**Nagłówek:** afxcontextmenumanager. h
 
-## <a name="ccontextmenumanageraddmenu"></a><a name="addmenu"></a>CContextMenuManager::Dodajmenu
+## <a name="ccontextmenumanageraddmenu"></a><a name="addmenu"></a> CContextMenuManager:: Add— menu
 
-Dodaje nowe menu skrótów do [programu CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
+Dodaje nowe menu skrótów do [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 BOOL AddMenu(
@@ -111,26 +112,26 @@ BOOL AddMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*interfejs użytkownika uiMenuNameResId*<br/>
-[w] Identyfikator zasobu dla ciągu zawierającego nazwę nowego menu.
+*uiMenuNameResId*<br/>
+podczas Identyfikator zasobu dla ciągu, który zawiera nazwę nowego menu.
 
-*interfejs użytkownika uiMenuResId*<br/>
-[w] Identyfikator zasobu menu.
+*uiMenuResId*<br/>
+podczas Identyfikator zasobu menu.
 
-*Lpszname*<br/>
-[w] Ciąg zawierający nazwę nowego menu.
+*lpszName*<br/>
+podczas Ciąg, który zawiera nazwę nowego menu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli metoda zakończyła się pomyślnie; 0, jeśli metoda nie powiedzie się.
+Niezerowe, jeśli metoda zakończyła się pomyślnie; 0, jeśli metoda zakończy się niepowodzeniem.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda kończy się *niepowodzeniem, jeśli uiMenuResId* jest nieprawidłowy lub jeśli inne menu o tej samej nazwie jest już w `CContextMenuManager`.
+Ta metoda kończy się niepowodzeniem, jeśli *uiMenuResId* jest nieprawidłowa lub jeśli inne menu o tej samej nazwie już znajduje się w `CContextMenuManager` .
 
-## <a name="ccontextmenumanagerccontextmenumanager"></a><a name="ccontextmenumanager"></a>CContextMenuManager::CContextMenuManager
+## <a name="ccontextmenumanagerccontextmenumanager"></a><a name="ccontextmenumanager"></a> CContextMenuManager::CContextMenuManager
 
-Konstruuje [obiekt CContextMenuManager.](../../mfc/reference/ccontextmenumanager-class.md)
+Konstruuje obiekt [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) .
 
 ```
 CContextMenuManager();
@@ -138,11 +139,11 @@ CContextMenuManager();
 
 ### <a name="remarks"></a>Uwagi
 
-W większości przypadków nie należy `CContextMenuManager` tworzyć ręcznie. Struktura aplikacji tworzy `CContextMenuManager` obiekt. Należy wywołać [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) podczas inicjowania aplikacji. Aby uzyskać wskaźnik do menedżera kontekstu, zadzwoń [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).
+W większości przypadków nie należy tworzyć `CContextMenuManager` ręcznie. Struktura aplikacji tworzy `CContextMenuManager` obiekt. Podczas inicjowania aplikacji należy wywołać [CWinAppEx:: InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) . Aby uzyskać wskaźnik do Menedżera kontekstu, wywołaj metodę [CWinAppEx::](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)pregetmanager.
 
-## <a name="ccontextmenumanagergetmenubyid"></a><a name="getmenubyid"></a>CContextMenuManager::GetMenuById
+## <a name="ccontextmenumanagergetmenubyid"></a><a name="getmenubyid"></a> CContextMenuManager::GetMenuById
 
-Zwraca dojście do menu skojarzonego z danym identyfikatorem zasobu.
+Zwraca uchwyt do menu skojarzonego z danym IDENTYFIKATORem zasobu.
 
 ```
 HMENU GetMenuById(UINT nMenuResId) const;
@@ -151,13 +152,13 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ### <a name="parameters"></a>Parametry
 
 *nMenuResId*<br/>
-[w] Identyfikator zasobu dla menu.
+podczas Identyfikator zasobu dla menu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt do skojarzonego menu `NULL` lub jeśli nie znaleziono menu.
+Dojście do powiązanego menu lub `NULL` Jeśli menu nie zostanie odnalezione.
 
-## <a name="ccontextmenumanagergetmenubyname"></a><a name="getmenubyname"></a>CContextMenuManager::GetMenuByName
+## <a name="ccontextmenumanagergetmenubyname"></a><a name="getmenubyname"></a> CContextMenuManager::GetMenuByName
 
 Zwraca uchwyt do określonego menu.
 
@@ -169,21 +170,21 @@ HMENU GetMenuByName(
 
 ### <a name="parameters"></a>Parametry
 
-*Lpszname*<br/>
-[w] Ciąg zawierający nazwę menu do pobrania.
+*lpszName*<br/>
+podczas Ciąg, który zawiera nazwę menu do pobrania.
 
 *puiOrigResID*<br/>
-[na zewnątrz] Wskaźnik do UINT. Ten parametr zawiera identyfikator zasobu określonego menu, jeśli zostanie znaleziony.
+określoną Wskaźnik do typu UINT. Ten parametr zawiera identyfikator zasobu określonego menu, jeśli został znaleziony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dojście do menu, które pasuje do nazwy określonej przez *lpszName*. NULL, jeśli nie ma menu o nazwie *lpszName*.
+Uchwyt do menu, który jest zgodny z nazwą określoną przez *lpszName*. Wartość NULL, jeśli nie istnieje menu o nazwie *lpszName*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ta metoda znajdzie menu zgodne z `GetMenuByName` *lpszName,* przechowuje identyfikator zasobu menu w parametrze *puiOrigResID*.
+Jeśli ta metoda odnajdzie menu, które pasuje do *lpszName*, `GetMenuByName` przechowuje identyfikator zasobu menu w parametrze *puiOrigResID*.
 
-## <a name="ccontextmenumanagergetmenunames"></a><a name="getmenunames"></a>CContextMenuManager::GetMenuNames
+## <a name="ccontextmenumanagergetmenunames"></a><a name="getmenunames"></a> CContextMenuManager::GetMenuNames
 
 Zwraca listę nazw menu dodanych do [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
@@ -193,12 +194,12 @@ void GetMenuNames(CStringList& listOfNames) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nazwa listy*<br/>
-[na zewnątrz] Odwołanie do [parametru CStringList.](../../mfc/reference/cstringlist-class.md) Ta metoda zapisuje listę nazw menu do tego parametru.
+*listOfNames*<br/>
+określoną Odwołanie do parametru [CStringList](../../mfc/reference/cstringlist-class.md) . Ta metoda zapisuje listę nazw menu dla tego parametru.
 
-## <a name="ccontextmenumanagerloadstate"></a><a name="loadstate"></a>CContextMenuManager::LoadState
+## <a name="ccontextmenumanagerloadstate"></a><a name="loadstate"></a> CContextMenuManager:: LoadState
 
-Ładuje informacje skojarzone z [CContextMenuManager Klasy](../../mfc/reference/ccontextmenumanager-class.md) z rejestru systemu Windows.
+Ładuje informacje skojarzone z [klasą CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) z rejestru systemu Windows.
 
 ```
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -207,21 +208,21 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[w] Ciąg zawierający ścieżkę względną klucza rejestru.
+podczas Ciąg, który zawiera ścieżkę względną klucza rejestru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *lpszProfileName* nie jest ścieżką bezwzględną wpisu rejestru. Jest to ścieżka względna, która jest dodawana na końcu domyślnego klucza rejestru dla aplikacji. Aby uzyskać lub ustawić domyślny klucz rejestru, należy użyć metod [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.
+Parametr *lpszProfileName* nie jest ścieżką bezwzględną dla wpisu rejestru. Jest to ścieżka względna, która jest dodawana na końcu domyślnego klucza rejestru dla aplikacji. Aby uzyskać lub ustawić domyślny klucz rejestru, należy użyć metod [CWinAppEx:: GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx:: SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.
 
-Użyj metody [CContextMenuManager::SaveState,](#savestate) aby zapisać menu skrótów w rejestrze.
+Użyj metody [CContextMenuManager:: SaveState](#savestate) , aby zapisać menu skrótów do rejestru.
 
-## <a name="ccontextmenumanagerresetstate"></a><a name="resetstate"></a>CContextMenuManager::ResetState
+## <a name="ccontextmenumanagerresetstate"></a><a name="resetstate"></a> CContextMenuManager:: elementu ResetState
 
-Usuwa wszystkie elementy z menu skrótów skojarzonych z [klasą CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
+Czyści wszystkie elementy z menu skrótów skojarzonych z [klasą CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 virtual BOOL ResetState();
@@ -229,15 +230,15 @@ virtual BOOL ResetState();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli metoda zakończy się pomyślnie; FAŁSZ, jeśli wystąpi błąd.
+Ma wartość TRUE, jeśli metoda zakończy się pomyślnie. Wartość FALSE, jeśli wystąpi błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda czyści menu podręczne i usuwa `CContextMenuManager`je z pliku .
+Ta metoda czyści menu podręczne i usuwa je z `CContextMenuManager` .
 
-## <a name="ccontextmenumanagersavestate"></a><a name="savestate"></a>CContextMenuManager::Zapisz stan
+## <a name="ccontextmenumanagersavestate"></a><a name="savestate"></a> CContextMenuManager:: SaveState
 
-Zapisuje informacje skojarzone z [CContextMenuManager Klasy](../../mfc/reference/ccontextmenumanager-class.md) do rejestru systemu Windows.
+Zapisuje informacje skojarzone z [klasą CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) w rejestrze systemu Windows.
 
 ```
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -246,21 +247,21 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[w] Ciąg zawierający ścieżkę względną klucza rejestru.
+podczas Ciąg, który zawiera ścieżkę względną klucza rejestru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *lpszProfileName* nie jest ścieżką bezwzględną wpisu rejestru. Jest to ścieżka względna, która jest dodawana na końcu domyślnego klucza rejestru dla aplikacji. Aby uzyskać lub ustawić domyślny klucz rejestru, należy użyć metod [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.
+Parametr *lpszProfileName* nie jest ścieżką bezwzględną dla wpisu rejestru. Jest to ścieżka względna, która jest dodawana na końcu domyślnego klucza rejestru dla aplikacji. Aby uzyskać lub ustawić domyślny klucz rejestru, należy użyć metod [CWinAppEx:: GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx:: SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.
 
-Użyj metody [CContextMenuManager::LoadState,](#loadstate) aby załadować menu skrótów z rejestru.
+Użyj metody [CContextMenuManager:: LoadState](#loadstate) , aby załadować menu skrótów z rejestru.
 
-## <a name="ccontextmenumanagersetdontcloseactivemenu"></a><a name="setdontcloseactivemenu"></a>CContextMenuManager::SetDontCloseActiveMenu
+## <a name="ccontextmenumanagersetdontcloseactivemenu"></a><a name="setdontcloseactivemenu"></a> CContextMenuManager::SetDontCloseActiveMenu
 
-Określa, czy [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) zamyka aktywne menu podręczne, gdy wyświetla nowe menu podręczne.
+Określa, czy [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) Zamyka aktywne menu podręczne po wyświetleniu nowego menu podręcznego.
 
 ```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
@@ -268,14 +269,14 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bStaw*<br/>
-[w] Parametr logiczny, który określa, czy chcesz zamknąć aktywne menu podręczne. Wartość TRUE oznacza, że aktywne menu podręczne nie jest zamknięte. FALSE oznacza, że aktywne menu podręczne jest zamknięte.
+*bSet*<br/>
+podczas Parametr logiczny, który określa, czy zamknąć aktywne menu podręczne. Wartość TRUE wskazuje, że aktywne menu podręczne nie jest zamknięte. Wartość FALSE wskazuje, że aktywne menu podręczne jest zamknięte.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `CContextMenuManager` zamyka aktywne menu podręczne.
+Domyślnie `CContextMenuManager` Zamyka aktywne menu podręczne.
 
-## <a name="ccontextmenumanagershowpopupmenu"></a><a name="showpopupmenu"></a>CContextMenuManager::ShowPopupMenu
+## <a name="ccontextmenumanagershowpopupmenu"></a><a name="showpopupmenu"></a> CContextMenuManager::ShowPopupMenu
 
 Wyświetla określone menu skrótów.
 
@@ -300,41 +301,41 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*interfejs użytkownika uiMenuResId*<br/>
-[w] Identyfikator zasobu menu, które będzie wyświetlany w tej metodzie.
+*uiMenuResId*<br/>
+podczas Identyfikator zasobu menu, które zostanie wyświetlone w tej metodzie.
 
-*X*<br/>
-[w] Przesunięcie poziome menu skrótów we współrzędnych klienta.
+*x*<br/>
+podczas Przesunięcie w poziomie menu skrótów we współrzędnych klienta.
 
 *Y*<br/>
-[w] Przesunięcie w pionie dla menu skrótów we współrzędnych klienta
+podczas Przesunięcie w pionie dla menu skrótów we współrzędnych klienta
 
 *pWndOwner*<br/>
-[w] Wskaźnik do okna nadrzędnego menu skrótów.
+podczas Wskaźnik do okna nadrzędnego menu skrótów.
 
 *bOwnMessage*<br/>
-[w] Parametr logiczny wskazujący sposób kierowania wiadomości. Jeśli *bOwnMessage* jest FALSE, używana jest standardowa routing MFC. W przeciwnym razie *pWndOwner* odbiera wiadomości.
+podczas Parametr logiczny, który wskazuje sposób, w jaki są kierowane komunikaty. Jeśli *bOwnMessage* ma wartość false, używana jest Standardowa usługa routingu MFC. W przeciwnym razie *pWndOwner* odbiera komunikaty.
 
 *hmenuPopup*<br/>
-[w] Dojście menu, które ta metoda będzie wyświetlana.
+podczas Uchwyt menu, które zostanie wyświetlone w tej metodzie.
 
-*bAutoDestroj*<br/>
-[w] Parametr logiczny wskazujący, czy menu zostanie automatycznie zniszczone.
+*bAutoDestroy*<br/>
+podczas Parametr logiczny, który wskazuje, czy menu zostanie automatycznie zniszczone.
 
-*bPrawaAlign*<br/>
-[w] Parametr logiczny wskazujący sposób wyrównania elementów menu. Jeśli *bRightAlign* jest TRUE, menu jest wyrównane do prawej dla kolejności czytania od prawej do lewej.
+*bRightAlign*<br/>
+podczas Parametr logiczny, który wskazuje, jak są wyrównane elementy menu. Jeśli *bRightAlign* ma wartość true, menu jest wyrównane do prawej strony dla kolejności odczytywania od prawej do lewej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Przeciążenie pierwszej metody zwraca nonzero, jeśli metoda pokazuje menu pomyślnie; w przeciwnym razie 0. Przeciążenie drugiej metody zwraca wskaźnik do [CMFCPopupMenu,](../../mfc/reference/cmfcpopupmenu-class.md) jeśli menu skrótów jest wyświetlane poprawnie; w przeciwnym razie NULL.
+Pierwsze Przeciążenie metody zwraca wartość różną od zera, jeśli metoda pomyślnie wyświetli menu; w przeciwnym razie 0. Drugie Przeciążenie metody zwraca wskaźnik do [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , jeśli menu skrótów jest wyświetlane prawidłowo; w przeciwnym razie wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda przypomina metodę [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) w tym obu metod wyświetlania menu skrótów. Zwraca `TrackPopupMenu` jednak indeks wybranego polecenia menu.
+Ta metoda przypomina metodę [CContextMenuManager:: TrackPopupMenu](#trackpopupmenu) w przypadku, gdy obie metody wyświetlają menu skrótów. Jednakże `TrackPopupMenu` zwraca indeks wybranego polecenia menu.
 
-Jeśli parametr *bAutoDestroy* jest FALSE, należy ręcznie `DestroyMenu` wywołać metodę dziedziczoną, aby zwolnić zasoby pamięci. Domyślna implementacja `ShowPopupMenu` nie używa parametru *bAutoDestroy*. Jest on przeznaczony do użytku w przyszłości `CContextMenuManager` lub dla klas niestandardowych pochodzących z klasy .
+Jeśli parametr *bAutoDestroy* ma wartość false, należy ręcznie wywołać metodę dziedziczonej w `DestroyMenu` celu zwolnienia zasobów pamięci. Domyślna implementacja programu `ShowPopupMenu` nie używa parametru *bAutoDestroy*. Jest ona dostępna do użytku w przyszłości lub dla klas niestandardowych pochodnych od `CContextMenuManager` klasy.
 
-## <a name="ccontextmenumanagertrackpopupmenu"></a><a name="trackpopupmenu"></a>CContextMenuManager::TrackPopupMenu
+## <a name="ccontextmenumanagertrackpopupmenu"></a><a name="trackpopupmenu"></a> CContextMenuManager::TrackPopupMenu
 
 Wyświetla określone menu skrótów i zwraca indeks wybranego polecenia menu skrótów.
 
@@ -350,27 +351,27 @@ virtual UINT TrackPopupMenu(
 ### <a name="parameters"></a>Parametry
 
 *hmenuPopup*<br/>
-[w] Uchwyt menu skrótów wyświetlanych przez tę metodę.
+podczas Uchwyt menu skrótów, które jest wyświetlane w tej metodzie.
 
-*X*<br/>
-[w] Przesunięcie poziome menu skrótów we współrzędnych klienta.
+*x*<br/>
+podczas Przesunięcie w poziomie menu skrótów we współrzędnych klienta.
 
 *Y*<br/>
-[w] Przesunięcie w pionie dla menu skrótów we współrzędnych klienta.
+podczas Przesunięcie w pionie menu skrótów we współrzędnych klienta.
 
 *pWndOwner*<br/>
-[w] Wskaźnik do okna nadrzędnego menu skrótów.
+podczas Wskaźnik do okna nadrzędnego menu skrótów.
 
-*bPrawaAlign*<br/>
-[w] Parametr logiczny wskazujący sposób wyrównania elementów menu. Jeśli *bRightAlign* jest TRUE, menu jest wyrównane do prawej dla kolejności czytania od prawej do lewej. Jeśli *bRightAlign* jest FALSE, menu jest wyrównane do lewej dla kolejności czytania od lewej do prawej.
+*bRightAlign*<br/>
+podczas Parametr logiczny, który wskazuje, jak są wyrównane elementy menu. Jeśli *bRightAlign* ma wartość true, menu jest wyrównane do prawej strony dla kolejności odczytywania od prawej do lewej. Jeśli *bRightAlign* ma wartość false, menu jest wyrównane do lewej strony w kolejności czytania od lewej do prawej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Identyfikator polecenia menu polecenia wybranego przez użytkownika; 0, jeśli użytkownik zamknie menu skrótów bez wybierania polecenia menu.
+Identyfikator polecenia menu polecenia wybranego przez użytkownika; 0 Jeśli użytkownik zamknie menu skrótów bez wybierania polecenia menu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda działa jako wywołanie modalne, aby wyświetlić menu skrótów. Aplikacja nie będzie kontynuować do następującego wiersza w kodzie, dopóki użytkownik nie zamknie menu skrótów lub nie wybierze polecenia. Alternatywną metodą, której można użyć do wyświetlenia menu skrótów, jest [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Ta metoda nie jest wywołaniem modalnym i nie zwróci identyfikatora wybranego polecenia.
+Ta metoda działa jako wywołanie modalne do wyświetlania menu skrótów. Aplikacja nie przejdzie do następującego wiersza w kodzie, dopóki użytkownik nie zamknie menu skrótów lub wybierze polecenie. Alternatywną metodą wyświetlania menu skrótów jest [CContextMenuManager:: ShowPopupMenu](#showpopupmenu). Ta metoda nie jest wywołaniem modalnym i nie zwróci identyfikatora wybranego polecenia.
 
 ## <a name="see-also"></a>Zobacz też
 

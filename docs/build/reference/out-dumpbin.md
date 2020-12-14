@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/OUT (polecenia DUMPBIN)
 title: /OUT (DUMPBIN)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - OUT dumpbin option
 - -OUT dumpbin option
 ms.assetid: 984f9ab6-685f-480b-a515-69abe9d83a65
-ms.openlocfilehash: 63f32582031e862599416278c53db5aa6ea48a0c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d2800929d52870961908a3f6a7f98eaef9d40ae5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226327"
 ---
 # <a name="out-dumpbin"></a>/OUT (DUMPBIN)
 
@@ -29,4 +30,4 @@ Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje DUMPBIN](dumpbin-options.md)
+[Opcje polecenia DUMPBIN](dumpbin-options.md)

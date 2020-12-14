@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej na temat: ___lc_collate_cp_func'
 title: ___lc_collate_cp_func
 ms.date: 4/2/2020
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: 7247827cb2bfe18c341ce60c2f3d8976f676b138
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b92a7fbb81741429caec62bc2d918b6ab3969dee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229837"
 ---
 # <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
@@ -45,7 +46,7 @@ Bieżąca strona kodowa sortowania wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-`___lc_collate_cp_func`jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT do pobrania bieżącej strony kodowej sortowania z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) .
+`___lc_collate_cp_func` jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT do pobrania bieżącej strony kodowej sortowania z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) .
 
 Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 

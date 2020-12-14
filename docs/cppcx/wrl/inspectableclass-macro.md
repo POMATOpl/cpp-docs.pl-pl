@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej o: makro InspectableClass'
 title: InspectableClass — Makro
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-ms.openlocfilehash: 755a8f58ffc290d73d6060b0b0924905ecbf6028
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cb19db7f35e7bda351cd84fa4dcf1f6a2b2ea2ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229005"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass — Makro
 
@@ -44,4 +45,4 @@ Makro **InspectableClass** może być używane tylko z typami środowisko wykona
 
 ## <a name="see-also"></a>Zobacz też
 
-[RuntimeClass, klasa](runtimeclass-class.md)
+[Klasa RuntimeClass](runtimeclass-class.md)

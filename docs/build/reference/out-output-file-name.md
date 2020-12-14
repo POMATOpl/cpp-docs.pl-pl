@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej o:/OUT (nazwa pliku wyjściowego)
 title: /OUT (Nazwa pliku wyjściowego)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /OUT C++ linker option
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1773b4b2dd340bc105495c1b05211c018548976f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226405"
 ---
 # <a name="out-output-file-name"></a>/OUT (Nazwa pliku wyjściowego)
 
@@ -27,31 +28,31 @@ ms.locfileid: "62320074"
 ## <a name="arguments"></a>Argumenty
 
 *Nazwa pliku*<br/>
-Określone przez użytkownika nazwa pliku wyjściowego. Zastępuje ona nazwę domyślną.
+Nazwa pliku wyjściowego określona przez użytkownika. Zastępuje domyślną nazwę.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja/out przesłania domyślną nazwę i lokalizację programu tworzonego przez konsolidatora.
+Opcja/OUT zastępuje domyślną nazwę i lokalizację programu tworzonego przez konsolidatora.
 
-Domyślnie konsolidator tworzy nazwę pliku przy użyciu podstawowej nazwy pierwszy plik .obj określony i odpowiednie rozszerzenia (.exe lub .dll).
+Domyślnie konsolidator tworzy nazwę pliku przy użyciu nazwy bazowej pierwszego określonego pliku. obj i odpowiedniego rozszerzenia (exe lub dll).
 
-To opcja domyślna nazwa podstawowej biblioteki .mapfile lub importu. Aby uzyskać więcej informacji, zobacz [Generowanie Mapfile](map-generate-mapfile.md) (/ MAP) i [/IMPLIB](implib-name-import-library.md).
+Ta opcja jest domyślną nazwą podstawową dla biblioteki. mapfile lub importu. Aby uzyskać szczegółowe informacje, zobacz [generowanie mapfile](map-generate-mapfile.md) (/map) i [/IMPLIB](implib-name-import-library.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **konsolidatora** folderu.
+1. Kliknij folder **konsolidator** .
 
-1. Kliknij przycisk **ogólne** stronę właściwości.
+1. Kliknij stronę właściwości **Ogólne** .
 
-1. Modyfikowanie **plik wyjściowy** właściwości.
+1. Zmodyfikuj właściwość **pliku wyjściowego** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)
