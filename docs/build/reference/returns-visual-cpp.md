@@ -1,5 +1,6 @@
 ---
-title: '&lt;zwraca > (C++ Komentarze do dokumentacji)'
+description: 'Dowiedz się więcej na temat: &lt; zwraca&gt;'
+title: '&lt;zwraca> (Komentarze dokumentacji języka C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - returns
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - returns C++ XML tag
 - <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-ms.openlocfilehash: 1315ec09271c2c97f7bcaf3fb6f9c75f514b5d2d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: c07439610fa0259a38a4c1993ead7f0f06023e5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225053"
 ---
-# <a name="ltreturnsgt"></a>&lt;zwraca&gt;
+# <a name="ltreturnsgt"></a>&lt;typu&gt;
 
-\<zwraca znacznik > powinien być używany w komentarzu dla deklaracji metody, aby opisać wartość zwracaną.
+\<returns>Tag powinien być używany w komentarzu dla deklaracji metody, aby opisać wartość zwracaną.
 
 ## <a name="syntax"></a>Składnia
 

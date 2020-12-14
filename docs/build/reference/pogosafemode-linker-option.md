@@ -1,18 +1,19 @@
 ---
-title: / POGOSAFEMODE (uruchamianie PGO w trybie awaryjnym wątku)
+description: Dowiedz się więcej o:/POGOSAFEMODE (Run PGO w trybie awaryjnym wątku)
+title: /POGOSAFEMODE (Uruchom PGO w trybie awaryjnym wątku)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe8d46a3008a1d41156d077e5b87e50ac345e18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225924"
 ---
-# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (uruchamianie PGO w trybie awaryjnym wątku)
+# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/POGOSAFEMODE (Uruchom PGO w trybie awaryjnym wątku)
 
-**Opcja /POGOSAFEMODE jest przestarzały, począwszy od programu Visual Studio 2015**. Użyj [przełączników/genprofile: dokładnie](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) i **/GENPROFILE:NOEXACT** zamiast opcji. **/POGOSAFEMODE** — opcja konsolidatora Określa, że kompilację instrumentowaną do używania trybu wątków dla profilu przechwytywania danych podczas profilowana Optymalizacja (PGO) wysyłanie przebiegów szkoleniowych.
+**Opcja/POGOSAFEMODE jest przestarzała począwszy od programu Visual Studio 2015**. Zamiast tego użyj opcji [/GENPROFILE: Exact](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) i **/GENPROFILE: noexact** . Opcja konsolidatora **/POGOSAFEMODE** określa, że kompilacja z instrumentacją została utworzona w celu używania trybu bezpiecznego wątkowego do przechwytywania danych profilu podczas przebiegu szkoleniowego optymalizacji opartej na profilach (PGO).
 
 ## <a name="syntax"></a>Składnia
 
@@ -20,33 +21,33 @@ ms.locfileid: "62319723"
 
 ## <a name="remarks"></a>Uwagi
 
-Profilowana Optymalizacja (PGO) ma dwa możliwe tryby podczas fazy profilowania: *trybie szybkim* i *tryb awaryjny*. Gdy profilowanie odbywa się w trybie szybkim, wykorzystuje instrukcję przyrostu Aby zwiększyć liczniki danych. Instrukcja przyrost jest szybsze, ale nie jest metodą o bezpiecznych wątkach. Gdy profilowanie odbywa się w trybie awaryjnym, aby zwiększyć liczniki danych używa instrukcji blokowanej przyrostu. Ta instrukcja ma taką samą funkcjonalność instrukcji przyrostu ma i jest bezpieczna dla wątków, ale jest wolniejsze.
+Optymalizacja oparta na profilach (PGO) ma dwa możliwe tryby w fazie profilowania: *Tryb szybki* i *tryb bezpieczny*. Gdy profilowanie jest w trybie szybkim, używa instrukcji przyrostowej, aby zwiększyć liczniki danych. Instrukcja Increment jest szybsza, ale nie jest bezpieczna wątkowo. Gdy profilowanie działa w trybie awaryjnym, używa instrukcji z blokadą i przyrostem, aby zwiększyć liczniki danych. Ta instrukcja ma takie same funkcje jak instrukcja Increment i jest bezpieczna wątkowo, ale jest wolniejsza.
 
-**/POGOSAFEMODE** opcja umożliwia ustawienie kompilację instrumentowaną do pracy w trybie awaryjnym. Ta opcja może być tylko używane podczas przestarzałego [pginstrument](ltcg-link-time-code-generation.md) określono w fazie konsolidatora Instrumentacja optymalizacji PGO.
+Opcja **/POGOSAFEMODE** ustawia przyrządową kompilację do używania trybu awaryjnego. Tej opcji można użyć tylko wtedy, gdy w fazie konsolidatora Instrumentacji PGO jest określony przestarzały [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) .
 
-Domyślnie profilowanie PGO działa w trybie szybkim. **/ POGOSAFEMODE** jest wymagany tylko, jeśli chcesz użyć trybu awaryjnego.
+Domyślnie profilowanie PGO działa w trybie szybkim. **/POGOSAFEMODE** jest wymagany tylko wtedy, gdy chcesz używać trybu awaryjnego.
 
-Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć **przełączników/genprofile: dokładnie** (preferowany) lub użyć zmiennej środowiskowej [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) lub przełącznika konsolidatora **/POGOSAFEMODE**, w zależności od systemu. Jeśli przeprowadzasz profilowanie na x64 komputera, musisz użyć przełącznika konsolidatora. Jeśli przeprowadzasz profilowanie na x86 komputera, możesz użyć przełącznika konsolidatora lub zdefiniować zmienną środowiskową na dowolną wartość, przed rozpoczęciem procesu Instrumentacji PGO.
+Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć obu **/GENPROFILE: Exact** (preferowany) lub użyć zmiennej środowiskowej [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) lub przełącznika konsolidatora **/POGOSAFEMODE**, w zależności od systemu. Jeśli przeprowadzasz profilowanie na komputerze z architekturą x64, musisz użyć przełącznika konsolidatora. Jeśli przeprowadzasz profilowanie na komputerze z procesorem x86, możesz użyć przełącznika konsolidatora lub zdefiniować zmienną środowiskową dla dowolnej wartości przed rozpoczęciem procesu instrumentacji PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **optymalizacji** stronę właściwości.
+1. Wybierz   >    >  stronę właściwości **optymalizacji** konsolidatora właściwości konfiguracji.
 
-1. W **łączonych kodów czasowych** właściwości, wybierz **profilowana Optymalizacja - Instrument (/ LTCG: pginstrument)**.
+1. W właściwości **generowanie kodu w czasie konsolidacji** wybierz opcję **profil Optymalizacja z przewodnikiem — instrument (/LTCG: PGInstrument)**.
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >    >  **wiersza polecenia** konsolidatora.
 
-1. Wprowadź **/POGOSAFEMODE** opcji do **dodatkowe opcje** pole. Wybierz **OK** Aby zapisać zmiany.
+1. Wprowadź opcję **/POGOSAFEMODE** w polu **dodatkowe opcje** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/ GENPROFILE i/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE i/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Optymalizacje sterowane profilem](../profile-guided-optimizations.md)<br/>
-[Zmienne środowiskowe dla optymalizacji sterowanych profilem](../environment-variables-for-profile-guided-optimizations.md)<br/>
+[Optymalizacje profilowane](../profile-guided-optimizations.md)<br/>
+[Zmienne środowiskowe dla optymalizacji Profile-Guided](../environment-variables-for-profile-guided-optimizations.md)<br/>

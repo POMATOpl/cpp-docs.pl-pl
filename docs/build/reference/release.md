@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/RELEASE
 title: /RELEASE
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /RELEASE editbin option
 - checksum setting
 ms.assetid: 183422eb-6b3c-474e-9589-04a0e69dec5d
-ms.openlocfilehash: 135740084c63017655233311f3b852f7614f06da
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c9cc6223c6d0bfba8f9e647b4330a0d64743d85e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225313"
 ---
 # <a name="release"></a>/RELEASE
 
@@ -30,4 +31,4 @@ System operacyjny wymaga sumy kontrolnej dla sterowników urządzeń. Zaleca si�
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje EDITBIN](editbin-options.md)
+[Opcje polecenia EDITBIN](editbin-options.md)

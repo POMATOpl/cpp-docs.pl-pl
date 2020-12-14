@@ -1,5 +1,6 @@
 ---
-title: '&lt;uwagi > (C++ Komentarze do dokumentacji)'
+description: 'Dowiedz się więcej na temat: &lt; uwagi&gt;'
+title: '&lt;uwagi> (Komentarze w dokumentacji C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - remarks
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: 096280526b12feff33377a705f7c03548a1f0f13
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0c919ba3101282fd755450489eacc6c0800fb437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225222"
 ---
 # <a name="ltremarksgt"></a>&lt;uwagi&gt;
 
-Tag \<uwagi > służy do dodawania informacji o typie, uzupełnienie informacji określonych za pomocą [\<podsumowania >](summary-visual-cpp.md). Te informacje są wyświetlane w [Przeglądarka obiektów](/visualstudio/ide/viewing-the-structure-of-code) i w raporcie w sieci Web komentarza do kodu.
+\<remarks>Tag służy do dodawania informacji o typie, uzupełniając informacje określone za pomocą [\<summary>](summary-visual-cpp.md) . Te informacje są wyświetlane w [Przeglądarka obiektów](/visualstudio/ide/viewing-the-structure-of-code) i w raporcie w sieci Web komentarza do kodu.
 
 ## <a name="syntax"></a>Składnia
 

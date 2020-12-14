@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/PDATA
 title: /PDATA
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /PDATA dumpbin option
 - -PDATA dumpbin option
 ms.assetid: 5d41d629-6576-4733-b103-0d61e6b77b50
-ms.openlocfilehash: bd763abf7b2a08e6aa54ba37cb451f1ec0f6cef7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2855e7f33577ca17aa271d953663f858163b94a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226132"
 ---
 # <a name="pdata"></a>/PDATA
 
@@ -25,10 +26,10 @@ ms.locfileid: "62320061"
 
 Tylko procesory RISC.
 
-Ta opcja zrzuty tabel wyjątek (.pdata) z obrazu lub obiektu.
+Ta opcja powoduje zrzut tabel wyjątków (. pdata) z obrazu lub obiektu.
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w przypadku plików utworzonych przy użyciu opcji kompilatora [/GL](gl-whole-program-optimization.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje DUMPBIN](dumpbin-options.md)
+[Opcje polecenia DUMPBIN](dumpbin-options.md)

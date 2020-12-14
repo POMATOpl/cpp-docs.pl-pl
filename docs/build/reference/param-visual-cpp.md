@@ -1,5 +1,6 @@
 ---
-title: '&lt;param > (komentarze dokumentacji C++)'
+description: 'Dowiedz się więcej na temat: &lt; param&gt;'
+title: '&lt;param> (Komentarze w dokumentacji C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - param
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - param C++ XML tag
 - <param> C++ XML tag
 ms.assetid: 66c1a1c3-4f98-4bcf-8c7d-9a40308982fb
-ms.openlocfilehash: d8ea4feddbe1ec2d5898f8ef698cc2d69d255933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3baabc6aef9a4cabdd7c7a9023fb628bd53793
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226145"
 ---
 # <a name="ltparamgt"></a>&lt;param&gt;
 
-\<Param > używany tag w komentarzu do deklaracji metody do opisania jeden z parametrów dla metody.
+\<param>Tag powinien być używany w komentarzu dla deklaracji metody, aby opisać jeden z parametrów dla metody.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,17 +28,17 @@ ms.locfileid: "62320009"
 
 #### <a name="parameters"></a>Parametry
 
-*Nazwa*<br/>
-Nazwa parametru metody.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `name`.
+*Nazwij*<br/>
+Nazwa parametru metody.  Ujmij nazwę w pojedyncze lub podwójne cudzysłowy.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `name` .
 
-*description*<br/>
+*zharmonizowan*<br/>
 Opis parametru.
 
 ## <a name="remarks"></a>Uwagi
 
-Tekst dla \<param > będą wyświetlane w technologii IntelliSense, [przeglądarki obiektów](/visualstudio/ide/viewing-the-structure-of-code)i w raporcie Web komentarzy kodu.
+Tekst dla \<param> tagu będzie wyświetlany w technologii IntelliSense, [Przeglądarka obiektów](/visualstudio/ide/viewing-the-structure-of-code)i w raporcie w sieci Web komentarza do kodu.
 
-Kompiluj przy użyciu [/doc](doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+Kompiluj z [/doc](doc-process-documentation-comments-c-cpp.md) , aby przetwarzać komentarze dokumentacji do pliku.
 
 ## <a name="example"></a>Przykład
 

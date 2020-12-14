@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/RAWDATA
 title: /RAWDATA
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efe2001c0170b8539b98902591849dedaf0fb819
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225378"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -24,19 +25,19 @@ ms.locfileid: "62319516"
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja wyświetla nieprzetworzonej zawartości każdej sekcji w pliku. Argumenty kontrolować format wyświetlania, jak pokazano poniżej:
+Ta opcja wyświetla nieprzetworzoną zawartość każdej sekcji w pliku. Argumenty kontrolują format wyświetlania, jak pokazano poniżej:
 
 |Argument|Wynik|
 |--------------|------------|
-|1|Domyślnie. Zawartość jest wyświetlana bajty szesnastkowe, a także jako znaki ASCII, jeśli mają one reprezentację drukowanych.|
-|2|Zawartości są wyświetlane jako wartości szesnastkowych 2-bajtowych.|
-|4|Zawartości są wyświetlane jako wartości szesnastkowych 4-bajtowe.|
-|8|Zawartość jest wyświetlana jako wartości 8-bajtowych szesnastkowe.|
-|BRAK|Nieprzetworzone dane są pomijane. Ten argument jest przydatne do kontroli danych wyjściowych/ALL.|
-|*Liczba*|Wyświetlane wiersze są ustawione na szerokość, który przechowuje `number` wartości w każdym wierszu.|
+|1|Domyślnie. Zawartość jest wyświetlana w bajtach szesnastkowych, a także jako znaki ASCII, jeśli mają wydrukowaną reprezentację.|
+|2|Zawartość jest wyświetlana jako szesnastkowe wartości 2-bajtowe.|
+|4|Zawartość jest wyświetlana jako szesnastkowe wartości 4-bajtowe.|
+|8|Zawartość jest wyświetlana jako szesnastkowe wartości 8-bajtowe.|
+|DAWAJ|Nieprzetworzone dane są pomijane. Ten argument jest przydatny do kontrolowania danych wyjściowych/ALL.|
+|*Liczba*|Wyświetlane wiersze są ustawione na szerokość, która przechowuje `number` wartości w wierszu.|
 
-Tylko [/HEADERS](headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](gl-whole-program-optimization.md) — opcja kompilatora.
+Tylko opcja [/Headers](headers.md) polecenia DUMPBIN jest dostępna do użycia w przypadku plików utworzonych przy użyciu opcji kompilatora [/GL](gl-whole-program-optimization.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje DUMPBIN](dumpbin-options.md)
+[Opcje polecenia DUMPBIN](dumpbin-options.md)

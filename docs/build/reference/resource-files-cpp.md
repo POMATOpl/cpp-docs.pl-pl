@@ -1,16 +1,17 @@
 ---
+description: 'Dowiedz się więcej na temat: pliki zasobów projektu (C++)'
 title: Pliki zasobów projektu (C++)
 ms.date: 05/14/2019
 helpviewer_keywords:
 - resource files
 - resources [C++]
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: d37c3602d8939db609fc8af42dd764655195b24b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2e0dbafdab2b13dd4757008e56b92fb5622e25b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225157"
 ---
 # <a name="project-resource-files-c"></a>Pliki zasobów projektu (C++)
 
@@ -29,6 +30,6 @@ Aby uzyskać więcej informacji, zobacz [Praca z zasobami](../../windows/working
 |Toolbar.bmp|*Projname*\res|Pliki zasobów|Plik mapy bitowej reprezentujący aplikację lub kontrolkę na pasku narzędzi lub w palecie. Ta mapa bitowa jest zawarta w pliku zasobów projektu. Początkowy pasek narzędzi i pasek stanu są skonstruowane w klasie **CMainFrame** .|
 |Wstążka. mfcribbon — ms|*Projname*\res|Pliki zasobów|Plik zasobu, który zawiera kod XML, który definiuje przyciski, kontrolki i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [Projektant wstążki (MFC)](../../mfc/ribbon-designer-mfc.md).|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typy plików utworzone dla projektów Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

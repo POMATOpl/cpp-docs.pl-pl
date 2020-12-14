@@ -1,4 +1,5 @@
 ---
+description: Dowiedz się więcej na temat:/STACK (alokacje stosu)
 title: /STACK (Twórz stos z alokacji)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e74b508d8cdb2340c73360bf35272d9113a0f75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224469"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Twórz stos z alokacji)
 
@@ -27,35 +28,35 @@ ms.locfileid: "62317929"
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja /STACK ustawia rozmiar stosu w bajtach. Użyj tej opcji tylko wtedy, gdy tworzysz pliku .exe.
+Opcja/STACK ustawia rozmiar stosu w bajtach. Tej opcji należy użyć tylko w przypadku kompilowania pliku. exe.
 
-`reserve` Wartość określa Alokacja całkowita stosu w pamięci wirtualnej. Dla ARM x86 i x64 maszyn, domyślny rozmiar stosu to 1 MB.
+`reserve`Wartość określa łączną alokację stosu w pamięci wirtualnej. W przypadku maszyn ARM, x86 i x64 rozmiar domyślnego stosu wynosi 1 MB.
 
-`commit` podlega interpretacji przez system operacyjny. W Windows wypchnie określa ilość pamięci fizycznej do przydzielenia w danym momencie. Zadeklarowanej pamięci wirtualnej powoduje, że miejsce, które mają zostać zarezerwowane w pliku stronicowania. Uzyskanie lepszej `commit` wartość pozwala zaoszczędzić czas, gdy potrzeba więcej miejsca na stosie aplikacji, ale zwiększa wymagania dotyczące pamięci i ewentualnie czas uruchamiania. Dla ARM maszyn x86 i x64 zatwierdzenia wartość domyślna to 4 KB.
+`commit` podlega interpretacji przez system operacyjny. W systemie Windows Windows RT określa ilość pamięci fizycznej do przydzielenia w danym momencie. Przydzielona pamięć wirtualna powoduje, że miejsce jest zarezerwowane w pliku stronicowania. Wyższa `commit` wartość umożliwia zaoszczędzenie czasu, gdy aplikacja wymaga większej ilości miejsca na stosie, ale zwiększa wymagania dotyczące pamięci i prawdopodobnie czasu uruchamiania. W przypadku maszyn z procesorem ARM, x86 i x64 domyślna wartość zatwierdzenia to 4 KB.
 
-Określ `reserve` i `commit` wartości dziesiętnych lub notacji języka C.
+Określ `reserve` wartości i `commit` w notacji dziesiętnej lub w języku C.
 
-Innym sposobem Ustaw rozmiar stosu jest [STACKSIZE](stacksize.md) instrukcja w pliku definicji modułu (.def). **STACKSIZE** zastępuje twórz stos z alokacji (/ STACK) opcję, jeśli są określone oba. Rozmiar stosu można zmienić po utworzeniu pliku .exe przy użyciu [EDITBIN](editbin-reference.md) narzędzia.
+Innym sposobem ustawienia rozmiaru stosu jest instrukcja [STACKSIZE](stacksize.md) w pliku definicji modułu (. def). **STACKSIZE** zastępuje opcję alokacji stosu (/stack), jeśli oba są określone. Rozmiar stosu można zmienić po skompilowaniu pliku. exe przy użyciu narzędzia [polecenia EDITBIN](editbin-reference.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **konsolidatora** folderu.
+1. Wybierz folder **konsolidatora** .
 
-1. Wybierz **systemu** stronę właściwości.
+1. Wybierz stronę właściwości **systemu** .
 
 1. Zmodyfikuj jedną z następujących właściwości:
 
-   - **Zaalokowany rozmiar stosu**
+   - **Rozmiar zatwierdzenia stosu**
 
-   - **Zarezerwowany rozmiar stosu**
+   - **Rozmiar rezerwy stosu**
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
 1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackCommitSize%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackReserveSize%2A> właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

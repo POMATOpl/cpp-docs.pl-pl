@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o: regułach dla instrukcji Module-Definition'
 title: Zasady dla instrukcji definicji modułu
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,35 +8,35 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca1f279a9a93690edeaabc2264d1cfe869b3e80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225001"
 ---
 # <a name="rules-for-module-definition-statements"></a>Zasady dla instrukcji definicji modułu
 
-Następujące reguły składni dotyczą wszystkie instrukcje w pliku .def. Inne zasady, które są stosowane do instrukcji określonych są opisane za pomocą każdej instrukcji.
+Poniższe reguły składni mają zastosowanie do wszystkich instrukcji w pliku. def. Inne reguły, które mają zastosowanie do określonych instrukcji, są opisane z każdą instrukcją.
 
-- Instrukcje i identyfikatory określone przez użytkownika słowa atrybut uwzględniają wielkość liter.
+- W instrukcjach, słowach kluczowych atrybutów i identyfikatorach określonych przez użytkownika jest uwzględniana wielkość liter.
 
-- Długie nazwy zawierające spacje lub średników (;) plików muszą być ujęte w znaki cudzysłowu (").
+- Długie nazwy plików zawierające spacje lub średniki (;) musi być ujęty w cudzysłów (").
 
-- Do oddzielania słowem kluczowym instrukcji z jej argumentów i oddzielania instrukcji od siebie nawzajem, należy użyć jednego lub więcej miejsca do magazynowania, karty lub znakami nowego wiersza. Dwukropek (:) lub znak równości (=), która określa argument jest otoczona przez zero lub więcej miejsca do magazynowania, karty lub znakami nowego wiersza.
+- Użyj co najmniej jednej spacji, tabulatorów lub znaków nowego wiersza do oddzielenia słowa kluczowego instrukcji od jego argumentów oraz do oddzielenia instrukcji od siebie. Dwukropek (:) lub znak równości (=) oznaczający, że argument jest otoczony zerem lub więcej spacjami, tabulatorami lub znakami nowego wiersza.
 
-- A **nazwa** lub **biblioteki** instrukcji, jeśli używany, musi poprzedzać wszystkie inne instrukcje.
+- Instrukcja **name** lub **Library** , jeśli jest używana, musi poprzedzać wszystkie inne instrukcje.
 
-- **Sekcje** i **EKSPORTY** instrukcji może występować więcej niż jeden raz w pliku .def. Każda instrukcja może zająć wiele specyfikacje, które muszą być oddzielone jeden lub więcej miejsca do magazynowania, karty lub znakami nowego wiersza. Instrukcja — słowo kluczowe musi pojawić się jeden raz przed pierwszą specyfikację i można powtarzać przed każdego dodatkowego specyfikacji.
+- Instrukcje **sekcja** i **eksporty** mogą pojawić się więcej niż raz w pliku. def. Każda instrukcja może przyjmować wiele specyfikacji, które muszą być oddzielone co najmniej jedną spacją, tabulatorami lub znakami nowego wiersza. Słowo kluczowe instrukcji musi występować raz przed pierwszą specyfikacją i może zostać powtórzone przed każdą dodatkową specyfikacją.
 
-- Wiele instrukcji mieć równoważne opcji wiersza polecenia łącza. Zobacz opis odpowiedniej opcji LINK, aby uzyskać więcej informacji.
+- Wiele instrukcji ma odpowiednik opcji wiersza polecenia. Więcej szczegółów można znaleźć w opisie odpowiedniej opcji LINKu.
 
-- Komentarze w pliku .def zostały oznaczone za pomocą średnika (;) na początku każdego wiersza komentarza. Komentarz nie można udostępniać wiersza po instrukcji, ale może być wyświetlany między specyfikacjami w wielowierszowym instrukcji. (**Sekcje** i **EKSPORTY** są instrukcje wielowierszowy.)
+- Komentarze w pliku DEF są wyznaczane za pomocą średnika (;) na początku każdego wiersza komentarza. Komentarz nie może udostępniać wiersza instrukcji, ale może występować między specyfikacjami w instrukcji wielowierszowej. (**Sekcje** i **eksporty** są instrukcje wielowierszowe).
 
-- Liczbowe argumenty są określone w podstawie 10 lub szesnastkowego.
+- Argumenty liczbowe są określone w podstawowym 10 lub szesnastkowym.
 
-- Jeśli argument ciągu pasuje [słowa zarezerwowanego](reserved-words.md), muszą być ujęte w podwójny cudzysłów (").
+- Jeśli argument ciągu pasuje do [słowa zastrzeżonego](reserved-words.md), musi być ujęty w znaki podwójnego cudzysłowu (").
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Pliki definicji modułu (.Def)](module-definition-dot-def-files.md)
+[Definicja modułu (. Def) — pliki](module-definition-dot-def-files.md)

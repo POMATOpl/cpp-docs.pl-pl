@@ -1,4 +1,5 @@
 ---
+description: 'Dowiedz się więcej o programie: Określanie pliku wbudowanego'
 title: Określanie pliku wbudowanego
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - inline files [C++], specifying NMAKE
 - files [C++], inline
 ms.assetid: 393eccfb-3fc9-4bac-a30c-8ac8d221cca3
-ms.openlocfilehash: 7eb123ef3f2115df5c65d266630bded8cb54baae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 461bf507f707512aa690e81dc5752a97d0c1c4ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224611"
 ---
 # <a name="specifying-an-inline-file"></a>Określanie pliku wbudowanego
 
-Określ dwa nawiasy (<<) w poleceniu gdzie *filename* jest wyświetlany. Nawiasy kątowe nie może być rozwinięciu makra.
+W poleceniu należy określić dwa nawiasy kątowe (<<), w którym ma zostać wyświetlona *Nazwa pliku* . Nawiasy kątowe nie mogą być rozwinięciem makra.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,8 +26,8 @@ Określ dwa nawiasy (<<) w poleceniu gdzie *filename* jest wyświetlany. Nawiasy
 
 ## <a name="remarks"></a>Uwagi
 
-Po uruchomieniu polecenia nawiasy kątowe są zastępowane przez *filename*, jeśli określono lub przez unikatową nazwę generowane NMAKE. Jeśli zostanie określony, *filename* muszą być zgodne nawiasy kątowe, bez spacji lub tabulatorów. Ścieżka jest dozwolone. Rozszerzenie nie jest wymagane lub zakłada, że. Jeśli *filename* jest określony, plik jest tworzony w bieżącej lub określony katalog zastąpienie wszystkich istniejących plików o takiej nazwie; w przeciwnym razie jest tworzony w katalogu TMP (lub bieżącego katalogu, jeśli zmienna środowiskowa TMP nie zdefiniowano). Jeśli poprzednie *filename* jest używane ponownie, NMAKE zastępuje poprzedni plik.
+Po uruchomieniu polecenia nawiasy ostre są zamieniane według *nazwy pliku*, jeśli określono lub według unikatowej nazwy wygenerowanej przez NMAKE. Jeśli ta wartość jest określona, *Nazwa pliku* musi być zgodna z nawiasami ostrymi bez spacji lub tabulatora. Ścieżka jest dozwolona. Nie jest wymagane ani nie założono rozszerzenia. Jeśli *Nazwa pliku* jest określona, plik zostanie utworzony w bieżącym lub określonym katalogu, zastępując istniejący plik o tej nazwie; w przeciwnym razie jest tworzony w katalogu TMP (lub bieżącym katalogu, jeśli zmienna środowiskowa TMP nie jest zdefiniowana). Jeśli poprzednia *Nazwa pliku* zostanie ponownie użyta, NMAKE zastępuje poprzedni plik.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Pliki wbudowane w pliku reguł programu Make](inline-files-in-a-makefile.md)
+[Pliki wbudowane w pliku reguł programu make](inline-files-in-a-makefile.md)
