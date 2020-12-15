@@ -270,6 +270,8 @@
                   href: ../c-language/string-literals-in-primary-expressions.md
                 - name: Wyrażenia w nawiasach
                   href: ../c-language/expressions-in-parentheses.md
+                - name: Wybór ogólny (C11)
+                  href: ../c-language/generic_selection.md
             - name: Wyrażenia wartości L i R
               href: ../c-language/l-value-and-r-value-expressions.md
             - name: Wyrażenia stałe języka C
