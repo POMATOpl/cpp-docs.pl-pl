@@ -1,20 +1,19 @@
 ---
 description: 'Dowiedz się więcej o: opcje kompilatora'
 title: Opcje kompilatora MSVC
-ms.date: 05/06/2019
+ms.date: 12/14/2020
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
 - ARM MSVC compiler
 - compiler options, C++
 - x64 MSVC compiler
-ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: a6b124fa5fce68844d53c1324da48c17ef5a9ccf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f89695b00be4ed67a00f947c6b76943bfa5eaf59
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97197026"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514580"
 ---
 # <a name="compiler-options"></a>Opcje kompilatora
 
@@ -25,7 +24,7 @@ cl.exe jest narzędziem, które kontroluje kompilatory i konsolidatory języka M
 
 Kompilatory generują pliki (. obj) obiektu Common File Format (COFF). Konsolidator tworzy pliki wykonywalne (exe) lub biblioteki dołączane dynamicznie (dll).
 
-Należy pamiętać, że w przypadku wszystkich opcji kompilatora jest uwzględniana wielkość liter. Aby określić opcję kompilatora, można użyć ukośnika ( `/` ) lub kreski ( `-` ).
+We wszystkich opcjach kompilatora jest rozróżniana wielkość liter. Aby określić opcję kompilatora, można użyć ukośnika ( `/` ) lub kreski ( `-` ).
 
 Aby skompilować bez konsolidacji, użyj [/c](c-compile-without-linking.md) opcji.
 

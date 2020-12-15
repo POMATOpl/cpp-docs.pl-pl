@@ -5,12 +5,12 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: bf12948658b5f7e3211c423b5302bc52d1b87729
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520956"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514559"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -209,7 +209,7 @@ Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompi
 | Opcja | Przeznaczenie |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | Umożliwia obsługę modułów eksperymentalnych. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Włącza eksperymentalną obsługę preprocesora. |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Przestarzałe. Włącza eksperymentalną obsługę preprocesora. Używanych [`/Zc:preprocessor`](zc-preprocessor.md) |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Przestarzałe i usunięte opcje kompilatora
 
@@ -232,7 +232,7 @@ Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompi
 | [`/Ze`](za-ze-disable-language-extensions.md) | Przestarzałe. Włącza rozszerzenia językowe. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Usunięto w programie Visual Studio 2015. Generuje prototypy funkcji. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konstrukcyjna języka C/C++](c-cpp-building-reference.md)\
 [Opcje kompilatora MSVC](compiler-options.md)\

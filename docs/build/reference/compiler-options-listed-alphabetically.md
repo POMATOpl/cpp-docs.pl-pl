@@ -4,12 +4,12 @@ description: Lista odwołań w kolejności alfabetycznej opcji wiersza polecenia
 ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 532ee4aceef281f7aa52fee6cd405a3520409218
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520865"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514551"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -40,7 +40,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Przestarzałe. Raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) . |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | Ustaw zestaw znaków wykonania. |
 | [`/experimental:module`](experimental-module.md) | Umożliwia obsługę modułów eksperymentalnych. |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | Włącza eksperymentalną obsługę preprocesora. |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | Przestarzałe. Włącza eksperymentalną obsługę preprocesora. Używanych [`/Zc:preprocessor`](zc-preprocessor.md) |
 | [`/F`](f-set-stack-size.md) | Ustawia rozmiar stosu. |
 | [`/favor`](favor-optimize-for-architecture-specifics.md) | Tworzy kod zoptymalizowany pod kątem określonej architektury x64. Lub dla określonych mikroarchitektur w architekturze AMD64 i EM64T. |
 | [`/FA`](fa-fa-listing-file.md) | Tworzy plik listy. |
@@ -119,7 +119,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/Qspectre`](qspectre.md) | Określa generowanie kompilatora instrukcji w celu ograniczenia niektórych luk w zabezpieczeniach Spectre Variant 1. |
 | [`/Qspectre-load`](qspectre-load.md) | Określa generowanie kompilatora serializacji instrukcji, aby ograniczyć Spectre luki w zabezpieczeniach na podstawie instrukcji ładowania. |
 | [`/Qspectre-load-cf`](qspectre-load-cf.md) | Określa generowanie kompilatora serializacji instrukcji, aby wyeliminować luki w zabezpieczeniach Spectre w oparciu o instrukcje przepływu sterowania, które ładują pamięć. |
-| [`/Qvec-report`(Poziom raportowania autowektoryzator)](qvec-report-auto-vectorizer-reporting-level.md) | Włącza poziomy raportowania dla automatycznej wektoryzacji. |
+| [`/Qvec-report` (Poziom raportowania autowektoryzator)](qvec-report-auto-vectorizer-reporting-level.md) | Włącza poziomy raportowania dla automatycznej wektoryzacji. |
 | [`/RTC`](rtc-run-time-error-checks.md) | Włącza sprawdzanie błędów czasu wykonywania. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Umożliwia korzystanie z dodatkowych funkcji zabezpieczeń i ostrzeżeń. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Wyświetla listę plików dołączanych podczas kompilacji. |
@@ -175,7 +175,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/Zs`](zs-syntax-check-only.md) | Sprawdza tylko składnię. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Tworzy plik wyjściowy do uruchomienia na środowisko wykonawcze systemu Windows. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)\
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

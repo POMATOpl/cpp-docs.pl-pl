@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: 876e0ca46dd8774796c8a4f9d7572cbff5caa93c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 74bf5b68696499ea8b1d88722d8a9e55f2ecab2d
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97149659"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514592"
 ---
 # <a name="variadic-macros"></a>Makra wariadyczne
 
@@ -21,7 +21,7 @@ Makra wariadyczne są makrami podobnymi do funkcji, które zawierają zmienną l
 
 Aby można było używać makr wariadyczne, wielokropek może być określony jako ostatni argument formalny w definicji makra, a identyfikator zastępczy `__VA_ARGS__` może być używany w definicji w celu wstawienia dodatkowych argumentów.  `__VA_ARGS__` jest zastępowany przez wszystkie argumenty, które pasują do wielokropka, w tym przecinki między nimi.
 
-Standard C określa, że co najmniej jeden argument musi być przekazywać do wielokropka, aby upewnić się, że makro nie jest rozpoznawane jako wyrażenie z końcowym przecinkiem. Tradycyjna implementacja języka Microsoft C++ pomija końcowy przecinek, jeśli żadne argumenty nie są przekazane do wielokropka. Po `/experimental:preprocessor` ustawieniu opcji kompilatora końcowe przecinek nie jest pomijany.
+Standard C określa, że co najmniej jeden argument musi być przekazywać do wielokropka, aby upewnić się, że makro nie jest rozpoznawane jako wyrażenie z końcowym przecinkiem. Tradycyjna implementacja języka Microsoft C++ pomija końcowy przecinek, jeśli żadne argumenty nie są przekazane do wielokropka. Gdy [`/Zc:preprocessor`](../build/reference/zc-preprocessor.md) Opcja kompilatora jest ustawiona, końcowy przecinek nie jest pomijany.
 
 ## <a name="example"></a>Przykład
 
