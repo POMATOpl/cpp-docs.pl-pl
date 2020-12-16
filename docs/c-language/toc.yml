@@ -138,6 +138,8 @@
           href: ../c-language/name-spaces.md
     - name: Deklaracje i typy
       items:
+        - name: Wyrównanie (C11)
+          href: ../c-language/alignment-c.md
         - name: Deklaracje i typy
           href: ../c-language/declarations-and-types.md
         - name: Przegląd deklaracji
