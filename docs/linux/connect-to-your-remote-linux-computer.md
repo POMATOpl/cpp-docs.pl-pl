@@ -2,12 +2,12 @@
 title: Nawiązywanie połączenia z docelowym systemem Linux w programie Visual Studio
 description: Jak nawiązać połączenie ze zdalnym komputerem z systemem Linux lub podsystemem Windows dla systemu Linux z wnętrza projektu Visual Studio C++.
 ms.date: 01/17/2020
-ms.openlocfilehash: da74d1c735a29304fdf46e920eac45580f386259
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b1907cc4c1c80a9d8ffba06849c9a80f1a8fbfbe
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921792"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645218"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Nawiązywanie połączenia z docelowym systemem Linux w programie Visual Studio
 
@@ -82,8 +82,8 @@ Jeśli protokół SSH nie został jeszcze skonfigurowany i uruchomiony w systemi
    | ----- | ---
    | **Nazwa hosta**           | Nazwa lub adres IP urządzenia docelowego
    | **Port**                | Port, na którym działa usługa SSH, zazwyczaj 22
-   | **User name** (Nazwa użytkownika)           | Użytkownik do uwierzytelniania jako
-   | **Authentication type** (Typ uwierzytelniania) | Obsługiwane są zarówno hasło, jak i klucz prywatny
+   | **Nazwa użytkownika**           | Użytkownik do uwierzytelniania jako
+   | **Typ uwierzytelniania** | Obsługiwane są zarówno hasło, jak i klucz prywatny
    | **Hasło**            | Hasło do podanej nazwy użytkownika
    | **Plik klucza prywatnego**    | Plik klucza prywatnego został utworzony na potrzeby połączenia SSH
    | **Danym**          | Hasło użyte z wybranym powyżej kluczem prywatnym
@@ -106,7 +106,7 @@ Jeśli protokół SSH nie został jeszcze skonfigurowany i uruchomiony w systemi
 
 ## <a name="logging-for-remote-connections"></a>Rejestrowanie dla połączeń zdalnych
 
-   Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów z połączeniami. Na pasku menu wybierz pozycję **narzędzia > opcje** . W oknie dialogowym **Opcje** wybierz pozycję **Rejestrowanie > Międzyplatformowe** :
+   Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów z połączeniami. Na pasku menu wybierz pozycję **narzędzia > opcje**. W oknie dialogowym **Opcje** wybierz pozycję **Rejestrowanie > Międzyplatformowe**:
 
    ![Rejestrowanie zdalne](media/remote-logging-vs2019.png)
 
@@ -116,7 +116,7 @@ Jeśli protokół SSH nie został jeszcze skonfigurowany i uruchomiony w systemi
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>Narzędzie wiersza polecenia dla Menedżera połączeń  
 
-**Visual studio 2019 w wersji 16,5 lub nowszej** : ConnectionManager.exe jest narzędziem wiersza polecenia do zarządzania połączeniami zdalnego tworzenia poza programem Visual Studio. Jest to przydatne w przypadku zadań, takich jak inicjowanie obsługi nowej maszyny deweloperskiej. Można też użyć go do skonfigurowania programu Visual Studio na potrzeby ciągłej integracji. Przykłady i kompletne odwołanie do polecenia ConnectionManager można znaleźć w temacie [ConnectionManager Reference](connectionmanager-reference.md).  
+**Visual studio 2019 w wersji 16,5 lub nowszej**: ConnectionManager.exe jest narzędziem wiersza polecenia do zarządzania połączeniami zdalnego tworzenia poza programem Visual Studio. Jest to przydatne w przypadku zadań, takich jak inicjowanie obsługi nowej maszyny deweloperskiej. Można też użyć go do skonfigurowania programu Visual Studio na potrzeby ciągłej integracji. Przykłady i kompletne odwołanie do polecenia ConnectionManager można znaleźć w temacie [ConnectionManager Reference](connectionmanager-reference.md).  
 
 ::: moniker-end
 
@@ -124,9 +124,9 @@ Jeśli protokół SSH nie został jeszcze skonfigurowany i uruchomiony w systemi
 
 ## <a name="tcp-port-forwarding"></a>Przekazywanie portów TCP
 
-Obsługa systemu Linux w programie Visual Studio ma zależność od przekazywania portów TCP. Jeśli przekazanie portów TCP jest wyłączone w systemie zdalnym, ma to na **rsync** i **serwera gdbserver** . Jeśli ma to wpływ na tę zależność, możesz przegłosować ten [bilet sugestii](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) w społeczności deweloperów.
+Obsługa systemu Linux w programie Visual Studio ma zależność od przekazywania portów TCP. Jeśli przekazanie portów TCP jest wyłączone w systemie zdalnym, ma to na **rsync** i **serwera gdbserver** . Jeśli ma to wpływ na tę zależność, możesz przegłosować ten [bilet sugestii](https://developercommunity2.visualstudio.com/t/shDonshshtsh-shrelysh-s/840265?space=62) w społeczności deweloperów.
 
-rsync jest używany przez projekty systemu Linux oparte na programie MSBuild i projekty CMake do [kopiowania nagłówków z zdalnego komputera do systemu Windows do użycia przez funkcję IntelliSense](configure-a-linux-project.md#remote_intellisense). Gdy nie można włączyć przekazywania portów TCP, wyłącz automatyczne pobieranie nagłówków zdalnych. Aby go wyłączyć, użyj **narzędzi > opcje > Międzyplatformowe > Menedżer połączeń > zdalnych nagłówków IntelliSense** . Jeśli system zdalny nie ma włączonego przekazywania portów TCP, zobaczysz ten błąd, jeśli pobieranie zdalnych nagłówków dla funkcji IntelliSense rozpocznie się:
+rsync jest używany przez projekty systemu Linux oparte na programie MSBuild i projekty CMake do [kopiowania nagłówków z zdalnego komputera do systemu Windows do użycia przez funkcję IntelliSense](configure-a-linux-project.md#remote_intellisense). Gdy nie można włączyć przekazywania portów TCP, wyłącz automatyczne pobieranie nagłówków zdalnych. Aby go wyłączyć, użyj **narzędzi > opcje > Międzyplatformowe > Menedżer połączeń > zdalnych nagłówków IntelliSense**. Jeśli system zdalny nie ma włączonego przekazywania portów TCP, zobaczysz ten błąd, jeśli pobieranie zdalnych nagłówków dla funkcji IntelliSense rozpocznie się:
 
 ![Błąd nagłówków](media/port-forwarding-headers-error.png)
 

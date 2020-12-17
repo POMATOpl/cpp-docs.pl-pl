@@ -1,7 +1,7 @@
 ---
 title: '`main` argumenty funkcji i wiersza polecenia (C++)'
 description: '`main`Funkcja jest punktem wejścia dla programu C++.'
-ms.date: 11/19/2020
+ms.date: 12/16/2020
 no-loc:
 - main
 - wmain
@@ -18,12 +18,12 @@ no-loc:
 - char
 - wchar_t
 - extern
-ms.openlocfilehash: 8a5ed43bdacf5d9d6dd2cbc5d1c56783c82b8e9a
-ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
+ms.openlocfilehash: a9c68f199d4169c02260542a9730472e4ab397bd
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95483220"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645075"
 ---
 # <a name="no-locmain-function-and-command-line-arguments"></a>`main` argumenty funkcji i wiersza polecenia
 
@@ -109,19 +109,21 @@ Poniższy przykład pokazuje, jak używać *`argc`* *`argv`* argumentów, i *`en
 #include <string.h>
 
 using namespace std;
-int main( int argc, char *argv[], char *envp[] ) {
-    int iNumberLines = 0;    // Default is no line numbers.
+int main( int argc, char *argv[], char *envp[] )
+{
+    bool numberLines = false;    // Default is no line numbers.
 
     // If /n is passed to the .exe, display numbered listing
     // of environment variables.
-
     if ( (argc == 2) && _stricmp( argv[1], "/n" ) == 0 )
-         iNumberLines = 1;
+         numberLines = true;
 
     // Walk through list of strings until a NULL is encountered.
-    for( int i = 0; envp[i] != NULL; ++i ) {
-        if( iNumberLines )
-            cout << i << ": " << envp[i] << "\n";
+    for ( int i = 0; envp[i] != NULL; ++i )
+    {
+        if ( numberLines )
+            cout << i << ": "; // Prefix with numbers if /n specified
+        cout << envp[i] << "\n";
     }
 }
 ```

@@ -265,12 +265,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: a72cc336a6f962eb5129bec15ccb3ed2fe748e10
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8466d8436aaf76a3acdfc6e50682745c9ad4fcc2
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333484"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645231"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -533,7 +533,7 @@ CSize ApproximateViewRect(
 Proponowane wymiary formantu (w pikselach). Jeśli wymiary nie są określone, struktura używa bieżącej wartości szerokości lub wysokości formantu.
 
 *iCount*<br/>
-Liczba elementów, które mają być wyświetlane w formancie. Jeśli ten parametr ma wartość-1, struktura używa całkowitej liczby elementów aktualnie w kontrolce.
+Liczba elementów, które mają być wyświetlane w formancie. Przekaż-1, aby użyć łącznej liczby elementów aktualnie znajdujących się w kontrolce.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3916,7 +3916,7 @@ BOOL SetItemState(
 ### <a name="parameters"></a>Parametry
 
 *nItem*<br/>
-Indeks elementu, którego stan ma być ustawiony.
+Indeks elementu, którego stan ma być ustawiony. Przekaż wartość 1, aby zastosować zmianę stanu do wszystkich elementów.
 
 *pItem*<br/>
 Adres struktury [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) , zgodnie z opisem w Windows SDK. `stateMask`Element członkowski struktury określa, które bity stanu zmienić, a `state` element członkowski struktury zawiera nowe wartości tych bitów. Pozostałe elementy członkowskie są ignorowane.
@@ -4451,7 +4451,7 @@ Ta funkcja Rozmieszcza również formant widoku listy, jeśli ma styl LVS_AUTOAR
 
 Zobacz przykład dla [CListCtrl:: GetSelectedCount](#getselectedcount).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przykład ROWLIST MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](cwnd-class.md)<br/>

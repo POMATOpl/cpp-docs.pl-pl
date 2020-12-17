@@ -1,16 +1,16 @@
 ---
 title: Korzystanie z kontrolerów podstawowych wytycznych dotyczących języka C++
 description: Jak skonfigurować i używać reguł analizy kodu w języku Microsoft C++ dla podstawowe wytyczne dotyczące języka C++.
-ms.date: 07/27/2020
+ms.date: 12/16/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
-ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
+ms.openlocfilehash: 93b69839bc9e5ffd45a08da12e84028eea10aef4
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94334146"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645166"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Korzystanie z kontrolerów podstawowych wytycznych dotyczących języka C++
 
@@ -30,7 +30,7 @@ Podzbiór reguł podstawowe sprawdzanie języka C++ jest zawarty w zestawie zale
 
 1. Otwórz okno dialogowe  **strony właściwości** dla projektu.
 
-1. Wybierz **Configuration Properties** > stronę właściwości **Analiza kodu** właściwości.
+1. Wybierz  > stronę właściwości **Analiza kodu** właściwości.
 
 1. Zaznacz pole wyboru **Włącz analizę kodu podczas kompilacji** .
 
@@ -49,7 +49,7 @@ Podzbiór reguł podstawowe sprawdzanie języka C++ jest zawarty w zestawie zale
 
 1. Otwórz okno dialogowe  **strony właściwości** dla projektu.
 
-1. Wybierz **Configuration Properties** > stronę właściwości **Analiza kodu** właściwości.
+1. Wybierz  > stronę właściwości **Analiza kodu** właściwości.
 
 1. Ustaw opcję **Włącz analizę kodu podczas kompilacji** i **Włącz właściwości analizy kodu firmy Microsoft** .
 
@@ -59,7 +59,7 @@ Możesz również uruchomić wszystkie obsługiwane reguły podstawowe sprawdzan
 
 1. Otwórz okno dialogowe  **strony właściwości** dla projektu.
 
-1. Wybierz pozycję **Configuration Properties** > **Analiza kodu** właściwości > Strona właściwości **Microsoft** .
+1. Wybierz pozycję  > **Analiza kodu** właściwości > Strona właściwości **Microsoft** .
 
 1. Otwórz listę rozwijaną **aktywne reguły** i wybierz pozycję **Wybierz wiele zestawów reguł**.
 
@@ -116,43 +116,43 @@ Podstawowe wytyczne dotyczące języka C++ można ułatwić pisanie lepszych i b
 
 W miarę dodawania nowych reguł do narzędzia podstawowe wytyczne dotyczące języka C++ Checker, liczba ostrzeżeń, które są generowane dla istniejącego kodu, może się zwiększyć. Wstępnie zdefiniowanych zestawów reguł można użyć do filtrowania typów reguł do włączenia. Artykuły referencyjne są dostępne dla większości reguł w [programie Visual Studio podstawowe sprawdzanie języka C++ Reference](code-analysis-for-cpp-corecheck.md).
 
-- **Reguły arytmetyczne** : reguły wykrywające [przepełnienie](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)arytmetyczne, [operacje podpisane bez znaku](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)i [manipulowanie bitowe](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
+- **Reguły arytmetyczne**: reguły wykrywające [przepełnienie](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)arytmetyczne, [operacje podpisane bez znaku](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)i [manipulowanie bitowe](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
 
-- **Reguły dotyczące granic** : Wymuś [profil granic podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
+- **Reguły dotyczące granic**: Wymuś [profil granic podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
 
-- **Reguły klasy** : kilka reguł, które koncentrują się na właściwym użyciu specjalnych funkcji składowych i specyfikacji wirtualnych. Są one podzbiorem kontroli zalecanych dla [klas i hierarchii klas](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class). <sup>15,5</sup>
+- **Reguły klasy**: kilka reguł, które koncentrują się na właściwym użyciu specjalnych funkcji składowych i specyfikacji wirtualnych. Są one podzbiorem kontroli zalecanych dla [klas i hierarchii klas](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class). <sup>15,5</sup>
 
-- **Reguły współbieżności** : pojedyncza reguła, która przechwytuje niewłaściwe deklaracje obiektów Guard. Aby uzyskać więcej informacji, zobacz [wytyczne dotyczące współbieżności](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
+- **Reguły współbieżności**: pojedyncza reguła, która przechwytuje niewłaściwe deklaracje obiektów Guard. Aby uzyskać więcej informacji, zobacz [wytyczne dotyczące współbieżności](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
 
-- **Reguły const** : Wymuś [testy związane z stałą z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
+- **Reguły const**: Wymuś [testy związane z stałą z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
 
-- **Reguły deklaracji** : kilka reguł z [wytycznych dotyczących interfejsów](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) , które koncentrują się na sposobie deklarowania zmiennych globalnych. <sup>15,5</sup>
+- **Reguły deklaracji**: kilka reguł z [wytycznych dotyczących interfejsów](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) , które koncentrują się na sposobie deklarowania zmiennych globalnych. <sup>15,5</sup>
 
-- **Reguły wyliczeniowe** : te reguły wymuszają [sprawdzenia związane z wyliczeniem z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
+- **Reguły wyliczeniowe**: te reguły wymuszają [sprawdzenia związane z wyliczeniem z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
 - **Reguły eksperymentalne** Są to eksperymentalne reguły podstawowe sprawdzanie języka C++, które są przydatne, ale nie są gotowe do codziennego użytku. Wypróbuj je i [Podaj opinię](https://aka.ms/feedback/suggest?space=62). <sup>16,0</sup>
 
-- **Reguły funkcji** : dwie kontrole, które pomagają w przyjęciu **`noexcept`** specyfikatora. Są one częścią wytycznych dotyczących [projektowania i implementacji funkcji czyszczenia](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
+- **Reguły funkcji**: dwie kontrole, które pomagają w przyjęciu **`noexcept`** specyfikatora. Są one częścią wytycznych dotyczących [projektowania i implementacji funkcji czyszczenia](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
-- **Reguły GSL** : te reguły wymuszają operacje sprawdzania powiązane z [biblioteką pomocy technicznej z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
+- **Reguły GSL**: te reguły wymuszają operacje sprawdzania powiązane z [biblioteką pomocy technicznej z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
 
-- **Reguły okresu istnienia** : te reguły wymuszają [profil okresu istnienia podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
+- **Reguły okresu istnienia**: te reguły wymuszają [profil okresu istnienia podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
 
-- **Reguły wskaźnika właściciela** : Wymuś [operacje sprawdzania zarządzania zasobami powiązane z właścicielem \<T> z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup> 15,3</sup>
+- **Reguły wskaźnika właściciela**: Wymuś [operacje sprawdzania zarządzania zasobami powiązane z właścicielem \<T> z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).<sup> 15,3</sup>
 
-- **Reguły wskaźnika RAW** : Wymuś [operacje sprawdzania zarządzania zasobami powiązane ze wskaźnikami nieprzetworzonymi z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Reguły wskaźnika RAW**: Wymuś [operacje sprawdzania zarządzania zasobami powiązane ze wskaźnikami nieprzetworzonymi z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Udostępnione reguły wskaźnika** : jest częścią wymuszania wytycznych dotyczących [zarządzania zasobami](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> dodaliśmy kilka reguł specyficznych dla sposobu przekazywania współużytkowanych wskaźników do funkcji lub używanych lokalnie.
+- **Udostępnione reguły wskaźnika**: jest częścią wymuszania wytycznych dotyczących [zarządzania zasobami](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> dodaliśmy kilka reguł specyficznych dla sposobu przekazywania współużytkowanych wskaźników do funkcji lub używanych lokalnie.
 
-- **Reguły STL** : te reguły wymuszają operacje sprawdzania dotyczące [standardowej biblioteki języka C++ (STL) z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
+- **Reguły STL**: te reguły wymuszają operacje sprawdzania dotyczące [standardowej biblioteki języka C++ (STL) z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
 
-- **Reguły stylu** : jeden prosty, ale istotny, który zakazuje używania instrukcji [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> to pierwszy krok w celu poprawienia stylu kodowania i używania wyrażeń i instrukcji w języku C++.
+- **Reguły stylu**: jeden prosty, ale istotny, który zakazuje używania instrukcji [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> to pierwszy krok w celu poprawienia stylu kodowania i używania wyrażeń i instrukcji w języku C++.
 
-- **Reguły typów** : Wymuś [Profil typu podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
+- **Reguły typów**: Wymuś [Profil typu podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
 
-- **Reguły unikatowego wskaźnika** : Wymuś [operacje sprawdzania zarządzania zasobami powiązane z typami z semantyką unikatowego wskaźnika z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Reguły unikatowego wskaźnika**: Wymuś [operacje sprawdzania zarządzania zasobami powiązane z typami z semantyką unikatowego wskaźnika z podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Reguły podstawowe sprawdzanie języka C++** : ten zestaw reguł zawiera wszystkie aktualnie zaimplementowane sprawdzenia z [podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), z wyjątkiem reguł eksperymentalnych.
+- **Reguły podstawowe sprawdzanie języka C++**: ten zestaw reguł zawiera wszystkie aktualnie zaimplementowane sprawdzenia z [podstawowe wytyczne dotyczące języka C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), z wyjątkiem reguł eksperymentalnych.
 
 <sup>15,3</sup> te reguły pojawiły się po raz pierwszy w programie Visual Studio 2017 w wersji 15,3 \
 <sup>15,5</sup> te reguły pojawiły się po raz pierwszy w programie Visual Studio 2017 w wersji 15,5 \
@@ -165,7 +165,7 @@ Można wybrać ograniczenie ostrzeżeń tylko do jednej lub kilku grup. **Natywn
 
 ::: moniker range="<=msvc-150"
 
-Aby wyświetlić dostępne zestawy reguł, Otwórz okno dialogowe **właściwości projektu** . W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja**  >  **ogólna Analiza kodu**  >  **General** . Następnie otwórz listę rozwijaną w polu kombi **zestawy reguł** , aby wyświetlić dostępne zestawy reguł. Aby utworzyć niestandardową kombinację zestawów reguł, wybierz pozycję **Wybierz wiele zestawów reguł**. Okno dialogowe **Dodawanie lub usuwanie zestawów reguł** zawiera listę reguł, spośród których można wybrać. Aby uzyskać więcej informacji o korzystaniu z zestawów reguł w programie Visual Studio, zobacz [Korzystanie z zestawów reguł do określania reguł języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Aby wyświetlić dostępne zestawy reguł, Otwórz okno dialogowe **właściwości projektu** . W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja**  >  **ogólna Analiza kodu**  >   . Następnie otwórz listę rozwijaną w polu kombi **zestawy reguł** , aby wyświetlić dostępne zestawy reguł. Aby utworzyć niestandardową kombinację zestawów reguł, wybierz pozycję **Wybierz wiele zestawów reguł**. Okno dialogowe **Dodawanie lub usuwanie zestawów reguł** zawiera listę reguł, spośród których można wybrać. Aby uzyskać więcej informacji o korzystaniu z zestawów reguł w programie Visual Studio, zobacz [Korzystanie z zestawów reguł do określania reguł języka C++ do uruchomienia](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 ::: moniker range=">=msvc-160"
@@ -226,11 +226,11 @@ Zamiast #pragmas można użyć opcji wiersza polecenia na stronie właściwości
 
 1. Kliknij prawym przyciskiem myszy plik w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości**.
 
-1. W oknie dialogowym **strony właściwości** wybierz pozycję **Właściwości konfiguracji**  >  **C/C++**  >  **Command Line** Strona właściwości.
+1. W oknie dialogowym **strony właściwości** wybierz pozycję **Właściwości konfiguracji**  >  **C/C++**  >   Strona właściwości.
 
 1. W polu Edytuj **Opcje dodatkowe** Dodaj *`/wd26400`* .
 
-Można użyć opcji wiersza polecenia, aby tymczasowo wyłączyć wszystkie analizy kodu dla pliku przez określenie **`/analyze-`** . Zobaczysz ostrzeżenie *D9025 przesłaniające "/ANALYZE" z "/ANALYZE-"* , który przypomina o ponownym włączeniu analizy kodu później.
+Można użyć opcji wiersza polecenia, aby tymczasowo wyłączyć wszystkie analizy kodu dla pliku przez określenie **`/analyze-`** . Zobaczysz ostrzeżenie *D9025 przesłaniające "/ANALYZE" z "/ANALYZE-"*, który przypomina o ponownym włączeniu analizy kodu później.
 
 ## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a> Włącz narzędzie podstawowe wytyczne dotyczące języka C++ Checker dla określonych plików projektu
 
@@ -246,9 +246,9 @@ Czasami warto zastosować skoncentrowaną analizę kodu i nadal używać środow
 
 1. Przejdź do pliku, który chcesz analizować za pomocą narzędzia podstawowe wytyczne dotyczące języka C++ Checker i otwórz jego właściwości.
 
-1. Wybierz pozycję **Właściwości konfiguracji**  >  **C/C++**  >  **Command Line**  >  **Opcje dodatkowe** i Dodaj *`/analyze:plugin EspXEngine.dll`*
+1. Wybierz pozycję **Właściwości konfiguracji**  >  **C/C++**  >    >  **Opcje dodatkowe** i Dodaj *`/analyze:plugin EspXEngine.dll`*
 
-1. Wyłącz używanie prekompilowanego nagłówka ( **Właściwości konfiguracji** :  >  prekompilowane nagłówki **C/C++**  >  **Precompiled Headers** ). Jest to konieczne, ponieważ aparat rozszerzeń może próbować odczytać informacje wewnętrzne z prekompilowanego nagłówka (PCH). Jeśli PCH został skompilowany z domyślnymi opcjami projektu, nie będzie zgodny.
+1. Wyłącz używanie prekompilowanego nagłówka (**Właściwości konfiguracji**:  >  prekompilowane nagłówki **C/C++**  >  ). Jest to konieczne, ponieważ aparat rozszerzeń może próbować odczytać informacje wewnętrzne z prekompilowanego nagłówka (PCH). Jeśli PCH został skompilowany z domyślnymi opcjami projektu, nie będzie zgodny.
 
 1. Ponownie skompiluj projekt. Wspólne testy szybkie są uruchamiane na wszystkich plikach. Ponieważ narzędzie podstawowe wytyczne dotyczące języka C++ Checker nie jest domyślnie włączone, powinno być uruchamiane tylko na pliku, który jest skonfigurowany do korzystania z niego.
 
@@ -308,7 +308,7 @@ Analiza kodu wymaga kilku zmiennych środowiskowych i opcji wiersza polecenia ko
 
 ## <a name="use-the-guideline-support-library"></a>Korzystanie z biblioteki podstawowej pomocy technicznej
 
-Podstawowa Biblioteka pomocy technicznej (GSL) została zaprojektowana w celu ułatwienia przestrzegania podstawowych wytycznych. GSL zawiera definicje, które umożliwiają zamianę konstrukcji podatnych na błędy z bezpieczniejszymi alternatywami. Na przykład można zastąpić `T*, length` parę parametrów `span<T>` typem. GSL jest dostępny pod adresem [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl) . Biblioteka jest open source, dzięki czemu można przeglądać źródła, wprowadzać komentarze lub współtworzyć. Projekt można znaleźć pod adresem [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) .
+Podstawowa Biblioteka pomocy technicznej (GSL) została zaprojektowana w celu ułatwienia przestrzegania podstawowych wytycznych. GSL zawiera definicje, które umożliwiają zamianę konstrukcji podatnych na błędy z bezpieczniejszymi alternatywami. Na przykład można zastąpić `T*, length` parę parametrów `span<T>` typem. Projekt GSL jest dostępny w witrynie GitHub pod adresem [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) . Biblioteka jest open source, dzięki czemu można przeglądać źródła, wprowadzać komentarze lub współtworzyć. Można także użyć Menedżera pakietów [vcpkg](../build/vcpkg.md) do pobrania i zainstalowania biblioteki lokalnie.
 
 ::: moniker range="msvc-140"
 
@@ -334,6 +334,6 @@ Ze względu na sposób, w jaki reguły analizy kodu są ładowane w programie Vi
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Informacje dotyczące podstawowe sprawdzanie języka C++ programu Visual Studio](code-analysis-for-cpp-corecheck.md)

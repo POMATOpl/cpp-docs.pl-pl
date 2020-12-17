@@ -1,40 +1,39 @@
 ---
-description: 'Dowiedz się więcej na temat: jak określić dodatkowe informacje o kodzie przy użyciu _Analysis_assume'
-title: Użyj _Analysis_assume na potrzeby wskazówek dotyczących analizy kodu
-ms.date: 11/04/2016
+description: Dowiedz się więcej na temat sposobu określania dodatkowych informacji o kodzie przy użyciu _Analysis_assume_.
+title: Użyj _Analysis_assume_ na potrzeby wskazówek dotyczących analizy kodu
+ms.date: 12/16/2020
 ms.topic: conceptual
 f1_keywords:
-- _Analysis_assume
+- _Analysis_assume_
 helpviewer_keywords:
-- _Analysis_assume
-ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
-ms.openlocfilehash: 1960fae929f1bd0ffbac4979b76541fd0d396e42
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- _Analysis_assume_
+ms.openlocfilehash: f4244a896d4334cb6c5e857e63b39be0cd53b08b
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97151557"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645127"
 ---
-# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Instrukcje: Określanie dodatkowych informacji o kodzie przy użyciu _Analysis_assume
+# <a name="how-to-specify-additional-code-information-by-using-_analysis_assume_"></a>Jak określić dodatkowe informacje o kodzie za pomocą `_Analysis_assume_`
 
-Możesz dostarczyć wskazówki do narzędzia analizy kodu dla kodu C/C++, które ułatwią proces analizy i zmniejszają ostrzeżenia. Aby podać dodatkowe informacje, użyj następującej funkcji:
+Możesz dostarczyć wskazówki do narzędzia analizy kodu dla kodu C/C++, które ułatwią proces analizy i zmniejszają ostrzeżenia. Aby podać dodatkowe informacje, użyj następującego makra funkcji:
 
-`_Analysis_assume(`  `expr`  `)`
+`_Analysis_assume( expr )`
 
-`expr` — Dowolne wyrażenie, które ma zostać obliczone na wartość true.
+*`expr`* — Dowolne wyrażenie, które ma zostać obliczone na wartość true.
 
-Narzędzie do analizy kodu zakłada, że warunek reprezentowany przez wyrażenie ma wartość true w punkcie, w którym funkcja jest wyświetlana i pozostaje prawdziwa do momentu zmiany wyrażenia, na przykład przez przypisanie do zmiennej.
+Narzędzie do analizy kodu zakłada, że warunek reprezentowany przez wyrażenie *`expr`* ma wartość true w punkcie, w którym znajduje się funkcja. I, pozostaje ona prawdziwa do momentu zmiany *`expr`* , na przykład przez przypisanie do zmiennej.
 
 > [!NOTE]
-> `_Analysis_assume` nie ma wpływu na optymalizację kodu. Poza narzędzia do analizy kodu, `_Analysis_assume` jest definiowana jako No-op.
+> `_Analysis_assume_` nie ma wpływu na optymalizację kodu. Poza narzędzia do analizy kodu, `_Analysis_assume_` jest definiowana jako No-op.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod używa `_Analysis_assume` do korygowania ostrzeżenia analizy kodu [C6388](../code-quality/c6388.md):
+Poniższy kod używa `_Analysis_assume_` do korygowania ostrzeżenia analizy kodu [C6388](../code-quality/c6388.md):
 
 ```cpp
-#include<windows.h>
-#include<codeanalysis\sourceannotations.h>
+#include <windows.h>
+#include <codeanalysis\sourceannotations.h>
 
 using namespace vc_attributes;
 
@@ -48,11 +47,11 @@ void test()
 {
     char pc = (char)malloc(5);
     FreeAndNull(&pc);
-    _Analysis_assume(pc == NULL);
+    _Analysis_assume_(pc == NULL);
     f(pc);
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [__assume](../intrinsics/assume.md)
