@@ -18,7 +18,7 @@ ms.locfileid: "92924236"
 
 W tym instruktażu pokazano, jak utworzyć tradycyjną aplikację klasyczną systemu Windows w programie Visual Studio. Przykładowa aplikacja, którą utworzysz, używa interfejsu API systemu Windows do wyświetlania "Hello, Windows Desktop!" w oknie. Kod, który tworzysz w tym instruktażu, można użyć jako wzorca, aby utworzyć inne aplikacje klasyczne systemu Windows.
 
-Interfejs API systemu Windows (znany również jako Win32 API, Windows Desktop API i Windows klasyczny interfejs API) to struktura oparta na języku C do tworzenia aplikacji systemu Windows. Jest ona istniena od 1980s i została użyta do tworzenia aplikacji systemu Windows dla dekad. Bardziej zaawansowane i prostsze struktury zostały utworzone w oparciu o interfejs API systemu Windows. Na przykład MFC, ATL, .NET Frameworks. Nawet najbardziej nowoczesny kod środowisko wykonawcze systemu Windows dla aplikacji platformy UWP i ze sklepu, które zostały zapisane w języku C++/WinRT, korzysta z interfejsu API systemu Windows poniżej. Aby uzyskać więcej informacji na temat interfejsu API systemu Windows, zobacz [indeks interfejsu API systemu Windows](/windows/win32/apiindex/windows-api-list). Istnieje wiele sposobów tworzenia aplikacji systemu Windows, ale powyższy proces jest pierwszy.
+Interfejs API systemu Windows (znany również jako Win32 API, Windows Desktop API i Klasyczny Interfejs API Systemu Windows) to struktura oparta na języku C do tworzenia aplikacji systemu Windows. Jest ona istnieje ona od lat 80tych i została użyta do tworzenia aplikacji systemu Windows od dekad. Bardziej zaawansowane i prostsze struktury zostały utworzone w oparciu o interfejs API systemu Windows. Na przykład MFC, ATL, .NET Frameworks. Nawet najbardziej nowoczesny kod środowisko wykonawcze systemu Windows dla aplikacji platformy UWP i ze sklepu, które zostały zapisane w języku C++/WinRT, korzysta z interfejsu API systemu Windows poniżej. Aby uzyskać więcej informacji na temat interfejsu API systemu Windows, zobacz [indeks interfejsu API systemu Windows](/windows/win32/apiindex/windows-api-list). Istnieje wiele sposobów tworzenia aplikacji systemu Windows, ale powyższy proces jest pierwszy.
 
 > [!IMPORTANT]
 > W celu zwięzłości niektóre instrukcje kodu są pomijane w tekście. Sekcja [Build kodu](#build-the-code) na końcu tego dokumentu pokazuje kompletny kod.
@@ -33,11 +33,11 @@ Interfejs API systemu Windows (znany również jako Win32 API, Windows Desktop A
 
 - Zrozumienie podstaw korzystania ze środowiska IDE programu Visual Studio. Jeśli wcześniej używasz aplikacji klasycznych systemu Windows, prawdopodobnie Zadbaj o to. Aby zapoznać się z wprowadzeniem, zobacz [Przewodnik po funkcji środowiska IDE programu Visual Studio](/visualstudio/ide/visual-studio-ide).
 
-- Zrozumienie wystarczającej podstawy języka C++ do wykonania. Nie martw się, nie wykonujemy żadnych zbyt skomplikowane.
+- Zrozumienie wystarczającej podstawy języka C++ do wykonania. Nie martw się, nie wykonujemy żadnych zbyt skomplikowanych zadań.
 
 ## <a name="create-a-windows-desktop-project"></a>Tworzenie projektu pulpitu systemu Windows
 
-Wykonaj następujące kroki, aby utworzyć pierwszy projekt pulpitu systemu Windows. Po przejściu wprowadzisz kod dla działającej aplikacji klasycznej systemu Windows. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj kontrolki selektora **wersji** . Znajduje się w górnej części spisu treści na tej stronie.
+Wykonaj następujące kroki, aby utworzyć pierwszy projekt pulpitu systemu Windows. Po przejściu wprowadzisz kod dla działającej aplikacji klasycznej systemu Windows. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj kontrolki selektora **wersji** , która znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker range="msvc-160"
 
@@ -588,7 +588,7 @@ Zgodnie z oczekiwaniami, Oto pełen kod dla aplikacji działającej.
 
    ![Uruchamianie projektu DesktopApp](../build/media/desktop-app-project-run-157.PNG "Uruchamianie projektu DesktopApp")
 
-Gratulacje! Ten Instruktaż został ukończony i opracowano tradycyjną aplikację klasyczną systemu Windows.
+Gratulacje! Ten Instruktaż został ukończony i opracowałeś(aś) tradycyjną aplikację klasyczną systemu Windows.
 
 ## <a name="see-also"></a>Zobacz także
 
