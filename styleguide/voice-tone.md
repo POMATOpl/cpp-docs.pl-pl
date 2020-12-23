@@ -1,7 +1,7 @@
 # <a name="voice-and-tone-guidelines"></a>Wytyczne dotyczące połączeń głosowych i ton
 
 Deweloperzy będą odczytu dokumentów platformy .NET core oraz z niego korzystać w służbowym numerze regularne.
-Celem użytkownika jest tworzenie przydatna dokumentacji, która pomaga czytnika w podróży. Nasze wskazówki pomagają korzystając z niego. Nasze wytyczne dotyczące stylu zawiera cztery zalecenia:
+Celem użytkownika jest tworzenie przydatnej dokumentacji, która pomaga czytelnika w podróży. Nasze wskazówki pomagają korzystając z niego. Nasze wytyczne dotyczące stylu zawiera cztery zalecenia:
 - [Należy używać tonu konwersacji](#use-a-conversational-tone)
 - [Zapisywanie w drugiej osoby](#write-in-2nd-person)
 - [Korzystaj z Active głosowej](#use-active-voice)
